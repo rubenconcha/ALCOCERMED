@@ -3,190 +3,405 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Panel Admin · Prepa Ben Carson</title>
+<title>Admin Dashboard · Prepa Ben Carson</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#0f1117;--bg2:#181c27;--bg3:#1e2336;--surface:#252a3d;--surface2:#2e3450;
-  --border:#2e3450;--border2:#3d4566;
-  --text:#e8eaf6;--text2:#9fa3b8;--text3:#5c6080;
-  --blue:#4f8ef7;--blue2:#3a7ae8;--blue-bg:#1a2545;
-  --green:#4caf7d;--green-bg:#152a20;
-  --red:#e05c5c;--red-bg:#2a1515;
-  --amber:#f5a623;--amber-bg:#2a2010;
-  --purple:#8b78f5;--purple-bg:#1e1a3a;
-  --radius:8px;--radius-lg:12px;
+:root {
+  --bg: #f3f4f6;
+  --sidebar-bg: #ffffff;
+  --card-bg: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-soft: #eef2ff;
+  --border: #e5e7eb;
+  --success: #10b981;
+  --success-soft: #ecfdf5;
+  --danger: #ef4444;
+  --danger-soft: #fef2f2;
+  --warning: #f59e0b;
+  --warning-soft: #fffbeb;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
 }
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);font-size:14px;min-height:100vh}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+  font-family: 'Outfit', sans-serif; 
+  background: var(--bg); 
+  color: var(--text-primary); 
+  font-size: 14px; 
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
 
 /* ── LAYOUT ── */
-#app{display:flex;height:100vh;overflow:hidden}
-.sidebar{width:230px;min-width:230px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden}
-.content{flex:1;overflow-y:auto;padding:28px 32px;background:var(--bg)}
+#app { display: flex; height: 100vh; overflow: hidden; }
+.sidebar { 
+  width: 260px; 
+  min-width: 260px; 
+  background: var(--sidebar-bg); 
+  border-right: 1px solid var(--border); 
+  display: flex; 
+  flex-direction: column; 
+  z-index: 50;
+}
+.content { 
+  flex: 1; 
+  overflow-y: auto; 
+  padding: 32px 40px; 
+  background: var(--bg);
+}
 
 /* ── SIDEBAR ── */
-.sb-logo{padding:22px 18px 18px;border-bottom:1px solid var(--border)}
-.sb-logo-img{width:36px;height:36px;border-radius:8px;object-fit:cover;margin-bottom:10px}
-.sb-logo-name{font-size:15px;font-weight:600;color:var(--text);display:block}
-.sb-logo-sub{font-size:11px;color:var(--text3);display:block;margin-top:1px}
-.sb-nav{flex:1;padding:12px 10px;overflow-y:auto}
-.sb-section{font-size:10px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;padding:12px 8px 5px}
-.sb-item{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:var(--radius);cursor:pointer;color:var(--text2);font-size:13px;border:none;background:none;width:100%;text-align:left;transition:.15s}
-.sb-item:hover{background:var(--surface);color:var(--text)}
-.sb-item.active{background:var(--blue-bg);color:var(--blue);font-weight:500}
-.sb-icon{width:20px;text-align:center;font-size:15px}
-.sb-footer{padding:14px;border-top:1px solid var(--border)}
-.sb-user{display:flex;align-items:center;gap:9px;padding:10px;border-radius:var(--radius);background:var(--surface)}
-.sb-avatar{width:30px;height:30px;border-radius:50%;background:var(--blue-bg);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--blue);flex-shrink:0}
-.sb-uname{font-size:12px;font-weight:500;color:var(--text)}
-.sb-urole{font-size:10px;color:var(--text3)}
-.sb-logout{margin-left:auto;background:none;border:none;color:var(--text3);cursor:pointer;padding:4px;border-radius:4px;font-size:13px}
-.sb-logout:hover{color:var(--red)}
+.sb-logo { 
+  padding: 32px 24px; 
+  display: flex; 
+  align-items: center; 
+  gap: 12px;
+}
+.sb-logo-img { 
+  width: 40px; 
+  height: 40px; 
+  border-radius: var(--radius-sm); 
+  object-fit: cover;
+}
+.sb-logo-text { line-height: 1.2; }
+.sb-logo-name { font-size: 16px; font-weight: 700; color: var(--text-primary); }
+.sb-logo-sub { font-size: 11px; color: var(--text-tertiary); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
 
-/* ── TOPBAR ── */
-.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
-.page-title{font-size:20px;font-weight:600;color:var(--text)}
-.page-sub{font-size:13px;color:var(--text3);margin-top:3px}
+.sb-nav { flex: 1; padding: 0 16px; }
+.sb-section { 
+  font-size: 11px; 
+  color: var(--text-tertiary); 
+  text-transform: uppercase; 
+  letter-spacing: 0.1em; 
+  font-weight: 600;
+  margin: 24px 0 8px 12px;
+}
+.sb-item { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  padding: 12px 14px; 
+  border-radius: var(--radius-sm); 
+  cursor: pointer; 
+  color: var(--text-secondary); 
+  font-size: 14px; 
+  font-weight: 500;
+  border: none; 
+  background: none; 
+  width: 100%; 
+  text-align: left; 
+  transition: all 0.2s ease;
+  margin-bottom: 4px;
+}
+.sb-item:hover { background: var(--accent-soft); color: var(--accent); }
+.sb-item.active { background: var(--accent); color: #ffffff; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2); }
+.sb-icon { font-size: 18px; width: 24px; text-align: center; }
 
-/* ── BOTONES ── */
-.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:var(--radius);border:1px solid var(--border2);background:var(--surface);color:var(--text2);font-size:13px;font-family:'Outfit',sans-serif;cursor:pointer;transition:.15s;font-weight:500}
-.btn:hover{background:var(--surface2);color:var(--text)}
-.btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
-.btn-primary:hover{background:var(--blue2);border-color:var(--blue2)}
-.btn-danger{background:var(--red-bg);color:var(--red);border-color:var(--red)}
-.btn-sm{padding:5px 11px;font-size:12px}
+.sb-footer { padding: 20px 16px; border-top: 1px solid var(--border); }
+.sb-user { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  padding: 12px; 
+  border-radius: var(--radius-md); 
+  background: var(--bg);
+}
+.sb-avatar { 
+  width: 36px; 
+  height: 36px; 
+  border-radius: 50%; 
+  background: var(--accent); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 13px; 
+  font-weight: 600; 
+  color: #ffffff;
+}
+.sb-user-info { flex: 1; min-width: 0; }
+.sb-uname { font-size: 13px; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sb-urole { font-size: 11px; color: var(--text-tertiary); }
+.sb-logout { 
+  background: none; 
+  border: none; 
+  color: var(--text-tertiary); 
+  cursor: pointer; 
+  padding: 6px; 
+  border-radius: 6px; 
+  transition: 0.2s;
+}
+.sb-logout:hover { color: var(--danger); background: var(--danger-soft); }
+
+/* ── HEADER ── */
+.topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
+.page-title { font-size: 24px; font-weight: 700; color: var(--text-primary); }
+.page-sub { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+/* ── BUTTONS ── */
+.btn { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px; 
+  padding: 10px 18px; 
+  border-radius: var(--radius-sm); 
+  border: 1px solid var(--border); 
+  background: #ffffff; 
+  color: var(--text-secondary); 
+  font-size: 13px; 
+  font-weight: 600;
+  cursor: pointer; 
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+.btn-primary { 
+  background: var(--accent); 
+  color: #ffffff; 
+  border-color: var(--accent);
+}
+.btn-primary:hover { 
+  background: var(--accent-hover); 
+  border-color: var(--accent-hover); 
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+.btn-danger { 
+  background: var(--danger-soft); 
+  color: var(--danger); 
+  border-color: var(--danger);
+}
+.btn-danger:hover { background: var(--danger); color: #ffffff; }
+.btn-sm { padding: 6px 12px; font-size: 12px; }
 
 /* ── STATS ── */
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:26px}
-.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 18px}
-.stat-label{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
-.stat-val{font-size:26px;font-weight:700;color:var(--text)}
-.stat-sub{font-size:11px;color:var(--text3);margin-top:4px}
-.stat-card.blue .stat-val{color:var(--blue)}
-.stat-card.green .stat-val{color:var(--green)}
-.stat-card.purple .stat-val{color:var(--purple)}
-.stat-card.amber .stat-val{color:var(--amber)}
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 32px; }
+.stat-card { 
+  background: var(--card-bg); 
+  border: 1px solid var(--border); 
+  border-radius: var(--radius-lg); 
+  padding: 24px; 
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.stat-label { font-size: 12px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 12px; }
+.stat-val { font-size: 32px; font-weight: 800; color: var(--text-primary); }
+.stat-sub { font-size: 12px; color: var(--text-secondary); margin-top: 8px; display: flex; align-items: center; gap: 4px; }
+.stat-card.blue .stat-val { color: var(--accent); }
+.stat-card.green .stat-val { color: var(--success); }
+.stat-card.purple .stat-val { color: #8b5cf6; }
+.stat-card.amber .stat-val { color: var(--warning); }
 
-/* ── CARDS ── */
-.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 22px;margin-bottom:18px}
-.card-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+/* ── CARDS & TABLES ── */
+.card { 
+  background: var(--card-bg); 
+  border: 1px solid var(--border); 
+  border-radius: var(--radius-lg); 
+  padding: 24px; 
+  margin-bottom: 24px; 
+  box-shadow: var(--shadow);
+}
+.card-title { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 
-/* ── SEARCH ── */
-.search-row{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
-.search-input{flex:1;min-width:180px;padding:9px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:13px;font-family:'Outfit',sans-serif;outline:none;transition:.15s}
-.search-input:focus{border-color:var(--blue);background:var(--surface2)}
-.search-input::placeholder{color:var(--text3)}
-.filter-select{padding:9px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text2);font-size:13px;font-family:'Outfit',sans-serif;cursor:pointer}
+.search-row { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.search-input { 
+  flex: 1; 
+  padding: 10px 16px; 
+  border: 1px solid var(--border); 
+  border-radius: var(--radius-sm); 
+  background: #ffffff; 
+  color: var(--text-primary); 
+  font-size: 14px; 
+  outline: none; 
+  transition: 0.2s;
+}
+.search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.filter-select { 
+  padding: 10px 16px; 
+  border: 1px solid var(--border); 
+  border-radius: var(--radius-sm); 
+  background: #ffffff; 
+  color: var(--text-secondary); 
+  cursor: pointer;
+}
 
-/* ── TABLA ── */
-.tbl{width:100%;border-collapse:collapse;font-size:13px}
-.tbl th{text-align:left;padding:9px 12px;font-size:11px;color:var(--text3);font-weight:500;text-transform:uppercase;letter-spacing:.07em;border-bottom:1px solid var(--border)}
-.tbl td{padding:11px 12px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle}
-.tbl tr:last-child td{border-bottom:none}
-.tbl tr:hover td{background:var(--surface)}
+.tbl-wrap { width: 100%; overflow-x: auto; border-radius: var(--radius-md); border: 1px solid var(--border); }
+.tbl { width: 100%; border-collapse: collapse; background: #ffffff; }
+.tbl th { 
+  text-align: left; 
+  padding: 14px 16px; 
+  font-size: 11px; 
+  color: var(--text-tertiary); 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em; 
+  background: #fafafa;
+  border-bottom: 1px solid var(--border);
+}
+.tbl td { padding: 16px; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: middle; }
+.tbl tr:last-child td { border-bottom: none; }
+.tbl tr:hover td { background: #f9fafb; }
 
-/* ── BADGES ── */
-.badge{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:500}
-.badge-green{background:var(--green-bg);color:var(--green)}
-.badge-blue{background:var(--blue-bg);color:var(--blue)}
-.badge-purple{background:var(--purple-bg);color:var(--purple)}
-.badge-red{background:var(--red-bg);color:var(--red)}
-.badge-gray{background:var(--surface2);color:var(--text3)}
-.tag{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;background:var(--purple-bg);color:var(--purple);margin:2px}
+/* ── COMPONENTS ── */
+.badge { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
+.badge-success { background: var(--success-soft); color: var(--success); }
+.badge-warning { background: var(--warning-soft); color: var(--warning); }
+.badge-danger { background: var(--danger-soft); color: var(--danger); }
+.badge-primary { background: var(--accent-soft); color: var(--accent); }
 
-/* ── AVATAR ── */
-.av{width:30px;height:30px;border-radius:50%;background:var(--blue-bg);display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--blue);margin-right:8px;vertical-align:middle;flex-shrink:0}
+.tag { padding: 4px 10px; border-radius: 6px; font-size: 12px; background: var(--bg); color: var(--text-secondary); border: 1px solid var(--border); font-weight: 500; }
+.av { 
+  width: 32px; 
+  height: 32px; 
+  border-radius: 50%; 
+  background: var(--accent-soft); 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 12px; 
+  font-weight: 700; 
+  color: var(--accent); 
+  margin-right: 10px;
+}
 
-/* ── PROGRESS ── */
-.prog-bar{height:4px;border-radius:2px;background:var(--border2);overflow:hidden;margin-top:5px}
-.prog-fill{height:100%;border-radius:2px;background:var(--blue);transition:width .5s}
+.prog-bar { height: 6px; border-radius: 3px; background: #f3f4f6; overflow: hidden; }
+.prog-fill { height: 100%; background: var(--accent); border-radius: 3px; }
 
 /* ── LOGIN ── */
-#login-wrap{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg)}
-.login-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 36px;width:380px}
-.login-logo{display:flex;align-items:center;gap:12px;margin-bottom:24px}
-.login-logo img{width:42px;height:42px;border-radius:9px;object-fit:cover}
-.login-brand{font-size:17px;font-weight:700;color:var(--text);display:block}
-.login-brand-sub{font-size:12px;color:var(--text3)}
-.login-title{font-size:22px;font-weight:700;color:var(--text);margin-bottom:6px}
-.login-sub{font-size:13px;color:var(--text3);margin-bottom:24px}
-.form-row{margin-bottom:14px}
-.form-label{font-size:12px;color:var(--text3);display:block;margin-bottom:5px;font-weight:500}
-.form-input{width:100%;padding:10px 13px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:13px;font-family:'Outfit',sans-serif;outline:none;transition:.15s}
-.form-input:focus{border-color:var(--blue)}
-.form-input::placeholder{color:var(--text3)}
-.login-btn{width:100%;padding:11px;border-radius:var(--radius);background:var(--blue);color:#fff;border:none;font-size:14px;font-weight:600;font-family:'Outfit',sans-serif;cursor:pointer;margin-top:6px;transition:.15s}
-.login-btn:hover{background:var(--blue2)}
+#login-wrap { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  min-height: 100vh; 
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+.login-card { 
+  background: #ffffff; 
+  border-radius: var(--radius-lg); 
+  padding: 48px; 
+  width: 440px; 
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.login-header { text-align: center; margin-bottom: 32px; }
+.login-logo-img { width: 64px; height: 64px; border-radius: 16px; margin-bottom: 16px; box-shadow: var(--shadow); }
+.login-title { font-size: 24px; font-weight: 800; color: var(--text-primary); margin-bottom: 8px; }
+.login-sub { color: var(--text-tertiary); font-size: 15px; }
 
-/* ── MODAL ── */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:200;backdrop-filter:blur(3px)}
-.modal{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg);padding:26px;width:460px;max-width:95vw}
-.modal-title{font-size:16px;font-weight:600;margin-bottom:18px;color:var(--text)}
-.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; font-size: 13px; font-weight: 600; color: var(--text-secondary); margin-bottom: 8px; }
+.form-input { 
+  width: 100%; 
+  padding: 12px 16px; 
+  border: 1px solid var(--border); 
+  border-radius: var(--radius-sm); 
+  font-size: 15px; 
+  transition: 0.2s;
+  background: #f9fafb;
+}
+.form-input:focus { background: #ffffff; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); outline: none; }
 
-/* ── ALERT ── */
-.alert{padding:11px 14px;border-radius:var(--radius);font-size:13px;margin-bottom:14px}
-.alert-success{background:var(--green-bg);color:var(--green);border:1px solid #1f4030}
-.alert-error{background:var(--red-bg);color:var(--red);border:1px solid #3d1515}
-.alert-info{background:var(--blue-bg);color:var(--blue);border:1px solid #1a2d50}
+/* ── MODALS ── */
+.modal-overlay { 
+  position: fixed; 
+  inset: 0; 
+  background: rgba(0,0,0,0.4); 
+  backdrop-filter: blur(4px); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  z-index: 1000;
+  animation: modalFade 0.2s ease-out;
+}
+@keyframes modalFade { from { opacity: 0; } to { opacity: 1; } }
+.modal { 
+  background: #ffffff; 
+  border-radius: var(--radius-lg); 
+  padding: 32px; 
+  width: 500px; 
+  max-width: 90vw; 
+  box-shadow: var(--shadow-lg);
+  transform: scale(1);
+  animation: modalSlide 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes modalSlide { from { transform: scale(0.9) translateY(20px); opacity: 0; } to { transform: scale(1) translateY(0); opacity: 1; } }
+.modal-title { font-size: 20px; font-weight: 700; margin-bottom: 24px; color: var(--text-primary); }
+.modal-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 32px; }
+
+/* ── ALERTS ── */
+.alert { padding: 12px 16px; border-radius: var(--radius-sm); font-size: 14px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border: 1px solid transparent; }
+.alert-success { background: var(--success-soft); color: var(--success); border-color: #d1fae5; }
+.alert-error { background: var(--danger-soft); color: var(--danger); border-color: #fee2e2; }
+.alert-info { background: var(--accent-soft); color: var(--accent); border-color: #e0e7ff; }
+
+.global-alert { 
+  position: fixed; 
+  top: 32px; 
+  right: 32px; 
+  z-index: 2000; 
+  min-width: 320px; 
+  box-shadow: var(--shadow-lg);
+  animation: alertIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes alertIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 
 /* ── MISC ── */
-.hidden{display:none!important}
-.section{display:none}
-.section.active{display:block}
-.empty-state{text-align:center;padding:40px 20px;color:var(--text3);font-size:13px}
-.empty-state .empty-icon{font-size:32px;margin-bottom:10px}
-.loading{text-align:center;padding:32px;color:var(--text3);font-size:13px}
-.global-alert{position:fixed;top:20px;right:24px;z-index:300;max-width:380px;animation:fadeIn .2s}
-@keyframes fadeIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.hidden { display: none !important; }
+.section { display: none; animation: sectionFade 0.3s ease-out; }
+.section.active { display: block; }
+@keyframes sectionFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* ── RESPONSIVE ── */
-@media(max-width:900px){
-  .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .two-col{grid-template-columns:1fr}
-  .sidebar{width:200px;min-width:200px}
-  .content{padding:20px 16px}
+.loading-spinner { 
+  width: 24px; height: 24px; border: 3px solid var(--accent-soft); border-top-color: var(--accent); 
+  border-radius: 50%; animation: spin 0.8s linear infinite; margin: 20px auto; 
 }
-@media(max-width:650px){
-  #app{flex-direction:column}
-  .sidebar{width:100%;min-width:unset;height:auto;flex-direction:row;flex-wrap:wrap}
-  .sb-nav{display:flex;flex-direction:row;overflow-x:auto;padding:6px}
-  .sb-section{display:none}
-  .stats-grid{grid-template-columns:1fr 1fr}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .two-col { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .sidebar { position: fixed; transform: translateX(-100%); transition: 0.3s; }
+  .sidebar.open { transform: translateX(0); }
+  .content { padding: 20px; }
+  .stats-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 
-<!-- ALERT GLOBAL -->
 <div id="global-alert" class="global-alert hidden"></div>
 
 <!-- LOGIN -->
 <div id="login-wrap">
   <div class="login-card">
-    <div class="login-logo">
-      <img src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg"
-           alt="Logo" onerror="this.style.display='none'">
-      <div>
-        <span class="login-brand">PREPA BEN CARSON</span>
-        <span class="login-brand-sub">panel de administración</span>
-      </div>
+    <div class="login-header">
+      <img class="login-logo-img" src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg" alt="Logo">
+      <h1 class="login-title">Administración</h1>
+      <p class="login-sub">Inicia sesión para gestionar la plataforma</p>
     </div>
-    <h1 class="login-title">acceso administrativo</h1>
-    <p class="login-sub">ingresa con tu cuenta de administrador</p>
     <div id="login-error" class="alert alert-error hidden"></div>
-    <div class="form-row">
-      <label class="form-label">correo electrónico</label>
-      <input class="form-input" type="email" id="l-email" placeholder="admin@bencarson.mx" autocomplete="email">
+    <div class="form-group">
+      <label class="form-label">Correo electrónico</label>
+      <input class="form-input" type="email" id="l-email" placeholder="admin@bencarson.com">
     </div>
-    <div class="form-row">
-      <label class="form-label">contraseña</label>
-      <input class="form-input" type="password" id="l-pass" placeholder="••••••••" autocomplete="current-password">
+    <div class="form-group">
+      <label class="form-label">Contraseña</label>
+      <input class="form-input" type="password" id="l-pass" placeholder="••••••••">
     </div>
-    <button class="login-btn" id="login-btn" onclick="doLogin()">ingresar al panel</button>
+    <button class="btn btn-primary" style="width:100%; padding:14px; font-size:15px; margin-top:10px" id="login-btn" onclick="doLogin()">Ingresar al Panel</button>
   </div>
 </div>
 
@@ -195,293 +410,293 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);font
   <!-- SIDEBAR -->
   <nav class="sidebar">
     <div class="sb-logo">
-      <img class="sb-logo-img" src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg" alt="Logo" onerror="this.style.display='none'">
-      <span class="sb-logo-name">Ben Carson</span>
-      <span class="sb-logo-sub">panel admin</span>
+      <img class="sb-logo-img" src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg" alt="Logo">
+      <div class="sb-logo-text">
+        <div class="sb-logo-name">Ben Carson</div>
+        <div class="sb-logo-sub">Panel Admin</div>
+      </div>
     </div>
+    
     <div class="sb-nav">
-      <div class="sb-section">principal</div>
+      <div class="sb-section">General</div>
       <button class="sb-item active" onclick="nav('dashboard',this)">
-        <span class="sb-icon">◈</span> resumen
+        <span class="sb-icon">📊</span> Resumen
       </button>
       <button class="sb-item" onclick="nav('usuarios',this)">
-        <span class="sb-icon">👤</span> usuarios
+        <span class="sb-icon">👥</span> Estudiantes
       </button>
-      <div class="sb-section">contenido</div>
+      
+      <div class="sb-section">Contenido</div>
       <button class="sb-item" onclick="nav('videoclases',this)">
-        <span class="sb-icon">▶</span> videoclases
+        <span class="sb-icon">🎥</span> Videoclases
       </button>
       <button class="sb-item" onclick="nav('mapas',this)">
-        <span class="sb-icon">🗺</span> mapas mentales
+        <span class="sb-icon">🗺️</span> Mapas Mentales
       </button>
-      <div class="sb-section">acceso</div>
+      
+      <div class="sb-section">Sistema</div>
       <button class="sb-item" onclick="nav('dispositivos',this)">
-        <span class="sb-icon">💻</span> dispositivos
+        <span class="sb-icon">📱</span> Dispositivos
       </button>
     </div>
+    
     <div class="sb-footer">
       <div class="sb-user">
         <div class="sb-avatar" id="sb-avatar">AD</div>
-        <div>
-          <div class="sb-uname" id="sb-uname">admin</div>
-          <div class="sb-urole">administrador</div>
+        <div class="sb-user-info">
+          <div class="sb-uname" id="sb-uname">Admin</div>
+          <div class="sb-urole">Administrador</div>
         </div>
-        <button class="sb-logout" onclick="doLogout()" title="cerrar sesión">✕</button>
+        <button class="sb-logout" onclick="doLogout()" title="Cerrar Sesión">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- CONTENIDO -->
+  <!-- MAIN CONTENT -->
   <main class="content">
-
-    <!-- ══ DASHBOARD ══ -->
+    
+    <!-- DASHBOARD -->
     <div id="s-dashboard" class="section active">
       <div class="topbar">
         <div>
-          <div class="page-title">resumen general</div>
-          <div class="page-sub">visión general de la plataforma · Prepa Ben Carson</div>
+          <h1 class="page-title">Resumen General</h1>
+          <p class="page-sub">Bienvenido de nuevo. Aquí tienes el estado actual de la plataforma.</p>
         </div>
-        <button class="btn" onclick="loadDashboard()">↻ actualizar</button>
+        <button class="btn" onclick="loadDashboard()">
+          <span>🔄</span> Actualizar
+        </button>
       </div>
+      
       <div class="stats-grid">
         <div class="stat-card blue">
-          <div class="stat-label">total usuarios</div>
-          <div class="stat-val" id="d-total">—</div>
-          <div class="stat-sub">estudiantes registrados</div>
+          <div class="stat-label">Estudiantes</div>
+          <div class="stat-val" id="d-total">0</div>
+          <div class="stat-sub"><span>👤</span> Registrados</div>
         </div>
         <div class="stat-card green">
-          <div class="stat-label">con dispositivo activo</div>
-          <div class="stat-val" id="d-devices">—</div>
-          <div class="stat-sub">acceso vinculado</div>
+          <div class="stat-label">Con Acceso</div>
+          <div class="stat-val" id="d-devices">0</div>
+          <div class="stat-sub"><span>✅</span> Dispositivo vinculado</div>
         </div>
         <div class="stat-card amber">
-          <div class="stat-label">videoclases</div>
-          <div class="stat-val" id="d-videos">—</div>
-          <div class="stat-sub">publicadas</div>
+          <div class="stat-label">Videoclases</div>
+          <div class="stat-val" id="d-videos">0</div>
+          <div class="stat-sub"><span>▶️</span> Publicadas</div>
         </div>
         <div class="stat-card purple">
-          <div class="stat-label">mapas mentales</div>
-          <div class="stat-val" id="d-mapas">—</div>
-          <div class="stat-sub">en intocables</div>
+          <div class="stat-label">Mapas Mentales</div>
+          <div class="stat-val" id="d-mapas">0</div>
+          <div class="stat-sub"><span>📍</span> Secc. Intocables</div>
         </div>
       </div>
+      
       <div class="two-col">
         <div class="card">
-          <div class="card-title">últimos registros</div>
-          <div id="d-recent"><div class="loading">cargando...</div></div>
+          <div class="card-title">Nuevos Estudiantes</div>
+          <div id="d-recent"><div class="loading-spinner"></div></div>
         </div>
         <div class="card">
-          <div class="card-title">contenido por materia</div>
-          <div id="d-materias"><div class="loading">cargando...</div></div>
+          <div class="card-title">Distribución por Materia</div>
+          <div id="d-materias"><div class="loading-spinner"></div></div>
         </div>
       </div>
     </div>
 
-    <!-- ══ USUARIOS ══ -->
+    <!-- USUARIOS -->
     <div id="s-usuarios" class="section">
       <div class="topbar">
         <div>
-          <div class="page-title">gestión de usuarios</div>
-          <div class="page-sub" id="u-sub">estudiantes registrados en la plataforma</div>
+          <h1 class="page-title">Estudiantes</h1>
+          <p class="page-sub" id="u-sub">Gestiona el acceso de los alumnos</p>
         </div>
-        <button class="btn btn-primary" onclick="openModal('m-add-user')">+ nuevo usuario</button>
+        <button class="btn btn-primary" onclick="openModal('m-add-user')">
+          <span>+</span> Registrar Estudiante
+        </button>
       </div>
       <div class="card">
         <div class="search-row">
-          <input class="search-input" id="u-search" placeholder="buscar por nombre o correo..." oninput="filterUsers()">
+          <input class="search-input" id="u-search" placeholder="Buscar por nombre o correo..." oninput="filterUsers()">
           <select class="filter-select" id="u-filter" onchange="filterUsers()">
-            <option value="">todos los estados</option>
-            <option value="con">con dispositivo</option>
-            <option value="sin">sin dispositivo</option>
+            <option value="">Todos los estados</option>
+            <option value="con">Con dispositivo</option>
+            <option value="sin">Sin dispositivo</option>
           </select>
         </div>
-        <div id="u-table"><div class="loading">cargando usuarios...</div></div>
+        <div class="tbl-wrap" id="u-table">
+          <div class="loading-spinner"></div>
+        </div>
       </div>
     </div>
 
-    <!-- ══ VIDEOCLASES ══ -->
+    <!-- VIDEOCLASES -->
     <div id="s-videoclases" class="section">
       <div class="topbar">
         <div>
-          <div class="page-title">videoclases</div>
-          <div class="page-sub" id="vc-sub">materiales audiovisuales de la plataforma</div>
+          <h1 class="page-title">Videoclases</h1>
+          <p class="page-sub" id="vc-sub">Material audiovisual del curso</p>
         </div>
-        <button class="btn btn-primary" onclick="openModal('m-add-video')">+ agregar videoclase</button>
+        <button class="btn btn-primary" onclick="openModal('m-add-video')">
+          <span>+</span> Nueva Videoclase
+        </button>
       </div>
       <div class="card">
         <div class="search-row">
-          <input class="search-input" id="vc-search" placeholder="buscar videoclase..." oninput="filterVideos()">
+          <input class="search-input" id="vc-search" placeholder="Buscar videoclase..." oninput="filterVideos()">
           <select class="filter-select" id="vc-mat-filter" onchange="filterVideos()">
-            <option value="">todas las materias</option>
+            <option value="">Todas las materias</option>
           </select>
         </div>
-        <div id="vc-table"><div class="loading">cargando videoclases...</div></div>
+        <div class="tbl-wrap" id="vc-table">
+          <div class="loading-spinner"></div>
+        </div>
       </div>
     </div>
 
-    <!-- ══ MAPAS MENTALES ══ -->
+    <!-- MAPAS MENTALES -->
     <div id="s-mapas" class="section">
       <div class="topbar">
         <div>
-          <div class="page-title">mapas mentales</div>
-          <div class="page-sub" id="mm-sub">sección intocables — conceptos clave del examen</div>
+          <h1 class="page-title">Mapas Mentales</h1>
+          <p class="page-sub" id="mm-sub">Sección "Intocables"</p>
         </div>
-        <button class="btn btn-primary" onclick="openModal('m-add-mapa')">+ agregar mapa</button>
+        <button class="btn btn-primary" onclick="openModal('m-add-mapa')">
+          <span>+</span> Agregar Mapa
+        </button>
       </div>
       <div class="card">
         <div class="search-row">
-          <input class="search-input" id="mm-search" placeholder="buscar mapa mental..." oninput="filterMapas()">
+          <input class="search-input" id="mm-search" placeholder="Buscar mapa..." oninput="filterMapas()">
           <select class="filter-select" id="mm-mat-filter" onchange="filterMapas()">
-            <option value="">todas las materias</option>
+            <option value="">Todas las materias</option>
           </select>
         </div>
-        <div id="mm-table"><div class="loading">cargando mapas mentales...</div></div>
+        <div class="tbl-wrap" id="mm-table">
+          <div class="loading-spinner"></div>
+        </div>
       </div>
     </div>
 
-    <!-- ══ DISPOSITIVOS ══ -->
+    <!-- DISPOSITIVOS -->
     <div id="s-dispositivos" class="section">
       <div class="topbar">
         <div>
-          <div class="page-title">control de dispositivos</div>
-          <div class="page-sub">gestiona el acceso por dispositivo de cada estudiante</div>
+          <h1 class="page-title">Control de Dispositivos</h1>
+          <p class="page-sub">Gestiona las sesiones activas</p>
         </div>
-        <button class="btn" onclick="loadDispositivos()">↻ actualizar</button>
+        <button class="btn" onclick="loadDispositivos()">🔄 Recargar</button>
       </div>
       <div class="card">
-        <div class="alert alert-info" style="margin-bottom:16px">
-          💡 cada estudiante puede tener máximo 2 dispositivos registrados. si perdió acceso, usa "resetear" para liberar sus slots.
+        <div class="alert alert-info">
+          <span>💡</span> Cada estudiante puede tener máximo 2 dispositivos. Usa "Resetear" para liberar slots.
         </div>
-        <div class="search-row">
-          <input class="search-input" id="dp-search" placeholder="buscar por ID de usuario..." oninput="filterDispositivos()">
+        <div class="search-row" style="margin-top:20px">
+          <input class="search-input" id="dp-search" placeholder="Buscar por ID de usuario..." oninput="filterDispositivos()">
         </div>
-        <div id="dp-table"><div class="loading">cargando dispositivos...</div></div>
+        <div class="tbl-wrap" id="dp-table">
+          <div class="loading-spinner"></div>
+        </div>
       </div>
     </div>
 
   </main>
 </div>
 
-<!-- ══ MODALES ══ -->
-
-<!-- Nuevo usuario -->
+<!-- MODALS -->
 <div id="m-add-user" class="modal-overlay hidden">
   <div class="modal">
-    <div class="modal-title">➕ nuevo usuario</div>
+    <h2 class="modal-title">Nuevo Estudiante</h2>
     <div id="mu-msg" class="hidden"></div>
-    <div class="form-row">
-      <label class="form-label">correo electrónico *</label>
-      <input class="form-input" id="mu-email" type="email" placeholder="estudiante@correo.com">
+    <div class="form-group">
+      <label class="form-label">Nombre Completo</label>
+      <input class="form-input" id="mu-name" type="text" placeholder="Ej: Juan Pérez">
     </div>
-    <div class="form-row">
-      <label class="form-label">contraseña temporal *</label>
-      <input class="form-input" id="mu-pass" type="text" placeholder="mínimo 6 caracteres">
+    <div class="form-group">
+      <label class="form-label">Correo electrónico *</label>
+      <input class="form-input" id="mu-email" type="email" placeholder="estudiante@bencarson.com">
     </div>
-    <div class="form-row">
-      <label class="form-label">nombre completo</label>
-      <input class="form-input" id="mu-name" type="text" placeholder="nombre del estudiante">
+    <div class="form-group">
+      <label class="form-label">Contraseña temporal *</label>
+      <input class="form-input" id="mu-pass" type="text" placeholder="Mínimo 6 caracteres">
     </div>
     <div class="modal-actions">
-      <button class="btn" onclick="closeModal('m-add-user')">cancelar</button>
-      <button class="btn btn-primary" id="mu-btn" onclick="crearUsuario()">crear usuario</button>
+      <button class="btn" onclick="closeModal('m-add-user')">Cancelar</button>
+      <button class="btn btn-primary" id="mu-btn" onclick="crearUsuario()">Registrar</button>
     </div>
   </div>
 </div>
 
-<!-- Nueva videoclase -->
 <div id="m-add-video" class="modal-overlay hidden">
   <div class="modal">
-    <div class="modal-title">▶ agregar videoclase</div>
+    <h2 class="modal-title">Agregar Videoclase</h2>
     <div id="mv-msg" class="hidden"></div>
-    <div class="form-row">
-      <label class="form-label">título *</label>
-      <input class="form-input" id="mv-titulo" placeholder="ej: Introducción a la Biología Celular">
+    <div class="form-group">
+      <label class="form-label">Título *</label>
+      <input class="form-input" id="mv-titulo" placeholder="Ej: Anatomía del Corazón">
     </div>
-    <div class="form-row">
-      <label class="form-label">materia *</label>
-      <input class="form-input" id="mv-materia" placeholder="ej: Biología">
+    <div class="form-group">
+      <label class="form-label">Materia *</label>
+      <input class="form-input" id="mv-materia" placeholder="Ej: Biología">
     </div>
-    <div class="form-row">
-      <label class="form-label">tema</label>
-      <input class="form-input" id="mv-tema" placeholder="ej: Células eucariotas">
+    <div class="form-group">
+      <label class="form-label">URL del video *</label>
+      <input class="form-input" id="mv-url" placeholder="YouTube, Vimeo o Bunny.net">
     </div>
-    <div class="form-row">
-      <label class="form-label">URL del video * (YouTube, Vimeo o Bunny.net)</label>
-      <input class="form-input" id="mv-url" placeholder="https://youtu.be/... o https://iframe.mediadelivery.net/...">
-    </div>
-    <div class="form-row">
-      <label class="form-label">URL miniatura (opcional)</label>
-      <input class="form-input" id="mv-miniatura" placeholder="https://...imagen.jpg">
-    </div>
-    <div class="form-row">
-      <label class="form-label">duración (opcional)</label>
-      <input class="form-input" id="mv-duracion" placeholder="ej: 12:30">
-    </div>
-    <div class="form-row">
-      <label class="form-label">descripción</label>
-      <input class="form-input" id="mv-desc" placeholder="breve descripción del contenido">
+    <div class="form-group">
+      <label class="form-label">Tema</label>
+      <input class="form-input" id="mv-tema" placeholder="Opcional">
     </div>
     <div class="modal-actions">
-      <button class="btn" onclick="closeModal('m-add-video')">cancelar</button>
-      <button class="btn btn-primary" onclick="crearVideo()">guardar videoclase</button>
+      <button class="btn" onclick="closeModal('m-add-video')">Cancelar</button>
+      <button class="btn btn-primary" onclick="crearVideo()">Guardar</button>
     </div>
   </div>
 </div>
 
-<!-- Nuevo mapa mental -->
 <div id="m-add-mapa" class="modal-overlay hidden">
   <div class="modal">
-    <div class="modal-title">🗺 agregar mapa mental</div>
+    <h2 class="modal-title">Agregar Mapa Mental</h2>
     <div id="mm-msg" class="hidden"></div>
-    <div class="form-row">
-      <label class="form-label">título *</label>
-      <input class="form-input" id="mm-titulo" placeholder="ej: Sistema Nervioso Central">
+    <div class="form-group">
+      <label class="form-label">Título *</label>
+      <input class="form-input" id="mm-titulo" placeholder="Ej: Ciclo de Krebs">
     </div>
-    <div class="form-row">
-      <label class="form-label">materia *</label>
-      <input class="form-input" id="mm-materia" placeholder="ej: Biología">
+    <div class="form-group">
+      <label class="form-label">Materia *</label>
+      <input class="form-input" id="mm-materia" placeholder="Ej: Bioquímica">
     </div>
-    <div class="form-row">
+    <div class="form-group">
       <label class="form-label">URL de la imagen *</label>
-      <input class="form-input" id="mm-url" placeholder="https://...imagen.jpg o URL de Supabase Storage">
-    </div>
-    <div class="form-row">
-      <label class="form-label">descripción (opcional)</label>
-      <input class="form-input" id="mm-desc" placeholder="descripción breve del mapa">
+      <input class="form-input" id="mm-url" placeholder="URL pública de la imagen">
     </div>
     <div class="modal-actions">
-      <button class="btn" onclick="closeModal('m-add-mapa')">cancelar</button>
-      <button class="btn btn-primary" onclick="crearMapa()">guardar mapa</button>
+      <button class="btn" onclick="closeModal('m-add-mapa')">Cancelar</button>
+      <button class="btn btn-primary" onclick="crearMapa()">Guardar</button>
     </div>
   </div>
 </div>
 
-<!-- Confirmar reset dispositivo -->
 <div id="m-reset-device" class="modal-overlay hidden">
   <div class="modal">
-    <div class="modal-title">💻 resetear dispositivos</div>
-    <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:6px">
-      ¿Confirmas resetear los dispositivos de <strong id="reset-name" style="color:var(--text)"></strong>?
-    </p>
-    <p style="font-size:12px;color:var(--text3);line-height:1.6">
-      El estudiante podrá registrar sus dispositivos de nuevo la próxima vez que inicie sesión.
-    </p>
+    <h2 class="modal-title">Resetear Dispositivos</h2>
+    <p style="color:var(--text-secondary); margin-bottom:12px">¿Confirmas resetear los dispositivos de <strong id="reset-name"></strong>?</p>
+    <p style="font-size:12px; color:var(--text-tertiary)">El estudiante podrá vincular nuevos dispositivos en su próximo inicio de sesión.</p>
     <div class="modal-actions">
-      <button class="btn" onclick="closeModal('m-reset-device')">cancelar</button>
-      <button class="btn btn-danger" onclick="confirmarReset()">sí, resetear</button>
+      <button class="btn" onclick="closeModal('m-reset-device')">Cancelar</button>
+      <button class="btn btn-danger" onclick="confirmarReset()">Sí, Resetear</button>
     </div>
   </div>
 </div>
 
-<!-- Confirmar eliminar -->
 <div id="m-delete-confirm" class="modal-overlay hidden">
   <div class="modal">
-    <div class="modal-title">⚠ confirmar eliminación</div>
-    <p style="font-size:13px;color:var(--text2);margin-bottom:6px" id="del-msg-text">¿Estás seguro de que quieres eliminar este registro?</p>
-    <p style="font-size:12px;color:var(--red)">esta acción no se puede deshacer.</p>
+    <h2 class="modal-title">Confirmar Eliminación</h2>
+    <p id="del-msg-text" style="color:var(--text-secondary); margin-bottom:12px"></p>
+    <p style="font-size:12px; color:var(--danger); font-weight:600">Esta acción no se puede deshacer.</p>
     <div class="modal-actions">
-      <button class="btn" onclick="closeModal('m-delete-confirm')">cancelar</button>
-      <button class="btn btn-danger" id="del-confirm-btn">eliminar</button>
+      <button class="btn" onclick="closeModal('m-delete-confirm')">Cancelar</button>
+      <button class="btn btn-danger" id="del-confirm-btn">Eliminar permanentemente</button>
     </div>
   </div>
 </div>
@@ -496,357 +711,400 @@ let adminUser=null;
 let allUsers=[],allVideos=[],allMapas=[],allDevices=[];
 let resetUserId=null,deleteCallback=null;
 
-// ── HELPERS ──
 function c(id){return document.getElementById(id)}
+
+// Helper para robustez en nombres de campos (ignora mayúsculas/minúsculas)
 function campo(obj,key){
   if(!obj)return '';
   const k=Object.keys(obj).find(k2=>k2.toLowerCase()===key.toLowerCase());
   return k?obj[k]:'';
 }
+
 function initials(str){return(str||'U').trim().substring(0,2).toUpperCase()}
+
 function fmtDate(d){
-  if(!d)return'—';
-  return new Date(d).toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'2-digit'});
+  if(!d)return '—';
+  const date = new Date(d);
+  return isNaN(date) ? '—' : date.toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'2-digit'});
 }
+
 function showAlert(msg,type='success'){
   const el=c('global-alert');
   el.className='global-alert alert alert-'+type;
-  el.textContent=msg;
+  el.innerHTML=`<span>${type==='success'?'✅':'❌'}</span> ${msg}`;
   el.classList.remove('hidden');
   clearTimeout(el._t);
-  el._t=setTimeout(()=>el.classList.add('hidden'),3500);
+  el._t=setTimeout(()=>el.classList.add('hidden'),4000);
 }
+
 function setModalMsg(id,msg,type){
   const el=c(id);
   el.className='alert alert-'+type;
-  el.textContent=msg;
+  el.innerHTML=`<span>${type==='success'?'✅':'⚠️'}</span> ${msg}`;
   el.classList.remove('hidden');
 }
+
 function clearModalMsg(id){c(id).classList.add('hidden');}
 
-// ── AUTH ──
+// AUTH
 async function doLogin(){
   const email=c('l-email').value.trim();
   const pass=c('l-pass').value;
   const errEl=c('login-error');
   errEl.classList.add('hidden');
-  if(!email||!pass){errEl.textContent='completa todos los campos';errEl.classList.remove('hidden');return;}
-  c('login-btn').textContent='verificando...';
-  c('login-btn').disabled=true;
-  const{data,error}=await getSB().auth.signInWithPassword({email,password:pass});
-  c('login-btn').textContent='ingresar al panel';
-  c('login-btn').disabled=false;
-  if(error){errEl.textContent='error: '+error.message;errEl.classList.remove('hidden');return;}
-  adminUser=data.user;
-  const ini=email.substring(0,2).toUpperCase();
-  c('sb-avatar').textContent=ini;
-  c('sb-uname').textContent=email.split('@')[0];
-  c('login-wrap').classList.add('hidden');
-  c('app').classList.remove('hidden');
-  loadDashboard();
+  if(!email||!pass){errEl.textContent='Ingresa correo y contraseña';errEl.classList.remove('hidden');return;}
+  
+  const btn = c('login-btn');
+  btn.textContent='Verificando...';
+  btn.disabled=true;
+  
+  try {
+    const {data,error} = await getSB().auth.signInWithPassword({email,password:pass});
+    if(error) throw error;
+    
+    adminUser=data.user;
+    c('sb-avatar').textContent=email.substring(0,2).toUpperCase();
+    c('sb-uname').textContent=email.split('@')[0];
+    c('login-wrap').classList.add('hidden');
+    c('app').classList.remove('hidden');
+    loadDashboard();
+  } catch(e) {
+    errEl.textContent='Error: '+e.message;
+    errEl.classList.remove('hidden');
+  } finally {
+    btn.textContent='Ingresar al Panel';
+    btn.disabled=false;
+  }
 }
+
 async function doLogout(){
   await getSB().auth.signOut();
   location.reload();
 }
+
 c('l-pass').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin()});
 
-// ── NAVEGACIÓN ──
+// NAVIGATION
 function nav(section,btn){
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   c('s-'+section).classList.add('active');
   document.querySelectorAll('.sb-item').forEach(b=>b.classList.remove('active'));
   if(btn)btn.classList.add('active');
-  if(section==='dashboard')loadDashboard();
-  if(section==='usuarios')loadUsers();
-  if(section==='videoclases')loadVideos();
-  if(section==='mapas')loadMapas();
-  if(section==='dispositivos')loadDispositivos();
+  
+  const loaders = {
+    dashboard: loadDashboard,
+    usuarios: loadUsers,
+    videoclases: loadVideos,
+    mapas: loadMapas,
+    dispositivos: loadDispositivos
+  };
+  if(loaders[section]) loaders[section]();
 }
+
 function openModal(id){c(id).classList.remove('hidden')}
-function closeModal(id){c(id).classList.add('hidden')}
+function closeModal(id){c(id).classList.add('hidden'); clearModalMsg(id.replace('m-','').split('-')[0]+'-msg');}
 
-// ── DASHBOARD ──
+// DASHBOARD
 async function loadDashboard(){
-  const client=getSB();
-  const[uRes,dRes,vRes,mRes]=await Promise.all([
-    client.from('profiles').select('id,created_at,full_name,email'),
-    client.from('user_devices').select('user_id,active_device_token'),
-    client.from('videoclases').select('id,MATERIA'),
-    client.from('mapas_mentales').select('id,MATERIA')
-  ]);
-  const users=uRes.data||[];
-  const devices=dRes.data||[];
-  const videos=vRes.data||[];
-  const mapas=mRes.data||[];
-  c('d-total').textContent=users.length;
-  c('d-devices').textContent=devices.filter(d=>d.active_device_token).length;
-  c('d-videos').textContent=videos.length;
-  c('d-mapas').textContent=mapas.length;
+  try {
+    const client=getSB();
+    const [uRes, dRes, vRes, mRes] = await Promise.all([
+      client.from('profiles').select('id,created_at,full_name,email'),
+      client.from('user_devices').select('user_id,active_device_token'),
+      client.from('videoclases').select('id,MATERIA'),
+      client.from('mapas_mentales').select('id,MATERIA')
+    ]);
 
-  // Últimos registros
-  const recent=[...users].sort((a,b)=>new Date(b.created_at)-new Date(a.created_at)).slice(0,6);
-  c('d-recent').innerHTML=recent.length?recent.map(u=>{
-    const name=u.full_name||u.email||u.id.substring(0,10);
-    return`<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)">
-      <div class="av">${initials(name)}</div>
-      <span style="flex:1;font-size:13px">${name}</span>
-      <span style="font-size:11px;color:var(--text3)">${fmtDate(u.created_at)}</span>
-    </div>`;
-  }).join(''):'<div class="empty-state">sin datos</div>';
+    const users = uRes.data || [];
+    const devices = dRes.data || [];
+    const videos = vRes.data || [];
+    const mapas = mRes.data || [];
 
-  // Materias
-  const mCount={};
-  [...videos,...mapas].forEach(r=>{
-    const m=(campo(r,'materia')||'sin materia').trim();
-    mCount[m]=(mCount[m]||0)+1;
-  });
-  const total=Object.values(mCount).reduce((a,b)=>a+b,0)||1;
-  const sorted=Object.entries(mCount).sort((a,b)=>b[1]-a[1]).slice(0,7);
-  c('d-materias').innerHTML=sorted.map(([mat,cnt])=>{
-    const pct=Math.round(cnt/total*100);
-    return`<div style="margin-bottom:12px">
-      <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px">
-        <span style="color:var(--text2)">${mat.toLowerCase()}</span>
-        <span style="color:var(--text3)">${cnt} recursos</span>
-      </div>
-      <div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div>
-    </div>`;
-  }).join('')||'<div class="empty-state">sin contenido aún</div>';
+    c('d-total').textContent = users.length;
+    c('d-devices').textContent = devices.filter(d=>d.active_device_token).length;
+    c('d-videos').textContent = videos.length;
+    c('d-mapas').textContent = mapas.length;
+
+    // Últimos registros
+    const recent = [...users].sort((a,b)=>new Date(b.created_at)-new Date(a.created_at)).slice(0,6);
+    c('d-recent').innerHTML = recent.length ? 
+      `<div class="tbl-wrap"><table class="tbl"><tbody>${recent.map(u=>{
+        const name = u.full_name || u.email || 'Usuario';
+        return `<tr>
+          <td><div class="av">${initials(name)}</div><strong>${name}</strong></td>
+          <td style="text-align:right"><span class="badge badge-primary">${fmtDate(u.created_at)}</span></td>
+        </tr>`;
+      }).join('')}</tbody></table></div>` 
+      : '<p style="text-align:center; padding:20px; color:var(--text-tertiary)">Sin registros recientes</p>';
+
+    // Materias
+    const mCount = {};
+    [...videos, ...mapas].forEach(r => {
+      const m = (campo(r, 'materia') || 'General').trim();
+      mCount[m] = (mCount[m] || 0) + 1;
+    });
+    const total = Object.values(mCount).reduce((a,b)=>a+b, 0) || 1;
+    const sorted = Object.entries(mCount).sort((a,b)=>b[1]-a[1]).slice(0,6);
+    
+    c('d-materias').innerHTML = sorted.length ? sorted.map(([mat,cnt])=>{
+      const pct = Math.round((cnt/total)*100);
+      return `<div style="margin-bottom:16px">
+        <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:13px">
+          <span style="font-weight:600">${mat}</span>
+          <span style="color:var(--text-tertiary)">${cnt} items</span>
+        </div>
+        <div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div>
+      </div>`;
+    }).join('') : '<p style="text-align:center; padding:20px; color:var(--text-tertiary)">Sin contenido</p>';
+
+  } catch(e) {
+    showAlert('Error al cargar dashboard: '+e.message, 'error');
+  }
 }
 
-// ── USUARIOS ──
+// USUARIOS
 async function loadUsers(){
-  const{data}=await getSB().from('profiles').select('*').order('created_at',{ascending:false});
+  const {data, error} = await getSB().from('profiles').select('*').order('created_at', {ascending:false});
+  if(error) return showAlert(error.message, 'error');
   allUsers=data||[];
-  c('u-sub').textContent=allUsers.length+' estudiantes registrados';
+  c('u-sub').textContent = allUsers.length + ' Estudiantes registrados';
   renderUsers(allUsers);
 }
+
 function filterUsers(){
-  const q=c('u-search').value.toLowerCase();
-  const f=c('u-filter').value;
-  let res=allUsers.filter(u=>{
-    const name=(u.full_name||u.nombre||'').toLowerCase();
-    const email=(u.email||'').toLowerCase();
-    return!q||name.includes(q)||email.includes(q);
+  const q = c('u-search').value.toLowerCase();
+  const f = c('u-filter').value;
+  const res = allUsers.filter(u=>{
+    const name = (u.full_name||u.nombre||'').toLowerCase();
+    const email = (u.email||'').toLowerCase();
+    return !q || name.includes(q) || email.includes(q);
   });
   renderUsers(res);
 }
+
 function renderUsers(list){
-  if(!list.length){c('u-table').innerHTML='<div class="empty-state"><div class="empty-icon">👤</div>ningún usuario encontrado</div>';return;}
-  c('u-table').innerHTML=`<table class="tbl">
-    <thead><tr>
-      <th>estudiante</th><th>correo</th><th>registro</th><th>acciones</th>
-    </tr></thead>
+  const container = c('u-table');
+  if(!list.length){ container.innerHTML='<div style="padding:40px; text-align:center; color:var(--text-tertiary)">No se encontraron estudiantes</div>'; return; }
+  
+  container.innerHTML = `<table class="tbl">
+    <thead><tr><th>Estudiante</th><th>Email</th><th>Registro</th><th style="text-align:right">Acciones</th></tr></thead>
     <tbody>${list.map(u=>{
-      const name=u.full_name||u.nombre||u.email||u.id.substring(0,10);
-      return`<tr>
-        <td><div class="av" style="display:inline-flex">${initials(name)}</div>${name}</td>
-        <td style="color:var(--text3)">${u.email||'—'}</td>
-        <td style="color:var(--text3)">${fmtDate(u.created_at)}</td>
-        <td>
-          <button class="btn btn-sm" onclick="abrirReset('${u.id}','${(name||'').replace(/'/g,'')}')">reset dispositivo</button>
+      const name = u.full_name || u.nombre || '—';
+      return `<tr>
+        <td><div class="av">${initials(name)}</div><strong>${name}</strong></td>
+        <td>${u.email||'—'}</td>
+        <td><span class="badge badge-primary">${fmtDate(u.created_at)}</span></td>
+        <td style="text-align:right">
+          <button class="btn btn-sm" onclick="abrirReset('${u.id}','${name.replace(/'/g,"")}')">Reset Device</button>
         </td>
       </tr>`;
     }).join('')}</tbody>
   </table>`;
 }
 
-// ── VIDEOCLASES ──
+// VIDEOCLASES
 async function loadVideos(){
-  const{data}=await getSB().from('videoclases').select('*').order('MATERIA',{ascending:true});
-  allVideos=data||[];
-  c('vc-sub').textContent=allVideos.length+' videoclases publicadas';
-  const mats=[...new Set(allVideos.map(v=>campo(v,'materia')).filter(Boolean))];
-  c('vc-mat-filter').innerHTML='<option value="">todas las materias</option>'+mats.map(m=>`<option value="${m}">${m.toLowerCase()}</option>`).join('');
+  const {data} = await getSB().from('videoclases').select('*').order('created_at', {ascending:false});
+  allVideos = data || [];
+  c('vc-sub').textContent = allVideos.length + ' Videoclases publicadas';
+  
+  const mats = [...new Set(allVideos.map(v=>campo(v,'materia')).filter(Boolean))];
+  c('vc-mat-filter').innerHTML = '<option value="">Todas las materias</option>' + mats.map(m=>`<option value="${m}">${m}</option>`).join('');
   renderVideos(allVideos);
 }
+
 function filterVideos(){
-  const q=c('vc-search').value.toLowerCase();
-  const m=c('vc-mat-filter').value;
+  const q = c('vc-search').value.toLowerCase();
+  const m = c('vc-mat-filter').value;
   renderVideos(allVideos.filter(v=>{
-    const t=(campo(v,'titulo')||'').toLowerCase();
-    const mat=campo(v,'materia')||'';
-    return(!q||t.includes(q))&&(!m||mat===m);
+    const t = (campo(v,'titulo')||'').toLowerCase();
+    const mat = campo(v,'materia')||'';
+    return (!q || t.includes(q)) && (!m || mat===m);
   }));
 }
+
 function renderVideos(list){
-  if(!list.length){c('vc-table').innerHTML='<div class="empty-state"><div class="empty-icon">▶</div>sin videoclases. usa el botón + para agregar.</div>';return;}
-  c('vc-table').innerHTML=`<table class="tbl">
-    <thead><tr><th>título</th><th>materia</th><th>tema</th><th>duración</th><th>acciones</th></tr></thead>
+  const container = c('vc-table');
+  if(!list.length){ container.innerHTML='<div style="padding:40px; text-align:center; color:var(--text-tertiary)">No hay videoclases</div>'; return; }
+  
+  container.innerHTML = `<table class="tbl">
+    <thead><tr><th>Título</th><th>Materia</th><th>Tema</th><th style="text-align:right">Acciones</th></tr></thead>
     <tbody>${list.map(v=>{
-      const titulo=campo(v,'titulo')||'sin título';
-      const mat=campo(v,'materia')||'—';
-      const tema=campo(v,'tema')||'—';
-      const dur=campo(v,'duracion')||'—';
-      const url=campo(v,'url_video')||'';
-      return`<tr>
-        <td style="max-width:200px"><span style="font-weight:500">${titulo}</span></td>
-        <td><span class="tag">${mat.toLowerCase()}</span></td>
-        <td style="color:var(--text3);font-size:12px">${tema}</td>
-        <td style="color:var(--text3)">${dur}</td>
-        <td style="display:flex;gap:6px;align-items:center">
-          ${url?`<a href="${url}" target="_blank" class="btn btn-sm">ver</a>`:''}
-          <button class="btn btn-sm" style="color:var(--red);border-color:var(--red)" onclick="pedirEliminar('videoclases','${v.id}','la videoclase «${titulo.substring(0,30)}»')">eliminar</button>
+      const tit = campo(v,'titulo')||'Sin título';
+      const mat = campo(v,'materia')||'—';
+      const url = campo(v,'url_video')||'';
+      return `<tr>
+        <td><strong>${tit}</strong></td>
+        <td><span class="tag">${mat}</span></td>
+        <td>${campo(v,'tema')||'—'}</td>
+        <td style="text-align:right">
+          <div style="display:flex; gap:8px; justify-content:flex-end">
+            ${url ? `<a href="${url}" target="_blank" class="btn btn-sm">Ver</a>` : ''}
+            <button class="btn btn-sm btn-danger" onclick="pedirEliminar('videoclases','${v.id}','${tit.replace(/'/g,"")}')">Eliminar</button>
+          </div>
         </td>
       </tr>`;
     }).join('')}</tbody>
   </table>`;
 }
 
-// ── MAPAS MENTALES ──
+// MAPAS MENTALES
 async function loadMapas(){
-  const{data}=await getSB().from('mapas_mentales').select('*').order('MATERIA',{ascending:true});
-  allMapas=data||[];
-  c('mm-sub').textContent=allMapas.length+' mapas mentales publicados';
-  const mats=[...new Set(allMapas.map(m=>campo(m,'materia')).filter(Boolean))];
-  c('mm-mat-filter').innerHTML='<option value="">todas las materias</option>'+mats.map(m=>`<option value="${m}">${m.toLowerCase()}</option>`).join('');
+  const {data} = await getSB().from('mapas_mentales').select('*').order('FECHA', {ascending:false});
+  allMapas = data || [];
+  c('mm-sub').textContent = allMapas.length + ' Mapas publicados';
+  
+  const mats = [...new Set(allMapas.map(m=>campo(m,'materia')).filter(Boolean))];
+  c('mm-mat-filter').innerHTML = '<option value="">Todas las materias</option>' + mats.map(m=>`<option value="${m}">${m}</option>`).join('');
   renderMapas(allMapas);
 }
+
 function filterMapas(){
-  const q=c('mm-search').value.toLowerCase();
-  const m=c('mm-mat-filter').value;
+  const q = c('mm-search').value.toLowerCase();
+  const m = c('mm-mat-filter').value;
   renderMapas(allMapas.filter(x=>{
-    const t=(campo(x,'titulo')||'').toLowerCase();
-    const mat=campo(x,'materia')||'';
-    return(!q||t.includes(q))&&(!m||mat===m);
+    const t = (campo(x,'titulo')||'').toLowerCase();
+    const mat = campo(x,'materia')||'';
+    return (!q || t.includes(q)) && (!m || mat===m);
   }));
 }
+
 function renderMapas(list){
-  if(!list.length){c('mm-table').innerHTML='<div class="empty-state"><div class="empty-icon">🗺</div>sin mapas mentales. usa + para agregar.</div>';return;}
-  c('mm-table').innerHTML=`<table class="tbl">
-    <thead><tr><th>título</th><th>materia</th><th>imagen</th><th>acciones</th></tr></thead>
+  const container = c('mm-table');
+  if(!list.length){ container.innerHTML='<div style="padding:40px; text-align:center; color:var(--text-tertiary)">No hay mapas mentales</div>'; return; }
+  
+  container.innerHTML = `<table class="tbl">
+    <thead><tr><th>Título</th><th>Materia</th><th style="text-align:right">Acciones</th></tr></thead>
     <tbody>${list.map(m=>{
-      const titulo=campo(m,'titulo')||'sin título';
-      const mat=campo(m,'materia')||'—';
-      const url=campo(m,'url_imagen')||campo(m,'url_image')||'';
-      return`<tr>
-        <td style="font-weight:500">${titulo}</td>
-        <td><span class="tag">${mat.toLowerCase()}</span></td>
-        <td>${url?`<a href="${url}" target="_blank" class="btn btn-sm">ver imagen</a>`:'—'}</td>
-        <td>
-          <button class="btn btn-sm" style="color:var(--red);border-color:var(--red)" onclick="pedirEliminar('mapas_mentales','${m.id}','el mapa «${titulo.substring(0,30)}»')">eliminar</button>
+      const tit = campo(m,'titulo')||'Sin título';
+      const url = campo(m,'url_imagen')||campo(m,'url_image')||'';
+      return `<tr>
+        <td><strong>${tit}</strong></td>
+        <td><span class="tag">${campo(m,'materia')||'—'}</span></td>
+        <td style="text-align:right">
+          <div style="display:flex; gap:8px; justify-content:flex-end">
+            ${url ? `<a href="${url}" target="_blank" class="btn btn-sm">Ver Imagen</a>` : ''}
+            <button class="btn btn-sm btn-danger" onclick="pedirEliminar('mapas_mentales','${m.id}','${tit.replace(/'/g,"")}')">Eliminar</button>
+          </div>
         </td>
       </tr>`;
     }).join('')}</tbody>
   </table>`;
 }
 
-// ── DISPOSITIVOS ──
+// DISPOSITIVOS
 async function loadDispositivos(){
-  const{data}=await getSB().from('user_devices').select('*').order('updated_at',{ascending:false});
-  allDevices=data||[];
+  const {data} = await getSB().from('user_devices').select('*').order('updated_at', {ascending:false});
+  allDevices = data || [];
   filterDispositivos();
 }
+
 function filterDispositivos(){
-  const q=c('dp-search').value.toLowerCase();
-  const f=allDevices.filter(d=>!q||d.user_id.toLowerCase().includes(q));
-  renderDispositivos(f);
+  const q = c('dp-search').value.toLowerCase();
+  renderDispositivos(allDevices.filter(d=> !q || d.user_id.toLowerCase().includes(q)));
 }
+
 function renderDispositivos(list){
-  if(!list.length){c('dp-table').innerHTML='<div class="empty-state"><div class="empty-icon">💻</div>sin datos de dispositivos</div>';return;}
-  c('dp-table').innerHTML=`<table class="tbl">
-    <thead><tr><th>usuario id</th><th>dispositivo 1</th><th>dispositivo 2</th><th>activo ahora</th><th>último acceso</th><th>acción</th></tr></thead>
+  const container = c('dp-table');
+  if(!list.length){ container.innerHTML='<div style="padding:40px; text-align:center; color:var(--text-tertiary)">Sin datos de dispositivos</div>'; return; }
+  
+  container.innerHTML = `<table class="tbl">
+    <thead><tr><th>Usuario ID</th><th>Disp. 1</th><th>Disp. 2</th><th>En Línea</th><th>Último Acceso</th><th style="text-align:right">Acción</th></tr></thead>
     <tbody>${list.map(d=>{
-      const s1=d.device_token?d.device_token.substring(0,10)+'…':'—';
-      const s2=d.device_token_2?d.device_token_2.substring(0,10)+'…':'<span style="color:var(--text3)">libre</span>';
-      const act=d.active_device_token?d.active_device_token.substring(0,10)+'…':'—';
-      const userId=d.user_id.substring(0,14)+'…';
-      return`<tr>
-        <td style="font-size:11px;color:var(--text3);font-family:monospace">${userId}</td>
-        <td style="font-size:12px;font-family:monospace">${s1}</td>
-        <td style="font-size:12px;font-family:monospace">${s2}</td>
-        <td><span class="badge badge-green" style="font-size:11px;font-family:monospace">${act}</span></td>
-        <td style="color:var(--text3)">${fmtDate(d.last_login||d.updated_at)}</td>
-        <td><button class="btn btn-sm" onclick="abrirReset('${d.user_id}','id: ${d.user_id.substring(0,8)}')">resetear</button></td>
+      const act = d.active_device_token ? `<span class="badge badge-success">Activo</span>` : `<span class="badge badge-warning">Inactivo</span>`;
+      return `<tr>
+        <td style="font-family:monospace; font-size:12px">${d.user_id.substring(0,8)}...</td>
+        <td style="font-size:12px">${d.device_token ? '✅' : '—'}</td>
+        <td style="font-size:12px">${d.device_token_2 ? '✅' : '—'}</td>
+        <td>${act}</td>
+        <td>${fmtDate(d.last_login || d.updated_at)}</td>
+        <td style="text-align:right">
+          <button class="btn btn-sm" onclick="abrirReset('${d.user_id}','ID: ${d.user_id.substring(0,8)}')">Resetear</button>
+        </td>
       </tr>`;
     }).join('')}</tbody>
   </table>`;
 }
 
-// ── CREAR USUARIO ──
+// CRUD ACTIONS
 async function crearUsuario(){
   const email=c('mu-email').value.trim();
   const pass=c('mu-pass').value;
   const name=c('mu-name').value.trim();
-  clearModalMsg('mu-msg');
-  if(!email||!pass){setModalMsg('mu-msg','correo y contraseña son obligatorios','error');return;}
-  if(pass.length<6){setModalMsg('mu-msg','la contraseña debe tener mínimo 6 caracteres','error');return;}
-  c('mu-btn').textContent='creando...';c('mu-btn').disabled=true;
-  const{data,error}=await getSB().auth.signUp({email,password:pass,options:{data:{full_name:name}}});
-  c('mu-btn').textContent='crear usuario';c('mu-btn').disabled=false;
-  if(error){setModalMsg('mu-msg','error: '+error.message,'error');return;}
-  setModalMsg('mu-msg','✓ usuario creado exitosamente','success');
-  c('mu-email').value='';c('mu-pass').value='';c('mu-name').value='';
-  setTimeout(()=>{closeModal('m-add-user');clearModalMsg('mu-msg');loadUsers();},1600);
+  if(!email||!pass){ setModalMsg('mu-msg','Completa los campos obligatorios','error'); return; }
+  
+  const btn = c('mu-btn');
+  btn.disabled=true; btn.textContent='Procesando...';
+  
+  const {data,error} = await getSB().auth.signUp({email,password:pass,options:{data:{full_name:name}}});
+  
+  if(error){ setModalMsg('mu-msg',error.message,'error'); btn.disabled=false; btn.textContent='Registrar'; }
+  else {
+    setModalMsg('mu-msg','Estudiante registrado correctamente','success');
+    setTimeout(()=>{ closeModal('m-add-user'); loadUsers(); }, 1500);
+  }
 }
 
-// ── CREAR VIDEOCLASE ──
 async function crearVideo(){
-  const titulo=c('mv-titulo').value.trim();
-  const materia=c('mv-materia').value.trim();
-  const url=c('mv-url').value.trim();
-  const tema=c('mv-tema').value.trim();
-  const mini=c('mv-miniatura').value.trim();
-  const dur=c('mv-duracion').value.trim();
-  const desc=c('mv-desc').value.trim();
-  clearModalMsg('mv-msg');
-  if(!titulo||!materia||!url){setModalMsg('mv-msg','título, materia y URL del video son obligatorios','error');return;}
-  const{error}=await getSB().from('videoclases').insert({
-    TITULO:titulo,MATERIA:materia,URL_VIDEO:url,
-    TEMA:tema||null,MINIATURA:mini||null,DURACION:dur||null,DESCRIPCION:desc||null,
-    created_at:new Date().toISOString()
-  });
-  if(error){setModalMsg('mv-msg','error: '+error.message,'error');return;}
-  setModalMsg('mv-msg','✓ videoclase agregada exitosamente','success');
-  ['mv-titulo','mv-materia','mv-url','mv-tema','mv-miniatura','mv-duracion','mv-desc'].forEach(id=>c(id).value='');
-  setTimeout(()=>{closeModal('m-add-video');clearModalMsg('mv-msg');loadVideos();},1600);
-}
-
-// ── CREAR MAPA MENTAL ──
-async function crearMapa(){
-  const titulo=c('mm-titulo').value.trim();
-  const materia=c('mm-materia').value.trim();
-  const url=c('mm-url').value.trim();
-  const desc=c('mm-desc').value.trim();
-  clearModalMsg('mm-msg');
-  if(!titulo||!materia||!url){setModalMsg('mm-msg','título, materia y URL son obligatorios','error');return;}
-  const{error}=await getSB().from('mapas_mentales').insert({
-    TITULO:titulo,MATERIA:materia,URL_IMAGEN:url,DESCRIPCION:desc||null,
-    FECHA:new Date().toISOString()
-  });
-  if(error){setModalMsg('mm-msg','error: '+error.message,'error');return;}
-  setModalMsg('mm-msg','✓ mapa mental agregado','success');
-  ['mm-titulo','mm-materia','mm-url','mm-desc'].forEach(id=>c(id).value='');
-  setTimeout(()=>{closeModal('m-add-mapa');clearModalMsg('mm-msg');loadMapas();},1600);
-}
-
-// ── ELIMINAR ──
-function pedirEliminar(tabla,id,nombre){
-  c('del-msg-text').textContent=`¿Eliminar ${nombre}?`;
-  deleteCallback=async()=>{
-    const{error}=await getSB().from(tabla).delete().eq('id',id);
-    closeModal('m-delete-confirm');
-    if(error){showAlert('error al eliminar: '+error.message,'error');return;}
-    showAlert('eliminado correctamente','success');
-    if(tabla==='videoclases')loadVideos();
-    if(tabla==='mapas_mentales')loadMapas();
+  const payload = {
+    TITULO: c('mv-titulo').value.trim(),
+    MATERIA: c('mv-materia').value.trim(),
+    URL_VIDEO: c('mv-url').value.trim(),
+    TEMA: c('mv-tema').value.trim() || null,
+    created_at: new Date().toISOString()
   };
-  c('del-confirm-btn').onclick=deleteCallback;
+  if(!payload.TITULO || !payload.MATERIA || !payload.URL_VIDEO) return setModalMsg('mv-msg','Campos obligatorios faltantes','error');
+  
+  const {error} = await getSB().from('videoclases').insert(payload);
+  if(error) setModalMsg('mv-msg', error.message, 'error');
+  else { setModalMsg('mv-msg','Videoclase guardada','success'); setTimeout(()=>{ closeModal('m-add-video'); loadVideos(); }, 1500); }
+}
+
+async function crearMapa(){
+  const payload = {
+    TITULO: c('mm-titulo').value.trim(),
+    MATERIA: c('mm-materia').value.trim(),
+    URL_IMAGEN: c('mm-url').value.trim(),
+    FECHA: new Date().toISOString()
+  };
+  if(!payload.TITULO || !payload.MATERIA || !payload.URL_IMAGEN) return setModalMsg('mm-msg','Campos obligatorios faltantes','error');
+  
+  const {error} = await getSB().from('mapas_mentales').insert(payload);
+  if(error) setModalMsg('mm-msg', error.message, 'error');
+  else { setModalMsg('mm-msg','Mapa guardado','success'); setTimeout(()=>{ closeModal('m-add-mapa'); loadMapas(); }, 1500); }
+}
+
+function pedirEliminar(tabla,id,nombre){
+  c('del-msg-text').innerHTML = `¿Estás seguro de eliminar <strong>${nombre}</strong>?`;
+  c('del-confirm-btn').onclick = async () => {
+    const {error} = await getSB().from(tabla).delete().eq('id',id);
+    closeModal('m-delete-confirm');
+    if(error) showAlert(error.message, 'error');
+    else { showAlert('Eliminado correctamente'); tabla==='videoclases'?loadVideos():loadMapas(); }
+  };
   openModal('m-delete-confirm');
 }
 
-// ── RESET DISPOSITIVOS ──
-function abrirReset(userId,name){
-  resetUserId=userId;
-  c('reset-name').textContent=name;
+function abrirReset(userId, name){
+  resetUserId = userId;
+  c('reset-name').textContent = name;
   openModal('m-reset-device');
 }
+
 async function confirmarReset(){
-  if(!resetUserId)return;
-  const{error}=await getSB().from('user_devices').delete().eq('user_id',resetUserId);
+  const {error} = await getSB().from('user_devices').delete().eq('user_id', resetUserId);
   closeModal('m-reset-device');
-  if(error){showAlert('error al resetear: '+error.message,'error');return;}
+  if(error) showAlert(error.message, 'error');
+  else { showAlert('Dispositivos reseteados'); loadDispositivos(); }
+}
+
+document.addEventListener('keydown', e => {
+  if(e.key==='Escape') document.querySelectorAll('.modal-overlay:not(.hidden)').forEach(m=>closeModal(m.id));
+});
+</script>
+</body>
+</html>
+Alert('error al resetear: '+error.message,'error');return;}
   showAlert('✓ dispositivos reseteados — el estudiante puede volver a registrarse','success');
   resetUserId=null;
   loadDispositivos();
