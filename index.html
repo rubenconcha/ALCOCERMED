@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prepa bencarson | propedeutico</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="login-active">
+
+    <!-- ══ PANTALLA DE LOGIN ══ -->
+    <div id="login-screen" class="login-screen">
+        <div class="login-bg-glow"></div>
+        <div class="login-bg-glow login-bg-glow-2"></div>
+
+        <div class="login-card">
+            <!-- Logo -->
+            <div class="login-logo-wrap">
+                <div class="login-logo-icon">
+                    <img src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg"
+                        alt="Logo Prepa Bencarson" class="login-logo-img"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="login-logo-fallback" style="display:none;">B</span>
+                </div>
+                <div class="login-brand-text">
+                    <span class="login-brand-pre">PREPARATORIA</span>
+                    <span class="login-brand-name">ben carson</span>
+                    <span class="login-brand-sub">propedéutico · panel académico</span>
+                </div>
+            </div>
+
+            <!-- Título -->
+            <div class="login-title-wrap">
+                <h1 class="login-title">bienvenido de vuelta</h1>
+                <p class="login-subtitle">ingresa con tus credenciales para acceder a tu plataforma</p>
+            </div>
+
+            <!-- Formulario -->
+            <form id="login-form" class="login-form" onsubmit="handleLogin(event)">
+                <div class="login-field">
+                    <label class="login-label" for="login-email">
+                        <i class="fas fa-envelope"></i> correo electrónico
+                    </label>
+                    <input type="email" id="login-email" class="login-input" placeholder="tu@correo.com" required
+                        autocomplete="email">
+                </div>
+
+                <div class="login-field">
+                    <label class="login-label" for="login-password">
+                        <i class="fas fa-lock"></i> contraseña
+                    </label>
+                    <div class="login-input-wrap">
+                        <input type="password" id="login-password" class="login-input" placeholder="••••••••" required
+                            autocomplete="current-password">
+                        <button type="button" class="login-eye-btn" onclick="togglePasswordVisibility()"
+                            title="mostrar/ocultar">
+                            <i class="fas fa-eye" id="login-eye-icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Error -->
+                <div id="login-error" class="login-error hidden">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="login-error-text">credenciales incorrectas</span>
+                </div>
+
+                <!-- Botón -->
+                <button type="submit" class="login-btn" id="login-btn">
+                    <span id="login-btn-text"><i class="fas fa-sign-in-alt"></i> ingresar</span>
+                    <span id="login-btn-loading" class="hidden">
+                        <i class="fas fa-spinner fa-spin"></i> verificando...
+                    </span>
+                </button>
+            </form>
+
+            <!-- Footer -->
+            <div class="login-footer">
+                <i class="fas fa-shield-alt"></i>
+                acceso exclusivo para estudiantes · prepa ben carson
+            </div>
+        </div>
+
+        <!-- Decoración flotante -->
+        <div class="login-deco login-deco-1"><i class="fas fa-heartbeat"></i></div>
+        <div class="login-deco login-deco-2"><i class="fas fa-dna"></i></div>
+        <div class="login-deco login-deco-3"><i class="fas fa-brain"></i></div>
+    </div>
+
+    <!-- Marca de agua global del sitio -->
+    <div class="watermark">prepa bencarson</div>
+
+    <!-- Botón hamburguesa MOBILE flotante (para abrir el sidebar cuando está cerrado) -->
+    <!-- Se muestra en la topbar del main content en mobile -->
+
+    <!-- Overlay oscuro al abrir el menú en mobile -->
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <nav class="sidebar" id="sidebar">
+
+        <!-- ══ HEADER DEL SIDEBAR ══ -->
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <img src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg"
+                        alt="Logo Prepa Bencarson" class="logo-img"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="logo-fallback" style="display:none;">B</span>
+                </div>
+                <div class="sidebar-logo-text">
+                    <span class="logo-pre">PREPARATORIA</span>
+                    <span class="logo-name">ben carson</span>
+                    <span class="logo-sub">propedéutico · panel académico</span>
+                </div>
+            </div>
+            <!-- Botón hamburguesa ÚNICO: cierra en mobile, colapsa en desktop -->
+            <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" onclick="handleSidebarToggle()" title="Menú">
+                <i class="fas fa-bars" id="sidebar-toggle-icon"></i>
+            </button>
+        </div>
+
+        <!-- ══ SESIÓN DE USUARIO ══ -->
+        <div class="user-session" id="user-session-block">
+            <div class="user-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="user-info">
+                <span class="user-name" id="sidebar-user-name">estudiante</span>
+                <span class="user-status"><i class="fas fa-circle status-dot"></i> sesión activa</span>
+            </div>
+            <button class="sidebar-logout-btn" onclick="handleLogout()" title="cerrar sesión">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+
+        <!-- ══ PANEL PRINCIPAL ══ -->
+        <div class="nav-section">
+            <span class="section-title">PANEL PRINCIPAL</span>
+            <ul class="nav-links">
+
+                <!-- Inicio -->
+                <li class="nav-item nav-item-simple" id="nav-inicio">
+                    <a href="#" onclick="goHome(); return false;" data-tooltip="inicio">
+                        <span class="nav-icon nav-icon-inicio">
+                            <i class="fas fa-house"></i>
+                        </span>
+                        <span class="nav-label">inicio</span>
+                    </a>
+                </li>
+
+                <!-- ── FLASHCARDS ── -->
+                <li class="nav-item">
+                    <a href="#" onclick="toggleFlashcards(); return false;" data-tooltip="flashcards">
+                        <span class="nav-icon nav-icon-anki">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M8 21h8M12 17v4" />
+                                <path d="M7 9h2l2 4 2-6 2 4h2" />
+                            </svg>
+                        </span>
+                        <span class="nav-label">flashcards</span>
+                        <i class="fas fa-chevron-right arrow" id="arrow-flashcards"></i>
+                    </a>
+
+                    <ul class="submenu" id="menu-flashcards">
+
+                        <li class="subject-item">
+                            <a href="#" onclick="toggleMenu('MORFOFUNCION'); return false;">
+                                <i class="fas fa-chevron-right arrow-sub" id="arrow-MORFOFUNCION"></i>
+                                <span>morfofuncion</span>
+                            </a>
+                            <ul class="submenu submenu-topics" id="menu-MORFOFUNCION"></ul>
+                        </li>
+
+                        <li class="subject-item">
+                            <a href="#" onclick="toggleMenu('BIOLOGIA CELULAR'); return false;">
+                                <i class="fas fa-chevron-right arrow-sub" id="arrow-BIOLOGIA-CELULAR"></i>
+                                <span>biología celular</span>
+                            </a>
+                            <ul class="submenu submenu-topics" id="menu-BIOLOGIA-CELULAR"></ul>
+                        </li>
+
+                        <li class="subject-item">
+                            <a href="#" onclick="toggleMenu('SALUD PUBLICA'); return false;">
+                                <i class="fas fa-chevron-right arrow-sub" id="arrow-SALUD-PUBLICA"></i>
+                                <span>salud pública</span>
+                            </a>
+                            <ul class="submenu submenu-topics" id="menu-SALUD-PUBLICA"></ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <!-- Videoclases -->
+                <li class="nav-item nav-item-simple" id="nav-videoclases">
+                    <a href="#" onclick="openVideoclases(); return false;" data-tooltip="videoclases">
+                        <span class="nav-icon nav-icon-video">
+                            <i class="fas fa-play-circle"></i>
+                        </span>
+                        <span class="nav-label">videoclases</span>
+                        <span class="nav-badge badge-new">NUEVO</span>
+                    </a>
+                </li>
+
+                <!-- Intocables -->
+                <li class="nav-item nav-item-simple" id="nav-intocables">
+                    <a href="#" onclick="openIntocables(); return false;" data-tooltip="intocables">
+                        <span class="nav-icon nav-icon-fire">
+                            <i class="fas fa-fire-alt"></i>
+                        </span>
+                        <span class="nav-label">intocables</span>
+                        <span class="nav-emoji">🔥</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- ══ EVALUACIÓN Y PRÁCTICA ══ -->
+        <div class="nav-section">
+            <span class="section-title">EVALUACIÓN Y PRÁCTICA</span>
+            <ul class="nav-links">
+
+                <li class="nav-item nav-item-simple" id="nav-banco">
+                    <a href="#" onclick="openBanco(); return false;" data-tooltip="banco de preguntas">
+                        <span class="nav-icon nav-icon-banco">
+                            <i class="fas fa-database"></i>
+                        </span>
+                        <span class="nav-label">banco de preguntas</span>
+                    </a>
+                </li>
+
+                <li class="nav-item nav-item-simple" id="nav-simulacro">
+                    <a href="#" onclick="openSimulacro(); return false;" data-tooltip="simulacros">
+                        <span class="nav-icon nav-icon-sim">
+                            <i class="fas fa-clipboard-list"></i>
+                        </span>
+                        <span class="nav-label">simulacros</span>
+                        <span class="nav-badge badge-new">NUEVO</span>
+                    </a>
+                </li>
+
+                <li class="nav-item nav-item-simple" id="nav-evaluacion">
+                    <a href="#" onclick="openEvaluacion(); return false;" data-tooltip="evaluación">
+                        <span class="nav-icon nav-icon-eval">
+                            <i class="fas fa-star"></i>
+                        </span>
+                        <span class="nav-label">evaluación</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- ══ JUEGOS ══ -->
+        <div class="nav-section">
+            <span class="section-title">JUEGOS</span>
+            <ul class="nav-links">
+
+                <li class="nav-item nav-item-simple">
+                    <a href="#" onclick="openGame('quiz'); return false;" data-tooltip="quiz relámpago">
+                        <span class="nav-icon nav-icon-quiz">
+                            <i class="fas fa-bolt"></i>
+                        </span>
+                        <span class="nav-label">quiz relámpago</span>
+                        <span class="nav-badge badge-game">JUGAR</span>
+                    </a>
+                </li>
+
+                <li class="nav-item nav-item-simple">
+                    <a href="#" onclick="openGame('hangman'); return false;" data-tooltip="ahorcado médico">
+                        <span class="nav-icon nav-icon-hang">
+                            <i class="fas fa-brain"></i>
+                        </span>
+                        <span class="nav-label">ahorcado médico</span>
+                        <span class="nav-badge badge-game">JUGAR</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- ══ MI PROGRESO ══ -->
+        <div class="nav-section progress-section">
+            <span class="section-title">MI PROGRESO</span>
+            <div class="progress-card">
+
+                <div class="progress-stats-row">
+                    <div class="prog-stat-box">
+                        <span class="prog-num" id="prog-repasos">0</span>
+                        <span class="prog-label">repasos</span>
+                    </div>
+                    <div class="prog-divider"></div>
+                    <div class="prog-stat-box">
+                        <span class="prog-num" id="prog-cards">0</span>
+                        <span class="prog-label">tarjetas</span>
+                    </div>
+                    <div class="prog-divider"></div>
+                    <div class="prog-stat-box">
+                        <span class="prog-num" id="prog-temas">0</span>
+                        <span class="prog-label">temas</span>
+                    </div>
+                </div>
+
+                <div class="prog-materia-row">
+                    <i class="fas fa-book-open prog-book-icon"></i>
+                    <span id="prog-materia-label">sin actividad aún</span>
+                </div>
+
+                <div class="prog-bar-wrap">
+                    <div class="prog-bar-fill" id="prog-bar"></div>
+                </div>
+                <div class="prog-bar-labels">
+                    <span id="prog-bar-text">0 / 0 tarjetas completadas</span>
+                    <span id="prog-pct">0%</span>
+                </div>
+
+            </div>
+
+            <!-- ══ META DIARIA ══ -->
+            <div class="daily-goal-card" id="daily-goal-card">
+                <div class="daily-goal-header">
+                    <div class="daily-goal-title-row">
+                        <i class="fas fa-fire daily-fire-icon"></i>
+                        <span class="daily-goal-title">meta diaria</span>
+                    </div>
+                    <span class="daily-goal-count">
+                        <span id="daily-done">0</span><span class="daily-sep">/</span><span
+                            id="daily-goal-num">20</span>
+                    </span>
+                </div>
+
+                <!-- Barra de progreso diario -->
+                <div class="daily-bar-track">
+                    <div class="daily-bar-fill" id="daily-bar-fill"></div>
+                    <div class="daily-bar-glow" id="daily-bar-glow"></div>
+                </div>
+
+                <!-- Mensaje motivacional -->
+                <p class="daily-goal-msg" id="daily-goal-msg">¡empieza tu sesión de hoy!</p>
+
+                <!-- Segmentos de hitos -->
+                <div class="daily-milestones">
+                    <div class="daily-milestone" id="ms-25">
+                        <div class="ms-dot"></div>
+                        <span>25%</span>
+                    </div>
+                    <div class="daily-milestone" id="ms-50">
+                        <div class="ms-dot"></div>
+                        <span>50%</span>
+                    </div>
+                    <div class="daily-milestone" id="ms-75">
+                        <div class="ms-dot"></div>
+                        <span>75%</span>
+                    </div>
+                    <div class="daily-milestone" id="ms-100">
+                        <div class="ms-dot"></div>
+                        <span>meta</span>
+                    </div>
+                </div>
+
+                <!-- Racha de días -->
+                <div class="daily-streak-row">
+                    <i class="fas fa-bolt streak-bolt"></i>
+                    <span class="streak-label"><span id="streak-count">0</span> días seguidos</span>
+                    <span class="streak-best" id="streak-best-wrap" style="display:none;">mejor: <span
+                            id="streak-best">0</span></span>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- ══ CONTENIDO PRINCIPAL ══ -->
+    <main class="main-content">
+        <!-- Barra superior MOBILE para abrir sidebar -->
+        <div class="mobile-topbar" id="mobile-topbar">
+            <button class="mobile-menu-btn" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="mobile-topbar-brand">
+                <div class="mobile-topbar-logo">
+                    <img src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg"
+                        alt="Logo" class="logo-img"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="logo-fallback" style="display:none;">B</span>
+                </div>
+                <span class="mobile-topbar-name">preparatoria ben carson</span>
+            </div>
+        </div>
+        <header class="top-stats">
+            <div class="stat-box">
+                <span class="st-label">asignatura:</span>
+                <span id="current-subject" class="st-val">---</span>
+            </div>
+            <div class="stat-box">
+                <span class="st-label">repasos:</span>
+                <span id="repasos-count" class="st-val">0</span>
+            </div>
+        </header>
+
+        <!-- ══ PANTALLA INICIO ══ -->
+        <section id="home-screen" class="home-screen">
+            <div class="home-hero">
+                <div class="home-hero-text">
+                    <h1 class="home-title">bienvenido al<br><span class="home-title-accent">propedéutico</span></h1>
+                    <p class="home-subtitle">tu plataforma de estudio para medicina · prepa ben carson</p>
+                </div>
+                <div class="home-hero-art">
+                    <div class="hero-icon-ring">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjetas de acceso rápido -->
+            <div class="home-grid">
+
+                <div class="home-card home-card-orange" onclick="toggleFlashcards()">
+                    <div class="hc-icon"><i class="fas fa-layer-group"></i></div>
+                    <div class="hc-body">
+                        <h3>flashcards</h3>
+                        <p>repasa con la técnica alcocer · sistema spaced repetition</p>
+                    </div>
+                    <i class="fas fa-arrow-right hc-arrow"></i>
+                </div>
+
+                <div class="home-card home-card-purple" onclick="openGame('quiz')">
+                    <div class="hc-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="hc-body">
+                        <h3>quiz relámpago</h3>
+                        <p>pon a prueba tus conocimientos con preguntas cronometradas</p>
+                    </div>
+                    <i class="fas fa-arrow-right hc-arrow"></i>
+                </div>
+
+                <div class="home-card home-card-green" onclick="openGame('hangman')">
+                    <div class="hc-icon"><i class="fas fa-brain"></i></div>
+                    <div class="hc-body">
+                        <h3>ahorcado médico</h3>
+                        <p>adivina términos de biología celular y morfofunción</p>
+                    </div>
+                    <i class="fas fa-arrow-right hc-arrow"></i>
+                </div>
+
+                <div class="home-card home-card-blue" onclick="openBanco()">
+                    <div class="hc-icon"><i class="fas fa-database"></i></div>
+                    <div class="hc-body">
+                        <h3>banco de preguntas</h3>
+                        <p>practica con preguntas tipo examen · selecciona materia y tema</p>
+                    </div>
+                    <i class="fas fa-arrow-right hc-arrow"></i>
+                </div>
+
+                <div class="home-card home-card-sim" onclick="openSimulacro()">
+                    <div class="hc-icon"><i class="fas fa-stopwatch"></i></div>
+                    <div class="hc-body">
+                        <h3>simulacro</h3>
+                        <p>examen cronometrado tipo admisión · sin ver respuestas hasta finalizar</p>
+                    </div>
+                    <i class="fas fa-arrow-right hc-arrow"></i>
+                </div>
+
+                <div class="home-card home-card-eval" onclick="openEvaluacion()">
+                    <div class="hc-icon"><i class="fas fa-chart-bar"></i></div>
+                    <div class="hc-body">
+                        <h3>mis evaluaciones</h3>
+                        <p>revisa tus resultados y retroalimentación pregunta a pregunta</p>
+                    </div>
+                    <i class="fas fa-arrow-right hc-arrow"></i>
+                </div>
+
+                <div class="home-card home-card-video" onclick="openVideoclases()">
+                    <div class="hc-icon"><i class="fas fa-play-circle"></i></div>
+                    <div class="hc-body">
+                        <h3>videoclases</h3>
+                        <p>clases grabadas por materia · repasa cuando quieras</p>
+                    </div>
+                    <i class="fas fa-arrow-right hc-arrow"></i>
+                </div>
+
+                <div class="home-card home-card-fire" onclick="openIntocables()">
+                    <div class="hc-icon"><i class="fas fa-fire-alt"></i></div>
+                    <div class="hc-body">
+                        <h3>intocables 🔥</h3>
+                        <p>los temas que siempre caen · mapas mentales esenciales</p>
+                    </div>
+                    <i class="fas fa-arrow-right hc-arrow"></i>
+                </div>
+
+            </div>
+
+            <!-- Sección materias -->
+            <div class="home-subjects">
+                <h2 class="home-section-title"><i class="fas fa-book-medical"></i> materias disponibles</h2>
+                <div class="subjects-row">
+                    <div class="subject-chip subject-morf" onclick="quickStartSubject('MORFOFUNCION')">
+                        <i class="fas fa-lungs"></i>
+                        <span>morfofunción</span>
+                    </div>
+                    <div class="subject-chip subject-bio" onclick="quickStartSubject('BIOLOGIA CELULAR')">
+                        <i class="fas fa-dna"></i>
+                        <span>biología celular</span>
+                    </div>
+                    <div class="subject-chip subject-salud" onclick="quickStartSubject('SALUD PUBLICA')">
+                        <i class="fas fa-hospital"></i>
+                        <span>salud pública</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats de sesión -->
+            <div class="home-session-stats">
+                <h2 class="home-section-title"><i class="fas fa-chart-line"></i> sesión de hoy</h2>
+                <div class="session-stats-grid">
+                    <div class="ss-box">
+                        <i class="fas fa-redo ss-icon"></i>
+                        <span class="ss-num" id="home-repasos">0</span>
+                        <span class="ss-label">repasos</span>
+                    </div>
+                    <div class="ss-box">
+                        <i class="fas fa-cards-blank ss-icon" style="font-family:'Font Awesome 6 Free';"></i>
+                        <i class="fas fa-clone ss-icon"></i>
+                        <span class="ss-num" id="home-cards">0</span>
+                        <span class="ss-label">tarjetas</span>
+                    </div>
+                    <div class="ss-box">
+                        <i class="fas fa-bookmark ss-icon"></i>
+                        <span class="ss-num" id="home-temas">0</span>
+                        <span class="ss-label">temas vistos</span>
+                    </div>
+                    <div class="ss-box">
+                        <i class="fas fa-gamepad ss-icon"></i>
+                        <span class="ss-num" id="home-games">0</span>
+                        <span class="ss-label">juegos jugados</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips del día -->
+            <div class="home-tip-card">
+                <div class="tip-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="tip-body">
+                    <h4>consejo de estudio</h4>
+                    <p id="tip-text">carga el contenido para ver un consejo de hoy...</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ══ ÁREA FLASHCARDS ══ -->
+        <section id="study-area" class="study-area hidden">
+
+            <!-- Header con botón volver -->
+            <div class="study-area-header">
+                <button class="btn-back-game" onclick="goHome()">
+                    <i class="fas fa-arrow-left"></i> volver
+                </button>
+                <h2 class="study-area-title">
+                    <i class="fas fa-layer-group"></i> flashcards
+                </h2>
+            </div>
+
+            <div class="card-container">
+                <div class="card" id="card">
+                    <div class="face front">
+                        <div class="card-watermark">técnica alcocer</div>
+                        <span class="card-tag" id="card-tema-name">tema</span>
+                        <div class="text-inner">
+                            <p id="q-text"></p>
+                        </div>
+                    </div>
+                    <div class="face back">
+                        <div class="card-watermark">técnica alcocer</div>
+                        <div class="text-inner back-text">
+                            <p id="a-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-counter">
+                tarjeta <span id="card-num">1</span> de <span id="card-total">0</span>
+            </div>
+
+            <div class="action-zone">
+                <button id="btn-reveal" class="btn-primary">revelar respuesta</button>
+
+                <div id="anki-buttons" class="anki-wrapper hidden">
+                    <div class="anki-rating-row">
+                        <button class="btn-anki yellow-intense" onclick="rateCard(0)">otra vez</button>
+                        <button class="btn-anki red-intense" onclick="rateCard(1)">difícil</button>
+                        <button class="btn-anki gold-intense" onclick="rateCard(2)">bien</button>
+                        <button class="btn-anki blue-intense" onclick="rateCard(3)">fácil</button>
+                    </div>
+                    <div class="nav-row">
+                        <button class="btn-nav btn-nav-left" onclick="prevCard()">
+                            <i class="fas fa-arrow-left"></i> atrás
+                        </button>
+                        <button class="btn-nav btn-nav-right" onclick="goNextCard()">
+                            siguiente <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ JUEGO: QUIZ RELÁMPAGO ══ -->
+        <section id="game-quiz" class="game-section hidden">
+            <div class="game-header">
+                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <h2><i class="fas fa-bolt"></i> quiz relámpago</h2>
+            </div>
+            <div class="quiz-wrapper">
+                <div class="quiz-top-bar">
+                    <div class="quiz-score-box"><i class="fas fa-star"></i> <span id="quiz-score">0</span> pts</div>
+                    <div class="quiz-timer-box" id="quiz-timer-box">
+                        <i class="fas fa-clock"></i> <span id="quiz-timer">15</span>s
+                    </div>
+                    <div class="quiz-q-count"><span id="quiz-qnum">1</span> / <span id="quiz-qtotal">10</span></div>
+                </div>
+                <div class="quiz-question-card">
+                    <p class="quiz-subject-tag" id="quiz-subject-tag">biología celular</p>
+                    <p class="quiz-question-text" id="quiz-question-text">cargando pregunta...</p>
+                </div>
+                <div class="quiz-options" id="quiz-options"></div>
+                <div id="quiz-feedback" class="quiz-feedback hidden"></div>
+                <div id="quiz-result" class="quiz-result hidden">
+                    <div class="quiz-result-inner">
+                        <div class="result-emoji" id="result-emoji">🎉</div>
+                        <h3 id="result-title">¡excelente!</h3>
+                        <p id="result-score-text"></p>
+                        <button class="btn-primary" onclick="startQuiz()" style="margin-top:20px;">jugar de
+                            nuevo</button>
+                        <button class="btn-back-game" onclick="goHome()"
+                            style="margin-top:10px;display:block;text-align:center;">volver al inicio</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ BANCO DE PREGUNTAS ══ -->
+        <section id="banco-screen" class="banco-section hidden">
+
+            <!-- PANTALLA 1: Selector de materia/tema -->
+            <div id="banco-selector">
+                <div class="banco-header">
+                    <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                    <div>
+                        <h2 class="banco-title"><i class="fas fa-database"></i> banco de preguntas</h2>
+                        <p class="banco-subtitle">selecciona la materia y el tema para comenzar</p>
+                    </div>
+                </div>
+
+                <div class="banco-config-card">
+                    <div class="banco-selects-row">
+                        <div class="banco-select-group">
+                            <label class="banco-select-label"><i class="fas fa-book-medical"></i> materia</label>
+                            <div class="banco-custom-select">
+                                <button class="banco-select-btn" id="banco-materia-btn"
+                                    onclick="toggleBancoDropdown('materia')">
+                                    <span id="banco-materia-text">seleccionar materia</span>
+                                    <i class="fas fa-chevron-down" id="banco-materia-arrow"></i>
+                                </button>
+                                <div class="banco-dropdown hidden" id="banco-materia-dropdown">
+                                    <div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando
+                                        materias...</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="banco-select-group">
+                            <label class="banco-select-label"><i class="fas fa-tag"></i> tema</label>
+                            <div class="banco-custom-select">
+                                <button class="banco-select-btn banco-select-disabled" id="banco-tema-btn"
+                                    onclick="toggleBancoDropdown('tema')">
+                                    <span id="banco-tema-text">primero selecciona una materia</span>
+                                    <i class="fas fa-chevron-down" id="banco-tema-arrow"></i>
+                                </button>
+                                <div class="banco-dropdown hidden" id="banco-tema-dropdown"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Fila de dificultad — ocupa ancho completo -->
+                    <div class="banco-dificultad-row">
+                        <label class="banco-select-label"><i class="fas fa-layer-group"></i> nivel de dificultad</label>
+                        <div class="banco-dificultad-btns" id="banco-dificultad-btns">
+                            <button class="banco-dif-btn banco-dif-active" id="banco-dif-todos" onclick="selectBancoDificultad(null)">
+                                <i class="fas fa-th"></i> todos
+                            </button>
+                            <button class="banco-dif-btn banco-dif-facil" id="banco-dif-facil" onclick="selectBancoDificultad('facil')">
+                                <i class="fas fa-seedling"></i> fácil
+                            </button>
+                            <button class="banco-dif-btn banco-dif-medio" id="banco-dif-medio" onclick="selectBancoDificultad('medio')">
+                                <i class="fas fa-fire"></i> medio
+                            </button>
+                            <button class="banco-dif-btn banco-dif-dificil" id="banco-dif-dificil" onclick="selectBancoDificultad('dificil')">
+                                <i class="fas fa-skull-crossbones"></i> difícil
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="banco-config-summary" id="banco-config-summary">
+                        <div class="banco-summary-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>se mostrarán hasta <strong id="banco-count-display">—</strong> preguntas en orden
+                                aleatorio</span>
+                        </div>
+                        <div class="banco-summary-item hidden" id="banco-summary-filter-row">
+                            <i class="fas fa-filter"></i>
+                            <span id="banco-summary-filter-text">—</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary banco-start-btn" id="banco-start-btn" onclick="startBanco()" disabled>
+                        <i class="fas fa-play"></i> iniciar banco de preguntas
+                    </button>
+                </div>
+
+                <!-- PANEL: Preguntas que más te cuestan -->
+                <div class="banco-dificiles-panel" id="banco-dificiles-panel">
+                    <div class="banco-dificiles-header">
+                        <div class="banco-dificiles-title-row">
+                            <div class="banco-dificiles-icon"><i class="fas fa-brain"></i></div>
+                            <div>
+                                <h3 class="banco-dificiles-title">tu seguimiento personalizado</h3>
+                                <p class="banco-dificiles-subtitle">preguntas que más te han costado responder</p>
+                            </div>
+                        </div>
+                        <button class="banco-dificiles-practica-btn" id="banco-dificiles-practica-btn" onclick="practicarPreguntasDificiles()" style="display:none">
+                            <i class="fas fa-dumbbell"></i> practicar estas preguntas
+                        </button>
+                    </div>
+                    <div id="banco-dificiles-loading" class="banco-dificiles-state">
+                        <i class="fas fa-spinner fa-spin"></i> cargando tu historial...
+                    </div>
+                    <div id="banco-dificiles-empty" class="banco-dificiles-state hidden">
+                        <div style="font-size:2rem;">🎯</div>
+                        <p style="color:rgba(255,255,255,0.7);font-weight:600;margin:0;">¡tu seguimiento empieza aquí!</p>
+                        <p style="color:rgba(255,255,255,0.4);font-size:0.78rem;margin:0;line-height:1.6;">
+                            Responde preguntas del banco y este panel irá<br>
+                            registrando automáticamente cuáles te cuestan más.<br>
+                            <span style="color:rgba(255,255,255,0.25);">Se necesitan al menos 2 intentos por pregunta.</span>
+                        </p>
+                    </div>
+                    <div id="banco-dificiles-list" class="banco-dificiles-list hidden"></div>
+                </div>
+
+            </div>
+
+            <!-- PANTALLA 2: Preguntas -->
+            <div id="banco-quiz" class="hidden">
+                <div class="banco-quiz-header">
+                    <button class="btn-back-game" onclick="exitBanco()"><i class="fas fa-arrow-left"></i> salir</button>
+                    <div class="banco-quiz-meta">
+                        <span class="banco-meta-materia" id="bq-materia">—</span>
+                        <span class="banco-meta-sep">·</span>
+                        <span class="banco-meta-tema" id="bq-tema">—</span>
+                    </div>
+                    <div class="banco-quiz-counter">
+                        <span class="bq-num" id="bq-num">1</span>
+                        <span class="bq-sep">/</span>
+                        <span class="bq-total" id="bq-total">0</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de pregunta -->
+                <div class="bq-question-card">
+                    <div class="bq-question-meta">
+                        <span class="bq-dificultad-label">dificultad:</span>
+                        <div class="bq-dificultad-dots" id="bq-dificultad"></div>
+                        <span class="bq-num-badge" id="bq-num-badge">N° 1</span>
+                    </div>
+                    <div class="bq-question-bar"></div>
+                    <p class="bq-question-text" id="bq-question-text">cargando pregunta...</p>
+                </div>
+
+                <!-- Opciones tipo MIR -->
+                <div class="bq-options" id="bq-options"></div>
+
+                <!-- Comentario (visible tras responder) -->
+                <div class="bq-comentario-wrap hidden" id="bq-comentario-wrap">
+                    <button class="bq-comentario-toggle" onclick="toggleComentario()">
+                        <i class="fas fa-comment-medical"></i>
+                        <span>comentario</span>
+                        <i class="fas fa-chevron-down" id="bq-comentario-arrow"></i>
+                    </button>
+                    <div class="bq-comentario-body hidden" id="bq-comentario-body">
+                        <p id="bq-comentario-text">sin comentario para esta pregunta.</p>
+                    </div>
+                </div>
+
+                <!-- Navegación círculos estilo MIR -->
+                <div class="bq-nav-section">
+                    <h4 class="bq-nav-title"><i class="fas fa-th"></i> preguntas</h4>
+                    <div class="bq-circles" id="bq-circles"></div>
+                </div>
+
+                <!-- Botones nav -->
+                <div class="bq-bottom-nav">
+                    <button class="bq-btn-prev" id="bq-btn-prev" onclick="bqNavigate(-1)">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button class="bq-btn-next" id="bq-btn-next" onclick="bqNavigate(1)">
+                        siguiente <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="bq-btn-finish" onclick="finalizarBanco()">
+                        <i class="fas fa-flag-checkered"></i> finalizar
+                    </button>
+                </div>
+
+                <!-- Resultado final -->
+                <div id="bq-result" class="bq-result hidden">
+                    <div class="bq-result-inner">
+                        <div class="bq-result-emoji" id="bq-result-emoji">🎉</div>
+                        <h3 id="bq-result-title">¡banco completado!</h3>
+                        <p id="bq-result-score"></p>
+                        <div class="bq-result-stats">
+                            <div class="bq-rs-box bq-rs-correct">
+                                <i class="fas fa-check"></i>
+                                <span id="bq-rs-correct">0</span>
+                                <label>correctas</label>
+                            </div>
+                            <div class="bq-rs-box bq-rs-wrong">
+                                <i class="fas fa-times"></i>
+                                <span id="bq-rs-wrong">0</span>
+                                <label>incorrectas</label>
+                            </div>
+                            <div class="bq-rs-box bq-rs-pending">
+                                <i class="fas fa-minus"></i>
+                                <span id="bq-rs-pending">0</span>
+                                <label>sin responder</label>
+                            </div>
+                        </div>
+                        <button class="btn-primary" onclick="openBanco()" style="margin-top:24px;"><i
+                                class="fas fa-redo"></i> nuevo banco</button>
+                        <button class="btn-back-game" onclick="goHome()"
+                            style="margin-top:10px;display:block;text-align:center;">volver al inicio</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ══ SIMULACRO ══ -->
+        <section id="simulacro-screen" class="simulacro-section hidden">
+
+            <!-- SUB-PANTALLA 1: Configuración -->
+            <div id="sim-config">
+                <div class="sim-header">
+                    <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                    <div>
+                        <h2 class="sim-title"><i class="fas fa-stopwatch"></i> simulacro</h2>
+                        <p class="sim-subtitle">configura tu examen cronometrado tipo admisión</p>
+                    </div>
+                </div>
+
+                <div class="sim-config-grid">
+
+                    <!-- Modo de simulacro -->
+                    <div class="sim-config-card">
+                        <h3 class="sim-config-section-title"><i class="fas fa-sliders-h"></i> modo de examen</h3>
+                        <div class="sim-mode-grid">
+                            <button class="sim-mode-btn sim-mode-active" id="sim-mode-oficial"
+                                onclick="setSimMode('oficial')">
+                                <i class="fas fa-file-invoice"></i>
+                                <span>examen oficial</span>
+                                <small>simulacros cargados</small>
+                            </button>
+                            <button class="sim-mode-btn" id="sim-mode-completo" onclick="setSimMode('completo')">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>aleatorio</span>
+                                <small>todas las materias</small>
+                            </button>
+                        </div>
+
+                        <!-- Selector Examen Oficial -->
+                        <div id="sim-oficial-group" class="sim-materia-group">
+                            <label class="banco-select-label"><i class="fas fa-clipboard-check"></i> seleccionar
+                                examen</label>
+                            <div class="banco-custom-select">
+                                <button class="banco-select-btn" id="sim-oficial-btn"
+                                    onclick="toggleSimOficialDropdown()">
+                                    <span id="sim-oficial-text">cargando exámenes...</span>
+                                    <i class="fas fa-chevron-down" id="sim-oficial-arrow"></i>
+                                </button>
+                                <div class="banco-dropdown hidden" id="sim-oficial-dropdown">
+                                    <div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Selector materia (oculto por defecto) -->
+                        <div id="sim-materia-group" class="sim-materia-group hidden">
+                            <label class="banco-select-label"><i class="fas fa-book-medical"></i> filtrar por
+                                materia</label>
+                            <div class="banco-custom-select">
+                                <button class="banco-select-btn" id="sim-materia-btn" onclick="toggleSimDropdown()">
+                                    <span id="sim-materia-text">seleccionar materia</span>
+                                    <i class="fas fa-chevron-down" id="sim-materia-arrow"></i>
+                                </button>
+                                <div class="banco-dropdown hidden" id="sim-materia-dropdown">
+                                    <div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duración del examen -->
+                    <div class="sim-config-card">
+                        <h3 class="sim-config-section-title"><i class="fas fa-clock"></i> duración</h3>
+                        <div class="sim-duration-grid">
+                            <button class="sim-dur-btn" id="sim-dur-30" onclick="setSimDuracion(30)">30 min</button>
+                            <button class="sim-dur-btn sim-dur-active" id="sim-dur-60" onclick="setSimDuracion(60)">60
+                                min</button>
+                            <button class="sim-dur-btn" id="sim-dur-90" onclick="setSimDuracion(90)">90 min</button>
+                            <button class="sim-dur-btn" id="sim-dur-120" onclick="setSimDuracion(120)">120 min</button>
+                        </div>
+                    </div>
+
+                    <!-- Número de preguntas -->
+                    <div class="sim-config-card">
+                        <h3 class="sim-config-section-title"><i class="fas fa-list-ol"></i> número de preguntas</h3>
+                        <div class="sim-nq-row">
+                            <input type="range" id="sim-nq-slider" class="sim-nq-slider" min="10" max="50" value="30"
+                                step="5" oninput="updateSimNQ()">
+                            <div class="sim-nq-display">
+                                <span id="sim-nq-value">30</span>
+                                <label>preguntas</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resumen y lanzar -->
+                    <div class="sim-config-card sim-launch-card">
+                        <div class="sim-summary-row">
+                            <div class="sim-summary-item">
+                                <i class="fas fa-clock"></i>
+                                <div><strong id="sim-sum-tiempo">60 min</strong><span>tiempo</span></div>
+                            </div>
+                            <div class="sim-summary-divider"></div>
+                            <div class="sim-summary-item">
+                                <i class="fas fa-list-ol"></i>
+                                <div><strong id="sim-sum-nq">30</strong><span>preguntas</span></div>
+                            </div>
+                            <div class="sim-summary-divider"></div>
+                            <div class="sim-summary-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div><strong id="sim-sum-materia">oficial</strong><span>tipo</span></div>
+                            </div>
+                        </div>
+                        <button class="btn-primary sim-start-btn" id="sim-start-btn" onclick="iniciarSimulacro()">
+                            <i class="fas fa-play"></i> comenzar simulacro
+                        </button>
+                        <p class="sim-warning-text"><i class="fas fa-exclamation-triangle"></i> durante el simulacro no
+                            podrás ver las respuestas. se revelan al finalizar.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SUB-PANTALLA 2: Examen en curso -->
+            <div id="sim-exam" class="hidden">
+
+                <!-- Barra superior con timer y progreso -->
+                <div class="sim-top-bar">
+                    <div class="sim-top-left">
+                        <button class="btn-back-game" onclick="confirmarSalirSimulacro()"><i class="fas fa-times"></i>
+                            salir</button>
+                        <div class="sim-top-meta" id="sim-top-meta">
+                            <span id="sim-exam-materia">simulacro</span>
+                            <span class="sim-top-sep">·</span>
+                            <span id="sim-exam-nq-info">30 preguntas</span>
+                        </div>
+                    </div>
+                    <div class="sim-timer-wrap" id="sim-timer-wrap">
+                        <i class="fas fa-clock"></i>
+                        <span id="sim-timer-display">60:00</span>
+                    </div>
+                    <div class="sim-top-counter">
+                        <span id="sim-cur-num">1</span> / <span id="sim-total-num">30</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de pregunta -->
+                <div class="bq-question-card sim-question-card">
+                    <div class="bq-question-bar"></div>
+                    <div class="bq-question-meta">
+                        <span class="bq-dificultad-label">dificultad:</span>
+                        <div class="bq-dificultad-dots" id="sim-dificultad"></div>
+                        <span class="bq-num-badge" id="sim-num-badge">N° 1</span>
+                    </div>
+                    <p class="bq-question-text" id="sim-question-text">cargando pregunta...</p>
+                </div>
+
+                <!-- Opciones (sin retroalimentación) -->
+                <div class="bq-options" id="sim-options"></div>
+
+                <!-- Círculos de navegación -->
+                <div class="bq-nav-section">
+                    <h4 class="bq-nav-title"><i class="fas fa-th"></i> preguntas</h4>
+                    <div class="bq-circles" id="sim-circles"></div>
+                </div>
+
+                <!-- Navegación inferior -->
+                <div class="bq-bottom-nav">
+                    <button class="bq-btn-prev" id="sim-btn-prev" onclick="simNavigate(-1)">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button class="bq-btn-next" id="sim-btn-next" onclick="simNavigate(1)">
+                        siguiente <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="bq-btn-finish" onclick="finalizarSimulacro()">
+                        <i class="fas fa-flag-checkered"></i> finalizar
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- SUB-PANTALLA 3: Resultado del simulacro -->
+            <div id="sim-result" class="hidden">
+                <div class="sim-result-wrap">
+                    <div class="sim-result-header">
+                        <div class="sim-result-emoji" id="sim-result-emoji">🏆</div>
+                        <h2 id="sim-result-title">simulacro completado</h2>
+                        <p id="sim-result-score"></p>
+                    </div>
+
+                    <!-- Estadísticas -->
+                    <div class="bq-result-stats sim-stats-row">
+                        <div class="bq-rs-box bq-rs-correct">
+                            <i class="fas fa-check"></i>
+                            <span id="sim-rs-correct">0</span>
+                            <label>correctas</label>
+                        </div>
+                        <div class="bq-rs-box bq-rs-wrong">
+                            <i class="fas fa-times"></i>
+                            <span id="sim-rs-wrong">0</span>
+                            <label>incorrectas</label>
+                        </div>
+                        <div class="bq-rs-box bq-rs-pending">
+                            <i class="fas fa-minus"></i>
+                            <span id="sim-rs-pending">0</span>
+                            <label>sin responder</label>
+                        </div>
+                        <div class="bq-rs-box bq-rs-time">
+                            <i class="fas fa-stopwatch"></i>
+                            <span id="sim-rs-time">—</span>
+                            <label>tiempo usado</label>
+                        </div>
+                    </div>
+
+                    <!-- Barra de calificación -->
+                    <div class="sim-grade-bar-wrap">
+                        <div class="sim-grade-bar-fill" id="sim-grade-bar"></div>
+                    </div>
+                    <div class="sim-grade-labels">
+                        <span>0%</span>
+                        <span id="sim-grade-pct">0%</span>
+                        <span>100%</span>
+                    </div>
+
+                    <!-- Revisión pregunta a pregunta -->
+                    <div class="sim-review-section">
+                        <h3 class="sim-review-title"><i class="fas fa-search"></i> revisión detallada</h3>
+                        <div id="sim-review-list" class="sim-review-list"></div>
+                    </div>
+
+                    <div class="sim-result-actions">
+                        <button class="btn-primary" onclick="openSimulacro()" style="margin-bottom:10px;">
+                            <i class="fas fa-redo"></i> nuevo simulacro
+                        </button>
+                        <button class="btn-back-game" onclick="goHome()"
+                            style="display:block;text-align:center;margin-top:8px;">volver al inicio</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ══ EVALUACIÓN ══ -->
+        <section id="evaluacion-screen" class="evaluacion-section hidden">
+
+            <div class="eval-header">
+                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <div>
+                    <h2 class="eval-title"><i class="fas fa-chart-bar"></i> mis evaluaciones</h2>
+                    <p class="eval-subtitle">historial de simulacros y bancos completados</p>
+                </div>
+            </div>
+
+            <!-- Métricas globales -->
+            <div class="eval-metrics-grid">
+                <div class="eval-metric-card">
+                    <i class="fas fa-clipboard-check eval-metric-icon" style="color:#7c3aed;"></i>
+                    <span class="eval-metric-num" id="eval-total-sims">0</span>
+                    <label>simulacros</label>
+                </div>
+                <div class="eval-metric-card">
+                    <i class="fas fa-trophy eval-metric-icon" style="color:#f59e0b;"></i>
+                    <span class="eval-metric-num" id="eval-mejor">—%</span>
+                    <label>mejor nota</label>
+                </div>
+                <div class="eval-metric-card">
+                    <i class="fas fa-chart-line eval-metric-icon" style="color:#22c55e;"></i>
+                    <span class="eval-metric-num" id="eval-promedio">—%</span>
+                    <label>promedio</label>
+                </div>
+                <div class="eval-metric-card">
+                    <i class="fas fa-clock eval-metric-icon" style="color:#3b82f6;"></i>
+                    <span class="eval-metric-num" id="eval-tiempo-total">0 min</span>
+                    <label>tiempo total</label>
+                </div>
+            </div>
+
+            <!-- Progreso por materia -->
+            <div class="eval-section-card">
+                <h3 class="eval-section-title"><i class="fas fa-book-medical"></i> rendimiento por materia</h3>
+                <div id="eval-materias-list" class="eval-materias-list">
+                    <p class="eval-empty"><i class="fas fa-inbox"></i> aún no hay evaluaciones registradas.<br>completa
+                        un simulacro o banco de preguntas.</p>
+                </div>
+            </div>
+
+            <!-- Historial de simulacros -->
+            <div class="eval-section-card">
+                <h3 class="eval-section-title"><i class="fas fa-history"></i> historial de sesiones</h3>
+                <div id="eval-historial" class="eval-historial">
+                    <p class="eval-empty"><i class="fas fa-inbox"></i> sin sesiones registradas todavía.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ══ JUEGO: AHORCADO ══ -->
+        <section id="game-hangman" class="game-section hidden">
+            <div class="game-header">
+                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <h2><i class="fas fa-brain"></i> ahorcado médico</h2>
+            </div>
+            <div class="hangman-wrapper">
+                <div class="hangman-top">
+                    <div class="hangman-figure" id="hangman-figure">
+                        <svg viewBox="0 0 120 160" class="hangman-svg">
+                            <!-- Horca -->
+                            <line x1="10" y1="150" x2="110" y2="150" stroke="currentColor" stroke-width="4"
+                                stroke-linecap="round" />
+                            <line x1="30" y1="150" x2="30" y2="10" stroke="currentColor" stroke-width="4"
+                                stroke-linecap="round" />
+                            <line x1="30" y1="10" x2="75" y2="10" stroke="currentColor" stroke-width="4"
+                                stroke-linecap="round" />
+                            <line x1="75" y1="10" x2="75" y2="30" stroke="currentColor" stroke-width="4"
+                                stroke-linecap="round" />
+                            <!-- Figura (oculta por clases) -->
+                            <circle class="hm-part hm-head" cx="75" cy="42" r="12" fill="none" stroke="currentColor"
+                                stroke-width="3" />
+                            <line class="hm-part hm-body" x1="75" y1="54" x2="75" y2="100" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" />
+                            <line class="hm-part hm-larm" x1="75" y1="65" x2="50" y2="85" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" />
+                            <line class="hm-part hm-rarm" x1="75" y1="65" x2="100" y2="85" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" />
+                            <line class="hm-part hm-lleg" x1="75" y1="100" x2="52" y2="128" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" />
+                            <line class="hm-part hm-rleg" x1="75" y1="100" x2="98" y2="128" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="hangman-info">
+                        <div class="hm-category-tag" id="hm-category">biología celular</div>
+                        <div class="hm-hint" id="hm-hint">pista: ...</div>
+                        <div class="hm-word" id="hm-word"></div>
+                        <div class="hm-errors">errores: <span id="hm-errors">0</span> / 6</div>
+                    </div>
+                </div>
+                <div class="hm-keyboard" id="hm-keyboard"></div>
+                <div id="hm-result" class="hm-result hidden">
+                    <p id="hm-result-text"></p>
+                    <button class="btn-primary" onclick="startHangman()" style="margin-top:14px;">otra palabra</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ VIDEOCLASES ══ -->
+        <section id="videoclases-screen" class="vc-section hidden">
+
+            <div class="vc-header">
+                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <div>
+                    <h2 class="vc-title"><i class="fas fa-play-circle"></i> videoclases</h2>
+                    <p class="vc-subtitle">clases grabadas por materia · selecciona y repasa</p>
+                </div>
+            </div>
+
+            <div class="vc-filters">
+                <div class="vc-filter-group">
+                    <label class="banco-select-label"><i class="fas fa-book-medical"></i> materia</label>
+                    <div class="banco-custom-select">
+                        <button class="banco-select-btn" id="vc-materia-btn" onclick="toggleVcDropdown()">
+                            <span id="vc-materia-text">todas las materias</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="banco-dropdown hidden" id="vc-materia-dropdown"></div>
+                    </div>
+                </div>
+                <div class="vc-search-wrap">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="vc-search-input" class="vc-search-input" placeholder="buscar videoclase..."
+                        oninput="filterVideoclases()">
+                </div>
+            </div>
+
+            <div id="vc-loading" class="vc-state-wrap">
+                <div class="vc-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+                <p>cargando videoclases...</p>
+            </div>
+            <div id="vc-grid" class="vc-grid hidden"></div>
+            <div id="vc-empty" class="vc-state-wrap hidden">
+                <i class="fas fa-video-slash"></i>
+                <h3>sin videoclases todavía</h3>
+                <p>pronto se publicarán clases grabadas.<br>vuelve más adelante.</p>
+            </div>
+
+        </section>
+
+        <!-- Modal reproductor de video -->
+        <div id="vc-modal" class="vc-modal hidden" onclick="closeVcModal(event)">
+            <div class="vc-modal-inner">
+                <button class="vc-modal-close" onclick="closeVcModal()"><i class="fas fa-times"></i></button>
+                <div class="vc-modal-meta">
+                    <span class="vc-modal-materia" id="vc-modal-materia"></span>
+                    <h3 class="vc-modal-title" id="vc-modal-title"></h3>
+                    <p class="vc-modal-desc" id="vc-modal-desc"></p>
+                </div>
+                <div class="vc-player-wrap">
+                    <iframe id="vc-iframe" class="vc-iframe" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══ INTOCABLES ══ -->
+        <section id="intocables-screen" class="intoc-section hidden">
+
+            <div class="intoc-header">
+                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <div>
+                    <h2 class="intoc-title"><i class="fas fa-fire-alt"></i> intocables</h2>
+                    <p class="intoc-subtitle">los conceptos que siempre caen en el examen de admisión</p>
+                </div>
+            </div>
+
+            <div class="intoc-hero">
+                <div class="intoc-hero-icon">🔥</div>
+                <div class="intoc-hero-text">
+                    <h3>mátenlos de memoria</h3>
+                    <p>estos temas aparecen examen tras examen. no pueden fallar.</p>
+                </div>
+                <div class="intoc-hero-stats">
+                    <div class="intoc-stat">
+                        <span id="intoc-stat-mapas">0</span>
+                        <label>mapas</label>
+                    </div>
+                    <div class="intoc-stat">
+                        <span id="intoc-stat-materias">0</span>
+                        <label>materias</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="intoc-tabs">
+                <button class="intoc-tab intoc-tab-active" id="tab-mapas" onclick="switchIntocTab('mapas')">
+                    <i class="fas fa-project-diagram"></i> mapas mentales
+                </button>
+                <button class="intoc-tab" id="tab-conceptos" onclick="switchIntocTab('conceptos')">
+                    <i class="fas fa-lightbulb"></i> conceptos clave
+                    <span class="intoc-tab-badge">pronto</span>
+                </button>
+                <button class="intoc-tab" id="tab-formulas" onclick="switchIntocTab('formulas')">
+                    <i class="fas fa-square-root-alt"></i> fórmulas
+                    <span class="intoc-tab-badge">pronto</span>
+                </button>
+            </div>
+
+            <!-- Panel Mapas Mentales -->
+            <div id="intoc-panel-mapas">
+                <div class="intoc-filter-row">
+                    <div class="banco-custom-select" style="max-width:260px;">
+                        <button class="banco-select-btn" id="mm-materia-btn" onclick="toggleMmDropdown()">
+                            <span id="mm-materia-text">todas las materias</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="banco-dropdown hidden" id="mm-materia-dropdown"></div>
+                    </div>
+                    <div class="vc-search-wrap" style="flex:1;max-width:320px;">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="mm-search-input" class="vc-search-input"
+                            placeholder="buscar mapa mental..." oninput="filterMapas()">
+                    </div>
+                </div>
+                <div id="mm-loading" class="vc-state-wrap">
+                    <div class="vc-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+                    <p>cargando mapas mentales...</p>
+                </div>
+                <div id="mm-grid" class="mm-grid hidden"></div>
+                <div id="mm-empty" class="vc-state-wrap hidden">
+                    <i class="fas fa-project-diagram" style="font-size:2.5rem;color:#d1d5db;"></i>
+                    <h3>sin mapas mentales todavía</h3>
+                    <p>los mapas mentales se irán publicando poco a poco.<br>vuelve pronto.</p>
+                </div>
+            </div>
+
+            <!-- Panel Conceptos (futuro) -->
+            <div id="intoc-panel-conceptos" class="hidden">
+                <div class="vc-state-wrap" style="padding:60px 0;">
+                    <i class="fas fa-lightbulb" style="font-size:2.5rem;color:#f59e0b;"></i>
+                    <h3>conceptos clave</h3>
+                    <p>próximamente: definiciones y conceptos fundamentales organizados por materia.</p>
+                </div>
+            </div>
+
+            <!-- Panel Fórmulas (futuro) -->
+            <div id="intoc-panel-formulas" class="hidden">
+                <div class="vc-state-wrap" style="padding:60px 0;">
+                    <i class="fas fa-square-root-alt" style="font-size:2.5rem;color:#7c3aed;"></i>
+                    <h3>fórmulas</h3>
+                    <p>próximamente: las fórmulas y ecuaciones que debes dominar.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Lightbox mapa mental -->
+        <div id="mm-lightbox" class="mm-lightbox hidden" onclick="closeMmLightbox(event)">
+            <button class="mm-lb-close" onclick="closeMmLightbox()"><i class="fas fa-times"></i></button>
+            <div class="mm-lb-inner">
+                <img id="mm-lb-img" src="" alt="Mapa mental" class="mm-lb-img">
+                <div class="mm-lb-info">
+                    <span class="mm-lb-materia" id="mm-lb-materia"></span>
+                    <h3 class="mm-lb-title" id="mm-lb-title"></h3>
+                    <p class="mm-lb-desc" id="mm-lb-desc"></p>
+                    <a id="mm-lb-download" href="" target="_blank" class="mm-lb-download">
+                        <i class="fas fa-download"></i> descargar imagen
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
