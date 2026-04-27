@@ -2,23 +2,21 @@
    ALCOCERMED — PANEL DE CONTROL (ADMIN JS)
    ═══════════════════════════════════════════════ */
 
-const SUPABASE_URL = 'https://asnwhddmurstzmghuyin.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
+const CONFIG = window.ALCOCER_CONFIG || {
+  SUPABASE_URL: 'https://asnwhddmurstzmghuyin.supabase.co',
+  SUPABASE_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo',
+  ADMIN_EMAILS: ['admin@alcocermed.com', 'rubenconcha@example.com', 'pichon4488@gmail.com']
+};
+const SUPABASE_URL = CONFIG.SUPABASE_URL;
+const SUPABASE_KEY = CONFIG.SUPABASE_KEY;
 let _supabase = null;
 function getSupabase() {
   if (!_supabase) _supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   return _supabase;
 }
 
-// ── CONFIGURACIÓN DE ADMINS ──
-// Agrega aquí los correos que tendrán acceso al panel de control.
-// También puedes usar una tabla 'admins' en Supabase para gestionarlos dinámicamente.
-const ADMIN_EMAILS = [
-  'admin@alcocermed.com',
-  'rubenconcha@example.com',
-  'pichon4488@gmail.com',
-  // Agrega más emails de admin aquí
-];
+// ── CONFIGURACION DE ADMINS ──
+const ADMIN_EMAILS = CONFIG.ADMIN_EMAILS || ['admin@alcocermed.com', 'rubenconcha@example.com', 'pichon4488@gmail.com'];
 
 let currentAdmin = null;
 let cachedData = {};
@@ -31,6 +29,21 @@ async function handleAdminLogin(e) {
   e.preventDefault();
   const email = document.getElementById('admin-email').value.trim().toLowerCase();
   const password = document.getElementById('admin-password').value;
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    const errBox = document.getElementById('admin-login-error');
+    const errText = document.getElementById('admin-login-error-text');
+    errText.textContent = 'formato de correo invalido';
+    errBox.classList.remove('hidden');
+    return;
+  }
+  if (!password || password.length < 6) {
+    const errBox = document.getElementById('admin-login-error');
+    const errText = document.getElementById('admin-login-error-text');
+    errText.textContent = 'la contrasena debe tener al menos 6 caracteres';
+    errBox.classList.remove('hidden');
+    return;
+  }
   const btn = document.getElementById('admin-login-btn');
   const btnText = document.getElementById('admin-login-btn-text');
   const btnLoad = document.getElementById('admin-login-btn-loading');
@@ -59,6 +72,7 @@ async function handleAdminLogin(e) {
     showToast('bienvenido al panel de control', 'success');
     await loadAllData();
   } catch (err) {
+    console.error('Admin login error:', err);
     errText.textContent = err.message || 'credenciales incorrectas o sin permisos de administrador';
     errBox.classList.remove('hidden');
   } finally {
@@ -88,13 +102,17 @@ function showAdminApp() {
 
 // Verificar sesión al cargar
 (async function initAdmin() {
-  const sb = getSupabase();
-  const { data: { session } } = await sb.auth.getSession();
-  if (session && session.user && ADMIN_EMAILS.includes(session.user.email.toLowerCase())) {
-    currentAdmin = session.user;
-    document.getElementById('admin-user-name').textContent = currentAdmin.email.split('@')[0];
-    showAdminApp();
-    await loadAllData();
+  try {
+    const sb = getSupabase();
+    const { data: { session } } = await sb.auth.getSession();
+    if (session && session.user && ADMIN_EMAILS.includes(session.user.email.toLowerCase())) {
+      currentAdmin = session.user;
+      document.getElementById('admin-user-name').textContent = currentAdmin.email.split('@')[0];
+      showAdminApp();
+      await loadAllData();
+    }
+  } catch (err) {
+    console.error('Init admin error:', err);
   }
 })();
 
@@ -301,31 +319,39 @@ async function loadEstudiantes(sb) {
 
 function renderEstudiantes(list) {
   const tbody = document.getElementById('tabla-estudiantes');
-  if (!list.length) {
+  if (!tbody) return;
+
+  if (!list || !list.length) {
     tbody.innerHTML = '<tr><td colspan="8"><div class="empty-state"><i class="fas fa-users"></i><h4>no hay estudiantes registrados</h4><p>cuando los alumnos inicien sesión aparecerán aquí.</p></div></td></tr>';
     return;
   }
-  tbody.innerHTML = list.map(u => `
-    <tr>
-      <td>
-        <div class="user-cell">
-          <div class="user-cell-avatar">${u.user_id?.slice(0,2).toUpperCase()||'UN'}</div>
-          <div class="user-cell-info">
-            <span class="user-cell-name">usuario …${u.user_id?.slice(-6)||'unknown'}</span>
-            <span class="user-cell-email">${u.devices} dispositivo${u.devices!==1?'s':''}</span>
+
+  tbody.innerHTML = list.map(u => {
+    const uid = String(u.user_id || '??');
+    const safeUid = uid.replace(/'/g, '');
+    const devices = Number(u.devices || 0);
+    return `
+      <tr>
+        <td>
+          <div class="user-cell">
+            <div class="user-cell-avatar">${uid.slice(0,2).toUpperCase()}</div>
+            <div class="user-cell-info">
+              <span class="user-cell-name">usuario …${uid.slice(-6)}</span>
+              <span class="user-cell-email">${devices} dispositivo${devices!==1?'s':''}</span>
+            </div>
           </div>
-        </div>
-      </td>
-      <td>${formatDateShort(u.last_seen)}</td>
-      <td><span class="tag tag-info">${u.sims}</span></td>
-      <td>${renderScore(u.avg)}</td>
-      <td>${u.vids}</td>
-      <td>—</td>
-      <td><span class="tag tag-success">activo</span></td>
-      <td><button class="btn btn-sm btn-secondary" onclick="verDetalleEstudiante('${u.user_id}')"><i class="fas fa-eye"></i> ver</button></td>
-    </tr>
-  `).join('');
+        </td>
+        <td>${formatDateShort(u.last_seen)}</td>
+        <td><span class="tag tag-info">${u.sims || 0}</span></td>
+        <td>${renderScore(u.avg || 0)}</td>
+        <td>${u.vids || 0}</td>
+        <td>—</td>
+        <td><span class="tag tag-success">activo</span></td>
+        <td><button class="btn btn-sm btn-secondary" onclick="verDetalleEstudiante('${safeUid}')"><i class="fas fa-eye"></i> ver</button></td>
+      </tr>`;
+  }).join('');
 }
+
 
 function filterEstudiantes() {
   const q = document.getElementById('search-estudiantes').value.toLowerCase();
@@ -639,6 +665,7 @@ async function verDetalleEstudiante(userId) {
         </tbody></table></div>` : ''}
     `;
   } catch (err) {
+    console.error('Error cargando detalle de estudiante:', err);
     body.innerHTML = '<div class="empty-state"><i class="fas fa-exclamation-circle"></i><h4>error cargando datos</h4><p>' + (err.message || 'no se pudo obtener el detalle') + '</p></div>';
   }
 }
@@ -675,14 +702,35 @@ function formatTime(seconds) {
 
 function showToast(msg, type = 'info') {
   const container = document.getElementById('toast-container');
+  if (!container) {
+    console.warn('showToast: no existe #toast-container');
+    return;
+  }
+
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
   const icon = type === 'success' ? 'fa-check-circle' : (type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle');
-  toast.innerHTML = `<i class="fas ${icon}"></i> <span>${msg}</span>`;
+  toast.innerHTML = `<i class="fas ${icon}"></i> <span>${String(msg || '')}</span>`;
   container.appendChild(toast);
+
   setTimeout(() => {
     toast.style.opacity = '0';
     toast.style.transform = 'translateX(100%)';
     setTimeout(() => toast.remove(), 300);
-  }, 3000);
+  }, type === 'error' ? 5000 : 3000);
 }
+
+
+
+// Exports senior-safe para handlers inline del HTML
+window.handleAdminLogin = handleAdminLogin;
+window.adminLogout = adminLogout;
+window.showSection = showSection;
+window.filterEstudiantes = filterEstudiantes;
+window.filterSimulacros = filterSimulacros;
+window.filterEvaluaciones = filterEvaluaciones;
+window.filterVideoclases = filterVideoclases;
+window.showContentTab = showContentTab;
+window.verDetalleEstudiante = verDetalleEstudiante;
+window.closeModal = closeModal;
+window.showToast = showToast;

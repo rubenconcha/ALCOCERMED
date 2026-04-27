@@ -1,5 +1,11 @@
-const SUPABASE_URL = 'https://asnwhddmurstzmghuyin.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
+// Configuracion compartida. Se carga desde config.js cuando esta disponible.
+const CONFIG = window.ALCOCER_CONFIG || {
+    SUPABASE_URL: 'https://asnwhddmurstzmghuyin.supabase.co',
+    SUPABASE_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo',
+    ADMIN_EMAILS: ['admin@alcocermed.com', 'rubenconcha@example.com', 'pichon4488@gmail.com']
+};
+const SUPABASE_URL = CONFIG.SUPABASE_URL;
+const SUPABASE_KEY = CONFIG.SUPABASE_KEY;
 
 let _supabase = null;
 function getSupabase() {
@@ -12,7 +18,7 @@ function getSupabase() {
 // ══════════════════════════════════════════════
 
 let currentUser = null;
-const ADMIN_EMAILS = ['admin@alcocermed.com', 'rubenconcha@example.com', 'pichon4488@gmail.com'];
+const ADMIN_EMAILS = CONFIG.ADMIN_EMAILS || ['admin@alcocermed.com', 'rubenconcha@example.com', 'pichon4488@gmail.com'];
 
 // Flag: true mientras handleLogin está ejecutando un login explícito.
 // Previene que onAuthStateChange interfiera antes de que registerCurrentDevice() termine.
@@ -36,7 +42,7 @@ function getOrCreateDeviceToken() {
     let token = localStorage.getItem(DEVICE_TOKEN_LS_KEY);
     if (!token) {
         token = _generateToken();
-        try { localStorage.setItem(DEVICE_TOKEN_LS_KEY, token); } catch (_) {}
+        try { localStorage.setItem(DEVICE_TOKEN_LS_KEY, token); } catch (e) { console.warn('[DeviceToken] no se pudo guardar token local:', e); }
     }
     return token;
 }
@@ -51,7 +57,7 @@ async function recoverDeviceTokenFromCloud(user) {
     try {
         const saved = user && user.user_metadata && user.user_metadata.device_token;
         if (saved) {
-            try { localStorage.setItem(DEVICE_TOKEN_LS_KEY, saved); } catch (_) {}
+            try { localStorage.setItem(DEVICE_TOKEN_LS_KEY, saved); } catch (e) { console.warn('[DeviceToken] no se pudo restaurar token local:', e); }
             console.log('[DeviceToken] token recuperado desde metadata');
         }
     } catch (e) {
@@ -126,59 +132,29 @@ async function getDeviceStatus() {
  *  Lanza 'DEVICE_LIMIT_REACHED' si ambos slots ya están ocupados por otros tokens.
  */
 async function registerAndActivateDevice() {
-    const localToken = getOrCreateDeviceToken();
-    const now = new Date().toISOString();
-
-    // Leer fila actual (re-fetch fresco para evitar race condition)
-    const { data, error } = await getSupabase()
-        .from('user_devices')
-        .select('device_token, device_token_2')
-        .eq('user_id', currentUser.id)
-        .maybeSingle();
-
-    // Error de BD → denegar por seguridad
-    if (error) {
-        console.warn('registerAndActivateDevice error al leer:', error);
+    if (!currentUser || !currentUser.id) {
+        console.error('registerAndActivateDevice: no hay usuario actual');
         throw new Error('DEVICE_LIMIT_REACHED');
     }
 
-    if (!data) {
-        // Primera vez: crear fila con slot 1
-        const { error: insertErr } = await getSupabase().from('user_devices').insert({
-            user_id: currentUser.id,
-            device_token: localToken,
-            device_token_2: null,
-            active_device_token: localToken,
-            last_login: now,
-            updated_at: now
-        });
-        if (insertErr) {
-            console.warn('registerAndActivateDevice insert error:', insertErr);
-            throw new Error('DEVICE_LIMIT_REACHED');
-        }
-    } else {
-        const inSlot1 = data.device_token === localToken;
-        const inSlot2 = data.device_token_2 === localToken;
+    const localToken = getOrCreateDeviceToken();
+    const now = new Date().toISOString();
 
-        if (inSlot1 || inSlot2) {
-            // Ya registrado → solo actualizar token activo
-            await getSupabase().from('user_devices').update({
-                active_device_token: localToken, last_login: now, updated_at: now
-            }).eq('user_id', currentUser.id);
-        } else if (!data.device_token_2) {
-            // Slot 2 libre → ocuparlo
-            await getSupabase().from('user_devices').update({
-                device_token_2: localToken,
-                active_device_token: localToken,
-                last_login: now,
-                updated_at: now
-            }).eq('user_id', currentUser.id);
-        } else {
-            // BUG FIX #3: ambos slots ocupados por OTROS tokens → BLOQUEAR
-            // Nunca sobreescribir un slot ajeno
-            console.warn('registerAndActivateDevice: ambos slots ocupados, bloqueando dispositivo');
-            throw new Error('DEVICE_LIMIT_REACHED');
-        }
+    // Usa RPC atomica en PostgreSQL para evitar condiciones de carrera entre dispositivos.
+    const { data, error } = await getSupabase().rpc('register_device', {
+        _user_id: currentUser.id,
+        _device_token: localToken,
+        _now: now
+    });
+
+    if (error) {
+        console.error('registerAndActivateDevice RPC error:', error);
+        throw new Error('DEVICE_LIMIT_REACHED');
+    }
+
+    if (data && data.success === false) {
+        console.error('registerAndActivateDevice RPC rechazo:', data);
+        throw new Error(data.message || 'DEVICE_LIMIT_REACHED');
     }
 }
 
@@ -204,10 +180,17 @@ async function isDeviceAuthorized() {
             .select('active_device_token')
             .eq('user_id', currentUser.id)
             .maybeSingle();
-        if (!data || error) return true; // error de red → no expulsamos
+
+        if (error) {
+            console.warn('isDeviceAuthorized error:', error);
+            return false; // Fail closed: si la BD/red falla, no dejamos la app abierta.
+        }
+
+        if (!data) return false;
         return data.active_device_token === localToken;
     } catch (e) {
-        return true;
+        console.warn('isDeviceAuthorized exception:', e);
+        return false; // Fail closed.
     }
 }
 
@@ -226,7 +209,7 @@ async function _evictThisDevice(reason) {
     if (_beingEvicted) return;
     _beingEvicted = true;
     console.warn('🔒 Dispositivo expulsado –', reason);
-    try { await saveDailyCountToCloud(); } catch (_) { }
+    try { await saveDailyCountToCloud(); } catch (e) { console.warn('No se pudo sincronizar progreso antes de salir:', e); }
     unsubscribeDeviceChannel();
     _stopDeviceWatcher();
     await getSupabase().auth.signOut({ scope: 'local' });
@@ -272,7 +255,7 @@ function subscribeDeviceChannel() {
 
 function unsubscribeDeviceChannel() {
     if (_deviceChannel) {
-        try { getSupabase().removeChannel(_deviceChannel); } catch (_) { }
+        try { getSupabase().removeChannel(_deviceChannel); } catch (e) { console.warn('No se pudo remover canal realtime:', e); }
         _deviceChannel = null;
     }
 }
@@ -328,7 +311,7 @@ async function loadDailyCountFromCloud(user) {
         const finalCount = Math.max(localCount, cloudCount);
         if (finalCount > localCount) {
             // El cloud tiene más → actualizar localStorage
-            try { localStorage.setItem(getDailyKey(), finalCount.toString()); } catch (_) { }
+            try { localStorage.setItem(getDailyKey(), finalCount.toString()); } catch (e) { console.warn('No se pudo guardar contador diario local:', e); }
         }
     } catch (e) {
         console.warn('Error cargando progreso diario:', e);
@@ -365,31 +348,12 @@ function maybeCloudSync() {
     }
 }
 
-// ── Pantalla de bloqueo permanente (3er dispositivo no autorizado) ──
+// ── Pantallas de bloqueo de dispositivo ─────────────────────────
 function showDevicePermanentlyBlockedScreen() {
-    document.body.classList.add('login-active');
-    const ls = document.getElementById('login-screen');
-    if (ls) ls.classList.add('hidden');
-    let el = document.getElementById('device-perm-blocked-screen');
-    if (!el) {
-        el = document.createElement('div');
-        el.id = 'device-perm-blocked-screen';
-        el.className = 'device-blocked-screen';
-        el.innerHTML =
-            '<div class="db-card">' +
-            '  <div class="db-icon" style="background:linear-gradient(135deg,#dc2626,#991b1b)">' +
-            '    <i class="fas fa-ban"></i>' +
-            '  </div>' +
-            '  <h2 class="db-title">dispositivo no autorizado</h2>' +
-            '  <p class="db-msg">este dispositivo no tiene permiso para acceder a esta cuenta.<br><br>' +
-            '  la cuenta ya tiene <strong style="color:rgba(255,255,255,0.85)">2 dispositivos autorizados</strong>.<br>' +
-            '  solo puedes ingresar desde tus dispositivos registrados.<br><br>' +
-            '  <span style="font-size:0.78rem;color:rgba(255,255,255,0.35)">' +
-            '  si perdiste acceso a un dispositivo autorizado, contacta al administrador.</span></p>' +
-            '</div>';
-        document.body.appendChild(el);
-    }
-    el.style.display = 'flex';
+    showDeviceBlockedScreen(
+        'este dispositivo no esta autorizado para esta cuenta.<br>ya existen dos dispositivos registrados. contacta al administrador si necesitas liberar un acceso.',
+        true
+    );
 }
 
 // ── Pantalla de conflicto de sesión (al intentar logear desde 2º dispositivo) ──
@@ -462,36 +426,40 @@ window.handleCancelConflict = async function () {
     _pendingConflictSession = null;
     _handlingExplicitLogin = false;
     currentUser = null;
-    try { await getSupabase().auth.signOut({ scope: 'local' }); } catch (_) { }
+    try { await getSupabase().auth.signOut({ scope: 'local' }); } catch (e) { console.warn('No se pudo cerrar sesion local:', e); }
     hideSessionConflictScreen();
     showLoginScreen();
 };
 
-// ── Pantalla de dispositivo bloqueado (sesión revocada mientras usaba la app) ──
-function showDeviceBlockedScreen() {
+// ── Pantalla de dispositivo bloqueado o no autorizado ──
+function showDeviceBlockedScreen(msg, isPermanent = false) {
     document.body.classList.add('login-active');
-    // Ocultar login si estuviera visible
     const ls = document.getElementById('login-screen');
     if (ls) ls.classList.add('hidden');
-    // Crear o mostrar la pantalla de bloqueo
+
     let blocked = document.getElementById('device-blocked-screen');
     if (!blocked) {
         blocked = document.createElement('div');
         blocked.id = 'device-blocked-screen';
         blocked.className = 'device-blocked-screen';
-        blocked.innerHTML =
-            '<div class="db-card">' +
-            '  <div class="db-icon"><i class="fas fa-lock"></i></div>' +
-            '  <h2 class="db-title">sesión activa en otro dispositivo</h2>' +
-            '  <p class="db-msg">tu cuenta está abierta en otro dispositivo.<br>' +
-            '  para continuar aquí, vuelve a ingresar con tu contraseña.<br>' +
-            '  esto cerrará la sesión en el otro dispositivo.</p>' +
-            '  <button class="login-btn db-btn" onclick="forceLoginFromBlockedScreen()">' +
-            '    <i class="fas fa-sign-in-alt"></i> iniciar sesión aquí' +
-            '  </button>' +
-            '</div>';
         document.body.appendChild(blocked);
     }
+
+    const iconClass = isPermanent ? 'fa-ban' : 'fa-lock';
+    const iconStyle = isPermanent ? 'style="background:linear-gradient(135deg,#dc2626,#991b1b)"' : '';
+    const title = isPermanent ? 'dispositivo no autorizado' : 'sesion activa en otro dispositivo';
+    const message = msg || 'tu cuenta esta abierta en otro dispositivo.<br>para continuar aqui, vuelve a ingresar con tu contrasena.<br>esto cerrara la sesion en el otro dispositivo.';
+
+    blocked.innerHTML =
+        '<div class="db-card">' +
+        '  <div class="db-icon" ' + iconStyle + '><i class="fas ' + iconClass + '"></i></div>' +
+        '  <h2 class="db-title">' + title + '</h2>' +
+        '  <p class="db-msg">' + message + '</p>' +
+        (isPermanent ? '' :
+        '  <button class="login-btn db-btn" onclick="forceLoginFromBlockedScreen()">' +
+        '    <i class="fas fa-sign-in-alt"></i> iniciar sesion aqui' +
+        '  </button>') +
+        '</div>';
     blocked.style.display = 'flex';
 }
 
@@ -614,7 +582,7 @@ async function initAuth() {
             }
 
         } else if (event === 'SIGNED_OUT') {
-            if (currentUser) { try { await saveDailyCountToCloud(); } catch (_) { } }
+            if (currentUser) { try { await saveDailyCountToCloud(); } catch (e) { console.warn('No se pudo sincronizar progreso antes de salir:', e); } }
             currentUser = null;
             unsubscribeDeviceChannel();
             _stopDeviceWatcher();
@@ -680,6 +648,16 @@ window.handleLogin = async function (e) {
     const password = document.getElementById('login-password').value;
 
     if (!email || !password) { showLoginError('completa todos los campos'); return; }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showLoginError('formato de correo invalido');
+        return;
+    }
+
+    if (password.length < 6) {
+        showLoginError('la contrasena debe tener al menos 6 caracteres');
+        return;
+    }
 
     setLoginLoading(true);
     _handlingExplicitLogin = true;
@@ -750,7 +728,7 @@ window.handleLogin = async function (e) {
 window.handleLogout = async function () {
     if (!confirm('¿cerrar sesión?')) return;
     // Sincronizar progreso antes de salir
-    try { await saveDailyCountToCloud(); } catch (_) { }
+    try { await saveDailyCountToCloud(); } catch (e) { console.warn('No se pudo sincronizar progreso antes de salir:', e); }
     unsubscribeDeviceChannel();
     _stopDeviceWatcher();
     try {
@@ -1345,7 +1323,7 @@ window.toggleSidebarDesktop = function () {
     if (main) main.classList.toggle('main-expanded', isCollapsed);
     const btn = document.getElementById('sidebar-toggle-btn');
     if (btn) btn.title = isCollapsed ? 'Expandir menú' : 'Colapsar menú';
-    try { localStorage.setItem('bc_sidebar_collapsed', isCollapsed ? '1' : '0'); } catch (_) { }
+    try { localStorage.setItem('bc_sidebar_collapsed', isCollapsed ? '1' : '0'); } catch (e) { console.warn('No se pudo guardar estado del sidebar:', e); }
 };
 
 // Restaurar estado guardado del sidebar al entrar a la app
@@ -1359,7 +1337,7 @@ function restoreSidebarState() {
             document.body.classList.add('sidebar-collapsed');
             if (main) main.classList.add('main-expanded');
         }
-    } catch (_) { }
+    } catch (e) { console.warn('No se pudo restaurar estado del sidebar:', e); }
 }
 
 // ══════════════════════════════════════════════
