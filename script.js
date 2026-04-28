@@ -18,6 +18,23 @@ function getSupabase() {
 // ══════════════════════════════════════════════
 
 let currentUser = null;
+
+// Si la URL contiene logout=1, forzar showLoginScreen apenas cargue
+if (new URLSearchParams(window.location.search).get("logout") === "1") {
+    document.addEventListener("DOMContentLoaded", function() {
+        showLoginScreen();
+        document.body.classList.add("login-active");
+        // Ocultar secciones principales
+        const dashboard = document.getElementById("dashboard-container");
+        if (dashboard) dashboard.style.display = "none";
+        const sidebar = document.getElementById("sidebar");
+        if (sidebar) sidebar.style.display = "none";
+        const header = document.getElementById("header");
+        if (header) header.style.display = "none";
+        // Eliminar parámetro de la URL sin recargar
+        history.replaceState({}, document.title, window.location.pathname);
+    });
+}
 const ADMIN_EMAILS = CONFIG.ADMIN_EMAILS || ['admin@alcocermed.com', 'admin@bencarson.com', 'rubenconcha@example.com', 'pichon4488@gmail.com'];
 
 // Flag: true mientras handleLogin está ejecutando un login explícito.
@@ -726,38 +743,16 @@ window.handleLogin = async function (e) {
 
 /** handleLogout */
 window.handleLogout = async function () {
-    console.log('[handleLogout] Iniciando cierre de sesión');
-    if (!confirm('¿cerrar sesión?')) {
-        console.log('[handleLogout] Usuario canceló');
-        return;
-    }
-    console.log('[handleLogout] Usuario confirmó');
-    // Sincronizar progreso antes de salir
-    try { 
-        console.log('[handleLogout] Sincronizando progreso...');
-        await saveDailyCountToCloud(); 
-        console.log('[handleLogout] Progreso sincronizado');
-    } catch (e) { 
-        console.warn('[handleLogout] No se pudo sincronizar progreso:', e); 
-    }
+    if (!confirm('¿cerrar sesión?')) return;
+    try { await saveDailyCountToCloud(); } catch (e) { console.warn(e); }
     unsubscribeDeviceChannel();
     _stopDeviceWatcher();
-    console.log('[handleLogout] Dispositivo desconectado');
-    try {
-        console.log('[handleLogout] Llamando getSupabase().auth.signOut()...');
-        await getSupabase().auth.signOut({ scope: 'global' });
-        console.log('[handleLogout] signOut exitoso');
-    } catch (err) {
-        console.error('[handleLogout] Error al cerrar sesión remoto:', err);
-    }
-    console.log('[handleLogout] Limpiando estado local');
+    try { await getSupabase().auth.signOut({ scope: 'global' }); } catch (e) { console.error(e); }
     currentUser = null;
-    console.log('[handleLogout] Mostrando pantalla de login');
-    showLoginScreen();
-    console.log('[handleLogout] Recargando página para estado limpio');
-    location.reload();
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.href = window.location.origin + window.location.pathname + '?logout=1';
 };
-
 /** Toggle visibilidad contraseña */
 window.togglePasswordVisibility = function () {
     const input = document.getElementById('login-password');
