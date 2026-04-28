@@ -736,10 +736,10 @@ window.handleLogout = async function () {
         await getSupabase().auth.signOut({ scope: 'global' });
     } catch (err) {
         console.error('Error al cerrar sesión:', err);
-        // Aunque falle el signOut remoto, limpiar estado local
-        currentUser = null;
-        showLoginScreen();
     }
+    // Siempre limpiar estado local después de intentar cerrar sesión
+    currentUser = null;
+    showLoginScreen();
 };
 
 /** Toggle visibilidad contraseña */
