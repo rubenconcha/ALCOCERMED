@@ -33,6 +33,425 @@ if (new URLSearchParams(window.location.search).get("logout") === "1") {
         if (header) header.style.display = "none";
         // Eliminar parámetro de la URL sin recargar
         history.replaceState({}, document.title, window.location.pathname);
+    
+    // Clic en logo del topbar cierra sesión instantáneamente
+    document.querySelector('.topbar-logo')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        handleLogout();
+    });
+    // También en cualquier .logo-img que no sea login
+    document.querySelectorAll('.logo-img, .sidebar-logo-img, .topbar-logo img').forEach(el => {
+        el.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            handleLogout();
+        });
+    });
+});
+}
+const ADMIN_EMAILS = CONFIG.ADMIN_EMAILS || ['admin@alcocermed.com', 'admin@bencarson.com', 'rubenconcha@example.com', 'pichon4488@gmail.com'];
+
+// Flag: true mientras handleLogin está ejecutando un login explícito.
+// Previene que onAuthStateChange interfiera antes de que registerCurrentDevice() termine.
+let _handlingExplicitLogin = false;
+// Sesión pendiente cuando hay conflicto de dispositivo en el login
+let _pendingConflictSession = null;
+
+// ── Token de dispositivo único ──────────────────
+// El token se guarda en localStorage Y en Supabase user_metadata.
+// Si localStorage se borra (caché limpio, modo incógnito, nuevo archivo),
+// se recupera desde metadata antes de cualquier verificación de dispositivo.
+const DEVICE_TOKEN_LS_KEY = 'bc_device_token';
+
+function _generateToken() {
+    return (typeof crypto !== 'undefined' && crypto.randomUUID)
+        ? crypto.randomUUID()
+        : 'dt_' + Date.now() + '_' + Math.random().toString(36).substring(2, 12);
+}
+
+function getOrCreateDeviceToken() {
+    let token = localStorage.getItem(DEVICE_TOKEN_LS_KEY);
+    if (!token) {
+        token = _generateToken();
+        try { localStorage.setItem(DEVICE_TOKEN_LS_KEY, token); } catch (e) { console.warn('[DeviceToken] no se pudo guardar token local:', e); }
+    }
+    return token;
+}
+
+/**
+ * Intenta recuperar el device_token desde user_metadata de Supabase.
+ * Llámalo ANTES de getDeviceStatus() cuando localStorage esté vacío.
+ * Si encuentra un token guardado, lo restaura en localStorage para que
+ * getDeviceStatus() lo reconozca como dispositivo ya autorizado.
+ */
+async function recoverDeviceTokenFromCloud(user) {
+    try {
+        const saved = user && user.user_metadata && user.user_metadata.device_token;
+        if (saved) {
+            try { localStorage.setItem(DEVICE_TOKEN_LS_KEY, saved); } catch (e) { console.warn('[DeviceToken] no se pudo restaurar token local:', e); }
+            console.log('[DeviceToken] token recuperado desde metadata');
+        }
+    } catch (e) {
+        console.warn('[DeviceToken] error recuperando token:', e);
+    }
+}
+
+/**
+ * Persiste el token actual en user_metadata para que sobreviva
+ * limpiezas de caché, actualizaciones de archivos, etc.
+ */
+async function persistDeviceTokenToCloud() {
+    try {
+        const token = getOrCreateDeviceToken();
+        const { data } = await getSupabase().auth.getUser();
+        const existing = (data && data.user && data.user.user_metadata) || {};
+        // Solo actualizar si cambió o no existe
+        if (existing.device_token !== token) {
+            await getSupabase().auth.updateUser({
+                data: { ...existing, device_token: token }
+            });
+            console.log('[DeviceToken] token persistido en metadata');
+        }
+    } catch (e) {
+        console.warn('[DeviceToken] error persistiendo token:', e);
+    }
+}
+
+/**
+ * Devuelve el estado de este dispositivo:
+ *   'active'       – autorizado Y actualmente activo → entrar
+ *   'idle'         – autorizado pero otro dispositivo está activo → conflicto
+ *   'can_register' – nuevo dispositivo, hay slot libre → puede registrarse
+ *   'blocked'      – ambos slots ocupados por otros dispositivos → bloqueo permanente
+ */
+async function getDeviceStatus() {
+    try {
+        if (!currentUser) return 'blocked';
+        const localToken = getOrCreateDeviceToken();
+        const { data, error } = await getSupabase()
+            .from('user_devices')
+            .select('device_token, device_token_2, active_device_token')
+            .eq('user_id', currentUser.id)
+            .maybeSingle();
+
+        // BUG FIX #1: error de red → BLOQUEADO, no acceso libre
+        if (error) { console.warn('getDeviceStatus error:', error); return 'blocked'; }
+        if (!data) return 'can_register'; // primera vez, sin fila → slot 1 disponible
+
+        const inSlot1 = data.device_token === localToken;
+        const inSlot2 = data.device_token_2 === localToken;
+
+        if (!inSlot1 && !inSlot2) {
+            // Este dispositivo NO está autorizado
+            // BUG FIX #2: verificar ambos slots para decidir bloqueo
+            const slot1Occupied = !!data.device_token;
+            const slot2Occupied = !!data.device_token_2;
+            if (slot1Occupied && slot2Occupied) return 'blocked';
+            if (slot1Occupied) return 'can_register'; // slot 2 libre
+            return 'can_register'; // sin registros previos
+        }
+        // Dispositivo autorizado → ¿está activo ahora?
+        return data.active_device_token === localToken ? 'active' : 'idle';
+    } catch (e) {
+        // BUG FIX #1b: excepción JS → BLOQUEADO, nunca puerta abierta
+        console.warn('getDeviceStatus excepción:', e);
+        return 'blocked';
+    }
+}
+
+/** Registra este dispositivo en el primer slot libre y lo marca como activo.
+ *  Lanza 'DEVICE_LIMIT_REACHED' si ambos slots ya están ocupados por otros tokens.
+ */
+async function registerAndActivateDevice() {
+    if (!currentUser || !currentUser.id) {
+        console.error('registerAndActivateDevice: no hay usuario actual');
+        throw new Error('DEVICE_LIMIT_REACHED');
+    }
+
+    const localToken = getOrCreateDeviceToken();
+    const now = new Date().toISOString();
+
+    // Usa RPC atomica en PostgreSQL para evitar condiciones de carrera entre dispositivos.
+    const { data, error } = await getSupabase().rpc('register_device', {
+        _user_id: currentUser.id,
+        _device_token: localToken,
+        _now: now
+    });
+
+    if (error) {
+        console.error('registerAndActivateDevice RPC error:', error);
+        throw new Error('DEVICE_LIMIT_REACHED');
+    }
+
+    if (data && data.success === false) {
+        console.error('registerAndActivateDevice RPC rechazo:', data);
+        throw new Error(data.message || 'DEVICE_LIMIT_REACHED');
+    }
+}
+
+/**
+ * Solo actualiza active_device_token → "tomar el control".
+ * Dispara Realtime en el otro dispositivo para expulsarlo.
+ */
+async function activateThisDevice() {
+    const localToken = getOrCreateDeviceToken();
+    const now = new Date().toISOString();
+    await getSupabase().from('user_devices').update({
+        active_device_token: localToken, last_login: now, updated_at: now
+    }).eq('user_id', currentUser.id);
+}
+
+/** Verifica (para polling/visibilitychange) si este dispositivo sigue siendo el activo */
+async function isDeviceAuthorized() {
+    try {
+        if (!currentUser) return false;
+        const localToken = getOrCreateDeviceToken();
+        const { data, error } = await getSupabase()
+            .from('user_devices')
+            .select('active_device_token')
+            .eq('user_id', currentUser.id)
+            .maybeSingle();
+
+        if (error) {
+            console.warn('isDeviceAuthorized error:', error);
+            return false; // Fail closed: si la BD/red falla, no dejamos la app abierta.
+        }
+
+        if (!data) return false;
+        return data.active_device_token === localToken;
+    } catch (e) {
+        console.warn('isDeviceAuthorized exception:', e);
+        return false; // Fail closed.
+    }
+}
+
+/** Canal Realtime activo para escuchar cambios en user_devices */
+let _deviceChannel = null;
+/** ID del intervalo de polling */
+let _devicePollInterval = null;
+/** Flag para evitar doble expulsión simultánea */
+let _beingEvicted = false;
+
+/**
+ * Lógica central de expulsión: cierra sesión local y muestra bloqueo.
+ * Protegida con flag para no ejecutarse dos veces a la vez.
+ */
+async function _evictThisDevice(reason) {
+    if (_beingEvicted) return;
+    _beingEvicted = true;
+    console.warn('🔒 Dispositivo expulsado –', reason);
+    try { await saveDailyCountToCloud(); } catch (e) { console.warn('No se pudo sincronizar progreso antes de salir:', e); }
+    unsubscribeDeviceChannel();
+    _stopDeviceWatcher();
+    await getSupabase().auth.signOut({ scope: 'local' });
+    currentUser = null;
+    _beingEvicted = false;
+    showDeviceBlockedScreen();
+}
+
+/**
+ * Suscribe al canal Realtime de user_devices.
+ * Cuando CUALQUIER cambio llega para este usuario, compara tokens.
+ * Si el token cambió → expulsa al instante.
+ */
+function subscribeDeviceChannel() {
+    if (!currentUser) return;
+    unsubscribeDeviceChannel();
+
+    const localToken = getOrCreateDeviceToken();
+    const userId = currentUser.id;
+
+    _deviceChannel = getSupabase()
+        .channel('device-lock-' + userId)
+        .on(
+            'postgres_changes',
+            {
+                event: 'UPDATE',   // solo UPDATE: cuando cambia active_device_token
+                schema: 'public',
+                table: 'user_devices',
+                filter: 'user_id=eq.' + userId
+            },
+            async function (payload) {
+                // Si el dispositivo activo ya no somos nosotros → expulsar
+                const newActive = payload.new && payload.new.active_device_token;
+                if (newActive && newActive !== localToken) {
+                    _evictThisDevice('Realtime – active_device_token cambió');
+                }
+            }
+        )
+        .subscribe(function (status) {
+            console.log('[DeviceLock] Realtime status:', status);
+        });
+}
+
+function unsubscribeDeviceChannel() {
+    if (_deviceChannel) {
+        try { getSupabase().removeChannel(_deviceChannel); } catch (e) { console.warn('No se pudo remover canal realtime:', e); }
+        _deviceChannel = null;
+    }
+}
+
+/**
+ * Inicia el watcher de dispositivo:
+ *   1. Polling cada 20 segundos (respaldo si Realtime falla)
+ *   2. Verificación inmediata al volver a la pestaña (visibilitychange)
+ */
+function _startDeviceWatcher() {
+    _stopDeviceWatcher();
+
+    async function _checkDevice() {
+        if (!currentUser || _beingEvicted) return;
+        const authorized = await isDeviceAuthorized();
+        if (!authorized) _evictThisDevice('Polling/Visibility – token distinto en BD');
+    }
+
+    // Polling cada 20 segundos
+    _devicePollInterval = setInterval(_checkDevice, 20 * 1000);
+
+    // Verificar en cuanto el usuario vuelve a esta pestaña/app
+    document.addEventListener('visibilitychange', _onVisibility);
+}
+
+function _stopDeviceWatcher() {
+    if (_devicePollInterval) {
+        clearInterval(_devicePollInterval);
+        _devicePollInterval = null;
+    }
+    document.removeEventListener('visibilitychange', _onVisibility);
+}
+
+function _onVisibility() {
+    if (document.visibilityState === 'visible' && currentUser && !_beingEvicted) {
+        isDeviceAuthorized().then(function (ok) {
+            if (!ok) _evictThisDevice('visibilitychange – token distinto en BD');
+        });
+    }
+}
+
+// ── Sync de progreso diario con la nube ─────────
+let _syncPendingCards = 0;
+const SYNC_EVERY_N_CARDS = 5;
+
+/** Carga el conteo diario desde Supabase metadata → localStorage */
+async function loadDailyCountFromCloud(user) {
+    try {
+        const today = new Date().toISOString().slice(0, 10);
+        const dailyCounts = (user.user_metadata && user.user_metadata.daily_counts) || {};
+        const cloudCount = parseInt(dailyCounts[today] || '0', 10);
+        const localCount = getDailyCount();
+        const finalCount = Math.max(localCount, cloudCount);
+        if (finalCount > localCount) {
+            // El cloud tiene más → actualizar localStorage
+            try { localStorage.setItem(getDailyKey(), finalCount.toString()); } catch (e) { console.warn('No se pudo guardar contador diario local:', e); }
+        }
+    } catch (e) {
+        console.warn('Error cargando progreso diario:', e);
+    }
+}
+
+/** Guarda el conteo diario actual en Supabase metadata */
+async function saveDailyCountToCloud() {
+    if (!currentUser) return;
+    try {
+        const today = new Date().toISOString().slice(0, 10);
+        const count = getDailyCount();
+        // Re-fetch metadata fresca para hacer merge sin sobrescribir otros campos
+        const { data } = await getSupabase().auth.getUser();
+        const existing = (data && data.user && data.user.user_metadata &&
+            data.user.user_metadata.daily_counts) || {};
+        existing[today] = count;
+        // Mantener solo los últimos 30 días
+        const sortedKeys = Object.keys(existing).sort().slice(-30);
+        const trimmed = {};
+        sortedKeys.forEach(function (k) { trimmed[k] = existing[k]; });
+        await getSupabase().auth.updateUser({ data: { daily_counts: trimmed } });
+    } catch (e) {
+        console.warn('Error sincronizando progreso diario:', e);
+    }
+}
+
+/** Llama saveDailyCountToCloud cada N cartas calificadas */
+function maybeCloudSync() {
+    _syncPendingCards++;
+    if (_syncPendingCards >= SYNC_EVERY_N_CARDS) {
+        _syncPendingCards = 0;
+        saveDailyCountToCloud();
+    }
+}
+
+// ── Pantallas de bloqueo de dispositivo ─────────────────────────
+function showDevicePermanentlyBlockedScreen() {
+    showDeviceBlockedScreen(
+        'este dispositivo no esta autorizado para esta cuenta.<br>ya existen dos dispositivos registrados. contacta al administrador si necesitas liberar un acceso.',
+        true
+    );
+}
+
+// ── Pantalla de conflicto de sesión (al intentar logear desde 2º dispositivo) ──
+function showSessionConflictScreen() {
+    document.body.classList.add('login-active');
+    const ls = document.getElementById('login-screen');
+    if (ls) ls.classList.add('hidden');
+    let el = document.getElementById('session-conflict-screen');
+    if (!el) {
+        el = document.createElement('div');
+        el.id = 'session-conflict-screen';
+        el.className = 'device-blocked-screen'; // mismo overlay
+        el.innerHTML =
+            '<div class="db-card">' +
+            '  <div class="db-icon" style="background:linear-gradient(135deg,#7c3aed,#6d28d9)">' +
+            '    <i class="fas fa-shield-alt"></i>' +
+            '  </div>' +
+            '  <h2 class="db-title">sesión activa en otro dispositivo</h2>' +
+            '  <p class="db-msg">tu cuenta ya está abierta en otro dispositivo.<br>' +
+            '  solo se permite una sesión a la vez.<br><br>' +
+            '  <strong style="color:rgba(255,255,255,0.8)">¿qué deseas hacer?</strong></p>' +
+            '  <div style="display:flex;gap:10px;flex-direction:column">' +
+            '    <button class="login-btn db-btn" onclick="handleTakeControl()">' +
+            '      <i class="fas fa-sign-in-alt"></i> tomar el control (cerrar sesión allá)' +
+            '    </button>' +
+            '    <button class="db-btn" onclick="handleCancelConflict()"' +
+            '      style="background:rgba(255,255,255,0.08);box-shadow:none;border:1.5px solid rgba(255,255,255,0.12);">' +
+            '      <i class="fas fa-times"></i> cancelar' +
+            '    </button>' +
+            '  </div>' +
+            '</div>';
+        document.body.appendChild(el);
+    }
+    el.style.display = 'flex';
+}
+
+function hideSessionConflictScreen() {
+    const el = document.getElementById('session-conflict-screen');
+    if (el) el.style.display = 'none';
+}
+
+/** Usuario elige "tomar el control" desde la pantalla de conflicto */
+window.handleTakeControl = async function () {
+    if (!_pendingConflictSession) return;
+    const btn = document.querySelector('#session-conflict-screen .login-btn');
+    if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> tomando control...'; }
+
+    try {
+        currentUser = _pendingConflictSession;
+        _pendingConflictSession = null;
+        // Recuperar token y activar este dispositivo
+        await recoverDeviceTokenFromCloud(currentUser);
+        await activateThisDevice();
+        persistDeviceTokenToCloud();
+        await loadDailyCountFromCloud(currentUser);
+        subscribeDeviceChannel();
+        _startDeviceWatcher();
+        hideSessionConflictScreen();
+        enterApp(currentUser);
+    } catch (e) {
+        console.error('Error al tomar control:', e);
+        if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-sign-in-alt"></i> tomar el control'; }
+    } finally {
+        _handlingExplicitLogin = false;
+    }
+};
 
 /** Usuario elige "cancelar" desde la pantalla de conflicto */
 window.handleCancelConflict = async function () {
@@ -338,11 +757,9 @@ window.handleLogin = async function (e) {
 };
 
 /** handleLogout */
-window.handleLogout = function() {
+window.handleLogout = async function () {
     localStorage.clear();
     sessionStorage.clear();
-    window.location.href = window.location.origin + window.location.pathname + '?logout=1';
-};
     window.location.href = window.location.origin + window.location.pathname + '?logout=1';
 };
     window.location.href = window.location.origin + window.location.pathname + '?logout=1';
@@ -3439,24 +3856,27 @@ async function registrarVideoVistoEnNube(videoId, titulo, materia, progresoPct) 
 }
 
 
+// Hacer que el logo también cierre sesión instantáneamente
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.getElementById('logo') || document.querySelector('.logo');
+    if (logo) {
+        logo.style.cursor = 'pointer';
+        logo.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.handleLogout();
+        });
+    }
+});
 
 
-
-
-
-
-// === LISTENER ÚNICO DEL LOGO ===
-document.addEventListener('click', function(e) {
-    // Verificar si el clic fue en un logo (por clase) o en un ancestro con clase logo
-    let target = e.target;
-    if (target.classList.contains('logo-img') || target.classList.contains('login-logo-img') || target.classList.contains('sidebar-logo-img') || target.closest('.logo-img') || target.closest('.login-logo-img') || target.closest('.sidebar-logo-img')) {
-        e.preventDefault();
-        e.stopPropagation();
-        // Prevenir que el padre (si es un enlace) navegue
-        const link = target.closest('a');
-        if (link) {
-            link.removeAttribute('href');
-        }
-        window.handleLogout();
+// Hacer que el logo también cierre sesión instantáneamente
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.querySelector('.logo-img');
+    if (logo) {
+        logo.style.cursor = 'pointer';
+        logo.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.handleLogout();
+        });
     }
 });
