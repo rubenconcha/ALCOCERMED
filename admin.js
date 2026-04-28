@@ -189,11 +189,12 @@ async function loadAllData() {
   const sb = getSupabase();
   cachedData.errors = [];
 
-  const [devices, sims, banco, videos, directory] = await Promise.all([
+  const [devices, sims, banco, videos, flashcards, directory] = await Promise.all([
     safeSelect(sb, 'user_devices', '*'),
     safeSelect(sb, 'resultados_simulacros', '*'),
     safeSelect(sb, 'resultados_banco', '*'),
     safeSelect(sb, 'progreso_videoclases', '*'),
+    safeSelect(sb, 'progreso_flashcards', '*'),
     getUserDirectory(sb)
   ]);
 
@@ -201,6 +202,7 @@ async function loadAllData() {
   cachedData.sims = sortByDate(sims, ['created_at']);
   cachedData.banco = sortByDate(banco, ['created_at']);
   cachedData.videos = sortByDate(videos, ['fecha_visto', 'created_at']);
+  cachedData.flashcards = flashcards;
   cachedData.userMap = buildUserMap(directory, cachedData);
   cachedData.estudiantes = buildStudentRows(cachedData);
 
@@ -271,12 +273,12 @@ function buildUserMap(directory, data) {
     });
   });
 
-  [...data.devices, ...data.sims, ...data.banco, ...data.videos].forEach(r => {
+  [...data.devices, ...data.sims, ...data.banco, ...data.videos, ...(data.flashcards || [])].forEach(r => {
     const id = r.user_id || r.uid || r.auth_user_id;
     add(id, {
       email: r.email || r.user_email || r.student_email || r.correo,
       name: r.user_name || r.nombre || r.name || r.display_name,
-      last_seen: r.updated_at || r.last_login || r.created_at || r.fecha_visto
+      last_seen: r.updated_at || r.last_login || r.created_at || r.fecha_visto || r.ultima_sesion
     });
   });
 
@@ -305,6 +307,9 @@ function buildStudentRows(data) {
       ...devs.map(r => r.updated_at || r.last_login || r.created_at),
       info.last_seen
     ]);
+    const fcards = (data.flashcards || []).find(f => String(f.user_id) === userId);
+    const flashCount = fcards ? number(fcards.repasos_totales) : 0;
+
     return {
       user_id: userId,
       email: info.email || '',
@@ -317,10 +322,11 @@ function buildStudentRows(data) {
       sims: sims.length,
       bancos: bancos.length,
       videos: vids.length,
+      flashcards: flashCount,
       simAvg,
       bancoAvg,
       best,
-      activity: sims.length + bancos.length + vids.length
+      activity: sims.length + bancos.length + vids.length + (flashCount > 0 ? 1 : 0)
     };
   }).sort((a, b) => new Date(b.last_seen || 0) - new Date(a.last_seen || 0));
 }
@@ -457,6 +463,7 @@ function renderEstudiantes(list) {
       <td>${renderScore(u.simAvg || u.bancoAvg || 0)}</td>
       <td><span class="tag tag-success">${u.videos}</span></td>
       <td><span class="tag tag-warning">${u.bancos}</span></td>
+      <td><span class="tag tag-purple">${u.flashcards || 0}</span></td>
       <td>${u.activity > 0 ? '<span class="tag tag-success">activo</span>' : '<span class="tag tag-muted">sin actividad</span>'}</td>
       <td><button class="btn btn-sm btn-secondary" onclick="window.verDetalleEstudiante('${escapeAttr(u.user_id)}')"><i class="fas fa-eye"></i> ver progreso</button></td>
     </tr>`).join('');

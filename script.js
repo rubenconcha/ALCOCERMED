@@ -692,6 +692,11 @@ window.rateCard = function (score) {
 
     renderCard();
     actualizarProgreso();
+
+    // Sincronizar flashcards con la nube cada 3 repasos para no saturar
+    if (totalReviews % 3 === 0) {
+        sincronizarFlashcardsEnNube();
+    }
 };
 
 // ──────────────────────────────────────────────
@@ -3295,6 +3300,23 @@ async function registrarVideoVistoEnNube(videoId, titulo, materia, progresoPct) 
         if (error) console.error('[Videoclases] Error guardando progreso:', error.message);
     } catch (e) {
         console.warn('[Videoclases] Error fatal en la nube:', e);
+    }
+}
+
+async function sincronizarFlashcardsEnNube() {
+    if (!currentUser) return;
+    try {
+        const sb = getSupabase();
+        const { error } = await sb.from('progreso_flashcards').upsert({
+            user_id: currentUser.id,
+            user_email: currentUser.email,
+            user_name: (currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email.split('@')[0],
+            repasos_totales: totalReviews,
+            ultima_sesion: new Date().toISOString()
+        }, { onConflict: 'user_id' });
+        if (error) console.error('[Flashcards] Error sincronizando:', error.message);
+    } catch (e) {
+        console.warn('[Flashcards] Error fatal en la nube:', e);
     }
 }
 
