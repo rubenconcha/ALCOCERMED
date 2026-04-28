@@ -33,7 +33,22 @@ if (new URLSearchParams(window.location.search).get("logout") === "1") {
         if (header) header.style.display = "none";
         // Eliminar parámetro de la URL sin recargar
         history.replaceState({}, document.title, window.location.pathname);
+    
+    // Clic en logo del topbar cierra sesión instantáneamente
+    document.querySelector('.topbar-logo')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        handleLogout();
     });
+    // También en cualquier .logo-img que no sea login
+    document.querySelectorAll('.logo-img, .sidebar-logo-img, .topbar-logo img').forEach(el => {
+        el.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            handleLogout();
+        });
+    });
+});
 }
 const ADMIN_EMAILS = CONFIG.ADMIN_EMAILS || ['admin@alcocermed.com', 'admin@bencarson.com', 'rubenconcha@example.com', 'pichon4488@gmail.com'];
 
