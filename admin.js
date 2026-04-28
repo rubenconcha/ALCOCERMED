@@ -275,7 +275,7 @@ function buildUserMap(directory, data) {
     const id = r.user_id || r.uid || r.auth_user_id;
     add(id, {
       email: r.email || r.user_email || r.student_email || r.correo,
-      name: r.nombre || r.name || r.display_name,
+      name: r.user_name || r.nombre || r.name || r.display_name,
       last_seen: r.updated_at || r.last_login || r.created_at || r.fecha_visto
     });
   });

@@ -1910,6 +1910,17 @@ window.finalizarBanco = function () {
         0, // banco no tiene timer
         bancoState.selectedMateria || 'todas'
     );
+
+    // Sincronizar con la nube para el Panel de Admin
+    guardarResultadoBancoEnNube({
+        materia: bancoState.selectedMateria || 'todas',
+        tema: 'práctica general',
+        dificultad: bancoState.selectedDificultad || 'todos',
+        total: total,
+        correctas: correctas,
+        incorrectas: incorrectas,
+        porcentaje: pct
+    });
 };
 
 // ──────────────────────────────────────────────
@@ -2693,6 +2704,17 @@ window.finalizarSimulacro = function () {
     // Guardar en historial local
     guardarEnHistorial(pct, correctas, total, tiempoUsado,
         simState.mode === 'materia' ? simState.selectedMateria : 'todas');
+
+    // Sincronizar con la nube para el Panel de Admin
+    guardarResultadoSimulacroEnNube({
+        titulo: simState.mode === 'oficial' ? (simState.selectedOficial || 'Simulacro Oficial') : 'Simulacro Personalizado',
+        materia: simState.mode === 'materia' ? simState.selectedMateria : 'todas',
+        porcentaje: pct,
+        correctas: correctas,
+        incorrectas: incorrectas,
+        sinRespuesta: sinResponder,
+        tiempoSegundos: tiempoUsado
+    });
 
     showSimScreen('sim-result');
 };
