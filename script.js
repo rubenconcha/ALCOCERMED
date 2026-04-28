@@ -6,6 +6,7 @@ const CONFIG = window.ALCOCER_CONFIG || {
 };
 const SUPABASE_URL = CONFIG.SUPABASE_URL;
 const SUPABASE_KEY = CONFIG.SUPABASE_KEY;
+const ADMIN_EMAILS = (CONFIG.ADMIN_EMAILS || []).map(function(e) { return String(e).toLowerCase(); });
 
 let _supabase = null;
 function getSupabase() {
@@ -345,7 +346,7 @@ window.handleLogout = function() {
     sessionStorage.clear();
     window.location.href = window.location.origin + window.location.pathname + '?logout=1';
 };
-    window.location.href = window.location.origin + window.location.pathname + '?logout=1';
+
 /** Toggle visibilidad contraseña */
 window.togglePasswordVisibility = function () {
     const input = document.getElementById('login-password');
