@@ -125,6 +125,7 @@ function enterApp(user) {
     updateDailyGoalUI();
     setTimeout(testConnection, 800);
     setTimeout(preloadAppData, 1200);
+    setTimeout(sincronizarPerfilEnNube, 2000);
 }
 
 /** handleLogin */
@@ -3214,8 +3215,10 @@ async function guardarResultadoSimulacroEnNube(resultado) {
     if (!currentUser) return;
     try {
         const sb = getSupabase();
-        await sb.from('resultados_simulacros').insert({
+        const { error } = await sb.from('resultados_simulacros').insert({
             user_id: currentUser.id,
+            user_email: currentUser.email,
+            user_name: (currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email.split('@')[0],
             simulacro_titulo: resultado.titulo,
             materia: resultado.materia,
             porcentaje: resultado.porcentaje,
@@ -3224,8 +3227,9 @@ async function guardarResultadoSimulacroEnNube(resultado) {
             sin_respuesta: resultado.sinRespuesta,
             tiempo_segundos: resultado.tiempoSegundos
         });
+        if (error) console.error('[Simulacro] Error guardando resultado:', error.message);
     } catch (e) {
-        console.warn('[Simulacro] Error guardando en la nube:', e);
+        console.warn('[Simulacro] Error fatal en la nube:', e);
     }
 }
 
@@ -3233,8 +3237,10 @@ async function guardarResultadoBancoEnNube(resultado) {
     if (!currentUser) return;
     try {
         const sb = getSupabase();
-        await sb.from('resultados_banco').insert({
+        const { error } = await sb.from('resultados_banco').insert({
             user_id: currentUser.id,
+            user_email: currentUser.email,
+            user_name: (currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email.split('@')[0],
             materia: resultado.materia,
             tema: resultado.tema,
             dificultad: resultado.dificultad,
@@ -3243,8 +3249,9 @@ async function guardarResultadoBancoEnNube(resultado) {
             incorrectas: resultado.incorrectas,
             porcentaje: resultado.porcentaje
         });
+        if (error) console.error('[Banco] Error guardando resultado:', error.message);
     } catch (e) {
-        console.warn('[Banco] Error guardando en la nube:', e);
+        console.warn('[Banco] Error fatal en la nube:', e);
     }
 }
 
@@ -3252,8 +3259,10 @@ async function registrarVideoVistoEnNube(videoId, titulo, materia, progresoPct) 
     if (!currentUser || !videoId) return;
     try {
         const sb = getSupabase();
-        await sb.from('progreso_videoclases').upsert({
+        const { error } = await sb.from('progreso_videoclases').upsert({
             user_id: currentUser.id,
+            user_email: currentUser.email,
+            user_name: (currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email.split('@')[0],
             video_id: videoId,
             video_titulo: titulo,
             materia: materia,
@@ -3261,8 +3270,38 @@ async function registrarVideoVistoEnNube(videoId, titulo, materia, progresoPct) 
             visto: progresoPct >= 90,
             fecha_visto: new Date().toISOString()
         }, { onConflict: 'user_id,video_id' }); 
+        if (error) console.error('[Videoclases] Error guardando progreso:', error.message);
     } catch (e) {
-        console.warn('[Videoclases] Error guardando en la nube:', e);
+        console.warn('[Videoclases] Error fatal en la nube:', e);
+    }
+}
+
+async function sincronizarPerfilEnNube() {
+    if (!currentUser) return;
+    try {
+        const sb = getSupabase();
+        const name = (currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email.split('@')[0];
+        
+        // Intentar registrar/actualizar en una tabla de perfiles que el admin pueda leer
+        // Probamos con 'user_profiles' que es la que el admin.js busca primero
+        const { error } = await sb.from('user_profiles').upsert({
+            user_id: currentUser.id,
+            email: currentUser.email,
+            full_name: name,
+            last_seen: new Date().toISOString()
+        }, { onConflict: 'user_id' });
+        
+        if (error) {
+            // Si falla user_profiles, intentar en 'profiles' (fallback)
+            await sb.from('profiles').upsert({
+                id: currentUser.id,
+                email: currentUser.email,
+                full_name: name,
+                updated_at: new Date().toISOString()
+            }, { onConflict: 'id' });
+        }
+    } catch (e) {
+        console.warn('[Auth] Error sincronizando perfil:', e);
     }
 }
 
