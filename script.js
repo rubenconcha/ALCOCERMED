@@ -751,6 +751,8 @@ window.handleLogout = async function () {
 };
     window.location.href = window.location.origin + window.location.pathname + '?logout=1';
 };
+    window.location.href = window.location.origin + window.location.pathname + '?logout=1';
+};
 /** Toggle visibilidad contraseña */
 window.togglePasswordVisibility = function () {
     const input = document.getElementById('login-password');
