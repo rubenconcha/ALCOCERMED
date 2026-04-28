@@ -3246,13 +3246,13 @@ async function guardarResultadoSimulacroEnNube(resultado) {
             user_id: currentUser.id,
             user_email: currentUser.email,
             user_name: (currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email.split('@')[0],
-            simulacro_titulo: resultado.titulo,
-            materia: resultado.materia,
-            porcentaje: resultado.porcentaje,
-            correctas: resultado.correctas,
-            incorrectas: resultado.incorrectas,
-            sin_respuesta: resultado.sinRespuesta,
-            tiempo_segundos: resultado.tiempoSegundos
+            simulacro_titulo: String(resultado.titulo || 'Simulacro'),
+            materia: String(resultado.materia || 'General'),
+            porcentaje: Math.round(Number(resultado.porcentaje || 0)),
+            correctas: Math.round(Number(resultado.correctas || 0)),
+            incorrectas: Math.round(Number(resultado.incorrectas || 0)),
+            sin_respuesta: Math.round(Number(resultado.sinRespuesta || 0)),
+            tiempo_segundos: Math.round(Number(resultado.tiempoSegundos || 0))
         });
         if (error) console.error('[Simulacro] Error guardando resultado:', error.message);
     } catch (e) {
@@ -3268,13 +3268,13 @@ async function guardarResultadoBancoEnNube(resultado) {
             user_id: currentUser.id,
             user_email: currentUser.email,
             user_name: (currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email.split('@')[0],
-            materia: resultado.materia,
-            tema: resultado.tema,
-            dificultad: resultado.dificultad,
-            total: resultado.total,
-            correctas: resultado.correctas,
-            incorrectas: resultado.incorrectas,
-            porcentaje: resultado.porcentaje
+            materia: String(resultado.materia || 'General'),
+            tema: String(resultado.tema || 'Práctica'),
+            dificultad: String(resultado.dificultad || 'Normal'),
+            total: Math.round(Number(resultado.total || 0)),
+            correctas: Math.round(Number(resultado.correctas || 0)),
+            incorrectas: Math.round(Number(resultado.incorrectas || 0)),
+            porcentaje: Math.round(Number(resultado.porcentaje || 0))
         });
         if (error) console.error('[Banco] Error guardando resultado:', error.message);
     } catch (e) {

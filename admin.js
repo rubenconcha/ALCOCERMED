@@ -696,7 +696,10 @@ async function verDetalleEstudiante(userId) {
         ${miniStat('simulacros', sims.length)}
         ${miniStat('banco', bancos.length)}
         ${miniStat('videos', vids.length)}
-        ${miniStat('promedio', Math.round(avg([simAvg, bancoAvg].filter(Boolean)) || 0) + '%')}
+        ${miniStat('flashcards', st.flashcards || 0)}
+      </div>
+      <div style="display:grid;grid-template-columns:1fr;margin-bottom:18px;">
+        ${miniStat('promedio general', Math.round(avg([simAvg, bancoAvg].filter(Boolean)) || 0) + '%')}
       </div>
       <div style="margin-bottom:18px;">
         <div class="chart-title" style="margin-bottom:10px;"><i class="fas fa-chart-line" style="color:var(--orange);"></i> rendimiento individual</div>
