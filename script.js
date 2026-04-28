@@ -743,14 +743,12 @@ window.handleLogin = async function (e) {
 
 /** handleLogout */
 window.handleLogout = async function () {
-    if (!confirm('¿cerrar sesión?')) return;
-    try { await saveDailyCountToCloud(); } catch (e) { console.warn(e); }
-    unsubscribeDeviceChannel();
-    _stopDeviceWatcher();
-    try { await getSupabase().auth.signOut({ scope: 'global' }); } catch (e) { console.error(e); }
-    currentUser = null;
     localStorage.clear();
     sessionStorage.clear();
+    window.location.href = window.location.origin + window.location.pathname + '?logout=1';
+};
+    window.location.href = window.location.origin + window.location.pathname + '?logout=1';
+};
     window.location.href = window.location.origin + window.location.pathname + '?logout=1';
 };
 /** Toggle visibilidad contraseña */
@@ -3839,3 +3837,29 @@ async function registrarVideoVistoEnNube(videoId, titulo, materia, progresoPct) 
         console.warn('[Videoclases] Error guardando en la nube:', e);
     }
 }
+
+
+// Hacer que el logo también cierre sesión instantáneamente
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.getElementById('logo') || document.querySelector('.logo');
+    if (logo) {
+        logo.style.cursor = 'pointer';
+        logo.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.handleLogout();
+        });
+    }
+});
+
+
+// Hacer que el logo también cierre sesión instantáneamente
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.querySelector('.logo-img');
+    if (logo) {
+        logo.style.cursor = 'pointer';
+        logo.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.handleLogout();
+        });
+    }
+});
