@@ -726,20 +726,36 @@ window.handleLogin = async function (e) {
 
 /** handleLogout */
 window.handleLogout = async function () {
-    if (!confirm('¿cerrar sesión?')) return;
+    console.log('[handleLogout] Iniciando cierre de sesión');
+    if (!confirm('¿cerrar sesión?')) {
+        console.log('[handleLogout] Usuario canceló');
+        return;
+    }
+    console.log('[handleLogout] Usuario confirmó');
     // Sincronizar progreso antes de salir
-    try { await saveDailyCountToCloud(); } catch (e) { console.warn('No se pudo sincronizar progreso antes de salir:', e); }
+    try { 
+        console.log('[handleLogout] Sincronizando progreso...');
+        await saveDailyCountToCloud(); 
+        console.log('[handleLogout] Progreso sincronizado');
+    } catch (e) { 
+        console.warn('[handleLogout] No se pudo sincronizar progreso:', e); 
+    }
     unsubscribeDeviceChannel();
     _stopDeviceWatcher();
+    console.log('[handleLogout] Dispositivo desconectado');
     try {
-        // scope:'global' invalida el token en el servidor → ningún dispositivo sigue con sesión activa
+        console.log('[handleLogout] Llamando getSupabase().auth.signOut()...');
         await getSupabase().auth.signOut({ scope: 'global' });
+        console.log('[handleLogout] signOut exitoso');
     } catch (err) {
-        console.error('Error al cerrar sesión:', err);
+        console.error('[handleLogout] Error al cerrar sesión remoto:', err);
     }
-    // Siempre limpiar estado local después de intentar cerrar sesión
+    console.log('[handleLogout] Limpiando estado local');
     currentUser = null;
+    console.log('[handleLogout] Mostrando pantalla de login');
     showLoginScreen();
+    console.log('[handleLogout] Recargando página para estado limpio');
+    location.reload();
 };
 
 /** Toggle visibilidad contraseña */
