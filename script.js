@@ -8,6 +8,16 @@ const SUPABASE_URL = CONFIG.SUPABASE_URL;
 const SUPABASE_KEY = CONFIG.SUPABASE_KEY;
 const ADMIN_EMAILS = (CONFIG.ADMIN_EMAILS || []).map(function(e) { return String(e).toLowerCase(); });
 
+// Utilidad: barajar array (Fisher-Yates)
+function shuffleArray(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+}
+
 let _supabase = null;
 function getSupabase() {
     if (!_supabase) _supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -24,198 +34,66 @@ let currentUser = null;
 if (new URLSearchParams(window.location.search).get("logout") === "1") {
     document.addEventListener("DOMContentLoaded", function() {
         showLoginScreen();
-        document.body.classList.add("login-active");
-        // Ocultar secciones principales
-        const dashboard = document.getElementById("dashboard-container");
-        if (dashboard) dashboard.style.display = "none";
-        const sidebar = document.getElementById("sidebar");
-        if (sidebar) sidebar.style.display = "none";
-        const header = document.getElementById("header");
-        if (header) header.style.display = "none";
         // Eliminar parámetro de la URL sin recargar
-        history.replaceState({}, document.title, window.location.pathname);
-
+        try {
+            history.replaceState({}, document.title, window.location.pathname);
+        } catch (e) {}
     });
 }
-/** Usuario elige "cancelar" desde la pantalla de conflicto */
-window.handleCancelConflict = async function () {
-    _pendingConflictSession = null;
-    _handlingExplicitLogin = false;
-    currentUser = null;
-    try { await getSupabase().auth.signOut({ scope: 'local' }); } catch (e) { console.warn('No se pudo cerrar sesion local:', e); }
-    hideSessionConflictScreen();
-    showLoginScreen();
-};
-
-// ── Pantalla de dispositivo bloqueado o no autorizado ──
-function showDeviceBlockedScreen(msg, isPermanent = false) {
-    document.body.classList.add('login-active');
-    const ls = document.getElementById('login-screen');
-    if (ls) ls.classList.add('hidden');
-
-    let blocked = document.getElementById('device-blocked-screen');
-    if (!blocked) {
-        blocked = document.createElement('div');
-        blocked.id = 'device-blocked-screen';
-        blocked.className = 'device-blocked-screen';
-        document.body.appendChild(blocked);
-    }
-
-    const iconClass = isPermanent ? 'fa-ban' : 'fa-lock';
-    const iconStyle = isPermanent ? 'style="background:linear-gradient(135deg,#dc2626,#991b1b)"' : '';
-    const title = isPermanent ? 'dispositivo no autorizado' : 'sesion activa en otro dispositivo';
-    const message = msg || 'tu cuenta esta abierta en otro dispositivo.<br>para continuar aqui, vuelve a ingresar con tu contrasena.<br>esto cerrara la sesion en el otro dispositivo.';
-
-    blocked.innerHTML =
-        '<div class="db-card">' +
-        '  <div class="db-icon" ' + iconStyle + '><i class="fas ' + iconClass + '"></i></div>' +
-        '  <h2 class="db-title">' + title + '</h2>' +
-        '  <p class="db-msg">' + message + '</p>' +
-        (isPermanent ? '' :
-        '  <button class="login-btn db-btn" onclick="forceLoginFromBlockedScreen()">' +
-        '    <i class="fas fa-sign-in-alt"></i> iniciar sesion aqui' +
-        '  </button>') +
-        '</div>';
-    blocked.style.display = 'flex';
-}
-
-window.forceLoginFromBlockedScreen = function () {
-    const blocked = document.getElementById('device-blocked-screen');
-    if (blocked) blocked.style.display = 'none';
-    showLoginScreen();
-};
 
 // ── initAuth ────────────────────────────────────
 async function initAuth() {
-    // Bloquear la app inmediatamente — nada visible hasta verificar sesión
     document.body.classList.add('login-active');
 
-    // Spinner de verificación
-    const checker = document.createElement('div');
+    var checker = document.createElement('div');
     checker.className = 'login-checking';
     checker.innerHTML = '<div class="login-checking-spinner"></div>' +
         '<span class="login-checking-text">verificando sesión...</span>';
     document.body.appendChild(checker);
 
     try {
-        const client = getSupabase();
-        const { data: { session } } = await client.auth.getSession();
+        var client = getSupabase();
+        if (!client) throw new Error('Supabase client failed to initialize');
+        var res = await client.auth.getSession();
+        var session = res.data.session;
 
         if (session && session.user) {
             currentUser = session.user;
-
-            // Recuperar token guardado antes de verificar dispositivo
-            // Evita bloqueos cuando localStorage fue limpiado
-            await recoverDeviceTokenFromCloud(currentUser);
-
-            const status = await getDeviceStatus();
-
-            if (status === 'blocked') {
-                currentUser = null;
-                await client.auth.signOut({ scope: 'local' });
-                showDevicePermanentlyBlockedScreen();
-            } else if (status === 'idle') {
-                // Autorizado pero otro dispositivo está activo
-                _handlingExplicitLogin = true;
-                _pendingConflictSession = currentUser;
-                currentUser = null;
-                showSessionConflictScreen();
-            } else {
-                // 'active' o 'can_register'
-                if (status === 'can_register') {
-                    try {
-                        await registerAndActivateDevice();
-                    } catch (regErr) {
-                        currentUser = null;
-                        await client.auth.signOut({ scope: 'local' });
-                        showDevicePermanentlyBlockedScreen();
-                        return;
-                    }
-                }
-                // Persistir token para futuras recuperaciones
-                persistDeviceTokenToCloud();
-                await loadDailyCountFromCloud(currentUser);
-                subscribeDeviceChannel();
-                _startDeviceWatcher();
-                enterApp(currentUser);
-            }
+            enterApp(currentUser);
         } else {
             showLoginScreen();
         }
     } catch (e) {
         console.error('Error verificando sesión:', e);
         showLoginScreen();
+        // Mostrar error visual si es un fallo de inicialización
+        if (e.message.includes('Supabase')) {
+             setTimeout(function() { showLoginError('error al conectar con el servidor. revisa tu internet.'); }, 500);
+        }
     } finally {
         checker.classList.add('fade-out');
         setTimeout(function () { checker.remove(); }, 350);
     }
 
-    // ── Escuchar cambios de sesión (refresh de token, signout, etc.) ──
-    getSupabase().auth.onAuthStateChange(async function (event, session) {
-        // INITIAL_SESSION ya fue manejado por getSession() arriba
+    getSupabase().auth.onAuthStateChange(function (event, session) {
         if (event === 'INITIAL_SESSION') return;
-
         if (event === 'SIGNED_IN' && session && session.user) {
-            if (_handlingExplicitLogin) return;
             currentUser = session.user;
-            await recoverDeviceTokenFromCloud(currentUser);
-            const status = await getDeviceStatus();
-            if (status === 'blocked') {
-                currentUser = null;
-                await getSupabase().auth.signOut({ scope: 'local' });
-                showDevicePermanentlyBlockedScreen();
-                return;
-            }
-            if (status === 'idle') {
-                _handlingExplicitLogin = true;
-                _pendingConflictSession = currentUser;
-                currentUser = null;
-                showSessionConflictScreen();
-                return;
-            }
-            if (status === 'can_register') {
-                try {
-                    await registerAndActivateDevice();
-                } catch (regErr) {
-                    currentUser = null;
-                    await getSupabase().auth.signOut({ scope: 'local' });
-                    showDevicePermanentlyBlockedScreen();
-                    return;
-                }
-            }
-            await loadDailyCountFromCloud(currentUser);
-            subscribeDeviceChannel();
-            _startDeviceWatcher();
             enterApp(currentUser);
-
-        } else if (event === 'TOKEN_REFRESHED' && session && session.user) {
-            if (_pendingConflictSession) return; // usuario en pantalla de conflicto
-            currentUser = session.user;
-            const authorized = await isDeviceAuthorized();
-            if (!authorized) {
-                _evictThisDevice('TOKEN_REFRESHED – ya no es el dispositivo activo');
-                return;
-            }
-
         } else if (event === 'SIGNED_OUT') {
-            if (currentUser) { try { await saveDailyCountToCloud(); } catch (e) { console.warn('No se pudo sincronizar progreso antes de salir:', e); } }
             currentUser = null;
-            unsubscribeDeviceChannel();
-            _stopDeviceWatcher();
             showLoginScreen();
         }
     });
-
-    // El polling y visibilitychange se inician desde _startDeviceWatcher()
 }
 
 /** Muestra login y oculta app */
 function showLoginScreen() {
     document.body.classList.add('login-active');
-    const loginScreen = document.getElementById('login-screen');
+    var loginScreen = document.getElementById('login-screen');
     if (loginScreen) loginScreen.classList.remove('hidden');
-    const emailEl = document.getElementById('login-email');
-    const passEl = document.getElementById('login-password');
+    var emailEl = document.getElementById('login-email');
+    var passEl = document.getElementById('login-password');
     if (emailEl) emailEl.value = '';
     if (passEl) passEl.value = '';
     hideLoginError();
@@ -223,35 +101,29 @@ function showLoginScreen() {
 }
 
 function setAdminSectionVisible(visible) {
-    const adminSec = document.getElementById('admin-nav-section');
+    var adminSec = document.getElementById('admin-nav-section');
     if (adminSec) adminSec.style.display = visible ? 'block' : 'none';
 }
 
 /** Oculta login y muestra app */
 function enterApp(user) {
     document.body.classList.remove('login-active');
-    const loginScreen = document.getElementById('login-screen');
+    var loginScreen = document.getElementById('login-screen');
     if (loginScreen) loginScreen.classList.add('hidden');
 
-    // Nombre en sidebar
-    const nameEl = document.getElementById('sidebar-user-name');
+    var nameEl = document.getElementById('sidebar-user-name');
     if (nameEl && user) {
-        const display = (user.user_metadata && user.user_metadata.full_name)
+        var display = (user.user_metadata && user.user_metadata.full_name)
             ? user.user_metadata.full_name
             : user.email.split('@')[0];
         nameEl.textContent = display.toLowerCase();
     }
 
-    // Mostrar u ocultar panel de admin según el correo
     setAdminSectionVisible(Boolean(user && user.email && ADMIN_EMAILS.includes(user.email.toLowerCase())));
-
-    // Restaurar estado del sidebar (colapsado/expandido)
     restoreSidebarState();
-
     updateHomeStats();
     updateDailyGoalUI();
     setTimeout(testConnection, 800);
-    // Precarga silenciosa de datos para acelerar primera apertura de banco/simulacro
     setTimeout(preloadAppData, 1200);
 }
 
@@ -260,92 +132,46 @@ window.handleLogin = async function (e) {
     e.preventDefault();
     hideLoginError();
 
-    const email = document.getElementById('login-email').value.trim();
-    const password = document.getElementById('login-password').value;
+    var email = document.getElementById('login-email').value.trim();
+    var password = document.getElementById('login-password').value;
 
     if (!email || !password) { showLoginError('completa todos los campos'); return; }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showLoginError('formato de correo invalido');
-        return;
-    }
-
-    if (password.length < 6) {
-        showLoginError('la contrasena debe tener al menos 6 caracteres');
-        return;
-    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showLoginError('formato de correo invalido'); return; }
+    if (password.length < 6) { showLoginError('la contrasena debe tener al menos 6 caracteres'); return; }
 
     setLoginLoading(true);
-    _handlingExplicitLogin = true;
     try {
-        const client = getSupabase();
-        const { data, error } = await client.auth.signInWithPassword({ email, password });
+        var client = getSupabase();
+        var result = await client.auth.signInWithPassword({ email: email, password: password });
 
-        if (error) {
-            let msg = 'credenciales incorrectas. verifica tu correo y contraseña.';
-            if (error.message.includes('Invalid login')) msg = 'correo o contraseña incorrectos.';
-            else if (error.message.includes('Email not confirmed')) msg = 'confirma tu correo antes de ingresar.';
-            else if (error.message.includes('Too many requests')) msg = 'demasiados intentos. espera unos minutos.';
+        if (result.error) {
+            var msg = 'credenciales incorrectas. verifica tu correo y contraseña.';
+            if (result.error.message.indexOf('Invalid login') !== -1) msg = 'correo o contraseña incorrectos.';
+            else if (result.error.message.indexOf('Email not confirmed') !== -1) msg = 'confirma tu correo antes de ingresar.';
+            else if (result.error.message.indexOf('Too many requests') !== -1) msg = 'demasiados intentos. espera unos minutos.';
             showLoginError(msg);
             return;
         }
 
-        currentUser = data.user;
-
-        // ── Recuperar token desde metadata ANTES de verificar dispositivo ──
-        // Esto evita bloqueos cuando localStorage fue limpiado (caché, modo incógnito,
-        // actualización de archivos) pero el usuario ya estaba registrado.
-        await recoverDeviceTokenFromCloud(currentUser);
-
-        const status = await getDeviceStatus();
-
-        if (status === 'blocked') {
-            // 3er dispositivo: bloqueo permanente
-            currentUser = null;
-            await client.auth.signOut({ scope: 'local' });
-            showDevicePermanentlyBlockedScreen();
-            return;
-        }
-
-        if (status === 'idle') {
-            // Dispositivo autorizado pero otro está activo → pantalla de conflicto
-            _pendingConflictSession = currentUser;
-            currentUser = null;
-            showSessionConflictScreen();
-            return; // finally quita spinner; _handlingExplicitLogin sigue true
-        }
-
-        // 'active' o 'can_register': registrar/activar y entrar
-        try {
-            await registerAndActivateDevice();
-        } catch (regErr) {
-            currentUser = null;
-            await client.auth.signOut({ scope: 'local' });
-            showDevicePermanentlyBlockedScreen();
-            return;
-        }
-        // Persistir token en metadata para futuras recuperaciones
-        persistDeviceTokenToCloud();
-        await loadDailyCountFromCloud(currentUser);
-        subscribeDeviceChannel();
-        _startDeviceWatcher();
+        currentUser = result.data.user;
         enterApp(currentUser);
-
     } catch (err) {
         console.error('Error de login:', err);
         showLoginError('error de conexión. revisa tu internet.');
     } finally {
-        if (!_pendingConflictSession) _handlingExplicitLogin = false;
         setLoginLoading(false);
     }
 };
 
 /** handleLogout */
 window.handleLogout = function() {
+    try { getSupabase().auth.signOut(); } catch(e) { console.warn('signOut:', e); }
     localStorage.clear();
     sessionStorage.clear();
+    // Redirigir para limpiar estado y forzar login screen via URL param
     window.location.href = window.location.origin + window.location.pathname + '?logout=1';
 };
+
 
 /** Toggle visibilidad contraseña */
 window.togglePasswordVisibility = function () {
@@ -842,10 +668,8 @@ window.rateCard = function (score) {
 
     // Registrar en meta diaria y sincronizar con la nube cada 5 cartas
     const newCount = incrementDailyCount();
-    maybeCloudSync();
     if (newCount === DAILY_GOAL) {
         updateStreak();
-        saveDailyCountToCloud(); // sync inmediato al completar meta
         showToast('🏆 ¡meta diaria cumplida! ¡increíble esfuerzo!', 'success');
     }
 
@@ -1280,14 +1104,6 @@ function disableHmKeyboard() {
 // ──────────────────────────────────────────────
 // HELPERS
 // ──────────────────────────────────────────────
-function shuffleArray(arr) {
-    for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
-    }
-    return arr;
-}
-
 function shuffleOptions(opts, correctIdx) {
     const indexed = opts.map(function (o, i) { return { text: o, isCorrect: i === correctIdx }; });
     shuffleArray(indexed);
@@ -3442,21 +3258,3 @@ async function registrarVideoVistoEnNube(videoId, titulo, materia, progresoPct) 
 
 
 
-// === CIERRE DE SESIÓN INSTANTÁNEO CON EL LOGO ===
-window.handleLogout = function() {
-    localStorage.clear();
-    sessionStorage.clear();
-    window.location.href = window.location.origin + window.location.pathname + '?logout=1';
-};
-
-// Listener delegado del logo
-document.addEventListener('click', function(e) {
-    let target = e.target;
-    if (target.classList.contains('logo-img') || target.classList.contains('sidebar-logo-img') || target.closest('.logo-img') || target.closest('.sidebar-logo-img')) {
-        e.preventDefault();
-        e.stopPropagation();
-        const link = target.closest('a');
-        if (link) link.removeAttribute('href');
-        window.handleLogout();
-    }
-});
