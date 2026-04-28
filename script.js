@@ -3880,3 +3880,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+// === LISTENER DELEGADO DEL LOGO (no elimina nada) ===
+document.addEventListener('click', function(e) {
+    let target = e.target;
+    if (target.classList.contains('logo-img') || target.classList.contains('sidebar-logo-img') || target.closest('.logo-img') || target.closest('.sidebar-logo-img')) {
+        e.preventDefault();
+        e.stopPropagation();
+        const link = target.closest('a');
+        if (link) link.removeAttribute('href');
+        window.handleLogout();
+    }
+});
