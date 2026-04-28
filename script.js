@@ -165,11 +165,27 @@ window.handleLogin = async function (e) {
 
 /** handleLogout */
 window.handleLogout = function() {
-    try { getSupabase().auth.signOut(); } catch(e) { console.warn('signOut:', e); }
+    // 1. Limpiar datos locales inmediatamente
     localStorage.clear();
     sessionStorage.clear();
-    // Redirigir para limpiar estado y forzar login screen via URL param
-    window.location.href = window.location.origin + window.location.pathname + '?logout=1';
+    
+    // 2. Intentar cerrar sesión en Supabase
+    try { 
+        getSupabase().auth.signOut(); 
+    } catch(e) { 
+        console.warn('signOut:', e); 
+    }
+    
+    // 3. Reset estado local
+    currentUser = null;
+    
+    // 4. Mostrar pantalla de login instantáneamente (evita el parpadeo de recarga)
+    showLoginScreen();
+    
+    // 5. Limpiar la URL (opcional, para estética)
+    try {
+        history.replaceState({}, document.title, window.location.origin + window.location.pathname);
+    } catch (e) {}
 };
 
 
