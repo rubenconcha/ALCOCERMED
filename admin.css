@@ -777,6 +777,7 @@ tr:hover td {
 .tag-warning { background: rgba(245, 158, 11, 0.1); color: var(--warning); }
 .tag-danger { background: rgba(239, 68, 68, 0.1); color: var(--danger); }
 .tag-info { background: rgba(59, 130, 246, 0.1); color: var(--info); }
+.tag-purple { background: rgba(124, 58, 237, 0.1); color: var(--purple); }
 .tag-muted { background: var(--bg-soft); color: var(--text-medium); }
 
 .score-badge {

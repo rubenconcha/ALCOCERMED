@@ -287,7 +287,7 @@ function buildUserMap(directory, data) {
 
 function buildStudentRows(data) {
   const ids = new Set();
-  [...data.devices, ...data.sims, ...data.banco, ...data.videos].forEach(r => {
+  [...data.devices, ...data.sims, ...data.banco, ...data.videos, ...(data.flashcards || [])].forEach(r => {
     if (r.user_id) ids.add(String(r.user_id));
   });
 
@@ -452,7 +452,7 @@ function renderEstudiantes(list) {
   if (!tbody) return;
   const rows = Array.isArray(list) ? list : [];
   if (!rows.length) {
-    tbody.innerHTML = `<tr><td colspan="8">${emptyState('fa-users', 'sin estudiantes con progreso', 'cuando un alumno entre o termine actividades, aparecerá aquí.')}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="9">${emptyState('fa-users', 'sin estudiantes con progreso', 'cuando un alumno entre o termine actividades, aparecerá aquí.')}</td></tr>`;
     return;
   }
   tbody.innerHTML = rows.map(u => `
@@ -750,7 +750,8 @@ function getStudent(userId) {
     name: '',
     sims: 0,
     bancos: 0,
-    videos: 0
+    videos: 0,
+    flashcards: 0
   };
 }
 function studentLabel(userId) { return 'estudiante …' + shortId(userId); }
