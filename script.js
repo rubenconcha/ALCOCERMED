@@ -2760,8 +2760,64 @@ window.openEvaluacion = function () {
     renderEvaluacion();
 };
 
-function renderEvaluacion() {
+async function renderEvaluacion() {
     var historial = JSON.parse(localStorage.getItem('pb_historial') || '[]');
+
+    if (currentUser) {
+        var histMap = {};
+        historial.forEach(function (h) {
+            var key = h.materia + '|' + h.fecha;
+            histMap[key] = h;
+        });
+
+        try {
+            var sb = getSupabase();
+            var [simRes, bancoRes] = await Promise.all([
+                sb.from('resultados_simulacros')
+                    .select('*')
+                    .eq('user_id', currentUser.id)
+                    .order('created_at', { ascending: false })
+                    .limit(100),
+                sb.from('resultados_banco')
+                    .select('*')
+                    .eq('user_id', currentUser.id)
+                    .order('created_at', { ascending: false })
+                    .limit(100)
+            ]);
+
+            (simRes.data || []).forEach(function (r) {
+                var total = (r.correctas || 0) + (r.incorrectas || 0) + (r.sin_respuesta || 0);
+                var entry = {
+                    fecha: r.created_at,
+                    pct: r.porcentaje || 0,
+                    correctas: r.correctas || 0,
+                    total: total,
+                    tiempoSeg: r.tiempo_segundos || 0,
+                    materia: (r.materia || 'todas').toLowerCase()
+                };
+                var key = entry.materia + '|' + entry.fecha;
+                if (!histMap[key]) { histMap[key] = entry; historial.push(entry); }
+            });
+
+            (bancoRes.data || []).forEach(function (r) {
+                var entry = {
+                    fecha: r.created_at,
+                    pct: r.porcentaje || 0,
+                    correctas: r.correctas || 0,
+                    total: r.total || 0,
+                    tiempoSeg: 0,
+                    materia: (r.materia || 'todas').toLowerCase()
+                };
+                var key = entry.materia + '|' + entry.fecha;
+                if (!histMap[key]) { histMap[key] = entry; historial.push(entry); }
+            });
+
+            historial.sort(function (a, b) { return new Date(b.fecha) - new Date(a.fecha); });
+            if (historial.length > 100) historial = historial.slice(0, 100);
+        } catch (e) {
+            console.warn('Error cargando historial de la nube:', e);
+        }
+    }
 
     // Métricas globales
     var totalSims = historial.length;
