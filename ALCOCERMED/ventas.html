@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepa Bencarson | Ingresa a Medicina en la UMSS — Cochabamba, Bolivia</title>
+    <meta name="description" content="Prepárate para el examen de ingreso a la Facultad de Medicina de la UMSS con flashcards, simulacros cronometrados, banco de preguntas y el Método Alcocer. Para bachilleres y estudiantes de secundaria.">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="ventas.css">
+</head>
+<body class="ventas-page">
+
+<!-- ══ NAVBAR ══ -->
+<nav class="v-nav" id="v-nav">
+    <a href="#" class="v-nav-logo">
+        <img src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg"
+             alt="Logo Prepa Bencarson" class="v-nav-logo-img"
+             onerror="this.style.display='none'">
+        <div class="v-nav-logo-text">
+            <span class="v-nav-logo-pre">PREPARATORIA</span>
+            <span class="v-nav-logo-name">Ben Carson</span>
+        </div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Logotipo_Vertical_Universidad_Mayor_de_San_Sim%C3%B3n.png"
+             alt="UMSS" class="v-nav-logo-img" style="border-radius:50%;margin-left:8px;border:2px solid rgba(255,255,255,0.15);background:#fff;"
+             onerror="this.style.display='none'">
+    </a>
+    <ul class="v-nav-links">
+        <li><a href="#features">Plataforma</a></li>
+        <li><a href="#pricing">Planes</a></li>
+        <li><a href="#testimonials">Testimonios</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+    </ul>
+    <button class="v-nav-cta" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i> Inscríbete
+    </button>
+    <button class="v-nav-hamburger" onclick="openMobileMenu()" aria-label="Menú">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="v-mobile-menu" id="v-mobile-menu">
+    <button class="v-mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+    <a href="#features" onclick="closeMobileMenu()">Plataforma</a>
+    <a href="#pricing" onclick="closeMobileMenu()">Planes</a>
+    <a href="#testimonials" onclick="closeMobileMenu()">Testimonios</a>
+    <a href="#faq" onclick="closeMobileMenu()">Preguntas</a>
+    <button class="v-btn-primary" onclick="closeMobileMenu(); openWhatsApp();">
+        <i class="fab fa-whatsapp"></i> Inscríbete ahora
+    </button>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="v-hero">
+    <div class="v-hero-bg"></div>
+    <div class="v-hero-grid-bg"></div>
+    <div class="v-hero-content v-fade-up">
+        <div class="v-hero-badge">
+            <i class="fas fa-graduation-cap"></i> Propedéutico UMSS 2026
+        </div>
+        <h1 class="v-hero-title">
+            Ingresa a <span>Medicina</span> en<br>la UMSS
+        </h1>
+        <p class="v-hero-sub">
+            La plataforma más completa de Cochabamba para que bachilleres y estudiantes de
+            secundaria aprueben el propedéutico de la <strong>Facultad de Medicina "Aurelio Melean"</strong>
+            de la Universidad Mayor de San Simón con el <strong>Método Alcocer</strong>.
+        </p>
+        <div class="v-hero-btns">
+            <button class="v-btn-primary" onclick="openLeadModal('premium')">
+                <i class="fab fa-whatsapp"></i> Quiero inscribirme
+            </button>
+            <a href="#features" class="v-btn-secondary">
+                <i class="fas fa-play-circle"></i> Conocer la plataforma
+            </a>
+        </div>
+        <div class="v-hero-stats">
+            <div class="v-hero-stat">
+                <span class="v-hero-stat-num" data-count="2500" data-suffix="+">0</span>
+                <span class="v-hero-stat-label">Preguntas en el banco</span>
+            </div>
+            <div class="v-hero-stat">
+                <span class="v-hero-stat-num" data-count="150" data-suffix="+">0</span>
+                <span class="v-hero-stat-label">Flashcards activas</span>
+            </div>
+            <div class="v-hero-stat">
+                <span class="v-hero-stat-num" data-count="95" data-suffix="%">0</span>
+                <span class="v-hero-stat-label">Satisfacción</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ FEATURES ══ -->
+<section class="v-section v-section-dark" id="features">
+    <h2 class="v-section-title v-fade-up">Todo lo que necesitas para <span>aprobar</span></h2>
+    <p class="v-section-sub v-fade-up">
+        Diseñada para bachilleres que quieren ingresar a Medicina en la UMSS.
+        Herramientas de estudio que realmente funcionan. Sin relleno. Solo lo esencial.
+    </p>
+    <div class="v-features-grid">
+        <div class="v-feature-card v-fade-up">
+            <div class="v-feature-icon v-fi-orange"><i class="fas fa-layer-group"></i></div>
+            <h3>Flashcards con Método Alcocer</h3>
+            <p>Sistema de repetición espaciada (SRS) que prioriza lo que más te cuesta. Estudia de forma inteligente, no repetitiva.</p>
+        </div>
+        <div class="v-feature-card v-fade-up">
+            <div class="v-feature-icon v-fi-purple"><i class="fas fa-stopwatch"></i></div>
+            <h3>Simulacros Cronometrados</h3>
+            <p>Exámenes tipo propedéutico UMSS con temporizador real. Reproduce las condiciones del examen de admisión para que llegues sin nervios.</p>
+        </div>
+        <div class="v-feature-card v-fade-up">
+            <div class="v-feature-icon v-fi-green"><i class="fas fa-database"></i></div>
+            <h3>Banco de +2,000 Preguntas</h3>
+            <p>Preguntas clasificadas por materia, tema y dificultad con justificación en cada respuesta. Basadas en el temario oficial del propedéutico UMSS.</p>
+        </div>
+        <div class="v-feature-card v-fade-up">
+            <div class="v-feature-icon v-fi-blue"><i class="fas fa-play-circle"></i></div>
+            <h3>Videoclases Grabadas</h3>
+            <p>Clases por materia que puedes ver cuando quieras. Morfofunción, Biología Celular y Salud Pública cubiertas.</p>
+        </div>
+        <div class="v-feature-card v-fade-up">
+            <div class="v-feature-icon v-fi-cyan"><i class="fas fa-fire-alt"></i></div>
+            <h3>Intocables — Mapas Mentales</h3>
+            <p>Los temas que siempre caen en el examen de admisión a Medicina, organizados en mapas mentales visuales para máxima retención.</p>
+        </div>
+        <div class="v-feature-card v-fade-up">
+            <div class="v-feature-icon v-fi-red"><i class="fas fa-chart-line"></i></div>
+            <h3>Seguimiento de Progreso</h3>
+            <p>Panel personalizado con rachas diarias, metas de estudio, y análisis de tus áreas débiles para mejorar cada día.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══ PRICING ══ -->
+<section class="v-section" id="pricing">
+    <h2 class="v-section-title v-fade-up">Elige tu <span>plan de estudio</span></h2>
+    <p class="v-section-sub v-fade-up">
+        Invierte en tu futuro como estudiante de Medicina. Cada plan incluye acceso completo a la plataforma digital.
+    </p>
+    <div class="v-pricing-grid">
+        <!-- Plan Básico -->
+        <div class="v-price-card v-fade-up">
+            <p class="v-price-name">Plan Esencial</p>
+            <p class="v-price-amount">150 <small>Bs</small></p>
+            <p class="v-price-period">pago mensual</p>
+            <ul class="v-price-features">
+                <li><i class="fas fa-check"></i> Flashcards con SRS</li>
+                <li><i class="fas fa-check"></i> Banco de preguntas completo</li>
+                <li><i class="fas fa-check"></i> Quiz Relámpago y Ahorcado</li>
+                <li><i class="fas fa-check"></i> Seguimiento de progreso</li>
+                <li><i class="fas fa-lock"></i> <span style="color:var(--v-text-muted)">Simulacros limitados (2/mes)</span></li>
+                <li><i class="fas fa-lock"></i> <span style="color:var(--v-text-muted)">Sin videoclases</span></li>
+            </ul>
+            <button class="v-price-btn secondary" onclick="openLeadModal('esencial')">
+                <i class="fab fa-whatsapp"></i> Elegir Plan Esencial
+            </button>
+        </div>
+        <!-- Plan Premium -->
+        <div class="v-price-card popular v-fade-up">
+            <div class="v-price-badge">⭐ Más Popular</div>
+            <p class="v-price-name">Plan Premium</p>
+            <p class="v-price-amount">250 <small>Bs</small></p>
+            <p class="v-price-period">pago mensual</p>
+            <ul class="v-price-features">
+                <li><i class="fas fa-check"></i> Todo del Plan Esencial</li>
+                <li><i class="fas fa-check"></i> Simulacros ilimitados</li>
+                <li><i class="fas fa-check"></i> Videoclases completas</li>
+                <li><i class="fas fa-check"></i> Intocables & Mapas Mentales</li>
+                <li><i class="fas fa-check"></i> Análisis de áreas débiles</li>
+                <li><i class="fas fa-check"></i> Soporte prioritario por WhatsApp</li>
+            </ul>
+            <button class="v-price-btn primary" onclick="openLeadModal('premium')">
+                <i class="fab fa-whatsapp"></i> Elegir Plan Premium
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="v-section v-section-dark" id="testimonials">
+    <h2 class="v-section-title v-fade-up">Lo que dicen nuestros <span>estudiantes</span></h2>
+    <p class="v-section-sub v-fade-up">
+        Bachilleres que confiaron en Prepa Bencarson y hoy son estudiantes de Medicina en la UMSS.
+    </p>
+    <div class="v-testimonials-grid">
+        <div class="v-testimonial-card v-fade-up">
+            <div class="v-testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="v-testimonial-text">"Las flashcards con el método Alcocer cambiaron mi forma de estudiar. En 3 meses subí mi rendimiento un 40% y aprobé el propedéutico sin problemas."</p>
+            <div class="v-testimonial-author">
+                <div class="v-testimonial-avatar" style="background:linear-gradient(135deg,#ff8c00,#ff4500);">MC</div>
+                <div>
+                    <div class="v-testimonial-name">María C.</div>
+                    <div class="v-testimonial-role">Estudiante de Medicina — UMSS</div>
+                </div>
+            </div>
+        </div>
+        <div class="v-testimonial-card v-fade-up">
+            <div class="v-testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="v-testimonial-text">"El banco de preguntas es brutal. Cada pregunta tiene justificación y eso me ayudó a entender Morfofunción y Biología Celular a fondo. ¡Ingresé a la primera!"</p>
+            <div class="v-testimonial-author">
+                <div class="v-testimonial-avatar" style="background:linear-gradient(135deg,#a855f7,#7c3aed);">JR</div>
+                <div>
+                    <div class="v-testimonial-name">Jorge R.</div>
+                    <div class="v-testimonial-role">Bachiller egresado — Colegio Don Bosco</div>
+                </div>
+            </div>
+        </div>
+        <div class="v-testimonial-card v-fade-up">
+            <div class="v-testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="v-testimonial-text">"Los simulacros cronometrados me quitaron el pánico al propedéutico. Cuando llegó el día real, ya lo había hecho 20 veces en la plataforma. Saqué 78/100."</p>
+            <div class="v-testimonial-author">
+                <div class="v-testimonial-avatar" style="background:linear-gradient(135deg,#22c55e,#16a34a);">AL</div>
+                <div>
+                    <div class="v-testimonial-name">Andrea L.</div>
+                    <div class="v-testimonial-role">Estudiante de Medicina — UMSS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="v-section" id="faq">
+    <h2 class="v-section-title v-fade-up">Preguntas <span>frecuentes</span></h2>
+    <p class="v-section-sub v-fade-up">Resolvemos tus dudas antes de que empieces.</p>
+    <div class="v-faq-list v-fade-up">
+        <div class="v-faq-item">
+            <button class="v-faq-q" onclick="toggleFaq(this)">
+                ¿Qué es el Método Alcocer?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="v-faq-a">Es un sistema de estudio basado en repetición espaciada y aprendizaje activo, diseñado específicamente para el examen de ingreso a Medicina de la UMSS. Combina flashcards inteligentes con práctica continua de preguntas tipo propedéutico.</div>
+        </div>
+        <div class="v-faq-item">
+            <button class="v-faq-q" onclick="toggleFaq(this)">
+                ¿Puedo acceder desde mi celular?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="v-faq-a">¡Sí! La plataforma es 100% responsive y funciona perfectamente en celular, tablet y computadora. Estudia donde quieras, cuando quieras.</div>
+        </div>
+        <div class="v-faq-item">
+            <button class="v-faq-q" onclick="toggleFaq(this)">
+                ¿Cuántas preguntas tiene el banco?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="v-faq-a">Actualmente contamos con más de 2,000 preguntas distribuidas en Morfofunción, Biología Celular y Salud Pública — las 3 materias del propedéutico UMSS. Cada pregunta incluye justificación y nivel de dificultad.</div>
+        </div>
+        <div class="v-faq-item">
+            <button class="v-faq-q" onclick="toggleFaq(this)">
+                ¿Cómo me inscribo?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="v-faq-a">Haz clic en cualquier botón de inscripción y te conectarás directamente con nuestro equipo por WhatsApp. Te guiaremos en el proceso de pago y activación de tu cuenta en minutos.</div>
+        </div>
+        <div class="v-faq-item">
+            <button class="v-faq-q" onclick="toggleFaq(this)">
+                ¿Puedo cambiar de plan después?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="v-faq-a">¡Claro! Puedes actualizar tu plan en cualquier momento. Si empiezas con el Esencial y quieres pasar al Premium, solo escríbenos por WhatsApp y ajustamos tu acceso.</div>
+        </div>
+        <div class="v-faq-item">
+            <button class="v-faq-q" onclick="toggleFaq(this)">
+                ¿Qué materias cubren?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="v-faq-a">Cubrimos las 3 materias del Curso Básico (propedéutico) de la Facultad de Medicina "Aurelio Melean" de la UMSS: Morfofunción, Biología Celular y Salud Pública. Contenido actualizado cada gestión.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ CTA FINAL ══ -->
+<section class="v-cta-section">
+    <div class="v-cta-content v-fade-up">
+        <h2>¿Listo para <span style="background:var(--v-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">ingresar a Medicina</span> en la UMSS?</h2>
+        <p>No dejes tu futuro al azar. Únete a los bachilleres que ya se están preparando con Prepa Bencarson para aprobar el propedéutico.</p>
+        <div class="v-hero-btns">
+            <button class="v-btn-primary" onclick="openLeadModal('premium')" style="font-size:1.15rem;padding:18px 40px;">
+                <i class="fab fa-whatsapp"></i> Empezar ahora
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="v-footer">
+    <div class="v-footer-grid">
+        <div class="v-footer-brand">
+            <a href="#" class="v-nav-logo" style="margin-bottom:4px;">
+                <img src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg"
+                     alt="Logo" class="v-nav-logo-img" onerror="this.style.display='none'">
+                <div class="v-nav-logo-text">
+                    <span class="v-nav-logo-pre">PREPARATORIA</span>
+                    <span class="v-nav-logo-name">Ben Carson</span>
+                </div>
+            </a>
+            <p>Tu plataforma de estudio inteligente para ingresar a la Facultad de Medicina de la UMSS en Cochabamba. Método Alcocer + tecnología.</p>
+        </div>
+        <div class="v-footer-col">
+            <h4>Plataforma</h4>
+            <a href="#features">Flashcards</a>
+            <a href="#features">Simulacros</a>
+            <a href="#features">Banco de Preguntas</a>
+            <a href="#features">Videoclases</a>
+        </div>
+        <div class="v-footer-col">
+            <h4>Planes</h4>
+            <a href="#pricing">Plan Esencial</a>
+            <a href="#pricing">Plan Premium</a>
+        </div>
+        <div class="v-footer-col">
+            <h4>Contacto</h4>
+            <a href="https://wa.me/59173752688" target="_blank"><i class="fab fa-whatsapp"></i> +591 73752688</a>
+            <a href="#faq">Preguntas Frecuentes</a>
+        </div>
+    </div>
+    <div class="v-footer-bottom">
+        &copy; 2026 Preparatoria Ben Carson. Todos los derechos reservados.
+    </div>
+</footer>
+
+<!-- ══ WHATSAPP FLOATING BUTTON ══ -->
+<a href="https://wa.me/59173752688?text=Hola%2C%20quiero%20info%20sobre%20Prepa%20Bencarson" target="_blank" class="v-wsp-float" id="v-wsp-float">
+    <i class="fab fa-whatsapp"></i>
+    <span class="v-wsp-tooltip">💬 ¡Chatea con nosotros!</span>
+</a>
+
+<!-- ══ LEAD CAPTURE MODAL ══ -->
+<div class="v-modal-overlay" id="v-lead-modal">
+    <div class="v-modal">
+        <button class="v-modal-close" onclick="closeLeadModal()"><i class="fas fa-times"></i></button>
+        <h3>🎓 ¡Inscríbete ahora!</h3>
+        <p class="v-modal-sub">Completa tus datos y te contactamos por WhatsApp para activar tu acceso.</p>
+        <form id="lead-form" onsubmit="submitLead(event)">
+            <input type="hidden" id="lead-plan" value="premium">
+            <div class="v-form-group">
+                <label for="lead-name"><i class="fas fa-user"></i> Nombre completo</label>
+                <input type="text" id="lead-name" placeholder="Ej: Juan Pérez" required>
+            </div>
+            <div class="v-form-group">
+                <label for="lead-email"><i class="fas fa-envelope"></i> Correo electrónico (opcional)</label>
+                <input type="email" id="lead-email" placeholder="tu@correo.com">
+            </div>
+            <div class="v-form-group">
+                <label for="lead-phone"><i class="fas fa-phone"></i> Teléfono / WhatsApp</label>
+                <input type="tel" id="lead-phone" placeholder="+591 7XXXXXXX" required>
+            </div>
+            <div class="v-form-group">
+                <label for="lead-plan-select"><i class="fas fa-tag"></i> Plan de interés</label>
+                <select id="lead-plan-select" onchange="document.getElementById('lead-plan').value=this.value">
+                    <option value="premium">Plan Premium — 250 Bs/mes</option>
+                    <option value="esencial">Plan Esencial — 150 Bs/mes</option>
+                </select>
+            </div>
+            <button type="submit" class="v-form-submit">
+                <i class="fab fa-whatsapp"></i> Inscribirme por WhatsApp
+            </button>
+            <div class="v-form-msg" id="lead-msg"></div>
+        </form>
+    </div>
+</div>
+
+<script src="config.js"></script>
+<script src="ventas.js"></script>
+</body>
+</html>
