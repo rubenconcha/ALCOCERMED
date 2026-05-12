@@ -6708,3 +6708,192 @@ body.login-active .overlay {
 .fa-spin {
     animation: fa-spin 0.6s linear infinite !important;
 }
+
+/* ═══════════════════════════════════════
+   HOME VIDEO SECTION
+   ═══════════════════════════════════════ */
+.home-video-section {
+    background: linear-gradient(145deg, #0F172A, #1E293B);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,.18);
+}
+.home-video-wrap {
+    position: relative;
+    padding-top: 56.25%;
+    background: #000;
+}
+.home-video-iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+}
+.home-video-info {
+    padding: 20px 24px;
+}
+.video-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: .65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--yellow, #F59E0B);
+    margin-bottom: 6px;
+}
+.home-video-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 4px;
+}
+.home-video-desc {
+    font-size: .82rem;
+    color: rgba(255,255,255,.55);
+    line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════
+   HOME WIDGETS ROW
+   ═══════════════════════════════════════ */
+.home-widgets-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.home-widget {
+    background: var(--bg-white, #fff);
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.04);
+}
+.home-widget h3 {
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--text-dark, #1e293b);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.home-widget h3 i {
+    color: var(--blue, #2563EB);
+    font-size: .9rem;
+}
+
+/* Calendar Mini */
+.calendar-mini { }
+.cal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.cal-month {
+    font-size: .82rem;
+    font-weight: 700;
+    color: var(--text-dark, #1e293b);
+    text-transform: capitalize;
+}
+.cal-nav {
+    width: 28px; height: 28px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,.08);
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7rem;
+    color: var(--text-dark, #666);
+    transition: .15s;
+}
+.cal-nav:hover {
+    background: var(--blue, #2563EB);
+    color: #fff;
+    border-color: var(--blue, #2563EB);
+}
+.cal-days-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: .6rem;
+    font-weight: 700;
+    color: rgba(0,0,0,.35);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+.cal-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+.cal-day {
+    text-align: center;
+    padding: 6px 0;
+    font-size: .72rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .15s;
+    color: var(--text-dark, #333);
+}
+.cal-day:hover { background: rgba(37,99,235,.08); }
+.cal-day.today {
+    background: var(--blue, #2563EB);
+    color: #fff;
+    font-weight: 700;
+}
+.cal-day.other-month { color: rgba(0,0,0,.18); }
+
+/* Announcements */
+.announce-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.announce-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(0,0,0,.015);
+    border: 1px solid rgba(0,0,0,.04);
+}
+.announce-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+.announce-dot-red { background: var(--red, #DC2626); }
+.announce-dot-blue { background: var(--blue, #2563EB); }
+.announce-dot-yellow { background: var(--yellow, #F59E0B); }
+.announce-item strong {
+    font-size: .78rem;
+    font-weight: 700;
+    color: var(--text-dark, #1e293b);
+    display: block;
+    margin-bottom: 2px;
+}
+.announce-item p {
+    font-size: .7rem;
+    color: rgba(0,0,0,.45);
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .home-widgets-row {
+        grid-template-columns: 1fr;
+    }
+    .home-video-info {
+        padding: 16px;
+    }
+}

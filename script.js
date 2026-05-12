@@ -3404,3 +3404,58 @@ async function sincronizarPerfilEnNube() {
         console.warn('[Auth] Error sincronizando perfil:', e);
     }
 }
+
+// ══════════════════════════════════════════════
+// MINI CALENDAR
+// ══════════════════════════════════════════════
+(function() {
+    var calMonth = new Date().getMonth();
+    var calYear = new Date().getFullYear();
+    var months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+
+    function renderCalendar() {
+        var label = document.getElementById('cal-month-label');
+        var grid = document.getElementById('cal-days-grid');
+        if (!label || !grid) return;
+
+        label.textContent = months[calMonth] + ' ' + calYear;
+
+        var firstDay = new Date(calYear, calMonth, 1).getDay();
+        firstDay = firstDay === 0 ? 6 : firstDay - 1;
+        var daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+        var daysInPrev = new Date(calYear, calMonth, 0).getDate();
+
+        var today = new Date();
+        var html = '';
+
+        for (var i = firstDay - 1; i >= 0; i--) {
+            html += '<span class="cal-day other-month">' + (daysInPrev - i) + '</span>';
+        }
+        for (var d = 1; d <= daysInMonth; d++) {
+            var isToday = (d === today.getDate() && calMonth === today.getMonth() && calYear === today.getFullYear());
+            html += '<span class="cal-day' + (isToday ? ' today' : '') + '">' + d + '</span>';
+        }
+        var totalCells = firstDay + daysInMonth;
+        var remaining = (7 - (totalCells % 7)) % 7;
+        for (var r = 1; r <= remaining; r++) {
+            html += '<span class="cal-day other-month">' + r + '</span>';
+        }
+        grid.innerHTML = html;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        renderCalendar();
+        var prevBtn = document.getElementById('cal-prev');
+        var nextBtn = document.getElementById('cal-next');
+        if (prevBtn) prevBtn.addEventListener('click', function() {
+            calMonth--;
+            if (calMonth < 0) { calMonth = 11; calYear--; }
+            renderCalendar();
+        });
+        if (nextBtn) nextBtn.addEventListener('click', function() {
+            calMonth++;
+            if (calMonth > 11) { calMonth = 0; calYear++; }
+            renderCalendar();
+        });
+    });
+})();

@@ -109,10 +109,12 @@ window.handleLogin = async function(e) {
     var client = getSupabase();
     var result = await client.auth.signInWithPassword({ email: email, password: password });
     if (result.error) {
-      var msg = 'Credenciales incorrectas';
+      console.error('Supabase login error:', result.error);
+      var msg = 'Credenciales incorrectas. Verifica tu correo y contraseña.';
       if (result.error.message.indexOf('Invalid login') !== -1) msg = 'Correo o contraseña incorrectos';
       else if (result.error.message.indexOf('Email not confirmed') !== -1) msg = 'Confirma tu correo antes de ingresar';
       else if (result.error.message.indexOf('Too many requests') !== -1) msg = 'Demasiados intentos, espera unos minutos';
+      else if (result.error.message) msg = result.error.message;
       showLoginError(msg);
       return;
     }
@@ -120,7 +122,7 @@ window.handleLogin = async function(e) {
     enterApp();
   } catch (err) {
     console.error('Login error:', err);
-    showLoginError('Error de conexión. Revisa tu internet.');
+    showLoginError('Error de conexión. Revisa tu internet e intenta de nuevo.');
   } finally {
     setLoginLoading(false);
   }

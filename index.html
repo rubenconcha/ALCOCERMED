@@ -424,14 +424,58 @@
 
         <!-- ══ PANTALLA INICIO ══ -->
         <section id="home-screen" class="home-screen">
-            <div class="home-hero">
-                <div class="home-hero-text">
-                    <h1 class="home-title">bienvenido al<br><span class="home-title-accent">propedéutico</span></h1>
-                    <p class="home-subtitle">tu plataforma de estudio para medicina · prepa ben carson</p>
+            <!-- Video de Introducción -->
+            <div class="home-video-section">
+                <div class="home-video-wrap">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="home-video-iframe"></iframe>
                 </div>
-                <div class="home-hero-art">
-                    <div class="hero-icon-ring">
-                        <i class="fas fa-heartbeat"></i>
+                <div class="home-video-info">
+                    <span class="video-badge"><i class="fas fa-play-circle"></i> video de la semana</span>
+                    <h2 class="home-video-title">¡bienvenido al propedéutico!</h2>
+                    <p class="home-video-desc">mira este video introductorio para conocer cómo funciona tu plataforma de estudio.</p>
+                </div>
+            </div>
+
+            <!-- Calendario + Anuncios -->
+            <div class="home-widgets-row">
+                <div class="home-widget home-calendar-widget">
+                    <h3><i class="fas fa-calendar-alt"></i> calendario académico</h3>
+                    <div class="calendar-mini">
+                        <div class="cal-header">
+                            <button class="cal-nav" id="cal-prev"><i class="fas fa-chevron-left"></i></button>
+                            <span class="cal-month" id="cal-month-label">mayo 2026</span>
+                            <button class="cal-nav" id="cal-next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="cal-days-header">
+                            <span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sá</span><span>Do</span>
+                        </div>
+                        <div class="cal-days" id="cal-days-grid"></div>
+                    </div>
+                </div>
+                <div class="home-widget home-announce-widget">
+                    <h3><i class="fas fa-bullhorn"></i> anuncios recientes</h3>
+                    <div class="announce-list">
+                        <div class="announce-item">
+                            <span class="announce-dot announce-dot-red"></span>
+                            <div>
+                                <strong>simulacro general #3</strong>
+                                <p>disponible este sábado a las 9:00 AM. ¡prepárate!</p>
+                            </div>
+                        </div>
+                        <div class="announce-item">
+                            <span class="announce-dot announce-dot-blue"></span>
+                            <div>
+                                <strong>nuevas flashcards de morfofunción</strong>
+                                <p>se agregaron 25 tarjetas sobre el sistema cardiovascular</p>
+                            </div>
+                        </div>
+                        <div class="announce-item">
+                            <span class="announce-dot announce-dot-yellow"></span>
+                            <div>
+                                <strong>clase en vivo: biología celular</strong>
+                                <p>lunes 12 de mayo a las 7:00 PM por zoom</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
