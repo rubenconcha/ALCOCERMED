@@ -378,7 +378,7 @@ function startLiveSession(){
   client.rpc('generate_quiz_code').then(function(cr){
     if(cr.error){showToast('Error generando código','error');return;}
     var code=cr.data;
-    client.from('evaluaciones').update({publicado:true,codigo:code,updated_at:new Date().toISOString()}).eq('id',evaluacionId).then(function(r){
+    client.from('evaluaciones').update({publicado:true,codigo:code,iniciado:false,updated_at:new Date().toISOString()}).eq('id',evaluacionId).then(function(r){
       if(r.error){showToast('Error al publicar','error');return;}
       showLobby(code);
     });
@@ -452,8 +452,13 @@ function copyLobbyCode(){
 }
 function startGameFromLobby(){
   if(lobbyPollInterval){clearInterval(lobbyPollInterval);lobbyPollInterval=null;}
-  showToast('¡Sesión iniciada! Los estudiantes ya pueden responder.','success');
-  closeLobby();
+  // Marcar la evaluación como iniciada en Supabase
+  var client=getSupabase();
+  client.from('evaluaciones').update({iniciado:true,updated_at:new Date().toISOString()}).eq('id',evaluacionId).then(function(r){
+    if(r.error){showToast('Error al iniciar: '+r.error.message,'error');return;}
+    showToast('¡Sesión iniciada! Los estudiantes pueden responder ahora.','success');
+    closeLobby();
+  });
 }
 
 // ═══ PREVIEW ═══

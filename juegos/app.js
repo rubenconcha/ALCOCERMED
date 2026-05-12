@@ -354,13 +354,51 @@ function searchAndStartQuiz(code) {
             // Mostrar la página de quiz
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Evaluación';
             document.getElementById('quiz-live-subtitle').textContent = quizData.preguntas.length + ' preguntas • ' + (evaluacion.asignatura || '');
-            document.getElementById('quiz-container').style.display = 'block';
+            document.getElementById('quiz-container').style.display = 'none';
             document.getElementById('quiz-result').style.display = 'none';
 
             navigateTo('quiz');
-            showSplashAndStart();
+
+            // Si el admin ya inició, empezar directamente
+            if (evaluacion.iniciado) {
+                showSplashAndStart();
+            } else {
+                // Mostrar sala de espera y esperar a que el admin inicie
+                showWaitingRoom();
+            }
         });
     });
+}
+
+var waitingPollInterval = null;
+
+function showWaitingRoom() {
+    var wt = document.getElementById('quiz-waiting');
+    if (wt) wt.style.display = 'flex';
+    document.getElementById('quiz-container').style.display = 'none';
+
+    var title = quizData.evaluacion.titulo || 'Evaluación';
+    var wtTitle = document.getElementById('waiting-title');
+    if (wtTitle) wtTitle.textContent = 'Esperando al profesor...';
+    var wtSub = document.getElementById('waiting-subtitle');
+    if (wtSub) wtSub.textContent = '"' + title + '" comenzará cuando el profesor presione EMPEZAR';
+
+    // Poll cada 3 segundos para verificar si el admin inició
+    if (waitingPollInterval) clearInterval(waitingPollInterval);
+    waitingPollInterval = setInterval(function() {
+        if (!quizData || !quizData.evaluacion) return;
+        var client = getSupabase();
+        client.from('evaluaciones').select('iniciado').eq('id', quizData.evaluacion.id).single().then(function(r) {
+            if (r.data && r.data.iniciado) {
+                clearInterval(waitingPollInterval);
+                waitingPollInterval = null;
+                var wt2 = document.getElementById('quiz-waiting');
+                if (wt2) wt2.style.display = 'none';
+                document.getElementById('quiz-container').style.display = 'block';
+                showSplashAndStart();
+            }
+        });
+    }, 3000);
 }
 
 var quizTimerInterval = null;
