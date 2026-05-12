@@ -386,19 +386,75 @@ function startLiveSession(){
 }
 
 // ═══ LOBBY ═══
+var lobbyPollInterval=null;
+
 function showLobby(code){
   var title=document.getElementById('quiz-title-input').value;
   document.getElementById('lobby-quiz-title').textContent=title;
   document.getElementById('lobby-question-count').textContent=questions.length+' preguntas';
   document.getElementById('lobby-code').textContent=code;
+  document.getElementById('lobby-player-count').textContent='0';
   document.getElementById('lobby-overlay').classList.add('active');
+
+  // Limpiar participantes anteriores
+  var client=getSupabase();
+  client.from('evaluacion_participantes').delete().eq('evaluacion_id',evaluacionId).then(function(){});
+
+  // Iniciar polling de participantes cada 3 segundos
+  pollLobbyParticipants();
+  if(lobbyPollInterval)clearInterval(lobbyPollInterval);
+  lobbyPollInterval=setInterval(pollLobbyParticipants,3000);
 }
-function closeLobby(){document.getElementById('lobby-overlay').classList.remove('active');}
+
+function pollLobbyParticipants(){
+  if(!evaluacionId)return;
+  var client=getSupabase();
+  client.from('evaluacion_participantes').select('nombre,joined_at').eq('evaluacion_id',evaluacionId).order('joined_at').then(function(r){
+    if(r.error||!r.data)return;
+    var count=r.data.length;
+    document.getElementById('lobby-player-count').textContent=count;
+    // Mostrar nombres de participantes
+    var container=document.getElementById('lobby-players-list');
+    if(!container){
+      // Crear contenedor de participantes si no existe
+      var footer=document.querySelector('.lobby-footer');
+      if(footer){
+        container=document.createElement('div');
+        container.id='lobby-players-list';
+        container.style.cssText='display:flex;flex-wrap:wrap;gap:8px;padding:12px 24px;justify-content:center;max-height:120px;overflow-y:auto';
+        footer.parentNode.insertBefore(container,footer);
+      }
+    }
+    if(container){
+      var html='';
+      for(var i=0;i<r.data.length;i++){
+        var name=r.data[i].nombre;
+        var initial=name.charAt(0).toUpperCase();
+        var colors=['#2563EB','#0D9488','#D97706','#DC2626','#7C3AED','#059669','#E91E63','#F59E0B'];
+        var col=colors[i%colors.length];
+        html+='<div style="display:flex;flex-direction:column;align-items:center;gap:4px;animation:fadeInUp .3s ease">';
+        html+='<div style="width:40px;height:40px;border-radius:50%;background:'+col+';display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:16px;box-shadow:0 2px 8px rgba(0,0,0,.2)">'+initial+'</div>';
+        html+='<span style="font-size:10px;color:rgba(255,255,255,.7);max-width:60px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+name+'</span>';
+        html+='</div>';
+      }
+      container.innerHTML=html;
+    }
+  });
+}
+
+function closeLobby(){
+  document.getElementById('lobby-overlay').classList.remove('active');
+  if(lobbyPollInterval){clearInterval(lobbyPollInterval);lobbyPollInterval=null;}
+}
 function copyLobbyCode(){
   var code=document.getElementById('lobby-code').textContent;
   if(navigator.clipboard){navigator.clipboard.writeText(code).then(function(){showToast('Código copiado: '+code,'success');});}
 }
-function startGameFromLobby(){showToast('¡Sesión iniciada! Los estudiantes ya pueden responder.','success');}
+function startGameFromLobby(){
+  if(lobbyPollInterval){clearInterval(lobbyPollInterval);lobbyPollInterval=null;}
+  showToast('¡Sesión iniciada! Los estudiantes ya pueden responder.','success');
+  closeLobby();
+}
 
 // ═══ PREVIEW ═══
 function previewQuiz(){

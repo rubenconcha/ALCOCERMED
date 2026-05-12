@@ -337,6 +337,20 @@ function searchAndStartQuiz(code) {
             quizAnswers = [];
             quizSelectedOption = -1;
 
+            // Registrar participante en el lobby
+            if (currentUser) {
+                var nombre = currentUser.user_metadata && currentUser.user_metadata.full_name
+                    ? currentUser.user_metadata.full_name
+                    : (currentUser.email || '').split('@')[0];
+                client.from('evaluacion_participantes').insert({
+                    evaluacion_id: evaluacion.id,
+                    user_id: currentUser.id,
+                    nombre: nombre
+                }).then(function(pr) {
+                    if (pr.error) console.warn('No se pudo registrar participante:', pr.error.message);
+                });
+            }
+
             // Mostrar la página de quiz
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Evaluación';
             document.getElementById('quiz-live-subtitle').textContent = quizData.preguntas.length + ' preguntas • ' + (evaluacion.asignatura || '');
@@ -428,16 +442,26 @@ function selectQuizOption(idx) {
     var pregunta = quizData.preguntas[quizCurrentQ];
     var opciones = pregunta.opciones || [];
     var buttons = document.querySelectorAll('.quiz-opt-btn');
+    var isCorrectAnswer = opciones[idx] && opciones[idx].correct;
 
     for (var i = 0; i < buttons.length; i++) {
-        var isCorrect = opciones[i] && opciones[i].correct;
         var isSelected = (i === idx);
-        if (isCorrect) { buttons[i].style.border = '2px solid #22C55E'; buttons[i].style.background = '#F0FDF4'; }
-        else if (isSelected && !isCorrect) { buttons[i].style.border = '2px solid #EF4444'; buttons[i].style.background = '#FEF2F2'; }
+        if (isSelected && isCorrectAnswer) {
+            // Respuesta correcta → verde
+            buttons[i].style.border = '2px solid #22C55E';
+            buttons[i].style.background = '#F0FDF4';
+        } else if (isSelected && !isCorrectAnswer) {
+            // Respuesta incorrecta → rojo (NO revelar la correcta)
+            buttons[i].style.border = '2px solid #EF4444';
+            buttons[i].style.background = '#FEF2F2';
+        } else {
+            // Las demás se desactivan sin revelar nada
+            buttons[i].style.opacity = '0.5';
+        }
         buttons[i].style.cursor = 'default';
+        buttons[i].style.pointerEvents = 'none';
     }
 
-    var isCorrectAnswer = opciones[idx] && opciones[idx].correct;
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer });
 
     var nextBtn = document.getElementById('quiz-next-btn');
