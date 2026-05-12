@@ -314,8 +314,40 @@
       </div>
     </section>
 
-    <!-- ===== QUIZ EN VIVO (se muestra al unirse) ===== -->
+    <!-- ===== BIBLIOTECA (ADMIN ONLY) ===== -->
+    <section class="page admin-only hidden" id="page-biblioteca">
+      <div class="page-header">
+        <h1><i class="fas fa-book-open"></i> Mi Biblioteca</h1>
+        <p class="page-subtitle">Todas tus evaluaciones creadas</p>
+      </div>
+      <div style="display:flex;justify-content:flex-end;margin-bottom:16px">
+        <button onclick="window.location.href='editor.html'" style="padding:10px 20px;background:linear-gradient(135deg,#E91E63,#C2185B);color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:14px"><i class="fas fa-plus"></i> Nueva evaluación</button>
+      </div>
+      <div id="library-list">
+        <div class="empty-state"><i class="fas fa-folder-open"></i><p>No has creado evaluaciones aún</p></div>
+      </div>
+    </section>
+
+    <!-- ===== MIS RESULTADOS (STUDENT) ===== -->
+    <section class="page" id="page-historial">
+      <div class="page-header">
+        <h1><i class="fas fa-trophy"></i> Mis Resultados</h1>
+        <p class="page-subtitle">Tu historial de evaluaciones</p>
+      </div>
+      <div id="results-list">
+        <div class="empty-state"><i class="fas fa-chart-pie"></i><p>No tienes resultados todavía</p><small>Participa en evaluaciones para ver tu progreso</small></div>
+      </div>
+    </section>
+
+    <!-- ===== QUIZ EN VIVO ===== -->
     <section class="page" id="page-quiz">
+
+      <!-- Splash "¡ADELANTE!" -->
+      <div id="quiz-splash" style="display:none;position:fixed;inset:0;background:linear-gradient(135deg,#1A0033,#2D1B4E,#4A148C);z-index:300;display:none;align-items:center;justify-content:center;flex-direction:column">
+        <h1 id="splash-text" style="font-size:4rem;font-weight:900;color:#fff;text-shadow:0 4px 40px rgba(233,30,99,.5);animation:splashPulse 1s ease-in-out infinite">¡ADELANTE!</h1>
+        <style>@keyframes splashPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.1);opacity:.8}}</style>
+      </div>
+
       <div class="page-header">
         <h1><i class="fas fa-play-circle"></i> <span id="quiz-live-title">Evaluación</span></h1>
         <p class="page-subtitle" id="quiz-live-subtitle">Responde las preguntas</p>
@@ -323,34 +355,43 @@
 
       <div id="quiz-container" style="max-width:700px">
         <!-- Barra de progreso -->
-        <div style="background:#E2E8F0;border-radius:20px;height:8px;margin-bottom:24px;overflow:hidden">
+        <div style="background:#E2E8F0;border-radius:20px;height:8px;margin-bottom:16px;overflow:hidden">
           <div id="quiz-progress-bar" style="height:100%;background:linear-gradient(90deg,#2563EB,#3B82F6);border-radius:20px;width:0%;transition:width .4s"></div>
+        </div>
+
+        <!-- Timer -->
+        <div id="quiz-timer-row" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px">
+          <i class="fas fa-clock" style="color:#E91E63"></i>
+          <span id="quiz-timer-text" style="font-size:1.1rem;font-weight:700;color:#E91E63">30</span>
         </div>
         
         <!-- Pregunta actual -->
         <div id="quiz-question-card" style="background:#fff;border:1px solid #E2E8F0;border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.06);margin-bottom:24px">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
             <span id="quiz-question-number" style="font-size:.75rem;font-weight:700;color:#64748B;background:#F1F5F9;padding:4px 12px;border-radius:8px">Pregunta 1/5</span>
+            <span id="quiz-question-points" style="font-size:.75rem;font-weight:700;color:#E91E63;background:#FCE4EC;padding:4px 12px;border-radius:8px">1 punto</span>
           </div>
           <h2 id="quiz-question-text" style="font-size:1.2rem;font-weight:700;line-height:1.5;margin-bottom:24px">Cargando...</h2>
           <div id="quiz-options-list" style="display:flex;flex-direction:column;gap:12px"></div>
         </div>
 
         <!-- Botón siguiente -->
-        <button id="quiz-next-btn" onclick="quizNext()" style="width:100%;padding:16px;background:linear-gradient(135deg,#2563EB,#1E3A8A);color:#fff;border:none;border-radius:14px;font-size:1rem;font-weight:700;cursor:pointer;display:none;transition:transform .15s">
+        <button id="quiz-next-btn" onclick="quizNext()" style="width:100%;padding:16px;background:linear-gradient(135deg,#E91E63,#C2185B);color:#fff;border:none;border-radius:14px;font-size:1rem;font-weight:700;cursor:pointer;display:none;transition:transform .15s">
           Siguiente →
         </button>
       </div>
 
       <!-- Resultado final -->
-      <div id="quiz-result" style="display:none;text-align:center;max-width:500px;margin:0 auto">
-        <div style="font-size:64px;margin-bottom:16px">🏆</div>
+      <div id="quiz-result" style="display:none;text-align:center;max-width:560px;margin:0 auto">
+        <div style="font-size:64px;margin-bottom:16px" id="quiz-result-emoji">🏆</div>
         <h2 id="quiz-result-title" style="font-size:1.5rem;font-weight:800;margin-bottom:8px">¡Evaluación completada!</h2>
         <p id="quiz-result-score" style="font-size:1.1rem;color:#64748B;margin-bottom:24px"></p>
-        <div id="quiz-result-bar" style="background:#E2E8F0;border-radius:20px;height:12px;margin-bottom:24px;overflow:hidden">
+        <div style="background:#E2E8F0;border-radius:20px;height:12px;margin-bottom:24px;overflow:hidden">
           <div id="quiz-result-fill" style="height:100%;border-radius:20px;transition:width 1s"></div>
         </div>
-        <button onclick="navigateTo('inicio')" style="padding:14px 32px;background:linear-gradient(135deg,#2563EB,#1E3A8A);color:#fff;border:none;border-radius:12px;font-size:.95rem;font-weight:700;cursor:pointer">Volver al inicio</button>
+        <!-- Per-question breakdown -->
+        <div id="quiz-result-breakdown" style="text-align:left;margin-bottom:24px"></div>
+        <button onclick="navigateTo('inicio')" style="padding:14px 32px;background:linear-gradient(135deg,#E91E63,#C2185B);color:#fff;border:none;border-radius:12px;font-size:.95rem;font-weight:700;cursor:pointer">Volver al inicio</button>
       </div>
     </section>
 
