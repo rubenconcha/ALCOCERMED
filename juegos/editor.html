@@ -101,7 +101,7 @@
           <div class="sm-row" style="margin-top:20px">
             <div>
               <label>Asignatura</label>
-              <select class="sm-select">
+              <select class="sm-select" id="settings-subject">
                 <option>Otro</option>
                 <option>Matemáticas</option>
                 <option>Ciencias</option>
@@ -112,7 +112,7 @@
             </div>
             <div>
               <label>Nivel</label>
-              <select class="sm-select">
+              <select class="sm-select" id="settings-level">
                 <option>Seleccione el grado...</option>
                 <option>1er grado</option>
                 <option>2do grado</option>
@@ -124,7 +124,7 @@
           </div>
 
           <label>Idioma</label>
-          <select class="sm-select" style="margin-bottom:16px">
+          <select class="sm-select" id="settings-lang" style="margin-bottom:16px">
             <option>Español</option>
             <option>Inglés</option>
             <option>Portugués</option>
@@ -169,6 +169,7 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="editor.js"></script>
 </body>
 </html>
