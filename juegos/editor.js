@@ -582,7 +582,18 @@ function showToast(msg, type) {
 
 // ═══ GO BACK ═══
 function goBackFromEditor() {
-    if (questions.length > 0 && !confirm('¿Deseas salir? Los cambios no guardados se perderán.')) return;
+    // Contar preguntas sin guardar en Supabase
+    var unsaved = 0;
+    for (var i = 0; i < questions.length; i++) {
+        if (!questions[i].dbId) unsaved++;
+    }
+    if (unsaved > 0) {
+        if (!confirm('Tienes ' + unsaved + ' pregunta(s) sin guardar.\n¿Deseas salir sin guardarlas?\n\nTu evaluación quedará guardada como borrador y podrás editarla desde la Biblioteca.')) return;
+    }
+    // Guardar el ID de evaluación para poder reanudar
+    if (evaluacionId) {
+        localStorage.setItem('alcocer_last_eval_id', evaluacionId);
+    }
     window.location.href = 'index.html';
 }
 

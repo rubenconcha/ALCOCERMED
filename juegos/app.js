@@ -276,26 +276,189 @@ function closeSidebar() {
 
 // ═══ JOIN BY CODE ═══
 
+// ═══ JOIN BY CODE — Buscar evaluación en Supabase ═══
+
+var quizData = null;       // { evaluacion, preguntas[] }
+var quizCurrentQ = 0;      // Índice de pregunta actual
+var quizAnswers = [];       // Respuestas del estudiante
+var quizSelectedOption = -1;
+
 function joinByCode() {
     var input = document.getElementById('join-code-input');
-    var code = input ? input.value.trim() : '';
+    var code = input ? input.value.trim().replace(/\s/g, '') : '';
     if (!code) { alert('Ingresa un código'); return; }
-    alert('Buscando evaluación con código: ' + code + '\n\nEsta función se conectará al sistema de evaluaciones en vivo.');
+    searchAndStartQuiz(code);
 }
 window.joinByCode = joinByCode;
 
 function joinByCodeFull() {
     var input = document.getElementById('join-code-full');
-    var code = input ? input.value.trim() : '';
+    var code = input ? input.value.trim().replace(/\s/g, '') : '';
     if (!code) {
         document.getElementById('join-error').classList.remove('hidden');
         document.getElementById('join-error-text').textContent = 'Ingresa un código válido';
         return;
     }
     document.getElementById('join-error').classList.add('hidden');
-    alert('Buscando evaluación con código: ' + code + '\n\nEsta función se conectará al sistema de evaluaciones en vivo.');
+    searchAndStartQuiz(code);
 }
 window.joinByCodeFull = joinByCodeFull;
+
+function searchAndStartQuiz(code) {
+    var client = getSupabase();
+
+    // Buscar evaluación por código
+    client.from('evaluaciones').select('*').eq('codigo', code).eq('publicado', true).single().then(function(result) {
+        if (result.error || !result.data) {
+            alert('❌ No se encontró ninguna evaluación con el código: ' + code + '\n\nVerifica que el código sea correcto.');
+            return;
+        }
+
+        var evaluacion = result.data;
+
+        // Cargar preguntas
+        client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evaluacion.id).order('orden').then(function(pResult) {
+            if (pResult.error || !pResult.data || pResult.data.length === 0) {
+                alert('Esta evaluación no tiene preguntas todavía.');
+                return;
+            }
+
+            quizData = {
+                evaluacion: evaluacion,
+                preguntas: pResult.data
+            };
+            quizCurrentQ = 0;
+            quizAnswers = [];
+            quizSelectedOption = -1;
+
+            // Mostrar la página de quiz
+            document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Evaluación';
+            document.getElementById('quiz-live-subtitle').textContent = quizData.preguntas.length + ' preguntas • ' + (evaluacion.asignatura || '');
+            document.getElementById('quiz-container').style.display = 'block';
+            document.getElementById('quiz-result').style.display = 'none';
+
+            navigateTo('quiz');
+            renderQuizQuestion();
+        });
+    });
+}
+
+function renderQuizQuestion() {
+    if (!quizData || quizCurrentQ >= quizData.preguntas.length) return;
+
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var total = quizData.preguntas.length;
+    var progress = ((quizCurrentQ) / total) * 100;
+
+    document.getElementById('quiz-progress-bar').style.width = progress + '%';
+    document.getElementById('quiz-question-number').textContent = 'Pregunta ' + (quizCurrentQ + 1) + '/' + total;
+    document.getElementById('quiz-question-text').textContent = pregunta.texto || '';
+
+    var opciones = pregunta.opciones || [];
+    var optColors = ['#2563EB', '#0D9488', '#D97706', '#DC2626', '#7C3AED', '#059669'];
+    var html = '';
+
+    for (var i = 0; i < opciones.length; i++) {
+        var bgColor = optColors[i % optColors.length];
+        html += '<button class="quiz-opt-btn" data-idx="' + i + '" onclick="selectQuizOption(' + i + ')" ' +
+            'style="padding:16px 20px;border:2px solid #E2E8F0;border-radius:14px;background:#fff;text-align:left;' +
+            'font-size:.95rem;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:12px">' +
+            '<span style="width:32px;height:32px;border-radius:8px;background:' + bgColor + ';color:#fff;display:flex;' +
+            'align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0">' +
+            String.fromCharCode(65 + i) + '</span>' +
+            '<span>' + (opciones[i].text || '') + '</span></button>';
+    }
+
+    document.getElementById('quiz-options-list').innerHTML = html;
+    document.getElementById('quiz-next-btn').style.display = 'none';
+    quizSelectedOption = -1;
+}
+
+function selectQuizOption(idx) {
+    if (quizSelectedOption !== -1) return; // Ya seleccionó
+    quizSelectedOption = idx;
+
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var opciones = pregunta.opciones || [];
+    var buttons = document.querySelectorAll('.quiz-opt-btn');
+
+    // Marcar correcta e incorrecta
+    for (var i = 0; i < buttons.length; i++) {
+        var isCorrect = opciones[i] && opciones[i].correct;
+        var isSelected = (i === idx);
+
+        if (isCorrect) {
+            buttons[i].style.border = '2px solid #22C55E';
+            buttons[i].style.background = '#F0FDF4';
+        } else if (isSelected && !isCorrect) {
+            buttons[i].style.border = '2px solid #EF4444';
+            buttons[i].style.background = '#FEF2F2';
+        }
+        buttons[i].style.cursor = 'default';
+    }
+
+    // Registrar respuesta
+    var isCorrectAnswer = opciones[idx] && opciones[idx].correct;
+    quizAnswers.push({
+        pregunta_id: pregunta.id,
+        seleccionada: idx,
+        correcta: isCorrectAnswer
+    });
+
+    // Mostrar botón siguiente
+    var nextBtn = document.getElementById('quiz-next-btn');
+    nextBtn.style.display = 'block';
+    if (quizCurrentQ >= quizData.preguntas.length - 1) {
+        nextBtn.textContent = '🏆 Ver resultados';
+    } else {
+        nextBtn.textContent = 'Siguiente →';
+    }
+}
+window.selectQuizOption = selectQuizOption;
+
+function quizNext() {
+    quizCurrentQ++;
+    if (quizCurrentQ >= quizData.preguntas.length) {
+        showQuizResults();
+    } else {
+        renderQuizQuestion();
+    }
+}
+window.quizNext = quizNext;
+
+function showQuizResults() {
+    var correctas = 0;
+    for (var i = 0; i < quizAnswers.length; i++) {
+        if (quizAnswers[i].correcta) correctas++;
+    }
+    var total = quizData.preguntas.length;
+    var pct = Math.round((correctas / total) * 100);
+
+    document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('quiz-result').style.display = 'block';
+    document.getElementById('quiz-result-score').textContent = 'Obtuviste ' + correctas + '/' + total + ' correctas (' + pct + '%)';
+
+    var fill = document.getElementById('quiz-result-fill');
+    fill.style.background = pct >= 70 ? 'linear-gradient(90deg,#22C55E,#16A34A)' :
+                             pct >= 40 ? 'linear-gradient(90deg,#F59E0B,#D97706)' :
+                                         'linear-gradient(90deg,#EF4444,#DC2626)';
+    setTimeout(function() { fill.style.width = pct + '%'; }, 100);
+
+    // Guardar resultado en Supabase (opcional, para historial)
+    if (currentUser) {
+        var client = getSupabase();
+        client.from('evaluacion_resultados').insert({
+            evaluacion_id: quizData.evaluacion.id,
+            user_id: currentUser.id,
+            puntaje: correctas,
+            total: total,
+            porcentaje: pct,
+            respuestas: quizAnswers
+        }).then(function(r) {
+            if (r.error) console.warn('No se pudo guardar resultado:', r.error.message);
+        });
+    }
+}
 
 // ═══ LOGOUT ═══
 
