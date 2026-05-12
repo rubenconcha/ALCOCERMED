@@ -3,270 +3,348 @@
 // Student-first platform with admin gating
 // ═══════════════════════════════════════════════
 
-const SUPABASE_URL = 'https://asnwhddmurstzmghuyin.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
-const ADMIN_EMAIL = 'pichon4488@gmail.com';
+var SUPABASE_URL = 'https://asnwhddmurstzmghuyin.supabase.co';
+var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
+var ADMIN_EMAIL = 'pichon4488@gmail.com';
 
-let sb = null;
-let currentUser = null;
-let isAdmin = false;
+var sb = null;
+var currentUser = null;
+var isAdmin = false;
 
 function getSupabase() {
-  if (!sb) sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-  return sb;
+    if (!sb) {
+        if (typeof window.supabase === 'undefined' || !window.supabase.createClient) {
+            console.error('Supabase library not loaded!');
+            return null;
+        }
+        sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    }
+    return sb;
 }
 
 // ═══ AUTHENTICATION ═══
 
-async function initAuth() {
-  try {
-    const client = getSupabase();
-    const { data: { session } } = await client.auth.getSession();
-    if (session && session.user) {
-      currentUser = session.user;
-      enterApp();
-    } else {
-      showLogin();
+function initAuth() {
+    var client = getSupabase();
+    if (!client) {
+        console.error('Cannot init auth - Supabase not available');
+        showLogin();
+        return;
     }
-  } catch (e) {
-    console.error('Auth error:', e);
-    showLogin();
-  }
 
-  getSupabase().auth.onAuthStateChange(function(event, session) {
-    if (event === 'SIGNED_IN' && session) {
-      currentUser = session.user;
-      enterApp();
-    } else if (event === 'SIGNED_OUT') {
-      currentUser = null;
-      isAdmin = false;
-      showLogin();
-    }
-  });
+    client.auth.getSession().then(function(result) {
+        if (result.data && result.data.session && result.data.session.user) {
+            currentUser = result.data.session.user;
+            enterApp();
+        } else {
+            showLogin();
+        }
+    }).catch(function(err) {
+        console.error('getSession error:', err);
+        showLogin();
+    });
+
+    client.auth.onAuthStateChange(function(event, session) {
+        if (event === 'SIGNED_IN' && session) {
+            currentUser = session.user;
+            enterApp();
+        } else if (event === 'SIGNED_OUT') {
+            currentUser = null;
+            isAdmin = false;
+            showLogin();
+        }
+    });
 }
 
 function showLogin() {
-  document.getElementById('login-screen').classList.remove('hidden');
-  document.getElementById('app-shell').classList.add('hidden');
-  var emailEl = document.getElementById('login-email');
-  var passEl = document.getElementById('login-password');
-  if (emailEl) emailEl.value = '';
-  if (passEl) passEl.value = '';
-  hideLoginError();
+    document.getElementById('login-screen').classList.remove('hidden');
+    document.getElementById('app-shell').classList.add('hidden');
+    var emailEl = document.getElementById('login-email');
+    var passEl = document.getElementById('login-password');
+    if (emailEl) emailEl.value = '';
+    if (passEl) passEl.value = '';
+    hideLoginError();
 }
 
 function enterApp() {
-  document.getElementById('login-screen').classList.add('hidden');
-  document.getElementById('app-shell').classList.remove('hidden');
+    document.getElementById('login-screen').classList.add('hidden');
+    document.getElementById('app-shell').classList.remove('hidden');
 
-  // Check admin
-  var email = (currentUser.email || '').toLowerCase().trim();
-  isAdmin = (email === ADMIN_EMAIL);
+    var email = (currentUser.email || '').toLowerCase().trim();
+    isAdmin = (email === ADMIN_EMAIL);
 
-  // Update UI with user info
-  var name = currentUser.user_metadata && currentUser.user_metadata.full_name
-    ? currentUser.user_metadata.full_name
-    : email.split('@')[0];
+    var name = currentUser.user_metadata && currentUser.user_metadata.full_name
+        ? currentUser.user_metadata.full_name
+        : email.split('@')[0];
 
-  document.getElementById('topbar-username').textContent = name;
-  document.getElementById('topbar-avatar').textContent = name.charAt(0).toUpperCase();
+    var usernameEl = document.getElementById('topbar-username');
+    var avatarEl = document.getElementById('topbar-avatar');
+    var greetEl = document.getElementById('greeting-text');
 
-  var greetEl = document.getElementById('greeting-text');
-  if (greetEl) greetEl.textContent = getGreeting() + ', ' + name + '!';
+    if (usernameEl) usernameEl.textContent = name;
+    if (avatarEl) avatarEl.textContent = name.charAt(0).toUpperCase();
+    if (greetEl) greetEl.textContent = getGreeting() + ', ' + name + '!';
 
-  // Show/hide admin sections
-  document.querySelectorAll('.admin-only').forEach(function(el) {
-    if (isAdmin) {
-      el.classList.remove('hidden');
-    } else {
-      el.classList.add('hidden');
+    // Show/hide admin sections
+    var adminEls = document.querySelectorAll('.admin-only');
+    for (var i = 0; i < adminEls.length; i++) {
+        if (isAdmin) {
+            adminEls[i].classList.remove('hidden');
+        } else {
+            adminEls[i].classList.add('hidden');
+        }
     }
-  });
 
-  if (document.getElementById('admin-nav-section')) {
-    if (isAdmin) {
-      document.getElementById('admin-nav-section').classList.remove('hidden');
-    } else {
-      document.getElementById('admin-nav-section').classList.add('hidden');
+    var adminNav = document.getElementById('admin-nav-section');
+    if (adminNav) {
+        if (isAdmin) {
+            adminNav.classList.remove('hidden');
+        } else {
+            adminNav.classList.add('hidden');
+        }
     }
-  }
 
-  navigateTo('inicio');
+    navigateTo('inicio');
 }
 
-window.handleLogin = async function(e) {
-  e.preventDefault();
-  hideLoginError();
+// ═══ LOGIN HANDLER ═══
 
-  var email = document.getElementById('login-email').value.trim();
-  var password = document.getElementById('login-password').value;
+function handleLogin(e) {
+    if (e) e.preventDefault();
+    hideLoginError();
 
-  if (!email || !password) { showLoginError('Completa todos los campos'); return; }
-  if (password.length < 6) { showLoginError('La contraseña debe tener al menos 6 caracteres'); return; }
+    var emailField = document.getElementById('login-email');
+    var passField = document.getElementById('login-password');
 
-  setLoginLoading(true);
-  try {
-    var client = getSupabase();
-    var result = await client.auth.signInWithPassword({ email: email, password: password });
-    if (result.error) {
-      console.error('Supabase login error:', result.error);
-      var msg = 'Credenciales incorrectas. Verifica tu correo y contraseña.';
-      if (result.error.message.indexOf('Invalid login') !== -1) msg = 'Correo o contraseña incorrectos';
-      else if (result.error.message.indexOf('Email not confirmed') !== -1) msg = 'Confirma tu correo antes de ingresar';
-      else if (result.error.message.indexOf('Too many requests') !== -1) msg = 'Demasiados intentos, espera unos minutos';
-      else if (result.error.message) msg = result.error.message;
-      showLoginError(msg);
-      return;
+    if (!emailField || !passField) {
+        showLoginError('Error interno: campos no encontrados');
+        return;
     }
-    currentUser = result.data.user;
-    enterApp();
-  } catch (err) {
-    console.error('Login error:', err);
-    showLoginError('Error de conexión. Revisa tu internet e intenta de nuevo.');
-  } finally {
-    setLoginLoading(false);
-  }
-};
 
-window.togglePasswordVisibility = function() {
-  var input = document.getElementById('login-password');
-  var icon = document.getElementById('login-eye-icon');
-  if (!input) return;
-  if (input.type === 'password') {
-    input.type = 'text';
-    if (icon) { icon.classList.remove('fa-eye'); icon.classList.add('fa-eye-slash'); }
-  } else {
-    input.type = 'password';
-    if (icon) { icon.classList.remove('fa-eye-slash'); icon.classList.add('fa-eye'); }
-  }
-};
+    var email = emailField.value.trim();
+    var password = passField.value;
+
+    if (!email || !password) {
+        showLoginError('Completa todos los campos');
+        return;
+    }
+    if (password.length < 6) {
+        showLoginError('La contraseña debe tener al menos 6 caracteres');
+        return;
+    }
+
+    var client = getSupabase();
+    if (!client) {
+        showLoginError('Error: servicio de autenticación no disponible. Recarga la página.');
+        return;
+    }
+
+    setLoginLoading(true);
+
+    client.auth.signInWithPassword({
+        email: email,
+        password: password
+    }).then(function(result) {
+        setLoginLoading(false);
+
+        if (result.error) {
+            console.error('Login error:', result.error.message, result.error);
+            var msg = 'Credenciales incorrectas';
+            var errMsg = result.error.message || '';
+            if (errMsg.indexOf('Invalid login') !== -1) {
+                msg = 'Correo o contraseña incorrectos';
+            } else if (errMsg.indexOf('Email not confirmed') !== -1) {
+                msg = 'Confirma tu correo antes de ingresar';
+            } else if (errMsg.indexOf('Too many requests') !== -1) {
+                msg = 'Demasiados intentos. Espera unos minutos.';
+            } else if (errMsg.indexOf('Invalid API key') !== -1) {
+                msg = 'Error de configuración del servidor';
+            } else if (errMsg.length > 0) {
+                msg = errMsg;
+            }
+            showLoginError(msg);
+            return;
+        }
+
+        if (result.data && result.data.user) {
+            currentUser = result.data.user;
+            enterApp();
+        } else {
+            showLoginError('Respuesta inesperada del servidor. Intenta de nuevo.');
+        }
+    }).catch(function(err) {
+        setLoginLoading(false);
+        console.error('Login catch error:', err);
+        showLoginError('Error de conexión. Verifica tu internet e intenta de nuevo.');
+    });
+}
+
+// Make handleLogin globally accessible
+window.handleLogin = handleLogin;
+
+function togglePasswordVisibility() {
+    var input = document.getElementById('login-password');
+    var icon = document.getElementById('login-eye-icon');
+    if (!input) return;
+    if (input.type === 'password') {
+        input.type = 'text';
+        if (icon) { icon.classList.remove('fa-eye'); icon.classList.add('fa-eye-slash'); }
+    } else {
+        input.type = 'password';
+        if (icon) { icon.classList.remove('fa-eye-slash'); icon.classList.add('fa-eye'); }
+    }
+}
+window.togglePasswordVisibility = togglePasswordVisibility;
 
 function showLoginError(msg) {
-  var el = document.getElementById('login-error');
-  var txt = document.getElementById('login-error-text');
-  if (el) el.classList.remove('hidden');
-  if (txt) txt.textContent = msg;
+    var el = document.getElementById('login-error');
+    var txt = document.getElementById('login-error-text');
+    if (el) el.classList.remove('hidden');
+    if (txt) txt.textContent = msg;
 }
+
 function hideLoginError() {
-  var el = document.getElementById('login-error');
-  if (el) el.classList.add('hidden');
+    var el = document.getElementById('login-error');
+    if (el) el.classList.add('hidden');
 }
+
 function setLoginLoading(loading) {
-  var btn = document.getElementById('login-btn');
-  var btnText = document.getElementById('login-btn-text');
-  var btnLoading = document.getElementById('login-btn-loading');
-  if (!btn) return;
-  btn.disabled = loading;
-  if (btnText) btnText.style.display = loading ? 'none' : '';
-  if (btnLoading) { if (loading) btnLoading.classList.remove('hidden'); else btnLoading.classList.add('hidden'); }
+    var btn = document.getElementById('login-btn');
+    var btnText = document.getElementById('login-btn-text');
+    var btnLoading = document.getElementById('login-btn-loading');
+    if (!btn) return;
+    btn.disabled = loading;
+    if (btnText) btnText.style.display = loading ? 'none' : '';
+    if (btnLoading) {
+        if (loading) btnLoading.classList.remove('hidden');
+        else btnLoading.classList.add('hidden');
+    }
 }
 
 // ═══ NAVIGATION ═══
 
-let currentPage = 'inicio';
+var currentPage = 'inicio';
 
 function navigateTo(page) {
-  currentPage = page;
+    currentPage = page;
 
-  // Hide all pages, show target
-  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
-  var target = document.getElementById('page-' + page);
-  if (target) target.classList.add('active');
+    var pages = document.querySelectorAll('.page');
+    for (var i = 0; i < pages.length; i++) { pages[i].classList.remove('active'); }
+    var target = document.getElementById('page-' + page);
+    if (target) target.classList.add('active');
 
-  // Update sidebar nav
-  document.querySelectorAll('.sidebar-nav .nav-item').forEach(function(n) { n.classList.remove('active'); });
-  var activeSidebar = document.querySelector('.sidebar-nav .nav-item[data-page="' + page + '"]');
-  if (activeSidebar) activeSidebar.classList.add('active');
+    var sideItems = document.querySelectorAll('.sidebar-nav .nav-item');
+    for (var j = 0; j < sideItems.length; j++) { sideItems[j].classList.remove('active'); }
+    var activeSidebar = document.querySelector('.sidebar-nav .nav-item[data-page="' + page + '"]');
+    if (activeSidebar) activeSidebar.classList.add('active');
 
-  // Update bottom nav
-  document.querySelectorAll('.bnav-item').forEach(function(b) { b.classList.remove('active'); });
-  var activeBottom = document.querySelector('.bnav-item[data-page="' + page + '"]');
-  if (activeBottom) activeBottom.classList.add('active');
+    var bottomItems = document.querySelectorAll('.bnav-item');
+    for (var k = 0; k < bottomItems.length; k++) { bottomItems[k].classList.remove('active'); }
+    var activeBottom = document.querySelector('.bnav-item[data-page="' + page + '"]');
+    if (activeBottom) activeBottom.classList.add('active');
 
-  closeSidebar();
+    closeSidebar();
 }
 
 // ═══ SIDEBAR ═══
 
 function openSidebar() {
-  document.getElementById('sidebar').classList.add('open');
-  document.getElementById('sidebar-overlay').classList.add('active');
+    document.getElementById('sidebar').classList.add('open');
+    document.getElementById('sidebar-overlay').classList.add('active');
 }
 
 function closeSidebar() {
-  document.getElementById('sidebar').classList.remove('open');
-  document.getElementById('sidebar-overlay').classList.remove('active');
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sidebar-overlay').classList.remove('active');
 }
 
 // ═══ JOIN BY CODE ═══
 
-window.joinByCode = function() {
-  var input = document.getElementById('join-code-input');
-  var code = input ? input.value.trim() : '';
-  if (!code) { alert('Ingresa un código'); return; }
-  alert('Buscando evaluación con código: ' + code + '\n\nEsta función se conectará al sistema de evaluaciones en vivo.');
-};
+function joinByCode() {
+    var input = document.getElementById('join-code-input');
+    var code = input ? input.value.trim() : '';
+    if (!code) { alert('Ingresa un código'); return; }
+    alert('Buscando evaluación con código: ' + code + '\n\nEsta función se conectará al sistema de evaluaciones en vivo.');
+}
+window.joinByCode = joinByCode;
 
-window.joinByCodeFull = function() {
-  var input = document.getElementById('join-code-full');
-  var code = input ? input.value.trim() : '';
-  if (!code) {
-    document.getElementById('join-error').classList.remove('hidden');
-    document.getElementById('join-error-text').textContent = 'Ingresa un código válido';
-    return;
-  }
-  document.getElementById('join-error').classList.add('hidden');
-  alert('Buscando evaluación con código: ' + code + '\n\nEsta función se conectará al sistema de evaluaciones en vivo.');
-};
+function joinByCodeFull() {
+    var input = document.getElementById('join-code-full');
+    var code = input ? input.value.trim() : '';
+    if (!code) {
+        document.getElementById('join-error').classList.remove('hidden');
+        document.getElementById('join-error-text').textContent = 'Ingresa un código válido';
+        return;
+    }
+    document.getElementById('join-error').classList.add('hidden');
+    alert('Buscando evaluación con código: ' + code + '\n\nEsta función se conectará al sistema de evaluaciones en vivo.');
+}
+window.joinByCodeFull = joinByCodeFull;
 
 // ═══ LOGOUT ═══
 
-async function handleLogout() {
-  try {
-    await getSupabase().auth.signOut();
-  } catch (e) {
-    console.error('Logout error:', e);
-  }
-  currentUser = null;
-  isAdmin = false;
-  showLogin();
+function handleLogout() {
+    var client = getSupabase();
+    if (client) {
+        client.auth.signOut().then(function() {
+            currentUser = null;
+            isAdmin = false;
+            showLogin();
+        }).catch(function(e) {
+            console.error('Logout error:', e);
+            currentUser = null;
+            isAdmin = false;
+            showLogin();
+        });
+    } else {
+        showLogin();
+    }
 }
 
 // ═══ HELPERS ═══
 
 function getGreeting() {
-  var h = new Date().getHours();
-  if (h < 12) return 'Buenos días';
-  if (h < 18) return 'Buenas tardes';
-  return 'Buenas noches';
+    var h = new Date().getHours();
+    if (h < 12) return 'Buenos días';
+    if (h < 18) return 'Buenas tardes';
+    return 'Buenas noches';
 }
 
 // ═══ INIT ═══
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Auth
-  initAuth();
+    // Auth
+    initAuth();
 
-  // Hamburger
-  document.getElementById('hamburger-btn').addEventListener('click', openSidebar);
-  document.getElementById('sidebar-overlay').addEventListener('click', closeSidebar);
-  var closeBtn = document.getElementById('sidebar-close-btn');
-  if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+    // Hamburger
+    var hamburgerBtn = document.getElementById('hamburger-btn');
+    if (hamburgerBtn) hamburgerBtn.addEventListener('click', openSidebar);
+    var overlayEl = document.getElementById('sidebar-overlay');
+    if (overlayEl) overlayEl.addEventListener('click', closeSidebar);
+    var closeBtn = document.getElementById('sidebar-close-btn');
+    if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
 
-  // Sidebar nav
-  document.querySelectorAll('.sidebar-nav .nav-item').forEach(function(item) {
-    if (item.dataset.page) {
-      item.addEventListener('click', function() { navigateTo(item.dataset.page); });
+    // Sidebar nav
+    var navItems = document.querySelectorAll('.sidebar-nav .nav-item');
+    for (var i = 0; i < navItems.length; i++) {
+        (function(item) {
+            if (item.dataset.page) {
+                item.addEventListener('click', function() { navigateTo(item.dataset.page); });
+            }
+        })(navItems[i]);
     }
-  });
 
-  // Bottom nav
-  document.querySelectorAll('.bnav-item').forEach(function(btn) {
-    if (btn.dataset.page) {
-      btn.addEventListener('click', function() { navigateTo(btn.dataset.page); });
+    // Bottom nav
+    var bnavItems = document.querySelectorAll('.bnav-item');
+    for (var j = 0; j < bnavItems.length; j++) {
+        (function(btn) {
+            if (btn.dataset.page) {
+                btn.addEventListener('click', function() { navigateTo(btn.dataset.page); });
+            }
+        })(bnavItems[j]);
     }
-  });
 
-  // Logout
-  document.getElementById('logout-btn').addEventListener('click', handleLogout);
+    // Logout
+    var logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) logoutBtn.addEventListener('click', handleLogout);
 });
