@@ -104,6 +104,23 @@ function enterApp() {
         }
     }
 
+    // ═══ DEVICE GUARD ═══
+    if (typeof DeviceGuard !== 'undefined') {
+        var client = getSupabase();
+        DeviceGuard.activateDevice(client, email).then(function(res) {
+            if (!res.ok) {
+                alert('⚠️ ' + (res.error || 'Dispositivo no autorizado'));
+                handleLogout();
+                return;
+            }
+            // Iniciar verificación periódica (cada 10s)
+            DeviceGuard.startChecking(client, function(reason) {
+                alert('🔒 Sesión cerrada: ' + reason);
+                handleLogout();
+            });
+        });
+    }
+
     navigateTo('inicio');
 }
 

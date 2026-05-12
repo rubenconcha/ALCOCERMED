@@ -126,6 +126,24 @@ function enterApp(user) {
     setTimeout(testConnection, 800);
     setTimeout(preloadAppData, 1200);
     setTimeout(sincronizarPerfilEnNube, 2000);
+
+
+    // ═══ DEVICE GUARD ═══
+    if (typeof DeviceGuard !== 'undefined' && user && user.email) {
+        var dgEmail = user.email.toLowerCase().trim();
+        var dgClient = getSupabase();
+        DeviceGuard.activateDevice(dgClient, dgEmail).then(function(res) {
+            if (!res.ok) {
+                alert('⚠️ ' + (res.error || 'Dispositivo no autorizado'));
+                window.handleLogout();
+                return;
+            }
+            DeviceGuard.startChecking(dgClient, function(reason) {
+                alert('🔒 Sesión cerrada: ' + reason);
+                window.handleLogout();
+            });
+        });
+    }
 }
 
 /** handleLogin */
@@ -166,8 +184,13 @@ window.handleLogin = async function (e) {
 
 /** handleLogout */
 window.handleLogout = function() {
+        // 0. Detener verificación de dispositivo
+    if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();
+    
     // 1. Limpiar datos locales inmediatamente
+    var _savedDeviceId = localStorage.getItem('alcocer_device_id');
     localStorage.clear();
+    if (_savedDeviceId) localStorage.setItem('alcocer_device_id', _savedDeviceId);
     sessionStorage.clear();
     
     // 2. Intentar cerrar sesión en Supabase
