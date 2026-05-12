@@ -259,8 +259,14 @@ function navigateTo(page) {
     var activeBottom = document.querySelector('.bnav-item[data-page="' + page + '"]');
     if (activeBottom) activeBottom.classList.add('active');
 
+    // Load data for specific pages
+    if (page === 'biblioteca' && isAdmin) loadLibrary();
+    if (page === 'informes' && isAdmin) loadReports();
+    if (page === 'historial' && !isAdmin) loadStudentResults();
+
     closeSidebar();
 }
+window.navigateTo = navigateTo;
 
 // ═══ SIDEBAR ═══
 
@@ -458,6 +464,145 @@ function showQuizResults() {
             if (r.error) console.warn('No se pudo guardar resultado:', r.error.message);
         });
     }
+}
+
+// ═══ ADMIN: BIBLIOTECA — Evaluaciones creadas ═══
+
+function loadLibrary() {
+    var container = document.getElementById('library-list');
+    if (!container || !currentUser) return;
+    container.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:24px"></i><p style="margin-top:12px">Cargando biblioteca...</p></div>';
+
+    var client = getSupabase();
+    client.from('evaluaciones').select('*').eq('created_by', currentUser.id).order('created_at', {ascending: false}).then(function(r) {
+        if (r.error || !r.data || r.data.length === 0) {
+            container.innerHTML = '<div class="empty-state"><i class="fas fa-folder-open"></i><p>No has creado evaluaciones aún</p><small>Haz clic en "Crear evaluación" para empezar</small></div>';
+            return;
+        }
+        var html = '';
+        for (var i = 0; i < r.data.length; i++) {
+            var ev = r.data[i];
+            var statusBadge = ev.publicado
+                ? '<span style="background:#DCFCE7;color:#166534;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:700">Publicado</span>'
+                : '<span style="background:#FEF3C7;color:#92400E;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:700">Borrador</span>';
+            var codeHtml = ev.codigo ? '<span style="font-family:monospace;font-size:13px;color:#2563EB;font-weight:700">Código: ' + ev.codigo + '</span>' : '';
+            var fecha = new Date(ev.created_at).toLocaleDateString('es-ES', {day:'numeric',month:'short',year:'numeric'});
+            html += '<div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;transition:box-shadow .2s" onmouseover="this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\'" onmouseout="this.style.boxShadow=\'none\'">' +
+                '<div style="flex:1">' +
+                '<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">' +
+                '<h3 style="font-size:16px;font-weight:700;color:#1E293B">' + (ev.titulo || 'Sin título') + '</h3>' +
+                statusBadge + '</div>' +
+                '<div style="display:flex;gap:16px;font-size:12px;color:#64748B">' +
+                '<span><i class="fas fa-book"></i> ' + (ev.asignatura || 'General') + '</span>' +
+                '<span><i class="fas fa-calendar"></i> ' + fecha + '</span>' +
+                codeHtml + '</div></div>' +
+                '<div style="display:flex;gap:8px">' +
+                '<button onclick="window.location.href=\'editor.html?id=' + ev.id + 
+                '\'" style="padding:8px 14px;background:#F0F1F3;border:1px solid #E2E8F0;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#555"><i class="fas fa-edit"></i> Editar</button>' +
+                (ev.publicado ? '<button onclick="alert(\'Código: ' + (ev.codigo||'') + '\')" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer"><i class="fas fa-play"></i> Código</button>' : '') +
+                '</div></div>';
+        }
+        container.innerHTML = html;
+    });
+}
+
+// ═══ ADMIN: INFORMES — Resultados de estudiantes ═══
+
+function loadReports() {
+    var container = document.getElementById('reports-list');
+    if (!container || !currentUser) return;
+    container.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:24px"></i><p style="margin-top:12px">Cargando informes...</p></div>';
+
+    var client = getSupabase();
+    // Get all published evaluations by admin
+    client.from('evaluaciones').select('id, titulo, codigo').eq('created_by', currentUser.id).eq('publicado', true).then(function(evRes) {
+        if (evRes.error || !evRes.data || evRes.data.length === 0) {
+            container.innerHTML = '<div class="empty-state"><i class="fas fa-chart-line"></i><p>No hay informes disponibles</p><small>Publica evaluaciones para ver los resultados</small></div>';
+            return;
+        }
+        // Get results for these evaluations
+        var evalIds = evRes.data.map(function(e) { return e.id; });
+        client.from('evaluacion_resultados').select('*').in('evaluacion_id', evalIds).order('created_at', {ascending: false}).then(function(rRes) {
+            if (rRes.error || !rRes.data || rRes.data.length === 0) {
+                container.innerHTML = '<div class="empty-state"><i class="fas fa-chart-line"></i><p>Aún no hay resultados</p><small>Los resultados aparecerán cuando los estudiantes completen evaluaciones</small></div>';
+                return;
+            }
+            // Group by evaluation
+            var grouped = {};
+            for (var i = 0; i < rRes.data.length; i++) {
+                var res = rRes.data[i];
+                if (!grouped[res.evaluacion_id]) grouped[res.evaluacion_id] = [];
+                grouped[res.evaluacion_id].push(res);
+            }
+            // Build HTML
+            var html = '';
+            for (var j = 0; j < evRes.data.length; j++) {
+                var ev = evRes.data[j];
+                var results = grouped[ev.id] || [];
+                if (results.length === 0) continue;
+                var avgPct = 0;
+                for (var k = 0; k < results.length; k++) avgPct += (results[k].porcentaje || 0);
+                avgPct = Math.round(avgPct / results.length);
+                var barColor = avgPct >= 70 ? '#22C55E' : avgPct >= 40 ? '#F59E0B' : '#EF4444';
+
+                html += '<div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px;margin-bottom:16px">';
+                html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">';
+                html += '<div><h3 style="font-size:16px;font-weight:700">' + (ev.titulo || 'Sin título') + '</h3>';
+                html += '<span style="font-size:12px;color:#64748B">' + results.length + ' participante(s) • Código: ' + (ev.codigo || '-') + '</span></div>';
+                html += '<div style="text-align:right"><span style="font-size:24px;font-weight:800;color:' + barColor + '">' + avgPct + '%</span><br><span style="font-size:11px;color:#8E90A6">Promedio</span></div></div>';
+                // Progress bar
+                html += '<div style="background:#E2E8F0;border-radius:20px;height:8px;margin-bottom:16px;overflow:hidden"><div style="height:100%;width:' + avgPct + '%;background:' + barColor + ';border-radius:20px"></div></div>';
+                // Results table
+                html += '<table style="width:100%;border-collapse:collapse;font-size:13px">';
+                html += '<tr style="border-bottom:1px solid #E2E8F0"><th style="text-align:left;padding:8px;color:#64748B;font-weight:600">Estudiante</th><th style="padding:8px;color:#64748B;font-weight:600">Puntaje</th><th style="padding:8px;color:#64748B;font-weight:600">Precisión</th></tr>';
+                for (var m = 0; m < results.length; m++) {
+                    var r = results[m];
+                    var pColor = r.porcentaje >= 70 ? '#22C55E' : r.porcentaje >= 40 ? '#F59E0B' : '#EF4444';
+                    html += '<tr style="border-bottom:1px solid #F1F5F9">';
+                    html += '<td style="padding:8px"><i class="fas fa-user-circle" style="color:#94A3B8;margin-right:6px"></i>' + (r.user_id ? r.user_id.substring(0, 8) + '...' : 'Anónimo') + '</td>';
+                    html += '<td style="padding:8px;text-align:center;font-weight:700">' + r.puntaje + '/' + r.total + '</td>';
+                    html += '<td style="padding:8px;text-align:center;font-weight:700;color:' + pColor + '">' + r.porcentaje + '%</td>';
+                    html += '</tr>';
+                }
+                html += '</table></div>';
+            }
+            container.innerHTML = html || '<div class="empty-state"><i class="fas fa-chart-line"></i><p>No hay resultados aún</p></div>';
+        });
+    });
+}
+
+// ═══ STUDENT: MIS RESULTADOS ═══
+
+function loadStudentResults() {
+    var container = document.getElementById('results-list');
+    if (!container || !currentUser) return;
+    container.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:24px"></i></div>';
+
+    var client = getSupabase();
+    client.from('evaluacion_resultados').select('*, evaluaciones(titulo, asignatura)').eq('user_id', currentUser.id).order('created_at', {ascending: false}).then(function(r) {
+        if (r.error || !r.data || r.data.length === 0) {
+            container.innerHTML = '<div class="empty-state"><i class="fas fa-chart-pie"></i><p>No tienes resultados todavía</p><small>Participa en evaluaciones para ver tu progreso aquí</small></div>';
+            return;
+        }
+        var html = '';
+        for (var i = 0; i < r.data.length; i++) {
+            var res = r.data[i];
+            var titulo = (res.evaluaciones && res.evaluaciones.titulo) ? res.evaluaciones.titulo : 'Evaluación';
+            var asig = (res.evaluaciones && res.evaluaciones.asignatura) ? res.evaluaciones.asignatura : '';
+            var pct = res.porcentaje || 0;
+            var barColor = pct >= 70 ? '#22C55E' : pct >= 40 ? '#F59E0B' : '#EF4444';
+            var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '⭐' : pct >= 40 ? '📝' : '💪';
+            var fecha = new Date(res.created_at).toLocaleDateString('es-ES', {day:'numeric',month:'short'});
+
+            html += '<div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:16px 20px;margin-bottom:10px;display:flex;align-items:center;gap:16px">';
+            html += '<div style="font-size:28px">' + emoji + '</div>';
+            html += '<div style="flex:1"><h4 style="font-size:14px;font-weight:700;margin-bottom:2px">' + titulo + '</h4>';
+            html += '<span style="font-size:11px;color:#64748B">' + asig + ' • ' + fecha + '</span></div>';
+            html += '<div style="text-align:right"><span style="font-size:20px;font-weight:800;color:' + barColor + '">' + pct + '%</span>';
+            html += '<div style="font-size:11px;color:#8E90A6">' + res.puntaje + '/' + res.total + '</div></div></div>';
+        }
+        container.innerHTML = html;
+    });
 }
 
 // ═══ LOGOUT ═══
