@@ -491,21 +491,61 @@ function renderPvQuestion(){
   document.getElementById('pv-timer').style.color='#E91E63';
   document.getElementById('pv-next-btn').style.display='none';
   pvSelected=-1;
+  pvMultiSelections=[];
 
   var opts=q.options||[];
   var optColors=['#2563EB','#0D9488','#D97706','#DC2626','#7C3AED','#059669'];
   var html='';
-  for(var i=0;i<opts.length;i++){
-    var bg=optColors[i%optColors.length];
-    html+='<button class="pv-opt" data-idx="'+i+'" onclick="pvSelectOption('+i+')" '+
-      'style="padding:14px 18px;border:2px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(255,255,255,.08);'+
-      'text-align:left;font-size:.95rem;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:12px;color:#fff">'+
-      '<span style="width:32px;height:32px;border-radius:8px;background:'+bg+';color:#fff;display:flex;'+
-      'align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0">'+
-      String.fromCharCode(65+i)+'</span>'+
-      '<span>'+(opts[i].text||'(vacío)')+'</span></button>';
+
+  // Open-ended: show textarea
+  if(q.type==='oa'){
+    html+='<textarea id="pv-open-answer" placeholder="Escribe tu respuesta aquí..." '+
+      'style="width:100%;min-height:120px;padding:16px;border:2px solid rgba(255,255,255,.2);border-radius:12px;'+
+      'background:rgba(255,255,255,.08);color:#fff;font-size:.95rem;font-family:Inter,sans-serif;resize:vertical;outline:none"></textarea>';
+    html+='<button onclick="pvSubmitOpen()" style="margin-top:12px;padding:12px 24px;background:linear-gradient(135deg,#E91E63,#C2185B);'+
+      'color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;width:100%">Enviar respuesta</button>';
+    document.getElementById('pv-options').innerHTML=html;
   }
-  document.getElementById('pv-options').innerHTML=html;
+  // Fill blanks: show text
+  else if(q.type==='fb'){
+    html+='<textarea id="pv-open-answer" placeholder="Completa los espacios en blanco..." '+
+      'style="width:100%;min-height:80px;padding:16px;border:2px solid rgba(255,255,255,.2);border-radius:12px;'+
+      'background:rgba(255,255,255,.08);color:#fff;font-size:.95rem;font-family:Inter,sans-serif;resize:vertical;outline:none"></textarea>';
+    html+='<button onclick="pvSubmitOpen()" style="margin-top:12px;padding:12px 24px;background:linear-gradient(135deg,#E91E63,#C2185B);'+
+      'color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;width:100%">Enviar respuesta</button>';
+    document.getElementById('pv-options').innerHTML=html;
+  }
+  // Multiple selection: allow clicking multiple
+  else if(q.type==='ms'){
+    for(var i=0;i<opts.length;i++){
+      var bg=optColors[i%optColors.length];
+      html+='<button class="pv-opt" data-idx="'+i+'" onclick="pvToggleMulti('+i+')" '+
+        'style="padding:14px 18px;border:2px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(255,255,255,.08);'+
+        'text-align:left;font-size:.95rem;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:12px;color:#fff">'+
+        '<span style="width:32px;height:32px;border-radius:8px;background:'+bg+';color:#fff;display:flex;'+
+        'align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0">'+
+        String.fromCharCode(65+i)+'</span>'+
+        '<span>'+(opts[i].text||'(vacío)')+'</span></button>';
+    }
+    html+='<button id="pv-confirm-multi" onclick="pvConfirmMulti()" style="margin-top:12px;padding:12px 24px;'+
+      'background:linear-gradient(135deg,#7C3AED,#6D28D9);color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;width:100%">'+
+      '✓ Confirmar selección</button>';
+    document.getElementById('pv-options').innerHTML=html;
+  }
+  // Normal MC / TF / Poll
+  else{
+    for(var j=0;j<opts.length;j++){
+      var bg2=optColors[j%optColors.length];
+      html+='<button class="pv-opt" data-idx="'+j+'" onclick="pvSelectOption('+j+')" '+
+        'style="padding:14px 18px;border:2px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(255,255,255,.08);'+
+        'text-align:left;font-size:.95rem;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:12px;color:#fff">'+
+        '<span style="width:32px;height:32px;border-radius:8px;background:'+bg2+';color:#fff;display:flex;'+
+        'align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0">'+
+        String.fromCharCode(65+j)+'</span>'+
+        '<span>'+(opts[j].text||'(vacío)')+'</span></button>';
+    }
+    document.getElementById('pv-options').innerHTML=html;
+  }
 
   // Start timer
   if(pvTimerInterval)clearInterval(pvTimerInterval);
@@ -517,13 +557,72 @@ function renderPvQuestion(){
     if(timeLeft<=5)timerEl.style.color='#EF4444';
     if(timeLeft<=0){
       clearInterval(pvTimerInterval);
-      if(pvSelected===-1){
+      if(pvSelected===-1&&pvMultiSelections.length===0){
         pvAnswers.push({correcta:false});
         document.getElementById('pv-next-btn').style.display='block';
         document.getElementById('pv-next-btn').textContent=pvIdx>=questions.length-1?'🏆 Ver resultados':'Siguiente →';
       }
     }
   },1000);
+}
+
+// Multiple selection tracking
+var pvMultiSelections=[];
+
+function pvToggleMulti(idx){
+  var pos=pvMultiSelections.indexOf(idx);
+  var buttons=document.querySelectorAll('.pv-opt');
+  if(pos===-1){
+    pvMultiSelections.push(idx);
+    buttons[idx].style.border='2px solid #7C3AED';
+    buttons[idx].style.background='rgba(124,58,237,.25)';
+  }else{
+    pvMultiSelections.splice(pos,1);
+    buttons[idx].style.border='2px solid rgba(255,255,255,.15)';
+    buttons[idx].style.background='rgba(255,255,255,.08)';
+  }
+}
+
+function pvConfirmMulti(){
+  if(pvMultiSelections.length===0){showToast('Selecciona al menos una opción','error');return;}
+  if(pvTimerInterval)clearInterval(pvTimerInterval);
+  pvSelected=1;
+  var q=questions[pvIdx];
+  var opts=q.options||[];
+  var buttons=document.querySelectorAll('.pv-opt');
+  // Check if all correct were selected and no incorrect
+  var allCorrect=true;
+  for(var i=0;i<opts.length;i++){
+    var isSel=pvMultiSelections.indexOf(i)!==-1;
+    var isCorr=opts[i]&&opts[i].correct;
+    if(isSel&&!isCorr)allCorrect=false;
+    if(!isSel&&isCorr)allCorrect=false;
+  }
+  // Show feedback
+  for(var j=0;j<buttons.length;j++){
+    var sel=pvMultiSelections.indexOf(j)!==-1;
+    if(sel){buttons[j].style.border=allCorrect?'2px solid #22C55E':'2px solid #F59E0B';buttons[j].style.background=allCorrect?'rgba(34,197,94,.2)':'rgba(245,158,11,.2)';}
+    else{buttons[j].style.opacity='0.4';}
+    buttons[j].style.pointerEvents='none';
+  }
+  var confirmBtn=document.getElementById('pv-confirm-multi');
+  if(confirmBtn)confirmBtn.style.display='none';
+  pvAnswers.push({correcta:allCorrect});
+  document.getElementById('pv-next-btn').style.display='block';
+  document.getElementById('pv-next-btn').textContent=pvIdx>=questions.length-1?'🏆 Ver resultados':'Siguiente →';
+}
+
+function pvSubmitOpen(){
+  var ta=document.getElementById('pv-open-answer');
+  var answer=ta?ta.value.trim():'';
+  if(!answer){showToast('Escribe una respuesta','error');return;}
+  if(pvTimerInterval)clearInterval(pvTimerInterval);
+  pvSelected=1;
+  ta.style.border='2px solid #22C55E';
+  ta.disabled=true;
+  pvAnswers.push({correcta:true}); // open-ended always counted
+  document.getElementById('pv-next-btn').style.display='block';
+  document.getElementById('pv-next-btn').textContent=pvIdx>=questions.length-1?'🏆 Ver resultados':'Siguiente →';
 }
 
 function pvSelectOption(idx){

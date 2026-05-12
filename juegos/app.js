@@ -397,6 +397,8 @@ function startQuestionTimer(seconds) {
     }, 1000);
 }
 
+var quizMultiSelections = [];
+
 function renderQuizQuestion() {
     if (!quizData || quizCurrentQ >= quizData.preguntas.length) return;
 
@@ -405,6 +407,7 @@ function renderQuizQuestion() {
     var progress = ((quizCurrentQ) / total) * 100;
     var pts = pregunta.puntos || 1;
     var timer = pregunta.temporizador || 30;
+    var tipo = pregunta.tipo || 'mc';
 
     document.getElementById('quiz-progress-bar').style.width = progress + '%';
     document.getElementById('quiz-question-number').textContent = 'Pregunta ' + (quizCurrentQ + 1) + '/' + total;
@@ -415,16 +418,45 @@ function renderQuizQuestion() {
     var opciones = pregunta.opciones || [];
     var optColors = ['#2563EB', '#0D9488', '#D97706', '#DC2626', '#7C3AED', '#059669'];
     var html = '';
+    quizMultiSelections = [];
 
-    for (var i = 0; i < opciones.length; i++) {
-        var bgColor = optColors[i % optColors.length];
-        html += '<button class="quiz-opt-btn" data-idx="' + i + '" onclick="selectQuizOption(' + i + ')" ' +
-            'style="padding:16px 20px;border:2px solid #E2E8F0;border-radius:14px;background:#fff;text-align:left;' +
-            'font-size:.95rem;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:12px">' +
-            '<span style="width:32px;height:32px;border-radius:8px;background:' + bgColor + ';color:#fff;display:flex;' +
-            'align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0">' +
-            String.fromCharCode(65 + i) + '</span>' +
-            '<span>' + (opciones[i].text || '') + '</span></button>';
+    // Open-ended or fill blanks: show textarea
+    if (tipo === 'oa' || tipo === 'fb') {
+        var ph = tipo === 'oa' ? 'Escribe tu respuesta aquí...' : 'Completa los espacios en blanco...';
+        html += '<textarea id="quiz-open-answer" placeholder="' + ph + '" ' +
+            'style="width:100%;min-height:120px;padding:16px;border:2px solid #E2E8F0;border-radius:12px;' +
+            'background:#fff;color:#333;font-size:.95rem;font-family:Inter,sans-serif;resize:vertical;outline:none"></textarea>';
+        html += '<button onclick="submitQuizOpen()" style="margin-top:12px;padding:14px 24px;background:linear-gradient(135deg,#E91E63,#C2185B);' +
+            'color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;width:100%;font-size:1rem">Enviar respuesta</button>';
+    }
+    // Multiple selection: allow multiple clicks + confirm
+    else if (tipo === 'ms') {
+        for (var i = 0; i < opciones.length; i++) {
+            var bgColor = optColors[i % optColors.length];
+            html += '<button class="quiz-opt-btn" data-idx="' + i + '" onclick="toggleQuizMulti(' + i + ')" ' +
+                'style="padding:16px 20px;border:2px solid #E2E8F0;border-radius:14px;background:#fff;text-align:left;' +
+                'font-size:.95rem;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:12px">' +
+                '<span style="width:32px;height:32px;border-radius:8px;background:' + bgColor + ';color:#fff;display:flex;' +
+                'align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0">' +
+                String.fromCharCode(65 + i) + '</span>' +
+                '<span>' + (opciones[i].text || '') + '</span></button>';
+        }
+        html += '<button id="quiz-confirm-multi" onclick="confirmQuizMulti()" style="margin-top:12px;padding:14px 24px;' +
+            'background:linear-gradient(135deg,#7C3AED,#6D28D9);color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;width:100%;font-size:1rem">' +
+            '✓ Confirmar selección</button>';
+    }
+    // Normal MC / TF / Poll
+    else {
+        for (var j = 0; j < opciones.length; j++) {
+            var bgColor2 = optColors[j % optColors.length];
+            html += '<button class="quiz-opt-btn" data-idx="' + j + '" onclick="selectQuizOption(' + j + ')" ' +
+                'style="padding:16px 20px;border:2px solid #E2E8F0;border-radius:14px;background:#fff;text-align:left;' +
+                'font-size:.95rem;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:12px">' +
+                '<span style="width:32px;height:32px;border-radius:8px;background:' + bgColor2 + ';color:#fff;display:flex;' +
+                'align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0">' +
+                String.fromCharCode(65 + j) + '</span>' +
+                '<span>' + (opciones[j].text || '') + '</span></button>';
+        }
     }
 
     document.getElementById('quiz-options-list').innerHTML = html;
@@ -433,6 +465,66 @@ function renderQuizQuestion() {
 
     startQuestionTimer(timer);
 }
+
+function toggleQuizMulti(idx) {
+    var pos = quizMultiSelections.indexOf(idx);
+    var buttons = document.querySelectorAll('.quiz-opt-btn');
+    if (pos === -1) {
+        quizMultiSelections.push(idx);
+        buttons[idx].style.border = '2px solid #7C3AED';
+        buttons[idx].style.background = '#F3E8FF';
+    } else {
+        quizMultiSelections.splice(pos, 1);
+        buttons[idx].style.border = '2px solid #E2E8F0';
+        buttons[idx].style.background = '#fff';
+    }
+}
+window.toggleQuizMulti = toggleQuizMulti;
+
+function confirmQuizMulti() {
+    if (quizMultiSelections.length === 0) return;
+    if (quizTimerInterval) clearInterval(quizTimerInterval);
+    quizSelectedOption = 1;
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var opciones = pregunta.opciones || [];
+    var buttons = document.querySelectorAll('.quiz-opt-btn');
+    var allCorrect = true;
+    for (var i = 0; i < opciones.length; i++) {
+        var isSel = quizMultiSelections.indexOf(i) !== -1;
+        var isCorr = opciones[i] && opciones[i].correct;
+        if (isSel && !isCorr) allCorrect = false;
+        if (!isSel && isCorr) allCorrect = false;
+    }
+    for (var j = 0; j < buttons.length; j++) {
+        var sel = quizMultiSelections.indexOf(j) !== -1;
+        if (sel) { buttons[j].style.border = allCorrect ? '2px solid #22C55E' : '2px solid #F59E0B'; buttons[j].style.background = allCorrect ? '#F0FDF4' : '#FEF3C7'; }
+        else { buttons[j].style.opacity = '0.5'; }
+        buttons[j].style.pointerEvents = 'none';
+    }
+    var confirmBtn = document.getElementById('quiz-confirm-multi');
+    if (confirmBtn) confirmBtn.style.display = 'none';
+    quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: quizMultiSelections, correcta: allCorrect });
+    var nextBtn = document.getElementById('quiz-next-btn');
+    nextBtn.style.display = 'block';
+    nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
+}
+window.confirmQuizMulti = confirmQuizMulti;
+
+function submitQuizOpen() {
+    var ta = document.getElementById('quiz-open-answer');
+    var answer = ta ? ta.value.trim() : '';
+    if (!answer) return;
+    if (quizTimerInterval) clearInterval(quizTimerInterval);
+    quizSelectedOption = 1;
+    ta.style.border = '2px solid #22C55E';
+    ta.disabled = true;
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: answer, correcta: true });
+    var nextBtn = document.getElementById('quiz-next-btn');
+    nextBtn.style.display = 'block';
+    nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
+}
+window.submitQuizOpen = submitQuizOpen;
 
 function selectQuizOption(idx) {
     if (quizSelectedOption !== -1) return;
@@ -447,15 +539,12 @@ function selectQuizOption(idx) {
     for (var i = 0; i < buttons.length; i++) {
         var isSelected = (i === idx);
         if (isSelected && isCorrectAnswer) {
-            // Respuesta correcta → verde
             buttons[i].style.border = '2px solid #22C55E';
             buttons[i].style.background = '#F0FDF4';
         } else if (isSelected && !isCorrectAnswer) {
-            // Respuesta incorrecta → rojo (NO revelar la correcta)
             buttons[i].style.border = '2px solid #EF4444';
             buttons[i].style.background = '#FEF2F2';
         } else {
-            // Las demás se desactivan sin revelar nada
             buttons[i].style.opacity = '0.5';
         }
         buttons[i].style.cursor = 'default';
