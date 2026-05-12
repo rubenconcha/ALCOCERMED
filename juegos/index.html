@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wayground Admin</title>
+  <meta name="description" content="Plataforma educativa interactiva - Panel de administración">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <button class="hamburger" id="hamburger-btn">☰</button>
+    <div class="search-global">
+      <span>🔍</span>
+      <input type="text" id="global-search-input" placeholder="Buscar en la biblioteca de Wayground">
+    </div>
+    <button class="code-btn" onclick="alert('Introduce un código de juego')">
+      <span>⊞</span> Introducir código
+    </button>
+  </header>
+
+  <!-- SIDEBAR OVERLAY -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-area">
+      <span class="logo-icon">🎮</span>
+      <div>
+        <span class="logo-text">WAYGROUND</span>
+        <span class="badge">STUDENT</span>
+        <small>formerly Quizizz</small>
+      </div>
+    </div>
+    <button class="create-btn" onclick="navigateTo('crear')">Crear</button>
+    <nav>
+      <div class="nav-item active" data-page="explorar">
+        <span>🏠</span> Explorar
+      </div>
+      <div class="nav-item" data-page="biblioteca">
+        <span>📄</span> Biblioteca
+      </div>
+      <div class="nav-item" data-page="informes">
+        <span>📊</span> Informes
+      </div>
+      <div class="nav-item" onclick="alert('Sesión cerrada')">
+        <span>🚪</span> Cerrar sesión
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="upgrade-bar">
+        <p>1/20 actividades creadas</p>
+        <div class="bar-track"><div class="bar-fill"></div></div>
+      </div>
+      <button class="upgrade-btn">🚀 Actualizar</button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- ===== EXPLORAR ===== -->
+    <section class="page active" id="page-explorar">
+      <div class="hero-section">
+        <p class="hero-greeting" id="greeting-text">Buenas noches, ruben 👋 Comencemos.</p>
+        <div class="hero-cards">
+          <div class="hero-action" data-tab="crear">
+            <div class="icon-circle">✏️</div>
+            <span>Crear</span>
+            <small>un recurso</small>
+          </div>
+          <div class="hero-action active" data-tab="buscar">
+            <div class="icon-circle">🔍</div>
+            <span>Buscar</span>
+            <small>recursos</small>
+          </div>
+          <div class="hero-action" data-tab="subir">
+            <div class="icon-circle">📤</div>
+            <span>Subir</span>
+            <small>y mejora tu contenido</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Tab: Buscar (default) -->
+      <div class="hero-tab-content active" id="hero-content-buscar">
+        <div class="search-section">
+          <div class="search-bar">
+            <span>🔍</span>
+            <input type="text" id="main-search-input" placeholder="Buscar cualquier tema">
+            <button class="search-submit" id="search-submit-btn">🔍</button>
+          </div>
+        </div>
+        <div class="explore-section">
+          <h3 class="explore-title">Explorar recursos para</h3>
+          <div class="filter-row">
+            <div class="filter-chip">Matemáticas ▾</div>
+            <div class="filter-chip">Grado 6 ▾</div>
+          </div>
+          <div class="section-header">
+            <h3>Curriculum-aligned mathematics resources</h3>
+            <span class="see-all">Ver todo →</span>
+          </div>
+          <div class="resource-grid" id="resource-grid-1"></div>
+          <div class="section-header">
+            <h3>Standards-aligned mathematics resources</h3>
+            <span class="see-all">Ver todo →</span>
+          </div>
+          <div class="resource-grid" id="resource-grid-2"></div>
+        </div>
+      </div>
+
+      <!-- Hero Tab: Crear -->
+      <div class="hero-tab-content" id="hero-content-crear">
+        <div class="crear-page">
+          <div class="crear-hero">
+            <h2>Crea 5 tipos diferentes de recursos interactivos</h2>
+            <p>Cree evaluaciones, presentaciones, flashcards, actividades de video y preguntas basadas en pasajes.</p>
+          </div>
+          <div class="crear-options">
+            <div class="crear-option" onclick="window.location.href='editor.html'"><div class="co-icon eval">✓</div><div class="co-text"><h4>Evaluación</h4><p>Preguntas rápidas e interactivas</p></div></div>
+            <div class="crear-option"><div class="co-icon pres">📋</div><div class="co-text"><h4>Presentación</h4><p>Diapositivas con preguntas y pizarra</p></div></div>
+            <div class="crear-option"><div class="co-icon video">🎬</div><div class="co-text"><h4>Vídeo</h4><p>Preguntas en puntos clave del vídeo</p></div></div>
+            <div class="crear-option"><div class="co-icon lect">📖</div><div class="co-text"><h4>Lectura</h4><p>Preguntas basadas en un pasaje</p></div></div>
+            <div class="crear-option"><div class="co-icon flash">🗂️</div><div class="co-text"><h4>Fichas de estudio</h4><p>Preguntas al frente, respuestas en el reverso</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Tab: Subir -->
+      <div class="hero-tab-content" id="hero-content-subir">
+        <div class="crear-page">
+          <div class="crear-hero">
+            <h2>Sube tu contenido</h2>
+            <p>Importa documentos, presentaciones y otros materiales para mejorarlos con herramientas interactivas.</p>
+          </div>
+          <div class="crear-options">
+            <div class="crear-option"><div class="co-icon eval">📄</div><div class="co-text"><h4>Documento</h4><p>Sube PDF, Word o texto</p></div></div>
+            <div class="crear-option"><div class="co-icon pres">📊</div><div class="co-text"><h4>Presentación</h4><p>Sube PowerPoint o Google Slides</p></div></div>
+            <div class="crear-option"><div class="co-icon video">🔗</div><div class="co-text"><h4>Enlace de video</h4><p>Agrega un enlace de YouTube u otro</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BIBLIOTECA ===== -->
+    <section class="page" id="page-biblioteca">
+      <div class="biblioteca-layout">
+        <div class="biblio-sidebar">
+          <h2>Biblioteca</h2>
+          <div class="bsb-item active" data-btab="creado">
+            <span><span>✏️</span> Creado</span>
+            <span class="count">1 / 20</span>
+          </div>
+          <div class="bsb-item" data-btab="usado">
+            <span><span>🕐</span> Usado previamente</span>
+          </div>
+          <div class="bsb-item" data-btab="compartido">
+            <span><span>🔄</span> Compartido por mí</span>
+          </div>
+          <div class="bsb-item" data-btab="todas">
+            <span><span>📋</span> Todas las actividades</span>
+          </div>
+          <div class="bsb-divider"></div>
+          <div class="bsb-item" data-btab="colecciones">
+            <span><span>📁</span> Colecciones</span>
+            <span class="count">0</span>
+          </div>
+          <div class="bsb-item" data-btab="equipos">
+            <span><span>👥</span> Equipos</span>
+            <span class="count">0</span>
+          </div>
+        </div>
+        <div class="biblio-main">
+          <div class="bm-search">
+            <input type="text" placeholder="Buscar por nombre de actividad">
+          </div>
+          <h2>Creado por mí</h2>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;flex-wrap:wrap">
+            <div class="tabs-row" style="margin-bottom:0">
+              <span class="tab-pill active">Creado (1/20)</span>
+              <span class="tab-pill">Borrador (0)</span>
+              <span class="tab-pill">Archivado (0)</span>
+            </div>
+            <div class="type-filter" style="margin-left:auto">Tipo de actividad ▾</div>
+          </div>
+          <div class="activity-table">
+            <div class="at-header">
+              <span>Detalles de la actividad ⇅</span>
+              <span>Tiempo de creación ▾</span>
+            </div>
+            <div id="activity-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CREAR ===== -->
+    <section class="page" id="page-crear">
+      <div class="crear-page">
+        <div class="crear-hero">
+          <h2>Crea 5 tipos diferentes de recursos interactivos</h2>
+          <p>Cree evaluaciones, presentaciones, flashcards, actividades de video y preguntas basadas en pasajes con nuestro completo kit de herramientas de creación.</p>
+        </div>
+        <div class="crear-options">
+          <div class="crear-option" onclick="window.location.href='editor.html'"><div class="co-icon eval">✓</div><div class="co-text"><h4>Evaluación</h4><p>Preguntas rápidas e interactivas</p></div></div>
+          <div class="crear-option"><div class="co-icon pres">📋</div><div class="co-text"><h4>Presentación</h4><p>Diapositivas con preguntas y pizarra</p></div></div>
+          <div class="crear-option"><div class="co-icon video">🎬</div><div class="co-text"><h4>Vídeo</h4><p>Preguntas en puntos clave del vídeo</p></div></div>
+          <div class="crear-option"><div class="co-icon lect">📖</div><div class="co-text"><h4>Lectura</h4><p>Preguntas basadas en un pasaje</p></div></div>
+          <div class="crear-option"><div class="co-icon flash">🗂️</div><div class="co-text"><h4>Fichas de estudio</h4><p>Preguntas al frente, respuestas en el reverso</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INFORMES ===== -->
+    <section class="page" id="page-informes">
+      <div class="informes-page">
+        <div class="informes-search">
+          <input type="text" placeholder="Buscar por nombre del informe">
+        </div>
+        <div class="filters-row">
+          <div class="filter-btn">Todos (6) ▾</div>
+          <div class="filter-btn">Tipos de recursos ▾</div>
+          <div class="filter-btn">Todos los informes ▾</div>
+          <div class="filter-btn">Todas las clases ▾</div>
+          <div class="filter-btn">Todo el tiempo ▾</div>
+        </div>
+        <div class="report-list" id="report-list"></div>
+      </div>
+    </section>
+
+    <!-- ===== BUSCAR ===== -->
+    <section class="page" id="page-buscar">
+      <div class="search-page">
+        <div class="sp-input">
+          <input type="text" id="search-query-display" placeholder="Buscar..." value="matem">
+        </div>
+        <div class="search-tabs">
+          <div class="search-tab active" data-stab="best">📌 Mejores resultados</div>
+          <div class="search-tab" data-stab="eval">✓ Evaluaciones</div>
+          <div class="search-tab" data-stab="pres">📋 Presentaciones</div>
+          <div class="search-tab" data-stab="vid">🎬 Videos interactivos</div>
+          <div class="search-tab" data-stab="lect">📖 Lecturas</div>
+          <div class="search-tab" data-stab="flash">🗂️ Fichas de estudio</div>
+        </div>
+        <div class="search-filters">
+          <div class="filter-btn">Calificaciones ▾</div>
+          <div class="filter-btn">Duración de la actividad ▾</div>
+          <div class="filter-btn">⚙️</div>
+        </div>
+        <div class="search-result-sections">
+          <h3>Evaluaciones <span class="see-all">Mostrar todo 171.9K →</span></h3>
+          <div class="search-results-list" id="search-results"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <div class="bnav-item active" data-page="explorar">
+      <span>🔍</span> Explorar
+    </div>
+    <div class="bnav-item" data-page="biblioteca">
+      <span>📄</span> Biblioteca
+    </div>
+    <div class="bnav-item create-nav" data-page="crear">
+      <span>➕</span> Crear
+    </div>
+    <div class="bnav-item" data-page="informes">
+      <span>📊</span> Informes
+    </div>
+  </nav>
+
+  <!-- HELP FAB -->
+  <button class="help-fab" onclick="alert('Centro de ayuda')">?</button>
+
+  <script src="app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  
+  const supabaseClient = window.supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_KEY);
+  
+  document.addEventListener('DOMContentLoaded', async () => {
+      const { data: { session } } = await supabaseClient.auth.getSession();
+      if (session) {
+          document.getElementById('login-screen').classList.add('hidden');
+      } else {
+          document.getElementById('login-screen').classList.remove('hidden');
+      }
+  });
+
+  async function handleLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value.trim();
+      const password = document.getElementById('login-password').value;
+      const errorEl = document.getElementById('login-error');
+      const errorText = document.getElementById('login-error-text');
+      
+      if (!email || !password) return;
+      
+      const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+      
+      if (error) {
+          errorEl.classList.remove('hidden');
+          errorText.textContent = 'Credenciales incorrectas';
+      } else {
+          errorEl.classList.add('hidden');
+          document.getElementById('login-screen').classList.add('hidden');
+      }
+  }
+
+  function togglePasswordVisibility() {
+      const input = document.getElementById('login-password');
+      if (input.type === 'password') input.type = 'text';
+      else input.type = 'password';
+  }
+</script>
+
+</body>
+</html>
