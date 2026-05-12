@@ -3413,7 +3413,7 @@ async function sincronizarPerfilEnNube() {
 
 
 
-\n\n/* ================= WAYGROUND JS ================= */\n// ===== WAYGROUND ADMIN REPLICA - APP.JS =====
+/* ================= WAYGROUND JS ================= */
 
 // --- DATA ---
 const resourceData = [
@@ -3699,7 +3699,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Navigate to explorar
   navigateTo('explorar');
 });
-\n\n/* ================= EDITOR JS ================= */\n// ===== EVALUATION EDITOR LOGIC =====
+/* ================= EDITOR JS ================= */
 
 let questions = [];
 let currentQuestionIndex = -1;
@@ -3975,7 +3975,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderQuestionTypes();
   renderQuestionThumbs();
 });
-\n
+
 // ==========================================
 // WAYGROUND INTEGRATION
 // ==========================================
