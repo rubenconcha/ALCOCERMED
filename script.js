@@ -128,8 +128,9 @@ function enterApp(user) {
     setTimeout(sincronizarPerfilEnNube, 2000);
 
 
-    // ═══ DEVICE GUARD ═══
-    if (typeof DeviceGuard !== 'undefined' && user && user.email) {
+    // ═══ DEVICE GUARD (solo estudiantes, admin exento) ═══
+    var _isAdmin = Boolean(user && user.email && ADMIN_EMAILS.includes(user.email.toLowerCase()));
+    if (typeof DeviceGuard !== 'undefined' && user && user.email && !_isAdmin) {
         var dgEmail = user.email.toLowerCase().trim();
         var dgClient = getSupabase();
         DeviceGuard.activateDevice(dgClient, dgEmail).then(function(res) {

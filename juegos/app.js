@@ -104,8 +104,8 @@ function enterApp() {
         }
     }
 
-    // ═══ DEVICE GUARD ═══
-    if (typeof DeviceGuard !== 'undefined') {
+    // ═══ DEVICE GUARD (solo estudiantes, admin exento) ═══
+    if (typeof DeviceGuard !== 'undefined' && !isAdmin) {
         var client = getSupabase();
         DeviceGuard.activateDevice(client, email).then(function(res) {
             if (!res.ok) {
@@ -113,7 +113,6 @@ function enterApp() {
                 handleLogout();
                 return;
             }
-            // Iniciar verificación periódica (cada 10s)
             DeviceGuard.startChecking(client, function(reason) {
                 alert('🔒 Sesión cerrada: ' + reason);
                 handleLogout();
