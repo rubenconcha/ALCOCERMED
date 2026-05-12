@@ -1,65 +1,191 @@
-// ===== WAYGROUND ADMIN REPLICA - APP.JS =====
+// ═══════════════════════════════════════════════
+// ALCOCERMED JUEGOS — APP.JS
+// Student-first platform with admin gating
+// ═══════════════════════════════════════════════
 
-// --- DATA ---
-const resourceData = [
-  { name: 'enVision Mathematics', color: '#4CAF50' },
-  { name: 'Big Ideas Math', color: '#2196F3' },
-  { name: 'Illustrative Mathematics', color: '#FF9800' },
-  { name: 'Reveal Math', color: '#E91E63' },
-  { name: 'Into Math', color: '#9C27B0' },
-  { name: 'Bluebonnet Learning', color: '#00BCD4' }
-];
+const SUPABASE_URL = 'https://asnwhddmurstzmghuyin.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
+const ADMIN_EMAIL = 'pichon4488@gmail.com';
 
-const standardResources = [
-  { name: 'Ratios & Proportions', color: '#FF5722' },
-  { name: 'Expressions & Equations', color: '#3F51B5' },
-  { name: 'Geometry Basics', color: '#009688' },
-  { name: 'Statistics & Probability', color: '#795548' }
-];
+let sb = null;
+let currentUser = null;
+let isAdmin = false;
 
-const myActivities = [
-  { name: 'clase 1', type: 'Presentación', questions: '1 P', subject: 'Otro', grade: 'Universidad', time: '35 minutos', icon: '📊' }
-];
+function getSupabase() {
+  if (!sb) sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  return sb;
+}
 
-const reportData = [
-  { name: 'Preguntas', type: 'Assessment', mode: 'Desafío', pct: 69, color: '#F59E0B', date: 'abr 14, 2020' },
-  { name: 'Geografía', type: 'Assessment', mode: 'Desafío', pct: 100, color: '#22C55E', date: 'abr 14, 2020' },
-  { name: 'Los Vengadores', type: 'Assessment', mode: 'Desafío', pct: 80, color: '#6C2EB9', date: 'abr 14, 2020' },
-  { name: 'Coronavirus', type: 'Assessment', mode: 'Desafío', pct: 66, color: '#F59E0B', date: 'abr 14, 2020' },
-  { name: 'Identifica los muebles', type: 'Assessment', mode: 'Desafío', pct: 67, color: '#F59E0B', date: 'abr 14, 2020' },
-  { name: 'Fotosíntesis - Nivel Básico', type: 'Assessment', mode: 'Desafío', pct: 87, color: '#6C2EB9', date: 'abr 14, 2020' }
-];
+// ═══ AUTHENTICATION ═══
 
-const searchResults = [
-  { name: 'matem.2', grade: '1er grado', questions: 17, type: 'Evaluación' },
-  { name: 'matem-2019', grade: '5to grado', questions: 16, type: 'Evaluación' },
-  { name: 'matem 10-6', grade: '5to grado', questions: 11, type: 'Evaluación' },
-  { name: 'matem 10-4', grade: '1er grado', questions: 19, type: 'Evaluación' }
-];
+async function initAuth() {
+  try {
+    const client = getSupabase();
+    const { data: { session } } = await client.auth.getSession();
+    if (session && session.user) {
+      currentUser = session.user;
+      enterApp();
+    } else {
+      showLogin();
+    }
+  } catch (e) {
+    console.error('Auth error:', e);
+    showLogin();
+  }
 
-// --- NAVIGATION ---
-let currentPage = 'explorar';
+  getSupabase().auth.onAuthStateChange(function(event, session) {
+    if (event === 'SIGNED_IN' && session) {
+      currentUser = session.user;
+      enterApp();
+    } else if (event === 'SIGNED_OUT') {
+      currentUser = null;
+      isAdmin = false;
+      showLogin();
+    }
+  });
+}
+
+function showLogin() {
+  document.getElementById('login-screen').classList.remove('hidden');
+  document.getElementById('app-shell').classList.add('hidden');
+  var emailEl = document.getElementById('login-email');
+  var passEl = document.getElementById('login-password');
+  if (emailEl) emailEl.value = '';
+  if (passEl) passEl.value = '';
+  hideLoginError();
+}
+
+function enterApp() {
+  document.getElementById('login-screen').classList.add('hidden');
+  document.getElementById('app-shell').classList.remove('hidden');
+
+  // Check admin
+  var email = (currentUser.email || '').toLowerCase().trim();
+  isAdmin = (email === ADMIN_EMAIL);
+
+  // Update UI with user info
+  var name = currentUser.user_metadata && currentUser.user_metadata.full_name
+    ? currentUser.user_metadata.full_name
+    : email.split('@')[0];
+
+  document.getElementById('topbar-username').textContent = name;
+  document.getElementById('topbar-avatar').textContent = name.charAt(0).toUpperCase();
+
+  var greetEl = document.getElementById('greeting-text');
+  if (greetEl) greetEl.textContent = getGreeting() + ', ' + name + '!';
+
+  // Show/hide admin sections
+  document.querySelectorAll('.admin-only').forEach(function(el) {
+    if (isAdmin) {
+      el.classList.remove('hidden');
+    } else {
+      el.classList.add('hidden');
+    }
+  });
+
+  if (document.getElementById('admin-nav-section')) {
+    if (isAdmin) {
+      document.getElementById('admin-nav-section').classList.remove('hidden');
+    } else {
+      document.getElementById('admin-nav-section').classList.add('hidden');
+    }
+  }
+
+  navigateTo('inicio');
+}
+
+window.handleLogin = async function(e) {
+  e.preventDefault();
+  hideLoginError();
+
+  var email = document.getElementById('login-email').value.trim();
+  var password = document.getElementById('login-password').value;
+
+  if (!email || !password) { showLoginError('Completa todos los campos'); return; }
+  if (password.length < 6) { showLoginError('La contraseña debe tener al menos 6 caracteres'); return; }
+
+  setLoginLoading(true);
+  try {
+    var client = getSupabase();
+    var result = await client.auth.signInWithPassword({ email: email, password: password });
+    if (result.error) {
+      var msg = 'Credenciales incorrectas';
+      if (result.error.message.indexOf('Invalid login') !== -1) msg = 'Correo o contraseña incorrectos';
+      else if (result.error.message.indexOf('Email not confirmed') !== -1) msg = 'Confirma tu correo antes de ingresar';
+      else if (result.error.message.indexOf('Too many requests') !== -1) msg = 'Demasiados intentos, espera unos minutos';
+      showLoginError(msg);
+      return;
+    }
+    currentUser = result.data.user;
+    enterApp();
+  } catch (err) {
+    console.error('Login error:', err);
+    showLoginError('Error de conexión. Revisa tu internet.');
+  } finally {
+    setLoginLoading(false);
+  }
+};
+
+window.togglePasswordVisibility = function() {
+  var input = document.getElementById('login-password');
+  var icon = document.getElementById('login-eye-icon');
+  if (!input) return;
+  if (input.type === 'password') {
+    input.type = 'text';
+    if (icon) { icon.classList.remove('fa-eye'); icon.classList.add('fa-eye-slash'); }
+  } else {
+    input.type = 'password';
+    if (icon) { icon.classList.remove('fa-eye-slash'); icon.classList.add('fa-eye'); }
+  }
+};
+
+function showLoginError(msg) {
+  var el = document.getElementById('login-error');
+  var txt = document.getElementById('login-error-text');
+  if (el) el.classList.remove('hidden');
+  if (txt) txt.textContent = msg;
+}
+function hideLoginError() {
+  var el = document.getElementById('login-error');
+  if (el) el.classList.add('hidden');
+}
+function setLoginLoading(loading) {
+  var btn = document.getElementById('login-btn');
+  var btnText = document.getElementById('login-btn-text');
+  var btnLoading = document.getElementById('login-btn-loading');
+  if (!btn) return;
+  btn.disabled = loading;
+  if (btnText) btnText.style.display = loading ? 'none' : '';
+  if (btnLoading) { if (loading) btnLoading.classList.remove('hidden'); else btnLoading.classList.add('hidden'); }
+}
+
+// ═══ NAVIGATION ═══
+
+let currentPage = 'inicio';
 
 function navigateTo(page) {
   currentPage = page;
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const target = document.getElementById('page-' + page);
+
+  // Hide all pages, show target
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+  var target = document.getElementById('page-' + page);
   if (target) target.classList.add('active');
 
-  // Update bottom nav
-  document.querySelectorAll('.bnav-item').forEach(b => b.classList.remove('active'));
-  const activeBtn = document.querySelector(`.bnav-item[data-page="${page}"]`);
-  if (activeBtn) activeBtn.classList.add('active');
-
   // Update sidebar nav
-  document.querySelectorAll('.sidebar .nav-item').forEach(n => n.classList.remove('active'));
-  const activeSidebar = document.querySelector(`.sidebar .nav-item[data-page="${page}"]`);
+  document.querySelectorAll('.sidebar-nav .nav-item').forEach(function(n) { n.classList.remove('active'); });
+  var activeSidebar = document.querySelector('.sidebar-nav .nav-item[data-page="' + page + '"]');
   if (activeSidebar) activeSidebar.classList.add('active');
+
+  // Update bottom nav
+  document.querySelectorAll('.bnav-item').forEach(function(b) { b.classList.remove('active'); });
+  var activeBottom = document.querySelector('.bnav-item[data-page="' + page + '"]');
+  if (activeBottom) activeBottom.classList.add('active');
 
   closeSidebar();
 }
 
-// --- SIDEBAR ---
+// ═══ SIDEBAR ═══
+
 function openSidebar() {
   document.getElementById('sidebar').classList.add('open');
   document.getElementById('sidebar-overlay').classList.add('active');
@@ -70,217 +196,75 @@ function closeSidebar() {
   document.getElementById('sidebar-overlay').classList.remove('active');
 }
 
-// --- HERO TABS ---
-function switchHeroTab(tab) {
-  document.querySelectorAll('.hero-action').forEach(a => a.classList.remove('active'));
-  const el = document.querySelector(`.hero-action[data-tab="${tab}"]`);
-  if (el) el.classList.add('active');
+// ═══ JOIN BY CODE ═══
 
-  document.querySelectorAll('.hero-tab-content').forEach(c => c.classList.remove('active'));
-  const content = document.getElementById('hero-content-' + tab);
-  if (content) content.classList.add('active');
-}
+window.joinByCode = function() {
+  var input = document.getElementById('join-code-input');
+  var code = input ? input.value.trim() : '';
+  if (!code) { alert('Ingresa un código'); return; }
+  alert('Buscando evaluación con código: ' + code + '\n\nEsta función se conectará al sistema de evaluaciones en vivo.');
+};
 
-// --- RENDER FUNCTIONS ---
-function renderResourceCards() {
-  const grid1 = document.getElementById('resource-grid-1');
-  const grid2 = document.getElementById('resource-grid-2');
-  if (!grid1) return;
-
-  grid1.innerHTML = resourceData.map(r => `
-    <div class="resource-card">
-      <span class="rc-name">${r.name}</span>
-      <div class="rc-img" style="background:${r.color}20">
-        <span style="font-size:24px;color:${r.color}">📚</span>
-      </div>
-    </div>
-  `).join('');
-
-  if (grid2) {
-    grid2.innerHTML = standardResources.map(r => `
-      <div class="resource-card">
-        <span class="rc-name">${r.name}</span>
-        <div class="rc-img" style="background:${r.color}20">
-          <span style="font-size:24px;color:${r.color}">📐</span>
-        </div>
-      </div>
-    `).join('');
-  }
-}
-
-function renderActivities() {
-  const container = document.getElementById('activity-list');
-  if (!container) return;
-
-  if (myActivities.length === 0) {
-    container.innerHTML = `<div class="empty-state"><i>📁</i><p>No hay actividades creadas aún</p></div>`;
+window.joinByCodeFull = function() {
+  var input = document.getElementById('join-code-full');
+  var code = input ? input.value.trim() : '';
+  if (!code) {
+    document.getElementById('join-error').classList.remove('hidden');
+    document.getElementById('join-error-text').textContent = 'Ingresa un código válido';
     return;
   }
+  document.getElementById('join-error').classList.add('hidden');
+  alert('Buscando evaluación con código: ' + code + '\n\nEsta función se conectará al sistema de evaluaciones en vivo.');
+};
 
-  container.innerHTML = myActivities.map(a => `
-    <div class="activity-row">
-      <div class="ar-icon">${a.icon}</div>
-      <div class="ar-info">
-        <h4>${a.name}</h4>
-        <div class="ar-meta">
-          <span class="badge-type" style="background:#DCFCE7;color:#16A34A">✓</span>
-          <span>${a.questions}</span>
-          <span>•</span>
-          <span>${a.subject}</span>
-          <span>•</span>
-          <span>${a.grade}</span>
-        </div>
-      </div>
-      <span class="ar-time">${a.time} hace</span>
-    </div>
-  `).join('');
-}
+// ═══ LOGOUT ═══
 
-function renderReports() {
-  const container = document.getElementById('report-list');
-  if (!container) return;
-
-  container.innerHTML = reportData.map(r => {
-    const circumference = 2 * Math.PI * 12;
-    const offset = circumference - (r.pct / 100) * circumference;
-    return `
-    <div class="report-item">
-      <div class="ri-progress">
-        <div class="progress-ring">
-          <svg viewBox="0 0 32 32">
-            <circle class="bg" cx="16" cy="16" r="12" />
-            <circle cx="16" cy="16" r="12" stroke="${r.color}" stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" />
-          </svg>
-          <span class="pct" style="color:${r.color}">${r.pct}%</span>
-        </div>
-      </div>
-      <div class="ri-info">
-        <h4>${r.name}</h4>
-        <div class="ri-meta">
-          <span class="badge-assess">✓ ${r.type}</span>
-          <span>•</span>
-          <span>${r.mode}</span>
-        </div>
-      </div>
-      <span class="ri-date">${r.date}</span>
-      <div class="ri-menu">⋮</div>
-    </div>
-  `;
-  }).join('');
-}
-
-function renderSearchResults() {
-  const container = document.getElementById('search-results');
-  if (!container) return;
-
-  const emojis = ['📝', '📊', '🎯', '✏️'];
-  container.innerHTML = searchResults.map((r, i) => `
-    <div class="search-result-card">
-      <div class="src-thumb">
-        <span style="font-size:28px">${emojis[i % emojis.length]}</span>
-      </div>
-      <div class="src-info">
-        <h4>${r.name}</h4>
-        <div class="src-meta">${r.grade} • ${r.questions} Preguntas</div>
-      </div>
-    </div>
-  `).join('');
-}
-
-// --- SEARCH ---
-function handleSearch(e) {
-  if (e.key === 'Enter' || e.type === 'click') {
-    const input = document.getElementById('main-search-input');
-    const val = input ? input.value.trim() : '';
-    if (val) {
-      document.getElementById('search-query-display').textContent = val;
-      navigateTo('buscar');
-    }
+async function handleLogout() {
+  try {
+    await getSupabase().auth.signOut();
+  } catch (e) {
+    console.error('Logout error:', e);
   }
+  currentUser = null;
+  isAdmin = false;
+  showLogin();
 }
 
-function handleGlobalSearch(e) {
-  if (e.key === 'Enter') {
-    const val = e.target.value.trim();
-    if (val) {
-      document.getElementById('main-search-input') && (document.getElementById('main-search-input').value = val);
-      document.getElementById('search-query-display').textContent = val;
-      navigateTo('buscar');
-    }
-  }
-}
+// ═══ HELPERS ═══
 
-// --- BIBLIOTECA SUB-NAV ---
-function switchBiblioTab(tab) {
-  document.querySelectorAll('.biblio-sidebar .bsb-item').forEach(i => i.classList.remove('active'));
-  const el = document.querySelector(`.bsb-item[data-btab="${tab}"]`);
-  if (el) el.classList.add('active');
-}
-
-// --- SEARCH TABS ---
-function switchSearchTab(tab) {
-  document.querySelectorAll('.search-tab').forEach(t => t.classList.remove('active'));
-  const el = document.querySelector(`.search-tab[data-stab="${tab}"]`);
-  if (el) el.classList.add('active');
-}
-
-// --- GREETING ---
 function getGreeting() {
-  const h = new Date().getHours();
+  var h = new Date().getHours();
   if (h < 12) return 'Buenos días';
   if (h < 18) return 'Buenas tardes';
   return 'Buenas noches';
 }
 
-// --- INIT ---
-document.addEventListener('DOMContentLoaded', () => {
-  // Set greeting
-  const greetEl = document.getElementById('greeting-text');
-  if (greetEl) greetEl.textContent = `${getGreeting()}, ruben 👋 Comencemos.`;
+// ═══ INIT ═══
 
-  // Render content
-  renderResourceCards();
-  renderActivities();
-  renderReports();
-  renderSearchResults();
+document.addEventListener('DOMContentLoaded', function() {
+  // Auth
+  initAuth();
 
-  // Event listeners
+  // Hamburger
   document.getElementById('hamburger-btn').addEventListener('click', openSidebar);
   document.getElementById('sidebar-overlay').addEventListener('click', closeSidebar);
-
-  // Bottom nav
-  document.querySelectorAll('.bnav-item').forEach(btn => {
-    btn.addEventListener('click', () => navigateTo(btn.dataset.page));
-  });
+  var closeBtn = document.getElementById('sidebar-close-btn');
+  if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
 
   // Sidebar nav
-  document.querySelectorAll('.sidebar .nav-item').forEach(item => {
-    item.addEventListener('click', () => navigateTo(item.dataset.page));
+  document.querySelectorAll('.sidebar-nav .nav-item').forEach(function(item) {
+    if (item.dataset.page) {
+      item.addEventListener('click', function() { navigateTo(item.dataset.page); });
+    }
   });
 
-  // Hero tabs
-  document.querySelectorAll('.hero-action').forEach(action => {
-    action.addEventListener('click', () => switchHeroTab(action.dataset.tab));
+  // Bottom nav
+  document.querySelectorAll('.bnav-item').forEach(function(btn) {
+    if (btn.dataset.page) {
+      btn.addEventListener('click', function() { navigateTo(btn.dataset.page); });
+    }
   });
 
-  // Search
-  const mainSearch = document.getElementById('main-search-input');
-  if (mainSearch) mainSearch.addEventListener('keydown', handleSearch);
-  const searchBtn = document.getElementById('search-submit-btn');
-  if (searchBtn) searchBtn.addEventListener('click', handleSearch);
-  const globalSearch = document.getElementById('global-search-input');
-  if (globalSearch) globalSearch.addEventListener('keydown', handleGlobalSearch);
-
-  // Biblioteca sub-nav
-  document.querySelectorAll('.bsb-item').forEach(item => {
-    item.addEventListener('click', () => switchBiblioTab(item.dataset.btab));
-  });
-
-  // Search tabs
-  document.querySelectorAll('.search-tab').forEach(tab => {
-    tab.addEventListener('click', () => switchSearchTab(tab.dataset.stab));
-  });
-
-  // Navigate to explorar
-  navigateTo('explorar');
+  // Logout
+  document.getElementById('logout-btn').addEventListener('click', handleLogout);
 });

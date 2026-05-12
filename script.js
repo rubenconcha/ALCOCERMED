@@ -269,7 +269,7 @@ const tips = [
 // NAVEGACIÓN ENTRE PANTALLAS
 // ──────────────────────────────────────────────
 function showScreen(screenId) {
-    const screens = ['home-screen', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'wayground-screen', 'wayground-editor-screen'];
+    const screens = ['home-screen', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen'];
     screens.forEach(function (id) {
         const el = document.getElementById(id);
         if (el) {
