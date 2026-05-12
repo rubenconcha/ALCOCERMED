@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/propedeutico",
+      "destination": "/ventas.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
