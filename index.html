@@ -257,7 +257,17 @@
                     </a>
                 </li>
 
-            </ul>
+            
+                    <li class="nav-item nav-item-simple" id="nav-wayground">
+                        <a href="#" onclick="openWayground(); return false;" data-tooltip="wayground">
+                            <span class="nav-icon" style="background: linear-gradient(135deg, #6C2EB9, #8B5CF6); color: #fff;">
+                                <i class="fas fa-gamepad"></i>
+                            </span>
+                            <span class="nav-label">wayground</span>
+                            <span class="nav-badge badge-new">NUEVO</span>
+                        </a>
+                    </li>
+    </ul>
         </div>
 
         <!-- ══ JUEGOS ══ -->
@@ -510,6 +520,15 @@
                         <p>los temas que siempre caen · mapas mentales esenciales</p>
                     </div>
                     <i class="fas fa-arrow-right hc-arrow"></i>
+                </div>
+
+                <div class="home-card" style="background: linear-gradient(135deg, #F0EAFF, #E8DEFF); border: 1px solid #C4A1FF;" onclick="openWayground()">
+                    <div class="hc-icon" style="color: #6C2EB9;"><i class="fas fa-gamepad"></i></div>
+                    <div class="hc-body">
+                        <h3 style="color: #6C2EB9;">wayground</h3>
+                        <p style="color: #6C2EB9;">creador de evaluaciones y recursos interactivos</p>
+                    </div>
+                    <i class="fas fa-arrow-right hc-arrow" style="color: #6C2EB9;"></i>
                 </div>
 
             </div>
@@ -1371,12 +1390,644 @@
                     <p class="mm-lb-desc" id="mm-lb-desc"></p>
                     <a id="mm-lb-download" href="" target="_blank" class="mm-lb-download">
                         <i class="fas fa-download"></i> descargar imagen
+                                stroke-linecap="round" />
+                            <line x1="75" y1="10" x2="75" y2="30" stroke="currentColor" stroke-width="4"
+                                stroke-linecap="round" />
+                            <!-- Figura (oculta por clases) -->
+                            <circle class="hm-part hm-head" cx="75" cy="42" r="12" fill="none" stroke="currentColor"
+                                stroke-width="3" />
+                            <line class="hm-part hm-body" x1="75" y1="54" x2="75" y2="100" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" />
+                            <line class="hm-part hm-larm" x1="75" y1="65" x2="50" y2="85" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" />
+                            <line class="hm-part hm-rarm" x1="75" y1="65" x2="100" y2="85" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" />
+                            <line class="hm-part hm-lleg" x1="75" y1="100" x2="52" y2="128" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" />
+                            <line class="hm-part hm-rleg" x1="75" y1="100" x2="98" y2="128" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="hangman-info">
+                        <div class="hm-category-tag" id="hm-category">biología celular</div>
+                        <div class="hm-hint" id="hm-hint">pista: ...</div>
+                        <div class="hm-word" id="hm-word"></div>
+                        <div class="hm-errors">errores: <span id="hm-errors">0</span> / 6</div>
+                    </div>
+                </div>
+                <div class="hm-keyboard" id="hm-keyboard"></div>
+                <div id="hm-result" class="hm-result hidden">
+                    <p id="hm-result-text"></p>
+                    <button class="btn-primary" onclick="startHangman()" style="margin-top:14px;">otra palabra</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ VIDEOCLASES ══ -->
+        <section id="videoclases-screen" class="vc-section hidden">
+
+            <div class="vc-header">
+                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <div>
+                    <h2 class="vc-title"><i class="fas fa-play-circle"></i> videoclases</h2>
+                    <p class="vc-subtitle">clases grabadas por materia · selecciona y repasa</p>
+                </div>
+            </div>
+
+            <div class="vc-filters">
+                <div class="vc-filter-group">
+                    <label class="banco-select-label"><i class="fas fa-book-medical"></i> materia</label>
+                    <div class="banco-custom-select">
+                        <button class="banco-select-btn" id="vc-materia-btn" onclick="toggleVcDropdown()">
+                            <span id="vc-materia-text">todas las materias</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="banco-dropdown hidden" id="vc-materia-dropdown"></div>
+                    </div>
+                </div>
+                <div class="vc-search-wrap">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="vc-search-input" class="vc-search-input" placeholder="buscar videoclase..."
+                        oninput="filterVideoclases()">
+                </div>
+            </div>
+
+            <div id="vc-loading" class="vc-state-wrap">
+                <div class="vc-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+                <p>cargando videoclases...</p>
+            </div>
+            <div id="vc-grid" class="vc-grid hidden"></div>
+            <div id="vc-empty" class="vc-state-wrap hidden">
+                <i class="fas fa-video-slash"></i>
+                <h3>sin videoclases todavía</h3>
+                <p>pronto se publicarán clases grabadas.<br>vuelve más adelante.</p>
+            </div>
+
+        </section>
+
+        <!-- Modal reproductor de video -->
+        <div id="vc-modal" class="vc-modal hidden" onclick="closeVcModal(event)">
+            <div class="vc-modal-inner">
+                <button class="vc-modal-close" onclick="closeVcModal()"><i class="fas fa-times"></i></button>
+                <div class="vc-modal-meta">
+                    <span class="vc-modal-materia" id="vc-modal-materia"></span>
+                    <h3 class="vc-modal-title" id="vc-modal-title"></h3>
+                    <p class="vc-modal-desc" id="vc-modal-desc"></p>
+                </div>
+                <div class="vc-player-wrap">
+                    <iframe id="vc-iframe" class="vc-iframe" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══ INTOCABLES ══ -->
+        <section id="intocables-screen" class="intoc-section hidden">
+
+            <div class="intoc-header">
+                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <div>
+                    <h2 class="intoc-title"><i class="fas fa-fire-alt"></i> intocables</h2>
+                    <p class="intoc-subtitle">los conceptos que siempre caen en el examen de admisión</p>
+                </div>
+            </div>
+
+            <div class="intoc-hero">
+                <div class="intoc-hero-icon">🔥</div>
+                <div class="intoc-hero-text">
+                    <h3>mátenlos de memoria</h3>
+                    <p>estos temas aparecen examen tras examen. no pueden fallar.</p>
+                </div>
+                <div class="intoc-hero-stats">
+                    <div class="intoc-stat">
+                        <span id="intoc-stat-mapas">0</span>
+                        <label>mapas</label>
+                    </div>
+                    <div class="intoc-stat">
+                        <span id="intoc-stat-materias">0</span>
+                        <label>materias</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="intoc-tabs">
+                <button class="intoc-tab intoc-tab-active" id="tab-mapas" onclick="switchIntocTab('mapas')">
+                    <i class="fas fa-project-diagram"></i> mapas mentales
+                </button>
+                <button class="intoc-tab" id="tab-conceptos" onclick="switchIntocTab('conceptos')">
+                    <i class="fas fa-lightbulb"></i> conceptos clave
+                    <span class="intoc-tab-badge">pronto</span>
+                </button>
+                <button class="intoc-tab" id="tab-formulas" onclick="switchIntocTab('formulas')">
+                    <i class="fas fa-square-root-alt"></i> fórmulas
+                    <span class="intoc-tab-badge">pronto</span>
+                </button>
+            </div>
+
+            <!-- Panel Mapas Mentales -->
+            <div id="intoc-panel-mapas">
+                <div class="intoc-filter-row">
+                    <div class="banco-custom-select" style="max-width:260px;">
+                        <button class="banco-select-btn" id="mm-materia-btn" onclick="toggleMmDropdown()">
+                            <span id="mm-materia-text">todas las materias</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="banco-dropdown hidden" id="mm-materia-dropdown"></div>
+                    </div>
+                    <div class="vc-search-wrap" style="flex:1;max-width:320px;">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="mm-search-input" class="vc-search-input"
+                            placeholder="buscar mapa mental..." oninput="filterMapas()">
+                    </div>
+                </div>
+                <div id="mm-loading" class="vc-state-wrap">
+                    <div class="vc-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+                    <p>cargando mapas mentales...</p>
+                </div>
+                <div id="mm-grid" class="mm-grid hidden"></div>
+                <div id="mm-empty" class="vc-state-wrap hidden">
+                    <i class="fas fa-project-diagram" style="font-size:2.5rem;color:#d1d5db;"></i>
+                    <h3>sin mapas mentales todavía</h3>
+                    <p>los mapas mentales se irán publicando poco a poco.<br>vuelve pronto.</p>
+                </div>
+            </div>
+
+            <!-- Panel Conceptos (futuro) -->
+            <div id="intoc-panel-conceptos" class="hidden">
+                <div class="vc-state-wrap" style="padding:60px 0;">
+                    <i class="fas fa-lightbulb" style="font-size:2.5rem;color:#f59e0b;"></i>
+                    <h3>conceptos clave</h3>
+                    <p>próximamente: definiciones y conceptos fundamentales organizados por materia.</p>
+                </div>
+            </div>
+
+            <!-- Panel Fórmulas (futuro) -->
+            <div id="intoc-panel-formulas" class="hidden">
+                <div class="vc-state-wrap" style="padding:60px 0;">
+                    <i class="fas fa-square-root-alt" style="font-size:2.5rem;color:#7c3aed;"></i>
+                    <h3>fórmulas</h3>
+                    <p>próximamente: las fórmulas y ecuaciones que debes dominar.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Lightbox mapa mental -->
+        <div id="mm-lightbox" class="mm-lightbox hidden" onclick="closeMmLightbox(event)">
+            <button class="mm-lb-close" onclick="closeMmLightbox()"><i class="fas fa-times"></i></button>
+            <div class="mm-lb-inner">
+                <img id="mm-lb-img" src="" alt="Mapa mental" class="mm-lb-img">
+                <div class="mm-lb-info">
+                    <span class="mm-lb-materia" id="mm-lb-materia"></span>
+                    <h3 class="mm-lb-title" id="mm-lb-title"></h3>
+                    <p class="mm-lb-desc" id="mm-lb-desc"></p>
+                    <a id="mm-lb-download" href="" target="_blank" class="mm-lb-download">
+                        <i class="fas fa-download"></i> descargar imagen
                     </a>
                 </div>
             </div>
         </div>
 
-    </main>
+    
+<!-- ================= WAYGROUND SCREEN ================= -->
+<section id="wayground-screen" class="hidden wg-wrapper" style="position: relative; height: 100vh; overflow-y: auto; overflow-x: hidden; contain: paint;">
+
+  <!-- TOPBAR -->
+  <header class="wg-topbar">
+    <button class="wg-hamburger" id="wg-hamburger-btn">☰</button>
+    <div class="search-global">
+      <span>🔍</span>
+      <input type="text" id="wg-global-search-input" placeholder="Buscar en la biblioteca de Wayground">
+    </div>
+    <button class="code-btn" onclick="alert('Introduce un código de juego')">
+      <span>⊞</span> Introducir código
+    </button>
+  </header>
+
+  <!-- SIDEBAR OVERLAY -->
+  <div class="wg-wg-sidebar-overlay" id="wg-sidebar-overlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="wg-sidebar" id="wg-sidebar">
+    <div class="logo-area">
+      <span class="logo-icon">🎮</span>
+      <div>
+        <span class="logo-text">WAYGROUND</span>
+        <span class="badge">STUDENT</span>
+        <small>formerly Quizizz</small>
+      </div>
+    </div>
+    <button class="create-btn" onclick="navigateTo('crear')">Crear</button>
+    <nav>
+      <div class="nav-item active" data-page="explorar">
+        <span>🏠</span> Explorar
+      </div>
+      <div class="nav-item" data-page="biblioteca">
+        <span>📄</span> Biblioteca
+      </div>
+      <div class="nav-item" data-page="informes">
+        <span>📊</span> Informes
+      </div>
+      <div class="nav-item" onclick="alert('Sesión cerrada')">
+        <span>🚪</span> Cerrar sesión
+      </div>
+    </nav>
+    <div class="wg-sidebar-footer">
+      <div class="upgrade-bar">
+        <p>1/20 actividades creadas</p>
+        <div class="bar-track"><div class="bar-fill"></div></div>
+      </div>
+      <button class="upgrade-btn">🚀 Actualizar</button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="wg-main-content">
+
+    <!-- ===== EXPLORAR ===== -->
+    <section class="wg-page active" id="wg-page-explorar">
+      <div class="hero-section">
+        <p class="hero-greeting" id="greeting-text">Buenas noches, ruben 👋 Comencemos.</p>
+        <div class="hero-cards">
+          <div class="hero-action" data-tab="crear">
+            <div class="icon-circle">✏️</div>
+            <span>Crear</span>
+            <small>un recurso</small>
+          </div>
+          <div class="hero-action active" data-tab="buscar">
+            <div class="icon-circle">🔍</div>
+            <span>Buscar</span>
+            <small>recursos</small>
+          </div>
+          <div class="hero-action" data-tab="subir">
+            <div class="icon-circle">📤</div>
+            <span>Subir</span>
+            <small>y mejora tu contenido</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Tab: Buscar (default) -->
+      <div class="hero-tab-content active" id="hero-content-buscar">
+        <div class="search-section">
+          <div class="search-bar">
+            <span>🔍</span>
+            <input type="text" id="wg-main-search-input" placeholder="Buscar cualquier tema">
+            <button class="search-submit" id="search-submit-btn">🔍</button>
+          </div>
+        </div>
+        <div class="explore-section">
+          <h3 class="explore-title">Explorar recursos para</h3>
+          <div class="filter-row">
+            <div class="filter-chip">Matemáticas ▾</div>
+            <div class="filter-chip">Grado 6 ▾</div>
+          </div>
+          <div class="section-header">
+            <h3>Curriculum-aligned mathematics resources</h3>
+            <span class="see-all">Ver todo →</span>
+          </div>
+          <div class="resource-grid" id="resource-grid-1"></div>
+          <div class="section-header">
+            <h3>Standards-aligned mathematics resources</h3>
+            <span class="see-all">Ver todo →</span>
+          </div>
+          <div class="resource-grid" id="resource-grid-2"></div>
+        </div>
+      </div>
+
+      <!-- Hero Tab: Crear -->
+      <div class="hero-tab-content" id="hero-content-crear">
+        <div class="crear-wg-page">
+          <div class="crear-hero">
+            <h2>Crea 5 tipos diferentes de recursos interactivos</h2>
+            <p>Cree evaluaciones, presentaciones, flashcards, actividades de video y preguntas basadas en pasajes.</p>
+          </div>
+          <div class="crear-options">
+            <div class="crear-option" onclick="window.location.href='editor.html'"><div class="co-icon eval">✓</div><div class="co-text"><h4>Evaluación</h4><p>Preguntas rápidas e interactivas</p></div></div>
+            <div class="crear-option"><div class="co-icon pres">📋</div><div class="co-text"><h4>Presentación</h4><p>Diapositivas con preguntas y pizarra</p></div></div>
+            <div class="crear-option"><div class="co-icon video">🎬</div><div class="co-text"><h4>Vídeo</h4><p>Preguntas en puntos clave del vídeo</p></div></div>
+            <div class="crear-option"><div class="co-icon lect">📖</div><div class="co-text"><h4>Lectura</h4><p>Preguntas basadas en un pasaje</p></div></div>
+            <div class="crear-option"><div class="co-icon flash">🗂️</div><div class="co-text"><h4>Fichas de estudio</h4><p>Preguntas al frente, respuestas en el reverso</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Tab: Subir -->
+      <div class="hero-tab-content" id="hero-content-subir">
+        <div class="crear-wg-page">
+          <div class="crear-hero">
+            <h2>Sube tu contenido</h2>
+            <p>Importa documentos, presentaciones y otros materiales para mejorarlos con herramientas interactivas.</p>
+          </div>
+          <div class="crear-options">
+            <div class="crear-option"><div class="co-icon eval">📄</div><div class="co-text"><h4>Documento</h4><p>Sube PDF, Word o texto</p></div></div>
+            <div class="crear-option"><div class="co-icon pres">📊</div><div class="co-text"><h4>Presentación</h4><p>Sube PowerPoint o Google Slides</p></div></div>
+            <div class="crear-option"><div class="co-icon video">🔗</div><div class="co-text"><h4>Enlace de video</h4><p>Agrega un enlace de YouTube u otro</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BIBLIOTECA ===== -->
+    <section class="wg-page" id="wg-page-biblioteca">
+      <div class="biblioteca-layout">
+        <div class="biblio-wg-sidebar">
+          <h2>Biblioteca</h2>
+          <div class="bsb-item active" data-btab="creado">
+            <span><span>✏️</span> Creado</span>
+            <span class="count">1 / 20</span>
+          </div>
+          <div class="bsb-item" data-btab="usado">
+            <span><span>🕐</span> Usado previamente</span>
+          </div>
+          <div class="bsb-item" data-btab="compartido">
+            <span><span>🔄</span> Compartido por mí</span>
+          </div>
+          <div class="bsb-item" data-btab="todas">
+            <span><span>📋</span> Todas las actividades</span>
+          </div>
+          <div class="bsb-divider"></div>
+          <div class="bsb-item" data-btab="colecciones">
+            <span><span>📁</span> Colecciones</span>
+            <span class="count">0</span>
+          </div>
+          <div class="bsb-item" data-btab="equipos">
+            <span><span>👥</span> Equipos</span>
+            <span class="count">0</span>
+          </div>
+        </div>
+        <div class="biblio-main">
+          <div class="bm-search">
+            <input type="text" placeholder="Buscar por nombre de actividad">
+          </div>
+          <h2>Creado por mí</h2>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;flex-wrap:wrap">
+            <div class="tabs-row" style="margin-bottom:0">
+              <span class="tab-pill active">Creado (1/20)</span>
+              <span class="tab-pill">Borrador (0)</span>
+              <span class="tab-pill">Archivado (0)</span>
+            </div>
+            <div class="type-filter" style="margin-left:auto">Tipo de actividad ▾</div>
+          </div>
+          <div class="activity-table">
+            <div class="at-header">
+              <span>Detalles de la actividad ⇅</span>
+              <span>Tiempo de creación ▾</span>
+            </div>
+            <div id="activity-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CREAR ===== -->
+    <section class="wg-page" id="wg-page-crear">
+      <div class="crear-wg-page">
+        <div class="crear-hero">
+          <h2>Crea 5 tipos diferentes de recursos interactivos</h2>
+          <p>Cree evaluaciones, presentaciones, flashcards, actividades de video y preguntas basadas en pasajes con nuestro completo kit de herramientas de creación.</p>
+        </div>
+        <div class="crear-options">
+          <div class="crear-option" onclick="window.location.href='editor.html'"><div class="co-icon eval">✓</div><div class="co-text"><h4>Evaluación</h4><p>Preguntas rápidas e interactivas</p></div></div>
+          <div class="crear-option"><div class="co-icon pres">📋</div><div class="co-text"><h4>Presentación</h4><p>Diapositivas con preguntas y pizarra</p></div></div>
+          <div class="crear-option"><div class="co-icon video">🎬</div><div class="co-text"><h4>Vídeo</h4><p>Preguntas en puntos clave del vídeo</p></div></div>
+          <div class="crear-option"><div class="co-icon lect">📖</div><div class="co-text"><h4>Lectura</h4><p>Preguntas basadas en un pasaje</p></div></div>
+          <div class="crear-option"><div class="co-icon flash">🗂️</div><div class="co-text"><h4>Fichas de estudio</h4><p>Preguntas al frente, respuestas en el reverso</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INFORMES ===== -->
+    <section class="wg-page" id="wg-page-informes">
+      <div class="informes-wg-page">
+        <div class="informes-search">
+          <input type="text" placeholder="Buscar por nombre del informe">
+        </div>
+        <div class="filters-row">
+          <div class="filter-btn">Todos (6) ▾</div>
+          <div class="filter-btn">Tipos de recursos ▾</div>
+          <div class="filter-btn">Todos los informes ▾</div>
+          <div class="filter-btn">Todas las clases ▾</div>
+          <div class="filter-btn">Todo el tiempo ▾</div>
+        </div>
+        <div class="report-list" id="report-list"></div>
+      </div>
+    </section>
+
+    <!-- ===== BUSCAR ===== -->
+    <section class="wg-page" id="wg-page-buscar">
+      <div class="search-wg-page">
+        <div class="sp-input">
+          <input type="text" id="search-query-display" placeholder="Buscar..." value="matem">
+        </div>
+        <div class="search-tabs">
+          <div class="search-tab active" data-stab="best">📌 Mejores resultados</div>
+          <div class="search-tab" data-stab="eval">✓ Evaluaciones</div>
+          <div class="search-tab" data-stab="pres">📋 Presentaciones</div>
+          <div class="search-tab" data-stab="vid">🎬 Videos interactivos</div>
+          <div class="search-tab" data-stab="lect">📖 Lecturas</div>
+          <div class="search-tab" data-stab="flash">🗂️ Fichas de estudio</div>
+        </div>
+        <div class="search-filters">
+          <div class="filter-btn">Calificaciones ▾</div>
+          <div class="filter-btn">Duración de la actividad ▾</div>
+          <div class="filter-btn">⚙️</div>
+        </div>
+        <div class="search-result-sections">
+          <h3>Evaluaciones <span class="see-all">Mostrar todo 171.9K →</span></h3>
+          <div class="search-results-list" id="search-results"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BOTTOM NAV -->
+  <nav class="wg-bottom-nav">
+    <div class="bnav-item active" data-page="explorar">
+      <span>🔍</span> Explorar
+    </div>
+    <div class="bnav-item" data-page="biblioteca">
+      <span>📄</span> Biblioteca
+    </div>
+    <div class="bnav-item create-nav" data-page="crear">
+      <span>➕</span> Crear
+    </div>
+    <div class="bnav-item" data-page="informes">
+      <span>📊</span> Informes
+    </div>
+  </nav>
+
+  <!-- HELP FAB -->
+  <button class="help-fab" onclick="alert('Centro de ayuda')">?</button>
+
+  </section>
+
+<!-- ================= WAYGROUND EDITOR SCREEN ================= -->
+<section id="wayground-editor-screen" class="hidden wg-wrapper" style="position: relative; height: 100vh; overflow-y: auto; overflow-x: hidden; background: #F0F4FF; contain: paint;">
+
+  <!-- EDITOR TOPBAR -->
+  <header class="wg-editor-topbar">
+    <button class="back-btn" onclick="goBackFromEditor()">←</button>
+    <input class="quiz-title" id="quiz-title-input" value="Cuestionario sin título" type="text">
+    <button class="settings-btn" onclick="openSettings()">⚙️ Ajustes</button>
+    <button class="publish-btn" onclick="publishQuiz()">📋 Publicar</button>
+  </header>
+
+  <!-- EDITOR CONTAINER -->
+  <div class="wg-editor-container">
+
+    <!-- Question List Sidebar -->
+    <div class="question-list-sidebar" id="question-thumbs"></div>
+
+    <!-- QUESTION TYPES PANEL -->
+    <div id="qtypes-panel" class="qtypes-panel">
+      <div class="qtypes-search">
+        <span>🔍</span>
+        <input type="text" placeholder="Busque cuestionarios sobre cualquier tema...">
+        <button class="qs-btn">Buscar cuestionarios →</button>
+      </div>
+      <h2 style="font-size:16px;font-weight:700;margin-bottom:4px">Tipos de preguntas</h2>
+      <p style="font-size:12px;color:#8e90a6;margin-bottom:20px">🖱️ Pase el cursor para obtener una vista previa</p>
+      <div id="qtypes-container"></div>
+    </div>
+
+    <!-- QUESTION EDITOR -->
+    <div class="question-editor" id="question-editor">
+
+      <!-- Format Toolbar -->
+      <div class="format-toolbar">
+        <div style="display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:8px;border:1px solid #e4e6ef;margin-right:12px;cursor:pointer">
+          <span style="font-size:12px;color:#2E7D32">☑️</span>
+          <span id="type-dropdown-label" style="font-size:12px;font-weight:600;color:#333">Opción múltiple</span>
+          <span style="font-size:10px;color:#999">▾</span>
+        </div>
+        <button class="fmt-btn" onclick="toggleFormat('bold')" title="Negrita"><b>B</b></button>
+        <button class="fmt-btn" onclick="toggleFormat('italic')" title="Cursiva"><i>I</i></button>
+        <button class="fmt-btn" onclick="toggleFormat('underline')" title="Subrayado"><u>U</u></button>
+        <button class="fmt-btn" onclick="toggleFormat('strikethrough')" title="Tachado"><s>S</s></button>
+        <div class="fmt-sep"></div>
+        <button class="fmt-btn" title="Superíndice">x²</button>
+        <button class="fmt-btn" title="Subíndice">x₂</button>
+        <button class="fmt-btn" title="Símbolo">Σ</button>
+      </div>
+
+      <!-- Question Input Area -->
+      <div class="question-area">
+        <div class="media-btn" title="Agregar imagen">📷</div>
+        <textarea class="q-input" id="q-text-input" placeholder="Escriba la pregunta aquí" rows="3"></textarea>
+      </div>
+
+      <!-- Answer Options -->
+      <div class="answer-options" id="answer-options"></div>
+
+      <!-- Add Option -->
+      <div class="add-option-btn" onclick="addOption()">+ Añadir otra opción</div>
+
+      <!-- Multiple Answers Toggle -->
+      <div class="multi-answer-row">
+        <span>Varias respuestas correctas:</span>
+        <div class="toggle-switch" id="multi-toggle" onclick="toggleMultipleAnswers()">
+          <div class="toggle-knob"></div>
+        </div>
+      </div>
+
+      <!-- Save Question Bar -->
+      <div class="save-question-bar">
+        <button class="save-question-btn" onclick="saveQuestion()">💾 Guardar pregunta</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETTINGS MODAL -->
+  <div class="settings-overlay" id="settings-overlay" onclick="if(event.target===this)closeSettings()">
+    <div class="settings-modal" style="position:relative">
+      <button class="sm-close" onclick="closeSettings()">✕</button>
+      <div class="sm-header">
+        <div class="sm-icon">⚙️</div>
+        <h2>Ajustes de examen</h2>
+      </div>
+
+      <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <label>Nombre</label>
+          <input class="sm-input" id="quiz-name-input" placeholder="Cuestionario sin título" maxlength="64">
+          <span style="float:right;font-size:11px;color:#8e90a6;margin-top:-12px">0/64</span>
+
+          <div class="sm-row" style="margin-top:20px">
+            <div>
+              <label>Asignatura</label>
+              <select class="sm-select">
+                <option>Otro</option>
+                <option>Matemáticas</option>
+                <option>Ciencias</option>
+                <option>Historia</option>
+                <option>Lenguaje</option>
+                <option>Inglés</option>
+              </select>
+            </div>
+            <div>
+              <label>Nivel</label>
+              <select class="sm-select">
+                <option>Seleccione el grado...</option>
+                <option>1er grado</option>
+                <option>2do grado</option>
+                <option>3er grado</option>
+                <option>Universidad</option>
+                <option>Profesional</option>
+              </select>
+            </div>
+          </div>
+
+          <label>Idioma</label>
+          <select class="sm-select" style="margin-bottom:16px">
+            <option>Español</option>
+            <option>Inglés</option>
+            <option>Portugués</option>
+            <option>Francés</option>
+          </select>
+
+          <label>Visibilidad</label>
+          <div class="visibility-group">
+            <div class="vis-option selected" onclick="selectVisibility(this)">
+              <div class="vis-radio"></div>
+              <div><h4>Públicamente visible</h4><p>Este recurso será visible públicamente en la biblioteca de evaluación.</p></div>
+            </div>
+            <div class="vis-option" onclick="selectVisibility(this)">
+              <div class="vis-radio"></div>
+              <div><h4>Restringido</h4><p>Este recurso será visible sólo para usted y las personas con quienes lo comparta.</p></div>
+            </div>
+            <div class="vis-option" onclick="selectVisibility(this)">
+              <div class="vis-radio"></div>
+              <div><h4>Todos en mi organización</h4><p>Este recurso será visible solo para los profesores de su organización.</p></div>
+            </div>
+          </div>
+
+          <label>Objetivo de enseñanza (opcional)</label>
+          <div class="goal-chips">
+            <span class="goal-chip" onclick="toggleGoalChip(this)">Enseñar</span>
+            <span class="goal-chip" onclick="toggleGoalChip(this)">Revisar</span>
+            <span class="goal-chip" onclick="toggleGoalChip(this)">Práctica</span>
+            <span class="goal-chip" onclick="toggleGoalChip(this)">Otro</span>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;padding-top:24px">
+          <div class="cover-upload" onclick="alert('Subir imagen de portada')">
+            <span style="font-size:24px">+</span>
+            <span>Agregar imagen de portada</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="sm-cancel-btn" onclick="closeSettings()">Cancelar</button>
+      <button class="sm-save-btn" onclick="saveSettings()">💾 Guardar</button>
+    </div>
+  </div>
+
+  \n</section>\n\n    </main>
 
     <script src="config.js"></script>
     <script src="script.js"></script>
