@@ -120,7 +120,13 @@ function enterApp() {
         });
     }
 
-    navigateTo('inicio');
+    // Verificar si hay una sesión de quiz pendiente (por si recargó la página)
+    var pendingCode = sessionStorage.getItem('alcocer_quiz_code');
+    if (pendingCode && !isAdmin) {
+        searchAndStartQuiz(pendingCode);
+    } else {
+        navigateTo('inicio');
+    }
 }
 
 // ═══ LOGIN HANDLER ═══
@@ -351,6 +357,9 @@ function searchAndStartQuiz(code) {
                     if (pr.error) console.warn('No se pudo registrar participante:', pr.error.message);
                 });
             }
+
+            // Guardar código en sessionStorage para persistir al recargar
+            sessionStorage.setItem('alcocer_quiz_code', code);
 
             // Mostrar la página de quiz
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Evaluación';
@@ -607,6 +616,8 @@ window.quizNext = quizNext;
 
 function showQuizResults() {
     if (quizTimerInterval) clearInterval(quizTimerInterval);
+    // Limpiar sesión pendiente — el quiz terminó
+    sessionStorage.removeItem('alcocer_quiz_code');
     var correctas = 0;
     for (var i = 0; i < quizAnswers.length; i++) { if (quizAnswers[i].correcta) correctas++; }
     var total = quizData.preguntas.length;
