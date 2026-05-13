@@ -655,19 +655,132 @@ function showQuizResults() {
         breakdownEl.innerHTML = bhtml;
     }
 
-    // Guardar en Supabase
+    // Guardar en Supabase y cargar leaderboard
     if (currentUser) {
         var client = getSupabase();
-        client.from('evaluacion_resultados').insert({
+        client.from('evaluacion_resultados').upsert({
             evaluacion_id: quizData.evaluacion.id,
             user_id: currentUser.id,
             puntaje: correctas,
             total: total,
             porcentaje: pct,
             respuestas: quizAnswers
-        }).then(function(r) {
+        }, { onConflict: 'evaluacion_id,user_id', ignoreDuplicates: false }).then(function(r) {
             if (r.error) console.warn('No se pudo guardar resultado:', r.error.message);
+            // Cargar leaderboard
+            loadLeaderboard(quizData.evaluacion.id);
         });
+    }
+}
+
+function loadLeaderboard(evalId) {
+    var client = getSupabase();
+    client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje').eq('evaluacion_id', evalId).order('porcentaje', { ascending: false }).order('puntaje', { ascending: false }).then(function(r) {
+        if (r.error || !r.data || r.data.length === 0) return;
+
+        // Get participant names
+        var userIds = [];
+        for (var i = 0; i < r.data.length; i++) {
+            if (userIds.indexOf(r.data[i].user_id) === -1) userIds.push(r.data[i].user_id);
+        }
+
+        client.from('evaluacion_participantes').select('user_id,nombre').eq('evaluacion_id', evalId).then(function(pRes) {
+            var nameMap = {};
+            if (pRes.data) {
+                for (var n = 0; n < pRes.data.length; n++) {
+                    nameMap[pRes.data[n].user_id] = pRes.data[n].nombre;
+                }
+            }
+
+            var results = r.data;
+            // Build leaderboard entries
+            var entries = [];
+            for (var k = 0; k < results.length; k++) {
+                entries.push({
+                    user_id: results[k].user_id,
+                    nombre: nameMap[results[k].user_id] || 'Estudiante',
+                    puntaje: results[k].puntaje,
+                    total: results[k].total,
+                    porcentaje: results[k].porcentaje
+                });
+            }
+
+            renderPodium(entries);
+        });
+    });
+}
+
+function renderPodium(entries) {
+    var podiumEl = document.getElementById('quiz-podium');
+    if (!podiumEl || entries.length === 0) return;
+    podiumEl.style.display = 'block';
+
+    var medals = ['🥇', '🥈', '🥉'];
+    var colors = ['#FFD700', '#C0C0C0', '#CD7F32'];
+    var heights = [140, 110, 90];
+    var bgGradients = [
+        'linear-gradient(180deg,#FFD700,#FFA000)',
+        'linear-gradient(180deg,#E0E0E0,#9E9E9E)',
+        'linear-gradient(180deg,#CD7F32,#8B5E3C)'
+    ];
+
+    // Podium pillars (order: 2nd, 1st, 3rd)
+    var pillarOrder = [1, 0, 2];
+    var pillarsHtml = '';
+
+    for (var p = 0; p < 3; p++) {
+        var idx = pillarOrder[p];
+        if (idx >= entries.length) {
+            pillarsHtml += '<div style="flex:1;max-width:120px"></div>';
+            continue;
+        }
+        var e = entries[idx];
+        var h = heights[idx];
+        var initial = e.nombre.charAt(0).toUpperCase();
+
+        pillarsHtml += '<div style="flex:1;max-width:120px;display:flex;flex-direction:column;align-items:center;animation:fadeInUp .5s ease ' + (p * 0.2) + 's both">';
+        // Avatar
+        pillarsHtml += '<div style="width:48px;height:48px;border-radius:50%;background:' + bgGradients[idx] + ';display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;color:#fff;margin-bottom:8px;box-shadow:0 4px 16px rgba(0,0,0,.3);border:3px solid ' + colors[idx] + '">' + initial + '</div>';
+        // Name
+        pillarsHtml += '<span style="font-size:11px;font-weight:700;color:#fff;margin-bottom:4px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block">' + e.nombre + '</span>';
+        // Score
+        pillarsHtml += '<span style="font-size:10px;color:rgba(255,255,255,.5);margin-bottom:6px">' + e.puntaje + '/' + e.total + ' (' + e.porcentaje + '%)</span>';
+        // Pillar
+        pillarsHtml += '<div style="width:100%;height:' + h + 'px;background:' + bgGradients[idx] + ';border-radius:12px 12px 0 0;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;box-shadow:0 -4px 20px rgba(0,0,0,.2)">';
+        pillarsHtml += '<span style="text-shadow:0 2px 8px rgba(0,0,0,.3)">' + medals[idx] + '</span>';
+        pillarsHtml += '</div>';
+        pillarsHtml += '</div>';
+    }
+
+    document.getElementById('podium-pillars').innerHTML = pillarsHtml;
+
+    // My rank
+    if (currentUser) {
+        var myRank = -1;
+        for (var m = 0; m < entries.length; m++) {
+            if (entries[m].user_id === currentUser.id) { myRank = m + 1; break; }
+        }
+        if (myRank > 0) {
+            var rankPill = document.getElementById('my-rank-pill');
+            var suffix = myRank === 1 ? 'er' : myRank === 2 ? 'do' : myRank === 3 ? 'er' : 'to';
+            rankPill.innerHTML = '🎯 Tu posición: <strong style="font-size:1.1rem;color:#fff;margin:0 4px">' + myRank + '°</strong> de ' + entries.length + ' estudiantes';
+            rankPill.style.display = 'block';
+        }
+    }
+
+    // Full list (beyond top 3)
+    if (entries.length > 3) {
+        var listHtml = '<div style="border-top:1px solid rgba(255,255,255,.1);padding-top:12px">';
+        for (var l = 3; l < entries.length; l++) {
+            var isMe = currentUser && entries[l].user_id === currentUser.id;
+            listHtml += '<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;' + (isMe ? 'background:rgba(233,30,99,.15);' : '') + 'margin-bottom:4px">';
+            listHtml += '<span style="font-weight:800;color:rgba(255,255,255,.4);font-size:14px;width:24px">' + (l + 1) + '</span>';
+            listHtml += '<span style="font-weight:600;flex:1;color:' + (isMe ? '#E91E63' : '#fff') + ';font-size:13px">' + entries[l].nombre + (isMe ? ' (tú)' : '') + '</span>';
+            listHtml += '<span style="font-size:12px;color:rgba(255,255,255,.5)">' + entries[l].porcentaje + '%</span>';
+            listHtml += '</div>';
+        }
+        listHtml += '</div>';
+        document.getElementById('podium-full-list').innerHTML = listHtml;
     }
 }
 

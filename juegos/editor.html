@@ -305,6 +305,51 @@
     </div>
   </div>
 
+  <!-- ═══ TEACHER LIVE RESULTS PANEL ═══ -->
+  <div class="modal-overlay" id="teacher-results-overlay">
+    <div class="preview-screen" style="padding:0">
+      <div class="preview-topbar">
+        <button class="preview-close" onclick="closeTeacherResults()"><i class="fas fa-times"></i> Cerrar resultados</button>
+        <span class="preview-badge"><i class="fas fa-chart-bar"></i> RESULTADOS EN VIVO</span>
+      </div>
+
+      <div style="max-width:800px;margin:0 auto;padding:24px;color:#fff">
+        <!-- Class accuracy -->
+        <div style="background:rgba(0,0,0,.3);border-radius:16px;padding:20px;margin-bottom:20px;text-align:center">
+          <p style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:8px">Exactitud de clase</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="flex:1;background:rgba(255,255,255,.1);border-radius:10px;height:16px;overflow:hidden">
+              <div id="tr-accuracy-bar" style="height:100%;background:linear-gradient(90deg,#22C55E,#16A34A);border-radius:10px;transition:width 1s;width:0%"></div>
+            </div>
+            <span id="tr-accuracy-pct" style="font-weight:800;font-size:1.2rem;min-width:50px">0%</span>
+          </div>
+          <p id="tr-accuracy-msg" style="font-size:.9rem;color:rgba(255,255,255,.6);margin-top:8px">Esperando resultados...</p>
+        </div>
+
+        <!-- Podio -->
+        <div style="display:flex;align-items:flex-end;justify-content:center;gap:12px;margin-bottom:20px;min-height:180px" id="tr-podium">
+        </div>
+
+        <!-- Tabla de resultados -->
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden">
+          <div style="display:flex;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.1);font-size:.75rem;font-weight:700;color:rgba(255,255,255,.4)">
+            <span style="width:30px">#</span>
+            <span style="flex:1">Nombres</span>
+            <span style="width:80px;text-align:center">Puntuación</span>
+            <span style="width:100px;text-align:center">Precisión</span>
+          </div>
+          <div id="tr-results-list" style="max-height:300px;overflow-y:auto">
+            <div style="padding:24px;text-align:center;color:rgba(255,255,255,.3);font-size:.85rem">
+              <i class="fas fa-spinner fa-spin"></i> Esperando que los estudiantes terminen...
+            </div>
+          </div>
+        </div>
+
+        <p style="text-align:center;margin-top:16px;font-size:.75rem;color:rgba(255,255,255,.3)">Se actualiza automáticamente cada 5 segundos</p>
+      </div>
+    </div>
+  </div>
+
   <!-- ═══ PREVIEW MODAL ═══ -->
   <div class="modal-overlay" id="preview-overlay">
     <div class="preview-screen">

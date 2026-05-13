@@ -427,7 +427,7 @@
       </div>
 
       <!-- Resultado final -->
-      <div id="quiz-result" style="display:none;text-align:center;max-width:560px;margin:0 auto">
+      <div id="quiz-result" style="display:none;text-align:center;max-width:600px;margin:0 auto">
         <div style="font-size:64px;margin-bottom:16px" id="quiz-result-emoji">🏆</div>
         <h2 id="quiz-result-title" style="font-size:1.5rem;font-weight:800;margin-bottom:8px">¡Evaluación completada!</h2>
         <p id="quiz-result-score" style="font-size:1.1rem;color:#64748B;margin-bottom:24px"></p>
@@ -436,6 +436,27 @@
         </div>
         <!-- Per-question breakdown -->
         <div id="quiz-result-breakdown" style="text-align:left;margin-bottom:24px"></div>
+
+        <!-- ═══ PODIO EN VIVO ═══ -->
+        <div id="quiz-podium" style="display:none;background:linear-gradient(135deg,#0F0526,#1A0A3E,#2D1B4E);border-radius:20px;padding:28px 20px;margin-bottom:24px;color:#fff;overflow:hidden;position:relative">
+          <!-- Orbes decorativos -->
+          <div style="position:absolute;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(233,30,99,.15),transparent);top:0;right:0"></div>
+          <div style="position:absolute;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.12),transparent);bottom:0;left:0"></div>
+
+          <h3 style="font-size:1rem;font-weight:800;margin-bottom:20px;position:relative;z-index:1"><i class="fas fa-trophy" style="color:#FFD700;margin-right:6px"></i> Tabla de posiciones</h3>
+
+          <!-- Podio visual -->
+          <div id="podium-pillars" style="display:flex;align-items:flex-end;justify-content:center;gap:8px;margin-bottom:20px;min-height:160px;position:relative;z-index:1">
+            <!-- Se llena dinámicamente -->
+          </div>
+
+          <!-- Tu posición -->
+          <div id="my-rank-pill" style="display:none;padding:10px 20px;background:rgba(233,30,99,.15);border:1px solid rgba(233,30,99,.4);border-radius:12px;font-size:.85rem;font-weight:700;color:#E91E63;position:relative;z-index:1"></div>
+
+          <!-- Lista completa -->
+          <div id="podium-full-list" style="margin-top:16px;position:relative;z-index:1"></div>
+        </div>
+
         <button onclick="navigateTo('inicio')" style="padding:14px 32px;background:linear-gradient(135deg,#E91E63,#C2185B);color:#fff;border:none;border-radius:12px;font-size:.95rem;font-weight:700;cursor:pointer">Volver al inicio</button>
       </div>
     </section>

@@ -452,12 +452,90 @@ function copyLobbyCode(){
 }
 function startGameFromLobby(){
   if(lobbyPollInterval){clearInterval(lobbyPollInterval);lobbyPollInterval=null;}
-  // Marcar la evaluación como iniciada en Supabase
   var client=getSupabase();
   client.from('evaluaciones').update({iniciado:true,updated_at:new Date().toISOString()}).eq('id',evaluacionId).then(function(r){
     if(r.error){showToast('Error al iniciar: '+r.error.message,'error');return;}
     showToast('¡Sesión iniciada! Los estudiantes pueden responder ahora.','success');
     closeLobby();
+    // Abrir panel de resultados en vivo del docente
+    openTeacherResults();
+  });
+}
+
+var teacherResultsPoll=null;
+
+function openTeacherResults(){
+  document.getElementById('teacher-results-overlay').classList.add('active');
+  pollTeacherResults();
+  if(teacherResultsPoll)clearInterval(teacherResultsPoll);
+  teacherResultsPoll=setInterval(pollTeacherResults,5000);
+}
+
+function closeTeacherResults(){
+  document.getElementById('teacher-results-overlay').classList.remove('active');
+  if(teacherResultsPoll){clearInterval(teacherResultsPoll);teacherResultsPoll=null;}
+}
+
+function pollTeacherResults(){
+  if(!evaluacionId)return;
+  var client=getSupabase();
+  client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje').eq('evaluacion_id',evaluacionId).order('porcentaje',{ascending:false}).order('puntaje',{ascending:false}).then(function(r){
+    if(r.error||!r.data)return;
+    if(r.data.length===0){return;}
+
+    // Get names
+    client.from('evaluacion_participantes').select('user_id,nombre').eq('evaluacion_id',evaluacionId).then(function(pRes){
+      var nameMap={};
+      if(pRes.data){for(var n=0;n<pRes.data.length;n++){nameMap[pRes.data[n].user_id]=pRes.data[n].nombre;}}
+
+      var entries=[];
+      var totalPct=0;
+      for(var k=0;k<r.data.length;k++){
+        entries.push({nombre:nameMap[r.data[k].user_id]||'Estudiante',puntaje:r.data[k].puntaje,total:r.data[k].total,porcentaje:r.data[k].porcentaje});
+        totalPct+=r.data[k].porcentaje;
+      }
+
+      // Class accuracy
+      var avgPct=Math.round(totalPct/entries.length);
+      document.getElementById('tr-accuracy-bar').style.width=avgPct+'%';
+      document.getElementById('tr-accuracy-pct').textContent=avgPct+'%';
+      var accMsg=avgPct>=90?'¡Excelente rendimiento!':avgPct>=70?'¡Buen trabajo de la clase!':avgPct>=40?'Rendimiento moderado':'Necesitan más práctica';
+      document.getElementById('tr-accuracy-msg').textContent=accMsg+' ('+entries.length+' estudiante'+(entries.length!==1?'s':'')+')';
+
+      // Podium
+      var medals=['🥇','🥈','🥉'];
+      var bgGrads=['linear-gradient(180deg,#FFD700,#FFA000)','linear-gradient(180deg,#E0E0E0,#9E9E9E)','linear-gradient(180deg,#CD7F32,#8B5E3C)'];
+      var bdColors=['#FFD700','#C0C0C0','#CD7F32'];
+      var hts=[140,110,90];
+      var pillarOrder=[1,0,2];
+      var ph='';
+      for(var p=0;p<3;p++){
+        var idx=pillarOrder[p];
+        if(idx>=entries.length){ph+='<div style="flex:1;max-width:120px"></div>';continue;}
+        var e=entries[idx],h=hts[idx],ini=e.nombre.charAt(0).toUpperCase();
+        ph+='<div style="flex:1;max-width:120px;display:flex;flex-direction:column;align-items:center">';
+        ph+='<div style="width:44px;height:44px;border-radius:50%;background:'+bgGrads[idx]+';display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#fff;margin-bottom:6px;border:3px solid '+bdColors[idx]+'">'+ini+'</div>';
+        ph+='<span style="font-size:10px;font-weight:700;color:#fff;margin-bottom:2px;max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+e.nombre+'</span>';
+        ph+='<span style="font-size:9px;color:rgba(255,255,255,.5);margin-bottom:4px">'+e.puntaje+'/'+e.total+'</span>';
+        ph+='<div style="width:100%;height:'+h+'px;background:'+bgGrads[idx]+';border-radius:10px 10px 0 0;display:flex;align-items:center;justify-content:center;font-size:24px">'+medals[idx]+'</div>';
+        ph+='</div>';
+      }
+      document.getElementById('tr-podium').innerHTML=ph;
+
+      // Results table
+      var lh='';
+      for(var l=0;l<entries.length;l++){
+        var en=entries[l];
+        var rankColor=l===0?'#FFD700':l===1?'#C0C0C0':l===2?'#CD7F32':'rgba(255,255,255,.4)';
+        lh+='<div style="display:flex;align-items:center;padding:10px 16px;border-bottom:1px solid rgba(255,255,255,.05)">';
+        lh+='<span style="width:30px;font-weight:800;color:'+rankColor+';font-size:13px">'+(l+1)+'</span>';
+        lh+='<span style="flex:1;font-weight:600;color:#fff;font-size:13px">'+en.nombre+'</span>';
+        lh+='<span style="width:80px;text-align:center;font-weight:700;color:#fff;font-size:13px">'+en.puntaje+'/'+en.total+'</span>';
+        lh+='<span style="width:100px;text-align:center;font-weight:700;font-size:13px;color:'+(en.porcentaje>=70?'#22C55E':en.porcentaje>=40?'#F59E0B':'#EF4444')+'">'+en.porcentaje+'%</span>';
+        lh+='</div>';
+      }
+      document.getElementById('tr-results-list').innerHTML=lh;
+    });
   });
 }
 
