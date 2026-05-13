@@ -337,16 +337,17 @@ function searchAndStartQuiz(code) {
             quizAnswers = [];
             quizSelectedOption = -1;
 
-            // Registrar participante en el lobby
+            // Registrar participante en el lobby (upsert para evitar duplicados)
             if (currentUser) {
                 var nombre = currentUser.user_metadata && currentUser.user_metadata.full_name
                     ? currentUser.user_metadata.full_name
                     : (currentUser.email || '').split('@')[0];
-                client.from('evaluacion_participantes').insert({
+                client.from('evaluacion_participantes').upsert({
                     evaluacion_id: evaluacion.id,
                     user_id: currentUser.id,
-                    nombre: nombre
-                }).then(function(pr) {
+                    nombre: nombre,
+                    joined_at: new Date().toISOString()
+                }, { onConflict: 'evaluacion_id,user_id' }).then(function(pr) {
                     if (pr.error) console.warn('No se pudo registrar participante:', pr.error.message);
                 });
             }
