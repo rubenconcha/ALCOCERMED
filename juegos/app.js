@@ -656,27 +656,45 @@ function showQuizResults() {
     }
 
     // Guardar en Supabase y cargar leaderboard
+    var evalIdForBoard = quizData.evaluacion.id;
     if (currentUser) {
         var client = getSupabase();
-        client.from('evaluacion_resultados').upsert({
-            evaluacion_id: quizData.evaluacion.id,
+        client.from('evaluacion_resultados').insert({
+            evaluacion_id: evalIdForBoard,
             user_id: currentUser.id,
             puntaje: correctas,
             total: total,
             porcentaje: pct,
             respuestas: quizAnswers
-        }, { onConflict: 'evaluacion_id,user_id', ignoreDuplicates: false }).then(function(r) {
-            if (r.error) console.warn('No se pudo guardar resultado:', r.error.message);
-            // Cargar leaderboard
-            loadLeaderboard(quizData.evaluacion.id);
+        }).then(function(r) {
+            if (r.error) {
+                console.warn('Insert resultado:', r.error.message);
+                // Si falla por duplicado, intentar update
+                client.from('evaluacion_resultados').update({
+                    puntaje: correctas,
+                    total: total,
+                    porcentaje: pct,
+                    respuestas: quizAnswers
+                }).eq('evaluacion_id', evalIdForBoard).eq('user_id', currentUser.id).then(function() {
+                    loadLeaderboard(evalIdForBoard);
+                });
+            } else {
+                loadLeaderboard(evalIdForBoard);
+            }
         });
+    } else {
+        // Sin usuario, aún mostrar leaderboard
+        loadLeaderboard(evalIdForBoard);
     }
 }
 
 function loadLeaderboard(evalId) {
     var client = getSupabase();
+    console.log('Loading leaderboard for:', evalId);
     client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje').eq('evaluacion_id', evalId).order('porcentaje', { ascending: false }).order('puntaje', { ascending: false }).then(function(r) {
-        if (r.error || !r.data || r.data.length === 0) return;
+        console.log('Leaderboard data:', r.data, 'Error:', r.error);
+        if (r.error) { console.warn('Leaderboard error:', r.error.message); return; }
+        if (!r.data || r.data.length === 0) { console.log('No results yet'); return; }
 
         // Get participant names
         var userIds = [];

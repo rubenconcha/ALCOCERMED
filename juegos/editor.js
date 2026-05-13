@@ -55,6 +55,12 @@ function initEditor(){
   else{createNewEvaluation();}
   renderQuestionTypes();
   renderQuestionThumbs();
+  // Restaurar panel de resultados en vivo si hay sesión activa
+  var activeSession=sessionStorage.getItem('alcocer_teacher_eval');
+  if(activeSession){
+    evaluacionId=activeSession;
+    setTimeout(function(){openTeacherResults();},1000);
+  }
 }
 
 // ═══ CREATE / LOAD EVALUATION ═══
@@ -456,8 +462,9 @@ function startGameFromLobby(){
   client.from('evaluaciones').update({iniciado:true,updated_at:new Date().toISOString()}).eq('id',evaluacionId).then(function(r){
     if(r.error){showToast('Error al iniciar: '+r.error.message,'error');return;}
     showToast('¡Sesión iniciada! Los estudiantes pueden responder ahora.','success');
+    // Guardar sesión activa para persistir al recargar
+    sessionStorage.setItem('alcocer_teacher_eval',evaluacionId);
     closeLobby();
-    // Abrir panel de resultados en vivo del docente
     openTeacherResults();
   });
 }
@@ -474,6 +481,7 @@ function openTeacherResults(){
 function closeTeacherResults(){
   document.getElementById('teacher-results-overlay').classList.remove('active');
   if(teacherResultsPoll){clearInterval(teacherResultsPoll);teacherResultsPoll=null;}
+  sessionStorage.removeItem('alcocer_teacher_eval');
 }
 
 function pollTeacherResults(){
