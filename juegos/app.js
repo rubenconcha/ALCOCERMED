@@ -415,11 +415,23 @@ var quizTimerInterval = null;
 var quizTimeLeft = 30;
 
 function showSplashAndStart() {
+    // Asegurar que la sala de espera se oculte
+    var wt = document.getElementById('quiz-waiting');
+    if (wt) wt.style.display = 'none';
+
     var splash = document.getElementById('quiz-splash');
     if (splash) {
         splash.style.display = 'flex';
-        setTimeout(function() { splash.style.display = 'none'; renderQuizQuestion(); }, 2000);
-    } else { renderQuizQuestion(); }
+        setTimeout(function() {
+            splash.style.display = 'none';
+            // Mostrar el contenedor de preguntas
+            document.getElementById('quiz-container').style.display = 'block';
+            renderQuizQuestion();
+        }, 2000);
+    } else {
+        document.getElementById('quiz-container').style.display = 'block';
+        renderQuizQuestion();
+    }
 }
 
 function startQuestionTimer(seconds) {
