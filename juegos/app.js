@@ -390,106 +390,183 @@ function searchAndStartQuiz(code) {
 }
 
 var waitingPollInterval = null;
-var waitingMusic = null;
+var gameMusic = null;
 
-function startWaitingMusic() {
+// ═══ GAME MUSIC — Lo-fi chill beats ═══
+function startGameMusic() {
     try {
-        if (waitingMusic && waitingMusic._ctx) {
-            waitingMusic._ctx.resume();
-            waitingMusic._playing = true;
+        if (gameMusic && gameMusic._ctx) {
+            if (gameMusic._ctx.state === 'suspended') gameMusic._ctx.resume();
+            gameMusic._playing = true;
             return;
         }
         var ctx = new (window.AudioContext || window.webkitAudioContext)();
         var master = ctx.createGain();
-        master.gain.value = 0.18;
+        master.gain.value = 0.15;
         master.connect(ctx.destination);
 
-        // Ambient chill waiting room music
-        var bpm = 90;
-        var beatLen = 60 / bpm;
-        var chillNotes = [261.63, 329.63, 392.00, 440.00, 523.25]; // C E G A C5
-        var loopLen = 8 * beatLen;
+        var bpm = 75;
+        var beat = 60 / bpm;
+        var loopBars = 4;
+        var loopLen = loopBars * 4 * beat;
         var playing = true;
 
-        function playWaitingBeat(startTime) {
-            // Soft pad chords
-            var padNotes = [261.63, 329.63, 392.00];
-            for (var p = 0; p < padNotes.length; p++) {
-                var padOsc = ctx.createOscillator();
-                var padGain = ctx.createGain();
-                padOsc.type = 'sine';
-                padOsc.frequency.value = padNotes[p];
-                padGain.gain.setValueAtTime(0, startTime);
-                padGain.gain.linearRampToValueAtTime(0.08, startTime + 0.5);
-                padGain.gain.setValueAtTime(0.08, startTime + loopLen - 0.5);
-                padGain.gain.linearRampToValueAtTime(0, startTime + loopLen);
-                padOsc.connect(padGain);
-                padGain.connect(master);
-                padOsc.start(startTime);
-                padOsc.stop(startTime + loopLen);
+        // Lo-fi chord progressions (Cmaj7 → Am7 → Fmaj7 → G7)
+        var chords = [
+            [261.63, 329.63, 392.00, 493.88],
+            [220.00, 261.63, 329.63, 392.00],
+            [174.61, 220.00, 261.63, 329.63],
+            [196.00, 246.94, 293.66, 349.23]
+        ];
+        // Melody notes (C pentatonic higher octave)
+        var melNotes = [523.25, 587.33, 659.25, 783.99, 880.00, 1046.50];
+
+        function playLofiLoop(t0) {
+            // === Chord pads (warm sine) ===
+            for (var c = 0; c < 4; c++) {
+                var chord = chords[c];
+                var cStart = t0 + c * 4 * beat;
+                for (var n = 0; n < chord.length; n++) {
+                    var o = ctx.createOscillator();
+                    var g = ctx.createGain();
+                    var f = ctx.createBiquadFilter();
+                    o.type = 'sine';
+                    o.frequency.value = chord[n];
+                    f.type = 'lowpass';
+                    f.frequency.value = 600 + Math.random() * 200;
+                    g.gain.setValueAtTime(0, cStart);
+                    g.gain.linearRampToValueAtTime(0.06, cStart + 0.3);
+                    g.gain.setValueAtTime(0.06, cStart + 3.5 * beat);
+                    g.gain.linearRampToValueAtTime(0, cStart + 4 * beat);
+                    o.connect(f); f.connect(g); g.connect(master);
+                    o.start(cStart); o.stop(cStart + 4 * beat + 0.1);
+                }
             }
 
-            // Gentle arpeggiated melody
-            var arpPattern = [0, 2, 4, 3, 2, 4, 3, 1];
-            for (var a = 0; a < 8; a++) {
-                var arpOsc = ctx.createOscillator();
-                var arpGain = ctx.createGain();
-                var arpFilter = ctx.createBiquadFilter();
-                arpOsc.type = 'triangle';
-                arpFilter.type = 'lowpass';
-                arpFilter.frequency.value = 800;
-                arpOsc.frequency.value = chillNotes[arpPattern[a]];
-                var aTime = startTime + a * beatLen;
-                arpGain.gain.setValueAtTime(0, aTime);
-                arpGain.gain.linearRampToValueAtTime(0.15, aTime + 0.05);
-                arpGain.gain.exponentialRampToValueAtTime(0.001, aTime + beatLen * 0.8);
-                arpOsc.connect(arpFilter);
-                arpFilter.connect(arpGain);
-                arpGain.connect(master);
-                arpOsc.start(aTime);
-                arpOsc.stop(aTime + beatLen);
+            // === Soft kick (2 & 4 feel) ===
+            for (var k = 0; k < loopBars * 4; k++) {
+                if (k % 4 === 0 || k % 4 === 2) {
+                    var ko = ctx.createOscillator();
+                    var kg = ctx.createGain();
+                    ko.type = 'sine';
+                    var kt = t0 + k * beat;
+                    ko.frequency.setValueAtTime(80, kt);
+                    ko.frequency.exponentialRampToValueAtTime(30, kt + 0.12);
+                    kg.gain.setValueAtTime(0.35, kt);
+                    kg.gain.exponentialRampToValueAtTime(0.001, kt + 0.2);
+                    ko.connect(kg); kg.connect(master);
+                    ko.start(kt); ko.stop(kt + 0.25);
+                }
             }
 
-            // Soft sub-bass pulse
-            for (var b = 0; b < 4; b++) {
-                var bassOsc = ctx.createOscillator();
-                var bassGain = ctx.createGain();
-                bassOsc.type = 'sine';
-                bassOsc.frequency.value = 130.81;
-                var bTime = startTime + b * beatLen * 2;
-                bassGain.gain.setValueAtTime(0, bTime);
-                bassGain.gain.linearRampToValueAtTime(0.2, bTime + 0.1);
-                bassGain.gain.exponentialRampToValueAtTime(0.001, bTime + beatLen * 1.5);
-                bassOsc.connect(bassGain);
-                bassGain.connect(master);
-                bassOsc.start(bTime);
-                bassOsc.stop(bTime + beatLen * 2);
+            // === Snare on 2 and 4 (noise burst) ===
+            for (var sn = 0; sn < loopBars * 4; sn++) {
+                if (sn % 4 === 2) {
+                    var snBuf = ctx.createBuffer(1, ctx.sampleRate * 0.08, ctx.sampleRate);
+                    var snD = snBuf.getChannelData(0);
+                    for (var si = 0; si < snD.length; si++) snD[si] = (Math.random() * 2 - 1) * 0.2;
+                    var snSrc = ctx.createBufferSource();
+                    snSrc.buffer = snBuf;
+                    var snG = ctx.createGain();
+                    var snF = ctx.createBiquadFilter();
+                    snF.type = 'bandpass'; snF.frequency.value = 3000; snF.Q.value = 1;
+                    var snT = t0 + sn * beat;
+                    snG.gain.setValueAtTime(0.18, snT);
+                    snG.gain.exponentialRampToValueAtTime(0.001, snT + 0.1);
+                    snSrc.connect(snF); snF.connect(snG); snG.connect(master);
+                    snSrc.start(snT); snSrc.stop(snT + 0.12);
+                }
             }
+
+            // === Hi-hat shuffle ===
+            for (var hh = 0; hh < loopBars * 8; hh++) {
+                var hhBuf = ctx.createBuffer(1, ctx.sampleRate * 0.02, ctx.sampleRate);
+                var hhD = hhBuf.getChannelData(0);
+                for (var hi = 0; hi < hhD.length; hi++) hhD[hi] = (Math.random() * 2 - 1) * 0.15;
+                var hhSrc = ctx.createBufferSource();
+                hhSrc.buffer = hhBuf;
+                var hhG = ctx.createGain();
+                var hhFi = ctx.createBiquadFilter();
+                hhFi.type = 'highpass'; hhFi.frequency.value = 9000;
+                var hhT = t0 + hh * (beat / 2);
+                var hhVol = (hh % 2 === 0) ? 0.08 : 0.04;
+                hhG.gain.setValueAtTime(hhVol, hhT);
+                hhG.gain.exponentialRampToValueAtTime(0.001, hhT + 0.03);
+                hhSrc.connect(hhFi); hhFi.connect(hhG); hhG.connect(master);
+                hhSrc.start(hhT); hhSrc.stop(hhT + 0.04);
+            }
+
+            // === Bass line (sub + warm) ===
+            var bassRoots = [130.81, 110.00, 87.31, 98.00];
+            for (var bl = 0; bl < 4; bl++) {
+                var bo = ctx.createOscillator();
+                var bg = ctx.createGain();
+                var bf = ctx.createBiquadFilter();
+                bo.type = 'triangle';
+                bo.frequency.value = bassRoots[bl];
+                bf.type = 'lowpass'; bf.frequency.value = 250;
+                var bT = t0 + bl * 4 * beat;
+                bg.gain.setValueAtTime(0, bT);
+                bg.gain.linearRampToValueAtTime(0.22, bT + 0.05);
+                bg.gain.setValueAtTime(0.22, bT + 3 * beat);
+                bg.gain.exponentialRampToValueAtTime(0.001, bT + 3.8 * beat);
+                bo.connect(bf); bf.connect(bg); bg.connect(master);
+                bo.start(bT); bo.stop(bT + 4 * beat);
+            }
+
+            // === Melody (random pentatonic, sparse) ===
+            for (var ml = 0; ml < 8; ml++) {
+                if (Math.random() > 0.5) continue;
+                var mNote = melNotes[Math.floor(Math.random() * melNotes.length)];
+                var mo = ctx.createOscillator();
+                var mg = ctx.createGain();
+                var mf = ctx.createBiquadFilter();
+                mo.type = 'sine';
+                mo.frequency.value = mNote;
+                mf.type = 'lowpass'; mf.frequency.value = 900 + Math.random() * 400;
+                var mT = t0 + ml * 2 * beat + Math.random() * beat * 0.3;
+                mg.gain.setValueAtTime(0, mT);
+                mg.gain.linearRampToValueAtTime(0.07, mT + 0.04);
+                mg.gain.exponentialRampToValueAtTime(0.001, mT + beat * 1.5);
+                mo.connect(mf); mf.connect(mg); mg.connect(master);
+                mo.start(mT); mo.stop(mT + beat * 2);
+            }
+
+            // === Vinyl crackle (ambient noise) ===
+            var crklBuf = ctx.createBuffer(1, ctx.sampleRate * loopLen, ctx.sampleRate);
+            var crklD = crklBuf.getChannelData(0);
+            for (var ci = 0; ci < crklD.length; ci++) {
+                crklD[ci] = Math.random() > 0.997 ? (Math.random() * 0.06 - 0.03) : 0;
+            }
+            var crklSrc = ctx.createBufferSource();
+            crklSrc.buffer = crklBuf;
+            var crklG = ctx.createGain();
+            crklG.gain.value = 0.5;
+            var crklF = ctx.createBiquadFilter();
+            crklF.type = 'bandpass'; crklF.frequency.value = 4000; crklF.Q.value = 0.5;
+            crklSrc.connect(crklF); crklF.connect(crklG); crklG.connect(master);
+            crklSrc.start(t0); crklSrc.stop(t0 + loopLen);
         }
 
-        function scheduleWaitingLoop() {
+        function scheduleLoop() {
             if (!playing) return;
-            var now = ctx.currentTime;
-            playWaitingBeat(now + 0.05);
-            setTimeout(scheduleWaitingLoop, loopLen * 1000);
+            playLofiLoop(ctx.currentTime + 0.1);
+            setTimeout(scheduleLoop, loopLen * 1000 - 200);
         }
+        scheduleLoop();
 
-        scheduleWaitingLoop();
-
-        waitingMusic = {
-            _ctx: ctx,
-            _playing: true,
-            pause: function() { playing = false; this._playing = false; if (ctx.state === 'running') ctx.suspend(); },
-            stop: function() { playing = false; this._playing = false; ctx.close().catch(function(){}); }
+        gameMusic = {
+            _ctx: ctx, _playing: true, _master: master,
+            pause: function() { playing = false; this._playing = false; ctx.suspend(); },
+            play: function() { playing = true; this._playing = true; ctx.resume(); scheduleLoop(); return Promise.resolve(); },
+            stop: function() { playing = false; this._playing = false; ctx.close().catch(function(){}); },
+            get paused() { return !this._playing; }
         };
-    } catch (e) { console.log('Waiting music error:', e); }
+    } catch (e) { console.log('Music error:', e); }
 }
 
-function stopWaitingMusic() {
-    if (waitingMusic) {
-        waitingMusic.stop();
-        waitingMusic = null;
-    }
+function stopGameMusic() {
+    if (gameMusic) { gameMusic.stop(); gameMusic = null; }
 }
 
 function showWaitingRoom() {
@@ -503,8 +580,8 @@ function showWaitingRoom() {
     var wtSub = document.getElementById('waiting-subtitle');
     if (wtSub) wtSub.textContent = '"' + title + '" comenzará cuando el profesor presione EMPEZAR';
 
-    // Iniciar música de espera
-    startWaitingMusic();
+    // Iniciar música lo-fi
+    startGameMusic();
 
     // Poll cada 3 segundos para verificar si el admin inició
     if (waitingPollInterval) clearInterval(waitingPollInterval);
@@ -515,7 +592,7 @@ function showWaitingRoom() {
             if (r.data && r.data.iniciado) {
                 clearInterval(waitingPollInterval);
                 waitingPollInterval = null;
-                stopWaitingMusic(); // Parar música al iniciar
+                // La música sigue sonando durante el examen
                 var wt2 = document.getElementById('quiz-waiting');
                 if (wt2) wt2.style.display = 'none';
                 document.getElementById('quiz-container').style.display = 'block';
@@ -529,8 +606,7 @@ var quizTimerInterval = null;
 var quizTimeLeft = 30;
 
 function showSplashAndStart() {
-    // Asegurar que la sala de espera se oculte y la música pare
-    stopWaitingMusic();
+    // Asegurar que la sala de espera se oculte (música sigue)
     var wt = document.getElementById('quiz-waiting');
     if (wt) wt.style.display = 'none';
 
@@ -561,12 +637,18 @@ function startQuestionTimer(seconds) {
         if (timerEl) timerEl.style.color = quizTimeLeft <= 5 ? '#EF4444' : '#E91E63';
         if (quizTimeLeft <= 0) {
             clearInterval(quizTimerInterval);
-            // Auto-select wrong if no answer
-            if (quizSelectedOption === -1) {
-                quizAnswers.push({ pregunta_id: quizData.preguntas[quizCurrentQ].id, seleccionada: -1, correcta: false });
-                var nextBtn = document.getElementById('quiz-next-btn');
-                nextBtn.style.display = 'block';
-                nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
+            if (!quizConfirmed) {
+                // Si seleccionó algo pero no confirmó, auto-confirmar
+                if (quizSelectedOption !== -1) {
+                    confirmQuizAnswer();
+                } else {
+                    // No seleccionó nada
+                    quizConfirmed = true;
+                    quizAnswers.push({ pregunta_id: quizData.preguntas[quizCurrentQ].id, seleccionada: -1, correcta: false });
+                    var nextBtn = document.getElementById('quiz-next-btn');
+                    nextBtn.style.display = 'block';
+                    nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
+                }
             }
         }
     }, 1000);
@@ -620,7 +702,7 @@ function renderQuizQuestion() {
             'background:linear-gradient(135deg,#7C3AED,#6D28D9);color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;width:100%;font-size:1rem">' +
             '✓ Confirmar selección</button>';
     }
-    // Normal MC / TF / Poll
+    // Normal MC / TF / Poll — con botón confirmar para poder cambiar respuesta
     else {
         for (var j = 0; j < opciones.length; j++) {
             var bgColor2 = optColors[j % optColors.length];
@@ -632,14 +714,22 @@ function renderQuizQuestion() {
                 String.fromCharCode(65 + j) + '</span>' +
                 '<span>' + (opciones[j].text || '') + '</span></button>';
         }
+        html += '<button id="quiz-confirm-answer" onclick="confirmQuizAnswer()" ' +
+            'style="display:none;margin-top:12px;padding:14px 24px;background:linear-gradient(135deg,#2563EB,#1E40AF);' +
+            'color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;width:100%;font-size:1rem;' +
+            'transition:transform .15s;box-shadow:0 4px 16px rgba(37,99,235,.3)">' +
+            '✓ Confirmar respuesta</button>';
     }
 
     document.getElementById('quiz-options-list').innerHTML = html;
     document.getElementById('quiz-next-btn').style.display = 'none';
     quizSelectedOption = -1;
+    quizConfirmed = false;
 
     startQuestionTimer(timer);
 }
+
+var quizConfirmed = false;
 
 function toggleQuizMulti(idx) {
     var pos = quizMultiSelections.indexOf(idx);
@@ -660,6 +750,7 @@ function confirmQuizMulti() {
     if (quizMultiSelections.length === 0) return;
     if (quizTimerInterval) clearInterval(quizTimerInterval);
     quizSelectedOption = 1;
+    quizConfirmed = true;
     var pregunta = quizData.preguntas[quizCurrentQ];
     var opciones = pregunta.opciones || [];
     var buttons = document.querySelectorAll('.quiz-opt-btn');
@@ -691,6 +782,7 @@ function submitQuizOpen() {
     if (!answer) return;
     if (quizTimerInterval) clearInterval(quizTimerInterval);
     quizSelectedOption = 1;
+    quizConfirmed = true;
     ta.style.border = '2px solid #22C55E';
     ta.disabled = true;
     var pregunta = quizData.preguntas[quizCurrentQ];
@@ -701,11 +793,43 @@ function submitQuizOpen() {
 }
 window.submitQuizOpen = submitQuizOpen;
 
+// Seleccionar opción SIN bloquear — permite cambiar antes de confirmar
 function selectQuizOption(idx) {
-    if (quizSelectedOption !== -1) return;
+    if (quizConfirmed) return; // Ya confirmó, no se puede cambiar
     quizSelectedOption = idx;
+
+    var buttons = document.querySelectorAll('.quiz-opt-btn');
+    var optColors = ['#2563EB', '#0D9488', '#D97706', '#DC2626', '#7C3AED', '#059669'];
+
+    // Resaltar solo la seleccionada, resetear las demás
+    for (var i = 0; i < buttons.length; i++) {
+        if (i === idx) {
+            buttons[i].style.border = '3px solid #2563EB';
+            buttons[i].style.background = '#EFF6FF';
+            buttons[i].style.transform = 'scale(1.02)';
+            buttons[i].style.boxShadow = '0 4px 16px rgba(37,99,235,.2)';
+        } else {
+            buttons[i].style.border = '2px solid #E2E8F0';
+            buttons[i].style.background = '#fff';
+            buttons[i].style.transform = 'scale(1)';
+            buttons[i].style.boxShadow = 'none';
+            buttons[i].style.opacity = '1';
+        }
+    }
+
+    // Mostrar botón de confirmar
+    var confirmBtn = document.getElementById('quiz-confirm-answer');
+    if (confirmBtn) confirmBtn.style.display = 'block';
+}
+window.selectQuizOption = selectQuizOption;
+
+// Confirmar respuesta — ahora sí bloquea y muestra correcto/incorrecto
+function confirmQuizAnswer() {
+    if (quizSelectedOption === -1 || quizConfirmed) return;
+    quizConfirmed = true;
     if (quizTimerInterval) clearInterval(quizTimerInterval);
 
+    var idx = quizSelectedOption;
     var pregunta = quizData.preguntas[quizCurrentQ];
     var opciones = pregunta.opciones || [];
     var buttons = document.querySelectorAll('.quiz-opt-btn');
@@ -714,17 +838,24 @@ function selectQuizOption(idx) {
     for (var i = 0; i < buttons.length; i++) {
         var isSelected = (i === idx);
         if (isSelected && isCorrectAnswer) {
-            buttons[i].style.border = '2px solid #22C55E';
+            buttons[i].style.border = '3px solid #22C55E';
             buttons[i].style.background = '#F0FDF4';
+            buttons[i].style.boxShadow = '0 4px 16px rgba(34,197,94,.25)';
         } else if (isSelected && !isCorrectAnswer) {
-            buttons[i].style.border = '2px solid #EF4444';
+            buttons[i].style.border = '3px solid #EF4444';
             buttons[i].style.background = '#FEF2F2';
+            buttons[i].style.boxShadow = '0 4px 16px rgba(239,68,68,.25)';
         } else {
-            buttons[i].style.opacity = '0.5';
+            buttons[i].style.opacity = '0.4';
+            buttons[i].style.transform = 'scale(0.98)';
         }
         buttons[i].style.cursor = 'default';
         buttons[i].style.pointerEvents = 'none';
     }
+
+    // Ocultar botón confirmar
+    var confirmBtn = document.getElementById('quiz-confirm-answer');
+    if (confirmBtn) confirmBtn.style.display = 'none';
 
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer });
 
@@ -732,7 +863,7 @@ function selectQuizOption(idx) {
     nextBtn.style.display = 'block';
     nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
 }
-window.selectQuizOption = selectQuizOption;
+window.confirmQuizAnswer = confirmQuizAnswer;
 
 function quizNext() {
     quizCurrentQ++;
@@ -743,6 +874,7 @@ window.quizNext = quizNext;
 
 function showQuizResults() {
     if (quizTimerInterval) clearInterval(quizTimerInterval);
+    stopGameMusic(); // Parar música al terminar
     // Limpiar sesión pendiente — el quiz terminó
     sessionStorage.removeItem('alcocer_quiz_code');
     var correctas = 0;
