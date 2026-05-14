@@ -1038,3 +1038,26 @@ document.addEventListener('DOMContentLoaded',function(){
   initEditorAuth();
   setupCharCount();
 });
+
+// ═══ PWA INSTALLATION ═══
+var deferredPromptEditor;
+window.addEventListener('beforeinstallprompt', function(e) {
+    e.preventDefault();
+    deferredPromptEditor = e;
+    var installBtn = document.getElementById('install-pwa-btn');
+    if (installBtn) {
+        installBtn.style.display = 'inline-block';
+        installBtn.addEventListener('click', function() {
+            installBtn.style.display = 'none';
+            deferredPromptEditor.prompt();
+            deferredPromptEditor.userChoice.then(function(choiceResult) {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('Admin aceptó la instalación de la PWA');
+                } else {
+                    console.log('Admin descartó la instalación de la PWA');
+                }
+                deferredPromptEditor = null;
+            });
+        });
+    }
+});

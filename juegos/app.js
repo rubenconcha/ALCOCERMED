@@ -1340,3 +1340,26 @@ document.addEventListener('DOMContentLoaded', function() {
     var logoutBtn = document.getElementById('logout-btn');
     if (logoutBtn) logoutBtn.addEventListener('click', handleLogout);
 });
+
+// ═══ PWA INSTALLATION ═══
+var deferredPrompt;
+window.addEventListener('beforeinstallprompt', function(e) {
+    e.preventDefault();
+    deferredPrompt = e;
+    var installBtn = document.getElementById('install-pwa-btn');
+    if (installBtn) {
+        installBtn.style.display = 'flex';
+        installBtn.addEventListener('click', function() {
+            installBtn.style.display = 'none';
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then(function(choiceResult) {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('Usuario aceptó la instalación de la PWA');
+                } else {
+                    console.log('Usuario descartó la instalación de la PWA');
+                }
+                deferredPrompt = null;
+            });
+        });
+    }
+});
