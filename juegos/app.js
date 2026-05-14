@@ -740,11 +740,29 @@ function startQuestionTimer(seconds) {
     if (timerEl) timerEl.textContent = quizTimeLeft;
 
     quizTimerInterval = setInterval(function() {
+        if (quizConfirmed) return; // Si ya confirmó, no hacer beeps
+        
         quizTimeLeft--;
         if (timerEl) timerEl.textContent = quizTimeLeft;
         if (timerEl) timerEl.style.color = quizTimeLeft <= 5 ? '#EF4444' : '#E91E63';
+        
+        // Faltando 10 segundos: sonido de apuro (Mario)
+        if (quizTimeLeft === 10) {
+            try {
+                var hurryAudio = new Audio('./hurry_up.mp3');
+                hurryAudio.volume = 0.7;
+                hurryAudio.play().catch(function(e){});
+            } catch(e) {}
+        }
+        
+        // Faltando 3 segundos: cuenta regresiva
+        if (quizTimeLeft <= 3 && quizTimeLeft > 0) {
+            playBeep(880, 'sine', 0.15);
+        }
+
         if (quizTimeLeft <= 0) {
             clearInterval(quizTimerInterval);
+            playBeep(440, 'square', 0.6); // Sonido final de tiempo
             if (!quizConfirmed) {
                 // Si seleccionó algo pero no confirmó, auto-confirmar
                 if (quizSelectedOption !== -1) {
