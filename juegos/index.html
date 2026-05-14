@@ -12,7 +12,7 @@
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#2563EB">
+  <meta name="theme-color" content="#0f1629">
   <!-- iOS Support -->
   <link rel="apple-touch-icon" href="./logo_app.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -25,8 +25,23 @@
      LOGIN SCREEN
      ══════════════════════════════════════════════ -->
 <div id="login-screen" class="login-screen">
+  <div class="login-screen-ambient" aria-hidden="true">
+    <span class="login-glow login-glow-1"></span>
+    <span class="login-glow login-glow-2"></span>
+  </div>
   <div class="login-screen-pattern" aria-hidden="true"></div>
   <div class="login-card">
+    <header class="login-header">
+      <div class="login-logo-ring">
+        <img src="./logo_app.png" alt="Prepa Ben Carson" class="login-header-logo"
+             onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');">
+        <span class="login-header-logo-fallback hidden" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+      </div>
+      <div class="login-header-names">
+        <span class="login-header-school">Prepa Ben Carson</span>
+        <span class="login-header-app">AlcocerMed · juegos</span>
+      </div>
+    </header>
     <form id="login-form" class="login-form" onsubmit="handleLogin(event)">
       <div class="login-field">
         <label class="login-label" for="login-email">
