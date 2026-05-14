@@ -25,28 +25,8 @@
      LOGIN SCREEN
      ══════════════════════════════════════════════ -->
 <div id="login-screen" class="login-screen">
-  <div class="login-bg-orb login-bg-orb-1"></div>
-  <div class="login-bg-orb login-bg-orb-2"></div>
-  <div class="login-bg-orb login-bg-orb-3"></div>
-
+  <div class="login-screen-pattern" aria-hidden="true"></div>
   <div class="login-card">
-    <div class="login-logo-wrap">
-      <div class="login-logo-icon">
-        <img src="./logo_app.png"
-             alt="Logo" class="login-logo-img"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <span class="login-logo-fallback" style="display:none;">B</span>
-      </div>
-      <div class="login-brand-text">
-        <span class="login-brand-name">Ben Carson</span>
-        <span class="login-brand-chip">juegos en vivo</span>
-      </div>
-    </div>
-
-    <div class="login-title-wrap">
-      <h1 class="login-title">¡A jugar! <span class="login-title-emoji" aria-hidden="true">🎯</span></h1>
-    </div>
-
     <form id="login-form" class="login-form" onsubmit="handleLogin(event)">
       <div class="login-field">
         <label class="login-label" for="login-email">
@@ -60,7 +40,7 @@
           <i class="fas fa-key"></i> contraseña
         </label>
         <div class="login-input-wrap">
-          <input type="password" id="login-password" class="login-input" placeholder="••••••••" required minlength="6" autocomplete="current-password">
+          <input type="password" id="login-password" class="login-input" required minlength="6" autocomplete="current-password">
           <button type="button" class="login-eye-btn" onclick="togglePasswordVisibility()">
             <i class="fas fa-eye" id="login-eye-icon"></i>
           </button>
