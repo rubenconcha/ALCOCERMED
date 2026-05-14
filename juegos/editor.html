@@ -24,7 +24,7 @@
   <header class="editor-topbar">
     <div class="topbar-left">
       <button class="back-btn" onclick="goBackFromEditor()" title="Volver"><i class="fas fa-arrow-left"></i></button>
-      <input class="quiz-title-input" id="quiz-title-input" value="Cuestionario sin título" type="text" spellcheck="false">
+      <input class="quiz-title-input" id="quiz-title-input" value="Cuestionario sin título" type="text" spellcheck="false" onchange="saveQuizTitle()">
     </div>
     <div class="topbar-center">
       <span class="topbar-stat" id="stat-questions">0 Preguntas</span>

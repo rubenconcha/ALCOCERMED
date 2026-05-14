@@ -89,6 +89,19 @@ function loadExistingEvaluation(id){
   });
 }
 
+function saveQuizTitle() {
+  if(!evaluacionId) return;
+  var titulo = document.getElementById('quiz-title-input').value || 'Cuestionario sin título';
+  var client = getSupabase();
+  client.from('evaluaciones').update({titulo: titulo, updated_at: new Date().toISOString()}).eq('id', evaluacionId).then(function(r){
+    if(r.error) {
+      showToast('Error al guardar título', 'error');
+    } else {
+      showToast('Título guardado', 'success');
+    }
+  });
+}
+
 // ═══ RENDER QUESTION TYPES ═══
 function renderQuestionTypes(){
   var c=document.getElementById('qtypes-container');if(!c)return;

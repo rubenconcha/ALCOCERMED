@@ -694,17 +694,19 @@ var quizTimeLeft = 30;
 
 function playBeep(freq, type, duration) {
     try {
-        var ctx = new (window.AudioContext || window.webkitAudioContext)();
+        var ctx = getAudioCtx();
         var o = ctx.createOscillator();
         var g = ctx.createGain();
         o.type = type;
         o.frequency.value = freq;
-        g.gain.setValueAtTime(0.1, ctx.currentTime);
-        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+        var t = ctx.currentTime;
+        g.gain.setValueAtTime(0, t);
+        g.gain.linearRampToValueAtTime(0.1, t + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.001, t + duration);
         o.connect(g);
         g.connect(ctx.destination);
-        o.start();
-        o.stop(ctx.currentTime + duration);
+        o.start(t);
+        o.stop(t + duration + 0.1);
     } catch(e) {}
 }
 
@@ -790,7 +792,15 @@ function showFeedbackAnimation(isCorrect) {
     }, 1500);
 }
 
+var splashInterval = null;
+
 function showSplashAndStart() {
+    // Asegurar que no se ejecute dos veces
+    if (splashInterval) {
+        clearInterval(splashInterval);
+        splashInterval = null;
+    }
+
     // Asegurar que la sala de espera se oculte (música sigue)
     var wt = document.getElementById('quiz-waiting');
     if (wt) wt.style.display = 'none';
@@ -803,11 +813,17 @@ function showSplashAndStart() {
     
     if (splash && splashText) {
         splash.style.display = 'flex';
+        
+        // Reset animación forzando reflow
+        splashText.style.animation = 'none';
+        splashText.offsetHeight; 
+        splashText.style.animation = 'splashPulse 1s ease-in-out infinite';
+
         var count = 3;
         splashText.textContent = count;
         playBeep(440, 'sine', 0.5);
         
-        var interval = setInterval(function() {
+        splashInterval = setInterval(function() {
             count--;
             if (count > 0) {
                 splashText.textContent = count;
@@ -816,7 +832,8 @@ function showSplashAndStart() {
                 splashText.textContent = '¡ADELANTE!';
                 playBeep(880, 'square', 0.8);
             } else {
-                clearInterval(interval);
+                clearInterval(splashInterval);
+                splashInterval = null;
                 splash.style.display = 'none';
                 document.getElementById('quiz-container').style.display = 'block';
                 renderQuizQuestion();
@@ -1380,12 +1397,40 @@ function loadLibrary() {
                 '<div style="display:flex;gap:8px">' +
                 '<button onclick="window.location.href=\'editor.html?id=' + ev.id + 
                 '\'" style="padding:8px 14px;background:#F0F1F3;border:1px solid #E2E8F0;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#555"><i class="fas fa-edit"></i> Editar</button>' +
-                (ev.publicado ? '<button onclick="alert(\'Código: ' + (ev.codigo||'') + '\')" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer"><i class="fas fa-play"></i> Código</button>' : '') +
+                (ev.publicado ? '<button onclick="alert(\'Código: ' + (ev.codigo||'') + '\')" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;margin-left:4px"><i class="fas fa-play"></i> Código</button>' : '') +
+                '<button onclick="deleteQuiz(\'' + ev.id + '\')" style="padding:8px 14px;background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#DC2626;margin-left:4px" title="Borrar"><i class="fas fa-trash-alt"></i></button>' +
                 '</div></div>';
         }
         container.innerHTML = html;
     });
 }
+
+window.deleteQuiz = function(id) {
+    if (!confirm('¿Estás seguro de que deseas borrar permanentemente esta evaluación? Todos los resultados e informes asociados también se perderán.')) return;
+    
+    var btn = event.currentTarget;
+    if (btn) btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+    var client = getSupabase();
+    
+    // Primero intentamos borrar dependencias (por si la BD no tiene ON DELETE CASCADE configurado)
+    Promise.all([
+        client.from('evaluacion_preguntas').delete().eq('evaluacion_id', id),
+        client.from('evaluacion_participantes').delete().eq('evaluacion_id', id),
+        client.from('evaluacion_resultados').delete().eq('evaluacion_id', id)
+    ]).then(function() {
+        // Finalmente borramos la evaluación padre
+        client.from('evaluaciones').delete().eq('id', id).then(function(r) {
+            if (r.error) {
+                alert('Error al borrar: ' + r.error.message);
+                if (btn) btn.innerHTML = '<i class="fas fa-trash-alt"></i>';
+            } else {
+                loadLibrary();
+                if (typeof loadReports === 'function') loadReports();
+            }
+        });
+    });
+};
 
 // ═══ ADMIN: INFORMES — Resultados de estudiantes ═══
 
