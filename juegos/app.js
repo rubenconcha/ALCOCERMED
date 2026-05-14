@@ -605,20 +605,51 @@ function showWaitingRoom() {
 var quizTimerInterval = null;
 var quizTimeLeft = 30;
 
+function playBeep(freq, type, duration) {
+    try {
+        var ctx = new (window.AudioContext || window.webkitAudioContext)();
+        var o = ctx.createOscillator();
+        var g = ctx.createGain();
+        o.type = type;
+        o.frequency.value = freq;
+        g.gain.setValueAtTime(0.1, ctx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+        o.connect(g);
+        g.connect(ctx.destination);
+        o.start();
+        o.stop(ctx.currentTime + duration);
+    } catch(e) {}
+}
+
 function showSplashAndStart() {
     // Asegurar que la sala de espera se oculte (música sigue)
     var wt = document.getElementById('quiz-waiting');
     if (wt) wt.style.display = 'none';
 
     var splash = document.getElementById('quiz-splash');
-    if (splash) {
+    var splashText = document.getElementById('splash-text');
+    
+    if (splash && splashText) {
         splash.style.display = 'flex';
-        setTimeout(function() {
-            splash.style.display = 'none';
-            // Mostrar el contenedor de preguntas
-            document.getElementById('quiz-container').style.display = 'block';
-            renderQuizQuestion();
-        }, 2000);
+        var count = 3;
+        splashText.textContent = count;
+        playBeep(440, 'sine', 0.5);
+        
+        var interval = setInterval(function() {
+            count--;
+            if (count > 0) {
+                splashText.textContent = count;
+                playBeep(440, 'sine', 0.5);
+            } else if (count === 0) {
+                splashText.textContent = '¡ADELANTE!';
+                playBeep(880, 'square', 0.8);
+            } else {
+                clearInterval(interval);
+                splash.style.display = 'none';
+                document.getElementById('quiz-container').style.display = 'block';
+                renderQuizQuestion();
+            }
+        }, 1000);
     } else {
         document.getElementById('quiz-container').style.display = 'block';
         renderQuizQuestion();

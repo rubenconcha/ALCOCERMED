@@ -187,7 +187,21 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
   .topbar-username{display:none;}
   .join-input-row{flex-direction:column;}
   .quick-actions{grid-template-columns:1fr;}
+
+  /* Evaluaciones Responsive */
+  #quiz-container{margin:0 auto;}
+  #quiz-question-card{padding:20px!important;margin-bottom:16px!important;}
+  #quiz-question-text{font-size:1.1rem!important;}
+  .quiz-opt-btn{padding:12px 16px!important;font-size:.9rem!important;}
+  
+  /* Login Responsive */
+  .login-card{padding:32px 24px;}
+  .login-title{font-size:1.3rem;}
+  
+  /* Tables Responsive */
+  table th, table td {padding:8px 4px!important;}
 }
 @media(min-width:769px){
   .sidebar{transform:none;}
+  #quiz-container{margin:0 auto;} /* Center the quiz on desktop too */
 }
