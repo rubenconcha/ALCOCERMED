@@ -339,7 +339,7 @@
     <div class="preview-screen" style="padding:0">
       <div class="preview-topbar">
         <button class="preview-close" onclick="closeTeacherResults()"><i class="fas fa-times"></i> Cerrar resultados</button>
-        <span class="preview-badge"><i class="fas fa-chart-bar"></i> RESULTADOS EN VIVO</span>
+        <span class="preview-badge" id="tr-live-badge"><i class="fas fa-chart-bar"></i> RESULTADOS EN VIVO</span>
       </div>
 
       <div style="max-width:800px;margin:0 auto;padding:24px;color:#fff">
@@ -374,7 +374,7 @@
           </div>
         </div>
 
-        <p style="text-align:center;margin-top:16px;font-size:.75rem;color:rgba(255,255,255,.3)">Se actualiza automáticamente cada 5 segundos</p>
+        <p id="tr-refresh-msg" style="text-align:center;margin-top:16px;font-size:.75rem;color:rgba(255,255,255,.3)">Se actualiza automáticamente cada 5 segundos</p>
       </div>
     </div>
   </div>

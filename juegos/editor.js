@@ -56,14 +56,12 @@ function initEditor(){
   else{createNewEvaluation();}
   renderQuestionTypes();
   renderQuestionThumbs();
-  // Restaurar panel de resultados en vivo si hay sesión activa
-  var activeSession=sessionStorage.getItem('alcocer_teacher_eval');
   if(showRes === 'true' && editId) {
     evaluacionId=editId;
-    setTimeout(function(){openTeacherResults();}, 1000);
+    setTimeout(function(){openTeacherResults(false);}, 1000);
   } else if(activeSession){
     evaluacionId=activeSession;
-    setTimeout(function(){openTeacherResults();},1000);
+    setTimeout(function(){openTeacherResults(true);},1000);
   }
 }
 
@@ -690,17 +688,26 @@ function startGameFromLobby(){
     // Guardar sesión activa para persistir al recargar
     sessionStorage.setItem('alcocer_teacher_eval',evaluacionId);
     closeLobby();
-    openTeacherResults();
+    openTeacherResults(true);
   });
 }
 
 var teacherResultsPoll=null;
 
-function openTeacherResults(){
+function openTeacherResults(isLive){
+  isLive = isLive !== false; // true por defecto
   document.getElementById('teacher-results-overlay').classList.add('active');
+  
+  var liveBadge = document.getElementById('tr-live-badge');
+  var refreshMsg = document.getElementById('tr-refresh-msg');
+  if (liveBadge) liveBadge.style.display = isLive ? 'inline-block' : 'none';
+  if (refreshMsg) refreshMsg.style.display = isLive ? 'block' : 'none';
+
   pollTeacherResults();
   if(teacherResultsPoll)clearInterval(teacherResultsPoll);
-  teacherResultsPoll=setInterval(pollTeacherResults,5000);
+  if(isLive){
+    teacherResultsPoll=setInterval(pollTeacherResults,5000);
+  }
 }
 
 function closeTeacherResults(){
@@ -724,7 +731,11 @@ function pollTeacherResults(){
       var entries=[];
       var totalPct=0;
       for(var k=0;k<r.data.length;k++){
-        entries.push({nombre:nameMap[r.data[k].user_id]||'Estudiante',puntaje:r.data[k].puntaje,total:r.data[k].total,porcentaje:r.data[k].porcentaje});
+        var fullNombre = nameMap[r.data[k].user_id] || 'Estudiante';
+        var parts = fullNombre.split('|');
+        var emoji = parts.length > 1 ? parts[0] : '';
+        var nombreReal = parts.length > 1 ? parts[1] : fullNombre;
+        entries.push({emoji: emoji, nombre: nombreReal, puntaje: r.data[k].puntaje, total: r.data[k].total, porcentaje: r.data[k].porcentaje});
         totalPct+=r.data[k].porcentaje;
       }
 
@@ -745,12 +756,16 @@ function pollTeacherResults(){
       for(var p=0;p<3;p++){
         var idx=pillarOrder[p];
         if(idx>=entries.length){ph+='<div style="flex:1;max-width:120px"></div>';continue;}
-        var e=entries[idx],h=hts[idx],ini=e.nombre.charAt(0).toUpperCase();
+        var e=entries[idx],h=hts[idx];
+        var avatarHtml = e.emoji 
+          ? '<div style="font-size:36px;margin-bottom:6px;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3))">'+e.emoji+'</div>'
+          : '<div style="width:44px;height:44px;border-radius:50%;background:'+bgGrads[idx]+';display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#fff;margin-bottom:6px;border:3px solid '+bdColors[idx]+'">'+e.nombre.charAt(0).toUpperCase()+'</div>';
+        
         ph+='<div style="flex:1;max-width:120px;display:flex;flex-direction:column;align-items:center">';
-        ph+='<div style="width:44px;height:44px;border-radius:50%;background:'+bgGrads[idx]+';display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#fff;margin-bottom:6px;border:3px solid '+bdColors[idx]+'">'+ini+'</div>';
-        ph+='<span style="font-size:10px;font-weight:700;color:#fff;margin-bottom:2px;max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+e.nombre+'</span>';
-        ph+='<span style="font-size:9px;color:rgba(255,255,255,.5);margin-bottom:4px">'+e.puntaje+'/'+e.total+'</span>';
-        ph+='<div style="width:100%;height:'+h+'px;background:'+bgGrads[idx]+';border-radius:10px 10px 0 0;display:flex;align-items:center;justify-content:center;font-size:24px">'+medals[idx]+'</div>';
+        ph+=avatarHtml;
+        ph+='<span style="font-size:12px;font-weight:800;color:#fff;margin-bottom:2px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+e.nombre+'</span>';
+        ph+='<span style="font-size:10px;font-weight:700;color:rgba(255,255,255,.7);margin-bottom:8px">'+e.puntaje+'/'+e.total+'</span>';
+        ph+='<div style="width:100%;height:'+h+'px;background:'+bgGrads[idx]+';border-radius:12px 12px 0 0;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:inset 0 4px 12px rgba(255,255,255,0.2)">'+medals[idx]+'</div>';
         ph+='</div>';
       }
       document.getElementById('tr-podium').innerHTML=ph;
@@ -760,11 +775,11 @@ function pollTeacherResults(){
       for(var l=0;l<entries.length;l++){
         var en=entries[l];
         var rankColor=l===0?'#FFD700':l===1?'#C0C0C0':l===2?'#CD7F32':'rgba(255,255,255,.4)';
-        lh+='<div style="display:flex;align-items:center;padding:10px 16px;border-bottom:1px solid rgba(255,255,255,.05)">';
-        lh+='<span style="width:30px;font-weight:800;color:'+rankColor+';font-size:13px">'+(l+1)+'</span>';
-        lh+='<span style="flex:1;font-weight:600;color:#fff;font-size:13px">'+en.nombre+'</span>';
-        lh+='<span style="width:80px;text-align:center;font-weight:700;color:#fff;font-size:13px">'+en.puntaje+'/'+en.total+'</span>';
-        lh+='<span style="width:100px;text-align:center;font-weight:700;font-size:13px;color:'+(en.porcentaje>=70?'#22C55E':en.porcentaje>=40?'#F59E0B':'#EF4444')+'">'+en.porcentaje+'%</span>';
+        lh+='<div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);transition:background 0.2s" onmouseover="this.style.background=\'rgba(255,255,255,.05)\'" onmouseout="this.style.background=\'transparent\'">';
+        lh+='<span style="width:30px;font-weight:800;color:'+rankColor+';font-size:14px">'+(l+1)+'</span>';
+        lh+='<span style="flex:1;font-weight:700;color:#fff;font-size:13px;display:flex;align-items:center;gap:10px">'+(en.emoji?'<span style="font-size:18px">'+en.emoji+'</span>':'')+en.nombre+'</span>';
+        lh+='<span style="width:80px;text-align:center;font-weight:800;color:rgba(255,255,255,.8);font-size:13px">'+en.puntaje+'/'+en.total+'</span>';
+        lh+='<span style="width:100px;text-align:center;font-weight:800;font-size:13px;color:'+(en.porcentaje>=70?'#4ADE80':en.porcentaje>=40?'#FBBF24':'#F87171')+'">'+en.porcentaje+'%</span>';
         lh+='</div>';
       }
       document.getElementById('tr-results-list').innerHTML=lh;
