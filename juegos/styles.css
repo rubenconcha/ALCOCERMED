@@ -68,18 +68,25 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
 .topbar-logo-text{font-size:1.05rem;font-weight:800;color:var(--text);}
 .topbar-logo-text small{font-size:.7rem;font-weight:600;color:var(--text-mid);margin-left:4px;}
 .topbar-spacer{flex:1;}
-.topbar-actions{display:flex;align-items:center;gap:12px;margin-right:8px;}
-.theme-toggle-btn{width:36px;height:36px;border-radius:10px;background:var(--bg);color:var(--text);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all 0.2s ease;}
-.theme-toggle-btn:hover{background:var(--border);transform:scale(1.05);}
-.install-pwa-btn{display:none;padding:8px 16px;background:linear-gradient(135deg,#2563EB,#1E40AF);color:#fff;border:none;border-radius:10px;font-weight:700;font-size:0.85rem;cursor:pointer;align-items:center;gap:8px;box-shadow:0 4px 12px rgba(37,99,235,0.25);transition:all 0.2s;}
-.install-pwa-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(37,99,235,0.4);}
-.topbar-user-wrap{display:flex;align-items:center;background:var(--bg);border:1px solid var(--border);padding:4px 4px 4px 12px;border-radius:30px;transition:all 0.2s ease;}
-.topbar-user-wrap:hover{background:var(--border);box-shadow:var(--shadow);}
-.topbar-user{display:flex;align-items:center;gap:10px;margin-right:8px;}
-.topbar-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg, #F59E0B, #E91E63);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;box-shadow:0 2px 8px rgba(233,30,99,0.3);}
+/* TOPBAR RIGHT: Clean Modern Educational App Style */
+.topbar-actions{display:flex;align-items:center;gap:6px;}
+
+.top-action-btn{height:36px;min-width:36px;padding:0 12px;border-radius:10px;background:transparent;color:var(--text-mid);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-size:1.1rem;transition:all 0.2s ease;}
+.top-action-btn:hover{background:var(--border);color:var(--text);}
+.top-action-btn.btn-primary{background:linear-gradient(135deg,#2563EB,#1E40AF);color:#fff;font-size:0.85rem;font-weight:700;padding:0 14px;box-shadow:0 4px 12px rgba(37,99,235,0.25);}
+.top-action-btn.btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(37,99,235,0.35);}
+.top-action-btn.text-danger:hover{background:var(--red-light);color:var(--red);}
+
+.topbar-divider{width:1px;height:24px;background:var(--border);margin:0 4px;}
+
+.top-profile{display:flex;align-items:center;gap:10px;padding:4px 8px;border-radius:10px;cursor:default;transition:background 0.2s;}
+.top-profile:hover{background:rgba(0,0,0,0.02);}
+[data-theme="dark"] .top-profile:hover{background:rgba(255,255,255,0.02);}
+
+.topbar-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg, #F59E0B, #E91E63);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;box-shadow:0 2px 8px rgba(233,30,99,0.3);}
+.top-profile-info{display:flex;flex-direction:column;line-height:1.2;}
 .topbar-username{font-size:.85rem;font-weight:700;color:var(--text);}
-.topbar-logout{width:32px;height:32px;border-radius:50%;border:none;background:var(--bg-card);color:var(--text-mid);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all 0.2s ease;}
-.topbar-logout:hover{background:var(--red-light);color:var(--red);transform:rotate(10deg);}
+.topbar-role{font-size:.65rem;font-weight:600;color:var(--text-light);text-transform:uppercase;letter-spacing:0.5px;}
 
 /* ═══ SIDEBAR ═══ */
 .sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:200;opacity:0;pointer-events:none;transition:opacity .3s;}
@@ -207,9 +214,9 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
   
   /* Topbar Responsive */
   .install-text{display:none;}
-  .install-pwa-btn{padding:0!important;width:36px;height:36px;border-radius:10px!important;justify-content:center;}
-  .topbar-actions{gap:8px;margin-right:0;}
-  .topbar-user-wrap{padding:4px;}
+  .top-action-btn.btn-primary{min-width:36px;padding:0!important;justify-content:center;border-radius:10px;}
+  .topbar-actions{gap:4px;}
+  .top-profile-info{display:none;}
   
   /* Login Responsive */
   .login-card{padding:32px 24px;}

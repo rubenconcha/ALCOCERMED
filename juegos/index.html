@@ -98,17 +98,29 @@
     </div>
     <div class="topbar-spacer"></div>
     <div class="topbar-actions">
-      <button id="theme-toggle-btn" class="theme-toggle-btn" title="Alternar Modo Oscuro"><i class="fas fa-moon"></i></button>
-      <button id="install-pwa-btn" class="install-pwa-btn" style="display:none;">
+      <!-- Icon buttons -->
+      <button id="install-pwa-btn" class="top-action-btn btn-primary" style="display:none;" title="Instalar App">
         <i class="fas fa-download"></i> <span class="install-text">Instalar</span>
       </button>
-      <div class="topbar-user-wrap">
-        <div class="topbar-user" id="topbar-user">
-          <div class="topbar-avatar" id="topbar-avatar">E</div>
+      <button id="theme-toggle-btn" class="top-action-btn" title="Modo Oscuro/Claro">
+        <i class="fas fa-moon"></i>
+      </button>
+      
+      <div class="topbar-divider"></div>
+      
+      <!-- User profile -->
+      <div class="top-profile">
+        <div class="topbar-avatar" id="topbar-avatar">E</div>
+        <div class="top-profile-info">
           <span class="topbar-username" id="topbar-username">Estudiante</span>
+          <span class="topbar-role">Alumno</span>
         </div>
-        <button class="topbar-logout" id="logout-btn" title="Cerrar sesión"><i class="fas fa-sign-out-alt"></i></button>
       </div>
+      
+      <!-- Logout -->
+      <button class="top-action-btn text-danger" id="logout-btn" title="Cerrar sesión">
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
     </div>
   </header>
 

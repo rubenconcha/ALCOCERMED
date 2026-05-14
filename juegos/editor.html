@@ -33,12 +33,27 @@
       <span class="topbar-dot">•</span>
       <span class="topbar-stat" id="stat-time">0 minutos</span>
     </div>
-    <div class="topbar-right">
-      <button id="theme-toggle-btn" class="topbar-btn" title="Alternar Modo Oscuro" style="padding:0;width:36px;justify-content:center"><i class="fas fa-moon"></i></button>
-      <button id="install-pwa-btn" class="topbar-btn" style="display:none;background:linear-gradient(135deg,#2563EB,#1E40AF);color:#fff;border:none"><i class="fas fa-download"></i> Instalar</button>
-      <button class="topbar-btn" onclick="openSettings()"><i class="fas fa-cog"></i> Ajustes</button>
-      <button class="topbar-btn" onclick="previewQuiz()"><i class="fas fa-eye"></i> Vista previa</button>
-      <button class="topbar-btn btn-publish" onclick="publishQuiz()"><i class="fas fa-paper-plane"></i> Publicar</button>
+    <div class="topbar-actions">
+      <!-- Theme & Install -->
+      <button id="install-pwa-btn" class="top-action-btn btn-primary" style="display:none;" title="Instalar App">
+        <i class="fas fa-download"></i> <span class="install-text">Instalar</span>
+      </button>
+      <button id="theme-toggle-btn" class="top-action-btn" title="Modo Oscuro/Claro">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="topbar-divider"></div>
+
+      <!-- Editor Actions -->
+      <button class="top-action-btn" onclick="openSettings()" title="Ajustes">
+        <i class="fas fa-cog"></i> <span class="install-text">Ajustes</span>
+      </button>
+      <button class="top-action-btn" onclick="previewQuiz()" title="Vista Previa">
+        <i class="fas fa-eye"></i> <span class="install-text">Vista previa</span>
+      </button>
+      <button class="top-action-btn btn-primary" onclick="publishQuiz()" title="Publicar">
+        <i class="fas fa-paper-plane"></i> <span class="install-text">Publicar</span>
+      </button>
     </div>
   </header>
 

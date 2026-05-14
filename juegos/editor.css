@@ -1,6 +1,14 @@
 /* ═══ EDITOR CSS — Réplica Wayground ═══ */
+:root {
+  --bg-editor: #F0F1F3; --bg-editor-panel: #fff; --text-editor: #333; --border-editor: #E4E6EF;
+}
+[data-theme="dark"] {
+  --bg-editor: #0F172A; --bg-editor-panel: #1E293B; --text-editor: #F1F5F9; --border-editor: #334155;
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#F0F1F3;overflow-x:hidden}
+body{font-family:'Inter',sans-serif;background:var(--bg-editor);color:var(--text-editor);overflow-x:hidden}
+.editor-topbar{background:var(--bg-editor-panel);border-bottom:1px solid var(--border-editor);}
+.question-sidebar, .qtypes-panel, .find-panel, .modal-card {background:var(--bg-editor-panel);border-color:var(--border-editor);}
 
 /* ═══ TOPBAR ═══ */
 .editor-topbar{display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 16px;background:#fff;border-bottom:1px solid #E4E6EF;position:fixed;top:0;left:0;right:0;z-index:100}
@@ -16,6 +24,18 @@ body{font-family:'Inter',sans-serif;background:#F0F1F3;overflow-x:hidden}
 .topbar-btn:hover{background:#F0F1F3;border-color:#CCC}
 .btn-publish{background:linear-gradient(135deg,#E91E63,#C2185B);color:#fff;border:none}
 .btn-publish:hover{opacity:.9}
+
+/* TOPBAR RIGHT: Clean Modern Educational App Style */
+.topbar-actions{display:flex;align-items:center;gap:6px;}
+.top-action-btn{height:36px;min-width:36px;padding:0 12px;border-radius:10px;background:transparent;color:#555;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-size:1.1rem;transition:all 0.2s ease;}
+.top-action-btn:hover{background:#F0F1F3;color:#333;}
+.top-action-btn.btn-primary{background:linear-gradient(135deg,#2563EB,#1E40AF);color:#fff;font-size:0.85rem;font-weight:700;padding:0 14px;box-shadow:0 4px 12px rgba(37,99,235,0.25);}
+.top-action-btn.btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(37,99,235,0.35);color:#fff;}
+.topbar-divider{width:1px;height:24px;background:#E4E6EF;margin:0 4px;}
+
+[data-theme="dark"] .topbar-actions{color:#F1F5F9;}
+[data-theme="dark"] .top-action-btn{color:#94A3B8;}
+[data-theme="dark"] .top-action-btn:hover{background:#334155;color:#fff;}
 
 /* ═══ MAIN LAYOUT ═══ */
 .editor-layout{display:flex;margin-top:56px;height:calc(100vh - 56px)}
