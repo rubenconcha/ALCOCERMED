@@ -628,36 +628,33 @@ function playSuccessSound() {
         var ctx = new (window.AudioContext || window.webkitAudioContext)();
         var o = ctx.createOscillator();
         var g = ctx.createGain();
-        o.type = 'sine';
-        o.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
-        o.frequency.setValueAtTime(659.25, ctx.currentTime + 0.1); // E5
-        o.frequency.setValueAtTime(783.99, ctx.currentTime + 0.2); // G5
-        o.frequency.setValueAtTime(1046.50, ctx.currentTime + 0.3); // C6
+        
+        // Sonido de moneda clásico (Mario Bros)
+        o.type = 'square';
+        
+        // Primera nota: Si 5 (B5) ~ 987.77 Hz
+        o.frequency.setValueAtTime(987.77, ctx.currentTime);
+        // Segunda nota: Mi 6 (E6) ~ 1318.51 Hz
+        o.frequency.setValueAtTime(1318.51, ctx.currentTime + 0.08);
+        
+        // Control de volumen (Envolvente)
         g.gain.setValueAtTime(0, ctx.currentTime);
-        g.gain.linearRampToValueAtTime(0.2, ctx.currentTime + 0.05);
-        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.6);
+        g.gain.linearRampToValueAtTime(0.15, ctx.currentTime + 0.01);
+        g.gain.setValueAtTime(0.15, ctx.currentTime + 0.08);
+        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+        
         o.connect(g);
         g.connect(ctx.destination);
         o.start();
-        o.stop(ctx.currentTime + 0.65);
+        o.stop(ctx.currentTime + 0.55);
     } catch(e) {}
 }
 
 function playErrorSound() {
     try {
-        var ctx = new (window.AudioContext || window.webkitAudioContext)();
-        var o = ctx.createOscillator();
-        var g = ctx.createGain();
-        o.type = 'sawtooth';
-        o.frequency.setValueAtTime(300, ctx.currentTime);
-        o.frequency.exponentialRampToValueAtTime(150, ctx.currentTime + 0.3);
-        g.gain.setValueAtTime(0, ctx.currentTime);
-        g.gain.linearRampToValueAtTime(0.2, ctx.currentTime + 0.05);
-        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
-        o.connect(g);
-        g.connect(ctx.destination);
-        o.start();
-        o.stop(ctx.currentTime + 0.45);
+        var audio = new Audio('./error_sound.mp3');
+        audio.volume = 0.5;
+        audio.play().catch(function(e) { console.warn('Audio play failed', e); });
     } catch(e) {}
 }
 
