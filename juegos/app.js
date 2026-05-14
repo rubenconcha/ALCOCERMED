@@ -1129,13 +1129,38 @@ function renderPodium(entries) {
     if (!podiumEl || entries.length === 0) return;
     podiumEl.style.display = 'block';
 
+    // Reproducir sonido triunfal (solo una vez)
+    if (!window._triumphPlayed) {
+        try {
+            var ctx = new (window.AudioContext || window.webkitAudioContext)();
+            var o = ctx.createOscillator();
+            var o2 = ctx.createOscillator();
+            var g = ctx.createGain();
+            o.type = 'square'; o2.type = 'triangle';
+            var notes = [523.25, 659.25, 783.99, 1046.50]; // Fanfarria: C5, E5, G5, C6
+            var t = ctx.currentTime;
+            for (var i = 0; i < notes.length; i++) {
+                o.frequency.setValueAtTime(notes[i], t + i * 0.15);
+                o2.frequency.setValueAtTime(notes[i]/2, t + i * 0.15); // Octava baja
+            }
+            g.gain.setValueAtTime(0, t);
+            g.gain.linearRampToValueAtTime(0.15, t + 0.1);
+            g.gain.setValueAtTime(0.15, t + 0.5);
+            g.gain.exponentialRampToValueAtTime(0.001, t + 1.5);
+            o.connect(g); o2.connect(g); g.connect(ctx.destination);
+            o.start(t); o2.start(t); o.stop(t + 1.6); o2.stop(t + 1.6);
+            window._triumphPlayed = true;
+        } catch(e) {}
+    }
+
     var medals = ['🥇', '🥈', '🥉'];
-    var colors = ['#FFD700', '#C0C0C0', '#CD7F32'];
-    var heights = [140, 110, 90];
+    var colors = ['#FFD700', '#E2E8F0', '#F1A560']; // Oro, Plata, Bronce
+    var textColors = ['#9A7B00', '#475569', '#8C511B'];
+    var heights = [160, 120, 90];
     var bgGradients = [
-        'linear-gradient(180deg,#FFD700,#FFA000)',
-        'linear-gradient(180deg,#E0E0E0,#9E9E9E)',
-        'linear-gradient(180deg,#CD7F32,#8B5E3C)'
+        'linear-gradient(180deg, rgba(255,215,0,0.85) 0%, rgba(218,165,32,0.3) 100%)',
+        'linear-gradient(180deg, rgba(226,232,240,0.85) 0%, rgba(148,163,184,0.3) 100%)',
+        'linear-gradient(180deg, rgba(241,165,96,0.85) 0%, rgba(184,105,40,0.3) 100%)'
     ];
 
     // Podium pillars (order: 2nd, 1st, 3rd)
@@ -1145,23 +1170,34 @@ function renderPodium(entries) {
     for (var p = 0; p < 3; p++) {
         var idx = pillarOrder[p];
         if (idx >= entries.length) {
-            pillarsHtml += '<div style="flex:1;max-width:120px"></div>';
+            pillarsHtml += '<div style="flex:1;max-width:140px"></div>';
             continue;
         }
         var e = entries[idx];
         var h = heights[idx];
         var initial = e.nombre.charAt(0).toUpperCase();
+        var delay = (p===1) ? 0.6 : (p===0 ? 0.3 : 0.9); // Orden de aparición: 2do, 1ro, 3ro
 
-        pillarsHtml += '<div style="flex:1;max-width:120px;display:flex;flex-direction:column;align-items:center;animation:fadeInUp .5s ease ' + (p * 0.2) + 's both">';
+        pillarsHtml += '<div style="flex:1;max-width:140px;display:flex;flex-direction:column;align-items:center;animation:fadeInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ' + delay + 's both">';
+        
         // Avatar
-        pillarsHtml += '<div style="width:48px;height:48px;border-radius:50%;background:' + bgGradients[idx] + ';display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;color:#fff;margin-bottom:8px;box-shadow:0 4px 16px rgba(0,0,0,.3);border:3px solid ' + colors[idx] + '">' + initial + '</div>';
+        pillarsHtml += '<div style="width:60px;height:60px;border-radius:50%;background:' + colors[idx] + ';display:flex;align-items:center;justify-content:center;font-weight:900;font-size:26px;color:' + textColors[idx] + ';margin-bottom:12px;box-shadow:0 0 24px ' + colors[idx] + '80;border:3px solid #fff;position:relative;z-index:2">' + initial + '</div>';
+        
         // Name
-        pillarsHtml += '<span style="font-size:11px;font-weight:700;color:#fff;margin-bottom:4px;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block">' + e.nombre + '</span>';
+        pillarsHtml += '<span style="font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;text-align:center;text-shadow:0 2px 4px rgba(0,0,0,0.5)">' + e.nombre + '</span>';
+        
         // Score
-        pillarsHtml += '<span style="font-size:10px;color:rgba(255,255,255,.5);margin-bottom:6px">' + e.puntaje + '/' + e.total + ' (' + e.porcentaje + '%)</span>';
-        // Pillar
-        pillarsHtml += '<div style="width:100%;height:' + h + 'px;background:' + bgGradients[idx] + ';border-radius:12px 12px 0 0;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;box-shadow:0 -4px 20px rgba(0,0,0,.2)">';
-        pillarsHtml += '<span style="text-shadow:0 2px 8px rgba(0,0,0,.3)">' + medals[idx] + '</span>';
+        pillarsHtml += '<span style="font-size:12px;color:rgba(255,255,255,.9);margin-bottom:12px;font-weight:600;background:rgba(0,0,0,0.3);padding:2px 8px;border-radius:10px">' + e.puntaje + '/' + e.total + ' (' + e.porcentaje + '%)</span>';
+        
+        // Pillar (Glassmorphism + 3D feel)
+        pillarsHtml += '<div style="width:100%;height:' + h + 'px;background:' + bgGradients[idx] + ';border-radius:16px 16px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:16px;box-shadow:inset 0 2px 0 rgba(255,255,255,0.4), 0 -4px 30px rgba(0,0,0,.3);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,0.5);position:relative;overflow:hidden">';
+        
+        // Medal icon inside pillar
+        pillarsHtml += '<div style="background:rgba(0,0,0,0.2);padding:6px 14px;border-radius:20px;font-size:24px;box-shadow:inset 0 2px 4px rgba(0,0,0,0.3);color:#fff">' + medals[idx] + '</div>';
+        
+        // Glow effect at bottom of pillar
+        pillarsHtml += '<div style="position:absolute;bottom:0;left:0;right:0;height:50px;background:linear-gradient(0deg, ' + colors[idx] + '50, transparent)"></div>';
+        
         pillarsHtml += '</div>';
         pillarsHtml += '</div>';
     }
