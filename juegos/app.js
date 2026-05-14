@@ -623,10 +623,88 @@ function playBeep(freq, type, duration) {
     } catch(e) {}
 }
 
+function playSuccessSound() {
+    try {
+        var ctx = new (window.AudioContext || window.webkitAudioContext)();
+        var o = ctx.createOscillator();
+        var g = ctx.createGain();
+        o.type = 'sine';
+        o.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
+        o.frequency.setValueAtTime(659.25, ctx.currentTime + 0.1); // E5
+        o.frequency.setValueAtTime(783.99, ctx.currentTime + 0.2); // G5
+        o.frequency.setValueAtTime(1046.50, ctx.currentTime + 0.3); // C6
+        g.gain.setValueAtTime(0, ctx.currentTime);
+        g.gain.linearRampToValueAtTime(0.2, ctx.currentTime + 0.05);
+        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.6);
+        o.connect(g);
+        g.connect(ctx.destination);
+        o.start();
+        o.stop(ctx.currentTime + 0.65);
+    } catch(e) {}
+}
+
+function playErrorSound() {
+    try {
+        var ctx = new (window.AudioContext || window.webkitAudioContext)();
+        var o = ctx.createOscillator();
+        var g = ctx.createGain();
+        o.type = 'sawtooth';
+        o.frequency.setValueAtTime(300, ctx.currentTime);
+        o.frequency.exponentialRampToValueAtTime(150, ctx.currentTime + 0.3);
+        g.gain.setValueAtTime(0, ctx.currentTime);
+        g.gain.linearRampToValueAtTime(0.2, ctx.currentTime + 0.05);
+        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+        o.connect(g);
+        g.connect(ctx.destination);
+        o.start();
+        o.stop(ctx.currentTime + 0.45);
+    } catch(e) {}
+}
+
+function showFeedbackAnimation(isCorrect) {
+    var overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '50%';
+    overlay.style.left = '50%';
+    overlay.style.transform = 'translate(-50%, -50%) scale(0.5)';
+    overlay.style.zIndex = '9999';
+    overlay.style.background = isCorrect ? 'rgba(34, 197, 94, 0.95)' : 'rgba(239, 68, 68, 0.95)';
+    overlay.style.color = '#fff';
+    overlay.style.padding = '20px 40px';
+    overlay.style.borderRadius = '20px';
+    overlay.style.fontSize = '2rem';
+    overlay.style.fontWeight = '900';
+    overlay.style.boxShadow = '0 10px 40px rgba(0,0,0,0.3)';
+    overlay.style.opacity = '0';
+    overlay.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    overlay.innerHTML = isCorrect ? '🌟 ¡Correcto! 🎉' : '❌ Incorrecto';
+    
+    document.body.appendChild(overlay);
+    
+    if (isCorrect) playSuccessSound();
+    else playErrorSound();
+    
+    // Animar
+    setTimeout(function() {
+        overlay.style.opacity = '1';
+        overlay.style.transform = 'translate(-50%, -50%) scale(1)';
+    }, 10);
+    
+    // Desaparecer
+    setTimeout(function() {
+        overlay.style.opacity = '0';
+        overlay.style.transform = 'translate(-50%, -50%) scale(1.2)';
+        setTimeout(function() { if(overlay.parentNode) document.body.removeChild(overlay); }, 300);
+    }, 1500);
+}
+
 function showSplashAndStart() {
     // Asegurar que la sala de espera se oculte (música sigue)
     var wt = document.getElementById('quiz-waiting');
     if (wt) wt.style.display = 'none';
+
+    // Iniciar música si no estaba sonando (ej. cuando admin ya inició y estudiante entra)
+    startGameMusic();
 
     var splash = document.getElementById('quiz-splash');
     var splashText = document.getElementById('splash-text');
@@ -678,6 +756,9 @@ function startQuestionTimer(seconds) {
                     // No seleccionó nada
                     quizConfirmed = true;
                     quizAnswers.push({ pregunta_id: quizData.preguntas[quizCurrentQ].id, seleccionada: -1, correcta: false });
+                    
+                    showFeedbackAnimation(false);
+                    
                     var nextBtn = document.getElementById('quiz-next-btn');
                     nextBtn.style.display = 'block';
                     nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
@@ -803,6 +884,9 @@ function confirmQuizMulti() {
     var confirmBtn = document.getElementById('quiz-confirm-multi');
     if (confirmBtn) confirmBtn.style.display = 'none';
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: quizMultiSelections, correcta: allCorrect });
+    
+    showFeedbackAnimation(allCorrect);
+    
     var nextBtn = document.getElementById('quiz-next-btn');
     nextBtn.style.display = 'block';
     nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
@@ -820,6 +904,9 @@ function submitQuizOpen() {
     ta.disabled = true;
     var pregunta = quizData.preguntas[quizCurrentQ];
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: answer, correcta: true });
+    
+    showFeedbackAnimation(true);
+    
     var nextBtn = document.getElementById('quiz-next-btn');
     nextBtn.style.display = 'block';
     nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
@@ -891,6 +978,8 @@ function confirmQuizAnswer() {
     if (confirmBtn) confirmBtn.style.display = 'none';
 
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer });
+    
+    showFeedbackAnimation(isCorrectAnswer);
 
     var nextBtn = document.getElementById('quiz-next-btn');
     nextBtn.style.display = 'block';
