@@ -51,13 +51,17 @@ function initEditorAuth(){
 function initEditor(){
   var params=new URLSearchParams(window.location.search);
   var editId=params.get('id');
+  var showRes=params.get('results');
   if(editId){loadExistingEvaluation(editId);}
   else{createNewEvaluation();}
   renderQuestionTypes();
   renderQuestionThumbs();
   // Restaurar panel de resultados en vivo si hay sesión activa
   var activeSession=sessionStorage.getItem('alcocer_teacher_eval');
-  if(activeSession){
+  if(showRes === 'true' && editId) {
+    evaluacionId=editId;
+    setTimeout(function(){openTeacherResults();}, 1000);
+  } else if(activeSession){
     evaluacionId=activeSession;
     setTimeout(function(){openTeacherResults();},1000);
   }
