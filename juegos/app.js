@@ -79,10 +79,12 @@ function enterApp() {
 
     var usernameEl = document.getElementById('topbar-username');
     var avatarEl = document.getElementById('topbar-avatar');
+    var roleEl = document.getElementById('topbar-role');
     var greetEl = document.getElementById('greeting-text');
 
     if (usernameEl) usernameEl.textContent = name;
     if (avatarEl) avatarEl.textContent = name.charAt(0).toUpperCase();
+    if (roleEl) roleEl.textContent = isAdmin ? 'Administrador' : 'Alumno';
     if (greetEl) greetEl.textContent = getGreeting() + ', ' + name + '!';
 
     // Show/hide admin sections
@@ -1336,10 +1338,53 @@ document.addEventListener('DOMContentLoaded', function() {
         })(bnavItems[j]);
     }
 
-    // Logout
-    var logoutBtn = document.getElementById('logout-btn');
-    if (logoutBtn) logoutBtn.addEventListener('click', handleLogout);
+    initUserMenu();
 });
+
+/** Menú desplegable del usuario (cerrar sesión) */
+function initUserMenu() {
+    var wrap = document.getElementById('user-menu-wrap');
+    var btn = document.getElementById('user-menu-btn');
+    var menu = document.getElementById('user-menu-dropdown');
+    var logoutItem = document.getElementById('user-menu-logout');
+    if (!wrap || !btn || !menu) return;
+
+    function setOpen(open) {
+        if (open) {
+            menu.classList.remove('hidden');
+            wrap.classList.add('is-open');
+            btn.setAttribute('aria-expanded', 'true');
+        } else {
+            menu.classList.add('hidden');
+            wrap.classList.remove('is-open');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var opening = menu.classList.contains('hidden');
+        setOpen(opening);
+    });
+
+    document.addEventListener('click', function() {
+        setOpen(false);
+    });
+    menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') setOpen(false);
+    });
+
+    if (logoutItem) {
+        logoutItem.addEventListener('click', function() {
+            setOpen(false);
+            handleLogout();
+        });
+    }
+}
 
 // ═══ PWA INSTALLATION ═══
 var deferredPrompt;

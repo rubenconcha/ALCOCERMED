@@ -108,19 +108,23 @@
       
       <div class="topbar-divider"></div>
       
-      <!-- User profile -->
-      <div class="top-profile">
-        <div class="topbar-avatar" id="topbar-avatar">E</div>
-        <div class="top-profile-info">
-          <span class="topbar-username" id="topbar-username">Estudiante</span>
-          <span class="topbar-role">Alumno</span>
+      <!-- User profile + menú (cerrar sesión dentro) -->
+      <div class="user-menu-wrap" id="user-menu-wrap">
+        <button type="button" class="user-menu-trigger" id="user-menu-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-menu-dropdown" title="Cuenta">
+          <div class="topbar-avatar" id="topbar-avatar">E</div>
+          <div class="top-profile-info">
+            <span class="topbar-username" id="topbar-username">Estudiante</span>
+            <span class="topbar-role" id="topbar-role">Alumno</span>
+          </div>
+          <i class="fas fa-chevron-down user-menu-chevron" aria-hidden="true"></i>
+        </button>
+        <div class="user-menu-dropdown hidden" id="user-menu-dropdown" role="menu">
+          <button type="button" class="user-menu-item user-menu-item--danger" id="user-menu-logout" role="menuitem">
+            <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+            Cerrar sesión
+          </button>
         </div>
       </div>
-      
-      <!-- Logout -->
-      <button class="top-action-btn text-danger" id="logout-btn" title="Cerrar sesión">
-        <i class="fas fa-sign-out-alt"></i>
-      </button>
     </div>
   </header>
 

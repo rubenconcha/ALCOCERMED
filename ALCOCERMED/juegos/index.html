@@ -88,11 +88,21 @@
       <span class="topbar-logo-text">AlcocerMed <small>Juegos</small></span>
     </div>
     <div class="topbar-spacer"></div>
-    <div class="topbar-user" id="topbar-user">
-      <div class="topbar-avatar" id="topbar-avatar">E</div>
-      <span class="topbar-username" id="topbar-username">Estudiante</span>
+    <div class="topbar-actions">
+      <div class="user-menu-wrap" id="user-menu-wrap">
+        <button type="button" class="user-menu-trigger" id="user-menu-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-menu-dropdown" title="Cuenta">
+          <div class="topbar-avatar" id="topbar-avatar">E</div>
+          <span class="topbar-username" id="topbar-username">Estudiante</span>
+          <i class="fas fa-chevron-down user-menu-chevron" aria-hidden="true"></i>
+        </button>
+        <div class="user-menu-dropdown hidden" id="user-menu-dropdown" role="menu">
+          <button type="button" class="user-menu-item user-menu-item--danger" id="user-menu-logout" role="menuitem">
+            <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+            Cerrar sesión
+          </button>
+        </div>
+      </div>
     </div>
-    <button class="topbar-logout" id="logout-btn" title="Cerrar sesión"><i class="fas fa-sign-out-alt"></i></button>
   </header>
 
   <!-- SIDEBAR OVERLAY -->

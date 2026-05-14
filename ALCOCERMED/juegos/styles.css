@@ -64,11 +64,22 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
 .topbar-logo-text{font-size:1.05rem;font-weight:800;color:var(--text);}
 .topbar-logo-text small{font-size:.7rem;font-weight:600;color:var(--text-mid);margin-left:4px;}
 .topbar-spacer{flex:1;}
-.topbar-user{display:flex;align-items:center;gap:8px;}
+.topbar-actions{display:flex;align-items:center;gap:8px;}
+
+.user-menu-wrap{position:relative;}
+.user-menu-trigger{display:flex;align-items:center;gap:8px;padding:6px 10px 6px 6px;border-radius:12px;border:1px solid transparent;background:transparent;cursor:pointer;font:inherit;color:inherit;text-align:left;transition:background .2s,border-color .2s;}
+.user-menu-trigger:hover{background:rgba(15,23,42,.04);border-color:var(--border);}
+.user-menu-wrap.is-open .user-menu-trigger{background:rgba(37,99,235,.06);border-color:rgba(37,99,235,.2);}
+.user-menu-chevron{font-size:.6rem;color:var(--text-light);transition:transform .2s ease;}
+.user-menu-wrap.is-open .user-menu-chevron{transform:rotate(180deg);}
+.user-menu-dropdown{position:absolute;right:0;top:calc(100% + 8px);min-width:200px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:6px;z-index:350;}
+.user-menu-item{width:100%;display:flex;align-items:center;gap:12px;padding:11px 14px;border:none;border-radius:10px;background:transparent;font-size:.88rem;font-weight:600;color:var(--text);cursor:pointer;text-align:left;transition:background .15s;}
+.user-menu-item:hover{background:rgba(15,23,42,.06);}
+.user-menu-item--danger{color:var(--red);}
+.user-menu-item--danger:hover{background:rgba(220,38,38,.1);color:var(--red-dark);}
+
 .topbar-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--yellow),var(--red));color:#fff;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;}
 .topbar-username{font-size:.85rem;font-weight:600;color:var(--text);}
-.topbar-logout{width:36px;height:36px;border-radius:10px;border:none;background:transparent;color:var(--text-light);cursor:pointer;font-size:16px;transition:.15s;}
-.topbar-logout:hover{background:var(--red-light);color:var(--red);}
 
 /* ═══ SIDEBAR ═══ */
 .sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:200;opacity:0;pointer-events:none;transition:opacity .3s;}
