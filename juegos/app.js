@@ -1115,13 +1115,32 @@ function loadReports() {
             container.innerHTML = '<div class="empty-state"><i class="fas fa-chart-line"></i><p>No hay informes disponibles</p><small>Publica evaluaciones para ver los resultados</small></div>';
             return;
         }
-        // Get results for these evaluations
         var evalIds = evRes.data.map(function(e) { return e.id; });
-        client.from('evaluacion_resultados').select('*').in('evaluacion_id', evalIds).order('created_at', {ascending: false}).then(function(rRes) {
+        
+        // Fetch results AND participants in parallel to get names
+        Promise.all([
+            client.from('evaluacion_resultados').select('*').in('evaluacion_id', evalIds),
+            client.from('evaluacion_participantes').select('evaluacion_id, user_id, nombre').in('evaluacion_id', evalIds)
+        ]).then(function(responses) {
+            var rRes = responses[0];
+            var pRes = responses[1];
+            
             if (rRes.error || !rRes.data || rRes.data.length === 0) {
                 container.innerHTML = '<div class="empty-state"><i class="fas fa-chart-line"></i><p>Aún no hay resultados</p><small>Los resultados aparecerán cuando los estudiantes completen evaluaciones</small></div>';
                 return;
             }
+            
+            // Create a lookup for participant names: { "evalId_userId": "Nombre" }
+            var nameMap = {};
+            if (!pRes.error && pRes.data) {
+                for (var n = 0; n < pRes.data.length; n++) {
+                    var p = pRes.data[n];
+                    if (p.evaluacion_id && p.user_id) {
+                        nameMap[p.evaluacion_id + '_' + p.user_id] = p.nombre;
+                    }
+                }
+            }
+            
             // Group by evaluation
             var grouped = {};
             for (var i = 0; i < rRes.data.length; i++) {
@@ -1129,12 +1148,20 @@ function loadReports() {
                 if (!grouped[res.evaluacion_id]) grouped[res.evaluacion_id] = [];
                 grouped[res.evaluacion_id].push(res);
             }
+            
             // Build HTML
             var html = '';
             for (var j = 0; j < evRes.data.length; j++) {
                 var ev = evRes.data[j];
                 var results = grouped[ev.id] || [];
                 if (results.length === 0) continue;
+                
+                // Sort results by porcentaje descending (Ranking)
+                results.sort(function(a, b) {
+                    if (b.porcentaje !== a.porcentaje) return b.porcentaje - a.porcentaje;
+                    return b.puntaje - a.puntaje; // Tie breaker
+                });
+                
                 var avgPct = 0;
                 for (var k = 0; k < results.length; k++) avgPct += (results[k].porcentaje || 0);
                 avgPct = Math.round(avgPct / results.length);
@@ -1144,24 +1171,39 @@ function loadReports() {
                 html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">';
                 html += '<div><h3 style="font-size:16px;font-weight:700">' + (ev.titulo || 'Sin título') + '</h3>';
                 html += '<span style="font-size:12px;color:#64748B">' + results.length + ' participante(s) • Código: ' + (ev.codigo || '-') + '</span></div>';
-                html += '<div style="text-align:right"><span style="font-size:24px;font-weight:800;color:' + barColor + '">' + avgPct + '%</span><br><span style="font-size:11px;color:#8E90A6">Promedio</span></div></div>';
-                // Progress bar
+                html += '<div style="text-align:right"><span style="font-size:24px;font-weight:800;color:' + barColor + '">' + avgPct + '%</span><br><span style="font-size:11px;color:#8E90A6">Promedio General</span></div></div>';
+                
+                // Progress bar (Average)
                 html += '<div style="background:#E2E8F0;border-radius:20px;height:8px;margin-bottom:16px;overflow:hidden"><div style="height:100%;width:' + avgPct + '%;background:' + barColor + ';border-radius:20px"></div></div>';
-                // Results table
+                
+                // Results Ranking table
                 html += '<table style="width:100%;border-collapse:collapse;font-size:13px">';
-                html += '<tr style="border-bottom:1px solid #E2E8F0"><th style="text-align:left;padding:8px;color:#64748B;font-weight:600">Estudiante</th><th style="padding:8px;color:#64748B;font-weight:600">Puntaje</th><th style="padding:8px;color:#64748B;font-weight:600">Precisión</th></tr>';
+                html += '<tr style="border-bottom:2px solid #E2E8F0;background:#F8FAFC"><th style="padding:10px 8px;color:#64748B;font-weight:700;width:40px;text-align:center">#</th><th style="text-align:left;padding:10px 8px;color:#64748B;font-weight:700">Estudiante</th><th style="padding:10px 8px;color:#64748B;font-weight:700;text-align:center">Respuestas Correctas</th><th style="padding:10px 8px;color:#64748B;font-weight:700;text-align:center">Precisión</th></tr>';
+                
                 for (var m = 0; m < results.length; m++) {
                     var r = results[m];
                     var pColor = r.porcentaje >= 70 ? '#22C55E' : r.porcentaje >= 40 ? '#F59E0B' : '#EF4444';
-                    html += '<tr style="border-bottom:1px solid #F1F5F9">';
-                    html += '<td style="padding:8px"><i class="fas fa-user-circle" style="color:#94A3B8;margin-right:6px"></i>' + (r.user_id ? r.user_id.substring(0, 8) + '...' : 'Anónimo') + '</td>';
-                    html += '<td style="padding:8px;text-align:center;font-weight:700">' + r.puntaje + '/' + r.total + '</td>';
-                    html += '<td style="padding:8px;text-align:center;font-weight:700;color:' + pColor + '">' + r.porcentaje + '%</td>';
+                    var studentName = nameMap[r.evaluacion_id + '_' + r.user_id] || (r.user_id ? r.user_id.substring(0, 8) + '...' : 'Anónimo');
+                    
+                    var rankIcon = (m + 1);
+                    var rankStyle = 'color:#64748B;font-weight:700;';
+                    if (m === 0) { rankIcon = '🥇'; rankStyle = 'font-size:16px;'; }
+                    else if (m === 1) { rankIcon = '🥈'; rankStyle = 'font-size:16px;'; }
+                    else if (m === 2) { rankIcon = '🥉'; rankStyle = 'font-size:16px;'; }
+                    
+                    html += '<tr style="border-bottom:1px solid #F1F5F9; transition: background .15s" onmouseover="this.style.background=\'#F8FAFC\'" onmouseout="this.style.background=\'transparent\'">';
+                    html += '<td style="padding:12px 8px;text-align:center;' + rankStyle + '">' + rankIcon + '</td>';
+                    html += '<td style="padding:12px 8px;font-weight:600;color:#334155"><i class="fas fa-user-circle" style="color:#94A3B8;margin-right:8px;font-size:15px"></i>' + studentName + '</td>';
+                    html += '<td style="padding:12px 8px;text-align:center;font-weight:700;color:#475569">' + r.puntaje + ' / ' + r.total + '</td>';
+                    html += '<td style="padding:12px 8px;text-align:center;font-weight:800;color:' + pColor + '"><div style="display:inline-block;padding:2px 8px;border-radius:12px;background:' + pColor + '15">' + r.porcentaje + '%</div></td>';
                     html += '</tr>';
                 }
                 html += '</table></div>';
             }
             container.innerHTML = html || '<div class="empty-state"><i class="fas fa-chart-line"></i><p>No hay resultados aún</p></div>';
+        }).catch(function(err) {
+            console.error(err);
+            container.innerHTML = '<div class="empty-state"><i class="fas fa-exclamation-triangle"></i><p>Error al cargar informes</p></div>';
         });
     });
 }
