@@ -79,6 +79,57 @@ window.selectAvatar = function(a) {
     closeAvatarModal();
 };
 
+window.showCustomConfirm = function(msg, callback) {
+    var overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,.8);backdrop-filter:blur(8px);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;';
+    var modal = document.createElement('div');
+    modal.style.cssText = 'background:#fff;border-radius:24px;width:100%;max-width:400px;padding:32px 24px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1)';
+    var icon = document.createElement('div');
+    icon.innerHTML = '<i class="fas fa-exclamation-triangle"></i>';
+    icon.style.cssText = 'font-size:40px;color:#F59E0B;margin-bottom:16px';
+    var text = document.createElement('p');
+    text.style.cssText = 'font-size:1rem;font-weight:600;color:#1E293B;margin-bottom:24px;line-height:1.5;';
+    text.textContent = msg;
+    var btnRow = document.createElement('div');
+    btnRow.style.cssText = 'display:flex;gap:12px;justify-content:center';
+    var cancelBtn = document.createElement('button');
+    cancelBtn.textContent = 'Cancelar';
+    cancelBtn.style.cssText = 'padding:12px 24px;background:#F1F5F9;color:#64748B;border:none;border-radius:12px;font-weight:700;cursor:pointer;flex:1;transition:background 0.2s';
+    cancelBtn.onmouseover = function() { this.style.background = '#E2E8F0'; };
+    cancelBtn.onmouseout = function() { this.style.background = '#F1F5F9'; };
+    cancelBtn.onclick = function() { document.body.removeChild(overlay); };
+    var confirmBtn = document.createElement('button');
+    confirmBtn.textContent = 'Aceptar';
+    confirmBtn.style.cssText = 'padding:12px 24px;background:#DC2626;color:#fff;border:none;border-radius:12px;font-weight:700;cursor:pointer;flex:1;transition:background 0.2s';
+    confirmBtn.onmouseover = function() { this.style.background = '#B91C1C'; };
+    confirmBtn.onmouseout = function() { this.style.background = '#DC2626'; };
+    confirmBtn.onclick = function() { document.body.removeChild(overlay); callback(); };
+    btnRow.appendChild(cancelBtn); btnRow.appendChild(confirmBtn);
+    modal.appendChild(icon); modal.appendChild(text); modal.appendChild(btnRow);
+    overlay.appendChild(modal); document.body.appendChild(overlay);
+};
+
+window.showCustomAlert = function(msg) {
+    var overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,.8);backdrop-filter:blur(8px);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;';
+    var modal = document.createElement('div');
+    modal.style.cssText = 'background:#fff;border-radius:24px;width:100%;max-width:400px;padding:32px 24px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1)';
+    var icon = document.createElement('div');
+    icon.innerHTML = '<i class="fas fa-info-circle"></i>';
+    icon.style.cssText = 'font-size:40px;color:#3B82F6;margin-bottom:16px';
+    var text = document.createElement('p');
+    text.style.cssText = 'font-size:1rem;font-weight:600;color:#1E293B;margin-bottom:24px;line-height:1.5;';
+    text.textContent = msg;
+    var confirmBtn = document.createElement('button');
+    confirmBtn.textContent = 'Entendido';
+    confirmBtn.style.cssText = 'padding:12px 24px;background:#2563EB;color:#fff;border:none;border-radius:12px;font-weight:700;cursor:pointer;width:100%;transition:background 0.2s';
+    confirmBtn.onmouseover = function() { this.style.background = '#1D4ED8'; };
+    confirmBtn.onmouseout = function() { this.style.background = '#2563EB'; };
+    confirmBtn.onclick = function() { document.body.removeChild(overlay); };
+    modal.appendChild(icon); modal.appendChild(text); modal.appendChild(confirmBtn);
+    overlay.appendChild(modal); document.body.appendChild(overlay);
+};
+
 function getSupabase() {
     if (!sb) {
         if (typeof window.supabase === 'undefined' || !window.supabase.createClient) {
@@ -1397,7 +1448,7 @@ function loadLibrary() {
                 '<div style="display:flex;gap:8px">' +
                 '<button onclick="window.location.href=\'editor.html?id=' + ev.id + 
                 '\'" style="padding:8px 14px;background:#F0F1F3;border:1px solid #E2E8F0;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#555"><i class="fas fa-edit"></i> Editar</button>' +
-                (ev.publicado ? '<button onclick="alert(\'Código: ' + (ev.codigo||'') + '\')" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;margin-left:4px"><i class="fas fa-play"></i> Código</button>' : '') +
+                (ev.publicado ? '<button onclick="showCustomAlert(\'Código: ' + (ev.codigo||'') + '\')" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;margin-left:4px"><i class="fas fa-play"></i> Código</button>' : '') +
                 '<button onclick="deleteQuiz(\'' + ev.id + '\')" style="padding:8px 14px;background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#DC2626;margin-left:4px" title="Borrar"><i class="fas fa-trash-alt"></i></button>' +
                 '</div></div>';
         }
@@ -1406,28 +1457,28 @@ function loadLibrary() {
 }
 
 window.deleteQuiz = function(id) {
-    if (!confirm('¿Estás seguro de que deseas borrar permanentemente esta evaluación? Todos los resultados e informes asociados también se perderán.')) return;
-    
     var btn = event.currentTarget;
-    if (btn) btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+    showCustomConfirm('¿Estás seguro de que deseas borrar permanentemente esta evaluación? Todos los resultados e informes asociados también se perderán.', function() {
+        if (btn) btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
 
-    var client = getSupabase();
-    
-    // Primero intentamos borrar dependencias (por si la BD no tiene ON DELETE CASCADE configurado)
-    Promise.all([
-        client.from('evaluacion_preguntas').delete().eq('evaluacion_id', id),
-        client.from('evaluacion_participantes').delete().eq('evaluacion_id', id),
-        client.from('evaluacion_resultados').delete().eq('evaluacion_id', id)
-    ]).then(function() {
-        // Finalmente borramos la evaluación padre
-        client.from('evaluaciones').delete().eq('id', id).then(function(r) {
-            if (r.error) {
-                alert('Error al borrar: ' + r.error.message);
-                if (btn) btn.innerHTML = '<i class="fas fa-trash-alt"></i>';
-            } else {
-                loadLibrary();
-                if (typeof loadReports === 'function') loadReports();
-            }
+        var client = getSupabase();
+        
+        // Primero intentamos borrar dependencias (por si la BD no tiene ON DELETE CASCADE configurado)
+        Promise.all([
+            client.from('evaluacion_preguntas').delete().eq('evaluacion_id', id),
+            client.from('evaluacion_participantes').delete().eq('evaluacion_id', id),
+            client.from('evaluacion_resultados').delete().eq('evaluacion_id', id)
+        ]).then(function() {
+            // Finalmente borramos la evaluación padre
+            client.from('evaluaciones').delete().eq('id', id).then(function(r) {
+                if (r.error) {
+                    showCustomAlert('Error al borrar: ' + r.error.message);
+                    if (btn) btn.innerHTML = '<i class="fas fa-trash-alt"></i>';
+                } else {
+                    loadLibrary();
+                    if (typeof loadReports === 'function') loadReports();
+                }
+            });
         });
     });
 };
