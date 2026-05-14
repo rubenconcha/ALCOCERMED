@@ -271,6 +271,7 @@
         <span class="lobby-title" id="lobby-quiz-title">preguntas ejemplo</span>
         <span class="lobby-dot">•</span>
         <span class="lobby-count" id="lobby-question-count">4 preguntas</span>
+        <button class="lobby-music-toggle" id="lobby-music-btn" onclick="toggleLobbyMusic()" title="Música" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);color:#fff;padding:8px 14px;border-radius:8px;cursor:pointer;font-size:14px;margin-right:8px;transition:.2s"><i class="fas fa-volume-up"></i></button>
         <button class="lobby-close" onclick="closeLobby()"><i class="fas fa-times"></i> Terminar</button>
       </div>
       <div class="lobby-body">
@@ -287,7 +288,9 @@
           <div class="lobby-code" id="lobby-code">000000</div>
         </div>
         <div class="lobby-qr" id="lobby-qr">
-          <div class="qr-placeholder">QR</div>
+          <div id="lobby-qr-canvas" style="width:140px;height:140px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;overflow:hidden">
+            <i class="fas fa-spinner fa-spin" style="color:#94A3B8;font-size:24px"></i>
+          </div>
           <div class="lobby-share">
             <span>Compartir vía</span>
             <button onclick="copyLobbyCode()"><i class="fas fa-link"></i></button>

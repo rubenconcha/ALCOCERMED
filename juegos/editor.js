@@ -393,6 +393,7 @@ function startLiveSession(){
 
 // ═══ LOBBY ═══
 var lobbyPollInterval=null;
+var lobbyMusic=null;
 
 function showLobby(code){
   var title=document.getElementById('quiz-title-input').value;
@@ -402,14 +403,219 @@ function showLobby(code){
   document.getElementById('lobby-player-count').textContent='0';
   document.getElementById('lobby-overlay').classList.add('active');
 
-  // Limpiar participantes anteriores
-  var client=getSupabase();
-  client.from('evaluacion_participantes').delete().eq('evaluacion_id',evaluacionId).then(function(){});
+  // Generar QR real
+  generateLobbyQR(code);
 
-  // Iniciar polling de participantes cada 3 segundos
-  pollLobbyParticipants();
-  if(lobbyPollInterval)clearInterval(lobbyPollInterval);
-  lobbyPollInterval=setInterval(pollLobbyParticipants,3000);
+  // Iniciar música del lobby
+  startLobbyMusic();
+
+  // Limpiar participantes y resultados anteriores antes de empezar a hacer polling
+  var client=getSupabase();
+  Promise.all([
+    client.from('evaluacion_participantes').delete().eq('evaluacion_id',evaluacionId),
+    client.from('evaluacion_resultados').delete().eq('evaluacion_id',evaluacionId)
+  ]).then(function(){
+    // Limpiar contenedor de participantes visualmente
+    var container=document.getElementById('lobby-players-list');
+    if(container) container.innerHTML='';
+    document.getElementById('lobby-player-count').textContent='0';
+    // Ahora sí iniciar polling con tabla limpia
+    pollLobbyParticipants();
+    if(lobbyPollInterval)clearInterval(lobbyPollInterval);
+    lobbyPollInterval=setInterval(pollLobbyParticipants,3000);
+  });
+}
+
+function generateLobbyQR(code){
+  var qrContainer=document.getElementById('lobby-qr-canvas');
+  if(!qrContainer) return;
+  qrContainer.innerHTML='';
+  // Build join URL dynamically from current host
+  var baseUrl=window.location.origin+window.location.pathname.replace(/editor\.html.*$/,'index.html');
+  var joinUrl=baseUrl+'?code='+code;
+  var qrApiUrl='https://api.qrserver.com/v1/create-qr-code/?size=160x160&data='+encodeURIComponent(joinUrl)+'&bgcolor=ffffff&color=2D1B4E&margin=8';
+  var img=document.createElement('img');
+  img.src=qrApiUrl;
+  img.alt='QR para unirse';
+  img.style.cssText='width:140px;height:140px;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.15);';
+  img.onerror=function(){qrContainer.innerHTML='<div style="width:140px;height:140px;background:#F1F5F9;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#64748B;font-size:12px">QR no disponible</div>';};
+  qrContainer.appendChild(img);
+}
+
+function startLobbyMusic(){
+  try{
+    if(lobbyMusic && lobbyMusic._ctx){
+      // Resume existing
+      lobbyMusic._ctx.resume();
+      lobbyMusic._playing=true;
+      return;
+    }
+    var ctx=new (window.AudioContext||window.webkitAudioContext)();
+    var master=ctx.createGain();
+    master.gain.value=0.25;
+    master.connect(ctx.destination);
+
+    // ═══ Catchy Lobby Beat Generator ═══
+    // Uses pentatonic scale for a fun, upbeat game vibe
+    var bpm=128;
+    var beatLen=60/bpm;
+    var notes=[261.63,293.66,329.63,392.00,440.00,523.25,587.33,659.25]; // C major pentatonic extended
+    var bassNotes=[130.81,146.83,164.81,196.00]; // Bass C D E G
+    var loopLen=8*beatLen; // 8 beats per loop
+    var playing=true;
+
+    function playBeat(startTime){
+      // Kick drum (low frequency)
+      for(var k=0;k<8;k++){
+        if(k%2===0){
+          var kickOsc=ctx.createOscillator();
+          var kickGain=ctx.createGain();
+          kickOsc.type='sine';
+          kickOsc.frequency.setValueAtTime(150,startTime+k*beatLen);
+          kickOsc.frequency.exponentialRampToValueAtTime(40,startTime+k*beatLen+0.08);
+          kickGain.gain.setValueAtTime(0.6,startTime+k*beatLen);
+          kickGain.gain.exponentialRampToValueAtTime(0.001,startTime+k*beatLen+0.15);
+          kickOsc.connect(kickGain);
+          kickGain.connect(master);
+          kickOsc.start(startTime+k*beatLen);
+          kickOsc.stop(startTime+k*beatLen+0.2);
+        }
+      }
+
+      // Hi-hat pattern
+      for(var h=0;h<16;h++){
+        var noise=ctx.createBufferSource();
+        var bufLen=ctx.sampleRate*0.03;
+        var buf=ctx.createBuffer(1,bufLen,ctx.sampleRate);
+        var data=buf.getChannelData(0);
+        for(var s=0;s<bufLen;s++) data[s]=(Math.random()*2-1)*0.3;
+        noise.buffer=buf;
+        var hhGain=ctx.createGain();
+        var hhTime=startTime+h*(beatLen/2);
+        hhGain.gain.setValueAtTime(h%2===0?0.15:0.08,hhTime);
+        hhGain.gain.exponentialRampToValueAtTime(0.001,hhTime+0.05);
+        var hhFilter=ctx.createBiquadFilter();
+        hhFilter.type='highpass';
+        hhFilter.frequency.value=8000;
+        noise.connect(hhFilter);
+        hhFilter.connect(hhGain);
+        hhGain.connect(master);
+        noise.start(hhTime);
+        noise.stop(hhTime+0.06);
+      }
+
+      // Bass line
+      for(var b=0;b<4;b++){
+        var bassOsc=ctx.createOscillator();
+        var bassGain=ctx.createGain();
+        bassOsc.type='sawtooth';
+        bassOsc.frequency.value=bassNotes[b%bassNotes.length];
+        var bassFilter=ctx.createBiquadFilter();
+        bassFilter.type='lowpass';
+        bassFilter.frequency.value=300;
+        var bTime=startTime+b*beatLen*2;
+        bassGain.gain.setValueAtTime(0.25,bTime);
+        bassGain.gain.exponentialRampToValueAtTime(0.001,bTime+beatLen*1.5);
+        bassOsc.connect(bassFilter);
+        bassFilter.connect(bassGain);
+        bassGain.connect(master);
+        bassOsc.start(bTime);
+        bassOsc.stop(bTime+beatLen*2);
+      }
+
+      // Melody (synth lead)
+      var melodyPattern=[0,2,4,5,4,2,3,1]; // Index into notes array
+      for(var m=0;m<8;m++){
+        var noteIdx=melodyPattern[m];
+        var mOsc=ctx.createOscillator();
+        var mGain=ctx.createGain();
+        mOsc.type='square';
+        var mFilter=ctx.createBiquadFilter();
+        mFilter.type='lowpass';
+        mFilter.frequency.value=1200;
+        mOsc.frequency.value=notes[noteIdx];
+        var mTime=startTime+m*beatLen;
+        mGain.gain.setValueAtTime(0.12,mTime);
+        mGain.gain.setValueAtTime(0.12,mTime+beatLen*0.6);
+        mGain.gain.exponentialRampToValueAtTime(0.001,mTime+beatLen*0.9);
+        mOsc.connect(mFilter);
+        mFilter.connect(mGain);
+        mGain.connect(master);
+        mOsc.start(mTime);
+        mOsc.stop(mTime+beatLen);
+      }
+
+      // Chord pad (soft background)
+      var padOsc1=ctx.createOscillator();
+      var padOsc2=ctx.createOscillator();
+      var padGain=ctx.createGain();
+      padOsc1.type='sine';
+      padOsc2.type='sine';
+      padOsc1.frequency.value=261.63; // C
+      padOsc2.frequency.value=329.63; // E
+      padGain.gain.setValueAtTime(0.06,startTime);
+      padOsc1.connect(padGain);
+      padOsc2.connect(padGain);
+      padGain.connect(master);
+      padOsc1.start(startTime);
+      padOsc2.start(startTime);
+      padOsc1.stop(startTime+loopLen);
+      padOsc2.stop(startTime+loopLen);
+    }
+
+    function scheduleLoop(){
+      if(!playing) return;
+      var now=ctx.currentTime;
+      playBeat(now+0.05);
+      setTimeout(scheduleLoop,loopLen*1000);
+    }
+
+    scheduleLoop();
+
+    lobbyMusic={
+      _ctx:ctx,
+      _playing:true,
+      _master:master,
+      pause:function(){
+        playing=false;
+        this._playing=false;
+        if(ctx.state==='running') ctx.suspend();
+      },
+      play:function(){
+        playing=true;
+        this._playing=true;
+        ctx.resume();
+        scheduleLoop();
+        return Promise.resolve();
+      },
+      get paused(){return !this._playing;}
+    };
+  }catch(e){console.log('Music error:',e);}
+}
+
+function stopLobbyMusic(){
+  if(lobbyMusic){
+    if(lobbyMusic._ctx){
+      lobbyMusic._ctx.close().catch(function(){});
+    }
+    lobbyMusic=null;
+  }
+}
+
+function toggleLobbyMusic(){
+  var btn=document.getElementById('lobby-music-btn');
+  if(!lobbyMusic || !lobbyMusic._ctx){
+    startLobbyMusic();
+    if(btn) btn.innerHTML='<i class="fas fa-volume-up"></i>';
+    return;
+  }
+  if(lobbyMusic._playing){
+    lobbyMusic.pause();
+    if(btn) btn.innerHTML='<i class="fas fa-volume-mute"></i>';
+  }else{
+    lobbyMusic.play().catch(function(){});
+    if(btn) btn.innerHTML='<i class="fas fa-volume-up"></i>';
+  }
 }
 
 function pollLobbyParticipants(){
@@ -451,6 +657,7 @@ function pollLobbyParticipants(){
 function closeLobby(){
   document.getElementById('lobby-overlay').classList.remove('active');
   if(lobbyPollInterval){clearInterval(lobbyPollInterval);lobbyPollInterval=null;}
+  stopLobbyMusic();
 }
 function copyLobbyCode(){
   var code=document.getElementById('lobby-code').textContent;
@@ -458,6 +665,7 @@ function copyLobbyCode(){
 }
 function startGameFromLobby(){
   if(lobbyPollInterval){clearInterval(lobbyPollInterval);lobbyPollInterval=null;}
+  stopLobbyMusic();
   var client=getSupabase();
   client.from('evaluaciones').update({iniciado:true,updated_at:new Date().toISOString()}).eq('id',evaluacionId).then(function(r){
     if(r.error){showToast('Error al iniciar: '+r.error.message,'error');return;}

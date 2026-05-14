@@ -120,9 +120,18 @@ function enterApp() {
         });
     }
 
+    // Verificar si hay un código en la URL (desde QR)
+    var urlParams = new URLSearchParams(window.location.search);
+    var urlCode = urlParams.get('code');
+    
     // Verificar si hay una sesión de quiz pendiente (por si recargó la página)
     var pendingCode = sessionStorage.getItem('alcocer_quiz_code');
-    if (pendingCode && !isAdmin) {
+    
+    if (urlCode && !isAdmin) {
+        // Limpiar el parámetro de la URL para evitar re-joins
+        window.history.replaceState({}, document.title, window.location.pathname);
+        searchAndStartQuiz(urlCode);
+    } else if (pendingCode && !isAdmin) {
         searchAndStartQuiz(pendingCode);
     } else {
         navigateTo('inicio');
@@ -381,6 +390,107 @@ function searchAndStartQuiz(code) {
 }
 
 var waitingPollInterval = null;
+var waitingMusic = null;
+
+function startWaitingMusic() {
+    try {
+        if (waitingMusic && waitingMusic._ctx) {
+            waitingMusic._ctx.resume();
+            waitingMusic._playing = true;
+            return;
+        }
+        var ctx = new (window.AudioContext || window.webkitAudioContext)();
+        var master = ctx.createGain();
+        master.gain.value = 0.18;
+        master.connect(ctx.destination);
+
+        // Ambient chill waiting room music
+        var bpm = 90;
+        var beatLen = 60 / bpm;
+        var chillNotes = [261.63, 329.63, 392.00, 440.00, 523.25]; // C E G A C5
+        var loopLen = 8 * beatLen;
+        var playing = true;
+
+        function playWaitingBeat(startTime) {
+            // Soft pad chords
+            var padNotes = [261.63, 329.63, 392.00];
+            for (var p = 0; p < padNotes.length; p++) {
+                var padOsc = ctx.createOscillator();
+                var padGain = ctx.createGain();
+                padOsc.type = 'sine';
+                padOsc.frequency.value = padNotes[p];
+                padGain.gain.setValueAtTime(0, startTime);
+                padGain.gain.linearRampToValueAtTime(0.08, startTime + 0.5);
+                padGain.gain.setValueAtTime(0.08, startTime + loopLen - 0.5);
+                padGain.gain.linearRampToValueAtTime(0, startTime + loopLen);
+                padOsc.connect(padGain);
+                padGain.connect(master);
+                padOsc.start(startTime);
+                padOsc.stop(startTime + loopLen);
+            }
+
+            // Gentle arpeggiated melody
+            var arpPattern = [0, 2, 4, 3, 2, 4, 3, 1];
+            for (var a = 0; a < 8; a++) {
+                var arpOsc = ctx.createOscillator();
+                var arpGain = ctx.createGain();
+                var arpFilter = ctx.createBiquadFilter();
+                arpOsc.type = 'triangle';
+                arpFilter.type = 'lowpass';
+                arpFilter.frequency.value = 800;
+                arpOsc.frequency.value = chillNotes[arpPattern[a]];
+                var aTime = startTime + a * beatLen;
+                arpGain.gain.setValueAtTime(0, aTime);
+                arpGain.gain.linearRampToValueAtTime(0.15, aTime + 0.05);
+                arpGain.gain.exponentialRampToValueAtTime(0.001, aTime + beatLen * 0.8);
+                arpOsc.connect(arpFilter);
+                arpFilter.connect(arpGain);
+                arpGain.connect(master);
+                arpOsc.start(aTime);
+                arpOsc.stop(aTime + beatLen);
+            }
+
+            // Soft sub-bass pulse
+            for (var b = 0; b < 4; b++) {
+                var bassOsc = ctx.createOscillator();
+                var bassGain = ctx.createGain();
+                bassOsc.type = 'sine';
+                bassOsc.frequency.value = 130.81;
+                var bTime = startTime + b * beatLen * 2;
+                bassGain.gain.setValueAtTime(0, bTime);
+                bassGain.gain.linearRampToValueAtTime(0.2, bTime + 0.1);
+                bassGain.gain.exponentialRampToValueAtTime(0.001, bTime + beatLen * 1.5);
+                bassOsc.connect(bassGain);
+                bassGain.connect(master);
+                bassOsc.start(bTime);
+                bassOsc.stop(bTime + beatLen * 2);
+            }
+        }
+
+        function scheduleWaitingLoop() {
+            if (!playing) return;
+            var now = ctx.currentTime;
+            playWaitingBeat(now + 0.05);
+            setTimeout(scheduleWaitingLoop, loopLen * 1000);
+        }
+
+        scheduleWaitingLoop();
+
+        waitingMusic = {
+            _ctx: ctx,
+            _playing: true,
+            pause: function() { playing = false; this._playing = false; if (ctx.state === 'running') ctx.suspend(); },
+            stop: function() { playing = false; this._playing = false; ctx.close().catch(function(){}); }
+        };
+    } catch (e) { console.log('Waiting music error:', e); }
+}
+
+function stopWaitingMusic() {
+    if (waitingMusic) {
+        waitingMusic.stop();
+        waitingMusic = null;
+    }
+}
 
 function showWaitingRoom() {
     var wt = document.getElementById('quiz-waiting');
@@ -393,6 +503,9 @@ function showWaitingRoom() {
     var wtSub = document.getElementById('waiting-subtitle');
     if (wtSub) wtSub.textContent = '"' + title + '" comenzará cuando el profesor presione EMPEZAR';
 
+    // Iniciar música de espera
+    startWaitingMusic();
+
     // Poll cada 3 segundos para verificar si el admin inició
     if (waitingPollInterval) clearInterval(waitingPollInterval);
     waitingPollInterval = setInterval(function() {
@@ -402,6 +515,7 @@ function showWaitingRoom() {
             if (r.data && r.data.iniciado) {
                 clearInterval(waitingPollInterval);
                 waitingPollInterval = null;
+                stopWaitingMusic(); // Parar música al iniciar
                 var wt2 = document.getElementById('quiz-waiting');
                 if (wt2) wt2.style.display = 'none';
                 document.getElementById('quiz-container').style.display = 'block';
@@ -415,7 +529,8 @@ var quizTimerInterval = null;
 var quizTimeLeft = 30;
 
 function showSplashAndStart() {
-    // Asegurar que la sala de espera se oculte
+    // Asegurar que la sala de espera se oculte y la música pare
+    stopWaitingMusic();
     var wt = document.getElementById('quiz-waiting');
     if (wt) wt.style.display = 'none';
 
