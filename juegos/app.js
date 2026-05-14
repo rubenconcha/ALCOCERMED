@@ -1363,3 +1363,28 @@ window.addEventListener('beforeinstallprompt', function(e) {
         });
     }
 });
+
+// ═══ DARK MODE TOGGLE ═══
+function initTheme() {
+    var theme = localStorage.getItem('alcocermed_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+    updateThemeIcon(theme);
+    
+    var themeBtn = document.getElementById('theme-toggle-btn');
+    if (themeBtn) {
+        themeBtn.addEventListener('click', function() {
+            var current = document.documentElement.getAttribute('data-theme');
+            var next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('alcocermed_theme', next);
+            updateThemeIcon(next);
+        });
+    }
+}
+function updateThemeIcon(theme) {
+    var icon = document.querySelector('#theme-toggle-btn i');
+    if (icon) {
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+}
+document.addEventListener('DOMContentLoaded', initTheme);
