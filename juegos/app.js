@@ -11,6 +11,74 @@ var sb = null;
 var currentUser = null;
 var isAdmin = false;
 
+// ═══ AUDIO GLOBAL Y AVATARES ═══
+var globalAudioCtx = null;
+var preloadedAudio = {};
+var currentAvatar = '👤';
+var availableAvatars = ['🦊','🐼','🦁','🐯','🐰','🐶','🐱','🦄','🦖','🐙','🦋','🦅'];
+
+function getAudioCtx() {
+    if (!globalAudioCtx) {
+        var AC = window.AudioContext || window.webkitAudioContext;
+        globalAudioCtx = new AC();
+    }
+    if (globalAudioCtx.state === 'suspended') {
+        globalAudioCtx.resume();
+    }
+    return globalAudioCtx;
+}
+
+function preloadAudio(name, url) {
+    fetch(url).then(function(r) { return r.arrayBuffer(); })
+              .then(function(buf) { return getAudioCtx().decodeAudioData(buf); })
+              .then(function(decoded) { preloadedAudio[name] = decoded; })
+              .catch(function(e) { console.warn('Error audio:', name, e); });
+}
+
+document.addEventListener('click', function() {
+    getAudioCtx();
+    if (!preloadedAudio['error']) preloadAudio('error', './error_sound.mp3');
+    if (!preloadedAudio['hurry']) preloadAudio('hurry', './hurry_up.mp3');
+}, { once: true });
+
+function initAvatars() {
+    if (currentUser && currentUser.user_metadata && currentUser.user_metadata.avatar) {
+        currentAvatar = currentUser.user_metadata.avatar;
+    }
+    var disp = document.getElementById('current-avatar-display');
+    if (disp) disp.textContent = currentAvatar;
+}
+
+window.openAvatarModal = function() {
+    var modal = document.getElementById('avatar-modal');
+    var grid = document.getElementById('avatar-grid');
+    if (!modal || !grid) return;
+    var html = '';
+    for (var i=0; i<availableAvatars.length; i++) {
+        var a = availableAvatars[i];
+        var isSel = (a === currentAvatar);
+        html += '<div onclick="selectAvatar(\'' + a + '\')" style="height:64px;border-radius:16px;background:' + (isSel ? '#E0E7FF' : '#F8FAFC') + ';border:2px solid ' + (isSel ? '#6366F1' : '#E2E8F0') + ';display:flex;align-items:center;justify-content:center;font-size:32px;cursor:pointer;transition:transform .15s;transform:' + (isSel ? 'scale(1.05)' : 'none') + '">' + a + '</div>';
+    }
+    grid.innerHTML = html;
+    modal.classList.remove('hidden');
+};
+
+window.closeAvatarModal = function() {
+    var modal = document.getElementById('avatar-modal');
+    if (modal) modal.classList.add('hidden');
+};
+
+window.selectAvatar = function(a) {
+    currentAvatar = a;
+    var disp = document.getElementById('current-avatar-display');
+    if (disp) disp.textContent = currentAvatar;
+    if (currentUser) {
+        var client = getSupabase();
+        client.auth.updateUser({ data: { avatar: a } });
+    }
+    closeAvatarModal();
+};
+
 function getSupabase() {
     if (!sb) {
         if (typeof window.supabase === 'undefined' || !window.supabase.createClient) {
@@ -96,6 +164,18 @@ function enterApp() {
             adminEls[i].classList.add('hidden');
         }
     }
+    
+    // Show/hide student sections
+    var studentEls = document.querySelectorAll('.student-only');
+    for (var i = 0; i < studentEls.length; i++) {
+        if (isAdmin) {
+            studentEls[i].classList.add('hidden');
+        } else {
+            studentEls[i].classList.remove('hidden');
+        }
+    }
+    
+    initAvatars();
 
     var adminNav = document.getElementById('admin-nav-section');
     if (adminNav) {
@@ -356,13 +436,15 @@ function searchAndStartQuiz(code) {
 
             // Registrar participante en el lobby (upsert para evitar duplicados)
             if (currentUser) {
-                var nombre = currentUser.user_metadata && currentUser.user_metadata.full_name
+                var nombreReal = currentUser.user_metadata && currentUser.user_metadata.full_name
                     ? currentUser.user_metadata.full_name
                     : (currentUser.email || '').split('@')[0];
+                var nombreConAvatar = currentAvatar + '|' + nombreReal;
+                
                 client.from('evaluacion_participantes').upsert({
                     evaluacion_id: evaluacion.id,
                     user_id: currentUser.id,
-                    nombre: nombre,
+                    nombre: nombreConAvatar,
                     joined_at: new Date().toISOString()
                 }, { onConflict: 'evaluacion_id,user_id' }).then(function(pr) {
                     if (pr.error) console.warn('No se pudo registrar participante:', pr.error.message);
@@ -584,6 +666,9 @@ function showWaitingRoom() {
 
     // Iniciar música lo-fi
     startGameMusic();
+    
+    var wtAv = document.getElementById('waiting-avatar-icon');
+    if (wtAv) wtAv.textContent = currentAvatar;
 
     // Poll cada 3 segundos para verificar si el admin inició
     if (waitingPollInterval) clearInterval(waitingPollInterval);
@@ -652,9 +737,19 @@ function playSuccessSound() {
 
 function playErrorSound() {
     try {
-        var audio = new Audio('./error_sound.mp3');
-        audio.volume = 0.5;
-        audio.play().catch(function(e) { console.warn('Audio play failed', e); });
+        var ctx = getAudioCtx();
+        if (preloadedAudio['error']) {
+            var src = ctx.createBufferSource();
+            src.buffer = preloadedAudio['error'];
+            var g = ctx.createGain();
+            g.gain.value = 0.5;
+            src.connect(g); g.connect(ctx.destination);
+            src.start(0);
+        } else {
+            var audio = new Audio('./error_sound.mp3');
+            audio.volume = 0.5;
+            audio.play().catch(function(e) { console.warn('Audio play failed', e); });
+        }
     } catch(e) {}
 }
 
@@ -749,9 +844,19 @@ function startQuestionTimer(seconds) {
         // Faltando 10 segundos: sonido de apuro (Mario)
         if (quizTimeLeft === 10) {
             try {
-                var hurryAudio = new Audio('./hurry_up.mp3');
-                hurryAudio.volume = 0.7;
-                hurryAudio.play().catch(function(e){});
+                var ctx = getAudioCtx();
+                if (preloadedAudio['hurry']) {
+                    var src = ctx.createBufferSource();
+                    src.buffer = preloadedAudio['hurry'];
+                    var g = ctx.createGain();
+                    g.gain.value = 0.7;
+                    src.connect(g); g.connect(ctx.destination);
+                    src.start(0);
+                } else {
+                    var hurryAudio = new Audio('./hurry_up.mp3');
+                    hurryAudio.volume = 0.7;
+                    hurryAudio.play().catch(function(e){});
+                }
             } catch(e) {}
         }
         
@@ -1102,7 +1207,14 @@ function loadLeaderboard(evalId) {
             var nameMap = {};
             if (pRes.data) {
                 for (var n = 0; n < pRes.data.length; n++) {
-                    nameMap[pRes.data[n].user_id] = pRes.data[n].nombre;
+                    var raw = pRes.data[n].nombre || 'Estudiante';
+                    var av = '👤';
+                    var nm = raw;
+                    if (raw.indexOf('|') !== -1) {
+                        var parts = raw.split('|');
+                        av = parts[0]; nm = parts[1];
+                    }
+                    nameMap[pRes.data[n].user_id] = { nombre: nm, avatar: av };
                 }
             }
 
@@ -1110,9 +1222,11 @@ function loadLeaderboard(evalId) {
             // Build leaderboard entries
             var entries = [];
             for (var k = 0; k < results.length; k++) {
+                var mapData = nameMap[results[k].user_id] || { nombre: 'Estudiante', avatar: '👤' };
                 entries.push({
                     user_id: results[k].user_id,
-                    nombre: nameMap[results[k].user_id] || 'Estudiante',
+                    nombre: mapData.nombre,
+                    avatar: mapData.avatar,
                     puntaje: results[k].puntaje,
                     total: results[k].total,
                     porcentaje: results[k].porcentaje
@@ -1175,13 +1289,12 @@ function renderPodium(entries) {
         }
         var e = entries[idx];
         var h = heights[idx];
-        var initial = e.nombre.charAt(0).toUpperCase();
         var delay = (p===1) ? 0.6 : (p===0 ? 0.3 : 0.9); // Orden de aparición: 2do, 1ro, 3ro
 
         pillarsHtml += '<div style="flex:1;max-width:140px;display:flex;flex-direction:column;align-items:center;animation:fadeInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ' + delay + 's both">';
         
         // Avatar
-        pillarsHtml += '<div style="width:60px;height:60px;border-radius:50%;background:' + colors[idx] + ';display:flex;align-items:center;justify-content:center;font-weight:900;font-size:26px;color:' + textColors[idx] + ';margin-bottom:12px;box-shadow:0 0 24px ' + colors[idx] + '80;border:3px solid #fff;position:relative;z-index:2">' + initial + '</div>';
+        pillarsHtml += '<div style="width:60px;height:60px;border-radius:50%;background:' + colors[idx] + ';display:flex;align-items:center;justify-content:center;font-weight:900;font-size:32px;margin-bottom:12px;box-shadow:0 0 24px ' + colors[idx] + '80;border:3px solid #fff;position:relative;z-index:2">' + e.avatar + '</div>';
         
         // Name
         pillarsHtml += '<span style="font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;text-align:center;text-shadow:0 2px 4px rgba(0,0,0,0.5)">' + e.nombre + '</span>';
