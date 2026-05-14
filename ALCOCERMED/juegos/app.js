@@ -143,7 +143,7 @@ function handleLogin(e) {
     var password = passField.value;
 
     if (!email || !password) {
-        showLoginError('Completa todos los campos');
+        showLoginError('Falta usuario o contraseña');
         return;
     }
     if (password.length < 6) {
@@ -170,9 +170,9 @@ function handleLogin(e) {
             var msg = 'Credenciales incorrectas';
             var errMsg = result.error.message || '';
             if (errMsg.indexOf('Invalid login') !== -1) {
-                msg = 'Correo o contraseña incorrectos';
+                msg = 'Usuario o contraseña incorrectos';
             } else if (errMsg.indexOf('Email not confirmed') !== -1) {
-                msg = 'Confirma tu correo antes de ingresar';
+                msg = 'Confirma tu cuenta antes de entrar';
             } else if (errMsg.indexOf('Too many requests') !== -1) {
                 msg = 'Demasiados intentos. Espera unos minutos.';
             } else if (errMsg.indexOf('Invalid API key') !== -1) {
