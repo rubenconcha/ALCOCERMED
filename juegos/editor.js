@@ -56,12 +56,13 @@ function initEditor(){
   else{createNewEvaluation();}
   renderQuestionTypes();
   renderQuestionThumbs();
+  var activeSession=sessionStorage.getItem('alcocer_teacher_eval');
   if(showRes === 'true' && editId) {
     evaluacionId=editId;
-    setTimeout(function(){openTeacherResults(false);}, 1000);
+    openTeacherResults(false);
   } else if(activeSession){
     evaluacionId=activeSession;
-    setTimeout(function(){openTeacherResults(true);},1000);
+    openTeacherResults(true);
   }
 }
 
