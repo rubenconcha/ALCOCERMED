@@ -4,14 +4,14 @@ import { WebView } from 'react-native-webview';
 import Constants from 'expo-constants';
 
 export default function App() {
-  // Configurado con la IP local para ver los cambios en vivo.
-  // IMPORTANTE: Asegúrate de que el comando "npx serve ." siga ejecutándose en tu PC.
-  const URL = 'http://192.168.1.7:3000/juegos/';
+  // URL configurada para ver la versión en producción.
+  const URL = 'https://alcocermed.com/juegos/';
 
   return (
     <SafeAreaView style={styles.container}>
       <WebView 
         source={{ uri: URL }} 
+        injectedJavaScript={`document.body.classList.add('is-native-app'); true;`}
         style={styles.webview}
         // Permite la reproducción de media en línea (videos, audio)
         allowsInlineMediaPlayback={true}
@@ -20,7 +20,7 @@ export default function App() {
         scalesPageToFit={false}
         bounces={false}
       />
-      <StatusBar style="auto" />
+      <StatusBar hidden={true} />
     </SafeAreaView>
   );
 }
