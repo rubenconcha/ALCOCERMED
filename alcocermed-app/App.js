@@ -29,8 +29,8 @@ export default function App() {
                  ========================================= */
               * { -webkit-tap-highlight-color: transparent; }
               
-              /* TOPBAR NATIVA - ENGROSADA */
-              .topbar { 
+              /* TOPBAR NATIVA - ENGROSADA (Para App y Editor) */
+              .topbar, .editor-topbar { 
                 display: flex !important;
                 height: 110px !important; /* Engrosada */
                 padding-top: 45px !important; /* Espacio para la barra de estado/notch del celular */
@@ -44,11 +44,15 @@ export default function App() {
                 z-index: 1000 !important;
               }
               
-              /* CONTENIDO PRINCIPAL */
-              .main-content {
+              /* CONTENIDO PRINCIPAL (Para App y Editor) */
+              .main-content, .editor-layout {
                 margin-top: 0 !important;
                 padding-top: 130px !important; /* Para que no se solape con el topbar fijo y grueso */
                 padding-bottom: 140px !important; /* Espacio extra para que no se solape la tarjeta inferior con la barra de abajo */
+              }
+              .editor-layout {
+                height: auto !important; /* Overrides 100vh height so it can scroll freely */
+                padding-bottom: 40px !important; /* Editor doesn't have a bottom nav, but needs some space */
               }
 
               /* BOTTOM NAV NATIVA - SUBIDA */
@@ -71,6 +75,7 @@ export default function App() {
 
               /* ═══ SOPORTE MODO OSCURO PARA BARRAS NATIVAS ═══ */
               [data-theme="dark"] .topbar,
+              [data-theme="dark"] .editor-topbar,
               [data-theme="dark"] .bottom-nav {
                 background: #1e2a3d !important;
                 box-shadow: 0 12px 40px rgba(0, 0, 0, 0.38) !important;

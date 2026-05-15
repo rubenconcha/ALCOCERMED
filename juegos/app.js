@@ -1471,21 +1471,21 @@ function loadLibrary() {
                 : '<span style="background:#FEF3C7;color:#92400E;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:700">Borrador</span>';
             var codeHtml = ev.codigo ? '<span style="font-family:monospace;font-size:13px;color:#2563EB;font-weight:700">Código: ' + ev.codigo + '</span>' : '';
             var fecha = new Date(ev.created_at).toLocaleDateString('es-ES', {day:'numeric',month:'short',year:'numeric'});
-            html += '<div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;transition:box-shadow .2s" onmouseover="this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\'" onmouseout="this.style.boxShadow=\'none\'">' +
-                '<div style="flex:1">' +
-                '<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">' +
-                '<h3 style="font-size:16px;font-weight:700;color:#1E293B">' + (ev.titulo || 'Sin título') + '</h3>' +
+            html += '<div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px;margin-bottom:12px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;transition:box-shadow .2s" onmouseover="this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\'" onmouseout="this.style.boxShadow=\'none\'">' +
+                '<div style="flex:1;min-width:200px">' +
+                '<div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:6px">' +
+                '<h3 style="font-size:16px;font-weight:700;color:#1E293B;margin:0">' + (ev.titulo || 'Sin título') + '</h3>' +
                 statusBadge + '</div>' +
-                '<div style="display:flex;gap:16px;font-size:12px;color:#64748B">' +
+                '<div style="display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:#64748B">' +
                 '<span><i class="fas fa-book"></i> ' + (ev.asignatura || 'General') + (ev.tema ? ' - ' + ev.tema : '') + '</span>' +
                 '<span><i class="fas fa-calendar"></i> ' + fecha + '</span>' +
                 codeHtml + '</div></div>' +
-                '<div style="display:flex;gap:8px">' +
+                '<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end">' +
                 '<button onclick="window.location.href=\'editor.html?id=' + ev.id + 
                 '\'" style="padding:8px 14px;background:#F0F1F3;border:1px solid #E2E8F0;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#555"><i class="fas fa-edit"></i> Editar</button>' +
-                (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&results=true\'" style="padding:8px 14px;background:#8B5CF6;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;margin-left:4px" title="Resultados en vivo"><i class="fas fa-trophy"></i> Resultados</button>' : '') +
-                (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&play=true\'" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;margin-left:4px" title="Abrir sala de juego"><i class="fas fa-play"></i> Jugar</button>' : '') +
-                '<button onclick="deleteQuiz(\'' + ev.id + '\')" style="padding:8px 14px;background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#DC2626;margin-left:4px" title="Borrar"><i class="fas fa-trash-alt"></i></button>' +
+                (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&results=true\'" style="padding:8px 14px;background:#8B5CF6;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;" title="Resultados en vivo"><i class="fas fa-trophy"></i> Resultados</button>' : '') +
+                (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&play=true\'" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;" title="Abrir sala de juego"><i class="fas fa-play"></i> Jugar</button>' : '') +
+                '<button onclick="deleteQuiz(\'' + ev.id + '\')" style="padding:8px 14px;background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#DC2626;" title="Borrar"><i class="fas fa-trash-alt"></i></button>' +
                 '</div></div>';
         }
         container.innerHTML = html;
