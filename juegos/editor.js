@@ -716,6 +716,10 @@ function closeTeacherResults(){
   document.body.classList.remove('loading-results');
   if(teacherResultsPoll){clearInterval(teacherResultsPoll);teacherResultsPoll=null;}
   sessionStorage.removeItem('alcocer_teacher_eval');
+  
+  if (window.location.search.includes('results=true')) {
+    window.location.href = 'index.html?page=biblioteca';
+  }
 }
 
 function pollTeacherResults(){

@@ -267,7 +267,11 @@ function enterApp() {
     } else if (pendingCode && !isAdmin) {
         searchAndStartQuiz(pendingCode);
     } else {
-        navigateTo('inicio');
+        var defaultPage = urlParams.get('page') || 'inicio';
+        navigateTo(defaultPage);
+        if (defaultPage !== 'inicio') {
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
     }
 }
 
