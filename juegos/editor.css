@@ -236,12 +236,18 @@ body{font-family:'Inter',sans-serif;background:var(--bg-editor);color:var(--text
   .answer-grid{grid-template-columns:1fr;gap:10px}
   .add-option-btn{padding:16px}
   
-  .editor-topbar{padding:0 8px}
-  .quiz-title-input{width:140px;font-size:14px}
+  .editor-topbar{padding:0 8px;gap:4px;}
+  .topbar-left{gap:6px; flex:1; min-width:0;}
+  .quiz-title-input{width:100%;max-width:120px;font-size:14px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+  .topbar-actions{gap:2px;}
+  .top-action-btn{min-width:32px;padding:0 8px;font-size:1rem;}
+  .top-action-btn.btn-primary{padding:0 12px;}
   .top-action-btn span.install-text{display:none} /* Hide text on mobile */
   
-  .format-toolbar{gap:8px;justify-content:space-between}
-  .type-selector{flex:1;justify-content:space-between}
+  .format-toolbar{gap:6px;justify-content:flex-start}
+  .type-selector{width:100%;flex:none;justify-content:space-between;margin-bottom:4px;}
+  .fmt-btn{width:28px;height:28px;font-size:12px;}
+  .fmt-divider{margin:0 2px;}
   .fmt-config{width:100%;justify-content:space-between;margin-top:8px}
   .fmt-spacer{display:none}
   
