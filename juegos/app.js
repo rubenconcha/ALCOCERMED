@@ -615,7 +615,7 @@ function showWaitingRoom() {
     var wtTitle = document.getElementById('waiting-title');
     if (wtTitle) wtTitle.textContent = 'Esperando al profesor...';
     var wtSub = document.getElementById('waiting-subtitle');
-    if (wtSub) wtSub.textContent = '"' + title + '" comenzará cuando el profesor presione EMPEZAR';
+    if (wtSub) wtSub.innerHTML = 'Estás en la sala de <b>' + title + '</b><br>El profesor iniciará el juego pronto.';
 
     // Iniciar música lo-fi
     startGameMusic();
@@ -959,12 +959,12 @@ function toggleQuizMulti(idx) {
     var buttons = document.querySelectorAll('.quiz-opt-btn');
     if (pos === -1) {
         quizMultiSelections.push(idx);
-        buttons[idx].style.border = '2px solid #7C3AED';
-        buttons[idx].style.background = '#F3E8FF';
+        buttons[idx].style.boxShadow = 'inset 0 0 0 6px rgba(255,255,255,0.7), 0 4px 10px rgba(0,0,0,0.3)';
+        buttons[idx].style.transform = 'scale(0.98)';
     } else {
         quizMultiSelections.splice(pos, 1);
-        buttons[idx].style.border = '2px solid #E2E8F0';
-        buttons[idx].style.background = '#fff';
+        buttons[idx].style.boxShadow = 'inset 0 -6px 0 rgba(0,0,0,0.2), 0 4px 10px rgba(0,0,0,0.3)';
+        buttons[idx].style.transform = 'none';
     }
 }
 window.toggleQuizMulti = toggleQuizMulti;
@@ -978,24 +978,49 @@ function confirmQuizMulti() {
     var opciones = pregunta.opciones || [];
     var buttons = document.querySelectorAll('.quiz-opt-btn');
     var allCorrect = true;
+    
+    // Strict boolean check for correctness
     for (var i = 0; i < opciones.length; i++) {
         var isSel = quizMultiSelections.indexOf(i) !== -1;
-        var isCorr = opciones[i] && opciones[i].correct;
+        var isCorr = opciones[i] && (opciones[i].correct === true || opciones[i].correct === 'true');
         if (isSel && !isCorr) allCorrect = false;
         if (!isSel && isCorr) allCorrect = false;
     }
+    
     for (var j = 0; j < buttons.length; j++) {
         var sel = quizMultiSelections.indexOf(j) !== -1;
-        if (sel) { buttons[j].style.border = allCorrect ? '2px solid #22C55E' : '2px solid #F59E0B'; buttons[j].style.background = allCorrect ? '#F0FDF4' : '#FEF3C7'; }
-        else { buttons[j].style.opacity = '0.5'; }
+        var isCorrBtn = opciones[j] && (opciones[j].correct === true || opciones[j].correct === 'true');
+        
+        if (sel && isCorrBtn) {
+            buttons[j].style.boxShadow = 'inset 0 0 0 6px #22C55E, 0 4px 10px rgba(0,0,0,0.3)';
+            buttons[j].style.filter = 'brightness(1.2)';
+        } else if (sel && !isCorrBtn) {
+            buttons[j].style.boxShadow = 'inset 0 0 0 6px #EF4444, 0 4px 10px rgba(0,0,0,0.3)';
+            buttons[j].style.filter = 'grayscale(0.5)';
+        } else if (!sel && isCorrBtn) {
+            buttons[j].style.boxShadow = 'inset 0 0 0 6px #22C55E, 0 4px 10px rgba(0,0,0,0.3)';
+            buttons[j].style.filter = 'brightness(1.2)';
+        } else {
+            buttons[j].style.opacity = '0.3';
+        }
         buttons[j].style.pointerEvents = 'none';
     }
+    
     var confirmBtn = document.getElementById('quiz-confirm-multi');
     if (confirmBtn) confirmBtn.style.display = 'none';
-    quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: quizMultiSelections, correcta: allCorrect });
     
-    var pts = (pregunta.puntos || 1) * 600;
-    showFeedbackAnimation(allCorrect, allCorrect ? pts : 0);
+    var pts = getQuizPoints(allCorrect, pregunta);
+    quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: quizMultiSelections, correcta: allCorrect, puntos_ganados: pts });
+    
+    // Stop the timer bar
+    var timerBar = document.getElementById('quiz-timer-bar');
+    if(timerBar) {
+        var computedWidth = window.getComputedStyle(timerBar).width;
+        timerBar.style.transition = 'none';
+        timerBar.style.width = computedWidth;
+    }
+    
+    showFeedbackAnimation(allCorrect, pts);
 }
 window.confirmQuizMulti = confirmQuizMulti;
 
