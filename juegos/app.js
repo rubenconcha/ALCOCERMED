@@ -401,6 +401,9 @@ function setLoginLoading(loading) {
 var currentPage = 'inicio';
 
 function navigateTo(page, skipPush) {
+    if (page === 'quiz' && typeof quizData === 'undefined' || (page === 'quiz' && !quizData)) {
+        page = 'historial'; // Redirect to historial if reloading the quiz page without active session
+    }
     currentPage = page;
 
     var pages = document.querySelectorAll('.page');
@@ -1720,29 +1723,59 @@ function loadStudentResults() {
     container.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:24px"></i></div>';
 
     var client = getSupabase();
-    client.from('evaluacion_resultados').select('*, evaluaciones(titulo, asignatura)').eq('user_id', currentUser.id).order('created_at', {ascending: false}).then(function(r) {
+    client.from('evaluacion_resultados').select('*, evaluaciones(titulo, asignatura)').eq('user_id', currentUser.id).order('created_at', {ascending: false})
+    .then(function(r) {
         if (r.error || !r.data || r.data.length === 0) {
             container.innerHTML = '<div class="empty-state"><i class="fas fa-chart-pie"></i><p>No tienes resultados todavía</p><small>Participa en evaluaciones para ver tu progreso aquí</small></div>';
             return;
         }
-        var html = '';
-        for (var i = 0; i < r.data.length; i++) {
-            var res = r.data[i];
-            var titulo = (res.evaluaciones && res.evaluaciones.titulo) ? res.evaluaciones.titulo : 'Evaluación';
-            var asig = (res.evaluaciones && res.evaluaciones.asignatura) ? res.evaluaciones.asignatura : '';
-            var pct = res.porcentaje || 0;
-            var barColor = pct >= 70 ? '#22C55E' : pct >= 40 ? '#F59E0B' : '#EF4444';
-            var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '⭐' : pct >= 40 ? '📝' : '💪';
-            var fecha = new Date(res.created_at).toLocaleDateString('es-ES', {day:'numeric',month:'short'});
+        
+        try {
+            var html = '';
+            window.adminReportsData = {};
+            window.adminReportsNameMap = {};
+            
+            for (var i = 0; i < r.data.length; i++) {
+                var res = r.data[i];
+                if (!res) continue;
+                
+                var evalId = res.evaluacion_id || 'unknown';
+                var userId = currentUser.id || 'unknown';
+                
+                if (!window.adminReportsData[evalId]) window.adminReportsData[evalId] = [];
+                window.adminReportsData[evalId].push(res);
+                window.adminReportsNameMap[evalId + '_' + userId] = 'Tu resultado';
 
-            html += '<div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:16px 20px;margin-bottom:10px;display:flex;align-items:center;gap:16px">';
-            html += '<div style="font-size:28px">' + emoji + '</div>';
-            html += '<div style="flex:1"><h4 style="font-size:14px;font-weight:700;margin-bottom:2px">' + titulo + '</h4>';
-            html += '<span style="font-size:11px;color:#64748B">' + asig + ' • ' + fecha + '</span></div>';
-            html += '<div style="text-align:right"><span style="font-size:20px;font-weight:800;color:' + barColor + '">' + pct + '%</span>';
-            html += '<div style="font-size:11px;color:#8E90A6">' + res.puntaje + '/' + res.total + '</div></div></div>';
+                var titulo = (res.evaluaciones && res.evaluaciones.titulo) ? res.evaluaciones.titulo : 'Evaluación';
+                var asig = (res.evaluaciones && res.evaluaciones.asignatura) ? res.evaluaciones.asignatura : '';
+                var pct = res.porcentaje || 0;
+                var barColor = pct >= 70 ? '#22C55E' : pct >= 40 ? '#F59E0B' : '#EF4444';
+                var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '⭐' : pct >= 40 ? '📝' : '💪';
+                
+                var fechaStr = '';
+                try {
+                    fechaStr = res.created_at ? new Date(res.created_at).toLocaleDateString('es-ES', {day:'numeric',month:'short'}) : '';
+                } catch(e) { fechaStr = ''; }
+
+                var punt = res.puntaje !== undefined ? res.puntaje : 0;
+                var tot = res.total !== undefined ? res.total : 0;
+
+                html += '<div onclick="openReportDetail(\'' + evalId + '\', \'' + userId + '\')" style="cursor:pointer;background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:16px;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.02)" onmouseover="this.style.boxShadow=\'0 6px 20px rgba(0,0,0,0.08)\'; this.style.transform=\'translateY(-2px)\'" onmouseout="this.style.boxShadow=\'0 2px 8px rgba(0,0,0,0.02)\'; this.style.transform=\'translateY(0)\'">';
+                html += '<div style="font-size:32px">' + emoji + '</div>';
+                html += '<div style="flex:1"><h4 style="font-size:15px;font-weight:800;color:#1E293B;margin-bottom:4px">' + titulo + '</h4>';
+                html += '<span style="font-size:12px;color:#64748B;font-weight:600;"><i class="fas fa-book" style="margin-right:4px;"></i>' + asig + (fechaStr ? ' • ' + fechaStr : '') + '</span></div>';
+                html += '<div style="text-align:right"><span style="font-size:22px;font-weight:900;color:' + barColor + '">' + pct + '%</span>';
+                html += '<div style="font-size:11px;color:#94A3B8;font-weight:700;margin-top:2px;">' + punt + ' / ' + tot + ' correctas</div></div></div>';
+            }
+            container.innerHTML = html || '<div class="empty-state"><i class="fas fa-chart-pie"></i><p>No tienes resultados todavía</p></div>';
+        } catch(ex) {
+            console.error(ex);
+            container.innerHTML = '<div style="padding:20px;text-align:center;color:#EF4444;"><i class="fas fa-exclamation-triangle" style="font-size:24px;margin-bottom:8px"></i><br>Error al procesar resultados.</div>';
         }
-        container.innerHTML = html;
+    })
+    .catch(function(err) {
+        console.error('Error fetching student results:', err);
+        container.innerHTML = '<div style="padding:20px;text-align:center;color:#EF4444;"><i class="fas fa-wifi" style="font-size:24px;margin-bottom:8px"></i><br>Error de conexión. Inténtalo de nuevo.</div>';
     });
 }
 
