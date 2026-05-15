@@ -19,6 +19,12 @@
   <meta name="apple-mobile-web-app-title" content="AlcocerMed Admin">
 </head>
 <body>
+  <script>
+    if(window.location.search.includes('results=true') || sessionStorage.getItem('alcocer_teacher_eval')){
+      document.body.classList.add('loading-results');
+      document.write('<style>body.loading-results #teacher-results-overlay{opacity:1 !important; visibility:visible !important; transition:none !important;}</style>');
+    }
+  </script>
 
   <!-- ═══ TOP BAR ═══ -->
   <header class="editor-topbar">

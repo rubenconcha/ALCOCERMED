@@ -713,6 +713,7 @@ function openTeacherResults(isLive){
 
 function closeTeacherResults(){
   document.getElementById('teacher-results-overlay').classList.remove('active');
+  document.body.classList.remove('loading-results');
   if(teacherResultsPoll){clearInterval(teacherResultsPoll);teacherResultsPoll=null;}
   sessionStorage.removeItem('alcocer_teacher_eval');
 }
