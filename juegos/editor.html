@@ -415,11 +415,11 @@
 
         <!-- Tabla de resultados -->
         <div style="background:rgba(15,23,42,.4);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.3)">
-          <div style="display:flex;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);font-size:.8rem;font-weight:800;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:0.5px">
-            <span style="width:40px;text-align:center">#</span>
-            <span style="flex:1">Nombres</span>
-            <span style="width:100px;text-align:center">Puntuación</span>
-            <span style="width:120px;text-align:center">Precisión</span>
+          <div class="tr-table-header">
+            <span class="tr-col-rank">#</span>
+            <span class="tr-col-name">Nombres</span>
+            <span class="tr-col-score">Pts</span>
+            <span class="tr-col-acc">Prec</span>
           </div>
           <div id="tr-results-list" style="max-height:350px;overflow-y:auto">
             <div style="padding:40px 24px;text-align:center;color:rgba(255,255,255,.4);font-size:.9rem;font-weight:600">

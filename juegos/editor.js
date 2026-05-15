@@ -910,11 +910,11 @@ function pollTeacherResults(){
       for(var l=0;l<entries.length;l++){
         var en=entries[l];
         var rankColor=l===0?'#FFD700':l===1?'#C0C0C0':l===2?'#CD7F32':'rgba(255,255,255,.4)';
-        lh+='<div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);transition:background 0.2s" onmouseover="this.style.background=\'rgba(255,255,255,.05)\'" onmouseout="this.style.background=\'transparent\'">';
-        lh+='<span style="width:30px;font-weight:800;color:'+rankColor+';font-size:14px">'+(l+1)+'</span>';
-        lh+='<span style="flex:1;font-weight:700;color:#fff;font-size:13px;display:flex;align-items:center;gap:10px">'+(en.emoji?'<span style="font-size:18px">'+en.emoji+'</span>':'')+en.nombre+'</span>';
-        lh+='<span style="width:80px;text-align:center;font-weight:800;color:rgba(255,255,255,.8);font-size:13px">'+en.puntaje+'/'+en.total+'</span>';
-        lh+='<span style="width:100px;text-align:center;font-weight:800;font-size:13px;color:'+(en.porcentaje>=70?'#4ADE80':en.porcentaje>=40?'#FBBF24':'#F87171')+'">'+en.porcentaje+'%</span>';
+        lh+='<div class="tr-row">';
+        lh+='<span class="tr-col-rank" style="color:'+rankColor+'">'+(l+1)+'</span>';
+        lh+='<span class="tr-col-name">'+(en.emoji?'<span>'+en.emoji+'</span>':'')+en.nombre+'</span>';
+        lh+='<span class="tr-col-score">'+en.puntaje+'/'+en.total+'</span>';
+        lh+='<span class="tr-col-acc" style="color:'+(en.porcentaje>=70?'#4ADE80':en.porcentaje>=40?'#FBBF24':'#F87171')+'">'+en.porcentaje+'%</span>';
         lh+='</div>';
       }
       document.getElementById('tr-results-list').innerHTML=lh;
