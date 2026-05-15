@@ -706,66 +706,48 @@ function playErrorSound() {
 }
 
 function showFeedbackAnimation(isCorrect, ptsEarned) {
-    var overlay = document.createElement('div');
-    overlay.style.position = 'absolute';
-    overlay.style.top = '0';
-    overlay.style.left = '0';
-    overlay.style.width = '100%';
-    overlay.style.height = '100%';
-    overlay.style.zIndex = '9999';
-    overlay.style.background = 'rgba(0,0,0,0.6)';
-    overlay.style.display = 'flex';
-    overlay.style.flexDirection = 'column';
-    overlay.style.alignItems = 'center';
-    overlay.style.justifyContent = 'center';
-    overlay.style.opacity = '0';
-    overlay.style.transition = 'opacity 0.2s';
+    var banner = document.createElement('div');
+    banner.style.position = 'fixed';
+    banner.style.top = '-150px'; // start hidden
+    banner.style.left = '50%';
+    banner.style.transform = 'translateX(-50%)';
+    banner.style.zIndex = '9999';
+    banner.style.background = isCorrect ? '#10B981' : '#EF4444';
+    banner.style.color = '#fff';
+    banner.style.padding = '16px 32px';
+    banner.style.borderRadius = '16px';
+    banner.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
+    banner.style.display = 'flex';
+    banner.style.alignItems = 'center';
+    banner.style.gap = '20px';
+    banner.style.transition = 'top 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
     
-    var card = document.createElement('div');
-    var color = isCorrect ? '#10B981' : '#EF4444';
-    card.style.background = color;
-    card.style.borderRadius = '24px';
-    card.style.padding = '32px 48px';
-    card.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)';
-    card.style.color = '#fff';
-    card.style.textAlign = 'center';
-    card.style.transform = 'scale(0.5) translateY(50px)';
-    card.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    var iconHtml = isCorrect ? '<i class="fas fa-check-circle" style="font-size:2.5rem;"></i>' : '<i class="fas fa-times-circle" style="font-size:2.5rem;"></i>';
+    var textHtml = '<div style="display:flex; flex-direction:column;"><span style="font-size:1.5rem; font-weight:900;">' + (isCorrect ? '¡CORRECTO!' : 'INCORRECTO') + '</span>';
+    if(isCorrect && ptsEarned) {
+        textHtml += '<span style="font-size:1.1rem; font-weight:700; opacity:0.9;">+' + ptsEarned + ' Puntos</span>';
+    }
+    textHtml += '</div>';
 
-    var ptsHtml = (isCorrect && ptsEarned) ? '<div style="background:rgba(0,0,0,0.25);padding:8px 24px;border-radius:20px;font-size:1.8rem;margin-top:20px;font-weight:900;">+' + ptsEarned + ' pts</div>' : '';
-    
-    // Meme GIFs like Quizizz
-    var gifUrl = isCorrect ? 'https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif' : 'https://media.giphy.com/media/hPPx8yk3Bmqys/giphy.gif';
-    var gifHtml = '<div style="margin-top:20px; border-radius:12px; overflow:hidden; border:4px solid rgba(255,255,255,0.2);"><img src="'+gifUrl+'" style="max-width:250px; height:auto; display:block;"></div>';
-    
-    var iconHtml = isCorrect ? '<i class="fas fa-check-circle" style="font-size:4rem;margin-bottom:16px;"></i>' : '<i class="fas fa-times-circle" style="font-size:4rem;margin-bottom:16px;"></i>';
-    
-    card.innerHTML = iconHtml + '<div style="font-size:2.5rem;font-weight:900;">' + (isCorrect ? '¡CORRECTO!' : 'INCORRECTO') + '</div>' + ptsHtml + gifHtml;
-    
-    overlay.appendChild(card);
-    
-    var container = document.getElementById('quiz-container');
-    container.style.position = 'relative'; // Ensure it's constrained
-    container.appendChild(overlay);
+    banner.innerHTML = iconHtml + textHtml;
+    document.body.appendChild(banner);
     
     if (isCorrect) playSuccessSound();
     else playErrorSound();
     
-    // Animar
+    // Slide in
     setTimeout(function() {
-        overlay.style.opacity = '1';
-        card.style.transform = 'scale(1) translateY(0)';
+        banner.style.top = '24px';
     }, 10);
     
-    // Desaparecer y next auto
+    // Slide out and next
     setTimeout(function() {
-        overlay.style.opacity = '0';
-        card.style.transform = 'scale(0.8) translateY(-30px)';
+        banner.style.top = '-150px';
         setTimeout(function() { 
-            if(overlay.parentNode) overlay.parentNode.removeChild(overlay); 
+            if(banner.parentNode) banner.parentNode.removeChild(banner); 
             quizNext();
-        }, 300);
-    }, 3000); // 3 seconds to view Meme and points
+        }, 400);
+    }, 2000);
 }
 
 var splashInterval = null;
