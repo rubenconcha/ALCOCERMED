@@ -438,30 +438,39 @@
         <p class="page-subtitle" id="quiz-live-subtitle">Responde las preguntas</p>
       </div>
 
-      <div id="quiz-container" style="max-width:700px">
-        <!-- Barra de progreso -->
-        <div style="background:#E2E8F0;border-radius:20px;height:8px;margin-bottom:16px;overflow:hidden">
-          <div id="quiz-progress-bar" style="height:100%;background:linear-gradient(90deg,#2563EB,#3B82F6);border-radius:20px;width:0%;transition:width .4s"></div>
+      <div id="quiz-container" style="max-width:1000px; margin:0 auto; display:flex; flex-direction:column; height:100vh;">
+        <!-- Top bar like Quizizz -->
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 24px; background:rgba(0,0,0,0.2); border-radius:12px; margin-bottom:20px;">
+          <div style="display:flex; align-items:center; gap:16px;">
+            <div style="background:rgba(255,255,255,0.1); padding:6px 12px; border-radius:8px; display:flex; align-items:center; gap:8px;">
+              <i class="fas fa-star" style="color:#FFD700;"></i>
+              <span id="quiz-current-score" style="color:#fff; font-weight:800; font-size:1.1rem;">0</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); padding:6px 12px; border-radius:8px; display:flex; align-items:center; gap:8px;">
+              <i class="fas fa-fire" style="color:#FF9800;"></i>
+              <span id="quiz-current-streak" style="color:#fff; font-weight:800; font-size:1.1rem;">0</span>
+            </div>
+          </div>
+          <div style="color:#fff; font-weight:800; font-size:1.2rem; background:rgba(0,0,0,0.3); padding:8px 16px; border-radius:12px;" id="quiz-question-number">
+            1 / 5
+          </div>
         </div>
 
-        <!-- Timer -->
-        <div id="quiz-timer-row" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px">
-          <i class="fas fa-clock" style="color:#E91E63"></i>
-          <span id="quiz-timer-text" style="font-size:1.1rem;font-weight:700;color:#E91E63">30</span>
+        <!-- Timer bar -->
+        <div style="background:rgba(255,255,255,0.2); border-radius:10px; height:8px; margin-bottom:24px; overflow:hidden;">
+          <div id="quiz-timer-bar" style="height:100%; background:#22C55E; width:100%; transition:width 1s linear, background 0.3s;"></div>
         </div>
         
         <!-- Pregunta actual -->
-        <div id="quiz-question-card" style="background:#fff;border:1px solid #E2E8F0;border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.06);margin-bottom:24px">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-            <span id="quiz-question-number" style="font-size:.75rem;font-weight:700;color:#64748B;background:#F1F5F9;padding:4px 12px;border-radius:8px">Pregunta 1/5</span>
-            <span id="quiz-question-points" style="font-size:.75rem;font-weight:700;color:#E91E63;background:#FCE4EC;padding:4px 12px;border-radius:8px">1 punto</span>
-          </div>
-          <h2 id="quiz-question-text" style="font-size:1.2rem;font-weight:700;line-height:1.5;margin-bottom:24px">Cargando...</h2>
-          <div id="quiz-options-list" style="display:flex;flex-direction:column;gap:12px"></div>
+        <div id="quiz-question-card" style="background:#fff; border-radius:24px; padding:40px; box-shadow:0 10px 30px rgba(0,0,0,0.2); margin-bottom:32px; text-align:center; min-height:180px; display:flex; align-items:center; justify-content:center;">
+          <h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:#1E293B; margin:0;">Cargando...</h2>
         </div>
 
-        <!-- Botón siguiente -->
-        <button id="quiz-next-btn" onclick="quizNext()" style="width:100%;padding:16px;background:linear-gradient(135deg,#E91E63,#C2185B);color:#fff;border:none;border-radius:14px;font-size:1rem;font-weight:700;cursor:pointer;display:none;transition:transform .15s">
+        <!-- Opciones -->
+        <div id="quiz-options-list" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; flex:1;"></div>
+
+        <!-- Botón siguiente (hidden mostly) -->
+        <button id="quiz-next-btn" onclick="quizNext()" style="margin-top:24px; padding:16px; background:linear-gradient(135deg,#E91E63,#C2185B); color:#fff; border:none; border-radius:14px; font-size:1.2rem; font-weight:800; cursor:pointer; display:none; transition:transform .15s; box-shadow:0 8px 20px rgba(233,30,99,0.3);">
           Siguiente →
         </button>
       </div>

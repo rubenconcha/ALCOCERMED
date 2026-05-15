@@ -577,7 +577,7 @@ function searchAndStartQuiz(code) {
 var waitingPollInterval = null;
 var gameMusic = null;
 
-// ═══ GAME MUSIC — Lo-fi chill beats ═══
+// ═══ GAME MUSIC — Upbeat Electronic (Quizizz vibe) ═══
 function startGameMusic() {
     try {
         if (gameMusic && gameMusic._ctx) {
@@ -587,155 +587,84 @@ function startGameMusic() {
         }
         var ctx = new (window.AudioContext || window.webkitAudioContext)();
         var master = ctx.createGain();
-        master.gain.value = 0.15;
+        master.gain.value = 0.1; // lower master volume so it doesn't overpower
         master.connect(ctx.destination);
 
-        var bpm = 75;
+        var bpm = 125; // bouncy and energetic!
         var beat = 60 / bpm;
         var loopBars = 4;
         var loopLen = loopBars * 4 * beat;
         var playing = true;
 
-        // Lo-fi chord progressions (Cmaj7 → Am7 → Fmaj7 → G7)
+        // Energetic Pop Chords: C - F - Am - G
         var chords = [
-            [261.63, 329.63, 392.00, 493.88],
-            [220.00, 261.63, 329.63, 392.00],
-            [174.61, 220.00, 261.63, 329.63],
-            [196.00, 246.94, 293.66, 349.23]
+            [261.63, 329.63, 392.00], // C
+            [349.23, 440.00, 523.25], // F
+            [220.00, 261.63, 329.63], // Am
+            [196.00, 246.94, 293.66]  // G
         ];
-        // Melody notes (C pentatonic higher octave)
-        var melNotes = [523.25, 587.33, 659.25, 783.99, 880.00, 1046.50];
+        
+        // Upbeat pentatonic melody notes
+        var melNotes = [523.25, 587.33, 659.25, 783.99, 880.00];
 
-        function playLofiLoop(t0) {
-            // === Chord pads (warm sine) ===
+        function playLoop(t0) {
+            // === Fast Arpeggiated Chords (Synth) ===
             for (var c = 0; c < 4; c++) {
                 var chord = chords[c];
                 var cStart = t0 + c * 4 * beat;
-                for (var n = 0; n < chord.length; n++) {
+                
+                // Play 16th note bounces
+                for(var i=0; i<16; i++) {
+                    var nStart = cStart + i * (beat / 4);
                     var o = ctx.createOscillator();
                     var g = ctx.createGain();
-                    var f = ctx.createBiquadFilter();
-                    o.type = 'sine';
-                    o.frequency.value = chord[n];
-                    f.type = 'lowpass';
-                    f.frequency.value = 600 + Math.random() * 200;
-                    g.gain.setValueAtTime(0, cStart);
-                    g.gain.linearRampToValueAtTime(0.06, cStart + 0.3);
-                    g.gain.setValueAtTime(0.06, cStart + 3.5 * beat);
-                    g.gain.linearRampToValueAtTime(0, cStart + 4 * beat);
-                    o.connect(f); f.connect(g); g.connect(master);
-                    o.start(cStart); o.stop(cStart + 4 * beat + 0.1);
+                    o.type = 'triangle';
+                    o.frequency.value = chord[i % chord.length] * (i%4===0 ? 0.5 : 1); // bounce bass on downbeat
+                    
+                    g.gain.setValueAtTime(0, nStart);
+                    g.gain.linearRampToValueAtTime(0.4, nStart + 0.02);
+                    g.gain.exponentialRampToValueAtTime(0.01, nStart + (beat/4) - 0.01);
+                    
+                    o.connect(g); g.connect(master);
+                    o.start(nStart); o.stop(nStart + (beat/4));
                 }
             }
 
-            // === Soft kick (2 & 4 feel) ===
-            for (var k = 0; k < loopBars * 4; k++) {
-                if (k % 4 === 0 || k % 4 === 2) {
-                    var ko = ctx.createOscillator();
-                    var kg = ctx.createGain();
-                    ko.type = 'sine';
-                    var kt = t0 + k * beat;
-                    ko.frequency.setValueAtTime(80, kt);
-                    ko.frequency.exponentialRampToValueAtTime(30, kt + 0.12);
-                    kg.gain.setValueAtTime(0.35, kt);
-                    kg.gain.exponentialRampToValueAtTime(0.001, kt + 0.2);
-                    ko.connect(kg); kg.connect(master);
-                    ko.start(kt); ko.stop(kt + 0.25);
+            // === Percussion (Kick & Snare pattern) ===
+            for (var i = 0; i < 16; i++) {
+                var pStart = t0 + i * beat;
+                // Kick on 1, 2, 3, 4
+                var ko = ctx.createOscillator();
+                var kg = ctx.createGain();
+                ko.frequency.setValueAtTime(150, pStart);
+                ko.frequency.exponentialRampToValueAtTime(0.01, pStart + 0.1);
+                kg.gain.setValueAtTime(0.8, pStart);
+                kg.gain.exponentialRampToValueAtTime(0.01, pStart + 0.1);
+                ko.connect(kg); kg.connect(master);
+                ko.start(pStart); ko.stop(pStart + 0.1);
+                
+                // Snare on 2 and 4
+                if (i % 2 === 1) {
+                    var snFilter = ctx.createBiquadFilter();
+                    snFilter.type = 'highpass';
+                    snFilter.frequency.value = 1000;
+                    
+                    var osc1 = ctx.createOscillator();
+                    osc1.type = 'square';
+                    
+                    var sg = ctx.createGain();
+                    sg.gain.setValueAtTime(0.3, pStart);
+                    sg.gain.exponentialRampToValueAtTime(0.01, pStart + 0.1);
+                    
+                    osc1.connect(snFilter); snFilter.connect(sg); sg.connect(master);
+                    osc1.start(pStart); osc1.stop(pStart + 0.1);
                 }
             }
-
-            // === Snare on 2 and 4 (noise burst) ===
-            for (var sn = 0; sn < loopBars * 4; sn++) {
-                if (sn % 4 === 2) {
-                    var snBuf = ctx.createBuffer(1, ctx.sampleRate * 0.08, ctx.sampleRate);
-                    var snD = snBuf.getChannelData(0);
-                    for (var si = 0; si < snD.length; si++) snD[si] = (Math.random() * 2 - 1) * 0.2;
-                    var snSrc = ctx.createBufferSource();
-                    snSrc.buffer = snBuf;
-                    var snG = ctx.createGain();
-                    var snF = ctx.createBiquadFilter();
-                    snF.type = 'bandpass'; snF.frequency.value = 3000; snF.Q.value = 1;
-                    var snT = t0 + sn * beat;
-                    snG.gain.setValueAtTime(0.18, snT);
-                    snG.gain.exponentialRampToValueAtTime(0.001, snT + 0.1);
-                    snSrc.connect(snF); snF.connect(snG); snG.connect(master);
-                    snSrc.start(snT); snSrc.stop(snT + 0.12);
-                }
-            }
-
-            // === Hi-hat shuffle ===
-            for (var hh = 0; hh < loopBars * 8; hh++) {
-                var hhBuf = ctx.createBuffer(1, ctx.sampleRate * 0.02, ctx.sampleRate);
-                var hhD = hhBuf.getChannelData(0);
-                for (var hi = 0; hi < hhD.length; hi++) hhD[hi] = (Math.random() * 2 - 1) * 0.15;
-                var hhSrc = ctx.createBufferSource();
-                hhSrc.buffer = hhBuf;
-                var hhG = ctx.createGain();
-                var hhFi = ctx.createBiquadFilter();
-                hhFi.type = 'highpass'; hhFi.frequency.value = 9000;
-                var hhT = t0 + hh * (beat / 2);
-                var hhVol = (hh % 2 === 0) ? 0.08 : 0.04;
-                hhG.gain.setValueAtTime(hhVol, hhT);
-                hhG.gain.exponentialRampToValueAtTime(0.001, hhT + 0.03);
-                hhSrc.connect(hhFi); hhFi.connect(hhG); hhG.connect(master);
-                hhSrc.start(hhT); hhSrc.stop(hhT + 0.04);
-            }
-
-            // === Bass line (sub + warm) ===
-            var bassRoots = [130.81, 110.00, 87.31, 98.00];
-            for (var bl = 0; bl < 4; bl++) {
-                var bo = ctx.createOscillator();
-                var bg = ctx.createGain();
-                var bf = ctx.createBiquadFilter();
-                bo.type = 'triangle';
-                bo.frequency.value = bassRoots[bl];
-                bf.type = 'lowpass'; bf.frequency.value = 250;
-                var bT = t0 + bl * 4 * beat;
-                bg.gain.setValueAtTime(0, bT);
-                bg.gain.linearRampToValueAtTime(0.22, bT + 0.05);
-                bg.gain.setValueAtTime(0.22, bT + 3 * beat);
-                bg.gain.exponentialRampToValueAtTime(0.001, bT + 3.8 * beat);
-                bo.connect(bf); bf.connect(bg); bg.connect(master);
-                bo.start(bT); bo.stop(bT + 4 * beat);
-            }
-
-            // === Melody (random pentatonic, sparse) ===
-            for (var ml = 0; ml < 8; ml++) {
-                if (Math.random() > 0.5) continue;
-                var mNote = melNotes[Math.floor(Math.random() * melNotes.length)];
-                var mo = ctx.createOscillator();
-                var mg = ctx.createGain();
-                var mf = ctx.createBiquadFilter();
-                mo.type = 'sine';
-                mo.frequency.value = mNote;
-                mf.type = 'lowpass'; mf.frequency.value = 900 + Math.random() * 400;
-                var mT = t0 + ml * 2 * beat + Math.random() * beat * 0.3;
-                mg.gain.setValueAtTime(0, mT);
-                mg.gain.linearRampToValueAtTime(0.07, mT + 0.04);
-                mg.gain.exponentialRampToValueAtTime(0.001, mT + beat * 1.5);
-                mo.connect(mf); mf.connect(mg); mg.connect(master);
-                mo.start(mT); mo.stop(mT + beat * 2);
-            }
-
-            // === Vinyl crackle (ambient noise) ===
-            var crklBuf = ctx.createBuffer(1, ctx.sampleRate * loopLen, ctx.sampleRate);
-            var crklD = crklBuf.getChannelData(0);
-            for (var ci = 0; ci < crklD.length; ci++) {
-                crklD[ci] = Math.random() > 0.997 ? (Math.random() * 0.06 - 0.03) : 0;
-            }
-            var crklSrc = ctx.createBufferSource();
-            crklSrc.buffer = crklBuf;
-            var crklG = ctx.createGain();
-            crklG.gain.value = 0.5;
-            var crklF = ctx.createBiquadFilter();
-            crklF.type = 'bandpass'; crklF.frequency.value = 4000; crklF.Q.value = 0.5;
-            crklSrc.connect(crklF); crklF.connect(crklG); crklG.connect(master);
-            crklSrc.start(t0); crklSrc.stop(t0 + loopLen);
-        }
+        } // end playLoop
 
         function scheduleLoop() {
             if (!playing) return;
-            playLofiLoop(ctx.currentTime + 0.1);
+            playLoop(ctx.currentTime + 0.1);
             setTimeout(scheduleLoop, loopLen * 1000 - 200);
         }
         scheduleLoop();
@@ -856,23 +785,27 @@ function playErrorSound() {
     } catch(e) {}
 }
 
-function showFeedbackAnimation(isCorrect) {
+function showFeedbackAnimation(isCorrect, ptsEarned) {
     var overlay = document.createElement('div');
     overlay.style.position = 'fixed';
-    overlay.style.top = '50%';
-    overlay.style.left = '50%';
-    overlay.style.transform = 'translate(-50%, -50%) scale(0.5)';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100vw';
+    overlay.style.height = '100vh';
     overlay.style.zIndex = '9999';
     overlay.style.background = isCorrect ? 'rgba(34, 197, 94, 0.95)' : 'rgba(239, 68, 68, 0.95)';
+    overlay.style.display = 'flex';
+    overlay.style.flexDirection = 'column';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
     overlay.style.color = '#fff';
-    overlay.style.padding = '20px 40px';
-    overlay.style.borderRadius = '20px';
-    overlay.style.fontSize = '2rem';
-    overlay.style.fontWeight = '900';
-    overlay.style.boxShadow = '0 10px 40px rgba(0,0,0,0.3)';
     overlay.style.opacity = '0';
-    overlay.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-    overlay.innerHTML = isCorrect ? '🌟 ¡Correcto! 🎉' : '❌ Incorrecto';
+    overlay.style.transition = 'opacity 0.2s';
+    
+    var ptsHtml = (isCorrect && ptsEarned) ? '<div style="background:rgba(0,0,0,0.3);padding:8px 24px;border-radius:20px;font-size:1.8rem;margin-top:24px;font-weight:800;">+' + ptsEarned + ' pts</div>' : '';
+    var iconHtml = isCorrect ? '<i class="fas fa-check-circle" style="font-size:6rem;margin-bottom:24px;text-shadow:0 4px 20px rgba(0,0,0,0.3);"></i>' : '<i class="fas fa-times-circle" style="font-size:6rem;margin-bottom:24px;text-shadow:0 4px 20px rgba(0,0,0,0.3);"></i>';
+    
+    overlay.innerHTML = iconHtml + '<div style="font-size:4rem;font-weight:900;text-shadow:0 4px 20px rgba(0,0,0,0.3);">' + (isCorrect ? '¡CORRECTO!' : 'INCORRECTO') + '</div>' + ptsHtml;
     
     document.body.appendChild(overlay);
     
@@ -882,15 +815,16 @@ function showFeedbackAnimation(isCorrect) {
     // Animar
     setTimeout(function() {
         overlay.style.opacity = '1';
-        overlay.style.transform = 'translate(-50%, -50%) scale(1)';
     }, 10);
     
-    // Desaparecer
+    // Desaparecer y next auto
     setTimeout(function() {
         overlay.style.opacity = '0';
-        overlay.style.transform = 'translate(-50%, -50%) scale(1.2)';
-        setTimeout(function() { if(overlay.parentNode) document.body.removeChild(overlay); }, 300);
-    }, 1500);
+        setTimeout(function() { 
+            if(overlay.parentNode) document.body.removeChild(overlay); 
+            quizNext();
+        }, 200);
+    }, 2000);
 }
 
 var splashInterval = null;
@@ -949,17 +883,25 @@ function showSplashAndStart() {
 function startQuestionTimer(seconds) {
     if (quizTimerInterval) clearInterval(quizTimerInterval);
     quizTimeLeft = seconds;
-    var timerEl = document.getElementById('quiz-timer-text');
-    if (timerEl) timerEl.textContent = quizTimeLeft;
+    
+    var timerBar = document.getElementById('quiz-timer-bar');
+    if(timerBar) {
+        timerBar.style.transition = 'width ' + seconds + 's linear, background 0.3s';
+        setTimeout(function() {
+            if(!quizConfirmed) timerBar.style.width = '0%';
+        }, 50);
+    }
 
     quizTimerInterval = setInterval(function() {
-        if (quizConfirmed) return; // Si ya confirmó, no hacer beeps
+        if (quizConfirmed) return; // Si ya confirmó, parar logica timer
         
         quizTimeLeft--;
-        if (timerEl) timerEl.textContent = quizTimeLeft;
-        if (timerEl) timerEl.style.color = quizTimeLeft <= 5 ? '#EF4444' : '#E91E63';
         
-        // Faltando 10 segundos: sonido de apuro (Mario)
+        if (quizTimeLeft <= 5 && timerBar) {
+            timerBar.style.background = '#EF4444';
+        }
+        
+        // Faltando 10 segundos: sonido de apuro
         if (quizTimeLeft === 10) {
             try {
                 var ctx = getAudioCtx();
@@ -970,37 +912,29 @@ function startQuestionTimer(seconds) {
                     g.gain.value = 0.7;
                     src.connect(g); g.connect(ctx.destination);
                     src.start(0);
-                } else {
-                    var hurryAudio = new Audio('./hurry_up.mp3');
-                    hurryAudio.volume = 0.7;
-                    hurryAudio.play().catch(function(e){});
                 }
             } catch(e) {}
         }
         
-        // Faltando 3 segundos: cuenta regresiva
         if (quizTimeLeft <= 3 && quizTimeLeft > 0) {
             playBeep(880, 'sine', 0.15);
         }
 
         if (quizTimeLeft <= 0) {
             clearInterval(quizTimerInterval);
-            playBeep(440, 'square', 0.6); // Sonido final de tiempo
+            playBeep(440, 'square', 0.6);
             if (!quizConfirmed) {
-                // Si seleccionó algo pero no confirmó, auto-confirmar
-                if (quizSelectedOption !== -1) {
-                    confirmQuizAnswer();
-                } else {
-                    // No seleccionó nada
-                    quizConfirmed = true;
-                    quizAnswers.push({ pregunta_id: quizData.preguntas[quizCurrentQ].id, seleccionada: -1, correcta: false });
-                    
-                    showFeedbackAnimation(false);
-                    
-                    var nextBtn = document.getElementById('quiz-next-btn');
-                    nextBtn.style.display = 'block';
-                    nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
+                // Time up! Auto-submit
+                quizConfirmed = true;
+                quizAnswers.push({ pregunta_id: quizData.preguntas[quizCurrentQ].id, seleccionada: -1, correcta: false });
+                
+                // Show wrong answers on buttons
+                var buttons = document.querySelectorAll('.quiz-opt-btn');
+                for(var b=0; b<buttons.length; b++){
+                    buttons[b].style.opacity = '0.3';
+                    buttons[b].style.pointerEvents = 'none';
                 }
+                showFeedbackAnimation(false, 0);
             }
         }
     }, 1000);
@@ -1013,19 +947,31 @@ function renderQuizQuestion() {
 
     var pregunta = quizData.preguntas[quizCurrentQ];
     var total = quizData.preguntas.length;
-    var progress = ((quizCurrentQ) / total) * 100;
     var pts = pregunta.puntos || 1;
     var timer = pregunta.temporizador || 30;
     var tipo = pregunta.tipo || 'mc';
 
-    document.getElementById('quiz-progress-bar').style.width = progress + '%';
-    document.getElementById('quiz-question-number').textContent = 'Pregunta ' + (quizCurrentQ + 1) + '/' + total;
+    document.getElementById('quiz-question-number').textContent = (quizCurrentQ + 1) + ' / ' + total;
     document.getElementById('quiz-question-text').textContent = pregunta.texto || '';
-    var ptsEl = document.getElementById('quiz-question-points');
-    if (ptsEl) ptsEl.textContent = pts + ' punto' + (pts !== 1 ? 's' : '');
+
+    // Calculate score
+    var currentScore = 0;
+    var currentStreak = 0;
+    for(var i=0; i<quizAnswers.length; i++){
+        if(quizAnswers[i].correcta) {
+            currentScore += (quizData.preguntas[i].puntos || 1) * 600; // Base points
+            currentStreak++;
+        } else {
+            currentStreak = 0;
+        }
+    }
+    var scoreEl = document.getElementById('quiz-current-score');
+    if(scoreEl) scoreEl.textContent = currentScore;
+    var streakEl = document.getElementById('quiz-current-streak');
+    if(streakEl) streakEl.textContent = currentStreak;
 
     var opciones = pregunta.opciones || [];
-    var optColors = ['#2563EB', '#0D9488', '#D97706', '#DC2626', '#7C3AED', '#059669'];
+    var optColors = ['#E91E63', '#2563EB', '#E6A15C', '#059669', '#7C3AED', '#0D9488'];
     var html = '';
     quizMultiSelections = [];
 
@@ -1033,50 +979,49 @@ function renderQuizQuestion() {
     if (tipo === 'oa' || tipo === 'fb') {
         var ph = tipo === 'oa' ? 'Escribe tu respuesta aquí...' : 'Completa los espacios en blanco...';
         html += '<textarea id="quiz-open-answer" placeholder="' + ph + '" ' +
-            'style="width:100%;min-height:120px;padding:16px;border:2px solid #E2E8F0;border-radius:12px;' +
-            'background:#fff;color:#333;font-size:.95rem;font-family:Inter,sans-serif;resize:vertical;outline:none"></textarea>';
-        html += '<button onclick="submitQuizOpen()" style="margin-top:12px;padding:14px 24px;background:linear-gradient(135deg,#E91E63,#C2185B);' +
-            'color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;width:100%;font-size:1rem">Enviar respuesta</button>';
+            'style="width:100%;min-height:120px;padding:16px;border:2px solid rgba(255,255,255,0.2);border-radius:12px;' +
+            'background:rgba(255,255,255,0.9);color:#333;font-size:1.1rem;font-weight:700;resize:vertical;outline:none"></textarea>';
+        html += '<button onclick="submitQuizOpen()" style="margin-top:16px;padding:16px 24px;background:#2563EB;' +
+            'color:#fff;border:none;border-radius:14px;font-weight:800;cursor:pointer;width:100%;font-size:1.2rem;box-shadow:0 6px 0 #1D4ED8;">Enviar respuesta</button>';
     }
-    // Multiple selection: allow multiple clicks + confirm
+    // Multiple selection
     else if (tipo === 'ms') {
         for (var i = 0; i < opciones.length; i++) {
             var bgColor = optColors[i % optColors.length];
             html += '<button class="quiz-opt-btn" data-idx="' + i + '" onclick="toggleQuizMulti(' + i + ')" ' +
-                'style="padding:16px 20px;border:2px solid #E2E8F0;border-radius:14px;background:#fff;text-align:left;' +
-                'font-size:.95rem;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:12px">' +
-                '<span style="width:32px;height:32px;border-radius:8px;background:' + bgColor + ';color:#fff;display:flex;' +
-                'align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0">' +
-                String.fromCharCode(65 + i) + '</span>' +
-                '<span>' + (opciones[i].text || '') + '</span></button>';
+                'style="padding:24px 20px;border:none;border-radius:16px;background:' + bgColor + ';color:#fff;text-align:center;' +
+                'font-size:1.2rem;font-weight:800;cursor:pointer;transition:transform .1s, filter .2s;box-shadow:inset 0 -6px 0 rgba(0,0,0,0.2), 0 4px 10px rgba(0,0,0,0.3);">' +
+                (opciones[i].text || '') + '</button>';
         }
-        html += '<button id="quiz-confirm-multi" onclick="confirmQuizMulti()" style="margin-top:12px;padding:14px 24px;' +
-            'background:linear-gradient(135deg,#7C3AED,#6D28D9);color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;width:100%;font-size:1rem">' +
-            '✓ Confirmar selección</button>';
+        html += '<button id="quiz-confirm-multi" onclick="confirmQuizMulti()" style="grid-column: 1 / -1; margin-top:12px;padding:16px 24px;' +
+            'background:#22C55E;color:#fff;border:none;border-radius:14px;font-weight:800;cursor:pointer;font-size:1.2rem;box-shadow:0 6px 0 #16A34A;">' +
+            'Enviar selección</button>';
     }
-    // Normal MC / TF / Poll — con botón confirmar para poder cambiar respuesta
+    // Normal MC / TF / Poll
     else {
         for (var j = 0; j < opciones.length; j++) {
             var bgColor2 = optColors[j % optColors.length];
-            html += '<button class="quiz-opt-btn" data-idx="' + j + '" onclick="selectQuizOption(' + j + ')" ' +
-                'style="padding:16px 20px;border:2px solid #E2E8F0;border-radius:14px;background:#fff;text-align:left;' +
-                'font-size:.95rem;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:12px">' +
-                '<span style="width:32px;height:32px;border-radius:8px;background:' + bgColor2 + ';color:#fff;display:flex;' +
-                'align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0">' +
-                String.fromCharCode(65 + j) + '</span>' +
-                '<span>' + (opciones[j].text || '') + '</span></button>';
+            html += '<button class="quiz-opt-btn" data-idx="' + j + '" onclick="confirmQuizAnswerInstant(' + j + ')" ' +
+                'style="padding:24px 20px;border:none;border-radius:16px;background:' + bgColor2 + ';color:#fff;text-align:center;' +
+                'font-size:1.2rem;font-weight:800;cursor:pointer;transition:transform .1s, filter .2s;box-shadow:inset 0 -6px 0 rgba(0,0,0,0.2), 0 4px 10px rgba(0,0,0,0.3);">' +
+                (opciones[j].text || '') + '</button>';
         }
-        html += '<button id="quiz-confirm-answer" onclick="confirmQuizAnswer()" ' +
-            'style="display:none;margin-top:12px;padding:14px 24px;background:linear-gradient(135deg,#2563EB,#1E40AF);' +
-            'color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;width:100%;font-size:1rem;' +
-            'transition:transform .15s;box-shadow:0 4px 16px rgba(37,99,235,.3)">' +
-            '✓ Confirmar respuesta</button>';
     }
 
     document.getElementById('quiz-options-list').innerHTML = html;
     document.getElementById('quiz-next-btn').style.display = 'none';
     quizSelectedOption = -1;
     quizConfirmed = false;
+
+    // Reset timer bar color and width
+    var tb = document.getElementById('quiz-timer-bar');
+    if(tb) {
+        tb.style.transition = 'none';
+        tb.style.width = '100%';
+        tb.style.background = '#22C55E';
+        // force reflow
+        void tb.offsetWidth;
+    }
 
     startQuestionTimer(timer);
 }
@@ -1123,11 +1068,8 @@ function confirmQuizMulti() {
     if (confirmBtn) confirmBtn.style.display = 'none';
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: quizMultiSelections, correcta: allCorrect });
     
-    showFeedbackAnimation(allCorrect);
-    
-    var nextBtn = document.getElementById('quiz-next-btn');
-    nextBtn.style.display = 'block';
-    nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
+    var pts = (pregunta.puntos || 1) * 600;
+    showFeedbackAnimation(allCorrect, allCorrect ? pts : 0);
 }
 window.confirmQuizMulti = confirmQuizMulti;
 
@@ -1143,11 +1085,8 @@ function submitQuizOpen() {
     var pregunta = quizData.preguntas[quizCurrentQ];
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: answer, correcta: true });
     
-    showFeedbackAnimation(true);
-    
-    var nextBtn = document.getElementById('quiz-next-btn');
-    nextBtn.style.display = 'block';
-    nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
+    var pts = (pregunta.puntos || 1) * 600;
+    showFeedbackAnimation(true, pts);
 }
 window.submitQuizOpen = submitQuizOpen;
 
@@ -1217,13 +1156,52 @@ function confirmQuizAnswer() {
 
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer });
     
-    showFeedbackAnimation(isCorrectAnswer);
-
-    var nextBtn = document.getElementById('quiz-next-btn');
-    nextBtn.style.display = 'block';
-    nextBtn.textContent = quizCurrentQ >= quizData.preguntas.length - 1 ? '🏆 Ver resultados' : 'Siguiente →';
+    showFeedbackAnimation(isCorrectAnswer, isCorrectAnswer ? (pregunta.puntos || 1) * 600 : 0);
 }
 window.confirmQuizAnswer = confirmQuizAnswer;
+
+function confirmQuizAnswerInstant(idx) {
+    if (quizConfirmed) return;
+    quizConfirmed = true;
+    if (quizTimerInterval) clearInterval(quizTimerInterval);
+
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var opciones = pregunta.opciones || [];
+    var buttons = document.querySelectorAll('.quiz-opt-btn');
+    var isCorrectAnswer = opciones[idx] && opciones[idx].correct;
+
+    for (var i = 0; i < buttons.length; i++) {
+        var isSelected = (i === idx);
+        if (isSelected && isCorrectAnswer) {
+            buttons[i].style.filter = 'brightness(1.2)';
+            buttons[i].style.border = '4px solid #fff';
+        } else if (isSelected && !isCorrectAnswer) {
+            buttons[i].style.filter = 'grayscale(0.5)';
+            buttons[i].style.opacity = '0.7';
+            buttons[i].style.border = '4px solid #EF4444';
+        } else if (opciones[i] && opciones[i].correct) {
+            buttons[i].style.filter = 'brightness(1.2)';
+            buttons[i].style.border = '4px solid #22C55E';
+        } else {
+            buttons[i].style.opacity = '0.3';
+        }
+        buttons[i].style.cursor = 'default';
+        buttons[i].style.pointerEvents = 'none';
+    }
+
+    quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer });
+    
+    // Stop the timer bar
+    var timerBar = document.getElementById('quiz-timer-bar');
+    if(timerBar) {
+        var computedWidth = window.getComputedStyle(timerBar).width;
+        timerBar.style.transition = 'none';
+        timerBar.style.width = computedWidth;
+    }
+
+    showFeedbackAnimation(isCorrectAnswer, isCorrectAnswer ? (pregunta.puntos || 1) * 600 : 0);
+}
+window.confirmQuizAnswerInstant = confirmQuizAnswerInstant;
 
 function quizNext() {
     quizCurrentQ++;
