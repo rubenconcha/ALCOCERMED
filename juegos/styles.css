@@ -557,3 +557,103 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
 .tr-silver { background: rgba(226, 232, 240, 0.5); color: #64748B; border: 2px solid #94A3B8; }
 .tr-bronze { background: rgba(241, 165, 96, 0.2); color: #A0522D; border: 2px solid #CD7F32; }
 .tr-normal { background: var(--bg-body); color: var(--text-mid); }
+
+/* ═══ QUIZ RESPONSIVE LAYOUT ═══ */
+.quiz-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  flex: 1;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  .quiz-options-grid {
+    gap: 12px;
+  }
+}
+
+/* SMARTPHONES (iPhone & Android) */
+@media (max-width: 768px) {
+  /* Main Container adjustments */
+  .main-content {
+    padding: 20px 16px 80px;
+  }
+  
+  /* Topbar Mobile */
+  .topbar-actions { gap: 4px; }
+  .top-action-btn.btn-primary {
+    padding: 0 10px;
+    font-size: 0.75rem;
+  }
+  .topbar-logo-text small { display: none; } /* Ocultar "Admin" en celus muy chicos */
+
+  /* Quiz HUD */
+  #quiz-top-hud {
+    flex-direction: column !important;
+    gap: 8px;
+    align-items: center;
+  }
+
+  /* Quiz Question Card */
+  #quiz-question-card {
+    padding: 20px !important;
+    min-height: 120px !important;
+    margin-bottom: 20px !important;
+  }
+  #quiz-question-text {
+    font-size: 1.3rem !important;
+  }
+
+  /* Quiz Grid: Stack to 1 column on Mobile */
+  .quiz-options-grid {
+    grid-template-columns: 1fr;
+  }
+  .quiz-opt-btn {
+    min-height: 70px !important;
+    padding: 16px !important;
+    font-size: 1.05rem !important;
+  }
+
+  /* Podium & Ranking Mobile */
+  .stadium-podium-container {
+    padding: 30px 10px 100px !important;
+    border-radius: 16px !important;
+  }
+  
+  .total-ranking-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+  .tr-rank-circle {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+  
+  /* Quiz Review List adjustments */
+  #quiz-review-section h3 {
+    font-size: 1.2rem !important;
+  }
+  #quiz-review-list > div {
+    padding: 14px !important;
+  }
+  #quiz-review-list .fas {
+    font-size: 0.85rem !important;
+  }
+  #quiz-review-list > div > div:first-child {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+  #quiz-question-text {
+    font-size: 1.15rem !important;
+  }
+  .quiz-opt-btn {
+    min-height: 60px !important;
+    font-size: 0.95rem !important;
+  }
+}
