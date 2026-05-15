@@ -1453,7 +1453,7 @@ function loadLibrary() {
                 '<button onclick="window.location.href=\'editor.html?id=' + ev.id + 
                 '\'" style="padding:8px 14px;background:#F0F1F3;border:1px solid #E2E8F0;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#555"><i class="fas fa-edit"></i> Editar</button>' +
                 (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&results=true\'" style="padding:8px 14px;background:#8B5CF6;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;margin-left:4px" title="Resultados en vivo"><i class="fas fa-trophy"></i> Resultados</button>' : '') +
-                (ev.publicado ? '<button onclick="showCustomAlert(\'Código: ' + (ev.codigo||'') + '\')" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;margin-left:4px"><i class="fas fa-play"></i> Código</button>' : '') +
+                (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&play=true\'" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;margin-left:4px" title="Abrir sala de juego"><i class="fas fa-play"></i> Jugar</button>' : '') +
                 '<button onclick="deleteQuiz(\'' + ev.id + '\')" style="padding:8px 14px;background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#DC2626;margin-left:4px" title="Borrar"><i class="fas fa-trash-alt"></i></button>' +
                 '</div></div>';
         }

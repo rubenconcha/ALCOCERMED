@@ -78,9 +78,19 @@ function createNewEvaluation(){
 
 function loadExistingEvaluation(id){
   var client=getSupabase();evaluacionId=id;
+  var titleLoaded=false, qLoaded=false, evCode=null;
+
+  function checkPlay(){
+    if(titleLoaded && qLoaded && new URLSearchParams(window.location.search).get('play') === 'true') {
+       if (evCode) showLobby(evCode);
+    }
+  }
+
   client.from('evaluaciones').select('*').eq('id',id).single().then(function(r){
     if(r.error)return;
     document.getElementById('quiz-title-input').value=r.data.titulo||'Cuestionario sin título';
+    evCode=r.data.codigo;
+    titleLoaded=true; checkPlay();
   });
   client.from('evaluacion_preguntas').select('*').eq('evaluacion_id',id).order('orden').then(function(r){
     if(r.error||!r.data)return;
@@ -89,6 +99,7 @@ function loadExistingEvaluation(id){
     });
     renderQuestionThumbs();updateStats();
     if(questions.length>0)selectQuestion(0);
+    qLoaded=true; checkPlay();
   });
 }
 
@@ -672,8 +683,16 @@ function pollLobbyParticipants(){
 
 function closeLobby(){
   document.getElementById('lobby-overlay').classList.remove('active');
+  document.body.classList.remove('loading-lobby');
   if(lobbyPollInterval){clearInterval(lobbyPollInterval);lobbyPollInterval=null;}
   stopLobbyMusic();
+}
+
+function cancelLobby() {
+  closeLobby();
+  if (window.location.search.includes('play=true')) {
+    window.location.href = 'index.html?page=biblioteca';
+  }
 }
 function copyLobbyCode(){
   var code=document.getElementById('lobby-code').textContent;

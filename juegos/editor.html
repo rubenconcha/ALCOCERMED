@@ -17,12 +17,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="AlcocerMed Admin">
-</head>
-<body>
   <script>
-    if(window.location.search.includes('results=true') || sessionStorage.getItem('alcocer_teacher_eval')){
+    var search = window.location.search;
+    if(search.includes('results=true') || sessionStorage.getItem('alcocer_teacher_eval')){
       document.body.classList.add('loading-results');
       document.write('<style>body.loading-results #teacher-results-overlay{opacity:1 !important; visibility:visible !important; transition:none !important;}</style>');
+    } else if(search.includes('play=true')) {
+      document.body.classList.add('loading-lobby');
+      document.write('<style>body.loading-lobby #lobby-overlay{opacity:1 !important; visibility:visible !important; transition:none !important;}</style>');
     }
   </script>
 
@@ -304,7 +306,7 @@
         <span class="lobby-dot">•</span>
         <span class="lobby-count" id="lobby-question-count">4 preguntas</span>
         <button class="lobby-music-toggle" id="lobby-music-btn" onclick="toggleLobbyMusic()" title="Música" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);color:#fff;padding:8px 14px;border-radius:8px;cursor:pointer;font-size:14px;margin-right:8px;transition:.2s"><i class="fas fa-volume-up"></i></button>
-        <button class="lobby-close" onclick="closeLobby()"><i class="fas fa-times"></i> Terminar</button>
+        <button class="lobby-close" onclick="cancelLobby()"><i class="fas fa-times"></i> Terminar</button>
       </div>
       <div class="lobby-body">
         <div class="lobby-join-info">
