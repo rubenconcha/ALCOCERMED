@@ -1642,6 +1642,7 @@ function loadReports() {
             }
             
             window.adminReportsNameMap = {};
+            window.adminStudentNames = {};
             if (!pRes.error && pRes.data) {
                 for (var n = 0; n < pRes.data.length; n++) {
                     var p = pRes.data[n];
@@ -1649,18 +1650,82 @@ function loadReports() {
                         var nm = p.nombre;
                         if(nm && nm.indexOf('|') !== -1) nm = nm.split('|')[1];
                         window.adminReportsNameMap[p.evaluacion_id + '_' + p.user_id] = nm;
+                        window.adminStudentNames[p.user_id] = nm;
                     }
                 }
             }
             
             window.adminReportsData = {};
+            var globalStats = {};
             for (var i = 0; i < rRes.data.length; i++) {
                 var res = rRes.data[i];
                 if (!window.adminReportsData[res.evaluacion_id]) window.adminReportsData[res.evaluacion_id] = [];
                 window.adminReportsData[res.evaluacion_id].push(res);
+                
+                if (res.user_id) {
+                    if (!globalStats[res.user_id]) {
+                        globalStats[res.user_id] = { id: res.user_id, pts: 0, count: 0, pctSum: 0 };
+                    }
+                    globalStats[res.user_id].pts += (res.puntaje || 0);
+                    globalStats[res.user_id].count++;
+                    globalStats[res.user_id].pctSum += (res.porcentaje || 0);
+                }
             }
             
+            var globalArr = [];
+            for (var uid in globalStats) {
+                var st = globalStats[uid];
+                st.name = window.adminStudentNames[uid] || (uid.substring(0,8) + '...');
+                st.avgPct = Math.round(st.pctSum / st.count);
+                globalArr.push(st);
+            }
+            globalArr.sort(function(a, b) {
+                if (b.pts !== a.pts) return b.pts - a.pts;
+                return b.avgPct - a.avgPct;
+            });
+            
             var html = '';
+            
+            if (globalArr.length > 0) {
+                html += '<div style="background:linear-gradient(145deg, #1E293B, #020617); border-radius:16px; padding:24px; margin-bottom:32px; box-shadow:0 12px 30px rgba(0,0,0,0.15); color:#fff; position:relative; overflow:hidden;">';
+                html += '<div style="position:absolute; top:-30px; right:-20px; opacity:0.05; font-size:140px; transform:rotate(-15deg); pointer-events:none;"><i class="fas fa-trophy"></i></div>';
+                html += '<h2 style="font-size:22px; font-weight:900; margin-bottom:4px; display:flex; align-items:center; gap:10px;"><i class="fas fa-crown" style="color:#FBBF24; filter:drop-shadow(0 2px 4px rgba(251,191,36,0.3));"></i> Ranking Histórico Top 10</h2>';
+                html += '<p style="font-size:13px; color:#94A3B8; margin-bottom:24px; font-weight:600;">Acumulado de puntos de todas tus evaluaciones</p>';
+                
+                html += '<div style="display:flex; flex-direction:column; gap:10px; position:relative; z-index:2;">';
+                for (var g = 0; g < Math.min(globalArr.length, 10); g++) {
+                    var st = globalArr[g];
+                    var rankIcon = (g + 1);
+                    var bg = 'rgba(30, 41, 59, 0.6)';
+                    var border = '1px solid rgba(255,255,255,0.05)';
+                    var rCol = '#94A3B8';
+                    if (g === 0) { rankIcon = '🥇'; bg = 'linear-gradient(90deg, rgba(251, 191, 36, 0.15), rgba(30, 41, 59, 0.6))'; border = '1px solid rgba(251, 191, 36, 0.3)'; rCol = '#FBBF24'; }
+                    else if (g === 1) { rankIcon = '🥈'; bg = 'linear-gradient(90deg, rgba(148, 163, 184, 0.15), rgba(30, 41, 59, 0.6))'; border = '1px solid rgba(148, 163, 184, 0.3)'; rCol = '#E2E8F0'; }
+                    else if (g === 2) { rankIcon = '🥉'; bg = 'linear-gradient(90deg, rgba(217, 119, 6, 0.15), rgba(30, 41, 59, 0.6))'; border = '1px solid rgba(217, 119, 6, 0.3)'; rCol = '#D97706'; }
+                    
+                    var pColor = st.avgPct >= 70 ? '#4ADE80' : st.avgPct >= 40 ? '#FBBF24' : '#F87171';
+
+                    html += '<div style="display:flex; align-items:center; padding:12px 16px; background:' + bg + '; border:' + border + '; border-radius:12px; transition:transform 0.2s;">';
+                    html += '<div style="width:36px; font-weight:900; font-size:18px; color:' + rCol + '; text-align:center;">' + rankIcon + '</div>';
+                    html += '<div style="flex:1; padding-left:12px;">';
+                    html += '<div style="font-weight:800; font-size:15px; color:#F8FAFC;">' + st.name + '</div>';
+                    html += '<div style="font-size:11px; color:#94A3B8; font-weight:600; margin-top:2px;">' + st.count + ' evaluación(es) completada(s)</div>';
+                    html += '</div>';
+                    
+                    html += '<div style="text-align:right; padding-right:16px;">';
+                    html += '<div style="font-weight:900; font-size:18px; color:#38BDF8;">' + (st.pts || 0).toLocaleString() + ' <span style="font-size:11px; color:#7DD3FC; font-weight:700;">pts</span></div>';
+                    html += '</div>';
+                    
+                    html += '<div style="text-align:right;">';
+                    html += '<div style="display:inline-block; padding:4px 8px; border-radius:8px; background:' + pColor + '20; color:' + pColor + '; font-weight:800; font-size:13px;">' + st.avgPct + '%</div>';
+                    html += '</div>';
+                    
+                    html += '</div>';
+                }
+                html += '</div></div>';
+                
+                html += '<h2 style="font-size:18px; font-weight:800; margin-bottom:16px; color:#1E293B;"><i class="fas fa-layer-group" style="margin-right:8px; color:#64748B;"></i> Reportes por Evaluación</h2>';
+            }
             for (var j = 0; j < evRes.data.length; j++) {
                 var ev = evRes.data[j];
                 var results = window.adminReportsData[ev.id] || [];
@@ -1685,7 +1750,7 @@ function loadReports() {
                 html += '<div style="background:#F1F5F9;border-radius:20px;height:10px;margin-bottom:20px;overflow:hidden"><div style="height:100%;width:' + avgPct + '%;background:' + barColor + ';border-radius:20px"></div></div>';
                 
                 html += '<table style="width:100%;border-collapse:collapse;font-size:14px">';
-                html += '<tr style="border-bottom:2px solid #E2E8F0;background:#F8FAFC"><th style="padding:12px;color:#64748B;font-weight:800;width:40px;text-align:center;border-top-left-radius:12px;">#</th><th style="text-align:left;padding:12px;color:#64748B;font-weight:800">Estudiante</th><th style="padding:12px;color:#64748B;font-weight:800;text-align:center">Aciertos</th><th style="padding:12px;color:#64748B;font-weight:800;text-align:center;border-top-right-radius:12px;">Precisión</th></tr>';
+                html += '<tr style="border-bottom:2px solid #E2E8F0;background:#F8FAFC"><th style="padding:12px;color:#64748B;font-weight:800;width:40px;text-align:center;border-top-left-radius:12px;">#</th><th style="text-align:left;padding:12px;color:#64748B;font-weight:800">Estudiante</th><th style="padding:12px;color:#64748B;font-weight:800;text-align:center">Puntos</th><th style="padding:12px;color:#64748B;font-weight:800;text-align:center;border-top-right-radius:12px;">Precisión</th></tr>';
                 
                 for (var m = 0; m < results.length; m++) {
                     var r = results[m];
@@ -1701,7 +1766,7 @@ function loadReports() {
                     html += '<tr onclick="openReportDetail(\'' + ev.id + '\', \'' + r.user_id + '\')" style="cursor:pointer;border-bottom:1px solid #F1F5F9;transition:background .2s" onmouseover="this.style.background=\'#F8FAFC\'" onmouseout="this.style.background=\'transparent\'">';
                     html += '<td style="padding:14px 12px;text-align:center;' + rankStyle + '">' + rankIcon + '</td>';
                     html += '<td style="padding:14px 12px;font-weight:700;color:#334155"><i class="fas fa-user-circle" style="color:#CBD5E1;margin-right:8px;font-size:18px;vertical-align:-2px;"></i>' + studentName + '</td>';
-                    html += '<td style="padding:14px 12px;text-align:center;font-weight:800;color:#475569">' + r.puntaje + ' <span style="color:#94A3B8;font-size:12px;font-weight:600;">/ ' + r.total + '</span></td>';
+                    html += '<td style="padding:14px 12px;text-align:center;font-weight:800;color:#475569">' + (r.puntaje || 0).toLocaleString() + ' <span style="color:#94A3B8;font-size:12px;font-weight:600;">pts</span></td>';
                     html += '<td style="padding:14px 12px;text-align:center;font-weight:900;color:' + pColor + '"><div style="display:inline-block;padding:4px 10px;border-radius:12px;background:' + pColor + '15">' + r.porcentaje + '%</div></td>';
                     html += '</tr>';
                 }
