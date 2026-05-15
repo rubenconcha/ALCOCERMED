@@ -78,11 +78,13 @@ function createNewEvaluation(){
 
 function loadExistingEvaluation(id){
   var client=getSupabase();evaluacionId=id;
-  var titleLoaded=false, qLoaded=false, evCode=null;
+  var titleLoaded=false, qLoaded=false, evCode=null, iniciado=false;
 
   function checkPlay(){
     if(titleLoaded && qLoaded && new URLSearchParams(window.location.search).get('play') === 'true') {
-       if (evCode) showLobby(evCode);
+       if (evCode && !iniciado && !sessionStorage.getItem('alcocer_teacher_eval')) {
+           showLobby(evCode);
+       }
     }
   }
 
@@ -90,6 +92,11 @@ function loadExistingEvaluation(id){
     if(r.error)return;
     document.getElementById('quiz-title-input').value=r.data.titulo||'Cuestionario sin título';
     evCode=r.data.codigo;
+    iniciado=r.data.iniciado;
+    if(document.getElementById('settings-subject')) document.getElementById('settings-subject').value=r.data.asignatura||'Otro';
+    if(document.getElementById('settings-topic')) document.getElementById('settings-topic').value=r.data.tema||'';
+    if(document.getElementById('settings-level')) document.getElementById('settings-level').value=r.data.nivel||'Seleccione el grado...';
+    if(document.getElementById('settings-lang')) document.getElementById('settings-lang').value=r.data.idioma||'español, castellano';
     titleLoaded=true; checkPlay();
   });
   client.from('evaluacion_preguntas').select('*').eq('evaluacion_id',id).order('orden').then(function(r){
@@ -375,6 +382,7 @@ function saveSettingsAndPublish(){
   client.from('evaluaciones').update({
     titulo:titulo,
     asignatura:(document.getElementById('settings-subject')||{}).value||'Otro',
+    tema:(document.getElementById('settings-topic')||{}).value||'',
     nivel:(document.getElementById('settings-level')||{}).value||'',
     idioma:(document.getElementById('settings-lang')||{}).value||'Español',
     visibilidad:vis,objetivo:obj,updated_at:new Date().toISOString()
@@ -745,8 +753,18 @@ function pollTeacherResults(){
   if(!evaluacionId)return;
   var client=getSupabase();
   client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje').eq('evaluacion_id',evaluacionId).order('porcentaje',{ascending:false}).order('puntaje',{ascending:false}).then(function(r){
-    if(r.error||!r.data)return;
-    if(r.data.length===0){return;}
+    if(r.error||!r.data){
+      document.getElementById('tr-results-list').innerHTML='<div style="padding:40px 24px;text-align:center;color:#F87171;font-size:1rem;font-weight:600"><i class="fas fa-exclamation-triangle" style="font-size:32px;margin-bottom:16px;display:block"></i>Error al cargar los resultados.</div>';
+      return;
+    }
+    if(r.data.length===0){
+      document.getElementById('tr-results-list').innerHTML='<div style="padding:40px 24px;text-align:center;color:rgba(255,255,255,.6);font-size:1rem;font-weight:600"><i class="fas fa-inbox" style="font-size:32px;margin-bottom:16px;color:rgba(255,255,255,.3);display:block"></i>No hay resultados registrados todavía para esta evaluación.</div>';
+      document.getElementById('tr-podium').innerHTML='<div style="width:100%;text-align:center;color:rgba(255,255,255,.4);padding:40px 0;font-style:italic">El podio aparecerá cuando haya resultados</div>';
+      document.getElementById('tr-accuracy-msg').textContent='No hay datos suficientes';
+      document.getElementById('tr-accuracy-pct').textContent='--%';
+      document.getElementById('tr-accuracy-bar').style.width='0%';
+      return;
+    }
 
     // Get names
     client.from('evaluacion_participantes').select('user_id,nombre').eq('evaluacion_id',evaluacionId).then(function(pRes){

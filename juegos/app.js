@@ -509,9 +509,22 @@ function searchAndStartQuiz(code) {
                 evaluacion: evaluacion,
                 preguntas: pResult.data
             };
-            quizCurrentQ = 0;
-            quizAnswers = [];
+            var savedStateStr = sessionStorage.getItem('alcocer_quiz_state_' + code);
+            if (savedStateStr) {
+                try {
+                    var st = JSON.parse(savedStateStr);
+                    quizCurrentQ = st.q || 0;
+                    quizAnswers = st.a || [];
+                } catch(e) {
+                    quizCurrentQ = 0;
+                    quizAnswers = [];
+                }
+            } else {
+                quizCurrentQ = 0;
+                quizAnswers = [];
+            }
             quizSelectedOption = -1;
+            quizConfirmed = false;
 
             // Registrar participante en el lobby (upsert para evitar duplicados)
             if (currentUser) {
@@ -543,7 +556,16 @@ function searchAndStartQuiz(code) {
 
             // Si el admin ya inició, empezar directamente
             if (evaluacion.iniciado) {
-                showSplashAndStart();
+                if (quizCurrentQ > 0) {
+                    // Restoring a session that was already started
+                    if (quizCurrentQ >= quizData.preguntas.length) {
+                        showQuizResults();
+                    } else {
+                        renderQuizQuestion();
+                    }
+                } else {
+                    showSplashAndStart();
+                }
             } else {
                 // Mostrar sala de espera y esperar a que el admin inicie
                 showWaitingRoom();
@@ -1205,6 +1227,12 @@ window.confirmQuizAnswer = confirmQuizAnswer;
 
 function quizNext() {
     quizCurrentQ++;
+    if (quizData && quizData.evaluacion && quizData.evaluacion.codigo) {
+        sessionStorage.setItem('alcocer_quiz_state_' + quizData.evaluacion.codigo, JSON.stringify({
+            q: quizCurrentQ,
+            a: quizAnswers
+        }));
+    }
     if (quizCurrentQ >= quizData.preguntas.length) { showQuizResults(); }
     else { renderQuizQuestion(); }
 }
@@ -1215,6 +1243,9 @@ function showQuizResults() {
     stopGameMusic(); // Parar música al terminar
     // Limpiar sesión pendiente — el quiz terminó
     sessionStorage.removeItem('alcocer_quiz_code');
+    if (quizData && quizData.evaluacion) {
+        sessionStorage.removeItem('alcocer_quiz_state_' + quizData.evaluacion.codigo);
+    }
     var correctas = 0;
     for (var i = 0; i < quizAnswers.length; i++) { if (quizAnswers[i].correcta) correctas++; }
     var total = quizData.preguntas.length;
@@ -1470,7 +1501,7 @@ function loadLibrary() {
                 '<h3 style="font-size:16px;font-weight:700;color:#1E293B">' + (ev.titulo || 'Sin título') + '</h3>' +
                 statusBadge + '</div>' +
                 '<div style="display:flex;gap:16px;font-size:12px;color:#64748B">' +
-                '<span><i class="fas fa-book"></i> ' + (ev.asignatura || 'General') + '</span>' +
+                '<span><i class="fas fa-book"></i> ' + (ev.asignatura || 'General') + (ev.tema ? ' - ' + ev.tema : '') + '</span>' +
                 '<span><i class="fas fa-calendar"></i> ' + fecha + '</span>' +
                 codeHtml + '</div></div>' +
                 '<div style="display:flex;gap:8px">' +
