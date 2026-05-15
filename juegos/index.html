@@ -478,23 +478,35 @@
         <div id="quiz-result-breakdown" style="text-align:left;margin-bottom:24px"></div>
 
         <!-- ═══ PODIO EN VIVO ═══ -->
-        <div id="quiz-podium" style="display:none;background:linear-gradient(135deg,#0F0526,#1A0A3E,#2D1B4E);border-radius:20px;padding:28px 20px;margin-bottom:24px;color:#fff;overflow:hidden;position:relative">
-          <!-- Orbes decorativos -->
-          <div style="position:absolute;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(233,30,99,.15),transparent);top:0;right:0"></div>
-          <div style="position:absolute;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.12),transparent);bottom:0;left:0"></div>
+        <div id="quiz-podium" style="display:none; text-align:left;">
+          <!-- 1. Stadium Podium (Top 3) -->
+          <div class="stadium-podium-container">
+            <div class="stadium-bg-lines"></div>
+            <div class="stadium-light-beam"></div>
+            
+            <h3 style="font-size:1.4rem;font-weight:900;margin-bottom:20px;position:relative;z-index:10;color:#fff;text-shadow:0 2px 5px rgba(0,0,0,0.8);text-align:center;">
+              <i class="fas fa-trophy" style="color:#FFD700;margin-right:8px;"></i> Podio de Ganadores
+            </h3>
 
-          <h3 style="font-size:1rem;font-weight:800;margin-bottom:20px;position:relative;z-index:1"><i class="fas fa-trophy" style="color:#FFD700;margin-right:6px"></i> Tabla de posiciones</h3>
-
-          <!-- Podio visual -->
-          <div id="podium-pillars" style="display:flex;align-items:flex-end;justify-content:center;gap:8px;margin-bottom:20px;min-height:160px;position:relative;z-index:1">
-            <!-- Se llena dinámicamente -->
+            <!-- Podio visual (Top 3) -->
+            <div id="podium-pillars" class="podium-pillars-wrapper"></div>
           </div>
 
-          <!-- Tu posición -->
-          <div id="my-rank-pill" style="display:none;padding:10px 20px;background:rgba(233,30,99,.15);border:1px solid rgba(233,30,99,.4);border-radius:12px;font-size:.85rem;font-weight:700;color:#E91E63;position:relative;z-index:1"></div>
+          <!-- 2. Total Ranking (List) -->
+          <div style="max-width:800px;margin:0 auto;">
+            <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:16px;color:var(--text-dark);">
+              <i class="fas fa-list-ol"></i> Ranking Total
+            </h3>
+            
+            <!-- Tu posición -->
+            <div id="my-rank-pill" style="display:none;padding:12px 20px;background:rgba(233,30,99,.1);border:1px solid rgba(233,30,99,.3);border-radius:12px;font-size:1rem;font-weight:700;color:#E91E63;margin-bottom:16px;"></div>
 
-          <!-- Lista completa -->
-          <div id="podium-full-list" style="margin-top:16px;position:relative;z-index:1"></div>
+            <div style="overflow-x:auto;">
+              <table class="total-ranking-table" id="total-ranking-table">
+                <tbody id="podium-full-list"></tbody>
+              </table>
+            </div>
+          </div>
         </div>
 
         <button onclick="navigateTo('inicio')" style="padding:14px 32px;background:linear-gradient(135deg,#E91E63,#C2185B);color:#fff;border:none;border-radius:12px;font-size:.95rem;font-weight:700;cursor:pointer">Volver al inicio</button>

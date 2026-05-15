@@ -366,70 +366,194 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
   #quiz-container{margin:0 auto;} /* Center the quiz on desktop too */
 }
 
-/* Question Type Dropdown */
-.type-selector {
+/* ═══ STADIUM PODIUM ═══ */
+.stadium-podium-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 32px;
+  background: radial-gradient(circle at 50% 30%, #3a1c61 0%, #170b2e 60%, #0d041a 100%);
+  border-radius: 24px;
+  padding: 40px 20px 20px;
   position: relative;
-  cursor: pointer;
-  padding: 6px 12px;
-  border-radius: 8px;
-  transition: background 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.05);
 }
-.type-selector:hover { background: rgba(0,0,0,0.05); }
 
-.type-dropdown {
+.stadium-bg-lines {
   position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  width: 240px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  border: 1px solid #E2E8F0;
-  z-index: 1000;
-  padding: 8px;
-  display: none;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.type-dropdown.active {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
+  inset: 0;
+  background: 
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px),
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px);
+  z-index: 1;
 }
 
-.type-item {
+.stadium-light-beam {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 400px;
+  background: radial-gradient(ellipse at top, rgba(255, 215, 0, 0.4), transparent 70%);
+  z-index: 2;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.podium-pillars-wrapper {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px;
-  border-radius: 8px;
-  transition: background 0.2s;
-  cursor: pointer;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 16px;
+  height: 220px;
+  position: relative;
+  z-index: 10;
+  margin-top: 60px;
 }
-.type-item:hover { background: #F1F5F9; }
 
-.ti-icon {
-  font-size: 20px;
+.podium-cylinder {
+  position: relative;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: popUpCylinder 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+@keyframes popUpCylinder {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Base Body (3D effect) */
+.cylinder-body {
+  width: 100%;
+  background: linear-gradient(90deg, #111 0%, #333 50%, #111 100%);
+  position: relative;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+  box-shadow: inset 0 -10px 20px rgba(0,0,0,0.8), 0 20px 30px rgba(0,0,0,0.5);
+}
+
+/* Top Oval */
+.cylinder-top {
+  width: 100%;
+  height: 40px;
+  background: radial-gradient(ellipse at center, #444 0%, #222 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  box-shadow: inset 0 2px 5px rgba(255,255,255,0.2), inset 0 -5px 15px rgba(0,0,0,0.8);
+  z-index: 2;
+}
+
+/* Avatar container standing on top */
+.podium-avatar-wrapper {
+  position: absolute;
+  top: -90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+.podium-avatar {
+  font-size: 48px;
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5));
+  margin-bottom: -10px;
+}
+
+.podium-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.5);
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 8px;
+}
+
+/* Rank text inside cylinder */
+.cylinder-rank {
+  font-size: 40px;
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+  z-index: 3;
+}
+
+.rank-1 { color: #FFD700; height: 160px; }
+.rank-2 { color: #E2E8F0; height: 120px; }
+.rank-3 { color: #F1A560; height: 90px; }
+
+@media(max-width:600px){
+  .podium-cylinder { width: 90px; }
+  .rank-1 { height: 130px; }
+  .rank-2 { height: 90px; }
+  .rank-3 { height: 60px; }
+  .podium-avatar { font-size: 36px; top: -70px; }
+  .cylinder-rank { font-size: 28px; }
+  .cylinder-top { height: 30px; top: -15px; }
+}
+
+/* Total Ranking Table */
+.total-ranking-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.total-ranking-table tr {
+  background: var(--bg-card);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.total-ranking-table tr:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.total-ranking-table td {
+  padding: 16px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.total-ranking-table td:first-child {
+  border-left: 1px solid var(--border);
+  border-radius: 12px 0 0 12px;
+}
+
+.total-ranking-table td:last-child {
+  border-right: 1px solid var(--border);
+  border-radius: 0 12px 12px 0;
+}
+
+.tr-rank-circle {
   width: 32px;
   height: 32px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #F8FAFC;
-  border-radius: 6px;
+  font-weight: 800;
+  font-size: 14px;
 }
 
-.ti-text { display: flex; flex-direction: column; }
-.ti-name { font-size: 13px; font-weight: 700; color: #1E293B; }
-.ti-desc { font-size: 11px; color: #64748B; }
-
-.fmt-divider {
-  width: 1px;
-  height: 24px;
-  background: #E2E8F0;
-  margin: 0 8px;
-}
+.tr-gold { background: rgba(255, 215, 0, 0.2); color: #B8860B; border: 2px solid #FFD700; }
+.tr-silver { background: rgba(226, 232, 240, 0.5); color: #64748B; border: 2px solid #94A3B8; }
+.tr-bronze { background: rgba(241, 165, 96, 0.2); color: #A0522D; border: 2px solid #CD7F32; }
+.tr-normal { background: var(--bg-body); color: var(--text-mid); }

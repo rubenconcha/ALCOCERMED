@@ -1394,51 +1394,34 @@ function renderPodium(entries) {
         } catch(e) {}
     }
 
-    var medals = ['🥇', '🥈', '🥉'];
-    var colors = ['#FFD700', '#E2E8F0', '#F1A560']; // Oro, Plata, Bronce
-    var textColors = ['#9A7B00', '#475569', '#8C511B'];
-    var heights = [160, 120, 90];
-    var bgGradients = [
-        'linear-gradient(180deg, rgba(255,215,0,0.85) 0%, rgba(218,165,32,0.3) 100%)',
-        'linear-gradient(180deg, rgba(226,232,240,0.85) 0%, rgba(148,163,184,0.3) 100%)',
-        'linear-gradient(180deg, rgba(241,165,96,0.85) 0%, rgba(184,105,40,0.3) 100%)'
-    ];
-
-    // Podium pillars (order: 2nd, 1st, 3rd)
+    // Top 3 Stadium Podium
     var pillarOrder = [1, 0, 2];
     var pillarsHtml = '';
-
+    
     for (var p = 0; p < 3; p++) {
         var idx = pillarOrder[p];
         if (idx >= entries.length) {
-            pillarsHtml += '<div style="flex:1;max-width:140px"></div>';
+            pillarsHtml += '<div style="flex:1;max-width:120px"></div>';
             continue;
         }
         var e = entries[idx];
-        var h = heights[idx];
-        var delay = (p===1) ? 0.6 : (p===0 ? 0.3 : 0.9); // Orden de aparición: 2do, 1ro, 3ro
-
-        pillarsHtml += '<div style="flex:1;max-width:140px;display:flex;flex-direction:column;align-items:center;animation:fadeInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ' + delay + 's both">';
+        var rankClass = idx === 0 ? 'rank-1' : (idx === 1 ? 'rank-2' : 'rank-3');
+        var rankText = idx === 0 ? '1st' : (idx === 1 ? '2nd' : '3rd');
         
-        // Avatar
-        pillarsHtml += '<div style="width:60px;height:60px;border-radius:50%;background:' + colors[idx] + ';display:flex;align-items:center;justify-content:center;font-weight:900;font-size:32px;margin-bottom:12px;box-shadow:0 0 24px ' + colors[idx] + '80;border:3px solid #fff;position:relative;z-index:2">' + e.avatar + '</div>';
+        pillarsHtml += '<div class="podium-cylinder ' + rankClass + '" style="animation-delay:' + (p*0.2) + 's">';
         
-        // Name
-        pillarsHtml += '<span style="font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;text-align:center;text-shadow:0 2px 4px rgba(0,0,0,0.5)">' + e.nombre + '</span>';
-        
-        // Score
-        pillarsHtml += '<span style="font-size:12px;color:rgba(255,255,255,.9);margin-bottom:12px;font-weight:600;background:rgba(0,0,0,0.3);padding:2px 8px;border-radius:10px">' + e.puntaje + '/' + e.total + ' (' + e.porcentaje + '%)</span>';
-        
-        // Pillar (Glassmorphism + 3D feel)
-        pillarsHtml += '<div style="width:100%;height:' + h + 'px;background:' + bgGradients[idx] + ';border-radius:16px 16px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:16px;box-shadow:inset 0 2px 0 rgba(255,255,255,0.4), 0 -4px 30px rgba(0,0,0,.3);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,0.5);position:relative;overflow:hidden">';
-        
-        // Medal icon inside pillar
-        pillarsHtml += '<div style="background:rgba(0,0,0,0.2);padding:6px 14px;border-radius:20px;font-size:24px;box-shadow:inset 0 2px 4px rgba(0,0,0,0.3);color:#fff">' + medals[idx] + '</div>';
-        
-        // Glow effect at bottom of pillar
-        pillarsHtml += '<div style="position:absolute;bottom:0;left:0;right:0;height:50px;background:linear-gradient(0deg, ' + colors[idx] + '50, transparent)"></div>';
-        
+        // Avatar standing on top
+        pillarsHtml += '<div class="podium-avatar-wrapper">';
+        pillarsHtml += '<div class="podium-avatar">' + e.avatar + '</div>';
+        pillarsHtml += '<div class="podium-name">' + e.nombre + '</div>';
         pillarsHtml += '</div>';
+
+        // The cylinder body
+        pillarsHtml += '<div class="cylinder-top"></div>';
+        pillarsHtml += '<div class="cylinder-body">';
+        pillarsHtml += '<div class="cylinder-rank">' + rankText + '</div>';
+        pillarsHtml += '</div>';
+        
         pillarsHtml += '</div>';
     }
 
@@ -1452,26 +1435,41 @@ function renderPodium(entries) {
         }
         if (myRank > 0) {
             var rankPill = document.getElementById('my-rank-pill');
-            var suffix = myRank === 1 ? 'er' : myRank === 2 ? 'do' : myRank === 3 ? 'er' : 'to';
-            rankPill.innerHTML = '🎯 Tu posición: <strong style="font-size:1.1rem;color:#fff;margin:0 4px">' + myRank + '°</strong> de ' + entries.length + ' estudiantes';
-            rankPill.style.display = 'block';
+            if(rankPill) {
+                rankPill.innerHTML = '🎯 Tu posición: <strong style="font-size:1.1rem;margin:0 4px">' + myRank + '°</strong> de ' + entries.length + ' estudiantes';
+                rankPill.style.display = 'inline-block';
+            }
         }
     }
 
-    // Full list (beyond top 3)
-    if (entries.length > 3) {
-        var listHtml = '<div style="border-top:1px solid rgba(255,255,255,.1);padding-top:12px">';
-        for (var l = 3; l < entries.length; l++) {
-            var isMe = currentUser && entries[l].user_id === currentUser.id;
-            listHtml += '<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;' + (isMe ? 'background:rgba(233,30,99,.15);' : '') + 'margin-bottom:4px">';
-            listHtml += '<span style="font-weight:800;color:rgba(255,255,255,.4);font-size:14px;width:24px">' + (l + 1) + '</span>';
-            listHtml += '<span style="font-weight:600;flex:1;color:' + (isMe ? '#E91E63' : '#fff') + ';font-size:13px">' + entries[l].nombre + (isMe ? ' (tú)' : '') + '</span>';
-            listHtml += '<span style="font-size:12px;color:rgba(255,255,255,.5)">' + entries[l].porcentaje + '%</span>';
-            listHtml += '</div>';
-        }
-        listHtml += '</div>';
-        document.getElementById('podium-full-list').innerHTML = listHtml;
+    // Full list table
+    var listHtml = '';
+    for (var l = 0; l < entries.length; l++) {
+        var isMe = currentUser && entries[l].user_id === currentUser.id;
+        var rClass = l === 0 ? 'tr-gold' : (l === 1 ? 'tr-silver' : (l === 2 ? 'tr-bronze' : 'tr-normal'));
+        
+        listHtml += '<tr' + (isMe ? ' style="background:rgba(233,30,99,.05);"' : '') + '>';
+        
+        // Rank
+        listHtml += '<td style="width:60px;"><div class="tr-rank-circle ' + rClass + '">' + (l + 1) + '</div></td>';
+        
+        // Player
+        listHtml += '<td><div style="display:flex;align-items:center;gap:12px;">';
+        listHtml += '<div style="font-size:24px;">' + entries[l].avatar + '</div>';
+        listHtml += '<div style="font-weight:700;color:var(--text-dark);">' + entries[l].nombre + (isMe ? ' <span style="font-size:10px;background:#E91E63;color:#fff;padding:2px 6px;border-radius:4px;margin-left:4px;">TÚ</span>' : '') + '</div>';
+        listHtml += '</div></td>';
+        
+        // Score
+        listHtml += '<td style="text-align:right;"><div style="font-weight:800;color:var(--text-dark);font-size:1.1rem;">' + entries[l].puntaje + ' <span style="font-size:0.8rem;color:var(--text-mid);font-weight:600;">pts</span></div></td>';
+        
+        // Percentage
+        listHtml += '<td style="text-align:right;width:80px;"><div style="font-weight:700;color:var(--blue);">' + entries[l].porcentaje + '%</div></td>';
+        
+        listHtml += '</tr>';
     }
+    
+    var fullListEl = document.getElementById('podium-full-list');
+    if(fullListEl) fullListEl.innerHTML = listHtml;
 }
 
 // ═══ ADMIN: BIBLIOTECA — Evaluaciones creadas ═══
