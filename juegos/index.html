@@ -518,8 +518,23 @@
           </div>
         </div>
 
-        <button onclick="navigateTo('inicio')" style="padding:14px 32px;background:linear-gradient(135deg,#E91E63,#C2185B);color:#fff;border:none;border-radius:12px;font-size:.95rem;font-weight:700;cursor:pointer">Volver al inicio</button>
+        <!-- 3. Review Questions Section -->
+        <div id="quiz-review-section" style="display:none; text-align:left; max-width:800px; margin:40px auto 0 auto;">
+          <h3 style="font-size:1.4rem;font-weight:900;margin-bottom:20px;color:var(--text-dark); border-bottom:2px solid #E2E8F0; padding-bottom:12px;">
+            <i class="fas fa-search" style="color:#2563EB;margin-right:8px;"></i> Resumen de Preguntas
+          </h3>
+          <div id="quiz-review-list" style="display:flex; flex-direction:column; gap:16px;"></div>
+        </div>
+
+        <button onclick="router.navigate('/')" style="margin-top:32px;padding:14px 24px;background:#E2E8F0;color:#475569;border:none;border-radius:10px;font-weight:700;cursor:pointer">
+          Volver al inicio
+        </button>
       </div>
+
+      <!-- Audio Element for background music -->
+      <audio id="quiz-bg-music" loop preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3" type="audio/mpeg">
+      </audio>
     </section>
 
   </main>
