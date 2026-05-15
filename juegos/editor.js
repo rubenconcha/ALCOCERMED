@@ -95,6 +95,11 @@ function loadExistingEvaluation(id){
     iniciado=r.data.iniciado;
     if(document.getElementById('settings-subject')) document.getElementById('settings-subject').value=r.data.asignatura||'Otro';
     if(document.getElementById('settings-topic')) document.getElementById('settings-topic').value=r.data.tema||'';
+    
+    // Sync to side panel if exists
+    if(document.getElementById('side-settings-subject')) document.getElementById('side-settings-subject').value=r.data.asignatura||'Otro';
+    if(document.getElementById('side-settings-topic')) document.getElementById('side-settings-topic').value=r.data.tema||'';
+
     if(document.getElementById('settings-level')) document.getElementById('settings-level').value=r.data.nivel||'Seleccione el grado...';
     if(document.getElementById('settings-lang')) document.getElementById('settings-lang').value=r.data.idioma||'español, castellano';
     titleLoaded=true; checkPlay();
@@ -143,23 +148,110 @@ function renderQuestionTypes(){
 // ═══ SELECT QUESTION TYPE ═══
 function selectQuestionType(typeId){
   var opts;
+  var typeName = "Opción múltiple";
+  var typeIcon = "☑️";
+
   if(typeId==='tf'){
     opts=[{text:'Verdadero',correct:false,color:'ac-blue'},{text:'Falso',correct:false,color:'ac-pink'}];
-  }else if(typeId==='oa'){
-    opts=[];
+    typeName = "Verdadero/Falso"; typeIcon = "⚖️";
+  }else if(typeId==='oa' || typeId==='open'){
+    typeId = 'oa'; opts=[]; typeName = "Respuesta abierta"; typeIcon = "📝";
   }else if(typeId==='fb'){
-    opts=[];
+    opts=[]; typeName = "Completa los espacios"; typeIcon = "✏️";
+  }else if(typeId==='poll'){
+    opts=[{text:'',correct:false,color:'ac-blue'},{text:'',correct:false,color:'ac-teal'}];
+    typeName = "Encuesta"; typeIcon = "📊";
   }else{
     opts=[{text:'',correct:false,color:'ac-blue'},{text:'',correct:false,color:'ac-teal'},{text:'',correct:false,color:'ac-yellow'},{text:'',correct:false,color:'ac-pink'}];
   }
-  var q={id:Date.now(),dbId:null,type:typeId,text:'',options:opts,multipleCorrect:(typeId==='ms'||typeId==='poll'),points:1,timer:30};
-  questions.push(q);
-  currentQuestionIndex=questions.length-1;
-  document.getElementById('q-text-input').value='';
-  showEditor();
+  
+  // Update selector UI
+  var labelEl = document.getElementById('type-selector-label');
+  var iconEl = document.getElementById('type-selector-icon');
+  if(labelEl) labelEl.textContent = typeName;
+  if(iconEl) iconEl.textContent = typeIcon;
+
+  var q={id:Date.now()+Math.random(),type:typeId,text:'',options:opts,multipleCorrect:false,points:1,timer:30};
+  questions.push(q);currentQuestionIndex=questions.length-1;
+  renderQuestionThumbs();updateStats();selectQuestion(currentQuestionIndex);
+  document.getElementById('qtypes-panel').style.display='none';
+  document.getElementById('question-editor').style.display='block';
+}
+
+function toggleTypeDropdown(e){
+  if(e) e.stopPropagation();
+  var dd = document.getElementById('type-dropdown');
+  if(!dd) return;
+  dd.classList.toggle('active');
+}
+
+// Close dropdown when clicking outside
+window.addEventListener('click', function(){
+  var dd = document.getElementById('type-dropdown');
+  if(dd) dd.classList.remove('active');
+});
+
+function changeQuestionType(typeId){
+  if(currentQuestionIndex === -1) return;
+  var q = questions[currentQuestionIndex];
+  if(q.type === typeId) return;
+
+  var typeName = "Opción múltiple";
+  var typeIcon = "☑️";
+  var opts = q.options;
+
+  if(typeId==='tf'){
+    opts=[{text:'Verdadero',correct:false,color:'ac-blue'},{text:'Falso',correct:false,color:'ac-pink'}];
+    typeName = "Verdadero/Falso"; typeIcon = "⚖️";
+  } else if(typeId==='open' || typeId==='oa'){
+    typeId = 'oa'; opts=[]; typeName = "Respuesta abierta"; typeIcon = "📝";
+  } else if(typeId==='poll'){
+    typeName = "Encuesta"; typeIcon = "📊";
+  } else {
+    // mc or others
+    if(q.type === 'tf' || q.type === 'oa' || q.type === 'fb') {
+       opts=[{text:'',correct:false,color:'ac-blue'},{text:'',correct:false,color:'ac-teal'},{text:'',correct:false,color:'ac-yellow'},{text:'',correct:false,color:'ac-pink'}];
+    }
+  }
+
+  q.type = typeId;
+  q.options = opts;
+  
+  var labelEl = document.getElementById('type-selector-label');
+  var iconEl = document.getElementById('type-selector-icon');
+  if(labelEl) labelEl.textContent = typeName;
+  if(iconEl) iconEl.textContent = typeIcon;
+
+  renderAnswerOptions();
   renderQuestionThumbs();
-  updateTypeLabel(typeId);
-  updateStats();
+  showToast('Tipo de pregunta cambiado', 'success');
+}
+
+function syncSideSettings(field) {
+  if(!evaluacionId) return;
+  var sideSubject = document.getElementById('side-settings-subject');
+  var sideTopic = document.getElementById('side-settings-topic');
+  var mainSubject = document.getElementById('settings-subject');
+  var mainTopic = document.getElementById('settings-topic');
+
+  var val = "";
+  if(field === 'subject') {
+    val = sideSubject.value;
+    if(mainSubject) mainSubject.value = val;
+  } else if(field === 'topic') {
+    val = sideTopic.value;
+    if(mainTopic) mainTopic.value = val;
+  }
+
+  var updateObj = { updated_at: new Date().toISOString() };
+  if(field === 'subject') updateObj.asignatura = val;
+  if(field === 'topic') updateObj.tema = val;
+
+  var client = getSupabase();
+  client.from('evaluaciones').update(updateObj).eq('id', evaluacionId).then(function(r){
+    if(r.error) showToast('Error al guardar configuración', 'error');
+    else showToast('Configuración guardada', 'success');
+  });
 }
 
 // ═══ SHOW EDITOR / TYPES ═══
@@ -1076,7 +1168,7 @@ function goBackFromEditor(){
 
 // ═══ FORMAT ═══
 function toggleFormat(f){document.execCommand(f,false,null);}
-function toggleTypeDropdown(){/* future */}
+
 
 // ═══ VISIBILITY / GOALS ═══
 function selectVisibility(opt){

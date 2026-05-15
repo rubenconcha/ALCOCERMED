@@ -95,10 +95,42 @@
       
       <!-- Format Toolbar -->
       <div class="format-toolbar">
-        <div class="type-selector" onclick="toggleTypeDropdown()">
+        <div class="type-selector" onclick="toggleTypeDropdown(event)">
           <span class="type-icon" id="type-selector-icon">☑️</span>
           <span class="type-label" id="type-selector-label">Opción múltiple</span>
           <i class="fas fa-caret-down"></i>
+          
+          <!-- Question Type Dropdown -->
+          <div class="type-dropdown" id="type-dropdown">
+            <div class="type-item" onclick="changeQuestionType('mc')">
+              <span class="ti-icon">☑️</span>
+              <div class="ti-text">
+                <span class="ti-name">Opción múltiple</span>
+                <span class="ti-desc">Una o más respuestas correctas</span>
+              </div>
+            </div>
+            <div class="type-item" onclick="changeQuestionType('tf')">
+              <span class="ti-icon">⚖️</span>
+              <div class="ti-text">
+                <span class="ti-name">Verdadero/Falso</span>
+                <span class="ti-desc">Opciones predefinidas</span>
+              </div>
+            </div>
+            <div class="type-item" onclick="changeQuestionType('open')">
+              <span class="ti-icon">📝</span>
+              <div class="ti-text">
+                <span class="ti-name">Respuesta abierta</span>
+                <span class="ti-desc">El estudiante escribe la respuesta</span>
+              </div>
+            </div>
+            <div class="type-item" onclick="changeQuestionType('poll')">
+              <span class="ti-icon">📊</span>
+              <div class="ti-text">
+                <span class="ti-name">Encuesta</span>
+                <span class="ti-desc">Sin respuesta correcta</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="fmt-divider"></div>
         <button class="fmt-btn" onclick="toggleFormat('bold')" title="Negrita"><b>B</b></button>
@@ -154,23 +186,37 @@
       </div>
     </div>
 
-    <!-- RIGHT: Find Questions Panel -->
+    <!-- RIGHT: Evaluation Settings Panel -->
     <aside class="find-panel" id="find-panel">
       <div class="find-panel-header">
-        <h3>Encuentra preguntas</h3>
-        <button class="find-panel-btn"><i class="fas fa-book"></i> Agregar desde la biblioteca</button>
+        <h3>Configuración</h3>
+        <button class="find-panel-btn" onclick="openSettings()"><i class="fas fa-cog"></i> Ajustes avanzados</button>
       </div>
-      <div class="find-search-row">
-        <i class="fas fa-search"></i>
-        <input type="text" placeholder="Buscar preguntas sobre cualquier tema">
-      </div>
-      <div class="find-preview">
-        <div class="find-preview-mockup">
-          <div class="mockup-bar"></div>
-          <div class="mockup-dots"></div>
-          <div class="mockup-card"></div>
+      
+      <div style="padding: 16px;">
+        <label style="display:block; font-size: 12px; font-weight: 700; color: #64748B; margin-bottom: 8px; text-transform: uppercase;">Materia / Asignatura</label>
+        <select class="sm-select" id="side-settings-subject" onchange="syncSideSettings('subject')" style="width: 100%; margin-bottom: 20px; border: 1px solid #E2E8F0; border-radius: 8px; padding: 8px;">
+          <option value="Otro">Otro</option>
+          <option value="Morfofunción">Morfofunción</option>
+          <option value="Biología Celular">Biología Celular</option>
+          <option value="Educación para la Salud">Educación para la Salud</option>
+          <option value="Anatomía">Anatomía</option>
+          <option value="Fisiología">Fisiología</option>
+          <option value="Bioquímica">Bioquímica</option>
+          <option value="Farmacología">Farmacología</option>
+          <option value="Histología">Histología</option>
+          <option value="Patología">Patología</option>
+        </select>
+
+        <label style="display:block; font-size: 12px; font-weight: 700; color: #64748B; margin-bottom: 8px; text-transform: uppercase;">Tema de la Evaluación</label>
+        <input type="text" class="sm-input" id="side-settings-topic" placeholder="Ej. Sistema Nervioso" maxlength="64" oninput="syncSideSettings('topic')" style="width: 100%; margin-bottom: 20px; border: 1px solid #E2E8F0; border-radius: 8px; padding: 8px;">
+
+        <div style="background: #F8FAFC; border-radius: 12px; padding: 16px; border: 1px dashed #CBD5E1;">
+          <p style="font-size: 12px; color: #64748B; line-height: 1.5; margin: 0;">
+            <i class="fas fa-info-circle" style="color: #8B5CF6; margin-right: 4px;"></i>
+            Esta configuración se aplica a toda la evaluación. Puedes ver más opciones en el botón de <b>Ajustes</b> arriba.
+          </p>
         </div>
-        <p>Encuentre diapositivas de lecciones, preguntas y vídeos interactivos sobre cualquier tema</p>
       </div>
     </aside>
   </div>
@@ -199,12 +245,14 @@
               <label>Asignatura</label>
               <select class="sm-select" id="settings-subject">
                 <option>Otro</option>
+                <option>Morfofunción</option>
+                <option>Biología Celular</option>
+                <option>Educación para la Salud</option>
                 <option>Anatomía</option>
                 <option>Fisiología</option>
                 <option>Bioquímica</option>
                 <option>Farmacología</option>
                 <option>Histología</option>
-                <option>Biología celular</option>
                 <option>Patología</option>
               </select>
             </div>
