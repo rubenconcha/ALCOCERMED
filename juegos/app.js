@@ -707,27 +707,46 @@ function playErrorSound() {
 
 function showFeedbackAnimation(isCorrect, ptsEarned) {
     var overlay = document.createElement('div');
-    overlay.style.position = 'fixed';
+    overlay.style.position = 'absolute';
     overlay.style.top = '0';
     overlay.style.left = '0';
-    overlay.style.width = '100vw';
-    overlay.style.height = '100vh';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
     overlay.style.zIndex = '9999';
-    overlay.style.background = isCorrect ? 'rgba(34, 197, 94, 0.95)' : 'rgba(239, 68, 68, 0.95)';
+    overlay.style.background = 'rgba(0,0,0,0.6)';
     overlay.style.display = 'flex';
     overlay.style.flexDirection = 'column';
     overlay.style.alignItems = 'center';
     overlay.style.justifyContent = 'center';
-    overlay.style.color = '#fff';
     overlay.style.opacity = '0';
     overlay.style.transition = 'opacity 0.2s';
     
-    var ptsHtml = (isCorrect && ptsEarned) ? '<div style="background:rgba(0,0,0,0.3);padding:8px 24px;border-radius:20px;font-size:1.8rem;margin-top:24px;font-weight:800;">+' + ptsEarned + ' pts</div>' : '';
-    var iconHtml = isCorrect ? '<i class="fas fa-check-circle" style="font-size:6rem;margin-bottom:24px;text-shadow:0 4px 20px rgba(0,0,0,0.3);"></i>' : '<i class="fas fa-times-circle" style="font-size:6rem;margin-bottom:24px;text-shadow:0 4px 20px rgba(0,0,0,0.3);"></i>';
+    var card = document.createElement('div');
+    var color = isCorrect ? '#10B981' : '#EF4444';
+    card.style.background = color;
+    card.style.borderRadius = '24px';
+    card.style.padding = '32px 48px';
+    card.style.boxShadow = '0 20px 50px rgba(0,0,0,0.4)';
+    card.style.color = '#fff';
+    card.style.textAlign = 'center';
+    card.style.transform = 'scale(0.5) translateY(50px)';
+    card.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+
+    var ptsHtml = (isCorrect && ptsEarned) ? '<div style="background:rgba(0,0,0,0.25);padding:8px 24px;border-radius:20px;font-size:1.8rem;margin-top:20px;font-weight:900;">+' + ptsEarned + ' pts</div>' : '';
     
-    overlay.innerHTML = iconHtml + '<div style="font-size:4rem;font-weight:900;text-shadow:0 4px 20px rgba(0,0,0,0.3);">' + (isCorrect ? '¡CORRECTO!' : 'INCORRECTO') + '</div>' + ptsHtml;
+    // Meme GIFs like Quizizz
+    var gifUrl = isCorrect ? 'https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif' : 'https://media.giphy.com/media/hPPx8yk3Bmqys/giphy.gif';
+    var gifHtml = '<div style="margin-top:20px; border-radius:12px; overflow:hidden; border:4px solid rgba(255,255,255,0.2);"><img src="'+gifUrl+'" style="max-width:250px; height:auto; display:block;"></div>';
     
-    document.body.appendChild(overlay);
+    var iconHtml = isCorrect ? '<i class="fas fa-check-circle" style="font-size:4rem;margin-bottom:16px;"></i>' : '<i class="fas fa-times-circle" style="font-size:4rem;margin-bottom:16px;"></i>';
+    
+    card.innerHTML = iconHtml + '<div style="font-size:2.5rem;font-weight:900;">' + (isCorrect ? '¡CORRECTO!' : 'INCORRECTO') + '</div>' + ptsHtml + gifHtml;
+    
+    overlay.appendChild(card);
+    
+    var container = document.getElementById('quiz-container');
+    container.style.position = 'relative'; // Ensure it's constrained
+    container.appendChild(overlay);
     
     if (isCorrect) playSuccessSound();
     else playErrorSound();
@@ -735,16 +754,18 @@ function showFeedbackAnimation(isCorrect, ptsEarned) {
     // Animar
     setTimeout(function() {
         overlay.style.opacity = '1';
+        card.style.transform = 'scale(1) translateY(0)';
     }, 10);
     
     // Desaparecer y next auto
     setTimeout(function() {
         overlay.style.opacity = '0';
+        card.style.transform = 'scale(0.8) translateY(-30px)';
         setTimeout(function() { 
-            if(overlay.parentNode) document.body.removeChild(overlay); 
+            if(overlay.parentNode) overlay.parentNode.removeChild(overlay); 
             quizNext();
-        }, 200);
-    }, 2000);
+        }, 300);
+    }, 3000); // 3 seconds to view Meme and points
 }
 
 var splashInterval = null;
@@ -879,7 +900,7 @@ function renderQuizQuestion() {
     var currentStreak = 0;
     for(var i=0; i<quizAnswers.length; i++){
         if(quizAnswers[i].correcta) {
-            currentScore += (quizData.preguntas[i].puntos || 1) * 600; // Base points
+            currentScore += (quizAnswers[i].puntos_ganados || 0);
             currentStreak++;
         } else {
             currentStreak = 0;
