@@ -1518,13 +1518,107 @@ window.deleteQuiz = function(id) {
 
 // ═══ ADMIN: INFORMES — Resultados de estudiantes ═══
 
+window.adminReportsData = {};
+window.adminReportsNameMap = {};
+
+window.openReportDetail = function(evalId, userId) {
+    if(!window.adminReportsData || !window.adminReportsData[evalId]) return;
+    var r = window.adminReportsData[evalId].find(function(x) { return x.user_id === userId; });
+    if(!r) return;
+    
+    var overlay = document.createElement('div');
+    overlay.id = 'report-detail-modal';
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,.8);backdrop-filter:blur(8px);z-index:100000;display:flex;align-items:center;justify-content:center;padding:20px;';
+    
+    var modal = document.createElement('div');
+    modal.style.cssText = 'background:#fff;border-radius:24px;width:100%;max-width:600px;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1);overflow:hidden;';
+    
+    var studentName = window.adminReportsNameMap ? (window.adminReportsNameMap[evalId+'_'+userId] || 'Estudiante') : 'Estudiante';
+    var header = document.createElement('div');
+    header.style.cssText = 'padding:24px;background:#F8FAFC;border-bottom:1px solid #E2E8F0;display:flex;justify-content:space-between;align-items:center;';
+    header.innerHTML = '<h2 style="font-size:1.2rem;font-weight:800;color:#1E293B;margin:0;"><i class="fas fa-user-circle" style="color:#94A3B8;margin-right:8px;"></i>' + studentName + '</h2>' +
+                       '<button onclick="document.body.removeChild(document.getElementById(\'report-detail-modal\'))" style="background:none;border:none;font-size:28px;color:#94A3B8;cursor:pointer;padding:0;line-height:1;">&times;</button>';
+    modal.appendChild(header);
+    
+    var bodyContainer = document.createElement('div');
+    bodyContainer.style.cssText = 'padding:24px;overflow-y:auto;flex:1;';
+    bodyContainer.innerHTML = '<div style="text-align:center;padding:40px;"><i class="fas fa-spinner fa-spin" style="font-size:32px;color:#94A3B8;"></i></div>';
+    modal.appendChild(bodyContainer);
+    
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+    
+    var client = getSupabase();
+    client.from('evaluacion_preguntas').select('orden, texto, opciones, tipo, respuesta_correcta').eq('evaluacion_id', evalId).order('orden').then(function(qRes) {
+        if(qRes.error || !qRes.data) {
+            bodyContainer.innerHTML = '<div style="color:#EF4444;text-align:center;padding:20px;font-weight:700;"><i class="fas fa-exclamation-triangle"></i> Error cargando preguntas</div>';
+            return;
+        }
+        var qs = qRes.data;
+        var html = '';
+        html += '<div style="display:flex;gap:12px;margin-bottom:24px;">';
+        html += '<div style="flex:1;background:#F0FDF4;padding:16px;border-radius:16px;text-align:center;border:2px solid #DCFCE7;"><div style="font-size:28px;font-weight:900;color:#166534;">'+r.puntaje+'</div><div style="font-size:13px;color:#15803D;font-weight:800;">Correctas</div></div>';
+        html += '<div style="flex:1;background:#EFF6FF;padding:16px;border-radius:16px;text-align:center;border:2px solid #DBEAFE;"><div style="font-size:28px;font-weight:900;color:#1E40AF;">'+r.porcentaje+'%</div><div style="font-size:13px;color:#1D4ED8;font-weight:800;">Precisión</div></div>';
+        html += '</div>';
+        
+        var ans = r.respuestas || [];
+        for(var i=0; i<qs.length; i++) {
+            var q = qs[i];
+            var a = ans[i];
+            var isCorrect = a ? a.correcta : false;
+            var qColor = isCorrect ? '#22C55E' : '#EF4444';
+            var qBg = isCorrect ? '#F0FDF4' : '#FEF2F2';
+            var qIcon = isCorrect ? 'fa-check-circle' : 'fa-times-circle';
+            
+            html += '<div style="background:'+qBg+';border:2px solid '+qColor+'40;border-radius:16px;padding:20px;margin-bottom:16px;">';
+            html += '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">';
+            html += '<div style="font-weight:800;color:#1E293B;font-size:1.05rem;line-height:1.4;flex:1;padding-right:12px;">' + (i+1) + '. ' + (q.texto||'') + '</div>';
+            html += '<div style="color:'+qColor+';font-size:1.4rem;"><i class="fas '+qIcon+'"></i></div>';
+            html += '</div>';
+            
+            if(q.tipo === 'mc' || !q.tipo || q.tipo === 'ms') {
+                var opts = q.opciones || [];
+                html += '<div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">';
+                for(var o=0; o<opts.length; o++) {
+                    var isSelected = false;
+                    if(q.tipo === 'ms') {
+                        isSelected = a && a.seleccionada && a.seleccionada.indexOf(o) !== -1;
+                    } else {
+                        isSelected = a && a.seleccionada === o;
+                    }
+                    var isOptCorrect = opts[o].correct;
+                    var oColor = isOptCorrect ? '#166534' : (isSelected ? '#991B1B' : '#475569');
+                    var oBg = isOptCorrect ? '#DCFCE7' : (isSelected ? '#FEE2E2' : '#FFFFFF');
+                    var oBorder = isOptCorrect ? '#86EFAC' : (isSelected ? '#FECACA' : '#CBD5E1');
+                    var oIcon = isOptCorrect ? '<i class="fas fa-check"></i>' : (isSelected ? '<i class="fas fa-times"></i>' : '');
+                    var oWeight = (isOptCorrect || isSelected) ? '800' : '600';
+                    
+                    html += '<div style="padding:10px 16px;background:'+oBg+';border:2px solid '+oBorder+';border-radius:12px;font-size:0.95rem;font-weight:'+oWeight+';color:'+oColor+';display:flex;justify-content:space-between;align-items:center;">';
+                    html += '<span>' + (opts[o].text||'') + '</span>';
+                    html += '<span style="font-size:1.1rem;">' + oIcon + '</span>';
+                    html += '</div>';
+                }
+                html += '</div>';
+            } else {
+                html += '<div style="margin-top:16px;padding:12px;background:#FFF;border:2px solid #E2E8F0;border-radius:12px;">';
+                html += '<div style="font-size:0.85rem;color:#64748B;font-weight:800;margin-bottom:6px;">Respuesta del estudiante:</div>';
+                html += '<div style="font-weight:700;color:#0F172A;font-size:1rem;">' + (a ? a.seleccionada : 'Sin responder') + '</div>';
+                html += '<div style="font-size:0.85rem;color:#10B981;font-weight:800;margin-top:12px;margin-bottom:6px;">Respuesta correcta esperada:</div>';
+                html += '<div style="font-weight:700;color:#047857;font-size:1rem;">' + (q.respuesta_correcta || '') + '</div>';
+                html += '</div>';
+            }
+            html += '</div>';
+        }
+        bodyContainer.innerHTML = html;
+    });
+};
+
 function loadReports() {
     var container = document.getElementById('reports-list');
     if (!container || !currentUser) return;
-    container.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:24px"></i><p style="margin-top:12px">Cargando informes...</p></div>';
+    container.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:24px"></i><p style="margin-top:12px;font-weight:600;">Cargando informes...</p></div>';
 
     var client = getSupabase();
-    // Get all published evaluations by admin
     client.from('evaluaciones').select('id, titulo, codigo').eq('created_by', currentUser.id).eq('publicado', true).then(function(evRes) {
         if (evRes.error || !evRes.data || evRes.data.length === 0) {
             container.innerHTML = '<div class="empty-state"><i class="fas fa-chart-line"></i><p>No hay informes disponibles</p><small>Publica evaluaciones para ver los resultados</small></div>';
@@ -1532,7 +1626,6 @@ function loadReports() {
         }
         var evalIds = evRes.data.map(function(e) { return e.id; });
         
-        // Fetch results AND participants in parallel to get names
         Promise.all([
             client.from('evaluacion_resultados').select('*').in('evaluacion_id', evalIds),
             client.from('evaluacion_participantes').select('evaluacion_id, user_id, nombre').in('evaluacion_id', evalIds)
@@ -1545,36 +1638,34 @@ function loadReports() {
                 return;
             }
             
-            // Create a lookup for participant names: { "evalId_userId": "Nombre" }
-            var nameMap = {};
+            window.adminReportsNameMap = {};
             if (!pRes.error && pRes.data) {
                 for (var n = 0; n < pRes.data.length; n++) {
                     var p = pRes.data[n];
                     if (p.evaluacion_id && p.user_id) {
-                        nameMap[p.evaluacion_id + '_' + p.user_id] = p.nombre;
+                        var nm = p.nombre;
+                        if(nm && nm.indexOf('|') !== -1) nm = nm.split('|')[1];
+                        window.adminReportsNameMap[p.evaluacion_id + '_' + p.user_id] = nm;
                     }
                 }
             }
             
-            // Group by evaluation
-            var grouped = {};
+            window.adminReportsData = {};
             for (var i = 0; i < rRes.data.length; i++) {
                 var res = rRes.data[i];
-                if (!grouped[res.evaluacion_id]) grouped[res.evaluacion_id] = [];
-                grouped[res.evaluacion_id].push(res);
+                if (!window.adminReportsData[res.evaluacion_id]) window.adminReportsData[res.evaluacion_id] = [];
+                window.adminReportsData[res.evaluacion_id].push(res);
             }
             
-            // Build HTML
             var html = '';
             for (var j = 0; j < evRes.data.length; j++) {
                 var ev = evRes.data[j];
-                var results = grouped[ev.id] || [];
+                var results = window.adminReportsData[ev.id] || [];
                 if (results.length === 0) continue;
                 
-                // Sort results by porcentaje descending (Ranking)
                 results.sort(function(a, b) {
                     if (b.porcentaje !== a.porcentaje) return b.porcentaje - a.porcentaje;
-                    return b.puntaje - a.puntaje; // Tie breaker
+                    return b.puntaje - a.puntaje;
                 });
                 
                 var avgPct = 0;
@@ -1582,35 +1673,33 @@ function loadReports() {
                 avgPct = Math.round(avgPct / results.length);
                 var barColor = avgPct >= 70 ? '#22C55E' : avgPct >= 40 ? '#F59E0B' : '#EF4444';
 
-                html += '<div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px;margin-bottom:16px">';
-                html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">';
-                html += '<div><h3 style="font-size:16px;font-weight:700">' + (ev.titulo || 'Sin título') + '</h3>';
-                html += '<span style="font-size:12px;color:#64748B">' + results.length + ' participante(s) • Código: ' + (ev.codigo || '-') + '</span></div>';
-                html += '<div style="text-align:right"><span style="font-size:24px;font-weight:800;color:' + barColor + '">' + avgPct + '%</span><br><span style="font-size:11px;color:#8E90A6">Promedio General</span></div></div>';
+                html += '<div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 12px rgba(0,0,0,0.02)">';
+                html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">';
+                html += '<div><h3 style="font-size:18px;font-weight:800;color:#1E293B;margin-bottom:4px;">' + (ev.titulo || 'Sin título') + '</h3>';
+                html += '<span style="font-size:13px;color:#64748B;font-weight:600;"><i class="fas fa-users" style="margin-right:4px;"></i>' + results.length + ' participante(s) • <i class="fas fa-key" style="margin-right:4px;margin-left:8px;"></i>' + (ev.codigo || '-') + '</span></div>';
+                html += '<div style="text-align:right"><span style="font-size:28px;font-weight:900;color:' + barColor + '">' + avgPct + '%</span><br><span style="font-size:11px;color:#94A3B8;font-weight:700;text-transform:uppercase;">Promedio</span></div></div>';
                 
-                // Progress bar (Average)
-                html += '<div style="background:#E2E8F0;border-radius:20px;height:8px;margin-bottom:16px;overflow:hidden"><div style="height:100%;width:' + avgPct + '%;background:' + barColor + ';border-radius:20px"></div></div>';
+                html += '<div style="background:#F1F5F9;border-radius:20px;height:10px;margin-bottom:20px;overflow:hidden"><div style="height:100%;width:' + avgPct + '%;background:' + barColor + ';border-radius:20px"></div></div>';
                 
-                // Results Ranking table
-                html += '<table style="width:100%;border-collapse:collapse;font-size:13px">';
-                html += '<tr style="border-bottom:2px solid #E2E8F0;background:#F8FAFC"><th style="padding:10px 8px;color:#64748B;font-weight:700;width:40px;text-align:center">#</th><th style="text-align:left;padding:10px 8px;color:#64748B;font-weight:700">Estudiante</th><th style="padding:10px 8px;color:#64748B;font-weight:700;text-align:center">Respuestas Correctas</th><th style="padding:10px 8px;color:#64748B;font-weight:700;text-align:center">Precisión</th></tr>';
+                html += '<table style="width:100%;border-collapse:collapse;font-size:14px">';
+                html += '<tr style="border-bottom:2px solid #E2E8F0;background:#F8FAFC"><th style="padding:12px;color:#64748B;font-weight:800;width:40px;text-align:center;border-top-left-radius:12px;">#</th><th style="text-align:left;padding:12px;color:#64748B;font-weight:800">Estudiante</th><th style="padding:12px;color:#64748B;font-weight:800;text-align:center">Aciertos</th><th style="padding:12px;color:#64748B;font-weight:800;text-align:center;border-top-right-radius:12px;">Precisión</th></tr>';
                 
                 for (var m = 0; m < results.length; m++) {
                     var r = results[m];
                     var pColor = r.porcentaje >= 70 ? '#22C55E' : r.porcentaje >= 40 ? '#F59E0B' : '#EF4444';
-                    var studentName = nameMap[r.evaluacion_id + '_' + r.user_id] || (r.user_id ? r.user_id.substring(0, 8) + '...' : 'Anónimo');
+                    var studentName = window.adminReportsNameMap[ev.id + '_' + r.user_id] || (r.user_id ? r.user_id.substring(0, 8) + '...' : 'Anónimo');
                     
                     var rankIcon = (m + 1);
-                    var rankStyle = 'color:#64748B;font-weight:700;';
-                    if (m === 0) { rankIcon = '🥇'; rankStyle = 'font-size:16px;'; }
-                    else if (m === 1) { rankIcon = '🥈'; rankStyle = 'font-size:16px;'; }
-                    else if (m === 2) { rankIcon = '🥉'; rankStyle = 'font-size:16px;'; }
+                    var rankStyle = 'color:#64748B;font-weight:800;';
+                    if (m === 0) { rankIcon = '🥇'; rankStyle = 'font-size:18px;'; }
+                    else if (m === 1) { rankIcon = '🥈'; rankStyle = 'font-size:18px;'; }
+                    else if (m === 2) { rankIcon = '🥉'; rankStyle = 'font-size:18px;'; }
                     
-                    html += '<tr style="border-bottom:1px solid #F1F5F9; transition: background .15s" onmouseover="this.style.background=\'#F8FAFC\'" onmouseout="this.style.background=\'transparent\'">';
-                    html += '<td style="padding:12px 8px;text-align:center;' + rankStyle + '">' + rankIcon + '</td>';
-                    html += '<td style="padding:12px 8px;font-weight:600;color:#334155"><i class="fas fa-user-circle" style="color:#94A3B8;margin-right:8px;font-size:15px"></i>' + studentName + '</td>';
-                    html += '<td style="padding:12px 8px;text-align:center;font-weight:700;color:#475569">' + r.puntaje + ' / ' + r.total + '</td>';
-                    html += '<td style="padding:12px 8px;text-align:center;font-weight:800;color:' + pColor + '"><div style="display:inline-block;padding:2px 8px;border-radius:12px;background:' + pColor + '15">' + r.porcentaje + '%</div></td>';
+                    html += '<tr onclick="openReportDetail(\'' + ev.id + '\', \'' + r.user_id + '\')" style="cursor:pointer;border-bottom:1px solid #F1F5F9;transition:background .2s" onmouseover="this.style.background=\'#F8FAFC\'" onmouseout="this.style.background=\'transparent\'">';
+                    html += '<td style="padding:14px 12px;text-align:center;' + rankStyle + '">' + rankIcon + '</td>';
+                    html += '<td style="padding:14px 12px;font-weight:700;color:#334155"><i class="fas fa-user-circle" style="color:#CBD5E1;margin-right:8px;font-size:18px;vertical-align:-2px;"></i>' + studentName + '</td>';
+                    html += '<td style="padding:14px 12px;text-align:center;font-weight:800;color:#475569">' + r.puntaje + ' <span style="color:#94A3B8;font-size:12px;font-weight:600;">/ ' + r.total + '</span></td>';
+                    html += '<td style="padding:14px 12px;text-align:center;font-weight:900;color:' + pColor + '"><div style="display:inline-block;padding:4px 10px;border-radius:12px;background:' + pColor + '15">' + r.porcentaje + '%</div></td>';
                     html += '</tr>';
                 }
                 html += '</table></div>';
