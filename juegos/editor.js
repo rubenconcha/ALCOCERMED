@@ -691,7 +691,7 @@ function closeLobby(){
 function cancelLobby() {
   closeLobby();
   if (window.location.search.includes('play=true')) {
-    window.location.href = 'index.html?page=biblioteca';
+    window.location.href = '/juegos/biblioteca';
   }
 }
 function copyLobbyCode(){
@@ -737,7 +737,7 @@ function closeTeacherResults(){
   sessionStorage.removeItem('alcocer_teacher_eval');
   
   if (window.location.search.includes('results=true')) {
-    window.location.href = 'index.html?page=biblioteca';
+    window.location.href = '/juegos/biblioteca';
   }
 }
 
@@ -1053,7 +1053,7 @@ function goBackFromEditor(){
   for(var i=0;i<questions.length;i++){if(!questions[i].dbId)unsaved++;}
   if(unsaved>0){if(!confirm('Tienes '+unsaved+' pregunta(s) sin guardar.\n¿Deseas salir?\nTu evaluación quedará como borrador.'))return;}
   if(evaluacionId)localStorage.setItem('alcocer_last_eval_id',evaluacionId);
-  window.location.href='index.html';
+  window.location.href='/juegos/biblioteca';
 }
 
 // ═══ FORMAT ═══

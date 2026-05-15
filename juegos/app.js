@@ -267,11 +267,18 @@ function enterApp() {
     } else if (pendingCode && !isAdmin) {
         searchAndStartQuiz(pendingCode);
     } else {
-        var defaultPage = urlParams.get('page') || 'inicio';
-        navigateTo(defaultPage);
-        if (defaultPage !== 'inicio') {
-            window.history.replaceState({}, document.title, window.location.pathname);
+        var pathParts = window.location.pathname.split('/');
+        var pathPage = pathParts[pathParts.length - 1];
+        if (pathPage === 'index.html' || pathPage === 'juegos' || pathPage === '') pathPage = 'inicio';
+        
+        var defaultPage = urlParams.get('page') || pathPage;
+        if (window.location.pathname.includes('index.html') || urlParams.has('page')) {
+            var cleanUrl = defaultPage === 'inicio' ? '/juegos/' : '/juegos/' + defaultPage;
+            window.history.replaceState({page: defaultPage}, '', cleanUrl);
+        } else {
+            window.history.replaceState({page: defaultPage}, '', window.location.pathname);
         }
+        navigateTo(defaultPage, true); // true to avoid pushing duplicate state
     }
 }
 
@@ -393,7 +400,7 @@ function setLoginLoading(loading) {
 
 var currentPage = 'inicio';
 
-function navigateTo(page) {
+function navigateTo(page, skipPush) {
     currentPage = page;
 
     var pages = document.querySelectorAll('.page');
@@ -417,7 +424,24 @@ function navigateTo(page) {
     if (page === 'historial' && !isAdmin) loadStudentResults();
 
     closeSidebar();
+
+    // Update URL
+    if (!skipPush) {
+        var cleanUrl = page === 'inicio' ? '/juegos/' : '/juegos/' + page;
+        window.history.pushState({page: page}, '', cleanUrl);
+    }
 }
+
+window.addEventListener('popstate', function(event) {
+    if (event.state && event.state.page) {
+        navigateTo(event.state.page, true);
+    } else {
+        var pathParts = window.location.pathname.split('/');
+        var pathPage = pathParts[pathParts.length - 1];
+        if (pathPage === 'index.html' || pathPage === 'juegos' || pathPage === '') pathPage = 'inicio';
+        navigateTo(pathPage, true);
+    }
+});
 window.navigateTo = navigateTo;
 
 // ═══ SIDEBAR ═══
