@@ -175,6 +175,27 @@ function initAuth() {
     });
 }
 
+function exitQuizToHome() {
+    // Restaurar header
+    var header = document.getElementById('quiz-page-header');
+    if (header) header.style.display = 'block';
+    
+    // Ocultar pantalla de quiz
+    document.getElementById('quiz-result').style.display = 'none';
+    document.getElementById('quiz-container').style.display = 'none';
+    
+    // Limpiar variables de estado
+    quizData = null;
+    quizCurrentQ = 0;
+    quizAnswers = [];
+    quizScore = 0;
+    quizStreak = 0;
+    
+    // Volver al inicio usando la navegación de la SPA
+    navigateTo('inicio');
+}
+window.exitQuizToHome = exitQuizToHome;
+
 function showLogin() {
     document.getElementById('login-screen').classList.remove('hidden');
     document.getElementById('app-shell').classList.add('hidden');
@@ -572,11 +593,13 @@ function searchAndStartQuiz(code) {
             // Guardar código en sessionStorage para persistir al recargar
             sessionStorage.setItem('alcocer_quiz_code', code);
 
-            // Mostrar la página de quiz
+            // Mostrar la página de quiz y asegurar que el header sea visible
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Evaluación';
             document.getElementById('quiz-live-subtitle').textContent = quizData.preguntas.length + ' preguntas • ' + (evaluacion.asignatura || '');
             document.getElementById('quiz-container').style.display = 'none';
             document.getElementById('quiz-result').style.display = 'none';
+            var header = document.getElementById('quiz-page-header');
+            if (header) header.style.display = 'block';
 
             navigateTo('quiz');
 
@@ -1227,6 +1250,8 @@ function showQuizResults() {
     var pct = Math.round((correctas / total) * 100);
 
     document.getElementById('quiz-container').style.display = 'none';
+    var header = document.getElementById('quiz-page-header');
+    if (header) header.style.display = 'none';
     document.getElementById('quiz-result').style.display = 'block';
 
     // Emoji and title based on score
