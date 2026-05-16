@@ -301,7 +301,14 @@ function renderAnswerOptions(){
   }
   // Fill in blanks
   if(q.type==='fb'){
-    c.innerHTML='<div style="width:100%;background:#fff;border:1px solid #E4E6EF;border-radius:12px;padding:20px;text-align:center"><p style="color:#555;font-size:14px;margin-bottom:12px">Escribe tu pregunta arriba y usa <button onclick="insertBlank()" style="background:#E91E63;color:#fff;border:none;padding:4px 12px;border-radius:6px;font-weight:600;cursor:pointer">+ Espacio</button> para agregar un espacio en blanco</p><p style="color:#999;font-size:12px">Los estudiantes completarán los espacios</p></div>';
+    var fbAnswer = (q.options && q.options.length > 0) ? q.options[0].text : '';
+    c.innerHTML='<div style="width:100%;background:#fff;border:1px solid #E4E6EF;border-radius:12px;padding:20px;text-align:center">'
+      +'<p style="color:#555;font-size:14px;margin-bottom:12px">Escribe tu pregunta arriba y usa <button onclick="insertBlank()" style="background:#E91E63;color:#fff;border:none;padding:4px 12px;border-radius:6px;font-weight:600;cursor:pointer">+ Espacio</button> para agregar un espacio en blanco</p>'
+      +'<div style="margin-top:20px;text-align:left;max-width:500px;margin-left:auto;margin-right:auto;">'
+      +'<label style="font-weight:700;color:#334155;margin-bottom:8px;display:block;">Respuesta correcta (patrón de autoevaluación):</label>'
+      +'<input type="text" value="'+fbAnswer.replace(/"/g,'&quot;')+'" placeholder="Escribe la palabra exacta..." style="width:100%;padding:12px;border-radius:8px;border:2px solid #E2E8F0;font-size:1rem;color:#0F172A;font-weight:600;" onchange="updateFbAnswer(this.value)">'
+      +'<p style="color:#94A3B8;font-size:12px;margin-top:6px;">Si hay varias opciones aceptadas, sepáralas con comas (ej. <b>núcleo,nucleo,núcleos</b>).</p>'
+      +'</div></div>';
     return;
   }
 
@@ -323,6 +330,14 @@ function renderAnswerOptions(){
 }
 
 // ═══ ANSWER HELPERS ═══
+function updateFbAnswer(val) {
+   var q = questions[currentQuestionIndex];
+   if (!q.options) q.options = [];
+   if (q.options.length === 0) q.options.push({text: '', correct: true, color: 'ac-blue'});
+   q.options[0].text = val;
+   q.options[0].correct = true;
+}
+
 function toggleCorrect(idx){
   var q=questions[currentQuestionIndex];
   if(!q.multipleCorrect){for(var i=0;i<q.options.length;i++)q.options[i].correct=(i===idx);}
@@ -1119,9 +1134,39 @@ function pvSubmitOpen(){
   if(!answer){showToast('Escribe una respuesta','error');return;}
   if(pvTimerInterval)clearInterval(pvTimerInterval);
   pvSelected=1;
-  ta.style.border='2px solid #22C55E';
+  var q=questions[pvIdx];
+  
+  var isCorrect = true;
+  if (q.type === 'fb') {
+      var correctPatterns = [];
+      if (q.options && q.options.length > 0 && q.options[0].text) {
+          correctPatterns = q.options[0].text.toLowerCase().split(',').map(function(s){ return s.trim(); });
+      }
+      var userAnswerLower = answer.toLowerCase().trim();
+      
+      isCorrect = false;
+      if (correctPatterns.length > 0) {
+          for (var p = 0; p < correctPatterns.length; p++) {
+              if (correctPatterns[p] === userAnswerLower) {
+                  isCorrect = true;
+                  break;
+              }
+          }
+      }
+  }
+
+  if (isCorrect) {
+      ta.style.border = '2px solid #22C55E';
+      ta.style.background = '#F0FDF4';
+      ta.style.color = '#166534';
+  } else {
+      ta.style.border = '2px solid #EF4444';
+      ta.style.background = '#FEF2F2';
+      ta.style.color = '#991B1B';
+  }
+  
   ta.disabled=true;
-  pvAnswers.push({correcta:true}); // open-ended always counted
+  pvAnswers.push({correcta:isCorrect});
   document.getElementById('pv-next-btn').style.display='block';
   document.getElementById('pv-next-btn').textContent=pvIdx>=questions.length-1?'🏆 Ver resultados':'Siguiente →';
 }

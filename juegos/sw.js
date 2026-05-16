@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-juegos-v8';
+const CACHE_NAME = 'alcocermed-juegos-v10';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

@@ -1104,10 +1104,40 @@ function submitQuizOpen() {
     ta.style.border = '2px solid #22C55E';
     ta.disabled = true;
     var pregunta = quizData.preguntas[quizCurrentQ];
-    quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: answer, correcta: true });
     
-    var pts = (pregunta.puntos || 1) * 600;
-    showFeedbackAnimation(true, pts);
+    var isCorrect = true; // Por defecto true para Preguntas Abiertas (oa)
+    if (pregunta.tipo === 'fb') {
+        var correctPatterns = [];
+        if (pregunta.opciones && pregunta.opciones.length > 0 && pregunta.opciones[0].text) {
+            correctPatterns = pregunta.opciones[0].text.toLowerCase().split(',').map(function(s){ return s.trim(); });
+        }
+        var userAnswerLower = answer.toLowerCase().trim();
+        
+        isCorrect = false;
+        if (correctPatterns.length > 0) {
+            for (var p = 0; p < correctPatterns.length; p++) {
+                if (correctPatterns[p] === userAnswerLower) {
+                    isCorrect = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    if (isCorrect) {
+        ta.style.border = '2px solid #22C55E';
+        ta.style.background = '#F0FDF4';
+        ta.style.color = '#166534';
+    } else {
+        ta.style.border = '2px solid #EF4444';
+        ta.style.background = '#FEF2F2';
+        ta.style.color = '#991B1B';
+    }
+    
+    var pts = isCorrect ? ((pregunta.puntos || 1) * 600) : 0;
+    quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: answer, correcta: isCorrect, puntos_ganados: pts });
+    
+    showFeedbackAnimation(isCorrect, pts);
 }
 window.submitQuizOpen = submitQuizOpen;
 
@@ -1303,7 +1333,6 @@ function showQuizResults() {
                 '<i class="fas fa-' + (ok ? 'check' : 'times') + '"></i></div>';
         }
         bhtml += '</div>';
-        bhtml += '<p style="font-size:12px;color:#8E90A6;text-align:center">Q1-Q' + total + ' • Verde = correcta, Rojo = incorrecta</p>';
         breakdownEl.innerHTML = bhtml;
     }
 
