@@ -200,7 +200,14 @@ body{font-family:'Inter',sans-serif;background:var(--bg-editor);color:var(--text
 .btn-start-session{padding:14px 40px;background:linear-gradient(135deg,#E91E63,#C2185B);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer}
 
 /* ═══ LOBBY ═══ */
-.lobby-screen{width:100%;height:100%;background:linear-gradient(135deg,#1A0033,#2D1B4E,#4A148C);display:flex;flex-direction:column;color:#fff}
+.lobby-screen{
+  width:100%;height:100%;
+  background: 
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px),
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px),
+    radial-gradient(circle at 50% 30%, #3a1c61 0%, #170b2e 60%, #0d041a 100%) !important;
+  display:flex;flex-direction:column;color:#fff
+}
 .lobby-header{display:flex;align-items:center;gap:12px;padding:16px 24px}
 .lobby-title{font-weight:700;font-size:15px}.lobby-dot{color:rgba(255,255,255,.4)}.lobby-count{font-size:13px;color:rgba(255,255,255,.6)}
 .lobby-close{margin-left:auto;padding:8px 16px;background:rgba(255,255,255,.1);border:none;border-radius:8px;color:#fff;font-weight:600;cursor:pointer}
@@ -304,7 +311,14 @@ body{font-family:'Inter',sans-serif;background:var(--bg-editor);color:var(--text
 }
 
 /* ═══ PREVIEW ═══ */
-.preview-screen{width:100%;height:100%;background:linear-gradient(135deg,#1A0033,#2D1B4E,#4A148C);display:flex;flex-direction:column;overflow-y:auto}
+.preview-screen{
+  width:100%;height:100%;
+  background: 
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px),
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px),
+    radial-gradient(circle at 50% 30%, #3a1c61 0%, #170b2e 60%, #0d041a 100%) !important;
+  display:flex;flex-direction:column;overflow-y:auto
+}
 .preview-topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 24px}
 .preview-close{padding:8px 16px;background:rgba(255,255,255,.1);border:none;border-radius:8px;color:#fff;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:13px}
 .preview-close:hover{background:rgba(255,255,255,.2)}

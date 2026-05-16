@@ -366,27 +366,29 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
   #quiz-container{margin:0 auto;} /* Center the quiz on desktop too */
 }
 
+/* ═══ OFFICIAL GAME BACKGROUND ═══ */
+.official-game-bg {
+  background: 
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px),
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px),
+    radial-gradient(circle at 50% 30%, #3a1c61 0%, #170b2e 60%, #0d041a 100%) !important;
+  background-attachment: fixed !important;
+}
+
 /* ═══ STADIUM PODIUM ═══ */
 .stadium-podium-container {
   width: 100%;
   max-width: 800px;
   margin: 0 auto 32px;
-  background: radial-gradient(circle at 50% 30%, #3a1c61 0%, #170b2e 60%, #0d041a 100%);
+  background: transparent; /* Now uses the page's background */
   border-radius: 24px;
   padding: 40px 20px 20px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .stadium-bg-lines {
-  position: absolute;
-  inset: 0;
-  background: 
-    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px),
-    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px);
-  z-index: 1;
+  display: none; /* Page already has grid */
 }
 
 .stadium-light-beam {
