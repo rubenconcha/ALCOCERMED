@@ -824,10 +824,45 @@ function openTeacherResults(isLive){
   if (refreshMsg) refreshMsg.style.display = isLive ? 'block' : 'none';
 
   pollTeacherResults();
+  loadQuestionReview(evaluacionId);
   if(teacherResultsPoll)clearInterval(teacherResultsPoll);
   if(isLive){
     teacherResultsPoll=setInterval(pollTeacherResults,5000);
   }
+}
+
+function loadQuestionReview(id) {
+  var client = getSupabase();
+  client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', id).order('orden').then(function(r) {
+    if (r.error || !r.data || r.data.length === 0) return;
+    var qs = r.data;
+    var html = '';
+    for (var i = 0; i < qs.length; i++) {
+       var q = qs[i];
+       html += '<div style="margin-bottom:16px;padding:16px;background:rgba(255,255,255,0.05);border-radius:12px;border-left:4px solid #8B5CF6;">';
+       html += '<div style="font-weight:700;color:#fff;margin-bottom:12px;font-size:1.05rem;">' + (i+1) + '. ' + (q.text || 'Pregunta sin texto') + '</div>';
+       if (q.tipo === 'ms') {
+          var opts = q.opciones || [];
+          for (var j = 0; j < opts.length; j++) {
+              var isCorrect = opts[j].correct;
+              var color = isCorrect ? '#4ADE80' : 'rgba(255,255,255,0.5)';
+              var bg = isCorrect ? 'rgba(74, 222, 128, 0.1)' : 'transparent';
+              var fw = isCorrect ? 'bold' : 'normal';
+              var icon = isCorrect ? '<i class="fas fa-check-circle" style="margin-right:8px"></i>' : '<i class="far fa-circle" style="margin-right:8px"></i>';
+              html += '<div style="color:'+color+';font-weight:'+fw+';margin-bottom:6px;font-size:0.95rem;padding:6px 10px;border-radius:6px;background:'+bg+';">' + icon + (opts[j].text || '(Opción vacía)') + '</div>';
+          }
+       } else if (q.tipo === 'oa' || q.tipo === 'fb') {
+          html += '<div style="color:#4ADE80;font-weight:bold;font-size:0.95rem;padding:6px 10px;background:rgba(74, 222, 128, 0.1);border-radius:6px;"><i class="fas fa-check-double" style="margin-right:8px"></i>Respuesta libre o abierta (Se revisa manualmente)</div>';
+       }
+       html += '</div>';
+    }
+    var reviewEl = document.getElementById('tr-question-review-content');
+    var reviewContainer = document.getElementById('tr-question-review');
+    if (reviewEl && reviewContainer) {
+        reviewEl.innerHTML = html;
+        reviewContainer.style.display = 'block';
+    }
+  });
 }
 
 function closeTeacherResults(){
