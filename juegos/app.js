@@ -495,7 +495,8 @@ function searchAndStartQuiz(code) {
     // Buscar evaluación por código
     client.from('evaluaciones').select('*').eq('codigo', code).eq('publicado', true).single().then(function(result) {
         if (result.error || !result.data) {
-            alert('❌ No se encontró ninguna evaluación con el código: ' + code + '\n\nVerifica que el código sea correcto.');
+            var dbError = result.error ? result.error.message : 'No existe o ya se cerró';
+            alert('❌ Código ' + code + ' no válido.\n\nEl profesor debe estar en la sala de espera AHORA MISMO. Si el profesor recargó la página, se generó un NUEVO código.\n\nDetalle técnico: ' + dbError);
             return;
         }
 
