@@ -510,6 +510,26 @@ function joinByCodeFull() {
         return;
     }
     document.getElementById('join-error').classList.add('hidden');
+    
+    // UI de carga
+    var btn = input.nextElementSibling || document.querySelector('button[onclick="joinByCodeFull()"]');
+    var oldText = '';
+    if (btn) {
+        btn.disabled = true;
+        oldText = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Conectando...';
+    }
+
+    // Wrap the call to restore the button when done (we can't easily wait for the internal Promise, so we set a timeout or rely on the UI changing pages)
+    // Actually searchAndStartQuiz handles page changes. If it fails, it shows an alert.
+    // Let's modify searchAndStartQuiz to return a Promise or take a callback. Since we don't want to rewrite it all, we just restore it after 3 seconds if we're still on the join page.
+    setTimeout(function() {
+        if (btn && document.getElementById('page-unirse').style.display !== 'none') {
+            btn.disabled = false;
+            btn.innerHTML = oldText;
+        }
+    }, 2500);
+
     searchAndStartQuiz(code);
 }
 window.joinByCodeFull = joinByCodeFull;

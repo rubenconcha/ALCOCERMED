@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-juegos-v4';
+const CACHE_NAME = 'alcocermed-juegos-v6';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -42,6 +42,9 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   // Ignorar peticiones que no sean GET (como el API de Supabase)
   if (event.request.method !== 'GET') return;
+  
+  // Ignorar absolutamente todo lo que vaya a Supabase para evitar cuelgues de red en PWA
+  if (event.request.url.includes('supabase.co')) return;
   
   // Ignorar extensiones de Chrome y peticiones cruzadas extrañas
   if (!event.request.url.startsWith('http')) return;
