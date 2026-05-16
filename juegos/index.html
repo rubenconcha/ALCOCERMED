@@ -584,9 +584,21 @@
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then((reg) => console.log('Service Worker registrado con éxito', reg.scope))
-        .catch((err) => console.log('Error al registrar Service Worker:', err));
+      navigator.serviceWorker.register('./sw.js').then((reg) => {
+        console.log('Service Worker registrado', reg.scope);
+        
+        // Lógica de auto-actualización silenciosa
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              // Hay una nueva versión disponible, recargar silenciosamente para aplicarla
+              console.log('Nueva versión detectada, recargando...');
+              window.location.reload();
+            }
+          });
+        });
+      }).catch((err) => console.log('Error SW:', err));
     });
   }
 </script>
