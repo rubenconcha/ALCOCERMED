@@ -536,14 +536,36 @@ function searchAndStartQuiz(code) {
                     : (currentUser.email || '').split('@')[0];
                 var nombreConAvatar = currentAvatar + '|' + nombreReal;
                 
-                client.from('evaluacion_participantes').upsert({
-                    evaluacion_id: evaluacion.id,
-                    user_id: currentUser.id,
-                    nombre: nombreConAvatar,
-                    joined_at: new Date().toISOString()
-                }, { onConflict: 'evaluacion_id,user_id' }).then(function(pr) {
-                    if (pr.error) console.warn('No se pudo registrar participante:', pr.error.message);
-                });
+                client.from('evaluacion_participantes')
+                    .select('user_id')
+                    .eq('evaluacion_id', evaluacion.id)
+                    .eq('user_id', currentUser.id)
+                    .single()
+                    .then(function(checkRes) {
+                        var payload = {
+                            evaluacion_id: evaluacion.id,
+                            user_id: currentUser.id,
+                            nombre: nombreConAvatar,
+                            joined_at: new Date().toISOString()
+                        };
+                        if (checkRes.data) {
+                            // Update existing
+                            client.from('evaluacion_participantes')
+                                .update(payload)
+                                .eq('evaluacion_id', evaluacion.id)
+                                .eq('user_id', currentUser.id)
+                                .then(function(pr) {
+                                    if (pr.error) console.warn('No se pudo actualizar participante:', pr.error.message);
+                                });
+                        } else {
+                            // Insert new
+                            client.from('evaluacion_participantes')
+                                .insert(payload)
+                                .then(function(pr) {
+                                    if (pr.error) console.warn('No se pudo insertar participante:', pr.error.message);
+                                });
+                        }
+                    });
             }
 
             // Guardar código en sessionStorage para persistir al recargar
