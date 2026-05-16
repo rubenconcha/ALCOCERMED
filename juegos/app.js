@@ -176,6 +176,10 @@ function initAuth() {
 }
 
 function exitQuizToHome() {
+    if (window.studentLeaderboardInterval) {
+        clearInterval(window.studentLeaderboardInterval);
+        window.studentLeaderboardInterval = null;
+    }
     // Restaurar header
     var header = document.getElementById('quiz-page-header');
     if (header) header.style.display = 'block';
@@ -1368,6 +1372,11 @@ function showQuizResults() {
 }
 
 function loadLeaderboard(evalId) {
+    if (!window.studentLeaderboardInterval) {
+        window.studentLeaderboardInterval = setInterval(function() {
+            loadLeaderboard(evalId);
+        }, 5000);
+    }
     var client = getSupabase();
     console.log('Loading leaderboard for:', evalId);
     client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje').eq('evaluacion_id', evalId).order('porcentaje', { ascending: false }).order('puntaje', { ascending: false }).then(function(r) {
