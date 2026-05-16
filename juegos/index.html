@@ -476,10 +476,12 @@
       </div>
 
       <!-- Resultado final -->
-      <div id="quiz-result" style="display:none;text-align:center;max-width:600px;margin:0 auto">
-        <button onclick="window.location.reload()" style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:12px 24px; border-radius:12px; font-weight:700; cursor:pointer; margin-bottom: 32px; display:inline-flex; align-items:center; gap:8px; font-size:1rem; transition: background 0.2s;">
-          <i class="fas fa-home"></i> Volver al Menú Principal
-        </button>
+      <div id="quiz-result" style="display:none;text-align:center;max-width:600px;margin:0 auto;padding-top:24px;">
+        <div style="position:sticky; top:20px; z-index:100; margin-bottom: 32px;">
+          <button onclick="window.location.reload()" style="background:rgba(233,30,99,0.9); border:2px solid #E91E63; color:#fff; padding:14px 28px; border-radius:16px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:8px; font-size:1.1rem; box-shadow:0 8px 24px rgba(233,30,99,0.4); backdrop-filter:blur(4px);">
+            <i class="fas fa-home"></i> Volver al Menú Principal
+          </button>
+        </div>
         <div style="font-size:64px;margin-bottom:16px" id="quiz-result-emoji">🏆</div>
         <h2 id="quiz-result-title" style="font-size:1.5rem;font-weight:800;margin-bottom:8px;color:#fff">¡Evaluación completada!</h2>
         <p id="quiz-result-score" style="font-size:1.1rem;color:rgba(255,255,255,0.8);margin-bottom:24px"></p>
@@ -529,9 +531,6 @@
           <div id="quiz-review-list" style="display:flex; flex-direction:column; gap:16px;"></div>
         </div>
 
-        <button onclick="router.navigate('/')" style="margin-top:32px;padding:14px 24px;background:#E2E8F0;color:#475569;border:none;border-radius:10px;font-weight:700;cursor:pointer">
-          Volver al inicio
-        </button>
       </div>
 
       <!-- Audio Element for background music -->
