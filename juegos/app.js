@@ -1372,6 +1372,11 @@ function showQuizResults() {
         }).then(function(r) {
             if (r.error) {
                 console.warn('Insert resultado:', r.error.message);
+                // Mostrar alerta en pantalla si es error de RLS para el estudiante
+                if (r.error.message && r.error.message.toLowerCase().includes('row-level security')) {
+                    document.getElementById('quiz-result-breakdown').innerHTML += '<div style="color:red; margin-bottom: 10px;">⚠️ Tu nota no se guardó porque el profesor no ha habilitado los permisos en la base de datos.</div>';
+                }
+                
                 // Si falla por duplicado, intentar update
                 client.from('evaluacion_resultados').update({
                     puntaje: totalPoints, // Actualizado a PUNTOS reales
@@ -1380,10 +1385,14 @@ function showQuizResults() {
                     respuestas: quizAnswers
                 }).eq('evaluacion_id', evalIdForBoard).eq('user_id', currentUser.id).then(function() {
                     loadLeaderboard(evalIdForBoard);
+                }).catch(function() {
+                    loadLeaderboard(evalIdForBoard);
                 });
             } else {
                 loadLeaderboard(evalIdForBoard);
             }
+        }).catch(function() {
+            loadLeaderboard(evalIdForBoard);
         });
     } else {
         // Sin usuario, aún mostrar leaderboard
@@ -1401,7 +1410,16 @@ function loadLeaderboard(evalId) {
     console.log('Loading leaderboard for:', evalId);
     client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje').eq('evaluacion_id', evalId).order('porcentaje', { ascending: false }).order('puntaje', { ascending: false }).then(function(r) {
         console.log('Leaderboard data:', r.data, 'Error:', r.error);
-        if (r.error) { console.warn('Leaderboard error:', r.error.message); return; }
+        if (r.error) { 
+            console.warn('Leaderboard error:', r.error.message); 
+            // Mostrar error visual si es por permisos (RLS)
+            var podiumEl = document.getElementById('quiz-podium');
+            if (podiumEl) {
+                podiumEl.style.display = 'block';
+                podiumEl.innerHTML = '<div style="padding:20px;background:rgba(255,0,0,0.2);color:#fff;border-radius:12px;margin-bottom:20px;border:2px solid red;"><b>⚠️ ERROR DE BASE DE DATOS</b><br>Las políticas RLS de Supabase están bloqueando a los estudiantes.<br>El profesor debe ir al panel de Supabase y ejecutar el código SQL de permisos.</div>';
+            }
+            return; 
+        }
         if (!r.data || r.data.length === 0) { console.log('No results yet'); return; }
 
         // Get participant names
@@ -1474,6 +1492,15 @@ function renderPodium(entries) {
         } catch(e) {}
     }
 
+    // Evitar re-renders innecesarios o repeticiones de animación molestas
+    var currentDataStr = JSON.stringify(entries);
+    if (window._lastPodiumData === currentDataStr) {
+        return; 
+    }
+    window._lastPodiumData = currentDataStr;
+
+    var isFirstRender = !document.getElementById('podium-pillars').innerHTML.trim();
+
     // Top 3 Stadium Podium
     var pillarOrder = [1, 0, 2];
     var pillarsHtml = '';
@@ -1488,7 +1515,11 @@ function renderPodium(entries) {
         var rankClass = idx === 0 ? 'rank-1' : (idx === 1 ? 'rank-2' : 'rank-3');
         var rankText = idx === 0 ? '1st' : (idx === 1 ? '2nd' : '3rd');
         
-        pillarsHtml += '<div class="podium-cylinder ' + rankClass + '" style="animation-delay:' + (p*0.2) + 's">';
+        var animStyle = isFirstRender 
+            ? ('animation-delay:' + (p*0.2) + 's') 
+            : 'animation: none !important; opacity: 1 !important; transform: translateY(0) !important;';
+            
+        pillarsHtml += '<div class="podium-cylinder ' + rankClass + '" style="' + animStyle + '">';
         
         // Avatar standing on top
         pillarsHtml += '<div class="podium-avatar-wrapper">';
