@@ -2625,29 +2625,26 @@ function loadStudentResults() {
 
     var client = getSupabase();
     
-    // Consultar las 3 fuentes de resultados en paralelo
-    Promise.all([
-        client.from('evaluacion_resultados').select('*').eq('user_id', currentUser.id),
-        client.from('resultados_simulacros').select('*').eq('user_id', currentUser.id),
-        client.from('resultados_banco').select('*').eq('user_id', currentUser.id)
-    ]).then(function(results) {
-        var evRes = results[0];
-        var simRes = results[1];
-        var bancoRes = results[2];
+    // Consultar únicamente las evaluaciones en vivo jugadas en esta sección
+    client.from('evaluacion_resultados')
+        .select('*')
+        .eq('user_id', currentUser.id)
+        .then(function(res) {
+            if (res.error) {
+                console.error('Error fetching student results:', res.error);
+                container.innerHTML = '<div style="padding:20px;text-align:center;color:#EF4444;"><i class="fas fa-exclamation-triangle" style="font-size:24px;margin-bottom:8px"></i><br>Error al cargar resultados de Supabase.</div>';
+                return;
+            }
 
-        if (evRes.error && simRes.error && bancoRes.error) {
-            console.error('Error fetching results:', evRes.error || simRes.error || bancoRes.error);
-            container.innerHTML = '<div style="padding:20px;text-align:center;color:#EF4444;"><i class="fas fa-exclamation-triangle" style="font-size:24px;margin-bottom:8px"></i><br>Error al cargar resultados de Supabase.</div>';
-            return;
-        }
+            var evResData = res.data || [];
+            if (evResData.length === 0) {
+                container.innerHTML = '<div class="empty-state"><i class="fas fa-chart-pie"></i><p>No tienes resultados todavía</p><small>Completa evaluaciones para ver tu progreso aquí.</small></div>';
+                return;
+            }
 
-        // Unificar resultados en un arreglo común
-        var allResults = [];
-
-        // 1. Evaluaciones en vivo
-        if (evRes.data) {
-            for (var i = 0; i < evRes.data.length; i++) {
-                var r = evRes.data[i];
+            var allResults = [];
+            for (var i = 0; i < evResData.length; i++) {
+                var r = evResData[i];
                 allResults.push({
                     type: 'evaluacion',
                     id: r.id,
@@ -2662,80 +2659,33 @@ function loadStudentResults() {
                     original: r
                 });
             }
-        }
 
-        // 2. Simulacros oficiales/personales
-        if (simRes.data) {
-            for (var i = 0; i < simRes.data.length; i++) {
-                var r = simRes.data[i];
-                var tot = (r.correctas || 0) + (r.incorrectas || 0) + (r.sin_respuesta || 0);
-                allResults.push({
-                    type: 'simulacro',
-                    id: r.id,
-                    titulo: r.simulacro_titulo || 'Simulacro',
-                    materia: r.materia || 'General',
-                    porcentaje: r.porcentaje || 0,
-                    correctas: r.correctas || 0,
-                    total: tot,
-                    puntaje: 0,
-                    fecha: r.created_at || new Date().toISOString(),
-                    original: r
-                });
+            // Obtener ids de evaluaciones para consultar sus metadatos
+            var evalIds = allResults.map(function(x) { return x.evaluacion_id; }).filter(Boolean);
+
+            var evalPromise = Promise.resolve({ data: [] });
+            if (evalIds.length > 0) {
+                evalPromise = client.from('evaluaciones').select('id, titulo, asignatura').in('id', evalIds);
             }
-        }
 
-        // 3. Banco de preguntas
-        if (bancoRes.data) {
-            for (var i = 0; i < bancoRes.data.length; i++) {
-                var r = bancoRes.data[i];
-                allResults.push({
-                    type: 'banco',
-                    id: r.id,
-                    titulo: 'Banco de Preguntas',
-                    materia: r.materia || 'General',
-                    porcentaje: r.porcentaje || 0,
-                    correctas: r.correctas || 0,
-                    total: r.total || 0,
-                    puntaje: 0,
-                    fecha: r.created_at || new Date().toISOString(),
-                    original: r
-                });
-            }
-        }
-
-        if (allResults.length === 0) {
-            container.innerHTML = '<div class="empty-state"><i class="fas fa-chart-pie"></i><p>No tienes resultados todavía</p><small>Completa evaluaciones, simulacros o bancos para ver tu progreso aquí.</small></div>';
-            return;
-        }
-
-        // Obtener ids de evaluaciones para consultar sus metadatos
-        var evalIds = allResults.filter(function(x) { return x.type === 'evaluacion'; }).map(function(x) { return x.evaluacion_id; }).filter(Boolean);
-
-        var evalPromise = Promise.resolve({ data: [] });
-        if (evalIds.length > 0) {
-            evalPromise = client.from('evaluaciones').select('id, titulo, asignatura').in('id', evalIds);
-        }
-
-        evalPromise.then(function(evQueryRes) {
-            var evalMap = {};
-            if (evQueryRes.data) {
-                for (var j = 0; j < evQueryRes.data.length; j++) {
-                    evalMap[evQueryRes.data[j].id] = evQueryRes.data[j];
+            evalPromise.then(function(evQueryRes) {
+                var evalMap = {};
+                if (evQueryRes.data) {
+                    for (var j = 0; j < evQueryRes.data.length; j++) {
+                        evalMap[evQueryRes.data[j].id] = evQueryRes.data[j];
+                    }
                 }
-            }
 
-            try {
-                // Ordenar por fecha decreciente
-                allResults.sort(function(a, b) { return new Date(b.fecha) - new Date(a.fecha); });
+                try {
+                    // Ordenar por fecha de forma decreciente
+                    allResults.sort(function(a, b) { return new Date(b.fecha) - new Date(a.fecha); });
 
-                var html = '';
-                window.adminReportsData = {};
-                window.adminReportsNameMap = {};
+                    var html = '';
+                    window.adminReportsData = {};
+                    window.adminReportsNameMap = {};
 
-                for (var i = 0; i < allResults.length; i++) {
-                    var item = allResults[i];
-
-                    if (item.type === 'evaluacion') {
+                    for (var i = 0; i < allResults.length; i++) {
+                        var item = allResults[i];
                         var evalId = item.evaluacion_id || 'unknown';
                         var userId = currentUser.id || 'unknown';
 
@@ -2746,27 +2696,17 @@ function loadStudentResults() {
                         var evObj = evalMap[evalId] || {};
                         item.titulo = evObj.titulo || 'Evaluación en Vivo';
                         item.materia = evObj.asignatura || 'General';
-                    }
 
-                    var pct = item.porcentaje || 0;
-                    var barColor = pct >= 70 ? '#22C55E' : pct >= 40 ? '#F59E0B' : '#EF4444';
-                    
-                    var emoji = '📝';
-                    if (item.type === 'evaluacion') {
-                        emoji = pct >= 90 ? '🏆' : pct >= 70 ? '⭐' : pct >= 40 ? '📝' : '💪';
-                    } else if (item.type === 'simulacro') {
-                        emoji = '📋';
-                    } else if (item.type === 'banco') {
-                        emoji = '📚';
-                    }
+                        var pct = item.porcentaje || 0;
+                        var barColor = pct >= 70 ? '#22C55E' : pct >= 40 ? '#F59E0B' : '#EF4444';
+                        var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '⭐' : pct >= 40 ? '📝' : '💪';
 
-                    var fechaStr = '';
-                    try {
-                        fechaStr = item.fecha ? new Date(item.fecha).toLocaleDateString('es-ES', {day:'numeric',month:'short'}) : '';
-                    } catch(e) { fechaStr = ''; }
+                        var fechaStr = '';
+                        try {
+                            fechaStr = item.fecha ? new Date(item.fecha).toLocaleDateString('es-ES', {day:'numeric',month:'short'}) : '';
+                        } catch(e) { fechaStr = ''; }
 
-                    var hits = item.correctas;
-                    if (item.type === 'evaluacion') {
+                        var hits = item.correctas;
                         var res = item.original;
                         var studentAns = res.respuestas || [];
                         if (studentAns && studentAns.length > 0) {
@@ -2776,40 +2716,30 @@ function loadStudentResults() {
                         } else {
                             hits = Math.round((pct / 100) * item.total);
                         }
+
+                        var clickHandler = 'onclick="openReportDetail(\'' + item.evaluacion_id + '\', \'' + currentUser.id + '\')"';
+                        var hoverCursor = 'cursor:pointer;';
+                        var typeTag = '<span style="font-size:10px;background:#EEF2F6;color:#475569;padding:2px 6px;border-radius:4px;font-weight:700;margin-left:6px;">LIVECARD</span>';
+
+                        html += '<div ' + clickHandler + ' style="' + hoverCursor + 'background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:16px;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.02)"' + 
+                            ' onmouseover="this.style.boxShadow=\'0 6px 20px rgba(0,0,0,0.08)\'; this.style.transform=\'translateY(-2px)\'"' +
+                            ' onmouseout="this.style.boxShadow=\'0 2px 8px rgba(0,0,0,0.02)\'; this.style.transform=\'translateY(0)\'"' + '>';
+                        html += '<div style="font-size:32px">' + emoji + '</div>';
+                        html += '<div style="flex:1"><h4 style="font-size:15px;font-weight:800;color:#1E293B;margin-bottom:4px;display:flex;align-items:center;flex-wrap:wrap;gap:4px;">' + item.titulo + typeTag + '</h4>';
+                        html += '<span style="font-size:12px;color:#64748B;font-weight:600;"><i class="fas fa-book" style="margin-right:4px;"></i>' + item.materia + (fechaStr ? ' • ' + fechaStr : '') + '</span></div>';
+                        html += '<div style="text-align:right"><span style="font-size:22px;font-weight:900;color:' + barColor + '">' + pct + '%</span>';
+                        html += '<div style="font-size:11px;color:#94A3B8;font-weight:700;margin-top:2px;">' + hits + ' / ' + item.total + ' correctas <span style="font-weight:500;opacity:0.85;">(' + item.puntaje + ' pts)</span></div></div></div>';
                     }
-
-                    var clickHandler = item.type === 'evaluacion' 
-                        ? 'onclick="openReportDetail(\'' + item.evaluacion_id + '\', \'' + currentUser.id + '\')"' 
-                        : '';
-                    var hoverCursor = item.type === 'evaluacion' ? 'cursor:pointer;' : 'cursor:default;';
-
-                    var typeTag = '';
-                    if (item.type === 'evaluacion') {
-                        typeTag = '<span style="font-size:10px;background:#EEF2F6;color:#475569;padding:2px 6px;border-radius:4px;font-weight:700;margin-left:6px;">LIVECARD</span>';
-                    } else if (item.type === 'simulacro') {
-                        typeTag = '<span style="font-size:10px;background:#EFF6FF;color:#1D4ED8;padding:2px 6px;border-radius:4px;font-weight:700;margin-left:6px;">SIMULACRO</span>';
-                    } else if (item.type === 'banco') {
-                        typeTag = '<span style="font-size:10px;background:#FDF2F8;color:#B91C1C;padding:2px 6px;border-radius:4px;font-weight:700;margin-left:6px;">BANCO</span>';
-                    }
-
-                    html += '<div ' + clickHandler + ' style="' + hoverCursor + 'background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:16px;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.02)"' + 
-                                                (item.type === 'evaluacion' ? ' onmouseover="this.style.boxShadow=\'' + '0 6px 20px rgba(0,0,0,0.08)' + '\'; this.style.transform=\'' + 'translateY(-2px)' + '\'" onmouseout="this.style.boxShadow=\'' + '0 2px 8px rgba(0,0,0,0.02)' + '\'; this.style.transform=\'' + 'translateY(0)' + '\'"' : '') + '>';
-                    html += '<div style="font-size:32px">' + emoji + '</div>';
-                    html += '<div style="flex:1"><h4 style="font-size:15px;font-weight:800;color:#1E293B;margin-bottom:4px;display:flex;align-items:center;flex-wrap:wrap;gap:4px;">' + item.titulo + typeTag + '</h4>';
-                    html += '<span style="font-size:12px;color:#64748B;font-weight:600;"><i class="fas fa-book" style="margin-right:4px;"></i>' + item.materia + (fechaStr ? ' • ' + fechaStr : '') + '</span></div>';
-                    html += '<div style="text-align:right"><span style="font-size:22px;font-weight:900;color:' + barColor + '">' + pct + '%</span>';
-                    html += '<div style="font-size:11px;color:#94A3B8;font-weight:700;margin-top:2px;">' + hits + ' / ' + item.total + ' correctas' + (item.type === 'evaluacion' ? ' <span style="font-weight:500;opacity:0.85;">(' + item.puntaje + ' pts)</span>' : '') + '</div></div></div>';
+                    container.innerHTML = html;
+                } catch(ex) {
+                    console.error(ex);
+                    container.innerHTML = '<div style="padding:20px;text-align:center;color:#EF4444;"><i class="fas fa-exclamation-triangle" style="font-size:24px;margin-bottom:8px"></i><br>Error al procesar los resultados históricos.</div>';
                 }
-                container.innerHTML = html;
-            } catch(ex) {
-                console.error(ex);
-                container.innerHTML = '<div style="padding:20px;text-align:center;color:#EF4444;"><i class="fas fa-exclamation-triangle" style="font-size:24px;margin-bottom:8px"></i><br>Error al procesar los resultados históricos.</div>';
-            }
+            });
+        }).catch(function(err) {
+            console.error('Error fetching student results:', err);
+            container.innerHTML = '<div style="padding:20px;text-align:center;color:#EF4444;"><i class="fas fa-wifi" style="font-size:24px;margin-bottom:8px"></i><br>Error de conexión. Inténtalo de nuevo.</div>';
         });
-    }).catch(function(err) {
-        console.error('Error fetching combined student results:', err);
-        container.innerHTML = '<div style="padding:20px;text-align:center;color:#EF4444;"><i class="fas fa-wifi" style="font-size:24px;margin-bottom:8px"></i><br>Error de conexión. Inténtalo de nuevo.</div>';
-    });
 }
 
 // ═══ LOGOUT ═══
