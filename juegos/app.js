@@ -981,15 +981,25 @@ function renderQuizQuestion() {
     var html = '';
     quizMultiSelections = [];
 
-    // Open-ended or fill blanks: show textarea
-    if (tipo === 'oa' || tipo === 'fb') {
-        var ph = tipo === 'oa' ? 'Escribe tu respuesta aquí...' : 'Completa los espacios en blanco...';
-        if (tipo === 'oa') {
+    // Detectar encuesta sin opciones reales → tratar como pregunta abierta
+    var isPollOpen = (tipo === 'poll' || tipo === 'encuesta') &&
+        (opciones.length === 0 || opciones.every(function(o){ return !o.text || !o.text.trim(); }));
+
+    // Open-ended, fill blanks, OR encuesta sin opciones: show textarea
+    if (tipo === 'oa' || tipo === 'fb' || isPollOpen) {
+        var isOpenStyle = (tipo === 'oa' || isPollOpen);
+        var ph = isOpenStyle ? 'Escribe tu respuesta aquí...' : 'Completa los espacios en blanco...';
+        if (isOpenStyle) {
+            // Badge icon & text según el subtipo
+            var badgeIcon = isPollOpen ? 'fa-comment-dots' : 'fa-pen-nib';
+            var badgeText = isPollOpen
+                ? 'Pregunta de encuesta — Tu respuesta será registrada sin afectar el puntaje'
+                : 'Pregunta abierta — Tu respuesta será registrada sin afectar el puntaje';
             // Premium open answer UI with no-score badge
             html += '<div style="width:100%;display:flex;flex-direction:column;gap:12px;">';
             html += '  <div style="display:flex;align-items:center;gap:8px;background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.3);border-radius:10px;padding:10px 14px;">';
-            html += '    <i class="fas fa-pen-nib" style="color:#A78BFA;font-size:1rem;"></i>';
-            html += '    <span style="color:#C4B5FD;font-size:0.85rem;font-weight:700;">Pregunta abierta — Tu respuesta será registrada sin afectar el puntaje</span>';
+            html += '    <i class="fas ' + badgeIcon + '" style="color:#A78BFA;font-size:1rem;"></i>';
+            html += '    <span style="color:#C4B5FD;font-size:0.85rem;font-weight:700;">' + badgeText + '</span>';
             html += '  </div>';
             html += '  <textarea id="quiz-open-answer" placeholder="' + ph + '" ' +
                 'style="width:100%;min-height:140px;padding:18px;border:2px solid rgba(255,255,255,0.15);border-radius:14px;' +
@@ -1954,10 +1964,12 @@ window.openReportDetail = function(evalId, userId) {
                 html += '<div style="font-weight:700;color:#0F172A;font-size:1rem;">' + (a ? a.seleccionada : 'Sin responder') + '</div>';
                 html += '<div style="font-size:0.85rem;color:#10B981;font-weight:800;margin-top:12px;margin-bottom:6px;">Respuesta correcta esperada:</div>';
                 var respCorrecta = '';
+                var isPollOpenRes = (q.tipo === 'poll' || q.tipo === 'encuesta') &&
+                    (!q.opciones || q.opciones.length === 0 || q.opciones.every(function(o){ return !o.text || !o.text.trim(); }));
                 if (q.tipo === 'fb') {
                     respCorrecta = (q.opciones && q.opciones.length > 0 && q.opciones[0].text) ? q.opciones[0].text : 'Sin patrón';
-                } else if (q.tipo === 'oa') {
-                    respCorrecta = 'Criterio abierto (Evaluado por el profesor)';
+                } else if (q.tipo === 'oa' || isPollOpenRes) {
+                    respCorrecta = isPollOpenRes ? 'Encuesta — respuesta libre (sin puntaje)' : 'Criterio abierto (Evaluado por el profesor)';
                 } else {
                     respCorrecta = q.respuesta_correcta || '';
                 }

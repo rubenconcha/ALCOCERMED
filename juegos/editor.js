@@ -1183,10 +1183,15 @@ function loadQuestionReview(id) {
            html += '<div style="color:#22D3EE;font-weight:600;margin-bottom:6px;font-size:0.9rem;padding:6px 10px;border-radius:6px;background:rgba(34,211,238,0.08);"><i class="fas fa-map-marker-alt" style="margin-right:8px"></i>' + String.fromCharCode(65+j) + '. ' + (o.text || '(Sin nombre)') + pinInfo + '</div>';
          }
        } else if (qType === 'poll') {
-         for (var j = 0; j < opts.length; j++) {
-           html += '<div style="color:rgba(255,255,255,0.6);font-weight:500;margin-bottom:6px;font-size:0.9rem;padding:6px 10px;border-radius:6px;background:rgba(255,255,255,0.03);"><i class="fas fa-chart-bar" style="margin-right:8px;color:#A78BFA;"></i>' + String.fromCharCode(65+j) + '. ' + (opts[j].text || '(Opción vacía)') + '</div>';
-         }
-         html += '<div style="color:rgba(255,255,255,0.3);font-size:0.75rem;margin-top:4px;font-style:italic;"><i class="fas fa-info-circle" style="margin-right:4px;"></i>Encuesta — sin respuesta correcta</div>';
+          var allEmpty = opts.length === 0 || opts.every(function(o){ return !o.text || !o.text.trim(); });
+          if (allEmpty) {
+            html += '<div style="color:#A78BFA;font-weight:600;font-size:0.9rem;padding:8px 12px;background:rgba(124,58,237,0.1);border-radius:8px;border:1px dashed rgba(124,58,237,0.3);"><i class="fas fa-comment-dots" style="margin-right:8px"></i>Encuesta abierta — Los estudiantes escribirán su respuesta (sin puntaje)</div>';
+          } else {
+            for (var j = 0; j < opts.length; j++) {
+              html += '<div style="color:rgba(255,255,255,0.6);font-weight:500;margin-bottom:6px;font-size:0.9rem;padding:6px 10px;border-radius:6px;background:rgba(255,255,255,0.03);"><i class="fas fa-chart-bar" style="margin-right:8px;color:#A78BFA;"></i>' + String.fromCharCode(65+j) + '. ' + (opts[j].text || '(Opción vacía)') + '</div>';
+            }
+            html += '<div style="color:rgba(255,255,255,0.3);font-size:0.75rem;margin-top:4px;font-style:italic;"><i class="fas fa-info-circle" style="margin-right:4px;"></i>Encuesta — sin respuesta correcta</div>';
+          }
        } else {
          // mc, ms, tf — all have options with correct flags
          for (var j = 0; j < opts.length; j++) {
