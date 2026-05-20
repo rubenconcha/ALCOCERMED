@@ -824,11 +824,81 @@ function startLiveSession(){
   client.rpc('generate_quiz_code').then(function(cr){
     if(cr.error){showToast('Error generando código','error');return;}
     var code=cr.data;
-    client.from('evaluaciones').update({publicado:true,codigo:code,iniciado:false,updated_at:new Date().toISOString()}).eq('id',evaluacionId).then(function(r){
+    // Modo Test: iniciado=true inmediatamente (sin lobby de espera)
+    var isTest = sessionMode === 'test';
+    var updateData = {
+      publicado: true,
+      codigo: code,
+      iniciado: isTest, // Test mode starts immediately
+      modo_sesion: sessionMode,
+      updated_at: new Date().toISOString()
+    };
+    client.from('evaluaciones').update(updateData).eq('id',evaluacionId).then(function(r){
       if(r.error){showToast('Error al publicar','error');return;}
-      showLobby(code);
+      if(isTest) {
+        showTestModeActive(code);
+      } else {
+        showLobby(code);
+      }
     });
   });
+}
+
+// ═══ MODO TEST — Panel de administración para examen a ritmo propio ═══
+function showTestModeActive(code) {
+  // Guardar sesión activa
+  sessionStorage.setItem('alcocer_teacher_eval', evaluacionId);
+  
+  var title = document.getElementById('quiz-title-input').value;
+  document.getElementById('lobby-quiz-title').textContent = title;
+  document.getElementById('lobby-question-count').textContent = questions.length + ' preguntas';
+  document.getElementById('lobby-code').textContent = code;
+  document.getElementById('lobby-player-count').textContent = '0';
+  document.getElementById('lobby-overlay').classList.add('active');
+
+  // Generar QR
+  generateLobbyQR(code);
+
+  // Música del lobby
+  startLobbyMusic();
+
+  // Limpiar participantes y resultados anteriores
+  var client = getSupabase();
+  Promise.all([
+    client.from('evaluacion_participantes').delete().eq('evaluacion_id', evaluacionId),
+    client.from('evaluacion_resultados').delete().eq('evaluacion_id', evaluacionId)
+  ]).then(function(){
+    var container = document.getElementById('lobby-players-list');
+    if(container) container.innerHTML = '';
+    document.getElementById('lobby-player-count').textContent = '0';
+    pollLobbyParticipants();
+    if(lobbyPollInterval) clearInterval(lobbyPollInterval);
+    lobbyPollInterval = setInterval(pollLobbyParticipants, 3000);
+  });
+
+  // Cambiar el botón EMPEZAR por "Ver Resultados" en modo test
+  var startBtn = document.querySelector('.lobby-btn-start');
+  if(startBtn) {
+    startBtn.innerHTML = '<i class="fas fa-chart-bar"></i> VER RESULTADOS EN VIVO';
+    startBtn.onclick = function() {
+      startGameFromLobby();
+    };
+  }
+
+  // Mostrar badge de modo test
+  var lobbyBody = document.querySelector('.lobby-body');
+  if(lobbyBody && !document.getElementById('test-mode-badge')) {
+    var badge = document.createElement('div');
+    badge.id = 'test-mode-badge';
+    badge.style.cssText = 'text-align:center;padding:12px 20px;background:linear-gradient(135deg,rgba(37,99,235,0.2),rgba(37,99,235,0.05));border:1px solid rgba(37,99,235,0.3);border-radius:14px;margin:12px auto 0;max-width:400px;';
+    badge.innerHTML = '<div style="display:flex;align-items:center;gap:10px;justify-content:center;">' +
+      '<i class="fas fa-clipboard-check" style="color:#3B82F6;font-size:1.3rem;"></i>' +
+      '<div style="text-align:left;">' +
+      '<div style="color:#fff;font-weight:800;font-size:0.95rem;">📋 Modo Test Activo</div>' +
+      '<div style="color:rgba(255,255,255,0.6);font-size:0.8rem;font-weight:500;">Los estudiantes comienzan al ingresar el código — Sin sala de espera</div>' +
+      '</div></div>';
+    lobbyBody.insertBefore(badge, lobbyBody.firstChild);
+  }
 }
 
 // ═══ LOBBY ═══
@@ -1061,7 +1131,7 @@ function toggleLobbyMusic(){
 function pollLobbyParticipants(){
   if(!evaluacionId)return;
   var client=getSupabase();
-  client.from('evaluacion_participantes').select('nombre,joined_at').eq('evaluacion_id',evaluacionId).order('joined_at').then(function(r){
+  client.from('evaluacion_participantes').select('nombre,joined_at,equipo').eq('evaluacion_id',evaluacionId).order('joined_at').then(function(r){
     if(r.error||!r.data)return;
     var count=r.data.length;
     document.getElementById('lobby-player-count').textContent=count;
@@ -1081,12 +1151,24 @@ function pollLobbyParticipants(){
       var html='';
       for(var i=0;i<r.data.length;i++){
         var name=r.data[i].nombre;
-        var initial=name.charAt(0).toUpperCase();
+        var equipo=r.data[i].equipo||'';
+        // Extract avatar if present
+        var displayName=name;
+        var avatarEmoji='';
+        if(name.indexOf('|')!==-1){
+          var parts=name.split('|');
+          avatarEmoji=parts[0];
+          displayName=parts[1];
+        }
+        var initial=avatarEmoji||displayName.charAt(0).toUpperCase();
         var colors=['#2563EB','#0D9488','#D97706','#DC2626','#7C3AED','#059669','#E91E63','#F59E0B'];
         var col=colors[i%colors.length];
         html+='<div style="display:flex;flex-direction:column;align-items:center;gap:4px;animation:fadeInUp .3s ease">';
         html+='<div style="width:40px;height:40px;border-radius:50%;background:'+col+';display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:16px;box-shadow:0 2px 8px rgba(0,0,0,.2)">'+initial+'</div>';
-        html+='<span style="font-size:10px;color:rgba(255,255,255,.7);max-width:60px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+name+'</span>';
+        html+='<span style="font-size:10px;color:rgba(255,255,255,.7);max-width:60px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+displayName+'</span>';
+        if(equipo && sessionMode==='equipo'){
+          html+='<span style="font-size:8px;color:rgba(255,255,255,.4);max-width:70px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600;">'+equipo+'</span>';
+        }
         html+='</div>';
       }
       container.innerHTML=html;

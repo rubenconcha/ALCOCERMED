@@ -492,6 +492,8 @@ var quizData = null;       // { evaluacion, preguntas[] }
 var quizCurrentQ = 0;      // Índice de pregunta actual
 var quizAnswers = [];       // Respuestas del estudiante
 var quizSelectedOption = -1;
+var quizSessionMode = 'clasico'; // 'clasico' | 'test' | 'equipo'
+var quizTeamName = null; // Equipo asignado (modo equipo)
 
 function joinByCode() {
     var input = document.getElementById('join-code-input');
@@ -569,6 +571,10 @@ function searchAndStartQuiz(code) {
                 evaluacion: evaluacion,
                 preguntas: pResult.data
             };
+            // ═══ Leer modo de sesión ═══
+            quizSessionMode = evaluacion.modo_sesion || 'clasico';
+            quizTeamName = sessionStorage.getItem('alcocer_quiz_team_' + code) || null;
+
             var savedStateStr = sessionStorage.getItem('alcocer_quiz_state_' + code);
             if (savedStateStr) {
                 try {
@@ -605,8 +611,10 @@ function searchAndStartQuiz(code) {
                             nombre: nombreConAvatar,
                             joined_at: new Date().toISOString()
                         };
+                        // Agregar equipo si estamos en modo equipo
+                        if (quizTeamName) payload.equipo = quizTeamName;
+
                         if (checkRes.data) {
-                            // Update existing
                             client.from('evaluacion_participantes')
                                 .update(payload)
                                 .eq('evaluacion_id', evaluacion.id)
@@ -615,7 +623,6 @@ function searchAndStartQuiz(code) {
                                     if (pr.error) console.warn('No se pudo actualizar participante:', pr.error.message);
                                 });
                         } else {
-                            // Insert new
                             client.from('evaluacion_participantes')
                                 .insert(payload)
                                 .then(function(pr) {
@@ -630,22 +637,42 @@ function searchAndStartQuiz(code) {
 
             // Mostrar la página de quiz y asegurar que el header sea visible
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Evaluación';
-            document.getElementById('quiz-live-subtitle').textContent = quizData.preguntas.length + ' preguntas • ' + (evaluacion.asignatura || '');
+            var subtitleSuffix = quizSessionMode === 'test' ? ' • 📋 Examen' : (quizSessionMode === 'equipo' ? ' • 👥 Equipo' : '');
+            document.getElementById('quiz-live-subtitle').textContent = quizData.preguntas.length + ' preguntas • ' + (evaluacion.asignatura || '') + subtitleSuffix;
             document.getElementById('quiz-container').style.display = 'none';
             document.getElementById('quiz-result').style.display = 'none';
             var header = document.getElementById('quiz-page-header');
             if (header) header.style.display = 'none';
 
+            // ═══ Modo Equipo: pedir equipo antes de continuar ═══
+            if (quizSessionMode === 'equipo' && !quizTeamName) {
+                navigateTo('quiz');
+                showTeamPicker(evaluacion, code);
+                return;
+            }
+
             navigateTo('quiz');
 
-            // Si el admin ya inició, empezar directamente
-            if (evaluacion.iniciado) {
+            // ═══ Modo Test: el quiz ya está iniciado, sin sala de espera ═══
+            if (quizSessionMode === 'test') {
+                applyTestModeUI();
                 if (quizCurrentQ > 0) {
-                    // Restoring a session that was already started
                     if (quizCurrentQ >= quizData.preguntas.length) {
                         showQuizResults();
                     } else {
-                        // ═══ FIX: Mostrar el contenedor antes de renderizar ═══
+                        document.getElementById('quiz-container').style.display = 'block';
+                        renderQuizQuestion();
+                    }
+                } else {
+                    showSplashAndStart();
+                }
+            }
+            // ═══ Modo Clásico / Equipo: flujo normal ═══
+            else if (evaluacion.iniciado) {
+                if (quizCurrentQ > 0) {
+                    if (quizCurrentQ >= quizData.preguntas.length) {
+                        showQuizResults();
+                    } else {
                         document.getElementById('quiz-container').style.display = 'block';
                         renderQuizQuestion();
                     }
@@ -653,7 +680,6 @@ function searchAndStartQuiz(code) {
                     showSplashAndStart();
                 }
             } else {
-                // Mostrar sala de espera y esperar a que el admin inicie
                 showWaitingRoom();
             }
         }).catch(function(err) {
@@ -735,6 +761,105 @@ function showWaitingRoom() {
         });
     }, 3000);
 }
+
+// ═══ MODO TEST — Ajustes de interfaz para examen a ritmo propio ═══
+function applyTestModeUI() {
+    // No reproducir música de fondo en modo test (ambiente de examen)
+    stopGameMusic();
+    
+    // Ocultar HUD competitivo (puntos y racha) — modo examen no es competitivo
+    var scoreHud = document.getElementById('quiz-current-score');
+    var streakHud = document.getElementById('quiz-current-streak');
+    if (scoreHud && scoreHud.parentElement) scoreHud.parentElement.style.display = 'none';
+    if (streakHud && streakHud.parentElement) streakHud.parentElement.style.display = 'none';
+    
+    // Agregar badge de modo test en la barra superior
+    var topBar = document.querySelector('#quiz-container > div:first-child');
+    if (topBar && !document.getElementById('test-mode-student-badge')) {
+        var badge = document.createElement('div');
+        badge.id = 'test-mode-student-badge';
+        badge.style.cssText = 'display:flex;align-items:center;gap:6px;background:rgba(37,99,235,0.25);border:1px solid rgba(37,99,235,0.4);padding:6px 12px;border-radius:8px;';
+        badge.innerHTML = '<i class="fas fa-clipboard-check" style="color:#60A5FA;font-size:0.85rem;"></i><span style="color:#93C5FD;font-weight:700;font-size:0.8rem;">EXAMEN</span>';
+        topBar.insertBefore(badge, topBar.firstChild);
+    }
+}
+
+// ═══ MODO EQUIPO — Selector de equipos premium ═══
+var teamColors = [
+    { name: '🔴 Equipo Rojo',    color: '#EF4444', bg: 'linear-gradient(135deg,#EF4444,#DC2626)' },
+    { name: '🔵 Equipo Azul',    color: '#3B82F6', bg: 'linear-gradient(135deg,#3B82F6,#2563EB)' },
+    { name: '🟢 Equipo Verde',   color: '#22C55E', bg: 'linear-gradient(135deg,#22C55E,#16A34A)' },
+    { name: '🟡 Equipo Dorado',  color: '#F59E0B', bg: 'linear-gradient(135deg,#F59E0B,#D97706)' },
+    { name: '🟣 Equipo Morado',  color: '#8B5CF6', bg: 'linear-gradient(135deg,#8B5CF6,#7C3AED)' },
+    { name: '🩷 Equipo Rosa',    color: '#EC4899', bg: 'linear-gradient(135deg,#EC4899,#DB2777)' }
+];
+
+function showTeamPicker(evaluacion, code) {
+    // Crear overlay de selección de equipo
+    var overlay = document.createElement('div');
+    overlay.id = 'team-picker-overlay';
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:linear-gradient(135deg,#1A0033,#2D1B4E,#0F172A);display:flex;align-items:center;justify-content:center;flex-direction:column;padding:24px;';
+
+    var html = '<div style="max-width:480px;width:100%;text-align:center;">';
+    html += '<div style="font-size:3rem;margin-bottom:12px;">👥</div>';
+    html += '<h1 style="color:#fff;font-size:1.6rem;font-weight:900;margin-bottom:8px;">Elige tu Equipo</h1>';
+    html += '<p style="color:rgba(255,255,255,0.5);font-size:0.9rem;margin-bottom:28px;font-weight:500;">' + (evaluacion.titulo || 'Evaluación') + ' • Modo Equipo</p>';
+    html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">';
+    
+    for (var i = 0; i < teamColors.length; i++) {
+        var t = teamColors[i];
+        html += '<button onclick="selectTeamAndContinue(\'' + t.name + '\',\'' + code + '\')" ' +
+            'style="padding:20px 16px;border:none;border-radius:16px;background:' + t.bg + ';' +
+            'color:#fff;font-weight:800;font-size:1.05rem;cursor:pointer;box-shadow:inset 0 -4px 0 rgba(0,0,0,0.2), 0 6px 16px rgba(0,0,0,0.3);' +
+            'transition:transform 0.1s,box-shadow 0.2s;" ' +
+            'onmousedown="this.style.transform=\'scale(0.96)\'" onmouseup="this.style.transform=\'scale(1)\'" ' +
+            'ontouchstart="this.style.transform=\'scale(0.96)\'" ontouchend="this.style.transform=\'scale(1)\'">' +
+            t.name + '</button>';
+    }
+    html += '</div>';
+    html += '</div>';
+    overlay.innerHTML = html;
+    document.body.appendChild(overlay);
+}
+window.showTeamPicker = showTeamPicker;
+
+function selectTeamAndContinue(teamName, code) {
+    quizTeamName = teamName;
+    sessionStorage.setItem('alcocer_quiz_team_' + code, teamName);
+    
+    // Eliminar overlay
+    var overlay = document.getElementById('team-picker-overlay');
+    if (overlay) overlay.parentNode.removeChild(overlay);
+    
+    // Actualizar participante con equipo
+    if (currentUser && quizData) {
+        var client = getSupabase();
+        client.from('evaluacion_participantes')
+            .update({ equipo: teamName })
+            .eq('evaluacion_id', quizData.evaluacion.id)
+            .eq('user_id', currentUser.id)
+            .then(function(r) {
+                if (r.error) console.warn('No se pudo actualizar equipo:', r.error.message);
+            });
+    }
+
+    // Continuar con el flujo normal
+    if (quizData.evaluacion.iniciado) {
+        if (quizCurrentQ > 0) {
+            if (quizCurrentQ >= quizData.preguntas.length) {
+                showQuizResults();
+            } else {
+                document.getElementById('quiz-container').style.display = 'block';
+                renderQuizQuestion();
+            }
+        } else {
+            showSplashAndStart();
+        }
+    } else {
+        showWaitingRoom();
+    }
+}
+window.selectTeamAndContinue = selectTeamAndContinue;
 
 var quizTimerInterval = null;
 var quizTimeLeft = 30;
@@ -870,8 +995,10 @@ function showSplashAndStart() {
     var wt = document.getElementById('quiz-waiting');
     if (wt) wt.style.display = 'none';
 
-    // Iniciar música si no estaba sonando (ej. cuando admin ya inició y estudiante entra)
-    startGameMusic();
+    // Iniciar música si no estaba sonando (excepto en modo test — ambiente de examen)
+    if (quizSessionMode !== 'test') {
+        startGameMusic();
+    }
 
     var splash = document.getElementById('quiz-splash');
     var splashText = document.getElementById('splash-text');
@@ -978,8 +1105,13 @@ function renderQuizQuestion() {
     var pregunta = quizData.preguntas[quizCurrentQ];
     var total = quizData.preguntas.length;
     var pts = pregunta.puntos || 1;
-    var timer = pregunta.temporizador || 30;
     var tipo = pregunta.tipo || 'mc';
+
+    // Salvaguarda: si está guardada como selección múltiple (ms) pero solo tiene 1 o menos correctas (o multiple_correctas es falso), tratar como selección única (mc)
+    var correctCount = (pregunta.opciones || []).filter(function(o){ return o.correct === true || o.correct === 'true'; }).length;
+    if (tipo === 'ms' && (pregunta.multiple_correctas === false || pregunta.multiple_correctas === 'false' || correctCount <= 1)) {
+        tipo = 'mc';
+    }
 
     document.getElementById('quiz-question-number').textContent = (quizCurrentQ + 1) + ' / ' + total;
     document.getElementById('quiz-question-text').textContent = pregunta.texto || '';
@@ -1539,13 +1671,13 @@ function showQuizResults() {
                 rhtml += '  </div>';
                 rhtml += '  <div style="font-weight:600; color:#1E293B; font-size:0.95rem; line-height:1.5; font-style:italic;">"' + (ans && ans.seleccionada ? ans.seleccionada : '<span style=\'color:#94A3B8;\'>Sin responder</span>') + '"</div>';
                 rhtml += '</div>';
-            } else if(pq.tipo === 'mc' || !pq.tipo || pq.tipo === 'ms' || pq.tipo === 'poll' || pq.tipo === 'encuesta') {
+            } else if(pq.tipo === 'mc' || pq.tipo === 'tf' || !pq.tipo || pq.tipo === 'ms' || pq.tipo === 'poll' || pq.tipo === 'encuesta') {
                 var opts = pq.opciones || [];
                 rhtml += '<div style="display:flex; flex-direction:column; gap:8px; margin-top:16px;">';
                 for(var o=0; o<opts.length; o++) {
                     var isSelected = false;
-                    if(pq.tipo === 'ms') {
-                        isSelected = ans && ans.seleccionada && ans.seleccionada.indexOf(o) !== -1;
+                    if(pq.tipo === 'ms' && ans && ans.seleccionada && typeof ans.seleccionada.indexOf === 'function') {
+                        isSelected = ans.seleccionada.indexOf(o) !== -1;
                     } else {
                         isSelected = ans && ans.seleccionada === o;
                     }
@@ -1607,45 +1739,74 @@ function showQuizResults() {
         document.getElementById('quiz-review-section').style.display = 'block';
     }
 
-    // Guardar en Supabase y cargar leaderboard
+    // Guardar en Supabase y cargar leaderboard según modo
     var evalIdForBoard = quizData.evaluacion.id;
+    var isTestMode = quizSessionMode === 'test';
+    var isTeamMode = quizSessionMode === 'equipo';
+
     if (currentUser) {
         var client = getSupabase();
         client.from('evaluacion_resultados').insert({
             evaluacion_id: evalIdForBoard,
             user_id: currentUser.id,
-            puntaje: totalPoints, // Actualizado a PUNTOS reales (Quizizz style)
+            puntaje: totalPoints,
             total: total,
             porcentaje: pct,
             respuestas: quizAnswers
         }).then(function(r) {
             if (r.error) {
                 console.warn('Insert resultado:', r.error.message);
-                // Mostrar alerta en pantalla si es error de RLS para el estudiante
                 if (r.error.message && r.error.message.toLowerCase().includes('row-level security')) {
                     document.getElementById('quiz-result-breakdown').innerHTML += '<div style="color:red; margin-bottom: 10px;">⚠️ Tu nota no se guardó porque el profesor no ha habilitado los permisos en la base de datos.</div>';
                 }
                 
-                // Si falla por duplicado, intentar update
                 client.from('evaluacion_resultados').update({
-                    puntaje: totalPoints, // Actualizado a PUNTOS reales
+                    puntaje: totalPoints,
                     total: total,
                     porcentaje: pct,
                     respuestas: quizAnswers
                 }).eq('evaluacion_id', evalIdForBoard).eq('user_id', currentUser.id).then(function() {
-                    loadLeaderboard(evalIdForBoard);
+                    if (!isTestMode) {
+                        if (isTeamMode) loadTeamLeaderboard(evalIdForBoard);
+                        else loadLeaderboard(evalIdForBoard);
+                    }
                 }).catch(function() {
-                    loadLeaderboard(evalIdForBoard);
+                    if (!isTestMode) loadLeaderboard(evalIdForBoard);
                 });
             } else {
-                loadLeaderboard(evalIdForBoard);
+                if (!isTestMode) {
+                    if (isTeamMode) loadTeamLeaderboard(evalIdForBoard);
+                    else loadLeaderboard(evalIdForBoard);
+                }
             }
         }).catch(function() {
-            loadLeaderboard(evalIdForBoard);
+            if (!isTestMode) loadLeaderboard(evalIdForBoard);
         });
-    } else {
-        // Sin usuario, aún mostrar leaderboard
+    } else if (!isTestMode) {
         loadLeaderboard(evalIdForBoard);
+    }
+
+    // En modo test, mostrar mensaje de confirmación sin leaderboard
+    if (isTestMode) {
+        var podiumEl = document.getElementById('quiz-podium');
+        if (podiumEl) {
+            podiumEl.style.display = 'block';
+            podiumEl.innerHTML = '<div style="text-align:center;padding:32px;background:rgba(37,99,235,0.1);border:2px solid rgba(37,99,235,0.25);border-radius:20px;margin-bottom:24px;">' +
+                '<div style="font-size:3rem;margin-bottom:12px;">📋</div>' +
+                '<h3 style="color:#fff;font-size:1.3rem;font-weight:900;margin-bottom:8px;">Examen Enviado</h3>' +
+                '<p style="color:rgba(255,255,255,0.6);font-size:0.95rem;font-weight:500;margin:0;">Tu profesor revisará los resultados. ¡Buen trabajo!</p>' +
+                '</div>';
+        }
+    }
+
+    // En modo equipo, mostrar badge del equipo
+    if (isTeamMode && quizTeamName) {
+        var breakdownEl2 = document.getElementById('quiz-result-breakdown');
+        if (breakdownEl2) {
+            var teamBadge = '<div style="text-align:center;padding:12px 20px;background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);border-radius:12px;margin-bottom:16px;display:inline-flex;align-items:center;gap:8px;font-weight:800;color:#A78BFA;font-size:1rem;">' +
+                '<i class="fas fa-users"></i> ' + quizTeamName + '</div>';
+            breakdownEl2.innerHTML = teamBadge + breakdownEl2.innerHTML;
+        }
     }
 }
 
@@ -1830,6 +1991,156 @@ function renderPodium(entries) {
     
     var fullListEl = document.getElementById('podium-full-list');
     if(fullListEl) fullListEl.innerHTML = listHtml;
+}
+
+// ═══ MODO EQUIPO — Leaderboard por equipos ═══
+function loadTeamLeaderboard(evalId) {
+    if (!window.studentLeaderboardInterval) {
+        window.studentLeaderboardInterval = setInterval(function() {
+            loadTeamLeaderboard(evalId);
+        }, 5000);
+    }
+    var client = getSupabase();
+    
+    // Cargar resultados + participantes con equipo
+    Promise.all([
+        client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje').eq('evaluacion_id', evalId),
+        client.from('evaluacion_participantes').select('user_id,nombre,equipo').eq('evaluacion_id', evalId)
+    ]).then(function(results) {
+        var resData = results[0].data || [];
+        var partData = results[1].data || [];
+        
+        if (resData.length === 0) return;
+        
+        // Build name+team map
+        var partMap = {};
+        for (var p = 0; p < partData.length; p++) {
+            var raw = partData[p].nombre || 'Estudiante';
+            var av = '👤', nm = raw;
+            if (raw.indexOf('|') !== -1) { var pts = raw.split('|'); av = pts[0]; nm = pts[1]; }
+            partMap[partData[p].user_id] = { nombre: nm, avatar: av, equipo: partData[p].equipo || 'Sin equipo' };
+        }
+        
+        // Group by team
+        var teams = {};
+        for (var r = 0; r < resData.length; r++) {
+            var info = partMap[resData[r].user_id] || { nombre: 'Estudiante', avatar: '👤', equipo: 'Sin equipo' };
+            var tName = info.equipo;
+            if (!teams[tName]) teams[tName] = { members: [], totalPts: 0, totalPct: 0 };
+            teams[tName].members.push({ nombre: info.nombre, avatar: info.avatar, puntaje: resData[r].puntaje, porcentaje: resData[r].porcentaje });
+            teams[tName].totalPts += resData[r].puntaje;
+            teams[tName].totalPct += resData[r].porcentaje;
+        }
+        
+        // Sort teams by total points
+        var teamEntries = [];
+        for (var tKey in teams) {
+            var t = teams[tKey];
+            teamEntries.push({
+                name: tKey,
+                totalPts: t.totalPts,
+                avgPct: Math.round(t.totalPct / t.members.length),
+                members: t.members
+            });
+        }
+        teamEntries.sort(function(a, b) { return b.totalPts - a.totalPts; });
+        
+        // Render team podium
+        var podiumEl = document.getElementById('quiz-podium');
+        if (!podiumEl || teamEntries.length === 0) return;
+        podiumEl.style.display = 'block';
+
+        // Triumph sound (only once)
+        if (!window._triumphPlayed) {
+            try {
+                var ctx = new (window.AudioContext || window.webkitAudioContext)();
+                var o = ctx.createOscillator();
+                var g = ctx.createGain();
+                o.type = 'square';
+                var notes = [523.25, 659.25, 783.99, 1046.50];
+                var ct = ctx.currentTime;
+                for (var n = 0; n < notes.length; n++) { o.frequency.setValueAtTime(notes[n], ct + n * 0.15); }
+                g.gain.setValueAtTime(0, ct); g.gain.linearRampToValueAtTime(0.15, ct + 0.1);
+                g.gain.exponentialRampToValueAtTime(0.001, ct + 1.5);
+                o.connect(g); g.connect(ctx.destination); o.start(ct); o.stop(ct + 1.6);
+                window._triumphPlayed = true;
+            } catch(e) {}
+        }
+
+        var currentDataStr = JSON.stringify(teamEntries);
+        if (window._lastPodiumData === currentDataStr) return;
+        window._lastPodiumData = currentDataStr;
+
+        // Build team cards
+        var tHtml = '<div class="stadium-podium-container"><div class="stadium-light-beam"></div>';
+        tHtml += '<h3 style="font-size:1.4rem;font-weight:900;margin-bottom:20px;position:relative;z-index:10;color:#fff;text-shadow:0 2px 5px rgba(0,0,0,0.8);text-align:center;">';
+        tHtml += '<i class="fas fa-users" style="color:#A78BFA;margin-right:8px;"></i> Ranking por Equipos</h3>';
+        tHtml += '<div style="display:flex;flex-direction:column;gap:16px;max-width:500px;margin:0 auto;position:relative;z-index:10;">';
+        
+        var medals = ['🥇', '🥈', '🥉'];
+        for (var ti = 0; ti < teamEntries.length; ti++) {
+            var te = teamEntries[ti];
+            var medalIcon = ti < 3 ? medals[ti] : (ti + 1) + '°';
+            var borderColor = ti === 0 ? '#FFD700' : (ti === 1 ? '#C0C0C0' : (ti === 2 ? '#CD7F32' : 'rgba(255,255,255,0.15)'));
+            var glowColor = ti === 0 ? 'rgba(255,215,0,0.2)' : 'rgba(255,255,255,0.05)';
+            
+            tHtml += '<div style="background:rgba(255,255,255,0.06);border:2px solid ' + borderColor + ';border-radius:16px;padding:20px;backdrop-filter:blur(8px);box-shadow:0 4px 20px ' + glowColor + ';">';
+            tHtml += '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">';
+            tHtml += '<div style="display:flex;align-items:center;gap:12px;">';
+            tHtml += '<span style="font-size:1.8rem;">' + medalIcon + '</span>';
+            tHtml += '<div><div style="color:#fff;font-weight:900;font-size:1.1rem;">' + te.name + '</div>';
+            tHtml += '<div style="color:rgba(255,255,255,0.5);font-size:0.8rem;font-weight:600;">' + te.members.length + ' miembro' + (te.members.length > 1 ? 's' : '') + '</div></div>';
+            tHtml += '</div>';
+            tHtml += '<div style="text-align:right;"><div style="color:#FFD700;font-weight:900;font-size:1.3rem;">' + te.totalPts + ' pts</div>';
+            tHtml += '<div style="color:rgba(255,255,255,0.4);font-size:0.8rem;font-weight:600;">' + te.avgPct + '% prom.</div></div>';
+            tHtml += '</div>';
+            
+            // Team members
+            tHtml += '<div style="display:flex;flex-wrap:wrap;gap:6px;">';
+            for (var mi = 0; mi < te.members.length; mi++) {
+                var mem = te.members[mi];
+                tHtml += '<div style="display:flex;align-items:center;gap:4px;background:rgba(255,255,255,0.08);padding:4px 10px;border-radius:8px;font-size:0.8rem;">';
+                tHtml += '<span style="font-size:0.9rem;">' + mem.avatar + '</span>';
+                tHtml += '<span style="color:rgba(255,255,255,0.7);font-weight:600;">' + mem.nombre + '</span>';
+                tHtml += '<span style="color:#A78BFA;font-weight:800;margin-left:4px;">' + mem.puntaje + 'pts</span>';
+                tHtml += '</div>';
+            }
+            tHtml += '</div></div>';
+        }
+        tHtml += '</div></div>';
+        
+        // My team
+        if (quizTeamName) {
+            var myTeamRank = -1;
+            for (var mr = 0; mr < teamEntries.length; mr++) {
+                if (teamEntries[mr].name === quizTeamName) { myTeamRank = mr + 1; break; }
+            }
+            if (myTeamRank > 0) {
+                var rankPill = document.getElementById('my-rank-pill');
+                if (rankPill) {
+                    rankPill.innerHTML = '👥 Tu equipo: <strong style="font-size:1.1rem;margin:0 4px">' + quizTeamName + '</strong> — Posición: <strong>' + myTeamRank + '°</strong> de ' + teamEntries.length + ' equipos';
+                    rankPill.style.display = 'inline-block';
+                }
+            }
+        }
+        
+        // Hide individual table, replace with team view
+        var tableEl = document.getElementById('total-ranking-table');
+        if (tableEl) tableEl.style.display = 'none';
+        
+        var podiumPillars = document.getElementById('podium-pillars');
+        if (podiumPillars) podiumPillars.innerHTML = '';
+        
+        // Insert team html  
+        var existingTeamView = document.getElementById('team-ranking-view');
+        if (existingTeamView) existingTeamView.innerHTML = tHtml;
+        else {
+            var teamDiv = document.createElement('div');
+            teamDiv.id = 'team-ranking-view';
+            teamDiv.innerHTML = tHtml;
+            podiumEl.insertBefore(teamDiv, podiumEl.firstChild);
+        }
+    });
 }
 
 // ═══ ADMIN: BIBLIOTECA — Evaluaciones creadas ═══
@@ -2023,13 +2334,13 @@ window.openReportDetail = function(evalId, userId) {
                 html += '  </div>';
                 html += '  <div style="font-weight:600; color:#1E293B; font-size:0.95rem; line-height:1.5; font-style:italic;">"' + (a && a.seleccionada ? a.seleccionada : '<span style=\'color:#94A3B8;\'>Sin responder</span>') + '"</div>';
                 html += '</div>';
-            } else if(q.tipo === 'mc' || !q.tipo || q.tipo === 'ms' || q.tipo === 'poll' || q.tipo === 'encuesta') {
+            } else if(q.tipo === 'mc' || q.tipo === 'tf' || !q.tipo || q.tipo === 'ms' || q.tipo === 'poll' || q.tipo === 'encuesta') {
                 var opts = q.opciones || [];
                 html += '<div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">';
                 for(var o=0; o<opts.length; o++) {
                     var isSelected = false;
-                    if(q.tipo === 'ms') {
-                        isSelected = a && a.seleccionada && a.seleccionada.indexOf(o) !== -1;
+                    if(q.tipo === 'ms' && a && a.seleccionada && typeof a.seleccionada.indexOf === 'function') {
+                        isSelected = a.seleccionada.indexOf(o) !== -1;
                     } else {
                         isSelected = a && a.seleccionada === o;
                     }
@@ -2074,18 +2385,45 @@ window.openReportDetail = function(evalId, userId) {
                 html += '  </div>';
                 html += '</div>';
             } else {
-                html += '<div style="margin-top:16px;padding:12px;background:#FFF;border:2px solid #E2E8F0;border-radius:12px;">';
-                html += '<div style="font-size:0.85rem;color:#64748B;font-weight:800;margin-bottom:6px;">Respuesta del estudiante:</div>';
-                html += '<div style="font-weight:700;color:#0F172A;font-size:1rem;">' + (a ? a.seleccionada : 'Sin responder') + '</div>';
-                html += '<div style="font-size:0.85rem;color:#10B981;font-weight:800;margin-top:12px;margin-bottom:6px;">Respuesta correcta esperada:</div>';
-                var respCorrecta = '';
-                if (q.tipo === 'fb') {
-                    respCorrecta = (q.opciones && q.opciones.length > 0 && q.opciones[0].text) ? q.opciones[0].text : 'Sin patrón';
+                // ═══ Fallback inteligente: si tiene opciones con texto y la respuesta es un índice, renderizar como tarjetas ═══
+                var fbOpts = q.opciones || [];
+                var hasRealOpts = fbOpts.length > 0 && fbOpts.some(function(op){ return op && op.text && op.text.trim(); });
+                var ansIsIndex = a && (typeof a.seleccionada === 'number');
+                
+                if (hasRealOpts && ansIsIndex) {
+                    // Renderizar como opciones visuales (el tipo fue guardado mal o es fb con opciones)
+                    html += '<div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">';
+                    for(var fo=0; fo<fbOpts.length; fo++) {
+                        var foSelected = (a.seleccionada === fo);
+                        var foCorrect = fbOpts[fo].correct;
+                        var foColor = foCorrect ? '#166534' : (foSelected ? '#991B1B' : '#475569');
+                        var foBg = foCorrect ? '#DCFCE7' : (foSelected ? '#FEE2E2' : '#FFFFFF');
+                        var foBorder = foCorrect ? '#86EFAC' : (foSelected ? '#FECACA' : '#CBD5E1');
+                        var foIcon = foCorrect ? '<i class="fas fa-check"></i>' : (foSelected ? '<i class="fas fa-times"></i>' : '');
+                        var foWeight = (foCorrect || foSelected) ? '800' : '600';
+                        html += '<div style="padding:10px 16px;background:'+foBg+';border:2px solid '+foBorder+';border-radius:12px;font-size:0.95rem;font-weight:'+foWeight+';color:'+foColor+';display:flex;justify-content:space-between;align-items:center;">';
+                        html += '<span>' + (fbOpts[fo].text||'') + '</span>';
+                        html += '<span style="font-size:1.1rem;">' + foIcon + '</span>';
+                        html += '</div>';
+                    }
+                    html += '</div>';
                 } else {
-                    respCorrecta = q.respuesta_correcta || '';
+                    // Pregunta de texto (fb puro u otro tipo sin opciones visuales)
+                    html += '<div style="margin-top:16px;padding:12px;background:#FFF;border:2px solid #E2E8F0;border-radius:12px;">';
+                    html += '<div style="font-size:0.85rem;color:#64748B;font-weight:800;margin-bottom:6px;">Respuesta del estudiante:</div>';
+                    html += '<div style="font-weight:700;color:#0F172A;font-size:1rem;">' + (a ? a.seleccionada : 'Sin responder') + '</div>';
+                    var respCorrecta = '';
+                    if (q.tipo === 'fb') {
+                        respCorrecta = (q.opciones && q.opciones.length > 0 && q.opciones[0].text) ? q.opciones[0].text : 'Sin patrón';
+                    } else {
+                        respCorrecta = q.respuesta_correcta || '';
+                    }
+                    if (respCorrecta) {
+                        html += '<div style="font-size:0.85rem;color:#10B981;font-weight:800;margin-top:12px;margin-bottom:6px;">Respuesta correcta esperada:</div>';
+                        html += '<div style="font-weight:700;color:#047857;font-size:1rem;">' + respCorrecta + '</div>';
+                    }
+                    html += '</div>';
                 }
-                html += '<div style="font-weight:700;color:#047857;font-size:1rem;">' + respCorrecta + '</div>';
-                html += '</div>';
             }
             html += '</div>';
         }
