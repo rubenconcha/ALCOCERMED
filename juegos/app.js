@@ -779,13 +779,16 @@ function playErrorSound() {
 }
 
 function showFeedbackAnimation(isCorrect, ptsEarned) {
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var isPoll = pregunta && (pregunta.tipo === 'poll' || pregunta.tipo === 'encuesta');
+
     var banner = document.createElement('div');
     banner.style.position = 'fixed';
     banner.style.top = '-150px'; // start hidden
     banner.style.left = '50%';
     banner.style.transform = 'translateX(-50%)';
     banner.style.zIndex = '9999';
-    banner.style.background = isCorrect ? '#10B981' : '#EF4444';
+    banner.style.background = isPoll ? '#7C3AED' : (isCorrect ? '#10B981' : '#EF4444');
     banner.style.color = '#fff';
     banner.style.padding = '16px 32px';
     banner.style.borderRadius = '16px';
@@ -795,17 +798,21 @@ function showFeedbackAnimation(isCorrect, ptsEarned) {
     banner.style.gap = '20px';
     banner.style.transition = 'top 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
     
-    var iconHtml = isCorrect ? '<i class="fas fa-check-circle" style="font-size:2.5rem;"></i>' : '<i class="fas fa-times-circle" style="font-size:2.5rem;"></i>';
-    var textHtml = '<div style="display:flex; flex-direction:column;"><span style="font-size:1.5rem; font-weight:900;">' + (isCorrect ? '¡CORRECTO!' : 'INCORRECTO') + '</span>';
-    if(isCorrect && ptsEarned) {
+    var iconHtml = isPoll ? '<i class="fas fa-comment-dots" style="font-size:2.5rem;"></i>' : (isCorrect ? '<i class="fas fa-check-circle" style="font-size:2.5rem;"></i>' : '<i class="fas fa-times-circle" style="font-size:2.5rem;"></i>');
+    var titleText = isPoll ? '¡REGISTRADO!' : (isCorrect ? '¡CORRECTO!' : 'INCORRECTO');
+    var textHtml = '<div style="display:flex; flex-direction:column;"><span style="font-size:1.5rem; font-weight:900;">' + titleText + '</span>';
+    if(!isPoll && isCorrect && ptsEarned) {
         textHtml += '<span style="font-size:1.1rem; font-weight:700; opacity:0.9;">+' + ptsEarned + ' Puntos</span>';
+    } else if (isPoll) {
+        textHtml += '<span style="font-size:1.1rem; font-weight:700; opacity:0.9;">¡Gracias por tu opinión!</span>';
     }
     textHtml += '</div>';
 
     banner.innerHTML = iconHtml + textHtml;
     document.body.appendChild(banner);
     
-    if (isCorrect) playSuccessSound();
+    if (isPoll) playSuccessSound();
+    else if (isCorrect) playSuccessSound();
     else playErrorSound();
     
     // Slide in
@@ -1213,6 +1220,7 @@ window.confirmQuizAnswer = confirmQuizAnswer;
 
 function getQuizPoints(isCorrect, pregunta) {
     if(!isCorrect) return 0;
+    if(pregunta.tipo === 'poll' || pregunta.tipo === 'encuesta') return 0;
     var base = 600;
     var totalTimer = pregunta.temporizador || 30;
     var timeRatio = Math.max(0, quizTimeLeft) / totalTimer;
@@ -1237,7 +1245,8 @@ function confirmQuizAnswerInstant(idx) {
     var pregunta = quizData.preguntas[quizCurrentQ];
     var opciones = pregunta.opciones || [];
     var buttons = document.querySelectorAll('.quiz-opt-btn');
-    var isCorrectAnswer = opciones[idx] && opciones[idx].correct;
+    var isPoll = pregunta.tipo === 'poll' || pregunta.tipo === 'encuesta';
+    var isCorrectAnswer = isPoll ? true : (opciones[idx] && opciones[idx].correct);
 
     for (var i = 0; i < buttons.length; i++) {
         var isSelected = (i === idx);
@@ -1248,7 +1257,7 @@ function confirmQuizAnswerInstant(idx) {
             buttons[i].style.filter = 'grayscale(0.5)';
             buttons[i].style.opacity = '0.7';
             buttons[i].style.border = '4px solid #EF4444';
-        } else if (opciones[i] && opciones[i].correct) {
+        } else if (!isPoll && opciones[i] && opciones[i].correct) {
             buttons[i].style.filter = 'brightness(1.2)';
             buttons[i].style.border = '4px solid #22C55E';
         } else {
@@ -1327,10 +1336,17 @@ function showQuizResults() {
     if (breakdownEl) {
         var bhtml = '<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:16px">';
         for (var j = 0; j < quizAnswers.length; j++) {
+            var pq = quizData.preguntas[j];
+            var isPoll = pq && (pq.tipo === 'poll' || pq.tipo === 'encuesta');
             var ok = quizAnswers[j].correcta;
+            
+            var bg = isPoll ? '#F5F3FF' : (ok ? '#DCFCE7' : '#FEE2E2');
+            var color = isPoll ? '#7C3AED' : (ok ? '#166534' : '#DC2626');
+            var icon = isPoll ? 'comment-dots' : (ok ? 'check' : 'times');
+
             bhtml += '<div style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;' +
-                'background:' + (ok ? '#DCFCE7' : '#FEE2E2') + ';color:' + (ok ? '#166534' : '#DC2626') + '">' +
-                '<i class="fas fa-' + (ok ? 'check' : 'times') + '"></i></div>';
+                'background:' + bg + ';color:' + color + '">' +
+                '<i class="fas fa-' + icon + '"></i></div>';
         }
         bhtml += '</div>';
         breakdownEl.innerHTML = bhtml;
@@ -1343,18 +1359,19 @@ function showQuizResults() {
         for(var q=0; q<quizData.preguntas.length; q++) {
             var pq = quizData.preguntas[q];
             var ans = quizAnswers[q];
-            var ok = ans ? ans.correcta : false;
-            var color = ok ? '#22C55E' : '#EF4444';
-            var icon = ok ? 'fa-check' : 'fa-times';
-            var scoreText = ok ? ('+' + (ans.puntos_ganados || 0) + ' pts') : '0 pts';
+            var isPoll = pq.tipo === 'poll' || pq.tipo === 'encuesta';
+            var ok = isPoll ? true : (ans ? ans.correcta : false);
+            var color = isPoll ? '#7C3AED' : (ok ? '#22C55E' : '#EF4444');
+            var icon = isPoll ? 'fa-comment-dots' : (ok ? 'fa-check' : 'fa-times');
+            var scoreText = isPoll ? 'Encuesta' : (ok ? ('+' + (ans.puntos_ganados || 0) + ' pts') : '0 pts');
             
             rhtml += '<div style="background:#fff; border-left:6px solid '+color+'; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">';
             rhtml += '<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">';
             rhtml += '<div style="font-weight:800; color:#1E293B; flex:1; padding-right:16px; font-size:1.1rem;">' + (q+1) + '. ' + (pq.texto||'') + '</div>';
-            rhtml += '<div style="background:'+(ok?'#DCFCE7':'#FEE2E2')+'; color:'+color+'; padding:6px 12px; border-radius:8px; font-weight:800; font-size:0.95rem; white-space:nowrap;"><i class="fas '+icon+'"></i> '+scoreText+'</div>';
+            rhtml += '<div style="background:'+(isPoll?'#F5F3FF':(ok?'#DCFCE7':'#FEE2E2'))+'; color:'+color+'; padding:6px 12px; border-radius:8px; font-weight:800; font-size:0.95rem; white-space:nowrap;"><i class="fas '+icon+'"></i> '+scoreText+'</div>';
             rhtml += '</div>';
             
-            if(pq.tipo === 'mc' || !pq.tipo || pq.tipo === 'ms') {
+            if(pq.tipo === 'mc' || !pq.tipo || pq.tipo === 'ms' || pq.tipo === 'poll') {
                 var opts = pq.opciones || [];
                 rhtml += '<div style="display:flex; flex-direction:column; gap:8px; margin-top:16px;">';
                 for(var o=0; o<opts.length; o++) {
@@ -1364,11 +1381,11 @@ function showQuizResults() {
                     } else {
                         isSelected = ans && ans.seleccionada === o;
                     }
-                    var isCorrect = opts[o].correct;
-                    var optColor = isCorrect ? '#22C55E' : (isSelected ? '#EF4444' : '#E2E8F0');
-                    var bg = isCorrect ? '#F0FDF4' : (isSelected ? '#FEF2F2' : '#F8FAFC');
+                    var isCorrect = !isPoll && opts[o].correct;
+                    var optColor = isPoll ? (isSelected ? '#7C3AED' : '#E2E8F0') : (isCorrect ? '#22C55E' : (isSelected ? '#EF4444' : '#E2E8F0'));
+                    var bg = isPoll ? (isSelected ? '#F5F3FF' : '#F8FAFC') : (isCorrect ? '#F0FDF4' : (isSelected ? '#FEF2F2' : '#F8FAFC'));
                     var fontWeight = (isCorrect || isSelected) ? '700' : '500';
-                    var icon2 = isCorrect ? '✓' : (isSelected ? '✗' : '');
+                    var icon2 = isPoll ? (isSelected ? '✓' : '') : (isCorrect ? '✓' : (isSelected ? '✗' : ''));
                     rhtml += '<div style="padding:10px 16px; border:2px solid '+optColor+'; background:'+bg+'; border-radius:8px; color:#334155; font-weight:'+fontWeight+'; display:flex; justify-content:space-between;">';
                     rhtml += '<span>' + (opts[o].text||'') + '</span>';
                     rhtml += '<span style="color:'+optColor+'; font-weight:900;">' + icon2 + '</span>';
@@ -1750,10 +1767,11 @@ window.openReportDetail = function(evalId, userId) {
         for(var i=0; i<qs.length; i++) {
             var q = qs[i];
             var a = ans[i];
-            var isCorrect = a ? a.correcta : false;
-            var qColor = isCorrect ? '#22C55E' : '#EF4444';
-            var qBg = isCorrect ? '#F0FDF4' : '#FEF2F2';
-            var qIcon = isCorrect ? 'fa-check-circle' : 'fa-times-circle';
+            var isPoll = q.tipo === 'poll' || q.tipo === 'encuesta';
+            var isCorrect = isPoll ? true : (a ? a.correcta : false);
+            var qColor = isPoll ? '#7C3AED' : (isCorrect ? '#22C55E' : '#EF4444');
+            var qBg = isPoll ? '#F5F3FF' : (isCorrect ? '#F0FDF4' : '#FEF2F2');
+            var qIcon = isPoll ? 'fa-comment-dots' : (isCorrect ? 'fa-check-circle' : 'fa-times-circle');
             
             html += '<div style="background:'+qBg+';border:2px solid '+qColor+'40;border-radius:16px;padding:20px;margin-bottom:16px;">';
             html += '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">';
@@ -1761,7 +1779,7 @@ window.openReportDetail = function(evalId, userId) {
             html += '<div style="color:'+qColor+';font-size:1.4rem;"><i class="fas '+qIcon+'"></i></div>';
             html += '</div>';
             
-            if(q.tipo === 'mc' || !q.tipo || q.tipo === 'ms') {
+            if(q.tipo === 'mc' || !q.tipo || q.tipo === 'ms' || q.tipo === 'poll') {
                 var opts = q.opciones || [];
                 html += '<div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">';
                 for(var o=0; o<opts.length; o++) {
@@ -1771,11 +1789,11 @@ window.openReportDetail = function(evalId, userId) {
                     } else {
                         isSelected = a && a.seleccionada === o;
                     }
-                    var isOptCorrect = opts[o].correct;
-                    var oColor = isOptCorrect ? '#166534' : (isSelected ? '#991B1B' : '#475569');
-                    var oBg = isOptCorrect ? '#DCFCE7' : (isSelected ? '#FEE2E2' : '#FFFFFF');
-                    var oBorder = isOptCorrect ? '#86EFAC' : (isSelected ? '#FECACA' : '#CBD5E1');
-                    var oIcon = isOptCorrect ? '<i class="fas fa-check"></i>' : (isSelected ? '<i class="fas fa-times"></i>' : '');
+                    var isOptCorrect = !isPoll && opts[o].correct;
+                    var oColor = isPoll ? (isSelected ? '#7C3AED' : '#475569') : (isOptCorrect ? '#166534' : (isSelected ? '#991B1B' : '#475569'));
+                    var oBg = isPoll ? (isSelected ? '#F5F3FF' : '#FFFFFF') : (isOptCorrect ? '#DCFCE7' : (isSelected ? '#FEE2E2' : '#FFFFFF'));
+                    var oBorder = isPoll ? (isSelected ? '#C084FC' : '#CBD5E1') : (isOptCorrect ? '#86EFAC' : (isSelected ? '#FECACA' : '#CBD5E1'));
+                    var oIcon = isPoll ? (isSelected ? '<i class="fas fa-check"></i>' : '') : (isOptCorrect ? '<i class="fas fa-check"></i>' : (isSelected ? '<i class="fas fa-times"></i>' : ''));
                     var oWeight = (isOptCorrect || isSelected) ? '800' : '600';
                     
                     html += '<div style="padding:10px 16px;background:'+oBg+';border:2px solid '+oBorder+';border-radius:12px;font-size:0.95rem;font-weight:'+oWeight+';color:'+oColor+';display:flex;justify-content:space-between;align-items:center;">';

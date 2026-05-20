@@ -1231,12 +1231,14 @@ function pvSelectOption(idx){
 
   var q=questions[pvIdx];
   var opts=q.options||[];
-  var isCorrect=opts[idx]&&opts[idx].correct;
+  var isPoll=q.type==='poll'||q.type==='encuesta';
+  var isCorrect=isPoll?true:(opts[idx]&&opts[idx].correct);
   var buttons=document.querySelectorAll('.pv-opt');
 
   for(var i=0;i<buttons.length;i++){
     var isSel=(i===idx);
-    if(isSel&&isCorrect){buttons[i].style.border='2px solid #22C55E';buttons[i].style.background='rgba(34,197,94,.2)';}
+    if(isSel&&isPoll){buttons[i].style.border='2px solid #7C3AED';buttons[i].style.background='rgba(124,58,237,.25)';}
+    else if(isSel&&isCorrect){buttons[i].style.border='2px solid #22C55E';buttons[i].style.background='rgba(34,197,94,.2)';}
     else if(isSel&&!isCorrect){buttons[i].style.border='2px solid #EF4444';buttons[i].style.background='rgba(239,68,68,.2)';}
     else{buttons[i].style.opacity='0.4';}
     buttons[i].style.cursor='default';buttons[i].style.pointerEvents='none';
