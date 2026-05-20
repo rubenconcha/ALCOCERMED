@@ -1019,7 +1019,7 @@ function renderQuizQuestion() {
         quizDndMatches = {};
         
         html += '<div style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">';
-        html += '  <p style="color:#fff; font-size:1.1rem; font-weight:800; text-align:center; background:rgba(0,0,0,0.3); padding:10px 20px; border-radius:12px; border:1px solid rgba(255,255,255,0.1);"><i class="fas fa-link" style="color:#A78BFA; margin-right:8px;"></i> Relaciona las partes de la imagen: selecciona una etiqueta e indícala en el círculo, o toca un círculo y elige su etiqueta correspondiente.</p>';
+        html += '  <p style="color:#fff; font-size:1.1rem; font-weight:800; text-align:center; background:rgba(0,0,0,0.3); padding:10px 20px; border-radius:12px; border:1px solid rgba(255,255,255,0.1);"><i class="fas fa-link" style="color:#A78BFA; margin-right:8px;"></i> Relaciona las partes: toca una etiqueta y su círculo (o viceversa).</p>';
         
         html += '  <div style="position:relative; display:inline-block; max-width:100%; border-radius:16px; overflow:hidden; border:4px solid rgba(255,255,255,0.2); background:#2D1B4E; box-shadow:0 12px 36px rgba(0,0,0,0.4);" id="dnd-student-container">';
         html += '    <img src="' + imgUrl + '" style="max-width:100%; max-height:380px; display:block; user-select:none; pointer-events:none;">';
