@@ -1107,9 +1107,10 @@ function renderQuizQuestion() {
     var pts = pregunta.puntos || 1;
     var tipo = pregunta.tipo || 'mc';
 
-    // Salvaguarda: si está guardada como selección múltiple (ms) pero solo tiene 1 o menos correctas (o multiple_correctas es falso), tratar como selección única (mc)
+    // Salvaguarda BLINDADA: si tipo es 'ms' pero solo tiene 0 o 1 respuestas correctas, SIEMPRE forzar a 'mc'
+    // Esto funciona incluso si multiple_correctas no fue actualizado en la BD
     var correctCount = (pregunta.opciones || []).filter(function(o){ return o.correct === true || o.correct === 'true'; }).length;
-    if (tipo === 'ms' && (pregunta.multiple_correctas === false || pregunta.multiple_correctas === 'false' || correctCount <= 1)) {
+    if (tipo === 'ms' && correctCount <= 1) {
         tipo = 'mc';
     }
 
@@ -2409,14 +2410,34 @@ window.openReportDetail = function(evalId, userId) {
                     html += '</div>';
                 } else {
                     // Pregunta de texto (fb puro u otro tipo sin opciones visuales)
+                    // SMART FALLBACK: Translate numeric index to option text if opciones exist
                     html += '<div style="margin-top:16px;padding:12px;background:#FFF;border:2px solid #E2E8F0;border-radius:12px;">';
                     html += '<div style="font-size:0.85rem;color:#64748B;font-weight:800;margin-bottom:6px;">Respuesta del estudiante:</div>';
-                    html += '<div style="font-weight:700;color:#0F172A;font-size:1rem;">' + (a ? a.seleccionada : 'Sin responder') + '</div>';
+                    var fallbackStudentAns = 'Sin responder';
+                    if (a) {
+                        var sel = a.seleccionada;
+                        var fbOpciones = q.opciones || [];
+                        var selIdx = (typeof sel === 'number') ? sel : (typeof sel === 'string' && !isNaN(sel) ? parseInt(sel) : -1);
+                        if (selIdx >= 0 && fbOpciones[selIdx] && fbOpciones[selIdx].text) {
+                            fallbackStudentAns = fbOpciones[selIdx].text;
+                        } else if (sel !== null && sel !== undefined) {
+                            fallbackStudentAns = String(sel);
+                        }
+                    }
+                    html += '<div style="font-weight:700;color:#0F172A;font-size:1rem;">' + fallbackStudentAns + '</div>';
                     var respCorrecta = '';
                     if (q.tipo === 'fb') {
                         respCorrecta = (q.opciones && q.opciones.length > 0 && q.opciones[0].text) ? q.opciones[0].text : 'Sin patrón';
                     } else {
-                        respCorrecta = q.respuesta_correcta || '';
+                        // First try to find correct option in opciones array
+                        if (q.opciones && q.opciones.length > 0) {
+                            var correctOpt = null;
+                            for (var ci = 0; ci < q.opciones.length; ci++) {
+                                if (q.opciones[ci] && q.opciones[ci].correct) { correctOpt = q.opciones[ci]; break; }
+                            }
+                            if (correctOpt && correctOpt.text) { respCorrecta = correctOpt.text; }
+                        }
+                        if (!respCorrecta) { respCorrecta = q.respuesta_correcta || ''; }
                     }
                     if (respCorrecta) {
                         html += '<div style="font-size:0.85rem;color:#10B981;font-weight:800;margin-top:12px;margin-bottom:6px;">Respuesta correcta esperada:</div>';
