@@ -822,11 +822,9 @@ function startLiveSession(){
   closeSessionModal();
   var client=getSupabase();
   
-  // Limpiar participantes y resultados anteriores una sola vez al iniciar la sesión
-  Promise.all([
-    client.from('evaluacion_participantes').delete().eq('evaluacion_id', evaluacionId),
-    client.from('evaluacion_resultados').delete().eq('evaluacion_id', evaluacionId)
-  ]).then(function(){
+  // Limpiar participantes anteriores una sola vez al iniciar la sesión.
+  // Mantenemos evaluacion_resultados intacto para preservar el historial de los estudiantes en Supabase.
+  client.from('evaluacion_participantes').delete().eq('evaluacion_id', evaluacionId).then(function(){
     client.rpc('generate_quiz_code').then(function(cr){
       if(cr.error){console.error('RPC generate_quiz_code error:', JSON.stringify(cr.error));showToast('Error generando código: ' + (cr.error.message||JSON.stringify(cr.error)),'error');return;}
       var code=cr.data;
@@ -1125,8 +1123,8 @@ function toggleLobbyMusic(){
 function pollLobbyParticipants(){
   if(!evaluacionId)return;
   var client=getSupabase();
-  client.from('evaluacion_participantes').select('nombre,joined_at,equipo').eq('evaluacion_id',evaluacionId).order('joined_at').then(function(r){
-    if(r.error||!r.data)return;
+  client.from('evaluacion_participantes').select('nombre,joined_at').eq('evaluacion_id',evaluacionId).order('joined_at').then(function(r){
+    if(r.error||!r.data){if(r.error)console.error('pollLobby error:',r.error.message);return;}
     var count=r.data.length;
     document.getElementById('lobby-player-count').textContent=count;
     // Mostrar nombres de participantes
@@ -1145,7 +1143,7 @@ function pollLobbyParticipants(){
       var html='';
       for(var i=0;i<r.data.length;i++){
         var name=r.data[i].nombre;
-        var equipo=r.data[i].equipo||'';
+        var equipo=r.data[i].equipo||r.data[i].team||'';
         // Extract avatar if present
         var displayName=name;
         var avatarEmoji='';
@@ -1557,23 +1555,39 @@ function pollTeacherResults(){
       var nameMap={};
       if(pRes.data){for(var n=0;n<pRes.data.length;n++){nameMap[pRes.data[n].user_id]=pRes.data[n].nombre;}}
 
-      window.teacherResults = r.data;
+      // Filtrar resultados para incluir solo a participantes de la sesión activa
+      var activeResults = [];
+      var entries=[];
+      var totalPct=0;
+      for(var k=0;k<r.data.length;k++){
+        var userId = r.data[k].user_id;
+        if (!nameMap[userId]) continue; // Omitir resultados de sesiones pasadas
+        activeResults.push(r.data[k]);
+
+        var fullNombre = nameMap[userId];
+        var parts = fullNombre.split('|');
+        var emoji = parts.length > 1 ? parts[0] : '';
+        var nombreReal = parts.length > 1 ? parts[1] : fullNombre;
+        entries.push({user_id: userId, emoji: emoji, nombre: nombreReal, puntaje: r.data[k].puntaje, total: r.data[k].total, porcentaje: r.data[k].porcentaje});
+        totalPct+=r.data[k].porcentaje;
+      }
+
+      window.teacherResults = activeResults;
       window.teacherNameMap = nameMap;
+
+      // Si no hay participantes activos con resultados
+      if(entries.length===0){
+        document.getElementById('tr-results-list').innerHTML='<div style="padding:40px 24px;text-align:center;color:rgba(255,255,255,.6);font-size:1rem;font-weight:600"><i class="fas fa-inbox" style="font-size:32px;margin-bottom:16px;color:rgba(255,255,255,.3);display:block"></i>Esperando que los participantes completen la evaluación...</div>';
+        document.getElementById('tr-podium').innerHTML='<div style="width:100%;text-align:center;color:rgba(255,255,255,.4);padding:40px 0;font-style:italic">El podio aparecerá cuando haya resultados</div>';
+        document.getElementById('tr-accuracy-msg').textContent='No hay datos suficientes';
+        document.getElementById('tr-accuracy-pct').textContent='--%';
+        document.getElementById('tr-accuracy-bar').style.width='0%';
+        return;
+      }
 
       // Update question review lists in real-time
       if (cachedQuestions) {
         renderQuestionReviewWithAnswers(cachedQuestions);
-      }
-
-      var entries=[];
-      var totalPct=0;
-      for(var k=0;k<r.data.length;k++){
-        var fullNombre = nameMap[r.data[k].user_id] || 'Estudiante';
-        var parts = fullNombre.split('|');
-        var emoji = parts.length > 1 ? parts[0] : '';
-        var nombreReal = parts.length > 1 ? parts[1] : fullNombre;
-        entries.push({user_id: r.data[k].user_id, emoji: emoji, nombre: nombreReal, puntaje: r.data[k].puntaje, total: r.data[k].total, porcentaje: r.data[k].porcentaje});
-        totalPct+=r.data[k].porcentaje;
       }
 
       // Class accuracy
