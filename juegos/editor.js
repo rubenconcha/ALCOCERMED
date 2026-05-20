@@ -1449,7 +1449,7 @@ function openTeacherReportDetail(userId, studentName) {
                 html += '  </div>';
                 html += '  <div style="font-weight:600; color:#1E293B; font-size:0.95rem; line-height:1.5; font-style:italic;">"' + (a && a.seleccionada ? a.seleccionada : '<span style=\'color:#94A3B8;\'>Sin responder</span>') + '"</div>';
                 html += '</div>';
-            } else if (q.tipo === 'mc' || !q.tipo || q.tipo === 'ms' || q.tipo === 'poll' || q.tipo === 'encuesta') {
+            } else if (q.tipo === 'mc' || q.tipo === 'tf' || !q.tipo || q.tipo === 'ms' || q.tipo === 'poll' || q.tipo === 'encuesta') {
                 var opts = q.opciones || [];
                 html += '<div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">';
                 for (var o = 0; o < opts.length; o++) {
