@@ -821,25 +821,32 @@ function closeSessionModal(){document.getElementById('session-overlay').classLis
 function startLiveSession(){
   closeSessionModal();
   var client=getSupabase();
-  client.rpc('generate_quiz_code').then(function(cr){
-    if(cr.error){console.error('RPC generate_quiz_code error:', JSON.stringify(cr.error));showToast('Error generando código: ' + (cr.error.message||JSON.stringify(cr.error)),'error');return;}
-    var code=cr.data;
-    // Modo Test: iniciado=true inmediatamente (sin lobby de espera)
-    var isTest = sessionMode === 'test';
-    var updateData = {
-      publicado: true,
-      codigo: code,
-      iniciado: isTest, // Test mode starts immediately
-      modo_sesion: sessionMode,
-      updated_at: new Date().toISOString()
-    };
-    client.from('evaluaciones').update(updateData).eq('id',evaluacionId).then(function(r){
-      if(r.error){console.error('Update evaluaciones error:', JSON.stringify(r.error));showToast('Error al publicar: ' + (r.error.message||r.error.details||JSON.stringify(r.error)),'error');return;}
-      if(isTest) {
-        showTestModeActive(code);
-      } else {
-        showLobby(code);
-      }
+  
+  // Limpiar participantes y resultados anteriores una sola vez al iniciar la sesión
+  Promise.all([
+    client.from('evaluacion_participantes').delete().eq('evaluacion_id', evaluacionId),
+    client.from('evaluacion_resultados').delete().eq('evaluacion_id', evaluacionId)
+  ]).then(function(){
+    client.rpc('generate_quiz_code').then(function(cr){
+      if(cr.error){console.error('RPC generate_quiz_code error:', JSON.stringify(cr.error));showToast('Error generando código: ' + (cr.error.message||JSON.stringify(cr.error)),'error');return;}
+      var code=cr.data;
+      // Modo Test: iniciado=true inmediatamente (sin lobby de espera)
+      var isTest = sessionMode === 'test';
+      var updateData = {
+        publicado: true,
+        codigo: code,
+        iniciado: isTest, // Test mode starts immediately
+        modo_sesion: sessionMode,
+        updated_at: new Date().toISOString()
+      };
+      client.from('evaluaciones').update(updateData).eq('id',evaluacionId).then(function(r){
+        if(r.error){console.error('Update evaluaciones error:', JSON.stringify(r.error));showToast('Error al publicar: ' + (r.error.message||r.error.details||JSON.stringify(r.error)),'error');return;}
+        if(isTest) {
+          showTestModeActive(code);
+        } else {
+          showLobby(code);
+        }
+      });
     });
   });
 }
@@ -862,19 +869,13 @@ function showTestModeActive(code) {
   // Música del lobby
   startLobbyMusic();
 
-  // Limpiar participantes y resultados anteriores
-  var client = getSupabase();
-  Promise.all([
-    client.from('evaluacion_participantes').delete().eq('evaluacion_id', evaluacionId),
-    client.from('evaluacion_resultados').delete().eq('evaluacion_id', evaluacionId)
-  ]).then(function(){
-    var container = document.getElementById('lobby-players-list');
-    if(container) container.innerHTML = '';
-    document.getElementById('lobby-player-count').textContent = '0';
-    pollLobbyParticipants();
-    if(lobbyPollInterval) clearInterval(lobbyPollInterval);
-    lobbyPollInterval = setInterval(pollLobbyParticipants, 3000);
-  });
+  // Limpiar contenedor visualmente e iniciar polling inmediatamente
+  var container = document.getElementById('lobby-players-list');
+  if(container) container.innerHTML = '';
+  document.getElementById('lobby-player-count').textContent = '0';
+  pollLobbyParticipants();
+  if(lobbyPollInterval) clearInterval(lobbyPollInterval);
+  lobbyPollInterval = setInterval(pollLobbyParticipants, 3000);
 
   // Cambiar el botón EMPEZAR por "Ver Resultados" en modo test
   var startBtn = document.querySelector('.lobby-btn-start');
@@ -919,21 +920,14 @@ function showLobby(code){
   // Iniciar música del lobby
   startLobbyMusic();
 
-  // Limpiar participantes y resultados anteriores antes de empezar a hacer polling
-  var client=getSupabase();
-  Promise.all([
-    client.from('evaluacion_participantes').delete().eq('evaluacion_id',evaluacionId),
-    client.from('evaluacion_resultados').delete().eq('evaluacion_id',evaluacionId)
-  ]).then(function(){
-    // Limpiar contenedor de participantes visualmente
-    var container=document.getElementById('lobby-players-list');
-    if(container) container.innerHTML='';
-    document.getElementById('lobby-player-count').textContent='0';
-    // Ahora sí iniciar polling con tabla limpia
-    pollLobbyParticipants();
-    if(lobbyPollInterval)clearInterval(lobbyPollInterval);
-    lobbyPollInterval=setInterval(pollLobbyParticipants,3000);
-  });
+  // Limpiar contenedor de participantes visualmente e iniciar polling
+  var container=document.getElementById('lobby-players-list');
+  if(container) container.innerHTML='';
+  document.getElementById('lobby-player-count').textContent='0';
+  // Ahora sí iniciar polling con tabla limpia
+  pollLobbyParticipants();
+  if(lobbyPollInterval)clearInterval(lobbyPollInterval);
+  lobbyPollInterval=setInterval(pollLobbyParticipants,3000);
 }
 
 function generateLobbyQR(code){
