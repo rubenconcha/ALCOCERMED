@@ -988,6 +988,10 @@ function renderQuizQuestion() {
     var currentScore = 0;
     var currentStreak = 0;
     for(var i=0; i<quizAnswers.length; i++){
+        var pq = quizData && quizData.preguntas ? quizData.preguntas.find(function(q) { return q.id === quizAnswers[i].pregunta_id; }) : null;
+        var isNeutral = pq ? (pq.tipo === 'oa' || pq.tipo === 'poll' || pq.tipo === 'encuesta') : (quizAnswers[i].correcta === null);
+        if (isNeutral) continue;
+
         if(quizAnswers[i].correcta) {
             currentScore += (quizAnswers[i].puntos_ganados || 0);
             currentStreak++;
@@ -1248,7 +1252,7 @@ function submitQuizOpen() {
         ta.style.color = '#991B1B';
     }
     
-    var pts = isCorrect ? ((pregunta.puntos || 1) * 600) : 0;
+    var pts = getQuizPoints(isCorrect, pregunta);
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: answer, correcta: isCorrect, puntos_ganados: pts });
     showFeedbackAnimation(isCorrect, pts);
 }
@@ -1318,9 +1322,10 @@ function confirmQuizAnswer() {
     var confirmBtn = document.getElementById('quiz-confirm-answer');
     if (confirmBtn) confirmBtn.style.display = 'none';
 
-    quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer });
+    var pts = getQuizPoints(isCorrectAnswer, pregunta);
+    quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer, puntos_ganados: pts });
     
-    showFeedbackAnimation(isCorrectAnswer, isCorrectAnswer ? (pregunta.puntos || 1) * 600 : 0);
+    showFeedbackAnimation(isCorrectAnswer, pts);
 }
 window.confirmQuizAnswer = confirmQuizAnswer;
 
@@ -1332,13 +1337,34 @@ function getQuizPoints(isCorrect, pregunta) {
     var timeRatio = Math.max(0, quizTimeLeft) / totalTimer;
     var timePts = Math.round(timeRatio * 400); // Hasta 400 pts por tiempo
     
-    var currentStreak = 0;
+    // Calcular la racha actual *antes* de esta respuesta
+    var prevStreak = 0;
     for(var i=0; i<quizAnswers.length; i++) {
-        if(quizAnswers[i].correcta) currentStreak++;
-        else currentStreak = 0;
+        var pq = quizData && quizData.preguntas ? quizData.preguntas.find(function(q) { return q.id === quizAnswers[i].pregunta_id; }) : null;
+        var isNeutral = pq ? (pq.tipo === 'oa' || pq.tipo === 'poll' || pq.tipo === 'encuesta') : (quizAnswers[i].correcta === null);
+        if (isNeutral) continue;
+
+        if(quizAnswers[i].correcta) {
+            prevStreak++;
+        } else {
+            prevStreak = 0;
+        }
     }
-    // Bonus de racha como Quizizz
-    var streakBonus = currentStreak >= 2 ? Math.min(300, currentStreak * 50) : 0;
+    
+    // Con esta respuesta correcta, la racha aumenta en 1
+    var currentStreak = prevStreak + 1;
+    
+    // Bonus de racha escalable y acumulativo (Quizizz-style)
+    // Racha 1: +0 pts
+    // Racha 2: +150 pts
+    // Racha 3: +300 pts
+    // Racha 4: +450 pts
+    // Racha 5+: +600 pts!
+    var streakBonus = 0;
+    if (currentStreak === 2) streakBonus = 150;
+    else if (currentStreak === 3) streakBonus = 300;
+    else if (currentStreak === 4) streakBonus = 450;
+    else if (currentStreak >= 5) streakBonus = 600 + (currentStreak - 5) * 50; // Suma 50 pts adicionales por racha sin límite
     
     return Math.round((base + timePts + streakBonus) * (pregunta.puntos || 1));
 }
@@ -1782,7 +1808,7 @@ function renderPodium(entries) {
         var isMe = currentUser && entries[l].user_id === currentUser.id;
         var rClass = l === 0 ? 'tr-gold' : (l === 1 ? 'tr-silver' : (l === 2 ? 'tr-bronze' : 'tr-normal'));
         
-        listHtml += '<tr' + (isMe ? ' style="background:rgba(233,30,99,.05);"' : '') + '>';
+        listHtml += '<tr class="' + (isMe ? 'is-me-row' : '') + '">';
         
         // Rank
         listHtml += '<td style="width:60px;"><div class="tr-rank-circle ' + rClass + '">' + (l + 1) + '</div></td>';
@@ -1790,14 +1816,14 @@ function renderPodium(entries) {
         // Player
         listHtml += '<td><div style="display:flex;align-items:center;gap:12px;">';
         listHtml += '<div style="font-size:24px;">' + entries[l].avatar + '</div>';
-        listHtml += '<div style="font-weight:700;color:var(--text-dark);">' + entries[l].nombre + (isMe ? ' <span style="font-size:10px;background:#E91E63;color:#fff;padding:2px 6px;border-radius:4px;margin-left:4px;">TÚ</span>' : '') + '</div>';
+        listHtml += '<div class="player-name">' + entries[l].nombre + (isMe ? ' <span style="font-size:10px;background:#E91E63;color:#fff;padding:2px 6px;border-radius:4px;margin-left:4px;">TÚ</span>' : '') + '</div>';
         listHtml += '</div></td>';
         
         // Score
-        listHtml += '<td style="text-align:right;"><div style="font-weight:800;color:var(--text-dark);font-size:1.1rem;">' + entries[l].puntaje + ' <span style="font-size:0.8rem;color:var(--text-mid);font-weight:600;">pts</span></div></td>';
+        listHtml += '<td style="text-align:right;"><div class="player-score">' + entries[l].puntaje + ' <span>pts</span></div></td>';
         
         // Percentage
-        listHtml += '<td style="text-align:right;width:80px;"><div style="font-weight:700;color:var(--blue);">' + entries[l].porcentaje + '%</div></td>';
+        listHtml += '<td style="text-align:right;width:80px;"><div class="player-pct">' + entries[l].porcentaje + '%</div></td>';
         
         listHtml += '</tr>';
     }
@@ -1814,9 +1840,9 @@ function loadLibrary() {
     container.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:24px"></i><p style="margin-top:12px">Cargando biblioteca...</p></div>';
 
     var client = getSupabase();
-    client.from('evaluaciones').select('*').eq('created_by', currentUser.id).order('created_at', {ascending: false}).then(function(r) {
+    client.from('evaluaciones').select('*').order('created_at', {ascending: false}).then(function(r) {
         if (r.error || !r.data || r.data.length === 0) {
-            container.innerHTML = '<div class="empty-state"><i class="fas fa-folder-open"></i><p>No has creado evaluaciones aún</p><small>Haz clic en "Crear evaluación" para empezar</small></div>';
+            container.innerHTML = '<div class="empty-state"><i class="fas fa-folder-open"></i><p>No has creado evaluaciones aún</p><small>Haz clic en "Nueva evaluación" para empezar</small></div>';
             return;
         }
         var html = '';
@@ -2073,7 +2099,7 @@ function loadReports() {
     container.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:24px"></i><p style="margin-top:12px;font-weight:600;">Cargando informes...</p></div>';
 
     var client = getSupabase();
-    client.from('evaluaciones').select('id, titulo, codigo').eq('created_by', currentUser.id).eq('publicado', true).then(function(evRes) {
+    client.from('evaluaciones').select('id, titulo, codigo').eq('publicado', true).then(function(evRes) {
         if (evRes.error || !evRes.data || evRes.data.length === 0) {
             container.innerHTML = '<div class="empty-state"><i class="fas fa-chart-line"></i><p>No hay informes disponibles</p><small>Publica evaluaciones para ver los resultados</small></div>';
             return;
@@ -2239,65 +2265,85 @@ function loadStudentResults() {
     container.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:24px"></i></div>';
 
     var client = getSupabase();
-    client.from('evaluacion_resultados').select('*, evaluaciones(titulo, asignatura)').eq('user_id', currentUser.id).order('created_at', {ascending: false})
+    client.from('evaluacion_resultados').select('*').eq('user_id', currentUser.id).order('created_at', {ascending: false})
     .then(function(r) {
-        if (r.error || !r.data || r.data.length === 0) {
+        if (r.error) {
+            console.error('Error fetching results:', r.error);
+            container.innerHTML = '<div style="padding:20px;text-align:center;color:#EF4444;"><i class="fas fa-exclamation-triangle" style="font-size:24px;margin-bottom:8px"></i><br>Error al cargar resultados.</div>';
+            return;
+        }
+        if (!r.data || r.data.length === 0) {
             container.innerHTML = '<div class="empty-state"><i class="fas fa-chart-pie"></i><p>No tienes resultados todavía</p><small>Participa en evaluaciones para ver tu progreso aquí</small></div>';
             return;
         }
+
+        // We have results! Let\'s get the unique evaluation IDs
+        var evalIds = r.data.map(function(res) { return res.evaluacion_id; }).filter(Boolean);
         
-        try {
-            var html = '';
-            window.adminReportsData = {};
-            window.adminReportsNameMap = {};
-            
-            for (var i = 0; i < r.data.length; i++) {
-                var res = r.data[i];
-                if (!res) continue;
-                
-                var evalId = res.evaluacion_id || 'unknown';
-                var userId = currentUser.id || 'unknown';
-                
-                if (!window.adminReportsData[evalId]) window.adminReportsData[evalId] = [];
-                window.adminReportsData[evalId].push(res);
-                window.adminReportsNameMap[evalId + '_' + userId] = 'Tu resultado';
-
-                var titulo = (res.evaluaciones && res.evaluaciones.titulo) ? res.evaluaciones.titulo : 'Evaluación';
-                var asig = (res.evaluaciones && res.evaluaciones.asignatura) ? res.evaluaciones.asignatura : '';
-                var pct = res.porcentaje || 0;
-                var barColor = pct >= 70 ? '#22C55E' : pct >= 40 ? '#F59E0B' : '#EF4444';
-                var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '⭐' : pct >= 40 ? '📝' : '💪';
-                
-                var fechaStr = '';
-                try {
-                    fechaStr = res.created_at ? new Date(res.created_at).toLocaleDateString('es-ES', {day:'numeric',month:'short'}) : '';
-                } catch(e) { fechaStr = ''; }
-
-                var punt = res.puntaje !== undefined ? res.puntaje : 0;
-                var tot = res.total !== undefined ? res.total : 0;
-                
-                var hits = 0;
-                var studentAns = res.respuestas || [];
-                if (studentAns && studentAns.length > 0) {
-                    for (var sa = 0; sa < studentAns.length; sa++) {
-                        if (studentAns[sa] && studentAns[sa].correcta) hits++;
-                    }
-                } else {
-                    hits = Math.round((pct / 100) * tot);
+        // Fetch evaluations independently to bypass any missing relation issue
+        client.from('evaluaciones').select('id, titulo, asignatura').in('id', evalIds)
+        .then(function(evRes) {
+            var evalMap = {};
+            if (evRes.data) {
+                for (var j = 0; j < evRes.data.length; j++) {
+                    evalMap[evRes.data[j].id] = evRes.data[j];
                 }
-
-                html += '<div onclick="openReportDetail(\'' + evalId + '\', \'' + userId + '\')" style="cursor:pointer;background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:16px;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.02)" onmouseover="this.style.boxShadow=\'0 6px 20px rgba(0,0,0,0.08)\'; this.style.transform=\'translateY(-2px)\'" onmouseout="this.style.boxShadow=\'0 2px 8px rgba(0,0,0,0.02)\'; this.style.transform=\'translateY(0)\'">';
-                html += '<div style="font-size:32px">' + emoji + '</div>';
-                html += '<div style="flex:1"><h4 style="font-size:15px;font-weight:800;color:#1E293B;margin-bottom:4px">' + titulo + '</h4>';
-                html += '<span style="font-size:12px;color:#64748B;font-weight:600;"><i class="fas fa-book" style="margin-right:4px;"></i>' + asig + (fechaStr ? ' • ' + fechaStr : '') + '</span></div>';
-                html += '<div style="text-align:right"><span style="font-size:22px;font-weight:900;color:' + barColor + '">' + pct + '%</span>';
-                html += '<div style="font-size:11px;color:#94A3B8;font-weight:700;margin-top:2px;">' + hits + ' / ' + tot + ' correctas <span style="font-weight:500;opacity:0.85;">(' + punt + ' pts)</span></div></div></div>';
             }
-            container.innerHTML = html || '<div class="empty-state"><i class="fas fa-chart-pie"></i><p>No tienes resultados todavía</p></div>';
-        } catch(ex) {
-            console.error(ex);
-            container.innerHTML = '<div style="padding:20px;text-align:center;color:#EF4444;"><i class="fas fa-exclamation-triangle" style="font-size:24px;margin-bottom:8px"></i><br>Error al procesar resultados.</div>';
-        }
+
+            try {
+                var html = '';
+                window.adminReportsData = {};
+                window.adminReportsNameMap = {};
+                
+                for (var i = 0; i < r.data.length; i++) {
+                    var res = r.data[i];
+                    if (!res) continue;
+                    
+                    var evalId = res.evaluacion_id || 'unknown';
+                    var userId = currentUser.id || 'unknown';
+                    
+                    if (!window.adminReportsData[evalId]) window.adminReportsData[evalId] = [];
+                    window.adminReportsData[evalId].push(res);
+                    window.adminReportsNameMap[evalId + '_' + userId] = 'Tu resultado';
+
+                    var evObj = evalMap[evalId] || {};
+                    var titulo = evObj.titulo || 'Evaluación';
+                    var asig = evObj.asignatura || 'General';
+                    var pct = res.porcentaje || 0;
+                    var barColor = pct >= 70 ? '#22C55E' : pct >= 40 ? '#F59E0B' : '#EF4444';
+                    var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '⭐' : pct >= 40 ? '📝' : '💪';
+                    
+                    var fechaStr = '';
+                    try {
+                        fechaStr = res.created_at ? new Date(res.created_at).toLocaleDateString('es-ES', {day:'numeric',month:'short'}) : '';
+                    } catch(e) { fechaStr = ''; }
+
+                    var punt = res.puntaje !== undefined ? res.puntaje : 0;
+                    var tot = res.total !== undefined ? res.total : 0;
+                    
+                    var hits = 0;
+                    var studentAns = res.respuestas || [];
+                    if (studentAns && studentAns.length > 0) {
+                        for (var sa = 0; sa < studentAns.length; sa++) {
+                            if (studentAns[sa] && studentAns[sa].correcta) hits++;
+                        }
+                    } else {
+                        hits = Math.round((pct / 100) * tot);
+                    }
+
+                    html += '<div onclick="openReportDetail(\'' + evalId + '\', \'' + userId + '\')" style="cursor:pointer;background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:16px;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.02)" onmouseover="this.style.boxShadow=\'0 6px 20px rgba(0,0,0,0.08)\'; this.style.transform=\'translateY(-2px)\'" onmouseout="this.style.boxShadow=\'0 2px 8px rgba(0,0,0,0.02)\'; this.style.transform=\'translateY(0)\'">';
+                    html += '<div style="font-size:32px">' + emoji + '</div>';
+                    html += '<div style="flex:1"><h4 style="font-size:15px;font-weight:800;color:#1E293B;margin-bottom:4px">' + titulo + '</h4>';
+                    html += '<span style="font-size:12px;color:#64748B;font-weight:600;"><i class="fas fa-book" style="margin-right:4px;"></i>' + asig + (fechaStr ? ' • ' + fechaStr : '') + '</span></div>';
+                    html += '<div style="text-align:right"><span style="font-size:22px;font-weight:900;color:' + barColor + '">' + pct + '%</span>';
+                    html += '<div style="font-size:11px;color:#94A3B8;font-weight:700;margin-top:2px;">' + hits + ' / ' + tot + ' correctas <span style="font-weight:500;opacity:0.85;">(' + punt + ' pts)</span></div></div></div>';
+                }
+                container.innerHTML = html || '<div class="empty-state"><i class="fas fa-chart-pie"></i><p>No tienes resultados todavía</p></div>';
+            } catch(ex) {
+                console.error(ex);
+                container.innerHTML = '<div style="padding:20px;text-align:center;color:#EF4444;"><i class="fas fa-exclamation-triangle" style="font-size:24px;margin-bottom:8px"></i><br>Error al procesar resultados.</div>';
+            }
+        });
     })
     .catch(function(err) {
         console.error('Error fetching student results:', err);

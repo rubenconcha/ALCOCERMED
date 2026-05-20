@@ -277,8 +277,8 @@
     <!-- ===== MIS RESULTADOS ===== -->
     <section class="page" id="page-historial">
       <div class="page-header">
-        <h1><i class="fas fa-chart-bar"></i> Mis resultados</h1>
-        <p class="page-subtitle">Aquí verás el historial de tus evaluaciones</p>
+        <h1><i class="fas fa-trophy"></i> Mis Resultados</h1>
+        <p class="page-subtitle">Tu historial de evaluaciones y simulacros</p>
       </div>
 
       <div id="results-list" class="results-list">
@@ -327,14 +327,17 @@
     <!-- ===== BIBLIOTECA (ADMIN ONLY) ===== -->
     <section class="page admin-only hidden" id="page-biblioteca">
       <div class="page-header">
-        <h1><i class="fas fa-folder-open"></i> Biblioteca</h1>
-        <p class="page-subtitle">Tus evaluaciones creadas</p>
+        <h1><i class="fas fa-folder-open"></i> Mi Biblioteca</h1>
+        <p class="page-subtitle">Todas tus evaluaciones creadas</p>
+      </div>
+      <div style="display:flex;justify-content:flex-end;margin-bottom:16px">
+        <button onclick="window.location.href='editor.html'" style="padding:10px 20px;background:linear-gradient(135deg,#E91E63,#C2185B);color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:14px"><i class="fas fa-plus"></i> Nueva evaluación</button>
       </div>
       <div id="library-list" class="library-list">
         <div class="empty-state">
           <i class="fas fa-folder-open"></i>
           <p>No has creado evaluaciones aún</p>
-          <small>Haz clic en "Crear evaluación" para empezar</small>
+          <small>Haz clic en "Nueva evaluación" para empezar</small>
         </div>
       </div>
     </section>
@@ -351,31 +354,6 @@
           <p>No hay informes disponibles</p>
           <small>Los informes aparecerán cuando los estudiantes completen evaluaciones</small>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== BIBLIOTECA (ADMIN ONLY) ===== -->
-    <section class="page admin-only hidden" id="page-biblioteca">
-      <div class="page-header">
-        <h1><i class="fas fa-book-open"></i> Mi Biblioteca</h1>
-        <p class="page-subtitle">Todas tus evaluaciones creadas</p>
-      </div>
-      <div style="display:flex;justify-content:flex-end;margin-bottom:16px">
-        <button onclick="window.location.href='editor.html'" style="padding:10px 20px;background:linear-gradient(135deg,#E91E63,#C2185B);color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:14px"><i class="fas fa-plus"></i> Nueva evaluación</button>
-      </div>
-      <div id="library-list">
-        <div class="empty-state"><i class="fas fa-folder-open"></i><p>No has creado evaluaciones aún</p></div>
-      </div>
-    </section>
-
-    <!-- ===== MIS RESULTADOS (STUDENT) ===== -->
-    <section class="page" id="page-historial">
-      <div class="page-header">
-        <h1><i class="fas fa-trophy"></i> Mis Resultados</h1>
-        <p class="page-subtitle">Tu historial de evaluaciones</p>
-      </div>
-      <div id="results-list">
-        <div class="empty-state"><i class="fas fa-chart-pie"></i><p>No tienes resultados todavía</p><small>Participa en evaluaciones para ver tu progreso</small></div>
       </div>
     </section>
 
@@ -509,7 +487,7 @@
 
           <!-- 2. Total Ranking (List) -->
           <div style="max-width:800px;margin:0 auto;">
-            <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:16px;color:var(--text-dark);">
+            <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:16px;color:#fff;text-shadow: 0 1px 3px rgba(0,0,0,0.5);">
               <i class="fas fa-list-ol"></i> Ranking Total
             </h3>
             
@@ -567,7 +545,7 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=10"></script>
+<script src="app.js?v=13"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->
