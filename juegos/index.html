@@ -433,7 +433,8 @@
         <style>@keyframes splashPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.1);opacity:.8}}</style>
       </div>
 
-      <div class="page-header" id="quiz-page-header">
+      <!-- Redundant Header Hidden for Student View Optimization -->
+      <div class="page-header" id="quiz-page-header" style="display: none !important;">
         <h1><i class="fas fa-play-circle"></i> <span id="quiz-live-title">Evaluación</span></h1>
         <p class="page-subtitle" id="quiz-live-subtitle">Responde las preguntas</p>
       </div>
@@ -566,7 +567,7 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=6"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->

@@ -182,7 +182,7 @@ function exitQuizToHome() {
     }
     // Restaurar header
     var header = document.getElementById('quiz-page-header');
-    if (header) header.style.display = 'block';
+    if (header) header.style.display = 'none';
     
     // Ocultar pantalla de quiz
     document.getElementById('quiz-result').style.display = 'none';
@@ -623,7 +623,7 @@ function searchAndStartQuiz(code) {
             document.getElementById('quiz-container').style.display = 'none';
             document.getElementById('quiz-result').style.display = 'none';
             var header = document.getElementById('quiz-page-header');
-            if (header) header.style.display = 'block';
+            if (header) header.style.display = 'none';
 
             navigateTo('quiz');
 
@@ -1689,6 +1689,13 @@ window.adminReportsNameMap = {};
 window.openReportDetail = function(evalId, userId) {
     if(!window.adminReportsData || !window.adminReportsData[evalId]) return;
     var r = window.adminReportsData[evalId].find(function(x) { return x.user_id === userId; });
+    
+    // Robust Fallback: If no exact user_id match (due to RLS column restrictions or device states)
+    // and there is only 1 result inside the array, default to it as it represents the student's own score.
+    if(!r && window.adminReportsData[evalId].length > 0) {
+        r = window.adminReportsData[evalId][0];
+    }
+    
     if(!r) return;
     
     var overlay = document.createElement('div');
@@ -1714,7 +1721,7 @@ window.openReportDetail = function(evalId, userId) {
     document.body.appendChild(overlay);
     
     var client = getSupabase();
-    client.from('evaluacion_preguntas').select('orden, texto, opciones, tipo, respuesta_correcta').eq('evaluacion_id', evalId).order('orden').then(function(qRes) {
+    client.from('evaluacion_preguntas').select('orden, texto, opciones, tipo').eq('evaluacion_id', evalId).order('orden').then(function(qRes) {
         if(qRes.error || !qRes.data) {
             bodyContainer.innerHTML = '<div style="color:#EF4444;text-align:center;padding:20px;font-weight:700;"><i class="fas fa-exclamation-triangle"></i> Error cargando preguntas</div>';
             return;
@@ -1722,7 +1729,20 @@ window.openReportDetail = function(evalId, userId) {
         var qs = qRes.data;
         var html = '';
         html += '<div style="display:flex;gap:12px;margin-bottom:24px;">';
-        html += '<div style="flex:1;background:#F0FDF4;padding:16px;border-radius:16px;text-align:center;border:2px solid #DCFCE7;"><div style="font-size:28px;font-weight:900;color:#166534;">'+r.puntaje+'</div><div style="font-size:13px;color:#15803D;font-weight:800;">Correctas</div></div>';
+        var correctCount = 0;
+        var ans = r.respuestas || [];
+        if (ans && ans.length > 0) {
+            for (var aIndex = 0; aIndex < ans.length; aIndex++) {
+                if (ans[aIndex] && ans[aIndex].correcta) {
+                    correctCount++;
+                }
+            }
+        } else {
+            correctCount = Math.round(((r.porcentaje || 0) / 100) * (r.total || 0));
+        }
+        
+        var totalCount = r.total || qs.length || 0;
+        html += '<div style="flex:1;background:#F0FDF4;padding:16px;border-radius:16px;text-align:center;border:2px solid #DCFCE7;"><div style="font-size:28px;font-weight:900;color:#166534;">'+correctCount+' / '+totalCount+'</div><div style="font-size:13px;color:#15803D;font-weight:800;">Correctas</div></div>';
         html += '<div style="flex:1;background:#EFF6FF;padding:16px;border-radius:16px;text-align:center;border:2px solid #DBEAFE;"><div style="font-size:28px;font-weight:900;color:#1E40AF;">'+r.porcentaje+'%</div><div style="font-size:13px;color:#1D4ED8;font-weight:800;">Precisión</div></div>';
         html += '</div>';
         
@@ -1769,7 +1789,15 @@ window.openReportDetail = function(evalId, userId) {
                 html += '<div style="font-size:0.85rem;color:#64748B;font-weight:800;margin-bottom:6px;">Respuesta del estudiante:</div>';
                 html += '<div style="font-weight:700;color:#0F172A;font-size:1rem;">' + (a ? a.seleccionada : 'Sin responder') + '</div>';
                 html += '<div style="font-size:0.85rem;color:#10B981;font-weight:800;margin-top:12px;margin-bottom:6px;">Respuesta correcta esperada:</div>';
-                html += '<div style="font-weight:700;color:#047857;font-size:1rem;">' + (q.respuesta_correcta || '') + '</div>';
+                var respCorrecta = '';
+                if (q.tipo === 'fb') {
+                    respCorrecta = (q.opciones && q.opciones.length > 0 && q.opciones[0].text) ? q.opciones[0].text : 'Sin patrón';
+                } else if (q.tipo === 'oa') {
+                    respCorrecta = 'Criterio abierto (Evaluado por el profesor)';
+                } else {
+                    respCorrecta = q.respuesta_correcta || '';
+                }
+                html += '<div style="font-weight:700;color:#047857;font-size:1rem;">' + respCorrecta + '</div>';
                 html += '</div>';
             }
             html += '</div>';
@@ -1986,13 +2014,23 @@ function loadStudentResults() {
 
                 var punt = res.puntaje !== undefined ? res.puntaje : 0;
                 var tot = res.total !== undefined ? res.total : 0;
+                
+                var hits = 0;
+                var studentAns = res.respuestas || [];
+                if (studentAns && studentAns.length > 0) {
+                    for (var sa = 0; sa < studentAns.length; sa++) {
+                        if (studentAns[sa] && studentAns[sa].correcta) hits++;
+                    }
+                } else {
+                    hits = Math.round((pct / 100) * tot);
+                }
 
                 html += '<div onclick="openReportDetail(\'' + evalId + '\', \'' + userId + '\')" style="cursor:pointer;background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:16px;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.02)" onmouseover="this.style.boxShadow=\'0 6px 20px rgba(0,0,0,0.08)\'; this.style.transform=\'translateY(-2px)\'" onmouseout="this.style.boxShadow=\'0 2px 8px rgba(0,0,0,0.02)\'; this.style.transform=\'translateY(0)\'">';
                 html += '<div style="font-size:32px">' + emoji + '</div>';
                 html += '<div style="flex:1"><h4 style="font-size:15px;font-weight:800;color:#1E293B;margin-bottom:4px">' + titulo + '</h4>';
                 html += '<span style="font-size:12px;color:#64748B;font-weight:600;"><i class="fas fa-book" style="margin-right:4px;"></i>' + asig + (fechaStr ? ' • ' + fechaStr : '') + '</span></div>';
                 html += '<div style="text-align:right"><span style="font-size:22px;font-weight:900;color:' + barColor + '">' + pct + '%</span>';
-                html += '<div style="font-size:11px;color:#94A3B8;font-weight:700;margin-top:2px;">' + punt + ' / ' + tot + ' correctas</div></div></div>';
+                html += '<div style="font-size:11px;color:#94A3B8;font-weight:700;margin-top:2px;">' + hits + ' / ' + tot + ' correctas <span style="font-weight:500;opacity:0.85;">(' + punt + ' pts)</span></div></div></div>';
             }
             container.innerHTML = html || '<div class="empty-state"><i class="fas fa-chart-pie"></i><p>No tienes resultados todavía</p></div>';
         } catch(ex) {
