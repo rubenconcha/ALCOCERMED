@@ -822,7 +822,7 @@ function startLiveSession(){
   closeSessionModal();
   var client=getSupabase();
   client.rpc('generate_quiz_code').then(function(cr){
-    if(cr.error){showToast('Error generando código','error');return;}
+    if(cr.error){console.error('RPC generate_quiz_code error:', JSON.stringify(cr.error));showToast('Error generando código: ' + (cr.error.message||JSON.stringify(cr.error)),'error');return;}
     var code=cr.data;
     // Modo Test: iniciado=true inmediatamente (sin lobby de espera)
     var isTest = sessionMode === 'test';
@@ -834,7 +834,7 @@ function startLiveSession(){
       updated_at: new Date().toISOString()
     };
     client.from('evaluaciones').update(updateData).eq('id',evaluacionId).then(function(r){
-      if(r.error){showToast('Error al publicar','error');return;}
+      if(r.error){console.error('Update evaluaciones error:', JSON.stringify(r.error));showToast('Error al publicar: ' + (r.error.message||r.error.details||JSON.stringify(r.error)),'error');return;}
       if(isTest) {
         showTestModeActive(code);
       } else {
