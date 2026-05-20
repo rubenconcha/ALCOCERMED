@@ -781,6 +781,7 @@ function playErrorSound() {
 function showFeedbackAnimation(isCorrect, ptsEarned) {
     var pregunta = quizData.preguntas[quizCurrentQ];
     var isPoll = pregunta && (pregunta.tipo === 'poll' || pregunta.tipo === 'encuesta');
+    var isOpenAnswer = pregunta && pregunta.tipo === 'oa';
 
     var banner = document.createElement('div');
     banner.style.position = 'fixed';
@@ -788,7 +789,7 @@ function showFeedbackAnimation(isCorrect, ptsEarned) {
     banner.style.left = '50%';
     banner.style.transform = 'translateX(-50%)';
     banner.style.zIndex = '9999';
-    banner.style.background = isPoll ? '#7C3AED' : (isCorrect ? '#10B981' : '#EF4444');
+    banner.style.background = (isPoll || isOpenAnswer) ? '#7C3AED' : (isCorrect ? '#10B981' : '#EF4444');
     banner.style.color = '#fff';
     banner.style.padding = '16px 32px';
     banner.style.borderRadius = '16px';
@@ -798,20 +799,22 @@ function showFeedbackAnimation(isCorrect, ptsEarned) {
     banner.style.gap = '20px';
     banner.style.transition = 'top 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
     
-    var iconHtml = isPoll ? '<i class="fas fa-comment-dots" style="font-size:2.5rem;"></i>' : (isCorrect ? '<i class="fas fa-check-circle" style="font-size:2.5rem;"></i>' : '<i class="fas fa-times-circle" style="font-size:2.5rem;"></i>');
-    var titleText = isPoll ? '¡REGISTRADO!' : (isCorrect ? '¡CORRECTO!' : 'INCORRECTO');
+    var iconHtml = (isPoll || isOpenAnswer) ? '<i class="fas fa-' + (isOpenAnswer ? 'pen-nib' : 'comment-dots') + '" style="font-size:2.5rem;"></i>' : (isCorrect ? '<i class="fas fa-check-circle" style="font-size:2.5rem;"></i>' : '<i class="fas fa-times-circle" style="font-size:2.5rem;"></i>');
+    var titleText = (isPoll || isOpenAnswer) ? '¡REGISTRADO!' : (isCorrect ? '¡CORRECTO!' : 'INCORRECTO');
     var textHtml = '<div style="display:flex; flex-direction:column;"><span style="font-size:1.5rem; font-weight:900;">' + titleText + '</span>';
-    if(!isPoll && isCorrect && ptsEarned) {
+    if(!isPoll && !isOpenAnswer && isCorrect && ptsEarned) {
         textHtml += '<span style="font-size:1.1rem; font-weight:700; opacity:0.9;">+' + ptsEarned + ' Puntos</span>';
     } else if (isPoll) {
         textHtml += '<span style="font-size:1.1rem; font-weight:700; opacity:0.9;">¡Gracias por tu opinión!</span>';
+    } else if (isOpenAnswer) {
+        textHtml += '<span style="font-size:1.1rem; font-weight:700; opacity:0.9;">Respuesta abierta — no afecta el puntaje</span>';
     }
     textHtml += '</div>';
 
     banner.innerHTML = iconHtml + textHtml;
     document.body.appendChild(banner);
     
-    if (isPoll) playSuccessSound();
+    if (isPoll || isOpenAnswer) playSuccessSound();
     else if (isCorrect) playSuccessSound();
     else playErrorSound();
     
@@ -981,11 +984,32 @@ function renderQuizQuestion() {
     // Open-ended or fill blanks: show textarea
     if (tipo === 'oa' || tipo === 'fb') {
         var ph = tipo === 'oa' ? 'Escribe tu respuesta aquí...' : 'Completa los espacios en blanco...';
-        html += '<textarea id="quiz-open-answer" placeholder="' + ph + '" ' +
-            'style="width:100%;min-height:120px;padding:16px;border:2px solid rgba(255,255,255,0.2);border-radius:12px;' +
-            'background:rgba(255,255,255,0.9);color:#333;font-size:1.1rem;font-weight:700;resize:vertical;outline:none"></textarea>';
-        html += '<button onclick="submitQuizOpen()" style="margin-top:16px;padding:16px 24px;background:#2563EB;' +
-            'color:#fff;border:none;border-radius:14px;font-weight:800;cursor:pointer;width:100%;font-size:1.2rem;box-shadow:0 6px 0 #1D4ED8;">Enviar respuesta</button>';
+        if (tipo === 'oa') {
+            // Premium open answer UI with no-score badge
+            html += '<div style="width:100%;display:flex;flex-direction:column;gap:12px;">';
+            html += '  <div style="display:flex;align-items:center;gap:8px;background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.3);border-radius:10px;padding:10px 14px;">';
+            html += '    <i class="fas fa-pen-nib" style="color:#A78BFA;font-size:1rem;"></i>';
+            html += '    <span style="color:#C4B5FD;font-size:0.85rem;font-weight:700;">Pregunta abierta — Tu respuesta será registrada sin afectar el puntaje</span>';
+            html += '  </div>';
+            html += '  <textarea id="quiz-open-answer" placeholder="' + ph + '" ' +
+                'style="width:100%;min-height:140px;padding:18px;border:2px solid rgba(255,255,255,0.15);border-radius:14px;' +
+                'background:rgba(255,255,255,0.08);color:#fff;font-size:1.05rem;font-weight:600;resize:vertical;outline:none;' +
+                'backdrop-filter:blur(4px);font-family:Inter,sans-serif;line-height:1.6;transition:border-color 0.2s;" ' +
+                'onfocus="this.style.borderColor=\'rgba(167,139,250,0.6)\'" ' +
+                'onblur="this.style.borderColor=\'rgba(255,255,255,0.15)\'"></textarea>';
+            html += '  <button onclick="submitQuizOpen()" style="padding:16px 24px;background:linear-gradient(135deg,#7C3AED,#6D28D9);' +
+                'color:#fff;border:none;border-radius:14px;font-weight:800;cursor:pointer;width:100%;font-size:1.1rem;' +
+                'box-shadow:0 6px 0 #4C1D95;display:flex;align-items:center;justify-content:center;gap:10px;transition:transform 0.1s;" ' +
+                'onmousedown="this.style.transform=\'translateY(3px)\'" onmouseup="this.style.transform=\'translateY(0)\'">' +
+                '<i class="fas fa-paper-plane"></i> Enviar respuesta</button>';
+            html += '</div>';
+        } else {
+            html += '<textarea id="quiz-open-answer" placeholder="' + ph + '" ' +
+                'style="width:100%;min-height:120px;padding:16px;border:2px solid rgba(255,255,255,0.2);border-radius:12px;' +
+                'background:rgba(255,255,255,0.9);color:#333;font-size:1.1rem;font-weight:700;resize:vertical;outline:none"></textarea>';
+            html += '<button onclick="submitQuizOpen()" style="margin-top:16px;padding:16px 24px;background:#2563EB;' +
+                'color:#fff;border:none;border-radius:14px;font-weight:800;cursor:pointer;width:100%;font-size:1.2rem;box-shadow:0 6px 0 #1D4ED8;">Enviar respuesta</button>';
+        }
     }
     // Identificar partes (DND)
     else if (tipo === 'dnd') {
@@ -1148,25 +1172,32 @@ function submitQuizOpen() {
     if (quizTimerInterval) clearInterval(quizTimerInterval);
     quizSelectedOption = 1;
     quizConfirmed = true;
-    ta.style.border = '2px solid #22C55E';
     ta.disabled = true;
     var pregunta = quizData.preguntas[quizCurrentQ];
     
-    var isCorrect = true; // Por defecto true para Preguntas Abiertas (oa)
-    if (pregunta.tipo === 'fb') {
-        var correctPatterns = [];
-        if (pregunta.opciones && pregunta.opciones.length > 0 && pregunta.opciones[0].text) {
-            correctPatterns = pregunta.opciones[0].text.toLowerCase().split(',').map(function(s){ return s.trim(); });
-        }
-        var userAnswerLower = answer.toLowerCase().trim();
-        
-        isCorrect = false;
-        if (correctPatterns.length > 0) {
-            for (var p = 0; p < correctPatterns.length; p++) {
-                if (correctPatterns[p] === userAnswerLower) {
-                    isCorrect = true;
-                    break;
-                }
+    // ── RESPUESTA ABIERTA (oa): no afecta puntaje ni porcentaje ──
+    if (pregunta.tipo === 'oa') {
+        ta.style.border = '2px solid rgba(167,139,250,0.6)';
+        ta.style.background = 'rgba(124,58,237,0.1)';
+        ta.style.color = '#C4B5FD';
+        // correcta = null → no suma ni resta al porcentaje; puntos_ganados = 0
+        quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: answer, correcta: null, puntos_ganados: 0, es_abierta: true });
+        showFeedbackAnimation(null, 0);
+        return;
+    }
+    
+    // ── COMPLETA ESPACIOS (fb): validar contra patrón ──
+    var isCorrect = false;
+    var correctPatterns = [];
+    if (pregunta.opciones && pregunta.opciones.length > 0 && pregunta.opciones[0].text) {
+        correctPatterns = pregunta.opciones[0].text.toLowerCase().split(',').map(function(s){ return s.trim(); });
+    }
+    var userAnswerLower = answer.toLowerCase().trim();
+    if (correctPatterns.length > 0) {
+        for (var p = 0; p < correctPatterns.length; p++) {
+            if (correctPatterns[p] === userAnswerLower) {
+                isCorrect = true;
+                break;
             }
         }
     }
@@ -1183,7 +1214,6 @@ function submitQuizOpen() {
     
     var pts = isCorrect ? ((pregunta.puntos || 1) * 600) : 0;
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: answer, correcta: isCorrect, puntos_ganados: pts });
-    
     showFeedbackAnimation(isCorrect, pts);
 }
 window.submitQuizOpen = submitQuizOpen;
@@ -1345,12 +1375,17 @@ function showQuizResults() {
     }
     var correctas = 0;
     var totalPoints = 0;
-    for (var i = 0; i < quizAnswers.length; i++) { 
-        if (quizAnswers[i].correcta) correctas++; 
-        totalPoints += (quizAnswers[i].puntos_ganados || 0);
+    var totalGradeable = 0; // Questions that actually count toward score
+    for (var i = 0; i < quizAnswers.length; i++) {
+        var ans = quizAnswers[i];
+        // OA (open answer) has correcta=null — skip from score/percentage
+        if (ans.correcta === null && ans.es_abierta) continue;
+        totalGradeable++;
+        if (ans.correcta) correctas++;
+        totalPoints += (ans.puntos_ganados || 0);
     }
     var total = quizData.preguntas.length;
-    var pct = Math.round((correctas / total) * 100);
+    var pct = totalGradeable > 0 ? Math.round((correctas / totalGradeable) * 100) : 0;
 
     document.getElementById('quiz-container').style.display = 'none';
     var header = document.getElementById('quiz-page-header');
@@ -1363,7 +1398,12 @@ function showQuizResults() {
     var emojiEl = document.getElementById('quiz-result-emoji');
     if (emojiEl) emojiEl.textContent = emoji;
     document.getElementById('quiz-result-title').textContent = msg;
-    document.getElementById('quiz-result-score').textContent = correctas + '/' + total + ' correctas (' + pct + '%)';
+    document.getElementById('quiz-result-score').textContent = correctas + '/' + totalGradeable + ' correctas (' + pct + '%)';
+    var oaCount = total - totalGradeable;
+    var scoreSubEl = document.getElementById('quiz-result-score');
+    if (oaCount > 0 && scoreSubEl) {
+        scoreSubEl.textContent = correctas + '/' + totalGradeable + ' correctas (' + pct + '%)  •  ' + oaCount + ' abierta' + (oaCount > 1 ? 's' : '') + ' (no cuentan)';
+    }
 
     var fill = document.getElementById('quiz-result-fill');
     fill.style.background = pct >= 70 ? 'linear-gradient(90deg,#22C55E,#16A34A)' :
@@ -1378,11 +1418,12 @@ function showQuizResults() {
         for (var j = 0; j < quizAnswers.length; j++) {
             var pq = quizData.preguntas[j];
             var isPoll = pq && (pq.tipo === 'poll' || pq.tipo === 'encuesta');
+            var isOA = pq && pq.tipo === 'oa';
             var ok = quizAnswers[j].correcta;
             
-            var bg = isPoll ? '#F5F3FF' : (ok ? '#DCFCE7' : '#FEE2E2');
-            var color = isPoll ? '#7C3AED' : (ok ? '#166534' : '#DC2626');
-            var icon = isPoll ? 'comment-dots' : (ok ? 'check' : 'times');
+            var bg = (isPoll || isOA) ? '#F5F3FF' : (ok ? '#DCFCE7' : '#FEE2E2');
+            var color = (isPoll || isOA) ? '#7C3AED' : (ok ? '#166534' : '#DC2626');
+            var icon = isPoll ? 'comment-dots' : (isOA ? 'pen-nib' : (ok ? 'check' : 'times'));
 
             bhtml += '<div style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;' +
                 'background:' + bg + ';color:' + color + '">' +
@@ -1400,16 +1441,18 @@ function showQuizResults() {
             var pq = quizData.preguntas[q];
             var ans = quizAnswers[q];
             var isPoll = pq.tipo === 'poll' || pq.tipo === 'encuesta';
-            var ok = isPoll ? true : (ans ? ans.correcta : false);
-            var color = isPoll ? '#7C3AED' : (ok ? '#22C55E' : '#EF4444');
-            var icon = isPoll ? 'fa-comment-dots' : (ok ? 'fa-check' : 'fa-times');
-            var scoreText = isPoll ? 'Encuesta' : (ok ? ('+' + (ans.puntos_ganados || 0) + ' pts') : '0 pts');
+            var isOA = pq.tipo === 'oa';
+            var ok = (isPoll || isOA) ? null : (ans ? ans.correcta : false);
+            var color = (isPoll || isOA) ? '#7C3AED' : (ok ? '#22C55E' : '#EF4444');
+            var icon = isPoll ? 'fa-comment-dots' : (isOA ? 'fa-pen-nib' : (ok ? 'fa-check' : 'fa-times'));
+            var scoreText = isPoll ? 'Encuesta' : (isOA ? 'Abierta' : (ok ? ('+' + (ans.puntos_ganados || 0) + ' pts') : '0 pts'));
             
             rhtml += '<div style="background:#fff; border-left:6px solid '+color+'; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">';
             rhtml += '<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">';
             rhtml += '<div style="font-weight:800; color:#1E293B; flex:1; padding-right:16px; font-size:1.1rem;">' + (q+1) + '. ' + (pq.texto||'') + '</div>';
-            rhtml += '<div style="background:'+(isPoll?'#F5F3FF':(ok?'#DCFCE7':'#FEE2E2'))+'; color:'+color+'; padding:6px 12px; border-radius:8px; font-weight:800; font-size:0.95rem; white-space:nowrap;"><i class="fas '+icon+'"></i> '+scoreText+'</div>';
+            rhtml += '<div style="background:'+((isPoll||isOA)?'#F5F3FF':(ok?'#DCFCE7':'#FEE2E2'))+'; color:'+color+'; padding:6px 12px; border-radius:8px; font-weight:800; font-size:0.95rem; white-space:nowrap;"><i class="fas '+icon+'"></i> '+scoreText+'</div>';
             rhtml += '</div>';
+
             
             if(pq.tipo === 'mc' || !pq.tipo || pq.tipo === 'ms' || pq.tipo === 'poll') {
                 var opts = pq.opciones || [];
@@ -1459,7 +1502,15 @@ function showQuizResults() {
                 }
                 rhtml += '  </div>';
                 rhtml += '</div>';
-            } else if (pq.tipo === 'oa' || pq.tipo === 'fb') {
+            } else if (pq.tipo === 'oa') {
+                rhtml += '<div style="margin-top:16px; padding:16px 20px; background:#F5F3FF; border:2px solid #DDD6FE; border-radius:12px;">';
+                rhtml += '  <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">';
+                rhtml += '    <i class="fas fa-pen-nib" style="color:#7C3AED; font-size:0.9rem;"></i>';
+                rhtml += '    <span style="font-weight:800; color:#6D28D9; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.5px;">Respuesta abierta — no afecta el puntaje</span>';
+                rhtml += '  </div>';
+                rhtml += '  <div style="font-weight:600; color:#1E293B; font-size:0.95rem; line-height:1.5; font-style:italic;">"' + (ans && ans.seleccionada ? ans.seleccionada : '<span style=\'color:#94A3B8;\'>Sin responder</span>') + '"</div>';
+                rhtml += '</div>';
+            } else if (pq.tipo === 'fb') {
                 rhtml += '<div style="margin-top:16px; padding:12px; background:#F8FAFC; border:2px solid #E2E8F0; border-radius:8px;">';
                 rhtml += '<div style="font-weight:700; color:#475569; font-size:0.85rem; margin-bottom:4px;">Tu respuesta:</div>';
                 rhtml += '<div style="font-weight:600; color:#1E293B;">' + (ans ? ans.seleccionada : 'Sin responder') + '</div>';

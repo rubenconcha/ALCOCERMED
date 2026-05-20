@@ -319,7 +319,17 @@ function renderAnswerOptions(){
 
   // Open ended — show text area preview
   if(q.type==='oa'){
-    c.innerHTML='<div style="display:flex;gap:16px;width:100%"><div style="flex:1;background:#2D1B4E;border-radius:12px;min-height:120px;display:flex;align-items:center;justify-content:center;padding:20px"><span style="color:rgba(255,255,255,.4);font-size:14px">Escriba la pregunta aquí</span></div><div style="flex:1;background:#fff;border:1px solid #E4E6EF;border-radius:12px;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px"><span style="color:#8E90A6;font-size:14px">Estudiantes escribirán su respuesta aquí</span><span style="color:#CCC;font-size:11px;margin-top:8px">3000 límite de caracteres</span></div></div>';
+    c.innerHTML = '<div class="oa-editor-preview">' +
+      '<div class="oa-no-score-badge"><i class="fas fa-pen-nib"></i> Pregunta abierta — No suma ni resta puntos al puntaje</div>' +
+      '<div class="oa-preview-field">' +
+        '<div class="oa-preview-placeholder"><i class="fas fa-pencil-alt"></i> El estudiante escribirá su respuesta aquí...</div>' +
+        '<div class="oa-preview-hint">3000 caracteres máximo · La respuesta queda registrada para revisión del docente</div>' +
+      '</div>' +
+      '<div class="oa-preview-footer">' +
+        '<span class="oa-preview-footer-note"><i class="fas fa-info-circle"></i> Esta pregunta es de redacción libre — cualquier respuesta escrita es válida</span>' +
+        '<button class="oa-preview-send-btn" disabled><i class="fas fa-paper-plane"></i> Enviar respuesta</button>' +
+      '</div>' +
+    '</div>';
     return;
   }
   // Identificar partes (Drag and Drop image labeling)
