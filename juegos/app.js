@@ -536,12 +536,21 @@ window.joinByCodeFull = joinByCodeFull;
 
 function searchAndStartQuiz(code) {
     var client = getSupabase();
+    if (!client) {
+        sessionStorage.removeItem('alcocer_quiz_code');
+        navigateTo('inicio');
+        return;
+    }
 
     // Buscar evaluación por código
     client.from('evaluaciones').select('*').eq('codigo', code).eq('publicado', true).single().then(function(result) {
         if (result.error || !result.data) {
             var dbError = result.error ? result.error.message : 'No existe o ya se cerró';
-            alert('❌ Código ' + code + ' no válido.\n\nEl profesor debe estar en la sala de espera AHORA MISMO. Si el profesor recargó la página, se generó un NUEVO código.\n\nDetalle técnico: ' + dbError);
+            // Limpiar sesión pendiente para evitar bucle infinito de reintento
+            sessionStorage.removeItem('alcocer_quiz_code');
+            sessionStorage.removeItem('alcocer_quiz_state_' + code);
+            showCustomAlert('Código ' + code + ' no válido.\n\nEl profesor debe estar en la sala de espera AHORA MISMO. Si el profesor recargó la página, se generó un NUEVO código.');
+            navigateTo('inicio');
             return;
         }
 
@@ -550,7 +559,9 @@ function searchAndStartQuiz(code) {
         // Cargar preguntas
         client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evaluacion.id).order('orden').then(function(pResult) {
             if (pResult.error || !pResult.data || pResult.data.length === 0) {
-                alert('Esta evaluación no tiene preguntas todavía.');
+                sessionStorage.removeItem('alcocer_quiz_code');
+                showCustomAlert('Esta evaluación no tiene preguntas todavía.');
+                navigateTo('inicio');
                 return;
             }
 
@@ -634,6 +645,8 @@ function searchAndStartQuiz(code) {
                     if (quizCurrentQ >= quizData.preguntas.length) {
                         showQuizResults();
                     } else {
+                        // ═══ FIX: Mostrar el contenedor antes de renderizar ═══
+                        document.getElementById('quiz-container').style.display = 'block';
                         renderQuizQuestion();
                     }
                 } else {
@@ -643,7 +656,18 @@ function searchAndStartQuiz(code) {
                 // Mostrar sala de espera y esperar a que el admin inicie
                 showWaitingRoom();
             }
+        }).catch(function(err) {
+            console.error('Error cargando preguntas:', err);
+            sessionStorage.removeItem('alcocer_quiz_code');
+            showCustomAlert('Error de conexión al cargar las preguntas. Intenta de nuevo.');
+            navigateTo('inicio');
         });
+    }).catch(function(err) {
+        console.error('Error buscando evaluación:', err);
+        sessionStorage.removeItem('alcocer_quiz_code');
+        sessionStorage.removeItem('alcocer_quiz_state_' + code);
+        showCustomAlert('Error de conexión. Verifica tu internet e intenta de nuevo.');
+        navigateTo('inicio');
     });
 }
 
