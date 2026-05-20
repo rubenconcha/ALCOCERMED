@@ -325,54 +325,113 @@ function renderAnswerOptions(){
   // Identificar partes (Drag and Drop image labeling)
   if(q.type === 'dnd'){
     var imageVal = (q.options && q.options[0]) ? (q.options[0].pregunta_imagen || '') : '';
+    var isLocatingAny = (activeLocatingOption !== -1);
     
-    var html = '<div style="width:100%; display:flex; flex-direction:column; gap:20px; background:#fff; border:1px solid #E4E6EF; border-radius:16px; padding:24px;">';
+    var html = '<div class="dnd-editor-root">';
     
-    html += '<div>';
-    html += '  <label style="font-weight:800; color:#1E293B; display:block; margin-bottom:8px;"><i class="fas fa-image" style="color:#7C3AED;"></i> 1. Pega la URL de la imagen de Anatomía (ej. huesos, músculos, etc.):</label>';
-    html += '  <input type="text" id="dnd-image-input" value="' + imageVal.replace(/"/g, '&quot;') + '" placeholder="https://ejemplo.com/imagen.jpg" style="width:100%; padding:12px 16px; border:2px solid #E2E8F0; border-radius:10px; font-size:0.95rem; font-weight:600; outline:none;" onchange="updateDndImage(this.value)">';
-    html += '</div>';
-    
-    if(imageVal){
-      html += '<div style="text-align:center;">';
-      html += '  <label style="font-weight:800; color:#1E293B; display:block; margin-bottom:4px;"><i class="fas fa-map-marker-alt" style="color:#E91E63;"></i> 2. Ubica las etiquetas en la imagen:</label>';
-      html += '  <p style="color:#64748B; font-size:0.8rem; margin-bottom:12px;">Haz clic en el botón "📍 Ubicar" de una respuesta y luego haz clic en el lugar correspondiente de la imagen.</p>';
+    // ── STEP 1: IMAGE UPLOAD ZONE ──
+    if(!imageVal){
+      html += '<div class="dnd-upload-section">';
+      html += '  <div class="dnd-step-header"><span class="dnd-step-number">1</span><span class="dnd-step-title">Sube o pega la imagen anatómica</span></div>';
+      html += '  <div id="dnd-dropzone" class="dnd-dropzone" onclick="document.getElementById(\'dnd-file-input\').click()" ondragover="event.preventDefault();this.classList.add(\'dnd-dropzone-active\')" ondragleave="this.classList.remove(\'dnd-dropzone-active\')" ondrop="handleDndFileDrop(event)">';
+      html += '    <input type="file" id="dnd-file-input" accept="image/*" style="display:none" onchange="handleDndFileSelect(event)">';
+      html += '    <div class="dnd-dropzone-icon"><i class="fas fa-cloud-upload-alt"></i></div>';
+      html += '    <div class="dnd-dropzone-title">Arrastra tu imagen aquí</div>';
+      html += '    <div class="dnd-dropzone-subtitle">o haz clic para seleccionar un archivo</div>';
+      html += '    <div class="dnd-dropzone-formats"><i class="fas fa-image"></i> JPG, PNG, GIF, WebP — Máx 5MB</div>';
+      html += '  </div>';
+      html += '  <div class="dnd-url-divider"><span>o pega una URL</span></div>';
+      html += '  <div class="dnd-url-row">';
+      html += '    <input type="text" id="dnd-image-input" placeholder="https://ejemplo.com/anatomia.jpg" class="dnd-url-input" onkeydown="if(event.key===\'Enter\')updateDndImage(this.value)">';
+      html += '    <button onclick="updateDndImage(document.getElementById(\'dnd-image-input\').value)" class="dnd-url-btn"><i class="fas fa-arrow-right"></i></button>';
+      html += '  </div>';
+      html += '</div>';
+    } else {
+      // ── IMAGE LOADED: SHOW MAP + PIN PLACEMENT ──
+      html += '<div class="dnd-loaded-section">';
       
-      html += '  <div id="dnd-map-container" style="position:relative; display:inline-block; max-width:550px; border-radius:12px; overflow:hidden; border:3px solid #E2E8F0; background:#F8FAFC; cursor:crosshair;" onclick="handleDndImageClick(event)">';
-      html += '    <img src="' + imageVal + '" style="max-width:100%; display:block; user-select:none; pointer-events:none;" id="dnd-preview-img">';
+      // Header with image info
+      html += '  <div class="dnd-loaded-header">';
+      html += '    <div class="dnd-step-header"><span class="dnd-step-number">1</span><span class="dnd-step-title">Imagen cargada</span><span class="dnd-img-badge"><i class="fas fa-check-circle"></i> Lista</span></div>';
+      html += '    <button onclick="clearDndImage()" class="dnd-change-img-btn"><i class="fas fa-sync-alt"></i> Cambiar imagen</button>';
+      html += '  </div>';
       
+      // ── STEP 2: PIN PLACEMENT ──
+      html += '  <div class="dnd-step-header" style="margin-top:20px"><span class="dnd-step-number">2</span><span class="dnd-step-title">Ubica cada parte en la imagen</span></div>';
+      
+      if(isLocatingAny) {
+        var locatingName = q.options[activeLocatingOption] ? (q.options[activeLocatingOption].text || 'Opción ' + String.fromCharCode(65+activeLocatingOption)) : '';
+        html += '  <div class="dnd-locating-banner"><i class="fas fa-crosshairs dnd-pulse-icon"></i> Haz clic en la imagen para ubicar: <strong>' + locatingName + '</strong></div>';
+      } else {
+        html += '  <div class="dnd-hint-banner"><i class="fas fa-info-circle"></i> Presiona <strong>"📍 Ubicar"</strong> en una opción y luego haz clic en la imagen donde corresponde.</div>';
+      }
+      
+      // Map container
+      html += '  <div class="dnd-map-wrapper">';
+      html += '    <div id="dnd-map-container" class="dnd-map-container' + (isLocatingAny ? ' dnd-map-active' : '') + '" onclick="handleDndImageClick(event)">';
+      html += '      <img src="' + imageVal + '" class="dnd-map-img" id="dnd-preview-img">';
+      
+      // Render placed pins
       for(var i=0; i<q.options.length; i++){
         var o = q.options[i];
         if(o.pinX !== undefined && o.pinY !== undefined){
-          var colors = {
+          var pinColors = {
             'ac-blue': '#2563EB', 'ac-teal': '#0D9488', 'ac-yellow': '#D97706', 'ac-pink': '#DC2626', 'ac-purple': '#7C3AED', 'ac-green': '#059669'
           };
-          var pinColor = colors[o.color] || '#E91E63';
-          html += '    <div style="position:absolute; left:' + o.pinX + '%; top:' + o.pinY + '%; transform:translate(-50%, -50%); width:32px; height:32px; border-radius:50%; background:' + pinColor + '; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; border:3px solid #fff; box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:10;">' + String.fromCharCode(65+i) + '</div>';
+          var pinColor = pinColors[o.color] || '#E91E63';
+          html += '      <div class="dnd-pin" style="left:' + o.pinX + '%; top:' + o.pinY + '%; background:' + pinColor + ';">';
+          html += '        <span class="dnd-pin-letter">' + String.fromCharCode(65+i) + '</span>';
+          html += '        <div class="dnd-pin-pulse" style="border-color:' + pinColor + '"></div>';
+          if(o.text) html += '        <div class="dnd-pin-tooltip">' + o.text + '</div>';
+          html += '      </div>';
         }
       }
       
+      html += '    </div>';
       html += '  </div>';
+      
       html += '</div>';
     }
     
-    html += '<div>';
-    html += '  <label style="font-weight:800; color:#1E293B; display:block; margin-bottom:12px;"><i class="fas fa-list-ol" style="color:#0EA5E9;"></i> 3. Nombres de las partes y su botón de ubicación:</label>';
-    html += '  <div style="display:flex; flex-direction:column; gap:12px;">';
+    // ── STEP 3: LABELS LIST ──
+    html += '<div class="dnd-labels-section">';
+    html += '  <div class="dnd-step-header"><span class="dnd-step-number">3</span><span class="dnd-step-title">Nombres de las partes a identificar</span></div>';
+    html += '  <div class="dnd-labels-list">';
     
     for(var i=0; i<q.options.length; i++){
       var o = q.options[i];
       var isLocating = (activeLocatingOption === i);
       var pinPlaced = (o.pinX !== undefined && o.pinY !== undefined);
+      var labelColors = {
+        'ac-blue': ['#2563EB','#1D4ED8'], 'ac-teal': ['#0D9488','#0F766E'], 'ac-yellow': ['#D97706','#B45309'],
+        'ac-pink': ['#DC2626','#B91C1C'], 'ac-purple': ['#7C3AED','#6D28D9'], 'ac-green': ['#059669','#047857']
+      };
+      var lc = labelColors[o.color] || ['#6366F1','#4F46E5'];
       
-      html += '    <div class="answer-card ' + o.color + '" style="display:flex; align-items:center; gap:12px; padding:12px 16px;">';
-      html += '      <button class="ac-delete" onclick="removeOption(' + i + ')"><i class="fas fa-trash"></i></button>';
-      html += '      <span style="font-weight:800; color:#fff; font-size:1.1rem; flex-shrink:0;">' + String.fromCharCode(65+i) + '</span>';
-      html += '      <input class="ac-input" placeholder="Nombre de esta parte..." value="' + (o.text || '').replace(/"/g, '&quot;') + '" oninput="updateOption(' + i + ',this.value)" style="flex:1;">';
+      html += '    <div class="dnd-label-card" style="--label-color:' + lc[0] + '; --label-dark:' + lc[1] + ';">';
+      html += '      <div class="dnd-label-left">';
+      html += '        <div class="dnd-label-letter" style="background:' + lc[0] + '">' + String.fromCharCode(65+i) + '</div>';
+      html += '        <input class="dnd-label-input" placeholder="Nombre de esta parte..." value="' + (o.text || '').replace(/"/g, '&quot;') + '" oninput="updateOption(' + i + ',this.value)">';
+      html += '      </div>';
+      html += '      <div class="dnd-label-right">';
       
-      html += '      <button onclick="startDndLocate(' + i + ')" style="padding:8px 16px; border-radius:8px; border:none; background:' + (isLocating ? '#EF4444' : '#fff') + '; color:' + (isLocating ? '#fff' : '#0F172A') + '; font-weight:800; font-size:0.85rem; cursor:pointer; display:flex; align-items:center; gap:6px; box-shadow:0 2px 6px rgba(0,0,0,0.15); transition:all 0.2s;">';
-      html += '        <i class="fas fa-map-marker-alt"></i> ' + (isLocating ? 'Haciendo clic...' : (pinPlaced ? '📍 Reubicar' : '📍 Ubicar'));
-      html += '      </button>';
+      // Status indicator
+      if(pinPlaced) {
+        html += '        <div class="dnd-label-status dnd-status-ok"><i class="fas fa-check-circle"></i> Ubicado</div>';
+      } else {
+        html += '        <div class="dnd-label-status dnd-status-pending"><i class="fas fa-exclamation-circle"></i> Sin ubicar</div>';
+      }
+      
+      // Locate button
+      if(isLocating) {
+        html += '        <button onclick="cancelDndLocate()" class="dnd-locate-btn dnd-locate-active"><i class="fas fa-times"></i> Cancelar</button>';
+      } else {
+        html += '        <button onclick="startDndLocate(' + i + ')" class="dnd-locate-btn' + (pinPlaced ? ' dnd-locate-remap' : '') + '"><i class="fas fa-map-marker-alt"></i> ' + (pinPlaced ? 'Reubicar' : 'Ubicar') + '</button>';
+      }
+      
+      // Delete button
+      html += '        <button class="dnd-label-delete" onclick="removeOption(' + i + ')"><i class="fas fa-trash-alt"></i></button>';
+      html += '      </div>';
       html += '    </div>';
     }
     
@@ -1591,16 +1650,39 @@ document.addEventListener('DOMContentLoaded', initThemeEditor);
 var activeLocatingOption = -1;
 
 function updateDndImage(val){
+  if(!val || !val.trim()) return;
   var q = questions[currentQuestionIndex];
   if(!q.options) q.options = [];
   q.options.forEach(function(o){
-    o.pregunta_imagen = val;
+    o.pregunta_imagen = val.trim();
   });
+  renderAnswerOptions();
+}
+
+function clearDndImage(){
+  var q = questions[currentQuestionIndex];
+  if(!q.options) q.options = [];
+  q.options.forEach(function(o){
+    o.pregunta_imagen = '';
+    delete o.pinX;
+    delete o.pinY;
+  });
+  activeLocatingOption = -1;
   renderAnswerOptions();
 }
 
 function startDndLocate(idx){
   activeLocatingOption = idx;
+  renderAnswerOptions();
+  // Scroll to map
+  setTimeout(function(){
+    var map = document.getElementById('dnd-map-container');
+    if(map) map.scrollIntoView({behavior:'smooth', block:'center'});
+  }, 100);
+}
+
+function cancelDndLocate(){
+  activeLocatingOption = -1;
   renderAnswerOptions();
 }
 
@@ -1617,13 +1699,83 @@ function handleDndImageClick(event){
   q.options[activeLocatingOption].pinX = x;
   q.options[activeLocatingOption].pinY = y;
   q.options[activeLocatingOption].correct = true;
+  
+  // Brief visual feedback
+  var ripple = document.createElement('div');
+  ripple.style.cssText = 'position:absolute;left:'+x+'%;top:'+y+'%;width:40px;height:40px;border-radius:50%;border:3px solid #22C55E;transform:translate(-50%,-50%) scale(0);animation:dnd-ripple .5s ease-out forwards;z-index:999;pointer-events:none;';
+  container.appendChild(ripple);
+  setTimeout(function(){ if(ripple.parentNode) ripple.parentNode.removeChild(ripple); }, 600);
+  
   activeLocatingOption = -1;
   renderAnswerOptions();
 }
 
+// ── FILE UPLOAD HANDLERS ──
+function handleDndFileDrop(event){
+  event.preventDefault();
+  event.stopPropagation();
+  var dropzone = document.getElementById('dnd-dropzone');
+  if(dropzone) dropzone.classList.remove('dnd-dropzone-active');
+  
+  var files = event.dataTransfer ? event.dataTransfer.files : [];
+  if(files.length > 0) processDndFile(files[0]);
+}
+
+function handleDndFileSelect(event){
+  var files = event.target.files;
+  if(files && files.length > 0) processDndFile(files[0]);
+}
+
+function processDndFile(file){
+  if(!file.type.startsWith('image/')){
+    showToast('Solo se permiten archivos de imagen','error');
+    return;
+  }
+  if(file.size > 5 * 1024 * 1024){
+    showToast('La imagen no debe superar 5MB','error');
+    return;
+  }
+  
+  // Show loading state
+  var dropzone = document.getElementById('dnd-dropzone');
+  if(dropzone){
+    dropzone.innerHTML = '<div class="dnd-dropzone-icon" style="color:#7C3AED"><i class="fas fa-spinner fa-spin"></i></div><div class="dnd-dropzone-title" style="color:#7C3AED">Subiendo imagen...</div><div class="dnd-upload-progress"><div class="dnd-upload-bar" id="dnd-progress-bar"></div></div>';
+  }
+  
+  // Upload to Supabase Storage
+  var client = getSupabase();
+  var ext = file.name.split('.').pop() || 'jpg';
+  var fileName = 'dnd_' + Date.now() + '_' + Math.random().toString(36).substr(2,6) + '.' + ext;
+  
+  client.storage.from('imagenes').upload(fileName, file, {
+    cacheControl: '3600',
+    upsert: false
+  }).then(function(result){
+    if(result.error){
+      // Fallback: use base64 if storage bucket doesn't exist
+      console.warn('Storage upload failed, using base64 fallback:', result.error.message);
+      var reader = new FileReader();
+      reader.onload = function(e){
+        updateDndImage(e.target.result);
+      };
+      reader.readAsDataURL(file);
+      return;
+    }
+    // Get public URL
+    var urlResult = client.storage.from('imagenes').getPublicUrl(fileName);
+    if(urlResult.data && urlResult.data.publicUrl){
+      updateDndImage(urlResult.data.publicUrl);
+    }
+  });
+}
+
 window.updateDndImage = updateDndImage;
+window.clearDndImage = clearDndImage;
 window.startDndLocate = startDndLocate;
+window.cancelDndLocate = cancelDndLocate;
 window.handleDndImageClick = handleDndImageClick;
+window.handleDndFileDrop = handleDndFileDrop;
+window.handleDndFileSelect = handleDndFileSelect;
 
 // ═══ DND PREVIEW (VISTA PREVIA) HELPERS ═══
 var pvSelectedDndLabel = -1;

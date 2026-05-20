@@ -632,3 +632,609 @@ body{font-family:'Inter',sans-serif;background:var(--bg-editor);color:var(--text
   }
 }
 
+/* ═══════════════════════════════════════════════════════════
+   IDENTIFICAR PARTES (DND) EDITOR — PREMIUM STYLES
+   ═══════════════════════════════════════════════════════════ */
+
+/* Root container */
+.dnd-editor-root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Step Headers ── */
+.dnd-step-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.dnd-step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7C3AED, #6D28D9);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+.dnd-step-title {
+  font-weight: 800;
+  color: var(--text-primary, #1E293B);
+  font-size: 1.05rem;
+}
+
+/* ── Upload Section ── */
+.dnd-upload-section {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border-light, #E4E6EF);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+/* Dropzone */
+.dnd-dropzone {
+  position: relative;
+  border: 3px dashed #CBD5E1;
+  border-radius: 20px;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+  overflow: hidden;
+}
+.dnd-dropzone::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 22px;
+  padding: 3px;
+  background: linear-gradient(135deg, #7C3AED, #EC4899, #2563EB, #7C3AED);
+  background-size: 300% 300%;
+  animation: dnd-border-flow 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.dnd-dropzone:hover::before,
+.dnd-dropzone-active::before {
+  opacity: 1;
+}
+.dnd-dropzone:hover,
+.dnd-dropzone-active {
+  border-color: transparent;
+  background: linear-gradient(135deg, #FAF5FF 0%, #EEF2FF 50%, #FDF2F8 100%);
+  transform: scale(1.01);
+}
+.dnd-dropzone-active {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(124, 58, 237, 0.15);
+}
+.dnd-dropzone-icon {
+  font-size: 3.5rem;
+  color: #94A3B8;
+  transition: all 0.3s;
+}
+.dnd-dropzone:hover .dnd-dropzone-icon {
+  color: #7C3AED;
+  transform: translateY(-4px);
+}
+.dnd-dropzone-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-primary, #334155);
+}
+.dnd-dropzone-subtitle {
+  font-size: 0.9rem;
+  color: #94A3B8;
+  font-weight: 600;
+}
+.dnd-dropzone-formats {
+  font-size: 0.78rem;
+  color: #94A3B8;
+  background: rgba(148, 163, 184, 0.1);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Upload progress */
+.dnd-upload-progress {
+  width: 200px;
+  height: 6px;
+  border-radius: 3px;
+  background: #E2E8F0;
+  margin-top: 12px;
+  overflow: hidden;
+}
+.dnd-upload-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7C3AED, #EC4899);
+  border-radius: 3px;
+  animation: dnd-progress 2s ease-in-out infinite;
+}
+
+/* URL divider */
+.dnd-url-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0 16px;
+}
+.dnd-url-divider::before,
+.dnd-url-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #E2E8F0;
+}
+.dnd-url-divider span {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* URL input row */
+.dnd-url-row {
+  display: flex;
+  gap: 8px;
+}
+.dnd-url-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #E2E8F0;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary, #1E293B);
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-card, #fff);
+}
+.dnd-url-input:focus {
+  border-color: #7C3AED;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+.dnd-url-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #7C3AED, #6D28D9);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.dnd-url-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+}
+
+/* ── Loaded Section ── */
+.dnd-loaded-section {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border-light, #E4E6EF);
+  border-radius: 20px;
+  padding: 28px;
+}
+.dnd-loaded-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.dnd-loaded-header .dnd-step-header {
+  margin-bottom: 0;
+}
+.dnd-img-badge {
+  background: #DCFCE7;
+  color: #166534;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.dnd-change-img-btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 2px solid #E2E8F0;
+  background: transparent;
+  color: var(--text-secondary, #64748B);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+}
+.dnd-change-img-btn:hover {
+  border-color: #EF4444;
+  color: #EF4444;
+  background: #FEF2F2;
+}
+
+/* Hint & Locating banners */
+.dnd-hint-banner {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 0.88rem;
+  color: #1E40AF;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dnd-locating-banner {
+  background: linear-gradient(135deg, #FEF3C7, #FFFBEB);
+  border: 2px solid #FCD34D;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  color: #92400E;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: dnd-banner-glow 1.5s ease-in-out infinite alternate;
+}
+
+/* ── Map Container ── */
+.dnd-map-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.dnd-map-container {
+  position: relative;
+  display: inline-block;
+  max-width: 600px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 3px solid #E2E8F0;
+  background: #F8FAFC;
+  cursor: default;
+  transition: all 0.3s;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+.dnd-map-container.dnd-map-active {
+  cursor: crosshair;
+  border-color: #FCD34D;
+  box-shadow: 0 0 0 4px rgba(252, 211, 77, 0.25), 0 12px 40px rgba(0, 0, 0, 0.12);
+  animation: dnd-map-pulse 2s ease-in-out infinite;
+}
+.dnd-map-img {
+  max-width: 100%;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ── Pin Markers ── */
+.dnd-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  z-index: 10;
+  cursor: default;
+  transition: transform 0.2s;
+}
+.dnd-pin:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+  z-index: 20;
+}
+.dnd-pin:hover .dnd-pin-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.dnd-pin-letter {
+  font-weight: 900;
+  font-size: 0.9rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.dnd-pin-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid;
+  opacity: 0.5;
+  animation: dnd-pin-pulse-anim 2s ease-out infinite;
+}
+.dnd-pin-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #1E293B;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+  z-index: 30;
+  pointer-events: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+.dnd-pin-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background: #1E293B;
+}
+
+/* ── Labels Section ── */
+.dnd-labels-section {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border-light, #E4E6EF);
+  border-radius: 20px;
+  padding: 28px;
+}
+.dnd-labels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Label Card */
+.dnd-label-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--bg-card, #fff);
+  border: 2px solid var(--border-light, #E4E6EF);
+  border-radius: 14px;
+  transition: all 0.2s;
+}
+.dnd-label-card:hover {
+  border-color: var(--label-color, #7C3AED);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.dnd-label-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+.dnd-label-letter {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.dnd-label-input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 2px solid #E2E8F0;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary, #1E293B);
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-surface, #F8FAFC);
+}
+.dnd-label-input:focus {
+  border-color: var(--label-color, #7C3AED);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--label-color) 15%, transparent);
+}
+.dnd-label-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Status badges */
+.dnd-label-status {
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.dnd-status-ok {
+  background: #DCFCE7;
+  color: #166534;
+}
+.dnd-status-pending {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+/* Locate button */
+.dnd-locate-btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #7C3AED, #6D28D9);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.82rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(124, 58, 237, 0.25);
+}
+.dnd-locate-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
+}
+.dnd-locate-btn.dnd-locate-remap {
+  background: linear-gradient(135deg, #0EA5E9, #0284C7);
+  box-shadow: 0 3px 10px rgba(14, 165, 233, 0.25);
+}
+.dnd-locate-btn.dnd-locate-remap:hover {
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.35);
+}
+.dnd-locate-btn.dnd-locate-active {
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  box-shadow: 0 3px 10px rgba(239, 68, 68, 0.25);
+  animation: dnd-cancel-pulse 1.2s ease-in-out infinite;
+}
+
+/* Delete button */
+.dnd-label-delete {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 2px solid #E2E8F0;
+  background: transparent;
+  color: #94A3B8;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.dnd-label-delete:hover {
+  border-color: #EF4444;
+  color: #EF4444;
+  background: #FEF2F2;
+}
+
+/* ── Animations ── */
+@keyframes dnd-border-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes dnd-progress {
+  0% { width: 0%; }
+  50% { width: 80%; }
+  100% { width: 100%; }
+}
+
+@keyframes dnd-pin-pulse-anim {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@keyframes dnd-map-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(252, 211, 77, 0.25), 0 12px 40px rgba(0,0,0,0.12); }
+  50% { box-shadow: 0 0 0 8px rgba(252, 211, 77, 0.15), 0 12px 40px rgba(0,0,0,0.12); }
+}
+
+@keyframes dnd-banner-glow {
+  0% { box-shadow: 0 0 0 0 rgba(252, 211, 77, 0); }
+  100% { box-shadow: 0 0 20px 2px rgba(252, 211, 77, 0.2); }
+}
+
+@keyframes dnd-cancel-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+@keyframes dnd-ripple {
+  0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+}
+
+.dnd-pulse-icon {
+  animation: dnd-pulse-spin 1.5s ease-in-out infinite;
+}
+@keyframes dnd-pulse-spin {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .dnd-label-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .dnd-label-right {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .dnd-dropzone {
+    padding: 32px 20px;
+  }
+  .dnd-dropzone-icon {
+    font-size: 2.5rem;
+  }
+  .dnd-loaded-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dnd-url-row {
+    flex-direction: column;
+  }
+  .dnd-url-btn {
+    width: 100%;
+    height: 44px;
+  }
+}
+
