@@ -1210,8 +1210,9 @@ function submitQuizOpen() {
     ta.disabled = true;
     var pregunta = quizData.preguntas[quizCurrentQ];
     
-    // ── RESPUESTA ABIERTA (oa): no afecta puntaje ni porcentaje ──
-    if (pregunta.tipo === 'oa') {
+    // ── RESPUESTA ABIERTA (oa) o ENCUESTA ABIERTA: no afecta puntaje ni porcentaje ──
+    var isPoll = pregunta.tipo === 'poll' || pregunta.tipo === 'encuesta';
+    if (pregunta.tipo === 'oa' || isPoll) {
         ta.style.border = '2px solid rgba(167,139,250,0.6)';
         ta.style.background = 'rgba(124,58,237,0.1)';
         ta.style.color = '#C4B5FD';
@@ -1413,8 +1414,14 @@ function showQuizResults() {
     var totalGradeable = 0; // Questions that actually count toward score
     for (var i = 0; i < quizAnswers.length; i++) {
         var ans = quizAnswers[i];
-        // OA (open answer) has correcta=null — skip from score/percentage
-        if (ans.correcta === null && ans.es_abierta) continue;
+        var pq = quizData && quizData.preguntas ? quizData.preguntas.find(function(q) { return q.id === ans.pregunta_id; }) : null;
+        var isExclude = false;
+        if (pq) {
+            isExclude = pq.tipo === 'oa' || pq.tipo === 'poll' || pq.tipo === 'encuesta';
+        } else {
+            isExclude = (ans.correcta === null && ans.es_abierta);
+        }
+        if (isExclude) continue;
         totalGradeable++;
         if (ans.correcta) correctas++;
         totalPoints += (ans.puntos_ganados || 0);
@@ -1489,7 +1496,20 @@ function showQuizResults() {
             rhtml += '</div>';
 
             
-            if(pq.tipo === 'mc' || !pq.tipo || pq.tipo === 'ms' || pq.tipo === 'poll') {
+            // Detectar encuesta/poll abierta (sin opciones reales) para mostrar texto
+            var isPollOpen2 = (pq.tipo === 'poll' || pq.tipo === 'encuesta') &&
+                (!pq.opciones || pq.opciones.length === 0 || pq.opciones.every(function(op){ return !op.text || !op.text.trim(); }));
+
+            if (isPollOpen2) {
+                // ═══ Encuesta/Poll abierta: mostrar respuesta de texto ═══
+                rhtml += '<div style="margin-top:16px; padding:16px 20px; background:#F5F3FF; border:2px solid #DDD6FE; border-radius:12px;">';
+                rhtml += '  <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">';
+                rhtml += '    <i class="fas fa-comment-dots" style="color:#7C3AED; font-size:0.9rem;"></i>';
+                rhtml += '    <span style="font-weight:800; color:#6D28D9; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.5px;">Respuesta de encuesta — no afecta el puntaje</span>';
+                rhtml += '  </div>';
+                rhtml += '  <div style="font-weight:600; color:#1E293B; font-size:0.95rem; line-height:1.5; font-style:italic;">"' + (ans && ans.seleccionada ? ans.seleccionada : '<span style=\'color:#94A3B8;\'>Sin responder</span>') + '"</div>';
+                rhtml += '</div>';
+            } else if(pq.tipo === 'mc' || !pq.tipo || pq.tipo === 'ms' || pq.tipo === 'poll' || pq.tipo === 'encuesta') {
                 var opts = pq.opciones || [];
                 rhtml += '<div style="display:flex; flex-direction:column; gap:8px; margin-top:16px;">';
                 for(var o=0; o<opts.length; o++) {
@@ -1900,19 +1920,23 @@ window.openReportDetail = function(evalId, userId) {
         var html = '';
         html += '<div style="display:flex;gap:12px;margin-bottom:24px;">';
         var correctCount = 0;
+        var totalGradeableCount = 0;
         var ans = r.respuestas || [];
-        if (ans && ans.length > 0) {
-            for (var aIndex = 0; aIndex < ans.length; aIndex++) {
-                if (ans[aIndex] && ans[aIndex].correcta) {
-                    correctCount++;
-                }
+        for (var aIndex = 0; aIndex < qs.length; aIndex++) {
+            var qItem = qs[aIndex];
+            var isExclude = qItem.tipo === 'oa' || qItem.tipo === 'poll' || qItem.tipo === 'encuesta';
+            if (isExclude) continue;
+            totalGradeableCount++;
+            if (ans[aIndex] && ans[aIndex].correcta) {
+                correctCount++;
             }
-        } else {
-            correctCount = Math.round(((r.porcentaje || 0) / 100) * (r.total || 0));
+        }
+        if (totalGradeableCount === 0) {
+            totalGradeableCount = r.total || qs.length || 0;
+            correctCount = Math.round(((r.porcentaje || 0) / 100) * totalGradeableCount);
         }
         
-        var totalCount = r.total || qs.length || 0;
-        html += '<div style="flex:1;background:#F0FDF4;padding:16px;border-radius:16px;text-align:center;border:2px solid #DCFCE7;"><div style="font-size:28px;font-weight:900;color:#166534;">'+correctCount+' / '+totalCount+'</div><div style="font-size:13px;color:#15803D;font-weight:800;">Correctas</div></div>';
+        html += '<div style="flex:1;background:#F0FDF4;padding:16px;border-radius:16px;text-align:center;border:2px solid #DCFCE7;"><div style="font-size:28px;font-weight:900;color:#166534;">'+correctCount+' / '+totalGradeableCount+'</div><div style="font-size:13px;color:#15803D;font-weight:800;">Correctas</div></div>';
         html += '<div style="flex:1;background:#EFF6FF;padding:16px;border-radius:16px;text-align:center;border:2px solid #DBEAFE;"><div style="font-size:28px;font-weight:900;color:#1E40AF;">'+r.porcentaje+'%</div><div style="font-size:13px;color:#1D4ED8;font-weight:800;">Precisión</div></div>';
         html += '</div>';
         
@@ -1932,7 +1956,29 @@ window.openReportDetail = function(evalId, userId) {
             html += '<div style="color:'+qColor+';font-size:1.4rem;"><i class="fas '+qIcon+'"></i></div>';
             html += '</div>';
             
-            if(q.tipo === 'mc' || !q.tipo || q.tipo === 'ms' || q.tipo === 'poll') {
+            // Detectar encuesta/poll abierta (sin opciones reales) para mostrar texto
+            var isPollOpenRes = (q.tipo === 'poll' || q.tipo === 'encuesta') &&
+                (!q.opciones || q.opciones.length === 0 || q.opciones.every(function(op){ return !op.text || !op.text.trim(); }));
+
+            if (isPollOpenRes) {
+                // ═══ Encuesta/Poll abierta: mostrar respuesta de texto ═══
+                html += '<div style="margin-top:16px; padding:16px 20px; background:#F5F3FF; border:2px solid #DDD6FE; border-radius:12px;">';
+                html += '  <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">';
+                html += '    <i class="fas fa-comment-dots" style="color:#7C3AED; font-size:0.9rem;"></i>';
+                html += '    <span style="font-weight:800; color:#6D28D9; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.5px;">Respuesta de encuesta — no afecta el puntaje</span>';
+                html += '  </div>';
+                html += '  <div style="font-weight:600; color:#1E293B; font-size:0.95rem; line-height:1.5; font-style:italic;">"' + (a && a.seleccionada ? a.seleccionada : '<span style=\'color:#94A3B8;\'>Sin responder</span>') + '"</div>';
+                html += '</div>';
+            } else if (q.tipo === 'oa') {
+                // ═══ Respuesta abierta (oa): mostrar respuesta de texto ═══
+                html += '<div style="margin-top:16px; padding:16px 20px; background:#F5F3FF; border:2px solid #DDD6FE; border-radius:12px;">';
+                html += '  <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">';
+                html += '    <i class="fas fa-pen-nib" style="color:#7C3AED; font-size:0.9rem;"></i>';
+                html += '    <span style="font-weight:800; color:#6D28D9; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.5px;">Respuesta abierta — no afecta el puntaje</span>';
+                html += '  </div>';
+                html += '  <div style="font-weight:600; color:#1E293B; font-size:0.95rem; line-height:1.5; font-style:italic;">"' + (a && a.seleccionada ? a.seleccionada : '<span style=\'color:#94A3B8;\'>Sin responder</span>') + '"</div>';
+                html += '</div>';
+            } else if(q.tipo === 'mc' || !q.tipo || q.tipo === 'ms' || q.tipo === 'poll' || q.tipo === 'encuesta') {
                 var opts = q.opciones || [];
                 html += '<div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">';
                 for(var o=0; o<opts.length; o++) {
@@ -1988,12 +2034,8 @@ window.openReportDetail = function(evalId, userId) {
                 html += '<div style="font-weight:700;color:#0F172A;font-size:1rem;">' + (a ? a.seleccionada : 'Sin responder') + '</div>';
                 html += '<div style="font-size:0.85rem;color:#10B981;font-weight:800;margin-top:12px;margin-bottom:6px;">Respuesta correcta esperada:</div>';
                 var respCorrecta = '';
-                var isPollOpenRes = (q.tipo === 'poll' || q.tipo === 'encuesta') &&
-                    (!q.opciones || q.opciones.length === 0 || q.opciones.every(function(o){ return !o.text || !o.text.trim(); }));
                 if (q.tipo === 'fb') {
                     respCorrecta = (q.opciones && q.opciones.length > 0 && q.opciones[0].text) ? q.opciones[0].text : 'Sin patrón';
-                } else if (q.tipo === 'oa' || isPollOpenRes) {
-                    respCorrecta = isPollOpenRes ? 'Encuesta — respuesta libre (sin puntaje)' : 'Criterio abierto (Evaluado por el profesor)';
                 } else {
                     respCorrecta = q.respuesta_correcta || '';
                 }
