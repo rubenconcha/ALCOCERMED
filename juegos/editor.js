@@ -1126,6 +1126,8 @@ function startGameFromLobby(){
 }
 
 var teacherResultsPoll=null;
+var cachedQuestions=null;
+
 
 function openTeacherResults(isLive){
   isLive = isLive !== false; // true por defecto
@@ -1145,66 +1147,113 @@ function openTeacherResults(isLive){
 }
 
 function loadQuestionReview(id) {
+  if (cachedQuestions) {
+    renderQuestionReviewWithAnswers(cachedQuestions);
+    return;
+  }
   var client = getSupabase();
   client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', id).order('orden').then(function(r) {
     if (r.error || !r.data || r.data.length === 0) return;
-    var qs = r.data;
+    cachedQuestions = r.data;
+    renderQuestionReviewWithAnswers(cachedQuestions);
+  });
+}
+
+function renderQuestionReviewWithAnswers(qs) {
     var html = '';
     for (var i = 0; i < qs.length; i++) {
-       var q = qs[i];
-       var qText = q.texto || q.text || 'Pregunta sin texto';
-       var qType = q.tipo || '';
-       var opts = q.opciones || [];
+        var q = qs[i];
+        var qText = q.texto || q.text || 'Pregunta sin texto';
+        var qType = q.tipo || '';
+        var opts = q.opciones || [];
 
-       // Type badge colors
-       var typeLabels = {
-         'mc': '☑️ Selección única', 'ms': '✅ Selección múltiple', 'tf': '⚖️ V/F',
-         'fb': '✏️ Completar', 'oa': '📝 Abierta', 'poll': '📊 Encuesta',
-         'dnd': '🖐️ Identificar partes'
-       };
-       var typeLabel = typeLabels[qType] || qType;
+        // Type badge colors
+        var typeLabels = {
+          'mc': '☑️ Selección única', 'ms': '✅ Selección múltiple', 'tf': '⚖️ V/F',
+          'fb': '✏️ Completar', 'oa': '📝 Abierta', 'poll': '📊 Encuesta',
+          'dnd': '🖐️ Identificar partes'
+        };
+        var typeLabel = typeLabels[qType] || qType;
 
-       html += '<div style="margin-bottom:16px;padding:16px;background:rgba(255,255,255,0.05);border-radius:12px;border-left:4px solid #8B5CF6;">';
-       html += '<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">';
-       html += '<span style="font-weight:700;color:#fff;font-size:1.05rem;">' + (i+1) + '. ' + qText + '</span>';
-       html += '<span style="font-size:0.7rem;padding:3px 8px;border-radius:6px;background:rgba(139,92,246,0.2);color:#A78BFA;font-weight:700;white-space:nowrap;">' + typeLabel + '</span>';
-       html += '</div>';
+        html += '<div style="margin-bottom:16px;padding:16px;background:rgba(255,255,255,0.05);border-radius:12px;border-left:4px solid #8B5CF6;">';
+        html += '<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">';
+        html += '<span style="font-weight:700;color:#fff;font-size:1.05rem;">' + (i+1) + '. ' + qText + '</span>';
+        html += '<span style="font-size:0.7rem;padding:3px 8px;border-radius:6px;background:rgba(139,92,246,0.2);color:#A78BFA;font-weight:700;white-space:nowrap;">' + typeLabel + '</span>';
+        html += '</div>';
 
-       // Render options based on question type
-       if (qType === 'oa') {
-         html += '<div style="color:#A78BFA;font-weight:600;font-size:0.9rem;padding:8px 12px;background:rgba(124,58,237,0.1);border-radius:8px;border:1px dashed rgba(124,58,237,0.3);"><i class="fas fa-pen-nib" style="margin-right:8px"></i>Respuesta abierta — Se revisa manualmente (no puntúa)</div>';
-       } else if (qType === 'fb') {
-         var fbAnswer = (opts.length > 0 && opts[0].text) ? opts[0].text : '(sin patrón definido)';
-         html += '<div style="color:#38BDF8;font-weight:600;font-size:0.9rem;padding:8px 12px;background:rgba(56,189,248,0.1);border-radius:8px;border:1px dashed rgba(56,189,248,0.3);"><i class="fas fa-spell-check" style="margin-right:8px"></i>Patrón de respuesta: <strong>' + fbAnswer + '</strong></div>';
-       } else if (qType === 'dnd') {
-         for (var j = 0; j < opts.length; j++) {
-           var o = opts[j];
-           var pinInfo = (o.pinX !== undefined && o.pinY !== undefined) ? ' <span style="color:rgba(255,255,255,0.3);font-size:0.8rem;">(' + Math.round(o.pinX) + '%, ' + Math.round(o.pinY) + '%)</span>' : '';
-           html += '<div style="color:#22D3EE;font-weight:600;margin-bottom:6px;font-size:0.9rem;padding:6px 10px;border-radius:6px;background:rgba(34,211,238,0.08);"><i class="fas fa-map-marker-alt" style="margin-right:8px"></i>' + String.fromCharCode(65+j) + '. ' + (o.text || '(Sin nombre)') + pinInfo + '</div>';
-         }
-       } else if (qType === 'poll') {
-          var allEmpty = opts.length === 0 || opts.every(function(o){ return !o.text || !o.text.trim(); });
-          if (allEmpty) {
-            html += '<div style="color:#A78BFA;font-weight:600;font-size:0.9rem;padding:8px 12px;background:rgba(124,58,237,0.1);border-radius:8px;border:1px dashed rgba(124,58,237,0.3);"><i class="fas fa-comment-dots" style="margin-right:8px"></i>Encuesta abierta — Los estudiantes escribirán su respuesta (sin puntaje)</div>';
-          } else {
-            for (var j = 0; j < opts.length; j++) {
-              html += '<div style="color:rgba(255,255,255,0.6);font-weight:500;margin-bottom:6px;font-size:0.9rem;padding:6px 10px;border-radius:6px;background:rgba(255,255,255,0.03);"><i class="fas fa-chart-bar" style="margin-right:8px;color:#A78BFA;"></i>' + String.fromCharCode(65+j) + '. ' + (opts[j].text || '(Opción vacía)') + '</div>';
-            }
-            html += '<div style="color:rgba(255,255,255,0.3);font-size:0.75rem;margin-top:4px;font-style:italic;"><i class="fas fa-info-circle" style="margin-right:4px;"></i>Encuesta — sin respuesta correcta</div>';
+        // Check if poll is open response
+        var isPollOpen = qType === 'poll' && 
+            (!opts || !Array.isArray(opts) || opts.length === 0 || opts.every(function(o){ return !o || !o.text || !o.text.trim(); }));
+
+        // Render options/instruction based on question type
+        if (qType === 'oa') {
+          html += '<div style="color:#A78BFA;font-weight:600;font-size:0.9rem;padding:8px 12px;background:rgba(124,58,237,0.1);border-radius:8px;border:1px dashed rgba(124,58,237,0.3);"><i class="fas fa-pen-nib" style="margin-right:8px"></i>Respuesta abierta — Se revisa manualmente (no puntúa)</div>';
+        } else if (qType === 'fb') {
+          var fbAnswer = (opts.length > 0 && opts[0].text) ? opts[0].text : '(sin patrón definido)';
+          html += '<div style="color:#38BDF8;font-weight:600;font-size:0.9rem;padding:8px 12px;background:rgba(56,189,248,0.1);border-radius:8px;border:1px dashed rgba(56,189,248,0.3);"><i class="fas fa-spell-check" style="margin-right:8px"></i>Patrón de respuesta: <strong>' + fbAnswer + '</strong></div>';
+        } else if (qType === 'dnd') {
+          for (var j = 0; j < opts.length; j++) {
+            var o = opts[j];
+            var pinInfo = (o.pinX !== undefined && o.pinY !== undefined) ? ' <span style="color:rgba(255,255,255,0.3);font-size:0.8rem;">(' + Math.round(o.pinX) + '%, ' + Math.round(o.pinY) + '%)</span>' : '';
+            html += '<div style="color:#22D3EE;font-weight:600;margin-bottom:6px;font-size:0.9rem;padding:6px 10px;border-radius:6px;background:rgba(34,211,238,0.08);"><i class="fas fa-map-marker-alt" style="margin-right:8px"></i>' + String.fromCharCode(65+j) + '. ' + (o.text || '(Sin nombre)') + pinInfo + '</div>';
           }
-       } else {
-         // mc, ms, tf — all have options with correct flags
-         for (var j = 0; j < opts.length; j++) {
-           var isCorrect = opts[j].correct;
-           var color = isCorrect ? '#4ADE80' : 'rgba(255,255,255,0.5)';
-           var bg = isCorrect ? 'rgba(74, 222, 128, 0.1)' : 'transparent';
-           var fw = isCorrect ? 'bold' : 'normal';
-           var icon = isCorrect ? '<i class="fas fa-check-circle" style="margin-right:8px"></i>' : '<i class="far fa-circle" style="margin-right:8px"></i>';
-           html += '<div style="color:'+color+';font-weight:'+fw+';margin-bottom:6px;font-size:0.95rem;padding:6px 10px;border-radius:6px;background:'+bg+';">' + icon + (opts[j].text || '(Opción vacía)') + '</div>';
-         }
-       }
+        } else if (qType === 'poll') {
+           if (isPollOpen) {
+             html += '<div style="color:#A78BFA;font-weight:600;font-size:0.9rem;padding:8px 12px;background:rgba(124,58,237,0.1);border-radius:8px;border:1px dashed rgba(124,58,237,0.3);"><i class="fas fa-comment-dots" style="margin-right:8px"></i>Encuesta abierta — Los estudiantes escribirán su respuesta (sin puntaje)</div>';
+           } else {
+             for (var j = 0; j < opts.length; j++) {
+               html += '<div style="color:rgba(255,255,255,0.6);font-weight:500;margin-bottom:6px;font-size:0.9rem;padding:6px 10px;border-radius:6px;background:rgba(255,255,255,0.03);"><i class="fas fa-chart-bar" style="margin-right:8px;color:#A78BFA;"></i>' + String.fromCharCode(65+j) + '. ' + (opts[j].text || '(Opción vacía)') + '</div>';
+             }
+             html += '<div style="color:rgba(255,255,255,0.3);font-size:0.75rem;margin-top:4px;font-style:italic;"><i class="fas fa-info-circle" style="margin-right:4px;"></i>Encuesta — sin respuesta correcta</div>';
+           }
+        } else {
+          // mc, ms, tf
+          for (var j = 0; j < opts.length; j++) {
+            var isCorrect = opts[j].correct;
+            var color = isCorrect ? '#4ADE80' : 'rgba(255,255,255,0.5)';
+            var bg = isCorrect ? 'rgba(74, 222, 128, 0.1)' : 'transparent';
+            var fw = isCorrect ? 'bold' : 'normal';
+            var icon = isCorrect ? '<i class="fas fa-check-circle" style="margin-right:8px"></i>' : '<i class="far fa-circle" style="margin-right:8px"></i>';
+            html += '<div style="color:'+color+';font-weight:'+fw+';margin-bottom:6px;font-size:0.95rem;padding:6px 10px;border-radius:6px;background:'+bg+';">' + icon + (opts[j].text || '(Opción vacía)') + '</div>';
+          }
+        }
 
-       html += '</div>';
+        // Render live answers for open response / open poll questions
+        if (qType === 'oa' || isPollOpen) {
+            var responsesList = [];
+            if (window.teacherResults && window.teacherResults.length > 0) {
+                for (var k = 0; k < window.teacherResults.length; k++) {
+                    var res = window.teacherResults[k];
+                    var name = window.teacherNameMap ? (window.teacherNameMap[res.user_id] || 'Estudiante') : 'Estudiante';
+                    if (name.indexOf('|') !== -1) name = name.split('|')[1];
+                    var studentAnswersList = res.respuestas || [];
+                    // Match by pregunta_id, fallback to index
+                    var studentAns = studentAnswersList.find(function(sa) { return sa.pregunta_id === q.id; }) || studentAnswersList[i];
+                    if (studentAns && studentAns.seleccionada !== undefined && studentAns.seleccionada !== '') {
+                        responsesList.push({ name: name, text: studentAns.seleccionada });
+                    }
+                }
+            }
+
+            html += '<div style="margin-top:12px;background:rgba(0,0,0,0.25);border-radius:10px;padding:12px;border:1px solid rgba(255,255,255,0.08);">';
+            html += '<div style="font-size:0.8rem;font-weight:800;color:rgba(255,255,255,0.5);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px;"><i class="fas fa-comments" style="margin-right:6px;color:#A78BFA;"></i>Respuestas escritas (' + responsesList.length + ')</div>';
+            if (responsesList.length > 0) {
+                html += '<div style="display:flex;flex-direction:column;gap:6px;max-height:180px;overflow-y:auto;padding-right:4px;">';
+                for (var rIdx = 0; rIdx < responsesList.length; rIdx++) {
+                    var resp = responsesList[rIdx];
+                    html += '<div style="font-size:0.85rem;line-height:1.4;background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:6px;border-left:3px solid #8B5CF6;text-align:left;">';
+                    html += '<strong style="color:#A78BFA;margin-right:6px;">' + resp.name + ':</strong>';
+                    html += '<span style="color:#fff;font-style:italic;">"' + resp.text + '"</span>';
+                    html += '</div>';
+                }
+                html += '</div>';
+            } else {
+                html += '<div style="font-size:0.8rem;color:rgba(255,255,255,0.3);font-style:italic;"><i class="fas fa-info-circle"></i> Ningún estudiante ha respondido todavía.</div>';
+            }
+            html += '</div>';
+        }
+
+        html += '</div>';
     }
     var reviewEl = document.getElementById('tr-question-review-content');
     var reviewContainer = document.getElementById('tr-question-review');
@@ -1212,24 +1261,208 @@ function loadQuestionReview(id) {
         reviewEl.innerHTML = html;
         reviewContainer.style.display = 'block';
     }
-  });
 }
+
+function openTeacherReportDetail(userId, studentName) {
+    if (!window.teacherResults) return;
+    var r = window.teacherResults.find(function(x) { return x.user_id === userId; });
+    if (!r) return;
+
+    if (!document.getElementById('report-detail-animation-styles')) {
+        var style = document.createElement('style');
+        style.id = 'report-detail-animation-styles';
+        style.innerHTML = '@keyframes popIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }';
+        document.head.appendChild(style);
+    }
+
+    var overlay = document.createElement('div');
+    overlay.id = 'report-detail-modal';
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);z-index:100000;display:flex;align-items:center;justify-content:center;padding:20px;';
+
+    var modal = document.createElement('div');
+    modal.style.cssText = 'background:#fff;border-radius:24px;width:100%;max-width:600px;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1);overflow:hidden;';
+
+    var header = document.createElement('div');
+    header.style.cssText = 'padding:20px 24px;background:#F8FAFC;border-bottom:1px solid #E2E8F0;display:flex;justify-content:space-between;align-items:center;';
+    header.innerHTML = '<h2 style="font-size:1.15rem;font-weight:800;color:#1E293B;margin:0;display:flex;align-items:center;gap:8px;"><i class="fas fa-user-circle" style="color:#94A3B8;font-size:1.4rem;"></i>' + studentName + '</h2>' +
+                       '<button onclick="document.body.removeChild(document.getElementById(\'report-detail-modal\'))" style="background:none;border:none;font-size:28px;color:#94A3B8;cursor:pointer;padding:0;line-height:1;transition:color 0.2s;">&times;</button>';
+    modal.appendChild(header);
+
+    var bodyContainer = document.createElement('div');
+    bodyContainer.style.cssText = 'padding:24px;overflow-y:auto;flex:1;';
+    bodyContainer.innerHTML = '<div style="text-align:center;padding:40px;"><i class="fas fa-spinner fa-spin" style="font-size:32px;color:#94A3B8;"></i></div>';
+    modal.appendChild(bodyContainer);
+
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+
+    var client = getSupabase();
+    client.from('evaluacion_preguntas').select('id, orden, texto, opciones, tipo').eq('evaluacion_id', evaluacionId).order('orden').then(function(qRes) {
+        if (qRes.error || !qRes.data) {
+            bodyContainer.innerHTML = '<div style="color:#EF4444;text-align:center;padding:20px;font-weight:700;"><i class="fas fa-exclamation-triangle"></i> Error cargando preguntas</div>';
+            return;
+        }
+        var qs = qRes.data;
+        var html = '';
+
+        var correctCount = 0;
+        var totalGradeableCount = 0;
+        var ans = r.respuestas || [];
+
+        // Build answer map by pregunta_id
+        var ansMap = {};
+        for (var ak = 0; ak < ans.length; ak++) {
+            if (ans[ak] && ans[ak].pregunta_id) {
+                ansMap[ans[ak].pregunta_id] = ans[ak];
+            }
+        }
+
+        for (var aIndex = 0; aIndex < qs.length; aIndex++) {
+            var qItem = qs[aIndex];
+            var isExclude = qItem.tipo === 'oa' || qItem.tipo === 'poll' || qItem.tipo === 'encuesta';
+            if (isExclude) continue;
+            totalGradeableCount++;
+            var aItem = ansMap[qItem.id] || ans[aIndex];
+            if (aItem && aItem.correcta) {
+                correctCount++;
+            }
+        }
+        if (totalGradeableCount === 0) {
+            totalGradeableCount = r.total || qs.length || 0;
+            correctCount = Math.round(((r.porcentaje || 0) / 100) * totalGradeableCount);
+        }
+
+        html += '<div style="display:flex;gap:12px;margin-bottom:24px;">';
+        html += '<div style="flex:1;background:#F0FDF4;padding:16px;border-radius:16px;text-align:center;border:2px solid #DCFCE7;"><div style="font-size:28px;font-weight:900;color:#166534;">'+correctCount+' / '+totalGradeableCount+'</div><div style="font-size:13px;color:#15803D;font-weight:800;">Correctas</div></div>';
+        html += '<div style="flex:1;background:#EFF6FF;padding:16px;border-radius:16px;text-align:center;border:2px solid #DBEAFE;"><div style="font-size:28px;font-weight:900;color:#1E40AF;">'+r.porcentaje+'%</div><div style="font-size:13px;color:#1D4ED8;font-weight:800;">Precisión</div></div>';
+        html += '</div>';
+
+        for (var i = 0; i < qs.length; i++) {
+            var q = qs[i];
+            var a = ansMap[q.id] || ans[i];
+            var isPoll = q.tipo === 'poll' || q.tipo === 'encuesta';
+            var isCorrect = isPoll ? true : (a ? a.correcta : false);
+            var qColor = isPoll ? '#7C3AED' : (isCorrect ? '#22C55E' : '#EF4444');
+            var qBg = isPoll ? '#F5F3FF' : (isCorrect ? '#F0FDF4' : '#FEF2F2');
+            var qIcon = isPoll ? 'fa-comment-dots' : (isCorrect ? 'fa-check-circle' : 'fa-times-circle');
+
+            html += '<div style="background:'+qBg+';border:2px solid '+qColor+'40;border-radius:16px;padding:20px;margin-bottom:16px;text-align:left;">';
+            html += '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">';
+            html += '<div style="font-weight:800;color:#1E293B;font-size:1.05rem;line-height:1.4;flex:1;padding-right:12px;">' + (i+1) + '. ' + (q.texto||'') + '</div>';
+            html += '<div style="color:'+qColor+';font-size:1.4rem;"><i class="fas '+qIcon+'"></i></div>';
+            html += '</div>';
+
+            var isPollOpenRes = (q.tipo === 'poll' || q.tipo === 'encuesta') &&
+                (
+                    (a && a.es_abierta) ||
+                    !q.opciones || q.opciones.length === 0 ||
+                    q.opciones.every(function(op){ return !op.text || !op.text.trim(); })
+                );
+
+            if (isPollOpenRes) {
+                html += '<div style="margin-top:16px; padding:16px 20px; background:#F5F3FF; border:2px solid #DDD6FE; border-radius:12px;">';
+                html += '  <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">';
+                html += '    <i class="fas fa-comment-dots" style="color:#7C3AED; font-size:0.9rem;"></i>';
+                html += '    <span style="font-weight:800; color:#6D28D9; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.5px;">Respuesta de encuesta — no afecta el puntaje</span>';
+                html += '  </div>';
+                html += '  <div style="font-weight:600; color:#1E293B; font-size:0.95rem; line-height:1.5; font-style:italic;">"' + (a && a.seleccionada ? a.seleccionada : '<span style=\'color:#94A3B8;\'>Sin responder</span>') + '"</div>';
+                html += '</div>';
+            } else if (q.tipo === 'oa') {
+                html += '<div style="margin-top:16px; padding:16px 20px; background:#F5F3FF; border:2px solid #DDD6FE; border-radius:12px;">';
+                html += '  <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">';
+                html += '    <i class="fas fa-pen-nib" style="color:#7C3AED; font-size:0.9rem;"></i>';
+                html += '    <span style="font-weight:800; color:#6D28D9; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.5px;">Respuesta abierta — no afecta el puntaje</span>';
+                html += '  </div>';
+                html += '  <div style="font-weight:600; color:#1E293B; font-size:0.95rem; line-height:1.5; font-style:italic;">"' + (a && a.seleccionada ? a.seleccionada : '<span style=\'color:#94A3B8;\'>Sin responder</span>') + '"</div>';
+                html += '</div>';
+            } else if (q.tipo === 'mc' || !q.tipo || q.tipo === 'ms' || q.tipo === 'poll' || q.tipo === 'encuesta') {
+                var opts = q.opciones || [];
+                html += '<div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">';
+                for (var o = 0; o < opts.length; o++) {
+                    var isSelected = false;
+                    if (q.tipo === 'ms') {
+                        isSelected = a && a.seleccionada && a.seleccionada.indexOf(o) !== -1;
+                    } else {
+                        isSelected = a && a.seleccionada === o;
+                    }
+                    var isOptCorrect = !isPoll && opts[o].correct;
+                    var oColor = isPoll ? (isSelected ? '#7C3AED' : '#475569') : (isOptCorrect ? '#166534' : (isSelected ? '#991B1B' : '#475569'));
+                    var oBg = isPoll ? (isSelected ? '#F5F3FF' : '#FFFFFF') : (isOptCorrect ? '#DCFCE7' : (isSelected ? '#FEE2E2' : '#FFFFFF'));
+                    var oBorder = isPoll ? (isSelected ? '#C084FC' : '#CBD5E1') : (isOptCorrect ? '#86EFAC' : (isSelected ? '#FECACA' : '#CBD5E1'));
+                    var oIcon = isPoll ? (isSelected ? '<i class="fas fa-check"></i>' : '') : (isOptCorrect ? '<i class="fas fa-check"></i>' : (isSelected ? '<i class="fas fa-times"></i>' : ''));
+                    var oWeight = (isOptCorrect || isSelected) ? '800' : '600';
+
+                    html += '<div style="padding:10px 16px;background:'+oBg+';border:2px solid '+oBorder+';border-radius:12px;font-size:0.95rem;font-weight:'+oWeight+';color:'+oColor+';display:flex;justify-content:space-between;align-items:center;">';
+                    html += '<span>' + (opts[o].text||'') + '</span>';
+                    html += '<span style="font-size:1.1rem;">' + oIcon + '</span>';
+                    html += '</div>';
+                }
+                html += '</div>';
+            } else if (q.tipo === 'dnd') {
+                var imgUrl = (q.opciones && q.opciones[0]) ? q.opciones[0].pregunta_imagen : '';
+                html += '<div style="margin-top:16px; display:flex; flex-direction:column; gap:12px; align-items:center;">';
+                html += '  <img src="' + imgUrl + '" style="max-width:100%; max-height:220px; border-radius:8px; border:2px solid #E2E8F0;">';
+                html += '  <div style="display:flex; flex-direction:column; gap:6px; width:100%;">';
+                var studentMatches = {};
+                try {
+                    studentMatches = JSON.parse(a.seleccionada);
+                } catch(e) {
+                    studentMatches = {};
+                }
+                var opts = q.opciones || [];
+                for(var o=0; o<opts.length; o++) {
+                    var matchIdx = studentMatches[o];
+                    var isCorrectMatch = (matchIdx === o);
+                    var matchedText = (matchIdx !== undefined && opts[matchIdx]) ? opts[matchIdx].text : 'Sin responder';
+                    var matchColor = isCorrectMatch ? '#166534' : '#991B1B';
+                    var matchBg = isCorrectMatch ? '#DCFCE7' : '#FEE2E2';
+                    var matchBorder = isCorrectMatch ? '#86EFAC' : '#FECACA';
+                    var matchIcon = isCorrectMatch ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>';
+                    html += '<div style="padding:10px 16px;background:'+matchBg+';border:2px solid '+matchBorder+';border-radius:12px;font-size:0.95rem;font-weight:700;color:'+matchColor+';display:flex;justify-content:space-between;align-items:center;">';
+                    html += '<span>Parte ' + String.fromCharCode(65+o) + ' (' + (opts[o].text||'') + '):</span>';
+                    html += '<span>' + matchIcon + ' Tu respuesta: ' + matchedText + '</span>';
+                    html += '</div>';
+                }
+                html += '  </div>';
+                html += '</div>';
+            } else {
+                html += '<div style="margin-top:16px;padding:12px;background:#FFF;border:2px solid #E2E8F0;border-radius:12px;">';
+                html += '<div style="font-size:0.85rem;color:#64748B;font-weight:800;margin-bottom:6px;">Respuesta del estudiante:</div>';
+                html += '<div style="font-weight:700;color:#0F172A;font-size:1rem;">' + (a ? a.seleccionada : 'Sin responder') + '</div>';
+                html += '<div style="font-size:0.85rem;color:#10B981;font-weight:800;margin-top:12px;margin-bottom:6px;">Respuesta correcta esperada:</div>';
+                var respCorrecta = '';
+                if (q.tipo === 'fb') {
+                    respCorrecta = (q.opciones && q.opciones.length > 0 && q.opciones[0].text) ? q.opciones[0].text : 'Sin patrón';
+                } else {
+                    respCorrecta = q.respuesta_correcta || '';
+                }
+                html += '<div style="font-weight:700;color:#047857;font-size:1rem;">' + respCorrecta + '</div>';
+                html += '</div>';
+            }
+            html += '</div>';
+        }
+        bodyContainer.innerHTML = html;
+    });
+}
+window.openTeacherReportDetail = openTeacherReportDetail;
 
 function closeTeacherResults(){
   document.getElementById('teacher-results-overlay').classList.remove('active');
   document.body.classList.remove('loading-results');
   if(teacherResultsPoll){clearInterval(teacherResultsPoll);teacherResultsPoll=null;}
   sessionStorage.removeItem('alcocer_teacher_eval');
+  cachedQuestions = null;
   
   if (window.location.search.includes('results=true')) {
     window.location.href = '/juegos/biblioteca';
   }
 }
 
+
 function pollTeacherResults(){
   if(!evaluacionId)return;
   var client=getSupabase();
-  client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje').eq('evaluacion_id',evaluacionId).order('porcentaje',{ascending:false}).order('puntaje',{ascending:false}).then(function(r){
+  client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje,respuestas').eq('evaluacion_id',evaluacionId).order('porcentaje',{ascending:false}).order('puntaje',{ascending:false}).then(function(r){
     if(r.error||!r.data){
       document.getElementById('tr-results-list').innerHTML='<div style="padding:40px 24px;text-align:center;color:#F87171;font-size:1rem;font-weight:600"><i class="fas fa-exclamation-triangle" style="font-size:32px;margin-bottom:16px;display:block"></i>Error al cargar los resultados.</div>';
       return;
@@ -1248,6 +1481,14 @@ function pollTeacherResults(){
       var nameMap={};
       if(pRes.data){for(var n=0;n<pRes.data.length;n++){nameMap[pRes.data[n].user_id]=pRes.data[n].nombre;}}
 
+      window.teacherResults = r.data;
+      window.teacherNameMap = nameMap;
+
+      // Update question review lists in real-time
+      if (cachedQuestions) {
+        renderQuestionReviewWithAnswers(cachedQuestions);
+      }
+
       var entries=[];
       var totalPct=0;
       for(var k=0;k<r.data.length;k++){
@@ -1255,7 +1496,7 @@ function pollTeacherResults(){
         var parts = fullNombre.split('|');
         var emoji = parts.length > 1 ? parts[0] : '';
         var nombreReal = parts.length > 1 ? parts[1] : fullNombre;
-        entries.push({emoji: emoji, nombre: nombreReal, puntaje: r.data[k].puntaje, total: r.data[k].total, porcentaje: r.data[k].porcentaje});
+        entries.push({user_id: r.data[k].user_id, emoji: emoji, nombre: nombreReal, puntaje: r.data[k].puntaje, total: r.data[k].total, porcentaje: r.data[k].porcentaje});
         totalPct+=r.data[k].porcentaje;
       }
 
@@ -1294,7 +1535,7 @@ function pollTeacherResults(){
           ? ('animation-delay:' + (p*0.15) + 's') 
           : 'animation: none !important; opacity: 1 !important; transform: translateY(0) !important;';
 
-        ph+='<div class="podium-cylinder ' + rankClass + '" style="' + animStyle + '">';
+        ph+='<div class="podium-cylinder ' + rankClass + '" style="' + animStyle + '; cursor: pointer;" onclick="openTeacherReportDetail(\'' + e.user_id + '\', \'' + e.nombre.replace(/'/g, "\\'") + '\')">';
         
         // Avatar standing on top
         ph+='<div class="podium-avatar-wrapper">';
@@ -1319,7 +1560,7 @@ function pollTeacherResults(){
         var en=entries[l];
         var rankColor=l===0?'#FFD700':l===1?'#C0C0C0':l===2?'#CD7F32':'rgba(255,255,255,.4)';
         // Adds a cascade delay for sequential slide-in row animation
-        lh+='<div class="tr-row" style="animation-delay: ' + (l * 0.05) + 's">';
+        lh+='<div class="tr-row" style="animation-delay: ' + (l * 0.05) + 's; cursor: pointer;" onclick="openTeacherReportDetail(\'' + en.user_id + '\', \'' + en.nombre.replace(/'/g, "\\'") + '\')">';
         lh+='<span class="tr-col-rank" style="color:'+rankColor+'">'+(l+1)+'</span>';
         lh+='<span class="tr-col-name">'+(en.emoji?'<span>'+en.emoji+'</span>':'')+en.nombre+'</span>';
         lh+='<span class="tr-col-score">'+en.puntaje+'/'+en.total+'</span>';

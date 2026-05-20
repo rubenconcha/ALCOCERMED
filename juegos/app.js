@@ -1496,9 +1496,13 @@ function showQuizResults() {
             rhtml += '</div>';
 
             
-            // Detectar encuesta/poll abierta (sin opciones reales) para mostrar texto
+            // Detectar encuesta/poll abierta: por flag es_abierta, o porque todas las opciones están vacías
             var isPollOpen2 = (pq.tipo === 'poll' || pq.tipo === 'encuesta') &&
-                (!pq.opciones || pq.opciones.length === 0 || pq.opciones.every(function(op){ return !op.text || !op.text.trim(); }));
+                (
+                    (ans && ans.es_abierta) ||
+                    !pq.opciones || pq.opciones.length === 0 ||
+                    pq.opciones.every(function(op){ return !op.text || !op.text.trim(); })
+                );
 
             if (isPollOpen2) {
                 // ═══ Encuesta/Poll abierta: mostrar respuesta de texto ═══
@@ -1911,7 +1915,7 @@ window.openReportDetail = function(evalId, userId) {
     document.body.appendChild(overlay);
     
     var client = getSupabase();
-    client.from('evaluacion_preguntas').select('orden, texto, opciones, tipo').eq('evaluacion_id', evalId).order('orden').then(function(qRes) {
+    client.from('evaluacion_preguntas').select('id, orden, texto, opciones, tipo').eq('evaluacion_id', evalId).order('orden').then(function(qRes) {
         if(qRes.error || !qRes.data) {
             bodyContainer.innerHTML = '<div style="color:#EF4444;text-align:center;padding:20px;font-weight:700;"><i class="fas fa-exclamation-triangle"></i> Error cargando preguntas</div>';
             return;
@@ -1922,12 +1926,22 @@ window.openReportDetail = function(evalId, userId) {
         var correctCount = 0;
         var totalGradeableCount = 0;
         var ans = r.respuestas || [];
+
+        // Build answer map by pregunta_id for reliable matching
+        var ansMap = {};
+        for (var ak = 0; ak < ans.length; ak++) {
+            if (ans[ak] && ans[ak].pregunta_id) {
+                ansMap[ans[ak].pregunta_id] = ans[ak];
+            }
+        }
+
         for (var aIndex = 0; aIndex < qs.length; aIndex++) {
             var qItem = qs[aIndex];
             var isExclude = qItem.tipo === 'oa' || qItem.tipo === 'poll' || qItem.tipo === 'encuesta';
             if (isExclude) continue;
             totalGradeableCount++;
-            if (ans[aIndex] && ans[aIndex].correcta) {
+            var aItem = ansMap[qItem.id] || ans[aIndex];
+            if (aItem && aItem.correcta) {
                 correctCount++;
             }
         }
@@ -1940,10 +1954,10 @@ window.openReportDetail = function(evalId, userId) {
         html += '<div style="flex:1;background:#EFF6FF;padding:16px;border-radius:16px;text-align:center;border:2px solid #DBEAFE;"><div style="font-size:28px;font-weight:900;color:#1E40AF;">'+r.porcentaje+'%</div><div style="font-size:13px;color:#1D4ED8;font-weight:800;">Precisión</div></div>';
         html += '</div>';
         
-        var ans = r.respuestas || [];
         for(var i=0; i<qs.length; i++) {
             var q = qs[i];
-            var a = ans[i];
+            // Match answer by pregunta_id first, then fall back to index
+            var a = ansMap[q.id] || ans[i];
             var isPoll = q.tipo === 'poll' || q.tipo === 'encuesta';
             var isCorrect = isPoll ? true : (a ? a.correcta : false);
             var qColor = isPoll ? '#7C3AED' : (isCorrect ? '#22C55E' : '#EF4444');
@@ -1956,9 +1970,14 @@ window.openReportDetail = function(evalId, userId) {
             html += '<div style="color:'+qColor+';font-size:1.4rem;"><i class="fas '+qIcon+'"></i></div>';
             html += '</div>';
             
-            // Detectar encuesta/poll abierta (sin opciones reales) para mostrar texto
+            // Detectar encuesta/poll abierta: por flag es_abierta en la respuesta,
+            // o porque todas las opciones están vacías
             var isPollOpenRes = (q.tipo === 'poll' || q.tipo === 'encuesta') &&
-                (!q.opciones || q.opciones.length === 0 || q.opciones.every(function(op){ return !op.text || !op.text.trim(); }));
+                (
+                    (a && a.es_abierta) ||
+                    !q.opciones || q.opciones.length === 0 ||
+                    q.opciones.every(function(op){ return !op.text || !op.text.trim(); })
+                );
 
             if (isPollOpenRes) {
                 // ═══ Encuesta/Poll abierta: mostrar respuesta de texto ═══
