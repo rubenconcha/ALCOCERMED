@@ -97,7 +97,7 @@
       <div class="format-toolbar">
         <div class="type-selector" onclick="toggleTypeDropdown(event)">
           <span class="type-icon" id="type-selector-icon">☑️</span>
-          <span class="type-label" id="type-selector-label">Opción múltiple</span>
+          <span class="type-label" id="type-selector-label">Selección única</span>
           <i class="fas fa-caret-down"></i>
           
           <!-- Question Type Dropdown -->
@@ -105,8 +105,15 @@
             <div class="type-item" onclick="changeQuestionType('mc')">
               <span class="ti-icon">☑️</span>
               <div class="ti-text">
-                <span class="ti-name">Opción múltiple</span>
-                <span class="ti-desc">Una o más respuestas correctas</span>
+                <span class="ti-name">Selección única</span>
+                <span class="ti-desc">Solo una respuesta correcta</span>
+              </div>
+            </div>
+            <div class="type-item" onclick="changeQuestionType('ms')">
+              <span class="ti-icon">✅</span>
+              <div class="ti-text">
+                <span class="ti-name">Selección múltiple</span>
+                <span class="ti-desc">Varias respuestas correctas</span>
               </div>
             </div>
             <div class="type-item" onclick="changeQuestionType('tf')">
@@ -114,6 +121,13 @@
               <div class="ti-text">
                 <span class="ti-name">Verdadero/Falso</span>
                 <span class="ti-desc">Opciones predefinidas</span>
+              </div>
+            </div>
+            <div class="type-item" onclick="changeQuestionType('fb')">
+              <span class="ti-icon">✏️</span>
+              <div class="ti-text">
+                <span class="ti-name">Completa los espacios</span>
+                <span class="ti-desc">Estudiante escribe respuesta exacta</span>
               </div>
             </div>
             <div class="type-item" onclick="changeQuestionType('open')">
@@ -485,7 +499,7 @@
 
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="editor.js"></script>
+  <script src="editor.js?v=2"></script>
   
   <!-- PWA Service Worker Registration -->
   <script>

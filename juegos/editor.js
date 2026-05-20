@@ -18,7 +18,7 @@ var timerOptions=[15,30,60,120,300];var timerIdx=1;
 // ═══ QUESTION TYPES ═══
 var questionTypes={
   'Básico':[
-    {id:'mc',name:'Opción múltiple',icon:'☑️',css:'qi-mc'},
+    {id:'mc',name:'Selección única',icon:'☑️',css:'qi-mc'},
     {id:'ms',name:'Selección múltiple',icon:'✅',css:'qi-ms'},
     {id:'tf',name:'Verdadero o falso',icon:'🔴',css:'qi-tf'},
     {id:'fb',name:'Completa los espacios',icon:'✏️',css:'qi-fb'},
@@ -194,21 +194,36 @@ window.addEventListener('click', function(){
 function changeQuestionType(typeId){
   if(currentQuestionIndex === -1) return;
   var q = questions[currentQuestionIndex];
+  if(typeId === 'open') typeId = 'oa';
   if(q.type === typeId) return;
 
-  var typeName = "Opción múltiple";
+  var typeName = "Selección única";
   var typeIcon = "☑️";
   var opts = q.options;
 
   if(typeId==='tf'){
     opts=[{text:'Verdadero',correct:false,color:'ac-blue'},{text:'Falso',correct:false,color:'ac-pink'}];
     typeName = "Verdadero/Falso"; typeIcon = "⚖️";
-  } else if(typeId==='open' || typeId==='oa'){
-    typeId = 'oa'; opts=[]; typeName = "Respuesta abierta"; typeIcon = "📝";
+  } else if(typeId==='oa'){
+    opts=[]; typeName = "Respuesta abierta"; typeIcon = "📝";
+  } else if(typeId==='fb'){
+    opts=[]; typeName = "Completa los espacios"; typeIcon = "✏️";
   } else if(typeId==='poll'){
     typeName = "Encuesta"; typeIcon = "📊";
+  } else if(typeId==='ms'){
+    typeName = "Selección múltiple"; typeIcon = "✅";
+    q.multipleCorrect = true;
+    var multiToggle = document.getElementById('multi-toggle');
+    if(multiToggle) multiToggle.classList.add('on');
+    if(q.type === 'tf' || q.type === 'oa' || q.type === 'fb') {
+       opts=[{text:'',correct:false,color:'ac-blue'},{text:'',correct:false,color:'ac-teal'},{text:'',correct:false,color:'ac-yellow'},{text:'',correct:false,color:'ac-pink'}];
+    }
   } else {
-    // mc or others
+    typeId = 'mc';
+    typeName = "Selección única"; typeIcon = "☑️";
+    q.multipleCorrect = false;
+    var multiToggle = document.getElementById('multi-toggle');
+    if(multiToggle) multiToggle.classList.remove('on');
     if(q.type === 'tf' || q.type === 'oa' || q.type === 'fb') {
        opts=[{text:'',correct:false,color:'ac-blue'},{text:'',correct:false,color:'ac-teal'},{text:'',correct:false,color:'ac-yellow'},{text:'',correct:false,color:'ac-pink'}];
     }
@@ -356,8 +371,14 @@ function addOption(){
   renderAnswerOptions();
 }
 function toggleMultipleAnswers(){
-  var q=questions[currentQuestionIndex];q.multipleCorrect=!q.multipleCorrect;
+  var q=questions[currentQuestionIndex];
+  q.multipleCorrect=!q.multipleCorrect;
+  if(q.type === 'mc' || q.type === 'ms') {
+    q.type = q.multipleCorrect ? 'ms' : 'mc';
+    updateTypeLabel(q.type);
+  }
   document.getElementById('multi-toggle').classList.toggle('on',q.multipleCorrect);
+  renderQuestionThumbs();
 }
 function insertBlank(){
   var inp=document.getElementById('q-text-input');
@@ -402,6 +423,14 @@ function renderQuestionThumbs(){
 function selectQuestion(idx){
   currentQuestionIndex=idx;
   var q=questions[idx];
+  
+  // Align type with multipleCorrect
+  if (q.type === 'mc' && q.multipleCorrect) {
+    q.type = 'ms';
+  } else if (q.type === 'ms' && !q.multipleCorrect) {
+    q.type = 'mc';
+  }
+  
   showEditor();
   updateTypeLabel(q.type);
   document.getElementById('q-text-input').value=q.text||'';
