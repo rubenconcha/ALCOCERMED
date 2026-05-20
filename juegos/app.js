@@ -987,6 +987,46 @@ function renderQuizQuestion() {
         html += '<button onclick="submitQuizOpen()" style="margin-top:16px;padding:16px 24px;background:#2563EB;' +
             'color:#fff;border:none;border-radius:14px;font-weight:800;cursor:pointer;width:100%;font-size:1.2rem;box-shadow:0 6px 0 #1D4ED8;">Enviar respuesta</button>';
     }
+    // Identificar partes (DND)
+    else if (tipo === 'dnd') {
+        var imgUrl = (opciones && opciones[0]) ? opciones[0].pregunta_imagen : '';
+        quizSelectedDndLabel = -1;
+        quizDndMatches = {};
+        
+        html += '<div style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">';
+        html += '  <p style="color:#fff; font-size:1.1rem; font-weight:800; text-align:center; background:rgba(0,0,0,0.3); padding:8px 16px; border-radius:10px;"><i class="fas fa-hand-pointer"></i> Toca una etiqueta de abajo y luego el círculo `?` correspondiente en la imagen:</p>';
+        
+        html += '  <div style="position:relative; display:inline-block; max-width:100%; border-radius:16px; overflow:hidden; border:4px solid rgba(255,255,255,0.2); background:#2D1B4E; box-shadow:0 12px 36px rgba(0,0,0,0.4);" id="dnd-student-container">';
+        html += '    <img src="' + imgUrl + '" style="max-width:100%; max-height:380px; display:block; user-select:none; pointer-events:none;">';
+        
+        for (var i = 0; i < opciones.length; i++) {
+            var o = opciones[i];
+            if (o.pinX !== undefined && o.pinY !== undefined) {
+                html += '    <div class="quiz-dnd-slot" id="dnd-slot-' + i + '" data-idx="' + i + '" onclick="clickDndSlot(' + i + ')" ' +
+                    'style="position:absolute; left:' + o.pinX + '%; top:' + o.pinY + '%; transform:translate(-50%, -50%); ' +
+                    'width:36px; height:36px; border-radius:50%; background:#fff; border:3px solid #E2E8F0; ' +
+                    'color:#334155; display:flex; align-items:center; justify-content:center; font-weight:900; ' +
+                    'font-size:1rem; cursor:pointer; box-shadow:0 6px 16px rgba(0,0,0,0.35); transition:all 0.2s; z-index:100;">?</div>';
+            }
+        }
+        html += '  </div>';
+        
+        html += '  <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:12px;" id="dnd-labels-container">';
+        for (var j = 0; j < opciones.length; j++) {
+            var bgColor = optColors[j % optColors.length];
+            html += '    <button class="quiz-opt-btn quiz-dnd-label-btn" id="dnd-label-' + j + '" data-idx="' + j + '" onclick="clickDndLabel(' + j + ')" ' +
+                'style="padding:16px 20px; border:none; border-radius:12px; background:' + bgColor + '; color:#fff; text-align:center; ' +
+                'font-size:1.05rem; font-weight:800; cursor:pointer; transition:all 0.2s; box-shadow:inset 0 -4px 0 rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.2);">' +
+                String.fromCharCode(65 + j) + '. ' + (opciones[j].text || '') + '</button>';
+        }
+        html += '  </div>';
+        
+        html += '  <button id="quiz-confirm-dnd" onclick="confirmQuizDnd()" disabled style="margin-top:16px; padding:16px 32px; ' +
+            'background:#94A3B8; color:#fff; border:none; border-radius:14px; font-weight:800; cursor:not-allowed; font-size:1.2rem; box-shadow:0 6px 0 #64748B; width:100%; transition:all 0.2s;">' +
+            '✓ Enviar respuestas</button>';
+        
+        html += '</div>';
+    }
     // Multiple selection
     else if (tipo === 'ms') {
         for (var i = 0; i < opciones.length; i++) {
@@ -1391,6 +1431,33 @@ function showQuizResults() {
                     rhtml += '<span style="color:'+optColor+'; font-weight:900;">' + icon2 + '</span>';
                     rhtml += '</div>';
                 }
+                rhtml += '</div>';
+            } else if (pq.tipo === 'dnd') {
+                var imgUrl = (pq.opciones && pq.opciones[0]) ? pq.opciones[0].pregunta_imagen : '';
+                rhtml += '<div style="margin-top:16px; display:flex; flex-direction:column; gap:12px; align-items:center;">';
+                rhtml += '  <img src="' + imgUrl + '" style="max-width:100%; max-height:220px; border-radius:8px; border:2px solid #E2E8F0;">';
+                rhtml += '  <div style="display:flex; flex-direction:column; gap:6px; width:100%;">';
+                var studentMatches = {};
+                try {
+                    studentMatches = JSON.parse(ans.seleccionada);
+                } catch(e) {
+                    studentMatches = {};
+                }
+                var opts = pq.opciones || [];
+                for(var o=0; o<opts.length; o++) {
+                    var matchIdx = studentMatches[o];
+                    var isCorrectMatch = (matchIdx === o);
+                    var matchedText = (matchIdx !== undefined && opts[matchIdx]) ? opts[matchIdx].text : 'Sin responder';
+                    var matchColor = isCorrectMatch ? '#22C55E' : '#EF4444';
+                    var matchBg = isCorrectMatch ? '#F0FDF4' : '#FEF2F2';
+                    var matchBorder = isCorrectMatch ? '#86EFAC' : '#FECACA';
+                    var matchIcon = isCorrectMatch ? 'fa-check' : 'fa-times';
+                    rhtml += '    <div style="padding:10px 16px; border:2px solid '+matchBorder+'; background:'+matchBg+'; border-radius:8px; color:#334155; display:flex; justify-content:space-between; align-items:center;">';
+                    rhtml += '      <span style="font-weight:700;">Parte ' + String.fromCharCode(65+o) + ' (' + (opts[o].text||'') + '):</span>';
+                    rhtml += '      <span style="color:'+matchColor+'; font-weight:800;"><i class="fas '+matchIcon+'"></i> Tu respuesta: ' + matchedText + '</span>';
+                    rhtml += '    </div>';
+                }
+                rhtml += '  </div>';
                 rhtml += '</div>';
             } else if (pq.tipo === 'oa' || pq.tipo === 'fb') {
                 rhtml += '<div style="margin-top:16px; padding:12px; background:#F8FAFC; border:2px solid #E2E8F0; border-radius:8px;">';
@@ -1801,6 +1868,33 @@ window.openReportDetail = function(evalId, userId) {
                     html += '<span style="font-size:1.1rem;">' + oIcon + '</span>';
                     html += '</div>';
                 }
+                html += '</div>';
+            } else if (q.tipo === 'dnd') {
+                var imgUrl = (q.opciones && q.opciones[0]) ? q.opciones[0].pregunta_imagen : '';
+                html += '<div style="margin-top:16px; display:flex; flex-direction:column; gap:12px; align-items:center;">';
+                html += '  <img src="' + imgUrl + '" style="max-width:100%; max-height:220px; border-radius:8px; border:2px solid #E2E8F0;">';
+                html += '  <div style="display:flex; flex-direction:column; gap:6px; width:100%;">';
+                var studentMatches = {};
+                try {
+                    studentMatches = JSON.parse(a.seleccionada);
+                } catch(e) {
+                    studentMatches = {};
+                }
+                var opts = q.opciones || [];
+                for(var o=0; o<opts.length; o++) {
+                    var matchIdx = studentMatches[o];
+                    var isCorrectMatch = (matchIdx === o);
+                    var matchedText = (matchIdx !== undefined && opts[matchIdx]) ? opts[matchIdx].text : 'Sin responder';
+                    var matchColor = isCorrectMatch ? '#166534' : '#991B1B';
+                    var matchBg = isCorrectMatch ? '#DCFCE7' : '#FEE2E2';
+                    var matchBorder = isCorrectMatch ? '#86EFAC' : '#FECACA';
+                    var matchIcon = isCorrectMatch ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>';
+                    html += '<div style="padding:10px 16px;background:'+matchBg+';border:2px solid '+matchBorder+';border-radius:12px;font-size:0.95rem;font-weight:700;color:'+matchColor+';display:flex;justify-content:space-between;align-items:center;">';
+                    html += '<span>Parte ' + String.fromCharCode(65+o) + ' (' + (opts[o].text||'') + '):</span>';
+                    html += '<span>' + matchIcon + ' Tu respuesta: ' + matchedText + '</span>';
+                    html += '</div>';
+                }
+                html += '  </div>';
                 html += '</div>';
             } else {
                 html += '<div style="margin-top:16px;padding:12px;background:#FFF;border:2px solid #E2E8F0;border-radius:12px;">';
@@ -2220,3 +2314,167 @@ function updateThemeIcon(theme) {
     }
 }
 document.addEventListener('DOMContentLoaded', initTheme);
+
+// ═══ IDENTIFICAR PARTES (DND) STUDENT GAMEPLAY HELPERS ═══
+var quizSelectedDndLabel = -1;
+var quizDndMatches = {};
+
+function clickDndLabel(idx) {
+    if (quizConfirmed) return;
+    var buttons = document.querySelectorAll('.quiz-dnd-label-btn');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].style.filter = 'brightness(1.0)';
+        buttons[i].style.transform = 'scale(1.0)';
+    }
+    quizSelectedDndLabel = idx;
+    var activeBtn = document.getElementById('dnd-label-' + idx);
+    if(activeBtn) {
+        activeBtn.style.filter = 'brightness(1.2) saturate(1.2)';
+        activeBtn.style.transform = 'scale(1.08)';
+    }
+}
+
+function clickDndSlot(slotIdx) {
+    if (quizConfirmed) return;
+    if (quizSelectedDndLabel === -1) {
+        playErrorSound();
+        var banner = document.createElement('div');
+        banner.style.position = 'fixed';
+        banner.style.bottom = '24px';
+        banner.style.left = '50%';
+        banner.style.transform = 'translateX(-50%)';
+        banner.style.background = '#EF4444';
+        banner.style.color = '#fff';
+        banner.style.padding = '12px 24px';
+        banner.style.borderRadius = '12px';
+        banner.style.zIndex = '99999';
+        banner.style.fontWeight = '800';
+        banner.textContent = '⚠️ Primero selecciona una etiqueta de abajo';
+        document.body.appendChild(banner);
+        setTimeout(function(){ if(banner.parentNode) banner.parentNode.removeChild(banner); }, 2000);
+        return;
+    }
+    
+    var labelIdx = quizSelectedDndLabel;
+    quizDndMatches[slotIdx] = labelIdx;
+    
+    var slotEl = document.getElementById('dnd-slot-' + slotIdx);
+    if(slotEl) {
+        var optColors = ['#E91E63', '#2563EB', '#E6A15C', '#059669', '#7C3AED', '#0D9488'];
+        var color = optColors[labelIdx % optColors.length];
+        
+        slotEl.style.background = color;
+        slotEl.style.borderColor = '#fff';
+        slotEl.style.color = '#fff';
+        slotEl.textContent = String.fromCharCode(65 + labelIdx);
+        slotEl.style.transform = 'translate(-50%, -50%) scale(1.15)';
+        setTimeout(function(){ slotEl.style.transform = 'translate(-50%, -50%) scale(1)'; }, 150);
+    }
+    
+    playBeep(600, 'sine', 0.1);
+    
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var slotsCount = 0;
+    pregunta.opciones.forEach(function(o){
+        if(o.pinX !== undefined && o.pinY !== undefined) slotsCount++;
+    });
+    
+    var filledCount = 0;
+    for(var sIdx = 0; sIdx < pregunta.opciones.length; sIdx++){
+        if(quizDndMatches[sIdx] !== undefined) filledCount++;
+    }
+    
+    var submitBtn = document.getElementById('quiz-confirm-dnd');
+    if(submitBtn) {
+        if(filledCount === slotsCount) {
+            submitBtn.disabled = false;
+            submitBtn.style.background = '#22C55E';
+            submitBtn.style.boxShadow = '0 6px 0 #16A34A';
+            submitBtn.style.cursor = 'pointer';
+        } else {
+            submitBtn.disabled = true;
+            submitBtn.style.background = '#94A3B8';
+            submitBtn.style.boxShadow = '0 6px 0 #64748B';
+            submitBtn.style.cursor = 'not-allowed';
+        }
+    }
+    
+    var buttons = document.querySelectorAll('.quiz-dnd-label-btn');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].style.filter = 'brightness(1.0)';
+        buttons[i].style.transform = 'scale(1.0)';
+    }
+    quizSelectedDndLabel = -1;
+}
+
+function confirmQuizDnd() {
+    if(quizConfirmed) return;
+    quizConfirmed = true;
+    if (quizTimerInterval) clearInterval(quizTimerInterval);
+    
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var opciones = pregunta.opciones || [];
+    var allCorrect = true;
+    
+    for (var i = 0; i < opciones.length; i++) {
+        var slotEl = document.getElementById('dnd-slot-' + i);
+        if(!slotEl) continue;
+        
+        var isCorrect = (quizDndMatches[i] === i);
+        if(!isCorrect) allCorrect = false;
+        
+        if (isCorrect) {
+            slotEl.style.background = '#22C55E';
+            slotEl.style.borderColor = '#fff';
+            slotEl.innerHTML = '<i class="fas fa-check" style="font-size:0.8rem;"></i>';
+        } else {
+            slotEl.style.background = '#EF4444';
+            slotEl.style.borderColor = '#fff';
+            slotEl.innerHTML = '<i class="fas fa-times" style="font-size:0.8rem;"></i>';
+            
+            var correctLetter = String.fromCharCode(65 + i);
+            var helper = document.createElement('div');
+            helper.style.position = 'absolute';
+            helper.style.left = '50%';
+            helper.style.top = '-20px';
+            helper.style.transform = 'translateX(-50%)';
+            helper.style.background = '#22C55E';
+            helper.style.color = '#fff';
+            helper.style.fontSize = '0.7rem';
+            helper.style.fontWeight = '900';
+            helper.style.padding = '2px 6px';
+            helper.style.borderRadius = '4px';
+            helper.style.whiteSpace = 'nowrap';
+            helper.textContent = 'Es: ' + correctLetter;
+            slotEl.appendChild(helper);
+        }
+    }
+    
+    var labelBtns = document.querySelectorAll('.quiz-dnd-label-btn');
+    labelBtns.forEach(function(b){
+        b.style.opacity = '0.4';
+        b.style.pointerEvents = 'none';
+    });
+    
+    var submitBtn = document.getElementById('quiz-confirm-dnd');
+    if(submitBtn) {
+        submitBtn.style.display = 'none';
+    }
+    
+    var pts = getQuizPoints(allCorrect, pregunta);
+    quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: JSON.stringify(quizDndMatches), correcta: allCorrect, puntos_ganados: pts });
+    
+    var timerBar = document.getElementById('quiz-timer-bar');
+    if(timerBar) {
+        var computedWidth = window.getComputedStyle(timerBar).width;
+        timerBar.style.transition = 'none';
+        timerBar.style.width = computedWidth;
+    }
+
+    showFeedbackAnimation(allCorrect, pts);
+}
+
+window.clickDndLabel = clickDndLabel;
+window.clickDndSlot = clickDndSlot;
+window.confirmQuizDnd = confirmQuizDnd;
+

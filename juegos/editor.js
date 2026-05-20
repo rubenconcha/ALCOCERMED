@@ -26,7 +26,7 @@ var questionTypes={
     {id:'poll',name:'Encuesta',icon:'📊',css:'qi-poll'}
   ],
   'Interactivo y de orden superior':[
-    {id:'dnd',name:'Arrastra y suelta',icon:'🖐️',css:'qi-dnd'},
+    {id:'dnd',name:'Identificar partes',icon:'🖐️',css:'qi-dnd'},
     {id:'cat',name:'Categorizar',icon:'📊',css:'qi-cat'},
     {id:'ro',name:'Reordenar',icon:'⬇️',css:'qi-ro'},
     {id:'mt',name:'Relacionar',icon:'🔗',css:'qi-mt'}
@@ -210,6 +210,14 @@ function changeQuestionType(typeId){
     opts=[]; typeName = "Completa los espacios"; typeIcon = "✏️";
   } else if(typeId==='poll'){
     typeName = "Encuesta"; typeIcon = "📊";
+  } else if(typeId==='dnd'){
+    typeName = "Identificar partes"; typeIcon = "🖐️";
+    if(q.type === 'tf' || q.type === 'oa' || q.type === 'fb') {
+       opts=[{text:'',correct:true,color:'ac-blue'},{text:'',correct:true,color:'ac-teal'},{text:'',correct:true,color:'ac-yellow'},{text:'',correct:true,color:'ac-pink'}];
+    } else {
+       // Make sure all options are flagged correct (since they all represent matches!)
+       opts.forEach(function(o){ o.correct = true; });
+    }
   } else if(typeId==='ms'){
     typeName = "Selección múltiple"; typeIcon = "✅";
     q.multipleCorrect = true;
@@ -312,6 +320,68 @@ function renderAnswerOptions(){
   // Open ended — show text area preview
   if(q.type==='oa'){
     c.innerHTML='<div style="display:flex;gap:16px;width:100%"><div style="flex:1;background:#2D1B4E;border-radius:12px;min-height:120px;display:flex;align-items:center;justify-content:center;padding:20px"><span style="color:rgba(255,255,255,.4);font-size:14px">Escriba la pregunta aquí</span></div><div style="flex:1;background:#fff;border:1px solid #E4E6EF;border-radius:12px;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px"><span style="color:#8E90A6;font-size:14px">Estudiantes escribirán su respuesta aquí</span><span style="color:#CCC;font-size:11px;margin-top:8px">3000 límite de caracteres</span></div></div>';
+    return;
+  }
+  // Identificar partes (Drag and Drop image labeling)
+  if(q.type === 'dnd'){
+    var imageVal = (q.options && q.options[0]) ? (q.options[0].pregunta_imagen || '') : '';
+    
+    var html = '<div style="width:100%; display:flex; flex-direction:column; gap:20px; background:#fff; border:1px solid #E4E6EF; border-radius:16px; padding:24px;">';
+    
+    html += '<div>';
+    html += '  <label style="font-weight:800; color:#1E293B; display:block; margin-bottom:8px;"><i class="fas fa-image" style="color:#7C3AED;"></i> 1. Pega la URL de la imagen de Anatomía (ej. huesos, músculos, etc.):</label>';
+    html += '  <input type="text" id="dnd-image-input" value="' + imageVal.replace(/"/g, '&quot;') + '" placeholder="https://ejemplo.com/imagen.jpg" style="width:100%; padding:12px 16px; border:2px solid #E2E8F0; border-radius:10px; font-size:0.95rem; font-weight:600; outline:none;" onchange="updateDndImage(this.value)">';
+    html += '</div>';
+    
+    if(imageVal){
+      html += '<div style="text-align:center;">';
+      html += '  <label style="font-weight:800; color:#1E293B; display:block; margin-bottom:4px;"><i class="fas fa-map-marker-alt" style="color:#E91E63;"></i> 2. Ubica las etiquetas en la imagen:</label>';
+      html += '  <p style="color:#64748B; font-size:0.8rem; margin-bottom:12px;">Haz clic en el botón "📍 Ubicar" de una respuesta y luego haz clic en el lugar correspondiente de la imagen.</p>';
+      
+      html += '  <div id="dnd-map-container" style="position:relative; display:inline-block; max-width:550px; border-radius:12px; overflow:hidden; border:3px solid #E2E8F0; background:#F8FAFC; cursor:crosshair;" onclick="handleDndImageClick(event)">';
+      html += '    <img src="' + imageVal + '" style="max-width:100%; display:block; user-select:none; pointer-events:none;" id="dnd-preview-img">';
+      
+      for(var i=0; i<q.options.length; i++){
+        var o = q.options[i];
+        if(o.pinX !== undefined && o.pinY !== undefined){
+          var colors = {
+            'ac-blue': '#2563EB', 'ac-teal': '#0D9488', 'ac-yellow': '#D97706', 'ac-pink': '#DC2626', 'ac-purple': '#7C3AED', 'ac-green': '#059669'
+          };
+          var pinColor = colors[o.color] || '#E91E63';
+          html += '    <div style="position:absolute; left:' + o.pinX + '%; top:' + o.pinY + '%; transform:translate(-50%, -50%); width:32px; height:32px; border-radius:50%; background:' + pinColor + '; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; border:3px solid #fff; box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:10;">' + String.fromCharCode(65+i) + '</div>';
+        }
+      }
+      
+      html += '  </div>';
+      html += '</div>';
+    }
+    
+    html += '<div>';
+    html += '  <label style="font-weight:800; color:#1E293B; display:block; margin-bottom:12px;"><i class="fas fa-list-ol" style="color:#0EA5E9;"></i> 3. Nombres de las partes y su botón de ubicación:</label>';
+    html += '  <div style="display:flex; flex-direction:column; gap:12px;">';
+    
+    for(var i=0; i<q.options.length; i++){
+      var o = q.options[i];
+      var isLocating = (activeLocatingOption === i);
+      var pinPlaced = (o.pinX !== undefined && o.pinY !== undefined);
+      
+      html += '    <div class="answer-card ' + o.color + '" style="display:flex; align-items:center; gap:12px; padding:12px 16px;">';
+      html += '      <button class="ac-delete" onclick="removeOption(' + i + ')"><i class="fas fa-trash"></i></button>';
+      html += '      <span style="font-weight:800; color:#fff; font-size:1.1rem; flex-shrink:0;">' + String.fromCharCode(65+i) + '</span>';
+      html += '      <input class="ac-input" placeholder="Nombre de esta parte..." value="' + (o.text || '').replace(/"/g, '&quot;') + '" oninput="updateOption(' + i + ',this.value)" style="flex:1;">';
+      
+      html += '      <button onclick="startDndLocate(' + i + ')" style="padding:8px 16px; border-radius:8px; border:none; background:' + (isLocating ? '#EF4444' : '#fff') + '; color:' + (isLocating ? '#fff' : '#0F172A') + '; font-weight:800; font-size:0.85rem; cursor:pointer; display:flex; align-items:center; gap:6px; box-shadow:0 2px 6px rgba(0,0,0,0.15); transition:all 0.2s;">';
+      html += '        <i class="fas fa-map-marker-alt"></i> ' + (isLocating ? 'Haciendo clic...' : (pinPlaced ? '📍 Reubicar' : '📍 Ubicar'));
+      html += '      </button>';
+      html += '    </div>';
+    }
+    
+    html += '  </div>';
+    html += '</div>';
+    
+    html += '</div>';
+    
+    c.innerHTML = html;
     return;
   }
   // Fill in blanks
@@ -455,8 +525,18 @@ function saveQuestion(){
   var inp=document.getElementById('q-text-input');
   if(inp)q.text=inp.value;
   if(!q.text||!q.text.trim()){showToast('Escribe el texto de la pregunta','error');return;}
-  // Validate correct answer (except poll/oa/fb)
-  if(q.type!=='poll'&&q.type!=='oa'&&q.type!=='fb'){
+  // Validate correct answer (except poll/oa/fb/dnd)
+  if(q.type === 'dnd'){
+    var imgVal = (q.options && q.options[0]) ? q.options[0].pregunta_imagen : '';
+    if(!imgVal || !imgVal.trim()){showToast('Agrega la URL de la imagen para identificar partes','error');return;}
+    for(var i=0; i<q.options.length; i++){
+      if(q.options[i].pinX === undefined || q.options[i].pinY === undefined){
+        showToast('Ubica la posición en la imagen para la opción ' + String.fromCharCode(65+i),'error');
+        return;
+      }
+    }
+  }
+  if(q.type!=='poll'&&q.type!=='oa'&&q.type!=='fb'&&q.type!=='dnd'){
     var hasC=false;for(var i=0;i<q.options.length;i++){if(q.options[i].correct)hasC=true;}
     if(!hasC){showToast('Selecciona al menos una respuesta correcta','error');return;}
   }
@@ -1084,6 +1164,48 @@ function renderPvQuestion(){
       'color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;width:100%">Enviar respuesta</button>';
     document.getElementById('pv-options').innerHTML=html;
   }
+  // Identificar partes:
+  else if(q.type==='dnd'){
+    var imgUrl = (opts && opts[0]) ? opts[0].pregunta_imagen : '';
+    pvSelectedDndLabel = -1;
+    pvDndMatches = {};
+    
+    html += '<div style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">';
+    html += '  <p style="color:#fff; font-size:0.95rem; font-weight:800; text-align:center; background:rgba(255,255,255,0.08); padding:8px 16px; border-radius:10px;"><i class="fas fa-hand-pointer"></i> Vista Previa: Toca una etiqueta y luego haz clic en el círculo `?` en la imagen:</p>';
+    
+    html += '  <div style="position:relative; display:inline-block; max-width:100%; border-radius:12px; overflow:hidden; border:3px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.05);">';
+    html += '    <img src="' + imgUrl + '" style="max-width:100%; max-height:260px; display:block; user-select:none; pointer-events:none;">';
+    
+    for (var i = 0; i < opts.length; i++) {
+        var o = opts[i];
+        if (o.pinX !== undefined && o.pinY !== undefined) {
+            html += '  <div class="pv-dnd-slot" id="pv-slot-' + i + '" onclick="pvClickSlot(' + i + ')" ' +
+                'style="position:absolute; left:' + o.pinX + '%; top:' + o.pinY + '%; transform:translate(-50%, -50%); ' +
+                'width:30px; height:30px; border-radius:50%; background:#fff; border:2px solid #E2E8F0; ' +
+                'color:#334155; display:flex; align-items:center; justify-content:center; font-weight:900; ' +
+                'font-size:0.85rem; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.3); z-index:100;">?</div>';
+        }
+    }
+    html += '  </div>';
+    
+    html += '  <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:8px;">';
+    for (var j = 0; j < opts.length; j++) {
+        var bg = optColors[j % optColors.length];
+        html += '    <button class="pv-dnd-label-btn" id="pv-label-' + j + '" onclick="pvClickLabel(' + j + ')" ' +
+            'style="padding:10px 14px; border:none; border-radius:8px; background:' + bg + '; color:#fff; text-align:center; ' +
+            'font-size:0.9rem; font-weight:800; cursor:pointer; transition:all 0.2s;">' +
+            String.fromCharCode(65 + j) + '. ' + (opts[j].text || '') + '</button>';
+    }
+    html += '  </div>';
+    
+    html += '  <button id="pv-confirm-dnd-btn" onclick="pvConfirmDnd()" disabled style="margin-top:12px; padding:12px 24px; ' +
+        'background:#94A3B8; color:#fff; border:none; border-radius:10px; font-weight:800; cursor:not-allowed; font-size:1rem; width:100%; transition:all 0.2s;">';
+    html += '✓ Enviar respuestas</button>';
+    
+    html += '</div>';
+    
+    document.getElementById('pv-options').innerHTML=html;
+  }
   // Multiple selection: allow clicking multiple
   else if(q.type==='ms'){
     for(var i=0;i<opts.length;i++){
@@ -1464,3 +1586,148 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 document.addEventListener('DOMContentLoaded', initThemeEditor);
+
+// ═══ IDENTIFICAR PARTES (DND) HELPERS ═══
+var activeLocatingOption = -1;
+
+function updateDndImage(val){
+  var q = questions[currentQuestionIndex];
+  if(!q.options) q.options = [];
+  q.options.forEach(function(o){
+    o.pregunta_imagen = val;
+  });
+  renderAnswerOptions();
+}
+
+function startDndLocate(idx){
+  activeLocatingOption = idx;
+  renderAnswerOptions();
+}
+
+function handleDndImageClick(event){
+  if(activeLocatingOption === -1) return;
+  var container = document.getElementById('dnd-map-container');
+  if(!container) return;
+  var rect = container.getBoundingClientRect();
+  var x = ((event.clientX - rect.left) / rect.width) * 100;
+  var y = ((event.clientY - rect.top) / rect.height) * 100;
+  x = Math.round(x * 100) / 100;
+  y = Math.round(y * 100) / 100;
+  var q = questions[currentQuestionIndex];
+  q.options[activeLocatingOption].pinX = x;
+  q.options[activeLocatingOption].pinY = y;
+  q.options[activeLocatingOption].correct = true;
+  activeLocatingOption = -1;
+  renderAnswerOptions();
+}
+
+window.updateDndImage = updateDndImage;
+window.startDndLocate = startDndLocate;
+window.handleDndImageClick = handleDndImageClick;
+
+// ═══ DND PREVIEW (VISTA PREVIA) HELPERS ═══
+var pvSelectedDndLabel = -1;
+var pvDndMatches = {};
+
+function pvClickLabel(idx) {
+  var buttons = document.querySelectorAll('.pv-dnd-label-btn');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].style.filter = 'brightness(1.0)';
+    buttons[i].style.transform = 'scale(1.0)';
+  }
+  pvSelectedDndLabel = idx;
+  var btn = document.getElementById('pv-label-' + idx);
+  if(btn) {
+    btn.style.filter = 'brightness(1.2)';
+    btn.style.transform = 'scale(1.06)';
+  }
+}
+
+function pvClickSlot(slotIdx) {
+  if (pvSelectedDndLabel === -1) return;
+  var labelIdx = pvSelectedDndLabel;
+  pvDndMatches[slotIdx] = labelIdx;
+  
+  var slotEl = document.getElementById('pv-slot-' + slotIdx);
+  if(slotEl) {
+    var optColors = ['#E91E63', '#2563EB', '#E6A15C', '#059669', '#7C3AED', '#0D9488'];
+    var color = optColors[labelIdx % optColors.length];
+    slotEl.style.background = color;
+    slotEl.style.borderColor = '#fff';
+    slotEl.style.color = '#fff';
+    slotEl.textContent = String.fromCharCode(65 + labelIdx);
+  }
+  
+  var q = questions[pvIdx];
+  var slotsCount = 0;
+  q.options.forEach(function(o){
+    if(o.pinX !== undefined && o.pinY !== undefined) slotsCount++;
+  });
+  
+  var filledCount = 0;
+  for(var sIdx = 0; sIdx < q.options.length; sIdx++){
+    if(pvDndMatches[sIdx] !== undefined) filledCount++;
+  }
+  
+  var submitBtn = document.getElementById('pv-confirm-dnd-btn');
+  if(submitBtn) {
+    if(filledCount === slotsCount) {
+      submitBtn.disabled = false;
+      submitBtn.style.background = '#22C55E';
+      submitBtn.style.cursor = 'pointer';
+    } else {
+      submitBtn.disabled = true;
+      submitBtn.style.background = '#94A3B8';
+      submitBtn.style.cursor = 'not-allowed';
+    }
+  }
+  
+  var buttons = document.querySelectorAll('.pv-dnd-label-btn');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].style.filter = 'brightness(1.0)';
+    buttons[i].style.transform = 'scale(1.0)';
+  }
+  pvSelectedDndLabel = -1;
+}
+
+function pvConfirmDnd() {
+  if(pvTimerInterval) clearInterval(pvTimerInterval);
+  var q = questions[pvIdx];
+  var opts = q.options || [];
+  var allCorrect = true;
+  
+  for (var i = 0; i < opts.length; i++) {
+    var slotEl = document.getElementById('pv-slot-' + i);
+    if(!slotEl) continue;
+    var isCorrect = (pvDndMatches[i] === i);
+    if(!isCorrect) allCorrect = false;
+    
+    if (isCorrect) {
+      slotEl.style.background = '#22C55E';
+      slotEl.style.borderColor = '#fff';
+      slotEl.innerHTML = '<i class="fas fa-check" style="font-size:0.7rem;"></i>';
+    } else {
+      slotEl.style.background = '#EF4444';
+      slotEl.style.borderColor = '#fff';
+      slotEl.innerHTML = '<i class="fas fa-times" style="font-size:0.7rem;"></i>';
+    }
+  }
+  
+  var labelBtns = document.querySelectorAll('.pv-dnd-label-btn');
+  labelBtns.forEach(function(b){
+    b.style.opacity = '0.4';
+    b.style.pointerEvents = 'none';
+  });
+  
+  var submitBtn = document.getElementById('pv-confirm-dnd-btn');
+  if(submitBtn) submitBtn.style.display = 'none';
+  
+  pvAnswers.push({correcta:allCorrect});
+  document.getElementById('pv-next-btn').style.display='block';
+  document.getElementById('pv-next-btn').textContent=pvIdx>=questions.length-1?'🏆 Ver resultados':'Siguiente →';
+}
+
+window.pvClickLabel = pvClickLabel;
+window.pvClickSlot = pvClickSlot;
+window.pvConfirmDnd = pvConfirmDnd;
+
