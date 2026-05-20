@@ -68,12 +68,10 @@ function initEditor(){
 
 // ═══ CREATE / LOAD EVALUATION ═══
 function createNewEvaluation(){
-  var client=getSupabase();
-  client.from('evaluaciones').insert({titulo:'Cuestionario sin título',created_by:currentUser.id,publicado:false}).select().then(function(r){
-    if(r.error){console.error(r.error);showToast('Error al crear evaluación','error');return;}
-    evaluacionId=r.data[0].id;
-    showToast('Borrador creado','success');
-  });
+  // Solo inicializar estado local — NO insertar en Supabase hasta que el usuario presione "Guardar"
+  evaluacionId=null;
+  questions=[];
+  showToast('Nuevo borrador — Presiona Guardar para almacenar','success');
 }
 
 function loadExistingEvaluation(id){
@@ -116,16 +114,8 @@ function loadExistingEvaluation(id){
 }
 
 function saveQuizTitle() {
-  if(!evaluacionId) return;
-  var titulo = document.getElementById('quiz-title-input').value || 'Cuestionario sin título';
-  var client = getSupabase();
-  client.from('evaluaciones').update({titulo: titulo, updated_at: new Date().toISOString()}).eq('id', evaluacionId).then(function(r){
-    if(r.error) {
-      showToast('Error al guardar título', 'error');
-    } else {
-      showToast('Título guardado', 'success');
-    }
-  });
+  // Solo marcar que hay cambios pendientes — no auto-guardar
+  markUnsavedChanges();
 }
 
 // ═══ RENDER QUESTION TYPES ═══
@@ -251,30 +241,18 @@ function changeQuestionType(typeId){
 }
 
 function syncSideSettings(field) {
-  if(!evaluacionId) return;
   var sideSubject = document.getElementById('side-settings-subject');
   var sideTopic = document.getElementById('side-settings-topic');
   var mainSubject = document.getElementById('settings-subject');
   var mainTopic = document.getElementById('settings-topic');
 
-  var val = "";
+  // Solo sincronizar valores entre paneles — sin guardar a Supabase
   if(field === 'subject') {
-    val = sideSubject.value;
-    if(mainSubject) mainSubject.value = val;
+    if(mainSubject && sideSubject) mainSubject.value = sideSubject.value;
   } else if(field === 'topic') {
-    val = sideTopic.value;
-    if(mainTopic) mainTopic.value = val;
+    if(mainTopic && sideTopic) mainTopic.value = sideTopic.value;
   }
-
-  var updateObj = { updated_at: new Date().toISOString() };
-  if(field === 'subject') updateObj.asignatura = val;
-  if(field === 'topic') updateObj.tema = val;
-
-  var client = getSupabase();
-  client.from('evaluaciones').update(updateObj).eq('id', evaluacionId).then(function(r){
-    if(r.error) showToast('Error al guardar configuración', 'error');
-    else showToast('Configuración guardada', 'success');
-  });
+  markUnsavedChanges();
 }
 
 // ═══ SHOW EDITOR / TYPES ═══
@@ -587,7 +565,7 @@ function updateStats(){
   document.getElementById('stat-time').textContent=mins+' minuto'+(mins!==1?'s':'');
 }
 
-// ═══ SAVE QUESTION TO SUPABASE ═══
+// ═══ SAVE QUESTION (validar y registrar localmente, luego guardar en DB si la evaluación existe) ═══
 function saveQuestion(){
   if(saving)return;
   var q=questions[currentQuestionIndex];
@@ -609,29 +587,166 @@ function saveQuestion(){
     var hasC=false;for(var i=0;i<q.options.length;i++){if(q.options[i].correct)hasC=true;}
     if(!hasC){showToast('Selecciona al menos una respuesta correcta','error');return;}
   }
-  if(!evaluacionId){showToast('Error: evaluación no inicializada','error');return;}
 
-  saving=true;
-  var btn=document.querySelector('.save-question-btn');
-  if(btn){btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Guardando...';btn.disabled=true;}
+  // Si la evaluación ya existe en DB, guardar la pregunta directamente
+  if(evaluacionId){
+    saving=true;
+    var btn=document.querySelector('.save-question-btn');
+    if(btn){btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Guardando...';btn.disabled=true;}
 
-  var data={evaluacion_id:evaluacionId,tipo:q.type,texto:q.text.trim(),opciones:q.options,multiple_correctas:q.multipleCorrect,orden:currentQuestionIndex,puntos:q.points||1,temporizador:q.timer||30};
-  var client=getSupabase();
+    var data={evaluacion_id:evaluacionId,tipo:q.type,texto:q.text.trim(),opciones:q.options,multiple_correctas:q.multipleCorrect,orden:currentQuestionIndex,puntos:q.points||1,temporizador:q.timer||30};
+    var client=getSupabase();
 
-  if(q.dbId){
-    client.from('evaluacion_preguntas').update(data).eq('id',q.dbId).select().then(function(r){
-      saving=false;if(btn){btn.innerHTML='<i class="fas fa-save"></i> Guardar pregunta';btn.disabled=false;}
-      if(r.error){showToast('Error: '+r.error.message,'error');return;}
-      showToast('✅ Pregunta '+(currentQuestionIndex+1)+' actualizada','success');
-      showTypesPanel();renderQuestionThumbs();updateStats();
+    if(q.dbId){
+      client.from('evaluacion_preguntas').update(data).eq('id',q.dbId).select().then(function(r){
+        saving=false;if(btn){btn.innerHTML='<i class="fas fa-save"></i> Guardar pregunta';btn.disabled=false;}
+        if(r.error){showToast('Error: '+r.error.message,'error');return;}
+        showToast('✅ Pregunta '+(currentQuestionIndex+1)+' actualizada','success');
+        showTypesPanel();renderQuestionThumbs();updateStats();
+      });
+    }else{
+      client.from('evaluacion_preguntas').insert(data).select().then(function(r){
+        saving=false;if(btn){btn.innerHTML='<i class="fas fa-save"></i> Guardar pregunta';btn.disabled=false;}
+        if(r.error){showToast('Error: '+r.error.message,'error');return;}
+        q.dbId=r.data[0].id;
+        showToast('✅ Pregunta '+(currentQuestionIndex+1)+' guardada','success');
+        showTypesPanel();renderQuestionThumbs();updateStats();
+      });
+    }
+  } else {
+    // Si la evaluación NO existe aún, solo validar localmente
+    showToast('✅ Pregunta '+(currentQuestionIndex+1)+' lista — Presiona "Guardar" arriba para almacenar todo','success');
+    showTypesPanel();renderQuestionThumbs();updateStats();
+  }
+}
+
+// ═══ MARCAR CAMBIOS NO GUARDADOS ═══
+var hasUnsavedChanges = false;
+function markUnsavedChanges(){
+  hasUnsavedChanges = true;
+  var saveBtn = document.getElementById('save-quiz-btn');
+  if(saveBtn){
+    saveBtn.classList.add('btn-unsaved');
+    saveBtn.title = 'Hay cambios sin guardar';
+  }
+}
+function clearUnsavedChanges(){
+  hasUnsavedChanges = false;
+  var saveBtn = document.getElementById('save-quiz-btn');
+  if(saveBtn){
+    saveBtn.classList.remove('btn-unsaved');
+    saveBtn.title = 'Guardar Evaluación';
+  }
+}
+
+// ═══ GUARDAR EVALUACIÓN COMPLETA (BOTÓN "GUARDAR") ═══
+function saveEvaluationTransaction(){
+  if(saving) return;
+  saving = true;
+
+  var saveBtn = document.getElementById('save-quiz-btn');
+  var originalHTML = saveBtn ? saveBtn.innerHTML : '';
+  if(saveBtn){
+    saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span class="install-text">Guardando...</span>';
+    saveBtn.disabled = true;
+  }
+
+  // Recoger texto de pregunta actual si está abierta
+  if(currentQuestionIndex >= 0 && currentQuestionIndex < questions.length){
+    var inp = document.getElementById('q-text-input');
+    if(inp) questions[currentQuestionIndex].text = inp.value;
+  }
+
+  var titulo = document.getElementById('quiz-title-input').value || 'Cuestionario sin título';
+  var asignatura = (document.getElementById('settings-subject') || document.getElementById('side-settings-subject') || {}).value || 'Otro';
+  var tema = (document.getElementById('settings-topic') || document.getElementById('side-settings-topic') || {}).value || '';
+  var nivel = (document.getElementById('settings-level') || {}).value || '';
+  var idioma = (document.getElementById('settings-lang') || {}).value || 'español, castellano';
+
+  var client = getSupabase();
+
+  function finishSave(err){
+    saving = false;
+    if(saveBtn){
+      saveBtn.innerHTML = originalHTML;
+      saveBtn.disabled = false;
+    }
+    if(err){
+      showToast('Error al guardar: ' + err, 'error');
+    } else {
+      clearUnsavedChanges();
+      showToast('✅ Evaluación guardada correctamente', 'success');
+    }
+  }
+
+  function saveAllQuestions(){
+    if(questions.length === 0){ finishSave(null); return; }
+    var pending = questions.length;
+    var anyError = null;
+
+    for(var i = 0; i < questions.length; i++){
+      (function(idx){
+        var q = questions[idx];
+        var data = {
+          evaluacion_id: evaluacionId,
+          tipo: q.type,
+          texto: (q.text || '').trim(),
+          opciones: q.options,
+          multiple_correctas: q.multipleCorrect,
+          orden: idx,
+          puntos: q.points || 1,
+          temporizador: q.timer || 30
+        };
+
+        if(q.dbId){
+          client.from('evaluacion_preguntas').update(data).eq('id', q.dbId).select().then(function(r){
+            if(r.error) anyError = r.error.message;
+            pending--;
+            if(pending <= 0) finishSave(anyError);
+          });
+        } else {
+          if(!data.texto){
+            pending--;
+            if(pending <= 0) finishSave(anyError);
+            return;
+          }
+          client.from('evaluacion_preguntas').insert(data).select().then(function(r){
+            if(r.error){ anyError = r.error.message; }
+            else { q.dbId = r.data[0].id; }
+            pending--;
+            if(pending <= 0) finishSave(anyError);
+          });
+        }
+      })(i);
+    }
+  }
+
+  var evalData = {
+    titulo: titulo,
+    asignatura: asignatura,
+    tema: tema,
+    nivel: nivel,
+    idioma: idioma,
+    updated_at: new Date().toISOString()
+  };
+
+  if(evaluacionId){
+    // Actualizar evaluación existente
+    client.from('evaluaciones').update(evalData).eq('id', evaluacionId).then(function(r){
+      if(r.error){ finishSave(r.error.message); return; }
+      saveAllQuestions();
     });
-  }else{
-    client.from('evaluacion_preguntas').insert(data).select().then(function(r){
-      saving=false;if(btn){btn.innerHTML='<i class="fas fa-save"></i> Guardar pregunta';btn.disabled=false;}
-      if(r.error){showToast('Error: '+r.error.message,'error');return;}
-      q.dbId=r.data[0].id;
-      showToast('✅ Pregunta '+(currentQuestionIndex+1)+' guardada','success');
-      showTypesPanel();renderQuestionThumbs();updateStats();
+  } else {
+    // Crear nueva evaluación
+    evalData.created_by = currentUser.id;
+    evalData.publicado = false;
+    client.from('evaluaciones').insert(evalData).select().then(function(r){
+      if(r.error){ finishSave(r.error.message); return; }
+      evaluacionId = r.data[0].id;
+      // Actualizar URL sin recargar
+      var newUrl = window.location.pathname + '?id=' + evaluacionId;
+      window.history.replaceState({}, '', newUrl);
+      saveAllQuestions();
     });
   }
 }
@@ -644,7 +759,11 @@ function openSettings(){document.getElementById('settings-overlay').classList.ad
 function closeSettings(){document.getElementById('settings-overlay').classList.remove('active');}
 
 function saveSettingsAndPublish(){
-  if(!evaluacionId){closeSettings();return;}
+  if(!evaluacionId){
+    closeSettings();
+    showToast('Primero guarda la evaluación con el botón Guardar','error');
+    return;
+  }
   var nameInp=document.getElementById('quiz-name-input');
   var titulo=(nameInp&&nameInp.value)?nameInp.value:'Cuestionario sin título';
   document.getElementById('quiz-title-input').value=titulo;
@@ -682,10 +801,11 @@ function saveSettingsAndPublish(){
 
 // ═══ PUBLISH ═══
 function publishQuiz(){
+  if(!evaluacionId){showToast('Primero guarda la evaluación con el botón Guardar','error');return;}
   if(questions.length===0){showToast('Agrega al menos una pregunta','error');return;}
   var unsaved=[];
   for(var i=0;i<questions.length;i++){if(!questions[i].dbId)unsaved.push(i+1);}
-  if(unsaved.length>0){showToast('Guarda las preguntas '+unsaved.join(', ')+' primero','error');return;}
+  if(unsaved.length>0){showToast('Guarda la evaluación primero (botón Guardar)','error');return;}
   // Open session mode selector
   document.getElementById('session-overlay').classList.add('active');
 }
