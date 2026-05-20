@@ -1015,10 +1015,11 @@ function renderQuizQuestion() {
     else if (tipo === 'dnd') {
         var imgUrl = (opciones && opciones[0]) ? opciones[0].pregunta_imagen : '';
         quizSelectedDndLabel = -1;
+        quizSelectedDndSlot = -1;
         quizDndMatches = {};
         
         html += '<div style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">';
-        html += '  <p style="color:#fff; font-size:1.1rem; font-weight:800; text-align:center; background:rgba(0,0,0,0.3); padding:8px 16px; border-radius:10px;"><i class="fas fa-hand-pointer"></i> Toca una etiqueta de abajo y luego el círculo `?` correspondiente en la imagen:</p>';
+        html += '  <p style="color:#fff; font-size:1.1rem; font-weight:800; text-align:center; background:rgba(0,0,0,0.3); padding:10px 20px; border-radius:12px; border:1px solid rgba(255,255,255,0.1);"><i class="fas fa-link" style="color:#A78BFA; margin-right:8px;"></i> Relaciona las partes de la imagen: selecciona una etiqueta e indícala en el círculo, o toca un círculo y elige su etiqueta correspondiente.</p>';
         
         html += '  <div style="position:relative; display:inline-block; max-width:100%; border-radius:16px; overflow:hidden; border:4px solid rgba(255,255,255,0.2); background:#2D1B4E; box-shadow:0 12px 36px rgba(0,0,0,0.4);" id="dnd-student-container">';
         html += '    <img src="' + imgUrl + '" style="max-width:100%; max-height:380px; display:block; user-select:none; pointer-events:none;">';
@@ -2368,47 +2369,108 @@ document.addEventListener('DOMContentLoaded', initTheme);
 
 // ═══ IDENTIFICAR PARTES (DND) STUDENT GAMEPLAY HELPERS ═══
 var quizSelectedDndLabel = -1;
+var quizSelectedDndSlot = -1;
 var quizDndMatches = {};
 
 function clickDndLabel(idx) {
     if (quizConfirmed) return;
+    
+    // Si ya había una ranura (círculo) seleccionada, vincularlos inmediatamente
+    if (quizSelectedDndSlot !== -1) {
+        var slotIdx = quizSelectedDndSlot;
+        quizDndMatches[slotIdx] = idx;
+        applyMatchVisual(slotIdx, idx);
+        
+        resetDndSelections();
+        checkDndCompletion();
+        return;
+    }
+    
+    // De lo contrario, seleccionar esta etiqueta
+    quizSelectedDndLabel = idx;
+    quizSelectedDndSlot = -1; // Resetear cualquier selección de slot
+    
+    // Actualizar estilo visual de las etiquetas
     var buttons = document.querySelectorAll('.quiz-dnd-label-btn');
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].style.filter = 'brightness(1.0)';
         buttons[i].style.transform = 'scale(1.0)';
+        buttons[i].style.border = 'none';
+        buttons[i].style.boxShadow = 'inset 0 -4px 0 rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.2)';
     }
-    quizSelectedDndLabel = idx;
+    
+    // Resetear ranuras no asignadas de su estado "activo/amarillo"
+    var slots = document.querySelectorAll('.quiz-dnd-slot');
+    slots.forEach(function(s) {
+        var sIdx = parseInt(s.getAttribute('data-idx'));
+        if (quizDndMatches[sIdx] === undefined) {
+            s.style.background = '#fff';
+            s.style.color = '#334155';
+            s.style.borderColor = '#E2E8F0';
+            s.style.transform = 'translate(-50%, -50%) scale(1)';
+        }
+    });
+    
     var activeBtn = document.getElementById('dnd-label-' + idx);
     if(activeBtn) {
         activeBtn.style.filter = 'brightness(1.2) saturate(1.2)';
         activeBtn.style.transform = 'scale(1.08)';
+        activeBtn.style.border = '3px solid #fff';
+        activeBtn.style.boxShadow = '0 0 12px rgba(255,255,255,0.6)';
     }
 }
 
 function clickDndSlot(slotIdx) {
     if (quizConfirmed) return;
-    if (quizSelectedDndLabel === -1) {
-        playErrorSound();
-        var banner = document.createElement('div');
-        banner.style.position = 'fixed';
-        banner.style.bottom = '24px';
-        banner.style.left = '50%';
-        banner.style.transform = 'translateX(-50%)';
-        banner.style.background = '#EF4444';
-        banner.style.color = '#fff';
-        banner.style.padding = '12px 24px';
-        banner.style.borderRadius = '12px';
-        banner.style.zIndex = '99999';
-        banner.style.fontWeight = '800';
-        banner.textContent = '⚠️ Primero selecciona una etiqueta de abajo';
-        document.body.appendChild(banner);
-        setTimeout(function(){ if(banner.parentNode) banner.parentNode.removeChild(banner); }, 2000);
+    
+    // Si ya había una etiqueta seleccionada, vincularlos inmediatamente
+    if (quizSelectedDndLabel !== -1) {
+        var labelIdx = quizSelectedDndLabel;
+        quizDndMatches[slotIdx] = labelIdx;
+        applyMatchVisual(slotIdx, labelIdx);
+        
+        resetDndSelections();
+        checkDndCompletion();
         return;
     }
     
-    var labelIdx = quizSelectedDndLabel;
-    quizDndMatches[slotIdx] = labelIdx;
+    // De lo contrario, seleccionar esta ranura (círculo)
+    quizSelectedDndSlot = slotIdx;
+    quizSelectedDndLabel = -1; // Resetear cualquier selección de etiqueta
     
+    // Limpiar estilos visuales de etiquetas activas
+    var buttons = document.querySelectorAll('.quiz-dnd-label-btn');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].style.filter = 'brightness(1.0)';
+        buttons[i].style.transform = 'scale(1.0)';
+        buttons[i].style.border = 'none';
+        buttons[i].style.boxShadow = 'inset 0 -4px 0 rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.2)';
+    }
+    
+    // Resaltar la ranura seleccionada
+    var slots = document.querySelectorAll('.quiz-dnd-slot');
+    slots.forEach(function(s) {
+        var sIdx = parseInt(s.getAttribute('data-idx'));
+        if (sIdx === slotIdx) {
+            s.style.background = '#F59E0B'; // Color ámbar premium para estado seleccionado
+            s.style.borderColor = '#fff';
+            s.style.color = '#fff';
+            s.style.transform = 'translate(-50%, -50%) scale(1.25)';
+            s.style.boxShadow = '0 0 15px #F59E0B';
+        } else if (quizDndMatches[sIdx] === undefined) {
+            // Círculos no asignados vuelven al estado por defecto
+            s.style.background = '#fff';
+            s.style.color = '#334155';
+            s.style.borderColor = '#E2E8F0';
+            s.style.transform = 'translate(-50%, -50%) scale(1)';
+            s.style.boxShadow = '0 6px 16px rgba(0,0,0,0.35)';
+        }
+    });
+    
+    playBeep(500, 'sine', 0.08);
+}
+
+function applyMatchVisual(slotIdx, labelIdx) {
     var slotEl = document.getElementById('dnd-slot-' + slotIdx);
     if(slotEl) {
         var optColors = ['#E91E63', '#2563EB', '#E6A15C', '#059669', '#7C3AED', '#0D9488'];
@@ -2419,11 +2481,26 @@ function clickDndSlot(slotIdx) {
         slotEl.style.color = '#fff';
         slotEl.textContent = String.fromCharCode(65 + labelIdx);
         slotEl.style.transform = 'translate(-50%, -50%) scale(1.15)';
+        slotEl.style.boxShadow = '0 4px 12px ' + color;
         setTimeout(function(){ slotEl.style.transform = 'translate(-50%, -50%) scale(1)'; }, 150);
     }
-    
     playBeep(600, 'sine', 0.1);
+}
+
+function resetDndSelections() {
+    quizSelectedDndLabel = -1;
+    quizSelectedDndSlot = -1;
     
+    var buttons = document.querySelectorAll('.quiz-dnd-label-btn');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].style.filter = 'brightness(1.0)';
+        buttons[i].style.transform = 'scale(1.0)';
+        buttons[i].style.border = 'none';
+        buttons[i].style.boxShadow = 'inset 0 -4px 0 rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.2)';
+    }
+}
+
+function checkDndCompletion() {
     var pregunta = quizData.preguntas[quizCurrentQ];
     var slotsCount = 0;
     pregunta.opciones.forEach(function(o){
@@ -2449,13 +2526,6 @@ function clickDndSlot(slotIdx) {
             submitBtn.style.cursor = 'not-allowed';
         }
     }
-    
-    var buttons = document.querySelectorAll('.quiz-dnd-label-btn');
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].style.filter = 'brightness(1.0)';
-        buttons[i].style.transform = 'scale(1.0)';
-    }
-    quizSelectedDndLabel = -1;
 }
 
 function confirmQuizDnd() {
@@ -2528,4 +2598,5 @@ function confirmQuizDnd() {
 window.clickDndLabel = clickDndLabel;
 window.clickDndSlot = clickDndSlot;
 window.confirmQuizDnd = confirmQuizDnd;
+
 
