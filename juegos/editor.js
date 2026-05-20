@@ -932,25 +932,48 @@ function pollTeacherResults(){
       document.getElementById('tr-accuracy-msg').textContent=accMsg+' ('+entries.length+' estudiante'+(entries.length!==1?'s':'')+')';
 
       // Podium
-      var medals=['🥇','🥈','🥉'];
       var bgGrads=['linear-gradient(180deg,#FFD700,#FFA000)','linear-gradient(180deg,#E0E0E0,#9E9E9E)','linear-gradient(180deg,#CD7F32,#8B5E3C)'];
       var bdColors=['#FFD700','#C0C0C0','#CD7F32'];
-      var hts=[140,110,90];
+      var rankTexts=['1st','2nd','3rd'];
       var pillarOrder=[1,0,2];
       var ph='';
+      
+      // Check if it is the very first render to play standard animations
+      var isFirstRender = !document.getElementById('tr-podium').innerHTML.trim() || document.getElementById('tr-podium').innerHTML.includes('El podio aparecerá');
+
       for(var p=0;p<3;p++){
         var idx=pillarOrder[p];
-        if(idx>=entries.length){ph+='<div style="flex:1;max-width:120px"></div>';continue;}
-        var e=entries[idx],h=hts[idx];
-        var avatarHtml = e.emoji 
-          ? '<div style="font-size:36px;margin-bottom:6px;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3))">'+e.emoji+'</div>'
-          : '<div style="width:44px;height:44px;border-radius:50%;background:'+bgGrads[idx]+';display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#fff;margin-bottom:6px;border:3px solid '+bdColors[idx]+'">'+e.nombre.charAt(0).toUpperCase()+'</div>';
+        if(idx>=entries.length){
+          ph+='<div style="flex:1;max-width:130px"></div>';
+          continue;
+        }
+        var e=entries[idx];
+        var rankClass = idx === 0 ? 'rank-1' : (idx === 1 ? 'rank-2' : 'rank-3');
+        var rankText = rankTexts[idx];
         
-        ph+='<div style="flex:1;max-width:120px;display:flex;flex-direction:column;align-items:center">';
-        ph+=avatarHtml;
-        ph+='<span style="font-size:12px;font-weight:800;color:#fff;margin-bottom:2px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+e.nombre+'</span>';
-        ph+='<span style="font-size:10px;font-weight:700;color:rgba(255,255,255,.7);margin-bottom:8px">'+e.puntaje+'/'+e.total+'</span>';
-        ph+='<div style="width:100%;height:'+h+'px;background:'+bgGrads[idx]+';border-radius:12px 12px 0 0;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:inset 0 4px 12px rgba(255,255,255,0.2)">'+medals[idx]+'</div>';
+        var avatarContent = e.emoji 
+          ? '<div class="podium-avatar">' + e.emoji + '</div>'
+          : '<div class="podium-avatar" style="font-size:24px;width:48px;height:48px;border-radius:50%;background:'+bgGrads[idx]+';display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;border:3px solid '+bdColors[idx]+';box-shadow:0 4px 12px rgba(0,0,0,0.3)">'+e.nombre.charAt(0).toUpperCase()+'</div>';
+
+        var animStyle = isFirstRender 
+          ? ('animation-delay:' + (p*0.15) + 's') 
+          : 'animation: none !important; opacity: 1 !important; transform: translateY(0) !important;';
+
+        ph+='<div class="podium-cylinder ' + rankClass + '" style="' + animStyle + '">';
+        
+        // Avatar standing on top
+        ph+='<div class="podium-avatar-wrapper">';
+        ph+=avatarContent;
+        ph+='<div class="podium-name">' + e.nombre + '</div>';
+        ph+='<div class="podium-points">' + e.puntaje + '/' + e.total + '</div>';
+        ph+='</div>';
+
+        // The cylinder body
+        ph+='<div class="cylinder-top"></div>';
+        ph+='<div class="cylinder-body">';
+        ph+='<div class="cylinder-rank">' + rankText + '</div>';
+        ph+='</div>';
+        
         ph+='</div>';
       }
       document.getElementById('tr-podium').innerHTML=ph;
@@ -960,7 +983,8 @@ function pollTeacherResults(){
       for(var l=0;l<entries.length;l++){
         var en=entries[l];
         var rankColor=l===0?'#FFD700':l===1?'#C0C0C0':l===2?'#CD7F32':'rgba(255,255,255,.4)';
-        lh+='<div class="tr-row">';
+        // Adds a cascade delay for sequential slide-in row animation
+        lh+='<div class="tr-row" style="animation-delay: ' + (l * 0.05) + 's">';
         lh+='<span class="tr-col-rank" style="color:'+rankColor+'">'+(l+1)+'</span>';
         lh+='<span class="tr-col-name">'+(en.emoji?'<span>'+en.emoji+'</span>':'')+en.nombre+'</span>';
         lh+='<span class="tr-col-score">'+en.puntaje+'/'+en.total+'</span>';
@@ -1332,4 +1356,80 @@ function updateThemeIconEditor(theme) {
         icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     }
 }
+
+// Aesthetic UI Test Route Hook
+document.addEventListener('DOMContentLoaded', function() {
+    initThemeEditor();
+    
+    if (window.location.search.indexOf('mock=true') !== -1) {
+        setTimeout(function() {
+            var overlay = document.getElementById('teacher-results-overlay');
+            if (overlay) {
+                overlay.classList.add('active');
+                
+                // Render gorgeous mock results
+                var entries = [
+                    { emoji: '🦁', nombre: 'Alejandro Cabrera', puntaje: 2400, total: 5, porcentaje: 100 },
+                    { emoji: '🐼', nombre: 'Sofia Lopez', puntaje: 1800, total: 5, porcentaje: 80 },
+                    { emoji: '🦊', nombre: 'David Vargas', puntaje: 1200, total: 5, porcentaje: 60 }
+                ];
+                
+                var bgGrads = ['linear-gradient(180deg,#FFD700,#FFA000)', 'linear-gradient(180deg,#E0E0E0,#9E9E9E)', 'linear-gradient(180deg,#CD7F32,#8B5E3C)'];
+                var bdColors = ['#FFD700', '#C0C0C0', '#CD7F32'];
+                var rankTexts = ['1st', '2nd', '3rd'];
+                var pillarOrder = [1, 0, 2];
+                var ph = '';
+                
+                for (var p = 0; p < 3; p++) {
+                    var idx = pillarOrder[p];
+                    var e = entries[idx];
+                    var rankClass = idx === 0 ? 'rank-1' : (idx === 1 ? 'rank-2' : 'rank-3');
+                    var rankText = rankTexts[idx];
+                    
+                    var avatarContent = e.emoji 
+                        ? '<div class="podium-avatar">' + e.emoji + '</div>'
+                        : '<div class="podium-avatar" style="font-size:24px;width:48px;height:48px;border-radius:50%;background:'+bgGrads[idx]+';display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;border:3px solid '+bdColors[idx]+';box-shadow:0 4px 12px rgba(0,0,0,0.3)">'+e.nombre.charAt(0).toUpperCase()+'</div>';
+                    
+                    ph += '<div class="podium-cylinder ' + rankClass + '" style="animation-delay:' + (p * 0.15) + 's">';
+                    ph += '  <div class="podium-avatar-wrapper">';
+                    ph += '    ' + avatarContent;
+                    ph += '    <div class="podium-name">' + e.nombre + '</div>';
+                    ph += '    <div class="podium-points">' + e.puntaje + ' pts</div>';
+                    ph += '  </div>';
+                    ph += '  <div class="cylinder-top"></div>';
+                    ph += '  <div class="cylinder-body">';
+                    ph += '    <div class="cylinder-rank">' + rankText + '</div>';
+                    ph += '  </div>';
+                    ph += '</div>';
+                }
+                
+                var podiumEl = document.getElementById('tr-podium');
+                if (podiumEl) podiumEl.innerHTML = ph;
+                
+                // Mock accuracy
+                var trBar = document.getElementById('tr-accuracy-bar');
+                var trPct = document.getElementById('tr-accuracy-pct');
+                var trMsg = document.getElementById('tr-accuracy-msg');
+                if (trBar) trBar.style.width = '80%';
+                if (trPct) trPct.textContent = '80%';
+                if (trMsg) trMsg.textContent = '¡Buen trabajo de la clase! (3 estudiantes)';
+                
+                // Mock table rows
+                var lh = '';
+                for (var l = 0; l < entries.length; l++) {
+                    var en = entries[l];
+                    var rankColor = l === 0 ? '#FFD700' : l === 1 ? '#C0C0C0' : l === 2 ? '#CD7F32' : 'rgba(255,255,255,.4)';
+                    lh += '<div class="tr-row" style="animation-delay: ' + (l * 0.1) + 's">';
+                    lh += '  <span class="tr-col-rank" style="color:' + rankColor + '">' + (l + 1) + '</span>';
+                    lh += '  <span class="tr-col-name">' + en.emoji + ' ' + en.nombre + '</span>';
+                    lh += '  <span class="tr-col-score">' + en.puntaje + '</span>';
+                    lh += '  <span class="tr-col-acc" style="color:' + (en.porcentaje >= 70 ? '#4ADE80' : en.porcentaje >= 40 ? '#FBBF24' : '#F87171') + '">' + en.porcentaje + '%</span>';
+                    lh += '</div>';
+                }
+                var resultsList = document.getElementById('tr-results-list');
+                if (resultsList) resultsList.innerHTML = lh;
+            }
+        }, 1500);
+    }
+});
 document.addEventListener('DOMContentLoaded', initThemeEditor);

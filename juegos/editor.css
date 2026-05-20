@@ -389,3 +389,246 @@ body{font-family:'Inter',sans-serif;background:var(--bg-editor);color:var(--text
 [data-theme="dark"] .type-item:hover { background: rgba(255,255,255,0.05); }
 [data-theme="dark"] .ti-name { color: var(--text-editor); }
 [data-theme="dark"] .ti-icon { background: rgba(255,255,255,0.05); }
+
+/* ═══ 3D STADIUM PODIUM (TEACHER VIEW) ═══ */
+.stadium-podium-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 32px;
+  background: transparent;
+  border-radius: 24px;
+  padding: 40px 20px 20px;
+  position: relative;
+  overflow: visible; /* Let avatars and glows pop out */
+}
+
+.stadium-light-beam {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 420px;
+  background: radial-gradient(ellipse at top, rgba(139, 92, 246, 0.35), transparent 70%);
+  z-index: 2;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: beamPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes beamPulse {
+  0% { opacity: 0.8; transform: translateX(-50%) scale(0.95); }
+  100% { opacity: 1; transform: translateX(-50%) scale(1.05); }
+}
+
+.podium-pillars-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  height: 240px;
+  position: relative;
+  z-index: 10;
+  margin-top: 60px;
+}
+
+.podium-cylinder {
+  position: relative;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: popUpCylinder 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes popUpCylinder {
+  from { opacity: 0; transform: translateY(60px) scale(0.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Base Body (3D cylinder effect with gorgeous metallics) */
+.cylinder-body {
+  width: 100%;
+  position: relative;
+  border-radius: 0 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 24px;
+  box-shadow: 
+    inset -5px 0 10px rgba(0,0,0,0.5), 
+    inset 5px 0 10px rgba(255,255,255,0.1),
+    0 15px 30px rgba(0,0,0,0.6);
+  border-bottom: 2px solid rgba(0,0,0,0.4);
+}
+
+/* Top Oval */
+.cylinder-top {
+  width: 100%;
+  height: 36px;
+  border-radius: 50%;
+  position: absolute;
+  top: -18px;
+  left: 0;
+  z-index: 2;
+  box-shadow: 
+    inset 0 1px 3px rgba(255,255,255,0.3), 
+    inset 0 -3px 8px rgba(0,0,0,0.5);
+}
+
+/* Avatar container standing on top */
+.podium-avatar-wrapper {
+  position: absolute;
+  top: -95px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.4));
+}
+
+.podium-avatar {
+  font-size: 52px;
+  margin-bottom: -4px;
+  transition: transform 0.3s ease;
+  animation: avatarFloat 3s ease-in-out infinite alternate;
+}
+
+.podium-avatar:hover {
+  transform: scale(1.15) rotate(5deg);
+}
+
+@keyframes avatarFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-6px); }
+}
+
+.podium-name {
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  padding: 3px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.podium-points {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1px 6px;
+  border-radius: 8px;
+  margin-top: 4px;
+  font-family: monospace;
+}
+
+/* Rank text inside cylinder */
+.cylinder-rank {
+  font-size: 44px;
+  font-weight: 900;
+  font-style: italic;
+  z-index: 3;
+  margin-bottom: -8px;
+}
+
+/* Premium 3D Metallic Gradients */
+/* 1st Place - Gold */
+.rank-1 .cylinder-body {
+  background: linear-gradient(90deg, #8B6508 0%, #FFD700 30%, #FFF3A8 50%, #FFD700 70%, #8B6508 100%);
+  height: 170px;
+}
+.rank-1 .cylinder-top {
+  background: radial-gradient(ellipse at center, #FFF8D4 0%, #FFD700 60%, #B8860B 100%);
+}
+.rank-1 .cylinder-rank {
+  color: #FFF;
+  text-shadow: 0 3px 6px rgba(139, 101, 8, 0.8), 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* 2nd Place - Silver */
+.rank-2 .cylinder-body {
+  background: linear-gradient(90deg, #4A5568 0%, #CBD5E1 30%, #FFFFFF 50%, #CBD5E1 70%, #4A5568 100%);
+  height: 130px;
+}
+.rank-2 .cylinder-top {
+  background: radial-gradient(ellipse at center, #FFFFFF 0%, #E2E8F0 60%, #94A3B8 100%);
+}
+.rank-2 .cylinder-rank {
+  color: #FFF;
+  text-shadow: 0 3px 6px rgba(74, 85, 104, 0.8), 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* 3rd Place - Bronze */
+.rank-3 .cylinder-body {
+  background: linear-gradient(90deg, #5C3818 0%, #CD7F32 30%, #F5C293 50%, #CD7F32 70%, #5C3818 100%);
+  height: 100px;
+}
+.rank-3 .cylinder-top {
+  background: radial-gradient(ellipse at center, #FBE5D2 0%, #CD7F32 60%, #8C4F1A 100%);
+}
+.rank-3 .cylinder-rank {
+  color: #FFF;
+  text-shadow: 0 3px 6px rgba(92, 56, 24, 0.8), 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* Row entry animation */
+.tr-row {
+  animation: trRowFadeIn 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+@keyframes trRowFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Podium for Editor Results */
+@media(max-width: 600px) {
+  .stadium-podium-container {
+    padding: 24px 8px 8px;
+    margin-bottom: 16px;
+  }
+  .podium-pillars-wrapper {
+    height: 190px;
+    gap: 12px;
+    margin-top: 40px;
+  }
+  .podium-cylinder {
+    width: 95px;
+  }
+  .rank-1 .cylinder-body { height: 130px; }
+  .rank-2 .cylinder-body { height: 100px; }
+  .rank-3 .cylinder-body { height: 75px; }
+  
+  .cylinder-top {
+    height: 26px;
+    top: -13px;
+  }
+  
+  .podium-avatar-wrapper {
+    top: -75px;
+  }
+  
+  .podium-avatar {
+    font-size: 38px;
+  }
+  
+  .podium-name {
+    font-size: 11px;
+    max-width: 90px;
+  }
+  .cylinder-rank {
+    font-size: 30px;
+  }
+}
+

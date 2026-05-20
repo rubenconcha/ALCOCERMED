@@ -410,11 +410,13 @@
         </div>
 
         <!-- Podio -->
-        <div style="display:flex;align-items:flex-end;justify-content:center;gap:16px;margin-bottom:40px;min-height:200px" id="tr-podium">
+        <div class="stadium-podium-container">
+          <div class="stadium-light-beam"></div>
+          <div id="tr-podium" class="podium-pillars-wrapper"></div>
         </div>
 
         <!-- Tabla de resultados -->
-        <div style="background:rgba(15,23,42,.4);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.3)">
+        <div style="background:rgba(15,23,42,.4);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.3);margin-bottom:32px;">
           <div class="tr-table-header">
             <span class="tr-col-rank">#</span>
             <span class="tr-col-name">Nombres</span>
@@ -425,6 +427,7 @@
             <div style="padding:40px 24px;text-align:center;color:rgba(255,255,255,.4);font-size:.9rem;font-weight:600">
               <i class="fas fa-spinner fa-spin" style="font-size:24px;margin-bottom:12px;color:#8B5CF6;display:block"></i> Esperando que los estudiantes terminen...
             </div>
+          </div>
         </div>
 
         <!-- Revisión de Preguntas para el Admin -->
