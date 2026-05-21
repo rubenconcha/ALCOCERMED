@@ -538,14 +538,22 @@ function adjustColor(hex, amount) {
 
 function loadExploreSubjects(filter) {
     var client = getSupabase();
-    if (!client) return;
-    document.getElementById('explorar-subject-grid').style.display = '';
-    document.getElementById('explorar-eval-list').style.display = 'none';
-    document.getElementById('explorar-back-btn').style.display = 'none';
-    exploreCurrentSubject = null;
-    document.getElementById('page-jugar').querySelector('.page-header h1').innerHTML = '<i class="fas fa-gamepad"></i> JUGAR';
-
+    if (!client) {
+        var grid = document.getElementById('explorar-subject-grid');
+        if (grid) grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><i class="fas fa-exclamation-triangle" style="color:#F59E0B"></i><p>Error de conexión</p><small>Recarga la página e inicia sesión de nuevo</small></div>';
+        return;
+    }
     var grid = document.getElementById('explorar-subject-grid');
+    if (!grid) return;
+    document.getElementById('explorar-subject-grid').style.display = '';
+    var evalList = document.getElementById('explorar-eval-list');
+    if (evalList) evalList.style.display = 'none';
+    var backBtn = document.getElementById('explorar-back-btn');
+    if (backBtn) backBtn.style.display = 'none';
+    exploreCurrentSubject = null;
+    var h1 = document.querySelector('#page-jugar .page-header h1');
+    if (h1) h1.innerHTML = '<i class="fas fa-gamepad"></i> JUGAR';
+
     grid.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6;grid-column:1/-1"><i class="fas fa-spinner fa-spin" style="font-size:28px"></i><p style="margin-top:12px">Cargando materias...</p></div>';
 
     var query = client.from('evaluaciones').select('asignatura, titulo, id, tema, codigo').eq('publicado', true).order('created_at', { ascending: false });
@@ -554,6 +562,8 @@ function loadExploreSubjects(filter) {
     query.then(function(r) {
         if (r.error || !r.data || r.data.length === 0) {
             grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><i class="fas fa-book-open"></i><p>No hay evaluaciones disponibles aún</p><small>El profesor publicará evaluaciones pronto</small></div>';
+            var filterBar = document.getElementById('explorar-filter-bar');
+            if (filterBar) filterBar.innerHTML = '';
             return;
         }
 
@@ -600,12 +610,16 @@ function loadSubjectEvaluations(subject) {
     exploreCurrentSubject = subject;
     var client = getSupabase();
     if (!client) return;
-    document.getElementById('explorar-subject-grid').style.display = 'none';
-            document.getElementById('explorar-back-btn').style.display = '';
+    var grid = document.getElementById('explorar-subject-grid');
+    if (grid) grid.style.display = 'none';
+    var backBtn = document.getElementById('explorar-back-btn');
+    if (backBtn) backBtn.style.display = '';
     var color = subjectIcons[subject] || subjectIcons['General'];
     var emoji = subjectEmojis[subject] || subjectEmojis['General'];
-    document.getElementById('page-jugar').querySelector('.page-header h1').innerHTML = '<i class="fas fa-arrow-left" style="cursor:pointer;margin-right:8px" onclick="loadExploreSubjects()"></i>' + emoji + ' ' + subject;
+    var h1 = document.querySelector('#page-jugar .page-header h1');
+    if (h1) h1.innerHTML = '<i class="fas fa-arrow-left" style="cursor:pointer;margin-right:8px" onclick="loadExploreSubjects()"></i>' + emoji + ' ' + subject;
     var listEl = document.getElementById('explorar-eval-list');
+    if (!listEl) return;
     listEl.style.display = '';
     listEl.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:28px"></i><p style="margin-top:12px">Cargando evaluaciones...</p></div>';
 
