@@ -721,7 +721,7 @@ function startSelfStudy(evalId) {
             sessionStorage.setItem('alcocer_quiz_qids_' + code, JSON.stringify(qids));
 
             quizData = { evaluacion: evaluacion, preguntas: preguntas };
-            quizSessionMode = 'test';
+            quizSessionMode = 'practica';
             quizTeamName = null;
             quizCurrentQ = 0;
             quizAnswers = [];
@@ -737,7 +737,6 @@ function startSelfStudy(evalId) {
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
             document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
             showSplashAndStart();
-            startGameMusic(); // forzar música en modo autodidacta
         });
     });
 }
@@ -770,7 +769,7 @@ function restoreSelfStudy(evalId, code) {
             }
 
             quizData = { evaluacion: evaluacion, preguntas: preguntas };
-            quizSessionMode = 'test';
+            quizSessionMode = 'practica';
             quizTeamName = null;
 
             var savedStateStr = sessionStorage.getItem('alcocer_quiz_state_' + code);
@@ -793,12 +792,10 @@ function restoreSelfStudy(evalId, code) {
                     showQuizResults();
                 } else {
                     document.getElementById('quiz-container').style.display = 'block';
-                    startGameMusic();
                     renderQuizQuestion();
                 }
             } else {
                 showSplashAndStart();
-                startGameMusic();
             }
         });
     });
@@ -2090,7 +2087,7 @@ function showQuizResults() {
 
     // Guardar en Supabase y cargar leaderboard según modo
     var evalIdForBoard = quizData.evaluacion.id;
-    var isTestMode = quizSessionMode === 'test';
+    var isTestMode = quizSessionMode === 'test' || quizSessionMode === 'practica';
     var isTeamMode = quizSessionMode === 'equipo';
 
     if (currentUser) {
