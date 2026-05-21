@@ -899,7 +899,6 @@ function closePowerupCards() {
         overlay.style.transition = 'opacity 0.3s';
         setTimeout(function() { if (overlay.parentNode) overlay.remove(); }, 300);
     }
-    renderPowerupBar();
     if (quizCurrentQ >= quizData.preguntas.length) { showQuizResults(); }
     else { renderQuizQuestion(); }
 }
@@ -1127,12 +1126,10 @@ function startSelfStudy(evalId) {
             sessionStorage.setItem('alcocer_quiz_code', code);
 
             // Usar el MISMO flujo que searchAndStartQuiz para modo test
-            pickRandomPowerups();
             navigateTo('quiz');
             applyTestModeUI();
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
             document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
-            renderPowerupBar();
             showSplashAndStart();
         });
     });
@@ -1181,9 +1178,7 @@ function restoreSelfStudy(evalId, code) {
             quizConfirmed = false;
 
             navigateTo('quiz');
-            pickRandomPowerups();
             applyTestModeUI();
-            renderPowerupBar();
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
             document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
             if (quizCurrentQ > 0) {
@@ -1849,7 +1844,6 @@ function renderQuizQuestion() {
     if (!quizData || quizCurrentQ >= quizData.preguntas.length) return;
 
     quizQuestionStartTime = Date.now();
-    renderPowerupBar();
 
     var pregunta = quizData.preguntas[quizCurrentQ];
     var total = quizData.preguntas.length;
@@ -2218,7 +2212,6 @@ function confirmQuizAnswer() {
             buttons[r].style.boxShadow = '';
         }
         if (confirmBtn) confirmBtn.style.display = '';
-        renderPowerupBar();
         return;
     }
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer, puntos_ganados: pts });
@@ -2312,8 +2305,6 @@ function quizNext() {
             a: quizAnswers
         }));
     }
-    renderPowerupBar();
-
     // ═══ RONDA DE COMODINES: pregunta 4 (idx 3) y pregunta 8 (idx 7) ═══
     if ((quizCurrentQ === 3 || quizCurrentQ === 7) && powerups.length > 0) {
         showPowerupCards();
