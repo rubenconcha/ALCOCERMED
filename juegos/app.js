@@ -792,6 +792,7 @@ function restoreSelfStudy(evalId, code) {
                     showQuizResults();
                 } else {
                     document.getElementById('quiz-container').style.display = 'block';
+                    if (quizSessionMode === 'practica') startGameMusic();
                     renderQuizQuestion();
                 }
             } else {
@@ -1340,7 +1341,7 @@ function showSplashAndStart() {
     if (wt) wt.style.display = 'none';
 
     // Iniciar música si no estaba sonando (excepto en modo test — ambiente de examen)
-    if (quizSessionMode !== 'test') {
+    if (quizSessionMode !== 'test' && quizSessionMode !== 'practica') {
         startGameMusic();
     }
 
@@ -1372,11 +1373,13 @@ function showSplashAndStart() {
                 splashInterval = null;
                 splash.style.display = 'none';
                 document.getElementById('quiz-container').style.display = 'block';
+                if (quizSessionMode === 'practica') startGameMusic();
                 renderQuizQuestion();
             }
         }, 1000);
     } else {
         document.getElementById('quiz-container').style.display = 'block';
+        if (quizSessionMode === 'practica') startGameMusic();
         renderQuizQuestion();
     }
 }
