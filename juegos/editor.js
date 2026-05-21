@@ -818,33 +818,38 @@ function selectSessionMode(el,mode){
 }
 function closeSessionModal(){document.getElementById('session-overlay').classList.remove('active');}
 
+function generateQuizCode() {
+  var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  var code = '';
+  for (var i = 0; i < 6; i++) { code += chars.charAt(Math.floor(Math.random() * chars.length)); }
+  return code;
+}
+
 function startLiveSession(){
   closeSessionModal();
   var client=getSupabase();
-  
-  // Limpiar participantes anteriores una sola vez al iniciar la sesión.
-  // Mantenemos evaluacion_resultados intacto para preservar el historial de los estudiantes en Supabase.
-  client.from('evaluacion_participantes').delete().eq('evaluacion_id', evaluacionId).then(function(){
-    client.rpc('generate_quiz_code').then(function(cr){
-      if(cr.error){console.error('RPC generate_quiz_code error:', JSON.stringify(cr.error));showToast('Error generando código: ' + (cr.error.message||JSON.stringify(cr.error)),'error');return;}
-      var code=cr.data;
-      // Modo Test: iniciado=true inmediatamente (sin lobby de espera)
-      var isTest = sessionMode === 'test';
-      var updateData = {
-        publicado: true,
-        codigo: code,
-        iniciado: isTest, // Test mode starts immediately
-        modo_sesion: sessionMode,
-        updated_at: new Date().toISOString()
-      };
-      client.from('evaluaciones').update(updateData).eq('id',evaluacionId).then(function(r){
-        if(r.error){console.error('Update evaluaciones error:', JSON.stringify(r.error));showToast('Error al publicar: ' + (r.error.message||r.error.details||JSON.stringify(r.error)),'error');return;}
-        if(isTest) {
-          showTestModeActive(code);
-        } else {
-          showLobby(code);
-        }
-      });
+
+  var code = generateQuizCode();
+  var isTest = sessionMode === 'test';
+
+  // Limpiar participantes anteriores e insertar código en un solo paso
+  // (evaluacion_resultados se mantiene intacto para preservar el historial)
+  client.from('evaluacion_participantes').delete().eq('evaluacion_id', evaluacionId).then(function(delRes){
+    // Ignoramos error de delete si es por RLS (puede que el admin no tenga política DELETE configurada aún)
+    var updateData = {
+      publicado: true,
+      codigo: code,
+      iniciado: isTest,
+      modo_sesion: sessionMode,
+      updated_at: new Date().toISOString()
+    };
+    client.from('evaluaciones').update(updateData).eq('id',evaluacionId).then(function(r){
+      if(r.error){console.error('Update evaluaciones error:', JSON.stringify(r.error));showToast('Error al publicar: ' + (r.error.message||r.error.details||JSON.stringify(r.error)),'error');return;}
+      if(isTest) {
+        showTestModeActive(code);
+      } else {
+        showLobby(code);
+      }
     });
   });
 }

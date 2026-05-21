@@ -2179,27 +2179,28 @@ function loadLibrary() {
                 '\'" style="padding:8px 14px;background:#F0F1F3;border:1px solid #E2E8F0;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#555"><i class="fas fa-edit"></i> Editar</button>' +
                 (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&results=true\'" style="padding:8px 14px;background:#8B5CF6;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;" title="Resultados en vivo"><i class="fas fa-trophy"></i> Resultados</button>' : '') +
                 (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&play=true\'" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;" title="Abrir sala de juego"><i class="fas fa-play"></i> Jugar</button>' : '') +
-                '<button onclick="deleteQuiz(\'' + ev.id + '\')" style="padding:8px 14px;background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#DC2626;" title="Borrar"><i class="fas fa-trash-alt"></i></button>' +
+                '<button onclick="deleteQuiz(\'' + ev.id + '\', event)" style="padding:8px 14px;background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#DC2626;" title="Borrar"><i class="fas fa-trash-alt"></i></button>' +
                 '</div></div>';
         }
         container.innerHTML = html;
     });
 }
 
-window.deleteQuiz = function(id) {
-    var btn = event.currentTarget;
+window.deleteQuiz = function(id, e) {
+    var btn = (e && e.currentTarget) ? e.currentTarget : null;
     showCustomConfirm('¿Estás seguro de que deseas borrar permanentemente esta evaluación? Todos los resultados e informes asociados también se perderán.', function() {
         if (btn) btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
 
         var client = getSupabase();
-        
-        // Primero intentamos borrar dependencias (por si la BD no tiene ON DELETE CASCADE configurado)
+        if (!client) { showCustomAlert('Error de conexión. Recarga la página.'); return; }
+
         Promise.all([
             client.from('evaluacion_preguntas').delete().eq('evaluacion_id', id),
             client.from('evaluacion_participantes').delete().eq('evaluacion_id', id),
             client.from('evaluacion_resultados').delete().eq('evaluacion_id', id)
-        ]).then(function() {
-            // Finalmente borramos la evaluación padre
+        ]).catch(function(err) {
+            console.warn('Alguna dependencia no se pudo borrar (posible RLS):', err);
+        }).then(function() {
             client.from('evaluaciones').delete().eq('id', id).then(function(r) {
                 if (r.error) {
                     showCustomAlert('Error al borrar: ' + r.error.message);
