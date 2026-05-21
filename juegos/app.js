@@ -297,13 +297,15 @@ function enterApp() {
         if (pathPage === 'index.html' || pathPage === 'juegos' || pathPage === '') pathPage = 'inicio';
         
         var defaultPage = urlParams.get('page') || pathPage;
+        // Students land on Explorar by default
+        if (defaultPage === 'inicio' && !isAdmin) defaultPage = 'explorar';
         if (window.location.pathname.includes('index.html') || urlParams.has('page')) {
             var cleanUrl = defaultPage === 'inicio' ? '/juegos/' : '/juegos/' + defaultPage;
             window.history.replaceState({page: defaultPage}, '', cleanUrl);
         } else {
             window.history.replaceState({page: defaultPage}, '', window.location.pathname);
         }
-        navigateTo(defaultPage, true); // true to avoid pushing duplicate state
+        navigateTo(defaultPage, true);
     }
 }
 
@@ -450,6 +452,8 @@ function navigateTo(page, skipPush) {
     if (page === 'biblioteca' && isAdmin) loadLibrary();
     if (page === 'informes' && isAdmin) loadReports();
     if (page === 'historial' && !isAdmin) loadStudentResults();
+    if (page === 'explorar' && !isAdmin) loadExploreSubjects();
+    if (page === 'explorar' && isAdmin) loadExploreSubjects();
 
     closeSidebar();
 
@@ -494,6 +498,202 @@ var quizAnswers = [];       // Respuestas del estudiante
 var quizSelectedOption = -1;
 var quizSessionMode = 'clasico'; // 'clasico' | 'test' | 'equipo'
 var quizTeamName = null; // Equipo asignado (modo equipo)
+var exploreCurrentSubject = null;
+
+// ═══ EXPLORAR — MODO AUTODIDACTA ═══
+
+var subjectIcons = {
+    'Anatomía': '#EF4444', 'Anatomia': '#EF4444',
+    'Fisiología': '#3B82F6', 'Fisiologia': '#3B82F6',
+    'Farmacología': '#8B5CF6', 'Farmacologia': '#8B5CF6',
+    'Patología': '#F59E0B', 'Patologia': '#F59E0B',
+    'Bioquímica': '#10B981', 'Bioquimica': '#10B981',
+    'Microbiología': '#EC4899', 'Microbiologia': '#EC4899',
+    'Embriología': '#06B6D4', 'Embriologia': '#06B6D4',
+    'Histología': '#84CC16', 'Histologia': '#84CC16',
+    'Clínica': '#F97316', 'Clinica': '#F97316',
+    'Terminología': '#6366F1', 'Terminologia': '#6366F1',
+    'General': '#94A3B8'
+};
+var subjectEmojis = {
+    'Anatomía': '🦴', 'Anatomia': '🦴',
+    'Fisiología': '⚡', 'Fisiologia': '⚡',
+    'Farmacología': '💊', 'Farmacologia': '💊',
+    'Patología': '🔬', 'Patologia': '🔬',
+    'Bioquímica': '🧬', 'Bioquimica': '🧬',
+    'Microbiología': '🦠', 'Microbiologia': '🦠',
+    'Embriología': '👶', 'Embriologia': '👶',
+    'Histología': '🔬', 'Histologia': '🔬',
+    'Clínica': '🏥', 'Clinica': '🏥',
+    'Terminología': '📖', 'Terminologia': '📖',
+    'General': '📚'
+};
+
+function loadExploreSubjects(filter) {
+    var client = getSupabase();
+    if (!client) return;
+    document.getElementById('explorar-subject-grid').style.display = '';
+    document.getElementById('explorar-eval-list').style.display = 'none';
+    document.getElementById('explorar-back-btn').style.display = 'none';
+    exploreCurrentSubject = null;
+
+    var grid = document.getElementById('explorar-subject-grid');
+    grid.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6;grid-column:1/-1"><i class="fas fa-spinner fa-spin" style="font-size:28px"></i><p style="margin-top:12px">Cargando materias...</p></div>';
+
+    var query = client.from('evaluaciones').select('asignatura, titulo, id, tema, codigo').eq('publicado', true).order('created_at', { ascending: false });
+    if (filter) query = query.ilike('asignatura', '%' + filter + '%');
+
+    query.then(function(r) {
+        if (r.error || !r.data || r.data.length === 0) {
+            grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><i class="fas fa-book-open"></i><p>No hay evaluaciones disponibles aún</p><small>El profesor publicará evaluaciones pronto</small></div>';
+            return;
+        }
+
+        var subjects = {};
+        for (var i = 0; i < r.data.length; i++) {
+            var subj = r.data[i].asignatura || 'General';
+            if (!subjects[subj]) subjects[subj] = { count: 0, evals: [] };
+            subjects[subj].count++;
+            subjects[subj].evals.push(r.data[i]);
+        }
+
+        var subjectNames = Object.keys(subjects);
+        var filterBar = document.getElementById('explorar-filter-bar');
+        filterBar.innerHTML = '';
+        for (var s = 0; s < subjectNames.length; s++) {
+            var sn = subjectNames[s];
+            filterBar.innerHTML += '<span class="explorar-filter-chip' + (!filter ? '' : (filter === sn ? ' active' : '')) + '" onclick="loadExploreSubjects(\'' + sn.replace(/'/g, "\\\'") + '\')">' + sn + ' (' + subjects[sn].count + ')</span>';
+        }
+        if (filter) {
+            filterBar.innerHTML += '<span class="explorar-filter-chip" onclick="loadExploreSubjects()" style="background:#FEF2F2;border-color:#FECACA;color:#DC2626"><i class="fas fa-times"></i> Quitar filtro</span>';
+        }
+
+        var html = '';
+        for (var s = 0; s < subjectNames.length; s++) {
+            var sn = subjectNames[s];
+            var data = subjects[sn];
+            var color = subjectIcons[sn] || subjectIcons['General'];
+            var emoji = subjectEmojis[sn] || subjectEmojis['General'];
+            html += '<div class="explorar-subject-card" onclick="loadSubjectEvaluations(\'' + sn.replace(/'/g, "\\\'") + '\')">';
+            html += '<div class="explorar-subject-badge">' + data.count + '</div>';
+            html += '<div class="explorar-subject-icon" style="background:' + color + '20;color:' + color + '">' + emoji + '</div>';
+            html += '<h3>' + sn + '</h3>';
+            html += '<p>' + data.count + ' evaluación' + (data.count !== 1 ? 'es' : '') + '</p>';
+            html += '</div>';
+        }
+        grid.innerHTML = html;
+    });
+}
+
+function loadSubjectEvaluations(subject) {
+    exploreCurrentSubject = subject;
+    var client = getSupabase();
+    if (!client) return;
+    document.getElementById('explorar-subject-grid').style.display = 'none';
+    document.getElementById('explorar-back-btn').style.display = '';
+    var listEl = document.getElementById('explorar-eval-list');
+    listEl.style.display = '';
+    listEl.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:28px"></i><p style="margin-top:12px">Cargando evaluaciones de ' + subject + '...</p></div>';
+
+    client.from('evaluaciones').select('id, titulo, tema, codigo, asignatura, created_at').eq('publicado', true).eq('asignatura', subject).order('created_at', { ascending: false }).then(function(evRes) {
+        if (evRes.error || !evRes.data || evRes.data.length === 0) {
+            listEl.innerHTML = '<div class="empty-state"><i class="fas fa-folder-open"></i><p>Sin evaluaciones en ' + subject + '</p><small>Vuelve más tarde</small></div>';
+            return;
+        }
+
+        // Query question count per evaluacion
+        var evalIds = evRes.data.map(function(e) { return e.id; });
+        client.from('evaluacion_preguntas').select('evaluacion_id').in('evaluacion_id', evalIds).then(function(qRes) {
+            var countMap = {};
+            if (qRes.data) {
+                for (var j = 0; j < qRes.data.length; j++) {
+                    var eid = qRes.data[j].evaluacion_id;
+                    countMap[eid] = (countMap[eid] || 0) + 1;
+                }
+            }
+
+            var html = '';
+            for (var i = 0; i < evRes.data.length; i++) {
+                var ev = evRes.data[i];
+                var preguntaCount = countMap[ev.id] || 0;
+                var temaHtml = ev.tema ? ' • ' + ev.tema : '';
+                var fecha = new Date(ev.created_at).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
+                html += '<div class="explorar-eval-card">';
+                html += '<div style="flex:1;min-width:180px">';
+                html += '<h4>' + (ev.titulo || 'Sin título') + '</h4>';
+                html += '<div class="eval-meta"><i class="fas fa-calendar"></i> ' + fecha + temaHtml + ' • <i class="fas fa-question-circle"></i> ' + preguntaCount + ' preguntas</div>';
+                html += '</div>';
+                html += '<button class="explorar-btn-study" onclick="event.stopPropagation();startSelfStudy(\'' + ev.id + '\')"><i class="fas fa-play"></i> Estudiar</button>';
+                html += '</div>';
+            }
+            listEl.innerHTML = html;
+        });
+    });
+}
+
+function startSelfStudy(evalId) {
+    if (!currentUser) { alert('Inicia sesión primero'); return; }
+    var client = getSupabase();
+    if (!client) return;
+
+    var code = 'SELF' + Math.random().toString(36).substring(2, 6).toUpperCase();
+    sessionStorage.setItem('alcocer_quiz_code', code);
+    sessionStorage.removeItem('alcocer_quiz_state_' + code);
+    sessionStorage.removeItem('alcocer_quiz_qids_' + code);
+
+    client.from('evaluaciones').select('*').eq('id', evalId).single().then(function(r) {
+        if (r.error || !r.data) {
+            alert('Evaluación no encontrada');
+            sessionStorage.removeItem('alcocer_quiz_code');
+            return;
+        }
+        var evaluacion = r.data;
+        evaluacion.codigo = code;
+        evaluacion.publicado = true;
+
+        client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evaluacion.id).order('orden').then(function(pResult) {
+            if (pResult.error || !pResult.data || pResult.data.length === 0) {
+                alert('Esta evaluación no tiene preguntas');
+                sessionStorage.removeItem('alcocer_quiz_code');
+                return;
+            }
+
+            var preguntas = pResult.data;
+            for (var i = preguntas.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = preguntas[i];
+                preguntas[i] = preguntas[j];
+                preguntas[j] = temp;
+            }
+            preguntas = preguntas.slice(0, 10);
+            var qids = preguntas.map(function(q) { return q.id; });
+            sessionStorage.setItem('alcocer_quiz_qids_' + code, JSON.stringify(qids));
+
+            quizData = { evaluacion: evaluacion, preguntas: preguntas };
+            quizSessionMode = 'test';
+            quizTeamName = null;
+            quizCurrentQ = 0;
+            quizAnswers = [];
+            quizSelectedOption = -1;
+            quizConfirmed = false;
+
+            sessionStorage.setItem('alcocer_quiz_state_' + code, JSON.stringify({ q: 0, a: [] }));
+            sessionStorage.setItem('alcocer_quiz_code', code);
+
+            navigateTo('quiz');
+            applyTestModeUI();
+            document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
+            document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
+            document.getElementById('quiz-container').style.display = 'flex';
+            document.getElementById('quiz-page-header').style.display = 'none';
+            document.getElementById('quiz-splash').style.display = 'none';
+            document.getElementById('quiz-result').style.display = 'none';
+            document.getElementById('quiz-waiting').style.display = 'none';
+            document.getElementById('quiz-team-picker').style.display = 'none';
+            renderQuestion();
+        });
+    });
+}
 
 function joinByCode() {
     var input = document.getElementById('join-code-input');

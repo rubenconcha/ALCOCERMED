@@ -144,6 +144,9 @@
       <div class="nav-item" data-page="unirse">
         <i class="fas fa-gamepad"></i> <span>Unirse a evaluación</span>
       </div>
+      <div class="nav-item" data-page="explorar">
+        <i class="fas fa-compass"></i> <span>Explorar</span>
+      </div>
       <div class="nav-item" data-page="historial">
         <i class="fas fa-chart-bar"></i> <span>Mis resultados</span>
       </div>
@@ -288,6 +291,18 @@
           <small>Participa en evaluaciones para ver tu progreso aquí</small>
         </div>
       </div>
+    </section>
+
+    <!-- ===== EXPLORAR (MODO AUTODIDACTA) ===== -->
+    <section class="page" id="page-explorar">
+      <div class="page-header">
+        <h1><i class="fas fa-compass"></i> Explorar</h1>
+        <p class="page-subtitle">Estudia a tu ritmo sin necesidad de un código</p>
+      </div>
+      <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap" id="explorar-filter-bar"></div>
+      <div id="explorar-subject-grid" class="explorar-grid"></div>
+      <div id="explorar-eval-list" class="explorar-eval-list" style="display:none"></div>
+      <button id="explorar-back-btn" onclick="loadExploreSubjects()" style="display:none;padding:10px 24px;background:#F1F5F9;border:1px solid #E2E8F0;border-radius:12px;font-weight:600;cursor:pointer;margin-bottom:16px;color:#475569;font-size:14px"><i class="fas fa-arrow-left"></i> Volver a materias</button>
     </section>
 
     <!-- ===== CREAR EVALUACIÓN (ADMIN ONLY) ===== -->
@@ -529,6 +544,10 @@
     <div class="bnav-item" data-page="unirse">
       <i class="fas fa-gamepad"></i>
       <span>Unirse</span>
+    </div>
+    <div class="bnav-item" data-page="explorar">
+      <i class="fas fa-compass"></i>
+      <span>Explorar</span>
     </div>
     <div class="bnav-item" data-page="historial">
       <i class="fas fa-chart-bar"></i>
