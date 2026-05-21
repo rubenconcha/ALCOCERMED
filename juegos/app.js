@@ -627,11 +627,19 @@ function loadSubjectEvaluations(subject) {
             listEl.innerHTML = '<div class="empty-state"><i class="fas fa-exclamation-triangle"></i><p>Error al cargar</p></div>';
             return;
         }
-        // Filtrar manualmente por coincidencia
+        // Filtrar manualmente: MORFOFUNCION recibe todo lo que no es de las otras 2 materias
         var matching = [];
+        var isMorfo = (subject === 'MORFOFUNCION');
         for (var i = 0; i < evRes.data.length; i++) {
-            if (subjectMatch(evRes.data[i].asignatura || '', subject)) {
-                matching.push(evRes.data[i]);
+            var dbAsig = (evRes.data[i].asignatura || '').toUpperCase();
+            if (isMorfo) {
+                if (dbAsig.indexOf('BIOLOGIA CELULAR') === -1 && dbAsig.indexOf('EDUCACION PARA LA SALUD') === -1) {
+                    matching.push(evRes.data[i]);
+                }
+            } else {
+                if (subjectMatch(evRes.data[i].asignatura || '', subject)) {
+                    matching.push(evRes.data[i]);
+                }
             }
         }
         if (matching.length === 0) {
