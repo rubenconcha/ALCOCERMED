@@ -741,7 +741,7 @@ function startSelfStudy(evalId) {
             document.getElementById('quiz-result').style.display = 'none';
             document.getElementById('quiz-waiting').style.display = 'none';
             document.getElementById('quiz-team-picker').style.display = 'none';
-            renderQuestion();
+            renderQuizQuestion();
         });
     });
 }
@@ -799,7 +799,7 @@ function restoreSelfStudy(evalId, code) {
             document.getElementById('quiz-waiting').style.display = 'none';
             document.getElementById('quiz-team-picker').style.display = 'none';
             if (quizCurrentQ >= preguntas.length) { showQuizResults(); }
-            else { renderQuestion(); }
+            else { renderQuizQuestion(); }
         });
     });
 }
