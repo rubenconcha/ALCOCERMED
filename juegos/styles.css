@@ -757,6 +757,69 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
 }
 
 /* ═══ NATIVE APP OVERRIDES (EXPO) ═══ */
+
+/* ═══ COMODINES POWER-UPS ═══ */
+.powerup-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 14px;
+    border-radius: 16px;
+    border: 2px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.7rem;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    backdrop-filter: blur(8px);
+    min-width: 70px;
+}
+.powerup-btn:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.powerup-btn:active {
+    transform: scale(0.9);
+}
+.powerup-icon {
+    font-size: 1.3rem;
+    transition: transform 0.2s;
+}
+.powerup-btn:hover .powerup-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+.powerup-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.3px;
+    text-align: center;
+    line-height: 1.1;
+}
+@media (max-width: 480px) {
+    .powerup-btn {
+        padding: 8px 10px;
+        min-width: 58px;
+        border-radius: 12px;
+    }
+    .powerup-icon { font-size: 1.1rem; }
+    .powerup-label { font-size: 0.52rem; }
+}
+@keyframes powerupGlow {
+    0%,100% { box-shadow: 0 0 10px currentColor, 0 0 20px currentColor; }
+    50% { box-shadow: 0 0 20px currentColor, 0 0 40px currentColor; }
+}
+@keyframes popIn {
+    0% { transform: translateX(-50%) scale(0.5); opacity: 0; }
+    100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+@keyframes pulse {
+    0%,100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* ═══ NATIVE APP OVERRIDES (EXPO) ═══ */
 body.is-native-app .topbar { display: none !important; }
 body.is-native-app .bottom-nav { display: none !important; }
 body.is-native-app .main-content {

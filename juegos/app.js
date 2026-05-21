@@ -507,8 +507,291 @@ var quizData = null;       // { evaluacion, preguntas[] }
 var quizCurrentQ = 0;      // Índice de pregunta actual
 var quizAnswers = [];       // Respuestas del estudiante
 var quizSelectedOption = -1;
-var quizSessionMode = 'clasico'; // 'clasico' | 'test' | 'equipo'
+var quizSessionMode = 'clasico'; // 'clasico' | 'test' | 'equipo' | 'practica'
 var quizTeamName = null; // Equipo asignado (modo equipo)
+var quizConfirmed = false;
+var quizStreakCount = 0;
+var quizQuestionStartTime = Date.now();
+
+// ═══ COMODINES / POWER-UPS ═══
+var powerups = [];       // 3 comodines disponibles esta sesión
+var activePowerup = null; // comodín activo en esta pregunta (ej: x2, eliminar)
+var powerupUsedThisQ = false;
+
+var POWERUP_DEFS = {
+    // 🎯 PUNTOS
+    x2:  { name:'⚡ x2 Puntos',    desc:'Duplica los puntos de esta pregunta',           cat:'puntos', effect:'multiply', value:2,  icon:'⚡', color:'#F59E0B' },
+    x3r: { name:'🔥 x3 Racha',     desc:'Si aciertas 3 seguidas, la próxima da x3',     cat:'puntos', effect:'streak_x3', value:3, icon:'🔥', color:'#EF4444' },
+    jack: { name:'💎 Jackpot',      desc:'Pregunta aleatoria vale 500-1000 pts extra',   cat:'puntos', effect:'jackpot',   value:0,  icon:'💎', color:'#06B6D4' },
+    myst: { name:'🎲 Misterioso',   desc:'Multiplicador aleatorio x2, x3 o x5',          cat:'puntos', effect:'random_mul', value:0, icon:'🎲', color:'#8B5CF6' },
+    speed:{ name:'⏳ Bonus Velocidad', desc:'Si respondes en <5s, ganas +200 pts',       cat:'puntos', effect:'speed_bonus', value:200, icon:'⏳', color:'#10B981' },
+
+    // 🛡️ AYUDA
+    elim: { name:'❌ Eliminar',     desc:'Elimina una opción incorrecta',                cat:'ayuda',  effect:'remove_wrong', value:1, icon:'❌', color:'#3B82F6' },
+    time: { name:'⏱️ +10 Segundos', desc:'Añade 10 segundos al temporizador',           cat:'ayuda',  effect:'add_time',   value:10, icon:'⏱️', color:'#6366F1' },
+    hint: { name:'👀 Pista',        desc:'Muestra una pista sobre la respuesta',         cat:'ayuda',  effect:'show_hint',  value:0,  icon:'👀', color:'#EC4899' },
+    free: { name:'🎁 Respuesta Gratis', desc:'Esta pregunta cuenta como correcta',       cat:'ayuda',  effect:'free_answer', value:0, icon:'🎁', color:'#22C55E' },
+    retry:{ name:'🔄 2a Oportunidad', desc:'Si fallas, puedes intentarlo otra vez',      cat:'ayuda',  effect:'retry',     value:1,  icon:'🔄', color:'#E91E63' },
+
+    // 😈 ATAQUE / DIVERTIDO
+    chest:{ name:'🎁 Caja Misteriosa', desc:'¡Puede ser premio o castigo!',              cat:'divertido', effect:'mystery_box', value:0, icon:'🎁', color:'#F97316' },
+    sleep:{ name:'💤 Dormido',       desc:'Las opciones se ven borrosas 3 segundos',     cat:'divertido', effect:'blur_options', value:3, icon:'💤', color:'#A78BFA' },
+    ultra:{ name:'🤯 Ultra Instinto', desc:'Opciones incorrectas desaparecen lento',      cat:'divertido', effect:'fade_wrong', value:0, icon:'🤯', color:'#FFD700' },
+    spy:  { name:'🕵️ Espía',         desc:'Ve qué porcentaje eligió cada opción',        cat:'divertido', effect:'spy_stats',  value:0, icon:'🕵️', color:'#64748B' },
+    swap: { name:'🌪️ Roba Puntos',   desc:'Roba 100 pts al primer lugar del podio',      cat:'divertido', effect:'steal_points', value:100, icon:'🌪️', color:'#84CC16' }
+};
+
+function pickRandomPowerups() {
+    var cats = { puntos: [], ayuda: [], divertido: [] };
+    for (var key in POWERUP_DEFS) {
+        var p = POWERUP_DEFS[key];
+        cats[p.cat].push({ key: key, def: p });
+    }
+    powerups = [];
+    for (var cat in cats) {
+        if (cats[cat].length > 0) {
+            var idx = Math.floor(Math.random() * cats[cat].length);
+            powerups.push(cats[cat][idx]);
+        }
+    }
+}
+
+function renderPowerupBar() {
+    var bar = document.getElementById('powerup-bar');
+    if (!bar || powerups.length === 0) return;
+    var html = '';
+    for (var i = 0; i < powerups.length; i++) {
+        var p = powerups[i];
+        var used = (p._used) ? 'opacity:0.35;pointer-events:none;filter:grayscale(1);' : '';
+        html += '<button class="powerup-btn" id="pw-btn-' + i + '" onclick="activatePowerup(' + i + ')" style="' + used + '" title="' + p.def.name + ': ' + p.def.desc + '">';
+        html += '<span class="powerup-icon">' + p.def.icon + '</span>';
+        html += '<span class="powerup-label">' + p.def.name + '</span>';
+        html += '</button>';
+    }
+    bar.innerHTML = html;
+    bar.style.display = 'flex';
+}
+
+function activatePowerup(idx) {
+    if (idx < 0 || idx >= powerups.length || powerups[idx]._used || activePowerup) return;
+    var p = powerups[idx];
+    var def = p.def;
+
+    // Marcar como usado (efecto inmediato se aplica, otros requieren activación en la pregunta)
+    if (def.effect === 'add_time') {
+        addQuizTime(def.value);
+        flashPowerup('pw-btn-' + idx);
+    } else if (def.effect === 'remove_wrong') {
+        removeOneWrongOption();
+        flashPowerup('pw-btn-' + idx);
+    } else if (def.effect === 'show_hint') {
+        showQuestionHint();
+        flashPowerup('pw-btn-' + idx);
+    } else if (def.effect === 'free_answer') {
+        autoAnswerCorrect();
+        flashPowerup('pw-btn-' + idx);
+    } else if (def.effect === 'blur_options') {
+        blurOptionsTemporarily(def.value);
+        flashPowerup('pw-btn-' + idx);
+    } else if (def.effect === 'fade_wrong') {
+        fadeWrongOptions();
+        flashPowerup('pw-btn-' + idx);
+    } else if (def.effect === 'spy_stats') {
+        showSpyStats();
+        flashPowerup('pw-btn-' + idx);
+    } else {
+        // Modificadores que afectan la siguiente respuesta
+        activePowerup = def;
+        var btn = document.getElementById('pw-btn-' + idx);
+        if (btn) btn.style.boxShadow = '0 0 20px ' + def.color + ', 0 0 40px ' + def.color;
+        showPowerupToast(def.icon + ' ' + def.name + ' ACTIVADO', def.color);
+    }
+    powerups[idx]._used = true;
+    powerupUsedThisQ = true;
+    setTimeout(function() { renderPowerupBar(); }, 400);
+}
+
+function flashPowerup(btnId) {
+    var btn = document.getElementById(btnId);
+    if (!btn) return;
+    btn.style.transform = 'scale(1.3)';
+    btn.style.boxShadow = '0 0 30px gold';
+    setTimeout(function() { if (btn) { btn.style.transform = ''; btn.style.boxShadow = ''; } }, 500);
+}
+
+function applyPowerupToAnswer(isCorrect, basePoints) {
+    if (!activePowerup) return basePoints;
+    var def = activePowerup;
+    var pts = basePoints;
+    if (def.effect === 'multiply' && isCorrect) pts = basePoints * def.value;
+    else if (def.effect === 'random_mul' && isCorrect) {
+        var mults = [2, 3, 5];
+        var m = mults[Math.floor(Math.random() * mults.length)];
+        pts = basePoints * m;
+        showPowerupToast('🎲 ¡x' + m + '! ' + pts + ' puntos', def.color);
+    } else if (def.effect === 'jackpot' && isCorrect) {
+        var bonus = Math.floor(Math.random() * 501) + 500;
+        pts = basePoints + bonus;
+        showPowerupToast('💎 ¡JACKPOT! +' + bonus + ' pts extra', def.color);
+    } else if (def.effect === 'speed_bonus' && isCorrect) {
+        var elapsed = (Date.now() - quizQuestionStartTime) / 1000;
+        if (elapsed < 5) pts = basePoints + def.value;
+        showPowerupToast('⏳ ' + (elapsed < 5 ? '¡Veloz! +' + def.value + ' pts' : 'Muy lento, sin bonus'), def.color);
+    } else if (def.effect === 'streak_x3' && isCorrect) {
+        quizStreakCount = (quizStreakCount || 0) + 1;
+        if (quizStreakCount >= 3) { pts = basePoints * 3; showPowerupToast('🔥 ¡Racha x3! ' + pts + ' pts', def.color); quizStreakCount = 0; }
+        else showPowerupToast('🔥 Racha: ' + quizStreakCount + '/3', def.color);
+    } else if (def.effect === 'mystery_box') {
+        var r = Math.random();
+        if (r < 0.4) { pts = isCorrect ? basePoints * 2 : 0; showPowerupToast('🎁 ¡Premio! x2 puntos', '#22C55E'); }
+        else if (r < 0.7) { pts = isCorrect ? basePoints : -50; showPowerupToast('🎁 ¡Castigo! -50 pts', '#EF4444'); }
+        else { pts = basePoints; showPowerupToast('🎁 ¡Vacío! Sin cambios', '#94A3B8'); }
+    } else if (def.effect === 'retry' && !isCorrect) {
+        powerups.push({ key: 'retry_used', def: def, _used: false });
+        showPowerupToast('🔄 ¡Segunda oportunidad! Responde de nuevo', def.color);
+        return null; // null = dont register answer yet
+    }
+    activePowerup = null;
+    powerupUsedThisQ = false;
+    return pts;
+}
+
+// === EFECTOS INMEDIATOS ===
+function addQuizTime(secs) {
+    quizTimeLeft += secs;
+    var timerBar = document.getElementById('quiz-timer-bar');
+    if (timerBar) {
+        var totalTimer = (quizData.preguntas[quizCurrentQ].temporizador || 30) + secs;
+        var pct = Math.min(100, (quizTimeLeft / totalTimer) * 100);
+        timerBar.style.width = pct + '%';
+        timerBar.style.transition = 'width ' + quizTimeLeft + 's linear, background 0.3s';
+    }
+    showPowerupToast('⏱️ +' + secs + ' segundos', '#6366F1');
+    playBeep(600, 'sine', 0.3);
+}
+
+function removeOneWrongOption() {
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var opts = pregunta.opciones || [];
+    var wrongIndices = [];
+    for (var i = 0; i < opts.length; i++) {
+        if (!opts[i].correct && i !== quizSelectedOption) wrongIndices.push(i);
+    }
+    if (wrongIndices.length > 0) {
+        var removeIdx = wrongIndices[Math.floor(Math.random() * wrongIndices.length)];
+        var btn = document.querySelectorAll('.quiz-opt-btn')[removeIdx];
+        if (btn) {
+            btn.style.opacity = '0';
+            btn.style.transform = 'scale(0)';
+            btn.style.pointerEvents = 'none';
+            btn.style.transition = 'all 0.4s ease';
+            if (btn.querySelector('.opt-letter')) btn.querySelector('.opt-letter').textContent = '🚫';
+        }
+        showPowerupToast('❌ Opción incorrecta eliminada', '#3B82F6');
+        playBeep(500, 'square', 0.2);
+    }
+}
+
+function showQuestionHint() {
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var opts = pregunta.opciones || [];
+    var correctText = '';
+    for (var i = 0; i < opts.length; i++) {
+        if (opts[i].correct) correctText = opts[i].text;
+    }
+    var hint = correctText ? correctText.substring(0, 3) + '...' : 'Pista no disponible';
+    var hintEl = document.createElement('div');
+    hintEl.style.cssText = 'text-align:center;padding:8px 16px;background:rgba(236,72,153,0.15);border:1px solid rgba(236,72,153,0.3);border-radius:10px;color:#EC4899;font-weight:700;font-size:0.85rem;margin-bottom:8px;animation:pulse 1s infinite';
+    hintEl.textContent = '👀 Pista: ' + hint;
+    var container = document.getElementById('quiz-question-card');
+    if (container) container.appendChild(hintEl);
+    setTimeout(function() { if (hintEl.parentNode) hintEl.parentNode.removeChild(hintEl); }, 4000);
+    showPowerupToast('👀 Pista revelada', '#EC4899');
+}
+
+function autoAnswerCorrect() {
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var opts = pregunta.opciones || [];
+    for (var i = 0; i < opts.length; i++) {
+        if (opts[i].correct) {
+            quizSelectedOption = i;
+            confirmQuizAnswer();
+            return;
+        }
+    }
+}
+
+function blurOptionsTemporarily(secs) {
+    var btns = document.querySelectorAll('.quiz-opt-btn');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].style.filter = 'blur(4px)';
+        btns[i].style.transition = 'filter 3s ease';
+    }
+    setTimeout(function() {
+        for (var i = 0; i < btns.length; i++) btns[i].style.filter = '';
+    }, secs * 1000);
+    showPowerupToast('💤 Opciones borrosas ' + secs + 's', '#A78BFA');
+}
+
+function fadeWrongOptions() {
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var opts = pregunta.opciones || [];
+    var btns = document.querySelectorAll('.quiz-opt-btn');
+    for (var i = 0; i < opts.length; i++) {
+        if (!opts[i].correct && btns[i]) {
+            btns[i].style.opacity = '0.3';
+            btns[i].style.transition = 'opacity 2s ease';
+            setTimeout((function(btn) { return function() { btn.style.opacity = '0'; btn.style.pointerEvents = 'none'; }; })(btns[i]), 2000);
+        }
+    }
+    showPowerupToast('🤯 Incorrectas se desvanecen...', '#FFD700');
+}
+
+function showSpyStats() {
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    var opts = pregunta.opciones || [];
+    var btns = document.querySelectorAll('.quiz-opt-btn');
+    for (var i = 0; i < opts.length; i++) {
+        var pct = Math.floor(Math.random() * 60) + 10;
+        if (opts[i].correct) pct = Math.floor(Math.random() * 30) + 50;
+        if (btns[i]) {
+            var badge = document.createElement('span');
+            badge.style.cssText = 'position:absolute;top:-8px;right:-8px;background:rgba(0,0,0,0.8);color:#fff;font-size:0.65rem;padding:2px 8px;border-radius:10px;font-weight:700;z-index:10';
+            badge.textContent = pct + '%';
+            btns[i].style.position = 'relative';
+            btns[i].appendChild(badge);
+            setTimeout(function(b) { return function() { if (b.parentNode) b.parentNode.removeChild(b); }; }(badge), 5000);
+        }
+    }
+    showPowerupToast('🕵️ Estadísticas reveladas 5s', '#64748B');
+}
+
+function showPowerupToast(msg, color) {
+    var existing = document.getElementById('pw-toast');
+    if (existing) existing.remove();
+    var toast = document.createElement('div');
+    toast.id = 'pw-toast';
+    toast.style.cssText = 'position:fixed;top:20%;left:50%;transform:translateX(-50%);z-index:5000;padding:16px 32px;border-radius:16px;font-weight:800;font-size:1.1rem;text-align:center;animation:popIn .4s cubic-bezier(.34,1.56,.64,1);box-shadow:0 8px 32px rgba(0,0,0,0.4);pointer-events:none';
+    toast.style.background = 'rgba(15,23,42,0.95)';
+    toast.style.border = '2px solid ' + color;
+    toast.style.color = '#fff';
+    toast.textContent = msg;
+    document.body.appendChild(toast);
+    setTimeout(function() {
+        toast.style.opacity = '0';
+        toast.style.transition = 'opacity 0.5s';
+        setTimeout(function() { if (toast.parentNode) toast.remove(); }, 500);
+    }, 2000);
+}
+
+function cleanupPowerupsForNextQ() {
+    activePowerup = null;
+    powerupUsedThisQ = false;
+    var toast = document.getElementById('pw-toast');
+    if (toast) toast.remove();
+    // Si hay streak_x3 sin terminar, mantener
+    if (quizStreakCount === undefined) quizStreakCount = 0;
+}
 var exploreCurrentSubject = null;
 
 // ═══ JUGAR — MODO AUTODIDACTA ═══
@@ -732,10 +1015,12 @@ function startSelfStudy(evalId) {
             sessionStorage.setItem('alcocer_quiz_code', code);
 
             // Usar el MISMO flujo que searchAndStartQuiz para modo test
+            pickRandomPowerups();
             navigateTo('quiz');
             applyTestModeUI();
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
             document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
+            renderPowerupBar();
             showSplashAndStart();
         });
     });
@@ -784,7 +1069,9 @@ function restoreSelfStudy(evalId, code) {
             quizConfirmed = false;
 
             navigateTo('quiz');
+            pickRandomPowerups();
             applyTestModeUI();
+            renderPowerupBar();
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
             document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
             if (quizCurrentQ > 0) {
@@ -1449,6 +1736,9 @@ var quizMultiSelections = [];
 function renderQuizQuestion() {
     if (!quizData || quizCurrentQ >= quizData.preguntas.length) return;
 
+    quizQuestionStartTime = Date.now();
+    renderPowerupBar();
+
     var pregunta = quizData.preguntas[quizCurrentQ];
     var total = quizData.preguntas.length;
     var pts = pregunta.puntos || 1;
@@ -1803,6 +2093,22 @@ function confirmQuizAnswer() {
     if (confirmBtn) confirmBtn.style.display = 'none';
 
     var pts = getQuizPoints(isCorrectAnswer, pregunta);
+    if (pts === null) {
+        quizConfirmed = false;
+        quizSelectedOption = -1;
+        for (var r = 0; r < buttons.length; r++) {
+            buttons[r].style.cursor = 'pointer';
+            buttons[r].style.pointerEvents = 'auto';
+            buttons[r].style.opacity = '1';
+            buttons[r].style.transform = '';
+            buttons[r].style.border = '';
+            buttons[r].style.background = '';
+            buttons[r].style.boxShadow = '';
+        }
+        if (confirmBtn) confirmBtn.style.display = '';
+        renderPowerupBar();
+        return;
+    }
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer, puntos_ganados: pts });
     
     showFeedbackAnimation(isCorrectAnswer, pts);
@@ -1815,38 +2121,29 @@ function getQuizPoints(isCorrect, pregunta) {
     var base = 600;
     var totalTimer = pregunta.temporizador || 30;
     var timeRatio = Math.max(0, quizTimeLeft) / totalTimer;
-    var timePts = Math.round(timeRatio * 400); // Hasta 400 pts por tiempo
+    var timePts = Math.round(timeRatio * 400);
     
-    // Calcular la racha actual *antes* de esta respuesta
     var prevStreak = 0;
     for(var i=0; i<quizAnswers.length; i++) {
         var pq = quizData && quizData.preguntas ? quizData.preguntas.find(function(q) { return q.id === quizAnswers[i].pregunta_id; }) : null;
         var isNeutral = pq ? (pq.tipo === 'oa' || pq.tipo === 'poll' || pq.tipo === 'encuesta') : (quizAnswers[i].correcta === null);
         if (isNeutral) continue;
-
-        if(quizAnswers[i].correcta) {
-            prevStreak++;
-        } else {
-            prevStreak = 0;
-        }
+        if(quizAnswers[i].correcta) { prevStreak++; }
+        else { prevStreak = 0; }
     }
     
-    // Con esta respuesta correcta, la racha aumenta en 1
     var currentStreak = prevStreak + 1;
-    
-    // Bonus de racha escalable y acumulativo (Quizizz-style)
-    // Racha 1: +0 pts
-    // Racha 2: +150 pts
-    // Racha 3: +300 pts
-    // Racha 4: +450 pts
-    // Racha 5+: +600 pts!
     var streakBonus = 0;
     if (currentStreak === 2) streakBonus = 150;
     else if (currentStreak === 3) streakBonus = 300;
     else if (currentStreak === 4) streakBonus = 450;
-    else if (currentStreak >= 5) streakBonus = 600 + (currentStreak - 5) * 50; // Suma 50 pts adicionales por racha sin límite
+    else if (currentStreak >= 5) streakBonus = 600 + (currentStreak - 5) * 50;
     
-    return Math.round((base + timePts + streakBonus) * (pregunta.puntos || 1));
+    var raw = Math.round((base + timePts + streakBonus) * (pregunta.puntos || 1));
+    // ═══ APLICAR COMODÍN DE PUNTOS ═══
+    var finalPts = applyPowerupToAnswer(isCorrect, raw);
+    if (finalPts === null) return null; // retry
+    return finalPts;
 }
 
 function confirmQuizAnswerInstant(idx) {
@@ -1895,6 +2192,7 @@ function confirmQuizAnswerInstant(idx) {
 window.confirmQuizAnswerInstant = confirmQuizAnswerInstant;
 
 function quizNext() {
+    cleanupPowerupsForNextQ();
     quizCurrentQ++;
     if (quizData && quizData.evaluacion && quizData.evaluacion.codigo) {
         sessionStorage.setItem('alcocer_quiz_state_' + quizData.evaluacion.codigo, JSON.stringify({
@@ -1902,6 +2200,7 @@ function quizNext() {
             a: quizAnswers
         }));
     }
+    renderPowerupBar();
     if (quizCurrentQ >= quizData.preguntas.length) { showQuizResults(); }
     else { renderQuizQuestion(); }
 }
@@ -1909,7 +2208,10 @@ window.quizNext = quizNext;
 
 function showQuizResults() {
     if (quizTimerInterval) clearInterval(quizTimerInterval);
-    stopGameMusic(); // Parar música al terminar
+    stopGameMusic();
+    var pwBar = document.getElementById('powerup-bar');
+    if (pwBar) pwBar.style.display = 'none';
+    activePowerup = null;
     // Limpiar sesión pendiente — el quiz terminó
     sessionStorage.removeItem('alcocer_quiz_code');
     if (quizData && quizData.evaluacion) {
