@@ -290,15 +290,26 @@ function enterApp() {
         window.history.replaceState({}, document.title, window.location.pathname);
         searchAndStartQuiz(urlCode);
     } else if (pendingCode && !isAdmin) {
-        searchAndStartQuiz(pendingCode);
+        // Si es sesión autodidacta, restaurar desde Supabase
+        if (pendingCode.indexOf('SELF') === 0) {
+            var savedEvalId = sessionStorage.getItem('alcocer_self_evalid');
+            if (savedEvalId) {
+                restoreSelfStudy(savedEvalId, pendingCode);
+            } else {
+                sessionStorage.removeItem('alcocer_quiz_code');
+                navigateTo('jugar', true);
+            }
+        } else {
+            searchAndStartQuiz(pendingCode);
+        }
     } else {
         var pathParts = window.location.pathname.split('/');
         var pathPage = pathParts[pathParts.length - 1];
         if (pathPage === 'index.html' || pathPage === 'juegos' || pathPage === '') pathPage = 'inicio';
         
         var defaultPage = urlParams.get('page') || pathPage;
-        // Students land on Explorar by default
-        if (defaultPage === 'inicio' && !isAdmin) defaultPage = 'explorar';
+        // Students land on JUGAR by default
+        if (defaultPage === 'inicio' && !isAdmin) defaultPage = 'jugar';
         if (window.location.pathname.includes('index.html') || urlParams.has('page')) {
             var cleanUrl = defaultPage === 'inicio' ? '/juegos/' : '/juegos/' + defaultPage;
             window.history.replaceState({page: defaultPage}, '', cleanUrl);
@@ -452,8 +463,8 @@ function navigateTo(page, skipPush) {
     if (page === 'biblioteca' && isAdmin) loadLibrary();
     if (page === 'informes' && isAdmin) loadReports();
     if (page === 'historial' && !isAdmin) loadStudentResults();
-    if (page === 'explorar' && !isAdmin) loadExploreSubjects();
-    if (page === 'explorar' && isAdmin) loadExploreSubjects();
+    if (page === 'jugar' && !isAdmin) loadExploreSubjects();
+    if (page === 'jugar' && isAdmin) loadExploreSubjects();
 
     closeSidebar();
 
@@ -500,34 +511,30 @@ var quizSessionMode = 'clasico'; // 'clasico' | 'test' | 'equipo'
 var quizTeamName = null; // Equipo asignado (modo equipo)
 var exploreCurrentSubject = null;
 
-// ═══ EXPLORAR — MODO AUTODIDACTA ═══
+// ═══ JUGAR — MODO AUTODIDACTA ═══
 
 var subjectIcons = {
-    'Anatomía': '#EF4444', 'Anatomia': '#EF4444',
-    'Fisiología': '#3B82F6', 'Fisiologia': '#3B82F6',
-    'Farmacología': '#8B5CF6', 'Farmacologia': '#8B5CF6',
-    'Patología': '#F59E0B', 'Patologia': '#F59E0B',
-    'Bioquímica': '#10B981', 'Bioquimica': '#10B981',
-    'Microbiología': '#EC4899', 'Microbiologia': '#EC4899',
-    'Embriología': '#06B6D4', 'Embriologia': '#06B6D4',
-    'Histología': '#84CC16', 'Histologia': '#84CC16',
-    'Clínica': '#F97316', 'Clinica': '#F97316',
-    'Terminología': '#6366F1', 'Terminologia': '#6366F1',
+    'MORFOFUNCION': '#EF4444', 'MORFOFUNCIÓN': '#EF4444', 'Morfofuncion': '#EF4444', 'Morfofunción': '#EF4444',
+    'BIOLOGIA CELULAR': '#3B82F6', 'BIOLOGÍA CELULAR': '#3B82F6', 'Biologia Celular': '#3B82F6', 'Biología Celular': '#3B82F6',
+    'EDUCACION PARA LA VIDA': '#10B981', 'EDUCACIÓN PARA LA VIDA': '#10B981', 'Educacion para la Vida': '#10B981', 'Educación para la Vida': '#10B981',
+    'EVALUACION PRUEBA': '#F59E0B', 'EVALUACIÓN PRUEBA': '#F59E0B', 'Evaluacion Prueba': '#F59E0B', 'Evaluación Prueba': '#F59E0B',
     'General': '#94A3B8'
 };
 var subjectEmojis = {
-    'Anatomía': '🦴', 'Anatomia': '🦴',
-    'Fisiología': '⚡', 'Fisiologia': '⚡',
-    'Farmacología': '💊', 'Farmacologia': '💊',
-    'Patología': '🔬', 'Patologia': '🔬',
-    'Bioquímica': '🧬', 'Bioquimica': '🧬',
-    'Microbiología': '🦠', 'Microbiologia': '🦠',
-    'Embriología': '👶', 'Embriologia': '👶',
-    'Histología': '🔬', 'Histologia': '🔬',
-    'Clínica': '🏥', 'Clinica': '🏥',
-    'Terminología': '📖', 'Terminologia': '📖',
+    'MORFOFUNCION': '🧠', 'MORFOFUNCIÓN': '🧠', 'Morfofuncion': '🧠', 'Morfofunción': '🧠',
+    'BIOLOGIA CELULAR': '🧬', 'BIOLOGÍA CELULAR': '🧬', 'Biologia Celular': '🧬', 'Biología Celular': '🧬',
+    'EDUCACION PARA LA VIDA': '🌱', 'EDUCACIÓN PARA LA VIDA': '🌱', 'Educacion para la Vida': '🌱', 'Educación para la Vida': '🌱',
+    'EVALUACION PRUEBA': '🎯', 'EVALUACIÓN PRUEBA': '🎯', 'Evaluacion Prueba': '🎯', 'Evaluación Prueba': '🎯',
     'General': '📚'
 };
+
+function adjustColor(hex, amount) {
+    var num = parseInt(hex.replace('#',''), 16);
+    var r = Math.min(255, Math.max(0, (num >> 16) + amount));
+    var g = Math.min(255, Math.max(0, ((num >> 8) & 0x00FF) + amount));
+    var b = Math.min(255, Math.max(0, (num & 0x0000FF) + amount));
+    return '#' + (0x1000000 + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
 
 function loadExploreSubjects(filter) {
     var client = getSupabase();
@@ -536,6 +543,7 @@ function loadExploreSubjects(filter) {
     document.getElementById('explorar-eval-list').style.display = 'none';
     document.getElementById('explorar-back-btn').style.display = 'none';
     exploreCurrentSubject = null;
+    document.getElementById('page-jugar').querySelector('.page-header h1').innerHTML = '<i class="fas fa-gamepad"></i> JUGAR';
 
     var grid = document.getElementById('explorar-subject-grid');
     grid.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6;grid-column:1/-1"><i class="fas fa-spinner fa-spin" style="font-size:28px"></i><p style="margin-top:12px">Cargando materias...</p></div>';
@@ -574,11 +582,14 @@ function loadExploreSubjects(filter) {
             var data = subjects[sn];
             var color = subjectIcons[sn] || subjectIcons['General'];
             var emoji = subjectEmojis[sn] || subjectEmojis['General'];
-            html += '<div class="explorar-subject-card" onclick="loadSubjectEvaluations(\'' + sn.replace(/'/g, "\\\'") + '\')">';
-            html += '<div class="explorar-subject-badge">' + data.count + '</div>';
-            html += '<div class="explorar-subject-icon" style="background:' + color + '20;color:' + color + '">' + emoji + '</div>';
-            html += '<h3>' + sn + '</h3>';
-            html += '<p>' + data.count + ' evaluación' + (data.count !== 1 ? 'es' : '') + '</p>';
+            var isDemo = (sn.toUpperCase().indexOf('PRUEBA') !== -1 || sn.toUpperCase().indexOf('MUESTRA') !== -1);
+            html += '<div class="explorar-subject-card" onclick="loadSubjectEvaluations(\'' + sn.replace(/'/g, "\\\'") + '\')" style="background:linear-gradient(135deg,' + color + '15,' + color + '05);border-color:' + color + '40">';
+            html += '<div class="explorar-subject-badge" style="background:' + color + '20;color:' + color + ';font-weight:800">' + data.count + ' 📋</div>';
+            html += '<div class="explorar-subject-icon" style="background:linear-gradient(135deg,' + color + '30,' + color + '10);color:' + color + ';box-shadow:0 8px 24px ' + color + '30">' + emoji + '</div>';
+            html += '<h3 style="font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:0.5px">' + sn + '</h3>';
+            html += '<p style="font-size:0.75rem;color:' + color + ';font-weight:700">' + data.count + ' evaluación' + (data.count !== 1 ? 'es' : '') + ' • JUGAR <i class="fas fa-arrow-right" style="font-size:0.65rem"></i></p>';
+            html += '<div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:' + color + '30;border-radius:0 0 20px 20px"><div style="height:100%;width:100%;background:' + color + ';border-radius:0 0 20px 20px;opacity:0.6"></div></div>';
+            if (isDemo) html += '<div style="position:absolute;top:8px;left:12px;background:#FEF3C7;color:#92400E;font-size:0.6rem;font-weight:800;padding:2px 8px;border-radius:10px">🎯 DEMO</div>';
             html += '</div>';
         }
         grid.innerHTML = html;
@@ -590,10 +601,13 @@ function loadSubjectEvaluations(subject) {
     var client = getSupabase();
     if (!client) return;
     document.getElementById('explorar-subject-grid').style.display = 'none';
-    document.getElementById('explorar-back-btn').style.display = '';
+            document.getElementById('explorar-back-btn').style.display = '';
+    var color = subjectIcons[subject] || subjectIcons['General'];
+    var emoji = subjectEmojis[subject] || subjectEmojis['General'];
+    document.getElementById('page-jugar').querySelector('.page-header h1').innerHTML = '<i class="fas fa-arrow-left" style="cursor:pointer;margin-right:8px" onclick="loadExploreSubjects()"></i>' + emoji + ' ' + subject;
     var listEl = document.getElementById('explorar-eval-list');
     listEl.style.display = '';
-    listEl.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:28px"></i><p style="margin-top:12px">Cargando evaluaciones de ' + subject + '...</p></div>';
+    listEl.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:28px"></i><p style="margin-top:12px">Cargando evaluaciones...</p></div>';
 
     client.from('evaluaciones').select('id, titulo, tema, codigo, asignatura, created_at').eq('publicado', true).eq('asignatura', subject).order('created_at', { ascending: false }).then(function(evRes) {
         if (evRes.error || !evRes.data || evRes.data.length === 0) {
@@ -613,17 +627,22 @@ function loadSubjectEvaluations(subject) {
             }
 
             var html = '';
+            var color = subjectIcons[subject] || subjectIcons['General'];
             for (var i = 0; i < evRes.data.length; i++) {
                 var ev = evRes.data[i];
                 var preguntaCount = countMap[ev.id] || 0;
                 var temaHtml = ev.tema ? ' • ' + ev.tema : '';
                 var fecha = new Date(ev.created_at).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
-                html += '<div class="explorar-eval-card">';
+                var isDemo = (ev.titulo || '').toUpperCase().indexOf('PRUEBA') !== -1;
+                html += '<div class="explorar-eval-card" style="border-left:4px solid ' + color + '">';
                 html += '<div style="flex:1;min-width:180px">';
-                html += '<h4>' + (ev.titulo || 'Sin título') + '</h4>';
-                html += '<div class="eval-meta"><i class="fas fa-calendar"></i> ' + fecha + temaHtml + ' • <i class="fas fa-question-circle"></i> ' + preguntaCount + ' preguntas</div>';
-                html += '</div>';
-                html += '<button class="explorar-btn-study" onclick="event.stopPropagation();startSelfStudy(\'' + ev.id + '\')"><i class="fas fa-play"></i> Estudiar</button>';
+                html += '<h4 style="font-size:1.05rem;font-weight:800;color:var(--text);margin:0 0 6px">' + (ev.titulo || 'Sin título') + (isDemo ? ' <span style="background:#FEF3C7;color:#92400E;font-size:0.65rem;padding:2px 8px;border-radius:8px;font-weight:700">🎯 DEMO</span>' : '') + '</h4>';
+                html += '<div class="eval-meta" style="display:flex;flex-wrap:wrap;gap:10px;font-size:0.78rem;color:#94A3B8">';
+                html += '<span><i class="fas fa-calendar"></i> ' + fecha + '</span>';
+                if (ev.tema) html += '<span><i class="fas fa-tag"></i> ' + ev.tema + '</span>';
+                html += '<span><i class="fas fa-question-circle"></i> ' + preguntaCount + ' preguntas</span>';
+                html += '</div></div>';
+                html += '<button class="explorar-btn-study" onclick="event.stopPropagation();startSelfStudy(\'' + ev.id + '\')" style="background:linear-gradient(135deg,' + color + ', ' + adjustColor(color, -20) + ');font-size:0.9rem;padding:14px 32px;border-radius:16px;font-weight:800;letter-spacing:0.5px"><i class="fas fa-play"></i> JUGAR AHORA</button>';
                 html += '</div>';
             }
             listEl.innerHTML = html;
@@ -638,6 +657,7 @@ function startSelfStudy(evalId) {
 
     var code = 'SELF' + Math.random().toString(36).substring(2, 6).toUpperCase();
     sessionStorage.setItem('alcocer_quiz_code', code);
+    sessionStorage.setItem('alcocer_self_evalid', evalId);
     sessionStorage.removeItem('alcocer_quiz_state_' + code);
     sessionStorage.removeItem('alcocer_quiz_qids_' + code);
 
@@ -693,6 +713,74 @@ function startSelfStudy(evalId) {
             renderQuestion();
         });
     });
+}
+
+function restoreSelfStudy(evalId, code) {
+    var client = getSupabase();
+    if (!client) { navigateTo('jugar', true); return; }
+
+    client.from('evaluaciones').select('*').eq('id', evalId).single().then(function(r) {
+        if (r.error || !r.data) { clearSelfSession(); navigateTo('jugar', true); return; }
+        var evaluacion = r.data;
+        evaluacion.codigo = code;
+        evaluacion.publicado = true;
+
+        client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evalId).order('orden').then(function(pResult) {
+            if (pResult.error || !pResult.data || pResult.data.length === 0) { clearSelfSession(); navigateTo('jugar', true); return; }
+
+            var preguntas = pResult.data;
+            var savedQidsStr = sessionStorage.getItem('alcocer_quiz_qids_' + code);
+            if (savedQidsStr) {
+                try {
+                    var savedQids = JSON.parse(savedQidsStr);
+                    var ordered = [];
+                    for (var qi = 0; qi < savedQids.length; qi++) {
+                        var found = preguntas.find(function(q) { return q.id === savedQids[qi]; });
+                        if (found) ordered.push(found);
+                    }
+                    if (ordered.length > 0) preguntas = ordered;
+                } catch(e) {}
+            }
+
+            quizData = { evaluacion: evaluacion, preguntas: preguntas };
+            quizSessionMode = 'test';
+            quizTeamName = null;
+
+            var savedStateStr = sessionStorage.getItem('alcocer_quiz_state_' + code);
+            if (savedStateStr) {
+                try {
+                    var st = JSON.parse(savedStateStr);
+                    quizCurrentQ = st.q || 0;
+                    quizAnswers = st.a || [];
+                } catch(e) { quizCurrentQ = 0; quizAnswers = []; }
+            } else { quizCurrentQ = 0; quizAnswers = []; }
+            quizSelectedOption = -1;
+            quizConfirmed = false;
+
+            navigateTo('quiz');
+            applyTestModeUI();
+            document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
+            document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
+            document.getElementById('quiz-container').style.display = 'flex';
+            document.getElementById('quiz-page-header').style.display = 'none';
+            document.getElementById('quiz-splash').style.display = 'none';
+            document.getElementById('quiz-result').style.display = 'none';
+            document.getElementById('quiz-waiting').style.display = 'none';
+            document.getElementById('quiz-team-picker').style.display = 'none';
+            if (quizCurrentQ >= preguntas.length) { showQuizResults(); }
+            else { renderQuestion(); }
+        });
+    });
+}
+
+function clearSelfSession() {
+    var code = sessionStorage.getItem('alcocer_quiz_code');
+    if (code) {
+        sessionStorage.removeItem('alcocer_quiz_state_' + code);
+        sessionStorage.removeItem('alcocer_quiz_qids_' + code);
+    }
+    sessionStorage.removeItem('alcocer_quiz_code');
+    sessionStorage.removeItem('alcocer_self_evalid');
 }
 
 function joinByCode() {
