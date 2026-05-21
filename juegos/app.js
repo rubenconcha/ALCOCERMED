@@ -731,17 +731,12 @@ function startSelfStudy(evalId) {
             sessionStorage.setItem('alcocer_quiz_state_' + code, JSON.stringify({ q: 0, a: [] }));
             sessionStorage.setItem('alcocer_quiz_code', code);
 
+            // Usar el MISMO flujo que searchAndStartQuiz para modo test
             navigateTo('quiz');
             applyTestModeUI();
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
             document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
-            document.getElementById('quiz-container').style.display = 'flex';
-            document.getElementById('quiz-page-header').style.display = 'none';
-            document.getElementById('quiz-splash').style.display = 'none';
-            document.getElementById('quiz-result').style.display = 'none';
-            document.getElementById('quiz-waiting').style.display = 'none';
-            document.getElementById('quiz-team-picker').style.display = 'none';
-            renderQuizQuestion();
+            showSplashAndStart();
         });
     });
 }
@@ -792,14 +787,16 @@ function restoreSelfStudy(evalId, code) {
             applyTestModeUI();
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
             document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
-            document.getElementById('quiz-container').style.display = 'flex';
-            document.getElementById('quiz-page-header').style.display = 'none';
-            document.getElementById('quiz-splash').style.display = 'none';
-            document.getElementById('quiz-result').style.display = 'none';
-            document.getElementById('quiz-waiting').style.display = 'none';
-            document.getElementById('quiz-team-picker').style.display = 'none';
-            if (quizCurrentQ >= preguntas.length) { showQuizResults(); }
-            else { renderQuizQuestion(); }
+            if (quizCurrentQ > 0) {
+                if (quizCurrentQ >= preguntas.length) {
+                    showQuizResults();
+                } else {
+                    document.getElementById('quiz-container').style.display = 'block';
+                    renderQuizQuestion();
+                }
+            } else {
+                showSplashAndStart();
+            }
         });
     });
 }
