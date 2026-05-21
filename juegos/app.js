@@ -737,6 +737,7 @@ function startSelfStudy(evalId) {
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
             document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
             showSplashAndStart();
+            startGameMusic(); // forzar música en modo autodidacta
         });
     });
 }
@@ -792,10 +793,12 @@ function restoreSelfStudy(evalId, code) {
                     showQuizResults();
                 } else {
                     document.getElementById('quiz-container').style.display = 'block';
+                    startGameMusic();
                     renderQuizQuestion();
                 }
             } else {
                 showSplashAndStart();
+                startGameMusic();
             }
         });
     });
