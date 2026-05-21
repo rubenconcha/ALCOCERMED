@@ -3134,4 +3134,172 @@ window.clickDndLabel = clickDndLabel;
 window.clickDndSlot = clickDndSlot;
 window.confirmQuizDnd = confirmQuizDnd;
 
+// ═══ IMPORTADOR MASIVO DESDE EXCEL/CSV ═══
+
+window.handleExcelImport = function(event) {
+    var file = event.target.files[0];
+    if (!file) return;
+
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        var text = e.target.result;
+        var rows = parseCSV(text);
+        if (rows.length < 2) {
+            showCustomAlert('El archivo está vacío o no tiene el formato correcto.');
+            return;
+        }
+        uploadCSVData(rows);
+    };
+    reader.readAsText(file, 'UTF-8');
+};
+
+function parseCSV(text) {
+    var lines = [];
+    var row = [''];
+    var inQuotes = false;
+    for (var i = 0; i < text.length; i++) {
+        var c = text[i];
+        var next = text[i + 1];
+        if (c === '"') {
+            if (inQuotes && next === '"') { row[row.length - 1] += '"'; i++; }
+            else { inQuotes = !inQuotes; }
+        } else if (c === ',' && !inQuotes) {
+            row.push('');
+        } else if ((c === '\r' || c === '\n') && !inQuotes) {
+            if (c === '\r' && next === '\n') { i++; }
+            lines.push(row);
+            row = [''];
+        } else {
+            row[row.length - 1] += c;
+        }
+    }
+    if (row.length > 1 || row[0] !== '') lines.push(row);
+    return lines;
+}
+
+window.uploadCSVData = function(rows) {
+    var dataRows = rows.slice(1);
+
+    var evaluations = {};
+    dataRows.forEach(function(row) {
+        if (!row[0] || row[0].trim() === '') return;
+        var title = row[0].trim();
+        if (!evaluations[title]) evaluations[title] = [];
+        evaluations[title].push(row);
+    });
+
+    var client = getSupabase();
+    if (!client) { showCustomAlert('Error de conexión. Inicia sesión primero.'); return; }
+
+    var evalTitles = Object.keys(evaluations);
+    if (evalTitles.length === 0) { showCustomAlert('No se encontraron preguntas válidas.'); return; }
+
+    var importBtn = document.getElementById('btn-import-excel');
+    if (importBtn) importBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Importando...';
+
+    var completedCount = 0;
+
+    function importNext(index) {
+        if (index >= evalTitles.length) {
+            if (importBtn) importBtn.innerHTML = '<i class="fas fa-file-excel"></i> Importar Excel';
+            showCustomAlert('Importación completa. ' + completedCount + ' evaluación(es) creada(s).');
+            document.getElementById('import-file-input').value = '';
+            loadLibrary();
+            return;
+        }
+
+        var title = evalTitles[index];
+        var questions = evaluations[title];
+        var firstRow = questions[0];
+
+        var codeChars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+        var code = '';
+        for (var i = 0; i < 6; i++) { code += codeChars.charAt(Math.floor(Math.random() * codeChars.length)); }
+
+        var evalObj = {
+            titulo: title,
+            asignatura: firstRow[1] || 'General',
+            tema: firstRow[2] || 'General',
+            nivel: 'Universidad',
+            idioma: 'Español',
+            created_by: currentUser.id,
+            publicado: true,
+            codigo: code,
+            iniciado: true,
+            modo_sesion: 'test',
+            visibilidad: 'publica',
+            updated_at: new Date().toISOString()
+        };
+
+        client.from('evaluaciones').insert(evalObj).select().then(function(res) {
+            if (res.error) {
+                console.error('Error creando evaluación:', res.error);
+                importNext(index + 1);
+                return;
+            }
+            var newEvalId = res.data[0].id;
+            var qInserts = [];
+            var qOrder = 0;
+
+            questions.forEach(function(qRow) {
+                var tipo = qRow[4] ? qRow[4].trim().toLowerCase() : 'mc';
+                var texto = qRow[3] || '';
+                var opciones = [];
+                var c5 = qRow[5] || ''; var c6 = qRow[6] || '';
+                var c7 = qRow[7] || ''; var c8 = qRow[8] || '';
+                var c9 = qRow[9] || ''; var c10 = qRow[10] || '';
+                var c11 = qRow[11] || ''; var c12 = qRow[12] || '';
+                var c13 = qRow[13] || '';
+
+                if (tipo === 'tf') {
+                    opciones = [
+                        { text: 'Verdadero', correct: c6 === 'TRUE' || c6 === 'true', color: 'ac-blue' },
+                        { text: 'Falso', correct: c8 === 'TRUE' || c8 === 'true', color: 'ac-pink' }
+                    ];
+                } else if (tipo === 'fb') {
+                    opciones = [{ text: c13, correct: true, color: 'ac-blue' }];
+                } else if (tipo === 'oa') {
+                    opciones = [];
+                } else if (tipo === 'dnd') {
+                    var imgUrl = qRow[14] || '';
+                    if (c5) opciones.push({ text: c5, correct: true, color: 'ac-blue', pregunta_imagen: imgUrl, pinX: parseFloat(qRow[15] || 50), pinY: parseFloat(qRow[16] || 50) });
+                    if (c7) opciones.push({ text: c7, correct: true, color: 'ac-teal', pregunta_imagen: imgUrl, pinX: parseFloat(qRow[17] || 50), pinY: parseFloat(qRow[18] || 50) });
+                    if (c9) opciones.push({ text: c9, correct: true, color: 'ac-yellow', pregunta_imagen: imgUrl, pinX: parseFloat(qRow[19] || 50), pinY: parseFloat(qRow[20] || 50) });
+                    if (c11) opciones.push({ text: c11, correct: true, color: 'ac-pink', pregunta_imagen: imgUrl, pinX: parseFloat(qRow[21] || 50), pinY: parseFloat(qRow[22] || 50) });
+                } else {
+                    if (c5) opciones.push({ text: c5, correct: c6 === 'TRUE' || c6 === 'true', color: 'ac-blue' });
+                    if (c7) opciones.push({ text: c7, correct: c8 === 'TRUE' || c8 === 'true', color: 'ac-teal' });
+                    if (c9) opciones.push({ text: c9, correct: c10 === 'TRUE' || c10 === 'true', color: 'ac-yellow' });
+                    if (c11) opciones.push({ text: c11, correct: c12 === 'TRUE' || c12 === 'true', color: 'ac-pink' });
+                }
+
+                qInserts.push({
+                    evaluacion_id: newEvalId,
+                    tipo: tipo,
+                    texto: texto,
+                    opciones: opciones,
+                    multiple_correctas: (tipo === 'ms'),
+                    orden: qOrder,
+                    puntos: parseInt(qRow[24] || '1'),
+                    temporizador: parseInt(qRow[23] || '30')
+                });
+                qOrder++;
+            });
+
+            if (qInserts.length === 0) { importNext(index + 1); return; }
+
+            client.from('evaluacion_preguntas').insert(qInserts).then(function(pRes) {
+                if (pRes.error) {
+                    console.error('Error insertando preguntas:', pRes.error);
+                    showCustomAlert('Error al subir preguntas de "' + title + '": ' + pRes.error.message);
+                } else {
+                    completedCount++;
+                }
+                importNext(index + 1);
+            });
+        });
+    }
+
+    importNext(0);
+};
 

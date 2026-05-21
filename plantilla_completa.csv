@@ -1,0 +1,8 @@
+"titulo_evaluacion","asignatura","tema","pregunta_enunciado","tipo_pregunta","opcion_1","opcion_1_correcta","opcion_2","opcion_2_correcta","opcion_3","opcion_3_correcta","opcion_4","opcion_4_correcta","respuestas_completar","imagen_url","opcion_1_pinx","opcion_1_piny","opcion_2_pinx","opcion_2_piny","opcion_3_pinx","opcion_3_piny","opcion_4_pinx","opcion_4_piny","segundos","puntos"
+"Examen Completo de Anatomía","Anatomía","General","¿Cuál es el hueso más largo del cuerpo humano?","mc","Fémur",TRUE,"Tibia",FALSE,"Húmero",FALSE,"Peroné",FALSE,,,,,,,,,,,30,1
+"Examen Completo de Anatomía","Anatomía","General","La insulina es producida por las células alfa del páncreas.","tf","Verdadero",FALSE,"Falso",TRUE,,,,,,,,,,,,,30,1
+"Examen Completo de Anatomía","Anatomía","General","¿Cuáles son huesos del cráneo?","ms","Frontal",TRUE,"Fémur",FALSE,"Parietal",TRUE,"Temporal",TRUE,,,,,,,,,,45,2
+"Examen Completo de Anatomía","Anatomía","General","La hormona del crecimiento es producida por la _____ .","fb",,,,,,,,,"hipófisis,hipofisis,adenohipófisis",,,,,,,,30,1
+"Examen Completo de Anatomía","Anatomía","General","¿Qué opinas de la clase de hoy?","poll","Excelente",FALSE,"Buena",FALSE,"Regular",FALSE,"Mala",FALSE,,,,,,,,,,30,0
+"Examen Completo de Anatomía","Anatomía","General","Identifica las siguientes estructuras en la imagen:","dnd","Cabeza del fémur",TRUE,"Trocánter mayor",TRUE,"Cuello del fémur",TRUE,"Cóndilo medial",TRUE,,"https://ejemplo.com/femur.jpg",20,15,65,30,40,60,80,85,60,2
+"Examen Completo de Anatomía","Anatomía","General","Describe la función principal del sistema nervioso simpático.","oa",,,,,,,,,,,,,,,,,120,0
