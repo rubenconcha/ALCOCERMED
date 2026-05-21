@@ -512,21 +512,29 @@ var quizTeamName = null; // Equipo asignado (modo equipo)
 var exploreCurrentSubject = null;
 
 // ═══ JUGAR — MODO AUTODIDACTA ═══
+// ⚠️ LAS 3 MATERIAS OFICIALES DE ALCOCERMED. NO MODIFICAR.
 
-var subjectIcons = {
-    'MORFOFUNCION': '#EF4444', 'MORFOFUNCIÓN': '#EF4444', 'Morfofuncion': '#EF4444', 'Morfofunción': '#EF4444',
-    'BIOLOGIA CELULAR': '#3B82F6', 'BIOLOGÍA CELULAR': '#3B82F6', 'Biologia Celular': '#3B82F6', 'Biología Celular': '#3B82F6',
-    'EDUCACION PARA LA VIDA': '#10B981', 'EDUCACIÓN PARA LA VIDA': '#10B981', 'Educacion para la Vida': '#10B981', 'Educación para la Vida': '#10B981',
-    'EVALUACION PRUEBA': '#F59E0B', 'EVALUACIÓN PRUEBA': '#F59E0B', 'Evaluacion Prueba': '#F59E0B', 'Evaluación Prueba': '#F59E0B',
-    'General': '#94A3B8'
-};
-var subjectEmojis = {
-    'MORFOFUNCION': '🧠', 'MORFOFUNCIÓN': '🧠', 'Morfofuncion': '🧠', 'Morfofunción': '🧠',
-    'BIOLOGIA CELULAR': '🧬', 'BIOLOGÍA CELULAR': '🧬', 'Biologia Celular': '🧬', 'Biología Celular': '🧬',
-    'EDUCACION PARA LA VIDA': '🌱', 'EDUCACIÓN PARA LA VIDA': '🌱', 'Educacion para la Vida': '🌱', 'Educación para la Vida': '🌱',
-    'EVALUACION PRUEBA': '🎯', 'EVALUACIÓN PRUEBA': '🎯', 'Evaluacion Prueba': '🎯', 'Evaluación Prueba': '🎯',
-    'General': '📚'
-};
+var SUBJECTS = [
+    { name: 'MORFOFUNCION',      color: '#EF4444', emoji: '🧠' },
+    { name: 'BIOLOGIA CELULAR', color: '#3B82F6', emoji: '🧬' },
+    { name: 'EDUCACION PARA LA SALUD', color: '#10B981', emoji: '💚' }
+];
+
+function subjectColor(name) {
+    for (var i = 0; i < SUBJECTS.length; i++) {
+        if (name.toUpperCase().indexOf(SUBJECTS[i].name) !== -1) return SUBJECTS[i].color;
+    }
+    return SUBJECTS[0].color; // fallback: MORFOFUNCION
+}
+function subjectEmoji(name) {
+    for (var i = 0; i < SUBJECTS.length; i++) {
+        if (name.toUpperCase().indexOf(SUBJECTS[i].name) !== -1) return SUBJECTS[i].emoji;
+    }
+    return SUBJECTS[0].emoji;
+}
+function subjectMatch(dbName, subjectName) {
+    return dbName.toUpperCase().indexOf(subjectName) !== -1;
+}
 
 function adjustColor(hex, amount) {
     var num = parseInt(hex.replace('#',''), 16);
@@ -536,15 +544,11 @@ function adjustColor(hex, amount) {
     return '#' + (0x1000000 + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
 
-function loadExploreSubjects(filter) {
+function loadExploreSubjects() {
     var client = getSupabase();
-    if (!client) {
-        var grid = document.getElementById('explorar-subject-grid');
-        if (grid) grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><i class="fas fa-exclamation-triangle" style="color:#F59E0B"></i><p>Error de conexión</p><small>Recarga la página e inicia sesión de nuevo</small></div>';
-        return;
-    }
     var grid = document.getElementById('explorar-subject-grid');
     if (!grid) return;
+    
     document.getElementById('explorar-subject-grid').style.display = '';
     var evalList = document.getElementById('explorar-eval-list');
     if (evalList) evalList.style.display = 'none';
@@ -553,56 +557,50 @@ function loadExploreSubjects(filter) {
     exploreCurrentSubject = null;
     var h1 = document.querySelector('#page-jugar .page-header h1');
     if (h1) h1.innerHTML = '<i class="fas fa-gamepad"></i> JUGAR';
+    var filterBar = document.getElementById('explorar-filter-bar');
+    if (filterBar) filterBar.innerHTML = '';
+
+    if (!client) {
+        grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><i class="fas fa-exclamation-triangle" style="color:#F59E0B"></i><p>Error de conexión</p><small>Recarga la página e inicia sesión</small></div>';
+        return;
+    }
 
     grid.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6;grid-column:1/-1"><i class="fas fa-spinner fa-spin" style="font-size:28px"></i><p style="margin-top:12px">Cargando materias...</p></div>';
 
-    var query = client.from('evaluaciones').select('asignatura, titulo, id, tema, codigo').eq('publicado', true).order('created_at', { ascending: false });
-    if (filter) query = query.ilike('asignatura', '%' + filter + '%');
-
-    query.then(function(r) {
-        if (r.error || !r.data || r.data.length === 0) {
-            grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><i class="fas fa-book-open"></i><p>No hay evaluaciones disponibles aún</p><small>El profesor publicará evaluaciones pronto</small></div>';
-            var filterBar = document.getElementById('explorar-filter-bar');
-            if (filterBar) filterBar.innerHTML = '';
-            return;
-        }
-
-        var subjects = {};
-        for (var i = 0; i < r.data.length; i++) {
-            var subj = r.data[i].asignatura || 'General';
-            if (!subjects[subj]) subjects[subj] = { count: 0, evals: [] };
-            subjects[subj].count++;
-            subjects[subj].evals.push(r.data[i]);
-        }
-
-        var subjectNames = Object.keys(subjects);
-        var filterBar = document.getElementById('explorar-filter-bar');
-        filterBar.innerHTML = '';
-        for (var s = 0; s < subjectNames.length; s++) {
-            var sn = subjectNames[s];
-            filterBar.innerHTML += '<span class="explorar-filter-chip' + (!filter ? '' : (filter === sn ? ' active' : '')) + '" onclick="loadExploreSubjects(\'' + sn.replace(/'/g, "\\\'") + '\')">' + sn + ' (' + subjects[sn].count + ')</span>';
-        }
-        if (filter) {
-            filterBar.innerHTML += '<span class="explorar-filter-chip" onclick="loadExploreSubjects()" style="background:#FEF2F2;border-color:#FECACA;color:#DC2626"><i class="fas fa-times"></i> Quitar filtro</span>';
+    client.from('evaluaciones').select('asignatura, id').eq('publicado', true).then(function(r) {
+        var counts = {};
+        for (var i = 0; i < SUBJECTS.length; i++) { counts[SUBJECTS[i].name] = 0; }
+        
+        if (r.data && r.data.length > 0) {
+            for (var i = 0; i < r.data.length; i++) {
+                var dbName = (r.data[i].asignatura || '').toUpperCase();
+                var matched = false;
+                for (var s = 0; s < SUBJECTS.length; s++) {
+                    if (dbName.indexOf(SUBJECTS[s].name) !== -1) {
+                        counts[SUBJECTS[s].name]++;
+                        matched = true;
+                        break;
+                    }
+                }
+                if (!matched) counts[SUBJECTS[0].name]++; // default: MORFOFUNCION
+            }
         }
 
         var html = '';
-        for (var s = 0; s < subjectNames.length; s++) {
-            var sn = subjectNames[s];
-            var data = subjects[sn];
-            var color = subjectIcons[sn] || subjectIcons['General'];
-            var emoji = subjectEmojis[sn] || subjectEmojis['General'];
-            var isDemo = (sn.toUpperCase().indexOf('PRUEBA') !== -1 || sn.toUpperCase().indexOf('MUESTRA') !== -1);
-            html += '<div class="explorar-subject-card" onclick="loadSubjectEvaluations(\'' + sn.replace(/'/g, "\\\'") + '\')" style="background:linear-gradient(135deg,' + color + '15,' + color + '05);border-color:' + color + '40">';
-            html += '<div class="explorar-subject-badge" style="background:' + color + '20;color:' + color + ';font-weight:800">' + data.count + ' 📋</div>';
-            html += '<div class="explorar-subject-icon" style="background:linear-gradient(135deg,' + color + '30,' + color + '10);color:' + color + ';box-shadow:0 8px 24px ' + color + '30">' + emoji + '</div>';
-            html += '<h3 style="font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:0.5px">' + sn + '</h3>';
-            html += '<p style="font-size:0.75rem;color:' + color + ';font-weight:700">' + data.count + ' evaluación' + (data.count !== 1 ? 'es' : '') + ' • JUGAR <i class="fas fa-arrow-right" style="font-size:0.65rem"></i></p>';
-            html += '<div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:' + color + '30;border-radius:0 0 20px 20px"><div style="height:100%;width:100%;background:' + color + ';border-radius:0 0 20px 20px;opacity:0.6"></div></div>';
-            if (isDemo) html += '<div style="position:absolute;top:8px;left:12px;background:#FEF3C7;color:#92400E;font-size:0.6rem;font-weight:800;padding:2px 8px;border-radius:10px">🎯 DEMO</div>';
+        for (var s = 0; s < SUBJECTS.length; s++) {
+            var subj = SUBJECTS[s];
+            var cnt = counts[subj.name] || 0;
+            html += '<div class="explorar-subject-card" onclick="loadSubjectEvaluations(\'' + subj.name + '\')" style="background:linear-gradient(135deg,' + subj.color + '15,' + subj.color + '05);border-color:' + subj.color + '40">';
+            html += '<div class="explorar-subject-badge" style="background:' + subj.color + '20;color:' + subj.color + ';font-weight:800">' + cnt + ' 📋</div>';
+            html += '<div class="explorar-subject-icon" style="background:linear-gradient(135deg,' + subj.color + '30,' + subj.color + '10);color:' + subj.color + ';box-shadow:0 8px 24px ' + subj.color + '30">' + subj.emoji + '</div>';
+            html += '<h3 style="font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:0.5px">' + subj.name.replace(/ /g, '<br>') + '</h3>';
+            html += '<p style="font-size:0.75rem;color:' + subj.color + ';font-weight:700">' + cnt + ' evaluación' + (cnt !== 1 ? 'es' : '') + ' • JUGAR <i class="fas fa-arrow-right" style="font-size:0.65rem"></i></p>';
+            html += '<div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:' + subj.color + '30;border-radius:0 0 20px 20px"><div style="height:100%;width:' + (cnt > 0 ? '100' : '0') + '%;background:' + subj.color + ';border-radius:0 0 20px 20px;opacity:0.6;transition:width .5s"></div></div>';
             html += '</div>';
         }
         grid.innerHTML = html;
+    }).catch(function(err) {
+        grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><i class="fas fa-exclamation-triangle" style="color:#F59E0B"></i><p>Error al cargar</p><small>Intenta de nuevo más tarde</small></div>';
     });
 }
 
@@ -614,8 +612,8 @@ function loadSubjectEvaluations(subject) {
     if (grid) grid.style.display = 'none';
     var backBtn = document.getElementById('explorar-back-btn');
     if (backBtn) backBtn.style.display = '';
-    var color = subjectIcons[subject] || subjectIcons['General'];
-    var emoji = subjectEmojis[subject] || subjectEmojis['General'];
+    var color = subjectColor(subject);
+    var emoji = subjectEmoji(subject);
     var h1 = document.querySelector('#page-jugar .page-header h1');
     if (h1) h1.innerHTML = '<i class="fas fa-arrow-left" style="cursor:pointer;margin-right:8px" onclick="loadExploreSubjects()"></i>' + emoji + ' ' + subject;
     var listEl = document.getElementById('explorar-eval-list');
@@ -623,14 +621,26 @@ function loadSubjectEvaluations(subject) {
     listEl.style.display = '';
     listEl.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6"><i class="fas fa-spinner fa-spin" style="font-size:28px"></i><p style="margin-top:12px">Cargando evaluaciones...</p></div>';
 
-    client.from('evaluaciones').select('id, titulo, tema, codigo, asignatura, created_at').eq('publicado', true).eq('asignatura', subject).order('created_at', { ascending: false }).then(function(evRes) {
-        if (evRes.error || !evRes.data || evRes.data.length === 0) {
+    // Buscar por coincidencia flexible con el nombre de la materia
+    client.from('evaluaciones').select('id, titulo, tema, codigo, asignatura, created_at').eq('publicado', true).order('created_at', { ascending: false }).then(function(evRes) {
+        if (evRes.error) {
+            listEl.innerHTML = '<div class="empty-state"><i class="fas fa-exclamation-triangle"></i><p>Error al cargar</p></div>';
+            return;
+        }
+        // Filtrar manualmente por coincidencia
+        var matching = [];
+        for (var i = 0; i < evRes.data.length; i++) {
+            if (subjectMatch(evRes.data[i].asignatura || '', subject)) {
+                matching.push(evRes.data[i]);
+            }
+        }
+        if (matching.length === 0) {
             listEl.innerHTML = '<div class="empty-state"><i class="fas fa-folder-open"></i><p>Sin evaluaciones en ' + subject + '</p><small>Vuelve más tarde</small></div>';
             return;
         }
 
         // Query question count per evaluacion
-        var evalIds = evRes.data.map(function(e) { return e.id; });
+        var evalIds = matching.map(function(e) { return e.id; });
         client.from('evaluacion_preguntas').select('evaluacion_id').in('evaluacion_id', evalIds).then(function(qRes) {
             var countMap = {};
             if (qRes.data) {
@@ -641,9 +651,8 @@ function loadSubjectEvaluations(subject) {
             }
 
             var html = '';
-            var color = subjectIcons[subject] || subjectIcons['General'];
-            for (var i = 0; i < evRes.data.length; i++) {
-                var ev = evRes.data[i];
+            for (var i = 0; i < matching.length; i++) {
+                var ev = matching[i];
                 var preguntaCount = countMap[ev.id] || 0;
                 var temaHtml = ev.tema ? ' • ' + ev.tema : '';
                 var fecha = new Date(ev.created_at).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
