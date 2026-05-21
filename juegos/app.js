@@ -792,6 +792,118 @@ function cleanupPowerupsForNextQ() {
     // Si hay streak_x3 sin terminar, mantener
     if (quizStreakCount === undefined) quizStreakCount = 0;
 }
+
+// ═══ SELECCIÓN DE COMODÍN CON TARJETAS (pregunta 4 y 8) ═══
+function showPowerupCards() {
+    // Elegir 3 comodines aleatorios (uno por categoría, aún no usados)
+    var available = [];
+    for (var key in POWERUP_DEFS) {
+        var used = false;
+        for (var u = 0; u < powerups.length; u++) {
+            if (powerups[u].key === key && powerups[u]._used) { used = true; break; }
+        }
+        if (!used) available.push({ key: key, def: POWERUP_DEFS[key] });
+    }
+
+    var cats = { puntos: [], ayuda: [], divertido: [] };
+    for (var i = 0; i < available.length; i++) {
+        var c = available[i].def.cat;
+        if (cats[c]) cats[c].push(available[i]);
+    }
+    var selected = [];
+    for (var cat in cats) {
+        if (cats[cat].length > 0) {
+            var idx = Math.floor(Math.random() * cats[cat].length);
+            selected.push(cats[cat][idx]);
+        }
+    }
+    // Si hay menos de 3, rellenar con aleatorios
+    while (selected.length < 3 && available.length > selected.length) {
+        var r = available[Math.floor(Math.random() * available.length)];
+        if (selected.indexOf(r) === -1) selected.push(r);
+    }
+
+    // Crear overlay animado
+    var overlay = document.createElement('div');
+    overlay.id = 'powerup-cards-overlay';
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:10000;background:rgba(15,23,42,0.92);backdrop-filter:blur(12px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;animation:fadeIn .3s ease';
+
+    var html = '<div style="text-align:center;margin-bottom:32px">';
+    html += '<div style="font-size:2.5rem;margin-bottom:8px;animation:bounceIn .6s cubic-bezier(.34,1.56,.64,1)">🎁</div>';
+    html += '<h2 style="color:#fff;font-size:1.6rem;font-weight:900;margin:0 0 6px">¡Elige tu comodín!</h2>';
+    html += '<p style="color:#94A3B8;font-size:0.9rem;margin:0">Toca una carta para activarlo en la siguiente pregunta</p>';
+    html += '</div>';
+
+    var colors = ['#EF4444', '#3B82F6', '#10B981', '#F59E0B', '#8B5CF6', '#EC4899'];
+    html += '<div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;max-width:700px">';
+    for (var s = 0; s < selected.length; s++) {
+        var card = selected[s];
+        var c = colors[s % colors.length];
+        html += '<div class="powerup-card" onclick="choosePowerupCard(\'' + card.key + '\')" style="background:linear-gradient(160deg,' + c + '18,' + c + '08);border:2px solid ' + c + '50;border-radius:20px;padding:24px 20px;width:180px;cursor:pointer;text-align:center;transition:transform .25s,box-shadow .25s,border-color .25s;animation:cardSlideIn .5s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.1) + 's both" onmouseover="this.style.transform=\'translateY(-10px) scale(1.04)\';this.style.boxShadow=\'0 16px 48px ' + c + '30\';this.style.borderColor=\'' + c + '\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'\';this.style.borderColor=\'' + c + '50\'">';
+        html += '<div class="powerup-card-icon" style="font-size:3rem;margin-bottom:12px;display:block;animation:floatIcon 3s ease-in-out infinite">' + card.def.icon + '</div>';
+        html += '<h3 style="color:#fff;font-size:0.95rem;font-weight:800;margin:0 0 6px">' + card.def.name + '</h3>';
+        html += '<p style="color:#94A3B8;font-size:0.7rem;margin:0;line-height:1.4">' + card.def.desc + '</p>';
+        html += '<div style="margin-top:12px;padding:6px 14px;background:' + c + '20;border-radius:10px;color:' + c + ';font-size:0.7rem;font-weight:700;display:inline-block">' + (card.def.cat === 'puntos' ? '🎯 PUNTOS' : card.def.cat === 'ayuda' ? '🛡️ AYUDA' : '😈 DIVERTIDO') + '</div>';
+        html += '</div>';
+    }
+    html += '</div>';
+
+    html += '<button onclick="skipPowerupCards()" style="margin-top:24px;background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.5);padding:8px 24px;border-radius:20px;cursor:pointer;font-size:0.8rem;transition:all .2s">Saltar →</button>';
+
+    overlay.innerHTML = html;
+    document.body.appendChild(overlay);
+
+    // Esconder barra de comodines mientras se elige
+    var bar = document.getElementById('powerup-bar');
+    if (bar) bar.style.display = 'none';
+}
+
+function choosePowerupCard(key) {
+    var overlay = document.getElementById('powerup-cards-overlay');
+    if (!overlay) return;
+
+    var def = POWERUP_DEFS[key];
+    if (!def) return;
+
+    // Activar como comodín activo para la siguiente pregunta
+    activePowerup = def;
+    powerups.push({ key: key, def: def, _used: false });
+    powerupUsedThisQ = true;
+
+    // Animación de selección
+    var card = overlay.querySelector('[onclick="choosePowerupCard(\'' + key + '\')"]');
+    if (card) {
+        card.style.transform = 'scale(1.3)';
+        card.style.boxShadow = '0 0 40px gold, 0 0 80px gold';
+        card.style.borderColor = 'gold';
+    }
+
+    showPowerupToast(def.icon + ' ' + def.name + ' SELECCIONADO', '#FFD700');
+    playBeep(880, 'sine', 0.3);
+    setTimeout(function() { playBeep(1100, 'sine', 0.3); }, 150);
+
+    // Cerrar overlay y continuar quiz
+    setTimeout(function() {
+        closePowerupCards();
+    }, 800);
+}
+
+function skipPowerupCards() {
+    closePowerupCards();
+}
+
+function closePowerupCards() {
+    var overlay = document.getElementById('powerup-cards-overlay');
+    if (overlay) {
+        overlay.style.opacity = '0';
+        overlay.style.transition = 'opacity 0.3s';
+        setTimeout(function() { if (overlay.parentNode) overlay.remove(); }, 300);
+    }
+    renderPowerupBar();
+    if (quizCurrentQ >= quizData.preguntas.length) { showQuizResults(); }
+    else { renderQuizQuestion(); }
+}
+
 var exploreCurrentSubject = null;
 
 // ═══ JUGAR — MODO AUTODIDACTA ═══
@@ -2201,10 +2313,20 @@ function quizNext() {
         }));
     }
     renderPowerupBar();
+
+    // ═══ RONDA DE COMODINES: pregunta 4 (idx 3) y pregunta 8 (idx 7) ═══
+    if ((quizCurrentQ === 3 || quizCurrentQ === 7) && powerups.length > 0) {
+        showPowerupCards();
+        return;
+    }
+
     if (quizCurrentQ >= quizData.preguntas.length) { showQuizResults(); }
     else { renderQuizQuestion(); }
 }
 window.quizNext = quizNext;
+window.choosePowerupCard = choosePowerupCard;
+window.skipPowerupCards = skipPowerupCards;
+window.closePowerupCards = closePowerupCards;
 
 function showQuizResults() {
     if (quizTimerInterval) clearInterval(quizTimerInterval);
