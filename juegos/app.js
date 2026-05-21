@@ -842,7 +842,7 @@ function searchAndStartQuiz(code) {
     var client = getSupabase();
     if (!client) {
         sessionStorage.removeItem('alcocer_quiz_code');
-        navigateTo('inicio');
+        navigateTo(isAdmin ? 'inicio' : 'jugar');
         return;
     }
 
@@ -855,7 +855,7 @@ function searchAndStartQuiz(code) {
             sessionStorage.removeItem('alcocer_quiz_state_' + code);
             sessionStorage.removeItem('alcocer_quiz_qids_' + code);
             showCustomAlert('Código ' + code + ' no válido.\n\nEl profesor debe estar en la sala de espera AHORA MISMO. Si el profesor recargó la página, se generó un NUEVO código.');
-            navigateTo('inicio');
+            navigateTo(isAdmin ? 'inicio' : 'jugar');
             return;
         }
 
@@ -866,7 +866,7 @@ function searchAndStartQuiz(code) {
             if (pResult.error || !pResult.data || pResult.data.length === 0) {
                 sessionStorage.removeItem('alcocer_quiz_code');
                 showCustomAlert('Esta evaluación no tiene preguntas todavía.');
-                navigateTo('inicio');
+                navigateTo(isAdmin ? 'inicio' : 'jugar');
                 return;
             }
 
