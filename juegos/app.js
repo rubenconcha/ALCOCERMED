@@ -551,6 +551,7 @@ function searchAndStartQuiz(code) {
             // Limpiar sesión pendiente para evitar bucle infinito de reintento
             sessionStorage.removeItem('alcocer_quiz_code');
             sessionStorage.removeItem('alcocer_quiz_state_' + code);
+            sessionStorage.removeItem('alcocer_quiz_qids_' + code);
             showCustomAlert('Código ' + code + ' no válido.\n\nEl profesor debe estar en la sala de espera AHORA MISMO. Si el profesor recargó la página, se generó un NUEVO código.');
             navigateTo('inicio');
             return;
@@ -567,9 +568,35 @@ function searchAndStartQuiz(code) {
                 return;
             }
 
+            var preguntas = pResult.data;
+
+            // ═══ ALEATORIZAR Y LIMITAR A 10 PREGUNTAS ═══
+            var savedQidsStr = sessionStorage.getItem('alcocer_quiz_qids_' + code);
+            if (savedQidsStr) {
+                try {
+                    var savedQids = JSON.parse(savedQidsStr);
+                    var ordered = [];
+                    for (var qi = 0; qi < savedQids.length; qi++) {
+                        var found = preguntas.find(function(q) { return q.id === savedQids[qi]; });
+                        if (found) ordered.push(found);
+                    }
+                    if (ordered.length > 0) preguntas = ordered;
+                } catch(e) {}
+            } else {
+                for (var i = preguntas.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var temp = preguntas[i];
+                    preguntas[i] = preguntas[j];
+                    preguntas[j] = temp;
+                }
+                preguntas = preguntas.slice(0, 10);
+                var qids = preguntas.map(function(q) { return q.id; });
+                sessionStorage.setItem('alcocer_quiz_qids_' + code, JSON.stringify(qids));
+            }
+
             quizData = {
                 evaluacion: evaluacion,
-                preguntas: pResult.data
+                preguntas: preguntas
             };
             // ═══ Leer modo de sesión ═══
             quizSessionMode = evaluacion.modo_sesion || 'clasico';
@@ -692,6 +719,7 @@ function searchAndStartQuiz(code) {
         console.error('Error buscando evaluación:', err);
         sessionStorage.removeItem('alcocer_quiz_code');
         sessionStorage.removeItem('alcocer_quiz_state_' + code);
+        sessionStorage.removeItem('alcocer_quiz_qids_' + code);
         showCustomAlert('Error de conexión. Verifica tu internet e intenta de nuevo.');
         navigateTo('inicio');
     });
@@ -1567,6 +1595,7 @@ function showQuizResults() {
     sessionStorage.removeItem('alcocer_quiz_code');
     if (quizData && quizData.evaluacion) {
         sessionStorage.removeItem('alcocer_quiz_state_' + quizData.evaluacion.codigo);
+        sessionStorage.removeItem('alcocer_quiz_qids_' + quizData.evaluacion.codigo);
     }
     var correctas = 0;
     var totalPoints = 0;
