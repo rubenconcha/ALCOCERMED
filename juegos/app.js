@@ -913,26 +913,46 @@ function showPowerupCards() {
         html += '<div class="powerup-flip-card ygo-card" id="pcard-' + s + '" onclick="choosePowerupCard(\'' + card.key + '\', ' + s + ')" style="width:200px;height:290px;cursor:pointer;animation:cardSlideIn .5s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.12) + 's both" onmouseover="if(!flippedCards)this.style.transform=\'translateY(-16px) scale(1.02)\'" onmouseout="if(!flippedCards)this.style.transform=\'\'">';
         html += '<div class="powerup-flip-inner" id="pcinner-' + s + '">';
 
-        // ═══ DORSO DE CARTA (BOCA ABAJO) ═══
-        html += '<div class="powerup-flip-front ygo-card-back" style="background:linear-gradient(145deg,#12062e 0%,#1a0a3e 30%,#0d0420 60%,#12062e 100%);border:4px solid #8B6914;border-radius:14px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;overflow:hidden;box-shadow:inset 0 0 80px rgba(139,105,20,0.1)">';
-        // Marco doble dorado
-        html += '<div style="position:absolute;inset:5px;border:2px solid #b8860b40;border-radius:10px"></div>';
-        html += '<div style="position:absolute;inset:9px;border:1px solid #b8860b20;border-radius:8px"></div>';
-        // Círculo exterior con patrón de espiral
-        html += '<div style="position:absolute;width:160px;height:160px;border:3px solid #b8860b35;border-radius:50%;animation:slowSpin 20s linear infinite"></div>';
-        html += '<div style="position:absolute;width:148px;height:148px;border:2px dashed #b8860b20;border-radius:50%"></div>';
-        html += '<div style="position:absolute;width:130px;height:130px;border:2px solid #b8860b25;border-radius:50%"></div>';
-        html += '<div style="position:absolute;width:110px;height:110px;border:1.5px solid #b8860b18;border-radius:50%"></div>';
-        // Símbolo central
-        html += '<div style="position:relative;z-index:1;width:56px;height:76px;background:linear-gradient(180deg,' + c + '60 0%,' + c + '15 100%);clip-path:polygon(30% 0%,70% 0%,95% 30%,95% 70%,70% 100%,30% 100%,5% 70%,5% 30%);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px ' + c + '30"></div>';
-        html += '<div style="position:absolute;z-index:2;color:gold;font-size:1.8rem;font-weight:900;text-shadow:0 0 20px ' + c + ',0 0 40px ' + c + '">?</div>';
-        // Esquinas
-        html += '<div style="position:absolute;top:10px;left:10px;width:20px;height:20px;border-top:2px solid #b8860b50;border-left:2px solid #b8860b50"></div>';
-        html += '<div style="position:absolute;top:10px;right:10px;width:20px;height:20px;border-top:2px solid #b8860b50;border-right:2px solid #b8860b50"></div>';
-        html += '<div style="position:absolute;bottom:10px;left:10px;width:20px;height:20px;border-bottom:2px solid #b8860b50;border-left:2px solid #b8860b50"></div>';
-        html += '<div style="position:absolute;bottom:10px;right:10px;width:20px;height:20px;border-bottom:2px solid #b8860b50;border-right:2px solid #b8860b50"></div>';
-        // Texto power-up
-        html += '<div style="position:absolute;bottom:26px;color:#b8860b70;font-size:0.5rem;font-weight:900;letter-spacing:4px;z-index:1;text-transform:uppercase">Power-Up</div>';
+        // ═══ DORSO DE CARTA (BOCA ABAJO) - ESTILO YU-GI-OH AUTÉNTICO ═══
+        html += '<div class="powerup-flip-front ygo-card-back" style="background:linear-gradient(160deg,#3e2a14 0%,#2d1a08 30%,#1a0c04 60%,#3e2a14 100%);border:5px solid #b8860b;border-radius:14px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;overflow:hidden;box-shadow:inset 0 0 100px rgba(139,105,20,0.2)">';
+
+        // Borde interior dorado
+        html += '<div style="position:absolute;inset:6px;border:2px solid #8B6914;border-radius:10px"></div>';
+        html += '<div style="position:absolute;inset:10px;border:1px solid #b8860b;border-radius:8px"></div>';
+
+        // Patrón de puntos alrededor del borde (simulado con bordes punteados)
+        html += '<div style="position:absolute;inset:14px;border:2px dotted #b8860b40;border-radius:7px"></div>';
+
+        // Óvalo central grande
+        html += '<div style="position:absolute;width:150px;height:200px;border:3px solid #b8860b;border-radius:40%/30%;animation:slowSpin 25s linear infinite"></div>';
+        html += '<div style="position:absolute;width:142px;height:192px;border:1.5px dashed #8B6914;border-radius:38%/28%"></div>';
+        html += '<div style="position:absolute;width:134px;height:184px;border:2px solid #b8860b50;border-radius:36%/26%"></div>';
+
+        // Círculo interior
+        html += '<div style="position:absolute;width:90px;height:90px;border:2px solid #b8860b;border-radius:50%;background:radial-gradient(circle,rgba(139,105,20,0.15),transparent 70%)"></div>';
+        html += '<div style="position:absolute;width:78px;height:78px;border:1px solid #8B6914;border-radius:50%"></div>';
+
+        // Ojo de Anubis estilizado (triángulo con ojo)
+        html += '<div style="position:relative;z-index:2;width:40px;height:40px;display:flex;align-items:center;justify-content:center">';
+        html += '<div style="position:absolute;width:0;height:0;border-left:22px solid transparent;border-right:22px solid transparent;border-bottom:40px solid #b8860b;opacity:0.6"></div>';
+        html += '<div style="position:relative;width:8px;height:18px;background:#FFD700;border-radius:40%;margin-top:8px;box-shadow:0 0 12px gold,0 0 24px gold;animation:pulse 2s infinite"></div>';
+        html += '</div>';
+
+        // "?" central
+        html += '<div style="position:absolute;z-index:3;color:gold;font-size:1.4rem;font-weight:900;text-shadow:0 0 10px gold,0 0 20px gold;margin-top:6px">?</div>';
+
+        // Nombre "ALCOCERMED" arriba
+        html += '<div style="position:absolute;top:20px;left:50%;transform:translateX(-50%);color:#b8860b;font-size:0.52rem;font-weight:900;letter-spacing:3px;text-shadow:0 0 6px rgba(139,105,20,0.5);text-transform:uppercase;z-index:1">AlcocerMed</div>';
+
+        // "POWER-UP" abajo
+        html += '<div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.48rem;font-weight:900;letter-spacing:4px;text-shadow:0 0 6px rgba(139,105,20,0.5);text-transform:uppercase;z-index:1">Power-Up</div>';
+
+        // Esquinas con ornamento
+        html += '<div style="position:absolute;top:16px;left:16px;width:22px;height:22px;border-top:2px solid #b8860b;border-left:2px solid #b8860b"></div>';
+        html += '<div style="position:absolute;top:16px;right:16px;width:22px;height:22px;border-top:2px solid #b8860b;border-right:2px solid #b8860b"></div>';
+        html += '<div style="position:absolute;bottom:16px;left:16px;width:22px;height:22px;border-bottom:2px solid #b8860b;border-left:2px solid #b8860b"></div>';
+        html += '<div style="position:absolute;bottom:16px;right:16px;width:22px;height:22px;border-bottom:2px solid #b8860b;border-right:2px solid #b8860b"></div>';
+
         html += '</div>';
 
         // ═══ FRENTE DE CARTA (BOCA ARRIBA) ═══
