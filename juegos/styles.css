@@ -475,8 +475,8 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
 }
 
 .podium-avatar {
-  font-size: 48px;
-  filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5));
+  font-size: 56px;
+  filter: drop-shadow(0 12px 16px rgba(0,0,0,0.5));
   margin-bottom: -10px;
 }
 

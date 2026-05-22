@@ -14,8 +14,12 @@ var isAdmin = false;
 // ═══ AUDIO GLOBAL Y AVATARES ═══
 var globalAudioCtx = null;
 var preloadedAudio = {};
-var currentAvatar = '👤';
-var availableAvatars = ['🦊','🐼','🦁','🐯','🐰','🐶','🐱','🦄','🦖','🐙','🦋','🦅'];
+var currentAvatar = '🧑‍🎓';
+var availableAvatars = [
+    '🧑‍🎓','🧑‍⚕️','👨‍🚀','🦸','🧙‍♂️','🧛','🥷','🤴','👸','🧝',
+    '🧞‍♂️','🦹','🤖','👽','🐲','🦄','🦅','🐺','🦊','🦁',
+    '🐯','🐻','🐼','🦖','🐙','🦋','👑','💀','👻','🎃'
+];
 
 function getAudioCtx() {
     if (!globalAudioCtx) {
@@ -57,7 +61,7 @@ window.openAvatarModal = function() {
     for (var i=0; i<availableAvatars.length; i++) {
         var a = availableAvatars[i];
         var isSel = (a === currentAvatar);
-        html += '<div onclick="selectAvatar(\'' + a + '\')" style="height:64px;border-radius:16px;background:' + (isSel ? '#E0E7FF' : '#F8FAFC') + ';border:2px solid ' + (isSel ? '#6366F1' : '#E2E8F0') + ';display:flex;align-items:center;justify-content:center;font-size:32px;cursor:pointer;transition:transform .15s;transform:' + (isSel ? 'scale(1.05)' : 'none') + '">' + a + '</div>';
+        html += '<div onclick="selectAvatar(\'' + a + '\')" style="height:72px;border-radius:16px;background:' + (isSel ? '#EEF2FF' : '#F8FAFC') + ';border:2px solid ' + (isSel ? '#6366F1' : '#E2E8F0') + ';display:flex;align-items:center;justify-content:center;font-size:38px;cursor:pointer;transition:all .15s;transform:' + (isSel ? 'scale(1.08)' : 'scale(1)') + '" onmouseover="this.style.transform=\'scale(1.15)\';this.style.background=\'#E0E7FF\'" onmouseout="this.style.transform=\'' + (isSel ? 'scale(1.08)' : 'scale(1)') + '\';this.style.background=\'' + (isSel ? '#EEF2FF' : '#F8FAFC') + '\'">' + a + '</div>';
     }
     grid.innerHTML = html;
     modal.classList.remove('hidden');
