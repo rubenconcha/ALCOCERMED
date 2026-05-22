@@ -1898,3 +1898,769 @@ body.is-native-app .sidebar { display: none !important; }
         font-size: 2rem;
     }
 }
+
+/* App-store game skin for /juegos */
+.games-app-theme {
+    --bg: #11071f;
+    --bg-card: rgba(31, 16, 55, 0.82);
+    --text: #f8fafc;
+    --text-mid: #cbd5e1;
+    --text-light: #94a3b8;
+    --border: rgba(255, 255, 255, 0.12);
+    --shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
+    background:
+        radial-gradient(circle at 50% -10%, rgba(250, 204, 21, 0.16), transparent 28rem),
+        radial-gradient(circle at 85% 12%, rgba(37, 99, 235, 0.22), transparent 20rem),
+        radial-gradient(circle at 15% 25%, rgba(225, 29, 72, 0.18), transparent 18rem),
+        linear-gradient(180deg, #080412 0%, #16092a 42%, #0b0715 100%);
+    background-attachment: fixed;
+}
+
+.games-app-theme::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 34px 34px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,.75), transparent 85%);
+    z-index: 0;
+}
+
+.games-app-theme .app-shell,
+.games-app-theme .login-screen {
+    position: relative;
+    z-index: 1;
+}
+
+.games-app-theme .topbar {
+    background: rgba(13, 7, 28, 0.84);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+}
+
+.games-app-theme .topbar-logo-icon,
+.games-app-theme .sb-logo-icon {
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 46%, #f59e0b 100%);
+    box-shadow: 0 8px 22px rgba(124, 58, 237, 0.34);
+}
+
+.games-app-theme .sidebar,
+.games-app-theme .bottom-nav {
+    background: rgba(13, 7, 28, 0.92);
+    border-color: rgba(255,255,255,0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.games-app-theme .nav-item.active,
+.games-app-theme .nav-item:hover,
+.games-app-theme .bnav-item.active,
+.games-app-theme .bnav-item:hover {
+    color: #facc15;
+}
+
+.games-app-theme .nav-item.active {
+    background: rgba(250, 204, 21, 0.12);
+    box-shadow: inset 3px 0 0 #facc15;
+}
+
+.games-app-theme .main-content {
+    position: relative;
+    z-index: 1;
+}
+
+.games-app-theme .login-screen {
+    background:
+        radial-gradient(circle at 50% 18%, rgba(124, 58, 237, 0.36), transparent 22rem),
+        radial-gradient(circle at 18% 80%, rgba(37, 99, 235, 0.22), transparent 18rem),
+        linear-gradient(180deg, #080412 0%, #16092a 55%, #0b0715 100%);
+}
+
+.games-app-theme .login-card {
+    background: rgba(20, 10, 38, 0.88);
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: 0 28px 70px rgba(0,0,0,0.56), inset 0 1px 0 rgba(255,255,255,0.10);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.games-app-theme .login-header {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+}
+
+.games-app-theme .login-header-school,
+.games-app-theme .login-card h2 {
+    color: #fff;
+}
+
+.games-app-theme .login-header-app,
+.games-app-theme .login-footer {
+    color: #cbd5e1;
+}
+
+.games-app-theme .login-input {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.14);
+    color: #fff;
+}
+
+.games-app-theme .login-input:focus {
+    background: rgba(255,255,255,0.12);
+    border-color: #facc15;
+    box-shadow: 0 0 0 4px rgba(250,204,21,0.16);
+}
+
+.games-app-theme .login-label {
+    color: #fde68a;
+}
+
+.game-app-hero {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 180px;
+    gap: 28px;
+    align-items: center;
+    margin: 0 0 22px;
+    padding: 26px;
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at 86% 22%, rgba(250, 204, 21, 0.26), transparent 11rem),
+        radial-gradient(circle at 18% 12%, rgba(37, 99, 235, 0.22), transparent 13rem),
+        linear-gradient(145deg, rgba(31, 16, 55, 0.92), rgba(12, 7, 25, 0.94));
+    box-shadow: 0 22px 60px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.10);
+}
+
+.game-app-hero::after {
+    content: "";
+    position: absolute;
+    inset: auto -15% -35% -15%;
+    height: 46%;
+    background: radial-gradient(ellipse at center, rgba(147, 51, 234, 0.52), transparent 62%);
+    pointer-events: none;
+}
+
+.game-app-hero-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.game-app-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    color: #fde68a;
+    background: rgba(250, 204, 21, 0.13);
+    border: 1px solid rgba(250, 204, 21, 0.24);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.game-app-hero h1 {
+    margin: 12px 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 4.1rem);
+    font-weight: 950;
+    line-height: 0.92;
+    text-shadow: 0 5px 0 rgba(0,0,0,0.24), 0 16px 32px rgba(0,0,0,0.42);
+}
+
+.game-app-hero h1 i {
+    color: #38bdf8;
+    filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.5));
+}
+
+.game-app-hero p {
+    max-width: 560px;
+    color: #dbeafe;
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.game-download-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.game-download-btn {
+    min-height: 54px;
+    border: 0;
+    border-radius: 15px;
+    padding: 9px 16px;
+    color: #fff;
+    background: linear-gradient(180deg, #22c55e, #15803d);
+    box-shadow: 0 5px 0 #14532d, 0 16px 28px rgba(34, 197, 94, 0.22);
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    cursor: pointer;
+    transition: transform .15s, filter .2s, box-shadow .15s;
+    text-align: left;
+}
+
+.game-download-btn-ios {
+    background: linear-gradient(180deg, #38bdf8, #1d4ed8);
+    box-shadow: 0 5px 0 #1e3a8a, 0 16px 28px rgba(56, 189, 248, 0.22);
+}
+
+.game-download-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.07);
+}
+
+.game-download-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.45), 0 8px 18px rgba(0,0,0,0.22);
+}
+
+.game-download-btn i {
+    font-size: 1.45rem;
+}
+
+.game-download-btn span {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.94rem;
+    font-weight: 950;
+    line-height: 1.05;
+    letter-spacing: 0;
+}
+
+.game-download-btn small {
+    color: rgba(255,255,255,0.74);
+    font-size: 0.61rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.game-phone-preview {
+    position: relative;
+    z-index: 2;
+    width: 164px;
+    height: 258px;
+    border-radius: 28px;
+    padding: 24px 14px 16px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background:
+        radial-gradient(circle at 50% 20%, rgba(250, 204, 21, 0.22), transparent 5.8rem),
+        linear-gradient(180deg, #210d3d 0%, #0e061d 100%);
+    box-shadow: inset 0 0 0 5px rgba(0,0,0,0.38), 0 24px 48px rgba(0,0,0,0.44);
+    justify-self: end;
+}
+
+.game-phone-notch {
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    width: 54px;
+    height: 7px;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: rgba(0,0,0,0.56);
+}
+
+.game-phone-preview img {
+    display: block;
+    width: 68px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 4px auto 12px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.34);
+}
+
+.game-phone-title {
+    color: #fff;
+    text-align: center;
+    font-size: 0.92rem;
+    font-weight: 950;
+    line-height: 1.05;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+}
+
+.game-mini-podium {
+    height: 86px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.mini-podium {
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 8px 8px;
+    color: #fff;
+    font-weight: 950;
+    text-shadow: 0 2px 0 rgba(0,0,0,0.25);
+    box-shadow: inset 0 8px 16px rgba(255,255,255,0.2), inset 0 -12px 20px rgba(0,0,0,0.32);
+}
+
+.mini-podium-1 { height: 80px; background: linear-gradient(180deg, #fde047, #f59e0b); color: #7c2d12; font-size: 2rem; }
+.mini-podium-2 { height: 58px; background: linear-gradient(180deg, #e2e8f0, #94a3b8); color: #334155; font-size: 1.55rem; }
+.mini-podium-3 { height: 44px; background: linear-gradient(180deg, #fb923c, #9a3412); font-size: 1.35rem; }
+
+.game-section-title {
+    margin-bottom: 12px;
+}
+
+.game-section-title h2 {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #fff;
+    font-size: 1.18rem;
+    font-weight: 950;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.38);
+}
+
+.game-section-title h2 i {
+    color: #facc15;
+    filter: drop-shadow(0 0 10px rgba(250,204,21,0.46));
+}
+
+.games-app-theme .explorar-grid {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 14px;
+}
+
+.games-app-theme .explorar-subject-card {
+    min-height: 172px;
+    color: #fff;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.24), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.games-app-theme .explorar-subject-card h3 {
+    color: #fff !important;
+}
+
+.games-app-theme .explorar-subject-card p {
+    color: #dbeafe !important;
+}
+
+.games-app-theme .explorar-eval-card,
+.games-app-theme .results-list,
+.games-app-theme .library-list,
+.games-app-theme .reports-list,
+.games-app-theme .join-card,
+.games-app-theme .join-full-card {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.12);
+    box-shadow: 0 16px 34px rgba(0,0,0,0.24);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.games-app-theme .explorar-eval-card h4 {
+    color: #fff !important;
+}
+
+.games-app-theme .explorar-filter-chip {
+    background: rgba(255,255,255,0.08);
+    color: #e2e8f0;
+    border-color: rgba(255,255,255,0.13);
+}
+
+.game-rank-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+    padding: 13px 15px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.22);
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.game-rank-card:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.28);
+}
+
+.game-rank-card.rank-gold { border-color: rgba(250,204,21,0.45); background: linear-gradient(90deg, rgba(250,204,21,0.16), rgba(255,255,255,0.08)); }
+.game-rank-card.rank-silver { border-color: rgba(226,232,240,0.36); background: linear-gradient(90deg, rgba(226,232,240,0.14), rgba(255,255,255,0.08)); }
+.game-rank-card.rank-bronze { border-color: rgba(251,146,60,0.40); background: linear-gradient(90deg, rgba(251,146,60,0.15), rgba(255,255,255,0.08)); }
+
+.game-rank-number {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(15,23,42,0.6);
+    font-size: 1.25rem;
+    font-weight: 950;
+}
+
+.game-rank-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    background: linear-gradient(180deg, rgba(56,189,248,0.22), rgba(37,99,235,0.16));
+    border: 2px solid rgba(255,255,255,0.16);
+}
+
+.game-rank-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.game-rank-name {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 900;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.game-rank-meta {
+    margin-top: 2px;
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    font-weight: 750;
+}
+
+.game-rank-badge {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(250,204,21,0.13);
+    color: #fde047;
+    border: 1px solid rgba(250,204,21,0.22);
+    font-size: 0.68rem;
+    font-weight: 950;
+    white-space: nowrap;
+}
+
+.games-app-theme #quiz-result {
+    max-width: 430px !important;
+}
+
+.games-app-theme #quiz-podium {
+    text-align: center !important;
+}
+
+.games-app-theme .stadium-podium-container {
+    max-width: 420px;
+    min-height: 560px;
+    margin: 0 auto 18px;
+    padding: 22px 14px 24px;
+    overflow: hidden;
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background:
+        radial-gradient(circle at 50% 30%, rgba(147, 51, 234, 0.48), transparent 13rem),
+        radial-gradient(circle at 50% 70%, rgba(250, 204, 21, 0.22), transparent 10rem),
+        linear-gradient(180deg, rgba(12, 4, 28, 0.96), rgba(24, 8, 44, 0.98));
+    box-shadow: 0 24px 70px rgba(0,0,0,0.58), inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+.games-app-theme .stadium-podium-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 16% 78%, rgba(56, 189, 248, 0.18), transparent 7rem),
+        radial-gradient(circle at 84% 84%, rgba(34, 197, 94, 0.16), transparent 7rem);
+    z-index: 0;
+}
+
+.games-app-theme .stadium-light-beam {
+    top: 70px;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(ellipse at center, rgba(250,204,21,0.34), rgba(147,51,234,0.22) 38%, transparent 72%);
+}
+
+.games-app-theme .podium-custom-header {
+    margin-bottom: 18px;
+}
+
+.games-app-theme .gold-trophy-top {
+    font-size: 2.15rem;
+}
+
+.games-app-theme .podium-title-box h2 {
+    font-size: 1.75rem !important;
+}
+
+.games-app-theme .podium-title-box h2 .highlight-yellow {
+    font-size: 2.05rem;
+}
+
+.games-app-theme .podium-pillars-wrapper {
+    min-height: 318px;
+    gap: 10px;
+    margin-top: 8px;
+    padding-bottom: 28px;
+}
+
+.games-app-theme .podium-pillars-wrapper::after {
+    left: 10px;
+    right: 10px;
+    bottom: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(168,85,247,0.95), rgba(88,28,135,0.72) 48%, transparent 73%);
+    border: 2px solid rgba(168,85,247,0.7);
+    box-shadow: 0 0 28px rgba(168,85,247,0.82), inset 0 0 18px rgba(250,204,21,0.18);
+}
+
+.games-app-theme .podium-cylinder {
+    min-width: 86px;
+    max-width: 116px;
+}
+
+.games-app-theme .rank-1 {
+    max-width: 130px;
+}
+
+.games-app-theme .rank-1 .cylinder-body { min-height: 162px; }
+.games-app-theme .rank-2 .cylinder-body { min-height: 124px; }
+.games-app-theme .rank-3 .cylinder-body { min-height: 104px; }
+
+.games-app-theme .cylinder-body {
+    border-radius: 0 0 24px 24px;
+}
+
+.games-app-theme .cylinder-rank {
+    color: rgba(255,255,255,0.88) !important;
+    font-size: 4.3rem;
+    text-shadow: 0 3px 0 rgba(0,0,0,0.22), 0 12px 18px rgba(0,0,0,0.38) !important;
+}
+
+.games-app-theme .podium-avatar {
+    width: 66px;
+    height: 66px;
+    font-size: 38px;
+    background: linear-gradient(180deg, #38bdf8, #2563eb);
+}
+
+.games-app-theme .rank-1 .podium-avatar {
+    width: 76px;
+    height: 76px;
+    font-size: 44px;
+}
+
+.games-app-theme .podium-score-badge {
+    width: auto;
+    min-width: 92px;
+    padding: 7px 12px;
+    margin-top: 8px;
+    border-radius: 14px;
+    background: rgba(8, 5, 18, 0.86);
+}
+
+.podium-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    max-width: 420px;
+    margin: -8px auto 24px;
+}
+
+.podium-action-btn {
+    flex: 1;
+    min-height: 52px;
+    border: 0;
+    border-radius: 14px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 950;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.34), 0 16px 28px rgba(0,0,0,0.24);
+    transition: transform .15s, filter .2s;
+}
+
+.podium-action-home {
+    background: linear-gradient(180deg, #38bdf8, #2563eb);
+}
+
+.podium-action-ranking {
+    background: linear-gradient(180deg, #22c55e, #15803d);
+}
+
+.podium-action-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+}
+
+.podium-action-btn:active {
+    transform: translateY(3px);
+}
+
+@media (max-width: 768px) {
+    .games-app-theme .topbar {
+        height: 58px;
+        padding: 0 12px;
+    }
+    .games-app-theme .main-content {
+        padding: 14px 12px 88px;
+    }
+    .games-app-theme .bottom-nav {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        height: 62px;
+        border-radius: 22px;
+        border: 1px solid rgba(255,255,255,0.14);
+        box-shadow: 0 18px 38px rgba(0,0,0,0.46);
+    }
+    .game-app-hero {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 20px;
+    }
+    .game-phone-preview {
+        width: 100%;
+        max-width: 210px;
+        height: 172px;
+        justify-self: center;
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        column-gap: 12px;
+        align-items: center;
+        padding: 22px 16px 14px;
+    }
+    .game-phone-preview img {
+        margin: 0;
+    }
+    .game-phone-title {
+        text-align: left;
+    }
+    .game-mini-podium {
+        grid-column: 1 / -1;
+        height: 52px;
+        margin-top: 10px;
+    }
+    .mini-podium { width: 42px; }
+    .mini-podium-1 { height: 52px; font-size: 1.5rem; }
+    .mini-podium-2 { height: 40px; font-size: 1.25rem; }
+    .mini-podium-3 { height: 32px; font-size: 1.1rem; }
+}
+
+@media (max-width: 520px) {
+    .game-app-hero h1 {
+        font-size: 2.35rem;
+    }
+    .game-download-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .game-download-btn {
+        min-width: 0;
+        padding: 8px 10px;
+        justify-content: center;
+    }
+    .game-download-btn i {
+        font-size: 1.25rem;
+    }
+    .game-download-btn span {
+        font-size: 0.78rem;
+    }
+    .game-download-btn small {
+        font-size: 0.52rem;
+    }
+    .games-app-theme .explorar-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .games-app-theme .explorar-subject-card {
+        min-height: 145px;
+        padding: 16px 10px;
+    }
+    .game-rank-card {
+        padding: 11px;
+        gap: 9px;
+    }
+    .game-rank-number {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+        border-radius: 11px;
+        font-size: 1rem;
+    }
+    .game-rank-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1.35rem;
+    }
+    .game-rank-badge {
+        display: none;
+    }
+    .games-app-theme .stadium-podium-container {
+        min-height: 526px;
+        padding: 18px 8px 20px;
+    }
+    .games-app-theme .podium-pillars-wrapper {
+        min-height: 296px;
+        gap: 6px;
+    }
+    .games-app-theme .podium-cylinder {
+        min-width: 76px;
+        max-width: 100px;
+    }
+    .games-app-theme .rank-1 {
+        max-width: 112px;
+    }
+    .games-app-theme .rank-1 .cylinder-body { min-height: 138px; }
+    .games-app-theme .rank-2 .cylinder-body { min-height: 108px; }
+    .games-app-theme .rank-3 .cylinder-body { min-height: 88px; }
+    .games-app-theme .cylinder-rank {
+        font-size: 3.2rem;
+    }
+    .games-app-theme .podium-avatar,
+    .games-app-theme .rank-1 .podium-avatar {
+        width: 58px;
+        height: 58px;
+        font-size: 32px;
+    }
+    .games-app-theme .podium-title-box h2 {
+        font-size: 1.38rem !important;
+    }
+    .games-app-theme .podium-title-box h2 .highlight-yellow {
+        font-size: 1.65rem;
+    }
+    .podium-actions {
+        gap: 8px;
+    }
+    .podium-action-btn {
+        min-height: 48px;
+        font-size: 0.78rem;
+    }
+}

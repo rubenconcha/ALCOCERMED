@@ -19,7 +19,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="AlcocerMed">
 </head>
-<body>
+<body class="games-app-theme">
 
 <!-- ══════════════════════════════════════════════
      LOGIN SCREEN
@@ -294,8 +294,32 @@
 
     <!-- ===== JUGAR (MODO AUTODIDACTA) ===== -->
     <section class="page" id="page-jugar">
-      <div class="page-header">
-        <h1><i class="fas fa-gamepad"></i> JUGAR</h1>
+      <div class="game-app-hero">
+        <div class="game-app-hero-copy">
+          <div class="game-app-kicker"><i class="fas fa-bolt"></i> AlcocerMed Arena</div>
+          <h1><i class="fas fa-gamepad"></i> JUGAR</h1>
+          <p>Evaluaciones, ranking y podios en modo app para Android y iPhone.</p>
+          <div class="game-download-row" aria-label="Descargar app">
+            <button type="button" class="game-download-btn install-pwa-trigger" data-platform="android">
+              <i class="fab fa-android"></i>
+              <span><small>Descargar para</small> Android</span>
+            </button>
+            <button type="button" class="game-download-btn game-download-btn-ios install-pwa-trigger" data-platform="ios">
+              <i class="fab fa-apple"></i>
+              <span><small>Agregar en</small> iPhone</span>
+            </button>
+          </div>
+        </div>
+        <div class="game-phone-preview" aria-hidden="true">
+          <div class="game-phone-notch"></div>
+          <img src="./logo_app.png" alt="">
+          <div class="game-phone-title">Podio de Ganadores</div>
+          <div class="game-mini-podium">
+            <span class="mini-podium mini-podium-2">2</span>
+            <span class="mini-podium mini-podium-1">1</span>
+            <span class="mini-podium mini-podium-3">3</span>
+          </div>
+        </div>
       </div>
       <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap" id="explorar-filter-bar"></div>
       <div id="explorar-subject-grid" class="explorar-grid"></div>
@@ -304,8 +328,8 @@
 
       <!-- ═══ TOP ESTUDIANTES ═══ -->
       <div id="top-estudiantes-section" style="margin-top:24px">
-        <div class="page-header" style="margin-bottom:12px">
-          <h2 style="font-size:1.2rem;font-weight:900;display:flex;align-items:center;gap:8px"><i class="fas fa-trophy" style="color:#FFD700"></i> TOP Estudiantes</h2>
+        <div class="game-section-title">
+          <h2><i class="fas fa-trophy"></i> TOP Estudiantes</h2>
         </div>
         <div id="top-estudiantes-list" style="display:flex;flex-direction:column;gap:8px">
           <div style="text-align:center;padding:20px;color:#8E90A6"><i class="fas fa-spinner fa-spin"></i> Cargando ranking...</div>
@@ -531,6 +555,14 @@
             
             <!-- Tu posición -->
             <div id="my-rank-pill" style="display:none;padding:12px 20px;background:rgba(233,30,99,.1);border:1px solid rgba(233,30,99,.3);border-radius:12px;font-size:1rem;font-weight:700;color:#E91E63;margin-bottom:16px;"></div>
+            <div class="podium-actions">
+              <button type="button" class="podium-action-btn podium-action-home" onclick="exitQuizToHome()">
+                <i class="fas fa-home"></i> Menu Principal
+              </button>
+              <button type="button" class="podium-action-btn podium-action-ranking" onclick="document.getElementById('total-ranking-table').scrollIntoView({behavior:'smooth',block:'center'});">
+                <i class="fas fa-chart-simple"></i> Ver ranking
+              </button>
+            </div>
 
             <div style="overflow-x:auto;">
               <table class="total-ranking-table" id="total-ranking-table">
@@ -587,7 +619,7 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=26"></script>
+<script src="app.js?v=29"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->

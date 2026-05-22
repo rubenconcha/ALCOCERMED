@@ -525,7 +525,7 @@ var powerupUsedThisQ = false;
 var POWERUP_DEFS = {
     // 🎯 PUNTOS
     x2:  { name:'⚡ x2 Puntos',    desc:'Duplica los puntos de esta pregunta',           cat:'puntos', effect:'multiply', value:2,  icon:'⚡', color:'#F59E0B' },
-    x3r: { name:'🔥 x3 Racha',     desc:'Si aciertas 3 seguidas, la próxima da x3',     cat:'puntos', effect:'streak_x3', value:3, icon:'🔥', color:'#EF4444' },
+    x3r: { name:'🔥 x3 o x5 Puntos', desc:'Multiplica los puntos de esta pregunta por 3 o 5 al azar', cat:'puntos', effect:'streak_x3', value:0, icon:'🔥', color:'#EF4444' },
     jack: { name:'💎 Jackpot',      desc:'Pregunta aleatoria vale 500-1000 pts extra',   cat:'puntos', effect:'jackpot',   value:0,  icon:'💎', color:'#06B6D4' },
     myst: { name:'🎲 Misterioso',   desc:'Multiplicador aleatorio x2, x3 o x5',          cat:'puntos', effect:'random_mul', value:0, icon:'🎲', color:'#8B5CF6' },
     speed:{ name:'⏳ Bonus Velocidad', desc:'Si respondes en <5s, ganas +200 pts',       cat:'puntos', effect:'speed_bonus', value:200, icon:'⏳', color:'#10B981' },
@@ -646,18 +646,10 @@ function applyPowerupToAnswer(isCorrect, basePoints) {
     } else if (def.effect === 'steal_points' && isCorrect) {
         pts = basePoints + def.value;
         showPowerupToast('🌪️ ¡Robaste +' + def.value + ' pts!', def.color);
-    } else if (def.effect === 'streak_x3') {
-        quizStreakCount = (quizStreakCount || 0) + (isCorrect ? 1 : 0);
-        if (!isCorrect) { quizStreakCount = 0; showPowerupToast('🔥 Racha rota', def.color); }
-        else if (quizStreakCount >= 3) {
-            pts = basePoints * 3;
-            showPowerupToast('🔥 ¡Racha x3! ' + pts + ' pts', def.color);
-            quizStreakCount = 0;
-            activePowerup = null;
-        } else {
-            showPowerupToast('🔥 Racha: ' + quizStreakCount + '/3', def.color);
-            return isCorrect ? basePoints : 0;
-        }
+    } else if (def.effect === 'streak_x3' && isCorrect) {
+        var mult = Math.random() < 0.5 ? 3 : 5;
+        pts = basePoints * mult;
+        showPowerupToast('🔥 ¡Multiplicador x' + mult + '! ' + pts + ' pts', def.color);
     } else if (def.effect === 'mystery_box') {
         var r = Math.random();
         if (r < 0.5) { pts = isCorrect ? basePoints * 2 : 0; showPowerupToast('🎁 ¡Premio! x2 puntos', '#22C55E'); }
@@ -1223,16 +1215,14 @@ function loadTopEstudiantes() {
                 var info = nameMap[s.user_id] || { nombre: 'Estudiante', avatar: '👤' };
                 var rank = medals[i] || (i + 1);
                 var isTop3 = i < 3;
-                var rankBg = isTop3 ? ['#FFF8E1','#F1F5F9','#FFF7ED'][i] : '#fff';
-                var rankBorder = isTop3 ? ['#F59E0B','#94A3B8','#F97316'][i] : '#E2E8F0';
-                var glowColor = isTop3 ? ['#F59E0B','#94A3B8','#F97316'][i] : 'transparent';
+                var rankClass = i === 0 ? ' rank-gold' : (i === 1 ? ' rank-silver' : (i === 2 ? ' rank-bronze' : ''));
                 var pctColor = s.bestPct >= 80 ? '#059669' : s.bestPct >= 50 ? '#D97706' : '#DC2626';
-                html += '<div style="background:' + rankBg + ';border:2px solid ' + rankBorder + ';border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:14px;transition:all .25s;box-shadow:0 2px 8px ' + glowColor + '20' + '" onmouseover="this.style.transform=\'scale(1.02)\';this.style.boxShadow=\'0 6px 20px ' + glowColor + '30\'" onmouseout="this.style.transform=\'scale(1)\';this.style.boxShadow=\'0 2px 8px ' + glowColor + '20\'">';
-                html += '<div style="font-size:1.8rem;min-width:36px;text-align:center;font-weight:900;color:' + rankBorder + '">' + rank + '</div>';
-                html += '<div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,' + rankBorder + '20,' + rankBorder + '10);display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 2px 8px ' + rankBorder + '20">' + info.avatar + '</div>';
-                html += '<div style="flex:1"><div style="font-weight:800;color:#0F172A;font-size:0.95rem;letter-spacing:-0.2px">' + info.nombre + '</div>';
-                html += '<div style="font-size:0.75rem;color:#64748B;margin-top:2px">' + s.total + ' pts • <span style="color:' + pctColor + ';font-weight:700">' + s.bestPct + '%</span></div></div>';
-                if (isTop3) html += '<div style="background:' + rankBorder + '15;border:1px solid ' + rankBorder + '30;padding:6px 12px;border-radius:20px;font-size:0.7rem;font-weight:800;color:' + rankBorder + ';letter-spacing:0.5px">TOP ' + (i+1) + '</div>';
+                html += '<div class="game-rank-card' + rankClass + '">';
+                html += '<div class="game-rank-number">' + rank + '</div>';
+                html += '<div class="game-rank-avatar">' + info.avatar + '</div>';
+                html += '<div class="game-rank-info"><div class="game-rank-name">' + info.nombre + '</div>';
+                html += '<div class="game-rank-meta">' + s.total + ' pts &bull; <span style="color:' + pctColor + ';font-weight:900">' + s.bestPct + '%</span></div></div>';
+                if (isTop3) html += '<div class="game-rank-badge">TOP ' + (i+1) + '</div>';
                 html += '</div>';
             }
             listEl.innerHTML = html;
@@ -2474,20 +2464,31 @@ function confirmQuizAnswer() {
 
     var pts = getQuizPoints(isCorrectAnswer, pregunta);
     if (pts === null) {
+        // Segunda Oportunidad (Retry): rehabilitar opciones y marcar la fallada
         quizConfirmed = false;
         quizSelectedOption = -1;
         for (var r = 0; r < buttons.length; r++) {
-            buttons[r].style.cursor = 'pointer';
-            buttons[r].style.pointerEvents = 'auto';
-            buttons[r].style.opacity = '1';
-            buttons[r].style.transform = '';
-            buttons[r].style.border = '';
-            buttons[r].style.background = '';
-            buttons[r].style.boxShadow = '';
+            if (r === idx) {
+                buttons[r].style.cursor = 'default';
+                buttons[r].style.pointerEvents = 'none';
+                buttons[r].style.opacity = '0.35';
+                buttons[r].style.filter = 'grayscale(1)';
+                buttons[r].style.border = '2px dashed #EF4444';
+                buttons[r].style.background = '#FEF2F2';
+                buttons[r].style.boxShadow = 'none';
+                buttons[r].style.transform = 'scale(0.96)';
+            } else {
+                buttons[r].style.cursor = 'pointer';
+                buttons[r].style.pointerEvents = 'auto';
+                buttons[r].style.opacity = '1';
+                buttons[r].style.filter = '';
+                buttons[r].style.border = '2px solid #E2E8F0';
+                buttons[r].style.background = '#fff';
+                buttons[r].style.boxShadow = 'none';
+                buttons[r].style.transform = 'scale(1)';
+            }
         }
         if (confirmBtn) confirmBtn.style.display = '';
-        // Reiniciar temporizador para la segunda oportunidad
-        var pregunta = quizData.preguntas[quizCurrentQ];
         startQuestionTimer(60);
         return;
     }
@@ -2498,8 +2499,8 @@ function confirmQuizAnswer() {
 window.confirmQuizAnswer = confirmQuizAnswer;
 
 function getQuizPoints(isCorrect, pregunta) {
-    if(!isCorrect) return 0;
-    if(pregunta.tipo === 'poll' || pregunta.tipo === 'encuesta') return 0;
+    if (pregunta.tipo === 'poll' || pregunta.tipo === 'encuesta') return 0;
+    
     var base = 600;
     var timeRatio = Math.max(0, quizTimeLeft) / 60;
     var timePts = Math.round(timeRatio * 400);
@@ -2518,7 +2519,9 @@ function getQuizPoints(isCorrect, pregunta) {
     var streakMult = Math.min(currentStreak, 5);
     var streakBonus = (streakMult - 1) * 150; // bonus extra por racha
 
-    var raw = Math.round((base + timePts + streakBonus) * (pregunta.puntos || 1) * streakMult);
+    var raw = isCorrect ? Math.round((base + timePts + streakBonus) * (pregunta.puntos || 1) * streakMult) : 0;
+    
+    // Evaluar comodín activo tanto para respuestas correctas como incorrectas
     var finalPts = applyPowerupToAnswer(isCorrect, raw);
     if (finalPts === null) return null;
     return finalPts;
@@ -2556,14 +2559,22 @@ function confirmQuizAnswerInstant(idx) {
 
     var pts = getQuizPoints(isCorrectAnswer, pregunta);
     if (pts === null) {
-        // Retry: resetear
+        // Segunda Oportunidad (Retry) en modo click instantáneo
         quizConfirmed = false;
         for (var i = 0; i < buttons.length; i++) {
-            buttons[i].style.cursor = 'pointer';
-            buttons[i].style.pointerEvents = 'auto';
-            buttons[i].style.opacity = '1';
-            buttons[i].style.filter = '';
-            buttons[i].style.border = '';
+            if (i === idx) {
+                buttons[i].style.cursor = 'default';
+                buttons[i].style.pointerEvents = 'none';
+                buttons[i].style.opacity = '0.35';
+                buttons[i].style.filter = 'grayscale(1)';
+                buttons[i].style.border = '2px dashed #EF4444';
+            } else {
+                buttons[i].style.cursor = 'pointer';
+                buttons[i].style.pointerEvents = 'auto';
+                buttons[i].style.opacity = '1';
+                buttons[i].style.filter = '';
+                buttons[i].style.border = '';
+            }
         }
         startQuestionTimer(60);
         return;
@@ -3941,28 +3952,55 @@ function initUserMenu() {
 
 // ═══ PWA INSTALLATION ═══
 var deferredPrompt;
+function isIosDevice() {
+    return /iphone|ipad|ipod/i.test(navigator.userAgent || '') || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+
+function showInstallHelp(platform) {
+    var iosMsg = 'En iPhone: abre esta pagina en Safari, toca Compartir y elige "Agregar a pantalla de inicio".';
+    var androidMsg = 'En Android: abre esta pagina en Chrome y toca Instalar app o Agregar a pantalla principal.';
+    var msg = (platform === 'ios' || isIosDevice()) ? iosMsg : androidMsg;
+    if (typeof showCustomAlert === 'function') showCustomAlert(msg);
+    else alert(msg);
+}
+
+function handlePwaInstallClick(platform) {
+    if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(function(choiceResult) {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('Usuario acepto la instalacion de la PWA');
+            } else {
+                console.log('Usuario descarto la instalacion de la PWA');
+            }
+            deferredPrompt = null;
+        });
+        return;
+    }
+    showInstallHelp(platform);
+}
+window.handlePwaInstallClick = handlePwaInstallClick;
 window.addEventListener('beforeinstallprompt', function(e) {
     e.preventDefault();
     deferredPrompt = e;
     var installBtn = document.getElementById('install-pwa-btn');
     if (installBtn) {
         installBtn.style.display = 'flex';
-        installBtn.addEventListener('click', function() {
-            installBtn.style.display = 'none';
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then(function(choiceResult) {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('Usuario aceptó la instalación de la PWA');
-                } else {
-                    console.log('Usuario descartó la instalación de la PWA');
-                }
-                deferredPrompt = null;
-            });
-        });
     }
 });
 
 // ═══ DARK MODE TOGGLE ═══
+document.addEventListener('DOMContentLoaded', function() {
+    var installTargets = document.querySelectorAll('.install-pwa-trigger, #install-pwa-btn');
+    for (var i = 0; i < installTargets.length; i++) {
+        (function(btn) {
+            btn.addEventListener('click', function() {
+                handlePwaInstallClick(btn.getAttribute('data-platform') || 'android');
+            });
+        })(installTargets[i]);
+    }
+});
+
 function initTheme() {
     var theme = localStorage.getItem('alcocermed_theme') || 'light';
     document.documentElement.setAttribute('data-theme', theme);
