@@ -623,8 +623,10 @@ function applyPowerupToAnswer(isCorrect, basePoints) {
     if (!activePowerup) return basePoints;
     var def = activePowerup;
     var pts = basePoints;
-    if (def.effect === 'multiply' && isCorrect) pts = basePoints * def.value;
-    else if (def.effect === 'random_mul' && isCorrect) {
+    if (def.effect === 'multiply' && isCorrect) {
+        pts = basePoints * def.value;
+        showPowerupToast(def.icon + ' ¡x' + def.value + '! ' + pts + ' puntos', def.color);
+    } else if (def.effect === 'random_mul' && isCorrect) {
         var mults = [2, 3, 5];
         var m = mults[Math.floor(Math.random() * mults.length)];
         pts = basePoints * m;
@@ -635,28 +637,32 @@ function applyPowerupToAnswer(isCorrect, basePoints) {
         showPowerupToast('💎 ¡JACKPOT! +' + bonus + ' pts extra', def.color);
     } else if (def.effect === 'speed_bonus' && isCorrect) {
         var elapsed = (Date.now() - quizQuestionStartTime) / 1000;
-        if (elapsed < 5) pts = basePoints + def.value;
-        showPowerupToast('⏳ ' + (elapsed < 5 ? '¡Veloz! +' + def.value + ' pts' : 'Muy lento, sin bonus'), def.color);
-    } else if (def.effect === 'streak_x3' && isCorrect) {
-        quizStreakCount = (quizStreakCount || 0) + 1;
-        if (quizStreakCount >= 3) { pts = basePoints * 3; showPowerupToast('🔥 ¡Racha x3! ' + pts + ' pts', def.color); quizStreakCount = 0; }
-        else showPowerupToast('🔥 Racha: ' + quizStreakCount + '/3', def.color);
+        if (elapsed < 5) { pts = basePoints + def.value; showPowerupToast('⏳ ¡Veloz! +' + def.value + ' pts', def.color); }
+        else showPowerupToast('⏳ Muy lento, sin bonus', def.color);
+    } else if (def.effect === 'steal_points' && isCorrect) {
+        pts = basePoints + def.value;
+        showPowerupToast('🌪️ ¡Robaste +' + def.value + ' pts!', def.color);
+    } else if (def.effect === 'streak_x3') {
+        quizStreakCount = (quizStreakCount || 0) + (isCorrect ? 1 : 0);
+        if (!isCorrect) { quizStreakCount = 0; showPowerupToast('🔥 Racha rota', def.color); }
+        else if (quizStreakCount >= 3) {
+            pts = basePoints * 3;
+            showPowerupToast('🔥 ¡Racha x3! ' + pts + ' pts', def.color);
+            quizStreakCount = 0;
+            activePowerup = null;
+        } else {
+            showPowerupToast('🔥 Racha: ' + quizStreakCount + '/3', def.color);
+            return isCorrect ? basePoints : 0;
+        }
     } else if (def.effect === 'mystery_box') {
         var r = Math.random();
-        if (r < 0.5) {
-            pts = isCorrect ? basePoints * 2 : 0;
-            showPowerupToast('🎁 ¡Premio! x2 puntos', '#22C55E');
-        } else if (r < 0.8) {
-            pts = isCorrect ? basePoints * 3 : 0;
-            showPowerupToast('🎁 ¡JACKPOT! x3 puntos', '#F59E0B');
-        } else {
-            pts = isCorrect ? Math.max(0, basePoints - 30) : 0;
-            showPowerupToast('🎁 ¡Trampa! -30 pts', '#EF4444');
-        }
+        if (r < 0.5) { pts = isCorrect ? basePoints * 2 : 0; showPowerupToast('🎁 ¡Premio! x2 puntos', '#22C55E'); }
+        else if (r < 0.8) { pts = isCorrect ? basePoints * 3 : 0; showPowerupToast('🎁 ¡JACKPOT! x3 puntos', '#F59E0B'); }
+        else { pts = isCorrect ? Math.max(0, basePoints - 30) : 0; showPowerupToast('🎁 ¡Trampa! -30 pts', '#EF4444'); }
     } else if (def.effect === 'retry' && !isCorrect) {
-        powerups.push({ key: 'retry_used', def: def, _used: false });
-        showPowerupToast('🔄 ¡Segunda oportunidad! Responde de nuevo', def.color);
-        return null; // null = dont register answer yet
+        showPowerupToast('🔄 ¡Segunda oportunidad!', def.color);
+        activePowerup = null;
+        return null;
     }
     activePowerup = null;
     powerupUsedThisQ = false;
@@ -668,11 +674,16 @@ function addQuizTime(secs) {
     quizTimeLeft += secs;
     var timerBar = document.getElementById('quiz-timer-bar');
     if (timerBar) {
-        var totalTimer = (quizData.preguntas[quizCurrentQ].temporizador || 30) + secs;
-        var pct = Math.min(100, (quizTimeLeft / totalTimer) * 100);
+        var totalTimer = (quizData.preguntas[quizCurrentQ].temporizador || 60) + secs;
+        var pct = (quizTimeLeft / totalTimer) * 100;
+        timerBar.style.transition = 'none';
         timerBar.style.width = pct + '%';
+        timerBar.style.background = quizTimeLeft <= 5 ? '#EF4444' : '#22C55E';
+        void timerBar.offsetWidth;
         timerBar.style.transition = 'width ' + quizTimeLeft + 's linear, background 0.3s';
     }
+    var label = document.getElementById('quiz-timer-label');
+    if (label) label.textContent = quizTimeLeft + 's';
     showPowerupToast('⏱️ +' + secs + ' segundos', '#6366F1');
     playBeep(600, 'sine', 0.3);
 }
@@ -1826,13 +1837,20 @@ function startQuestionTimer(seconds) {
         }, 50);
     }
 
+    var label = document.getElementById('quiz-timer-label');
+    if (label) { label.textContent = seconds + 's'; label.style.color = 'rgba(255,255,255,0.7)'; }
+
     quizTimerInterval = setInterval(function() {
-        if (quizConfirmed) return; // Si ya confirmó, parar logica timer
-        
+        if (quizConfirmed) return;
+
         quizTimeLeft--;
-        
+
+        var label = document.getElementById('quiz-timer-label');
+        if (label) label.textContent = quizTimeLeft + 's';
+
         if (quizTimeLeft <= 5 && timerBar) {
             timerBar.style.background = '#EF4444';
+            if (label) label.style.color = '#EF4444';
         }
         
         // Faltando 10 segundos: sonido de apuro
@@ -2041,7 +2059,7 @@ function renderQuizQuestion() {
         void tb.offsetWidth;
     }
 
-    startQuestionTimer(timer);
+    startQuestionTimer(pregunta.temporizador || 60);
 }
 
 var quizConfirmed = false;
@@ -2248,6 +2266,9 @@ function confirmQuizAnswer() {
             buttons[r].style.boxShadow = '';
         }
         if (confirmBtn) confirmBtn.style.display = '';
+        // Reiniciar temporizador para la segunda oportunidad
+        var pregunta = quizData.preguntas[quizCurrentQ];
+        startQuestionTimer(pregunta.temporizador || 60);
         return;
     }
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer, puntos_ganados: pts });
@@ -2318,6 +2339,19 @@ function confirmQuizAnswerInstant(idx) {
     }
 
     var pts = getQuizPoints(isCorrectAnswer, pregunta);
+    if (pts === null) {
+        // Retry: resetear
+        quizConfirmed = false;
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].style.cursor = 'pointer';
+            buttons[i].style.pointerEvents = 'auto';
+            buttons[i].style.opacity = '1';
+            buttons[i].style.filter = '';
+            buttons[i].style.border = '';
+        }
+        startQuestionTimer(pregunta.temporizador || 60);
+        return;
+    }
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer, puntos_ganados: pts });
     
     // Stop the timer bar
