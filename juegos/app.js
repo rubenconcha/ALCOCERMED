@@ -924,10 +924,8 @@ function choosePowerupCard(key) {
     var def = POWERUP_DEFS[key];
     if (!def) return;
 
-    // Activar como comodín activo para la siguiente pregunta
-    activePowerup = def;
-    powerups.push({ key: key, def: def, _used: false });
-    powerupUsedThisQ = true;
+    // Guardar para aplicar después de renderizar la pregunta
+    pendingPowerupKey = key;
 
     // Animación de selección
     var card = overlay.querySelector('[onclick="choosePowerupCard(\'' + key + '\')"]');
@@ -948,8 +946,11 @@ function choosePowerupCard(key) {
 }
 
 function skipPowerupCards() {
+    pendingPowerupKey = null;
     closePowerupCards();
 }
+
+var pendingPowerupKey = null;
 
 function closePowerupCards() {
     var overlay = document.getElementById('powerup-cards-overlay');
@@ -958,8 +959,51 @@ function closePowerupCards() {
         overlay.style.transition = 'opacity 0.3s';
         setTimeout(function() { if (overlay.parentNode) overlay.remove(); }, 300);
     }
-    if (quizCurrentQ >= quizData.preguntas.length) { showQuizResults(); }
-    else { renderQuizQuestion(); }
+    if (quizCurrentQ >= quizData.preguntas.length) { showQuizResults(); return; }
+
+    // Renderizar la pregunta
+    renderQuizQuestion();
+
+    // Aplicar el comodín elegido (efecto inmediato o diferido)
+    setTimeout(function() {
+        applyPendingPowerup();
+    }, 100);
+}
+
+function applyPendingPowerup() {
+    if (!pendingPowerupKey) return;
+    var def = POWERUP_DEFS[pendingPowerupKey];
+    pendingPowerupKey = null;
+    if (!def) return;
+
+    var isImmediate = (def.effect === 'add_time' || def.effect === 'remove_wrong' ||
+        def.effect === 'show_hint' || def.effect === 'free_answer' ||
+        def.effect === 'blur_options' || def.effect === 'fade_wrong' ||
+        def.effect === 'spy_stats');
+
+    if (def.effect === 'add_time') {
+        addQuizTime(def.value);
+    } else if (def.effect === 'remove_wrong') {
+        removeOneWrongOption();
+    } else if (def.effect === 'show_hint') {
+        showQuestionHint();
+    } else if (def.effect === 'free_answer') {
+        autoAnswerCorrect();
+    } else if (def.effect === 'blur_options') {
+        blurOptionsTemporarily(def.value);
+    } else if (def.effect === 'fade_wrong') {
+        fadeWrongOptions();
+    } else if (def.effect === 'spy_stats') {
+        showSpyStats();
+    } else {
+        // Efectos diferidos: se aplican al confirmar la respuesta
+        activePowerup = def;
+        showPowerupToast(def.icon + ' ' + def.name + ' ACTIVO para esta pregunta', def.color);
+    }
+
+    if (isImmediate) {
+        showPowerupToast(def.icon + ' ' + def.name + ' APLICADO', def.color);
+    }
 }
 
 var exploreCurrentSubject = null;
