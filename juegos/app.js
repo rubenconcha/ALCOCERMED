@@ -904,13 +904,13 @@ function showPowerupCards() {
 
     var colors = ['#C62828', '#1565C0', '#2E7D32'];
     var catNames = { puntos: '🎯 PUNTOS', ayuda: '🛡️ AYUDA', divertido: '😈 DIVERTIDO' };
-    html += '<div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;perspective:1400px">';
+    html += '<div style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;perspective:1400px;max-width:800px;margin:0 auto">';
     for (var s = 0; s < selected.length; s++) {
         var card = selected[s];
-        var c = colors[s % colors.length]; // rojo, azul, verde
+        var c = colors[s % colors.length];
         var stars = s === 0 ? '★★★★★' : s === 1 ? '★★★★' : '★★★';
         var rarityLabel = s === 0 ? 'ULTRA RARA' : s === 1 ? 'SÚPER RARA' : 'RARA';
-        html += '<div class="powerup-flip-card ygo-card" id="pcard-' + s + '" onclick="choosePowerupCard(\'' + card.key + '\', ' + s + ')" style="width:200px;height:290px;cursor:pointer;animation:cardSlideIn .5s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.12) + 's both" onmouseover="if(!flippedCards)this.style.transform=\'translateY(-16px) scale(1.02)\'" onmouseout="if(!flippedCards)this.style.transform=\'\'">';
+        html += '<div class="powerup-flip-card ygo-card" id="pcard-' + s + '" onclick="choosePowerupCard(\'' + card.key + '\', ' + s + ')" style="width:210px;height:300px;cursor:pointer;animation:cardSlideIn .5s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.12) + 's both" onmouseover="if(!flippedCards)this.style.transform=\'translateY(-16px) scale(1.03)\'" onmouseout="if(!flippedCards)this.style.transform=\'\'">';
         html += '<div class="powerup-flip-inner" id="pcinner-' + s + '">';
 
         // ═══ DORSO DE CARTA (BOCA ABAJO) ═══
