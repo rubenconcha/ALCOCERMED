@@ -389,135 +389,184 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
   width: 100%;
   max-width: 800px;
   margin: 0 auto 32px;
-  background: transparent; /* Now uses the page's background */
+  background: transparent;
   border-radius: 24px;
   padding: 40px 20px 20px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
-.stadium-bg-lines {
-  display: none; /* Page already has grid */
-}
+.stadium-bg-lines { display: none; }
 
 .stadium-light-beam {
   position: absolute;
-  top: -50px;
-  left: 50%;
+  top: -60px; left: 50%;
   transform: translateX(-50%);
-  width: 300px;
-  height: 400px;
-  background: radial-gradient(ellipse at top, rgba(255, 215, 0, 0.4), transparent 70%);
-  z-index: 2;
-  mix-blend-mode: screen;
-  pointer-events: none;
+  width: 420px; height: 520px;
+  background: radial-gradient(ellipse at top, rgba(255,215,0,0.38), transparent 65%);
+  z-index: 2; mix-blend-mode: screen; pointer-events: none;
+  animation: beamFlicker 4s ease-in-out infinite;
 }
+@keyframes beamFlicker { 0%,100%{opacity:.8} 50%{opacity:1} }
 
 .podium-pillars-wrapper {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 16px;
-  height: 220px;
+  gap: 10px;
+  height: 280px;
   position: relative;
   z-index: 10;
-  margin-top: 60px;
+  margin-top: 90px;
+  padding-bottom: 4px;
 }
 
 .podium-cylinder {
   position: relative;
-  width: 120px;
+  width: 136px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: popUpCylinder 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: podiumRise 0.9s cubic-bezier(0.175,0.885,0.32,1.275) forwards;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(70px);
 }
+@keyframes podiumRise { to { opacity:1; transform:translateY(0); } }
 
-@keyframes popUpCylinder {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Base Body (3D effect) */
+/* Base Body — metallic gradient per rank */
 .cylinder-body {
   width: 100%;
-  background: linear-gradient(90deg, #111 0%, #333 50%, #111 100%);
   position: relative;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 14px 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  padding-bottom: 20px;
-  box-shadow: inset 0 -10px 20px rgba(0,0,0,0.8), 0 20px 30px rgba(0,0,0,0.5);
+  justify-content: center;
+  padding: 10px 8px 22px;
+  box-shadow: inset 2px 0 10px rgba(255,255,255,0.07),
+              inset -2px 0 10px rgba(0,0,0,0.6),
+              0 20px 40px rgba(0,0,0,0.6);
+}
+.rank-1 .cylinder-body {
+  background: linear-gradient(155deg,#5a3e00 0%,#f5c800 30%,#ffe066 50%,#c8920a 70%,#5a3e00 100%);
+  height: 196px;
+}
+.rank-2 .cylinder-body {
+  background: linear-gradient(155deg,#2a3840 0%,#9bb8cc 30%,#ddeeff 50%,#6e8ea0 70%,#2a3840 100%);
+  height: 152px;
+}
+.rank-3 .cylinder-body {
+  background: linear-gradient(155deg,#4a1e08 0%,#c06820 30%,#e8a050 50%,#904010 70%,#4a1e08 100%);
+  height: 116px;
 }
 
-/* Top Oval */
+/* Top Oval cap — coloured per rank */
 .cylinder-top {
   width: 100%;
-  height: 40px;
-  background: radial-gradient(ellipse at center, #444 0%, #222 100%);
+  height: 46px;
   border-radius: 50%;
   position: absolute;
-  top: -20px;
-  left: 0;
-  box-shadow: inset 0 2px 5px rgba(255,255,255,0.2), inset 0 -5px 15px rgba(0,0,0,0.8);
-  z-index: 2;
+  top: -23px; left: 0;
+  z-index: 3;
+}
+.rank-1 .cylinder-top {
+  background: radial-gradient(ellipse at 38% 32%, #fff9c4 0%, #FFD700 45%, #a07800 100%);
+  box-shadow: 0 0 28px rgba(255,215,0,0.7), 0 4px 12px rgba(0,0,0,0.4);
+}
+.rank-2 .cylinder-top {
+  background: radial-gradient(ellipse at 38% 32%, #ffffff 0%, #c8dce8 45%, #5a7888 100%);
+  box-shadow: 0 0 18px rgba(180,210,230,0.6), 0 4px 12px rgba(0,0,0,0.4);
+}
+.rank-3 .cylinder-top {
+  background: radial-gradient(ellipse at 38% 32%, #ffe4a0 0%, #CD7F32 45%, #6a3010 100%);
+  box-shadow: 0 0 18px rgba(205,127,50,0.6), 0 4px 12px rgba(0,0,0,0.4);
 }
 
-/* Avatar container standing on top */
+/* Avatar wrapper */
 .podium-avatar-wrapper {
   position: absolute;
-  top: -90px;
+  top: -116px;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 5;
 }
-
+/* Glow ring */
+.podium-avatar-ring {
+  position: absolute;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  top: -2px; left: 50%;
+  transform: translateX(-50%);
+  animation: glowPulse 2.2s ease-in-out infinite;
+  pointer-events:none;
+}
+.rank-1 .podium-avatar-ring { background: radial-gradient(circle, rgba(255,215,0,0.6) 0%, transparent 70%); }
+.rank-2 .podium-avatar-ring { background: radial-gradient(circle, rgba(200,225,245,0.5) 0%, transparent 70%); }
+.rank-3 .podium-avatar-ring { background: radial-gradient(circle, rgba(210,130,50,0.5) 0%, transparent 70%); }
+@keyframes glowPulse { 0%,100%{opacity:.65;transform:translateX(-50%) scale(1)} 50%{opacity:1;transform:translateX(-50%) scale(1.25)} }
+/* Crown on 1st */
+.podium-crown {
+  font-size: 26px;
+  position: absolute; top: -30px; left:50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 2px 8px rgba(255,180,0,0.95));
+  animation: crownBounce 1.6s ease-in-out infinite;
+  z-index: 7;
+}
+@keyframes crownBounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(-7px)} }
 .podium-avatar {
-  font-size: 56px;
-  filter: drop-shadow(0 12px 16px rgba(0,0,0,0.5));
-  margin-bottom: -10px;
+  font-size: 58px;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.7));
+  position: relative; z-index: 2;
 }
-
 .podium-name {
-  font-size: 14px;
-  font-weight: 800;
-  color: #fff;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  font-size: 13px; font-weight: 800; color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.58);
+  border: 1px solid rgba(255,255,255,0.14);
+  padding: 3px 10px; border-radius: 12px;
+  white-space: nowrap; max-width: 130px;
+  overflow: hidden; text-overflow: ellipsis;
+  margin-top: 5px; backdrop-filter: blur(4px);
+}
+.podium-score-badge {
+  font-size: 11px; font-weight: 800;
   background: rgba(0,0,0,0.5);
-  padding: 2px 8px;
-  border-radius: 10px;
-  white-space: nowrap;
-  max-width: 120px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-top: 8px;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff; padding: 2px 8px;
+  border-radius: 8px; margin-bottom: 5px;
+  letter-spacing: 0.3px;
 }
-
-/* Rank text inside cylinder */
+/* Rank number */
 .cylinder-rank {
-  font-size: 40px;
-  font-weight: 900;
-  font-style: italic;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.8);
-  z-index: 3;
+  font-size: 48px; font-weight: 900; font-style: italic;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.9), 0 0 20px rgba(255,255,255,0.15);
+  z-index: 3; line-height: 1;
 }
+.rank-1 .cylinder-rank { color: #fff8d0; }
+.rank-2 .cylinder-rank { color: #e4f0ff; }
+.rank-3 .cylinder-rank { color: #ffecc8; }
 
-.rank-1 { color: #FFD700; height: 160px; }
-.rank-2 { color: #E2E8F0; height: 120px; }
-.rank-3 { color: #F1A560; height: 90px; }
+.rank-1 { color: #FFD700; }
+.rank-2 { color: #B8C8D8; }
+.rank-3 { color: #CD7F32; }
+
+#podium-confetti {
+  position:absolute; inset:0; pointer-events:none; z-index:1;
+  border-radius:24px;
+}
 
 @media(max-width:600px){
-  .podium-cylinder { width: 90px; }
-  .rank-1 { height: 130px; }
-  .rank-2 { height: 90px; }
-  .rank-3 { height: 60px; }
-  .podium-avatar { font-size: 36px; top: -70px; }
-  .cylinder-rank { font-size: 28px; }
-  .cylinder-top { height: 30px; top: -15px; }
+  .podium-cylinder { width: 98px; }
+  .rank-1 .cylinder-body { height:155px; }
+  .rank-2 .cylinder-body { height:116px; }
+  .rank-3 .cylinder-body { height:84px; }
+  .podium-avatar { font-size: 40px; }
+  .cylinder-rank { font-size: 32px; }
+  .cylinder-top { height: 34px; top: -17px; }
+  .podium-avatar-wrapper { top: -88px; }
+  .podium-pillars-wrapper { height: 230px; margin-top:72px; }
 }
 
 /* Total Ranking Table - Premium Glassmorphic Theme for Live Quiz */
@@ -528,28 +577,26 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
 }
 
 .total-ranking-table tr {
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: rgba(255,255,255,0.06) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  border: 1px solid rgba(255,255,255,0.08) !important;
 }
-
 .total-ranking-table tr:hover {
   transform: translateY(-2px) scale(1.01);
-  background: rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  background: rgba(255,255,255,0.11) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
 }
-
 .total-ranking-table tr.is-me-row {
-  background: rgba(233, 30, 99, 0.18) !important;
-  border: 1.5px solid rgba(233, 30, 99, 0.5) !important;
-  box-shadow: 0 4px 20px rgba(233, 30, 99, 0.25);
+  background: rgba(233,30,99,0.18) !important;
+  border: 1.5px solid rgba(233,30,99,0.55) !important;
+  box-shadow: 0 4px 24px rgba(233,30,99,0.28);
 }
-
-.total-ranking-table tr.is-me-row:hover {
-  background: rgba(233, 30, 99, 0.25) !important;
-}
+.total-ranking-table tr.is-me-row:hover { background: rgba(233,30,99,0.26) !important; }
+.total-ranking-table tr.row-gold   { border-color: rgba(255,215,0,0.35) !important; }
+.total-ranking-table tr.row-silver { border-color: rgba(184,200,216,0.3) !important; }
+.total-ranking-table tr.row-bronze { border-color: rgba(205,127,50,0.3) !important; }
 
 .total-ranking-table td {
   padding: 16px 20px;
@@ -565,24 +612,17 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
   border-radius: 0 16px 16px 0 !important;
 }
 
-/* Rank Circle styles */
 .tr-rank-circle {
-  width: 36px;
-  height: 36px;
+  width: 38px; height: 38px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  font-size: 15px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
-
-.tr-gold { background: linear-gradient(135deg, #FFD700, #DAA520); color: #000 !important; border: 2px solid #FFF; }
-.tr-silver { background: linear-gradient(135deg, #E2E8F0, #94A3B8); color: #000 !important; border: 2px solid #FFF; }
-.tr-bronze { background: linear-gradient(135deg, #F1A560, #C87533); color: #FFF !important; border: 2px solid #FFF; }
-.tr-normal { background: rgba(255, 255, 255, 0.1); color: #FFF !important; border: 1px solid rgba(255, 255, 255, 0.2); }
+.tr-gold   { background: linear-gradient(135deg,#FFD700,#b8860b); color:#1a1000 !important; border: 2px solid rgba(255,255,255,0.6); box-shadow:0 4px 16px rgba(255,215,0,0.5); }
+.tr-silver { background: linear-gradient(135deg,#d4e4f0,#7090a0); color:#0a1820 !important; border: 2px solid rgba(255,255,255,0.5); }
+.tr-bronze { background: linear-gradient(135deg,#e8a060,#7a4010); color:#fff !important;    border: 2px solid rgba(255,255,255,0.4); }
+.tr-normal { background: rgba(255,255,255,0.1); color:#fff !important; border: 1px solid rgba(255,255,255,0.18); }
 
 /* Text highlighting for readability inside table cells */
 .total-ranking-table .player-name {

@@ -2965,121 +2965,98 @@ function renderPodium(entries) {
     if (!podiumEl || entries.length === 0) return;
     podiumEl.style.display = 'block';
 
-    // Reproducir sonido triunfal (solo una vez)
     if (!window._triumphPlayed) {
         try {
             var ctx = new (window.AudioContext || window.webkitAudioContext)();
-            var o = ctx.createOscillator();
-            var o2 = ctx.createOscillator();
-            var g = ctx.createGain();
+            var o = ctx.createOscillator(); var o2 = ctx.createOscillator(); var g = ctx.createGain();
             o.type = 'square'; o2.type = 'triangle';
-            var notes = [523.25, 659.25, 783.99, 1046.50]; // Fanfarria: C5, E5, G5, C6
-            var t = ctx.currentTime;
+            var notes = [523.25, 659.25, 783.99, 1046.50]; var t = ctx.currentTime;
             for (var i = 0; i < notes.length; i++) {
-                o.frequency.setValueAtTime(notes[i], t + i * 0.15);
-                o2.frequency.setValueAtTime(notes[i]/2, t + i * 0.15); // Octava baja
+                o.frequency.setValueAtTime(notes[i], t + i*0.15);
+                o2.frequency.setValueAtTime(notes[i]/2, t + i*0.15);
             }
-            g.gain.setValueAtTime(0, t);
-            g.gain.linearRampToValueAtTime(0.15, t + 0.1);
-            g.gain.setValueAtTime(0.15, t + 0.5);
-            g.gain.exponentialRampToValueAtTime(0.001, t + 1.5);
+            g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(0.15, t+0.1);
+            g.gain.setValueAtTime(0.15, t+0.5); g.gain.exponentialRampToValueAtTime(0.001, t+1.5);
             o.connect(g); o2.connect(g); g.connect(ctx.destination);
-            o.start(t); o2.start(t); o.stop(t + 1.6); o2.stop(t + 1.6);
+            o.start(t); o2.start(t); o.stop(t+1.6); o2.stop(t+1.6);
             window._triumphPlayed = true;
         } catch(e) {}
     }
 
-    // Evitar re-renders innecesarios o repeticiones de animación molestas
     var currentDataStr = JSON.stringify(entries);
-    if (window._lastPodiumData === currentDataStr) {
-        return; 
-    }
+    if (window._lastPodiumData === currentDataStr) return;
     window._lastPodiumData = currentDataStr;
 
     var isFirstRender = !document.getElementById('podium-pillars').innerHTML.trim();
-
-    // Top 3 Stadium Podium
     var pillarOrder = [1, 0, 2];
     var pillarsHtml = '';
-    
+
     for (var p = 0; p < 3; p++) {
         var idx = pillarOrder[p];
         if (idx >= entries.length) {
-            pillarsHtml += '<div style="flex:1;max-width:120px"></div>';
+            pillarsHtml += '<div style="flex:1;max-width:136px"></div>';
             continue;
         }
         var e = entries[idx];
-        var rankClass = idx === 0 ? 'rank-1' : (idx === 1 ? 'rank-2' : 'rank-3');
-        var rankText = idx === 0 ? '1st' : (idx === 1 ? '2nd' : '3rd');
-        
-        var animStyle = isFirstRender 
-            ? ('animation-delay:' + (p*0.2) + 's') 
-            : 'animation: none !important; opacity: 1 !important; transform: translateY(0) !important;';
-            
+        var rankClass  = idx===0 ? 'rank-1' : (idx===1 ? 'rank-2' : 'rank-3');
+        var rankText   = idx===0 ? '1st'    : (idx===1 ? '2nd'    : '3rd');
+        var scoreLabel = e.puntaje + ' pts · ' + e.porcentaje + '%';
+        var animStyle  = isFirstRender
+            ? ('animation-delay:' + (p*0.22) + 's')
+            : 'animation:none!important;opacity:1!important;transform:translateY(0)!important;';
+
         pillarsHtml += '<div class="podium-cylinder ' + rankClass + '" style="' + animStyle + '">';
-        
-        // Avatar standing on top
         pillarsHtml += '<div class="podium-avatar-wrapper">';
+        if (idx === 0) pillarsHtml += '<div class="podium-crown">👑</div>';
+        pillarsHtml += '<div class="podium-avatar-ring"></div>';
         pillarsHtml += '<div class="podium-avatar">' + e.avatar + '</div>';
         pillarsHtml += '<div class="podium-name">' + e.nombre + '</div>';
         pillarsHtml += '</div>';
-
-        // The cylinder body
         pillarsHtml += '<div class="cylinder-top"></div>';
         pillarsHtml += '<div class="cylinder-body">';
+        pillarsHtml += '<div class="podium-score-badge">' + scoreLabel + '</div>';
         pillarsHtml += '<div class="cylinder-rank">' + rankText + '</div>';
-        pillarsHtml += '</div>';
-        
-        pillarsHtml += '</div>';
+        pillarsHtml += '</div></div>';
     }
 
     document.getElementById('podium-pillars').innerHTML = pillarsHtml;
 
-    // My rank
     if (currentUser) {
         var myRank = -1;
         for (var m = 0; m < entries.length; m++) {
-            if (entries[m].user_id === currentUser.id) { myRank = m + 1; break; }
+            if (entries[m].user_id === currentUser.id) { myRank = m+1; break; }
         }
         if (myRank > 0) {
             var rankPill = document.getElementById('my-rank-pill');
-            if(rankPill) {
-                rankPill.innerHTML = '🎯 Tu posición: <strong style="font-size:1.1rem;margin:0 4px">' + myRank + '°</strong> de ' + entries.length + ' estudiantes';
+            if (rankPill) {
+                var medalMe = myRank===1 ? '🥇' : myRank===2 ? '🥈' : myRank===3 ? '🥉' : '🎯';
+                rankPill.innerHTML = medalMe + ' Tu posición: <strong style="font-size:1.15rem;margin:0 4px">' + myRank + 'º</strong> de ' + entries.length + ' estudiantes';
                 rankPill.style.display = 'inline-block';
             }
         }
     }
 
-    // Full list table
     var listHtml = '';
     for (var l = 0; l < entries.length; l++) {
-        var isMe = currentUser && entries[l].user_id === currentUser.id;
-        var rClass = l === 0 ? 'tr-gold' : (l === 1 ? 'tr-silver' : (l === 2 ? 'tr-bronze' : 'tr-normal'));
-        
-        listHtml += '<tr class="' + (isMe ? 'is-me-row' : '') + '">';
-        
-        // Rank
-        listHtml += '<td style="width:60px;"><div class="tr-rank-circle ' + rClass + '">' + (l + 1) + '</div></td>';
-        
-        // Player
+        var isMe      = currentUser && entries[l].user_id === currentUser.id;
+        var rClass    = l===0 ? 'tr-gold'   : l===1 ? 'tr-silver' : l===2 ? 'tr-bronze' : 'tr-normal';
+        var rowAccent = l===0 ? 'row-gold'  : l===1 ? 'row-silver': l===2 ? 'row-bronze': '';
+        var rankIcon  = l===0 ? '🥇' : l===1 ? '🥈' : l===2 ? '🥉' : (l+1);
+        listHtml += '<tr class="' + rowAccent + (isMe ? ' is-me-row' : '') + '">';
+        listHtml += '<td style="width:56px;"><div class="tr-rank-circle ' + rClass + '">' + rankIcon + '</div></td>';
         listHtml += '<td><div style="display:flex;align-items:center;gap:12px;">';
-        listHtml += '<div style="font-size:24px;">' + entries[l].avatar + '</div>';
-        listHtml += '<div class="player-name">' + entries[l].nombre + (isMe ? ' <span style="font-size:10px;background:#E91E63;color:#fff;padding:2px 6px;border-radius:4px;margin-left:4px;">TÚ</span>' : '') + '</div>';
+        listHtml += '<div style="font-size:26px;line-height:1">' + entries[l].avatar + '</div>';
+        listHtml += '<div class="player-name">' + entries[l].nombre + (isMe ? ' <span style="font-size:10px;background:#E91E63;color:#fff;padding:2px 7px;border-radius:6px;margin-left:5px;">TÚ</span>' : '') + '</div>';
         listHtml += '</div></td>';
-        
-        // Score
         listHtml += '<td style="text-align:right;"><div class="player-score">' + entries[l].puntaje + ' <span>pts</span></div></td>';
-        
-        // Percentage
         listHtml += '<td style="text-align:right;width:80px;"><div class="player-pct">' + entries[l].porcentaje + '%</div></td>';
-        
         listHtml += '</tr>';
     }
-    
     var fullListEl = document.getElementById('podium-full-list');
-    if(fullListEl) fullListEl.innerHTML = listHtml;
-}
+    if (fullListEl) fullListEl.innerHTML = listHtml;
 
+    if (isFirstRender) spawnConfetti();
+}
 // ═══ MODO EQUIPO — Leaderboard por equipos ═══
 function loadTeamLeaderboard(evalId) {
     if (!window.studentLeaderboardInterval) {
@@ -4220,5 +4197,51 @@ window.clickDndLabel = clickDndLabel;
 window.clickDndSlot = clickDndSlot;
 window.confirmQuizDnd = confirmQuizDnd;
 
-
-
+// ═══ CONFETTI BURST ═══
+function spawnConfetti() {
+    var container = document.querySelector('.stadium-podium-container');
+    if (!container) return;
+    var canvas = document.getElementById('podium-confetti');
+    if (!canvas) {
+        canvas = document.createElement('canvas');
+        canvas.id = 'podium-confetti';
+        canvas.style.cssText = 'position:absolute;inset:0;pointer-events:none;z-index:1;border-radius:24px;width:100%;height:100%;';
+        container.insertBefore(canvas, container.firstChild);
+    }
+    var W = container.offsetWidth || 600;
+    var H = container.offsetHeight || 320;
+    canvas.width = W; canvas.height = H;
+    var ctx2 = canvas.getContext('2d');
+    var COLORS = ['#FFD700','#E91E63','#00BCD4','#4CAF50','#FF5722','#9C27B0','#fff','#FF9800'];
+    var particles = [];
+    for (var i = 0; i < 110; i++) {
+        particles.push({
+            x: W*0.3 + Math.random()*W*0.4, y: H*0.4,
+            vx: (Math.random()-0.5)*9, vy: -Math.random()*11 - 4,
+            w: Math.random()*8+4, h: Math.random()*4+3,
+            color: COLORS[Math.floor(Math.random()*COLORS.length)],
+            rot: Math.random()*360, rv: (Math.random()-0.5)*12, alpha: 1
+        });
+    }
+    var frame = 0;
+    function tick() {
+        ctx2.clearRect(0,0,W,H);
+        var alive = false;
+        for (var j = 0; j < particles.length; j++) {
+            var p2 = particles[j];
+            p2.x += p2.vx; p2.y += p2.vy;
+            p2.vy += 0.35; p2.vx *= 0.99; p2.rot += p2.rv; p2.alpha -= 0.013;
+            if (p2.alpha <= 0) continue;
+            alive = true;
+            ctx2.save(); ctx2.globalAlpha = p2.alpha;
+            ctx2.translate(p2.x, p2.y); ctx2.rotate(p2.rot * Math.PI/180);
+            ctx2.fillStyle = p2.color;
+            ctx2.fillRect(-p2.w/2, -p2.h/2, p2.w, p2.h);
+            ctx2.restore();
+        }
+        frame++;
+        if (alive && frame < 220) requestAnimationFrame(tick);
+        else ctx2.clearRect(0,0,W,H);
+    }
+    tick();
+}
