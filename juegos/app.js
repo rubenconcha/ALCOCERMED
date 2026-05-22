@@ -921,26 +921,15 @@ function showPowerupCards() {
         html += '<div style="position:absolute;inset:10px;border:1px solid #b8860b;border-radius:8px"></div>';
         html += '<div style="position:absolute;inset:14px;border:2px dotted #b8860b30;border-radius:7px"></div>';
 
-        // Triángulo inferior del ojo
-        html += '<div style="position:relative;z-index:2;display:flex;align-items:center;justify-content:center">';
-        html += '<div style="position:absolute;width:0;height:0;border-left:26px solid transparent;border-right:26px solid transparent;border-bottom:46px solid #b8860b40"></div>';
-        html += '<div style="position:relative;width:10px;height:25px;background:#b8860b;border-radius:40%;margin-top:12px;box-shadow:0 0 16px #b8860b60,0 0 32px #b8860b30"></div>';
-        html += '</div>';
+        // "?" GIGANTE OCUPANDO TODO EL CENTRO
+        html += '<div style="position:absolute;z-index:3;color:rgba(184,134,11,0.25);font-size:10rem;font-weight:900;font-family:serif;line-height:1;text-shadow:0 0 40px rgba(184,134,11,0.3)">?</div>';
+        // "?" más pequeño encima para definición
+        html += '<div style="position:relative;z-index:4;color:#b8860b;font-size:3.5rem;font-weight:900;text-shadow:0 0 16px #b8860b80,0 0 32px #b8860b40;font-family:serif">?</div>';
 
-        // "?" sobre el ojo - GRANDE Y VISIBLE
-        html += '<div style="position:absolute;z-index:3;color:#b8860b;font-size:2.2rem;font-weight:900;text-shadow:0 0 16px #b8860b80,0 0 32px #b8860b40;margin-top:6px">?</div>';
-
-        // Texto superior
-        html += '<div style="position:absolute;top:22px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.5rem;font-weight:900;letter-spacing:3px;z-index:1">ALCOCERMED</div>';
-
-        // Texto inferior
-        html += '<div style="position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.48rem;font-weight:900;letter-spacing:4px;z-index:1">POWER-UP</div>';
-
-        // Esquinas
-        html += '<div style="position:absolute;top:18px;left:18px;width:20px;height:20px;border-top:2px solid #b8860b60;border-left:2px solid #b8860b60"></div>';
-        html += '<div style="position:absolute;top:18px;right:18px;width:20px;height:20px;border-top:2px solid #b8860b60;border-right:2px solid #b8860b60"></div>';
-        html += '<div style="position:absolute;bottom:18px;left:18px;width:20px;height:20px;border-bottom:2px solid #b8860b60;border-left:2px solid #b8860b60"></div>';
-        html += '<div style="position:absolute;bottom:18px;right:18px;width:20px;height:20px;border-bottom:2px solid #b8860b60;border-right:2px solid #b8860b60"></div>';
+        // ALCOCERMED arriba
+        html += '<div style="position:absolute;top:22px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.5rem;font-weight:900;letter-spacing:3px;z-index:5">ALCOCERMED</div>';
+        // POWER-UP abajo
+        html += '<div style="position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.48rem;font-weight:900;letter-spacing:4px;z-index:5">POWER-UP</div>';
 
         html += '</div>';
 
@@ -1852,18 +1841,18 @@ function playErrorSound() {
     } catch(e) {}
 }
 
-function showFeedbackAnimation(isCorrect, ptsEarned) {
+function showFeedbackAnimation(isCorrect, ptsEarned, timedOut) {
     var pregunta = quizData.preguntas[quizCurrentQ];
     var isPoll = pregunta && (pregunta.tipo === 'poll' || pregunta.tipo === 'encuesta');
     var isOpenAnswer = pregunta && pregunta.tipo === 'oa';
 
     var banner = document.createElement('div');
     banner.style.position = 'fixed';
-    banner.style.top = '-150px'; // start hidden
+    banner.style.top = '-150px';
     banner.style.left = '50%';
     banner.style.transform = 'translateX(-50%)';
     banner.style.zIndex = '9999';
-    banner.style.background = (isPoll || isOpenAnswer) ? '#7C3AED' : (isCorrect ? '#10B981' : '#EF4444');
+    banner.style.background = timedOut ? '#EF4444' : (isPoll || isOpenAnswer) ? '#7C3AED' : (isCorrect ? '#10B981' : '#EF4444');
     banner.style.color = '#fff';
     banner.style.padding = '16px 32px';
     banner.style.borderRadius = '16px';
@@ -1873,8 +1862,10 @@ function showFeedbackAnimation(isCorrect, ptsEarned) {
     banner.style.gap = '20px';
     banner.style.transition = 'top 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
     
-    var iconHtml = (isPoll || isOpenAnswer) ? '<i class="fas fa-' + (isOpenAnswer ? 'pen-nib' : 'comment-dots') + '" style="font-size:2.5rem;"></i>' : (isCorrect ? '<i class="fas fa-check-circle" style="font-size:2.5rem;"></i>' : '<i class="fas fa-times-circle" style="font-size:2.5rem;"></i>');
-    var titleText = (isPoll || isOpenAnswer) ? '¡REGISTRADO!' : (isCorrect ? '¡CORRECTO!' : 'INCORRECTO');
+    var iconHtml = timedOut ? '<i class="fas fa-hourglass-end" style="font-size:2.5rem;"></i>' :
+        (isPoll || isOpenAnswer) ? '<i class="fas fa-' + (isOpenAnswer ? 'pen-nib' : 'comment-dots') + '" style="font-size:2.5rem;"></i>' : 
+        (isCorrect ? '<i class="fas fa-check-circle" style="font-size:2.5rem;"></i>' : '<i class="fas fa-times-circle" style="font-size:2.5rem;"></i>');
+    var titleText = timedOut ? '¡TIEMPO AGOTADO!' : (isPoll || isOpenAnswer) ? '¡REGISTRADO!' : (isCorrect ? '¡CORRECTO!' : 'INCORRECTO');
     var textHtml = '<div style="display:flex; flex-direction:column;"><span style="font-size:1.5rem; font-weight:900;">' + titleText + '</span>';
     if(!isPoll && !isOpenAnswer && isCorrect && ptsEarned) {
         textHtml += '<span style="font-size:1.1rem; font-weight:700; opacity:0.9;">+' + ptsEarned + ' Puntos</span>';
@@ -1902,7 +1893,7 @@ function showFeedbackAnimation(isCorrect, ptsEarned) {
     
     if (isPoll || isOpenAnswer) playSuccessSound();
     else if (isCorrect) playSuccessSound();
-    else playErrorSound();
+    else if (!timedOut) playErrorSound();
     
     // Slide in
     setTimeout(function() {
@@ -2025,19 +2016,18 @@ function startQuestionTimer(seconds) {
 
         if (quizTimeLeft <= 0) {
             clearInterval(quizTimerInterval);
+            quizTimerInterval = null;
             playBeep(440, 'square', 0.6);
             if (!quizConfirmed) {
-                // Time up! Auto-submit
                 quizConfirmed = true;
                 quizAnswers.push({ pregunta_id: quizData.preguntas[quizCurrentQ].id, seleccionada: -1, correcta: false, puntos_ganados: 0 });
                 
-                // Show wrong answers on buttons
                 var buttons = document.querySelectorAll('.quiz-opt-btn');
                 for(var b=0; b<buttons.length; b++){
                     buttons[b].style.opacity = '0.3';
                     buttons[b].style.pointerEvents = 'none';
                 }
-                showFeedbackAnimation(false, 0);
+                showFeedbackAnimation(false, 0, true);
             }
         }
     }, 1000);
