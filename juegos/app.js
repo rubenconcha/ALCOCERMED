@@ -534,7 +534,7 @@ var POWERUP_DEFS = {
     retry:{ name:'🔄 2a Oportunidad', desc:'Si fallas, puedes intentarlo otra vez',      cat:'ayuda',  effect:'retry',     value:1,  icon:'🔄', color:'#E91E63' },
 
     // 😈 ATAQUE / DIVERTIDO
-    chest:{ name:'🎁 Caja Misteriosa', desc:'¡Puede ser premio o castigo!',              cat:'divertido', effect:'mystery_box', value:0, icon:'🎁', color:'#F97316' },
+    chest:{ name:'🎁 Caja Misteriosa', desc:'¡50% x2, 30% x3, 20% trampa!',              cat:'divertido', effect:'mystery_box', value:0, icon:'🎁', color:'#F97316' },
     sleep:{ name:'💤 Dormido',       desc:'Las opciones se ven borrosas 3 segundos',     cat:'divertido', effect:'blur_options', value:3, icon:'💤', color:'#A78BFA' },
     ultra:{ name:'🤯 Ultra Instinto', desc:'Opciones incorrectas desaparecen lento',      cat:'divertido', effect:'fade_wrong', value:0, icon:'🤯', color:'#FFD700' },
     spy:  { name:'🕵️ Espía',         desc:'Ve qué porcentaje eligió cada opción',        cat:'divertido', effect:'spy_stats',  value:0, icon:'🕵️', color:'#64748B' },
@@ -643,9 +643,16 @@ function applyPowerupToAnswer(isCorrect, basePoints) {
         else showPowerupToast('🔥 Racha: ' + quizStreakCount + '/3', def.color);
     } else if (def.effect === 'mystery_box') {
         var r = Math.random();
-        if (r < 0.4) { pts = isCorrect ? basePoints * 2 : 0; showPowerupToast('🎁 ¡Premio! x2 puntos', '#22C55E'); }
-        else if (r < 0.7) { pts = isCorrect ? basePoints : -50; showPowerupToast('🎁 ¡Castigo! -50 pts', '#EF4444'); }
-        else { pts = basePoints; showPowerupToast('🎁 ¡Vacío! Sin cambios', '#94A3B8'); }
+        if (r < 0.5) {
+            pts = isCorrect ? basePoints * 2 : 0;
+            showPowerupToast('🎁 ¡Premio! x2 puntos', '#22C55E');
+        } else if (r < 0.8) {
+            pts = isCorrect ? basePoints * 3 : 0;
+            showPowerupToast('🎁 ¡JACKPOT! x3 puntos', '#F59E0B');
+        } else {
+            pts = isCorrect ? Math.max(0, basePoints - 30) : 0;
+            showPowerupToast('🎁 ¡Trampa! -30 pts', '#EF4444');
+        }
     } else if (def.effect === 'retry' && !isCorrect) {
         powerups.push({ key: 'retry_used', def: def, _used: false });
         showPowerupToast('🔄 ¡Segunda oportunidad! Responde de nuevo', def.color);
