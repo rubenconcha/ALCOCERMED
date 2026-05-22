@@ -2717,9 +2717,17 @@ function showQuizResults() {
                 rhtml += '  <div style="font-weight:600; color:#1E293B; font-size:0.95rem; line-height:1.5; font-style:italic;">"' + (ans && ans.seleccionada ? ans.seleccionada : '<span style=\'color:#94A3B8;\'>Sin responder</span>') + '"</div>';
                 rhtml += '</div>';
             } else if (pq.tipo === 'fb') {
-                rhtml += '<div style="margin-top:16px; padding:12px; background:#F8FAFC; border:2px solid #E2E8F0; border-radius:8px;">';
-                rhtml += '<div style="font-weight:700; color:#475569; font-size:0.85rem; margin-bottom:4px;">Tu respuesta:</div>';
-                rhtml += '<div style="font-weight:600; color:#1E293B;">' + (ans ? ans.seleccionada : 'Sin responder') + '</div>';
+                var correctaFb = (pq.opciones && pq.opciones[0]) ? pq.opciones[0].text : '';
+                var studentAns = ans ? (ans.seleccionada || 'Sin responder') : 'Sin responder';
+                var fbIsCorrect = ans && ans.correcta;
+                rhtml += '<div style="margin-top:16px; padding:14px; background:' + (fbIsCorrect ? '#F0FDF4' : '#FEF2F2') + '; border:2px solid ' + (fbIsCorrect ? '#86EFAC' : '#FECACA') + '; border-radius:10px;">';
+                rhtml += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">';
+                rhtml += '<div style="font-weight:800; color:' + (fbIsCorrect ? '#166534' : '#DC2626') + '; font-size:0.85rem"><i class="fas fa-' + (fbIsCorrect ? 'check' : 'times') + '-circle"></i> ' + (fbIsCorrect ? '¡Correcto!' : 'Incorrecto') + '</div>';
+                rhtml += '</div>';
+                rhtml += '<div style="font-weight:700; color:#475569; font-size:0.8rem; margin-bottom:2px;">Tu respuesta:</div>';
+                rhtml += '<div style="font-weight:600; color:#1E293B;background:#fff;padding:6px 10px;border-radius:6px;margin-bottom:8px">' + studentAns + '</div>';
+                rhtml += '<div style="font-weight:700; color:#059669; font-size:0.8rem; margin-bottom:2px;">✅ Respuesta correcta:</div>';
+                rhtml += '<div style="font-weight:700; color:#059669;background:#F0FDF4;padding:6px 10px;border-radius:6px">' + (correctaFb || 'No especificada') + '</div>';
                 rhtml += '</div>';
             }
             rhtml += '</div>';
