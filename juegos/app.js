@@ -852,9 +852,11 @@ function selectDiverseQuestions(allQuestions, total) {
     return result;
 }
 
-// ═══ SELECCIÓN DE COMODÍN CON TARJETAS (pregunta 4 y 8) ═══
+// ═══ SELECCIÓN DE COMODÍN CON TARJETAS VOLTEADAS (pregunta 4 y 8) ═══
+var flippedCards = false;
+
 function showPowerupCards() {
-    // Elegir 3 comodines aleatorios (uno por categoría, aún no usados)
+    flippedCards = false;
     var available = [];
     for (var key in POWERUP_DEFS) {
         var used = false;
@@ -876,76 +878,99 @@ function showPowerupCards() {
             selected.push(cats[cat][idx]);
         }
     }
-    // Si hay menos de 3, rellenar con aleatorios
     while (selected.length < 3 && available.length > selected.length) {
         var r = available[Math.floor(Math.random() * available.length)];
         if (selected.indexOf(r) === -1) selected.push(r);
     }
 
-    // Crear overlay animado
     var overlay = document.createElement('div');
     overlay.id = 'powerup-cards-overlay';
-    overlay.style.cssText = 'position:fixed;inset:0;z-index:10000;background:rgba(15,23,42,0.92);backdrop-filter:blur(12px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;animation:fadeIn .3s ease';
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:10000;background:radial-gradient(ellipse at center,rgba(30,20,60,0.95),rgba(5,2,20,0.98));backdrop-filter:blur(16px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;animation:fadeIn .4s ease';
 
-    var html = '<div style="text-align:center;margin-bottom:32px">';
-    html += '<div style="font-size:2.5rem;margin-bottom:8px;animation:bounceIn .6s cubic-bezier(.34,1.56,.64,1)">🎁</div>';
-    html += '<h2 style="color:#fff;font-size:1.6rem;font-weight:900;margin:0 0 6px">¡Elige tu comodín!</h2>';
-    html += '<p style="color:#94A3B8;font-size:0.9rem;margin:0">Toca una carta para activarlo en la siguiente pregunta</p>';
+    var html = '<div style="text-align:center;margin-bottom:28px">';
+    html += '<div style="font-size:3rem;margin-bottom:4px;animation:bounceIn .6s cubic-bezier(.34,1.56,.64,1)">🃏</div>';
+    html += '<h2 style="color:#fff;font-size:1.5rem;font-weight:900;margin:0 0 4px;text-shadow:0 0 20px rgba(168,85,247,0.6)">¡Elige una carta!</h2>';
+    html += '<p style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin:0">Toca una carta boca abajo y descubre tu comodín</p>';
     html += '</div>';
 
-    var colors = ['#EF4444', '#3B82F6', '#10B981', '#F59E0B', '#8B5CF6', '#EC4899'];
-    html += '<div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;max-width:700px">';
+    var colors = ['#EF4444', '#3B82F6', '#10B981'];
+    html += '<div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;perspective:1200px">';
     for (var s = 0; s < selected.length; s++) {
         var card = selected[s];
         var c = colors[s % colors.length];
-        html += '<div class="powerup-card" onclick="choosePowerupCard(\'' + card.key + '\')" style="background:linear-gradient(160deg,' + c + '18,' + c + '08);border:2px solid ' + c + '50;border-radius:20px;padding:24px 20px;width:180px;cursor:pointer;text-align:center;transition:transform .25s,box-shadow .25s,border-color .25s;animation:cardSlideIn .5s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.1) + 's both" onmouseover="this.style.transform=\'translateY(-10px) scale(1.04)\';this.style.boxShadow=\'0 16px 48px ' + c + '30\';this.style.borderColor=\'' + c + '\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'\';this.style.borderColor=\'' + c + '50\'">';
-        html += '<div class="powerup-card-icon" style="font-size:3rem;margin-bottom:12px;display:block;animation:floatIcon 3s ease-in-out infinite">' + card.def.icon + '</div>';
-        html += '<h3 style="color:#fff;font-size:0.95rem;font-weight:800;margin:0 0 6px">' + card.def.name + '</h3>';
-        html += '<p style="color:#94A3B8;font-size:0.7rem;margin:0;line-height:1.4">' + card.def.desc + '</p>';
-        html += '<div style="margin-top:12px;padding:6px 14px;background:' + c + '20;border-radius:10px;color:' + c + ';font-size:0.7rem;font-weight:700;display:inline-block">' + (card.def.cat === 'puntos' ? '🎯 PUNTOS' : card.def.cat === 'ayuda' ? '🛡️ AYUDA' : '😈 DIVERTIDO') + '</div>';
+        html += '<div class="powerup-flip-card" id="pcard-' + s + '" onclick="choosePowerupCard(\'' + card.key + '\', ' + s + ')" style="width:170px;height:280px;cursor:pointer;animation:cardSlideIn .6s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.12) + 's both" onmouseover="if(!flippedCards)this.style.transform=\'translateY(-12px)\'" onmouseout="if(!flippedCards)this.style.transform=\'\'">';
+        // Inner flip container
+        html += '<div class="powerup-flip-inner" id="pcinner-' + s + '">';
+        // FRONT = boca abajo (misterio)
+        html += '<div class="powerup-flip-front" style="background:linear-gradient(160deg,#1a0533,#2d1b4e,#1a0533);border:3px solid ' + c + '60;border-radius:18px;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;overflow:hidden">';
+        html += '<div style="position:absolute;inset:8px;border:2px solid ' + c + '20;border-radius:12px;background:radial-gradient(circle at 30% 30%,' + c + '10,transparent 70%)"></div>';
+        html += '<div style="font-size:3.5rem;z-index:1;filter:drop-shadow(0 0 15px ' + c + ')">❓</div>';
+        html += '<div style="z-index:1;color:' + c + ';font-size:0.65rem;font-weight:800;letter-spacing:2px;margin-top:4px;opacity:0.7">COMODÍN</div>';
+        // Yugioh-style swirl ornament
+        html += '<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:40px;height:40px;border:2px solid ' + c + '30;border-radius:50%;z-index:1"></div>';
+        html += '<div style="position:absolute;bottom:24px;left:50%;transform:translateX(-50%);width:16px;height:16px;background:' + c + '40;border-radius:50%;z-index:1"></div>';
         html += '</div>';
+        // BACK = boca arriba (revelado)
+        html += '<div class="powerup-flip-back" style="background:linear-gradient(160deg,' + c + '10,' + c + '05);border:3px solid ' + c + '60;border-radius:18px;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;transform:rotateY(180deg);padding:12px;box-sizing:border-box">';
+        html += '<div class="powerup-card-icon" style="font-size:2.5rem;margin-bottom:8px;display:block">' + card.def.icon + '</div>';
+        html += '<h3 style="color:#fff;font-size:0.85rem;font-weight:800;margin:0 0 4px;text-align:center">' + card.def.name + '</h3>';
+        html += '<p style="color:rgba(255,255,255,0.6);font-size:0.62rem;margin:0 0 8px;text-align:center;line-height:1.3">' + card.def.desc + '</p>';
+        html += '<div style="padding:4px 10px;background:' + c + '25;border-radius:8px;color:' + c + ';font-size:0.6rem;font-weight:700">' + (card.def.cat === 'puntos' ? '🎯 PUNTOS' : card.def.cat === 'ayuda' ? '🛡️ AYUDA' : '😈 DIVERTIDO') + '</div>';
+        html += '</div>';
+        html += '</div>'; // flip-inner
+        html += '</div>'; // flip-card
     }
     html += '</div>';
 
-    html += '<button onclick="skipPowerupCards()" style="margin-top:24px;background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.5);padding:8px 24px;border-radius:20px;cursor:pointer;font-size:0.8rem;transition:all .2s">Saltar →</button>';
+    html += '<button onclick="skipPowerupCards()" style="margin-top:20px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.4);padding:6px 20px;border-radius:20px;cursor:pointer;font-size:0.75rem;transition:all .2s;margin-top:20px">Saltar →</button>';
 
     overlay.innerHTML = html;
     document.body.appendChild(overlay);
 
-    // Esconder barra de comodines mientras se elige
     var bar = document.getElementById('powerup-bar');
     if (bar) bar.style.display = 'none';
 }
 
-function choosePowerupCard(key) {
-    var overlay = document.getElementById('powerup-cards-overlay');
-    if (!overlay) return;
+function choosePowerupCard(key, cardIdx) {
+    if (flippedCards) return;
+    flippedCards = true;
 
     var def = POWERUP_DEFS[key];
     if (!def) return;
 
-    // Guardar para aplicar después de renderizar la pregunta
-    pendingPowerupKey = key;
-
-    // Animación de selección
-    var card = overlay.querySelector('[onclick="choosePowerupCard(\'' + key + '\')"]');
-    if (card) {
-        card.style.transform = 'scale(1.3)';
-        card.style.boxShadow = '0 0 40px gold, 0 0 80px gold';
-        card.style.borderColor = 'gold';
+    // Voltear todas las cartas
+    for (var s = 0; s < 3; s++) {
+        var inner = document.getElementById('pcinner-' + s);
+        if (inner) {
+            var delay = (s === cardIdx) ? 0 : 0.3 + (s * 0.15);
+            inner.style.transition = 'transform 0.7s cubic-bezier(.34,1.56,.64,1) ' + delay + 's';
+            inner.style.transform = 'rotateY(180deg)';
+        }
     }
+
+    // Brillo dorado en la elegida
+    setTimeout(function() {
+        var chosen = document.getElementById('pcard-' + cardIdx);
+        if (chosen) {
+            chosen.style.transform = 'scale(1.05)';
+            chosen.style.filter = 'drop-shadow(0 0 30px gold) drop-shadow(0 0 60px gold)';
+        }
+    }, 700);
+
+    // Guardar para aplicar
+    pendingPowerupKey = key;
 
     showPowerupToast(def.icon + ' ' + def.name + ' SELECCIONADO', '#FFD700');
     playBeep(880, 'sine', 0.3);
     setTimeout(function() { playBeep(1100, 'sine', 0.3); }, 150);
 
-    // Cerrar overlay y continuar quiz
     setTimeout(function() {
         closePowerupCards();
-    }, 800);
+    }, 1800);
 }
 
 function skipPowerupCards() {
+    flippedCards = true;
     pendingPowerupKey = null;
     closePowerupCards();
 }

@@ -860,6 +860,41 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
     }
 }
 
+/* ═══ CARTAS VOLTEADAS (YU-GI-OH STYLE) ═══ */
+.powerup-flip-card {
+    perspective: 1000px;
+    transition: transform 0.3s;
+}
+.powerup-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(.34,1.56,.64,1);
+    transform-style: preserve-3d;
+}
+.powerup-flip-front, .powerup-flip-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.powerup-flip-front {
+    transform: rotateY(0deg);
+}
+.powerup-flip-back {
+    transform: rotateY(180deg);
+}
+@media (max-width: 500px) {
+    .powerup-flip-card {
+        width: 130px !important;
+        height: 220px !important;
+    }
+    .powerup-flip-card .powerup-card-icon {
+        font-size: 2rem !important;
+    }
+    .powerup-flip-card h3 {
+        font-size: 0.7rem !important;
+    }
+}
+
 /* ═══ RESULTADOS ═══ */
 #quiz-result-breakdown > div > div {
     transition: transform 0.2s;
