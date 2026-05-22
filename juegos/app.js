@@ -3296,15 +3296,15 @@ window.openReportDetail = function(evalId, userId) {
     
     var overlay = document.createElement('div');
     overlay.id = 'report-detail-modal';
-    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,.8);backdrop-filter:blur(8px);z-index:100000;display:flex;align-items:center;justify-content:center;padding:20px;';
+    overlay.className = 'report-detail-overlay';
     
     var modal = document.createElement('div');
-    modal.style.cssText = 'background:#fff;border-radius:24px;width:100%;max-width:600px;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1);overflow:hidden;';
+    modal.className = 'report-detail-modal-box';
     
     var studentName = window.adminReportsNameMap ? (window.adminReportsNameMap[evalId+'_'+userId] || 'Estudiante') : 'Estudiante';
     var header = document.createElement('div');
-    header.style.cssText = 'padding:24px;background:#F8FAFC;border-bottom:1px solid #E2E8F0;display:flex;justify-content:space-between;align-items:center;';
-    header.innerHTML = '<h2 style="font-size:1.2rem;font-weight:800;color:#1E293B;margin:0;"><i class="fas fa-user-circle" style="color:#94A3B8;margin-right:8px;"></i>' + studentName + '</h2>' +
+    header.className = 'report-detail-header';
+    header.innerHTML = '<h2 style="font-size:1.2rem;font-weight:800;color:#1E293B;margin:0;display:flex;align-items:center;gap:8px;"><i class="fas fa-user-circle" style="color:#94A3B8;"></i>' + studentName + '</h2>' +
                        '<button onclick="document.body.removeChild(document.getElementById(\'report-detail-modal\'))" style="background:none;border:none;font-size:28px;color:#94A3B8;cursor:pointer;padding:0;line-height:1;">&times;</button>';
     modal.appendChild(header);
     
@@ -3336,6 +3336,19 @@ window.openReportDetail = function(evalId, userId) {
                 ansMap[ans[ak].pregunta_id] = ans[ak];
             }
         }
+
+        // ═══ KEY FIX: Filter qs to only the questions the student actually answered ═══
+        var answeredIds = Object.keys(ansMap);
+        if (answeredIds.length > 0) {
+            // We have pregunta_id references — filter bank to only those IDs
+            var answeredIdSet = {};
+            for (var ki = 0; ki < answeredIds.length; ki++) answeredIdSet[answeredIds[ki]] = true;
+            qs = qs.filter(function(q) { return answeredIdSet[q.id] || answeredIdSet[String(q.id)]; });
+        } else if (ans.length > 0 && ans.length < qs.length) {
+            // No pregunta_id stored — answers are positional; cap qs to the answered count
+            qs = qs.slice(0, ans.length);
+        }
+        // If ans is empty or qs already matches — keep qs as-is (nothing to filter)
 
         for (var aIndex = 0; aIndex < qs.length; aIndex++) {
             var qItem = qs[aIndex];
