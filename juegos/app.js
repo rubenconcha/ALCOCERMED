@@ -1594,14 +1594,15 @@ function showWaitingRoom() {
 
 // ═══ MODO TEST — Ajustes de interfaz para examen a ritmo propio ═══
 function applyTestModeUI() {
-    // No reproducir música de fondo en modo test (ambiente de examen)
     stopGameMusic();
     
-    // Ocultar HUD competitivo (puntos y racha) — modo examen no es competitivo
-    var scoreHud = document.getElementById('quiz-current-score');
-    var streakHud = document.getElementById('quiz-current-streak');
-    if (scoreHud && scoreHud.parentElement) scoreHud.parentElement.style.display = 'none';
-    if (streakHud && streakHud.parentElement) streakHud.parentElement.style.display = 'none';
+    // Ocultar HUD competitivo solo en modo test real (examen), no en práctica
+    if (quizSessionMode === 'test') {
+        var scoreHud = document.getElementById('quiz-current-score');
+        var streakHud = document.getElementById('quiz-current-streak');
+        if (scoreHud && scoreHud.parentElement) scoreHud.parentElement.style.display = 'none';
+        if (streakHud && streakHud.parentElement) streakHud.parentElement.style.display = 'none';
+    }
     
     // Agregar badge de modo test en la barra superior
     var topBar = document.querySelector('#quiz-container > div:first-child');
