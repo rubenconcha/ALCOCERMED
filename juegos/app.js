@@ -914,65 +914,41 @@ function showPowerupCards() {
         var c = colors[s % colors.length];
         var stars = s === 0 ? '★★★★★' : s === 1 ? '★★★★' : '★★★';
         var rarityLabel = s === 0 ? 'ULTRA RARA' : s === 1 ? 'SÚPER RARA' : 'RARA';
-        html += '<div class="powerup-flip-card ygo-card" id="pcard-' + s + '" onclick="choosePowerupCard(\'' + card.key + '\', ' + s + ')" style="width:210px;height:300px;cursor:pointer;animation:cardSlideIn .5s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.12) + 's both" onmouseover="if(!flippedCards)this.style.transform=\'translateY(-16px) scale(1.03)\'" onmouseout="if(!flippedCards)this.style.transform=\'\'">';
-        html += '<div class="powerup-flip-inner" id="pcinner-' + s + '">';
-
-        // ═══ DORSO DE CARTA (BOCA ABAJO) ═══
-        html += '<div class="powerup-flip-front ygo-card-back" style="background:linear-gradient(160deg,#3e2a14 0%,#2d1a08 30%,#1a0c04 60%,#3e2a14 100%);border:5px solid #b8860b;border-radius:14px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;overflow:hidden;box-shadow:inset 0 0 60px rgba(139,105,20,0.15)">';
-
-        // Borde interior
-        html += '<div style="position:absolute;inset:6px;border:2px solid #8B6914;border-radius:10px"></div>';
-        html += '<div style="position:absolute;inset:10px;border:1px solid #b8860b;border-radius:8px"></div>';
-        html += '<div style="position:absolute;inset:14px;border:2px dotted #b8860b30;border-radius:7px"></div>';
-
-        // "?" GIGANTE OCUPANDO TODO EL CENTRO
-        html += '<div style="position:absolute;z-index:3;color:rgba(184,134,11,0.25);font-size:10rem;font-weight:900;font-family:serif;line-height:1;text-shadow:0 0 40px rgba(184,134,11,0.3)">?</div>';
-        // "?" más pequeño encima para definición
-        html += '<div style="position:relative;z-index:4;color:#b8860b;font-size:3.5rem;font-weight:900;text-shadow:0 0 16px #b8860b80,0 0 32px #b8860b40;font-family:serif">?</div>';
-
-        // ALCOCERMED arriba
-        html += '<div style="position:absolute;top:22px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.5rem;font-weight:900;letter-spacing:3px;z-index:5">ALCOCERMED</div>';
-        // POWER-UP abajo
-        html += '<div style="position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.48rem;font-weight:900;letter-spacing:4px;z-index:5">POWER-UP</div>';
-
-        html += '</div>';
-
-        // ═══ FRENTE DE CARTA (BOCA ARRIBA - REVELADA) ═══
+        
         var isSpell = card.def.cat === 'ayuda';
         var isTrap = card.def.cat === 'divertido';
         var typeIcon = isSpell ? '🛡️' : isTrap ? '😈' : '⚡';
         var typeLabel = isSpell ? 'HABILIDAD' : isTrap ? 'EFECTO' : 'MEJORA';
         var catLabel = card.def.cat === 'puntos' ? '🎯 PUNTOS' : card.def.cat === 'ayuda' ? '🛡️ AYUDA' : '😈 DIVERTIDO';
 
-        html += '<div class="powerup-flip-back ygo-card-front" style="background:linear-gradient(170deg,#0f0f1a 0%,#1a1a2e 40%,#16213e 100%);border:4px solid ' + c + ';border-radius:14px;width:100%;height:100%;display:flex;flex-direction:column;backface-visibility:hidden;position:absolute;inset:0;transform:rotateY(180deg);overflow:hidden;box-shadow:0 0 30px ' + c + '30,0 0 60px ' + c + '10">';
+        html += '<div class="powerup-flip-card ygo-card" id="pcard-' + s + '" onclick="choosePowerupCard(\'' + card.key + '\', ' + s + ')" style="width:210px;height:300px;cursor:pointer;animation:cardSlideIn .5s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.12) + 's both" onmouseover="if(!flippedCards)this.style.transform=\'translateY(-16px) scale(1.03)\'" onmouseout="if(!flippedCards)this.style.transform=\'\'">';
+        html += '<div class="powerup-flip-inner" id="pcinner-' + s + '">';
 
-        // Borde interno neon
-        html += '<div style="position:absolute;inset:5px;border:2px solid ' + c + '60;border-radius:10px;pointer-events:none;z-index:1"></div>';
-
-        // Banner superior con gradiente
-        html += '<div style="background:linear-gradient(180deg,' + c + ' 0%,' + c + 'dd 100%);color:#fff;padding:12px 10px 8px;font-weight:900;font-size:0.9rem;text-align:center;letter-spacing:0.5px;position:relative;z-index:2;text-shadow:1px 1px 3px rgba(0,0,0,0.5);border-bottom:2px solid rgba(255,255,255,0.3)">' + card.def.name + '</div>';
-
-        // Área de arte (icono grande)
-        html += '<div style="flex:1;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 30%,' + c + '30,transparent 60%),radial-gradient(ellipse at 30% 70%,' + c + '15,transparent 50%);position:relative;z-index:1;margin:2px 10px">';
-        html += '<div style="font-size:4.5rem;filter:drop-shadow(0 0 20px ' + c + '80) drop-shadow(2px 3px 6px rgba(0,0,0,0.5));z-index:1">' + card.def.icon + '</div>';
-        // Círculo de categoría
-        html += '<div style="position:absolute;top:5px;right:5px;width:28px;height:28px;border-radius:50%;background:' + c + ';color:#fff;font-size:0.75rem;font-weight:900;display:flex;align-items:center;justify-content:center;z-index:3;box-shadow:0 0 10px ' + c + '80">' + typeIcon + '</div>';
+        // ═══ DORSO DE CARTA (BOCA ABAJO) ═══
+        html += '<div class="powerup-flip-front ygo-card-back" style="background:linear-gradient(160deg,#3e2a14 0%,#2d1a08 30%,#1a0c04 60%,#3e2a14 100%);border:5px solid #b8860b;border-radius:14px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;overflow:hidden;box-shadow:inset 0 0 60px rgba(139,105,20,0.15)">';
+        html += '<div style="position:absolute;inset:6px;border:2px solid #8B6914;border-radius:10px"></div>';
+        html += '<div style="position:absolute;inset:10px;border:1px solid #b8860b;border-radius:8px"></div>';
+        html += '<div style="position:absolute;inset:14px;border:2px dotted #b8860b30;border-radius:7px"></div>';
+        html += '<div style="position:absolute;z-index:3;color:rgba(184,134,11,0.25);font-size:10rem;font-weight:900;font-family:serif;line-height:1;text-shadow:0 0 40px rgba(184,134,11,0.3)">?</div>';
+        html += '<div style="position:relative;z-index:4;color:#b8860b;font-size:3.5rem;font-weight:900;text-shadow:0 0 16px #b8860b80,0 0 32px #b8860b40;font-family:serif">?</div>';
+        html += '<div style="position:absolute;top:22px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.5rem;font-weight:900;letter-spacing:3px;z-index:5">ALCOCERMED</div>';
+        html += '<div style="position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.48rem;font-weight:900;letter-spacing:4px;z-index:5">POWER-UP</div>';
         html += '</div>';
 
-        // Línea de categoría
-        html += '<div style="background:rgba(255,255,255,0.06);padding:5px 10px;font-size:0.65rem;font-weight:800;color:' + c + ';text-align:center;z-index:2;letter-spacing:1px;border-top:1px solid ' + c + '30;border-bottom:1px solid ' + c + '30">' + catLabel + ' • ' + rarityLabel + '</div>';
-
-        // Descripción - texto grande, alto contraste
-        html += '<div style="background:rgba(255,255,255,0.12);margin:5px 8px;padding:10px 12px;border:1px solid ' + c + '40;border-radius:6px;font-size:0.72rem;color:#FFFFFF;line-height:1.5;z-index:2;min-height:46px;text-align:center;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,0.4)">' + card.def.desc + '</div>';
-
-
-        // Footer
-        html += '<div style="display:flex;justify-content:space-between;padding:2px 12px 8px;z-index:2;font-size:0.55rem;font-weight:800;color:rgba(255,255,255,0.5);letter-spacing:0.5px">';
+        // ═══ FRENTE DE CARTA (BOCA ARRIBA - REVELADA) ═══
+        html += '<div class="powerup-flip-back ygo-card-front" style="border: 4px solid ' + c + '; box-shadow: 0 0 30px ' + c + '30, 0 0 60px ' + c + '10;">';
+        html += '<div class="ygo-card-border-neon" style="border: 2px solid ' + c + '60;"></div>';
+        html += '<div class="ygo-card-banner" style="background: linear-gradient(180deg,' + c + ' 0%,' + c + 'dd 100%); border-bottom: 2px solid rgba(255,255,255,0.3);">' + card.def.name + '</div>';
+        html += '<div class="ygo-card-art-area" style="background: radial-gradient(ellipse at 50% 30%,' + c + '30,transparent 60%), radial-gradient(ellipse at 30% 70%,' + c + '15,transparent 50%);">';
+        html += '<div class="ygo-card-icon" style="filter: drop-shadow(0 0 20px ' + c + '80) drop-shadow(2px 3px 6px rgba(0,0,0,0.5));">' + card.def.icon + '</div>';
+        html += '<div class="ygo-card-category-circle" style="background: ' + c + '; box-shadow: 0 0 10px ' + c + '80;">' + typeIcon + '</div>';
+        html += '</div>';
+        html += '<div class="ygo-card-rarity-row" style="color: ' + c + '; border-top: 1px solid ' + c + '30; border-bottom: 1px solid ' + c + '30;">' + catLabel + ' • ' + rarityLabel + '</div>';
+        html += '<div class="ygo-card-desc-box" style="border: 1px solid ' + c + '40;">' + card.def.desc + '</div>';
+        html += '<div class="ygo-card-footer">';
         html += '<span>' + typeLabel + '</span>';
         html += '<span style="color:' + c + '">★ POWER UP</span>';
         html += '</div>';
-
-        // Brillo inferior
         html += '<div style="position:absolute;bottom:0;left:10%;right:10%;height:2px;background:linear-gradient(90deg,transparent,' + c + '80,' + c + '80,transparent);z-index:2"></div>';
         html += '</div>';
 
@@ -2999,7 +2975,7 @@ function renderPodium(entries) {
         }
         var e = entries[idx];
         var rankClass  = idx===0 ? 'rank-1' : (idx===1 ? 'rank-2' : 'rank-3');
-        var rankText   = idx===0 ? '1st'    : (idx===1 ? '2nd'    : '3rd');
+        var rankText   = idx===0 ? '1'      : (idx===1 ? '2'      : '3');
         var scoreLabel = e.puntaje + ' pts · ' + e.porcentaje + '%';
         var animStyle  = isFirstRender
             ? ('animation-delay:' + (p*0.22) + 's')

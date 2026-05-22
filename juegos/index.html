@@ -442,19 +442,19 @@
 
       <div id="quiz-container" style="width:100%; max-width:1100px; margin:0 auto; padding:0 12px; display:flex; flex-direction:column; height:100vh;">
         <!-- Top bar like Quizizz -->
-        <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 24px; background:rgba(0,0,0,0.2); border-radius:12px; margin-bottom:20px;">
-          <div style="display:flex; align-items:center; gap:16px;">
-            <div style="background:rgba(255,255,255,0.1); padding:6px 12px; border-radius:8px; display:flex; align-items:center; gap:8px;">
+        <div class="quiz-top-hud">
+          <div class="quiz-hud-left">
+            <div class="quiz-hud-badge">
               <i class="fas fa-star" style="color:#FFD700;"></i>
               <span id="quiz-current-score" style="color:#fff; font-weight:800; font-size:1.1rem;">0</span>
             </div>
-            <div style="background:rgba(255,255,255,0.1); padding:6px 12px; border-radius:8px; display:flex; align-items:center; gap:8px;">
+            <div class="quiz-hud-badge">
               <i class="fas fa-fire" style="color:#FF9800;"></i>
               <span id="quiz-current-streak" style="color:#fff; font-weight:800; font-size:1.1rem;">0</span>
             </div>
-            <span id="quiz-streak-mult" style="display:none;background:linear-gradient(135deg,#FF6B00,#FF3D00);color:#fff;font-weight:900;font-size:0.85rem;padding:4px 10px;border-radius:10px;animation:pulse .8s infinite">x1</span>
+            <span id="quiz-streak-mult" class="quiz-hud-mult" style="display:none;">x1</span>
           </div>
-          <div style="color:#fff; font-weight:800; font-size:1.2rem; background:rgba(0,0,0,0.3); padding:8px 16px; border-radius:12px;" id="quiz-question-number">
+          <div class="quiz-question-counter" id="quiz-question-number">
             1 / 5
           </div>
         </div>
@@ -581,7 +581,7 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=23"></script>
+<script src="app.js?v=24"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->
