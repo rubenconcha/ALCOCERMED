@@ -442,43 +442,48 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
   opacity: 0;
   transform: translateY(70px);
   z-index: 2;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+.podium-cylinder:hover {
+  transform: translateY(-10px) !important;
 }
 @keyframes podiumRise { to { opacity:1; transform:translateY(0); } }
 
 .cylinder-body {
   width: 100%;
   position: relative;
-  border-radius: 0 0 6px 6px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 16px 8px 16px;
-  /* Deep architectural rich crimson/burgundy */
-  background: linear-gradient(135deg, #7F1D1D 0%, #450A0A 100%) !important;
-  border: 2px solid #ffc10740;
-  border-top: none;
-  box-shadow: inset 0 0 24px rgba(0,0,0,0.7), 0 12px 24px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 0 5px 15px rgba(255,255,255,.3),
+    inset 0 -10px 20px rgba(0,0,0,.35),
+    0 10px 30px rgba(0,0,0,.4) !important;
+  transform-style: preserve-3d;
+  border: none !important;
 }
 
 .rank-1 .cylinder-body {
-  min-height: 176px;
-  border-color: #ffc10770;
+  min-height: 180px;
+  background: linear-gradient(to bottom, #ffd54f, #ff9800) !important;
 }
 .rank-2 .cylinder-body {
-  min-height: 136px;
-  border-color: #e2e8f040;
+  min-height: 140px;
+  background: linear-gradient(to bottom, #dfe6ee, #8d99ae) !important;
 }
 .rank-3 .cylinder-body {
   min-height: 100px;
-  border-color: #b4530940;
+  background: linear-gradient(to bottom, #ffb074, #b75a20) !important;
 }
 
 /* Flat Gold Cap/Platform */
 .cylinder-top {
   width: calc(100% + 8px);
   height: 14px;
-  border-radius: 3px;
+  border-radius: 4px;
   position: absolute;
   top: -14px; left: -4px;
   z-index: 3;
@@ -1629,4 +1634,45 @@ body.is-native-app .sidebar { display: none !important; }
         min-height: 32px;
         padding: 4px 6px;
     }
+}
+
+/* ═══ USER POSITION CARD (EXTRACTED ZIP INTEGRATION) ═══ */
+#my-rank-pill {
+    display: none;
+    background: rgba(255, 255, 255, 0.06) !important;
+    padding: 22px !important;
+    border-radius: 24px !important;
+    text-align: center !important;
+    font-size: 20px !important;
+    margin-bottom: 30px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-shadow: 
+      inset 0 4px 12px rgba(255, 255, 255, 0.05),
+      0 12px 36px rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    animation: pulse 2.5s infinite;
+}
+#my-rank-pill strong {
+    color: #ffca28 !important;
+    font-size: 38px !important;
+    font-weight: 900 !important;
+    margin: 0 6px !important;
+    text-shadow: 0 4px 12px rgba(255, 202, 40, 0.45) !important;
+}
+
+.background-glow {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: rgba(166, 0, 255, 0.15);
+    filter: blur(100px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
 }

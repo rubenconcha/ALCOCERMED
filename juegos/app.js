@@ -3006,8 +3006,8 @@ function renderPodium(entries) {
             var rankPill = document.getElementById('my-rank-pill');
             if (rankPill) {
                 var medalMe = myRank===1 ? '🥇' : myRank===2 ? '🥈' : myRank===3 ? '🥉' : '🎯';
-                rankPill.innerHTML = medalMe + ' Tu posición: <strong style="font-size:1.15rem;margin:0 4px">' + myRank + 'º</strong> de ' + entries.length + ' estudiantes';
-                rankPill.style.display = 'inline-block';
+                rankPill.innerHTML = medalMe + ' Tu posición: <strong>' + myRank + '°</strong> de ' + entries.length + ' estudiantes';
+                rankPill.style.display = 'block';
             }
         }
     }
