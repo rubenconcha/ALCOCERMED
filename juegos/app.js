@@ -913,45 +913,34 @@ function showPowerupCards() {
         html += '<div class="powerup-flip-card ygo-card" id="pcard-' + s + '" onclick="choosePowerupCard(\'' + card.key + '\', ' + s + ')" style="width:200px;height:290px;cursor:pointer;animation:cardSlideIn .5s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.12) + 's both" onmouseover="if(!flippedCards)this.style.transform=\'translateY(-16px) scale(1.02)\'" onmouseout="if(!flippedCards)this.style.transform=\'\'">';
         html += '<div class="powerup-flip-inner" id="pcinner-' + s + '">';
 
-        // ═══ DORSO DE CARTA (BOCA ABAJO) - ESTILO YU-GI-OH AUTÉNTICO ═══
-        html += '<div class="powerup-flip-front ygo-card-back" style="background:linear-gradient(160deg,#3e2a14 0%,#2d1a08 30%,#1a0c04 60%,#3e2a14 100%);border:5px solid #b8860b;border-radius:14px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;overflow:hidden;box-shadow:inset 0 0 100px rgba(139,105,20,0.2)">';
+        // ═══ DORSO DE CARTA (BOCA ABAJO) ═══
+        html += '<div class="powerup-flip-front ygo-card-back" style="background:linear-gradient(160deg,#3e2a14 0%,#2d1a08 30%,#1a0c04 60%,#3e2a14 100%);border:5px solid #b8860b;border-radius:14px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;overflow:hidden;box-shadow:inset 0 0 60px rgba(139,105,20,0.15)">';
 
-        // Borde interior dorado
+        // Borde interior
         html += '<div style="position:absolute;inset:6px;border:2px solid #8B6914;border-radius:10px"></div>';
         html += '<div style="position:absolute;inset:10px;border:1px solid #b8860b;border-radius:8px"></div>';
+        html += '<div style="position:absolute;inset:14px;border:2px dotted #b8860b30;border-radius:7px"></div>';
 
-        // Patrón de puntos alrededor del borde (simulado con bordes punteados)
-        html += '<div style="position:absolute;inset:14px;border:2px dotted #b8860b40;border-radius:7px"></div>';
-
-        // Óvalo central grande
-        html += '<div style="position:absolute;width:150px;height:200px;border:3px solid #b8860b;border-radius:40%/30%;animation:slowSpin 25s linear infinite"></div>';
-        html += '<div style="position:absolute;width:142px;height:192px;border:1.5px dashed #8B6914;border-radius:38%/28%"></div>';
-        html += '<div style="position:absolute;width:134px;height:184px;border:2px solid #b8860b50;border-radius:36%/26%"></div>';
-
-        // Círculo interior
-        html += '<div style="position:absolute;width:90px;height:90px;border:2px solid #b8860b;border-radius:50%;background:radial-gradient(circle,rgba(139,105,20,0.15),transparent 70%)"></div>';
-        html += '<div style="position:absolute;width:78px;height:78px;border:1px solid #8B6914;border-radius:50%"></div>';
-
-        // Ojo de Anubis estilizado (triángulo con ojo)
-        html += '<div style="position:relative;z-index:2;width:40px;height:40px;display:flex;align-items:center;justify-content:center">';
-        html += '<div style="position:absolute;width:0;height:0;border-left:22px solid transparent;border-right:22px solid transparent;border-bottom:40px solid #b8860b;opacity:0.6"></div>';
-        html += '<div style="position:relative;width:8px;height:18px;background:#FFD700;border-radius:40%;margin-top:8px;box-shadow:0 0 12px gold,0 0 24px gold;animation:pulse 2s infinite"></div>';
+        // Triángulo inferior del ojo
+        html += '<div style="position:relative;z-index:2;display:flex;align-items:center;justify-content:center">';
+        html += '<div style="position:absolute;width:0;height:0;border-left:26px solid transparent;border-right:26px solid transparent;border-bottom:46px solid #b8860b40"></div>';
+        html += '<div style="position:relative;width:10px;height:25px;background:#b8860b;border-radius:40%;margin-top:12px;box-shadow:0 0 16px #b8860b60,0 0 32px #b8860b30"></div>';
         html += '</div>';
 
-        // "?" central
-        html += '<div style="position:absolute;z-index:3;color:gold;font-size:1.4rem;font-weight:900;text-shadow:0 0 10px gold,0 0 20px gold;margin-top:6px">?</div>';
+        // "?" sobre el ojo
+        html += '<div style="position:absolute;z-index:3;color:#b8860b;font-size:1.5rem;font-weight:900;text-shadow:0 0 10px #b8860b50;margin-top:4px">?</div>';
 
-        // Nombre "ALCOCERMED" arriba
-        html += '<div style="position:absolute;top:20px;left:50%;transform:translateX(-50%);color:#b8860b;font-size:0.52rem;font-weight:900;letter-spacing:3px;text-shadow:0 0 6px rgba(139,105,20,0.5);text-transform:uppercase;z-index:1">AlcocerMed</div>';
+        // Texto superior
+        html += '<div style="position:absolute;top:22px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.5rem;font-weight:900;letter-spacing:3px;z-index:1">ALCOCERMED</div>';
 
-        // "POWER-UP" abajo
-        html += '<div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.48rem;font-weight:900;letter-spacing:4px;text-shadow:0 0 6px rgba(139,105,20,0.5);text-transform:uppercase;z-index:1">Power-Up</div>';
+        // Texto inferior
+        html += '<div style="position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.48rem;font-weight:900;letter-spacing:4px;z-index:1">POWER-UP</div>';
 
-        // Esquinas con ornamento
-        html += '<div style="position:absolute;top:16px;left:16px;width:22px;height:22px;border-top:2px solid #b8860b;border-left:2px solid #b8860b"></div>';
-        html += '<div style="position:absolute;top:16px;right:16px;width:22px;height:22px;border-top:2px solid #b8860b;border-right:2px solid #b8860b"></div>';
-        html += '<div style="position:absolute;bottom:16px;left:16px;width:22px;height:22px;border-bottom:2px solid #b8860b;border-left:2px solid #b8860b"></div>';
-        html += '<div style="position:absolute;bottom:16px;right:16px;width:22px;height:22px;border-bottom:2px solid #b8860b;border-right:2px solid #b8860b"></div>';
+        // Esquinas
+        html += '<div style="position:absolute;top:18px;left:18px;width:20px;height:20px;border-top:2px solid #b8860b60;border-left:2px solid #b8860b60"></div>';
+        html += '<div style="position:absolute;top:18px;right:18px;width:20px;height:20px;border-top:2px solid #b8860b60;border-right:2px solid #b8860b60"></div>';
+        html += '<div style="position:absolute;bottom:18px;left:18px;width:20px;height:20px;border-bottom:2px solid #b8860b60;border-left:2px solid #b8860b60"></div>';
+        html += '<div style="position:absolute;bottom:18px;right:18px;width:20px;height:20px;border-bottom:2px solid #b8860b60;border-right:2px solid #b8860b60"></div>';
 
         html += '</div>';
 
@@ -985,7 +974,7 @@ function showPowerupCards() {
         html += '<span style="color:' + c + '">★ POWER</span>';
         html += '</div>';
         // Holograma
-        html += '<div style="position:absolute;bottom:10px;right:12px;width:28px;height:28px;background:linear-gradient(135deg,' + c + '40,gold 50%,' + c + '40);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);z-index:2;animation:slowSpin 8s linear infinite"></div>';
+        html += '<div style="position:absolute;bottom:10px;right:12px;width:28px;height:28px;background:linear-gradient(135deg,' + c + '40,gold 50%,' + c + '40);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);z-index:2"></div>';
         html += '</div>';
 
         html += '</div>'; // flip-inner
@@ -1009,13 +998,23 @@ function choosePowerupCard(key, cardIdx) {
     var def = POWERUP_DEFS[key];
     if (!def) return;
 
-    // Voltear todas las cartas
+    // Voltear solo la carta seleccionada
+    var inner = document.getElementById('pcinner-' + cardIdx);
+    if (inner) {
+        inner.style.transition = 'transform 0.7s cubic-bezier(.34,1.56,.64,1)';
+        inner.style.transform = 'rotateY(180deg)';
+    }
+
+    // Atenuar las otras 2 cartas
     for (var s = 0; s < 3; s++) {
-        var inner = document.getElementById('pcinner-' + s);
-        if (inner) {
-            var delay = (s === cardIdx) ? 0 : 0.3 + (s * 0.15);
-            inner.style.transition = 'transform 0.7s cubic-bezier(.34,1.56,.64,1) ' + delay + 's';
-            inner.style.transform = 'rotateY(180deg)';
+        if (s !== cardIdx) {
+            var other = document.getElementById('pcard-' + s);
+            if (other) {
+                other.style.opacity = '0.3';
+                other.style.filter = 'grayscale(1)';
+                other.style.transform = 'scale(0.9)';
+                other.style.pointerEvents = 'none';
+            }
         }
     }
 
