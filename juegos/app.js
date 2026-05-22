@@ -933,36 +933,42 @@ function showPowerupCards() {
 
         html += '</div>';
 
-        // ═══ FRENTE DE CARTA (BOCA ARRIBA) ═══
+        // ═══ FRENTE DE CARTA (BOCA ARRIBA - REVELADA) ═══
         var isSpell = card.def.cat === 'ayuda';
         var isTrap = card.def.cat === 'divertido';
         var typeIcon = isSpell ? '🛡️' : isTrap ? '😈' : '⚡';
         var typeLabel = isSpell ? 'HABILIDAD' : isTrap ? 'EFECTO' : 'MEJORA';
-        var typeBg = isSpell ? '#1E8449' : isTrap ? '#8E44AD' : '#C0392B';
+        var catLabel = card.def.cat === 'puntos' ? '🎯 PUNTOS' : card.def.cat === 'ayuda' ? '🛡️ AYUDA' : '😈 DIVERTIDO';
 
-        html += '<div class="powerup-flip-back ygo-card-front" style="background:linear-gradient(170deg,#fdf8f0 0%,#f5edd8 30%,#faf3e5 60%,#f0e6d0 100%);border:4px solid #8B7355;border-radius:14px;width:100%;height:100%;display:flex;flex-direction:column;backface-visibility:hidden;position:absolute;inset:0;transform:rotateY(180deg);overflow:hidden;font-family:Georgia,serif;box-shadow:0 0 20px rgba(0,0,0,0.2)">';
-        // Marco
-        html += '<div style="position:absolute;inset:5px;border:2px solid #C4A97D;border-radius:10px;pointer-events:none;z-index:1"></div>';
-        // Nombre - MÁS GRANDE
-        html += '<div style="background:linear-gradient(180deg,#2c1810 0%,#1a0a05 100%);color:#F5DEB3;padding:10px 10px;font-weight:900;font-size:0.85rem;text-align:center;letter-spacing:0.5px;position:relative;z-index:2;border-bottom:2px solid #8B6914;text-shadow:1px 1px 1px black">' + card.def.name + '</div>';
-        // Estrellas
-        html += '<div style="text-align:right;padding:3px 10px 1px;color:#FFD700;font-size:0.65rem;letter-spacing:1.5px;position:relative;z-index:2;text-shadow:0 0 4px gold">' + stars + '</div>';
-        // Arte
-        html += '<div style="flex:1;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 40% 30%,' + c + '25,transparent 65%),linear-gradient(180deg,' + c + '08,transparent);position:relative;margin:4px 12px;border:2px solid #C4A97D;z-index:1">';
-        html += '<div style="font-size:4rem;filter:drop-shadow(3px 4px 6px rgba(0,0,0,0.4));z-index:1">' + card.def.icon + '</div>';
-        html += '<div style="position:absolute;top:3px;right:3px;width:26px;height:26px;border-radius:50%;background:' + c + ';color:#fff;font-size:0.7rem;font-weight:900;display:flex;align-items:center;justify-content:center;z-index:3;border:1px solid rgba(0,0,0,0.3)">' + typeIcon + '</div>';
+        html += '<div class="powerup-flip-back ygo-card-front" style="background:linear-gradient(170deg,#0f0f1a 0%,#1a1a2e 40%,#16213e 100%);border:4px solid ' + c + ';border-radius:14px;width:100%;height:100%;display:flex;flex-direction:column;backface-visibility:hidden;position:absolute;inset:0;transform:rotateY(180deg);overflow:hidden;box-shadow:0 0 30px ' + c + '30,0 0 60px ' + c + '10">';
+
+        // Borde interno neon
+        html += '<div style="position:absolute;inset:5px;border:2px solid ' + c + '60;border-radius:10px;pointer-events:none;z-index:1"></div>';
+
+        // Banner superior con gradiente
+        html += '<div style="background:linear-gradient(180deg,' + c + ' 0%,' + c + 'dd 100%);color:#fff;padding:12px 10px 8px;font-weight:900;font-size:0.9rem;text-align:center;letter-spacing:0.5px;position:relative;z-index:2;text-shadow:1px 1px 3px rgba(0,0,0,0.5);border-bottom:2px solid rgba(255,255,255,0.3)">' + card.def.name + '</div>';
+
+        // Área de arte (icono grande)
+        html += '<div style="flex:1;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 30%,' + c + '30,transparent 60%),radial-gradient(ellipse at 30% 70%,' + c + '15,transparent 50%);position:relative;z-index:1;margin:2px 10px">';
+        html += '<div style="font-size:4.5rem;filter:drop-shadow(0 0 20px ' + c + '80) drop-shadow(2px 3px 6px rgba(0,0,0,0.5));z-index:1">' + card.def.icon + '</div>';
+        // Círculo de categoría
+        html += '<div style="position:absolute;top:5px;right:5px;width:28px;height:28px;border-radius:50%;background:' + c + ';color:#fff;font-size:0.75rem;font-weight:900;display:flex;align-items:center;justify-content:center;z-index:3;box-shadow:0 0 10px ' + c + '80">' + typeIcon + '</div>';
         html += '</div>';
-        // Tipo
-        html += '<div style="background:#2c1810;color:#F5DEB3;padding:4px 10px;font-size:0.6rem;font-weight:700;text-align:left;z-index:2;border-top:1px solid #8B6914;border-bottom:1px solid #8B6914;letter-spacing:0.5px">[' + typeLabel + ' / ' + rarityLabel + ']</div>';
-        // Efecto - MÁS GRANDE
-        html += '<div style="background:linear-gradient(180deg,#fdfaf3,#f8f0e3);margin:5px 8px;padding:8px 10px;border:1.5px solid #C4A97D;border-radius:3px;font-size:0.63rem;color:#1a0a05;line-height:1.4;z-index:2;min-height:40px;font-family:Georgia,serif">' + card.def.desc + '</div>';
+
+        // Línea de categoría
+        html += '<div style="background:rgba(255,255,255,0.06);padding:5px 10px;font-size:0.65rem;font-weight:800;color:' + c + ';text-align:center;z-index:2;letter-spacing:1px;border-top:1px solid ' + c + '30;border-bottom:1px solid ' + c + '30">' + catLabel + ' • ' + rarityLabel + '</div>';
+
+        // Descripción
+        html += '<div style="background:rgba(255,255,255,0.05);margin:4px 8px;padding:8px 10px;border:1px solid ' + c + '30;border-radius:6px;font-size:0.68rem;color:#E2E8F0;line-height:1.4;z-index:2;min-height:44px;text-align:center">' + card.def.desc + '</div>';
+
         // Footer
-        html += '<div style="display:flex;justify-content:space-between;padding:2px 10px 6px;z-index:2;font-size:0.55rem;font-weight:900;color:#1a0a05;font-family:Arial,sans-serif">';
+        html += '<div style="display:flex;justify-content:space-between;padding:2px 12px 8px;z-index:2;font-size:0.55rem;font-weight:800;color:rgba(255,255,255,0.5);letter-spacing:0.5px">';
         html += '<span>' + typeLabel + '</span>';
-        html += '<span style="color:' + c + '">★ POWER</span>';
+        html += '<span style="color:' + c + '">★ POWER UP</span>';
         html += '</div>';
-        // Holograma
-        html += '<div style="position:absolute;bottom:10px;right:12px;width:30px;height:30px;background:linear-gradient(135deg,' + c + '40,gold 50%,' + c + '40);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);z-index:2"></div>';
+
+        // Brillo inferior
+        html += '<div style="position:absolute;bottom:0;left:10%;right:10%;height:2px;background:linear-gradient(90deg,transparent,' + c + '80,' + c + '80,transparent);z-index:2"></div>';
         html += '</div>';
 
         html += '</div>'; // flip-inner
