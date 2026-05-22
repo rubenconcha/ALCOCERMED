@@ -793,6 +793,47 @@ function cleanupPowerupsForNextQ() {
     if (quizStreakCount === undefined) quizStreakCount = 0;
 }
 
+// ═══ SELECCIÓN DIVERSA DE PREGUNTAS (garantiza mc, ms, fb, tf) ═══
+function selectDiverseQuestions(allQuestions, total) {
+    var shuffled = allQuestions.slice();
+    for (var i = shuffled.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = shuffled[i]; shuffled[i] = shuffled[j]; shuffled[j] = temp;
+    }
+    var byType = { mc:[], ms:[], fb:[], tf:[], oa:[], dnd:[], poll:[], other:[] };
+    for (var i = 0; i < shuffled.length; i++) {
+        var t = shuffled[i].tipo || 'mc';
+        if (byType[t]) byType[t].push(shuffled[i]);
+        else byType['other'].push(shuffled[i]);
+    }
+    var result = [];
+    function takeFrom(type, min) {
+        for (var i = 0; i < min && byType[type].length > 0; i++) {
+            result.push(byType[type].shift());
+        }
+    }
+    takeFrom('fb', 2);
+    takeFrom('ms', 2);
+    takeFrom('tf', 1);
+    takeFrom('mc', 2);
+    var remaining = [];
+    for (var key in byType) {
+        for (var k = 0; k < byType[key].length; k++) remaining.push(byType[key][k]);
+    }
+    for (var i = remaining.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = remaining[i]; remaining[i] = remaining[j]; remaining[j] = temp;
+    }
+    while (result.length < total && remaining.length > 0) {
+        result.push(remaining.shift());
+    }
+    for (var i = result.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = result[i]; result[i] = result[j]; result[j] = temp;
+    }
+    return result;
+}
+
 // ═══ SELECCIÓN DE COMODÍN CON TARJETAS (pregunta 4 y 8) ═══
 function showPowerupCards() {
     // Elegir 3 comodines aleatorios (uno por categoría, aún no usados)
@@ -1104,13 +1145,7 @@ function startSelfStudy(evalId) {
             }
 
             var preguntas = pResult.data;
-            for (var i = preguntas.length - 1; i > 0; i--) {
-                var j = Math.floor(Math.random() * (i + 1));
-                var temp = preguntas[i];
-                preguntas[i] = preguntas[j];
-                preguntas[j] = temp;
-            }
-            preguntas = preguntas.slice(0, 10);
+            preguntas = selectDiverseQuestions(preguntas, 10);
             var qids = preguntas.map(function(q) { return q.id; });
             sessionStorage.setItem('alcocer_quiz_qids_' + code, JSON.stringify(qids));
 
@@ -1294,13 +1329,7 @@ function searchAndStartQuiz(code) {
                     if (ordered.length > 0) preguntas = ordered;
                 } catch(e) {}
             } else {
-                for (var i = preguntas.length - 1; i > 0; i--) {
-                    var j = Math.floor(Math.random() * (i + 1));
-                    var temp = preguntas[i];
-                    preguntas[i] = preguntas[j];
-                    preguntas[j] = temp;
-                }
-                preguntas = preguntas.slice(0, 10);
+                preguntas = selectDiverseQuestions(preguntas, 10);
                 var qids = preguntas.map(function(q) { return q.id; });
                 sessionStorage.setItem('alcocer_quiz_qids_' + code, JSON.stringify(qids));
             }
@@ -2306,7 +2335,7 @@ function quizNext() {
         }));
     }
     // ═══ RONDA DE COMODINES: pregunta 4 (idx 3) y pregunta 8 (idx 7) ═══
-    if ((quizCurrentQ === 3 || quizCurrentQ === 7) && powerups.length > 0) {
+    if (quizCurrentQ === 3 || quizCurrentQ === 7) {
         showPowerupCards();
         return;
     }
