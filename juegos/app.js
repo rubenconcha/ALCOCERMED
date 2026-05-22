@@ -2541,7 +2541,7 @@ function showQuizResults() {
 
     // Guardar en Supabase y cargar leaderboard según modo
     var evalIdForBoard = quizData.evaluacion.id;
-    var isTestMode = quizSessionMode === 'test' || quizSessionMode === 'practica';
+    var isTestMode = quizSessionMode === 'test';
     var isTeamMode = quizSessionMode === 'equipo';
 
     if (currentUser) {
