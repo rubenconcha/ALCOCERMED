@@ -1181,12 +1181,12 @@ function loadExploreSubjects() {
         for (var s = 0; s < SUBJECTS.length; s++) {
             var subj = SUBJECTS[s];
             var cnt = counts[subj.name] || 0;
-            html += '<div class="explorar-subject-card" onclick="loadSubjectEvaluations(\'' + subj.name + '\')" style="background:linear-gradient(135deg,' + subj.color + '15,' + subj.color + '05);border-color:' + subj.color + '40">';
-            html += '<div class="explorar-subject-badge" style="background:' + subj.color + '20;color:' + subj.color + ';font-weight:800">' + cnt + ' 📋</div>';
-            html += '<div class="explorar-subject-icon" style="background:linear-gradient(135deg,' + subj.color + '30,' + subj.color + '10);color:' + subj.color + ';box-shadow:0 8px 24px ' + subj.color + '30">' + subj.emoji + '</div>';
-            html += '<h3 style="font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:0.5px">' + subj.name.replace(/ /g, '<br>') + '</h3>';
-            html += '<p style="font-size:0.75rem;color:' + subj.color + ';font-weight:700">' + cnt + ' evaluación' + (cnt !== 1 ? 'es' : '') + ' • JUGAR <i class="fas fa-arrow-right" style="font-size:0.65rem"></i></p>';
-            html += '<div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:' + subj.color + '30;border-radius:0 0 20px 20px"><div style="height:100%;width:' + (cnt > 0 ? '100' : '0') + '%;background:' + subj.color + ';border-radius:0 0 20px 20px;opacity:0.6;transition:width .5s"></div></div>';
+            html += '<div class="explorar-subject-card" onclick="loadSubjectEvaluations(\'' + subj.name + '\')" style="background:linear-gradient(160deg,' + subj.color + '08 0%,rgba(255,255,255,0.04) 50%,' + subj.color + '06 100%);border:1.5px solid ' + subj.color + '25;backdrop-filter:blur(10px);border-radius:20px">';
+            html += '<div class="explorar-subject-badge" style="background:' + subj.color + '18;color:' + subj.color + ';font-weight:800;border:1px solid ' + subj.color + '30">' + cnt + ' 📋</div>';
+            html += '<div class="explorar-subject-icon" style="background:linear-gradient(135deg,' + subj.color + '25,' + subj.color + '08);color:' + subj.color + ';box-shadow:0 8px 32px ' + subj.color + '20;font-size:30px">' + subj.emoji + '</div>';
+            html += '<h3 style="font-size:1rem;font-weight:800;letter-spacing:0.3px;color:var(--text)">' + subj.name.replace(/ /g, '<br>') + '</h3>';
+            html += '<p style="font-size:0.72rem;color:' + subj.color + ';font-weight:600">' + cnt + ' evaluación' + (cnt !== 1 ? 'es' : '') + ' • JUGAR <i class="fas fa-arrow-right" style="font-size:0.6rem"></i></p>';
+            html += '<div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:' + subj.color + '20"><div style="height:100%;width:' + (cnt > 0 ? '100' : '0') + '%;background:' + subj.color + '80;border-radius:0 0 20px 20px;transition:width .6s ease"></div></div>';
             html += '</div>';
         }
         grid.innerHTML = html;
@@ -1246,13 +1246,17 @@ function loadTopEstudiantes() {
                 var s = sorted[i];
                 var info = nameMap[s.user_id] || { nombre: 'Estudiante', avatar: '👤' };
                 var rank = medals[i] || (i + 1);
-                var bg = i === 0 ? 'linear-gradient(135deg,#FFFBEB,#FEF3C7)' : i === 1 ? 'linear-gradient(135deg,#F8FAFC,#E2E8F0)' : i === 2 ? 'linear-gradient(135deg,#FFF7ED,#FFEDD5)' : '#fff';
-                var border = i === 0 ? '#F59E0B' : i === 1 ? '#94A3B8' : i === 2 ? '#F97316' : '#E2E8F0';
-                html += '<div style="background:' + bg + ';border:2px solid ' + border + ';border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px;transition:transform .2s" onmouseover="this.style.transform=\'scale(1.02)\'" onmouseout="this.style.transform=\'\'">';
-                html += '<div style="font-size:1.6rem;min-width:36px;text-align:center">' + rank + '</div>';
-                html += '<div style="font-size:1.8rem">' + info.avatar + '</div>';
-                html += '<div style="flex:1"><div style="font-weight:800;color:#1E293B;font-size:0.9rem">' + info.nombre + '</div>';
-                html += '<div style="font-size:0.72rem;color:#64748B">' + s.total + ' pts • ' + s.bestPct + '% mejor</div></div>';
+                var isTop3 = i < 3;
+                var rankBg = isTop3 ? ['#FFF8E1','#F1F5F9','#FFF7ED'][i] : '#fff';
+                var rankBorder = isTop3 ? ['#F59E0B','#94A3B8','#F97316'][i] : '#E2E8F0';
+                var glowColor = isTop3 ? ['#F59E0B','#94A3B8','#F97316'][i] : 'transparent';
+                var pctColor = s.bestPct >= 80 ? '#059669' : s.bestPct >= 50 ? '#D97706' : '#DC2626';
+                html += '<div style="background:' + rankBg + ';border:2px solid ' + rankBorder + ';border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:14px;transition:all .25s;box-shadow:0 2px 8px ' + glowColor + '20' + '" onmouseover="this.style.transform=\'scale(1.02)\';this.style.boxShadow=\'0 6px 20px ' + glowColor + '30\'" onmouseout="this.style.transform=\'scale(1)\';this.style.boxShadow=\'0 2px 8px ' + glowColor + '20\'">';
+                html += '<div style="font-size:1.8rem;min-width:36px;text-align:center;font-weight:900;color:' + rankBorder + '">' + rank + '</div>';
+                html += '<div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,' + rankBorder + '20,' + rankBorder + '10);display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 2px 8px ' + rankBorder + '20">' + info.avatar + '</div>';
+                html += '<div style="flex:1"><div style="font-weight:800;color:#0F172A;font-size:0.95rem;letter-spacing:-0.2px">' + info.nombre + '</div>';
+                html += '<div style="font-size:0.75rem;color:#64748B;margin-top:2px">' + s.total + ' pts • <span style="color:' + pctColor + ';font-weight:700">' + s.bestPct + '%</span></div></div>';
+                if (isTop3) html += '<div style="background:' + rankBorder + '15;border:1px solid ' + rankBorder + '30;padding:6px 12px;border-radius:20px;font-size:0.7rem;font-weight:800;color:' + rankBorder + ';letter-spacing:0.5px">TOP ' + (i+1) + '</div>';
                 html += '</div>';
             }
             listEl.innerHTML = html;
