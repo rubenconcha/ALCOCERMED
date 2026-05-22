@@ -885,64 +885,87 @@ function showPowerupCards() {
 
     var overlay = document.createElement('div');
     overlay.id = 'powerup-cards-overlay';
-    overlay.style.cssText = 'position:fixed;inset:0;z-index:10000;background:radial-gradient(ellipse at center,rgba(30,20,60,0.95),rgba(5,2,20,0.98));backdrop-filter:blur(16px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;animation:fadeIn .4s ease';
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:10000;background:radial-gradient(ellipse at 50% 30%,#1a1040,#0a0520 60%,#020010);backdrop-filter:blur(16px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;animation:fadeIn .4s ease';
 
-    var html = '<div style="text-align:center;margin-bottom:20px">';
-    html += '<h2 style="color:#fff;font-size:1.4rem;font-weight:900;margin:0 0 4px;text-shadow:0 0 20px rgba(168,85,247,0.6)">¡Elige una carta!</h2>';
-    html += '<p style="color:rgba(255,255,255,0.45);font-size:0.8rem;margin:0">Toca una y descubre tu comodín</p>';
+    var html = '';
+    // Partículas de fondo estilo campo de duelo
+    html += '<div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">';
+    for (var p = 0; p < 20; p++) {
+        var px = Math.random() * 100; var py = Math.random() * 100;
+        var pd = 1 + Math.random() * 3;
+        html += '<div style="position:absolute;left:' + px + '%;top:' + py + '%;width:' + pd + 'px;height:' + pd + 'px;background:rgba(139,90,43,0.6);border-radius:50%;animation:floatUp ' + (4+Math.random()*6) + 's linear infinite;animation-delay:' + (Math.random()*5) + 's"></div>';
+    }
+    html += '</div>';
+
+    html += '<div style="text-align:center;margin-bottom:16px;position:relative;z-index:1">';
+    html += '<h2 style="color:#fff;font-size:1.3rem;font-weight:900;margin:0 0 2px;text-shadow:0 0 20px rgba(168,85,247,0.6);letter-spacing:1px">⚡ TURNO DE COMODÍN ⚡</h2>';
+    html += '<p style="color:rgba(255,255,255,0.4);font-size:0.75rem;margin:0">Selecciona una carta boca abajo</p>';
     html += '</div>';
 
     var colors = ['#C62828', '#1565C0', '#2E7D32'];
     var catNames = { puntos: '🎯 PUNTOS', ayuda: '🛡️ AYUDA', divertido: '😈 DIVERTIDO' };
-    html += '<div style="display:flex;gap:22px;flex-wrap:wrap;justify-content:center;perspective:1200px">';
+    html += '<div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;perspective:1400px">';
     for (var s = 0; s < selected.length; s++) {
         var card = selected[s];
-        var c = colors[s % colors.length];
-        var rarity = s === 0 ? '★ ★ ★ ★ ★' : s === 1 ? '★ ★ ★ ★' : '★ ★ ★';
-        html += '<div class="powerup-flip-card ygo-card" id="pcard-' + s + '" onclick="choosePowerupCard(\'' + card.key + '\', ' + s + ')" style="width:180px;height:270px;cursor:pointer;animation:cardSlideIn .5s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.12) + 's both" onmouseover="if(!flippedCards)this.style.transform=\'translateY(-14px)\'" onmouseout="if(!flippedCards)this.style.transform=\'\'">';
+        var c = colors[s % colors.length]; // rojo, azul, verde
+        var stars = s === 0 ? '★★★★★' : s === 1 ? '★★★★' : '★★★';
+        var rarityLabel = s === 0 ? 'ULTRA RARA' : s === 1 ? 'SÚPER RARA' : 'RARA';
+        html += '<div class="powerup-flip-card ygo-card" id="pcard-' + s + '" onclick="choosePowerupCard(\'' + card.key + '\', ' + s + ')" style="width:200px;height:290px;cursor:pointer;animation:cardSlideIn .5s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.12) + 's both" onmouseover="if(!flippedCards)this.style.transform=\'translateY(-16px) scale(1.02)\'" onmouseout="if(!flippedCards)this.style.transform=\'\'">';
         html += '<div class="powerup-flip-inner" id="pcinner-' + s + '">';
 
-        // ═══ CARA TRASERA (BOCA ABAJO) ═══
-        html += '<div class="powerup-flip-front ygo-card-back" style="background:linear-gradient(155deg,#1a0a2e,#2d1240,#1a0a2e,#0d0520);border:3px solid ' + c + '50;border-radius:12px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;overflow:hidden">';
-        // Patrón de fondo
-        html += '<div style="position:absolute;inset:6px;border:2px solid #b8860b20;border-radius:8px"></div>';
-        html += '<div style="position:absolute;inset:10px;border:1px solid #b8860b15;border-radius:7px"></div>';
-        // Círculo exterior decorativo
-        html += '<div style="position:absolute;width:150px;height:150px;border:3px solid #b8860b30;border-radius:50%;animation:slowSpin 20s linear infinite"></div>';
+        // ═══ DORSO DE CARTA (BOCA ABAJO) ═══
+        html += '<div class="powerup-flip-front ygo-card-back" style="background:linear-gradient(145deg,#12062e 0%,#1a0a3e 30%,#0d0420 60%,#12062e 100%);border:4px solid #8B6914;border-radius:14px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;overflow:hidden;box-shadow:inset 0 0 80px rgba(139,105,20,0.1)">';
+        // Marco doble dorado
+        html += '<div style="position:absolute;inset:5px;border:2px solid #b8860b40;border-radius:10px"></div>';
+        html += '<div style="position:absolute;inset:9px;border:1px solid #b8860b20;border-radius:8px"></div>';
+        // Círculo exterior con patrón de espiral
+        html += '<div style="position:absolute;width:160px;height:160px;border:3px solid #b8860b35;border-radius:50%;animation:slowSpin 20s linear infinite"></div>';
+        html += '<div style="position:absolute;width:148px;height:148px;border:2px dashed #b8860b20;border-radius:50%"></div>';
         html += '<div style="position:absolute;width:130px;height:130px;border:2px solid #b8860b25;border-radius:50%"></div>';
-        html += '<div style="position:absolute;width:100px;height:100px;border:1px solid #b8860b20;border-radius:50%"></div>';
-        // Ojo central (estilo Millennium Eye)
-        html += '<div style="position:relative;z-index:1;width:60px;height:80px;background:linear-gradient(180deg,' + c + '80,' + c + '20);clip-path:polygon(30% 0%,70% 0%,100% 30%,100% 70%,70% 100%,30% 100%,0% 70%,0% 30%);display:flex;align-items:center;justify-content:center"></div>';
-        html += '<div style="position:absolute;z-index:2;color:' + c + ';font-size:1.6rem;font-weight:900;text-shadow:0 0 20px ' + c + '">?</div>';
-        // Esquinas decorativas
-        html += '<div style="position:absolute;top:8px;left:8px;width:16px;height:16px;border-top:2px solid #b8860b40;border-left:2px solid #b8860b40"></div>';
-        html += '<div style="position:absolute;top:8px;right:8px;width:16px;height:16px;border-top:2px solid #b8860b40;border-right:2px solid #b8860b40"></div>';
-        html += '<div style="position:absolute;bottom:8px;left:8px;width:16px;height:16px;border-bottom:2px solid #b8860b40;border-left:2px solid #b8860b40"></div>';
-        html += '<div style="position:absolute;bottom:8px;right:8px;width:16px;height:16px;border-bottom:2px solid #b8860b40;border-right:2px solid #b8860b40"></div>';
-        // Texto inferior
-        html += '<div style="position:absolute;bottom:22px;color:#b8860b60;font-size:0.5rem;font-weight:800;letter-spacing:3px;z-index:1">POWER-UP</div>';
+        html += '<div style="position:absolute;width:110px;height:110px;border:1.5px solid #b8860b18;border-radius:50%"></div>';
+        // Símbolo central
+        html += '<div style="position:relative;z-index:1;width:56px;height:76px;background:linear-gradient(180deg,' + c + '60 0%,' + c + '15 100%);clip-path:polygon(30% 0%,70% 0%,95% 30%,95% 70%,70% 100%,30% 100%,5% 70%,5% 30%);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px ' + c + '30"></div>';
+        html += '<div style="position:absolute;z-index:2;color:gold;font-size:1.8rem;font-weight:900;text-shadow:0 0 20px ' + c + ',0 0 40px ' + c + '">?</div>';
+        // Esquinas
+        html += '<div style="position:absolute;top:10px;left:10px;width:20px;height:20px;border-top:2px solid #b8860b50;border-left:2px solid #b8860b50"></div>';
+        html += '<div style="position:absolute;top:10px;right:10px;width:20px;height:20px;border-top:2px solid #b8860b50;border-right:2px solid #b8860b50"></div>';
+        html += '<div style="position:absolute;bottom:10px;left:10px;width:20px;height:20px;border-bottom:2px solid #b8860b50;border-left:2px solid #b8860b50"></div>';
+        html += '<div style="position:absolute;bottom:10px;right:10px;width:20px;height:20px;border-bottom:2px solid #b8860b50;border-right:2px solid #b8860b50"></div>';
+        // Texto power-up
+        html += '<div style="position:absolute;bottom:26px;color:#b8860b70;font-size:0.5rem;font-weight:900;letter-spacing:4px;z-index:1;text-transform:uppercase">Power-Up</div>';
         html += '</div>';
 
-        // ═══ CARA FRONTAL (BOCA ARRIBA - REVELADA) ═══  
-        html += '<div class="powerup-flip-back ygo-card-front" style="background:linear-gradient(170deg,#f5f0e8,#e8dcc8,#f0e6d0);border:3px solid #8B7355;border-radius:12px;width:100%;height:100%;display:flex;flex-direction:column;backface-visibility:hidden;position:absolute;inset:0;transform:rotateY(180deg);overflow:hidden;font-family:serif">';
-        // Marco interno
-        html += '<div style="position:absolute;inset:5px;border:2px solid #C4A97D;border-radius:9px;pointer-events:none;z-index:1"></div>';
-        // Banner del nombre
-        html += '<div style="background:linear-gradient(180deg,' + c + ',' + c + 'dd);color:#fff;padding:6px 10px;font-weight:900;font-size:0.7rem;text-align:center;letter-spacing:0.5px;position:relative;z-index:2;text-shadow:1px 1px 2px rgba(0,0,0,0.4)">' + card.def.name + '</div>';
-        // Área de arte (icono)
-        html += '<div style="flex:1;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,' + c + '15,transparent 70%);position:relative;z-index:1;margin:0 8px;border-left:2px solid #C4A97D;border-right:2px solid #C4A97D">';
-        html += '<div style="font-size:3rem;filter:drop-shadow(2px 3px 4px rgba(0,0,0,0.3))">' + card.def.icon + '</div>';
-        // Círculo de atributo (top-right del área de arte)
-        html += '<div style="position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;background:' + c + ';color:#fff;font-size:0.55rem;font-weight:900;display:flex;align-items:center;justify-content:center;z-index:3">' + (card.def.cat === 'puntos' ? '⚡' : card.def.cat === 'ayuda' ? '🛡' : '😈') + '</div>';
+        // ═══ FRENTE DE CARTA (BOCA ARRIBA) ═══
+        var isSpell = card.def.cat === 'ayuda';
+        var isTrap = card.def.cat === 'divertido';
+        var typeIcon = isSpell ? '🛡️' : isTrap ? '😈' : '⚡';
+        var typeLabel = isSpell ? 'HABILIDAD' : isTrap ? 'EFECTO' : 'MEJORA';
+        var typeBg = isSpell ? '#1E8449' : isTrap ? '#8E44AD' : '#C0392B';
+
+        html += '<div class="powerup-flip-back ygo-card-front" style="background:linear-gradient(170deg,#fdf8f0 0%,#f5edd8 30%,#faf3e5 60%,#f0e6d0 100%);border:4px solid #8B7355;border-radius:14px;width:100%;height:100%;display:flex;flex-direction:column;backface-visibility:hidden;position:absolute;inset:0;transform:rotateY(180deg);overflow:hidden;font-family:Georgia,serif;box-shadow:0 0 20px rgba(0,0,0,0.2)">';
+        // Marco
+        html += '<div style="position:absolute;inset:5px;border:2px solid #C4A97D;border-radius:10px;pointer-events:none;z-index:1"></div>';
+        // Nombre
+        html += '<div style="background:linear-gradient(180deg,#2c1810 0%,#1a0a05 100%);color:#F5DEB3;padding:8px 10px;font-weight:900;font-size:0.72rem;text-align:center;letter-spacing:0.3px;position:relative;z-index:2;border-bottom:2px solid #8B6914;text-shadow:1px 1px 1px black">' + card.def.name + '</div>';
+        // Estrellas de nivel
+        html += '<div style="text-align:right;padding:2px 10px 0;color:#FFD700;font-size:0.55rem;letter-spacing:1px;position:relative;z-index:2;text-shadow:0 0 4px gold">' + stars + '</div>';
+        // Arte
+        html += '<div style="flex:1;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 40% 30%,' + c + '25,transparent 65%),linear-gradient(180deg,' + c + '08,transparent);position:relative;margin:4px 12px;border:2px solid #C4A97D;z-index:1">';
+        html += '<div style="font-size:3.5rem;filter:drop-shadow(3px 4px 6px rgba(0,0,0,0.4));z-index:1;transition:transform .3s">' + card.def.icon + '</div>';
+        // Atributo (top-right del arte)
+        html += '<div style="position:absolute;top:3px;right:3px;width:24px;height:24px;border-radius:50%;background:' + c + ';color:#fff;font-size:0.6rem;font-weight:900;display:flex;align-items:center;justify-content:center;z-index:3;border:1px solid rgba(0,0,0,0.3)">' + typeIcon + '</div>';
         html += '</div>';
-        // Línea de tipo
-        html += '<div style="background:#f5f0e8;padding:3px 8px;font-size:0.55rem;font-weight:700;color:#5D4037;text-align:center;border-top:1px solid #C4A97D;z-index:2">[' + catNames[card.def.cat] + ']</div>';
-        // Caja de efecto
-        html += '<div style="background:linear-gradient(180deg,#fdfaf3,#f5f0e8);margin:4px 8px;padding:6px 8px;border:1px solid #C4A97D;border-radius:4px;font-size:0.55rem;color:#3E2723;line-height:1.3;z-index:2;min-height:32px">' + card.def.desc + '</div>';
-        // Estrellas de rareza
-        html += '<div style="text-align:center;padding:2px 0 6px;color:#b8860b;font-size:0.5rem;letter-spacing:1px;z-index:2">' + rarity + '</div>';
-        // Borde inferior holográfico
-        html += '<div style="position:absolute;bottom:8px;left:12px;right:12px;height:1px;background:linear-gradient(90deg,transparent,#b8860b60,#b8860b60,transparent);z-index:1"></div>';
+        // Tipo
+        html += '<div style="background:#2c1810;color:#F5DEB3;padding:2px 10px;font-size:0.55rem;font-weight:700;text-align:left;z-index:2;border-top:1px solid #8B6914;border-bottom:1px solid #8B6914;letter-spacing:0.5px">[' + typeLabel + ' / ' + rarityLabel + ']</div>';
+        // Efecto
+        html += '<div style="background:linear-gradient(180deg,#fdfaf3,#f8f0e3);margin:4px 8px;padding:6px 8px;border:1.5px solid #C4A97D;border-radius:3px;font-size:0.55rem;color:#1a0a05;line-height:1.35;z-index:2;min-height:36px;font-family:Georgia,serif">' + card.def.desc + '</div>';
+        // ATK/DEF o equivalente
+        html += '<div style="display:flex;justify-content:space-between;padding:0 10px 4px;z-index:2;font-size:0.52rem;font-weight:900;color:#1a0a05;font-family:Arial,sans-serif">';
+        html += '<span>' + typeLabel + '</span>';
+        html += '<span style="color:' + c + '">★ POWER</span>';
+        html += '</div>';
+        // Holograma
+        html += '<div style="position:absolute;bottom:10px;right:12px;width:28px;height:28px;background:linear-gradient(135deg,' + c + '40,gold 50%,' + c + '40);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);z-index:2;animation:slowSpin 8s linear infinite"></div>';
         html += '</div>';
 
         html += '</div>'; // flip-inner
