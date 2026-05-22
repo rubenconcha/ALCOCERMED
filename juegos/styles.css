@@ -246,6 +246,8 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
 .main-content{margin-left:var(--sidebar-w);margin-top:var(--topbar-h);flex:1;padding:32px 40px 100px;min-height:calc(100vh - var(--topbar-h));}
 .page{display:none;animation:fadeIn .3s ease;}
 .page.active{display:block;}
+.page-header h1{font-size:1.6rem;font-weight:900;margin-bottom:6px;color:var(--text);}
+.page-subtitle{color:var(--text-mid);font-size:0.9rem;font-weight:600;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
 
 .page-header{margin-bottom:28px;}
@@ -1100,10 +1102,10 @@ body.is-native-app .sidebar { display: none !important; }
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.82rem;
+    font-weight: 700;
     cursor: pointer;
-    color: #64748B;
+    color: #475569;
     transition: all .2s;
 }
 .explorar-filter-chip:hover, .explorar-filter-chip.active {

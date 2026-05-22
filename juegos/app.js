@@ -962,8 +962,9 @@ function showPowerupCards() {
         // Línea de categoría
         html += '<div style="background:rgba(255,255,255,0.06);padding:5px 10px;font-size:0.65rem;font-weight:800;color:' + c + ';text-align:center;z-index:2;letter-spacing:1px;border-top:1px solid ' + c + '30;border-bottom:1px solid ' + c + '30">' + catLabel + ' • ' + rarityLabel + '</div>';
 
-        // Descripción
-        html += '<div style="background:rgba(255,255,255,0.05);margin:4px 8px;padding:8px 10px;border:1px solid ' + c + '30;border-radius:6px;font-size:0.68rem;color:#E2E8F0;line-height:1.4;z-index:2;min-height:44px;text-align:center">' + card.def.desc + '</div>';
+        // Descripción - texto grande, alto contraste
+        html += '<div style="background:rgba(255,255,255,0.12);margin:5px 8px;padding:10px 12px;border:1px solid ' + c + '40;border-radius:6px;font-size:0.72rem;color:#FFFFFF;line-height:1.5;z-index:2;min-height:46px;text-align:center;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,0.4)">' + card.def.desc + '</div>';
+
 
         // Footer
         html += '<div style="display:flex;justify-content:space-between;padding:2px 12px 8px;z-index:2;font-size:0.55rem;font-weight:800;color:rgba(255,255,255,0.5);letter-spacing:0.5px">';
