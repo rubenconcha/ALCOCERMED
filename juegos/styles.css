@@ -863,35 +863,41 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
 /* ═══ CARTAS VOLTEADAS (YU-GI-OH STYLE) ═══ */
 .powerup-flip-card {
     perspective: 1000px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, filter 0.5s;
+}
+.ygo-card {
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.5));
+    transition: transform 0.3s, filter 0.5s !important;
 }
 .powerup-flip-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.7s cubic-bezier(.34,1.56,.64,1);
+    transition: transform 0.8s cubic-bezier(.34,1.56,.64,1);
     transform-style: preserve-3d;
 }
 .powerup-flip-front, .powerup-flip-back {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
-.powerup-flip-front {
-    transform: rotateY(0deg);
+.ygo-card-back {
+    box-shadow: inset 0 0 60px rgba(139,90,43,0.15);
 }
-.powerup-flip-back {
-    transform: rotateY(180deg);
+.ygo-card-front {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+@keyframes slowSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 @media (max-width: 500px) {
-    .powerup-flip-card {
-        width: 130px !important;
-        height: 220px !important;
+    .ygo-card {
+        width: 140px !important;
+        height: 210px !important;
     }
-    .powerup-flip-card .powerup-card-icon {
-        font-size: 2rem !important;
-    }
-    .powerup-flip-card h3 {
-        font-size: 0.7rem !important;
+    .ygo-card-front > div:first-child {
+        font-size: 0.6rem !important;
+        padding: 4px 6px !important;
     }
 }
 

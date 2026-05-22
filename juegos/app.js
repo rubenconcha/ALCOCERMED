@@ -887,36 +887,64 @@ function showPowerupCards() {
     overlay.id = 'powerup-cards-overlay';
     overlay.style.cssText = 'position:fixed;inset:0;z-index:10000;background:radial-gradient(ellipse at center,rgba(30,20,60,0.95),rgba(5,2,20,0.98));backdrop-filter:blur(16px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;animation:fadeIn .4s ease';
 
-    var html = '<div style="text-align:center;margin-bottom:28px">';
-    html += '<div style="font-size:3rem;margin-bottom:4px;animation:bounceIn .6s cubic-bezier(.34,1.56,.64,1)">🃏</div>';
-    html += '<h2 style="color:#fff;font-size:1.5rem;font-weight:900;margin:0 0 4px;text-shadow:0 0 20px rgba(168,85,247,0.6)">¡Elige una carta!</h2>';
-    html += '<p style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin:0">Toca una carta boca abajo y descubre tu comodín</p>';
+    var html = '<div style="text-align:center;margin-bottom:20px">';
+    html += '<h2 style="color:#fff;font-size:1.4rem;font-weight:900;margin:0 0 4px;text-shadow:0 0 20px rgba(168,85,247,0.6)">¡Elige una carta!</h2>';
+    html += '<p style="color:rgba(255,255,255,0.45);font-size:0.8rem;margin:0">Toca una y descubre tu comodín</p>';
     html += '</div>';
 
-    var colors = ['#EF4444', '#3B82F6', '#10B981'];
-    html += '<div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;perspective:1200px">';
+    var colors = ['#C62828', '#1565C0', '#2E7D32'];
+    var catNames = { puntos: '🎯 PUNTOS', ayuda: '🛡️ AYUDA', divertido: '😈 DIVERTIDO' };
+    html += '<div style="display:flex;gap:22px;flex-wrap:wrap;justify-content:center;perspective:1200px">';
     for (var s = 0; s < selected.length; s++) {
         var card = selected[s];
         var c = colors[s % colors.length];
-        html += '<div class="powerup-flip-card" id="pcard-' + s + '" onclick="choosePowerupCard(\'' + card.key + '\', ' + s + ')" style="width:170px;height:280px;cursor:pointer;animation:cardSlideIn .6s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.12) + 's both" onmouseover="if(!flippedCards)this.style.transform=\'translateY(-12px)\'" onmouseout="if(!flippedCards)this.style.transform=\'\'">';
-        // Inner flip container
+        var rarity = s === 0 ? '★ ★ ★ ★ ★' : s === 1 ? '★ ★ ★ ★' : '★ ★ ★';
+        html += '<div class="powerup-flip-card ygo-card" id="pcard-' + s + '" onclick="choosePowerupCard(\'' + card.key + '\', ' + s + ')" style="width:180px;height:270px;cursor:pointer;animation:cardSlideIn .5s cubic-bezier(.34,1.56,.64,1) ' + (s * 0.12) + 's both" onmouseover="if(!flippedCards)this.style.transform=\'translateY(-14px)\'" onmouseout="if(!flippedCards)this.style.transform=\'\'">';
         html += '<div class="powerup-flip-inner" id="pcinner-' + s + '">';
-        // FRONT = boca abajo (misterio)
-        html += '<div class="powerup-flip-front" style="background:linear-gradient(160deg,#1a0533,#2d1b4e,#1a0533);border:3px solid ' + c + '60;border-radius:18px;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;overflow:hidden">';
-        html += '<div style="position:absolute;inset:8px;border:2px solid ' + c + '20;border-radius:12px;background:radial-gradient(circle at 30% 30%,' + c + '10,transparent 70%)"></div>';
-        html += '<div style="font-size:3.5rem;z-index:1;filter:drop-shadow(0 0 15px ' + c + ')">❓</div>';
-        html += '<div style="z-index:1;color:' + c + ';font-size:0.65rem;font-weight:800;letter-spacing:2px;margin-top:4px;opacity:0.7">COMODÍN</div>';
-        // Yugioh-style swirl ornament
-        html += '<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:40px;height:40px;border:2px solid ' + c + '30;border-radius:50%;z-index:1"></div>';
-        html += '<div style="position:absolute;bottom:24px;left:50%;transform:translateX(-50%);width:16px;height:16px;background:' + c + '40;border-radius:50%;z-index:1"></div>';
+
+        // ═══ CARA TRASERA (BOCA ABAJO) ═══
+        html += '<div class="powerup-flip-front ygo-card-back" style="background:linear-gradient(155deg,#1a0a2e,#2d1240,#1a0a2e,#0d0520);border:3px solid ' + c + '50;border-radius:12px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;overflow:hidden">';
+        // Patrón de fondo
+        html += '<div style="position:absolute;inset:6px;border:2px solid #b8860b20;border-radius:8px"></div>';
+        html += '<div style="position:absolute;inset:10px;border:1px solid #b8860b15;border-radius:7px"></div>';
+        // Círculo exterior decorativo
+        html += '<div style="position:absolute;width:150px;height:150px;border:3px solid #b8860b30;border-radius:50%;animation:slowSpin 20s linear infinite"></div>';
+        html += '<div style="position:absolute;width:130px;height:130px;border:2px solid #b8860b25;border-radius:50%"></div>';
+        html += '<div style="position:absolute;width:100px;height:100px;border:1px solid #b8860b20;border-radius:50%"></div>';
+        // Ojo central (estilo Millennium Eye)
+        html += '<div style="position:relative;z-index:1;width:60px;height:80px;background:linear-gradient(180deg,' + c + '80,' + c + '20);clip-path:polygon(30% 0%,70% 0%,100% 30%,100% 70%,70% 100%,30% 100%,0% 70%,0% 30%);display:flex;align-items:center;justify-content:center"></div>';
+        html += '<div style="position:absolute;z-index:2;color:' + c + ';font-size:1.6rem;font-weight:900;text-shadow:0 0 20px ' + c + '">?</div>';
+        // Esquinas decorativas
+        html += '<div style="position:absolute;top:8px;left:8px;width:16px;height:16px;border-top:2px solid #b8860b40;border-left:2px solid #b8860b40"></div>';
+        html += '<div style="position:absolute;top:8px;right:8px;width:16px;height:16px;border-top:2px solid #b8860b40;border-right:2px solid #b8860b40"></div>';
+        html += '<div style="position:absolute;bottom:8px;left:8px;width:16px;height:16px;border-bottom:2px solid #b8860b40;border-left:2px solid #b8860b40"></div>';
+        html += '<div style="position:absolute;bottom:8px;right:8px;width:16px;height:16px;border-bottom:2px solid #b8860b40;border-right:2px solid #b8860b40"></div>';
+        // Texto inferior
+        html += '<div style="position:absolute;bottom:22px;color:#b8860b60;font-size:0.5rem;font-weight:800;letter-spacing:3px;z-index:1">POWER-UP</div>';
         html += '</div>';
-        // BACK = boca arriba (revelado)
-        html += '<div class="powerup-flip-back" style="background:linear-gradient(160deg,' + c + '10,' + c + '05);border:3px solid ' + c + '60;border-radius:18px;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;backface-visibility:hidden;position:absolute;inset:0;transform:rotateY(180deg);padding:12px;box-sizing:border-box">';
-        html += '<div class="powerup-card-icon" style="font-size:2.5rem;margin-bottom:8px;display:block">' + card.def.icon + '</div>';
-        html += '<h3 style="color:#fff;font-size:0.85rem;font-weight:800;margin:0 0 4px;text-align:center">' + card.def.name + '</h3>';
-        html += '<p style="color:rgba(255,255,255,0.6);font-size:0.62rem;margin:0 0 8px;text-align:center;line-height:1.3">' + card.def.desc + '</p>';
-        html += '<div style="padding:4px 10px;background:' + c + '25;border-radius:8px;color:' + c + ';font-size:0.6rem;font-weight:700">' + (card.def.cat === 'puntos' ? '🎯 PUNTOS' : card.def.cat === 'ayuda' ? '🛡️ AYUDA' : '😈 DIVERTIDO') + '</div>';
+
+        // ═══ CARA FRONTAL (BOCA ARRIBA - REVELADA) ═══  
+        html += '<div class="powerup-flip-back ygo-card-front" style="background:linear-gradient(170deg,#f5f0e8,#e8dcc8,#f0e6d0);border:3px solid #8B7355;border-radius:12px;width:100%;height:100%;display:flex;flex-direction:column;backface-visibility:hidden;position:absolute;inset:0;transform:rotateY(180deg);overflow:hidden;font-family:serif">';
+        // Marco interno
+        html += '<div style="position:absolute;inset:5px;border:2px solid #C4A97D;border-radius:9px;pointer-events:none;z-index:1"></div>';
+        // Banner del nombre
+        html += '<div style="background:linear-gradient(180deg,' + c + ',' + c + 'dd);color:#fff;padding:6px 10px;font-weight:900;font-size:0.7rem;text-align:center;letter-spacing:0.5px;position:relative;z-index:2;text-shadow:1px 1px 2px rgba(0,0,0,0.4)">' + card.def.name + '</div>';
+        // Área de arte (icono)
+        html += '<div style="flex:1;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,' + c + '15,transparent 70%);position:relative;z-index:1;margin:0 8px;border-left:2px solid #C4A97D;border-right:2px solid #C4A97D">';
+        html += '<div style="font-size:3rem;filter:drop-shadow(2px 3px 4px rgba(0,0,0,0.3))">' + card.def.icon + '</div>';
+        // Círculo de atributo (top-right del área de arte)
+        html += '<div style="position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;background:' + c + ';color:#fff;font-size:0.55rem;font-weight:900;display:flex;align-items:center;justify-content:center;z-index:3">' + (card.def.cat === 'puntos' ? '⚡' : card.def.cat === 'ayuda' ? '🛡' : '😈') + '</div>';
         html += '</div>';
+        // Línea de tipo
+        html += '<div style="background:#f5f0e8;padding:3px 8px;font-size:0.55rem;font-weight:700;color:#5D4037;text-align:center;border-top:1px solid #C4A97D;z-index:2">[' + catNames[card.def.cat] + ']</div>';
+        // Caja de efecto
+        html += '<div style="background:linear-gradient(180deg,#fdfaf3,#f5f0e8);margin:4px 8px;padding:6px 8px;border:1px solid #C4A97D;border-radius:4px;font-size:0.55rem;color:#3E2723;line-height:1.3;z-index:2;min-height:32px">' + card.def.desc + '</div>';
+        // Estrellas de rareza
+        html += '<div style="text-align:center;padding:2px 0 6px;color:#b8860b;font-size:0.5rem;letter-spacing:1px;z-index:2">' + rarity + '</div>';
+        // Borde inferior holográfico
+        html += '<div style="position:absolute;bottom:8px;left:12px;right:12px;height:1px;background:linear-gradient(90deg,transparent,#b8860b60,#b8860b60,transparent);z-index:1"></div>';
+        html += '</div>';
+
         html += '</div>'; // flip-inner
         html += '</div>'; // flip-card
     }
