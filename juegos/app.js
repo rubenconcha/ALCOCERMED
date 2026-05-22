@@ -2976,26 +2976,55 @@ function renderPodium(entries) {
         var e = entries[idx];
         var rankClass  = idx===0 ? 'rank-1' : (idx===1 ? 'rank-2' : 'rank-3');
         var rankText   = idx===0 ? '1'      : (idx===1 ? '2'      : '3');
-        var scoreLabel = e.puntaje + ' pts · ' + e.porcentaje + '%';
         var animStyle  = isFirstRender
             ? ('animation-delay:' + (p*0.22) + 's')
             : 'animation:none!important;opacity:1!important;transform:translateY(0)!important;';
 
         pillarsHtml += '<div class="podium-cylinder ' + rankClass + '" style="' + animStyle + '">';
+        
+        // 1. Avatar Section (Above pedestal)
         pillarsHtml += '<div class="podium-avatar-wrapper">';
         if (idx === 0) pillarsHtml += '<div class="podium-crown">👑</div>';
         pillarsHtml += '<div class="podium-avatar-ring"></div>';
         pillarsHtml += '<div class="podium-avatar">' + e.avatar + '</div>';
         pillarsHtml += '<div class="podium-name">' + e.nombre + '</div>';
         pillarsHtml += '</div>';
+        
+        // 2. Pedestal Cylindrical Column
         pillarsHtml += '<div class="cylinder-top"></div>';
         pillarsHtml += '<div class="cylinder-body">';
-        pillarsHtml += '<div class="podium-score-badge">' + scoreLabel + '</div>';
+        
+        // Golden Laurels wrapping number 1 (Middle screen style)
+        if (idx === 0) {
+            pillarsHtml += '<div class="laurel-wreath-rank1-left">🌿</div>';
+            pillarsHtml += '<div class="laurel-wreath-rank1-right">🌿</div>';
+        }
+        
         pillarsHtml += '<div class="cylinder-rank">' + rankText + '</div>';
-        pillarsHtml += '</div></div>';
+        pillarsHtml += '</div>';
+        
+        // 3. Stats Badge sitting exactly at the bottom of the cylinder
+        pillarsHtml += '<div class="podium-score-badge">';
+        pillarsHtml += '<div class="score-pts">' + e.puntaje + ' pts</div>';
+        pillarsHtml += '<div class="score-pct">' + e.porcentaje + '%</div>';
+        pillarsHtml += '</div>';
+        
+        pillarsHtml += '</div>';
     }
 
     document.getElementById('podium-pillars').innerHTML = pillarsHtml;
+
+    // Add perspective circular stage base if not already present
+    var stageContainer = document.getElementById('podium-stage-base');
+    if (!stageContainer) {
+        var pillarsWrapper = document.getElementById('podium-pillars');
+        if (pillarsWrapper) {
+            var stageGlow = document.createElement('div');
+            stageGlow.id = 'podium-stage-base';
+            stageGlow.className = 'podium-stage-glow';
+            pillarsWrapper.appendChild(stageGlow);
+        }
+    }
 
     if (currentUser) {
         var myRank = -1;
@@ -3005,9 +3034,13 @@ function renderPodium(entries) {
         if (myRank > 0) {
             var rankPill = document.getElementById('my-rank-pill');
             if (rankPill) {
-                var medalMe = myRank===1 ? '🥇' : myRank===2 ? '🥈' : myRank===3 ? '🥉' : '🎯';
-                rankPill.innerHTML = medalMe + ' Tu posición: <strong>' + myRank + '°</strong> de ' + entries.length + ' estudiantes';
-                rankPill.style.display = 'block';
+                var medalHtml = '<div class="medal-ribbon-container">' +
+                                '  <div class="ribbon-blue-left"></div>' +
+                                '  <div class="ribbon-blue-right"></div>' +
+                                '  <div class="medal-gold-circle">🏅</div>' +
+                                '</div>';
+                rankPill.innerHTML = medalHtml + '<div class="rank-pill-text-content">Tu posición: <strong>' + myRank + '°</strong> de ' + entries.length + ' estudiantes</div>';
+                rankPill.style.display = 'flex';
             }
         }
     }
