@@ -814,6 +814,10 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
     0% { transform: translateX(-50%) scale(0.5); opacity: 0; }
     100% { transform: translateX(-50%) scale(1); opacity: 1; }
 }
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+}
 @keyframes pulse {
     0%,100% { opacity: 1; }
     50% { opacity: 0.6; }
@@ -853,6 +857,30 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
     }
     .powerup-card h3 {
         font-size: 0.8rem !important;
+    }
+}
+
+/* ═══ RESULTADOS ═══ */
+#quiz-result-breakdown > div > div {
+    transition: transform 0.2s;
+}
+#quiz-result-breakdown > div > div:hover {
+    transform: scale(1.15);
+}
+#quiz-review-section {
+    animation: fadeIn 0.5s ease;
+}
+@media (max-width: 480px) {
+    #quiz-result-emoji {
+        width: 100px !important;
+        height: 100px !important;
+        font-size: 40px !important;
+    }
+    #quiz-result-title {
+        font-size: 1.3rem !important;
+    }
+    #quiz-result-score {
+        font-size: 1rem !important;
     }
 }
 

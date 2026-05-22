@@ -2396,13 +2396,18 @@ function showQuizResults() {
     var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '⭐' : pct >= 40 ? '📝' : '💪';
     var msg = pct >= 90 ? '¡Excelente!' : pct >= 70 ? '¡Muy bien!' : pct >= 40 ? '¡Puedes mejorar!' : '¡Sigue practicando!';
     var emojiEl = document.getElementById('quiz-result-emoji');
-    if (emojiEl) emojiEl.textContent = emoji;
+    if (emojiEl) {
+        emojiEl.textContent = emoji;
+        emojiEl.style.background = pct >= 70 ? 'linear-gradient(135deg,#22C55E,#16A34A)' :
+                                  pct >= 40 ? 'linear-gradient(135deg,#F59E0B,#D97706)' :
+                                              'linear-gradient(135deg,#EF4444,#DC2626)';
+    }
     document.getElementById('quiz-result-title').textContent = msg;
-    document.getElementById('quiz-result-score').textContent = correctas + '/' + totalGradeable + ' correctas (' + pct + '%)';
+    document.getElementById('quiz-result-score').textContent = correctas + '/' + totalGradeable + ' correctas • ' + pct + '%';
     var oaCount = total - totalGradeable;
-    var scoreSubEl = document.getElementById('quiz-result-score');
-    if (oaCount > 0 && scoreSubEl) {
-        scoreSubEl.textContent = correctas + '/' + totalGradeable + ' correctas (' + pct + '%)  •  ' + oaCount + ' abierta' + (oaCount > 1 ? 's' : '') + ' (no cuentan)';
+    var detailEl = document.getElementById('quiz-result-detail');
+    if (detailEl) {
+        detailEl.textContent = totalPoints + ' puntos totales' + (oaCount > 0 ? ' • ' + oaCount + ' pregunta(s) abierta(s)' : '');
     }
 
     var fill = document.getElementById('quiz-result-fill');
