@@ -1783,6 +1783,18 @@ function showFeedbackAnimation(isCorrect, ptsEarned) {
     var textHtml = '<div style="display:flex; flex-direction:column;"><span style="font-size:1.5rem; font-weight:900;">' + titleText + '</span>';
     if(!isPoll && !isOpenAnswer && isCorrect && ptsEarned) {
         textHtml += '<span style="font-size:1.1rem; font-weight:700; opacity:0.9;">+' + ptsEarned + ' Puntos</span>';
+        // Mostrar multiplicador de racha
+        var currStreak = 0;
+        for(var si=quizAnswers.length - 1; si >= 0; si--) {
+            var spq = quizData.preguntas.find(function(q) { return q.id === quizAnswers[si].pregunta_id; });
+            if (spq && (spq.tipo === 'oa' || spq.tipo === 'poll' || spq.tipo === 'encuesta')) continue;
+            if(quizAnswers[si].correcta) currStreak++;
+            else break;
+        }
+        if (currStreak >= 2) {
+            var sm = Math.min(currStreak, 5);
+            textHtml += '<span style="font-size:0.9rem; font-weight:900; color:#FFB74D;margin-top:2px">🔥 Racha x' + sm + '</span>';
+        }
     } else if (isPoll) {
         textHtml += '<span style="font-size:1.1rem; font-weight:700; opacity:0.9;">¡Gracias por tu opinión!</span>';
     } else if (isOpenAnswer) {
@@ -1958,25 +1970,46 @@ function renderQuizQuestion() {
     document.getElementById('quiz-question-number').textContent = (quizCurrentQ + 1) + ' / ' + total;
     document.getElementById('quiz-question-text').textContent = pregunta.texto || '';
 
-    // Calculate score
+    // Calculate score and streak
     var currentScore = 0;
     var currentStreak = 0;
+    for(var i=quizAnswers.length - 1; i >= 0; i--) {
+        var pq = quizData.preguntas.find(function(q) { return q.id === quizAnswers[i].pregunta_id; });
+        if (pq && (pq.tipo === 'oa' || pq.tipo === 'poll' || pq.tipo === 'encuesta')) continue;
+        if(quizAnswers[i].correcta) { currentStreak++; }
+        else { break; }
+    }
     for(var i=0; i<quizAnswers.length; i++){
-        var pq = quizData && quizData.preguntas ? quizData.preguntas.find(function(q) { return q.id === quizAnswers[i].pregunta_id; }) : null;
-        var isNeutral = pq ? (pq.tipo === 'oa' || pq.tipo === 'poll' || pq.tipo === 'encuesta') : (quizAnswers[i].correcta === null);
-        if (isNeutral) continue;
-
-        if(quizAnswers[i].correcta) {
-            currentScore += (quizAnswers[i].puntos_ganados || 0);
-            currentStreak++;
-        } else {
-            currentStreak = 0;
-        }
+        var pq = quizData.preguntas.find(function(q) { return q.id === quizAnswers[i].pregunta_id; });
+        if (pq && (pq.tipo === 'oa' || pq.tipo === 'poll' || pq.tipo === 'encuesta')) continue;
+        currentScore += (quizAnswers[i].puntos_ganados || 0);
     }
     var scoreEl = document.getElementById('quiz-current-score');
     if(scoreEl) scoreEl.textContent = currentScore;
     var streakEl = document.getElementById('quiz-current-streak');
-    if(streakEl) streakEl.textContent = currentStreak;
+    if(streakEl) {
+        var streakMult = Math.min(currentStreak, 5);
+        if (currentStreak >= 2) {
+            streakEl.textContent = currentStreak + ' 🔥';
+            streakEl.parentElement.style.background = 'rgba(255,152,0,0.25)';
+            streakEl.parentElement.style.border = '1px solid rgba(255,152,0,0.4)';
+            streakEl.style.color = '#FFB74D';
+            var multBadge = document.getElementById('quiz-streak-mult');
+            if (multBadge) { multBadge.style.display = 'inline-block'; multBadge.textContent = 'x' + streakMult; }
+        } else {
+            streakEl.textContent = currentStreak;
+            streakEl.parentElement.style.background = 'rgba(255,255,255,0.1)';
+            streakEl.parentElement.style.border = 'none';
+            streakEl.style.color = '#fff';
+            var multBadge = document.getElementById('quiz-streak-mult');
+            if (multBadge) multBadge.style.display = 'none';
+        }
+    }
+    // Update score parent style for high scores
+    if(scoreEl && currentScore > 0) {
+        scoreEl.parentElement.style.background = 'rgba(255,215,0,0.15)';
+        scoreEl.style.color = '#FFD700';
+    }
 
     var opciones = pregunta.opciones || [];
     var optColors = ['#E91E63', '#2563EB', '#E6A15C', '#059669', '#7C3AED', '#0D9488'];
@@ -2325,30 +2358,26 @@ function getQuizPoints(isCorrect, pregunta) {
     if(!isCorrect) return 0;
     if(pregunta.tipo === 'poll' || pregunta.tipo === 'encuesta') return 0;
     var base = 600;
-    var totalTimer = pregunta.temporizador || 30;
-    var timeRatio = Math.max(0, quizTimeLeft) / totalTimer;
+    var timeRatio = Math.max(0, quizTimeLeft) / 60;
     var timePts = Math.round(timeRatio * 400);
     
+    // Calcular racha actual (antes de esta respuesta)
     var prevStreak = 0;
-    for(var i=0; i<quizAnswers.length; i++) {
-        var pq = quizData && quizData.preguntas ? quizData.preguntas.find(function(q) { return q.id === quizAnswers[i].pregunta_id; }) : null;
-        var isNeutral = pq ? (pq.tipo === 'oa' || pq.tipo === 'poll' || pq.tipo === 'encuesta') : (quizAnswers[i].correcta === null);
-        if (isNeutral) continue;
+    for(var i=quizAnswers.length - 1; i >= 0; i--) {
+        var pq = quizData.preguntas.find(function(q) { return q.id === quizAnswers[i].pregunta_id; });
+        if (pq && (pq.tipo === 'oa' || pq.tipo === 'poll' || pq.tipo === 'encuesta')) continue;
         if(quizAnswers[i].correcta) { prevStreak++; }
-        else { prevStreak = 0; }
+        else { break; }
     }
-    
     var currentStreak = prevStreak + 1;
-    var streakBonus = 0;
-    if (currentStreak === 2) streakBonus = 150;
-    else if (currentStreak === 3) streakBonus = 300;
-    else if (currentStreak === 4) streakBonus = 450;
-    else if (currentStreak >= 5) streakBonus = 600 + (currentStreak - 5) * 50;
-    
-    var raw = Math.round((base + timePts + streakBonus) * (pregunta.puntos || 1));
-    // ═══ APLICAR COMODÍN DE PUNTOS ═══
+
+    // ═══ MULTIPLICADOR DE RACHA: x1, x2, x3, x4, x5 (máx) ═══
+    var streakMult = Math.min(currentStreak, 5);
+    var streakBonus = (streakMult - 1) * 150; // bonus extra por racha
+
+    var raw = Math.round((base + timePts + streakBonus) * (pregunta.puntos || 1) * streakMult);
     var finalPts = applyPowerupToAnswer(isCorrect, raw);
-    if (finalPts === null) return null; // retry
+    if (finalPts === null) return null;
     return finalPts;
 }
 
