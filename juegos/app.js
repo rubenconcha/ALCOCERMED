@@ -467,8 +467,8 @@ function navigateTo(page, skipPush) {
     if (page === 'biblioteca' && isAdmin) loadLibrary();
     if (page === 'informes' && isAdmin) loadReports();
     if (page === 'historial' && !isAdmin) loadStudentResults();
-    if (page === 'jugar' && !isAdmin) loadExploreSubjects();
-    if (page === 'jugar' && isAdmin) loadExploreSubjects();
+    if (page === 'jugar' && !isAdmin) { loadExploreSubjects(); loadTopEstudiantes(); }
+    if (page === 'jugar' && isAdmin) { loadExploreSubjects(); loadTopEstudiantes(); }
 
     closeSidebar();
 
@@ -1192,6 +1192,73 @@ function loadExploreSubjects() {
         grid.innerHTML = html;
     }).catch(function(err) {
         grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><i class="fas fa-exclamation-triangle" style="color:#F59E0B"></i><p>Error al cargar</p><small>Intenta de nuevo más tarde</small></div>';
+    });
+}
+
+function loadTopEstudiantes() {
+    var listEl = document.getElementById('top-estudiantes-list');
+    if (!listEl) return;
+    listEl.innerHTML = '<div style="text-align:center;padding:20px;color:#8E90A6"><i class="fas fa-spinner fa-spin"></i> Cargando ranking...</div>';
+
+    var client = getSupabase();
+    if (!client) { listEl.innerHTML = '<div style="text-align:center;padding:12px;color:#EF4444">Error de conexión</div>'; return; }
+
+    client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje').then(function(r) {
+        if (r.error || !r.data || r.data.length === 0) {
+            listEl.innerHTML = '<div class="empty-state"><i class="fas fa-trophy" style="color:#FFD700"></i><p>Aún no hay resultados</p><small>¡Sé el primero en jugar!</small></div>';
+            return;
+        }
+
+        // Agrupar por user_id sumando puntajes y contando correctas
+        var users = {};
+        for (var i = 0; i < r.data.length; i++) {
+            var uid = r.data[i].user_id;
+            if (!users[uid]) users[uid] = { total: 0, count: 0, bestPct: 0 };
+            users[uid].total += (r.data[i].puntaje || 0);
+            users[uid].count++;
+            if ((r.data[i].porcentaje || 0) > users[uid].bestPct) users[uid].bestPct = r.data[i].porcentaje;
+        }
+
+        // Ordenar por puntaje total
+        var sorted = [];
+        for (var uid in users) {
+            sorted.push({ user_id: uid, total: users[uid].total, count: users[uid].count, bestPct: users[uid].bestPct });
+        }
+        sorted.sort(function(a, b) { return b.total - a.total; });
+        sorted = sorted.slice(0, 10);
+
+        // Obtener nombres
+        var userIds = sorted.map(function(s) { return s.user_id; });
+        client.from('evaluacion_participantes').select('user_id, nombre').in('user_id', userIds).then(function(nRes) {
+            var nameMap = {};
+            if (nRes.data) {
+                for (var n = 0; n < nRes.data.length; n++) {
+                    var raw = nRes.data[n].nombre || 'Estudiante';
+                    var av = '👤'; var nm = raw;
+                    if (raw.indexOf('|') !== -1) { var parts = raw.split('|'); av = parts[0]; nm = parts[1]; }
+                    if (!nameMap[nRes.data[n].user_id]) nameMap[nRes.data[n].user_id] = { nombre: nm, avatar: av };
+                }
+            }
+
+            var medals = ['🥇','🥈','🥉'];
+            var html = '';
+            for (var i = 0; i < sorted.length; i++) {
+                var s = sorted[i];
+                var info = nameMap[s.user_id] || { nombre: 'Estudiante', avatar: '👤' };
+                var rank = medals[i] || (i + 1);
+                var bg = i === 0 ? 'linear-gradient(135deg,#FFFBEB,#FEF3C7)' : i === 1 ? 'linear-gradient(135deg,#F8FAFC,#E2E8F0)' : i === 2 ? 'linear-gradient(135deg,#FFF7ED,#FFEDD5)' : '#fff';
+                var border = i === 0 ? '#F59E0B' : i === 1 ? '#94A3B8' : i === 2 ? '#F97316' : '#E2E8F0';
+                html += '<div style="background:' + bg + ';border:2px solid ' + border + ';border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px;transition:transform .2s" onmouseover="this.style.transform=\'scale(1.02)\'" onmouseout="this.style.transform=\'\'">';
+                html += '<div style="font-size:1.6rem;min-width:36px;text-align:center">' + rank + '</div>';
+                html += '<div style="font-size:1.8rem">' + info.avatar + '</div>';
+                html += '<div style="flex:1"><div style="font-weight:800;color:#1E293B;font-size:0.9rem">' + info.nombre + '</div>';
+                html += '<div style="font-size:0.72rem;color:#64748B">' + s.total + ' pts • ' + s.bestPct + '% mejor</div></div>';
+                html += '</div>';
+            }
+            listEl.innerHTML = html;
+        });
+    }).catch(function() {
+        listEl.innerHTML = '<div style="text-align:center;padding:12px;color:#EF4444">Error al cargar ranking</div>';
     });
 }
 
