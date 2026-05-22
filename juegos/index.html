@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=35">
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
@@ -310,14 +310,32 @@
             </button>
           </div>
         </div>
-        <div class="game-phone-preview" aria-hidden="true">
-          <div class="game-phone-notch"></div>
-          <img src="./logo_app.png" alt="">
-          <div class="game-phone-title">Podio de Ganadores</div>
-          <div class="game-mini-podium">
-            <span class="mini-podium mini-podium-2">2</span>
-            <span class="mini-podium mini-podium-1">1</span>
-            <span class="mini-podium mini-podium-3">3</span>
+        <div class="game-podium-showcase" aria-hidden="true">
+          <div class="showcase-trophy"><i class="fas fa-trophy"></i></div>
+          <div class="showcase-title">Podio de <span>Ganadores</span></div>
+          <div class="showcase-laurels">
+            <span></span><span></span>
+          </div>
+          <div class="showcase-stage">
+            <div class="showcase-player showcase-player-2">
+              <div class="showcase-avatar"></div>
+              <div class="showcase-name">Estudiante</div>
+              <div class="showcase-pillar"><strong>2</strong></div>
+              <div class="showcase-score">13132 pts<br><span>60%</span></div>
+            </div>
+            <div class="showcase-player showcase-player-1">
+              <div class="showcase-crown"><i class="fas fa-crown"></i></div>
+              <div class="showcase-avatar"></div>
+              <div class="showcase-name">Estudiante</div>
+              <div class="showcase-pillar"><strong>1</strong></div>
+              <div class="showcase-score">18081 pts<br><span>70%</span></div>
+            </div>
+            <div class="showcase-player showcase-player-3">
+              <div class="showcase-avatar"></div>
+              <div class="showcase-name">Estudiante</div>
+              <div class="showcase-pillar"><strong>3</strong></div>
+              <div class="showcase-score">9540 pts<br><span>45%</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -619,7 +637,7 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=29"></script>
+<script src="app.js?v=32"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->

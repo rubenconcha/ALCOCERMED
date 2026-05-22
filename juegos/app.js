@@ -1074,9 +1074,9 @@ var exploreCurrentSubject = null;
 // ⚠️ LAS 3 MATERIAS OFICIALES DE ALCOCERMED. NO MODIFICAR.
 
 var SUBJECTS = [
-    { name: 'MORFOFUNCION',      color: '#EF4444', emoji: '🧠' },
-    { name: 'BIOLOGIA CELULAR', color: '#3B82F6', emoji: '🧬' },
-    { name: 'EDUCACION PARA LA SALUD', color: '#10B981', emoji: '💚' }
+    { name: 'MORFOFUNCION',      color: '#EF4444', emoji: 'M' },
+    { name: 'BIOLOGIA CELULAR', color: '#3B82F6', emoji: 'BC' },
+    { name: 'EDUCACION PARA LA SALUD', color: '#10B981', emoji: 'ES' }
 ];
 
 function subjectColor(name) {
@@ -1149,12 +1149,18 @@ function loadExploreSubjects() {
         for (var s = 0; s < SUBJECTS.length; s++) {
             var subj = SUBJECTS[s];
             var cnt = counts[subj.name] || 0;
-            html += '<div class="explorar-subject-card" onclick="loadSubjectEvaluations(\'' + subj.name + '\')" style="background:linear-gradient(160deg,' + subj.color + '08 0%,rgba(255,255,255,0.04) 50%,' + subj.color + '06 100%);border:1.5px solid ' + subj.color + '25;backdrop-filter:blur(10px);border-radius:20px">';
-            html += '<div class="explorar-subject-badge" style="background:' + subj.color + '18;color:' + subj.color + ';font-weight:800;border:1px solid ' + subj.color + '30">' + cnt + ' 📋</div>';
-            html += '<div class="explorar-subject-icon" style="background:linear-gradient(135deg,' + subj.color + '25,' + subj.color + '08);color:' + subj.color + ';box-shadow:0 8px 32px ' + subj.color + '20;font-size:30px">' + subj.emoji + '</div>';
-            html += '<h3 style="font-size:1rem;font-weight:800;letter-spacing:0.3px;color:var(--text)">' + subj.name.replace(/ /g, '<br>') + '</h3>';
-            html += '<p style="font-size:0.72rem;color:' + subj.color + ';font-weight:600">' + cnt + ' evaluación' + (cnt !== 1 ? 'es' : '') + ' • JUGAR <i class="fas fa-arrow-right" style="font-size:0.6rem"></i></p>';
-            html += '<div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:' + subj.color + '20"><div style="height:100%;width:' + (cnt > 0 ? '100' : '0') + '%;background:' + subj.color + '80;border-radius:0 0 20px 20px;transition:width .6s ease"></div></div>';
+            var missionNo = s + 1;
+            var progress = cnt > 0 ? 100 : 18;
+            var statusText = cnt > 0 ? 'Disponible' : 'Pronto';
+            html += '<div class="explorar-subject-card subject-mission-card" onclick="loadSubjectEvaluations(\'' + subj.name + '\')" style="--subject-color:' + subj.color + '">';
+            html += '<div class="mission-shine"></div>';
+            html += '<div class="mission-topline"><span>MISION ' + missionNo + '</span><strong>' + statusText + '</strong></div>';
+            html += '<div class="mission-main">';
+            html += '<div class="mission-orb"><span>' + subj.emoji + '</span></div>';
+            html += '<div class="mission-copy"><h3>' + subj.name + '</h3><p>' + cnt + ' evaluacion' + (cnt !== 1 ? 'es' : '') + ' lista' + (cnt !== 1 ? 's' : '') + '</p></div>';
+            html += '<div class="mission-play"><i class="fas fa-play"></i></div>';
+            html += '</div>';
+            html += '<div class="mission-progress"><span style="width:' + progress + '%"></span></div>';
             html += '</div>';
         }
         grid.innerHTML = html;
