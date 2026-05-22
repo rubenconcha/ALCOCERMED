@@ -674,7 +674,7 @@ function addQuizTime(secs) {
     quizTimeLeft += secs;
     var timerBar = document.getElementById('quiz-timer-bar');
     if (timerBar) {
-        var totalTimer = (quizData.preguntas[quizCurrentQ].temporizador || 60) + secs;
+        var totalTimer = 60 + secs;
         var pct = (quizTimeLeft / totalTimer) * 100;
         timerBar.style.transition = 'none';
         timerBar.style.width = pct + '%';
@@ -2103,7 +2103,7 @@ function renderQuizQuestion() {
         void tb.offsetWidth;
     }
 
-    startQuestionTimer(pregunta.temporizador || 60);
+    startQuestionTimer(60);
 }
 
 var quizConfirmed = false;
@@ -2312,7 +2312,7 @@ function confirmQuizAnswer() {
         if (confirmBtn) confirmBtn.style.display = '';
         // Reiniciar temporizador para la segunda oportunidad
         var pregunta = quizData.preguntas[quizCurrentQ];
-        startQuestionTimer(pregunta.temporizador || 60);
+        startQuestionTimer(60);
         return;
     }
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer, puntos_ganados: pts });
@@ -2393,7 +2393,7 @@ function confirmQuizAnswerInstant(idx) {
             buttons[i].style.filter = '';
             buttons[i].style.border = '';
         }
-        startQuestionTimer(pregunta.temporizador || 60);
+        startQuestionTimer(60);
         return;
     }
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer, puntos_ganados: pts });
