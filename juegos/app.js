@@ -927,8 +927,8 @@ function showPowerupCards() {
         html += '<div style="position:relative;width:10px;height:25px;background:#b8860b;border-radius:40%;margin-top:12px;box-shadow:0 0 16px #b8860b60,0 0 32px #b8860b30"></div>';
         html += '</div>';
 
-        // "?" sobre el ojo
-        html += '<div style="position:absolute;z-index:3;color:#b8860b;font-size:1.5rem;font-weight:900;text-shadow:0 0 10px #b8860b50;margin-top:4px">?</div>';
+        // "?" sobre el ojo - GRANDE Y VISIBLE
+        html += '<div style="position:absolute;z-index:3;color:#b8860b;font-size:2.2rem;font-weight:900;text-shadow:0 0 16px #b8860b80,0 0 32px #b8860b40;margin-top:6px">?</div>';
 
         // Texto superior
         html += '<div style="position:absolute;top:22px;left:50%;transform:translateX(-50%);color:#8B6914;font-size:0.5rem;font-weight:900;letter-spacing:3px;z-index:1">ALCOCERMED</div>';
@@ -954,27 +954,26 @@ function showPowerupCards() {
         html += '<div class="powerup-flip-back ygo-card-front" style="background:linear-gradient(170deg,#fdf8f0 0%,#f5edd8 30%,#faf3e5 60%,#f0e6d0 100%);border:4px solid #8B7355;border-radius:14px;width:100%;height:100%;display:flex;flex-direction:column;backface-visibility:hidden;position:absolute;inset:0;transform:rotateY(180deg);overflow:hidden;font-family:Georgia,serif;box-shadow:0 0 20px rgba(0,0,0,0.2)">';
         // Marco
         html += '<div style="position:absolute;inset:5px;border:2px solid #C4A97D;border-radius:10px;pointer-events:none;z-index:1"></div>';
-        // Nombre
-        html += '<div style="background:linear-gradient(180deg,#2c1810 0%,#1a0a05 100%);color:#F5DEB3;padding:8px 10px;font-weight:900;font-size:0.72rem;text-align:center;letter-spacing:0.3px;position:relative;z-index:2;border-bottom:2px solid #8B6914;text-shadow:1px 1px 1px black">' + card.def.name + '</div>';
-        // Estrellas de nivel
-        html += '<div style="text-align:right;padding:2px 10px 0;color:#FFD700;font-size:0.55rem;letter-spacing:1px;position:relative;z-index:2;text-shadow:0 0 4px gold">' + stars + '</div>';
+        // Nombre - MÁS GRANDE
+        html += '<div style="background:linear-gradient(180deg,#2c1810 0%,#1a0a05 100%);color:#F5DEB3;padding:10px 10px;font-weight:900;font-size:0.85rem;text-align:center;letter-spacing:0.5px;position:relative;z-index:2;border-bottom:2px solid #8B6914;text-shadow:1px 1px 1px black">' + card.def.name + '</div>';
+        // Estrellas
+        html += '<div style="text-align:right;padding:3px 10px 1px;color:#FFD700;font-size:0.65rem;letter-spacing:1.5px;position:relative;z-index:2;text-shadow:0 0 4px gold">' + stars + '</div>';
         // Arte
         html += '<div style="flex:1;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 40% 30%,' + c + '25,transparent 65%),linear-gradient(180deg,' + c + '08,transparent);position:relative;margin:4px 12px;border:2px solid #C4A97D;z-index:1">';
-        html += '<div style="font-size:3.5rem;filter:drop-shadow(3px 4px 6px rgba(0,0,0,0.4));z-index:1;transition:transform .3s">' + card.def.icon + '</div>';
-        // Atributo (top-right del arte)
-        html += '<div style="position:absolute;top:3px;right:3px;width:24px;height:24px;border-radius:50%;background:' + c + ';color:#fff;font-size:0.6rem;font-weight:900;display:flex;align-items:center;justify-content:center;z-index:3;border:1px solid rgba(0,0,0,0.3)">' + typeIcon + '</div>';
+        html += '<div style="font-size:4rem;filter:drop-shadow(3px 4px 6px rgba(0,0,0,0.4));z-index:1">' + card.def.icon + '</div>';
+        html += '<div style="position:absolute;top:3px;right:3px;width:26px;height:26px;border-radius:50%;background:' + c + ';color:#fff;font-size:0.7rem;font-weight:900;display:flex;align-items:center;justify-content:center;z-index:3;border:1px solid rgba(0,0,0,0.3)">' + typeIcon + '</div>';
         html += '</div>';
         // Tipo
-        html += '<div style="background:#2c1810;color:#F5DEB3;padding:2px 10px;font-size:0.55rem;font-weight:700;text-align:left;z-index:2;border-top:1px solid #8B6914;border-bottom:1px solid #8B6914;letter-spacing:0.5px">[' + typeLabel + ' / ' + rarityLabel + ']</div>';
-        // Efecto
-        html += '<div style="background:linear-gradient(180deg,#fdfaf3,#f8f0e3);margin:4px 8px;padding:6px 8px;border:1.5px solid #C4A97D;border-radius:3px;font-size:0.55rem;color:#1a0a05;line-height:1.35;z-index:2;min-height:36px;font-family:Georgia,serif">' + card.def.desc + '</div>';
-        // ATK/DEF o equivalente
-        html += '<div style="display:flex;justify-content:space-between;padding:0 10px 4px;z-index:2;font-size:0.52rem;font-weight:900;color:#1a0a05;font-family:Arial,sans-serif">';
+        html += '<div style="background:#2c1810;color:#F5DEB3;padding:4px 10px;font-size:0.6rem;font-weight:700;text-align:left;z-index:2;border-top:1px solid #8B6914;border-bottom:1px solid #8B6914;letter-spacing:0.5px">[' + typeLabel + ' / ' + rarityLabel + ']</div>';
+        // Efecto - MÁS GRANDE
+        html += '<div style="background:linear-gradient(180deg,#fdfaf3,#f8f0e3);margin:5px 8px;padding:8px 10px;border:1.5px solid #C4A97D;border-radius:3px;font-size:0.63rem;color:#1a0a05;line-height:1.4;z-index:2;min-height:40px;font-family:Georgia,serif">' + card.def.desc + '</div>';
+        // Footer
+        html += '<div style="display:flex;justify-content:space-between;padding:2px 10px 6px;z-index:2;font-size:0.55rem;font-weight:900;color:#1a0a05;font-family:Arial,sans-serif">';
         html += '<span>' + typeLabel + '</span>';
         html += '<span style="color:' + c + '">★ POWER</span>';
         html += '</div>';
         // Holograma
-        html += '<div style="position:absolute;bottom:10px;right:12px;width:28px;height:28px;background:linear-gradient(135deg,' + c + '40,gold 50%,' + c + '40);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);z-index:2"></div>';
+        html += '<div style="position:absolute;bottom:10px;right:12px;width:30px;height:30px;background:linear-gradient(135deg,' + c + '40,gold 50%,' + c + '40);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);z-index:2"></div>';
         html += '</div>';
 
         html += '</div>'; // flip-inner
@@ -1036,7 +1035,7 @@ function choosePowerupCard(key, cardIdx) {
 
     setTimeout(function() {
         closePowerupCards();
-    }, 1800);
+    }, 5000);
 }
 
 function skipPowerupCards() {
