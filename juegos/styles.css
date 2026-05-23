@@ -3956,3 +3956,193 @@ body.is-native-app .sidebar { display: none !important; }
         display: flex !important;
     }
 }
+
+/* Fix de distribucion para el ranking gamer.
+   Las reglas antiguas de #top-estudiantes-list ajustaban hijos directos
+   como si fueran filas simples y comprimian el layout nuevo. */
+.games-app-theme #top-estudiantes-list .game-ranking-shell,
+.games-app-theme #top-estudiantes-list .game-ranking-header,
+.games-app-theme #top-estudiantes-list .game-ranking-list,
+.games-app-theme #top-estudiantes-list .game-rank-card {
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    font-size: inherit !important;
+}
+
+.games-app-theme #top-estudiantes-list .game-ranking-shell {
+    display: block !important;
+    padding: 18px 16px !important;
+    overflow: hidden;
+}
+
+.games-app-theme #top-estudiantes-list .game-ranking-header {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+}
+
+.games-app-theme #top-estudiantes-list .game-ranking-header > div {
+    min-width: 0;
+}
+
+.games-app-theme #top-estudiantes-list .game-ranking-header h3,
+.games-app-theme #top-estudiantes-list .game-ranking-header p {
+    overflow-wrap: anywhere;
+}
+
+.games-app-theme #top-estudiantes-list .game-ranking-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+.games-app-theme #top-estudiantes-list .game-rank-card {
+    display: grid !important;
+    grid-template-columns: 36px 56px minmax(0, 1fr) 18px !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 12px !important;
+}
+
+.games-app-theme #top-estudiantes-list .game-rank-number,
+.games-app-theme #top-estudiantes-list .game-rank-number-plain {
+    width: 36px !important;
+    min-width: 36px !important;
+    height: 36px !important;
+    font-size: .95rem !important;
+    line-height: 1 !important;
+}
+
+.games-app-theme #top-estudiantes-list .game-rank-avatar {
+    width: 56px !important;
+    min-width: 56px !important;
+    height: 56px !important;
+    font-size: initial !important;
+}
+
+.games-app-theme #top-estudiantes-list .game-rank-info {
+    min-width: 0 !important;
+    overflow: hidden;
+}
+
+.games-app-theme #top-estudiantes-list .game-rank-name,
+.games-app-theme #top-estudiantes-list .game-rank-meta {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.games-app-theme #top-estudiantes-list .game-rank-meta {
+    line-height: 1.35;
+}
+
+.games-app-theme #top-estudiantes-list .game-rank-arrow {
+    width: 18px;
+    min-width: 18px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .games-app-theme #top-estudiantes-list .game-ranking-shell {
+        padding: 14px 12px 16px !important;
+        border-radius: 22px;
+    }
+
+    .games-app-theme #top-estudiantes-list .game-ranking-header {
+        align-items: center !important;
+    }
+
+    .games-app-theme #top-estudiantes-list .game-ranking-header h3 {
+        font-size: .98rem !important;
+    }
+
+    .games-app-theme #top-estudiantes-list .game-ranking-header p {
+        font-size: .72rem !important;
+        line-height: 1.25;
+    }
+
+    .games-app-theme #top-estudiantes-list .game-ranking-chip {
+        flex: 0 0 auto;
+        padding: 7px 9px;
+        font-size: .68rem;
+    }
+
+    .games-app-theme #top-estudiantes-list .game-rank-card {
+        grid-template-columns: 32px 48px minmax(0, 1fr) 14px !important;
+        gap: 9px !important;
+        padding: 9px 10px !important;
+        border-radius: 16px;
+    }
+
+    .games-app-theme #top-estudiantes-list .game-rank-number,
+    .games-app-theme #top-estudiantes-list .game-rank-number-plain {
+        width: 32px !important;
+        min-width: 32px !important;
+        height: 32px !important;
+        border-radius: 11px;
+        font-size: .86rem !important;
+    }
+
+    .games-app-theme #top-estudiantes-list .game-rank-avatar {
+        width: 48px !important;
+        min-width: 48px !important;
+        height: 48px !important;
+        border-radius: 14px;
+    }
+
+    .games-app-theme #top-estudiantes-list .game-rank-name {
+        font-size: .86rem !important;
+        line-height: 1.15;
+    }
+
+    .games-app-theme #top-estudiantes-list .game-rank-meta {
+        font-size: .7rem !important;
+    }
+}
+
+/* Fix de separacion para los puntajes del podio principal. */
+.games-app-theme #page-jugar .showcase-stage {
+    padding-bottom: 18px;
+}
+
+.games-app-theme #page-jugar .showcase-player {
+    justify-content: flex-end;
+}
+
+.games-app-theme #page-jugar .showcase-score,
+.games-app-theme .showcase-score {
+    position: relative;
+    z-index: 8;
+    margin-top: 10px !important;
+    min-width: 86px;
+    padding: 7px 10px;
+    line-height: 1.08;
+    white-space: nowrap;
+}
+
+.games-app-theme #page-jugar .showcase-score span,
+.games-app-theme .showcase-score span {
+    display: block;
+    margin-top: 2px;
+    line-height: 1;
+}
+
+@media (max-width: 480px) {
+    .games-app-theme #page-jugar .showcase-stage {
+        min-height: 286px;
+        padding-bottom: 22px;
+    }
+
+    .games-app-theme #page-jugar .showcase-score,
+    .games-app-theme .showcase-score {
+        min-width: 74px;
+        padding: 6px 8px;
+        font-size: .56rem;
+        border-radius: 13px;
+    }
+}
