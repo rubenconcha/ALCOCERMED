@@ -2328,6 +2328,20 @@ body.is-native-app .sidebar { display: none !important; }
 .game-rank-card.rank-gold { border-color: rgba(250,204,21,0.45); background: linear-gradient(90deg, rgba(250,204,21,0.16), rgba(255,255,255,0.08)); }
 .game-rank-card.rank-silver { border-color: rgba(226,232,240,0.36); background: linear-gradient(90deg, rgba(226,232,240,0.14), rgba(255,255,255,0.08)); }
 .game-rank-card.rank-bronze { border-color: rgba(251,146,60,0.40); background: linear-gradient(90deg, rgba(251,146,60,0.15), rgba(255,255,255,0.08)); }
+.game-rank-card.is-me-ranking { border-color: rgba(233,30,99,0.55) !important; background: linear-gradient(90deg, rgba(233,30,99,0.18), rgba(255,255,255,0.06)) !important; box-shadow: 0 0 20px rgba(233,30,99,0.22); }
+
+/* Ranking General Page */
+.ranking-podium-showcase {
+    background: linear-gradient(180deg, rgba(20,10,40,0.6), rgba(10,5,20,0.8));
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 24px;
+    padding: 24px 16px 16px;
+    backdrop-filter: blur(8px);
+}
+.ranking-podium-avatar-media {
+    width: 100%; height: 100%;
+    object-fit: cover; border-radius: 50%;
+}
 
 .games-app-theme #top-estudiantes-list > div,
 .games-app-theme #top-estudiantes-list > div[style] {
@@ -2593,7 +2607,25 @@ body.is-native-app .sidebar { display: none !important; }
 @media (max-width: 768px) {
     .games-app-theme .topbar {
         height: 58px;
-        padding: 0 12px;
+        padding: 0 8px 0 12px;
+    }
+    /* Asegurar que el avatar de perfil no se corte */
+    .games-app-theme .user-menu-wrap {
+        flex-shrink: 0;
+    }
+    .games-app-theme .user-menu-trigger {
+        padding: 5px 8px 5px 5px;
+        gap: 6px;
+    }
+    .games-app-theme .topbar-avatar {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+    .games-app-theme .topbar-actions {
+        flex-shrink: 0;
+        overflow: visible;
+        gap: 4px;
     }
     .games-app-theme .main-content {
         padding: 14px 12px 88px;

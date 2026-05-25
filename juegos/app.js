@@ -1017,6 +1017,7 @@ function navigateTo(page, skipPush) {
     if (page === 'historial' && !isAdmin) loadStudentResults();
     if (page === 'jugar' && !isAdmin) { loadExploreSubjects(); loadTopEstudiantes(); }
     if (page === 'jugar' && isAdmin) { loadExploreSubjects(); loadTopEstudiantes(); }
+    if (page === 'ranking') loadRankingGeneral();
 
     closeSidebar();
 
@@ -1848,6 +1849,151 @@ function loadTopEstudiantes() {
         updateShowcasePodium([]);
         listEl.innerHTML = '<div class="game-ranking-shell"><div style="text-align:center;padding:12px;color:#EF4444">Error al cargar ranking</div></div>';
     });
+}
+
+// ════════════════════════════════════════
+// RANKING GENERAL (página dedicada)
+// ════════════════════════════════════════
+function loadRankingGeneral() {
+    var listEl = document.getElementById('ranking-general-list');
+    if (!listEl) return;
+    listEl.innerHTML = '<div style="text-align:center;padding:32px;color:#8E90A6;"><i class="fas fa-spinner fa-spin" style="font-size:24px;"></i><p style="margin-top:12px;font-weight:600;">Cargando ranking...</p></div>';
+
+    var client = getSupabase();
+    if (!client) {
+        listEl.innerHTML = '<div class="game-rank-card"><span style="color:#EF4444">Error de conexión</span></div>';
+        return;
+    }
+
+    client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje').then(function(r) {
+        if (r.error || !r.data || r.data.length === 0) {
+            updateRankingPodium([]);
+            listEl.innerHTML = '<div class="empty-state"><i class="fas fa-trophy" style="color:#FFD700"></i><p>Aún no hay resultados</p><small>¡Sé el primero en participar!</small></div>';
+            return;
+        }
+
+        var users = {};
+        for (var i = 0; i < r.data.length; i++) {
+            var uid = r.data[i].user_id;
+            if (!users[uid]) users[uid] = { total: 0, count: 0, bestPct: 0 };
+            users[uid].total += (r.data[i].puntaje || 0);
+            users[uid].count++;
+            if ((r.data[i].porcentaje || 0) > users[uid].bestPct) users[uid].bestPct = r.data[i].porcentaje;
+        }
+
+        var sorted = [];
+        for (var uid in users) {
+            sorted.push({ user_id: uid, total: users[uid].total, count: users[uid].count, bestPct: users[uid].bestPct });
+        }
+        sorted.sort(function(a, b) { return b.total - a.total; });
+
+        var userIds = sorted.map(function(s) { return s.user_id; });
+        client.from('evaluacion_participantes').select('user_id, nombre').in('user_id', userIds).then(function(nRes) {
+            var nameMap = {};
+            if (nRes.data) {
+                for (var n = 0; n < nRes.data.length; n++) {
+                    var raw = nRes.data[n].nombre || 'Estudiante';
+                    var av = '';
+                    var nm = raw;
+                    if (raw.indexOf('|') !== -1) {
+                        var parts = raw.split('|');
+                        av = parts[0];
+                        nm = parts.slice(1).join('|');
+                    }
+                    av = normalizeAvatarValue(av, nm);
+                    if (!nameMap[nRes.data[n].user_id]) nameMap[nRes.data[n].user_id] = { nombre: nm, avatar: av };
+                }
+            }
+
+            var decorated = [];
+            for (var x = 0; x < sorted.length; x++) {
+                var item = sorted[x];
+                var info = nameMap[item.user_id] || { nombre: 'Estudiante', avatar: normalizeAvatarValue('', 'Estudiante ' + x) };
+                decorated.push({
+                    user_id: item.user_id,
+                    nombre: info.nombre,
+                    avatar: normalizeAvatarValue(info.avatar, info.nombre),
+                    total: item.total,
+                    bestPct: item.bestPct,
+                    count: item.count,
+                    rank: x + 1
+                });
+            }
+
+            // Actualizar el podio visual de la página ranking
+            updateRankingPodium(decorated.slice(0, 3));
+
+            // Determinar el usuario actual
+            var myUid = currentUser ? currentUser.id : null;
+
+            // Renderizar la lista completa
+            var html = '';
+            var medals = ['🥇', '🥈', '🥉'];
+            for (var i = 0; i < decorated.length; i++) {
+                var s = decorated[i];
+                var isMe = (myUid && s.user_id === myUid);
+                var rankClass = i === 0 ? 'rank-gold' : i === 1 ? 'rank-silver' : i === 2 ? 'rank-bronze' : '';
+                var medalIcon = i < 3 ? '<span style="font-size:1.2rem;">' + medals[i] + '</span>' : '<span style="width:38px;height:38px;border-radius:13px;background:rgba(255,255,255,0.1);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:1rem;">' + s.rank + '</span>';
+                var pctColor = s.bestPct >= 80 ? '#34d399' : s.bestPct >= 50 ? '#fbbf24' : '#f87171';
+                html += '<div class="game-rank-card ' + rankClass + (isMe ? ' is-me-ranking' : '') + '">';
+                html += '<div style="min-width:38px;display:flex;align-items:center;justify-content:center;">' + medalIcon + '</div>';
+                html += '<div class="game-rank-avatar">' + avatarMarkup(s.avatar, s.nombre, 'game-rank-avatar-media') + '</div>';
+                html += '<div class="game-rank-info">';
+                html += '<div class="game-rank-name">' + s.nombre + (isMe ? ' <span style="font-size:0.65rem;background:rgba(233,30,99,0.2);color:#f472b6;padding:2px 8px;border-radius:8px;font-weight:700;">TÚ</span>' : '') + '</div>';
+                html += '<div class="game-rank-meta">' + s.total.toLocaleString() + ' pts · ' + s.count + ' evaluaci' + (s.count !== 1 ? 'ones' : 'ón') + ' · <span style="color:' + pctColor + ';font-weight:800;">' + s.bestPct + '%</span> mejor</div>';
+                html += '</div>';
+                html += '<div style="color:rgba(255,255,255,0.3);font-size:0.8rem;"><i class="fas fa-chevron-right"></i></div>';
+                html += '</div>';
+            }
+            if (decorated.length === 0) {
+                html = '<div class="empty-state"><i class="fas fa-trophy" style="color:#FFD700"></i><p>Sin datos aún</p><small>El ranking se generará cuando los estudiantes completen evaluaciones.</small></div>';
+            }
+            listEl.innerHTML = html;
+
+            // Resaltar posición propia
+            if (myUid) {
+                var myRank = decorated.findIndex(function(d) { return d.user_id === myUid; });
+                if (myRank !== -1) {
+                    var pill = document.createElement('div');
+                    pill.style.cssText = 'margin-bottom:16px;padding:12px 18px;background:rgba(233,30,99,0.12);border:1px solid rgba(233,30,99,0.28);border-radius:14px;font-size:0.9rem;font-weight:800;color:#f472b6;display:flex;align-items:center;gap:10px;';
+                    pill.innerHTML = '<i class="fas fa-user-circle"></i> Tu posición: #' + (myRank + 1) + ' de ' + decorated.length + ' estudiantes';
+                    listEl.insertBefore(pill, listEl.firstChild);
+                }
+            }
+        }).catch(function() {
+            listEl.innerHTML = '<div class="game-rank-card"><span style="color:#EF4444">Error al cargar estudiantes</span></div>';
+        });
+    }).catch(function() {
+        updateRankingPodium([]);
+        listEl.innerHTML = '<div class="game-rank-card"><span style="color:#EF4444">Error al cargar ranking</span></div>';
+    });
+}
+
+function updateRankingPodium(entries) {
+    // slots: [2° lugar, 1° lugar, 3° lugar] en ese orden visual
+    var slots = [
+        { selector: '.ranking-podium-showcase .showcase-player-2', idx: 1 },
+        { selector: '.ranking-podium-showcase .showcase-player-1', idx: 0 },
+        { selector: '.ranking-podium-showcase .showcase-player-3', idx: 2 }
+    ];
+    for (var i = 0; i < slots.length; i++) {
+        var slot = slots[i];
+        var player = document.querySelector(slot.selector);
+        if (!player) continue;
+        var entry = entries[slot.idx];
+        var avatarNode = player.querySelector('.showcase-avatar');
+        var nameNode = player.querySelector('.showcase-name');
+        var scoreNode = player.querySelector('.showcase-score');
+        if (!entry) {
+            if (nameNode) nameNode.textContent = '—';
+            if (scoreNode) scoreNode.innerHTML = '0 pts<br><span>0%</span>';
+            if (avatarNode) avatarNode.innerHTML = '';
+            continue;
+        }
+        if (nameNode) nameNode.textContent = entry.nombre;
+        if (scoreNode) scoreNode.innerHTML = entry.total.toLocaleString() + ' pts<br><span>' + entry.bestPct + '%</span>';
+        if (avatarNode) avatarNode.innerHTML = avatarMarkup(entry.avatar, entry.nombre, 'ranking-podium-avatar-media');
+    }
 }
 
 function updateShowcasePodium(entries) {
