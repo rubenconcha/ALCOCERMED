@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=38">
+  <link rel="stylesheet" href="styles.css?v=40">
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
@@ -637,15 +637,15 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=33"></script>
+<script src="app.js?v=35"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->
 <div id="avatar-modal" class="hidden" style="position:fixed;inset:0;background:rgba(15,23,42,.8);backdrop-filter:blur(8px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;">
-  <div style="background:var(--bg-card);border-radius:24px;width:100%;max-width:400px;padding:32px 24px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1)">
+  <div class="avatar-modal-panel" style="background:var(--bg-card);border-radius:24px;width:100%;max-width:430px;padding:32px 24px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1)">
     <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:8px">Elige tu Avatar</h2>
     <p style="font-size:.9rem;color:var(--text-mid);margin-bottom:24px">Toca el personaje que más te guste para representarte</p>
-    <div id="avatar-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px">
+    <div id="avatar-grid" class="avatar-carousel" style="display:flex;gap:14px;margin-bottom:24px">
       <!-- Llenado por JS -->
     </div>
     <button onclick="closeAvatarModal()" style="width:100%;padding:14px;background:var(--bg-hover);color:var(--text-main);border:none;border-radius:12px;font-weight:700;cursor:pointer;transition:background 0.2s">Cerrar</button>

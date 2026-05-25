@@ -96,10 +96,13 @@ window.openAvatarModal = function() {
     var modal = document.getElementById('avatar-modal');
     var grid = document.getElementById('avatar-grid');
     if (!modal || !grid) return;
+    grid.classList.add('avatar-carousel');
     var html = '';
+    var selectedIndex = 0;
     for (var i = 0; i < availableAvatars.length; i++) {
         var item = availableAvatars[i];
         var isSel = (normalizeAvatarValue(item.src) === normalizeAvatarValue(currentAvatar));
+        if (isSel) selectedIndex = i;
         html += '<button type="button" class="avatar-modal-card' + (isSel ? ' selected' : '') + '" onclick="selectAvatar(\'' + item.src + '\')">';
         html += '<span class="avatar-modal-thumb-wrap" style="--avatar-accent:' + item.accent + '">' + avatarMarkup(item.src, item.label, 'avatar-modal-thumb') + '</span>';
         html += '<span class="avatar-modal-label">' + item.label + '</span>';
@@ -107,6 +110,12 @@ window.openAvatarModal = function() {
     }
     grid.innerHTML = html;
     modal.classList.remove('hidden');
+    setTimeout(function() {
+        var selectedCard = grid.children[selectedIndex];
+        if (selectedCard && selectedCard.scrollIntoView) {
+            selectedCard.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+    }, 60);
 };
 
 window.closeAvatarModal = function() {
@@ -242,6 +251,7 @@ function exitQuizToHome() {
     quizAnswers = [];
     quizScore = 0;
     quizStreak = 0;
+    setQuizFocusMode(false);
     
     // Volver al inicio usando la navegación de la SPA
     navigateTo('inicio');
@@ -249,6 +259,7 @@ function exitQuizToHome() {
 window.exitQuizToHome = exitQuizToHome;
 
 function showLogin() {
+    setQuizFocusMode(false);
     document.getElementById('login-screen').classList.remove('hidden');
     document.getElementById('app-shell').classList.add('hidden');
     var emailEl = document.getElementById('login-email');
@@ -487,11 +498,22 @@ function setLoginLoading(loading) {
 
 var currentPage = 'inicio';
 
+function setQuizFocusMode(active) {
+    if (document.body) {
+        document.body.classList.toggle('quiz-focus-mode', !!active);
+    }
+    var appShell = document.getElementById('app-shell');
+    if (appShell) {
+        appShell.classList.toggle('quiz-focus-mode', !!active);
+    }
+}
+
 function navigateTo(page, skipPush) {
     if (page === 'quiz' && typeof quizData === 'undefined' || (page === 'quiz' && !quizData)) {
         page = 'historial'; // Redirect to historial if reloading the quiz page without active session
     }
     currentPage = page;
+    setQuizFocusMode(page === 'quiz');
 
     var pages = document.querySelectorAll('.page');
     for (var i = 0; i < pages.length; i++) { pages[i].classList.remove('active'); }
@@ -2257,6 +2279,12 @@ function renderQuizQuestion() {
     var html = '';
     quizMultiSelections = [];
 
+    var optionsListEl = document.getElementById('quiz-options-list');
+    if (optionsListEl) {
+        optionsListEl.className = 'quiz-options-grid';
+        if (tipo === 'dnd') optionsListEl.classList.add('quiz-options-dnd');
+    }
+
     // Detectar encuesta sin opciones reales → tratar como pregunta abierta
     var isPollOpen = (tipo === 'poll' || tipo === 'encuesta') &&
         (opciones.length === 0 || opciones.every(function(o){ return !o.text || !o.text.trim(); }));
@@ -2304,11 +2332,11 @@ function renderQuizQuestion() {
         quizSelectedDndSlot = -1;
         quizDndMatches = {};
         
-        html += '<div style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">';
+        html += '<div class="quiz-dnd-builder" style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">';
         html += '  <p style="color:#fff; font-size:1.1rem; font-weight:800; text-align:center; background:rgba(0,0,0,0.3); padding:10px 20px; border-radius:12px; border:1px solid rgba(255,255,255,0.1);"><i class="fas fa-link" style="color:#A78BFA; margin-right:8px;"></i> Relaciona las partes: toca una etiqueta y su círculo (o viceversa).</p>';
         
         html += '  <div style="position:relative; display:inline-block; max-width:100%; border-radius:16px; overflow:hidden; border:4px solid rgba(255,255,255,0.2); background:#2D1B4E; box-shadow:0 12px 36px rgba(0,0,0,0.4);" id="dnd-student-container">';
-        html += '    <img src="' + imgUrl + '" style="max-width:100%; max-height:380px; display:block; user-select:none; pointer-events:none;">';
+        html += '    <img class="quiz-dnd-image" src="' + imgUrl + '" style="max-width:100%; max-height:380px; display:block; user-select:none; pointer-events:none;">';
         
         for (var i = 0; i < opciones.length; i++) {
             var o = opciones[i];

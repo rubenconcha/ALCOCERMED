@@ -4146,3 +4146,229 @@ body.is-native-app .sidebar { display: none !important; }
         border-radius: 13px;
     }
 }
+
+/* Modo juego: durante preguntas/resultados se oculta toda la navegacion. */
+body.quiz-focus-mode,
+body.quiz-focus-mode .app-shell {
+    overflow-x: hidden;
+}
+
+body.quiz-focus-mode .topbar,
+body.quiz-focus-mode .sidebar,
+body.quiz-focus-mode .bottom-nav,
+body.quiz-focus-mode .sidebar-overlay {
+    display: none !important;
+}
+
+body.quiz-focus-mode .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh !important;
+}
+
+body.quiz-focus-mode #page-quiz {
+    min-height: 100vh;
+    padding: 0 !important;
+}
+
+body.quiz-focus-mode #quiz-container {
+    min-height: 100vh;
+    height: 100vh !important;
+    max-width: 1100px;
+    padding: 0 12px 18px !important;
+}
+
+@supports (height: 100dvh) {
+    body.quiz-focus-mode .main-content,
+    body.quiz-focus-mode #page-quiz,
+    body.quiz-focus-mode #quiz-container {
+        min-height: 100dvh !important;
+    }
+
+    body.quiz-focus-mode #quiz-container {
+        height: 100dvh !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body.quiz-focus-mode #quiz-container {
+        padding: 0 10px 14px !important;
+    }
+}
+
+/* Ajustes moviles para preguntas de relacionar imagen con incisos. */
+.quiz-options-grid.quiz-options-dnd {
+    display: block;
+    flex: 0 0 auto;
+    min-height: 0;
+    overflow: visible;
+}
+
+.quiz-dnd-builder {
+    grid-column: 1 / -1;
+    max-width: 100%;
+}
+
+.quiz-dnd-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+body.quiz-focus-mode #page-quiz {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+body.quiz-focus-mode #quiz-container {
+    height: auto !important;
+    overflow: visible;
+}
+
+@media (max-width: 768px) {
+    body.quiz-focus-mode #quiz-container {
+        min-height: 100vh !important;
+        height: auto !important;
+        padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    body.quiz-focus-mode #quiz-question-card {
+        flex: 0 0 auto;
+        min-height: 92px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .quiz-options-grid.quiz-options-dnd {
+        padding-bottom: 22px;
+    }
+
+    .quiz-dnd-builder {
+        gap: 10px !important;
+    }
+
+    .quiz-dnd-builder > p {
+        width: 100%;
+        margin: 0 !important;
+        padding: 8px 10px !important;
+        font-size: 0.86rem !important;
+        line-height: 1.3 !important;
+    }
+
+    #dnd-student-container {
+        width: 100%;
+        border-width: 2px !important;
+        border-radius: 12px !important;
+    }
+
+    #dnd-student-container .quiz-dnd-image {
+        max-height: min(34vh, 260px) !important;
+    }
+
+    #dnd-labels-container {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 8px !important;
+        width: 100%;
+        margin-top: 2px !important;
+    }
+
+    #dnd-labels-container .quiz-dnd-label-btn {
+        width: 100%;
+        min-height: 44px !important;
+        padding: 10px 12px !important;
+        font-size: 0.9rem !important;
+        line-height: 1.25 !important;
+        text-align: left !important;
+    }
+
+    #quiz-confirm-dnd {
+        margin-top: 2px !important;
+        padding: 13px 16px !important;
+        min-height: 48px;
+        font-size: 1rem !important;
+        position: sticky;
+        bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+        z-index: 25;
+    }
+}
+
+@media (max-width: 380px) {
+    #dnd-student-container .quiz-dnd-image {
+        max-height: 30vh !important;
+    }
+
+    #dnd-labels-container .quiz-dnd-label-btn {
+        min-height: 40px !important;
+        padding: 9px 10px !important;
+        font-size: 0.84rem !important;
+    }
+}
+
+/* Selector de avatar en carrusel horizontal, uno por uno. */
+.avatar-modal-panel {
+    overflow: hidden;
+}
+
+#avatar-grid.avatar-carousel {
+    display: flex !important;
+    grid-template-columns: none !important;
+    gap: 14px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 18px;
+    padding: 4px 8px 16px;
+    margin: 0 -8px 24px !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+#avatar-grid.avatar-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+#avatar-grid.avatar-carousel::-webkit-scrollbar-thumb {
+    background: rgba(148,163,184,.45);
+    border-radius: 999px;
+}
+
+#avatar-grid.avatar-carousel .avatar-modal-card {
+    flex: 0 0 min(74vw, 250px);
+    min-height: 190px;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#avatar-grid.avatar-carousel .avatar-modal-thumb-wrap {
+    width: 116px;
+    height: 116px;
+    border-radius: 28px;
+}
+
+#avatar-grid.avatar-carousel .avatar-modal-label {
+    font-size: 0.94rem;
+}
+
+@media (max-width: 480px) {
+    #avatar-modal {
+        padding: 14px !important;
+    }
+
+    .avatar-modal-panel {
+        padding: 24px 16px !important;
+        max-width: 100% !important;
+    }
+
+    #avatar-grid.avatar-carousel {
+        scroll-padding: 12px;
+        padding-inline: 6px;
+        margin-inline: -6px !important;
+    }
+
+    #avatar-grid.avatar-carousel .avatar-modal-card {
+        flex-basis: calc(100% - 18px);
+        min-height: 210px;
+    }
+}
