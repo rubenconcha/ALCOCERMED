@@ -23,9 +23,9 @@ var availableAvatars = [
     { id: 'sofia',     label: 'Sofía',     gender: 'female', src: './assets/avatars/sofia.png',     accent: '#22c55e', keyColor: '#228d35', variantSrcs: { cap: './assets/avatars/sofia_cap.png', stethoscope: './assets/avatars/sofia_stethoscope.png' } },
     { id: 'andres',    label: 'Andrés',    gender: 'male',   src: './assets/avatars/andres.png',     accent: '#ec4899', keyColor: '#ef5ba7' },
     { id: 'valentina', label: 'Valentina', gender: 'female', src: './assets/avatars/valentina.png', accent: '#facc15', keyColor: '#dfaf1c' },
-    { id: 'diego',     label: 'Diego',     gender: 'male',   src: './assets/avatars/diego.png',     accent: '#06b6d4', keyColor: '#0a9ca8' },
+    { id: 'diego',     label: 'Diego',     gender: 'male',   src: './assets/avatars/diego.png',     accent: '#06b6d4', keyColor: '#0a9ca8', variantSrcs: { cap: './assets/avatars/diego_cap.png', stethoscope: './assets/avatars/diego_stethoscope.png' } },
     { id: 'bruno',     label: 'Bruno',     gender: 'male',   src: './assets/avatars/bruno.png',     accent: '#f97316', keyColor: '#f08414' },
-    { id: 'sebastian', label: 'Sebastián', gender: 'male',   src: './assets/avatars/sebastian.png', accent: '#38bdf8', keyColor: '#39a7ee' },
+    { id: 'sebastian', label: 'Sebastián', gender: 'male',   src: './assets/avatars/sebastian.png', accent: '#f97316', keyColor: '#f08414', variantSrcs: { cap: './assets/avatars/sebastian_cap.png', stethoscope: './assets/avatars/sebastian_stethoscope.png' } },
     { id: 'camila',    label: 'Camila',    gender: 'female', src: './assets/avatars/camila.png',    accent: '#c084fc', keyColor: '#b17ae8' },
     { id: 'paula',     label: 'Paula',     gender: 'female', src: './assets/avatars/paula.png',    accent: '#86efac', keyColor: '#9bd7c9' },
     { id: 'emilia',    label: 'Emilia',    gender: 'female', src: './assets/avatars/emilia.png',    accent: '#14b8a6', keyColor: '#09b0b3' }
@@ -385,11 +385,59 @@ function refreshCurrentAvatarUI() {
     setAvatarContent(topbarAvatar, currentAvatar, 'Avatar de usuario', 'topbar-avatar-media');
 }
 
+function getCurrentUserDisplayName() {
+    if (!currentUser) return 'Estudiante';
+    return currentUser.user_metadata && currentUser.user_metadata.full_name
+        ? currentUser.user_metadata.full_name
+        : (currentUser.email || 'Estudiante').split('@')[0];
+}
+
+function avatarStorageKey() {
+    return currentUser && currentUser.id ? 'alcocermed_avatar_' + currentUser.id : '';
+}
+
+function getStoredAvatarValue(seedName) {
+    var key = avatarStorageKey();
+    if (!key) return '';
+    try {
+        return localStorage.getItem(key) || '';
+    } catch (e) {
+        return '';
+    }
+}
+
+function storeAvatarValue(value) {
+    var key = avatarStorageKey();
+    if (!key) return;
+    try {
+        localStorage.setItem(key, value);
+    } catch (e) {}
+}
+
+function syncParticipantAvatarRows() {
+    if (!currentUser) return;
+    var client = getSupabase();
+    if (!client) return;
+    var nombreConAvatar = currentAvatar + '|' + getCurrentUserDisplayName();
+    client.from('evaluacion_participantes')
+        .update({ nombre: nombreConAvatar })
+        .eq('user_id', currentUser.id)
+        .then(function(res) {
+            if (res && res.error) console.warn('No se pudo sincronizar avatar en participantes:', res.error.message);
+        });
+}
+
 function initAvatars() {
-    if (currentUser && currentUser.user_metadata && currentUser.user_metadata.avatar) {
-        currentAvatar = normalizeAvatarValue(currentUser.user_metadata.avatar, currentUser.user_metadata.full_name || currentUser.email || 'avatar');
+    var seedName = currentUser && (currentUser.user_metadata && currentUser.user_metadata.full_name || currentUser.email) || 'avatar';
+    var metadataAvatar = currentUser && currentUser.user_metadata && currentUser.user_metadata.avatar ? currentUser.user_metadata.avatar : '';
+    var storedAvatar = getStoredAvatarValue(seedName);
+    if (metadataAvatar) {
+        currentAvatar = normalizeAvatarValue(metadataAvatar, seedName);
+        storeAvatarValue(currentAvatar);
+    } else if (storedAvatar) {
+        currentAvatar = normalizeAvatarValue(storedAvatar, seedName);
     } else {
-        currentAvatar = normalizeAvatarValue(currentAvatar, currentUser && (currentUser.user_metadata && currentUser.user_metadata.full_name || currentUser.email) || 'avatar');
+        currentAvatar = normalizeAvatarValue(currentAvatar, seedName);
     }
     refreshCurrentAvatarUI();
 }
@@ -517,11 +565,24 @@ window.chooseAvatarAccessory = function(accessory) {
 };
 
 window.saveAvatarSelection = function() {
-    currentAvatar = normalizeAvatarValue(avatarDraftConfig || currentAvatar, currentUser && ((currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email) || 'avatar');
+    var seedName = currentUser && ((currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email) || 'avatar';
+    currentAvatar = normalizeAvatarValue(avatarDraftConfig || currentAvatar, seedName);
+    storeAvatarValue(currentAvatar);
     refreshCurrentAvatarUI();
     if (currentUser) {
         var client = getSupabase();
-        client.auth.updateUser({ data: { avatar: currentAvatar } });
+        var newMetadata = Object.assign({}, currentUser.user_metadata || {}, { avatar: currentAvatar });
+        currentUser.user_metadata = newMetadata;
+        syncParticipantAvatarRows();
+        if (client) {
+            client.auth.updateUser({ data: { avatar: currentAvatar } }).then(function(result) {
+                if (result && result.data && result.data.user) currentUser = result.data.user;
+                if (result && result.error) {
+                    console.warn('No se pudo guardar avatar en Supabase:', result.error.message);
+                    alert('Guardé el avatar en esta cuenta local, pero Supabase no confirmó el cambio. Intenta de nuevo si no aparece en otro dispositivo.');
+                }
+            });
+        }
     }
     closeAvatarModal();
 };
