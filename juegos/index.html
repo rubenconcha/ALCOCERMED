@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=41">
+  <link rel="stylesheet" href="styles.css?v=42">
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
@@ -112,6 +112,10 @@
           <i class="fas fa-chevron-down user-menu-chevron" aria-hidden="true"></i>
         </button>
         <div class="user-menu-dropdown hidden" id="user-menu-dropdown" role="menu">
+          <button type="button" class="user-menu-item" id="user-menu-avatar" role="menuitem">
+            <i class="fas fa-shirt" aria-hidden="true"></i>
+            Personalizar avatar
+          </button>
           <button type="button" class="user-menu-item user-menu-item--danger" id="user-menu-logout" role="menuitem">
             <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
             Cerrar sesión
@@ -637,18 +641,47 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=36"></script>
+<script src="app.js?v=37"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->
 <div id="avatar-modal" class="hidden" style="position:fixed;inset:0;background:rgba(15,23,42,.8);backdrop-filter:blur(8px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;">
-  <div class="avatar-modal-panel" style="background:var(--bg-card);border-radius:24px;width:100%;max-width:430px;padding:32px 24px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1)">
-    <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:8px">Elige tu Avatar</h2>
-    <p style="font-size:.9rem;color:var(--text-mid);margin-bottom:24px">Toca el personaje que más te guste para representarte</p>
-    <div id="avatar-grid" class="avatar-carousel" style="display:flex;gap:14px;margin-bottom:24px">
-      <!-- Llenado por JS -->
+  <div class="avatar-modal-panel avatar-editor-panel" style="background:var(--bg-card);border-radius:24px;width:100%;max-width:460px;padding:28px 22px;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1)">
+    <div class="avatar-editor-head">
+      <div>
+        <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:8px">Personaliza tu avatar</h2>
+        <p style="font-size:.9rem;color:var(--text-mid)">Elige personaje, color de ropa y accesorios</p>
+      </div>
+      <button type="button" class="avatar-modal-close" onclick="closeAvatarModal()"><i class="fas fa-times"></i></button>
     </div>
-    <button onclick="closeAvatarModal()" style="width:100%;padding:14px;background:var(--bg-hover);color:var(--text-main);border:none;border-radius:12px;font-weight:700;cursor:pointer;transition:background 0.2s">Cerrar</button>
+
+    <div class="avatar-preview-card">
+      <div id="avatar-preview-stage" class="avatar-preview-stage"></div>
+      <div class="avatar-preview-copy">
+        <strong>Vista previa</strong>
+        <span>Así aparecerás en evaluaciones, ranking y podio.</span>
+      </div>
+    </div>
+
+    <div class="avatar-editor-section">
+      <h3>1. Personaje</h3>
+      <div id="avatar-grid" class="avatar-grid"></div>
+    </div>
+
+    <div class="avatar-editor-section">
+      <h3>2. Color de ropa</h3>
+      <div id="avatar-color-options" class="avatar-color-options"></div>
+    </div>
+
+    <div class="avatar-editor-section">
+      <h3>3. Accesorios</h3>
+      <div id="avatar-accessory-options" class="avatar-accessory-options"></div>
+    </div>
+
+    <div class="avatar-editor-actions">
+      <button type="button" class="avatar-editor-btn avatar-editor-btn-secondary" onclick="closeAvatarModal()">Cancelar</button>
+      <button type="button" class="avatar-editor-btn avatar-editor-btn-primary" onclick="saveAvatarSelection()">Guardar avatar</button>
+    </div>
   </div>
 </div>
 

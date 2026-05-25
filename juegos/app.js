@@ -14,48 +14,470 @@ var isAdmin = false;
 // ═══ AUDIO GLOBAL Y AVATARES ═══
 var globalAudioCtx = null;
 var preloadedAudio = {};
-var currentAvatar = './assets/avatars/carlos.png';
-var availableAvatars = [
-    { id: 'carlos',    label: 'Carlos',    src: './assets/avatars/carlos.png',    accent: '#ef4444' },
-    { id: 'lucia',     label: 'Lucía',     src: './assets/avatars/lucia.png',     accent: '#8b5cf6' },
-    { id: 'mateo',     label: 'Mateo',     src: './assets/avatars/mateo.png',     accent: '#1d4ed8' },
-    { id: 'sofia',     label: 'Sofía',     src: './assets/avatars/sofia.png',     accent: '#f472b6' },
-    { id: 'andres',    label: 'Andrés',    src: './assets/avatars/andres.png',    accent: '#06b6d4' },
-    { id: 'valentina', label: 'Valentina', src: './assets/avatars/valentina.png', accent: '#facc15' },
-    { id: 'diego',     label: 'Diego',     src: './assets/avatars/diego.png',     accent: '#22c55e' }
-];
-var avatarFallbackPool = availableAvatars.map(function(item) { return item.src; });
 
-function avatarIndexFromSeed(seed) {
+var currentAvatar = 'avatarcfg:%7B%22base%22%3A%22carlos%22%2C%22outfitColor%22%3A%22%23ef4444%22%2C%22accessory%22%3A%22none%22%7D';
+var availableAvatars = [
+    { id: 'carlos',    label: 'Carlos',    gender: 'male',   src: './assets/avatars/carlos.png',    accent: '#ef4444', keyColor: '#cf2029' },
+    { id: 'lucia',     label: 'Lucía',     gender: 'female', src: './assets/avatars/lucia.png',     accent: '#8b5cf6', keyColor: '#6b2ec8' },
+    { id: 'mateo',     label: 'Mateo',     gender: 'male',   src: './assets/avatars/mateo.png',     accent: '#1d4ed8', keyColor: '#273866' },
+    { id: 'sofia',     label: 'Sofía',     gender: 'female', src: './assets/avatars/bruno.png',     accent: '#22c55e', keyColor: '#228d35' },
+    { id: 'andres',    label: 'Andrés',    gender: 'male',   src: './assets/avatars/paula.png',     accent: '#ec4899', keyColor: '#ef5ba7' },
+    { id: 'valentina', label: 'Valentina', gender: 'female', src: './assets/avatars/valentina.png', accent: '#facc15', keyColor: '#dfaf1c' },
+    { id: 'diego',     label: 'Diego',     gender: 'male',   src: './assets/avatars/diego.png',     accent: '#06b6d4', keyColor: '#0a9ca8' },
+    { id: 'bruno',     label: 'Bruno',     gender: 'male',   src: './assets/avatars/sofia.png',     accent: '#f97316', keyColor: '#f08414' },
+    { id: 'sebastian', label: 'Sebastián', gender: 'male',   src: './assets/avatars/sebastian.png', accent: '#38bdf8', keyColor: '#39a7ee' },
+    { id: 'camila',    label: 'Camila',    gender: 'female', src: './assets/avatars/camila.png',    accent: '#c084fc', keyColor: '#b17ae8' },
+    { id: 'paula',     label: 'Paula',     gender: 'female', src: './assets/avatars/andres.png',    accent: '#86efac', keyColor: '#9bd7c9' },
+    { id: 'emilia',    label: 'Emilia',    gender: 'female', src: './assets/avatars/emilia.png',    accent: '#14b8a6', keyColor: '#09b0b3' }
+];
+var avatarLegacyPathMap = {
+    'andres.png': 'andres',
+    'bruno.png': 'bruno',
+    'paula.png': 'paula',
+    'sofia.png': 'sofia'
+};
+var avatarColorOptions = [
+    { id: 'rojo',      label: 'Rojo',      value: '#ef4444' },
+    { id: 'naranja',   label: 'Naranja',   value: '#f97316' },
+    { id: 'amarillo',  label: 'Amarillo',  value: '#eab308' },
+    { id: 'verde',     label: 'Verde',     value: '#22c55e' },
+    { id: 'menta',     label: 'Menta',     value: '#2dd4bf' },
+    { id: 'celeste',   label: 'Celeste',   value: '#38bdf8' },
+    { id: 'azul',      label: 'Azul',      value: '#2563eb' },
+    { id: 'morado',    label: 'Morado',    value: '#a855f7' },
+    { id: 'rosa',      label: 'Rosa',      value: '#ec4899' },
+    { id: 'blanco',    label: 'Blanco',    value: '#f3f4f6' }
+];
+var avatarAccessoryOptions = [
+    { id: 'none',          label: 'Sin accesorio' },
+    { id: 'cap',           label: 'Gorra' },
+    { id: 'glasses',       label: 'Lentes' },
+    { id: 'sunglasses',    label: 'Lentes negros' },
+    { id: 'headphones',    label: 'Audífonos' },
+    { id: 'stethoscope',   label: 'Estetoscopio' }
+];
+var avatarFallbackPool = availableAvatars.map(function(item) { return item.id; });
+var avatarFallbackPoolsByGender = {
+    male: availableAvatars.filter(function(item) { return item.gender === 'male'; }).map(function(item) { return item.id; }),
+    female: availableAvatars.filter(function(item) { return item.gender === 'female'; }).map(function(item) { return item.id; })
+};
+var avatarDraftConfig = null;
+var avatarTintCache = {};
+var avatarTintPending = {};
+var avatarRenderObserver = null;
+var avatarHydrateTimer = null;
+
+function avatarIndexFromSeed(seed, pool) {
+    pool = pool || avatarFallbackPool;
     var str = String(seed || 'alcocermed');
     var total = 0;
     for (var i = 0; i < str.length; i++) total += str.charCodeAt(i) * (i + 1);
-    return total % avatarFallbackPool.length;
+    return total % pool.length;
+}
+
+function normalizeAvatarSeedName(seedName) {
+    return String(seedName || '').trim().toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-zñ\s-]/g, ' ')
+        .replace(/\s+/g, ' ');
+}
+
+function inferAvatarGender(seedName) {
+    var cleaned = normalizeAvatarSeedName(seedName);
+    var first = cleaned.split(/[\s-]+/)[0] || '';
+    var femaleNames = {
+        alejandra:1, alicia:1, ana:1, andrea:1, angela:1, antonella:1, belen:1, camila:1, carla:1,
+        carolina:1, catalina:1, cecilia:1, clara:1, daniela:1, elena:1, emilia:1, fernanda:1,
+        gabriela:1, isabel:1, julia:1, laura:1, lucia:1, luisa:1, maria:1, mariana:1,
+        martina:1, natalia:1, paola:1, paula:1, romina:1, sarah:1, sofia:1, valentina:1,
+        valeria:1, victoria:1
+    };
+    var maleNames = {
+        alejandro:1, andres:1, antonio:1, bruno:1, carlos:1, cristian:1, daniel:1, david:1,
+        diego:1, eduardo:1, emiliano:1, fernando:1, francisco:1, gabriel:1, javier:1,
+        jose:1, juan:1, luis:1, manuel:1, mario:1, martin:1, mateo:1, matias:1,
+        miguel:1, nicolas:1, pablo:1, pedro:1, rafael:1, ricardo:1, roberto:1,
+        ruben:1, samuel:1, sebastian:1, sergio:1, victor:1
+    };
+    if (femaleNames[first]) return 'female';
+    if (maleNames[first]) return 'male';
+    if (first.length > 2 && /a$/.test(first) && !/ias$/.test(first)) return 'female';
+    if (first.length > 2 && /(o|os|el|an|er|es|is|or)$/.test(first)) return 'male';
+    return '';
+}
+
+function pickFallbackAvatarId(seedName) {
+    var gender = inferAvatarGender(seedName);
+    var pool = avatarFallbackPoolsByGender[gender] || avatarFallbackPool;
+    return pool[avatarIndexFromSeed(seedName, pool)];
+}
+
+function findAvatarDef(value, seedName) {
+    var raw = value == null ? '' : String(value).trim();
+    if (raw) {
+        var legacyName = (raw.split(/[\\/]/).pop() || '').split('?')[0].toLowerCase();
+        if (avatarLegacyPathMap[legacyName]) raw = avatarLegacyPathMap[legacyName];
+        for (var i = 0; i < availableAvatars.length; i++) {
+            var item = availableAvatars[i];
+            if (raw === item.id || raw === item.src || raw === ('/' + item.src).replace(/^\.\//,'' ) || raw.toLowerCase() === item.label.toLowerCase()) return item;
+            if (raw.indexOf('/' + item.src.replace(/^\.\//,'')) !== -1) return item;
+        }
+    }
+    return getAvatarDefById(pickFallbackAvatarId(seedName || raw));
+}
+
+function getAvatarDefById(id, seedName) {
+    return findAvatarDef(id, seedName);
+}
+
+function safeHexColor(value, fallback) {
+    var raw = String(value || '').trim();
+    if (/^#[0-9a-fA-F]{6}$/.test(raw)) return raw;
+    return fallback || '#6366f1';
+}
+
+function ensureAvatarConfig(config, seedName) {
+    var def = findAvatarDef(config && (config.base || config.src || config.id), seedName);
+    return {
+        base: def.id,
+        outfitColor: safeHexColor(config && config.outfitColor, def.accent),
+        accessory: (config && config.accessory) || 'none'
+    };
+}
+
+function encodeAvatarConfig(config, seedName) {
+    var normalized = ensureAvatarConfig(config || {}, seedName);
+    return 'avatarcfg:' + encodeURIComponent(JSON.stringify(normalized));
+}
+
+function decodeAvatarConfig(value, seedName) {
+    var raw = value == null ? '' : String(value).trim();
+    if (!raw || raw === '👤' || raw === '🧑‍🎓') {
+        return ensureAvatarConfig({ base: pickFallbackAvatarId(seedName || raw) }, seedName);
+    }
+    if (raw.indexOf('avatarcfg:') === 0) {
+        try {
+            return ensureAvatarConfig(JSON.parse(decodeURIComponent(raw.slice(10))), seedName);
+        } catch (e) {
+            console.warn('Error parseando avatar config', e);
+        }
+    }
+    var def = findAvatarDef(raw, seedName);
+    if (def) return ensureAvatarConfig({ base: def.id }, seedName);
+    return ensureAvatarConfig({ base: pickFallbackAvatarId(seedName || raw) }, seedName);
 }
 
 function normalizeAvatarValue(value, seedName) {
-    var raw = value == null ? '' : String(value).trim();
-    if (!raw || raw === '👤' || raw === '🧑‍🎓') return avatarFallbackPool[avatarIndexFromSeed(seedName || raw)];
-    if (raw.indexOf('./assets/avatars/') === 0 || raw.indexOf('/assets/avatars/') === 0 || raw.indexOf('assets/avatars/') === 0) return raw;
-    if (raw.indexOf('http://') === 0 || raw.indexOf('https://') === 0) return raw;
-    for (var i = 0; i < availableAvatars.length; i++) {
-        var item = availableAvatars[i];
-        if (raw === item.id || raw.toLowerCase() === item.label.toLowerCase()) return item.src;
+    return encodeAvatarConfig(decodeAvatarConfig(value, seedName), seedName);
+}
+
+function resolveAvatarSrc(value, seedName) {
+    var cfg = decodeAvatarConfig(value, seedName);
+    return getAvatarDefById(cfg.base, seedName).src;
+}
+
+function escapeHtml(value) {
+    return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function accessorySvg(type) {
+    if (type === 'cap') {
+        return '<span class="avatar-accessory avatar-accessory-cap" aria-hidden="true"><svg viewBox="0 0 120 80" fill="none"><path d="M20 44c7-18 24-30 44-30 17 0 34 8 46 24-18 4-36 8-54 10-14 2-25 1-36-4z" fill="#111827"/><path d="M16 45c10 5 23 6 38 4 20-3 39-7 55-11 5 5 8 10 9 16-24 7-47 11-68 12-15 1-28-2-39-9 0-5 2-9 5-12z" fill="#1f2937"/></svg></span>';
     }
-    if (/\.(png|jpe?g|webp|gif|svg)$/i.test(raw)) return raw;
-    return avatarFallbackPool[avatarIndexFromSeed(seedName || raw)];
+    if (type === 'glasses') {
+        return '<span class="avatar-accessory avatar-accessory-glasses" aria-hidden="true"><svg viewBox="0 0 120 42" fill="none" stroke="#111827" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="10" rx="10" ry="10" width="34" height="22"/><rect x="76" y="10" rx="10" ry="10" width="34" height="22"/><path d="M44 20h32"/><path d="M4 18h6"/><path d="M110 18h6"/></svg></span>';
+    }
+    if (type === 'sunglasses') {
+        return '<span class="avatar-accessory avatar-accessory-glasses avatar-accessory-sunglasses" aria-hidden="true"><svg viewBox="0 0 120 42" fill="none" stroke="#111827" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="10" rx="10" ry="10" width="34" height="22" fill="#111827"/><rect x="76" y="10" rx="10" ry="10" width="34" height="22" fill="#111827"/><path d="M44 20h32"/><path d="M4 18h6"/><path d="M110 18h6"/></svg></span>';
+    }
+    if (type === 'headphones') {
+        return '<span class="avatar-accessory avatar-accessory-headphones" aria-hidden="true"><svg viewBox="0 0 120 80" fill="none"><path d="M18 46c0-24 18-40 42-40s42 16 42 40" stroke="#111827" stroke-width="8" stroke-linecap="round"/><rect x="10" y="40" width="18" height="24" rx="8" fill="#111827"/><rect x="92" y="40" width="18" height="24" rx="8" fill="#111827"/><path d="M24 50c0 9 3 15 10 18" stroke="#4b5563" stroke-width="4" stroke-linecap="round"/><path d="M96 50c0 9-3 15-10 18" stroke="#4b5563" stroke-width="4" stroke-linecap="round"/></svg></span>';
+    }
+    if (type === 'stethoscope') {
+        return '<span class="avatar-accessory avatar-accessory-stethoscope" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M40 18v24c0 12 8 20 20 20s20-8 20-20V18"/><path d="M32 18h16"/><path d="M72 18h16"/><path d="M48 62v18c0 15 12 27 27 27h6"/><circle cx="89" cy="92" r="11" fill="#fff"/><path d="M89 81v-12"/></svg></span>';
+    }
+    return '';
 }
 
 function avatarMarkup(value, alt, extraClass) {
-    var src = normalizeAvatarValue(value, alt);
-    return '<img src="' + src + '" alt="' + (alt || 'Avatar') + '" class="' + (extraClass || 'avatar-media') + '">';
+    var cfg = decodeAvatarConfig(value, alt);
+    var def = getAvatarDefById(cfg.base, alt);
+    var cls = extraClass || 'avatar-media';
+    return '<span class="avatar-render ' + cls + '" data-avatar-src="' + escapeHtml(def.src) + '" data-avatar-color="' + escapeHtml(cfg.outfitColor) + '" data-avatar-accessory="' + escapeHtml(cfg.accessory) + '" data-avatar-key-color="' + escapeHtml(def.keyColor || def.accent) + '"><img src="' + escapeHtml(def.src) + '" alt="' + escapeHtml(alt || 'Avatar') + '" class="avatar-render-base ' + cls + '">' + accessorySvg(cfg.accessory) + '</span>';
+}
+
+function scheduleAvatarHydration(root) {
+    clearTimeout(avatarHydrateTimer);
+    avatarHydrateTimer = setTimeout(function() { hydrateRenderedAvatars(root || document); }, 10);
 }
 
 function setAvatarContent(el, value, alt, extraClass) {
     if (!el) return;
     el.innerHTML = avatarMarkup(value, alt, extraClass);
+    scheduleAvatarHydration(el);
 }
 
+function hexToRgb(hex) {
+    var clean = safeHexColor(hex, '#6366f1').replace('#', '');
+    return {
+        r: parseInt(clean.slice(0,2), 16),
+        g: parseInt(clean.slice(2,4), 16),
+        b: parseInt(clean.slice(4,6), 16)
+    };
+}
+
+function rgbToHsl(r, g, b) {
+    r /= 255; g /= 255; b /= 255;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var h, s, l = (max + min) / 2;
+    if (max === min) {
+        h = s = 0;
+    } else {
+        var d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / d + 2; break;
+            case b: h = (r - g) / d + 4; break;
+        }
+        h /= 6;
+    }
+    return { h: h, s: s, l: l };
+}
+
+function hslToRgb(h, s, l) {
+    var r, g, b;
+    if (s === 0) {
+        r = g = b = l;
+    } else {
+        function hue2rgb(p, q, t) {
+            if (t < 0) t += 1;
+            if (t > 1) t -= 1;
+            if (t < 1/6) return p + (q - p) * 6 * t;
+            if (t < 1/2) return q;
+            if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+    }
+    return { r: Math.round(r * 255), g: Math.round(g * 255), b: Math.round(b * 255) };
+}
+
+function hueDistance(a, b) {
+    var d = Math.abs(a - b);
+    return Math.min(d, 1 - d);
+}
+
+function recolorAvatarToDataUrl(baseSrc, targetColor, keyColor, done) {
+    var cacheKey = [baseSrc, targetColor, keyColor].join('|');
+    if (avatarTintCache[cacheKey]) {
+        done(avatarTintCache[cacheKey]);
+        return;
+    }
+    if (avatarTintPending[cacheKey]) {
+        avatarTintPending[cacheKey].push(done);
+        return;
+    }
+    avatarTintPending[cacheKey] = [done];
+    var img = new Image();
+    img.onload = function() {
+        var canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+        var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        var data = imageData.data;
+        var keyRgb = hexToRgb(keyColor);
+        var keyHsl = rgbToHsl(keyRgb.r, keyRgb.g, keyRgb.b);
+        var targetRgb = hexToRgb(targetColor);
+        var targetHsl = rgbToHsl(targetRgb.r, targetRgb.g, targetRgb.b);
+        for (var i = 0; i < data.length; i += 4) {
+            var alpha = data[i + 3];
+            if (alpha < 8) continue;
+            var r = data[i], g = data[i + 1], b = data[i + 2];
+            var rgbDist = Math.sqrt(Math.pow(r - keyRgb.r, 2) + Math.pow(g - keyRgb.g, 2) + Math.pow(b - keyRgb.b, 2));
+            var hsl = rgbToHsl(r, g, b);
+            var hueDiff = hueDistance(hsl.h, keyHsl.h);
+            if ((rgbDist < 130 || (hueDiff < 0.10 && hsl.s > 0.2)) && hsl.l > 0.10 && hsl.l < 0.92) {
+                var recolored = hslToRgb(targetHsl.h, Math.max(hsl.s, targetHsl.s * 0.75), hsl.l);
+                data[i] = recolored.r;
+                data[i + 1] = recolored.g;
+                data[i + 2] = recolored.b;
+            }
+        }
+        ctx.putImageData(imageData, 0, 0);
+        var dataUrl = canvas.toDataURL('image/png');
+        avatarTintCache[cacheKey] = dataUrl;
+        var queue = avatarTintPending[cacheKey] || [];
+        delete avatarTintPending[cacheKey];
+        for (var q = 0; q < queue.length; q++) queue[q](dataUrl);
+    };
+    img.onerror = function() {
+        var queue = avatarTintPending[cacheKey] || [];
+        delete avatarTintPending[cacheKey];
+        avatarTintCache[cacheKey] = baseSrc;
+        for (var q = 0; q < queue.length; q++) queue[q](baseSrc);
+    };
+    img.src = baseSrc;
+}
+
+function hydrateRenderedAvatars(root) {
+    var scope = root && root.querySelectorAll ? root : document;
+    var renders = scope.querySelectorAll ? scope.querySelectorAll('.avatar-render') : [];
+    for (var i = 0; i < renders.length; i++) {
+        (function(node) {
+            var img = node.querySelector('img');
+            if (!img) return;
+            var src = node.getAttribute('data-avatar-src') || img.getAttribute('src');
+            var color = safeHexColor(node.getAttribute('data-avatar-color'), '#6366f1');
+            var keyColor = safeHexColor(node.getAttribute('data-avatar-key-color'), color);
+            recolorAvatarToDataUrl(src, color, keyColor, function(dataUrl) {
+                img.setAttribute('src', dataUrl);
+            });
+        })(renders[i]);
+    }
+}
+
+function initAvatarRenderObserver() {
+    if (avatarRenderObserver || !document.body || typeof MutationObserver === 'undefined') {
+        hydrateRenderedAvatars(document);
+        return;
+    }
+    avatarRenderObserver = new MutationObserver(function(mutations) {
+        for (var i = 0; i < mutations.length; i++) {
+            for (var j = 0; j < mutations[i].addedNodes.length; j++) {
+                var node = mutations[i].addedNodes[j];
+                if (node.nodeType === 1) scheduleAvatarHydration(node);
+            }
+        }
+    });
+    avatarRenderObserver.observe(document.body, { childList: true, subtree: true });
+    hydrateRenderedAvatars(document);
+}
+
+function refreshCurrentAvatarUI() {
+    var disp = document.getElementById('current-avatar-display');
+    setAvatarContent(disp, currentAvatar, 'Tu avatar', 'avatar-choice-media');
+    var topbarAvatar = document.getElementById('topbar-avatar');
+    setAvatarContent(topbarAvatar, currentAvatar, 'Avatar de usuario', 'topbar-avatar-media');
+}
+
+function initAvatars() {
+    if (currentUser && currentUser.user_metadata && currentUser.user_metadata.avatar) {
+        currentAvatar = normalizeAvatarValue(currentUser.user_metadata.avatar, currentUser.user_metadata.full_name || currentUser.email || 'avatar');
+    } else {
+        currentAvatar = normalizeAvatarValue(currentAvatar, currentUser && (currentUser.user_metadata && currentUser.user_metadata.full_name || currentUser.email) || 'avatar');
+    }
+    refreshCurrentAvatarUI();
+}
+
+function avatarColorSwatchesHtml(selectedColor) {
+    var html = '';
+    for (var i = 0; i < avatarColorOptions.length; i++) {
+        var item = avatarColorOptions[i];
+        var selected = safeHexColor(selectedColor) === safeHexColor(item.value);
+        html += '<button type="button" class="avatar-color-chip' + (selected ? ' selected' : '') + '" title="' + escapeHtml(item.label) + '" onclick="chooseAvatarColor(\'' + item.value + '\')">';
+        html += '<span class="avatar-color-dot" style="background:' + item.value + '"></span>';
+        html += '<span>' + escapeHtml(item.label) + '</span>';
+        html += '</button>';
+    }
+    return html;
+}
+
+function avatarAccessoryOptionsHtml(selectedAccessory) {
+    var html = '';
+    for (var i = 0; i < avatarAccessoryOptions.length; i++) {
+        var item = avatarAccessoryOptions[i];
+        var selected = (selectedAccessory || 'none') === item.id;
+        html += '<button type="button" class="avatar-accessory-chip' + (selected ? ' selected' : '') + '" onclick="chooseAvatarAccessory(\'' + item.id + '\')">';
+        html += '<span>' + escapeHtml(item.label) + '</span>';
+        html += '</button>';
+    }
+    return html;
+}
+
+function avatarCardsHtml(selectedBase) {
+    var html = '';
+    for (var i = 0; i < availableAvatars.length; i++) {
+        var item = availableAvatars[i];
+        var cfg = { base: item.id, outfitColor: avatarDraftConfig ? avatarDraftConfig.outfitColor : item.accent, accessory: avatarDraftConfig ? avatarDraftConfig.accessory : 'none' };
+        var selected = selectedBase === item.id;
+        html += '<button type="button" class="avatar-modal-card' + (selected ? ' selected' : '') + '" onclick="chooseAvatarBase(\'' + item.id + '\')">';
+        html += '<span class="avatar-modal-thumb-wrap" style="--avatar-accent:' + item.accent + '">' + avatarMarkup(encodeAvatarConfig(cfg), item.label, 'avatar-modal-thumb') + '</span>';
+        html += '<span class="avatar-modal-label">' + escapeHtml(item.label) + '</span>';
+        html += '</button>';
+    }
+    return html;
+}
+
+function renderAvatarModal() {
+    var modal = document.getElementById('avatar-modal');
+    if (!modal || !avatarDraftConfig) return;
+    var preview = document.getElementById('avatar-preview-stage');
+    var grid = document.getElementById('avatar-grid');
+    var colors = document.getElementById('avatar-color-options');
+    var accessories = document.getElementById('avatar-accessory-options');
+    if (preview) preview.innerHTML = avatarMarkup(encodeAvatarConfig(avatarDraftConfig), 'Vista previa', 'avatar-preview-media');
+    if (grid) grid.innerHTML = avatarCardsHtml(avatarDraftConfig.base);
+    if (colors) colors.innerHTML = avatarColorSwatchesHtml(avatarDraftConfig.outfitColor);
+    if (accessories) accessories.innerHTML = avatarAccessoryOptionsHtml(avatarDraftConfig.accessory);
+    scheduleAvatarHydration(modal);
+}
+
+window.openAvatarModal = function() {
+    var modal = document.getElementById('avatar-modal');
+    if (!modal) return;
+    avatarDraftConfig = decodeAvatarConfig(currentAvatar, currentUser && ((currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email) || 'avatar');
+    renderAvatarModal();
+    modal.classList.remove('hidden');
+};
+
+window.closeAvatarModal = function() {
+    var modal = document.getElementById('avatar-modal');
+    if (modal) modal.classList.add('hidden');
+};
+
+window.chooseAvatarBase = function(baseId) {
+    avatarDraftConfig = ensureAvatarConfig({
+        base: baseId,
+        outfitColor: avatarDraftConfig ? avatarDraftConfig.outfitColor : getAvatarDefById(baseId).accent,
+        accessory: avatarDraftConfig ? avatarDraftConfig.accessory : 'none'
+    });
+    renderAvatarModal();
+};
+
+window.chooseAvatarColor = function(color) {
+    if (!avatarDraftConfig) avatarDraftConfig = decodeAvatarConfig(currentAvatar, 'avatar');
+    avatarDraftConfig.outfitColor = safeHexColor(color, avatarDraftConfig.outfitColor);
+    renderAvatarModal();
+};
+
+window.chooseAvatarAccessory = function(accessory) {
+    if (!avatarDraftConfig) avatarDraftConfig = decodeAvatarConfig(currentAvatar, 'avatar');
+    avatarDraftConfig.accessory = accessory || 'none';
+    renderAvatarModal();
+};
+
+window.saveAvatarSelection = function() {
+    currentAvatar = normalizeAvatarValue(avatarDraftConfig || currentAvatar, currentUser && ((currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email) || 'avatar');
+    refreshCurrentAvatarUI();
+    if (currentUser) {
+        var client = getSupabase();
+        client.auth.updateUser({ data: { avatar: currentAvatar } });
+    }
+    closeAvatarModal();
+};
+
+window.selectAvatar = function(a) {
+    var cfg = decodeAvatarConfig(a, currentUser && ((currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email) || 'avatar');
+    avatarDraftConfig = cfg;
+    saveAvatarSelection();
+};
 
 function getAudioCtx() {
     if (!globalAudioCtx) {
@@ -80,61 +502,6 @@ document.addEventListener('click', function() {
     if (!preloadedAudio['error']) preloadAudio('error', './error_sound.mp3');
     if (!preloadedAudio['hurry']) preloadAudio('hurry', './hurry_up.mp3');
 }, { once: true });
-
-function initAvatars() {
-    if (currentUser && currentUser.user_metadata && currentUser.user_metadata.avatar) {
-        currentAvatar = normalizeAvatarValue(currentUser.user_metadata.avatar, currentUser.user_metadata.full_name || currentUser.email || 'avatar');
-    } else {
-        currentAvatar = normalizeAvatarValue(currentAvatar, currentUser && (currentUser.user_metadata && currentUser.user_metadata.full_name || currentUser.email) || 'avatar');
-    }
-    var disp = document.getElementById('current-avatar-display');
-    setAvatarContent(disp, currentAvatar, 'Tu avatar', 'avatar-choice-media');
-}
-
-
-window.openAvatarModal = function() {
-    var modal = document.getElementById('avatar-modal');
-    var grid = document.getElementById('avatar-grid');
-    if (!modal || !grid) return;
-    grid.classList.add('avatar-carousel');
-    var html = '';
-    var selectedIndex = 0;
-    for (var i = 0; i < availableAvatars.length; i++) {
-        var item = availableAvatars[i];
-        var isSel = (normalizeAvatarValue(item.src) === normalizeAvatarValue(currentAvatar));
-        if (isSel) selectedIndex = i;
-        html += '<button type="button" class="avatar-modal-card' + (isSel ? ' selected' : '') + '" onclick="selectAvatar(\'' + item.src + '\')">';
-        html += '<span class="avatar-modal-thumb-wrap" style="--avatar-accent:' + item.accent + '">' + avatarMarkup(item.src, item.label, 'avatar-modal-thumb') + '</span>';
-        html += '<span class="avatar-modal-label">' + item.label + '</span>';
-        html += '</button>';
-    }
-    grid.innerHTML = html;
-    modal.classList.remove('hidden');
-    setTimeout(function() {
-        var selectedCard = grid.children[selectedIndex];
-        if (selectedCard && selectedCard.scrollIntoView) {
-            selectedCard.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        }
-    }, 60);
-};
-
-window.closeAvatarModal = function() {
-    var modal = document.getElementById('avatar-modal');
-    if (modal) modal.classList.add('hidden');
-};
-
-window.selectAvatar = function(a) {
-    currentAvatar = normalizeAvatarValue(a, currentUser && (currentUser.user_metadata && currentUser.user_metadata.full_name || currentUser.email) || 'avatar');
-    var disp = document.getElementById('current-avatar-display');
-    setAvatarContent(disp, currentAvatar, 'Tu avatar', 'avatar-choice-media');
-    var topbarAvatar = document.getElementById('topbar-avatar');
-    setAvatarContent(topbarAvatar, currentAvatar, 'Avatar de usuario', 'topbar-avatar-media');
-    if (currentUser) {
-        var client = getSupabase();
-        client.auth.updateUser({ data: { avatar: currentAvatar } });
-    }
-    closeAvatarModal();
-};
 
 window.showCustomConfirm = function(msg, callback) {
     var overlay = document.createElement('div');
@@ -4105,6 +4472,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     initUserMenu();
+    initAvatarRenderObserver();
 });
 
 /** Menú desplegable del usuario (cerrar sesión) */
@@ -4112,6 +4480,7 @@ function initUserMenu() {
     var wrap = document.getElementById('user-menu-wrap');
     var btn = document.getElementById('user-menu-btn');
     var menu = document.getElementById('user-menu-dropdown');
+    var avatarItem = document.getElementById('user-menu-avatar');
     var logoutItem = document.getElementById('user-menu-logout');
     if (!wrap || !btn || !menu) return;
 
@@ -4143,6 +4512,14 @@ function initUserMenu() {
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') setOpen(false);
     });
+
+
+    if (avatarItem) {
+        avatarItem.addEventListener('click', function() {
+            setOpen(false);
+            openAvatarModal();
+        });
+    }
 
     if (logoutItem) {
         logoutItem.addEventListener('click', function() {
