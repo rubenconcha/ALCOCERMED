@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=44">
+  <link rel="stylesheet" href="styles.css?v=45">
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
@@ -306,35 +306,108 @@
         <p class="page-subtitle">Los estudiantes más destacados de la plataforma</p>
       </div>
 
-      <!-- Podio Top 3 -->
-      <div class="ranking-podium-showcase" id="ranking-podium-showcase" style="margin-bottom:28px;">
-        <div class="game-section-title" style="margin-bottom:16px;">
-          <h2><i class="fas fa-crown"></i> Podio de Campeones</h2>
-        </div>
-        <div class="showcase-stage" style="display:flex;align-items:flex-end;justify-content:center;gap:16px;padding:24px 0 8px;">
-          <div class="showcase-player showcase-player-2" style="text-align:center;">
-            <div class="showcase-avatar" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#c0c0c0,#808080);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 6px;border:3px solid #c0c0c0;"></div>
-            <div class="showcase-name" style="font-size:0.8rem;font-weight:800;color:#fff;margin-bottom:4px;">—</div>
-            <div class="showcase-pillar" style="background:linear-gradient(180deg,#dfe6ee,#8d99ae);border-radius:12px 12px 4px 4px;padding:16px 20px 8px;min-width:80px;"><strong style="color:#fff;font-size:1.4rem;font-weight:900;">2</strong></div>
-            <div class="showcase-score" style="font-size:0.72rem;color:#cbd5e1;margin-top:4px;">0 pts<br><span>0%</span></div>
-          </div>
-          <div class="showcase-player showcase-player-1" style="text-align:center;">
-            <div class="showcase-crown" style="font-size:1.4rem;margin-bottom:4px;"><i class="fas fa-crown" style="color:#FFD700;filter:drop-shadow(0 0 8px rgba(255,215,0,0.8));"></i></div>
-            <div class="showcase-avatar" style="width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,#ffd54f,#ff9800);display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 6px;border:3px solid #FFD700;box-shadow:0 0 20px rgba(255,215,0,0.5);"></div>
-            <div class="showcase-name" style="font-size:0.85rem;font-weight:800;color:#fff;margin-bottom:4px;">—</div>
-            <div class="showcase-pillar" style="background:linear-gradient(180deg,#ffd54f,#ff9800);border-radius:12px 12px 4px 4px;padding:20px 24px 8px;min-width:90px;"><strong style="color:#fff;font-size:1.6rem;font-weight:900;">1</strong></div>
-            <div class="showcase-score" style="font-size:0.72rem;color:#fde68a;margin-top:4px;">0 pts<br><span>0%</span></div>
-          </div>
-          <div class="showcase-player showcase-player-3" style="text-align:center;">
-            <div class="showcase-avatar" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#ffb074,#b75a20);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 6px;border:3px solid #cd7f32;"></div>
-            <div class="showcase-name" style="font-size:0.8rem;font-weight:800;color:#fff;margin-bottom:4px;">—</div>
-            <div class="showcase-pillar" style="background:linear-gradient(180deg,#ffb074,#b75a20);border-radius:12px 12px 4px 4px;padding:12px 20px 8px;min-width:80px;"><strong style="color:#fff;font-size:1.4rem;font-weight:900;">3</strong></div>
-            <div class="showcase-score" style="font-size:0.72rem;color:#fed7aa;margin-top:4px;">0 pts<br><span>0%</span></div>
-          </div>
-        </div>
-      </div>
+      <!-- ═══ PODIO PREMIUM ═══ -->
+      <div class="ranking-podium-showcase" id="ranking-podium-showcase">
 
-      <!-- Lista completa de ranking -->
+        <!-- Partículas de fondo -->
+        <div class="rp-particles" aria-hidden="true">
+          <span class="rp-particle rp-p1"></span><span class="rp-particle rp-p2"></span>
+          <span class="rp-particle rp-p3"></span><span class="rp-particle rp-p4"></span>
+          <span class="rp-particle rp-p5"></span><span class="rp-particle rp-p6"></span>
+        </div>
+
+        <!-- Header -->
+        <div class="rp-header">
+          <div class="rp-header-left">
+            <span class="rp-crown-emoji">👑</span>
+            <div>
+              <h2 class="rp-title">Podio de Campeones</h2>
+              <p class="rp-subtitle">Top 3 de esta semana</p>
+            </div>
+          </div>
+          <div class="rp-shield-icon"><i class="fas fa-shield-alt"></i></div>
+        </div>
+
+        <!-- Estrellas decorativas -->
+        <div class="rp-stars-row" aria-hidden="true">
+          <span class="rp-dot"></span><span class="rp-dot"></span><span class="rp-dot"></span>
+          <span class="rp-dot rp-dot-big"></span><span class="rp-dot"></span>
+        </div>
+
+        <!-- Stage (orden visual: 2° | 1° | 3°) -->
+        <div class="rp-stage">
+
+          <!-- ── 2° LUGAR ── -->
+          <div class="rp-slot rp-slot-2 rp-showcase-2">
+            <div class="rp-crown rp-crown-silver"><i class="fas fa-crown"></i></div>
+            <div class="rp-ring rp-ring-silver">
+              <div class="rp-ring-pulse rp-pulse-silver"></div>
+              <div class="rp-avatar-wrap showcase-avatar"></div>
+            </div>
+            <div class="rp-pedestal rp-pedestal-silver">
+              <div class="rp-laurels-small" aria-hidden="true">⚜</div>
+              <span class="rp-rank-num">2</span>
+            </div>
+            <div class="rp-name-pill showcase-name">—</div>
+            <div class="rp-score-box">
+              <span class="rp-pts showcase-pts">0 pts</span>
+              <span class="rp-pct showcase-pct rp-pct-silver">0%</span>
+            </div>
+          </div>
+
+          <!-- ── 1° LUGAR ── -->
+          <div class="rp-slot rp-slot-1 rp-showcase-1">
+            <div class="rp-crown rp-crown-gold"><i class="fas fa-crown"></i></div>
+            <div class="rp-ring rp-ring-gold">
+              <div class="rp-ring-pulse rp-pulse-gold"></div>
+              <div class="rp-avatar-wrap showcase-avatar"></div>
+            </div>
+            <div class="rp-pedestal rp-pedestal-gold">
+              <div class="rp-laurels-gold" aria-hidden="true">🌿&nbsp;🌿</div>
+              <span class="rp-rank-num">1</span>
+            </div>
+            <div class="rp-name-pill rp-name-pill-gold showcase-name">—</div>
+            <div class="rp-score-box">
+              <span class="rp-pts rp-pts-gold showcase-pts">0 pts</span>
+              <span class="rp-pct rp-pct-gold showcase-pct">0%</span>
+            </div>
+          </div>
+
+          <!-- ── 3° LUGAR ── -->
+          <div class="rp-slot rp-slot-3 rp-showcase-3">
+            <div class="rp-crown rp-crown-bronze"><i class="fas fa-crown"></i></div>
+            <div class="rp-ring rp-ring-bronze">
+              <div class="rp-ring-pulse rp-pulse-bronze"></div>
+              <div class="rp-avatar-wrap showcase-avatar"></div>
+            </div>
+            <div class="rp-pedestal rp-pedestal-bronze">
+              <div class="rp-laurels-small" aria-hidden="true">⚜</div>
+              <span class="rp-rank-num">3</span>
+            </div>
+            <div class="rp-name-pill showcase-name">—</div>
+            <div class="rp-score-box">
+              <span class="rp-pts showcase-pts">0 pts</span>
+              <span class="rp-pct showcase-pct rp-pct-bronze">0%</span>
+            </div>
+          </div>
+
+        </div><!-- /rp-stage -->
+
+        <!-- Banner motivacional -->
+        <div class="rp-banner">
+          <div class="rp-banner-icon-wrap"><i class="fas fa-chart-bar"></i></div>
+          <div class="rp-banner-copy">
+            <strong>¡Sigue así, campeón!</strong>
+            <span>Cada punto te acerca más a la cima.</span>
+          </div>
+          <button class="rp-banner-btn" onclick="document.getElementById('ranking-general-list').scrollIntoView({behavior:'smooth'})">
+            Ver tabla general&nbsp;<i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+      </div><!-- /ranking-podium-showcase -->
+
+      <!-- Lista completa -->
       <div class="game-section-title" style="margin-bottom:12px;">
         <h2><i class="fas fa-list-ol"></i> Tabla General</h2>
       </div>
@@ -691,7 +764,7 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=39"></script>
+<script src="app.js?v=40"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->

@@ -1970,29 +1970,37 @@ function loadRankingGeneral() {
 }
 
 function updateRankingPodium(entries) {
-    // slots: [2° lugar, 1° lugar, 3° lugar] en ese orden visual
+    // Slots: orden visual = 2° | 1° | 3°
     var slots = [
-        { selector: '.ranking-podium-showcase .showcase-player-2', idx: 1 },
-        { selector: '.ranking-podium-showcase .showcase-player-1', idx: 0 },
-        { selector: '.ranking-podium-showcase .showcase-player-3', idx: 2 }
+        { selector: '.ranking-podium-showcase .rp-showcase-2', idx: 1 },
+        { selector: '.ranking-podium-showcase .rp-showcase-1', idx: 0 },
+        { selector: '.ranking-podium-showcase .rp-showcase-3', idx: 2 }
     ];
     for (var i = 0; i < slots.length; i++) {
         var slot = slots[i];
         var player = document.querySelector(slot.selector);
         if (!player) continue;
         var entry = entries[slot.idx];
-        var avatarNode = player.querySelector('.showcase-avatar');
-        var nameNode = player.querySelector('.showcase-name');
-        var scoreNode = player.querySelector('.showcase-score');
+
+        var avatarNode = player.querySelector('.rp-avatar-wrap');
+        var nameNode   = player.querySelector('.showcase-name');
+        var ptsNode    = player.querySelector('.showcase-pts');
+        var pctNode    = player.querySelector('.showcase-pct');
+
         if (!entry) {
-            if (nameNode) nameNode.textContent = '—';
-            if (scoreNode) scoreNode.innerHTML = '0 pts<br><span>0%</span>';
-            if (avatarNode) avatarNode.innerHTML = '';
+            if (nameNode)   nameNode.textContent  = '—';
+            if (ptsNode)    ptsNode.textContent   = '0 pts';
+            if (pctNode)    pctNode.textContent   = '0%';
+            if (avatarNode) avatarNode.innerHTML  = '';
             continue;
         }
-        if (nameNode) nameNode.textContent = entry.nombre;
-        if (scoreNode) scoreNode.innerHTML = entry.total.toLocaleString() + ' pts<br><span>' + entry.bestPct + '%</span>';
-        if (avatarNode) avatarNode.innerHTML = avatarMarkup(entry.avatar, entry.nombre, 'ranking-podium-avatar-media');
+
+        // Nombre truncado para la píldora
+        var shortName = entry.nombre.length > 10 ? entry.nombre.substring(0, 9) + '…' : entry.nombre;
+        if (nameNode)   nameNode.textContent  = shortName;
+        if (ptsNode)    ptsNode.textContent   = entry.total.toLocaleString() + ' pts';
+        if (pctNode)    pctNode.textContent   = entry.bestPct + '%';
+        if (avatarNode) avatarNode.innerHTML  = avatarMarkup(entry.avatar, entry.nombre, 'rp-avatar-media');
     }
 }
 
