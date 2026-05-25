@@ -4372,3 +4372,71 @@ body.quiz-focus-mode #quiz-container {
         min-height: 210px;
     }
 }
+
+/* Modo demo para la muestra: el resto queda visible con candado. */
+.subject-mission-card.subject-mission-locked {
+    filter: saturate(0.78);
+}
+
+.subject-mission-card.subject-mission-locked .mission-play {
+    background: rgba(15,23,42,.72) !important;
+    border-color: rgba(148,163,184,.35) !important;
+}
+
+.explorar-eval-card.explorar-eval-locked {
+    position: relative;
+    opacity: 0.88;
+}
+
+.explorar-eval-card.explorar-eval-locked::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(15,23,42,.08), rgba(15,23,42,.18));
+}
+
+.demo-access-badge,
+.locked-access-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 999px;
+    padding: 3px 9px;
+    font-size: 0.66rem;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    vertical-align: middle;
+}
+
+.demo-access-badge {
+    background: rgba(34,197,94,.16);
+    color: #16A34A;
+    border: 1px solid rgba(34,197,94,.26);
+}
+
+.locked-access-badge {
+    background: rgba(15,23,42,.10);
+    color: #64748B;
+    border: 1px solid rgba(100,116,139,.22);
+}
+
+.explorar-btn-study.explorar-btn-locked {
+    background: linear-gradient(135deg, #64748B, #334155) !important;
+    color: #fff !important;
+    box-shadow: 0 10px 20px rgba(15,23,42,.18) !important;
+}
+
+.explorar-btn-study.explorar-btn-locked:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(15,23,42,.24) !important;
+}
+
+@media (max-width: 600px) {
+    .demo-access-badge,
+    .locked-access-badge {
+        font-size: 0.6rem;
+        padding: 3px 7px;
+    }
+}

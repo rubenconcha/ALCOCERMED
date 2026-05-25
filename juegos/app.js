@@ -1146,6 +1146,34 @@ var SUBJECTS = [
     { name: 'EDUCACION PARA LA SALUD', color: '#10B981', emoji: 'ES' }
 ];
 
+var DEMO_ACCESS_ONLY = true;
+
+function normalizeDemoText(value) {
+    return String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toUpperCase();
+}
+
+function isDemoEvaluation(ev) {
+    var text = normalizeDemoText([
+        ev && ev.titulo,
+        ev && ev.tema,
+        ev && ev.codigo,
+        ev && ev.asignatura
+    ].join(' '));
+    return text.indexOf('PRUEBA') !== -1 || text.indexOf('DEMO') !== -1 || text.indexOf('MUESTRA') !== -1;
+}
+
+function canAccessEvaluation(ev) {
+    return isAdmin || !DEMO_ACCESS_ONLY || isDemoEvaluation(ev);
+}
+
+function showLockedDemoNotice() {
+    showCustomAlert('Contenido bloqueado por ahora.\n\nPara la demostracion del martes solo estan habilitadas las preguntas de prueba (DEMO). Cuando el estudiante compre el acceso, se desbloquearan las demas evaluaciones.');
+}
+window.showLockedDemoNotice = showLockedDemoNotice;
+
 function subjectColor(name) {
     for (var i = 0; i < SUBJECTS.length; i++) {
         if (name.toUpperCase().indexOf(SUBJECTS[i].name) !== -1) return SUBJECTS[i].color;
@@ -1193,9 +1221,13 @@ function loadExploreSubjects() {
 
     grid.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6;grid-column:1/-1"><i class="fas fa-spinner fa-spin" style="font-size:28px"></i><p style="margin-top:12px">Cargando materias...</p></div>';
 
-    client.from('evaluaciones').select('asignatura, id').eq('publicado', true).then(function(r) {
+    client.from('evaluaciones').select('asignatura, id, titulo, tema, codigo').eq('publicado', true).then(function(r) {
         var counts = {};
-        for (var i = 0; i < SUBJECTS.length; i++) { counts[SUBJECTS[i].name] = 0; }
+        var demoCounts = {};
+        for (var i = 0; i < SUBJECTS.length; i++) {
+            counts[SUBJECTS[i].name] = 0;
+            demoCounts[SUBJECTS[i].name] = 0;
+        }
         
         if (r.data && r.data.length > 0) {
             for (var i = 0; i < r.data.length; i++) {
@@ -1204,11 +1236,15 @@ function loadExploreSubjects() {
                 for (var s = 0; s < SUBJECTS.length; s++) {
                     if (dbName.indexOf(SUBJECTS[s].name) !== -1) {
                         counts[SUBJECTS[s].name]++;
+                        if (isDemoEvaluation(r.data[i])) demoCounts[SUBJECTS[s].name]++;
                         matched = true;
                         break;
                     }
                 }
-                if (!matched) counts[SUBJECTS[0].name]++; // default: MORFOFUNCION
+                if (!matched) {
+                    counts[SUBJECTS[0].name]++; // default: MORFOFUNCION
+                    if (isDemoEvaluation(r.data[i])) demoCounts[SUBJECTS[0].name]++;
+                }
             }
         }
 
@@ -1216,16 +1252,18 @@ function loadExploreSubjects() {
         for (var s = 0; s < SUBJECTS.length; s++) {
             var subj = SUBJECTS[s];
             var cnt = counts[subj.name] || 0;
+            var demoCnt = demoCounts[subj.name] || 0;
             var missionNo = s + 1;
-            var progress = cnt > 0 ? 100 : 18;
-            var statusText = cnt > 0 ? 'Disponible' : 'Pronto';
-            html += '<div class="explorar-subject-card subject-mission-card" onclick="loadSubjectEvaluations(\'' + subj.name + '\')" style="--subject-color:' + subj.color + '">';
+            var progress = demoCnt > 0 ? 100 : (cnt > 0 ? 42 : 18);
+            var statusText = demoCnt > 0 ? 'Demo' : (cnt > 0 ? 'Bloqueado' : 'Pronto');
+            var lockClass = demoCnt > 0 ? '' : ' subject-mission-locked';
+            html += '<div class="explorar-subject-card subject-mission-card' + lockClass + '" onclick="loadSubjectEvaluations(\'' + subj.name + '\')" style="--subject-color:' + subj.color + '">';
             html += '<div class="mission-shine"></div>';
             html += '<div class="mission-topline"><span>MISION ' + missionNo + '</span><strong>' + statusText + '</strong></div>';
             html += '<div class="mission-main">';
             html += '<div class="mission-orb"><span>' + subj.emoji + '</span></div>';
-            html += '<div class="mission-copy"><h3>' + subj.name + '</h3><p>' + cnt + ' evaluacion' + (cnt !== 1 ? 'es' : '') + ' lista' + (cnt !== 1 ? 's' : '') + '</p></div>';
-            html += '<div class="mission-play"><i class="fas fa-play"></i></div>';
+            html += '<div class="mission-copy"><h3>' + subj.name + '</h3><p>' + demoCnt + ' demo disponible' + (demoCnt !== 1 ? 's' : '') + (cnt > demoCnt ? ' • ' + (cnt - demoCnt) + ' con candado' : '') + '</p></div>';
+            html += '<div class="mission-play"><i class="fas ' + (demoCnt > 0 ? 'fa-play' : 'fa-lock') + '"></i></div>';
             html += '</div>';
             html += '<div class="mission-progress"><span style="width:' + progress + '%"></span></div>';
             html += '</div>';
@@ -1422,16 +1460,22 @@ function loadSubjectEvaluations(subject) {
                 var preguntaCount = countMap[ev.id] || 0;
                 var temaHtml = ev.tema ? ' • ' + ev.tema : '';
                 var fecha = new Date(ev.created_at).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
-                var isDemo = (ev.titulo || '').toUpperCase().indexOf('PRUEBA') !== -1;
-                html += '<div class="explorar-eval-card" style="border-left:4px solid ' + color + '">';
+                var isDemo = isDemoEvaluation(ev);
+                var isLocked = !canAccessEvaluation(ev);
+                html += '<div class="explorar-eval-card' + (isLocked ? ' explorar-eval-locked' : '') + '" style="border-left:4px solid ' + color + '">';
                 html += '<div style="flex:1;min-width:180px">';
                 html += '<h4 style="font-size:1.05rem;font-weight:800;color:var(--text);margin:0 0 6px">' + (ev.titulo || 'Sin título') + (isDemo ? ' <span style="background:#FEF3C7;color:#92400E;font-size:0.65rem;padding:2px 8px;border-radius:8px;font-weight:700">🎯 DEMO</span>' : '') + '</h4>';
                 html += '<div class="eval-meta" style="display:flex;flex-wrap:wrap;gap:10px;font-size:0.78rem;color:#94A3B8">';
                 html += '<span><i class="fas fa-calendar"></i> ' + fecha + '</span>';
                 if (ev.tema) html += '<span><i class="fas fa-tag"></i> ' + ev.tema + '</span>';
                 html += '<span><i class="fas fa-question-circle"></i> ' + preguntaCount + ' preguntas</span>';
+                if (isLocked) html += '<span class="locked-access-badge"><i class="fas fa-lock"></i> BLOQUEADO</span>';
                 html += '</div></div>';
-                html += '<button class="explorar-btn-study" onclick="event.stopPropagation();startSelfStudy(\'' + ev.id + '\')" style="background:linear-gradient(135deg,' + color + ', ' + adjustColor(color, -20) + ');font-size:0.9rem;padding:14px 32px;border-radius:16px;font-weight:800;letter-spacing:0.5px"><i class="fas fa-play"></i> JUGAR AHORA</button>';
+                if (isLocked) {
+                    html += '<button class="explorar-btn-study explorar-btn-locked" onclick="event.stopPropagation();showLockedDemoNotice()" style="font-size:0.9rem;padding:14px 32px;border-radius:16px;font-weight:800;letter-spacing:0.5px"><i class="fas fa-lock"></i> DESBLOQUEAR</button>';
+                } else {
+                    html += '<button class="explorar-btn-study" onclick="event.stopPropagation();startSelfStudy(\'' + ev.id + '\')" style="background:linear-gradient(135deg,' + color + ', ' + adjustColor(color, -20) + ');font-size:0.9rem;padding:14px 32px;border-radius:16px;font-weight:800;letter-spacing:0.5px"><i class="fas fa-play"></i> JUGAR DEMO</button>';
+                }
                 html += '</div>';
             }
             listEl.innerHTML = html;
@@ -1457,6 +1501,12 @@ function startSelfStudy(evalId) {
             return;
         }
         var evaluacion = r.data;
+        if (!canAccessEvaluation(evaluacion)) {
+            showLockedDemoNotice();
+            sessionStorage.removeItem('alcocer_quiz_code');
+            sessionStorage.removeItem('alcocer_self_evalid');
+            return;
+        }
         evaluacion.codigo = code;
         evaluacion.publicado = true;
 
@@ -1500,6 +1550,12 @@ function restoreSelfStudy(evalId, code) {
     client.from('evaluaciones').select('*').eq('id', evalId).single().then(function(r) {
         if (r.error || !r.data) { clearSelfSession(); navigateTo('jugar', true); return; }
         var evaluacion = r.data;
+        if (!canAccessEvaluation(evaluacion)) {
+            clearSelfSession();
+            showLockedDemoNotice();
+            navigateTo('jugar', true);
+            return;
+        }
         evaluacion.codigo = code;
         evaluacion.publicado = true;
 
@@ -1627,6 +1683,14 @@ function searchAndStartQuiz(code) {
         }
 
         var evaluacion = result.data;
+        if (!canAccessEvaluation(evaluacion)) {
+            sessionStorage.removeItem('alcocer_quiz_code');
+            sessionStorage.removeItem('alcocer_quiz_state_' + code);
+            sessionStorage.removeItem('alcocer_quiz_qids_' + code);
+            showLockedDemoNotice();
+            navigateTo(isAdmin ? 'inicio' : 'jugar');
+            return;
+        }
 
         // Cargar preguntas
         client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evaluacion.id).order('orden').then(function(pResult) {
