@@ -17,7 +17,7 @@ var preloadedAudio = {};
 
 var currentAvatar = 'avatarcfg:%7B%22base%22%3A%22carlos%22%2C%22outfitColor%22%3A%22%23ef4444%22%2C%22accessory%22%3A%22none%22%7D';
 var availableAvatars = [
-    { id: 'carlos',    label: 'Carlos',    gender: 'male',   src: './assets/avatars/carlos.png',    accent: '#ef4444', keyColor: '#cf2029' },
+    { id: 'carlos',    label: 'Carlos',    gender: 'male',   src: './assets/avatars/carlos.png',    accent: '#ef4444', keyColor: '#cf2029', variantSrcs: { cap: './assets/avatars/carlos_cap.png', stethoscope: './assets/avatars/carlos_stethoscope.png' } },
     { id: 'lucia',     label: 'Lucía',     gender: 'female', src: './assets/avatars/lucia.png',     accent: '#8b5cf6', keyColor: '#6b2ec8', variantSrcs: { cap: './assets/avatars/lucia_cap.png', stethoscope: './assets/avatars/lucia_stethoscope.png' } },
     { id: 'mateo',     label: 'Mateo',     gender: 'male',   src: './assets/avatars/mateo.png',     accent: '#1d4ed8', keyColor: '#273866', variantSrcs: { cap: './assets/avatars/mateo_cap.png', stethoscope: './assets/avatars/mateo_stethoscope.png' } },
     { id: 'sofia',     label: 'Sofía',     gender: 'female', src: './assets/avatars/sofia.png',     accent: '#22c55e', keyColor: '#228d35', variantSrcs: { cap: './assets/avatars/sofia_cap.png', stethoscope: './assets/avatars/sofia_stethoscope.png' } },
@@ -53,10 +53,11 @@ var avatarAccessoryOptions = [
     { id: 'cap',           label: 'Con gorra' },
     { id: 'stethoscope',   label: 'Con estetoscopio' }
 ];
-var avatarFallbackPool = availableAvatars.map(function(item) { return item.id; });
+var selectableAvatars = availableAvatars.filter(avatarHasCompleteVariantSet);
+var avatarFallbackPool = (selectableAvatars.length ? selectableAvatars : availableAvatars).map(function(item) { return item.id; });
 var avatarFallbackPoolsByGender = {
-    male: availableAvatars.filter(function(item) { return item.gender === 'male'; }).map(function(item) { return item.id; }),
-    female: availableAvatars.filter(function(item) { return item.gender === 'female'; }).map(function(item) { return item.id; })
+    male: (selectableAvatars.length ? selectableAvatars : availableAvatars).filter(function(item) { return item.gender === 'male'; }).map(function(item) { return item.id; }),
+    female: (selectableAvatars.length ? selectableAvatars : availableAvatars).filter(function(item) { return item.gender === 'female'; }).map(function(item) { return item.id; })
 };
 var avatarDraftConfig = null;
 var avatarTintCache = {};
@@ -187,6 +188,10 @@ function getAvatarVariantSrc(def, accessory) {
     return def.src;
 }
 
+function avatarHasCompleteVariantSet(def) {
+    return !!(def && def.src && def.variantSrcs && def.variantSrcs.cap && def.variantSrcs.stethoscope);
+}
+
 function escapeHtml(value) {
     return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
@@ -216,7 +221,7 @@ function avatarMarkup(value, alt, extraClass) {
     var cls = extraClass || 'avatar-media';
     var renderSrc = getAvatarVariantSrc(def, cfg.accessory);
     var builtInAccessory = renderSrc !== def.src;
-    return '<span class="avatar-render ' + cls + '" data-avatar-src="' + escapeHtml(renderSrc) + '" data-avatar-color="' + escapeHtml(cfg.outfitColor) + '" data-avatar-accessory="' + escapeHtml(cfg.accessory) + '" data-avatar-key-color="' + escapeHtml(def.keyColor || def.accent) + '"><img src="' + escapeHtml(renderSrc) + '" alt="' + escapeHtml(alt || 'Avatar') + '" class="avatar-render-base ' + cls + '">' + (builtInAccessory ? '' : accessorySvg(cfg.accessory)) + '</span>';
+    return '<span class="avatar-render ' + cls + '" data-avatar-src="' + escapeHtml(renderSrc) + '" data-avatar-color="' + escapeHtml(cfg.outfitColor) + '" data-avatar-accessory="' + escapeHtml(cfg.accessory) + '" data-avatar-key-color="' + escapeHtml(def.keyColor || def.accent) + '"><img src="' + escapeHtml(renderSrc) + '" alt="' + escapeHtml(alt || 'Avatar') + '" class="avatar-render-base ' + cls + '">' + (builtInAccessory ? '' : '') + '</span>';
 }
 
 function scheduleAvatarHydration(root) {
@@ -414,29 +419,33 @@ function avatarAccessoryOptionsHtml(selectedAccessory) {
     return html;
 }
 
-function avatarVariantButtonHtml(baseId, accessory, label, selectedAccessory, isSelectedBase) {
+function avatarVariantButtonHtml(item, accessory, selectedAccessory, isSelectedBase) {
     var selected = isSelectedBase && (selectedAccessory || 'none') === accessory;
-    return '<button type="button" class="avatar-variant-btn' + (selected ? ' selected' : '') + '" onclick="chooseAvatarVariant(\'' + baseId + '\', \'' + accessory + '\')">' + escapeHtml(label) + '</button>';
+    var cfg = { base: item.id, outfitColor: item.accent, accessory: accessory };
+    return '<button type="button" class="avatar-variant-btn' + (selected ? ' selected' : '') + '" onclick="chooseAvatarVariant(\'' + item.id + '\', \'' + accessory + '\')" aria-label="Seleccionar variante de ' + escapeHtml(item.label) + '">' + avatarMarkup(encodeAvatarConfig(cfg), item.label, 'avatar-variant-thumb') + '</button>';
 }
 
 function avatarCardsHtml(selectedBase) {
     var html = '';
-    for (var i = 0; i < availableAvatars.length; i++) {
-        var item = availableAvatars[i];
+    var avatars = selectableAvatars.length ? selectableAvatars : availableAvatars;
+    for (var i = 0; i < avatars.length; i++) {
+        var item = avatars[i];
+        if (!avatarHasCompleteVariantSet(item)) continue;
         var selected = selectedBase === item.id;
         var selectedAccessory = selected && avatarDraftConfig ? avatarDraftConfig.accessory : 'none';
         var selectedColor = selected && avatarDraftConfig ? avatarDraftConfig.outfitColor : item.accent;
         var cfg = { base: item.id, outfitColor: selectedColor, accessory: selectedAccessory };
         var cardLabel = selectedAccessory === 'cap' ? item.label + ' con gorra' : selectedAccessory === 'stethoscope' ? item.label + ' con estetoscopio' : item.label + ' solo ropa';
         html += '<article class="avatar-modal-card avatar-carousel-card' + (selected ? ' selected' : '') + '" style="--avatar-accent:' + item.accent + '">';
-        html += '<button type="button" class="avatar-card-select" onclick="chooseAvatarVariant(\'' + item.id + '\', \'none\')" aria-label="Seleccionar ' + escapeHtml(item.label) + ' solo ropa">';
+        html += '<div class="avatar-card-layout">';
+        html += '<button type="button" class="avatar-card-select" onclick="chooseAvatarVariant(\'' + item.id + '\', \'' + selectedAccessory + '\')" aria-label="Seleccionar ' + escapeHtml(item.label) + '">';
         html += '<span class="avatar-modal-thumb-wrap">' + avatarMarkup(encodeAvatarConfig(cfg), cardLabel, 'avatar-modal-thumb') + '</span>';
-        html += '<span class="avatar-modal-label">' + escapeHtml(item.label) + '</span>';
-        html += '<span class="avatar-modal-state">' + (selectedAccessory === 'cap' ? 'Con gorra' : selectedAccessory === 'stethoscope' ? 'Con estetoscopio' : 'Solo ropa') + '</span>';
         html += '</button>';
         html += '<div class="avatar-card-variants">';
-        html += avatarVariantButtonHtml(item.id, 'cap', 'Gorra', selectedAccessory, selected);
-        html += avatarVariantButtonHtml(item.id, 'stethoscope', 'Esteto', selectedAccessory, selected);
+        html += avatarVariantButtonHtml(item, 'none', selectedAccessory, selected);
+        html += avatarVariantButtonHtml(item, 'cap', selectedAccessory, selected);
+        html += avatarVariantButtonHtml(item, 'stethoscope', selectedAccessory, selected);
+        html += '</div>';
         html += '</div>';
         html += '</article>';
     }
@@ -464,6 +473,13 @@ window.openAvatarModal = function() {
     var modal = document.getElementById('avatar-modal');
     if (!modal) return;
     avatarDraftConfig = decodeAvatarConfig(currentAvatar, currentUser && ((currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email) || 'avatar');
+    if (!avatarHasCompleteVariantSet(getAvatarDefById(avatarDraftConfig.base)) && selectableAvatars.length) {
+        avatarDraftConfig = ensureAvatarConfig({
+            base: selectableAvatars[0].id,
+            outfitColor: selectableAvatars[0].accent,
+            accessory: 'none'
+        });
+    }
     renderAvatarModal();
     modal.classList.remove('hidden');
 };
@@ -479,9 +495,10 @@ window.chooseAvatarBase = function(baseId) {
 
 window.chooseAvatarVariant = function(baseId, accessory) {
     var def = getAvatarDefById(baseId);
+    if (!avatarHasCompleteVariantSet(def) && selectableAvatars.length) def = selectableAvatars[0];
     var keepCurrentColor = avatarDraftConfig && avatarDraftConfig.base === baseId;
     avatarDraftConfig = ensureAvatarConfig({
-        base: baseId,
+        base: def.id,
         outfitColor: keepCurrentColor ? avatarDraftConfig.outfitColor : def.accent,
         accessory: normalizeAvatarAccessory(accessory)
     });
