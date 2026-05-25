@@ -1970,37 +1970,53 @@ function loadRankingGeneral() {
 }
 
 function updateRankingPodium(entries) {
-    // Slots: orden visual = 2° | 1° | 3°
+    // Orden visual del overlay: 1° centro | 2° izq | 3° der
     var slots = [
-        { selector: '.ranking-podium-showcase .rp-showcase-2', idx: 1 },
-        { selector: '.ranking-podium-showcase .rp-showcase-1', idx: 0 },
-        { selector: '.ranking-podium-showcase .rp-showcase-3', idx: 2 }
+        { selector: '.rp-bg-wrap .rp-showcase-1', idx: 0 },
+        { selector: '.rp-bg-wrap .rp-showcase-2', idx: 1 },
+        { selector: '.rp-bg-wrap .rp-showcase-3', idx: 2 }
     ];
+    var infoSlots = [
+        { selector: '.rp-bg-wrap .rp-ov-info-1', idx: 0 },
+        { selector: '.rp-bg-wrap .rp-ov-info-2', idx: 1 },
+        { selector: '.rp-bg-wrap .rp-ov-info-3', idx: 2 }
+    ];
+
+    // Rellenar avatares
     for (var i = 0; i < slots.length; i++) {
-        var slot = slots[i];
-        var player = document.querySelector(slot.selector);
-        if (!player) continue;
-        var entry = entries[slot.idx];
+        var s = slots[i];
+        var el = document.querySelector(s.selector);
+        if (!el) continue;
+        var avatarEl = el.querySelector('.rp-ov-avatar');
+        var entry = entries[s.idx];
+        if (avatarEl) {
+            if (entry) {
+                avatarEl.innerHTML = avatarMarkup(entry.avatar, entry.nombre, 'rp-avatar-media');
+            } else {
+                avatarEl.innerHTML = '';
+            }
+        }
+    }
 
-        var avatarNode = player.querySelector('.rp-avatar-wrap');
-        var nameNode   = player.querySelector('.showcase-name');
-        var ptsNode    = player.querySelector('.showcase-pts');
-        var pctNode    = player.querySelector('.showcase-pct');
-
-        if (!entry) {
-            if (nameNode)   nameNode.textContent  = '—';
-            if (ptsNode)    ptsNode.textContent   = '0 pts';
-            if (pctNode)    pctNode.textContent   = '0%';
-            if (avatarNode) avatarNode.innerHTML  = '';
+    // Rellenar nombre y score
+    for (var j = 0; j < infoSlots.length; j++) {
+        var inf = infoSlots[j];
+        var infoEl = document.querySelector(inf.selector);
+        if (!infoEl) continue;
+        var entry2 = entries[inf.idx];
+        var nameEl = infoEl.querySelector('.rp-ov-name');
+        var ptsEl  = infoEl.querySelector('.showcase-pts');
+        var pctEl  = infoEl.querySelector('.showcase-pct');
+        if (!entry2) {
+            if (nameEl) nameEl.textContent = '—';
+            if (ptsEl)  ptsEl.textContent  = '0 pts';
+            if (pctEl)  pctEl.textContent  = '0%';
             continue;
         }
-
-        // Nombre truncado para la píldora
-        var shortName = entry.nombre.length > 10 ? entry.nombre.substring(0, 9) + '…' : entry.nombre;
-        if (nameNode)   nameNode.textContent  = shortName;
-        if (ptsNode)    ptsNode.textContent   = entry.total.toLocaleString() + ' pts';
-        if (pctNode)    pctNode.textContent   = entry.bestPct + '%';
-        if (avatarNode) avatarNode.innerHTML  = avatarMarkup(entry.avatar, entry.nombre, 'rp-avatar-media');
+        var shortName = entry2.nombre.length > 11 ? entry2.nombre.substring(0, 10) + '…' : entry2.nombre;
+        if (nameEl) nameEl.textContent = shortName;
+        if (ptsEl)  ptsEl.textContent  = entry2.total.toLocaleString() + ' pts';
+        if (pctEl)  pctEl.textContent  = entry2.bestPct + '%';
     }
 }
 

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=45">
+  <link rel="stylesheet" href="styles.css?v=46">
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
@@ -306,109 +306,57 @@
         <p class="page-subtitle">Los estudiantes más destacados de la plataforma</p>
       </div>
 
-      <!-- ═══ PODIO PREMIUM ═══ -->
-      <div class="ranking-podium-showcase" id="ranking-podium-showcase">
+      <!-- ═══ PODIO CON IMAGEN DE FONDO + OVERLAYS ═══ -->
+      <div class="rp-bg-wrap" id="ranking-podium-showcase">
 
-        <!-- Partículas de fondo -->
-        <div class="rp-particles" aria-hidden="true">
-          <span class="rp-particle rp-p1"></span><span class="rp-particle rp-p2"></span>
-          <span class="rp-particle rp-p3"></span><span class="rp-particle rp-p4"></span>
-          <span class="rp-particle rp-p5"></span><span class="rp-particle rp-p6"></span>
+        <!-- La imagen es el fondo via CSS, los overlays van encima -->
+
+        <!-- ── Círculo 1° LUGAR (dorado, centro) ── -->
+        <div class="rp-ov rp-ov-circle-1 rp-showcase-1">
+          <div class="rp-ov-avatar showcase-avatar"></div>
         </div>
 
-        <!-- Header -->
-        <div class="rp-header">
-          <div class="rp-header-left">
-            <span class="rp-crown-emoji">👑</span>
-            <div>
-              <h2 class="rp-title">Podio de Campeones</h2>
-              <p class="rp-subtitle">Top 3 de esta semana</p>
-            </div>
-          </div>
-          <div class="rp-shield-icon"><i class="fas fa-shield-alt"></i></div>
+        <!-- ── Círculo 2° LUGAR (plateado, izquierda) ── -->
+        <div class="rp-ov rp-ov-circle-2 rp-showcase-2">
+          <div class="rp-ov-avatar showcase-avatar"></div>
         </div>
 
-        <!-- Estrellas decorativas -->
-        <div class="rp-stars-row" aria-hidden="true">
-          <span class="rp-dot"></span><span class="rp-dot"></span><span class="rp-dot"></span>
-          <span class="rp-dot rp-dot-big"></span><span class="rp-dot"></span>
+        <!-- ── Círculo 3° LUGAR (bronce, derecha) ── -->
+        <div class="rp-ov rp-ov-circle-3 rp-showcase-3">
+          <div class="rp-ov-avatar showcase-avatar"></div>
         </div>
 
-        <!-- Stage (orden visual: 2° | 1° | 3°) -->
-        <div class="rp-stage">
-
-          <!-- ── 2° LUGAR ── -->
-          <div class="rp-slot rp-slot-2 rp-showcase-2">
-            <div class="rp-crown rp-crown-silver"><i class="fas fa-crown"></i></div>
-            <div class="rp-ring rp-ring-silver">
-              <div class="rp-ring-pulse rp-pulse-silver"></div>
-              <div class="rp-avatar-wrap showcase-avatar"></div>
-            </div>
-            <div class="rp-pedestal rp-pedestal-silver">
-              <div class="rp-laurels-small" aria-hidden="true">⚜</div>
-              <span class="rp-rank-num">2</span>
-            </div>
-            <div class="rp-name-pill showcase-name">—</div>
-            <div class="rp-score-box">
-              <span class="rp-pts showcase-pts">0 pts</span>
-              <span class="rp-pct showcase-pct rp-pct-silver">0%</span>
-            </div>
+        <!-- ── Caja nombre+score 1° ── -->
+        <div class="rp-ov rp-ov-info-1">
+          <div class="rp-ov-name showcase-name">—</div>
+          <div class="rp-ov-score">
+            <span class="showcase-pts rp-ov-pts-gold">0 pts</span>
+            <span class="showcase-pct rp-ov-pct-gold">0%</span>
           </div>
-
-          <!-- ── 1° LUGAR ── -->
-          <div class="rp-slot rp-slot-1 rp-showcase-1">
-            <div class="rp-crown rp-crown-gold"><i class="fas fa-crown"></i></div>
-            <div class="rp-ring rp-ring-gold">
-              <div class="rp-ring-pulse rp-pulse-gold"></div>
-              <div class="rp-avatar-wrap showcase-avatar"></div>
-            </div>
-            <div class="rp-pedestal rp-pedestal-gold">
-              <div class="rp-laurels-gold" aria-hidden="true">🌿&nbsp;🌿</div>
-              <span class="rp-rank-num">1</span>
-            </div>
-            <div class="rp-name-pill rp-name-pill-gold showcase-name">—</div>
-            <div class="rp-score-box">
-              <span class="rp-pts rp-pts-gold showcase-pts">0 pts</span>
-              <span class="rp-pct rp-pct-gold showcase-pct">0%</span>
-            </div>
-          </div>
-
-          <!-- ── 3° LUGAR ── -->
-          <div class="rp-slot rp-slot-3 rp-showcase-3">
-            <div class="rp-crown rp-crown-bronze"><i class="fas fa-crown"></i></div>
-            <div class="rp-ring rp-ring-bronze">
-              <div class="rp-ring-pulse rp-pulse-bronze"></div>
-              <div class="rp-avatar-wrap showcase-avatar"></div>
-            </div>
-            <div class="rp-pedestal rp-pedestal-bronze">
-              <div class="rp-laurels-small" aria-hidden="true">⚜</div>
-              <span class="rp-rank-num">3</span>
-            </div>
-            <div class="rp-name-pill showcase-name">—</div>
-            <div class="rp-score-box">
-              <span class="rp-pts showcase-pts">0 pts</span>
-              <span class="rp-pct showcase-pct rp-pct-bronze">0%</span>
-            </div>
-          </div>
-
-        </div><!-- /rp-stage -->
-
-        <!-- Banner motivacional -->
-        <div class="rp-banner">
-          <div class="rp-banner-icon-wrap"><i class="fas fa-chart-bar"></i></div>
-          <div class="rp-banner-copy">
-            <strong>¡Sigue así, campeón!</strong>
-            <span>Cada punto te acerca más a la cima.</span>
-          </div>
-          <button class="rp-banner-btn" onclick="document.getElementById('ranking-general-list').scrollIntoView({behavior:'smooth'})">
-            Ver tabla general&nbsp;<i class="fas fa-chevron-right"></i>
-          </button>
         </div>
 
-      </div><!-- /ranking-podium-showcase -->
+        <!-- ── Caja nombre+score 2° ── -->
+        <div class="rp-ov rp-ov-info-2">
+          <div class="rp-ov-name showcase-name">—</div>
+          <div class="rp-ov-score">
+            <span class="showcase-pts rp-ov-pts">0 pts</span>
+            <span class="showcase-pct rp-ov-pct-silver">0%</span>
+          </div>
+        </div>
+
+        <!-- ── Caja nombre+score 3° ── -->
+        <div class="rp-ov rp-ov-info-3">
+          <div class="rp-ov-name showcase-name">—</div>
+          <div class="rp-ov-score">
+            <span class="showcase-pts rp-ov-pts">0 pts</span>
+            <span class="showcase-pct rp-ov-pct-bronze">0%</span>
+          </div>
+        </div>
+
+      </div><!-- /rp-bg-wrap -->
 
       <!-- Lista completa -->
-      <div class="game-section-title" style="margin-bottom:12px;">
+      <div class="game-section-title" style="margin-bottom:12px;margin-top:4px;">
         <h2><i class="fas fa-list-ol"></i> Tabla General</h2>
       </div>
       <div id="ranking-general-list" style="display:flex;flex-direction:column;gap:8px;">
@@ -764,7 +712,7 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=40"></script>
+<script src="app.js?v=41"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->
