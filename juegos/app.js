@@ -18,16 +18,16 @@ var preloadedAudio = {};
 var currentAvatar = 'avatarcfg:%7B%22base%22%3A%22carlos%22%2C%22outfitColor%22%3A%22%23ef4444%22%2C%22accessory%22%3A%22none%22%7D';
 var availableAvatars = [
     { id: 'carlos',    label: 'Carlos',    gender: 'male',   src: './assets/avatars/carlos.png',    accent: '#ef4444', keyColor: '#cf2029' },
-    { id: 'lucia',     label: 'Lucía',     gender: 'female', src: './assets/avatars/lucia.png',     accent: '#8b5cf6', keyColor: '#6b2ec8' },
+    { id: 'lucia',     label: 'Lucía',     gender: 'female', src: './assets/avatars/lucia.png',     accent: '#8b5cf6', keyColor: '#6b2ec8', variantSrcs: { cap: './assets/avatars/lucia_cap.png', stethoscope: './assets/avatars/lucia_stethoscope.png' } },
     { id: 'mateo',     label: 'Mateo',     gender: 'male',   src: './assets/avatars/mateo.png',     accent: '#1d4ed8', keyColor: '#273866' },
-    { id: 'sofia',     label: 'Sofía',     gender: 'female', src: './assets/avatars/bruno.png',     accent: '#22c55e', keyColor: '#228d35' },
-    { id: 'andres',    label: 'Andrés',    gender: 'male',   src: './assets/avatars/paula.png',     accent: '#ec4899', keyColor: '#ef5ba7' },
+    { id: 'sofia',     label: 'Sofía',     gender: 'female', src: './assets/avatars/sofia.png',     accent: '#22c55e', keyColor: '#228d35' },
+    { id: 'andres',    label: 'Andrés',    gender: 'male',   src: './assets/avatars/andres.png',     accent: '#ec4899', keyColor: '#ef5ba7' },
     { id: 'valentina', label: 'Valentina', gender: 'female', src: './assets/avatars/valentina.png', accent: '#facc15', keyColor: '#dfaf1c' },
     { id: 'diego',     label: 'Diego',     gender: 'male',   src: './assets/avatars/diego.png',     accent: '#06b6d4', keyColor: '#0a9ca8' },
-    { id: 'bruno',     label: 'Bruno',     gender: 'male',   src: './assets/avatars/sofia.png',     accent: '#f97316', keyColor: '#f08414' },
+    { id: 'bruno',     label: 'Bruno',     gender: 'male',   src: './assets/avatars/bruno.png',     accent: '#f97316', keyColor: '#f08414' },
     { id: 'sebastian', label: 'Sebastián', gender: 'male',   src: './assets/avatars/sebastian.png', accent: '#38bdf8', keyColor: '#39a7ee' },
     { id: 'camila',    label: 'Camila',    gender: 'female', src: './assets/avatars/camila.png',    accent: '#c084fc', keyColor: '#b17ae8' },
-    { id: 'paula',     label: 'Paula',     gender: 'female', src: './assets/avatars/andres.png',    accent: '#86efac', keyColor: '#9bd7c9' },
+    { id: 'paula',     label: 'Paula',     gender: 'female', src: './assets/avatars/paula.png',    accent: '#86efac', keyColor: '#9bd7c9' },
     { id: 'emilia',    label: 'Emilia',    gender: 'female', src: './assets/avatars/emilia.png',    accent: '#14b8a6', keyColor: '#09b0b3' }
 ];
 var avatarLegacyPathMap = {
@@ -49,12 +49,9 @@ var avatarColorOptions = [
     { id: 'blanco',    label: 'Blanco',    value: '#f3f4f6' }
 ];
 var avatarAccessoryOptions = [
-    { id: 'none',          label: 'Sin accesorio' },
-    { id: 'cap',           label: 'Gorra' },
-    { id: 'glasses',       label: 'Lentes' },
-    { id: 'sunglasses',    label: 'Lentes negros' },
-    { id: 'headphones',    label: 'Audífonos' },
-    { id: 'stethoscope',   label: 'Estetoscopio' }
+    { id: 'none',          label: 'Solo ropa' },
+    { id: 'cap',           label: 'Con gorra' },
+    { id: 'stethoscope',   label: 'Con estetoscopio' }
 ];
 var avatarFallbackPool = availableAvatars.map(function(item) { return item.id; });
 var avatarFallbackPoolsByGender = {
@@ -136,12 +133,20 @@ function safeHexColor(value, fallback) {
     return fallback || '#6366f1';
 }
 
+function normalizeAvatarAccessory(accessory) {
+    accessory = String(accessory || 'none');
+    for (var i = 0; i < avatarAccessoryOptions.length; i++) {
+        if (avatarAccessoryOptions[i].id === accessory) return accessory;
+    }
+    return 'none';
+}
+
 function ensureAvatarConfig(config, seedName) {
     var def = findAvatarDef(config && (config.base || config.src || config.id), seedName);
     return {
         base: def.id,
         outfitColor: safeHexColor(config && config.outfitColor, def.accent),
-        accessory: (config && config.accessory) || 'none'
+        accessory: normalizeAvatarAccessory(config && config.accessory)
     };
 }
 
@@ -173,7 +178,13 @@ function normalizeAvatarValue(value, seedName) {
 
 function resolveAvatarSrc(value, seedName) {
     var cfg = decodeAvatarConfig(value, seedName);
-    return getAvatarDefById(cfg.base, seedName).src;
+    var def = getAvatarDefById(cfg.base, seedName);
+    return getAvatarVariantSrc(def, cfg.accessory);
+}
+
+function getAvatarVariantSrc(def, accessory) {
+    if (def && def.variantSrcs && def.variantSrcs[accessory]) return def.variantSrcs[accessory];
+    return def.src;
 }
 
 function escapeHtml(value) {
@@ -182,7 +193,7 @@ function escapeHtml(value) {
 
 function accessorySvg(type) {
     if (type === 'cap') {
-        return '<span class="avatar-accessory avatar-accessory-cap" aria-hidden="true"><svg viewBox="0 0 120 80" fill="none"><path d="M20 44c7-18 24-30 44-30 17 0 34 8 46 24-18 4-36 8-54 10-14 2-25 1-36-4z" fill="#111827"/><path d="M16 45c10 5 23 6 38 4 20-3 39-7 55-11 5 5 8 10 9 16-24 7-47 11-68 12-15 1-28-2-39-9 0-5 2-9 5-12z" fill="#1f2937"/></svg></span>';
+        return '<span class="avatar-accessory avatar-accessory-cap" aria-hidden="true"><svg viewBox="0 0 120 80" fill="none"><path d="M19 44c7-18 24-30 45-30 18 0 34 9 46 24-18 4-37 8-55 10-14 2-26 1-36-4z" fill="#ef4444"/><path d="M15 45c10 5 24 6 39 4 20-3 39-7 56-11 5 5 8 10 9 16-24 7-48 11-69 12-15 1-29-2-40-9 0-5 2-9 5-12z" fill="#dc2626"/><path d="M64 17c7 6 11 15 12 27" stroke="#991b1b" stroke-width="5" stroke-linecap="round"/><circle cx="88" cy="30" r="3" fill="#7f1d1d"/></svg></span>';
     }
     if (type === 'glasses') {
         return '<span class="avatar-accessory avatar-accessory-glasses" aria-hidden="true"><svg viewBox="0 0 120 42" fill="none" stroke="#111827" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="10" rx="10" ry="10" width="34" height="22"/><rect x="76" y="10" rx="10" ry="10" width="34" height="22"/><path d="M44 20h32"/><path d="M4 18h6"/><path d="M110 18h6"/></svg></span>';
@@ -203,7 +214,9 @@ function avatarMarkup(value, alt, extraClass) {
     var cfg = decodeAvatarConfig(value, alt);
     var def = getAvatarDefById(cfg.base, alt);
     var cls = extraClass || 'avatar-media';
-    return '<span class="avatar-render ' + cls + '" data-avatar-src="' + escapeHtml(def.src) + '" data-avatar-color="' + escapeHtml(cfg.outfitColor) + '" data-avatar-accessory="' + escapeHtml(cfg.accessory) + '" data-avatar-key-color="' + escapeHtml(def.keyColor || def.accent) + '"><img src="' + escapeHtml(def.src) + '" alt="' + escapeHtml(alt || 'Avatar') + '" class="avatar-render-base ' + cls + '">' + accessorySvg(cfg.accessory) + '</span>';
+    var renderSrc = getAvatarVariantSrc(def, cfg.accessory);
+    var builtInAccessory = renderSrc !== def.src;
+    return '<span class="avatar-render ' + cls + '" data-avatar-src="' + escapeHtml(renderSrc) + '" data-avatar-color="' + escapeHtml(cfg.outfitColor) + '" data-avatar-accessory="' + escapeHtml(cfg.accessory) + '" data-avatar-key-color="' + escapeHtml(def.keyColor || def.accent) + '"><img src="' + escapeHtml(renderSrc) + '" alt="' + escapeHtml(alt || 'Avatar') + '" class="avatar-render-base ' + cls + '">' + (builtInAccessory ? '' : accessorySvg(cfg.accessory)) + '</span>';
 }
 
 function scheduleAvatarHydration(root) {
@@ -459,7 +472,7 @@ window.chooseAvatarColor = function(color) {
 
 window.chooseAvatarAccessory = function(accessory) {
     if (!avatarDraftConfig) avatarDraftConfig = decodeAvatarConfig(currentAvatar, 'avatar');
-    avatarDraftConfig.accessory = accessory || 'none';
+    avatarDraftConfig.accessory = normalizeAvatarAccessory(accessory);
     renderAvatarModal();
 };
 
