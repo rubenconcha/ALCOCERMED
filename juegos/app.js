@@ -19,8 +19,8 @@ var currentAvatar = 'avatarcfg:%7B%22base%22%3A%22carlos%22%2C%22outfitColor%22%
 var availableAvatars = [
     { id: 'carlos',    label: 'Carlos',    gender: 'male',   src: './assets/avatars/carlos.png',    accent: '#ef4444', keyColor: '#cf2029' },
     { id: 'lucia',     label: 'Lucía',     gender: 'female', src: './assets/avatars/lucia.png',     accent: '#8b5cf6', keyColor: '#6b2ec8', variantSrcs: { cap: './assets/avatars/lucia_cap.png', stethoscope: './assets/avatars/lucia_stethoscope.png' } },
-    { id: 'mateo',     label: 'Mateo',     gender: 'male',   src: './assets/avatars/mateo.png',     accent: '#1d4ed8', keyColor: '#273866' },
-    { id: 'sofia',     label: 'Sofía',     gender: 'female', src: './assets/avatars/sofia.png',     accent: '#22c55e', keyColor: '#228d35' },
+    { id: 'mateo',     label: 'Mateo',     gender: 'male',   src: './assets/avatars/mateo.png',     accent: '#1d4ed8', keyColor: '#273866', variantSrcs: { cap: './assets/avatars/mateo_cap.png', stethoscope: './assets/avatars/mateo_stethoscope.png' } },
+    { id: 'sofia',     label: 'Sofía',     gender: 'female', src: './assets/avatars/sofia.png',     accent: '#22c55e', keyColor: '#228d35', variantSrcs: { cap: './assets/avatars/sofia_cap.png', stethoscope: './assets/avatars/sofia_stethoscope.png' } },
     { id: 'andres',    label: 'Andrés',    gender: 'male',   src: './assets/avatars/andres.png',     accent: '#ec4899', keyColor: '#ef5ba7' },
     { id: 'valentina', label: 'Valentina', gender: 'female', src: './assets/avatars/valentina.png', accent: '#facc15', keyColor: '#dfaf1c' },
     { id: 'diego',     label: 'Diego',     gender: 'male',   src: './assets/avatars/diego.png',     accent: '#06b6d4', keyColor: '#0a9ca8' },
@@ -414,16 +414,31 @@ function avatarAccessoryOptionsHtml(selectedAccessory) {
     return html;
 }
 
+function avatarVariantButtonHtml(baseId, accessory, label, selectedAccessory, isSelectedBase) {
+    var selected = isSelectedBase && (selectedAccessory || 'none') === accessory;
+    return '<button type="button" class="avatar-variant-btn' + (selected ? ' selected' : '') + '" onclick="chooseAvatarVariant(\'' + baseId + '\', \'' + accessory + '\')">' + escapeHtml(label) + '</button>';
+}
+
 function avatarCardsHtml(selectedBase) {
     var html = '';
     for (var i = 0; i < availableAvatars.length; i++) {
         var item = availableAvatars[i];
-        var cfg = { base: item.id, outfitColor: avatarDraftConfig ? avatarDraftConfig.outfitColor : item.accent, accessory: avatarDraftConfig ? avatarDraftConfig.accessory : 'none' };
         var selected = selectedBase === item.id;
-        html += '<button type="button" class="avatar-modal-card' + (selected ? ' selected' : '') + '" onclick="chooseAvatarBase(\'' + item.id + '\')">';
-        html += '<span class="avatar-modal-thumb-wrap" style="--avatar-accent:' + item.accent + '">' + avatarMarkup(encodeAvatarConfig(cfg), item.label, 'avatar-modal-thumb') + '</span>';
+        var selectedAccessory = selected && avatarDraftConfig ? avatarDraftConfig.accessory : 'none';
+        var selectedColor = selected && avatarDraftConfig ? avatarDraftConfig.outfitColor : item.accent;
+        var cfg = { base: item.id, outfitColor: selectedColor, accessory: selectedAccessory };
+        var cardLabel = selectedAccessory === 'cap' ? item.label + ' con gorra' : selectedAccessory === 'stethoscope' ? item.label + ' con estetoscopio' : item.label + ' solo ropa';
+        html += '<article class="avatar-modal-card avatar-carousel-card' + (selected ? ' selected' : '') + '" style="--avatar-accent:' + item.accent + '">';
+        html += '<button type="button" class="avatar-card-select" onclick="chooseAvatarVariant(\'' + item.id + '\', \'none\')" aria-label="Seleccionar ' + escapeHtml(item.label) + ' solo ropa">';
+        html += '<span class="avatar-modal-thumb-wrap">' + avatarMarkup(encodeAvatarConfig(cfg), cardLabel, 'avatar-modal-thumb') + '</span>';
         html += '<span class="avatar-modal-label">' + escapeHtml(item.label) + '</span>';
+        html += '<span class="avatar-modal-state">' + (selectedAccessory === 'cap' ? 'Con gorra' : selectedAccessory === 'stethoscope' ? 'Con estetoscopio' : 'Solo ropa') + '</span>';
         html += '</button>';
+        html += '<div class="avatar-card-variants">';
+        html += avatarVariantButtonHtml(item.id, 'cap', 'Gorra', selectedAccessory, selected);
+        html += avatarVariantButtonHtml(item.id, 'stethoscope', 'Esteto', selectedAccessory, selected);
+        html += '</div>';
+        html += '</article>';
     }
     return html;
 }
@@ -436,9 +451,12 @@ function renderAvatarModal() {
     var colors = document.getElementById('avatar-color-options');
     var accessories = document.getElementById('avatar-accessory-options');
     if (preview) preview.innerHTML = avatarMarkup(encodeAvatarConfig(avatarDraftConfig), 'Vista previa', 'avatar-preview-media');
-    if (grid) grid.innerHTML = avatarCardsHtml(avatarDraftConfig.base);
-    if (colors) colors.innerHTML = avatarColorSwatchesHtml(avatarDraftConfig.outfitColor);
-    if (accessories) accessories.innerHTML = avatarAccessoryOptionsHtml(avatarDraftConfig.accessory);
+    if (grid) {
+        grid.classList.add('avatar-carousel');
+        grid.innerHTML = avatarCardsHtml(avatarDraftConfig.base);
+    }
+    if (colors) colors.innerHTML = '';
+    if (accessories) accessories.innerHTML = '';
     scheduleAvatarHydration(modal);
 }
 
@@ -456,10 +474,16 @@ window.closeAvatarModal = function() {
 };
 
 window.chooseAvatarBase = function(baseId) {
+    window.chooseAvatarVariant(baseId, 'none');
+};
+
+window.chooseAvatarVariant = function(baseId, accessory) {
+    var def = getAvatarDefById(baseId);
+    var keepCurrentColor = avatarDraftConfig && avatarDraftConfig.base === baseId;
     avatarDraftConfig = ensureAvatarConfig({
         base: baseId,
-        outfitColor: avatarDraftConfig ? avatarDraftConfig.outfitColor : getAvatarDefById(baseId).accent,
-        accessory: avatarDraftConfig ? avatarDraftConfig.accessory : 'none'
+        outfitColor: keepCurrentColor ? avatarDraftConfig.outfitColor : def.accent,
+        accessory: normalizeAvatarAccessory(accessory)
     });
     renderAvatarModal();
 };
@@ -472,8 +496,7 @@ window.chooseAvatarColor = function(color) {
 
 window.chooseAvatarAccessory = function(accessory) {
     if (!avatarDraftConfig) avatarDraftConfig = decodeAvatarConfig(currentAvatar, 'avatar');
-    avatarDraftConfig.accessory = normalizeAvatarAccessory(accessory);
-    renderAvatarModal();
+    window.chooseAvatarVariant(avatarDraftConfig.base, accessory);
 };
 
 window.saveAvatarSelection = function() {

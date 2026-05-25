@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=42">
+  <link rel="stylesheet" href="styles.css?v=43">
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
@@ -641,7 +641,7 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=37"></script>
+<script src="app.js?v=38"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->
@@ -650,7 +650,7 @@
     <div class="avatar-editor-head">
       <div>
         <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:8px">Personaliza tu avatar</h2>
-        <p style="font-size:.9rem;color:var(--text-mid)">Elige personaje y variacion: solo ropa, gorra o estetoscopio</p>
+        <p style="font-size:.9rem;color:var(--text-mid)">Desliza a la derecha, toca el avatar para usar solo ropa o elige gorra/estetoscopio.</p>
       </div>
       <button type="button" class="avatar-modal-close" onclick="closeAvatarModal()"><i class="fas fa-times"></i></button>
     </div>
@@ -663,19 +663,12 @@
       </div>
     </div>
 
-    <div class="avatar-editor-section">
-      <h3>1. Personaje</h3>
-      <div id="avatar-grid" class="avatar-grid"></div>
-    </div>
-
-    <div class="avatar-editor-section">
-      <h3>2. Color de ropa</h3>
-      <div id="avatar-color-options" class="avatar-color-options"></div>
-    </div>
-
-    <div class="avatar-editor-section">
-      <h3>3. Variacion</h3>
-      <div id="avatar-accessory-options" class="avatar-accessory-options"></div>
+    <div class="avatar-editor-section avatar-carousel-section">
+      <h3>Elige tu avatar</h3>
+      <p class="avatar-carousel-hint">Desliza hacia la derecha para ver mas personajes.</p>
+      <div id="avatar-grid" class="avatar-grid avatar-carousel"></div>
+      <div id="avatar-color-options" class="avatar-color-options" hidden></div>
+      <div id="avatar-accessory-options" class="avatar-accessory-options" hidden></div>
     </div>
 
     <div class="avatar-editor-actions">
