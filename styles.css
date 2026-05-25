@@ -6562,6 +6562,151 @@ body.login-active .overlay {
     }
 }
 
+/* Mobile flashcards hardening */
+.study-area-subtitle {
+    margin-top: 4px;
+    color: var(--text-muted);
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.action-zone,
+.anki-wrapper,
+.nav-row,
+.anki-rating-row {
+    width: 100%;
+    max-width: 660px;
+}
+
+@media (max-width: 768px) {
+    .study-area {
+        min-height: calc(100svh - 82px);
+        justify-content: flex-start;
+        padding: 8px 0 22px;
+    }
+
+    .study-area-header {
+        max-width: 100%;
+        margin-bottom: 12px;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .study-area-title {
+        font-size: 1.05rem;
+        line-height: 1.2;
+    }
+
+    .study-area-subtitle {
+        font-size: 0.78rem;
+        line-height: 1.35;
+    }
+
+    .card-container {
+        width: min(100%, 430px);
+        height: min(58svh, 390px);
+        min-height: 300px;
+        margin-bottom: 10px;
+        perspective: 900px;
+    }
+
+    .face {
+        border-radius: 20px;
+        padding: 34px 20px 24px;
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.10);
+    }
+
+    .card-tag {
+        top: 12px;
+        left: 16px;
+        font-size: 0.68rem;
+    }
+
+    .card-watermark {
+        font-size: clamp(1.05rem, 8vw, 1.75rem);
+        letter-spacing: 3px;
+        opacity: 0.8;
+    }
+
+    .text-inner {
+        padding: 4px 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .text-inner p {
+        font-size: clamp(1.05rem, 5.2vw, 1.32rem);
+        line-height: 1.45;
+    }
+
+    .back-text p {
+        font-size: clamp(1rem, 5vw, 1.26rem);
+        line-height: 1.45;
+    }
+
+    .card-counter {
+        margin-bottom: 10px;
+        font-size: 0.78rem;
+    }
+
+    .action-zone {
+        position: sticky;
+        bottom: 0;
+        z-index: 20;
+        padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        background: linear-gradient(180deg, rgba(248, 250, 252, 0), var(--bg-light) 24%);
+    }
+
+    .btn-primary {
+        width: 100%;
+        min-height: 52px;
+        padding: 14px 18px;
+        font-size: 0.98rem;
+    }
+
+    .anki-rating-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .btn-anki {
+        min-width: 0;
+        min-height: 48px;
+        padding: 10px 8px;
+        white-space: normal;
+        line-height: 1.15;
+    }
+
+    .nav-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .btn-nav {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 380px) {
+    .card-container {
+        height: min(56svh, 350px);
+        min-height: 280px;
+    }
+
+    .face {
+        padding: 32px 16px 22px;
+    }
+
+    .text-inner p {
+        font-size: clamp(0.98rem, 5.3vw, 1.18rem);
+    }
+}
+
 /* Tarjeta central */
 .db-card {
     background: linear-gradient(145deg, #1a1a2e, #16213e);

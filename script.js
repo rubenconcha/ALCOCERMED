@@ -19,7 +19,62 @@ function shuffleArray(arr) {
 }
 
 let _supabase = null;
+let _supabaseSdkPromise = null;
+
+function loadScriptOnce(src) {
+    return new Promise(function(resolve, reject) {
+        const existing = Array.from(document.scripts).find(function(s) { return s.src === src; });
+        if (existing && existing.dataset.loaded === '1') { resolve(); return; }
+        const script = existing || document.createElement('script');
+        let done = false;
+        const timer = setTimeout(function() {
+            if (done) return;
+            done = true;
+            reject(new Error('timeout cargando ' + src));
+        }, 8000);
+        script.onload = function() {
+            if (done) return;
+            done = true;
+            clearTimeout(timer);
+            script.dataset.loaded = '1';
+            resolve();
+        };
+        script.onerror = function() {
+            if (done) return;
+            done = true;
+            clearTimeout(timer);
+            reject(new Error('no se pudo cargar ' + src));
+        };
+        if (!existing) {
+            script.src = src;
+            script.async = true;
+            document.head.appendChild(script);
+        }
+    });
+}
+
+async function ensureSupabaseSdk() {
+    if (window.supabase && window.supabase.createClient) return window.supabase;
+    if (!_supabaseSdkPromise) {
+        _supabaseSdkPromise = loadScriptOnce('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2')
+            .catch(function() { return loadScriptOnce('https://unpkg.com/@supabase/supabase-js@2'); })
+            .then(function() {
+                if (!window.supabase || !window.supabase.createClient) {
+                    throw new Error('Supabase SDK no disponible');
+                }
+                return window.supabase;
+            });
+    }
+    return _supabaseSdkPromise;
+}
+
 function getSupabase() {
+    if (!SUPABASE_URL || !SUPABASE_KEY) {
+        throw new Error('Supabase config incompleta');
+    }
+    if (!window.supabase || !window.supabase.createClient) {
+        throw new Error('Supabase SDK no cargado');
+    }
     if (!_supabase) _supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     return _supabase;
 }
@@ -52,6 +107,7 @@ async function initAuth() {
     document.body.appendChild(checker);
 
     try {
+        await ensureSupabaseSdk();
         var client = getSupabase();
         if (!client) throw new Error('Supabase client failed to initialize');
         var res = await client.auth.getSession();
@@ -75,16 +131,20 @@ async function initAuth() {
         setTimeout(function () { checker.remove(); }, 350);
     }
 
-    getSupabase().auth.onAuthStateChange(function (event, session) {
-        if (event === 'INITIAL_SESSION') return;
-        if (event === 'SIGNED_IN' && session && session.user) {
-            currentUser = session.user;
-            enterApp(currentUser);
-        } else if (event === 'SIGNED_OUT') {
-            currentUser = null;
-            showLoginScreen();
-        }
-    });
+    try {
+        getSupabase().auth.onAuthStateChange(function (event, session) {
+            if (event === 'INITIAL_SESSION') return;
+            if (event === 'SIGNED_IN' && session && session.user) {
+                currentUser = session.user;
+                enterApp(currentUser);
+            } else if (event === 'SIGNED_OUT') {
+                currentUser = null;
+                showLoginScreen();
+            }
+        });
+    } catch (e) {
+        console.warn('No se pudo registrar auth listener:', e.message);
+    }
 }
 
 /** Muestra login y oculta app */
@@ -161,6 +221,7 @@ window.handleLogin = async function (e) {
 
     setLoginLoading(true);
     try {
+        await ensureSupabaseSdk();
         var client = getSupabase();
         var result = await client.auth.signInWithPassword({ email: email, password: password });
 
@@ -265,6 +326,23 @@ function campo(row, nombre) {
     return '';
 }
 
+function normalizeDbText(value) {
+    return String(value || '').trim().toUpperCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, ' ');
+}
+
+function isMissingSupabaseTableError(error) {
+    const msg = String((error && (error.message || error.details || error.hint)) || '').toLowerCase();
+    return error && (
+        error.code === '42P01' ||
+        error.code === 'PGRST205' ||
+        msg.includes('could not find the table') ||
+        msg.includes('does not exist') ||
+        msg.includes('schema cache')
+    );
+}
+
 // ──────────────────────────────────────────────
 // ESTADO GLOBAL
 // ──────────────────────────────────────────────
@@ -274,6 +352,8 @@ let totalReviews = 0;
 let temasVistos = new Set();
 let ultimaMateria = '—';
 let gamesPlayed = 0;
+let flashcardsCache = null;
+const missingCloudTables = {};
 
 // ──────────────────────────────────────────────
 // TIPS DE ESTUDIO
@@ -347,12 +427,24 @@ window.toggleFlashcards = function () {
 
     const isOpen = submenu.classList.contains('active');
     submenu.classList.toggle('active');
-    arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
+    if (arrow) arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
 };
 
 // ──────────────────────────────────────────────
 // TOGGLE MATERIA: carga temas desde Supabase
 // ──────────────────────────────────────────────
+async function loadFlashcards() {
+    if (Array.isArray(flashcardsCache)) return flashcardsCache;
+    const client = getSupabase();
+    const { data, error } = await client
+        .from('flashcards')
+        .select('*')
+        .limit(5000);
+    if (error) throw error;
+    flashcardsCache = data || [];
+    return flashcardsCache;
+}
+
 window.toggleMenu = async function (asignatura) {
     const key = asignatura.replace(/ /g, '-');
     const submenu = document.getElementById('menu-' + key);
@@ -362,26 +454,20 @@ window.toggleMenu = async function (asignatura) {
 
     if (submenu.classList.contains('active')) {
         submenu.classList.remove('active');
-        arrow.style.transform = 'rotate(0deg)';
+        if (arrow) arrow.style.transform = 'rotate(0deg)';
         return;
     }
 
     submenu.innerHTML = '<li><span class="loading">cargando temas...</span></li>';
     submenu.classList.add('active');
-    arrow.style.transform = 'rotate(90deg)';
+    if (arrow) arrow.style.transform = 'rotate(90deg)';
 
     try {
-        const client = getSupabase();
+        let data = await loadFlashcards();
         // select('*') y filtrar client-side — compatible con MAY/min en nombres de columnas
-        let { data, error } = await client
-            .from('flashcards')
-            .select('*');
-
-        if (error) throw error;
-
         // Filtrar por materia usando campo() que detecta MAYÚSCULAS o minúsculas
         data = data.filter(function (r) {
-            return campo(r, 'materia') === asignatura;
+            return normalizeDbText(campo(r, 'materia')) === normalizeDbText(asignatura);
         });
 
         const temas = new Set();
@@ -440,10 +526,14 @@ function startDeck(tema, asignatura, data) {
     for (let i = 0; i < data.length; i++) {
         // Soportar columna TEMA en mayúsculas o minúsculas
         const temaVal = campo(data[i], 'tema');
-        if (temaVal === tema) deck.push(data[i]);
+        if (normalizeDbText(temaVal) === normalizeDbText(tema)) deck.push(data[i]);
     }
     // Aleatorizar el mazo en cada revisión (Fix: orden aleatorio)
     deck = shuffleArray(deck);
+    if (deck.length === 0) {
+        showToast('no se encontraron tarjetas para este tema', 'error');
+        return;
+    }
     currentIndex = 0;
     ultimaMateria = asignatura.toLowerCase();
 
@@ -3384,7 +3474,7 @@ async function registrarVideoVistoEnNube(videoId, titulo, materia, progresoPct) 
 }
 
 async function sincronizarFlashcardsEnNube() {
-    if (!currentUser) return;
+    if (!currentUser || missingCloudTables.progreso_flashcards) return;
     try {
         const sb = getSupabase();
         const { error } = await sb.from('progreso_flashcards').upsert({
@@ -3394,7 +3484,14 @@ async function sincronizarFlashcardsEnNube() {
             repasos_totales: totalReviews,
             ultima_sesion: new Date().toISOString()
         }, { onConflict: 'user_id' });
-        if (error) console.error('[Flashcards] Error sincronizando:', error.message);
+        if (error) {
+            if (isMissingSupabaseTableError(error)) {
+                missingCloudTables.progreso_flashcards = true;
+                console.info('[Flashcards] progreso_flashcards no existe; progreso local activo.');
+                return;
+            }
+            console.error('[Flashcards] Error sincronizando:', error.message);
+        }
     } catch (e) {
         console.warn('[Flashcards] Error fatal en la nube:', e);
     }
@@ -3408,21 +3505,35 @@ async function sincronizarPerfilEnNube() {
         
         // Intentar registrar/actualizar en una tabla de perfiles que el admin pueda leer
         // Probamos con 'user_profiles' que es la que el admin.js busca primero
-        const { error } = await sb.from('user_profiles').upsert({
-            user_id: currentUser.id,
-            email: currentUser.email,
-            full_name: name,
-            last_seen: new Date().toISOString()
-        }, { onConflict: 'user_id' });
+        let error = null;
+        if (!missingCloudTables.user_profiles) {
+            const res = await sb.from('user_profiles').upsert({
+                user_id: currentUser.id,
+                email: currentUser.email,
+                full_name: name,
+                last_seen: new Date().toISOString()
+            }, { onConflict: 'user_id' });
+            error = res.error;
+            if (isMissingSupabaseTableError(error)) missingCloudTables.user_profiles = true;
+        } else {
+            error = { message: 'user_profiles no disponible' };
+        }
         
         if (error) {
             // Si falla user_profiles, intentar en 'profiles' (fallback)
-            await sb.from('profiles').upsert({
+            if (missingCloudTables.profiles) return;
+            const fallback = await sb.from('profiles').upsert({
                 id: currentUser.id,
                 email: currentUser.email,
                 full_name: name,
                 updated_at: new Date().toISOString()
             }, { onConflict: 'id' });
+            if (isMissingSupabaseTableError(fallback.error)) {
+                missingCloudTables.profiles = true;
+                console.info('[Auth] tablas de perfil no disponibles; se omite sincronizacion.');
+            } else if (fallback.error) {
+                console.warn('[Auth] Error sincronizando perfil:', fallback.error.message);
+            }
         }
     } catch (e) {
         console.warn('[Auth] Error sincronizando perfil:', e);

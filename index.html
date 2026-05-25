@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prepa bencarson | propedeutico</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" async data-supabase-sdk></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -557,6 +557,39 @@
 
             </div>
 
+        </section>
+
+        <!-- Flashcards -->
+        <section id="study-area" class="study-area hidden">
+            <div class="study-area-header">
+                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <div>
+                    <h2 class="study-area-title"><i class="fas fa-layer-group"></i> flashcards</h2>
+                    <p class="study-area-subtitle">
+                        <span id="current-subject">materia</span> · <span id="card-tema-name">tema</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-container" tabindex="0" aria-label="Tarjeta de estudio">
+                <div class="card" id="card">
+                    <div class="face front">
+                        <span class="card-tag">pregunta</span>
+                        <span class="card-watermark">ALCOCERMED</span>
+                        <div class="text-inner">
+                            <p id="q-text">elige un tema para comenzar</p>
+                        </div>
+                    </div>
+                    <div class="face back">
+                        <span class="card-tag">respuesta</span>
+                        <span class="card-watermark">ALCOCERMED</span>
+                        <div class="text-inner back-text">
+                            <p id="a-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="card-counter">
                 tarjeta <span id="card-num">1</span> de <span id="card-total">0</span>
             </div>
@@ -567,13 +600,13 @@
                 <div id="anki-buttons" class="anki-wrapper hidden">
                     <div class="anki-rating-row">
                         <button class="btn-anki yellow-intense" onclick="rateCard(0)">otra vez</button>
-                        <button class="btn-anki red-intense" onclick="rateCard(1)">difícil</button>
+                        <button class="btn-anki red-intense" onclick="rateCard(1)">dificil</button>
                         <button class="btn-anki gold-intense" onclick="rateCard(2)">bien</button>
-                        <button class="btn-anki blue-intense" onclick="rateCard(3)">fácil</button>
+                        <button class="btn-anki blue-intense" onclick="rateCard(3)">facil</button>
                     </div>
                     <div class="nav-row">
                         <button class="btn-nav btn-nav-left" onclick="prevCard()">
-                            <i class="fas fa-arrow-left"></i> atrás
+                            <i class="fas fa-arrow-left"></i> atras
                         </button>
                         <button class="btn-nav btn-nav-right" onclick="goNextCard()">
                             siguiente <i class="fas fa-arrow-right"></i>
