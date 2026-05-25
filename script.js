@@ -23,8 +23,12 @@ let _supabaseSdkPromise = null;
 
 function loadScriptOnce(src) {
     return new Promise(function(resolve, reject) {
-        const existing = Array.from(document.scripts).find(function(s) { return s.src === src; });
-        if (existing && existing.dataset.loaded === '1') { resolve(); return; }
+        const existing = Array.from(document.scripts).find(function(script) { return script.src === src; });
+        if (existing && existing.dataset.loaded === '1') {
+            resolve();
+            return;
+        }
+
         const script = existing || document.createElement('script');
         let done = false;
         const timer = setTimeout(function() {
@@ -32,6 +36,7 @@ function loadScriptOnce(src) {
             done = true;
             reject(new Error('timeout cargando ' + src));
         }, 8000);
+
         script.onload = function() {
             if (done) return;
             done = true;
@@ -45,6 +50,7 @@ function loadScriptOnce(src) {
             clearTimeout(timer);
             reject(new Error('no se pudo cargar ' + src));
         };
+
         if (!existing) {
             script.src = src;
             script.async = true;
@@ -57,7 +63,9 @@ async function ensureSupabaseSdk() {
     if (window.supabase && window.supabase.createClient) return window.supabase;
     if (!_supabaseSdkPromise) {
         _supabaseSdkPromise = loadScriptOnce('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2')
-            .catch(function() { return loadScriptOnce('https://unpkg.com/@supabase/supabase-js@2'); })
+            .catch(function() {
+                return loadScriptOnce('https://unpkg.com/@supabase/supabase-js@2');
+            })
             .then(function() {
                 if (!window.supabase || !window.supabase.createClient) {
                     throw new Error('Supabase SDK no disponible');
@@ -69,12 +77,8 @@ async function ensureSupabaseSdk() {
 }
 
 function getSupabase() {
-    if (!SUPABASE_URL || !SUPABASE_KEY) {
-        throw new Error('Supabase config incompleta');
-    }
-    if (!window.supabase || !window.supabase.createClient) {
-        throw new Error('Supabase SDK no cargado');
-    }
+    if (!SUPABASE_URL || !SUPABASE_KEY) throw new Error('Supabase config incompleta');
+    if (!window.supabase || !window.supabase.createClient) throw new Error('Supabase SDK no cargado');
     if (!_supabase) _supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     return _supabase;
 }
@@ -248,26 +252,26 @@ window.handleLogin = async function (e) {
 window.handleLogout = function() {
         // 0. Detener verificación de dispositivo
     if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();
-    
+
     // 1. Limpiar datos locales inmediatamente
     var _savedDeviceId = localStorage.getItem('alcocer_device_id');
     localStorage.clear();
     if (_savedDeviceId) localStorage.setItem('alcocer_device_id', _savedDeviceId);
     sessionStorage.clear();
-    
+
     // 2. Intentar cerrar sesión en Supabase
-    try { 
-        getSupabase().auth.signOut(); 
-    } catch(e) { 
-        console.warn('signOut:', e); 
+    try {
+        getSupabase().auth.signOut();
+    } catch(e) {
+        console.warn('signOut:', e);
     }
-    
+
     // 3. Reset estado local
     currentUser = null;
-    
+
     // 4. Mostrar pantalla de login instantáneamente (evita el parpadeo de recarga)
     showLoginScreen();
-    
+
     // 5. Limpiar la URL (opcional, para estética)
     try {
         history.replaceState({}, document.title, window.location.origin + window.location.pathname);
@@ -326,6 +330,9 @@ function campo(row, nombre) {
     return '';
 }
 
+// ──────────────────────────────────────────────
+// ESTADO GLOBAL
+// ──────────────────────────────────────────────
 function normalizeDbText(value) {
     return String(value || '').trim().toUpperCase()
         .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
@@ -337,15 +344,12 @@ function isMissingSupabaseTableError(error) {
     return error && (
         error.code === '42P01' ||
         error.code === 'PGRST205' ||
-        msg.includes('could not find the table') ||
-        msg.includes('does not exist') ||
-        msg.includes('schema cache')
+        msg.indexOf('could not find the table') !== -1 ||
+        msg.indexOf('does not exist') !== -1 ||
+        msg.indexOf('schema cache') !== -1
     );
 }
 
-// ──────────────────────────────────────────────
-// ESTADO GLOBAL
-// ──────────────────────────────────────────────
 let deck = [];
 let currentIndex = 0;
 let totalReviews = 0;
@@ -411,6 +415,12 @@ function updateHomeStats() {
     if (elC) elC.textContent = Math.min(currentIndex, deck.length);
     if (elT) elT.textContent = temasVistos.size;
     if (elG) elG.textContent = gamesPlayed;
+    const progressFill = document.getElementById('study-progress-fill');
+    if (progressFill) {
+        const total = Math.max(deck.length, 1);
+        const pct = Math.min(100, Math.round((Math.min(currentIndex, deck.length) / total) * 100));
+        progressFill.style.width = pct + '%';
+    }
 
     // Tip aleatorio
     const tipEl = document.getElementById('tip-text');
@@ -465,6 +475,7 @@ window.toggleMenu = async function (asignatura) {
     try {
         let data = await loadFlashcards();
         // select('*') y filtrar client-side — compatible con MAY/min en nombres de columnas
+
         // Filtrar por materia usando campo() que detecta MAYÚSCULAS o minúsculas
         data = data.filter(function (r) {
             return normalizeDbText(campo(r, 'materia')) === normalizeDbText(asignatura);
@@ -3187,10 +3198,10 @@ window.openVcModal = function (v) {
 
     // Registrar visualización en la nube (asumimos 100% de progreso al abrirlo)
     registrarVideoVistoEnNube(
-        campo(v, 'id') || campo(v, 'url_video') || campo(v, 'titulo'), 
-        campo(v, 'titulo') || 'Video sin título', 
-        campo(v, 'materia') || 'General', 
-        100 
+        campo(v, 'id') || campo(v, 'url_video') || campo(v, 'titulo'),
+        campo(v, 'titulo') || 'Video sin título',
+        campo(v, 'materia') || 'General',
+        100
     );
 
 };
@@ -3226,6 +3237,10 @@ var mmState = {
     filteredMapas: [],
     selectedMateria: null,
     currentTab: 'mapas'
+};
+
+window.openMindMaps = function () {
+    if (typeof openIntocables === 'function') openIntocables();
 };
 
 window.openIntocables = function () {
@@ -3466,7 +3481,7 @@ async function registrarVideoVistoEnNube(videoId, titulo, materia, progresoPct) 
             progreso_pct: progresoPct,
             visto: progresoPct >= 90,
             fecha_visto: new Date().toISOString()
-        }, { onConflict: 'user_id,video_id' }); 
+        }, { onConflict: 'user_id,video_id' });
         if (error) console.error('[Videoclases] Error guardando progreso:', error.message);
     } catch (e) {
         console.warn('[Videoclases] Error fatal en la nube:', e);
@@ -3502,37 +3517,39 @@ async function sincronizarPerfilEnNube() {
     try {
         const sb = getSupabase();
         const name = (currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email.split('@')[0];
-        
-        // Intentar registrar/actualizar en una tabla de perfiles que el admin pueda leer
-        // Probamos con 'user_profiles' que es la que el admin.js busca primero
-        let error = null;
+
         if (!missingCloudTables.user_profiles) {
-            const res = await sb.from('user_profiles').upsert({
+            const { error } = await sb.from('user_profiles').upsert({
                 user_id: currentUser.id,
                 email: currentUser.email,
                 full_name: name,
                 last_seen: new Date().toISOString()
             }, { onConflict: 'user_id' });
-            error = res.error;
-            if (isMissingSupabaseTableError(error)) missingCloudTables.user_profiles = true;
-        } else {
-            error = { message: 'user_profiles no disponible' };
+
+            if (!error) return;
+            if (!isMissingSupabaseTableError(error)) {
+                console.warn('[Auth] Error sincronizando user_profiles:', error.message);
+                return;
+            }
+            missingCloudTables.user_profiles = true;
+            console.info('[Auth] user_profiles no existe; probando profiles.');
         }
-        
-        if (error) {
-            // Si falla user_profiles, intentar en 'profiles' (fallback)
-            if (missingCloudTables.profiles) return;
-            const fallback = await sb.from('profiles').upsert({
+
+        if (!missingCloudTables.profiles) {
+            const { error } = await sb.from('profiles').upsert({
                 id: currentUser.id,
                 email: currentUser.email,
                 full_name: name,
                 updated_at: new Date().toISOString()
             }, { onConflict: 'id' });
-            if (isMissingSupabaseTableError(fallback.error)) {
-                missingCloudTables.profiles = true;
-                console.info('[Auth] tablas de perfil no disponibles; se omite sincronizacion.');
-            } else if (fallback.error) {
-                console.warn('[Auth] Error sincronizando perfil:', fallback.error.message);
+
+            if (error) {
+                if (isMissingSupabaseTableError(error)) {
+                    missingCloudTables.profiles = true;
+                    console.info('[Auth] profiles no existe; perfil local activo.');
+                    return;
+                }
+                console.warn('[Auth] Error sincronizando profiles:', error.message);
             }
         }
     } catch (e) {

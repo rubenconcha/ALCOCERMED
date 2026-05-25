@@ -59,7 +59,7 @@
                     <div class="login-input-wrap">
                         <input type="password" id="login-password" class="login-input" placeholder="••••••••" required minlength="6"
                             autocomplete="current-password">
-                        <button type="button" class="login-eye-btn" 
+                        <button type="button" class="login-eye-btn"
                             title="mostrar/ocultar" onclick="togglePasswordVisibility()">
                             <i class="fas fa-eye" id="login-eye-icon"></i>
                         </button>
@@ -199,6 +199,18 @@
                     </ul>
                 </li>
 
+
+                <!-- Mapas mentales -->
+                <li class="nav-item nav-item-simple" id="nav-mapas-mentales">
+                    <a href="#" onclick="openMindMaps(); return false;" data-tooltip="mapas mentales">
+                        <span class="nav-icon nav-icon-map">
+                            <i class="fas fa-project-diagram"></i>
+                        </span>
+                        <span class="nav-label">mapas mentales</span>
+                        <span class="nav-badge badge-new">NUEVO</span>
+                    </a>
+                </li>
+
                 <!-- Videoclases -->
                 <li class="nav-item nav-item-simple" id="nav-videoclases">
                     <a href="#" onclick="openVideoclases(); return false;" data-tooltip="videoclases">
@@ -287,7 +299,7 @@
             </ul>
         </div>
 
-        
+
         <!-- ══ ADMINISTRACIÓN ══ -->
         <div class="nav-section" id="admin-nav-section" style="display: none;">
             <span class="section-title">ADMINISTRACIÓN</span>
@@ -412,209 +424,181 @@
             </div>
         </div>
 
-
-        <!-- ══ PANTALLA INICIO ══ -->
-        <section id="home-screen" class="home-screen">
-            <!-- Video de Introducción -->
-            <div class="home-video-section">
-                <div class="home-video-wrap">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="home-video-iframe"></iframe>
+        <!-- ══ PANTALLA INICIO — MOBILE FIRST ══ -->
+        <section id="home-screen" class="home-screen home-mobile-redesign">
+            <div class="home-mobile-hero">
+                <div class="home-hero-kicker"><i class="fas fa-bolt"></i> plataforma médica móvil</div>
+                <h1>Estudia medicina desde tu celular.</h1>
+                <p>Flashcards, mapas mentales, preguntas y simulacros organizados para repasar rápido en Android y iPhone.</p>
+                <div class="home-hero-actions">
+                    <button class="home-primary-action" onclick="toggleFlashcards()"><i class="fas fa-layer-group"></i> iniciar flashcards</button>
+                    <button class="home-secondary-action" onclick="openMindMaps()"><i class="fas fa-project-diagram"></i> mapas</button>
                 </div>
-                <div class="home-video-info">
-                    <span class="video-badge"><i class="fas fa-play-circle"></i> video de la semana</span>
-                    <h2 class="home-video-title">¡bienvenido al propedéutico!</h2>
-                    <p class="home-video-desc">mira este video introductorio para conocer cómo funciona tu plataforma de estudio.</p>
-                </div>
-            </div>
-
-            <!-- Calendario + Anuncios -->
-            <div class="home-widgets-row">
-                <div class="home-widget home-calendar-widget">
-                    <h3><i class="fas fa-calendar-alt"></i> calendario académico</h3>
-                    <div class="calendar-mini">
-                        <div class="cal-header">
-                            <button class="cal-nav" id="cal-prev"><i class="fas fa-chevron-left"></i></button>
-                            <span class="cal-month" id="cal-month-label">mayo 2026</span>
-                            <button class="cal-nav" id="cal-next"><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                        <div class="cal-days-header">
-                            <span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sá</span><span>Do</span>
-                        </div>
-                        <div class="cal-days" id="cal-days-grid"></div>
-                    </div>
-                </div>
-                <div class="home-widget home-announce-widget">
-                    <h3><i class="fas fa-bullhorn"></i> anuncios recientes</h3>
-                    <div class="announce-list">
-                        <div class="announce-item">
-                            <span class="announce-dot announce-dot-red"></span>
-                            <div>
-                                <strong>simulacro general #3</strong>
-                                <p>disponible este sábado a las 9:00 AM. ¡prepárate!</p>
-                            </div>
-                        </div>
-                        <div class="announce-item">
-                            <span class="announce-dot announce-dot-blue"></span>
-                            <div>
-                                <strong>nuevas flashcards de morfofunción</strong>
-                                <p>se agregaron 25 tarjetas sobre el sistema cardiovascular</p>
-                            </div>
-                        </div>
-                        <div class="announce-item">
-                            <span class="announce-dot announce-dot-yellow"></span>
-                            <div>
-                                <strong>clase en vivo: biología celular</strong>
-                                <p>lunes 12 de mayo a las 7:00 PM por zoom</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="home-hero-stats">
+                    <div><strong id="home-repasos">0</strong><span>repasos</span></div>
+                    <div><strong id="home-cards">0</strong><span>tarjetas</span></div>
+                    <div><strong id="home-temas">0</strong><span>temas</span></div>
+                    <div><strong id="home-games">0</strong><span>juegos</span></div>
                 </div>
             </div>
 
-            <!-- Tarjetas de acceso rápido -->
-            <div class="home-grid">
-
-                <div class="home-card home-card-orange" onclick="toggleFlashcards()">
-                    <div class="hc-icon"><i class="fas fa-layer-group"></i></div>
-                    <div class="hc-body">
-                        <h3>flashcards</h3>
-                        <p>repasa con la técnica alcocer · sistema spaced repetition</p>
+            <div class="home-focus-grid">
+                <article class="home-feature-card home-feature-flash" onclick="toggleFlashcards()">
+                    <div class="home-feature-top">
+                        <div class="home-feature-icon"><i class="fas fa-clone"></i></div>
+                        <span class="home-feature-badge">SRS</span>
                     </div>
-                    <i class="fas fa-arrow-right hc-arrow"></i>
-                </div>
-
-                <div class="home-card home-card-purple" onclick="openGame('quiz')">
-                    <div class="hc-icon"><i class="fas fa-bolt"></i></div>
-                    <div class="hc-body">
-                        <h3>quiz relámpago</h3>
-                        <p>pon a prueba tus conocimientos con preguntas cronometradas</p>
+                    <h2>Flashcards inteligentes</h2>
+                    <p>Repasa por pregunta, revela la respuesta y califica tu memoria: otra vez, difícil, bien o fácil.</p>
+                    <div class="flashcard-mini-stack" aria-hidden="true">
+                        <div class="mini-card mini-card-back">Respuesta clínica</div>
+                        <div class="mini-card mini-card-mid">¿Qué estructura...?</div>
+                        <div class="mini-card mini-card-front"><i class="fas fa-brain"></i> Morfofunción</div>
                     </div>
-                    <i class="fas fa-arrow-right hc-arrow"></i>
-                </div>
+                    <button class="home-feature-link">abrir flashcards <i class="fas fa-arrow-right"></i></button>
+                </article>
 
-                <div class="home-card home-card-green" onclick="openGame('hangman')">
-                    <div class="hc-icon"><i class="fas fa-brain"></i></div>
-                    <div class="hc-body">
-                        <h3>ahorcado médico</h3>
-                        <p>adivina términos de biología celular y morfofunción</p>
+                <article class="home-feature-card home-feature-map" onclick="openMindMaps()">
+                    <div class="home-feature-top">
+                        <div class="home-feature-icon"><i class="fas fa-project-diagram"></i></div>
+                        <span class="home-feature-badge">Nuevo</span>
                     </div>
-                    <i class="fas fa-arrow-right hc-arrow"></i>
-                </div>
-
-                <div class="home-card home-card-blue" onclick="openBanco()">
-                    <div class="hc-icon"><i class="fas fa-database"></i></div>
-                    <div class="hc-body">
-                        <h3>banco de preguntas</h3>
-                        <p>practica con preguntas tipo examen · selecciona materia y tema</p>
+                    <h2>Mapas mentales</h2>
+                    <p>Conecta conceptos, clínica, imágenes y repasos clave en una vista visual fácil de recordar.</p>
+                    <div class="mindmap-preview" aria-hidden="true">
+                        <span class="mind-line mind-line-1"></span>
+                        <span class="mind-line mind-line-2"></span>
+                        <span class="mind-line mind-line-3"></span>
+                        <span class="mind-line mind-line-4"></span>
+                        <span class="mind-node mind-node-main">tema</span>
+                        <span class="mind-node mind-node-a">concepto</span>
+                        <span class="mind-node mind-node-b">clínica</span>
+                        <span class="mind-node mind-node-c">imagen</span>
+                        <span class="mind-node mind-node-d">repaso</span>
                     </div>
-                    <i class="fas fa-arrow-right hc-arrow"></i>
-                </div>
-
-                <div class="home-card home-card-sim" onclick="openSimulacro()">
-                    <div class="hc-icon"><i class="fas fa-stopwatch"></i></div>
-                    <div class="hc-body">
-                        <h3>simulacro</h3>
-                        <p>examen cronometrado tipo admisión · sin ver respuestas hasta finalizar</p>
-                    </div>
-                    <i class="fas fa-arrow-right hc-arrow"></i>
-                </div>
-
-                <div class="home-card home-card-eval" onclick="openEvaluacion()">
-                    <div class="hc-icon"><i class="fas fa-chart-bar"></i></div>
-                    <div class="hc-body">
-                        <h3>mis evaluaciones</h3>
-                        <p>revisa tus resultados y retroalimentación pregunta a pregunta</p>
-                    </div>
-                    <i class="fas fa-arrow-right hc-arrow"></i>
-                </div>
-
-                <div class="home-card home-card-video" onclick="openVideoclases()">
-                    <div class="hc-icon"><i class="fas fa-play-circle"></i></div>
-                    <div class="hc-body">
-                        <h3>videoclases</h3>
-                        <p>clases grabadas por materia · repasa cuando quieras</p>
-                    </div>
-                    <i class="fas fa-arrow-right hc-arrow"></i>
-                </div>
-
-                <div class="home-card home-card-fire" onclick="openIntocables()">
-                    <div class="hc-icon"><i class="fas fa-fire-alt"></i></div>
-                    <div class="hc-body">
-                        <h3>intocables 🔥</h3>
-                        <p>los temas que siempre caen · mapas mentales esenciales</p>
-                    </div>
-                    <i class="fas fa-arrow-right hc-arrow"></i>
-                </div>
-
-                <div class="home-card" style="background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border: 1px solid #BFDBFE;" onclick="window.location.href='juegos/index.html'">
-                    <div class="hc-icon" style="color: #2563EB;"><i class="fas fa-gamepad"></i></div>
-                    <div class="hc-body">
-                        <h3 style="color: #1E40AF;">juegos interactivos</h3>
-                        <p style="color: #3B82F6;">evaluaciones en vivo · únete con un código de acceso</p>
-                    </div>
-                    <i class="fas fa-arrow-right hc-arrow" style="color: #2563EB;"></i>
-                </div>
-
+                    <button class="home-feature-link">ver mapas <i class="fas fa-arrow-right"></i></button>
+                </article>
             </div>
 
+            <section class="home-section-block">
+                <div class="home-section-head">
+                    <h2>Accesos rápidos</h2>
+                    <p>Todo optimizado para tocar con el pulgar.</p>
+                </div>
+                <div class="home-grid home-grid-mobile-v2">
+                    <div class="home-card home-card-orange home-card-priority" onclick="toggleFlashcards()">
+                        <div class="hc-icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="hc-body">
+                            <h3>flashcards</h3>
+                            <p>repaso activo · memoria a largo plazo</p>
+                        </div>
+                        <i class="fas fa-arrow-right hc-arrow"></i>
+                    </div>
+                    <div class="home-card home-card-map" onclick="openMindMaps()">
+                        <div class="hc-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="hc-body">
+                            <h3>mapas mentales</h3>
+                            <p>temas conectados visualmente</p>
+                        </div>
+                        <i class="fas fa-arrow-right hc-arrow"></i>
+                    </div>
+                    <div class="home-card home-card-purple" onclick="openGame('quiz')">
+                        <div class="hc-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="hc-body"><h3>quiz relámpago</h3><p>preguntas cronometradas</p></div>
+                        <i class="fas fa-arrow-right hc-arrow"></i>
+                    </div>
+                    <div class="home-card home-card-green" onclick="openGame('hangman')">
+                        <div class="hc-icon"><i class="fas fa-brain"></i></div>
+                        <div class="hc-body"><h3>ahorcado médico</h3><p>términos clave</p></div>
+                        <i class="fas fa-arrow-right hc-arrow"></i>
+                    </div>
+                    <div class="home-card home-card-blue" onclick="openBanco()">
+                        <div class="hc-icon"><i class="fas fa-database"></i></div>
+                        <div class="hc-body"><h3>banco de preguntas</h3><p>práctica por materia</p></div>
+                        <i class="fas fa-arrow-right hc-arrow"></i>
+                    </div>
+                    <div class="home-card home-card-sim" onclick="openSimulacro()">
+                        <div class="hc-icon"><i class="fas fa-stopwatch"></i></div>
+                        <div class="hc-body"><h3>simulacro</h3><p>modo admisión</p></div>
+                        <i class="fas fa-arrow-right hc-arrow"></i>
+                    </div>
+                    <div class="home-card home-card-eval" onclick="openEvaluacion()">
+                        <div class="hc-icon"><i class="fas fa-chart-bar"></i></div>
+                        <div class="hc-body"><h3>mis evaluaciones</h3><p>resultados y feedback</p></div>
+                        <i class="fas fa-arrow-right hc-arrow"></i>
+                    </div>
+                    <div class="home-card home-card-video" onclick="openVideoclases()">
+                        <div class="hc-icon"><i class="fas fa-play-circle"></i></div>
+                        <div class="hc-body"><h3>videoclases</h3><p>clases por materia</p></div>
+                        <i class="fas fa-arrow-right hc-arrow"></i>
+                    </div>
+                    <div class="home-card home-card-fire" onclick="openIntocables()">
+                        <div class="hc-icon"><i class="fas fa-fire-alt"></i></div>
+                        <div class="hc-body"><h3>intocables 🔥</h3><p>lo que siempre cae</p></div>
+                        <i class="fas fa-arrow-right hc-arrow"></i>
+                    </div>
+                    <div class="home-card home-card-games" onclick="window.location.href='juegos/index.html'">
+                        <div class="hc-icon"><i class="fas fa-gamepad"></i></div>
+                        <div class="hc-body"><h3>juegos interactivos</h3><p>evaluaciones en vivo</p></div>
+                        <i class="fas fa-arrow-right hc-arrow"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home-study-tip">
+                <i class="fas fa-lightbulb"></i>
+                <div>
+                    <strong>Tip de estudio</strong>
+                    <p id="tip-text">repasa los temas difíciles justo antes de dormir; el sueño consolida la memoria a largo plazo.</p>
+                </div>
+            </section>
         </section>
 
-        <!-- Flashcards -->
+        <!-- ══ FLASHCARDS / STUDY AREA ══ -->
         <section id="study-area" class="study-area hidden">
-            <div class="study-area-header">
-                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+            <div class="study-mobile-header">
+                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> inicio</button>
                 <div>
-                    <h2 class="study-area-title"><i class="fas fa-layer-group"></i> flashcards</h2>
-                    <p class="study-area-subtitle">
-                        <span id="current-subject">materia</span> · <span id="card-tema-name">tema</span>
-                    </p>
+                    <span id="current-subject" class="study-subject-pill">flashcards</span>
+                    <h2 id="card-tema-name">elige un tema</h2>
                 </div>
             </div>
 
-            <div class="card-container" tabindex="0" aria-label="Tarjeta de estudio">
+            <div class="study-progress-row">
+                <div class="card-counter">tarjeta <span id="card-num">1</span> de <span id="card-total">0</span></div>
+                <div class="study-progress-track"><span id="study-progress-fill"></span></div>
+            </div>
+
+            <div class="card-container">
                 <div class="card" id="card">
                     <div class="face front">
-                        <span class="card-tag">pregunta</span>
-                        <span class="card-watermark">ALCOCERMED</span>
-                        <div class="text-inner">
-                            <p id="q-text">elige un tema para comenzar</p>
-                        </div>
+                        <div class="card-face-label"><i class="fas fa-question-circle"></i> pregunta</div>
+                        <div class="text-inner"><p id="q-text">selecciona una materia y tema desde flashcards.</p></div>
                     </div>
                     <div class="face back">
-                        <span class="card-tag">respuesta</span>
-                        <span class="card-watermark">ALCOCERMED</span>
-                        <div class="text-inner back-text">
-                            <p id="a-text"></p>
-                        </div>
+                        <div class="card-face-label"><i class="fas fa-check-circle"></i> respuesta</div>
+                        <div class="back-text"><p id="a-text">aquí aparecerá la respuesta.</p></div>
                     </div>
                 </div>
-            </div>
-
-            <div class="card-counter">
-                tarjeta <span id="card-num">1</span> de <span id="card-total">0</span>
             </div>
 
             <div class="action-zone">
                 <button id="btn-reveal" class="btn-primary">revelar respuesta</button>
-
                 <div id="anki-buttons" class="anki-wrapper hidden">
                     <div class="anki-rating-row">
                         <button class="btn-anki yellow-intense" onclick="rateCard(0)">otra vez</button>
-                        <button class="btn-anki red-intense" onclick="rateCard(1)">dificil</button>
+                        <button class="btn-anki red-intense" onclick="rateCard(1)">difícil</button>
                         <button class="btn-anki gold-intense" onclick="rateCard(2)">bien</button>
-                        <button class="btn-anki blue-intense" onclick="rateCard(3)">facil</button>
+                        <button class="btn-anki blue-intense" onclick="rateCard(3)">fácil</button>
                     </div>
                     <div class="nav-row">
-                        <button class="btn-nav btn-nav-left" onclick="prevCard()">
-                            <i class="fas fa-arrow-left"></i> atras
-                        </button>
-                        <button class="btn-nav btn-nav-right" onclick="goNextCard()">
-                            siguiente <i class="fas fa-arrow-right"></i>
-                        </button>
+                        <button class="btn-nav btn-nav-left" onclick="prevCard()"><i class="fas fa-arrow-left"></i> atrás</button>
+                        <button class="btn-nav btn-nav-right" onclick="goNextCard()">siguiente <i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
         </section>
+
 
         <!-- ══ JUEGO: QUIZ RELÁMPAGO ══ -->
         <section id="game-quiz" class="game-section hidden">
