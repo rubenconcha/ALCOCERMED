@@ -489,7 +489,9 @@ function renderAnswerOptions(){
             'ac-blue': '#2563EB', 'ac-teal': '#0D9488', 'ac-yellow': '#D97706', 'ac-pink': '#DC2626', 'ac-purple': '#7C3AED', 'ac-green': '#059669'
           };
           var pinColor = pinColors[o.color] || '#E91E63';
-          html += '      <div class="dnd-pin" style="left:' + o.pinX + '%; top:' + o.pinY + '%; background:' + pinColor + ';">';
+          html += '      <div class="dnd-pin-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%; background:' + pinColor + ';"></div>';
+          html += '      <div class="dnd-pin-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%; background:linear-gradient(90deg,' + pinColor + ',rgba(255,255,255,0.12));"></div>';
+          html += '      <div class="dnd-pin" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%; background:' + pinColor + ';">';
           html += '        <span class="dnd-pin-letter">' + String.fromCharCode(65+i) + '</span>';
           html += '        <div class="dnd-pin-pulse" style="border-color:' + pinColor + '"></div>';
           if(o.text) html += '        <div class="dnd-pin-tooltip">' + o.text + '</div>';
@@ -1952,14 +1954,16 @@ function renderPvQuestion(){
     html += '<div style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">';
     html += '  <p style="color:#fff; font-size:0.95rem; font-weight:800; text-align:center; background:rgba(255,255,255,0.08); padding:8px 16px; border-radius:10px;"><i class="fas fa-hand-pointer"></i> Vista Previa: Toca una etiqueta y luego haz clic en el círculo `?` en la imagen:</p>';
     
-    html += '  <div style="position:relative; display:inline-block; max-width:100%; border-radius:12px; overflow:hidden; border:3px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.05);">';
-    html += '    <img src="' + imgUrl + '" style="max-width:100%; max-height:260px; display:block; user-select:none; pointer-events:none;">';
+    html += '  <div class="pv-dnd-map-container" style="position:relative; display:inline-block; max-width:100%; border-radius:12px; overflow:hidden; border:3px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.05);">';
+    html += '    <img class="pv-dnd-image" src="' + imgUrl + '" style="max-width:100%; max-height:260px; display:block; user-select:none; pointer-events:none;">';
     
     for (var i = 0; i < opts.length; i++) {
         var o = opts[i];
         if (o.pinX !== undefined && o.pinY !== undefined) {
+            html += '  <div class="pv-dnd-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%;"></div>';
+            html += '  <div class="pv-dnd-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%;"></div>';
             html += '  <div class="pv-dnd-slot" id="pv-slot-' + i + '" onclick="pvClickSlot(' + i + ')" ' +
-                'style="position:absolute; left:' + o.pinX + '%; top:' + o.pinY + '%; transform:translate(-50%, -50%); ' +
+                'style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; position:absolute; left:' + o.pinX + '%; top:' + o.pinY + '%; transform:translate(-50%, -50%); ' +
                 'width:30px; height:30px; border-radius:50%; background:#fff; border:2px solid #E2E8F0; ' +
                 'color:#334155; display:flex; align-items:center; justify-content:center; font-weight:900; ' +
                 'font-size:0.85rem; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.3); z-index:100;">?</div>';
@@ -2614,4 +2618,3 @@ function pvConfirmDnd() {
 window.pvClickLabel = pvClickLabel;
 window.pvClickSlot = pvClickSlot;
 window.pvConfirmDnd = pvConfirmDnd;
-
