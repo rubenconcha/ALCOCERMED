@@ -164,11 +164,22 @@ body{font-family:'Inter',sans-serif;background:var(--bg-editor);color:var(--text
 .config-pill i{font-size:11px;color:#888}
 
 /* Question Area (Dark Purple like Wayground) */
-.question-area{background:#2D1B4E;border-radius:16px;padding:24px;min-height:180px;margin-bottom:16px;position:relative;display:flex;align-items:center;justify-content:center}
+.question-area{background:#2D1B4E;border-radius:16px;padding:24px;min-height:180px;margin-bottom:16px;position:relative;display:flex;align-items:center;justify-content:center;gap:18px}
 .question-media-btn{position:absolute;top:12px;left:12px;width:36px;height:36px;background:rgba(255,255,255,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(255,255,255,.6);transition:background .2s}
 .question-media-btn:hover{background:rgba(255,255,255,.25)}
+.question-image-preview{display:none;flex:0 0 auto;max-width:240px}
+.question-image-empty{width:150px;height:112px;border:2px dashed rgba(255,255,255,.28);border-radius:14px;color:rgba(255,255,255,.68);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-size:12px;font-weight:800;cursor:pointer;background:rgba(255,255,255,.06)}
+.question-image-empty i{font-size:22px}
+.question-image-empty.loading{cursor:default}
+.question-image-card{position:relative;width:220px;max-width:24vw;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.08);box-shadow:0 10px 28px rgba(0,0,0,.22)}
+.question-image-card img{width:100%;max-height:180px;display:block;object-fit:contain;background:#fff}
+.question-image-actions{display:flex;gap:6px;padding:7px;background:rgba(15,23,42,.86)}
+.question-image-actions button{flex:1;border:none;border-radius:8px;padding:7px 6px;font-size:11px;font-weight:800;color:#1d4ed8;background:#dbeafe;cursor:pointer}
+.question-image-actions button.danger{color:#b91c1c;background:#fee2e2}
 .question-input{width:100%;background:transparent;border:none;outline:none;color:#fff;font-size:18px;font-weight:600;text-align:center;resize:none;line-height:1.5;font-family:'Inter',sans-serif}
 .question-input::placeholder{color:rgba(255,255,255,.4)}
+.pv-question-image-wrap{width:100%;display:flex;justify-content:center;margin-bottom:10px}
+.pv-question-image-wrap img{max-width:100%;max-height:220px;border-radius:14px;background:#fff;object-fit:contain;box-shadow:0 10px 28px rgba(0,0,0,.22)}
 
 /* Answer Cards Grid */
 .answer-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}

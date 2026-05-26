@@ -83,6 +83,17 @@ function collectGameConfigForSave(){
 function editorEscapeHtml(s){
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
+function getQuestionImage(q){
+  return (q && q.options && q.options[0] && q.options[0].pregunta_imagen) ? q.options[0].pregunta_imagen : '';
+}
+function setQuestionImage(q,url){
+  if(!q)return;
+  if(!q.options)q.options=[];
+  if(q.options.length===0)q.options.push({text:'',correct:false,color:'ac-blue'});
+  for(var i=0;i<q.options.length;i++){
+    q.options[i].pregunta_imagen=url||'';
+  }
+}
 function renderGameConfigPanel(){
   syncGameConfigQuestionIds();
   var maxInp=document.getElementById('game-max-questions');
@@ -479,6 +490,25 @@ function showEditor(){
   // Update points/timer pills
   document.getElementById('points-label').textContent=q.points+' punto'+(q.points!==1?'s':'');
   document.getElementById('timer-label').textContent=formatTimer(q.timer);
+  renderQuestionImagePreview();
+}
+
+function renderQuestionImagePreview(){
+  var box=document.getElementById('question-image-preview');
+  if(!box||currentQuestionIndex<0)return;
+  var q=questions[currentQuestionIndex];
+  var url=getQuestionImage(q);
+  if(q.type==='dnd'){
+    box.innerHTML='';
+    box.style.display='none';
+    return;
+  }
+  box.style.display='block';
+  if(url){
+    box.innerHTML='<div class="question-image-card"><img src="'+editorEscapeHtml(url)+'" alt="Imagen de la pregunta"><div class="question-image-actions"><button type="button" onclick="openQuestionImagePicker()"><i class="fas fa-sync-alt"></i> Cambiar</button><button type="button" class="danger" onclick="clearQuestionImage()"><i class="fas fa-trash-alt"></i> Quitar</button></div></div>';
+  }else{
+    box.innerHTML='<div class="question-image-empty" onclick="openQuestionImagePicker()"><i class="fas fa-image"></i><span>Agregar imagen a la pregunta</span></div>';
+  }
 }
 
 function showTypesPanel(){
@@ -698,7 +728,7 @@ function removeOption(idx){
 function addOption(){
   var q=questions[currentQuestionIndex];if(q.options.length>=6)return;
   var colors=['ac-blue','ac-teal','ac-yellow','ac-pink','ac-purple','ac-green'];
-  q.options.push({text:'',correct:false,color:colors[q.options.length%6]});
+  q.options.push({text:'',correct:false,color:colors[q.options.length%6],pregunta_imagen:getQuestionImage(q)});
   renderAnswerOptions();
 }
 function toggleMultipleAnswers(){
@@ -2061,6 +2091,10 @@ function renderPvQuestion(){
   var opts=q.options||[];
   var optColors=['#2563EB','#0D9488','#D97706','#DC2626','#7C3AED','#059669'];
   var html='';
+  var qImg=getQuestionImage(q);
+  if(qImg && q.type!=='dnd'){
+    html+='<div class="pv-question-image-wrap"><img src="'+editorEscapeHtml(qImg)+'" alt="Imagen de la pregunta"></div>';
+  }
 
   // Open-ended: show textarea
   if(q.type==='oa'){
@@ -2520,6 +2554,64 @@ document.addEventListener('DOMContentLoaded', function() {
 // ═══ IDENTIFICAR PARTES (DND) HELPERS ═══
 var activeLocatingOption = -1;
 
+function openQuestionImagePicker(){
+  if(currentQuestionIndex<0)return;
+  var q=questions[currentQuestionIndex];
+  if(q.type==='dnd'){
+    showToast('Para identificar partes usa el cargador de imagen de esa seccion','error');
+    return;
+  }
+  var input=document.getElementById('question-image-input');
+  if(input){input.value='';input.click();}
+}
+
+function handleQuestionImageSelect(event){
+  var files=event.target.files;
+  if(files&&files.length>0)processQuestionImageFile(files[0]);
+}
+
+function clearQuestionImage(){
+  if(currentQuestionIndex<0)return;
+  setQuestionImage(questions[currentQuestionIndex],'');
+  renderQuestionImagePreview();
+  markUnsavedChanges();
+}
+
+function processQuestionImageFile(file){
+  if(!file.type.startsWith('image/')){
+    showToast('Solo se permiten archivos de imagen','error');
+    return;
+  }
+  if(file.size>5*1024*1024){
+    showToast('La imagen no debe superar 5MB','error');
+    return;
+  }
+  var box=document.getElementById('question-image-preview');
+  if(box)box.innerHTML='<div class="question-image-empty loading"><i class="fas fa-spinner fa-spin"></i><span>Subiendo imagen...</span></div>';
+  var client=getSupabase();
+  var ext=file.name.split('.').pop()||'jpg';
+  var fileName='question_'+Date.now()+'_'+Math.random().toString(36).substr(2,6)+'.'+ext;
+  client.storage.from('imagenes').upload(fileName,file,{cacheControl:'3600',upsert:false}).then(function(result){
+    if(result.error){
+      console.warn('Storage upload failed, using base64 fallback:',result.error.message);
+      var reader=new FileReader();
+      reader.onload=function(e){
+        setQuestionImage(questions[currentQuestionIndex],e.target.result);
+        renderQuestionImagePreview();
+        markUnsavedChanges();
+      };
+      reader.readAsDataURL(file);
+      return;
+    }
+    var urlResult=client.storage.from('imagenes').getPublicUrl(fileName);
+    if(urlResult.data&&urlResult.data.publicUrl){
+      setQuestionImage(questions[currentQuestionIndex],urlResult.data.publicUrl);
+      renderQuestionImagePreview();
+      markUnsavedChanges();
+    }
+  });
+}
+
 function updateDndImage(val){
   if(!val || !val.trim()) return;
   var q = questions[currentQuestionIndex];
@@ -2649,6 +2741,9 @@ window.cancelDndLocate = cancelDndLocate;
 window.handleDndImageClick = handleDndImageClick;
 window.handleDndFileDrop = handleDndFileDrop;
 window.handleDndFileSelect = handleDndFileSelect;
+window.openQuestionImagePicker = openQuestionImagePicker;
+window.handleQuestionImageSelect = handleQuestionImageSelect;
+window.clearQuestionImage = clearQuestionImage;
 
 // ═══ DND PREVIEW (VISTA PREVIA) HELPERS ═══
 var pvSelectedDndLabel = -1;

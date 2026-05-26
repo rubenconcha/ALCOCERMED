@@ -3745,6 +3745,10 @@ function startQuestionTimer(seconds) {
 
 var quizMultiSelections = [];
 
+function getQuizQuestionImage(pregunta) {
+    return (pregunta && pregunta.opciones && pregunta.opciones[0] && pregunta.opciones[0].pregunta_imagen) ? pregunta.opciones[0].pregunta_imagen : '';
+}
+
 function renderQuizQuestion() {
     if (!quizData || quizCurrentQ >= quizData.preguntas.length) return;
 
@@ -3763,7 +3767,13 @@ function renderQuizQuestion() {
     }
 
     document.getElementById('quiz-question-number').textContent = (quizCurrentQ + 1) + ' / ' + total;
-    document.getElementById('quiz-question-text').textContent = pregunta.texto || '';
+    var questionCard = document.getElementById('quiz-question-card');
+    var questionImage = getQuizQuestionImage(pregunta);
+    if (questionCard && questionImage && tipo !== 'dnd') {
+        questionCard.innerHTML = '<div class="quiz-question-content"><img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="Imagen de la pregunta"><h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">' + escapeHtml(pregunta.texto || '') + '</h2></div>';
+    } else if (questionCard) {
+        questionCard.innerHTML = '<h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">' + escapeHtml(pregunta.texto || '') + '</h2>';
+    }
 
     // Calculate score and streak
     var currentScore = 0;

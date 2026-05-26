@@ -4470,6 +4470,24 @@ body.quiz-focus-mode #quiz-container {
     object-fit: contain;
 }
 
+.quiz-question-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.quiz-question-image {
+    max-width: min(42%, 360px);
+    max-height: 260px;
+    border-radius: 18px;
+    background: #fff;
+    object-fit: contain;
+    box-shadow: 0 14px 34px rgba(0,0,0,.20);
+}
+
 .quiz-dnd-anchor,
 .quiz-dnd-connector {
     display: none;
@@ -4504,6 +4522,16 @@ body.quiz-focus-mode #quiz-container {
 
     .quiz-dnd-builder {
         gap: 10px !important;
+    }
+
+    .quiz-question-content {
+        gap: 12px;
+    }
+
+    .quiz-question-image {
+        max-width: 100%;
+        max-height: 28vh;
+        border-radius: 14px;
     }
 
     .quiz-dnd-builder > p {
