@@ -3778,7 +3778,29 @@ function startQuestionTimer(seconds) {
 var quizMultiSelections = [];
 
 function getQuizQuestionImage(pregunta) {
-    return (pregunta && pregunta.opciones && pregunta.opciones[0] && pregunta.opciones[0].pregunta_imagen) ? pregunta.opciones[0].pregunta_imagen : '';
+    var opts = pregunta && pregunta.opciones;
+    if (typeof opts === 'string') {
+        try { opts = JSON.parse(opts); } catch (e) { opts = []; }
+    }
+    if (!opts || !opts.length) return '';
+    for (var i = 0; i < opts.length; i++) {
+        var url = opts[i] && opts[i].pregunta_imagen;
+        if (url && String(url).trim()) return String(url).trim();
+    }
+    return '';
+}
+
+function renderQuizQuestionImageWrap(pregunta, tipo) {
+    var wrap = document.getElementById('quiz-question-image-wrap');
+    if (!wrap) return;
+    var questionImage = getQuizQuestionImage(pregunta);
+    if (questionImage && tipo !== 'dnd') {
+        wrap.hidden = false;
+        wrap.innerHTML = '<img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="Imagen de la pregunta">';
+    } else {
+        wrap.hidden = true;
+        wrap.innerHTML = '';
+    }
 }
 
 function renderQuizQuestion() {
@@ -3800,12 +3822,10 @@ function renderQuizQuestion() {
 
     document.getElementById('quiz-question-number').textContent = (quizCurrentQ + 1) + ' / ' + total;
     var questionCard = document.getElementById('quiz-question-card');
-    var questionImage = getQuizQuestionImage(pregunta);
-    if (questionCard && questionImage && tipo !== 'dnd') {
-        questionCard.innerHTML = '<div class="quiz-question-content"><img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="Imagen de la pregunta"><h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">' + escapeHtml(pregunta.texto || '') + '</h2></div>';
-    } else if (questionCard) {
+    if (questionCard) {
         questionCard.innerHTML = '<h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">' + escapeHtml(pregunta.texto || '') + '</h2>';
     }
+    renderQuizQuestionImageWrap(pregunta, tipo);
 
     // Calculate score and streak
     var currentScore = 0;
