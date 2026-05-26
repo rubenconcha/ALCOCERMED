@@ -7,6 +7,14 @@ var SUPABASE_URL = 'https://asnwhddmurstzmghuyin.supabase.co';
 var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
 var ADMIN_EMAIL = 'pichon4488@gmail.com';
 
+/** Evento masivo: registro automático con cuenta individual 24h */
+var DEMO_EVENT = {
+    enabled: true,
+    accessCode: 'BENCARSON2026',
+    emailDomain: 'demo.alcocermed.app',
+    validityHours: 24
+};
+
 var sb = null;
 var currentUser = null;
 var isAdmin = false;
@@ -987,6 +995,15 @@ function initAuth() {
 
     client.auth.getSession().then(function(result) {
         if (result.data && result.data.session && result.data.session.user) {
+            if (isDemoGuestExpired(result.data.session.user)) {
+                client.auth.signOut();
+                showLogin();
+                setTimeout(function() {
+                    showLoginError('Tu cuenta demo expiró. Crea una nueva en «Cuenta demo 24h» o usa tu cuenta regular.');
+                    setLoginMode('demo');
+                }, 200);
+                return;
+            }
             currentUser = result.data.session.user;
             enterApp();
         } else {
@@ -999,6 +1016,10 @@ function initAuth() {
 
     client.auth.onAuthStateChange(function(event, session) {
         if (event === 'SIGNED_IN' && session) {
+            if (isDemoGuestExpired(session.user)) {
+                client.auth.signOut();
+                return;
+            }
             currentUser = session.user;
             enterApp();
         } else if (event === 'SIGNED_OUT') {
@@ -1101,8 +1122,8 @@ function enterApp() {
         }
     }
 
-    // ═══ DEVICE GUARD (solo estudiantes, admin exento) ═══
-    if (typeof DeviceGuard !== 'undefined' && !isAdmin) {
+    // ═══ DEVICE GUARD (estudiantes regulares; demo y admin exentos) ═══
+    if (typeof DeviceGuard !== 'undefined' && !isAdmin && !isDemoGuestUser(currentUser)) {
         var client = getSupabase();
         DeviceGuard.activateDevice(client, email).then(function(res) {
             if (!res.ok) {
@@ -1157,6 +1178,260 @@ function enterApp() {
         }
         navigateTo(defaultPage, true);
     }
+}
+
+// ═══ CUENTAS DEMO (evento 24h) ═══
+
+function isDemoGuestUser(user) {
+    if (!user) return false;
+    var email = (user.email || '').toLowerCase();
+    if (email.indexOf('@' + DEMO_EVENT.emailDomain) !== -1) return true;
+    return !!(user.user_metadata && user.user_metadata.demo_guest);
+}
+
+function isDemoGuestExpired(user) {
+    if (!user || !isDemoGuestUser(user)) return false;
+    var exp = user.user_metadata && user.user_metadata.demo_expires_at;
+    if (!exp) return false;
+    return new Date(exp).getTime() < Date.now();
+}
+
+function slugifyDemoEmailLocal(name) {
+    var slug = normalizeDemoText(name).toLowerCase()
+        .replace(/[^a-z0-9]+/g, '.')
+        .replace(/^\.+|\.+$/g, '')
+        .slice(0, 22);
+    return slug || 'alumno';
+}
+
+function buildDemoGuestEmail(fullName) {
+    var local = slugifyDemoEmailLocal(fullName);
+    var suffix = Math.random().toString(36).replace(/[^a-z0-9]/g, '').slice(0, 5);
+    return local + '.' + suffix + '@' + DEMO_EVENT.emailDomain;
+}
+
+function getDemoExpiresAtIso() {
+    var ms = (DEMO_EVENT.validityHours || 24) * 60 * 60 * 1000;
+    return new Date(Date.now() + ms).toISOString();
+}
+
+function registerEvalParticipant(evaluacionId) {
+    if (!currentUser || !evaluacionId) return Promise.resolve();
+    var client = getSupabase();
+    if (!client) return Promise.resolve();
+    var nombreConAvatar = currentAvatar + '|' + getCurrentUserDisplayName();
+    var payload = {
+        evaluacion_id: evaluacionId,
+        user_id: currentUser.id,
+        nombre: nombreConAvatar,
+        joined_at: new Date().toISOString()
+    };
+    return client.from('evaluacion_participantes')
+        .select('user_id')
+        .eq('evaluacion_id', evaluacionId)
+        .eq('user_id', currentUser.id)
+        .maybeSingle()
+        .then(function(checkRes) {
+            if (checkRes.data) {
+                return client.from('evaluacion_participantes')
+                    .update(payload)
+                    .eq('evaluacion_id', evaluacionId)
+                    .eq('user_id', currentUser.id);
+            }
+            return client.from('evaluacion_participantes').insert(payload);
+        })
+        .then(function(res) {
+            if (res && res.error) {
+                console.warn('No se pudo registrar participante:', res.error.message);
+            }
+        })
+        .catch(function(err) {
+            console.warn('registerEvalParticipant:', err);
+        });
+}
+
+function setLoginMode(mode) {
+    var existingForm = document.getElementById('login-form');
+    var demoForm = document.getElementById('demo-signup-form');
+    var tabExisting = document.getElementById('login-tab-existing');
+    var tabDemo = document.getElementById('login-tab-demo');
+    var footer = document.getElementById('login-footer-text');
+    var isDemo = mode === 'demo';
+    if (existingForm) existingForm.classList.toggle('hidden', isDemo);
+    if (demoForm) demoForm.classList.toggle('hidden', !isDemo);
+    if (tabExisting) {
+        tabExisting.classList.toggle('active', !isDemo);
+        tabExisting.setAttribute('aria-selected', !isDemo ? 'true' : 'false');
+    }
+    if (tabDemo) {
+        tabDemo.classList.toggle('active', isDemo);
+        tabDemo.setAttribute('aria-selected', isDemo ? 'true' : 'false');
+    }
+    if (footer) {
+        footer.textContent = isDemo
+            ? 'Cuenta temporal solo para el evento demo · Prepa Ben Carson'
+            : 'solo alumnos de la preparatoria Ben Carson';
+    }
+    hideLoginError();
+    hideDemoSignupError();
+}
+
+function showDemoSignupError(msg) {
+    var el = document.getElementById('demo-signup-error');
+    var txt = document.getElementById('demo-signup-error-text');
+    var ok = document.getElementById('demo-signup-success');
+    if (ok) ok.classList.add('hidden');
+    if (el) el.classList.remove('hidden');
+    if (txt) txt.textContent = msg;
+}
+
+function hideDemoSignupError() {
+    var el = document.getElementById('demo-signup-error');
+    if (el) el.classList.add('hidden');
+}
+
+function showDemoSignupSuccess(html) {
+    var el = document.getElementById('demo-signup-success');
+    hideDemoSignupError();
+    if (el) {
+        el.innerHTML = html;
+        el.classList.remove('hidden');
+    }
+}
+
+function setDemoSignupLoading(loading) {
+    var btn = document.getElementById('demo-signup-btn');
+    var txt = document.getElementById('demo-signup-btn-text');
+    var load = document.getElementById('demo-signup-btn-loading');
+    if (!btn) return;
+    btn.disabled = loading;
+    if (txt) txt.style.display = loading ? 'none' : '';
+    if (load) load.classList.toggle('hidden', !loading);
+}
+
+function handleDemoSignup(e) {
+    if (e) e.preventDefault();
+    if (!DEMO_EVENT.enabled) {
+        showDemoSignupError('El registro demo no está activo.');
+        return;
+    }
+    hideDemoSignupError();
+    var nameEl = document.getElementById('demo-full-name');
+    var passEl = document.getElementById('demo-password');
+    var codeEl = document.getElementById('demo-access-code');
+    var fullName = (nameEl && nameEl.value || '').trim();
+    var password = passEl ? passEl.value : '';
+    var code = normalizeDemoText(codeEl && codeEl.value || '');
+    var expectedCode = normalizeDemoText(DEMO_EVENT.accessCode);
+
+    if (fullName.length < 3) {
+        showDemoSignupError('Escribe tu nombre completo (mínimo 3 letras).');
+        return;
+    }
+    if (password.length < 6) {
+        showDemoSignupError('La contraseña debe tener al menos 6 caracteres.');
+        return;
+    }
+    if (code !== expectedCode) {
+        showDemoSignupError('Código del evento incorrecto. Pídeselo a tu profesor.');
+        return;
+    }
+
+    var client = getSupabase();
+    if (!client) {
+        showDemoSignupError('No hay conexión con el servidor. Recarga la página.');
+        return;
+    }
+
+    var email = buildDemoGuestEmail(fullName);
+    var expiresAt = getDemoExpiresAtIso();
+    setDemoSignupLoading(true);
+
+    client.auth.signUp({
+        email: email,
+        password: password,
+        options: {
+            data: {
+                full_name: fullName,
+                demo_guest: true,
+                demo_expires_at: expiresAt
+            }
+        }
+    }).then(function(result) {
+        if (result.error) {
+            setDemoSignupLoading(false);
+            var err = result.error.message || '';
+            if (err.indexOf('already registered') !== -1 || err.indexOf('already been registered') !== -1) {
+                showDemoSignupError('Ese usuario ya existe. Si ya te registraste, usa la pestaña «Ya tengo cuenta» con el correo que te dimos.');
+            } else if (err.indexOf('Signups not allowed') !== -1) {
+                showDemoSignupError('El registro no está habilitado en el servidor. El profesor debe activarlo en Supabase (ver DEMO_DIA_SETUP.sql).');
+            } else {
+                showDemoSignupError(err || 'No se pudo crear la cuenta.');
+            }
+            return;
+        }
+
+        function finishLogin(user, session) {
+            setDemoSignupLoading(false);
+            if (!user) {
+                showDemoSignupError('Cuenta creada pero no hubo sesión. Intenta entrar con tu correo: ' + email);
+                return;
+            }
+            currentUser = user;
+            try {
+                localStorage.setItem('alcocermed_demo_last_email', email);
+                localStorage.setItem('alcocermed_demo_last_name', fullName);
+            } catch (ignore) {}
+            showDemoSignupSuccess(
+                '<p><strong>¡Listo, ' + fullName + '!</strong></p>' +
+                '<p style="margin-top:8px;font-size:0.82rem">Usuario: <code style="word-break:break-all">' + email + '</code></p>' +
+                '<p style="margin-top:6px;font-size:0.78rem;color:#64748b">Guarda este correo y tu contraseña por si cierras sesión.</p>'
+            );
+            setTimeout(function() { enterApp(); }, 1200);
+        }
+
+        if (result.data && result.data.session && result.data.user) {
+            finishLogin(result.data.user, result.data.session);
+            return;
+        }
+
+        client.auth.signInWithPassword({ email: email, password: password }).then(function(signInRes) {
+            if (signInRes.error || !signInRes.data || !signInRes.data.user) {
+                setDemoSignupLoading(false);
+                showDemoSignupSuccess(
+                    '<p><strong>Cuenta creada.</strong></p>' +
+                    '<p style="margin-top:8px">Confirma tu correo si te lo pidió el sistema, o entra en «Ya tengo cuenta» con:</p>' +
+                    '<p style="margin-top:6px"><code style="word-break:break-all">' + email + '</code></p>'
+                );
+                return;
+            }
+            finishLogin(signInRes.data.user, signInRes.data.session);
+        });
+    }).catch(function(err) {
+        setDemoSignupLoading(false);
+        showDemoSignupError('Error de conexión. Intenta de nuevo.');
+        console.error(err);
+    });
+}
+window.handleDemoSignup = handleDemoSignup;
+
+function initLoginScreenUi() {
+    var tabs = document.querySelectorAll('.login-mode-tab');
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener('click', function() {
+            setLoginMode(this.getAttribute('data-login-mode'));
+        });
+    }
+    try {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('demo') === '1' || params.get('registro') === '1') {
+            setLoginMode('demo');
+        }
+        var lastEmail = localStorage.getItem('alcocermed_demo_last_email');
+        if (lastEmail && document.getElementById('login-email')) {
+            document.getElementById('login-email').value = lastEmail;
+        }
+    } catch (ignore) {}
 }
 
 // ═══ LOGIN HANDLER ═══
@@ -1219,6 +1494,11 @@ function handleLogin(e) {
         }
 
         if (result.data && result.data.user) {
+            if (isDemoGuestExpired(result.data.user)) {
+                showLoginError('Tu cuenta demo expiró (24 h). Pide una nueva al profesor o usa tu cuenta regular.');
+                client.auth.signOut();
+                return;
+            }
             currentUser = result.data.user;
             enterApp();
         } else {
@@ -1234,9 +1514,9 @@ function handleLogin(e) {
 // Make handleLogin globally accessible
 window.handleLogin = handleLogin;
 
-function togglePasswordVisibility() {
-    var input = document.getElementById('login-password');
-    var icon = document.getElementById('login-eye-icon');
+function togglePasswordVisibility(inputId, iconId) {
+    var input = document.getElementById(inputId || 'login-password');
+    var icon = document.getElementById(iconId || 'login-eye-icon');
     if (!input) return;
     if (input.type === 'password') {
         input.type = 'text';
@@ -2526,6 +2806,8 @@ function startSelfStudy(evalId) {
 
             sessionStorage.setItem('alcocer_quiz_state_' + code, JSON.stringify({ q: 0, a: [] }));
             sessionStorage.setItem('alcocer_quiz_code', code);
+
+            registerEvalParticipant(evaluacion.id);
 
             // Usar el MISMO flujo que searchAndStartQuiz para modo test
             navigateTo('quiz');
@@ -4015,6 +4297,7 @@ function showQuizResults() {
     var isTeamMode = quizSessionMode === 'equipo';
 
     if (currentUser) {
+        registerEvalParticipant(evalIdForBoard);
         var client = getSupabase();
         client.from('evaluacion_resultados').insert({
             evaluacion_id: evalIdForBoard,
@@ -5049,6 +5332,7 @@ function getGreeting() {
 // ═══ INIT ═══
 
 document.addEventListener('DOMContentLoaded', function() {
+    initLoginScreenUi();
     // Auth
     initAuth();
 

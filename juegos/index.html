@@ -42,6 +42,12 @@
         <span class="login-header-app">AlcocerMed · juegos</span>
       </div>
     </header>
+
+    <div class="login-mode-tabs" role="tablist" aria-label="Modo de acceso">
+      <button type="button" class="login-mode-tab active" id="login-tab-existing" data-login-mode="existing" role="tab" aria-selected="true">Ya tengo cuenta</button>
+      <button type="button" class="login-mode-tab" id="login-tab-demo" data-login-mode="demo" role="tab" aria-selected="false">Cuenta demo 24h</button>
+    </div>
+
     <form id="login-form" class="login-form" onsubmit="handleLogin(event)">
       <div class="login-field">
         <label class="login-label" for="login-email">
@@ -56,7 +62,7 @@
         </label>
         <div class="login-input-wrap">
           <input type="password" id="login-password" class="login-input" required minlength="6" autocomplete="current-password">
-          <button type="button" class="login-eye-btn" onclick="togglePasswordVisibility()">
+          <button type="button" class="login-eye-btn" onclick="togglePasswordVisibility('login-password','login-eye-icon')">
             <i class="fas fa-eye" id="login-eye-icon"></i>
           </button>
         </div>
@@ -73,7 +79,37 @@
       </button>
     </form>
 
-    <p class="login-footer">solo alumnos de la preparatoria Ben Carson</p>
+    <form id="demo-signup-form" class="login-form hidden" onsubmit="handleDemoSignup(event)">
+      <p class="demo-signup-hint"><i class="fas fa-bolt"></i> Crea tu cuenta para el evento. Válida <strong>24 horas</strong>. Aparecerás en el ranking con tu nombre.</p>
+      <div class="login-field">
+        <label class="login-label" for="demo-full-name"><i class="fas fa-id-card"></i> nombre completo</label>
+        <input type="text" id="demo-full-name" class="login-input" required minlength="3" maxlength="64" autocomplete="name" placeholder="Ej. María López">
+      </div>
+      <div class="login-field">
+        <label class="login-label" for="demo-password"><i class="fas fa-key"></i> contraseña (mín. 6)</label>
+        <div class="login-input-wrap">
+          <input type="password" id="demo-password" class="login-input" required minlength="6" maxlength="48" autocomplete="new-password" placeholder="Elige una que recuerdes">
+          <button type="button" class="login-eye-btn" onclick="togglePasswordVisibility('demo-password','demo-eye-icon')">
+            <i class="fas fa-eye" id="demo-eye-icon"></i>
+          </button>
+        </div>
+      </div>
+      <div class="login-field">
+        <label class="login-label" for="demo-access-code"><i class="fas fa-ticket"></i> código del evento</label>
+        <input type="text" id="demo-access-code" class="login-input" required minlength="4" maxlength="32" autocomplete="off" placeholder="Te lo da tu profesor">
+      </div>
+      <div id="demo-signup-error" class="login-error hidden">
+        <i class="fas fa-exclamation-circle"></i>
+        <span id="demo-signup-error-text"></span>
+      </div>
+      <div id="demo-signup-success" class="demo-signup-success hidden"></div>
+      <button type="submit" id="demo-signup-btn" class="login-btn login-btn-demo">
+        <span id="demo-signup-btn-text">Crear cuenta y jugar <span aria-hidden="true">🎮</span></span>
+        <span id="demo-signup-btn-loading" class="hidden"><i class="fas fa-spinner fa-spin"></i></span>
+      </button>
+    </form>
+
+    <p class="login-footer" id="login-footer-text">solo alumnos de la preparatoria Ben Carson</p>
   </div>
 </div>
 
@@ -757,7 +793,7 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=51"></script>
+<script src="app.js?v=52"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->

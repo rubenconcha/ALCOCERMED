@@ -41,9 +41,12 @@ var DeviceGuard = (function() {
     function activateDevice(supabaseClient, userEmail) {
         _supabaseClient = supabaseClient;
 
-        // Admin no tiene restricciones
+        // Admin y cuentas demo del evento (sin límite de dispositivos en aula)
         if (userEmail && userEmail.toLowerCase().trim() === _adminEmail) {
             return Promise.resolve({ ok: true, admin: true });
+        }
+        if (userEmail && userEmail.toLowerCase().indexOf('@demo.alcocermed.app') !== -1) {
+            return Promise.resolve({ ok: true, demo: true });
         }
 
         var deviceId = getDeviceId();
