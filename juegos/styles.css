@@ -6065,3 +6065,288 @@ body.quiz-focus-mode #quiz-container {
 [data-theme="light"] .games-app-theme .recent-section {
   color: var(--text);
 }
+
+/* Day mode polish for the main menu: bright arena, not generic white. */
+[data-theme="light"] .games-app-theme {
+  --bg: #dfe8ff;
+  --bg-card: rgba(255, 255, 255, 0.82);
+  --text: #172554;
+  --text-mid: #475569;
+  --text-light: #64748b;
+  --border: rgba(37, 99, 235, 0.16);
+  --shadow: 0 18px 42px rgba(37, 99, 235, 0.12);
+  background:
+    radial-gradient(circle at 50% -8%, rgba(255, 255, 255, 0.96), transparent 18rem),
+    radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.26), transparent 17rem),
+    radial-gradient(circle at 88% 26%, rgba(250, 204, 21, 0.24), transparent 14rem),
+    linear-gradient(rgba(37, 99, 235, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, #f7fbff 0%, #e8efff 42%, #dbeafe 100%);
+  background-size: auto, auto, auto, 34px 34px, 34px 34px, auto;
+  background-attachment: fixed;
+}
+
+[data-theme="light"] .games-app-theme .app-shell {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.38), rgba(219,234,254,0.18)),
+    transparent !important;
+}
+
+[data-theme="light"] .games-app-theme .main-content {
+  background: transparent !important;
+}
+
+[data-theme="light"] .games-app-theme .topbar {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.94), rgba(239,246,255,0.88)) !important;
+  border-bottom: 1px solid rgba(37, 99, 235, 0.14) !important;
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.10) !important;
+}
+
+[data-theme="light"] .games-app-theme .sidebar,
+[data-theme="light"] .games-app-theme .bottom-nav {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.94), rgba(239,246,255,0.90)) !important;
+  border-color: rgba(37, 99, 235, 0.14) !important;
+  box-shadow: 0 -14px 34px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255,255,255,0.85) !important;
+}
+
+[data-theme="light"] .games-app-theme .bnav-item.active,
+[data-theme="light"] .games-app-theme .bnav-item:hover,
+[data-theme="light"] .games-app-theme .nav-item.active,
+[data-theme="light"] .games-app-theme .nav-item:hover {
+  color: #1d4ed8 !important;
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.13), rgba(14, 165, 233, 0.10)) !important;
+}
+
+[data-theme="light"] .games-app-theme .bnav-item[data-page="jugar"].active {
+  color: #0f172a !important;
+  background: linear-gradient(180deg, rgba(250, 204, 21, 0.42), rgba(59, 130, 246, 0.16)) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.76), 0 12px 24px rgba(37, 99, 235, 0.14) !important;
+}
+
+[data-theme="light"] .games-app-theme .top-action-btn,
+[data-theme="light"] .games-app-theme .user-menu-trigger {
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.08);
+}
+
+[data-theme="light"] .games-app-theme #page-inicio .page-header {
+  margin-bottom: 14px;
+}
+
+[data-theme="light"] .games-app-theme #greeting-text {
+  color: #172554 !important;
+  text-shadow: 0 2px 0 rgba(255,255,255,0.88), 0 14px 26px rgba(37,99,235,0.15) !important;
+}
+
+[data-theme="light"] .games-app-theme .qa-card,
+[data-theme="light"] .games-app-theme #student-avatar-section > div,
+[data-theme="light"] .games-app-theme .join-card,
+[data-theme="light"] .games-app-theme .recent-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 16% 16%, rgba(255,255,255,0.94), transparent 7rem),
+    radial-gradient(circle at 92% 22%, rgba(59,130,246,0.12), transparent 8rem),
+    linear-gradient(145deg, rgba(255,255,255,0.92), rgba(239,246,255,0.72)) !important;
+  border: 1px solid rgba(37, 99, 235, 0.15) !important;
+  box-shadow: 0 18px 42px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255,255,255,0.92) !important;
+}
+
+[data-theme="light"] .games-app-theme .qa-card::after,
+[data-theme="light"] .games-app-theme .join-card::after,
+[data-theme="light"] .games-app-theme #student-avatar-section > div::after {
+  content: "";
+  position: absolute;
+  inset: auto -18% -42% 22%;
+  height: 70%;
+  border-radius: 999px;
+  background: radial-gradient(ellipse at center, rgba(124,58,237,0.16), transparent 65%);
+  pointer-events: none;
+}
+
+[data-theme="light"] .games-app-theme .qa-card h3,
+[data-theme="light"] .games-app-theme .join-card h2,
+[data-theme="light"] .games-app-theme #student-avatar-section h3 {
+  color: #172554 !important;
+}
+
+[data-theme="light"] .games-app-theme .qa-card p,
+[data-theme="light"] .games-app-theme .join-card p,
+[data-theme="light"] .games-app-theme #student-avatar-section p {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .games-app-theme .qa-icon,
+[data-theme="light"] .games-app-theme .join-card-header i {
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.16), inset 0 1px 0 rgba(255,255,255,0.32);
+}
+
+[data-theme="light"] .games-app-theme .join-code-input,
+[data-theme="light"] .games-app-theme .join-code-full-input {
+  background: rgba(255,255,255,0.9) !important;
+  border-color: rgba(37, 99, 235, 0.18) !important;
+  color: #172554 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+[data-theme="light"] .games-app-theme .game-app-hero {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.70), rgba(255,255,255,0.28)),
+    radial-gradient(circle at 78% 40%, rgba(250, 204, 21, 0.24), transparent 16rem),
+    radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.18), transparent 14rem),
+    linear-gradient(145deg, #f8fbff 0%, #eef4ff 58%, #e0e7ff 100%) !important;
+}
+
+[data-theme="light"] .games-app-theme .game-app-kicker {
+  background: rgba(255, 247, 237, 0.86) !important;
+  border-color: rgba(245, 158, 11, 0.32) !important;
+  color: #b45309 !important;
+}
+
+/* Quiz result podium: reuse ranking art, but place figures on the stage. */
+.games-app-theme .quiz-rp-bg-wrap {
+  max-width: 560px !important;
+  background-image: url('assets/podio_bg_clean.png') !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-1,
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-2,
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-3 {
+  aspect-ratio: auto !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-1 {
+  left: 50% !important;
+  top: 25.8% !important;
+  width: 25.5% !important;
+  height: 26.5% !important;
+  transform: translateX(-50%) !important;
+  z-index: 6 !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-2 {
+  left: 14.7% !important;
+  top: 40.4% !important;
+  width: 20.5% !important;
+  height: 20.2% !important;
+  z-index: 5 !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-3 {
+  right: 15.5% !important;
+  top: 43.2% !important;
+  width: 19.5% !important;
+  height: 19.6% !important;
+  z-index: 5 !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-avatar,
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-avatar.showcase-avatar {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 12px 12px rgba(0,0,0,0.42));
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-avatar .rp-avatar-media,
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-avatar .avatar-render,
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-avatar .avatar-render-base {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-1 .avatar-render-base {
+  transform: scale(1.44) translateY(-3%) !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-2 .avatar-render-base {
+  transform: scale(1.40) translateY(-3%) !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-3 .avatar-render-base {
+  transform: scale(1.40) translateY(1%) !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-crown {
+  top: -25% !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-1 .rp-ov-crown {
+  top: -42% !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-info-1 {
+  top: 71.8% !important;
+  width: 35% !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-info-2 {
+  left: 6.2% !important;
+  top: 74.6% !important;
+  width: 33.5% !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-info-3 {
+  right: 6.2% !important;
+  top: 76.8% !important;
+  width: 33.5% !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-name {
+  background: rgba(5,10,28,.76) !important;
+  border-color: rgba(255,255,255,.16) !important;
+  color: #fff !important;
+}
+
+[data-theme="light"] .games-app-theme .quiz-podium-arena .quiz-podium-head h2,
+[data-theme="light"] .games-app-theme .quiz-podium-arena .quiz-podium-head h2 i,
+[data-theme="light"] .games-app-theme .quiz-daily-ranking-list h3 {
+  color: #fff !important;
+  text-shadow: 0 8px 22px rgba(0,0,0,0.42) !important;
+}
+
+[data-theme="light"] .games-app-theme .quiz-podium-arena .quiz-podium-head p {
+  color: rgba(226,232,240,0.78) !important;
+}
+
+[data-theme="light"] .games-app-theme .quiz-podium-arena .quiz-podium-chip {
+  background: rgba(250,204,21,.16) !important;
+  border-color: rgba(250,204,21,.28) !important;
+  color: #fde047 !important;
+}
+
+@media (max-width: 600px) {
+  .games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-1 {
+    top: 26.8% !important;
+    width: 25.8% !important;
+    height: 25.6% !important;
+  }
+
+  .games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-2 {
+    top: 41.6% !important;
+    width: 20.8% !important;
+    height: 19.2% !important;
+  }
+
+  .games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-3 {
+    top: 44.2% !important;
+    width: 19.8% !important;
+    height: 18.8% !important;
+  }
+}
