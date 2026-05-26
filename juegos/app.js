@@ -2451,6 +2451,84 @@ function adjustColor(hex, amount) {
     return '#' + (0x1000000 + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
 
+var JUGAR_SUBJECTS_CACHE_KEY = 'alcocermed_jugar_subjects_cache_v1';
+var JUGAR_RANKING_CACHE_KEY = 'alcocermed_jugar_ranking_cache_v1';
+var JUGAR_CACHE_MAX_AGE = 10 * 60 * 1000;
+
+function readLocalJson(key) {
+    try {
+        var raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : null;
+    } catch(e) { return null; }
+}
+
+function writeLocalJson(key, value) {
+    try { localStorage.setItem(key, JSON.stringify(value)); } catch(e) {}
+}
+
+function cachedPayloadFresh(payload) {
+    return !!(payload && payload.ts && (Date.now() - payload.ts) < JUGAR_CACHE_MAX_AGE);
+}
+
+function emptySubjectStats() {
+    var counts = {};
+    var demoCounts = {};
+    for (var i = 0; i < SUBJECTS.length; i++) {
+        counts[SUBJECTS[i].name] = 0;
+        demoCounts[SUBJECTS[i].name] = 0;
+    }
+    return { counts: counts, demoCounts: demoCounts };
+}
+
+function defaultSubjectStats() {
+    var stats = emptySubjectStats();
+    var counts = stats.counts;
+    var demoCounts = stats.demoCounts;
+    counts.MORFOFUNCION = 1;
+    demoCounts.MORFOFUNCION = 1;
+    return stats;
+}
+
+function buildSubjectStats(rows) {
+    var stats = emptySubjectStats();
+    for (var i = 0; rows && i < rows.length; i++) {
+        var resolved = resolveEvaluationSubject(rows[i]);
+        if (!stats.counts[resolved]) stats.counts[resolved] = 0;
+        if (!stats.demoCounts[resolved]) stats.demoCounts[resolved] = 0;
+        stats.counts[resolved]++;
+        if (isDemoEvaluation(rows[i])) stats.demoCounts[resolved]++;
+    }
+    return stats;
+}
+
+function renderSubjectMissions(grid, stats) {
+    if (!grid) return;
+    stats = stats || defaultSubjectStats();
+    var counts = stats.counts || {};
+    var demoCounts = stats.demoCounts || {};
+    var html = '';
+    for (var s = 0; s < SUBJECTS.length; s++) {
+        var subj = SUBJECTS[s];
+        var cnt = counts[subj.name] || 0;
+        var demoCnt = demoCounts[subj.name] || 0;
+        var missionNo = s + 1;
+        var progress = demoCnt > 0 ? 100 : (cnt > 0 ? 42 : 18);
+        var statusText = demoCnt > 0 ? 'Demo' : (cnt > 0 ? 'Bloqueado' : 'Pronto');
+        var lockClass = demoCnt > 0 ? '' : ' subject-mission-locked';
+        html += '<div class="explorar-subject-card subject-mission-card' + lockClass + '" onclick="loadSubjectEvaluations(\'' + subj.name + '\')" style="--subject-color:' + subj.color + '">';
+        html += '<div class="mission-shine"></div>';
+        html += '<div class="mission-topline"><span>MISION ' + missionNo + '</span><strong>' + statusText + '</strong></div>';
+        html += '<div class="mission-main">';
+        html += '<div class="mission-orb"><span>' + subj.emoji + '</span></div>';
+        html += '<div class="mission-copy"><h3>' + subj.name + '</h3><p>' + demoCnt + ' demo disponible' + (demoCnt !== 1 ? 's' : '') + (cnt > demoCnt ? ' - ' + (cnt - demoCnt) + ' con candado' : '') + '</p></div>';
+        html += '<div class="mission-play"><i class="fas ' + (demoCnt > 0 ? 'fa-play' : 'fa-lock') + '"></i></div>';
+        html += '</div>';
+        html += '<div class="mission-progress"><span style="width:' + progress + '%"></span></div>';
+        html += '</div>';
+    }
+    grid.innerHTML = html;
+}
+
 function loadExploreSubjects() {
     var client = getSupabase();
     var grid = document.getElementById('explorar-subject-grid');
@@ -2467,70 +2545,86 @@ function loadExploreSubjects() {
     var filterBar = document.getElementById('explorar-filter-bar');
     if (filterBar) filterBar.innerHTML = '';
 
-    if (!client) {
-        grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><i class="fas fa-exclamation-triangle" style="color:#F59E0B"></i><p>Error de conexión</p><small>Recarga la página e inicia sesión</small></div>';
-        return;
+    var cachedSubjects = readLocalJson(JUGAR_SUBJECTS_CACHE_KEY);
+    renderSubjectMissions(grid, cachedPayloadFresh(cachedSubjects) ? cachedSubjects.stats : defaultSubjectStats());
+
+    if (!client) return;
+
+    Promise.resolve(client.from('evaluaciones').select('asignatura, id, titulo, tema, codigo').eq('publicado', true)).then(function(r) {
+        if (!r || r.error) return;
+        var stats = buildSubjectStats(r.data || []);
+        writeLocalJson(JUGAR_SUBJECTS_CACHE_KEY, { ts: Date.now(), stats: stats });
+        renderSubjectMissions(grid, stats);
+    }).catch(function() {});
+}
+
+function renderTopStudentsShell(listEl, decorated, isFallback) {
+    if (!listEl) return;
+    decorated = decorated || [];
+    updateJugarPodium(decorated.slice(0, 3));
+    var html = '<div class="game-ranking-shell">';
+    html += '<div class="game-ranking-header"><div><h3>Ranking General</h3><p>' + (isFallback ? 'Se actualiza automaticamente al terminar cada partida' : 'Los estudiantes mas destacados del momento') + '</p></div><span class="game-ranking-chip">' + (isFallback ? 'En vivo' : 'Top ' + decorated.length) + '</span></div>';
+    html += '<div class="game-ranking-list">';
+    var listStart = decorated.length > 3 ? 3 : 0;
+    for (var i = listStart; i < decorated.length; i++) {
+        var item = decorated[i];
+        var pctClass = item.bestPct >= 80 ? 'pct-high' : (item.bestPct >= 50 ? 'pct-mid' : 'pct-low');
+        html += '<div class="game-rank-card">';
+        html += '<div class="game-rank-number game-rank-number-plain">' + item.rank + '</div>';
+        html += '<div class="game-rank-avatar">' + avatarMarkup(item.avatar, item.nombre, 'game-rank-avatar-media') + '</div>';
+        html += '<div class="game-rank-info"><div class="game-rank-name">' + item.nombre + '</div>';
+        html += '<div class="game-rank-meta">' + (item.total || 0) + ' pts - <span class="game-rank-pct ' + pctClass + '">' + (item.bestPct || 0) + '%</span></div></div>';
+        html += '<div class="game-rank-arrow"><i class="fas fa-chevron-right"></i></div>';
+        html += '</div>';
     }
+    if (decorated.length <= 3) {
+        html += '<div class="empty-state" style="padding:20px 12px"><i class="fas fa-bolt"></i><p>' + (isFallback ? 'Ranking preparado para el evento.' : 'El ranking se completara cuando mas estudiantes jueguen.') + '</p></div>';
+    }
+    html += '</div></div>';
+    listEl.innerHTML = html;
+}
 
-    grid.innerHTML = '<div style="text-align:center;padding:40px;color:#8E90A6;grid-column:1/-1"><i class="fas fa-spinner fa-spin" style="font-size:28px"></i><p style="margin-top:12px">Cargando materias...</p></div>';
+function fallbackRankingEntries() {
+    var currentName = currentUser ? getCurrentUserDisplayName() : 'Listo para jugar';
+    return [
+        { nombre: currentName, avatar: currentAvatar, total: 0, bestPct: 0, rank: 1 },
+        { nombre: 'Top 2', avatar: normalizeAvatarValue('avatarcfg:%7B%22base%22%3A%22sofia%22%2C%22outfitColor%22%3A%22%2322c55e%22%2C%22accessory%22%3A%22none%22%7D', 'Top 2'), total: 0, bestPct: 0, rank: 2 },
+        { nombre: 'Top 3', avatar: normalizeAvatarValue('avatarcfg:%7B%22base%22%3A%22carlos%22%2C%22outfitColor%22%3A%22%23ef4444%22%2C%22accessory%22%3A%22none%22%7D', 'Top 3'), total: 0, bestPct: 0, rank: 3 }
+    ];
+}
 
-    client.from('evaluaciones').select('asignatura, id, titulo, tema, codigo').eq('publicado', true).then(function(r) {
-        var counts = {};
-        var demoCounts = {};
-        for (var i = 0; i < SUBJECTS.length; i++) {
-            counts[SUBJECTS[i].name] = 0;
-            demoCounts[SUBJECTS[i].name] = 0;
+function decorateRankingEntries(sorted, nameMap) {
+    var decorated = [];
+    nameMap = nameMap || {};
+    for (var x = 0; sorted && x < sorted.length; x++) {
+        var item = sorted[x];
+        var info = nameMap[item.user_id] || { nombre: 'Estudiante ' + (x + 1), avatar: normalizeAvatarValue('', 'Estudiante ' + x) };
+        if (currentUser && item.user_id === currentUser.id) {
+            info = { nombre: getCurrentUserDisplayName(), avatar: currentAvatar };
         }
-        
-        if (r.data && r.data.length > 0) {
-            for (var i = 0; i < r.data.length; i++) {
-                var resolved = resolveEvaluationSubject(r.data[i]);
-                counts[resolved]++;
-                if (isDemoEvaluation(r.data[i])) demoCounts[resolved]++;
-            }
-        }
-
-        var html = '';
-        for (var s = 0; s < SUBJECTS.length; s++) {
-            var subj = SUBJECTS[s];
-            var cnt = counts[subj.name] || 0;
-            var demoCnt = demoCounts[subj.name] || 0;
-            var missionNo = s + 1;
-            var progress = demoCnt > 0 ? 100 : (cnt > 0 ? 42 : 18);
-            var statusText = demoCnt > 0 ? 'Demo' : (cnt > 0 ? 'Bloqueado' : 'Pronto');
-            var lockClass = demoCnt > 0 ? '' : ' subject-mission-locked';
-            html += '<div class="explorar-subject-card subject-mission-card' + lockClass + '" onclick="loadSubjectEvaluations(\'' + subj.name + '\')" style="--subject-color:' + subj.color + '">';
-            html += '<div class="mission-shine"></div>';
-            html += '<div class="mission-topline"><span>MISION ' + missionNo + '</span><strong>' + statusText + '</strong></div>';
-            html += '<div class="mission-main">';
-            html += '<div class="mission-orb"><span>' + subj.emoji + '</span></div>';
-            html += '<div class="mission-copy"><h3>' + subj.name + '</h3><p>' + demoCnt + ' demo disponible' + (demoCnt !== 1 ? 's' : '') + (cnt > demoCnt ? ' • ' + (cnt - demoCnt) + ' con candado' : '') + '</p></div>';
-            html += '<div class="mission-play"><i class="fas ' + (demoCnt > 0 ? 'fa-play' : 'fa-lock') + '"></i></div>';
-            html += '</div>';
-            html += '<div class="mission-progress"><span style="width:' + progress + '%"></span></div>';
-            html += '</div>';
-        }
-        grid.innerHTML = html;
-    }).catch(function(err) {
-        grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><i class="fas fa-exclamation-triangle" style="color:#F59E0B"></i><p>Error al cargar</p><small>Intenta de nuevo más tarde</small></div>';
-    });
+        decorated.push({ user_id: item.user_id, nombre: info.nombre, avatar: normalizeAvatarValue(info.avatar, info.nombre), total: item.total, bestPct: item.bestPct, rank: x + 1 });
+    }
+    return decorated;
 }
 
 function loadTopEstudiantes() {
     var listEl = document.getElementById('top-estudiantes-list');
     if (!listEl) return;
-    listEl.innerHTML = '<div class="game-ranking-shell"><div style="text-align:center;padding:20px;color:#8E90A6"><i class="fas fa-spinner fa-spin"></i> Cargando ranking...</div></div>';
 
-    var client = getSupabase();
-    if (!client) {
-        listEl.innerHTML = '<div class="game-ranking-shell"><div style="text-align:center;padding:12px;color:#EF4444">Error de conexión</div></div>';
-        return;
+    var cached = readLocalJson(JUGAR_RANKING_CACHE_KEY);
+    if (cachedPayloadFresh(cached) && cached.entries && cached.entries.length) {
+        renderTopStudentsShell(listEl, cached.entries, false);
+    } else {
+        renderTopStudentsShell(listEl, fallbackRankingEntries(), true);
     }
 
-    client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje').then(function(r) {
+    var client = getSupabase();
+    if (!client) return;
+
+    Promise.resolve(client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje, created_at').order('created_at', { ascending: false }).limit(800)).then(function(r) {
+        if (!r) return;
         if (r.error || !r.data || r.data.length === 0) {
-            updateJugarPodium([]);
-            listEl.innerHTML = '<div class="game-ranking-shell"><div class="empty-state"><i class="fas fa-trophy" style="color:#FFD700"></i><p>Aún no hay resultados</p><small>¡Sé el primero en jugar!</small></div></div>';
+            renderTopStudentsShell(listEl, fallbackRankingEntries(), true);
             return;
         }
 
@@ -2550,7 +2644,10 @@ function loadTopEstudiantes() {
         sorted.sort(function(a, b) { return b.total - a.total; });
         sorted = sorted.slice(0, 10);
 
-        var userIds = sorted.map(function(s) { return s.user_id; });
+        var provisional = decorateRankingEntries(sorted, {});
+        renderTopStudentsShell(listEl, provisional, false);
+
+        var userIds = sorted.map(function(item) { return item.user_id; });
         client.from('evaluacion_participantes').select('user_id, nombre').in('user_id', userIds).then(function(nRes) {
             var nameMap = {};
             if (nRes.data) {
@@ -2562,51 +2659,12 @@ function loadTopEstudiantes() {
             }
 
             loadCloudAvatarProfiles(client, userIds, nameMap, function() {
-            var decorated = [];
-            for (var x = 0; x < sorted.length; x++) {
-                var item = sorted[x];
-                var info = nameMap[item.user_id] || { nombre: 'Estudiante', avatar: normalizeAvatarValue('', 'Estudiante ' + x) };
-                if (currentUser && item.user_id === currentUser.id) {
-                    info = { nombre: getCurrentUserDisplayName(), avatar: currentAvatar };
-                }
-                decorated.push({
-                    user_id: item.user_id,
-                    nombre: info.nombre,
-                    avatar: normalizeAvatarValue(info.avatar, info.nombre),
-                    total: item.total,
-                    bestPct: item.bestPct,
-                    rank: x + 1
-                });
-            }
-
-            updateJugarPodium(decorated.slice(0, 3));
-
-            var html = '<div class="game-ranking-shell">';
-            html += '<div class="game-ranking-header"><div><h3>Ranking General</h3><p>Los estudiantes más destacados del momento</p></div><span class="game-ranking-chip">Top ' + decorated.length + '</span></div>';
-            var listStart = decorated.length > 3 ? 3 : 0;
-            html += '<div class="game-ranking-list">';
-            for (var i = listStart; i < decorated.length; i++) {
-                var s = decorated[i];
-                var pctClass = s.bestPct >= 80 ? 'pct-high' : (s.bestPct >= 50 ? 'pct-mid' : 'pct-low');
-                html += '<div class="game-rank-card">';
-                html += '<div class="game-rank-number game-rank-number-plain">' + s.rank + '</div>';
-                html += '<div class="game-rank-avatar">' + avatarMarkup(s.avatar, s.nombre, 'game-rank-avatar-media') + '</div>';
-                html += '<div class="game-rank-info"><div class="game-rank-name">' + s.nombre + '</div>';
-                html += '<div class="game-rank-meta">' + s.total + ' pts · <span class="game-rank-pct ' + pctClass + '">' + s.bestPct + '%</span></div></div>';
-                html += '<div class="game-rank-arrow"><i class="fas fa-chevron-right"></i></div>';
-                html += '</div>';
-            }
-            if (decorated.length <= 3) {
-                html += '<div class="empty-state" style="padding:20px 12px"><i class="fas fa-stars"></i><p>El ranking se completará cuando más estudiantes jueguen.</p></div>';
-            }
-            html += '</div></div>';
-            listEl.innerHTML = html;
+                var decorated = decorateRankingEntries(sorted, nameMap);
+                writeLocalJson(JUGAR_RANKING_CACHE_KEY, { ts: Date.now(), entries: decorated });
+                renderTopStudentsShell(listEl, decorated, false);
             });
-        });
-    }).catch(function() {
-        updateJugarPodium([]);
-        listEl.innerHTML = '<div class="game-ranking-shell"><div style="text-align:center;padding:12px;color:#EF4444">Error al cargar ranking</div></div>';
-    });
+        }).catch(function() {});
+    }).catch(function() {});
 }
 
 // ════════════════════════════════════════
