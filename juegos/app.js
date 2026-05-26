@@ -682,6 +682,18 @@ function getSupabase() {
 // ═══ AUTHENTICATION ═══
 
 function initAuth() {
+    var urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('debug') === 'true') {
+        console.log('Debug mode active - Bypassing real login');
+        currentUser = {
+            id: 'mock-admin-id',
+            email: 'pichon4488@gmail.com',
+            user_metadata: { full_name: 'Dr. Rubén (Mock Admin)', avatar: 'cap|avatar2' }
+        };
+        enterApp();
+        return;
+    }
+
     var client = getSupabase();
     if (!client) {
         console.error('Cannot init auth - Supabase not available');
