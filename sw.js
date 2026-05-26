@@ -1,13 +1,17 @@
-const CACHE_NAME = 'alcocermed-main-v7';
+const CACHE_NAME = 'alcocermed-main-v9';
 const APP_SHELL = [
     './',
     './index.html',
-    './styles.css?v=7',
+    './styles.css?v=9',
     './script.js?v=2',
     './config.js',
     './device_guard.js',
     './manifest.webmanifest',
-    './logo%20app%20juegos.png'
+    './logo%20app%20juegos.png',
+    './assets/flashcard-icons/mal-3d.png',
+    './assets/flashcard-icons/regular-3d.png',
+    './assets/flashcard-icons/bien-smile-3d.png',
+    './assets/flashcard-icons/facil-3d.png'
 ];
 
 self.addEventListener('install', function (event) {

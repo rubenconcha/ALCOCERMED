@@ -7798,33 +7798,29 @@ body.login-active .overlay {
     align-items: center;
     justify-content: center;
     flex: 0 0 auto;
-    background: rgba(255, 255, 255, .92);
-    color: #0f172a;
-    font-family: "Outfit", Arial, sans-serif;
-    font-size: 1.35rem;
-    font-weight: 900;
+    content: "";
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     line-height: 1;
-    box-shadow: 0 10px 20px rgba(15, 23, 42, .18), inset 0 -2px 0 rgba(15, 23, 42, .08);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, .18);
 }
 
 .study-area .red-intense::before {
-    content: "☹";
-    color: #dc2626;
+    background-image: url("assets/flashcard-icons/mal-3d.png");
 }
 
 .study-area .yellow-intense::before {
-    content: "−";
-    color: #d97706;
+    background-image: url("assets/flashcard-icons/regular-3d.png");
 }
 
 .study-area .gold-intense::before {
-    content: "✓";
-    color: #16a34a;
+    background-image: url("assets/flashcard-icons/bien-smile-3d.png");
 }
 
 .study-area .blue-intense::before {
-    content: "✦";
-    color: #2563eb;
+    background-image: url("assets/flashcard-icons/facil-3d.png");
 }
 
 .study-area .nav-row {
