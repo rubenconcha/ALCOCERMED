@@ -25,6 +25,28 @@ var EDITOR_POWERUP_DEFS={
   spy:{name:'🕵️ Espía',cat:'divertido'},swap:{name:'🌪️ Roba pts',cat:'divertido'}
 };
 var DEFAULT_POWERUP_KEYS=Object.keys(EDITOR_POWERUP_DEFS);
+var EDITOR_POWERUP_ADMIN_META={
+  x2:{name:'x2 Puntos',desc:'Duplica el puntaje de la pregunta.',cat:'puntos',icon:'bolt'},
+  x3r:{name:'x3 / x5',desc:'Multiplicador alto al azar.',cat:'puntos',icon:'fire'},
+  jack:{name:'Jackpot',desc:'Premio grande de puntos extra.',cat:'puntos',icon:'gem'},
+  myst:{name:'Misterioso',desc:'Multiplicador sorpresa.',cat:'puntos',icon:'dice'},
+  speed:{name:'Velocidad',desc:'Bonus si responde rapido.',cat:'puntos',icon:'stopwatch'},
+  elim:{name:'Eliminar',desc:'Quita opciones incorrectas.',cat:'ayuda',icon:'times-circle'},
+  time:{name:'+10 segundos',desc:'Agrega tiempo para pensar.',cat:'ayuda',icon:'clock'},
+  hint:{name:'Pista',desc:'Muestra una ayuda corta.',cat:'ayuda',icon:'eye'},
+  free:{name:'Gratis',desc:'Protege una respuesta dificil.',cat:'ayuda',icon:'gift'},
+  retry:{name:'2da chance',desc:'Permite intentar otra vez.',cat:'ayuda',icon:'redo'},
+  chest:{name:'Caja sorpresa',desc:'Efecto aleatorio divertido.',cat:'divertido',icon:'box-open'},
+  sleep:{name:'Dormido',desc:'Pausa o distrae en juego.',cat:'divertido',icon:'moon'},
+  ultra:{name:'Ultra',desc:'Carta especial de impacto alto.',cat:'divertido',icon:'star'},
+  spy:{name:'Espia',desc:'Da informacion estrategica.',cat:'divertido',icon:'user-secret'},
+  swap:{name:'Roba puntos',desc:'Intercambia o roba ventaja.',cat:'divertido',icon:'shuffle'}
+};
+var EDITOR_POWERUP_CATS=[
+  {id:'puntos',label:'Puntos',hint:'Suben el puntaje o multiplican la recompensa.'},
+  {id:'ayuda',label:'Ayuda',hint:'Reducen dificultad o dan una segunda oportunidad.'},
+  {id:'divertido',label:'Diversion',hint:'Efectos sorpresa para hacer mas dinamico el demo.'}
+];
 var gameConfig={maxQuestions:10,questionOrder:[],enabledPowerups:DEFAULT_POWERUP_KEYS.slice()};
 
 function parseGameConfigFromEval(raw){
@@ -101,6 +123,71 @@ function renderGameConfigPanel(){
       var def=EDITOR_POWERUP_DEFS[key],on=gameConfig.enabledPowerups.indexOf(key)!==-1;
       ghtml+='<label class="game-powerup-chip'+(on?' selected':'')+'" onclick="toggleEditorPowerup(\''+key+'\');return false;">'
         +'<input type="checkbox"'+(on?' checked':'')+'><span>'+def.name+'</span></label>';
+    }
+    grid.innerHTML=ghtml;
+  }
+}
+function getAdminQuestionTypeLabel(type){
+  var labels={mc:'Seleccion unica',ms:'Seleccion multiple',tf:'Verdadero/Falso',fb:'Completar',oa:'Abierta',poll:'Encuesta',dnd:'Identificar partes',cat:'Categorizar',ro:'Reordenar',mt:'Relacionar'};
+  return labels[type]||'Pregunta';
+}
+function renderGameConfigPanel(){
+  syncGameConfigQuestionIds();
+  var maxInp=document.getElementById('game-max-questions');
+  if(maxInp)maxInp.value=gameConfig.maxQuestions;
+  var listEl=document.getElementById('game-play-order-list');
+  if(listEl){
+    if(gameConfig.questionOrder.length===0){
+      listEl.innerHTML='<p class="game-config-empty">Agrega preguntas y guarda la evaluacion.</p>';
+    }else{
+      var html='',unsaved=0;
+      for(var i=0;i<gameConfig.questionOrder.length;i++){
+        var qid=gameConfig.questionOrder[i],label='(sin texto)',found=false,typeLabel='Pregunta',editorNum='P'+(i+1);
+        for(var q=0;q<questions.length;q++){
+          if(questions[q].dbId===qid){
+            found=true;
+            var txt=(questions[q].text||'').replace(/<[^>]+>/g,'').trim();
+            label=txt||('Pregunta '+(q+1));
+            if(label.length>92)label=label.slice(0,92)+'...';
+            typeLabel=getAdminQuestionTypeLabel(questions[q].type||'mc');
+            editorNum='P'+(q+1);
+            break;
+          }
+        }
+        if(!found){label='Guarda de nuevo para sincronizar esta pregunta';typeLabel='Pendiente';}
+        html+='<div class="game-play-order-item">'
+          +'<div class="game-play-order-num"><strong>'+String(i+1)+'</strong><span>orden</span></div>'
+          +'<div class="game-play-order-main">'
+          +'<div class="game-play-order-meta"><span>'+editorEscapeHtml(editorNum)+'</span><span>'+editorEscapeHtml(typeLabel)+'</span></div>'
+          +'<div class="game-play-order-text">'+editorEscapeHtml(label)+'</div>'
+          +'</div>'
+          +'<div class="game-play-order-btns">'
+          +'<button type="button" title="Subir" onclick="movePlayOrderItem('+i+',-1)"'+(i===0?' disabled':'')+'><i class="fas fa-arrow-up"></i></button>'
+          +'<button type="button" title="Bajar" onclick="movePlayOrderItem('+i+',1)"'+(i===gameConfig.questionOrder.length-1?' disabled':'')+'><i class="fas fa-arrow-down"></i></button>'
+          +'</div></div>';
+      }
+      for(var u=0;u<questions.length;u++){if(!questions[u].dbId)unsaved++;}
+      if(unsaved>0)html+='<p class="game-config-warn">'+unsaved+' pregunta(s) sin guardar. Pulsa Guardar arriba.</p>';
+      listEl.innerHTML=html;
+    }
+  }
+  var grid=document.getElementById('game-powerups-grid');
+  if(grid){
+    var ghtml='';
+    for(var c=0;c<EDITOR_POWERUP_CATS.length;c++){
+      var cat=EDITOR_POWERUP_CATS[c];
+      ghtml+='<div class="game-powerup-group"><div class="game-powerup-group-head"><strong>'+cat.label+'</strong><span>'+cat.hint+'</span></div>';
+      for(var key in EDITOR_POWERUP_DEFS){
+        var def=EDITOR_POWERUP_ADMIN_META[key]||EDITOR_POWERUP_DEFS[key];
+        if(def.cat!==cat.id)continue;
+        var on=gameConfig.enabledPowerups.indexOf(key)!==-1;
+        ghtml+='<button type="button" class="game-powerup-card'+(on?' selected':'')+'" onclick="toggleEditorPowerup(\''+key+'\');return false;">'
+          +'<span class="game-powerup-icon"><i class="fas fa-'+(def.icon||'bolt')+'"></i></span>'
+          +'<span class="game-powerup-copy"><strong>'+editorEscapeHtml(def.name)+'</strong><small>'+editorEscapeHtml(def.desc||'Comodin disponible en juego')+'</small></span>'
+          +'<span class="game-powerup-state">'+(on?'Activo':'Off')+'</span>'
+          +'</button>';
+      }
+      ghtml+='</div>';
     }
     grid.innerHTML=ghtml;
   }
