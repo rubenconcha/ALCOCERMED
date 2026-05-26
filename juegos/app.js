@@ -656,16 +656,55 @@ function syncParticipantAvatarRows() {
 }
 
 function applySavedAvatarImmediately() {
-    refreshVisibleAvatarSurfaces();
+    refreshCurrentAvatarUI();
+    window._lastPodiumData = null;
+    function reloadPodiums() {
+        if (currentPage === 'jugar') loadTopEstudiantes();
+        else if (currentPage === 'ranking') loadRankingGeneral();
+        else if (currentPage === 'quiz' && quizData && quizData.evaluacion && quizData.evaluacion.id) {
+            if (quizSessionMode === 'equipo') loadTeamLeaderboard(quizData.evaluacion.id);
+            else loadLeaderboard(quizData.evaluacion.id);
+        }
+    }
+    function patchPodiumAvatars() {
+        if (!currentUser) return;
+        var userName = getCurrentUserDisplayName();
+        var showcases = ['quiz-podium-showcase', 'jugar-podium-showcase', 'ranking-podium-showcase'];
+        for (var si = 0; si < showcases.length; si++) {
+            var container = document.getElementById(showcases[si]);
+            if (!container) continue;
+            var nameEls = container.querySelectorAll('.rp-ov-name');
+            for (var ni = 0; ni < nameEls.length; ni++) {
+                if (nameEls[ni].textContent.trim() === userName) {
+                    var infoSlot = nameEls[ni].closest('.rp-ov-info-' + (ni + 1));
+                    if (infoSlot) {
+                        var ptsEl = infoSlot.querySelector('.showcase-pts');
+                        var pctEl = infoSlot.querySelector('.showcase-pct');
+                    }
+                    var circleSlot = container.querySelector('.rp-showcase-' + (ni + 1));
+                    if (circleSlot) {
+                        var avatarEl = circleSlot.querySelector('.rp-ov-avatar');
+                        if (avatarEl) setAvatarContent(avatarEl, currentAvatar, userName, 'rp-avatar-media');
+                    }
+                }
+            }
+        }
+    }
+    reloadPodiums();
+    setTimeout(patchPodiumAvatars, 100);
     Promise.all([
         syncParticipantAvatarRows(),
         syncAvatarProfileTables()
     ]).then(function() {
-        refreshVisibleAvatarSurfaces();
+        window._lastPodiumData = null;
+        reloadPodiums();
+        setTimeout(patchPodiumAvatars, 100);
         broadcastAvatarUpdate();
         setTimeout(broadcastAvatarUpdate, 900);
     }).catch(function() {
-        refreshVisibleAvatarSurfaces();
+        window._lastPodiumData = null;
+        reloadPodiums();
+        setTimeout(patchPodiumAvatars, 100);
         broadcastAvatarUpdate();
         setTimeout(broadcastAvatarUpdate, 900);
     });
