@@ -418,8 +418,10 @@ function updateHomeStats() {
     const progressFill = document.getElementById('study-progress-fill');
     if (progressFill) {
         const total = Math.max(deck.length, 1);
-        const pct = Math.min(100, Math.round((Math.min(currentIndex, deck.length) / total) * 100));
+        const pct = Math.min(100, Math.round((Math.min(currentIndex + 1, deck.length) / total) * 100));
         progressFill.style.width = pct + '%';
+        const progressPct = document.getElementById('study-progress-percent');
+        if (progressPct) progressPct.textContent = pct + '%';
     }
 
     // Tip aleatorio
@@ -850,6 +852,13 @@ function actualizarProgreso() {
 
     const pctEl = document.getElementById('prog-pct');
     if (pctEl) pctEl.textContent = pct + '%';
+
+    const studyFill = document.getElementById('study-progress-fill');
+    const studyPctEl = document.getElementById('study-progress-percent');
+    const activeCard = total > 0 ? Math.min(currentIndex + 1, total) : 0;
+    const studyPct = total > 0 ? Math.round((activeCard / total) * 100) : 0;
+    if (studyFill) studyFill.style.width = studyPct + '%';
+    if (studyPctEl) studyPctEl.textContent = studyPct + '%';
 
     // Actualizar meta diaria cada vez que hay actividad
     updateDailyGoalUI();
