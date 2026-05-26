@@ -1790,6 +1790,61 @@ function flashPowerup(btnId) {
     setTimeout(function() { if (btn) { btn.style.transform = ''; btn.style.boxShadow = ''; } }, 500);
 }
 
+function isQuizOptionCorrect(opt) {
+    return !!(opt && (opt.correct === true || opt.correct === 'true'));
+}
+
+function getQuestionTimerSeconds(pregunta) {
+    return (pregunta && pregunta.temporizador) ? pregunta.temporizador : 60;
+}
+
+/** Rehabilita la pregunta tras comodín retry (2ª oportunidad). wrongIndices: número o array de índices bloqueados. */
+function handleQuizRetry(wrongIndices) {
+    quizConfirmed = false;
+    quizSelectedOption = -1;
+    quizMultiSelections = [];
+
+    var wrongSet = {};
+    if (typeof wrongIndices === 'number') {
+        wrongSet[wrongIndices] = true;
+    } else if (wrongIndices && wrongIndices.length) {
+        for (var w = 0; w < wrongIndices.length; w++) {
+            wrongSet[wrongIndices[w]] = true;
+        }
+    }
+
+    var buttons = document.querySelectorAll('.quiz-opt-btn');
+    for (var r = 0; r < buttons.length; r++) {
+        if (wrongSet[r]) {
+            buttons[r].style.cursor = 'default';
+            buttons[r].style.pointerEvents = 'none';
+            buttons[r].style.opacity = '0.35';
+            buttons[r].style.filter = 'grayscale(1)';
+            buttons[r].style.border = '2px dashed #EF4444';
+            buttons[r].style.background = '#FEF2F2';
+            buttons[r].style.boxShadow = 'none';
+            buttons[r].style.transform = 'scale(0.96)';
+        } else {
+            buttons[r].style.cursor = 'pointer';
+            buttons[r].style.pointerEvents = 'auto';
+            buttons[r].style.opacity = '1';
+            buttons[r].style.filter = '';
+            buttons[r].style.border = '2px solid #E2E8F0';
+            buttons[r].style.background = '#fff';
+            buttons[r].style.boxShadow = 'none';
+            buttons[r].style.transform = 'scale(1)';
+        }
+    }
+
+    var confirmBtn = document.getElementById('quiz-confirm-answer');
+    if (confirmBtn) confirmBtn.style.display = '';
+    var confirmMulti = document.getElementById('quiz-confirm-multi');
+    if (confirmMulti) confirmMulti.style.display = '';
+
+    var pregunta = quizData.preguntas[quizCurrentQ];
+    startQuestionTimer(getQuestionTimerSeconds(pregunta));
+}
+
 function applyPowerupToAnswer(isCorrect, basePoints) {
     if (!activePowerup) return basePoints;
     var def = activePowerup;
@@ -1856,7 +1911,7 @@ function removeOneWrongOption() {
     var opts = pregunta.opciones || [];
     var wrongIndices = [];
     for (var i = 0; i < opts.length; i++) {
-        if (!opts[i].correct && i !== quizSelectedOption) wrongIndices.push(i);
+        if (!isQuizOptionCorrect(opts[i]) && i !== quizSelectedOption) wrongIndices.push(i);
     }
     if (wrongIndices.length > 0) {
         var removeIdx = wrongIndices[Math.floor(Math.random() * wrongIndices.length)];
@@ -1878,7 +1933,7 @@ function showQuestionHint() {
     var opts = pregunta.opciones || [];
     var correctText = '';
     for (var i = 0; i < opts.length; i++) {
-        if (opts[i].correct) correctText = opts[i].text;
+        if (isQuizOptionCorrect(opts[i])) correctText = opts[i].text;
     }
     var hint = correctText ? correctText.substring(0, 3) + '...' : 'Pista no disponible';
     var hintEl = document.createElement('div');
@@ -1894,7 +1949,7 @@ function autoAnswerCorrect() {
     var pregunta = quizData.preguntas[quizCurrentQ];
     var opts = pregunta.opciones || [];
     for (var i = 0; i < opts.length; i++) {
-        if (opts[i].correct) {
+        if (isQuizOptionCorrect(opts[i])) {
             quizSelectedOption = i;
             confirmQuizAnswer();
             return;
@@ -1919,7 +1974,7 @@ function fadeWrongOptions() {
     var opts = pregunta.opciones || [];
     var btns = document.querySelectorAll('.quiz-opt-btn');
     for (var i = 0; i < opts.length; i++) {
-        if (!opts[i].correct && btns[i]) {
+        if (!isQuizOptionCorrect(opts[i]) && btns[i]) {
             btns[i].style.opacity = '0.3';
             btns[i].style.transition = 'opacity 2s ease';
             setTimeout((function(btn) { return function() { btn.style.opacity = '0'; btn.style.pointerEvents = 'none'; }; })(btns[i]), 2000);
@@ -1934,7 +1989,7 @@ function showSpyStats() {
     var btns = document.querySelectorAll('.quiz-opt-btn');
     for (var i = 0; i < opts.length; i++) {
         var pct = Math.floor(Math.random() * 60) + 10;
-        if (opts[i].correct) pct = Math.floor(Math.random() * 30) + 50;
+        if (isQuizOptionCorrect(opts[i])) pct = Math.floor(Math.random() * 30) + 50;
         if (btns[i]) {
             var badge = document.createElement('span');
             badge.style.cssText = 'position:absolute;top:-8px;right:-8px;background:rgba(0,0,0,0.8);color:#fff;font-size:0.65rem;padding:2px 8px;border-radius:10px;font-weight:700;z-index:10';
@@ -4024,26 +4079,33 @@ window.toggleQuizMulti = toggleQuizMulti;
 
 function confirmQuizMulti() {
     if (quizMultiSelections.length === 0) return;
-    if (quizTimerInterval) clearInterval(quizTimerInterval);
-    quizSelectedOption = 1;
-    quizConfirmed = true;
     var pregunta = quizData.preguntas[quizCurrentQ];
     var opciones = pregunta.opciones || [];
-    var buttons = document.querySelectorAll('.quiz-opt-btn');
     var allCorrect = true;
-    
-    // Strict boolean check for correctness
+
     for (var i = 0; i < opciones.length; i++) {
         var isSel = quizMultiSelections.indexOf(i) !== -1;
-        var isCorr = opciones[i] && (opciones[i].correct === true || opciones[i].correct === 'true');
+        var isCorr = isQuizOptionCorrect(opciones[i]);
         if (isSel && !isCorr) allCorrect = false;
         if (!isSel && isCorr) allCorrect = false;
     }
-    
+
+    var pts = getQuizPoints(allCorrect, pregunta);
+    if (pts === null) {
+        if (quizTimerInterval) clearInterval(quizTimerInterval);
+        handleQuizRetry([]);
+        return;
+    }
+
+    if (quizTimerInterval) clearInterval(quizTimerInterval);
+    quizSelectedOption = 1;
+    quizConfirmed = true;
+    var buttons = document.querySelectorAll('.quiz-opt-btn');
+
     for (var j = 0; j < buttons.length; j++) {
         var sel = quizMultiSelections.indexOf(j) !== -1;
-        var isCorrBtn = opciones[j] && (opciones[j].correct === true || opciones[j].correct === 'true');
-        
+        var isCorrBtn = isQuizOptionCorrect(opciones[j]);
+
         if (sel && isCorrBtn) {
             buttons[j].style.boxShadow = 'inset 0 0 0 6px #22C55E, 0 4px 10px rgba(0,0,0,0.3)';
             buttons[j].style.filter = 'brightness(1.2)';
@@ -4058,21 +4120,19 @@ function confirmQuizMulti() {
         }
         buttons[j].style.pointerEvents = 'none';
     }
-    
+
     var confirmBtn = document.getElementById('quiz-confirm-multi');
     if (confirmBtn) confirmBtn.style.display = 'none';
-    
-    var pts = getQuizPoints(allCorrect, pregunta);
+
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: quizMultiSelections, correcta: allCorrect, puntos_ganados: pts });
-    
-    // Stop the timer bar
+
     var timerBar = document.getElementById('quiz-timer-bar');
-    if(timerBar) {
+    if (timerBar) {
         var computedWidth = window.getComputedStyle(timerBar).width;
         timerBar.style.transition = 'none';
         timerBar.style.width = computedWidth;
     }
-    
+
     showFeedbackAnimation(allCorrect, pts);
 }
 window.confirmQuizMulti = confirmQuizMulti;
@@ -4164,15 +4224,23 @@ window.selectQuizOption = selectQuizOption;
 // Confirmar respuesta — ahora sí bloquea y muestra correcto/incorrecto
 function confirmQuizAnswer() {
     if (quizSelectedOption === -1 || quizConfirmed) return;
-    quizConfirmed = true;
-    if (quizTimerInterval) clearInterval(quizTimerInterval);
 
     var idx = quizSelectedOption;
     var pregunta = quizData.preguntas[quizCurrentQ];
     var opciones = pregunta.opciones || [];
-    var buttons = document.querySelectorAll('.quiz-opt-btn');
-    var isCorrectAnswer = opciones[idx] && opciones[idx].correct;
+    var isCorrectAnswer = isQuizOptionCorrect(opciones[idx]);
 
+    var pts = getQuizPoints(isCorrectAnswer, pregunta);
+    if (pts === null) {
+        if (quizTimerInterval) clearInterval(quizTimerInterval);
+        handleQuizRetry(idx);
+        return;
+    }
+
+    quizConfirmed = true;
+    if (quizTimerInterval) clearInterval(quizTimerInterval);
+
+    var buttons = document.querySelectorAll('.quiz-opt-btn');
     for (var i = 0; i < buttons.length; i++) {
         var isSelected = (i === idx);
         if (isSelected && isCorrectAnswer) {
@@ -4191,42 +4259,11 @@ function confirmQuizAnswer() {
         buttons[i].style.pointerEvents = 'none';
     }
 
-    // Ocultar botón confirmar
     var confirmBtn = document.getElementById('quiz-confirm-answer');
     if (confirmBtn) confirmBtn.style.display = 'none';
 
-    var pts = getQuizPoints(isCorrectAnswer, pregunta);
-    if (pts === null) {
-        // Segunda Oportunidad (Retry): rehabilitar opciones y marcar la fallada
-        quizConfirmed = false;
-        quizSelectedOption = -1;
-        for (var r = 0; r < buttons.length; r++) {
-            if (r === idx) {
-                buttons[r].style.cursor = 'default';
-                buttons[r].style.pointerEvents = 'none';
-                buttons[r].style.opacity = '0.35';
-                buttons[r].style.filter = 'grayscale(1)';
-                buttons[r].style.border = '2px dashed #EF4444';
-                buttons[r].style.background = '#FEF2F2';
-                buttons[r].style.boxShadow = 'none';
-                buttons[r].style.transform = 'scale(0.96)';
-            } else {
-                buttons[r].style.cursor = 'pointer';
-                buttons[r].style.pointerEvents = 'auto';
-                buttons[r].style.opacity = '1';
-                buttons[r].style.filter = '';
-                buttons[r].style.border = '2px solid #E2E8F0';
-                buttons[r].style.background = '#fff';
-                buttons[r].style.boxShadow = 'none';
-                buttons[r].style.transform = 'scale(1)';
-            }
-        }
-        if (confirmBtn) confirmBtn.style.display = '';
-        startQuestionTimer(60);
-        return;
-    }
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer, puntos_ganados: pts });
-    
+
     showFeedbackAnimation(isCorrectAnswer, pts);
 }
 window.confirmQuizAnswer = confirmQuizAnswer;
@@ -4262,15 +4299,23 @@ function getQuizPoints(isCorrect, pregunta) {
 
 function confirmQuizAnswerInstant(idx) {
     if (quizConfirmed) return;
-    quizConfirmed = true;
-    if (quizTimerInterval) clearInterval(quizTimerInterval);
 
     var pregunta = quizData.preguntas[quizCurrentQ];
     var opciones = pregunta.opciones || [];
-    var buttons = document.querySelectorAll('.quiz-opt-btn');
     var isPoll = pregunta.tipo === 'poll' || pregunta.tipo === 'encuesta';
-    var isCorrectAnswer = isPoll ? true : (opciones[idx] && opciones[idx].correct);
+    var isCorrectAnswer = isPoll ? true : isQuizOptionCorrect(opciones[idx]);
 
+    var pts = getQuizPoints(isCorrectAnswer, pregunta);
+    if (pts === null) {
+        if (quizTimerInterval) clearInterval(quizTimerInterval);
+        handleQuizRetry(idx);
+        return;
+    }
+
+    quizConfirmed = true;
+    if (quizTimerInterval) clearInterval(quizTimerInterval);
+
+    var buttons = document.querySelectorAll('.quiz-opt-btn');
     for (var i = 0; i < buttons.length; i++) {
         var isSelected = (i === idx);
         if (isSelected && isCorrectAnswer) {
@@ -4280,7 +4325,7 @@ function confirmQuizAnswerInstant(idx) {
             buttons[i].style.filter = 'grayscale(0.5)';
             buttons[i].style.opacity = '0.7';
             buttons[i].style.border = '4px solid #EF4444';
-        } else if (!isPoll && opciones[i] && opciones[i].correct) {
+        } else if (!isPoll && isQuizOptionCorrect(opciones[i])) {
             buttons[i].style.filter = 'brightness(1.2)';
             buttons[i].style.border = '4px solid #22C55E';
         } else {
@@ -4290,33 +4335,10 @@ function confirmQuizAnswerInstant(idx) {
         buttons[i].style.pointerEvents = 'none';
     }
 
-    var pts = getQuizPoints(isCorrectAnswer, pregunta);
-    if (pts === null) {
-        // Segunda Oportunidad (Retry) en modo click instantáneo
-        quizConfirmed = false;
-        for (var i = 0; i < buttons.length; i++) {
-            if (i === idx) {
-                buttons[i].style.cursor = 'default';
-                buttons[i].style.pointerEvents = 'none';
-                buttons[i].style.opacity = '0.35';
-                buttons[i].style.filter = 'grayscale(1)';
-                buttons[i].style.border = '2px dashed #EF4444';
-            } else {
-                buttons[i].style.cursor = 'pointer';
-                buttons[i].style.pointerEvents = 'auto';
-                buttons[i].style.opacity = '1';
-                buttons[i].style.filter = '';
-                buttons[i].style.border = '';
-            }
-        }
-        startQuestionTimer(60);
-        return;
-    }
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer, puntos_ganados: pts });
-    
-    // Stop the timer bar
+
     var timerBar = document.getElementById('quiz-timer-bar');
-    if(timerBar) {
+    if (timerBar) {
         var computedWidth = window.getComputedStyle(timerBar).width;
         timerBar.style.transition = 'none';
         timerBar.style.width = computedWidth;
