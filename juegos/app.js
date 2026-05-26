@@ -2679,7 +2679,7 @@ function loadTopEstudiantes() {
     var client = getSupabase();
     if (!client) return;
 
-    Promise.resolve(applyEventResultsCutoff(client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje, created_at')).order('created_at', { ascending: false }).limit(800)).then(function(r) {
+    Promise.resolve(applyEventResultsCutoff(client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje, created_at')).order('created_at', { ascending: false }).limit(5000)).then(function(r) {
         if (!r) return;
         if (r.error || !r.data || r.data.length === 0) {
             renderTopStudentsShell(listEl, fallbackRankingEntries(), true);
@@ -2739,7 +2739,7 @@ function loadRankingGeneral() {
         return;
     }
 
-    applyEventResultsCutoff(client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje, created_at')).then(function(r) {
+    client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje, created_at', { count: 'exact' }).order('created_at', { ascending: false }).limit(5000).then(function(r) {
         if (r.error || !r.data || r.data.length === 0) {
             updateRankingPodium([]);
             listEl.innerHTML = '<div class="empty-state"><i class="fas fa-trophy" style="color:#FFD700"></i><p>Aún no hay resultados</p><small>¡Sé el primero en participar!</small></div>';
