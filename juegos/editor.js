@@ -220,6 +220,7 @@ window.resetPlayOrderFromSidebar=resetPlayOrderFromSidebar;
 window.movePlayOrderItem=movePlayOrderItem;
 window.toggleEditorPowerup=toggleEditorPowerup;
 window.setAllEditorPowerups=setAllEditorPowerups;
+window.deleteQuestion=deleteQuestion;
 
 // ═══ QUESTION TYPES ═══
 var questionTypes={
@@ -745,6 +746,7 @@ function renderQuestionThumbs(){
     html+='<div class="q-thumb '+(i===currentQuestionIndex?'active':'')+'" onclick="selectQuestion('+i+')">'
       +'<span>'+(i+1)+'</span>'
       +'<span class="thumb-type" style="background:'+(typeColors[q.type]||'#888')+'">'+(i+1)+'</span>'
+      +'<button type="button" class="q-thumb-delete" title="Eliminar pregunta" onclick="deleteQuestion('+i+',event)"><i class="fas fa-trash-alt"></i></button>'
       +'</div>';
   }
   c.innerHTML=html;
@@ -767,6 +769,50 @@ function selectQuestion(idx){
   document.getElementById('q-text-input').value=q.text||'';
   document.getElementById('multi-toggle').classList.toggle('on',q.multipleCorrect);
   renderQuestionThumbs();
+}
+
+function deleteQuestion(idx,event){
+  if(event){event.preventDefault();event.stopPropagation();}
+  if(idx<0||idx>=questions.length)return;
+  var q=questions[idx];
+  var title=(q.text||'').replace(/<[^>]+>/g,'').trim();
+  if(title.length>80)title=title.slice(0,80)+'...';
+  var msg='Eliminar la pregunta '+(idx+1)+(title?'\\n"'+title+'"':'')+'?\\n\\nEsta accion no se puede deshacer.';
+  if(!window.confirm(msg))return;
+
+  function removeLocal(){
+    var deletedId=q.dbId;
+    questions.splice(idx,1);
+    if(deletedId){
+      gameConfig.questionOrder=gameConfig.questionOrder.filter(function(id){return id!==deletedId;});
+    }
+    syncGameConfigQuestionIds();
+    if(currentQuestionIndex>idx)currentQuestionIndex--;
+    else if(currentQuestionIndex===idx)currentQuestionIndex=Math.min(idx,questions.length-1);
+
+    renderQuestionThumbs();
+    updateStats();
+    renderGameConfigPanel();
+    markUnsavedChanges();
+
+    if(questions.length>0 && currentQuestionIndex>=0){
+      selectQuestion(currentQuestionIndex);
+    }else{
+      currentQuestionIndex=-1;
+      showTypesPanel();
+    }
+    showToast('Pregunta eliminada', 'success');
+  }
+
+  if(q.dbId){
+    var client=getSupabase();
+    client.from('evaluacion_preguntas').delete().eq('id',q.dbId).then(function(r){
+      if(r.error){showToast('No se pudo eliminar: '+r.error.message,'error');return;}
+      removeLocal();
+    });
+  }else{
+    removeLocal();
+  }
 }
 
 // ═══ UPDATE STATS ═══
