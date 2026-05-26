@@ -22,9 +22,6 @@
 }
 *{ margin:0; padding:0; box-sizing:border-box; font-family:'Inter',system-ui,sans-serif; }
 html,body{ height:100%; background:var(--bg); color:var(--text); }
-html {
-  background: #11071f !important;
-}
 .hidden{ display:none!important; }
 
 /* ═══ LOGIN — fondo oscuro + logo prepa / app + tarjeta clara ═══ */
@@ -1385,7 +1382,7 @@ body.is-native-app .sidebar { display: none !important; }
     padding: 20px;
 }
 .report-detail-modal-box {
-    background: #fff;
+    background: var(--bg-card);
     border-radius: 24px;
     width: 100%;
     max-width: 600px;

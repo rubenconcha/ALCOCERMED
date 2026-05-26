@@ -2410,6 +2410,15 @@ function loadSubjectEvaluations(subject) {
             return;
         }
 
+        // Ordenar: "prueba" siempre primero, luego por created_at descendente
+        matching.sort(function(a, b) {
+            var aTitle = (a.titulo || '').toLowerCase();
+            var bTitle = (b.titulo || '').toLowerCase();
+            if (aTitle.indexOf('prueba') !== -1 && bTitle.indexOf('prueba') === -1) return -1;
+            if (aTitle.indexOf('prueba') === -1 && bTitle.indexOf('prueba') !== -1) return 1;
+            return new Date(b.created_at) - new Date(a.created_at);
+        });
+
         Promise.resolve().then(function() {
             var html = '';
             for (var i = 0; i < matching.length; i++) {

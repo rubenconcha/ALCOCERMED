@@ -2211,7 +2211,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1500);
     }
 });
-document.addEventListener('DOMContentLoaded', initThemeEditor);
 
 // ═══ IDENTIFICAR PARTES (DND) HELPERS ═══
 var activeLocatingOption = -1;
