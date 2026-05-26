@@ -4470,6 +4470,11 @@ body.quiz-focus-mode #quiz-container {
     object-fit: contain;
 }
 
+.quiz-dnd-anchor,
+.quiz-dnd-connector {
+    display: none;
+}
+
 body.quiz-focus-mode #page-quiz {
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
@@ -4513,10 +4518,50 @@ body.quiz-focus-mode #quiz-container {
         width: 100%;
         border-width: 2px !important;
         border-radius: 12px !important;
+        overflow: hidden !important;
     }
 
     #dnd-student-container .quiz-dnd-image {
         max-height: min(34vh, 260px) !important;
+    }
+
+    #dnd-student-container .quiz-dnd-anchor {
+        display: block;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #f43f5e;
+        border: 2px solid #fff;
+        transform: translate(-50%, -50%);
+        z-index: 78;
+        box-shadow: 0 0 0 3px rgba(244,63,94,.22);
+        pointer-events: none;
+    }
+
+    #dnd-student-container .quiz-dnd-connector {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: calc(92% - (var(--pin-x) * 1%));
+        min-width: 18px;
+        max-width: 128px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, rgba(244,63,94,.92), rgba(244,63,94,.18));
+        transform: translateY(-50%);
+        z-index: 76;
+        pointer-events: none;
+        box-shadow: 0 0 10px rgba(244,63,94,.28);
+    }
+
+    #dnd-student-container .quiz-dnd-slot {
+        left: 92% !important;
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.88rem !important;
+        z-index: 90 !important;
+        border-width: 2px !important;
+        box-shadow: 0 5px 14px rgba(0,0,0,.32), 0 0 0 3px rgba(15,23,42,.22) !important;
     }
 
     #dnd-labels-container {

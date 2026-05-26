@@ -3873,8 +3873,10 @@ function renderQuizQuestion() {
         for (var i = 0; i < opciones.length; i++) {
             var o = opciones[i];
             if (o.pinX !== undefined && o.pinY !== undefined) {
+                html += '    <div class="quiz-dnd-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%;"></div>';
+                html += '    <div class="quiz-dnd-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%;"></div>';
                 html += '    <div class="quiz-dnd-slot" id="dnd-slot-' + i + '" data-idx="' + i + '" onclick="clickDndSlot(' + i + ')" ' +
-                    'style="position:absolute; left:' + o.pinX + '%; top:' + o.pinY + '%; transform:translate(-50%, -50%); ' +
+                    'style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; position:absolute; left:' + o.pinX + '%; top:' + o.pinY + '%; transform:translate(-50%, -50%); ' +
                     'width:36px; height:36px; border-radius:50%; background:var(--bg-card); border:3px solid var(--border); ' +
                     'color:var(--text); display:flex; align-items:center; justify-content:center; font-weight:900; ' +
                     'font-size:1rem; cursor:pointer; box-shadow:0 6px 16px rgba(0,0,0,0.35); transition:all 0.2s; z-index:100;">?</div>';
