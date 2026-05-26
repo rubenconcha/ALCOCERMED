@@ -6276,7 +6276,7 @@ body.quiz-focus-mode #quiz-container {
 }
 
 .games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-2 .avatar-render-base {
-  transform: scale(1.40) translateY(-3%) !important;
+  transform: scale(1.40) translateY(-8%) !important;
 }
 
 .games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-3 .avatar-render-base {
@@ -6284,11 +6284,16 @@ body.quiz-focus-mode #quiz-container {
 }
 
 .games-app-theme .quiz-rp-bg-wrap .rp-ov-crown {
-  top: -25% !important;
+  top: -55% !important;
 }
 
 .games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-1 .rp-ov-crown {
-  top: -42% !important;
+  top: -68% !important;
+  left: 40% !important;
+}
+
+.games-app-theme .quiz-rp-bg-wrap .rp-ov-circle-2 .rp-ov-crown {
+  top: -64% !important;
 }
 
 .games-app-theme .quiz-rp-bg-wrap .rp-ov-info-1 {
