@@ -64,6 +64,7 @@ var avatarTintCache = {};
 var avatarTintPending = {};
 var avatarRenderObserver = null;
 var avatarHydrateTimer = null;
+var missingAvatarProfileTables = {};
 
 function avatarIndexFromSeed(seed, pool) {
     pool = pool || avatarFallbackPool;
@@ -414,6 +415,133 @@ function storeAvatarValue(value) {
     } catch (e) {}
 }
 
+function isMissingSupabaseObjectError(error) {
+    var msg = String((error && (error.message || error.details || error.hint)) || '').toLowerCase();
+    return error && (
+        error.code === '42P01' ||
+        error.code === 'PGRST205' ||
+        error.code === 'PGRST204' ||
+        msg.indexOf('could not find the table') !== -1 ||
+        msg.indexOf('could not find the') !== -1 ||
+        msg.indexOf('does not exist') !== -1 ||
+        msg.indexOf('schema cache') !== -1
+    );
+}
+
+function parseParticipantAvatarName(raw, fallbackSeed) {
+    raw = raw || 'Estudiante';
+    var av = '';
+    var nm = raw;
+    if (raw.indexOf('|') !== -1) {
+        var parts = raw.split('|');
+        av = parts[0];
+        nm = parts.slice(1).join('|') || 'Estudiante';
+    }
+    return {
+        nombre: nm,
+        avatar: normalizeAvatarValue(av, nm || fallbackSeed || 'Estudiante')
+    };
+}
+
+function mergeCloudProfileRow(nameMap, row, idField) {
+    if (!row) return;
+    var uid = row[idField];
+    if (!uid) return;
+    var existing = nameMap[uid] || {};
+    var nm = row.full_name || row.nombre || row.name || row.display_name || existing.nombre || (row.email ? row.email.split('@')[0] : 'Estudiante');
+    var av = row.avatar || row.avatar_url || existing.avatar || '';
+    nameMap[uid] = {
+        nombre: nm,
+        avatar: normalizeAvatarValue(av, nm)
+    };
+}
+
+function loadCloudAvatarProfiles(client, userIds, nameMap, done) {
+    if (!client || !userIds || userIds.length === 0) {
+        done();
+        return;
+    }
+
+    function tryProfiles() {
+        if (missingAvatarProfileTables.profiles) {
+            done();
+            return;
+        }
+        client.from('profiles')
+            .select('id, email, full_name, avatar, avatar_url')
+            .in('id', userIds)
+            .then(function(res) {
+                if (!res.error && res.data) {
+                    for (var i = 0; i < res.data.length; i++) mergeCloudProfileRow(nameMap, res.data[i], 'id');
+                } else if (res.error) {
+                    if (isMissingSupabaseObjectError(res.error)) missingAvatarProfileTables.profiles = true;
+                    else console.warn('No se pudieron cargar avatares desde profiles:', res.error.message);
+                }
+                done();
+            })
+            .catch(function() { done(); });
+    }
+
+    if (missingAvatarProfileTables.user_profiles) {
+        tryProfiles();
+        return;
+    }
+    client.from('user_profiles')
+        .select('user_id, email, full_name, avatar, avatar_url')
+        .in('user_id', userIds)
+        .then(function(res) {
+            if (!res.error && res.data) {
+                for (var i = 0; i < res.data.length; i++) mergeCloudProfileRow(nameMap, res.data[i], 'user_id');
+                done();
+                return;
+            }
+            if (res.error) {
+                if (isMissingSupabaseObjectError(res.error)) missingAvatarProfileTables.user_profiles = true;
+                else console.warn('No se pudieron cargar avatares desde user_profiles:', res.error.message);
+            }
+            tryProfiles();
+        })
+        .catch(function() { tryProfiles(); });
+}
+
+function syncAvatarProfileTables() {
+    if (!currentUser) return;
+    var client = getSupabase();
+    if (!client) return;
+    var name = getCurrentUserDisplayName();
+    var now = new Date().toISOString();
+
+    if (!missingAvatarProfileTables.user_profiles) {
+        client.from('user_profiles').upsert({
+            user_id: currentUser.id,
+            email: currentUser.email,
+            full_name: name,
+            avatar: currentAvatar,
+            last_seen: now
+        }, { onConflict: 'user_id' }).then(function(res) {
+            if (res.error) {
+                if (isMissingSupabaseObjectError(res.error)) missingAvatarProfileTables.user_profiles = true;
+                else console.warn('No se pudo guardar avatar en user_profiles:', res.error.message);
+            }
+        });
+    }
+
+    if (!missingAvatarProfileTables.profiles) {
+        client.from('profiles').upsert({
+            id: currentUser.id,
+            email: currentUser.email,
+            full_name: name,
+            avatar: currentAvatar,
+            updated_at: now
+        }, { onConflict: 'id' }).then(function(res) {
+            if (res.error) {
+                if (isMissingSupabaseObjectError(res.error)) missingAvatarProfileTables.profiles = true;
+                else console.warn('No se pudo guardar avatar en profiles:', res.error.message);
+            }
+        });
+    }
+}
+
 function syncParticipantAvatarRows() {
     if (!currentUser) return;
     var client = getSupabase();
@@ -574,6 +702,7 @@ window.saveAvatarSelection = function() {
         var newMetadata = Object.assign({}, currentUser.user_metadata || {}, { avatar: currentAvatar });
         currentUser.user_metadata = newMetadata;
         syncParticipantAvatarRows();
+        syncAvatarProfileTables();
         if (client) {
             client.auth.updateUser({ data: { avatar: currentAvatar } }).then(function(result) {
                 if (result && result.data && result.data.user) currentUser = result.data.user;
@@ -1807,19 +1936,13 @@ function loadTopEstudiantes() {
             var nameMap = {};
             if (nRes.data) {
                 for (var n = 0; n < nRes.data.length; n++) {
-                    var raw = nRes.data[n].nombre || 'Estudiante';
-                    var av = '';
-                    var nm = raw;
-                    if (raw.indexOf('|') !== -1) {
-                        var parts = raw.split('|');
-                        av = parts[0];
-                        nm = parts.slice(1).join('|');
+                    if (!nameMap[nRes.data[n].user_id]) {
+                        nameMap[nRes.data[n].user_id] = parseParticipantAvatarName(nRes.data[n].nombre, 'Estudiante ' + n);
                     }
-                    av = normalizeAvatarValue(av, nm);
-                    if (!nameMap[nRes.data[n].user_id]) nameMap[nRes.data[n].user_id] = { nombre: nm, avatar: av };
                 }
             }
 
+            loadCloudAvatarProfiles(client, userIds, nameMap, function() {
             var decorated = [];
             for (var x = 0; x < sorted.length; x++) {
                 var item = sorted[x];
@@ -1856,6 +1979,7 @@ function loadTopEstudiantes() {
             }
             html += '</div></div>';
             listEl.innerHTML = html;
+            });
         });
     }).catch(function() {
         updateShowcasePodium([]);
@@ -1904,19 +2028,13 @@ function loadRankingGeneral() {
             var nameMap = {};
             if (nRes.data) {
                 for (var n = 0; n < nRes.data.length; n++) {
-                    var raw = nRes.data[n].nombre || 'Estudiante';
-                    var av = '';
-                    var nm = raw;
-                    if (raw.indexOf('|') !== -1) {
-                        var parts = raw.split('|');
-                        av = parts[0];
-                        nm = parts.slice(1).join('|');
+                    if (!nameMap[nRes.data[n].user_id]) {
+                        nameMap[nRes.data[n].user_id] = parseParticipantAvatarName(nRes.data[n].nombre, 'Estudiante ' + n);
                     }
-                    av = normalizeAvatarValue(av, nm);
-                    if (!nameMap[nRes.data[n].user_id]) nameMap[nRes.data[n].user_id] = { nombre: nm, avatar: av };
                 }
             }
 
+            loadCloudAvatarProfiles(client, userIds, nameMap, function() {
             var decorated = [];
             for (var x = 0; x < sorted.length; x++) {
                 var item = sorted[x];
@@ -1972,6 +2090,7 @@ function loadRankingGeneral() {
                     listEl.insertBefore(pill, listEl.firstChild);
                 }
             }
+            });
         }).catch(function() {
             listEl.innerHTML = '<div class="game-rank-card"><span style="color:#EF4444">Error al cargar estudiantes</span></div>';
         });

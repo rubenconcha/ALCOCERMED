@@ -4976,3 +4976,116 @@ body.quiz-focus-mode #quiz-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Avatar cleanup: transparent figures fitted inside ranking and home circles. */
+.rp-ov-circle-1 {
+  left: 50% !important;
+  top: 16% !important;
+  width: 30.5% !important;
+}
+
+.rp-ov-circle-2 {
+  left: 12% !important;
+  top: 34% !important;
+  width: 25.5% !important;
+}
+
+.rp-ov-circle-3 {
+  right: 12% !important;
+  top: 40% !important;
+  width: 24% !important;
+}
+
+.rp-bg-wrap .rp-ov-avatar,
+.rp-bg-wrap .rp-ov-avatar.showcase-avatar {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.rp-ov-circle-1 .rp-ov-avatar::after,
+.rp-ov-circle-2 .rp-ov-avatar::after,
+.rp-ov-circle-3 .rp-ov-avatar::after {
+  display: none !important;
+}
+
+.rp-ov-avatar .rp-avatar-media,
+.rp-ov-avatar .avatar-render,
+.rp-ov-avatar .avatar-render-base {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+  overflow: visible !important;
+}
+
+.rp-ov-circle-1 .avatar-render-base { transform: scale(1.26); }
+.rp-ov-circle-2 .avatar-render-base,
+.rp-ov-circle-3 .avatar-render-base { transform: scale(1.22); }
+
+.games-app-theme .topbar-avatar,
+.games-app-theme .game-rank-avatar,
+.games-app-theme .showcase-avatar,
+.games-app-theme #current-avatar-display {
+  background: transparent !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.games-app-theme .topbar-avatar {
+  border: 2px solid rgba(255,255,255,.35) !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,.22) !important;
+}
+
+.games-app-theme .game-rank-avatar {
+  border: 1px solid rgba(255,255,255,.32) !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,.22) !important;
+}
+
+.games-app-theme #current-avatar-display {
+  border: 3px solid rgba(255,255,255,.82) !important;
+  box-shadow: 0 0 0 7px rgba(56,189,248,.16), 0 16px 34px rgba(0,0,0,.30) !important;
+}
+
+.games-app-theme #page-jugar .showcase-avatar {
+  border: 3px solid rgba(255,255,255,.72) !important;
+  box-shadow: 0 12px 26px rgba(0,0,0,.28), 0 0 0 6px rgba(56,189,248,.10) !important;
+}
+
+.games-app-theme #page-jugar .showcase-player-1 .showcase-avatar {
+  border-color: rgba(250,204,21,.82) !important;
+  box-shadow: 0 16px 30px rgba(0,0,0,.30), 0 0 0 8px rgba(250,204,21,.14) !important;
+}
+
+.games-app-theme #page-jugar .showcase-avatar::after {
+  display: none !important;
+}
+
+.topbar-avatar .avatar-render,
+.game-rank-avatar .avatar-render,
+.showcase-avatar .avatar-render,
+#current-avatar-display .avatar-render,
+.topbar-avatar .avatar-render-base,
+.game-rank-avatar .avatar-render-base,
+.showcase-avatar .avatar-render-base,
+#current-avatar-display .avatar-render-base {
+  width: 100% !important;
+  height: 100% !important;
+  background: transparent !important;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+}
+
+.topbar-avatar .avatar-render-base,
+.game-rank-avatar .avatar-render-base,
+#current-avatar-display .avatar-render-base {
+  transform: scale(1.14);
+}
+
+.showcase-avatar .avatar-render-base {
+  transform: scale(1.16);
+}
