@@ -6206,6 +6206,37 @@ body.quiz-focus-mode #quiz-container {
   color: #b45309 !important;
 }
 
+/* Home/JUGAR podium: keep only the rings baked into the background image. */
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-avatar.showcase-avatar,
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-avatar,
+.games-app-theme #page-jugar .game-podium-bg-showcase .showcase-avatar {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-avatar.showcase-avatar::before,
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-avatar.showcase-avatar::after,
+.games-app-theme #page-jugar .game-podium-bg-showcase .showcase-avatar::before,
+.games-app-theme #page-jugar .game-podium-bg-showcase .showcase-avatar::after {
+  display: none !important;
+  content: none !important;
+}
+
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-avatar .rp-avatar-media,
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-avatar .avatar-render,
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-avatar .avatar-render-base {
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+  overflow: visible !important;
+}
+
 /* Quiz result podium: reuse ranking art, but place figures on the stage. */
 .games-app-theme .quiz-rp-bg-wrap {
   max-width: 560px !important;
