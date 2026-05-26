@@ -3929,21 +3929,18 @@ function renderQuizQuestion() {
         html += '<div class="quiz-dnd-builder" style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">';
         html += '  <p style="color:#fff; font-size:1.1rem; font-weight:800; text-align:center; background:rgba(0,0,0,0.3); padding:10px 20px; border-radius:12px; border:1px solid rgba(255,255,255,0.1);"><i class="fas fa-link" style="color:#A78BFA; margin-right:8px;"></i> Relaciona las partes: toca una etiqueta y su círculo (o viceversa).</p>';
         
-        html += '  <div style="position:relative; display:inline-block; max-width:100%; border-radius:16px; overflow:hidden; border:4px solid rgba(255,255,255,0.2); background:#2D1B4E; box-shadow:0 12px 36px rgba(0,0,0,0.4);" id="dnd-student-container">';
-        html += '    <img class="quiz-dnd-image" src="' + imgUrl + '" style="max-width:100%; max-height:380px; display:block; user-select:none; pointer-events:none;">';
-        
+        html += '  <div id="dnd-student-container" class="quiz-dnd-map-shell">';
+        html += '    <div class="quiz-dnd-image-stage">';
+        html += '      <img class="quiz-dnd-image" src="' + escapeHtml(imgUrl) + '" alt="Imagen de la pregunta">';
         for (var i = 0; i < opciones.length; i++) {
             var o = opciones[i];
             if (o.pinX !== undefined && o.pinY !== undefined) {
-                html += '    <div class="quiz-dnd-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%;"></div>';
-                html += '    <div class="quiz-dnd-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%;"></div>';
-                html += '    <div class="quiz-dnd-slot" id="dnd-slot-' + i + '" data-idx="' + i + '" onclick="clickDndSlot(' + i + ')" ' +
-                    'style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; position:absolute; left:' + o.pinX + '%; top:' + o.pinY + '%; transform:translate(-50%, -50%); ' +
-                    'width:36px; height:36px; border-radius:50%; background:var(--bg-card); border:3px solid var(--border); ' +
-                    'color:var(--text); display:flex; align-items:center; justify-content:center; font-weight:900; ' +
-                    'font-size:1rem; cursor:pointer; box-shadow:0 6px 16px rgba(0,0,0,0.35); transition:all 0.2s; z-index:100;">?</div>';
+                html += '      <div class="quiz-dnd-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';"></div>';
+                html += '      <div class="quiz-dnd-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';"></div>';
+                html += '      <div class="quiz-dnd-slot" id="dnd-slot-' + i + '" data-idx="' + i + '" onclick="clickDndSlot(' + i + ')" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';">?</div>';
             }
         }
+        html += '    </div>';
         html += '  </div>';
         
         html += '  <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:12px;" id="dnd-labels-container">';
@@ -3999,6 +3996,10 @@ function renderQuizQuestion() {
         tb.style.background = '#22C55E';
         // force reflow
         void tb.offsetWidth;
+    }
+
+    if (tipo === 'dnd') {
+        initQuizDndMapLayout();
     }
 
     startQuestionTimer(60);
@@ -5775,6 +5776,38 @@ initTheme();
 var quizSelectedDndLabel = -1;
 var quizSelectedDndSlot = -1;
 var quizDndMatches = {};
+var quizDndLayoutTimer = null;
+var quizDndResizeBound = false;
+
+function initQuizDndMapLayout() {
+    var stage = document.querySelector('#dnd-student-container .quiz-dnd-image-stage');
+    var img = stage ? stage.querySelector('.quiz-dnd-image') : null;
+    if (!stage || !img) return;
+
+    function syncStage() {
+        stage.style.width = '';
+        stage.style.height = '';
+    }
+
+    syncStage();
+    img.onload = syncStage;
+    if (img.complete) syncStage();
+
+    if (!quizDndResizeBound) {
+        quizDndResizeBound = true;
+        window.addEventListener('resize', function() {
+            if (quizDndLayoutTimer) clearTimeout(quizDndLayoutTimer);
+            quizDndLayoutTimer = setTimeout(function() {
+                var s = document.querySelector('#dnd-student-container .quiz-dnd-image-stage');
+                var im = s ? s.querySelector('.quiz-dnd-image') : null;
+                if (s && im) {
+                    s.style.width = '';
+                    s.style.height = '';
+                }
+            }, 120);
+        });
+    }
+}
 
 function clickDndLabel(idx) {
     if (quizConfirmed) return;

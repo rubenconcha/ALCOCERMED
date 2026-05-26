@@ -2123,21 +2123,22 @@ function renderPvQuestion(){
     html += '<div style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">';
     html += '  <p style="color:#fff; font-size:0.95rem; font-weight:800; text-align:center; background:rgba(255,255,255,0.08); padding:8px 16px; border-radius:10px;"><i class="fas fa-hand-pointer"></i> Vista Previa: Toca una etiqueta y luego haz clic en el círculo `?` en la imagen:</p>';
     
-    html += '  <div class="pv-dnd-map-container" style="position:relative; display:inline-block; max-width:100%; border-radius:12px; overflow:hidden; border:3px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.05);">';
-    html += '    <img class="pv-dnd-image" src="' + imgUrl + '" style="max-width:100%; max-height:260px; display:block; user-select:none; pointer-events:none;">';
-    
+    html += '  <div class="pv-dnd-map-container" style="position:relative; display:inline-block; max-width:100%; border-radius:12px; overflow:visible; border:3px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.05);">';
+    html += '    <div class="quiz-dnd-image-stage pv-dnd-image-stage">';
+    html += '      <img class="pv-dnd-image quiz-dnd-image" src="' + editorEscapeHtml(imgUrl) + '" alt="Imagen de la pregunta">';
     for (var i = 0; i < opts.length; i++) {
         var o = opts[i];
         if (o.pinX !== undefined && o.pinY !== undefined) {
-            html += '  <div class="pv-dnd-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%;"></div>';
-            html += '  <div class="pv-dnd-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%;"></div>';
-            html += '  <div class="pv-dnd-slot" id="pv-slot-' + i + '" onclick="pvClickSlot(' + i + ')" ' +
+            html += '      <div class="pv-dnd-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%;"></div>';
+            html += '      <div class="pv-dnd-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%;"></div>';
+            html += '      <div class="pv-dnd-slot" id="pv-slot-' + i + '" onclick="pvClickSlot(' + i + ')" ' +
                 'style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; position:absolute; left:' + o.pinX + '%; top:' + o.pinY + '%; transform:translate(-50%, -50%); ' +
                 'width:30px; height:30px; border-radius:50%; background:#fff; border:2px solid #E2E8F0; ' +
                 'color:#334155; display:flex; align-items:center; justify-content:center; font-weight:900; ' +
                 'font-size:0.85rem; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.3); z-index:100;">?</div>';
         }
     }
+    html += '    </div>';
     html += '  </div>';
     
     html += '  <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:8px;">';
