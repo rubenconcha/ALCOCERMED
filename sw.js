@@ -1,8 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v2';
+const CACHE_NAME = 'alcocermed-main-v3';
 const APP_SHELL = [
     './',
     './index.html',
-    './styles.css?v=2',
+    './styles.css?v=3',
     './script.js',
     './config.js',
     './device_guard.js',

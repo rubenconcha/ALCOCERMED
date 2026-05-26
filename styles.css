@@ -7624,18 +7624,25 @@ body.login-active .overlay {
 }
 
 .study-area .face::before {
-    content: "";
+    content: "prepa ben carson";
     position: absolute;
-    inset: 34px 28px;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 48px);
     z-index: 0;
     pointer-events: none;
-    background-image: url("logo%20app%20juegos.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: min(68%, 360px);
-    opacity: .075;
-    filter: grayscale(1) contrast(1.05);
-    transform: rotate(-7deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(15, 23, 42, .055);
+    font-size: clamp(2.4rem, 8vw, 5.1rem);
+    font-weight: 900;
+    letter-spacing: .04em;
+    line-height: 1;
+    white-space: nowrap;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    user-select: none;
 }
 
 .study-area .face::after {
@@ -7795,10 +7802,9 @@ body.login-active .overlay {
     }
 
     .study-area .face::before {
-        inset: 46px 18px 34px;
-        background-size: min(86%, 340px);
-        opacity: .09;
-        transform: rotate(-5deg);
+        width: calc(100% - 34px);
+        font-size: clamp(2.25rem, 11.5vw, 4.7rem);
+        letter-spacing: .025em;
     }
 
     .study-area .card-face-label {
