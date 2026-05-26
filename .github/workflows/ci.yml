@@ -6,11 +6,16 @@ on:
   pull_request:
     branches: [ main, master ]
 
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -18,9 +23,15 @@ jobs:
         run: |
           node --check script.js
           node --check admin.js
+          node --check juegos/app.js
+          node --check juegos/editor.js
+          node --check juegos/sw.js
+          node --check sw.js
       - name: Check required files
         run: |
           test -f index.html
           test -f admin.html
           test -f config.js
           test -f vercel.json
+          test -f juegos/index.html
+          test -f juegos/editor.html

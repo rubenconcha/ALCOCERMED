@@ -3,6 +3,8 @@ var SUPABASE_URL='https://asnwhddmurstzmghuyin.supabase.co';
 var SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
 var _sb=null;
 function getSupabase(){if(!_sb)_sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);return _sb;}
+var EVENT_RESULTS_START_AT='2026-05-26T15:23:21.000Z';
+function applyEventResultsCutoff(query){return EVENT_RESULTS_START_AT?query.gte('created_at',EVENT_RESULTS_START_AT):query;}
 
 // ═══ STATE ═══
 var questions=[];
@@ -1926,7 +1928,7 @@ function editorAvatarRowHtml(avatarStr, name, size) {
 function pollTeacherResults(){
   if(!evaluacionId)return;
   var client=getSupabase();
-  client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje,respuestas,created_at').eq('evaluacion_id',evaluacionId).order('porcentaje',{ascending:false}).order('puntaje',{ascending:false}).order('created_at',{ascending:false}).then(function(r){
+  applyEventResultsCutoff(client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje,respuestas,created_at').eq('evaluacion_id',evaluacionId)).order('porcentaje',{ascending:false}).order('puntaje',{ascending:false}).order('created_at',{ascending:false}).then(function(r){
     if(r.error||!r.data){
       document.getElementById('tr-results-list').innerHTML='<div style="padding:40px 24px;text-align:center;color:#F87171;font-size:1rem;font-weight:600"><i class="fas fa-exclamation-triangle" style="font-size:32px;margin-bottom:16px;display:block"></i>Error al cargar los resultados.</div>';
       return;

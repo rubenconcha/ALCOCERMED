@@ -11,6 +11,7 @@ var ADMIN_EMAIL = 'pichon4488@gmail.com';
 var DEMO_EVENT = {
     enabled: true,
     accessCode: 'BENCARSON2026',
+    resultsStartAt: '2026-05-26T15:23:21.000Z',
     emailDomain: 'demo.alcocermed.app',
     validityHours: 24
 };
@@ -2296,6 +2297,15 @@ function normalizeDemoText(value) {
         .toUpperCase();
 }
 
+function getEventResultsStartIso() {
+    return DEMO_EVENT && DEMO_EVENT.resultsStartAt ? DEMO_EVENT.resultsStartAt : '';
+}
+
+function applyEventResultsCutoff(query) {
+    var startIso = getEventResultsStartIso();
+    return startIso ? query.gte('created_at', startIso) : query;
+}
+
 function isDemoEvaluation(ev) {
     var title = normalizeDemoText(ev && ev.titulo || '').trim();
     var text = normalizeDemoText([
@@ -2669,7 +2679,7 @@ function loadTopEstudiantes() {
     var client = getSupabase();
     if (!client) return;
 
-    Promise.resolve(client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje, created_at').order('created_at', { ascending: false }).limit(800)).then(function(r) {
+    Promise.resolve(applyEventResultsCutoff(client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje, created_at')).order('created_at', { ascending: false }).limit(800)).then(function(r) {
         if (!r) return;
         if (r.error || !r.data || r.data.length === 0) {
             renderTopStudentsShell(listEl, fallbackRankingEntries(), true);
@@ -2729,7 +2739,7 @@ function loadRankingGeneral() {
         return;
     }
 
-    client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje').then(function(r) {
+    applyEventResultsCutoff(client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje, created_at')).then(function(r) {
         if (r.error || !r.data || r.data.length === 0) {
             updateRankingPodium([]);
             listEl.innerHTML = '<div class="empty-state"><i class="fas fa-trophy" style="color:#FFD700"></i><p>Aún no hay resultados</p><small>¡Sé el primero en participar!</small></div>';
@@ -2921,7 +2931,7 @@ function openStudentGeneralStats(userId, displayName, avatarValue) {
     }
 
     Promise.all([
-        client.from('evaluacion_resultados').select('id,evaluacion_id,puntaje,total,porcentaje,respuestas,created_at').eq('user_id', userId),
+        applyEventResultsCutoff(client.from('evaluacion_resultados').select('id,evaluacion_id,puntaje,total,porcentaje,respuestas,created_at').eq('user_id', userId)),
         client.from('evaluacion_participantes').select('evaluacion_id,user_id,nombre,joined_at').eq('user_id', userId)
     ]).then(function(all) {
         var resultsRes = all[0] || {};
@@ -4956,6 +4966,7 @@ function loadLeaderboard(evalId) {
     client.from('evaluacion_resultados')
         .select('user_id,puntaje,total,porcentaje,created_at')
         .eq('evaluacion_id', evalId)
+        .gte('created_at', getEventResultsStartIso())
         .gte('created_at', todayRange.start)
         .lt('created_at', todayRange.end)
         .order('porcentaje', { ascending: false })
@@ -5121,7 +5132,7 @@ function loadTeamLeaderboard(evalId) {
     
     // Cargar resultados + participantes con equipo
     Promise.all([
-        client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje').eq('evaluacion_id', evalId),
+        applyEventResultsCutoff(client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje,created_at').eq('evaluacion_id', evalId)),
         client.from('evaluacion_participantes').select('user_id,nombre').eq('evaluacion_id', evalId)
     ]).then(function(results) {
         var resData = results[0].data || [];
@@ -5601,7 +5612,7 @@ function loadReports() {
         var evalIds = evRes.data.map(function(e) { return e.id; });
         
         Promise.all([
-            client.from('evaluacion_resultados').select('*').in('evaluacion_id', evalIds),
+            applyEventResultsCutoff(client.from('evaluacion_resultados').select('*').in('evaluacion_id', evalIds)),
             client.from('evaluacion_participantes').select('evaluacion_id, user_id, nombre').in('evaluacion_id', evalIds)
         ]).then(function(responses) {
             var rRes = responses[0];
@@ -5761,9 +5772,9 @@ function loadStudentResults() {
     var client = getSupabase();
     
     // Consultar únicamente las evaluaciones en vivo jugadas en esta sección
-    client.from('evaluacion_resultados')
+    applyEventResultsCutoff(client.from('evaluacion_resultados')
         .select('*')
-        .eq('user_id', currentUser.id)
+        .eq('user_id', currentUser.id))
         .then(function(res) {
             if (res.error) {
                 console.error('Error fetching student results:', res.error);
