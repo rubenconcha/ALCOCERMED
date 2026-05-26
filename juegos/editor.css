@@ -503,6 +503,16 @@ body{font-family:'Inter',sans-serif;background:var(--bg-editor);color:var(--text
   transform: scale(1.15) rotate(5deg);
 }
 
+.podium-avatar img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.25);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  display: block;
+}
+
 @keyframes avatarFloat {
   0% { transform: translateY(0); }
   100% { transform: translateY(-6px); }

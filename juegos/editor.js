@@ -1538,6 +1538,74 @@ function closeTeacherResults(){
 }
 
 
+// ═══ AVATAR RENDERING PARA RESULTADOS ═══
+var editorAvatarsList = [
+  { id: 'carlos',    src: './assets/avatars/carlos.png' },
+  { id: 'lucia',     src: './assets/avatars/lucia.png' },
+  { id: 'mateo',     src: './assets/avatars/mateo.png' },
+  { id: 'sofia',     src: './assets/avatars/sofia.png' },
+  { id: 'andres',    src: './assets/avatars/andres.png' },
+  { id: 'valentina', src: './assets/avatars/valentina.png' },
+  { id: 'diego',     src: './assets/avatars/diego.png' },
+  { id: 'bruno',     src: './assets/avatars/bruno.png' },
+  { id: 'sebastian', src: './assets/avatars/sebastian.png' },
+  { id: 'camila',    src: './assets/avatars/camila.png' },
+  { id: 'paula',     src: './assets/avatars/paula.png' },
+  { id: 'emilia',    src: './assets/avatars/emilia.png' }
+];
+var editorAvatarMap = {};
+for (var ei = 0; ei < editorAvatarsList.length; ei++) {
+  editorAvatarMap[editorAvatarsList[ei].id] = editorAvatarsList[ei];
+}
+function editorIsEmoji(s) {
+  if (!s || typeof s !== 'string' || s.length === 0) return false;
+  if (s.indexOf('avatarcfg:') === 0) return false;
+  if (s.length <= 2) return true;
+  for (var ec = 0; ec < s.length; ec++) {
+    if (s.charCodeAt(ec) >= 0xD800 && s.charCodeAt(ec) <= 0xDFFF) return true;
+  }
+  return false;
+}
+function editorAvatarHtml(avatarStr, name, podiumIdx) {
+  if (!avatarStr) {
+    var letter = name ? name.charAt(0).toUpperCase() : '?';
+    var grads = ['linear-gradient(180deg,#FFD700,#FFA000)','linear-gradient(180deg,#E0E0E0,#9E9E9E)','linear-gradient(180deg,#CD7F32,#8B5E3C)'];
+    var bd = ['#FFD700','#C0C0C0','#CD7F32'];
+    var idx = podiumIdx != null ? podiumIdx : 0;
+    return '<div class="podium-avatar" style="font-size:24px;width:48px;height:48px;border-radius:50%;background:' + grads[idx % 3] + ';display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;border:3px solid ' + bd[idx % 3] + ';box-shadow:0 4px 12px rgba(0,0,0,0.3)">' + letter + '</div>';
+  }
+  if (editorIsEmoji(avatarStr)) {
+    return '<div class="podium-avatar">' + avatarStr + '</div>';
+  }
+  if (avatarStr.indexOf('avatarcfg:') === 0) {
+    try {
+      var parsed = JSON.parse(decodeURIComponent(avatarStr.slice(10)));
+      var def = editorAvatarMap[parsed.base];
+      if (def) {
+        return '<div class="podium-avatar" style="width:72px;height:72px"><img src="' + def.src + '" alt="' + (name || '') + '"></div>';
+      }
+    } catch (e) {}
+  }
+  return '<div class="podium-avatar" style="font-size:20px">' + (name ? name.charAt(0).toUpperCase() : '?') + '</div>';
+}
+function editorAvatarRowHtml(avatarStr, name, size) {
+  if (!avatarStr) return '';
+  if (editorIsEmoji(avatarStr)) {
+    return '<span style="font-size:' + (size || 20) + 'px;margin-right:8px">' + avatarStr + '</span>';
+  }
+  if (avatarStr.indexOf('avatarcfg:') === 0) {
+    try {
+      var parsed = JSON.parse(decodeURIComponent(avatarStr.slice(10)));
+      var def = editorAvatarMap[parsed.base];
+      if (def) {
+        var s = size || 28;
+        return '<img src="' + def.src + '" alt="" style="width:' + s + 'px;height:' + s + 'px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:8px;border:2px solid rgba(255,255,255,0.15);display:inline-block">';
+      }
+    } catch (e) {}
+  }
+  return '';
+}
+
 function pollTeacherResults(){
   if(!evaluacionId)return;
   var client=getSupabase();
@@ -1622,9 +1690,7 @@ function pollTeacherResults(){
         var rankClass = idx === 0 ? 'rank-1' : (idx === 1 ? 'rank-2' : 'rank-3');
         var rankText = rankTexts[idx];
         
-        var avatarContent = e.emoji 
-          ? '<div class="podium-avatar">' + e.emoji + '</div>'
-          : '<div class="podium-avatar" style="font-size:24px;width:48px;height:48px;border-radius:50%;background:'+bgGrads[idx]+';display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;border:3px solid '+bdColors[idx]+';box-shadow:0 4px 12px rgba(0,0,0,0.3)">'+e.nombre.charAt(0).toUpperCase()+'</div>';
+        var avatarContent = editorAvatarHtml(e.emoji, e.nombre, idx);
 
         var animStyle = isFirstRender 
           ? ('animation-delay:' + (p*0.15) + 's') 
@@ -1657,7 +1723,7 @@ function pollTeacherResults(){
         // Adds a cascade delay for sequential slide-in row animation
         lh+='<div class="tr-row" style="animation-delay: ' + (l * 0.05) + 's; cursor: pointer;" onclick="openTeacherReportDetail(\'' + en.user_id + '\', \'' + en.nombre.replace(/'/g, "\\'") + '\')">';
         lh+='<span class="tr-col-rank" style="color:'+rankColor+'">'+(l+1)+'</span>';
-        lh+='<span class="tr-col-name">'+(en.emoji?'<span>'+en.emoji+'</span>':'')+en.nombre+'</span>';
+        lh+='<span class="tr-col-name">'+editorAvatarRowHtml(en.emoji, en.nombre)+en.nombre+'</span>';
         lh+='<span class="tr-col-score">'+en.puntaje+'/'+en.total+'</span>';
         lh+='<span class="tr-col-acc" style="color:'+(en.porcentaje>=70?'#4ADE80':en.porcentaje>=40?'#FBBF24':'#F87171')+'">'+en.porcentaje+'%</span>';
         lh+='</div>';
@@ -2101,9 +2167,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     var rankClass = idx === 0 ? 'rank-1' : (idx === 1 ? 'rank-2' : 'rank-3');
                     var rankText = rankTexts[idx];
                     
-                    var avatarContent = e.emoji 
-                        ? '<div class="podium-avatar">' + e.emoji + '</div>'
-                        : '<div class="podium-avatar" style="font-size:24px;width:48px;height:48px;border-radius:50%;background:'+bgGrads[idx]+';display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;border:3px solid '+bdColors[idx]+';box-shadow:0 4px 12px rgba(0,0,0,0.3)">'+e.nombre.charAt(0).toUpperCase()+'</div>';
+                    var avatarContent = editorAvatarHtml(e.emoji, e.nombre, idx);
                     
                     ph += '<div class="podium-cylinder ' + rankClass + '" style="animation-delay:' + (p * 0.15) + 's">';
                     ph += '  <div class="podium-avatar-wrapper">';
@@ -2136,7 +2200,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     var rankColor = l === 0 ? '#FFD700' : l === 1 ? '#C0C0C0' : l === 2 ? '#CD7F32' : 'rgba(255,255,255,.4)';
                     lh += '<div class="tr-row" style="animation-delay: ' + (l * 0.1) + 's">';
                     lh += '  <span class="tr-col-rank" style="color:' + rankColor + '">' + (l + 1) + '</span>';
-                    lh += '  <span class="tr-col-name">' + en.emoji + ' ' + en.nombre + '</span>';
+                    lh += '  <span class="tr-col-name">' + editorAvatarRowHtml(en.emoji, en.nombre) + en.nombre + '</span>';
                     lh += '  <span class="tr-col-score">' + en.puntaje + '</span>';
                     lh += '  <span class="tr-col-acc" style="color:' + (en.porcentaje >= 70 ? '#4ADE80' : en.porcentaje >= 40 ? '#FBBF24' : '#F87171') + '">' + en.porcentaje + '%</span>';
                     lh += '</div>';
