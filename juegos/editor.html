@@ -229,7 +229,7 @@
         <label style="display:block; font-size: 12px; font-weight: 700; color: #64748B; margin-bottom: 8px; text-transform: uppercase;">Tema de la Evaluación</label>
         <input type="text" class="sm-input" id="side-settings-topic" placeholder="Ej. Sistema Nervioso" maxlength="64" oninput="syncSideSettings('topic')" style="width: 100%; margin-bottom: 20px; border: 1px solid #E2E8F0; border-radius: 8px; padding: 8px;">
 
-        <div style="background: #F8FAFC; border-radius: 12px; padding: 16px; border: 1px dashed #CBD5E1;">
+        <div style="background: var(--bg-editor-panel); border-radius: 12px; padding: 16px; border: 1px dashed var(--border-editor);">
           <p style="font-size: 12px; color: #64748B; line-height: 1.5; margin: 0;">
             <i class="fas fa-info-circle" style="color: #8B5CF6; margin-right: 4px;"></i>
             Esta configuración se aplica a toda la evaluación. Puedes ver más opciones en el botón de <b>Ajustes</b> arriba.
@@ -395,7 +395,7 @@
           <div class="lobby-code" id="lobby-code">000000</div>
         </div>
         <div class="lobby-qr" id="lobby-qr">
-          <div id="lobby-qr-canvas" style="width:140px;height:140px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;overflow:hidden">
+          <div id="lobby-qr-canvas" style="width:140px;height:140px;display:flex;align-items:center;justify-content:center;background:var(--bg-editor-panel);border-radius:12px;overflow:hidden">
             <i class="fas fa-spinner fa-spin" style="color:#94A3B8;font-size:24px"></i>
           </div>
           <div class="lobby-share">
@@ -489,7 +489,7 @@
           <h2 id="pv-question" style="color:#fff;font-size:1.15rem;font-weight:700;text-align:center;line-height:1.5">Pregunta</h2>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
-          <span id="pv-qnum" style="font-size:.75rem;font-weight:700;color:#64748B;background:#F1F5F9;padding:4px 12px;border-radius:8px">Pregunta 1/5</span>
+          <span id="pv-qnum" style="font-size:.75rem;font-weight:700;color:var(--text-mid);background:var(--bg-editor);padding:4px 12px;border-radius:8px">Pregunta 1/5</span>
           <span id="pv-pts" style="font-size:.75rem;font-weight:700;color:#E91E63;background:#FCE4EC;padding:4px 12px;border-radius:8px">1 punto</span>
         </div>
         <div id="pv-options" style="display:flex;flex-direction:column;gap:10px"></div>
@@ -505,7 +505,7 @@
           <div id="pv-result-fill" style="height:100%;border-radius:20px;transition:width 1s"></div>
         </div>
         <div id="pv-breakdown" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:24px"></div>
-        <button onclick="closePreview()" style="padding:12px 32px;background:#fff;color:#2D1B4E;border:none;border-radius:10px;font-weight:700;cursor:pointer">Volver al editor</button>
+        <button onclick="closePreview()" style="padding:12px 32px;background:var(--bg-editor-panel);color:var(--text-editor);border:1px solid var(--border-editor);border-radius:10px;font-weight:700;cursor:pointer">Volver al editor</button>
       </div>
     </div>
   </div>

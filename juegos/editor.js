@@ -2116,27 +2116,34 @@ window.addEventListener('beforeinstallprompt', function(e) {
 
 // ═══ DARK MODE TOGGLE ═══
 function initThemeEditor() {
-    var theme = localStorage.getItem('alcocermed_theme') || 'light';
-    document.documentElement.setAttribute('data-theme', theme);
-    updateThemeIconEditor(theme);
-    
-    var themeBtn = document.getElementById('theme-toggle-btn');
-    if (themeBtn) {
-        themeBtn.addEventListener('click', function() {
-            var current = document.documentElement.getAttribute('data-theme');
-            var next = current === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('alcocermed_theme', next);
-            updateThemeIconEditor(next);
-        });
-    }
+    try {
+        var theme = localStorage.getItem('alcocermed_theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        updateThemeIconEditor(theme);
+    } catch(e) {}
 }
 function updateThemeIconEditor(theme) {
-    var icon = document.querySelector('#theme-toggle-btn i');
-    if (icon) {
-        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-    }
+    try {
+        var icon = document.querySelector('#theme-toggle-btn i');
+        if (icon) {
+            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    } catch(e) {}
 }
+function toggleThemeEditor() {
+    try {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('alcocermed_theme', next);
+        updateThemeIconEditor(next);
+    } catch(e) {}
+}
+initThemeEditor();
+(function() {
+    var btn = document.getElementById('theme-toggle-btn');
+    if (btn) btn.addEventListener('click', toggleThemeEditor);
+})();
 
 // Aesthetic UI Test Route Hook
 document.addEventListener('DOMContentLoaded', function() {

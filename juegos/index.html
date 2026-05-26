@@ -432,7 +432,7 @@
       <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap" id="explorar-filter-bar"></div>
       <div id="explorar-subject-grid" class="explorar-grid"></div>
       <div id="explorar-eval-list" class="explorar-eval-list" style="display:none"></div>
-      <button id="explorar-back-btn" onclick="loadExploreSubjects()" style="display:none;padding:10px 24px;background:#F1F5F9;border:1px solid #E2E8F0;border-radius:12px;font-weight:600;cursor:pointer;margin-bottom:16px;color:#475569;font-size:14px"><i class="fas fa-arrow-left"></i> Volver a materias</button>
+      <button id="explorar-back-btn" onclick="loadExploreSubjects()" style="display:none;padding:10px 24px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;font-weight:600;cursor:pointer;margin-bottom:16px;color:var(--text-mid);font-size:14px"><i class="fas fa-arrow-left"></i> Volver a materias</button>
 
       <!-- ═══ TOP ESTUDIANTES ═══ -->
       <div id="top-estudiantes-section" style="margin-top:24px">
@@ -603,8 +603,8 @@
         <div id="powerup-bar" style="display:none;justify-content:center;gap:10px;margin-bottom:16px;flex-wrap:wrap"></div>
 
         <!-- Pregunta actual -->
-        <div id="quiz-question-card" style="background:#fff; border-radius:24px; padding:40px; box-shadow:0 10px 30px rgba(0,0,0,0.2); margin-bottom:32px; text-align:center; min-height:180px; display:flex; align-items:center; justify-content:center;">
-          <h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:#1E293B; margin:0;">Cargando...</h2>
+        <div id="quiz-question-card" style="background:var(--bg-card); border-radius:24px; padding:40px; box-shadow:0 10px 30px rgba(0,0,0,0.2); margin-bottom:32px; text-align:center; min-height:180px; display:flex; align-items:center; justify-content:center;">
+          <h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">Cargando...</h2>
         </div>
 
         <!-- Opciones -->
@@ -627,7 +627,7 @@
         <h2 id="quiz-result-title" style="font-size:1.8rem;font-weight:900;margin-bottom:8px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,0.4)">¡Evaluación completada!</h2>
         <p id="quiz-result-score" style="font-size:1.2rem;color:rgba(255,255,255,0.9);margin-bottom:4px;font-weight:700"></p>
         <p id="quiz-result-detail" style="font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:20px"></p>
-        <div class="quiz-result-progress" style="background:#E2E8F0;border-radius:20px;height:12px;margin-bottom:16px;overflow:hidden">
+        <div class="quiz-result-progress" style="background:var(--border);border-radius:20px;height:12px;margin-bottom:16px;overflow:hidden">
           <div id="quiz-result-fill" style="height:100%;border-radius:20px;transition:width 1s"></div>
         </div>
         <p class="quiz-result-scroll-hint" style="color:rgba(255,255,255,0.5);font-size:0.75rem;margin-bottom:8px"><i class="fas fa-chevron-down" style="animation:bounce 1.5s infinite"></i> Desliza para ver tus respuestas</p>

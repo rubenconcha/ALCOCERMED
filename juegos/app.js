@@ -5156,28 +5156,34 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initTheme() {
-    var theme = localStorage.getItem('alcocermed_theme') || 'light';
-    document.documentElement.setAttribute('data-theme', theme);
-    updateThemeIcon(theme);
-    
-    var themeBtn = document.getElementById('theme-toggle-btn');
-    if (themeBtn) {
-        themeBtn.addEventListener('click', function() {
-            var current = document.documentElement.getAttribute('data-theme');
-            var next = current === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('alcocermed_theme', next);
-            updateThemeIcon(next);
-        });
-    }
+    try {
+        var theme = localStorage.getItem('alcocermed_theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        updateThemeIcon(theme);
+    } catch(e) {}
 }
 function updateThemeIcon(theme) {
-    var icon = document.querySelector('#theme-toggle-btn i');
-    if (icon) {
-        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-    }
+    try {
+        var icon = document.querySelector('#theme-toggle-btn i');
+        if (icon) {
+            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    } catch(e) {}
 }
-document.addEventListener('DOMContentLoaded', initTheme);
+function toggleTheme() {
+    try {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('alcocermed_theme', next);
+        updateThemeIcon(next);
+    } catch(e) {}
+}
+initTheme();
+(function() {
+    var btn = document.getElementById('theme-toggle-btn');
+    if (btn) btn.addEventListener('click', toggleTheme);
+})();
 
 // ═══ IDENTIFICAR PARTES (DND) STUDENT GAMEPLAY HELPERS ═══
 var quizSelectedDndLabel = -1;
