@@ -2237,6 +2237,90 @@ function canAccessEvaluation(ev) {
     return isAdmin || !DEMO_ACCESS_ONLY || isDemoEvaluation(ev);
 }
 
+/**
+ * Preguntas fijas para el demo (mismas y mismo orden para todos).
+ * Ver juegos/DEMO_PREGUNTAS_ORDEN.md para cómo personalizar.
+ *
+ * orderMode: 'orden' → por campo orden en Supabase (1,2,3…)
+ * questionOrden: [1,5,3,2,...] → orden explícito (números del editor)
+ * questionIds: ['uuid',...] → orden por ID de pregunta
+ */
+var DEMO_FIXED_QUIZZES = [
+    {
+        matchTitle: 'EVALUACION 1',
+        maxQuestions: 10,
+        orderMode: 'orden'
+        // questionOrden: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        // evaluacionId: 'pegue-aqui-el-uuid-si-prefiere',
+        // questionIds: []
+    }
+];
+
+function evalMatchesFixedQuizConfig(evaluacion, cfg) {
+    if (!evaluacion || !cfg) return false;
+    if (cfg.evaluacionId && evaluacion.id === cfg.evaluacionId) return true;
+    if (cfg.matchTitle) {
+        var title = normalizeDemoText(evaluacion.titulo || '');
+        if (title.indexOf(normalizeDemoText(cfg.matchTitle)) !== -1) return true;
+    }
+    return false;
+}
+
+function getFixedQuizConfig(evaluacion) {
+    if (!evaluacion) return null;
+    var i;
+    for (i = 0; i < DEMO_FIXED_QUIZZES.length; i++) {
+        if (evalMatchesFixedQuizConfig(evaluacion, DEMO_FIXED_QUIZZES[i])) {
+            return DEMO_FIXED_QUIZZES[i];
+        }
+    }
+    if (isDemoEvaluation(evaluacion)) {
+        return { maxQuestions: 10, orderMode: 'orden' };
+    }
+    return null;
+}
+
+/** Misma selección y orden para todos (sin aleatorio) en evaluaciones demo configuradas. */
+function resolveQuizQuestionsForEval(evaluacion, allQuestions) {
+    var cfg = getFixedQuizConfig(evaluacion);
+    if (!cfg) {
+        return selectDiverseQuestions(allQuestions, 10);
+    }
+
+    var maxQ = cfg.maxQuestions || 10;
+    var list = [];
+
+    if (cfg.questionIds && cfg.questionIds.length) {
+        var byId = {};
+        for (var i = 0; i < allQuestions.length; i++) {
+            byId[allQuestions[i].id] = allQuestions[i];
+        }
+        for (var j = 0; j < cfg.questionIds.length; j++) {
+            if (byId[cfg.questionIds[j]]) list.push(byId[cfg.questionIds[j]]);
+        }
+    } else if (cfg.questionOrden && cfg.questionOrden.length) {
+        var byOrden = {};
+        for (var k = 0; k < allQuestions.length; k++) {
+            var ord = Number(allQuestions[k].orden);
+            if (!isNaN(ord)) byOrden[ord] = allQuestions[k];
+        }
+        for (var m = 0; m < cfg.questionOrden.length; m++) {
+            var num = Number(cfg.questionOrden[m]);
+            if (byOrden[num]) list.push(byOrden[num]);
+        }
+    } else {
+        list = allQuestions.slice().sort(function(a, b) {
+            return (Number(a.orden) || 0) - (Number(b.orden) || 0);
+        });
+    }
+
+    if (list.length > maxQ) list = list.slice(0, maxQ);
+    if (list.length === 0) {
+        return selectDiverseQuestions(allQuestions, maxQ);
+    }
+    return list;
+}
+
 function showLockedDemoNotice() {
     showCustomAlert('Suscribete para tener acceso a todas las evaluaciones.');
 }
@@ -2791,8 +2875,7 @@ function startSelfStudy(evalId) {
                 return;
             }
 
-            var preguntas = pResult.data;
-            preguntas = selectDiverseQuestions(preguntas, 10);
+            var preguntas = resolveQuizQuestionsForEval(evaluacion, pResult.data);
             var qids = preguntas.map(function(q) { return q.id; });
             sessionStorage.setItem('alcocer_quiz_qids_' + code, JSON.stringify(qids));
 
@@ -2992,7 +3075,7 @@ function searchAndStartQuiz(code) {
                     if (ordered.length > 0) preguntas = ordered;
                 } catch(e) {}
             } else {
-                preguntas = selectDiverseQuestions(preguntas, 10);
+                preguntas = resolveQuizQuestionsForEval(evaluacion, preguntas);
                 var qids = preguntas.map(function(q) { return q.id; });
                 sessionStorage.setItem('alcocer_quiz_qids_' + code, JSON.stringify(qids));
             }
