@@ -8065,10 +8065,15 @@ body.login-active .overlay {
     }
 }
 
-.study-area .face .card-face-label {
-    top: 18px !important;
+#study-area .card .face .card-face-label {
+    position: absolute !important;
+    top: 16px !important;
     left: auto !important;
-    right: 22px !important;
+    right: 18px !important;
+    inset-inline-start: auto !important;
+    inset-inline-end: 18px !important;
     transform: none !important;
+    margin: 0 !important;
     white-space: nowrap;
+    z-index: 4;
 }
