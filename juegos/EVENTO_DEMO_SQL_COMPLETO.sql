@@ -135,3 +135,8 @@ UNION ALL
 SELECT 'evaluacion_participantes', COUNT(*) FROM pg_policies WHERE tablename = 'evaluacion_participantes' AND schemaname = 'public'
 UNION ALL
 SELECT 'evaluacion_resultados', COUNT(*) FROM pg_policies WHERE tablename = 'evaluacion_resultados' AND schemaname = 'public';
+
+
+-- ─── 7. Orden de preguntas y comodines (editor admin) ───
+ALTER TABLE public.evaluaciones
+ADD COLUMN IF NOT EXISTS config_juego jsonb DEFAULT '{}'::jsonb;

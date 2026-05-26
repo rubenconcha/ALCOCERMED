@@ -1648,6 +1648,34 @@ var quizQuestionStartTime = Date.now();
 var powerups = [];       // 3 comodines disponibles esta sesión
 var activePowerup = null; // comodín activo en esta pregunta (ej: x2, eliminar)
 var powerupUsedThisQ = false;
+/** null = todos; [] = ninguno; ['x2','elim',...] = solo los del editor admin */
+var quizEnabledPowerups = null;
+
+function parseEvalGameConfig(evaluacion) {
+    var empty = { maxQuestions: 10, questionOrder: [], enabledPowerups: null };
+    if (!evaluacion) return empty;
+    var raw = evaluacion.config_juego;
+    if (!raw) return empty;
+    if (typeof raw === 'string') {
+        try { raw = JSON.parse(raw); } catch (e) { return empty; }
+    }
+    if (!raw || typeof raw !== 'object') return empty;
+    return {
+        maxQuestions: Math.max(1, Number(raw.maxQuestions) || 10),
+        questionOrder: Array.isArray(raw.questionOrder) ? raw.questionOrder.filter(Boolean) : [],
+        enabledPowerups: Array.isArray(raw.enabledPowerups) ? raw.enabledPowerups.slice() : null
+    };
+}
+
+function applyEvalPowerupConfig(evaluacion) {
+    var cfg = parseEvalGameConfig(evaluacion);
+    quizEnabledPowerups = cfg.enabledPowerups;
+}
+
+function isPowerupEnabledForQuiz(key) {
+    if (!quizEnabledPowerups) return true;
+    return quizEnabledPowerups.indexOf(key) !== -1;
+}
 
 var POWERUP_DEFS = {
     // 🎯 PUNTOS
@@ -1675,6 +1703,7 @@ var POWERUP_DEFS = {
 function pickRandomPowerups() {
     var cats = { puntos: [], ayuda: [], divertido: [] };
     for (var key in POWERUP_DEFS) {
+        if (!isPowerupEnabledForQuiz(key)) continue;
         var p = POWERUP_DEFS[key];
         cats[p.cat].push({ key: key, def: p });
     }
@@ -1982,11 +2011,15 @@ function showPowerupCards() {
     flippedCards = false;
     var available = [];
     for (var key in POWERUP_DEFS) {
+        if (!isPowerupEnabledForQuiz(key)) continue;
         var used = false;
         for (var u = 0; u < powerups.length; u++) {
             if (powerups[u].key === key && powerups[u]._used) { used = true; break; }
         }
         if (!used) available.push({ key: key, def: POWERUP_DEFS[key] });
+    }
+    if (available.length === 0) {
+        return;
     }
 
     var cats = { puntos: [], ayuda: [], divertido: [] };
@@ -2282,6 +2315,21 @@ function getFixedQuizConfig(evaluacion) {
 
 /** Misma selección y orden para todos (sin aleatorio) en evaluaciones demo configuradas. */
 function resolveQuizQuestionsForEval(evaluacion, allQuestions) {
+    var gameCfg = parseEvalGameConfig(evaluacion);
+    if (gameCfg.questionOrder && gameCfg.questionOrder.length > 0) {
+        var byIdAdmin = {};
+        for (var ai = 0; ai < allQuestions.length; ai++) {
+            byIdAdmin[allQuestions[ai].id] = allQuestions[ai];
+        }
+        var adminList = [];
+        for (var aj = 0; aj < gameCfg.questionOrder.length; aj++) {
+            if (byIdAdmin[gameCfg.questionOrder[aj]]) adminList.push(byIdAdmin[gameCfg.questionOrder[aj]]);
+        }
+        var maxAdmin = gameCfg.maxQuestions || 10;
+        if (adminList.length > maxAdmin) adminList = adminList.slice(0, maxAdmin);
+        if (adminList.length > 0) return adminList;
+    }
+
     var cfg = getFixedQuizConfig(evaluacion);
     if (!cfg) {
         return selectDiverseQuestions(allQuestions, 10);
@@ -2879,6 +2927,7 @@ function startSelfStudy(evalId) {
             var qids = preguntas.map(function(q) { return q.id; });
             sessionStorage.setItem('alcocer_quiz_qids_' + code, JSON.stringify(qids));
 
+            applyEvalPowerupConfig(evaluacion);
             quizData = { evaluacion: evaluacion, preguntas: preguntas };
             quizSessionMode = 'practica';
             quizTeamName = null;
@@ -2935,6 +2984,7 @@ function restoreSelfStudy(evalId, code) {
                 } catch(e) {}
             }
 
+            applyEvalPowerupConfig(evaluacion);
             quizData = { evaluacion: evaluacion, preguntas: preguntas };
             quizSessionMode = 'practica';
             quizTeamName = null;
@@ -3080,6 +3130,7 @@ function searchAndStartQuiz(code) {
                 sessionStorage.setItem('alcocer_quiz_qids_' + code, JSON.stringify(qids));
             }
 
+            applyEvalPowerupConfig(evaluacion);
             quizData = {
                 evaluacion: evaluacion,
                 preguntas: preguntas

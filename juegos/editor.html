@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="editor.css?v=4">
+  <link rel="stylesheet" href="editor.css?v=5">
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
@@ -229,10 +229,31 @@
         <label style="display:block; font-size: 12px; font-weight: 700; color: #64748B; margin-bottom: 8px; text-transform: uppercase;">Tema de la Evaluación</label>
         <input type="text" class="sm-input" id="side-settings-topic" placeholder="Ej. Sistema Nervioso" maxlength="64" oninput="syncSideSettings('topic')" style="width: 100%; margin-bottom: 20px; border: 1px solid #E2E8F0; border-radius: 8px; padding: 8px;">
 
+        <section class="game-config-block">
+          <h4 class="game-config-title"><i class="fas fa-list-ol"></i> Orden para estudiantes</h4>
+          <p class="game-config-hint">Mismo orden y mismas preguntas para todos. Usa ↑ ↓ y guarda la evaluación.</p>
+          <label class="game-config-label" for="game-max-questions">Cantidad máxima en el juego</label>
+          <input type="number" class="sm-input" id="game-max-questions" min="1" max="50" value="10" style="width:100%;margin-bottom:10px;">
+          <div class="game-config-actions">
+            <button type="button" class="game-config-mini-btn" onclick="resetPlayOrderFromSidebar()">Orden del listado</button>
+          </div>
+          <div id="game-play-order-list" class="game-play-order-list"></div>
+        </section>
+
+        <section class="game-config-block">
+          <h4 class="game-config-title"><i class="fas fa-bolt"></i> Comodines disponibles</h4>
+          <p class="game-config-hint">Solo los marcados pueden salir en las cartas (preguntas 4 y 8).</p>
+          <div class="game-config-actions">
+            <button type="button" class="game-config-mini-btn" onclick="setAllEditorPowerups(true)">Todos</button>
+            <button type="button" class="game-config-mini-btn" onclick="setAllEditorPowerups(false)">Ninguno</button>
+          </div>
+          <div id="game-powerups-grid" class="game-powerups-grid"></div>
+        </section>
+
         <div style="background: var(--bg-editor-panel); border-radius: 12px; padding: 16px; border: 1px dashed var(--border-editor);">
           <p style="font-size: 12px; color: #64748B; line-height: 1.5; margin: 0;">
             <i class="fas fa-info-circle" style="color: #8B5CF6; margin-right: 4px;"></i>
-            Esta configuración se aplica a toda la evaluación. Puedes ver más opciones en el botón de <b>Ajustes</b> arriba.
+            Pulsa <b>Guardar</b> arriba para aplicar orden y comodines a los estudiantes.
           </p>
         </div>
       </div>
@@ -512,7 +533,7 @@
 
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="editor.js?v=13"></script>
+  <script src="editor.js?v=14"></script>
   
   <!-- PWA Service Worker Registration -->
   <script>

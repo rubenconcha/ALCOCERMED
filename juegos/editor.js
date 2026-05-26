@@ -15,6 +15,125 @@ var sessionMode='clasico';
 var pointsOptions=[0,1,2];var pointsIdx=1;
 var timerOptions=[15,30,60,120,300];var timerIdx=1;
 
+// ═══ CONFIG JUEGO (orden + comodines para estudiantes) ═══
+var EDITOR_POWERUP_DEFS={
+  x2:{name:'⚡ x2 Puntos',cat:'puntos'},x3r:{name:'🔥 x3/x5',cat:'puntos'},jack:{name:'💎 Jackpot',cat:'puntos'},
+  myst:{name:'🎲 Misterioso',cat:'puntos'},speed:{name:'⏳ Velocidad',cat:'puntos'},
+  elim:{name:'❌ Eliminar',cat:'ayuda'},time:{name:'⏱️ +10s',cat:'ayuda'},hint:{name:'👀 Pista',cat:'ayuda'},
+  free:{name:'🎁 Gratis',cat:'ayuda'},retry:{name:'🔄 2ª chance',cat:'ayuda'},
+  chest:{name:'🎁 Caja',cat:'divertido'},sleep:{name:'💤 Dormido',cat:'divertido'},ultra:{name:'🤯 Ultra',cat:'divertido'},
+  spy:{name:'🕵️ Espía',cat:'divertido'},swap:{name:'🌪️ Roba pts',cat:'divertido'}
+};
+var DEFAULT_POWERUP_KEYS=Object.keys(EDITOR_POWERUP_DEFS);
+var gameConfig={maxQuestions:10,questionOrder:[],enabledPowerups:DEFAULT_POWERUP_KEYS.slice()};
+
+function parseGameConfigFromEval(raw){
+  if(!raw)return;
+  if(typeof raw==='string'){try{raw=JSON.parse(raw);}catch(e){return;}}
+  if(!raw||typeof raw!=='object')return;
+  if(raw.maxQuestions)gameConfig.maxQuestions=Math.max(1,Math.min(50,Number(raw.maxQuestions)||10));
+  if(raw.questionOrder&&raw.questionOrder.length)gameConfig.questionOrder=raw.questionOrder.slice();
+  if(raw.enabledPowerups){
+    gameConfig.enabledPowerups=raw.enabledPowerups.filter(function(k){return EDITOR_POWERUP_DEFS[k];});
+  }
+}
+function syncGameConfigQuestionIds(){
+  var ids=[];
+  for(var i=0;i<questions.length;i++){if(questions[i].dbId)ids.push(questions[i].dbId);}
+  if(gameConfig.questionOrder.length===0){gameConfig.questionOrder=ids.slice();return;}
+  var kept=[];
+  for(var j=0;j<gameConfig.questionOrder.length;j++){
+    if(ids.indexOf(gameConfig.questionOrder[j])!==-1)kept.push(gameConfig.questionOrder[j]);
+  }
+  for(var k=0;k<ids.length;k++){if(kept.indexOf(ids[k])===-1)kept.push(ids[k]);}
+  gameConfig.questionOrder=kept;
+}
+function collectGameConfigForSave(){
+  syncGameConfigQuestionIds();
+  var maxInp=document.getElementById('game-max-questions');
+  if(maxInp)gameConfig.maxQuestions=Math.max(1,Math.min(50,parseInt(maxInp.value,10)||10));
+  return{
+    maxQuestions:gameConfig.maxQuestions,
+    questionOrder:gameConfig.questionOrder.filter(function(id){return!!id;}),
+    enabledPowerups:gameConfig.enabledPowerups.slice()
+  };
+}
+function editorEscapeHtml(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function renderGameConfigPanel(){
+  syncGameConfigQuestionIds();
+  var maxInp=document.getElementById('game-max-questions');
+  if(maxInp)maxInp.value=gameConfig.maxQuestions;
+  var listEl=document.getElementById('game-play-order-list');
+  if(listEl){
+    if(gameConfig.questionOrder.length===0){
+      listEl.innerHTML='<p class="game-config-empty">Agrega preguntas y guarda la evaluación.</p>';
+    }else{
+      var html='',unsaved=0;
+      for(var i=0;i<gameConfig.questionOrder.length;i++){
+        var qid=gameConfig.questionOrder[i],label='(sin texto)',found=false;
+        for(var q=0;q<questions.length;q++){
+          if(questions[q].dbId===qid){
+            found=true;
+            var txt=(questions[q].text||'').replace(/<[^>]+>/g,'').trim();
+            label=txt?(txt.length>48?txt.slice(0,48)+'…':txt):('Pregunta '+(q+1));
+            break;
+          }
+        }
+        if(!found)label='(guarda de nuevo)';
+        html+='<div class="game-play-order-item"><span class="game-play-order-num">'+(i+1)+'º</span>'
+          +'<span class="game-play-order-text">'+editorEscapeHtml(label)+'</span>'
+          +'<div class="game-play-order-btns">'
+          +'<button type="button" onclick="movePlayOrderItem('+i+',-1)"'+(i===0?' disabled':'')+'>↑</button>'
+          +'<button type="button" onclick="movePlayOrderItem('+i+',1)"'+(i===gameConfig.questionOrder.length-1?' disabled':'')+'>↓</button>'
+          +'</div></div>';
+      }
+      for(var u=0;u<questions.length;u++){if(!questions[u].dbId)unsaved++;}
+      if(unsaved>0)html+='<p class="game-config-warn">'+unsaved+' pregunta(s) sin guardar — pulsa Guardar arriba.</p>';
+      listEl.innerHTML=html;
+    }
+  }
+  var grid=document.getElementById('game-powerups-grid');
+  if(grid){
+    var ghtml='';
+    for(var key in EDITOR_POWERUP_DEFS){
+      var def=EDITOR_POWERUP_DEFS[key],on=gameConfig.enabledPowerups.indexOf(key)!==-1;
+      ghtml+='<label class="game-powerup-chip'+(on?' selected':'')+'" onclick="toggleEditorPowerup(\''+key+'\');return false;">'
+        +'<input type="checkbox"'+(on?' checked':'')+'><span>'+def.name+'</span></label>';
+    }
+    grid.innerHTML=ghtml;
+  }
+}
+function resetPlayOrderFromSidebar(){
+  gameConfig.questionOrder=[];
+  syncGameConfigQuestionIds();
+  renderGameConfigPanel();
+}
+function movePlayOrderItem(idx,delta){
+  var arr=gameConfig.questionOrder,ni=idx+delta;
+  if(ni<0||ni>=arr.length)return;
+  var t=arr[idx];arr[idx]=arr[ni];arr[ni]=t;
+  renderGameConfigPanel();
+  markUnsavedChanges();
+}
+function toggleEditorPowerup(key){
+  var i=gameConfig.enabledPowerups.indexOf(key);
+  if(i===-1)gameConfig.enabledPowerups.push(key);
+  else gameConfig.enabledPowerups.splice(i,1);
+  renderGameConfigPanel();
+  markUnsavedChanges();
+}
+function setAllEditorPowerups(on){
+  gameConfig.enabledPowerups=on?DEFAULT_POWERUP_KEYS.slice():[];
+  renderGameConfigPanel();
+  markUnsavedChanges();
+}
+window.resetPlayOrderFromSidebar=resetPlayOrderFromSidebar;
+window.movePlayOrderItem=movePlayOrderItem;
+window.toggleEditorPowerup=toggleEditorPowerup;
+window.setAllEditorPowerups=setAllEditorPowerups;
+
 // ═══ QUESTION TYPES ═══
 var questionTypes={
   'Básico':[
@@ -56,6 +175,7 @@ function initEditor(){
   else{createNewEvaluation();}
   renderQuestionTypes();
   renderQuestionThumbs();
+  renderGameConfigPanel();
   var activeSession=sessionStorage.getItem('alcocer_teacher_eval');
   if(showRes === 'true' && editId) {
     evaluacionId=editId;
@@ -100,6 +220,7 @@ function loadExistingEvaluation(id){
 
     if(document.getElementById('settings-level')) document.getElementById('settings-level').value=r.data.nivel||'Seleccione el grado...';
     if(document.getElementById('settings-lang')) document.getElementById('settings-lang').value=r.data.idioma||'español, castellano';
+    parseGameConfigFromEval(r.data.config_juego);
     titleLoaded=true; checkPlay();
   });
   client.from('evaluacion_preguntas').select('*').eq('evaluacion_id',id).order('orden').then(function(r){
@@ -107,7 +228,8 @@ function loadExistingEvaluation(id){
     questions=r.data.map(function(p){
       return{dbId:p.id,id:Date.now()+Math.random(),type:p.tipo,text:p.texto,options:p.opciones||[],multipleCorrect:p.multiple_correctas||false,points:p.puntos||1,timer:p.temporizador||30};
     });
-    renderQuestionThumbs();updateStats();
+    syncGameConfigQuestionIds();
+    renderQuestionThumbs();updateStats();renderGameConfigPanel();
     if(questions.length>0)selectQuestion(0);
     qLoaded=true; checkPlay();
   });
@@ -535,6 +657,7 @@ function renderQuestionThumbs(){
       +'</div>';
   }
   c.innerHTML=html;
+  renderGameConfigPanel();
 }
 
 function selectQuestion(idx){
@@ -679,8 +802,24 @@ function saveEvaluationTransaction(){
     }
   }
 
+  function saveGameConfigToDb(done){
+    syncGameConfigQuestionIds();
+    var cfg = collectGameConfigForSave();
+    client.from('evaluaciones').update({
+      config_juego: cfg,
+      updated_at: new Date().toISOString()
+    }).eq('id', evaluacionId).then(function(r){
+      if(r.error) done(r.error.message);
+      else done(null);
+    });
+  }
+
   function saveAllQuestions(){
-    if(questions.length === 0){ finishSave(null); return; }
+    if(questions.length === 0){
+      if(!evaluacionId){ finishSave(null); return; }
+      saveGameConfigToDb(function(cfgErr){ finishSave(cfgErr); });
+      return;
+    }
     var pending = questions.length;
     var anyError = null;
 
@@ -702,19 +841,31 @@ function saveEvaluationTransaction(){
           client.from('evaluacion_preguntas').update(data).eq('id', q.dbId).select().then(function(r){
             if(r.error) anyError = r.error.message;
             pending--;
-            if(pending <= 0) finishSave(anyError);
+            if(pending <= 0){
+              saveGameConfigToDb(function(cfgErr){
+                finishSave(anyError || cfgErr);
+              });
+            }
           });
         } else {
           if(!data.texto){
             pending--;
-            if(pending <= 0) finishSave(anyError);
+            if(pending <= 0){
+              saveGameConfigToDb(function(cfgErr){
+                finishSave(anyError || cfgErr);
+              });
+            }
             return;
           }
           client.from('evaluacion_preguntas').insert(data).select().then(function(r){
             if(r.error){ anyError = r.error.message; }
             else { q.dbId = r.data[0].id; }
             pending--;
-            if(pending <= 0) finishSave(anyError);
+            if(pending <= 0){
+              saveGameConfigToDb(function(cfgErr){
+                finishSave(anyError || cfgErr);
+              });
+            }
           });
         }
       })(i);

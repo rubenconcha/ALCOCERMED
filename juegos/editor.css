@@ -1393,3 +1393,135 @@ body{font-family:'Inter',sans-serif;background:var(--bg-editor);color:var(--text
   }
 }
 
+/* ═══ Config juego: orden + comodines ═══ */
+.game-config-block {
+  margin-bottom: 18px;
+  padding: 14px;
+  background: var(--bg-editor-panel, #f8fafc);
+  border: 1px solid var(--border-editor, #e2e8f0);
+  border-radius: 12px;
+}
+.game-config-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #334155;
+  margin: 0 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.game-config-title i { color: #8b5cf6; }
+.game-config-hint {
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0 0 10px;
+}
+.game-config-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.game-config-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.game-config-mini-btn {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #475569;
+  cursor: pointer;
+}
+.game-config-mini-btn:hover { background: #f1f5f9; }
+.game-play-order-list {
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.game-play-order-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.game-play-order-num {
+  flex-shrink: 0;
+  font-weight: 800;
+  color: #8b5cf6;
+  min-width: 28px;
+}
+.game-play-order-text {
+  flex: 1;
+  color: #334155;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.game-play-order-btns {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.game-play-order-btns button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #f8fafc;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+.game-play-order-btns button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.game-config-empty,
+.game-config-warn {
+  font-size: 11px;
+  color: #64748b;
+  margin: 4px 0 0;
+}
+.game-config-warn { color: #b45309; }
+.game-powerups-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.game-powerup-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  font-size: 11px;
+  cursor: pointer;
+  user-select: none;
+}
+.game-powerup-chip.selected {
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.12);
+  color: #5b21b6;
+  font-weight: 700;
+}
+.game-powerup-chip input { display: none; }
+
