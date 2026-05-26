@@ -5486,3 +5486,457 @@ body.quiz-focus-mode #quiz-container {
     margin-right: -5px !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   MODO DÍA — AlcocerMed Arena (coherente con el skin oscuro)
+   ═══════════════════════════════════════════════════════════════ */
+[data-theme="light"] .games-app-theme {
+  --bg: #eef2ff;
+  --bg-card: #ffffff;
+  --text: #1e1b4b;
+  --text-mid: #475569;
+  --text-light: #64748b;
+  --border: rgba(99, 102, 241, 0.14);
+  --shadow: 0 10px 32px rgba(79, 70, 229, 0.08);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(167, 139, 250, 0.18), transparent 22rem),
+    radial-gradient(circle at 88% 12%, rgba(56, 189, 248, 0.14), transparent 18rem),
+    linear-gradient(180deg, #f5f3ff 0%, #eef2ff 42%, #e8eef8 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+[data-theme="light"] .games-app-theme .app-shell,
+[data-theme="light"] .games-app-theme .main-content,
+[data-theme="light"] .games-app-theme .page,
+[data-theme="light"] .games-app-theme #page-jugar {
+  background-color: transparent !important;
+}
+
+[data-theme="light"] .games-app-theme .app-shell {
+  background: transparent;
+  min-height: 100vh;
+}
+
+[data-theme="light"] .games-app-theme .topbar {
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.06);
+}
+
+[data-theme="light"] .games-app-theme .topbar-logo-text,
+[data-theme="light"] .games-app-theme .sb-logo-text,
+[data-theme="light"] .games-app-theme .topbar-username {
+  color: var(--text);
+}
+
+[data-theme="light"] .games-app-theme .topbar-logo-icon,
+[data-theme="light"] .games-app-theme .sb-logo-icon {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 46%, #f59e0b 100%);
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.28);
+}
+
+[data-theme="light"] .games-app-theme .sidebar,
+[data-theme="light"] .games-app-theme .bottom-nav {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(99, 102, 241, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 -8px 28px rgba(79, 70, 229, 0.05);
+}
+
+[data-theme="light"] .games-app-theme .nav-item,
+[data-theme="light"] .games-app-theme .bnav-item {
+  color: var(--text-mid);
+}
+
+[data-theme="light"] .games-app-theme .nav-item.active,
+[data-theme="light"] .games-app-theme .nav-item:hover,
+[data-theme="light"] .games-app-theme .bnav-item.active,
+[data-theme="light"] .games-app-theme .bnav-item:hover {
+  color: #b45309;
+}
+
+[data-theme="light"] .games-app-theme .nav-item.active {
+  background: rgba(245, 158, 11, 0.12);
+  box-shadow: inset 3px 0 0 #f59e0b;
+}
+
+[data-theme="light"] .games-app-theme #theme-toggle-btn {
+  background: rgba(99, 102, 241, 0.08);
+  color: #4f46e5;
+}
+
+[data-theme="light"] .games-app-theme #theme-toggle-btn:hover {
+  background: rgba(99, 102, 241, 0.14);
+  color: #4338ca;
+}
+
+[data-theme="light"] .games-app-theme .login-screen {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(167, 139, 250, 0.35), transparent 22rem),
+    radial-gradient(circle at 18% 80%, rgba(56, 189, 248, 0.22), transparent 18rem),
+    linear-gradient(180deg, #ede9fe 0%, #e0e7ff 55%, #dbeafe 100%);
+}
+
+[data-theme="light"] .games-app-theme .login-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(99, 102, 241, 0.14);
+  box-shadow: 0 24px 56px rgba(79, 70, 229, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .games-app-theme .login-header {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .games-app-theme .login-header-school,
+[data-theme="light"] .games-app-theme .login-card h2 {
+  color: #0f172a;
+}
+
+[data-theme="light"] .games-app-theme .login-header-app,
+[data-theme="light"] .games-app-theme .login-footer {
+  color: #64748b;
+}
+
+[data-theme="light"] .games-app-theme .login-input {
+  background: #fff;
+  border-color: #e2e8f0;
+  color: #0f172a;
+}
+
+[data-theme="light"] .games-app-theme .login-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18);
+}
+
+[data-theme="light"] .games-app-theme .login-label {
+  color: #4338ca;
+}
+
+[data-theme="light"] .game-app-hero {
+  border: 1px solid rgba(99, 102, 241, 0.14);
+  background:
+    radial-gradient(circle at 86% 22%, rgba(250, 204, 21, 0.22), transparent 11rem),
+    radial-gradient(circle at 18% 12%, rgba(37, 99, 235, 0.12), transparent 13rem),
+    linear-gradient(145deg, #ffffff 0%, #f5f3ff 58%, #ede9fe 100%);
+  box-shadow: 0 16px 40px rgba(79, 70, 229, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .game-app-kicker {
+  color: #b45309;
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.28);
+}
+
+[data-theme="light"] .game-app-hero h1 {
+  color: #1e1b4b;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.8), 0 8px 20px rgba(79, 70, 229, 0.12);
+}
+
+[data-theme="light"] .game-app-hero h1 i {
+  color: #2563eb;
+  filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.25));
+}
+
+[data-theme="light"] .game-app-hero p {
+  color: #475569;
+}
+
+[data-theme="light"] .game-section-title h2 {
+  color: #1e1b4b;
+  text-shadow: none;
+}
+
+[data-theme="light"] .game-section-title h2 i {
+  color: #d97706;
+  filter: none;
+}
+
+[data-theme="light"] .games-app-theme #page-jugar .game-app-hero {
+  background:
+    radial-gradient(circle at 78% 40%, rgba(250, 204, 21, 0.16), transparent 16rem),
+    radial-gradient(circle at 10% 12%, rgba(56, 189, 248, 0.12), transparent 14rem),
+    linear-gradient(145deg, #ffffff 0%, #f5f3ff 62%, #ede9fe 100%);
+}
+
+[data-theme="light"] .games-app-theme #page-jugar .game-podium-showcase,
+[data-theme="light"] .games-app-theme .game-podium-bg-showcase.rp-bg-wrap {
+  border: 1px solid rgba(124, 58, 237, 0.16);
+  box-shadow:
+    0 16px 40px rgba(79, 70, 229, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .games-app-theme .subject-mission-card {
+  background:
+    radial-gradient(circle at 18% 26%, color-mix(in srgb, var(--subject-color) 22%, transparent), transparent 7rem),
+    linear-gradient(145deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1px solid color-mix(in srgb, var(--subject-color) 38%, rgba(99, 102, 241, 0.12)) !important;
+  box-shadow:
+    0 10px 28px rgba(79, 70, 229, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+[data-theme="light"] .games-app-theme .subject-mission-card::before {
+  background:
+    linear-gradient(120deg, transparent 0 42%, rgba(255, 255, 255, 0.65) 43% 46%, transparent 47%),
+    repeating-linear-gradient(135deg, rgba(99, 102, 241, 0.04) 0 1px, transparent 1px 9px);
+  opacity: 0.65;
+}
+
+[data-theme="light"] .games-app-theme .mission-topline span {
+  color: #334155;
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.14);
+}
+
+[data-theme="light"] .games-app-theme .mission-copy h3 {
+  color: #1e1b4b !important;
+  text-shadow: none;
+}
+
+[data-theme="light"] .games-app-theme .mission-copy p {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .games-app-theme .mission-orb span {
+  color: #fff;
+}
+
+[data-theme="light"] .games-app-theme .mission-progress {
+  background: rgba(99, 102, 241, 0.1);
+}
+
+[data-theme="light"] .games-app-theme .explorar-subject-card {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 78% 18%, rgba(56, 189, 248, 0.1), transparent 7rem),
+    linear-gradient(145deg, #ffffff, #f8fafc) !important;
+  border-color: rgba(99, 102, 241, 0.14) !important;
+  box-shadow: 0 10px 28px rgba(79, 70, 229, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .games-app-theme .explorar-subject-card h3 {
+  color: #1e1b4b !important;
+}
+
+[data-theme="light"] .games-app-theme .explorar-subject-card p {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .games-app-theme .explorar-eval-card,
+[data-theme="light"] .games-app-theme .results-list,
+[data-theme="light"] .games-app-theme .library-list,
+[data-theme="light"] .games-app-theme .reports-list,
+[data-theme="light"] .games-app-theme .join-card,
+[data-theme="light"] .games-app-theme .join-full-card,
+[data-theme="light"] .game-rank-card {
+  background: #ffffff;
+  border-color: rgba(99, 102, 241, 0.12);
+  box-shadow: 0 10px 28px rgba(79, 70, 229, 0.07);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+[data-theme="light"] .games-app-theme .explorar-eval-card h4 {
+  color: #1e1b4b !important;
+}
+
+[data-theme="light"] .games-app-theme .explorar-filter-chip {
+  background: #fff;
+  color: var(--text-mid);
+  border-color: rgba(99, 102, 241, 0.14);
+}
+
+[data-theme="light"] .game-rank-card.rank-gold {
+  border-color: rgba(245, 158, 11, 0.45);
+  background: linear-gradient(90deg, rgba(254, 243, 199, 0.9), #ffffff);
+}
+
+[data-theme="light"] .game-rank-card.rank-silver {
+  border-color: rgba(148, 163, 184, 0.45);
+  background: linear-gradient(90deg, rgba(241, 245, 249, 0.95), #ffffff);
+}
+
+[data-theme="light"] .game-rank-card.rank-bronze {
+  border-color: rgba(251, 146, 60, 0.4);
+  background: linear-gradient(90deg, rgba(255, 237, 213, 0.9), #ffffff);
+}
+
+[data-theme="light"] .game-rank-number {
+  color: #fff;
+  background: linear-gradient(180deg, #6366f1, #4f46e5);
+}
+
+[data-theme="light"] .game-rank-name {
+  color: #1e1b4b;
+}
+
+[data-theme="light"] .game-rank-meta {
+  color: #64748b;
+}
+
+[data-theme="light"] .game-rank-badge {
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+  border-color: rgba(245, 158, 11, 0.28);
+}
+
+[data-theme="light"] .games-app-theme #top-estudiantes-list > div,
+[data-theme="light"] .games-app-theme #top-estudiantes-list > div[style] {
+  background:
+    radial-gradient(circle at 12% 50%, rgba(124, 58, 237, 0.08), transparent 5rem),
+    linear-gradient(90deg, #ffffff, #f8fafc) !important;
+  border: 1px solid rgba(99, 102, 241, 0.12) !important;
+  color: #1e1b4b !important;
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme="light"] .games-app-theme #top-estudiantes-list > div:nth-child(1) {
+  border-color: rgba(245, 158, 11, 0.45) !important;
+  background:
+    radial-gradient(circle at 10% 50%, rgba(250, 204, 21, 0.14), transparent 5rem),
+    linear-gradient(90deg, #fffbeb, #ffffff) !important;
+}
+
+[data-theme="light"] .games-app-theme #top-estudiantes-list * {
+  color: #1e1b4b !important;
+}
+
+[data-theme="light"] .games-app-theme #top-estudiantes-list span[style*="color:#059669"],
+[data-theme="light"] .games-app-theme #top-estudiantes-list span[style*="color: #059669"],
+[data-theme="light"] .games-app-theme #top-estudiantes-list span[style*="color:#22c55e"],
+[data-theme="light"] .games-app-theme #top-estudiantes-list span[style*="color: #22c55e"] {
+  color: #059669 !important;
+}
+
+[data-theme="light"] .games-app-theme #top-estudiantes-list span[style*="color:#D97706"],
+[data-theme="light"] .games-app-theme #top-estudiantes-list span[style*="color: #D97706"] {
+  color: #d97706 !important;
+}
+
+[data-theme="light"] .games-app-theme .qa-card-blue {
+  background: linear-gradient(145deg, #eff6ff, #dbeafe) !important;
+  border-color: rgba(37, 99, 235, 0.2) !important;
+}
+
+[data-theme="light"] .games-app-theme .qa-card-red {
+  background: linear-gradient(145deg, #fef2f2, #fee2e2) !important;
+  border-color: rgba(220, 38, 38, 0.18) !important;
+}
+
+[data-theme="light"] .games-app-theme .qa-card-yellow {
+  background: linear-gradient(145deg, #fffbeb, #fef3c7) !important;
+  border-color: rgba(245, 158, 11, 0.22) !important;
+}
+
+[data-theme="light"] .games-app-theme .game-ranking-header h3,
+[data-theme="light"] .games-app-theme .game-ranking-header p {
+  color: var(--text);
+}
+
+[data-theme="light"] .games-app-theme .game-ranking-chip {
+  background: rgba(99, 102, 241, 0.1);
+  color: #4338ca;
+  border: 1px solid rgba(99, 102, 241, 0.16);
+}
+
+[data-theme="light"] .games-app-theme .empty-state {
+  color: var(--text-mid);
+}
+
+[data-theme="light"] .games-app-theme .empty-state i {
+  color: rgba(99, 102, 241, 0.25);
+}
+
+[data-theme="light"] .games-app-theme #explorar-back-btn,
+[data-theme="light"] #explorar-back-btn {
+  background: #fff !important;
+  border-color: rgba(99, 102, 241, 0.14) !important;
+  color: var(--text-mid) !important;
+}
+
+[data-theme="light"] .games-app-theme .recent-section h2,
+[data-theme="light"] .games-app-theme .join-card h2 {
+  color: var(--text);
+}
+
+[data-theme="light"] .games-app-theme .quiz-podium-head h2 {
+  color: #1e1b4b;
+  text-shadow: none;
+}
+
+[data-theme="light"] .games-app-theme .quiz-podium-head p,
+[data-theme="light"] .games-app-theme .quiz-ranking-empty {
+  color: #64748b;
+}
+
+[data-theme="light"] .games-app-theme .quiz-daily-ranking-list .total-ranking-table tr {
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .games-app-theme .quiz-daily-ranking-list h3 {
+  color: var(--text);
+}
+
+[data-theme="light"] .games-app-theme .page-header h1,
+[data-theme="light"] .games-app-theme .page-header h2,
+[data-theme="light"] .games-app-theme #greeting-text {
+  color: #1e1b4b !important;
+  text-shadow: none;
+}
+
+[data-theme="light"] .games-app-theme .qa-card {
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  box-shadow: 0 12px 32px rgba(79, 70, 229, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+[data-theme="light"] .games-app-theme .qa-card h3,
+[data-theme="light"] .games-app-theme .qa-card p {
+  color: var(--text);
+}
+
+[data-theme="light"] .games-app-theme .qa-card p {
+  color: var(--text-mid);
+}
+
+[data-theme="light"] .game-ranking-shell {
+  background: linear-gradient(180deg, #ffffff 0%, #f5f3ff 100%);
+  border: 1px solid rgba(99, 102, 241, 0.14);
+  box-shadow: 0 14px 36px rgba(79, 70, 229, 0.08);
+}
+
+[data-theme="light"] .games-app-theme .game-rank-card {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.06);
+}
+
+[data-theme="light"] .game-rank-name {
+  color: #1e1b4b !important;
+}
+
+[data-theme="light"] .game-rank-meta {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .game-rank-number-plain {
+  background: rgba(99, 102, 241, 0.12);
+  color: #4f46e5;
+}
+
+[data-theme="light"] .game-rank-arrow {
+  color: #94a3b8;
+}
+
+[data-theme="light"] .games-app-theme .join-card,
+[data-theme="light"] .games-app-theme .recent-section {
+  color: var(--text);
+}

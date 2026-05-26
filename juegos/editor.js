@@ -2117,18 +2117,17 @@ window.addEventListener('beforeinstallprompt', function(e) {
 // ═══ DARK MODE TOGGLE ═══
 function applyThemeEditor(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    var body = document.body;
-    if (theme === 'dark') {
-        body.classList.add('games-app-theme');
-    } else {
-        body.classList.remove('games-app-theme');
-        body.classList.add('games-app-theme-light');
+    document.body.classList.add('games-app-theme');
+    document.body.classList.remove('games-app-theme-light');
+    var metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (metaTheme) {
+        metaTheme.setAttribute('content', theme === 'dark' ? '#0f1629' : '#eef2ff');
     }
     updateThemeIconEditor(theme);
 }
 function initThemeEditor() {
     try {
-        var theme = localStorage.getItem('alcocermed_theme') || 'light';
+        var theme = localStorage.getItem('alcocermed_theme') || 'dark';
         applyThemeEditor(theme);
     } catch(e) {}
 }
