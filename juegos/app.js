@@ -808,7 +808,8 @@ window.chooseAvatarAccessory = function(accessory) {
 
 window.saveAvatarSelection = function() {
     var seedName = currentUser && ((currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email) || 'avatar';
-    currentAvatar = normalizeAvatarValue(avatarDraftConfig || currentAvatar, seedName);
+    var config = avatarDraftConfig || decodeAvatarConfig(currentAvatar, seedName);
+    currentAvatar = encodeAvatarConfig(config, seedName);
     storeAvatarValue(currentAvatar);
     refreshCurrentAvatarUI();
     if (currentUser) {
