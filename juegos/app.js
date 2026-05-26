@@ -1954,6 +1954,44 @@ function showLockedDemoNotice() {
 }
 window.showLockedDemoNotice = showLockedDemoNotice;
 
+/** Clasifica evaluación → materia oficial (acentos y títulos incluidos). */
+function resolveEvaluationSubject(ev) {
+    var asig = normalizeDemoText(ev && ev.asignatura || '');
+    var title = normalizeDemoText(ev && ev.titulo || '');
+    var tema = normalizeDemoText(ev && ev.tema || '');
+    var blob = (asig + ' ' + title + ' ' + tema).trim();
+
+    if (asig.indexOf('BIOLOGIA CELULAR') !== -1 || asig.indexOf('BIOLOGIA CEL') !== -1) {
+        return 'BIOLOGIA CELULAR';
+    }
+    if (asig.indexOf('EDUCACION PARA LA SALUD') !== -1 || asig.indexOf('EDUCACION PARA LA') !== -1) {
+        return 'EDUCACION PARA LA SALUD';
+    }
+    if (asig.indexOf('MORFOFUNCION') !== -1 || asig.indexOf('MORFO FUNCION') !== -1) {
+        return 'MORFOFUNCION';
+    }
+
+    var bioCellPatterns = [
+        'MICROTRANSPORTE',
+        'MEMBRANA PLASMATICA',
+        'ESTRUCTURA DE LA MEMBRANA',
+        'COMO SE ESTUDIAN LAS CELULAS',
+        'INTRODUCCION A LA BIOLOGIA CELULAR',
+        'TEJIDO OSEO',
+        'HISTOLOGIA',
+        'ORGANIZACION CORPORAL'
+    ];
+    for (var b = 0; b < bioCellPatterns.length; b++) {
+        if (blob.indexOf(bioCellPatterns[b]) !== -1) return 'BIOLOGIA CELULAR';
+    }
+
+    if (asig.indexOf('EDUCACION') !== -1 && asig.indexOf('SALUD') !== -1) {
+        return 'EDUCACION PARA LA SALUD';
+    }
+
+    return 'MORFOFUNCION';
+}
+
 function subjectColor(name) {
     for (var i = 0; i < SUBJECTS.length; i++) {
         if (name.toUpperCase().indexOf(SUBJECTS[i].name) !== -1) return SUBJECTS[i].color;
@@ -1966,8 +2004,23 @@ function subjectEmoji(name) {
     }
     return SUBJECTS[0].emoji;
 }
-function subjectMatch(dbName, subjectName) {
-    return dbName.toUpperCase().indexOf(subjectName) !== -1;
+function subjectMatch(ev, subjectName) {
+    return resolveEvaluationSubject(ev) === subjectName;
+}
+
+function sortSubjectEvaluations(list, subject) {
+    list.sort(function(a, b) {
+        var aDemo = isDemoEvaluation(a) ? 1 : 0;
+        var bDemo = isDemoEvaluation(b) ? 1 : 0;
+        if (aDemo !== bDemo) return bDemo - aDemo;
+        if (subject === 'MORFOFUNCION') {
+            var aE1 = normalizeDemoText(a.titulo || '').indexOf('EVALUACION 1') !== -1 ? 1 : 0;
+            var bE1 = normalizeDemoText(b.titulo || '').indexOf('EVALUACION 1') !== -1 ? 1 : 0;
+            if (aE1 !== bE1) return bE1 - aE1;
+        }
+        return new Date(b.created_at) - new Date(a.created_at);
+    });
+    return list;
 }
 
 function adjustColor(hex, amount) {
@@ -2011,20 +2064,9 @@ function loadExploreSubjects() {
         
         if (r.data && r.data.length > 0) {
             for (var i = 0; i < r.data.length; i++) {
-                var dbName = (r.data[i].asignatura || '').toUpperCase();
-                var matched = false;
-                for (var s = 0; s < SUBJECTS.length; s++) {
-                    if (dbName.indexOf(SUBJECTS[s].name) !== -1) {
-                        counts[SUBJECTS[s].name]++;
-                        if (isDemoEvaluation(r.data[i])) demoCounts[SUBJECTS[s].name]++;
-                        matched = true;
-                        break;
-                    }
-                }
-                if (!matched) {
-                    counts[SUBJECTS[0].name]++; // default: MORFOFUNCION
-                    if (isDemoEvaluation(r.data[i])) demoCounts[SUBJECTS[0].name]++;
-                }
+                var resolved = resolveEvaluationSubject(r.data[i]);
+                counts[resolved]++;
+                if (isDemoEvaluation(r.data[i])) demoCounts[resolved]++;
             }
         }
 
@@ -2390,19 +2432,10 @@ function loadSubjectEvaluations(subject) {
             listEl.innerHTML = '<div class="empty-state"><i class="fas fa-exclamation-triangle"></i><p>Error al cargar</p></div>';
             return;
         }
-        // Filtrar manualmente: MORFOFUNCION recibe todo lo que no es de las otras 2 materias
         var matching = [];
-        var isMorfo = (subject === 'MORFOFUNCION');
         for (var i = 0; i < evRes.data.length; i++) {
-            var dbAsig = (evRes.data[i].asignatura || '').toUpperCase();
-            if (isMorfo) {
-                if (dbAsig.indexOf('BIOLOGIA CELULAR') === -1 && dbAsig.indexOf('EDUCACION PARA LA SALUD') === -1) {
-                    matching.push(evRes.data[i]);
-                }
-            } else {
-                if (subjectMatch(evRes.data[i].asignatura || '', subject)) {
-                    matching.push(evRes.data[i]);
-                }
+            if (subjectMatch(evRes.data[i], subject)) {
+                matching.push(evRes.data[i]);
             }
         }
         if (matching.length === 0) {
@@ -2410,14 +2443,7 @@ function loadSubjectEvaluations(subject) {
             return;
         }
 
-        // Ordenar: "prueba" siempre primero, luego por created_at descendente
-        matching.sort(function(a, b) {
-            var aTitle = (a.titulo || '').toLowerCase();
-            var bTitle = (b.titulo || '').toLowerCase();
-            if (aTitle.indexOf('prueba') !== -1 && bTitle.indexOf('prueba') === -1) return -1;
-            if (aTitle.indexOf('prueba') === -1 && bTitle.indexOf('prueba') !== -1) return 1;
-            return new Date(b.created_at) - new Date(a.created_at);
-        });
+        sortSubjectEvaluations(matching, subject);
 
         Promise.resolve().then(function() {
             var html = '';
@@ -2432,7 +2458,7 @@ function loadSubjectEvaluations(subject) {
                 if (isLocked) html += '<span class="locked-access-badge"><i class="fas fa-lock"></i> BLOQUEADO</span>';
                 html += '</div></div>';
                 if (isLocked) {
-                    html += '<button class="explorar-btn-study explorar-btn-locked" onclick="event.stopPropagation();showLockedDemoNotice()" style="font-size:0.9rem;padding:14px 32px;border-radius:16px;font-weight:800;letter-spacing:0.5px"><i class="fas fa-lock"></i> DESBLOQUEAR</button>';
+                    html += '<button class="explorar-btn-study explorar-btn-locked" onclick="event.stopPropagation();showLockedDemoNotice()" style="font-size:0.82rem;padding:12px 18px;border-radius:16px;font-weight:800;letter-spacing:0.02em;max-width:220px;line-height:1.25"><i class="fas fa-lock"></i> Suscribete para desbloquear...</button>';
                 } else {
                     html += '<button class="explorar-btn-study" onclick="event.stopPropagation();startSelfStudy(\'' + ev.id + '\')" style="background:linear-gradient(135deg,' + color + ', ' + adjustColor(color, -20) + ');font-size:0.9rem;padding:14px 32px;border-radius:16px;font-weight:800;letter-spacing:0.5px"><i class="fas fa-play"></i> JUGAR DEMO</button>';
                 }
