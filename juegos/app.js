@@ -661,9 +661,11 @@ function applySavedAvatarImmediately() {
         syncParticipantAvatarRows(),
         syncAvatarProfileTables()
     ]).then(function() {
+        refreshVisibleAvatarSurfaces();
         broadcastAvatarUpdate();
         setTimeout(broadcastAvatarUpdate, 900);
     }).catch(function() {
+        refreshVisibleAvatarSurfaces();
         broadcastAvatarUpdate();
         setTimeout(broadcastAvatarUpdate, 900);
     });
