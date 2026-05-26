@@ -20,7 +20,7 @@ var EDITOR_POWERUP_DEFS={
   x2:{name:'⚡ x2 Puntos',cat:'puntos'},x3r:{name:'🔥 x3/x5',cat:'puntos'},jack:{name:'💎 Jackpot',cat:'puntos'},
   myst:{name:'🎲 Misterioso',cat:'puntos'},speed:{name:'⏳ Velocidad',cat:'puntos'},
   elim:{name:'❌ Eliminar',cat:'ayuda'},time:{name:'⏱️ +10s',cat:'ayuda'},hint:{name:'👀 Pista',cat:'ayuda'},
-  free:{name:'🎁 Gratis',cat:'ayuda'},retry:{name:'🔄 2ª chance',cat:'ayuda'},
+  retry:{name:'🔄 2ª chance',cat:'ayuda'},
   chest:{name:'🎁 Caja',cat:'divertido'},sleep:{name:'💤 Dormido',cat:'divertido'},ultra:{name:'🤯 Ultra',cat:'divertido'},
   spy:{name:'🕵️ Espía',cat:'divertido'},swap:{name:'🌪️ Roba pts',cat:'divertido'}
 };
@@ -34,7 +34,6 @@ var EDITOR_POWERUP_ADMIN_META={
   elim:{name:'Eliminar',desc:'Quita opciones incorrectas.',cat:'ayuda',icon:'times-circle'},
   time:{name:'+10 segundos',desc:'Agrega tiempo para pensar.',cat:'ayuda',icon:'clock'},
   hint:{name:'Pista',desc:'Muestra una ayuda corta.',cat:'ayuda',icon:'eye'},
-  free:{name:'Gratis',desc:'Protege una respuesta dificil.',cat:'ayuda',icon:'gift'},
   retry:{name:'2da chance',desc:'Permite intentar otra vez.',cat:'ayuda',icon:'redo'},
   chest:{name:'Caja sorpresa',desc:'Efecto aleatorio divertido.',cat:'divertido',icon:'box-open'},
   sleep:{name:'Dormido',desc:'Pausa o distrae en juego.',cat:'divertido',icon:'moon'},

@@ -1700,7 +1700,6 @@ var POWERUP_DEFS = {
     elim: { name:'❌ Eliminar',     desc:'Elimina una opción incorrecta',                cat:'ayuda',  effect:'remove_wrong', value:1, icon:'❌', color:'#3B82F6' },
     time: { name:'⏱️ +10 Segundos', desc:'Añade 10 segundos al temporizador',           cat:'ayuda',  effect:'add_time',   value:10, icon:'⏱️', color:'#6366F1' },
     hint: { name:'👀 Pista',        desc:'Muestra una pista sobre la respuesta',         cat:'ayuda',  effect:'show_hint',  value:0,  icon:'👀', color:'#EC4899' },
-    free: { name:'🎁 Respuesta Gratis', desc:'Esta pregunta cuenta como correcta',       cat:'ayuda',  effect:'free_answer', value:0, icon:'🎁', color:'#22C55E' },
     retry:{ name:'🔄 2a Oportunidad', desc:'Si fallas, puedes intentarlo otra vez',      cat:'ayuda',  effect:'retry',     value:1,  icon:'🔄', color:'#E91E63' },
 
     // 😈 ATAQUE / DIVERTIDO
@@ -1757,9 +1756,6 @@ function activatePowerup(idx) {
         flashPowerup('pw-btn-' + idx);
     } else if (def.effect === 'show_hint') {
         showQuestionHint();
-        flashPowerup('pw-btn-' + idx);
-    } else if (def.effect === 'free_answer') {
-        autoAnswerCorrect();
         flashPowerup('pw-btn-' + idx);
     } else if (def.effect === 'blur_options') {
         blurOptionsTemporarily(def.value);
@@ -1943,18 +1939,6 @@ function showQuestionHint() {
     if (container) container.appendChild(hintEl);
     setTimeout(function() { if (hintEl.parentNode) hintEl.parentNode.removeChild(hintEl); }, 4000);
     showPowerupToast('👀 Pista revelada', '#EC4899');
-}
-
-function autoAnswerCorrect() {
-    var pregunta = quizData.preguntas[quizCurrentQ];
-    var opts = pregunta.opciones || [];
-    for (var i = 0; i < opts.length; i++) {
-        if (isQuizOptionCorrect(opts[i])) {
-            quizSelectedOption = i;
-            confirmQuizAnswer();
-            return;
-        }
-    }
 }
 
 function blurOptionsTemporarily(secs) {
@@ -2265,7 +2249,7 @@ function applyPendingPowerup() {
     if (!def) return;
 
     var isImmediate = (def.effect === 'add_time' || def.effect === 'remove_wrong' ||
-        def.effect === 'show_hint' || def.effect === 'free_answer' ||
+        def.effect === 'show_hint' ||
         def.effect === 'blur_options' || def.effect === 'fade_wrong' ||
         def.effect === 'spy_stats');
 
@@ -2275,8 +2259,6 @@ function applyPendingPowerup() {
         removeOneWrongOption();
     } else if (def.effect === 'show_hint') {
         showQuestionHint();
-    } else if (def.effect === 'free_answer') {
-        autoAnswerCorrect();
     } else if (def.effect === 'blur_options') {
         blurOptionsTemporarily(def.value);
     } else if (def.effect === 'fade_wrong') {
