@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prepa bencarson | propedeutico</title>
+    <meta name="theme-color" content="#ff8c00">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="AlcocerMed">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="logo%20app%20juegos.png">
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" async data-supabase-sdk></script>
 
@@ -422,6 +428,9 @@
                 </div>
                 <span class="mobile-topbar-name">preparatoria ben carson</span>
             </div>
+            <button id="install-pwa-btn" class="mobile-install-btn pwa-install-trigger" type="button" title="descargar app">
+                <i class="fas fa-download"></i>
+            </button>
         </div>
 
         <!-- ══ PANTALLA INICIO — MOBILE FIRST ══ -->
@@ -433,6 +442,7 @@
                 <div class="home-hero-actions">
                     <button class="home-primary-action" onclick="toggleFlashcards()"><i class="fas fa-layer-group"></i> iniciar flashcards</button>
                     <button class="home-secondary-action" onclick="openMindMaps()"><i class="fas fa-project-diagram"></i> mapas</button>
+                    <button class="home-secondary-action pwa-install-trigger" type="button"><i class="fas fa-download"></i> descargar app</button>
                 </div>
                 <div class="home-hero-stats">
                     <div><strong id="home-repasos">0</strong><span>repasos</span></div>
@@ -586,8 +596,8 @@
                 <button id="btn-reveal" class="btn-primary">revelar respuesta</button>
                 <div id="anki-buttons" class="anki-wrapper hidden">
                     <div class="anki-rating-row">
-                        <button class="btn-anki yellow-intense" onclick="rateCard(0)">otra vez</button>
-                        <button class="btn-anki red-intense" onclick="rateCard(1)">difícil</button>
+                        <button class="btn-anki red-intense" onclick="rateCard(0)">mal</button>
+                        <button class="btn-anki yellow-intense" onclick="rateCard(1)">regular</button>
                         <button class="btn-anki gold-intense" onclick="rateCard(2)">bien</button>
                         <button class="btn-anki blue-intense" onclick="rateCard(3)">fácil</button>
                     </div>

@@ -618,9 +618,10 @@ function renderCard() {
 // SISTEMA DE REPETICION ESPACIADA (SRS)
 // ──────────────────────────────────────────────
 const SRS_INTERVALS = {
-    1: 10 * 60 * 1000,          // difícil  → 10 min
-    2: 12 * 60 * 60 * 1000,     // bien     → 12 horas
-    3: 24 * 60 * 60 * 1000      // fácil    → 1 día
+    0: 3 * 60 * 1000,           // mal      -> 3 min
+    1: 10 * 60 * 1000,          // regular  -> 10 min
+    2: 12 * 60 * 60 * 1000,     // bien     -> 12 horas
+    3: 24 * 60 * 60 * 1000      // facil    -> 1 dia
 };
 
 function getSrsKey(card) {
@@ -781,32 +782,17 @@ function updateDailyGoalUI() {
 // CALIFICAR (SRS)
 // ──────────────────────────────────────────────
 window.rateCard = function (score) {
+    if (!deck.length || currentIndex >= deck.length) return;
+
     totalReviews++;
-    document.getElementById('repasos-count').innerText = totalReviews;
+    const repasosCount = document.getElementById('repasos-count');
+    if (repasosCount) repasosCount.innerText = totalReviews;
 
     const card = deck[currentIndex];
+    const interval = SRS_INTERVALS[score];
+    if (interval) saveSrs(card, interval);
 
-    if (score === 0) {
-        // "otra vez" — vuelve en ~3 tarjetas (< 1 min de estudio)
-        deck.splice(currentIndex, 1);
-        const insertAt = Math.min(currentIndex + 3, deck.length);
-        deck.splice(insertAt, 0, card);
-        // No avanzar currentIndex — la siguiente tarjeta ya está en currentIndex
-    } else if (score === 1) {
-        // "difícil" — guardar 10 min y poner al final de la sesión
-        saveSrs(card, SRS_INTERVALS[1]);
-        deck.splice(currentIndex, 1);
-        deck.push(card);
-        // No avanzar — siguiente carta ahora en currentIndex
-    } else if (score === 2) {
-        // "bien" — guardar 12 hrs y avanzar
-        saveSrs(card, SRS_INTERVALS[2]);
-        currentIndex++;
-    } else if (score === 3) {
-        // "fácil" — guardar 1 día y avanzar
-        saveSrs(card, SRS_INTERVALS[3]);
-        currentIndex++;
-    }
+    currentIndex++;
 
     // Registrar en meta diaria y sincronizar con la nube cada 5 cartas
     const newCount = incrementDailyCount();
@@ -1283,6 +1269,76 @@ function showToast(msg, type) {
     }, type === 'error' ? 5000 : 3000);
 }
 
+// PWA / instalacion de la app principal
+let deferredPwaInstallPrompt = null;
+
+function isStandalonePwa() {
+    return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+}
+
+function getPwaInstallFallbackMessage() {
+    const ua = navigator.userAgent || '';
+    if (/iphone|ipad|ipod/i.test(ua)) {
+        return 'En iPhone: toca compartir y luego "Agregar a pantalla de inicio".';
+    }
+    return 'Si no aparece la instalacion, abre el menu del navegador y elige "Instalar app" o "Agregar a pantalla de inicio".';
+}
+
+function setPwaInstallButtonsHidden(hidden) {
+    document.querySelectorAll('.pwa-install-trigger').forEach(function (btn) {
+        btn.classList.toggle('is-hidden', hidden);
+    });
+}
+
+async function handlePwaInstallClick() {
+    if (isStandalonePwa()) {
+        showToast('la app ya esta instalada', 'success');
+        setPwaInstallButtonsHidden(true);
+        return;
+    }
+
+    if (!deferredPwaInstallPrompt) {
+        showToast(getPwaInstallFallbackMessage(), 'info');
+        return;
+    }
+
+    deferredPwaInstallPrompt.prompt();
+    try {
+        await deferredPwaInstallPrompt.userChoice;
+    } catch (e) {
+        console.warn('[PWA] instalacion cancelada o no disponible:', e);
+    }
+    deferredPwaInstallPrompt = null;
+}
+
+function initPwaInstall() {
+    document.querySelectorAll('.pwa-install-trigger').forEach(function (btn) {
+        btn.addEventListener('click', handlePwaInstallClick);
+    });
+
+    if (isStandalonePwa()) {
+        setPwaInstallButtonsHidden(true);
+    }
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js').catch(function (error) {
+            console.warn('[PWA] no se pudo registrar el service worker:', error);
+        });
+    }
+}
+
+window.addEventListener('beforeinstallprompt', function (event) {
+    event.preventDefault();
+    deferredPwaInstallPrompt = event;
+    setPwaInstallButtonsHidden(false);
+});
+
+window.addEventListener('appinstalled', function () {
+    deferredPwaInstallPrompt = null;
+    setPwaInstallButtonsHidden(true);
+    showToast('app instalada correctamente', 'success');
+});
+
 // ──────────────────────────────────────────────
 // PRUEBA DE CONEXIÓN A SUPABASE
 // ──────────────────────────────────────────────
@@ -1317,6 +1373,8 @@ async function testConnection() {
 // ──────────────────────────────────────────────
 // Inicialización unificada al cargar el DOM
 document.addEventListener('DOMContentLoaded', function () {
+    initPwaInstall();
+
     // Botón revelar respuesta
     const btnReveal = document.getElementById('btn-reveal');
     if (btnReveal) {

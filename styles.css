@@ -1833,10 +1833,32 @@ body.wayground-active .main-content {
     box-shadow: 0 3px 10px rgba(255, 69, 0, 0.3);
 }
 
+.mobile-install-btn {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);
+}
+
+.pwa-install-trigger.is-hidden {
+    display: none !important;
+}
+
 .mobile-topbar-brand {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex: 1;
+    min-width: 0;
 }
 
 .mobile-topbar-logo {
@@ -7005,6 +7027,13 @@ body.login-active .overlay {
     background: rgba(255,255,255,.10);
     border: 1px solid rgba(255,255,255,.12);
 }
+
+.home-secondary-action.pwa-install-trigger {
+    color: #fff;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border-color: rgba(147,197,253,.3);
+}
+
 .home-hero-stats {
     position: relative;
     z-index: 1;
