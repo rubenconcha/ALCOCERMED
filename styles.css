@@ -8067,8 +8067,8 @@ body.login-active .overlay {
 
 .study-area .face .card-face-label {
     top: 18px !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
+    left: auto !important;
+    right: 22px !important;
+    transform: none !important;
     white-space: nowrap;
 }
