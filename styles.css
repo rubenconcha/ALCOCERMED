@@ -7759,13 +7759,16 @@ body.login-active .overlay {
 
 .study-area .card-face-label {
     top: 26px;
-    left: 28px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
     padding: 11px 16px;
     border-radius: 999px;
     background: rgba(15, 23, 42, .07);
     color: #334155;
     letter-spacing: .08em;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+    white-space: nowrap;
 }
 
 .study-area .text-inner,
@@ -7781,8 +7784,8 @@ body.login-active .overlay {
 .study-area .back-text p {
     max-width: 92%;
     color: #0f172a;
-    font-size: clamp(1.55rem, 4.8vw, 2.55rem);
-    line-height: 1.14;
+    font-size: clamp(1.75rem, 5.35vw, 2.9rem);
+    line-height: 1.1;
     font-weight: 900;
     letter-spacing: -.02em;
     text-align: center;
@@ -7980,7 +7983,7 @@ body.login-active .overlay {
 
     .study-area .face {
         border-radius: 32px;
-        padding: 64px 22px 30px;
+        padding: 78px 22px 34px;
         box-shadow: 0 26px 66px rgba(15, 23, 42, .18), 0 10px 22px rgba(15, 23, 42, .08);
     }
 
@@ -7991,17 +7994,20 @@ body.login-active .overlay {
     }
 
     .study-area .card-face-label {
-        top: 22px;
-        left: 22px;
+        top: 18px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
         padding: 8px 14px;
         font-size: .72rem;
+        white-space: nowrap;
     }
 
     .study-area .text-inner p,
     .study-area .back-text p {
         max-width: 96%;
-        font-size: clamp(1.22rem, 5.45vw, 1.72rem);
-        line-height: 1.16;
+        font-size: clamp(1.52rem, 6.6vw, 2.15rem);
+        line-height: 1.1;
     }
 
     .study-area .action-zone {
@@ -8047,7 +8053,7 @@ body.login-active .overlay {
     }
 
     .study-area .face {
-        padding: 60px 18px 28px;
+        padding: 72px 18px 30px;
         border-radius: 28px;
     }
 
@@ -8057,4 +8063,12 @@ body.login-active .overlay {
         border-radius: 16px;
         font-size: .88rem;
     }
+}
+
+.study-area .face .card-face-label {
+    top: 18px !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    white-space: nowrap;
 }
