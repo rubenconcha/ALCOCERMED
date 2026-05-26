@@ -2427,7 +2427,7 @@ function loadSubjectEvaluations(subject) {
                 var isLocked = !canAccessEvaluation(ev);
                 html += '<div class="explorar-eval-card' + (isLocked ? ' explorar-eval-locked' : '') + '" style="border-left:4px solid ' + color + '">';
                 html += '<div style="flex:1;min-width:180px">';
-                html += '<h4 style="font-size:1.05rem;font-weight:800;color:var(--text);margin:0 0 6px">' + (ev.titulo || 'Sin título') + (isDemo ? ' <span style="background:#FEF3C7;color:#92400E;font-size:0.65rem;padding:2px 8px;border-radius:8px;font-weight:700">🎯 DEMO</span>' : '') + '</h4>';
+                html += '<h4 style="font-size:1.05rem;font-weight:800;color:var(--text);margin:0 0 6px">' + (ev.titulo || 'Sin título') + (isDemo ? ' <span style="background:var(--badge-draft-bg,#FEF3C7);color:var(--badge-draft-color,#92400E);font-size:0.65rem;padding:2px 8px;border-radius:8px;font-weight:700">🎯 DEMO</span>' : '') + '</h4>';
                 html += '<div class="eval-meta" style="display:flex;flex-wrap:wrap;gap:10px;font-size:0.78rem;color:#94A3B8">';
                 if (isLocked) html += '<span class="locked-access-badge"><i class="fas fa-lock"></i> BLOQUEADO</span>';
                 html += '</div></div>';
@@ -3959,14 +3959,14 @@ function showQuizResults() {
                 var correctaFb = (pq.opciones && pq.opciones[0]) ? pq.opciones[0].text : '';
                 var studentAns = ans ? (ans.seleccionada || 'Sin responder') : 'Sin responder';
                 var fbIsCorrect = ans && ans.correcta;
-                rhtml += '<div style="margin-top:16px; padding:14px; background:' + (fbIsCorrect ? '#F0FDF4' : '#FEF2F2') + '; border:2px solid ' + (fbIsCorrect ? '#86EFAC' : '#FECACA') + '; border-radius:10px;">';
+                rhtml += '<div style="margin-top:16px; padding:14px; background:' + (fbIsCorrect ? 'var(--fb-correct-bg,#F0FDF4)' : 'var(--fb-incorrect-bg,#FEF2F2)') + '; border:2px solid ' + (fbIsCorrect ? 'var(--fb-correct-border,#86EFAC)' : 'var(--fb-incorrect-border,#FECACA)') + '; border-radius:10px;">';
                 rhtml += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">';
-                rhtml += '<div style="font-weight:800; color:' + (fbIsCorrect ? '#166534' : '#DC2626') + '; font-size:0.85rem"><i class="fas fa-' + (fbIsCorrect ? 'check' : 'times') + '-circle"></i> ' + (fbIsCorrect ? '¡Correcto!' : 'Incorrecto') + '</div>';
+                rhtml += '<div style="font-weight:800; color:' + (fbIsCorrect ? 'var(--fb-correct-text,#166534)' : '#DC2626') + '; font-size:0.85rem"><i class="fas fa-' + (fbIsCorrect ? 'check' : 'times') + '-circle"></i> ' + (fbIsCorrect ? '¡Correcto!' : 'Incorrecto') + '</div>';
                 rhtml += '</div>';
                 rhtml += '<div style="font-weight:700; color:#475569; font-size:0.8rem; margin-bottom:2px;">Tu respuesta:</div>';
                 rhtml += '<div style="font-weight:600; color:var(--text);background:var(--bg-card);padding:6px 10px;border-radius:6px;margin-bottom:8px">' + studentAns + '</div>';
                 rhtml += '<div style="font-weight:700; color:#059669; font-size:0.8rem; margin-bottom:2px;">✅ Respuesta correcta:</div>';
-                rhtml += '<div style="font-weight:700; color:#059669;background:#F0FDF4;padding:6px 10px;border-radius:6px">' + (correctaFb || 'No especificada') + '</div>';
+                rhtml += '<div style="font-weight:700; color:var(--fb-correct-text,#059669);background:var(--fb-correct-bg,#F0FDF4);padding:6px 10px;border-radius:6px">' + (correctaFb || 'No especificada') + '</div>';
                 rhtml += '</div>';
             }
             rhtml += '</div>';
@@ -4388,9 +4388,9 @@ function loadLibrary() {
         for (var i = 0; i < r.data.length; i++) {
             var ev = r.data[i];
             var statusBadge = ev.publicado
-                ? '<span style="background:#DCFCE7;color:#166534;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:700">Publicado</span>'
-                : '<span style="background:#FEF3C7;color:#92400E;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:700">Borrador</span>';
-            var codeHtml = ev.codigo ? '<span style="font-family:monospace;font-size:13px;color:#2563EB;font-weight:700">Código: ' + ev.codigo + '</span>' : '';
+                ? '<span style="background:var(--badge-published-bg,#DCFCE7);color:var(--badge-published-color,#166534);padding:3px 10px;border-radius:6px;font-size:11px;font-weight:700">Publicado</span>'
+                : '<span style="background:var(--badge-draft-bg,#FEF3C7);color:var(--badge-draft-color,#92400E);padding:3px 10px;border-radius:6px;font-size:11px;font-weight:700">Borrador</span>';
+            var codeHtml = ev.codigo ? '<span style="font-family:monospace;font-size:13px;color:var(--blue);font-weight:700">Código: ' + ev.codigo + '</span>' : '';
             var fecha = new Date(ev.created_at).toLocaleDateString('es-ES', {day:'numeric',month:'short',year:'numeric'});
             html += '<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:12px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;transition:box-shadow .2s" onmouseover="this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\'" onmouseout="this.style.boxShadow=\'none\'">' +
                 '<div style="flex:1;min-width:200px">' +
@@ -4406,7 +4406,7 @@ function loadLibrary() {
                 '\'" style="padding:8px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:var(--text-mid)"><i class="fas fa-edit"></i> Editar</button>' +
                 (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&results=true\'" style="padding:8px 14px;background:#8B5CF6;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;" title="Resultados en vivo"><i class="fas fa-trophy"></i> Resultados</button>' : '') +
                 (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&play=true\'" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;" title="Abrir sala de juego"><i class="fas fa-play"></i> Jugar</button>' : '') +
-                '<button onclick="deleteQuiz(\'' + ev.id + '\', event)" style="padding:8px 14px;background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#DC2626;" title="Borrar"><i class="fas fa-trash-alt"></i></button>' +
+                '<button onclick="deleteQuiz(\'' + ev.id + '\', event)" style="padding:8px 14px;background:var(--danger-bg,#FEF2F2);border:1px solid var(--danger-border,#FECACA);border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#DC2626;" title="Borrar"><i class="fas fa-trash-alt"></i></button>' +
                 '</div></div>';
         }
         container.innerHTML = html;
@@ -4529,8 +4529,8 @@ window.openReportDetail = function(evalId, userId) {
             correctCount = Math.round(((r.porcentaje || 0) / 100) * totalGradeableCount);
         }
         
-        html += '<div style="flex:1;background:#F0FDF4;padding:16px;border-radius:16px;text-align:center;border:2px solid #DCFCE7;"><div style="font-size:28px;font-weight:900;color:#166534;">'+correctCount+' / '+totalGradeableCount+'</div><div style="font-size:13px;color:#15803D;font-weight:800;">Correctas</div></div>';
-        html += '<div style="flex:1;background:#EFF6FF;padding:16px;border-radius:16px;text-align:center;border:2px solid #DBEAFE;"><div style="font-size:28px;font-weight:900;color:#1E40AF;">'+r.porcentaje+'%</div><div style="font-size:13px;color:#1D4ED8;font-weight:800;">Precisión</div></div>';
+        html += '<div style="flex:1;background:var(--score-correct-bg,#F0FDF4);padding:16px;border-radius:16px;text-align:center;border:2px solid var(--score-correct-border,#DCFCE7);"><div style="font-size:28px;font-weight:900;color:var(--score-correct-text,#166534);">'+correctCount+' / '+totalGradeableCount+'</div><div style="font-size:13px;color:var(--score-correct-text,#15803D);font-weight:800;">Correctas</div></div>';
+        html += '<div style="flex:1;background:var(--score-precision-bg,#EFF6FF);padding:16px;border-radius:16px;text-align:center;border:2px solid var(--score-precision-border,#DBEAFE);"><div style="font-size:28px;font-weight:900;color:var(--score-precision-text,#1E40AF);">'+r.porcentaje+'%</div><div style="font-size:13px;color:var(--score-precision-text,#1D4ED8);font-weight:800;">Precisión</div></div>';
         html += '</div>';
         
         for(var i=0; i<qs.length; i++) {
@@ -4652,8 +4652,8 @@ window.openReportDetail = function(evalId, userId) {
                 } else {
                     // Pregunta de texto (fb puro u otro tipo sin opciones visuales)
                     // SMART FALLBACK: Translate numeric index to option text if opciones exist
-                    html += '<div style="margin-top:16px;padding:12px;background:#FFF;border:2px solid #E2E8F0;border-radius:12px;">';
-                    html += '<div style="font-size:0.85rem;color:#64748B;font-weight:800;margin-bottom:6px;">Respuesta del estudiante:</div>';
+                    html += '<div style="margin-top:16px;padding:12px;background:var(--bg-card);border:2px solid var(--border);border-radius:12px;">';
+                    html += '<div style="font-size:0.85rem;color:var(--text-mid);font-weight:800;margin-bottom:6px;">Respuesta del estudiante:</div>';
                     var fallbackStudentAns = 'Sin responder';
                     if (a) {
                         var sel = a.seleccionada;
@@ -4801,7 +4801,7 @@ function loadReports() {
                 }
                 html += '</div></div>';
                 
-                html += '<h2 style="font-size:18px; font-weight:800; margin-bottom:16px; color:#1E293B;"><i class="fas fa-layer-group" style="margin-right:8px; color:#64748B;"></i> Reportes por Evaluación</h2>';
+                html += '<h2 style="font-size:18px; font-weight:800; margin-bottom:16px; color:var(--text);"><i class="fas fa-layer-group" style="margin-right:8px; color:var(--text-mid);"></i> Reportes por Evaluación</h2>';
             }
             for (var j = 0; j < evRes.data.length; j++) {
                 var ev = evRes.data[j];
@@ -4960,7 +4960,7 @@ function loadStudentResults() {
 
                         var clickHandler = 'onclick="openReportDetail(\'' + item.evaluacion_id + '\', \'' + currentUser.id + '\')"';
                         var hoverCursor = 'cursor:pointer;';
-                        var typeTag = '<span style="font-size:10px;background:#EEF2F6;color:#475569;padding:2px 6px;border-radius:4px;font-weight:700;margin-left:6px;">LIVECARD</span>';
+                        var typeTag = '<span style="font-size:10px;background:var(--tag-livecard-bg,#EEF2F6);color:var(--tag-livecard-text,#475569);padding:2px 6px;border-radius:4px;font-weight:700;margin-left:6px;">LIVECARD</span>';
 
                         html += '<div ' + clickHandler + ' style="' + hoverCursor + 'background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:16px;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.02)"' + 
                             ' onmouseover="this.style.boxShadow=\'0 6px 20px rgba(0,0,0,0.08)\'; this.style.transform=\'translateY(-2px)\'"' +
