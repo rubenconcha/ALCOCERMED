@@ -3380,10 +3380,14 @@ window.switchIntocTab = function (tab) {
 async function loadMapasMentales() {
     setMmState('loading');
     try {
-        var client = getSupabase();
-        var res = await client.from('mapas_mentales').select('*').order('MATERIA', { ascending: true });
-        if (res.error) throw res.error;
-        mmState.allMapas = res.data || [];
+        var localMapas = [
+            { titulo: 'Citoesqueleto', materia: 'Biología Celular', url_imagen: 'mapas mentales/citoesqueleto.png', descripcion: 'Estructura y función del citoesqueleto: microtúbulos, microfilamentos y filamentos intermedios.', fecha: new Date().toISOString() },
+            { titulo: 'La Célula', materia: 'Biología Celular', url_imagen: 'mapas mentales/lacelula.png', descripcion: 'Visión general de la célula: tipos, organelos y funciones fundamentales.', fecha: new Date().toISOString() },
+            { titulo: 'Membrana Plasmática', materia: 'Biología Celular', url_imagen: 'mapas mentales/membranaplasmatica.png', descripcion: 'Composición y funciones de la membrana celular: bicapa lipídica, proteínas y transporte.', fecha: new Date().toISOString() },
+            { titulo: 'Núcleo Celular', materia: 'Biología Celular', url_imagen: 'mapas mentales/nucleocelular.png', descripcion: 'Estructura nuclear: envoltura nuclear, cromatina, nucléolo y funciones del núcleo.', fecha: new Date().toISOString() },
+            { titulo: 'Organelos Celulares', materia: 'Biología Celular', url_imagen: 'mapas mentales/organeloscelulares.png', descripcion: 'Principales organelos: retículo endoplásmico, aparato de Golgi, mitocondrias, lisosomas y más.', fecha: new Date().toISOString() }
+        ];
+        mmState.allMapas = localMapas;
         populateMmMaterias();
         updateIntocStats();
         filterMapas();
