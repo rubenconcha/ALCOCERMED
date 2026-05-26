@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=51">
+  <link rel="stylesheet" href="styles.css?v=52">
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
@@ -617,9 +617,9 @@
       </div>
 
       <!-- Resultado final -->
-      <div id="quiz-result" style="display:none;text-align:center;max-width:600px;margin:0 auto;padding-top:24px;">
-        <div style="position:sticky; top:20px; z-index:100; margin-bottom: 32px;">
-          <button onclick="exitQuizToHome()" style="background:rgba(233,30,99,0.9); border:2px solid #E91E63; color:#fff; padding:14px 28px; border-radius:16px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:8px; font-size:1.1rem; box-shadow:0 8px 24px rgba(233,30,99,0.4); backdrop-filter:blur(4px);">
+      <div id="quiz-result" class="quiz-result-arena" style="display:none;text-align:center;max-width:600px;margin:0 auto;padding-top:24px;">
+        <div class="result-home-float" style="position:sticky; top:20px; z-index:100; margin-bottom: 32px;">
+          <button onclick="exitQuizToHome()" class="result-home-btn" style="background:rgba(233,30,99,0.9); border:2px solid #E91E63; color:#fff; padding:14px 28px; border-radius:16px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:8px; font-size:1.1rem; box-shadow:0 8px 24px rgba(233,30,99,0.4); backdrop-filter:blur(4px);">
             <i class="fas fa-home"></i> Volver al Menú Principal
           </button>
         </div>
@@ -627,38 +627,68 @@
         <h2 id="quiz-result-title" style="font-size:1.8rem;font-weight:900;margin-bottom:8px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,0.4)">¡Evaluación completada!</h2>
         <p id="quiz-result-score" style="font-size:1.2rem;color:rgba(255,255,255,0.9);margin-bottom:4px;font-weight:700"></p>
         <p id="quiz-result-detail" style="font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:20px"></p>
-        <div style="background:#E2E8F0;border-radius:20px;height:12px;margin-bottom:16px;overflow:hidden">
+        <div class="quiz-result-progress" style="background:#E2E8F0;border-radius:20px;height:12px;margin-bottom:16px;overflow:hidden">
           <div id="quiz-result-fill" style="height:100%;border-radius:20px;transition:width 1s"></div>
         </div>
-        <p style="color:rgba(255,255,255,0.5);font-size:0.75rem;margin-bottom:8px"><i class="fas fa-chevron-down" style="animation:bounce 1.5s infinite"></i> Desliza para ver tus respuestas</p>
+        <p class="quiz-result-scroll-hint" style="color:rgba(255,255,255,0.5);font-size:0.75rem;margin-bottom:8px"><i class="fas fa-chevron-down" style="animation:bounce 1.5s infinite"></i> Desliza para ver tus respuestas</p>
         <!-- Per-question breakdown -->
         <div id="quiz-result-breakdown" style="text-align:left;margin-bottom:24px"></div>
 
         <!-- ═══ PODIO EN VIVO ═══ -->
         <div id="quiz-podium" style="display:none; text-align:left;">
-          <!-- 1. Stadium Podium (Top 3) -->
-          <div class="stadium-podium-container">
-            <div class="stadium-bg-lines"></div>
-            <div class="stadium-light-beam"></div>
-            
-            <!-- Premium Laurel Header (Middle Image Style) -->
-            <div class="podium-custom-header">
-              <div class="laurel-wreath-left">🌿</div>
-              <div class="podium-title-box">
-                <div class="gold-trophy-top">🏆</div>
-                <h2>Podio de <span class="highlight-yellow">Ganadores</span></h2>
-              </div>
-              <div class="laurel-wreath-right">🌿</div>
+          <div class="quiz-podium-arena">
+            <div class="quiz-podium-head">
+              <span class="quiz-podium-chip"><i class="fas fa-bolt"></i> Ranking de hoy</span>
+              <h2><i class="fas fa-trophy"></i> Podio de Ganadores</h2>
+              <p id="quiz-podium-date-label">Solo resultados del día actual</p>
             </div>
 
-            <!-- Podio visual (Top 3) -->
-            <div id="podium-pillars" class="podium-pillars-wrapper"></div>
+            <div class="rp-bg-wrap quiz-rp-bg-wrap" id="quiz-podium-showcase">
+              <div class="rp-ov rp-ov-circle-1 rp-showcase-1">
+                <div class="rp-ov-crown rp-ov-crown-gold"><i class="fas fa-crown"></i></div>
+                <div class="rp-ov-avatar showcase-avatar"></div>
+              </div>
+
+              <div class="rp-ov rp-ov-circle-2 rp-showcase-2">
+                <div class="rp-ov-crown rp-ov-crown-silver"><i class="fas fa-crown"></i></div>
+                <div class="rp-ov-avatar showcase-avatar"></div>
+              </div>
+
+              <div class="rp-ov rp-ov-circle-3 rp-showcase-3">
+                <div class="rp-ov-crown rp-ov-crown-bronze"><i class="fas fa-crown"></i></div>
+                <div class="rp-ov-avatar showcase-avatar"></div>
+              </div>
+
+              <div class="rp-ov rp-ov-info-1">
+                <div class="rp-ov-name showcase-name">—</div>
+                <div class="rp-ov-score">
+                  <span class="showcase-pts rp-ov-pts-gold">0 pts</span>
+                  <span class="showcase-pct rp-ov-pct-gold">0%</span>
+                </div>
+              </div>
+
+              <div class="rp-ov rp-ov-info-2">
+                <div class="rp-ov-name showcase-name">—</div>
+                <div class="rp-ov-score">
+                  <span class="showcase-pts rp-ov-pts">0 pts</span>
+                  <span class="showcase-pct rp-ov-pct-silver">0%</span>
+                </div>
+              </div>
+
+              <div class="rp-ov rp-ov-info-3">
+                <div class="rp-ov-name showcase-name">—</div>
+                <div class="rp-ov-score">
+                  <span class="showcase-pts rp-ov-pts">0 pts</span>
+                  <span class="showcase-pct rp-ov-pct-bronze">0%</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- 2. Total Ranking (List) -->
-          <div style="max-width:800px;margin:0 auto;">
+          <div class="quiz-daily-ranking-list" style="max-width:800px;margin:0 auto;">
             <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:16px;color:#fff;text-shadow: 0 1px 3px rgba(0,0,0,0.5);">
-              <i class="fas fa-list-ol"></i> Ranking Total
+              <i class="fas fa-list-ol"></i> Más estudiantes de hoy
             </h3>
             
             <!-- Tu posición -->
@@ -727,7 +757,7 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=44"></script>
+<script src="app.js?v=45"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->

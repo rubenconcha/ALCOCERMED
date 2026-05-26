@@ -65,6 +65,8 @@ var avatarTintPending = {};
 var avatarRenderObserver = null;
 var avatarHydrateTimer = null;
 var missingAvatarProfileTables = {};
+var avatarRealtimeChannel = null;
+var avatarRealtimeRefreshTimer = null;
 
 function avatarIndexFromSeed(seed, pool) {
     pool = pool || avatarFallbackPool;
@@ -386,6 +388,77 @@ function refreshCurrentAvatarUI() {
     setAvatarContent(topbarAvatar, currentAvatar, 'Avatar de usuario', 'topbar-avatar-media');
 }
 
+function refreshVisibleAvatarSurfaces() {
+    refreshCurrentAvatarUI();
+    if (currentPage === 'jugar') loadTopEstudiantes();
+    if (currentPage === 'ranking') loadRankingGeneral();
+    if (currentPage === 'quiz' && quizData && quizData.evaluacion && quizData.evaluacion.id) {
+        if (quizSessionMode === 'equipo') loadTeamLeaderboard(quizData.evaluacion.id);
+        else loadLeaderboard(quizData.evaluacion.id);
+    }
+}
+
+function scheduleAvatarRealtimeRefresh() {
+    clearTimeout(avatarRealtimeRefreshTimer);
+    avatarRealtimeRefreshTimer = setTimeout(refreshVisibleAvatarSurfaces, 350);
+}
+
+function setupAvatarRealtime() {
+    var client = getSupabase();
+    if (!client || !currentUser || typeof client.channel !== 'function') return;
+
+    if (avatarRealtimeChannel) {
+        try { client.removeChannel(avatarRealtimeChannel); } catch (e) {}
+        avatarRealtimeChannel = null;
+    }
+
+    avatarRealtimeChannel = client.channel('alcocermed-avatar-live')
+        .on('broadcast', { event: 'avatar-updated' }, function(payload) {
+            var data = payload && payload.payload ? payload.payload : {};
+            if (!data.user_id || data.user_id === currentUser.id) return;
+            scheduleAvatarRealtimeRefresh();
+        })
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'evaluacion_participantes' }, function(payload) {
+            var row = (payload && (payload.new || payload.old)) || {};
+            if (row.user_id && row.user_id !== currentUser.id) scheduleAvatarRealtimeRefresh();
+        })
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'user_profiles' }, function(payload) {
+            var row = (payload && (payload.new || payload.old)) || {};
+            if (row.user_id && row.user_id !== currentUser.id) scheduleAvatarRealtimeRefresh();
+        })
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'profiles' }, function(payload) {
+            var row = (payload && (payload.new || payload.old)) || {};
+            if (row.id && row.id !== currentUser.id) scheduleAvatarRealtimeRefresh();
+        })
+        .subscribe();
+}
+
+function teardownAvatarRealtime() {
+    var client = getSupabase();
+    clearTimeout(avatarRealtimeRefreshTimer);
+    avatarRealtimeRefreshTimer = null;
+    if (client && avatarRealtimeChannel) {
+        try { client.removeChannel(avatarRealtimeChannel); } catch (e) {}
+    }
+    avatarRealtimeChannel = null;
+}
+
+function broadcastAvatarUpdate() {
+    if (!avatarRealtimeChannel || !currentUser || typeof avatarRealtimeChannel.send !== 'function') return;
+    avatarRealtimeChannel.send({
+        type: 'broadcast',
+        event: 'avatar-updated',
+        payload: {
+            user_id: currentUser.id,
+            avatar: currentAvatar,
+            full_name: getCurrentUserDisplayName(),
+            updated_at: new Date().toISOString()
+        }
+    }).catch(function(e) {
+        console.warn('No se pudo emitir cambio de avatar en vivo:', e && e.message ? e.message : e);
+    });
+}
+
 function getCurrentUserDisplayName() {
     if (!currentUser) return 'Estudiante';
     return currentUser.user_metadata && currentUser.user_metadata.full_name
@@ -529,14 +602,15 @@ function loadCloudAvatarProfiles(client, userIds, nameMap, done) {
 }
 
 function syncAvatarProfileTables() {
-    if (!currentUser) return;
+    if (!currentUser) return Promise.resolve();
     var client = getSupabase();
-    if (!client) return;
+    if (!client) return Promise.resolve();
     var name = getCurrentUserDisplayName();
     var now = new Date().toISOString();
+    var writes = [];
 
     if (!missingAvatarProfileTables.user_profiles) {
-        client.from('user_profiles').upsert({
+        writes.push(client.from('user_profiles').upsert({
             user_id: currentUser.id,
             email: currentUser.email,
             full_name: name,
@@ -547,11 +621,11 @@ function syncAvatarProfileTables() {
                 if (isMissingSupabaseObjectError(res.error)) missingAvatarProfileTables.user_profiles = true;
                 else console.warn('No se pudo guardar avatar en user_profiles:', res.error.message);
             }
-        });
+        }));
     }
 
     if (!missingAvatarProfileTables.profiles) {
-        client.from('profiles').upsert({
+        writes.push(client.from('profiles').upsert({
             id: currentUser.id,
             email: currentUser.email,
             full_name: name,
@@ -562,21 +636,37 @@ function syncAvatarProfileTables() {
                 if (isMissingSupabaseObjectError(res.error)) missingAvatarProfileTables.profiles = true;
                 else console.warn('No se pudo guardar avatar en profiles:', res.error.message);
             }
-        });
+        }));
     }
+
+    return Promise.all(writes);
 }
 
 function syncParticipantAvatarRows() {
-    if (!currentUser) return;
+    if (!currentUser) return Promise.resolve();
     var client = getSupabase();
-    if (!client) return;
+    if (!client) return Promise.resolve();
     var nombreConAvatar = currentAvatar + '|' + getCurrentUserDisplayName();
-    client.from('evaluacion_participantes')
+    return client.from('evaluacion_participantes')
         .update({ nombre: nombreConAvatar })
         .eq('user_id', currentUser.id)
         .then(function(res) {
             if (res && res.error) console.warn('No se pudo sincronizar avatar en participantes:', res.error.message);
         });
+}
+
+function applySavedAvatarImmediately() {
+    refreshVisibleAvatarSurfaces();
+    Promise.all([
+        syncParticipantAvatarRows(),
+        syncAvatarProfileTables()
+    ]).then(function() {
+        broadcastAvatarUpdate();
+        setTimeout(broadcastAvatarUpdate, 900);
+    }).catch(function() {
+        broadcastAvatarUpdate();
+        setTimeout(broadcastAvatarUpdate, 900);
+    });
 }
 
 function initAvatars() {
@@ -725,8 +815,7 @@ window.saveAvatarSelection = function() {
         var client = getSupabase();
         var newMetadata = Object.assign({}, currentUser.user_metadata || {}, { avatar: currentAvatar });
         currentUser.user_metadata = newMetadata;
-        syncParticipantAvatarRows();
-        syncAvatarProfileTables();
+        applySavedAvatarImmediately();
         if (client) {
             client.auth.updateUser({ data: { avatar: currentAvatar } }).then(function(result) {
                 if (result && result.data && result.data.user) currentUser = result.data.user;
@@ -871,6 +960,7 @@ function initAuth() {
             currentUser = session.user;
             enterApp();
         } else if (event === 'SIGNED_OUT') {
+            teardownAvatarRealtime();
             currentUser = null;
             isAdmin = false;
             showLogin();
@@ -958,6 +1048,7 @@ function enterApp() {
     }
     
     initAvatars();
+    setupAvatarRealtime();
 
     var adminNav = document.getElementById('admin-nav-section');
     if (adminNav) {
@@ -1971,6 +2062,9 @@ function loadTopEstudiantes() {
             for (var x = 0; x < sorted.length; x++) {
                 var item = sorted[x];
                 var info = nameMap[item.user_id] || { nombre: 'Estudiante', avatar: normalizeAvatarValue('', 'Estudiante ' + x) };
+                if (currentUser && item.user_id === currentUser.id) {
+                    info = { nombre: getCurrentUserDisplayName(), avatar: currentAvatar };
+                }
                 decorated.push({
                     user_id: item.user_id,
                     nombre: info.nombre,
@@ -2063,6 +2157,9 @@ function loadRankingGeneral() {
             for (var x = 0; x < sorted.length; x++) {
                 var item = sorted[x];
                 var info = nameMap[item.user_id] || { nombre: 'Estudiante', avatar: normalizeAvatarValue('', 'Estudiante ' + x) };
+                if (currentUser && item.user_id === currentUser.id) {
+                    info = { nombre: getCurrentUserDisplayName(), avatar: currentAvatar };
+                }
                 decorated.push({
                     user_id: item.user_id,
                     nombre: info.nombre,
@@ -2130,6 +2227,18 @@ function updateRankingPodium(entries) {
 
 function updateJugarPodium(entries) {
     updateBgPodium('#jugar-podium-showcase', entries);
+}
+
+function getLocalTodayRange() {
+    var start = new Date();
+    start.setHours(0, 0, 0, 0);
+    var end = new Date(start);
+    end.setDate(end.getDate() + 1);
+    return {
+        start: start.toISOString(),
+        end: end.toISOString(),
+        label: start.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })
+    };
 }
 
 function updateBgPodium(rootSelector, entries) {
@@ -3826,7 +3935,8 @@ function showQuizResults() {
             puntaje: totalPoints,
             total: total,
             porcentaje: pct,
-            respuestas: quizAnswers
+            respuestas: quizAnswers,
+            created_at: new Date().toISOString()
         }).then(function(r) {
             if (r.error) {
                 console.warn('Insert resultado:', r.error.message);
@@ -3838,7 +3948,8 @@ function showQuizResults() {
                     puntaje: totalPoints,
                     total: total,
                     porcentaje: pct,
-                    respuestas: quizAnswers
+                    respuestas: quizAnswers,
+                    created_at: new Date().toISOString()
                 }).eq('evaluacion_id', evalIdForBoard).eq('user_id', currentUser.id).then(function() {
                     if (!isTestMode) {
                         if (isTeamMode) loadTeamLeaderboard(evalIdForBoard);
@@ -3933,6 +4044,9 @@ function loadLeaderboard(evalId) {
             var entries = [];
             for (var k = 0; k < results.length; k++) {
                 var mapData = nameMap[results[k].user_id] || { nombre: 'Estudiante', avatar: normalizeAvatarValue('', 'Estudiante ' + k) };
+                if (currentUser && results[k].user_id === currentUser.id) {
+                    mapData = { nombre: getCurrentUserDisplayName(), avatar: currentAvatar };
+                }
                 entries.push({
                     user_id: results[k].user_id,
                     nombre: mapData.nombre,
@@ -4111,6 +4225,10 @@ function loadTeamLeaderboard(evalId) {
         var teams = {};
         for (var r = 0; r < resData.length; r++) {
             var info = partMap[resData[r].user_id] || { nombre: 'Estudiante', avatar: normalizeAvatarValue('', 'Estudiante ' + r), equipo: 'Sin equipo' };
+            if (currentUser && resData[r].user_id === currentUser.id) {
+                info.nombre = getCurrentUserDisplayName();
+                info.avatar = currentAvatar;
+            }
             var tName = info.equipo;
             if (!teams[tName]) teams[tName] = { members: [], totalPts: 0, totalPct: 0 };
             teams[tName].members.push({ nombre: info.nombre, avatar: info.avatar, puntaje: resData[r].puntaje, porcentaje: resData[r].porcentaje });

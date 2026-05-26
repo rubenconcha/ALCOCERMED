@@ -5132,6 +5132,53 @@ body.quiz-focus-mode #quiz-container {
     0 0 0 1px rgba(255,255,255,.07);
 }
 
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-1 {
+  top: 13.2% !important;
+  width: 31.5% !important;
+}
+
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-2 {
+  left: 5.2% !important;
+  top: 34.2% !important;
+  width: 25.5% !important;
+}
+
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-3 {
+  right: 5.4% !important;
+  top: 39.6% !important;
+  width: 24.5% !important;
+}
+
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-info-1 {
+  top: 70.8% !important;
+  width: 36% !important;
+}
+
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-info-2 {
+  left: 5.2% !important;
+  top: 74.2% !important;
+  width: 32% !important;
+}
+
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-info-3 {
+  right: 5.2% !important;
+  top: 76.5% !important;
+  width: 32% !important;
+}
+
+@media (max-width: 600px) {
+  .games-app-theme #page-jugar .game-app-hero {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .games-app-theme #page-jugar .game-podium-bg-showcase {
+    width: calc(100% + 8px);
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+}
+
 .games-app-theme .topbar-avatar,
 .games-app-theme .game-rank-avatar,
 .games-app-theme .showcase-avatar,
