@@ -890,9 +890,6 @@ function getAudioCtx() {
         var AC = window.AudioContext || window.webkitAudioContext;
         globalAudioCtx = new AC();
     }
-    if (globalAudioCtx.state === 'suspended') {
-        globalAudioCtx.resume();
-    }
     return globalAudioCtx;
 }
 
@@ -903,10 +900,24 @@ function preloadAudio(name, url) {
               .catch(function(e) { console.warn('Error audio:', name, e); });
 }
 
+/** Desbloquea Web Audio y precarga SFX (correcto / incorrecto / apuro). */
+function unlockQuizAudio(done) {
+    try {
+        var ctx = getAudioCtx();
+        if (!preloadedAudio['error']) preloadAudio('error', './error_sound.mp3');
+        if (!preloadedAudio['hurry']) preloadAudio('hurry', './hurry_up.mp3');
+        if (ctx.state === 'suspended') {
+            ctx.resume().then(function() { if (done) done(); }).catch(function() { if (done) done(); });
+        } else if (done) {
+            done();
+        }
+    } catch (e) {
+        if (done) done();
+    }
+}
+
 document.addEventListener('click', function() {
-    getAudioCtx();
-    if (!preloadedAudio['error']) preloadAudio('error', './error_sound.mp3');
-    if (!preloadedAudio['hurry']) preloadAudio('hurry', './hurry_up.mp3');
+    unlockQuizAudio();
 }, { once: true });
 
 window.showCustomConfirm = function(msg, callback) {
@@ -3004,7 +3015,7 @@ function startSelfStudy(evalId) {
             applyTestModeUI();
             document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
             document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
-            showSplashAndStart();
+            unlockQuizAudio(function() { showSplashAndStart(); });
         });
     });
 }
@@ -3067,8 +3078,10 @@ function restoreSelfStudy(evalId, code) {
                     showQuizResults();
                 } else {
                     document.getElementById('quiz-container').style.display = 'block';
-                    if (quizSessionMode === 'practica') startGameMusic();
-                    renderQuizQuestion();
+                    unlockQuizAudio(function() {
+                        if (quizSessionMode === 'practica') startGameMusic();
+                        renderQuizQuestion();
+                    });
                 }
             } else {
                 showSplashAndStart();
@@ -3326,6 +3339,7 @@ var gameMusic = null;
 // ═══ GAME MUSIC — Background Audio Element ═══
 function startGameMusic() {
     try {
+        unlockQuizAudio();
         var audioEl = document.getElementById('quiz-bg-music');
         if (audioEl) {
             audioEl.volume = 0.3; // Volumen moderado para no tapar efectos
@@ -3387,8 +3401,11 @@ function showWaitingRoom() {
 
 // ═══ MODO TEST — Ajustes de interfaz para examen a ritmo propio ═══
 function applyTestModeUI() {
-    stopGameMusic();
-    
+    // Solo el examen formal silencia la música; la práctica/demo la mantiene
+    if (quizSessionMode === 'test') {
+        stopGameMusic();
+    }
+
     // Ocultar HUD competitivo solo en modo test real (examen), no en práctica
     if (quizSessionMode === 'test') {
         var scoreHud = document.getElementById('quiz-current-score');
@@ -3397,9 +3414,9 @@ function applyTestModeUI() {
         if (streakHud && streakHud.parentElement) streakHud.parentElement.style.display = 'none';
     }
     
-    // Agregar badge de modo test en la barra superior
+    // Badge de examen solo en modo test (no en práctica / demo autodidacta)
     var topBar = document.querySelector('#quiz-container > div:first-child');
-    if (topBar && !document.getElementById('test-mode-student-badge')) {
+    if (quizSessionMode === 'test' && topBar && !document.getElementById('test-mode-student-badge')) {
         var badge = document.createElement('div');
         badge.id = 'test-mode-student-badge';
         badge.style.cssText = 'display:flex;align-items:center;gap:6px;background:rgba(37,99,235,0.25);border:1px solid rgba(37,99,235,0.4);padding:6px 12px;border-radius:8px;';
@@ -3506,49 +3523,63 @@ function playBeep(freq, type, duration) {
     } catch(e) {}
 }
 
-function playSuccessSound() {
+function duckBgMusicForSfx() {
     try {
-        var ctx = new (window.AudioContext || window.webkitAudioContext)();
-        var o = ctx.createOscillator();
-        var g = ctx.createGain();
-        
-        // Sonido de moneda clásico (Mario Bros)
-        o.type = 'square';
-        
-        // Primera nota: Si 5 (B5) ~ 987.77 Hz
-        o.frequency.setValueAtTime(987.77, ctx.currentTime);
-        // Segunda nota: Mi 6 (E6) ~ 1318.51 Hz
-        o.frequency.setValueAtTime(1318.51, ctx.currentTime + 0.08);
-        
-        // Control de volumen (Envolvente)
-        g.gain.setValueAtTime(0, ctx.currentTime);
-        g.gain.linearRampToValueAtTime(0.15, ctx.currentTime + 0.01);
-        g.gain.setValueAtTime(0.15, ctx.currentTime + 0.08);
-        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
-        
-        o.connect(g);
-        g.connect(ctx.destination);
-        o.start();
-        o.stop(ctx.currentTime + 0.55);
-    } catch(e) {}
+        var audioEl = document.getElementById('quiz-bg-music');
+        if (audioEl && !audioEl.paused) {
+            var prev = audioEl.volume;
+            audioEl.volume = Math.min(prev, 0.12);
+            setTimeout(function() { audioEl.volume = prev; }, 700);
+        }
+    } catch (e) {}
+}
+
+function playSuccessSound() {
+    duckBgMusicForSfx();
+    unlockQuizAudio(function() {
+        try {
+            var ctx = getAudioCtx();
+            var o = ctx.createOscillator();
+            var g = ctx.createGain();
+
+            // Sonido de moneda clásico (Mario Bros)
+            o.type = 'square';
+            o.frequency.setValueAtTime(987.77, ctx.currentTime);
+            o.frequency.setValueAtTime(1318.51, ctx.currentTime + 0.08);
+
+            g.gain.setValueAtTime(0, ctx.currentTime);
+            g.gain.linearRampToValueAtTime(0.15, ctx.currentTime + 0.01);
+            g.gain.setValueAtTime(0.15, ctx.currentTime + 0.08);
+            g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+
+            o.connect(g);
+            g.connect(ctx.destination);
+            o.start();
+            o.stop(ctx.currentTime + 0.55);
+        } catch (e) {}
+    });
 }
 
 function playErrorSound() {
-    try {
-        var ctx = getAudioCtx();
-        if (preloadedAudio['error']) {
-            var src = ctx.createBufferSource();
-            src.buffer = preloadedAudio['error'];
-            var g = ctx.createGain();
-            g.gain.value = 0.5;
-            src.connect(g); g.connect(ctx.destination);
-            src.start(0);
-        } else {
-            var audio = new Audio('./error_sound.mp3');
-            audio.volume = 0.5;
-            audio.play().catch(function(e) { console.warn('Audio play failed', e); });
-        }
-    } catch(e) {}
+    duckBgMusicForSfx();
+    unlockQuizAudio(function() {
+        try {
+            var ctx = getAudioCtx();
+            if (preloadedAudio['error']) {
+                var src = ctx.createBufferSource();
+                src.buffer = preloadedAudio['error'];
+                var g = ctx.createGain();
+                g.gain.value = 0.5;
+                src.connect(g);
+                g.connect(ctx.destination);
+                src.start(0);
+            } else {
+                var audio = new Audio('./error_sound.mp3');
+                audio.volume = 0.5;
+                audio.play().catch(function(e) { console.warn('Audio play failed', e); });
+            }
+        } catch (e) {}
+    });
 }
 
 function showFeedbackAnimation(isCorrect, ptsEarned, timedOut) {
@@ -3629,52 +3660,53 @@ function showSplashAndStart() {
         splashInterval = null;
     }
 
-    // Asegurar que la sala de espera se oculte (música sigue)
-    var wt = document.getElementById('quiz-waiting');
-    if (wt) wt.style.display = 'none';
+    unlockQuizAudio(function() {
+        // Asegurar que la sala de espera se oculte (música sigue)
+        var wt = document.getElementById('quiz-waiting');
+        if (wt) wt.style.display = 'none';
 
-    // Iniciar música si no estaba sonando (excepto en modo test — ambiente de examen)
-    if (quizSessionMode !== 'test' && quizSessionMode !== 'practica') {
-        startGameMusic();
-    }
+        // Iniciar música si no estaba sonando (excepto en modo test — ambiente de examen)
+        if (quizSessionMode !== 'test' && quizSessionMode !== 'practica') {
+            startGameMusic();
+        }
 
-    var splash = document.getElementById('quiz-splash');
-    var splashText = document.getElementById('splash-text');
-    
-    if (splash && splashText) {
-        splash.style.display = 'flex';
-        
-        // Reset animación forzando reflow
-        splashText.style.animation = 'none';
-        splashText.offsetHeight; 
-        splashText.style.animation = 'splashPulse 1s ease-in-out infinite';
+        var splash = document.getElementById('quiz-splash');
+        var splashText = document.getElementById('splash-text');
 
-        var count = 3;
-        splashText.textContent = count;
-        playBeep(440, 'sine', 0.5);
-        
-        splashInterval = setInterval(function() {
-            count--;
-            if (count > 0) {
-                splashText.textContent = count;
-                playBeep(440, 'sine', 0.5);
-            } else if (count === 0) {
-                splashText.textContent = '¡ADELANTE!';
-                playBeep(880, 'square', 0.8);
-            } else {
-                clearInterval(splashInterval);
-                splashInterval = null;
-                splash.style.display = 'none';
-                document.getElementById('quiz-container').style.display = 'block';
-                if (quizSessionMode === 'practica') startGameMusic();
-                renderQuizQuestion();
-            }
-        }, 1000);
-    } else {
-        document.getElementById('quiz-container').style.display = 'block';
-        if (quizSessionMode === 'practica') startGameMusic();
-        renderQuizQuestion();
-    }
+        if (splash && splashText) {
+            splash.style.display = 'flex';
+
+            splashText.style.animation = 'none';
+            splashText.offsetHeight;
+            splashText.style.animation = 'splashPulse 1s ease-in-out infinite';
+
+            var count = 3;
+            splashText.textContent = count;
+            playBeep(440, 'sine', 0.5);
+
+            splashInterval = setInterval(function() {
+                count--;
+                if (count > 0) {
+                    splashText.textContent = count;
+                    playBeep(440, 'sine', 0.5);
+                } else if (count === 0) {
+                    splashText.textContent = '¡ADELANTE!';
+                    playBeep(880, 'square', 0.8);
+                } else {
+                    clearInterval(splashInterval);
+                    splashInterval = null;
+                    splash.style.display = 'none';
+                    document.getElementById('quiz-container').style.display = 'block';
+                    if (quizSessionMode === 'practica') startGameMusic();
+                    renderQuizQuestion();
+                }
+            }, 1000);
+        } else {
+            document.getElementById('quiz-container').style.display = 'block';
+            if (quizSessionMode === 'practica') startGameMusic();
+            renderQuizQuestion();
+        }
+    });
 }
 
 function startQuestionTimer(seconds) {
