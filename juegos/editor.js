@@ -565,8 +565,9 @@ function renderAnswerOptions(){
       
       // Map container
       html += '  <div class="dnd-map-wrapper">';
-      html += '    <div id="dnd-map-container" class="dnd-map-container' + (isLocatingAny ? ' dnd-map-active' : '') + '" onclick="handleDndImageClick(event)">';
-      html += '      <img src="' + imageVal + '" class="dnd-map-img" id="dnd-preview-img">';
+      html += '    <div id="dnd-map-container" class="dnd-map-container' + (isLocatingAny ? ' dnd-map-active' : '') + '">';
+      html += '      <div class="dnd-image-stage" onclick="handleDndImageClick(event)">';
+      html += '        <img src="' + imageVal + '" class="dnd-map-img" id="dnd-preview-img">';
       
       // Render placed pins
       for(var i=0; i<q.options.length; i++){
@@ -576,9 +577,9 @@ function renderAnswerOptions(){
             'ac-blue': '#2563EB', 'ac-teal': '#0D9488', 'ac-yellow': '#D97706', 'ac-pink': '#DC2626', 'ac-purple': '#7C3AED', 'ac-green': '#059669'
           };
           var pinColor = pinColors[o.color] || '#E91E63';
-          html += '      <div class="dnd-pin-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%; background:' + pinColor + ';"></div>';
-          html += '      <div class="dnd-pin-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%; background:linear-gradient(90deg,' + pinColor + ',rgba(255,255,255,0.12));"></div>';
-          html += '      <div class="dnd-pin" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%; background:' + pinColor + ';">';
+          html += '        <div class="dnd-pin-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%; background:' + pinColor + ';"></div>';
+          html += '        <div class="dnd-pin-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%; background:linear-gradient(90deg,' + pinColor + ',rgba(255,255,255,0.12));"></div>';
+          html += '        <div class="dnd-pin" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + '; left:' + o.pinX + '%; top:' + o.pinY + '%; background:' + pinColor + ';">';
           html += '        <span class="dnd-pin-letter">' + String.fromCharCode(65+i) + '</span>';
           html += '        <div class="dnd-pin-pulse" style="border-color:' + pinColor + '"></div>';
           if(o.text) html += '        <div class="dnd-pin-tooltip">' + o.text + '</div>';
@@ -586,6 +587,7 @@ function renderAnswerOptions(){
         }
       }
       
+      html += '      </div>';
       html += '    </div>';
       html += '  </div>';
       
@@ -2511,9 +2513,10 @@ function cancelDndLocate(){
 
 function handleDndImageClick(event){
   if(activeLocatingOption === -1) return;
-  var container = document.getElementById('dnd-map-container');
-  if(!container) return;
-  var rect = container.getBoundingClientRect();
+  var img = document.getElementById('dnd-preview-img');
+  if(!img) return;
+  var rect = img.getBoundingClientRect();
+  if(event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) return;
   var x = ((event.clientX - rect.left) / rect.width) * 100;
   var y = ((event.clientY - rect.top) / rect.height) * 100;
   x = Math.round(x * 100) / 100;
@@ -2526,7 +2529,8 @@ function handleDndImageClick(event){
   // Brief visual feedback
   var ripple = document.createElement('div');
   ripple.style.cssText = 'position:absolute;left:'+x+'%;top:'+y+'%;width:40px;height:40px;border-radius:50%;border:3px solid #22C55E;transform:translate(-50%,-50%) scale(0);animation:dnd-ripple .5s ease-out forwards;z-index:999;pointer-events:none;';
-  container.appendChild(ripple);
+  var stage = img.parentNode;
+  stage.appendChild(ripple);
   setTimeout(function(){ if(ripple.parentNode) ripple.parentNode.removeChild(ripple); }, 600);
   
   activeLocatingOption = -1;
