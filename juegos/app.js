@@ -1817,7 +1817,7 @@ function canAccessEvaluation(ev) {
 }
 
 function showLockedDemoNotice() {
-    showCustomAlert('Contenido bloqueado por ahora.\n\nPara la demostracion del martes solo estan habilitadas las preguntas de prueba (DEMO). Cuando el estudiante compre el acceso, se desbloquearan las demas evaluaciones.');
+    showCustomAlert('Suscribete para tener acceso a todas las evaluaciones.');
 }
 window.showLockedDemoNotice = showLockedDemoNotice;
 
@@ -2259,32 +2259,16 @@ function loadSubjectEvaluations(subject) {
             return;
         }
 
-        // Query question count per evaluacion
-        var evalIds = matching.map(function(e) { return e.id; });
-        client.from('evaluacion_preguntas').select('evaluacion_id').in('evaluacion_id', evalIds).then(function(qRes) {
-            var countMap = {};
-            if (qRes.data) {
-                for (var j = 0; j < qRes.data.length; j++) {
-                    var eid = qRes.data[j].evaluacion_id;
-                    countMap[eid] = (countMap[eid] || 0) + 1;
-                }
-            }
-
+        Promise.resolve().then(function() {
             var html = '';
             for (var i = 0; i < matching.length; i++) {
                 var ev = matching[i];
-                var preguntaCount = countMap[ev.id] || 0;
-                var temaHtml = ev.tema ? ' • ' + ev.tema : '';
-                var fecha = new Date(ev.created_at).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
                 var isDemo = isDemoEvaluation(ev);
                 var isLocked = !canAccessEvaluation(ev);
                 html += '<div class="explorar-eval-card' + (isLocked ? ' explorar-eval-locked' : '') + '" style="border-left:4px solid ' + color + '">';
                 html += '<div style="flex:1;min-width:180px">';
                 html += '<h4 style="font-size:1.05rem;font-weight:800;color:var(--text);margin:0 0 6px">' + (ev.titulo || 'Sin título') + (isDemo ? ' <span style="background:#FEF3C7;color:#92400E;font-size:0.65rem;padding:2px 8px;border-radius:8px;font-weight:700">🎯 DEMO</span>' : '') + '</h4>';
                 html += '<div class="eval-meta" style="display:flex;flex-wrap:wrap;gap:10px;font-size:0.78rem;color:#94A3B8">';
-                html += '<span><i class="fas fa-calendar"></i> ' + fecha + '</span>';
-                if (ev.tema) html += '<span><i class="fas fa-tag"></i> ' + ev.tema + '</span>';
-                html += '<span><i class="fas fa-question-circle"></i> ' + preguntaCount + ' preguntas</span>';
                 if (isLocked) html += '<span class="locked-access-badge"><i class="fas fa-lock"></i> BLOQUEADO</span>';
                 html += '</div></div>';
                 if (isLocked) {
