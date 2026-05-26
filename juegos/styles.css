@@ -4980,20 +4980,46 @@ body.quiz-focus-mode #quiz-container {
 /* Avatar cleanup: transparent figures fitted inside ranking and home circles. */
 .rp-ov-circle-1 {
   left: 50% !important;
-  top: 16% !important;
-  width: 30.5% !important;
+  top: 14.5% !important;
+  width: 33% !important;
+  overflow: visible !important;
+  z-index: 5;
 }
 
 .rp-ov-circle-2 {
-  left: 12% !important;
-  top: 34% !important;
-  width: 25.5% !important;
+  left: 9.5% !important;
+  top: 32.8% !important;
+  width: 28% !important;
+  overflow: visible !important;
+  z-index: 4;
 }
 
 .rp-ov-circle-3 {
-  right: 12% !important;
-  top: 40% !important;
-  width: 24% !important;
+  right: 9.5% !important;
+  top: 38.4% !important;
+  width: 26.5% !important;
+  overflow: visible !important;
+  z-index: 4;
+}
+
+.rp-ov-info-1 {
+  top: 70.8% !important;
+  width: 35% !important;
+  z-index: 8;
+}
+
+.rp-ov-info-2 {
+  left: 6.2% !important;
+  top: 73.9% !important;
+  width: 33.5% !important;
+  z-index: 8;
+}
+
+.rp-ov-info-3 {
+  right: 6.2% !important;
+  top: 76.2% !important;
+  width: 33.5% !important;
+  z-index: 8;
 }
 
 .rp-bg-wrap .rp-ov-avatar,
@@ -5002,6 +5028,9 @@ body.quiz-focus-mode #quiz-container {
   border: 0 !important;
   box-shadow: none !important;
   padding: 0 !important;
+  overflow: hidden !important;
+  position: relative;
+  z-index: 2;
 }
 
 .rp-ov-circle-1 .rp-ov-avatar::after,
@@ -5022,9 +5051,86 @@ body.quiz-focus-mode #quiz-container {
   overflow: visible !important;
 }
 
-.rp-ov-circle-1 .avatar-render-base { transform: scale(1.26); }
+.rp-ov-circle-1 .avatar-render-base { transform: scale(1.42); }
 .rp-ov-circle-2 .avatar-render-base,
-.rp-ov-circle-3 .avatar-render-base { transform: scale(1.22); }
+.rp-ov-circle-3 .avatar-render-base { transform: scale(1.36); }
+
+.rp-ov-crown {
+  position: absolute;
+  left: 50%;
+  top: -14%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(22px, 6.6vw, 40px);
+  height: clamp(20px, 6vw, 36px);
+  border-radius: 999px;
+  filter: drop-shadow(0 5px 8px rgba(0,0,0,.55));
+  pointer-events: none;
+}
+
+.rp-ov-circle-1 .rp-ov-crown {
+  top: -12%;
+  font-size: clamp(1.2rem, 4.8vw, 2.2rem);
+}
+
+.rp-ov-circle-2 .rp-ov-crown,
+.rp-ov-circle-3 .rp-ov-crown {
+  top: -16%;
+  font-size: clamp(.95rem, 3.8vw, 1.55rem);
+}
+
+.rp-ov-crown-gold {
+  color: #ffd84a;
+  text-shadow: 0 0 12px rgba(255,216,74,.85), 0 2px 0 rgba(120,53,15,.8);
+}
+
+.rp-ov-crown-silver {
+  color: #f8fafc;
+  text-shadow: 0 0 10px rgba(226,232,240,.85), 0 2px 0 rgba(51,65,85,.8);
+}
+
+.rp-ov-crown-bronze {
+  color: #fb923c;
+  text-shadow: 0 0 10px rgba(251,146,60,.85), 0 2px 0 rgba(124,45,18,.8);
+}
+
+.rp-bg-wrap .rp-ov-name {
+  display: block !important;
+  width: 100%;
+  max-width: 100%;
+  min-height: 1.8em;
+  padding: .34em .62em;
+  border-radius: 999px;
+  background: rgba(5,10,28,.74);
+  border: 1px solid rgba(255,255,255,.16);
+  color: #fff !important;
+  font-size: clamp(.58rem, 2.35vw, .84rem);
+  line-height: 1.08;
+  box-shadow: 0 7px 14px rgba(0,0,0,.35);
+}
+
+.rp-bg-wrap .rp-ov-score {
+  margin-top: .16rem;
+  min-height: 1.6rem;
+}
+
+.game-podium-bg-showcase {
+  width: 100%;
+  max-width: 560px;
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+}
+
+.games-app-theme #page-jugar .game-podium-bg-showcase {
+  border-radius: 28px;
+  box-shadow:
+    0 20px 48px rgba(0,0,0,.42),
+    0 0 0 1px rgba(255,255,255,.07);
+}
 
 .games-app-theme .topbar-avatar,
 .games-app-theme .game-rank-avatar,
@@ -5088,4 +5194,19 @@ body.quiz-focus-mode #quiz-container {
 
 .showcase-avatar .avatar-render-base {
   transform: scale(1.16);
+}
+
+.games-app-theme .rp-bg-wrap .rp-ov-avatar.showcase-avatar {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.rp-bg-wrap .rp-ov-circle-1 .avatar-render-base {
+  transform: scale(1.42) !important;
+}
+
+.rp-bg-wrap .rp-ov-circle-2 .avatar-render-base,
+.rp-bg-wrap .rp-ov-circle-3 .avatar-render-base {
+  transform: scale(1.36) !important;
 }

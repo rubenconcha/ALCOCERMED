@@ -468,7 +468,7 @@ function loadCloudAvatarProfiles(client, userIds, nameMap, done) {
             return;
         }
         client.from('profiles')
-            .select('id, email, full_name, avatar, avatar_url')
+            .select('id, full_name, avatar, avatar_url')
             .in('id', userIds)
             .then(function(res) {
                 if (!res.error && res.data) {
@@ -482,26 +482,50 @@ function loadCloudAvatarProfiles(client, userIds, nameMap, done) {
             .catch(function() { done(); });
     }
 
-    if (missingAvatarProfileTables.user_profiles) {
-        tryProfiles();
+    function tryUserProfiles() {
+        if (missingAvatarProfileTables.user_profiles) {
+            tryProfiles();
+            return;
+        }
+        client.from('user_profiles')
+            .select('user_id, full_name, avatar, avatar_url')
+            .in('user_id', userIds)
+            .then(function(res) {
+                if (!res.error && res.data) {
+                    for (var i = 0; i < res.data.length; i++) mergeCloudProfileRow(nameMap, res.data[i], 'user_id');
+                    done();
+                    return;
+                }
+                if (res.error) {
+                    if (isMissingSupabaseObjectError(res.error)) missingAvatarProfileTables.user_profiles = true;
+                    else console.warn('No se pudieron cargar avatares desde user_profiles:', res.error.message);
+                }
+                tryProfiles();
+            })
+            .catch(function() { tryProfiles(); });
+    }
+
+    if (!missingAvatarProfileTables.avatar_profiles) {
+        client.from('avatar_profiles')
+            .select('user_id, full_name, avatar')
+            .in('user_id', userIds)
+            .then(function(res) {
+                if (!res.error && res.data) {
+                    for (var i = 0; i < res.data.length; i++) mergeCloudProfileRow(nameMap, res.data[i], 'user_id');
+                    done();
+                    return;
+                }
+                if (res.error) {
+                    if (isMissingSupabaseObjectError(res.error)) missingAvatarProfileTables.avatar_profiles = true;
+                    else console.warn('No se pudieron cargar avatares desde avatar_profiles:', res.error.message);
+                }
+                tryUserProfiles();
+            })
+            .catch(function() { tryUserProfiles(); });
         return;
     }
-    client.from('user_profiles')
-        .select('user_id, email, full_name, avatar, avatar_url')
-        .in('user_id', userIds)
-        .then(function(res) {
-            if (!res.error && res.data) {
-                for (var i = 0; i < res.data.length; i++) mergeCloudProfileRow(nameMap, res.data[i], 'user_id');
-                done();
-                return;
-            }
-            if (res.error) {
-                if (isMissingSupabaseObjectError(res.error)) missingAvatarProfileTables.user_profiles = true;
-                else console.warn('No se pudieron cargar avatares desde user_profiles:', res.error.message);
-            }
-            tryProfiles();
-        })
-        .catch(function() { tryProfiles(); });
+
+    tryUserProfiles();
 }
 
 function syncAvatarProfileTables() {
@@ -1910,7 +1934,7 @@ function loadTopEstudiantes() {
 
     client.from('evaluacion_resultados').select('user_id, puntaje, porcentaje').then(function(r) {
         if (r.error || !r.data || r.data.length === 0) {
-            updateShowcasePodium([]);
+            updateJugarPodium([]);
             listEl.innerHTML = '<div class="game-ranking-shell"><div class="empty-state"><i class="fas fa-trophy" style="color:#FFD700"></i><p>Aún no hay resultados</p><small>¡Sé el primero en jugar!</small></div></div>';
             return;
         }
@@ -1957,7 +1981,7 @@ function loadTopEstudiantes() {
                 });
             }
 
-            updateShowcasePodium(decorated.slice(0, 3));
+            updateJugarPodium(decorated.slice(0, 3));
 
             var html = '<div class="game-ranking-shell">';
             html += '<div class="game-ranking-header"><div><h3>Ranking General</h3><p>Los estudiantes más destacados del momento</p></div><span class="game-ranking-chip">Top ' + decorated.length + '</span></div>';
@@ -1982,7 +2006,7 @@ function loadTopEstudiantes() {
             });
         });
     }).catch(function() {
-        updateShowcasePodium([]);
+        updateJugarPodium([]);
         listEl.innerHTML = '<div class="game-ranking-shell"><div style="text-align:center;padding:12px;color:#EF4444">Error al cargar ranking</div></div>';
     });
 }
@@ -2101,22 +2125,32 @@ function loadRankingGeneral() {
 }
 
 function updateRankingPodium(entries) {
+    updateBgPodium('#ranking-podium-showcase', entries);
+}
+
+function updateJugarPodium(entries) {
+    updateBgPodium('#jugar-podium-showcase', entries);
+}
+
+function updateBgPodium(rootSelector, entries) {
+    var root = document.querySelector(rootSelector);
+    if (!root) return;
     // Orden visual del overlay: 1° centro | 2° izq | 3° der
     var slots = [
-        { selector: '.rp-bg-wrap .rp-showcase-1', idx: 0 },
-        { selector: '.rp-bg-wrap .rp-showcase-2', idx: 1 },
-        { selector: '.rp-bg-wrap .rp-showcase-3', idx: 2 }
+        { selector: '.rp-showcase-1', idx: 0 },
+        { selector: '.rp-showcase-2', idx: 1 },
+        { selector: '.rp-showcase-3', idx: 2 }
     ];
     var infoSlots = [
-        { selector: '.rp-bg-wrap .rp-ov-info-1', idx: 0 },
-        { selector: '.rp-bg-wrap .rp-ov-info-2', idx: 1 },
-        { selector: '.rp-bg-wrap .rp-ov-info-3', idx: 2 }
+        { selector: '.rp-ov-info-1', idx: 0 },
+        { selector: '.rp-ov-info-2', idx: 1 },
+        { selector: '.rp-ov-info-3', idx: 2 }
     ];
 
     // Rellenar avatares
     for (var i = 0; i < slots.length; i++) {
         var s = slots[i];
-        var el = document.querySelector(s.selector);
+        var el = root.querySelector(s.selector);
         if (!el) continue;
         var avatarEl = el.querySelector('.rp-ov-avatar');
         var entry = entries[s.idx];
@@ -2132,7 +2166,7 @@ function updateRankingPodium(entries) {
     // Rellenar nombre y score
     for (var j = 0; j < infoSlots.length; j++) {
         var inf = infoSlots[j];
-        var infoEl = document.querySelector(inf.selector);
+        var infoEl = root.querySelector(inf.selector);
         if (!infoEl) continue;
         var entry2 = entries[inf.idx];
         var nameEl = infoEl.querySelector('.rp-ov-name');
@@ -2144,7 +2178,7 @@ function updateRankingPodium(entries) {
             if (pctEl)  pctEl.textContent  = '0%';
             continue;
         }
-        var shortName = entry2.nombre.length > 11 ? entry2.nombre.substring(0, 10) + '…' : entry2.nombre;
+        var shortName = entry2.nombre.length > 14 ? entry2.nombre.substring(0, 13) + '…' : entry2.nombre;
         if (nameEl) nameEl.textContent = shortName;
         if (ptsEl)  ptsEl.textContent  = entry2.total.toLocaleString() + ' pts';
         if (pctEl)  pctEl.textContent  = entry2.bestPct + '%';
