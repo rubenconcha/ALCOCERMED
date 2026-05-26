@@ -2003,7 +2003,7 @@ function updateRankingPodium(entries) {
         var entry = entries[s.idx];
         if (avatarEl) {
             if (entry) {
-                avatarEl.innerHTML = avatarMarkup(entry.avatar, entry.nombre, 'rp-avatar-media');
+                setAvatarContent(avatarEl, entry.avatar, entry.nombre, 'rp-avatar-media');
             } else {
                 avatarEl.innerHTML = '';
             }

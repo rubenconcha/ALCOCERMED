@@ -2336,6 +2336,8 @@ body.is-native-app .sidebar { display: none !important; }
 .rp-bg-wrap {
     position: relative;
     width: 100%;
+    max-width: 580px;
+    margin: 0 auto 20px auto;
     /* La imagen es 1024x1024 → aspect-ratio 1/1 */
     aspect-ratio: 1 / 1;
     background-image: url('assets/podio_bg.png');
@@ -2344,7 +2346,6 @@ body.is-native-app .sidebar { display: none !important; }
     background-repeat: no-repeat;
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 8px;
     /* Leve sombra para integrarse con la UI */
     box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06);
 }
@@ -2356,15 +2357,13 @@ body.is-native-app .sidebar { display: none !important; }
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* pointer-events: none para que no bloqueen interacciones */
 }
 
 /* ── AVATAR CÍRCULO 1° LUGAR (dorado, centro-arriba) ── */
-/* Centro del círculo dorado en la imagen: ~50% x, ~32% y  Diámetro: ~44% del ancho */
 .rp-ov-circle-1 {
     left: 50%;
-    top: 7%;
-    width: 44%;
+    top: 12.5%;
+    width: 33%;
     aspect-ratio: 1/1;
     transform: translateX(-50%);
     border-radius: 50%;
@@ -2372,22 +2371,20 @@ body.is-native-app .sidebar { display: none !important; }
 }
 
 /* ── AVATAR CÍRCULO 2° LUGAR (plateado, izquierda) ── */
-/* Centro: ~21% x, ~46% y  Diámetro: ~29% */
 .rp-ov-circle-2 {
-    left: 6.5%;
-    top: 31%;
-    width: 29%;
+    left: 10%;
+    top: 34.5%;
+    width: 22%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
 }
 
 /* ── AVATAR CÍRCULO 3° LUGAR (bronce, derecha) ── */
-/* Centro: ~79% x, ~48% y  Diámetro: ~28% */
 .rp-ov-circle-3 {
-    right: 6.5%;
-    top: 34%;
-    width: 28%;
+    right: 10%;
+    top: 37.5%;
+    width: 21%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
@@ -2414,24 +2411,24 @@ body.is-native-app .sidebar { display: none !important; }
 .rp-ov-info-1 {
     left: 50%;
     transform: translateX(-50%);
-    top: 77%;
+    top: 72%;
     width: 33%;
     gap: 2px;
 }
 
 /* Caja 2° (izquierda) */
 .rp-ov-info-2 {
-    left: 3%;
-    top: 79%;
-    width: 30%;
+    left: 4.5%;
+    top: 76%;
+    width: 33%;
     gap: 2px;
 }
 
 /* Caja 3° (derecha) */
 .rp-ov-info-3 {
-    right: 3%;
+    right: 4.5%;
     top: 79%;
-    width: 30%;
+    width: 33%;
     gap: 2px;
 }
 
