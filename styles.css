@@ -7898,7 +7898,10 @@ body.login-active .overlay {
     #study-area.study-area {
         width: 100%;
         max-width: none;
-        padding: 0 16px calc(14px + env(safe-area-inset-bottom));
+        min-height: calc(100dvh - 58px);
+        padding: 0 16px calc(12px + env(safe-area-inset-bottom));
+        display: flex;
+        flex-direction: column;
         gap: 0;
     }
 
@@ -7907,7 +7910,8 @@ body.login-active .overlay {
         grid-template-columns: auto minmax(0, 1fr);
         align-items: center;
         gap: 10px;
-        margin: 0 auto 6px;
+        margin: 0 auto 7px;
+        flex: 0 0 auto;
     }
 
     .study-area .study-mobile-header > div {
@@ -7930,16 +7934,17 @@ body.login-active .overlay {
 
     .study-area .study-mobile-header h2 {
         margin-top: 4px;
-        font-size: clamp(1.36rem, 6.1vw, 1.82rem);
-        line-height: 1.02;
+        font-size: clamp(1.48rem, 6.35vw, 1.94rem);
+        line-height: 1.04;
         overflow-wrap: normal;
         word-break: normal;
         hyphens: none;
     }
 
     .study-area .study-progress-row {
-        margin-bottom: 7px;
+        margin-bottom: 8px;
         gap: 0;
+        flex: 0 0 auto;
     }
 
     .study-area .card-counter {
@@ -7967,14 +7972,15 @@ body.login-active .overlay {
     }
 
     .study-area .card-container {
-        height: clamp(232px, 32dvh, 285px);
-        min-height: 232px;
-        margin-bottom: 9px;
+        height: clamp(260px, 37dvh, 345px);
+        min-height: 260px;
+        margin-bottom: 12px;
+        flex: 0 0 auto;
     }
 
     .study-area .face {
         border-radius: 32px;
-        padding: 58px 22px 26px;
+        padding: 64px 22px 30px;
         box-shadow: 0 26px 66px rgba(15, 23, 42, .18), 0 10px 22px rgba(15, 23, 42, .08);
     }
 
@@ -7985,7 +7991,7 @@ body.login-active .overlay {
     }
 
     .study-area .card-face-label {
-        top: 19px;
+        top: 22px;
         left: 22px;
         padding: 8px 14px;
         font-size: .72rem;
@@ -7994,8 +8000,14 @@ body.login-active .overlay {
     .study-area .text-inner p,
     .study-area .back-text p {
         max-width: 96%;
-        font-size: clamp(1.18rem, 5.25vw, 1.62rem);
+        font-size: clamp(1.22rem, 5.45vw, 1.72rem);
         line-height: 1.16;
+    }
+
+    .study-area .action-zone {
+        margin-top: auto;
+        padding-top: 3px;
+        flex: 0 0 auto;
     }
 
     .study-area .anki-rating-row {
@@ -8030,12 +8042,12 @@ body.login-active .overlay {
 
 @media (max-width: 390px) {
     .study-area .card-container {
-        min-height: 220px;
-        height: 31dvh;
+        min-height: 242px;
+        height: 35dvh;
     }
 
     .study-area .face {
-        padding: 54px 18px 24px;
+        padding: 60px 18px 28px;
         border-radius: 28px;
     }
 
