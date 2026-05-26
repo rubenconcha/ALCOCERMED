@@ -3728,6 +3728,8 @@ window.closePowerupCards = closePowerupCards;
 function showQuizResults() {
     if (quizTimerInterval) clearInterval(quizTimerInterval);
     stopGameMusic();
+    window._quizPodiumConfettiPlayed = false;
+    window._lastPodiumData = null;
     var pwBar = document.getElementById('powerup-bar');
     if (pwBar) pwBar.style.display = 'none';
     activePowerup = null;
@@ -4002,8 +4004,18 @@ function loadLeaderboard(evalId) {
         }, 5000);
     }
     var client = getSupabase();
+    var todayRange = getLocalTodayRange();
+    var dateLabel = document.getElementById('quiz-podium-date-label');
+    if (dateLabel) dateLabel.textContent = 'Solo resultados de hoy: ' + todayRange.label;
     console.log('Loading leaderboard for:', evalId);
-    client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje').eq('evaluacion_id', evalId).order('porcentaje', { ascending: false }).order('puntaje', { ascending: false }).then(function(r) {
+    client.from('evaluacion_resultados')
+        .select('user_id,puntaje,total,porcentaje,created_at')
+        .eq('evaluacion_id', evalId)
+        .gte('created_at', todayRange.start)
+        .lt('created_at', todayRange.end)
+        .order('porcentaje', { ascending: false })
+        .order('puntaje', { ascending: false })
+        .then(function(r) {
         console.log('Leaderboard data:', r.data, 'Error:', r.error);
         if (r.error) { 
             console.warn('Leaderboard error:', r.error.message); 
@@ -4015,7 +4027,15 @@ function loadLeaderboard(evalId) {
             }
             return; 
         }
-        if (!r.data || r.data.length === 0) { console.log('No results yet'); return; }
+        if (!r.data || r.data.length === 0) {
+            var emptyPodium = document.getElementById('quiz-podium');
+            if (emptyPodium) emptyPodium.style.display = 'block';
+            updateBgPodium('#quiz-podium-showcase', []);
+            var emptyList = document.getElementById('podium-full-list');
+            if (emptyList) emptyList.innerHTML = '<tr><td colspan="4"><div class="quiz-ranking-empty"><i class="fas fa-calendar-day"></i><p>Aún no hay resultados de hoy.</p></div></td></tr>';
+            console.log('No results today');
+            return;
+        }
 
         // Get participant names
         var userIds = [];
@@ -4089,68 +4109,15 @@ function renderPodium(entries) {
     if (window._lastPodiumData === currentDataStr) return;
     window._lastPodiumData = currentDataStr;
 
-    var isFirstRender = !document.getElementById('podium-pillars').innerHTML.trim();
-    var pillarOrder = [1, 0, 2];
-    var pillarsHtml = '';
-
-    for (var p = 0; p < 3; p++) {
-        var idx = pillarOrder[p];
-        if (idx >= entries.length) {
-            pillarsHtml += '<div style="flex:1;max-width:136px"></div>';
-            continue;
-        }
-        var e = entries[idx];
-        var rankClass  = idx===0 ? 'rank-1' : (idx===1 ? 'rank-2' : 'rank-3');
-        var rankText   = idx===0 ? '1'      : (idx===1 ? '2'      : '3');
-        var animStyle  = isFirstRender
-            ? ('animation-delay:' + (p*0.22) + 's')
-            : 'animation:none!important;opacity:1!important;transform:translateY(0)!important;';
-
-        pillarsHtml += '<div class="podium-cylinder ' + rankClass + '" style="' + animStyle + '">';
-        
-        // 1. Avatar Section (Above pedestal)
-        pillarsHtml += '<div class="podium-avatar-wrapper">';
-        if (idx === 0) pillarsHtml += '<div class="podium-crown">👑</div>';
-        pillarsHtml += '<div class="podium-avatar-ring"></div>';
-        pillarsHtml += '<div class="podium-avatar">' + avatarMarkup(e.avatar, e.nombre, 'podium-avatar-media') + '</div>';
-        pillarsHtml += '<div class="podium-name">' + e.nombre + '</div>';
-        pillarsHtml += '</div>';
-        
-        // 2. Pedestal Cylindrical Column
-        pillarsHtml += '<div class="cylinder-top"></div>';
-        pillarsHtml += '<div class="cylinder-body">';
-        
-        // Golden Laurels wrapping number 1 (Middle screen style)
-        if (idx === 0) {
-            pillarsHtml += '<div class="laurel-wreath-rank1-left">🌿</div>';
-            pillarsHtml += '<div class="laurel-wreath-rank1-right">🌿</div>';
-        }
-        
-        pillarsHtml += '<div class="cylinder-rank">' + rankText + '</div>';
-        pillarsHtml += '</div>';
-        
-        // 3. Stats Badge sitting exactly at the bottom of the cylinder
-        pillarsHtml += '<div class="podium-score-badge">';
-        pillarsHtml += '<div class="score-pts">' + e.puntaje + ' pts</div>';
-        pillarsHtml += '<div class="score-pct">' + e.porcentaje + '%</div>';
-        pillarsHtml += '</div>';
-        
-        pillarsHtml += '</div>';
-    }
-
-    document.getElementById('podium-pillars').innerHTML = pillarsHtml;
-
-    // Add perspective circular stage base if not already present
-    var stageContainer = document.getElementById('podium-stage-base');
-    if (!stageContainer) {
-        var pillarsWrapper = document.getElementById('podium-pillars');
-        if (pillarsWrapper) {
-            var stageGlow = document.createElement('div');
-            stageGlow.id = 'podium-stage-base';
-            stageGlow.className = 'podium-stage-glow';
-            pillarsWrapper.appendChild(stageGlow);
-        }
-    }
+    var podiumEntries = entries.slice(0, 3).map(function(e) {
+        return {
+            nombre: e.nombre,
+            avatar: e.avatar,
+            total: e.puntaje || 0,
+            bestPct: e.porcentaje || 0
+        };
+    });
+    updateBgPodium('#quiz-podium-showcase', podiumEntries);
 
     if (currentUser) {
         var myRank = -1;
@@ -4172,11 +4139,11 @@ function renderPodium(entries) {
     }
 
     var listHtml = '';
-    for (var l = 0; l < entries.length; l++) {
+    for (var l = 3; l < entries.length; l++) {
         var isMe      = currentUser && entries[l].user_id === currentUser.id;
-        var rClass    = l===0 ? 'tr-gold'   : l===1 ? 'tr-silver' : l===2 ? 'tr-bronze' : 'tr-normal';
-        var rowAccent = l===0 ? 'row-gold'  : l===1 ? 'row-silver': l===2 ? 'row-bronze': '';
-        var rankIcon  = l===0 ? '🥇' : l===1 ? '🥈' : l===2 ? '🥉' : (l+1);
+        var rClass    = 'tr-normal';
+        var rowAccent = '';
+        var rankIcon  = l + 1;
         listHtml += '<tr class="' + rowAccent + (isMe ? ' is-me-row' : '') + '">';
         listHtml += '<td style="width:56px;"><div class="tr-rank-circle ' + rClass + '">' + rankIcon + '</div></td>';
         listHtml += '<td><div style="display:flex;align-items:center;gap:12px;">';
@@ -4187,10 +4154,16 @@ function renderPodium(entries) {
         listHtml += '<td style="text-align:right;width:80px;"><div class="player-pct">' + entries[l].porcentaje + '%</div></td>';
         listHtml += '</tr>';
     }
+    if (!listHtml) {
+        listHtml = '<tr><td colspan="4"><div class="quiz-ranking-empty"><i class="fas fa-medal"></i><p>Por ahora solo hay Top 3 en el ranking de hoy.</p></div></td></tr>';
+    }
     var fullListEl = document.getElementById('podium-full-list');
     if (fullListEl) fullListEl.innerHTML = listHtml;
 
-    if (isFirstRender) spawnConfetti();
+    if (!window._quizPodiumConfettiPlayed) {
+        spawnConfetti();
+        window._quizPodiumConfettiPlayed = true;
+    }
 }
 // ═══ MODO EQUIPO — Leaderboard por equipos ═══
 function loadTeamLeaderboard(evalId) {

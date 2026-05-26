@@ -1,10 +1,11 @@
-const CACHE_NAME = 'alcocermed-juegos-v57';
+const CACHE_NAME = 'alcocermed-juegos-v59';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './styles.css',
   './app.js',
   './manifest.json',
+  './assets/result_arena_bg.png',
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
   './logo_app.png'
