@@ -1142,10 +1142,12 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
     animation: fadeIn 0.5s ease;
 }
 @media (max-width: 480px) {
-    #quiz-result-emoji {
-        width: 100px !important;
-        height: 100px !important;
-        font-size: 40px !important;
+    .quiz-result-trophy-wrap {
+        width: 104px !important;
+        height: 104px !important;
+    }
+    .quiz-result-trophy-ring i {
+        font-size: 2.65rem !important;
     }
     #quiz-result-title {
         font-size: 1.3rem !important;
@@ -5346,15 +5348,104 @@ body.quiz-focus-mode #quiz-container {
   box-shadow: 0 18px 38px rgba(233,30,99,.34), inset 0 1px 0 rgba(255,255,255,.22) !important;
 }
 
-.games-app-theme #quiz-result-emoji {
+/* Trofeo de resultado (estilo Arena, reemplaza emoji genérico) */
+.quiz-result-trophy-wrap {
+  width: 132px;
+  height: 132px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-result-trophy-ring {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.42),
+    inset 0 2px 0 rgba(255, 255, 255, 0.35);
+}
+
+.quiz-result-trophy-ring i {
+  position: relative;
+  z-index: 2;
+  font-size: 3.35rem;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+}
+
+.quiz-result-trophy-glow {
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.quiz-result-trophy--gold .quiz-result-trophy-ring {
+  background: linear-gradient(145deg, #fde047 0%, #f59e0b 42%, #d97706 100%);
+  box-shadow:
+    0 0 0 8px rgba(250, 204, 21, 0.14),
+    0 0 40px rgba(250, 204, 21, 0.35),
+    0 22px 52px rgba(0, 0, 0, 0.44),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4);
+}
+
+.quiz-result-trophy--gold .quiz-result-trophy-ring i {
+  color: #fffbeb;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
+}
+
+.quiz-result-trophy--gold .quiz-result-trophy-glow {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.55) 0%, transparent 68%);
+}
+
+.quiz-result-trophy--silver .quiz-result-trophy-ring {
+  background: linear-gradient(145deg, #f8fafc 0%, #cbd5e1 48%, #64748b 100%);
+  box-shadow:
+    0 0 0 8px rgba(148, 163, 184, 0.12),
+    0 0 32px rgba(148, 163, 184, 0.28),
+    0 22px 52px rgba(0, 0, 0, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.45);
+}
+
+.quiz-result-trophy--silver .quiz-result-trophy-ring i {
+  color: #f8fafc;
+}
+
+.quiz-result-trophy--silver .quiz-result-trophy-glow {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.42) 0%, transparent 70%);
+}
+
+.quiz-result-trophy--bronze .quiz-result-trophy-ring {
+  background: linear-gradient(145deg, #fdba74 0%, #ea580c 50%, #9a3412 100%);
+  box-shadow:
+    0 0 0 8px rgba(251, 146, 60, 0.12),
+    0 0 28px rgba(234, 88, 12, 0.28),
+    0 22px 52px rgba(0, 0, 0, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.28);
+}
+
+.quiz-result-trophy--bronze .quiz-result-trophy-ring i {
+  color: #fff7ed;
+}
+
+.quiz-result-trophy--bronze .quiz-result-trophy-glow {
+  background: radial-gradient(circle, rgba(255, 237, 213, 0.45) 0%, transparent 70%);
+}
+
+.games-app-theme #quiz-result-emoji.quiz-result-trophy-wrap {
   width: 128px !important;
   height: 128px !important;
   margin-bottom: 18px !important;
-  border: 5px solid rgba(255,255,255,.18) !important;
-  box-shadow:
-    0 0 0 10px rgba(34,197,94,.10),
-    0 24px 58px rgba(0,0,0,.44),
-    inset 0 1px 0 rgba(255,255,255,.28) !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 
 .games-app-theme #quiz-result-title {

@@ -4092,6 +4092,18 @@ window.choosePowerupCard = choosePowerupCard;
 window.skipPowerupCards = skipPowerupCards;
 window.closePowerupCards = closePowerupCards;
 
+function setQuizResultTrophy(pct) {
+    var wrap = document.getElementById('quiz-result-emoji');
+    if (!wrap) return;
+    var tier = pct >= 90 ? 'gold' : pct >= 70 ? 'gold' : pct >= 40 ? 'silver' : 'bronze';
+    wrap.className = 'quiz-result-trophy-wrap quiz-result-trophy--' + tier;
+    wrap.innerHTML =
+        '<div class="quiz-result-trophy-ring">' +
+        '<span class="quiz-result-trophy-glow" aria-hidden="true"></span>' +
+        '<i class="fas fa-trophy" aria-hidden="true"></i>' +
+        '</div>';
+}
+
 function showQuizResults() {
     if (quizTimerInterval) clearInterval(quizTimerInterval);
     stopGameMusic();
@@ -4131,16 +4143,8 @@ function showQuizResults() {
     if (header) header.style.display = 'none';
     document.getElementById('quiz-result').style.display = 'block';
 
-    // Emoji and title based on score
-    var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '⭐' : pct >= 40 ? '📝' : '💪';
     var msg = pct >= 90 ? '¡Excelente!' : pct >= 70 ? '¡Muy bien!' : pct >= 40 ? '¡Puedes mejorar!' : '¡Sigue practicando!';
-    var emojiEl = document.getElementById('quiz-result-emoji');
-    if (emojiEl) {
-        emojiEl.textContent = emoji;
-        emojiEl.style.background = pct >= 70 ? 'linear-gradient(135deg,#22C55E,#16A34A)' :
-                                  pct >= 40 ? 'linear-gradient(135deg,#F59E0B,#D97706)' :
-                                              'linear-gradient(135deg,#EF4444,#DC2626)';
-    }
+    setQuizResultTrophy(pct);
     document.getElementById('quiz-result-title').textContent = msg;
     document.getElementById('quiz-result-score').textContent = correctas + '/' + totalGradeable + ' correctas • ' + pct + '%';
     var oaCount = total - totalGradeable;
