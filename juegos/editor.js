@@ -2115,11 +2115,21 @@ window.addEventListener('beforeinstallprompt', function(e) {
 });
 
 // ═══ DARK MODE TOGGLE ═══
+function applyThemeEditor(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    var body = document.body;
+    if (theme === 'dark') {
+        body.classList.add('games-app-theme');
+    } else {
+        body.classList.remove('games-app-theme');
+        body.classList.add('games-app-theme-light');
+    }
+    updateThemeIconEditor(theme);
+}
 function initThemeEditor() {
     try {
         var theme = localStorage.getItem('alcocermed_theme') || 'light';
-        document.documentElement.setAttribute('data-theme', theme);
-        updateThemeIconEditor(theme);
+        applyThemeEditor(theme);
     } catch(e) {}
 }
 function updateThemeIconEditor(theme) {
@@ -2134,9 +2144,8 @@ function toggleThemeEditor() {
     try {
         var current = document.documentElement.getAttribute('data-theme');
         var next = current === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
+        applyThemeEditor(next);
         localStorage.setItem('alcocermed_theme', next);
-        updateThemeIconEditor(next);
     } catch(e) {}
 }
 initThemeEditor();

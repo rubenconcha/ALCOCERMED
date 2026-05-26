@@ -5158,8 +5158,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initTheme() {
     try {
         var theme = localStorage.getItem('alcocermed_theme') || 'light';
-        document.documentElement.setAttribute('data-theme', theme);
-        updateThemeIcon(theme);
+        applyTheme(theme);
     } catch(e) {}
 }
 function updateThemeIcon(theme) {
@@ -5170,13 +5169,23 @@ function updateThemeIcon(theme) {
         }
     } catch(e) {}
 }
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    var body = document.body;
+    if (theme === 'dark') {
+        body.classList.add('games-app-theme');
+    } else {
+        body.classList.remove('games-app-theme');
+        body.classList.add('games-app-theme-light');
+    }
+    updateThemeIcon(theme);
+}
 function toggleTheme() {
     try {
         var current = document.documentElement.getAttribute('data-theme');
         var next = current === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
+        applyTheme(next);
         localStorage.setItem('alcocermed_theme', next);
-        updateThemeIcon(next);
     } catch(e) {}
 }
 initTheme();
