@@ -783,8 +783,52 @@ function updateDailyGoalUI() {
 // ──────────────────────────────────────────────
 // CALIFICAR (SRS)
 // ──────────────────────────────────────────────
+let flashcardAudioContext = null;
+
+function playFlashcardRatingSound() {
+    try {
+        const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContextCtor) return;
+
+        if (!flashcardAudioContext) flashcardAudioContext = new AudioContextCtor();
+        const ctx = flashcardAudioContext;
+        if (ctx.state === 'suspended') ctx.resume().catch(function () { });
+
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const filter = ctx.createBiquadFilter();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(980, now);
+        osc.frequency.exponentialRampToValueAtTime(1420, now + 0.045);
+        osc.frequency.exponentialRampToValueAtTime(760, now + 0.105);
+
+        filter.type = 'bandpass';
+        filter.frequency.setValueAtTime(1150, now);
+        filter.Q.setValueAtTime(5.5, now);
+
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(0.055, now + 0.012);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.11);
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.12);
+    } catch (e) {
+        // El audio es decorativo; nunca debe bloquear la respuesta.
+    }
+}
+
 window.rateCard = function (score) {
     if (!deck.length || currentIndex >= deck.length) return;
+    playFlashcardRatingSound();
+    const selectedButton = window.event && window.event.currentTarget && window.event.currentTarget.classList
+        ? window.event.currentTarget
+        : null;
+    if (selectedButton) selectedButton.classList.add('is-selected');
 
     totalReviews++;
     const repasosCount = document.getElementById('repasos-count');
@@ -803,13 +847,19 @@ window.rateCard = function (score) {
         showToast('🏆 ¡meta diaria cumplida! ¡increíble esfuerzo!', 'success');
     }
 
-    renderCard();
-    actualizarProgreso();
+    const finishRatingUi = function () {
+        renderCard();
+        actualizarProgreso();
+        if (selectedButton) selectedButton.classList.remove('is-selected');
 
-    // Sincronizar flashcards con la nube cada 3 repasos para no saturar
-    if (totalReviews % 3 === 0) {
-        sincronizarFlashcardsEnNube();
-    }
+        // Sincronizar flashcards con la nube cada 3 repasos para no saturar
+        if (totalReviews % 3 === 0) {
+            sincronizarFlashcardsEnNube();
+        }
+    };
+
+    if (selectedButton) setTimeout(finishRatingUi, 210);
+    else finishRatingUi();
 };
 
 // ──────────────────────────────────────────────

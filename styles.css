@@ -7591,27 +7591,46 @@ body.login-active .overlay {
 
 .study-area .study-progress-track {
     position: relative;
-    height: 18px;
+    height: 20px;
     border-radius: 999px;
-    border: 2px solid #dbe4ef;
+    border: 2px solid #cbd5e1;
     background:
-        repeating-linear-gradient(90deg, transparent 0 30px, rgba(15, 23, 42, .14) 31px 35px),
-        linear-gradient(180deg, #f8fafc, #e8eef6);
+        linear-gradient(180deg, rgba(255,255,255,.92), rgba(226,232,240,.72)),
+        repeating-linear-gradient(90deg, transparent 0 23px, rgba(15, 23, 42, .16) 24px 26px);
     overflow: visible;
-    box-shadow: inset 0 2px 5px rgba(15, 23, 42, .08), 0 8px 20px rgba(15, 23, 42, .08);
+    box-shadow:
+        inset 0 2px 3px rgba(255, 255, 255, .9),
+        inset 0 -3px 5px rgba(15, 23, 42, .12),
+        0 8px 18px rgba(15, 23, 42, .10);
 }
 
 .study-area .study-progress-track::after {
     content: "";
     position: absolute;
     top: 50%;
-    right: -10px;
-    width: 8px;
-    height: 12px;
+    right: -11px;
+    width: 10px;
+    height: 13px;
     border-radius: 0 6px 6px 0;
-    background: #dbe4ef;
+    border: 2px solid #cbd5e1;
+    border-left: 0;
+    background: linear-gradient(180deg, #f8fafc, #dbe4ef);
     transform: translateY(-50%);
-    box-shadow: inset -1px 0 2px rgba(15, 23, 42, .08);
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,.8),
+        0 5px 10px rgba(15, 23, 42, .10);
+}
+
+.study-area .study-progress-track::before {
+    content: "";
+    position: absolute;
+    inset: 3px 5px;
+    z-index: 0;
+    border-radius: 999px;
+    background:
+        repeating-linear-gradient(90deg, rgba(15,23,42,.10) 0 2px, transparent 2px 24px),
+        linear-gradient(180deg, rgba(148,163,184,.18), rgba(255,255,255,.18));
+    pointer-events: none;
 }
 
 .study-area .study-progress-percent {
@@ -7625,8 +7644,16 @@ body.login-active .overlay {
 
 .study-area #study-progress-fill {
     position: relative;
-    background: linear-gradient(90deg, #f97316 0%, #f59e0b 38%, #2563eb 100%);
-    box-shadow: 0 0 14px rgba(249, 115, 22, .35);
+    z-index: 1;
+    height: 100%;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.45), transparent 46%),
+        linear-gradient(90deg, #fb923c 0%, #f59e0b 42%, #2563eb 100%);
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,.65),
+        inset 0 -2px 4px rgba(15,23,42,.16),
+        0 0 14px rgba(37, 99, 235, .22);
     min-width: 10px;
     overflow: hidden;
 }
@@ -7635,8 +7662,10 @@ body.login-active .overlay {
     content: "";
     position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(90deg, rgba(255,255,255,.20) 0 2px, transparent 2px 18px);
-    opacity: .65;
+    background:
+        linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.24) 0 2px, transparent 2px 17px);
+    opacity: .75;
 }
 
 .study-area .card-container {
@@ -7780,6 +7809,7 @@ body.login-active .overlay {
 }
 
 .study-area .btn-anki {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -7788,6 +7818,11 @@ body.login-active .overlay {
     border-radius: 22px;
     font-size: 1.05rem;
     box-shadow: 0 16px 28px rgba(15, 23, 42, .16);
+    overflow: visible;
+    transform: translateZ(0);
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    --rating-glow: rgba(255, 255, 255, .95);
+    --rating-glow-soft: rgba(255, 255, 255, .34);
 }
 
 .study-area .btn-anki::before {
@@ -7807,6 +7842,45 @@ body.login-active .overlay {
     box-shadow: 0 10px 20px rgba(15, 23, 42, .18);
 }
 
+.study-area .btn-anki::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    z-index: 0;
+    border-radius: 27px;
+    border: 2px solid transparent;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(.96);
+    background:
+        linear-gradient(var(--rating-glow), var(--rating-glow)) padding-box,
+        linear-gradient(135deg, rgba(255,255,255,.95), var(--rating-glow), rgba(255,255,255,.25)) border-box;
+    box-shadow:
+        0 0 0 0 var(--rating-glow-soft),
+        0 16px 30px rgba(15, 23, 42, .18);
+    transition: opacity .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+
+.study-area .btn-anki:active,
+.study-area .btn-anki:focus,
+.study-area .btn-anki.is-selected {
+    transform: translateY(-2px) scale(1.025);
+    filter: saturate(1.12) brightness(1.04);
+    box-shadow: 0 22px 42px rgba(15, 23, 42, .22);
+}
+
+.study-area .btn-anki:active::after,
+.study-area .btn-anki:focus::after,
+.study-area .btn-anki.is-selected::after {
+    opacity: 1;
+    transform: scale(1);
+    animation: ratingSelectPulse .42s cubic-bezier(.2,.8,.2,1);
+}
+
+.study-area .btn-anki:disabled {
+    cursor: default;
+}
+
 .study-area .red-intense::before {
     background-image: url("assets/flashcard-icons/mal-3d.png");
 }
@@ -7821,6 +7895,38 @@ body.login-active .overlay {
 
 .study-area .blue-intense::before {
     background-image: url("assets/flashcard-icons/facil-3d.png");
+}
+
+.study-area .red-intense {
+    --rating-glow: rgba(255, 210, 210, .96);
+    --rating-glow-soft: rgba(239, 68, 68, .34);
+}
+
+.study-area .yellow-intense {
+    --rating-glow: rgba(255, 236, 179, .96);
+    --rating-glow-soft: rgba(245, 158, 11, .36);
+}
+
+.study-area .gold-intense {
+    --rating-glow: rgba(202, 255, 222, .96);
+    --rating-glow-soft: rgba(22, 163, 74, .36);
+}
+
+.study-area .blue-intense {
+    --rating-glow: rgba(207, 226, 255, .96);
+    --rating-glow-soft: rgba(37, 99, 235, .34);
+}
+
+@keyframes ratingSelectPulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--rating-glow-soft), 0 14px 26px rgba(15, 23, 42, .16);
+    }
+    62% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0), 0 24px 42px rgba(15, 23, 42, .20);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 18px 32px rgba(15, 23, 42, .16);
+    }
 }
 
 .study-area .nav-row {
