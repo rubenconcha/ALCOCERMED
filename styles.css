@@ -7820,9 +7820,8 @@ body.login-active .overlay {
     box-shadow: 0 16px 28px rgba(15, 23, 42, .16);
     overflow: visible;
     transform: translateZ(0);
-    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-    --rating-glow: rgba(255, 255, 255, .95);
-    --rating-glow-soft: rgba(255, 255, 255, .34);
+    border: 3px solid transparent;
+    transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
 
 .study-area .btn-anki::before {
@@ -7843,38 +7842,15 @@ body.login-active .overlay {
 }
 
 .study-area .btn-anki::after {
-    content: "";
-    position: absolute;
-    inset: -5px;
-    z-index: 0;
-    border-radius: 27px;
-    border: 2px solid transparent;
-    pointer-events: none;
-    opacity: 0;
-    transform: scale(.96);
-    background:
-        linear-gradient(var(--rating-glow), var(--rating-glow)) padding-box,
-        linear-gradient(135deg, rgba(255,255,255,.95), var(--rating-glow), rgba(255,255,255,.25)) border-box;
-    box-shadow:
-        0 0 0 0 var(--rating-glow-soft),
-        0 16px 30px rgba(15, 23, 42, .18);
-    transition: opacity .18s ease, transform .18s ease, box-shadow .18s ease;
+    content: none;
 }
 
 .study-area .btn-anki:active,
 .study-area .btn-anki:focus,
 .study-area .btn-anki.is-selected {
-    transform: translateY(-2px) scale(1.025);
-    filter: saturate(1.12) brightness(1.04);
-    box-shadow: 0 22px 42px rgba(15, 23, 42, .22);
-}
-
-.study-area .btn-anki:active::after,
-.study-area .btn-anki:focus::after,
-.study-area .btn-anki.is-selected::after {
-    opacity: 1;
-    transform: scale(1);
-    animation: ratingSelectPulse .42s cubic-bezier(.2,.8,.2,1);
+    transform: translateY(-1px);
+    border-color: #0f172a;
+    box-shadow: 0 18px 34px rgba(15, 23, 42, .24);
 }
 
 .study-area .btn-anki:disabled {
@@ -7895,38 +7871,6 @@ body.login-active .overlay {
 
 .study-area .blue-intense::before {
     background-image: url("assets/flashcard-icons/facil-3d.png");
-}
-
-.study-area .red-intense {
-    --rating-glow: rgba(255, 210, 210, .96);
-    --rating-glow-soft: rgba(239, 68, 68, .34);
-}
-
-.study-area .yellow-intense {
-    --rating-glow: rgba(255, 236, 179, .96);
-    --rating-glow-soft: rgba(245, 158, 11, .36);
-}
-
-.study-area .gold-intense {
-    --rating-glow: rgba(202, 255, 222, .96);
-    --rating-glow-soft: rgba(22, 163, 74, .36);
-}
-
-.study-area .blue-intense {
-    --rating-glow: rgba(207, 226, 255, .96);
-    --rating-glow-soft: rgba(37, 99, 235, .34);
-}
-
-@keyframes ratingSelectPulse {
-    0% {
-        box-shadow: 0 0 0 0 var(--rating-glow-soft), 0 14px 26px rgba(15, 23, 42, .16);
-    }
-    62% {
-        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0), 0 24px 42px rgba(15, 23, 42, .20);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 18px 32px rgba(15, 23, 42, .16);
-    }
 }
 
 .study-area .nav-row {
@@ -7954,7 +7898,7 @@ body.login-active .overlay {
     #study-area.study-area {
         width: 100%;
         max-width: none;
-        padding: 4px 18px calc(22px + env(safe-area-inset-bottom));
+        padding: 0 16px calc(14px + env(safe-area-inset-bottom));
         gap: 0;
     }
 
@@ -7962,36 +7906,49 @@ body.login-active .overlay {
         display: grid;
         grid-template-columns: auto minmax(0, 1fr);
         align-items: center;
-        gap: 12px;
-        margin: 0 auto 10px;
+        gap: 10px;
+        margin: 0 auto 6px;
+    }
+
+    .study-area .study-mobile-header > div {
+        min-width: 0;
+        width: 100%;
     }
 
     .study-area .btn-back-game {
-        min-height: 48px;
-        padding: 0 16px;
-        border-radius: 16px;
-        font-size: .95rem;
+        min-height: 44px;
+        padding: 0 13px;
+        border-radius: 15px;
+        font-size: .9rem;
+        white-space: nowrap;
     }
 
     .study-area .study-subject-pill {
-        padding: 7px 14px;
-        font-size: .78rem;
+        padding: 6px 13px;
+        font-size: .74rem;
     }
 
     .study-area .study-mobile-header h2 {
-        margin-top: 5px;
-        font-size: clamp(1.55rem, 6.8vw, 2.08rem);
+        margin-top: 4px;
+        font-size: clamp(1.36rem, 6.1vw, 1.82rem);
         line-height: 1.02;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
     }
 
     .study-area .study-progress-row {
-        margin-bottom: 12px;
-        gap: 7px;
+        margin-bottom: 7px;
+        gap: 0;
     }
 
     .study-area .card-counter {
-        font-size: .9rem;
+        font-size: .84rem;
         text-align: center;
+    }
+
+    .study-area .study-progress-meter {
+        display: none;
     }
 
     .study-area .study-progress-track {
@@ -8010,14 +7967,14 @@ body.login-active .overlay {
     }
 
     .study-area .card-container {
-        height: clamp(270px, 39dvh, 330px);
-        min-height: 270px;
-        margin-bottom: 12px;
+        height: clamp(232px, 32dvh, 285px);
+        min-height: 232px;
+        margin-bottom: 9px;
     }
 
     .study-area .face {
         border-radius: 32px;
-        padding: 70px 24px 32px;
+        padding: 58px 22px 26px;
         box-shadow: 0 26px 66px rgba(15, 23, 42, .18), 0 10px 22px rgba(15, 23, 42, .08);
     }
 
@@ -8028,16 +7985,16 @@ body.login-active .overlay {
     }
 
     .study-area .card-face-label {
-        top: 24px;
-        left: 24px;
-        padding: 10px 16px;
-        font-size: .78rem;
+        top: 19px;
+        left: 22px;
+        padding: 8px 14px;
+        font-size: .72rem;
     }
 
     .study-area .text-inner p,
     .study-area .back-text p {
         max-width: 96%;
-        font-size: clamp(1.28rem, 5.9vw, 1.9rem);
+        font-size: clamp(1.18rem, 5.25vw, 1.62rem);
         line-height: 1.16;
     }
 
@@ -8047,15 +8004,15 @@ body.login-active .overlay {
     }
 
     .study-area .btn-anki {
-        min-height: 56px;
+        min-height: 50px;
         border-radius: 18px;
-        font-size: .98rem;
-        gap: 10px;
+        font-size: .92rem;
+        gap: 8px;
     }
 
     .study-area .btn-anki::before {
-        width: 34px;
-        height: 34px;
+        width: 30px;
+        height: 30px;
         font-size: 1.02rem;
     }
 
@@ -8065,27 +8022,27 @@ body.login-active .overlay {
     }
 
     .study-area .btn-nav {
-        min-height: 54px;
+        min-height: 48px;
         border-radius: 18px;
-        font-size: .98rem;
+        font-size: .92rem;
     }
 }
 
 @media (max-width: 390px) {
     .study-area .card-container {
-        min-height: 380px;
-        height: 50dvh;
+        min-height: 220px;
+        height: 31dvh;
     }
 
     .study-area .face {
-        padding: 78px 20px 36px;
+        padding: 54px 18px 24px;
         border-radius: 28px;
     }
 
     .study-area .btn-anki,
     .study-area .btn-nav {
-        min-height: 60px;
-        border-radius: 20px;
-        font-size: .98rem;
+        min-height: 46px;
+        border-radius: 16px;
+        font-size: .88rem;
     }
 }
