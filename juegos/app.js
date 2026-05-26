@@ -1936,13 +1936,21 @@ function normalizeDemoText(value) {
 }
 
 function isDemoEvaluation(ev) {
+    var title = normalizeDemoText(ev && ev.titulo || '').trim();
     var text = normalizeDemoText([
         ev && ev.titulo,
         ev && ev.tema,
         ev && ev.codigo,
         ev && ev.asignatura
     ].join(' '));
-    return text.indexOf('PRUEBA') !== -1 || text.indexOf('DEMO') !== -1 || text.indexOf('MUESTRA') !== -1;
+    if (text.indexOf('PRUEBA') !== -1 || text.indexOf('DEMO') !== -1 || text.indexOf('MUESTRA') !== -1) {
+        return true;
+    }
+    // Demo oficial de Morfofunción: "evaluacion 1" / "evaluacion 1 DEMO" (sin palabra DEMO obligatoria)
+    if (/^EVALUACION\s*1(\s+DEMO)?$/.test(title)) {
+        return true;
+    }
+    return false;
 }
 
 function canAccessEvaluation(ev) {
