@@ -905,20 +905,20 @@ window.showCustomConfirm = function(msg, callback) {
     var overlay = document.createElement('div');
     overlay.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,.8);backdrop-filter:blur(8px);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;';
     var modal = document.createElement('div');
-    modal.style.cssText = 'background:#fff;border-radius:24px;width:100%;max-width:400px;padding:32px 24px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1)';
+    modal.style.cssText = 'background:var(--bg-card);border-radius:24px;width:100%;max-width:400px;padding:32px 24px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1)';
     var icon = document.createElement('div');
     icon.innerHTML = '<i class="fas fa-exclamation-triangle"></i>';
     icon.style.cssText = 'font-size:40px;color:#F59E0B;margin-bottom:16px';
     var text = document.createElement('p');
-    text.style.cssText = 'font-size:1rem;font-weight:600;color:#1E293B;margin-bottom:24px;line-height:1.5;';
+    text.style.cssText = 'font-size:1rem;font-weight:600;color:var(--text);margin-bottom:24px;line-height:1.5;';
     text.textContent = msg;
     var btnRow = document.createElement('div');
     btnRow.style.cssText = 'display:flex;gap:12px;justify-content:center';
     var cancelBtn = document.createElement('button');
     cancelBtn.textContent = 'Cancelar';
-    cancelBtn.style.cssText = 'padding:12px 24px;background:#F1F5F9;color:#64748B;border:none;border-radius:12px;font-weight:700;cursor:pointer;flex:1;transition:background 0.2s';
-    cancelBtn.onmouseover = function() { this.style.background = '#E2E8F0'; };
-    cancelBtn.onmouseout = function() { this.style.background = '#F1F5F9'; };
+    cancelBtn.style.cssText = 'padding:12px 24px;background:var(--bg-card);color:var(--text-mid);border:1px solid var(--border);border-radius:12px;font-weight:700;cursor:pointer;flex:1;transition:background 0.2s';
+    cancelBtn.onmouseover = function() { this.style.background = 'var(--border)'; };
+    cancelBtn.onmouseout = function() { this.style.background = 'var(--bg-card)'; };
     cancelBtn.onclick = function() { document.body.removeChild(overlay); };
     var confirmBtn = document.createElement('button');
     confirmBtn.textContent = 'Aceptar';
@@ -935,12 +935,12 @@ window.showCustomAlert = function(msg) {
     var overlay = document.createElement('div');
     overlay.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,.8);backdrop-filter:blur(8px);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;';
     var modal = document.createElement('div');
-    modal.style.cssText = 'background:#fff;border-radius:24px;width:100%;max-width:400px;padding:32px 24px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1)';
+    modal.style.cssText = 'background:var(--bg-card);border-radius:24px;width:100%;max-width:400px;padding:32px 24px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.4);animation:popIn .3s cubic-bezier(.34,1.56,.64,1)';
     var icon = document.createElement('div');
     icon.innerHTML = '<i class="fas fa-info-circle"></i>';
     icon.style.cssText = 'font-size:40px;color:#3B82F6;margin-bottom:16px';
     var text = document.createElement('p');
-    text.style.cssText = 'font-size:1rem;font-weight:600;color:#1E293B;margin-bottom:24px;line-height:1.5;';
+    text.style.cssText = 'font-size:1rem;font-weight:600;color:var(--text);margin-bottom:24px;line-height:1.5;';
     text.textContent = msg;
     var confirmBtn = document.createElement('button');
     confirmBtn.textContent = 'Entendido';
@@ -3367,8 +3367,8 @@ function renderQuizQuestion() {
             if (o.pinX !== undefined && o.pinY !== undefined) {
                 html += '    <div class="quiz-dnd-slot" id="dnd-slot-' + i + '" data-idx="' + i + '" onclick="clickDndSlot(' + i + ')" ' +
                     'style="position:absolute; left:' + o.pinX + '%; top:' + o.pinY + '%; transform:translate(-50%, -50%); ' +
-                    'width:36px; height:36px; border-radius:50%; background:#fff; border:3px solid #E2E8F0; ' +
-                    'color:#334155; display:flex; align-items:center; justify-content:center; font-weight:900; ' +
+                    'width:36px; height:36px; border-radius:50%; background:var(--bg-card); border:3px solid var(--border); ' +
+                    'color:var(--text); display:flex; align-items:center; justify-content:center; font-weight:900; ' +
                     'font-size:1rem; cursor:pointer; box-shadow:0 6px 16px rgba(0,0,0,0.35); transition:all 0.2s; z-index:100;">?</div>';
             }
         }
@@ -3875,9 +3875,9 @@ function showQuizResults() {
             var icon = isPoll ? 'fa-comment-dots' : (isOA ? 'fa-pen-nib' : (ok ? 'fa-check' : 'fa-times'));
             var scoreText = isPoll ? 'Encuesta' : (isOA ? 'Abierta' : (ok ? ('+' + (ans.puntos_ganados || 0) + ' pts') : '0 pts'));
             
-            rhtml += '<div style="background:#fff; border-left:6px solid '+color+'; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">';
+            rhtml += '<div style="background:var(--bg-card); border-left:6px solid '+color+'; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">';
             rhtml += '<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">';
-            rhtml += '<div style="font-weight:800; color:#1E293B; flex:1; padding-right:16px; font-size:1.1rem;">' + (q+1) + '. ' + (pq.texto||'') + '</div>';
+            rhtml += '<div style="font-weight:800; color:var(--text); flex:1; padding-right:16px; font-size:1.1rem;">' + (q+1) + '. ' + (pq.texto||'') + '</div>';
             rhtml += '<div style="background:'+((isPoll||isOA)?'#F5F3FF':(ok?'#DCFCE7':'#FEE2E2'))+'; color:'+color+'; padding:6px 12px; border-radius:8px; font-weight:800; font-size:0.95rem; white-space:nowrap;"><i class="fas '+icon+'"></i> '+scoreText+'</div>';
             rhtml += '</div>';
 
@@ -3964,7 +3964,7 @@ function showQuizResults() {
                 rhtml += '<div style="font-weight:800; color:' + (fbIsCorrect ? '#166534' : '#DC2626') + '; font-size:0.85rem"><i class="fas fa-' + (fbIsCorrect ? 'check' : 'times') + '-circle"></i> ' + (fbIsCorrect ? '¡Correcto!' : 'Incorrecto') + '</div>';
                 rhtml += '</div>';
                 rhtml += '<div style="font-weight:700; color:#475569; font-size:0.8rem; margin-bottom:2px;">Tu respuesta:</div>';
-                rhtml += '<div style="font-weight:600; color:#1E293B;background:#fff;padding:6px 10px;border-radius:6px;margin-bottom:8px">' + studentAns + '</div>';
+                rhtml += '<div style="font-weight:600; color:var(--text);background:var(--bg-card);padding:6px 10px;border-radius:6px;margin-bottom:8px">' + studentAns + '</div>';
                 rhtml += '<div style="font-weight:700; color:#059669; font-size:0.8rem; margin-bottom:2px;">✅ Respuesta correcta:</div>';
                 rhtml += '<div style="font-weight:700; color:#059669;background:#F0FDF4;padding:6px 10px;border-radius:6px">' + (correctaFb || 'No especificada') + '</div>';
                 rhtml += '</div>';
@@ -4392,18 +4392,18 @@ function loadLibrary() {
                 : '<span style="background:#FEF3C7;color:#92400E;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:700">Borrador</span>';
             var codeHtml = ev.codigo ? '<span style="font-family:monospace;font-size:13px;color:#2563EB;font-weight:700">Código: ' + ev.codigo + '</span>' : '';
             var fecha = new Date(ev.created_at).toLocaleDateString('es-ES', {day:'numeric',month:'short',year:'numeric'});
-            html += '<div style="background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px;margin-bottom:12px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;transition:box-shadow .2s" onmouseover="this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\'" onmouseout="this.style.boxShadow=\'none\'">' +
+            html += '<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:12px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;transition:box-shadow .2s" onmouseover="this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\'" onmouseout="this.style.boxShadow=\'none\'">' +
                 '<div style="flex:1;min-width:200px">' +
                 '<div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:6px">' +
-                '<h3 style="font-size:16px;font-weight:700;color:#1E293B;margin:0">' + (ev.titulo || 'Sin título') + '</h3>' +
+                '<h3 style="font-size:16px;font-weight:700;color:var(--text);margin:0">' + (ev.titulo || 'Sin título') + '</h3>' +
                 statusBadge + '</div>' +
-                '<div style="display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:#64748B">' +
+                '<div style="display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--text-mid)">' +
                 '<span><i class="fas fa-book"></i> ' + (ev.asignatura || 'General') + (ev.tema ? ' - ' + ev.tema : '') + '</span>' +
                 '<span><i class="fas fa-calendar"></i> ' + fecha + '</span>' +
                 codeHtml + '</div></div>' +
                 '<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end">' +
                 '<button onclick="window.location.href=\'editor.html?id=' + ev.id + 
-                '\'" style="padding:8px 14px;background:#F0F1F3;border:1px solid #E2E8F0;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#555"><i class="fas fa-edit"></i> Editar</button>' +
+                '\'" style="padding:8px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:var(--text-mid)"><i class="fas fa-edit"></i> Editar</button>' +
                 (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&results=true\'" style="padding:8px 14px;background:#8B5CF6;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;" title="Resultados en vivo"><i class="fas fa-trophy"></i> Resultados</button>' : '') +
                 (ev.publicado ? '<button onclick="window.location.href=\'editor.html?id=' + ev.id + '&play=true\'" style="padding:8px 14px;background:#2563EB;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;" title="Abrir sala de juego"><i class="fas fa-play"></i> Jugar</button>' : '') +
                 '<button onclick="deleteQuiz(\'' + ev.id + '\', event)" style="padding:8px 14px;background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;color:#DC2626;" title="Borrar"><i class="fas fa-trash-alt"></i></button>' +
@@ -4818,16 +4818,16 @@ function loadReports() {
                 avgPct = Math.round(avgPct / results.length);
                 var barColor = avgPct >= 70 ? '#22C55E' : avgPct >= 40 ? '#F59E0B' : '#EF4444';
 
-                html += '<div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 12px rgba(0,0,0,0.02)">';
+                html += '<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 4px 12px rgba(0,0,0,0.02)">';
                 html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">';
-                html += '<div><h3 style="font-size:18px;font-weight:800;color:#1E293B;margin-bottom:4px;">' + (ev.titulo || 'Sin título') + '</h3>';
-                html += '<span style="font-size:13px;color:#64748B;font-weight:600;"><i class="fas fa-users" style="margin-right:4px;"></i>' + results.length + ' participante(s) • <i class="fas fa-key" style="margin-right:4px;margin-left:8px;"></i>' + (ev.codigo || '-') + '</span></div>';
-                html += '<div style="text-align:right"><span style="font-size:28px;font-weight:900;color:' + barColor + '">' + avgPct + '%</span><br><span style="font-size:11px;color:#94A3B8;font-weight:700;text-transform:uppercase;">Promedio</span></div></div>';
+                html += '<div><h3 style="font-size:18px;font-weight:800;color:var(--text);margin-bottom:4px;">' + (ev.titulo || 'Sin título') + '</h3>';
+                html += '<span style="font-size:13px;color:var(--text-mid);font-weight:600;"><i class="fas fa-users" style="margin-right:4px;"></i>' + results.length + ' participante(s) • <i class="fas fa-key" style="margin-right:4px;margin-left:8px;"></i>' + (ev.codigo || '-') + '</span></div>';
+                html += '<div style="text-align:right"><span style="font-size:28px;font-weight:900;color:' + barColor + '">' + avgPct + '%</span><br><span style="font-size:11px;color:var(--text-mid);font-weight:700;text-transform:uppercase;">Promedio</span></div></div>';
                 
-                html += '<div style="background:#F1F5F9;border-radius:20px;height:10px;margin-bottom:20px;overflow:hidden"><div style="height:100%;width:' + avgPct + '%;background:' + barColor + ';border-radius:20px"></div></div>';
+                html += '<div style="background:var(--bg-card);border-radius:20px;height:10px;margin-bottom:20px;overflow:hidden"><div style="height:100%;width:' + avgPct + '%;background:' + barColor + ';border-radius:20px"></div></div>';
                 
                 html += '<table style="width:100%;border-collapse:collapse;font-size:14px">';
-                html += '<tr style="border-bottom:2px solid #E2E8F0;background:#F8FAFC"><th style="padding:12px;color:#64748B;font-weight:800;width:40px;text-align:center;border-top-left-radius:12px;">#</th><th style="text-align:left;padding:12px;color:#64748B;font-weight:800">Estudiante</th><th style="padding:12px;color:#64748B;font-weight:800;text-align:center">Puntos</th><th style="padding:12px;color:#64748B;font-weight:800;text-align:center;border-top-right-radius:12px;">Precisión</th></tr>';
+                html += '<tr style="border-bottom:2px solid var(--border);background:var(--bg-card)"><th style="padding:12px;color:var(--text-mid);font-weight:800;width:40px;text-align:center;border-top-left-radius:12px;">#</th><th style="text-align:left;padding:12px;color:var(--text-mid);font-weight:800">Estudiante</th><th style="padding:12px;color:var(--text-mid);font-weight:800;text-align:center">Puntos</th><th style="padding:12px;color:var(--text-mid);font-weight:800;text-align:center;border-top-right-radius:12px;">Precisión</th></tr>';
                 
                 for (var m = 0; m < results.length; m++) {
                     var r = results[m];
@@ -4835,15 +4835,15 @@ function loadReports() {
                     var studentName = window.adminReportsNameMap[ev.id + '_' + r.user_id] || (r.user_id ? r.user_id.substring(0, 8) + '...' : 'Anónimo');
                     
                     var rankIcon = (m + 1);
-                    var rankStyle = 'color:#64748B;font-weight:800;';
+                    var rankStyle = 'color:var(--text-mid);font-weight:800;';
                     if (m === 0) { rankIcon = '🥇'; rankStyle = 'font-size:18px;'; }
                     else if (m === 1) { rankIcon = '🥈'; rankStyle = 'font-size:18px;'; }
                     else if (m === 2) { rankIcon = '🥉'; rankStyle = 'font-size:18px;'; }
                     
-                    html += '<tr onclick="openReportDetail(\'' + ev.id + '\', \'' + r.user_id + '\')" style="cursor:pointer;border-bottom:1px solid #F1F5F9;transition:background .2s" onmouseover="this.style.background=\'#F8FAFC\'" onmouseout="this.style.background=\'transparent\'">';
+                    html += '<tr onclick="openReportDetail(\'' + ev.id + '\', \'' + r.user_id + '\')" style="cursor:pointer;border-bottom:1px solid var(--border);transition:background .2s" onmouseover="this.style.background=\'var(--bg-card)\'" onmouseout="this.style.background=\'transparent\'">';
                     html += '<td style="padding:14px 12px;text-align:center;' + rankStyle + '">' + rankIcon + '</td>';
-                    html += '<td style="padding:14px 12px;font-weight:700;color:#334155"><i class="fas fa-user-circle" style="color:#CBD5E1;margin-right:8px;font-size:18px;vertical-align:-2px;"></i>' + studentName + '</td>';
-                    html += '<td style="padding:14px 12px;text-align:center;font-weight:800;color:#475569">' + (r.puntaje || 0).toLocaleString() + ' <span style="color:#94A3B8;font-size:12px;font-weight:600;">pts</span></td>';
+                    html += '<td style="padding:14px 12px;font-weight:700;color:var(--text)"><i class="fas fa-user-circle" style="color:var(--text-mid);margin-right:8px;font-size:18px;vertical-align:-2px;"></i>' + studentName + '</td>';
+                    html += '<td style="padding:14px 12px;text-align:center;font-weight:800;color:var(--text-mid)">' + (r.puntaje || 0).toLocaleString() + ' <span style="color:var(--text-mid);font-size:12px;font-weight:600;">pts</span></td>';
                     html += '<td style="padding:14px 12px;text-align:center;font-weight:900;color:' + pColor + '"><div style="display:inline-block;padding:4px 10px;border-radius:12px;background:' + pColor + '15">' + r.porcentaje + '%</div></td>';
                     html += '</tr>';
                 }
@@ -4962,14 +4962,14 @@ function loadStudentResults() {
                         var hoverCursor = 'cursor:pointer;';
                         var typeTag = '<span style="font-size:10px;background:#EEF2F6;color:#475569;padding:2px 6px;border-radius:4px;font-weight:700;margin-left:6px;">LIVECARD</span>';
 
-                        html += '<div ' + clickHandler + ' style="' + hoverCursor + 'background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:16px;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.02)"' + 
+                        html += '<div ' + clickHandler + ' style="' + hoverCursor + 'background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:16px;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.02)"' + 
                             ' onmouseover="this.style.boxShadow=\'0 6px 20px rgba(0,0,0,0.08)\'; this.style.transform=\'translateY(-2px)\'"' +
                             ' onmouseout="this.style.boxShadow=\'0 2px 8px rgba(0,0,0,0.02)\'; this.style.transform=\'translateY(0)\'"' + '>';
                         html += '<div style="font-size:32px">' + emoji + '</div>';
-                        html += '<div style="flex:1"><h4 style="font-size:15px;font-weight:800;color:#1E293B;margin-bottom:4px;display:flex;align-items:center;flex-wrap:wrap;gap:4px;">' + item.titulo + typeTag + '</h4>';
-                        html += '<span style="font-size:12px;color:#64748B;font-weight:600;"><i class="fas fa-book" style="margin-right:4px;"></i>' + item.materia + (fechaStr ? ' • ' + fechaStr : '') + '</span></div>';
+                        html += '<div style="flex:1"><h4 style="font-size:15px;font-weight:800;color:var(--text);margin-bottom:4px;display:flex;align-items:center;flex-wrap:wrap;gap:4px;">' + item.titulo + typeTag + '</h4>';
+                        html += '<span style="font-size:12px;color:var(--text-mid);font-weight:600;"><i class="fas fa-book" style="margin-right:4px;"></i>' + item.materia + (fechaStr ? ' • ' + fechaStr : '') + '</span></div>';
                         html += '<div style="text-align:right"><span style="font-size:22px;font-weight:900;color:' + barColor + '">' + pct + '%</span>';
-                        html += '<div style="font-size:11px;color:#94A3B8;font-weight:700;margin-top:2px;">' + hits + ' / ' + item.total + ' correctas <span style="font-weight:500;opacity:0.85;">(' + item.puntaje + ' pts)</span></div></div></div>';
+                        html += '<div style="font-size:11px;color:var(--text-mid);font-weight:700;margin-top:2px;">' + hits + ' / ' + item.total + ' correctas <span style="font-weight:500;opacity:0.85;">(' + item.puntaje + ' pts)</span></div></div></div>';
                     }
                     container.innerHTML = html;
                 } catch(ex) {
