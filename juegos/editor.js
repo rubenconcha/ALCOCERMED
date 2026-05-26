@@ -1538,7 +1538,7 @@ function openTeacherResults(isLive){
   loadQuestionReview(evaluacionId);
   if(teacherResultsPoll)clearInterval(teacherResultsPoll);
   if(isLive){
-    teacherResultsPoll=setInterval(pollTeacherResults,5000);
+    teacherResultsPoll=setInterval(pollTeacherResults,2000);
   }
 }
 
@@ -1926,7 +1926,7 @@ function editorAvatarRowHtml(avatarStr, name, size) {
 function pollTeacherResults(){
   if(!evaluacionId)return;
   var client=getSupabase();
-  client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje,respuestas').eq('evaluacion_id',evaluacionId).order('porcentaje',{ascending:false}).order('puntaje',{ascending:false}).then(function(r){
+  client.from('evaluacion_resultados').select('user_id,puntaje,total,porcentaje,respuestas,created_at').eq('evaluacion_id',evaluacionId).order('porcentaje',{ascending:false}).order('puntaje',{ascending:false}).order('created_at',{ascending:false}).then(function(r){
     if(r.error||!r.data){
       document.getElementById('tr-results-list').innerHTML='<div style="padding:40px 24px;text-align:center;color:#F87171;font-size:1rem;font-weight:600"><i class="fas fa-exclamation-triangle" style="font-size:32px;margin-bottom:16px;display:block"></i>Error al cargar los resultados.</div>';
       return;
@@ -1949,9 +1949,12 @@ function pollTeacherResults(){
       var activeResults = [];
       var entries=[];
       var totalPct=0;
+      var seenUsers={};
       for(var k=0;k<r.data.length;k++){
         var userId = r.data[k].user_id;
         if (!nameMap[userId]) continue; // Omitir resultados de sesiones pasadas
+        if (seenUsers[userId]) continue; // Evitar duplicados entre registro parcial y final
+        seenUsers[userId]=true;
         activeResults.push(r.data[k]);
 
         var fullNombre = nameMap[userId];

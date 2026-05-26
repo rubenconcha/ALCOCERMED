@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=71">
+  <link rel="stylesheet" href="styles.css?v=72">
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
@@ -45,7 +45,7 @@
 
     <div class="login-mode-tabs" role="tablist" aria-label="Modo de acceso">
       <button type="button" class="login-mode-tab active" id="login-tab-existing" data-login-mode="existing" role="tab" aria-selected="true">Ya tengo cuenta</button>
-      <button type="button" class="login-mode-tab" id="login-tab-demo" data-login-mode="demo" role="tab" aria-selected="false">Cuenta demo 24h</button>
+      <button type="button" class="login-mode-tab" id="login-tab-demo" data-login-mode="demo" role="tab" aria-selected="false">Cuenta demo</button>
     </div>
 
     <form id="login-form" class="login-form" onsubmit="handleLogin(event)">
@@ -61,7 +61,7 @@
           <i class="fas fa-key"></i> contraseña
         </label>
         <div class="login-input-wrap">
-          <input type="password" id="login-password" class="login-input" required minlength="6" autocomplete="current-password">
+          <input type="password" id="login-password" class="login-input" required minlength="6" maxlength="128" autocomplete="current-password">
           <button type="button" class="login-eye-btn" onclick="togglePasswordVisibility('login-password','login-eye-icon')">
             <i class="fas fa-eye" id="login-eye-icon"></i>
           </button>
@@ -80,7 +80,6 @@
     </form>
 
     <form id="demo-signup-form" class="login-form hidden" onsubmit="handleDemoSignup(event)">
-      <p class="demo-signup-hint"><i class="fas fa-bolt"></i> Crea tu cuenta para el evento. Válida <strong>24 horas</strong>. Aparecerás en el ranking con tu nombre.</p>
       <div class="login-field">
         <label class="login-label" for="demo-full-name"><i class="fas fa-id-card"></i> nombre completo</label>
         <input type="text" id="demo-full-name" class="login-input" required minlength="3" maxlength="64" autocomplete="name" placeholder="Ej. María López">
@@ -88,7 +87,7 @@
       <div class="login-field">
         <label class="login-label" for="demo-password"><i class="fas fa-key"></i> contraseña (mín. 6)</label>
         <div class="login-input-wrap">
-          <input type="password" id="demo-password" class="login-input" required minlength="6" maxlength="48" autocomplete="new-password" placeholder="Elige una que recuerdes">
+          <input type="password" id="demo-password" class="login-input" required minlength="6" maxlength="128" autocomplete="new-password" placeholder="Elige una que recuerdes">
           <button type="button" class="login-eye-btn" onclick="togglePasswordVisibility('demo-password','demo-eye-icon')">
             <i class="fas fa-eye" id="demo-eye-icon"></i>
           </button>
@@ -96,7 +95,7 @@
       </div>
       <div class="login-field">
         <label class="login-label" for="demo-access-code"><i class="fas fa-ticket"></i> código del evento</label>
-        <input type="text" id="demo-access-code" class="login-input" required minlength="4" maxlength="32" autocomplete="off" placeholder="Te lo da tu profesor">
+        <input type="text" id="demo-access-code" class="login-input" required minlength="4" maxlength="64" autocomplete="off" placeholder="Te lo da tu profesor">
       </div>
       <div id="demo-signup-error" class="login-error hidden">
         <i class="fas fa-exclamation-circle"></i>
@@ -109,7 +108,7 @@
       </button>
     </form>
 
-    <p class="login-footer" id="login-footer-text">solo alumnos de la preparatoria Ben Carson</p>
+    <p class="login-footer hidden" id="login-footer-text"></p>
   </div>
 </div>
 
@@ -270,7 +269,7 @@
           </div>
           <p>Tu profesor te dará un código de acceso. Ingrésalo aquí para unirte a la evaluación en vivo.</p>
           <div class="join-input-row">
-            <input type="text" id="join-code-input" class="join-code-input" placeholder="Ej: 483 291" maxlength="10" autocomplete="off">
+            <input type="text" id="join-code-input" class="join-code-input" placeholder="Ej: BENCARSON2026" maxlength="64" autocomplete="off">
             <button class="join-code-btn" onclick="joinByCode()">
               <i class="fas fa-arrow-right"></i> Unirse
             </button>
@@ -307,7 +306,7 @@
         <h2>Código de acceso</h2>
         <p>Pide el código a tu profesor y escríbelo a continuación</p>
         <div class="join-full-input-row">
-          <input type="text" id="join-code-full" class="join-code-full-input" placeholder="Ingresa el código aquí" maxlength="10" autocomplete="off">
+          <input type="text" id="join-code-full" class="join-code-full-input" placeholder="Ingresa el código aquí" maxlength="64" autocomplete="off">
           <button class="join-full-btn" onclick="joinByCodeFull()">
             <i class="fas fa-play"></i> Unirse ahora
           </button>
@@ -805,7 +804,7 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../device_guard.js?v=3"></script>
-<script src="app.js?v=59"></script>
+<script src="app.js?v=63"></script>
 
 <!-- PWA Service Worker Registration -->
 <!-- AVATAR MODAL -->

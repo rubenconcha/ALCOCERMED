@@ -1010,7 +1010,7 @@ function initAuth() {
                 client.auth.signOut();
                 showLogin();
                 setTimeout(function() {
-                    showLoginError('Tu cuenta demo expiró. Crea una nueva en «Cuenta demo 24h» o usa tu cuenta regular.');
+                    showLoginError('Tu cuenta demo expiró. Crea una nueva en «Cuenta demo» o usa tu cuenta regular.');
                     setLoginMode('demo');
                 }, 200);
                 return;
@@ -2796,20 +2796,32 @@ function loadRankingGeneral() {
                 var rankClass = i === 0 ? 'rank-gold' : i === 1 ? 'rank-silver' : i === 2 ? 'rank-bronze' : '';
                 var medalIcon = i < 3 ? '<span style="font-size:1.2rem;">' + medals[i] + '</span>' : '<span style="width:38px;height:38px;border-radius:13px;background:rgba(255,255,255,0.1);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:1rem;">' + s.rank + '</span>';
                 var pctColor = s.bestPct >= 80 ? '#34d399' : s.bestPct >= 50 ? '#fbbf24' : '#f87171';
-                html += '<div class="game-rank-card ' + rankClass + (isMe ? ' is-me-ranking' : '') + '">';
+                html += '<div class="game-rank-card student-stats-trigger ' + rankClass + (isMe ? ' is-me-ranking' : '') + '" data-student-id="' + escapeHtml(s.user_id) + '" data-student-name="' + escapeHtml(s.nombre) + '" data-student-avatar="' + escapeHtml(s.avatar) + '" role="button" tabindex="0" aria-label="Ver estadisticas de ' + escapeHtml(s.nombre) + '">';
                 html += '<div style="min-width:38px;display:flex;align-items:center;justify-content:center;">' + medalIcon + '</div>';
                 html += '<div class="game-rank-avatar">' + avatarMarkup(s.avatar, s.nombre, 'game-rank-avatar-media') + '</div>';
                 html += '<div class="game-rank-info">';
                 html += '<div class="game-rank-name">' + s.nombre + (isMe ? ' <span style="font-size:0.65rem;background:rgba(233,30,99,0.2);color:#f472b6;padding:2px 8px;border-radius:8px;font-weight:700;">TÚ</span>' : '') + '</div>';
                 html += '<div class="game-rank-meta">' + s.total.toLocaleString() + ' pts · ' + s.count + ' evaluaci' + (s.count !== 1 ? 'ones' : 'ón') + ' · <span style="color:' + pctColor + ';font-weight:800;">' + s.bestPct + '%</span> mejor</div>';
                 html += '</div>';
-                html += '<div style="color:rgba(255,255,255,0.3);font-size:0.8rem;"><i class="fas fa-chevron-right"></i></div>';
+                html += '<div class="game-rank-arrow"><i class="fas fa-chevron-right"></i></div>';
                 html += '</div>';
             }
             if (decorated.length === 0) {
                 html = '<div class="empty-state"><i class="fas fa-trophy" style="color:#FFD700"></i><p>Sin datos aún</p><small>El ranking se generará cuando los estudiantes completen evaluaciones.</small></div>';
             }
             listEl.innerHTML = html;
+            var statTriggers = listEl.querySelectorAll('.student-stats-trigger');
+            for (var st = 0; st < statTriggers.length; st++) {
+                statTriggers[st].addEventListener('click', function() {
+                    openStudentGeneralStats(this.getAttribute('data-student-id'), this.getAttribute('data-student-name'), this.getAttribute('data-student-avatar'));
+                });
+                statTriggers[st].addEventListener('keydown', function(ev) {
+                    if (ev.key === 'Enter' || ev.key === ' ') {
+                        ev.preventDefault();
+                        openStudentGeneralStats(this.getAttribute('data-student-id'), this.getAttribute('data-student-name'), this.getAttribute('data-student-avatar'));
+                    }
+                });
+            }
 
             // Resaltar posición propia
             if (myUid) {
@@ -2833,6 +2845,191 @@ function loadRankingGeneral() {
 
 function updateRankingPodium(entries) {
     updateBgPodium('#ranking-podium-showcase', entries);
+}
+
+function parseStoredAnswers(value) {
+    if (Array.isArray(value)) return value;
+    if (!value) return [];
+    if (typeof value === 'string') {
+        try {
+            var parsed = JSON.parse(value);
+            return Array.isArray(parsed) ? parsed : [];
+        } catch(e) {
+            return [];
+        }
+    }
+    return [];
+}
+
+function uniqueValueCount(values) {
+    var seen = {};
+    var count = 0;
+    for (var i = 0; i < values.length; i++) {
+        var key = values[i];
+        if (!key || seen[key]) continue;
+        seen[key] = true;
+        count++;
+    }
+    return count;
+}
+
+function formatStudentStatsDate(value) {
+    if (!value) return 'Sin fecha';
+    try {
+        return new Date(value).toLocaleDateString('es-ES', { day: '2-digit', month: 'short', year: 'numeric' });
+    } catch(e) {
+        return 'Sin fecha';
+    }
+}
+
+function ensureStudentStatsModal() {
+    var modal = document.getElementById('student-stats-modal');
+    if (modal) return modal;
+    var html = '';
+    html += '<div id="student-stats-modal" class="student-stats-modal" onclick="if(event.target===this) closeStudentGeneralStats()">';
+    html += '<div class="student-stats-panel" role="dialog" aria-modal="true" aria-labelledby="student-stats-title">';
+    html += '<button type="button" class="student-stats-close" onclick="closeStudentGeneralStats()" aria-label="Cerrar estadisticas"><i class="fas fa-times"></i></button>';
+    html += '<div id="student-stats-content"></div>';
+    html += '</div>';
+    html += '</div>';
+    document.body.insertAdjacentHTML('beforeend', html);
+    return document.getElementById('student-stats-modal');
+}
+
+function renderStudentStatsMetric(icon, label, value, tone) {
+    return '<div class="student-stats-metric ' + (tone || '') + '">' +
+        '<span class="student-stats-metric-icon"><i class="fas fa-' + icon + '"></i></span>' +
+        '<strong>' + value + '</strong>' +
+        '<small>' + label + '</small>' +
+        '</div>';
+}
+
+function openStudentGeneralStats(userId, displayName, avatarValue) {
+    if (!userId) return;
+    var modal = ensureStudentStatsModal();
+    var content = document.getElementById('student-stats-content');
+    var safeName = displayName || 'Estudiante';
+    var safeAvatar = avatarValue || normalizeAvatarValue('', safeName);
+    modal.classList.add('open');
+    document.body.classList.add('student-stats-open');
+    content.innerHTML = '<div class="student-stats-loading"><i class="fas fa-spinner fa-spin"></i><p>Cargando estadisticas del estudiante...</p></div>';
+
+    var client = getSupabase();
+    if (!client) {
+        content.innerHTML = '<div class="student-stats-empty"><i class="fas fa-exclamation-triangle"></i><p>No hay conexion con la base de datos.</p></div>';
+        return;
+    }
+
+    Promise.all([
+        client.from('evaluacion_resultados').select('id,evaluacion_id,puntaje,total,porcentaje,respuestas,created_at').eq('user_id', userId),
+        client.from('evaluacion_participantes').select('evaluacion_id,user_id,nombre,joined_at').eq('user_id', userId)
+    ]).then(function(all) {
+        var resultsRes = all[0] || {};
+        var participantsRes = all[1] || {};
+        if (resultsRes.error) {
+            content.innerHTML = '<div class="student-stats-empty"><i class="fas fa-exclamation-triangle"></i><p>No se pudieron cargar los resultados.</p></div>';
+            return;
+        }
+
+        var results = resultsRes.data || [];
+        var participants = participantsRes.data || [];
+        var participantName = safeName;
+        if (participants.length && participants[0].nombre) {
+            var parsedName = parseParticipantAvatarName(participants[0].nombre, safeName);
+            participantName = parsedName.nombre || safeName;
+            safeAvatar = parsedName.avatar || safeAvatar;
+        }
+
+        var evalIds = [];
+        var totalPoints = 0;
+        var bestPct = 0;
+        var pctSum = 0;
+        var answeredTotal = 0;
+        var latestDate = '';
+        for (var i = 0; i < results.length; i++) {
+            var row = results[i];
+            evalIds.push(row.evaluacion_id);
+            totalPoints += Number(row.puntaje || 0);
+            var pct = Number(row.porcentaje || 0);
+            pctSum += pct;
+            if (pct > bestPct) bestPct = pct;
+            answeredTotal += parseStoredAnswers(row.respuestas).length;
+            if (row.created_at && (!latestDate || new Date(row.created_at) > new Date(latestDate))) latestDate = row.created_at;
+        }
+
+        var uniqueEvaluations = uniqueValueCount(evalIds);
+        var sessionCount = participants.length || uniqueEvaluations;
+        var avgPct = results.length ? Math.round(pctSum / results.length) : 0;
+        var evalPromise = Promise.resolve({ data: [] });
+        var uniqueEvalIds = [];
+        var evalSeen = {};
+        for (var e = 0; e < evalIds.length; e++) {
+            if (evalIds[e] && !evalSeen[evalIds[e]]) {
+                evalSeen[evalIds[e]] = true;
+                uniqueEvalIds.push(evalIds[e]);
+            }
+        }
+        if (uniqueEvalIds.length) {
+            evalPromise = client.from('evaluaciones').select('id,titulo,asignatura').in('id', uniqueEvalIds);
+        }
+
+        evalPromise.then(function(evRes) {
+            var evalMap = {};
+            if (evRes.data) {
+                for (var j = 0; j < evRes.data.length; j++) {
+                    evalMap[evRes.data[j].id] = evRes.data[j];
+                }
+            }
+
+            results.sort(function(a, b) {
+                return new Date(b.created_at || 0) - new Date(a.created_at || 0);
+            });
+
+            var attemptsHtml = '';
+            var maxAttempts = Math.min(results.length, 8);
+            for (var k = 0; k < maxAttempts; k++) {
+                var attempt = results[k];
+                var ev = evalMap[attempt.evaluacion_id] || {};
+                var attemptPct = Number(attempt.porcentaje || 0);
+                var attemptTone = attemptPct >= 80 ? 'good' : attemptPct >= 50 ? 'mid' : 'low';
+                attemptsHtml += '<div class="student-stats-attempt">';
+                attemptsHtml += '<div><strong>' + escapeHtml(ev.titulo || 'Evaluacion') + '</strong><small>' + escapeHtml(ev.asignatura || 'General') + ' &middot; ' + formatStudentStatsDate(attempt.created_at) + '</small></div>';
+                attemptsHtml += '<div class="student-stats-attempt-score ' + attemptTone + '">' + Number(attempt.puntaje || 0).toLocaleString() + ' pts &middot; ' + attemptPct + '%</div>';
+                attemptsHtml += '</div>';
+            }
+            if (!attemptsHtml) {
+                attemptsHtml = '<div class="student-stats-empty compact"><i class="fas fa-chart-line"></i><p>Aun no tiene intentos registrados.</p></div>';
+            }
+
+            var headerAvatar = avatarMarkup(safeAvatar, participantName, 'student-stats-avatar-media');
+            var html = '';
+            html += '<div class="student-stats-head">';
+            html += '<div class="student-stats-avatar">' + headerAvatar + '</div>';
+            html += '<div><span>Estadisticas generales</span><h2 id="student-stats-title">' + escapeHtml(participantName) + '</h2><p>Resumen acumulado de sus evaluaciones y sesiones.</p></div>';
+            html += '</div>';
+            html += '<div class="student-stats-grid">';
+            html += renderStudentStatsMetric('door-open', 'sesiones registradas', sessionCount.toLocaleString(), 'blue');
+            html += renderStudentStatsMetric('clipboard-check', 'evaluaciones hechas', uniqueEvaluations.toLocaleString(), 'green');
+            html += renderStudentStatsMetric('redo-alt', 'intentos registrados', results.length.toLocaleString(), 'violet');
+            html += renderStudentStatsMetric('star', 'puntos acumulados', totalPoints.toLocaleString(), 'gold');
+            html += renderStudentStatsMetric('bullseye', 'promedio general', avgPct + '%', 'cyan');
+            html += renderStudentStatsMetric('trophy', 'mejor resultado', bestPct + '%', 'orange');
+            html += '</div>';
+            html += '<div class="student-stats-footnote"><i class="fas fa-clock"></i> Ultima actividad: ' + formatStudentStatsDate(latestDate) + ' &middot; Respuestas marcadas: ' + answeredTotal.toLocaleString() + '</div>';
+            html += '<div class="student-stats-section-title"><i class="fas fa-list"></i> Ultimos intentos</div>';
+            html += '<div class="student-stats-attempts">' + attemptsHtml + '</div>';
+            content.innerHTML = html;
+            scheduleAvatarHydration(content);
+        });
+    }).catch(function() {
+        content.innerHTML = '<div class="student-stats-empty"><i class="fas fa-exclamation-triangle"></i><p>Error al cargar estadisticas del estudiante.</p></div>';
+    });
+}
+
+function closeStudentGeneralStats() {
+    var modal = document.getElementById('student-stats-modal');
+    if (modal) modal.classList.remove('open');
+    document.body.classList.remove('student-stats-open');
 }
 
 function updateJugarPodium(entries) {
@@ -3001,6 +3198,7 @@ function startSelfStudy(evalId) {
     if (!client) return;
 
     var code = 'SELF' + Math.random().toString(36).substring(2, 6).toUpperCase();
+    quizLiveResultId = null;
     sessionStorage.setItem('alcocer_quiz_code', code);
     sessionStorage.setItem('alcocer_self_evalid', evalId);
     sessionStorage.removeItem('alcocer_quiz_state_' + code);
@@ -3263,6 +3461,7 @@ function searchAndStartQuiz(code) {
             }
             quizSelectedOption = -1;
             quizConfirmed = false;
+            quizLiveResultId = null;
 
             // Registrar participante en el lobby (upsert para evitar duplicados)
             if (currentUser) {
@@ -3800,6 +3999,7 @@ function startQuestionTimer(seconds) {
             if (!quizConfirmed) {
                 quizConfirmed = true;
                 quizAnswers.push({ pregunta_id: quizData.preguntas[quizCurrentQ].id, seleccionada: -1, correcta: false, puntos_ganados: 0 });
+                syncLiveQuizProgress();
                 
                 var buttons = document.querySelectorAll('.quiz-opt-btn');
                 for(var b=0; b<buttons.length; b++){
@@ -3813,6 +4013,7 @@ function startQuestionTimer(seconds) {
 }
 
 var quizMultiSelections = [];
+var quizLiveResultId = null;
 
 function getQuizQuestionImage(pregunta) {
     var opts = pregunta && pregunta.opciones;
@@ -3838,6 +4039,89 @@ function renderQuizQuestionImageWrap(pregunta, tipo) {
         wrap.hidden = true;
         wrap.innerHTML = '';
     }
+}
+
+function getQuizLiveResultStorageKey(evalId) {
+    if (!currentUser || !evalId) return '';
+    var code = '';
+    try {
+        code = sessionStorage.getItem('alcocer_quiz_code') || '';
+    } catch(e) {}
+    if (!code && quizData && quizData.evaluacion && quizData.evaluacion.codigo) {
+        code = quizData.evaluacion.codigo;
+    }
+    return 'alcocer_live_result_' + evalId + '_' + currentUser.id + '_' + (code || 'default');
+}
+
+function calculateQuizProgressStats() {
+    var correctas = 0;
+    var totalPoints = 0;
+    var totalGradeable = 0;
+    for (var i = 0; i < quizAnswers.length; i++) {
+        var ans = quizAnswers[i];
+        var pq = quizData && quizData.preguntas ? quizData.preguntas.find(function(q) { return q.id === ans.pregunta_id; }) : null;
+        var isExclude = pq ? (pq.tipo === 'oa' || pq.tipo === 'poll' || pq.tipo === 'encuesta') : (ans.correcta === null && ans.es_abierta);
+        if (isExclude) continue;
+        totalGradeable++;
+        if (ans.correcta) correctas++;
+        totalPoints += (ans.puntos_ganados || 0);
+    }
+    return {
+        correctas: correctas,
+        totalPoints: totalPoints,
+        totalGradeable: totalGradeable,
+        pct: totalGradeable > 0 ? Math.round((correctas / totalGradeable) * 100) : 0
+    };
+}
+
+function syncLiveQuizProgress() {
+    if (!currentUser || !quizData || !quizData.evaluacion || quizSessionMode === 'test') return;
+    var evalId = quizData.evaluacion.id;
+    var client = getSupabase();
+    var stats = calculateQuizProgressStats();
+    var payload = {
+        evaluacion_id: evalId,
+        user_id: currentUser.id,
+        puntaje: stats.totalPoints,
+        total: quizData.preguntas ? quizData.preguntas.length : stats.totalGradeable,
+        porcentaje: stats.pct,
+        respuestas: quizAnswers,
+        created_at: new Date().toISOString()
+    };
+    registerEvalParticipant(evalId);
+    var storageKey = getQuizLiveResultStorageKey(evalId);
+    if (!quizLiveResultId) {
+        try { quizLiveResultId = sessionStorage.getItem(storageKey); } catch(e) {}
+    }
+    function updateById(id) {
+        client.from('evaluacion_resultados').update(payload).eq('id', id).then(function(r) {
+            if (r && r.error) quizLiveResultId = null;
+        });
+    }
+    if (quizLiveResultId) {
+        updateById(quizLiveResultId);
+        return;
+    }
+    client.from('evaluacion_resultados').insert(payload).select('id').then(function(r) {
+        if (!r.error && r.data && r.data[0] && r.data[0].id) {
+            quizLiveResultId = r.data[0].id;
+            try { sessionStorage.setItem(storageKey, quizLiveResultId); } catch(e) {}
+            return;
+        }
+        client.from('evaluacion_resultados')
+            .select('id')
+            .eq('evaluacion_id', evalId)
+            .eq('user_id', currentUser.id)
+            .order('created_at', { ascending: false })
+            .limit(1)
+            .then(function(found) {
+                if (found.data && found.data[0] && found.data[0].id) {
+                    quizLiveResultId = found.data[0].id;
+                    try { sessionStorage.setItem(storageKey, quizLiveResultId); } catch(e) {}
+                    updateById(quizLiveResultId);
+                }
+            });
+    });
 }
 
 function renderQuizQuestion() {
@@ -4107,6 +4391,7 @@ function confirmQuizMulti() {
     if (confirmBtn) confirmBtn.style.display = 'none';
 
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: quizMultiSelections, correcta: allCorrect, puntos_ganados: pts });
+    syncLiveQuizProgress();
 
     var timerBar = document.getElementById('quiz-timer-bar');
     if (timerBar) {
@@ -4137,6 +4422,7 @@ function submitQuizOpen() {
         ta.style.color = '#C4B5FD';
         // correcta = null → no suma ni resta al porcentaje; puntos_ganados = 0
         quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: answer, correcta: null, puntos_ganados: 0, es_abierta: true });
+        syncLiveQuizProgress();
         showFeedbackAnimation(null, 0);
         return;
     }
@@ -4169,6 +4455,7 @@ function submitQuizOpen() {
     
     var pts = getQuizPoints(isCorrect, pregunta);
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: answer, correcta: isCorrect, puntos_ganados: pts });
+    syncLiveQuizProgress();
     showFeedbackAnimation(isCorrect, pts);
 }
 window.submitQuizOpen = submitQuizOpen;
@@ -4245,6 +4532,7 @@ function confirmQuizAnswer() {
     if (confirmBtn) confirmBtn.style.display = 'none';
 
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer, puntos_ganados: pts });
+    syncLiveQuizProgress();
 
     showFeedbackAnimation(isCorrectAnswer, pts);
 }
@@ -4318,6 +4606,7 @@ function confirmQuizAnswerInstant(idx) {
     }
 
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: idx, correcta: isCorrectAnswer, puntos_ganados: pts });
+    syncLiveQuizProgress();
 
     var timerBar = document.getElementById('quiz-timer-bar');
     if (timerBar) {
@@ -4373,6 +4662,7 @@ function showQuizResults() {
     var pwBar = document.getElementById('powerup-bar');
     if (pwBar) pwBar.style.display = 'none';
     activePowerup = null;
+    var finishedLiveStorageKey = quizData && quizData.evaluacion ? getQuizLiveResultStorageKey(quizData.evaluacion.id) : '';
     // Limpiar sesión pendiente — el quiz terminó
     sessionStorage.removeItem('alcocer_quiz_code');
     if (quizData && quizData.evaluacion) {
@@ -4564,7 +4854,7 @@ function showQuizResults() {
     if (currentUser) {
         registerEvalParticipant(evalIdForBoard);
         var client = getSupabase();
-        client.from('evaluacion_resultados').insert({
+        var finalPayload = {
             evaluacion_id: evalIdForBoard,
             user_id: currentUser.id,
             puntaje: totalPoints,
@@ -4572,36 +4862,58 @@ function showQuizResults() {
             porcentaje: pct,
             respuestas: quizAnswers,
             created_at: new Date().toISOString()
-        }).then(function(r) {
-            if (r.error) {
-                console.warn('Insert resultado:', r.error.message);
-                if (r.error.message && r.error.message.toLowerCase().includes('row-level security')) {
-                    document.getElementById('quiz-result-breakdown').innerHTML += '<div style="color:red; margin-bottom: 10px;">⚠️ Tu nota no se guardó porque el profesor no ha habilitado los permisos en la base de datos.</div>';
-                }
-                
-                client.from('evaluacion_resultados').update({
-                    puntaje: totalPoints,
-                    total: total,
-                    porcentaje: pct,
-                    respuestas: quizAnswers,
-                    created_at: new Date().toISOString()
-                }).eq('evaluacion_id', evalIdForBoard).eq('user_id', currentUser.id).then(function() {
-                    if (!isTestMode) {
-                        if (isTeamMode) loadTeamLeaderboard(evalIdForBoard);
-                        else loadLeaderboard(evalIdForBoard);
-                    }
-                }).catch(function() {
-                    if (!isTestMode) loadLeaderboard(evalIdForBoard);
-                });
-            } else {
-                if (!isTestMode) {
-                    if (isTeamMode) loadTeamLeaderboard(evalIdForBoard);
-                    else loadLeaderboard(evalIdForBoard);
-                }
+        };
+        function finishResultSave() {
+            if (finishedLiveStorageKey) {
+                try { sessionStorage.removeItem(finishedLiveStorageKey); } catch(e) {}
             }
-        }).catch(function() {
-            if (!isTestMode) loadLeaderboard(evalIdForBoard);
-        });
+            quizLiveResultId = null;
+            if (!isTestMode) {
+                if (isTeamMode) loadTeamLeaderboard(evalIdForBoard);
+                else loadLeaderboard(evalIdForBoard);
+            }
+        }
+        function insertFinalResult() {
+            client.from('evaluacion_resultados').insert(finalPayload).then(function(r) {
+                if (r.error) {
+                    console.warn('Insert resultado:', r.error.message);
+                    client.from('evaluacion_resultados').update(finalPayload).eq('evaluacion_id', evalIdForBoard).eq('user_id', currentUser.id).then(finishResultSave).catch(function() {
+                        if (!isTestMode) loadLeaderboard(evalIdForBoard);
+                    });
+                    return;
+                }
+                finishResultSave();
+            }).catch(function() {
+                if (!isTestMode) loadLeaderboard(evalIdForBoard);
+            });
+        }
+        function updateFinalResultById(id) {
+            client.from('evaluacion_resultados').update(finalPayload).eq('id', id).then(function(r) {
+                if (r.error) {
+                    quizLiveResultId = null;
+                    insertFinalResult();
+                    return;
+                }
+                finishResultSave();
+            }).catch(function() {
+                quizLiveResultId = null;
+                insertFinalResult();
+            });
+        }
+        if (quizLiveResultId) {
+            updateFinalResultById(quizLiveResultId);
+        } else if (finishedLiveStorageKey) {
+            var storedLiveId = null;
+            try { storedLiveId = sessionStorage.getItem(finishedLiveStorageKey); } catch(e) {}
+            if (storedLiveId) {
+                quizLiveResultId = storedLiveId;
+                updateFinalResultById(storedLiveId);
+            } else {
+                insertFinalResult();
+            }
+        } else {
+            insertFinalResult();
+        }
     } else if (!isTestMode) {
         loadLeaderboard(evalIdForBoard);
     }
@@ -6025,6 +6337,7 @@ function confirmQuizDnd() {
     
     var pts = getQuizPoints(allCorrect, pregunta);
     quizAnswers.push({ pregunta_id: pregunta.id, seleccionada: JSON.stringify(quizDndMatches), correcta: allCorrect, puntos_ganados: pts });
+    syncLiveQuizProgress();
     
     var timerBar = document.getElementById('quiz-timer-bar');
     if(timerBar) {
