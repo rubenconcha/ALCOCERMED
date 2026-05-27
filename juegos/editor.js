@@ -49,6 +49,9 @@ var EDITOR_POWERUP_CATS=[
   {id:'divertido',label:'Diversion',hint:'Efectos sorpresa para hacer mas dinamico el demo.'}
 ];
 var gameConfig={maxQuestions:10,questionOrder:[],enabledPowerups:DEFAULT_POWERUP_KEYS.slice()};
+var questionThumbDragIndex=null;
+var questionThumbSuppressClick=false;
+var questionOrderFollowsSidebar=false;
 
 function parseGameConfigFromEval(raw){
   if(!raw)return;
@@ -207,14 +210,90 @@ function renderGameConfigPanel(){
 function resetPlayOrderFromSidebar(){
   gameConfig.questionOrder=[];
   syncGameConfigQuestionIds();
+  questionOrderFollowsSidebar=true;
   renderGameConfigPanel();
 }
 function movePlayOrderItem(idx,delta){
   var arr=gameConfig.questionOrder,ni=idx+delta;
   if(ni<0||ni>=arr.length)return;
   var t=arr[idx];arr[idx]=arr[ni];arr[ni]=t;
+  questionOrderFollowsSidebar=false;
   renderGameConfigPanel();
   markUnsavedChanges();
+}
+function rememberCurrentQuestionText(){
+  if(currentQuestionIndex<0||currentQuestionIndex>=questions.length)return;
+  var inp=document.getElementById('q-text-input');
+  if(inp)questions[currentQuestionIndex].text=inp.value;
+}
+function syncPlayOrderFromQuestions(){
+  var ids=[];
+  for(var i=0;i<questions.length;i++){
+    if(questions[i].dbId)ids.push(questions[i].dbId);
+  }
+  if(ids.length>0)gameConfig.questionOrder=ids;
+}
+function reorderQuestionThumb(fromIdx,toIdx){
+  if(typeof fromIdx!=='number'||typeof toIdx!=='number'||isNaN(fromIdx)||isNaN(toIdx))return;
+  if(fromIdx===toIdx)return;
+  if(fromIdx<0||toIdx<0||fromIdx>=questions.length||toIdx>=questions.length)return;
+  rememberCurrentQuestionText();
+  var activeQuestion=questions[currentQuestionIndex]||null;
+  var moved=questions.splice(fromIdx,1)[0];
+  questions.splice(toIdx,0,moved);
+  currentQuestionIndex=activeQuestion?questions.indexOf(activeQuestion):toIdx;
+  if(currentQuestionIndex<0)currentQuestionIndex=toIdx;
+  syncPlayOrderFromQuestions();
+  questionOrderFollowsSidebar=true;
+  renderQuestionThumbs();
+  renderGameConfigPanel();
+  markUnsavedChanges();
+}
+function clearQuestionThumbDragState(){
+  var nodes=document.querySelectorAll('.q-thumb.dragging,.q-thumb.drag-over');
+  for(var i=0;i<nodes.length;i++){
+    nodes[i].classList.remove('dragging','drag-over');
+  }
+}
+function handleQuestionThumbClick(event,idx){
+  if(questionThumbSuppressClick){
+    if(event){event.preventDefault();event.stopPropagation();}
+    return;
+  }
+  selectQuestion(idx);
+}
+function handleQuestionThumbDragStart(event,idx){
+  questionThumbDragIndex=idx;
+  questionThumbSuppressClick=true;
+  if(event&&event.dataTransfer){
+    event.dataTransfer.effectAllowed='move';
+    event.dataTransfer.setData('text/plain',String(idx));
+  }
+  if(event&&event.currentTarget)event.currentTarget.classList.add('dragging');
+}
+function handleQuestionThumbDragOver(event,idx){
+  if(event)event.preventDefault();
+  if(questionThumbDragIndex===null||questionThumbDragIndex===idx)return;
+  if(event&&event.currentTarget)event.currentTarget.classList.add('drag-over');
+}
+function handleQuestionThumbDragLeave(event){
+  if(event&&event.currentTarget)event.currentTarget.classList.remove('drag-over');
+}
+function handleQuestionThumbDrop(event,idx){
+  if(event){event.preventDefault();event.stopPropagation();}
+  var fromIdx=questionThumbDragIndex;
+  if(event&&event.dataTransfer){
+    var raw=event.dataTransfer.getData('text/plain');
+    if(raw!==''&&!isNaN(Number(raw)))fromIdx=Number(raw);
+  }
+  clearQuestionThumbDragState();
+  questionThumbDragIndex=null;
+  reorderQuestionThumb(fromIdx,idx);
+}
+function handleQuestionThumbDragEnd(event){
+  clearQuestionThumbDragState();
+  questionThumbDragIndex=null;
+  setTimeout(function(){questionThumbSuppressClick=false;},0);
 }
 function toggleEditorPowerup(key){
   var i=gameConfig.enabledPowerups.indexOf(key);
@@ -232,6 +311,12 @@ window.resetPlayOrderFromSidebar=resetPlayOrderFromSidebar;
 window.movePlayOrderItem=movePlayOrderItem;
 window.toggleEditorPowerup=toggleEditorPowerup;
 window.setAllEditorPowerups=setAllEditorPowerups;
+window.handleQuestionThumbClick=handleQuestionThumbClick;
+window.handleQuestionThumbDragStart=handleQuestionThumbDragStart;
+window.handleQuestionThumbDragOver=handleQuestionThumbDragOver;
+window.handleQuestionThumbDragLeave=handleQuestionThumbDragLeave;
+window.handleQuestionThumbDrop=handleQuestionThumbDrop;
+window.handleQuestionThumbDragEnd=handleQuestionThumbDragEnd;
 window.deleteQuestion=deleteQuestion;
 
 // ═══ QUESTION TYPES ═══
@@ -774,10 +859,9 @@ function renderQuestionThumbs(){
   for(var i=0;i<questions.length;i++){
     var q=questions[i];
     var typeColors={mc:'#2E7D32',ms:'#2E7D32',tf:'#C62828',fb:'#1565C0',oa:'#E65100',poll:'#7B1FA2',dnd:'#00838F',cat:'#2E7D32',ro:'#1565C0',mt:'#EF6C00'};
-    html+='<div class="q-thumb '+(i===currentQuestionIndex?'active':'')+'" onclick="selectQuestion('+i+')">'
+    html+='<div class="q-thumb '+(i===currentQuestionIndex?'active':'')+'" draggable="true" onclick="handleQuestionThumbClick(event,'+i+')" ondragstart="handleQuestionThumbDragStart(event,'+i+')" ondragover="handleQuestionThumbDragOver(event,'+i+')" ondragleave="handleQuestionThumbDragLeave(event)" ondrop="handleQuestionThumbDrop(event,'+i+')" ondragend="handleQuestionThumbDragEnd(event)">'
       +'<span>'+(i+1)+'</span>'
       +'<span class="thumb-type" style="background:'+(typeColors[q.type]||'#888')+'">'+(i+1)+'</span>'
-      +'<button type="button" class="q-thumb-delete" title="Eliminar pregunta" onclick="deleteQuestion('+i+',event)"><i class="fas fa-trash-alt"></i></button>'
       +'</div>';
   }
   c.innerHTML=html;
@@ -971,7 +1055,8 @@ function saveEvaluationTransaction(){
   }
 
   function saveGameConfigToDb(done){
-    syncGameConfigQuestionIds();
+    if(questionOrderFollowsSidebar)syncPlayOrderFromQuestions();
+    else syncGameConfigQuestionIds();
     var cfg = collectGameConfigForSave();
     client.from('evaluaciones').update({
       config_juego: cfg,

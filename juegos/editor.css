@@ -88,11 +88,15 @@ body{font-family:'Inter',sans-serif;background:var(--bg-editor);color:var(--text
 
 /* ═══ LEFT SIDEBAR — Question Thumbnails ═══ */
 .question-sidebar{width:64px;background:var(--bg-editor-panel);border-right:1px solid var(--border-editor);display:flex;flex-direction:column;align-items:center;padding:12px 0;gap:8px;overflow-y:auto}
-.q-thumb{width:44px;height:40px;border-radius:8px;background:#F0F1F3;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#555;cursor:pointer;border:2px solid transparent;transition:all .2s;position:relative}
+.q-thumb{width:44px;height:40px;border-radius:8px;background:#F0F1F3;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#555;cursor:grab;border:2px solid transparent;transition:all .2s;position:relative;user-select:none}
+.q-thumb:active{cursor:grabbing}
 .q-thumb:hover{border-color:#CCC}
 .q-thumb.active{border-color:#E91E63;background:#FCE4EC;color:#E91E63}
+.q-thumb.dragging{opacity:.55;transform:scale(.94)}
+.q-thumb.drag-over{border-color:#60A5FA;box-shadow:0 0 0 3px rgba(96,165,250,.24)}
 .q-thumb .thumb-type{position:absolute;top:-3px;right:-3px;width:14px;height:14px;border-radius:50%;font-size:7px;display:flex;align-items:center;justify-content:center;color:#fff}
 .q-thumb-delete {
+  display: none !important;
   position: absolute;
   right: -7px;
   bottom: -7px;
