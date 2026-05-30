@@ -4789,7 +4789,7 @@ body.quiz-focus-mode #quiz-container {
 .quiz-dnd-image-stage .quiz-dnd-image {
     display: block;
     max-width: 100%;
-    max-height: 380px;
+    max-height: min(62vh, 560px);
     width: auto;
     height: auto;
     user-select: none;
@@ -4853,8 +4853,8 @@ body.quiz-focus-mode #quiz-container {
 .quiz-question-image {
     display: block;
     width: auto;
-    max-width: min(100%, 520px);
-    max-height: 320px;
+    max-width: min(100%, 620px);
+    max-height: min(46vh, 380px);
     border-radius: 18px;
     background: #fff;
     object-fit: contain;
@@ -4909,7 +4909,7 @@ body.quiz-focus-mode #quiz-container {
     .quiz-question-image-wrap .quiz-question-image,
     .quiz-question-image {
         max-width: 100%;
-        max-height: min(28vh, 280px);
+        max-height: min(34vh, 300px);
         border-radius: 14px;
     }
 
@@ -4929,7 +4929,7 @@ body.quiz-focus-mode #quiz-container {
     }
 
     .quiz-dnd-image-stage .quiz-dnd-image {
-        max-height: min(34vh, 260px) !important;
+        max-height: min(48vh, 390px) !important;
     }
 
     .quiz-dnd-image-stage .quiz-dnd-anchor {
@@ -5006,7 +5006,7 @@ body.quiz-focus-mode #quiz-container {
 
 @media (max-width: 380px) {
     .quiz-dnd-image-stage .quiz-dnd-image {
-        max-height: 30vh !important;
+        max-height: 44vh !important;
     }
 
     #dnd-labels-container .quiz-dnd-label-btn {
