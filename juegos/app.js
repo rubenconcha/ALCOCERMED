@@ -2288,7 +2288,7 @@ var SUBJECTS = [
     { name: 'EDUCACION PARA LA SALUD', color: '#10B981', emoji: 'ES' }
 ];
 
-var DEMO_ACCESS_ONLY = true;
+var DEMO_ACCESS_ONLY = false;
 
 function normalizeDemoText(value) {
     return String(value || '')
@@ -2325,7 +2325,9 @@ function isDemoEvaluation(ev) {
 }
 
 function canAccessEvaluation(ev) {
-    return isAdmin || !DEMO_ACCESS_ONLY || isDemoEvaluation(ev);
+    if (isAdmin) return true;
+    if (isDemoGuestUser(currentUser)) return isDemoEvaluation(ev);
+    return !DEMO_ACCESS_ONLY || isDemoEvaluation(ev);
 }
 
 /**
@@ -2564,22 +2566,28 @@ function renderSubjectMissions(grid, stats) {
     stats = stats || defaultSubjectStats();
     var counts = stats.counts || {};
     var demoCounts = stats.demoCounts || {};
+    var demoUser = isDemoGuestUser(currentUser);
     var html = '';
     for (var s = 0; s < SUBJECTS.length; s++) {
         var subj = SUBJECTS[s];
         var cnt = counts[subj.name] || 0;
         var demoCnt = demoCounts[subj.name] || 0;
+        var availableCnt = demoUser ? demoCnt : cnt;
+        var lockedCnt = Math.max(0, cnt - availableCnt);
         var missionNo = s + 1;
-        var progress = demoCnt > 0 ? 100 : (cnt > 0 ? 42 : 18);
-        var statusText = demoCnt > 0 ? 'Demo' : (cnt > 0 ? 'Bloqueado' : 'Pronto');
-        var lockClass = demoCnt > 0 ? '' : ' subject-mission-locked';
+        var progress = availableCnt > 0 ? 100 : (cnt > 0 ? 42 : 18);
+        var statusText = availableCnt > 0 ? (demoUser ? 'Demo' : 'Disponible') : (cnt > 0 ? 'Bloqueado' : 'Pronto');
+        var lockClass = availableCnt > 0 ? '' : ' subject-mission-locked';
+        var availabilityText = demoUser
+            ? (demoCnt + ' demo disponible' + (demoCnt !== 1 ? 's' : '') + (lockedCnt > 0 ? ' - ' + lockedCnt + ' con candado' : ''))
+            : (availableCnt + ' evaluacion' + (availableCnt !== 1 ? 'es' : '') + ' disponible' + (availableCnt !== 1 ? 's' : ''));
         html += '<div class="explorar-subject-card subject-mission-card' + lockClass + '" onclick="loadSubjectEvaluations(\'' + subj.name + '\')" style="--subject-color:' + subj.color + '">';
         html += '<div class="mission-shine"></div>';
         html += '<div class="mission-topline"><span>MISION ' + missionNo + '</span><strong>' + statusText + '</strong></div>';
         html += '<div class="mission-main">';
         html += '<div class="mission-orb"><span>' + subj.emoji + '</span></div>';
-        html += '<div class="mission-copy"><h3>' + subj.name + '</h3><p>' + demoCnt + ' demo disponible' + (demoCnt !== 1 ? 's' : '') + (cnt > demoCnt ? ' - ' + (cnt - demoCnt) + ' con candado' : '') + '</p></div>';
-        html += '<div class="mission-play"><i class="fas ' + (demoCnt > 0 ? 'fa-play' : 'fa-lock') + '"></i></div>';
+        html += '<div class="mission-copy"><h3>' + subj.name + '</h3><p>' + availabilityText + '</p></div>';
+        html += '<div class="mission-play"><i class="fas ' + (availableCnt > 0 ? 'fa-play' : 'fa-lock') + '"></i></div>';
         html += '</div>';
         html += '<div class="mission-progress"><span style="width:' + progress + '%"></span></div>';
         html += '</div>';
@@ -3193,7 +3201,7 @@ function loadSubjectEvaluations(subject) {
                 if (isLocked) {
                     html += '<button class="explorar-btn-study explorar-btn-locked" onclick="event.stopPropagation();showLockedDemoNotice()" style="font-size:0.82rem;padding:12px 18px;border-radius:16px;font-weight:800;letter-spacing:0.02em;max-width:220px;line-height:1.25"><i class="fas fa-lock"></i> Suscribete para desbloquear...</button>';
                 } else {
-                    html += '<button class="explorar-btn-study" onclick="event.stopPropagation();startSelfStudy(\'' + ev.id + '\')" style="background:linear-gradient(135deg,' + color + ', ' + adjustColor(color, -20) + ');font-size:0.9rem;padding:14px 32px;border-radius:16px;font-weight:800;letter-spacing:0.5px"><i class="fas fa-play"></i> JUGAR DEMO</button>';
+                    html += '<button class="explorar-btn-study" onclick="event.stopPropagation();startSelfStudy(\'' + ev.id + '\')" style="background:linear-gradient(135deg,' + color + ', ' + adjustColor(color, -20) + ');font-size:0.9rem;padding:14px 32px;border-radius:16px;font-weight:800;letter-spacing:0.5px"><i class="fas fa-play"></i> ' + (isDemo ? 'JUGAR DEMO' : 'JUGAR') + '</button>';
                 }
                 html += '</div>';
             }
