@@ -1,9 +1,9 @@
-const CACHE_NAME = 'alcocermed-juegos-v64';
+const CACHE_NAME = 'alcocermed-juegos-v65';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './styles.css',
-  './styles.css?v=72',
+  './styles.css?v=73',
   './app.js',
   './app.js?v=64',
   './manifest.json',

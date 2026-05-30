@@ -1,4 +1,5 @@
-Guarda aqui las 5 imagenes recortadas del capitulo 13 con estos nombres exactos:
+Imagenes recortadas del capitulo 13 usadas por la evaluacion de Morfofuncion.
+Estos nombres deben mantenerse exactos:
 
 1. cap13_plexo_cervical.png
    Imagen del plexo cervical con C1-C5 y nervio hipogloso.
@@ -16,4 +17,4 @@ Guarda aqui las 5 imagenes recortadas del capitulo 13 con estos nombres exactos:
    Imagen de nervio raquideo con radiculas, raices, ganglio, vasos sanguineos y fasciculo.
 
 Estas rutas son las que usa el SQL:
-./assets/capitulo13-morfo/NOMBRE_DEL_ARCHIVO.png
+/juegos/assets/capitulo13-morfo/NOMBRE_DEL_ARCHIVO.png

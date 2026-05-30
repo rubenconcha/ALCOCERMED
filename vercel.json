@@ -9,6 +9,10 @@
       "destination": "/admin.html"
     },
     {
+      "source": "/juegos",
+      "destination": "/juegos/index.html"
+    },
+    {
       "source": "/juegos/(.*)",
       "destination": "/juegos/index.html"
     },
