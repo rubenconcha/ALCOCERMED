@@ -23,6 +23,7 @@ FROM (
     VALUES
     ('Yhanneth Vargas Mollo', 'yhanneth@prepa.com'),
     ('Maylin Kenia Quispe Vallejos', 'maylin@prepa.com'),
+    ('Maylin Kenia Quispe Vallejos - alternativo', 'maylinquispe@prepa.com'),
     ('Paola Andrea Flores Cruz', 'paolaandrea@prepa.com'),
     ('Stephania Guizada', 'stephania@prepa.com'),
     ('Avril Ara Rocha', 'avril@prepa.com'),
@@ -35,15 +36,18 @@ FROM (
     ('Lia Rojas Rocha', 'lia@prepa.com'),
     ('Mariana Rosario Orellana Ferrufino', 'mariana@prepa.com'),
     ('Liz Gisela Calizaya Poma', 'liz@prepa.com'),
+    ('Liz Gisela Calizaya Poma - alternativo', 'lizgisela@prepa.com'),
     ('Deysi Vasquez Torrico', 'deysi@prepa.com'),
     ('Ahinoa Alexandra Choque Escalera', 'ahinoa@prepa.com'),
     ('Russ Bania Choque Poma', 'russ@prepa.com'),
     ('Jhonatan Jose Vidaurre Nunez', 'jhonatan@prepa.com'),
     ('Paola Ramirez Fernandez', 'paolaramirez@prepa.com'),
     ('Jhina Moreiro Diego', 'jhina@prepa.com'),
+    ('Jhina Moreiro Diego - alternativo', 'jhinamoreiro@prepa.com'),
     ('Luz Neyda Soliz Flores', 'luz@prepa.com'),
     ('Santiago Encinas', 'santiago@prepa.com'),
     ('Camila Solis Candida', 'camilasolis@prepa.com'),
-    ('Camila Solis Candida - alternativo', 'camilacandida@prepa.com')
+    ('Camila Solis Candida - alternativo', 'camilacandida@prepa.com'),
+    ('Camila Solis Candida - alternativo 2', 'camilasoliz@prepa.com')
 ) AS usuarios(estudiante, usuario)
 ORDER BY estudiante;

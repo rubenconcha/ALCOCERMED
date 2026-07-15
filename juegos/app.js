@@ -22,6 +22,7 @@ var VIRTUAL_2026_REGISTRATION = {
     students: {
         'yhanneth@prepa.com': 'Yhanneth Vargas Mollo',
         'maylin@prepa.com': 'Maylin Kenia Quispe Vallejos',
+        'maylinquispe@prepa.com': 'Maylin Kenia Quispe Vallejos',
         'paolaandrea@prepa.com': 'Paola Andrea Flores Cruz',
         'stephania@prepa.com': 'Stephania Guizada',
         'avril@prepa.com': 'Avril Ara Rocha',
@@ -34,16 +35,19 @@ var VIRTUAL_2026_REGISTRATION = {
         'lia@prepa.com': 'Lia Rojas Rocha',
         'mariana@prepa.com': 'Mariana Rosario Orellana Ferrufino',
         'liz@prepa.com': 'Liz Gisela Calizaya Poma',
+        'lizgisela@prepa.com': 'Liz Gisela Calizaya Poma',
         'deysi@prepa.com': 'Deysi Vasquez Torrico',
         'ahinoa@prepa.com': 'Ahinoa Alexandra Choque Escalera',
         'russ@prepa.com': 'Russ Bania Choque Poma',
         'jhonatan@prepa.com': 'Jhonatan Jose Vidaurre Nunez',
         'paolaramirez@prepa.com': 'Paola Ramirez Fernandez',
         'jhina@prepa.com': 'Jhina Moreiro Diego',
+        'jhinamoreiro@prepa.com': 'Jhina Moreiro Diego',
         'luz@prepa.com': 'Luz Neyda Soliz Flores',
         'santiago@prepa.com': 'Santiago Encinas',
         'camilasolis@prepa.com': 'Camila Solis Candida',
-        'camilacandida@prepa.com': 'Camila Solis Candida'
+        'camilacandida@prepa.com': 'Camila Solis Candida',
+        'camilasoliz@prepa.com': 'Camila Solis Candida'
     }
 };
 
