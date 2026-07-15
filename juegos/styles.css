@@ -172,7 +172,7 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
 }
 
 .login-mode-tabs{
-  display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px;
 }
 .login-mode-tab{
   padding:10px 8px;border-radius:12px;border:2px solid #e2e8f0;background:#f8fafc;
@@ -191,6 +191,10 @@ html,body{ height:100%; background:var(--bg); color:var(--text); }
 .login-btn-demo{
   background:linear-gradient(135deg,#059669 0%,#10b981 45%,#34d399 100%) !important;
   box-shadow:0 5px 0 #047857,0 14px 28px rgba(16,185,129,.35) !important;
+}
+.login-btn-virtual{
+  background:linear-gradient(135deg,#2563eb 0%,#4f46e5 45%,#7c3aed 100%) !important;
+  box-shadow:0 5px 0 #3730a3,0 14px 28px rgba(79,70,229,.35) !important;
 }
 .demo-signup-success{
   margin-bottom:12px;padding:14px;border-radius:12px;text-align:left;

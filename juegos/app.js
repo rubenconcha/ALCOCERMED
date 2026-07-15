@@ -16,6 +16,35 @@ var DEMO_EVENT = {
     validityHours: 24
 };
 
+var VIRTUAL_2026_REGISTRATION = {
+    enabled: true,
+    domain: 'prepa.com',
+    students: {
+        'yhanneth@prepa.com': 'Yhanneth Vargas Mollo',
+        'maylin@prepa.com': 'Maylin Kenia Quispe Vallejos',
+        'paolaandrea@prepa.com': 'Paola Andrea Flores Cruz',
+        'stephania@prepa.com': 'Stephania Guizada',
+        'avril@prepa.com': 'Avril Ara Rocha',
+        'camilabelen@prepa.com': 'Camila Belen Adrian Garcia',
+        'abigail@prepa.com': 'Abigail Nataly Barreto Atahuichi',
+        'luiz@prepa.com': 'Luiz Miguel Vallejos Toroya',
+        'daniel@prepa.com': 'Daniel Covarrubias Ortiz',
+        'mary@prepa.com': 'Mary Alejandra Cruz',
+        'lia@prepa.com': 'Lia Rojas Rocha',
+        'mariana@prepa.com': 'Mariana Rosario Orellana Ferrufino',
+        'liz@prepa.com': 'Liz Gisela Calizaya Poma',
+        'deysi@prepa.com': 'Deysi Vasquez Torrico',
+        'ahinoa@prepa.com': 'Ahinoa Alexandra Choque Escalera',
+        'russ@prepa.com': 'Russ Bania Choque Poma',
+        'jhonatan@prepa.com': 'Jhonatan Jose Vidaurre Nunez',
+        'paolaramirez@prepa.com': 'Paola Ramirez Fernandez',
+        'jhina@prepa.com': 'Jhina Moreiro Diego',
+        'luz@prepa.com': 'Luz Neyda Soliz Flores',
+        'santiago@prepa.com': 'Santiago Encinas',
+        'camilasolis@prepa.com': 'Camila Solis Candida'
+    }
+};
+
 var sb = null;
 var currentUser = null;
 var isAdmin = false;
@@ -1264,16 +1293,24 @@ function registerEvalParticipant(evaluacionId) {
 
 function setLoginMode(mode) {
     var existingForm = document.getElementById('login-form');
+    var virtualForm = document.getElementById('virtual-signup-form');
     var demoForm = document.getElementById('demo-signup-form');
     var tabExisting = document.getElementById('login-tab-existing');
+    var tabVirtual = document.getElementById('login-tab-virtual');
     var tabDemo = document.getElementById('login-tab-demo');
     var footer = document.getElementById('login-footer-text');
     var isDemo = mode === 'demo';
-    if (existingForm) existingForm.classList.toggle('hidden', isDemo);
+    var isVirtual = mode === 'virtual';
+    if (existingForm) existingForm.classList.toggle('hidden', isDemo || isVirtual);
+    if (virtualForm) virtualForm.classList.toggle('hidden', !isVirtual);
     if (demoForm) demoForm.classList.toggle('hidden', !isDemo);
     if (tabExisting) {
-        tabExisting.classList.toggle('active', !isDemo);
-        tabExisting.setAttribute('aria-selected', !isDemo ? 'true' : 'false');
+        tabExisting.classList.toggle('active', !isDemo && !isVirtual);
+        tabExisting.setAttribute('aria-selected', (!isDemo && !isVirtual) ? 'true' : 'false');
+    }
+    if (tabVirtual) {
+        tabVirtual.classList.toggle('active', isVirtual);
+        tabVirtual.setAttribute('aria-selected', isVirtual ? 'true' : 'false');
     }
     if (tabDemo) {
         tabDemo.classList.toggle('active', isDemo);
@@ -1284,9 +1321,154 @@ function setLoginMode(mode) {
             ? 'Cuenta temporal solo para el evento demo · Prepa Ben Carson'
             : 'solo alumnos de la preparatoria Ben Carson';
     }
+    if (isVirtual && footer) footer.textContent = 'usa tu usuario @prepa.com y crea tu propia contrasena';
     hideLoginError();
+    hideVirtualSignupError();
     hideDemoSignupError();
 }
+
+function normalizeVirtualEmail(email) {
+    return String(email || '').trim().toLowerCase();
+}
+
+function getVirtualStudentName(email) {
+    return VIRTUAL_2026_REGISTRATION.students[normalizeVirtualEmail(email)] || '';
+}
+
+function showVirtualSignupError(msg) {
+    var el = document.getElementById('virtual-signup-error');
+    var txt = document.getElementById('virtual-signup-error-text');
+    var ok = document.getElementById('virtual-signup-success');
+    if (ok) ok.classList.add('hidden');
+    if (el) el.classList.remove('hidden');
+    if (txt) txt.textContent = msg;
+}
+
+function hideVirtualSignupError() {
+    var el = document.getElementById('virtual-signup-error');
+    if (el) el.classList.add('hidden');
+}
+
+function showVirtualSignupSuccess(html) {
+    var el = document.getElementById('virtual-signup-success');
+    hideVirtualSignupError();
+    if (el) {
+        el.innerHTML = html;
+        el.classList.remove('hidden');
+    }
+}
+
+function setVirtualSignupLoading(loading) {
+    var btn = document.getElementById('virtual-signup-btn');
+    var txt = document.getElementById('virtual-signup-btn-text');
+    var load = document.getElementById('virtual-signup-btn-loading');
+    if (!btn) return;
+    btn.disabled = loading;
+    if (txt) txt.style.display = loading ? 'none' : '';
+    if (load) load.classList.toggle('hidden', !loading);
+}
+
+function finishVirtualSignupLogin(user, email, fullName) {
+    setVirtualSignupLoading(false);
+    if (!user) {
+        showVirtualSignupError('Cuenta creada, pero Supabase no inicio sesion. Entra en "Ya tengo cuenta" con: ' + email);
+        return;
+    }
+    currentUser = user;
+    try {
+        localStorage.setItem('alcocermed_virtual_last_email', email);
+        localStorage.setItem('alcocermed_virtual_last_name', fullName);
+    } catch (ignore) {}
+    showVirtualSignupSuccess(
+        '<p><strong>Cuenta lista, ' + escapeHtml(fullName) + '.</strong></p>' +
+        '<p style="margin-top:8px;font-size:0.82rem">Usuario: <code style="word-break:break-all">' + escapeHtml(email) + '</code></p>' +
+        '<p style="margin-top:6px;font-size:0.78rem;color:#64748b">Guarda tu contrasena; la eliges tu y no la ve el profesor.</p>'
+    );
+    setTimeout(function() { enterApp(); }, 900);
+}
+
+function handleVirtualSignup(e) {
+    if (e) e.preventDefault();
+    if (!VIRTUAL_2026_REGISTRATION.enabled) {
+        showVirtualSignupError('El registro virtual 2026 no esta activo.');
+        return;
+    }
+    hideVirtualSignupError();
+    var emailEl = document.getElementById('virtual-email');
+    var passEl = document.getElementById('virtual-password');
+    var email = normalizeVirtualEmail(emailEl && emailEl.value);
+    var password = passEl ? passEl.value : '';
+    var fullName = getVirtualStudentName(email);
+
+    if (!email || email.indexOf('@') === -1) {
+        showVirtualSignupError('Escribe tu usuario asignado. Ejemplo: yhanneth@prepa.com');
+        return;
+    }
+    if (!fullName) {
+        showVirtualSignupError('Ese usuario no esta en la lista virtual 2026. Revisa que este escrito igual al usuario asignado.');
+        return;
+    }
+    if (password.length < 6) {
+        showVirtualSignupError('La contrasena debe tener al menos 6 caracteres.');
+        return;
+    }
+
+    var client = getSupabase();
+    if (!client) {
+        showVirtualSignupError('No hay conexion con el servidor. Recarga la pagina.');
+        return;
+    }
+
+    setVirtualSignupLoading(true);
+    client.auth.signUp({
+        email: email,
+        password: password,
+        options: {
+            data: {
+                full_name: fullName,
+                lista: 'virtual 2026',
+                virtual_2026: true,
+                role: 'student'
+            }
+        }
+    }).then(function(result) {
+        if (result.error) {
+            setVirtualSignupLoading(false);
+            var err = result.error.message || '';
+            if (err.indexOf('already registered') !== -1 || err.indexOf('already been registered') !== -1 || err.indexOf('User already registered') !== -1) {
+                showVirtualSignupError('Ese usuario ya fue registrado. Entra en "Ya tengo cuenta" con tu contrasena.');
+            } else if (err.indexOf('Signups not allowed') !== -1) {
+                showVirtualSignupError('El registro no esta habilitado en Supabase. Activa Auth > Providers > Email > Enable sign ups.');
+            } else {
+                showVirtualSignupError(err || 'No se pudo crear la cuenta.');
+            }
+            return;
+        }
+
+        if (result.data && result.data.session && result.data.user) {
+            finishVirtualSignupLogin(result.data.user, email, fullName);
+            return;
+        }
+
+        client.auth.signInWithPassword({ email: email, password: password }).then(function(signInRes) {
+            if (signInRes.error || !signInRes.data || !signInRes.data.user) {
+                setVirtualSignupLoading(false);
+                showVirtualSignupSuccess(
+                    '<p><strong>Cuenta creada.</strong></p>' +
+                    '<p style="margin-top:8px">Si no puede entrar, desactiva la confirmacion por email en Supabase porque estos usuarios @prepa.com son internos.</p>' +
+                    '<p style="margin-top:6px"><code style="word-break:break-all">' + escapeHtml(email) + '</code></p>'
+                );
+                return;
+            }
+            finishVirtualSignupLogin(signInRes.data.user, email, fullName);
+        });
+    }).catch(function(err) {
+        setVirtualSignupLoading(false);
+        showVirtualSignupError('Error de conexion. Intenta de nuevo.');
+        console.error(err);
+    });
+}
+window.handleVirtualSignup = handleVirtualSignup;
 
 function showDemoSignupError(msg) {
     var el = document.getElementById('demo-signup-error');
@@ -1436,8 +1618,14 @@ function initLoginScreenUi() {
     }
     try {
         var params = new URLSearchParams(window.location.search);
-        if (params.get('demo') === '1' || params.get('registro') === '1') {
+        if (params.get('virtual') === '1' || params.get('registro') === 'virtual') {
+            setLoginMode('virtual');
+        } else if (params.get('demo') === '1' || params.get('registro') === '1') {
             setLoginMode('demo');
+        }
+        var lastVirtualEmail = localStorage.getItem('alcocermed_virtual_last_email');
+        if (lastVirtualEmail && document.getElementById('virtual-email')) {
+            document.getElementById('virtual-email').value = lastVirtualEmail;
         }
         var lastEmail = localStorage.getItem('alcocermed_demo_last_email');
         if (lastEmail && document.getElementById('login-email')) {

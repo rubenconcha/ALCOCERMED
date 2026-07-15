@@ -45,6 +45,7 @@
 
     <div class="login-mode-tabs" role="tablist" aria-label="Modo de acceso">
       <button type="button" class="login-mode-tab active" id="login-tab-existing" data-login-mode="existing" role="tab" aria-selected="true">Ya tengo cuenta</button>
+      <button type="button" class="login-mode-tab" id="login-tab-virtual" data-login-mode="virtual" role="tab" aria-selected="false">Registro 2026</button>
       <button type="button" class="login-mode-tab" id="login-tab-demo" data-login-mode="demo" role="tab" aria-selected="false">Cuenta demo</button>
     </div>
 
@@ -76,6 +77,31 @@
       <button type="submit" id="login-btn" class="login-btn">
         <span id="login-btn-text">¡Vamos! <span aria-hidden="true">⚡</span></span>
         <span id="login-btn-loading" class="hidden"><i class="fas fa-spinner fa-spin"></i></span>
+      </button>
+    </form>
+
+    <form id="virtual-signup-form" class="login-form hidden" onsubmit="handleVirtualSignup(event)">
+      <div class="login-field">
+        <label class="login-label" for="virtual-email"><i class="fas fa-envelope"></i> usuario asignado</label>
+        <input type="email" id="virtual-email" class="login-input" required autocomplete="username" inputmode="email" placeholder="ej. yhanneth@prepa.com">
+      </div>
+      <div class="login-field">
+        <label class="login-label" for="virtual-password"><i class="fas fa-key"></i> crea tu contrasena (min. 6)</label>
+        <div class="login-input-wrap">
+          <input type="password" id="virtual-password" class="login-input" required minlength="6" maxlength="128" autocomplete="new-password" placeholder="Elige una que recuerdes">
+          <button type="button" class="login-eye-btn" onclick="togglePasswordVisibility('virtual-password','virtual-eye-icon')">
+            <i class="fas fa-eye" id="virtual-eye-icon"></i>
+          </button>
+        </div>
+      </div>
+      <div id="virtual-signup-error" class="login-error hidden">
+        <i class="fas fa-exclamation-circle"></i>
+        <span id="virtual-signup-error-text"></span>
+      </div>
+      <div id="virtual-signup-success" class="demo-signup-success hidden"></div>
+      <button type="submit" id="virtual-signup-btn" class="login-btn login-btn-virtual">
+        <span id="virtual-signup-btn-text">Crear mi cuenta</span>
+        <span id="virtual-signup-btn-loading" class="hidden"><i class="fas fa-spinner fa-spin"></i></span>
       </button>
     </form>
 
