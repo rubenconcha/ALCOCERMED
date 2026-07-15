@@ -145,7 +145,7 @@ insert into public.evaluacion_preguntas (
   'Selecciona aportes historicos que impulsaron la medicina moderna.',
   $$[
     {"text":"Vesalius realizo disecciones y publico ilustraciones anatomicas exactas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_05.png"},
-    {"text":"Hooke y Leeuwenhoek abrieron el estudio microscopico de la vida","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_06.png"},
+    {"text":"Hooke y Leeuwenhoek abrieron el estudio microscopico de la vida","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_05.png"},
     {"text":"La tradicion dogmatica de no cuestionar libros antiguos acelero la ciencia","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_05.png"},
     {"text":"La observacion directa ayudo a corregir errores anatomicos heredados","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_05.png"},
     {"text":"La diseccion humana nunca fue importante para la anatomia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_05.png"}
@@ -351,8 +351,8 @@ insert into public.evaluacion_preguntas (
   'dnd',
   'Relaciona los huesos del antebrazo senalados en la imagen.',
   $$[
-    {"text":"Radio","correct":true,"color":"ac-blue","pinX":28,"pinY":46,"pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_antebrazo_radio_cubito.png"},
-    {"text":"Cubito","correct":true,"color":"ac-green","pinX":43,"pinY":47,"pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_antebrazo_radio_cubito.png"}
+    {"text":"Radio","correct":true,"color":"ac-blue","pinX":70,"pinY":42,"pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_antebrazo_radio_cubito.png"},
+    {"text":"Cubito","correct":true,"color":"ac-green","pinX":68,"pinY":56,"pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_antebrazo_radio_cubito.png"}
   ]$$::jsonb,
   false,
   17,

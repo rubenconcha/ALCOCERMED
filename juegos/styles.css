@@ -5016,6 +5016,213 @@ body.quiz-focus-mode #quiz-container {
     }
 }
 
+/* DND v2: layout compacto para relacionar imagen + etiquetas. */
+.quiz-options-grid.quiz-options-dnd {
+    display: block !important;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 0 18px;
+}
+
+.quiz-dnd-builder {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 12px !important;
+}
+
+.quiz-dnd-prompt {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: 900;
+    text-align: center;
+    background: rgba(0,0,0,0.34);
+    padding: 9px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.quiz-dnd-prompt i {
+    color: #A78BFA;
+    margin-right: 8px;
+}
+
+.quiz-dnd-workspace {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(220px, max-content) minmax(240px, 320px);
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-dnd-map-shell {
+    justify-self: center;
+    min-width: 0;
+    max-width: 100%;
+    background: #fff !important;
+    border: 2px solid rgba(255,255,255,0.22) !important;
+    border-radius: 16px !important;
+    padding: 8px !important;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.36) !important;
+}
+
+.quiz-dnd-image-stage {
+    max-width: 100%;
+    background: #fff;
+}
+
+.quiz-dnd-image-stage .quiz-dnd-image {
+    max-width: min(100%, 680px) !important;
+    max-height: min(58vh, 590px) !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.quiz-dnd-side-panel {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+.quiz-dnd-labels-container {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 10px !important;
+    margin: 0 !important;
+}
+
+#dnd-labels-container .quiz-dnd-label-btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px !important;
+    border: none !important;
+    border-radius: 12px !important;
+    background: var(--dnd-label-bg, #2563EB) !important;
+    color: #fff !important;
+    text-align: left !important;
+    font-size: 0.98rem !important;
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+    cursor: pointer;
+    transition: transform .12s, filter .18s, box-shadow .18s !important;
+    box-shadow: inset 0 -4px 0 rgba(0,0,0,0.22), 0 5px 12px rgba(0,0,0,0.25) !important;
+}
+
+.quiz-dnd-submit {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 18px;
+    background: #94A3B8;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.05rem;
+    font-weight: 900;
+    cursor: not-allowed;
+    box-shadow: 0 6px 0 #64748B;
+    transition: background .18s, box-shadow .18s, transform .12s;
+}
+
+@media (min-width: 769px) {
+    .quiz-dnd-builder {
+        margin-top: -4px;
+    }
+
+    .quiz-dnd-side-panel {
+        position: sticky;
+        top: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .quiz-options-grid.quiz-options-dnd {
+        padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    .quiz-dnd-builder {
+        gap: 9px !important;
+    }
+
+    .quiz-dnd-prompt {
+        width: 100%;
+        padding: 8px 10px !important;
+        font-size: 0.86rem !important;
+        line-height: 1.22 !important;
+    }
+
+    .quiz-dnd-workspace {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    #dnd-student-container.quiz-dnd-map-shell {
+        width: fit-content !important;
+        max-width: 100% !important;
+        padding: 5px !important;
+        border-width: 2px !important;
+        border-radius: 12px !important;
+    }
+
+    .quiz-dnd-image-stage .quiz-dnd-image {
+        max-width: 100% !important;
+        max-height: min(48svh, 410px) !important;
+    }
+
+    .quiz-dnd-side-panel {
+        gap: 9px;
+    }
+
+    #dnd-labels-container.quiz-dnd-labels-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        width: 100%;
+    }
+
+    #dnd-labels-container .quiz-dnd-label-btn {
+        min-height: 42px !important;
+        padding: 9px 10px !important;
+        font-size: 0.84rem !important;
+        text-align: center !important;
+        word-break: normal;
+        overflow-wrap: anywhere;
+    }
+
+    #quiz-confirm-dnd.quiz-dnd-submit {
+        min-height: 46px;
+        padding: 12px 14px !important;
+        font-size: 0.98rem !important;
+        position: sticky;
+        bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+        z-index: 25;
+    }
+}
+
+@media (max-width: 390px) {
+    .quiz-dnd-image-stage .quiz-dnd-image {
+        max-height: min(43svh, 360px) !important;
+    }
+
+    #dnd-labels-container .quiz-dnd-label-btn {
+        min-height: 40px !important;
+        padding: 8px 8px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
 /* Selector de avatar en carrusel horizontal, uno por uno. */
 .avatar-modal-panel {
     overflow: hidden;

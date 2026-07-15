@@ -4266,37 +4266,33 @@ function renderQuizQuestion() {
         quizSelectedDndSlot = -1;
         quizDndMatches = {};
         
-        html += '<div class="quiz-dnd-builder" style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">';
-        html += '  <p style="color:#fff; font-size:1.1rem; font-weight:800; text-align:center; background:rgba(0,0,0,0.3); padding:10px 20px; border-radius:12px; border:1px solid rgba(255,255,255,0.1);"><i class="fas fa-link" style="color:#A78BFA; margin-right:8px;"></i> Relaciona las partes: toca una etiqueta y su círculo (o viceversa).</p>';
-        
-        html += '  <div id="dnd-student-container" class="quiz-dnd-map-shell">';
-        html += '    <div class="quiz-dnd-image-stage">';
-        html += '      <img class="quiz-dnd-image" src="' + escapeHtml(imgUrl) + '" alt="Imagen de la pregunta">';
+        html += '<div class="quiz-dnd-builder">';
+        html += '  <p class="quiz-dnd-prompt"><i class="fas fa-link"></i> Relaciona: toca una etiqueta y luego su circulo.</p>';
+        html += '  <div class="quiz-dnd-workspace">';
+        html += '    <div id="dnd-student-container" class="quiz-dnd-map-shell">';
+        html += '      <div class="quiz-dnd-image-stage">';
+        html += '        <img class="quiz-dnd-image" src="' + escapeHtml(imgUrl) + '" alt="Imagen de la pregunta">';
         for (var i = 0; i < opciones.length; i++) {
             var o = opciones[i];
             if (o.pinX !== undefined && o.pinY !== undefined) {
-                html += '      <div class="quiz-dnd-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';"></div>';
-                html += '      <div class="quiz-dnd-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';"></div>';
-                html += '      <div class="quiz-dnd-slot" id="dnd-slot-' + i + '" data-idx="' + i + '" onclick="clickDndSlot(' + i + ')" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';">?</div>';
+                html += '        <div class="quiz-dnd-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';"></div>';
+                html += '        <div class="quiz-dnd-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';"></div>';
+                html += '        <div class="quiz-dnd-slot" id="dnd-slot-' + i + '" data-idx="' + i + '" onclick="clickDndSlot(' + i + ')" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';">?</div>';
             }
         }
+        html += '      </div>';
         html += '    </div>';
-        html += '  </div>';
-        
-        html += '  <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:12px;" id="dnd-labels-container">';
+        html += '    <div class="quiz-dnd-side-panel">';
+        html += '      <div id="dnd-labels-container" class="quiz-dnd-labels-container">';
         for (var j = 0; j < opciones.length; j++) {
             var bgColor = optColors[j % optColors.length];
-            html += '    <button class="quiz-opt-btn quiz-dnd-label-btn" id="dnd-label-' + j + '" data-idx="' + j + '" onclick="clickDndLabel(' + j + ')" ' +
-                'style="padding:16px 20px; border:none; border-radius:12px; background:' + bgColor + '; color:#fff; text-align:center; ' +
-                'font-size:1.05rem; font-weight:800; cursor:pointer; transition:all 0.2s; box-shadow:inset 0 -4px 0 rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.2);">' +
+            html += '        <button class="quiz-opt-btn quiz-dnd-label-btn" id="dnd-label-' + j + '" data-idx="' + j + '" onclick="clickDndLabel(' + j + ')" style="--dnd-label-bg:' + bgColor + ';">' +
                 String.fromCharCode(65 + j) + '. ' + (opciones[j].text || '') + '</button>';
         }
+        html += '      </div>';
+        html += '      <button id="quiz-confirm-dnd" class="quiz-dnd-submit" onclick="confirmQuizDnd()" disabled>Enviar respuestas</button>';
+        html += '    </div>';
         html += '  </div>';
-        
-        html += '  <button id="quiz-confirm-dnd" onclick="confirmQuizDnd()" disabled style="margin-top:16px; padding:16px 32px; ' +
-            'background:#94A3B8; color:#fff; border:none; border-radius:14px; font-weight:800; cursor:not-allowed; font-size:1.2rem; box-shadow:0 6px 0 #64748B; width:100%; transition:all 0.2s;">' +
-            '✓ Enviar respuestas</button>';
-        
         html += '</div>';
     }
     // Multiple selection
