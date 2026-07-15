@@ -26,6 +26,7 @@ var VIRTUAL_2026_REGISTRATION = {
         'stephania@prepa.com': 'Stephania Guizada',
         'avril@prepa.com': 'Avril Ara Rocha',
         'camilabelen@prepa.com': 'Camila Belen Adrian Garcia',
+        'camilaadrian@prepa.com': 'Camila Belen Adrian Garcia',
         'abigail@prepa.com': 'Abigail Nataly Barreto Atahuichi',
         'luiz@prepa.com': 'Luiz Miguel Vallejos Toroya',
         'daniel@prepa.com': 'Daniel Covarrubias Ortiz',
@@ -41,7 +42,8 @@ var VIRTUAL_2026_REGISTRATION = {
         'jhina@prepa.com': 'Jhina Moreiro Diego',
         'luz@prepa.com': 'Luz Neyda Soliz Flores',
         'santiago@prepa.com': 'Santiago Encinas',
-        'camilasolis@prepa.com': 'Camila Solis Candida'
+        'camilasolis@prepa.com': 'Camila Solis Candida',
+        'camilacandida@prepa.com': 'Camila Solis Candida'
     }
 };
 

@@ -27,6 +27,7 @@ FROM (
     ('Stephania Guizada', 'stephania@prepa.com'),
     ('Avril Ara Rocha', 'avril@prepa.com'),
     ('Camila Belen Adrian Garcia', 'camilabelen@prepa.com'),
+    ('Camila Belen Adrian Garcia - alternativo', 'camilaadrian@prepa.com'),
     ('Abigail Nataly Barreto Atahuichi', 'abigail@prepa.com'),
     ('Luiz Miguel Vallejos Toroya', 'luiz@prepa.com'),
     ('Daniel Covarrubias Ortiz', 'daniel@prepa.com'),
@@ -42,6 +43,7 @@ FROM (
     ('Jhina Moreiro Diego', 'jhina@prepa.com'),
     ('Luz Neyda Soliz Flores', 'luz@prepa.com'),
     ('Santiago Encinas', 'santiago@prepa.com'),
-    ('Camila Solis Candida', 'camilasolis@prepa.com')
+    ('Camila Solis Candida', 'camilasolis@prepa.com'),
+    ('Camila Solis Candida - alternativo', 'camilacandida@prepa.com')
 ) AS usuarios(estudiante, usuario)
 ORDER BY estudiante;
