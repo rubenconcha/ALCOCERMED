@@ -79,10 +79,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'Segun el tema 1, la anatomia se ocupa principalmente de:',
   $$[
-    {"text":"La forma y estructura del cuerpo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"},
-    {"text":"La funcion experimental de los organos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"},
-    {"text":"El tratamiento farmacologico de enfermedades","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"},
-    {"text":"La composicion quimica de los alimentos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"}
+    {"text":"La forma y estructura del cuerpo","correct":true,"color":"ac-blue"},
+    {"text":"La funcion experimental de los organos","correct":false,"color":"ac-teal"},
+    {"text":"El tratamiento farmacologico de enfermedades","correct":false,"color":"ac-yellow"},
+    {"text":"La composicion quimica de los alimentos","correct":false,"color":"ac-pink"}
   ]$$::jsonb,
   false,
   0,
@@ -95,10 +95,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'La fisiologia estudia sobre todo:',
   $$[
-    {"text":"La funcion corporal y sus mecanismos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"},
-    {"text":"Solo nombres de regiones externas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"},
-    {"text":"Solo la diseccion de cadaveres","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"},
-    {"text":"La clasificacion comercial de equipos medicos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"}
+    {"text":"La funcion corporal y sus mecanismos","correct":true,"color":"ac-blue"},
+    {"text":"Solo nombres de regiones externas","correct":false,"color":"ac-teal"},
+    {"text":"Solo la diseccion de cadaveres","correct":false,"color":"ac-yellow"},
+    {"text":"La clasificacion comercial de equipos medicos","correct":false,"color":"ac-pink"}
   ]$$::jsonb,
   false,
   1,
@@ -111,10 +111,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'La radiologia es relevante porque permite:',
   $$[
-    {"text":"Ver el interior del cuerpo sin cirugia exploratoria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_23.png"},
-    {"text":"Reemplazar toda exploracion microscopica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_23.png"},
-    {"text":"Observar solo celulas individuales vivas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_23.png"},
-    {"text":"Evitar cualquier necesidad de diagnostico clinico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_23.png"}
+    {"text":"Ver el interior del cuerpo sin cirugia exploratoria","correct":true,"color":"ac-blue"},
+    {"text":"Reemplazar toda exploracion microscopica","correct":false,"color":"ac-teal"},
+    {"text":"Observar solo celulas individuales vivas","correct":false,"color":"ac-yellow"},
+    {"text":"Evitar cualquier necesidad de diagnostico clinico","correct":false,"color":"ac-pink"}
   ]$$::jsonb,
   false,
   2,
@@ -127,11 +127,11 @@ insert into public.evaluacion_preguntas (
   'ms',
   'Selecciona campos relacionados con el estudio microscopico descrito en el tema.',
   $$[
-    {"text":"Histologia","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"},
-    {"text":"Citologia","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"},
-    {"text":"Ultraestructura","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"},
-    {"text":"Astrologia zodiacal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"},
-    {"text":"Topografia comercial","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_03.png"}
+    {"text":"Histologia","correct":true,"color":"ac-blue"},
+    {"text":"Citologia","correct":true,"color":"ac-teal"},
+    {"text":"Ultraestructura","correct":true,"color":"ac-yellow"},
+    {"text":"Astrologia zodiacal","correct":false,"color":"ac-pink"},
+    {"text":"Topografia comercial","correct":false,"color":"ac-purple"}
   ]$$::jsonb,
   true,
   3,
@@ -144,11 +144,11 @@ insert into public.evaluacion_preguntas (
   'ms',
   'Selecciona aportes historicos que impulsaron la medicina moderna.',
   $$[
-    {"text":"Vesalius realizo disecciones y publico ilustraciones anatomicas exactas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_05.png"},
-    {"text":"Hooke y Leeuwenhoek abrieron el estudio microscopico de la vida","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_05.png"},
-    {"text":"La tradicion dogmatica de no cuestionar libros antiguos acelero la ciencia","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_05.png"},
-    {"text":"La observacion directa ayudo a corregir errores anatomicos heredados","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_05.png"},
-    {"text":"La diseccion humana nunca fue importante para la anatomia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_05.png"}
+    {"text":"Vesalius realizo disecciones y publico ilustraciones anatomicas exactas","correct":true,"color":"ac-blue"},
+    {"text":"Hooke y Leeuwenhoek abrieron el estudio microscopico de la vida","correct":true,"color":"ac-teal"},
+    {"text":"La tradicion dogmatica de no cuestionar libros antiguos acelero la ciencia","correct":false,"color":"ac-yellow"},
+    {"text":"La observacion directa ayudo a corregir errores anatomicos heredados","correct":true,"color":"ac-pink"},
+    {"text":"La diseccion humana nunca fue importante para la anatomia","correct":false,"color":"ac-purple"}
   ]$$::jsonb,
   true,
   4,
@@ -161,10 +161,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'En el metodo hipotetico-deductivo, el orden mas adecuado es:',
   $$[
-    {"text":"Pregunta, hipotesis, prediccion y experimento","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_08.png"},
-    {"text":"Conclusion, dogma, autoridad y memorizacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_08.png"},
-    {"text":"Experimento, supersticion, hipotesis y mito","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_08.png"},
-    {"text":"Revision externa antes de formular cualquier pregunta","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_08.png"}
+    {"text":"Pregunta, hipotesis, prediccion y experimento","correct":true,"color":"ac-blue"},
+    {"text":"Conclusion, dogma, autoridad y memorizacion","correct":false,"color":"ac-teal"},
+    {"text":"Experimento, supersticion, hipotesis y mito","correct":false,"color":"ac-yellow"},
+    {"text":"Revision externa antes de formular cualquier pregunta","correct":false,"color":"ac-pink"}
   ]$$::jsonb,
   false,
   5,
@@ -177,8 +177,8 @@ insert into public.evaluacion_preguntas (
   'tf',
   'Una hipotesis cientifica debe poder ponerse a prueba y, en principio, refutarse.',
   $$[
-    {"text":"Verdadero","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_08.png"},
-    {"text":"Falso","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_08.png"}
+    {"text":"Verdadero","correct":true,"color":"ac-green"},
+    {"text":"Falso","correct":false,"color":"ac-pink"}
   ]$$::jsonb,
   false,
   6,
@@ -191,11 +191,11 @@ insert into public.evaluacion_preguntas (
   'ms',
   'En un experimento bien disenado, selecciona elementos que aumentan la confiabilidad.',
   $$[
-    {"text":"Grupo control","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_09.png"},
-    {"text":"Placebo cuando corresponde","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_09.png"},
-    {"text":"Analisis estadistico de los resultados","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_09.png"},
-    {"text":"Aceptar diferencias sin medir variacion aleatoria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_09.png"},
-    {"text":"Cambiar la hipotesis para que siempre salga verdadera","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_09.png"}
+    {"text":"Grupo control","correct":true,"color":"ac-blue"},
+    {"text":"Placebo cuando corresponde","correct":true,"color":"ac-teal"},
+    {"text":"Analisis estadistico de los resultados","correct":true,"color":"ac-yellow"},
+    {"text":"Aceptar diferencias sin medir variacion aleatoria","correct":false,"color":"ac-pink"},
+    {"text":"Cambiar la hipotesis para que siempre salga verdadera","correct":false,"color":"ac-purple"}
   ]$$::jsonb,
   true,
   7,
@@ -208,10 +208,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'En biologia, evolucion significa:',
   $$[
-    {"text":"Cambio en la composicion genetica de una poblacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_10.png"},
-    {"text":"Mejora intencional de cada individuo durante su vida","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_10.png"},
-    {"text":"Aparicion espontanea de organos por necesidad inmediata","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_10.png"},
-    {"text":"Desaparicion de toda variacion hereditaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_10.png"}
+    {"text":"Cambio en la composicion genetica de una poblacion","correct":true,"color":"ac-blue"},
+    {"text":"Mejora intencional de cada individuo durante su vida","correct":false,"color":"ac-teal"},
+    {"text":"Aparicion espontanea de organos por necesidad inmediata","correct":false,"color":"ac-yellow"},
+    {"text":"Desaparicion de toda variacion hereditaria","correct":false,"color":"ac-pink"}
   ]$$::jsonb,
   false,
   8,
@@ -224,11 +224,11 @@ insert into public.evaluacion_preguntas (
   'ms',
   'Selecciona adaptaciones basicas de los primates destacadas en el tema.',
   $$[
-    {"text":"Pulgares oponibles","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_11.png"},
-    {"text":"Ojos dirigidos hacia el frente con vision estereoscopica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_11.png"},
-    {"text":"Hombros con gran movilidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_11.png"},
-    {"text":"Perdida de toda destreza manual","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_11.png"},
-    {"text":"Ojos laterales sin profundidad visual","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_11.png"}
+    {"text":"Pulgares oponibles","correct":true,"color":"ac-blue"},
+    {"text":"Ojos dirigidos hacia el frente con vision estereoscopica","correct":true,"color":"ac-teal"},
+    {"text":"Hombros con gran movilidad","correct":true,"color":"ac-yellow"},
+    {"text":"Perdida de toda destreza manual","correct":false,"color":"ac-pink"},
+    {"text":"Ojos laterales sin profundidad visual","correct":false,"color":"ac-purple"}
   ]$$::jsonb,
   true,
   9,
@@ -241,10 +241,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'Una ventaja funcional importante de la bipedestacion fue:',
   $$[
-    {"text":"Liberar las extremidades superiores para transportar y manipular objetos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_12.png"},
-    {"text":"Impedir la vigilancia del entorno","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_12.png"},
-    {"text":"Eliminar la necesidad de cambios esqueleticos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_12.png"},
-    {"text":"Disminuir por completo la capacidad de caminar","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_12.png"}
+    {"text":"Liberar las extremidades superiores para transportar y manipular objetos","correct":true,"color":"ac-blue"},
+    {"text":"Impedir la vigilancia del entorno","correct":false,"color":"ac-teal"},
+    {"text":"Eliminar la necesidad de cambios esqueleticos","correct":false,"color":"ac-yellow"},
+    {"text":"Disminuir por completo la capacidad de caminar","correct":false,"color":"ac-pink"}
   ]$$::jsonb,
   false,
   10,
@@ -257,10 +257,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'En la jerarquia estructural, el orden de menor a mayor complejidad es:',
   $$[
-    {"text":"Atomo, molecula, organelo, celula, tejido, organo, sistema y organismo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_13.png"},
-    {"text":"Organismo, celula, atomo, sistema, tejido y molecula","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_13.png"},
-    {"text":"Organo, molecula, organismo, tejido, celula y atomo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_13.png"},
-    {"text":"Tejido, sistema, molecula, organelo, atomo y celula","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_13.png"}
+    {"text":"Atomo, molecula, organelo, celula, tejido, organo, sistema y organismo","correct":true,"color":"ac-blue"},
+    {"text":"Organismo, celula, atomo, sistema, tejido y molecula","correct":false,"color":"ac-teal"},
+    {"text":"Organo, molecula, organismo, tejido, celula y atomo","correct":false,"color":"ac-yellow"},
+    {"text":"Tejido, sistema, molecula, organelo, atomo y celula","correct":false,"color":"ac-pink"}
   ]$$::jsonb,
   false,
   11,
@@ -273,11 +273,11 @@ insert into public.evaluacion_preguntas (
   'ms',
   'Selecciona caracteristicas de la vida humana descritas en el tema.',
   $$[
-    {"text":"Organizacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_16.png"},
-    {"text":"Metabolismo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_16.png"},
-    {"text":"Homeostasis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_16.png"},
-    {"text":"Ausencia total de respuesta a estimulos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_16.png"},
-    {"text":"Incapacidad de desarrollo","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_16.png"}
+    {"text":"Organizacion","correct":true,"color":"ac-blue"},
+    {"text":"Metabolismo","correct":true,"color":"ac-teal"},
+    {"text":"Homeostasis","correct":true,"color":"ac-yellow"},
+    {"text":"Ausencia total de respuesta a estimulos","correct":false,"color":"ac-pink"},
+    {"text":"Incapacidad de desarrollo","correct":false,"color":"ac-purple"}
   ]$$::jsonb,
   true,
   12,
@@ -290,10 +290,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'La retroalimentacion negativa se caracteriza por:',
   $$[
-    {"text":"Oponerse al cambio y devolver la variable hacia su punto de ajuste","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_17.png"},
-    {"text":"Amplificar siempre el estimulo hasta destruir el equilibrio","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_17.png"},
-    {"text":"Actuar solo durante el parto","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_17.png"},
-    {"text":"No participar en la homeostasis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_17.png"}
+    {"text":"Oponerse al cambio y devolver la variable hacia su punto de ajuste","correct":true,"color":"ac-blue"},
+    {"text":"Amplificar siempre el estimulo hasta destruir el equilibrio","correct":false,"color":"ac-teal"},
+    {"text":"Actuar solo durante el parto","correct":false,"color":"ac-yellow"},
+    {"text":"No participar en la homeostasis","correct":false,"color":"ac-pink"}
   ]$$::jsonb,
   false,
   13,
@@ -306,8 +306,8 @@ insert into public.evaluacion_preguntas (
   'tf',
   'La retroalimentacion positiva amplifica el cambio; el parto es un ejemplo clasico.',
   $$[
-    {"text":"Verdadero","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_19.png"},
-    {"text":"Falso","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_19.png"}
+    {"text":"Verdadero","correct":true,"color":"ac-green"},
+    {"text":"Falso","correct":false,"color":"ac-pink"}
   ]$$::jsonb,
   false,
   14,
@@ -320,10 +320,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'Ante aumento de temperatura corporal, una respuesta homeostatica esperada es:',
   $$[
-    {"text":"Vasodilatacion cutanea y sudoracion para perder calor","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_17.png"},
-    {"text":"Vasoconstriccion intensa y escalofrios para producir mas calor","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_17.png"},
-    {"text":"Suspender toda perdida de calor por la piel","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_17.png"},
-    {"text":"Aumentar la fiebre sin control por retroalimentacion negativa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_17.png"}
+    {"text":"Vasodilatacion cutanea y sudoracion para perder calor","correct":true,"color":"ac-blue"},
+    {"text":"Vasoconstriccion intensa y escalofrios para producir mas calor","correct":false,"color":"ac-teal"},
+    {"text":"Suspender toda perdida de calor por la piel","correct":false,"color":"ac-yellow"},
+    {"text":"Aumentar la fiebre sin control por retroalimentacion negativa","correct":false,"color":"ac-pink"}
   ]$$::jsonb,
   false,
   15,
@@ -365,10 +365,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'En posicion anatomica correcta:',
   $$[
-    {"text":"El sujeto esta de pie, mira al frente y las palmas se orientan hacia adelante","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_29.png"},
-    {"text":"El sujeto esta acostado boca abajo con palmas hacia atras","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_29.png"},
-    {"text":"Los pies estan elevados y las rodillas flexionadas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_29.png"},
-    {"text":"La cabeza se gira hacia un lado para mostrar el perfil","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_29.png"}
+    {"text":"El sujeto esta de pie, mira al frente y las palmas se orientan hacia adelante","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_regiones_corporales_anterior.png"},
+    {"text":"El sujeto esta acostado boca abajo con palmas hacia atras","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_regiones_corporales_anterior.png"},
+    {"text":"Los pies estan elevados y las rodillas flexionadas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_regiones_corporales_anterior.png"},
+    {"text":"La cabeza se gira hacia un lado para mostrar el perfil","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_regiones_corporales_anterior.png"}
   ]$$::jsonb,
   false,
   18,
@@ -381,10 +381,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'Cuando el antebrazo esta en supinacion:',
   $$[
-    {"text":"La palma mira hacia adelante en posicion anatomica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_29.png"},
-    {"text":"El radio cruza al cubito y la palma mira hacia atras","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_29.png"},
-    {"text":"La mano queda siempre cerrada en puno","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_29.png"},
-    {"text":"El codo se vuelve distal respecto a la muneca","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_29.png"}
+    {"text":"La palma mira hacia adelante en posicion anatomica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_antebrazo_radio_cubito.png"},
+    {"text":"El radio cruza al cubito y la palma mira hacia atras","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_antebrazo_radio_cubito.png"},
+    {"text":"La mano queda siempre cerrada en puno","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_antebrazo_radio_cubito.png"},
+    {"text":"El codo se vuelve distal respecto a la muneca","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_antebrazo_radio_cubito.png"}
   ]$$::jsonb,
   false,
   19,
@@ -397,10 +397,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'El plano transversal divide el cuerpo en porciones:',
   $$[
-    {"text":"Superior e inferior","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_30.png"},
-    {"text":"Anterior y posterior","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_30.png"},
-    {"text":"Derecha e izquierda","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_30.png"},
-    {"text":"Proximal y distal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_30.png"}
+    {"text":"Superior e inferior","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_planos_cortes.png"},
+    {"text":"Anterior y posterior","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_planos_cortes.png"},
+    {"text":"Derecha e izquierda","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_planos_cortes.png"},
+    {"text":"Proximal y distal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_planos_cortes.png"}
   ]$$::jsonb,
   false,
   20,
@@ -413,11 +413,11 @@ insert into public.evaluacion_preguntas (
   'ms',
   'Selecciona pares de terminos direccionales correctamente relacionados.',
   $$[
-    {"text":"Superior / inferior","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_30.png"},
-    {"text":"Medial / lateral","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_30.png"},
-    {"text":"Proximal / distal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_30.png"},
-    {"text":"Pleural / cerebral","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_30.png"},
-    {"text":"Sagital / peritoneal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_30.png"}
+    {"text":"Superior / inferior","correct":true,"color":"ac-blue"},
+    {"text":"Medial / lateral","correct":true,"color":"ac-teal"},
+    {"text":"Proximal / distal","correct":true,"color":"ac-yellow"},
+    {"text":"Pleural / cerebral","correct":false,"color":"ac-pink"},
+    {"text":"Sagital / peritoneal","correct":false,"color":"ac-purple"}
   ]$$::jsonb,
   true,
   21,
@@ -448,10 +448,10 @@ insert into public.evaluacion_preguntas (
   'mc',
   'La region axial del cuerpo comprende principalmente:',
   $$[
-    {"text":"Cabeza, cuello y tronco","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_32.png"},
-    {"text":"Solo extremidades superiores","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_32.png"},
-    {"text":"Solo extremidades inferiores","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_32.png"},
-    {"text":"Unicamente manos y pies","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_32.png"}
+    {"text":"Cabeza, cuello y tronco","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_regiones_corporales_anterior.png"},
+    {"text":"Solo extremidades superiores","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_regiones_corporales_anterior.png"},
+    {"text":"Solo extremidades inferiores","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_regiones_corporales_anterior.png"},
+    {"text":"Unicamente manos y pies","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_regiones_corporales_anterior.png"}
   ]$$::jsonb,
   false,
   23,
@@ -518,11 +518,11 @@ insert into public.evaluacion_preguntas (
   'ms',
   'Selecciona membranas serosas descritas para cavidades corporales.',
   $$[
-    {"text":"Pleura","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_35.png"},
-    {"text":"Pericardio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_35.png"},
-    {"text":"Peritoneo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_35.png"},
-    {"text":"Meninges como membrana serosa toracica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_35.png"},
-    {"text":"Mediastino como capa visceral del pulmon","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_35.png"}
+    {"text":"Pleura","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_cavidades_corporales.png"},
+    {"text":"Pericardio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_cavidades_corporales.png"},
+    {"text":"Peritoneo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_cavidades_corporales.png"},
+    {"text":"Meninges como membrana serosa toracica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_cavidades_corporales.png"},
+    {"text":"Mediastino como capa visceral del pulmon","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/cap1_cavidades_corporales.png"}
   ]$$::jsonb,
   true,
   27,
@@ -535,11 +535,11 @@ insert into public.evaluacion_preguntas (
   'ms',
   'Selecciona asociaciones correctas entre sistema de organos y funcion principal.',
   $$[
-    {"text":"Sistema endocrino: produccion de hormonas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_39.png"},
-    {"text":"Sistema nervioso: comunicacion interna rapida y control","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_39.png"},
-    {"text":"Sistema circulatorio: distribucion de nutrientes, oxigeno y hormonas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_39.png"},
-    {"text":"Sistema digestivo: absorcion de oxigeno y eliminacion de CO2","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_39.png"},
-    {"text":"Sistema reproductor: regulacion principal del equilibrio acidobasico sanguineo","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_39.png"}
+    {"text":"Sistema endocrino: produccion de hormonas","correct":true,"color":"ac-blue"},
+    {"text":"Sistema nervioso: comunicacion interna rapida y control","correct":true,"color":"ac-teal"},
+    {"text":"Sistema circulatorio: distribucion de nutrientes, oxigeno y hormonas","correct":true,"color":"ac-yellow"},
+    {"text":"Sistema digestivo: absorcion de oxigeno y eliminacion de CO2","correct":false,"color":"ac-pink"},
+    {"text":"Sistema reproductor: regulacion principal del equilibrio acidobasico sanguineo","correct":false,"color":"ac-purple"}
   ]$$::jsonb,
   true,
   28,
@@ -552,8 +552,8 @@ insert into public.evaluacion_preguntas (
   'tf',
   'La variacion anatomica es siempre patologica y casi nunca aparece en personas sanas.',
   $$[
-    {"text":"Verdadero","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_15.png"},
-    {"text":"Falso","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo1-tema1-saladin/tema1_page_15.png"}
+    {"text":"Verdadero","correct":false,"color":"ac-pink"},
+    {"text":"Falso","correct":true,"color":"ac-green"}
   ]$$::jsonb,
   false,
   29,

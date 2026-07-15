@@ -77,31 +77,27 @@ insert into public.evaluacion_preguntas (
   'a1ad1c19-6427-531d-b360-8619d455bf86',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'Segun el cuadro 2.1, cuales son los seis elementos principales que representan cerca del 98.5% del peso corporal?',
+  'Cuales son los seis elementos principales que representan cerca del 98.5% del peso corporal?',
   $$[
     {
         "text": "Oxigeno, carbono, hidrogeno, nitrogeno, calcio y fosforo",
         "correct": true,
-        "color": "ac-blue",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_elementos_cuerpo_humano.png"
+        "color": "ac-blue"
     },
     {
         "text": "Sodio, cloro, potasio, magnesio, hierro y azufre",
         "correct": false,
-        "color": "ac-green",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_elementos_cuerpo_humano.png"
+        "color": "ac-green"
     },
     {
         "text": "Carbono, sodio, potasio, yodo, zinc y cobre",
         "correct": false,
-        "color": "ac-yellow",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_elementos_cuerpo_humano.png"
+        "color": "ac-yellow"
     },
     {
         "text": "Calcio, fosforo, hierro, yodo, fluor y selenio",
         "correct": false,
-        "color": "ac-pink",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_elementos_cuerpo_humano.png"
+        "color": "ac-pink"
     }
 ]$$::jsonb,
   false,
@@ -240,32 +236,27 @@ insert into public.evaluacion_preguntas (
     {
         "text": "Son sustancias que se ionizan en agua",
         "correct": true,
-        "color": "ac-blue",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_electrolitos_tabla.png"
+        "color": "ac-blue"
     },
     {
         "text": "Forman soluciones capaces de conducir electricidad",
         "correct": true,
-        "color": "ac-green",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_electrolitos_tabla.png"
+        "color": "ac-green"
     },
     {
         "text": "Son importantes para funciones nerviosas, musculares y equilibrio de agua",
         "correct": true,
-        "color": "ac-yellow",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_electrolitos_tabla.png"
+        "color": "ac-yellow"
     },
     {
         "text": "No tienen carga y por eso no afectan la actividad electrica corporal",
         "correct": false,
-        "color": "ac-pink",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_electrolitos_tabla.png"
+        "color": "ac-pink"
     },
     {
         "text": "Siempre son lipidos organicos insolubles en agua",
         "correct": false,
-        "color": "ac-purple",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_electrolitos_tabla.png"
+        "color": "ac-purple"
     }
 ]$$::jsonb,
   true,
@@ -564,26 +555,22 @@ insert into public.evaluacion_preguntas (
     {
         "text": "Catabolismo descompone y libera energia; anabolismo sintetiza moleculas y requiere energia",
         "correct": true,
-        "color": "ac-blue",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_metabolismo_oxidacion_reduccion.png"
+        "color": "ac-blue"
     },
     {
         "text": "Catabolismo siempre sintetiza proteinas; anabolismo siempre degrada glucosa",
         "correct": false,
-        "color": "ac-green",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_metabolismo_oxidacion_reduccion.png"
+        "color": "ac-green"
     },
     {
         "text": "Ambos son procesos sin relacion con la energia",
         "correct": false,
-        "color": "ac-yellow",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_metabolismo_oxidacion_reduccion.png"
+        "color": "ac-yellow"
     },
     {
         "text": "Anabolismo y catabolismo son sinonimos de pH acido y pH basico",
         "correct": false,
-        "color": "ac-pink",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_metabolismo_oxidacion_reduccion.png"
+        "color": "ac-pink"
     }
 ]$$::jsonb,
   false,
@@ -1164,32 +1151,27 @@ insert into public.evaluacion_preguntas (
     {
         "text": "Los acidos nucleicos son polimeros de nucleotidos",
         "correct": true,
-        "color": "ac-blue",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_acidos_nucleicos_texto.png"
+        "color": "ac-blue"
     },
     {
         "text": "El DNA constituye los genes y transfiere informacion hereditaria",
         "correct": true,
-        "color": "ac-green",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_acidos_nucleicos_texto.png"
+        "color": "ac-green"
     },
     {
         "text": "El RNA participa en aplicar las instrucciones del DNA para sintetizar proteinas",
         "correct": true,
-        "color": "ac-yellow",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_acidos_nucleicos_texto.png"
+        "color": "ac-yellow"
     },
     {
         "text": "Las proteinas son los monomeros que forman DNA y RNA",
         "correct": false,
-        "color": "ac-pink",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_acidos_nucleicos_texto.png"
+        "color": "ac-pink"
     },
     {
         "text": "Los acidos nucleicos no guardan ninguna relacion con nucleotidos",
         "correct": false,
-        "color": "ac-purple",
-        "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_acidos_nucleicos_texto.png"
+        "color": "ac-purple"
     }
 ]$$::jsonb,
   true,
