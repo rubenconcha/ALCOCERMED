@@ -2014,7 +2014,7 @@ function cleanupPowerupsForNextQ() {
     if (quizStreakCount === undefined) quizStreakCount = 0;
 }
 
-// ═══ SELECCIÓN DIVERSA DE PREGUNTAS (garantiza mc, ms, fb, tf) ═══
+// ═══ SELECCION DIVERSA DE PREGUNTAS (garantiza mc, ms, fb, tf, dnd cuando existan) ═══
 function selectDiverseQuestions(allQuestions, total) {
     var shuffled = allQuestions.slice();
     for (var i = shuffled.length - 1; i > 0; i--) {
@@ -2036,6 +2036,7 @@ function selectDiverseQuestions(allQuestions, total) {
     takeFrom('fb', 2);
     takeFrom('ms', 2);
     takeFrom('tf', 1);
+    takeFrom('dnd', 1);
     takeFrom('mc', 2);
     var remaining = [];
     for (var key in byType) {
@@ -2392,7 +2393,7 @@ function resolveQuizQuestionsForEval(evaluacion, allQuestions) {
 
     var cfg = getFixedQuizConfig(evaluacion);
     if (!cfg) {
-        return selectDiverseQuestions(allQuestions, 10);
+        return selectDiverseQuestions(allQuestions, gameCfg.maxQuestions || 10);
     }
 
     var maxQ = cfg.maxQuestions || 10;
