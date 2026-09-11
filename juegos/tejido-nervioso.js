@@ -32,7 +32,10 @@ function initNervousClass() {
         button.onclick = function() { startSelfStudy(nervousClassIds[Number(button.dataset.round)]); };
     });
     document.getElementById('class-change-name').onclick = async function() {
-        await sb.auth.signOut(); currentUser = null; showLogin();
+        await sb.auth.signOut();
+        clearSelfSession();
+        sessionStorage.removeItem('alcocer_nervioso_owner');
+        currentUser = null; showLogin();
         document.getElementById('class-name').focus();
     };
     sb.auth.getSession().then(function(result) {
@@ -73,6 +76,10 @@ async function enterNervousClassByName(event) {
 
 function showNervousClass() {
     isAdmin = false;
+    if (sessionStorage.getItem('alcocer_nervioso_owner') !== currentUser.id) {
+        clearSelfSession();
+        sessionStorage.setItem('alcocer_nervioso_owner', currentUser.id);
+    }
     document.getElementById('login-screen').classList.add('hidden');
     document.getElementById('app-shell').classList.remove('hidden');
     var name = currentUser.user_metadata.full_name || 'Estudiante';
