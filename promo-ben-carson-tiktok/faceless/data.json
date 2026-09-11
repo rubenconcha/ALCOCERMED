@@ -1,0 +1,143 @@
+[
+  {
+    "id": "Repaso",
+    "tag": "ESTUDIA CON MÉTODO",
+    "accent": "#63F5CD",
+    "scenes": [
+      {
+        "title": "¿LEES… Y SE TE OLVIDA?",
+        "sub": "Prueba esto con el tema de hoy",
+        "voice": "¿Lees y se te olvida? Prueba esto con el tema de hoy.",
+        "kind": "book",
+        "audio": "faceless/Repaso-0.mp3",
+        "frames": 139
+      },
+      {
+        "title": "CIERRA EL LIBRO",
+        "sub": "01 / Recuerda sin mirar",
+        "voice": "Primero, cierra el libro. Explica lo que recuerdas sin mirar tus apuntes.",
+        "kind": "book",
+        "audio": "faceless/Repaso-1.mp3",
+        "frames": 177
+      },
+      {
+        "title": "PONLO EN PAPEL",
+        "sub": "02 / Encuentra los vacíos",
+        "voice": "Escríbelo en una hoja. Después compara y marca lo que olvidaste o confundiste.",
+        "kind": "notes",
+        "audio": "faceless/Repaso-2.mp3",
+        "frames": 177
+      },
+      {
+        "title": "PONTE A PRUEBA",
+        "sub": "03 / Explica tu respuesta",
+        "voice": "Resuelve una pregunta y explica por qué descartas las otras opciones.",
+        "kind": "quiz",
+        "audio": "faceless/Repaso-3.mp3",
+        "frames": 141
+      },
+      {
+        "title": "¿QUÉ MATERIA TE CUESTA?",
+        "sub": "Cuéntanos en comentarios",
+        "voice": "¿Qué materia te cuesta más? Cuéntanos en comentarios. Sigue a Prepa Ben Carson.",
+        "kind": "cta",
+        "audio": "faceless/Repaso-4.mp3",
+        "frames": 200
+      }
+    ]
+  },
+  {
+    "id": "Simulacro",
+    "tag": "APRENDE DE TUS ERRORES",
+    "accent": "#FFD36A",
+    "scenes": [
+      {
+        "title": "TU NOTA NO LO DICE TODO",
+        "sub": "¿Ya corregiste tu simulacro?",
+        "voice": "Tu nota no lo dice todo. Lo importante ahora es revisar tus errores.",
+        "kind": "quiz",
+        "audio": "faceless/Simulacro-0.mp3",
+        "frames": 169
+      },
+      {
+        "title": "¿QUÉ FALLÓ?",
+        "sub": "01 / No conocía el tema",
+        "voice": "Si no conocías el tema, vuelve a la base y practica una pregunta sencilla.",
+        "kind": "notes",
+        "audio": "faceless/Simulacro-1.mp3",
+        "frames": 157
+      },
+      {
+        "title": "¿CONFUNDISTE CONCEPTOS?",
+        "sub": "02 / Compara las diferencias",
+        "voice": "Si confundiste conceptos, compáralos y escribe la diferencia con tus palabras.",
+        "kind": "compare",
+        "audio": "faceless/Simulacro-2.mp3",
+        "frames": 165
+      },
+      {
+        "title": "¿LEÍSTE MUY RÁPIDO?",
+        "sub": "03 / Revisa la consigna",
+        "voice": "Si leíste muy rápido, identifica exactamente qué te pide la pregunta.",
+        "kind": "quiz",
+        "audio": "faceless/Simulacro-3.mp3",
+        "frames": 157
+      },
+      {
+        "title": "CORRIGE. PRACTICA. REPITE.",
+        "sub": "Guárdalo para tu próximo simulacro",
+        "voice": "Guarda este video para tu próximo simulacro. Prepárate con Ben Carson.",
+        "kind": "cta",
+        "audio": "faceless/Simulacro-4.mp3",
+        "frames": 167
+      }
+    ]
+  },
+  {
+    "id": "RetoBiologia",
+    "tag": "RETO DE BIOLOGÍA / 01",
+    "accent": "#96B7FF",
+    "scenes": [
+      {
+        "title": "¿DÓNDE SE FABRICAN LAS PROTEÍNAS?",
+        "sub": "Pregunta de práctica • Biología",
+        "voice": "Reto de biología. ¿Qué estructura celular sintetiza las proteínas?",
+        "kind": "cell",
+        "audio": "faceless/RetoBiologia-0.mp3",
+        "frames": 164
+      },
+      {
+        "title": "ELIGE TU RESPUESTA",
+        "sub": "A  Lisosoma\nB  Ribosoma\nC  Aparato de Golgi",
+        "voice": "A, lisosoma. B, ribosoma. C, aparato de Golgi. Piensa tu respuesta.",
+        "kind": "options",
+        "audio": "faceless/RetoBiologia-1.mp3",
+        "frames": 307
+      },
+      {
+        "title": "B / RIBOSOMA",
+        "sub": "Une aminoácidos para formar proteínas",
+        "voice": "La respuesta es B: ribosoma. Allí se unen aminoácidos para formar proteínas.",
+        "kind": "cell",
+        "audio": "faceless/RetoBiologia-2.mp3",
+        "frames": 193
+      },
+      {
+        "title": "NO LOS CONFUNDAS",
+        "sub": "Golgi: modifica y clasifica\nLisosoma: digestión celular",
+        "voice": "El aparato de Golgi modifica y clasifica. El lisosoma participa en la digestión celular.",
+        "kind": "compare",
+        "audio": "faceless/RetoBiologia-3.mp3",
+        "frames": 197
+      },
+      {
+        "title": "¿ACERTASTE?",
+        "sub": "Sigue la cuenta para otro reto",
+        "voice": "¿Acertaste? Sigue a Prepa Ben Carson para practicar con más retos.",
+        "kind": "cta",
+        "audio": "faceless/RetoBiologia-4.mp3",
+        "frames": 167
+      }
+    ]
+  }
+]

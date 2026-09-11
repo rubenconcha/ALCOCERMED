@@ -1,0 +1,315 @@
+[
+  {
+    "kind": "hook",
+    "text": "¿Te imaginas entrando aquí?",
+    "bg": "facultad.jpg",
+    "offset": 0,
+    "frames": 67,
+    "words": [
+      {
+        "text": "Te",
+        "start": 0.091708,
+        "end": 0.185541
+      },
+      {
+        "text": "imaginas",
+        "start": 0.195958,
+        "end": 0.675541
+      },
+      {
+        "text": "entrando",
+        "start": 0.685958,
+        "end": 1.009124
+      },
+      {
+        "text": "aquí",
+        "start": 1.019541,
+        "end": 1.311457
+      }
+    ]
+  },
+  {
+    "kind": "goal",
+    "text": "Medicina. Universidad Mayor de San Simón.",
+    "bg": "facultad.jpg",
+    "offset": 0,
+    "frames": 120,
+    "words": [
+      {
+        "text": "Medicina",
+        "start": 0.095833,
+        "end": 0.794333
+      },
+      {
+        "text": "Universidad",
+        "start": 1.50125,
+        "end": 2.105916
+      },
+      {
+        "text": "Mayor",
+        "start": 2.116333,
+        "end": 2.429083
+      },
+      {
+        "text": "de",
+        "start": 2.439541,
+        "end": 2.522957
+      },
+      {
+        "text": "San",
+        "start": 2.533375,
+        "end": 2.700166
+      },
+      {
+        "text": "Simón",
+        "start": 2.710583,
+        "end": 3.054624
+      }
+    ]
+  },
+  {
+    "kind": "reality",
+    "text": "Ese sueño empieza mucho antes del examen.",
+    "bg": "clip3.mp4",
+    "offset": 0,
+    "frames": 89,
+    "words": [
+      {
+        "text": "Ese",
+        "start": 0.091708,
+        "end": 0.279374
+      },
+      {
+        "text": "sueño",
+        "start": 0.289791,
+        "end": 0.550416
+      },
+      {
+        "text": "empieza",
+        "start": 0.560833,
+        "end": 0.883999
+      },
+      {
+        "text": "mucho",
+        "start": 0.894458,
+        "end": 1.228083
+      },
+      {
+        "text": "antes",
+        "start": 1.2385,
+        "end": 1.478291
+      },
+      {
+        "text": "del",
+        "start": 1.488708,
+        "end": 1.582541
+      },
+      {
+        "text": "examen",
+        "start": 1.592958,
+        "end": 2.030833
+      }
+    ]
+  },
+  {
+    "kind": "practice",
+    "text": "Con preguntas. Con práctica. Y corrigiendo lo que todavía te cuesta.",
+    "bg": "clip3.mp4",
+    "offset": 3,
+    "frames": 174,
+    "words": [
+      {
+        "text": "Con",
+        "start": 0.091708,
+        "end": 0.237666
+      },
+      {
+        "text": "preguntas",
+        "start": 0.248083,
+        "end": 0.894458
+      },
+      {
+        "text": "Con",
+        "start": 1.615916,
+        "end": 1.803582
+      },
+      {
+        "text": "práctica",
+        "start": 1.814,
+        "end": 2.387375
+      },
+      {
+        "text": "Y",
+        "start": 3.10675,
+        "end": 3.190166
+      },
+      {
+        "text": "corrigiendo",
+        "start": 3.200583,
+        "end": 3.700999
+      },
+      {
+        "text": "lo",
+        "start": 3.711416,
+        "end": 3.794832
+      },
+      {
+        "text": "que",
+        "start": 3.80525,
+        "end": 3.930375
+      },
+      {
+        "text": "todavía",
+        "start": 3.940791,
+        "end": 4.357791
+      },
+      {
+        "text": "te",
+        "start": 4.368208,
+        "end": 4.472458
+      },
+      {
+        "text": "cuesta",
+        "start": 4.482916,
+        "end": 4.879082
+      }
+    ]
+  },
+  {
+    "kind": "team",
+    "text": "Y con gente que también quiere llegar.",
+    "bg": "clip4.mp4",
+    "offset": 1,
+    "frames": 81,
+    "words": [
+      {
+        "text": "Y",
+        "start": 0.091708,
+        "end": 0.195958
+      },
+      {
+        "text": "con",
+        "start": 0.206375,
+        "end": 0.373166
+      },
+      {
+        "text": "gente",
+        "start": 0.383625,
+        "end": 0.64425
+      },
+      {
+        "text": "que",
+        "start": 0.654666,
+        "end": 0.758916
+      },
+      {
+        "text": "también",
+        "start": 0.769333,
+        "end": 1.144666
+      },
+      {
+        "text": "quiere",
+        "start": 1.155083,
+        "end": 1.353166
+      },
+      {
+        "text": "llegar",
+        "start": 1.363583,
+        "end": 1.749333
+      }
+    ]
+  },
+  {
+    "kind": "brand",
+    "text": "Esto es Prepa Ben Carson.",
+    "bg": "clip4.mp4",
+    "offset": 3,
+    "frames": 70,
+    "words": [
+      {
+        "text": "Esto",
+        "start": 0.091708,
+        "end": 0.362749
+      },
+      {
+        "text": "es",
+        "start": 0.373166,
+        "end": 0.508707
+      },
+      {
+        "text": "Prepa",
+        "start": 0.519125,
+        "end": 0.758916
+      },
+      {
+        "text": "Ben",
+        "start": 0.769333,
+        "end": 0.956999
+      },
+      {
+        "text": "Carson",
+        "start": 0.967416,
+        "end": 1.394874
+      }
+    ]
+  },
+  {
+    "kind": "cta",
+    "text": "¿Tu meta también es Medicina? Escríbenos y conoce nuestra preparación.",
+    "bg": "clip3.mp4",
+    "offset": 1,
+    "frames": 151,
+    "words": [
+      {
+        "text": "Tu",
+        "start": 0.091708,
+        "end": 0.175124
+      },
+      {
+        "text": "meta",
+        "start": 0.185541,
+        "end": 0.435749
+      },
+      {
+        "text": "también",
+        "start": 0.446166,
+        "end": 0.779791
+      },
+      {
+        "text": "es",
+        "start": 0.790208,
+        "end": 0.884041
+      },
+      {
+        "text": "Medicina",
+        "start": 0.894458,
+        "end": 1.446999
+      },
+      {
+        "text": "Escríbenos",
+        "start": 2.158041,
+        "end": 2.752291
+      },
+      {
+        "text": "y",
+        "start": 2.762708,
+        "end": 2.825249
+      },
+      {
+        "text": "conoce",
+        "start": 2.835708,
+        "end": 3.211041
+      },
+      {
+        "text": "nuestra",
+        "start": 3.221416,
+        "end": 3.482041
+      },
+      {
+        "text": "preparación",
+        "start": 3.4925,
+        "end": 4.08675
+      }
+    ]
+  }
+]

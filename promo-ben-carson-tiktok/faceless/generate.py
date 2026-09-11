@@ -1,5 +1,7 @@
 import asyncio, json, subprocess, math
 from pathlib import Path
+import truststore
+truststore.inject_into_ssl()
 import edge_tts
 
 root = Path(__file__).resolve().parent.parent
