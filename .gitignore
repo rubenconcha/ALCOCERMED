@@ -7,3 +7,6 @@ Thumbs.db
 
 *.log
 *.tmp
+
+# Video fuente local: supera el limite de GitHub.
+/tiktok-c0245/public/source.mp4
