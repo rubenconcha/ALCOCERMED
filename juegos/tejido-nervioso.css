@@ -6,3 +6,10 @@
 .class-round { padding:24px;border:1px solid var(--border);border-radius:18px;background:var(--bg-card);color:var(--text);font:700 1.2rem Inter,sans-serif;text-align:left;cursor:pointer;box-shadow:var(--shadow); }
 .class-round:hover,.class-round:focus-visible { border-color:#e91e63;outline:2px solid #e91e63; }
 .class-round small { display:block;margin-top:12px;font-size:1rem;font-weight:400;line-height:1.5; }
+.class-entry { display:flex;align-items:center;gap:12px;margin:0 0 24px;padding:18px;border:1px solid #a78bfa;border-radius:16px;background:linear-gradient(120deg,#4c1d95,#7e22ce);color:#fff;text-decoration:none;font:700 1rem Inter,sans-serif;line-height:1.4; }
+.class-entry span { flex:1;min-width:0; }
+.class-entry strong { padding:8px 14px;border-radius:10px;background:#fff;color:#581c87;font-size:1rem; }
+.class-entry:hover { filter:brightness(1.1); }
+.class-entry:focus-visible { outline:3px solid #e91e63;outline-offset:4px; }
+.nervous-class .class-entry { display:none; }
+@media(max-width:360px) { .class-entry { padding:14px;gap:8px; } .class-entry strong { padding:8px 10px; } }
