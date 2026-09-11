@@ -21,7 +21,7 @@ function Scene({s,index}:any){
  const f=useCurrentFrame();const intro=pop(f); const zoom=interpolate(f,[0,s.frames],[1.03,1.13]);
  const footage=s.bg.endsWith('mp4');
  return <AbsoluteFill style={{background:blue,overflow:'hidden'}}>
- {footage?<OffthreadVideo src={staticFile(s.bg)} startFrom={Math.round(s.offset*30)} muted style={{width:'100%',height:'100%',objectFit:'cover',transform:`scale(${zoom})`,filter:'saturate(1.12) contrast(1.08)'}}/>:<Img src={staticFile('authentic/'+s.bg)} style={{width:'100%',height:'100%',objectFit:'cover',filter:'brightness(.65)',transform:`scale(${zoom})`}}/>}
+ {footage?<OffthreadVideo src={staticFile('authentic/'+s.bg)} startFrom={Math.round(s.offset*30)} muted style={{width:'100%',height:'100%',objectFit:'cover',transform:`scale(${zoom})`,filter:'saturate(1.12) contrast(1.08)'}}/>:<Img src={staticFile('authentic/'+s.bg)} style={{width:'100%',height:'100%',objectFit:'cover',filter:'brightness(.65)',transform:`scale(${zoom})`}}/>}
  <AbsoluteFill style={{background:'linear-gradient(180deg,#0009 0%,transparent 40%,transparent 55%,#000B 100%)'}}/>
  <div style={{position:'absolute',top:85,left:65,background:paper,borderRadius:60,padding:'6px 24px 6px 6px',display:'flex',alignItems:'center',gap:12,boxShadow:'0 5px 20px #0004'}}><Img src={staticFile('authentic/logo.png')} style={{width:93,height:80,objectFit:'contain'}}/><div style={{fontSize:23,fontWeight:900,color:blue}}>PREPA BEN CARSON</div></div>
  <div style={{position:'absolute',top:108,right:110,color:paper,fontSize:25,fontWeight:800}}>CBBA <span style={{color:red}}>●</span></div>
@@ -74,4 +74,5 @@ function Scene({s,index}:any){
 }
 function Video(){let start=0;return <AbsoluteFill style={{fontFamily:'Arial, sans-serif',color:'white'}}><Audio src={staticFile('authentic/beat.wav')} volume={.36}/>{scenes.map((s,i)=>{let from=start;start+=s.frames;return <Sequence key={i} from={from} durationInFrames={s.frames}><Scene s={s} index={i}/><Audio src={staticFile(`authentic/voice-${i}.mp3`)} volume={1}/>{i>0&&<Audio src={staticFile('whoosh.wav')} volume={.09}/>}</Sequence>})}</AbsoluteFill>}
 registerRoot(()=> <Composition id="BenCarsonReal" component={Video} width={1080} height={1920} fps={30} durationInFrames={scenes.reduce((n,s)=>n+s.frames,0)}/>);
+
 
