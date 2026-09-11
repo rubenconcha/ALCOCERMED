@@ -1,5 +1,11 @@
 # Tejido nervioso: 2 rondas de 15 preguntas
 
+Enlace de clase: https://alcocermed.com/juegos/?tema=tejido-nervioso
+
+El acceso solicita nombre y apellidos y crea una sesión individual, separada de la cuenta habitual del navegador. Al regresar desde el mismo navegador conserva esa sesión. El motor existente registra participación y resultados en Supabase. «Entrar con otro nombre» cierra la sesión de clase para un dispositivo compartido.
+
+Antes de compartirlo, importar el SQL y comprobar ambas rondas con una sesión de estudiante. Mientras las evaluaciones no estén publicadas, el formulario muestra que el profesor está habilitando el juego y no crea cuentas.
+
 Fuente: presentación del usuario, hasta la primera diapositiva titulada Mielina (40). La 39 es un resumen de neuroglía.
 
 Cada ronda se abre como una evaluación en MORFOFUNCION. Se juegan sus 15 preguntas completas, en orden, sin repetición entre rondas. Se mantienen puntuación, temporizador y comodines de la plataforma.

@@ -1021,6 +1021,7 @@ function getSupabase() {
 // ═══ AUTHENTICATION ═══
 
 function initAuth() {
+    if (typeof nervousClassMode !== "undefined" && nervousClassMode) { initNervousClass(); return; }
     var urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('debug') === 'true') {
         console.log('Debug mode active - Bypassing real login');
@@ -1116,6 +1117,7 @@ function showLogin() {
 }
 
 function enterApp() {
+    if (typeof nervousClassMode !== "undefined" && nervousClassMode) { showNervousClass(); return; }
     document.getElementById('login-screen').classList.add('hidden');
     document.getElementById('app-shell').classList.remove('hidden');
 
@@ -1774,6 +1776,10 @@ function setQuizFocusMode(active) {
 }
 
 function navigateTo(page, skipPush) {
+    if (typeof nervousClassMode !== "undefined" && nervousClassMode) {
+        if (page !== "quiz") page = "nervioso";
+        skipPush = true;
+    }
     if (page === 'quiz' && typeof quizData === 'undefined' || (page === 'quiz' && !quizData)) {
         page = 'historial'; // Redirect to historial if reloading the quiz page without active session
     }
@@ -2520,6 +2526,7 @@ function isDemoEvaluation(ev) {
 }
 
 function canAccessEvaluation(ev) {
+    if (typeof nervousClassMode !== "undefined" && nervousClassMode) return !!ev && nervousClassIds.indexOf(ev.id) !== -1;
     if (isAdmin) return true;
     if (isDemoGuestUser(currentUser)) return isDemoEvaluation(ev);
     return !DEMO_ACCESS_ONLY || isDemoEvaluation(ev);
