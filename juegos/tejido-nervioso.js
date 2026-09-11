@@ -12,13 +12,12 @@ function initNervousClass() {
     card.querySelectorAll('form,.login-mode-tabs').forEach(function(el) { el.hidden = true; el.style.display = 'none'; });
     var form = document.createElement('form');
     form.className = 'login-form';
-    form.innerHTML = '<h1 style="font-size:1.5rem">Tejido nervioso</h1>' +
-        '<p>Dos rondas de 15 preguntas · Hasta mielina</p>' +
+    form.innerHTML = '<h1 style="font-size:1.5rem">Sistema nervioso</h1>' +
         '<div class="login-field"><label class="login-label" for="class-name">Nombre y apellidos</label>' +
         '<input id="class-name" class="login-input" autocomplete="name" minlength="3" maxlength="100" required></div>' +
         '<p>Tu nombre aparecerá junto a tu resultado. Usa el mismo dispositivo para continuar.</p>' +
         '<p id="class-error" role="alert"></p>' +
-        '<button class="login-btn" type="submit">Entrar al juego</button>';
+        '<button class="login-btn" type="submit">Jugar</button>';
     card.appendChild(form);
     form.addEventListener('submit', enterNervousClassByName);
     var section = document.createElement('section');
@@ -69,7 +68,7 @@ async function enterNervousClassByName(event) {
         currentUser = result.data.user; enterApp();
     } catch (err) {
         error.textContent = err.message || 'No hay conexión. Intenta nuevamente.';
-    } finally { button.disabled = false; button.textContent = 'Entrar al juego'; }
+    } finally { button.disabled = false; button.textContent = 'Jugar'; }
 }
 
 function showNervousClass() {
