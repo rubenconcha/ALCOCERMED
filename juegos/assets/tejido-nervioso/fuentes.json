@@ -1,0 +1,106 @@
+{
+  "sistema": {
+    "src": "/juegos/assets/tejido-nervioso/sistema.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Nervous_system_1_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Nervous_system_-_Nervous_system_1_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "nervio": {
+    "src": "/juegos/assets/tejido-nervioso/nervio.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Nerve_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/d/da/Nervous_system_-_Nerve_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "encefalo": {
+    "src": "/juegos/assets/tejido-nervioso/encefalo.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Brain_11_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Nervous_system_-_Brain_11_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "medula": {
+    "src": "/juegos/assets/tejido-nervioso/medula.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Spinal_cord_section_1_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Nervous_system_-_Spinal_cord_section_1_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "autonomo": {
+    "src": "/juegos/assets/tejido-nervioso/autonomo.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Sympathetic_nervous_system_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Nervous_system_-_Sympathetic_nervous_system_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "neurona": {
+    "src": "/juegos/assets/tejido-nervioso/neurona.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Neuron_7_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Nervous_system_-_Neuron_7_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "neurona-detalle": {
+    "src": "/juegos/assets/tejido-nervioso/neurona-detalle.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Neuron_1_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/8/83/Nervous_system_-_Neuron_1_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "sinapsis": {
+    "src": "/juegos/assets/tejido-nervioso/sinapsis.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Synapse_2_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Nervous_system_-_Synapse_2_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "union-muscular": {
+    "src": "/juegos/assets/tejido-nervioso/union-muscular.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Neuromuscular_synapse_1_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/6/61/Nervous_system_-_Neuromuscular_synapse_1_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "glia": {
+    "src": "/juegos/assets/tejido-nervioso/glia.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_CNS_cell_lines_-_Oligodendrocyte_1_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Nervous_system_-_CNS_cell_lines_-_Oligodendrocyte_1_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "epitelio": {
+    "src": "/juegos/assets/tejido-nervioso/epitelio.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Ependymal_cell_1_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Nervous_system_-_Ependymal_cell_1_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "defensa": {
+    "src": "/juegos/assets/tejido-nervioso/defensa.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Microglia_1_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/6/68/Nervous_system_-_Microglia_1_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  },
+  "soporte": {
+    "src": "/juegos/assets/tejido-nervioso/soporte.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Astrocyte_1_--_Smart-Servier.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/5/52/Nervous_system_-_Astrocyte_1_--_Smart-Servier.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "author": "Servier Medical Art / Laboratoires Servier",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modified": false
+  }
+}

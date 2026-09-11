@@ -4236,6 +4236,8 @@ var quizMultiSelections = [];
 var quizLiveResultId = null;
 
 function getQuizQuestionImage(pregunta) {
+    var illustration = getNervousQuestionIllustration(pregunta);
+    if (illustration) return illustration.src;
     var opts = pregunta && pregunta.opciones;
     if (typeof opts === 'string') {
         try { opts = JSON.parse(opts); } catch (e) { opts = []; }
@@ -4248,13 +4250,24 @@ function getQuizQuestionImage(pregunta) {
     return '';
 }
 
+function getNervousQuestionIllustration(pregunta) {
+    if (!pregunta || pregunta.tipo === 'tf' || typeof nervousQuestionImages === 'undefined') return null;
+    return nervousQuestionImages[pregunta.id] || null;
+}
+
 function renderQuizQuestionImageWrap(pregunta, tipo) {
     var wrap = document.getElementById('quiz-question-image-wrap');
     if (!wrap) return;
+    var illustration = getNervousQuestionIllustration(pregunta);
+    wrap.classList.toggle('quiz-image-illustrated', !!illustration);
     var questionImage = getQuizQuestionImage(pregunta);
     if (questionImage && tipo !== 'dnd') {
         wrap.hidden = false;
-        wrap.innerHTML = '<img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="Imagen de la pregunta">';
+        wrap.innerHTML = '<img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(illustration ? illustration.alt : 'Imagen de la pregunta') + '">';
+        if (illustration) {
+            wrap.innerHTML += '<small class="quiz-image-credit"><a href="' + escapeHtml(illustration.source) + '" target="_blank" rel="noopener noreferrer">Servier Medical Art</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></small>';
+            wrap.querySelector('img').addEventListener('error', function() { wrap.hidden = true; });
+        }
     } else {
         wrap.hidden = true;
         wrap.innerHTML = '';

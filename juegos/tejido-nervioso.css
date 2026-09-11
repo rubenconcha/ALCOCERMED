@@ -13,3 +13,19 @@
 .class-entry:focus-visible { outline:3px solid #e91e63;outline-offset:4px; }
 .nervous-class .class-entry { display:none; }
 @media(max-width:360px) { .class-entry { padding:14px;gap:8px; } .class-entry strong { padding:8px 10px; } }
+.quiz-question-image-wrap.quiz-image-illustrated {
+    flex-direction: column;
+    gap: 6px;
+}
+.quiz-image-illustrated .quiz-question-image {
+    max-height: min(28vh, 230px);
+    max-width: min(100%, 500px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.quiz-image-credit {
+    font: 400 11px/1.4 Inter, sans-serif;
+    color: var(--text-muted, #64748b);
+    text-align: center;
+}
+.quiz-image-credit a { color: inherit; }

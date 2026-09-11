@@ -2,6 +2,8 @@
 
 Enlace de clase: https://alcocermed.com/juegos/?tema=tejido-nervioso
 
+Las 25 preguntas de selección incluyen ilustraciones originales de Servier Medical Art obtenidas de Wikimedia Commons; las 5 de verdadero/falso permanecen sin imagen. La asignación por ID está en `tejido-nervioso-imagenes.js`, con archivos locales y créditos en `assets/tejido-nervioso/README.md`. No requiere volver a importar las preguntas a Supabase.
+
 El acceso solicita nombre y apellidos y crea una sesión individual, separada de la cuenta habitual del navegador. Al regresar desde el mismo navegador conserva esa sesión. El motor existente registra participación y resultados en Supabase. «Entrar con otro nombre» cierra la sesión de clase para un dispositivo compartido.
 
 Antes de compartirlo, importar el SQL y comprobar ambas rondas con una sesión de estudiante. Mientras las evaluaciones no estén publicadas, el formulario muestra que el profesor está habilitando el juego y no crea cuentas.
