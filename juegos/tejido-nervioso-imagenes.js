@@ -1,5 +1,4 @@
-// Imágenes originales de Servier Medical Art (CC BY-SA 3.0).
-// Solo estas 25 preguntas: verdadero/falso no lleva imagen.
+// Ilustraciones de Servier Medical Art, CC BY-SA 3.0. Fuentes por imagen.
 var nervousQuestionImages = {
   "a1a0219f-e9e2-5790-8121-26f9842336a6": {
     "src": "/juegos/assets/tejido-nervioso/sistema.png",
@@ -125,5 +124,67 @@ var nervousQuestionImages = {
     "src": "/juegos/assets/tejido-nervioso/nervio.png",
     "alt": "Organización de un nervio periférico y sus fibras",
     "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Nerve_--_Smart-Servier.png"
+  },
+  "2e7f0db0-1b1b-550c-943e-1f296c6d04bd": {
+    "src": "/juegos/assets/tejido-nervioso/neurona-detalle.png",
+    "alt": "Ilustración de una neurona con su cuerpo celular y prolongaciones",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Neuron_1_--_Smart-Servier.png"
+  },
+  "da8147d8-4f1e-560a-961a-db4e5b197b63": {
+    "src": "/juegos/assets/tejido-nervioso/glia.png",
+    "alt": "Ilustración de una célula de la neuroglía",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_CNS_cell_lines_-_Oligodendrocyte_1_--_Smart-Servier.png"
+  },
+  "d4745aea-c22a-5a39-ae18-d9b9388fb28e": {
+    "src": "/juegos/assets/tejido-nervioso/encefalo.png",
+    "alt": "Vista lateral del encéfalo",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Brain_11_--_Smart-Servier.png"
+  },
+  "23670aca-2d3f-54e8-9616-bc66ce6035df": {
+    "src": "/juegos/assets/tejido-nervioso/neurona.png",
+    "alt": "Morfología de una célula nerviosa",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Neuron_7_--_Smart-Servier.png"
+  },
+  "e91f3b8b-5565-5c51-8ea4-e47ebd9aa665": {
+    "src": "/juegos/assets/tejido-nervioso/nervio.png",
+    "alt": "Organización de un nervio periférico y sus fibras",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Nerve_--_Smart-Servier.png"
+  },
+  "8e3bf1b0-0b57-58f4-8e27-1cbe120ed2da": {
+    "src": "/juegos/assets/tejido-nervioso/nervio.png",
+    "alt": "Organización de un nervio periférico y sus fibras",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Nerve_--_Smart-Servier.png"
+  },
+  "22b6ab49-b24c-5f18-b841-f939825f1301": {
+    "src": "/juegos/assets/tejido-nervioso/neurona-detalle.png",
+    "alt": "Ilustración de una neurona con su cuerpo celular y prolongaciones",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Neuron_1_--_Smart-Servier.png"
+  },
+  "ee79a6c8-fa12-55f6-a720-161a2e69d09b": {
+    "src": "/juegos/assets/tejido-nervioso/union-muscular.png",
+    "alt": "Conexión entre una terminación nerviosa y fibras musculares",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Neuromuscular_synapse_1_--_Smart-Servier.png"
+  },
+  "cb5e7921-c99f-5922-9251-0e9c9779a466": {
+    "src": "/juegos/assets/tejido-nervioso/glia.png",
+    "alt": "Ilustración de una célula de la neuroglía",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_CNS_cell_lines_-_Oligodendrocyte_1_--_Smart-Servier.png"
+  },
+  "407eba9b-0ef8-559d-9caf-39afc8228624": {
+    "src": "/juegos/assets/tejido-nervioso/union-muscular.png",
+    "alt": "Conexión entre una terminación nerviosa y fibras musculares",
+    "source": "https://commons.wikimedia.org/wiki/File:Nervous_system_-_Neuromuscular_synapse_1_--_Smart-Servier.png"
   }
+};
+var nervousQuestionHints = {
+  "2e7f0db0-1b1b-550c-943e-1f296c6d04bd": "Observa las separaciones entre las envolturas del axón.",
+  "da8147d8-4f1e-560a-961a-db4e5b197b63": "Compara cuántos segmentos puede formar cada célula y en qué sistema se encuentra.",
+  "d4745aea-c22a-5a39-ae18-d9b9388fb28e": "Piensa en la función aislante de la mielina.",
+  "23670aca-2d3f-54e8-9616-bc66ce6035df": "Recuerda la relación entre herencia, enzimas lisosomales y almacenamiento de lípidos.",
+  "e91f3b8b-5565-5c51-8ea4-e47ebd9aa665": "Estar alojado en una célula de Schwann no equivale a tener varias capas de mielina.",
+  "8e3bf1b0-0b57-58f4-8e27-1cbe120ed2da": "Busca un factor relacionado con el tamaño y otro con el aislamiento del axón.",
+  "22b6ab49-b24c-5f18-b841-f939825f1301": "El axón necesita un soma vivo y estructuras de soporte para volver a crecer.",
+  "ee79a6c8-fa12-55f6-a720-161a2e69d09b": "Piensa qué ocurre con el tamaño del músculo cuando pierde su inervación.",
+  "cb5e7921-c99f-5922-9251-0e9c9779a466": "Recuerda las estructuras periféricas que orientan el brote axonal.",
+  "407eba9b-0ef8-559d-9caf-39afc8228624": "Distingue entre posibilidad de regeneración y garantía de recuperación completa."
 };
