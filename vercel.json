@@ -20,5 +20,17 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/juego",
+      "destination": "/juegos/",
+      "permanent": false
+    },
+    {
+      "source": "/juego/",
+      "destination": "/juegos/",
+      "permanent": false
+    }
   ]
 }

@@ -1,0 +1,175 @@
+{
+  "evaluationId": "2faa1933-85fe-57d4-b660-850984685824",
+  "title": "Tejido nervioso — Ronda 3: diapositivas 41 a 50",
+  "topic": "tejido-nervioso-41-50",
+  "source": "TEJIDO NERVIOSO 2026 estudiantes.pptx",
+  "questions": [
+    {
+      "id": "2e7f0db0-1b1b-550c-943e-1f296c6d04bd",
+      "slide": 41,
+      "type": "mc",
+      "text": "En una fibra mielinizada, ¿cómo se llaman las interrupciones entre segmentos de mielina?",
+      "options": [
+        "Botones sinápticos",
+        "Nodos de Ranvier",
+        "Cuerpos de Nissl",
+        "Dendritas"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Los nodos de Ranvier separan los internodos de mielina y permiten la conducción saltatoria.",
+      "order": 1
+    },
+    {
+      "id": "da8147d8-4f1e-560a-961a-db4e5b197b63",
+      "slide": 41,
+      "type": "mc",
+      "text": "¿Qué diferencia a la mielinización del SNC de la del SNP?",
+      "options": [
+        "La microglía forma mielina en ambos sistemas",
+        "Cada célula de Schwann mieliniza varios axones del SNC",
+        "Un oligodendrocito puede mielinizar segmentos de varios axones; una célula de Schwann forma un segmento en un axón del SNP",
+        "La mielina solo se encuentra en el SNP"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "En el SNC actúan los oligodendrocitos; en el SNP, las células de Schwann.",
+      "order": 2
+    },
+    {
+      "id": "d4745aea-c22a-5a39-ae18-d9b9388fb28e",
+      "slide": 42,
+      "type": "mc",
+      "text": "La esclerosis múltiple daña la mielina del SNC. ¿Qué consecuencia funcional se relaciona con ese daño?",
+      "options": [
+        "La conducción nerviosa puede hacerse más lenta o interrumpirse",
+        "Todos los axones conducen más rápido",
+        "La fibra se convierte en una célula muscular",
+        "Aumenta obligatoriamente el diámetro de todas las fibras"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "La pérdida de mielina altera la propagación normal de las señales por las vías afectadas.",
+      "order": 3
+    },
+    {
+      "id": "23670aca-2d3f-54e8-9616-bc66ce6035df",
+      "slide": 43,
+      "type": "mc",
+      "text": "¿Qué característica corresponde a la enfermedad de Tay-Sachs presentada en clase?",
+      "options": [
+        "Se produce por una sección traumática del nervio",
+        "Es un aumento normal de mielina durante el desarrollo",
+        "Afecta exclusivamente a los músculos",
+        "Es hereditaria y se relaciona con una deficiencia enzimática que causa acumulación de lípidos en las neuronas"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Es un trastorno hereditario de almacenamiento lisosomal. La pregunta evalúa el mecanismo general, sin reproducir errores de rotulación de gangliósidos en las imágenes.",
+      "order": 4
+    },
+    {
+      "id": "e91f3b8b-5565-5c51-8ea4-e47ebd9aa665",
+      "slide": 44,
+      "type": "tf",
+      "text": "Una fibra amielínica del SNP puede estar alojada en una célula de Schwann aunque no tenga una vaina de mielina.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "La célula de Schwann puede alojar varias fibras sin envolver cada una con capas concéntricas de mielina.",
+      "order": 5
+    },
+    {
+      "id": "8e3bf1b0-0b57-58f4-8e27-1cbe120ed2da",
+      "slide": 45,
+      "type": "ms",
+      "text": "Selecciona los DOS factores que favorecen una conducción nerviosa más rápida.",
+      "options": [
+        "Mayor diámetro de la fibra",
+        "Ausencia de mielina",
+        "Presencia de mielina",
+        "Menor diámetro de la fibra"
+      ],
+      "correct": [
+        0,
+        2
+      ],
+      "explanation": "La velocidad depende del diámetro de la fibra y de la presencia o ausencia de mielina.",
+      "order": 6
+    },
+    {
+      "id": "22b6ab49-b24c-5f18-b841-f939825f1301",
+      "slide": 46,
+      "type": "mc",
+      "text": "Tras una lesión de una fibra nerviosa periférica, ¿qué situación permite que exista posibilidad de regeneración?",
+      "options": [
+        "La desaparición completa del soma",
+        "Un soma intacto y conservación de parte del neurilema",
+        "La destrucción de todo el trayecto de soporte",
+        "La conversión del axón en una dendrita"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "La regeneración periférica requiere la supervivencia del soma y un entorno de soporte que permita el crecimiento axonal.",
+      "order": 7
+    },
+    {
+      "id": "ee79a6c8-fa12-55f6-a720-161a2e69d09b",
+      "slide": 47,
+      "type": "mc",
+      "text": "Un músculo pierde su inervación después de una lesión nerviosa. ¿Qué cambio se describe en las diapositivas?",
+      "options": [
+        "Aumenta su volumen sin actividad nerviosa",
+        "Se transforma en tejido nervioso",
+        "Se contrae de forma permanente por producir mielina",
+        "Sus fibras se encogen: atrofia por desnervación"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "La pérdida de inervación provoca atrofia de las fibras musculares.",
+      "order": 8
+    },
+    {
+      "id": "cb5e7921-c99f-5922-9251-0e9c9779a466",
+      "slide": 48,
+      "type": "mc",
+      "text": "Durante la regeneración de un nervio periférico, ¿qué guía el brote axonal hacia su destino?",
+      "options": [
+        "Un nuevo oligodendrocito que sale del encéfalo",
+        "La vaina de mielina de otra neurona del SNC",
+        "El conducto de regeneración formado por células de Schwann, lámina basal y neurilema",
+        "La desaparición de todas las células de Schwann"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "El conducto de regeneración y las señales de las células de Schwann favorecen y orientan el crecimiento axonal.",
+      "order": 9
+    },
+    {
+      "id": "407eba9b-0ef8-559d-9caf-39afc8228624",
+      "slide": 49,
+      "type": "tf",
+      "text": "La regeneración de una fibra nerviosa periférica garantiza siempre la recuperación completa de su función.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "La recuperación puede ser incompleta: algunas fibras no alcanzan su destino o establecen conexiones incorrectas.",
+      "order": 10
+    }
+  ]
+}

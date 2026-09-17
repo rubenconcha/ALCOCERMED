@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-juegos-v68';
+const CACHE_NAME = 'alcocermed-juegos-v69';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const ASSETS_TO_CACHE = [
   './app.js',
   './app.js?v=68',
   './tejido-nervioso-imagenes.js?v=1',
+  './tejido-nervioso.js?v=4',
   './tejido-nervioso.css?v=3',
   './manifest.json',
   './assets/result_arena_bg.png',

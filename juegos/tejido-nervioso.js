@@ -1,18 +1,23 @@
 // Acceso de la clase. Usa las evaluaciones y el motor de juegos existentes.
-var nervousClassMode = new URLSearchParams(location.search).get('tema') === 'tejido-nervioso';
-var nervousClassIds = ['71c3ac1c-7bda-5eaa-a449-d0b94ac33684', '243e1718-d7af-56bc-bf64-ea00346daa0d'];
+var nervousClassTopic = new URLSearchParams(location.search).get('tema');
+var nervousClassContinuation = nervousClassTopic === 'tejido-nervioso-41-50';
+var nervousClassMode = nervousClassTopic === 'tejido-nervioso' || nervousClassContinuation;
+var nervousClassIds = nervousClassContinuation
+    ? ['2faa1933-85fe-57d4-b660-850984685824']
+    : ['71c3ac1c-7bda-5eaa-a449-d0b94ac33684', '243e1718-d7af-56bc-bf64-ea00346daa0d'];
 
 function initNervousClass() {
     document.body.classList.add('nervous-class');
     // Sesión separada: no reemplaza la cuenta habitual de este navegador.
     sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
-        auth: { storageKey: 'alcocermed-tejido-nervioso-2026' }
+        auth: { storageKey: 'alcocermed-' + nervousClassTopic + '-2026' }
     });
     var card = document.querySelector('#login-screen .login-card');
     card.querySelectorAll('form,.login-mode-tabs').forEach(function(el) { el.hidden = true; el.style.display = 'none'; });
     var form = document.createElement('form');
     form.className = 'login-form';
     form.innerHTML = '<h1 style="font-size:1.5rem">Sistema nervioso</h1>' +
+        (nervousClassContinuation ? '<p>Diapositivas 41 a 50 · 10 preguntas</p>' : '') +
         '<div class="login-field"><label class="login-label" for="class-name">Nombre y apellidos</label>' +
         '<input id="class-name" class="login-input" autocomplete="name" minlength="3" maxlength="100" required></div>' +
         '<p>Tu nombre aparecerá junto a tu resultado. Usa el mismo dispositivo para continuar.</p>' +
@@ -23,9 +28,14 @@ function initNervousClass() {
     var section = document.createElement('section');
     section.id = 'page-nervioso'; section.className = 'page';
     section.innerHTML = '<h1 class="page-title">Tejido nervioso</h1><p id="class-greeting" class="page-subtitle"></p>' +
-        '<p>Completa la primera ronda y después continúa con la segunda.</p>' +
-        '<div class="class-rounds"><button class="class-round" data-round="0">Ronda 1 <small>Organización y neuronas · 15 preguntas</small></button>' +
-        '<button class="class-round" data-round="1">Ronda 2 <small>Neuroglía y mielina · 15 preguntas</small></button></div>' +
+        (nervousClassContinuation
+            ? '<p>Continúa con mielina, conducción y regeneración nerviosa.</p>' +
+              '<div class="class-rounds"><button class="class-round" data-round="0">Ronda 3 <small>Diapositivas 41 a 50 · 10 preguntas</small></button></div>' +
+              '<p><a href="/juegos/?tema=tejido-nervioso">Volver a las rondas 1 y 2</a></p>'
+            : '<p>Completa la primera ronda y después continúa con la segunda.</p>' +
+              '<div class="class-rounds"><button class="class-round" data-round="0">Ronda 1 <small>Organización y neuronas · 15 preguntas</small></button>' +
+              '<button class="class-round" data-round="1">Ronda 2 <small>Neuroglía y mielina · 15 preguntas</small></button></div>' +
+              '<p><a href="/juegos/?tema=tejido-nervioso-41-50">Continuar con la ronda 3: diapositivas 41 a 50 (10 preguntas)</a></p>') +
         '<button id="class-change-name" class="class-round">Entrar con otro nombre</button>';
     document.getElementById('page-quiz').parentNode.appendChild(section);
     section.querySelectorAll('[data-round]').forEach(function(button) {
@@ -40,7 +50,7 @@ function initNervousClass() {
     };
     sb.auth.getSession().then(function(result) {
         var user = result.data && result.data.session && result.data.session.user;
-        if (user && user.user_metadata && user.user_metadata.class_topic === 'tejido-nervioso') {
+        if (user && user.user_metadata && user.user_metadata.class_topic === nervousClassTopic) {
             currentUser = user; enterApp();
         }
     }).catch(function() { showLogin(); });
@@ -56,15 +66,17 @@ async function enterNervousClassByName(event) {
     button.disabled = true; button.textContent = 'Preparando tu entrada…';
     try {
         var ready = await sb.from('evaluaciones').select('id').in('id', nervousClassIds).eq('publicado', true);
-        if (ready.error || !ready.data || ready.data.length !== 2) {
-            throw new Error('El profesor todavía está habilitando las dos rondas. Intenta nuevamente en unos minutos.');
+        if (ready.error || !ready.data || ready.data.length !== nervousClassIds.length) {
+            throw new Error(nervousClassContinuation
+                ? 'El profesor todavía está habilitando la ronda 3. Intenta nuevamente en unos minutos.'
+                : 'El profesor todavía está habilitando las dos rondas. Intenta nuevamente en unos minutos.');
         }
         var bytes = crypto.getRandomValues(new Uint8Array(32));
         var secret = Array.from(bytes, function(b) { return b.toString(16).padStart(2, '0'); }).join('');
         var result = await sb.auth.signUp({
             email: 'neuro.' + crypto.randomUUID() + '@' + DEMO_EVENT.emailDomain,
             password: secret,
-            options: { data: { full_name: name, demo_guest: true, class_topic: 'tejido-nervioso' } }
+            options: { data: { full_name: name, demo_guest: true, class_topic: nervousClassTopic } }
         });
         if (result.error) throw new Error('No se pudo crear tu entrada. Espera un momento e inténtalo otra vez.');
         if (!result.data || !result.data.session) throw new Error('No se pudo iniciar la sesión. Avísale al profesor.');
