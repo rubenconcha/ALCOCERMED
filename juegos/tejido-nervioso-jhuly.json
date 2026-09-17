@@ -1,0 +1,372 @@
+{
+  "evaluationId": "b1fe4fa3-5825-5d93-98a3-3c7a669d3f95",
+  "topic": "tejido-nervioso-jhuly",
+  "title": "Tejido nervioso — Electricidad, sinapsis y circuitos (20 preguntas)",
+  "source": "tejido nervioso jhuly.pptx",
+  "slideRange": [
+    51,
+    117
+  ],
+  "questions": [
+    {
+      "id": "13feb955-78dd-517b-b546-d2109dcccf87",
+      "order": 1,
+      "slide": 51,
+      "difficulty": "fácil",
+      "type": "mc",
+      "text": "¿Qué es una corriente eléctrica?",
+      "options": [
+        "Una diferencia de temperatura",
+        "Un flujo de partículas cargadas",
+        "Una capa de mielina",
+        "Una unión entre células"
+      ],
+      "correct": [
+        1
+      ],
+      "hint": "La corriente describe movimiento de cargas."
+    },
+    {
+      "id": "ee3f5533-691c-59fc-8c9b-bae4ab19f460",
+      "order": 2,
+      "slide": 53,
+      "difficulty": "fácil",
+      "type": "mc",
+      "text": "En reposo, ¿cómo es el interior de la neurona respecto al exterior?",
+      "options": [
+        "Más negativo",
+        "Más positivo",
+        "Siempre igual",
+        "Sin cargas eléctricas"
+      ],
+      "correct": [
+        0
+      ],
+      "hint": "Compara la carga interior con la exterior."
+    },
+    {
+      "id": "662f2b63-8e62-5aad-9b6c-23c379374bb2",
+      "order": 3,
+      "slide": 53,
+      "difficulty": "intermedio",
+      "type": "mc",
+      "text": "¿Qué hace la bomba de sodio y potasio en cada ciclo?",
+      "options": [
+        "Introduce 3 Na⁺ y expulsa 2 K⁺",
+        "Expulsa 2 Na⁺ e introduce 3 K⁺",
+        "Expulsa 3 Na⁺ e introduce 2 K⁺",
+        "Introduce Na⁺ y K⁺ en igual cantidad"
+      ],
+      "correct": [
+        2
+      ],
+      "hint": "Recuerda la relación 3:2 y el sodio hacia fuera."
+    },
+    {
+      "id": "2c13905e-e279-5f63-9e8c-46495150c5ca",
+      "order": 4,
+      "slide": 56,
+      "difficulty": "intermedio",
+      "type": "mc",
+      "text": "El interior de la neurona es negativo. ¿Qué efecto eléctrico ejerce sobre el K⁺?",
+      "options": [
+        "Lo repele hacia fuera",
+        "No ejerce ningún efecto",
+        "Lo convierte en Na⁺",
+        "Lo atrae hacia el interior"
+      ],
+      "correct": [
+        3
+      ],
+      "hint": "Las cargas de signo contrario se atraen."
+    },
+    {
+      "id": "46edae80-8fa8-5be9-ae5d-dad15609a8d8",
+      "order": 5,
+      "slide": 61,
+      "difficulty": "fácil",
+      "type": "mc",
+      "text": "Los potenciales locales son graduados. ¿Qué significa?",
+      "options": [
+        "Su amplitud varía con la fuerza del estímulo",
+        "Siempre tienen la misma amplitud",
+        "No cambian con los estímulos",
+        "Solo aparecen en la mielina"
+      ],
+      "correct": [
+        0
+      ],
+      "hint": "Graduado significa que la respuesta puede ser menor o mayor."
+    },
+    {
+      "id": "22b56a51-e1c6-5345-ac69-a2fbe6b5e464",
+      "order": 6,
+      "slide": 61,
+      "difficulty": "intermedio",
+      "type": "mc",
+      "text": "Un potencial local se debilita al alejarse de su origen. ¿Qué propiedad muestra?",
+      "options": [
+        "Todo o nada",
+        "Decremental",
+        "Irreversible",
+        "Refractaria"
+      ],
+      "correct": [
+        1
+      ],
+      "hint": "Busca el término que indica disminución."
+    },
+    {
+      "id": "93a510a0-4257-5994-b1ec-1a7ebec5828b",
+      "order": 7,
+      "slide": 63,
+      "difficulty": "intermedio",
+      "type": "mc",
+      "text": "Un potencial local llega a la zona de activación, pero no alcanza el umbral. ¿Qué ocurre?",
+      "options": [
+        "Se libera siempre neurotransmisor",
+        "Se produce un potencial de acción mayor",
+        "No se desencadena un potencial de acción",
+        "Se elimina el periodo refractario"
+      ],
+      "correct": [
+        2
+      ],
+      "hint": "El umbral es el mínimo necesario para disparar."
+    },
+    {
+      "id": "881cd4b9-0e76-53d3-b63c-9e78a16c8ec3",
+      "order": 8,
+      "slide": 63,
+      "difficulty": "fácil",
+      "type": "mc",
+      "text": "Durante la repolarización descrita en las diapositivas, ¿qué ion sale de la célula?",
+      "options": [
+        "Calcio",
+        "Sodio",
+        "Cloruro",
+        "Potasio"
+      ],
+      "correct": [
+        3
+      ],
+      "hint": "Repasa qué canales se abren para que el interior vuelva a ser negativo."
+    },
+    {
+      "id": "26db9948-dc42-5d03-8f18-8eac1612efc7",
+      "order": 9,
+      "slide": 69,
+      "difficulty": "intermedio",
+      "type": "mc",
+      "text": "Durante el periodo refractario absoluto, ¿puede un estímulo muy intenso provocar otro potencial de acción en esa región?",
+      "options": [
+        "Sí, siempre",
+        "No, ningún estímulo lo provoca en ese periodo",
+        "Solo si la fibra tiene mielina",
+        "Solo si entra neurotransmisor"
+      ],
+      "correct": [
+        1
+      ],
+      "hint": "Absoluto significa que no hay excepción por aumentar la intensidad."
+    },
+    {
+      "id": "117828c1-2a48-5389-8437-181bf29d1e85",
+      "order": 10,
+      "slide": 77,
+      "difficulty": "fácil",
+      "type": "mc",
+      "text": "¿Cómo se llama la conducción característica de las fibras mielinizadas?",
+      "options": [
+        "Saltatoria",
+        "Continua",
+        "Decremental",
+        "Reverberante"
+      ],
+      "correct": [
+        0
+      ],
+      "hint": "Se compara con la conducción continua de las fibras amielínicas."
+    },
+    {
+      "id": "6237c5ce-bed7-529e-82ac-edbf76c2a0ff",
+      "order": 11,
+      "slide": 80,
+      "difficulty": "fácil",
+      "type": "mc",
+      "text": "¿Qué contienen las vesículas sinápticas?",
+      "options": [
+        "Nodos de Ranvier",
+        "Vainas de mielina",
+        "Neurotransmisores",
+        "Cuerpos neuronales"
+      ],
+      "correct": [
+        2
+      ],
+      "hint": "Las vesículas almacenan el mensajero que se libera en la sinapsis."
+    },
+    {
+      "id": "ca891225-335f-56b9-abdd-681415867d0e",
+      "order": 12,
+      "slide": 87,
+      "difficulty": "fácil",
+      "type": "mc",
+      "text": "¿Qué ion entra en el botón presináptico y favorece la liberación del neurotransmisor?",
+      "options": [
+        "Cloruro",
+        "Potasio",
+        "Magnesio",
+        "Calcio"
+      ],
+      "correct": [
+        3
+      ],
+      "hint": "En el esquema aparece como Ca²⁺."
+    },
+    {
+      "id": "543a6b23-f608-55c8-b0a3-d894655b4aa2",
+      "order": 13,
+      "slide": 89,
+      "difficulty": "fácil",
+      "type": "mc",
+      "text": "¿Qué neurotransmisor participa en la sinapsis inhibitoria GABAérgica?",
+      "options": [
+        "GABA",
+        "Acetilcolina",
+        "Noradrenalina",
+        "Glutamato"
+      ],
+      "correct": [
+        0
+      ],
+      "hint": "El nombre de esta sinapsis indica el mensajero utilizado."
+    },
+    {
+      "id": "120f8156-9850-514f-98ba-d07faa7c97cb",
+      "order": 14,
+      "slide": 94,
+      "difficulty": "intermedio",
+      "type": "mc",
+      "text": "¿Por qué debe retirarse el estímulo químico de la sinapsis en el momento adecuado?",
+      "options": [
+        "Para producir mielina",
+        "Para evitar una activación postsináptica indefinida",
+        "Para eliminar todos los receptores",
+        "Para transformar el axón en dendrita"
+      ],
+      "correct": [
+        1
+      ],
+      "hint": "La comunicación necesita comenzar y terminar de forma coordinada."
+    },
+    {
+      "id": "da990b70-6c3a-548f-92c6-758f2d5751ad",
+      "order": 15,
+      "slide": 109,
+      "difficulty": "fácil",
+      "type": "mc",
+      "text": "¿Qué efecto tiene un potencial excitatorio postsináptico (PEPS)?",
+      "options": [
+        "Forma una vaina de mielina",
+        "Siempre impide llegar al umbral",
+        "Favorece alcanzar el umbral",
+        "Destruye los neurotransmisores"
+      ],
+      "correct": [
+        2
+      ],
+      "hint": "Excitación significa facilitar que la neurona dispare."
+    },
+    {
+      "id": "85e9a61a-c3c4-5a88-a365-c8d4761a55b3",
+      "order": 16,
+      "slide": 109,
+      "difficulty": "intermedio",
+      "type": "mc",
+      "text": "Llegan señales muy próximas en el tiempo a través de la misma sinapsis. ¿Qué tipo de sumación ocurre?",
+      "options": [
+        "Espacial",
+        "Saltatoria",
+        "Refractaria",
+        "Temporal"
+      ],
+      "correct": [
+        3
+      ],
+      "hint": "La clave es la misma sinapsis y la cercanía en el tiempo."
+    },
+    {
+      "id": "41ef5c48-1518-51df-8701-6c8af654bb61",
+      "order": 17,
+      "slide": 109,
+      "difficulty": "intermedio",
+      "type": "mc",
+      "text": "Varias sinapsis aportan señales al mismo tiempo a una neurona. ¿Qué tipo de sumación ocurre?",
+      "options": [
+        "Espacial",
+        "Temporal",
+        "Axonal",
+        "Refractaria"
+      ],
+      "correct": [
+        0
+      ],
+      "hint": "La clave es que las señales llegan desde lugares distintos."
+    },
+    {
+      "id": "cdd0c6d8-87a8-50db-8b5b-7a9732c5cfcf",
+      "order": 18,
+      "slide": 110,
+      "difficulty": "intermedio",
+      "type": "mc",
+      "text": "Un estímulo más fuerte activa neuronas adicionales. ¿Cómo se llama ese proceso?",
+      "options": [
+        "Repolarización",
+        "Reclutamiento",
+        "Reverberación",
+        "Hiperpolarización"
+      ],
+      "correct": [
+        1
+      ],
+      "hint": "Se incorporan más neuronas a la respuesta."
+    },
+    {
+      "id": "5361775b-8fcd-5cb0-b3fb-724cd3f5bb64",
+      "order": 19,
+      "slide": 113,
+      "difficulty": "fácil",
+      "type": "mc",
+      "text": "En un circuito divergente, ¿hacia dónde se distribuye la información?",
+      "options": [
+        "De muchas neuronas a una sola",
+        "Solo hacia la misma neurona",
+        "De una vía hacia varias células postsinápticas",
+        "Exclusivamente hacia una glándula"
+      ],
+      "correct": [
+        2
+      ],
+      "hint": "Divergir significa ramificarse hacia varios destinos."
+    },
+    {
+      "id": "1c46378b-911f-5872-9676-289d426a7cda",
+      "order": 20,
+      "slide": 113,
+      "difficulty": "intermedio",
+      "type": "mc",
+      "text": "Varias fibras nerviosas llevan información hacia una neurona o conjunto neural. ¿Qué circuito representa?",
+      "options": [
+        "Divergente",
+        "Reverberante",
+        "Paralelo después de la descarga",
+        "Convergente"
+      ],
+      "correct": [
+        3
+      ],
+      "hint": "Converger significa que varias entradas se reúnen."
+    }
+  ]
+}

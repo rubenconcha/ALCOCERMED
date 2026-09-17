@@ -4,6 +4,7 @@ const vm = require('node:vm');
 const { webcrypto } = require('node:crypto');
 const source = fs.readFileSync('juegos/tejido-nervioso.js', 'utf8');
 const bank = JSON.parse(fs.readFileSync('juegos/tejido-nervioso-41-50.json', 'utf8'));
+const jhuly = JSON.parse(fs.readFileSync('juegos/tejido-nervioso-jhuly.json', 'utf8'));
 const oldIds = ['71c3ac1c-7bda-5eaa-a449-d0b94ac33684', '243e1718-d7af-56bc-bf64-ea00346daa0d'];
 function setup(topic, ready = true) {
   const state = { signups: [], entered: 0, cleared: 0, restored: [], navigation: [] };
@@ -44,9 +45,26 @@ function setup(topic, ready = true) {
   assert.ok(sql.includes('"maxQuestions": 10'));
   assert.ok(!sql.match(/\bdelete\s+from\b|\btruncate\b/i));
   bank.questions.forEach(q => assert.ok(sql.includes(q.id)));
-  for (const topic of ['tejido-nervioso', bank.topic]) {
+  assert.equal(jhuly.questions.length,20);
+  assert.equal(new Set(jhuly.questions.map(q=>q.id)).size,20);
+  assert.equal(jhuly.questions.filter(q=>q.difficulty==='fácil').length,10);
+  assert.equal(jhuly.questions.filter(q=>q.difficulty==='intermedio').length,10);
+  const imageContext=vm.createContext({});
+  vm.runInContext(fs.readFileSync('juegos/tejido-nervioso-imagenes.js','utf8'),imageContext);
+  const jhulySql=fs.readFileSync('juegos/SUPABASE_TEJIDO_NERVIOSO_JHULY_20.sql','utf8');
+  assert.equal((jhulySql.match(/insert into public.evaluacion_preguntas/gi)||[]).length,20);
+  jhuly.questions.forEach((q,i)=>{
+    assert.equal(q.order,i+1); assert.ok(q.slide>=51&&q.slide<=117);
+    assert.equal(q.options.length,4); assert.ok(q.options.every(s=>s.trim().length>0));
+    assert.equal(q.correct.length,1); assert.ok(q.correct[0]>=0&&q.correct[0]<4);
+    assert.doesNotMatch(JSON.stringify(q),/memoria|alzheimer|parkinson/i);
+    assert.ok(jhulySql.includes(q.id));
+    assert.ok(imageContext.nervousQuestionImages[q.id]);
+    assert.ok(imageContext.nervousQuestionHints[q.id]);
+  });
+  for (const topic of ['tejido-nervioso', bank.topic, jhuly.topic]) {
     const test = setup(topic); assert.equal(test.ctx.nervousClassMode,true);
-    assert.deepEqual(Array.from(test.ctx.nervousClassIds),topic===bank.topic?[bank.evaluationId]:oldIds);
+    assert.deepEqual(Array.from(test.ctx.nervousClassIds),topic===jhuly.topic?[jhuly.evaluationId]:topic===bank.topic?[bank.evaluationId]:oldIds);
     test.get('class-name').value='  Ana   Pérez  ';
     await test.ctx.enterNervousClassByName(test.event);
     assert.equal(test.state.entered,1); assert.equal(test.button.disabled,false);
@@ -69,5 +87,5 @@ function setup(topic, ready = true) {
   await invalid.ctx.enterNervousClassByName(invalid.event);
   assert.equal(invalid.state.signups.length,0); assert.equal(invalid.state.requested,undefined);
   assert.equal(setup('otro-tema').ctx.nervousClassMode,false);
-  console.log('OK: 10 preguntas; SQL; rondas anteriores; nombre; acceso; bloqueo sin publicación; restauración de sesión.');
+  console.log('OK: bancos de 10 y 20 preguntas; contenido excluido; imágenes y pistas; SQL; acceso por nombre; rondas anteriores; bloqueo sin publicación; restauración.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

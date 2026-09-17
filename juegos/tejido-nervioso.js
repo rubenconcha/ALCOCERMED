@@ -1,8 +1,9 @@
 // Acceso de la clase. Usa las evaluaciones y el motor de juegos existentes.
 var nervousClassTopic = new URLSearchParams(location.search).get('tema');
 var nervousClassContinuation = nervousClassTopic === 'tejido-nervioso-41-50';
-var nervousClassMode = nervousClassTopic === 'tejido-nervioso' || nervousClassContinuation;
-var nervousClassIds = nervousClassContinuation
+var nervousClassJhuly = nervousClassTopic === 'tejido-nervioso-jhuly';
+var nervousClassMode = nervousClassTopic === 'tejido-nervioso' || nervousClassContinuation || nervousClassJhuly;
+var nervousClassIds = nervousClassJhuly ? ['b1fe4fa3-5825-5d93-98a3-3c7a669d3f95'] : nervousClassContinuation
     ? ['2faa1933-85fe-57d4-b660-850984685824']
     : ['71c3ac1c-7bda-5eaa-a449-d0b94ac33684', '243e1718-d7af-56bc-bf64-ea00346daa0d'];
 
@@ -18,6 +19,7 @@ function initNervousClass() {
     form.className = 'login-form';
     form.innerHTML = '<h1 style="font-size:1.5rem">Sistema nervioso</h1>' +
         (nervousClassContinuation ? '<p>Diapositivas 41 a 50 · 10 preguntas</p>' : '') +
+        (nervousClassJhuly ? '<p>Electricidad, sinapsis y circuitos · 20 preguntas · Fácil e intermedio</p>' : '') +
         '<div class="login-field"><label class="login-label" for="class-name">Nombre y apellidos</label>' +
         '<input id="class-name" class="login-input" autocomplete="name" minlength="3" maxlength="100" required></div>' +
         '<p>Tu nombre aparecerá junto a tu resultado. Usa el mismo dispositivo para continuar.</p>' +
@@ -28,7 +30,10 @@ function initNervousClass() {
     var section = document.createElement('section');
     section.id = 'page-nervioso'; section.className = 'page';
     section.innerHTML = '<h1 class="page-title">Tejido nervioso</h1><p id="class-greeting" class="page-subtitle"></p>' +
-        (nervousClassContinuation
+        (nervousClassJhuly
+            ? '<p>Repasa el contenido de las diapositivas desde la 51: electricidad neuronal, sinapsis e integración.</p>' +
+              '<div class="class-rounds"><button class="class-round" data-round="0">Comenzar <small>20 preguntas · Fácil e intermedio</small></button></div>'
+            : nervousClassContinuation
             ? '<p>Continúa con mielina, conducción y regeneración nerviosa.</p>' +
               '<div class="class-rounds"><button class="class-round" data-round="0">Ronda 3 <small>Diapositivas 41 a 50 · 10 preguntas</small></button></div>' +
               '<p><a href="/juegos/?tema=tejido-nervioso">Volver a las rondas 1 y 2</a></p>'
@@ -67,7 +72,9 @@ async function enterNervousClassByName(event) {
     try {
         var ready = await sb.from('evaluaciones').select('id').in('id', nervousClassIds).eq('publicado', true);
         if (ready.error || !ready.data || ready.data.length !== nervousClassIds.length) {
-            throw new Error(nervousClassContinuation
+            throw new Error(nervousClassJhuly
+                ? 'El profesor todavía está habilitando las 20 preguntas. Intenta nuevamente en unos minutos.'
+                : nervousClassContinuation
                 ? 'El profesor todavía está habilitando la ronda 3. Intenta nuevamente en unos minutos.'
                 : 'El profesor todavía está habilitando las dos rondas. Intenta nuevamente en unos minutos.');
         }
