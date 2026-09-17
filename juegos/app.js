@@ -4280,7 +4280,9 @@ function renderQuizQuestionImageWrap(pregunta, tipo) {
         wrap.hidden = false;
         wrap.innerHTML = '<img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(illustration ? illustration.alt : 'Imagen de la pregunta') + '">';
         if (illustration) {
-            wrap.innerHTML += '<small class="quiz-image-credit"><a href="' + escapeHtml(illustration.source) + '" target="_blank" rel="noopener noreferrer">Servier Medical Art</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></small>';
+            wrap.innerHTML += illustration.credit
+                ? '<small class="quiz-image-credit">' + escapeHtml(illustration.credit) + '</small>'
+                : '<small class="quiz-image-credit"><a href="' + escapeHtml(illustration.source) + '" target="_blank" rel="noopener noreferrer">Servier Medical Art</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></small>';
             wrap.querySelector('img').addEventListener('error', function() { wrap.hidden = true; });
         }
     } else {
