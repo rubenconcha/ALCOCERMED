@@ -48,37 +48,37 @@
       "id": "662f2b63-8e62-5aad-9b6c-23c379374bb2",
       "order": 3,
       "slide": 53,
-      "difficulty": "intermedio",
+      "difficulty": "fácil",
       "type": "mc",
-      "text": "¿Qué hace la bomba de sodio y potasio en cada ciclo?",
+      "text": "¿Qué dos iones transporta la bomba de sodio y potasio?",
       "options": [
-        "Introduce 3 Na⁺ y expulsa 2 K⁺",
-        "Expulsa 2 Na⁺ e introduce 3 K⁺",
-        "Expulsa 3 Na⁺ e introduce 2 K⁺",
-        "Introduce Na⁺ y K⁺ en igual cantidad"
+        "Calcio y cloruro",
+        "Hierro y calcio",
+        "Sodio y potasio",
+        "Magnesio y hierro"
       ],
       "correct": [
         2
       ],
-      "hint": "Recuerda la relación 3:2 y el sodio hacia fuera."
+      "hint": "Los dos iones aparecen en el nombre de la bomba."
     },
     {
       "id": "2c13905e-e279-5f63-9e8c-46495150c5ca",
       "order": 4,
       "slide": 56,
-      "difficulty": "intermedio",
+      "difficulty": "fácil",
       "type": "mc",
-      "text": "El interior de la neurona es negativo. ¿Qué efecto eléctrico ejerce sobre el K⁺?",
+      "text": "¿Qué carga tiene el ion potasio (K⁺)?",
       "options": [
-        "Lo repele hacia fuera",
-        "No ejerce ningún efecto",
-        "Lo convierte en Na⁺",
-        "Lo atrae hacia el interior"
+        "Negativa",
+        "Neutra",
+        "No tiene carga",
+        "Positiva"
       ],
       "correct": [
         3
       ],
-      "hint": "Las cargas de signo contrario se atraen."
+      "hint": "Observa el signo + junto a K."
     },
     {
       "id": "46edae80-8fa8-5be9-ae5d-dad15609a8d8",
@@ -102,37 +102,37 @@
       "id": "22b56a51-e1c6-5345-ac69-a2fbe6b5e464",
       "order": 6,
       "slide": 61,
-      "difficulty": "intermedio",
+      "difficulty": "fácil",
       "type": "mc",
-      "text": "Un potencial local se debilita al alejarse de su origen. ¿Qué propiedad muestra?",
+      "text": "Al alejarse de su origen, un potencial local…",
       "options": [
-        "Todo o nada",
-        "Decremental",
-        "Irreversible",
-        "Refractaria"
+        "Se vuelve más fuerte",
+        "Se debilita",
+        "Se convierte en mielina",
+        "Forma otra neurona"
       ],
       "correct": [
         1
       ],
-      "hint": "Busca el término que indica disminución."
+      "hint": "Decremental significa que disminuye."
     },
     {
       "id": "93a510a0-4257-5994-b1ec-1a7ebec5828b",
       "order": 7,
       "slide": 63,
-      "difficulty": "intermedio",
+      "difficulty": "fácil",
       "type": "mc",
-      "text": "Un potencial local llega a la zona de activación, pero no alcanza el umbral. ¿Qué ocurre?",
+      "text": "Para iniciar un potencial de acción, se debe alcanzar…",
       "options": [
-        "Se libera siempre neurotransmisor",
-        "Se produce un potencial de acción mayor",
-        "No se desencadena un potencial de acción",
-        "Se elimina el periodo refractario"
+        "La vaina de mielina",
+        "El núcleo",
+        "El umbral",
+        "La vesícula"
       ],
       "correct": [
         2
       ],
-      "hint": "El umbral es el mínimo necesario para disparar."
+      "hint": "Es el nivel mínimo necesario para iniciar la respuesta."
     },
     {
       "id": "881cd4b9-0e76-53d3-b63c-9e78a16c8ec3",
@@ -156,19 +156,19 @@
       "id": "26db9948-dc42-5d03-8f18-8eac1612efc7",
       "order": 9,
       "slide": 69,
-      "difficulty": "intermedio",
+      "difficulty": "fácil",
       "type": "mc",
-      "text": "Durante el periodo refractario absoluto, ¿puede un estímulo muy intenso provocar otro potencial de acción en esa región?",
+      "text": "En el periodo refractario absoluto, la neurona…",
       "options": [
-        "Sí, siempre",
-        "No, ningún estímulo lo provoca en ese periodo",
-        "Solo si la fibra tiene mielina",
-        "Solo si entra neurotransmisor"
+        "Puede disparar sin parar",
+        "No puede iniciar otro potencial de acción",
+        "Produce mielina",
+        "Pierde su núcleo"
       ],
       "correct": [
         1
       ],
-      "hint": "Absoluto significa que no hay excepción por aumentar la intensidad."
+      "hint": "Es un periodo en el que no puede producirse otro impulso."
     },
     {
       "id": "117828c1-2a48-5389-8437-181bf29d1e85",
@@ -246,19 +246,19 @@
       "id": "120f8156-9850-514f-98ba-d07faa7c97cb",
       "order": 14,
       "slide": 94,
-      "difficulty": "intermedio",
+      "difficulty": "fácil",
       "type": "mc",
-      "text": "¿Por qué debe retirarse el estímulo químico de la sinapsis en el momento adecuado?",
+      "text": "¿Para qué se retira el neurotransmisor de la sinapsis?",
       "options": [
-        "Para producir mielina",
-        "Para evitar una activación postsináptica indefinida",
-        "Para eliminar todos los receptores",
-        "Para transformar el axón en dendrita"
+        "Para formar mielina",
+        "Para terminar la señal",
+        "Para crear un axón",
+        "Para fabricar otra neurona"
       ],
       "correct": [
         1
       ],
-      "hint": "La comunicación necesita comenzar y terminar de forma coordinada."
+      "hint": "La señal no debe continuar indefinidamente."
     },
     {
       "id": "da990b70-6c3a-548f-92c6-758f2d5751ad",
@@ -282,55 +282,55 @@
       "id": "85e9a61a-c3c4-5a88-a365-c8d4761a55b3",
       "order": 16,
       "slide": 109,
-      "difficulty": "intermedio",
+      "difficulty": "fácil",
       "type": "mc",
-      "text": "Llegan señales muy próximas en el tiempo a través de la misma sinapsis. ¿Qué tipo de sumación ocurre?",
+      "text": "La sumación temporal reúne señales próximas…",
       "options": [
-        "Espacial",
-        "Saltatoria",
-        "Refractaria",
-        "Temporal"
+        "En el tamaño",
+        "En el color",
+        "En la forma",
+        "En el tiempo"
       ],
       "correct": [
         3
       ],
-      "hint": "La clave es la misma sinapsis y la cercanía en el tiempo."
+      "hint": "Temporal se relaciona con tiempo."
     },
     {
       "id": "41ef5c48-1518-51df-8701-6c8af654bb61",
       "order": 17,
       "slide": 109,
-      "difficulty": "intermedio",
+      "difficulty": "fácil",
       "type": "mc",
-      "text": "Varias sinapsis aportan señales al mismo tiempo a una neurona. ¿Qué tipo de sumación ocurre?",
+      "text": "La sumación espacial reúne señales de…",
       "options": [
-        "Espacial",
-        "Temporal",
-        "Axonal",
-        "Refractaria"
+        "Varias sinapsis",
+        "Una sola vesícula",
+        "Una vaina de mielina",
+        "Un solo canal de sodio"
       ],
       "correct": [
         0
       ],
-      "hint": "La clave es que las señales llegan desde lugares distintos."
+      "hint": "Las señales proceden de distintos lugares."
     },
     {
       "id": "cdd0c6d8-87a8-50db-8b5b-7a9732c5cfcf",
       "order": 18,
       "slide": 110,
-      "difficulty": "intermedio",
+      "difficulty": "fácil",
       "type": "mc",
-      "text": "Un estímulo más fuerte activa neuronas adicionales. ¿Cómo se llama ese proceso?",
+      "text": "El reclutamiento neuronal consiste en activar…",
       "options": [
-        "Repolarización",
-        "Reclutamiento",
-        "Reverberación",
-        "Hiperpolarización"
+        "Menos neuronas",
+        "Más neuronas",
+        "Solo la mielina",
+        "Solo las vesículas"
       ],
       "correct": [
         1
       ],
-      "hint": "Se incorporan más neuronas a la respuesta."
+      "hint": "Reclutar significa incorporar más participantes."
     },
     {
       "id": "5361775b-8fcd-5cb0-b3fb-724cd3f5bb64",
@@ -354,19 +354,19 @@
       "id": "1c46378b-911f-5872-9676-289d426a7cda",
       "order": 20,
       "slide": 113,
-      "difficulty": "intermedio",
+      "difficulty": "fácil",
       "type": "mc",
-      "text": "Varias fibras nerviosas llevan información hacia una neurona o conjunto neural. ¿Qué circuito representa?",
+      "text": "En un circuito convergente, las señales…",
       "options": [
-        "Divergente",
-        "Reverberante",
-        "Paralelo después de la descarga",
-        "Convergente"
+        "Se separan hacia muchos destinos",
+        "Desaparecen en la mielina",
+        "Se convierten en hormonas",
+        "Se reúnen hacia un mismo destino"
       ],
       "correct": [
         3
       ],
-      "hint": "Converger significa que varias entradas se reúnen."
+      "hint": "Converger significa reunirse."
     }
   ]
 }

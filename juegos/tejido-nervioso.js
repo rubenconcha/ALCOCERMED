@@ -19,7 +19,6 @@ function initNervousClass() {
     form.className = 'login-form';
     form.innerHTML = '<h1 style="font-size:1.5rem">Sistema nervioso</h1>' +
         (nervousClassContinuation ? '<p>Diapositivas 41 a 50 · 10 preguntas</p>' : '') +
-        (nervousClassJhuly ? '<p>Electricidad, sinapsis y circuitos · 20 preguntas · Fácil e intermedio</p>' : '') +
         '<div class="login-field"><label class="login-label" for="class-name">Nombre y apellidos</label>' +
         '<input id="class-name" class="login-input" autocomplete="name" minlength="3" maxlength="100" required></div>' +
         '<p>Tu nombre aparecerá junto a tu resultado. Usa el mismo dispositivo para continuar.</p>' +
@@ -32,7 +31,7 @@ function initNervousClass() {
     section.innerHTML = '<h1 class="page-title">Tejido nervioso</h1><p id="class-greeting" class="page-subtitle"></p>' +
         (nervousClassJhuly
             ? '<p>Repasa el contenido de las diapositivas desde la 51: electricidad neuronal, sinapsis e integración.</p>' +
-              '<div class="class-rounds"><button class="class-round" data-round="0">Comenzar <small>20 preguntas · Fácil e intermedio</small></button></div>'
+              '<div class="class-rounds"><button class="class-round" data-round="0">Comenzar <small>20 preguntas fáciles</small></button></div>'
             : nervousClassContinuation
             ? '<p>Continúa con mielina, conducción y regeneración nerviosa.</p>' +
               '<div class="class-rounds"><button class="class-round" data-round="0">Ronda 3 <small>Diapositivas 41 a 50 · 10 preguntas</small></button></div>' +

@@ -47,8 +47,8 @@ function setup(topic, ready = true) {
   bank.questions.forEach(q => assert.ok(sql.includes(q.id)));
   assert.equal(jhuly.questions.length,20);
   assert.equal(new Set(jhuly.questions.map(q=>q.id)).size,20);
-  assert.equal(jhuly.questions.filter(q=>q.difficulty==='fácil').length,10);
-  assert.equal(jhuly.questions.filter(q=>q.difficulty==='intermedio').length,10);
+  assert.equal(jhuly.questions.filter(q=>q.difficulty==='fácil').length,20);
+  assert.equal(jhuly.questions.filter(q=>q.difficulty==='intermedio').length,0);
   const imageContext=vm.createContext({});
   vm.runInContext(fs.readFileSync('juegos/tejido-nervioso-imagenes.js','utf8'),imageContext);
   const jhulySql=fs.readFileSync('juegos/SUPABASE_TEJIDO_NERVIOSO_JHULY_20.sql','utf8');
