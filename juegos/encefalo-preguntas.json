@@ -1,0 +1,416 @@
+{
+  "version": 1,
+  "source": "ENCEFALO SALADIN PREMIUM J..pptx",
+  "scope": "Ronda 1: diapositivas 2–14. Ronda 2: 15–26; la 27 es la portada de rombencéfalo.",
+  "rounds": [
+    {
+      "title": "Organización y meninges",
+      "questions": [
+        {
+          "id": "encefalo-r1-01",
+          "type": "mc",
+          "prompt": "¿Cuáles son las tres grandes porciones del encéfalo descritas en esta sección?",
+          "image": "assets/encefalo/s3-4.jpeg",
+          "alt": "Regiones principales del encéfalo",
+          "caption": "Imagen de la presentación · diap. 3",
+          "slides": "3–5",
+          "explanation": "El cerebro, el cerebelo y el tallo encefálico constituyen sus tres porciones principales.",
+          "options": [
+            "Cerebro, cerebelo y tallo encefálico",
+            "Cerebro, médula espinal y nervios",
+            "Tálamo, hipotálamo y ganglios",
+            "Duramadre, aracnoides y piamadre"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "encefalo-r1-02",
+          "type": "tf",
+          "prompt": "El cerebelo contiene más de la mitad de las neuronas del encéfalo, aunque representa cerca del 10 % de su volumen.",
+          "image": "assets/encefalo/s3-4.jpeg",
+          "alt": "Regiones principales del encéfalo",
+          "caption": "Imagen de la presentación · diap. 3",
+          "slides": "5",
+          "explanation": "La proporción de neuronas no equivale a la proporción de volumen.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "encefalo-r1-03",
+          "type": "ms",
+          "prompt": "¿Qué elementos son característicos de la sustancia gris? Marca todas las respuestas correctas.",
+          "image": "assets/encefalo/s3-4.jpeg",
+          "alt": "Regiones principales del encéfalo",
+          "caption": "Imagen de la presentación · diap. 3",
+          "slides": "6",
+          "explanation": "La sustancia gris reúne cuerpos neuronales, dendritas y sinapsis; la blanca está formada principalmente por haces de axones.",
+          "options": [
+            "Cuerpos neuronales",
+            "Dendritas",
+            "Sinapsis",
+            "Haces de axones mielinizados como componente predominante"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "encefalo-r1-04",
+          "type": "tf",
+          "prompt": "En el encéfalo, toda la sustancia gris está en la superficie; no existen núcleos profundos.",
+          "image": "assets/encefalo/s3-4.jpeg",
+          "alt": "Regiones principales del encéfalo",
+          "caption": "Imagen de la presentación · diap. 3",
+          "slides": "6",
+          "explanation": "Además de la corteza superficial, existen núcleos profundos de sustancia gris rodeados por sustancia blanca.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            1
+          ]
+        },
+        {
+          "id": "encefalo-r1-05",
+          "type": "mc",
+          "prompt": "¿Qué estructura embrionaria origina el encéfalo y la médula espinal?",
+          "image": "assets/encefalo/s7-2.png",
+          "alt": "Formación del tubo neural",
+          "caption": "Imagen de la presentación · diap. 7",
+          "slides": "7–9",
+          "explanation": "La placa neural se pliega y forma el tubo neural, precursor del sistema nervioso central.",
+          "options": [
+            "Cresta neural",
+            "Notocordio",
+            "Tubo neural",
+            "Somita"
+          ],
+          "correct": [
+            2
+          ]
+        },
+        {
+          "id": "encefalo-r1-06",
+          "type": "match",
+          "prompt": "Relaciona cada vesícula primaria con sus vesículas secundarias.",
+          "image": "assets/encefalo/s9-4.png",
+          "alt": "Vesículas encefálicas embrionarias",
+          "caption": "Imagen de la presentación · diap. 9",
+          "slides": "9–10",
+          "explanation": "El prosencéfalo se divide en dos vesículas, el mesencéfalo conserva su nombre y el rombencéfalo se divide en dos.",
+          "pairs": [
+            [
+              "Prosencéfalo",
+              "Telencéfalo y diencéfalo"
+            ],
+            [
+              "Mesencéfalo",
+              "Mesencéfalo"
+            ],
+            [
+              "Rombencéfalo",
+              "Metencéfalo y mielencéfalo"
+            ]
+          ]
+        },
+        {
+          "id": "encefalo-r1-07",
+          "type": "mc",
+          "prompt": "¿Cuál es el orden de las meninges, desde el cráneo hacia el encéfalo?",
+          "image": "assets/encefalo/s12-4.png",
+          "alt": "Capas meníngeas y superficies del encéfalo",
+          "caption": "Imagen de la presentación · diap. 12",
+          "slides": "12–13",
+          "explanation": "La duramadre es la más externa; la piamadre queda adherida al tejido nervioso.",
+          "options": [
+            "Piamadre → aracnoides → duramadre",
+            "Duramadre → aracnoides → piamadre",
+            "Aracnoides → duramadre → piamadre",
+            "Duramadre → piamadre → aracnoides"
+          ],
+          "correct": [
+            1
+          ]
+        },
+        {
+          "id": "encefalo-r1-08",
+          "type": "ms",
+          "prompt": "Selecciona las dos capas de la duramadre craneal.",
+          "image": "assets/encefalo/s12-4.png",
+          "alt": "Capas meníngeas y superficies del encéfalo",
+          "caption": "Imagen de la presentación · diap. 12",
+          "slides": "12",
+          "explanation": "La duramadre craneal posee una capa perióstica externa y una meníngea interna.",
+          "options": [
+            "Capa perióstica",
+            "Capa meníngea",
+            "Capa aracnoidea",
+            "Capa pial"
+          ],
+          "correct": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "encefalo-r1-09",
+          "type": "match",
+          "prompt": "Relaciona cada meninge con su característica principal.",
+          "image": "assets/encefalo/s12-4.png",
+          "alt": "Capas meníngeas y superficies del encéfalo",
+          "caption": "Imagen de la presentación · diap. 12",
+          "slides": "12–13",
+          "explanation": "La piamadre sigue los contornos del encéfalo, incluso los surcos; el espacio subaracnoideo queda entre ella y la aracnoides.",
+          "pairs": [
+            [
+              "Duramadre",
+              "Membrana externa resistente"
+            ],
+            [
+              "Aracnoides",
+              "Membrana situada sobre el espacio subaracnoideo"
+            ],
+            [
+              "Piamadre",
+              "Membrana íntimamente adherida al encéfalo"
+            ]
+          ]
+        },
+        {
+          "id": "encefalo-r1-10",
+          "type": "mc",
+          "prompt": "¿Entre qué meninges se encuentra el espacio subaracnoideo?",
+          "image": "assets/encefalo/s12-4.png",
+          "alt": "Capas meníngeas y superficies del encéfalo",
+          "caption": "Imagen de la presentación · diap. 12",
+          "slides": "13–14",
+          "explanation": "El espacio subaracnoideo se sitúa entre la aracnoides y la piamadre y contiene líquido cefalorraquídeo.",
+          "options": [
+            "Duramadre y cráneo",
+            "Duramadre y aracnoides",
+            "Aracnoides y piamadre",
+            "Piamadre y corteza cerebral"
+          ],
+          "correct": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Ventrículos, LCR y barreras",
+      "questions": [
+        {
+          "id": "encefalo-r2-01",
+          "type": "mc",
+          "prompt": "¿Cuántos ventrículos tiene el encéfalo?",
+          "image": "assets/encefalo/s15-2.png",
+          "alt": "Sistema ventricular del encéfalo",
+          "caption": "Imagen de la presentación · diap. 15",
+          "slides": "15–16",
+          "explanation": "Existen dos ventrículos laterales, un tercer ventrículo y un cuarto ventrículo.",
+          "options": [
+            "Dos",
+            "Tres",
+            "Cinco",
+            "Cuatro"
+          ],
+          "correct": [
+            3
+          ]
+        },
+        {
+          "id": "encefalo-r2-02",
+          "type": "match",
+          "prompt": "Relaciona cada comunicación ventricular con las cavidades que conecta.",
+          "image": "assets/encefalo/s15-2.png",
+          "alt": "Sistema ventricular del encéfalo",
+          "caption": "Imagen de la presentación · diap. 15",
+          "slides": "15–18",
+          "explanation": "El LCR pasa de los ventrículos laterales al tercero y, por el acueducto, al cuarto; sale al espacio subaracnoideo por las aberturas del cuarto ventrículo.",
+          "pairs": [
+            [
+              "Agujeros interventriculares",
+              "Ventrículos laterales → tercer ventrículo"
+            ],
+            [
+              "Acueducto mesencefálico",
+              "Tercer ventrículo → cuarto ventrículo"
+            ],
+            [
+              "Aberturas mediana y laterales",
+              "Cuarto ventrículo → espacio subaracnoideo"
+            ]
+          ]
+        },
+        {
+          "id": "encefalo-r2-03",
+          "type": "tf",
+          "prompt": "Los plexos coroideos participan en la producción de líquido cefalorraquídeo.",
+          "image": "assets/encefalo/s15-2.png",
+          "alt": "Sistema ventricular del encéfalo",
+          "caption": "Imagen de la presentación · diap. 15",
+          "slides": "16",
+          "explanation": "Los plexos coroideos, recubiertos por epitelio especializado, producen LCR.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "encefalo-r2-04",
+          "type": "mc",
+          "prompt": "Según la presentación, ¿cuánto LCR se produce aproximadamente cada día?",
+          "image": "assets/encefalo/s18-2.png",
+          "alt": "Circulación del líquido cefalorraquídeo",
+          "caption": "Imagen de la presentación · diap. 18",
+          "slides": "16",
+          "explanation": "La producción diaria es cercana a 500 mL; esto no equivale al volumen presente simultáneamente, que es menor.",
+          "options": [
+            "50 mL",
+            "500 mL",
+            "1500 mL",
+            "5 mL"
+          ],
+          "correct": [
+            1
+          ]
+        },
+        {
+          "id": "encefalo-r2-05",
+          "type": "ms",
+          "prompt": "¿Cuáles son funciones del líquido cefalorraquídeo?",
+          "image": "assets/encefalo/s18-2.png",
+          "alt": "Circulación del líquido cefalorraquídeo",
+          "caption": "Imagen de la presentación · diap. 18",
+          "slides": "20–21",
+          "explanation": "El LCR permite flotación, amortigua movimientos y contribuye a la estabilidad química y eliminación de desechos.",
+          "options": [
+            "Dar flotabilidad al encéfalo",
+            "Amortiguar golpes y movimientos",
+            "Contribuir a la estabilidad química",
+            "Producir la mielina de los axones"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "encefalo-r2-06",
+          "type": "mc",
+          "prompt": "¿Por qué estructuras retorna el LCR a la sangre venosa?",
+          "image": "assets/encefalo/s18-2.png",
+          "alt": "Circulación del líquido cefalorraquídeo",
+          "caption": "Imagen de la presentación · diap. 18",
+          "slides": "17–19",
+          "explanation": "Las granulaciones aracnoideas permiten la reabsorción del LCR hacia los senos venosos durales.",
+          "options": [
+            "Plexos coroideos",
+            "Acueducto mesencefálico",
+            "Granulaciones aracnoideas",
+            "Raíces de los nervios espinales"
+          ],
+          "correct": [
+            2
+          ]
+        },
+        {
+          "id": "encefalo-r2-07",
+          "type": "tf",
+          "prompt": "El encéfalo recibe aproximadamente el 15 % del flujo sanguíneo, aunque representa cerca del 2 % del peso corporal adulto.",
+          "image": "assets/encefalo/s25-1.png",
+          "alt": "Organización de los capilares",
+          "caption": "Imagen de la presentación · diap. 25",
+          "slides": "22",
+          "explanation": "Su elevada demanda metabólica explica que reciba una fracción importante del flujo sanguíneo.",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "encefalo-r2-08",
+          "type": "mc",
+          "prompt": "¿Cuál es la base estructural principal de la barrera hematoencefálica?",
+          "image": "assets/encefalo/s24-4.png",
+          "alt": "Barrera entre sangre y tejido nervioso",
+          "caption": "Imagen de la presentación · diap. 24",
+          "slides": "23–25",
+          "explanation": "Las uniones estrechas entre células endoteliales de los capilares restringen el paso entre ellas; los astrocitos contribuyen a mantener la barrera.",
+          "options": [
+            "Uniones estrechas entre células endoteliales capilares",
+            "Separaciones amplias entre las células endoteliales",
+            "La capa perióstica de la duramadre",
+            "Las granulaciones aracnoideas"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "encefalo-r2-09",
+          "type": "ms",
+          "prompt": "¿Qué afirmaciones sobre el sistema de barrera encefálica son correctas?",
+          "image": "assets/encefalo/s24-4.png",
+          "alt": "Barrera entre sangre y tejido nervioso",
+          "caption": "Imagen de la presentación · diap. 24",
+          "slides": "24–26",
+          "explanation": "El oxígeno y el dióxido de carbono atraviesan con facilidad; la barrera es selectiva y puede dificultar la entrada de fármacos.",
+          "options": [
+            "Permite el paso de oxígeno y dióxido de carbono",
+            "Regula el intercambio entre sangre y tejido nervioso",
+            "Deja pasar por igual todas las sustancias",
+            "Puede dificultar la llegada de algunos medicamentos al encéfalo"
+          ],
+          "correct": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "encefalo-r2-10",
+          "type": "match",
+          "prompt": "Relaciona cada estructura con su papel en el LCR o en las barreras encefálicas.",
+          "image": "assets/encefalo/s25-1.png",
+          "alt": "Organización de los capilares",
+          "caption": "Imagen de la presentación · diap. 25",
+          "slides": "16–26",
+          "explanation": "Producción, reabsorción y control del intercambio son funciones diferentes.",
+          "pairs": [
+            [
+              "Plexo coroideo",
+              "Producción de LCR"
+            ],
+            [
+              "Granulación aracnoidea",
+              "Reabsorción de LCR"
+            ],
+            [
+              "Endotelio capilar con uniones estrechas",
+              "Barrera hematoencefálica"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

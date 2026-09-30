@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encéfalo · AlcocerMed Juegos</title>
+  <link rel="icon" href="logo_app.png">
+  <meta name="theme-color" content="#10172b">
+  <link rel="stylesheet" href="encefalo.css?v=1">
+  <script defer src="../config.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.js"></script>
+  <script defer src="encefalo.js?v=1"></script>
+</head>
+<body>
+ <header class="top"><a href="/juegos/">← Juegos</a><span>ALCOCER<span class="accent">MED</span> · BEN CARSON</span><button id="change-name" hidden>Cambiar nombre</button></header>
+ <main>
+  <section id="entry" class="card entry">
+   <span class="eyebrow">MORFOFUNCIÓN · SALADIN</span><h1>El encéfalo,<br><span class="accent">pregunta a pregunta.</span></h1>
+   <p>Dos rondas, 20 desafíos visuales y un podio compartido con tu clase.</p>
+   <form id="join-form">
+    <label for="student-name">Tu nombre y apellido</label><input id="student-name" autocomplete="name" minlength="3" maxlength="60" required placeholder="Así aparecerás en el podio">
+    <label for="room">Código de sala</label><input id="room" pattern="[A-Za-z0-9\-]{3,32}" minlength="3" maxlength="32" required aria-describedby="room-help">
+    <small id="room-help">Todos deben usar el mismo código. No necesitas correo ni contraseña.</small>
+    <button class="primary" type="submit">Entrar a jugar →</button>
+   </form>
+   <p id="entry-error" role="alert"></p>
+   <div class="teacher"><button id="new-room">Crear sala de clase</button><button id="open-podium">Abrir solo el podio</button></div>
+  </section>
+  <section id="lobby" hidden>
+   <span class="eyebrow">TU SESIÓN DE ESTUDIO</span><h1 id="greeting"></h1><p>100 puntos por respuesta correcta. Sin penalización por tiempo. Cada ronda cuenta una vez por sala.</p>
+   <div class="rounds"><button class="card round" data-round="0"><span class="eyebrow">RONDA 01 · 10 PREGUNTAS</span><h2>Organización y meninges</h2><p>Marcas anatómicas, sustancias gris y blanca, desarrollo embrionario y meninges.</p><strong id="round-state-0">Comenzar →</strong></button><button class="card round" data-round="1"><span class="eyebrow">RONDA 02 · 10 PREGUNTAS</span><h2>Ventrículos, LCR y barreras</h2><p>Circulación del LCR, protección e irrigación. Hasta la portada de rombencéfalo (diap. 27).</p><strong id="round-state-1">Comenzar →</strong></button></div>
+  </section>
+  <section id="quiz" class="card" hidden aria-labelledby="question-title">
+   <div class="quiz-meta"><button id="back-lobby">← Rondas</button><span id="progress"></span><strong id="score"></strong></div>
+   <progress id="progress-bar" max="10" value="0" aria-label="Avance de la ronda"></progress>
+   <span id="question-type" class="eyebrow"></span><h2 id="question-title" tabindex="-1"></h2>
+   <div class="question-layout"><figure><button id="zoom-image" aria-label="Ampliar imagen"><img id="question-image" alt=""></button><figcaption id="image-caption"></figcaption><small>Ilustración de apoyo · Toca para ampliar</small></figure><form id="answer-form"><div id="answers"></div><button id="check-answer" class="primary">Comprobar respuesta</button></form></div>
+   <div id="feedback" class="feedback" hidden role="status"></div><button id="next-question" class="primary" hidden>Siguiente pregunta →</button>
+  </section>
+  <section id="result" class="card" hidden><span class="eyebrow">RONDA COMPLETADA</span><h1 id="result-title"></h1><p id="result-description"></p><button id="result-back" class="primary">Volver a las rondas</button></section>
+  <section id="live" class="card" hidden>
+   <div class="live-header"><div><span class="eyebrow">PODIO DE LA CLASE</span><h2 id="room-title"></h2></div><span id="connection" role="status">Conectando…</span></div>
+   <div class="toolbar"><button id="copy-link">Copiar enlace para estudiantes</button><button id="download-results">Descargar resultados CSV</button></div>
+   <p id="share-message" role="status"></p><div id="podium" class="podium"></div><ol id="ranking"></ol>
+   <p class="muted">Puntaje total de ambas rondas · los empates comparten puesto. Mantén el podio abierto durante la clase. Los resultados se conservan en este navegador; descarga el CSV antes de cambiar de dispositivo.</p>
+  </section>
+  <footer>Basado en «ENCÉFALO SALADIN PREMIUM J.», diapositivas 2–26. La diapositiva 27 abre la siguiente sección.<br><a href="encefalo-anki-1.csv" download>Anki: organización y meninges</a> · <a href="encefalo-anki-2.csv" download>Anki: LCR e irrigación</a></footer>
+ </main>
+ <dialog id="image-dialog"><button id="close-image">Cerrar ×</button><img id="large-image" alt=""></dialog>
+</body></html>

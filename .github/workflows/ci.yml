@@ -25,6 +25,8 @@ jobs:
           node --check admin.js
           node --check juegos/app.js
           node --check juegos/editor.js
+          node --check juegos/encefalo.js
+          node tools/check_encefalo.cjs
           node --check juegos/sw.js
           node --check sw.js
       - name: Check required files
