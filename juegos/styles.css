@@ -7063,3 +7063,6 @@ body.quiz-focus-mode #quiz-container {
     height: 18.8% !important;
   }
 }
+
+/* Relacionar en el motor de tarjetas existente. */
+.quiz-matching{grid-column:1/-1;min-width:0;width:100%}.quiz-match-row{display:grid;gap:10px;margin:14px 0;padding:14px;border:1px solid #94a3b8;border-radius:14px;text-align:left}.quiz-match-row span{font-weight:700}.quiz-match-select{width:100%;min-width:0;max-width:100%;padding:12px 8px;font:inherit;font-size:16px;border:2px solid #94a3b8;border-radius:10px;color:#172033;background:#fff}.quiz-match-row small{display:block}#night-login-toggle{width:100%;margin-bottom:12px}#night-login-note{font-size:.9rem;line-height:1.5;margin:12px 0}#night-login-note[hidden],#night-login-toggle[hidden]{display:none}

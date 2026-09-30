@@ -1114,6 +1114,7 @@ function showLogin() {
     if (emailEl) emailEl.value = '';
     if (passEl) passEl.value = '';
     hideLoginError();
+    if (typeof configureNightLogin === 'function') configureNightLogin();
 }
 
 function enterApp() {
@@ -1645,6 +1646,7 @@ function initLoginScreenUi() {
 // ═══ LOGIN HANDLER ═══
 
 function handleLogin(e) {
+    if (typeof isNightClassOpen === 'function' && isNightClassOpen() && !nightAccountMode) return enterNightClass(e);
     if (e) e.preventDefault();
     hideLoginError();
 
@@ -2549,6 +2551,7 @@ function isDemoEvaluation(ev) {
 function canAccessEvaluation(ev) {
     if (typeof nervousClassMode !== "undefined" && nervousClassMode) return !!ev && nervousClassIds.indexOf(ev.id) !== -1;
     if (isAdmin) return true;
+    if (typeof isNightClassUser === 'function' && isNightClassUser(currentUser)) return isNightClassOpen();
     if (isDemoGuestUser(currentUser)) return isDemoEvaluation(ev);
     return !DEMO_ACCESS_ONLY || isDemoEvaluation(ev);
 }
@@ -2713,6 +2716,10 @@ function subjectMatch(ev, subjectName) {
 
 function sortSubjectEvaluations(list, subject) {
     list.sort(function(a, b) {
+        var aEncefalo = /^ENCEFALO[12]$/.test(a.codigo || '');
+        var bEncefalo = /^ENCEFALO[12]$/.test(b.codigo || '');
+        if (aEncefalo !== bEncefalo) return aEncefalo ? -1 : 1;
+        if (aEncefalo && bEncefalo) return a.codigo.localeCompare(b.codigo);
         var aDemo = isDemoEvaluation(a) ? 1 : 0;
         var bDemo = isDemoEvaluation(b) ? 1 : 0;
         if (aDemo !== bDemo) return bDemo - aDemo;
@@ -2789,7 +2796,7 @@ function renderSubjectMissions(grid, stats) {
     stats = stats || defaultSubjectStats();
     var counts = stats.counts || {};
     var demoCounts = stats.demoCounts || {};
-    var demoUser = isDemoGuestUser(currentUser);
+    var demoUser = isDemoGuestUser(currentUser) && !(typeof isNightClassUser === 'function' && isNightClassUser(currentUser) && isNightClassOpen());
     var html = '';
     for (var s = 0; s < SUBJECTS.length; s++) {
         var subj = SUBJECTS[s];
@@ -4457,7 +4464,10 @@ function renderQuizQuestion() {
         (opciones.length === 0 || opciones.every(function(o){ return !o.text || !o.text.trim(); }));
 
     // Open-ended, fill blanks, OR encuesta sin opciones: show textarea
-    if (tipo === 'oa' || tipo === 'fb' || isPollOpen) {
+    if (tipo === 'match') {
+        html = renderQuizMatching(opciones);
+    }
+    else if (tipo === 'oa' || tipo === 'fb' || isPollOpen) {
         var isOpenStyle = (tipo === 'oa' || isPollOpen);
         var ph = isOpenStyle ? 'Escribe tu respuesta aquí...' : 'Completa los espacios en blanco...';
         if (isOpenStyle) {
@@ -5077,6 +5087,8 @@ function showQuizResults() {
                 rhtml += '  </div>';
                 rhtml += '  <div style="font-weight:600; color:#1E293B; font-size:0.95rem; line-height:1.5; font-style:italic;">"' + (ans && ans.seleccionada ? ans.seleccionada : '<span style=\'color:#94A3B8;\'>Sin responder</span>') + '"</div>';
                 rhtml += '</div>';
+            } else if (pq.tipo === 'match') {
+                rhtml += renderMatchingReview(pq, ans);
             } else if (pq.tipo === 'fb') {
                 var correctaFb = (pq.opciones && pq.opciones[0]) ? pq.opciones[0].text : '';
                 var studentAns = ans ? (ans.seleccionada || 'Sin responder') : 'Sin responder';
@@ -5090,6 +5102,9 @@ function showQuizResults() {
                 rhtml += '<div style="font-weight:700; color:#059669; font-size:0.8rem; margin-bottom:2px;">✅ Respuesta correcta:</div>';
                 rhtml += '<div style="font-weight:700; color:var(--fb-correct-text,#059669);background:var(--fb-correct-bg,#F0FDF4);padding:6px 10px;border-radius:6px">' + (correctaFb || 'No especificada') + '</div>';
                 rhtml += '</div>';
+            }
+            if (pq.opciones && pq.opciones[0] && pq.opciones[0].explicacion) {
+                rhtml += '<p class="quiz-review-explanation">' + escapeHtml(pq.opciones[0].explicacion) + '</p>';
             }
             rhtml += '</div>';
         }

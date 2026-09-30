@@ -1,32 +1,34 @@
-# Encéfalo: dos rondas visuales
+# Encéfalo dentro del juego original
 
-Acceso: `/juegos/encefalo.html`. Está enlazado desde la entrada y la página Jugar.
+Entrada: https://www.alcocermed.com/juegos/ → MORFOFUNCION.
 
-- Ronda 1: 10 preguntas, diapositivas 2–14, hasta meninges.
-- Ronda 2: 10 preguntas, diapositivas 15–26. La diapositiva 27 es la portada de rombencéfalo y mesencéfalo; no contiene desarrollo de ese tema.
-- Ambas rondas incluyen selección única, selección múltiple, verdadero/falso y relación. Todas las preguntas tienen imagen, explicación y diapositiva de referencia.
-- `encefalo-preguntas.json` y las imágenes se publican junto con el sitio por GitHub/Vercel. No hay que importar SQL ni crear cuentas.
+Las dos nuevas tarjetas aparecen primero en la lista original:
+- Ronda 1: Organización y meninges, 10 preguntas (diapositivas 2–14).
+- Ronda 2: Ventrículos, LCR y barreras, 10 preguntas (15–26; la 27 es la portada de rombencéfalo).
 
-## Uso en clase
+Todas tienen imágenes de la presentación. Se usan selección única, selección múltiple, verdadero/falso y relación. Conservan el motor existente, sus comodines, rachas, resultados y podio. Las relaciones se responden mediante selectores accesibles en PC y celular. Las explicaciones se incluyen en el resumen final.
 
-1. Abre el juego y pulsa Crear sala de clase.
-2. Pulsa Abrir solo el podio y luego Copiar enlace para estudiantes.
-3. Cada estudiante entra por ese enlace y escribe su nombre. No usa Supabase Auth, correo ni contraseña.
-4. Mantén abierto el podio. Se suman 100 puntos por pregunta correcta, hasta 2000 entre ambas rondas. Los empates comparten puesto.
-5. Descarga el CSV de resultados al terminar. Para otra clase crea una sala nueva.
+## Acceso temporal
 
-La identidad y el progreso se guardan en localStorage por sala. Recargar y volver a entrar con el mismo nombre conserva el avance; cada ronda puntúa una sola vez por identidad. Los nombres iguales no se fusionan entre dispositivos. Cambiar de nombre crea otra identidad.
+El login original pide nombre y apellidos hasta el 1 de octubre de 2026 a las 06:00 de Bolivia (10:00 UTC). Después vuelve automáticamente a correo y contraseña. El botón «Entrar con mi cuenta / Profesor» conserva el acceso habitual durante la clase.
 
-El podio usa Broadcast y Presence de Supabase Realtime con la clave pública del proyecto existente. No crea registros en Auth ni en tablas. Los participantes conectados comparten resultados y recuperan un snapshot al entrar o reconectar. Cada navegador conserva los resultados que recibió, también cuando alguien sale; no es un historial central permanente. Es una actividad de clase con identidad declarada, no una evaluación con identidad o puntajes verificados por servidor.
+Se reutiliza el alta automática de invitados que ya estaba habilitada: el alumno no introduce correo ni contraseña y el profesor no registra alumnos manualmente. Internamente Supabase Auth conserva una identidad automática para cumplir la referencia de los resultados a auth.users; no es un acceso sin registros de Auth. La sesión invitada tiene vencimiento y el cliente comprueba su cierre cada 15 segundos. No se cambian las políticas de acceso de Supabase. Las cuentas habituales conservan su funcionamiento.
+
+El resultado se actualiza al responder. El podio original consulta los resultados cada cinco segundos. Cada ronda tiene su podio; se puede mantener abierto mientras terminan otros estudiantes. La conexión a Internet es necesaria para guardar y compartir puntajes.
+
+## Datos y publicación
+
+`SUPABASE_ENCEFALO_20.sql` añade las dos evaluaciones y veinte preguntas a las tablas originales. Es reejecutable por ID y conserva otras evaluaciones. `tools/build_encefalo_native.cjs` lo genera desde el banco revisado y prepara el mapa de imágenes. El SQL se ejecutó en el proyecto existente asnwhddmurstzmghuyin y confirmó dos rondas de diez.
+
+El antiguo enlace `/juegos/encefalo.html` redirige al juego original. Ya no se ofrece un juego separado.
 
 ## Anki
 
-`encefalo-anki-1.csv` y `encefalo-anki-2.csv`: UTF-8, dos campos Front/Back, diez notas cada uno. Importar como Básico. Las primeras tres líneas son directivas de importación de Anki, no tarjetas. No dependen de archivos multimedia.
+`encefalo-anki-1.csv` y `encefalo-anki-2.csv`: diez notas cada uno, UTF-8, campos Front y Back, importación como Básico. Las tres primeras líneas son directivas de Anki.
 
-## Validación del 30 de septiembre de 2026
+## Verificación
 
-- `node tools/check_encefalo.cjs`: cuenta, tipos, respuestas, imágenes y CSV.
-- Prueba de navegador Edge Chromium: 20 preguntas completas, 2000 puntos, respuesta incorrecta, regreso a rondas, recarga, cambio de estudiante, imagen ampliada y guardado sin conexión.
-- Revisión visual: PC 1440 px y móvil 390 px; sin desbordamiento horizontal.
-- Comunicación entre dos contextos de navegador verificada con transporte simulado. No equivale a una prueba de Supabase en producción.
-- Bloqueo externo: el dominio configurado `asnwhddmurstzmghuyin.supabase.co` no resolvió DNS en la prueba real. El juego permite estudiar y guardar resultados locales, pero no puede compartir el podio hasta que el proyecto Supabase esté disponible. No mostrarlo como verificado en vivo hasta repetir una prueba real con dos dispositivos.
+- `node --test tests/*.test.cjs`: vencimiento en hora de Bolivia, relaciones completas/incorrectas, imágenes, integración y regresiones del motor de comodines y tejido nervioso.
+- `node tools/check_encefalo.cjs`: 20 preguntas, cuatro tipos en cada ronda, imágenes y 20 notas Anki.
+- Prueba real con Supabase en el motor original: acceso por nombre, respuestas, puntuación y podio.
+- Revisión de presentación en celular de 390 px y escritorio.
