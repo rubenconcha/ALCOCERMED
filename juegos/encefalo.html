@@ -5,10 +5,10 @@
   <title>Encéfalo · AlcocerMed Juegos</title>
   <link rel="icon" href="logo_app.png">
   <meta name="theme-color" content="#10172b">
-  <link rel="stylesheet" href="encefalo.css?v=1">
+  <link rel="stylesheet" href="encefalo.css?v=2">
   <script defer src="../config.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.js"></script>
-  <script defer src="encefalo.js?v=1"></script>
+  <script defer src="encefalo.js?v=2"></script>
 </head>
 <body>
  <header class="top"><a href="/juegos/">← Juegos</a><span>ALCOCER<span class="accent">MED</span> · BEN CARSON</span><button id="change-name" hidden>Cambiar nombre</button></header>
@@ -20,7 +20,7 @@
     <label for="student-name">Tu nombre y apellido</label><input id="student-name" autocomplete="name" minlength="3" maxlength="60" required placeholder="Así aparecerás en el podio">
     <label for="room">Código de sala</label><input id="room" pattern="[A-Za-z0-9\-]{3,32}" minlength="3" maxlength="32" required aria-describedby="room-help">
     <small id="room-help">Todos deben usar el mismo código. No necesitas correo ni contraseña.</small>
-    <button class="primary" type="submit">Entrar a jugar →</button>
+    <button id="join-button" class="primary" type="submit" disabled>Cargando preguntas…</button>
    </form>
    <p id="entry-error" role="alert"></p>
    <div class="teacher"><button id="new-room">Crear sala de clase</button><button id="open-podium">Abrir solo el podio</button></div>

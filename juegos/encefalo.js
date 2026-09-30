@@ -86,6 +86,6 @@
  $('zoom-image').onclick=()=>{$('large-image').src=$('question-image').src;$('large-image').alt=$('question-image').alt;$('image-dialog').showModal();};$('close-image').onclick=()=>$('image-dialog').close();
  window.addEventListener('offline',()=>status('Sin conexión. Tu avance se conserva aquí.',true));
  window.addEventListener('online',()=>{if(connected)publish();});
- fetch('encefalo-preguntas.json?v=1').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{bank=data;if(observer){show(null);connect();}else{const prev=storage.get(key('student'),null);if(prev)$('student-name').value=prev.student.name;}}).catch(()=>{$('entry-error').textContent='No se pudieron cargar las preguntas. Comprueba la conexión y recarga.';});
+ fetch('encefalo-preguntas.json?v=1').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{bank=data;$('join-button').disabled=false;$('join-button').textContent='Entrar a jugar →';if(observer){show(null);connect();}else{const prev=storage.get(key('student'),null);if(prev)$('student-name').value=prev.student.name;}}).catch(()=>{$('entry-error').textContent='No se pudieron cargar las preguntas. Comprueba la conexión y recarga.';});
 })();
 
