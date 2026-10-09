@@ -32,11 +32,10 @@ function initNervousClass() {
     form.addEventListener('submit', enterNervousClassByName);
     var section = document.createElement('section');
     section.id = 'page-nervioso'; section.className = 'page';
-    section.innerHTML = '<h1 class="page-title">' + (sentidosClassMode ? 'Sentidos · primera vuelta' : 'Tejido nervioso') + '</h1><p id="class-greeting" class="page-subtitle"></p>' +
+    section.innerHTML = (sentidosClassMode ? '' : '<h1 class="page-title">Tejido nervioso</h1><p id="class-greeting" class="page-subtitle"></p>') +
         (sentidosClassMode
-            ? '<p>Repasa lo esencial de la presentación. Elige una ronda para comenzar.</p>' +
-              '<div class="class-rounds"><button class="class-round" data-round="0">Ronda 1 <small>Receptores, dolor, gusto y olfato<br>20 preguntas fáciles con imágenes</small></button>' +
-              '<button class="class-round" data-round="1">Ronda 2 <small>Audición, equilibrio y visión<br>20 preguntas fáciles con imágenes</small></button></div>'
+            ? '<div class="class-rounds"><button class="class-round" data-round="0">Ronda 1 <small>Receptores, dolor, gusto y olfato</small></button>' +
+              '<button class="class-round" data-round="1">Ronda 2 <small>Audición, equilibrio y visión</small></button></div>'
             : nervousClassJhuly
             ? '<p>Repasa el contenido de las diapositivas desde la 51: electricidad neuronal, sinapsis e integración.</p>' +
               '<div class="class-rounds"><button class="class-round" data-round="0">Comenzar <small>20 preguntas fáciles</small></button></div>'
@@ -111,7 +110,8 @@ function showNervousClass() {
     document.getElementById('app-shell').classList.remove('hidden');
     var name = currentUser.user_metadata.full_name || 'Estudiante';
     document.getElementById('topbar-username').textContent = name;
-    document.getElementById('class-greeting').textContent = '¡Hola, ' + name + '!';
+    var greeting = document.getElementById('class-greeting');
+    if (greeting) greeting.textContent = '¡Hola, ' + name + '!';
     var pending = sessionStorage.getItem('alcocer_quiz_code');
     var evalId = sessionStorage.getItem('alcocer_self_evalid');
     if (pending && pending.indexOf('SELF') === 0 && nervousClassIds.indexOf(evalId) !== -1) {
