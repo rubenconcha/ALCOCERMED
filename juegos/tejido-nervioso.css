@@ -30,3 +30,14 @@
     text-align: center;
 }
 .quiz-image-credit a { color: inherit; }
+.sentidos-live-results { margin:28px 0;padding:20px;border:1px solid var(--border);border-radius:18px;background:var(--bg-card);color:var(--text);text-align:left; }
+.sentidos-live-results h2 { font-size:1.3rem;margin:0 0 8px; }
+.sentidos-live-results h3 { margin:20px 0 10px; }
+.sentidos-live-status { color:var(--text-muted);font-size:.85rem; }
+.sentidos-live-scroll { overflow-x:auto; }
+.sentidos-live-results table { width:100%;border-collapse:collapse;font-size:.9rem; }
+.sentidos-live-results th,.sentidos-live-results td { padding:10px 6px;border-bottom:1px solid var(--border);text-align:left; }
+.sentidos-live-results td:first-child { min-width:110px;overflow-wrap:anywhere; }
+.sentidos-live-results th:not(:first-child),.sentidos-live-results td:not(:first-child) { white-space:nowrap; }
+.sentidos-live-own { background:rgba(139,92,246,.15);font-weight:700; }
+.nervous-class #class-error:empty { display:none; }

@@ -21,15 +21,13 @@ function initNervousClass() {
     card.querySelectorAll('form,.login-mode-tabs').forEach(function(el) { el.hidden = true; el.style.display = 'none'; });
     var form = document.createElement('form');
     form.className = 'login-form';
-    form.innerHTML = '<h1 style="font-size:1.5rem">' + (sentidosClassMode ? 'Sentidos · primera vuelta' : 'Sistema nervioso') + '</h1>' +
-        (sentidosClassMode ? '<p>Conceptos esenciales · 2 rondas de 20 preguntas fáciles, todas con imágenes.</p>' : '') +
+    form.innerHTML = (sentidosClassMode ? '' : '<h1 style="font-size:1.5rem">Sistema nervioso</h1>') +
         (nervousClassContinuation ? '<p>Diapositivas 41 a 50 · 10 preguntas</p>' : '') +
         '<div class="login-field"><label class="login-label" for="class-name">Nombre y apellidos</label>' +
         '<input id="class-name" class="login-input" autocomplete="name" minlength="3" maxlength="100" required></div>' +
-        '<p>Tu nombre aparecerá junto a tu resultado. Usa el mismo dispositivo para continuar.</p>' +
+        (sentidosClassMode ? '' : '<p>Tu nombre aparecerá junto a tu resultado. Usa el mismo dispositivo para continuar.</p>') +
         '<p id="class-error" role="alert"></p>' +
-        '<button class="login-btn" type="submit">Jugar</button>' +
-        (sentidosClassMode ? '<p><a href="/juegos/?cuenta=1">Entrar con mi cuenta / Profesor</a></p>' : '');
+        '<button class="login-btn" type="submit">Entrar</button>';
     card.appendChild(form);
     form.addEventListener('submit', enterNervousClassByName);
     var section = document.createElement('section');
@@ -52,10 +50,12 @@ function initNervousClass() {
               '<p><a href="/juegos/?tema=tejido-nervioso-41-50">Continuar con la ronda 3: diapositivas 41 a 50 (10 preguntas)</a></p>') +
         '<button id="class-change-name" class="class-round">Entrar con otro nombre</button>';
     document.getElementById('page-quiz').parentNode.appendChild(section);
+    if (sentidosClassMode) initSentidosLiveResults(section);
     section.querySelectorAll('[data-round]').forEach(function(button) {
         button.onclick = function() { startSelfStudy(nervousClassIds[Number(button.dataset.round)]); };
     });
     document.getElementById('class-change-name').onclick = async function() {
+        if (sentidosClassMode) stopSentidosLiveResults();
         await sb.auth.signOut();
         clearSelfSession();
         sessionStorage.removeItem('alcocer_nervioso_owner');
@@ -99,7 +99,7 @@ async function enterNervousClassByName(event) {
         currentUser = result.data.user; enterApp();
     } catch (err) {
         error.textContent = err.message || 'No hay conexión. Intenta nuevamente.';
-    } finally { button.disabled = false; button.textContent = 'Jugar'; }
+    } finally { button.disabled = false; button.textContent = 'Entrar'; }
 }
 
 function showNervousClass() {
@@ -113,6 +113,7 @@ function showNervousClass() {
     var name = currentUser.user_metadata.full_name || 'Estudiante';
     document.getElementById('topbar-username').textContent = name;
     document.getElementById('class-greeting').textContent = '¡Hola, ' + name + '!';
+    if (sentidosClassMode) startSentidosLiveResults();
     var pending = sessionStorage.getItem('alcocer_quiz_code');
     var evalId = sessionStorage.getItem('alcocer_self_evalid');
     if (pending && pending.indexOf('SELF') === 0 && nervousClassIds.indexOf(evalId) !== -1) {
