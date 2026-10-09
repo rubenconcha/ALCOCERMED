@@ -47,9 +47,9 @@ for(const r of bank.rounds){
 }
 console.log('OK: 2 × 20 preguntas, 40 imágenes distintas, cuatro modalidades, respuestas válidas y orden completo del motor.');
 const entry=fs.readFileSync('juegos/tejido-nervioso.js','utf8');
-for(const [pathname,search,expected] of [['/juegos/','',true],['/juegos','',true],['/juegos/index.html','',true],['/juegos/','?tema=sentidos-saladin',true],['/juegos/','?cuenta=1',false],['/juegos/','?tema=tejido-nervioso',false]]){
+for(const [pathname,search,expected] of [['/juegos/','',false],['/juegos','',false],['/juegos/index.html','',false],['/juegos/','?docente=1',true],['/juegos/','?tema=sentidos-saladin',true],['/juegos/','?cuenta=1',false],['/juegos/','?tema=tejido-nervioso',false]]){
   const c={URLSearchParams,location:{pathname,search}};vm.createContext(c);vm.runInContext(entry,c);
   assert.equal(c.sentidosClassMode,expected);
   if(expected)assert.deepEqual(Array.from(c.nervousClassIds),Array.from(ctx.sentidosEvaluations,e=>e.id));
 }
-console.log('OK: entrada por nombre en /juegos/, dos rondas correctas y acceso habitual preservado.');
+console.log('OK: acceso normal en /juegos/, Sentidos en enlace propio y enlace docente preservado.');

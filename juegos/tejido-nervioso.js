@@ -1,8 +1,8 @@
 // Acceso de la clase. Usa las evaluaciones y el motor de juegos existentes.
 var classParams = new URLSearchParams(location.search);
 var nervousClassTopic = classParams.get('tema');
-// La entrada principal abre la clase actual; la cuenta habitual sigue disponible.
-if (!nervousClassTopic && !classParams.has('cuenta') && /\/juegos(?:\/(?:index\.html)?)?$/.test(location.pathname)) nervousClassTopic = 'sentidos-saladin';
+// Sentidos tiene un enlace propio; conserva también el enlace docente compartido.
+if (!nervousClassTopic && classParams.get('docente') === '1') nervousClassTopic = 'sentidos-saladin';
 var sentidosClassMode = nervousClassTopic === 'sentidos-saladin';
 var sentidosTeacherMode = sentidosClassMode && classParams.get('docente') === '1';
 var sentidosTeacherEvalId = null;
