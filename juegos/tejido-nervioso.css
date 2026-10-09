@@ -31,3 +31,6 @@
 }
 .quiz-image-credit a { color: inherit; }
 .nervous-class #class-error:empty { display:none; }
+.sentidos-teacher .class-round[aria-pressed="true"] { border-color:#e91e63;outline:2px solid #e91e63; }
+.sentidos-teacher #quiz-podium { max-width:800px;margin:0 auto; }
+.sentidos-teacher .podium-action-home { display:none; }

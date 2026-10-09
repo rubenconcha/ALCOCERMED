@@ -5233,6 +5233,7 @@ function loadLeaderboard(evalId) {
         .order('puntaje', { ascending: false })
         .then(function(r) {
         console.log('Leaderboard data:', r.data, 'Error:', r.error);
+        if (typeof sentidosTeacherMode !== 'undefined' && sentidosTeacherMode && sentidosTeacherEvalId !== evalId) return;
         if (r.error) { 
             console.warn('Leaderboard error:', r.error.message); 
             // Mostrar error visual si es por permisos (RLS)
@@ -5260,6 +5261,7 @@ function loadLeaderboard(evalId) {
         }
 
         client.from('evaluacion_participantes').select('user_id,nombre').eq('evaluacion_id', evalId).then(function(pRes) {
+            if (typeof sentidosTeacherMode !== 'undefined' && sentidosTeacherMode && sentidosTeacherEvalId !== evalId) return;
             var nameMap = {};
             if (pRes.data) {
                 for (var n = 0; n < pRes.data.length; n++) {

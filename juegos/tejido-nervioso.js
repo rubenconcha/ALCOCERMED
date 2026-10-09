@@ -4,6 +4,8 @@ var nervousClassTopic = classParams.get('tema');
 // La entrada principal abre la clase actual; la cuenta habitual sigue disponible.
 if (!nervousClassTopic && !classParams.has('cuenta') && /\/juegos(?:\/(?:index\.html)?)?$/.test(location.pathname)) nervousClassTopic = 'sentidos-saladin';
 var sentidosClassMode = nervousClassTopic === 'sentidos-saladin';
+var sentidosTeacherMode = sentidosClassMode && classParams.get('docente') === '1';
+var sentidosTeacherEvalId = null;
 var nervousClassContinuation = nervousClassTopic === 'tejido-nervioso-41-50';
 var nervousClassJhuly = nervousClassTopic === 'tejido-nervioso-jhuly';
 var nervousClassMode = sentidosClassMode || nervousClassTopic === 'tejido-nervioso' || nervousClassContinuation || nervousClassJhuly;
@@ -13,6 +15,7 @@ var nervousClassIds = sentidosClassMode ? ['7d7b8eaa-4b8e-51cb-a9db-a666bda3d976
 
 function initNervousClass() {
     document.body.classList.add('nervous-class');
+    if (sentidosTeacherMode) { initSentidosTeacher(); return; }
     // Sesión separada: no reemplaza la cuenta habitual de este navegador.
     sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
         auth: { storageKey: 'alcocermed-' + nervousClassTopic + '-2026' }
@@ -66,6 +69,47 @@ function initNervousClass() {
             currentUser = user; enterApp();
         }
     }).catch(function() { showLogin(); });
+}
+
+// Vista de lectura: reutiliza el mismo podio y ranking del juego.
+function initSentidosTeacher() {
+    sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
+        auth: {persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}
+    });
+    document.body.classList.add('sentidos-teacher');
+    document.getElementById('login-screen').classList.add('hidden');
+    document.getElementById('app-shell').classList.remove('hidden');
+    document.getElementById('topbar-username').textContent = 'Docente';
+    var section = document.createElement('section');
+    section.id = 'page-sentidos-teacher';
+    section.className = 'page active';
+    section.innerHTML = '<h1 class="page-title">Ranking en vivo</h1><div class="class-rounds"><button class="class-round" data-teacher-round="0">Ronda 1</button><button class="class-round" data-teacher-round="1">Ronda 2</button></div>';
+    document.querySelectorAll('.page').forEach(function(page) { page.classList.remove('active'); });
+    document.getElementById('page-quiz').parentNode.appendChild(section);
+    section.appendChild(document.getElementById('quiz-podium'));
+    section.querySelectorAll('[data-teacher-round]').forEach(function(button) {
+        button.onclick = function() { showSentidosTeacherRound(Number(button.dataset.teacherRound)); };
+    });
+    showSentidosTeacherRound(classParams.get('ronda') === '2' ? 1 : 0);
+}
+
+function showSentidosTeacherRound(index) {
+    clearInterval(window.studentLeaderboardInterval);
+    window.studentLeaderboardInterval = null;
+    sentidosTeacherEvalId = nervousClassIds[index];
+    window._lastPodiumData = null;
+    document.querySelectorAll('[data-teacher-round]').forEach(function(button) {
+        button.setAttribute('aria-pressed', String(Number(button.dataset.teacherRound) === index));
+    });
+    var podium = document.getElementById('quiz-podium');
+    podium.style.display = 'block';
+    podium.querySelector('.quiz-podium-head h2').textContent = 'Ronda ' + (index+1) + ' · Podio de Ganadores';
+    updateBgPodium('#quiz-podium-showcase', []);
+    document.getElementById('podium-full-list').replaceChildren();
+    loadLeaderboard(sentidosTeacherEvalId);
+    var url = new URL(location.href);
+    url.searchParams.set('ronda',String(index+1));
+    history.replaceState(null,'',url);
 }
 
 async function enterNervousClassByName(event) {
