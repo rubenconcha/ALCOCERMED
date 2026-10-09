@@ -28,6 +28,8 @@ jobs:
           node --check juegos/encefalo.js
           node tools/check_encefalo.cjs
           node --check juegos/sw.js
+          node --check juegos/tejido-nervioso.js
+          node tests/sentidos.test.cjs
           node --check sw.js
       - name: Check required files
         run: |

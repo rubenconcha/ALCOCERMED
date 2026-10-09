@@ -2716,6 +2716,10 @@ function subjectMatch(ev, subjectName) {
 
 function sortSubjectEvaluations(list, subject) {
     list.sort(function(a, b) {
+        var aSentidos = /^SENTIDOS[12]$/.test(a.codigo || '');
+        var bSentidos = /^SENTIDOS[12]$/.test(b.codigo || '');
+        if (aSentidos !== bSentidos) return aSentidos ? -1 : 1;
+        if (aSentidos && bSentidos) return a.codigo.localeCompare(b.codigo);
         var aEncefalo = /^ENCEFALO[12]$/.test(a.codigo || '');
         var bEncefalo = /^ENCEFALO[12]$/.test(b.codigo || '');
         if (aEncefalo !== bEncefalo) return aEncefalo ? -1 : 1;

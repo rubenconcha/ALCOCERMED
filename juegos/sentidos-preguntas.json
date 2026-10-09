@@ -1,0 +1,829 @@
+{
+  "source": "SENTIDOS SALADIN [Autoguardado].pptx",
+  "scope": "Contenido exclusivamente de la presentación aportada. Dos rondas de 20 preguntas con imágenes extraídas de la misma presentación.",
+  "rounds": [
+    {
+      "title": "Receptores, dolor, gusto y olfato",
+      "questions": [
+        {
+          "id": "0324bcfe-78f0-589e-a306-a4a10d8942ed",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 3,
+          "image": "assets/sentidos-saladin/s2-image7.png",
+          "prompt": "¿Qué proceso convierte la energía de un estímulo en señales nerviosas?",
+          "explanation": "La transducción es la conversión de la energía del estímulo en señales nerviosas.",
+          "alt": "Órganos que reciben estímulos sensoriales",
+          "options": [
+            "Adaptación",
+            "Transducción",
+            "Acomodación",
+            "Convergencia"
+          ],
+          "correct": [
+            1
+          ]
+        },
+        {
+          "id": "bc8f73a2-98aa-53e2-ac37-1c4fd80fcdca",
+          "type": "ms",
+          "difficulty": "fácil",
+          "slide": 10,
+          "image": "assets/sentidos-saladin/s7-image26.png",
+          "prompt": "¿Cuáles son sentidos especiales? Selecciona todas las respuestas correctas.",
+          "explanation": "Los sentidos especiales son visión, audición, equilibrio, gusto y olfato. El tacto pertenece a los sentidos generales.",
+          "alt": "Ilustración de los sentidos y el encéfalo",
+          "options": [
+            "Visión",
+            "Audición",
+            "Gusto",
+            "Olfato",
+            "Equilibrio",
+            "Tacto de la piel"
+          ],
+          "correct": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "64ba0b41-8bf1-57de-a0e9-a59ab6d5a94f",
+          "type": "tf",
+          "difficulty": "fácil",
+          "slide": 3,
+          "image": "assets/sentidos-saladin/s3-image9.png",
+          "prompt": "Todas las señales sensitivas que llegan al sistema nervioso central producen una sensación consciente.",
+          "explanation": "Muchas señales se filtran o participan en funciones que no requieren conciencia.",
+          "alt": "Ruta sensitiva de un reflejo ante el calor",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            1
+          ]
+        },
+        {
+          "id": "b0b121ef-1958-552c-9ae9-ea0383d0a677",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 13,
+          "image": "assets/sentidos-saladin/s18-image73.png",
+          "prompt": "¿Qué sentido te permite notar que alguien toca tu mano?",
+          "explanation": "Los receptores de la piel permiten detectar el contacto.",
+          "alt": "Manos y superficies sensitivas de los pies",
+          "options": [
+            "Tacto",
+            "Gusto",
+            "Olfato",
+            "Visión"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "e99941f6-d43c-54e0-bc2e-65a3db1feeca",
+          "type": "match",
+          "difficulty": "fácil",
+          "slide": 10,
+          "image": "assets/sentidos-saladin/s2-image6.png",
+          "prompt": "Relaciona cada receptor con el estímulo que detecta.",
+          "explanation": "Los receptores se clasifican según la modalidad de estímulo a la que responden.",
+          "alt": "Esquema de receptores sensitivos",
+          "pairs": [
+            [
+              "Termorreceptor",
+              "Frío o calor"
+            ],
+            [
+              "Fotorreceptor",
+              "Luz"
+            ],
+            [
+              "Quimiorreceptor",
+              "Sustancias químicas"
+            ],
+            [
+              "Mecanorreceptor",
+              "Deformación física"
+            ]
+          ]
+        },
+        {
+          "id": "33d04ce0-665e-5936-86bd-d642a1822d19",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 7,
+          "image": "assets/sentidos-saladin/s8-image29.png",
+          "prompt": "Un olor se percibe con fuerza al principio y luego deja de notarse aunque siga presente. ¿Qué propiedad lo explica?",
+          "explanation": "Los receptores fásicos se adaptan con rapidez y reducen sus señales aunque el estímulo continúe.",
+          "alt": "Epitelio y vía olfativa",
+          "options": [
+            "Adaptación lenta de receptores tónicos",
+            "Ausencia de transducción",
+            "Adaptación rápida de receptores fásicos",
+            "Aumento progresivo de la intensidad del estímulo"
+          ],
+          "correct": [
+            2
+          ]
+        },
+        {
+          "id": "92650d10-b371-525e-880c-b1eed8c91846",
+          "type": "tf",
+          "difficulty": "fácil",
+          "slide": 10,
+          "image": "assets/sentidos-saladin/s8-image31.png",
+          "prompt": "La propiocepción informa sobre la posición y el movimiento de nuestro cuerpo.",
+          "explanation": "Los propiorreceptores detectan la posición y el movimiento corporal. Se encuentran en músculos, tendones y cápsulas articulares.",
+          "alt": "Receptores de músculos y tendones",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "8c9dce87-1d5f-51a1-a228-ba3beefd46d0",
+          "type": "match",
+          "difficulty": "fácil",
+          "slide": 10,
+          "image": "assets/sentidos-saladin/s10-image42.png",
+          "prompt": "Relaciona cada grupo de receptores con el origen de la información.",
+          "explanation": "La clasificación por origen distingue estímulos externos, internos y de posición corporal.",
+          "alt": "Esquema de propiocepción y posición corporal",
+          "pairs": [
+            [
+              "Exterorreceptores",
+              "Estímulos externos al cuerpo"
+            ],
+            [
+              "Interorreceptores",
+              "Estímulos de los órganos internos"
+            ],
+            [
+              "Propiorreceptores",
+              "Posición y movimiento del cuerpo"
+            ]
+          ]
+        },
+        {
+          "id": "a6fec7f1-7be2-5a9f-85aa-938638f1f431",
+          "type": "ms",
+          "difficulty": "fácil",
+          "slide": 10,
+          "image": "assets/sentidos-saladin/s18-image72.png",
+          "prompt": "¿Dónde se encuentran receptores de los sentidos generales?",
+          "explanation": "Los sentidos generales emplean receptores distribuidos en piel, músculos, tendones y otros tejidos.",
+          "alt": "Receptores y estructuras de la piel",
+          "options": [
+            "Piel",
+            "Músculos",
+            "Tendones",
+            "Únicamente en los ojos"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "f1a63054-6083-5a25-bf62-49e661c6349e",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 15,
+          "image": "assets/sentidos-saladin/s8-image30.png",
+          "prompt": "¿Qué receptores detectan que un contacto ligero dobla un pelo?",
+          "explanation": "Los receptores pilosos tienen dendritas alrededor de la base del folículo y responden al movimiento del pelo.",
+          "alt": "Anatomía de un folículo piloso",
+          "options": [
+            "Fotorreceptores",
+            "Receptores pilosos",
+            "Corpúsculos bulbosos",
+            "Células gustativas"
+          ],
+          "correct": [
+            1
+          ]
+        },
+        {
+          "id": "0b03bc69-b531-52be-b978-b0073708f00f",
+          "type": "match",
+          "difficulty": "fácil",
+          "slide": 2,
+          "image": "assets/sentidos-saladin/s9-image37.png",
+          "prompt": "Relaciona cada estructura con el sentido correspondiente.",
+          "explanation": "La presentación relaciona los órganos sensoriales con los estímulos que perciben.",
+          "alt": "Receptores de la piel",
+          "pairs": [
+            [
+              "Piel",
+              "Tacto"
+            ],
+            [
+              "Ojos",
+              "Visión"
+            ],
+            [
+              "Nariz",
+              "Olfato"
+            ],
+            [
+              "Lengua",
+              "Gusto"
+            ]
+          ]
+        },
+        {
+          "id": "93e7a65b-0d23-564a-9259-6484a10ae3b4",
+          "type": "tf",
+          "difficulty": "fácil",
+          "slide": 10,
+          "image": "assets/sentidos-saladin/s9-image34.png",
+          "prompt": "Los receptores del dolor responden a una lesión tisular o a situaciones que amenazan con dañar los tejidos.",
+          "explanation": "Los receptores del dolor detectan daño tisular real o potencial.",
+          "alt": "Estímulo doloroso y vía sensitiva",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "b470cf25-cf2a-51d6-95ec-185d1a41f154",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 29,
+          "image": "assets/sentidos-saladin/s26-image96.png",
+          "prompt": "¿Qué es el dolor referido?",
+          "explanation": "En el dolor referido, el dolor se percibe en una región diferente de donde se origina la señal.",
+          "alt": "Vías de transmisión del dolor",
+          "options": [
+            "Dolor que solo aparece durante el sueño",
+            "Ausencia total de dolor",
+            "Dolor que siempre se siente justo donde se origina",
+            "Dolor que se percibe en un lugar distinto de su origen"
+          ],
+          "correct": [
+            3
+          ]
+        },
+        {
+          "id": "68eca636-19a9-5379-96a9-8752431b6170",
+          "type": "ms",
+          "difficulty": "fácil",
+          "slide": 38,
+          "image": "assets/sentidos-saladin/s38-image133.png",
+          "prompt": "Selecciona los cinco sabores primarios reconocidos en la presentación.",
+          "explanation": "Los cinco sabores son dulce, salado, ácido, amargo y umami. Crujiente describe una textura.",
+          "alt": "Lengua y ejemplos de estímulos gustativos",
+          "options": [
+            "Dulce",
+            "Salado",
+            "Ácido",
+            "Amargo",
+            "Umami",
+            "Crujiente"
+          ],
+          "correct": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "bebe3743-20c9-5afb-91da-5a5209fc66d4",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 39,
+          "image": "assets/sentidos-saladin/s39-image136.png",
+          "prompt": "¿Qué sabor se describe como «a carne» y se relaciona con aminoácidos como el glutámico?",
+          "explanation": "El umami se relaciona con aminoácidos como los ácidos glutámico y aspártico.",
+          "alt": "Alimentos asociados al sabor umami",
+          "options": [
+            "Ácido",
+            "Salado",
+            "Umami",
+            "Amargo"
+          ],
+          "correct": [
+            2
+          ]
+        },
+        {
+          "id": "acae1ba3-353d-595d-8963-c80e1810905a",
+          "type": "tf",
+          "difficulty": "fácil",
+          "slide": 35,
+          "image": "assets/sentidos-saladin/s35-image121.jpg",
+          "prompt": "Las papilas filiformes desempeñan un papel gustativo porque contienen botones gustativos.",
+          "explanation": "Las papilas filiformes son abundantes, pero la presentación indica que no tienen función gustativa.",
+          "alt": "Distribución de las papilas de la lengua",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            1
+          ]
+        },
+        {
+          "id": "cbaa77e7-e8ea-5498-8b31-6b9fa53f07c8",
+          "type": "match",
+          "difficulty": "fácil",
+          "slide": 38,
+          "image": "assets/sentidos-saladin/s39-image135.png",
+          "prompt": "Relaciona cada sabor con el estímulo descrito en la presentación.",
+          "explanation": "El sabor salado corresponde a iones metálicos; el ácido, a ácidos; el umami, a determinados aminoácidos.",
+          "alt": "Limón como ejemplo de estímulo gustativo",
+          "pairs": [
+            [
+              "Salado",
+              "Iones metálicos, como sodio y potasio"
+            ],
+            [
+              "Ácido",
+              "Ácidos"
+            ],
+            [
+              "Umami",
+              "Aminoácidos, como glutámico y aspártico"
+            ]
+          ]
+        },
+        {
+          "id": "486650a2-7285-5032-917f-acfd0f0ab17c",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 40,
+          "image": "assets/sentidos-saladin/s3-image10.png",
+          "prompt": "¿Qué diferencia a las células olfativas de las células gustativas?",
+          "explanation": "La presentación identifica las células olfativas como neuronas y las gustativas como células epiteliales.",
+          "alt": "Región olfativa de la cavidad nasal",
+          "options": [
+            "Las olfativas son neuronas y las gustativas son células epiteliales",
+            "Ambas son exclusivamente células musculares",
+            "Las gustativas son neuronas y las olfativas son células óseas",
+            "Ninguna se relaciona con fibras nerviosas"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "e3933802-3760-5515-b130-501345046d78",
+          "type": "ms",
+          "difficulty": "fácil",
+          "slide": 35,
+          "image": "assets/sentidos-saladin/s41-image141.jpg",
+          "prompt": "¿Qué afirmaciones sobre las células gustativas son correctas?",
+          "explanation": "Las células gustativas son epiteliales y liberan neurotransmisores hacia fibras sensitivas.",
+          "alt": "Botón gustativo y sus células",
+          "options": [
+            "Son células epiteliales",
+            "Se conectan mediante sinapsis con fibras sensitivas",
+            "Liberan neurotransmisores",
+            "Son los axones del nervio óptico"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "8c8e4300-e05d-5b62-8a71-7073782eead0",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 40,
+          "image": "assets/sentidos-saladin/s51-image160.png",
+          "prompt": "¿En qué región se encuentra el epitelio que detecta los olores?",
+          "explanation": "El epitelio olfativo se encuentra en la región superior de la cavidad nasal.",
+          "alt": "Olfato y comunicación con el encéfalo",
+          "options": [
+            "En la lengua",
+            "En la parte superior de la cavidad nasal",
+            "En el oído medio",
+            "En la córnea"
+          ],
+          "correct": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Audición, equilibrio y visión",
+      "questions": [
+        {
+          "id": "821bf597-3ceb-5579-8143-d8aacab78de5",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 58,
+          "image": "assets/sentidos-saladin/s61-image192.png",
+          "prompt": "¿Cuál es el orden de los huesecillos desde la membrana timpánica hacia el oído interno?",
+          "explanation": "Desde fuera hacia dentro se encuentran martillo, yunque y estribo.",
+          "alt": "Cadena de huesecillos del oído medio",
+          "options": [
+            "Estribo, yunque, martillo",
+            "Yunque, martillo, estribo",
+            "Martillo, yunque, estribo",
+            "Martillo, estribo, yunque"
+          ],
+          "correct": [
+            2
+          ]
+        },
+        {
+          "id": "4aed3f45-94e0-5120-a75f-fc0ff4627916",
+          "type": "tf",
+          "difficulty": "fácil",
+          "slide": 58,
+          "image": "assets/sentidos-saladin/s60-image189.png",
+          "prompt": "La trompa auditiva ayuda a igualar la presión a ambos lados de la membrana timpánica.",
+          "explanation": "Al abrirse durante la deglución o el bostezo, permite el intercambio de aire con la cavidad timpánica.",
+          "alt": "Oído y trompa auditiva",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "ae5fa77d-b86e-5925-a72a-e3c7a244c534",
+          "type": "ms",
+          "difficulty": "fácil",
+          "slide": 58,
+          "image": "assets/sentidos-saladin/s71-image217.png",
+          "prompt": "¿Cuáles son los tres huesecillos del oído medio?",
+          "explanation": "Martillo, yunque y estribo forman la cadena de huesecillos. La cóclea pertenece al oído interno.",
+          "alt": "Oído medio y cadena de huesecillos",
+          "options": [
+            "Martillo",
+            "Yunque",
+            "Estribo",
+            "Cóclea"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "78f29a1e-d0f3-5ad7-85a7-924c581b957c",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 61,
+          "image": "assets/sentidos-saladin/s70-image213.png",
+          "prompt": "¿En qué abertura se encuentra la base del estribo?",
+          "explanation": "La base del estribo ocupa la ventana oval, donde comienza el oído interno.",
+          "alt": "Transmisión de vibraciones hacia el oído interno",
+          "options": [
+            "Ventana redonda",
+            "Conducto auditivo externo",
+            "Trompa auditiva",
+            "Ventana oval"
+          ],
+          "correct": [
+            3
+          ]
+        },
+        {
+          "id": "a9aa1bde-fe3f-59d1-9ff3-742773bf4bc7",
+          "type": "match",
+          "difficulty": "fácil",
+          "slide": 61,
+          "image": "assets/sentidos-saladin/s53-image163.jpg",
+          "prompt": "Relaciona cada estructura con la región del oído a la que pertenece.",
+          "explanation": "La presentación organiza el oído en externo, medio e interno.",
+          "alt": "Regiones y estructuras del oído",
+          "pairs": [
+            [
+              "Conducto auditivo externo",
+              "Oído externo"
+            ],
+            [
+              "Cadena de huesecillos",
+              "Oído medio"
+            ],
+            [
+              "Cóclea",
+              "Oído interno"
+            ]
+          ]
+        },
+        {
+          "id": "f730b0ea-fd03-5e68-b80e-f4cd199728a1",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 65,
+          "image": "assets/sentidos-saladin/s79-image235.jpg",
+          "prompt": "¿Cuál es la función del órgano de Corti?",
+          "explanation": "El órgano de Corti convierte las vibraciones en señales nerviosas relacionadas con la audición.",
+          "alt": "Órgano de Corti y sus células pilosas",
+          "options": [
+            "Producir lágrimas",
+            "Convertir vibraciones en señales nerviosas para la audición",
+            "Detectar sabores",
+            "Cambiar el color del iris"
+          ],
+          "correct": [
+            1
+          ]
+        },
+        {
+          "id": "dbdf5e1d-33df-5e8b-bc26-c021a813eed8",
+          "type": "tf",
+          "difficulty": "fácil",
+          "slide": 84,
+          "image": "assets/sentidos-saladin/s84-image247.png",
+          "prompt": "El sáculo y el utrículo detectan exclusivamente la aceleración angular.",
+          "explanation": "El sáculo y el utrículo participan en el equilibrio estático y la aceleración lineal; los conductos semicirculares detectan la angular.",
+          "alt": "Equilibrio estático y dinámico",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            1
+          ]
+        },
+        {
+          "id": "7af3994a-eaf5-5954-90a2-503ccb523da7",
+          "type": "match",
+          "difficulty": "fácil",
+          "slide": 84,
+          "image": "assets/sentidos-saladin/s64-image199.png",
+          "prompt": "Relaciona las estructuras vestibulares con el movimiento que detectan.",
+          "explanation": "El sistema vestibular distingue posición respecto a la gravedad, aceleración lineal y aceleración angular.",
+          "alt": "Laberintos del oído interno",
+          "pairs": [
+            [
+              "Sáculo y utrículo",
+              "Equilibrio estático y aceleración lineal"
+            ],
+            [
+              "Conductos semicirculares",
+              "Aceleración angular"
+            ]
+          ]
+        },
+        {
+          "id": "8a2ecbee-fc66-5676-838d-e7d829be9551",
+          "type": "ms",
+          "difficulty": "fácil",
+          "slide": 84,
+          "image": "assets/sentidos-saladin/s86-image252.png",
+          "prompt": "¿Qué detectan el sáculo y el utrículo?",
+          "explanation": "El sáculo y el utrículo participan en el equilibrio estático y detectan aceleración lineal.",
+          "alt": "Ejemplo de aceleración lineal",
+          "options": [
+            "Posición de la cabeza respecto a la gravedad",
+            "Aceleración en línea recta",
+            "Sabores",
+            "Colores"
+          ],
+          "correct": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "0400dd5f-21e3-5829-86c8-7cedc655a4dc",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 65,
+          "image": "assets/sentidos-saladin/s59-image186.png",
+          "prompt": "¿Qué estructura del oído interno contiene el órgano de Corti y participa en la audición?",
+          "explanation": "La cóclea o caracol contiene el órgano de Corti, receptor de la audición.",
+          "alt": "Ubicación del caracol en el oído interno",
+          "options": [
+            "Iris",
+            "Lengua",
+            "Cóclea o caracol",
+            "Cristalino"
+          ],
+          "correct": [
+            2
+          ]
+        },
+        {
+          "id": "22b2438c-ad4a-5a64-a380-1803bdb9db72",
+          "type": "match",
+          "difficulty": "fácil",
+          "slide": 100,
+          "image": "assets/sentidos-saladin/s100-image284.png",
+          "prompt": "Relaciona cada túnica del ojo con sus componentes.",
+          "explanation": "La pared del globo ocular se organiza en túnicas fibrosa, vascular e interna.",
+          "alt": "Capas del globo ocular",
+          "pairs": [
+            [
+              "Fibrosa",
+              "Esclerótica y córnea"
+            ],
+            [
+              "Vascular",
+              "Coroides, cuerpo ciliar e iris"
+            ],
+            [
+              "Interna",
+              "Retina"
+            ]
+          ]
+        },
+        {
+          "id": "fa546b6e-8fcc-5c43-bb43-41c6fe4d6066",
+          "type": "ms",
+          "difficulty": "fácil",
+          "slide": 101,
+          "image": "assets/sentidos-saladin/s101-image288.png",
+          "prompt": "Selecciona las estructuras que pertenecen a la túnica vascular.",
+          "explanation": "La túnica vascular o úvea incluye coroides, cuerpo ciliar e iris; la córnea pertenece a la túnica fibrosa.",
+          "alt": "Cuerpo ciliar, coroides e iris",
+          "options": [
+            "Coroides",
+            "Cuerpo ciliar",
+            "Iris",
+            "Córnea"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "aece70ef-22d9-5353-8d1b-b7673d3952b1",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 105,
+          "image": "assets/sentidos-saladin/s105-image300.png",
+          "prompt": "¿Qué cambio describe una catarata en la presentación?",
+          "explanation": "Una catarata es la aparición de turbiedad en el cristalino.",
+          "alt": "Comparación de un ojo normal y uno con catarata",
+          "options": [
+            "Turbiedad del cristalino",
+            "Aumento del número de conos",
+            "Rotación del globo ocular",
+            "Adaptación a la oscuridad"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "0dff4ac3-c04a-541c-9729-876984a49c8c",
+          "type": "tf",
+          "difficulty": "fácil",
+          "slide": 108,
+          "image": "assets/sentidos-saladin/s108-image310.png",
+          "prompt": "El disco óptico produce un punto ciego porque carece de fotorreceptores.",
+          "explanation": "El disco óptico es la salida del nervio óptico y carece de fotorreceptores.",
+          "alt": "Disco óptico y punto ciego",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "ef64e77e-a5f9-56b8-9d7a-c1374e4f63fe",
+          "type": "ms",
+          "difficulty": "fácil",
+          "slide": 103,
+          "image": "assets/sentidos-saladin/s117-image332.png",
+          "prompt": "¿Qué estructuras o medios transparentes atraviesa la luz dentro del ojo?",
+          "explanation": "Los componentes ópticos incluyen córnea, humor acuoso, cristalino y humor vítreo.",
+          "alt": "Cristalino y recorrido de la luz",
+          "options": [
+            "Córnea",
+            "Cristalino",
+            "Humor vítreo",
+            "Huesecillos del oído"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "3006dbc3-78cd-571c-aca0-8b136a740e8f",
+          "type": "match",
+          "difficulty": "fácil",
+          "slide": 118,
+          "image": "assets/sentidos-saladin/s118-image336.png",
+          "prompt": "Relaciona cada defecto visual con su descripción.",
+          "explanation": "La tabla de la presentación compara miopía, hipermetropía y astigmatismo por su mecanismo de desenfoque.",
+          "alt": "Comparación del enfoque normal con el astigmatismo",
+          "pairs": [
+            [
+              "Miopía",
+              "Los rayos se enfocan antes de alcanzar la retina"
+            ],
+            [
+              "Hipermetropía",
+              "El globo ocular es demasiado corto"
+            ],
+            [
+              "Astigmatismo",
+              "La curvatura corneal dificulta enfocar en distintos planos"
+            ]
+          ]
+        },
+        {
+          "id": "50d49340-8dad-5a1d-a77a-139906741d2f",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 132,
+          "image": "assets/sentidos-saladin/s134-image374.png",
+          "prompt": "¿Qué fotorreceptores permiten principalmente la visión con luz tenue?",
+          "explanation": "El sistema escotópico depende de los bastones y funciona con luz tenue.",
+          "alt": "Escena nocturna como ejemplo de iluminación tenue",
+          "options": [
+            "Conos",
+            "Células gustativas",
+            "Células pilosas",
+            "Bastones"
+          ],
+          "correct": [
+            3
+          ]
+        },
+        {
+          "id": "42ca4ec0-4c38-5cd0-b6e8-a3bda0e29335",
+          "type": "tf",
+          "difficulty": "fácil",
+          "slide": 133,
+          "image": "assets/sentidos-saladin/s133-image371.png",
+          "prompt": "Los conos participan en la visión diurna y permiten una mayor agudeza visual que el sistema de bastones.",
+          "explanation": "La visión fotópica se basa en conos y presenta menor convergencia neural, lo que favorece la agudeza visual.",
+          "alt": "Retina, conos y bastones",
+          "options": [
+            "Verdadero",
+            "Falso"
+          ],
+          "correct": [
+            0
+          ]
+        },
+        {
+          "id": "98195178-b98c-5820-a39b-9c4d2da1acea",
+          "type": "ms",
+          "difficulty": "fácil",
+          "slide": 132,
+          "image": "assets/sentidos-saladin/s126-image354.png",
+          "prompt": "Selecciona las afirmaciones correctas sobre conos y bastones.",
+          "explanation": "Conos y bastones son fotorreceptores de la retina. Los conos permiten visión del color; los bastones funcionan con luz tenue.",
+          "alt": "Tipos de conos de la retina",
+          "options": [
+            "Los conos participan en la visión de los colores",
+            "Los bastones ayudan a ver con luz tenue",
+            "Ambos se encuentran en la retina",
+            "Ambos son huesecillos del oído"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "9f1d594c-3413-58e5-b63a-e59f0cc8be6e",
+          "type": "mc",
+          "difficulty": "fácil",
+          "slide": 138,
+          "image": "assets/sentidos-saladin/s4-image15.png",
+          "prompt": "¿En qué lóbulo se encuentra la corteza visual primaria donde ocurre la sensación visual consciente?",
+          "explanation": "La irradiación óptica llega a la corteza visual primaria del lóbulo occipital.",
+          "alt": "Vía visual desde los ojos hasta la corteza",
+          "options": [
+            "Frontal",
+            "Occipital",
+            "Temporal",
+            "Parietal"
+          ],
+          "correct": [
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

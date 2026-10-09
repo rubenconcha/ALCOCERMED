@@ -1,9 +1,13 @@
 // Acceso de la clase. Usa las evaluaciones y el motor de juegos existentes.
-var nervousClassTopic = new URLSearchParams(location.search).get('tema');
+var classParams = new URLSearchParams(location.search);
+var nervousClassTopic = classParams.get('tema');
+// La entrada principal abre la clase actual; la cuenta habitual sigue disponible.
+if (!nervousClassTopic && !classParams.has('cuenta') && /\/juegos(?:\/(?:index\.html)?)?$/.test(location.pathname)) nervousClassTopic = 'sentidos-saladin';
+var sentidosClassMode = nervousClassTopic === 'sentidos-saladin';
 var nervousClassContinuation = nervousClassTopic === 'tejido-nervioso-41-50';
 var nervousClassJhuly = nervousClassTopic === 'tejido-nervioso-jhuly';
-var nervousClassMode = nervousClassTopic === 'tejido-nervioso' || nervousClassContinuation || nervousClassJhuly;
-var nervousClassIds = nervousClassJhuly ? ['b1fe4fa3-5825-5d93-98a3-3c7a669d3f95'] : nervousClassContinuation
+var nervousClassMode = sentidosClassMode || nervousClassTopic === 'tejido-nervioso' || nervousClassContinuation || nervousClassJhuly;
+var nervousClassIds = sentidosClassMode ? ['7d7b8eaa-4b8e-51cb-a9db-a666bda3d976', '2fa17a3c-035a-50d7-afae-ed8fe3ba11fc'] : nervousClassJhuly ? ['b1fe4fa3-5825-5d93-98a3-3c7a669d3f95'] : nervousClassContinuation
     ? ['2faa1933-85fe-57d4-b660-850984685824']
     : ['71c3ac1c-7bda-5eaa-a449-d0b94ac33684', '243e1718-d7af-56bc-bf64-ea00346daa0d'];
 
@@ -17,19 +21,25 @@ function initNervousClass() {
     card.querySelectorAll('form,.login-mode-tabs').forEach(function(el) { el.hidden = true; el.style.display = 'none'; });
     var form = document.createElement('form');
     form.className = 'login-form';
-    form.innerHTML = '<h1 style="font-size:1.5rem">Sistema nervioso</h1>' +
+    form.innerHTML = '<h1 style="font-size:1.5rem">' + (sentidosClassMode ? 'Sentidos · primera vuelta' : 'Sistema nervioso') + '</h1>' +
+        (sentidosClassMode ? '<p>Conceptos esenciales · 2 rondas de 20 preguntas fáciles, todas con imágenes.</p>' : '') +
         (nervousClassContinuation ? '<p>Diapositivas 41 a 50 · 10 preguntas</p>' : '') +
         '<div class="login-field"><label class="login-label" for="class-name">Nombre y apellidos</label>' +
         '<input id="class-name" class="login-input" autocomplete="name" minlength="3" maxlength="100" required></div>' +
         '<p>Tu nombre aparecerá junto a tu resultado. Usa el mismo dispositivo para continuar.</p>' +
         '<p id="class-error" role="alert"></p>' +
-        '<button class="login-btn" type="submit">Jugar</button>';
+        '<button class="login-btn" type="submit">Jugar</button>' +
+        (sentidosClassMode ? '<p><a href="/juegos/?cuenta=1">Entrar con mi cuenta / Profesor</a></p>' : '');
     card.appendChild(form);
     form.addEventListener('submit', enterNervousClassByName);
     var section = document.createElement('section');
     section.id = 'page-nervioso'; section.className = 'page';
-    section.innerHTML = '<h1 class="page-title">Tejido nervioso</h1><p id="class-greeting" class="page-subtitle"></p>' +
-        (nervousClassJhuly
+    section.innerHTML = '<h1 class="page-title">' + (sentidosClassMode ? 'Sentidos · primera vuelta' : 'Tejido nervioso') + '</h1><p id="class-greeting" class="page-subtitle"></p>' +
+        (sentidosClassMode
+            ? '<p>Repasa lo esencial de la presentación. Elige una ronda para comenzar.</p>' +
+              '<div class="class-rounds"><button class="class-round" data-round="0">Ronda 1 <small>Receptores, dolor, gusto y olfato<br>20 preguntas fáciles con imágenes</small></button>' +
+              '<button class="class-round" data-round="1">Ronda 2 <small>Audición, equilibrio y visión<br>20 preguntas fáciles con imágenes</small></button></div>'
+            : nervousClassJhuly
             ? '<p>Repasa el contenido de las diapositivas desde la 51: electricidad neuronal, sinapsis e integración.</p>' +
               '<div class="class-rounds"><button class="class-round" data-round="0">Comenzar <small>20 preguntas fáciles</small></button></div>'
             : nervousClassContinuation
