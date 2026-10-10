@@ -858,7 +858,189 @@ WHERE NOT EXISTS (
     AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
 );
 
+-- salud: páginas PDF 60-72 | SALUD PUBLICA / marco teorico e hipotesis
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Para qué sirve la fundamentación teórica después de formular un problema?', 'Para situarlo en el conocimiento existente y orientar su explicación y análisis.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Qué dos tareas centrales forman la construcción de un marco teórico?', 'Revisar la literatura y adoptar una teoría o desarrollar una perspectiva teórica.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', 'Al buscar antecedentes, ¿debes reunir cualquier lectura o las relacionadas con tu problema?', 'Las que se relacionen con el problema y los objetivos del estudio.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Qué ayuda a organizar un marco conceptual?', 'Definir y relacionar los conceptos básicos del objeto de estudio.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Qué distingue a un marco teórico de un marco conceptual más simple?', 'Integra proposiciones y relaciones teóricas de forma más estructurada para explicar el fenómeno.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Puede una investigación carecer por completo de marco de referencia?', 'No. Puede quedar implícito, pero siempre parte de alguna perspectiva conceptual.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Para qué puede servir una revisión bibliográfica además de citar autores?', 'Para reconocer conceptos, antecedentes y relaciones que fundamenten el estudio.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Qué hace una hipótesis con la relación entre variables?', 'Propone una explicación o relación posible que se pondrá a prueba.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Una hipótesis es ya un hecho demostrado?', 'No. Es una propuesta probable que debe contrastarse con la evidencia.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Qué aporta una hipótesis bien formulada al trabajo de campo?', 'Ayuda a enfocar qué información hay que recoger y analizar.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', 'En un estudio cualitativo, ¿el marco teórico tiene que estar totalmente cerrado antes de empezar?', 'No. Puede construirse y ajustarse conforme avanza la investigación.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Por qué un concepto abstracto necesita operacionalizarse?', 'Para relacionarlo con manifestaciones observables o medibles.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Qué es una dimensión al operacionalizar una variable?', 'Un aspecto de la variable que permite examinarla y medirla con mayor precisión.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Qué papel cumple un indicador dentro de una dimensión?', 'Representar una condición observable o medible de esa dimensión.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', 'Si el estudio compara exposición y resultado, ¿qué variable se considera explicativa?', 'La independiente; el resultado se considera dependiente.'),
+    ('SALUD PUBLICA', 'marco teorico e hipotesis', '¿Qué conviene hacer después de identificar variables y sus relaciones?', 'Plantear la hipótesis y construir un esquema que muestre esas relaciones.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 72-73 | SALUD PUBLICA / variables y medicion
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'variables y medicion', 'En una investigación, ¿por qué la edad puede ser una variable?', 'Porque toma valores distintos entre personas o en diferentes momentos.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿Qué variable se considera resultado cuando una hipótesis relaciona dos características?', 'La variable dependiente.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿Cómo llamas a la variable que puede explicar un cambio en otra?', 'Variable independiente.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿Qué es una variable interviniente?', 'Un elemento que puede influir indirectamente en la relación entre la independiente y la dependiente.'),
+    ('SALUD PUBLICA', 'variables y medicion', 'Si comparas estudiar en grupo con la calificación final, ¿cuál es el resultado a explicar?', 'La calificación final.'),
+    ('SALUD PUBLICA', 'variables y medicion', 'Si comparas estudiar en grupo con la calificación final, ¿cuál es la variable explicativa?', 'La forma de estudio: en grupo o individualmente.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿Qué distingue a una variable cualitativa?', 'Clasifica en categorías o propiedades, en lugar de expresar una cantidad medida.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿La religión de una persona se registra como cantidad o categoría?', 'Como categoría; es una variable cualitativa.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿Por qué el peso es una variable cuantitativa?', 'Porque su magnitud se expresa mediante una medida numérica.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿Qué caracteriza a una variable cuantitativa continua?', 'Puede tomar valores intermedios dentro de un intervalo.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿La talla es continua o discreta?', 'Continua; puede medirse en metros, centímetros y subdivisiones menores.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿Qué caracteriza a una variable cuantitativa discreta?', 'Se cuenta en valores separados, sin fracciones intermedias posibles para esa unidad.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿Por qué el número de hijos se considera discreto?', 'Porque se cuentan hijos completos, no fracciones de un hijo.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿La temperatura medida en grados es un ejemplo de magnitud o categoría?', 'De magnitud numérica; es cuantitativa.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿Puede una variable cambiar de valor en un mismo sujeto con el tiempo?', 'Sí. La definición admite variaciones entre sujetos o en diferentes momentos.'),
+    ('SALUD PUBLICA', 'variables y medicion', '¿Para qué se especifican las variables en el marco teórico?', 'Para aclarar qué se estudiará y cómo se relacionan los elementos del problema.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 85-94 | SALUD PUBLICA / estadistica descriptiva
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿Para qué se recogen, ordenan e interpretan datos en estadística?', 'Para responder preguntas y tomar decisiones fundamentadas.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', 'Una tabla resume las edades de los encuestados sin generalizar. ¿Qué rama estadística estás usando?', 'Estadística descriptiva.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿Qué necesita la estadística inferencial para hablar de una población que no estudió completa?', 'Una muestra seleccionada con técnicas adecuadas.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿Qué es la unidad de análisis de un estudio?', 'El elemento concreto que se investiga: persona, grupo, objeto o acontecimiento.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', 'Si investigas hospitales, ¿debe quedar claro si la unidad de análisis es cada hospital o cada paciente?', 'Sí. La unidad debe corresponder a la pregunta y evitar ambigüedades.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿Cuándo se considera finita una población según el texto?', 'Cuando se conoce el número de elementos que la integran.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', 'Si estudias a todas las personas de la población, ¿cómo se llama ese estudio?', 'Un censo.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿Qué diferencia hay entre un parámetro y un estadígrafo?', 'El parámetro describe a la población; el estadígrafo describe a la muestra.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿Por qué una muestra debe representar bien a la población?', 'Para que sus resultados permitan estimar con sentido las características del conjunto.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿Que una categoría tenga código 1 o 2 la vuelve cuantitativa?', 'No. Un número puede ser solo una etiqueta para una variable cualitativa.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿Qué tipo de variable es contar cuántos artículos se venden?', 'Cuantitativa discreta.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿Qué escala distingue categorías sin establecer un orden?', 'La nominal.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', 'Si clasificas salud como buena, regular y mala, ¿qué escala utilizas?', 'Ordinal, porque las categorías tienen un orden.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿La distancia entre dos niveles de una escala ordinal tiene que ser igual?', 'No. La escala ordena, pero no asegura distancias iguales.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿Qué caracteriza a una escala de intervalo?', 'Sus distancias son comparables y el cero no significa ausencia de la característica.'),
+    ('SALUD PUBLICA', 'estadistica descriptiva', '¿Por qué una longitud medida en centímetros pertenece a escala de razón?', 'Porque tiene cero absoluto y permite comparar proporciones, como el doble de longitud.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 161-168 | SALUD PUBLICA / medidas de posicion
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'medidas de posicion', '¿Qué otro nombre reciben las medidas de posición?', 'Cuantiles.'),
+    ('SALUD PUBLICA', 'medidas de posicion', '¿Qué medida de posición deja aproximadamente al 25 % de datos por debajo?', 'El primer cuartil, Q1.'),
+    ('SALUD PUBLICA', 'medidas de posicion', '¿Qué cuartil coincide con la mediana?', 'El segundo cuartil, Q2.'),
+    ('SALUD PUBLICA', 'medidas de posicion', 'Si Q3 es 80 puntos, ¿cómo interpretas ese valor?', 'Aproximadamente el 75 % de observaciones está en 80 puntos o menos.'),
+    ('SALUD PUBLICA', 'medidas de posicion', '¿Cuántos puntos de corte separan los datos en cuatro partes?', 'Tres cuartiles: Q1, Q2 y Q3.'),
+    ('SALUD PUBLICA', 'medidas de posicion', '¿Qué porcentaje representa cada una de las cuatro partes separadas por cuartiles?', '25 % de los datos.'),
+    ('SALUD PUBLICA', 'medidas de posicion', '¿Cuántos deciles sirven de puntos de corte?', 'Nueve, del D1 al D9.'),
+    ('SALUD PUBLICA', 'medidas de posicion', 'Si D3 es 40, ¿qué proporción queda aproximadamente en 40 o menos?', 'El 30 % de las observaciones.'),
+    ('SALUD PUBLICA', 'medidas de posicion', '¿A qué percentil equivale el primer decil?', 'Al percentil 10, P10.'),
+    ('SALUD PUBLICA', 'medidas de posicion', '¿A qué percentil equivale el tercer cuartil?', 'Al percentil 75, P75.'),
+    ('SALUD PUBLICA', 'medidas de posicion', '¿Qué medida es equivalente a Q2, D5 y P50?', 'La mediana.'),
+    ('SALUD PUBLICA', 'medidas de posicion', '¿Cuántos percentiles marcan los cortes entre cien partes de una distribución?', 'Noventa y nueve, de P1 a P99.'),
+    ('SALUD PUBLICA', 'medidas de posicion', 'Si un alumno está en P90, ¿significa que respondió correctamente el 90 % de preguntas?', 'No necesariamente. Significa que su valor supera aproximadamente al 90 % de la distribución de referencia.'),
+    ('SALUD PUBLICA', 'medidas de posicion', '¿Por qué los cuantiles requieren ordenar los datos?', 'Porque dependen de la posición que ocupa cada observación.'),
+    ('SALUD PUBLICA', 'medidas de posicion', 'Con datos agrupados, ¿qué columna ayuda a localizar la clase de un cuartil?', 'La frecuencia acumulada.'),
+    ('SALUD PUBLICA', 'medidas de posicion', '¿Qué diferencia principal hay entre cuartiles, deciles y percentiles?', 'Dividen los datos ordenados en cuatro, diez y cien partes, respectivamente.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 171-188 | SALUD PUBLICA / dispersion y forma de los datos
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Por qué conocer solo la media puede ocultar diferencias entre dos grupos?', 'Porque los grupos pueden tener el mismo centro y distinta variabilidad.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Qué limitación tiene el rango como medida de dispersión?', 'Solo usa los dos valores extremos e ignora cómo se distribuyen los demás.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Cómo calculas el rango intercuartil?', 'Restando Q1 de Q3.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Qué parte del conjunto describe el rango intercuartil?', 'La dispersión de la mitad central de los datos.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Por qué el rango intercuartil resiste mejor los valores extremos que el rango total?', 'Porque se apoya en Q1 y Q3, no en el mínimo y el máximo.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Qué compara la varianza de cada dato con la media?', 'La diferencia entre cada dato y la media, elevada al cuadrado.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Por qué se elevan al cuadrado las diferencias respecto de la media?', 'Para evitar que las desviaciones positivas y negativas se cancelen.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Por qué la varianza de una talla en centímetros se expresa en centímetros cuadrados?', 'Porque las desviaciones usadas para calcularla se elevan al cuadrado.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Cómo se obtiene la desviación estándar a partir de la varianza?', 'Tomando su raíz cuadrada positiva.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿En qué unidades se expresa la desviación estándar?', 'En las mismas unidades que la variable original.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Qué significa una desviación estándar mayor, si comparas datos de la misma clase?', 'Mayor dispersión alrededor de la media.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Qué relaciona el coeficiente de variación?', 'La desviación estándar con la media, expresada como porcentaje.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Por qué puede ayudar el coeficiente de variación al comparar dos conjuntos con medias diferentes?', 'Porque expresa la variabilidad relativa a cada media.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', 'Si la media es mayor que la mediana, ¿hacia qué lado apunta el sesgo descrito en el texto?', 'Hacia la derecha; es sesgo positivo.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', 'Si la media es menor que la mediana, ¿qué signo tiene la asimetría?', 'Negativo, o sesgo hacia la izquierda.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Qué indica un coeficiente de asimetría cercano a cero?', 'Una distribución aproximadamente simétrica.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Qué describe la curtosis?', 'El grado de concentración de los datos alrededor de los valores centrales.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', 'Una distribución muy puntiaguda alrededor del centro, ¿cómo se denomina?', 'Leptocúrtica.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', 'Una distribución más aplanada, ¿cómo se denomina?', 'Platicúrtica.'),
+    ('SALUD PUBLICA', 'dispersion y forma de los datos', '¿Qué significa mesocúrtica en la clasificación del material?', 'Una concentración central moderada, semejante a la distribución de referencia.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 191-225 | SALUD PUBLICA / analisis de datos en excel y spss
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Qué complemento de Excel menciona el material para abrir ''Análisis de datos''?', 'Herramientas para análisis.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', 'En Excel, ¿dónde compruebas si aparece la opción ''Análisis de datos''?', 'En la pestaña Datos.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Qué opción eliges dentro de ''Análisis de datos'' para resumir una columna numérica?', 'Estadística descriptiva.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', 'Al indicar un rango de entrada en Excel, ¿qué debes seleccionar?', 'La columna de datos que vas a analizar y, si corresponde, su título.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Cuándo marcas ''Rótulos en la primera fila'' en Excel?', 'Cuando el rango elegido incluye el nombre de la variable en su primera fila.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Qué opción de Excel solicita media, mediana y otras medidas en una sola salida?', 'Resumen de estadísticas dentro de Estadística descriptiva.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Puede la salida de Excel sustituir la interpretación del investigador?', 'No. Hay que explicar qué significan las medidas para el problema estudiado.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', 'En SPSS, ¿dónde defines nombre, tipo, valores y medida de una variable?', 'En Vista de variables.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', 'En SPSS, ¿dónde registras las respuestas de cada participante?', 'En Vista de datos.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', 'Si codificas ''sí'' como 1 y ''no'' como 2, ¿qué debes definir para leer la salida?', 'Etiquetas de valor para cada código.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Para qué se usa una etiqueta de variable en SPSS?', 'Para mostrar una descripción comprensible de la variable en los resultados.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Por qué debe señalarse un código como dato perdido en vez de tratarlo como respuesta real?', 'Para que no distorsione frecuencias y cálculos estadísticos.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', 'Una variable como ''género'' se registra como texto. ¿Qué tipo de dato configura el ejemplo del material?', 'Cadena, y su nivel de medida como nominal.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Qué menú de SPSS conduce a los procedimientos estadísticos?', 'Analizar.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', 'Para obtener tablas por categoría en SPSS, ¿qué opción descriptiva utiliza el capítulo?', 'Frecuencias.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Qué información muestra una tabla de frecuencias generada por SPSS?', 'Conteos, porcentajes y, cuando corresponde, porcentajes acumulados.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Qué debes revisar antes de elegir un gráfico en Excel o SPSS?', 'El tipo de variable y la pregunta que quieres responder.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', 'Si SPSS informa datos válidos y perdidos, ¿por qué importa esa diferencia?', 'Porque los cálculos se basan en respuestas disponibles y deben interpretarse conociendo cuántos faltan.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Qué tipo de variables puede resumirse con media y desviación estándar en SPSS?', 'Variables cuantitativas, cuando esas medidas son apropiadas para el análisis.'),
+    ('SALUD PUBLICA', 'analisis de datos en excel y spss', '¿Qué debes hacer si la tabla muestra una cifra extraña que no coincide con la codificación prevista?', 'Revisar los datos y la definición de la variable antes de interpretar el resultado.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
 COMMIT;
 NOTIFY pgrst, 'reload schema';
 
--- 595 tarjetas, 20 temas, 3 materias.
+-- 699 tarjetas, 26 temas, 3 materias.
