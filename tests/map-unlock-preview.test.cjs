@@ -16,6 +16,15 @@ test('los 18 capítulos de Biología Celular conservan el acceso gratuito inicia
   assert.ok(chapters[1][0].includes('acceso_gratis: true'));
 });
 
+test('los mapas de Educación para la Salud respetan el acceso gratuito inicial', () => {
+  const maps = [...script.matchAll(/\{ titulo: '[^']+', materia: 'Educación para la Salud', url_imagen: 'mapas mentales\/(salud_(\d{2})_[^']+)',[^\n]+/g)];
+  assert.equal(maps.length, 27);
+  assert.deepEqual(maps.map(match => Number(match[2])), Array.from({ length: 27 }, (_, index) => index + 1));
+  assert.equal(maps.filter(match => match[0].includes('acceso_gratis: true')).length, 2);
+  assert.ok(maps[0][0].includes('acceso_gratis: true'));
+  assert.ok(maps[1][0].includes('acceso_gratis: true'));
+});
+
 test('cada mapa local tiene una miniatura ligera', () => {
   const sources = [...script.matchAll(/url_imagen: '(mapas mentales\/[^']+)'/g)].map(match => match[1]);
   assert.ok(sources.length >= 34);
