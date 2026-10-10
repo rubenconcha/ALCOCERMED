@@ -26,3 +26,12 @@
 .plan-price strong{font-size:44px;line-height:1.2;letter-spacing:-1.5px;font-weight:500}.plan-price span{font-size:13px;opacity:.75}
 
 .public-intro .public-brand{color:var(--ink)}
+
+.home-mobile-hero::before,.home-mobile-hero::after{display:none!important}
+.home-mobile-hero h1{font-size:clamp(32px,4vw,52px)!important;line-height:1.1!important;letter-spacing:-1.5px}
+.home-mobile-hero .home-hero-kicker{background:#e0e7d7;color:#3e5b3c;border-color:#bdcbb4}
+.home-mobile-hero .home-primary-action,.home-mobile-hero .home-secondary-action{background:var(--green)!important;color:#fff!important;box-shadow:none!important;border:1px solid var(--green);border-radius:8px}
+.home-mobile-hero .home-secondary-action{background:transparent!important;color:var(--green)!important}
+.home-mobile-hero .home-hero-stats{border-top:1px solid #cfd8c7;padding-top:18px}
+.home-mobile-hero .home-hero-stats strong{color:var(--ink)!important}.home-mobile-hero .home-hero-stats span{color:#53694e!important}
+.home-feature-card{box-shadow:none!important;border:1px solid #dde3db!important;border-radius:14px!important}.home-feature-flash,.home-feature-map{background:#fffefb!important}
