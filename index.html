@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles.css?v=20">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
-    <link rel="stylesheet" href="campus-theme.css?v=2">
+    <link rel="stylesheet" href="campus-theme.css?v=3">
 </head>
 
 <body class="login-active">
@@ -216,7 +216,7 @@
                 <li class="nav-item nav-item-simple" id="nav-mapas-mentales">
                     <a href="#" onclick="openMindMaps(); return false;" data-tooltip="mapas mentales">
                         <span class="nav-icon nav-icon-map">
-                            <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#map"></use></svg>
+                            <img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80">
                         </span>
                         <span class="nav-label">mapas mentales</span>
 
@@ -435,8 +435,8 @@
                 <h1>Elige tu próximo tema.</h1>
                 <p>Abre una materia para ver sus tarjetas. Usa los mapas para relacionar conceptos y las preguntas para comprobar tu repaso.</p>
                 <div class="home-hero-actions">
-                    <button class="home-primary-action" onclick="openStudyLibrary()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#cards"></use></svg> Elegir materia</button>
-                    <button class="home-secondary-action" onclick="openMindMaps()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#map"></use></svg> mapas</button>
+                    <button class="home-primary-action" onclick="openStudyLibrary()"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"> Elegir materia</button>
+                    <button class="home-secondary-action" onclick="openMindMaps()"><img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80"> mapas</button>
                     <button class="home-secondary-action pwa-install-trigger" type="button"><i class="fas fa-download"></i> descargar app</button>
                 </div>
                 <div class="home-hero-stats">
@@ -458,7 +458,7 @@
 </section><div class="home-section-head"><h2>Dos maneras de repasar</h2><p>Recuerda una respuesta o explora el tema completo.</p></div><div class="home-focus-grid">
                 <article class="home-feature-card home-feature-flash" onclick="openStudyLibrary()">
                     <div class="home-feature-top">
-                        <div class="home-feature-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#cards"></use></svg></div>
+                        <div class="home-feature-icon"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"></div>
                         <span class="home-feature-badge">PREGUNTA / RESPUESTA</span>
                     </div>
                     <h2>Flashcards inteligentes</h2>
@@ -473,7 +473,7 @@
 
                 <article class="home-feature-card home-feature-map" onclick="openMindMaps()">
                     <div class="home-feature-top">
-                        <div class="home-feature-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#map"></use></svg></div>
+                        <div class="home-feature-icon"><img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80"></div>
                         <span class="home-feature-badge">MAPAS DEL CURSO</span>
                     </div>
                     <h2>Mapas mentales</h2>
@@ -490,7 +490,7 @@
                 </div>
                 <div class="home-grid home-grid-mobile-v2">
                     <div class="home-card home-card-orange home-card-priority" onclick="openStudyLibrary()">
-                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#cards"></use></svg></div>
+                        <div class="hc-icon"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"></div>
                         <div class="hc-body">
                             <h3>flashcards</h3>
                             <p>repaso activo · memoria a largo plazo</p>
@@ -498,7 +498,7 @@
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
                     <div class="home-card home-card-map" onclick="openMindMaps()">
-                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#map"></use></svg></div>
+                        <div class="hc-icon"><img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80"></div>
                         <div class="hc-body">
                             <h3>mapas mentales</h3>
                             <p>temas conectados visualmente</p>
@@ -506,12 +506,12 @@
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
                     <div class="home-card home-card-purple" onclick="openGame('quiz')">
-                        <div class="hc-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="hc-icon"><img class="study-art" src="/assets/study-art/quiz.png" alt="" width="80" height="80"></div>
                         <div class="hc-body"><h3>quiz relámpago</h3><p>preguntas cronometradas</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
                     <div class="home-card home-card-green" onclick="openGame('hangman')">
-                        <div class="hc-icon"><i class="fas fa-brain"></i></div>
+                        <div class="hc-icon"><img class="study-art" src="/assets/study-art/word.png" alt="" width="80" height="80"></div>
                         <div class="hc-body"><h3>ahorcado médico</h3><p>términos clave</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
@@ -521,7 +521,7 @@
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
                     <div class="home-card home-card-sim" onclick="openSimulacro()">
-                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#quiz"></use></svg></div>
+                        <div class="hc-icon"><img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80"></div>
                         <div class="hc-body"><h3>simulacro</h3><p>modo admisión</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
@@ -677,7 +677,7 @@
 
                     <!-- Fila de dificultad — ocupa ancho completo -->
                     <div class="banco-dificultad-row">
-                        <label class="banco-select-label"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#cards"></use></svg> nivel de dificultad</label>
+                        <label class="banco-select-label"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"> nivel de dificultad</label>
                         <div class="banco-dificultad-btns" id="banco-dificultad-btns">
                             <button class="banco-dif-btn banco-dif-active" id="banco-dif-todos" onclick="selectBancoDificultad(null)">
                                 <i class="fas fa-th"></i> todos
@@ -844,7 +844,7 @@
                 <div class="sim-header">
                     <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
                     <div>
-                        <h2 class="sim-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#quiz"></use></svg> simulacro</h2>
+                        <h2 class="sim-title"><img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80"> simulacro</h2>
                         <p class="sim-subtitle">Elige las materias, el tiempo y la cantidad de preguntas.</p>
                     </div>
                 </div>
@@ -1040,7 +1040,7 @@
                             <label>sin responder</label>
                         </div>
                         <div class="bq-rs-box bq-rs-time">
-                            <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#quiz"></use></svg>
+                            <img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80">
                             <span id="sim-rs-time">—</span>
                             <label>tiempo usado</label>
                         </div>
@@ -1268,7 +1268,7 @@
             <!-- Tabs -->
             <div class="intoc-tabs">
                 <button class="intoc-tab intoc-tab-active" id="tab-mapas" onclick="switchIntocTab('mapas')">
-                    <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#map"></use></svg> mapas mentales
+                    <img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80"> mapas mentales
                 </button>
                 <button class="intoc-tab" hidden id="tab-conceptos" onclick="switchIntocTab('conceptos')">
                     <i class="fas fa-lightbulb"></i> conceptos clave
