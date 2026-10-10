@@ -17,6 +17,9 @@ assert.equal(context.isDemoEvaluation({ titulo: 'Tema 12: Población y muestra',
 assert.equal(context.isDemoEvaluation({ titulo: 'Evaluación 1', asignatura: 'Otro' }), true);
 assert.equal(context.isDemoEvaluation({ titulo: 'Prueba gratis de Morfofunción' }), true);
 assert.equal(context.isDemoEvaluation({ titulo: 'Demo de Biología celular' }), true);
+for (const code of ['DEMOMORFO26', 'DEMOBIO26', 'DEMOSALUD26']) {
+  assert.equal(context.isDemoEvaluation({ titulo: 'Demo: materia', codigo: code }), true);
+}
 assert.equal(context.isLegacyClassEvaluation({ asignatura: 'Otro', titulo: 'Sistema Óseo' }), true);
 assert.equal(context.isLegacyClassEvaluation({ asignatura: 'Anatomía', titulo: 'Examen Tejido Muscular' }), true);
 assert.equal(context.isLegacyClassEvaluation({ asignatura: 'Biología Celular', titulo: 'Introducción a la biología celular' }), true);
