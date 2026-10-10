@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
-<link rel="stylesheet" href="campus-access.css?v=1"><link rel="stylesheet" href="campus-navigation.css?v=2">
+<link rel="stylesheet" href="campus-access.css?v=1"><link rel="stylesheet" href="campus-navigation.css?v=2"><link rel="stylesheet" href="campus-home.css?v=1">
 </head>
 
 <body class="login-active">
@@ -342,10 +342,21 @@
 
         <!-- ══ PANTALLA INICIO — MOBILE FIRST ══ -->
 <section id="home-screen" class="home-screen campus-dashboard">
-<header class="campus-greeting"><span>PREPARATORIA BEN CARSON · ALCOCERMED</span><h1>Hola, <span id="welcome-name">bienvenido</span>.</h1><p>Bienvenido a tu plataforma de estudio.</p></header>
-<div class="dashboard-columns"><div class="dashboard-main"><article class="welcome-card"><div><span class="welcome-label">TU CAMPUS</span><h2>Tu preparación para Medicina, en un solo lugar.</h2><p>En el menú encontrarás tus flashcards, mapas mentales, preguntas y juegos. Elige una sección y después la materia que quieres repasar.</p><button class="home-primary-action" onclick="openStudyLibrary()">Ir a flashcards <span aria-hidden="true">→</span></button></div><img src="/assets/study-art/cards.png" alt="Tarjetas de estudio"></article><div id="trial-account-banner" class="free-account-banner" hidden><small>PRUEBA GRATUITA · ACCESO COMPLETO</small><h2>Tienes todo AlcocerMed disponible.</h2><p id="trial-account-deadline"></p><a href="/planes#planes">Ver planes para continuar →</a></div>
+  <header class="campus-greeting"><div><span>PREPARATORIA BEN CARSON</span><h1>Hola, <span id="welcome-name">bienvenido</span>.</h1><p>Tu material de estudio está aquí. Elige qué quieres hacer hoy.</p></div><div class="greeting-symbol" aria-hidden="true"><img src="/assets/study-art/health-education.png" alt=""></div></header>
+  <div class="dashboard-columns"><div class="dashboard-main">
+    <div id="trial-account-banner" class="free-account-banner" hidden><small>PRUEBA GRATUITA · ACCESO COMPLETO</small><h2>Tienes todo AlcocerMed disponible.</h2><p id="trial-account-deadline"></p><a href="/planes#planes">Ver planes para continuar →</a></div>
 <div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA ALCOCERMED</small><h2>Continúa tu preparación.</h2><p>Elige un plan para acceder a todos los recursos. Tu progreso guardado permanece en tu cuenta.</p><div class="free-samples"><button onclick="CampusAccess.unlock()">Ver planes →</button></div></div>
-<div class="campus-account-note"><i class="fas fa-graduation-cap" aria-hidden="true"></i><div><strong>Tu cuenta, tu avance</strong><p>Consulta tus resultados y retoma el estudio desde el menú.</p></div><button onclick="openEvaluacion()">Ver resultados →</button></div></div><aside class="dashboard-progress" aria-label="Tu progreso"><h2>Tu progreso</h2>        <!-- ══ MI PROGRESO ══ -->
+
+    <section class="dashboard-launch" aria-labelledby="dashboard-launch-title"><div class="dashboard-launch-heading"><div><span class="dashboard-eyebrow">TU ESPACIO DE ESTUDIO</span><h2 id="dashboard-launch-title">¿Qué vas a estudiar hoy?</h2></div><span class="dashboard-launch-hint">También puedes usar el menú de la izquierda.</span></div>
+      <div class="dashboard-activity-grid">
+        <button class="dashboard-activity dashboard-activity-gold" onclick="openStudyLibrary()"><img src="/assets/study-art/cards.png" alt=""><span><strong>Flashcards</strong><small>Repasa por materia y tema</small></span><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+        <button class="dashboard-activity dashboard-activity-blue" onclick="openMindMaps()"><img src="/assets/study-art/map.png" alt=""><span><strong>Mapas mentales</strong><small>Visualiza las ideas del tema</small></span><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+        <button class="dashboard-activity dashboard-activity-olive" onclick="openBanco()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#bank"></use></svg><span><strong>Banco de preguntas</strong><small>Practica por materia</small></span><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+        <button class="dashboard-activity dashboard-activity-navy" onclick="openSimulacro()"><img src="/assets/study-art/quiz.png" alt=""><span><strong>Simulacros</strong><small>Resuelve un examen con tiempo</small></span><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+      </div>
+    </section>
+    <div class="dashboard-more"><button onclick="openGame('quiz')"><img src="/assets/study-art/word.png" alt=""><span><strong>Aprende jugando</strong><small>Quiz y términos médicos</small></span><span aria-hidden="true">→</span></button><button onclick="openEvaluacion()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#progress"></use></svg><span><strong>Mis resultados</strong><small>Consulta tus evaluaciones</small></span><span aria-hidden="true">→</span></button></div>
+  </div><aside class="dashboard-progress" aria-label="Tu progreso"><div class="dashboard-progress-heading"><span>MI ACTIVIDAD</span><h2>Tu progreso</h2></div>        <!-- ══ MI PROGRESO ══ -->
         <div class="nav-section progress-section">
             <span class="section-title">MI PROGRESO</span>
             <div class="progress-card">
