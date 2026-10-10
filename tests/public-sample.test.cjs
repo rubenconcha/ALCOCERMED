@@ -9,7 +9,7 @@ test('sample uses exact production tool markup and shared visual styles', () => 
     const section = app.match(new RegExp(`<section id="${id}"[\\s\\S]*?</section>`))[0];
     assert.ok(sample.includes(section), `${id} must match the actual platform`);
   }
-  for (const file of ['styles.css?v=22', 'student-white.css?v=2', 'campus-theme.css?v=3']) {
+  for (const file of ['styles.css?v=23', 'student-white.css?v=2', 'campus-theme.css?v=3']) {
     assert.ok(sample.includes(file)); assert.ok(app.includes(file));
   }
 });

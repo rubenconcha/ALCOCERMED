@@ -2795,7 +2795,11 @@ window.setSimMode = function (mode) {
     if (mGroup) mGroup.classList.toggle('hidden', mode !== 'materia');
     var slider = document.getElementById('sim-nq-slider');
     var note = document.getElementById('sim-nq-note');
-    if (slider) slider.disabled = mode === 'oficial';
+    if (slider) {
+        slider.disabled = mode === 'oficial';
+        slider.hidden = mode === 'oficial';
+    }
+    document.getElementById('sim-nq-card').classList.toggle('sim-fixed-nq', mode === 'oficial');
     if (note) note.textContent = mode === 'oficial'
         ? 'Este simulacro usa todas sus preguntas; puedes elegir el tiempo.'
         : 'Elige cuántas preguntas quieres resolver.';

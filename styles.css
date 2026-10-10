@@ -3511,7 +3511,7 @@ body.wayground-active .main-content {
    SIMULACRO
 ═══════════════════════════════════════════════════ */
 .simulacro-section {
-    max-width: 860px;
+    max-width: 1040px;
     width: 100%;
 }
 
@@ -3563,6 +3563,10 @@ body.wayground-active .main-content {
 .sim-config-card:focus-within {
     border-color: rgba(255, 107, 0, 0.3);
     box-shadow: 0 8px 28px rgba(255, 107, 0, 0.1);
+}
+
+.sim-mode-card {
+    grid-column: 1 / -1;
 }
 
 .sim-config-section-title {
@@ -3722,6 +3726,14 @@ body.wayground-active .main-content {
 .sim-nq-slider:disabled {
     opacity: 0.45;
     cursor: not-allowed;
+}
+
+.sim-nq-slider[hidden] {
+    display: none;
+}
+
+.sim-fixed-nq .sim-nq-row {
+    justify-content: center;
 }
 
 .sim-nq-note {
