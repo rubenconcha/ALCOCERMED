@@ -29,18 +29,15 @@ let quizTimeLeft = 15;
 let quizAnswered = false;
 
 window.startQuiz = function () {
-    // Mezclar y tomar 10 preguntas
     const available = QUIZ_QUESTIONS.filter(q => !selectedGameSubject || q.subject === selectedGameSubject);
-    quizQuestions = shuffleArray((window.CampusAccess && CampusAccess.isFree() ? available.slice(0,5) : available).slice()).slice(0, 10);
+    quizQuestions = shuffleArray(available.slice()).slice(0, 5);
     quizIndex = 0;
     quizScore = 0;
     quizAnswered = false;
-
     document.getElementById('quiz-result').classList.add('hidden');
     document.getElementById('quiz-feedback').classList.add('hidden');
     document.getElementById('quiz-score').textContent = quizScore;
     document.getElementById('quiz-qtotal').textContent = quizQuestions.length;
-
     gamesPlayed++;
     renderQuizQuestion();
 };
@@ -170,14 +167,19 @@ function showQuizResult() {
 let hmWord = '';
 let hmGuessed = [];
 let hmErrors = 0;
+const hangmanRemaining = new Map();
 const HM_MAX_ERRORS = 6;
 const HM_PARTS = ['hm-head', 'hm-body', 'hm-larm', 'hm-rarm', 'hm-lleg', 'hm-rleg'];
 
 window.startHangman = function () {
     const available = HANGMAN_WORDS.filter(q => !selectedGameSubject || q.category === selectedGameSubject);
     const words = window.CampusAccess && CampusAccess.isFree() ? available.slice(0,5) : available;
-    const entry = words[Math.floor(Math.random() * words.length)];
-    hmWord = entry.word.toUpperCase();
+    const poolKey = selectedGameSubject + (window.CampusAccess && CampusAccess.isFree() ? ':demo' : ':full');
+    let remaining = hangmanRemaining.get(poolKey);
+    if (!remaining || !remaining.length) remaining = shuffleArray(words.slice());
+    const entry = remaining.pop();
+    hangmanRemaining.set(poolKey, remaining);
+    hmWord = entry.word.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     hmGuessed = [];
     hmErrors = 0;
     gamesPlayed++;

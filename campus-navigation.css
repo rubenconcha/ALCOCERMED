@@ -8,3 +8,12 @@
 @media(max-width:1100px){.dashboard-columns{grid-template-columns:minmax(0,1fr)}.dashboard-progress{max-width:none}.welcome-card>img{width:150px}.campus-browser .subject-picker{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.campus-dashboard,.campus-browser{padding:12px 10px 90px;margin:10px auto}.welcome-card{padding:24px;display:block}.welcome-card>img{display:none}.welcome-card h2{font-size:28px}.campus-account-note{flex-wrap:wrap}.campus-browser .subject-picker,.campus-browser .library-topics{grid-template-columns:1fr}.campus-browser .subject-picker button{min-height:150px;flex-direction:row;align-items:center;padding:20px}.campus-browser .subject-picker img{width:66px;height:66px}.campus-browser .subject-picker span,.campus-browser .subject-picker strong{font-size:21px}.campus-browser h1,.campus-browser h2{font-size:28px}.campus-browser #library-topics-panel{padding:16px}}
 @media(prefers-reduced-motion:reduce){.campus-browser .subject-picker button{transition:none;transform:none}}
+
+.campus-browser .games-chooser button { justify-content:flex-start; min-height:290px; gap:14px; }
+.campus-browser .games-chooser button > .study-tool-icon { width:88px; height:88px; color:#278fbd; }
+.campus-browser .games-chooser button:nth-child(3) > .study-tool-icon { color:#799635; }
+.campus-browser .games-chooser button small { display:block; color:#62748a; font-size:14px; line-height:1.45; font-weight:500; }
+.campus-browser .games-chooser .game-choice-action { margin-top:auto; display:block; color:#a8660a; font-size:14px; font-weight:800; }
+.campus-browser .games-chooser button:nth-child(2) .game-choice-action { color:#176d98; }
+.campus-browser .games-chooser button:nth-child(3) .game-choice-action { color:#637e26; }
+@media(max-width:600px){.campus-browser .games-chooser button{min-height:190px;flex-direction:column;align-items:flex-start}.campus-browser .games-chooser button>.study-tool-icon{width:66px;height:66px}}

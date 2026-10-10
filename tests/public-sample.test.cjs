@@ -20,10 +20,11 @@ test('public sample contains no auth, database, persistence or ranking code', ()
   assert.doesNotMatch(html, /src="(?:script|config|device_guard)\.js/);
   assert.ok(fs.existsSync(path.join(__dirname, '..', 'mapas mentales/lacelula.png')));
 });
-test('sample game engines remain the production engines', () => {
+test('sample uses the production game renderers without the paid question loader', () => {
   const source = read('script.js'), sample = read('sample-engine.js');
-  const quiz = source.slice(source.indexOf('let quizQuestions = []'), source.indexOf('let hmWord ='));
+  const quiz = source.slice(source.indexOf('function renderQuizQuestion()'), source.indexOf('let hmWord ='));
   const hangman = source.slice(source.indexOf('let hmWord ='), source.indexOf('let _toastTimer ='));
   assert.ok(sample.includes(quiz)); assert.ok(sample.includes(hangman));
+  assert.doesNotMatch(sample, /fetchAllBancoQuestions|quizQuestionFromBanco/);
 });
 

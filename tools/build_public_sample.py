@@ -26,12 +26,12 @@ lightbox = lightbox.replace('class="mm-lb-close"', 'class="mm-lb-close" aria-lab
 page = '''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AlcocerMed · Muestra de la plataforma</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="styles.css?v=22"><link rel="stylesheet" href="commerce.css?v=1"><link rel="stylesheet" href="student-white.css?v=2"><link rel="stylesheet" href="campus-theme.css?v=3"><link rel="stylesheet" href="sample-shell.css?v=4">
+<link rel="stylesheet" href="styles.css?v=23"><link rel="stylesheet" href="commerce.css?v=1"><link rel="stylesheet" href="student-white.css?v=2"><link rel="stylesheet" href="campus-theme.css?v=3"><link rel="stylesheet" href="sample-shell.css?v=4">
 </head><body class="sample-page"><nav class="sample-tabs" aria-label="Herramientas de la muestra"><button data-screen="study-area" aria-pressed="true"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Flashcards</strong><small>Responde y gira la tarjeta</small></span><span class="sample-tool-meta">5 tarjetas</span></button><button data-screen="sample-maps" aria-pressed="false"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Mapas mentales</strong><small>Amplía el mapa de la célula</small></span><span class="sample-tool-meta">1 mapa completo</span></button><button data-screen="game-quiz" aria-pressed="false"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Quiz relámpago</strong><small>Resuelve el quiz con tiempo</small></span><span class="sample-tool-meta">5 preguntas</span></button><a class="sample-game-link" href="/juegos/?demo=1" target="_top"><span class="sample-tool-art"><img class="study-art" src="/assets/study-art/word.png" alt="" aria-hidden="true" width="80" height="80"></span><span class="sample-tool-copy"><strong>Juega</strong><small>Entra a la demo de Juegos</small></span><span class="sample-tool-meta">Cuenta demo · con código ↗</span></a></nav><div class="sample-context"><span>EXPLORA BIOLOGÍA CELULAR</span><p>Elige una herramienta y empieza. Puedes cambiar cuando quieras.</p></div><main id="sample-content">
 '''+study+quiz+hangman+'''
 <section id="sample-maps" class="hidden"><div class="game-header"><h2><i class="fas fa-project-diagram"></i> mapas mentales</h2></div><p class="sample-caption">Abre el mapa para ampliarlo, igual que dentro de la plataforma.</p><div id="mm-grid" class="mm-grid"></div></section>
 <section id="sample-finished" class="hidden sample-finished"><h2>Terminaste la muestra de flashcards.</h2><p>Prueba los Juegos o vuelve a repasar estas cinco tarjetas.</p><button class="btn-primary" onclick="resetFlashcards()">Repetir flashcards</button><button class="btn-back-game" onclick="selectSample('game-quiz')">Probar el quiz</button></section>
-'''+lightbox+'''</main><script src="sample-engine.js?v=1"></script><script src="sample-runtime.js?v=1"></script></body></html>'''
+'''+lightbox+'''</main><script src="sample-engine.js?v=2"></script><script src="sample-runtime.js?v=1"></script></body></html>'''
 (ROOT / 'muestra.html').write_text(page, encoding='utf-8')
 
 # Game data and engines come from the actual application, rather than separate imitations.
@@ -44,7 +44,24 @@ engine += 'const QUIZ_QUESTIONS = [\n' + '\n'.join(question_rows) + '\n];\n'
 engine += 'const HANGMAN_WORDS = [\n' + '\n'.join(word_rows) + '\n];\n'
 engine += between(js, 'function shuffleArray(', 'let _supabase')
 engine += 'let gamesPlayed = 0;\n'
-engine += between(js, 'let quizQuestions = []', 'let hmWord =')
+# The public sample shares the live renderer, but starts only its five local
+# questions. The paid campus loader must never be copied into this page.
+engine += between(js, 'let quizQuestions = []', 'function quizQuestionFromBanco')
+engine += '''window.startQuiz = function () {
+    const available = QUIZ_QUESTIONS.filter(q => !selectedGameSubject || q.subject === selectedGameSubject);
+    quizQuestions = shuffleArray(available.slice()).slice(0, 5);
+    quizIndex = 0;
+    quizScore = 0;
+    quizAnswered = false;
+    document.getElementById('quiz-result').classList.add('hidden');
+    document.getElementById('quiz-feedback').classList.add('hidden');
+    document.getElementById('quiz-score').textContent = quizScore;
+    document.getElementById('quiz-qtotal').textContent = quizQuestions.length;
+    gamesPlayed++;
+    renderQuizQuestion();
+};
+\n'''
+engine += between(js, 'function renderQuizQuestion()', 'let hmWord =')
 engine += between(js, 'let hmWord =', 'let _toastTimer =')
 engine += between(js, 'function renderMmGrid()', 'function updateIntocStats()')
 engine += between(js, 'window.openMmLightbox =', '// Cerrar sidebar en mobile')

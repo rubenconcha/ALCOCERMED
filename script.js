@@ -1020,6 +1020,7 @@ function resourceChooser(tool, names, select, description) {
     document.getElementById('resource-description').textContent = description || 'Selecciona el contenido que quieres practicar.';
     const options = document.getElementById('resource-options');
     options.replaceChildren();
+    options.classList.toggle('games-chooser', tool === 'Juegos');
     names.forEach(name => {
         const button = document.createElement('button');
         button.type = 'button';
@@ -1034,7 +1035,26 @@ function resourceChooser(tool, names, select, description) {
     });
 }
 window.openGameMenu = function () {
-    resourceChooser('Juegos', ['Quiz relámpago', 'Ahorcado médico'], name => openGame(name === 'Quiz relámpago' ? 'quiz' : 'hangman'), 'Elige un juego para empezar.');
+    const games = [
+        { name: 'Quiz relámpago', description: 'Responde contra reloj con preguntas de las tres materias.', action: () => openGame('quiz') },
+        { name: 'Ahorcado médico', description: 'Adivina conceptos de Morfofunción, Biología celular y Salud.', action: () => openGame('hangman') },
+        { name: 'Juegos por materias', description: 'Entra a AlcocerMed Juegos: evaluaciones, ranking y demos por materia.', action: () => { window.location.href = '/juegos/'; } }
+    ];
+    resourceChooser('Juegos', games.map(game => game.name), name => games.find(game => game.name === name).action(), 'Tres formas de practicar. Si tienes una cuenta gratuita, podrás jugar las versiones demo.');
+    document.querySelectorAll('#resource-options button').forEach((button, index) => {
+        const game = games[index];
+        if (index === 2) {
+            const art = button.querySelector('img');
+            art.outerHTML = '<svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#gamepad"></use></svg>';
+        }
+        const details = document.createElement('small');
+        details.textContent = game.description;
+        button.append(details);
+        const footer = document.createElement('span');
+        footer.className = 'game-choice-action';
+        footer.textContent = index === 2 ? 'Entrar a Juegos →' : 'Elegir materia →';
+        button.append(footer);
+    });
 };
 window.openGame = function (gameType) {
     const source = gameType === 'quiz' ? QUIZ_QUESTIONS : HANGMAN_WORDS;
@@ -1084,6 +1104,8 @@ const QUIZ_QUESTIONS = [
     { q: '¿qué mide la tasa de mortalidad infantil?', opts: ['muertes de menores de 5 años por cada 100k hab.', 'muertes de menores de 1 año por cada 1000 nacidos vivos', 'muertes maternas por cada 100k nacidos', 'fallecidos en hospitales por año'], answer: 1, subject: 'educación para la salud' },
     { q: 'la epidemiología estudia principalmente:', opts: ['las enfermedades individuales', 'la distribución y determinantes de la salud en poblaciones', 'la anatomía patológica', 'el tratamiento farmacológico'], answer: 1, subject: 'educación para la salud' },
     { q: '¿cuál es el indicador que mide los años de vida ajustados por discapacidad?', opts: ['AVISA (DALY)', 'AVPP', 'tasa de incidencia', 'índice de Gini'], answer: 0, subject: 'educación para la salud' },
+    { q: 'Si se organiza una campaña de vacunación, ¿qué función de salud pública se está reforzando?', opts: ['prevención de enfermedades', 'diagnóstico por imágenes', 'cirugía de urgencia', 'rehabilitación física'], answer: 0, subject: 'educación para la salud' },
+    { q: '¿Qué aporta la comunidad cuando participa en las decisiones sobre su salud?', opts: ['sus experiencias y prioridades', 'solo datos de laboratorio', 'únicamente financiamiento', 'el reemplazo de la vigilancia sanitaria'], answer: 0, subject: 'educación para la salud' },
 ];
 
 const HANGMAN_WORDS = [
@@ -1098,6 +1120,16 @@ const HANGMAN_WORDS = [
     { word: 'MEIOSIS', hint: 'división celular que produce gametos haploides', category: 'biología celular' },
     { word: 'MITOSIS', hint: 'división celular somática, produce células idénticas', category: 'biología celular' },
     { word: 'PEROXISOMA', hint: 'desintoxica la célula, neutraliza peróxido de hidrógeno', category: 'biología celular' },
+    { word: 'CITOPLASMA', hint: 'región celular entre la membrana y el núcleo', category: 'biología celular' },
+    { word: 'NUCLEOLO', hint: 'región del núcleo donde se forman subunidades ribosómicas', category: 'biología celular' },
+    { word: 'CROMATINA', hint: 'ADN asociado a proteínas dentro del núcleo', category: 'biología celular' },
+    { word: 'CITOSOL', hint: 'porción líquida del citoplasma', category: 'biología celular' },
+    { word: 'CENTRIOLO', hint: 'estructura cilíndrica de microtúbulos del centrosoma', category: 'biología celular' },
+    { word: 'MICROTUBULO', hint: 'filamento del citoesqueleto que forma el huso mitótico', category: 'biología celular' },
+    { word: 'ENDOCITOSIS', hint: 'entrada de material a la célula mediante vesículas', category: 'biología celular' },
+    { word: 'EXOCITOSIS', hint: 'salida de material celular mediante fusión de vesículas', category: 'biología celular' },
+    { word: 'FOSFOLIPIDO', hint: 'molécula anfipática que forma la bicapa de la membrana', category: 'biología celular' },
+    { word: 'OSMOSIS', hint: 'movimiento de agua a través de una membrana selectiva', category: 'biología celular' },
     // Morfofunción
     { word: 'DIAFRAGMA', hint: 'músculo principal de la respiración', category: 'morfofunción' },
     { word: 'FEMUR', hint: 'hueso más largo del cuerpo humano', category: 'morfofunción' },
@@ -1109,6 +1141,32 @@ const HANGMAN_WORDS = [
     { word: 'PANCREAS', hint: 'produce insulina y enzimas digestivas', category: 'morfofunción' },
     { word: 'TRÁQUEA', hint: 'conducto aéreo entre laringe y bronquios', category: 'morfofunción' },
     { word: 'CEREBELO', hint: 'coordina el equilibrio y el movimiento fino', category: 'morfofunción' },
+    { word: 'HOMEOSTASIS', hint: 'mantenimiento de condiciones internas relativamente estables', category: 'morfofunción' },
+    { word: 'FISIOLOGIA', hint: 'estudia cómo funciona el cuerpo', category: 'morfofunción' },
+    { word: 'ANATOMIA', hint: 'estudia la estructura del cuerpo', category: 'morfofunción' },
+    { word: 'EPIDERMIS', hint: 'capa más superficial de la piel', category: 'morfofunción' },
+    { word: 'DERMIS', hint: 'capa de la piel bajo la epidermis', category: 'morfofunción' },
+    { word: 'HEMOGLOBINA', hint: 'proteína de los eritrocitos que transporta oxígeno', category: 'morfofunción' },
+    { word: 'ALVEOLO', hint: 'pequeña estructura pulmonar donde ocurre el intercambio gaseoso', category: 'morfofunción' },
+    { word: 'NEURONA', hint: 'célula especializada en transmitir señales nerviosas', category: 'morfofunción' },
+    { word: 'ARTERIA', hint: 'vaso que conduce sangre desde el corazón', category: 'morfofunción' },
+    { word: 'TENDON', hint: 'tejido que une un músculo con un hueso', category: 'morfofunción' },
+    // Educación para la Salud
+    { word: 'PREVENCION', hint: 'acciones para reducir el riesgo o los casos de enfermedad', category: 'educación para la salud' },
+    { word: 'PROMOCION', hint: 'crea condiciones y capacidades para cuidar la salud', category: 'educación para la salud' },
+    { word: 'VIGILANCIA', hint: 'seguimiento de datos para reconocer riesgos y brotes', category: 'educación para la salud' },
+    { word: 'COMUNIDAD', hint: 'grupo que participa en decisiones sobre su salud', category: 'educación para la salud' },
+    { word: 'VACUNACION', hint: 'medida preventiva que protege frente a enfermedades', category: 'educación para la salud' },
+    { word: 'EPIDEMIOLOGIA', hint: 'estudia la distribución de problemas de salud en poblaciones', category: 'educación para la salud' },
+    { word: 'INCIDENCIA', hint: 'medida de casos nuevos durante un periodo', category: 'educación para la salud' },
+    { word: 'PREVALENCIA', hint: 'medida de personas que viven con una condición en un momento o periodo', category: 'educación para la salud' },
+    { word: 'POBLACION', hint: 'conjunto de personas cuya salud se observa o protege', category: 'educación para la salud' },
+    { word: 'SANEAMIENTO', hint: 'medidas para mantener agua y entorno en condiciones saludables', category: 'educación para la salud' },
+    { word: 'ENTREVISTA', hint: 'técnica para recoger información directamente de una persona', category: 'educación para la salud' },
+    { word: 'ENCUESTA', hint: 'instrumento con preguntas para reunir datos de un grupo', category: 'educación para la salud' },
+    { word: 'MUESTRA', hint: 'parte de una población seleccionada para un estudio', category: 'educación para la salud' },
+    { word: 'VARIABLE', hint: 'característica que puede tomar distintos valores en una investigación', category: 'educación para la salud' },
+    { word: 'HIPOTESIS', hint: 'explicación provisional que se somete a comprobación', category: 'educación para la salud' },
 ];
 
 // Preguntas de práctica visibles en la cuenta gratuita. No consulta el banco de pago.
@@ -1132,10 +1190,34 @@ let quizTimer = null;
 let quizTimeLeft = 15;
 let quizAnswered = false;
 
-window.startQuiz = function () {
-    // Mezclar y tomar 10 preguntas
-    const available = QUIZ_QUESTIONS.filter(q => !selectedGameSubject || q.subject === selectedGameSubject);
-    quizQuestions = shuffleArray((window.CampusAccess && CampusAccess.isFree() ? available.slice(0,5) : available).slice()).slice(0, 10);
+function quizQuestionFromBanco(row) {
+    if (!campo(row, 'fuente')) return null;
+    const subjectCode = normalizeDbText(campo(row, 'materia'));
+    const subject = { 'MORFOFUNCION': 'morfofunción', 'BIOLOGIA CELULAR': 'biología celular', 'SALUD PUBLICA': 'educación para la salud' }[subjectCode];
+    const answer = 'ABCD'.indexOf(String(campo(row, 'respuesta_correcta')).trim().toUpperCase());
+    const opts = ['a', 'b', 'c', 'd'].map(letter => campo(row, 'opcion_' + letter));
+    const question = campo(row, 'pregunta');
+    if (!subject || !question || opts.some(option => !option || !String(option).trim()) || answer < 0) return null;
+    return { q: String(question), opts: opts.map(String), answer, subject };
+}
+
+window.startQuiz = async function () {
+    const requestedSubject = selectedGameSubject;
+    const isFree = window.CampusAccess && CampusAccess.isFree();
+    let available = QUIZ_QUESTIONS.filter(q => !requestedSubject || q.subject === requestedSubject);
+    if (!isFree) {
+        document.getElementById('quiz-question-text').textContent = 'Preparando preguntas...';
+        document.getElementById('quiz-options').replaceChildren();
+        try {
+            const banco = (await fetchAllBancoQuestions()).map(quizQuestionFromBanco).filter(Boolean);
+            const matching = banco.filter(q => !requestedSubject || q.subject === requestedSubject);
+            if (matching.length) available = matching;
+        } catch (error) {
+            console.warn('No se pudo cargar el banco para Quiz relámpago:', error);
+        }
+    }
+    if (selectedGameSubject !== requestedSubject || document.getElementById('game-quiz').classList.contains('hidden')) return;
+    quizQuestions = shuffleArray((isFree ? available.slice(0, 5) : available).slice()).slice(0, 10);
     quizIndex = 0;
     quizScore = 0;
     quizAnswered = false;
@@ -1274,14 +1356,19 @@ function showQuizResult() {
 let hmWord = '';
 let hmGuessed = [];
 let hmErrors = 0;
+const hangmanRemaining = new Map();
 const HM_MAX_ERRORS = 6;
 const HM_PARTS = ['hm-head', 'hm-body', 'hm-larm', 'hm-rarm', 'hm-lleg', 'hm-rleg'];
 
 window.startHangman = function () {
     const available = HANGMAN_WORDS.filter(q => !selectedGameSubject || q.category === selectedGameSubject);
     const words = window.CampusAccess && CampusAccess.isFree() ? available.slice(0,5) : available;
-    const entry = words[Math.floor(Math.random() * words.length)];
-    hmWord = entry.word.toUpperCase();
+    const poolKey = selectedGameSubject + (window.CampusAccess && CampusAccess.isFree() ? ':demo' : ':full');
+    let remaining = hangmanRemaining.get(poolKey);
+    if (!remaining || !remaining.length) remaining = shuffleArray(words.slice());
+    const entry = remaining.pop();
+    hangmanRemaining.set(poolKey, remaining);
+    hmWord = entry.word.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     hmGuessed = [];
     hmErrors = 0;
     gamesPlayed++;
