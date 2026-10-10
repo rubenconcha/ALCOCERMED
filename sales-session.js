@@ -5,6 +5,17 @@
 (async () => {
     const fromCampus = new URLSearchParams(location.search).get('desde') === 'campus';
     const root = document.documentElement;
+    const backLink = document.querySelector('.back-to-campus');
+    if (backLink) {
+        backLink.href = '/?volver=campus';
+        try {
+            const saved = JSON.parse(sessionStorage.getItem('alcocer_plan_return') || 'null');
+            if (saved?.screen === 'mapas') {
+                backLink.textContent = '← Volver a mapas mentales';
+                backLink.setAttribute('aria-label', 'Volver a mapas mentales en el campus');
+            }
+        } catch (_) { /* Mantener el regreso general al campus. */ }
+    }
     try {
         const config = window.ALCOCER_CONFIG;
         if (!config || !window.supabase?.createClient) return;
@@ -15,7 +26,7 @@
             root.classList.add('session-active');
             document.querySelector('.campus-session-note').textContent = 'Tu sesión sigue activa. Al elegir un plan, conservarás tu cuenta y tu avance.';
         } else if (fromCampus) {
-            document.querySelector('.campus-session-note').textContent = 'Elige tu plan aquí. Si necesitas entrar otra vez, usa «Volver al campus».';
+            document.querySelector('.campus-session-note').textContent = 'Elige tu plan y vuelve a tu material desde el botón superior.';
         }
     } catch (error) {
         // Un fallo de red no debe sacar al estudiante de su cuenta.
@@ -24,6 +35,6 @@
     }
 
     if (root.classList.contains('campus-entry') || root.classList.contains('session-active')) {
-        requestAnimationFrame(() => document.getElementById('planes')?.scrollIntoView({ block: 'start', behavior: 'instant' }));
+        requestAnimationFrame(() => window.scrollTo(0, 0));
     }
 })();

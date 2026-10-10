@@ -213,6 +213,8 @@ function enterVerifiedApp(user) {
     setTimeout(preloadAppData, 1200);
     setTimeout(sincronizarPerfilEnNube, 2000);
 
+    restoreCampusAfterPlans();
+
 
     // ═══ DEVICE GUARD (solo estudiantes, admin exento) ═══
     var _isAdmin = Boolean(user && user.email && ADMIN_EMAILS.includes(user.email.toLowerCase()));
@@ -231,6 +233,26 @@ function enterVerifiedApp(user) {
             });
         });
     }
+}
+
+async function restoreCampusAfterPlans() {
+    if (new URLSearchParams(window.location.search).get('volver') !== 'campus') return;
+    var saved = null;
+    try {
+        saved = JSON.parse(sessionStorage.getItem('alcocer_plan_return') || 'null');
+        sessionStorage.removeItem('alcocer_plan_return');
+        history.replaceState({}, document.title, window.location.pathname);
+    } catch (_) { return; }
+    if (!saved || saved.screen !== 'mapas') return;
+    showScreen('intocables-screen');
+    switchIntocTab('mapas');
+    await loadMapasMentales();
+    var search = document.getElementById('mm-search-input');
+    if (search) search.value = saved.search || '';
+    selectMmMateria(saved.materia || null);
+    requestAnimationFrame(function () {
+        requestAnimationFrame(function () { window.scrollTo(0, Math.max(0, Number(saved.scrollY) || 0)); });
+    });
 }
 
 /** handleLogin */

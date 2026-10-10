@@ -3,5 +3,5 @@ function setup(response){const elements=new Map();const el=id=>{if(!elements.has
 test('server-classified free account is locked',async()=>{const t=setup({data:{ready:true,premium:false,expires_at:'2020-01-01T00:00:00Z'}});await t.access.resolve(t.client);assert.ok(t.access.isFree());assert.equal(t.el('free-account-banner').hidden,false)});
 test('verified current subscription unlocks resources',async()=>{const t=setup({data:{ready:true,premium:true,expires_at:'2099-01-01T00:00:00Z'}});await t.access.resolve(t.client);assert.ok(!t.access.isFree());assert.equal(t.el('free-account-banner').hidden,true)});
 test('access errors never unlock a new account',async()=>{const t=setup({error:{message:'offline'}});await assert.rejects(t.access.resolve(t.client));assert.ok(t.access.isFree())});
-test('locked content goes to plans',()=>{const t=setup({});t.access.unlock();assert.equal(t.location.href,'/planes?desde=campus#planes')});
+test('locked content goes to plans',()=>{const t=setup({});t.access.unlock();assert.equal(t.location.href,'/planes?desde=campus')});
 test('signup does not claim a paid role; Google requests account selection',()=>{const s=fs.readFileSync('registration.js','utf8');assert.doesNotMatch(s,/premium\s*:|role\s*:/);assert.match(fs.readFileSync('campus-access.js','utf8'),/prompt:'select_account'/)});
