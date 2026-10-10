@@ -2804,6 +2804,10 @@ function defaultSubjectStats() {
     var demoCounts = stats.demoCounts;
     counts.MORFOFUNCION = 1;
     demoCounts.MORFOFUNCION = 1;
+    counts['BIOLOGIA CELULAR'] = 1;
+    demoCounts['BIOLOGIA CELULAR'] = 1;
+    counts['EDUCACION PARA LA SALUD'] = 1;
+    demoCounts['EDUCACION PARA LA SALUD'] = 1;
     return stats;
 }
 
