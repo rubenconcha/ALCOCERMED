@@ -2579,9 +2579,10 @@ var simState = {
     timerInterval: null,
     secondsLeft: 3600,
     startTimestamp: null,
+    endTimestamp: null,
     finalized: false,
     _cache: [],
-    _oficialesCache: []     // caché de la tabla simulacros
+    _oficialesCache: []     // catálogo de simulacros con número de preguntas
 };
 
 // ── Abrir pantalla de configuración ──
@@ -2614,8 +2615,7 @@ window.openSimulacro = async function () {
         document.getElementById('sidebar').classList.remove('open');
         document.getElementById('overlay').classList.remove('active');
     }
-    await loadSimOficiales();
-    await loadSimMaterias();
+    await Promise.all([loadSimOficiales(), loadSimMaterias()]);
 };
 
 async function loadSimOficiales() {
@@ -2628,32 +2628,71 @@ async function loadSimOficiales() {
     ddEl.innerHTML = '<div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando exámenes...</div>';
     try {
         var client = getSupabase();
-        // Obtener nombres únicos de exámenes de la nueva tabla
-        var { data, error } = await client.from('simulacros').select('nombre, materia').order('nombre');
-        if (error) throw error;
-
-        simState._oficialesCache = data || [];
-        var nombresSet = new Set();
-        data.forEach(function (r) { if (r.nombre) nombresSet.add(r.nombre); });
-        var nombres = Array.from(nombresSet);
+        // PostgREST limita las filas por petición; recorrer todas evita ocultar los últimos simulacros.
+        var catalogo = new Map();
+        for (var from = 0; ; from += 500) {
+            var { data, error } = await client.from('simulacros')
+                .select('nombre,materia,numero_pregunta')
+                .order('nombre').order('numero_pregunta')
+                .range(from, from + 499);
+            if (error) throw error;
+            (data || []).forEach(function (r) {
+                var item = catalogo.get(r.nombre) || { nombre: r.nombre, materia: r.materia, count: 0 };
+                item.count++;
+                catalogo.set(r.nombre, item);
+            });
+            if (!data || data.length < 500) break;
+        }
+        simState._oficialesCache = Array.from(catalogo.values());
 
         ddEl.innerHTML = '';
-        if (nombres.length === 0) {
+        if (catalogo.size === 0) {
             ddEl.innerHTML = '<div class="banco-loading-opts">no hay exámenes cargados aún</div>';
             document.getElementById('sim-oficial-text').textContent = 'sin exámenes';
             return;
         }
 
-        nombres.forEach(function (n) {
-            var btn = document.createElement('button');
-            btn.className = 'banco-dropdown-item';
-            btn.textContent = n.toLowerCase();
-            btn.onclick = function () { selectSimOficial(n); };
-            ddEl.appendChild(btn);
+        var grupos = [
+            { label: 'Simulacro integral', rows: [] },
+            { label: 'Morfofunción', rows: [] },
+            { label: 'Biología celular', rows: [] },
+            { label: 'Educación para la Salud', rows: [] },
+            { label: 'Muestras anteriores', rows: [] }
+        ];
+        simState._oficialesCache.forEach(function (item) {
+            var group = grupos[4];
+            if (item.nombre.startsWith('Práctica bibliográfica')) {
+                if (item.nombre.includes('Integral')) group = grupos[0];
+                else if (item.materia === 'MORFOFUNCION') group = grupos[1];
+                else if (item.materia === 'BIOLOGIA CELULAR') group = grupos[2];
+                else if (item.materia === 'SALUD PUBLICA') group = grupos[3];
+            }
+            group.rows.push(item);
+        });
+        grupos.forEach(function (group) {
+            if (!group.rows.length) return;
+            var heading = document.createElement('div');
+            heading.className = 'sim-dropdown-heading';
+            heading.textContent = group.label;
+            ddEl.appendChild(heading);
+            group.rows.forEach(function (item) {
+                var btn = document.createElement('button');
+                btn.className = 'banco-dropdown-item sim-dropdown-item';
+                var title = document.createElement('span');
+                title.textContent = item.nombre;
+                var count = document.createElement('small');
+                count.textContent = item.count + ' preguntas';
+                btn.append(title, count);
+                btn.onclick = function () { selectSimOficial(item.nombre); };
+                ddEl.appendChild(btn);
+            });
         });
 
-        // Seleccionar el primero por defecto si no hay uno
-        if (!simState.selectedExamen) selectSimOficial(nombres[0]);
+        if (!catalogo.has(simState.selectedExamen)) {
+            selectSimOficial(grupos.find(function (g) { return g.rows.length; }).rows[0].nombre);
+        } else if (simState.mode === 'oficial') {
+            selectSimOficial(simState.selectedExamen);
+        }
 
     } catch (e) {
         console.warn('Error loadSimOficiales:', e);
@@ -2671,15 +2710,15 @@ window.toggleSimOficialDropdown = function () {
 
 window.selectSimOficial = function (nombre) {
     simState.selectedExamen = nombre;
-    document.getElementById('sim-oficial-text').textContent = nombre.toLowerCase();
+    document.getElementById('sim-oficial-text').textContent = nombre;
     document.getElementById('sim-oficial-dropdown').classList.add('hidden');
     document.getElementById('sim-oficial-btn').classList.remove('open');
-    document.getElementById('sim-sum-materia').textContent = nombre.toLowerCase();
-
-    // Buscar materia de este examen para el resumen
+    if (simState.mode === 'oficial') document.getElementById('sim-sum-materia').textContent = nombre;
     var found = simState._oficialesCache.find(function (r) { return r.nombre === nombre; });
-    if (found && found.materia) {
-        // Opcional: mostrar materia también
+    if (found && simState.mode === 'oficial') {
+        simState.nPreguntas = found.count;
+        document.getElementById('sim-nq-value').textContent = found.count;
+        document.getElementById('sim-sum-nq').textContent = found.count;
     }
 };
 
@@ -2727,6 +2766,15 @@ window.selectSimMateria = function (materia) {
     document.getElementById('sim-materia-dropdown').classList.add('hidden');
     document.getElementById('sim-materia-btn').classList.remove('open');
     document.getElementById('sim-sum-materia').textContent = materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
+    if (CampusAccess.isFree()) {
+        var disponibles = simState._cache.filter(function (r) { return campo(r, 'materia') === materia; }).length;
+        var slider = document.getElementById('sim-nq-slider');
+        slider.min = 1;
+        slider.max = Math.max(1, disponibles);
+        slider.step = 1;
+        slider.value = Math.max(1, disponibles);
+        updateSimNQ();
+    }
 };
 
 window.setSimMode = function (mode) {
@@ -2745,13 +2793,30 @@ window.setSimMode = function (mode) {
 
     if (oGroup) oGroup.classList.toggle('hidden', mode !== 'oficial');
     if (mGroup) mGroup.classList.toggle('hidden', mode !== 'materia');
+    var slider = document.getElementById('sim-nq-slider');
+    var note = document.getElementById('sim-nq-note');
+    if (slider) slider.disabled = mode === 'oficial';
+    if (note) note.textContent = mode === 'oficial'
+        ? 'Este simulacro usa todas sus preguntas; puedes elegir el tiempo.'
+        : 'Elige cuántas preguntas quieres resolver.';
 
     if (mode === 'completo') {
         simState.selectedMateria = null;
-        simState.selectedExamen = null;
         document.getElementById('sim-sum-materia').textContent = 'aleatorio';
+        if (CampusAccess.isFree() && slider) {
+            slider.min = 1;
+            slider.max = Math.max(1, simState._cache.length);
+            slider.step = 1;
+            slider.value = Math.max(1, simState._cache.length);
+        }
     } else if (mode === 'oficial') {
-        if (simState.selectedExamen) document.getElementById('sim-sum-materia').textContent = simState.selectedExamen.toLowerCase();
+        if (simState.selectedExamen) selectSimOficial(simState.selectedExamen);
+    } else if (mode === 'materia') {
+        document.getElementById('sim-sum-materia').textContent = simState.selectedMateria
+            ? simState.selectedMateria.toLowerCase() : 'por materia';
+    }
+    if (mode !== 'oficial' && slider) {
+        updateSimNQ();
     }
 };
 
@@ -2765,6 +2830,7 @@ window.setSimDuracion = function (min) {
 };
 
 window.updateSimNQ = function () {
+    if (simState.mode === 'oficial') return;
     var val = parseInt(document.getElementById('sim-nq-slider').value);
     simState.nPreguntas = val;
     document.getElementById('sim-nq-value').textContent = val;
@@ -2824,6 +2890,7 @@ window.iniciarSimulacro = async function () {
         simState.finalized = false;
         simState.secondsLeft = simState.duracion * 60;
         simState.startTimestamp = Date.now();
+        simState.endTimestamp = simState.startTimestamp + simState.secondsLeft * 1000;
 
         // Actualizar header
         document.getElementById('sim-exam-materia').textContent =
@@ -2850,7 +2917,7 @@ function startSimTimer() {
     clearInterval(simState.timerInterval);
     updateSimTimerDisplay();
     simState.timerInterval = setInterval(function () {
-        simState.secondsLeft--;
+        simState.secondsLeft = Math.max(0, Math.ceil((simState.endTimestamp - Date.now()) / 1000));
         updateSimTimerDisplay();
         if (simState.secondsLeft <= 0) {
             clearInterval(simState.timerInterval);
@@ -3104,6 +3171,12 @@ window.finalizarSimulacro = function () {
                 explanation.append(explanationIcon, explanationText);
                 item.appendChild(explanation);
             }
+            if (q.fuente) {
+                var source = document.createElement('p');
+                source.className = 'sim-rev-source';
+                source.textContent = 'Fuente: ' + q.fuente + (q.paginas_pdf ? ' · páginas PDF ' + q.paginas_pdf : '');
+                item.appendChild(source);
+            }
             reviewList.appendChild(item);
         });
     }
@@ -3114,8 +3187,9 @@ window.finalizarSimulacro = function () {
 
     // Sincronizar con la nube para el Panel de Admin
     guardarResultadoSimulacroEnNube({
-        titulo: simState.mode === 'oficial' ? (simState.selectedOficial || 'Simulacro Oficial') : 'Simulacro Personalizado',
-        materia: simState.mode === 'materia' ? simState.selectedMateria : 'todas',
+        titulo: simState.mode === 'oficial' ? (simState.selectedExamen || 'Simulacro preparado') : 'Simulacro personalizado',
+        materia: simState.mode === 'materia' ? simState.selectedMateria :
+            simState.mode === 'oficial' ? (simState._oficialesCache.find(function (r) { return r.nombre === simState.selectedExamen; }) || {}).materia || 'todas' : 'todas',
         porcentaje: pct,
         correctas: correctas,
         incorrectas: incorrectas,

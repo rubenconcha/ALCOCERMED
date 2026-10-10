@@ -749,7 +749,7 @@
                     <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
                     <div>
                         <h2 class="sim-title"><img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80"> simulacro</h2>
-                        <p class="sim-subtitle">Elige las materias, el tiempo y la cantidad de preguntas.</p>
+                        <p class="sim-subtitle">Practica con preguntas de la bibliografía, elige tu tiempo y revisa tus respuestas al terminar.</p>
                     </div>
                 </div>
 
@@ -762,8 +762,8 @@
                             <button class="sim-mode-btn sim-mode-active" id="sim-mode-oficial"
                                 onclick="setSimMode('oficial')">
                                 <i class="fas fa-file-invoice"></i>
-                                <span>examen oficial</span>
-                                <small>simulacros cargados</small>
+                                <span>simulacros preparados</span>
+                                <small>por materia o integral</small>
                                 <b class="section-lock" data-free-lock hidden><i class="fas fa-lock" aria-hidden="true"></i> Con un plan</b>
                             </button>
                             <button class="sim-mode-btn" id="sim-mode-completo" onclick="setSimMode('completo')">
@@ -771,12 +771,16 @@
                                 <span>aleatorio</span>
                                 <small>todas las materias</small>
                             </button>
+                            <button class="sim-mode-btn" id="sim-mode-materia" onclick="setSimMode('materia')">
+                                <i class="fas fa-book-medical"></i>
+                                <span>por materia</span>
+                                <small>elige qué repasar</small>
+                            </button>
                         </div>
 
                         <!-- Selector Examen Oficial -->
                         <div id="sim-oficial-group" class="sim-materia-group">
-                            <label class="banco-select-label"><i class="fas fa-clipboard-check"></i> seleccionar
-                                examen</label>
+                            <label class="banco-select-label"><i class="fas fa-clipboard-check"></i> seleccionar simulacro</label>
                             <div class="banco-custom-select">
                                 <button class="banco-select-btn" id="sim-oficial-btn"
                                     onclick="toggleSimOficialDropdown()">
@@ -820,7 +824,7 @@
                     </div>
 
                     <!-- Número de preguntas -->
-                    <div class="sim-config-card">
+                    <div class="sim-config-card" id="sim-nq-card">
                         <h3 class="sim-config-section-title"><i class="fas fa-list-ol"></i> número de preguntas</h3>
                         <div class="sim-nq-row">
                             <input type="range" id="sim-nq-slider" class="sim-nq-slider" min="10" max="50" value="30"
@@ -830,6 +834,7 @@
                                 <label>preguntas</label>
                             </div>
                         </div>
+                        <p class="sim-nq-note" id="sim-nq-note">Elige cuántas preguntas quieres resolver.</p>
                     </div>
 
                     <!-- Resumen y lanzar -->
@@ -857,7 +862,7 @@
                             podrás ver las respuestas. se revelan al finalizar.</p>
                     </div>
 
-                    <button class="section-locked-card" data-free-lock hidden onclick="CampusAccess.unlock()"><i class="fas fa-lock" aria-hidden="true"></i><span><strong>Exámenes pasados y simulacros completos</strong><small>Más preguntas y modos al elegir un plan</small></span><span class="section-locked-arrow" aria-hidden="true">→</span></button>
+                    <button class="section-locked-card" data-free-lock hidden onclick="CampusAccess.unlock()"><i class="fas fa-lock" aria-hidden="true"></i><span><strong>Simulacros completos</strong><small>Más preguntas y modos al elegir un plan</small></span><span class="section-locked-arrow" aria-hidden="true">→</span></button>
 
                 </div>
             </div>
@@ -1274,7 +1279,7 @@
     <script src="config.js"></script>
     <script src="device_guard.js"></script>
     <script src="campus-access.js?v=6"></script>
-    <script src="script.js?v=31"></script>
+    <script src="script.js?v=32"></script>
     <script src="student-library.js?v=8"></script>
 </body>
 

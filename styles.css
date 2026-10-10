@@ -3584,7 +3584,7 @@ body.wayground-active .main-content {
 /* Modos */
 .sim-mode-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
     margin-bottom: 14px;
 }
@@ -3645,6 +3645,30 @@ body.wayground-active .main-content {
     margin-top: 12px;
 }
 
+.sim-dropdown-heading {
+    padding: 12px 15px 6px;
+    color: #1d88b8;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: #f4f9fc;
+}
+
+.sim-dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    text-align: left;
+}
+
+.sim-dropdown-item small {
+    flex-shrink: 0;
+    color: #65758c;
+    font-size: 0.7rem;
+}
+
 /* Duración */
 .sim-duration-grid {
     display: grid;
@@ -3693,6 +3717,25 @@ body.wayground-active .main-content {
     background: #e5e7eb;
     outline: none;
     cursor: pointer;
+}
+
+.sim-nq-slider:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.sim-nq-note {
+    margin: 14px 0 0;
+    color: #65758c;
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+.sim-rev-source {
+    margin: 10px 0 0;
+    color: #65758c;
+    font-size: 0.75rem;
+    line-height: 1.45;
 }
 
 .sim-nq-slider::-webkit-slider-thumb {
