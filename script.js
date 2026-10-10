@@ -3595,30 +3595,58 @@ function renderMmGrid() {
         var urlImg = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
         var desc = campo(m, 'descripcion') || '';
         var locked = window.CampusAccess && CampusAccess.isFree() && !campo(m, 'acceso_gratis');
+        var safeTitle = escapeMmText(titulo);
+        var safeMateria = escapeMmText(materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud'));
+        var safeDesc = escapeMmText(desc);
+        var safeUrl = escapeMmText(urlImg);
 
         var card = document.createElement('button');
         card.type = 'button';
         card.className = 'mm-card' + (locked ? ' mm-card-locked' : '');
-        card.onclick = function () { if (locked) CampusAccess.unlock(); else openMmLightbox(m); };
+        card.setAttribute('aria-label', locked ? 'Ver cómo desbloquear el mapa ' + titulo : 'Abrir mapa ' + titulo);
+        card.onclick = function () { if (locked) openMmUnlockDialog(m); else openMmLightbox(m); };
         card.innerHTML =
             '<div class="mm-card-thumb">' +
-            (locked
-                ? '<div class="mm-card-locked-art"><i class="fas fa-lock" aria-hidden="true"></i><span>Mapa reservado</span></div>'
-                : urlImg
-                ? '<img src="' + urlImg + '" alt="' + titulo + '" class="mm-card-img" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+            (urlImg
+                ? '<img src="' + safeUrl + '" alt="' + (locked ? '' : safeTitle) + '" loading="lazy" decoding="async" class="mm-card-img' + (locked ? ' mm-card-img-locked' : '') + '" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
                 '<div class="mm-card-img-placeholder" style="display:none"><i class="fas fa-project-diagram"></i></div>'
                 : '<div class="mm-card-img-placeholder"><i class="fas fa-project-diagram"></i></div>') +
-            (locked ? '' : '<div class="mm-zoom-overlay"><i class="fas fa-expand"></i></div>') +
+            (locked ? '<span class="mm-preview-scrim" aria-hidden="true"><span class="mm-preview-label"><i class="fas fa-lock"></i> Vista previa</span></span>' : '<div class="mm-zoom-overlay"><i class="fas fa-expand"></i></div>') +
             '</div>' +
             '<div class="mm-card-body">' +
-            (materia ? '<span class="mm-card-materia">' + materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + '</span>' : '') +
-            '<h3 class="mm-card-title">' + titulo + '</h3>' +
-            (locked ? '<p class="mm-card-desc"><i class="fas fa-lock" aria-hidden="true"></i> Elige un plan para abrir este mapa</p>' : desc ? '<p class="mm-card-desc">' + desc + '</p>' : '') +
+            (materia ? '<span class="mm-card-materia">' + safeMateria + '</span>' : '') +
+            '<h3 class="mm-card-title">' + safeTitle + '</h3>' +
+            (locked ? '<span class="mm-card-preview-action">Ver cómo desbloquear <i class="fas fa-arrow-right" aria-hidden="true"></i></span>' : desc ? '<p class="mm-card-desc">' + safeDesc + '</p>' : '') +
             '</div>';
         grid.appendChild(card);
     });
 
 }
+function escapeMmText(value) {
+    return String(value).replace(/[&<>"']/g, function (character) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character];
+    });
+}
+
+window.openMmUnlockDialog = function (m) {
+    if (!window.CampusAccess || !CampusAccess.isFree()) return openMmLightbox(m);
+    var dialog = document.getElementById('mm-unlock-dialog');
+    if (!dialog) return;
+    document.getElementById('mm-unlock-title').textContent = campo(m, 'titulo') || 'Mapa mental';
+    document.getElementById('mm-unlock-image').src = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
+    if (!dialog.open) dialog.showModal();
+};
+
+window.closeMmUnlockDialog = function () {
+    var dialog = document.getElementById('mm-unlock-dialog');
+    if (dialog && dialog.open) dialog.close();
+};
+
+window.confirmMmUnlock = function () {
+    closeMmUnlockDialog();
+    CampusAccess.unlock();
+};
+
 function updateIntocStats() {
     var mapasEl = document.getElementById('intoc-stat-mapas');
     var matEl = document.getElementById('intoc-stat-materias');
@@ -3630,7 +3658,7 @@ function updateIntocStats() {
 }
 
 window.openMmLightbox = function (m) {
-    if (window.CampusAccess && CampusAccess.isFree() && !campo(m, 'acceso_gratis')) return CampusAccess.unlock();
+    if (window.CampusAccess && CampusAccess.isFree() && !campo(m, 'acceso_gratis')) return openMmUnlockDialog(m);
     var lb = document.getElementById('mm-lightbox');
     if (!lb) return;
     var urlImg = campo(m, 'url_imagen') || campo(m, 'url_image') || '';

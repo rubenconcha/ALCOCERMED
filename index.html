@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="campus-theme.css?v=3">
 <link rel="stylesheet" href="campus-access.css?v=2"><link rel="stylesheet" href="campus-navigation.css?v=2"><link rel="stylesheet" href="campus-home.css?v=5"><link rel="stylesheet" href="campus-topics.css?v=3">
     <link rel="stylesheet" href="login-polish.css?v=1">
-    <link rel="stylesheet" href="campus-preview.css?v=1">
+    <link rel="stylesheet" href="campus-preview.css?v=2">
 </head>
 
 <body class="login-active">
@@ -1253,12 +1253,28 @@
 
     </main>
 
+    <dialog id="mm-unlock-dialog" class="mm-unlock-dialog" aria-labelledby="mm-unlock-title" onclick="if (event.target === this) closeMmUnlockDialog()">
+        <div class="mm-unlock-panel">
+            <button type="button" class="mm-unlock-close" onclick="closeMmUnlockDialog()" aria-label="Cerrar vista previa"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <div class="mm-unlock-art" aria-hidden="true">
+                <img id="mm-unlock-image" src="" alt="">
+                <span><i class="fas fa-lock" aria-hidden="true"></i> Vista previa</span>
+            </div>
+            <div class="mm-unlock-content">
+                <span class="mm-unlock-kicker">MAPA MENTAL</span>
+                <h2 id="mm-unlock-title">Mapa mental</h2>
+                <button type="button" class="mm-unlock-cta" onclick="confirmMmUnlock()">Desbloquea este contenido inscribiéndote a un plan <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                <button type="button" class="mm-unlock-later" onclick="closeMmUnlockDialog()">Seguir viendo mapas</button>
+            </div>
+        </div>
+    </dialog>
+
 <a class="support-float" href="https://wa.me/59173752688?text=Hola%2C%20tengo%20una%20consulta%20sobre%20AlcocerMed" target="_blank" rel="noopener noreferrer" aria-label="Hablar con AlcocerMed por WhatsApp" title="¿Te ayudamos? Escríbenos"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
     <script src="platform-polish.js?v=1"></script>
     <script src="config.js"></script>
     <script src="device_guard.js"></script>
     <script src="campus-access.js?v=5"></script>
-    <script src="script.js?v=23"></script>
+    <script src="script.js?v=24"></script>
     <script src="student-library.js?v=8"></script>
 </body>
 

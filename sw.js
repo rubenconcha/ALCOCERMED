@@ -1,9 +1,9 @@
-const CACHE_NAME = 'alcocermed-main-v47';
+const CACHE_NAME = 'alcocermed-main-v48';
 const APP_SHELL = [
     './',
     './index.html',
     './styles.css?v=20',
-    './script.js?v=23',
+    './script.js?v=24',
     './commerce.css?v=1',
     './student-white.css?v=2',
     './campus-theme.css?v=3',
@@ -16,7 +16,7 @@ const APP_SHELL = [
     './student-library.js?v=3',
     './platform-polish.js?v=1',
     './campus-access.js?v=5',
-    './campus-preview.css?v=1',
+    './campus-preview.css?v=2',
     './campus-access.css?v=1',
     './config.js',
     './device_guard.js',
