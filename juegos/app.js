@@ -1044,7 +1044,7 @@ function initAuth() {
     client.auth.getSession().then(function(result) {
         if (result.data && result.data.session && result.data.session.user) {
             if (isDemoGuestExpired(result.data.session.user)) {
-                client.auth.signOut();
+                client.auth.signOut({ scope: 'local' });
                 showLogin();
                 setTimeout(function() {
                     showLoginError('Tu cuenta demo expiró. Crea una nueva en «Cuenta demo» o usa tu cuenta regular.');
@@ -1065,13 +1065,15 @@ function initAuth() {
     client.auth.onAuthStateChange(function(event, session) {
         if (event === 'SIGNED_IN' && session) {
             if (isDemoGuestExpired(session.user)) {
-                client.auth.signOut();
+                client.auth.signOut({ scope: 'local' });
                 return;
             }
             currentUser = session.user;
             enterApp();
         } else if (event === 'SIGNED_OUT') {
             teardownAvatarRealtime();
+            if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();
+            gameVerifiedDeviceUserId = null;
             currentUser = null;
             isAdmin = false;
             DEMO_ACCESS_ONLY = true;
@@ -1118,8 +1120,50 @@ function showLogin() {
     if (typeof configureNightLogin === 'function') configureNightLogin();
 }
 
+var gameVerifiedDeviceUserId = null;
+var gameDeviceEntry = null;
+
 function enterApp() {
-    if (typeof nervousClassMode !== "undefined" && nervousClassMode) { showNervousClass(); return; }
+    if (!currentUser) return;
+    var deviceEmail = (currentUser.email || '').toLowerCase().trim();
+    var deviceUserId = currentUser.id;
+    if (deviceEmail !== ADMIN_EMAIL && gameVerifiedDeviceUserId !== deviceUserId) {
+        if (gameDeviceEntry) return gameDeviceEntry;
+        if (typeof DeviceGuard === 'undefined') {
+            showLogin();
+            showLoginError('No pudimos verificar tus dispositivos. Recarga la página.');
+            return;
+        }
+        var deviceClient = getSupabase();
+        gameDeviceEntry = DeviceGuard.activateDevice(deviceClient, deviceEmail).then(function(result) {
+            if (!currentUser || currentUser.id !== deviceUserId) return;
+            if (!result.ok) {
+                var message = result.error || 'No pudimos verificar este dispositivo.';
+                var finish = result.code === 'DEVICE_LIMIT'
+                    ? deviceClient.auth.signOut({ scope: 'local' })
+                    : Promise.resolve();
+                return finish.catch(function() {}).then(function() {
+                    currentUser = null;
+                    showLogin();
+                    if (typeof nervousClassMode !== 'undefined' && nervousClassMode) {
+                        var classError = document.getElementById('class-error');
+                        if (classError) classError.textContent = message;
+                    } else { showLoginError(message); }
+                });
+            }
+            gameVerifiedDeviceUserId = deviceUserId;
+            return enterApp();
+        }).finally(function() { gameDeviceEntry = null; });
+        return gameDeviceEntry;
+    }
+    if (typeof nervousClassMode !== "undefined" && nervousClassMode) {
+        DeviceGuard.startChecking(getSupabase(), function(reason) {
+            alert('🔒 Sesión cerrada: ' + reason);
+            handleLogout();
+        });
+        showNervousClass();
+        return;
+    }
     document.getElementById('login-screen').classList.add('hidden');
     document.getElementById('app-shell').classList.remove('hidden');
 
@@ -1185,19 +1229,12 @@ function enterApp() {
         }
     }
 
-    // ═══ DEVICE GUARD (estudiantes regulares; demo y admin exentos) ═══
-    if (typeof DeviceGuard !== 'undefined' && !isAdmin && !isDemoGuestUser(currentUser)) {
+    // ═══ DEVICE GUARD: entrada verificada antes de mostrar Juegos ═══
+    if (typeof DeviceGuard !== 'undefined' && !isAdmin) {
         var client = getSupabase();
-        DeviceGuard.activateDevice(client, email).then(function(res) {
-            if (!res.ok) {
-                alert('⚠️ ' + (res.error || 'Dispositivo no autorizado'));
-                handleLogout();
-                return;
-            }
-            DeviceGuard.startChecking(client, function(reason) {
-                alert('🔒 Sesión cerrada: ' + reason);
-                handleLogout();
-            });
+        DeviceGuard.startChecking(client, function(reason) {
+            alert('🔒 Sesión cerrada: ' + reason);
+            handleLogout();
         });
     }
 
@@ -1729,7 +1766,7 @@ function handleLogin(e) {
         if (result.data && result.data.user) {
             if (isDemoGuestExpired(result.data.user)) {
                 showLoginError('Tu cuenta demo expiró (24 h). Pide una nueva al profesor o usa tu cuenta regular.');
-                client.auth.signOut();
+                client.auth.signOut({ scope: 'local' });
                 return;
             }
             currentUser = result.data.user;
@@ -6165,9 +6202,11 @@ function loadStudentResults() {
 // ═══ LOGOUT ═══
 
 function handleLogout() {
+    if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();
+    gameVerifiedDeviceUserId = null;
     var client = getSupabase();
     if (client) {
-        client.auth.signOut().then(function() {
+        client.auth.signOut({ scope: 'local' }).then(function() {
             currentUser = null;
             isAdmin = false;
             showLogin();

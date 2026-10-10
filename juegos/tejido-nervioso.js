@@ -57,7 +57,7 @@ function initNervousClass() {
     });
     var changeNameButton = document.getElementById('class-change-name');
     if (changeNameButton) changeNameButton.onclick = async function() {
-        await sb.auth.signOut();
+        await sb.auth.signOut({ scope: 'local' });
         clearSelfSession();
         sessionStorage.removeItem('alcocer_nervioso_owner');
         currentUser = null; showLogin();

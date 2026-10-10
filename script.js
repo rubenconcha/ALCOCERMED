@@ -175,7 +175,20 @@ function enterApp(user) {
     if (campusEntry) return campusEntry;
     campusEntry = (async function () {
         try {
-            await CampusAccess.resolve(getSupabase());
+            var client = getSupabase();
+            var isStudent = Boolean(user && user.email && !ADMIN_EMAILS.includes(user.email.toLowerCase()));
+            if (isStudent) {
+                if (typeof DeviceGuard === 'undefined') throw new Error('No pudimos verificar tus dispositivos. Recarga la página.');
+                var device = await DeviceGuard.activateDevice(client, user.email);
+                if (!device.ok) {
+                    if (device.code === 'DEVICE_LIMIT') {
+                        await client.auth.signOut({ scope: 'local' });
+                        currentUser = null;
+                    }
+                    throw new Error(device.error || 'No pudimos verificar este dispositivo.');
+                }
+            }
+            await CampusAccess.resolve(client);
             flashcardsCache = null;
             bancoState._cache = [];
             bancoState.allPreguntas = [];
@@ -216,21 +229,13 @@ function enterVerifiedApp(user) {
     restoreCampusAfterPlans();
 
 
-    // ═══ DEVICE GUARD (solo estudiantes, admin exento) ═══
+    // ═══ DEVICE GUARD: ya se verificó antes de mostrar el campus ═══
     var _isAdmin = Boolean(user && user.email && ADMIN_EMAILS.includes(user.email.toLowerCase()));
     if (typeof DeviceGuard !== 'undefined' && user && user.email && !_isAdmin) {
-        var dgEmail = user.email.toLowerCase().trim();
         var dgClient = getSupabase();
-        DeviceGuard.activateDevice(dgClient, dgEmail).then(function(res) {
-            if (!res.ok) {
-                alert('⚠️ ' + (res.error || 'Dispositivo no autorizado'));
-                window.handleLogout();
-                return;
-            }
-            DeviceGuard.startChecking(dgClient, function(reason) {
-                alert('🔒 Sesión cerrada: ' + reason);
-                window.handleLogout();
-            });
+        DeviceGuard.startChecking(dgClient, function(reason) {
+            alert('🔒 Sesión cerrada: ' + reason);
+            window.handleLogout();
         });
     }
 }
@@ -305,7 +310,7 @@ window.handleLogout = function() {
 
     // 2. Intentar cerrar sesión en Supabase
     try {
-        getSupabase().auth.signOut();
+        getSupabase().auth.signOut({ scope: 'local' });
     } catch(e) {
         console.warn('signOut:', e);
     }

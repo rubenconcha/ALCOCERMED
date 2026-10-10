@@ -29,7 +29,7 @@ alcocermed/
 | `flashcards` | Tarjetas de estudio (columnas: MATERIA, TEMA, PREGUNTA, RESPUESTA) |
 | `banco_preguntas` | Preguntas tipo examen (MATERIA, TEMA, PREGUNTA, opciones A-D, RESPUESTA, DIFICULTAD, COMENTARIO) |
 | `simulacros` | Exámenes cronometrados oficiales |
-| `user_devices` | Control de sesión por dispositivo (máx. 2) |
+| `device_sessions` | Control de acceso de hasta 3 dispositivos por cuenta |
 | `mapas_mentales` | Imágenes de mapas mentales (MATERIA, TITULO, URL_IMAGEN, DESCRIPCION) |
 | `videoclases` | Videos por materia |
 
@@ -75,10 +75,10 @@ vercel --prod
 
 ## 🔒 Seguridad de sesión
 
-- Máximo **2 dispositivos** autorizados por cuenta
-- Control de dispositivo activo en tiempo real via Supabase Realtime
-- Token de dispositivo guardado en `localStorage` y sincronizado con `user_metadata`
-- Al limpiar caché, el token se recupera automáticamente desde la nube
+- Máximo **3 dispositivos registrados y activos** por cuenta de estudiante; el cuarto se rechaza sin cerrar los tres anteriores.
+- El campus y Juegos verifican el dispositivo antes de mostrar el contenido y revalidan la autorización periódicamente.
+- El identificador de dispositivo se guarda en `localStorage`; cerrar sesión conserva el registro de ese navegador.
+- La regla de base de datos está en `sql/limite_tres_dispositivos_2026.sql`.
 
 ## ⚠️ Notas importantes
 

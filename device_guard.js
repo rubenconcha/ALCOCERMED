@@ -1,6 +1,6 @@
 // ═══════════════════════════════════════════════════════
 // DEVICE GUARD — Control de dispositivos AlcocerMed
-// Máximo 2 dispositivos, solo 1 activo simultáneamente
+// Máximo 3 dispositivos registrados por estudiante, los 3 pueden estar activos.
 // Compartido entre página principal y /juegos
 // ═══════════════════════════════════════════════════════
 
@@ -10,13 +10,14 @@ var DeviceGuard = (function() {
     var _checkTimer = null;
     var _supabaseClient = null;
     var _onKicked = null;
-    var _adminEmail = 'pichon4488@gmail.com';
 
     // Generar o recuperar ID único de este dispositivo
     function getDeviceId() {
         var id = localStorage.getItem(STORAGE_KEY);
         if (!id) {
-            id = 'dev_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            id = 'dev_' + (window.crypto && crypto.randomUUID
+                ? crypto.randomUUID()
+                : Date.now() + '_' + Math.random().toString(36).substr(2, 9));
             localStorage.setItem(STORAGE_KEY, id);
         }
         return id;
@@ -41,15 +42,9 @@ var DeviceGuard = (function() {
     function activateDevice(supabaseClient, userEmail) {
         _supabaseClient = supabaseClient;
 
-        // Admin y cuentas demo del evento (sin límite de dispositivos en aula)
-        if (userEmail && userEmail.toLowerCase().trim() === _adminEmail) {
-            return Promise.resolve({ ok: true, admin: true });
-        }
-        if (userEmail && userEmail.toLowerCase().indexOf('@demo.alcocermed.app') !== -1) {
-            return Promise.resolve({ ok: true, demo: true });
-        }
-
-        var deviceId = getDeviceId();
+        var deviceId;
+        try { deviceId = getDeviceId(); }
+        catch (_) { return Promise.resolve({ ok: false, error: 'Permite el almacenamiento de este navegador para registrar tu dispositivo.' }); }
         var deviceName = getDeviceName();
 
         return supabaseClient.rpc('activate_device', {
@@ -61,10 +56,10 @@ var DeviceGuard = (function() {
                 return { ok: false, error: result.error.message || 'Error al activar dispositivo' };
             }
             var data = result.data;
-            if (data && data.ok === false) {
-                return { ok: false, error: data.error || 'Dispositivo no autorizado', code: data.code };
+            if (!data || data.ok !== true) {
+                return { ok: false, error: data && data.error || 'No pudimos verificar este dispositivo.', code: data && data.code };
             }
-            return { ok: true };
+            return { ok: true, limit: data && data.limit, registered: data && data.registered };
         }).catch(function(err) {
             console.error('activate_device catch:', err);
             return { ok: false, error: 'Error de conexión al verificar dispositivo' };
@@ -75,7 +70,13 @@ var DeviceGuard = (function() {
     function checkStillActive() {
         if (!_supabaseClient) return;
 
-        var deviceId = getDeviceId();
+        var deviceId;
+        try { deviceId = getDeviceId(); }
+        catch (_) {
+            stopChecking();
+            if (typeof _onKicked === 'function') _onKicked('Permite el almacenamiento de este navegador para continuar.');
+            return;
+        }
 
         _supabaseClient.rpc('check_device_active', {
             p_device_id: deviceId
