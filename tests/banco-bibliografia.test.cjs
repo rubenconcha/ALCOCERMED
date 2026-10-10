@@ -18,13 +18,14 @@ test('el banco bibliográfico cubre las tres materias y conserva cuatro opciones
     assert.match(row.RESPUESTA_CORRECTA, /^[A-D]$/);
     assert.ok(row.PREGUNTA && row.EXPLICACION && row.FUENTE && row.PAGINAS_PDF);
     assert.equal(options['ABCD'.indexOf(row.RESPUESTA_CORRECTA)], row.EXPLICACION);
+    assert.ok(!/^(no|sí|si)\b[\s.,:;]/i.test(row.EXPLICACION), `Pregunta binaria sin distractores claros: ${key}`);
   }
   assert.deepEqual(Object.fromEntries([...subjects].map(([subject, topics]) => [subject, topics.size])), {
     'SALUD PUBLICA': 21,
     'BIOLOGIA CELULAR': 18,
     MORFOFUNCION: 29,
   });
-  assert.equal(rows.length, 1375);
+  assert.equal(rows.length, 1300);
 });
 
 test('la carga del banco sigue leyendo después de la primera página de Supabase', async () => {
@@ -32,7 +33,7 @@ test('la carga del banco sigue leyendo después de la primera página de Supabas
   const start = script.indexOf('let bancoQuestionsPromise = null;');
   const end = script.indexOf('async function preloadAppData()', start);
   assert.ok(start >= 0 && end > start);
-  const records = Array.from({ length: 1375 }, (_, i) => ({ id: i + 1 }));
+  const records = Array.from({ length: 1300 }, (_, i) => ({ id: i + 1 }));
   const ranges = [];
   const context = {
     bancoState: { _cache: [] },
@@ -55,7 +56,7 @@ test('la carga del banco sigue leyendo después de la primera página de Supabas
   };
   vm.runInNewContext(script.slice(start, end) + '\nglobalThis.load = fetchAllBancoQuestions;', context);
   const result = await context.load();
-  assert.equal(result.length, 1375);
+  assert.equal(result.length, 1300);
   assert.deepEqual(ranges, [[0, 499], [500, 999], [1000, 1499]]);
   await context.load();
   assert.equal(ranges.length, 3, 'la segunda lectura reutiliza la caché');

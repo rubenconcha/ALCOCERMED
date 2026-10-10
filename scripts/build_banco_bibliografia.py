@@ -90,6 +90,10 @@ def load_cards() -> list[dict]:
             pages = group.get("pages") or []
             for question, answer in group["cards"]:
                 question, answer = question.strip(), answer.strip()
+                # Binary flashcards do not become sound four-choice questions
+                # without inventing several near-identical "No" alternatives.
+                if norm(answer).startswith(("no ", "si ")):
+                    continue
                 key = (group["materia"], norm(question))
                 if key in seen:
                     continue
@@ -116,6 +120,8 @@ def distractor_score(target: dict, candidate: dict) -> float:
     target_prefix = norm(target["respuesta"]).split()[:2]
     candidate_prefix = norm(candidate["respuesta"]).split()[:2]
     return (
+        (4.0 if target["tema"] == candidate["tema"] else 0.0)
+        +
         (0.45 if target["_kind"] == candidate["_kind"] else 0.0)
         + (2.6 if target["_shape"] == candidate["_shape"] else -1.2)
         + (2.0 if target["_shape"] == "number" and candidate["_shape"] == "number" else 0.0)
@@ -124,10 +130,33 @@ def distractor_score(target: dict, candidate: dict) -> float:
     )
 
 
+def too_similar(first: str, second: str) -> bool:
+    a, b = norm(first), norm(second)
+    if a == b or a in b or b in a:
+        return True
+    wa, wb = words(first), words(second)
+    return bool(wa and wb) and len(wa & wb) / min(len(wa), len(wb)) >= 0.75
+
+
 def choose_distractors(target: dict, subject_cards: list[dict]) -> list[str]:
+    qn = norm(target["pregunta"])
+    an = norm(target["respuesta"])
+    prevention_levels = ("primaria", "secundaria", "terciaria", "cuaternaria")
+    if ("prevencion" in qn and any(p in qn for p in ("que nivel", "a que nivel", "que prevencion", "que tipo de prevencion"))):
+        level = next((level for level in prevention_levels if re.search(r"\bprevencion " + level + r"\b", an)), None)
+        if level:
+            return ["Prevención " + other + "." for other in prevention_levels if other != level]
+    aps_attributes = ("accesibilidad", "coordinacion", "integralidad", "longitudinalidad")
+    if "atributo" in qn and ("atencion primaria" in qn or "equipo" in qn or "servicio" in qn):
+        attribute = next((item for item in aps_attributes if item in an), None)
+        if attribute:
+            return [other.capitalize().replace("Coordinacion", "Coordinación") for other in aps_attributes if other != attribute]
     numeric = re.match(r"^(\d+)(?:,([0-9]+))?(\s+.+)$", target["respuesta"])
     if numeric:
         whole, fraction, suffix = numeric.groups()
+        # Keep only the unit in wrong numeric choices. Reusing the correct
+        # explanation can make a wrong number self-contradictory.
+        suffix = re.split(r"[,;:]|\s+porque\b", suffix, maxsplit=1, flags=re.I)[0].rstrip(".")
         number = float(whole + ("." + fraction if fraction else ""))
         step = 1 if number < 20 else 10 if number < 100 else 20
         values = [max(0, number - step), number + step, number + step * 2]
@@ -140,10 +169,10 @@ def choose_distractors(target: dict, subject_cards: list[dict]) -> list[str]:
     candidates = []
     target_answer = norm(target["respuesta"])
     for candidate in subject_cards:
-        if candidate is target or candidate["tema"] != target["tema"]:
+        if candidate is target:
             continue
         answer = norm(candidate["respuesta"])
-        if answer == target_answer:
+        if too_similar(candidate["respuesta"], target["respuesta"]):
             continue
         score = distractor_score(target, candidate)
         # Stable tie break prevents unrelated source-file order from changing options.
@@ -155,6 +184,8 @@ def choose_distractors(target: dict, subject_cards: list[dict]) -> list[str]:
     for _, candidate in candidates:
         answer = norm(candidate["respuesta"])
         if answer in seen:
+            continue
+        if any(too_similar(candidate["respuesta"], item) for item in selected):
             continue
         selected.append(candidate["respuesta"])
         seen.add(answer)
