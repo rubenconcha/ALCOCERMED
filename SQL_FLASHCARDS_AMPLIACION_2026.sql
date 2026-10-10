@@ -178,7 +178,7 @@ WHERE NOT EXISTS (
     AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
 );
 
--- biologia: páginas PDF 581-590 | BIOLOGIA CELULAR / ciclo celular
+-- biologia: páginas PDF 581-613 | BIOLOGIA CELULAR / ciclo celular
 WITH incoming (materia, tema, pregunta, respuesta) AS (
   VALUES
     ('BIOLOGIA CELULAR', 'ciclo celular', 'Una célula se prepara para dividirse. ¿Qué tres tareas principales debe completar antes de producir dos hijas?', 'Crecer, duplicar su material genético y repartirlo durante la división.'),
@@ -207,7 +207,76 @@ WITH incoming (materia, tema, pregunta, respuesta) AS (
     ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué son los orígenes de replicación?', 'Sitios del ADN donde empieza la apertura de la doble hélice para copiarla.'),
     ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué abre la doble hélice y genera una horquilla de replicación?', 'Las helicasas del complejo Mcm.'),
     ('BIOLOGIA CELULAR', 'ciclo celular', '¿Por qué los telómeros se acortan en muchas células tras repetidas divisiones?', 'Porque la síntesis de la hebra retardada no completa del todo el extremo del cromosoma.'),
-    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué le ocurre a una célula cuando el acortamiento telomérico limita nuevas divisiones?', 'Puede entrar en senescencia replicativa.')
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué le ocurre a una célula cuando el acortamiento telomérico limita nuevas divisiones?', 'Puede entrar en senescencia replicativa.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué significa Cdk en el control del ciclo celular?', 'Quinasa dependiente de ciclina.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué hacen las Cdk con muchas proteínas que regulan el ciclo?', 'Las fosforilan para cambiar su actividad y permitir la progresión celular.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', 'Si una Cdk está presente pero inactiva, ¿qué proteína reguladora suele necesitar?', 'Una ciclina adecuada a la fase del ciclo.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Por qué las ciclinas se llaman así?', 'Porque sus niveles suben y bajan de forma cíclica durante la vida de la célula.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué cambia en la Cdk cuando se une una ciclina?', 'Su conformación expone o activa el centro catalítico de la quinasa.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué complejo de Cdk y ciclina ayuda especialmente a iniciar la mitosis?', 'Cdk1 unida a ciclina B.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿En qué transición aumenta la actividad de Cdk1-ciclina B?', 'En el paso de G2 a la fase M.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué puede pasar si una ciclina se acumula sin degradarse cuando corresponde?', 'La célula puede mantener señales de avance que deberían apagarse.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué etiqueta molecular marca muchas ciclinas para su degradación?', 'La ubiquitina.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Dónde se degradan las ciclinas marcadas con ubiquitina?', 'En el proteasoma.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué complejo ayuda a degradar reguladores durante la mitosis y permite avanzar a anafase?', 'El complejo promotor de la anafase, APC/C.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué dos familias de proteínas inhibidoras de Cdk destaca el texto?', 'Ink4 y Cip/Kip.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué Cdk bloquean especialmente las proteínas de la familia Ink4?', 'Cdk4 y Cdk6.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Por qué una Cdk no depende solo de la presencia de ciclina?', 'También se regula mediante fosforilación y proteínas inhibidoras.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué quinasa mantiene inactivo al complejo Cdk1-ciclina B durante parte de G2?', 'Wee1.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué podría pasar si Wee1 deja entrar prematuramente a una célula en mitosis?', 'La célula podría dividirse antes de alcanzar un tamaño adecuado.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué fosfatasa ayuda a activar Cdk1-ciclina B al final de G2?', 'Cdc25.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué evalúa el punto de control G2 antes de iniciar la mitosis?', 'Que el ADN se haya replicado adecuadamente y que la célula esté preparada para dividirse.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué proteína actúa como freno de la entrada en fase S al unirse a E2F?', 'La proteína de retinoblastoma, Rb.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué necesita E2F para activar genes de la fase S?', 'Liberarse de la inhibición de Rb.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Cómo se libera E2F del freno de Rb durante G1?', 'Por fosforilación de Rb a cargo de complejos Cdk-ciclina.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', 'Una célula recibe señales de crecimiento y activa ciclina D. ¿Qué Cdk se asocian con ella?', 'Cdk4 y Cdk6.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué complejo G1/S aumenta la fosforilación de Rb al acercarse la fase S?', 'Cdk2-ciclina E.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué genes ayuda a activar E2F después de liberarse de Rb?', 'Genes necesarios para replicar ADN y avanzar por la fase S.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Por qué el paso de G1 a S se considera una decisión importante?', 'Porque la célula se compromete a duplicar su material genético antes de dividirse.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué debe revisar una célula que recibió una señal de crecimiento antes de copiar el ADN?', 'Que tenga condiciones y tamaño suficientes y que su ADN no presente daño importante.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué hace un factor de crecimiento externo con la maquinaria del ciclo?', 'Puede activar señales que favorecen el avance, especialmente por G1.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Puede una célula volver de G0 al ciclo si recibe un estímulo adecuado?', 'Sí, si su quiescencia es reversible.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué situación bloquearía normalmente la transición G1/S?', 'Daño del ADN no reparado o condiciones desfavorables para duplicarlo.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué proteína une a las cromátidas hermanas antes de separarse?', 'El complejo de cohesinas.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué debe ocurrir con los cromosomas antes de que empiece la anafase?', 'Todos deben estar unidos correctamente al huso mitótico.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', 'Si un cromosoma no se unió bien al huso, ¿qué punto de control debe frenar la división?', 'El punto M o control de ensamblaje del huso.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué pasaría si la célula separara cromátidas antes de revisar el huso?', 'Las células hijas podrían recibir números incorrectos de cromosomas.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué proteína mantiene inactiva a separasa antes de la anafase?', 'La segurina.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué hace APC/C con la segurina al iniciarse la anafase?', 'La marca para degradación y libera la actividad de separasa.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué corta separasa para permitir que las cromátidas hermanas se aparten?', 'Las cohesinas que las mantenían unidas.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Por qué se degradan ciclinas mitóticas al finalizar la división?', 'Para apagar las señales de mitosis y permitir la salida hacia G1.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué quiere decir retrocontrol en el ciclo celular?', 'Revisar después de avanzar si hubo errores y detener el proceso si hace falta.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué dos grandes problemas detecta el retrocontrol descrito en el capítulo?', 'Errores de unión al huso mitótico y lesiones del ADN.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', 'Si se rompe el ADN antes de mitosis, ¿por qué conviene detener el ciclo?', 'Para repararlo antes de transmitir la lesión a células hijas.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿En qué fases se revisa el estado del ADN antes de seguir?', 'En puntos de control como G1 y G2; una lesión también puede detener otras fases.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué proteína se activa frente a daño del ADN y puede frenar el ciclo?', 'p53.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué opciones tiene una célula con ADN dañado si la reparación fracasa?', 'Puede entrar en senescencia o activar apoptosis.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Por qué p53 se considera protector frente a la transformación tumoral?', 'Porque limita la proliferación de células con daño genético.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué proteína mantiene baja la actividad de p53 cuando no hay daño?', 'Mdm2, que la inhibe y favorece su degradación.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué quinasas conectan sensores de lesión del ADN con la respuesta de control?', 'ATM y ATR.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué quinasas de control pueden inhibir a Cdc25 tras detectar daño?', 'Chk1 y Chk2.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué inhibidor de Cdk puede inducir p53 para detener G1/S?', 'p21.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué puede pasar si falla una ruta que detecta daño del ADN?', 'La célula podría seguir dividiéndose con alteraciones genéticas.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué distingue quiescencia de senescencia?', 'La quiescencia puede revertirse; la senescencia bloquea de modo duradero la proliferación.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', 'Una célula senescente recibe factores de crecimiento. ¿Por qué no suele reanudar el ciclo?', 'Porque su bloqueo proliferativo es estable, a diferencia de G0 reversible.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué significa apoptosis como posible destino de una célula dañada?', 'Muerte celular programada y controlada.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Por qué la división no es el único destino posible de una célula?', 'También puede diferenciarse, permanecer quiescente, adaptarse al estrés o morir.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué aporta la matriz extracelular al control de proliferación?', 'Señales que la célula recibe mediante receptores como las integrinas.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Las integrinas sirven solo para pegar una célula a su entorno?', 'No. También transmiten señales que influyen en crecimiento y supervivencia.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué otras señales del microambiente pueden promover o frenar la división?', 'Factores de crecimiento y citocinas.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué significa diferenciación celular?', 'Adquirir rasgos y funciones especializadas dentro de un tejido.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', 'Si una célula aumenta de tamaño frente a una mayor demanda, ¿qué adaptación presenta?', 'Hipertrofia.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', 'Si aumenta el número de células de un tejido, ¿cómo se llama la adaptación?', 'Hiperplasia.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', 'Si un tejido pierde tamaño por menor actividad, ¿qué adaptación puede producirse?', 'Atrofia.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué significa metaplasia como respuesta adaptativa?', 'Cambio de un tipo celular diferenciado por otro ante condiciones persistentes.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Por qué el estrés celular prolongado puede terminar en muerte?', 'Porque la célula puede superar su capacidad de adaptación y sufrir lesiones irreversibles.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué estructura protege los extremos cromosómicos mientras se replica el ADN?', 'Los telómeros.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué enzima puede compensar el acortamiento de los telómeros en ciertas células?', 'La telomerasa.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Por qué se forman horquillas de replicación durante la fase S?', 'Porque las dos hebras del ADN se separan y sirven de molde para copiarse.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué son los fragmentos de Okazaki?', 'Segmentos cortos que se sintetizan de forma discontinua en la hebra retardada.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué estructura organiza el huso que separará cromosomas?', 'El centrosoma duplicado.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué sucede con las cromátidas durante la profase y la metafase?', 'Se condensan y se organizan para ser repartidas con precisión.'),
+    ('BIOLOGIA CELULAR', 'ciclo celular', '¿Cuál es el resultado esperado de una mitosis normal en una célula somática?', 'Dos núcleos hijos con la misma información cromosómica que el núcleo progenitor.')
 )
 INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
 SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
@@ -501,4 +570,4 @@ WHERE NOT EXISTS (
 COMMIT;
 NOTIFY pgrst, 'reload schema';
 
--- 352 tarjetas, 11 temas, 3 materias.
+-- 421 tarjetas, 11 temas, 3 materias.
