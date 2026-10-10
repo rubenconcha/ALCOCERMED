@@ -567,7 +567,185 @@ WHERE NOT EXISTS (
     AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
 );
 
+-- salud: páginas PDF 20-22 | SALUD PUBLICA / factor de riesgo y salud comunitaria
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', 'Una persona fuma y tiene antecedentes familiares de cardiopatía. ¿Cuál de los dos riesgos puede cambiar?', 'El tabaquismo; los antecedentes familiares no se pueden modificar.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', '¿La edad es un factor de riesgo modificable?', 'No. Es una característica que no puede cambiarse.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', '¿Qué tienen en común el sedentarismo y una dieta inadecuada como factores de riesgo?', 'Ambos pueden modificarse con apoyo e intervenciones adecuadas.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', 'Si alguien tiene hipertensión, ¿puede actuar sobre ese factor de riesgo?', 'Sí. La presión arterial puede controlarse mediante atención y cambios apropiados.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', '¿Por qué tener un factor de riesgo no significa que la enfermedad sea inevitable?', 'Porque aumenta la probabilidad de enfermar, pero no determina por sí solo el resultado.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', '¿Qué otras condiciones, además de las biológicas, pueden funcionar como factores de riesgo?', 'Las condiciones ambientales, los comportamientos y las exposiciones sociales.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', 'Un barrio crea un comité para vigilar la calidad del agua. ¿Qué enfoque está aplicando?', 'Salud comunitaria: la población participa en la solución de un problema propio.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', 'En salud comunitaria, ¿la población solo recibe instrucciones del personal sanitario?', 'No. Participa en la planificación, la gestión y el control de las acciones.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', '¿Qué puede aportar la comunidad al planificar una intervención de salud?', 'Su conocimiento de las necesidades, costumbres y condiciones del lugar.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', 'Una brigada de salud escolar organizada con las familias, ¿ilustra qué forma de trabajo?', 'Una acción de salud comunitaria.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', '¿Qué busca un programa comunitario de control de vectores?', 'Construir con la población una respuesta a un problema de salud del entorno.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', '¿Qué tres tipos de determinantes debe considerar una solución de salud comunitaria?', 'Los sociales, los culturales y los ambientales.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', 'Además de prevenir enfermedades, ¿qué deben hacer los servicios de salud según el texto?', 'Fomentar la salud, atender de forma integral y apoyar la rehabilitación.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', 'Una persona supera una enfermedad, pero necesita volver a sus actividades. ¿Qué función del servicio de salud entra en juego?', 'La rehabilitación y la reintegración social.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', '¿Qué prácticas cotidianas menciona el material como parte del fomento de la salud?', 'Higiene, actividad física, alimentación adecuada y autocuidado, entre otras.'),
+    ('SALUD PUBLICA', 'factor de riesgo y salud comunitaria', '¿Por qué el saneamiento ambiental también es una acción de fomento de la salud?', 'Porque crea condiciones que facilitan el bienestar de la comunidad.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 6-9 | SALUD PUBLICA / ods y cobertura sanitaria
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Hasta qué año orienta la agenda de los Objetivos de Desarrollo Sostenible?', 'Hasta 2030.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Qué plantea específicamente el ODS 3?', 'Garantizar una vida sana y promover el bienestar para todas las personas, a todas las edades.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Cuántas metas reúnen los 17 ODS según el material?', '169 metas.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', 'Si una meta dice qué se quiere lograr, ¿qué permite observar un indicador?', 'Si se está avanzando hacia esa meta con una medida comparable.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Por qué un profesional de salud debería conocer los ODS?', 'Porque relacionan los problemas sanitarios con prioridades sociales, económicas y ambientales.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', 'Una población tiene agua insegura. ¿Por qué esto importa a la agenda de salud?', 'Porque el agua y el saneamiento son determinantes de la salud.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Qué ayuda a identificar los ODS al comparar el acceso a salud entre grupos?', 'Las inequidades y las poblaciones vulnerables o marginadas.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Qué estrategia sanitaria destaca el texto para avanzar hacia la cobertura universal?', 'Fortalecer la Atención Primaria en Salud.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Cómo pueden los ODS orientar una investigación local en salud?', 'Vinculando una necesidad de la comunidad con metas e indicadores de la agenda global.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿La salud dentro de los ODS depende únicamente de los hospitales?', 'No. También depende de educación, vivienda, trabajo, ambiente y otras condiciones.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Qué significa trabajar de forma intersectorial por la salud?', 'Coordinar salud con sectores como educación, vivienda, trabajo y medio ambiente.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Qué hace posible que distintos países comparen sus avances en salud?', 'El seguimiento mediante indicadores globales.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', 'Si una política reduce barreras que afectan más a un grupo vulnerable, ¿qué objetivo de los ODS favorece?', 'La reducción de inequidades en salud.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Cuándo se adoptó la Agenda 2030 mencionada en el material?', 'En 2015.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Qué dimensiones integra la agenda de los ODS además de la sanitaria?', 'Dimensiones sociales, económicas, ambientales y de gobernanza.'),
+    ('SALUD PUBLICA', 'ods y cobertura sanitaria', '¿Qué relación tiene la equidad de género con la salud en la agenda de los ODS?', 'Es una condición social que puede influir en el bienestar y el acceso a oportunidades de salud.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 10-14 | SALUD PUBLICA / salud en bolivia y modelo safci
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', 'Según el curso, ¿qué dos principios de acceso destacan para los servicios de salud en Bolivia?', 'La gratuidad y la universalidad.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', '¿Qué sistema boliviano se describe como financiado con recursos públicos y basado en la atención primaria?', 'El Sistema Único de Salud (SUS).'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', 'En el modelo SAFCI, ¿la familia queda fuera de las decisiones de salud?', 'No. La familia y la comunidad forman parte de la atención integral.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', 'Una comunidad consulta a sus médicos y a sus practicantes tradicionales. ¿Qué principio del SAFCI refleja?', 'La articulación intercultural entre saberes ancestrales y biomedicina.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', '¿Por qué el SAFCI debe adaptar la atención a la cultura local?', 'Para que sea pertinente y respete los saberes de la comunidad.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', '¿Qué pueden hacer los comités de salud en su territorio?', 'Participar en la planificación, vigilancia y evaluación de las acciones sanitarias.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', '¿Qué aporta un agente comunitario de salud?', 'Trabajo cercano al territorio para prevenir enfermedades y promover hábitos saludables.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', '¿Quién define las decisiones y estrategias de una política pública de salud?', 'El Estado, con el fin de garantizar el derecho a la salud y reducir inequidades.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', 'Si una norma asigna presupuesto y fija prioridades sanitarias, ¿hablamos de acción clínica o de política pública?', 'De política pública de salud.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', 'Si un equipo aplica una campaña de vacunación, ¿a qué campo de acción pertenece?', 'A la salud pública.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', '¿Qué papel tiene la participación social en la política sanitaria descrita?', 'Permite que comunidades y organizaciones ayuden a planificar y evaluar las acciones.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', '¿En qué se concreta una política pública de salud?', 'En planes, programas y normas que guían los servicios de salud.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', '¿Por qué una política de salud debe colaborar con educación o medio ambiente?', 'Porque las condiciones de vida influyen en la salud y requieren respuestas entre sectores.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', '¿Qué misión de salud pública consiste en conocer problemas y prioridades de una población?', 'Evaluar y monitorizar su estado de salud.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', 'Después de identificar un problema de salud local, ¿qué debe hacer la salud pública?', 'Formular programas y políticas con la comunidad y las autoridades.'),
+    ('SALUD PUBLICA', 'salud en bolivia y modelo safci', '¿Qué debe comprobarse al garantizar servicios de salud?', 'Que la población acceda a servicios adecuados y que las intervenciones se evalúen.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 32-37 | SALUD PUBLICA / epidemiologia social
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'epidemiologia social', '¿Qué intenta explicar la epidemiología social cuando dos grupos tienen distinta esperanza de vida?', 'Cómo las desigualdades y condiciones sociales influyen en la salud de esos grupos.'),
+    ('SALUD PUBLICA', 'epidemiologia social', 'Ante un brote en una escuela, ¿qué enfoque epidemiológico busca intervenir con rapidez en el lugar?', 'La epidemiología de campo.'),
+    ('SALUD PUBLICA', 'epidemiologia social', '¿En qué tipo de espacios suele actuar la epidemiología de campo descrita en el texto?', 'En espacios concretos como escuelas, hospitales o asilos.'),
+    ('SALUD PUBLICA', 'epidemiologia social', '¿Qué escala de acción destaca en la epidemiología social?', 'La regional o nacional, incluida la orientación de políticas públicas.'),
+    ('SALUD PUBLICA', 'epidemiologia social', '¿Por qué estudiar solo el agente de una enfermedad puede dejar incompleto el análisis poblacional?', 'Porque puede pasar por alto pobreza, acceso a servicios y otras condiciones de vida.'),
+    ('SALUD PUBLICA', 'epidemiologia social', '¿Qué busca la epidemiología social entre la posición social y la salud?', 'Explicar las causas de las desigualdades sanitarias.'),
+    ('SALUD PUBLICA', 'epidemiologia social', 'Si un estudio describe cuántos casos aparecen por lugar, tiempo y persona, ¿qué tipo de estudio observacional es?', 'Descriptivo.'),
+    ('SALUD PUBLICA', 'epidemiologia social', '¿Para qué puede servir un estudio descriptivo antes de probar una explicación?', 'Para reconocer la distribución de un problema y generar hipótesis.'),
+    ('SALUD PUBLICA', 'epidemiologia social', 'Si un estudio compara grupos para evaluar una hipótesis sobre una causa, ¿es descriptivo o analítico?', 'Analítico.'),
+    ('SALUD PUBLICA', 'epidemiologia social', '¿Qué diferencia clave existe entre un estudio observacional y uno experimental?', 'En el experimental se manipula una variable bajo condiciones controladas; en el observacional no.'),
+    ('SALUD PUBLICA', 'epidemiologia social', 'Un ensayo se realiza con comunidades completas. ¿Qué tipo de estudio experimental menciona el texto?', 'Un ensayo comunitario.'),
+    ('SALUD PUBLICA', 'epidemiologia social', 'Un ensayo clínico del texto, ¿interviene principalmente sobre individuos o poblaciones enteras?', 'Sobre individuos.'),
+    ('SALUD PUBLICA', 'epidemiologia social', '¿Qué investiga la epidemiología sobre las necesidades de salud de una población?', 'Su frecuencia, distribución y determinantes.'),
+    ('SALUD PUBLICA', 'epidemiologia social', '¿Qué investiga el estudio de los sistemas de salud?', 'La respuesta social organizada frente a las condiciones de salud y enfermedad.'),
+    ('SALUD PUBLICA', 'epidemiologia social', '¿Por qué la salud pública necesita ciencias sociales y biológicas?', 'Porque la salud poblacional reúne procesos de ambas dimensiones.'),
+    ('SALUD PUBLICA', 'epidemiologia social', '¿Qué dato permite a la epidemiología de campo orientar decisiones urgentes durante un brote?', 'Información recogida en el terreno junto con la vigilancia de los casos.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 40-47 | SALUD PUBLICA / proceso de investigacion
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'proceso de investigacion', 'Tienes una idea de investigación todavía vaga. ¿Qué paso ayuda a convertirla en un tema preciso?', 'Revisar antecedentes y analizar qué aspecto relevante falta estudiar.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿De dónde puede surgir una idea para investigar según el texto?', 'De la práctica, debates, publicaciones, noticias o vacíos del conocimiento, entre otras fuentes.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿Cuáles son los tres grandes momentos de la investigación cuantitativa descritos?', 'Planificación, ejecución e informe final.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', 'Antes de recolectar datos, ¿en qué momento debes definir el problema y la metodología?', 'En la planificación.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿Qué tres preguntas ordenan la planificación del estudio?', 'Qué se investigará, cuál es su base teórica y cómo se investigará.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿Qué documento deja explícita una parte del plan de investigación?', 'El protocolo.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', 'Al construir la base teórica, ¿qué conviene revisar?', 'Conceptos, teorías, investigaciones previas y datos disponibles.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', 'Si defines población y muestra, ¿qué parte del proyecto estás preparando?', 'El diseño metodológico.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿Qué debes elegir para obtener la información que responde tu pregunta?', 'Los métodos e instrumentos de recolección de datos.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', 'Una encuesta necesita encuestadores entrenados. ¿En qué parte del diseño se prevé esto?', 'En los procedimientos de recolección de información.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿Para qué se prepara un plan de tabulación y análisis antes del trabajo de campo?', 'Para decidir cómo ordenar, presentar e interpretar los datos que se obtengan.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿Qué actividades integran la ejecución del estudio?', 'Recolectar, procesar, analizar e interpretar los datos, y elaborar conclusiones y recomendaciones.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿Por qué una mala recolección de datos afecta todo el estudio?', 'Porque los datos son la materia prima de los análisis y hallazgos posteriores.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', 'Después de reunir los datos, ¿qué pasos ayudan a presentarlos con claridad?', 'Ordenarlos, clasificarlos y tabularlos.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿En qué deben basarse las conclusiones y recomendaciones?', 'En los resultados obtenidos e interpretados, no en suposiciones ajenas al estudio.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿Para qué se comunica el informe final?', 'Para aportar conocimiento o ayudar a resolver el problema que motivó la investigación.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', 'En una investigación cualitativa, ¿las preguntas siempre quedan fijas desde el inicio?', 'No. Pueden precisarse o cambiar mientras se conoce el fenómeno.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿Qué busca comprender un estudio cualitativo en el ambiente natural?', 'Cómo vive, actúa y entiende la situación la gente involucrada.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', '¿Por qué el proceso de investigación no debe verse como una lista rígida de pasos?', 'Porque sus momentos se relacionan y pueden revisarse conforme avanza el estudio.'),
+    ('SALUD PUBLICA', 'proceso de investigacion', 'Si la comunidad ayuda a identificar qué problema investigar, ¿qué enfoque se parece al descrito en el texto?', 'La investigación cualitativa participativa o investigación-acción.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 49-59 | SALUD PUBLICA / problema y objetivos de investigacion
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Por qué elegir un tema amplio todavía no equivale a tener un problema de investigación?', 'Porque falta concretar qué se estudiará, en quiénes, dónde y con qué alcance.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', 'Si tu pregunta admite varias interpretaciones, ¿qué debes mejorar primero?', 'La claridad y precisión de la delimitación del problema.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Qué debe permitir comprobar un problema de investigación cuantitativa?', 'Sus variables o características mediante evidencia empírica.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Por qué conviene indicar el lugar y el periodo de un estudio?', 'Para fijar sus dimensiones espacial y temporal.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', 'Un proyecto dice ''estudiaré la salud de todos''. ¿Qué dato esencial de la pregunta falta definir?', 'La población concreta que será investigada.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Por qué se revisan tiempo, personal, dinero y equipo antes de elegir un problema?', 'Para comprobar que el proyecto sea viable.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Qué condición ética debe considerarse al estudiar personas?', 'Su aceptación de la investigación y sus procedimientos mediante consentimiento informado.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Qué relación debe existir entre el método elegido y el problema?', 'El método debe ser capaz de aportar datos para responder ese problema.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Por qué la urgencia de los resultados influye en el diseño del estudio?', 'Porque su duración debe permitir que los hallazgos sirvan para tomar decisiones a tiempo.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Qué se entiende por delimitar un problema?', 'Concentrar el estudio en una parte clara y abordable de un tema más amplio.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Qué riesgo existe si delimitas el problema hasta volverlo insignificante?', 'Perder su relación con el fenómeno general y su relevancia.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Para qué sirven los objetivos durante la investigación?', 'Para guiar sus fases y aclarar lo que el estudio pretende lograr.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Qué debe indicar un objetivo específico?', 'Una actividad o resultado concreto relacionado con el problema principal.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Por qué una pregunta de investigación puede ayudar más que una frase vaga?', 'Porque orienta de forma directa qué datos habrá que buscar para responderla.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', 'Si un estudio no explica por qué importa, ¿qué sección necesita fortalecer?', 'La justificación.'),
+    ('SALUD PUBLICA', 'problema y objetivos de investigacion', '¿Qué debe explicar la justificación de un estudio?', 'Por qué conviene realizarlo, a quién puede beneficiar y para qué servirán sus resultados.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
 COMMIT;
 NOTIFY pgrst, 'reload schema';
 
--- 421 tarjetas, 11 temas, 3 materias.
+-- 521 tarjetas, 17 temas, 3 materias.
