@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/planes",
+      "destination": "/ventas.html"
+    },
+    {
       "source": "/propedeutico",
       "destination": "/ventas.html"
     },

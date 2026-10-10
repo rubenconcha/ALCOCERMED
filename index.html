@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prepa bencarson | propedeutico</title>
+    <title>AlcocerMed | Tu plataforma de estudio · Prepa Ben Carson</title>
+    <meta name="description" content="Flashcards, preguntas, simulacros y videoclases para tu preparación en Medicina. Accede a tu cuenta o descubre los planes de AlcocerMed.">
     <meta name="theme-color" content="#ff8c00">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -17,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css?v=20">
+    <link rel="stylesheet" href="public-platform.css?v=1">
 </head>
 
 <body class="login-active">
@@ -26,6 +28,7 @@
         <div class="login-bg-glow"></div>
         <div class="login-bg-glow login-bg-glow-2"></div>
 
+        <section class="public-intro" aria-label="Conoce AlcocerMed"><a class="public-brand" href="/ventas.html"><img src="/logo%20app%20juegos.png" alt="" width="42" height="42"><span>AlcocerMed<small>Prepa Ben Carson</small></span></a><p class="public-eyebrow">Tu preparación para Medicina</p><h2>Tu próxima meta<br>empieza <em>aquí.</em></h2><p class="public-lead">Clases para comprender, flashcards para recordar y preguntas para ponerte a prueba. Todo AlcocerMed en una sola suscripción.</p><a class="public-btn" href="/ventas.html#planes">Conocer los planes <span aria-hidden="true">↗</span></a><p class="public-note">Bs 200 al mes · Bs 499 hasta finalizar el curso o gestión</p><div class="intro-index"><span><b>Comprende</b>Videoclases y mapas</span><span><b>Recuerda</b>Flashcards e Intocables</span><span><b>Practica</b>Preguntas y simulacros</span></div></section>
         <div class="login-card">
             <!-- Logo -->
             <div class="login-logo-wrap">
@@ -44,15 +47,15 @@
 
             <!-- Título -->
             <div class="login-title-wrap">
-                <h1 class="login-title">bienvenido de vuelta</h1>
-                <p class="login-subtitle">ingresa con tus credenciales para acceder a tu plataforma</p>
+                <h1 class="login-title">Bienvenido de vuelta</h1>
+                <p class="login-subtitle">Ingresa a tu espacio de estudio.</p>
             </div>
 
             <!-- Formulario -->
             <form id="login-form" class="login-form" onsubmit="handleLogin(event)">
                 <div class="login-field">
                     <label class="login-label" for="login-email">
-                        <i class="fas fa-envelope"></i> correo electrónico
+                        <i class="fas fa-envelope"></i> Correo electrónico
                     </label>
                     <input type="email" id="login-email" class="login-input" placeholder="tu@correo.com" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                         autocomplete="email">
@@ -60,7 +63,7 @@
 
                 <div class="login-field">
                     <label class="login-label" for="login-password">
-                        <i class="fas fa-lock"></i> contraseña
+                        <i class="fas fa-lock"></i> Contraseña
                     </label>
                     <div class="login-input-wrap">
                         <input type="password" id="login-password" class="login-input" placeholder="••••••••" required minlength="6"
@@ -73,7 +76,7 @@
                 </div>
 
                 <!-- Error -->
-                <div id="login-error" class="login-error hidden">
+                <div id="login-error" class="login-error hidden" role="alert" aria-live="polite">
                     <i class="fas fa-exclamation-circle"></i>
                     <span id="login-error-text">credenciales incorrectas</span>
                 </div>
@@ -87,6 +90,7 @@
                 </button>
             </form>
 
+            <div class="login-assistance"><a href="/ventas.html#planes">Quiero suscribirme</a><a href="https://wa.me/59173752688?text=Hola%2C%20necesito%20ayuda%20para%20ingresar%20a%20AlcocerMed" target="_blank" rel="noopener noreferrer">Necesito ayuda para ingresar</a></div>
             <!-- Footer -->
             <div class="login-footer">
                 <i class="fas fa-shield-alt"></i>
@@ -416,7 +420,7 @@
     <main class="main-content">
         <!-- Barra superior MOBILE para abrir sidebar -->
         <div class="mobile-topbar" id="mobile-topbar">
-            <button class="mobile-menu-btn" onclick="toggleSidebar()">
+            <button aria-label="Abrir menú" class="mobile-menu-btn" onclick="toggleSidebar()">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="mobile-topbar-brand">
@@ -435,6 +439,7 @@
 
         <!-- ══ PANTALLA INICIO — MOBILE FIRST ══ -->
         <section id="home-screen" class="home-screen home-mobile-redesign">
+            <div class="membership-strip"><div><h2>Todo tu estudio, en un solo lugar.</h2><p>Consulta los planes y elige cómo continuar tu preparación.</p></div><a class="public-btn secondary" href="/ventas.html#planes">Planes y suscripción ↗</a></div>
             <div class="home-mobile-hero">
                 <div class="home-hero-kicker"><i class="fas fa-bolt"></i> plataforma médica móvil</div>
                 <h1>Estudia medicina desde tu celular.</h1>
@@ -493,7 +498,7 @@
             <section class="home-section-block">
                 <div class="home-section-head">
                     <h2>Accesos rápidos</h2>
-                    <p>Todo optimizado para tocar con el pulgar.</p>
+                    <p>Elige con qué quieres practicar hoy.</p>
                 </div>
                 <div class="home-grid home-grid-mobile-v2">
                     <div class="home-card home-card-orange home-card-priority" onclick="toggleFlashcards()">
@@ -1358,6 +1363,8 @@
 
     </main>
 
+<a class="support-float" href="https://wa.me/59173752688?text=Hola%2C%20tengo%20una%20consulta%20sobre%20AlcocerMed" target="_blank" rel="noopener noreferrer" aria-label="Hablar con AlcocerMed por WhatsApp" title="¿Te ayudamos? Escríbenos"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+    <script src="platform-polish.js?v=1"></script>
     <script src="config.js"></script>
     <script src="device_guard.js"></script>
     <script src="script.js?v=5"></script>
