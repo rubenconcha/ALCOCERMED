@@ -3480,8 +3480,9 @@ async function loadMapasMentales() {
     setMmState('loading');
     try {
         var localMapas = [
+            { titulo: 'Temas principales de anatomía y fisiología', materia: 'Morfofunción', url_imagen: 'mapas mentales/morfo_01_anatomia_y_fisiologia.webp', descripcion: 'Anatomía, fisiología, organización del cuerpo y homeostasis. Basado en el capítulo 1 de Saladin.', acceso_gratis: true, fecha: new Date().toISOString() },
             { titulo: 'Citoesqueleto', materia: 'Biología Celular', url_imagen: 'mapas mentales/citoesqueleto.png', descripcion: 'Estructura y función del citoesqueleto: microtúbulos, microfilamentos y filamentos intermedios.', fecha: new Date().toISOString() },
-            { titulo: 'La Célula', materia: 'Biología Celular', url_imagen: 'mapas mentales/lacelula.png', descripcion: 'Visión general de la célula: tipos, organelos y funciones fundamentales.', fecha: new Date().toISOString() },
+            { titulo: 'La Célula', materia: 'Biología Celular', url_imagen: 'mapas mentales/lacelula.png', descripcion: 'Visión general de la célula: tipos, organelos y funciones fundamentales.', acceso_gratis: true, fecha: new Date().toISOString() },
             { titulo: 'Membrana Plasmática', materia: 'Biología Celular', url_imagen: 'mapas mentales/membranaplasmatica.png', descripcion: 'Composición y funciones de la membrana celular: bicapa lipídica, proteínas y transporte.', fecha: new Date().toISOString() },
             { titulo: 'Núcleo Celular', materia: 'Biología Celular', url_imagen: 'mapas mentales/nucleocelular.png', descripcion: 'Estructura nuclear: envoltura nuclear, cromatina, nucléolo y funciones del núcleo.', fecha: new Date().toISOString() },
             { titulo: 'Organelos Celulares', materia: 'Biología Celular', url_imagen: 'mapas mentales/organeloscelulares.png', descripcion: 'Principales organelos: retículo endoplásmico, aparato de Golgi, mitocondrias, lisosomas y más.', fecha: new Date().toISOString() }
@@ -3549,7 +3550,7 @@ window.filterMapas = function () {
     });
     if (window.CampusAccess && CampusAccess.isFree()) {
         mmState.filteredMapas.sort(function (a, b) {
-            return Number(campo(b, 'titulo') === 'La Célula') - Number(campo(a, 'titulo') === 'La Célula');
+            return Number(Boolean(campo(b, 'acceso_gratis'))) - Number(Boolean(campo(a, 'acceso_gratis')));
         });
     }
     renderMmGrid();
@@ -3565,7 +3566,7 @@ function renderMmGrid() {
         var materia = campo(m, 'materia') || '';
         var urlImg = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
         var desc = campo(m, 'descripcion') || '';
-        var locked = window.CampusAccess && CampusAccess.isFree() && titulo !== 'La Célula';
+        var locked = window.CampusAccess && CampusAccess.isFree() && !campo(m, 'acceso_gratis');
 
         var card = document.createElement('button');
         card.type = 'button';
@@ -3601,7 +3602,7 @@ function updateIntocStats() {
 }
 
 window.openMmLightbox = function (m) {
-    if (window.CampusAccess && CampusAccess.isFree() && campo(m, 'titulo') !== 'La Célula') return CampusAccess.unlock();
+    if (window.CampusAccess && CampusAccess.isFree() && !campo(m, 'acceso_gratis')) return CampusAccess.unlock();
     var lb = document.getElementById('mm-lightbox');
     if (!lb) return;
     var urlImg = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
