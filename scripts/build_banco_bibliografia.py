@@ -276,6 +276,21 @@ COMMIT;
         (SQL_DIR / f"lote_{number:02d}.sql").write_text(sql, encoding="utf-8")
         all_sql.append(sql)
     (ROOT / "SQL_BANCO_BIBLIOGRAFIA_2026.sql").write_text("\n".join(all_sql), encoding="utf-8")
+    # Smaller complete statements can be pasted in the dashboard editor even
+    # when its file viewer truncates the full SQL file.
+    for old in SQL_DIR.glob("parte_*.sql"):
+        old.unlink()
+    parts = []
+    current = []
+    for statement in all_sql:
+        if current and sum(len(item) for item in current) + len(statement) > 175_000:
+            parts.append("\n".join(current))
+            current = []
+        current.append(statement)
+    if current:
+        parts.append("\n".join(current))
+    for index, part in enumerate(parts, 1):
+        (SQL_DIR / f"parte_{index:02d}.sql").write_text(part, encoding="utf-8")
 
 
 def make_csv(rows: list[dict]) -> None:
