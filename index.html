@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles.css?v=20">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
-    <link rel="stylesheet" href="campus-theme.css?v=1">
+    <link rel="stylesheet" href="campus-theme.css?v=2">
 </head>
 
 <body class="login-active">
@@ -216,10 +216,10 @@
                 <li class="nav-item nav-item-simple" id="nav-mapas-mentales">
                     <a href="#" onclick="openMindMaps(); return false;" data-tooltip="mapas mentales">
                         <span class="nav-icon nav-icon-map">
-                            <i class="fas fa-project-diagram"></i>
+                            <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#map"></use></svg>
                         </span>
                         <span class="nav-label">mapas mentales</span>
-                        <span class="nav-badge badge-new">NUEVO</span>
+
                     </a>
                 </li>
 
@@ -227,7 +227,7 @@
                 <li class="nav-item nav-item-simple" id="nav-intocables">
                     <a href="#" onclick="openIntocables(); return false;" data-tooltip="intocables">
                         <span class="nav-icon nav-icon-fire">
-                            <i class="fas fa-fire-alt"></i>
+                            <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#core"></use></svg>
                         </span>
                         <span class="nav-label">intocables</span>
                         <span class="nav-emoji">🔥</span>
@@ -245,7 +245,7 @@
                 <li class="nav-item nav-item-simple" id="nav-banco">
                     <a href="#" onclick="openBanco(); return false;" data-tooltip="banco de preguntas">
                         <span class="nav-icon nav-icon-banco">
-                            <i class="fas fa-database"></i>
+                            <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#bank"></use></svg>
                         </span>
                         <span class="nav-label">banco de preguntas</span>
                     </a>
@@ -257,7 +257,7 @@
                             <i class="fas fa-clipboard-list"></i>
                         </span>
                         <span class="nav-label">simulacros</span>
-                        <span class="nav-badge badge-new">NUEVO</span>
+
                     </a>
                 </li>
 
@@ -432,11 +432,11 @@
         <section id="home-screen" class="home-screen home-mobile-redesign">
             <div class="home-mobile-hero">
                 <div class="home-hero-kicker"><i class="fas fa-bolt"></i> Tu espacio de estudio</div>
-                <h1>¿Qué vas a aprender hoy?</h1>
-                <p>Elige una materia, repasa sus temas y ponte a prueba. Todo tu material, en un mismo lugar.</p>
+                <h1>Elige tu próximo tema.</h1>
+                <p>Abre una materia para ver sus tarjetas. Usa los mapas para relacionar conceptos y las preguntas para comprobar tu repaso.</p>
                 <div class="home-hero-actions">
-                    <button class="home-primary-action" onclick="openStudyLibrary()"><i class="fas fa-layer-group"></i> Elegir materia</button>
-                    <button class="home-secondary-action" onclick="openMindMaps()"><i class="fas fa-project-diagram"></i> mapas</button>
+                    <button class="home-primary-action" onclick="openStudyLibrary()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#cards"></use></svg> Elegir materia</button>
+                    <button class="home-secondary-action" onclick="openMindMaps()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#map"></use></svg> mapas</button>
                     <button class="home-secondary-action pwa-install-trigger" type="button"><i class="fas fa-download"></i> descargar app</button>
                 </div>
                 <div class="home-hero-stats">
@@ -451,56 +451,46 @@
 <div class="home-section-head"><div><p class="library-kicker">TU BIBLIOTECA</p><h2 id="library-title">Estudia por materia</h2></div><p>Selecciona una materia para ver sus temas.</p></div>
 <div class="subject-picker" aria-label="Materias">
 <button type="button" data-subject="MORFOFUNCION" aria-pressed="false"><i class="fas fa-brain"></i><span>Morfofunción<small>Anatomía y fisiología</small></span><i class="fas fa-arrow-right"></i></button>
-<button type="button" data-subject="BIOLOGIA CELULAR" aria-pressed="false"><i class="fas fa-dna"></i><span>Biología celular<small>La vida, a pequeña escala</small></span><i class="fas fa-arrow-right"></i></button>
-<button type="button" data-subject="SALUD PUBLICA" aria-pressed="false"><i class="fas fa-heartbeat"></i><span>Salud pública<small>Salud y comunidad</small></span><i class="fas fa-arrow-right"></i></button>
+<button type="button" data-subject="BIOLOGIA CELULAR" aria-pressed="false"><i class="fas fa-dna"></i><span>Biología celular<small>Célula, membrana y organelos</small></span><i class="fas fa-arrow-right"></i></button>
+<button type="button" data-subject="SALUD PUBLICA" aria-pressed="false"><i class="fas fa-heartbeat"></i><span>Salud pública<small>Población, prevención y salud</small></span><i class="fas fa-arrow-right"></i></button>
 </div>
 <div id="library-topics-panel" hidden><label for="library-search">Buscar un tema</label><input type="search" id="library-search" placeholder="Escribe el nombre del tema…"><p id="library-status" role="status"></p><div id="library-topics" class="library-topics"></div></div>
-</section><div class="home-section-head"><h2>Conecta lo que aprendes</h2><p>Una idea, distintas formas de repasarla.</p></div><div class="home-focus-grid">
+</section><div class="home-section-head"><h2>Dos maneras de repasar</h2><p>Recuerda una respuesta o explora el tema completo.</p></div><div class="home-focus-grid">
                 <article class="home-feature-card home-feature-flash" onclick="openStudyLibrary()">
                     <div class="home-feature-top">
-                        <div class="home-feature-icon"><i class="fas fa-clone"></i></div>
-                        <span class="home-feature-badge">SRS</span>
+                        <div class="home-feature-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#cards"></use></svg></div>
+                        <span class="home-feature-badge">PREGUNTA / RESPUESTA</span>
                     </div>
                     <h2>Flashcards inteligentes</h2>
                     <p>Repasa por pregunta, revela la respuesta y califica tu memoria: otra vez, difícil, bien o fácil.</p>
                     <div class="flashcard-mini-stack" aria-hidden="true">
-                        <div class="mini-card mini-card-back">Respuesta clínica</div>
-                        <div class="mini-card mini-card-mid">¿Qué estructura...?</div>
-                        <div class="mini-card mini-card-front"><i class="fas fa-brain"></i> Morfofunción</div>
+                        <div class="mini-card mini-card-back">Síntesis de proteínas</div>
+                        <div class="mini-card mini-card-mid">¿Qué función cumple un ribosoma?</div>
+                        <div class="mini-card mini-card-front">Biología celular</div>
                     </div>
                     <button class="home-feature-link">abrir flashcards <i class="fas fa-arrow-right"></i></button>
                 </article>
 
                 <article class="home-feature-card home-feature-map" onclick="openMindMaps()">
                     <div class="home-feature-top">
-                        <div class="home-feature-icon"><i class="fas fa-project-diagram"></i></div>
-                        <span class="home-feature-badge">Visual</span>
+                        <div class="home-feature-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#map"></use></svg></div>
+                        <span class="home-feature-badge">MAPAS DEL CURSO</span>
                     </div>
                     <h2>Mapas mentales</h2>
-                    <p>Conecta conceptos, clínica, imágenes y repasos clave en una vista visual fácil de recordar.</p>
-                    <div class="mindmap-preview" aria-hidden="true">
-                        <span class="mind-line mind-line-1"></span>
-                        <span class="mind-line mind-line-2"></span>
-                        <span class="mind-line mind-line-3"></span>
-                        <span class="mind-line mind-line-4"></span>
-                        <span class="mind-node mind-node-main">tema</span>
-                        <span class="mind-node mind-node-a">concepto</span>
-                        <span class="mind-node mind-node-b">clínica</span>
-                        <span class="mind-node mind-node-c">imagen</span>
-                        <span class="mind-node mind-node-d">repaso</span>
-                    </div>
+                    <p>Explora La Célula, membrana, núcleo, organelos y citoesqueleto. Abre cada mapa para verlo con detalle.</p>
+                    <div class="course-map-preview"><img src="mapas%20mentales/lacelula.png" alt="Vista del mapa La Célula disponible en el curso" loading="lazy"><span>La Célula · Biología celular</span></div>
                     <button class="home-feature-link">ver mapas <i class="fas fa-arrow-right"></i></button>
                 </article>
             </div>
 
             <section class="home-section-block">
                 <div class="home-section-head">
-                    <h2>Accesos rápidos</h2>
-                    <p>Elige con qué quieres practicar hoy.</p>
+                    <h2>Pon a prueba tu repaso</h2>
+                    <p>Preguntas, simulacros y Juegos para practicar lo que estudiaste.</p>
                 </div>
                 <div class="home-grid home-grid-mobile-v2">
                     <div class="home-card home-card-orange home-card-priority" onclick="openStudyLibrary()">
-                        <div class="hc-icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#cards"></use></svg></div>
                         <div class="hc-body">
                             <h3>flashcards</h3>
                             <p>repaso activo · memoria a largo plazo</p>
@@ -508,7 +498,7 @@
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
                     <div class="home-card home-card-map" onclick="openMindMaps()">
-                        <div class="hc-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#map"></use></svg></div>
                         <div class="hc-body">
                             <h3>mapas mentales</h3>
                             <p>temas conectados visualmente</p>
@@ -526,22 +516,22 @@
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
                     <div class="home-card home-card-blue" onclick="openBanco()">
-                        <div class="hc-icon"><i class="fas fa-database"></i></div>
+                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#bank"></use></svg></div>
                         <div class="hc-body"><h3>banco de preguntas</h3><p>práctica por materia</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
                     <div class="home-card home-card-sim" onclick="openSimulacro()">
-                        <div class="hc-icon"><i class="fas fa-stopwatch"></i></div>
+                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#quiz"></use></svg></div>
                         <div class="hc-body"><h3>simulacro</h3><p>modo admisión</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
                     <div class="home-card home-card-eval" onclick="openEvaluacion()">
-                        <div class="hc-icon"><i class="fas fa-chart-bar"></i></div>
+                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#progress"></use></svg></div>
                         <div class="hc-body"><h3>mis evaluaciones</h3><p>resultados y feedback</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
                     <div class="home-card home-card-fire" onclick="openIntocables()">
-                        <div class="hc-icon"><i class="fas fa-fire-alt"></i></div>
+                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#core"></use></svg></div>
                         <div class="hc-body"><h3>intocables 🔥</h3><p>conceptos esenciales</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
@@ -649,8 +639,8 @@
                 <div class="banco-header">
                     <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
                     <div>
-                        <h2 class="banco-title"><i class="fas fa-database"></i> banco de preguntas</h2>
-                        <p class="banco-subtitle">selecciona la materia y el tema para comenzar</p>
+                        <h2 class="banco-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#bank"></use></svg> banco de preguntas</h2>
+                        <p class="banco-subtitle">Elige una materia y un tema. Responde y revisa la explicación.</p>
                     </div>
                 </div>
 
@@ -687,7 +677,7 @@
 
                     <!-- Fila de dificultad — ocupa ancho completo -->
                     <div class="banco-dificultad-row">
-                        <label class="banco-select-label"><i class="fas fa-layer-group"></i> nivel de dificultad</label>
+                        <label class="banco-select-label"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#cards"></use></svg> nivel de dificultad</label>
                         <div class="banco-dificultad-btns" id="banco-dificultad-btns">
                             <button class="banco-dif-btn banco-dif-active" id="banco-dif-todos" onclick="selectBancoDificultad(null)">
                                 <i class="fas fa-th"></i> todos
@@ -854,8 +844,8 @@
                 <div class="sim-header">
                     <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
                     <div>
-                        <h2 class="sim-title"><i class="fas fa-stopwatch"></i> simulacro</h2>
-                        <p class="sim-subtitle">configura tu examen cronometrado tipo admisión</p>
+                        <h2 class="sim-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#quiz"></use></svg> simulacro</h2>
+                        <p class="sim-subtitle">Elige las materias, el tiempo y la cantidad de preguntas.</p>
                     </div>
                 </div>
 
@@ -1050,7 +1040,7 @@
                             <label>sin responder</label>
                         </div>
                         <div class="bq-rs-box bq-rs-time">
-                            <i class="fas fa-stopwatch"></i>
+                            <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#quiz"></use></svg>
                             <span id="sim-rs-time">—</span>
                             <label>tiempo usado</label>
                         </div>
@@ -1090,8 +1080,8 @@
             <div class="eval-header">
                 <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
                 <div>
-                    <h2 class="eval-title"><i class="fas fa-chart-bar"></i> mis evaluaciones</h2>
-                    <p class="eval-subtitle">historial de simulacros y bancos completados</p>
+                    <h2 class="eval-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#progress"></use></svg> mis evaluaciones</h2>
+                    <p class="eval-subtitle">Revisa tus resultados y las materias que necesitas volver a practicar.</p>
                 </div>
             </div>
 
@@ -1252,16 +1242,16 @@
             <div class="intoc-header">
                 <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
                 <div>
-                    <h2 class="intoc-title"><i class="fas fa-fire-alt"></i> intocables</h2>
-                    <p class="intoc-subtitle">los conceptos que siempre caen en el examen de admisión</p>
+                    <h2 class="intoc-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#core"></use></svg> intocables</h2>
+                    <p class="intoc-subtitle">Mapas para relacionar los conceptos de Biología celular.</p>
                 </div>
             </div>
 
             <div class="intoc-hero">
                 <div class="intoc-hero-icon">🔥</div>
                 <div class="intoc-hero-text">
-                    <h3>mátenlos de memoria</h3>
-                    <p>estos temas aparecen examen tras examen. no pueden fallar.</p>
+                    <h3>Mira cómo se conecta cada tema.</h3>
+                    <p>Abre un mapa, recorre sus ramas y vuelve a las tarjetas para comprobar qué recuerdas.</p>
                 </div>
                 <div class="intoc-hero-stats">
                     <div class="intoc-stat">
@@ -1278,13 +1268,13 @@
             <!-- Tabs -->
             <div class="intoc-tabs">
                 <button class="intoc-tab intoc-tab-active" id="tab-mapas" onclick="switchIntocTab('mapas')">
-                    <i class="fas fa-project-diagram"></i> mapas mentales
+                    <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#map"></use></svg> mapas mentales
                 </button>
-                <button class="intoc-tab" id="tab-conceptos" onclick="switchIntocTab('conceptos')">
+                <button class="intoc-tab" hidden id="tab-conceptos" onclick="switchIntocTab('conceptos')">
                     <i class="fas fa-lightbulb"></i> conceptos clave
                     <span class="intoc-tab-badge">pronto</span>
                 </button>
-                <button class="intoc-tab" id="tab-formulas" onclick="switchIntocTab('formulas')">
+                <button class="intoc-tab" hidden id="tab-formulas" onclick="switchIntocTab('formulas')">
                     <i class="fas fa-square-root-alt"></i> fórmulas
                     <span class="intoc-tab-badge">pronto</span>
                 </button>
@@ -1360,7 +1350,7 @@
     <script src="platform-polish.js?v=1"></script>
     <script src="config.js"></script>
     <script src="device_guard.js"></script>
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=6"></script>
     <script src="student-library.js?v=2"></script>
 </body>
 

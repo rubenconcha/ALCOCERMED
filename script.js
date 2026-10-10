@@ -363,14 +363,11 @@ const missingCloudTables = {};
 // TIPS DE ESTUDIO
 // ──────────────────────────────────────────────
 const tips = [
-    'repasa los temas difíciles justo antes de dormir; el sueño consolida la memoria a largo plazo.',
-    'la técnica alcocer funciona mejor cuando verbalizas las respuestas en voz alta.',
-    'si una tarjeta te cuesta, márcala como "difícil" para verla más veces en la sesión.',
-    'estudia en bloques de 25 minutos con descansos de 5 — técnica pomodoro.',
-    'conectar conceptos nuevos con lo que ya sabes acelera la retención hasta un 40%.',
-    'el quiz relámpago entrena tu cerebro bajo presión, igual que en el examen real.',
-    'morfofunción y biología celular están conectadas: estudia sus relaciones, no solo los datos aislados.',
-    'para la salud pública, enfócate en los indicadores epidemiológicos más preguntados en el examen.',
+    'Antes de revelar una tarjeta, intenta decir la respuesta completa con tus propias palabras.',
+    'Si dudas entre dos respuestas, anota la diferencia y compruébala en el material del tema.',
+    'Después de un simulacro, abre Mis evaluaciones y elige una materia para volver a practicar.',
+    'Abre un mapa, cierra la imagen e intenta explicar cómo se relacionan sus ramas.',
+    'Al terminar un tema, prueba unas preguntas para comprobar qué puedes responder sin mirar.'
 ];
 
 // ──────────────────────────────────────────────
