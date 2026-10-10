@@ -421,7 +421,7 @@ function showScreen(screenId) {
     closeMobileSidebar();
     if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
-    const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen'];
+    const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'resumenes-screen'];
     screens.forEach(function (id) {
         const el = document.getElementById(id);
         if (el) {
@@ -433,6 +433,10 @@ function showScreen(screenId) {
         }
     });
 }
+
+window.openResumenes = function () {
+    showScreen('resumenes-screen');
+};
 
 window.goHome = function () {
     const bancoEnProgreso = bancoState && bancoState.preguntas.length > 0 &&
