@@ -30,7 +30,7 @@ let quizAnswered = false;
 
 window.startQuiz = function () {
     // Mezclar y tomar 10 preguntas
-    quizQuestions = shuffleArray(QUIZ_QUESTIONS.slice()).slice(0, 10);
+    quizQuestions = shuffleArray((window.CampusAccess && CampusAccess.isFree() ? QUIZ_QUESTIONS.slice(0,5) : QUIZ_QUESTIONS).slice()).slice(0, 10);
     quizIndex = 0;
     quizScore = 0;
     quizAnswered = false;
@@ -173,7 +173,8 @@ const HM_MAX_ERRORS = 6;
 const HM_PARTS = ['hm-head', 'hm-body', 'hm-larm', 'hm-rarm', 'hm-lleg', 'hm-rleg'];
 
 window.startHangman = function () {
-    const entry = HANGMAN_WORDS[Math.floor(Math.random() * HANGMAN_WORDS.length)];
+    const words = window.CampusAccess && CampusAccess.isFree() ? HANGMAN_WORDS.slice(0,5) : HANGMAN_WORDS;
+    const entry = words[Math.floor(Math.random() * words.length)];
     hmWord = entry.word.toUpperCase();
     hmGuessed = [];
     hmErrors = 0;

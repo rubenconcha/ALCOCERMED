@@ -119,7 +119,7 @@ async function initAuth() {
 
         if (session && session.user) {
             currentUser = session.user;
-            enterApp(currentUser);
+            await enterApp(currentUser);
         } else {
             showLoginScreen();
         }
@@ -140,7 +140,7 @@ async function initAuth() {
             if (event === 'INITIAL_SESSION') return;
             if (event === 'SIGNED_IN' && session && session.user) {
                 currentUser = session.user;
-                enterApp(currentUser);
+                setTimeout(function () { enterApp(currentUser); }, 0);
             } else if (event === 'SIGNED_OUT') {
                 currentUser = null;
                 showLoginScreen();
@@ -170,7 +170,29 @@ function setAdminSectionVisible(visible) {
 }
 
 /** Oculta login y muestra app */
+let campusEntry = null;
 function enterApp(user) {
+    if (campusEntry) return campusEntry;
+    campusEntry = (async function () {
+        try {
+            await CampusAccess.resolve(getSupabase());
+            flashcardsCache = null;
+            bancoState._cache = [];
+            bancoState.allPreguntas = [];
+            bancoState.preguntas = [];
+            simState._cache = [];
+            simState._oficialesCache = [];
+            simState.preguntas = [];
+            showScreen('home-screen');
+            enterVerifiedApp(user);
+        } catch (error) {
+            showLoginScreen();
+            showLoginError(error.message);
+        } finally { campusEntry = null; }
+    })();
+    return campusEntry;
+}
+function enterVerifiedApp(user) {
     document.body.classList.remove('login-active');
     var loginScreen = document.getElementById('login-screen');
     if (loginScreen) loginScreen.classList.add('hidden');
@@ -489,7 +511,9 @@ window.toggleMenu = async function (asignatura) {
         submenu.innerHTML = '';
 
         if (temas.size === 0) {
-            submenu.innerHTML = '<li><span class="loading">sin temas aún</span></li>';
+            submenu.innerHTML = '';
+            if (CampusAccess.isFree()) await CampusAccess.appendLocks(submenu, asignatura);
+            else submenu.innerHTML = '<li><span class="loading">sin temas aún</span></li>';
             return;
         }
 
@@ -505,6 +529,7 @@ window.toggleMenu = async function (asignatura) {
             li.appendChild(a);
             submenu.appendChild(li);
         });
+        await CampusAccess.appendLocks(submenu, asignatura);
 
     } catch (e) {
         console.error('Error cargando temas de flashcards:', e);
@@ -1045,7 +1070,7 @@ let quizAnswered = false;
 
 window.startQuiz = function () {
     // Mezclar y tomar 10 preguntas
-    quizQuestions = shuffleArray(QUIZ_QUESTIONS.slice()).slice(0, 10);
+    quizQuestions = shuffleArray((window.CampusAccess && CampusAccess.isFree() ? QUIZ_QUESTIONS.slice(0,5) : QUIZ_QUESTIONS).slice()).slice(0, 10);
     quizIndex = 0;
     quizScore = 0;
     quizAnswered = false;
@@ -1188,7 +1213,8 @@ const HM_MAX_ERRORS = 6;
 const HM_PARTS = ['hm-head', 'hm-body', 'hm-larm', 'hm-rarm', 'hm-lleg', 'hm-rleg'];
 
 window.startHangman = function () {
-    const entry = HANGMAN_WORDS[Math.floor(Math.random() * HANGMAN_WORDS.length)];
+    const words = window.CampusAccess && CampusAccess.isFree() ? HANGMAN_WORDS.slice(0,5) : HANGMAN_WORDS;
+    const entry = words[Math.floor(Math.random() * words.length)];
     hmWord = entry.word.toUpperCase();
     hmGuessed = [];
     hmErrors = 0;
@@ -2474,6 +2500,7 @@ var simState = {
 
 // ── Abrir pantalla de configuración ──
 window.openSimulacro = async function () {
+    if (CampusAccess.isFree()) return CampusAccess.unlock();
     if (simState.timerInterval) {
         if (!confirm('hay un simulacro en curso. ¿deseas descartarlo?')) return;
         clearInterval(simState.timerInterval);
@@ -3157,6 +3184,7 @@ var vcState = {
 };
 
 window.openVideoclases = function () {
+    if (CampusAccess.isFree()) return CampusAccess.unlock();
     showScreen('videoclases-screen');
     closeMobileSidebar();
     loadVideoclases();

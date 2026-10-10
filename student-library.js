@@ -26,9 +26,9 @@
             const title = document.createElement('strong');
             title.textContent = topic.name;
             const detail = document.createElement('span');
-            detail.textContent = `${topic.count} ${topic.count === 1 ? 'tarjeta' : 'tarjetas'} · Empezar →`;
+            detail.textContent = topic.locked ? '🔒 Incluido en los planes · Desbloquear →' : `${topic.count} ${topic.count === 1 ? 'tarjeta' : 'tarjetas'} · Empezar →`;
             button.append(title, detail);
-            button.addEventListener('click', () => startDeck(topic.name, subject, rows));
+            button.addEventListener('click', () => topic.locked ? CampusAccess.unlock() : startDeck(topic.name, subject, rows));
             list.append(button);
         });
     }
@@ -58,6 +58,11 @@
                 groups.set(key, group);
             });
             topics = [...groups.values()].sort((a, b) => a.name.localeCompare(b.name, 'es', { numeric: true }));
+            if (window.CampusAccess && CampusAccess.isFree()) {
+                const catalog = await CampusAccess.catalog();
+                if (token !== request) return;
+                topics = catalog.filter(t => normalizeDbText(t.materia) === normalizeDbText(value)).map(t => ({name:t.tema,count:Number(t.free_count),locked:!Number(t.free_count)}));
+            }
             search.disabled = false;
             renderTopics();
         } catch (error) {

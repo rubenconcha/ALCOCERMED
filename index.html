@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
+<link rel="stylesheet" href="campus-access.css?v=1">
 </head>
 
 <body class="login-active">
@@ -52,7 +53,7 @@
                 <p class="login-subtitle">Ingresa a tu espacio de estudio.</p>
             </div>
 
-            <!-- Formulario -->
+            <button type="button" class="campus-google" onclick="continueWithGoogle(this)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.39-.18-2.05H12v3.88h5.38a4.6 4.6 0 0 1-2 3.02v2.51h3.24c1.9-1.75 2.98-4.32 2.98-7.36z"/><path fill="#34A853" d="M12 22c2.7 0 4.96-.9 6.62-2.41l-3.24-2.51c-.9.6-2.05.96-3.38.96-2.61 0-4.83-1.76-5.62-4.13H3.03v2.59A10 10 0 0 0 12 22z"/><path fill="#FBBC05" d="M6.38 13.91a6 6 0 0 1 0-3.82V7.5H3.03a10 10 0 0 0 0 9l3.35-2.59z"/><path fill="#EA4335" d="M12 5.96c1.47 0 2.79.5 3.83 1.5l2.87-2.88A9.64 9.64 0 0 0 12 2a10 10 0 0 0-8.97 5.5l3.35 2.59C7.17 7.72 9.39 5.96 12 5.96z"/></svg>Continuar con Google</button><p id="google-status" class="auth-status" role="status" aria-live="polite"></p><div class="auth-separator">o entra con tu correo</div><!-- Formulario -->
             <form id="login-form" class="login-form" onsubmit="handleLogin(event)">
                 <div class="login-field">
                     <label class="login-label" for="login-email">
@@ -91,7 +92,7 @@
                 </button>
             </form>
 
-            <div class="login-offer"><span>¿Aún no tienes acceso?</span><a href="/planes">Prueba un tema gratis · Ver planes <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+            <div class="login-offer"><span>¿Primera vez aquí?</span><a href="/registro">Registrarse gratis →</a><a href="/planes">Prueba un tema gratis · Ver planes <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
             <div class="login-assistance"><a href="/planes">Quiero suscribirme</a><a href="https://wa.me/59173752688?text=Hola%2C%20necesito%20ayuda%20para%20ingresar%20a%20AlcocerMed" target="_blank" rel="noopener noreferrer">Necesito ayuda para ingresar</a></div>
             <!-- Footer -->
             <div class="login-footer">
@@ -252,7 +253,7 @@
                 </li>
 
                 <li class="nav-item nav-item-simple" id="nav-simulacro">
-                    <a href="#" onclick="openSimulacro(); return false;" data-tooltip="simulacros">
+                    <a href="#" onclick="openSimulacro(); return false;" data-tooltip="simulacros"><span class="campus-lock-badge" data-premium-label hidden>🔒</span>
                         <span class="nav-icon nav-icon-sim">
                             <i class="fas fa-clipboard-list"></i>
                         </span>
@@ -430,6 +431,7 @@
 
         <!-- ══ PANTALLA INICIO — MOBILE FIRST ══ -->
         <section id="home-screen" class="home-screen home-mobile-redesign">
+<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA GRATUITA</small><h2>Empieza a repasar. Tu avance cuenta.</h2><p>Tienes 5 flashcards, 5 mapas mentales y prácticas de 5 preguntas. Los recursos con candado se abren con un plan.</p><div class="free-samples"><button onclick="CampusAccess.startSample()">5 flashcards →</button><button onclick="openMindMaps()">5 mapas →</button><button onclick="openGame('quiz')">Quiz de 5 preguntas →</button><button onclick="openBanco()">Banco de muestra →</button><button onclick="CampusAccess.unlock()">🔒 Desbloquear todo</button></div></div>
             <div class="home-mobile-hero">
                 <div class="home-hero-kicker"><i class="fas fa-bolt"></i> Tu espacio de estudio</div>
                 <h1>Elige tu próximo tema.</h1>
@@ -520,7 +522,7 @@
                         <div class="hc-body"><h3>banco de preguntas</h3><p>práctica por materia</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
-                    <div class="home-card home-card-sim" onclick="openSimulacro()">
+                    <div class="home-card home-card-sim" onclick="openSimulacro()"><span class="campus-lock-badge" data-premium-label hidden>🔒 Plan completo</span>
                         <div class="hc-icon"><img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80"></div>
                         <div class="hc-body"><h3>simulacro</h3><p>modo admisión</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
@@ -535,7 +537,7 @@
                         <div class="hc-body"><h3>intocables 🔥</h3><p>conceptos esenciales</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
-                    <div class="home-card home-card-games" onclick="window.location.href='juegos/index.html'">
+                    <div class="home-card home-card-games" onclick="if(CampusAccess.isFree()){CampusAccess.unlock();}else{window.location.href='juegos/index.html';}">
                         <div class="hc-icon"><i class="fas fa-gamepad"></i></div>
                         <div class="hc-body"><h3>juegos interactivos</h3><p>evaluaciones en vivo</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
@@ -1350,8 +1352,9 @@
     <script src="platform-polish.js?v=1"></script>
     <script src="config.js"></script>
     <script src="device_guard.js"></script>
-    <script src="script.js?v=7"></script>
-    <script src="student-library.js?v=2"></script>
-</body>
+    <script src="campus-access.js?v=1"></script>
+    <script src="script.js?v=8"></script>
+    <script src="student-library.js?v=3"></script>
+<dialog id="campus-unlock" class="campus-unlock"><span aria-hidden="true">🔒</span><h2>Sigue con el repaso completo.</h2><p>Tu cuenta gratuita conserva sus muestras. Con un plan puedes abrir todas las flashcards, el banco de preguntas, los simulacros y los exámenes disponibles.</p><a href="/planes#planes">Ver planes desde Bs 200 →</a><button onclick="this.closest('dialog').close()">Seguir con mi cuenta gratuita</button></dialog></body>
 
 </html>

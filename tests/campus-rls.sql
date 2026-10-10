@@ -1,0 +1,27 @@
+BEGIN;
+CREATE TEMP TABLE campus_verification(check_name text,result boolean) ON COMMIT DROP;
+GRANT ALL ON campus_verification TO authenticated,anon;
+SELECT set_config('request.jwt.claims',jsonb_build_object('sub',(SELECT m.user_id FROM public.campus_memberships m JOIN auth.users u ON u.id=m.user_id WHERE lower(u.email) NOT IN ('pichon4488@gmail.com','admin@alcocermed.com','admin@bencarson.com','rubenconcha@example.com') LIMIT 1),'role','authenticated')::text,true);
+SET LOCAL ROLE authenticated;
+INSERT INTO campus_verification VALUES('legacy access preserved',public.campus_has_access() AND (SELECT count(*)>5 FROM public.flashcards));
+RESET ROLE;
+UPDATE public.campus_memberships SET expires_at=now()-interval '1 day' WHERE user_id=auth.uid();
+SET LOCAL ROLE authenticated;
+INSERT INTO campus_verification VALUES('expired subscription limited',NOT public.campus_has_access() AND (SELECT count(*)=5 FROM public.flashcards));
+SELECT set_config('request.jwt.claims','{"sub":"00000000-0000-4000-8000-000000000005","role":"authenticated","email":"admin@alcocermed.com","user_metadata":{"premium":true}}',true);
+INSERT INTO campus_verification VALUES('new user cannot forge admin or premium',NOT public.campus_is_admin() AND NOT public.campus_has_access());
+INSERT INTO campus_verification VALUES('free flashcards exactly five',(SELECT count(*)=5 FROM public.flashcards));
+INSERT INTO campus_verification VALUES('free bank exactly five',(SELECT count(*)=5 FROM public.banco_preguntas));
+INSERT INTO campus_verification VALUES('premium exams hidden',(SELECT count(*)=0 FROM public.simulacros));
+INSERT INTO campus_verification VALUES('other profiles hidden',(SELECT count(*)=0 FROM public.profiles));
+INSERT INTO campus_verification VALUES('private leads hidden',(SELECT count(*)=0 FROM public.leads_ventas));
+DO $$ BEGIN
+ BEGIN PERFORM public.campus_activate('nobody@example.invalid',12); RAISE EXCEPTION 'test failed: activation permitted'; EXCEPTION WHEN raise_exception THEN IF SQLERRM <> 'Solo administradores' THEN RAISE; END IF; END;
+ INSERT INTO campus_verification VALUES('free user cannot activate subscriptions',true);
+END $$;
+RESET ROLE;
+SET LOCAL ROLE anon;
+SELECT set_config('request.jwt.claims','{}',true);
+INSERT INTO campus_verification VALUES('anonymous content denied',(SELECT count(*)=0 FROM public.flashcards));
+SELECT * FROM campus_verification;
+ROLLBACK;
