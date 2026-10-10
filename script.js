@@ -3481,6 +3481,7 @@ async function loadMapasMentales() {
     try {
         var localMapas = [
             { titulo: 'Temas principales de anatomía y fisiología', materia: 'Morfofunción', url_imagen: 'mapas mentales/morfo_01_anatomia_y_fisiologia.webp', descripcion: 'Anatomía, fisiología, organización del cuerpo y homeostasis. Basado en el capítulo 1 de Saladin.', acceso_gratis: true, fecha: new Date().toISOString() },
+            { titulo: 'La química de la vida', materia: 'Morfofunción', url_imagen: 'mapas mentales/morfo_02_quimica_de_la_vida.webp', descripcion: 'Átomos, agua, metabolismo, biomoléculas y ATP. Basado en el capítulo 2 de Saladin.', acceso_gratis: true, fecha: new Date().toISOString() },
             { titulo: 'Citoesqueleto', materia: 'Biología Celular', url_imagen: 'mapas mentales/citoesqueleto.png', descripcion: 'Estructura y función del citoesqueleto: microtúbulos, microfilamentos y filamentos intermedios.', fecha: new Date().toISOString() },
             { titulo: 'La Célula', materia: 'Biología Celular', url_imagen: 'mapas mentales/lacelula.png', descripcion: 'Visión general de la célula: tipos, organelos y funciones fundamentales.', acceso_gratis: true, fecha: new Date().toISOString() },
             { titulo: 'Membrana Plasmática', materia: 'Biología Celular', url_imagen: 'mapas mentales/membranaplasmatica.png', descripcion: 'Composición y funciones de la membrana celular: bicapa lipídica, proteínas y transporte.', fecha: new Date().toISOString() },
