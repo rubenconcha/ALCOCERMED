@@ -26,12 +26,23 @@
     transform: translateY(-2px);
 }
 
+.campus-browser .library-topic-row.is-locked {
+    background: #f8fafc;
+}
+
 .campus-browser .library-topic-row strong {
     align-self: start;
     color: #19253d;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.35;
+}
+
+.campus-browser .library-topic-lock-icon {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 17px;
+    vertical-align: -1px;
 }
 
 .campus-browser .library-topic-row .library-topic-action {
@@ -49,6 +60,7 @@
     font-size: 14px;
     font-weight: 700;
     text-align: center;
+    text-decoration: none;
     cursor: pointer;
     transition: background .18s ease, box-shadow .18s ease, transform .18s ease;
 }

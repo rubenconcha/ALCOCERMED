@@ -2,17 +2,13 @@
 window.CampusAccess = (() => {
     let state = { premium: false, ready: false };
     let catalogPromise;
-    const isFree = () => !state.premium || (state.expires_at && Date.parse(state.expires_at) <= Date.now());
+    const isFree = () => !state.premium;
     function unlock() { document.getElementById('campus-unlock').showModal(); }
     async function resolve(client) {
         const { data, error } = await client.rpc('campus_access');
         if (error || !data?.ready) throw new Error('No pudimos verificar tu acceso. Intenta de nuevo.');
         state = data;
         catalogPromise = null;
-        const trialBanner = document.getElementById('trial-account-banner');
-        if (trialBanner) trialBanner.hidden = !data.trial || isFree();
-        const deadline = document.getElementById('trial-account-deadline');
-        if (deadline && data.trial && data.expires_at) deadline.textContent = 'Tu acceso gratuito termina el ' + new Date(data.expires_at).toLocaleString('es-BO') + '. Tu progreso guardado se conserva al elegir un plan.';
         document.body.classList.toggle('campus-free', Boolean(isFree()));
         document.getElementById('free-account-banner').hidden = !isFree();
         document.querySelectorAll('[data-premium-label]').forEach(el => { el.hidden = !isFree(); });
@@ -24,25 +20,18 @@ window.CampusAccess = (() => {
         });
         return catalogPromise;
     }
-    async function startSample() {
-        if (isFree()) return unlock();
-        const rows = await loadFlashcards();
-        if (!rows.length) return showToast('No pudimos cargar la muestra. Vuelve a intentarlo.', 'error');
-        const sample = rows.slice(0,5).map(row => ({...row, tema:'Tus 5 flashcards gratuitas'}));
-        startDeck('Tus 5 flashcards gratuitas','BIOLOGIA CELULAR',sample);
-    }
     async function appendLocks(container, subject) {
         if (!isFree()) return;
         try {
             const topics = (await catalog()).filter(t => normalizeDbText(t.materia) === normalizeDbText(subject) && !Number(t.free_count));
             topics.forEach(topic => {
-                const li=document.createElement('li'), button=document.createElement('button');
-                button.type='button'; button.className='campus-topic-lock'; button.textContent='🔒 '+topic.tema;
-                button.onclick=unlock; li.append(button); container.append(li);
+                const li=document.createElement('li'), link=document.createElement('a');
+                link.href='/planes#planes'; link.className='campus-topic-lock'; link.textContent='🔒 '+topic.tema;
+                li.append(link); container.append(li);
             });
         } catch (_) { /* Existing sample remains usable when catalogue is unavailable. */ }
     }
-    return { resolve, isFree, unlock, catalog, startSample, appendLocks };
+    return { resolve, isFree, unlock, catalog, appendLocks };
 })();
 
 window.continueWithGoogle = async function(button) {

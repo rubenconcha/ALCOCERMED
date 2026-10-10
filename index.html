@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
-<link rel="stylesheet" href="campus-access.css?v=1"><link rel="stylesheet" href="campus-navigation.css?v=2"><link rel="stylesheet" href="campus-home.css?v=3"><link rel="stylesheet" href="campus-topics.css?v=1">
+<link rel="stylesheet" href="campus-access.css?v=1"><link rel="stylesheet" href="campus-navigation.css?v=2"><link rel="stylesheet" href="campus-home.css?v=3"><link rel="stylesheet" href="campus-topics.css?v=2">
 </head>
 
 <body class="login-active">
@@ -92,7 +92,7 @@
                 </button>
             </form>
 
-            <div class="login-offer"><span>¿Primera vez aquí?</span><a href="/registro">Registrarse gratis →</a><a href="/planes">Prueba un tema gratis · Ver planes <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+            <div class="login-offer"><span>¿Primera vez aquí?</span><a href="/registro">Registrarse gratis →</a><a href="/planes">Dos temas por materia · Ver planes <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
             <div class="login-assistance"><a href="/planes">Quiero suscribirme</a><a href="https://wa.me/59173752688?text=Hola%2C%20necesito%20ayuda%20para%20ingresar%20a%20AlcocerMed" target="_blank" rel="noopener noreferrer">Necesito ayuda para ingresar</a></div>
             <!-- Footer -->
             <div class="login-footer">
@@ -351,8 +351,7 @@
 <section id="home-screen" class="home-screen campus-dashboard">
   <header class="campus-greeting"><div><span>PREPARATORIA BEN CARSON</span><h1>Hola, <span id="welcome-name">bienvenido</span>.</h1><p>Tu material de estudio está aquí. Elige qué quieres hacer hoy.</p></div><div class="greeting-symbol" aria-hidden="true"><img src="/assets/study-art/health-education.png" alt=""></div></header>
   <div class="dashboard-columns"><div class="dashboard-main">
-    <div id="trial-account-banner" class="free-account-banner" hidden><small>PRUEBA GRATUITA · ACCESO COMPLETO</small><h2>Tienes todo AlcocerMed disponible.</h2><p id="trial-account-deadline"></p><a href="/planes#planes">Ver planes para continuar →</a></div>
-<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA ALCOCERMED</small><h2>Continúa tu preparación.</h2><p>Elige un plan para acceder a todos los recursos. Tu progreso guardado permanece en tu cuenta.</p><div class="free-samples"><button onclick="CampusAccess.unlock()">Ver planes →</button></div></div>
+<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA GRATUITA</small><h2>Empieza por los primeros temas.</h2><p>Puedes repasar los dos primeros temas de cada materia. Los demás se desbloquean al elegir un plan; tu avance se conserva.</p><div class="free-samples"><button onclick="location.href='/planes#planes'">Ver planes →</button></div></div>
 
     <section class="dashboard-launch" aria-labelledby="dashboard-launch-title"><div class="dashboard-launch-heading"><div><span class="dashboard-eyebrow">TU ESPACIO DE ESTUDIO</span><h2 id="dashboard-launch-title">¿Qué vas a estudiar hoy?</h2></div></div>
       <div class="dashboard-activity-grid">
@@ -1261,9 +1260,9 @@
     <script src="platform-polish.js?v=1"></script>
     <script src="config.js"></script>
     <script src="device_guard.js"></script>
-    <script src="campus-access.js?v=2"></script>
+    <script src="campus-access.js?v=3"></script>
     <script src="script.js?v=14"></script>
-    <script src="student-library.js?v=6"></script>
+    <script src="student-library.js?v=7"></script>
 <dialog id="campus-unlock" class="campus-unlock"><span aria-hidden="true">🔒</span><h2>Sigue con el repaso completo.</h2><p>Con un plan puedes continuar con todas las flashcards, mapas mentales, juegos, simulacros y exámenes. Tu progreso guardado se conserva.</p><a href="/planes#planes">Ver planes desde Bs 200 →</a><button onclick="this.closest('dialog').close()">Seguir con mi cuenta gratuita</button></dialog></body>
 
 </html>

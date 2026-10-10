@@ -42,16 +42,26 @@
         status.textContent = visible.length ? 'Elige un tema para comenzar tu repaso.' : 'No se encontraron temas. Prueba otra búsqueda o materia.';
         visible.forEach(topic => {
             const row = document.createElement('article');
-            row.className = 'library-topic-row';
+            row.className = topic.locked ? 'library-topic-row is-locked' : 'library-topic-row';
             const title = document.createElement('strong');
             title.textContent = topic.name.charAt(0).toLocaleUpperCase('es') + topic.name.slice(1);
-            const button = document.createElement('button');
-            button.type = 'button';
-            button.className = topic.locked ? 'library-topic-action is-locked' : 'library-topic-action';
-            button.textContent = topic.locked ? 'Desbloquear' : 'Empezar';
-            button.setAttribute('aria-label', `${topic.locked ? 'Desbloquear' : 'Empezar'} ${topic.name}`);
-            button.addEventListener('click', () => topic.locked ? CampusAccess.unlock() : startDeck(topic.name, subject, rows));
-            row.append(title, button);
+            if (topic.locked) {
+                const icon = document.createElement('span');
+                icon.className = 'library-topic-lock-icon';
+                icon.textContent = '🔒';
+                icon.setAttribute('aria-hidden', 'true');
+                title.append(icon);
+            }
+            const action = document.createElement(topic.locked ? 'a' : 'button');
+            action.className = topic.locked ? 'library-topic-action is-locked' : 'library-topic-action';
+            action.textContent = topic.locked ? 'Ver planes →' : 'Empezar';
+            action.setAttribute('aria-label', topic.locked ? `Ver planes para desbloquear ${topic.name}` : `Empezar ${topic.name}`);
+            if (topic.locked) action.href = '/planes#planes';
+            else {
+                action.type = 'button';
+                action.addEventListener('click', () => startDeck(topic.name, subject, rows));
+            }
+            row.append(title, action);
             list.append(row);
         });
     }
