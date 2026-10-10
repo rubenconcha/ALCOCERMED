@@ -11,7 +11,7 @@ function loadFunction(name) {
   vm.runInContext(source.slice(start, end), context);
 }
 
-for (const name of ['normalizeDemoText', 'isDemoEvaluation', 'resolveEvaluationSubject', 'subjectMatch']) loadFunction(name);
+for (const name of ['normalizeDemoText', 'isDemoEvaluation', 'resolveEvaluationSubject', 'subjectMatch', 'sortSubjectEvaluations']) loadFunction(name);
 
 assert.equal(context.isDemoEvaluation({ titulo: 'Tema 12: Población y muestra', tema: 'Población y muestra', codigo: 'SP12P2' }), false);
 assert.equal(context.isDemoEvaluation({ titulo: 'Evaluación 1', asignatura: 'Otro' }), true);
@@ -26,3 +26,10 @@ assert.equal(context.subjectMatch({ asignatura: 'Otro', titulo: 'Sistema Óseo' 
 assert.equal(context.subjectMatch({ asignatura: 'Anatomía', titulo: 'Examen Tejido Muscular' }, 'MORFOFUNCION'), true);
 assert.equal(context.subjectMatch({ asignatura: 'Biología Celular', titulo: 'Introducción a la biología celular' }, 'BIOLOGIA CELULAR'), true);
 assert.equal(context.subjectMatch({ asignatura: 'BIOLOGIA CELULAR', tema: 'Capitulo 1: introduccion', titulo: 'Capitulo 1' }, 'BIOLOGIA CELULAR'), true);
+const morfoGames = [
+  { codigo: 'SENTIDOS1', titulo: 'Sentidos', created_at: '2026-01-02' },
+  { codigo: 'DEMOMORFO26', titulo: 'Demo oficial', created_at: '2026-01-01' },
+  { codigo: 'MORFO20', titulo: 'Juego de pago', created_at: '2026-01-03' }
+];
+context.sortSubjectEvaluations(morfoGames, 'MORFOFUNCION');
+assert.equal(morfoGames[0].codigo, 'DEMOMORFO26');

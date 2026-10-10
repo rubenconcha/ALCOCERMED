@@ -2734,6 +2734,9 @@ function subjectMatch(ev, subjectName) {
 
 function sortSubjectEvaluations(list, subject) {
     list.sort(function(a, b) {
+        var aOfficialDemo = /^DEMO(MORFO|BIO|SALUD)26$/.test(normalizeDemoText(a.codigo || ''));
+        var bOfficialDemo = /^DEMO(MORFO|BIO|SALUD)26$/.test(normalizeDemoText(b.codigo || ''));
+        if (aOfficialDemo !== bOfficialDemo) return aOfficialDemo ? -1 : 1;
         var aDemo = isDemoEvaluation(a) ? 1 : 0;
         var bDemo = isDemoEvaluation(b) ? 1 : 0;
         if (aDemo !== bDemo) return bDemo - aDemo;
