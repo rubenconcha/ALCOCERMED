@@ -12,6 +12,7 @@ window.CampusAccess = (() => {
         document.body.classList.toggle('campus-free', Boolean(isFree()));
         document.getElementById('free-account-banner').hidden = !isFree();
         document.querySelectorAll('[data-premium-label]').forEach(el => { el.hidden = !isFree(); });
+        document.querySelectorAll('[data-premium-only]').forEach(el => { el.hidden = isFree(); });
         return state;
     }
     async function catalog() {
@@ -26,7 +27,7 @@ window.CampusAccess = (() => {
             const topics = (await catalog()).filter(t => normalizeDbText(t.materia) === normalizeDbText(subject) && !Number(t.free_count));
             topics.forEach(topic => {
                 const li=document.createElement('li'), link=document.createElement('a');
-                link.href='/planes#planes'; link.className='campus-topic-lock'; link.textContent='🔒 '+topic.tema;
+                link.href='/planes?desde=campus#planes'; link.className='campus-topic-lock'; link.textContent='🔒 '+topic.tema;
                 li.append(link); container.append(li);
             });
         } catch (_) { /* Existing sample remains usable when catalogue is unavailable. */ }

@@ -19,6 +19,10 @@
 .sidebar .nav-icon-sim,.sidebar .nav-icon-quiz{color:#ffbd90;background:#df78321c;border-color:#df783232}
 .sidebar .nav-icon-hang,.sidebar .nav-icon-arena{color:#a8e2b5;background:#47a86b1c;border-color:#47a86b32}
 .sidebar .nav-icon-admin{color:#d4dce9;background:#ffffff0b;border-color:#ffffff16}
+.dashboard-activity .dashboard-lock{position:absolute;top:15px;right:15px;display:inline-flex;flex-direction:row;align-items:center;gap:6px;max-width:none;padding:7px 10px;border:1px solid #e6ad4c;border-radius:999px;background:#fff7e6;color:#754c09;font-size:12px;font-weight:800;box-shadow:0 3px 10px #a2661515}
+.dashboard-activity .dashboard-lock i,.dashboard-more-lock i{font-size:12px}
+.dashboard-more .dashboard-more-lock{display:inline-flex;align-items:center;justify-content:center;width:33px;height:33px;flex:none;border:1px solid #e6ad4c;border-radius:10px;background:#fff7e6;color:#754c09}
+@media(max-width:650px){.dashboard-activity .dashboard-lock{top:9px;right:9px;padding:5px 7px;font-size:10px}.dashboard-activity .dashboard-lock i{font-size:10px}}
 .sidebar .nav-item>a:hover .nav-icon{transform:translateY(-1px);background:#ffffff1b;border-color:#ffffff40}
 .sidebar .nav-item-active>a .nav-icon{color:#26344a;background:#fff4d6;border-color:#ffe08b}
 .sidebar .nav-item>a:focus-visible{outline:2px solid #ffce60;outline-offset:2px}

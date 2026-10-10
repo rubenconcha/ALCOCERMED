@@ -28,6 +28,7 @@
 
 .campus-browser .library-topic-row.is-locked {
     background: #f8fafc;
+    border-color: #d4dfe9;
 }
 
 .campus-browser .library-topic-row strong {
@@ -38,11 +39,18 @@
     line-height: 1.35;
 }
 
-.campus-browser .library-topic-lock-icon {
-    display: inline-block;
-    margin-left: 10px;
-    font-size: 17px;
-    vertical-align: -1px;
+.campus-browser .library-topic-row .library-topic-lock-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 12px;
+    padding: 5px 9px;
+    border-radius: 7px;
+    background: #e9eef4;
+    color: #53667b;
+    font-size: 12px;
+    font-weight: 700;
+    vertical-align: 2px;
 }
 
 .campus-browser .library-topic-row .library-topic-action {
@@ -72,9 +80,9 @@
 }
 
 .campus-browser .library-topic-row .library-topic-action.is-locked {
-    border-color: #dbe4ef;
-    background: #f5f7fa;
-    color: #3b4a63;
+    border-color: #e9a631;
+    background: #fff5df;
+    color: #583a06;
 }
 
 .campus-browser .library-topic-row .library-topic-action.is-locked:hover {

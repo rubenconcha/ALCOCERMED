@@ -39,7 +39,7 @@
         const query = normalizeDbText(search.value);
         const visible = topics.filter(topic => normalizeDbText(topic.name).includes(query));
         list.replaceChildren();
-        status.textContent = visible.length ? 'Elige un tema para comenzar tu repaso.' : 'No se encontraron temas. Prueba otra búsqueda o materia.';
+        status.textContent = visible.length ? (window.CampusAccess?.isFree() ? 'Los temas con candado se desbloquean con un plan.' : 'Elige un tema para comenzar tu repaso.') : 'No se encontraron temas. Prueba otra búsqueda o materia.';
         visible.forEach(topic => {
             const row = document.createElement('article');
             row.className = topic.locked ? 'library-topic-row is-locked' : 'library-topic-row';
@@ -48,15 +48,14 @@
             if (topic.locked) {
                 const icon = document.createElement('span');
                 icon.className = 'library-topic-lock-icon';
-                icon.textContent = '🔒';
-                icon.setAttribute('aria-hidden', 'true');
+                icon.innerHTML = '<i class="fas fa-lock" aria-hidden="true"></i> Bloqueado';
                 title.append(icon);
             }
             const action = document.createElement(topic.locked ? 'a' : 'button');
             action.className = topic.locked ? 'library-topic-action is-locked' : 'library-topic-action';
-            action.textContent = topic.locked ? 'Ver planes →' : 'Empezar';
+            action.textContent = topic.locked ? 'Desbloquear →' : 'Empezar';
             action.setAttribute('aria-label', topic.locked ? `Ver planes para desbloquear ${topic.name}` : `Empezar ${topic.name}`);
-            if (topic.locked) action.href = '/planes#planes';
+            if (topic.locked) action.href = '/planes?desde=campus#planes';
             else {
                 action.type = 'button';
                 action.addEventListener('click', () => startDeck(topic.name, subject, rows));
