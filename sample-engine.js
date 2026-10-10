@@ -313,7 +313,7 @@ function renderMmGrid() {
             '<div class="mm-zoom-overlay"><i class="fas fa-expand"></i></div>' +
             '</div>' +
             '<div class="mm-card-body">' +
-            (materia ? '<span class="mm-card-materia">' + materia.toLowerCase() + '</span>' : '') +
+            (materia ? '<span class="mm-card-materia">' + materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + '</span>' : '') +
             '<h3 class="mm-card-title">' + titulo + '</h3>' +
             (desc ? '<p class="mm-card-desc">' + desc + '</p>' : '') +
             '</div>';

@@ -547,7 +547,7 @@ function startDeck(tema, asignatura, data) {
     currentIndex = 0;
     ultimaMateria = asignatura.toLowerCase();
 
-    document.getElementById('current-subject').innerText = asignatura.toLowerCase();
+    document.getElementById('current-subject').innerText = asignatura.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
     document.getElementById('card-tema-name').innerText = tema.toLowerCase();
     document.getElementById('card-total').innerText = deck.length;
 
@@ -884,7 +884,7 @@ function actualizarProgreso() {
     if (elTemas) elTemas.textContent = temasVistos.size;
 
     const elMateria = document.getElementById('prog-materia-label');
-    if (elMateria) elMateria.textContent = ultimaMateria !== '—' ? ultimaMateria : 'sin actividad aún';
+    if (elMateria) elMateria.textContent = ultimaMateria !== '—' ? String(ultimaMateria).replace(/^salud p[úu]blica$/i, 'Educación para la Salud') : 'sin actividad aún';
 
     const total = deck.length || 0;
     const vistas = Math.min(currentIndex, total);
@@ -1002,10 +1002,10 @@ const QUIZ_QUESTIONS = [
     { q: 'el tendón de aquiles conecta los músculos de la pantorrilla con:', opts: ['el peroné', 'la tibia', 'el calcáneo', 'el astrágalo'], answer: 2, subject: 'morfofunción' },
     { q: '¿qué cámara del corazón bombea sangre a la circulación sistémica?', opts: ['aurícula derecha', 'ventrículo derecho', 'aurícula izquierda', 'ventrículo izquierdo'], answer: 3, subject: 'morfofunción' },
     { q: 'la articulación de la rodilla es de tipo:', opts: ['esferoidea', 'gínglimo (bisagra)', 'trocoidea', 'elipsoidea'], answer: 1, subject: 'morfofunción' },
-    // Salud Pública
-    { q: '¿qué mide la tasa de mortalidad infantil?', opts: ['muertes de menores de 5 años por cada 100k hab.', 'muertes de menores de 1 año por cada 1000 nacidos vivos', 'muertes maternas por cada 100k nacidos', 'fallecidos en hospitales por año'], answer: 1, subject: 'salud pública' },
-    { q: 'la epidemiología estudia principalmente:', opts: ['las enfermedades individuales', 'la distribución y determinantes de la salud en poblaciones', 'la anatomía patológica', 'el tratamiento farmacológico'], answer: 1, subject: 'salud pública' },
-    { q: '¿cuál es el indicador que mide los años de vida ajustados por discapacidad?', opts: ['AVISA (DALY)', 'AVPP', 'tasa de incidencia', 'índice de Gini'], answer: 0, subject: 'salud pública' },
+    // Educación para la Salud
+    { q: '¿qué mide la tasa de mortalidad infantil?', opts: ['muertes de menores de 5 años por cada 100k hab.', 'muertes de menores de 1 año por cada 1000 nacidos vivos', 'muertes maternas por cada 100k nacidos', 'fallecidos en hospitales por año'], answer: 1, subject: 'educación para la salud' },
+    { q: 'la epidemiología estudia principalmente:', opts: ['las enfermedades individuales', 'la distribución y determinantes de la salud en poblaciones', 'la anatomía patológica', 'el tratamiento farmacológico'], answer: 1, subject: 'educación para la salud' },
+    { q: '¿cuál es el indicador que mide los años de vida ajustados por discapacidad?', opts: ['AVISA (DALY)', 'AVPP', 'tasa de incidencia', 'índice de Gini'], answer: 0, subject: 'educación para la salud' },
 ];
 
 const HANGMAN_WORDS = [
@@ -1601,7 +1601,7 @@ async function loadBancoMaterias() {
         bancoState.materias.forEach(function (m) {
             const btn = document.createElement('button');
             btn.className = 'banco-dropdown-item';
-            btn.textContent = m.toLowerCase();
+            btn.textContent = m.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
             btn.onclick = function () { selectBancoMateria(m); };
             ddEl.appendChild(btn);
         });
@@ -1625,13 +1625,13 @@ window.selectBancoMateria = async function (materia) {
     bancoState.selectedTema = null;
 
     // Actualizar UI materia
-    document.getElementById('banco-materia-text').textContent = materia.toLowerCase();
+    document.getElementById('banco-materia-text').textContent = materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
     document.getElementById('banco-materia-dropdown').classList.add('hidden');
     document.getElementById('banco-materia-btn').classList.remove('open');
 
     // Highlight item seleccionado
     document.querySelectorAll('#banco-materia-dropdown .banco-dropdown-item').forEach(function (el) {
-        el.classList.toggle('selected', el.textContent === materia.toLowerCase());
+        el.classList.toggle('selected', el.textContent === materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud'));
     });
 
     // Habilitar select tema
@@ -1775,7 +1775,7 @@ async function loadBancoPreguntas() {
             filterText.textContent = 'tema: ' + bancoState.selectedTema.toLowerCase() + difLabel;
         } else {
             filterRow.classList.remove('hidden');
-            filterText.textContent = 'materia: ' + bancoState.selectedMateria.toLowerCase() + ' · todos los temas' + difLabel;
+            filterText.textContent = 'materia: ' + bancoState.selectedMateria.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + ' · todos los temas' + difLabel;
         }
 
         // Habilitar botón start si hay preguntas
@@ -1864,7 +1864,7 @@ window.startBanco = function () {
     });
 
     // Actualizar meta header
-    document.getElementById('bq-materia').textContent = bancoState.selectedMateria.toLowerCase();
+    document.getElementById('bq-materia').textContent = bancoState.selectedMateria.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
     document.getElementById('bq-tema').textContent = bancoState.selectedTema
         ? bancoState.selectedTema.toLowerCase()
         : 'todos los temas';
@@ -2367,7 +2367,7 @@ async function loadPreguntasDificiles() {
                     '<div class="banco-dificil-body">' +
                     '<div class="banco-dificil-pregunta">' + (r.pregunta_texto || 'pregunta sin texto') + '</div>' +
                     '<div class="banco-dificil-meta">' +
-                    (r.materia ? '<span><i class="fas fa-book-medical"></i>' + r.materia.toLowerCase() + '</span>' : '') +
+                    (r.materia ? '<span><i class="fas fa-book-medical"></i>' + r.materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + '</span>' : '') +
                     (r.tema ? '<span><i class="fas fa-tag"></i>' + r.tema.toLowerCase() + '</span>' : '') +
                     (lastDate ? '<span><i class="fas fa-clock"></i>' + lastDate + '</span>' : '') +
                     '</div>' +
@@ -2575,7 +2575,7 @@ async function loadSimMaterias() {
         materiasSet.forEach(function (m) {
             var btn = document.createElement('button');
             btn.className = 'banco-dropdown-item';
-            btn.textContent = m.toLowerCase();
+            btn.textContent = m.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
             btn.onclick = function () { selectSimMateria(m); };
             ddEl.appendChild(btn);
         });
@@ -2594,10 +2594,10 @@ window.toggleSimDropdown = function () {
 
 window.selectSimMateria = function (materia) {
     simState.selectedMateria = materia;
-    document.getElementById('sim-materia-text').textContent = materia.toLowerCase();
+    document.getElementById('sim-materia-text').textContent = materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
     document.getElementById('sim-materia-dropdown').classList.add('hidden');
     document.getElementById('sim-materia-btn').classList.remove('open');
-    document.getElementById('sim-sum-materia').textContent = materia.toLowerCase();
+    document.getElementById('sim-sum-materia').textContent = materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
 };
 
 window.setSimMode = function (mode) {
@@ -2699,7 +2699,7 @@ window.iniciarSimulacro = async function () {
         // Actualizar header
         document.getElementById('sim-exam-materia').textContent =
             simState.mode === 'oficial' ? simState.selectedExamen.toLowerCase() :
-                (simState.mode === 'materia' ? simState.selectedMateria.toLowerCase() : 'simulacro aleatorio');
+                (simState.mode === 'materia' ? simState.selectedMateria.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') : 'simulacro aleatorio');
 
         document.getElementById('sim-exam-nq-info').textContent = simState.preguntas.length + ' preguntas';
         document.getElementById('sim-total-num').textContent = simState.preguntas.length;
@@ -3095,7 +3095,7 @@ async function renderEvaluacion() {
             item.className = 'eval-materia-item';
             item.innerHTML =
                 '<div class="eval-materia-top">' +
-                '<span class="eval-materia-name">' + m.toLowerCase() + '</span>' +
+                '<span class="eval-materia-name">' + m.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + '</span>' +
                 '<span class="eval-materia-pct" style="color:' + color + '">' + avgPct + '%</span>' +
                 '</div>' +
                 '<div class="eval-materia-bar-wrap">' +
@@ -3125,7 +3125,7 @@ async function renderEvaluacion() {
                 '<div class="eval-hist-left">' +
                 '<span class="eval-hist-num">#' + (i + 1) + '</span>' +
                 '<div>' +
-                '<span class="eval-hist-materia">' + (h.materia || 'todas').toLowerCase() + '</span>' +
+                '<span class="eval-hist-materia">' + (h.materia || 'todas').toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + '</span>' +
                 '<span class="eval-hist-fecha">' + fechaStr + ' · ' + horaStr + '</span>' +
                 '</div>' +
                 '</div>' +
@@ -3194,7 +3194,7 @@ function populateVcMaterias() {
     materias.forEach(function (m) {
         var btn = document.createElement('button');
         btn.className = 'banco-dropdown-item';
-        btn.textContent = m.toLowerCase();
+        btn.textContent = m.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
         btn.onclick = function () { selectVcMateria(m); };
         dd.appendChild(btn);
     });
@@ -3212,7 +3212,7 @@ window.toggleVcDropdown = function () {
 window.selectVcMateria = function (materia) {
     vcState.selectedMateria = materia;
     var el = document.getElementById('vc-materia-text');
-    if (el) el.textContent = materia ? materia.toLowerCase() : 'todas las materias';
+    if (el) el.textContent = materia ? materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') : 'todas las materias';
     var dd = document.getElementById('vc-materia-dropdown');
     var btn = document.getElementById('vc-materia-btn');
     if (dd) dd.classList.add('hidden');
@@ -3260,7 +3260,7 @@ function renderVcGrid() {
             (duracion ? '<span class="vc-duration">' + duracion + '</span>' : '') +
             '</div>' +
             '<div class="vc-card-body">' +
-            (materia ? '<span class="vc-card-materia">' + materia.toLowerCase() + '</span>' : '') +
+            (materia ? '<span class="vc-card-materia">' + materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + '</span>' : '') +
             '<h3 class="vc-card-title">' + titulo + '</h3>' +
             (desc ? '<p class="vc-card-desc">' + desc + '</p>' : '') +
             (tema ? '<span class="vc-card-tema"><i class="fas fa-tag"></i> ' + tema.toLowerCase() + '</span>' : '') +
@@ -3411,7 +3411,7 @@ function populateMmMaterias() {
     materias.forEach(function (m) {
         var btn = document.createElement('button');
         btn.className = 'banco-dropdown-item';
-        btn.textContent = m.toLowerCase();
+        btn.textContent = m.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
         btn.onclick = function () { selectMmMateria(m); };
         dd.appendChild(btn);
     });
@@ -3429,7 +3429,7 @@ window.toggleMmDropdown = function () {
 window.selectMmMateria = function (materia) {
     mmState.selectedMateria = materia;
     var el = document.getElementById('mm-materia-text');
-    if (el) el.textContent = materia ? materia.toLowerCase() : 'todas las materias';
+    if (el) el.textContent = materia ? materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') : 'todas las materias';
     var dd = document.getElementById('mm-materia-dropdown');
     var btn = document.getElementById('mm-materia-btn');
     if (dd) dd.classList.add('hidden');
@@ -3471,7 +3471,7 @@ function renderMmGrid() {
             '<div class="mm-zoom-overlay"><i class="fas fa-expand"></i></div>' +
             '</div>' +
             '<div class="mm-card-body">' +
-            (materia ? '<span class="mm-card-materia">' + materia.toLowerCase() + '</span>' : '') +
+            (materia ? '<span class="mm-card-materia">' + materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + '</span>' : '') +
             '<h3 class="mm-card-title">' + titulo + '</h3>' +
             (desc ? '<p class="mm-card-desc">' + desc + '</p>' : '') +
             '</div>';
