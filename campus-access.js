@@ -9,6 +9,10 @@ window.CampusAccess = (() => {
         if (error || !data?.ready) throw new Error('No pudimos verificar tu acceso. Intenta de nuevo.');
         state = data;
         catalogPromise = null;
+        const trialBanner = document.getElementById('trial-account-banner');
+        if (trialBanner) trialBanner.hidden = !data.trial || isFree();
+        const deadline = document.getElementById('trial-account-deadline');
+        if (deadline && data.trial && data.expires_at) deadline.textContent = 'Tu acceso gratuito termina el ' + new Date(data.expires_at).toLocaleString('es-BO') + '. Tu progreso guardado se conserva al elegir un plan.';
         document.body.classList.toggle('campus-free', Boolean(isFree()));
         document.getElementById('free-account-banner').hidden = !isFree();
         document.querySelectorAll('[data-premium-label]').forEach(el => { el.hidden = !isFree(); });
@@ -21,6 +25,7 @@ window.CampusAccess = (() => {
         return catalogPromise;
     }
     async function startSample() {
+        if (isFree()) return unlock();
         const rows = await loadFlashcards();
         if (!rows.length) return showToast('No pudimos cargar la muestra. Vuelve a intentarlo.', 'error');
         const sample = rows.slice(0,5).map(row => ({...row, tema:'Tus 5 flashcards gratuitas'}));

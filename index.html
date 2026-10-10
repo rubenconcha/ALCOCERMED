@@ -431,7 +431,8 @@
 
         <!-- ══ PANTALLA INICIO — MOBILE FIRST ══ -->
         <section id="home-screen" class="home-screen home-mobile-redesign">
-<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA GRATUITA</small><h2>Empieza a repasar. Tu avance cuenta.</h2><p>Tienes 5 flashcards, 5 mapas mentales y prácticas de 5 preguntas. Los recursos con candado se abren con un plan.</p><div class="free-samples"><button onclick="CampusAccess.startSample()">5 flashcards →</button><button onclick="openMindMaps()">5 mapas →</button><button onclick="openGame('quiz')">Quiz de 5 preguntas →</button><button onclick="openBanco()">Banco de muestra →</button><button onclick="CampusAccess.unlock()">🔒 Desbloquear todo</button></div></div>
+<div id="trial-account-banner" class="free-account-banner" hidden><small>PRUEBA GRATUITA · ACCESO COMPLETO</small><h2>Tienes todo AlcocerMed disponible.</h2><p id="trial-account-deadline"></p><a href="/planes#planes">Ver planes para continuar →</a></div>
+<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA ALCOCERMED</small><h2>Continúa tu preparación.</h2><p>Elige un plan para acceder a todos los recursos. Tu progreso guardado permanece en tu cuenta.</p><div class="free-samples"><button onclick="CampusAccess.unlock()">Ver planes →</button></div></div>
             <div class="home-mobile-hero">
                 <div class="home-hero-kicker"><i class="fas fa-bolt"></i> Tu espacio de estudio</div>
                 <h1>Elige tu próximo tema.</h1>
@@ -1352,9 +1353,9 @@
     <script src="platform-polish.js?v=1"></script>
     <script src="config.js"></script>
     <script src="device_guard.js"></script>
-    <script src="campus-access.js?v=1"></script>
-    <script src="script.js?v=8"></script>
+    <script src="campus-access.js?v=2"></script>
+    <script src="script.js?v=9"></script>
     <script src="student-library.js?v=3"></script>
-<dialog id="campus-unlock" class="campus-unlock"><span aria-hidden="true">🔒</span><h2>Sigue con el repaso completo.</h2><p>Tu cuenta gratuita conserva sus muestras. Con un plan puedes abrir todas las flashcards, el banco de preguntas, los simulacros y los exámenes disponibles.</p><a href="/planes#planes">Ver planes desde Bs 200 →</a><button onclick="this.closest('dialog').close()">Seguir con mi cuenta gratuita</button></dialog></body>
+<dialog id="campus-unlock" class="campus-unlock"><span aria-hidden="true">🔒</span><h2>Sigue con el repaso completo.</h2><p>Con un plan puedes continuar con todas las flashcards, mapas mentales, juegos, simulacros y exámenes. Tu progreso guardado se conserva.</p><a href="/planes#planes">Ver planes desde Bs 200 →</a><button onclick="this.closest('dialog').close()">Seguir con mi cuenta gratuita</button></dialog></body>
 
 </html>

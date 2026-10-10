@@ -1,0 +1,24 @@
+BEGIN;
+CREATE TEMP TABLE trial_checks(check_name text,result boolean) ON COMMIT DROP;
+GRANT ALL ON trial_checks TO authenticated,anon;
+INSERT INTO auth.users(id,email,created_at) VALUES('00000000-0000-4000-8000-000000004848','trial-check@example.invalid',now());
+SELECT set_config('request.jwt.claims','{"sub":"00000000-0000-4000-8000-000000004848","role":"authenticated"}',true);
+SET LOCAL ROLE authenticated;
+INSERT INTO trial_checks VALUES('new account gets full access',public.campus_has_access() AND (public.campus_access()->>'trial')::boolean AND (SELECT count(*)>5 FROM public.flashcards));
+INSERT INTO trial_checks VALUES('trial lasts exactly 48 hours',public.campus_trial_end()=now()+interval '48 hours');
+INSERT INTO trial_checks VALUES('trial is not admin',NOT public.campus_is_admin());
+RESET ROLE;
+-- Simulate expiry without changing account registration or real users.
+CREATE OR REPLACE FUNCTION public.campus_trial_end() RETURNS timestamptz LANGUAGE sql STABLE SECURITY DEFINER SET search_path='' AS $$ SELECT now()-interval '1 second'; $$;
+SET LOCAL ROLE authenticated;
+INSERT INTO trial_checks VALUES('expired trial loses content',NOT public.campus_has_access() AND (SELECT count(*)=0 FROM public.flashcards) AND (SELECT count(*)=0 FROM public.banco_preguntas));
+RESET ROLE;
+INSERT INTO public.campus_memberships(user_id,plan,expires_at) VALUES('00000000-0000-4000-8000-000000004848','monthly',now()+interval '1 month');
+SET LOCAL ROLE authenticated;
+INSERT INTO trial_checks VALUES('paid subscription works after trial',public.campus_has_access());
+RESET ROLE;
+SET LOCAL ROLE anon;
+SELECT set_config('request.jwt.claims','{}',true);
+INSERT INTO trial_checks VALUES('anonymous remains blocked',NOT public.campus_has_access() AND (SELECT count(*)=0 FROM public.flashcards));
+SELECT * FROM trial_checks;
+ROLLBACK;

@@ -988,6 +988,7 @@ function restoreSidebarState() {
 // ══════════════════════════════════════════════
 
 window.openGame = function (gameType) {
+    if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
     if (gameType === 'quiz') {
         showScreen('game-quiz');
         startQuiz();
@@ -1534,6 +1535,7 @@ let bancoState = {
 // ABRIR BANCO (pantalla selector)
 // ──────────────────────────────────────────────
 window.openBanco = async function () {
+    if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
     // Advertir si hay banco en progreso
     const enProgreso = bancoState.preguntas.length > 0 && !bancoState.finalized &&
         bancoState.answers.some(function (a) { return a.selected !== null; });
@@ -3382,6 +3384,7 @@ var mmState = {
 };
 
 window.openMindMaps = function () {
+    if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
     if (typeof openIntocables === 'function') openIntocables();
 };
 

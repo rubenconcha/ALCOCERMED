@@ -7,11 +7,11 @@ INSERT INTO campus_verification VALUES('legacy access preserved',public.campus_h
 RESET ROLE;
 UPDATE public.campus_memberships SET expires_at=now()-interval '1 day' WHERE user_id=auth.uid();
 SET LOCAL ROLE authenticated;
-INSERT INTO campus_verification VALUES('expired subscription limited',NOT public.campus_has_access() AND (SELECT count(*)=5 FROM public.flashcards));
+INSERT INTO campus_verification VALUES('expired subscription limited',NOT public.campus_has_access() AND (SELECT count(*)=0 FROM public.flashcards));
 SELECT set_config('request.jwt.claims','{"sub":"00000000-0000-4000-8000-000000000005","role":"authenticated","email":"admin@alcocermed.com","user_metadata":{"premium":true}}',true);
 INSERT INTO campus_verification VALUES('new user cannot forge admin or premium',NOT public.campus_is_admin() AND NOT public.campus_has_access());
-INSERT INTO campus_verification VALUES('free flashcards exactly five',(SELECT count(*)=5 FROM public.flashcards));
-INSERT INTO campus_verification VALUES('free bank exactly five',(SELECT count(*)=5 FROM public.banco_preguntas));
+INSERT INTO campus_verification VALUES('expired flashcards blocked',(SELECT count(*)=0 FROM public.flashcards));
+INSERT INTO campus_verification VALUES('expired bank blocked',(SELECT count(*)=0 FROM public.banco_preguntas));
 INSERT INTO campus_verification VALUES('premium exams hidden',(SELECT count(*)=0 FROM public.simulacros));
 INSERT INTO campus_verification VALUES('other profiles hidden',(SELECT count(*)=0 FROM public.profiles));
 INSERT INTO campus_verification VALUES('private leads hidden',(SELECT count(*)=0 FROM public.leads_ventas));
