@@ -113,15 +113,10 @@ def load_cards() -> list[dict]:
 def distractor_score(target: dict, candidate: dict) -> float:
     qj = len(target["_qwords"] & candidate["_qwords"]) / max(1, len(target["_qwords"] | candidate["_qwords"]))
     length_fit = 1 - abs(math.log((len(candidate["respuesta"]) + 12) / (len(target["respuesta"]) + 12)))
-    same_topic = target["tema"] == candidate["tema"]
     target_prefix = norm(target["respuesta"]).split()[:2]
     candidate_prefix = norm(candidate["respuesta"]).split()[:2]
-    # Explanatory questions often have several simultaneously true causes in a
-    # chapter. Use other chapters for their distractors to keep one clear key.
-    explanatory = target["_kind"] in {"por que", "como"} or target["_shape"] == "reason"
     return (
-        ((-1.0 if explanatory else 1.5) if same_topic else 0.0)
-        + (0.45 if target["_kind"] == candidate["_kind"] else 0.0)
+        (0.45 if target["_kind"] == candidate["_kind"] else 0.0)
         + (2.6 if target["_shape"] == candidate["_shape"] else -1.2)
         + (2.0 if target["_shape"] == "number" and candidate["_shape"] == "number" else 0.0)
         + (0.8 if target_prefix == candidate_prefix else 0.0)
@@ -145,16 +140,10 @@ def choose_distractors(target: dict, subject_cards: list[dict]) -> list[str]:
     candidates = []
     target_answer = norm(target["respuesta"])
     for candidate in subject_cards:
-        if candidate is target:
+        if candidate is target or candidate["tema"] != target["tema"]:
             continue
         answer = norm(candidate["respuesta"])
-        if answer == target_answer or answer in target_answer or target_answer in answer:
-            continue
-        target_stems = {w[:6] for w in target["_awords"]}
-        candidate_stems = {w[:6] for w in candidate["_awords"]}
-        # A different true statement about the same concept is a particularly
-        # dangerous distractor (it can yield two correct answers).
-        if target_stems & candidate_stems:
+        if answer == target_answer:
             continue
         score = distractor_score(target, candidate)
         # Stable tie break prevents unrelated source-file order from changing options.
