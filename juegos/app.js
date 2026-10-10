@@ -1131,6 +1131,7 @@ function enterApp() {
         GameAccess.verify(getSupabase()).then(function(paid) {
             if (!currentUser || currentUser.id !== accessUserId) return;
             DEMO_ACCESS_ONLY = !paid;
+            syncGameDemoBanner();
             if (currentPage === 'jugar') {
                 if (exploreCurrentSubject) loadSubjectEvaluations(exploreCurrentSubject);
                 else loadExploreSubjects();
@@ -2526,6 +2527,11 @@ var SUBJECTS = [
 ];
 
 var DEMO_ACCESS_ONLY = true;
+function syncGameDemoBanner() {
+    var banner = document.getElementById('game-demo-banner');
+    if (banner) banner.hidden = isAdmin || !DEMO_ACCESS_ONLY;
+}
+
 
 function normalizeDemoText(value) {
     return String(value || '')
@@ -2846,6 +2852,7 @@ function loadExploreSubjects() {
     var client = getSupabase();
     var grid = document.getElementById('explorar-subject-grid');
     if (!grid) return;
+    syncGameDemoBanner();
     
     document.getElementById('explorar-subject-grid').style.display = '';
     var evalList = document.getElementById('explorar-eval-list');
