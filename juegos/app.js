@@ -2245,14 +2245,14 @@ function cleanupPowerupsForNextQ() {
     if (quizStreakCount === undefined) quizStreakCount = 0;
 }
 
-// ═══ SELECCION DIVERSA DE PREGUNTAS (garantiza mc, ms, fb, tf, dnd cuando existan) ═══
+// ═══ SELECCION DIVERSA DE PREGUNTAS (incluye las modalidades disponibles) ═══
 function selectDiverseQuestions(allQuestions, total) {
     var shuffled = allQuestions.slice();
     for (var i = shuffled.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = shuffled[i]; shuffled[i] = shuffled[j]; shuffled[j] = temp;
     }
-    var byType = { mc:[], ms:[], fb:[], tf:[], oa:[], dnd:[], poll:[], other:[] };
+    var byType = { mc:[], ms:[], fb:[], tf:[], oa:[], dnd:[], match:[], poll:[], other:[] };
     for (var i = 0; i < shuffled.length; i++) {
         var t = shuffled[i].tipo || 'mc';
         if (byType[t]) byType[t].push(shuffled[i]);
@@ -2268,6 +2268,7 @@ function selectDiverseQuestions(allQuestions, total) {
     takeFrom('ms', 2);
     takeFrom('tf', 1);
     takeFrom('dnd', 1);
+    takeFrom('match', 1);
     takeFrom('mc', 2);
     var remaining = [];
     for (var key in byType) {
@@ -2551,13 +2552,9 @@ function applyEventResultsCutoff(query) {
 
 function isDemoEvaluation(ev) {
     var title = normalizeDemoText(ev && ev.titulo || '').trim();
-    var text = normalizeDemoText([
-        ev && ev.titulo,
-        ev && ev.tema,
-        ev && ev.codigo,
-        ev && ev.asignatura
-    ].join(' '));
-    if (text.indexOf('PRUEBA') !== -1 || text.indexOf('DEMO') !== -1 || text.indexOf('MUESTRA') !== -1) {
+    var code = normalizeDemoText(ev && ev.codigo || '').trim();
+    if (/\bDEMO\b/.test(title) || /^DEMO/.test(code) ||
+        /(^|\s)(PRUEBA GRATIS|MUESTRA GRATIS)(\s|$)/.test(title)) {
         return true;
     }
     // Demo oficial de Morfofunción: "evaluacion 1" / "evaluacion 1 DEMO" (sin palabra DEMO obligatoria)
@@ -2717,6 +2714,14 @@ function resolveEvaluationSubject(ev) {
     return 'MORFOFUNCION';
 }
 
+function isLegacyClassEvaluation(ev) {
+    var subject = normalizeDemoText(ev && ev.asignatura || '').trim();
+    var code = normalizeDemoText(ev && ev.codigo || '').trim();
+    return subject === 'OTRO' || subject === 'ANATOMIA' ||
+        (subject === 'BIOLOGIA CELULAR' && !String(ev && ev.tema || '').trim()) ||
+        /^(ENCEFALO|NEURO|SENTIDOS)/.test(code);
+}
+
 function subjectColor(name) {
     for (var i = 0; i < SUBJECTS.length; i++) {
         if (name.toUpperCase().indexOf(SUBJECTS[i].name) !== -1) return SUBJECTS[i].color;
@@ -2804,7 +2809,14 @@ function defaultSubjectStats() {
 
 function buildSubjectStats(rows) {
     var stats = emptySubjectStats();
+    stats.classCount = 0;
+    stats.classDemoCount = 0;
     for (var i = 0; rows && i < rows.length; i++) {
+        if (isLegacyClassEvaluation(rows[i])) {
+            stats.classCount++;
+            if (isDemoEvaluation(rows[i])) stats.classDemoCount++;
+            continue;
+        }
         var resolved = resolveEvaluationSubject(rows[i]);
         if (!stats.counts[resolved]) stats.counts[resolved] = 0;
         if (!stats.demoCounts[resolved]) stats.demoCounts[resolved] = 0;
@@ -2843,6 +2855,15 @@ function renderSubjectMissions(grid, stats) {
         html += '</div>';
         html += '<div class="mission-progress"><span style="width:' + progress + '%"></span></div>';
         html += '</div>';
+    }
+    if (stats.classCount) {
+        var classesAvailable = demoUser ? (stats.classDemoCount || 0) : stats.classCount;
+        html += '<div class="explorar-subject-card subject-mission-card subject-mission-classes' + (classesAvailable ? '' : ' subject-mission-locked') + '" onclick="loadSubjectEvaluations(\'CLASES\')" style="--subject-color:#EBA12C">';
+        html += '<div class="mission-shine"></div><div class="mission-topline"><span>TUS EXPOSICIONES</span><strong>' + (demoUser ? 'Demo y planes' : 'Disponible') + '</strong></div>';
+        html += '<div class="mission-main"><div class="mission-orb"><i class="fas fa-folder-open" aria-hidden="true"></i></div>';
+        html += '<div class="mission-copy"><h3>Juegos de clase</h3><p>' + stats.classCount + ' evaluaciones anteriores conservadas</p></div>';
+        html += '<div class="mission-play"><i class="fas fa-arrow-right" aria-hidden="true"></i></div></div>';
+        html += '<div class="mission-progress"><span style="width:100%"></span></div></div>';
     }
     grid.innerHTML = html;
 }
@@ -3411,10 +3432,10 @@ function loadSubjectEvaluations(subject) {
     if (grid) grid.style.display = 'none';
     var backBtn = document.getElementById('explorar-back-btn');
     if (backBtn) backBtn.style.display = '';
-    var color = subjectColor(subject);
-    var emoji = subjectEmoji(subject);
+    var color = subject === 'CLASES' ? '#EBA12C' : subjectColor(subject);
+    var emoji = subject === 'CLASES' ? '<i class="fas fa-folder-open" aria-hidden="true"></i>' : subjectEmoji(subject);
     var h1 = document.querySelector('#page-jugar .page-header h1');
-    if (h1) h1.innerHTML = '<i class="fas fa-arrow-left" style="cursor:pointer;margin-right:8px" onclick="loadExploreSubjects()"></i>' + emoji + ' ' + subject;
+    if (h1) h1.innerHTML = '<i class="fas fa-arrow-left" style="cursor:pointer;margin-right:8px" onclick="loadExploreSubjects()"></i>' + emoji + ' ' + (subject === 'CLASES' ? 'JUEGOS DE CLASE' : subject);
     var listEl = document.getElementById('explorar-eval-list');
     if (!listEl) return;
     listEl.style.display = '';
@@ -3428,7 +3449,7 @@ function loadSubjectEvaluations(subject) {
         }
         var matching = [];
         for (var i = 0; i < evRes.data.length; i++) {
-            if (subjectMatch(evRes.data[i], subject)) {
+            if (subject === 'CLASES' ? isLegacyClassEvaluation(evRes.data[i]) : (!isLegacyClassEvaluation(evRes.data[i]) && subjectMatch(evRes.data[i], subject))) {
                 matching.push(evRes.data[i]);
             }
         }

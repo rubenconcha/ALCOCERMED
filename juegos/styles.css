@@ -3924,6 +3924,12 @@ body.is-native-app .sidebar { display: none !important; }
     margin-top: 18px;
 }
 
+@media (min-width: 1260px) {
+    .games-app-theme #page-jugar .explorar-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
 .games-app-theme .subject-mission-card {
     position: relative;
     min-height: 176px;
