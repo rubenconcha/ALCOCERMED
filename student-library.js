@@ -26,7 +26,7 @@
             const title = document.createElement('strong');
             title.textContent = topic.name;
             const detail = document.createElement('span');
-            detail.textContent = `${topic.count} tarjetas · Empezar →`;
+            detail.textContent = `${topic.count} ${topic.count === 1 ? 'tarjeta' : 'tarjetas'} · Empezar →`;
             button.append(title, detail);
             button.addEventListener('click', () => startDeck(topic.name, subject, rows));
             list.append(button);
