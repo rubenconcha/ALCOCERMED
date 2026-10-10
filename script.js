@@ -3589,7 +3589,7 @@ function renderMmGrid() {
     var grid = document.getElementById('mm-grid');
     if (!grid || mmState.filteredMapas.length === 0) return;
     grid.innerHTML = '';
-    mmState.filteredMapas.forEach(function (m) {
+    mmState.filteredMapas.forEach(function (m, index) {
         var titulo = campo(m, 'titulo') || 'Sin título';
         var materia = campo(m, 'materia') || '';
         var urlImg = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
@@ -3599,6 +3599,10 @@ function renderMmGrid() {
         var safeMateria = escapeMmText(materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud'));
         var safeDesc = escapeMmText(desc);
         var safeUrl = escapeMmText(urlImg);
+        var previewUrl = getMmThumbnailUrl(urlImg);
+        var safePreviewUrl = escapeMmText(previewUrl);
+        var fallbackAttr = previewUrl !== urlImg ? ' data-fallback="' + safeUrl + '"' : '';
+        var loadingAttr = index < 3 ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
 
         var card = document.createElement('button');
         card.type = 'button';
@@ -3608,7 +3612,7 @@ function renderMmGrid() {
         card.innerHTML =
             '<div class="mm-card-thumb">' +
             (urlImg
-                ? '<img src="' + safeUrl + '" alt="' + (locked ? '' : safeTitle) + '" loading="lazy" decoding="async" class="mm-card-img' + (locked ? ' mm-card-img-locked' : '') + '" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+                ? '<img src="' + safePreviewUrl + '"' + fallbackAttr + ' alt="' + (locked ? '' : safeTitle) + '"' + loadingAttr + ' decoding="async" class="mm-card-img' + (locked ? ' mm-card-img-locked' : '') + '" onerror="fallbackMmPreview(this)">' +
                 '<div class="mm-card-img-placeholder" style="display:none"><i class="fas fa-project-diagram"></i></div>'
                 : '<div class="mm-card-img-placeholder"><i class="fas fa-project-diagram"></i></div>') +
             (locked ? '<span class="mm-preview-scrim" aria-hidden="true"><span class="mm-preview-label"><i class="fas fa-lock"></i> Vista previa</span></span>' : '<div class="mm-zoom-overlay"><i class="fas fa-expand"></i></div>') +
@@ -3622,6 +3626,22 @@ function renderMmGrid() {
     });
 
 }
+function getMmThumbnailUrl(url) {
+    var match = /^mapas mentales\/([^/?#]+)\.(?:png|jpe?g|webp)$/i.exec(url || '');
+    return match ? 'mapas mentales/thumbs/' + match[1] + '.webp' : url;
+}
+
+window.fallbackMmPreview = function (image) {
+    if (image.dataset.fallback) {
+        var original = image.dataset.fallback;
+        delete image.dataset.fallback;
+        image.src = original;
+        return;
+    }
+    image.style.display = 'none';
+    if (image.nextElementSibling) image.nextElementSibling.style.display = 'flex';
+};
+
 function escapeMmText(value) {
     return String(value).replace(/[&<>"']/g, function (character) {
         return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character];
@@ -3633,7 +3653,13 @@ window.openMmUnlockDialog = function (m) {
     var dialog = document.getElementById('mm-unlock-dialog');
     if (!dialog) return;
     document.getElementById('mm-unlock-title').textContent = campo(m, 'titulo') || 'Mapa mental';
-    document.getElementById('mm-unlock-image').src = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
+    var image = document.getElementById('mm-unlock-image');
+    var originalUrl = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
+    var previewUrl = getMmThumbnailUrl(originalUrl);
+    image.style.display = '';
+    image.dataset.fallback = previewUrl !== originalUrl ? originalUrl : '';
+    image.onerror = function () { fallbackMmPreview(image); };
+    image.src = previewUrl;
     if (!dialog.open) dialog.showModal();
 };
 
@@ -3662,7 +3688,18 @@ window.openMmLightbox = function (m) {
     var lb = document.getElementById('mm-lightbox');
     if (!lb) return;
     var urlImg = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
-    document.getElementById('mm-lb-img').src = urlImg;
+    var image = document.getElementById('mm-lb-img');
+    var previewUrl = getMmThumbnailUrl(urlImg);
+    image.dataset.fullUrl = urlImg;
+    image.src = previewUrl;
+    if (previewUrl !== urlImg) {
+        var fullImage = new Image();
+        fullImage.decoding = 'async';
+        fullImage.onload = function () {
+            if (image.dataset.fullUrl === urlImg) image.src = urlImg;
+        };
+        fullImage.src = urlImg;
+    }
     document.getElementById('mm-lb-title').textContent = campo(m, 'titulo') || '';
     document.getElementById('mm-lb-materia').textContent = (campo(m, 'materia') || '').toLowerCase();
     document.getElementById('mm-lb-desc').textContent = campo(m, 'descripcion') || '';
