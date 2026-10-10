@@ -1012,11 +1012,9 @@ function resourceChooser(tool, names, select, description) {
     });
 }
 window.openGameMenu = function () {
-    if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
     resourceChooser('Juegos', ['Quiz relámpago', 'Ahorcado médico'], name => openGame(name === 'Quiz relámpago' ? 'quiz' : 'hangman'), 'Elige un juego para empezar.');
 };
 window.openGame = function (gameType) {
-    if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
     const source = gameType === 'quiz' ? QUIZ_QUESTIONS : HANGMAN_WORDS;
     const key = gameType === 'quiz' ? 'subject' : 'category';
     resourceChooser(gameType === 'quiz' ? 'Quiz relámpago' : 'Ahorcado médico', [...new Set(source.map(q => q[key]))], name => {
@@ -1024,6 +1022,14 @@ window.openGame = function (gameType) {
         showScreen(gameType === 'quiz' ? 'game-quiz' : 'game-hangman');
         if (gameType === 'quiz') startQuiz(); else startHangman();
     });
+    if (window.CampusAccess && CampusAccess.isFree()) {
+        const locked = document.createElement('button');
+        locked.type = 'button';
+        locked.className = 'resource-locked-option';
+        locked.innerHTML = '<i class="fas fa-lock" aria-hidden="true"></i><strong>Más contenido del juego</strong><small>Disponible con un plan</small>';
+        locked.onclick = () => CampusAccess.unlock();
+        document.getElementById('resource-options').append(locked);
+    }
 };
 
 // ──────────────────────────────────────────────
@@ -1083,6 +1089,17 @@ const HANGMAN_WORDS = [
     { word: 'CEREBELO', hint: 'coordina el equilibrio y el movimiento fino', category: 'morfofunción' },
 ];
 
+// Preguntas de práctica visibles en la cuenta gratuita. No consulta el banco de pago.
+function freePracticeRows() {
+    const perSubject = {};
+    return QUIZ_QUESTIONS.filter(q => (perSubject[q.subject] = (perSubject[q.subject] || 0) + 1) <= 3)
+        .map(q => ({
+            materia: q.subject, tema: 'Práctica inicial', pregunta: q.q,
+            opcion_a: q.opts[0], opcion_b: q.opts[1], opcion_c: q.opts[2], opcion_d: q.opts[3],
+            respuesta_correcta: 'ABCD'[q.answer], dificultad: 'facil'
+        }));
+}
+
 // ══════════════════════════════════════════════
 // QUIZ RELÁMPAGO
 // ══════════════════════════════════════════════
@@ -1095,7 +1112,8 @@ let quizAnswered = false;
 
 window.startQuiz = function () {
     // Mezclar y tomar 10 preguntas
-    quizQuestions = shuffleArray((window.CampusAccess && CampusAccess.isFree() ? QUIZ_QUESTIONS.slice(0,5) : QUIZ_QUESTIONS).filter(q => !selectedGameSubject || q.subject === selectedGameSubject).slice()).slice(0, 10);
+    const available = QUIZ_QUESTIONS.filter(q => !selectedGameSubject || q.subject === selectedGameSubject);
+    quizQuestions = shuffleArray((window.CampusAccess && CampusAccess.isFree() ? available.slice(0,5) : available).slice()).slice(0, 10);
     quizIndex = 0;
     quizScore = 0;
     quizAnswered = false;
@@ -1238,7 +1256,8 @@ const HM_MAX_ERRORS = 6;
 const HM_PARTS = ['hm-head', 'hm-body', 'hm-larm', 'hm-rarm', 'hm-lleg', 'hm-rleg'];
 
 window.startHangman = function () {
-    const words = (window.CampusAccess && CampusAccess.isFree() ? HANGMAN_WORDS.slice(0,5) : HANGMAN_WORDS).filter(q => !selectedGameSubject || q.category === selectedGameSubject);
+    const available = HANGMAN_WORDS.filter(q => !selectedGameSubject || q.category === selectedGameSubject);
+    const words = window.CampusAccess && CampusAccess.isFree() ? available.slice(0,5) : available;
     const entry = words[Math.floor(Math.random() * words.length)];
     hmWord = entry.word.toUpperCase();
     hmGuessed = [];
@@ -1524,6 +1543,7 @@ document.addEventListener('copy', function (e) {
 // así cuando el usuario abre banco/simulacro ya está en caché
 // ──────────────────────────────────────────────
 async function preloadAppData() {
+    if (CampusAccess.isFree()) return;
     if (bancoState._cache && bancoState._cache.length > 0) return; // ya cargado
     try {
         var client = getSupabase();
@@ -1559,7 +1579,6 @@ let bancoState = {
 // ABRIR BANCO (pantalla selector)
 // ──────────────────────────────────────────────
 window.openBanco = async function () {
-    if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
     // Advertir si hay banco en progreso
     const enProgreso = bancoState.preguntas.length > 0 && !bancoState.finalized &&
         bancoState.answers.some(function (a) { return a.selected !== null; });
@@ -1606,15 +1625,15 @@ window.openBanco = async function () {
 
     // Cargar materias y preguntas difíciles personalizadas
     await loadBancoMaterias();
-    loadPreguntasDificiles(); // no await: carga en paralelo sin bloquear
+    if (!CampusAccess.isFree()) loadPreguntasDificiles();
 };
 
 async function loadBancoMaterias() {
     const ddEl = document.getElementById('banco-materia-dropdown');
 
     // Si hay caché, construir UI inmediatamente (Fix: velocidad de apertura)
-    let data = bancoState._cache || [];
-    if (data.length === 0) {
+    let data = CampusAccess.isFree() ? freePracticeRows() : (bancoState._cache || []);
+    if (!CampusAccess.isFree() && data.length === 0) {
         ddEl.innerHTML = '<div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando materias...</div>';
         try {
             const client = getSupabase();
@@ -2266,6 +2285,7 @@ function resetBancoDificultadUI() {
 }
 
 window.selectBancoDificultad = async function (nivel) {
+    if (CampusAccess.isFree() && (nivel === 'medio' || nivel === 'dificil')) return CampusAccess.unlock();
     bancoState.selectedDificultad = nivel;
 
     // Reset todos los botones
@@ -2297,6 +2317,7 @@ window.selectBancoDificultad = async function (nivel) {
 // ──────────────────────────────────────────────
 async function registrarRespuestaBanco(preguntaRow, acerto) {
     if (!currentUser) return;
+    if (!campo(preguntaRow, 'id')) return; // la práctica gratuita local no tiene fila en el banco de pago
     try {
         var client = getSupabase();
 
@@ -2526,7 +2547,6 @@ var simState = {
 
 // ── Abrir pantalla de configuración ──
 window.openSimulacro = async function () {
-    if (CampusAccess.isFree()) return CampusAccess.unlock();
     if (simState.timerInterval) {
         if (!confirm('hay un simulacro en curso. ¿deseas descartarlo?')) return;
         clearInterval(simState.timerInterval);
@@ -2535,6 +2555,22 @@ window.openSimulacro = async function () {
     simState.finalized = false;
     showSimScreen('sim-config');
     showScreen('simulacro-screen');
+    if (CampusAccess.isFree()) {
+        simState._cache = freePracticeRows();
+        simState.selectedExamen = null;
+        setSimMode('completo');
+        setSimDuracion(30);
+        const slider = document.getElementById('sim-nq-slider');
+        slider.min = 5; slider.max = simState._cache.length; slider.step = 1;
+        slider.value = simState._cache.length;
+        updateSimNQ();
+    } else {
+        const slider = document.getElementById('sim-nq-slider');
+        slider.min = 10; slider.max = 50; slider.step = 5;
+        slider.value = 30;
+        updateSimNQ();
+        setSimMode('oficial');
+    }
     if (window.innerWidth <= 768) {
         document.getElementById('sidebar').classList.remove('open');
         document.getElementById('overlay').classList.remove('active');
@@ -2546,6 +2582,10 @@ window.openSimulacro = async function () {
 async function loadSimOficiales() {
     var ddEl = document.getElementById('sim-oficial-dropdown');
     if (!ddEl) return;
+    if (CampusAccess.isFree()) {
+        ddEl.textContent = 'Los exámenes pasados se abren con un plan.';
+        return;
+    }
     ddEl.innerHTML = '<div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando exámenes...</div>';
     try {
         var client = getSupabase();
@@ -2610,8 +2650,8 @@ async function loadSimMaterias() {
     if (!ddEl) return;
     ddEl.innerHTML = '<div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando materias...</div>';
     try {
-        var rows = bancoState._cache || [];
-        if (rows.length === 0) {
+        var rows = CampusAccess.isFree() ? freePracticeRows() : (bancoState._cache || []);
+        if (!CampusAccess.isFree() && rows.length === 0) {
             var client = getSupabase();
             var res = await client.from('banco_preguntas').select('*').limit(1000);
             if (res.error) throw res.error;
@@ -2654,6 +2694,7 @@ window.selectSimMateria = function (materia) {
 };
 
 window.setSimMode = function (mode) {
+    if (mode === 'oficial' && CampusAccess.isFree()) return CampusAccess.unlock();
     simState.mode = mode;
     var btnOficial = document.getElementById('sim-mode-oficial');
     var btnCompleto = document.getElementById('sim-mode-completo');
@@ -2696,6 +2737,7 @@ window.updateSimNQ = function () {
 
 // ── Iniciar simulacro ──
 window.iniciarSimulacro = async function () {
+    if (CampusAccess.isFree() && simState.mode === 'oficial') return CampusAccess.unlock();
     if (simState.mode === 'materia' && !simState.selectedMateria) {
         showToast('⚠ selecciona una materia primero', 'error');
         return;
@@ -3408,7 +3450,6 @@ var mmState = {
 };
 
 window.openMindMaps = async function () {
-    if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
     await loadMapasMentales();
     resourceChooser('Mapas mentales', [...new Set(mmState.allMapas.map(m => m.materia))], materia => {
         showScreen('intocables-screen');
@@ -3418,7 +3459,6 @@ window.openMindMaps = async function () {
     }, 'Elige una materia para ver sus mapas. Después abre el tema que necesitas.');
 };
 window.openIntocables = function () {
-    if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
     resourceChooser('Intocables', ['Mapas mentales'], name => {
         if (name === 'Mapas mentales') return openMindMaps();
         showScreen('intocables-screen');
@@ -3507,6 +3547,11 @@ window.filterMapas = function () {
         var matchQ = !q || titulo.includes(q);
         return matchMat && matchQ;
     });
+    if (window.CampusAccess && CampusAccess.isFree()) {
+        mmState.filteredMapas.sort(function (a, b) {
+            return Number(campo(b, 'titulo') === 'La Célula') - Number(campo(a, 'titulo') === 'La Célula');
+        });
+    }
     renderMmGrid();
 };
 
@@ -3520,22 +3565,26 @@ function renderMmGrid() {
         var materia = campo(m, 'materia') || '';
         var urlImg = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
         var desc = campo(m, 'descripcion') || '';
+        var locked = window.CampusAccess && CampusAccess.isFree() && titulo !== 'La Célula';
 
-        var card = document.createElement('div');
-        card.className = 'mm-card';
-        card.onclick = function () { openMmLightbox(m); };
+        var card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'mm-card' + (locked ? ' mm-card-locked' : '');
+        card.onclick = function () { if (locked) CampusAccess.unlock(); else openMmLightbox(m); };
         card.innerHTML =
             '<div class="mm-card-thumb">' +
-            (urlImg
+            (locked
+                ? '<div class="mm-card-locked-art"><i class="fas fa-lock" aria-hidden="true"></i><span>Mapa reservado</span></div>'
+                : urlImg
                 ? '<img src="' + urlImg + '" alt="' + titulo + '" class="mm-card-img" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
                 '<div class="mm-card-img-placeholder" style="display:none"><i class="fas fa-project-diagram"></i></div>'
                 : '<div class="mm-card-img-placeholder"><i class="fas fa-project-diagram"></i></div>') +
-            '<div class="mm-zoom-overlay"><i class="fas fa-expand"></i></div>' +
+            (locked ? '' : '<div class="mm-zoom-overlay"><i class="fas fa-expand"></i></div>') +
             '</div>' +
             '<div class="mm-card-body">' +
             (materia ? '<span class="mm-card-materia">' + materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + '</span>' : '') +
             '<h3 class="mm-card-title">' + titulo + '</h3>' +
-            (desc ? '<p class="mm-card-desc">' + desc + '</p>' : '') +
+            (locked ? '<p class="mm-card-desc"><i class="fas fa-lock" aria-hidden="true"></i> Elige un plan para abrir este mapa</p>' : desc ? '<p class="mm-card-desc">' + desc + '</p>' : '') +
             '</div>';
         grid.appendChild(card);
     });
@@ -3552,6 +3601,7 @@ function updateIntocStats() {
 }
 
 window.openMmLightbox = function (m) {
+    if (window.CampusAccess && CampusAccess.isFree() && campo(m, 'titulo') !== 'La Célula') return CampusAccess.unlock();
     var lb = document.getElementById('mm-lightbox');
     if (!lb) return;
     var urlImg = campo(m, 'url_imagen') || campo(m, 'url_image') || '';

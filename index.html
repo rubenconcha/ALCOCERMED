@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="campus-theme.css?v=3">
 <link rel="stylesheet" href="campus-access.css?v=2"><link rel="stylesheet" href="campus-navigation.css?v=2"><link rel="stylesheet" href="campus-home.css?v=5"><link rel="stylesheet" href="campus-topics.css?v=3">
     <link rel="stylesheet" href="login-polish.css?v=1">
+    <link rel="stylesheet" href="campus-preview.css?v=1">
 </head>
 
 <body class="login-active">
@@ -214,7 +215,6 @@
                             <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#map"></use></svg>
                         </span>
                         <span class="nav-label">mapas mentales</span>
-                        <span class="campus-lock-badge" data-premium-label hidden title="Desbloquear con un plan"><i class="fas fa-lock" aria-hidden="true"></i></span>
 
                     </a>
                 </li>
@@ -226,7 +226,6 @@
                             <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#core"></use></svg>
                         </span>
                         <span class="nav-label">intocables</span>
-                        <span class="campus-lock-badge" data-premium-label hidden title="Desbloquear con un plan"><i class="fas fa-lock" aria-hidden="true"></i></span>
                     </a>
                 </li>
 
@@ -244,7 +243,6 @@
                             <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg>
                         </span>
                         <span class="nav-label">banco de preguntas</span>
-                        <span class="campus-lock-badge" data-premium-label hidden title="Desbloquear con un plan"><i class="fas fa-lock" aria-hidden="true"></i></span>
                     </a>
                 </li>
 
@@ -254,7 +252,6 @@
                             <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg>
                         </span>
                         <span class="nav-label">simulacros</span>
-                        <span class="campus-lock-badge" data-premium-label hidden title="Desbloquear con un plan"><i class="fas fa-lock" aria-hidden="true"></i></span>
 
                     </a>
                 </li>
@@ -281,7 +278,7 @@
                             <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#quiz"></use></svg>
                         </span>
                         <span class="nav-label">quiz relámpago</span>
-                        <span class="nav-badge badge-game" data-premium-only>JUGAR</span><span class="campus-lock-badge" data-premium-label hidden title="Desbloquear con un plan"><i class="fas fa-lock" aria-hidden="true"></i></span>
+                        <span class="nav-badge badge-game">JUGAR</span>
                     </a>
                 </li>
 
@@ -291,7 +288,7 @@
                             <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#word"></use></svg>
                         </span>
                         <span class="nav-label">ahorcado médico</span>
-                        <span class="nav-badge badge-game" data-premium-only>JUGAR</span><span class="campus-lock-badge" data-premium-label hidden title="Desbloquear con un plan"><i class="fas fa-lock" aria-hidden="true"></i></span>
+                        <span class="nav-badge badge-game">JUGAR</span>
                     </a>
                 </li>
                 <li class="nav-item nav-item-simple">
@@ -348,17 +345,17 @@
 <section id="home-screen" class="home-screen campus-dashboard">
   <header class="campus-greeting"><div><span>PREPARATORIA BEN CARSON</span><h1>Hola, <span id="welcome-name">bienvenido</span>.</h1><p>Tu material de estudio está aquí. Elige qué quieres hacer hoy.</p></div><div class="greeting-symbol" aria-hidden="true"><img src="/assets/study-art/health-education.png" alt=""></div></header>
   <div class="dashboard-columns"><div class="dashboard-main">
-<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA GRATUITA</small><h2>Empieza por los primeros temas.</h2><p>Abre Flashcards, elige una materia y repasa los temas disponibles. Verás un candado en el contenido que se desbloquea con un plan.</p><div class="free-samples"><button onclick="location.href='/planes?desde=campus#planes'">Ver planes →</button></div></div>
+<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA GRATUITA</small><h2>Entra y empieza a estudiar.</h2><p>Prueba las herramientas del campus. Dentro de cada sección encontrarás material para comenzar y verás un candado en el contenido reservado para los planes.</p></div>
 
     <section class="dashboard-launch" aria-labelledby="dashboard-launch-title"><div class="dashboard-launch-heading"><div><span class="dashboard-eyebrow">TU ESPACIO DE ESTUDIO</span><h2 id="dashboard-launch-title">¿Qué vas a estudiar hoy?</h2></div></div>
       <div class="dashboard-activity-grid">
         <button class="dashboard-activity dashboard-activity-gold" onclick="openStudyLibrary()"><img src="/assets/study-art/cards.png" alt=""><span><strong>Flashcards</strong><small>Repasa por materia y tema</small></span></button>
-        <button class="dashboard-activity dashboard-activity-blue" onclick="openMindMaps()"><span class="dashboard-lock" data-premium-label hidden><i class="fas fa-lock" aria-hidden="true"></i> Desbloquear</span><img src="/assets/study-art/map.png" alt=""><span><strong>Mapas mentales</strong><small>Visualiza las ideas del tema</small></span></button>
-        <button class="dashboard-activity dashboard-activity-olive" onclick="openBanco()"><span class="dashboard-lock" data-premium-label hidden><i class="fas fa-lock" aria-hidden="true"></i> Desbloquear</span><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg><span><strong>Banco de preguntas</strong><small>Practica por materia</small></span></button>
-        <button class="dashboard-activity dashboard-activity-navy" onclick="openSimulacro()"><span class="dashboard-lock" data-premium-label hidden><i class="fas fa-lock" aria-hidden="true"></i> Desbloquear</span><img src="/assets/study-art/quiz.png" alt=""><span><strong>Simulacros</strong><small>Resuelve un examen con tiempo</small></span></button>
+        <button class="dashboard-activity dashboard-activity-blue" onclick="openMindMaps()"><img src="/assets/study-art/map.png" alt=""><span><strong>Mapas mentales</strong><small>Visualiza las ideas del tema</small></span></button>
+        <button class="dashboard-activity dashboard-activity-olive" onclick="openBanco()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg><span><strong>Banco de preguntas</strong><small>Practica por materia</small></span></button>
+        <button class="dashboard-activity dashboard-activity-navy" onclick="openSimulacro()"><img src="/assets/study-art/quiz.png" alt=""><span><strong>Simulacros</strong><small>Resuelve un examen con tiempo</small></span></button>
       </div>
     </section>
-    <div class="dashboard-more"><button onclick="openGameMenu()"><img src="/assets/study-art/word.png" alt=""><span><strong>Aprende jugando</strong><small>Quiz y términos médicos</small></span><span class="dashboard-more-lock" data-premium-label hidden><i class="fas fa-lock" aria-hidden="true"></i></span><span class="dashboard-more-arrow" data-premium-only aria-hidden="true">→</span></button><button onclick="openEvaluacion()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#progress"></use></svg><span><strong>Mis resultados</strong><small>Consulta tus evaluaciones</small></span><span aria-hidden="true">→</span></button></div>
+    <div class="dashboard-more"><button onclick="openGameMenu()"><img src="/assets/study-art/word.png" alt=""><span><strong>Aprende jugando</strong><small>Quiz y términos médicos</small></span><span class="dashboard-more-arrow" aria-hidden="true">→</span></button><button onclick="openEvaluacion()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#progress"></use></svg><span><strong>Mis resultados</strong><small>Consulta tus evaluaciones</small></span><span aria-hidden="true">→</span></button></div>
   </div><aside class="dashboard-progress" aria-label="Tu progreso"><div class="dashboard-progress-heading"><span>TU AVANCE</span><h2>Tu progreso</h2></div>        <!-- ══ MI PROGRESO ══ -->
         <div class="nav-section progress-section">
             <span class="section-title">MI PROGRESO</span>
@@ -591,10 +588,10 @@
                                 <i class="fas fa-seedling"></i> fácil
                             </button>
                             <button class="banco-dif-btn banco-dif-medio" id="banco-dif-medio" onclick="selectBancoDificultad('medio')">
-                                <i class="fas fa-fire"></i> medio
+                                <i class="fas fa-fire"></i> medio <i class="fas fa-lock" data-free-lock hidden aria-label="Solo con un plan"></i>
                             </button>
                             <button class="banco-dif-btn banco-dif-dificil" id="banco-dif-dificil" onclick="selectBancoDificultad('dificil')">
-                                <i class="fas fa-skull-crossbones"></i> difícil
+                                <i class="fas fa-skull-crossbones"></i> difícil <i class="fas fa-lock" data-free-lock hidden aria-label="Solo con un plan"></i>
                             </button>
                         </div>
                     </div>
@@ -616,8 +613,10 @@
                     </button>
                 </div>
 
+                <button class="section-locked-card" data-free-lock hidden onclick="CampusAccess.unlock()"><i class="fas fa-lock" aria-hidden="true"></i><span><strong>Banco completo</strong><small>Más preguntas por materia y nivel</small></span><span class="section-locked-arrow" aria-hidden="true">→</span></button>
+
                 <!-- PANEL: Preguntas que más te cuestan -->
-                <div class="banco-dificiles-panel" id="banco-dificiles-panel">
+                <div class="banco-dificiles-panel" id="banco-dificiles-panel" data-premium-only>
                     <div class="banco-dificiles-header">
                         <div class="banco-dificiles-title-row">
                             <div class="banco-dificiles-icon"><i class="fas fa-brain"></i></div>
@@ -765,6 +764,7 @@
                                 <i class="fas fa-file-invoice"></i>
                                 <span>examen oficial</span>
                                 <small>simulacros cargados</small>
+                                <b class="section-lock" data-free-lock hidden><i class="fas fa-lock" aria-hidden="true"></i> Con un plan</b>
                             </button>
                             <button class="sim-mode-btn" id="sim-mode-completo" onclick="setSimMode('completo')">
                                 <i class="fas fa-graduation-cap"></i>
@@ -856,6 +856,8 @@
                         <p class="sim-warning-text"><i class="fas fa-exclamation-triangle"></i> durante el simulacro no
                             podrás ver las respuestas. se revelan al finalizar.</p>
                     </div>
+
+                    <button class="section-locked-card" data-free-lock hidden onclick="CampusAccess.unlock()"><i class="fas fa-lock" aria-hidden="true"></i><span><strong>Exámenes pasados y simulacros completos</strong><small>Más preguntas y modos al elegir un plan</small></span><span class="section-locked-arrow" aria-hidden="true">→</span></button>
 
                 </div>
             </div>
@@ -1255,9 +1257,9 @@
     <script src="platform-polish.js?v=1"></script>
     <script src="config.js"></script>
     <script src="device_guard.js"></script>
-    <script src="campus-access.js?v=4"></script>
-    <script src="script.js?v=15"></script>
+    <script src="campus-access.js?v=5"></script>
+    <script src="script.js?v=16"></script>
     <script src="student-library.js?v=8"></script>
-<dialog id="campus-unlock" class="campus-unlock"><span aria-hidden="true">🔒</span><h2>Sigue con el repaso completo.</h2><p>Con un plan puedes continuar con todas las flashcards, mapas mentales, juegos, simulacros y exámenes. Tu progreso guardado se conserva.</p><a href="/planes?desde=campus#planes">Ver planes desde Bs 200 →</a><button onclick="this.closest('dialog').close()">Seguir con mi cuenta gratuita</button></dialog></body>
+</body>
 
 </html>

@@ -3,7 +3,7 @@ window.CampusAccess = (() => {
     let state = { premium: false, ready: false };
     let catalogPromise;
     const isFree = () => !state.premium;
-    function unlock() { document.getElementById('campus-unlock').showModal(); }
+    function unlock() { window.location.href = '/planes?desde=campus#planes'; }
     async function resolve(client) {
         const { data, error } = await client.rpc('campus_access');
         if (error || !data?.ready) throw new Error('No pudimos verificar tu acceso. Intenta de nuevo.');
@@ -13,6 +13,7 @@ window.CampusAccess = (() => {
         document.getElementById('free-account-banner').hidden = !isFree();
         document.querySelectorAll('[data-premium-label]').forEach(el => { el.hidden = !isFree(); });
         document.querySelectorAll('[data-premium-only]').forEach(el => { el.hidden = isFree(); });
+        document.querySelectorAll('[data-free-lock]').forEach(el => { el.hidden = !isFree(); });
         return state;
     }
     async function catalog() {

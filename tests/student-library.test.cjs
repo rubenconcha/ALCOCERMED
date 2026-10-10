@@ -90,8 +90,8 @@ test('free account opens listed topics and sends locked topics directly to plans
   assert.equal(rows.length, 3);
   assert.equal(rows[0].children[1].textContent, 'Empezar');
   assert.equal(rows[1].children[1].textContent, 'Empezar');
-  assert.equal(rows[2].children[1].href, '/planes#planes');
-  assert.equal(rows[2].children[0].children[0].textContent, '🔒');
+  assert.equal(rows[2].children[1].href, '/planes?desde=campus#planes');
+  assert.match(rows[2].children[0].children[0].innerHTML, /Bloqueado/);
   rows[0].children[1].click();
   assert.equal(h.starts.length, 1);
   assert.equal(h.starts[0][2].length, 2);

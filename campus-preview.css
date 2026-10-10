@@ -1,0 +1,36 @@
+/* El acceso gratuito entra en cada herramienta; el candado vive en el material reservado. */
+[data-premium-only][hidden], [data-free-lock][hidden] { display: none !important; }
+
+.section-locked-card {
+    width: 100%; min-height: 86px; margin: 18px 0 0; padding: 18px 20px;
+    display: flex; align-items: center; gap: 16px; text-align: left;
+    border: 1px solid #efcf91; border-radius: 17px;
+    background: linear-gradient(110deg, #fffaf0, #fff);
+    color: #24334c; font: inherit; cursor: pointer;
+    transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.section-locked-card:hover { transform: translateY(-2px); border-color: #eea51f; box-shadow: 0 12px 28px #91651318; }
+.section-locked-card > i { width: 43px; height: 43px; border-radius: 13px; display: grid; place-items: center; background: #fff0c5; color: #a76b08; flex: none; }
+.section-locked-card span { display: flex; flex-direction: column; gap: 4px; }
+.section-locked-card strong { font-size: 17px; line-height: 1.2; }
+.section-locked-card small { font-size: 13px; color: #64728a; }
+.section-locked-card .section-locked-arrow { margin-left: auto; color: #ad760f; font-size: 22px; }
+.sim-mode-btn { position: relative; }
+.sim-mode-btn .section-lock { display: inline-flex; gap: 6px; align-items: center; margin-top: 8px; padding: 5px 8px; border-radius: 8px; background: #fff1d6; color: #815412; font-size: 11px; }
+
+.mm-card { display: block; width: 100%; padding: 0; text-align: left; font: inherit; }
+.mm-card-locked-art { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 11px; background: linear-gradient(145deg, #f6f8fb, #e8eef6); color: #64748b; font-size: 14px; font-weight: 750; }
+.mm-card-locked-art i { font-size: 30px; color: #d0932a; }
+.mm-card-locked .mm-card-desc i { margin-right: 5px; color: #bd8423; }
+.mm-card-locked:hover { border-color: #dfb058; box-shadow: 0 12px 25px #ae7e291b; }
+
+.campus-browser .subject-picker .resource-locked-option { border: 1px dashed #e0bb78; border-bottom: 5px solid #d59b35; background: #fffaf0; }
+.campus-browser .subject-picker .resource-locked-option > i { font-size: 30px; color: #b77e23; }
+.campus-browser .subject-picker .resource-locked-option small { display: block; color: #775d36; font-size: 13px; }
+
+@media (max-width: 600px) {
+    .section-locked-card { padding: 15px; min-height: 76px; }
+    .section-locked-card strong { font-size: 15px; }
+    .campus-browser .subject-picker .resource-locked-option { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) { .section-locked-card { transition: none; } .section-locked-card:hover { transform: none; } }
