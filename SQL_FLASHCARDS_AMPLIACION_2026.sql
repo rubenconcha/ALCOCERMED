@@ -313,7 +313,7 @@ WHERE NOT EXISTS (
     AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
 );
 
--- morfo: páginas PDF 981-997 | MORFOFUNCION / aparato digestivo
+-- morfo: páginas PDF 981-1022 | MORFOFUNCION / aparato digestivo
 WITH incoming (materia, tema, pregunta, respuesta) AS (
   VALUES
     ('MORFOFUNCION', 'aparato digestivo', 'Al masticar una manzana, ¿qué tipo de digestión comienza primero?', 'La mecánica: los dientes fragmentan el alimento y aumentan su superficie.'),
@@ -352,7 +352,66 @@ WITH incoming (materia, tema, pregunta, respuesta) AS (
     ('MORFOFUNCION', 'aparato digestivo', '¿Qué células gástricas secretan ácido clorhídrico y factor intrínseco?', 'Las células parietales.'),
     ('MORFOFUNCION', 'aparato digestivo', '¿Cómo pasa el pepsinógeno a ser pepsina activa?', 'El ambiente ácido elimina parte de la molécula y la activa.'),
     ('MORFOFUNCION', 'aparato digestivo', '¿Qué células renuevan el epitelio de las glándulas gástricas?', 'Las células regenerativas o citoblastos.'),
-    ('MORFOFUNCION', 'aparato digestivo', '¿Qué tipo de células gástricas libera mensajeros que regulan la digestión?', 'Las células enteroendocrinas.')
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué tipo de células gástricas libera mensajeros que regulan la digestión?', 'Las células enteroendocrinas.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'Si el estómago contiene ácido y pepsina, ¿qué ayuda a proteger su propia mucosa?', 'Una barrera de moco y bicarbonato que separa el epitelio del contenido ácido.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué nutriente empieza a degradar la pepsina en el estómago?', 'Las proteínas, que rompe en fragmentos más pequeños.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Por qué importa el factor intrínseco secretado por el estómago?', 'Porque permite la absorción de vitamina B12.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'Una persona produce menos factor intrínseco por daño gástrico. ¿Qué absorción puede verse afectada?', 'La de vitamina B12.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué efecto tiene la gastrina sobre la actividad gástrica?', 'Estimula la secreción y favorece la función digestiva del estómago.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué mensajero local ayuda a estimular la secreción ácida del estómago?', 'La histamina.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'El olor de la comida activa el estómago antes de comer. ¿Qué fase es?', 'La fase cefálica, mediada en gran parte por el nervio vago.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'El alimento distiende el estómago y aumenta su secreción. ¿Qué fase de regulación es?', 'La fase gástrica.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'El duodeno ya recibió quimo y frena la entrada de más. ¿Qué fase predomina?', 'La fase intestinal, que reduce la secreción y la motilidad gástricas.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Cómo se llama la mezcla semilíquida que sale del estómago hacia el duodeno?', 'Quimo.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Por qué llega al hígado sangre procedente del intestino por la vena porta?', 'Para que los hepatocitos procesen los nutrientes absorbidos antes de que pasen a la circulación general.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'Además de sangre portal, ¿qué aporte llega al hígado por la arteria hepática?', 'Sangre arterial con oxígeno.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué células de los sinusoides hepáticos eliminan bacterias y desechos de la sangre?', 'Los macrófagos hepáticos o células de Kupffer.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Dónde vierten inicialmente los hepatocitos la bilis que producen?', 'En los canalículos biliares.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué conducto se forma al unirse el hepático común con el cístico?', 'El colédoco, que conduce bilis hacia el duodeno.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'Entre comidas, ¿qué hace la vesícula biliar con la bilis?', 'La almacena y concentra al absorber parte de su agua y electrolitos.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué componente de la bilis ayuda especialmente a digerir y absorber grasas?', 'Los ácidos biliares, que participan en la emulsificación y formación de micelas.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿En qué parte del intestino se reabsorbe gran parte de los ácidos biliares?', 'En el íleon.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Cómo se llama el recorrido de los ácidos biliares desde el hígado al intestino y de vuelta?', 'Circulación enterohepática.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué parte exocrina del páncreas secreta enzimas y sus precursores?', 'Los ácinos pancreáticos.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué aportan los conductos pancreáticos al jugo que llega al duodeno?', 'Bicarbonato, que ayuda a neutralizar el ácido del quimo.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Por qué el bicarbonato pancreático facilita el trabajo de las enzimas?', 'Porque eleva el pH duodenal hasta un rango más favorable para su actividad.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué enzima intestinal activa el tripsinógeno pancreático?', 'La enterocinasa de la mucosa del intestino delgado.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'Una vez formada, ¿qué hace la tripsina con otros precursores de proteasas?', 'Los activa para continuar la digestión de proteínas.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué enzima pancreática continúa la digestión del almidón?', 'La amilasa pancreática.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué enzima pancreática realiza la mayor parte de la digestión de grasas?', 'La lipasa pancreática.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué hormona pancreática prepara el almacenamiento de nutrientes al favorecer la entrada de glucosa en tejidos?', 'La insulina.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué hormona pancreática ayuda a elevar la glucosa sanguínea entre comidas?', 'El glucagón.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'Cuando llegan grasas al duodeno, ¿qué hormona favorece la contracción de la vesícula biliar?', 'La colecistocinina o CCK.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'Cuando el quimo ácido llega al duodeno, ¿qué hormona favorece la secreción de bicarbonato pancreático?', 'La secretina.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Cuál es el primer segmento del intestino delgado que recibe quimo del estómago?', 'El duodeno.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué segmento se sitúa entre el duodeno y el íleon?', 'El yeyuno.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Cuál es el último segmento del intestino delgado antes del ciego?', 'El íleon.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué impide la válvula ileocecal además de regular el paso hacia el ciego?', 'Que el contenido del intestino grueso retroceda hacia el íleon.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Por qué las vellosidades son útiles para absorber nutrientes?', 'Aumentan el área de contacto de la mucosa con el contenido intestinal.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué forman las microvellosidades de las células intestinales?', 'El borde en cepillo, que amplía aún más la superficie de absorción.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'Dentro de una vellosidad, ¿qué vaso recibe buena parte de los lípidos absorbidos?', 'El vaso quilífero linfático.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿A qué vasos de una vellosidad pasan muchos azúcares y aminoácidos absorbidos?', 'A los capilares sanguíneos.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué agrupaciones de tejido linfático destacan en el íleon?', 'Las placas o parches de Peyer.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Cómo protegen las glándulas duodenales la mucosa frente al quimo ácido?', 'Secretan moco rico en bicarbonato que ayuda a neutralizarlo.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué secretan principalmente las criptas intestinales?', 'Jugo intestinal con agua y moco; gran parte de las enzimas actúa en el borde en cepillo o llega del páncreas.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Para qué sirven las contracciones de segmentación del intestino delgado?', 'Para mezclar el quimo con las secreciones y exponerlo a la mucosa.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'Entre comidas, ¿qué patrón de movimiento ayuda a barrer el contenido residual del intestino delgado?', 'El complejo motor migratorio.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'Si comes pan o arroz, ¿qué polisacárido digestible aportan en buena parte?', 'Almidón, cuya digestión empieza con amilasas y continúa en el intestino delgado.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Por qué la celulosa no se digiere como el almidón en el intestino delgado humano?', 'Porque nuestras enzimas digestivas no pueden romper sus enlaces de la misma manera.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Dónde empieza la digestión química de proteínas?', 'En el estómago, por acción de la pepsina.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Cómo se llama en conjunto a las enzimas que rompen proteínas?', 'Proteasas o peptidasas.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué proteasas pancreáticas continúan rompiendo polipéptidos en el intestino?', 'Entre otras, la tripsina y la quimotripsina.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Dónde terminan de actuar muchas peptidasas antes de absorber aminoácidos?', 'En el borde en cepillo del intestino delgado.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué significa emulsificar una grasa antes de que actúe la lipasa?', 'Dividir el glóbulo en gotas pequeñas para aumentar la superficie disponible.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué estructuras biliares transportan lípidos hacia la superficie de absorción intestinal?', 'Las micelas.'),
+    ('MORFOFUNCION', 'aparato digestivo', 'Tras absorber grasas, ¿cómo las empaqueta la célula intestinal para enviarlas a la linfa?', 'En quilomicrones.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué recupera principalmente el intestino grueso del residuo alimentario?', 'Agua y sales, con lo que ayuda a formar las heces.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Cómo se llama la primera bolsa del intestino grueso, situada tras la válvula ileocecal?', 'El ciego.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué partes del colon siguen al ciego antes del recto?', 'Colon ascendente, transverso, descendente y sigmoide.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué segmento almacena las heces antes de la evacuación?', 'El recto.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Por qué algunas bacterias del colon pueden beneficiar a la persona?', 'Ayudan a aprovechar compuestos de la dieta y producen ciertas vitaminas.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué vitamina producida por bacterias intestinales es importante para la coagulación?', 'La vitamina K.'),
+    ('MORFOFUNCION', 'aparato digestivo', '¿Qué esfínter anal funciona de modo involuntario y cuál puede controlarse voluntariamente?', 'El interno es involuntario; el externo está bajo control voluntario.')
 )
 INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
 SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
@@ -366,4 +425,4 @@ WHERE NOT EXISTS (
 COMMIT;
 NOTIFY pgrst, 'reload schema';
 
--- 217 tarjetas, 11 temas, 3 materias.
+-- 276 tarjetas, 11 temas, 3 materias.
