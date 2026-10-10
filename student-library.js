@@ -14,6 +14,8 @@
         const picker = document.getElementById('library-subjects');
         const back = document.getElementById('library-back');
         const title = document.getElementById('library-title');
+        const instruction = document.getElementById('library-instruction');
+        if (instruction) instruction.textContent = isTopics ? 'Elige un tema para abrir sus flashcards.' : 'Selecciona una materia para ver sus temas.';
         if (picker) picker.hidden = isTopics;
         if (back) back.hidden = !isTopics;
         if (title) title.textContent = isTopics ? ({'MORFOFUNCION':'Morfofunción','BIOLOGIA CELULAR':'Biología celular','SALUD PUBLICA':'Educación para la Salud'}[subject] || subject) : 'Elige una materia';

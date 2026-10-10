@@ -3409,7 +3409,7 @@ window.openMindMaps = async function () {
 };
 window.openIntocables = function () {
     if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
-    resourceChooser('Intocables', ['Mapas mentales', 'Conceptos clave', 'Fórmulas'], name => {
+    resourceChooser('Intocables', ['Mapas mentales'], name => {
         if (name === 'Mapas mentales') return openMindMaps();
         showScreen('intocables-screen');
         switchIntocTab(name === 'Conceptos clave' ? 'conceptos' : 'formulas');

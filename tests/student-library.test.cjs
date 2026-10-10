@@ -12,11 +12,13 @@ class Element {
   click() { return this.events.click(); }
 }
 function setup(load) {
-  const ids = Object.fromEntries(['library-topics-panel', 'library-topics', 'library-status', 'library-search'].map(id => [id, new Element()]));
+  const ids = Object.fromEntries(['library-topics-panel', 'library-topics', 'library-status', 'library-search', 'library-subjects', 'library-back', 'library-title', 'library-instruction'].map(id => [id, new Element()]));
   const buttons = ['MORFOFUNCION', 'BIOLOGIA CELULAR'].map(subject => Object.assign(new Element(), { dataset: { subject } }));
   const starts = [];
-  vm.runInNewContext(source, { window: {}, document: { getElementById: id => ids[id], querySelectorAll: () => buttons, createElement: () => new Element() }, normalizeDbText: x => String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(), campo: (r, k) => r[k] || r[k.toUpperCase()], loadFlashcards: load, startDeck: (...args) => starts.push(args) });
-  return { ids, buttons, starts };
+  const window = {};
+  const screens = [];
+  vm.runInNewContext(source, { window, showScreen: id => screens.push(id), document: { getElementById: id => ids[id], querySelectorAll: () => buttons, createElement: () => new Element() }, normalizeDbText: x => String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(), campo: (r, k) => r[k] || r[k.toUpperCase()], loadFlashcards: load, startDeck: (...args) => starts.push(args) });
+  return { ids, buttons, starts, window, screens };
 }
 test('groups actual topics, searches accents, opens only selected subject data', async () => {
   const h = setup(async () => [{ MATERIA: 'MORFOFUNCION', TEMA: 'Óseo' }, { materia: 'MORFOFUNCION', tema: 'óseo' }, { materia: 'BIOLOGIA CELULAR', tema: 'Óseo' }]);
@@ -51,4 +53,21 @@ test('failed load exposes retry and recovers', async () => {
   assert.match(h.ids['library-status'].textContent, /No pudimos/);
   await h.ids['library-topics'].children[0].click();
   assert.equal(h.ids['library-topics'].children[0].children[0].textContent, 'Músculo');
+});
+
+test('subject selection never starts a deck and returning preserves topic choices', async () => {
+  const h = setup(async () => [{materia:'MORFOFUNCION',tema:'Hueso'}]);
+  h.window.openStudyLibrary();
+  assert.equal(h.ids['library-subjects'].hidden, false);
+  assert.equal(h.ids['library-topics-panel'].hidden, true);
+  await h.buttons[0].click();
+  assert.equal(h.starts.length, 0);
+  assert.equal(h.ids['library-subjects'].hidden, true);
+  h.ids['library-topics'].children[0].click();
+  assert.equal(h.starts.length, 1);
+  h.window.backToStudyTopics();
+  assert.equal(h.ids['library-topics-panel'].hidden, false);
+  assert.equal(h.ids['library-topics'].children[0].children[0].textContent, 'Hueso');
+  h.window.openStudyLibrary();
+  assert.equal(h.ids['library-topics-panel'].hidden, true);
 });
