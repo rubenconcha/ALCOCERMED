@@ -4247,7 +4247,31 @@ function startQuestionTimer(seconds) {
 var quizMultiSelections = [];
 var quizLiveResultId = null;
 
+// Ilustraciones propias de las preguntas conceptuales del demo de Morfofunción.
+// La evaluación original reutilizaba una fotografía de regiones corporales
+// incluso en fisiología, radiología y método científico.
+var morfoConceptImages = {
+    'cdb01b7f-bc1c-5bac-892f-f4845682b3d8': { src: '/juegos/assets/demo-morfo/anatomia.svg', alt: 'Esquema de estructuras corporales: esqueleto y corazón' },
+    '33968fe3-4086-56a1-bda5-98c755dae66d': { src: '/juegos/assets/demo-morfo/fisiologia.svg', alt: 'Esquema del corazón y los pulmones en funcionamiento' },
+    '960a5cdf-518c-547e-b197-9b071f87b2f3': { src: '/juegos/assets/demo-morfo/radiologia.svg', alt: 'Ilustración de una radiografía del interior del cuerpo' },
+    '45e95ab8-e181-5647-8d11-0e31d6091ddb': { src: '/juegos/assets/demo-morfo/metodo-cientifico.svg', alt: 'Esquema de pregunta, idea y experimento' },
+    '832f8e4b-0d55-56a5-9d08-2bc9d8125b11': { src: '/juegos/assets/demo-morfo/evolucion.svg', alt: 'Árbol ramificado que representa cambios en poblaciones' },
+    '7ec65f72-704f-546d-94a7-e16c9104042b': { src: '/juegos/assets/demo-morfo/microscopia.svg', alt: 'Microscopio y células observadas con aumento' },
+    '8ab550d2-326f-58bc-9844-44f923ccea85': { src: '/juegos/assets/demo-morfo/historia.svg', alt: 'Libro de anatomía y microscopio histórico' },
+    '2a98c39a-21ef-5658-831d-405968f64bd4': { src: '/juegos/assets/demo-morfo/hipotesis.svg', alt: 'Hipótesis sometida a una prueba experimental' },
+    '4c7575e3-7a3e-a1ba-accb-1292b18d6d2f': { src: '/juegos/assets/demo-morfo/anatomia.svg', alt: 'Esquema de estructuras corporales: esqueleto y corazón' },
+    '40cef129-87ff-9565-d95f-613814957367': { src: '/juegos/assets/demo-morfo/fisiologia.svg', alt: 'Esquema del corazón y los pulmones en funcionamiento' },
+    'e5b6f657-3e7e-b17f-5c2b-79e5532a704e': { src: '/juegos/assets/demo-morfo/radiologia.svg', alt: 'Ilustración de una radiografía del interior del cuerpo' },
+    'd8cbb57d-16f5-7511-89ce-ecbc467df1fd': { src: '/juegos/assets/demo-morfo/metodo-cientifico.svg', alt: 'Esquema de pregunta, idea y experimento' },
+    '48d1642b-f519-da67-593c-d4c38812689f': { src: '/juegos/assets/demo-morfo/evolucion.svg', alt: 'Árbol ramificado que representa cambios en poblaciones' },
+    '66345056-5fa5-a12c-4379-c5a4e005b390': { src: '/juegos/assets/demo-morfo/microscopia.svg', alt: 'Microscopio y células observadas con aumento' },
+    'e39f7b12-f4e9-6659-c2ed-f152312eefab': { src: '/juegos/assets/demo-morfo/historia.svg', alt: 'Libro de anatomía y microscopio histórico' },
+    'd5a3aa1e-bc91-174c-4c5d-0a2bd21f3570': { src: '/juegos/assets/demo-morfo/hipotesis.svg', alt: 'Hipótesis sometida a una prueba experimental' }
+};
+
 function getQuizQuestionImage(pregunta) {
+    var morfoIllustration = pregunta && morfoConceptImages[pregunta.id];
+    if (morfoIllustration) return morfoIllustration.src;
     var illustration = getNervousQuestionIllustration(pregunta);
     if (illustration) return illustration.src;
     var opts = pregunta && pregunta.opciones;
@@ -4271,11 +4295,12 @@ function renderQuizQuestionImageWrap(pregunta, tipo) {
     var wrap = document.getElementById('quiz-question-image-wrap');
     if (!wrap) return;
     var illustration = getNervousQuestionIllustration(pregunta);
+    var morfoIllustration = pregunta && morfoConceptImages[pregunta.id];
     wrap.classList.toggle('quiz-image-illustrated', !!illustration);
     var questionImage = getQuizQuestionImage(pregunta);
     if (questionImage && tipo !== 'dnd') {
         wrap.hidden = false;
-        wrap.innerHTML = '<img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(illustration ? illustration.alt : 'Imagen de la pregunta') + '">';
+        wrap.innerHTML = '<img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(morfoIllustration ? morfoIllustration.alt : (illustration ? illustration.alt : 'Imagen de la pregunta')) + '">';
         if (illustration) {
             wrap.innerHTML += illustration.credit
                 ? '<small class="quiz-image-credit">' + escapeHtml(illustration.credit) + '</small>'

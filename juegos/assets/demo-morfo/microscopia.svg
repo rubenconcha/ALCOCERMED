@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" aria-label="Del tejido a la célula">
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#e9f5fb"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1a4565" flood-opacity=".12"/></filter>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 7 4 1 7" fill="none" stroke="#2e9cab" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="760" height="340" rx="22" fill="url(#bg)"/>
+<circle cx="670" cy="62" r="110" fill="#2e9cab" opacity=".06"/><circle cx="110" cy="310" r="120" fill="#2e9cab" opacity=".05"/>
+<rect x="24" y="21" width="712" height="298" rx="22" fill="#fff" stroke="#d9e8f1" filter="url(#shadow)"/>
+<rect x="48" y="43" width="6" height="34" rx="3" fill="#2e9cab"/>
+<text x="67" y="59" fill="#16324a" font-size="18" font-weight="800" font-family="Arial,sans-serif">MICROSCOPÍA</text>
+<text x="67" y="78" fill="#6a8092" font-size="12" font-family="Arial,sans-serif">Del tejido a la célula</text>
+
+<rect x="80" y="110" width="250" height="183" rx="20" fill="#f3f8fc" stroke="#dce9f0"/><rect x="408" y="110" width="270" height="183" rx="20" fill="#f3f8fc" stroke="#dce9f0"/>
+<path d="m159 256 43-22-37-54 27-20 43 60-21 16m-43 19h110m-84-64 15-36 25 10-15 36m-59 62h108" fill="none" stroke="#2e8298" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="249" cy="220" r="26" fill="#c7edf0" stroke="#2e8298" stroke-width="6"/>
+<circle cx="550" cy="203" r="75" fill="#edf9fa" stroke="#2e9cab" stroke-width="6"/>
+<circle cx="520" cy="181" r="25" fill="#d6b9e9" stroke="#916bb4" stroke-width="4"/><circle cx="581" cy="181" r="22" fill="#d6b9e9" stroke="#916bb4" stroke-width="4"/>
+<circle cx="547" cy="233" r="25" fill="#d6b9e9" stroke="#916bb4" stroke-width="4"/>
+<circle cx="520" cy="181" r="8" fill="#916bb4"/><circle cx="581" cy="181" r="7" fill="#916bb4"/><circle cx="547" cy="233" r="8" fill="#916bb4"/>
+<path d="M330 202h70" stroke="#2e9cab" stroke-width="5" marker-end="url(#arrow)"/>
+
+</svg>

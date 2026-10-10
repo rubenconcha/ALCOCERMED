@@ -84,7 +84,17 @@ update public.evaluacion_preguntas q
    set opciones = (
      select jsonb_agg(o.value || jsonb_build_object('pregunta_imagen',
        case e.codigo
-         when 'T1MORF' then '/juegos/assets/capitulo1-tema1-saladin/cap1_regiones_corporales_anterior.png'
+         when 'T1MORF' then case q.orden
+           when 0 then '/juegos/assets/demo-morfo/anatomia.svg'
+           when 1 then '/juegos/assets/demo-morfo/fisiologia.svg'
+           when 2 then '/juegos/assets/demo-morfo/radiologia.svg'
+           when 3 then '/juegos/assets/demo-morfo/microscopia.svg'
+           when 4 then '/juegos/assets/demo-morfo/historia.svg'
+           when 5 then '/juegos/assets/demo-morfo/metodo-cientifico.svg'
+           when 6 then '/juegos/assets/demo-morfo/hipotesis.svg'
+           when 8 then '/juegos/assets/demo-morfo/evolucion.svg'
+           else null
+         end
          else '/juegos/assets/capitulo2-tema2-saladin/cap2_elementos_cuerpo_humano.png'
        end) order by o.ordinality)
        from jsonb_array_elements(q.opciones) with ordinality as o(value, ordinality)
@@ -92,6 +102,7 @@ update public.evaluacion_preguntas q
   from public.evaluaciones e
  where q.evaluacion_id=e.id
    and e.codigo in ('T1MORF','T2MORF')
+   and (e.codigo <> 'T1MORF' or q.orden in (0,1,2,3,4,5,6,8))
    and jsonb_typeof(q.opciones)='array'
    and jsonb_array_length(q.opciones)>0
    and not exists (

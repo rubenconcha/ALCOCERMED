@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" aria-label="Estructuras y relaciones del cuerpo">
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#e9f5fb"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1a4565" flood-opacity=".12"/></filter>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 7 4 1 7" fill="none" stroke="#2591c5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="760" height="340" rx="22" fill="url(#bg)"/>
+<circle cx="670" cy="62" r="110" fill="#2591c5" opacity=".06"/><circle cx="110" cy="310" r="120" fill="#2591c5" opacity=".05"/>
+<rect x="24" y="21" width="712" height="298" rx="22" fill="#fff" stroke="#d9e8f1" filter="url(#shadow)"/>
+<rect x="48" y="43" width="6" height="34" rx="3" fill="#2591c5"/>
+<text x="67" y="59" fill="#16324a" font-size="18" font-weight="800" font-family="Arial,sans-serif">ANATOMÍA</text>
+<text x="67" y="78" fill="#6a8092" font-size="12" font-family="Arial,sans-serif">Estructuras y relaciones del cuerpo</text>
+
+<rect x="76" y="110" width="260" height="178" rx="20" fill="#f3f8fc" stroke="#dce9f0"/><rect x="424" y="110" width="260" height="178" rx="20" fill="#f3f8fc" stroke="#dce9f0"/>
+<circle cx="206" cy="139" r="19" fill="#dcecf2" stroke="#347fa8" stroke-width="4"/>
+<path d="M206 158v72m-40-54 40 22 40-22m-40 54-27 38m27-38 27 38" fill="none" stroke="#347fa8" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M190 185c14-5 28-5 32 0m-36 15c18-7 35-7 40 0m-37 14c15-4 29-4 34 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<path d="M468 199c-9-30 9-55 33-54 17 0 28 12 31 29 8-26 23-34 42-28 25 8 29 39 12 58-15 18-39 34-55 48-18-14-47-31-63-53Z" fill="#f3a085" stroke="#df7568" stroke-width="4"/>
+<path d="M530 153v-24m-25 12-10-19m59 20 11-18" fill="none" stroke="#347fa8" stroke-width="7" stroke-linecap="round"/>
+<path d="M335 199h87" stroke="#2591c5" stroke-width="5" stroke-dasharray="6 8"/>
+<circle cx="379" cy="199" r="12" fill="#2591c5"/><circle cx="379" cy="199" r="4" fill="#fff"/>
+
+</svg>

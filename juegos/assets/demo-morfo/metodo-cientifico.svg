@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" aria-label="De una pregunta a una prueba">
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#e9f5fb"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1a4565" flood-opacity=".12"/></filter>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 7 4 1 7" fill="none" stroke="#9258b1" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="760" height="340" rx="22" fill="url(#bg)"/>
+<circle cx="670" cy="62" r="110" fill="#9258b1" opacity=".06"/><circle cx="110" cy="310" r="120" fill="#9258b1" opacity=".05"/>
+<rect x="24" y="21" width="712" height="298" rx="22" fill="#fff" stroke="#d9e8f1" filter="url(#shadow)"/>
+<rect x="48" y="43" width="6" height="34" rx="3" fill="#9258b1"/>
+<text x="67" y="59" fill="#16324a" font-size="18" font-weight="800" font-family="Arial,sans-serif">MÉTODO CIENTÍFICO</text>
+<text x="67" y="78" fill="#6a8092" font-size="12" font-family="Arial,sans-serif">De una pregunta a una prueba</text>
+
+<rect x="76" y="117" width="608" height="174" rx="20" fill="#f3f8fc" stroke="#dce9f0"/>
+<circle cx="172" cy="202" r="47" fill="#e6dcf4" stroke="#9258b1" stroke-width="4"/>
+<text x="172" y="223" text-anchor="middle" fill="#734199" font-size="68" font-weight="700" font-family="Arial,sans-serif">?</text>
+<path d="M221 202h65" stroke="#9258b1" stroke-width="5" marker-end="url(#arrow)"/>
+<path d="M333 173c-20 0-35 13-35 32 0 11 6 20 14 26v16h40v-16c9-6 15-16 15-27 0-18-14-31-34-31Z" fill="#ffe5aa" stroke="#dca849" stroke-width="4"/>
+<path d="M320 254h26" stroke="#dca849" stroke-width="5" stroke-linecap="round"/>
+<path d="M372 202h65" stroke="#9258b1" stroke-width="5" marker-end="url(#arrow)"/>
+<path d="M482 159h65l-12 50 27 51h-95l27-51-12-50Z" fill="#b5e2d9" stroke="#438e83" stroke-width="5"/>
+<path d="M479 227q33-14 67 0" fill="none" stroke="#438e83" stroke-width="4"/>
+<circle cx="496" cy="217" r="5" fill="#438e83"/><circle cx="525" cy="238" r="4" fill="#438e83"/>
+<path d="M571 202h50" stroke="#9258b1" stroke-width="5" marker-end="url(#arrow)"/>
+
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" aria-label="Poblaciones y cambio a través del tiempo">
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#e9f5fb"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1a4565" flood-opacity=".12"/></filter>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 7 4 1 7" fill="none" stroke="#68a75d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="760" height="340" rx="22" fill="url(#bg)"/>
+<circle cx="670" cy="62" r="110" fill="#68a75d" opacity=".06"/><circle cx="110" cy="310" r="120" fill="#68a75d" opacity=".05"/>
+<rect x="24" y="21" width="712" height="298" rx="22" fill="#fff" stroke="#d9e8f1" filter="url(#shadow)"/>
+<rect x="48" y="43" width="6" height="34" rx="3" fill="#68a75d"/>
+<text x="67" y="59" fill="#16324a" font-size="18" font-weight="800" font-family="Arial,sans-serif">EVOLUCIÓN</text>
+<text x="67" y="78" fill="#6a8092" font-size="12" font-family="Arial,sans-serif">Poblaciones y cambio a través del tiempo</text>
+
+<rect x="86" y="109" width="588" height="186" rx="20" fill="#f3f8fc" stroke="#dce9f0"/>
+<path d="M173 262v-52h101v-61m-101 61h140v38m-39-99h130v44m0 0h114v-47m-114 47h94v53m-325-36h-66" fill="none" stroke="#71ad69" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="173" cy="263" r="19" fill="#cceac8" stroke="#549551" stroke-width="4"/>
+<circle cx="274" cy="149" r="19" fill="#d6efd0" stroke="#549551" stroke-width="4"/>
+<circle cx="313" cy="248" r="19" fill="#c4e5d0" stroke="#549551" stroke-width="4"/>
+<circle cx="518" cy="146" r="19" fill="#cceac8" stroke="#549551" stroke-width="4"/>
+<circle cx="498" cy="246" r="19" fill="#c4e5d0" stroke="#549551" stroke-width="4"/>
+<path d="m166 256 9-8 9 8m82-109 9-8 9 8m20 100 9-8 9 8m188-101 9-8 9 8m-28 99 9-8 9 8" fill="none" stroke="#549551" stroke-width="3"/>
+<path d="M104 263h-3m548-117h10m-10 100h12" stroke="#68a75d" stroke-width="6" stroke-linecap="round"/>
+
+</svg>
