@@ -3603,7 +3603,7 @@ function renderMmGrid() {
         var card = document.createElement('button');
         card.type = 'button';
         card.className = 'mm-card' + (locked ? ' mm-card-locked' : '');
-        card.setAttribute('aria-label', locked ? 'Ver cómo desbloquear el mapa ' + titulo : 'Abrir mapa ' + titulo);
+        card.setAttribute('aria-label', locked ? 'Desbloquear mapa ' + titulo : 'Abrir mapa ' + titulo);
         card.onclick = function () { if (locked) openMmUnlockDialog(m); else openMmLightbox(m); };
         card.innerHTML =
             '<div class="mm-card-thumb">' +
@@ -3616,7 +3616,7 @@ function renderMmGrid() {
             '<div class="mm-card-body">' +
             (materia ? '<span class="mm-card-materia">' + safeMateria + '</span>' : '') +
             '<h3 class="mm-card-title">' + safeTitle + '</h3>' +
-            (locked ? '<span class="mm-card-preview-action">Ver cómo desbloquear <i class="fas fa-arrow-right" aria-hidden="true"></i></span>' : desc ? '<p class="mm-card-desc">' + safeDesc + '</p>' : '') +
+            (locked ? '<span class="mm-card-preview-action">Desbloquear</span>' : desc ? '<p class="mm-card-desc">' + safeDesc + '</p>' : '') +
             '</div>';
         grid.appendChild(card);
     });

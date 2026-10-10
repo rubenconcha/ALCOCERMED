@@ -30,7 +30,7 @@ test('el mapa bloqueado muestra la vista previa antes de abrir los planes', () =
 
   assert.equal(grid.cards.length, 1);
   assert.match(grid.cards[0].innerHTML, /mm-card-img-locked/);
-  assert.match(grid.cards[0].innerHTML, /Ver cómo desbloquear/);
+  assert.match(grid.cards[0].innerHTML, />Desbloquear<\/span>/);
   grid.cards[0].onclick();
   assert.equal(dialog.open, true);
   assert.equal(title.textContent, map.titulo);
