@@ -1808,6 +1808,17 @@ function navigateTo(page, skipPush) {
     if (page === 'quiz' && typeof quizData === 'undefined' || (page === 'quiz' && !quizData)) {
         page = 'historial'; // Redirect to historial if reloading the quiz page without active session
     }
+    if (currentPage === 'quiz' && page !== 'quiz') {
+        if (quizTimerInterval) clearInterval(quizTimerInterval);
+        quizTimerInterval = null;
+        if (splashInterval) clearInterval(splashInterval);
+        splashInterval = null;
+        if (powerupCloseTimeout) clearTimeout(powerupCloseTimeout);
+        powerupCloseTimeout = null;
+        var powerupOverlay = document.getElementById('powerup-cards-overlay');
+        if (powerupOverlay) powerupOverlay.remove();
+        stopGameMusic();
+    }
     currentPage = page;
     setQuizFocusMode(page === 'quiz');
 
@@ -2302,6 +2313,7 @@ var flippedCards = false;
 var powerupCloseTimeout = null;
 
 function showPowerupCards() {
+    if (currentPage !== 'quiz') return;
     flippedCards = false;
     var available = [];
     for (var key in POWERUP_DEFS) {
@@ -4859,6 +4871,7 @@ function confirmQuizAnswerInstant(idx) {
 window.confirmQuizAnswerInstant = confirmQuizAnswerInstant;
 
 function quizNext() {
+    if (currentPage !== 'quiz') return;
     cleanupPowerupsForNextQ();
     quizCurrentQ++;
     if (quizData && quizData.evaluacion && quizData.evaluacion.codigo) {
