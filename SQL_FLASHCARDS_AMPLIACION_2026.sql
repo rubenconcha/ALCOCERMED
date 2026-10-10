@@ -280,7 +280,7 @@ WHERE NOT EXISTS (
     AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
 );
 
--- morfo: páginas PDF 883-891 | MORFOFUNCION / aparato respiratorio
+-- morfo: páginas PDF 883-920 | MORFOFUNCION / aparato respiratorio
 WITH incoming (materia, tema, pregunta, respuesta) AS (
   VALUES
     ('MORFOFUNCION', 'aparato respiratorio', 'Antes de que el aire llegue a los pulmones, ¿qué tres cosas hace la nariz con él?', 'Lo calienta, lo humedece y ayuda a limpiarlo.'),
@@ -302,7 +302,83 @@ WITH incoming (materia, tema, pregunta, respuesta) AS (
     ('MORFOFUNCION', 'aparato respiratorio', '¿Qué entra al pulmón por el hilio además del bronquio principal?', 'Vasos sanguíneos, vasos linfáticos y nervios.'),
     ('MORFOFUNCION', 'aparato respiratorio', '¿Cuántos lóbulos tiene el pulmón derecho?', 'Tres: superior, medio e inferior.'),
     ('MORFOFUNCION', 'aparato respiratorio', '¿Qué pulmón tiene una escotadura relacionada con el corazón?', 'El izquierdo.'),
-    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué ramas marcan el final de la zona conductora del árbol bronquial?', 'Los bronquiolos terminales.')
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué ramas marcan el final de la zona conductora del árbol bronquial?', 'Los bronquiolos terminales.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Cuántos lóbulos tiene el pulmón izquierdo?', 'Dos: superior e inferior.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Por qué el pulmón izquierdo tiene menos espacio que el derecho?', 'Porque el corazón ocupa parte del lado izquierdo del mediastino.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué parte del pulmón descansa sobre el diafragma?', 'La base pulmonar.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Cómo se llama la punta superior del pulmón que se proyecta hacia la clavícula?', 'El vértice.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué bronquios llevan aire a cada lóbulo pulmonar?', 'Los bronquios lobulares o secundarios.'),
+    ('MORFOFUNCION', 'aparato respiratorio', 'Después de los bronquios lobulares, ¿qué ramas ventilan segmentos broncopulmonares?', 'Los bronquios segmentarios.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Cuál es la diferencia funcional entre un bronquiolo terminal y uno respiratorio?', 'El terminal solo conduce aire; el respiratorio ya tiene alvéolos y participa en intercambio gaseoso.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué estructuras siguen a los bronquiolos respiratorios antes de los sacos alveolares?', 'Los conductos alveolares.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Cuál es la unidad final donde el aire intercambia gases con los capilares?', 'El alvéolo.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Por qué los alvéolos tienen paredes muy delgadas?', 'Para que oxígeno y dióxido de carbono difundan a corta distancia.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué células alveolares producen surfactante?', 'Los neumocitos de tipo II.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Para qué sirve el surfactante dentro de los alvéolos?', 'Reduce la tensión superficial y ayuda a que no colapsen al espirar.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué células limpian partículas que llegaron hasta los alvéolos?', 'Los macrófagos alveolares.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué dos lados separa la membrana respiratoria?', 'El aire alveolar y la sangre de los capilares pulmonares.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué capa de pleura está pegada a la superficie del pulmón?', 'La pleura visceral.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué capa de pleura reviste la pared de la cavidad torácica?', 'La pleura parietal.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué permite una fina película de líquido entre las pleuras?', 'Que ambas superficies se deslicen con poco rozamiento durante la respiración.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué diferencia hay entre zona conductora y zona respiratoria?', 'La conductora lleva y acondiciona aire; la respiratoria contiene alvéolos e intercambia gases.'),
+    ('MORFOFUNCION', 'aparato respiratorio', 'Si un conducto carece de alvéolos, ¿esperas intercambio gaseoso importante en su pared?', 'No. Su función principal es conducir el aire.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué sangre llega a los capilares que rodean los alvéolos?', 'Sangre venosa procedente de las arterias pulmonares.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Cómo se llama la entrada de aire a los pulmones?', 'Inspiración o inhalación.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Cómo se llama la salida de aire desde los pulmones?', 'Espiración o exhalación.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué ocurre con el diafragma al contraerse durante la inspiración?', 'Desciende y aumenta el volumen de la cavidad torácica.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué ocurre con la presión intrapulmonar cuando aumenta el volumen torácico?', 'Disminuye y el aire puede entrar desde la atmósfera.'),
+    ('MORFOFUNCION', 'aparato respiratorio', 'Si la presión dentro del pulmón supera la atmosférica, ¿hacia dónde fluye el aire?', 'Hacia fuera del pulmón.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué relación entre volumen y presión describe la ley de Boyle?', 'A temperatura constante, al aumentar el volumen de un gas disminuye su presión.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Por qué no hay flujo de aire al final de una respiración tranquila?', 'Porque se igualan la presión atmosférica y la intrapulmonar.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿La espiración tranquila requiere una contracción muscular potente?', 'No. Predomina el retroceso elástico después de que se relajan los músculos inspiratorios.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué músculos además del diafragma ayudan a mover las costillas al respirar?', 'Los músculos intercostales.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Por qué la espiración forzada puede necesitar músculos adicionales?', 'Porque debe reducir el volumen torácico con más fuerza que el retroceso elástico normal.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué cambio en los bronquiolos aumenta la resistencia al flujo de aire?', 'El estrechamiento de su diámetro.'),
+    ('MORFOFUNCION', 'aparato respiratorio', 'Si los bronquiolos se dilatan, ¿qué pasa con la resistencia al paso del aire?', 'Disminuye.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué significa atelectasia?', 'Colapso de una parte o de todo el pulmón.'),
+    ('MORFOFUNCION', 'aparato respiratorio', 'Una vía aérea queda obstruida y el aire distal se absorbe. ¿Qué puede ocurrir con esa región?', 'Puede colapsar y producir atelectasia.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué es el volumen corriente?', 'El aire que entra o sale durante una respiración tranquila.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué es el espacio muerto anatómico?', 'El volumen de aire que queda en vías conductoras y no llega a zonas de intercambio.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Por qué la ventilación alveolar puede ser menor que el aire inhalado?', 'Porque una parte de cada inspiración permanece en el espacio muerto anatómico.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Cómo se calcula de forma básica la ventilación alveolar por minuto?', 'Aire que llega a alvéolos por respiración multiplicado por respiraciones por minuto.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué es el volumen residual?', 'El aire que permanece en los pulmones incluso después de una espiración máxima.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Para qué se usa la espirometría?', 'Para medir volúmenes y flujos respiratorios y evaluar la ventilación pulmonar.'),
+    ('MORFOFUNCION', 'aparato respiratorio', 'Si una enfermedad impide que el pulmón se expanda bien, ¿es obstructiva o restrictiva?', 'Restrictiva.'),
+    ('MORFOFUNCION', 'aparato respiratorio', 'Si una enfermedad estrecha las vías y dificulta mover aire, ¿es obstructiva o restrictiva?', 'Obstructiva.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué ejemplo del texto causa obstrucción variable de las vías respiratorias?', 'El asma.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Dónde se localizan los centros automáticos principales de la respiración?', 'En el bulbo raquídeo y la protuberancia del tronco encefálico.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué grupo respiratorio del bulbo se describe como generador principal del ritmo?', 'El grupo respiratorio ventral.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué parte del encéfalo permite decidir contener la respiración o cantar?', 'La corteza motora, que aporta control voluntario.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué reflejo puede provocar el humo al estimular receptores de irritantes?', 'Tos, cambios en la respiración o broncoconstricción protectora.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué expresa la presión parcial de un gas en una mezcla?', 'La parte de la presión total que corresponde a ese gas.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Por qué el aire alveolar tiene menos oxígeno que el aire recién inspirado?', 'Porque se humedece, se mezcla con aire residual e intercambia gases con la sangre.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Hacia dónde difunde el oxígeno en el alvéolo si su presión parcial es mayor en el aire que en la sangre?', 'Del aire alveolar hacia la sangre.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Hacia dónde difunde el dióxido de carbono en los capilares pulmonares?', 'De la sangre hacia el aire alveolar para ser exhalado.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué necesita un alvéolo además de ventilación para oxigenar sangre?', 'Perfusión: flujo de sangre por sus capilares.'),
+    ('MORFOFUNCION', 'aparato respiratorio', 'Si una región pulmonar está mal ventilada, ¿qué ajuste local puede hacer su circulación?', 'Contraer sus vasos para desviar sangre a zonas mejor ventiladas.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Cómo se llama el ajuste entre aire que llega y sangre que pasa por una región pulmonar?', 'Acoplamiento ventilación-perfusión.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿En qué molécula viaja la mayor parte del oxígeno sanguíneo?', 'Unida a la hemoglobina de los eritrocitos.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Cuántas moléculas de oxígeno puede transportar una hemoglobina completa?', 'Hasta cuatro, una en cada grupo hemo.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué ion del grupo hemo se une reversiblemente al oxígeno?', 'El hierro ferroso, Fe2+.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Toda la sangre transporta oxígeno disuelto en el plasma?', 'Sí, pero es una fracción pequeña frente a la unida a hemoglobina.'),
+    ('MORFOFUNCION', 'aparato respiratorio', 'Cuando aumenta la presión parcial de oxígeno, ¿qué suele pasar con la saturación de hemoglobina?', 'Aumenta hasta acercarse a su capacidad máxima.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Por qué el intercambio de oxígeno en tejidos activos puede aumentar?', 'Porque consumen más oxígeno y crean un gradiente que favorece su salida de la sangre.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿En qué forma viaja gran parte del dióxido de carbono en la sangre?', 'Como bicarbonato, después de reaccionar con agua.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué enzima del eritrocito acelera la formación de bicarbonato a partir de CO2 y agua?', 'La anhidrasa carbónica.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué intercambio iónico acompaña la salida de bicarbonato del eritrocito?', 'Entra cloruro a cambio; se conoce como desplazamiento de cloruro.'),
+    ('MORFOFUNCION', 'aparato respiratorio', 'Además de bicarbonato, ¿en qué otras formas puede transportarse el CO2?', 'Disuelto como gas y unido a proteínas en compuestos carbamino.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué ocurre con el CO2 de los tejidos al llegar a los pulmones?', 'Las reacciones se invierten, se libera CO2 y difunde hacia los alvéolos.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Por qué una célula muscular en ejercicio recibe más oxígeno que una en reposo?', 'Porque su mayor actividad favorece la descarga local de oxígeno desde la hemoglobina.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué vigilan los quimiorreceptores para ajustar el ritmo respiratorio?', 'Cambios de pH y de gases en la sangre y el líquido cefalorraquídeo.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Por qué el ejercicio puede aumentar la respiración antes de que cambien mucho los gases arteriales?', 'Porque órdenes motoras y señales de músculos y articulaciones estimulan los centros respiratorios.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué significa hipoxemia?', 'Concentración o presión de oxígeno anormalmente baja en la sangre.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué significa hipoxia?', 'Suministro insuficiente de oxígeno a los tejidos.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué coloración puede acompañar una oxigenación deficiente?', 'Cianosis, un tono azulado de piel o mucosas.'),
+    ('MORFOFUNCION', 'aparato respiratorio', 'En el enfisema, ¿qué cambio dificulta la espiración?', 'La pérdida de elasticidad y el atrapamiento de aire en los pulmones.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué le hace la bronquitis crónica a las vías respiratorias?', 'Produce inflamación y secreciones que dificultan el flujo de aire.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Por qué fumar aumenta el riesgo de daño respiratorio y cáncer pulmonar?', 'Porque expone repetidamente el epitelio a irritantes y carcinógenos.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué dos tareas de todo el aparato respiratorio conectan pulmones y metabolismo?', 'Entregar oxígeno a los tejidos y retirar el dióxido de carbono que producen.'),
+    ('MORFOFUNCION', 'aparato respiratorio', '¿Qué otro equilibrio corporal ayuda a regular la eliminación de CO2?', 'El equilibrio ácido-base o pH.')
 )
 INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
 SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
@@ -425,4 +501,4 @@ WHERE NOT EXISTS (
 COMMIT;
 NOTIFY pgrst, 'reload schema';
 
--- 276 tarjetas, 11 temas, 3 materias.
+-- 352 tarjetas, 11 temas, 3 materias.
