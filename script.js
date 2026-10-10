@@ -996,7 +996,7 @@ function resourceChooser(tool, names, select, description) {
         const button = document.createElement('button');
         button.type = 'button';
         const img = document.createElement('img');
-        img.src = '/assets/study-art/' + (/biolog|c[eé]lul/i.test(name) ? 'cell' : /salud/i.test(name) ? 'health-education' : 'morphology') + '.png';
+        img.src = '/assets/study-art/' + (/quiz/i.test(name) ? 'quiz' : /ahorcado/i.test(name) ? 'word' : /biolog|c[eé]lul/i.test(name) ? 'cell' : /salud/i.test(name) ? 'health-education' : 'morphology') + '.png';
         img.alt = '';
         const label = document.createElement('strong');
         label.textContent = name.replace(/salud p[úu]blica/i, 'Educación para la Salud');
@@ -1005,6 +1005,10 @@ function resourceChooser(tool, names, select, description) {
         options.append(button);
     });
 }
+window.openGameMenu = function () {
+    if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
+    resourceChooser('Juegos', ['Quiz relámpago', 'Ahorcado médico'], name => openGame(name === 'Quiz relámpago' ? 'quiz' : 'hangman'), 'Elige un juego para empezar.');
+};
 window.openGame = function (gameType) {
     if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
     const source = gameType === 'quiz' ? QUIZ_QUESTIONS : HANGMAN_WORDS;
