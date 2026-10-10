@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
-<link rel="stylesheet" href="campus-access.css?v=1">
+<link rel="stylesheet" href="campus-access.css?v=1"><link rel="stylesheet" href="campus-navigation.css?v=1">
 </head>
 
 <body class="login-active">
@@ -317,7 +317,35 @@
             </ul>
         </div>
 
-        <!-- ══ MI PROGRESO ══ -->
+    </nav>
+
+    <!-- ══ CONTENIDO PRINCIPAL ══ -->
+    <main class="main-content">
+        <!-- Barra superior MOBILE para abrir sidebar -->
+        <div class="mobile-topbar" id="mobile-topbar">
+            <button aria-label="Abrir menú" class="mobile-menu-btn" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="mobile-topbar-brand">
+                <div class="mobile-topbar-logo">
+                    <img src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg"
+                        alt="Logo" class="logo-img"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="logo-fallback" style="display:none;">B</span>
+                </div>
+                <span class="mobile-topbar-name">preparatoria ben carson</span>
+            </div>
+            <button id="install-pwa-btn" class="mobile-install-btn pwa-install-trigger" type="button" title="descargar app">
+                <i class="fas fa-download"></i>
+            </button>
+        </div>
+
+        <!-- ══ PANTALLA INICIO — MOBILE FIRST ══ -->
+<section id="home-screen" class="home-screen campus-dashboard">
+<header class="campus-greeting"><span>PREPARATORIA BEN CARSON · ALCOCERMED</span><h1>Hola, <span id="welcome-name">bienvenido</span>.</h1><p>Bienvenido a tu plataforma de estudio.</p></header>
+<div class="dashboard-columns"><div class="dashboard-main"><article class="welcome-card"><div><span class="welcome-label">TU CAMPUS</span><h2>Tu preparación para Medicina, en un solo lugar.</h2><p>En el menú encontrarás tus flashcards, mapas mentales, preguntas y juegos. Elige una sección y después la materia que quieres repasar.</p><button class="home-primary-action" onclick="openStudyLibrary()">Ir a flashcards <span aria-hidden="true">→</span></button></div><img src="/assets/study-art/cards.png" alt="Tarjetas de estudio"></article><div id="trial-account-banner" class="free-account-banner" hidden><small>PRUEBA GRATUITA · ACCESO COMPLETO</small><h2>Tienes todo AlcocerMed disponible.</h2><p id="trial-account-deadline"></p><a href="/planes#planes">Ver planes para continuar →</a></div>
+<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA ALCOCERMED</small><h2>Continúa tu preparación.</h2><p>Elige un plan para acceder a todos los recursos. Tu progreso guardado permanece en tu cuenta.</p><div class="free-samples"><button onclick="CampusAccess.unlock()">Ver planes →</button></div></div>
+<div class="campus-account-note"><i class="fas fa-graduation-cap" aria-hidden="true"></i><div><strong>Tu cuenta, tu avance</strong><p>Consulta tus resultados y retoma el estudio desde el menú.</p></div><button onclick="openEvaluacion()">Ver resultados →</button></div></div><aside class="dashboard-progress" aria-label="Tu progreso"><h2>Tu progreso</h2>        <!-- ══ MI PROGRESO ══ -->
         <div class="nav-section progress-section">
             <span class="section-title">MI PROGRESO</span>
             <div class="progress-card">
@@ -406,159 +434,21 @@
             </div>
         </div>
 
-    </nav>
-
-    <!-- ══ CONTENIDO PRINCIPAL ══ -->
-    <main class="main-content">
-        <!-- Barra superior MOBILE para abrir sidebar -->
-        <div class="mobile-topbar" id="mobile-topbar">
-            <button aria-label="Abrir menú" class="mobile-menu-btn" onclick="toggleSidebar()">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="mobile-topbar-brand">
-                <div class="mobile-topbar-logo">
-                    <img src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg"
-                        alt="Logo" class="logo-img"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                    <span class="logo-fallback" style="display:none;">B</span>
-                </div>
-                <span class="mobile-topbar-name">preparatoria ben carson</span>
-            </div>
-            <button id="install-pwa-btn" class="mobile-install-btn pwa-install-trigger" type="button" title="descargar app">
-                <i class="fas fa-download"></i>
-            </button>
-        </div>
-
-        <!-- ══ PANTALLA INICIO — MOBILE FIRST ══ -->
-        <section id="home-screen" class="home-screen home-mobile-redesign">
-<div id="trial-account-banner" class="free-account-banner" hidden><small>PRUEBA GRATUITA · ACCESO COMPLETO</small><h2>Tienes todo AlcocerMed disponible.</h2><p id="trial-account-deadline"></p><a href="/planes#planes">Ver planes para continuar →</a></div>
-<div id="free-account-banner" class="free-account-banner" hidden><small>TU CUENTA ALCOCERMED</small><h2>Continúa tu preparación.</h2><p>Elige un plan para acceder a todos los recursos. Tu progreso guardado permanece en tu cuenta.</p><div class="free-samples"><button onclick="CampusAccess.unlock()">Ver planes →</button></div></div>
-            <div class="home-mobile-hero">
-                <div class="home-hero-kicker"><i class="fas fa-bolt"></i> Tu espacio de estudio</div>
-                <h1>Elige tu próximo tema.</h1>
-                <p>Abre una materia para ver sus tarjetas. Usa los mapas para relacionar conceptos y las preguntas para comprobar tu repaso.</p>
-                <div class="home-hero-actions">
-                    <button class="home-primary-action" onclick="openStudyLibrary()"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"> Elegir materia</button>
-                    <button class="home-secondary-action" onclick="openMindMaps()"><img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80"> mapas</button>
-                    <button class="home-secondary-action pwa-install-trigger" type="button"><i class="fas fa-download"></i> descargar app</button>
-                </div>
-                <div class="home-hero-stats">
-                    <div><strong id="home-repasos">0</strong><span>repasos</span></div>
-                    <div><strong id="home-cards">0</strong><span>avance del mazo</span></div>
-                    <div><strong id="home-temas">0</strong><span>temas repasados</span></div>
-                    <div><strong id="home-games">0</strong><span>partidas jugadas</span></div>
-                </div>
-            </div>
-
-            <section class="study-library" id="study-library" aria-labelledby="library-title">
-<div class="home-section-head"><div><p class="library-kicker">TU BIBLIOTECA</p><h2 id="library-title">Estudia por materia</h2></div><p>Selecciona una materia para ver sus temas.</p></div>
-<div class="subject-picker" aria-label="Materias">
-<button type="button" data-subject="MORFOFUNCION" aria-pressed="false"><i class="fas fa-brain"></i><span>Morfofunción<small>Anatomía y fisiología</small></span><i class="fas fa-arrow-right"></i></button>
-<button type="button" data-subject="BIOLOGIA CELULAR" aria-pressed="false"><i class="fas fa-dna"></i><span>Biología celular<small>Célula, membrana y organelos</small></span><i class="fas fa-arrow-right"></i></button>
-<button type="button" data-subject="SALUD PUBLICA" aria-pressed="false"><i class="fas fa-heartbeat"></i><span>Educación para la Salud<small>Población, prevención y salud</small></span><i class="fas fa-arrow-right"></i></button>
+</aside></div></section>
+            <section class="study-library campus-browser hidden" id="study-library" aria-labelledby="library-title">
+<div class="home-section-head"><div><p class="library-kicker">FLASHCARDS</p><h2 id="library-title">Elige una materia</h2></div><p>Selecciona una materia para ver sus temas.</p></div>
+<button id="library-back" class="campus-back" onclick="openStudyLibrary()" hidden>← Materias</button><div id="library-subjects" class="subject-picker" aria-label="Materias">
+<button type="button" data-subject="MORFOFUNCION" aria-pressed="false"><img src="/assets/study-art/morphology.png" alt=""><span>Morfofunción<small>Anatomía y fisiología</small></span><i class="fas fa-arrow-right"></i></button>
+<button type="button" data-subject="BIOLOGIA CELULAR" aria-pressed="false"><img src="/assets/study-art/cell.png" alt=""><span>Biología celular<small>Célula, membrana y organelos</small></span><i class="fas fa-arrow-right"></i></button>
+<button type="button" data-subject="SALUD PUBLICA" aria-pressed="false"><img src="/assets/study-art/health-education.png" alt=""><span>Educación para la Salud<small>Población, prevención y salud</small></span><i class="fas fa-arrow-right"></i></button>
 </div>
 <div id="library-topics-panel" hidden><label for="library-search">Buscar un tema</label><input type="search" id="library-search" placeholder="Escribe el nombre del tema…"><p id="library-status" role="status"></p><div id="library-topics" class="library-topics"></div></div>
-</section><div class="home-section-head"><h2>Dos maneras de repasar</h2><p>Recuerda una respuesta o explora el tema completo.</p></div><div class="home-focus-grid">
-                <article class="home-feature-card home-feature-flash" onclick="openStudyLibrary()">
-                    <div class="home-feature-top">
-                        <div class="home-feature-icon"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"></div>
-                        <span class="home-feature-badge">PREGUNTA / RESPUESTA</span>
-                    </div>
-                    <h2>Flashcards inteligentes</h2>
-                    <p>Repasa por pregunta, revela la respuesta y califica tu memoria: otra vez, difícil, bien o fácil.</p>
-                    <div class="flashcard-mini-stack" aria-hidden="true">
-                        <div class="mini-card mini-card-back">Síntesis de proteínas</div>
-                        <div class="mini-card mini-card-mid">¿Qué función cumple un ribosoma?</div>
-                        <div class="mini-card mini-card-front">Biología celular</div>
-                    </div>
-                    <button class="home-feature-link">abrir flashcards <i class="fas fa-arrow-right"></i></button>
-                </article>
-
-                <article class="home-feature-card home-feature-map" onclick="openMindMaps()">
-                    <div class="home-feature-top">
-                        <div class="home-feature-icon"><img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80"></div>
-                        <span class="home-feature-badge">MAPAS DEL CURSO</span>
-                    </div>
-                    <h2>Mapas mentales</h2>
-                    <p>Explora La Célula, membrana, núcleo, organelos y citoesqueleto. Abre cada mapa para verlo con detalle.</p>
-                    <div class="course-map-preview"><img src="mapas%20mentales/lacelula.png" alt="Vista del mapa La Célula disponible en el curso" loading="lazy"><span>La Célula · Biología celular</span></div>
-                    <button class="home-feature-link">ver mapas <i class="fas fa-arrow-right"></i></button>
-                </article>
-            </div>
-
-            <section class="home-section-block">
-                <div class="home-section-head">
-                    <h2>Pon a prueba tu repaso</h2>
-                    <p>Preguntas, simulacros y Juegos para practicar lo que estudiaste.</p>
-                </div>
-                <div class="home-grid home-grid-mobile-v2">
-                    <div class="home-card home-card-orange home-card-priority" onclick="openStudyLibrary()">
-                        <div class="hc-icon"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"></div>
-                        <div class="hc-body">
-                            <h3>flashcards</h3>
-                            <p>repaso activo · memoria a largo plazo</p>
-                        </div>
-                        <i class="fas fa-arrow-right hc-arrow"></i>
-                    </div>
-                    <div class="home-card home-card-map" onclick="openMindMaps()">
-                        <div class="hc-icon"><img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80"></div>
-                        <div class="hc-body">
-                            <h3>mapas mentales</h3>
-                            <p>temas conectados visualmente</p>
-                        </div>
-                        <i class="fas fa-arrow-right hc-arrow"></i>
-                    </div>
-                    <div class="home-card home-card-purple" onclick="openGame('quiz')">
-                        <div class="hc-icon"><img class="study-art" src="/assets/study-art/quiz.png" alt="" width="80" height="80"></div>
-                        <div class="hc-body"><h3>quiz relámpago</h3><p>preguntas cronometradas</p></div>
-                        <i class="fas fa-arrow-right hc-arrow"></i>
-                    </div>
-                    <div class="home-card home-card-green" onclick="openGame('hangman')">
-                        <div class="hc-icon"><img class="study-art" src="/assets/study-art/word.png" alt="" width="80" height="80"></div>
-                        <div class="hc-body"><h3>ahorcado médico</h3><p>términos clave</p></div>
-                        <i class="fas fa-arrow-right hc-arrow"></i>
-                    </div>
-                    <div class="home-card home-card-blue" onclick="openBanco()">
-                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#bank"></use></svg></div>
-                        <div class="hc-body"><h3>banco de preguntas</h3><p>práctica por materia</p></div>
-                        <i class="fas fa-arrow-right hc-arrow"></i>
-                    </div>
-                    <div class="home-card home-card-sim" onclick="openSimulacro()"><span class="campus-lock-badge" data-premium-label hidden>🔒 Plan completo</span>
-                        <div class="hc-icon"><img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80"></div>
-                        <div class="hc-body"><h3>simulacro</h3><p>modo admisión</p></div>
-                        <i class="fas fa-arrow-right hc-arrow"></i>
-                    </div>
-                    <div class="home-card home-card-eval" onclick="openEvaluacion()">
-                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#progress"></use></svg></div>
-                        <div class="hc-body"><h3>mis evaluaciones</h3><p>resultados y feedback</p></div>
-                        <i class="fas fa-arrow-right hc-arrow"></i>
-                    </div>
-                    <div class="home-card home-card-fire" onclick="openIntocables()">
-                        <div class="hc-icon"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#core"></use></svg></div>
-                        <div class="hc-body"><h3>intocables 🔥</h3><p>conceptos esenciales</p></div>
-                        <i class="fas fa-arrow-right hc-arrow"></i>
-                    </div>
-                    <div class="home-card home-card-games" onclick="if(CampusAccess.isFree()){CampusAccess.unlock();}else{window.location.href='juegos/index.html';}">
-                        <div class="hc-icon"><i class="fas fa-gamepad"></i></div>
-                        <div class="hc-body"><h3>juegos interactivos</h3><p>evaluaciones en vivo</p></div>
-                        <i class="fas fa-arrow-right hc-arrow"></i>
-                    </div>
-                </div>
-            </section>
-
-            <section class="home-study-tip">
-                <i class="fas fa-lightbulb"></i>
-                <div>
-                    <strong>Tip de estudio</strong>
-                    <p id="tip-text">repasa los temas difíciles justo antes de dormir; el sueño consolida la memoria a largo plazo.</p>
-                </div>
-            </section>
-        </section>
-
+</section>
+<section id="resource-browser" class="campus-browser hidden"><button class="campus-back" onclick="goHome()">← Inicio</button><p class="library-kicker" id="resource-tool"></p><h1 id="resource-title">Elige una materia</h1><p id="resource-description"></p><div id="resource-options" class="subject-picker"></div></section>
         <!-- ══ FLASHCARDS / STUDY AREA ══ -->
         <section id="study-area" class="study-area hidden">
             <div class="study-mobile-header">
-                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> inicio</button>
+                <button class="btn-back-game" onclick="backToStudyTopics()"><i class="fas fa-arrow-left"></i> temas</button>
                 <div>
                     <span id="current-subject" class="study-subject-pill">flashcards</span>
                     <h2 id="card-tema-name">elige un tema</h2>
@@ -1354,8 +1244,8 @@
     <script src="config.js"></script>
     <script src="device_guard.js"></script>
     <script src="campus-access.js?v=2"></script>
-    <script src="script.js?v=9"></script>
-    <script src="student-library.js?v=3"></script>
+    <script src="script.js?v=10"></script>
+    <script src="student-library.js?v=4"></script>
 <dialog id="campus-unlock" class="campus-unlock"><span aria-hidden="true">🔒</span><h2>Sigue con el repaso completo.</h2><p>Con un plan puedes continuar con todas las flashcards, mapas mentales, juegos, simulacros y exámenes. Tu progreso guardado se conserva.</p><a href="/planes#planes">Ver planes desde Bs 200 →</a><button onclick="this.closest('dialog').close()">Seguir con mi cuenta gratuita</button></dialog></body>
 
 </html>

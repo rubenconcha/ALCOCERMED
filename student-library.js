@@ -10,9 +10,27 @@
     let rows = [];
     let subject = '';
 
+    function stage(isTopics) {
+        const picker = document.getElementById('library-subjects');
+        const back = document.getElementById('library-back');
+        const title = document.getElementById('library-title');
+        if (picker) picker.hidden = isTopics;
+        if (back) back.hidden = !isTopics;
+        if (title) title.textContent = isTopics ? ({'MORFOFUNCION':'Morfofunción','BIOLOGIA CELULAR':'Biología celular','SALUD PUBLICA':'Educación para la Salud'}[subject] || subject) : 'Elige una materia';
+        panel.hidden = !isTopics;
+    }
     window.openStudyLibrary = function () {
-        document.getElementById('study-library').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        buttons[0].focus({ preventScroll: true });
+        ++request;
+        showScreen('study-library');
+        stage(false);
+    };
+    window.backToStudyTopics = function () {
+        showScreen('study-library');
+        stage(Boolean(subject));
+    };
+    window.quickStartSubject = function (value) {
+        showScreen('study-library');
+        return chooseSubject(value);
     };
 
     function renderTopics() {
@@ -36,6 +54,7 @@
     async function chooseSubject(value) {
         const token = ++request;
         subject = value;
+        stage(true);
         topics = [];
         rows = [];
         search.value = '';

@@ -396,7 +396,9 @@ const tips = [
 // NAVEGACIÓN ENTRE PANTALLAS
 // ──────────────────────────────────────────────
 function showScreen(screenId) {
-    const screens = ['home-screen', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen'];
+    closeMobileSidebar();
+    window.scrollTo({top:0,behavior:'instant'});
+    const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen'];
     screens.forEach(function (id) {
         const el = document.getElementById(id);
         if (el) {
@@ -426,6 +428,9 @@ window.goHome = function () {
 };
 
 function updateHomeStats() {
+    const welcome = document.getElementById('welcome-name');
+    const profile = document.getElementById('sidebar-user-name');
+    if (welcome && profile) welcome.textContent = profile.textContent.trim().split(/\s+/)[0] || 'bienvenido';
     const elR = document.getElementById('home-repasos');
     const elC = document.getElementById('home-cards');
     const elT = document.getElementById('home-temas');
@@ -451,15 +456,7 @@ function updateHomeStats() {
 // ──────────────────────────────────────────────
 // TOGGLE PADRE: abre/cierra el menú "flashcards"
 // ──────────────────────────────────────────────
-window.toggleFlashcards = function () {
-    const submenu = document.getElementById('menu-flashcards');
-    const arrow = document.getElementById('arrow-flashcards');
-    if (!submenu) return;
-
-    const isOpen = submenu.classList.contains('active');
-    submenu.classList.toggle('active');
-    if (arrow) arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
-};
+window.toggleFlashcards = function () { openStudyLibrary(); };
 
 // ──────────────────────────────────────────────
 // TOGGLE MATERIA: carga temas desde Supabase
@@ -987,19 +984,36 @@ function restoreSidebarState() {
 // ██  JUEGOS  ██
 // ══════════════════════════════════════════════
 
+let selectedGameSubject = '';
+function resourceChooser(tool, names, select, description) {
+    showScreen('resource-browser');
+    document.getElementById('resource-tool').textContent = tool;
+    document.getElementById('resource-title').textContent = 'Elige una materia';
+    document.getElementById('resource-description').textContent = description || 'Selecciona el contenido que quieres practicar.';
+    const options = document.getElementById('resource-options');
+    options.replaceChildren();
+    names.forEach(name => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        const img = document.createElement('img');
+        img.src = '/assets/study-art/' + (/biolog|c[eé]lul/i.test(name) ? 'cell' : /salud/i.test(name) ? 'health-education' : 'morphology') + '.png';
+        img.alt = '';
+        const label = document.createElement('strong');
+        label.textContent = name.replace(/salud p[úu]blica/i, 'Educación para la Salud');
+        button.append(img, label);
+        button.onclick = () => select(name);
+        options.append(button);
+    });
+}
 window.openGame = function (gameType) {
     if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
-    if (gameType === 'quiz') {
-        showScreen('game-quiz');
-        startQuiz();
-    } else if (gameType === 'hangman') {
-        showScreen('game-hangman');
-        startHangman();
-    }
-    if (window.innerWidth <= 768) {
-        document.getElementById('sidebar').classList.remove('open');
-        document.getElementById('overlay').classList.remove('active');
-    }
+    const source = gameType === 'quiz' ? QUIZ_QUESTIONS : HANGMAN_WORDS;
+    const key = gameType === 'quiz' ? 'subject' : 'category';
+    resourceChooser(gameType === 'quiz' ? 'Quiz relámpago' : 'Ahorcado médico', [...new Set(source.map(q => q[key]))], name => {
+        selectedGameSubject = name;
+        showScreen(gameType === 'quiz' ? 'game-quiz' : 'game-hangman');
+        if (gameType === 'quiz') startQuiz(); else startHangman();
+    });
 };
 
 // ──────────────────────────────────────────────
@@ -1071,7 +1085,7 @@ let quizAnswered = false;
 
 window.startQuiz = function () {
     // Mezclar y tomar 10 preguntas
-    quizQuestions = shuffleArray((window.CampusAccess && CampusAccess.isFree() ? QUIZ_QUESTIONS.slice(0,5) : QUIZ_QUESTIONS).slice()).slice(0, 10);
+    quizQuestions = shuffleArray((window.CampusAccess && CampusAccess.isFree() ? QUIZ_QUESTIONS.slice(0,5) : QUIZ_QUESTIONS).filter(q => !selectedGameSubject || q.subject === selectedGameSubject).slice()).slice(0, 10);
     quizIndex = 0;
     quizScore = 0;
     quizAnswered = false;
@@ -1214,7 +1228,7 @@ const HM_MAX_ERRORS = 6;
 const HM_PARTS = ['hm-head', 'hm-body', 'hm-larm', 'hm-rarm', 'hm-lleg', 'hm-rleg'];
 
 window.startHangman = function () {
-    const words = window.CampusAccess && CampusAccess.isFree() ? HANGMAN_WORDS.slice(0,5) : HANGMAN_WORDS;
+    const words = (window.CampusAccess && CampusAccess.isFree() ? HANGMAN_WORDS.slice(0,5) : HANGMAN_WORDS).filter(q => !selectedGameSubject || q.category === selectedGameSubject);
     const entry = words[Math.floor(Math.random() * words.length)];
     hmWord = entry.word.toUpperCase();
     hmGuessed = [];
@@ -3383,16 +3397,23 @@ var mmState = {
     currentTab: 'mapas'
 };
 
-window.openMindMaps = function () {
+window.openMindMaps = async function () {
     if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
-    if (typeof openIntocables === 'function') openIntocables();
+    await loadMapasMentales();
+    resourceChooser('Mapas mentales', [...new Set(mmState.allMapas.map(m => m.materia))], materia => {
+        showScreen('intocables-screen');
+        switchIntocTab('mapas');
+        document.getElementById('mm-search-input').value = '';
+        selectMmMateria(materia);
+    }, 'Elige una materia para ver sus mapas. Después abre el tema que necesitas.');
 };
-
 window.openIntocables = function () {
-    showScreen('intocables-screen');
-    closeMobileSidebar();
-    switchIntocTab('mapas');
-    loadMapasMentales();
+    if (window.CampusAccess && CampusAccess.isFree()) return CampusAccess.unlock();
+    resourceChooser('Intocables', ['Mapas mentales', 'Conceptos clave', 'Fórmulas'], name => {
+        if (name === 'Mapas mentales') return openMindMaps();
+        showScreen('intocables-screen');
+        switchIntocTab(name === 'Conceptos clave' ? 'conceptos' : 'formulas');
+    }, 'Selecciona el tipo de material.');
 };
 
 window.switchIntocTab = function (tab) {
