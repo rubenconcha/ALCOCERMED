@@ -7,7 +7,13 @@ STABLE
 SECURITY DEFINER
 SET search_path = ''
 AS $function$
-  SELECT public.campus_has_access()
+  SELECT public.campus_is_admin()
+    OR EXISTS (
+      SELECT 1 FROM public.campus_memberships
+      WHERE user_id = auth.uid()
+        AND starts_at <= now()
+        AND (expires_at IS NULL OR expires_at > now())
+    )
     OR p_id IN (
       '7d7b8eaa-4b8e-51cb-a9db-a666bda3d976'::uuid,
       '2fa17a3c-035a-50d7-afae-ed8fe3ba11fc'::uuid,
