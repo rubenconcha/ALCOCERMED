@@ -114,6 +114,8 @@ def distractor_score(target: dict, candidate: dict) -> float:
     qj = len(target["_qwords"] & candidate["_qwords"]) / max(1, len(target["_qwords"] | candidate["_qwords"]))
     length_fit = 1 - abs(math.log((len(candidate["respuesta"]) + 12) / (len(target["respuesta"]) + 12)))
     same_topic = target["tema"] == candidate["tema"]
+    target_prefix = norm(target["respuesta"]).split()[:2]
+    candidate_prefix = norm(candidate["respuesta"]).split()[:2]
     # Explanatory questions often have several simultaneously true causes in a
     # chapter. Use other chapters for their distractors to keep one clear key.
     explanatory = target["_kind"] in {"por que", "como"} or target["_shape"] == "reason"
@@ -121,11 +123,25 @@ def distractor_score(target: dict, candidate: dict) -> float:
         ((-1.0 if explanatory else 1.5) if same_topic else 0.0)
         + (0.45 if target["_kind"] == candidate["_kind"] else 0.0)
         + (2.6 if target["_shape"] == candidate["_shape"] else -1.2)
+        + (2.0 if target["_shape"] == "number" and candidate["_shape"] == "number" else 0.0)
+        + (0.8 if target_prefix == candidate_prefix else 0.0)
         + 1.2 * qj + 0.6 * length_fit
     )
 
 
 def choose_distractors(target: dict, subject_cards: list[dict]) -> list[str]:
+    numeric = re.match(r"^(\d+)(?:,([0-9]+))?(\s+.+)$", target["respuesta"])
+    if numeric:
+        whole, fraction, suffix = numeric.groups()
+        number = float(whole + ("." + fraction if fraction else ""))
+        step = 1 if number < 20 else 10 if number < 100 else 20
+        values = [max(0, number - step), number + step, number + step * 2]
+        places = len(fraction or "")
+        def render(value: float) -> str:
+            amount = f"{value:.{places}f}".replace(".", ",") if places else str(int(value))
+            return amount + suffix
+        if len(set(values + [number])) == 4:
+            return [render(value) for value in values]
     candidates = []
     target_answer = norm(target["respuesta"])
     for candidate in subject_cards:
