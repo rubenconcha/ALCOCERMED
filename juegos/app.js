@@ -2826,13 +2826,12 @@ function renderSubjectMissions(grid, stats) {
         var cnt = counts[subj.name] || 0;
         var demoCnt = demoCounts[subj.name] || 0;
         var availableCnt = demoUser ? demoCnt : cnt;
-        var lockedCnt = Math.max(0, cnt - availableCnt);
         var missionNo = s + 1;
         var progress = availableCnt > 0 ? 100 : (cnt > 0 ? 42 : 18);
-        var statusText = availableCnt > 0 ? (demoUser ? 'Demo' : 'Disponible') : (cnt > 0 ? 'Bloqueado' : 'Pronto');
+        var statusText = demoUser ? (demoCnt > 0 ? 'Demo' : 'Con plan') : (cnt > 0 ? 'Disponible' : 'Pronto');
         var lockClass = availableCnt > 0 ? '' : ' subject-mission-locked';
         var availabilityText = demoUser
-            ? (demoCnt + ' demo disponible' + (demoCnt !== 1 ? 's' : '') + (lockedCnt > 0 ? ' - ' + lockedCnt + ' con candado' : ''))
+            ? (demoCnt > 0 ? demoCnt + ' juego' + (demoCnt !== 1 ? 's' : '') + ' demo disponible' + (demoCnt !== 1 ? 's' : '') : 'Juegos disponibles con un plan')
             : (availableCnt + ' evaluacion' + (availableCnt !== 1 ? 'es' : '') + ' disponible' + (availableCnt !== 1 ? 's' : ''));
         html += '<div class="explorar-subject-card subject-mission-card' + lockClass + '" onclick="loadSubjectEvaluations(\'' + subj.name + '\')" style="--subject-color:' + subj.color + '">';
         html += '<div class="mission-shine"></div>';
@@ -3434,7 +3433,11 @@ function loadSubjectEvaluations(subject) {
             }
         }
         if (matching.length === 0) {
-            listEl.innerHTML = '<div class="empty-state"><i class="fas fa-folder-open"></i><p>Sin evaluaciones en ' + subject + '</p><small>Vuelve más tarde</small></div>';
+            if (!isAdmin && DEMO_ACCESS_ONLY) {
+                listEl.innerHTML = '<div class="empty-state"><i class="fas fa-lock"></i><p>Los juegos de ' + subject + ' están en el acceso completo.</p><small>El demo gratuito está en Morfofunción.</small><p><a class="explorar-btn-study explorar-btn-locked" href="/planes#planes">Ver planes para desbloquear</a></p></div>';
+            } else {
+                listEl.innerHTML = '<div class="empty-state"><i class="fas fa-folder-open"></i><p>Sin evaluaciones en ' + subject + '</p><small>Vuelve más tarde</small></div>';
+            }
             return;
         }
 
