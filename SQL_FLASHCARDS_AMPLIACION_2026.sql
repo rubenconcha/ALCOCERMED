@@ -745,7 +745,120 @@ WHERE NOT EXISTS (
     AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
 );
 
+-- salud: páginas PDF 97-105 | SALUD PUBLICA / muestreo
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'muestreo', '¿Para qué tomar una muestra en vez de estudiar a toda la población?', 'Para obtener información usando menos tiempo, personal y recursos.'),
+    ('SALUD PUBLICA', 'muestreo', '¿Qué es la población en un estudio?', 'El conjunto total de elementos al que se refiere la pregunta de investigación.'),
+    ('SALUD PUBLICA', 'muestreo', 'En el muestreo, ¿cómo llamas a la parte de la población que seleccionas para estudiar?', 'La muestra.'),
+    ('SALUD PUBLICA', 'muestreo', 'Asignas un número a cada persona y eliges números al azar. ¿Qué método aplicas?', 'Muestreo aleatorio simple.'),
+    ('SALUD PUBLICA', 'muestreo', 'En un muestreo sistemático, ¿cómo eliges los elementos después del punto inicial?', 'Tomándolos cada k posiciones en la lista.'),
+    ('SALUD PUBLICA', 'muestreo', 'Si la población tiene N integrantes y deseas n, ¿cómo obtienes el intervalo k del muestreo sistemático?', 'Dividiendo N entre n.'),
+    ('SALUD PUBLICA', 'muestreo', '¿Por qué el punto de partida del muestreo sistemático debe elegirse al azar?', 'Para que la selección no dependa de una preferencia del investigador.'),
+    ('SALUD PUBLICA', 'muestreo', '¿Qué puede salir mal si la lista tiene una periodicidad que coincide con el intervalo de selección?', 'La muestra sistemática puede reflejar un patrón artificial y sesgarse.'),
+    ('SALUD PUBLICA', 'muestreo', 'La población es heterogénea y quieres representar cada grupo. ¿Qué método conviene considerar?', 'El muestreo estratificado.'),
+    ('SALUD PUBLICA', 'muestreo', 'Después de definir los estratos, ¿cómo se eligen los integrantes dentro de cada uno?', 'Con una selección aleatoria, como el muestreo aleatorio simple.'),
+    ('SALUD PUBLICA', 'muestreo', '¿Qué significa afijación simple en una muestra estratificada?', 'Asignar el mismo número de personas a cada estrato.'),
+    ('SALUD PUBLICA', 'muestreo', '¿Qué significa afijación proporcional?', 'Dar a cada estrato una parte de la muestra proporcional a su tamaño poblacional.'),
+    ('SALUD PUBLICA', 'muestreo', 'El 70 % de estudiantes pertenece a colegios públicos. En una muestra proporcional de 600, ¿cuántos corresponden a ese estrato?', '420 estudiantes.'),
+    ('SALUD PUBLICA', 'muestreo', '¿Qué considera la afijación óptima además del tamaño de cada estrato?', 'La variación o desviación típica dentro de los estratos.'),
+    ('SALUD PUBLICA', 'muestreo', 'Si eliges municipios completos al azar para estudiar a quienes viven en ellos, ¿qué método empleas?', 'Muestreo por conglomerados.'),
+    ('SALUD PUBLICA', 'muestreo', 'Primero eliges comunas, luego colegios y después alumnos. ¿Cómo se llama ese diseño?', 'Muestreo polietápico.'),
+    ('SALUD PUBLICA', 'muestreo', 'Faltan personas en la lista desde la que sortearás la muestra. ¿Qué error aparece?', 'Error de cobertura: esas personas no tienen posibilidad de ser seleccionadas.'),
+    ('SALUD PUBLICA', 'muestreo', 'Varias personas elegidas no contestan la encuesta. ¿Qué problema debes reconocer?', 'Sesgo o error de no respuesta.'),
+    ('SALUD PUBLICA', 'muestreo', '¿Puede desaparecer por completo el error de muestreo cuando estudias solo una parte de la población?', 'No. Puede controlarse con un diseño adecuado, pero existe variación entre muestras.'),
+    ('SALUD PUBLICA', 'muestreo', 'Una pregunta confusa induce respuestas imprecisas. ¿Qué tipo de error provoca?', 'Error de medición.'),
+    ('SALUD PUBLICA', 'muestreo', 'Fijas cupos por edad y entrevistarás a los primeros que cumplan cada cupo. ¿Qué método es?', 'Muestreo no probabilístico por cuotas.'),
+    ('SALUD PUBLICA', 'muestreo', 'Eliges deliberadamente participantes típicos que pueden informar sobre el problema. ¿Qué método es?', 'Muestreo intencional.'),
+    ('SALUD PUBLICA', 'muestreo', 'Pides a un participante difícil de localizar que te presente a otros. ¿Qué método utilizas?', 'Muestreo de bola de nieve.'),
+    ('SALUD PUBLICA', 'muestreo', '¿Por qué debes tener cuidado al generalizar resultados de una muestra no probabilística?', 'Porque los integrantes no tuvieron una probabilidad comparable de ser elegidos.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 109-138 | SALUD PUBLICA / frecuencias y graficos
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Qué haces primero para convertir muchas respuestas sueltas en una tabla?', 'Las ordenas por categorías o valores y cuentas cuántas hay de cada uno.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', 'En una encuesta de 40 personas, 10 eligen la opción A. ¿Cuál es su frecuencia absoluta?', '10 personas.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', 'En esa misma encuesta, 10 de 40 eligen A. ¿Cuál es su frecuencia relativa?', '10/40 = 0,25, es decir, 25 %.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Cuánto deben sumar las frecuencias absolutas de todas las categorías?', 'El total de observaciones.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Cuánto deben sumar aproximadamente los porcentajes de todas las categorías?', '100 %, salvo pequeñas diferencias por redondeo.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Qué indica que una tabla de frecuencias tenga un total distinto al número de encuestados?', 'Que falta alguna observación o existe un error de conteo.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Qué significa que la frecuencia acumulada sea 18 hasta una categoría?', 'Que 18 observaciones se reúnen hasta esa categoría, incluyéndola.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Por qué la frecuencia acumulada final debe coincidir con el total de datos?', 'Porque al llegar a la última categoría ya se incluyeron todas las observaciones.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', 'Si las categorías tienen un orden natural, ¿qué permite leer la frecuencia acumulada?', 'Cuántos casos se encuentran hasta cierto valor o intervalo.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', 'Tienes una variable cuantitativa con muchos valores. ¿Por qué agruparla en intervalos?', 'Para resumir su distribución y hacerla más fácil de interpretar.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', 'Si el valor mayor es 80 y el menor 50, ¿cuál es el rango?', 'El rango es 30.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Qué es la amplitud de un intervalo?', 'La distancia entre sus límites superior e inferior.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Qué es la marca de clase de un intervalo?', 'Su punto medio.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', 'Para el intervalo de 50 a 60, ¿cuál es la marca de clase?', 'La marca de clase es 55.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Por qué los intervalos de una tabla no deben solaparse?', 'Para que cada observación se cuente en una sola clase.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', 'En un histograma, ¿qué representa la altura de cada barra?', 'La frecuencia correspondiente a ese intervalo.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Por qué las barras de un histograma suelen tocarse?', 'Porque representan intervalos contiguos de una variable cuantitativa.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', 'Si quieres comparar respuestas como ''sí'', ''no'' y ''no sabe'', ¿qué gráfico resulta útil?', 'Un diagrama de barras.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Qué diferencia visual ayuda a distinguir un diagrama de barras de un histograma?', 'Las barras de categorías suelen separarse; las del histograma representan intervalos contiguos.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Qué representa un sector en un gráfico circular?', 'La parte del total correspondiente a una categoría.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', 'Si una categoría representa 25 % del total, ¿cuántos grados ocupa en un gráfico circular?', '90 grados, porque es una cuarta parte de 360.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Cuándo puede resultar poco claro un gráfico circular según el material?', 'Cuando hay demasiadas categorías; el texto desaconseja usarlo con más de cuatro.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Cómo se construye un polígono de frecuencias?', 'Uniendo los puntos que representan las frecuencias en las marcas de clase.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', 'Si necesitas mostrar cómo se acumulan los casos hasta cada intervalo, ¿qué gráfica eliges?', 'Una ojiva o curva de frecuencia acumulada.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Qué conviene hacer antes de elegir cualquier gráfica para una variable?', 'Clasificar la variable y construir su tabla de frecuencias.'),
+    ('SALUD PUBLICA', 'frecuencias y graficos', '¿Para qué sirve una gráfica además de adornar una tabla?', 'Para reconocer y comunicar el comportamiento o la distribución de los datos.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 147-158 | SALUD PUBLICA / medidas de tendencia central
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'medidas de tendencia central', '¿Qué intenta resumir una medida de tendencia central?', 'El valor alrededor del cual se reúnen los datos de un conjunto.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', '¿Cuáles son las tres medidas centrales que desarrolla el capítulo?', 'Media aritmética, mediana y moda.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'Los tiempos son 2, 4, 3 y 5 horas. ¿Cuál es la media?', '3,5 horas.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', '¿Qué sucede con la media si añades un valor extremadamente alto?', 'Puede desplazarse hacia arriba, aunque los demás datos no cambien.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'Si los datos están en una tabla de frecuencias, ¿cómo ayudas al cálculo de la media?', 'Multiplicas cada valor por su frecuencia, sumas los productos y divides entre el total.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', '¿Qué valor representa a cada intervalo cuando estimas la media de datos agrupados?', 'La marca de clase o punto medio del intervalo.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'Antes de hallar la mediana, ¿qué debes hacer con los datos?', 'Ordenarlos de menor a mayor.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'En 3, 4, 5, 6 y 8, ¿cuál es la mediana?', '5, el valor central.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'Si tienes un número par de observaciones, ¿cómo hallas la mediana?', 'Promedias los dos valores centrales de la lista ordenada.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'En 5, 7, 9 y 11, ¿cuál es la mediana?', '8, porque los valores centrales son 7 y 9.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', '¿Qué porcentaje de observaciones queda aproximadamente a cada lado de la mediana?', 'La mitad, 50 % a cada lado.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'En una tabla por intervalos, ¿qué columna ayuda a localizar el intervalo de la mediana?', 'La frecuencia absoluta acumulada.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', '¿Cuándo suele describir mejor el centro la mediana que la media?', 'Cuando hay valores extremos que alteran mucho el promedio.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'Las edades son 16, 17, 17, 18 y 35. ¿Qué valor muestra mejor el centro típico: la mediana o la media?', 'La mediana, 17 años; la media sube por el valor extremo de 35.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', '¿Puede calcularse la moda de una categoría como color preferido?', 'Sí. Es la categoría que aparece más veces.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'En rojo, azul, azul y verde, ¿cuál es la moda?', 'Azul.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', '¿Qué significa que una distribución sea unimodal?', 'Que tiene una sola moda.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'Si dos valores comparten la frecuencia máxima, ¿qué ocurre con la moda?', 'Hay dos modas; la distribución es bimodal.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', '¿Qué significa que un conjunto sea amodal?', 'Que no se identifica un valor con mayor frecuencia que los demás.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'En datos agrupados, ¿cómo localizas primero la clase modal?', 'Buscando el intervalo con mayor frecuencia absoluta.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'Si todas las categorías tienen la misma frecuencia, ¿conviene decir que una sola está de moda?', 'No. Ninguna destaca por encima de las demás.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', '¿Cuál de las tres medidas centrales necesita datos numéricos para calcularse?', 'La media aritmética.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', '¿Cuál de las tres medidas permite resumir una variable cualitativa nominal?', 'La moda.'),
+    ('SALUD PUBLICA', 'medidas de tendencia central', 'Si el promedio de hijos es 2, ¿significa que todas las personas tienen dos hijos?', 'No. Resume al grupo; los valores individuales pueden ser distintos.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
 COMMIT;
 NOTIFY pgrst, 'reload schema';
 
--- 521 tarjetas, 17 temas, 3 materias.
+-- 595 tarjetas, 20 temas, 3 materias.
