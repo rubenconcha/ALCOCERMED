@@ -15,6 +15,7 @@ if __name__ == "__main__":
             ROOT / "content" / "flashcards_ampliacion_lote5_2026.json",
             ROOT / "content" / "flashcards_ampliacion_lote6_2026.json",
             ROOT / "content" / "flashcards_ampliacion_lote7_2026.json",
+            ROOT / "content" / "flashcards_ampliacion_lote8_2026.json",
         ],
         ROOT / "SQL_FLASHCARDS_AMPLIACION_2026.sql",
     )
