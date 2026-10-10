@@ -419,6 +419,7 @@ const tips = [
 // ──────────────────────────────────────────────
 function showScreen(screenId) {
     closeMobileSidebar();
+    if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
     const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen'];
     screens.forEach(function (id) {
