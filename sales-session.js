@@ -13,6 +13,10 @@
             if (saved?.screen === 'mapas') {
                 backLink.textContent = '← Volver a mapas mentales';
                 backLink.setAttribute('aria-label', 'Volver a mapas mentales en el campus');
+            } else if (saved?.screen === 'juegos') {
+                backLink.href = '/juegos/jugar';
+                backLink.textContent = '← Volver a ' + (saved.subject || 'Juegos');
+                backLink.setAttribute('aria-label', 'Volver a los juegos de la asignatura');
             }
         } catch (_) { /* Mantener el regreso general al campus. */ }
     }

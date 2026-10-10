@@ -30,6 +30,7 @@ jobs:
           node --check juegos/sw.js
           node --check juegos/tejido-nervioso.js
           node tests/sentidos.test.cjs
+          node tests/juegos-student-flow.test.cjs
           node --check sw.js
       - name: Check required files
         run: |
