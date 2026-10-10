@@ -1,0 +1,12 @@
+"""Build the idempotent import for the reviewed flashcard expansion."""
+
+from pathlib import Path
+
+from build_flashcards_sql import ROOT, main
+
+
+if __name__ == "__main__":
+    main(
+        [ROOT / "content" / "flashcards_ampliacion_2026.json"],
+        ROOT / "SQL_FLASHCARDS_AMPLIACION_2026.sql",
+    )

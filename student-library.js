@@ -39,17 +39,20 @@
         const query = normalizeDbText(search.value);
         const visible = topics.filter(topic => normalizeDbText(topic.name).includes(query));
         list.replaceChildren();
-        status.textContent = visible.length ? `${visible.length} temas disponibles · Elige uno para empezar.` : 'No se encontraron temas. Prueba otra búsqueda o materia.';
+        status.textContent = visible.length ? 'Elige un tema para comenzar tu repaso.' : 'No se encontraron temas. Prueba otra búsqueda o materia.';
         visible.forEach(topic => {
+            const row = document.createElement('article');
+            row.className = 'library-topic-row';
+            const title = document.createElement('strong');
+            title.textContent = topic.name.charAt(0).toLocaleUpperCase('es') + topic.name.slice(1);
             const button = document.createElement('button');
             button.type = 'button';
-            const title = document.createElement('strong');
-            title.textContent = topic.name;
-            const detail = document.createElement('span');
-            detail.textContent = topic.locked ? '🔒 Incluido en los planes · Desbloquear →' : `${topic.count} ${topic.count === 1 ? 'tarjeta' : 'tarjetas'} · Empezar →`;
-            button.append(title, detail);
+            button.className = topic.locked ? 'library-topic-action is-locked' : 'library-topic-action';
+            button.textContent = topic.locked ? 'Desbloquear' : 'Empezar';
+            button.setAttribute('aria-label', `${topic.locked ? 'Desbloquear' : 'Empezar'} ${topic.name}`);
             button.addEventListener('click', () => topic.locked ? CampusAccess.unlock() : startDeck(topic.name, subject, rows));
-            list.append(button);
+            row.append(title, button);
+            list.append(row);
         });
     }
 

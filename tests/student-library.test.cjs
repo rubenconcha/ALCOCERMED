@@ -25,10 +25,12 @@ test('groups actual topics, searches accents, opens only selected subject data',
   await h.buttons[0].click();
   const list = h.ids['library-topics'];
   assert.equal(list.children.length, 1);
-  assert.match(list.children[0].children[1].textContent, /2 tarjetas/);
+  assert.equal(list.children[0].className, 'library-topic-row');
+  assert.equal(list.children[0].children[1].textContent, 'Empezar');
+  assert.doesNotMatch(JSON.stringify(list.children), /2 tarjetas/);
   h.ids['library-search'].value = 'oseo';
   h.ids['library-search'].events.input();
-  list.children[0].click();
+  list.children[0].children[1].click();
   assert.equal(h.starts[0][1], 'MORFOFUNCION');
   assert.equal(h.starts[0][2].length, 2);
   h.ids['library-search'].value = 'no existe';
@@ -63,7 +65,7 @@ test('subject selection never starts a deck and returning preserves topic choice
   await h.buttons[0].click();
   assert.equal(h.starts.length, 0);
   assert.equal(h.ids['library-subjects'].hidden, true);
-  h.ids['library-topics'].children[0].click();
+  h.ids['library-topics'].children[0].children[1].click();
   assert.equal(h.starts.length, 1);
   h.window.backToStudyTopics();
   assert.equal(h.ids['library-topics-panel'].hidden, false);

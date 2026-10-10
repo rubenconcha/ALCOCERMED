@@ -464,12 +464,19 @@ window.toggleFlashcards = function () { openStudyLibrary(); };
 async function loadFlashcards() {
     if (Array.isArray(flashcardsCache)) return flashcardsCache;
     const client = getSupabase();
-    const { data, error } = await client
-        .from('flashcards')
-        .select('*')
-        .limit(5000);
-    if (error) throw error;
-    flashcardsCache = data || [];
+    const pageSize = 1000;
+    const all = [];
+    for (let offset = 0; ; offset += pageSize) {
+        const { data, error } = await client
+            .from('flashcards')
+            .select('*')
+            .order('id', { ascending: true })
+            .range(offset, offset + pageSize - 1);
+        if (error) throw error;
+        all.push(...(data || []));
+        if (!data || data.length < pageSize) break;
+    }
+    flashcardsCache = all;
     return flashcardsCache;
 }
 

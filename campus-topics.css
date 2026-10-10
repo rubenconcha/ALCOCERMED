@@ -1,0 +1,92 @@
+/* Topic browser: a calm, scannable list with one clear action per topic. */
+.campus-browser .library-topics {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+}
+
+.campus-browser .library-topic-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 18px;
+    box-sizing: border-box;
+    min-height: 82px;
+    padding: 14px 18px;
+    border: 1px solid #dbe4ef;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 3px 14px rgba(25, 37, 61, .035);
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.campus-browser .library-topic-row:hover {
+    border-color: #f5b549;
+    box-shadow: 0 9px 24px rgba(25, 37, 61, .075);
+    transform: translateY(-2px);
+}
+
+.campus-browser .library-topic-row strong {
+    align-self: start;
+    color: #19253d;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.campus-browser .library-topic-row .library-topic-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 118px;
+    min-height: 40px;
+    padding: 9px 18px;
+    border: 1px solid #ee9612;
+    border-radius: 9px;
+    background: #f6a11a;
+    color: #17233b;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: background .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.campus-browser .library-topic-row .library-topic-action:hover {
+    background: #ffbd43;
+    box-shadow: 0 6px 16px rgba(238, 150, 18, .23);
+    transform: translateY(-1px);
+}
+
+.campus-browser .library-topic-row .library-topic-action.is-locked {
+    border-color: #dbe4ef;
+    background: #f5f7fa;
+    color: #3b4a63;
+}
+
+.campus-browser .library-topic-row .library-topic-action.is-locked:hover {
+    border-color: #ee9612;
+    background: #fff4df;
+    box-shadow: none;
+}
+
+@media (max-width: 600px) {
+    .campus-browser .library-topic-row {
+        min-height: 88px;
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .campus-browser .library-topic-row strong { font-size: 16px; }
+    .campus-browser .library-topic-row .library-topic-action {
+        min-width: 102px;
+        min-height: 38px;
+        padding: 8px 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .campus-browser .library-topic-row,
+    .campus-browser .library-topic-row .library-topic-action { transition: none; }
+}

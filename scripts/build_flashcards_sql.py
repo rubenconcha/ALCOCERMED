@@ -27,9 +27,9 @@ def sql(value: str) -> str:
     return "'" + value.replace("'", "''") + "'"
 
 
-def main() -> None:
+def main(inputs: list[Path] = INPUTS, output: Path = OUTPUT) -> None:
     groups: list[dict] = []
-    for path in INPUTS:
+    for path in inputs:
         payload = json.loads(path.read_text(encoding="utf-8"))
         if payload.get("format") != "pregunta-respuesta":
             raise ValueError(f"Formato inesperado: {path}")
@@ -90,8 +90,8 @@ def main() -> None:
             f"-- {card_count} tarjetas, {len(groups)} temas, 3 materias.",
         ]
     )
-    OUTPUT.write_text("\n".join(out), encoding="utf-8")
-    print(f"{OUTPUT.name}: {card_count} tarjetas / {len(groups)} temas / {OUTPUT.stat().st_size} bytes")
+    output.write_text("\n".join(out), encoding="utf-8")
+    print(f"{output.name}: {card_count} tarjetas / {len(groups)} temas / {output.stat().st_size} bytes")
 
 
 if __name__ == "__main__":
