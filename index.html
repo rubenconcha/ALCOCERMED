@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
-<link rel="stylesheet" href="campus-access.css?v=1"><link rel="stylesheet" href="campus-navigation.css?v=2"><link rel="stylesheet" href="campus-home.css?v=3"><link rel="stylesheet" href="campus-topics.css?v=2">
+<link rel="stylesheet" href="campus-access.css?v=1"><link rel="stylesheet" href="campus-navigation.css?v=2"><link rel="stylesheet" href="campus-home.css?v=4"><link rel="stylesheet" href="campus-topics.css?v=2">
 </head>
 
 <body class="login-active">
@@ -162,7 +162,7 @@
                 <li class="nav-item nav-item-simple" id="nav-inicio">
                     <a href="#" onclick="goHome(); return false;" data-tooltip="inicio">
                         <span class="nav-icon nav-icon-inicio">
-                            <i class="fas fa-house"></i>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#home"></use></svg>
                         </span>
                         <span class="nav-label">inicio</span>
                     </a>
@@ -172,12 +172,7 @@
                 <li class="nav-item">
                     <a href="#" onclick="toggleFlashcards(); return false;" data-tooltip="flashcards">
                         <span class="nav-icon nav-icon-anki">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="3" width="20" height="14" rx="2" />
-                                <path d="M8 21h8M12 17v4" />
-                                <path d="M7 9h2l2 4 2-6 2 4h2" />
-                            </svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#cards"></use></svg>
                         </span>
                         <span class="nav-label">flashcards</span>
                         <i class="fas fa-chevron-right arrow" id="arrow-flashcards"></i>
@@ -217,7 +212,7 @@
                 <li class="nav-item nav-item-simple" id="nav-mapas-mentales">
                     <a href="#" onclick="openMindMaps(); return false;" data-tooltip="mapas mentales">
                         <span class="nav-icon nav-icon-map">
-                            <img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80">
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#map"></use></svg>
                         </span>
                         <span class="nav-label">mapas mentales</span>
 
@@ -228,10 +223,9 @@
                 <li class="nav-item nav-item-simple" id="nav-intocables">
                     <a href="#" onclick="openIntocables(); return false;" data-tooltip="intocables">
                         <span class="nav-icon nav-icon-fire">
-                            <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#core"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#core"></use></svg>
                         </span>
                         <span class="nav-label">intocables</span>
-                        <span class="nav-emoji">🔥</span>
                     </a>
                 </li>
 
@@ -246,7 +240,7 @@
                 <li class="nav-item nav-item-simple" id="nav-banco">
                     <a href="#" onclick="openBanco(); return false;" data-tooltip="banco de preguntas">
                         <span class="nav-icon nav-icon-banco">
-                            <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#bank"></use></svg>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg>
                         </span>
                         <span class="nav-label">banco de preguntas</span>
                     </a>
@@ -255,7 +249,7 @@
                 <li class="nav-item nav-item-simple" id="nav-simulacro">
                     <a href="#" onclick="openSimulacro(); return false;" data-tooltip="simulacros"><span class="campus-lock-badge" data-premium-label hidden>🔒</span>
                         <span class="nav-icon nav-icon-sim">
-                            <i class="fas fa-clipboard-list"></i>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg>
                         </span>
                         <span class="nav-label">simulacros</span>
 
@@ -265,7 +259,7 @@
                 <li class="nav-item nav-item-simple" id="nav-evaluacion">
                     <a href="#" onclick="openEvaluacion(); return false;" data-tooltip="evaluación">
                         <span class="nav-icon nav-icon-eval">
-                            <i class="fas fa-star"></i>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#results"></use></svg>
                         </span>
                         <span class="nav-label">evaluación</span>
                     </a>
@@ -281,7 +275,7 @@
                 <li class="nav-item nav-item-simple">
                     <a href="#" onclick="openGame('quiz'); return false;" data-tooltip="quiz relámpago">
                         <span class="nav-icon nav-icon-quiz">
-                            <i class="fas fa-bolt"></i>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#quiz"></use></svg>
                         </span>
                         <span class="nav-label">quiz relámpago</span>
                         <span class="nav-badge badge-game">JUGAR</span>
@@ -291,7 +285,7 @@
                 <li class="nav-item nav-item-simple">
                     <a href="#" onclick="openGame('hangman'); return false;" data-tooltip="ahorcado médico">
                         <span class="nav-icon nav-icon-hang">
-                            <i class="fas fa-brain"></i>
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#word"></use></svg>
                         </span>
                         <span class="nav-label">ahorcado médico</span>
                         <span class="nav-badge badge-game">JUGAR</span>
@@ -299,7 +293,7 @@
                 </li>
                 <li class="nav-item nav-item-simple">
                     <a href="/juegos/jugar" data-tooltip="juegos por materias">
-                        <span class="nav-icon nav-icon-arena"><i class="fas fa-gamepad"></i></span>
+                        <span class="nav-icon nav-icon-arena"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#gamepad"></use></svg></span>
                         <span class="nav-label">juegos por materias</span>
                         <span class="nav-badge badge-game">ABRIR</span>
                     </a>
@@ -315,8 +309,8 @@
             <ul class="nav-links">
                 <li class="nav-item nav-item-simple">
                     <a href="admin.html" data-tooltip="panel de control">
-                        <span class="nav-icon" style="background: linear-gradient(135deg, #111827, #374151); color: #fff;">
-                            <i class="fas fa-user-shield"></i>
+                        <span class="nav-icon nav-icon-admin">
+                            <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#shield"></use></svg>
                         </span>
                         <span class="nav-label">panel de control</span>
                     </a>
@@ -355,14 +349,14 @@
 
     <section class="dashboard-launch" aria-labelledby="dashboard-launch-title"><div class="dashboard-launch-heading"><div><span class="dashboard-eyebrow">TU ESPACIO DE ESTUDIO</span><h2 id="dashboard-launch-title">¿Qué vas a estudiar hoy?</h2></div></div>
       <div class="dashboard-activity-grid">
-        <button class="dashboard-activity dashboard-activity-gold" onclick="openStudyLibrary()"><img src="/assets/study-art/cards.png" alt=""><span><strong>Flashcards</strong><small>Repasa por materia y tema</small></span><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
-        <button class="dashboard-activity dashboard-activity-blue" onclick="openMindMaps()"><img src="/assets/study-art/map.png" alt=""><span><strong>Mapas mentales</strong><small>Visualiza las ideas del tema</small></span><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
-        <button class="dashboard-activity dashboard-activity-olive" onclick="openBanco()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#bank"></use></svg><span><strong>Banco de preguntas</strong><small>Practica por materia</small></span><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
-        <button class="dashboard-activity dashboard-activity-navy" onclick="openSimulacro()"><img src="/assets/study-art/quiz.png" alt=""><span><strong>Simulacros</strong><small>Resuelve un examen con tiempo</small></span><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+        <button class="dashboard-activity dashboard-activity-gold" onclick="openStudyLibrary()"><img src="/assets/study-art/cards.png" alt=""><span><strong>Flashcards</strong><small>Repasa por materia y tema</small></span></button>
+        <button class="dashboard-activity dashboard-activity-blue" onclick="openMindMaps()"><img src="/assets/study-art/map.png" alt=""><span><strong>Mapas mentales</strong><small>Visualiza las ideas del tema</small></span></button>
+        <button class="dashboard-activity dashboard-activity-olive" onclick="openBanco()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg><span><strong>Banco de preguntas</strong><small>Practica por materia</small></span></button>
+        <button class="dashboard-activity dashboard-activity-navy" onclick="openSimulacro()"><img src="/assets/study-art/quiz.png" alt=""><span><strong>Simulacros</strong><small>Resuelve un examen con tiempo</small></span></button>
       </div>
     </section>
-    <div class="dashboard-more"><button onclick="openGameMenu()"><img src="/assets/study-art/word.png" alt=""><span><strong>Aprende jugando</strong><small>Quiz y términos médicos</small></span><span aria-hidden="true">→</span></button><button onclick="openEvaluacion()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#progress"></use></svg><span><strong>Mis resultados</strong><small>Consulta tus evaluaciones</small></span><span aria-hidden="true">→</span></button></div>
-  </div><aside class="dashboard-progress" aria-label="Tu progreso"><div class="dashboard-progress-heading"><span>MI ACTIVIDAD</span><h2>Tu progreso</h2></div>        <!-- ══ MI PROGRESO ══ -->
+    <div class="dashboard-more"><button onclick="openGameMenu()"><img src="/assets/study-art/word.png" alt=""><span><strong>Aprende jugando</strong><small>Quiz y términos médicos</small></span><span aria-hidden="true">→</span></button><button onclick="openEvaluacion()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#progress"></use></svg><span><strong>Mis resultados</strong><small>Consulta tus evaluaciones</small></span><span aria-hidden="true">→</span></button></div>
+  </div><aside class="dashboard-progress" aria-label="Tu progreso"><div class="dashboard-progress-heading"><span>TU AVANCE</span><h2>Tu progreso</h2></div>        <!-- ══ MI PROGRESO ══ -->
         <div class="nav-section progress-section">
             <span class="section-title">MI PROGRESO</span>
             <div class="progress-card">
@@ -385,16 +379,16 @@
                 </div>
 
                 <div class="prog-materia-row">
-                    <i class="fas fa-book-open prog-book-icon"></i>
-                    <span id="prog-materia-label">sin actividad aún</span>
+                    <span class="topic-dot" aria-hidden="true"></span>
+                    <span id="prog-materia-label">Elige un tema para empezar</span>
                 </div>
 
                 <div class="prog-bar-wrap">
                     <div class="prog-bar-fill" id="prog-bar"></div>
                 </div>
                 <div class="prog-bar-labels">
-                    <span id="prog-bar-text">0 / 0 tarjetas completadas</span>
-                    <span id="prog-pct">0%</span>
+                    <span id="prog-bar-text">Tu avance por tema aparecerá aquí</span>
+                    <span id="prog-pct"></span>
                 </div>
 
             </div>
@@ -403,8 +397,7 @@
             <div class="daily-goal-card" id="daily-goal-card">
                 <div class="daily-goal-header">
                     <div class="daily-goal-title-row">
-                        <i class="fas fa-fire daily-fire-icon"></i>
-                        <span class="daily-goal-title">meta diaria</span>
+                        <span class="daily-goal-title">Tarjetas de hoy</span>
                     </div>
                     <span class="daily-goal-count">
                         <span id="daily-done">0</span><span class="daily-sep">/</span><span
@@ -419,7 +412,7 @@
                 </div>
 
                 <!-- Mensaje motivacional -->
-                <p class="daily-goal-msg" id="daily-goal-msg">¡empieza tu sesión de hoy!</p>
+                <p class="daily-goal-msg" id="daily-goal-msg">Responde una tarjeta para empezar.</p>
 
                 <!-- Segmentos de hitos -->
                 <div class="daily-milestones">
@@ -443,7 +436,6 @@
 
                 <!-- Racha de días -->
                 <div class="daily-streak-row">
-                    <i class="fas fa-bolt streak-bolt"></i>
                     <span class="streak-label"><span id="streak-count">0</span> días seguidos</span>
                     <span class="streak-best" id="streak-best-wrap" style="display:none;">mejor: <span
                             id="streak-best">0</span></span>
@@ -549,7 +541,7 @@
                 <div class="banco-header">
                     <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
                     <div>
-                        <h2 class="banco-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#bank"></use></svg> banco de preguntas</h2>
+                        <h2 class="banco-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg> banco de preguntas</h2>
                         <p class="banco-subtitle">Elige una materia y un tema. Responde y revisa la explicación.</p>
                     </div>
                 </div>
@@ -990,7 +982,7 @@
             <div class="eval-header">
                 <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
                 <div>
-                    <h2 class="eval-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#progress"></use></svg> mis evaluaciones</h2>
+                    <h2 class="eval-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#progress"></use></svg> mis evaluaciones</h2>
                     <p class="eval-subtitle">Revisa tus resultados y las materias que necesitas volver a practicar.</p>
                 </div>
             </div>
@@ -1152,7 +1144,7 @@
             <div class="intoc-header">
                 <button class="btn-back-game" onclick="openMindMaps()"><i class="fas fa-arrow-left"></i> materias</button>
                 <div>
-                    <h2 class="intoc-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg#core"></use></svg> Mapas mentales</h2>
+                    <h2 class="intoc-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#core"></use></svg> Mapas mentales</h2>
                     <p class="intoc-subtitle">Mapas para relacionar los conceptos de Biología celular.</p>
                 </div>
             </div>
@@ -1261,7 +1253,7 @@
     <script src="config.js"></script>
     <script src="device_guard.js"></script>
     <script src="campus-access.js?v=3"></script>
-    <script src="script.js?v=14"></script>
+    <script src="script.js?v=15"></script>
     <script src="student-library.js?v=7"></script>
 <dialog id="campus-unlock" class="campus-unlock"><span aria-hidden="true">🔒</span><h2>Sigue con el repaso completo.</h2><p>Con un plan puedes continuar con todas las flashcards, mapas mentales, juegos, simulacros y exámenes. Tu progreso guardado se conserva.</p><a href="/planes#planes">Ver planes desde Bs 200 →</a><button onclick="this.closest('dialog').close()">Seguir con mi cuenta gratuita</button></dialog></body>
 

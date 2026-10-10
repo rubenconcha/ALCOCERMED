@@ -766,12 +766,10 @@ function updateDailyGoalUI() {
     // Mensaje motivacional
     const msgEl = document.getElementById('daily-goal-msg');
     if (msgEl) {
-        if (pct === 0) msgEl.textContent = '¡empieza tu sesión de hoy!';
-        else if (pct < 25) msgEl.textContent = '¡buen comienzo, sigue así!';
-        else if (pct < 50) msgEl.textContent = '¡vas muy bien, no pares!';
-        else if (pct < 75) msgEl.textContent = '¡más de la mitad! ¡tú puedes!';
-        else if (pct < 100) msgEl.textContent = '¡casi llegas a tu meta!';
-        else msgEl.textContent = '🏆 ¡meta cumplida! ¡excelente!';
+        if (pct === 0) msgEl.textContent = 'Responde una tarjeta para empezar.';
+        else if (pct < 50) msgEl.textContent = 'Cada respuesta cuenta para tu meta de hoy.';
+        else if (pct < 100) msgEl.textContent = 'Te faltan ' + Math.max(0, DAILY_GOAL - done) + ' tarjetas para completar tu meta.';
+        else msgEl.textContent = 'Meta de hoy completada.';
     }
 
     // Hitos alcanzados
@@ -913,21 +911,22 @@ function actualizarProgreso() {
     if (elTemas) elTemas.textContent = temasVistos.size;
 
     const elMateria = document.getElementById('prog-materia-label');
-    if (elMateria) elMateria.textContent = ultimaMateria !== '—' ? String(ultimaMateria).replace(/^salud p[úu]blica$/i, 'Educación para la Salud') : 'sin actividad aún';
+    if (elMateria) elMateria.textContent = ultimaMateria !== '—' ? String(ultimaMateria).replace(/^salud p[úu]blica$/i, 'Educación para la Salud') : 'Elige un tema para empezar';
 
     const total = deck.length || 0;
     const vistas = Math.min(currentIndex, total);
     const pct = total > 0 ? Math.round((vistas / total) * 100) : 0;
+    document.querySelector('.dashboard-progress')?.classList.toggle('has-topic-progress', total > 0);
 
     const bar = document.getElementById('prog-bar');
 
     if (bar) bar.style.width = pct + '%';
 
     const barText = document.getElementById('prog-bar-text');
-    if (barText) barText.textContent = vistas + ' / ' + total + ' tarjetas completadas';
+    if (barText) barText.textContent = total > 0 ? vistas + ' / ' + total + ' tarjetas completadas' : 'Tu avance por tema aparecerá aquí';
 
     const pctEl = document.getElementById('prog-pct');
-    if (pctEl) pctEl.textContent = pct + '%';
+    if (pctEl) pctEl.textContent = total > 0 ? pct + '%' : '';
 
     const studyFill = document.getElementById('study-progress-fill');
     const studyPctEl = document.getElementById('study-progress-percent');

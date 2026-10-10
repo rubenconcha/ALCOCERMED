@@ -9,3 +9,42 @@
 @media(prefers-reduced-motion:reduce){.dashboard-activity,.dashboard-more button{transition:none}.dashboard-activity:hover,.dashboard-more button:hover{transform:none}}
 
 .sidebar .nav-icon-arena{color:#ffb43c;background:#352d2a;border-radius:10px}.sidebar a[href="/juegos/jugar"]:hover .nav-icon-arena{color:#fff;background:#bd7411}
+
+/* Un solo trazo y una escala común para todo el menú lateral. */
+.sidebar .nav-icon{width:38px;height:38px;border-radius:12px;background:#ffffff0b;border:1px solid #ffffff16;color:#d5deeb;box-shadow:none;transition:background .18s,border-color .18s,transform .18s}
+.sidebar .sidebar-tool-icon{width:23px;height:23px;display:block;fill:none}
+.sidebar .nav-icon-inicio,.sidebar .nav-icon-anki{color:#ffd078;background:#f2a6291e;border-color:#f2a62932}
+.sidebar .nav-icon-map,.sidebar .nav-icon-banco{color:#86d6eb;background:#2592bb1c;border-color:#2592bb32}
+.sidebar .nav-icon-fire,.sidebar .nav-icon-eval{color:#d3c4ff;background:#8668bf1c;border-color:#8668bf32}
+.sidebar .nav-icon-sim,.sidebar .nav-icon-quiz{color:#ffbd90;background:#df78321c;border-color:#df783232}
+.sidebar .nav-icon-hang,.sidebar .nav-icon-arena{color:#a8e2b5;background:#47a86b1c;border-color:#47a86b32}
+.sidebar .nav-icon-admin{color:#d4dce9;background:#ffffff0b;border-color:#ffffff16}
+.sidebar .nav-item>a:hover .nav-icon{transform:translateY(-1px);background:#ffffff1b;border-color:#ffffff40}
+.sidebar .nav-item-active>a .nav-icon{color:#26344a;background:#fff4d6;border-color:#ffe08b}
+.sidebar .nav-item>a:focus-visible{outline:2px solid #ffce60;outline-offset:2px}
+
+/* El progreso conserva sus datos, con un estado inicial legible. */
+.dashboard-progress{border-top:4px solid #f3ac2e;padding-top:22px}
+.dashboard-progress-heading{padding-bottom:17px;border-bottom:1px solid #e6edf3}
+.dashboard-progress-heading span{letter-spacing:1.2px}
+.dashboard-progress-heading h2{font-size:26px}
+.dashboard-progress .progress-stats-row{background:#f6f9fc;border-color:#e4ebf2;padding:18px 4px}
+.dashboard-progress .prog-num{font-size:31px}
+.dashboard-progress .prog-materia-row{background:#eef7fb;margin:17px 0 12px;font-weight:650}
+.dashboard-progress .prog-materia-row #prog-materia-label{color:#28566c;font-size:13px;font-weight:650;text-transform:none}
+.dashboard-progress .topic-dot{width:8px;height:8px;border-radius:50%;background:#2594c5;flex:none}
+.dashboard-progress:not(.has-topic-progress) .prog-bar-wrap{display:none}
+.dashboard-progress .prog-bar-labels{font-size:12px;margin-top:10px}
+.dashboard-progress .prog-bar-labels span{font-size:12px;color:#65778b}
+.dashboard-progress .daily-goal-card{background:linear-gradient(145deg,#fff9e8,#fffdf8);border-color:#f2dfb2;padding:18px;gap:12px}
+.dashboard-progress .daily-goal-title{font-size:14px;font-weight:750;text-transform:none;letter-spacing:0}
+.dashboard-progress .daily-goal-count{font-size:20px;color:#9e650e}
+.dashboard-progress .daily-sep{color:#ae9974}
+.dashboard-progress .daily-bar-track{height:9px;background:#f0e4c9;overflow:hidden}
+.dashboard-progress .daily-bar-glow{display:none!important}
+.dashboard-progress .daily-goal-msg{margin:0;font-size:13px;line-height:1.45;min-height:0}
+.dashboard-progress .daily-milestones{display:none}
+.dashboard-progress .daily-streak-row{margin:3px 0 0;padding:10px 0 0;border:0;border-top:1px solid #ebdfc4;background:transparent}
+.dashboard-progress .streak-label{font-size:12px;color:#687589}
+@media(max-width:650px){.sidebar .nav-icon{width:38px;height:38px}.dashboard-progress{padding:20px}}
+@media(prefers-reduced-motion:reduce){.sidebar .nav-icon{transition:none}.sidebar .nav-item>a:hover .nav-icon{transform:none}}
