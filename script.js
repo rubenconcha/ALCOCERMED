@@ -988,7 +988,7 @@ let selectedGameSubject = '';
 function resourceChooser(tool, names, select, description) {
     showScreen('resource-browser');
     document.getElementById('resource-tool').textContent = tool;
-    document.getElementById('resource-title').textContent = 'Elige una materia';
+    document.getElementById('resource-title').textContent = tool === 'Juegos' ? 'Elige un juego' : tool === 'Intocables' ? 'Elige un recurso' : 'Elige una materia';
     document.getElementById('resource-description').textContent = description || 'Selecciona el contenido que quieres practicar.';
     const options = document.getElementById('resource-options');
     options.replaceChildren();
