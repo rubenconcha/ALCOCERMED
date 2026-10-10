@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css?v=20">
-    <link rel="stylesheet" href="public-platform.css?v=3">
+    <link rel="stylesheet" href="commerce.css?v=1">
 </head>
 
 <body class="login-active">
@@ -28,8 +28,7 @@
         <div class="login-bg-glow"></div>
         <div class="login-bg-glow login-bg-glow-2"></div>
 
-        <section class="public-intro" aria-label="Conoce AlcocerMed"><a class="public-brand" href="/ventas.html"><img src="/logo%20app%20juegos.png" alt="" width="42" height="42"><span>AlcocerMed<small>Prepa Ben Carson</small></span></a><p class="public-eyebrow">Tu preparación para Medicina</p><h2>Tu meta es Medicina.<br><em>Vamos por ella.</em></h2><p class="public-lead">Mapas para conectar ideas, flashcards para recordar y preguntas para ponerte a prueba. Todo AlcocerMed en una sola suscripción.</p><a class="public-btn" href="/ventas.html#planes">Conocer los planes <span aria-hidden="true">↗</span></a><p class="public-note">Bs 200 al mes · Bs 499 hasta finalizar el curso o gestión</p><div class="intro-index"><span><b>Comprende</b>Mapas mentales</span><span><b>Recuerda</b>Flashcards e Intocables</span><span><b>Practica</b>Preguntas y simulacros</span></div></section>
-        <div class="login-card">
+<div class="login-card">
             <!-- Logo -->
             <div class="login-logo-wrap">
                 <div class="login-logo-icon">
@@ -90,7 +89,8 @@
                 </button>
             </form>
 
-            <div class="login-assistance"><a href="/ventas.html#planes">Quiero suscribirme</a><a href="https://wa.me/59173752688?text=Hola%2C%20necesito%20ayuda%20para%20ingresar%20a%20AlcocerMed" target="_blank" rel="noopener noreferrer">Necesito ayuda para ingresar</a></div>
+            <div class="login-offer"><span>¿Aún no tienes acceso?</span><a href="/planes#pricing">Ver planes · desde Bs 200 al mes <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+            <div class="login-assistance"><a href="/planes#pricing">Quiero suscribirme</a><a href="https://wa.me/59173752688?text=Hola%2C%20necesito%20ayuda%20para%20ingresar%20a%20AlcocerMed" target="_blank" rel="noopener noreferrer">Necesito ayuda para ingresar</a></div>
             <!-- Footer -->
             <div class="login-footer">
                 <i class="fas fa-shield-alt"></i>
@@ -428,12 +428,12 @@
 
         <!-- ══ PANTALLA INICIO — MOBILE FIRST ══ -->
         <section id="home-screen" class="home-screen home-mobile-redesign">
-            <div class="membership-strip"><div><h2>Todo tu estudio, en un solo lugar.</h2><p>Consulta los planes y elige cómo continuar tu preparación.</p></div><a class="public-btn secondary" href="/ventas.html#planes">Planes y suscripción ↗</a></div>
             <div class="home-mobile-hero">
                 <div class="home-hero-kicker"><i class="fas fa-bolt"></i> plataforma médica móvil</div>
                 <h1>Estudia medicina desde tu celular.</h1>
                 <p>Flashcards, mapas mentales, preguntas y simulacros organizados para repasar rápido en Android y iPhone.</p>
                 <div class="home-hero-actions">
+                    <a class="home-secondary-action plan-access" href="/planes#pricing"><i class="fas fa-ticket-alt"></i> planes y suscripción</a>
                     <button class="home-primary-action" onclick="toggleFlashcards()"><i class="fas fa-layer-group"></i> iniciar flashcards</button>
                     <button class="home-secondary-action" onclick="openMindMaps()"><i class="fas fa-project-diagram"></i> mapas</button>
                     <button class="home-secondary-action pwa-install-trigger" type="button"><i class="fas fa-download"></i> descargar app</button>
