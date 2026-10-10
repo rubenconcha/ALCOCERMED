@@ -1564,15 +1564,41 @@ document.addEventListener('copy', function (e) {
 // Carga banco_preguntas en background al iniciar la app
 // así cuando el usuario abre banco/simulacro ya está en caché
 // ──────────────────────────────────────────────
+let bancoQuestionsPromise = null;
+
+// Supabase entrega como máximo 1.000 filas por petición. Cargar por páginas
+// evita que desaparezcan materias o temas al crecer la bibliografía.
+async function fetchAllBancoQuestions() {
+    if (bancoState._cache && bancoState._cache.length) return bancoState._cache;
+    if (bancoQuestionsPromise) return bancoQuestionsPromise;
+    bancoQuestionsPromise = (async function () {
+        const client = getSupabase();
+        const rows = [];
+        const pageSize = 500;
+        for (let offset = 0; ; offset += pageSize) {
+            const { data, error } = await client.from('banco_preguntas')
+                .select('*').order('id', { ascending: true })
+                .range(offset, offset + pageSize - 1);
+            if (error) throw error;
+            rows.push(...(data || []));
+            if (!data || data.length < pageSize) break;
+        }
+        bancoState._cache = rows;
+        simState._cache = rows;
+        return rows;
+    })();
+    try {
+        return await bancoQuestionsPromise;
+    } finally {
+        bancoQuestionsPromise = null;
+    }
+}
+
 async function preloadAppData() {
     if (CampusAccess.isFree()) return;
     if (bancoState._cache && bancoState._cache.length > 0) return; // ya cargado
     try {
-        var client = getSupabase();
-        var res = await client.from('banco_preguntas').select('*').limit(1000);
-        if (res.error) return;
-        bancoState._cache = res.data || [];
-        simState._cache = bancoState._cache;
+        await fetchAllBancoQuestions();
         console.log('[Preload] banco_preguntas cargado:', bancoState._cache.length, 'preguntas');
     } catch (e) {
         console.warn('[Preload] error:', e.message);
@@ -1658,13 +1684,7 @@ async function loadBancoMaterias() {
     if (!CampusAccess.isFree() && data.length === 0) {
         ddEl.innerHTML = '<div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando materias...</div>';
         try {
-            const client = getSupabase();
-            const { data: fetched, error } = await client
-                .from('banco_preguntas')
-                .select('*')
-                .limit(1000);
-            if (error) throw error;
-            data = fetched;
+            data = await fetchAllBancoQuestions();
             bancoState._cache = data;
         } catch (e) {
             console.error('Error cargando materias del banco:', e);
@@ -1683,7 +1703,7 @@ async function loadBancoMaterias() {
         });
         bancoState.materias = Array.from(materiasSet).sort();
         // Guardar todos los datos en caché para evitar re-queries
-        bancoState._cache = data;
+        if (!CampusAccess.isFree()) bancoState._cache = data;
 
         ddEl.innerHTML = '';
         if (bancoState.materias.length === 0) {
@@ -1744,17 +1764,11 @@ async function loadBancoTemas(materia) {
 
     try {
         // Usar caché si está disponible para evitar re-query
-        let rows = bancoState._cache || [];
+        let rows = CampusAccess.isFree() ? freePracticeRows() : (bancoState._cache || []);
         let usandoCache = rows.length > 0;
 
         if (!usandoCache) {
-            const client = getSupabase();
-            const { data, error } = await client
-                .from('banco_preguntas')
-                .select('*')
-                .limit(1000);
-            if (error) throw error;
-            rows = data || [];
+            rows = await fetchAllBancoQuestions();
             bancoState._cache = rows;
         }
 
@@ -1820,17 +1834,11 @@ async function loadBancoPreguntas() {
 
     try {
         // Usar caché para filtrar (ya cargado en loadBancoMaterias)
-        let rows = bancoState._cache || [];
+        let rows = CampusAccess.isFree() ? freePracticeRows() : (bancoState._cache || []);
 
         // Si no hay caché, hacer query completa
         if (rows.length === 0) {
-            const client = getSupabase();
-            const { data, error } = await client
-                .from('banco_preguntas')
-                .select('*')
-                .limit(1000);
-            if (error) throw error;
-            rows = data || [];
+            rows = await fetchAllBancoQuestions();
             bancoState._cache = rows;
         }
 
@@ -2014,10 +2022,18 @@ function renderBancoQuestion() {
     opciones.forEach(function (opcion, i) {
         const btn = document.createElement('button');
         btn.className = 'bq-option-btn';
-        btn.innerHTML =
-            '<span class="bq-option-letter">' + letras[i] + '</span>' +
-            '<span class="bq-option-text">' + opcion + '</span>' +
-            '<span class="bq-option-check"><i class="fas ' + (i === correctIdx ? 'fa-check' : 'fa-times') + '"></i></span>';
+        const letter = document.createElement('span');
+        letter.className = 'bq-option-letter';
+        letter.textContent = letras[i];
+        const label = document.createElement('span');
+        label.className = 'bq-option-text';
+        label.textContent = opcion;
+        const mark = document.createElement('span');
+        mark.className = 'bq-option-check';
+        const icon = document.createElement('i');
+        icon.className = 'fas ' + (i === correctIdx ? 'fa-check' : 'fa-times');
+        mark.appendChild(icon);
+        btn.append(letter, label, mark);
 
         // Si ya fue respondida
         if (ans.selected !== null || bancoState.finalized) {
@@ -2036,10 +2052,7 @@ function renderBancoQuestion() {
     // Comentario / Justificación (soporta: JUSTIFICACION, justificacion, EXPLICACION, explicacion, COMENTARIO)
     const comentarioWrap = document.getElementById('bq-comentario-wrap');
     const comentarioText = document.getElementById('bq-comentario-text');
-    const comentario = campo(q, 'justificacion')
-        || campo(q, 'explicacion')
-        || campo(q, 'comentario')
-        || '';
+    const comentario = bancoComentario(q);
 
     if (ans.selected !== null || bancoState.finalized) {
         comentarioWrap.classList.remove('hidden');
@@ -2065,6 +2078,13 @@ function renderBancoQuestion() {
     nextBtn.disabled = idx === bancoState.preguntas.length - 1;
 }
 
+function bancoComentario(q) {
+    const explicacion = campo(q, 'justificacion') || campo(q, 'explicacion') || campo(q, 'comentario') || '';
+    const fuente = campo(q, 'fuente');
+    const paginas = campo(q, 'paginas_pdf');
+    return explicacion + (fuente ? '\nFuente: ' + fuente + (paginas ? ' · páginas ' + paginas + ' del PDF' : '') : '');
+}
+
 // ──────────────────────────────────────────────
 // SELECCIONAR RESPUESTA
 // ──────────────────────────────────────────────
@@ -2086,10 +2106,7 @@ function selectBancoAnswer(selectedIdx, correctIdx) {
 
     // Mostrar comentario con el texto de JUSTIFICACION
     const q = bancoState.preguntas[idx];
-    const comentario = campo(q, 'justificacion')
-        || campo(q, 'explicacion')
-        || campo(q, 'comentario')
-        || '';
+    const comentario = bancoComentario(q);
     const comentarioWrap = document.getElementById('bq-comentario-wrap');
     const comentarioText = document.getElementById('bq-comentario-text');
     comentarioWrap.classList.remove('hidden');
@@ -2674,10 +2691,7 @@ async function loadSimMaterias() {
     try {
         var rows = CampusAccess.isFree() ? freePracticeRows() : (bancoState._cache || []);
         if (!CampusAccess.isFree() && rows.length === 0) {
-            var client = getSupabase();
-            var res = await client.from('banco_preguntas').select('*').limit(1000);
-            if (res.error) throw res.error;
-            rows = res.data || [];
+            rows = await fetchAllBancoQuestions();
             bancoState._cache = rows;
         }
         simState._cache = rows;
@@ -2786,9 +2800,7 @@ window.iniciarSimulacro = async function () {
         } else {
             var rows = simState._cache || bancoState._cache || [];
             if (rows.length === 0) {
-                var res = await client.from('banco_preguntas').select('*').limit(1000);
-                if (res.error) throw res.error;
-                rows = res.data || [];
+                rows = await fetchAllBancoQuestions();
                 bancoState._cache = rows;
             }
             filtradas = rows;

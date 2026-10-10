@@ -2955,6 +2955,7 @@ body.wayground-active .main-content {
     line-height: 1.6;
     text-transform: none;
     font-weight: 400;
+    white-space: pre-line;
 }
 
 /* ── CÍRCULOS DE NAVEGACIÓN MIR ── */
