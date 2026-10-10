@@ -7,6 +7,15 @@ const script = fs.readFileSync('script.js', 'utf8');
 const start = script.indexOf('function renderMmGrid()');
 const end = script.indexOf('function updateIntocStats()', start);
 
+test('los 18 capítulos de Biología Celular conservan el acceso gratuito inicial', () => {
+  const chapters = [...script.matchAll(/\{ titulo: '[^']+', materia: 'Biología Celular', url_imagen: 'mapas mentales\/(biocel_(\d{2})_[^']+)',[^\n]+/g)];
+  assert.equal(chapters.length, 18);
+  assert.deepEqual(chapters.map(match => Number(match[2])), Array.from({ length: 18 }, (_, index) => index + 1));
+  assert.equal(chapters.filter(match => match[0].includes('acceso_gratis: true')).length, 2);
+  assert.ok(chapters[0][0].includes('acceso_gratis: true'));
+  assert.ok(chapters[1][0].includes('acceso_gratis: true'));
+});
+
 test('cada mapa local tiene una miniatura ligera', () => {
   const sources = [...script.matchAll(/url_imagen: '(mapas mentales\/[^']+)'/g)].map(match => match[1]);
   assert.ok(sources.length >= 34);
