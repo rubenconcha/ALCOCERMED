@@ -11,7 +11,7 @@ function loadFunction(name) {
   vm.runInContext(source.slice(start, end), context);
 }
 
-for (const name of ['normalizeDemoText', 'isDemoEvaluation', 'isLegacyClassEvaluation']) loadFunction(name);
+for (const name of ['normalizeDemoText', 'isDemoEvaluation', 'resolveEvaluationSubject', 'subjectMatch']) loadFunction(name);
 
 assert.equal(context.isDemoEvaluation({ titulo: 'Tema 12: Población y muestra', tema: 'Población y muestra', codigo: 'SP12P2' }), false);
 assert.equal(context.isDemoEvaluation({ titulo: 'Evaluación 1', asignatura: 'Otro' }), true);
@@ -20,9 +20,9 @@ assert.equal(context.isDemoEvaluation({ titulo: 'Demo de Biología celular' }), 
 for (const code of ['DEMOMORFO26', 'DEMOBIO26', 'DEMOSALUD26']) {
   assert.equal(context.isDemoEvaluation({ titulo: 'Demo: materia', codigo: code }), true);
 }
-assert.equal(context.isLegacyClassEvaluation({ asignatura: 'Otro', titulo: 'Sistema Óseo' }), true);
-assert.equal(context.isLegacyClassEvaluation({ asignatura: 'Anatomía', titulo: 'Examen Tejido Muscular' }), true);
-assert.equal(context.isLegacyClassEvaluation({ asignatura: 'Biología Celular', titulo: 'Introducción a la biología celular' }), true);
-assert.equal(context.isLegacyClassEvaluation({ asignatura: 'MORFOFUNCION', codigo: 'NEURO26R1' }), true);
-assert.equal(context.isLegacyClassEvaluation({ asignatura: 'MORFOFUNCION', codigo: 'SENTIDOS1' }), true);
-assert.equal(context.isLegacyClassEvaluation({ asignatura: 'BIOLOGIA CELULAR', tema: 'Capitulo 1: introduccion', titulo: 'Capitulo 1' }), false);
+assert.equal(context.isDemoEvaluation({ codigo: 'SENTIDOS1' }), true);
+assert.equal(context.isDemoEvaluation({ codigo: 'SENTIDOS2' }), true);
+assert.equal(context.subjectMatch({ asignatura: 'Otro', titulo: 'Sistema Óseo' }, 'MORFOFUNCION'), true);
+assert.equal(context.subjectMatch({ asignatura: 'Anatomía', titulo: 'Examen Tejido Muscular' }, 'MORFOFUNCION'), true);
+assert.equal(context.subjectMatch({ asignatura: 'Biología Celular', titulo: 'Introducción a la biología celular' }, 'BIOLOGIA CELULAR'), true);
+assert.equal(context.subjectMatch({ asignatura: 'BIOLOGIA CELULAR', tema: 'Capitulo 1: introduccion', titulo: 'Capitulo 1' }, 'BIOLOGIA CELULAR'), true);

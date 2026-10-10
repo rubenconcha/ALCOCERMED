@@ -1132,7 +1132,6 @@ function enterApp() {
             if (!currentUser || currentUser.id !== accessUserId) return;
             DEMO_ACCESS_ONLY = !paid;
             if (currentPage === 'jugar') {
-                if (subjectMiniGameState) return;
                 if (exploreCurrentSubject) loadSubjectEvaluations(exploreCurrentSubject);
                 else loadExploreSubjects();
             }
@@ -1245,7 +1244,7 @@ function enterApp() {
             var planReturn = JSON.parse(sessionStorage.getItem('alcocer_plan_return') || 'null');
             if (planReturn && planReturn.screen === 'juegos') {
                 sessionStorage.removeItem('alcocer_plan_return');
-                if (SUBJECT_MINI_GAMES[planReturn.subject]) {
+                if (SUBJECTS.some(function(item) { return item.name === planReturn.subject; })) {
                     if (currentPage !== 'jugar') navigateTo('jugar', true);
                     loadSubjectEvaluations(planReturn.subject);
                 }
@@ -2559,6 +2558,7 @@ function isDemoEvaluation(ev) {
     var title = normalizeDemoText(ev && ev.titulo || '').trim();
     var code = normalizeDemoText(ev && ev.codigo || '').trim();
     if (/\bDEMO\b/.test(title) || /^DEMO/.test(code) ||
+        /^SENTIDOS[12]$/.test(code) ||
         /(^|\s)(PRUEBA GRATIS|MUESTRA GRATIS)(\s|$)/.test(title)) {
         return true;
     }
@@ -2703,10 +2703,7 @@ function resolveEvaluationSubject(ev) {
         'MEMBRANA PLASMATICA',
         'ESTRUCTURA DE LA MEMBRANA',
         'COMO SE ESTUDIAN LAS CELULAS',
-        'INTRODUCCION A LA BIOLOGIA CELULAR',
-        'TEJIDO OSEO',
-        'HISTOLOGIA',
-        'ORGANIZACION CORPORAL'
+        'INTRODUCCION A LA BIOLOGIA CELULAR'
     ];
     for (var b = 0; b < bioCellPatterns.length; b++) {
         if (blob.indexOf(bioCellPatterns[b]) !== -1) return 'BIOLOGIA CELULAR';
@@ -2717,14 +2714,6 @@ function resolveEvaluationSubject(ev) {
     }
 
     return 'MORFOFUNCION';
-}
-
-function isLegacyClassEvaluation(ev) {
-    var subject = normalizeDemoText(ev && ev.asignatura || '').trim();
-    var code = normalizeDemoText(ev && ev.codigo || '').trim();
-    return subject === 'OTRO' || subject === 'ANATOMIA' ||
-        (subject === 'BIOLOGIA CELULAR' && !String(ev && ev.tema || '').trim()) ||
-        /^(ENCEFALO|NEURO|SENTIDOS)/.test(code);
 }
 
 function subjectColor(name) {
@@ -2745,6 +2734,9 @@ function subjectMatch(ev, subjectName) {
 
 function sortSubjectEvaluations(list, subject) {
     list.sort(function(a, b) {
+        var aDemo = isDemoEvaluation(a) ? 1 : 0;
+        var bDemo = isDemoEvaluation(b) ? 1 : 0;
+        if (aDemo !== bDemo) return bDemo - aDemo;
         var aSentidos = /^SENTIDOS[12]$/.test(a.codigo || '');
         var bSentidos = /^SENTIDOS[12]$/.test(b.codigo || '');
         if (aSentidos !== bSentidos) return aSentidos ? -1 : 1;
@@ -2753,9 +2745,6 @@ function sortSubjectEvaluations(list, subject) {
         var bEncefalo = /^ENCEFALO[12]$/.test(b.codigo || '');
         if (aEncefalo !== bEncefalo) return aEncefalo ? -1 : 1;
         if (aEncefalo && bEncefalo) return a.codigo.localeCompare(b.codigo);
-        var aDemo = isDemoEvaluation(a) ? 1 : 0;
-        var bDemo = isDemoEvaluation(b) ? 1 : 0;
-        if (aDemo !== bDemo) return bDemo - aDemo;
         if (subject === 'MORFOFUNCION') {
             var aE1 = normalizeDemoText(a.titulo || '').indexOf('EVALUACION 1') !== -1 ? 1 : 0;
             var bE1 = normalizeDemoText(b.titulo || '').indexOf('EVALUACION 1') !== -1 ? 1 : 0;
@@ -2820,7 +2809,6 @@ function loadExploreSubjects() {
     var backBtn = document.getElementById('explorar-back-btn');
     if (backBtn) backBtn.style.display = 'none';
     exploreCurrentSubject = null;
-    subjectMiniGameState = null;
     var h1 = document.querySelector('#page-jugar .page-header h1');
     if (h1) h1.innerHTML = '<i class="fas fa-gamepad"></i> JUGAR';
     var filterBar = document.getElementById('explorar-filter-bar');
@@ -3355,190 +3343,55 @@ function updateShowcasePodium(entries) {
     }
 }
 
-// Partidas breves basadas en la bibliografía del curso. Permanecen disponibles
-// incluso cuando el catálogo remoto no responde.
-var SUBJECT_MINI_GAMES = {
-    'MORFOFUNCION': {
-        art: '../assets/study-art/morphology.png',
-        demo: [
-            { q: 'Si estudias la forma del corazón, ¿qué ciencia estás usando?', a: ['Anatomía', 'Fisiología', 'Epidemiología'], correct: 0, why: 'La anatomía estudia la estructura del cuerpo; la fisiología, cómo funciona.' },
-            { q: 'Una célula muscular se une con otras para formar una estructura. ¿Qué nivel sigue después de la célula?', a: ['Un tejido', 'Un sistema', 'Un organismo'], correct: 0, why: 'Células semejantes forman tejidos; los tejidos forman órganos.' },
-            { q: '¿Qué significa que el cuerpo mantenga la homeostasis?', a: ['Que el medio interno se conserve relativamente estable', 'Que todos los órganos dejen de trabajar', 'Que la temperatura nunca varíe'], correct: 0, why: 'La homeostasis mantiene condiciones internas dentro de límites adecuados, aunque existan pequeñas variaciones.' },
-            { q: 'Si la temperatura corporal sube y empiezas a sudar, ¿qué tipo de respuesta ayuda a corregir el cambio?', a: ['Retroalimentación negativa', 'Retroalimentación positiva', 'Ausencia de regulación'], correct: 0, why: 'El sudor ayuda a contrarrestar el aumento de temperatura: es retroalimentación negativa.' },
-            { q: '¿Qué estudia la fisiología?', a: ['Cómo funcionan las estructuras del cuerpo', 'Solo los nombres de los huesos', 'La forma externa de los órganos'], correct: 0, why: 'La fisiología explica las funciones y procesos que realizan las estructuras corporales.' }
-        ],
-        premium: [
-            { q: '¿En qué zona del tórax está el corazón?', a: ['En el mediastino, entre los pulmones', 'Dentro del pulmón izquierdo', 'Debajo del diafragma'], correct: 0, why: 'El corazón se ubica en el mediastino, entre los pulmones y detrás del esternón.' },
-            { q: '¿Cómo se llama el saco de doble pared que rodea al corazón?', a: ['Pericardio', 'Miocardio', 'Endocardio'], correct: 0, why: 'El pericardio envuelve el corazón; el miocardio es su capa muscular.' },
-            { q: '¿Qué capa del corazón realiza la mayor parte del trabajo de bombeo?', a: ['Miocardio', 'Endocardio', 'Epicardio'], correct: 0, why: 'El miocardio es el músculo cardíaco que se contrae para impulsar la sangre.' },
-            { q: '¿Por qué el ventrículo izquierdo tiene una pared más gruesa?', a: ['Porque impulsa sangre hacia la circulación sistémica', 'Porque recibe sangre de los pulmones', 'Porque solo bombea hacia el pulmón'], correct: 0, why: 'Debe generar más presión para llevar sangre a todo el cuerpo.' },
-            { q: '¿Qué lado del corazón envía sangre hacia los pulmones?', a: ['El derecho', 'El izquierdo', 'Ambos directamente'], correct: 0, why: 'El ventrículo derecho envía sangre a la circulación pulmonar.' }
-        ]
-    },
-    'BIOLOGIA CELULAR': {
-        art: '../assets/study-art/cell.png',
-        demo: [
-            { q: '¿Cuál es la unidad estructural y funcional de los seres vivos?', a: ['La célula', 'El órgano', 'La molécula'], correct: 0, why: 'La teoría celular reconoce a la célula como la unidad básica de estructura y función.' },
-            { q: '¿Qué idea añadió Virchow a la teoría celular?', a: ['Toda célula procede de otra célula', 'Todas las células tienen pared celular', 'Toda célula posee núcleo'], correct: 0, why: 'Virchow formuló que las células se originan a partir de células preexistentes.' },
-            { q: '¿Qué distingue a una célula eucariota de una procariota?', a: ['Tiene un núcleo delimitado por membrana', 'No posee material genético', 'Nunca forma tejidos'], correct: 0, why: 'Las células eucariotas tienen el ADN dentro de un núcleo con envoltura.' },
-            { q: '¿Qué estructura separa la célula de su entorno y regula el intercambio?', a: ['Membrana plasmática', 'Nucléolo', 'Centrosoma'], correct: 0, why: 'La membrana plasmática delimita la célula y controla el paso de sustancias.' },
-            { q: '¿Qué orgánulo participa de forma principal en la producción de ATP?', a: ['Mitocondria', 'Lisosoma', 'Aparato de Golgi'], correct: 0, why: 'Las mitocondrias generan gran parte del ATP utilizado por la célula.' }
-        ],
-        premium: [
-            { q: '¿Qué fases componen la interfase del ciclo celular?', a: ['G1, S y G2', 'Profase, metafase y anafase', 'Solo G1 y mitosis'], correct: 0, why: 'Durante G1, S y G2 la célula crece, replica su ADN y se prepara para dividirse.' },
-            { q: '¿En qué fase del ciclo celular se replica el ADN?', a: ['Fase S', 'Fase G1', 'Citocinesis'], correct: 0, why: 'La S significa síntesis: en ella se duplica el material genético.' },
-            { q: 'Una célula fabrica proteínas y orgánulos antes de copiar su ADN. ¿En qué fase está?', a: ['G1', 'G2', 'M'], correct: 0, why: 'La fase G1 corresponde al crecimiento previo a la replicación del ADN.' },
-            { q: 'La célula ya copió su ADN y se prepara para dividirse. ¿En qué fase está?', a: ['G2', 'G1', 'S'], correct: 0, why: 'En G2 continúa el crecimiento y se revisa la preparación para la fase M.' },
-            { q: '¿Qué proceso divide el citoplasma para formar dos células hijas?', a: ['Citocinesis', 'Transcripción', 'Replicación'], correct: 0, why: 'La citocinesis reparte el citoplasma al final de la división celular.' }
-        ]
-    },
-    'EDUCACION PARA LA SALUD': {
-        art: '../assets/study-art/health-education.png',
-        demo: [
-            { q: 'Una familia no tiene acceso a agua segura. ¿Qué influye en su salud además de sus decisiones personales?', a: ['Las condiciones del entorno', 'Solo su edad', 'Únicamente la atención hospitalaria'], correct: 0, why: 'Los determinantes sociales y ambientales condicionan las oportunidades de cuidar la salud.' },
-            { q: '¿Qué busca la promoción de la salud?', a: ['Aumentar la capacidad de las personas para controlar su salud', 'Atender solo enfermedades avanzadas', 'Sustituir toda atención médica'], correct: 0, why: 'La promoción fortalece capacidades y condiciones para mejorar la salud.' },
-            { q: 'Una persona sana recibe una vacuna. ¿Qué nivel de prevención representa?', a: ['Primaria', 'Secundaria', 'Terciaria'], correct: 0, why: 'La prevención primaria actúa antes de que aparezca la enfermedad.' },
-            { q: 'Un examen detecta una enfermedad antes de que cause síntomas. ¿Qué prevención es?', a: ['Secundaria', 'Primaria', 'Terciaria'], correct: 0, why: 'La prevención secundaria busca detectar y tratar temprano.' },
-            { q: 'Después de un infarto, una persona inicia rehabilitación. ¿Qué se intenta reducir?', a: ['Las secuelas de una enfermedad ya establecida', 'La posibilidad de nacer con una enfermedad', 'La necesidad de hacer un diagnóstico'], correct: 0, why: 'La rehabilitación corresponde a prevención terciaria: limita consecuencias y recupera funciones.' }
-        ],
-        premium: [
-            { q: 'Una comunidad decide junto al equipo de salud sus prioridades. ¿Qué se fortalece?', a: ['La participación comunitaria', 'El aislamiento de los servicios', 'La atención exclusivamente curativa'], correct: 0, why: 'La acción comunitaria permite que la población participe en las decisiones sobre su salud.' },
-            { q: 'Un municipio considera la salud al diseñar su transporte. ¿Qué área de promoción aplica?', a: ['Políticas públicas saludables', 'Solo rehabilitación', 'Diagnóstico individual'], correct: 0, why: 'Una política saludable considera cómo las decisiones públicas afectan el bienestar.' },
-            { q: 'Una escuela enseña a elegir alimentos saludables. ¿Qué área de promoción trabaja?', a: ['Desarrollo de habilidades personales', 'Únicamente atención hospitalaria', 'Prevención terciaria'], correct: 0, why: 'La educación permite desarrollar habilidades para tomar decisiones informadas.' },
-            { q: '¿Qué significa reorientar los servicios de salud?', a: ['Dar más espacio a promoción y atención primaria', 'Atender solo urgencias', 'Eliminar toda atención curativa'], correct: 0, why: 'La reorientación integra promoción y prevención con la atención curativa.' },
-            { q: '¿Por qué la promoción necesita colaborar con otros sectores?', a: ['Porque educación, vivienda y trabajo también influyen en la salud', 'Porque la salud solo depende del hospital', 'Porque las comunidades no deben participar'], correct: 0, why: 'Las condiciones de vida dependen de decisiones que van más allá de los servicios sanitarios.' }
-        ]
-    }
-};
-
-var subjectMiniGameState = null;
-
-function canPlayPremiumSubjectGame() {
-    return isAdmin || (!DEMO_ACCESS_ONLY && !isDemoGuestUser(currentUser)) ||
-        (typeof isNightClassUser === 'function' && isNightClassUser(currentUser) && isNightClassOpen());
-}
-
 function rememberSubjectPlanReturn(subject) {
     try { sessionStorage.setItem('alcocer_plan_return', JSON.stringify({ screen: 'juegos', subject: subject })); }
     catch (e) { /* El enlace a planes sigue funcionando sin almacenamiento. */ }
 }
 
-function subjectMiniGameCards(subject) {
-    var game = SUBJECT_MINI_GAMES[subject];
-    if (!game) return '';
-    var premiumOpen = canPlayPremiumSubjectGame();
-    var html = '<div class="subject-game-intro"><img src="' + game.art + '" alt="" aria-hidden="true"><div><span>JUEGOS DE ' + escapeHtml(subject) + '</span><h2>Elige tu partida</h2><p>Empieza con una ronda corta. Después podrás seguir practicando con el resto de juegos.</p></div></div>';
-    html += '<div class="subject-game-options">';
-    html += '<article class="subject-game-option subject-game-option-free"><div class="subject-game-option-icon"><i class="fas fa-gamepad" aria-hidden="true"></i></div><div><span class="subject-game-kicker">PARA EMPEZAR</span><h3>Partida de muestra</h3><p>Responde cinco preguntas y descubre cuánto recuerdas.</p></div><button type="button" onclick="startSubjectMiniGame(\'' + subject + '\', \'demo\')">Jugar ahora <i class="fas fa-arrow-right" aria-hidden="true"></i></button></article>';
-    html += '<article class="subject-game-option' + (premiumOpen ? '' : ' subject-game-option-locked') + '"><div class="subject-game-option-icon"><i class="fas ' + (premiumOpen ? 'fa-brain' : 'fa-lock') + '" aria-hidden="true"></i></div><div><span class="subject-game-kicker">SIGUIENTE RETO</span><h3>Desafío de ' + escapeHtml(subject) + '</h3><p>Cinco preguntas más para profundizar en la materia.</p></div>';
-    html += premiumOpen ? '<button type="button" onclick="startSubjectMiniGame(\'' + subject + '\', \'premium\')">Jugar <i class="fas fa-arrow-right" aria-hidden="true"></i></button>' : '<a href="/planes?desde=campus#planes" onclick="rememberSubjectPlanReturn(\'' + subject + '\')"><i class="fas fa-lock" aria-hidden="true"></i> Desbloquear</a>';
-    html += '</article></div>';
-    return html;
-}
-
-function startSubjectMiniGame(subject, level) {
-    if (!SUBJECT_MINI_GAMES[subject] || (level === 'premium' && !canPlayPremiumSubjectGame())) return;
-    var questions = SUBJECT_MINI_GAMES[subject][level];
-    var orders = questions.map(function(item) {
-        var order = item.a.map(function(_, index) { return index; });
-        for (var i = order.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var temp = order[i]; order[i] = order[j]; order[j] = temp;
-        }
-        return order;
-    });
-    subjectMiniGameState = { subject: subject, level: level, index: 0, answers: [], selected: null, orders: orders };
-    renderSubjectMiniGame();
-}
-
-function chooseSubjectMiniGameAnswer(choice) {
-    if (!subjectMiniGameState || subjectMiniGameState.selected !== null) return;
-    subjectMiniGameState.selected = choice;
-    renderSubjectMiniGame();
-}
-
-function nextSubjectMiniGameQuestion() {
-    if (!subjectMiniGameState || subjectMiniGameState.selected === null) return;
-    var state = subjectMiniGameState;
-    var questions = SUBJECT_MINI_GAMES[state.subject][state.level];
-    state.answers.push(state.selected === questions[state.index].correct);
-    state.index++;
-    state.selected = null;
-    renderSubjectMiniGame();
-}
-
-function renderSubjectMiniGame() {
-    var state = subjectMiniGameState;
-    var listEl = document.getElementById('explorar-eval-list');
-    if (!state || !listEl) return;
-    var game = SUBJECT_MINI_GAMES[state.subject];
-    var questions = game[state.level];
-    var html = '<div class="subject-mini-game"><button class="subject-mini-back" type="button" onclick="loadSubjectEvaluations(\'' + state.subject + '\')"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a los juegos</button>';
-    if (state.index >= questions.length) {
-        var score = state.answers.filter(Boolean).length;
-        html += '<div class="subject-mini-result"><img src="' + game.art + '" alt="" aria-hidden="true"><span>RONDA COMPLETADA</span><h2>' + score + ' de ' + questions.length + ' respuestas correctas</h2><p>' + (score === questions.length ? '¡Excelente! Sigue poniendo a prueba lo que sabes.' : 'Ya tienes una idea de qué repasar. Puedes volver a intentarlo.') + '</p><div class="subject-mini-actions"><button type="button" onclick="startSubjectMiniGame(\'' + state.subject + '\', \'' + state.level + '\')">Jugar otra vez</button><button type="button" class="subject-mini-secondary" onclick="loadSubjectEvaluations(\'' + state.subject + '\')">Ver más juegos</button></div></div>';
-    } else {
-        var item = questions[state.index];
-        html += '<div class="subject-mini-heading"><span>' + escapeHtml(state.subject) + ' · ' + (state.level === 'demo' ? 'PARTIDA DE MUESTRA' : 'DESAFÍO') + '</span><strong>' + (state.index + 1) + ' / ' + questions.length + '</strong></div>';
-        html += '<div class="subject-mini-progress"><span style="width:' + (state.index / questions.length * 100) + '%"></span></div>';
-        html += '<div class="subject-mini-question"><img src="' + game.art + '" alt="" aria-hidden="true"><h2>' + escapeHtml(item.q) + '</h2></div>';
-        html += '<div class="subject-mini-choices">';
-        var order = state.orders[state.index];
-        for (var i = 0; i < order.length; i++) {
-            var optionIndex = order[i];
-            var selected = state.selected !== null;
-            var choiceClass = selected ? (optionIndex === item.correct ? ' is-correct' : (optionIndex === state.selected ? ' is-incorrect' : '')) : '';
-            html += '<button type="button" class="subject-mini-choice' + choiceClass + '" onclick="chooseSubjectMiniGameAnswer(' + optionIndex + ')" ' + (selected ? 'disabled' : '') + '><span>' + String.fromCharCode(65 + i) + '</span>' + escapeHtml(item.a[optionIndex]) + '</button>';
-        }
-        html += '</div>';
-        if (state.selected !== null) html += '<div class="subject-mini-feedback"><strong>' + (state.selected === item.correct ? '¡Correcto!' : 'Casi. La respuesta correcta está marcada arriba.') + '</strong><p>' + escapeHtml(item.why) + '</p><button type="button" onclick="nextSubjectMiniGameQuestion()">' + (state.index + 1 === questions.length ? 'Ver resultado' : 'Siguiente pregunta') + ' <i class="fas fa-arrow-right" aria-hidden="true"></i></button></div>';
-    }
-    listEl.innerHTML = html + '</div>';
-    if (state.selected === null) listEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
 function loadSubjectEvaluations(subject) {
     exploreCurrentSubject = subject;
-    subjectMiniGameState = null;
     var client = getSupabase();
     var grid = document.getElementById('explorar-subject-grid');
     if (grid) grid.style.display = 'none';
     var backBtn = document.getElementById('explorar-back-btn');
     if (backBtn) backBtn.style.display = '';
-    var color = subject === 'CLASES' ? '#EBA12C' : subjectColor(subject);
-    var emoji = subject === 'CLASES' ? '<i class="fas fa-folder-open" aria-hidden="true"></i>' : subjectEmoji(subject);
+    var color = subjectColor(subject);
+    var emoji = subjectEmoji(subject);
     var h1 = document.querySelector('#page-jugar .page-header h1');
-    if (h1) h1.innerHTML = '<i class="fas fa-arrow-left" style="cursor:pointer;margin-right:8px" onclick="loadExploreSubjects()"></i>' + emoji + ' ' + (subject === 'CLASES' ? 'JUEGOS DE CLASE' : subject);
+    if (h1) h1.innerHTML = '<i class="fas fa-arrow-left" style="cursor:pointer;margin-right:8px" onclick="loadExploreSubjects()"></i>' + emoji + ' ' + subject;
     var listEl = document.getElementById('explorar-eval-list');
     if (!listEl) return;
     listEl.style.display = '';
-    var localGames = subjectMiniGameCards(subject);
-    listEl.innerHTML = localGames;
-    if (!client) return;
+    listEl.innerHTML = '<div class="empty-state"><i class="fas fa-spinner fa-spin" aria-hidden="true"></i><p>Cargando tus juegos...</p></div>';
+    if (!client) {
+        listEl.innerHTML = '<div class="empty-state"><p>No se pudo conectar con tus juegos.</p><button type="button" class="explorar-btn-study" onclick="loadSubjectEvaluations(\'' + subject + '\')">Reintentar</button></div>';
+        return;
+    }
 
-    // Buscar por coincidencia flexible con el nombre de la materia
-    client.from('evaluaciones').select('id, titulo, tema, codigo, asignatura, created_at').eq('publicado', true).order('created_at', { ascending: false }).then(function(evRes) {
-        if (exploreCurrentSubject !== subject || subjectMiniGameState) return;
+    // El catálogo expone solo títulos y temas. La política existente de Supabase
+    // sigue protegiendo el contenido y las preguntas de las partidas de pago.
+    client.rpc('campus_game_catalog').then(function(evRes) {
+        if (exploreCurrentSubject !== subject) return;
         if (evRes.error) {
-            listEl.innerHTML = localGames;
+            listEl.innerHTML = '<div class="empty-state"><p>No se pudieron cargar las partidas.</p><button type="button" class="explorar-btn-study" onclick="loadSubjectEvaluations(\'' + subject + '\')">Reintentar</button></div>';
             return;
         }
         var matching = [];
         for (var i = 0; i < evRes.data.length; i++) {
-            if (subject === 'CLASES' ? isLegacyClassEvaluation(evRes.data[i]) : (subjectMatch(evRes.data[i], subject) && (!isAdmin || !isLegacyClassEvaluation(evRes.data[i])))) {
+            if (subjectMatch(evRes.data[i], subject)) {
                 matching.push(evRes.data[i]);
             }
         }
         if (matching.length === 0) {
-            listEl.innerHTML = localGames;
+            listEl.innerHTML = '<div class="empty-state"><i class="fas fa-folder-open" aria-hidden="true"></i><p>Aún no hay partidas publicadas para ' + escapeHtml(subject) + '.</p></div>';
             return;
         }
 
         sortSubjectEvaluations(matching, subject);
 
         Promise.resolve().then(function() {
-            if (exploreCurrentSubject !== subject || subjectMiniGameState) return;
-            var html = localGames + '<h2 class="subject-more-title">Más partidas</h2>';
+            if (exploreCurrentSubject !== subject) return;
+            var html = '<div class="subject-game-list-heading"><span>PARTIDAS DE ' + escapeHtml(subject) + '</span><p>Elige un tema y juega con las preguntas, imágenes, sonidos y animaciones del juego original.</p></div>';
             for (var i = 0; i < matching.length; i++) {
                 var ev = matching[i];
                 var isDemo = isDemoEvaluation(ev);
@@ -3547,6 +3400,7 @@ function loadSubjectEvaluations(subject) {
                 html += '<div style="flex:1;min-width:180px">';
                 html += '<h4 style="font-size:1.05rem;font-weight:800;color:var(--text);margin:0 0 6px">' + escapeHtml(ev.titulo || 'Sin título') + (isDemo ? ' <span style="background:var(--badge-draft-bg,#FEF3C7);color:var(--badge-draft-color,#92400E);font-size:0.65rem;padding:2px 8px;border-radius:8px;font-weight:700">🎯 DEMO</span>' : '') + '</h4>';
                 html += '<div class="eval-meta" style="display:flex;flex-wrap:wrap;gap:10px;font-size:0.78rem;color:#94A3B8">';
+                if (ev.tema) html += '<span>' + escapeHtml(ev.tema) + '</span>';
                 if (isLocked) html += '<span class="locked-access-badge"><i class="fas fa-lock"></i> BLOQUEADO</span>';
                 html += '</div></div>';
                 if (isLocked) {

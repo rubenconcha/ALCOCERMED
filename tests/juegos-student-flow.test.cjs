@@ -4,70 +4,83 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 const source = fs.readFileSync(path.join(__dirname, '..', 'juegos', 'app.js'), 'utf8');
-const from = source.indexOf('var SUBJECT_MINI_GAMES =');
-const to = source.indexOf('function loadSubjectEvaluations(', from);
-assert(from !== -1 && to > from, 'The subject game module exists');
+assert.doesNotMatch(source, /SUBJECT_MINI_GAMES|startSubjectMiniGame|subjectMiniGameCards/);
 
-let rendered = '';
-const list = {
-  get innerHTML() { return rendered; },
-  set innerHTML(value) { rendered = value; },
-  scrollIntoView() {}
+function functionSource(name, nextName) {
+  const start = source.indexOf(`function ${name}(`);
+  const end = source.indexOf(`function ${nextName}(`, start);
+  assert(start >= 0 && end > start, `${name} exists before ${nextName}`);
+  return source.slice(start, end);
+}
+
+const nodes = {
+  'explorar-subject-grid': { innerHTML: '', style: {} },
+  'explorar-back-btn': { style: {} },
+  'explorar-eval-list': { innerHTML: '', style: {} }
 };
+const h1 = { innerHTML: '' };
 const saved = new Map();
-const context = vm.createContext({
-  document: { getElementById: id => id === 'explorar-eval-list' ? list : null },
-  escapeHtml: value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;'),
-  isAdmin: false,
-  DEMO_ACCESS_ONLY: true,
-  currentUser: { id: 'student' },
-  isDemoGuestUser: () => false,
-  sessionStorage: { setItem: (key, value) => saved.set(key, value) },
-  Math
-});
-vm.runInContext(source.slice(from, to), context);
-
-const subjectStart = source.indexOf('function renderSubjectMissions(');
-const subjectEnd = source.indexOf('function loadExploreSubjects(', subjectStart);
-assert(subjectStart !== -1 && subjectEnd > subjectStart);
-context.SUBJECTS = [
+const subjects = [
   { name: 'MORFOFUNCION', color: '#EF4444', emoji: 'M' },
   { name: 'BIOLOGIA CELULAR', color: '#3B82F6', emoji: 'BC' },
   { name: 'EDUCACION PARA LA SALUD', color: '#10B981', emoji: 'ES' }
 ];
-vm.runInContext(source.slice(subjectStart, subjectEnd), context);
-const grid = { innerHTML: '' };
-context.renderSubjectMissions(grid);
-assert.equal((grid.innerHTML.match(/class="explorar-subject-card/g) || []).length, 3);
-assert.doesNotMatch(grid.innerHTML, /Demo y planes|Juegos de clase|Con plan|fa-lock/i);
+let rows = [];
+const context = vm.createContext({
+  document: {
+    getElementById: id => nodes[id],
+    querySelector: () => h1
+  },
+  getSupabase: () => ({
+    rpc: name => {
+      assert.equal(name, 'campus_game_catalog');
+      return Promise.resolve({ data: rows, error: null });
+    }
+  }),
+  SUBJECTS: subjects,
+  exploreCurrentSubject: null,
+  isAdmin: false,
+  isLegacyClassEvaluation: () => false,
+  subjectMatch: (ev, subject) => ev.asignatura === subject,
+  sortSubjectEvaluations: list => list.sort((a, b) => Number(b.codigo.startsWith('DEMO')) - Number(a.codigo.startsWith('DEMO'))),
+  subjectColor: () => '#EF4444',
+  subjectEmoji: () => 'M',
+  isDemoEvaluation: ev => ev.codigo.startsWith('DEMO'),
+  canAccessEvaluation: ev => ev.codigo.startsWith('DEMO'),
+  adjustColor: () => '#A00000',
+  escapeHtml: value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;'),
+  sessionStorage: { setItem: (key, value) => saved.set(key, value) },
+  Promise
+});
 
-for (const subject of ['MORFOFUNCION', 'BIOLOGIA CELULAR', 'EDUCACION PARA LA SALUD']) {
-  const freeCards = context.subjectMiniGameCards(subject);
-  assert.match(freeCards, /Jugar ahora/);
-  assert.match(freeCards, /href="\/planes\?desde=campus#planes"/);
-  assert.match(freeCards, /Desbloquear/);
-  context.rememberSubjectPlanReturn(subject);
-  assert.deepEqual(JSON.parse(saved.get('alcocer_plan_return')), { screen: 'juegos', subject });
+vm.runInContext(functionSource('renderSubjectMissions', 'loadExploreSubjects'), context);
+vm.runInContext(functionSource('rememberSubjectPlanReturn', 'startSelfStudy'), context);
+context.renderSubjectMissions(nodes['explorar-subject-grid']);
+assert.equal((nodes['explorar-subject-grid'].innerHTML.match(/class="explorar-subject-card/g) || []).length, 3);
 
-  context.startSubjectMiniGame(subject, 'premium');
-  assert.equal(context.subjectMiniGameState, null, 'The paid challenge stays locked');
-
-  context.startSubjectMiniGame(subject, 'demo');
-  for (let i = 0; i < 5; i++) {
-    assert.match(rendered, new RegExp(`${i + 1} \/ 5`));
-    const answer = context.subjectMiniGameState;
-    const correct = context.SUBJECT_MINI_GAMES[subject].demo[i].correct;
-    assert.equal(answer.orders[i].length, 3);
-    context.chooseSubjectMiniGameAnswer(correct);
-    assert.match(rendered, /¡Correcto!/);
-    context.nextSubjectMiniGameQuestion();
+(async () => {
+  for (const subject of subjects) {
+    rows = [
+      { id: 'paid-id', codigo: 'T1', titulo: 'Tema completo', tema: 'Anatomía', asignatura: subject.name },
+      { id: 'demo-id', codigo: 'DEMO26', titulo: 'Muestra', tema: 'Primer tema', asignatura: subject.name }
+    ];
+    context.loadSubjectEvaluations(subject.name);
+    await new Promise(resolve => setImmediate(resolve));
+    const html = nodes['explorar-eval-list'].innerHTML;
+    assert.match(html, /startSelfStudy\('demo-id'\)/, 'The original quiz engine opens the demo');
+    assert.match(html, /JUGAR DEMO/);
+    assert.match(html, /Tema completo/);
+    assert.match(html, /Desbloquear/);
+    assert.match(html, /href="\/planes\?desde=campus#planes"/);
+    assert.doesNotMatch(html, /Partida de muestra|Cinco preguntas más|startSubjectMiniGame/);
+    context.rememberSubjectPlanReturn(subject.name);
+    assert.deepEqual(JSON.parse(saved.get('alcocer_plan_return')), { screen: 'juegos', subject: subject.name });
   }
-  assert.match(rendered, /5 de 5 respuestas correctas/);
-  context.subjectMiniGameState = null;
-}
 
-context.DEMO_ACCESS_ONLY = false;
-assert.doesNotMatch(context.subjectMiniGameCards('MORFOFUNCION'), /href="\/planes\?desde=campus#planes"/);
-context.startSubjectMiniGame('MORFOFUNCION', 'premium');
-assert.equal(context.subjectMiniGameState.level, 'premium');
-console.log('OK: three free subject demos, paid challenges locked/unlocked, quiz completion.');
+  rows = [];
+  context.loadSubjectEvaluations('MORFOFUNCION');
+  await new Promise(resolve => setImmediate(resolve));
+  assert.match(nodes['explorar-eval-list'].innerHTML, /Aún no hay partidas publicadas/);
+  assert.doesNotMatch(nodes['explorar-eval-list'].innerHTML, /startSelfStudy|Partida de muestra/);
+  console.log('OK: three subjects use published evaluations and the original quiz engine; no duplicate mini-game.');
+})().catch(err => { console.error(err); process.exitCode = 1; });
