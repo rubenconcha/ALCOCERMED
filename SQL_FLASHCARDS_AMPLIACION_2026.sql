@@ -91,6 +91,93 @@ WHERE NOT EXISTS (
     AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
 );
 
+-- salud: páginas PDF 2-16 | SALUD PUBLICA / educacion en salud
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'educacion en salud', 'Después de una charla, un grupo sabe qué hacer pero no puede practicarlo. ¿Qué le falta a la educación en salud?', 'Ayudar a desarrollar habilidades y condiciones para convertir lo aprendido en prácticas sostenibles.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿A quiénes incluye la educación en salud además de cada paciente?', 'A las familias y a las comunidades.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿Qué tres aspectos de la persona intenta transformar la educación en salud?', 'Conocimientos, actitudes y prácticas.'),
+    ('SALUD PUBLICA', 'educacion en salud', 'Una estudiante explica el lavado de manos y luego practica con su comunidad. ¿Qué aporta la segunda parte?', 'Pasa de la información a una habilidad y una práctica concreta.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿Por qué se habla de un proceso permanente de educación en salud?', 'Porque aprender y ajustar conductas saludables requiere continuidad y reflexión, no una sola charla.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿Qué significa autogestionar la salud?', 'Tomar decisiones informadas y participar activamente en el cuidado propio, familiar y comunitario.'),
+    ('SALUD PUBLICA', 'educacion en salud', 'Si una campaña ignora costumbres locales, ¿qué dimensión importante está dejando fuera?', 'El contexto cultural y social en el que las personas aprenden y toman decisiones.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿Por qué la comunicación en educación para la salud debe ir en ambos sentidos?', 'Para escuchar dudas y experiencias de la comunidad, además de compartir información.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿La educación en salud puede por sí sola eliminar la pobreza o mejorar todas las viviendas?', 'No. Es una herramienta importante, pero esos determinantes exigen políticas y acciones sociales más amplias.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿Qué enfoque reconoce factores biológicos, psicológicos y sociales al educar en salud?', 'El enfoque biopsicosocial.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿Qué busca el empoderamiento de la comunidad en educación sanitaria?', 'Que pueda comprender opciones y participar en decisiones que afectan su bienestar.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿Cómo se relaciona la educación en salud con la prevención?', 'Ayuda a reconocer riesgos y a adoptar prácticas que disminuyan la posibilidad de enfermar.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿Cómo se relaciona la educación en salud con la promoción?', 'Fortalece capacidades personales y comunitarias para mejorar condiciones de bienestar.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿Por qué enseñar una conducta saludable sin considerar el entorno puede fallar?', 'Porque la posibilidad de practicarla depende también de recursos, costumbres y condiciones de vida.'),
+    ('SALUD PUBLICA', 'educacion en salud', '¿Qué nivel de vida busca sostener la educación para la salud en la persona y su entorno?', 'Un estilo de vida saludable con cuidado personal, familiar y comunitario.'),
+    ('SALUD PUBLICA', 'educacion en salud', 'Una comunidad identifica sus problemas y propone soluciones con el equipo de salud. ¿Qué papel desempeña?', 'Participa activamente en su aprendizaje y en el cuidado colectivo de la salud.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 2-4 | SALUD PUBLICA / concepto de salud y determinantes
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿Cómo veía la salud el enfoque biomédico clásico?', 'Principalmente como ausencia de enfermedad, con énfasis en diagnóstico y tratamiento.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿Qué añadió el enfoque biopsicosocial a la idea de salud?', 'La interacción de factores biológicos, psicológicos y sociales.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', 'Según la definición de la OMS citada en el material, ¿qué tres dimensiones integran el bienestar?', 'La física, la mental y la social.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', 'Una persona tiene trabajo inseguro y mala vivienda. ¿Por qué eso importa para su salud?', 'Porque empleo y vivienda son determinantes sociales que condicionan cómo vive y enferma.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿En qué momentos de la vida influyen los determinantes sociales?', 'En las condiciones en que las personas nacen, crecen, trabajan y envejecen.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿Qué diferencia hay entre un factor individual y uno ambiental?', 'El individual pertenece a la persona, como edad o genética; el ambiental corresponde al entorno, como aire, agua o vivienda.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿El hábito de fumar es un determinante conductual o político?', 'Conductual, porque forma parte de las prácticas de la persona.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿Cómo puede una ley influir en la salud aunque no sea un tratamiento médico?', 'Puede modificar riesgos, servicios y condiciones de vida de toda la población.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿Qué distingue una inequidad en salud de cualquier diferencia entre personas?', 'Que la inequidad es una diferencia injusta y evitable vinculada a condiciones desiguales.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', 'Un barrio tiene agua segura y otro no. ¿Qué medida apunta a la equidad?', 'Actuar sobre esa diferencia para que ambos tengan una oportunidad similar de mantenerse sanos.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿Qué sucede con las enfermedades predominantes durante la transición epidemiológica descrita en el PDF?', 'Disminuye el peso relativo de infecciones y aumentan las enfermedades crónicas no transmisibles.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', 'Si la población vive más años y cambian las principales causas de muerte, ¿qué dos transiciones se relacionan?', 'La demográfica y la epidemiológica.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿Por qué el aumento de enfermedades crónicas exige algo más que atención hospitalaria?', 'Requiere prevención, hábitos saludables y trabajo con los factores de riesgo de la comunidad.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿Qué ejemplos da el material de condiciones de vida diarias que afectan la salud?', 'Vivienda, alimentación y acceso a servicios.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿Qué ejemplos da de factores estructurales de la salud?', 'Políticas, distribución de la riqueza y educación.'),
+    ('SALUD PUBLICA', 'concepto de salud y determinantes', '¿Por qué la salud se considera también un derecho y no solo una condición biológica?', 'Porque todas las personas deben tener oportunidades y condiciones dignas para alcanzar bienestar.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- salud: páginas PDF 4-5 | SALUD PUBLICA / funciones de salud publica
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿Cuál es la meta general de la salud pública según el material?', 'Proteger y mejorar la salud de las poblaciones mediante esfuerzos organizados.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', 'Un laboratorio informa un aumento inesperado de casos. ¿Qué función permite detectar la señal?', 'La vigilancia y el monitoreo de datos de salud.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿Para qué se recogen y analizan datos en salud pública?', 'Para reconocer riesgos, brotes y prioridades antes de decidir acciones.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', 'Si se inspeccionan alimentos vendidos en una feria, ¿qué función se ejerce?', 'Protección de la salud mediante el control de riesgos sanitarios.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿Qué riesgos ambientales menciona el material que deben controlarse?', 'Los relacionados con alimentos, agua y aire.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿La vacunación se ubica en protección, prevención o vigilancia?', 'En prevención de enfermedades.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', 'Un programa de control de vectores busca reducir nuevos casos. ¿Qué función cumple?', 'Prevención de enfermedades.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿Qué diferencia la promoción de la prevención dentro de las funciones públicas?', 'La promoción crea condiciones y capacidades saludables; la prevención reduce riesgos o casos de enfermedad.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', 'Una ciudad crea parques accesibles para actividad física. ¿Qué función se ve principalmente?', 'Promoción de la salud mediante un entorno favorable.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿Qué añade la participación comunitaria a la identificación de problemas?', 'La experiencia y las prioridades de quienes viven las condiciones de salud del lugar.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿Quiénes pueden organizar acciones de salud pública según el material?', 'La sociedad, el Estado y las comunidades.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿Por qué una sola consulta clínica no reemplaza la vigilancia poblacional?', 'Porque la consulta mira a una persona; la vigilancia identifica patrones y riesgos en grupos.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿Qué función se activa cuando la comunidad participa en la toma de decisiones sanitarias?', 'Participación comunitaria y gobernanza.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿Qué relación hay entre protección del agua y prevención de infecciones?', 'Controlar el agua elimina una exposición ambiental que podría causar enfermedad.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿Qué cinco funciones esenciales resume el material?', 'Vigilancia, protección, prevención, promoción y participación comunitaria.'),
+    ('SALUD PUBLICA', 'funciones de salud publica', '¿Por qué la salud pública necesita esfuerzo organizado?', 'Porque proteger a una población exige coordinar información, recursos, servicios y decisiones colectivas.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
 -- biologia: páginas PDF 581-590 | BIOLOGIA CELULAR / ciclo celular
 WITH incoming (materia, tema, pregunta, respuesta) AS (
   VALUES
@@ -121,6 +208,68 @@ WITH incoming (materia, tema, pregunta, respuesta) AS (
     ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué abre la doble hélice y genera una horquilla de replicación?', 'Las helicasas del complejo Mcm.'),
     ('BIOLOGIA CELULAR', 'ciclo celular', '¿Por qué los telómeros se acortan en muchas células tras repetidas divisiones?', 'Porque la síntesis de la hebra retardada no completa del todo el extremo del cromosoma.'),
     ('BIOLOGIA CELULAR', 'ciclo celular', '¿Qué le ocurre a una célula cuando el acortamiento telomérico limita nuevas divisiones?', 'Puede entrar en senescencia replicativa.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- biologia: páginas PDF 653-657 | BIOLOGIA CELULAR / biologia celular del cancer
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Por qué el cáncer se relaciona con genes aunque también influyan el ambiente y la edad?', 'Porque aparecen alteraciones genéticas y epigenéticas que cambian el control de la célula.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Qué equilibrio celular se altera cuando surge un tumor?', 'El que regula proliferación, diferenciación y muerte celular programada.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Todos los cánceres se originan y evolucionan de la misma manera?', 'No. Son enfermedades variadas con mecanismos comunes y rasgos propios de cada tipo.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Por qué la incidencia del cáncer suele aumentar con la edad según el texto?', 'Porque se acumulan alteraciones celulares a lo largo de la vida.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', 'Una célula produce sus propias señales de crecimiento. ¿Qué ventaja tumoral obtiene?', 'Puede mantener la proliferación sin depender de los controles habituales del tejido.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Qué ocurre cuando una célula tumoral evade los frenos de proliferación?', 'Continúa avanzando en el ciclo y multiplicándose pese a señales que deberían detenerla.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Cómo ayuda a un tumor evitar la apoptosis?', 'Permite que sobrevivan células alteradas que normalmente serían eliminadas.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', 'Si aumenta Bcl-2 y disminuyen proteínas proapoptóticas, ¿qué proceso se dificulta?', 'La apoptosis o muerte celular programada.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Por qué la inestabilidad genómica favorece la progresión tumoral?', 'Genera nuevas mutaciones entre las que pueden surgir ventajas de crecimiento o supervivencia.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Qué papel puede tener una inflamación crónica en ciertos tumores?', 'Modificar el microambiente y favorecer el desarrollo de células neoplásicas.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Qué significa que un tumor reprograme su metabolismo?', 'Que cambia el uso de nutrientes y energía para sostener su proliferación.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Qué sistema de defensa pueden evadir las células cancerosas?', 'La respuesta inmunitaria, incluida la acción de linfocitos y células NK.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Cuál es una diferencia clave entre tumor benigno y maligno?', 'El benigno permanece localizado; el maligno puede invadir tejidos y diseminarse.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', 'Un tumor atraviesa la membrana basal e invade el tejido vecino. ¿Qué comportamiento muestra?', 'Comportamiento maligno e invasivo.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Por qué se habla de evolución de las células dentro de un tumor?', 'Porque las alteraciones se acumulan y algunas células adquieren ventajas frente a otras.'),
+    ('BIOLOGIA CELULAR', 'biologia celular del cancer', '¿Qué vías puede usar un tumor maligno para diseminarse a distancia?', 'La vía sanguínea, linfática o serosa, según el tipo de tumor.')
+)
+INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
+SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
+WHERE NOT EXISTS (
+  SELECT 1 FROM public.flashcards AS f
+  WHERE lower(btrim(f.materia)) = lower(btrim(i.materia))
+    AND lower(btrim(f.tema)) = lower(btrim(i.tema))
+    AND lower(btrim(f.pregunta)) = lower(btrim(i.pregunta))
+);
+
+-- morfo: páginas PDF 743-749 | MORFOFUNCION / corazon
+WITH incoming (materia, tema, pregunta, respuesta) AS (
+  VALUES
+    ('MORFOFUNCION', 'corazon', '¿En qué región del tórax se encuentra el corazón?', 'En el mediastino, entre los pulmones y detrás del esternón.'),
+    ('MORFOFUNCION', 'corazon', '¿Cómo se llama el extremo inferior del corazón que apunta hacia el diafragma?', 'El ápice.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué parte amplia y superior del corazón se relaciona con los grandes vasos?', 'La base.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué saco de doble pared rodea al corazón?', 'El pericardio.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué capa del corazón hace el trabajo muscular de bombeo?', 'El miocardio.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué capa recubre por dentro las cámaras cardíacas y las válvulas?', 'El endocardio.'),
+    ('MORFOFUNCION', 'corazon', '¿Cómo se llama la capa superficial de la pared cardíaca?', 'El epicardio.'),
+    ('MORFOFUNCION', 'corazon', '¿Por qué el ventrículo izquierdo tiene una pared más gruesa que el derecho?', 'Porque debe bombear sangre a toda la circulación sistémica y realiza más trabajo.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué lado del corazón envía sangre hacia los pulmones?', 'El derecho.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué lado del corazón recibe la sangre oxigenada que viene de los pulmones?', 'El izquierdo.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué válvula separa la aurícula derecha del ventrículo derecho?', 'La tricúspide.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué válvula separa la aurícula izquierda del ventrículo izquierdo?', 'La mitral o bicúspide.'),
+    ('MORFOFUNCION', 'corazon', '¿Cuántas valvas tiene la válvula tricúspide?', 'Tres.'),
+    ('MORFOFUNCION', 'corazon', '¿Cuántas valvas tiene la válvula mitral?', 'Dos.'),
+    ('MORFOFUNCION', 'corazon', '¿Para qué sirven las cuerdas tendinosas de las válvulas auriculoventriculares?', 'Conectan sus valvas con los músculos papilares y evitan que se inviertan durante la contracción.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué estructura de tejido conjuntivo sostiene las válvulas y las aberturas cardíacas?', 'El esqueleto fibroso del corazón.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué circuito lleva la sangre a los tejidos del cuerpo?', 'La circulación sistémica.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué circuito lleva la sangre del corazón a los pulmones y de regreso?', 'La circulación pulmonar.'),
+    ('MORFOFUNCION', 'corazon', '¿Por qué el corazón necesita válvulas en sus cámaras y grandes arterias?', 'Para mantener el flujo de sangre en una sola dirección.'),
+    ('MORFOFUNCION', 'corazon', '¿Qué vasos reciben el nombre de grandes vasos por su diámetro?', 'Las arterias y venas mayores que entran y salen del corazón.')
 )
 INSERT INTO public.flashcards (materia, tema, pregunta, respuesta)
 SELECT i.materia, i.tema, i.pregunta, i.respuesta FROM incoming AS i
@@ -217,4 +366,4 @@ WHERE NOT EXISTS (
 COMMIT;
 NOTIFY pgrst, 'reload schema';
 
--- 133 tarjetas, 6 temas, 3 materias.
+-- 217 tarjetas, 11 temas, 3 materias.
