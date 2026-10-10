@@ -1,0 +1,168 @@
+{
+  "version": "2026-10-10",
+  "format": "pregunta-respuesta",
+  "groups": [
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "introduccion a la biologia celular", "source": "biologia", "pages": [33, 53],
+      "cards": [
+        ["Si una célula tiene el ADN dentro de un núcleo delimitado, ¿es procariota o eucariota?", "Eucariota. La envoltura nuclear separa su ADN del citoplasma."],
+        ["¿Qué rasgo te ayuda a reconocer una célula procariota frente a una eucariota?", "La procariota no tiene un núcleo delimitado por membrana; su material genético ocupa una región llamada nucleoide."],
+        ["Un virus está fuera de una célula hospedadora. ¿Puede reproducirse por sí solo?", "No. Necesita la maquinaria de una célula para producir nuevos virus."],
+        ["¿Por qué un prion no se clasifica como una célula?", "Es una proteína infecciosa mal plegada, sin organización celular ni ácido nucleico propio."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "metodos y tecnicas basicas en biologia celular", "source": "biologia", "pages": [54, 119],
+      "cards": [
+        ["Quieres ver la organización interna muy fina de una célula. ¿Qué microscopía elegirías?", "La microscopía electrónica, porque permite distinguir detalles más pequeños que la microscopía óptica."],
+        ["En una muestra hay poquísimo ADN de interés. ¿Qué técnica permite multiplicar esa secuencia?", "La reacción en cadena de la polimerasa, o PCR, amplifica una secuencia específica de ADN."],
+        ["¿Para qué sirve marcar una proteína con un anticuerpo en una muestra de tejido?", "Para localizarla en las células o en el tejido mediante una técnica inmunológica, como la inmunohistoquímica."],
+        ["Si separas los componentes de una célula según su tamaño y densidad, ¿qué técnica estás usando?", "El fraccionamiento celular mediante centrifugación diferencial."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "estructura de la membrana plasmatica", "source": "biologia", "pages": [120, 166],
+      "cards": [
+        ["¿Por qué los fosfolípidos forman una bicapa cuando están en agua?", "Sus cabezas hidrófilas miran al agua y sus colas hidrófobas quedan orientadas hacia el interior de la bicapa."],
+        ["¿Qué quiere decir que la membrana sigue el modelo de mosaico fluido?", "Que los lípidos y muchas proteínas se distribuyen en una bicapa dinámica, con movilidad lateral."],
+        ["¿Dónde encuentras el glucocáliz: mirando al citoplasma o al exterior de la célula?", "En la cara externa de la membrana; está formado por cadenas de glúcidos unidas a lípidos y proteínas."],
+        ["¿Qué molécula ayuda a modular la fluidez de la membrana de células animales?", "El colesterol, intercalado entre los fosfolípidos."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "transporte a traves de la membrana plasmatica", "source": "biologia", "pages": [167, 213],
+      "cards": [
+        ["Una molécula cruza la membrana a favor de su gradiente y sin gastar ATP. ¿Qué tipo de transporte es?", "Transporte pasivo; puede ocurrir por difusión simple o con ayuda de un canal o transportador."],
+        ["¿Qué hace la bomba sodio-potasio con cada ciclo de ATP?", "Expulsa tres iones Na+ e introduce dos iones K+; mantiene gradientes importantes para la excitabilidad celular."],
+        ["El oxígeno atraviesa la bicapa sin un transportador. ¿Cómo se llama ese paso?", "Difusión simple a través de la membrana."],
+        ["¿Qué diferencia al transporte activo del pasivo?", "El activo mueve sustancias contra su gradiente y requiere energía directa o indirectamente; el pasivo sigue el gradiente."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "macrotransporte a traves de la membrana plasmatica", "source": "biologia", "pages": [214, 255],
+      "cards": [
+        ["La célula rodea una partícula grande y la introduce. ¿Qué proceso observas?", "Fagocitosis, una forma de endocitosis para incorporar partículas grandes."],
+        ["¿Qué ocurre con la membrana cuando una vesícula libera su contenido al exterior?", "La vesícula se fusiona con la membrana plasmática y descarga su contenido por exocitosis."],
+        ["¿Por qué la endocitosis mediada por receptor es selectiva?", "Porque la carga se une primero a receptores específicos de la superficie celular."],
+        ["En una sinapsis, ¿por qué proceso sale el neurotransmisor de la terminal presináptica?", "Por exocitosis de vesículas sinápticas tras fusionarse con la membrana."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "especializaciones de la membrana plasmatica", "source": "biologia", "pages": [256, 290],
+      "cards": [
+        ["Una célula intestinal necesita absorber más. ¿Qué estructura aumenta su superficie apical?", "Las microvellosidades aumentan la superficie disponible para la absorción."],
+        ["¿Qué unión evita que el material pase libremente entre dos células epiteliales vecinas?", "La unión estrecha, que sella el espacio entre ellas."],
+        ["¿Qué unión aporta resistencia mecánica cuando un tejido sufre tirones?", "El desmosoma, que conecta el citoesqueleto de células vecinas."],
+        ["¿Qué puede pasarle a una célula que necesita anclaje si pierde contacto con la matriz extracelular?", "Puede activar anoikis, una forma de apoptosis provocada por la falta de adhesión."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "nucleo y cromatina", "source": "biologia", "pages": [291, 349],
+      "cards": [
+        ["¿Por dónde intercambia el núcleo moléculas con el citoplasma?", "A través de los complejos de poro de la envoltura nuclear."],
+        ["¿Qué proteínas sirven de soporte para empaquetar el ADN en nucleosomas?", "Las histonas; el ADN se enrolla alrededor de ellas."],
+        ["Si una región de cromatina está poco compactada y suele transcribirse, ¿cómo se llama?", "Eucromatina."],
+        ["Antes de dividirse, ¿qué debe hacer la célula con su ADN?", "Replicarlo para que cada célula hija reciba una copia de la información genética."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "transcripcion y maduracion del arn", "source": "biologia", "pages": [350, 384],
+      "cards": [
+        ["¿Qué se fabrica cuando se transcribe un gen?", "Una molécula de ARN a partir de la información contenida en el ADN."],
+        ["¿Qué se retira del pre-ARN mensajero durante el corte y empalme?", "Los intrones; los exones se unen para formar el ARN mensajero maduro."],
+        ["¿Qué función cumple el nucléolo en la célula?", "Participa en la producción de ARN ribosómico y en el ensamblaje inicial de subunidades ribosómicas."],
+        ["¿Por qué el ARN mensajero debe madurar antes de salir del núcleo?", "Porque necesita procesarse, entre otros pasos con corte y empalme, para poder dirigir correctamente la síntesis de proteínas."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "sintesis y modificacion de proteinas", "source": "biologia", "pages": [385, 419],
+      "cards": [
+        ["¿Qué lee el ribosoma para ordenar los aminoácidos de una proteína?", "Los codones del ARN mensajero."],
+        ["¿Qué molécula lleva cada aminoácido hasta el ribosoma?", "El ARN de transferencia, cuyo anticodón reconoce el codón del ARN mensajero."],
+        ["Una proteína ya se tradujo, pero aún no funciona bien. ¿Qué proceso puede faltarle?", "Plegamiento o modificaciones postraduccionales que le den su estructura y actividad finales."],
+        ["¿Dónde se sintetizan las proteínas destinadas a secreción o membranas?", "En ribosomas asociados al retículo endoplasmático rugoso."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "reticulo endoplasmatico golgi y lisosomas", "source": "biologia", "pages": [420, 455],
+      "cards": [
+        ["Si una célula fabrica muchas proteínas para secretarlas, ¿qué organelo suele tener muy desarrollado?", "El retículo endoplasmático rugoso, con ribosomas unidos a su superficie."],
+        ["¿Qué fabrica principalmente el retículo endoplasmático liso?", "Lípidos, que también sirven para formar membranas celulares."],
+        ["¿Qué hace el aparato de Golgi con muchas proteínas que recibe del retículo?", "Las modifica, clasifica y dirige hacia su destino."],
+        ["¿Para qué sirven los lisosomas?", "Para degradar y reciclar material mediante enzimas digestivas."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "mitocondrias y peroxisomas", "source": "biologia", "pages": [456, 490],
+      "cards": [
+        ["¿En qué organelo se produce gran parte del ATP mediante metabolismo oxidativo?", "En las mitocondrias."],
+        ["¿Cómo se llaman los pliegues de la membrana interna mitocondrial?", "Crestas mitocondriales; amplían la superficie de esa membrana."],
+        ["¿Qué particularidad genética tienen las mitocondrias?", "Poseen ADN propio, aunque muchas de sus proteínas se codifican en el núcleo."],
+        ["¿Qué organelo participa en reacciones oxidativas y en la degradación del peróxido de hidrógeno?", "El peroxisoma, que contiene enzimas como la catalasa."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "citoesqueleto", "source": "biologia", "pages": [491, 535],
+      "cards": [
+        ["¿Cuáles son las tres grandes piezas del citoesqueleto?", "Microtúbulos, microfilamentos de actina y filamentos intermedios."],
+        ["Una vesícula se desplaza por una vía de tubulina. ¿Qué estructura le sirve de riel?", "Un microtúbulo."],
+        ["¿Qué proteína forma los microfilamentos implicados en movimiento y forma celular?", "La actina."],
+        ["¿Qué componente del citoesqueleto destaca por dar resistencia mecánica a la célula?", "Los filamentos intermedios."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "senalizacion celular", "source": "biologia", "pages": [536, 579],
+      "cards": [
+        ["Una célula libera una señal que actúa sobre sus vecinas. ¿Cómo se llama esa comunicación?", "Señalización paracrina."],
+        ["Una hormona viaja por la sangre hasta un tejido distante. ¿Qué tipo de señalización es?", "Señalización endocrina."],
+        ["¿Por qué una célula responde a una señal y otra quizá no?", "Porque la respuesta depende, entre otras cosas, de que tenga el receptor adecuado para reconocer esa señal."],
+        ["¿Qué hace un segundo mensajero dentro de la célula?", "Transmite y puede amplificar la señal iniciada cuando un mensajero externo se une a su receptor."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "ciclo celular", "source": "biologia", "pages": [580, 617],
+      "cards": [
+        ["¿En qué fase del ciclo celular se duplica el ADN?", "En la fase S de la interfase."],
+        ["¿Qué sucede en G1 antes de que la célula copie su ADN?", "La célula crece y se prepara para entrar en la fase S."],
+        ["¿Para qué sirven los puntos de control del ciclo celular?", "Para comprobar que las condiciones y el ADN sean adecuados antes de avanzar a la siguiente fase."],
+        ["Una célula deja temporalmente de dividirse. ¿En qué estado puede permanecer?", "En G0, un estado de reposo o quiescencia fuera del ciclo de división activo."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "division celular y muerte programada", "source": "biologia", "pages": [618, 649],
+      "cards": [
+        ["¿Qué resultado esperas de una mitosis de una célula somática?", "Dos células hijas con la misma dotación cromosómica que la célula de partida."],
+        ["¿Para qué sirve la meiosis en la formación de gametos?", "Reduce la dotación cromosómica y genera células haploides."],
+        ["Si una célula se elimina de forma ordenada y controlada, ¿qué proceso ocurre?", "Apoptosis, una forma de muerte celular programada."],
+        ["¿Qué distingue en general a la necrosis de la apoptosis?", "La necrosis suele seguir a un daño externo con ruptura celular; la apoptosis es un programa celular regulado."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "biologia celular del cancer", "source": "biologia", "pages": [650, 696],
+      "cards": [
+        ["¿Qué pasa cuando una célula tumoral deja de obedecer las señales que frenan la división?", "Puede proliferar de manera descontrolada, una característica central del cáncer."],
+        ["¿Qué es la angiogénesis en el crecimiento de un tumor?", "La formación de nuevos vasos sanguíneos que aportan oxígeno y nutrientes al tumor."],
+        ["¿Qué significa que un cáncer haya hecho metástasis?", "Que células tumorales se han diseminado y han formado lesiones en otro sitio del organismo."],
+        ["¿Cómo contribuye la pérdida de función de un gen supresor tumoral?", "Elimina un freno normal del crecimiento o de la supervivencia celular."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "respuesta inmunitaria", "source": "biologia", "pages": [697, 737],
+      "cards": [
+        ["¿Cuál responde primero de forma general ante muchos microorganismos: la inmunidad innata o la adaptativa?", "La inmunidad innata; actúa con rapidez y reconoce patrones generales."],
+        ["¿Qué ventaja aporta la memoria de la inmunidad adaptativa?", "Permite una respuesta más eficaz cuando el organismo vuelve a encontrar el mismo antígeno."],
+        ["¿Qué célula puede producir anticuerpos después de activarse y diferenciarse?", "El linfocito B, al convertirse en célula plasmática."],
+        ["¿Qué busca una vacuna al presentar antígenos sin causar la enfermedad?", "Activar una respuesta protectora y memoria inmunitaria frente al agente real."]
+      ]
+    },
+    {
+      "materia": "BIOLOGIA CELULAR", "tema": "celulas madre y aplicaciones terapeuticas", "source": "biologia", "pages": [738, 771],
+      "cards": [
+        ["¿Qué dos capacidades definen a una célula madre?", "Autorrenovarse durante mucho tiempo y diferenciarse hacia células especializadas."],
+        ["¿Qué puede formar una célula madre totipotente que una pluripotente no forma por sí sola?", "Tejidos extraembrionarios, como los de la placenta."],
+        ["¿Qué pueden producir las células madre pluripotentes?", "Tipos celulares derivados de las tres capas embrionarias, pero no tejido placentario por sí solas."],
+        ["¿Cómo suele ser el potencial de una célula madre multipotente adulta?", "Más restringido: genera varios tipos celulares relacionados con el tejido o linaje al que pertenece."]
+      ]
+    }
+  ]
+}

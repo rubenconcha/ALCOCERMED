@@ -1,0 +1,182 @@
+{
+  "version": "2026-10-10",
+  "format": "pregunta-respuesta",
+  "groups": [
+    {"materia":"MORFOFUNCION","tema":"temas principales de anatomia y fisiologia","source":"morfo","pages":[29,69],"cards":[
+      ["Si te preguntan por la forma de un órgano, ¿estás hablando de anatomía o de fisiología?","De anatomía. La fisiología se ocupa de cómo funciona ese órgano."],
+      ["¿Qué busca conservar el cuerpo cuando mantiene estables sus condiciones internas?","La homeostasis: una estabilidad relativa del medio interno pese a los cambios del entorno."],
+      ["Cuando sube la temperatura corporal y sudas para bajarla, ¿qué tipo de retroalimentación actúa?","Retroalimentación negativa, porque la respuesta se opone al cambio inicial."],
+      ["En posición anatómica, ¿hacia dónde miran las palmas de las manos?","Hacia delante, con el cuerpo erguido y los brazos a los lados."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"la quimica de la vida","source":"morfo","pages":[70,105],"cards":[
+      ["Un átomo pierde un electrón. ¿Qué carga adquiere el ion resultante?","Positiva; al perder una carga negativa queda con más protones que electrones."],
+      ["¿Qué te indica un pH más bajo: mayor o menor concentración de H+?","Mayor concentración de H+; por eso la solución es más ácida."],
+      ["¿Qué hacen las enzimas para acelerar una reacción sin consumirse?","Disminuyen la energía de activación necesaria para que la reacción ocurra."],
+      ["¿Por qué el agua es tan útil como medio de las reacciones del cuerpo?","Su polaridad le permite disolver muchas sustancias y facilitar sus interacciones."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"forma y funcion celulares","source":"morfo","pages":[106,141],"cards":[
+      ["Una célula se hincha al entrar agua. ¿Qué proceso explica ese movimiento a través de la membrana?","La ósmosis: el agua se desplaza a través de una membrana selectivamente permeable."],
+      ["¿Qué estructura separa el interior celular del líquido que la rodea y regula intercambios?","La membrana plasmática."],
+      ["Si una célula necesita fabricar mucho ATP, ¿qué organelo será especialmente importante?","La mitocondria, donde ocurre gran parte de la respiración aeróbica."],
+      ["¿Qué función cumplen las microvellosidades de la superficie celular?","Aumentan el área de superficie para procesos como la absorción."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"genetica y funcion celular","source":"morfo","pages":[142,170],"cards":[
+      ["¿Qué molécula conserva las instrucciones hereditarias de la célula?","El ADN."],
+      ["Si una célula copia la información de un gen a ARN, ¿cómo se llama ese paso?","Transcripción."],
+      ["¿Qué hace un ribosoma con la información del ARN mensajero?","La traduce en una secuencia de aminoácidos para formar una proteína."],
+      ["Antes de que una célula se divida, ¿qué debe ocurrir con su ADN?","Debe duplicarse para repartir la información genética a las células hijas."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"histologia","source":"morfo","pages":[171,207],"cards":[
+      ["¿Qué tejido forma una cubierta y reviste cavidades del cuerpo?","El tejido epitelial."],
+      ["¿Qué tejido suele tener células separadas por abundante matriz extracelular?","El tejido conjuntivo."],
+      ["¿Qué cuatro grandes clases de tejido debes reconocer en una lámina?","Epitelial, conjuntivo, muscular y nervioso."],
+      ["Si una muestra tiene células especializadas en contraerse, ¿qué clase de tejido es?","Tejido muscular."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"sistema tegumentario","source":"morfo","pages":[208,233],"cards":[
+      ["¿Cuál es la capa más superficial de la piel?","La epidermis, un epitelio estratificado queratinizado."],
+      ["¿Qué capa de la piel contiene vasos, nervios y abundante tejido conjuntivo?","La dermis."],
+      ["Cuando sudas para perder calor, ¿qué anexo cutáneo está trabajando?","Las glándulas sudoríparas."],
+      ["¿Qué células producen el pigmento que contribuye al color de la piel?","Los melanocitos producen melanina."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"tejido oseo","source":"morfo","pages":[234,260],"cards":[
+      ["En un hueso en crecimiento, ¿qué célula deposita nueva matriz ósea?","El osteoblasto."],
+      ["¿Qué célula retira matriz durante la remodelación del hueso?","El osteoclasto."],
+      ["¿Cómo se llama la célula ósea madura alojada en una laguna de la matriz?","Osteocito."],
+      ["¿Por qué el esqueleto también participa en la regulación de minerales?","Porque el hueso almacena y libera minerales, especialmente calcio y fosfato."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"el sistema oseo","source":"morfo","pages":[261,305],"cards":[
+      ["¿Qué estructuras pertenecen al esqueleto axial?","Cráneo, columna vertebral y caja torácica."],
+      ["¿Qué incluye el esqueleto apendicular?","Las cinturas escapular y pélvica y los huesos de las extremidades."],
+      ["¿Qué protege principalmente el cráneo?","El encéfalo, además de sostener estructuras de la cara."],
+      ["Si observas el cuerpo alargado de un hueso largo, ¿cómo se llama esa región?","Diáfisis."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"articulaciones","source":"morfo","pages":[306,339],"cards":[
+      ["Una articulación permite mucho movimiento y contiene una cavidad con líquido. ¿De qué tipo es?","Sinovial."],
+      ["¿Qué estructura une un hueso con otro y ayuda a estabilizar la articulación?","Un ligamento."],
+      ["¿Para qué sirve el cartílago articular en una articulación sinovial?","Reduce la fricción y ayuda a repartir las cargas entre las superficies óseas."],
+      ["¿Qué diferencia básica hay entre una sutura craneal y una rodilla?","La sutura es una articulación fibrosa con muy poco movimiento; la rodilla es sinovial y móvil."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"el sistema muscular","source":"morfo","pages":[340,428],"cards":[
+      ["Cuando flexionas el codo, ¿cómo se llama el músculo que produce principalmente ese movimiento?","Agonista o motor principal."],
+      ["¿Qué hace un músculo antagonista durante un movimiento?","Se opone o controla la acción del agonista y permite el movimiento contrario."],
+      ["¿Cómo se llama un conjunto de fibras musculares agrupadas dentro de un músculo?","Fascículo."],
+      ["¿Qué extremo de un músculo suele moverse más durante una contracción: origen o inserción?","La inserción suele ser el extremo más móvil."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"tejido muscular","source":"morfo","pages":[429,466],"cards":[
+      ["¿Cuál es la unidad contráctil que se acorta dentro de una miofibrilla?","El sarcómero."],
+      ["¿Qué ion permite que actina y miosina inicien la contracción del músculo estriado?","El calcio; al unirse a troponina deja disponibles los sitios de unión de actina."],
+      ["¿Para qué necesita ATP el ciclo de puentes entre actina y miosina?","Entre otras funciones, para separar la cabeza de miosina de la actina y preparar un nuevo ciclo."],
+      ["¿Qué tipo de músculo forma la pared del intestino y se contrae de modo involuntario?","Músculo liso."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"tejido nervioso","source":"morfo","pages":[467,505],"cards":[
+      ["¿Qué parte de una neurona suele recibir señales de otras células?","Las dendritas."],
+      ["¿Por qué la mielina acelera la conducción en muchos axones?","Porque el impulso se regenera principalmente en los nodos de Ranvier y salta entre ellos."],
+      ["¿Cómo se llama la unión funcional donde una neurona transmite información a otra célula?","Sinapsis."],
+      ["¿Qué ocurre al inicio de un potencial de acción típico cuando se abren canales de sodio dependientes de voltaje?","Entra Na+ y la membrana se despolariza rápidamente."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"medula espinal y reflejos","source":"morfo","pages":[506,538],"cards":[
+      ["¿Por qué raíz entra la información sensitiva a la médula espinal?","Por la raíz dorsal o posterior."],
+      ["¿Por qué raíz salen las fibras motoras de un nervio raquídeo?","Por la raíz ventral o anterior."],
+      ["Tocas algo muy caliente y retiras la mano antes de pensarlo. ¿Qué circuito lo explica?","Un arco reflejo medular, que integra una respuesta rápida sin esperar una decisión consciente."],
+      ["En un corte medular, ¿dónde se sitúa la sustancia gris respecto de la blanca?","La gris ocupa la zona central; la blanca la rodea."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"encefalo y pares craneales","source":"morfo","pages":[539,588],"cards":[
+      ["¿Qué parte del encéfalo afina la coordinación y el equilibrio de los movimientos?","El cerebelo."],
+      ["¿Qué estructura del tronco encefálico contiene centros vitales relacionados con respiración y circulación?","El bulbo raquídeo."],
+      ["¿Qué papel cumple el tálamo para muchas señales sensitivas?","Actúa como estación de relevo antes de que lleguen a la corteza cerebral."],
+      ["¿Qué líquido circula por los ventrículos y alrededor del encéfalo y la médula?","El líquido cefalorraquídeo."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"sistema nervioso autonomo","source":"morfo","pages":[589,609],"cards":[
+      ["En una situación de alerta, ¿qué división autónoma suele elevar la frecuencia cardiaca?","La simpática."],
+      ["Después de comer, ¿qué división favorece la digestión y el reposo?","La parasimpática."],
+      ["¿Cuántas neuronas motoras suelen intervenir entre el sistema nervioso central y un órgano visceral?","Dos: una preganglionar y otra posganglionar, conectadas en un ganglio."],
+      ["¿Qué es un reflejo visceral?","Una respuesta automática de un órgano interno ante un estímulo, coordinada por circuitos del sistema nervioso autónomo."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"organos de los sentidos","source":"morfo","pages":[610,660],"cards":[
+      ["Si un receptor responde a presión sobre la piel, ¿qué tipo de estímulo detecta?","Un estímulo mecánico; es un mecanorreceptor."],
+      ["¿Qué receptores advierten daño real o posible y participan en la percepción del dolor?","Los nociceptores."],
+      ["¿Por qué gusto y olfato se consideran sentidos químicos?","Porque sus receptores responden a moléculas químicas."],
+      ["¿Qué estructura del oído interno detecta el movimiento de la cabeza para el equilibrio?","El aparato vestibular, que incluye conductos semicirculares y órganos otolíticos."],
+      ["¿Qué células de la retina permiten ver mejor con poca luz?","Los bastones."],
+      ["¿Qué células de la retina aportan visión de color y gran detalle?","Los conos."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"sistema endocrino","source":"morfo","pages":[661,705],"cards":[
+      ["¿Cómo llegan las hormonas de una glándula endocrina a órganos lejanos?","Se liberan a la sangre y viajan hasta células con receptores adecuados."],
+      ["¿Qué diferencia a una glándula exocrina de una endocrina?","La exocrina vierte su producto por conductos; la endocrina libera hormonas al líquido intersticial y la sangre."],
+      ["Tras una comida sube la glucosa. ¿Qué hormona pancreática favorece su descenso?","La insulina."],
+      ["Si baja la glucosa entre comidas, ¿qué hormona pancreática ayuda a elevarla?","El glucagón."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"sangre","source":"morfo","pages":[706,741],"cards":[
+      ["¿Qué componente líquido de la sangre transporta solutos y proteínas?","El plasma."],
+      ["¿Qué llevan principalmente los eritrocitos gracias a la hemoglobina?","Oxígeno desde los pulmones hacia los tejidos."],
+      ["¿Qué células sanguíneas participan de manera importante en la defensa del organismo?","Los leucocitos o glóbulos blancos."],
+      ["¿Qué fragmentos celulares ayudan a formar el tapón inicial cuando se lesiona un vaso?","Las plaquetas."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"corazon","source":"morfo","pages":[742,776],"cards":[
+      ["¿A dónde envía sangre el circuito pulmonar desde el lado derecho del corazón?","A los pulmones para el intercambio de gases."],
+      ["¿Qué evita que la sangre retroceda dentro del corazón cuando cambia la presión?","Las válvulas cardíacas."],
+      ["¿Qué estructura inicia normalmente cada latido como marcapasos del corazón?","El nodo sinoauricular."],
+      ["¿Qué cavidad impulsa sangre hacia la circulación sistémica?","El ventrículo izquierdo."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"vasos sanguineos y circulacion","source":"morfo","pages":[777,835],"cards":[
+      ["¿Qué diferencia básica hay entre arterias y venas según la dirección del flujo?","Las arterias llevan sangre desde el corazón; las venas la devuelven al corazón."],
+      ["¿En qué vasos ocurre la mayor parte del intercambio con los tejidos?","En los capilares, por sus paredes muy delgadas."],
+      ["¿Por qué muchas venas de las extremidades tienen válvulas?","Para dificultar el retroceso de la sangre mientras retorna al corazón."],
+      ["Si una arteriola se estrecha, ¿qué ocurre con la resistencia al paso de la sangre?","Aumenta la resistencia vascular."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"sistema linfatico e inmunidad","source":"morfo","pages":[836,881],"cards":[
+      ["¿Qué pasa con el líquido intersticial que recogen los vasos linfáticos?","Se convierte en linfa y acaba regresando a la circulación sanguínea."],
+      ["¿Qué función tienen los ganglios linfáticos en el trayecto de la linfa?","La filtran y facilitan el encuentro de células inmunitarias con antígenos."],
+      ["¿Qué tipo de defensa actúa rápido y sin reconocer un antígeno concreto?","La defensa innata o inespecífica."],
+      ["¿Qué órgano filtra sangre y participa en respuestas inmunitarias frente a antígenos sanguíneos?","El bazo."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"aparato respiratorio","source":"morfo","pages":[882,922],"cards":[
+      ["Al inspirar tranquilamente, ¿qué músculo aumenta el volumen del tórax al contraerse?","El diafragma."],
+      ["¿Dónde difunden oxígeno y dióxido de carbono entre el aire y la sangre?","En la membrana respiratoria de los alvéolos y sus capilares."],
+      ["¿Qué tubo conduce aire desde la laringe hacia los bronquios?","La tráquea."],
+      ["¿Qué recubre los pulmones y ayuda a que se deslicen contra la pared torácica?","La pleura, con sus hojas visceral y parietal y una fina película de líquido entre ellas."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"aparato urinario","source":"morfo","pages":[923,957],"cards":[
+      ["¿Cómo se llama la unidad funcional del riñón que filtra y modifica el líquido tubular?","Nefrona."],
+      ["¿Qué ocurre primero con el plasma cuando atraviesa el glomérulo renal?","Se filtra parte de su agua y solutos hacia la cápsula glomerular."],
+      ["¿Qué significa reabsorción tubular?","Que una sustancia pasa del filtrado de la nefrona de vuelta a la sangre."],
+      ["Si el cuerpo necesita conservar agua, ¿qué hormona aumenta su reabsorción en el riñón?","La vasopresina u hormona antidiurética, ADH."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"equilibrio hidrico y acidobasico","source":"morfo","pages":[958,980],"cards":[
+      ["¿Dónde está la mayor parte del agua corporal: dentro o fuera de las células?","Dentro de las células, en el compartimiento intracelular."],
+      ["¿Qué ion predomina en el líquido extracelular: sodio o potasio?","El sodio; el potasio predomina dentro de las células."],
+      ["¿Qué sistema amortiguador sanguíneo usa ácido carbónico y bicarbonato?","El sistema bicarbonato, importante para mantener el pH."],
+      ["Si cambia la concentración de CO2, ¿qué órgano ajusta con rapidez su eliminación?","Los pulmones, al modificar la ventilación."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"aparato digestivo","source":"morfo","pages":[981,1027],"cards":[
+      ["¿Cómo se llama la onda muscular que impulsa el alimento por el tubo digestivo?","Peristaltismo."],
+      ["¿Qué órgano produce bilis, útil para la digestión de grasas?","El hígado; la vesícula biliar la almacena y concentra."],
+      ["¿En qué segmento del tubo digestivo ocurre la mayor parte de la absorción de nutrientes?","En el intestino delgado."],
+      ["¿Qué secreción del estómago ayuda a activar la pepsina y dificulta la supervivencia de microorganismos?","El ácido clorhídrico."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"nutricion y metabolismo","source":"morfo","pages":[1028,1061],"cards":[
+      ["¿Qué molécula usa la célula como fuente inmediata de energía para muchos trabajos?","El ATP."],
+      ["¿Qué nutriente aporta aminoácidos para fabricar proteínas corporales?","Las proteínas de la dieta."],
+      ["¿Qué ocurre en la glucólisis antes de entrar al ciclo de Krebs?","La glucosa se transforma en piruvato y se obtiene una pequeña cantidad de ATP."],
+      ["¿Qué significa estar en equilibrio energético?","Que la energía ingerida se aproxima a la energía gastada durante un período."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"aparato reproductor masculino","source":"morfo","pages":[1062,1091],"cards":[
+      ["¿Dónde se forman los espermatozoides?","En los túbulos seminíferos de los testículos."],
+      ["¿En qué conducto maduran y se almacenan temporalmente los espermatozoides?","En el epidídimo."],
+      ["¿Qué células testiculares producen principalmente testosterona?","Las células intersticiales o de Leydig."],
+      ["¿Por qué la meiosis es importante para producir gametos?","Reduce a la mitad la dotación cromosómica antes de la fecundación."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"aparato reproductor femenino","source":"morfo","pages":[1092,1129],"cards":[
+      ["¿Qué estructura del ovario contiene al ovocito en desarrollo?","El folículo ovárico."],
+      ["¿Qué hormona desencadena la ovulación cuando presenta un aumento brusco?","La hormona luteinizante, LH."],
+      ["¿Qué tejido del útero cambia a lo largo del ciclo menstrual y se desprende en la menstruación?","El endometrio."],
+      ["¿Qué hormona del cuerpo lúteo ayuda a mantener preparado el endometrio tras la ovulación?","La progesterona."]
+    ]},
+    {"materia":"MORFOFUNCION","tema":"desarrollo humano y envejecimiento","source":"morfo","pages":[1130,1164],"cards":[
+      ["¿Qué se forma al unirse un espermatozoide y un ovocito?","Un cigoto, la primera célula del nuevo organismo."],
+      ["¿Cómo se llama la fijación inicial del blastocisto al endometrio?","Implantación."],
+      ["¿Qué órgano permite el intercambio de nutrientes, gases y desechos entre madre y feto?","La placenta."],
+      ["¿Cuáles son las tres capas germinales que originan los tejidos del embrión?","Ectodermo, mesodermo y endodermo."]
+    ]}
+  ]
+}

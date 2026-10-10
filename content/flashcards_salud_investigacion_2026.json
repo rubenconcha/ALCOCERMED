@@ -1,0 +1,132 @@
+{
+  "version": "2026-10-10",
+  "format": "pregunta-respuesta",
+  "groups": [
+    {"materia":"SALUD PUBLICA","tema":"educacion en salud","source":"salud","pages":[2,3],"cards":[
+      ["¿Qué busca la educación en salud además de transmitir información?","Que las personas desarrollen habilidades y adopten prácticas saludables de manera sostenida."],
+      ["Si una comunidad aprende a decidir cómo cuidar su salud, ¿qué está ganando?","Capacidad de autogestión y mayor control sobre los factores que afectan su bienestar."],
+      ["¿Por qué una charla aislada no basta para cambiar la salud de una población?","Porque los hábitos también dependen del entorno y de condiciones sociales; la educación debe acompañarse de acciones más amplias."],
+      ["¿Con qué dos grandes tareas sanitarias se relaciona la educación en salud?","Con la promoción de la salud y la prevención de enfermedades."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"concepto de salud y determinantes","source":"salud","pages":[2,4],"cards":[
+      ["¿Por qué decir que salud es solo 'no estar enfermo' resulta incompleto?","Porque el bienestar también incluye dimensiones psicológicas, sociales y la capacidad de adaptarse al entorno."],
+      ["Dos barrios tienen distinta calidad de agua y vivienda. ¿Qué concepto ayuda a explicar sus diferencias de salud?","Los determinantes sociales y ambientales de la salud."],
+      ["¿Qué factores personales no modificables aparecen entre los determinantes de salud?","Entre otros, edad, sexo y herencia genética."],
+      ["¿Qué significa buscar equidad en salud?","Actuar sobre diferencias evitables e injustas para que todas las personas tengan oportunidades de bienestar."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"funciones de salud publica","source":"salud","pages":[4,5],"cards":[
+      ["Una ciudad analiza datos para detectar un brote. ¿Qué función de salud pública está realizando?","Vigilancia y monitoreo de la salud."],
+      ["Controlar la calidad del agua potable, ¿a qué función de salud pública contribuye?","A la protección de la salud frente a riesgos ambientales."],
+      ["¿Por qué la población debe participar al definir problemas sanitarios?","Porque la participación comunitaria ayuda a reconocer necesidades y a tomar decisiones pertinentes."],
+      ["¿Qué diferencia a una intervención poblacional de atender solo a un paciente?","Busca proteger o mejorar la salud de grupos y comunidades mediante acciones organizadas."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"niveles de prevencion","source":"salud","pages":[5,19],"cards":[
+      ["Vacunar para evitar que aparezca una enfermedad, ¿qué nivel de prevención es?","Prevención primaria."],
+      ["Un tamizaje detecta una enfermedad cuando aún no da síntomas. ¿Qué nivel de prevención es?","Prevención secundaria: busca detección y tratamiento oportunos."],
+      ["La rehabilitación después de un infarto, ¿qué nivel de prevención representa?","Prevención terciaria, porque intenta reducir secuelas de una enfermedad establecida."],
+      ["Evitar pruebas o tratamientos innecesarios que puedan dañar al paciente, ¿qué prevención es?","Prevención cuaternaria."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"promocion de la salud","source":"salud","pages":[14,16],"cards":[
+      ["¿En qué se centra la promoción de la salud cuando mira más allá de la enfermedad?","En crear condiciones y capacidades que favorezcan el bienestar de la población."],
+      ["Si una escuela y el municipio crean espacios seguros para actividad física, ¿solo están dando información?","No. También están creando un entorno que facilita una conducta saludable."],
+      ["¿Qué pide la Carta de Ottawa respecto a las políticas públicas?","Que se construyan políticas saludables y se consideren los efectos de las decisiones sobre la salud."],
+      ["¿Por qué la participación comunitaria importa en la promoción?","Porque la población identifica sus necesidades y ayuda a decidir y sostener las acciones."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"atencion primaria de salud","source":"salud","pages":[16,18],"cards":[
+      ["¿Qué nivel de atención es normalmente el primer contacto de la persona con el sistema de salud?","La atención primaria de salud."],
+      ["Un centro de salud coordina una derivación y recibe la información de regreso. ¿Qué atributo de la atención primaria muestra?","Coordinación entre profesionales y niveles de atención."],
+      ["¿Qué significa longitudinalidad en atención primaria?","Acompañar a la persona o familia a lo largo del tiempo, no solo en una consulta aislada."],
+      ["Si un servicio aborda promoción, prevención, tratamiento y rehabilitación, ¿qué atributo demuestra?","Integralidad de la atención."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"factor de riesgo y salud comunitaria","source":"salud","pages":[20,22],"cards":[
+      ["¿Qué es un factor de riesgo?","Una característica o exposición que aumenta la probabilidad de una enfermedad o lesión, sin ser necesariamente una causa directa."],
+      ["Entre edad y tabaquismo, ¿cuál es un factor de riesgo modificable?","El tabaquismo, porque puede reducirse o eliminarse mediante intervenciones y cambios de conducta."],
+      ["¿Qué aporta la salud comunitaria a una intervención sanitaria?","La participación activa de la comunidad en reconocer problemas y buscar soluciones."],
+      ["¿Por qué no basta con culpar al individuo por todos sus riesgos?","Porque también influyen condiciones sociales, económicas y ambientales que limitan sus opciones."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"ods y cobertura sanitaria","source":"salud","pages":[6,9],"cards":[
+      ["¿Cuántos Objetivos de Desarrollo Sostenible reúne la Agenda 2030 descrita en el texto?","Diecisiete objetivos."],
+      ["¿Para qué sirven las metas e indicadores de los ODS?","Para fijar objetivos y seguir el progreso de forma medible."],
+      ["¿Por qué la salud se relaciona con educación, ambiente y pobreza dentro de los ODS?","Porque el bienestar depende de condiciones sociales y ambientales, no solo de la atención médica."],
+      ["¿Qué persigue la cobertura sanitaria universal?","Que las personas puedan recibir servicios de salud necesarios sin quedar excluidas por barreras de acceso."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"salud en bolivia y modelo safci","source":"salud","pages":[10,14],"cards":[
+      ["¿Qué reconoce la Constitución boliviana sobre la salud según el material del curso?","La reconoce como un derecho fundamental y una responsabilidad del Estado."],
+      ["¿Qué significan las siglas SAFCI?","Salud Familiar Comunitaria Intercultural."],
+      ["¿Qué busca el enfoque intercultural del modelo SAFCI?","Articular la atención con la familia y la comunidad, respetando saberes y prácticas culturales."],
+      ["¿Por qué un programa de salud debe tener metas e indicadores?","Para evaluar si sus acciones mejoran la cobertura y los resultados sanitarios."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"epidemiologia social","source":"salud","pages":[32,39],"cards":[
+      ["¿Qué observa la epidemiología social además de contar casos de enfermedad?","Las desigualdades, condiciones de vida y determinantes sociales que influyen en la salud de poblaciones."],
+      ["Si un barrio concentra más enfermedad por falta de agua segura, ¿qué pregunta haría la epidemiología social?","Cómo las condiciones de vida y las decisiones colectivas contribuyen a esa diferencia."],
+      ["¿Qué estudia la epidemiología de campo ante un brote?","La distribución de los casos y las posibles fuentes o vías de transmisión para orientar el control."],
+      ["¿Por qué conviene comparar poblaciones y no solo describir a un paciente?","Porque permite reconocer patrones y factores que afectan la salud colectiva."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"proceso de investigacion","source":"salud","pages":[40,48],"cards":[
+      ["Antes de recoger datos, ¿qué debes dejar claro en un proyecto de investigación?","Qué problema estudiarás, por qué importa y qué objetivos persigues."],
+      ["¿Para qué sirve el diseño de un estudio?","Para organizar cómo se obtendrán y analizarán datos capaces de responder la pregunta de investigación."],
+      ["Si observas sin modificar las condiciones del fenómeno, ¿qué tipo general de estudio realizas?","Un estudio observacional."],
+      ["Si el investigador interviene y compara resultados, ¿qué tipo general de estudio es?","Un estudio experimental."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"problema y objetivos de investigacion","source":"salud","pages":[49,59],"cards":[
+      ["¿Qué gana una investigación al delimitar bien su problema?","Una pregunta más precisa, viable y susceptible de estudiarse con datos."],
+      ["¿Cómo debería escribirse un objetivo de investigación para orientar el trabajo?","Con una acción clara y un resultado observable o medible."],
+      ["¿Qué diferencia hay entre objetivo general y objetivos específicos?","El general expresa la meta principal; los específicos la descomponen en pasos concretos."],
+      ["¿Por qué los objetivos deben corresponder al problema planteado?","Porque cada objetivo debe aportar evidencia para responder la pregunta central."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"marco teorico e hipotesis","source":"salud","pages":[60,72],"cards":[
+      ["¿Para qué revisas literatura antes de formular una hipótesis?","Para conocer lo que ya se sabe y fundamentar la relación que vas a estudiar."],
+      ["¿Qué es una hipótesis de investigación?","Una explicación o relación tentativa que puede contrastarse con observaciones."],
+      ["Si planteas que el tabaquismo influye en un resultado de salud, ¿cuál suele ser la variable independiente?","La exposición al tabaquismo; el resultado de salud sería la variable dependiente."],
+      ["¿Por qué una hipótesis debe usar conceptos claros?","Para poder definir variables y comprobarla con datos sin ambigüedad."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"variables y medicion","source":"salud","pages":[72,76],"cards":[
+      ["¿Qué es una variable dentro de una investigación?","Una característica de las unidades de estudio que puede tomar distintos valores o categorías."],
+      ["¿La ocupación se registra como variable cualitativa o cuantitativa?","Cualitativa: clasifica a las personas en categorías."],
+      ["¿La talla medida en centímetros es cualitativa o cuantitativa?","Cuantitativa; expresa una magnitud numérica."],
+      ["¿Por qué conviene definir cómo medirás cada variable antes de recoger datos?","Para que todos los registros se hagan con el mismo criterio y puedan compararse."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"estadistica descriptiva","source":"salud","pages":[85,94],"cards":[
+      ["¿Qué hace la estadística descriptiva con un conjunto de datos?","Los organiza y resume con tablas, gráficos y medidas numéricas."],
+      ["Si quieres sacar conclusiones sobre una población usando una muestra, ¿qué rama de la estadística utilizas?","Estadística inferencial."],
+      ["¿Qué es la población de un estudio?","El conjunto de unidades sobre las que se quiere conocer una característica."],
+      ["¿Qué es una muestra?","Una parte de la población seleccionada para observarla o medirla."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"muestreo","source":"salud","pages":[95,108],"cards":[
+      ["Si todos los integrantes tienen una probabilidad conocida de ser elegidos, ¿qué tipo de muestreo usas?","Muestreo probabilístico."],
+      ["Divides la población en grupos y seleccionas personas de cada uno. ¿Qué muestreo es?","Muestreo estratificado."],
+      ["Eliges grupos completos, como aulas, y estudias a sus integrantes. ¿Qué muestreo es?","Muestreo por conglomerados."],
+      ["Si los seleccionados no representan bien a la población, ¿qué problema aparece?","Sesgo de selección o de cobertura, que puede distorsionar los resultados."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"frecuencias y graficos","source":"salud","pages":[109,139],"cards":[
+      ["¿Qué expresa la frecuencia absoluta de una categoría?","Cuántas observaciones pertenecen a esa categoría."],
+      ["¿Qué expresa la frecuencia relativa?","La proporción o porcentaje del total que corresponde a una categoría."],
+      ["Si quieres mostrar la distribución de una variable cuantitativa agrupada en intervalos, ¿qué gráfico usarías?","Un histograma."],
+      ["¿Qué muestra una frecuencia acumulada?","Cuántas observaciones, o qué proporción, se han reunido hasta cierto valor o intervalo."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"medidas de tendencia central","source":"salud","pages":[145,160],"cards":[
+      ["¿Cómo calculas la media aritmética de varios valores?","Sumas los valores y divides entre el número de observaciones."],
+      ["Ordenas las edades de menor a mayor. ¿Qué medida ocupa el centro de la lista?","La mediana."],
+      ["En una lista de respuestas, ¿cómo llamas al valor que aparece más veces?","Moda."],
+      ["Si unos pocos valores son extremadamente altos, ¿qué medida central suele resistir mejor su efecto?","La mediana."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"medidas de posicion","source":"salud","pages":[161,170],"cards":[
+      ["¿En cuántas partes dividen los cuartiles un conjunto de datos ordenados?","En cuatro partes."],
+      ["¿Qué representa el percentil 75?","Un valor por debajo del cual se encuentra aproximadamente el 75 % de las observaciones."],
+      ["¿En cuántas partes dividen los deciles los datos ordenados?","En diez partes."],
+      ["¿Por qué primero debes ordenar los datos antes de ubicar un cuartil?","Porque las medidas de posición dependen del lugar que ocupa cada valor en la distribución."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"dispersion y forma de los datos","source":"salud","pages":[171,190],"cards":[
+      ["Dos grupos tienen la misma media, pero uno varía mucho más. ¿Qué clase de medida necesitas para distinguirlos?","Una medida de dispersión, como la desviación estándar."],
+      ["¿Qué es el rango de un conjunto de datos?","La diferencia entre el valor máximo y el mínimo."],
+      ["¿Qué mide la desviación estándar?","Cuánto se alejan típicamente los valores de la media."],
+      ["Si una distribución tiene una cola más larga hacia un lado, ¿qué propiedad describes?","Su asimetría o sesgo."]
+    ]},
+    {"materia":"SALUD PUBLICA","tema":"analisis de datos en excel y spss","source":"salud","pages":[191,226],"cards":[
+      ["Antes de pedir resultados estadísticos a un programa, ¿qué debes revisar en tu tabla de datos?","Que cada variable esté definida y los registros sean consistentes, sin valores mal codificados."],
+      ["¿Para qué puede servir la herramienta de estadística descriptiva de Excel?","Para resumir datos con medidas como media, mediana y dispersión."],
+      ["En SPSS, ¿por qué conviene asignar etiquetas a las categorías de una variable?","Para interpretar las salidas sin depender de códigos numéricos poco claros."],
+      ["¿Qué debes hacer después de obtener una tabla o un gráfico de cualquier programa?","Interpretarlo en relación con la pregunta de investigación; el programa calcula, pero no explica por sí solo el problema."]
+    ]}
+  ]
+}
