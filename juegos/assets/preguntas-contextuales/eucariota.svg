@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f5fbff"/><stop offset="1" stop-color="#fff8e9"/></linearGradient>
+<linearGradient id="cell" x2="1" y2="1"><stop stop-color="#c8edfa"/><stop offset="1" stop-color="#e5d8fa"/></linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1e3a5f" flood-opacity=".14"/></filter></defs>
+<rect width="960" height="480" rx="28" fill="url(#bg)"/>
+<path d="M0 378C202 301 285 420 478 370S796 334 960 398V480H0Z" fill="#e9f4fb" opacity=".65"/>
+<circle cx="482" cy="240" r="192" fill="url(#cell)" stroke="#2c94c2" stroke-width="13" filter="url(#shadow)"/>
+<ellipse cx="475" cy="226" rx="77" ry="70" fill="#baa5dc" stroke="#7355a4" stroke-width="9"/><circle cx="466" cy="220" r="25" fill="#7455a6"/>
+<path d="M295 206q59-67 108 0M309 230q57-52 94 4M550 285q64-55 111-1M560 309q48-42 88-4" fill="none" stroke="#5bb5a7" stroke-width="12" stroke-linecap="round"/>
+<ellipse cx="581" cy="124" rx="36" ry="20" transform="rotate(-24 581 124)" fill="#f4ac73" stroke="#cd7c57" stroke-width="6"/>
+<ellipse cx="378" cy="343" rx="37" ry="20" transform="rotate(28 378 343)" fill="#f4ac73" stroke="#cd7c57" stroke-width="6"/>
+<circle cx="343" cy="142" r="13" fill="#e7c451"/><circle cx="622" cy="352" r="13" fill="#e7c451"/></svg>

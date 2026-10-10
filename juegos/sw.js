@@ -1,11 +1,11 @@
-const CACHE_NAME = 'alcocermed-juegos-v91';
+const CACHE_NAME = 'alcocermed-juegos-v92';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './styles.css',
   './styles.css?v=80',
   './app.js',
-  './app.js?v=89',
+  './app.js?v=90',
   './game-access.js?v=2',
   './acceso-noche.js?v=1',
   './relacionar.js?v=1',
@@ -16,6 +16,15 @@ const ASSETS_TO_CACHE = [
   './tejido-nervioso.css?v=8',
   './manifest.json',
   './assets/result_arena_bg.png',
+  './assets/preguntas-contextuales/teoria-celular.svg',
+  './assets/preguntas-contextuales/procariota.svg',
+  './assets/preguntas-contextuales/eucariota.svg',
+  './assets/preguntas-contextuales/adn.svg',
+  './assets/preguntas-contextuales/arn.svg',
+  './assets/preguntas-contextuales/virus.svg',
+  './assets/preguntas-contextuales/salud-colectiva.svg',
+  './assets/preguntas-contextuales/promocion-salud.svg',
+  './assets/preguntas-contextuales/prevencion.svg',
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
   './logo_app.png'

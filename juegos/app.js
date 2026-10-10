@@ -4306,11 +4306,32 @@ var morfoConceptImages = {
     'd5a3aa1e-bc91-174c-4c5d-0a2bd21f3570': { src: '/juegos/assets/demo-morfo/hipotesis.svg', alt: 'Hipótesis sometida a una prueba experimental' }
 };
 
-function getQuizQuestionImage(pregunta) {
+// Las láminas de capítulo sirven para relacionar conceptos en DND, pero no
+// ilustran una pregunta concreta de opción múltiple o verdadero/falso.
+function isGameOverviewImage(url) {
+    return /^\/juegos\/assets\/(?:biologia-celular-parciales|salud-publica-parciales|segundo-parcial-morfo)\//.test(url || '')
+        || /\/cap1_regiones_corporales_anterior\.png(?:\?|$)/.test(url || '');
+}
+
+var contextualGameImages = {
+    '601b9a75-345b-5de9-bd63-00da7fdf67ee': { src: '/juegos/assets/preguntas-contextuales/teoria-celular.svg', alt: 'Varias células con distinta forma que integran un tejido' },
+    '292fea5d-ca1a-5eef-b886-55ee9b5351af': { src: '/juegos/assets/preguntas-contextuales/procariota.svg', alt: 'Esquema de una bacteria con material genético libre en el citoplasma' },
+    '10ab6dbf-b090-53ce-b612-c56dda7c2824': { src: '/juegos/assets/preguntas-contextuales/eucariota.svg', alt: 'Célula con núcleo delimitado y orgánulos internos' },
+    '9fc43d6e-c558-5623-bf5a-c7f5fce73527': { src: '/juegos/assets/preguntas-contextuales/adn.svg', alt: 'Doble hélice de ADN en el interior de un núcleo celular' },
+    '39e58e2b-b97a-500f-b98b-6f0ad929b692': { src: '/juegos/assets/preguntas-contextuales/arn.svg', alt: 'Cadena de ARN junto a un ribosoma' },
+    'd248e289-f0e8-5cb6-b6c6-e2188226b542': { src: '/juegos/assets/preguntas-contextuales/virus.svg', alt: 'Partícula viral que se aproxima a una célula huésped' },
+    '3bea9399-4e1c-569e-c9fb-4e174e02278e': { src: '/juegos/assets/preguntas-contextuales/salud-colectiva.svg', alt: 'Red de personas y centros de atención conectados en una comunidad' },
+    'c6c88e9a-65b9-5d04-cf43-1c4408bc0bbb': { src: '/juegos/assets/preguntas-contextuales/promocion-salud.svg', alt: 'Comunidad que participa en decisiones para cuidar su salud' },
+    '652123b7-fe82-51d7-c4cd-aa74239aaf46': { src: '/juegos/assets/preguntas-contextuales/prevencion.svg', alt: 'Escudo de protección antes de que aparezca una enfermedad' }
+};
+
+function getQuizQuestionImage(pregunta, tipo) {
     var morfoIllustration = pregunta && morfoConceptImages[pregunta.id];
     if (morfoIllustration) return morfoIllustration.src;
     var illustration = getNervousQuestionIllustration(pregunta);
     if (illustration) return illustration.src;
+    var contextual = pregunta && contextualGameImages[pregunta.id];
+    if (contextual) return contextual.src;
     var opts = pregunta && pregunta.opciones;
     if (typeof opts === 'string') {
         try { opts = JSON.parse(opts); } catch (e) { opts = []; }
@@ -4318,7 +4339,11 @@ function getQuizQuestionImage(pregunta) {
     if (!opts || !opts.length) return '';
     for (var i = 0; i < opts.length; i++) {
         var url = opts[i] && opts[i].pregunta_imagen;
-        if (url && String(url).trim()) return String(url).trim();
+        if (url && String(url).trim()) {
+            url = String(url).trim();
+            if (tipo !== 'dnd' && isGameOverviewImage(url)) return '';
+            return url;
+        }
     }
     return '';
 }
@@ -4333,17 +4358,18 @@ function renderQuizQuestionImageWrap(pregunta, tipo) {
     if (!wrap) return;
     var illustration = getNervousQuestionIllustration(pregunta);
     var morfoIllustration = pregunta && morfoConceptImages[pregunta.id];
+    var contextual = pregunta && contextualGameImages[pregunta.id];
     wrap.classList.toggle('quiz-image-illustrated', !!illustration);
-    var questionImage = getQuizQuestionImage(pregunta);
+    var questionImage = getQuizQuestionImage(pregunta, tipo);
     if (questionImage && tipo !== 'dnd') {
         wrap.hidden = false;
-        wrap.innerHTML = '<img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(morfoIllustration ? morfoIllustration.alt : (illustration ? illustration.alt : 'Imagen de la pregunta')) + '">';
+        wrap.innerHTML = '<img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(morfoIllustration ? morfoIllustration.alt : (illustration ? illustration.alt : (contextual ? contextual.alt : 'Imagen de la pregunta'))) + '">';
         if (illustration) {
             wrap.innerHTML += illustration.credit
                 ? '<small class="quiz-image-credit">' + escapeHtml(illustration.credit) + '</small>'
                 : '<small class="quiz-image-credit"><a href="' + escapeHtml(illustration.source) + '" target="_blank" rel="noopener noreferrer">Servier Medical Art</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></small>';
-            wrap.querySelector('img').addEventListener('error', function() { wrap.hidden = true; });
         }
+        wrap.querySelector('img').addEventListener('error', function() { wrap.hidden = true; });
     } else {
         wrap.hidden = true;
         wrap.innerHTML = '';
