@@ -2896,9 +2896,13 @@ function renderSimQuestion() {
     opciones.forEach(function (opcion, i) {
         var btn = document.createElement('button');
         btn.className = 'bq-option-btn sim-opt-btn' + (ans.selected === i ? ' sim-opt-selected' : '');
-        btn.innerHTML =
-            '<span class="bq-option-letter">' + letras[i] + '</span>' +
-            '<span class="bq-option-text">' + opcion + '</span>';
+        var letter = document.createElement('span');
+        letter.className = 'bq-option-letter';
+        letter.textContent = letras[i];
+        var label = document.createElement('span');
+        label.className = 'bq-option-text';
+        label.textContent = opcion;
+        btn.append(letter, label);
         btn.onclick = function () { selectSimAnswer(i); };
         optsEl.appendChild(btn);
     });
@@ -3056,20 +3060,50 @@ window.finalizarSimulacro = function () {
             ].filter(function (o) { return o && o.toString().trim() !== ''; });
             var isCorrect = ans.selected !== null && ans.selected === correctIdx;
             var sinResp = ans.selected === null;
-            var justif = campo(q, 'justificacion') || campo(q, 'explicacion') || campo(q, 'comentario') || '';
+            var justif = bancoComentario(q);
 
             var item = document.createElement('div');
             item.className = 'sim-review-item' + (isCorrect ? ' sim-rev-ok' : sinResp ? ' sim-rev-pending' : ' sim-rev-fail');
-            item.innerHTML =
-                '<div class="sim-rev-header">' +
-                '<span class="sim-rev-num">N° ' + (i + 1) + '</span>' +
-                '<span class="sim-rev-badge">' + (isCorrect ? '✓ correcta' : sinResp ? '— sin responder' : '✗ incorrecta') + '</span>' +
-                '</div>' +
-                '<p class="sim-rev-question">' + (campo(q, 'pregunta') || '') + '</p>' +
-                (ans.selected !== null && opciones[ans.selected] ?
-                    '<p class="sim-rev-tu-resp">tu respuesta: <strong>' + opciones[ans.selected] + '</strong></p>' : '') +
-                '<p class="sim-rev-correcta">respuesta correcta: <strong>' + (opciones[correctIdx] || '—') + '</strong></p>' +
-                (justif ? '<p class="sim-rev-justif"><i class="fas fa-lightbulb"></i> ' + justif + '</p>' : '');
+            var header = document.createElement('div');
+            header.className = 'sim-rev-header';
+            var number = document.createElement('span');
+            number.className = 'sim-rev-num';
+            number.textContent = 'N° ' + (i + 1);
+            var badge = document.createElement('span');
+            badge.className = 'sim-rev-badge';
+            badge.textContent = isCorrect ? '✓ correcta' : sinResp ? '— sin responder' : '✗ incorrecta';
+            header.append(number, badge);
+            item.appendChild(header);
+            var question = document.createElement('p');
+            question.className = 'sim-rev-question';
+            question.textContent = campo(q, 'pregunta') || '';
+            item.appendChild(question);
+            if (ans.selected !== null && opciones[ans.selected]) {
+                var selected = document.createElement('p');
+                selected.className = 'sim-rev-tu-resp';
+                selected.textContent = 'tu respuesta: ';
+                var selectedAnswer = document.createElement('strong');
+                selectedAnswer.textContent = opciones[ans.selected];
+                selected.appendChild(selectedAnswer);
+                item.appendChild(selected);
+            }
+            var correct = document.createElement('p');
+            correct.className = 'sim-rev-correcta';
+            correct.textContent = 'respuesta correcta: ';
+            var correctAnswer = document.createElement('strong');
+            correctAnswer.textContent = opciones[correctIdx] || '—';
+            correct.appendChild(correctAnswer);
+            item.appendChild(correct);
+            if (justif) {
+                var explanation = document.createElement('p');
+                explanation.className = 'sim-rev-justif';
+                var explanationIcon = document.createElement('i');
+                explanationIcon.className = 'fas fa-lightbulb';
+                var explanationText = document.createElement('span');
+                explanationText.textContent = justif;
+                explanation.append(explanationIcon, explanationText);
+                item.appendChild(explanation);
+            }
             reviewList.appendChild(item);
         });
     }

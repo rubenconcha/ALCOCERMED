@@ -4119,6 +4119,10 @@ body.wayground-active .main-content {
     margin-top: 2px;
 }
 
+.sim-rev-justif span {
+    white-space: pre-line;
+}
+
 .sim-result-actions {
     text-align: center;
 }
