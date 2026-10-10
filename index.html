@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css?v=20">
     <link rel="stylesheet" href="commerce.css?v=1">
+    <link rel="stylesheet" href="student-white.css?v=1">
 </head>
 
 <body class="login-active">
@@ -89,8 +90,8 @@
                 </button>
             </form>
 
-            <div class="login-offer"><span>¿Aún no tienes acceso?</span><a href="/planes#pricing">Ver planes · desde Bs 200 al mes <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
-            <div class="login-assistance"><a href="/planes#pricing">Quiero suscribirme</a><a href="https://wa.me/59173752688?text=Hola%2C%20necesito%20ayuda%20para%20ingresar%20a%20AlcocerMed" target="_blank" rel="noopener noreferrer">Necesito ayuda para ingresar</a></div>
+            <div class="login-offer"><span>¿Aún no tienes acceso?</span><a href="/planes">Prueba un tema gratis · Ver planes <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+            <div class="login-assistance"><a href="/planes">Quiero suscribirme</a><a href="https://wa.me/59173752688?text=Hola%2C%20necesito%20ayuda%20para%20ingresar%20a%20AlcocerMed" target="_blank" rel="noopener noreferrer">Necesito ayuda para ingresar</a></div>
             <!-- Footer -->
             <div class="login-footer">
                 <i class="fas fa-shield-alt"></i>
@@ -429,25 +430,32 @@
         <!-- ══ PANTALLA INICIO — MOBILE FIRST ══ -->
         <section id="home-screen" class="home-screen home-mobile-redesign">
             <div class="home-mobile-hero">
-                <div class="home-hero-kicker"><i class="fas fa-bolt"></i> plataforma médica móvil</div>
-                <h1>Estudia medicina desde tu celular.</h1>
-                <p>Flashcards, mapas mentales, preguntas y simulacros organizados para repasar rápido en Android y iPhone.</p>
+                <div class="home-hero-kicker"><i class="fas fa-bolt"></i> Tu espacio de estudio</div>
+                <h1>¿Qué vas a aprender hoy?</h1>
+                <p>Elige una materia, repasa sus temas y ponte a prueba. Todo tu material, en un mismo lugar.</p>
                 <div class="home-hero-actions">
-                    <a class="home-secondary-action plan-access" href="/planes#pricing"><i class="fas fa-ticket-alt"></i> planes y suscripción</a>
-                    <button class="home-primary-action" onclick="toggleFlashcards()"><i class="fas fa-layer-group"></i> iniciar flashcards</button>
+                    <button class="home-primary-action" onclick="openStudyLibrary()"><i class="fas fa-layer-group"></i> Elegir materia</button>
                     <button class="home-secondary-action" onclick="openMindMaps()"><i class="fas fa-project-diagram"></i> mapas</button>
                     <button class="home-secondary-action pwa-install-trigger" type="button"><i class="fas fa-download"></i> descargar app</button>
                 </div>
                 <div class="home-hero-stats">
                     <div><strong id="home-repasos">0</strong><span>repasos</span></div>
-                    <div><strong id="home-cards">0</strong><span>tarjetas</span></div>
-                    <div><strong id="home-temas">0</strong><span>temas</span></div>
-                    <div><strong id="home-games">0</strong><span>juegos</span></div>
+                    <div><strong id="home-cards">0</strong><span>avance del mazo</span></div>
+                    <div><strong id="home-temas">0</strong><span>temas repasados</span></div>
+                    <div><strong id="home-games">0</strong><span>partidas jugadas</span></div>
                 </div>
             </div>
 
-            <div class="home-focus-grid">
-                <article class="home-feature-card home-feature-flash" onclick="toggleFlashcards()">
+            <section class="study-library" id="study-library" aria-labelledby="library-title">
+<div class="home-section-head"><div><p class="library-kicker">TU BIBLIOTECA</p><h2 id="library-title">Estudia por materia</h2></div><p>Selecciona una materia para ver sus temas.</p></div>
+<div class="subject-picker" aria-label="Materias">
+<button type="button" data-subject="MORFOFUNCION" aria-pressed="false"><i class="fas fa-brain"></i><span>Morfofunción<small>Anatomía y fisiología</small></span><i class="fas fa-arrow-right"></i></button>
+<button type="button" data-subject="BIOLOGIA CELULAR" aria-pressed="false"><i class="fas fa-dna"></i><span>Biología celular<small>La vida, a pequeña escala</small></span><i class="fas fa-arrow-right"></i></button>
+<button type="button" data-subject="SALUD PUBLICA" aria-pressed="false"><i class="fas fa-heartbeat"></i><span>Salud pública<small>Salud y comunidad</small></span><i class="fas fa-arrow-right"></i></button>
+</div>
+<div id="library-topics-panel" hidden><label for="library-search">Buscar un tema</label><input type="search" id="library-search" placeholder="Escribe el nombre del tema…"><p id="library-status" role="status"></p><div id="library-topics" class="library-topics"></div></div>
+</section><div class="home-section-head"><h2>Conecta lo que aprendes</h2><p>Una idea, distintas formas de repasarla.</p></div><div class="home-focus-grid">
+                <article class="home-feature-card home-feature-flash" onclick="openStudyLibrary()">
                     <div class="home-feature-top">
                         <div class="home-feature-icon"><i class="fas fa-clone"></i></div>
                         <span class="home-feature-badge">SRS</span>
@@ -465,7 +473,7 @@
                 <article class="home-feature-card home-feature-map" onclick="openMindMaps()">
                     <div class="home-feature-top">
                         <div class="home-feature-icon"><i class="fas fa-project-diagram"></i></div>
-                        <span class="home-feature-badge">Nuevo</span>
+                        <span class="home-feature-badge">Visual</span>
                     </div>
                     <h2>Mapas mentales</h2>
                     <p>Conecta conceptos, clínica, imágenes y repasos clave en una vista visual fácil de recordar.</p>
@@ -490,7 +498,7 @@
                     <p>Elige con qué quieres practicar hoy.</p>
                 </div>
                 <div class="home-grid home-grid-mobile-v2">
-                    <div class="home-card home-card-orange home-card-priority" onclick="toggleFlashcards()">
+                    <div class="home-card home-card-orange home-card-priority" onclick="openStudyLibrary()">
                         <div class="hc-icon"><i class="fas fa-layer-group"></i></div>
                         <div class="hc-body">
                             <h3>flashcards</h3>
@@ -533,7 +541,7 @@
                     </div>
                     <div class="home-card home-card-fire" onclick="openIntocables()">
                         <div class="hc-icon"><i class="fas fa-fire-alt"></i></div>
-                        <div class="hc-body"><h3>intocables 🔥</h3><p>lo que siempre cae</p></div>
+                        <div class="hc-body"><h3>intocables 🔥</h3><p>conceptos esenciales</p></div>
                         <i class="fas fa-arrow-right hc-arrow"></i>
                     </div>
                     <div class="home-card home-card-games" onclick="window.location.href='juegos/index.html'">
@@ -1352,6 +1360,7 @@
     <script src="config.js"></script>
     <script src="device_guard.js"></script>
     <script src="script.js?v=5"></script>
+    <script src="student-library.js?v=1"></script>
 </body>
 
 </html>
