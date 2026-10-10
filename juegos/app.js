@@ -1074,6 +1074,7 @@ function initAuth() {
             teardownAvatarRealtime();
             currentUser = null;
             isAdmin = false;
+            DEMO_ACCESS_ONLY = true;
             showLogin();
         }
     });
@@ -1124,6 +1125,18 @@ function enterApp() {
 
     var email = (currentUser.email || '').toLowerCase().trim();
     isAdmin = (email === ADMIN_EMAIL);
+    DEMO_ACCESS_ONLY = !isAdmin;
+    var accessUserId = currentUser.id;
+    if (!isAdmin && !isDemoGuestUser(currentUser)) {
+        GameAccess.verify(getSupabase()).then(function(paid) {
+            if (!currentUser || currentUser.id !== accessUserId) return;
+            DEMO_ACCESS_ONLY = !paid;
+            if (currentPage === 'jugar') {
+                if (exploreCurrentSubject) loadSubjectEvaluations(exploreCurrentSubject);
+                else loadExploreSubjects();
+            }
+        });
+    }
 
     var name = currentUser.user_metadata && currentUser.user_metadata.full_name
         ? currentUser.user_metadata.full_name
@@ -2512,7 +2525,7 @@ var SUBJECTS = [
     { name: 'EDUCACION PARA LA SALUD', color: '#10B981', emoji: 'ES' }
 ];
 
-var DEMO_ACCESS_ONLY = false;
+var DEMO_ACCESS_ONLY = true;
 
 function normalizeDemoText(value) {
     return String(value || '')
@@ -2800,7 +2813,7 @@ function renderSubjectMissions(grid, stats) {
     stats = stats || defaultSubjectStats();
     var counts = stats.counts || {};
     var demoCounts = stats.demoCounts || {};
-    var demoUser = isDemoGuestUser(currentUser) && !(typeof isNightClassUser === 'function' && isNightClassUser(currentUser) && isNightClassOpen());
+    var demoUser = !isAdmin && (DEMO_ACCESS_ONLY || isDemoGuestUser(currentUser)) && !(typeof isNightClassUser === 'function' && isNightClassUser(currentUser) && isNightClassOpen());
     var html = '';
     for (var s = 0; s < SUBJECTS.length; s++) {
         var subj = SUBJECTS[s];
@@ -3433,7 +3446,7 @@ function loadSubjectEvaluations(subject) {
                 if (isLocked) html += '<span class="locked-access-badge"><i class="fas fa-lock"></i> BLOQUEADO</span>';
                 html += '</div></div>';
                 if (isLocked) {
-                    html += '<button class="explorar-btn-study explorar-btn-locked" onclick="event.stopPropagation();showLockedDemoNotice()" style="font-size:0.82rem;padding:12px 18px;border-radius:16px;font-weight:800;letter-spacing:0.02em;max-width:220px;line-height:1.25"><i class="fas fa-lock"></i> Suscribete para desbloquear...</button>';
+                    html += '<a class="explorar-btn-study explorar-btn-locked" href="/planes#planes" style="font-size:0.82rem;padding:12px 18px;border-radius:16px;font-weight:800;letter-spacing:0.02em;max-width:220px;line-height:1.25"><i class="fas fa-lock"></i> Ver planes para desbloquear</a>';
                 } else {
                     html += '<button class="explorar-btn-study" onclick="event.stopPropagation();startSelfStudy(\'' + ev.id + '\')" style="background:linear-gradient(135deg,' + color + ', ' + adjustColor(color, -20) + ');font-size:0.9rem;padding:14px 32px;border-radius:16px;font-weight:800;letter-spacing:0.5px"><i class="fas fa-play"></i> ' + (isDemo ? 'JUGAR DEMO' : 'JUGAR') + '</button>';
                 }
