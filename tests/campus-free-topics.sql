@@ -26,14 +26,27 @@ SELECT 'free account cannot read blocked cards', NOT EXISTS (
 );
 
 RESET ROLE;
-INSERT INTO public.campus_memberships (user_id, plan, expires_at)
-VALUES ('00000000-0000-4000-8000-000000002222', 'monthly', now() + interval '1 month');
+INSERT INTO public.campus_memberships (user_id, plan)
+VALUES ('00000000-0000-4000-8000-000000002222', 'legacy');
+SET LOCAL ROLE authenticated;
+INSERT INTO free_topic_checks
+SELECT 'legacy account keeps the free limit', NOT public.campus_has_access() AND NOT EXISTS (
+  SELECT 1 FROM public.flashcards
+  WHERE materia = 'MORFOFUNCION' AND tema = 'corazon'
+);
+INSERT INTO free_topic_checks
+SELECT 'legacy account cannot open paid games', NOT public.campus_game_access('00000000-0000-4000-8000-000000009999');
+RESET ROLE;
+UPDATE public.campus_memberships SET plan='monthly', expires_at=now() + interval '1 month'
+WHERE user_id='00000000-0000-4000-8000-000000002222';
 SET LOCAL ROLE authenticated;
 INSERT INTO free_topic_checks
 SELECT 'paid account reads blocked cards', public.campus_has_access() AND EXISTS (
   SELECT 1 FROM public.flashcards
   WHERE materia = 'MORFOFUNCION' AND tema = 'corazon'
 );
+INSERT INTO free_topic_checks
+SELECT 'paid account opens paid games', public.campus_game_access('00000000-0000-4000-8000-000000009999');
 RESET ROLE;
 SET LOCAL ROLE anon;
 SELECT set_config('request.jwt.claims', '{}', true);
