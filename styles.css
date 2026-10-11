@@ -5184,34 +5184,6 @@ body.sidebar-collapsed .sidebar .nav-item-simple a:hover::before {
     margin: 0;
 }
 
-.intoc-hero-stats {
-    display: flex;
-    gap: 20px;
-    flex-shrink: 0;
-}
-
-.intoc-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-}
-
-.intoc-stat span {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #f97316;
-    line-height: 1;
-    text-transform: none;
-}
-
-.intoc-stat label {
-    font-size: 0.65rem;
-    color: rgba(255, 255, 255, 0.4);
-    text-transform: lowercase;
-    font-weight: 600;
-}
-
 /* Tabs */
 .intoc-tabs {
     display: flex;
@@ -5546,16 +5518,39 @@ body.sidebar-collapsed .sidebar .nav-item-simple a:hover::before {
         padding: 12px 44px 10px 14px;
     }
 
-    .intoc-hero {
+    .intoc-section { padding-top: 14px; }
+
+    .intoc-header {
         flex-direction: column;
-        text-align: center;
-        gap: 14px;
-        padding: 20px;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 18px;
     }
 
-    .intoc-hero-stats {
-        justify-content: center;
+    .intoc-header .btn-back-game {
+        padding: 9px 14px;
+        min-height: 40px;
+        font-size: 0.85rem;
     }
+
+    .intoc-title { font-size: 1.4rem; line-height: 1.25; }
+    .intoc-subtitle { margin: 6px 0 0; line-height: 1.5; }
+
+    .intoc-hero {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 12px;
+        padding: 20px 18px;
+        border-radius: 18px;
+        margin-bottom: 18px;
+        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .intoc-hero-icon { font-size: 2rem; line-height: 1.2; }
+    .intoc-hero-text { min-width: 0; }
+    .intoc-hero-text h3 { font-size: 1.05rem; line-height: 1.35; margin-bottom: 8px; }
+    .intoc-hero-text p { font-size: 0.85rem; line-height: 1.55; color: rgba(255,255,255,0.72); }
 
     .intoc-tabs {
         width: 100%;
