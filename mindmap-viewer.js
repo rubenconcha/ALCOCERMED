@@ -1,394 +1,97 @@
-/* Full-screen map reader. The overlay is visible while loading; the same mark
-   is baked into the rendered image and into the downloadable WebP. */
+/* Native concept map. Original raster maps are used only for downloads. */
 (function () {
-    var currentUrl = null;
-    var currentObjectUrl = null;
-    var previousFocus = null;
-    var loadToken = 0;
-    var zoom = 1;
-    var branchCount = 6;
-    var branchOpen = [false, false, false, false, false, false];
-    var branchColors = ['#60a92f', '#197ce5', '#8e37b4', '#f58224', '#16a9b8', '#e8495a'];
-    function field(row, name) { return row && (row[name] ?? row[name.toUpperCase()]); }
-    function labelsFor(map) {
-        var file = (field(map, 'url_imagen') || '').split('/').pop();
-        return (window.MINDMAP_BRANCH_LABELS && window.MINDMAP_BRANCH_LABELS[file]) || ['Rama 1','Rama 2','Rama 3','Rama 4','Rama 5','Rama 6'];
-    }
-    function thumbnail(url) {
-        var match = /^mapas mentales\/([^/?#]+)\.(?:png|jpe?g|webp)$/i.exec(url || '');
-        return match ? 'mapas mentales/thumbs/' + match[1] + '.webp' : url;
-    }
-
-    function releaseObjectUrl() {
-        if (currentObjectUrl) URL.revokeObjectURL(currentObjectUrl);
-        currentObjectUrl = null;
-    }
-
-    function updateBranchControls() {
-        var opened = branchOpen.filter(Boolean).length;
-        var count = document.getElementById('mm-branch-count');
-        if (count) count.textContent = opened + ' de ' + branchCount + ' ramas abiertas';
-        for (var i = 0; i < 6; i++) {
-            var open = branchOpen[i];
-            var shortcut = document.querySelector('.mm-branch-shortcut[data-branch="' + i + '"]');
-            var treeBranch = document.querySelector('.mm-tree-branch[data-branch="' + i + '"]');
-            if (shortcut) {
-                shortcut.hidden = i >= branchCount;
-                shortcut.classList.toggle('is-open', open);
-                shortcut.setAttribute('aria-pressed', String(open));
-                shortcut.setAttribute('aria-label', (open ? 'Cerrar' : 'Abrir') + ' rama ' + (i + 1));
-            }
-            if (treeBranch) {
-                treeBranch.classList.toggle('is-open', open);
-                treeBranch.setAttribute('aria-expanded', String(open));
-                treeBranch.setAttribute('aria-label', (open ? 'Cerrar' : 'Abrir') + ' rama ' + (i + 1));
-                var symbol = treeBranch.querySelector('.mm-tree-toggle');
-                if (symbol) symbol.textContent = open ? '−' : '+';
-            }
-        }
-    }
-
-    function setBranch(index, open) {
-        branchOpen[index] = open;
-        updateBranchControls();
-    }
-
-    function setAllBranches(open) {
-        branchOpen = branchOpen.map(function () { return open; });
-        updateBranchControls();
-    }
-
-    function setZoom(value) {
-        zoom = Math.min(2.5, Math.max(.6, Math.round(value * 10) / 10));
-        var stage = document.querySelector('.mm-lb-stage');
-        var tree = document.getElementById('mm-tree');
-        var readout = document.getElementById('mm-zoom-value');
-        if (readout) readout.textContent = Math.round(zoom * 100) + '%';
-        if (!stage || !tree || !tree.children.length) return;
-        var fitWidth = Math.min(stage.clientWidth - 36, (stage.clientHeight - 24) * 1.85);
-        tree.style.width = Math.round(fitWidth * zoom) + 'px';
-        tree.style.height = Math.round(fitWidth / 1.85 * zoom) + 'px';
-        tree.style.setProperty('--mobile-zoom', zoom);
-        requestAnimationFrame(function () {
-            if (window.matchMedia('(max-width:650px)').matches) {
-                stage.scrollLeft = 0;
-                stage.scrollTop = 0;
-                return;
-            }
-            stage.scrollLeft = Math.max(0, (stage.scrollWidth - stage.clientWidth) / 2);
-            stage.scrollTop = Math.max(0, (stage.scrollHeight - stage.clientHeight) / 2);
-        });
-    }
-
-    function resetStudyTools() {
-        zoom = 1;
-        var readout = document.getElementById('mm-zoom-value');
-        if (readout) readout.textContent = '100%';
-        var tree = document.getElementById('mm-tree');
-        if (tree) { tree.style.width = ''; tree.style.height = ''; }
-    }
-
-    function prepareStudyTools() {
-        var stage = document.querySelector('.mm-lb-stage');
-        var tree = document.getElementById('mm-tree');
-        if (!stage || !tree) return;
-        document.getElementById('mm-zoom-out').addEventListener('click', function () { setZoom(zoom - .2); });
-        document.getElementById('mm-zoom-in').addEventListener('click', function () { setZoom(zoom + .2); });
-        document.getElementById('mm-zoom-center').addEventListener('click', function () { setZoom(1); });
-        document.getElementById('mm-true-fullscreen').addEventListener('click', function () {
-            var viewer = document.getElementById('mm-lightbox');
-            if (document.fullscreenElement === viewer) document.exitFullscreen();
-            else if (viewer && viewer.requestFullscreen) viewer.requestFullscreen().catch(function () {});
-        });
-        stage.addEventListener('wheel', function (event) {
-            if (!event.ctrlKey) return;
-            event.preventDefault();
-            setZoom(zoom + (event.deltaY < 0 ? .1 : -.1));
-        }, { passive: false });
-        var pan = null;
-        tree.addEventListener('pointerdown', function (event) {
-            if (event.button !== 0 || event.target.closest('button')) return;
-            pan = { id: event.pointerId, x: event.clientX, y: event.clientY, left: stage.scrollLeft, top: stage.scrollTop };
-            tree.setPointerCapture(event.pointerId);
-        });
-        tree.addEventListener('pointermove', function (event) {
-            if (!pan || event.pointerId !== pan.id) return;
-            stage.scrollLeft = pan.left - (event.clientX - pan.x);
-            stage.scrollTop = pan.top - (event.clientY - pan.y);
-        });
-        function endPan(event) { if (pan && event.pointerId === pan.id) pan = null; }
-        tree.addEventListener('pointerup', endPan);
-        tree.addEventListener('pointercancel', endPan);
-        window.addEventListener('resize', function () {
-            var viewer = document.getElementById('mm-lightbox');
-            if (viewer && !viewer.classList.contains('hidden')) setZoom(zoom);
-        });
-    }
-
-    function cropImage(image, region, maxWidth) {
-        var canvas = document.createElement('canvas');
-        var sw = Math.round(image.naturalWidth * region.w);
-        var sh = Math.round(image.naturalHeight * region.h);
-        canvas.width = Math.min(maxWidth, sw);
-        canvas.height = Math.round(canvas.width * sh / sw);
-        canvas.getContext('2d').drawImage(image,
-            Math.round(image.naturalWidth * region.x), Math.round(image.naturalHeight * region.y), sw, sh,
-            0, 0, canvas.width, canvas.height);
-        return canvas.toDataURL('image/webp', .9);
-    }
-
-    function buildInteractiveTree(image, map) {
-        var tree = document.getElementById('mm-tree');
-        if (!tree) return;
-        tree.replaceChildren();
-        var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        svg.setAttribute('class', 'mm-tree-lines');
-        svg.setAttribute('viewBox', '0 0 1000 540');
-        svg.setAttribute('preserveAspectRatio', 'none');
-        svg.setAttribute('aria-hidden', 'true');
-        var paths = [
-            'M 405 270 C 365 270 375 90 335 90', 'M 595 270 C 635 270 625 90 665 90',
-            'M 405 270 C 370 270 370 270 335 270', 'M 595 270 C 630 270 630 270 665 270',
-            'M 405 270 C 365 270 375 450 335 450', 'M 595 270 C 635 270 625 450 665 450'
-        ];
-        paths.slice(0, labelsFor(map).length).forEach(function (pathData, index) {
-            var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-            path.setAttribute('d', pathData);
-            path.setAttribute('fill', 'none');
-            path.setAttribute('stroke', branchColors[index]);
-            path.setAttribute('stroke-width', '3');
-            path.setAttribute('stroke-linecap', 'round');
-            svg.appendChild(path);
-        });
-        tree.appendChild(svg);
-        var core = document.createElement('div');
-        core.className = 'mm-tree-core';
-        var coreTitle = document.createElement('strong');
-        coreTitle.className = 'mm-tree-core-title';
-        coreTitle.textContent = field(map, 'titulo') || 'Mapa mental';
-        var coreImage = document.createElement('img');
-        var file = (field(map, 'url_imagen') || '').split('/').pop();
-        coreImage.src = cropImage(image, /^morfo_0[12]_/.test(file) ? { x: .42, y: .55, w: .16, h: .27 } : { x: .39, y: .48, w: .22, h: .29 }, 780);
-        coreImage.alt = 'Idea central: ' + (field(map, 'titulo') || 'Mapa mental');
-        core.appendChild(coreTitle);
-        core.appendChild(coreImage);
-        tree.appendChild(core);
-
-        var labels = labelsFor(map);
-        var sections = [
-            { x: 0, y: 0, w: .28, h: .33 }, { x: .72, y: 0, w: .28, h: .33 },
-            { x: 0, y: .34, w: .28, h: .32 }, { x: .72, y: .34, w: .28, h: .32 },
-            { x: 0, y: .67, w: .28, h: .33 }, { x: .72, y: .67, w: .28, h: .33 }
-        ];
-        if (file === 'morfo_01_anatomia_y_fisiologia.webp') {
-            sections[0] = { x: 0, y: .1, w: .28, h: .3 };
-            sections[1] = { x: .57, y: .28, w: .43, h: .13 };
-            sections[2] = { x: 0, y: .43, w: .28, h: .23 };
-            sections[3] = { x: .68, y: .53, w: .32, h: .13 };
-        } else if (file === 'morfo_02_quimica_de_la_vida.webp') {
-            sections[1] = { x: .68, y: .04, w: .32, h: .36 };
-            sections[3] = { x: .69, y: .45, w: .31, h: .55 };
-            sections[4] = { x: .26, y: .72, w: .52, h: .28 };
-        } else if (['lacelula.png', 'membranaplasmatica.png', 'nucleocelular.png'].includes(file)) {
-            sections[2] = { x: .76, y: .31, w: .24, h: .32 };
-            sections[3] = { x: .76, y: .64, w: .24, h: .27 };
-            sections[4] = { x: 0, y: .62, w: .25, h: .29 };
-            sections[5] = { x: 0, y: .31, w: .25, h: .30 };
-        } else if (file === 'organeloscelulares.png') {
-            sections[0] = { x: 0, y: .03, w: .24, h: .43 };
-            sections[1] = { x: .77, y: .08, w: .23, h: .27 };
-            sections[2] = { x: .77, y: .33, w: .23, h: .29 };
-            sections[3] = { x: 0, y: .53, w: .25, h: .25 };
-            sections[4] = { x: .77, y: .57, w: .23, h: .25 };
-            sections[5] = { x: .28, y: .68, w: .44, h: .19 };
-        }
-        for (var index = 0; index < labels.length; index++) {
-            (function (branch) {
-                var button = document.createElement('button');
-                button.type = 'button';
-                button.className = 'mm-tree-branch';
-                button.dataset.branch = branch;
-                button.style.setProperty('--branch-color', branchColors[branch]);
-                button.style.setProperty('--branch-order', branch + 1);
-                var preview = document.createElement('span');
-                preview.className = 'mm-tree-preview';
-                preview.textContent = (branch + 1) + '  ' + labels[branch];
-                var openLabel = document.createElement('span');
-                openLabel.className = 'mm-tree-open-label';
-                openLabel.textContent = labels[branch];
-                var detail = document.createElement('img');
-                detail.className = 'mm-tree-detail';
-                detail.src = cropImage(image, sections[branch], 1150);
-                detail.alt = '';
-                var symbol = document.createElement('span');
-                symbol.className = 'mm-tree-toggle';
-                button.appendChild(preview);
-                button.appendChild(openLabel);
-                button.appendChild(detail);
-                button.appendChild(symbol);
-                button.addEventListener('click', function () { setBranch(branch, !branchOpen[branch]); });
-                tree.appendChild(button);
-            })(index);
-        }
-        updateBranchControls();
-    }
-
-    function prepareBranchControls() {
-        var shortcuts = document.getElementById('mm-branch-shortcuts');
-        if (!shortcuts || shortcuts.children.length) return;
-        branchColors.forEach(function (color, index) {
-            var shortcut = document.createElement('button');
-            shortcut.type = 'button';
-            shortcut.className = 'mm-branch-shortcut';
-            shortcut.dataset.branch = index;
-            shortcut.style.setProperty('--branch-color', color);
-            shortcut.textContent = index + 1;
-            shortcut.addEventListener('click', function () { setBranch(index, !branchOpen[index]); });
-            shortcuts.appendChild(shortcut);
-        });
-        document.getElementById('mm-branch-all').addEventListener('click', function () { setAllBranches(true); });
-        document.getElementById('mm-branch-none').addEventListener('click', function () { setAllBranches(false); });
-        prepareStudyTools();
-        updateBranchControls();
-    }
-
-    function watermarkImage(source) {
-        return new Promise(function (resolve, reject) {
-            var canvas = document.createElement('canvas');
-            canvas.width = source.naturalWidth;
-            canvas.height = source.naturalHeight;
-            var ctx = canvas.getContext('2d');
-            if (!ctx) return reject(new Error('No se pudo preparar la imagen.'));
-            ctx.drawImage(source, 0, 0);
-
-            var text = 'PREPA BEN CARSON';
-            var size = Math.round(Math.min(canvas.width * 0.085, canvas.height * 0.18));
-            ctx.font = '800 ' + size + 'px Arial, sans-serif';
-            var width = ctx.measureText(text).width;
-            if (width > canvas.width * 0.78) {
-                size = Math.round(size * (canvas.width * 0.78 / width));
-                ctx.font = '800 ' + size + 'px Arial, sans-serif';
-            }
-            ctx.save();
-            ctx.translate(canvas.width / 2, canvas.height / 2);
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.globalAlpha = 0.08;
-            ctx.fillStyle = '#1c456c';
-            ctx.fillText(text, 0, 0);
-            ctx.restore();
-            canvas.toBlob(function (blob) {
-                if (blob) resolve(URL.createObjectURL(blob));
-                else reject(new Error('No se pudo preparar la descarga.'));
-            }, 'image/webp', 0.95);
-        });
-    }
-
-    window.openMmLightbox = function (map) {
-        if (window.CampusAccess && CampusAccess.isFree() && !field(map, 'acceso_gratis')) return openMmUnlockDialog(map);
-        var viewer = document.getElementById('mm-lightbox');
-        var image = document.getElementById('mm-lb-img');
-        var figure = viewer && viewer.querySelector('.mm-lb-figure');
-        var download = document.getElementById('mm-lb-download');
-        var status = document.getElementById('mm-lb-status');
-        if (!viewer || !image || !figure || !download || !status) return;
-
-        var url = field(map, 'url_imagen') || field(map, 'url_image') || '';
-        branchCount = labelsFor(map).length;
-        branchOpen = Array(branchCount).fill(false);
-        prepareBranchControls();
-        setAllBranches(false);
-        resetStudyTools();
-        var token = ++loadToken;
-        releaseObjectUrl();
-        currentUrl = url;
-        previousFocus = document.activeElement;
-        figure.classList.remove('is-watermarked');
-        image.dataset.fullUrl = url;
-        image.src = thumbnail(url);
-        var tree = document.getElementById('mm-tree');
-        if (tree) tree.replaceChildren();
-        image.alt = 'Mapa mental: ' + (field(map, 'titulo') || 'sin título');
-        status.textContent = 'Preparando mapa…';
-        download.disabled = true;
-        download.dataset.filename = (url.split('/').pop() || 'mapa').replace(/\.[^.]+$/, '') + '-prepa-ben-carson.webp';
-        document.getElementById('mm-lb-title').textContent = field(map, 'titulo') || 'Mapa mental';
-        document.getElementById('mm-lb-materia').textContent = (field(map, 'materia') || '').toLowerCase();
-        viewer.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        viewer.querySelector('.mm-lb-close').focus();
-
-        var source = new Image();
-        source.crossOrigin = 'anonymous';
-        source.decoding = 'async';
-        source.onload = function () {
-            if (token !== loadToken || currentUrl !== url) return;
-            try {
-                var sampleCanvas = document.createElement('canvas');
-                sampleCanvas.width = sampleCanvas.height = 1;
-                var sampleContext = sampleCanvas.getContext('2d');
-                sampleContext.drawImage(source, source.naturalWidth * .51, source.naturalHeight * .04, 1, 1, 0, 0, 1, 1);
-                var paper = sampleContext.getImageData(0, 0, 1, 1).data;
-                figure.style.setProperty('--map-paper', 'rgb(' + paper[0] + ',' + paper[1] + ',' + paper[2] + ')');
-            } catch (_) { figure.style.setProperty('--map-paper', '#f5fbfc'); }
-            watermarkImage(source).then(function (objectUrl) {
-                if (token !== loadToken || currentUrl !== url) { URL.revokeObjectURL(objectUrl); return; }
-                currentObjectUrl = objectUrl;
-                image.onload = function () {
-                    if (token !== loadToken) return;
-                    figure.classList.add('is-watermarked');
-                    status.textContent = '';
-                    download.disabled = false;
-                    buildInteractiveTree(image, map);
-                    setZoom(1);
-                };
-                image.src = objectUrl;
-            }).catch(function () {
-                if (token !== loadToken) return;
-                image.src = url;
-                status.textContent = 'No se pudo preparar la descarga de este mapa.';
-            });
-        };
-        source.onerror = function () {
-            if (token === loadToken) status.textContent = 'No se pudo cargar el mapa.';
-        };
-        source.src = url;
-    };
-
-    window.closeMmLightbox = function (event) {
-        var viewer = document.getElementById('mm-lightbox');
-        if (!viewer) return;
-        if (event && event.target !== viewer && !event.target.classList.contains('mm-lb-stage')) return;
-        ++loadToken;
-        viewer.classList.add('hidden');
-        if (document.fullscreenElement === viewer) document.exitFullscreen().catch(function () {});
-        document.body.style.overflow = '';
-        document.getElementById('mm-lb-img').src = '';
-        var tree = document.getElementById('mm-tree');
-        if (tree) tree.replaceChildren();
-        currentUrl = null;
-        releaseObjectUrl();
-        if (previousFocus && previousFocus.focus) previousFocus.focus();
-    };
-
-    document.addEventListener('DOMContentLoaded', function () {
-        var download = document.getElementById('mm-lb-download');
-        if (download) download.addEventListener('click', function () {
-            if (!currentObjectUrl) return;
-            var link = document.createElement('a');
-            link.href = currentObjectUrl;
-            link.download = download.dataset.filename || 'mapa-prepa-ben-carson.webp';
-            document.body.appendChild(link);
-            link.click();
-            link.remove();
-        });
-        document.addEventListener('keydown', function (event) {
-            var viewer = document.getElementById('mm-lightbox');
-            if (event.key === 'Escape' && viewer && !viewer.classList.contains('hidden')) closeMmLightbox();
-            if (viewer && !viewer.classList.contains('hidden') && /^[1-6]$/.test(event.key) && Number(event.key) <= branchCount && !event.altKey && !event.ctrlKey && !event.metaKey) {
-                var index = Number(event.key) - 1;
-                setBranch(index, !branchOpen[index]);
-            }
-        });
-    });
+ var activeMap=null,objectUrl=null,sourceImage=null,previousFocus=null,previousOverflow='',token=0;
+ var zoom=1,selectedBranch=0,branchOpen=[],showAllMobile=false,wired=false,fitPending=false;
+ var colors=['#429243','#267dd0','#8c59b0','#e58929','#209caa','#d76387'];
+ var $=function(id){return document.getElementById(id);};
+ function field(map,name){return map&&(map[name]??map[name.toUpperCase()]);}
+ function fileFor(map){return (field(map,'url_imagen')||field(map,'url_image')||'').split('/').pop().split('?')[0];}
+ function labelsFor(map){return window.MINDMAP_BRANCH_LABELS[fileFor(map)]||[];}
+ function mobile(){return window.matchMedia('(max-width:1100px)').matches;}
+ function el(tag,cls,text){var node=document.createElement(tag);node.className=cls;if(text)node.textContent=text;return node;}
+ function release(){if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=null;if(sourceImage){sourceImage.onload=null;sourceImage.onerror=null;sourceImage.src='';sourceImage=null;}}
+ function redraw(){
+  var tree=$('mm-tree'),svg=tree.querySelector('.mm-concept-lines');if(!svg||!tree.offsetWidth)return;
+  var rect=tree.getBoundingClientRect(),scale=rect.width/tree.offsetWidth,width=tree.offsetWidth,height=tree.offsetHeight;
+  svg.setAttribute('viewBox','0 0 '+width+' '+height);svg.replaceChildren();
+  function bounds(node){var r=node.getBoundingClientRect();return {x:(r.left-rect.left)/scale,y:(r.top-rect.top)/scale,w:r.width/scale,h:r.height/scale};}
+  function connect(from,to,color,vertical){
+   var a=bounds(from),b=bounds(to),x1,y1,x2,y2,path;
+   if(vertical){
+    if(showAllMobile&&from.classList.contains('mm-concept-root')){x1=a.x+14;y1=a.y+a.h;x2=b.x;y2=b.y+b.h/2;path='M '+x1+' '+y1+' L '+0+' '+y1+' L '+0+' '+y2+' L '+x2+' '+y2;}
+    else if(from.classList.contains('mm-concept-root')){x1=a.x+a.w/2;y1=a.y+a.h;x2=b.x+b.w/2;y2=b.y;path='M '+x1+' '+y1+' L '+x2+' '+y2;}
+    else{x1=a.x+14;y1=a.y+a.h;x2=b.x;y2=b.y+b.h/2;path='M '+x1+' '+y1+' L '+x1+' '+y2+' L '+x2+' '+y2;}
+   }
+   else{var left=b.x<a.x;x1=left?a.x:a.x+a.w;y1=a.y+a.h/2;x2=left?b.x+b.w:b.x;y2=b.y+b.h/2;var midpoint=(x1+x2)/2;path='M '+x1+' '+y1+' C '+midpoint+' '+y1+' '+midpoint+' '+y2+' '+x2+' '+y2;}
+   var p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',path);p.setAttribute('stroke',color);svg.appendChild(p);
+  }
+  var root=tree.querySelector('.mm-concept-root');
+  tree.querySelectorAll('.mm-concept-group').forEach(function(group){if(!group.offsetWidth)return;var branch=group.querySelector('.mm-concept-branch'),color=colors[Number(group.dataset.branch)];connect(root,branch,color,mobile());if(branchOpen[Number(group.dataset.branch)])group.querySelectorAll('.mm-concept-leaf').forEach(function(leaf){connect(branch,leaf,color,mobile());});});
+  var space=$('mm-map-space');space.style.width=Math.ceil(width*zoom)+'px';space.style.height=Math.ceil(height*zoom)+'px';space.style.marginTop=(mobile()?0:Math.max(0,(document.querySelector('.mm-lb-stage').clientHeight-48-height*zoom)/2))+'px';
+ }
+ function scheduleDraw(){requestAnimationFrame(function(){redraw();requestAnimationFrame(redraw);});}
+ function update(){
+  $('mm-tree').classList.toggle('show-all',showAllMobile);
+  $('mm-branch-count').textContent=mobile()&&!showAllMobile?'Rama '+(selectedBranch+1)+' de '+branchOpen.length:branchOpen.filter(Boolean).length+' de '+branchOpen.length+' ramas abiertas';
+  document.querySelectorAll('.mm-concept-group').forEach(function(group){var i=Number(group.dataset.branch),button=group.querySelector('.mm-concept-branch');group.classList.toggle('is-open',branchOpen[i]);group.classList.toggle('is-selected',i===selectedBranch);button.setAttribute('aria-expanded',String(branchOpen[i]));button.querySelector('.mm-node-toggle').textContent=branchOpen[i]?'−':'+';group.querySelector('.mm-concept-children').hidden=!branchOpen[i];});
+  $('mm-branch-shortcuts').querySelectorAll('button').forEach(function(button){var i=Number(button.dataset.branch);button.classList.toggle('is-selected',i===selectedBranch);button.setAttribute('aria-pressed',String(i===selectedBranch));});scheduleDraw();
+ }
+ function setBranch(index,open){branchOpen[index]=open;selectedBranch=index;update();}
+ function selectBranch(index){showAllMobile=false;selectedBranch=index;branchOpen[index]=true;update();var stage=document.querySelector('.mm-lb-stage');stage.scrollTop=0;stage.scrollLeft=0;}
+ function setAll(open){showAllMobile=mobile()&&open;branchOpen=branchOpen.map(function(){return open;});update();}
+ function setZoom(value,center){
+  zoom=Math.max(.5,Math.min(2.5,Math.round(value*100)/100));var tree=$('mm-tree');tree.style.transform='scale('+zoom+')';$('mm-zoom-value').textContent=Math.round(zoom*100)+'%';redraw();
+  if(center)requestAnimationFrame(function(){var stage=document.querySelector('.mm-lb-stage');stage.scrollLeft=Math.max(0,(stage.scrollWidth-stage.clientWidth)/2);stage.scrollTop=mobile()?0:Math.max(0,(stage.scrollHeight-stage.clientHeight)/2);});
+ }
+ function fit(){if(!activeMap)return;var stage=document.querySelector('.mm-lb-stage'),tree=$('mm-tree');tree.style.width=mobile()?Math.max(280,stage.clientWidth-32)+'px':'1360px';setZoom(mobile()?1:Math.min(1,(stage.clientWidth-48)/1360,(stage.clientHeight-40)/tree.offsetHeight),true);}
+ function build(map){
+  var tree=$('mm-tree'),labels=labelsFor(map),content=window.MINDMAP_CONTENT[fileFor(map)]||[];tree.replaceChildren();tree.className='mm-tree mm-concept-map';
+  var svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('class','mm-concept-lines');svg.setAttribute('aria-hidden','true');tree.appendChild(svg);
+  var mark=el('span','mm-concept-watermark','PREPA BEN CARSON');mark.setAttribute('aria-hidden','true');tree.appendChild(mark);
+  var root=el('div','mm-concept-root'),icon=el('span','mm-concept-icon');
+  icon.innerHTML='<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 8h12v10h10v12H30v10H18V30H8V18h10z" fill="currentColor"/><circle cx="38" cy="10" r="4" fill="#ffb833"/></svg>';
+  var title=(field(map,'titulo')||'Mapa mental').replace(/^Temas principales de /i,'');title=title.charAt(0).toUpperCase()+title.slice(1);
+  root.appendChild(icon);root.appendChild(el('span','mm-concept-kicker','IDEA CENTRAL'));root.appendChild(el('strong','mm-concept-title',title));tree.appendChild(root);
+  var nav=$('mm-branch-shortcuts');nav.replaceChildren();
+  labels.forEach(function(label,index){
+   var group=el('section','mm-concept-group');group.dataset.branch=index;group.style.setProperty('--branch-color',colors[index]);
+   var parent=el('button','mm-concept-branch');parent.type='button';parent.setAttribute('aria-controls','mm-children-'+index);parent.appendChild(el('span','mm-node-number',String(index+1)));parent.appendChild(el('span','mm-node-label',label));parent.appendChild(el('span','mm-node-toggle','+'));parent.addEventListener('click',function(){setBranch(index,!branchOpen[index]);});group.appendChild(parent);
+   var children=el('div','mm-concept-children');children.id='mm-children-'+index;
+   (content[index]||[]).forEach(function(item){
+    var leaf=el('button','mm-concept-leaf');leaf.type='button';leaf.setAttribute('aria-expanded',String(index===0));leaf.classList.toggle('is-expanded',index===0);var heading=el('span','mm-leaf-heading');heading.appendChild(el('span','mm-leaf-dot'));heading.appendChild(el('strong','',item[0]));heading.appendChild(el('span','mm-leaf-toggle',index===0?'−':'+'));leaf.appendChild(heading);
+    var explanation=el('span','mm-leaf-explanation',item[1]);explanation.hidden=index!==0;leaf.appendChild(explanation);
+    leaf.addEventListener('click',function(){var open=leaf.getAttribute('aria-expanded')!=='true';leaf.setAttribute('aria-expanded',String(open));leaf.classList.toggle('is-expanded',open);explanation.hidden=!open;leaf.querySelector('.mm-leaf-toggle').textContent=open?'−':'+';scheduleDraw();});children.appendChild(leaf);
+   });
+   group.appendChild(children);tree.appendChild(group);var tab=el('button','mm-topic-tab',label);tab.type='button';tab.dataset.branch=index;tab.style.setProperty('--branch-color',colors[index]);tab.addEventListener('click',function(){selectBranch(index);});nav.appendChild(tab);
+  });update();fit();
+ }
+ function wire(){
+  if(wired)return;wired=true;
+  $('mm-zoom-out').addEventListener('click',function(){setZoom(zoom-.15,true);});$('mm-zoom-in').addEventListener('click',function(){setZoom(zoom+.15,true);});$('mm-zoom-center').addEventListener('click',fit);
+  $('mm-branch-all').addEventListener('click',function(){setAll(true);});$('mm-branch-none').addEventListener('click',function(){setAll(false);});
+  $('mm-tools-toggle').addEventListener('click',function(){var bar=$('mm-lightbox').querySelector('.mm-branch-bar'),open=!bar.classList.contains('is-expanded');bar.classList.toggle('is-expanded',open);$('mm-tools-toggle').setAttribute('aria-expanded',String(open));fit();});
+  $('mm-true-fullscreen').addEventListener('click',function(){var viewer=$('mm-lightbox');if(document.fullscreenElement===viewer)document.exitFullscreen();else if(viewer.requestFullscreen)viewer.requestFullscreen().catch(function(){});});
+  $('mm-lb-download').addEventListener('click',function(){if(!objectUrl)return;var link=el('a','');link.href=objectUrl;link.download=fileFor(activeMap).replace(/\.[^.]+$/,'')+'-prepa-ben-carson.webp';document.body.appendChild(link);link.click();link.remove();});
+  var stage=document.querySelector('.mm-lb-stage'),pan=null;
+  stage.addEventListener('wheel',function(event){if(!event.ctrlKey)return;event.preventDefault();setZoom(zoom+(event.deltaY<0?.1:-.1),true);},{passive:false});
+  stage.addEventListener('pointerdown',function(event){if(event.pointerType!=='mouse'||event.button!==0||event.target.closest('button'))return;pan={id:event.pointerId,x:event.clientX,y:event.clientY,left:stage.scrollLeft,top:stage.scrollTop};stage.setPointerCapture(event.pointerId);stage.classList.add('is-panning');});
+  stage.addEventListener('pointermove',function(event){if(!pan||event.pointerId!==pan.id)return;stage.scrollLeft=pan.left-(event.clientX-pan.x);stage.scrollTop=pan.top-(event.clientY-pan.y);});
+  function end(event){if(pan&&event.pointerId===pan.id){pan=null;stage.classList.remove('is-panning');}}
+  stage.addEventListener('pointerup',end);stage.addEventListener('pointercancel',end);
+  window.addEventListener('resize',function(){if(!activeMap||fitPending)return;fitPending=true;requestAnimationFrame(function(){fitPending=false;update();fit();});});
+  if(window.ResizeObserver)new ResizeObserver(function(){if(activeMap)scheduleDraw();}).observe($('mm-tree'));
+  document.addEventListener('keydown',function(event){
+   if(!activeMap)return;if(event.key==='Escape'){window.closeMmLightbox();return;}
+   if(/^[1-6]$/.test(event.key)&&Number(event.key)<=branchOpen.length&&!event.ctrlKey&&!event.metaKey&&!event.altKey){var i=Number(event.key)-1;if(mobile())selectBranch(i);else setBranch(i,!branchOpen[i]);}
+   if(event.key==='Tab'){var buttons=Array.from($('mm-lightbox').querySelectorAll('button:not(:disabled)')).filter(function(node){return node.offsetWidth&&node.offsetHeight;});var first=buttons[0],last=buttons[buttons.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
+  });
+ }
+ function watermark(source){return new Promise(function(resolve,reject){var canvas=document.createElement('canvas');canvas.width=source.naturalWidth;canvas.height=source.naturalHeight;var context=canvas.getContext('2d');context.drawImage(source,0,0);var size=Math.round(canvas.width*.075);context.font='800 '+size+'px Arial';var width=context.measureText('PREPA BEN CARSON').width;if(width>canvas.width*.8){size=Math.round(size*canvas.width*.8/width);context.font='800 '+size+'px Arial';}context.textAlign='center';context.textBaseline='middle';context.fillStyle='rgba(28,69,108,.08)';context.fillText('PREPA BEN CARSON',canvas.width/2,canvas.height/2);canvas.toBlob(function(blob){if(blob)resolve(URL.createObjectURL(blob));else reject(new Error('Descarga no disponible'));},'image/webp',.95);});}
+ window.openMmLightbox=function(map){
+  if(window.CampusAccess&&CampusAccess.isFree()&&!field(map,'acceso_gratis'))return openMmUnlockDialog(map);if(!$('mm-lightbox'))return;
+  wire();release();activeMap=map;selectedBranch=0;showAllMobile=false;branchOpen=labelsFor(map).map(function(_,i){return i===0;});var current=++token;previousFocus=document.activeElement;previousOverflow=document.body.style.overflow;
+  $('mm-lb-title').textContent=field(map,'titulo')||'Mapa mental';$('mm-lb-materia').textContent=field(map,'materia')||'';$('mm-lightbox').classList.remove('hidden');document.body.style.overflow='hidden';$('mm-lb-download').disabled=true;$('mm-lb-status').textContent='';build(map);$('mm-lightbox').querySelector('.mm-lb-close').focus();
+  var source=new Image();sourceImage=source;source.crossOrigin='anonymous';source.onload=function(){if(current!==token)return;try{watermark(source).then(function(url){if(current!==token){URL.revokeObjectURL(url);return;}objectUrl=url;$('mm-lb-download').disabled=false;}).catch(function(){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';});}catch(_){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';}};source.onerror=function(){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';};source.src=field(map,'url_imagen')||field(map,'url_image')||'';
+ };
+ window.closeMmLightbox=function(){if(!activeMap)return;++token;activeMap=null;$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;if(document.fullscreenElement===$('mm-lightbox'))document.exitFullscreen().catch(function(){});$('mm-tree').replaceChildren();$('mm-branch-shortcuts').replaceChildren();release();if(previousFocus&&previousFocus.isConnected)previousFocus.focus();};
 })();

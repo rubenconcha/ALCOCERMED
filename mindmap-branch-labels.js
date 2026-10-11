@@ -12,7 +12,7 @@ window.MINDMAP_BRANCH_LABELS = {
   'biocel_05_endocitosis_exocitosis.png': ['Endocitosis','Captación selectiva','Exocitosis','Tráfico vesicular','Sinapsis','Infección celular'],
   'biocel_06_entorno_celular.png': ['Dominio apical','Dominio lateral','Dominio basal','Membrana basal','Matriz extracelular','Adhesión celular'],
   'biocel_07_nucleo_cromatina_adn.png': ['Envoltura nuclear','Cromatina','Cromosomas','Genoma','Replicación del ADN','Estabilidad genética'],
-  'biocel_08_transcripcion_arn.png': ['Transcripción','Regulación','Maduración','Tipos de ARN','Nucleólo','Salida al citoplasma'],
+  'biocel_08_transcripcion_arn.png': ['Transcripción','Regulación','Maduración','Tipos de ARN','Nucléolo','Salida al citoplasma'],
   'biocel_09_sintesis_proteinas.png': ['Transcripción','Código genético','Ribosoma','ARNt','Traducción','Destino de la proteína'],
   'biocel_10_endomembranas.png': ['Retículo rugoso','Retículo liso','Aparato de Golgi','Vesículas','Lisosomas','Ruta secretora'],
   'biocel_11_mitocondrias_peroxisomas.png': ['Estructura mitocondrial','Energía','ADN mitocondrial','Estrés oxidativo','Apoptosis','Peroxisomas'],
