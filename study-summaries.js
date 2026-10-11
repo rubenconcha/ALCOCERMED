@@ -5,15 +5,18 @@
         { subject: 'Biología celular', topic: 'Capítulo 2', title: 'Cómo se estudian las células', pages: 7, file: 'biologia-capitulo-2', kind: 'bio' },
         { subject: 'Biología celular', topic: 'Capítulo 3', title: 'Estructura de la membrana plasmática', pages: 6, file: 'biologia-capitulo-3', kind: 'bio' },
         { subject: 'Biología celular', topic: 'Capítulo 4', title: 'Microtransporte a través de la membrana plasmática', pages: 8, file: 'biologia-capitulo-4', kind: 'bio' },
+        { subject: 'Biología celular', topic: 'Capítulo 5', title: 'Macrotransporte a través de la membrana plasmática', pages: 8, file: 'biologia-capitulo-5', kind: 'bio' },
         { subject: 'Educación para la Salud', topic: 'Tema 1', title: 'Evolución del concepto de salud', pages: 2, file: 'educacion-salud-tema-1', kind: 'salud' },
         { subject: 'Educación para la Salud', topic: 'Tema 2', title: 'Determinantes de la salud', pages: 2, file: 'educacion-salud-tema-2', kind: 'salud' },
         { subject: 'Educación para la Salud', topic: 'Tema 3', title: 'Salud pública', pages: 1, file: 'educacion-salud-tema-3', kind: 'salud' },
         { subject: 'Educación para la Salud', topic: 'Tema 4', title: 'Enfoques y paradigmas de intervención en salud', pages: 2, file: 'educacion-salud-tema-4', kind: 'salud' },
+        { subject: 'Educación para la Salud', topic: 'Tema 5', title: 'Bases normativas y políticas internacionales', pages: 2, file: 'educacion-salud-tema-5', kind: 'salud' },
         { subject: 'Morfofunción', topic: 'Tema 1', title: 'Temas principales de anatomía y fisiología', pages: 8, file: 'morfofuncion-tema-1', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 2', title: 'La química de la vida', pages: 8, file: 'morfofuncion-tema-2', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 3', title: 'Forma y función celulares', pages: 8, file: 'morfofuncion-tema-3', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 4', title: 'Genética y función celular', pages: 8, file: 'morfofuncion-tema-4', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 5', title: 'Histología', pages: 8, file: 'morfofuncion-tema-5', kind: 'morfo' },
+        { subject: 'Morfofunción', topic: 'Tema 6', title: 'El sistema tegumentario', pages: 8, file: 'morfofuncion-tema-6', kind: 'morfo' },
     ];
 
     const grid = document.getElementById('resumenes-grid');
