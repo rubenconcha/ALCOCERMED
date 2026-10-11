@@ -18,7 +18,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=29">
+    <link rel="stylesheet" href="styles.css?v=35">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
@@ -1264,29 +1264,34 @@
 
         </section>
 
-        <!-- Lightbox mapa mental -->
-        <div id="mm-lightbox" class="mm-lightbox hidden" onclick="closeMmLightbox(event)">
-            <button class="mm-lb-close" onclick="closeMmLightbox()"><i class="fas fa-times"></i></button>
-            <div class="mm-lb-inner">
-                <img id="mm-lb-img" src="" alt="Mapa mental" class="mm-lb-img">
-                <div class="mm-lb-info">
-                    <span class="mm-lb-materia" id="mm-lb-materia"></span>
-                    <h3 class="mm-lb-title" id="mm-lb-title"></h3>
-                    <p class="mm-lb-desc" id="mm-lb-desc"></p>
-                    <a id="mm-lb-download" href="" target="_blank" class="mm-lb-download">
-                        <i class="fas fa-download"></i> descargar imagen
-                    </a>
-                </div>
-            </div>
-        </div>
-
     </main>
+
+    <!-- Lector de mapas a pantalla completa -->
+    <div id="mm-lightbox" class="mm-lightbox hidden" role="dialog" aria-modal="true" aria-labelledby="mm-lb-title">
+        <div class="mm-lb-toolbar">
+            <div class="mm-lb-heading"><span class="mm-lb-materia" id="mm-lb-materia"></span><h3 class="mm-lb-title" id="mm-lb-title"></h3></div>
+            <div class="mm-lb-actions"><button id="mm-lb-download" type="button" class="mm-lb-download" disabled>Descargar mapa</button><button class="mm-lb-close" type="button" onclick="closeMmLightbox()" aria-label="Cerrar mapa">×</button></div>
+        </div>
+        <div class="mm-branch-bar" aria-label="Controles de las ramas">
+            <div class="mm-tool-group mm-zoom-group" aria-label="Zoom del mapa"><button id="mm-zoom-out" type="button" title="Alejar" aria-label="Alejar">−</button><span id="mm-zoom-value">100%</span><button id="mm-zoom-in" type="button" title="Acercar" aria-label="Acercar">+</button><button id="mm-zoom-center" type="button">Centrar</button><button id="mm-true-fullscreen" type="button">Pantalla completa</button></div>
+            <span id="mm-branch-count" class="mm-branch-count" aria-live="polite">0 de 6 ramas abiertas</span>
+            <div id="mm-branch-shortcuts" class="mm-branch-shortcuts"></div>
+            <button id="mm-branch-all" class="mm-branch-all" type="button">Mostrar todas</button>
+            <button id="mm-branch-none" class="mm-branch-all" type="button">Cerrar todas</button>
+        </div>
+        <div class="mm-lb-stage" onclick="closeMmLightbox(event)">
+            <div class="mm-lb-figure"><img id="mm-lb-img" src="" alt="Mapa mental" class="mm-lb-img"><span class="mm-lb-watermark" aria-hidden="true">PREPA BEN CARSON</span></div>
+            <div id="mm-tree" class="mm-tree" aria-label="Mapa mental interactivo"></div>
+            <p id="mm-lb-status" class="mm-lb-status" role="status">Cargando mapa…</p>
+        </div>
+    </div>
 
     <dialog id="mm-unlock-dialog" class="mm-unlock-dialog" aria-labelledby="mm-unlock-title" onclick="if (event.target === this) closeMmUnlockDialog()">
         <div class="mm-unlock-panel">
             <button type="button" class="mm-unlock-close" onclick="closeMmUnlockDialog()" aria-label="Cerrar vista previa"><i class="fas fa-times" aria-hidden="true"></i></button>
             <div class="mm-unlock-art" aria-hidden="true">
                 <img id="mm-unlock-image" src="" alt="">
+                <span class="mm-unlock-watermark">PREPA BEN CARSON</span>
                 <span><i class="fas fa-lock" aria-hidden="true"></i> Vista previa</span>
             </div>
             <div class="mm-unlock-content">
@@ -1304,6 +1309,8 @@
     <script src="device_guard.js?v=4"></script>
     <script src="campus-access.js?v=8"></script>
     <script src="script.js?v=41"></script>
+    <script src="mindmap-branch-labels.js?v=2"></script>
+    <script src="mindmap-viewer.js?v=6"></script>
     <script src="intocables-hub.js?v=1"></script>
     <script src="simulacro-ingreso.js?v=1"></script>
     <script src="student-library.js?v=8"></script>

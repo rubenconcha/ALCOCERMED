@@ -3991,6 +3991,7 @@ function renderMmGrid() {
                 ? '<img src="' + safePreviewUrl + '"' + fallbackAttr + ' alt="' + (locked ? '' : safeTitle) + '"' + loadingAttr + ' decoding="async" class="mm-card-img' + (locked ? ' mm-card-img-locked' : '') + '" onerror="fallbackMmPreview(this)">' +
                 '<div class="mm-card-img-placeholder" style="display:none"><i class="fas fa-project-diagram"></i></div>'
                 : '<div class="mm-card-img-placeholder"><i class="fas fa-project-diagram"></i></div>') +
+            (urlImg ? '<span class="mm-card-watermark" aria-hidden="true">PREPA BEN CARSON</span>' : '') +
             (locked ? '<span class="mm-preview-scrim" aria-hidden="true"><span class="mm-preview-label"><i class="fas fa-lock"></i> Vista previa</span></span>' : '<div class="mm-zoom-overlay"><i class="fas fa-expand"></i></div>') +
             '</div>' +
             '<div class="mm-card-body">' +
