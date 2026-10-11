@@ -67,4 +67,24 @@ for (const id of ['0e799f9f-4d1b-2aec-a58a-18da85ea4359', '2fe32dbc-9da5-dbe8-35
   assert.equal(context.getQuizQuestionImage({ id, opciones: [] }, 'dnd'), art.src);
 }
 
+const saludImport = fs.readFileSync(path.join(root, 'juegos/SUPABASE_IMPORT_SALUD_PUBLICA_PARCIAL_1_2_30_POR_TEMA.sql'), 'utf8');
+const saludFirstTopic = saludImport.slice(0, saludImport.indexOf('insert into public.evaluaciones (', saludImport.indexOf('insert into public.evaluaciones (') + 1));
+const saludQuestionIds = [...saludFirstTopic.matchAll(/\(\s*'([0-9a-f-]{36})',\s*'db08a86a-11bd-52e4-ce09-f2b744dad5d9'/g)].map((match) => match[1]);
+assert.equal(saludQuestionIds.length, 30, 'el primer tema de Salud debe contener 30 preguntas');
+for (const id of saludQuestionIds) {
+  assert(context.window.premiumGameImages[id], `${id}: falta una imagen específica de Salud`);
+}
+for (const [id, count] of Object.entries({
+  '813370fb-850e-5be3-c117-3cc97e3cd903': 6,
+  '54a5a1b9-61cf-58b9-cb37-b02c3dbda08b': 6,
+  '4a0bcbdc-f613-5da2-c6f4-715d663952c6': 5,
+  '165263ac-3a14-5d31-c25e-396d83c49314': 6,
+  'da1067ce-2ce5-5c7c-c8f1-ebe62476fc68': 6,
+  '7689164e-da2e-5dda-cae1-d142f8956022': 6,
+})) {
+  const art = context.window.premiumGameImages[id];
+  assert.equal(art.pins.length, count, `${id}: cada etiqueta necesita su escena`);
+  assert.equal(new Set(art.pins.map(([x, y]) => `${x},${y}`)).size, count, `${id}: puntos superpuestos`);
+}
+
 console.log(`Juegos: ${Object.keys(context.window.premiumGameImages).length} preguntas con ilustraciones premium, incluidas las dos versiones de procariota.`);

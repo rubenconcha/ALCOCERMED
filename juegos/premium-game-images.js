@@ -428,5 +428,209 @@ window.premiumGameImages = {
         75
       ]
     ]
+  },
+  "4a0bcbdc-f613-5da2-c6f4-715d663952c6": {
+    "src": "/juegos/assets/preguntas-premium/salud-5.webp",
+    "alt": "Salud colectiva, vacunación, rehabilitación, atención primaria y Carta de Ottawa en cinco escenas",
+    "prompt": "Relaciona cada escena con la intervención o documento de salud que representa.",
+    "pins": [
+      [
+        17,
+        25
+      ],
+      [
+        50,
+        25
+      ],
+      [
+        83,
+        25
+      ],
+      [
+        25,
+        75
+      ],
+      [
+        75,
+        75
+      ]
+    ]
+  },
+  "165263ac-3a14-5d31-c25e-396d83c49314": {
+    "src": "/juegos/assets/preguntas-premium/salud-etapas.webp",
+    "alt": "Carta de Ottawa, determinantes sociales, atención primaria y tres niveles de prevención",
+    "prompt": "Relaciona cada escena de salud pública con su concepto correspondiente.",
+    "pins": [
+      [
+        17,
+        25
+      ],
+      [
+        50,
+        25
+      ],
+      [
+        83,
+        25
+      ],
+      [
+        17,
+        75
+      ],
+      [
+        50,
+        75
+      ],
+      [
+        83,
+        75
+      ]
+    ]
+  },
+  "da1067ce-2ce5-5c7c-c8f1-ebe62476fc68": {
+    "src": "/juegos/assets/preguntas-premium/salud-etiquetas.webp",
+    "alt": "Promoción de salud, vacunación, tamizaje, rehabilitación, prevención cuaternaria y atención primaria",
+    "prompt": "Relaciona las seis intervenciones de salud con sus conceptos.",
+    "pins": [
+      [
+        17,
+        25
+      ],
+      [
+        50,
+        25
+      ],
+      [
+        83,
+        25
+      ],
+      [
+        17,
+        75
+      ],
+      [
+        50,
+        75
+      ],
+      [
+        83,
+        75
+      ]
+    ]
+  },
+  "7689164e-da2e-5dda-cae1-d142f8956022": {
+    "src": "/juegos/assets/preguntas-premium/salud-practica.webp",
+    "alt": "Vacunación, tamizaje, rehabilitación, decisión clínica prudente, atención primaria y determinantes sociales",
+    "prompt": "Identifica en cada escena el nivel de prevención o el enfoque de salud.",
+    "pins": [
+      [
+        17,
+        25
+      ],
+      [
+        50,
+        25
+      ],
+      [
+        83,
+        25
+      ],
+      [
+        17,
+        75
+      ],
+      [
+        50,
+        75
+      ],
+      [
+        83,
+        75
+      ]
+    ]
+  },
+  "e4cf3ad1-0185-58d7-c747-2eeac712d9cc": {
+    "src": "/juegos/assets/preguntas-premium/prevencion-secundaria.webp",
+    "alt": "Prueba de tamizaje para detectar un problema de salud tempranamente"
+  },
+  "9ef28b26-2d2f-5dc6-cb49-6d7e3a397202": {
+    "src": "/juegos/assets/preguntas-premium/prevencion-secundaria.webp",
+    "alt": "Prueba de tamizaje para detectar un problema de salud tempranamente"
+  },
+  "c8433e16-1a32-5507-cc1a-e89e0a35b8b7": {
+    "src": "/juegos/assets/preguntas-premium/prevencion-terciaria.webp",
+    "alt": "Rehabilitación funcional después de una enfermedad establecida"
+  },
+  "9e55f88c-68a7-51af-ca63-a8bb01626035": {
+    "src": "/juegos/assets/preguntas-premium/prevencion-terciaria.webp",
+    "alt": "Rehabilitación funcional después de una enfermedad establecida"
+  },
+  "87a65c31-d7dd-511c-cc58-71df7489c310": {
+    "src": "/juegos/assets/preguntas-premium/prevencion-cuaternaria.webp",
+    "alt": "Médica y paciente evitan una prueba innecesaria mediante una decisión compartida"
+  },
+  "90194595-dd5c-5ea5-c7a0-52c15d4b0ad9": {
+    "src": "/juegos/assets/preguntas-premium/prevencion-cuaternaria.webp",
+    "alt": "Médica y paciente evitan una prueba innecesaria mediante una decisión compartida"
+  },
+  "3fa6e740-9fae-5479-cd70-666d7ab038b6": {
+    "src": "/juegos/assets/preguntas-premium/atencion-primaria-salud.webp",
+    "alt": "Atención integral a una familia en un centro de salud de su comunidad"
+  },
+  "a33b3170-faec-5864-c3d9-fdd89d34406d": {
+    "src": "/juegos/assets/preguntas-premium/atencion-primaria-salud.webp",
+    "alt": "Atención integral a una familia en un centro de salud de su comunidad"
+  },
+  "8244840d-0b51-5771-cd63-f4974d3735ba": {
+    "src": "/juegos/assets/preguntas-premium/determinantes-sociales.webp",
+    "alt": "Familia, agua potable, escuela, transporte, trabajo y alimentación en un barrio"
+  },
+  "66d24cfd-8254-5d19-cb98-ccb31b5145ab": {
+    "src": "/juegos/assets/preguntas-premium/determinantes-sociales.webp",
+    "alt": "Familia, agua potable, escuela, transporte, trabajo y alimentación en un barrio"
+  },
+  "0294bd09-6b17-5ca2-c42f-a56cfc1aaaf4": {
+    "src": "/juegos/assets/preguntas-premium/carta-ottawa.webp",
+    "alt": "Delegados internacionales acuerdan una carta de promoción de la salud en Ottawa"
+  },
+  "1018ced3-48c9-577d-c468-0a4a1037c0e0": {
+    "src": "/juegos/assets/preguntas-premium/carta-ottawa.webp",
+    "alt": "Delegados internacionales acuerdan una carta de promoción de la salud en Ottawa"
+  },
+  "30936162-a192-5cbe-c514-ed6779d69eab": {
+    "src": "/juegos/assets/preguntas-premium/demo-salud-prevencion.webp",
+    "alt": "Ejemplos visuales de salud pública, promoción y prevención"
+  },
+  "84138439-7471-5249-c3f9-137d2afc3900": {
+    "src": "/juegos/assets/preguntas-premium/demo-salud-prevencion.webp",
+    "alt": "Ejemplos visuales de salud pública, promoción y prevención"
+  },
+  "b1c8bc42-1354-547a-c4a0-1c0ffe96eb35": {
+    "src": "/juegos/assets/preguntas-premium/demo-salud-aplicaciones.webp",
+    "alt": "Tamizaje, rehabilitación, atención primaria y determinantes sociales"
+  },
+  "5e8e2eda-b2fa-53c8-c677-934499fffec4": {
+    "src": "/juegos/assets/preguntas-premium/demo-salud-aplicaciones.webp",
+    "alt": "Tamizaje, rehabilitación, atención primaria y determinantes sociales"
+  },
+  "62fa6389-1f81-53c7-c083-5417afd2ddd9": {
+    "src": "/juegos/assets/preguntas-premium/salud-etiquetas.webp",
+    "alt": "Vacunación, prevención cuaternaria y documento de promoción de salud"
+  },
+  "57086d91-ab89-5d6d-c5e3-a2c2e3894ae5": {
+    "src": "/juegos/assets/preguntas-premium/salud-practica.webp",
+    "alt": "Salud colectiva, rehabilitación y Carta de Ottawa en contexto"
+  },
+  "1dabb1e5-303c-547c-c108-88dafcce0e1d": {
+    "src": "/juegos/assets/preguntas-premium/salud-colectiva.webp",
+    "alt": "Equipo de salud y vecinos en una acción comunitaria"
+  },
+  "7b477dc7-6dc3-5f29-ca2d-4267dd93c969": {
+    "src": "/juegos/assets/preguntas-premium/promocion-salud.webp",
+    "alt": "Comunidad participando en decisiones de salud"
+  },
+  "9b77c510-5f69-551f-c6d1-4e153bbc9b2e": {
+    "src": "/juegos/assets/preguntas-premium/prevencion-primaria.webp",
+    "alt": "Vacunación antes de la aparición de una enfermedad"
   }
 };
