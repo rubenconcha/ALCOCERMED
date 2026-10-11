@@ -7,8 +7,8 @@ function renderQuizMatching(options) {
     }
     var html = '<div class="quiz-matching"><p>Relaciona cada elemento con su descripción.</p>';
     options.forEach(function(option, index) {
-        html += '<label class="quiz-match-row"><span>' + escapeHtml(option.text) + '</span><select class="quiz-match-select" aria-label="Relacionar ' + escapeHtml(option.text) + '" data-pair="' + index + '"><option value="">Elige una respuesta</option>';
-        order.forEach(function(k) { html += '<option value="' + k + '">' + escapeHtml(options[k].match) + '</option>'; });
+        html += '<label class="quiz-match-row"><span>' + escapeHtml(formatQuizCopy(option.text, 'option')) + '</span><select class="quiz-match-select" aria-label="Relacionar ' + escapeHtml(formatQuizCopy(option.text, 'option')) + '" data-pair="' + index + '"><option value="">Elige una respuesta</option>';
+        order.forEach(function(k) { html += '<option value="' + k + '">' + escapeHtml(formatQuizCopy(options[k].match, 'option')) + '</option>'; });
         html += '</select></label>';
     });
     return html + '<button class="login-btn" id="quiz-confirm-match" onclick="confirmQuizMatching()">Enviar relaciones</button><p id="quiz-match-error" role="alert"></p></div>';
@@ -19,7 +19,7 @@ function matchingAnswersCorrect(selections, options) {
 function renderMatchingReview(question, answer) {
     return '<div class="quiz-matching">' + question.opciones.map(function(option, i) {
         var selected = answer && Array.isArray(answer.seleccionada) && question.opciones[Number(answer.seleccionada[i])];
-        return '<div class="quiz-match-row"><strong>' + escapeHtml(option.text) + '</strong><span>Tu respuesta: ' + escapeHtml(selected ? selected.match : 'Sin responder') + '</span><span>Respuesta correcta: ' + escapeHtml(option.match) + '</span></div>';
+        return '<div class="quiz-match-row"><strong>' + escapeHtml(formatQuizCopy(option.text, 'option')) + '</strong><span>Tu respuesta: ' + escapeHtml(formatQuizCopy(selected ? selected.match : 'Sin responder', 'option')) + '</span><span>Respuesta correcta: ' + escapeHtml(formatQuizCopy(option.match, 'option')) + '</span></div>';
     }).join('') + '</div>';
 }
 function confirmQuizMatching() {
@@ -41,7 +41,7 @@ function confirmQuizMatching() {
         control.disabled = true;
         control.style.borderColor = Number(answers[i]) === i ? '#22c55e' : '#ef4444';
         var feedback = document.createElement('small');
-        feedback.textContent = 'Respuesta: ' + question.opciones[i].match;
+        feedback.textContent = 'Respuesta: ' + formatQuizCopy(question.opciones[i].match, 'option');
         control.parentNode.appendChild(feedback);
     });
     document.getElementById('quiz-confirm-match').hidden = true;

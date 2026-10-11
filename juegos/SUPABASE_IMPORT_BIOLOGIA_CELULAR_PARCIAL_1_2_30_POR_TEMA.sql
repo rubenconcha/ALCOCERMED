@@ -20,23 +20,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '601b9a75-345b-5de9-bd63-00da7fdf67ee',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
-  'La teoria celular establece que la celula es:',
-  '[{"text":"La unidad estructural y funcional de los seres vivos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Un organulo membranoso","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Un virus complejo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Una proteina catalitica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'La teoría celular establece que la célula es:',
+  '[{"text":"La unidad estructural y funcional de los seres vivos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Un orgánulo membranoso","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Un virus complejo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Una proteína catalítica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
   '292fea5d-ca1a-5eef-b886-55ee9b5351af',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
-  'Una celula procariota se caracteriza por:',
-  '[{"text":"Poseer nucleolo complejo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Tener mitocondrias","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Presentar RER","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Carecer de nucleo delimitado por envoltura","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'Una célula procariota se caracteriza por:',
+  '[{"text":"Poseer nucléolo complejo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Tener mitocondrias","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Presentar RER","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Carecer de núcleo delimitado por envoltura","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   '10ab6dbf-b090-53ce-b612-c56dda7c2824',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
-  'Una celula eucariota se diferencia por:',
+  'Una célula eucariota se diferencia por:',
   '[{"text":"Carecer de ribosomas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Ser siempre bacteriana","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Compartimentos membranosos internos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Ausencia total de ADN","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
@@ -45,7 +45,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
   'El ADN almacena principalmente:',
-  '[{"text":"Enzimas lisosomales","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Informacion genetica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Energia inmediata","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Lipid rafts","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  '[{"text":"Enzimas lisosomales","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Información genética","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Energía inmediata","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Lipid rafts","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
@@ -53,15 +53,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
   'El ARN puede participar en:',
-  '[{"text":"Expresion de la informacion genetica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Formar bicapa lipidica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Dar rigidez osea","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Oxidar acidos grasos siempre","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  '[{"text":"Expresión de la información genética","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Formar bicapa lipídica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Dar rigidez ósea","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Oxidar ácidos grasos siempre","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
   'd248e289-f0e8-5cb6-b6c6-e2188226b542',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
-  'Un virus necesita celulas porque:',
-  '[{"text":"Tiene mitocondrias propias","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Posee ribosomas completos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Es una celula eucariota","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"No realiza por si solo todo el metabolismo reproductivo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'Un virus necesita células porque:',
+  '[{"text":"Tiene mitocondrias propias","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Posee ribosomas completos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Es una célula eucariota","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"No realiza por si solo todo el metabolismo reproductivo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
@@ -69,15 +69,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
   'Los priones son:',
-  '[{"text":"Bacterias pequenas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Lisosomas defectuosos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Proteinas infecciosas mal plegadas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"ADN circular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  '[{"text":"Bacterias pequenas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Lisosomas defectuosos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Proteínas infecciosas mal plegadas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"ADN circular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
   'a37e37be-9471-565a-b9a0-6ec6fc063ebc',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
-  'Un modelo biologico se usa para:',
-  '[{"text":"Evitar hipotesis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Estudiar procesos conservados en sistemas manejables","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Sustituir todo experimento","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Eliminar controles","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'Un modelo biológico se usa para:',
+  '[{"text":"Evitar hipótesis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Estudiar procesos conservados en sistemas manejables","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Sustituir todo experimento","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Eliminar controles","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
@@ -85,23 +85,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
   'Las bacterias son utiles como modelos porque:',
-  '[{"text":"Crecen rapido y son manipulables geneticamente","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Carecen siempre de ADN","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Tienen nucleolo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"No tienen membrana","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  '[{"text":"Crecen rapido y son manipulables geneticamente","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Carecen siempre de ADN","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Tienen nucléolo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"No tienen membrana","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   '6176e8b1-2d77-5880-b4b0-833891c5957f',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
-  'La biologia celular biomedica relaciona:',
-  '[{"text":"Solo taxonomia vegetal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo anatomia macroscopica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo meteorologia","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Estructura celular con salud y enfermedad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'La biología celular biomedica relaciona:',
+  '[{"text":"Solo taxonomia vegetal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo anatomía macroscópica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo meteorología","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Estructura celular con salud y enfermedad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   '99e5ba20-e484-5148-b3cf-418855e8d935',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
-  'La membrana plasmatica cumple:',
-  '[{"text":"Producir ATP siempre","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Ser el nucleolo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Separar y comunicar celula con entorno","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Guardar cromosomas exclusivamente","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'La membrana plasmática cumple:',
+  '[{"text":"Producir ATP siempre","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Ser el nucléolo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Separar y comunicar célula con entorno","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Guardar cromosomas exclusivamente","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
@@ -109,14 +109,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
   'El citoplasma eucariota contiene:',
-  '[{"text":"Solo pared bacteriana","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Citosol, organulos y citoesqueleto","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo ADN nuclear","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo plasma sanguineo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  '[{"text":"Solo pared bacteriana","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Citosol, orgánulos y citoesqueleto","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo ADN nuclear","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo plasma sanguineo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   'cbd26dda-6172-58f0-b158-74f2093bde05',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
-  'El nucleo eucariota contiene:',
+  'El núcleo eucariota contiene:',
   '[{"text":"ADN organizado en cromatina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Lisosomas primarios","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Caveolas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"ATP sintasa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
@@ -125,7 +125,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
   'La homeostasis celular requiere:',
-  '[{"text":"Aislamiento absoluto","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Ausencia de energia","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"No expresar genes","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Control de intercambio y respuesta al entorno","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  '[{"text":"Aislamiento absoluto","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Ausencia de energía","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"No expresar genes","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Control de intercambio y respuesta al entorno","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
@@ -133,39 +133,39 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
   'Un gen se expresa cuando:',
-  '[{"text":"Se elimina la membrana","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Se bloquea todo ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Su informacion contribuye a producir ARN o proteina funcional","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Se destruye el cromosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  '[{"text":"Se elimina la membrana","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Se bloquea todo ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Su información contribuye a producir ARN o proteína funcional","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Se destruye el cromosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   '9b8547c8-c185-5795-b868-47de442b550d',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
-  'Una proteina puede actuar como:',
-  '[{"text":"Solo acido nucleico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Enzima, receptor, transportador o estructura","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo material genetico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo lipido de membrana","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'Una proteína puede actuar como:',
+  '[{"text":"Solo ácido nucleico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Enzima, receptor, transportador o estructura","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo material genético","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Solo lípido de membrana","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   'b02971c9-38cc-538a-bb0c-b314dc6ae96b',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
-  'La evolucion celular se apoya en:',
-  '[{"text":"Conservacion y variacion de mecanismos moleculares","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Ausencia de mutaciones","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Inmovilidad genetica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"No seleccion natural","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'La evolución celular se apoya en:',
+  '[{"text":"Conservación y variación de mecanismos moleculares","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Ausencia de mutaciones","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Inmovilidad genética","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"No selección natural","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   '882bb4f9-ea7e-5eca-b531-cb92a8569966',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'mc',
-  'La comparacion procariota-eucariota ayuda a:',
-  '[{"text":"Eliminar la teoria celular","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Probar que virus son celulas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Negar el ADN","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Entender organizacion y complejidad celular","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'La comparación procariota-eucariota ayuda a:',
+  '[{"text":"Eliminar la teoría celular","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Probar que virus son células","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Negar el ADN","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Entender organización y complejidad celular","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
   'b16d067c-1ab4-5515-b327-dd7fa40b4d86',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'ms',
-  'Selecciona componentes comunes de celulas.',
-  '[{"text":"Membrana plasmatica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Material genetico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Ribosomas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Citoplasma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Capside viral obligada","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'Selecciona componentes comunes de células.',
+  '[{"text":"Membrana plasmática","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Material genético","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Ribosomas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Citoplasma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Capside viral obligada","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -181,31 +181,31 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'ms',
   'Selecciona rasgos eucariotas.',
-  '[{"text":"Nucleo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Sistema de endomembranas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Mitocondrias","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Citoesqueleto organizado","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Nucleoide bacteriano","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  '[{"text":"Núcleo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Sistema de endomembranas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Mitocondrias","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Citoesqueleto organizado","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Nucleoide bacteriano","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
   '85f2b751-8a61-54b2-b8d5-25ac31f83c87',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'ms',
-  'Selecciona funciones de proteinas celulares.',
-  '[{"text":"Catalisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Transporte","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Recepcion de senales","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Soporte estructural","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Almacenar toda herencia por si solas","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'Selecciona funciones de proteínas celulares.',
+  '[{"text":"Catalisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Transporte","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Recepción de señales","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Soporte estructural","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Almacenar toda herencia por si solas","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
   'f2ff6cd6-e56c-56ac-b390-1e796f1a6d01',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'ms',
-  'Selecciona conceptos introductorios del capitulo.',
-  '[{"text":"Teoria celular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Modelos biologicos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Virus","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Priones","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'Selecciona conceptos introductorios.',
+  '[{"text":"Teoría celular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Modelos biologicos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Virus","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Priones","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
 (
   'a643d1b7-10af-5d25-b50c-4f9a73b69120',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'ms',
-  'Selecciona niveles de informacion biologica.',
-  '[{"text":"ADN","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"ARN","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Proteina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Caveola como acido nucleico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
+  'Selecciona niveles de información biológica.',
+  '[{"text":"ADN","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"ARN","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Proteína","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"},{"text":"Caveola como ácido nucleico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -213,15 +213,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'dnd',
   'Relaciona conceptos introductorios.',
-  '[{"text":"Teoria celular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":15,"pinY":36},{"text":"Procariota","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":33,"pinY":36},{"text":"Eucariota","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":51,"pinY":36},{"text":"Virus","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":69,"pinY":36},{"text":"Prion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":85,"pinY":36},{"text":"ADN","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":22,"pinY":67}]'::jsonb,
+  '[{"text":"Teoría celular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":15,"pinY":36},{"text":"Procariota","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":33,"pinY":36},{"text":"Eucariota","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":51,"pinY":36},{"text":"Virus","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":69,"pinY":36},{"text":"Prion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":85,"pinY":36},{"text":"ADN","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
   '3e85e5eb-959b-52c9-bff7-2ab8bee08031',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'dnd',
-  'Relaciona celula y material genetico.',
-  '[{"text":"Procariota","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":33,"pinY":36},{"text":"Nucleoide","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":33,"pinY":46},{"text":"Eucariota","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":51,"pinY":36},{"text":"Nucleo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":51,"pinY":46},{"text":"ADN","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":22,"pinY":67}]'::jsonb,
+  'Relaciona célula y material genético.',
+  '[{"text":"Procariota","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":33,"pinY":36},{"text":"Nucleoide","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":33,"pinY":46},{"text":"Eucariota","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":51,"pinY":36},{"text":"Núcleo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":51,"pinY":46},{"text":"ADN","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -229,15 +229,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'dnd',
   'Relaciona agentes acelulares.',
-  '[{"text":"Virus","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":69,"pinY":36},{"text":"Capside","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":69,"pinY":46},{"text":"Prion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":85,"pinY":36},{"text":"Proteina mal plegada","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":85,"pinY":46},{"text":"ARN viral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":58,"pinY":67}]'::jsonb,
+  '[{"text":"Virus","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":69,"pinY":36},{"text":"Capside","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":69,"pinY":46},{"text":"Prion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":85,"pinY":36},{"text":"Proteína mal plegada","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":85,"pinY":46},{"text":"ARN viral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":58,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
   '39958698-856b-5669-b2a0-cccb55b12d14',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'dnd',
-  'Relaciona flujo general de informacion.',
-  '[{"text":"ADN","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":22,"pinY":67},{"text":"ARN","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":40,"pinY":67},{"text":"Proteina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":58,"pinY":67},{"text":"Funcion celular","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":76,"pinY":67},{"text":"Fenotipo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":85,"pinY":50}]'::jsonb,
+  'Relaciona flujo general de información.',
+  '[{"text":"ADN","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":22,"pinY":67},{"text":"ARN","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":40,"pinY":67},{"text":"Proteína","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":58,"pinY":67},{"text":"Función celular","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":76,"pinY":67},{"text":"Fenotipo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":85,"pinY":50}]'::jsonb,
   false, 27, 1, 75
 ),
 (
@@ -252,8 +252,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '8fbb3be5-d58e-5f1d-b9bf-288d10c29187',
   '90d8fca4-6e57-5d53-b7d6-2dbc987df7d9',
   'dnd',
-  'Relaciona organizacion celular.',
-  '[{"text":"Membrana","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":15,"pinY":36},{"text":"Citoplasma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":51,"pinY":36},{"text":"Nucleo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":51,"pinY":46},{"text":"Organulos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":58,"pinY":67},{"text":"Citoesqueleto","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":76,"pinY":67}]'::jsonb,
+  'Relaciona organización celular.',
+  '[{"text":"Membrana","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":15,"pinY":36},{"text":"Citoplasma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":51,"pinY":36},{"text":"Núcleo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":51,"pinY":46},{"text":"Orgánulos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":58,"pinY":67},{"text":"Citoesqueleto","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg","pinX":76,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -274,7 +274,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'cedc6bfe-450a-5fcb-bb1e-448e6eb70c85',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
-  'La microscopia optica usa principalmente:',
+  'La microscopía óptica usa principalmente:',
   '[{"text":"Luz visible y lentes","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Electrones solamente","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"PCR","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Anticuerpos primarios","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
@@ -282,16 +282,16 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'deaf69a0-a4ff-5768-bc14-34a8dddd73cb',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
-  'La microscopia electronica permite:',
-  '[{"text":"Menor resolucion que ojo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Amplificar ADN","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Medir fluorescencia soluble","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Mayor resolucion ultraestructural","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  'La microscopía electrónica permite:',
+  '[{"text":"Menor resolución que ojo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Amplificar ADN","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Medir fluorescencia soluble","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Mayor resolución ultraestructural","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   '51d675b9-73a4-5cc9-bb23-2087210be822',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
-  'La fijacion de muestras busca:',
-  '[{"text":"Mover organulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Activar mitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Preservar estructuras celulares","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Degradar acidos nucleicos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  'La fijación de muestras busca:',
+  '[{"text":"Mover orgánulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Activar mitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Preservar estructuras celulares","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Degradar ácidos nucleicos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
@@ -299,31 +299,31 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
   'La PCR sirve para:',
-  '[{"text":"Ver mitocondrias en vivo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Amplificar secuencias de ADN","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Separar organulos por densidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Medir antigenos con enzimas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  '[{"text":"Ver mitocondrias en vivo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Amplificar secuencias de ADN","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Separar orgánulos por densidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Medir antigenos con enzimas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
   '322f0b43-ef86-53a9-bc05-4d48310ef1dd',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
-  'La electroforesis separa acidos nucleicos por:',
-  '[{"text":"Tamano y carga","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Color celular","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Actividad motora","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"pH lisosomal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  'La electroforesis separa ácidos nucleicos por:',
+  '[{"text":"Tamaño y carga","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Color celular","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Actividad motora","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"pH lisosomal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
   'cb2fe2d0-d72e-528f-b0af-c05e5656c94c',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
-  'La secuenciacion de ADN determina:',
-  '[{"text":"Masa de organulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Velocidad de endocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Numero de caveolas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Orden de nucleotidos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  'La secuenciación de ADN determina:',
+  '[{"text":"Masa de orgánulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Velocidad de endocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Número de caveolas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Orden de nucleotidos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
   '4448f6f2-4044-5fe7-b888-f0db7a35859e',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
-  'La hibridacion in situ permite:',
-  '[{"text":"Medir ATP directo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Eliminar cromatina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Localizar secuencias de acidos nucleicos en celulas o tejidos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Romper todas las membranas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  'La hibridación in situ permite:',
+  '[{"text":"Medir ATP directo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Eliminar cromatina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Localizar secuencias de ácidos nucleicos en células o tejidos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Romper todas las membranas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
@@ -331,7 +331,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
   'ELISA se basa en:',
-  '[{"text":"Mitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Union antigeno-anticuerpo y deteccion enzimatica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Centrifugacion diferencial","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Difusion simple","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  '[{"text":"Mitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Unión antigeno-anticuerpo y detección enzimatica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Centrifugación diferencial","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Difusión simple","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
@@ -339,7 +339,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
   'La citometria de flujo analiza:',
-  '[{"text":"Celulas individuales en suspension","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo tejidos incluidos en parafina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Un unico gel de ADN","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo organulos fijos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  '[{"text":"Células individuales en suspensión","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo tejidos incluidos en parafina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Un único gel de ADN","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo orgánulos fijos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
@@ -347,15 +347,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
   'El cultivo celular permite:',
-  '[{"text":"Evitar nutrientes","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Impedir division siempre","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Eliminar controles","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Mantener celulas en condiciones controladas","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  '[{"text":"Evitar nutrientes","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Impedir división siempre","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Eliminar controles","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Mantener células en condiciones controladas","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   '69984a9f-9020-54b0-bdbc-053552803526',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
-  'La centrifugacion diferencial separa:',
-  '[{"text":"Proteinas por codon","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Receptores por ligando","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Componentes por tamano y densidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Genes por promotor","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  'La centrifugación diferencial separa:',
+  '[{"text":"Proteínas por codón","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Receptores por ligando","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Componentes por tamaño y densidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Genes por promotor","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
@@ -363,7 +363,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
   'Un anticuerpo monoclonal reconoce:',
-  '[{"text":"Solo lipidos sin especificidad","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Un epitopo especifico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Todos los antigenos al azar","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo ADN","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  '[{"text":"Solo lípidos sin especificidad","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Un epitopo especifico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Todos los antigenos al azar","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo ADN","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
@@ -371,7 +371,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
   'La inmunofluorescencia permite:',
-  '[{"text":"Detectar moleculas con anticuerpos marcados","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Amplificar ARN","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Crear animales knock out","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Medir presion osmotica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  '[{"text":"Detectar moléculas con anticuerpos marcados","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Amplificar ARN","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Crear animales knock out","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Medir presión osmótica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
@@ -379,7 +379,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
   'Un animal knock out tiene:',
-  '[{"text":"Todos sus genes duplicados","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Ausencia de celulas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo virus","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Un gen inactivado experimentalmente","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  '[{"text":"Todos sus genes duplicados","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Ausencia de células","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo virus","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Un gen inactivado experimentalmente","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
@@ -387,15 +387,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
   'Los microarrays estudian:',
-  '[{"text":"Un solo ion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Matriz extracelular solamente","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Expresion de muchos genes a la vez","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo forma celular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  '[{"text":"Un solo ion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Matriz extracelular solamente","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Expresión de muchos genes a la vez","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo forma celular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   '4e5aa591-5caa-52f1-b13d-7a429a92b2a3',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
-  'La terapia genica intenta:',
-  '[{"text":"Eliminar PCR","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Introducir o corregir material genetico con fin terapeutico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Bloquear toda expresion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Sustituir microscopia","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  'La terapia génica intenta:',
+  '[{"text":"Eliminar PCR","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Introducir o corregir material genético con fin terapéutico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Bloquear toda expresión","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Sustituir microscopía","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
@@ -403,14 +403,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
   'El fraccionamiento celular requiere:',
-  '[{"text":"Ruptura celular controlada y centrifugacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Celulas intactas sin romper","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo tincion H-E","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo anticuerpos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  '[{"text":"Ruptura celular controlada y centrifugación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Células intactas sin romper","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo tinción H-E","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Solo anticuerpos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   '74398344-f6b3-5876-b285-a2e6286897c2',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'mc',
-  'La cuantificacion de acidos nucleicos puede usar:',
+  'La cuantificación de ácidos nucleicos puede usar:',
   '[{"text":"Onda P","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Potencial de Nernst","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Absorbancia a 260 nm","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
@@ -418,23 +418,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'd61d8d45-60ca-52f2-bf12-ad60d09d7c83',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'ms',
-  'Selecciona tecnicas de microscopia.',
-  '[{"text":"Optica convencional","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Electronica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Fluorescencia","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"ELISA como microscopio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  'Selecciona técnicas de microscopía.',
+  '[{"text":"Óptica convencional","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Electrónica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Fluorescencia","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"ELISA como microscopio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
   '21063b24-6af8-5f47-b494-2728b3e1a649',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'ms',
-  'Selecciona tecnicas de ADN.',
-  '[{"text":"PCR","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Secuenciacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Hibridacion in situ","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Electroforesis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Fagocitosis","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  'Selecciona técnicas de ADN.',
+  '[{"text":"PCR","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Secuenciación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Hibridación in situ","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Electroforesis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Fagocitosis","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   'f099c1c3-2947-505b-b036-6d6f750d3666',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'ms',
-  'Selecciona tecnicas inmunologicas.',
+  'Selecciona técnicas inmunologicas.',
   '[{"text":"Anticuerpos monoclonales","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"ELISA","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Inmunofluorescencia","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Nernst","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
@@ -443,7 +443,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'ms',
   'Selecciona usos de cultivo celular.',
-  '[{"text":"Ensayo experimental","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Produccion biologica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Observacion de respuestas celulares","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Formar priones obligatoriamente","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  '[{"text":"Ensayo experimental","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Producción biológica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Observación de respuestas celulares","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Formar priones obligatoriamente","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -451,38 +451,38 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'ms',
   'Selecciona pasos generales de fraccionamiento.',
-  '[{"text":"Homogeneizacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Centrifugacion diferencial","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Obtencion de fracciones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Transcripcion nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  '[{"text":"Homogeneización","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Centrifugación diferencial","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Obtención de fracciones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Transcripción nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
 (
   '3550e672-2be8-555e-b5b1-e818cfcdf6ee',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'ms',
-  'Selecciona enfoques de genetica experimental.',
-  '[{"text":"ADN recombinante","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Transgenesis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Knock out","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Terapia genica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Exocitosis constitutiva","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
+  'Selecciona enfoques de genética experimental.',
+  '[{"text":"ADN recombinante","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Transgenesis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Knock out","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Terapia génica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"},{"text":"Exocitosis constitutiva","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
   'cdea344d-1dd6-5f90-beed-8d34a7bb945e',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'dnd',
-  'Relaciona tecnicas.',
-  '[{"text":"Microscopia optica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":13,"pinY":35},{"text":"Microscopia electronica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":32,"pinY":35},{"text":"PCR","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":50,"pinY":35},{"text":"Secuenciacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":69,"pinY":35},{"text":"Citometria","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":41,"pinY":67},{"text":"Centrifugacion","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":78,"pinY":67}]'::jsonb,
+  'Relaciona técnicas.',
+  '[{"text":"Microscopía óptica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":13,"pinY":35},{"text":"Microscopía electrónica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":32,"pinY":35},{"text":"PCR","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":50,"pinY":35},{"text":"Secuenciación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":69,"pinY":35},{"text":"Citometria","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":41,"pinY":67},{"text":"Centrifugación","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
   'ba6c9d3a-25a1-560d-beec-28be6d6d5b9a',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'dnd',
-  'Relaciona biologia molecular.',
-  '[{"text":"PCR","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":50,"pinY":35},{"text":"ADN molde","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":50,"pinY":45},{"text":"Secuenciacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":69,"pinY":35},{"text":"Nucleotidos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":69,"pinY":45},{"text":"Hibridacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":86,"pinY":35}]'::jsonb,
+  'Relaciona biología molecular.',
+  '[{"text":"PCR","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":50,"pinY":35},{"text":"ADN molde","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":50,"pinY":45},{"text":"Secuenciación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":69,"pinY":35},{"text":"Nucleotidos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":69,"pinY":45},{"text":"Hibridación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":86,"pinY":35}]'::jsonb,
   false, 25, 1, 75
 ),
 (
   '5688e93f-8915-58ce-be87-25dbb3e70323',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'dnd',
-  'Relaciona inmunodeteccion.',
+  'Relaciona inmunodetección.',
   '[{"text":"Antigeno","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":20,"pinY":67},{"text":"Anticuerpo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":32,"pinY":67},{"text":"ELISA","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":22,"pinY":67},{"text":"Fluorescencia","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":13,"pinY":35},{"text":"Citometria","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
@@ -491,15 +491,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'dnd',
   'Relaciona fraccionamiento.',
-  '[{"text":"Homogeneizado","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":58,"pinY":67},{"text":"Centrifugacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":78,"pinY":67},{"text":"Nucleo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":20,"pinY":40},{"text":"Mitocondria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":36,"pinY":45},{"text":"Microsomas","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":55,"pinY":50}]'::jsonb,
+  '[{"text":"Homogeneizado","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":58,"pinY":67},{"text":"Centrifugación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":78,"pinY":67},{"text":"Núcleo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":20,"pinY":40},{"text":"Mitocondria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":36,"pinY":45},{"text":"Microsomas","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":55,"pinY":50}]'::jsonb,
   false, 27, 1, 75
 ),
 (
   '8ee00116-a053-5b21-b7fd-4696bc68d2a9',
   '7b163c43-f925-5c44-bdd6-98f2b980add2',
   'dnd',
-  'Relaciona microscopia.',
-  '[{"text":"Optica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":13,"pinY":35},{"text":"Luz visible","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":13,"pinY":45},{"text":"Electronica","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":32,"pinY":35},{"text":"Electrones","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":32,"pinY":45},{"text":"Resolucion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":50,"pinY":50}]'::jsonb,
+  'Relaciona microscopía.',
+  '[{"text":"Óptica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":13,"pinY":35},{"text":"Luz visible","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":13,"pinY":45},{"text":"Electrónica","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":32,"pinY":35},{"text":"Electrones","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":32,"pinY":45},{"text":"Resolución","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap02_metodos_tecnicas.svg","pinX":50,"pinY":50}]'::jsonb,
   false, 28, 1, 75
 ),
 (
@@ -529,7 +529,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
   'El modelo de mosaico fluido propone:',
-  '[{"text":"Bicapa lipidica con proteinas moviles","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Sandwich rigido de proteina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Pared de celulosa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Cromatina condensada","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Bicapa lipídica con proteínas moviles","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Sandwich rigido de proteína","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Pared de celulosa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Cromatina condensada","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
@@ -537,7 +537,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
   'Los fosfolipidos son:',
-  '[{"text":"Solo hidrofobos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Solo proteicos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Acidos nucleicos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Anfipaticos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Solo hidrofobos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Solo proteicos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Ácidos nucleicos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Anfipáticos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
@@ -545,7 +545,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
   'El colesterol modula:',
-  '[{"text":"Splicing","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Transcripcion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Fluidez de membrana","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Codigo genetico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Splicing","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Transcripción","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Fluidez de membrana","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Codigo genético","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
@@ -560,7 +560,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '614bfe47-0c21-593f-b71e-7042d83f0c0c',
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
-  'Una proteina integral:',
+  'Una proteína integral:',
   '[{"text":"Se inserta en la bicapa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Esta siempre fuera de membrana","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Es ADN","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Es glucogeno","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
@@ -569,15 +569,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
   'El glucocaliz se ubica:',
-  '[{"text":"En matriz mitocondrial","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Dentro del nucleolo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"En ribosoma","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"En la cara extracelular","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"En matriz mitocondrial","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Dentro del nucléolo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"En ribosoma","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"En la cara extracelular","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
   '881914ae-aaa7-5ab0-bbf8-6d2d5c371d73',
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
-  'La asimetria de membrana significa:',
-  '[{"text":"Sin proteinas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Solo colesterol","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Diferente composicion en cada monocapa","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Ambas caras identicas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  'La asimetría de membrana significa:',
+  '[{"text":"Sin proteínas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Solo colesterol","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Diferente composición en cada monocapa","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Ambas caras identicas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
@@ -585,15 +585,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
   'La fluidez aumenta con:',
-  '[{"text":"Mas enlaces rigidos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Acidos grasos insaturados","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Saturacion extrema","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Baja temperatura siempre","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Más enlaces rigidos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Ácidos grasos insaturados","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Saturación extrema","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Baja temperatura siempre","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   '2703c010-b225-5bf2-bfe6-ecdbd32ce451',
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
-  'La temperatura de fusion se relaciona con:',
-  '[{"text":"Paso gel-fluido de lipidos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Inicio de mitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Activacion de PCR","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Coagulacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  'La temperatura de fusión se relaciona con:',
+  '[{"text":"Paso gel-fluido de lípidos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Inicio de mitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Activación de PCR","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Coagulación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
@@ -601,14 +601,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
   'Las glucoproteinas participan en:',
-  '[{"text":"Sintesis de ATP","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Replicacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Beta oxidacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Reconocimiento celular","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Síntesis de ATP","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Replicación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Beta oxidación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Reconocimiento celular","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   '9935decc-5714-59e6-b3ba-a28bed593c0e',
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
-  'Las proteinas perifericas se asocian:',
+  'Las proteínas perifericas se asocian:',
   '[{"text":"Dentro del ADN","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Como histonas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"A una cara de la membrana","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Atravesando siempre toda bicapa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
@@ -625,15 +625,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
   'La membrana mitocondrial interna tiene:',
-  '[{"text":"Alto contenido proteico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Solo glucidos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Ausencia de proteinas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Nucleosomas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Alto contenido proteico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Solo glucidos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Ausencia de proteínas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Nucleosomas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   'fb18b71c-d764-54c0-b910-dde66c5f48df',
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
-  'La movilidad lateral de lipidos apoya:',
-  '[{"text":"Rigidez absoluta","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Imposibilidad de difusion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Cristalizacion permanente","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Dinamismo del mosaico fluido","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  'La movilidad lateral de lípidos apoya:',
+  '[{"text":"Rigidez absoluta","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Imposibilidad de difusión","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Cristalización permanente","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Dinamismo del mosaico fluido","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
@@ -641,15 +641,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
   'La cubierta glucidica protege y participa en:',
-  '[{"text":"Degradacion proteasomal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Traduccion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Adhesion y reconocimiento","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Contraccion muscular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Degradación proteasomal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Traducción","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Adhesión y reconocimiento","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Contracción muscular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   'd98fd4b3-e981-5162-bec3-23d82215a279',
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
-  'Una proteina transmembrana puede funcionar como:',
-  '[{"text":"Peroxisoma","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Canal, receptor o transportador","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Histona nuclear","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Codon","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  'Una proteína transmembrana puede funcionar como:',
+  '[{"text":"Peroxisoma","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Canal, receptor o transportador","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Histona nuclear","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Codón","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
@@ -657,15 +657,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
   'La membrana es selectiva porque:',
-  '[{"text":"Su composicion regula paso molecular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Permite paso libre a todo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"No tiene lipidos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Es pared mineral","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Su composición regula paso molecular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Permite paso libre a todo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"No tiene lípidos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Es pared mineral","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   'd981bb87-5d31-530b-b44d-43695560dd5f',
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'mc',
-  'Los lipidos de membrana se organizan espontaneamente por:',
-  '[{"text":"Codigo genetico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Bomba Na-K","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Splicing","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Efecto hidrofobico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  'Los lípidos de membrana se organizan espontaneamente por:',
+  '[{"text":"Codigo genético","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Bomba Na-K","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Splicing","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Efecto hidrofóbico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -673,7 +673,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'ms',
   'Selecciona componentes de membrana.',
-  '[{"text":"Fosfolipidos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Colesterol","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Proteinas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Glucidos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Cromosomas","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Fosfolipidos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Colesterol","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Proteínas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Glucidos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Cromosomas","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -681,15 +681,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'ms',
   'Selecciona funciones del glucocaliz.',
-  '[{"text":"Proteccion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Reconocimiento","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Adhesion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Sintesis de ATP","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Protección","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Reconocimiento","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Adhesión","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Síntesis de ATP","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   '90240f46-33b4-5a0c-bf7c-b8a892922bc7',
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'ms',
-  'Selecciona tipos de proteinas de membrana.',
-  '[{"text":"Integrales","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Perifericas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Ancladas a lipidos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Histonas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  'Selecciona tipos de proteínas de membrana.',
+  '[{"text":"Integrales","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Perifericas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Ancladas a lípidos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Histonas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -697,7 +697,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'ms',
   'Selecciona factores de fluidez.',
-  '[{"text":"Temperatura","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Colesterol","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Insaturacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Longitud de cadenas","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Numero de intrones","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Temperatura","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Colesterol","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Insaturación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Longitud de cadenas","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Número de intrones","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -705,14 +705,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'ms',
   'Selecciona conceptos del mosaico fluido.',
-  '[{"text":"Bicapa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Movilidad lateral","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Proteinas insertas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Asimetria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Rigidez absoluta","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
+  '[{"text":"Bicapa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Movilidad lateral","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Proteínas insertas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Asimetría","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Rigidez absoluta","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
 (
   '57b0057e-6d72-53e8-b267-4043c2c5db92',
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'ms',
-  'Selecciona lipidos de rafts.',
+  'Selecciona lípidos de rafts.',
   '[{"text":"Colesterol","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Esfingolipidos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"ARNr","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"},{"text":"Tubulina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
@@ -721,7 +721,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'dnd',
   'Relaciona estructuras clave.',
-  '[{"text":"Bicapa lipidica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":15,"pinY":38},{"text":"Fosfolipidos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Proteina integral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":68,"pinY":38},{"text":"Glucocaliz","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69},{"text":"Balsa lipidica","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":25,"pinY":69}]'::jsonb,
+  '[{"text":"Bicapa lipídica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":15,"pinY":38},{"text":"Fosfolipidos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Proteína integral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":68,"pinY":38},{"text":"Glucocaliz","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69},{"text":"Balsa lipídica","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":25,"pinY":69}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -729,7 +729,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'dnd',
   'Relaciona el proceso principal.',
-  '[{"text":"Balsa lipidica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":25,"pinY":69},{"text":"Glucocaliz","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69},{"text":"Proteina integral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":68,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Fosfolipidos","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Bicapa lipidica","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":15,"pinY":38}]'::jsonb,
+  '[{"text":"Balsa lipídica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":25,"pinY":69},{"text":"Glucocaliz","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69},{"text":"Proteína integral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":68,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Fosfolipidos","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Bicapa lipídica","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":15,"pinY":38}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -737,7 +737,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'dnd',
   'Relaciona componentes funcionales.',
-  '[{"text":"Bicapa lipidica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":15,"pinY":38},{"text":"Fosfolipidos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Proteina integral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":68,"pinY":38},{"text":"Glucocaliz","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69}]'::jsonb,
+  '[{"text":"Bicapa lipídica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":15,"pinY":38},{"text":"Fosfolipidos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Proteína integral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":68,"pinY":38},{"text":"Glucocaliz","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -745,7 +745,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'dnd',
   'Relaciona etiquetas del esquema.',
-  '[{"text":"Fosfolipidos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Proteina integral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":68,"pinY":38},{"text":"Glucocaliz","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69},{"text":"Balsa lipidica","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":25,"pinY":69}]'::jsonb,
+  '[{"text":"Fosfolipidos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Proteína integral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":68,"pinY":38},{"text":"Glucocaliz","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69},{"text":"Balsa lipídica","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":25,"pinY":69}]'::jsonb,
   false, 27, 1, 75
 ),
 (
@@ -753,15 +753,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'dnd',
   'Relaciona elementos aplicados.',
-  '[{"text":"Bicapa lipidica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":15,"pinY":38},{"text":"Fosfolipidos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Glucocaliz","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69},{"text":"Balsa lipidica","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":25,"pinY":69}]'::jsonb,
+  '[{"text":"Bicapa lipídica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":15,"pinY":38},{"text":"Fosfolipidos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Glucocaliz","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69},{"text":"Balsa lipídica","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":25,"pinY":69}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   '2bb935b1-7711-5dbe-bc3a-07bdae31a8db',
   '9c30c89e-cc46-53a9-b001-a33a8bc8a632',
   'dnd',
-  'Relaciona conceptos del capitulo.',
-  '[{"text":"Bicapa lipidica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":15,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Glucocaliz","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69},{"text":"Fosfolipidos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Proteina integral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":68,"pinY":38}]'::jsonb,
+  'Relaciona conceptos.',
+  '[{"text":"Bicapa lipídica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":15,"pinY":38},{"text":"Colesterol","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":50,"pinY":38},{"text":"Glucocaliz","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":43,"pinY":69},{"text":"Fosfolipidos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":33,"pinY":38},{"text":"Proteína integral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap03_membrana_estructura.svg","pinX":68,"pinY":38}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -783,14 +783,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
   'Transporte pasivo ocurre:',
-  '[{"text":"A favor del gradiente sin ATP directo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Contra gradiente siempre","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Solo por vesiculas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"En nucleolo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"A favor del gradiente sin ATP directo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Contra gradiente siempre","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Solo por vesículas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"En nucléolo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
   'c82cb7dd-fa33-5f61-b15b-a6e48141123d',
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
-  'Difusion simple atraviesa:',
+  'Difusión simple atraviesa:',
   '[{"text":"Ribosoma","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Nucleosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Proteasoma","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Bicapa sin transportador especifico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
@@ -798,7 +798,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f164a01f-3884-5d92-b7c6-4e3552af9190',
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
-  'Difusion facilitada usa:',
+  'Difusión facilitada usa:',
   '[{"text":"Histonas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Cilios","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Canales o transportadores","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
@@ -806,8 +806,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'd86eec71-a30f-55e4-ba29-eb0b8d9da27e',
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
-  'Osmosis es movimiento de:',
-  '[{"text":"Colesterol","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Agua","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"ADN","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Proteinas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  'Ósmosis es movimiento de:',
+  '[{"text":"Colesterol","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Agua","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"ADN","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Proteínas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
@@ -815,7 +815,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
   'Transporte activo primario usa:',
-  '[{"text":"Energia de ATP","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Gradiente de otro soluto solo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Luz visible","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Anticuerpos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Energía de ATP","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Gradiente de otro soluto solo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Luz visible","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Anticuerpos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
@@ -831,7 +831,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
   'Simporte mueve solutos:',
-  '[{"text":"Sin membrana","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Solo por exocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"En la misma direccion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"En direcciones opuestas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Sin membrana","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Solo por exocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"En la misma dirección","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"En direcciones opuestas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
@@ -839,7 +839,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
   'Antiporte mueve solutos:',
-  '[{"text":"Solo ribosomas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"En direcciones opuestas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Misma direccion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Solo vesiculas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Solo ribosomas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"En direcciones opuestas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Misma dirección","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Solo vesículas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
@@ -847,7 +847,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
   'Canales dependientes de ligando se abren por:',
-  '[{"text":"Union de una molecula reguladora","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Cambio de fase lipidica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Splicing","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Glicosilacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Unión de una molécula reguladora","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Cambio de fase lipídica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Splicing","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Glicosilación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
@@ -862,8 +862,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a9f3212f-a9c3-52ec-bf56-156deb5b2c22',
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
-  'La ecuacion de Nernst estima:',
-  '[{"text":"Tamano de vesicula","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Numero de intrones","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Potencial de equilibrio de un ion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Tasa de traduccion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  'La ecuación de Nernst estima:',
+  '[{"text":"Tamaño de vesícula","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Número de intrones","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Potencial de equilibrio de un ion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Tasa de traducción","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
@@ -871,7 +871,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
   'La permeabilidad selectiva depende de:',
-  '[{"text":"Solo colageno","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Membrana y proteinas transportadoras","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Ausencia de lipidos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Solo ADN","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Solo colageno","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Membrana y proteínas transportadoras","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Ausencia de lípidos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Solo ADN","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
@@ -879,7 +879,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
   'Un gradiente electroquimico combina:',
-  '[{"text":"Concentracion y carga electrica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Color y forma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Masa y edad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"ARN y histona","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Concentración y carga eléctrica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Color y forma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Masa y edad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"ARN y histona","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
@@ -887,14 +887,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
   'El transporte activo secundario usa:',
-  '[{"text":"ATP directo siempre","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Anticuerpos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Luz UV","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Energia almacenada en gradiente ionico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"ATP directo siempre","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Anticuerpos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Luz UV","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Energía almacenada en gradiente iónico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   '6643fbf5-9504-5d54-b6ad-705f62589686',
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
-  'Un canal ionico es generalmente:',
+  'Un canal iónico es generalmente:',
   '[{"text":"Una histona","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Un lisosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Selectivo y regulable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Inespecifico siempre","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
@@ -903,7 +903,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
   'El potencial de membrana depende de:',
-  '[{"text":"Golgi cis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Distribucion desigual de iones","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Numero de vesiculas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Longitud de ADN","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Golgi cis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Distribución desigual de iones","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Número de vesículas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Longitud de ADN","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
@@ -911,7 +911,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
   'La membrana impide paso libre de:',
-  '[{"text":"Moleculas polares grandes","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Gases pequenos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Moleculas liposolubles pequenas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Agua por acuaporinas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Moléculas polares grandes","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Gases pequenos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Moléculas liposolubles pequenas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Agua por acuaporinas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
@@ -919,7 +919,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'mc',
   'Las acuaporinas facilitan:',
-  '[{"text":"ADN","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Proteinas plegadas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Colesterol esterificado","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Movimiento de agua","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"ADN","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Proteínas plegadas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Colesterol esterificado","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Movimiento de agua","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -927,7 +927,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'ms',
   'Selecciona transportes pasivos.',
-  '[{"text":"Difusion simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Difusion facilitada","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Osmosis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Bomba Na-K","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Difusión simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Difusión facilitada","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Ósmosis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Bomba Na-K","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -935,7 +935,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'ms',
   'Selecciona transportes activos.',
-  '[{"text":"Primario","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Secundario","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Simporte acoplado","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Antiporte acoplado","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Difusion simple","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Primario","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Secundario","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Simporte acoplado","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Antiporte acoplado","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Difusión simple","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
@@ -943,7 +943,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'ms',
   'Selecciona regulaciones de canales.',
-  '[{"text":"Ligando","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Voltaje","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Mecanica","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Codigo genetico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Ligando","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Voltaje","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Mecánica","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Codigo genético","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -951,7 +951,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'ms',
   'Selecciona componentes del gradiente electroquimico.',
-  '[{"text":"Gradiente quimico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Diferencia electrica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Glucocaliz","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Gradiente químico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Diferencia eléctrica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Glucocaliz","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -967,7 +967,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'ms',
   'Selecciona permeables con facilidad relativa.',
-  '[{"text":"Gases","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Moleculas liposolubles pequenas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Iones sin canal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Proteinas grandes","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
+  '[{"text":"Gases","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Moléculas liposolubles pequenas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Iones sin canal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"},{"text":"Proteínas grandes","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -975,7 +975,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'dnd',
   'Relaciona estructuras clave.',
-  '[{"text":"Difusion simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":15,"pinY":36},{"text":"Difusion facilitada","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Osmosis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Canal ionico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":69,"pinY":36},{"text":"Bomba Na-K","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36},{"text":"Antiporte","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":58,"pinY":67}]'::jsonb,
+  '[{"text":"Difusión simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":15,"pinY":36},{"text":"Difusión facilitada","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Ósmosis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Canal iónico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":69,"pinY":36},{"text":"Bomba Na-K","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36},{"text":"Antiporte","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":58,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -983,7 +983,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'dnd',
   'Relaciona el proceso principal.',
-  '[{"text":"Antiporte","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":58,"pinY":67},{"text":"Bomba Na-K","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36},{"text":"Canal ionico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":69,"pinY":36},{"text":"Osmosis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Difusion facilitada","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Difusion simple","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":15,"pinY":36}]'::jsonb,
+  '[{"text":"Antiporte","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":58,"pinY":67},{"text":"Bomba Na-K","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36},{"text":"Canal iónico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":69,"pinY":36},{"text":"Ósmosis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Difusión facilitada","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Difusión simple","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":15,"pinY":36}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -991,7 +991,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'dnd',
   'Relaciona componentes funcionales.',
-  '[{"text":"Difusion simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":15,"pinY":36},{"text":"Difusion facilitada","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Osmosis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Canal ionico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":69,"pinY":36},{"text":"Bomba Na-K","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36}]'::jsonb,
+  '[{"text":"Difusión simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":15,"pinY":36},{"text":"Difusión facilitada","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Ósmosis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Canal iónico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":69,"pinY":36},{"text":"Bomba Na-K","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -999,7 +999,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'dnd',
   'Relaciona etiquetas del esquema.',
-  '[{"text":"Difusion facilitada","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Osmosis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Canal ionico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":69,"pinY":36},{"text":"Bomba Na-K","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36},{"text":"Antiporte","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":58,"pinY":67}]'::jsonb,
+  '[{"text":"Difusión facilitada","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Ósmosis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Canal iónico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":69,"pinY":36},{"text":"Bomba Na-K","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36},{"text":"Antiporte","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":58,"pinY":67}]'::jsonb,
   false, 27, 1, 75
 ),
 (
@@ -1007,15 +1007,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'dnd',
   'Relaciona elementos aplicados.',
-  '[{"text":"Difusion simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":15,"pinY":36},{"text":"Difusion facilitada","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Osmosis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Bomba Na-K","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36},{"text":"Antiporte","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":58,"pinY":67}]'::jsonb,
+  '[{"text":"Difusión simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":15,"pinY":36},{"text":"Difusión facilitada","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Ósmosis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Bomba Na-K","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36},{"text":"Antiporte","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":58,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   'b6904a57-3da3-5e00-b3db-c2ed32aa298d',
   'f926bbd0-205f-543c-b3be-ea7ed1af070f',
   'dnd',
-  'Relaciona conceptos del capitulo.',
-  '[{"text":"Difusion simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":15,"pinY":36},{"text":"Osmosis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Bomba Na-K","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36},{"text":"Difusion facilitada","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Canal ionico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":69,"pinY":36}]'::jsonb,
+  'Relaciona conceptos.',
+  '[{"text":"Difusión simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":15,"pinY":36},{"text":"Ósmosis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":51,"pinY":36},{"text":"Bomba Na-K","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":85,"pinY":36},{"text":"Difusión facilitada","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":33,"pinY":36},{"text":"Canal iónico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap04_microtransporte.svg","pinX":69,"pinY":36}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -1036,7 +1036,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '585aca8d-0ec3-520d-b46a-cc58471619c1',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'Endocitosis introduce material a la celula. Identifica el concepto:',
+  'Endocitosis introduce material a la célula. Identifica el concepto:',
   '[{"text":"Endocitosis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
@@ -1052,7 +1052,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ce7b03ee-51fe-5cc9-b989-451ffcdf6957',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'Clatrina recubre vesiculas. Identifica el concepto:',
+  'Clatrina recubre vesículas. Identifica el concepto:',
   '[{"text":"Exocitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endocitosis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
@@ -1076,7 +1076,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2b55fd83-bc73-5fa5-bf55-fcdfd18af78f',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'Lisosomas degradan con hidrolasas acidas. Identifica el concepto:',
+  'Lisosomas degradan con hidrolasas ácidas. Identifica el concepto:',
   '[{"text":"Endocitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Lisosoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
@@ -1084,7 +1084,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '68676eae-4cfe-5a4f-ba78-813cb0e8b869',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'SNARE facilita fusion vesicular. Identifica el concepto:',
+  'SNARE facilita fusión vesicular. Identifica el concepto:',
   '[{"text":"Exocitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"SNARE","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endocitosis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
@@ -1092,7 +1092,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '07c41174-e87f-54a4-b39b-ad51643bbc65',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'Transcitosis cruza la celula. Identifica el concepto:',
+  'Transcitosis cruza la célula. Identifica el concepto:',
   '[{"text":"Clatrina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Transcitosis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endocitosis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
@@ -1100,15 +1100,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'cc03a801-e726-5640-b9dc-ad4f018361ef',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'En el capitulo 5, Endocitosis se relaciona mejor con:',
-  '[{"text":"celula","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor endocitosis?',
+  '[{"text":"célula","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   'b53b79d8-3424-59c3-b098-63e3854d6da0',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'En el capitulo 5, Exocitosis se relaciona mejor con:',
+  '¿Con qué se relaciona mejor exocitosis?',
   '[{"text":"Endocitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"exterior","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
@@ -1116,15 +1116,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '3e50eb2b-ee59-538b-b428-89c32dd836d8',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'En el capitulo 5, Clatrina se relaciona mejor con:',
-  '[{"text":"Exocitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"vesiculas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endocitosis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor clatrina?',
+  '[{"text":"Exocitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"vesículas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endocitosis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   'd152d2d4-f505-5b07-b423-d127e6255483',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'En el capitulo 5, Caveolas se relaciona mejor con:',
+  '¿Con qué se relaciona mejor caveolas?',
   '[{"text":"Clatrina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"colesterol","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endocitosis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
@@ -1132,7 +1132,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c084194-06bc-548f-b6de-8be97035e51e',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'En el capitulo 5, Endosoma se relaciona mejor con:',
+  '¿Con qué se relaciona mejor endosoma?',
   '[{"text":"carga","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
@@ -1140,15 +1140,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1d065e62-569b-501d-b851-19021791e200',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'En el capitulo 5, Lisosoma se relaciona mejor con:',
-  '[{"text":"Endocitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"acidas","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor lisosoma?',
+  '[{"text":"Endocitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"ácidas","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   'edea7f6e-6b2d-5640-bb7a-ec0e29472cee',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'En el capitulo 5, SNARE se relaciona mejor con:',
+  '¿Con qué se relaciona mejor sNARE?',
   '[{"text":"Exocitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"vesicular","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endocitosis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
@@ -1156,23 +1156,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '45a5cc17-f5b6-591b-b079-76e6d9769906',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'En el capitulo 5, Transcitosis se relaciona mejor con:',
-  '[{"text":"Clatrina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"celula","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endocitosis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor transcitosis?',
+  '[{"text":"Clatrina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"célula","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endocitosis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   'd8348bc0-3825-5e39-b4f4-b27d7092c05c',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'En el capitulo 5, Endocitosis se relaciona mejor con:',
-  '[{"text":"celula","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor endocitosis?',
+  '[{"text":"célula","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   '9a5c349e-89b8-52e3-b8ff-df385c693d82',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'mc',
-  'En el capitulo 5, Exocitosis se relaciona mejor con:',
+  '¿Con qué se relaciona mejor exocitosis?',
   '[{"text":"Endocitosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"exterior","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
@@ -1180,7 +1180,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '553d0ac8-208b-52cf-bbc6-08c14be0c256',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'ms',
-  'Selecciona conceptos centrales del capitulo.',
+  'Selecciona conceptos centrales.',
   '[{"text":"Endocitosis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
@@ -1197,7 +1197,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'ms',
   'Selecciona pares correctos de este tema.',
-  '[{"text":"Endocitosis: introduce material a la","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis: libera material al exterior","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Nucleolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
+  '[{"text":"Endocitosis: introduce material a la","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Exocitosis: libera material al exterior","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Nucléolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -1205,14 +1205,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'ms',
   'Selecciona componentes funcionales.',
-  '[{"text":"Endocitosis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Virus como organulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
+  '[{"text":"Endocitosis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Clatrina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Endosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Virus como orgánulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
   'f3849b31-317f-5bac-b6f8-4bb1ebb9440f',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'ms',
-  'Selecciona elementos que requieren regulacion celular.',
+  'Selecciona elementos que requieren regulación celular.',
   '[{"text":"Exocitosis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Caveolas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Lisosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Cristalino ocular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
@@ -1221,7 +1221,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'ms',
   'Selecciona aplicaciones biomédicas posibles.',
-  '[{"text":"SNARE","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Transcitosis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Presion arterial sistolica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
+  '[{"text":"SNARE","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Transcitosis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"},{"text":"Presión arterial sistólica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -1268,7 +1268,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '509898ee-6449-597e-b181-d559f7dac0bf',
   '409130f8-5f0b-5819-b5e4-9807f2b48f77',
   'dnd',
-  'Relaciona conceptos del capitulo.',
+  'Relaciona conceptos.',
   '[{"text":"Fagocitosis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg","pinX":15,"pinY":36},{"text":"Receptor","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg","pinX":51,"pinY":36},{"text":"Caveola","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg","pinX":85,"pinY":36},{"text":"Pinocitosis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg","pinX":33,"pinY":36},{"text":"Clatrina","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap05_macrotransporte.svg","pinX":69,"pinY":36}]'::jsonb,
   false, 29, 1, 75
 );
@@ -1298,7 +1298,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0cb827c1-5693-5a7d-b9a1-05a202f8020d',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'Cilios dependen de microtubulos y dineina. Identifica el concepto:',
+  'Cilios dependen de microtúbulos y dineina. Identifica el concepto:',
   '[{"text":"Microvellosidades","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Uniones estrechas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Desmosomas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
@@ -1314,7 +1314,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '82d0f4dc-36fa-5219-ba98-759040163da3',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'Desmosomas dan adhesion mecanica. Identifica el concepto:',
+  'Desmosomas dan adhesión mecánica. Identifica el concepto:',
   '[{"text":"Uniones estrechas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Desmosomas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Microvellosidades","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
@@ -1354,7 +1354,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '230d7ebe-928b-58b7-b295-c8cde56a3d2a',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'En el capitulo 6, Microvellosidades se relaciona mejor con:',
+  '¿Con qué se relaciona mejor microvellosidades?',
   '[{"text":"superficie","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Uniones estrechas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Desmosomas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
@@ -1362,7 +1362,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '8403762c-f85c-558f-b564-cbca049953f1',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'En el capitulo 6, Cilios se relaciona mejor con:',
+  '¿Con qué se relaciona mejor cilios?',
   '[{"text":"Microvellosidades","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Uniones estrechas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Desmosomas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"dineina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
@@ -1370,7 +1370,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'bbe12004-20ab-5cc3-b33a-e3388892fdf8',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'En el capitulo 6, Uniones estrechas se relaciona mejor con:',
+  '¿Con qué se relaciona mejor uniones estrechas?',
   '[{"text":"Cilios","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Desmosomas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"paracelular","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Microvellosidades","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
@@ -1378,15 +1378,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '3bf9414b-937e-54cd-b9d2-543659227c33',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'En el capitulo 6, Desmosomas se relaciona mejor con:',
-  '[{"text":"Uniones estrechas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"mecanica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Microvellosidades","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor desmosomas?',
+  '[{"text":"Uniones estrechas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"mecánica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Microvellosidades","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   '5caf7f60-60dc-5a63-b7ee-1f15830c2dd6',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'En el capitulo 6, Gap se relaciona mejor con:',
+  '¿Con qué se relaciona mejor gap?',
   '[{"text":"citoplasmas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Microvellosidades","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Uniones estrechas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
@@ -1394,7 +1394,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '4e01b09b-4f07-5fdb-b983-64676900cc34',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'En el capitulo 6, Membrana basal se relaciona mejor con:',
+  '¿Con qué se relaciona mejor membrana basal?',
   '[{"text":"Microvellosidades","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Uniones estrechas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"epitelios","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
@@ -1402,7 +1402,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0ce3b92f-0a3a-5ba0-b7cb-7f3b9ae15cfd',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'En el capitulo 6, Matriz extracelular se relaciona mejor con:',
+  '¿Con qué se relaciona mejor matriz extracelular?',
   '[{"text":"Cilios","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Uniones estrechas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"fundamental","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Microvellosidades","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
@@ -1410,7 +1410,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '96c09274-4443-59ae-b5e1-a957cdf8d080',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'En el capitulo 6, Integrinas se relaciona mejor con:',
+  '¿Con qué se relaciona mejor integrinas?',
   '[{"text":"Uniones estrechas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"citoesqueleto","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Microvellosidades","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
@@ -1418,7 +1418,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2324067c-ffe3-5e58-b3e0-d5fb02e3c54e',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'En el capitulo 6, Microvellosidades se relaciona mejor con:',
+  '¿Con qué se relaciona mejor microvellosidades?',
   '[{"text":"superficie","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Uniones estrechas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Desmosomas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
@@ -1426,7 +1426,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '46a69444-c0cf-51e7-bfa7-912b8b793473',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'mc',
-  'En el capitulo 6, Cilios se relaciona mejor con:',
+  '¿Con qué se relaciona mejor cilios?',
   '[{"text":"Microvellosidades","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Uniones estrechas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Desmosomas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"dineina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
@@ -1434,7 +1434,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ab8a57ff-6c20-530c-b460-eff257517674',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'ms',
-  'Selecciona conceptos centrales del capitulo.',
+  'Selecciona conceptos centrales.',
   '[{"text":"Microvellosidades","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Uniones estrechas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Desmosomas","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
@@ -1451,7 +1451,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'ms',
   'Selecciona pares correctos de este tema.',
-  '[{"text":"Microvellosidades: aumentan superficie","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios: dependen de microtubulos y","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Nucleolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
+  '[{"text":"Microvellosidades: aumentan superficie","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cilios: dependen de microtúbulos y","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Nucléolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -1459,14 +1459,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'ms',
   'Selecciona componentes funcionales.',
-  '[{"text":"Microvellosidades","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Uniones estrechas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Gap","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Virus como organulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
+  '[{"text":"Microvellosidades","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Uniones estrechas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Gap","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Virus como orgánulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
   'f01da451-0d08-508e-b71d-b3f5e260f035',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'ms',
-  'Selecciona elementos que requieren regulacion celular.',
+  'Selecciona elementos que requieren regulación celular.',
   '[{"text":"Cilios","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Desmosomas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Membrana basal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Cristalino ocular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
@@ -1475,7 +1475,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'ms',
   'Selecciona aplicaciones biomédicas posibles.',
-  '[{"text":"Matriz extracelular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Integrinas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Presion arterial sistolica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
+  '[{"text":"Matriz extracelular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Integrinas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"},{"text":"Presión arterial sistólica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -1483,7 +1483,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'dnd',
   'Relaciona estructuras clave.',
-  '[{"text":"Microvellosidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":13,"pinY":35},{"text":"Cilio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Union estrecha","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Desmosoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":69,"pinY":35},{"text":"Gap","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35},{"text":"Integrina","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Microvellosidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":13,"pinY":35},{"text":"Cilio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Unión estrecha","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Desmosoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":69,"pinY":35},{"text":"Gap","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35},{"text":"Integrina","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -1491,7 +1491,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'dnd',
   'Relaciona el proceso principal.',
-  '[{"text":"Integrina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":78,"pinY":67},{"text":"Gap","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35},{"text":"Desmosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":69,"pinY":35},{"text":"Union estrecha","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Cilio","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Microvellosidad","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":13,"pinY":35}]'::jsonb,
+  '[{"text":"Integrina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":78,"pinY":67},{"text":"Gap","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35},{"text":"Desmosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":69,"pinY":35},{"text":"Unión estrecha","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Cilio","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Microvellosidad","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":13,"pinY":35}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -1499,7 +1499,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'dnd',
   'Relaciona componentes funcionales.',
-  '[{"text":"Microvellosidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":13,"pinY":35},{"text":"Cilio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Union estrecha","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Desmosoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":69,"pinY":35},{"text":"Gap","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35}]'::jsonb,
+  '[{"text":"Microvellosidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":13,"pinY":35},{"text":"Cilio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Unión estrecha","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Desmosoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":69,"pinY":35},{"text":"Gap","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -1507,7 +1507,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'dnd',
   'Relaciona etiquetas del esquema.',
-  '[{"text":"Cilio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Union estrecha","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Desmosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":69,"pinY":35},{"text":"Gap","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35},{"text":"Integrina","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Cilio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Unión estrecha","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Desmosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":69,"pinY":35},{"text":"Gap","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35},{"text":"Integrina","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 27, 1, 75
 ),
 (
@@ -1515,15 +1515,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'dnd',
   'Relaciona elementos aplicados.',
-  '[{"text":"Microvellosidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":13,"pinY":35},{"text":"Cilio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Union estrecha","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Gap","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35},{"text":"Integrina","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Microvellosidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":13,"pinY":35},{"text":"Cilio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Unión estrecha","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Gap","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35},{"text":"Integrina","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   '5dbd019c-2c41-55f6-b055-7ff603e7b5d4',
   '6c79a27b-8b9f-558b-b6ac-515dbaf7ff1f',
   'dnd',
-  'Relaciona conceptos del capitulo.',
-  '[{"text":"Microvellosidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":13,"pinY":35},{"text":"Union estrecha","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Gap","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35},{"text":"Cilio","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Desmosoma","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":69,"pinY":35}]'::jsonb,
+  'Relaciona conceptos.',
+  '[{"text":"Microvellosidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":13,"pinY":35},{"text":"Unión estrecha","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":50,"pinY":35},{"text":"Gap","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":86,"pinY":35},{"text":"Cilio","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":32,"pinY":35},{"text":"Desmosoma","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap06_especializaciones_mec.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -1568,7 +1568,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '4e6fcec7-6509-5b45-b341-d472e2ed4687',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'Nucleosoma es unidad basica de cromatina. Identifica el concepto:',
+  'Nucleosoma es unidad básica de cromatina. Identifica el concepto:',
   '[{"text":"Cromatina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Nucleosoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Envoltura nuclear","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
@@ -1584,7 +1584,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c67e1be-1595-5065-b643-b7dfc180d877',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'Heterocromatina es mas condensada. Identifica el concepto:',
+  'Heterocromatina es más condensada. Identifica el concepto:',
   '[{"text":"Envoltura nuclear","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Heterocromatina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
@@ -1592,23 +1592,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '4b4c5c13-fbc3-591e-bcee-632aee43c467',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'Replicacion conserva informacion genetica. Identifica el concepto:',
-  '[{"text":"Poros nucleares","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Replicacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Envoltura nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
+  'Replicación conserva información genética. Identifica el concepto:',
+  '[{"text":"Poros nucleares","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Replicación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Envoltura nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
   '5fd74e3b-a4ea-5f19-b7f6-e559c5102ed9',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'Reparacion corrige lesiones del ADN. Identifica el concepto:',
-  '[{"text":"Cromatina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Reparacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Envoltura nuclear","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
+  'Reparación corrige lesiones del ADN. Identifica el concepto:',
+  '[{"text":"Cromatina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Reparación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Envoltura nuclear","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   'e3ffff82-de02-53e5-b6d2-5a8dea871fbc',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'En el capitulo 7, Envoltura nuclear se relaciona mejor con:',
+  '¿Con qué se relaciona mejor envoltura nuclear?',
   '[{"text":"membrana","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Nucleosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
@@ -1616,7 +1616,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'c9ecde52-2e66-598c-b497-134b51c852d7',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'En el capitulo 7, Poros nucleares se relaciona mejor con:',
+  '¿Con qué se relaciona mejor poros nucleares?',
   '[{"text":"Envoltura nuclear","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Nucleosoma","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"transporte","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
@@ -1624,7 +1624,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0ec4dae2-a7d6-5357-b68e-40e65406fcba',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'En el capitulo 7, Cromatina se relaciona mejor con:',
+  '¿Con qué se relaciona mejor cromatina?',
   '[{"text":"Poros nucleares","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Nucleosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"histonas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Envoltura nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
@@ -1632,7 +1632,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f7115d1b-c4d6-5715-bf1f-173418ae07ed',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'En el capitulo 7, Nucleosoma se relaciona mejor con:',
+  '¿Con qué se relaciona mejor nucleosoma?',
   '[{"text":"Cromatina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"cromatina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Envoltura nuclear","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
@@ -1640,7 +1640,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'c42f07f0-4ca6-5bf8-b325-53cdef3ca678',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'En el capitulo 7, Eucromatina se relaciona mejor con:',
+  '¿Con qué se relaciona mejor eucromatina?',
   '[{"text":"condensada","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Envoltura nuclear","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
@@ -1648,7 +1648,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6292a020-64e3-5571-be3c-404c1be2814c',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'En el capitulo 7, Heterocromatina se relaciona mejor con:',
+  '¿Con qué se relaciona mejor heterocromatina?',
   '[{"text":"Envoltura nuclear","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"condensada","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
@@ -1656,15 +1656,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'fe034895-7e65-58d0-b421-b930b1c96d94',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'En el capitulo 7, Replicacion se relaciona mejor con:',
-  '[{"text":"Poros nucleares","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"genetica","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Envoltura nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor replicación?',
+  '[{"text":"Poros nucleares","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"genética","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Envoltura nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   '0b774b2a-9b5f-5ade-b13d-61d1425c2947',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'En el capitulo 7, Reparacion se relaciona mejor con:',
+  '¿Con qué se relaciona mejor reparación?',
   '[{"text":"Cromatina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"ADN","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Envoltura nuclear","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
@@ -1672,7 +1672,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'e16cfdc1-43f6-53e2-b233-685ec2b10212',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'En el capitulo 7, Envoltura nuclear se relaciona mejor con:',
+  '¿Con qué se relaciona mejor envoltura nuclear?',
   '[{"text":"membrana","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Nucleosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
@@ -1680,7 +1680,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '34160785-87e5-5c6c-b4e1-7dcc885ce16a',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'mc',
-  'En el capitulo 7, Poros nucleares se relaciona mejor con:',
+  '¿Con qué se relaciona mejor poros nucleares?',
   '[{"text":"Envoltura nuclear","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Nucleosoma","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"transporte","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
@@ -1688,7 +1688,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '76cecc3e-39b3-51f3-b4cf-7079b753adcb',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'ms',
-  'Selecciona conceptos centrales del capitulo.',
+  'Selecciona conceptos centrales.',
   '[{"text":"Envoltura nuclear","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Nucleosoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
@@ -1697,7 +1697,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'ms',
   'Selecciona estructuras o procesos relacionados.',
-  '[{"text":"Eucromatina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Heterocromatina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Replicacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Reparacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Onda P","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
+  '[{"text":"Eucromatina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Heterocromatina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Replicación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Reparación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Onda P","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
@@ -1705,7 +1705,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'ms',
   'Selecciona pares correctos de este tema.',
-  '[{"text":"Envoltura nuclear: nuclear tiene doble membrana","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares: nucleares regulan transporte","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Nucleolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
+  '[{"text":"Envoltura nuclear: nuclear tiene doble membrana","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Poros nucleares: nucleares regulan transporte","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Nucléolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -1713,14 +1713,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'ms',
   'Selecciona componentes funcionales.',
-  '[{"text":"Envoltura nuclear","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Eucromatina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Virus como organulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
+  '[{"text":"Envoltura nuclear","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cromatina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Eucromatina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Virus como orgánulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
   'cb5c3bd8-c5b5-5c69-b3a6-5472bd1b3b63',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'ms',
-  'Selecciona elementos que requieren regulacion celular.',
+  'Selecciona elementos que requieren regulación celular.',
   '[{"text":"Poros nucleares","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Nucleosoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Heterocromatina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Cristalino ocular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
@@ -1729,7 +1729,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'ms',
   'Selecciona aplicaciones biomédicas posibles.',
-  '[{"text":"Replicacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Reparacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Presion arterial sistolica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
+  '[{"text":"Replicación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Reparación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"},{"text":"Presión arterial sistólica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -1737,7 +1737,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'dnd',
   'Relaciona estructuras clave.',
-  '[{"text":"Envoltura nuclear","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":15,"pinY":35},{"text":"Poro nuclear","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":33,"pinY":35},{"text":"Nucleosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":51,"pinY":35},{"text":"Eucromatina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":69,"pinY":35},{"text":"Heterocromatina","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":85,"pinY":35},{"text":"Replicacion","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":40,"pinY":67}]'::jsonb,
+  '[{"text":"Envoltura nuclear","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":15,"pinY":35},{"text":"Poro nuclear","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":33,"pinY":35},{"text":"Nucleosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":51,"pinY":35},{"text":"Eucromatina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":69,"pinY":35},{"text":"Heterocromatina","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":85,"pinY":35},{"text":"Replicación","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":40,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -1745,7 +1745,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'dnd',
   'Relaciona el proceso principal.',
-  '[{"text":"Replicacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":40,"pinY":67},{"text":"Heterocromatina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":85,"pinY":35},{"text":"Eucromatina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":69,"pinY":35},{"text":"Nucleosoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":51,"pinY":35},{"text":"Poro nuclear","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":33,"pinY":35},{"text":"Envoltura nuclear","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":15,"pinY":35}]'::jsonb,
+  '[{"text":"Replicación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":40,"pinY":67},{"text":"Heterocromatina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":85,"pinY":35},{"text":"Eucromatina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":69,"pinY":35},{"text":"Nucleosoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":51,"pinY":35},{"text":"Poro nuclear","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":33,"pinY":35},{"text":"Envoltura nuclear","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":15,"pinY":35}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -1761,7 +1761,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'dnd',
   'Relaciona etiquetas del esquema.',
-  '[{"text":"Poro nuclear","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":33,"pinY":35},{"text":"Nucleosoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":51,"pinY":35},{"text":"Eucromatina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":69,"pinY":35},{"text":"Heterocromatina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":85,"pinY":35},{"text":"Replicacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":40,"pinY":67}]'::jsonb,
+  '[{"text":"Poro nuclear","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":33,"pinY":35},{"text":"Nucleosoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":51,"pinY":35},{"text":"Eucromatina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":69,"pinY":35},{"text":"Heterocromatina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":85,"pinY":35},{"text":"Replicación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":40,"pinY":67}]'::jsonb,
   false, 27, 1, 75
 ),
 (
@@ -1769,14 +1769,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'dnd',
   'Relaciona elementos aplicados.',
-  '[{"text":"Envoltura nuclear","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":15,"pinY":35},{"text":"Poro nuclear","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":33,"pinY":35},{"text":"Nucleosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":51,"pinY":35},{"text":"Heterocromatina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":85,"pinY":35},{"text":"Replicacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":40,"pinY":67}]'::jsonb,
+  '[{"text":"Envoltura nuclear","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":15,"pinY":35},{"text":"Poro nuclear","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":33,"pinY":35},{"text":"Nucleosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":51,"pinY":35},{"text":"Heterocromatina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":85,"pinY":35},{"text":"Replicación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":40,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   'ba73a290-61bf-5d66-baa8-e5dad7f47b7b',
   '1f4072c0-6653-52fc-b39a-3ff2a33eac82',
   'dnd',
-  'Relaciona conceptos del capitulo.',
+  'Relaciona conceptos.',
   '[{"text":"Envoltura nuclear","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":15,"pinY":35},{"text":"Nucleosoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":51,"pinY":35},{"text":"Heterocromatina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":85,"pinY":35},{"text":"Poro nuclear","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":33,"pinY":35},{"text":"Eucromatina","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap07_nucleo_cromatina.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 29, 1, 75
 );
@@ -1798,32 +1798,32 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f87b5cbf-1489-5160-b626-16e555f31142',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'Transcripcion sintetiza ARN desde ADN. Identifica el concepto:',
-  '[{"text":"Transcripcion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  'Transcripción sintetiza ARN desde ADN. Identifica el concepto:',
+  '[{"text":"Transcripción","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
   '4e4586f7-3cde-5ad2-bc98-cd2c0bf5679a',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'ARN polimerasa cataliza sintesis de ARN. Identifica el concepto:',
-  '[{"text":"Transcripcion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  'ARN polimerasa cataliza síntesis de ARN. Identifica el concepto:',
+  '[{"text":"Transcripción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   '5c5863d2-23b2-53f0-b872-b8c8b66faf9f',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'Promotor inicia regulacion transcripcional. Identifica el concepto:',
-  '[{"text":"ARN polimerasa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripcion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  'Promotor inicia regulación transcripcional. Identifica el concepto:',
+  '[{"text":"ARN polimerasa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripción","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
   '96536a6c-883a-5ee8-b57e-d389e86372d9',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'Pre-ARNm requiere maduracion. Identifica el concepto:',
-  '[{"text":"Promotor","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripcion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  'Pre-ARNm requiere maduración. Identifica el concepto:',
+  '[{"text":"Promotor","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripción","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
@@ -1831,7 +1831,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
   'Caperuza 5 protege ARNm. Identifica el concepto:',
-  '[{"text":"Caperuza 5","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripcion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '[{"text":"Caperuza 5","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripción","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
@@ -1839,7 +1839,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
   'Cola poli-A estabiliza extremo 3. Identifica el concepto:',
-  '[{"text":"Transcripcion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Cola poli-A","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '[{"text":"Transcripción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Cola poli-A","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
@@ -1847,22 +1847,22 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
   'Splicing elimina intrones. Identifica el concepto:',
-  '[{"text":"ARN polimerasa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Splicing","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripcion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '[{"text":"ARN polimerasa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Splicing","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripción","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
   '7b0daf08-6f65-5f0d-bc74-43b3b6485fb5',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'Nucleolo produce ARNr y subunidades ribosomales. Identifica el concepto:',
-  '[{"text":"Promotor","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Nucleolo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripcion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  'Nucléolo produce ARNr y subunidades ribosomales. Identifica el concepto:',
+  '[{"text":"Promotor","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Nucléolo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripción","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   'f76a0ec9-4f0f-5da7-bece-1d51aedaa041',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'En el capitulo 8, Transcripcion se relaciona mejor con:',
+  '¿Con qué se relaciona mejor transcripción?',
   '[{"text":"ADN","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
@@ -1870,63 +1870,63 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7cae76de-c317-577b-b8bd-c7aad33bcc46',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'En el capitulo 8, ARN polimerasa se relaciona mejor con:',
-  '[{"text":"Transcripcion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor aRN polimerasa?',
+  '[{"text":"Transcripción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   'c5b95c50-6c64-528d-ba8a-36fdcbb1d3f8',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'En el capitulo 8, Promotor se relaciona mejor con:',
-  '[{"text":"ARN polimerasa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"transcripcional","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripcion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor promotor?',
+  '[{"text":"ARN polimerasa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"transcripcional","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripción","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   'ab758efb-e4be-51bc-bdc2-c7eb352968f0',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'En el capitulo 8, Pre-ARNm se relaciona mejor con:',
-  '[{"text":"Promotor","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"maduracion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripcion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor pre-ARNm?',
+  '[{"text":"Promotor","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"maduración","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripción","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   '61afa2f4-1eb8-583f-ba35-ace509ee9c6f',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'En el capitulo 8, Caperuza 5 se relaciona mejor con:',
-  '[{"text":"ARNm","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripcion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor caperuza 5?',
+  '[{"text":"ARNm","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripción","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   '44288ad3-efb0-5e4e-b591-faa5f6c56e4e',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'En el capitulo 8, Cola poli-A se relaciona mejor con:',
-  '[{"text":"Transcripcion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"3","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor cola poli-A?',
+  '[{"text":"Transcripción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"3","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   'fed10355-a470-52e4-bfaf-76e4625fccc2',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'En el capitulo 8, Splicing se relaciona mejor con:',
-  '[{"text":"ARN polimerasa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"intrones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripcion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor splicing?',
+  '[{"text":"ARN polimerasa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"intrones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripción","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   'fc6aa492-0e6c-590a-bd32-718d6d489dda',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'En el capitulo 8, Nucleolo se relaciona mejor con:',
-  '[{"text":"Promotor","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ribosomales","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripcion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor nucléolo?',
+  '[{"text":"Promotor","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ribosomales","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Transcripción","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   '16bca50a-3d33-5a6b-bd96-0e6e1083dcd8',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'En el capitulo 8, Transcripcion se relaciona mejor con:',
+  '¿Con qué se relaciona mejor transcripción?',
   '[{"text":"ADN","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
@@ -1934,16 +1934,16 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1d123794-e0d4-550f-b47b-0e7ed2c3955b',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'mc',
-  'En el capitulo 8, ARN polimerasa se relaciona mejor con:',
-  '[{"text":"Transcripcion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor aRN polimerasa?',
+  '[{"text":"Transcripción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
   '1e1e1f24-7491-500d-b440-1df0456fdb12',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'ms',
-  'Selecciona conceptos centrales del capitulo.',
-  '[{"text":"Transcripcion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  'Selecciona conceptos centrales.',
+  '[{"text":"Transcripción","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -1951,7 +1951,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'ms',
   'Selecciona estructuras o procesos relacionados.',
-  '[{"text":"Caperuza 5","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Cola poli-A","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Splicing","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Nucleolo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Onda P","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '[{"text":"Caperuza 5","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Cola poli-A","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Splicing","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Nucléolo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Onda P","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
@@ -1959,7 +1959,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'ms',
   'Selecciona pares correctos de este tema.',
-  '[{"text":"Transcripcion: sintetiza ARN desde ADN","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa: polimerasa cataliza sintesis de","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Nucleolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '[{"text":"Transcripción: sintetiza ARN desde ADN","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"ARN polimerasa: polimerasa cataliza síntesis de","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Nucléolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -1967,14 +1967,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'ms',
   'Selecciona componentes funcionales.',
-  '[{"text":"Transcripcion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Caperuza 5","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Virus como organulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '[{"text":"Transcripción","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Promotor","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Caperuza 5","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Virus como orgánulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
   'aafb18f6-e28b-52fa-b556-473f6e4a1fda',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'ms',
-  'Selecciona elementos que requieren regulacion celular.',
+  'Selecciona elementos que requieren regulación celular.',
   '[{"text":"ARN polimerasa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Pre-ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Cola poli-A","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Cristalino ocular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
@@ -1983,7 +1983,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'ms',
   'Selecciona aplicaciones biomédicas posibles.',
-  '[{"text":"Splicing","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Nucleolo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Presion arterial sistolica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
+  '[{"text":"Splicing","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Nucléolo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"},{"text":"Presión arterial sistólica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -1991,7 +1991,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'dnd',
   'Relaciona estructuras clave.',
-  '[{"text":"ARN polimerasa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":15,"pinY":35},{"text":"Promotor","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":33,"pinY":35},{"text":"Transcrito primario","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":51,"pinY":35},{"text":"Caperuza 5","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":69,"pinY":35},{"text":"Cola poli-A","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":85,"pinY":35},{"text":"Nucleolo","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":76,"pinY":67}]'::jsonb,
+  '[{"text":"ARN polimerasa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":15,"pinY":35},{"text":"Promotor","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":33,"pinY":35},{"text":"Transcrito primario","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":51,"pinY":35},{"text":"Caperuza 5","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":69,"pinY":35},{"text":"Cola poli-A","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":85,"pinY":35},{"text":"Nucléolo","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":76,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -1999,7 +1999,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'dnd',
   'Relaciona el proceso principal.',
-  '[{"text":"Nucleolo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":76,"pinY":67},{"text":"Cola poli-A","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":85,"pinY":35},{"text":"Caperuza 5","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":69,"pinY":35},{"text":"Transcrito primario","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":51,"pinY":35},{"text":"Promotor","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":33,"pinY":35},{"text":"ARN polimerasa","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":15,"pinY":35}]'::jsonb,
+  '[{"text":"Nucléolo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":76,"pinY":67},{"text":"Cola poli-A","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":85,"pinY":35},{"text":"Caperuza 5","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":69,"pinY":35},{"text":"Transcrito primario","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":51,"pinY":35},{"text":"Promotor","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":33,"pinY":35},{"text":"ARN polimerasa","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":15,"pinY":35}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -2015,7 +2015,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'dnd',
   'Relaciona etiquetas del esquema.',
-  '[{"text":"Promotor","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":33,"pinY":35},{"text":"Transcrito primario","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":51,"pinY":35},{"text":"Caperuza 5","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":69,"pinY":35},{"text":"Cola poli-A","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":85,"pinY":35},{"text":"Nucleolo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":76,"pinY":67}]'::jsonb,
+  '[{"text":"Promotor","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":33,"pinY":35},{"text":"Transcrito primario","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":51,"pinY":35},{"text":"Caperuza 5","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":69,"pinY":35},{"text":"Cola poli-A","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":85,"pinY":35},{"text":"Nucléolo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":76,"pinY":67}]'::jsonb,
   false, 27, 1, 75
 ),
 (
@@ -2023,14 +2023,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'dnd',
   'Relaciona elementos aplicados.',
-  '[{"text":"ARN polimerasa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":15,"pinY":35},{"text":"Promotor","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":33,"pinY":35},{"text":"Transcrito primario","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":51,"pinY":35},{"text":"Cola poli-A","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":85,"pinY":35},{"text":"Nucleolo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":76,"pinY":67}]'::jsonb,
+  '[{"text":"ARN polimerasa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":15,"pinY":35},{"text":"Promotor","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":33,"pinY":35},{"text":"Transcrito primario","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":51,"pinY":35},{"text":"Cola poli-A","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":85,"pinY":35},{"text":"Nucléolo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":76,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   '573c9b73-a5ee-5b8c-ba40-667e4242dd10',
   '6c8515d9-3adc-57f1-b90d-c0ea81037f02',
   'dnd',
-  'Relaciona conceptos del capitulo.',
+  'Relaciona conceptos.',
   '[{"text":"ARN polimerasa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":15,"pinY":35},{"text":"Transcrito primario","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":51,"pinY":35},{"text":"Cola poli-A","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":85,"pinY":35},{"text":"Promotor","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":33,"pinY":35},{"text":"Caperuza 5","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap08_transcripcion_nucleolo.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 29, 1, 75
 );
@@ -2052,8 +2052,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '91b4d1b7-74b3-5eee-b04b-baf905049edb',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'Traduccion sintetiza proteinas. Identifica el concepto:',
-  '[{"text":"Traduccion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  'Traducción sintetiza proteínas. Identifica el concepto:',
+  '[{"text":"Traducción","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
@@ -2061,7 +2061,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
   'Ribosoma lee ARNm. Identifica el concepto:',
-  '[{"text":"Traduccion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '[{"text":"Traducción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
@@ -2069,7 +2069,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
   'ARNm porta codones. Identifica el concepto:',
-  '[{"text":"Ribosoma","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traduccion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '[{"text":"Ribosoma","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traducción","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
@@ -2077,15 +2077,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
   'ARNt aporta aminoacidos. Identifica el concepto:',
-  '[{"text":"ARNm","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traduccion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '[{"text":"ARNm","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traducción","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
   'ff16104a-ac3f-5171-b25b-97ce8553582a',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'Codon especifica aminoacido o stop. Identifica el concepto:',
-  '[{"text":"Codon","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traduccion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  'Codón especifica aminoacido o stop. Identifica el concepto:',
+  '[{"text":"Codón","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traducción","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
@@ -2093,111 +2093,111 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
   'Plegamiento define estructura funcional. Identifica el concepto:',
-  '[{"text":"Traduccion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Plegamiento","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '[{"text":"Traducción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Plegamiento","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
   'a1d72824-7ee9-54c8-b86d-c746b914d65c',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'Glicosilacion modifica proteinas. Identifica el concepto:',
-  '[{"text":"Ribosoma","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Glicosilacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traduccion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  'Glicosilación modifica proteínas. Identifica el concepto:',
+  '[{"text":"Ribosoma","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Glicosilación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traducción","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
   'c40bc952-57b6-5fc9-bd32-123de5d1c945',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'Proteasoma degrada proteinas ubiquitinadas. Identifica el concepto:',
-  '[{"text":"ARNm","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Proteasoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traduccion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  'Proteasoma degrada proteínas ubiquitinadas. Identifica el concepto:',
+  '[{"text":"ARNm","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Proteasoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traducción","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   '2caaaacf-b11c-571f-b67e-0d5db6fcf0fd',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'En el capitulo 9, Traduccion se relaciona mejor con:',
-  '[{"text":"proteinas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor traducción?',
+  '[{"text":"proteínas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   '3920a9bb-2e42-5176-b925-52ec7826cbaa',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'En el capitulo 9, Ribosoma se relaciona mejor con:',
-  '[{"text":"Traduccion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor ribosoma?',
+  '[{"text":"Traducción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   '598f8003-4f99-5145-ba7c-a0394a3d99c1',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'En el capitulo 9, ARNm se relaciona mejor con:',
-  '[{"text":"Ribosoma","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"codones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traduccion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor aRNm?',
+  '[{"text":"Ribosoma","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"codones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traducción","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   '2f916732-2189-5e43-b54a-d500cc4bdd93',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'En el capitulo 9, ARNt se relaciona mejor con:',
-  '[{"text":"ARNm","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"aminoacidos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traduccion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor aRNt?',
+  '[{"text":"ARNm","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"aminoacidos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traducción","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   'f5652575-cbbe-5aff-b801-85d2b9bf84c3',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'En el capitulo 9, Codon se relaciona mejor con:',
-  '[{"text":"stop","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traduccion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor codón?',
+  '[{"text":"stop","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traducción","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   '677eda56-ef17-554f-b885-1c0c0bab60cf',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'En el capitulo 9, Plegamiento se relaciona mejor con:',
-  '[{"text":"Traduccion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"funcional","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor plegamiento?',
+  '[{"text":"Traducción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"funcional","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   '93bbe1a1-06d5-52a7-bdaa-6ed766069804',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'En el capitulo 9, Glicosilacion se relaciona mejor con:',
-  '[{"text":"Ribosoma","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"proteinas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traduccion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor glicosilación?',
+  '[{"text":"Ribosoma","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"proteínas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traducción","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   'c9be9bda-f8a6-564a-bccf-71be93bbff79',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'En el capitulo 9, Proteasoma se relaciona mejor con:',
-  '[{"text":"ARNm","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ubiquitinadas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traduccion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor proteasoma?',
+  '[{"text":"ARNm","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ubiquitinadas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Traducción","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   '0a8f716d-215c-5059-b35e-68aa69783fc5',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'En el capitulo 9, Traduccion se relaciona mejor con:',
-  '[{"text":"proteinas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor traducción?',
+  '[{"text":"proteínas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   '5141a7d9-3560-5726-b94d-144c1a85b55d',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'mc',
-  'En el capitulo 9, Ribosoma se relaciona mejor con:',
-  '[{"text":"Traduccion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor ribosoma?',
+  '[{"text":"Traducción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
   '2c579abc-fff6-5ab9-b9c5-1c4f6f5fe19b',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'ms',
-  'Selecciona conceptos centrales del capitulo.',
-  '[{"text":"Traduccion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  'Selecciona conceptos centrales.',
+  '[{"text":"Traducción","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -2205,7 +2205,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'ms',
   'Selecciona estructuras o procesos relacionados.',
-  '[{"text":"Codon","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Plegamiento","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Glicosilacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Proteasoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Onda P","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '[{"text":"Codón","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Plegamiento","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Glicosilación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Proteasoma","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Onda P","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
@@ -2213,7 +2213,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'ms',
   'Selecciona pares correctos de este tema.',
-  '[{"text":"Traduccion: sintetiza proteinas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma: lee ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Nucleolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '[{"text":"Traducción: sintetiza proteínas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Ribosoma: lee ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Nucléolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -2221,14 +2221,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'ms',
   'Selecciona componentes funcionales.',
-  '[{"text":"Traduccion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Codon","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Virus como organulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '[{"text":"Traducción","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Codón","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Virus como orgánulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
   'cf840cbe-1ed0-5121-ba28-8afa4226281b',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'ms',
-  'Selecciona elementos que requieren regulacion celular.',
+  'Selecciona elementos que requieren regulación celular.',
   '[{"text":"Ribosoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"ARNt","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Plegamiento","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Cristalino ocular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
@@ -2237,7 +2237,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'ms',
   'Selecciona aplicaciones biomédicas posibles.',
-  '[{"text":"Glicosilacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Proteasoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Presion arterial sistolica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
+  '[{"text":"Glicosilación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Proteasoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"},{"text":"Presión arterial sistólica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -2245,7 +2245,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'dnd',
   'Relaciona estructuras clave.',
-  '[{"text":"Ribosoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":15,"pinY":35},{"text":"ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"Codon","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":69,"pinY":35},{"text":"Peptido","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35},{"text":"Proteasoma","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":76,"pinY":67}]'::jsonb,
+  '[{"text":"Ribosoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":15,"pinY":35},{"text":"ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"Codón","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":69,"pinY":35},{"text":"Péptido","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35},{"text":"Proteasoma","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":76,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -2253,7 +2253,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'dnd',
   'Relaciona el proceso principal.',
-  '[{"text":"Proteasoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":76,"pinY":67},{"text":"Peptido","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35},{"text":"Codon","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":69,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"ARNm","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"Ribosoma","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":15,"pinY":35}]'::jsonb,
+  '[{"text":"Proteasoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":76,"pinY":67},{"text":"Péptido","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35},{"text":"Codón","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":69,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"ARNm","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"Ribosoma","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":15,"pinY":35}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -2261,7 +2261,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'dnd',
   'Relaciona componentes funcionales.',
-  '[{"text":"Ribosoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":15,"pinY":35},{"text":"ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"Codon","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":69,"pinY":35},{"text":"Peptido","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35}]'::jsonb,
+  '[{"text":"Ribosoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":15,"pinY":35},{"text":"ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"Codón","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":69,"pinY":35},{"text":"Péptido","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -2269,7 +2269,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'dnd',
   'Relaciona etiquetas del esquema.',
-  '[{"text":"ARNm","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"Codon","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":69,"pinY":35},{"text":"Peptido","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35},{"text":"Proteasoma","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":76,"pinY":67}]'::jsonb,
+  '[{"text":"ARNm","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"Codón","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":69,"pinY":35},{"text":"Péptido","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35},{"text":"Proteasoma","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":76,"pinY":67}]'::jsonb,
   false, 27, 1, 75
 ),
 (
@@ -2277,15 +2277,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'dnd',
   'Relaciona elementos aplicados.',
-  '[{"text":"Ribosoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":15,"pinY":35},{"text":"ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"Peptido","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35},{"text":"Proteasoma","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":76,"pinY":67}]'::jsonb,
+  '[{"text":"Ribosoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":15,"pinY":35},{"text":"ARNm","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"Péptido","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35},{"text":"Proteasoma","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":76,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   '26d096fc-e619-5e5b-b53b-71f3479b5301',
   '528acaf2-0131-5d2b-b5d9-5cac5ae8718a',
   'dnd',
-  'Relaciona conceptos del capitulo.',
-  '[{"text":"Ribosoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":15,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"Peptido","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35},{"text":"ARNm","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"Codon","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":69,"pinY":35}]'::jsonb,
+  'Relaciona conceptos.',
+  '[{"text":"Ribosoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":15,"pinY":35},{"text":"ARNt","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":51,"pinY":35},{"text":"Péptido","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":85,"pinY":35},{"text":"ARNm","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":33,"pinY":35},{"text":"Codón","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap09_sintesis_proteinas.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -2306,7 +2306,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1f7efd72-a535-5f5c-b0ef-86941ae402c6',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'RER sintetiza proteinas secretadas y de membrana. Identifica el concepto:',
+  'RER sintetiza proteínas secretadas y de membrana. Identifica el concepto:',
   '[{"text":"RER","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Lisosomas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
@@ -2314,7 +2314,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6baa85ab-0c35-53c4-bf2f-b26f5ef258f4',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'REL sintetiza lipidos y detoxifica. Identifica el concepto:',
+  'REL sintetiza lípidos y detoxifica. Identifica el concepto:',
   '[{"text":"RER","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Lisosomas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
@@ -2322,7 +2322,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9fb26c13-f81c-553f-b6b1-5158a880045c',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'Golgi modifica y clasifica proteinas. Identifica el concepto:',
+  'Golgi modifica y clasifica proteínas. Identifica el concepto:',
   '[{"text":"REL","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Lisosomas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"RER","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
@@ -2338,8 +2338,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'd009697c-6260-5e90-b0a6-b739587f2f4c',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'Peptido senal dirige al RER. Identifica el concepto:',
-  '[{"text":"Peptido senal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"RER","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
+  'Péptido señal dirige al RER. Identifica el concepto:',
+  '[{"text":"Péptido señal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"RER","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
@@ -2362,7 +2362,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '73780a0c-de40-5a8b-b8e9-178a3b9c0b41',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'Clatrina participa en trafico selectivo. Identifica el concepto:',
+  'Clatrina participa en tráfico selectivo. Identifica el concepto:',
   '[{"text":"Golgi","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Clatrina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"RER","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
@@ -2370,7 +2370,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '4a4eba1f-9dbb-59f1-ba51-e0ebe278c85c',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'En el capitulo 10, RER se relaciona mejor con:',
+  '¿Con qué se relaciona mejor rER?',
   '[{"text":"membrana","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Lisosomas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
@@ -2378,7 +2378,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '04805018-5648-5c4e-b8e6-dcf442ccc12d',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'En el capitulo 10, REL se relaciona mejor con:',
+  '¿Con qué se relaciona mejor rEL?',
   '[{"text":"RER","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Lisosomas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"detoxifica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
@@ -2386,15 +2386,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5183cc10-2ddd-5600-bf4c-f36dcac7e503',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'En el capitulo 10, Golgi se relaciona mejor con:',
-  '[{"text":"REL","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Lisosomas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"proteinas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"RER","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor golgi?',
+  '[{"text":"REL","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Lisosomas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"proteínas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"RER","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   '46d6e2fa-e701-5f21-b541-720f140eb3c3',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'En el capitulo 10, Lisosomas se relaciona mejor con:',
+  '¿Con qué se relaciona mejor lisosomas?',
   '[{"text":"Golgi","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"macromoleculas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"RER","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
@@ -2402,7 +2402,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'e0ccfc82-76fc-5f23-b867-c9c214743661',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'En el capitulo 10, Peptido senal se relaciona mejor con:',
+  '¿Con qué se relaciona mejor péptido señal?',
   '[{"text":"RER","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"RER","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
@@ -2410,7 +2410,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'd0c74115-428b-51ae-b1e9-d0f0486db865',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'En el capitulo 10, COPII se relaciona mejor con:',
+  '¿Con qué se relaciona mejor cOPII?',
   '[{"text":"RER","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
@@ -2418,7 +2418,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a8176d2f-4018-52a7-bd2d-d3170faab59e',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'En el capitulo 10, COPI se relaciona mejor con:',
+  '¿Con qué se relaciona mejor cOPI?',
   '[{"text":"REL","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi-RE","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"RER","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
@@ -2426,7 +2426,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '8a464ba8-8fec-5383-bfd6-a2c957bf4243',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'En el capitulo 10, Clatrina se relaciona mejor con:',
+  '¿Con qué se relaciona mejor clatrina?',
   '[{"text":"Golgi","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"selectivo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"RER","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
@@ -2434,7 +2434,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'be45375f-f709-5d78-b5ef-5c86e19fd1df',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'En el capitulo 10, RER se relaciona mejor con:',
+  '¿Con qué se relaciona mejor rER?',
   '[{"text":"membrana","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Lisosomas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
@@ -2442,7 +2442,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ff5cd633-7314-5c35-ba81-f49c4d6f23ee',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'mc',
-  'En el capitulo 10, REL se relaciona mejor con:',
+  '¿Con qué se relaciona mejor rEL?',
   '[{"text":"RER","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Lisosomas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"detoxifica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
@@ -2450,7 +2450,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '3e993645-9b85-5ba1-b751-61e6f808bd30',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'ms',
-  'Selecciona conceptos centrales del capitulo.',
+  'Selecciona conceptos centrales.',
   '[{"text":"RER","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Lisosomas","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
@@ -2459,7 +2459,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'ms',
   'Selecciona estructuras o procesos relacionados.',
-  '[{"text":"Peptido senal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"COPII","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"COPI","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Clatrina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Onda P","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
+  '[{"text":"Péptido señal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"COPII","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"COPI","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Clatrina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Onda P","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
@@ -2467,7 +2467,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'ms',
   'Selecciona pares correctos de este tema.',
-  '[{"text":"RER: sintetiza proteinas secretadas y","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL: sintetiza lipidos y detoxifica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Nucleolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
+  '[{"text":"RER: sintetiza proteínas secretadas y","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"REL: sintetiza lípidos y detoxifica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Nucléolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -2475,14 +2475,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'ms',
   'Selecciona componentes funcionales.',
-  '[{"text":"RER","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Peptido senal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Virus como organulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
+  '[{"text":"RER","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Golgi","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Péptido señal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Virus como orgánulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
   '7fa1c960-07b0-5c35-bc61-c059019b4736',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'ms',
-  'Selecciona elementos que requieren regulacion celular.',
+  'Selecciona elementos que requieren regulación celular.',
   '[{"text":"REL","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Lisosomas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"COPII","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Cristalino ocular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
@@ -2491,7 +2491,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'ms',
   'Selecciona aplicaciones biomédicas posibles.',
-  '[{"text":"COPI","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Clatrina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Presion arterial sistolica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
+  '[{"text":"COPI","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Clatrina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"},{"text":"Presión arterial sistólica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -2538,7 +2538,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'cc0ce875-8166-55f6-b3a7-c193e6ec033c',
   'fddad17e-fd7d-5735-b13a-61aa311a70b9',
   'dnd',
-  'Relaciona conceptos del capitulo.',
+  'Relaciona conceptos.',
   '[{"text":"RER","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg","pinX":15,"pinY":35},{"text":"Golgi cis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg","pinX":51,"pinY":35},{"text":"Lisosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg","pinX":85,"pinY":35},{"text":"REL","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg","pinX":33,"pinY":35},{"text":"Golgi trans","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap10_endomembranas.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 29, 1, 75
 );
@@ -2560,7 +2560,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '911b95e3-1b00-59d7-bcf7-5113ea84f92e',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'Mitocondria produce ATP aerobico. Identifica el concepto:',
+  'Mitocondria produce ATP aeróbico. Identifica el concepto:',
   '[{"text":"Mitocondria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN mitocondrial","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
@@ -2584,7 +2584,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'fac2ec5c-684e-502b-bfc3-8c2e85b4cadb',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'ADN mitocondrial se hereda sobre todo por via materna. Identifica el concepto:',
+  'ADN mitocondrial se hereda sobre todo por vía materna. Identifica el concepto:',
   '[{"text":"Matriz","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN mitocondrial","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Mitocondria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
@@ -2608,7 +2608,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b6b7e408-5b12-521e-b29f-5f810580c4c1',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'ROS son especies reactivas de oxigeno. Identifica el concepto:',
+  'ROS son especies reactivas de oxígeno. Identifica el concepto:',
   '[{"text":"Crestas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ROS","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Mitocondria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
@@ -2624,15 +2624,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '31829d68-dea5-54ab-b726-13acea52b6b4',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'En el capitulo 11, Mitocondria se relaciona mejor con:',
-  '[{"text":"aerobico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN mitocondrial","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor mitocondria?',
+  '[{"text":"aeróbico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN mitocondrial","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   'ec949473-d140-5458-b13f-15435b245eea',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'En el capitulo 11, Crestas se relaciona mejor con:',
+  '¿Con qué se relaciona mejor crestas?',
   '[{"text":"Mitocondria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN mitocondrial","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"interna","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
@@ -2640,7 +2640,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7886d0ab-d5bc-523e-b761-ac654c26e138',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'En el capitulo 11, Matriz se relaciona mejor con:',
+  '¿Con qué se relaciona mejor matriz?',
   '[{"text":"Crestas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN mitocondrial","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Mitocondria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
@@ -2648,7 +2648,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1a6656b9-c352-5f1f-b9f6-32727fea2608',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'En el capitulo 11, ADN mitocondrial se relaciona mejor con:',
+  '¿Con qué se relaciona mejor aDN mitocondrial?',
   '[{"text":"Matriz","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"materna","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Mitocondria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
@@ -2656,7 +2656,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '602c4ebd-7547-5ff8-b326-2386c0e8f85c',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'En el capitulo 11, Cadena respiratoria se relaciona mejor con:',
+  '¿Con qué se relaciona mejor cadena respiratoria?',
   '[{"text":"electrones","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Mitocondria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
@@ -2664,7 +2664,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '58ae1028-fdd0-553c-be76-1395e5ffd9e8',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'En el capitulo 11, ATP sintasa se relaciona mejor con:',
+  '¿Con qué se relaciona mejor aTP sintasa?',
   '[{"text":"Mitocondria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"protones","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
@@ -2672,15 +2672,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '63d2a309-c7a1-5458-ba15-3585dde250d4',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'En el capitulo 11, ROS se relaciona mejor con:',
-  '[{"text":"Crestas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"oxigeno","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Mitocondria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor rOS?',
+  '[{"text":"Crestas","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"oxígeno","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Mitocondria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   '7521fc6f-83ca-50fe-bc7a-7e97b63164e8',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'En el capitulo 11, Peroxisoma se relaciona mejor con:',
+  '¿Con qué se relaciona mejor peroxisoma?',
   '[{"text":"Matriz","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"sustratos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Mitocondria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
@@ -2688,15 +2688,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9c9f0e84-55ca-52aa-bccd-0185491d9720',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'En el capitulo 11, Mitocondria se relaciona mejor con:',
-  '[{"text":"aerobico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN mitocondrial","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor mitocondria?',
+  '[{"text":"aeróbico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN mitocondrial","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   'c6f32b12-69e1-5d94-b93f-a0e57cc6706a',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'mc',
-  'En el capitulo 11, Crestas se relaciona mejor con:',
+  '¿Con qué se relaciona mejor crestas?',
   '[{"text":"Mitocondria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN mitocondrial","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"interna","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
@@ -2704,7 +2704,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'd8506381-7aec-52e2-b08f-9b64945ad596',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'ms',
-  'Selecciona conceptos centrales del capitulo.',
+  'Selecciona conceptos centrales.',
   '[{"text":"Mitocondria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN mitocondrial","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
@@ -2721,7 +2721,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'ms',
   'Selecciona pares correctos de este tema.',
-  '[{"text":"Mitocondria: produce ATP aerobico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas: amplian membrana interna","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Nucleolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
+  '[{"text":"Mitocondria: produce ATP aeróbico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Crestas: amplian membrana interna","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Nucléolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -2729,14 +2729,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'ms',
   'Selecciona componentes funcionales.',
-  '[{"text":"Mitocondria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Cadena respiratoria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Virus como organulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
+  '[{"text":"Mitocondria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Matriz","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Cadena respiratoria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Virus como orgánulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
   '53d7964c-aca0-52b5-bf42-48f75a9ccd98',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'ms',
-  'Selecciona elementos que requieren regulacion celular.',
+  'Selecciona elementos que requieren regulación celular.',
   '[{"text":"Crestas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ADN mitocondrial","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"ATP sintasa","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Cristalino ocular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
@@ -2745,7 +2745,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'ms',
   'Selecciona aplicaciones biomédicas posibles.',
-  '[{"text":"ROS","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Peroxisoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Presion arterial sistolica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
+  '[{"text":"ROS","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Peroxisoma","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"},{"text":"Presión arterial sistólica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -2792,7 +2792,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a0069ba6-d827-5423-b8bd-38a8054257d6',
   'bc4f1601-ac7b-59f5-bd6a-70301177f12a',
   'dnd',
-  'Relaciona conceptos del capitulo.',
+  'Relaciona conceptos.',
   '[{"text":"Membrana externa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg","pinX":15,"pinY":35},{"text":"Crestas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg","pinX":51,"pinY":35},{"text":"ADN mitocondrial","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg","pinX":85,"pinY":35},{"text":"Membrana interna","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg","pinX":33,"pinY":35},{"text":"Matriz","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap11_mitocondria_peroxisoma.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 29, 1, 75
 );
@@ -2815,7 +2815,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
   'Actina forma microfilamentos. Identifica el concepto:',
-  '[{"text":"Actina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '[{"text":"Actina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
@@ -2823,31 +2823,31 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
   'Miosina es motor de actina. Identifica el concepto:',
-  '[{"text":"Actina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '[{"text":"Actina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   '2c98dad0-7d6a-58bc-b211-b503c354a7df',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'Microtubulos sirven como rutas y huso. Identifica el concepto:',
-  '[{"text":"Miosina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  'Microtúbulos sirven como rutas y huso. Identifica el concepto:',
+  '[{"text":"Miosina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
   '3e62b144-7c47-52b4-b336-040b9d432e21',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'Tubulina forma microtubulos. Identifica el concepto:',
-  '[{"text":"Microtubulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  'Tubulina forma microtúbulos. Identifica el concepto:',
+  '[{"text":"Microtúbulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
   'dac484fd-8f33-51cc-b540-2a716c166a03',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'Centrosoma organiza microtubulos. Identifica el concepto:',
-  '[{"text":"Centrosoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  'Centrosoma organiza microtúbulos. Identifica el concepto:',
+  '[{"text":"Centrosoma","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
@@ -2855,7 +2855,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
   'Quinesina camina hacia extremo positivo. Identifica el concepto:',
-  '[{"text":"Actina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Quinesina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '[{"text":"Actina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Quinesina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
@@ -2863,38 +2863,38 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
   'Dineina camina hacia extremo negativo. Identifica el concepto:',
-  '[{"text":"Miosina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Dineina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '[{"text":"Miosina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Dineina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
   'aed29f9a-714c-5239-b7f2-65c1adbb9c3f',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'Lamelipodios impulsan migracion. Identifica el concepto:',
-  '[{"text":"Microtubulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Lamelipodios","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  'Lamelipodios impulsan migración. Identifica el concepto:',
+  '[{"text":"Microtúbulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Lamelipodios","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   '08a117f8-6914-5cf2-ba80-3e0e30f9d719',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'En el capitulo 12, Actina se relaciona mejor con:',
-  '[{"text":"microfilamentos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor actina?',
+  '[{"text":"microfilamentos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   'f0241492-e2a5-5648-b650-c99d86e931db',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'En el capitulo 12, Miosina se relaciona mejor con:',
-  '[{"text":"Actina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"actina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor miosina?',
+  '[{"text":"Actina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"actina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   '4bdbe0a5-c861-51eb-b7a3-90cc1cfe2605',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'En el capitulo 12, Microtubulos se relaciona mejor con:',
+  '¿Con qué se relaciona mejor microtúbulos?',
   '[{"text":"Miosina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"huso","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
@@ -2902,64 +2902,64 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'd7208a71-1b91-5b0c-b0c8-7605311ac7da',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'En el capitulo 12, Tubulina se relaciona mejor con:',
-  '[{"text":"Microtubulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"microtubulos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor tubulina?',
+  '[{"text":"Microtúbulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"microtúbulos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   'b0a4098b-84ec-5026-b200-5d3e0557d340',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'En el capitulo 12, Centrosoma se relaciona mejor con:',
-  '[{"text":"microtubulos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor centrosoma?',
+  '[{"text":"microtúbulos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   'e7d41876-6ed0-5609-bb16-d6c49c0025af',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'En el capitulo 12, Quinesina se relaciona mejor con:',
-  '[{"text":"Actina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"positivo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor quinesina?',
+  '[{"text":"Actina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"positivo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   '811d2d52-291b-55a4-b40d-75ef7fe1312a',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'En el capitulo 12, Dineina se relaciona mejor con:',
-  '[{"text":"Miosina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"negativo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor dineina?',
+  '[{"text":"Miosina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"negativo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   'bb39d893-44d7-5e59-b5f9-7282628eb2ab',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'En el capitulo 12, Lamelipodios se relaciona mejor con:',
-  '[{"text":"Microtubulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"migracion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor lamelipodios?',
+  '[{"text":"Microtúbulos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"migración","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Actina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   '525a4ede-6e24-5b4c-b2c0-23f0a3fd760a',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'En el capitulo 12, Actina se relaciona mejor con:',
-  '[{"text":"microfilamentos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor actina?',
+  '[{"text":"microfilamentos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   'de528a22-5431-58e2-baf2-9345c5b03e5b',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'mc',
-  'En el capitulo 12, Miosina se relaciona mejor con:',
-  '[{"text":"Actina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"actina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '¿Con qué se relaciona mejor miosina?',
+  '[{"text":"Actina","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"actina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
   '66d7229a-a722-5b85-bb22-25bdeaf5d2e3',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'ms',
-  'Selecciona conceptos centrales del capitulo.',
-  '[{"text":"Actina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  'Selecciona conceptos centrales.',
+  '[{"text":"Actina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Hemostasia","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -2975,7 +2975,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'ms',
   'Selecciona pares correctos de este tema.',
-  '[{"text":"Actina: forma microfilamentos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina: es motor de actina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Nucleolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '[{"text":"Actina: forma microfilamentos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Miosina: es motor de actina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Nucléolo: bomba Na-K","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -2983,14 +2983,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'ms',
   'Selecciona componentes funcionales.',
-  '[{"text":"Actina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtubulos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Centrosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Virus como organulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '[{"text":"Actina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Microtúbulos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Centrosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Virus como orgánulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
   '671c19c0-c519-55dc-bd15-25fb121cc6d7',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'ms',
-  'Selecciona elementos que requieren regulacion celular.',
+  'Selecciona elementos que requieren regulación celular.',
   '[{"text":"Miosina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Tubulina","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Quinesina","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Cristalino ocular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
@@ -2999,7 +2999,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'ms',
   'Selecciona aplicaciones biomédicas posibles.',
-  '[{"text":"Dineina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Lamelipodios","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Presion arterial sistolica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
+  '[{"text":"Dineina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Lamelipodios","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"},{"text":"Presión arterial sistólica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -3046,7 +3046,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '8ac4b7c5-8776-5d50-b8f0-934fdb3cc5d9',
   '0b76e410-dbdb-5777-b5cd-0cf8cbbba9f8',
   'dnd',
-  'Relaciona conceptos del capitulo.',
+  'Relaciona conceptos.',
   '[{"text":"Actina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg","pinX":15,"pinY":35},{"text":"Microtubulo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg","pinX":51,"pinY":35},{"text":"Centrosoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg","pinX":85,"pinY":35},{"text":"Miosina","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg","pinX":33,"pinY":35},{"text":"Tubulina","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/biologia-celular-parciales/cap12_citoesqueleto.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 29, 1, 75
 );

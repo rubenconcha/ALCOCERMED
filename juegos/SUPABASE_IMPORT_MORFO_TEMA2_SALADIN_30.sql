@@ -77,10 +77,10 @@ insert into public.evaluacion_preguntas (
   'a1ad1c19-6427-531d-b360-8619d455bf86',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'Cuales son los seis elementos principales que representan cerca del 98.5% del peso corporal?',
+  'Cuáles son los seis elementos principales que representan cerca del 98.5% del peso corporal?',
   $$[
     {
-        "text": "Oxigeno, carbono, hidrogeno, nitrogeno, calcio y fosforo",
+        "text": "Oxígeno, carbono, hidrogeno, nitrogeno, calcio y fosforo",
         "correct": true,
         "color": "ac-blue"
     },
@@ -156,25 +156,25 @@ insert into public.evaluacion_preguntas (
   'Selecciona las afirmaciones correctas sobre isotopos y radioisotopos.',
   $$[
     {
-        "text": "Los isotopos de un elemento difieren en el numero de neutrones y en su masa atomica",
+        "text": "Los isotopos de un elemento difieren en el número de neutrones y en su masa atomica",
         "correct": true,
         "color": "ac-blue",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_isotopos_hidrogeno.png"
     },
     {
-        "text": "Los isotopos de un mismo elemento tienen el mismo numero de protones",
+        "text": "Los isotopos de un mismo elemento tienen el mismo número de protones",
         "correct": true,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_isotopos_hidrogeno.png"
     },
     {
-        "text": "Los radioisotopos son inestables y emiten radiacion al degradarse",
+        "text": "Los radioisotopos son inestables y emiten radiación al degradarse",
         "correct": true,
         "color": "ac-yellow",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_isotopos_hidrogeno.png"
     },
     {
-        "text": "Los isotopos se diferencian porque cambian su numero atomico",
+        "text": "Los isotopos se diferencian porque cambian su número atomico",
         "correct": false,
         "color": "ac-pink",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_isotopos_hidrogeno.png"
@@ -195,22 +195,22 @@ insert into public.evaluacion_preguntas (
   '34b0b7c5-cf31-551b-865f-ff0d13504937',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'En la ionizacion del sodio mostrada en la figura, el ion Na+ se forma porque el sodio:',
+  'En la ionización del sodio mostrada en la figura, el ion Na+ se forma porque el sodio:',
   $$[
     {
-        "text": "Pierde un electron y queda como cation",
+        "text": "Pierde un electrón y queda como cation",
         "correct": true,
         "color": "ac-blue",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_ionizacion_sodio_cloro.png"
     },
     {
-        "text": "Gana un electron y queda como anion",
+        "text": "Gana un electrón y queda como anion",
         "correct": false,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_ionizacion_sodio_cloro.png"
     },
     {
-        "text": "Gana un proton dentro del nucleo",
+        "text": "Gana un proton dentro del núcleo",
         "correct": false,
         "color": "ac-yellow",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_ionizacion_sodio_cloro.png"
@@ -249,12 +249,12 @@ insert into public.evaluacion_preguntas (
         "color": "ac-yellow"
     },
     {
-        "text": "No tienen carga y por eso no afectan la actividad electrica corporal",
+        "text": "No tienen carga y por eso no afectan la actividad eléctrica corporal",
         "correct": false,
         "color": "ac-pink"
     },
     {
-        "text": "Siempre son lipidos organicos insolubles en agua",
+        "text": "Siempre son lípidos orgánicos insolubles en agua",
         "correct": false,
         "color": "ac-purple"
     }
@@ -304,7 +304,7 @@ insert into public.evaluacion_preguntas (
   '042a7b88-1bf7-576b-b570-1b356648c94e',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'tf',
-  'Los puentes de hidrogeno son atracciones debiles entre regiones parcialmente positivas y negativas de moleculas polares.',
+  'Los puentes de hidrogeno son atracciones debiles entre regiones parcialmente positivas y negativas de moléculas polares.',
   $$[
     {
         "text": "Verdadero",
@@ -337,7 +337,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_agua_esferas_hidratacion.png"
     },
     {
-        "text": "Cohesion y adhesion entre moleculas o superficies",
+        "text": "Cohesión y adhesión entre moléculas o superficies",
         "correct": true,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_agua_esferas_hidratacion.png"
@@ -349,7 +349,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_agua_esferas_hidratacion.png"
     },
     {
-        "text": "Participacion en reacciones como hidrolisis y sintesis por deshidratacion",
+        "text": "Participación en reacciones como hidrolisis y síntesis por deshidratación",
         "correct": true,
         "color": "ac-purple",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_agua_esferas_hidratacion.png"
@@ -370,28 +370,28 @@ insert into public.evaluacion_preguntas (
   '37847ca1-caf7-58b9-8288-bf93c8e871dd',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'Una solucion, a diferencia de un coloide o una suspension, se caracteriza porque:',
+  'Una solución, a diferencia de un coloide o una suspensión, se caracteriza porque:',
   $$[
     {
-        "text": "El soluto permanece mezclado y sus particulas son demasiado pequenas para dispersar la luz",
+        "text": "El soluto permanece mezclado y sus partículas son demasiado pequenas para dispersar la luz",
         "correct": true,
         "color": "ac-blue",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_solucion_coloide_suspension.png"
     },
     {
-        "text": "Las particulas se sedimentan rapidamente al dejarla reposar",
+        "text": "Las partículas se sedimentan rapidamente al dejarla reposar",
         "correct": false,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_solucion_coloide_suspension.png"
     },
     {
-        "text": "Siempre contiene celulas visibles suspendidas en plasma",
+        "text": "Siempre contiene células visibles suspendidas en plasma",
         "correct": false,
         "color": "ac-yellow",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_solucion_coloide_suspension.png"
     },
     {
-        "text": "Sus particulas son tan grandes que no atraviesan ninguna membrana",
+        "text": "Sus partículas son tan grandes que no atraviesan ninguna membrana",
         "correct": false,
         "color": "ac-pink",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_solucion_coloide_suspension.png"
@@ -409,7 +409,7 @@ insert into public.evaluacion_preguntas (
   'Relaciona cada tipo de mezcla con el tubo correspondiente.',
   $$[
     {
-        "text": "Solucion",
+        "text": "Solución",
         "correct": true,
         "color": "ac-blue",
         "pinX": 18,
@@ -425,7 +425,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_mezclas_tubos_sin_rotulos.png"
     },
     {
-        "text": "Suspension",
+        "text": "Suspensión",
         "correct": true,
         "color": "ac-yellow",
         "pinX": 64,
@@ -442,16 +442,16 @@ insert into public.evaluacion_preguntas (
   'fe831901-ef66-5e91-ae4a-80fb1b6f2fff',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'La molaridad expresa la concentracion como:',
+  'La molaridad expresa la concentración como:',
   $$[
     {
-        "text": "Moles de soluto por litro de solucion",
+        "text": "Moles de soluto por litro de solución",
         "correct": true,
         "color": "ac-blue",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_concentracion_porcentaje_molaridad.png"
     },
     {
-        "text": "Gramos de soluto por cada 100 ml de solucion",
+        "text": "Gramos de soluto por cada 100 ml de solución",
         "correct": false,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_concentracion_porcentaje_molaridad.png"
@@ -463,7 +463,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_concentracion_porcentaje_molaridad.png"
     },
     {
-        "text": "La carga electrica total de un ion multiplicada por el pH",
+        "text": "La carga eléctrica total de un ion multiplicada por el pH",
         "correct": false,
         "color": "ac-pink",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_concentracion_porcentaje_molaridad.png"
@@ -478,10 +478,10 @@ insert into public.evaluacion_preguntas (
   '4ec4253d-2aa3-593e-8000-79dbea097612',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'Segun la escala de pH, una solucion con pH menor de 7 se considera:',
+  'Según la escala de pH, una solución con pH menor de 7 se considera:',
   $$[
     {
-        "text": "Acida",
+        "text": "Ácida",
         "correct": true,
         "color": "ac-pink",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_escala_ph.png"
@@ -493,7 +493,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_escala_ph.png"
     },
     {
-        "text": "Basica o alcalina",
+        "text": "Básica o alcalina",
         "correct": false,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_escala_ph.png"
@@ -514,10 +514,10 @@ insert into public.evaluacion_preguntas (
   '5eea353d-61a2-53cd-b17c-0fd69b262466',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'dnd',
-  'Relaciona cada esquema con la clase de reaccion quimica.',
+  'Relaciona cada esquema con la clase de reacción química.',
   $$[
     {
-        "text": "Descomposicion",
+        "text": "Descomposición",
         "correct": true,
         "color": "ac-pink",
         "pinX": 15,
@@ -525,7 +525,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_reacciones_descomposicion_sintesis_intercambio.png"
     },
     {
-        "text": "Sintesis",
+        "text": "Síntesis",
         "correct": true,
         "color": "ac-blue",
         "pinX": 47,
@@ -550,25 +550,25 @@ insert into public.evaluacion_preguntas (
   '060dcb11-e7bf-5d11-960e-1725528b0f20',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'La relacion correcta entre catabolismo y anabolismo es:',
+  'La relación correcta entre catabolismo y anabolismo es:',
   $$[
     {
-        "text": "Catabolismo descompone y libera energia; anabolismo sintetiza moleculas y requiere energia",
+        "text": "Catabolismo descompone y libera energía; anabolismo sintetiza moléculas y requiere energía",
         "correct": true,
         "color": "ac-blue"
     },
     {
-        "text": "Catabolismo siempre sintetiza proteinas; anabolismo siempre degrada glucosa",
+        "text": "Catabolismo siempre sintetiza proteínas; anabolismo siempre degrada glucosa",
         "correct": false,
         "color": "ac-green"
     },
     {
-        "text": "Ambos son procesos sin relacion con la energia",
+        "text": "Ambos son procesos sin relación con la energía",
         "correct": false,
         "color": "ac-yellow"
     },
     {
-        "text": "Anabolismo y catabolismo son sinonimos de pH acido y pH basico",
+        "text": "Anabolismo y catabolismo son sinonimos de pH ácido y pH básico",
         "correct": false,
         "color": "ac-pink"
     }
@@ -634,7 +634,7 @@ insert into public.evaluacion_preguntas (
   'bc339c21-1a37-52b3-9d32-18d5ef75cecf',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'En una molecula organica, los grupos funcionales son importantes porque:',
+  'En una molécula organica, los grupos funcionales son importantes porque:',
   $$[
     {
         "text": "Determinan gran parte de sus propiedades quimicas y su comportamiento fisiologico",
@@ -643,13 +643,13 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_compuestos_organicos_grupos_funcionales.png"
     },
     {
-        "text": "Siempre eliminan el carbono de la molecula",
+        "text": "Siempre eliminan el carbono de la molécula",
         "correct": false,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_compuestos_organicos_grupos_funcionales.png"
     },
     {
-        "text": "Hacen que todos los compuestos organicos tengan la misma funcion",
+        "text": "Hacen que todos los compuestos orgánicos tengan la misma función",
         "correct": false,
         "color": "ac-yellow",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_compuestos_organicos_grupos_funcionales.png"
@@ -709,31 +709,31 @@ insert into public.evaluacion_preguntas (
   'Selecciona las afirmaciones correctas sobre trigliceridos y grasas.',
   $$[
     {
-        "text": "Un triglicerido se forma por glicerol unido a tres acidos grasos",
+        "text": "Un triglicerido se forma por glicerol unido a tres ácidos grasos",
         "correct": true,
         "color": "ac-blue",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_trigliceridos_grasas.png"
     },
     {
-        "text": "La sintesis de trigliceridos produce agua como producto secundario",
+        "text": "La síntesis de trigliceridos produce agua como producto secundario",
         "correct": true,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_trigliceridos_grasas.png"
     },
     {
-        "text": "Los acidos grasos saturados no tienen dobles enlaces carbono-carbono",
+        "text": "Los ácidos grasos saturados no tienen dobles enlaces carbono-carbono",
         "correct": true,
         "color": "ac-yellow",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_trigliceridos_grasas.png"
     },
     {
-        "text": "Los acidos grasos insaturados tienen uno o mas dobles enlaces C=C",
+        "text": "Los ácidos grasos insaturados tienen uno o más dobles enlaces C=C",
         "correct": true,
         "color": "ac-purple",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_trigliceridos_grasas.png"
     },
     {
-        "text": "Todos los lipidos se disuelven con libertad en agua",
+        "text": "Todos los lípidos se disuelven con libertad en agua",
         "correct": false,
         "color": "ac-pink",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_trigliceridos_grasas.png"
@@ -748,7 +748,7 @@ insert into public.evaluacion_preguntas (
   'f331a639-78f8-57c6-bc09-1445a45a8d06',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'tf',
-  'Una grasa trans suele tener una cadena mas recta que una grasa cis, lo que favorece que se comporte mas como grasa saturada.',
+  'Una grasa trans suele tener una cadena más recta que una grasa cis, lo que favorece que se comporte más como grasa saturada.',
   $$[
     {
         "text": "Verdadero",
@@ -772,7 +772,7 @@ insert into public.evaluacion_preguntas (
   '207d7c69-59e3-5b64-b667-0f88e46455b9',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'La caracteristica anfifila de un fosfolipido significa que:',
+  'La característica anfifila de un fosfolipido significa que:',
   $$[
     {
         "text": "Tiene una cabeza hidrofilica y colas hidrofobicas",
@@ -781,7 +781,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_fosfolipido_lecitina.png"
     },
     {
-        "text": "Toda la molecula repele el agua por igual",
+        "text": "Toda la molécula repele el agua por igual",
         "correct": false,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_fosfolipido_lecitina.png"
@@ -793,7 +793,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_fosfolipido_lecitina.png"
     },
     {
-        "text": "Solo se encuentra en el nucleo celular como DNA",
+        "text": "Solo se encuentra en el núcleo celular como DNA",
         "correct": false,
         "color": "ac-pink",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_fosfolipido_lecitina.png"
@@ -832,7 +832,7 @@ insert into public.evaluacion_preguntas (
   '95d420d8-a191-5a42-8ce5-24bf6814afdc',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'ms',
-  'Sobre aminoacidos, peptidos y proteinas, selecciona las afirmaciones correctas.',
+  'Sobre aminoacidos, péptidos y proteínas, selecciona las afirmaciones correctas.',
   $$[
     {
         "text": "Un aminoacido posee un grupo amino, un grupo carboxilo y un grupo R",
@@ -841,13 +841,13 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_aminoacidos_peptidos.png"
     },
     {
-        "text": "Los enlaces peptidicos unen aminoacidos para formar peptidos y polipeptidos",
+        "text": "Los enlaces peptidicos unen aminoacidos para formar péptidos y polipeptidos",
         "correct": true,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_aminoacidos_peptidos.png"
     },
     {
-        "text": "La union peptidica se forma por sintesis por deshidratacion",
+        "text": "La unión peptidica se forma por síntesis por deshidratación",
         "correct": true,
         "color": "ac-yellow",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_aminoacidos_peptidos.png"
@@ -859,7 +859,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_aminoacidos_peptidos.png"
     },
     {
-        "text": "Una proteina no puede tener mas de un aminoacido",
+        "text": "Una proteína no puede tener más de un aminoacido",
         "correct": false,
         "color": "ac-purple",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_aminoacidos_peptidos.png"
@@ -918,7 +918,7 @@ insert into public.evaluacion_preguntas (
   'bb013ffb-d81a-5955-8ddd-096b1c622262',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'En la estructura primaria de una proteina, lo que se describe principalmente es:',
+  'En la estructura primaria de una proteína, lo que se describe principalmente es:',
   $$[
     {
         "text": "La secuencia de aminoacidos unidos por enlaces peptidicos",
@@ -927,7 +927,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_insulina_estructura_primaria.png"
     },
     {
-        "text": "La union de varias cadenas ya plegadas en una proteina final",
+        "text": "La unión de varias cadenas ya plegadas en una proteína final",
         "correct": false,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_insulina_estructura_primaria.png"
@@ -939,7 +939,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_insulina_estructura_primaria.png"
     },
     {
-        "text": "La cantidad de lipidos adheridos a la membrana",
+        "text": "La cantidad de lípidos adheridos a la membrana",
         "correct": false,
         "color": "ac-pink",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_insulina_estructura_primaria.png"
@@ -954,16 +954,16 @@ insert into public.evaluacion_preguntas (
   'ef6d1201-154f-512c-ab5c-a771692792d8',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'El efecto principal de una enzima sobre una reaccion quimica es:',
+  'El efecto principal de una enzima sobre una reacción química es:',
   $$[
     {
-        "text": "Disminuir la energia de activacion y acelerar la reaccion sin consumirse",
+        "text": "Disminuir la energía de activación y acelerar la reacción sin consumirse",
         "correct": true,
         "color": "ac-blue",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_enzima_energia_activacion.png"
     },
     {
-        "text": "Aumentar siempre la energia de activacion",
+        "text": "Aumentar siempre la energía de activación",
         "correct": false,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_enzima_energia_activacion.png"
@@ -990,7 +990,7 @@ insert into public.evaluacion_preguntas (
   '6d040d1c-794c-5127-ae52-fa34ea07bfc1',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'ms',
-  'En una reaccion enzimatica como la de la sacarasa, cuales pasos o ideas son correctos?',
+  'En una reacción enzimatica como la de la sacarasa, cuáles pasos o ideas son correctos?',
   $$[
     {
         "text": "El sustrato se une al sitio activo de la enzima",
@@ -1005,7 +1005,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_reaccion_enzimatica_sacarasa.png"
     },
     {
-        "text": "La enzima libera productos y puede catalizar otra reaccion",
+        "text": "La enzima libera productos y puede catalizar otra reacción",
         "correct": true,
         "color": "ac-yellow",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_reaccion_enzimatica_sacarasa.png"
@@ -1032,16 +1032,16 @@ insert into public.evaluacion_preguntas (
   '682e2e89-d640-55b7-be04-eddbfc6e17bd',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'mc',
-  'En el ATP, la energia transferible se asocia sobre todo con:',
+  'En el ATP, la energía transferible se asocia sobre todo con:',
   $$[
     {
-        "text": "Los enlaces de alta energia entre los grupos fosfato",
+        "text": "Los enlaces de alta energía entre los grupos fosfato",
         "correct": true,
         "color": "ac-blue",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_atp_camp.png"
     },
     {
-        "text": "La eliminacion completa de la adenina",
+        "text": "La eliminación completa de la adenina",
         "correct": false,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_atp_camp.png"
@@ -1053,7 +1053,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_atp_camp.png"
     },
     {
-        "text": "La conversion de ATP en DNA",
+        "text": "La conversión de ATP en DNA",
         "correct": false,
         "color": "ac-pink",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_atp_camp.png"
@@ -1068,28 +1068,28 @@ insert into public.evaluacion_preguntas (
   '5c47ac83-2a8c-554b-97fd-1ef4968396f0',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'ms',
-  'Selecciona funciones o ideas correctas sobre el ATP en la celula.',
+  'Selecciona funciones o ideas correctas sobre el ATP en la célula.',
   $$[
     {
-        "text": "La oxidacion de glucosa ayuda a generar ATP",
+        "text": "La oxidación de glucosa ayuda a generar ATP",
         "correct": true,
         "color": "ac-blue",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_fuente_funciones_atp.png"
     },
     {
-        "text": "El ATP puede sostener contraccion muscular, actividad ciliar y transporte activo",
+        "text": "El ATP puede sostener contracción muscular, actividad ciliar y transporte activo",
         "correct": true,
         "color": "ac-green",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_fuente_funciones_atp.png"
     },
     {
-        "text": "La hidrolisis de ATP a ADP y Pi libera energia util",
+        "text": "La hidrolisis de ATP a ADP y Pi libera energía util",
         "correct": true,
         "color": "ac-yellow",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_fuente_funciones_atp.png"
     },
     {
-        "text": "La fosforilacion puede activar o desactivar rutas metabolicas",
+        "text": "La fosforilación puede activar o desactivar rutas metabolicas",
         "correct": true,
         "color": "ac-purple",
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_fuente_funciones_atp.png"
@@ -1110,7 +1110,7 @@ insert into public.evaluacion_preguntas (
   '386c3255-e847-51d3-b502-85f5fc6f67d2',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'dnd',
-  'Relaciona cada ruta de produccion de ATP con la region del esquema.',
+  'Relaciona cada ruta de producción de ATP con la región del esquema.',
   $$[
     {
         "text": "Glucolisis",
@@ -1121,7 +1121,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_produccion_atp.png"
     },
     {
-        "text": "Fermentacion anaerobica",
+        "text": "Fermentación anaerobica",
         "correct": true,
         "color": "ac-yellow",
         "pinX": 35,
@@ -1129,7 +1129,7 @@ insert into public.evaluacion_preguntas (
         "pregunta_imagen": "/juegos/assets/capitulo2-tema2-saladin/cap2_produccion_atp.png"
     },
     {
-        "text": "Respiracion aerobica",
+        "text": "Respiración aerobica",
         "correct": true,
         "color": "ac-pink",
         "pinX": 38,
@@ -1146,30 +1146,30 @@ insert into public.evaluacion_preguntas (
   '6c7b8c8f-b220-5c9b-b0a5-52d5c0deaf0f',
   'a19f2789-872e-5f1e-9682-e16448dbee05',
   'ms',
-  'Sobre acidos nucleicos, DNA y RNA, selecciona las afirmaciones correctas.',
+  'Sobre ácidos nucleicos, DNA y RNA, selecciona las afirmaciones correctas.',
   $$[
     {
-        "text": "Los acidos nucleicos son polimeros de nucleotidos",
+        "text": "Los ácidos nucleicos son polimeros de nucleotidos",
         "correct": true,
         "color": "ac-blue"
     },
     {
-        "text": "El DNA constituye los genes y transfiere informacion hereditaria",
+        "text": "El DNA constituye los genes y transfiere información hereditaria",
         "correct": true,
         "color": "ac-green"
     },
     {
-        "text": "El RNA participa en aplicar las instrucciones del DNA para sintetizar proteinas",
+        "text": "El RNA participa en aplicar las instrucciones del DNA para sintetizar proteínas",
         "correct": true,
         "color": "ac-yellow"
     },
     {
-        "text": "Las proteinas son los monomeros que forman DNA y RNA",
+        "text": "Las proteínas son los monomeros que forman DNA y RNA",
         "correct": false,
         "color": "ac-pink"
     },
     {
-        "text": "Los acidos nucleicos no guardan ninguna relacion con nucleotidos",
+        "text": "Los ácidos nucleicos no guardan ninguna relación con nucleotidos",
         "correct": false,
         "color": "ac-purple"
     }

@@ -21,7 +21,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
   'Acciones colectivas para proteger y mejorar salud poblacional',
-  '[{"text":"Salud publica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promocion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '[{"text":"Salud pública","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promoción","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
@@ -29,23 +29,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
   'Proceso que permite mayor control sobre la salud',
-  '[{"text":"Prevencion primaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion terciaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promocion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '[{"text":"Prevención primaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención terciaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promoción","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   '652123b7-fe82-51d7-c4cd-aa74239aaf46',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'Evita aparicion de enfermedad',
-  '[{"text":"Prevencion terciaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion cuaternaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  'Evita aparición de enfermedad',
+  '[{"text":"Prevención terciaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención cuaternaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
   'e4cf3ad1-0185-58d7-c747-2eeac712d9cc',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'Detecta tempranamente y limita dano',
-  '[{"text":"Prevencion primaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Salud publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promocion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  'Detecta tempranamente y limita daño',
+  '[{"text":"Prevención primaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Salud pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promoción","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
@@ -53,7 +53,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
   'Reduce secuelas de enfermedad establecida',
-  '[{"text":"Prevencion terciaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promocion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '[{"text":"Prevención terciaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promoción","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
@@ -61,7 +61,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
   'Evita intervenciones innecesarias o iatrogenicas',
-  '[{"text":"Prevencion primaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion terciaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion cuaternaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '[{"text":"Prevención primaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención terciaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención cuaternaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
@@ -69,7 +69,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
   'Estrategia integral cercana a la comunidad',
-  '[{"text":"Promocion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"APS","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Salud publica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '[{"text":"Promoción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"APS","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Salud pública","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
@@ -77,87 +77,87 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
   'Condiciones sociales que influyen en salud',
-  '[{"text":"Prevencion secundaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Determinantes sociales","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promocion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '[{"text":"Prevención secundaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Determinantes sociales","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promoción","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   '0294bd09-6b17-5ca2-c42f-a56cfc1aaaf4',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'Documento clave de promocion de la salud',
-  '[{"text":"Carta de Ottawa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion terciaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  'Documento clave de promoción de la salud',
+  '[{"text":"Carta de Ottawa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención terciaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   '1dabb1e5-303c-547c-c108-88dafcce0e1d',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'En Tema 1: Generalidades, bases normativas y politicas internacionales, identifica el concepto relacionado con: acciones colectivas para proteger y mejorar salud poblacional',
-  '[{"text":"Promocion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Salud publica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «acciones colectivas para proteger y mejorar salud poblacional»?',
+  '[{"text":"Promoción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Salud pública","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   '7b477dc7-6dc3-5f29-ca2d-4267dd93c969',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'En Tema 1: Generalidades, bases normativas y politicas internacionales, identifica el concepto relacionado con: proceso que permite mayor control sobre la salud',
-  '[{"text":"Prevencion secundaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion terciaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promocion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «proceso que permite mayor control sobre la salud»?',
+  '[{"text":"Prevención secundaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención terciaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promoción","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   '9b77c510-5f69-551f-c6d1-4e153bbc9b2e',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'En Tema 1: Generalidades, bases normativas y politicas internacionales, identifica el concepto relacionado con: evita aparicion de enfermedad',
-  '[{"text":"Prevencion cuaternaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion terciaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «evita aparición de enfermedad»?',
+  '[{"text":"Prevención cuaternaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención terciaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   '9ef28b26-2d2f-5dc6-cb49-6d7e3a397202',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'En Tema 1: Generalidades, bases normativas y politicas internacionales, identifica el concepto relacionado con: detecta tempranamente y limita dano',
-  '[{"text":"Prevencion secundaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Salud publica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promocion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «detecta tempranamente y limita daño»?',
+  '[{"text":"Prevención secundaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Salud pública","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promoción","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   '9e55f88c-68a7-51af-ca63-a8bb01626035',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'En Tema 1: Generalidades, bases normativas y politicas internacionales, identifica el concepto relacionado con: reduce secuelas de enfermedad establecida',
-  '[{"text":"Promocion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion terciaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «reduce secuelas de enfermedad establecida»?',
+  '[{"text":"Promoción","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención terciaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   '90194595-dd5c-5ea5-c7a0-52c15d4b0ad9',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'En Tema 1: Generalidades, bases normativas y politicas internacionales, identifica el concepto relacionado con: evita intervenciones innecesarias o iatrogenicas',
-  '[{"text":"Prevencion secundaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion terciaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion cuaternaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «evita intervenciones innecesarias o iatrogenicas»?',
+  '[{"text":"Prevención secundaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención terciaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención cuaternaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   'a33b3170-faec-5864-c3d9-fdd89d34406d',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'En Tema 1: Generalidades, bases normativas y politicas internacionales, identifica el concepto relacionado con: estrategia integral cercana a la comunidad',
-  '[{"text":"Prevencion primaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"APS","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Salud publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promocion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «estrategia integral cercana a la comunidad»?',
+  '[{"text":"Prevención primaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"APS","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Salud pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promoción","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   '66d24cfd-8254-5d19-cb98-ccb31b5145ab',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'En Tema 1: Generalidades, bases normativas y politicas internacionales, identifica el concepto relacionado con: condiciones sociales que influyen en salud',
-  '[{"text":"Determinantes sociales","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promocion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «condiciones sociales que influyen en salud»?',
+  '[{"text":"Determinantes sociales","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promoción","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   '1018ced3-48c9-577d-c468-0a4a1037c0e0',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'mc',
-  'En Tema 1: Generalidades, bases normativas y politicas internacionales, identifica el concepto relacionado con: documento clave de promocion de la salud',
-  '[{"text":"Prevencion primaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion terciaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Carta de Ottawa","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «documento clave de promoción de la salud»?',
+  '[{"text":"Prevención primaria","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención terciaria","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Carta de Ottawa","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -165,7 +165,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"Salud publica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promocion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion primaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion secundaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '[{"text":"Salud pública","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promoción","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención primaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención secundaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -173,15 +173,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"Prevencion terciaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion cuaternaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"APS","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Determinantes sociales","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '[{"text":"Prevención terciaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención cuaternaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"APS","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Determinantes sociales","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   '84138439-7471-5249-c3f9-137d2afc3900',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"Salud publica: Acciones colectivas para proteger y","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promocion: Proceso que permite mayor control","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"Salud pública: Acciones colectivas para proteger y","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Promoción: Proceso que permite mayor control","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -189,7 +189,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'ms',
   'Selecciona elementos que se usan para planificar o evaluar.',
-  '[{"text":"Prevencion primaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion cuaternaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Carta de Ottawa","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '[{"text":"Prevención primaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención cuaternaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Carta de Ottawa","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -197,15 +197,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'ms',
   'Selecciona conceptos que deben definirse con claridad.',
-  '[{"text":"Prevencion secundaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"APS","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Determinantes sociales","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  '[{"text":"Prevención secundaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"APS","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Determinantes sociales","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
 (
   '57086d91-ab89-5d6d-c5e3-a2c2e3894ae5',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
-  '[{"text":"Salud publica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevencion terciaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Carta de Ottawa","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
+  'Selecciona los componentes correctos.',
+  '[{"text":"Salud pública","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Prevención terciaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Carta de Ottawa","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -213,7 +213,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'dnd',
   'Relaciona conceptos del esquema.',
-  '[{"text":"Salud publica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":13,"pinY":35},{"text":"Promocion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":32,"pinY":35},{"text":"Prevencion primaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":50,"pinY":35},{"text":"Prevencion secundaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":69,"pinY":35},{"text":"Prevencion terciaria","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"Prevencion cuaternaria","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":22,"pinY":67}]'::jsonb,
+  '[{"text":"Salud pública","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":13,"pinY":35},{"text":"Promoción","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":32,"pinY":35},{"text":"Prevención primaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":50,"pinY":35},{"text":"Prevención secundaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":69,"pinY":35},{"text":"Prevención terciaria","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"Prevención cuaternaria","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -221,7 +221,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'dnd',
   'Relaciona componentes aplicados.',
-  '[{"text":"Prevencion secundaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":69,"pinY":35},{"text":"Prevencion terciaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"Prevencion cuaternaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":22,"pinY":67},{"text":"APS","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":41,"pinY":67},{"text":"Determinantes sociales","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":59,"pinY":67},{"text":"Carta de Ottawa","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Prevención secundaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":69,"pinY":35},{"text":"Prevención terciaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"Prevención cuaternaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":22,"pinY":67},{"text":"APS","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":41,"pinY":67},{"text":"Determinantes sociales","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":59,"pinY":67},{"text":"Carta de Ottawa","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -229,7 +229,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'dnd',
   'Relaciona elementos principales.',
-  '[{"text":"Salud publica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":13,"pinY":35},{"text":"Prevencion primaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":50,"pinY":35},{"text":"Prevencion terciaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"APS","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":41,"pinY":67},{"text":"Carta de Ottawa","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Salud pública","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":13,"pinY":35},{"text":"Prevención primaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":50,"pinY":35},{"text":"Prevención terciaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"APS","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":41,"pinY":67},{"text":"Carta de Ottawa","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -237,23 +237,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'dnd',
   'Relaciona conceptos y etapas.',
-  '[{"text":"Carta de Ottawa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":78,"pinY":67},{"text":"Determinantes sociales","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":59,"pinY":67},{"text":"APS","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":41,"pinY":67},{"text":"Prevencion cuaternaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":22,"pinY":67},{"text":"Prevencion terciaria","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"Prevencion secundaria","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":69,"pinY":35}]'::jsonb,
+  '[{"text":"Carta de Ottawa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":78,"pinY":67},{"text":"Determinantes sociales","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":59,"pinY":67},{"text":"APS","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":41,"pinY":67},{"text":"Prevención cuaternaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":22,"pinY":67},{"text":"Prevención terciaria","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"Prevención secundaria","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 27, 1, 75
 ),
 (
   'da1067ce-2ce5-5c7c-c8f1-ebe62476fc68',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'dnd',
-  'Relaciona etiquetas del tema.',
-  '[{"text":"Promocion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":32,"pinY":35},{"text":"Prevencion primaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":50,"pinY":35},{"text":"Prevencion secundaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":69,"pinY":35},{"text":"Prevencion terciaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"Prevencion cuaternaria","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":22,"pinY":67},{"text":"APS","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":41,"pinY":67}]'::jsonb,
+  'Relaciona cada concepto con su imagen.',
+  '[{"text":"Promoción","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":32,"pinY":35},{"text":"Prevención primaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":50,"pinY":35},{"text":"Prevención secundaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":69,"pinY":35},{"text":"Prevención terciaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"Prevención cuaternaria","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":22,"pinY":67},{"text":"APS","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   '7689164e-da2e-5dda-cae1-d142f8956022',
   'db08a86a-11bd-52e4-ce09-f2b744dad5d9',
   'dnd',
-  'Relaciona practica y evaluacion.',
-  '[{"text":"Prevencion primaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":50,"pinY":35},{"text":"Prevencion secundaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":69,"pinY":35},{"text":"Prevencion terciaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"Prevencion cuaternaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":22,"pinY":67},{"text":"APS","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":41,"pinY":67},{"text":"Determinantes sociales","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":59,"pinY":67}]'::jsonb,
+  'Relaciona práctica y evaluación.',
+  '[{"text":"Prevención primaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":50,"pinY":35},{"text":"Prevención secundaria","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":69,"pinY":35},{"text":"Prevención terciaria","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":86,"pinY":35},{"text":"Prevención cuaternaria","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":22,"pinY":67},{"text":"APS","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":41,"pinY":67},{"text":"Determinantes sociales","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp01_sp01p1.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -274,23 +274,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '8aa0ac9f-c7b8-5d8b-cb6a-de4ff8602392',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'Curso de accion estatal para resolver asuntos publicos',
-  '[{"text":"Politica publica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud publica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  'Curso de acción estatal para resolver asuntos publicos',
+  '[{"text":"Política pública","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud pública","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
   '285acfb0-4a3c-5938-c425-dcd1a458d9de',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'Campo de accion poblacional en salud',
-  '[{"text":"Derecho a la salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud publica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  'Campo de acción poblacional en salud',
+  '[{"text":"Derecho a la salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud pública","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   'b79bca05-738f-526d-c5db-1c5dd80f9178',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'Base normativa para garantizar atencion',
+  'Base normativa para garantizar atención',
   '[{"text":"Universalidad","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Solidaridad","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
@@ -299,22 +299,22 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
   'Reducir desigualdades injustas',
-  '[{"text":"Derecho a la salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud publica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '[{"text":"Derecho a la salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud pública","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
   'b348e8a5-d437-5cf7-c1b9-c652a3e5dfdd',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'Cobertura para toda la poblacion',
-  '[{"text":"Universalidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud publica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  'Cobertura para toda la población',
+  '[{"text":"Universalidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud pública","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
   '2aa1affd-463e-5140-c867-0175f60de715',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'Apoyo colectivo segun necesidad',
+  'Apoyo colectivo según necesidad',
   '[{"text":"Derecho a la salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Solidaridad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
@@ -322,8 +322,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b55dfe2f-c4f9-597e-c0f6-acab500fa1e9',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'Coordinacion con otros sectores',
-  '[{"text":"Salud publica","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Intersectorialidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Politica publica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  'Coordinación con otros sectores',
+  '[{"text":"Salud pública","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Intersectorialidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Política pública","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
@@ -331,38 +331,38 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
   'Toma de decisiones con actores sociales',
-  '[{"text":"Equidad","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Gobernanza","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '[{"text":"Equidad","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Gobernanza","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   'd44a5842-cda3-5b6c-ca55-26660cf4c688',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'Medicion de resultados e impacto',
-  '[{"text":"Evaluacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  'Medición de resultados e impacto',
+  '[{"text":"Evaluación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   'df40c792-2624-554d-c9c5-22cdbcddf50b',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'En Tema 2: Politicas publicas en salud, identifica el concepto relacionado con: curso de accion estatal para resolver asuntos publicos',
-  '[{"text":"Salud publica","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Politica publica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «curso de acción estatal para resolver asuntos publicos»?',
+  '[{"text":"Salud pública","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Política pública","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   'bc2a7848-7cfa-5658-c1ad-2c735a2a272c',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'En Tema 2: Politicas publicas en salud, identifica el concepto relacionado con: campo de accion poblacional en salud',
-  '[{"text":"Equidad","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud publica","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «campo de acción poblacional en salud»?',
+  '[{"text":"Equidad","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud pública","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   '3e96be01-393b-57b0-c974-a8e4920832cd',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'En Tema 2: Politicas publicas en salud, identifica el concepto relacionado con: base normativa para garantizar atencion',
+  '¿Qué concepto se describe aquí: «base normativa para garantizar atención»?',
   '[{"text":"Solidaridad","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
@@ -370,23 +370,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '78132a58-f55b-5a08-c838-086c70b225ee',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'En Tema 2: Politicas publicas en salud, identifica el concepto relacionado con: reducir desigualdades injustas',
-  '[{"text":"Equidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Politica publica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «reducir desigualdades injustas»?',
+  '[{"text":"Equidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Política pública","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   '74c040f6-aae7-5e55-c262-10494135f42f',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'En Tema 2: Politicas publicas en salud, identifica el concepto relacionado con: cobertura para toda la poblacion',
-  '[{"text":"Salud publica","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «cobertura para toda la población»?',
+  '[{"text":"Salud pública","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   'ce8cdf5f-4be9-5ae9-c9d4-64b61739c5ef',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'En Tema 2: Politicas publicas en salud, identifica el concepto relacionado con: apoyo colectivo segun necesidad',
+  '¿Qué concepto se describe aquí: «apoyo colectivo según necesidad»?',
   '[{"text":"Equidad","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Solidaridad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
@@ -394,24 +394,24 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6abe8de4-3897-5e1a-c2fc-8664e511bcff',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'En Tema 2: Politicas publicas en salud, identifica el concepto relacionado con: coordinacion con otros sectores',
-  '[{"text":"Derecho a la salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Intersectorialidad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud publica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «coordinación con otros sectores»?',
+  '[{"text":"Derecho a la salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Intersectorialidad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud pública","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   'c146490a-bcee-5ef1-c488-c3211175b331',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'En Tema 2: Politicas publicas en salud, identifica el concepto relacionado con: toma de decisiones con actores sociales',
-  '[{"text":"Gobernanza","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud publica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «toma de decisiones con actores sociales»?',
+  '[{"text":"Gobernanza","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud pública","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   '6b021bc5-2fa9-5cf2-c58f-fd25c4f7866d',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'mc',
-  'En Tema 2: Politicas publicas en salud, identifica el concepto relacionado con: medicion de resultados e impacto',
-  '[{"text":"Derecho a la salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Evaluacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «medición de resultados e impacto»?',
+  '[{"text":"Derecho a la salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Evaluación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -419,7 +419,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"Politica publica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud publica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '[{"text":"Política pública","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud pública","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Derecho a la salud","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Equidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -427,15 +427,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"Universalidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Solidaridad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Intersectorialidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Gobernanza","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '[{"text":"Universalidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Solidaridad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Intersectorialidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Gobernanza","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   '0c57134b-a977-5b48-c8da-92048c484456',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"Politica publica: Curso de accion estatal para","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud publica: Campo de accion poblacional en","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"Política pública: Curso de acción estatal para","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Salud pública: Campo de acción poblacional en","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -443,7 +443,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'ms',
   'Selecciona elementos que se usan para planificar o evaluar.',
-  '[{"text":"Derecho a la salud","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Solidaridad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Evaluacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  '[{"text":"Derecho a la salud","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Solidaridad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Evaluación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -458,8 +458,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '17bb999a-ccc1-5176-cb0a-99a238decb5c',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
-  '[{"text":"Politica publica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Evaluacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
+  'Selecciona los componentes correctos.',
+  '[{"text":"Política pública","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Universalidad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Evaluación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -467,7 +467,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'dnd',
   'Relaciona conceptos del esquema.',
-  '[{"text":"Politica publica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":13,"pinY":35},{"text":"Salud publica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":32,"pinY":35},{"text":"Derecho a la salud","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":50,"pinY":35},{"text":"Equidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":69,"pinY":35},{"text":"Universalidad","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":86,"pinY":35},{"text":"Solidaridad","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":22,"pinY":67}]'::jsonb,
+  '[{"text":"Política pública","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":13,"pinY":35},{"text":"Salud pública","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":32,"pinY":35},{"text":"Derecho a la salud","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":50,"pinY":35},{"text":"Equidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":69,"pinY":35},{"text":"Universalidad","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":86,"pinY":35},{"text":"Solidaridad","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -475,7 +475,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'dnd',
   'Relaciona componentes aplicados.',
-  '[{"text":"Equidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":69,"pinY":35},{"text":"Universalidad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":86,"pinY":35},{"text":"Solidaridad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":22,"pinY":67},{"text":"Intersectorialidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":41,"pinY":67},{"text":"Gobernanza","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":59,"pinY":67},{"text":"Evaluacion","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Equidad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":69,"pinY":35},{"text":"Universalidad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":86,"pinY":35},{"text":"Solidaridad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":22,"pinY":67},{"text":"Intersectorialidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":41,"pinY":67},{"text":"Gobernanza","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":59,"pinY":67},{"text":"Evaluación","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -483,7 +483,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'dnd',
   'Relaciona elementos principales.',
-  '[{"text":"Politica publica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":13,"pinY":35},{"text":"Derecho a la salud","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":50,"pinY":35},{"text":"Universalidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":86,"pinY":35},{"text":"Intersectorialidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":41,"pinY":67},{"text":"Evaluacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Política pública","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":13,"pinY":35},{"text":"Derecho a la salud","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":50,"pinY":35},{"text":"Universalidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":86,"pinY":35},{"text":"Intersectorialidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":41,"pinY":67},{"text":"Evaluación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -491,22 +491,22 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'dnd',
   'Relaciona conceptos y etapas.',
-  '[{"text":"Evaluacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":78,"pinY":67},{"text":"Gobernanza","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":59,"pinY":67},{"text":"Intersectorialidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":41,"pinY":67},{"text":"Solidaridad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":22,"pinY":67},{"text":"Universalidad","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":86,"pinY":35},{"text":"Equidad","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":69,"pinY":35}]'::jsonb,
+  '[{"text":"Evaluación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":78,"pinY":67},{"text":"Gobernanza","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":59,"pinY":67},{"text":"Intersectorialidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":41,"pinY":67},{"text":"Solidaridad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":22,"pinY":67},{"text":"Universalidad","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":86,"pinY":35},{"text":"Equidad","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 27, 1, 75
 ),
 (
   '721c2f52-c168-5e77-cfea-a2843d8ccba9',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'dnd',
-  'Relaciona etiquetas del tema.',
-  '[{"text":"Salud publica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":32,"pinY":35},{"text":"Derecho a la salud","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":50,"pinY":35},{"text":"Equidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":69,"pinY":35},{"text":"Universalidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":86,"pinY":35},{"text":"Solidaridad","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":22,"pinY":67},{"text":"Intersectorialidad","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":41,"pinY":67}]'::jsonb,
+  'Relaciona cada concepto con su imagen.',
+  '[{"text":"Salud pública","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":32,"pinY":35},{"text":"Derecho a la salud","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":50,"pinY":35},{"text":"Equidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":69,"pinY":35},{"text":"Universalidad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":86,"pinY":35},{"text":"Solidaridad","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":22,"pinY":67},{"text":"Intersectorialidad","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   '21edae3d-7572-5902-c92a-02375b34266c',
   'ac9dee4a-2dfb-5991-c709-4a941c5d51fc',
   'dnd',
-  'Relaciona practica y evaluacion.',
+  'Relaciona práctica y evaluación.',
   '[{"text":"Derecho a la salud","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":50,"pinY":35},{"text":"Equidad","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":69,"pinY":35},{"text":"Universalidad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":86,"pinY":35},{"text":"Solidaridad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":22,"pinY":67},{"text":"Intersectorialidad","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":41,"pinY":67},{"text":"Gobernanza","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp02_sp02p1.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
@@ -528,7 +528,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '8c29a92b-00fc-5afe-c037-ef0cdcf169ce',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'Politica de Salud Familiar Comunitaria Intercultural',
+  'Política de Salud Familiar Comunitaria Intercultural',
   '[{"text":"SAFCI","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"PAI","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
@@ -536,7 +536,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7843e8e8-5edd-5de7-cb37-e21949c3c173',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'Sistema Unico de Salud gratuito y universal',
+  'Sistema Único de Salud gratuito y universal',
   '[{"text":"Mi Salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"PAI","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"VIH/ITS","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
@@ -552,7 +552,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '4ca72194-4111-5572-cda2-8dbe319df45a',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'Programa de vacunacion universal',
+  'Programa de vacunación universal',
   '[{"text":"Mi Salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"PAI","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SAFCI","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
@@ -560,7 +560,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '029c3871-c073-5c2c-cee3-51df4224c2d6',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'Programa de prevencion diagnostico y tratamiento',
+  'Programa de prevención diagnóstico y tratamiento',
   '[{"text":"VIH/ITS","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"PAI","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
@@ -584,7 +584,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9635eff7-e1de-519a-c54c-1ce0616e7cd2',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'Atencion prioritaria a binomio madre-nino',
+  'Atención prioritaria a binomio madre-nino',
   '[{"text":"PAI","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Salud materna infantil","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
@@ -600,7 +600,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '68f29597-0482-5185-c93f-98ab2cee9d4f',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'En Tema 3: Programas de salud en Bolivia, identifica el concepto relacionado con: politica de salud familiar comunitaria intercultural',
+  '¿Qué concepto se describe aquí: «política de salud familiar comunitaria intercultural»?',
   '[{"text":"SUS","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"PAI","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SAFCI","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
@@ -608,7 +608,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'c5b0aeee-e5e6-5d00-cebb-f93b09108c53',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'En Tema 3: Programas de salud en Bolivia, identifica el concepto relacionado con: sistema unico de salud gratuito y universal',
+  '¿Qué concepto se describe aquí: «sistema único de salud gratuito y universal»?',
   '[{"text":"PAI","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"VIH/ITS","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
@@ -616,7 +616,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'c967dcbb-ebeb-5b72-c595-66c7b023db61',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'En Tema 3: Programas de salud en Bolivia, identifica el concepto relacionado con: programa con equipos comunitarios y visitas domiciliarias',
+  '¿Qué concepto se describe aquí: «programa con equipos comunitarios y visitas domiciliarias»?',
   '[{"text":"Tuberculosis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"PAI","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"VIH/ITS","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
@@ -624,7 +624,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '85b5e644-cf30-5058-cead-64175226c02d',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'En Tema 3: Programas de salud en Bolivia, identifica el concepto relacionado con: programa de vacunacion universal',
+  '¿Qué concepto se describe aquí: «programa de vacunación universal»?',
   '[{"text":"PAI","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SAFCI","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
@@ -632,7 +632,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '1a9c869e-44c0-5586-c7ce-e848a947c560',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'En Tema 3: Programas de salud en Bolivia, identifica el concepto relacionado con: programa de prevencion diagnostico y tratamiento',
+  '¿Qué concepto se describe aquí: «programa de prevención diagnóstico y tratamiento»?',
   '[{"text":"SUS","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"PAI","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"VIH/ITS","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
@@ -640,7 +640,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6d563839-e703-564a-ccff-99b32bb41a68',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'En Tema 3: Programas de salud en Bolivia, identifica el concepto relacionado con: programa de control de enfermedad transmisible',
+  '¿Qué concepto se describe aquí: «programa de control de enfermedad transmisible»?',
   '[{"text":"PAI","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"VIH/ITS","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Tuberculosis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
@@ -648,7 +648,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'cb7ecdcc-740c-535a-cc5e-a02eb89e3d44',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'En Tema 3: Programas de salud en Bolivia, identifica el concepto relacionado con: problema prioritario vectorial en bolivia',
+  '¿Qué concepto se describe aquí: «problema prioritario vectorial en bolivia»?',
   '[{"text":"Mi Salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Chagas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SAFCI","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
@@ -656,7 +656,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '7677ebf2-b6f1-5494-c1c9-743cac090b7e',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'En Tema 3: Programas de salud en Bolivia, identifica el concepto relacionado con: atencion prioritaria a binomio madre-nino',
+  '¿Qué concepto se describe aquí: «atención prioritaria a binomio madre-nino»?',
   '[{"text":"Salud materna infantil","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"PAI","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
@@ -664,7 +664,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2e34536a-e71d-5711-c6a0-0ce3ff9e89ef',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'mc',
-  'En Tema 3: Programas de salud en Bolivia, identifica el concepto relacionado con: medidas para evaluar metas e impacto',
+  '¿Qué concepto se describe aquí: «medidas para evaluar metas e impacto»?',
   '[{"text":"Mi Salud","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"PAI","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"VIH/ITS","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Indicadores","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
@@ -673,7 +673,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"SAFCI","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"PAI","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
+  '[{"text":"SAFCI","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mi Salud","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"PAI","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -681,15 +681,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"VIH/ITS","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Tuberculosis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Chagas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Salud materna infantil","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
+  '[{"text":"VIH/ITS","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Tuberculosis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Chagas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Salud materna infantil","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   '38e2cffc-38e2-555c-cf75-96e1d8b48d42',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"SAFCI: Politica de Salud Familiar Comunitaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS: Sistema Unico de Salud gratuito","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"SAFCI: Política de Salud Familiar Comunitaria","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"SUS: Sistema Único de Salud gratuito","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -712,7 +712,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9016972e-719f-5937-c1db-674e9646fc96',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
+  'Selecciona los componentes correctos.',
   '[{"text":"SAFCI","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"VIH/ITS","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Indicadores","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
@@ -752,7 +752,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f79adb2f-92bb-593f-cbb1-853c01521b47',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'dnd',
-  'Relaciona etiquetas del tema.',
+  'Relaciona cada concepto con su imagen.',
   '[{"text":"SUS","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":32,"pinY":35},{"text":"Mi Salud","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":50,"pinY":35},{"text":"PAI","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":69,"pinY":35},{"text":"VIH/ITS","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":86,"pinY":35},{"text":"Tuberculosis","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":22,"pinY":67},{"text":"Chagas","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
@@ -760,7 +760,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '87615ed4-b00f-573d-ce5b-01908d799ff4',
   '64e70024-2e36-5cb1-c6a3-abd3493c9126',
   'dnd',
-  'Relaciona practica y evaluacion.',
+  'Relaciona práctica y evaluación.',
   '[{"text":"Mi Salud","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":50,"pinY":35},{"text":"PAI","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":69,"pinY":35},{"text":"VIH/ITS","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":86,"pinY":35},{"text":"Tuberculosis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":22,"pinY":67},{"text":"Chagas","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":41,"pinY":67},{"text":"Salud materna infantil","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp03_sp03p1.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
@@ -782,8 +782,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a480f2dc-3e65-58c9-cb18-b3255525cca6',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'Situacion delimitada que requiere estudio',
-  '[{"text":"Problema de investigacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  'Situación delimitada que requiere estudio',
+  '[{"text":"Problema de investigación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
@@ -791,15 +791,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
   'Analiza condiciones sociales de la salud',
-  '[{"text":"Epidemiologia","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Poblacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '[{"text":"Epidemiología","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Población","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   '352624e6-c1d6-5fcc-c7ca-0c6d359529d4',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'Estudia distribucion y determinantes en poblaciones',
-  '[{"text":"Poblacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Contexto","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  'Estudia distribución y determinantes en poblaciones',
+  '[{"text":"Población","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Contexto","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
@@ -807,7 +807,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
   'Factores que explican desigualdad y riesgo',
-  '[{"text":"Epidemiologia","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Problema de investigacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '[{"text":"Epidemiología","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Problema de investigación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
@@ -815,7 +815,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
   'Grupo humano donde ocurre el fenomeno',
-  '[{"text":"Poblacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '[{"text":"Población","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
@@ -823,7 +823,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
   'Condiciones historicas y territoriales',
-  '[{"text":"Epidemiologia","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Poblacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Contexto","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '[{"text":"Epidemiología","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Población","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Contexto","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
@@ -831,95 +831,95 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
   'Resultados que se busca alcanzar',
-  '[{"text":"Perspectiva social","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Objetivos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Problema de investigacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '[{"text":"Perspectiva social","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Objetivos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Problema de investigación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
   'e1c824fc-2739-54b7-cc69-169d6e3c3339',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'Caracteristicas observables o medibles',
-  '[{"text":"Determinantes","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Variables","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  'Características observables o medibles',
+  '[{"text":"Determinantes","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Variables","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   '9eb08c63-af49-5159-ccb3-f01d86f8da6b',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'Informacion recolectada para analizar',
-  '[{"text":"Datos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Poblacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  'Información recolectada para analizar',
+  '[{"text":"Datos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Población","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   '3908b4cf-d226-5d08-cded-306321090757',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'En Tema 4: Proceso investigativo desde la perspectiva social epidemiologica, identifica el concepto relacionado con: situacion delimitada que requiere estudio',
-  '[{"text":"Perspectiva social","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Problema de investigacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «situación delimitada que requiere estudio»?',
+  '[{"text":"Perspectiva social","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Problema de investigación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   'aa97ed59-8bd4-5353-c6b0-569c644f3354',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'En Tema 4: Proceso investigativo desde la perspectiva social epidemiologica, identifica el concepto relacionado con: analiza condiciones sociales de la salud',
-  '[{"text":"Determinantes","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Poblacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «analiza condiciones sociales de la salud»?',
+  '[{"text":"Determinantes","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Población","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   'ebf9f2db-4762-52ab-c158-103abf37310b',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'En Tema 4: Proceso investigativo desde la perspectiva social epidemiologica, identifica el concepto relacionado con: estudia distribucion y determinantes en poblaciones',
-  '[{"text":"Contexto","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Poblacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «estudia distribución y determinantes en poblaciones»?',
+  '[{"text":"Contexto","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Población","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   '3703a413-bbd9-5f09-cccc-d8e96719d660',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'En Tema 4: Proceso investigativo desde la perspectiva social epidemiologica, identifica el concepto relacionado con: factores que explican desigualdad y riesgo',
-  '[{"text":"Determinantes","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Problema de investigacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «factores que explican desigualdad y riesgo»?',
+  '[{"text":"Determinantes","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Problema de investigación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   '8a3ea406-e38f-5386-c907-c03025c4d8bf',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'En Tema 4: Proceso investigativo desde la perspectiva social epidemiologica, identifica el concepto relacionado con: grupo humano donde ocurre el fenomeno',
-  '[{"text":"Perspectiva social","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Poblacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «grupo humano donde ocurre el fenomeno»?',
+  '[{"text":"Perspectiva social","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Población","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   '5afe1310-0f59-582d-c5ef-c2cc4df63c4a',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'En Tema 4: Proceso investigativo desde la perspectiva social epidemiologica, identifica el concepto relacionado con: condiciones historicas y territoriales',
-  '[{"text":"Determinantes","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Poblacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Contexto","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «condiciones historicas y territoriales»?',
+  '[{"text":"Determinantes","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Población","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Contexto","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   'da8a8035-94d8-56e6-c747-ffcad05ad5da',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'En Tema 4: Proceso investigativo desde la perspectiva social epidemiologica, identifica el concepto relacionado con: resultados que se busca alcanzar',
-  '[{"text":"Epidemiologia","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Objetivos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Problema de investigacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «resultados que se busca alcanzar»?',
+  '[{"text":"Epidemiología","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Objetivos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Problema de investigación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   'ae52edca-5830-59ff-c17f-6e04eadf0329',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'En Tema 4: Proceso investigativo desde la perspectiva social epidemiologica, identifica el concepto relacionado con: caracteristicas observables o medibles',
-  '[{"text":"Variables","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «características observables o medibles»?',
+  '[{"text":"Variables","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   '9a10994c-66d7-5423-c87b-7c620717f7c0',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'mc',
-  'En Tema 4: Proceso investigativo desde la perspectiva social epidemiologica, identifica el concepto relacionado con: informacion recolectada para analizar',
-  '[{"text":"Epidemiologia","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Poblacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Datos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «información recolectada para analizar»?',
+  '[{"text":"Epidemiología","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Población","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Datos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -927,7 +927,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"Problema de investigacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiologia","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '[{"text":"Problema de investigación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Epidemiología","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Determinantes","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -935,15 +935,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"Poblacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Contexto","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Objetivos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Variables","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '[{"text":"Población","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Contexto","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Objetivos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Variables","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   'b98c6cfb-41c5-5284-ccfc-3bd29af4f1e4',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"Problema de investigacion: Situacion delimitada que requiere estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social: Analiza condiciones sociales de la","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"Problema de investigación: Situación delimitada que requiere estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Perspectiva social: Analiza condiciones sociales de la","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -951,7 +951,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'ms',
   'Selecciona elementos que se usan para planificar o evaluar.',
-  '[{"text":"Epidemiologia","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Contexto","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Datos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  '[{"text":"Epidemiología","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Contexto","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Datos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -966,8 +966,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'fe15368c-5e59-5b28-c80b-f78d5fae4871',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
-  '[{"text":"Problema de investigacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Poblacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Datos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
+  'Selecciona los componentes correctos.',
+  '[{"text":"Problema de investigación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Población","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Datos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -975,7 +975,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'dnd',
   'Relaciona conceptos del esquema.',
-  '[{"text":"Problema de investigacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":13,"pinY":35},{"text":"Perspectiva social","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":32,"pinY":35},{"text":"Epidemiologia","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":50,"pinY":35},{"text":"Determinantes","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":69,"pinY":35},{"text":"Poblacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Contexto","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":22,"pinY":67}]'::jsonb,
+  '[{"text":"Problema de investigación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":13,"pinY":35},{"text":"Perspectiva social","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":32,"pinY":35},{"text":"Epidemiología","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":50,"pinY":35},{"text":"Determinantes","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":69,"pinY":35},{"text":"Población","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Contexto","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -983,7 +983,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'dnd',
   'Relaciona componentes aplicados.',
-  '[{"text":"Determinantes","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":69,"pinY":35},{"text":"Poblacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Contexto","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":22,"pinY":67},{"text":"Objetivos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":41,"pinY":67},{"text":"Variables","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":59,"pinY":67},{"text":"Datos","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Determinantes","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":69,"pinY":35},{"text":"Población","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Contexto","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":22,"pinY":67},{"text":"Objetivos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":41,"pinY":67},{"text":"Variables","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":59,"pinY":67},{"text":"Datos","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -991,7 +991,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'dnd',
   'Relaciona elementos principales.',
-  '[{"text":"Problema de investigacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":13,"pinY":35},{"text":"Epidemiologia","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":50,"pinY":35},{"text":"Poblacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Objetivos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":41,"pinY":67},{"text":"Datos","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Problema de investigación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":13,"pinY":35},{"text":"Epidemiología","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":50,"pinY":35},{"text":"Población","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Objetivos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":41,"pinY":67},{"text":"Datos","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -999,23 +999,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'dnd',
   'Relaciona conceptos y etapas.',
-  '[{"text":"Datos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":78,"pinY":67},{"text":"Variables","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":59,"pinY":67},{"text":"Objetivos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":41,"pinY":67},{"text":"Contexto","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":22,"pinY":67},{"text":"Poblacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Determinantes","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":69,"pinY":35}]'::jsonb,
+  '[{"text":"Datos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":78,"pinY":67},{"text":"Variables","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":59,"pinY":67},{"text":"Objetivos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":41,"pinY":67},{"text":"Contexto","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":22,"pinY":67},{"text":"Población","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Determinantes","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 27, 1, 75
 ),
 (
   'a265a5f2-ee25-5b88-c569-aa6d2be05b75',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'dnd',
-  'Relaciona etiquetas del tema.',
-  '[{"text":"Perspectiva social","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":32,"pinY":35},{"text":"Epidemiologia","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":50,"pinY":35},{"text":"Determinantes","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":69,"pinY":35},{"text":"Poblacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Contexto","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":22,"pinY":67},{"text":"Objetivos","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":41,"pinY":67}]'::jsonb,
+  'Relaciona cada concepto con su imagen.',
+  '[{"text":"Perspectiva social","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":32,"pinY":35},{"text":"Epidemiología","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":50,"pinY":35},{"text":"Determinantes","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":69,"pinY":35},{"text":"Población","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Contexto","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":22,"pinY":67},{"text":"Objetivos","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   '89309e8d-a398-5f12-cca5-0f1c50efcc25',
   '5936a198-1804-5346-cf80-6ce3551b1397',
   'dnd',
-  'Relaciona practica y evaluacion.',
-  '[{"text":"Epidemiologia","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":50,"pinY":35},{"text":"Determinantes","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":69,"pinY":35},{"text":"Poblacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Contexto","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":22,"pinY":67},{"text":"Objetivos","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":41,"pinY":67},{"text":"Variables","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":59,"pinY":67}]'::jsonb,
+  'Relaciona práctica y evaluación.',
+  '[{"text":"Epidemiología","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":50,"pinY":35},{"text":"Determinantes","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":69,"pinY":35},{"text":"Población","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":86,"pinY":35},{"text":"Contexto","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":22,"pinY":67},{"text":"Objetivos","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":41,"pinY":67},{"text":"Variables","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp04_sp04p1.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -1037,7 +1037,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
   'Reconocer area o problema inicial',
-  '[{"text":"Identificacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '[{"text":"Identificación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
@@ -1045,7 +1045,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
   'Precisar alcance temporal espacial y poblacional',
-  '[{"text":"Definicion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recoleccion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '[{"text":"Definición","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recolección","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
@@ -1053,7 +1053,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
   'Redactar problema investigable',
-  '[{"text":"Recoleccion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Tabulacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '[{"text":"Recolección","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Tabulación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
@@ -1061,31 +1061,31 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
   'Plan para responder la pregunta',
-  '[{"text":"Definicion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Identificacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '[{"text":"Definición","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Identificación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
   'c0fdcf4b-5b85-5ff8-c1f5-f025f01267ac',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'Obtencion sistematica de informacion',
-  '[{"text":"Recoleccion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  'Obtención sistemática de información',
+  '[{"text":"Recolección","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
   'cc2650da-65a2-55a9-cebe-23a3df34e430',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'Organizacion de datos recolectados',
-  '[{"text":"Definicion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recoleccion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Tabulacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  'Organización de datos recolectados',
+  '[{"text":"Definición","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recolección","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Tabulación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
   '00ce6255-0ab3-5b1c-c74d-7c93e3123e5d',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'Interpretacion segun objetivos',
-  '[{"text":"Delimitacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Analisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Identificacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  'Interpretación según objetivos',
+  '[{"text":"Delimitación","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Análisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Identificación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
@@ -1093,87 +1093,87 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
   'Documento que comunica proceso y resultados',
-  '[{"text":"Diseno","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Informe final","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '[{"text":"Diseño","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Informe final","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   '99bfe65d-6d52-54ed-cf2c-0524302ab664',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'Respuestas derivadas del analisis',
-  '[{"text":"Conclusiones","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recoleccion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  'Respuestas derivadas del análisis',
+  '[{"text":"Conclusiones","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recolección","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   '9ea7dff1-a6f8-551f-c9cd-b3fd7e16603f',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'En Tema 5: Momentos del proceso de investigacion, identifica el concepto relacionado con: reconocer area o problema inicial',
-  '[{"text":"Delimitacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Identificacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «reconocer area o problema inicial»?',
+  '[{"text":"Delimitación","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Identificación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   'fbc4ee82-1f86-5ce8-cdd1-f66f8f3152f0',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'En Tema 5: Momentos del proceso de investigacion, identifica el concepto relacionado con: precisar alcance temporal espacial y poblacional',
-  '[{"text":"Diseno","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recoleccion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «precisar alcance temporal espacial y poblacional»?',
+  '[{"text":"Diseño","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recolección","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   '87081d54-9dfc-57db-cf36-0fb033212f78',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'En Tema 5: Momentos del proceso de investigacion, identifica el concepto relacionado con: redactar problema investigable',
-  '[{"text":"Tabulacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recoleccion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «redactar problema investigable»?',
+  '[{"text":"Tabulación","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recolección","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   '86f69d38-debb-55f2-c3d9-9185677c0c7f',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'En Tema 5: Momentos del proceso de investigacion, identifica el concepto relacionado con: plan para responder la pregunta',
-  '[{"text":"Diseno","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Identificacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «plan para responder la pregunta»?',
+  '[{"text":"Diseño","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Identificación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   '511e978b-5866-51e7-c5fc-c4c4df8ce31c',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'En Tema 5: Momentos del proceso de investigacion, identifica el concepto relacionado con: obtencion sistematica de informacion',
-  '[{"text":"Delimitacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recoleccion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «obtención sistemática de información»?',
+  '[{"text":"Delimitación","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recolección","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   'bf90b84a-8c79-507e-cccc-3cc3010d83ca',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'En Tema 5: Momentos del proceso de investigacion, identifica el concepto relacionado con: organizacion de datos recolectados',
-  '[{"text":"Diseno","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recoleccion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Tabulacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «organización de datos recolectados»?',
+  '[{"text":"Diseño","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recolección","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Tabulación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   'f37ffd2d-b36a-59f2-c1ed-122ab7e63c36',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'En Tema 5: Momentos del proceso de investigacion, identifica el concepto relacionado con: interpretacion segun objetivos',
-  '[{"text":"Definicion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Analisis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Identificacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «interpretación según objetivos»?',
+  '[{"text":"Definición","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Análisis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Identificación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   '75fd47f9-079e-5ac8-c3f8-f754c225c3b8',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'En Tema 5: Momentos del proceso de investigacion, identifica el concepto relacionado con: documento que comunica proceso y resultados',
-  '[{"text":"Informe final","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «documento que comunica proceso y resultados»?',
+  '[{"text":"Informe final","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   '1edaf9d5-cb45-5bd9-cda1-eba1f70ab6e5',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'mc',
-  'En Tema 5: Momentos del proceso de investigacion, identifica el concepto relacionado con: respuestas derivadas del analisis',
-  '[{"text":"Definicion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recoleccion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Conclusiones","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «respuestas derivadas del análisis»?',
+  '[{"text":"Definición","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recolección","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Conclusiones","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -1181,7 +1181,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"Identificacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definicion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseno","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '[{"text":"Identificación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Definición","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Diseño","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -1189,15 +1189,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"Recoleccion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Tabulacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Analisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Informe final","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '[{"text":"Recolección","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Tabulación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Análisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Informe final","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   '04bca329-fabc-561d-ccb0-cbdb1cacd1db',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"Identificacion: Reconocer area o problema inicial","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitacion: Precisar alcance temporal espacial y","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"Identificación: Reconocer area o problema inicial","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Delimitación: Precisar alcance temporal espacial y","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -1205,7 +1205,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'ms',
   'Selecciona elementos que se usan para planificar o evaluar.',
-  '[{"text":"Definicion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Tabulacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Conclusiones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '[{"text":"Definición","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Tabulación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Conclusiones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -1213,15 +1213,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'ms',
   'Selecciona conceptos que deben definirse con claridad.',
-  '[{"text":"Diseno","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Analisis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Informe final","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  '[{"text":"Diseño","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Análisis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Informe final","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
 (
   'ce90160e-6c31-5100-c127-0e37b4788e1f',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
-  '[{"text":"Identificacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recoleccion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Conclusiones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
+  'Selecciona los componentes correctos.',
+  '[{"text":"Identificación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Recolección","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Conclusiones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -1229,7 +1229,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'dnd',
   'Relaciona conceptos del esquema.',
-  '[{"text":"Identificacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":13,"pinY":35},{"text":"Delimitacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":32,"pinY":35},{"text":"Definicion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":50,"pinY":35},{"text":"Diseno","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":69,"pinY":35},{"text":"Recoleccion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Tabulacion","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":22,"pinY":67}]'::jsonb,
+  '[{"text":"Identificación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":13,"pinY":35},{"text":"Delimitación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":32,"pinY":35},{"text":"Definición","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":50,"pinY":35},{"text":"Diseño","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":69,"pinY":35},{"text":"Recolección","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Tabulación","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -1237,7 +1237,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'dnd',
   'Relaciona componentes aplicados.',
-  '[{"text":"Diseno","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":69,"pinY":35},{"text":"Recoleccion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Tabulacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":22,"pinY":67},{"text":"Analisis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":41,"pinY":67},{"text":"Informe final","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":59,"pinY":67},{"text":"Conclusiones","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Diseño","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":69,"pinY":35},{"text":"Recolección","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Tabulación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":22,"pinY":67},{"text":"Análisis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":41,"pinY":67},{"text":"Informe final","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":59,"pinY":67},{"text":"Conclusiones","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -1245,7 +1245,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'dnd',
   'Relaciona elementos principales.',
-  '[{"text":"Identificacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":13,"pinY":35},{"text":"Definicion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":50,"pinY":35},{"text":"Recoleccion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Analisis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":41,"pinY":67},{"text":"Conclusiones","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Identificación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":13,"pinY":35},{"text":"Definición","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":50,"pinY":35},{"text":"Recolección","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Análisis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":41,"pinY":67},{"text":"Conclusiones","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -1253,23 +1253,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'dnd',
   'Relaciona conceptos y etapas.',
-  '[{"text":"Conclusiones","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":78,"pinY":67},{"text":"Informe final","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":59,"pinY":67},{"text":"Analisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":41,"pinY":67},{"text":"Tabulacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":22,"pinY":67},{"text":"Recoleccion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Diseno","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":69,"pinY":35}]'::jsonb,
+  '[{"text":"Conclusiones","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":78,"pinY":67},{"text":"Informe final","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":59,"pinY":67},{"text":"Análisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":41,"pinY":67},{"text":"Tabulación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":22,"pinY":67},{"text":"Recolección","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Diseño","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 27, 1, 75
 ),
 (
   'c4c30922-ebc6-594d-cf88-54c5c564f0eb',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'dnd',
-  'Relaciona etiquetas del tema.',
-  '[{"text":"Delimitacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":32,"pinY":35},{"text":"Definicion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":50,"pinY":35},{"text":"Diseno","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":69,"pinY":35},{"text":"Recoleccion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Tabulacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":22,"pinY":67},{"text":"Analisis","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":41,"pinY":67}]'::jsonb,
+  'Relaciona cada concepto con su imagen.',
+  '[{"text":"Delimitación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":32,"pinY":35},{"text":"Definición","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":50,"pinY":35},{"text":"Diseño","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":69,"pinY":35},{"text":"Recolección","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Tabulación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":22,"pinY":67},{"text":"Análisis","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   '0e5c5e19-0605-5e85-c9e0-51f6bdbf34df',
   '0f8ca82a-027b-5be6-c398-416b11aae300',
   'dnd',
-  'Relaciona practica y evaluacion.',
-  '[{"text":"Definicion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":50,"pinY":35},{"text":"Diseno","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":69,"pinY":35},{"text":"Recoleccion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Tabulacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":22,"pinY":67},{"text":"Analisis","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":41,"pinY":67},{"text":"Informe final","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":59,"pinY":67}]'::jsonb,
+  'Relaciona práctica y evaluación.',
+  '[{"text":"Definición","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":50,"pinY":35},{"text":"Diseño","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":69,"pinY":35},{"text":"Recolección","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":86,"pinY":35},{"text":"Tabulación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":22,"pinY":67},{"text":"Análisis","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":41,"pinY":67},{"text":"Informe final","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp05_sp05p1.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -1291,15 +1291,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
   'Fenomeno concreto que se investigara',
-  '[{"text":"Objeto de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '[{"text":"Objeto de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
   'fc22c480-83c4-563a-c71b-2c68c88b8214',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'Pregunta o situacion central delimitada',
-  '[{"text":"Justificacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teorico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  'Pregunta o situación central delimitada',
+  '[{"text":"Justificación","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teórico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
@@ -1307,15 +1307,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
   'Razones y utilidad del estudio',
-  '[{"text":"Marco teorico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hipotesis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '[{"text":"Marco teórico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hipótesis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
   'acf9097a-5935-5554-c5f0-08acd68b7ac0',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'Logros que orientan la investigacion',
-  '[{"text":"Justificacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objeto de estudio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  'Logros que orientan la investigación',
+  '[{"text":"Justificación","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objeto de estudio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
@@ -1323,7 +1323,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
   'Base conceptual y antecedentes',
-  '[{"text":"Marco teorico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '[{"text":"Marco teórico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
@@ -1331,15 +1331,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
   'Respuesta tentativa comprobable',
-  '[{"text":"Justificacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teorico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hipotesis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '[{"text":"Justificación","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teórico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hipótesis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
   '2d9ff427-d681-5ae2-c53c-c48690b7ef8c',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'Caracteristica que puede variar',
-  '[{"text":"Problema","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objeto de estudio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  'Característica que puede variar',
+  '[{"text":"Problema","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objeto de estudio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
@@ -1347,87 +1347,87 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
   'Medida observable de una variable',
-  '[{"text":"Objetivos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Indicador","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '[{"text":"Objetivos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Indicador","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   '39ed3eae-32bc-5152-c853-4df8b7a5e6fb',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'Traduccion de conceptos a mediciones',
-  '[{"text":"Operacionalizacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teorico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  'Traducción de conceptos a mediciones',
+  '[{"text":"Operacionalización","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teórico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   '4e298bba-0f5c-5fc7-cbb6-7a909f0e068a',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'En Tema 6: Objeto de estudio, fundamentacion teorica e hipotesis, identifica el concepto relacionado con: fenomeno concreto que se investigara',
-  '[{"text":"Problema","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objeto de estudio","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «fenomeno concreto que se investigara»?',
+  '[{"text":"Problema","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objeto de estudio","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   '2192bc39-ba49-5ab0-c7b8-e4566c090839',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'En Tema 6: Objeto de estudio, fundamentacion teorica e hipotesis, identifica el concepto relacionado con: pregunta o situacion central delimitada',
-  '[{"text":"Objetivos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teorico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «pregunta o situación central delimitada»?',
+  '[{"text":"Objetivos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teórico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   '3e9b71d3-ebec-5e54-cc33-92d5a650c450',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'En Tema 6: Objeto de estudio, fundamentacion teorica e hipotesis, identifica el concepto relacionado con: razones y utilidad del estudio',
-  '[{"text":"Hipotesis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teorico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «razones y utilidad del estudio»?',
+  '[{"text":"Hipótesis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teórico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   'c743631f-39ea-5d51-c185-854e0f7b1a5b',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'En Tema 6: Objeto de estudio, fundamentacion teorica e hipotesis, identifica el concepto relacionado con: logros que orientan la investigacion',
-  '[{"text":"Objetivos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objeto de estudio","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «logros que orientan la investigación»?',
+  '[{"text":"Objetivos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objeto de estudio","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   'e7a972f0-c5a9-5e15-c5bc-aa2087aa6afb',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'En Tema 6: Objeto de estudio, fundamentacion teorica e hipotesis, identifica el concepto relacionado con: base conceptual y antecedentes',
-  '[{"text":"Problema","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teorico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «base conceptual y antecedentes»?',
+  '[{"text":"Problema","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teórico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   '3b2f2f29-ac66-5757-c496-7335e1675fb0',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'En Tema 6: Objeto de estudio, fundamentacion teorica e hipotesis, identifica el concepto relacionado con: respuesta tentativa comprobable',
-  '[{"text":"Objetivos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teorico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hipotesis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «respuesta tentativa comprobable»?',
+  '[{"text":"Objetivos","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teórico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hipótesis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   '2bf5e181-2e10-5e46-c1d0-3a8bebe8f37c',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'En Tema 6: Objeto de estudio, fundamentacion teorica e hipotesis, identifica el concepto relacionado con: caracteristica que puede variar',
-  '[{"text":"Justificacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Variable","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objeto de estudio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «característica que puede variar»?',
+  '[{"text":"Justificación","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Variable","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objeto de estudio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   '774dc436-504d-5a22-c6c7-84b459b282da',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'En Tema 6: Objeto de estudio, fundamentacion teorica e hipotesis, identifica el concepto relacionado con: medida observable de una variable',
-  '[{"text":"Indicador","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «medida observable de una variable»?',
+  '[{"text":"Indicador","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   'bc4cf685-8637-5805-ce88-7530c611b015',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'mc',
-  'En Tema 6: Objeto de estudio, fundamentacion teorica e hipotesis, identifica el concepto relacionado con: traduccion de conceptos a mediciones',
-  '[{"text":"Justificacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teorico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Operacionalizacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «traducción de conceptos a mediciones»?',
+  '[{"text":"Justificación","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teórico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Operacionalización","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -1435,7 +1435,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"Objeto de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '[{"text":"Objeto de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Justificación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Objetivos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -1443,15 +1443,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"Marco teorico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hipotesis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Indicador","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '[{"text":"Marco teórico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hipótesis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Indicador","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   '73358402-eecd-5d8a-c7da-797ed7b6718c',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"Objeto de estudio: Fenomeno concreto que se investigara","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema: Pregunta o situacion central delimitada","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"Objeto de estudio: Fenomeno concreto que se investigara","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Problema: Pregunta o situación central delimitada","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -1459,7 +1459,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'ms',
   'Selecciona elementos que se usan para planificar o evaluar.',
-  '[{"text":"Justificacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hipotesis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Operacionalizacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  '[{"text":"Justificación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Hipótesis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Operacionalización","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -1474,8 +1474,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5afbaa5d-95a9-5d6e-cbae-5cde62b6ad44',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
-  '[{"text":"Objeto de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teorico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Operacionalizacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
+  'Selecciona los componentes correctos.',
+  '[{"text":"Objeto de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Marco teórico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Operacionalización","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -1483,7 +1483,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'dnd',
   'Relaciona conceptos del esquema.',
-  '[{"text":"Objeto de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":13,"pinY":35},{"text":"Problema","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":32,"pinY":35},{"text":"Justificacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":50,"pinY":35},{"text":"Objetivos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":69,"pinY":35},{"text":"Marco teorico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Hipotesis","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":22,"pinY":67}]'::jsonb,
+  '[{"text":"Objeto de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":13,"pinY":35},{"text":"Problema","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":32,"pinY":35},{"text":"Justificación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":50,"pinY":35},{"text":"Objetivos","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":69,"pinY":35},{"text":"Marco teórico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Hipótesis","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -1491,7 +1491,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'dnd',
   'Relaciona componentes aplicados.',
-  '[{"text":"Objetivos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":69,"pinY":35},{"text":"Marco teorico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Hipotesis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":22,"pinY":67},{"text":"Variable","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":41,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":59,"pinY":67},{"text":"Operacionalizacion","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Objetivos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":69,"pinY":35},{"text":"Marco teórico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Hipótesis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":22,"pinY":67},{"text":"Variable","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":41,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":59,"pinY":67},{"text":"Operacionalización","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -1499,7 +1499,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'dnd',
   'Relaciona elementos principales.',
-  '[{"text":"Objeto de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":13,"pinY":35},{"text":"Justificacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":50,"pinY":35},{"text":"Marco teorico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Variable","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":41,"pinY":67},{"text":"Operacionalizacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Objeto de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":13,"pinY":35},{"text":"Justificación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":50,"pinY":35},{"text":"Marco teórico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Variable","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":41,"pinY":67},{"text":"Operacionalización","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -1507,23 +1507,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'dnd',
   'Relaciona conceptos y etapas.',
-  '[{"text":"Operacionalizacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":78,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":59,"pinY":67},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":41,"pinY":67},{"text":"Hipotesis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":22,"pinY":67},{"text":"Marco teorico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Objetivos","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":69,"pinY":35}]'::jsonb,
+  '[{"text":"Operacionalización","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":78,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":59,"pinY":67},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":41,"pinY":67},{"text":"Hipótesis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":22,"pinY":67},{"text":"Marco teórico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Objetivos","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 27, 1, 75
 ),
 (
   '201a2219-25ba-5e1c-ce25-7b67fba3a33c',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'dnd',
-  'Relaciona etiquetas del tema.',
-  '[{"text":"Problema","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":32,"pinY":35},{"text":"Justificacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":50,"pinY":35},{"text":"Objetivos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":69,"pinY":35},{"text":"Marco teorico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Hipotesis","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":22,"pinY":67},{"text":"Variable","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":41,"pinY":67}]'::jsonb,
+  'Relaciona cada concepto con su imagen.',
+  '[{"text":"Problema","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":32,"pinY":35},{"text":"Justificación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":50,"pinY":35},{"text":"Objetivos","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":69,"pinY":35},{"text":"Marco teórico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Hipótesis","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":22,"pinY":67},{"text":"Variable","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   'fdeb5c0d-31b3-5daa-c2e2-de511e7cb532',
   '2165b1db-a32a-5aad-c37d-82fb9a269891',
   'dnd',
-  'Relaciona practica y evaluacion.',
-  '[{"text":"Justificacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":50,"pinY":35},{"text":"Objetivos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":69,"pinY":35},{"text":"Marco teorico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Hipotesis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":22,"pinY":67},{"text":"Variable","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":41,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":59,"pinY":67}]'::jsonb,
+  'Relaciona práctica y evaluación.',
+  '[{"text":"Justificación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":50,"pinY":35},{"text":"Objetivos","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":69,"pinY":35},{"text":"Marco teórico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":86,"pinY":35},{"text":"Hipótesis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":22,"pinY":67},{"text":"Variable","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":41,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp06_sp06p1.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -1544,8 +1544,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'e64bed7b-008d-5aaa-c30a-124514b5c533',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'Seleccion de parte de una poblacion',
-  '[{"text":"Muestreo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  'Selección de parte de una población',
+  '[{"text":"Muestreo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
@@ -1553,23 +1553,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
   'Todos tienen probabilidad conocida e igual',
-  '[{"text":"Sistematico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '[{"text":"Sistemático","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   '28e1e765-44f6-5542-c3d4-de5489206456',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'Seleccion por intervalo despues de arranque',
-  '[{"text":"Conglomerados","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conveniencia","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  'Selección por intervalo despues de arranque',
+  '[{"text":"Conglomerados","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conveniencia","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
   '3a1dcba3-127f-53c1-c62a-f641d0be1823',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'Divide poblacion en estratos homogeneos',
-  '[{"text":"Sistematico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Muestreo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  'Divide población en estratos homogeneos',
+  '[{"text":"Sistemático","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Muestreo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
@@ -1577,7 +1577,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
   'Selecciona grupos naturales o comunas',
-  '[{"text":"Conglomerados","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '[{"text":"Conglomerados","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
@@ -1585,15 +1585,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
   'Incluye sujetos accesibles',
-  '[{"text":"Sistematico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conveniencia","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '[{"text":"Sistemático","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conveniencia","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
   '390b3d35-ae84-56a9-cbef-b18e497db9c1',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'Seleccion no probabilistica por categorias',
-  '[{"text":"Aleatorio simple","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Cuotas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Muestreo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  'Selección no probabilistica por categorías',
+  '[{"text":"Aleatorio simple","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Cuotas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Muestreo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
@@ -1601,87 +1601,87 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
   'Participantes refieren nuevos participantes',
-  '[{"text":"Estratificado","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Bola de nieve","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '[{"text":"Estratificado","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Bola de nieve","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   '5d95da4b-2701-5274-cea6-81b195c4cc27',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'Diferencia esperada entre muestra y poblacion',
-  '[{"text":"Error muestral","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  'Diferencia esperada entre muestra y población',
+  '[{"text":"Error muestral","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   'e20d25fc-1f51-5f16-c933-2b046cd43c07',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'En Tema 7: Introduccion a los tipos de muestreo, identifica el concepto relacionado con: seleccion de parte de una poblacion',
-  '[{"text":"Aleatorio simple","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Muestreo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «selección de parte de una población»?',
+  '[{"text":"Aleatorio simple","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Muestreo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   '4d71c4bf-4972-59d9-ce09-b8623ef9b75d',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'En Tema 7: Introduccion a los tipos de muestreo, identifica el concepto relacionado con: todos tienen probabilidad conocida e igual',
-  '[{"text":"Estratificado","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «todos tienen probabilidad conocida e igual»?',
+  '[{"text":"Estratificado","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   '929f7ea1-a3f3-5ba1-ce54-2befb4aa66d9',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'En Tema 7: Introduccion a los tipos de muestreo, identifica el concepto relacionado con: seleccion por intervalo despues de arranque',
-  '[{"text":"Conveniencia","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «selección por intervalo despues de arranque»?',
+  '[{"text":"Conveniencia","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   '149cf1dc-4d3f-5729-c5db-ddaae249f9dc',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'En Tema 7: Introduccion a los tipos de muestreo, identifica el concepto relacionado con: divide poblacion en estratos homogeneos',
-  '[{"text":"Estratificado","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Muestreo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «divide población en estratos homogeneos»?',
+  '[{"text":"Estratificado","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Muestreo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   '0042d4b8-4677-5883-c60c-f82f1fb015e0',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'En Tema 7: Introduccion a los tipos de muestreo, identifica el concepto relacionado con: selecciona grupos naturales o comunas',
-  '[{"text":"Aleatorio simple","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «selecciona grupos naturales o comunas»?',
+  '[{"text":"Aleatorio simple","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   '322a6308-2bfa-5c1c-c239-fffcbd3d4d3b',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'En Tema 7: Introduccion a los tipos de muestreo, identifica el concepto relacionado con: incluye sujetos accesibles',
-  '[{"text":"Estratificado","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conveniencia","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «incluye sujetos accesibles»?',
+  '[{"text":"Estratificado","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conveniencia","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   '2287c24d-7c47-57b1-c870-acbfbacdffd4',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'En Tema 7: Introduccion a los tipos de muestreo, identifica el concepto relacionado con: seleccion no probabilistica por categorias',
-  '[{"text":"Sistematico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Cuotas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Muestreo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «selección no probabilistica por categorías»?',
+  '[{"text":"Sistemático","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Cuotas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Muestreo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   '5aceba89-1dee-5ff9-cb3d-d7a19db5e901',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'En Tema 7: Introduccion a los tipos de muestreo, identifica el concepto relacionado con: participantes refieren nuevos participantes',
-  '[{"text":"Bola de nieve","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «participantes refieren nuevos participantes»?',
+  '[{"text":"Bola de nieve","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   '773cb8a8-d0d5-5a5b-cb2f-92baf5ddc6ba',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'mc',
-  'En Tema 7: Introduccion a los tipos de muestreo, identifica el concepto relacionado con: diferencia esperada entre muestra y poblacion',
-  '[{"text":"Sistematico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Error muestral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «diferencia esperada entre muestra y población»?',
+  '[{"text":"Sistemático","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Error muestral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -1689,7 +1689,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"Muestreo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistematico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '[{"text":"Muestreo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Sistemático","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Estratificado","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -1697,15 +1697,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"Conglomerados","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conveniencia","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Cuotas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Bola de nieve","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '[{"text":"Conglomerados","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conveniencia","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Cuotas","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Bola de nieve","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   '7df7b498-c2ac-5b33-c583-bec03f4b76ee',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"Muestreo: Seleccion de parte de una","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple: Todos tienen probabilidad conocida e","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"Muestreo: Selección de parte de una","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Aleatorio simple: Todos tienen probabilidad conocida e","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -1713,7 +1713,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'ms',
   'Selecciona elementos que se usan para planificar o evaluar.',
-  '[{"text":"Sistematico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conveniencia","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Error muestral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
+  '[{"text":"Sistemático","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conveniencia","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Error muestral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -1728,7 +1728,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6d7b3c5f-9bfa-5534-ca5e-6228976b4fb6',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
+  'Selecciona los componentes correctos.',
   '[{"text":"Muestreo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Conglomerados","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Error muestral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
@@ -1737,7 +1737,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'dnd',
   'Relaciona conceptos del esquema.',
-  '[{"text":"Muestreo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":13,"pinY":35},{"text":"Aleatorio simple","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":32,"pinY":35},{"text":"Sistematico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":50,"pinY":35},{"text":"Estratificado","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":69,"pinY":35},{"text":"Conglomerados","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":86,"pinY":35},{"text":"Conveniencia","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":22,"pinY":67}]'::jsonb,
+  '[{"text":"Muestreo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":13,"pinY":35},{"text":"Aleatorio simple","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":32,"pinY":35},{"text":"Sistemático","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":50,"pinY":35},{"text":"Estratificado","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":69,"pinY":35},{"text":"Conglomerados","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":86,"pinY":35},{"text":"Conveniencia","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -1753,7 +1753,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'dnd',
   'Relaciona elementos principales.',
-  '[{"text":"Muestreo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":13,"pinY":35},{"text":"Sistematico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":50,"pinY":35},{"text":"Conglomerados","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":86,"pinY":35},{"text":"Cuotas","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":41,"pinY":67},{"text":"Error muestral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Muestreo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":13,"pinY":35},{"text":"Sistemático","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":50,"pinY":35},{"text":"Conglomerados","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":86,"pinY":35},{"text":"Cuotas","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":41,"pinY":67},{"text":"Error muestral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -1768,16 +1768,16 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '0c296f35-f27d-5d78-ca5a-7ce87af76c26',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'dnd',
-  'Relaciona etiquetas del tema.',
-  '[{"text":"Aleatorio simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":32,"pinY":35},{"text":"Sistematico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":50,"pinY":35},{"text":"Estratificado","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":69,"pinY":35},{"text":"Conglomerados","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":86,"pinY":35},{"text":"Conveniencia","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":22,"pinY":67},{"text":"Cuotas","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":41,"pinY":67}]'::jsonb,
+  'Relaciona cada concepto con su imagen.',
+  '[{"text":"Aleatorio simple","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":32,"pinY":35},{"text":"Sistemático","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":50,"pinY":35},{"text":"Estratificado","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":69,"pinY":35},{"text":"Conglomerados","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":86,"pinY":35},{"text":"Conveniencia","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":22,"pinY":67},{"text":"Cuotas","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   'fca4fcd9-120b-5fa4-c0d9-a48c1098d147',
   '9de26112-2a1b-5447-c4f1-1845682d5392',
   'dnd',
-  'Relaciona practica y evaluacion.',
-  '[{"text":"Sistematico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":50,"pinY":35},{"text":"Estratificado","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":69,"pinY":35},{"text":"Conglomerados","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":86,"pinY":35},{"text":"Conveniencia","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":22,"pinY":67},{"text":"Cuotas","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":41,"pinY":67},{"text":"Bola de nieve","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":59,"pinY":67}]'::jsonb,
+  'Relaciona práctica y evaluación.',
+  '[{"text":"Sistemático","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":50,"pinY":35},{"text":"Estratificado","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":69,"pinY":35},{"text":"Conglomerados","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":86,"pinY":35},{"text":"Conveniencia","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":22,"pinY":67},{"text":"Cuotas","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":41,"pinY":67},{"text":"Bola de nieve","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp07_sp07p2.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -1799,14 +1799,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
   'Plan ordenado de como investigar',
-  '[{"text":"Diseno metodologico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '[{"text":"Diseño metodológico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
   'f97c3af7-5361-524a-cc8e-cf06539f22ca',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'Interrogante que guia el estudio',
+  'Interrogante que guía el estudio',
   '[{"text":"Enfoque","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
@@ -1815,22 +1815,22 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
   'Cuantitativo cualitativo o mixto',
-  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tecnica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Técnica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
   '6fc7a14e-0254-5e90-c3b4-a7f0ad222d1e',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'Estructura segun alcance y temporalidad',
-  '[{"text":"Enfoque","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Diseno metodologico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  'Estructura según alcance y temporalidad',
+  '[{"text":"Enfoque","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Diseño metodológico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
   'b2068ed9-f75e-5933-c563-22a9e9b5e32d',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'Subconjunto que aporta informacion',
+  'Subconjunto que aporta información',
   '[{"text":"Muestra","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
@@ -1839,23 +1839,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
   'Modo de recolectar datos',
-  '[{"text":"Enfoque","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tecnica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '[{"text":"Enfoque","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Técnica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
   'b83b201e-8f44-5bfa-c89b-53c945d6bdd2',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'Herramienta concreta de medicion',
-  '[{"text":"Pregunta","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Instrumento","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Diseno metodologico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  'Herramienta concreta de medición',
+  '[{"text":"Pregunta","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Instrumento","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Diseño metodológico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
   'eb551ef8-0e78-5a2d-c5b6-f1e94d214521',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'Proteccion de participantes y consentimiento',
-  '[{"text":"Tipo de estudio","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Etica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  'Protección de participantes y consentimiento',
+  '[{"text":"Tipo de estudio","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Ética","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
@@ -1863,22 +1863,22 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
   'Estrategia para procesar resultados',
-  '[{"text":"Plan de analisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '[{"text":"Plan de análisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   'b732ef4f-3d9e-51d5-ccad-0a8e68b425d9',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'En Tema 8: Breve introduccion al diseno metodologico, identifica el concepto relacionado con: plan ordenado de como investigar',
-  '[{"text":"Pregunta","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Diseno metodologico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «plan ordenado de como investigar»?',
+  '[{"text":"Pregunta","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Diseño metodológico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   'dde09215-32db-5093-c03f-14a1ed7a7a0b',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'En Tema 8: Breve introduccion al diseno metodologico, identifica el concepto relacionado con: interrogante que guia el estudio',
+  '¿Qué concepto se describe aquí: «interrogante que guía el estudio»?',
   '[{"text":"Tipo de estudio","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
@@ -1886,23 +1886,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'dc3ca8da-fb01-5b02-cdda-c9a5b70bdfc9',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'En Tema 8: Breve introduccion al diseno metodologico, identifica el concepto relacionado con: cuantitativo cualitativo o mixto',
-  '[{"text":"Tecnica","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «cuantitativo cualitativo o mixto»?',
+  '[{"text":"Técnica","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   'c9e69211-ab3f-5eb4-c282-d8ff5533b9bd',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'En Tema 8: Breve introduccion al diseno metodologico, identifica el concepto relacionado con: estructura segun alcance y temporalidad',
-  '[{"text":"Tipo de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Diseno metodologico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «estructura según alcance y temporalidad»?',
+  '[{"text":"Tipo de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Diseño metodológico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   'bc1ace15-3602-5e8e-cd6b-6831bbc81f65',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'En Tema 8: Breve introduccion al diseno metodologico, identifica el concepto relacionado con: subconjunto que aporta informacion',
+  '¿Qué concepto se describe aquí: «subconjunto que aporta información»?',
   '[{"text":"Pregunta","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
@@ -1910,32 +1910,32 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '09901a9b-3705-59cb-c35a-862168909350',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'En Tema 8: Breve introduccion al diseno metodologico, identifica el concepto relacionado con: modo de recolectar datos',
-  '[{"text":"Tipo de estudio","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tecnica","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «modo de recolectar datos»?',
+  '[{"text":"Tipo de estudio","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Técnica","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   '8f8ac848-1ca6-5ef4-ce1c-c4436ca7f73f',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'En Tema 8: Breve introduccion al diseno metodologico, identifica el concepto relacionado con: herramienta concreta de medicion',
-  '[{"text":"Enfoque","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Instrumento","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Diseno metodologico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «herramienta concreta de medición»?',
+  '[{"text":"Enfoque","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Instrumento","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Diseño metodológico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   'e7a572ad-aa84-5558-cb2e-cb29ad97dec3',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'En Tema 8: Breve introduccion al diseno metodologico, identifica el concepto relacionado con: proteccion de participantes y consentimiento',
-  '[{"text":"Etica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «protección de participantes y consentimiento»?',
+  '[{"text":"Ética","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   'f7f6a73f-6743-55b0-c468-11c975499bf7',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'mc',
-  'En Tema 8: Breve introduccion al diseno metodologico, identifica el concepto relacionado con: estrategia para procesar resultados',
-  '[{"text":"Enfoque","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Plan de analisis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «estrategia para procesar resultados»?',
+  '[{"text":"Enfoque","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Plan de análisis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -1943,7 +1943,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"Diseno metodologico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '[{"text":"Diseño metodológico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Enfoque","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tipo de estudio","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -1951,15 +1951,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"Muestra","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tecnica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Instrumento","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Etica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '[{"text":"Muestra","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Técnica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Instrumento","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Ética","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   '651999e5-2716-52cf-ceeb-31b600145382',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"Diseno metodologico: Plan ordenado de como investigar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta: Interrogante que guia el estudio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"Diseño metodológico: Plan ordenado de como investigar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Pregunta: Interrogante que guía el estudio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -1967,7 +1967,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'ms',
   'Selecciona elementos que se usan para planificar o evaluar.',
-  '[{"text":"Enfoque","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Tecnica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Plan de analisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '[{"text":"Enfoque","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Técnica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Plan de análisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -1975,15 +1975,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'ms',
   'Selecciona conceptos que deben definirse con claridad.',
-  '[{"text":"Tipo de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Instrumento","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Etica","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  '[{"text":"Tipo de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Instrumento","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Ética","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
 (
   '9dda62d6-47d0-58ed-c1c9-a0138e01602e',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
-  '[{"text":"Diseno metodologico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Plan de analisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
+  'Selecciona los componentes correctos.',
+  '[{"text":"Diseño metodológico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Muestra","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Plan de análisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -1991,7 +1991,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'dnd',
   'Relaciona conceptos del esquema.',
-  '[{"text":"Diseno metodologico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":13,"pinY":35},{"text":"Pregunta","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":32,"pinY":35},{"text":"Enfoque","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":50,"pinY":35},{"text":"Tipo de estudio","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":69,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Tecnica","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":22,"pinY":67}]'::jsonb,
+  '[{"text":"Diseño metodológico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":13,"pinY":35},{"text":"Pregunta","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":32,"pinY":35},{"text":"Enfoque","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":50,"pinY":35},{"text":"Tipo de estudio","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":69,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Técnica","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -1999,7 +1999,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'dnd',
   'Relaciona componentes aplicados.',
-  '[{"text":"Tipo de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":69,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Tecnica","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":22,"pinY":67},{"text":"Instrumento","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":41,"pinY":67},{"text":"Etica","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":59,"pinY":67},{"text":"Plan de analisis","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Tipo de estudio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":69,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Técnica","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":22,"pinY":67},{"text":"Instrumento","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":41,"pinY":67},{"text":"Ética","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":59,"pinY":67},{"text":"Plan de análisis","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -2007,7 +2007,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'dnd',
   'Relaciona elementos principales.',
-  '[{"text":"Diseno metodologico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":13,"pinY":35},{"text":"Enfoque","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":50,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Instrumento","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":41,"pinY":67},{"text":"Plan de analisis","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Diseño metodológico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":13,"pinY":35},{"text":"Enfoque","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":50,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Instrumento","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":41,"pinY":67},{"text":"Plan de análisis","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -2015,23 +2015,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '512db625-43f6-5076-c30f-e5662844f75f',
   'dnd',
   'Relaciona conceptos y etapas.',
-  '[{"text":"Plan de analisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":78,"pinY":67},{"text":"Etica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":59,"pinY":67},{"text":"Instrumento","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":41,"pinY":67},{"text":"Tecnica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":22,"pinY":67},{"text":"Muestra","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Tipo de estudio","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":69,"pinY":35}]'::jsonb,
+  '[{"text":"Plan de análisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":78,"pinY":67},{"text":"Ética","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":59,"pinY":67},{"text":"Instrumento","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":41,"pinY":67},{"text":"Técnica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":22,"pinY":67},{"text":"Muestra","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Tipo de estudio","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 27, 1, 75
 ),
 (
   'a7a421af-334b-5af2-cffe-97f438a7f5ed',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'dnd',
-  'Relaciona etiquetas del tema.',
-  '[{"text":"Pregunta","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":32,"pinY":35},{"text":"Enfoque","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":50,"pinY":35},{"text":"Tipo de estudio","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":69,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Tecnica","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":22,"pinY":67},{"text":"Instrumento","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":41,"pinY":67}]'::jsonb,
+  'Relaciona cada concepto con su imagen.',
+  '[{"text":"Pregunta","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":32,"pinY":35},{"text":"Enfoque","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":50,"pinY":35},{"text":"Tipo de estudio","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":69,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Técnica","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":22,"pinY":67},{"text":"Instrumento","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   'e7bbd2ea-db2c-5838-caea-96cf341ffe0c',
   '512db625-43f6-5076-c30f-e5662844f75f',
   'dnd',
-  'Relaciona practica y evaluacion.',
-  '[{"text":"Enfoque","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":50,"pinY":35},{"text":"Tipo de estudio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":69,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Tecnica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":22,"pinY":67},{"text":"Instrumento","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":41,"pinY":67},{"text":"Etica","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":59,"pinY":67}]'::jsonb,
+  'Relaciona práctica y evaluación.',
+  '[{"text":"Enfoque","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":50,"pinY":35},{"text":"Tipo de estudio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":69,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":86,"pinY":35},{"text":"Técnica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":22,"pinY":67},{"text":"Instrumento","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":41,"pinY":67},{"text":"Ética","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp08_sp08p2.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -2053,39 +2053,39 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
   'Enfoque que cuantifica fenomenos',
-  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medicion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medición","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
   'fed10f2c-e338-5ff5-cc6a-ed628c050a6a',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'Asignacion de valores a variables',
-  '[{"text":"Variable","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analitico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medicion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  'Asignación de valores a variables',
+  '[{"text":"Variable","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analítico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medición","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   '1268800e-da4a-5ab6-c6ba-e7c668758ba3',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'Caracteristica medible',
-  '[{"text":"Analitico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Transversal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  'Característica medible',
+  '[{"text":"Analítico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Transversal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
   '5a42ec4f-8683-5474-c00c-6d8415a3374d',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'Describe frecuencia o distribucion',
-  '[{"text":"Variable","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medicion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  'Describe frecuencia o distribución',
+  '[{"text":"Variable","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medición","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
   'b4811864-5c22-5f64-c260-789250939f47',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'Busca asociacion entre exposicion y evento',
-  '[{"text":"Analitico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medicion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  'Busca asociación entre exposición y evento',
+  '[{"text":"Analítico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medición","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
@@ -2093,7 +2093,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
   'Mide en un momento determinado',
-  '[{"text":"Variable","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analitico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Transversal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '[{"text":"Variable","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analítico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Transversal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
@@ -2101,7 +2101,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
   'Sigue expuestos y no expuestos',
-  '[{"text":"Medicion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cohorte","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '[{"text":"Medición","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cohorte","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
@@ -2109,87 +2109,87 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
   'Compara enfermos y no enfermos retrospectivamente',
-  '[{"text":"Descriptivo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Caso-control","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medicion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '[{"text":"Descriptivo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Caso-control","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medición","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   'ac15daa3-b65a-5d19-c83f-a2a2eecc8ced',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'Intervencion controlada para evaluar efecto',
-  '[{"text":"Ensayo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analitico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  'Intervención controlada para evaluar efecto',
+  '[{"text":"Ensayo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analítico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   'e93d9d23-4574-5873-c6db-fe3aae8e3396',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'En Tema 9: Disenos para investigacion cuantitativa, identifica el concepto relacionado con: enfoque que cuantifica fenomenos',
-  '[{"text":"Medicion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cuantitativa","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «enfoque que cuantifica fenomenos»?',
+  '[{"text":"Medición","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cuantitativa","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   '198b3538-5a77-5dfa-cfad-bcd6bd8503b9',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'En Tema 9: Disenos para investigacion cuantitativa, identifica el concepto relacionado con: asignacion de valores a variables',
-  '[{"text":"Descriptivo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analitico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medicion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «asignación de valores a variables»?',
+  '[{"text":"Descriptivo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analítico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medición","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   '202e6030-dd93-5db6-c4be-6f563023874c',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'En Tema 9: Disenos para investigacion cuantitativa, identifica el concepto relacionado con: caracteristica medible',
-  '[{"text":"Transversal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analitico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «característica medible»?',
+  '[{"text":"Transversal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analítico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   'ba295772-1e2b-51b1-ca56-1fb54a0ae064',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'En Tema 9: Disenos para investigacion cuantitativa, identifica el concepto relacionado con: describe frecuencia o distribucion',
-  '[{"text":"Descriptivo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medicion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «describe frecuencia o distribución»?',
+  '[{"text":"Descriptivo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medición","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   'd96ce0d5-05eb-5e3e-c4c4-b4c5f5ba8d13',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'En Tema 9: Disenos para investigacion cuantitativa, identifica el concepto relacionado con: busca asociacion entre exposicion y evento',
-  '[{"text":"Medicion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analitico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «busca asociación entre exposición y evento»?',
+  '[{"text":"Medición","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analítico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   'a383d038-7696-571a-c921-605b5e93d46a',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'En Tema 9: Disenos para investigacion cuantitativa, identifica el concepto relacionado con: mide en un momento determinado',
-  '[{"text":"Descriptivo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analitico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Transversal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «mide en un momento determinado»?',
+  '[{"text":"Descriptivo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analítico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Transversal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   'bcc59665-129b-5248-c8ff-e2a5498e07aa',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'En Tema 9: Disenos para investigacion cuantitativa, identifica el concepto relacionado con: sigue expuestos y no expuestos',
-  '[{"text":"Variable","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cohorte","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medicion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «sigue expuestos y no expuestos»?',
+  '[{"text":"Variable","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cohorte","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medición","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   '704adc00-77b4-5334-c67e-0926da38f8b9',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'En Tema 9: Disenos para investigacion cuantitativa, identifica el concepto relacionado con: compara enfermos y no enfermos retrospectivamente',
-  '[{"text":"Caso-control","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medicion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «compara enfermos y no enfermos retrospectivamente»?',
+  '[{"text":"Caso-control","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medición","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   '60444006-e342-50d4-cfea-0a52ab636cb9',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'mc',
-  'En Tema 9: Disenos para investigacion cuantitativa, identifica el concepto relacionado con: intervencion controlada para evaluar efecto',
-  '[{"text":"Variable","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analitico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Ensayo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «intervención controlada para evaluar efecto»?',
+  '[{"text":"Variable","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analítico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Ensayo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -2197,7 +2197,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medicion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medición","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Descriptivo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -2205,15 +2205,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"Analitico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Transversal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cohorte","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Caso-control","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  '[{"text":"Analítico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Transversal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Cohorte","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Caso-control","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   'dc123ba7-8500-5e97-c108-fb75f6e5ed74',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"Cuantitativa: Enfoque que cuantifica fenomenos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medicion: Asignacion de valores a variables","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"Cuantitativa: Enfoque que cuantifica fenomenos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Medición: Asignación de valores a variables","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -2236,8 +2236,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '8212e7e9-688f-5990-ce4a-19cbda6ee16e',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
-  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analitico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Ensayo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
+  'Selecciona los componentes correctos.',
+  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Analítico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Ensayo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -2245,7 +2245,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'dnd',
   'Relaciona conceptos del esquema.',
-  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":13,"pinY":35},{"text":"Medicion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":32,"pinY":35},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":50,"pinY":35},{"text":"Descriptivo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":69,"pinY":35},{"text":"Analitico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Transversal","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":22,"pinY":67}]'::jsonb,
+  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":13,"pinY":35},{"text":"Medición","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":32,"pinY":35},{"text":"Variable","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":50,"pinY":35},{"text":"Descriptivo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":69,"pinY":35},{"text":"Analítico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Transversal","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -2253,7 +2253,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'dnd',
   'Relaciona componentes aplicados.',
-  '[{"text":"Descriptivo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":69,"pinY":35},{"text":"Analitico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Transversal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":22,"pinY":67},{"text":"Cohorte","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":41,"pinY":67},{"text":"Caso-control","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":59,"pinY":67},{"text":"Ensayo","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Descriptivo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":69,"pinY":35},{"text":"Analítico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Transversal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":22,"pinY":67},{"text":"Cohorte","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":41,"pinY":67},{"text":"Caso-control","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":59,"pinY":67},{"text":"Ensayo","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -2261,7 +2261,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'dnd',
   'Relaciona elementos principales.',
-  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":13,"pinY":35},{"text":"Variable","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":50,"pinY":35},{"text":"Analitico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Cohorte","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":41,"pinY":67},{"text":"Ensayo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":13,"pinY":35},{"text":"Variable","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":50,"pinY":35},{"text":"Analítico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Cohorte","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":41,"pinY":67},{"text":"Ensayo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -2269,23 +2269,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'dnd',
   'Relaciona conceptos y etapas.',
-  '[{"text":"Ensayo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":78,"pinY":67},{"text":"Caso-control","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":59,"pinY":67},{"text":"Cohorte","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":41,"pinY":67},{"text":"Transversal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":22,"pinY":67},{"text":"Analitico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Descriptivo","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":69,"pinY":35}]'::jsonb,
+  '[{"text":"Ensayo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":78,"pinY":67},{"text":"Caso-control","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":59,"pinY":67},{"text":"Cohorte","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":41,"pinY":67},{"text":"Transversal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":22,"pinY":67},{"text":"Analítico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Descriptivo","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 27, 1, 75
 ),
 (
   '90a51add-8a2f-5bfe-cc13-8dfccf5f27fd',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'dnd',
-  'Relaciona etiquetas del tema.',
-  '[{"text":"Medicion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":32,"pinY":35},{"text":"Variable","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":50,"pinY":35},{"text":"Descriptivo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":69,"pinY":35},{"text":"Analitico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Transversal","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":22,"pinY":67},{"text":"Cohorte","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":41,"pinY":67}]'::jsonb,
+  'Relaciona cada concepto con su imagen.',
+  '[{"text":"Medición","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":32,"pinY":35},{"text":"Variable","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":50,"pinY":35},{"text":"Descriptivo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":69,"pinY":35},{"text":"Analítico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Transversal","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":22,"pinY":67},{"text":"Cohorte","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   '9db4c1a6-462d-5584-c64a-a422d547d399',
   '161b3643-acb8-54fb-c457-567fbbc44296',
   'dnd',
-  'Relaciona practica y evaluacion.',
-  '[{"text":"Variable","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":50,"pinY":35},{"text":"Descriptivo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":69,"pinY":35},{"text":"Analitico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Transversal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":22,"pinY":67},{"text":"Cohorte","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":41,"pinY":67},{"text":"Caso-control","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":59,"pinY":67}]'::jsonb,
+  'Relaciona práctica y evaluación.',
+  '[{"text":"Variable","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":50,"pinY":35},{"text":"Descriptivo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":69,"pinY":35},{"text":"Analítico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":86,"pinY":35},{"text":"Transversal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":22,"pinY":67},{"text":"Cohorte","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":41,"pinY":67},{"text":"Caso-control","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp09_sp09p2.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -2315,22 +2315,22 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
   'Sentidos atribuidos por participantes',
-  '[{"text":"Entrevista","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '[{"text":"Entrevista","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   'a9bf6552-8a1f-5fe6-cba3-193a5b148488',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'Conversacion guiada para profundidad',
-  '[{"text":"Observacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Muestreo teorico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  'Conversación guiada para profundidad',
+  '[{"text":"Observación","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Muestreo teórico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
   'fd636142-6157-59db-cb7c-62628c9d952a',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'Discusion grupal orientada',
+  'Discusión grupal orientada',
   '[{"text":"Entrevista","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
@@ -2338,47 +2338,47 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '563ba2e4-ab72-5463-c0ac-c025a634c489',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'Registro sistematico de conductas y contexto',
-  '[{"text":"Observacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  'Registro sistemático de conductas y contexto',
+  '[{"text":"Observación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
   '7033764e-3781-5dcf-ca6c-6fc20950f1a7',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'Seleccion segun desarrollo teorico',
-  '[{"text":"Entrevista","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Muestreo teorico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  'Selección según desarrollo teórico',
+  '[{"text":"Entrevista","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Muestreo teórico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
   '2bbf3d16-2e9b-5eeb-c119-83abdbfea19c',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'No aparecen categorias nuevas',
-  '[{"text":"Significados","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Saturacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  'No aparecen categorías nuevas',
+  '[{"text":"Significados","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Saturación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
   'be4b6d00-823c-534e-c2b5-b38b7eac3ca4',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'Asignacion de codigos a datos',
-  '[{"text":"Grupo focal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Codificacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  'Asignación de codigos a datos',
+  '[{"text":"Grupo focal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Codificación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   'b2155b8a-c845-5655-cb44-87b833eebc88',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'Contraste de fuentes metodos o investigadores',
-  '[{"text":"Triangulacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  'Contraste de fuentes métodos o investigadores',
+  '[{"text":"Triangulación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   'b542c9cc-e652-558e-c37e-f8d7a4cd41f0',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'En Tema 10: Disenos de investigacion cualitativa, identifica el concepto relacionado con: enfoque que comprende experiencias',
+  '¿Qué concepto se describe aquí: «enfoque que comprende experiencias»?',
   '[{"text":"Significados","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Cualitativa","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
@@ -2386,23 +2386,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'f99aba57-aeda-59ef-c415-7a927cdb6e2d',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'En Tema 10: Disenos de investigacion cualitativa, identifica el concepto relacionado con: sentidos atribuidos por participantes',
-  '[{"text":"Grupo focal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «sentidos atribuidos por participantes»?',
+  '[{"text":"Grupo focal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   '805aff9b-9e3c-5257-cea6-8e751176087f',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'En Tema 10: Disenos de investigacion cualitativa, identifica el concepto relacionado con: conversacion guiada para profundidad',
-  '[{"text":"Muestreo teorico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «conversación guiada para profundidad»?',
+  '[{"text":"Muestreo teórico","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observación","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   '756504ad-c538-545d-c115-97298e7c0d20',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'En Tema 10: Disenos de investigacion cualitativa, identifica el concepto relacionado con: discusion grupal orientada',
+  '¿Qué concepto se describe aquí: «discusión grupal orientada»?',
   '[{"text":"Grupo focal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
@@ -2410,40 +2410,40 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'fd7efdc8-a248-520d-c1c3-a266186b39ce',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'En Tema 10: Disenos de investigacion cualitativa, identifica el concepto relacionado con: registro sistematico de conductas y contexto',
-  '[{"text":"Significados","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «registro sistemático de conductas y contexto»?',
+  '[{"text":"Significados","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   'ab9418c1-bced-5369-c5bc-7e07267078f0',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'En Tema 10: Disenos de investigacion cualitativa, identifica el concepto relacionado con: seleccion segun desarrollo teorico',
-  '[{"text":"Grupo focal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Muestreo teorico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «selección según desarrollo teórico»?',
+  '[{"text":"Grupo focal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observación","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Muestreo teórico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   'a5925901-73b7-523d-c10f-cf5ef9c33fd6',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'En Tema 10: Disenos de investigacion cualitativa, identifica el concepto relacionado con: no aparecen categorias nuevas',
-  '[{"text":"Entrevista","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Saturacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «no aparecen categorías nuevas»?',
+  '[{"text":"Entrevista","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Saturación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   '4dfce1f9-fbdb-5a14-c6a2-d78a83428c19',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'En Tema 10: Disenos de investigacion cualitativa, identifica el concepto relacionado con: asignacion de codigos a datos',
-  '[{"text":"Codificacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «asignación de codigos a datos»?',
+  '[{"text":"Codificación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   'c117b6a1-6ee6-5a40-c061-ed0dc20175fa',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'mc',
-  'En Tema 10: Disenos de investigacion cualitativa, identifica el concepto relacionado con: contraste de fuentes metodos o investigadores',
-  '[{"text":"Entrevista","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Triangulacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «contraste de fuentes métodos o investigadores»?',
+  '[{"text":"Entrevista","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observación","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Triangulación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -2451,7 +2451,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"Cualitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '[{"text":"Cualitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Entrevista","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Grupo focal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -2459,15 +2459,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"Observacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Muestreo teorico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Saturacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Codificacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '[{"text":"Observación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Muestreo teórico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Saturación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Codificación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   'ee7c422d-ace9-5c16-c8c4-9b39dcef6091',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"Cualitativa: Enfoque que comprende experiencias","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados: Sentidos atribuidos por participantes","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"Cualitativa: Enfoque que comprende experiencias","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Significados: Sentidos atribuidos por participantes","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -2475,7 +2475,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'ms',
   'Selecciona elementos que se usan para planificar o evaluar.',
-  '[{"text":"Entrevista","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Muestreo teorico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Triangulacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '[{"text":"Entrevista","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Muestreo teórico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Triangulación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -2483,15 +2483,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'ms',
   'Selecciona conceptos que deben definirse con claridad.',
-  '[{"text":"Grupo focal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Saturacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Codificacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  '[{"text":"Grupo focal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Saturación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Codificación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
 (
   'eee0fe63-c6d5-5030-c208-3982924a9adf',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
-  '[{"text":"Cualitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Triangulacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
+  'Selecciona los componentes correctos.',
+  '[{"text":"Cualitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Observación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Triangulación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -2499,7 +2499,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'dnd',
   'Relaciona conceptos del esquema.',
-  '[{"text":"Cualitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":13,"pinY":35},{"text":"Significados","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":32,"pinY":35},{"text":"Entrevista","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":50,"pinY":35},{"text":"Grupo focal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":69,"pinY":35},{"text":"Observacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Muestreo teorico","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":22,"pinY":67}]'::jsonb,
+  '[{"text":"Cualitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":13,"pinY":35},{"text":"Significados","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":32,"pinY":35},{"text":"Entrevista","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":50,"pinY":35},{"text":"Grupo focal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":69,"pinY":35},{"text":"Observación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Muestreo teórico","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -2507,7 +2507,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'dnd',
   'Relaciona componentes aplicados.',
-  '[{"text":"Grupo focal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":69,"pinY":35},{"text":"Observacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Muestreo teorico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":22,"pinY":67},{"text":"Saturacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":41,"pinY":67},{"text":"Codificacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":59,"pinY":67},{"text":"Triangulacion","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Grupo focal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":69,"pinY":35},{"text":"Observación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Muestreo teórico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":22,"pinY":67},{"text":"Saturación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":41,"pinY":67},{"text":"Codificación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":59,"pinY":67},{"text":"Triangulación","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -2515,7 +2515,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'dnd',
   'Relaciona elementos principales.',
-  '[{"text":"Cualitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":13,"pinY":35},{"text":"Entrevista","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":50,"pinY":35},{"text":"Observacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Saturacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":41,"pinY":67},{"text":"Triangulacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Cualitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":13,"pinY":35},{"text":"Entrevista","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":50,"pinY":35},{"text":"Observación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Saturación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":41,"pinY":67},{"text":"Triangulación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -2523,23 +2523,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'dnd',
   'Relaciona conceptos y etapas.',
-  '[{"text":"Triangulacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":78,"pinY":67},{"text":"Codificacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":59,"pinY":67},{"text":"Saturacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":41,"pinY":67},{"text":"Muestreo teorico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":22,"pinY":67},{"text":"Observacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Grupo focal","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":69,"pinY":35}]'::jsonb,
+  '[{"text":"Triangulación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":78,"pinY":67},{"text":"Codificación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":59,"pinY":67},{"text":"Saturación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":41,"pinY":67},{"text":"Muestreo teórico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":22,"pinY":67},{"text":"Observación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Grupo focal","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 27, 1, 75
 ),
 (
   '0ddb6386-66cd-53d7-ca4f-fdfbe2c426e0',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'dnd',
-  'Relaciona etiquetas del tema.',
-  '[{"text":"Significados","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":32,"pinY":35},{"text":"Entrevista","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":50,"pinY":35},{"text":"Grupo focal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":69,"pinY":35},{"text":"Observacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Muestreo teorico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":22,"pinY":67},{"text":"Saturacion","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":41,"pinY":67}]'::jsonb,
+  'Relaciona cada concepto con su imagen.',
+  '[{"text":"Significados","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":32,"pinY":35},{"text":"Entrevista","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":50,"pinY":35},{"text":"Grupo focal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":69,"pinY":35},{"text":"Observación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Muestreo teórico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":22,"pinY":67},{"text":"Saturación","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   'e199eb7d-d713-5d11-c4ef-fd160e0bf58b',
   'a1779608-8130-5f41-c6c9-ee8338184383',
   'dnd',
-  'Relaciona practica y evaluacion.',
-  '[{"text":"Entrevista","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":50,"pinY":35},{"text":"Grupo focal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":69,"pinY":35},{"text":"Observacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Muestreo teorico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":22,"pinY":67},{"text":"Saturacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":41,"pinY":67},{"text":"Codificacion","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":59,"pinY":67}]'::jsonb,
+  'Relaciona práctica y evaluación.',
+  '[{"text":"Entrevista","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":50,"pinY":35},{"text":"Grupo focal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":69,"pinY":35},{"text":"Observación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":86,"pinY":35},{"text":"Muestreo teórico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":22,"pinY":67},{"text":"Saturación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":41,"pinY":67},{"text":"Codificación","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp10_sp10p2.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -2560,7 +2560,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '627e08aa-0b9f-54cc-c5c8-96313642f4eb',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'Caracteristica que cambia o se mide',
+  'Característica que cambia o se mide',
   '[{"text":"Variable","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
@@ -2568,7 +2568,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '63c9f4d4-b529-533d-ca01-62b0a9a021ec',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'Variable de categorias no numericas',
+  'Variable de categorías no numéricas',
   '[{"text":"Cuantitativa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Ordinal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
@@ -2584,7 +2584,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '95140f4e-81fa-54d4-c76c-f46053f4bb93',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'Categorias sin orden',
+  'Categorías sin orden',
   '[{"text":"Cuantitativa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Variable","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
@@ -2592,7 +2592,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'd761291d-fe66-5975-c114-191791c3c261',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'Categorias con orden',
+  'Categorías con orden',
   '[{"text":"Ordinal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
@@ -2609,7 +2609,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
   'Escala con cero absoluto',
-  '[{"text":"Cualitativa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Razon","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Variable","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
+  '[{"text":"Cualitativa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Razón","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Variable","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
@@ -2624,15 +2624,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6cce55b1-77be-553d-c3f2-092ccbe8d815',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'Definicion practica para medir',
-  '[{"text":"Operacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Ordinal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
+  'Definición práctica para medir',
+  '[{"text":"Operación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Ordinal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   '3fafddee-d386-5372-c51f-aae4df3ea792',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'En Tema 11: Definicion y medicion de variables, identifica el concepto relacionado con: caracteristica que cambia o se mide',
+  '¿Qué concepto se describe aquí: «característica que cambia o se mide»?',
   '[{"text":"Cualitativa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Variable","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
@@ -2640,7 +2640,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '9f8be707-5952-51ca-c89f-8b1f5e67b3de',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'En Tema 11: Definicion y medicion de variables, identifica el concepto relacionado con: variable de categorias no numericas',
+  '¿Qué concepto se describe aquí: «variable de categorías no numéricas»?',
   '[{"text":"Nominal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Ordinal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
@@ -2648,7 +2648,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '5156f3c1-7943-5137-c82b-f3124d530e71',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'En Tema 11: Definicion y medicion de variables, identifica el concepto relacionado con: variable expresada numericamente',
+  '¿Qué concepto se describe aquí: «variable expresada numericamente»?',
   '[{"text":"Intervalo","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Ordinal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
@@ -2656,7 +2656,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '353a4760-e021-5509-c7c7-9adfb6992656',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'En Tema 11: Definicion y medicion de variables, identifica el concepto relacionado con: categorias sin orden',
+  '¿Qué concepto se describe aquí: «categorías sin orden»?',
   '[{"text":"Nominal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Variable","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
@@ -2664,7 +2664,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '87bc3f0c-c952-5f3c-cfdb-c450fae406c4',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'En Tema 11: Definicion y medicion de variables, identifica el concepto relacionado con: categorias con orden',
+  '¿Qué concepto se describe aquí: «categorías con orden»?',
   '[{"text":"Cualitativa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Ordinal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
@@ -2672,7 +2672,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '51feb1f8-6f34-5b33-c9cf-6238b25d0e62',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'En Tema 11: Definicion y medicion de variables, identifica el concepto relacionado con: escala con intervalos sin cero absoluto',
+  '¿Qué concepto se describe aquí: «escala con intervalos sin cero absoluto»?',
   '[{"text":"Nominal","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Ordinal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Intervalo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
@@ -2680,15 +2680,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '564df7bc-f04d-5161-c162-51b10e50840e',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'En Tema 11: Definicion y medicion de variables, identifica el concepto relacionado con: escala con cero absoluto',
-  '[{"text":"Cuantitativa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Razon","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Variable","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «escala con cero absoluto»?',
+  '[{"text":"Cuantitativa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Razón","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Variable","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   '8f21e297-beb4-579a-c649-678564cb6ca1',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'En Tema 11: Definicion y medicion de variables, identifica el concepto relacionado con: medida observable de variable',
+  '¿Qué concepto se describe aquí: «medida observable de variable»?',
   '[{"text":"Indicador","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
@@ -2696,8 +2696,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'a6c582a2-d601-5c31-c90c-f96e814da191',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'mc',
-  'En Tema 11: Definicion y medicion de variables, identifica el concepto relacionado con: definicion practica para medir',
-  '[{"text":"Cuantitativa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Ordinal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Operacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «definición práctica para medir»?',
+  '[{"text":"Cuantitativa","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Ordinal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Operación","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -2705,7 +2705,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"Variable","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
+  '[{"text":"Variable","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cuantitativa","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nominal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -2713,15 +2713,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"Ordinal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Intervalo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Razon","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Indicador","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
+  '[{"text":"Ordinal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Intervalo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Razón","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Indicador","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   'a6f343a0-3cfd-5a49-cffd-b79b8a5e8489',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"Variable: Caracteristica que cambia o se","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa: Variable de categorias no numericas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"Variable: Característica que cambia o se","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cualitativa: Variable de categorías no numéricas","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -2729,7 +2729,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'ms',
   'Selecciona elementos que se usan para planificar o evaluar.',
-  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Intervalo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Operacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
+  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Intervalo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Operación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -2737,15 +2737,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'ms',
   'Selecciona conceptos que deben definirse con claridad.',
-  '[{"text":"Nominal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Razon","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Indicador","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
+  '[{"text":"Nominal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Razón","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Indicador","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
 (
   '9e1536ae-e22d-5e5a-c9d7-91debdabc5de',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
-  '[{"text":"Variable","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Ordinal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Operacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
+  'Selecciona los componentes correctos.',
+  '[{"text":"Variable","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Ordinal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Operación","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
 (
@@ -2761,7 +2761,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'dnd',
   'Relaciona componentes aplicados.',
-  '[{"text":"Nominal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":69,"pinY":35},{"text":"Ordinal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":86,"pinY":35},{"text":"Intervalo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":22,"pinY":67},{"text":"Razon","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":41,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":59,"pinY":67},{"text":"Operacion","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Nominal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":69,"pinY":35},{"text":"Ordinal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":86,"pinY":35},{"text":"Intervalo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":22,"pinY":67},{"text":"Razón","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":41,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":59,"pinY":67},{"text":"Operación","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -2769,7 +2769,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'dnd',
   'Relaciona elementos principales.',
-  '[{"text":"Variable","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":13,"pinY":35},{"text":"Cuantitativa","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":50,"pinY":35},{"text":"Ordinal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":86,"pinY":35},{"text":"Razon","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":41,"pinY":67},{"text":"Operacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Variable","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":13,"pinY":35},{"text":"Cuantitativa","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":50,"pinY":35},{"text":"Ordinal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":86,"pinY":35},{"text":"Razón","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":41,"pinY":67},{"text":"Operación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -2777,23 +2777,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'dnd',
   'Relaciona conceptos y etapas.',
-  '[{"text":"Operacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":78,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":59,"pinY":67},{"text":"Razon","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":41,"pinY":67},{"text":"Intervalo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":22,"pinY":67},{"text":"Ordinal","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":86,"pinY":35},{"text":"Nominal","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":69,"pinY":35}]'::jsonb,
+  '[{"text":"Operación","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":78,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":59,"pinY":67},{"text":"Razón","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":41,"pinY":67},{"text":"Intervalo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":22,"pinY":67},{"text":"Ordinal","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":86,"pinY":35},{"text":"Nominal","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 27, 1, 75
 ),
 (
   '32f89d21-a701-53af-c6ba-036e621d03f6',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'dnd',
-  'Relaciona etiquetas del tema.',
-  '[{"text":"Cualitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":32,"pinY":35},{"text":"Cuantitativa","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":50,"pinY":35},{"text":"Nominal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":69,"pinY":35},{"text":"Ordinal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":86,"pinY":35},{"text":"Intervalo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":22,"pinY":67},{"text":"Razon","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":41,"pinY":67}]'::jsonb,
+  'Relaciona cada concepto con su imagen.',
+  '[{"text":"Cualitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":32,"pinY":35},{"text":"Cuantitativa","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":50,"pinY":35},{"text":"Nominal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":69,"pinY":35},{"text":"Ordinal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":86,"pinY":35},{"text":"Intervalo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":22,"pinY":67},{"text":"Razón","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   '6c871684-8e76-5589-cf2e-a5fbb07deab8',
   '6f3f398c-7d9e-5c63-c54c-23fe022d0de4',
   'dnd',
-  'Relaciona practica y evaluacion.',
-  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":50,"pinY":35},{"text":"Nominal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":69,"pinY":35},{"text":"Ordinal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":86,"pinY":35},{"text":"Intervalo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":22,"pinY":67},{"text":"Razon","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":41,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":59,"pinY":67}]'::jsonb,
+  'Relaciona práctica y evaluación.',
+  '[{"text":"Cuantitativa","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":50,"pinY":35},{"text":"Nominal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":69,"pinY":35},{"text":"Ordinal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":86,"pinY":35},{"text":"Intervalo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":22,"pinY":67},{"text":"Razón","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":41,"pinY":67},{"text":"Indicador","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp11_sp11p2.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
 
@@ -2814,8 +2814,8 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'd1be1ca2-b819-5e8b-cbb8-be522a3b3543',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'Conjunto total teorico de interes',
-  '[{"text":"Universo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Poblacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  'Conjunto total teórico de interes',
+  '[{"text":"Universo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Población","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
@@ -2823,7 +2823,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
   'Conjunto accesible definido para estudio',
-  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Poblacion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Población","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
@@ -2831,15 +2831,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
   'Subconjunto seleccionado',
-  '[{"text":"Marco muestral","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio inclusion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '[{"text":"Marco muestral","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio inclusión","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
   '4c9d7300-0005-587b-cfbc-6d67d8c5b07e',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'Elemento sobre el que se observa informacion',
-  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Universo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Poblacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  'Elemento sobre el que se observa información',
+  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Universo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Población","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
@@ -2847,111 +2847,111 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
   'Listado o base para seleccionar muestra',
-  '[{"text":"Marco muestral","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Poblacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '[{"text":"Marco muestral","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Población","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
   '24c9cab6-6b44-58c4-c120-494dd5f3b45f',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'Condicion para participar',
-  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio inclusion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  'Condición para participar',
+  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio inclusión","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
   'f432f858-d07a-5b45-c6cd-f384b032ac55',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'Condicion para no participar',
-  '[{"text":"Poblacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio exclusion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Universo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  'Condición para no participar',
+  '[{"text":"Población","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio exclusión","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Universo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
   '79381aee-246c-57cb-cbfa-c3f1598e937c',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'Numero necesario de participantes',
-  '[{"text":"Unidad de analisis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Tamano muestral","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Poblacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  'Número necesario de participantes',
+  '[{"text":"Unidad de análisis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Tamaño muestral","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Población","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
   '58792d10-d758-5476-c4e2-d2c836d7c68f',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'Capacidad de reflejar a la poblacion',
-  '[{"text":"Representatividad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  'Capacidad de reflejar a la población',
+  '[{"text":"Representatividad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 8, 1, 45
 ),
 (
   '17c16eae-bfbc-50b6-cf93-d951e2bac0d5',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'En Tema 12: Poblacion y muestra, identifica el concepto relacionado con: conjunto total teorico de interes',
-  '[{"text":"Poblacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Universo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «conjunto total teórico de interes»?',
+  '[{"text":"Población","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Universo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 9, 1, 45
 ),
 (
   '094ed416-4da3-51a5-ca04-d00a6c95f8cf',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'En Tema 12: Poblacion y muestra, identifica el concepto relacionado con: conjunto accesible definido para estudio',
-  '[{"text":"Unidad de analisis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Poblacion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «conjunto accesible definido para estudio»?',
+  '[{"text":"Unidad de análisis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Población","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 10, 1, 45
 ),
 (
   '1c93b2d4-d86d-573d-cbe2-1204eec4e3a1',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'En Tema 12: Poblacion y muestra, identifica el concepto relacionado con: subconjunto seleccionado',
-  '[{"text":"Criterio inclusion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «subconjunto seleccionado»?',
+  '[{"text":"Criterio inclusión","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 11, 1, 45
 ),
 (
   '3d26b733-9cff-5d6a-c8c0-7cf5c4d4de8c',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'En Tema 12: Poblacion y muestra, identifica el concepto relacionado con: elemento sobre el que se observa informacion',
-  '[{"text":"Unidad de analisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Universo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Poblacion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «elemento sobre el que se observa información»?',
+  '[{"text":"Unidad de análisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Universo","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Población","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 12, 1, 45
 ),
 (
   '6d482eec-bbb1-5471-c640-bdf568e7ce07',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'En Tema 12: Poblacion y muestra, identifica el concepto relacionado con: listado o base para seleccionar muestra',
-  '[{"text":"Poblacion","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «listado o base para seleccionar muestra»?',
+  '[{"text":"Población","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 13, 1, 45
 ),
 (
   'c6b9285f-0dcd-5540-cb13-7718fdb2feac',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'En Tema 12: Poblacion y muestra, identifica el concepto relacionado con: condicion para participar',
-  '[{"text":"Unidad de analisis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio inclusion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «condición para participar»?',
+  '[{"text":"Unidad de análisis","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio inclusión","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 14, 1, 45
 ),
 (
   'd3e4879c-8668-5930-c0c6-c55181679726',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'En Tema 12: Poblacion y muestra, identifica el concepto relacionado con: condicion para no participar',
-  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio exclusion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Universo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Poblacion","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «condición para no participar»?',
+  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio exclusión","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Universo","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Población","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 15, 1, 45
 ),
 (
   '7fc327b4-0fef-5ae7-c18e-4f0d9afa012d',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'En Tema 12: Poblacion y muestra, identifica el concepto relacionado con: numero necesario de participantes',
-  '[{"text":"Tamano muestral","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Poblacion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «número necesario de participantes»?',
+  '[{"text":"Tamaño muestral","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Población","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 16, 1, 45
 ),
 (
   '4751f648-eae7-5196-c390-9d19392460b8',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'mc',
-  'En Tema 12: Poblacion y muestra, identifica el concepto relacionado con: capacidad de reflejar a la poblacion',
-  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Representatividad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '¿Qué concepto se describe aquí: «capacidad de reflejar a la población»?',
+  '[{"text":"Muestra","correct":false,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Representatividad","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   false, 17, 1, 45
 ),
 (
@@ -2959,7 +2959,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'ms',
   'Selecciona conceptos centrales de este tema.',
-  '[{"text":"Universo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Poblacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de analisis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Hallazgo anatomico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '[{"text":"Universo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Población","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Muestra","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Unidad de análisis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Hallazgo anatómico aislado","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   true, 18, 1, 60
 ),
 (
@@ -2967,15 +2967,15 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'ms',
   'Selecciona elementos operativos o aplicados.',
-  '[{"text":"Marco muestral","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio inclusion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio exclusion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Tamano muestral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Potencial de accion neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '[{"text":"Marco muestral","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio inclusión","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio exclusión","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Tamaño muestral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Potencial de acción neuronal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   true, 19, 1, 60
 ),
 (
   'e5c90848-3788-52db-c71e-41536cfd7a63',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'ms',
-  'Selecciona pares correctos del tema.',
-  '[{"text":"Universo: Conjunto total teorico de interes","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Poblacion: Conjunto accesible definido para estudio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Mitocondria: politica publica","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  'Selecciona los pares correctos.',
+  '[{"text":"Universo: Conjunto total teórico de interes","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Población: Conjunto accesible definido para estudio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Mitocondria: política pública","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   true, 20, 1, 60
 ),
 (
@@ -2983,7 +2983,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'ms',
   'Selecciona elementos que se usan para planificar o evaluar.',
-  '[{"text":"Muestra","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio inclusion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Representatividad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '[{"text":"Muestra","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio inclusión","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Representatividad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Cromatina nuclear","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   true, 21, 1, 60
 ),
 (
@@ -2991,14 +2991,14 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'ms',
   'Selecciona conceptos que deben definirse con claridad.',
-  '[{"text":"Unidad de analisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio exclusion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Tamano muestral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
+  '[{"text":"Unidad de análisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Criterio exclusión","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Tamaño muestral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Vaina de mielina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   true, 22, 1, 60
 ),
 (
   '4d06cf0c-8507-511d-ca66-bbb19953455c',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'ms',
-  'Selecciona componentes relevantes para el examen parcial.',
+  'Selecciona los componentes correctos.',
   '[{"text":"Universo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Marco muestral","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Representatividad","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"},{"text":"Nodo sinoauricular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg"}]'::jsonb,
   true, 23, 1, 60
 ),
@@ -3007,7 +3007,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'dnd',
   'Relaciona conceptos del esquema.',
-  '[{"text":"Universo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":13,"pinY":35},{"text":"Poblacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":32,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":50,"pinY":35},{"text":"Unidad de analisis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":69,"pinY":35},{"text":"Marco muestral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Criterio inclusion","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":22,"pinY":67}]'::jsonb,
+  '[{"text":"Universo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":13,"pinY":35},{"text":"Población","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":32,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":50,"pinY":35},{"text":"Unidad de análisis","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":69,"pinY":35},{"text":"Marco muestral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Criterio inclusión","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":22,"pinY":67}]'::jsonb,
   false, 24, 1, 75
 ),
 (
@@ -3015,7 +3015,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'dnd',
   'Relaciona componentes aplicados.',
-  '[{"text":"Unidad de analisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":69,"pinY":35},{"text":"Marco muestral","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Criterio inclusion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":22,"pinY":67},{"text":"Criterio exclusion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":41,"pinY":67},{"text":"Tamano muestral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":59,"pinY":67},{"text":"Representatividad","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Unidad de análisis","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":69,"pinY":35},{"text":"Marco muestral","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Criterio inclusión","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":22,"pinY":67},{"text":"Criterio exclusión","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":41,"pinY":67},{"text":"Tamaño muestral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":59,"pinY":67},{"text":"Representatividad","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 25, 1, 75
 ),
 (
@@ -3023,7 +3023,7 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'dnd',
   'Relaciona elementos principales.',
-  '[{"text":"Universo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":13,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":50,"pinY":35},{"text":"Marco muestral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Criterio exclusion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":41,"pinY":67},{"text":"Representatividad","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":78,"pinY":67}]'::jsonb,
+  '[{"text":"Universo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":13,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":50,"pinY":35},{"text":"Marco muestral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Criterio exclusión","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":41,"pinY":67},{"text":"Representatividad","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":78,"pinY":67}]'::jsonb,
   false, 26, 1, 75
 ),
 (
@@ -3031,23 +3031,23 @@ insert into public.evaluacion_preguntas (id, evaluacion_id, tipo, texto, opcione
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'dnd',
   'Relaciona conceptos y etapas.',
-  '[{"text":"Representatividad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":78,"pinY":67},{"text":"Tamano muestral","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":59,"pinY":67},{"text":"Criterio exclusion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":41,"pinY":67},{"text":"Criterio inclusion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":22,"pinY":67},{"text":"Marco muestral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Unidad de analisis","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":69,"pinY":35}]'::jsonb,
+  '[{"text":"Representatividad","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":78,"pinY":67},{"text":"Tamaño muestral","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":59,"pinY":67},{"text":"Criterio exclusión","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":41,"pinY":67},{"text":"Criterio inclusión","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":22,"pinY":67},{"text":"Marco muestral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Unidad de análisis","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":69,"pinY":35}]'::jsonb,
   false, 27, 1, 75
 ),
 (
   'd20fcc08-543c-5d6a-c04a-0f348d5961a3',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'dnd',
-  'Relaciona etiquetas del tema.',
-  '[{"text":"Poblacion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":32,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":50,"pinY":35},{"text":"Unidad de analisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":69,"pinY":35},{"text":"Marco muestral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Criterio inclusion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":22,"pinY":67},{"text":"Criterio exclusion","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":41,"pinY":67}]'::jsonb,
+  'Relaciona cada concepto con su imagen.',
+  '[{"text":"Población","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":32,"pinY":35},{"text":"Muestra","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":50,"pinY":35},{"text":"Unidad de análisis","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":69,"pinY":35},{"text":"Marco muestral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Criterio inclusión","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":22,"pinY":67},{"text":"Criterio exclusión","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":41,"pinY":67}]'::jsonb,
   false, 28, 1, 75
 ),
 (
   'f7187eed-63a3-569e-cf3e-67fae0dd3a7e',
   'b2f247fb-7e53-5310-cef9-03cdcf39e259',
   'dnd',
-  'Relaciona practica y evaluacion.',
-  '[{"text":"Muestra","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":50,"pinY":35},{"text":"Unidad de analisis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":69,"pinY":35},{"text":"Marco muestral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Criterio inclusion","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":22,"pinY":67},{"text":"Criterio exclusion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":41,"pinY":67},{"text":"Tamano muestral","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":59,"pinY":67}]'::jsonb,
+  'Relaciona práctica y evaluación.',
+  '[{"text":"Muestra","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":50,"pinY":35},{"text":"Unidad de análisis","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":69,"pinY":35},{"text":"Marco muestral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":86,"pinY":35},{"text":"Criterio inclusión","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":22,"pinY":67},{"text":"Criterio exclusión","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":41,"pinY":67},{"text":"Tamaño muestral","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/salud-publica-parciales/sp12_sp12p2.svg","pinX":59,"pinY":67}]'::jsonb,
   false, 29, 1, 75
 );
 commit;

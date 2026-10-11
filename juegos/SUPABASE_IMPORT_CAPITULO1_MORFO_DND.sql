@@ -88,7 +88,7 @@ insert into public.evaluacion_preguntas (
   '87ed37f2-c87a-43fd-a458-5f9f0f88a101',
   '5f4c3c25-7f13-48fd-a64c-5fa7796f7fd1',
   'dnd',
-  'Capitulo 1 imagen: relaciona los huesos del antebrazo senalados.',
+  'Relaciona los huesos del antebrazo señalados.',
   '[
     {"text":"Radio","correct":true,"color":"ac-blue","pinX":28,"pinY":46,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_antebrazo_radio_cubito.png"},
     {"text":"Cubito","correct":true,"color":"ac-green","pinX":43,"pinY":47,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_antebrazo_radio_cubito.png"}
@@ -102,7 +102,7 @@ insert into public.evaluacion_preguntas (
   '87ed37f2-c87a-43fd-a458-5f9f0f88a102',
   '5f4c3c25-7f13-48fd-a64c-5fa7796f7fd1',
   'dnd',
-  'Capitulo 1 imagen: identifica el plano o corte anatomico representado.',
+  'Identifica el plano o corte anatómico representado.',
   '[
     {"text":"Corte sagital","correct":true,"color":"ac-purple","pinX":17,"pinY":50,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_planos_cortes.png"},
     {"text":"Corte frontal","correct":true,"color":"ac-blue","pinX":50,"pinY":50,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_planos_cortes.png"},
@@ -117,14 +117,14 @@ insert into public.evaluacion_preguntas (
   '87ed37f2-c87a-43fd-a458-5f9f0f88a103',
   '5f4c3c25-7f13-48fd-a64c-5fa7796f7fd1',
   'dnd',
-  'Capitulo 1 imagen: ubica regiones corporales anteriores.',
+  'Ubica regiones corporales anteriores.',
   '[
-    {"text":"Region cefalica","correct":true,"color":"ac-blue","pinX":51,"pinY":8,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"},
-    {"text":"Region cervical","correct":true,"color":"ac-green","pinX":50,"pinY":19,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"},
-    {"text":"Region toracica","correct":true,"color":"ac-purple","pinX":50,"pinY":33,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"},
-    {"text":"Region umbilical","correct":true,"color":"ac-yellow","pinX":50,"pinY":49,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"},
-    {"text":"Region inguinal","correct":true,"color":"ac-pink","pinX":55,"pinY":63,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"},
-    {"text":"Region femoral","correct":true,"color":"ac-yellow","pinX":55,"pinY":76,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"}
+    {"text":"Región cefálica","correct":true,"color":"ac-blue","pinX":51,"pinY":8,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"},
+    {"text":"Región cervical","correct":true,"color":"ac-green","pinX":50,"pinY":19,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"},
+    {"text":"Región torácica","correct":true,"color":"ac-purple","pinX":50,"pinY":33,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"},
+    {"text":"Región umbilical","correct":true,"color":"ac-yellow","pinX":50,"pinY":49,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"},
+    {"text":"Región inguinal","correct":true,"color":"ac-pink","pinX":55,"pinY":63,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"},
+    {"text":"Región femoral","correct":true,"color":"ac-yellow","pinX":55,"pinY":76,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_regiones_corporales_anterior.png"}
   ]'::jsonb,
   true,
   2,
@@ -135,7 +135,7 @@ insert into public.evaluacion_preguntas (
   '87ed37f2-c87a-43fd-a458-5f9f0f88a104',
   '5f4c3c25-7f13-48fd-a64c-5fa7796f7fd1',
   'dnd',
-  'Capitulo 1 imagen: relaciona los cuatro cuadrantes abdominales.',
+  'Relaciona los cuatro cuadrantes abdominales.',
   '[
     {"text":"Cuadrante superior derecho","correct":true,"color":"ac-blue","pinX":37,"pinY":43,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_cuadrantes_abdominales.png"},
     {"text":"Cuadrante superior izquierdo","correct":true,"color":"ac-yellow","pinX":62,"pinY":43,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_cuadrantes_abdominales.png"},
@@ -151,17 +151,17 @@ insert into public.evaluacion_preguntas (
   '87ed37f2-c87a-43fd-a458-5f9f0f88a105',
   '5f4c3c25-7f13-48fd-a64c-5fa7796f7fd1',
   'dnd',
-  'Capitulo 1 imagen: relaciona las nueve regiones abdominales.',
+  'Relaciona las nueve regiones abdominales.',
   '[
     {"text":"Hipocondrio derecho","correct":true,"color":"ac-blue","pinX":28,"pinY":37,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
-    {"text":"Region epigastrica","correct":true,"color":"ac-yellow","pinX":50,"pinY":37,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
+    {"text":"Región epigástrica","correct":true,"color":"ac-yellow","pinX":50,"pinY":37,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
     {"text":"Hipocondrio izquierdo","correct":true,"color":"ac-green","pinX":72,"pinY":37,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
-    {"text":"Region lumbar derecha","correct":true,"color":"ac-purple","pinX":28,"pinY":51,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
-    {"text":"Region umbilical","correct":true,"color":"ac-pink","pinX":50,"pinY":51,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
-    {"text":"Region lumbar izquierda","correct":true,"color":"ac-purple","pinX":72,"pinY":51,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
-    {"text":"Region inguinal derecha","correct":true,"color":"ac-teal","pinX":28,"pinY":65,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
-    {"text":"Region hipogastrica","correct":true,"color":"ac-yellow","pinX":50,"pinY":65,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
-    {"text":"Region inguinal izquierda","correct":true,"color":"ac-teal","pinX":72,"pinY":65,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"}
+    {"text":"Región lumbar derecha","correct":true,"color":"ac-purple","pinX":28,"pinY":51,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
+    {"text":"Región umbilical","correct":true,"color":"ac-pink","pinX":50,"pinY":51,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
+    {"text":"Región lumbar izquierda","correct":true,"color":"ac-purple","pinX":72,"pinY":51,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
+    {"text":"Región inguinal derecha","correct":true,"color":"ac-teal","pinX":28,"pinY":65,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
+    {"text":"Región hipogástrica","correct":true,"color":"ac-yellow","pinX":50,"pinY":65,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"},
+    {"text":"Región inguinal izquierda","correct":true,"color":"ac-teal","pinX":72,"pinY":65,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_nueve_regiones_abdominales.png"}
   ]'::jsonb,
   true,
   4,
@@ -172,13 +172,13 @@ insert into public.evaluacion_preguntas (
   '87ed37f2-c87a-43fd-a458-5f9f0f88a106',
   '5f4c3c25-7f13-48fd-a64c-5fa7796f7fd1',
   'dnd',
-  'Capitulo 1 imagen: identifica las principales cavidades corporales.',
+  'Identifica las principales cavidades corporales.',
   '[
     {"text":"Cavidad craneana","correct":true,"color":"ac-blue","pinX":43,"pinY":6,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_cavidades_corporales.png"},
     {"text":"Conducto vertebral","correct":true,"color":"ac-green","pinX":63,"pinY":31,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_cavidades_corporales.png"},
-    {"text":"Cavidad toracica","correct":true,"color":"ac-purple","pinX":38,"pinY":34,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_cavidades_corporales.png"},
+    {"text":"Cavidad torácica","correct":true,"color":"ac-purple","pinX":38,"pinY":34,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_cavidades_corporales.png"},
     {"text":"Cavidad abdominal","correct":true,"color":"ac-pink","pinX":37,"pinY":60,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_cavidades_corporales.png"},
-    {"text":"Cavidad pelvica","correct":true,"color":"ac-yellow","pinX":47,"pinY":75,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_cavidades_corporales.png"}
+    {"text":"Cavidad pélvica","correct":true,"color":"ac-yellow","pinX":47,"pinY":75,"pregunta_imagen":"./assets/capitulo1-morfo/cap1_cavidades_corporales.png"}
   ]'::jsonb,
   true,
   5,

@@ -39,14 +39,14 @@ insert into public.evaluacion_preguntas (
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'mc',
   'En la imagen, el nervio olfatorio (I) se relaciona principalmente con:',
-  '[{"text":"Olfato","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_olfatorio.png"},{"text":"Audicion","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_olfatorio.png"},{"text":"Deglucion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_olfatorio.png"},{"text":"Movimiento lateral del ojo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_olfatorio.png"}]'::jsonb,
+  '[{"text":"Olfato","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_olfatorio.png"},{"text":"Audición","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_olfatorio.png"},{"text":"Deglución","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_olfatorio.png"},{"text":"Movimiento lateral del ojo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_olfatorio.png"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
   '7b8c6bd0-85bb-7245-75ec-71785b31d8bd',
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'mc',
-  'En la base del encefalo, el nervio optico corresponde al par craneal:',
+  'En la base del encefalo, el nervio óptico corresponde al par craneal:',
   '[{"text":"II","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_optico.png"},{"text":"III","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_optico.png"},{"text":"V","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_optico.png"},{"text":"VIII","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_optico.png"}]'::jsonb,
   false, 1, 1, 45
 ),
@@ -54,15 +54,15 @@ insert into public.evaluacion_preguntas (
   'f398b23b-6ec9-e3b5-895a-4b52822ee406',
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'mc',
-  'La figura del nervio motor ocular comun orienta a que funcion principal?',
-  '[{"text":"Movimientos oculares y control pupilar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"},{"text":"Audicion y equilibrio","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"},{"text":"Sensibilidad facial principal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"},{"text":"Movimientos de la lengua","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"}]'::jsonb,
+  'La figura del nervio motor ocular comun orienta a que función principal?',
+  '[{"text":"Movimientos oculares y control pupilar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"},{"text":"Audición y equilibrio","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"},{"text":"Sensibilidad facial principal","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"},{"text":"Movimientos de la lengua","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"}]'::jsonb,
   false, 2, 1, 45
 ),
 (
   '8925313a-f890-a872-a6d5-05be9f9f6498',
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'mc',
-  'En la imagen del trigemino, la division mandibular se representa como:',
+  'En la imagen del trigémino, la división mandibular se representa como:',
   '[{"text":"V3","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png"},{"text":"V1","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png"},{"text":"V2","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png"},{"text":"VII","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png"}]'::jsonb,
   false, 3, 1, 45
 ),
@@ -71,7 +71,7 @@ insert into public.evaluacion_preguntas (
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'mc',
   'La figura del nervio facial destaca un par craneal que controla sobre todo:',
-  '[{"text":"Expresion facial","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png"},{"text":"Vision central","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png"},{"text":"Audicion pura","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png"},{"text":"Abduccion del ojo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png"}]'::jsonb,
+  '[{"text":"Expresión facial","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png"},{"text":"Visión central","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png"},{"text":"Audición pura","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png"},{"text":"Abducción del ojo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
@@ -79,7 +79,7 @@ insert into public.evaluacion_preguntas (
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'mc',
   'El nervio auditivo o vestibulococlear (VIII) se asocia con:',
-  '[{"text":"Audicion y equilibrio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png"},{"text":"Olfato","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png"},{"text":"Movimientos del trapecio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png"},{"text":"Motilidad intestinal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png"}]'::jsonb,
+  '[{"text":"Audición y equilibrio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png"},{"text":"Olfato","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png"},{"text":"Movimientos del trapecio","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png"},{"text":"Motilidad intestinal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
@@ -87,7 +87,7 @@ insert into public.evaluacion_preguntas (
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'mc',
   'En la imagen, el nervio vago (X) se caracteriza por inervar ampliamente:',
-  '[{"text":"Visceras toracicas y abdominopelvicas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"},{"text":"Solo musculos extraoculares","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"},{"text":"Solo piel de la cara","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"},{"text":"Solo la retina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"}]'::jsonb,
+  '[{"text":"Visceras torácicas y abdominopelvicas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"},{"text":"Solo músculos extraoculares","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"},{"text":"Solo piel de la cara","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"},{"text":"Solo la retina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
@@ -95,7 +95,7 @@ insert into public.evaluacion_preguntas (
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'mc',
   'En la figura inferior, el nervio hipogloso (XII) controla principalmente:',
-  '[{"text":"Movimientos de la lengua","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png"},{"text":"Olfato","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png"},{"text":"Audicion","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png"},{"text":"Glandula lagrimal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png"}]'::jsonb,
+  '[{"text":"Movimientos de la lengua","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png"},{"text":"Olfato","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png"},{"text":"Audición","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png"},{"text":"Glándula lagrimal","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png"}]'::jsonb,
   false, 7, 1, 45
 ),
 (
@@ -103,14 +103,14 @@ insert into public.evaluacion_preguntas (
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'ms',
   'Selecciona los pares craneales sensitivos principales que aparecen en el cuadro.',
-  '[{"text":"I olfatorio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png"},{"text":"II optico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png"},{"text":"VIII vestibulococlear","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png"},{"text":"XI accesorio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png"},{"text":"XII hipogloso","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png"}]'::jsonb,
+  '[{"text":"I olfatorio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png"},{"text":"II óptico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png"},{"text":"VIII vestibulococlear","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png"},{"text":"XI accesorio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png"},{"text":"XII hipogloso","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png"}]'::jsonb,
   true, 8, 1, 45
 ),
 (
   '8ef62a8a-e7be-a099-68ba-698628e1cb0c',
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'ms',
-  'Segun las figuras, cuales pares craneales son motores de manera predominante?',
+  'Según las figuras, cuáles pares craneales son motores de manera predominante?',
   '[{"text":"III motor ocular comun","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"},{"text":"IV patetico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"},{"text":"VI motor ocular externo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"},{"text":"XI accesorio","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"},{"text":"I olfatorio","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_oculomotores.png"}]'::jsonb,
   true, 9, 1, 45
 ),
@@ -118,7 +118,7 @@ insert into public.evaluacion_preguntas (
   '75fbb75c-2e68-0768-b8ad-9761e42d6092',
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'ms',
-  'En el nervio trigemino, que divisiones forman el territorio sensitivo facial mostrado?',
+  'En el nervio trigémino, que divisiones forman el territorio sensitivo facial mostrado?',
   '[{"text":"Oftalmica V1","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png"},{"text":"Maxilar V2","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png"},{"text":"Mandibular V3","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png"},{"text":"Vago X","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png"},{"text":"Accesorio XI","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png"}]'::jsonb,
   true, 10, 1, 45
 ),
@@ -126,7 +126,7 @@ insert into public.evaluacion_preguntas (
   '1c97389b-fd4f-db4b-e283-b191bceb3a4e',
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'ms',
-  'Que pares craneales llevan fibras parasimpaticas hacia organos de la cabeza o visceras?',
+  'Que pares craneales llevan fibras parasimpaticas hacia órganos de la cabeza o visceras?',
   '[{"text":"III","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"},{"text":"VII","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"},{"text":"IX","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"},{"text":"X","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"},{"text":"XII","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png"}]'::jsonb,
   true, 11, 1, 45
 ),
@@ -135,15 +135,15 @@ insert into public.evaluacion_preguntas (
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'dnd',
   'Relaciona los principales pares craneales en la vista basal mostrada.',
-  '[{"text":"I olfatorio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":45,"pinY":17},{"text":"II optico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":47,"pinY":30},{"text":"III oculomotor","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":53,"pinY":39},{"text":"V trigemino","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":53,"pinY":51},{"text":"VII facial","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":54,"pinY":61},{"text":"X vago","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":55,"pinY":75},{"text":"XII hipogloso","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":56,"pinY":82}]'::jsonb,
+  '[{"text":"I olfatorio","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":45,"pinY":17},{"text":"II óptico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":47,"pinY":30},{"text":"III oculomotor","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":53,"pinY":39},{"text":"V trigémino","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":53,"pinY":51},{"text":"VII facial","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":54,"pinY":61},{"text":"X vago","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":55,"pinY":75},{"text":"XII hipogloso","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":56,"pinY":82}]'::jsonb,
   false, 12, 1, 60
 ),
 (
   'cf18aa86-038d-3f6e-cbf5-7ffe0b246fe2',
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'dnd',
-  'Relaciona las divisiones del nervio trigemino.',
-  '[{"text":"Division oftalmica V1","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png","pinX":70,"pinY":22},{"text":"Division maxilar V2","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png","pinX":70,"pinY":31},{"text":"Division mandibular V3","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png","pinX":70,"pinY":41},{"text":"Ganglio trigemino","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png","pinX":60,"pinY":20},{"text":"Ramas motoras de V3","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png","pinX":67,"pinY":72}]'::jsonb,
+  'Relaciona las divisiones del nervio trigémino.',
+  '[{"text":"División oftalmica V1","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png","pinX":70,"pinY":22},{"text":"División maxilar V2","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png","pinX":70,"pinY":31},{"text":"División mandibular V3","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png","pinX":70,"pinY":41},{"text":"Ganglio trigémino","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png","pinX":60,"pinY":20},{"text":"Ramas motoras de V3","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_trigemino.png","pinX":67,"pinY":72}]'::jsonb,
   false, 13, 1, 60
 ),
 (
@@ -151,7 +151,7 @@ insert into public.evaluacion_preguntas (
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'dnd',
   'Relaciona las cinco ramas terminales del nervio facial.',
-  '[{"text":"Temporal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png","pinX":59,"pinY":72},{"text":"Cigomatico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png","pinX":58,"pinY":77},{"text":"Bucal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png","pinX":56,"pinY":83},{"text":"Mandibular","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png","pinX":58,"pinY":89},{"text":"Cervical","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png","pinX":60,"pinY":94}]'::jsonb,
+  '[{"text":"Temporal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png","pinX":59,"pinY":72},{"text":"Cigomático","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png","pinX":58,"pinY":77},{"text":"Bucal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png","pinX":56,"pinY":83},{"text":"Mandibular","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png","pinX":58,"pinY":89},{"text":"Cervical","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_facial.png","pinX":60,"pinY":94}]'::jsonb,
   false, 14, 1, 60
 ),
 (
@@ -159,7 +159,7 @@ insert into public.evaluacion_preguntas (
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'dnd',
   'Relaciona destinos o referencias del nervio vago.',
-  '[{"text":"Agujero yugular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png","pinX":67,"pinY":22},{"text":"Nervio laringeo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png","pinX":69,"pinY":36},{"text":"Corazon","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png","pinX":57,"pinY":56},{"text":"Estomago","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png","pinX":49,"pinY":78},{"text":"Intestino delgado","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png","pinX":72,"pinY":86}]'::jsonb,
+  '[{"text":"Agujero yugular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png","pinX":67,"pinY":22},{"text":"Nervio laringeo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png","pinX":69,"pinY":36},{"text":"Corazón","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png","pinX":57,"pinY":56},{"text":"Estomago","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png","pinX":49,"pinY":78},{"text":"Intestino delgado","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_vago.png","pinX":72,"pinY":86}]'::jsonb,
   false, 15, 1, 60
 ),
 (
@@ -175,15 +175,15 @@ insert into public.evaluacion_preguntas (
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'dnd',
   'Relaciona estructuras de los nervios accesorio e hipogloso.',
-  '[{"text":"Nervio accesorio XI","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png","pinX":61,"pinY":22},{"text":"Musculo esternocleidomastoideo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png","pinX":64,"pinY":36},{"text":"Trapecio","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png","pinX":64,"pinY":44},{"text":"Canal hipogloso","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png","pinX":54,"pinY":78},{"text":"Nervio hipogloso XII","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png","pinX":55,"pinY":92}]'::jsonb,
+  '[{"text":"Nervio accesorio XI","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png","pinX":61,"pinY":22},{"text":"Músculo esternocleidomastoideo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png","pinX":64,"pinY":36},{"text":"Trapecio","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png","pinX":64,"pinY":44},{"text":"Canal hipogloso","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png","pinX":54,"pinY":78},{"text":"Nervio hipogloso XII","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_accesorio_hipogloso.png","pinX":55,"pinY":92}]'::jsonb,
   false, 17, 1, 60
 ),
 (
   '9b73b84f-0b16-c41c-4c7d-9f25bc6d7a6e',
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'dnd',
-  'Relaciona nervios de audicion, deglucion y salivacion.',
-  '[{"text":"Nervio auditivo VIII","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png","pinX":78,"pinY":26},{"text":"Caracol","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png","pinX":75,"pinY":38},{"text":"Vestibulo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png","pinX":75,"pinY":43},{"text":"Nervio glosofaringeo IX","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png","pinX":82,"pinY":77},{"text":"Seno carotideo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png","pinX":83,"pinY":91}]'::jsonb,
+  'Relaciona nervios de audición, deglución y salivación.',
+  '[{"text":"Nervio auditivo VIII","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png","pinX":78,"pinY":26},{"text":"Caracol","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png","pinX":75,"pinY":38},{"text":"Vestíbulo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png","pinX":75,"pinY":43},{"text":"Nervio glosofaringeo IX","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png","pinX":82,"pinY":77},{"text":"Seno carotideo","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_auditivo_glosofaringeo.png","pinX":83,"pinY":91}]'::jsonb,
   false, 18, 1, 60
 ),
 (
@@ -191,7 +191,7 @@ insert into public.evaluacion_preguntas (
   'e861bbdc-c7a2-e11e-5797-1ccd25784835',
   'dnd',
   'Relaciona numeros romanos con los pares craneales destacados.',
-  '[{"text":"II optico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":50,"pinY":31},{"text":"V trigemino","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":54,"pinY":50},{"text":"VII facial","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":55,"pinY":61},{"text":"IX glosofaringeo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":55,"pinY":70},{"text":"X vago","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":56,"pinY":75},{"text":"XI accesorio","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":57,"pinY":88}]'::jsonb,
+  '[{"text":"II óptico","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":50,"pinY":31},{"text":"V trigémino","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":54,"pinY":50},{"text":"VII facial","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":55,"pinY":61},{"text":"IX glosofaringeo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":55,"pinY":70},{"text":"X vago","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":56,"pinY":75},{"text":"XI accesorio","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo14-pares-craneales/pc_pares_craneales_base.png","pinX":57,"pinY":88}]'::jsonb,
   false, 19, 1, 60
 );
 
@@ -229,23 +229,23 @@ insert into public.evaluacion_preguntas (
   'ca933b94-207b-b98e-a6ba-afaab8b2ae7e',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'mc',
-  'La comparacion mostrada indica que la ruta autonoma eferente utiliza:',
-  '[{"text":"Dos neuronas y un ganglio neurovegetativo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"Una sola motoneurona somatica","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"Solo fibras sensitivas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"Solo musculo esqueletico","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"}]'::jsonb,
+  'La comparación mostrada indica que la ruta autónoma eferente utiliza:',
+  '[{"text":"Dos neuronas y un ganglio neurovegetativo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"Una sola motoneurona somática","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"Solo fibras sensitivas","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"Solo músculo esquelético","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
   '8db1a4ad-a2c7-bb54-9250-9f9291ebe215',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'mc',
-  'La division simpatica del sistema nervioso autonomo se describe como:',
-  '[{"text":"Toracolumbar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Craneosacra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Solo cortical","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Exclusivamente somatica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"}]'::jsonb,
+  'La división simpática del sistema nervioso autónomo se describe como:',
+  '[{"text":"Toracolumbar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Craneosacra","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Solo cortical","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Exclusivamente somática","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   '304b15f0-efe9-cc8f-fd11-fc3bd432ed1a',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'mc',
-  'La division parasimpatica se reconoce por su salida:',
+  'La división parasimpática se reconoce por su salida:',
   '[{"text":"Craneosacra","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Toracolumbar","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Solo cervical","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Solo lumbar","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"}]'::jsonb,
   false, 2, 1, 45
 ),
@@ -253,7 +253,7 @@ insert into public.evaluacion_preguntas (
   'a5c11311-10b0-8785-3b45-dd69a208a0c4',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'mc',
-  'En el esquema simpatico, las fibras posganglionares se muestran principalmente en color:',
+  'En el esquema simpático, las fibras posganglionares se muestran principalmente en color:',
   '[{"text":"Rojo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Azul","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Morado","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Negro","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"}]'::jsonb,
   false, 3, 1, 45
 ),
@@ -261,31 +261,31 @@ insert into public.evaluacion_preguntas (
   'a6a0ed9b-16ca-cd28-cfe2-b4f3b5ad322c',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'mc',
-  'La figura de la cadena simpatica muestra que las fibras preganglionares pueden entrar mediante:',
-  '[{"text":"Rama comunicante blanca","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png"},{"text":"Nervio optico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png"},{"text":"Conducto auditivo interno","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png"},{"text":"Canal hipogloso","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png"}]'::jsonb,
+  'La figura de la cadena simpática muestra que las fibras preganglionares pueden entrar mediante:',
+  '[{"text":"Rama comunicante blanca","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png"},{"text":"Nervio óptico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png"},{"text":"Conducto auditivo interno","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png"},{"text":"Canal hipogloso","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png"}]'::jsonb,
   false, 4, 1, 45
 ),
 (
   'ba7bf25a-069f-b4de-f95a-59ddfc5068a1',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'mc',
-  'En los componentes abdominopelvicos simpaticos, la glandula suprarrenal destacada participa por su:',
-  '[{"text":"Medula suprarrenal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png"},{"text":"Corteza visual","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png"},{"text":"Retina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png"},{"text":"Vestibulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png"}]'::jsonb,
+  'En los componentes abdominopelvicos simpaticos, la glándula suprarrenal destacada participa por su:',
+  '[{"text":"Médula suprarrenal","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png"},{"text":"Corteza visual","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png"},{"text":"Retina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png"},{"text":"Vestíbulo","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
   '1d8af791-efc6-42cc-e524-69a3cf07536e',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'mc',
-  'En el parasimpatico general, que par craneal aporta la mayor distribucion hacia torax y abdomen?',
-  '[{"text":"Nervio vago X","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Nervio olfatorio I","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Nervio optico II","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Nervio accesorio XI","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"}]'::jsonb,
+  'En el parasimpático general, que par craneal aporta la mayor distribución hacia torax y abdomen?',
+  '[{"text":"Nervio vago X","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Nervio olfatorio I","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Nervio óptico II","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Nervio accesorio XI","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
   '26b464bf-6b04-3f81-dd44-238d2f10eae4',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'mc',
-  'En el esquema de neurotransmisores, la fibra adrenergica simpatica posganglionar libera sobre todo:',
+  'En el esquema de neurotransmisores, la fibra adrenérgica simpática posganglionar libera sobre todo:',
   '[{"text":"Norepinefrina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"},{"text":"Dopamina retinal","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"},{"text":"Melatonina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"},{"text":"Glicina muscular","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"}]'::jsonb,
   false, 7, 1, 45
 ),
@@ -293,8 +293,8 @@ insert into public.evaluacion_preguntas (
   '6b6b0ef6-235b-f888-19f9-33a65a9819ef',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'ms',
-  'Selecciona efectos tipicos de activacion simpatica mostrados o inferidos por las figuras.',
-  '[{"text":"Aumento de actividad cardiaca","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Broncodilatacion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Movilizacion de energia","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Disminucion marcada de alerta","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Constriccion pupilar parasimpatica","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"}]'::jsonb,
+  'Selecciona efectos típicos de activación simpática mostrados o inferidos por las figuras.',
+  '[{"text":"Aumento de actividad cardíaca","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Broncodilatación","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Movilización de energía","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Disminución marcada de alerta","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"},{"text":"Constricción pupilar parasimpática","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png"}]'::jsonb,
   true, 8, 1, 45
 ),
 (
@@ -302,7 +302,7 @@ insert into public.evaluacion_preguntas (
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'ms',
   'Selecciona efectos parasimpaticos compatibles con el esquema.',
-  '[{"text":"Favorecer digestion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Estimular miccion","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Conservar energia","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Dilatar pupila por via adrenergica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Aumentar tono simpatico general","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"}]'::jsonb,
+  '[{"text":"Favorecer digestion","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Estimular micción","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Conservar energía","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Dilatar pupila por vía adrenérgica","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"},{"text":"Aumentar tono simpático general","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png"}]'::jsonb,
   true, 9, 1, 45
 ),
 (
@@ -310,39 +310,39 @@ insert into public.evaluacion_preguntas (
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'ms',
   'En las rutas autonomas, que afirmaciones son correctas?',
-  '[{"text":"La fibra preganglionar sale del SNC","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"Existe sinapsis en un ganglio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"La fibra posganglionar llega al efector visceral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"Siempre hay una sola neurona desde SNC al efector","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"El efector exclusivo es musculo esqueletico","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"}]'::jsonb,
+  '[{"text":"La fibra preganglionar sale del SNC","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"Existe sinapsis en un ganglio","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"La fibra posganglionar llega al efector visceral","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"Siempre hay una sola neurona desde SNC al efector","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"},{"text":"El efector exclusivo es músculo esquelético","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png"}]'::jsonb,
   true, 10, 1, 45
 ),
 (
   '9e74681a-59e1-0961-6639-3af523b97573',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'ms',
-  'Segun el esquema de neurotransmisores, cuales receptores o transmisores corresponden al ANS?',
-  '[{"text":"ACh","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"},{"text":"NE","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"},{"text":"Receptor nicotinico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"},{"text":"Receptor muscarinico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"},{"text":"Rodopsina","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"}]'::jsonb,
+  'Según el esquema de neurotransmisores, cuáles receptores o transmisores corresponden al ANS?',
+  '[{"text":"ACh","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"},{"text":"NE","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"},{"text":"Receptor nicotínico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"},{"text":"Receptor muscarínico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"},{"text":"Rodopsina","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png"}]'::jsonb,
   true, 11, 1, 45
 ),
 (
   'e0c914e1-4432-67e0-e910-5fcca71a5624',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'dnd',
-  'Relaciona destinos principales de la division simpatica.',
-  '[{"text":"Corazon","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":72,"pinY":36},{"text":"Pulmon","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":75,"pinY":49},{"text":"Ganglio celiaco","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":50,"pinY":51},{"text":"Intestino delgado","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":74,"pinY":70},{"text":"Vejiga urinaria","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":72,"pinY":93},{"text":"Cadena simpatica","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":24,"pinY":72}]'::jsonb,
+  'Relaciona destinos principales de la división simpática.',
+  '[{"text":"Corazón","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":72,"pinY":36},{"text":"Pulmón","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":75,"pinY":49},{"text":"Ganglio celiaco","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":50,"pinY":51},{"text":"Intestino delgado","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":74,"pinY":70},{"text":"Vejiga urinaria","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":72,"pinY":93},{"text":"Cadena simpática","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_simpatico_general.png","pinX":24,"pinY":72}]'::jsonb,
   false, 12, 1, 60
 ),
 (
   '793981df-e921-5793-dad3-a95a97fa0a3c',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'dnd',
-  'Relaciona destinos principales de la division parasimpatica.',
-  '[{"text":"Nervio vago X","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":35,"pinY":35},{"text":"Plexo cardiaco","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":40,"pinY":40},{"text":"Estomago","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":74,"pinY":55},{"text":"Colon descendente","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":76,"pinY":73},{"text":"Nervios pelvicos","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":43,"pinY":83},{"text":"Vejiga urinaria","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":70,"pinY":91}]'::jsonb,
+  'Relaciona destinos principales de la división parasimpática.',
+  '[{"text":"Nervio vago X","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":35,"pinY":35},{"text":"Plexo cardíaco","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":40,"pinY":40},{"text":"Estomago","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":74,"pinY":55},{"text":"Colon descendente","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":76,"pinY":73},{"text":"Nervios pelvicos","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":43,"pinY":83},{"text":"Vejiga urinaria","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_parasimpatico_general.png","pinX":70,"pinY":91}]'::jsonb,
   false, 13, 1, 60
 ),
 (
   '1003be2a-a96a-1a32-b283-be54738836ee',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'dnd',
-  'Relaciona estructuras de la cadena simpatica.',
-  '[{"text":"Fibra simpatica preganglionar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":69,"pinY":35},{"text":"Fibra simpatica posganglionar","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":73,"pinY":43},{"text":"Rama blanca","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":67,"pinY":57},{"text":"Rama gris","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":72,"pinY":57},{"text":"Tronco simpatico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":80,"pinY":62},{"text":"Nervio esplacnico","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":36,"pinY":68}]'::jsonb,
+  'Relaciona estructuras de la cadena simpática.',
+  '[{"text":"Fibra simpática preganglionar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":69,"pinY":35},{"text":"Fibra simpática posganglionar","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":73,"pinY":43},{"text":"Rama blanca","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":67,"pinY":57},{"text":"Rama gris","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":72,"pinY":57},{"text":"Tronco simpático","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":80,"pinY":62},{"text":"Nervio esplácnico","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_cadena_simpatica.png","pinX":36,"pinY":68}]'::jsonb,
   false, 14, 1, 60
 ),
 (
@@ -350,31 +350,31 @@ insert into public.evaluacion_preguntas (
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'dnd',
   'Relaciona neurotransmisores y receptores autonomos.',
-  '[{"text":"ACh preganglionar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png","pinX":30,"pinY":17},{"text":"Receptor nicotinico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png","pinX":57,"pinY":13},{"text":"NE posganglionar","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png","pinX":70,"pinY":54},{"text":"Receptor adrenergico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png","pinX":82,"pinY":61},{"text":"Receptor muscarinico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png","pinX":82,"pinY":91}]'::jsonb,
+  '[{"text":"ACh preganglionar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png","pinX":30,"pinY":17},{"text":"Receptor nicotínico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png","pinX":57,"pinY":13},{"text":"NE posganglionar","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png","pinX":70,"pinY":54},{"text":"Receptor adrenérgico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png","pinX":82,"pinY":61},{"text":"Receptor muscarínico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_neurotransmisores.png","pinX":82,"pinY":91}]'::jsonb,
   false, 15, 1, 60
 ),
 (
   'fe7fde5a-79c4-146e-048b-79a6e4e8c42d',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'dnd',
-  'Relaciona los componentes de la inervacion dual del iris.',
-  '[{"text":"Ganglio cervical superior","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":36,"pinY":28},{"text":"Ganglio ciliar","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":70,"pinY":38},{"text":"Efecto simpatico","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":24,"pinY":76},{"text":"Efecto parasimpatico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":83,"pinY":76},{"text":"Pupila dilatada","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":32,"pinY":91},{"text":"Pupila constrenida","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":80,"pinY":91}]'::jsonb,
+  'Relaciona los componentes de la inervación dual del iris.',
+  '[{"text":"Ganglio cervical superior","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":36,"pinY":28},{"text":"Ganglio ciliar","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":70,"pinY":38},{"text":"Efecto simpático","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":24,"pinY":76},{"text":"Efecto parasimpático","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":83,"pinY":76},{"text":"Pupila dilatada","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":32,"pinY":91},{"text":"Pupila constrenida","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_iris_dual.png","pinX":80,"pinY":91}]'::jsonb,
   false, 16, 1, 60
 ),
 (
   '6f48a609-4dc7-4bdc-5921-7e4cc62cea31',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'dnd',
-  'Relaciona los pasos del arco reflejo autonomo barorreceptor.',
-  '[{"text":"Barorreceptores carotideos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_reflejo_barorreceptor.png","pinX":67,"pinY":38},{"text":"Nervio glosofaringeo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_reflejo_barorreceptor.png","pinX":67,"pinY":26},{"text":"Nervio vago","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_reflejo_barorreceptor.png","pinX":19,"pinY":48},{"text":"Ganglio terminal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_reflejo_barorreceptor.png","pinX":34,"pinY":58},{"text":"Disminuye ritmo cardiaco","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_reflejo_barorreceptor.png","pinX":22,"pinY":78}]'::jsonb,
+  'Relaciona los pasos del arco reflejo autónomo barorreceptor.',
+  '[{"text":"Barorreceptores carotideos","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_reflejo_barorreceptor.png","pinX":67,"pinY":38},{"text":"Nervio glosofaringeo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_reflejo_barorreceptor.png","pinX":67,"pinY":26},{"text":"Nervio vago","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_reflejo_barorreceptor.png","pinX":19,"pinY":48},{"text":"Ganglio terminal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_reflejo_barorreceptor.png","pinX":34,"pinY":58},{"text":"Disminuye ritmo cardíaco","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_reflejo_barorreceptor.png","pinX":22,"pinY":78}]'::jsonb,
   false, 17, 1, 60
 ),
 (
   '75b4026a-892f-7919-03fb-2c801bf53d89',
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'dnd',
-  'Relaciona la ruta somatica y la ruta autonoma de salida.',
-  '[{"text":"Ruta somatica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png","pinX":17,"pinY":18},{"text":"Fibra mielinica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png","pinX":54,"pinY":19},{"text":"Ganglio neurovegetativo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png","pinX":53,"pinY":72},{"text":"Fibra posganglionar amielinica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png","pinX":65,"pinY":62},{"text":"Efector visceral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png","pinX":88,"pinY":65}]'::jsonb,
+  'Relaciona la ruta somática y la ruta autónoma de salida.',
+  '[{"text":"Ruta somática","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png","pinX":17,"pinY":18},{"text":"Fibra mielínica","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png","pinX":54,"pinY":19},{"text":"Ganglio neurovegetativo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png","pinX":53,"pinY":72},{"text":"Fibra posganglionar amielínica","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png","pinX":65,"pinY":62},{"text":"Efector visceral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_rutas_eferentes.png","pinX":88,"pinY":65}]'::jsonb,
   false, 18, 1, 60
 ),
 (
@@ -382,7 +382,7 @@ insert into public.evaluacion_preguntas (
   '4a2549a4-e070-34c8-2513-5cdada997302',
   'dnd',
   'Relaciona componentes abdominopelvicos simpaticos.',
-  '[{"text":"Ganglio celiaco","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":26,"pinY":34},{"text":"Glandula suprarrenal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":27,"pinY":42},{"text":"Plexo renal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":27,"pinY":49},{"text":"Plexo aortico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":28,"pinY":64},{"text":"Ganglio mesenterico superior","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":74,"pinY":43},{"text":"Ganglio mesenterico inferior","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":73,"pinY":58}]'::jsonb,
+  '[{"text":"Ganglio celiaco","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":26,"pinY":34},{"text":"Glándula suprarrenal","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":27,"pinY":42},{"text":"Plexo renal","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":27,"pinY":49},{"text":"Plexo aortico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":28,"pinY":64},{"text":"Ganglio mesenterico superior","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":74,"pinY":43},{"text":"Ganglio mesenterico inferior","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-sistema-nervioso-autonomo/sna_abdominopelvico.png","pinX":73,"pinY":58}]'::jsonb,
   false, 19, 1, 60
 );
 
@@ -421,22 +421,22 @@ insert into public.evaluacion_preguntas (
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'mc',
   'En el arco barorreceptor mostrado, los receptores detectan principalmente:',
-  '[{"text":"Aumento de presion arterial","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Disminucion de luz ambiental","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Vibracion sonora","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Olor intenso","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"}]'::jsonb,
+  '[{"text":"Aumento de presión arterial","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Disminución de luz ambiental","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Vibración sonora","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Olor intenso","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"}]'::jsonb,
   false, 0, 1, 45
 ),
 (
   '958acb34-a972-613f-a7f3-96d2f04685cb',
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'mc',
-  'En la figura, la senal aferente desde barorreceptores carotideos viaja al bulbo por el nervio:',
-  '[{"text":"Glosofaringeo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Optico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Hipogloso","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Accesorio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"}]'::jsonb,
+  'En la figura, la señal aferente desde barorreceptores carotideos viaja al bulbo por el nervio:',
+  '[{"text":"Glosofaringeo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Óptico","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Hipogloso","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Accesorio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"}]'::jsonb,
   false, 1, 1, 45
 ),
 (
   'c1198823-d8f2-42f0-c430-320494ea9e39',
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'mc',
-  'La respuesta eferente que reduce el ritmo cardiaco viaja principalmente por:',
+  'La respuesta eferente que reduce el ritmo cardíaco viaja principalmente por:',
   '[{"text":"Nervio vago","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Nervio olfatorio","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Nervio vestibulococlear","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Nervio accesorio","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"}]'::jsonb,
   false, 2, 1, 45
 ),
@@ -444,15 +444,15 @@ insert into public.evaluacion_preguntas (
   '09e7bb06-f1bf-9911-c3ae-cbb5c978942a',
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'mc',
-  'Un reflejo visceral autonomo termina sobre todo en:',
-  '[{"text":"Musculo liso, cardiaco o glandulas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Solo musculo esqueletico voluntario","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Solo retina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Solo hueso cortical","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"}]'::jsonb,
+  'Un reflejo visceral autónomo termina sobre todo en:',
+  '[{"text":"Músculo liso, cardíaco o glándulas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Solo músculo esquelético voluntario","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Solo retina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Solo hueso cortical","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"}]'::jsonb,
   false, 3, 1, 45
 ),
 (
   '4fd4ae6a-7da2-1c55-7515-2646021116dd',
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'mc',
-  'En la inervacion dual del iris, el efecto simpatico produce:',
+  'En la inervación dual del iris, el efecto simpático produce:',
   '[{"text":"Pupila dilatada","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Pupila constrenida","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Perdida del olfato","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Cierre de cuerdas vocales","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"}]'::jsonb,
   false, 4, 1, 45
 ),
@@ -460,8 +460,8 @@ insert into public.evaluacion_preguntas (
   '9929fba2-4b94-3c33-23ef-2f0bf2d234cc',
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'mc',
-  'En la misma figura, el efecto parasimpatico sobre el iris produce:',
-  '[{"text":"Pupila constrenida","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Pupila dilatada","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Taquicardia maxima","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Broncodilatacion pura","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"}]'::jsonb,
+  'En la misma figura, el efecto parasimpático sobre el iris produce:',
+  '[{"text":"Pupila constrenida","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Pupila dilatada","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Taquicardia maxima","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Broncodilatación pura","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"}]'::jsonb,
   false, 5, 1, 45
 ),
 (
@@ -469,14 +469,14 @@ insert into public.evaluacion_preguntas (
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'mc',
   'El tono vasomotor mostrado depende principalmente de:',
-  '[{"text":"Actividad simpatica sobre musculo liso vascular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png"},{"text":"Actividad olfatoria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png"},{"text":"Nervio optico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png"},{"text":"Contraccion de musculo esqueletico voluntario","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png"}]'::jsonb,
+  '[{"text":"Actividad simpática sobre músculo liso vascular","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png"},{"text":"Actividad olfatoria","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png"},{"text":"Nervio óptico","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png"},{"text":"Contracción de músculo esquelético voluntario","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png"}]'::jsonb,
   false, 6, 1, 45
 ),
 (
   '368abb13-de2d-2db3-f302-7bf01dae7390',
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'mc',
-  'En el esquema de neurotransmisores, una fibra colinergica libera:',
+  'En el esquema de neurotransmisores, una fibra colinérgica libera:',
   '[{"text":"Acetilcolina","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png"},{"text":"Norepinefrina exclusivamente","correct":false,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png"},{"text":"Melanina","correct":false,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png"},{"text":"Hemoglobina","correct":false,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png"}]'::jsonb,
   false, 7, 1, 45
 ),
@@ -484,8 +484,8 @@ insert into public.evaluacion_preguntas (
   '8b1c5ee9-8a97-2d30-ba85-2206b0e6cdc5',
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'ms',
-  'Selecciona componentes del reflejo barorreceptor autonomo.',
-  '[{"text":"Barorreceptores","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Bulbo raquideo como centro integrador","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Nervio vago eferente","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Corazon como efector","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Retina como efector principal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"}]'::jsonb,
+  'Selecciona componentes del reflejo barorreceptor autónomo.',
+  '[{"text":"Barorreceptores","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Bulbo raquídeo como centro integrador","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Nervio vago eferente","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Corazón como efector","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"},{"text":"Retina como efector principal","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png"}]'::jsonb,
   true, 8, 1, 45
 ),
 (
@@ -493,23 +493,23 @@ insert into public.evaluacion_preguntas (
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'ms',
   'Selecciona ejemplos de respuestas viscerales autonomas.',
-  '[{"text":"Cambio de frecuencia cardiaca","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png"},{"text":"Cambio de tono vascular","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png"},{"text":"Secrecion glandular","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png"},{"text":"Motilidad intestinal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png"},{"text":"Movimiento voluntario del biceps","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png"}]'::jsonb,
+  '[{"text":"Cambio de frecuencia cardíaca","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png"},{"text":"Cambio de tono vascular","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png"},{"text":"Secreción glandular","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png"},{"text":"Motilidad intestinal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png"},{"text":"Movimiento voluntario del biceps","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png"}]'::jsonb,
   true, 9, 1, 45
 ),
 (
   'c99b3150-e13f-66ed-3f43-b3527890df2d',
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'ms',
-  'En la inervacion dual, que organos o tejidos pueden recibir acciones antagonicas?',
-  '[{"text":"Iris","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Corazon","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Tubo digestivo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Vasos sanguineos con tono simpatico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Cristalino sin inervacion","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"}]'::jsonb,
+  'En la inervación dual, que órganos o tejidos pueden recibir acciones antagónicas?',
+  '[{"text":"Iris","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Corazón","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Tubo digestivo","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Vasos sanguineos con tono simpático","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"},{"text":"Cristalino sin inervación","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png"}]'::jsonb,
   true, 10, 1, 45
 ),
 (
   'b267b01d-2265-254e-2c9e-d477d8f141a1',
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'ms',
-  'En los reflejos viscerales, que elementos pueden formar parte de la via eferente?',
-  '[{"text":"Neurona preganglionar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Ganglio autonomo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Neurona posganglionar","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Efector visceral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Receptor olfatorio como unico efector","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"}]'::jsonb,
+  'En los reflejos viscerales, que elementos pueden formar parte de la vía eferente?',
+  '[{"text":"Neurona preganglionar","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Ganglio autónomo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Neurona posganglionar","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Efector visceral","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"},{"text":"Receptor olfatorio como único efector","correct":false,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png"}]'::jsonb,
   true, 11, 1, 45
 ),
 (
@@ -517,15 +517,15 @@ insert into public.evaluacion_preguntas (
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'dnd',
   'Ordena y relaciona el arco reflejo barorreceptor.',
-  '[{"text":"1 Barorreceptores","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":68,"pinY":39},{"text":"2 Nervio glosofaringeo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":68,"pinY":26},{"text":"3 Nervio vago","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":20,"pinY":48},{"text":"Ganglio terminal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":34,"pinY":58},{"text":"4 Disminuye ritmo cardiaco","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":23,"pinY":78}]'::jsonb,
+  '[{"text":"1 Barorreceptores","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":68,"pinY":39},{"text":"2 Nervio glosofaringeo","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":68,"pinY":26},{"text":"3 Nervio vago","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":20,"pinY":48},{"text":"Ganglio terminal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":34,"pinY":58},{"text":"4 Disminuye ritmo cardíaco","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":23,"pinY":78}]'::jsonb,
   false, 12, 1, 60
 ),
 (
   '87f5ff39-fc87-e795-f199-02de0d6a1a1d',
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'dnd',
-  'Relaciona la ruta eferente autonoma frente a la somatica.',
-  '[{"text":"Inervacion somatica","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png","pinX":17,"pinY":18},{"text":"Efector somatico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png","pinX":88,"pinY":20},{"text":"Inervacion autonoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png","pinX":17,"pinY":58},{"text":"Ganglio neurovegetativo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png","pinX":52,"pinY":73},{"text":"Efector visceral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png","pinX":88,"pinY":65}]'::jsonb,
+  'Relaciona la ruta eferente autónoma frente a la somática.',
+  '[{"text":"Inervación somática","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png","pinX":17,"pinY":18},{"text":"Efector somático","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png","pinX":88,"pinY":20},{"text":"Inervación autónoma","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png","pinX":17,"pinY":58},{"text":"Ganglio neurovegetativo","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png","pinX":52,"pinY":73},{"text":"Efector visceral","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_rutas_eferentes.png","pinX":88,"pinY":65}]'::jsonb,
   false, 13, 1, 60
 ),
 (
@@ -533,7 +533,7 @@ insert into public.evaluacion_preguntas (
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'dnd',
   'Relaciona destinos viscerales simpaticos.',
-  '[{"text":"Ojo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":76,"pinY":12},{"text":"Corazon","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":72,"pinY":36},{"text":"Pulmon","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":75,"pinY":49},{"text":"Higado y vesicula biliar","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":75,"pinY":58},{"text":"Intestino grueso","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":76,"pinY":74},{"text":"Medula suprarrenal","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":75,"pinY":82}]'::jsonb,
+  '[{"text":"Ojo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":76,"pinY":12},{"text":"Corazón","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":72,"pinY":36},{"text":"Pulmón","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":75,"pinY":49},{"text":"Higado y vesícula biliar","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":75,"pinY":58},{"text":"Intestino grueso","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":76,"pinY":74},{"text":"Médula suprarrenal","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_simpatico_general.png","pinX":75,"pinY":82}]'::jsonb,
   false, 14, 1, 60
 ),
 (
@@ -541,14 +541,14 @@ insert into public.evaluacion_preguntas (
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'dnd',
   'Relaciona destinos viscerales parasimpaticos.',
-  '[{"text":"Ojo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":76,"pinY":14},{"text":"Corazon","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":72,"pinY":35},{"text":"Pulmones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":73,"pinY":44},{"text":"Estomago","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":75,"pinY":55},{"text":"Colon descendente","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":76,"pinY":72},{"text":"Vejiga urinaria","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":70,"pinY":91}]'::jsonb,
+  '[{"text":"Ojo","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":76,"pinY":14},{"text":"Corazón","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":72,"pinY":35},{"text":"Pulmones","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":73,"pinY":44},{"text":"Estomago","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":75,"pinY":55},{"text":"Colon descendente","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":76,"pinY":72},{"text":"Vejiga urinaria","correct":true,"color":"ac-green","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_parasimpatico_general.png","pinX":70,"pinY":91}]'::jsonb,
   false, 15, 1, 60
 ),
 (
   '2392e1a0-a198-a1fb-d7aa-dcd6ec4aedf4',
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'dnd',
-  'Relaciona los efectos de la inervacion dual del iris.',
+  'Relaciona los efectos de la inervación dual del iris.',
   '[{"text":"Fibras simpaticas","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png","pinX":70,"pinY":24},{"text":"Fibras parasimpaticas III","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png","pinX":67,"pinY":13},{"text":"Ganglio ciliar","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png","pinX":70,"pinY":38},{"text":"Pupila dilatada","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png","pinX":32,"pinY":91},{"text":"Pupila constrenida","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_iris_dual.png","pinX":80,"pinY":91}]'::jsonb,
   false, 16, 1, 60
 ),
@@ -557,7 +557,7 @@ insert into public.evaluacion_preguntas (
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'dnd',
   'Relaciona los cambios de tono vasomotor.',
-  '[{"text":"Tono simpatico fuerte","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png","pinX":78,"pinY":20},{"text":"Contraccion de musculo liso","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png","pinX":78,"pinY":34},{"text":"Vasoconstriccion","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png","pinX":78,"pinY":46},{"text":"Tono simpatico debil","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png","pinX":78,"pinY":61},{"text":"Vasodilatacion","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png","pinX":78,"pinY":78}]'::jsonb,
+  '[{"text":"Tono simpático fuerte","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png","pinX":78,"pinY":20},{"text":"Contracción de músculo liso","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png","pinX":78,"pinY":34},{"text":"Vasoconstricción","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png","pinX":78,"pinY":46},{"text":"Tono simpático debil","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png","pinX":78,"pinY":61},{"text":"Vasodilatación","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_tono_vasomotor.png","pinX":78,"pinY":78}]'::jsonb,
   false, 17, 1, 60
 ),
 (
@@ -565,7 +565,7 @@ insert into public.evaluacion_preguntas (
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'dnd',
   'Relaciona transmisores y receptores de reflejos autonomos.',
-  '[{"text":"ACh","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png","pinX":31,"pinY":16},{"text":"Receptor nicotinico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png","pinX":57,"pinY":13},{"text":"NE","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png","pinX":71,"pinY":54},{"text":"Receptor adrenergico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png","pinX":82,"pinY":61},{"text":"Receptor muscarinico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png","pinX":82,"pinY":91}]'::jsonb,
+  '[{"text":"ACh","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png","pinX":31,"pinY":16},{"text":"Receptor nicotínico","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png","pinX":57,"pinY":13},{"text":"NE","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png","pinX":71,"pinY":54},{"text":"Receptor adrenérgico","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png","pinX":82,"pinY":61},{"text":"Receptor muscarínico","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_neurotransmisores.png","pinX":82,"pinY":91}]'::jsonb,
   false, 18, 1, 60
 ),
 (
@@ -573,7 +573,7 @@ insert into public.evaluacion_preguntas (
   '9964c761-0495-41de-2a05-f1366ed220f7',
   'dnd',
   'Relaciona los elementos generales de un reflejo visceral.',
-  '[{"text":"Receptor visceral","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":68,"pinY":39},{"text":"Via aferente","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":61,"pinY":29},{"text":"Centro integrador bulbar","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":40,"pinY":21},{"text":"Via eferente vagal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":19,"pinY":48},{"text":"Efector cardiaco","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":47,"pinY":68}]'::jsonb,
+  '[{"text":"Receptor visceral","correct":true,"color":"ac-blue","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":68,"pinY":39},{"text":"Vía aferente","correct":true,"color":"ac-teal","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":61,"pinY":29},{"text":"Centro integrador bulbar","correct":true,"color":"ac-yellow","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":40,"pinY":21},{"text":"Vía eferente vagal","correct":true,"color":"ac-pink","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":19,"pinY":48},{"text":"Efector cardíaco","correct":true,"color":"ac-purple","pregunta_imagen":"/juegos/assets/capitulo15-reflejos-viscerales/rv_reflejo_barorreceptor.png","pinX":47,"pinY":68}]'::jsonb,
   false, 19, 1, 60
 );
 

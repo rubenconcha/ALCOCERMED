@@ -1,15 +1,16 @@
-const CACHE_NAME = 'alcocermed-juegos-v99';
+const CACHE_NAME = 'alcocermed-juegos-v100';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './styles.css',
   './styles.css?v=80',
   './app.js',
-  './app.js?v=94',
+  './app.js?v=95',
+  './quiz-copy.js?v=1',
   './premium-game-images.js?v=6',
   './game-access.js?v=2',
   './acceso-noche.js?v=1',
-  './relacionar.js?v=1',
+  './relacionar.js?v=2',
   './encefalo-native-data.js?v=1',
   './sentidos-imagenes.js?v=1',
   './tejido-nervioso-imagenes.js?v=5',

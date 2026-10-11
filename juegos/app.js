@@ -4503,7 +4503,7 @@ function renderQuizQuestion() {
     var questionCard = document.getElementById('quiz-question-card');
     if (questionCard) {
         var premiumQuestion = window.premiumGameImages && window.premiumGameImages[pregunta.id];
-        questionCard.innerHTML = '<h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">' + escapeHtml((premiumQuestion && premiumQuestion.prompt) || pregunta.texto || '') + '</h2>';
+        questionCard.innerHTML = '<h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">' + escapeHtml(formatQuizCopy((premiumQuestion && premiumQuestion.prompt) || pregunta.texto || '', 'question')) + '</h2>';
     }
     renderQuizQuestionImageWrap(pregunta, tipo);
 
@@ -4635,7 +4635,7 @@ function renderQuizQuestion() {
         for (var j = 0; j < opciones.length; j++) {
             var bgColor = optColors[j % optColors.length];
             html += '        <button class="quiz-opt-btn quiz-dnd-label-btn" id="dnd-label-' + j + '" data-idx="' + j + '" onclick="clickDndLabel(' + j + ')" style="--dnd-label-bg:' + bgColor + ';">' +
-                String.fromCharCode(65 + j) + '. ' + (opciones[j].text || '') + '</button>';
+                String.fromCharCode(65 + j) + '. ' + escapeHtml(formatQuizCopy(opciones[j].text || '', 'option')) + '</button>';
         }
         html += '      </div>';
         html += '      <button id="quiz-confirm-dnd" class="quiz-dnd-submit" onclick="confirmQuizDnd()" disabled>Enviar respuestas</button>';
@@ -4650,7 +4650,7 @@ function renderQuizQuestion() {
             html += '<button class="quiz-opt-btn" data-idx="' + i + '" onclick="toggleQuizMulti(' + i + ')" ' +
                 'style="padding:24px 20px;border:none;border-radius:16px;background:' + bgColor + ';color:#fff;text-align:center;' +
                 'font-size:1.2rem;font-weight:800;cursor:pointer;transition:transform .1s, filter .2s;box-shadow:inset 0 -6px 0 rgba(0,0,0,0.2), 0 4px 10px rgba(0,0,0,0.3);">' +
-                (opciones[i].text || '') + '</button>';
+                escapeHtml(formatQuizCopy(opciones[i].text || '', 'option')) + '</button>';
         }
         html += '<button id="quiz-confirm-multi" onclick="confirmQuizMulti()" style="grid-column: 1 / -1; margin-top:12px;padding:16px 24px;' +
             'background:#22C55E;color:#fff;border:none;border-radius:14px;font-weight:800;cursor:pointer;font-size:1.2rem;box-shadow:0 6px 0 #16A34A;">' +
@@ -4663,7 +4663,7 @@ function renderQuizQuestion() {
             html += '<button class="quiz-opt-btn" data-idx="' + j + '" onclick="confirmQuizAnswerInstant(' + j + ')" ' +
                 'style="padding:24px 20px;border:none;border-radius:16px;background:' + bgColor2 + ';color:#fff;text-align:center;' +
                 'font-size:1.2rem;font-weight:800;cursor:pointer;transition:transform .1s, filter .2s;box-shadow:inset 0 -6px 0 rgba(0,0,0,0.2), 0 4px 10px rgba(0,0,0,0.3);">' +
-                (opciones[j].text || '') + '</button>';
+                escapeHtml(formatQuizCopy(opciones[j].text || '', 'option')) + '</button>';
         }
     }
 
@@ -5115,7 +5115,8 @@ function showQuizResults() {
             
             rhtml += '<div style="background:var(--bg-card); border-left:6px solid '+color+'; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">';
             rhtml += '<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">';
-            rhtml += '<div style="font-weight:800; color:var(--text); flex:1; padding-right:16px; font-size:1.1rem;">' + (q+1) + '. ' + (pq.texto||'') + '</div>';
+            var premiumReview = window.premiumGameImages && window.premiumGameImages[pq.id];
+            rhtml += '<div style="font-weight:800; color:var(--text); flex:1; padding-right:16px; font-size:1.1rem;">' + (q+1) + '. ' + escapeHtml(formatQuizCopy((premiumReview && premiumReview.prompt) || pq.texto || '', 'question')) + '</div>';
             rhtml += '<div style="background:'+((isPoll||isOA)?'#F5F3FF':(ok?'#DCFCE7':'#FEE2E2'))+'; color:'+color+'; padding:6px 12px; border-radius:8px; font-weight:800; font-size:0.95rem; white-space:nowrap;"><i class="fas '+icon+'"></i> '+scoreText+'</div>';
             rhtml += '</div>';
 
@@ -5153,13 +5154,14 @@ function showQuizResults() {
                     var fontWeight = (isCorrect || isSelected) ? '700' : '500';
                     var icon2 = isPoll ? (isSelected ? '✓' : '') : (isCorrect ? '✓' : (isSelected ? '✗' : ''));
                     rhtml += '<div style="padding:10px 16px; border:2px solid '+optColor+'; background:'+bg+'; border-radius:8px; color:#334155; font-weight:'+fontWeight+'; display:flex; justify-content:space-between;">';
-                    rhtml += '<span>' + (opts[o].text||'') + '</span>';
+                    rhtml += '<span>' + escapeHtml(formatQuizCopy(opts[o].text||'', 'option')) + '</span>';
                     rhtml += '<span style="color:'+optColor+'; font-weight:900;">' + icon2 + '</span>';
                     rhtml += '</div>';
                 }
                 rhtml += '</div>';
             } else if (pq.tipo === 'dnd') {
-                var imgUrl = (pq.opciones && pq.opciones[0]) ? pq.opciones[0].pregunta_imagen : '';
+                var premiumReviewImage = window.premiumGameImages && window.premiumGameImages[pq.id];
+                var imgUrl = premiumReviewImage ? premiumReviewImage.src : ((pq.opciones && pq.opciones[0]) ? pq.opciones[0].pregunta_imagen : '');
                 rhtml += '<div style="margin-top:16px; display:flex; flex-direction:column; gap:12px; align-items:center;">';
                 rhtml += '  <img src="' + imgUrl + '" style="max-width:100%; max-height:220px; border-radius:8px; border:2px solid #E2E8F0;">';
                 rhtml += '  <div style="display:flex; flex-direction:column; gap:6px; width:100%;">';
@@ -5179,8 +5181,8 @@ function showQuizResults() {
                     var matchBorder = isCorrectMatch ? '#86EFAC' : '#FECACA';
                     var matchIcon = isCorrectMatch ? 'fa-check' : 'fa-times';
                     rhtml += '    <div style="padding:10px 16px; border:2px solid '+matchBorder+'; background:'+matchBg+'; border-radius:8px; color:#334155; display:flex; justify-content:space-between; align-items:center;">';
-                    rhtml += '      <span style="font-weight:700;">Parte ' + String.fromCharCode(65+o) + ' (' + (opts[o].text||'') + '):</span>';
-                    rhtml += '      <span style="color:'+matchColor+'; font-weight:800;"><i class="fas '+matchIcon+'"></i> Tu respuesta: ' + matchedText + '</span>';
+                    rhtml += '      <span style="font-weight:700;">Parte ' + String.fromCharCode(65+o) + ' (' + escapeHtml(formatQuizCopy(opts[o].text||'', 'option')) + '):</span>';
+                    rhtml += '      <span style="color:'+matchColor+'; font-weight:800;"><i class="fas '+matchIcon+'"></i> Tu respuesta: ' + escapeHtml(formatQuizCopy(matchedText, 'option')) + '</span>';
                     rhtml += '    </div>';
                 }
                 rhtml += '  </div>';
@@ -5206,7 +5208,7 @@ function showQuizResults() {
                 rhtml += '<div style="font-weight:700; color:#475569; font-size:0.8rem; margin-bottom:2px;">Tu respuesta:</div>';
                 rhtml += '<div style="font-weight:600; color:var(--text);background:var(--bg-card);padding:6px 10px;border-radius:6px;margin-bottom:8px">' + studentAns + '</div>';
                 rhtml += '<div style="font-weight:700; color:#059669; font-size:0.8rem; margin-bottom:2px;">✅ Respuesta correcta:</div>';
-                rhtml += '<div style="font-weight:700; color:var(--fb-correct-text,#059669);background:var(--fb-correct-bg,#F0FDF4);padding:6px 10px;border-radius:6px">' + (correctaFb || 'No especificada') + '</div>';
+                rhtml += '<div style="font-weight:700; color:var(--fb-correct-text,#059669);background:var(--fb-correct-bg,#F0FDF4);padding:6px 10px;border-radius:6px">' + escapeHtml(formatQuizCopy(correctaFb || 'No especificada', 'option')) + '</div>';
                 rhtml += '</div>';
             }
             if (pq.opciones && pq.opciones[0] && pq.opciones[0].explicacion) {
@@ -5814,7 +5816,8 @@ window.openReportDetail = function(evalId, userId) {
             
             html += '<div style="background:'+qBg+';border:2px solid '+qColor+'40;border-radius:16px;padding:20px;margin-bottom:16px;">';
             html += '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">';
-            html += '<div style="font-weight:800;color:#1E293B;font-size:1.05rem;line-height:1.4;flex:1;padding-right:12px;">' + (i+1) + '. ' + (q.texto||'') + '</div>';
+            var premiumReport = window.premiumGameImages && window.premiumGameImages[q.id];
+            html += '<div style="font-weight:800;color:#1E293B;font-size:1.05rem;line-height:1.4;flex:1;padding-right:12px;">' + (i+1) + '. ' + escapeHtml(formatQuizCopy((premiumReport && premiumReport.prompt) || q.texto || '', 'question')) + '</div>';
             html += '<div style="color:'+qColor+';font-size:1.4rem;"><i class="fas '+qIcon+'"></i></div>';
             html += '</div>';
             
@@ -5863,13 +5866,13 @@ window.openReportDetail = function(evalId, userId) {
                     var oWeight = (isOptCorrect || isSelected) ? '800' : '600';
                     
                     html += '<div style="padding:10px 16px;background:'+oBg+';border:2px solid '+oBorder+';border-radius:12px;font-size:0.95rem;font-weight:'+oWeight+';color:'+oColor+';display:flex;justify-content:space-between;align-items:center;">';
-                    html += '<span>' + (opts[o].text||'') + '</span>';
+                    html += '<span>' + escapeHtml(formatQuizCopy(opts[o].text||'', 'option')) + '</span>';
                     html += '<span style="font-size:1.1rem;">' + oIcon + '</span>';
                     html += '</div>';
                 }
                 html += '</div>';
             } else if (q.tipo === 'dnd') {
-                var imgUrl = (q.opciones && q.opciones[0]) ? q.opciones[0].pregunta_imagen : '';
+                var imgUrl = premiumReport ? premiumReport.src : ((q.opciones && q.opciones[0]) ? q.opciones[0].pregunta_imagen : '');
                 html += '<div style="margin-top:16px; display:flex; flex-direction:column; gap:12px; align-items:center;">';
                 html += '  <img src="' + imgUrl + '" style="max-width:100%; max-height:220px; border-radius:8px; border:2px solid #E2E8F0;">';
                 html += '  <div style="display:flex; flex-direction:column; gap:6px; width:100%;">';
@@ -5889,8 +5892,8 @@ window.openReportDetail = function(evalId, userId) {
                     var matchBorder = isCorrectMatch ? '#86EFAC' : '#FECACA';
                     var matchIcon = isCorrectMatch ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>';
                     html += '<div style="padding:10px 16px;background:'+matchBg+';border:2px solid '+matchBorder+';border-radius:12px;font-size:0.95rem;font-weight:700;color:'+matchColor+';display:flex;justify-content:space-between;align-items:center;">';
-                    html += '<span>Parte ' + String.fromCharCode(65+o) + ' (' + (opts[o].text||'') + '):</span>';
-                    html += '<span>' + matchIcon + ' Tu respuesta: ' + matchedText + '</span>';
+                    html += '<span>Parte ' + String.fromCharCode(65+o) + ' (' + escapeHtml(formatQuizCopy(opts[o].text||'', 'option')) + '):</span>';
+                    html += '<span>' + matchIcon + ' Tu respuesta: ' + escapeHtml(formatQuizCopy(matchedText, 'option')) + '</span>';
                     html += '</div>';
                 }
                 html += '  </div>';
@@ -5913,7 +5916,7 @@ window.openReportDetail = function(evalId, userId) {
                         var foIcon = foCorrect ? '<i class="fas fa-check"></i>' : (foSelected ? '<i class="fas fa-times"></i>' : '');
                         var foWeight = (foCorrect || foSelected) ? '800' : '600';
                         html += '<div style="padding:10px 16px;background:'+foBg+';border:2px solid '+foBorder+';border-radius:12px;font-size:0.95rem;font-weight:'+foWeight+';color:'+foColor+';display:flex;justify-content:space-between;align-items:center;">';
-                        html += '<span>' + (fbOpts[fo].text||'') + '</span>';
+                        html += '<span>' + escapeHtml(formatQuizCopy(fbOpts[fo].text||'', 'option')) + '</span>';
                         html += '<span style="font-size:1.1rem;">' + foIcon + '</span>';
                         html += '</div>';
                     }
@@ -5934,7 +5937,7 @@ window.openReportDetail = function(evalId, userId) {
                             fallbackStudentAns = String(sel);
                         }
                     }
-                    html += '<div style="font-weight:700;color:#0F172A;font-size:1rem;">' + fallbackStudentAns + '</div>';
+                    html += '<div style="font-weight:700;color:#0F172A;font-size:1rem;">' + escapeHtml(formatQuizCopy(fallbackStudentAns, 'option')) + '</div>';
                     var respCorrecta = '';
                     if (q.tipo === 'fb') {
                         respCorrecta = (q.opciones && q.opciones.length > 0 && q.opciones[0].text) ? q.opciones[0].text : 'Sin patrón';
@@ -5951,7 +5954,7 @@ window.openReportDetail = function(evalId, userId) {
                     }
                     if (respCorrecta) {
                         html += '<div style="font-size:0.85rem;color:#10B981;font-weight:800;margin-top:12px;margin-bottom:6px;">Respuesta correcta esperada:</div>';
-                        html += '<div style="font-weight:700;color:#047857;font-size:1rem;">' + respCorrecta + '</div>';
+                        html += '<div style="font-weight:700;color:#047857;font-size:1rem;">' + escapeHtml(formatQuizCopy(respCorrecta, 'option')) + '</div>';
                     }
                     html += '</div>';
                 }
