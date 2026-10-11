@@ -18,7 +18,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=28">
+    <link rel="stylesheet" href="styles.css?v=29">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
@@ -1144,7 +1144,21 @@
             </dialog>
         </section>
 
-        <!-- ══ INTOCABLES ══ -->
+        <section id="intocables-hub-screen" class="itc-page hidden" aria-labelledby="itc-title">
+            <div class="itc-top"><button type="button" class="itc-back" onclick="goHome()"><span aria-hidden="true">←</span> Volver</button><span>PREPARATORIA BEN CARSON · BIBLIOTECA</span></div>
+            <div class="itc-hero">
+                <div class="itc-hero-copy"><span class="itc-eyebrow">INTOCABLES</span><h1 id="itc-title">Conceptos que debes dominar</h1><p>Una idea central, el error que suele confundirse y una pregunta para comprobarla.</p><div class="itc-hero-actions"><a href="#itc-coleccion" class="itc-primary">Explorar fichas <span aria-hidden="true">→</span></a><button type="button" class="itc-secondary" onclick="openMindMaps()">Ver mapas mentales</button></div></div>
+                <div class="itc-hero-art" aria-hidden="true"><span class="itc-orbit itc-orbit-one"></span><span class="itc-orbit itc-orbit-two"></span><span class="itc-core">01</span><span class="itc-orbit-label itc-label-a">MORFO</span><span class="itc-orbit-label itc-label-b">BIOLOGÍA</span><span class="itc-orbit-label itc-label-c">SALUD</span></div>
+            </div>
+            <div class="itc-metrics" aria-label="Contenido disponible"><span><strong>18</strong> fichas</span><span><strong>3</strong> materias</span><span><strong>6</strong> en demo</span></div>
+            <div id="itc-coleccion" class="itc-collection"><div class="itc-collection-head"><div><span class="itc-eyebrow">COLECCIÓN</span><h2>Elige qué repasar</h2></div><p id="itc-count" aria-live="polite"></p></div>
+                <div class="itc-controls"><div id="itc-subjects" class="itc-subjects" aria-label="Filtrar por materia"></div><label class="itc-search"><span aria-hidden="true">⌕</span><input id="itc-search" type="search" placeholder="Buscar concepto o tema" autocomplete="off" aria-label="Buscar concepto o tema"></label><select id="itc-topic" aria-label="Filtrar por tema"><option value="">Todos los temas</option></select></div>
+                <div id="itc-status" class="itc-status" role="status" hidden></div><div id="itc-grid" class="itc-grid"></div>
+            </div>
+            <dialog id="itc-dialog" class="itc-dialog" aria-labelledby="itc-dialog-title"><div class="itc-dialog-head"><span id="itc-dialog-kicker"></span><button type="button" id="itc-close" aria-label="Cerrar ficha"><span aria-hidden="true">×</span></button></div><div class="itc-dialog-body"><h2 id="itc-dialog-title"></h2><div class="itc-key"><span>LA IDEA CENTRAL</span><p id="itc-key"></p></div><h3>Para entenderlo</h3><p id="itc-explain"></p><div class="itc-mistake"><strong>Atención a esta confusión</strong><p id="itc-mistake"></p></div><div class="itc-question"><strong>Compruébalo</strong><p id="itc-question"></p><button type="button" id="itc-reveal">Ver respuesta</button><p id="itc-answer" hidden></p></div><small id="itc-source"></small></div></dialog>
+        </section>
+
+        <!-- ══ INTOCABLES · MAPAS MENTALES ══ -->
         <section id="intocables-screen" class="intoc-section hidden">
 
             <div class="intoc-header">
@@ -1289,7 +1303,8 @@
     <script src="config.js"></script>
     <script src="device_guard.js?v=4"></script>
     <script src="campus-access.js?v=8"></script>
-    <script src="script.js?v=39"></script>
+    <script src="script.js?v=40"></script>
+    <script src="intocables-hub.js?v=1"></script>
     <script src="simulacro-ingreso.js?v=1"></script>
     <script src="student-library.js?v=8"></script>
     <script src="study-summaries.js?v=2"></script>

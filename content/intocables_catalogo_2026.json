@@ -1,0 +1,146 @@
+[
+  {
+    "id": "morfo-homeostasis",
+    "materia": "Morfofunción",
+    "tema": "Fundamentos",
+    "titulo": "Homeostasis",
+    "orden": 1,
+    "acceso_gratis": true
+  },
+  {
+    "id": "morfo-forma-funcion",
+    "materia": "Morfofunción",
+    "tema": "Fundamentos",
+    "titulo": "Forma y función",
+    "orden": 2,
+    "acceso_gratis": true
+  },
+  {
+    "id": "morfo-agua-ph",
+    "materia": "Morfofunción",
+    "tema": "Química de la vida",
+    "titulo": "Agua, pH y tampones",
+    "orden": 3,
+    "acceso_gratis": false
+  },
+  {
+    "id": "morfo-atp",
+    "materia": "Morfofunción",
+    "tema": "Química de la vida",
+    "titulo": "ATP y energía celular",
+    "orden": 4,
+    "acceso_gratis": false
+  },
+  {
+    "id": "morfo-transporte",
+    "materia": "Morfofunción",
+    "tema": "Célula",
+    "titulo": "Transporte a través de la membrana",
+    "orden": 5,
+    "acceso_gratis": false
+  },
+  {
+    "id": "morfo-tejidos",
+    "materia": "Morfofunción",
+    "tema": "Tejidos",
+    "titulo": "Cuatro tejidos básicos",
+    "orden": 6,
+    "acceso_gratis": false
+  },
+  {
+    "id": "bio-teoria-celular",
+    "materia": "Biología celular",
+    "tema": "Introducción",
+    "titulo": "Teoría celular",
+    "orden": 7,
+    "acceso_gratis": true
+  },
+  {
+    "id": "bio-procariota-eucariota",
+    "materia": "Biología celular",
+    "tema": "Introducción",
+    "titulo": "Procariotas y eucariotas",
+    "orden": 8,
+    "acceso_gratis": true
+  },
+  {
+    "id": "bio-resolucion",
+    "materia": "Biología celular",
+    "tema": "Métodos de estudio",
+    "titulo": "Aumento y resolución",
+    "orden": 9,
+    "acceso_gratis": false
+  },
+  {
+    "id": "bio-membrana",
+    "materia": "Biología celular",
+    "tema": "Membrana plasmática",
+    "titulo": "Mosaico fluido",
+    "orden": 10,
+    "acceso_gratis": false
+  },
+  {
+    "id": "bio-vesiculas",
+    "materia": "Biología celular",
+    "tema": "Transporte celular",
+    "titulo": "Endocitosis y exocitosis",
+    "orden": 11,
+    "acceso_gratis": false
+  },
+  {
+    "id": "bio-dogma",
+    "materia": "Biología celular",
+    "tema": "Información genética",
+    "titulo": "Del ADN a la proteína",
+    "orden": 12,
+    "acceso_gratis": false
+  },
+  {
+    "id": "salud-concepto",
+    "materia": "Educación para la Salud",
+    "tema": "Concepto de salud",
+    "titulo": "Salud como proceso",
+    "orden": 13,
+    "acceso_gratis": true
+  },
+  {
+    "id": "salud-determinantes",
+    "materia": "Educación para la Salud",
+    "tema": "Determinantes de la salud",
+    "titulo": "Determinantes sociales",
+    "orden": 14,
+    "acceso_gratis": true
+  },
+  {
+    "id": "salud-promocion",
+    "materia": "Educación para la Salud",
+    "tema": "Promoción y prevención",
+    "titulo": "Promoción y prevención",
+    "orden": 15,
+    "acceso_gratis": false
+  },
+  {
+    "id": "salud-prevencion",
+    "materia": "Educación para la Salud",
+    "tema": "Promoción y prevención",
+    "titulo": "Tres niveles de prevención",
+    "orden": 16,
+    "acceso_gratis": false
+  },
+  {
+    "id": "salud-incidencia",
+    "materia": "Educación para la Salud",
+    "tema": "Epidemiología",
+    "titulo": "Incidencia y prevalencia",
+    "orden": 17,
+    "acceso_gratis": false
+  },
+  {
+    "id": "salud-hipotesis",
+    "materia": "Educación para la Salud",
+    "tema": "Investigación",
+    "titulo": "Pregunta, hipótesis y variables",
+    "orden": 18,
+    "acceso_gratis": false
+  }
+]

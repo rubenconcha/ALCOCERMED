@@ -427,7 +427,7 @@ function showScreen(screenId) {
     closeMobileSidebar();
     if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
-    const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'resumenes-screen'];
+    const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen'];
     screens.forEach(function (id) {
         const el = document.getElementById(id);
         if (el) {
@@ -3727,11 +3727,8 @@ window.openMindMaps = async function () {
     closeMobileSidebar();
 };
 window.openIntocables = function () {
-    resourceChooser('Intocables', ['Mapas mentales'], name => {
-        if (name === 'Mapas mentales') return openMindMaps();
-        showScreen('intocables-screen');
-        switchIntocTab(name === 'Conceptos clave' ? 'conceptos' : 'formulas');
-    }, 'Selecciona el tipo de material.');
+    showScreen('intocables-hub-screen');
+    if (window.IntocablesHub) window.IntocablesHub.open();
 };
 
 window.switchIntocTab = function (tab) {
