@@ -3,6 +3,7 @@
     const summaries = [
         { subject: 'Biología celular', topic: 'Tema 1', title: 'Introducción a la biología de las células', pages: 6, file: 'biologia-tema-1', kind: 'bio' },
         { subject: 'Biología celular', topic: 'Capítulo 2', title: 'Cómo se estudian las células', pages: 7, file: 'biologia-capitulo-2', kind: 'bio' },
+        { subject: 'Biología celular', topic: 'Capítulo 3', title: 'Estructura de la membrana plasmática', pages: 6, file: 'biologia-capitulo-3', kind: 'bio' },
         { subject: 'Educación para la Salud', topic: 'Tema 1', title: 'Evolución del concepto de salud', pages: 2, file: 'educacion-salud-tema-1', kind: 'salud' },
         { subject: 'Educación para la Salud', topic: 'Tema 2', title: 'Determinantes de la salud', pages: 2, file: 'educacion-salud-tema-2', kind: 'salud' },
         { subject: 'Morfofunción', topic: 'Tema 1', title: 'Temas principales de anatomía y fisiología', pages: 8, file: 'morfofuncion-tema-1', kind: 'morfo' },
