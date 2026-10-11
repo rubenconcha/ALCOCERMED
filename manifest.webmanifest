@@ -2,7 +2,7 @@
   "name": "AlcocerMed",
   "short_name": "AlcocerMed",
   "description": "Plataforma de estudio medico con flashcards, banco de preguntas, simulacros y juegos.",
-  "start_url": "./index.html",
+  "start_url": "/campus",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",

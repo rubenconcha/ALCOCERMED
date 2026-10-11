@@ -1,4 +1,4 @@
-/* Pantalla de ingreso compacta, sin enlaces de venta dentro del formulario. */
+/* Pantalla de ingreso compacta con acceso claro al registro. */
 body.login-active .login-screen {
     min-height: 100dvh;
     padding: 24px;
@@ -23,6 +23,28 @@ body.login-active .auth-separator { margin: 12px 0 14px; }
 body.login-active .login-form { gap: 16px; }
 body.login-active .login-input { min-height: 48px; }
 body.login-active .login-btn { min-height: 50px; margin-top: 5px; }
+body.login-active .login-create-account {
+    display: grid;
+    gap: 8px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #637287;
+}
+body.login-active .login-create-account a {
+    color: #142944;
+    font-weight: 750;
+    text-decoration: none;
+}
+body.login-active .login-create-account a:first-of-type {
+    display: block;
+    padding: 12px;
+    border: 1px solid #f4bb3f;
+    border-radius: 12px;
+    background: #fff7e5;
+}
+body.login-active .login-create-account a:hover { text-decoration: underline; }
+body.login-active .login-create-account .login-back-home { color: #2183aa; font-size: 13px; }
 body.login-active .login-footer {
     margin-top: 27px;
     padding-top: 19px;

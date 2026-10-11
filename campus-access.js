@@ -65,7 +65,7 @@ window.continueWithGoogle = async function(button) {
         if(!response.ok) throw new Error('No pudimos conectar. Intenta de nuevo.');
         const settings=await response.json();
         if(!settings.external?.google) throw new Error('Google todavía no está habilitado. Puedes registrarte con tu correo y contraseña.');
-        const {error}=await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:location.origin+'/',queryParams:{prompt:'select_account'}}});
+        const {error}=await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:location.origin+'/campus',queryParams:{prompt:'select_account'}}});
         if(error) throw error;
     } catch(error) { output.textContent=error.message; button.disabled=false; }
 };

@@ -43,7 +43,7 @@ test('el enlace de planes dice volver a mapas mentales cuando corresponde', asyn
     URLSearchParams
   };
   vm.runInNewContext(fs.readFileSync('sales-session.js', 'utf8'), context);
-  assert.equal(backLink.href, '/?volver=campus');
+  assert.equal(backLink.href, '/campus?volver=campus');
   assert.match(backLink.textContent, /Volver a mapas mentales/);
 });
 

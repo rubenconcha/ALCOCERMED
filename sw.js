@@ -1,7 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v55';
+const CACHE_NAME = 'alcocermed-main-v56';
 const APP_SHELL = [
-    './',
+    './campus',
     './index.html',
+    './ventas.html',
     './styles.css?v=22',
     './script.js?v=31',
     './commerce.css?v=1',
@@ -72,7 +73,9 @@ self.addEventListener('fetch', function (event) {
             .catch(function () {
                 return caches.match(request).then(function (cached) {
                     if (cached) return cached;
-                    if (request.mode === 'navigate') return caches.match('./index.html');
+                    if (request.mode === 'navigate') {
+                        return caches.match(url.pathname === '/' || url.pathname === '/planes' ? './ventas.html' : './index.html');
+                    }
                     return undefined;
                 });
             })

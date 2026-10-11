@@ -7,7 +7,7 @@
     const root = document.documentElement;
     const backLink = document.querySelector('.back-to-campus');
     if (backLink) {
-        backLink.href = '/?volver=campus';
+        backLink.href = '/campus?volver=campus';
         try {
             const saved = JSON.parse(sessionStorage.getItem('alcocer_plan_return') || 'null');
             if (saved?.screen === 'mapas') {
@@ -27,6 +27,10 @@
         const { data, error } = await client.auth.getSession();
         if (error) throw error;
         if (data.session) {
+            if (location.pathname === '/') {
+                location.replace('/campus');
+                return;
+            }
             root.classList.add('session-active');
             document.querySelector('.campus-session-note').textContent = 'Tu sesión sigue activa. Al elegir un plan, conservarás tu cuenta y tu avance.';
         } else if (fromCampus) {
