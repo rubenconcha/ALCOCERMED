@@ -9,6 +9,7 @@
         { subject: 'Educación para la Salud', topic: 'Tema 3', title: 'Salud pública', pages: 1, file: 'educacion-salud-tema-3', kind: 'salud' },
         { subject: 'Morfofunción', topic: 'Tema 1', title: 'Temas principales de anatomía y fisiología', pages: 8, file: 'morfofuncion-tema-1', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 2', title: 'La química de la vida', pages: 8, file: 'morfofuncion-tema-2', kind: 'morfo' },
+        { subject: 'Morfofunción', topic: 'Tema 3', title: 'Forma y función celulares', pages: 8, file: 'morfofuncion-tema-3', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 4', title: 'Genética y función celular', pages: 8, file: 'morfofuncion-tema-4', kind: 'morfo' }
     ];
 
