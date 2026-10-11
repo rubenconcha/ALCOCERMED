@@ -176,5 +176,109 @@ window.premiumGameImages = {
   "776bf600-09c8-1379-375b-d2684147f830": {
     "src": "/juegos/assets/preguntas-premium/demo-biologia-adn-celulas.webp",
     "alt": "Bacteria con nucleoide, célula humana con núcleo y doble hélice de ADN"
+  },
+  "cedc6bfe-450a-5fcb-bb1e-448e6eb70c85": {
+    "src": "/juegos/assets/preguntas-premium/bc02-microscopia-optica.webp",
+    "alt": "Microscopio óptico que ilumina una muestra de células en un portaobjetos"
+  },
+  "deaf69a0-a4ff-5768-bc14-34a8dddd73cb": {
+    "src": "/juegos/assets/preguntas-premium/bc02-microscopia-electronica.webp",
+    "alt": "Microscopio electrónico y detalle ultraestructural de una célula"
+  },
+  "51d675b9-73a4-5cc9-bb23-2087210be822": {
+    "src": "/juegos/assets/preguntas-premium/bc02-fijacion.webp",
+    "alt": "Muestra de tejido colocada en fijador antes de observarla al microscopio"
+  },
+  "41c1741e-9424-5cfe-b929-65bbbfb54d3c": {
+    "src": "/juegos/assets/preguntas-premium/bc02-pcr.webp",
+    "alt": "Termociclador con tubos de reacción y copias amplificadas de ADN"
+  },
+  "322f0b43-ef86-53a9-bc05-4d48310ef1dd": {
+    "src": "/juegos/assets/preguntas-premium/bc02-electroforesis.webp",
+    "alt": "Gel de electroforesis con fragmentos de ADN separados en bandas"
+  },
+  "cb2fe2d0-d72e-528f-b0af-c05e5656c94c": {
+    "src": "/juegos/assets/preguntas-premium/bc02-secuenciacion.webp",
+    "alt": "Secuenciador de ADN y cromatograma de bases de distintos colores"
+  },
+  "4448f6f2-4044-5fe7-b888-f0db7a35859e": {
+    "src": "/juegos/assets/preguntas-premium/bc02-fish.webp",
+    "alt": "Sondas fluorescentes unidas a cromosomas dentro de una célula"
+  },
+  "f2446921-4afe-55de-be15-f97e59b0b082": {
+    "src": "/juegos/assets/preguntas-premium/bc02-elisa.webp",
+    "alt": "Placa ELISA y unión específica entre un anticuerpo y su antígeno"
+  },
+  "4cc3b1c8-437f-55c5-ba0e-92937fb56d11": {
+    "src": "/juegos/assets/preguntas-premium/bc02-citometria.webp",
+    "alt": "Células individuales atravesando un láser en un citómetro de flujo"
+  },
+  "417cd8c5-0e01-522d-be87-dbb054b1e5b4": {
+    "src": "/juegos/assets/preguntas-premium/bc02-cultivo-celular.webp",
+    "alt": "Células cultivadas en una placa de laboratorio bajo condiciones controladas"
+  },
+  "69984a9f-9020-54b0-bdbc-053552803526": {
+    "src": "/juegos/assets/preguntas-premium/bc02-centrifugacion.webp",
+    "alt": "Centrífuga y fracciones celulares separadas según su densidad"
+  },
+  "81166499-3d0b-5ae9-b3b3-31faf5383eee": {
+    "src": "/juegos/assets/preguntas-premium/bc02-elisa.webp",
+    "alt": "Anticuerpo unido a un antígeno específico en un ensayo de laboratorio"
+  },
+  "0817a368-845d-5216-b53a-494bd6c823b5": {
+    "src": "/juegos/assets/preguntas-premium/bc02-inmunofluorescencia.webp",
+    "alt": "Proteínas celulares marcadas con anticuerpos fluorescentes"
+  },
+  "bf6441c1-eae7-5d90-b79e-ce39b8578bcc": {
+    "src": "/juegos/assets/preguntas-premium/bc02-knockout.webp",
+    "alt": "Modelo animal con un gen desactivado para estudiar su función"
+  },
+  "55e70315-f9a8-5172-b5e5-9ed4a0e7df9b": {
+    "src": "/juegos/assets/preguntas-premium/bc02-microarray.webp",
+    "alt": "Microarray con puntos fluorescentes y análisis de expresión genética"
+  },
+  "4e5aa591-5caa-52f1-b13d-7a429a92b2a3": {
+    "src": "/juegos/assets/preguntas-premium/bc02-terapia-genica.webp",
+    "alt": "Vector que introduce un gen funcional en una célula humana"
+  },
+  "ea2643ca-937d-5cc9-b719-11c9190c0e2f": {
+    "src": "/juegos/assets/preguntas-premium/bc02-centrifugacion.webp",
+    "alt": "Centrífuga que separa los componentes de una muestra celular"
+  },
+  "74398344-f6b3-5876-b285-a2e6286897c2": {
+    "src": "/juegos/assets/preguntas-premium/bc02-cuantificacion-adn.webp",
+    "alt": "Espectrofotómetro que mide la concentración de ácidos nucleicos"
+  },
+  "d61d8d45-60ca-52f2-bf12-ad60d09d7c83": {
+    "src": "/juegos/assets/preguntas-premium/bc02-microscopia-electronica.webp",
+    "alt": "Microscopio electrónico y microscopio óptico usados para estudiar células"
+  },
+  "21063b24-6af8-5f47-b494-2728b3e1a649": {
+    "src": "/juegos/assets/preguntas-premium/bc02-tecnicas-adn.webp",
+    "alt": "Termociclador, gel de electroforesis y secuenciador de ADN"
+  },
+  "f099c1c3-2947-505b-b036-6d6f750d3666": {
+    "src": "/juegos/assets/preguntas-premium/bc02-elisa.webp",
+    "alt": "Placa de inmunoensayo donde anticuerpos reconocen antígenos"
+  },
+  "add83ea1-40e2-5a18-b52e-a263e62088e6": {
+    "src": "/juegos/assets/preguntas-premium/bc02-cultivo-celular.webp",
+    "alt": "Placas de cultivo con células mantenidas en un laboratorio"
+  },
+  "47c37b87-f83c-5f48-bd34-b1d7aa697c36": {
+    "src": "/juegos/assets/preguntas-premium/bc02-centrifugacion.webp",
+    "alt": "Etapas de separación de orgánulos por centrifugación diferencial"
+  },
+  "3550e672-2be8-555e-b5b1-e818cfcdf6ee": {
+    "src": "/juegos/assets/preguntas-premium/bc02-knockout.webp",
+    "alt": "Investigación de la función de un gen mediante su desactivación"
+  },
+  "fefcd6f3-68ae-fca7-bade-6c210e9f1214": {
+    "src": "/juegos/assets/preguntas-premium/bc02-inmunofluorescencia.webp",
+    "alt": "Célula con estructuras identificadas mediante fluorescencia"
+  },
+  "748d278c-a85a-e851-f3e5-974ad4edf71f": {
+    "src": "/juegos/assets/preguntas-premium/bc02-centrifugacion.webp",
+    "alt": "Centrífuga que separa orgánulos celulares por propiedades físicas"
   }
 };
