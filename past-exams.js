@@ -52,7 +52,7 @@
             const meta = document.createElement('p'); meta.textContent = exam.count + ' preguntas · ' + exam.duration + ' minutos';
             const note = document.createElement('p'); note.className = 'past-card-note';
             note.textContent = sourceNotes(exam) ? 'Con observaciones del documento original' : 'Preguntas y patrón original';
-            const button = document.createElement('button'); button.type = 'button'; button.className = 'btn-primary'; button.textContent = locked ? 'Desbloquear' : 'Ver examen →';
+            const button = document.createElement('button'); button.type = 'button'; button.className = 'btn-primary'; button.textContent = locked ? 'Desbloquear' : 'Realizar examen →';
             button.addEventListener('click', () => { if (isLocked(exam)) CampusAccess.unlock(); else selectExam(exam); });
             const heading = document.createElement('div'); heading.className = 'past-card-heading'; heading.append(eyebrow);
             if (locked) {
