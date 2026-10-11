@@ -1108,6 +1108,14 @@ function exitQuizToHome() {
 }
 window.exitQuizToHome = exitQuizToHome;
 
+function leaveGamesToCampus() {
+    clearSelfSession();
+    quizData = null;
+    sessionStorage.removeItem('alcocer_plan_return');
+    window.location.href = '/campus';
+}
+window.leaveGamesToCampus = leaveGamesToCampus;
+
 function showLogin() {
     setQuizFocusMode(false);
     document.getElementById('login-screen').classList.remove('hidden');
