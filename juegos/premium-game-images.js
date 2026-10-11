@@ -280,5 +280,29 @@ window.premiumGameImages = {
   "748d278c-a85a-e851-f3e5-974ad4edf71f": {
     "src": "/juegos/assets/preguntas-premium/bc02-centrifugacion.webp",
     "alt": "Centrífuga que separa orgánulos celulares por propiedades físicas"
+  },
+  "cdea344d-1dd6-5f90-beed-8d34a7bb945e": {
+    "src": "/juegos/assets/preguntas-premium/bc02-relacionar-tecnicas.webp",
+    "alt": "Seis equipos de laboratorio: microscopios óptico y electrónico, PCR, secuenciación, citometría y centrifugación"
+  },
+  "ba6c9d3a-25a1-560d-beec-28be6d6d5b9a": {
+    "src": "/juegos/assets/preguntas-premium/bc02-relacionar-molecular.webp",
+    "alt": "PCR, ADN molde, secuenciador, nucleótidos y sonda de hibridación en cinco escenas"
+  },
+  "5688e93f-8915-58ce-be87-25dbb3e70323": {
+    "src": "/juegos/assets/preguntas-premium/bc02-relacionar-inmuno.webp",
+    "alt": "Antígeno, anticuerpo, placa ELISA, inmunofluorescencia y citometría en cinco escenas"
+  },
+  "32812aa2-fa83-5872-bc69-0b64a54caaf7": {
+    "src": "/juegos/assets/preguntas-premium/bc02-relacionar-fraccionamiento.webp",
+    "alt": "Homogeneizado, centrífuga, núcleo, mitocondria y microsomas separados visualmente"
+  },
+  "8ee00116-a053-5b21-b7fd-4696bc68d2a9": {
+    "src": "/juegos/assets/preguntas-premium/bc02-relacionar-microscopia.webp",
+    "alt": "Microscopio óptico, luz visible, microscopio electrónico, haz de electrones y micrografía de alta resolución"
+  },
+  "ab65b469-e058-5eba-be6e-ba7fe29af7ef": {
+    "src": "/juegos/assets/preguntas-premium/bc02-relacionar-cultivo.webp",
+    "alt": "Placa de cultivo, medio nutritivo, incubador, línea celular y ensayo de viabilidad"
   }
 };
