@@ -30,7 +30,22 @@
     const frame = document.getElementById('resumenes-frame');
     const loading = document.getElementById('resumenes-loading');
     const download = document.getElementById('resumenes-download');
-    let blobUrl = '';
+    const pdfVersion = '20261011';
+    const pdfCache = new Map();
+    let pendingRequest = null;
+    let openRevision = 0;
+
+    function clearPdfCache() {
+        pdfCache.forEach(url => URL.revokeObjectURL(url));
+        pdfCache.clear();
+    }
+
+    function showPdf(url, item) {
+        frame.src = url;
+        download.href = url;
+        download.download = `${item.file}.pdf`;
+        download.hidden = false;
+    }
 
     const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     const isLocked = item => !item.free && (!window.CampusAccess || CampusAccess.isFree());
@@ -91,8 +106,9 @@
 
     async function openSummary(item) {
         if (isLocked(item)) return CampusAccess.unlock();
-        if (blobUrl) URL.revokeObjectURL(blobUrl);
-        blobUrl = '';
+        const revision = ++openRevision;
+        if (pendingRequest) pendingRequest.abort();
+        pendingRequest = null;
         frame.removeAttribute('src');
         document.getElementById('resumenes-viewer-subject').textContent = `${item.subject} · ${item.topic}`;
         document.getElementById('resumenes-viewer-title').textContent = item.title;
@@ -100,29 +116,55 @@
         loading.textContent = 'Cargando PDF…';
         loading.hidden = false;
         dialog.showModal();
+        // Let the browser stream public PDFs and reuse its HTTP cache.
+        if (item.free) {
+            showPdf(`/resumenes/${item.file}.pdf?v=${pdfVersion}`, item);
+            return;
+        }
+        const controller = new AbortController();
+        pendingRequest = controller;
+        const timeout = setTimeout(() => controller.abort(), 30000);
         try {
-            const headers = {};
-            if (!item.free) {
-                const { data } = await getSupabase().auth.getSession();
-                if (!data.session?.access_token) throw new Error('Inicia sesión para abrir este resumen.');
-                headers.Authorization = `Bearer ${data.session.access_token}`;
+            const { data } = await getSupabase().auth.getSession();
+            if (revision !== openRevision || !dialog.open) return;
+            if (!data.session?.access_token) throw new Error('Inicia sesión para abrir este resumen.');
+            const key = `${data.session.user.id}:${item.file}`;
+            if (pdfCache.has(key)) {
+                const url = pdfCache.get(key);
+                pdfCache.delete(key);
+                pdfCache.set(key, url);
+                showPdf(url, item);
+                return;
             }
-            const url = item.free ? `/resumenes/${item.file}.pdf` : `/api/resumen?file=${encodeURIComponent(item.file)}`;
-            const response = await fetch(url, { headers, cache: 'no-store' });
+            const response = await fetch(`/api/resumen?file=${encodeURIComponent(item.file)}`, {
+                headers: { Authorization: `Bearer ${data.session.access_token}` },
+                cache: 'no-store', signal: controller.signal
+            });
             if (!response.ok) throw new Error(response.status === 403 ? 'Este resumen requiere una suscripción activa.' : 'No se pudo cargar el PDF. Intenta otra vez.');
             const blob = await response.blob();
             if (!blob.type.includes('pdf')) throw new Error('El archivo no se recibió como PDF.');
-            if (!dialog.open) return;
-            blobUrl = URL.createObjectURL(blob);
-            frame.src = blobUrl;
-            download.href = blobUrl;
-            download.download = `${item.file}.pdf`;
-            download.hidden = false;
-            loading.hidden = true;
+            if (revision !== openRevision || !dialog.open) return;
+            const url = URL.createObjectURL(blob);
+            pdfCache.set(key, url);
+            if (pdfCache.size > 3) {
+                const oldest = pdfCache.keys().next().value;
+                URL.revokeObjectURL(pdfCache.get(oldest));
+                pdfCache.delete(oldest);
+            }
+            showPdf(url, item);
         } catch (error) {
-            loading.textContent = error.message;
+            if (revision === openRevision && dialog.open) {
+                loading.textContent = error.name === 'AbortError' ? 'La conexión está tardando. Cierra y vuelve a abrir el resumen.' : error.message;
+            }
+        } finally {
+            clearTimeout(timeout);
+            if (pendingRequest === controller) pendingRequest = null;
         }
     }
+
+    frame.addEventListener('load', () => {
+        if (frame.getAttribute('src')) loading.hidden = true;
+    });
 
     search.addEventListener('input', render);
     subject.addEventListener('change', () => { fillTopics(); render(); });
@@ -137,11 +179,13 @@
     });
     document.getElementById('resumenes-close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('close', () => {
+        ++openRevision;
+        if (pendingRequest) pendingRequest.abort();
+        pendingRequest = null;
         frame.removeAttribute('src');
-        if (blobUrl) URL.revokeObjectURL(blobUrl);
-        blobUrl = '';
     });
-    window.addEventListener('campus-access-change', render);
+    window.addEventListener('campus-access-change', () => { clearPdfCache(); render(); });
+    window.addEventListener('pagehide', clearPdfCache);
     fillTopics();
     render();
 })();

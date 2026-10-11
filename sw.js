@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v58';
+const CACHE_NAME = 'alcocermed-main-v59';
 const APP_SHELL = [
     './campus',
     './campus.html',
@@ -15,7 +15,7 @@ const APP_SHELL = [
     './assets/flashcard-icons/bien-smile-3d.png',
     './assets/flashcard-icons/facil-3d.png',
     './manifest.webmanifest',
-    './styles.css?v=35',
+    './styles.css?v=37',
     './commerce.css?v=1',
     './student-white.css?v=2',
     './campus-theme.css?v=3',
@@ -30,12 +30,14 @@ const APP_SHELL = [
     './device_guard.js?v=4',
     './campus-access.js?v=9',
     './script.js?v=43',
-    './mindmap-branch-labels.js?v=2',
-    './mindmap-viewer.js?v=6',
+    './mindmap-branch-labels.js?v=3',
+    './mindmap-content.js?v=1',
+    './mindmap-viewer.js?v=7',
+    './mindmap-viewer.css?v=1',
     './intocables-hub.js?v=1',
     './simulacro-ingreso.js?v=1',
     './student-library.js?v=8',
-    './study-summaries.js?v=2',
+    './study-summaries.js?v=3',
 ];
 
 self.addEventListener('install', function (event) {
@@ -66,7 +68,7 @@ self.addEventListener('fetch', function (event) {
     const url = new URL(request.url);
 
     if (request.method !== 'GET' || url.protocol.indexOf('http') !== 0) return;
-    if (url.origin !== self.location.origin || url.pathname.startsWith('/api/')) return;
+    if (url.origin !== self.location.origin || url.pathname.startsWith('/api/') || url.pathname.endsWith('.pdf')) return;
 
     event.respondWith(
         fetch(request)
