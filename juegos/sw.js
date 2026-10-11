@@ -1,53 +1,51 @@
-const CACHE_NAME = 'alcocermed-juegos-v100';
+const CACHE_NAME = 'alcocermed-juegos-v101';
 const ASSETS_TO_CACHE = [
-  './',
-  './index.html',
-  './styles.css',
-  './styles.css?v=80',
-  './app.js',
-  './app.js?v=95',
-  './quiz-copy.js?v=1',
-  './premium-game-images.js?v=6',
-  './game-access.js?v=2',
-  './acceso-noche.js?v=1',
-  './relacionar.js?v=2',
-  './encefalo-native-data.js?v=1',
-  './sentidos-imagenes.js?v=1',
-  './tejido-nervioso-imagenes.js?v=5',
-  './tejido-nervioso.js?v=14',
-  './tejido-nervioso.css?v=8',
-  './manifest.json',
-  './assets/result_arena_bg.png',
-  './assets/preguntas-contextuales/teoria-celular.svg',
-  './assets/preguntas-contextuales/procariota.svg',
-  './assets/preguntas-contextuales/eucariota.svg',
-  './assets/preguntas-contextuales/adn.svg',
-  './assets/preguntas-contextuales/arn.svg',
-  './assets/preguntas-contextuales/virus.svg',
-  './assets/preguntas-contextuales/prion.svg',
-  './assets/preguntas-contextuales/modelo-biologico.svg',
-  './assets/preguntas-contextuales/bacterias-modelo.svg',
-  './assets/preguntas-contextuales/biomedicina-celular.svg',
-  './assets/preguntas-contextuales/membrana-plasmatica.svg',
-  './assets/preguntas-contextuales/citoplasma.svg',
-  './assets/preguntas-contextuales/nucleo.svg',
-  './assets/preguntas-contextuales/homeostasis-celular.svg',
-  './assets/preguntas-contextuales/expresion-genica.svg',
-  './assets/preguntas-contextuales/proteina-funcion.svg',
-  './assets/preguntas-contextuales/evolucion-celular.svg',
-  './assets/preguntas-contextuales/comparacion-celulas.svg',
-  './assets/preguntas-contextuales/componentes-celulares.svg',
-  './assets/preguntas-contextuales/sistemas-acelulares.svg',
-  './assets/preguntas-contextuales/rasgos-eucariotas.svg',
-  './assets/preguntas-contextuales/funciones-proteinas.svg',
-  './assets/preguntas-contextuales/conceptos-introductorios.svg',
-  './assets/preguntas-contextuales/niveles-informacion.svg',
-  './assets/preguntas-contextuales/salud-colectiva.svg',
-  './assets/preguntas-contextuales/promocion-salud.svg',
-  './assets/preguntas-contextuales/prevencion.svg',
-  'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
-  './logo_app.png'
+    './',
+    './index.html',
+    './assets/result_arena_bg.png',
+    './assets/preguntas-contextuales/teoria-celular.svg',
+    './assets/preguntas-contextuales/procariota.svg',
+    './assets/preguntas-contextuales/eucariota.svg',
+    './assets/preguntas-contextuales/adn.svg',
+    './assets/preguntas-contextuales/arn.svg',
+    './assets/preguntas-contextuales/virus.svg',
+    './assets/preguntas-contextuales/prion.svg',
+    './assets/preguntas-contextuales/modelo-biologico.svg',
+    './assets/preguntas-contextuales/bacterias-modelo.svg',
+    './assets/preguntas-contextuales/biomedicina-celular.svg',
+    './assets/preguntas-contextuales/membrana-plasmatica.svg',
+    './assets/preguntas-contextuales/citoplasma.svg',
+    './assets/preguntas-contextuales/nucleo.svg',
+    './assets/preguntas-contextuales/homeostasis-celular.svg',
+    './assets/preguntas-contextuales/expresion-genica.svg',
+    './assets/preguntas-contextuales/proteina-funcion.svg',
+    './assets/preguntas-contextuales/evolucion-celular.svg',
+    './assets/preguntas-contextuales/comparacion-celulas.svg',
+    './assets/preguntas-contextuales/componentes-celulares.svg',
+    './assets/preguntas-contextuales/sistemas-acelulares.svg',
+    './assets/preguntas-contextuales/rasgos-eucariotas.svg',
+    './assets/preguntas-contextuales/funciones-proteinas.svg',
+    './assets/preguntas-contextuales/conceptos-introductorios.svg',
+    './assets/preguntas-contextuales/niveles-informacion.svg',
+    './assets/preguntas-contextuales/salud-colectiva.svg',
+    './assets/preguntas-contextuales/promocion-salud.svg',
+    './assets/preguntas-contextuales/prevencion.svg',
+    './styles.css?v=81',
+    './tejido-nervioso.css?v=8',
+    './manifest.json',
+    '././logo_app.png',
+    './bg_music.mp4',
+    '../device_guard.js?v=4',
+    './tejido-nervioso-imagenes.js?v=5',
+    './encefalo-native-data.js?v=1',
+    './sentidos-imagenes.js?v=1',
+    './relacionar.js?v=2',
+    './acceso-noche.js?v=1',
+    './game-access.js?v=2',
+    './premium-game-images.js?v=6',
+    './quiz-copy.js?v=1',
+    './app.js?v=100',
+    './tejido-nervioso.js?v=14',
 ];
 
 // Instalar el Service Worker y almacenar en caché los recursos estáticos
@@ -67,7 +65,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
+          if (cacheName !== CACHE_NAME && cacheName.startsWith('alcocermed-juegos-')) {
             return caches.delete(cacheName);
           }
         })
@@ -84,7 +82,8 @@ self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   
   // Ignorar absolutamente todo lo que vaya a Supabase para evitar cuelgues de red en PWA
-  if (event.request.url.includes('supabase.co')) return;
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin || url.pathname.startsWith('/api/')) return;
   
   // Ignorar extensiones de Chrome y peticiones cruzadas extrañas
   if (!event.request.url.startsWith('http')) return;
@@ -93,7 +92,7 @@ self.addEventListener('fetch', (event) => {
     fetch(event.request)
       .then((networkResponse) => {
         // Clonar la respuesta de la red y actualizar la caché si es un recurso local o de asset
-        if(networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+        if(networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic' && !/no-store|private/i.test(networkResponse.headers.get('Cache-Control') || '')) {
             const responseToCache = networkResponse.clone();
             caches.open(CACHE_NAME).then((cache) => {
               cache.put(event.request, responseToCache);

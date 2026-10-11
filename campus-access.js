@@ -14,7 +14,9 @@ window.CampusAccess = (() => {
                 tema: window.mmState?.selectedTema || null,
                 search: document.getElementById('mm-search-input')?.value || '',
                 scrollY: window.scrollY || 0
-            } : { screen: 'inicio' };
+            } : { screen: typeof currentCampusScreen === 'string'
+                ? ({'study-area': 'study-library', 'game-quiz': 'resource-browser', 'game-hangman': 'resource-browser'}[currentCampusScreen] || currentCampusScreen)
+                : 'inicio' };
             sessionStorage.setItem('alcocer_plan_return', JSON.stringify(state));
         } catch (_) { /* La navegación al plan debe funcionar aunque el navegador limite el almacenamiento. */ }
         window.location.href = '/planes?desde=campus';

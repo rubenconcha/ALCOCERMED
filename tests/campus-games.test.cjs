@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 
 const script = fs.readFileSync('script.js', 'utf8');
-const html = fs.readFileSync('index.html', 'utf8');
+const html = fs.readFileSync('campus.html', 'utf8');
 const start = script.indexOf('const QUIZ_QUESTIONS = [');
 const end = script.indexOf('window.startQuiz =', start);
 const context = {

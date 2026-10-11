@@ -7,7 +7,8 @@
     const root = document.documentElement;
     const backLink = document.querySelector('.back-to-campus');
     if (backLink) {
-        backLink.href = '/campus?volver=campus';
+        backLink.href = fromCampus ? '/campus?volver=campus' : '/';
+        if (!fromCampus) backLink.textContent = '← Volver al inicio';
         try {
             const saved = JSON.parse(sessionStorage.getItem('alcocer_plan_return') || 'null');
             if (saved?.screen === 'mapas') {
@@ -22,6 +23,8 @@
                     location.replace(backLink.href);
                 });
             }
+            const labels = {'resumenes-screen': 'Resúmenes', 'study-library': 'Flashcards', 'resource-browser': 'Aprende jugando', 'banco-screen': 'Banco de preguntas', 'simulacro-screen': 'Simulacros', 'intocables-hub-screen': 'Intocables'};
+            if (labels[saved?.screen]) backLink.textContent = '← Volver a ' + labels[saved.screen];
         } catch (_) { /* Mantener el regreso general al campus. */ }
     }
     try {
@@ -36,7 +39,13 @@
                 return;
             }
             root.classList.add('session-active');
+            if (backLink && backLink.getAttribute('href') === '/') {
+                backLink.href = '/campus?volver=campus';
+                backLink.textContent = '← Volver al campus';
+            }
             document.querySelector('.campus-session-note').textContent = 'Tu sesión sigue activa. Al elegir un plan, conservarás tu cuenta y tu avance.';
+        } else if (!fromCampus && location.pathname === '/planes') {
+            document.querySelector('.campus-session-note').textContent = 'Elige tu plan. Puedes crear tu cuenta gratis desde la página principal.';
         } else if (fromCampus) {
             document.querySelector('.campus-session-note').textContent = 'Elige tu plan y vuelve a tu material desde el botón superior.';
         }

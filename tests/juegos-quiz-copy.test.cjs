@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const formatQuizCopy = require('../juegos/quiz-copy.js');
 const page = fs.readFileSync(path.join(__dirname, '../juegos/index.html'), 'utf8');
-assert(page.indexOf('quiz-copy.js?v=1') > 0 && page.indexOf('quiz-copy.js?v=1') < page.indexOf('app.js?v=95'));
+assert(page.indexOf('quiz-copy.js?v=1') > 0 && page.indexOf('quiz-copy.js?v=1') < page.search(/src="app\.js\?v=\d+"/));
 
 assert.equal(
   formatQuizCopy('Segun el tema 1, la anatomia se ocupa principalmente de:', 'question'),

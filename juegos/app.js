@@ -1068,8 +1068,9 @@ function initAuth() {
                 client.auth.signOut({ scope: 'local' });
                 return;
             }
+            const sameAccount = currentUser && currentUser.id === session.user.id;
             currentUser = session.user;
-            enterApp();
+            if (!sameAccount || document.getElementById('app-shell').classList.contains('hidden')) enterApp();
         } else if (event === 'SIGNED_OUT') {
             teardownAvatarRealtime();
             if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();

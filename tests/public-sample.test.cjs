@@ -4,12 +4,12 @@ const fs = require('node:fs');
 const path = require('node:path');
 const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 test('sample uses exact production tool markup and shared visual styles', () => {
-  const app = read('index.html'), sample = read('muestra.html');
+  const app = read('campus.html'), sample = read('muestra.html');
   for (const id of ['study-area', 'game-quiz', 'game-hangman']) {
     const section = app.match(new RegExp(`<section id="${id}"[\\s\\S]*?</section>`))[0];
     assert.ok(sample.includes(section), `${id} must match the actual platform`);
   }
-  for (const file of ['styles.css?v=23', 'student-white.css?v=2', 'campus-theme.css?v=3']) {
+  for (const file of ['styles.css?v=35', 'student-white.css?v=2', 'campus-theme.css?v=3']) {
     assert.ok(sample.includes(file)); assert.ok(app.includes(file));
   }
 });

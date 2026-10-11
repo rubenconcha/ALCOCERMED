@@ -153,6 +153,7 @@ async function initAuth() {
 
 /** Muestra login y oculta app */
 function showLoginScreen() {
+    verifiedCampusUserId = null;
     if (flashcardReviewTimer) clearTimeout(flashcardReviewTimer);
     flashcardReviewTimer = null;
     flashcardTopicCards = [];
@@ -176,7 +177,10 @@ function setAdminSectionVisible(visible) {
 
 /** Oculta login y muestra app */
 let campusEntry = null;
+let verifiedCampusUserId = null;
 function enterApp(user) {
+    if (!user || currentUser?.id !== user.id) return Promise.resolve();
+    if (verifiedCampusUserId === user?.id && !document.body.classList.contains('login-active')) return Promise.resolve();
     if (campusEntry) return campusEntry;
     campusEntry = (async function () {
         try {
@@ -194,6 +198,7 @@ function enterApp(user) {
                 }
             }
             await CampusAccess.resolve(client);
+            if (currentUser?.id !== user.id) return;
             flashcardsCache = null;
             bancoState._cache = [];
             bancoState.allPreguntas = [];
@@ -211,6 +216,7 @@ function enterApp(user) {
     return campusEntry;
 }
 function enterVerifiedApp(user) {
+    verifiedCampusUserId = user.id;
     document.body.classList.remove('login-active');
     var loginScreen = document.getElementById('login-screen');
     if (loginScreen) loginScreen.classList.add('hidden');
@@ -253,7 +259,19 @@ async function restoreCampusAfterPlans() {
         sessionStorage.removeItem('alcocer_plan_return');
         history.replaceState({}, document.title, window.location.pathname);
     } catch (_) { return; }
-    if (!saved || saved.screen !== 'mapas') return;
+    if (!saved) return;
+    if (saved.screen !== 'mapas') {
+        const destinations = {
+            'resumenes-screen': () => openResumenes(),
+            'study-library': () => openStudyLibrary(),
+            'resource-browser': () => openGameMenu(),
+            'banco-screen': () => openBanco(),
+            'simulacro-screen': () => openSimulacro(),
+            'intocables-hub-screen': () => openIntocables()
+        };
+        if (destinations[saved.screen]) await destinations[saved.screen]();
+        return;
+    }
     showScreen('intocables-screen');
     switchIntocTab('mapas');
     await loadMapasMentales();
@@ -275,8 +293,8 @@ window.handleLogin = async function (e) {
     var password = document.getElementById('login-password').value;
 
     if (!email || !password) { showLoginError('completa todos los campos'); return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showLoginError('formato de correo invalido'); return; }
-    if (password.length < 6) { showLoginError('la contrasena debe tener al menos 6 caracteres'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showLoginError('formato de correo inválido'); return; }
+    if (password.length < 6) { showLoginError('la contraseña debe tener al menos 6 caracteres'); return; }
 
     setLoginLoading(true);
     try {
@@ -294,7 +312,7 @@ window.handleLogin = async function (e) {
         }
 
         currentUser = result.data.user;
-        enterApp(currentUser);
+        await enterApp(currentUser);
     } catch (err) {
         console.error('Error de login:', err);
         showLoginError('error de conexión. revisa tu internet.');

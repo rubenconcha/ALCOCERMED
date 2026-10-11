@@ -23,6 +23,7 @@ function selectSample(id) {
 }
 sampleButtons.forEach(button => button.addEventListener('click', () => selectSample(button.dataset.screen)));
 window.goHome = () => selectSample('study-area');
+window.goBack = window.goHome;
 
 function renderSampleCard() {
     if (sampleIndex >= sampleCards.length) { selectSample('sample-finished'); return; }

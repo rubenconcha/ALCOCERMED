@@ -1,33 +1,41 @@
-const CACHE_NAME = 'alcocermed-main-v57';
+const CACHE_NAME = 'alcocermed-main-v58';
 const APP_SHELL = [
     './campus',
     './campus.html',
     './index.html',
     './ventas.html',
-    './styles.css?v=22',
-    './script.js?v=31',
-    './commerce.css?v=1',
-    './student-white.css?v=2',
-    './campus-theme.css?v=3',
     './assets/study-tools.svg',
     './assets/study-art/cards.png',
     './assets/study-art/map.png',
     './assets/study-art/quiz.png',
     './assets/study-art/word.png',
-
-    './student-library.js?v=3',
-    './platform-polish.js?v=1',
-    './campus-access.js?v=6',
-    './campus-preview.css?v=3',
-    './campus-access.css?v=1',
-    './config.js',
-    './device_guard.js',
-    './manifest.webmanifest',
     './logo%20app%20juegos.png',
     './assets/flashcard-icons/mal-3d.png',
     './assets/flashcard-icons/regular-3d.png',
     './assets/flashcard-icons/bien-smile-3d.png',
-    './assets/flashcard-icons/facil-3d.png'
+    './assets/flashcard-icons/facil-3d.png',
+    './manifest.webmanifest',
+    './styles.css?v=35',
+    './commerce.css?v=1',
+    './student-white.css?v=2',
+    './campus-theme.css?v=3',
+    './campus-access.css?v=2',
+    './campus-navigation.css?v=3',
+    './campus-home.css?v=5',
+    './campus-topics.css?v=3',
+    './login-polish.css?v=1',
+    './campus-preview.css?v=3',
+    './platform-polish.js?v=1',
+    './config.js',
+    './device_guard.js?v=4',
+    './campus-access.js?v=9',
+    './script.js?v=43',
+    './mindmap-branch-labels.js?v=2',
+    './mindmap-viewer.js?v=6',
+    './intocables-hub.js?v=1',
+    './simulacro-ingreso.js?v=1',
+    './student-library.js?v=8',
+    './study-summaries.js?v=2',
 ];
 
 self.addEventListener('install', function (event) {
@@ -58,12 +66,12 @@ self.addEventListener('fetch', function (event) {
     const url = new URL(request.url);
 
     if (request.method !== 'GET' || url.protocol.indexOf('http') !== 0) return;
-    if (url.hostname.indexOf('supabase.co') !== -1) return;
+    if (url.origin !== self.location.origin || url.pathname.startsWith('/api/')) return;
 
     event.respondWith(
         fetch(request)
             .then(function (response) {
-                if (response && response.ok && response.type !== 'opaque') {
+                if (response && response.ok && response.type !== 'opaque' && !/no-store|private/i.test(response.headers.get('Cache-Control') || '')) {
                     const copy = response.clone();
                     caches.open(CACHE_NAME).then(function (cache) {
                         cache.put(request, copy);
