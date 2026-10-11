@@ -5275,6 +5275,17 @@ body.sidebar-collapsed .sidebar .nav-item-simple a:hover::before {
     margin-bottom: 20px;
     flex-wrap: wrap;
 }
+.mm-filter-field { flex: 1 1 210px; min-width: 0; }
+.mm-topic-field { flex-grow: 1.35; }
+.mm-search-field { flex-grow: 1.1; }
+.mm-filter-field > label { display: block; margin: 0 0 7px; color: #36506b; font-size: .76rem; font-weight: 800; }
+.mm-filter-field .banco-select-btn, .mm-filter-field select, .mm-filter-field .vc-search-wrap { width: 100%; min-height: 46px; border: 1px solid #cddce8; border-radius: 10px; background: #fff; color: #172a42; }
+.mm-filter-field select { padding: 10px 13px; font: inherit; font-size: .88rem; cursor: pointer; }
+.mm-filter-field .vc-search-wrap { margin: 0; }
+.mm-filter-field .vc-search-input::placeholder { color: #8a9aab; }
+.mm-filter-field select:focus-visible, .mm-filter-field .banco-select-btn:focus-visible, .mm-filter-field input:focus-visible { outline: 2px solid #238cc1; outline-offset: 2px; }
+.mm-clear-filters { align-self: flex-end; min-height: 46px; padding: 0 9px; border: 0; background: transparent; color: #126b9b; font: inherit; font-size: .81rem; font-weight: 800; cursor: pointer; }
+.mm-results-count { margin: -5px 0 14px; color: #62758b; font-size: .84rem; }
 
 /* Grid mapas mentales */
 .mm-grid {
@@ -5566,7 +5577,10 @@ body.sidebar-collapsed .sidebar .nav-item-simple a:hover::before {
 
     .intoc-filter-row {
         flex-direction: column;
+        align-items: stretch;
     }
+    .mm-filter-field { flex-basis: auto; width: 100%; }
+    .mm-clear-filters { align-self: flex-start; min-height: 32px; padding: 0; }
 }
 
 @media (max-width: 480px) {

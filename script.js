@@ -255,6 +255,7 @@ async function restoreCampusAfterPlans() {
     var search = document.getElementById('mm-search-input');
     if (search) search.value = saved.search || '';
     selectMmMateria(saved.materia || null);
+    if (saved.tema) selectMmTema(saved.tema);
     requestAnimationFrame(function () {
         requestAnimationFrame(function () { window.scrollTo(0, Math.max(0, Number(saved.scrollY) || 0)); });
     });
@@ -3711,17 +3712,19 @@ var mmState = {
     allMapas: [],
     filteredMapas: [],
     selectedMateria: null,
+    selectedTema: null,
     currentTab: 'mapas'
 };
 
 window.openMindMaps = async function () {
+    showScreen('intocables-screen');
+    switchIntocTab('mapas');
+    mmState.selectedMateria = null;
+    mmState.selectedTema = null;
+    document.getElementById('mm-materia-text').textContent = 'Todas las materias';
+    document.getElementById('mm-search-input').value = '';
     await loadMapasMentales();
-    resourceChooser('Mapas mentales', [...new Set(mmState.allMapas.map(m => m.materia))], materia => {
-        showScreen('intocables-screen');
-        switchIntocTab('mapas');
-        document.getElementById('mm-search-input').value = '';
-        selectMmMateria(materia);
-    }, 'Elige una materia para ver sus mapas. Después abre el tema que necesitas.');
+    closeMobileSidebar();
 };
 window.openIntocables = function () {
     resourceChooser('Intocables', ['Mapas mentales'], name => {
@@ -3827,6 +3830,7 @@ async function loadMapasMentales() {
         ];
         mmState.allMapas = localMapas;
         populateMmMaterias();
+        populateMmTemas();
         updateIntocStats();
         filterMapas();
     } catch (e) {
@@ -3858,6 +3862,29 @@ function populateMmMaterias() {
     });
 }
 
+function mmTopicKey(m) {
+    return (campo(m, 'materia') || '') + '\u001f' + (campo(m, 'titulo') || '');
+}
+
+function populateMmTemas() {
+    var select = document.getElementById('mm-tema-select');
+    if (!select) return;
+    var previous = mmState.selectedTema;
+    var rows = mmState.allMapas.filter(function (m) {
+        return !mmState.selectedMateria || campo(m, 'materia') === mmState.selectedMateria;
+    });
+    select.replaceChildren(new Option('Todos los temas', ''));
+    rows.sort(function (a, b) {
+        return (campo(a, 'titulo') || '').localeCompare(campo(b, 'titulo') || '', 'es');
+    }).forEach(function (m) {
+        var title = campo(m, 'titulo') || 'Sin título';
+        var label = mmState.selectedMateria ? title : title + ' · ' + (campo(m, 'materia') || '');
+        select.add(new Option(label, mmTopicKey(m)));
+    });
+    select.value = rows.some(function (m) { return mmTopicKey(m) === previous; }) ? previous : '';
+    mmState.selectedTema = select.value || null;
+}
+
 window.toggleMmDropdown = function () {
     var dd = document.getElementById('mm-materia-dropdown');
     var btn = document.getElementById('mm-materia-btn');
@@ -3865,40 +3892,65 @@ window.toggleMmDropdown = function () {
     var isOpen = !dd.classList.contains('hidden');
     dd.classList.toggle('hidden', isOpen);
     btn.classList.toggle('open', !isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
 };
 
 window.selectMmMateria = function (materia) {
     mmState.selectedMateria = materia;
+    mmState.selectedTema = null;
     var el = document.getElementById('mm-materia-text');
-    if (el) el.textContent = materia ? materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') : 'todas las materias';
+    if (el) el.textContent = materia ? materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') : 'Todas las materias';
     var dd = document.getElementById('mm-materia-dropdown');
     var btn = document.getElementById('mm-materia-btn');
     if (dd) dd.classList.add('hidden');
-    if (btn) btn.classList.remove('open');
+    if (btn) { btn.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+    populateMmTemas();
     filterMapas();
 };
 
+window.selectMmTema = function (tema) {
+    mmState.selectedTema = tema || null;
+    filterMapas();
+};
+
+window.clearMmFilters = function () {
+    document.getElementById('mm-search-input').value = '';
+    selectMmMateria(null);
+};
+
+function normalizeMmText(value) {
+    return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
 window.filterMapas = function () {
-    var q = ((document.getElementById('mm-search-input') || {}).value || '').toLowerCase();
+    var q = normalizeMmText(((document.getElementById('mm-search-input') || {}).value || '').trim());
     mmState.filteredMapas = mmState.allMapas.filter(function (m) {
         var matchMat = !mmState.selectedMateria || campo(m, 'materia') === mmState.selectedMateria;
-        var titulo = (campo(m, 'titulo') || '').toLowerCase();
-        var matchQ = !q || titulo.includes(q);
-        return matchMat && matchQ;
+        var matchTema = !mmState.selectedTema || mmTopicKey(m) === mmState.selectedTema;
+        var searchable = normalizeMmText((campo(m, 'titulo') || '') + ' ' + (campo(m, 'descripcion') || ''));
+        var matchQ = !q || searchable.includes(q);
+        return matchMat && matchTema && matchQ;
     });
     if (window.CampusAccess && CampusAccess.isFree()) {
         mmState.filteredMapas.sort(function (a, b) {
             return Number(Boolean(campo(b, 'acceso_gratis'))) - Number(Boolean(campo(a, 'acceso_gratis')));
         });
     }
+    var count = document.getElementById('mm-results-count');
+    if (count) count.textContent = mmState.filteredMapas.length + (mmState.filteredMapas.length === 1 ? ' mapa' : ' mapas');
+    var emptyTitle = document.getElementById('mm-empty-title');
+    var emptyText = document.getElementById('mm-empty-text');
+    if (emptyTitle) emptyTitle.textContent = mmState.allMapas.length ? 'No hay mapas para estos filtros' : 'Aún no hay mapas mentales';
+    if (emptyText) emptyText.textContent = mmState.allMapas.length ? 'Prueba otra materia, tema o palabra.' : 'Los mapas se irán publicando poco a poco.';
     renderMmGrid();
 };
 
 function renderMmGrid() {
     setMmState(mmState.filteredMapas.length === 0 ? 'empty' : 'grid');
     var grid = document.getElementById('mm-grid');
-    if (!grid || mmState.filteredMapas.length === 0) return;
+    if (!grid) return;
     grid.innerHTML = '';
+    if (mmState.filteredMapas.length === 0) return;
     mmState.filteredMapas.forEach(function (m, index) {
         var titulo = campo(m, 'titulo') || 'Sin título';
         var materia = campo(m, 'materia') || '';

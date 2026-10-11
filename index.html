@@ -17,7 +17,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=26">
+    <link rel="stylesheet" href="styles.css?v=27">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
@@ -1141,10 +1141,10 @@
         <section id="intocables-screen" class="intoc-section hidden">
 
             <div class="intoc-header">
-                <button class="btn-back-game" onclick="openMindMaps()"><i class="fas fa-arrow-left"></i> materias</button>
+                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
                 <div>
                     <h2 class="intoc-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#core"></use></svg> Mapas mentales</h2>
-                    <p class="intoc-subtitle">Mapas para relacionar los conceptos de Biología celular.</p>
+                    <p class="intoc-subtitle">Explora los mapas por materia y tema.</p>
                 </div>
             </div>
 
@@ -1184,19 +1184,33 @@
             <!-- Panel Mapas Mentales -->
             <div id="intoc-panel-mapas">
                 <div class="intoc-filter-row">
-                    <div class="banco-custom-select" style="max-width:260px;">
-                        <button class="banco-select-btn" id="mm-materia-btn" onclick="toggleMmDropdown()">
-                            <span id="mm-materia-text">todas las materias</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="banco-dropdown hidden" id="mm-materia-dropdown"></div>
+                    <div class="mm-filter-field">
+                        <label for="mm-materia-btn">Materia</label>
+                        <div class="banco-custom-select">
+                            <button type="button" class="banco-select-btn" id="mm-materia-btn" onclick="toggleMmDropdown()" aria-haspopup="true" aria-expanded="false">
+                                <span id="mm-materia-text">Todas las materias</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="banco-dropdown hidden" id="mm-materia-dropdown"></div>
+                        </div>
                     </div>
-                    <div class="vc-search-wrap" style="flex:1;max-width:320px;">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="mm-search-input" class="vc-search-input"
-                            placeholder="buscar mapa mental..." oninput="filterMapas()">
+                    <div class="mm-filter-field mm-topic-field">
+                        <label for="mm-tema-select">Tema</label>
+                        <select id="mm-tema-select" onchange="selectMmTema(this.value)">
+                            <option value="">Todos los temas</option>
+                        </select>
                     </div>
+                    <div class="mm-filter-field mm-search-field">
+                        <label for="mm-search-input">Buscar</label>
+                        <div class="vc-search-wrap">
+                            <i class="fas fa-search"></i>
+                            <input type="search" id="mm-search-input" class="vc-search-input"
+                                placeholder="Nombre o concepto" oninput="filterMapas()">
+                        </div>
+                    </div>
+                    <button type="button" class="mm-clear-filters" onclick="clearMmFilters()">Limpiar filtros</button>
                 </div>
+                <p id="mm-results-count" class="mm-results-count" aria-live="polite"></p>
                 <div id="mm-loading" class="vc-state-wrap">
                     <div class="vc-spinner"><i class="fas fa-spinner fa-spin"></i></div>
                     <p>cargando mapas mentales...</p>
@@ -1204,8 +1218,8 @@
                 <div id="mm-grid" class="mm-grid hidden"></div>
                 <div id="mm-empty" class="vc-state-wrap hidden">
                     <i class="fas fa-project-diagram" style="font-size:2.5rem;color:#d1d5db;"></i>
-                    <h3>sin mapas mentales todavía</h3>
-                    <p>los mapas mentales se irán publicando poco a poco.<br>vuelve pronto.</p>
+                    <h3 id="mm-empty-title">No hay mapas para estos filtros</h3>
+                    <p id="mm-empty-text">Prueba otra materia, tema o palabra.</p>
                 </div>
             </div>
 
@@ -1267,8 +1281,8 @@
     <script src="platform-polish.js?v=1"></script>
     <script src="config.js"></script>
     <script src="device_guard.js?v=4"></script>
-    <script src="campus-access.js?v=7"></script>
-    <script src="script.js?v=38"></script>
+    <script src="campus-access.js?v=8"></script>
+    <script src="script.js?v=39"></script>
     <script src="simulacro-ingreso.js?v=1"></script>
     <script src="student-library.js?v=8"></script>
     <script src="study-summaries.js?v=2"></script>

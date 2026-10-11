@@ -11,6 +11,7 @@ window.CampusAccess = (() => {
             const state = viewingMaps ? {
                 screen: 'mapas',
                 materia: window.mmState?.selectedMateria || null,
+                tema: window.mmState?.selectedTema || null,
                 search: document.getElementById('mm-search-input')?.value || '',
                 scrollY: window.scrollY || 0
             } : { screen: 'inicio' };
