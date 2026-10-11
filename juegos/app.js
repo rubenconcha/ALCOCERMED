@@ -4603,7 +4603,9 @@ function renderQuizQuestion() {
     }
     // Identificar partes (DND)
     else if (tipo === 'dnd') {
-        var imgUrl = (opciones && opciones[0]) ? opciones[0].pregunta_imagen : '';
+        var premiumDndImage = window.premiumGameImages && window.premiumGameImages[pregunta.id];
+        var imgUrl = premiumDndImage ? premiumDndImage.src : ((opciones && opciones[0]) ? opciones[0].pregunta_imagen : '');
+        var imgAlt = premiumDndImage ? premiumDndImage.alt : 'Lámina para relacionar conceptos';
         quizSelectedDndLabel = -1;
         quizSelectedDndSlot = -1;
         quizDndMatches = {};
@@ -4613,7 +4615,7 @@ function renderQuizQuestion() {
         html += '  <div class="quiz-dnd-workspace">';
         html += '    <div id="dnd-student-container" class="quiz-dnd-map-shell">';
         html += '      <div class="quiz-dnd-image-stage">';
-        html += '        <img class="quiz-dnd-image" src="' + escapeHtml(imgUrl) + '" alt="Imagen de la pregunta">';
+        html += '        <img class="quiz-dnd-image" src="' + escapeHtml(imgUrl) + '" alt="' + escapeHtml(imgAlt) + '">';
         for (var i = 0; i < opciones.length; i++) {
             var o = opciones[i];
             if (o.pinX !== undefined && o.pinY !== undefined) {

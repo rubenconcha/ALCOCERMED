@@ -168,5 +168,13 @@ window.premiumGameImages = {
   "2a98c39a-21ef-5658-831d-405968f64bd4": {
     "src": "/juegos/assets/preguntas-premium/hipotesis.webp",
     "alt": "Comparación experimental de cultivos celulares"
+  },
+  "a851e479-0f22-02ec-f4f3-0b837aa69da8": {
+    "src": "/juegos/assets/preguntas-premium/demo-biologia-conceptos.webp",
+    "alt": "Seis escenas: división celular, bacteria, célula humana, virus, prion y ADN"
+  },
+  "776bf600-09c8-1379-375b-d2684147f830": {
+    "src": "/juegos/assets/preguntas-premium/demo-biologia-adn-celulas.webp",
+    "alt": "Bacteria con nucleoide, célula humana con núcleo y doble hélice de ADN"
   }
 };
