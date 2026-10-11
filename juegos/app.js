@@ -4741,6 +4741,7 @@ function renderQuizQuestion() {
         };
         art.addEventListener('load', beginTimer, { once: true });
         art.addEventListener('error', beginTimer, { once: true });
+        if (art.complete) beginTimer();
         setTimeout(beginTimer, 6000);
     } else {
         quizQuestionStartTime = Date.now();
