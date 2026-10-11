@@ -130,7 +130,7 @@ def import_collection(source):
             (output/(slug+'.json')).write_text(json.dumps({**meta,'questions':questions},ensure_ascii=False,indent=2),encoding='utf-8')
             exams.append(meta)
             print(slug,len(questions),'missing:',missing)
-        (ROOT/'content'/'past-exams'/'catalog.json').write_text(json.dumps({'source':'documento_prepa_ben_carson_editado.docx','sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'exams':exams},ensure_ascii=False,indent=2),encoding='utf-8')
+        (ROOT/'content'/'past-exams'/'catalog.json').write_text(json.dumps({'freeYear':YEARS[-1],'source':'documento_prepa_ben_carson_editado.docx','sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'exams':exams},ensure_ascii=False,indent=2),encoding='utf-8')
         (ROOT/'tmp'/'past-exams-source'/'import-issues.json').write_text(json.dumps(issues,indent=2),encoding='utf-8')
         print('Key issues:',json.dumps(issues))
 

@@ -3,7 +3,7 @@
 Fuente: `C:\Users\PC\Downloads\documento_prepa_ben_carson_editado.docx`.
 El catálogo registra el SHA-256 del documento importado. Se conservaron los enunciados y la numeración del Word, sin corregir afirmaciones deliberadamente falsas de las preguntas.
 
-15 exámenes, 6 gestiones, 1491 preguntas calificables. El catálogo público contiene solo información de los exámenes. Las preguntas y las imágenes de los patrones se sirven desde `api/past-exam.js`, previa comprobación de sesión y acceso en `campus_access`. El primer parcial 2021 sirve como muestra gratuita; los demás requieren un plan vigente.
+15 exámenes, 6 gestiones, 1491 preguntas calificables. El catálogo público contiene solo información de los exámenes. Las preguntas y las imágenes de los patrones se sirven desde `api/past-exam.js`, previa comprobación de sesión y acceso en `campus_access`. Todos los exámenes y patrones de la última gestión (2025–2026) están disponibles para cuentas gratuitas. Las gestiones anteriores requieren un plan vigente. La gestión gratuita se define en `catalog.freeYear`, compartida por la interfaz y el servidor.
 
 Observaciones del documento original:
 

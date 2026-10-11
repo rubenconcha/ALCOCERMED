@@ -59,15 +59,60 @@ test('el servidor verifica la sesión y el plan antes de entregar preguntas o pa
         global.fetch = async () => ({ ok: true, json: async () => ({ ready: true, premium: false }) });
         assert.equal((await run('2021-1', '')).code, 401);
         assert.equal((await run('../resumen')).code, 404);
-        const sample = await run('2021-1');
-        assert.equal(sample.code, 200); assert.equal(JSON.parse(sample.bytes).questions.length, 100);
-        assert.equal((await run('2025-2026-2')).code, 403);
-        assert.equal((await run('2025-2026-2', 'valid', '1')).code, 403);
+        assert.equal(catalog.freeYear, '2025–2026');
+        for (const exam of catalog.exams) {
+            const questionResponse = await run(exam.id);
+            const patternResponse = await run(exam.id, 'valid', '1');
+            const expected = exam.year === catalog.freeYear ? 200 : 403;
+            assert.equal(questionResponse.code, expected, exam.id + ' questions');
+            assert.equal(patternResponse.code, expected, exam.id + ' pattern');
+            if (expected === 200) assert.equal(JSON.parse(questionResponse.bytes).questions.length, exam.count);
+        }
         global.fetch = async () => ({ ok: true, json: async () => ({ ready: true, premium: true }) });
-        assert.equal((await run('2025-2026-3')).code, 200);
-        const pattern = await run('2025-2026-2', 'valid', '1');
-        assert.equal(pattern.code, 200); assert.equal(pattern.headers['Content-Type'], 'image/webp');
+        for (const exam of catalog.exams) {
+            assert.equal((await run(exam.id)).code, 200);
+            const pattern = await run(exam.id, 'valid', '1');
+            assert.equal(pattern.code, 200); assert.equal(pattern.headers['Content-Type'], 'image/webp');
+        }
         global.fetch = async () => { throw new Error('timeout'); };
         assert.equal((await run('2025-2026-2')).code, 503);
     } finally { global.fetch = originalFetch; }
+});
+
+test('la cuenta gratuita ve tres exámenes abiertos de la última gestión y doce con candado que llevan a planes', async () => {
+    function element() {
+        return { children: [], value: '', options: [{}], events: {}, className: '',
+            append(...children) { this.children.push(...children); this.options.push(...children); },
+            replaceChildren(...children) { this.children = children; },
+            addEventListener(name, fn) { this.events[name] = fn; }, setAttribute() {}, removeAttribute() {} };
+    }
+    const elements = new Map();
+    const get = id => { if (!elements.has(id)) elements.set(id, element()); return elements.get(id); };
+    let free = true, planVisits = 0;
+    const context = {
+        window: { addEventListener() {} },
+        document: { getElementById: get, createElement: element, createTextNode: text => ({ textContent: text }) },
+        fetch: async () => ({ ok: true, json: async () => catalog }),
+        CampusAccess: { isFree: () => free, unlock: () => { planVisits++; } },
+        currentUser: { id: 'student' }, simState: { timerInterval: null },
+        sessionStorage: { getItem: () => null }, showScreen() {},
+        URL: { revokeObjectURL() {} }
+    };
+    vm.runInNewContext(fs.readFileSync('past-exams.js', 'utf8'), context);
+    await context.window.openPastExams();
+    const cards = get('past-grid').children;
+    assert.equal(cards.length, 15);
+    const locked = cards.filter(card => card.className.includes('past-card-locked'));
+    assert.equal(locked.length, 12);
+    assert.equal(locked[0].children[0].children[1].children[0].className, 'fas fa-lock');
+    locked[0].children.at(-1).events.click();
+    assert.equal(planVisits, 1);
+    const latest = cards.filter(card => !card.className.includes('past-card-locked'));
+    assert.equal(latest.length, 3);
+    latest[0].children.at(-1).events.click();
+    assert.match(get('past-detail-title').textContent, /2025–2026/);
+    assert.equal(get('past-start').textContent, 'Comenzar examen');
+    free = false;
+    await context.window.openPastExams();
+    assert.equal(get('past-grid').children.filter(card => card.className.includes('past-card-locked')).length, 0);
 });

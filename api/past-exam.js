@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const catalog = require('../content/past-exams/catalog.json');
-const ids = new Set(catalog.exams.map(exam => exam.id));
+const exams = new Map(catalog.exams.map(exam => [exam.id, exam]));
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
 
@@ -11,7 +11,7 @@ module.exports = async function handler(req, res) {
   res.setHeader('X-Robots-Tag', 'noindex');
   if (req.method !== 'GET') return res.status(405).end();
   const id = typeof req.query.id === 'string' ? req.query.id : '';
-  if (!ids.has(id)) return res.status(404).end();
+  if (!exams.has(id)) return res.status(404).end();
   const token = /^Bearer\s+(.+)$/i.exec(req.headers.authorization || '')?.[1];
   if (!token) return res.status(401).end();
   try {
@@ -22,7 +22,7 @@ module.exports = async function handler(req, res) {
     if (!response.ok) return res.status(response.status === 401 ? 401 : 503).end();
     const access = await response.json();
     if (!access?.ready) return res.status(403).end();
-    if (!access.premium && id !== '2021-1') return res.status(403).end();
+    if (!access.premium && exams.get(id).year !== catalog.freeYear) return res.status(403).end();
   } catch (_) { return res.status(503).end(); }
   const pattern = req.query.pattern === '1';
   const file = path.join(process.cwd(), 'api', '_past_exams', id + (pattern ? '-pattern.webp' : '.json'));

@@ -24,3 +24,7 @@
 
 .past-exams-screen .btn-primary{color:#192840!important}
 #sim-exam .bq-dificultad-label[hidden],#sim-dificultad[hidden]{display:none!important}
+
+.past-card-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.past-card-locked{border-top-color:#d39a23}
+.past-lock-badge{display:inline-flex;align-items:center;gap:5px;color:#8a5b13;background:#fff5dc;border:1px solid #f1dda7;border-radius:20px;padding:5px 9px;font-size:.7rem;font-weight:700}

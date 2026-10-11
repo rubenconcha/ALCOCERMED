@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v60';
+const CACHE_NAME = 'alcocermed-main-v61';
 const APP_SHELL = [
     './campus',
     './campus.html',
@@ -38,8 +38,8 @@ const APP_SHELL = [
     './simulacro-ingreso.js?v=2',
     './student-library.js?v=8',
     './study-summaries.js?v=3',
-    './past-exams.js?v=1',
-    './past-exams.css?v=1',
+    './past-exams.js?v=2',
+    './past-exams.css?v=2',
 ];
 
 self.addEventListener('install', function (event) {

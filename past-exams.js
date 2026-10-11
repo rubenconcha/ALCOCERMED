@@ -1,13 +1,14 @@
 'use strict';
 (() => {
-    let catalogPromise, selected, loading = false, patternUrl;
+    let catalogPromise, selected, loading = false, patternUrl, freeYear;
     const examCache = new Map();
     const $ = id => document.getElementById(id);
     const readableError = () => 'No se pudo cargar el examen. Intenta de nuevo.';
 
     async function catalog() {
-        if (!catalogPromise) catalogPromise = fetch('/content/past-exams/catalog.json?v=1')
+        if (!catalogPromise) catalogPromise = fetch('/content/past-exams/catalog.json?v=2')
             .then(response => { if (!response.ok) throw new Error(readableError()); return response.json(); })
+            .then(data => { freeYear = data.freeYear; return data; })
             .catch(error => { catalogPromise = null; throw error; });
         return catalogPromise;
     }
@@ -23,6 +24,7 @@
         if (!response.ok) throw new Error(readableError());
         return pattern ? response.blob() : response.json();
     }
+    const isLocked = exam => CampusAccess.isFree() && exam.year !== freeYear;
     function sourceNotes(exam) {
         const notes = [];
         if (exam.missingNumbers.length) notes.push('En el Word original faltan las preguntas ' + exam.missingNumbers.join(', ') + '.');
@@ -43,15 +45,22 @@
         const root = $('past-grid'); root.replaceChildren();
         $('past-count').textContent = exams.length + (exams.length === 1 ? ' examen' : ' exámenes');
         exams.slice().reverse().forEach(exam => {
-            const card = document.createElement('article'); card.className = 'past-card';
+            const locked = isLocked(exam);
+            const card = document.createElement('article'); card.className = 'past-card' + (locked ? ' past-card-locked' : '');
             const eyebrow = document.createElement('span'); eyebrow.className = 'entrance-eyebrow'; eyebrow.textContent = 'GESTIÓN ' + exam.year;
             const title = document.createElement('h3'); title.textContent = exam.type;
             const meta = document.createElement('p'); meta.textContent = exam.count + ' preguntas · ' + exam.duration + ' minutos';
             const note = document.createElement('p'); note.className = 'past-card-note';
             note.textContent = sourceNotes(exam) ? 'Con observaciones del documento original' : 'Preguntas y patrón original';
-            const button = document.createElement('button'); button.type = 'button'; button.className = 'btn-primary'; button.textContent = 'Ver examen →';
-            button.addEventListener('click', () => selectExam(exam));
-            card.append(eyebrow, title, meta, note, button); root.append(card);
+            const button = document.createElement('button'); button.type = 'button'; button.className = 'btn-primary'; button.textContent = locked ? 'Desbloquear' : 'Ver examen →';
+            button.addEventListener('click', () => { if (isLocked(exam)) CampusAccess.unlock(); else selectExam(exam); });
+            const heading = document.createElement('div'); heading.className = 'past-card-heading'; heading.append(eyebrow);
+            if (locked) {
+                const badge = document.createElement('span'); badge.className = 'past-lock-badge';
+                const icon = document.createElement('i'); icon.className = 'fas fa-lock'; icon.setAttribute('aria-hidden', 'true');
+                badge.append(icon, document.createTextNode(' Bloqueado')); heading.append(badge);
+            }
+            card.append(heading, title, meta, note, button); root.append(card);
         });
         $('past-empty').hidden = exams.length !== 0;
     }
@@ -63,7 +72,7 @@
         $('past-source-notes').textContent = sourceNotes(exam);
         $('past-source-notes').hidden = !sourceNotes(exam);
         $('past-back').innerHTML = '<i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a los exámenes';
-        $('past-start').textContent = CampusAccess.isFree() && exam.id !== '2021-1' ? 'Desbloquear' : 'Comenzar examen';
+        $('past-start').textContent = isLocked(exam) ? 'Desbloquear' : 'Comenzar examen';
     }
     window.openPastExams = async function () {
         if (simState.timerInterval) {
@@ -94,7 +103,7 @@
     window.startPastExam = async function () {
         if (!selected || loading) return;
         const exam = selected;
-        if (CampusAccess.isFree() && exam.id !== '2021-1') return CampusAccess.unlock();
+        if (isLocked(exam)) return CampusAccess.unlock();
         const accountId = currentUser?.id || '';
         loading = true; $('past-start').disabled = true; $('past-start').textContent = 'Preparando preguntas…';
         try {
@@ -114,7 +123,7 @@
             $('sim-another-exam').textContent = 'Elegir otro examen pasado';
             showScreen('simulacro-screen'); showSimScreen('sim-exam'); buildSimCircles(); renderSimQuestion(); startSimTimer();
         } catch (error) { showToast(error.message, 'error'); }
-        finally { loading = false; $('past-start').disabled = false; $('past-start').textContent = CampusAccess.isFree() && exam.id !== '2021-1' ? 'Desbloquear' : 'Comenzar examen'; }
+        finally { loading = false; $('past-start').disabled = false; $('past-start').textContent = isLocked(exam) ? 'Desbloquear' : 'Comenzar examen'; }
     };
     window.returnToExamSelection = function () {
         if (simState.mode === 'pasado') {
