@@ -4344,6 +4344,8 @@ var contextualGameImages = {
 };
 
 function getQuizQuestionImage(pregunta, tipo) {
+    var premium = pregunta && window.premiumGameImages && window.premiumGameImages[pregunta.id];
+    if (premium) return premium.src;
     var morfoIllustration = pregunta && morfoConceptImages[pregunta.id];
     if (morfoIllustration) return morfoIllustration.src;
     var illustration = getNervousQuestionIllustration(pregunta);
@@ -4374,6 +4376,7 @@ function getNervousQuestionIllustration(pregunta) {
 function renderQuizQuestionImageWrap(pregunta, tipo) {
     var wrap = document.getElementById('quiz-question-image-wrap');
     if (!wrap) return;
+    var premium = pregunta && window.premiumGameImages && window.premiumGameImages[pregunta.id];
     var illustration = getNervousQuestionIllustration(pregunta);
     var morfoIllustration = pregunta && morfoConceptImages[pregunta.id];
     var contextual = pregunta && contextualGameImages[pregunta.id];
@@ -4381,7 +4384,7 @@ function renderQuizQuestionImageWrap(pregunta, tipo) {
     var questionImage = getQuizQuestionImage(pregunta, tipo);
     if (questionImage && tipo !== 'dnd') {
         wrap.hidden = false;
-        wrap.innerHTML = '<img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(morfoIllustration ? morfoIllustration.alt : (illustration ? illustration.alt : (contextual ? contextual.alt : 'Imagen de la pregunta'))) + '">';
+        wrap.innerHTML = '<img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(premium ? premium.alt : (morfoIllustration ? morfoIllustration.alt : (illustration ? illustration.alt : (contextual ? contextual.alt : 'Imagen de la pregunta')))) + '">';
         if (illustration) {
             wrap.innerHTML += illustration.credit
                 ? '<small class="quiz-image-credit">' + escapeHtml(illustration.credit) + '</small>'

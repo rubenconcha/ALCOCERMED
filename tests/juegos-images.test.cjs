@@ -19,7 +19,8 @@ const mapStart = source.indexOf('var contextualGameImages = {');
 const mapMatch = /\r?\n};/.exec(source.slice(mapStart));
 assert(mapStart >= 0 && mapMatch);
 const mapDeclaration = source.slice(mapStart, mapStart + mapMatch.index + mapMatch[0].length);
-const context = { morfoConceptImages: {}, getNervousQuestionIllustration: () => null };
+const context = { window: {}, morfoConceptImages: {}, getNervousQuestionIllustration: () => null };
+vm.runInNewContext(fs.readFileSync(path.join(root, 'juegos/premium-game-images.js'), 'utf8'), context);
 vm.runInNewContext([
   declaration('isGameOverviewImage'),
   mapDeclaration,
@@ -39,8 +40,11 @@ const bodyOverview = '/juegos/assets/capitulo1-tema1-saladin/cap1_regiones_corpo
 assert.equal(context.getQuizQuestionImage({ id: 'otra', opciones: [{ pregunta_imagen: bodyOverview }] }, 'mc'), '');
 assert.equal(
   context.getQuizQuestionImage({ id: '601b9a75-345b-5de9-bd63-00da7fdf67ee', opciones: [{ pregunta_imagen: '/juegos/assets/biologia-celular-parciales/cap01_intro_biologia_celular.svg' }] }, 'mc'),
-  '/juegos/assets/preguntas-contextuales/teoria-celular.svg'
+  '/juegos/assets/preguntas-premium/teoria-celular.webp'
 );
+for (const id of ['01078577-e2a3-8f02-7344-30a895c50fe4', '292fea5d-ca1a-5eef-b886-55ee9b5351af']) {
+  assert.equal(context.getQuizQuestionImage({ id, opciones: [{ pregunta_imagen: null }] }, 'mc'), '/juegos/assets/preguntas-premium/procariota.webp');
+}
 assert.equal(context.getQuizQuestionImage({ id: 'otra', opciones: [{ pregunta_imagen: '/juegos/assets/sentidos-saladin/ojo-retina.png' }] }, 'mc'), '/juegos/assets/sentidos-saladin/ojo-retina.png');
 
 for (const [id, image] of Object.entries(context.contextualGameImages)) {
@@ -49,4 +53,10 @@ for (const [id, image] of Object.entries(context.contextualGameImages)) {
   assert(image.alt.length > 25, `${id} requiere descripción útil`);
 }
 
-console.log(`Juegos: láminas genéricas filtradas, ${Object.keys(context.contextualGameImages).length} ilustraciones contextuales verificadas.`);
+for (const [id, image] of Object.entries(context.window.premiumGameImages)) {
+  assert.match(id, /^[0-9a-f-]{36}$/);
+  assert(fs.existsSync(path.join(root, image.src.replace(/^\//, ''))), `${image.src} falta`);
+  assert(image.alt.length > 25, `${id} requiere descripción útil`);
+}
+
+console.log(`Juegos: ${Object.keys(context.window.premiumGameImages).length} preguntas con ilustraciones premium, incluidas las dos versiones de procariota.`);
