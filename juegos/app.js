@@ -4502,7 +4502,8 @@ function renderQuizQuestion() {
     document.getElementById('quiz-question-number').textContent = (quizCurrentQ + 1) + ' / ' + total;
     var questionCard = document.getElementById('quiz-question-card');
     if (questionCard) {
-        questionCard.innerHTML = '<h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">' + escapeHtml(pregunta.texto || '') + '</h2>';
+        var premiumQuestion = window.premiumGameImages && window.premiumGameImages[pregunta.id];
+        questionCard.innerHTML = '<h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">' + escapeHtml((premiumQuestion && premiumQuestion.prompt) || pregunta.texto || '') + '</h2>';
     }
     renderQuizQuestionImageWrap(pregunta, tipo);
 
@@ -4618,10 +4619,13 @@ function renderQuizQuestion() {
         html += '        <img class="quiz-dnd-image" src="' + escapeHtml(imgUrl) + '" alt="' + escapeHtml(imgAlt) + '">';
         for (var i = 0; i < opciones.length; i++) {
             var o = opciones[i];
-            if (o.pinX !== undefined && o.pinY !== undefined) {
-                html += '        <div class="quiz-dnd-anchor" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';"></div>';
-                html += '        <div class="quiz-dnd-connector" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';"></div>';
-                html += '        <div class="quiz-dnd-slot" id="dnd-slot-' + i + '" data-idx="' + i + '" onclick="clickDndSlot(' + i + ')" style="--pin-x:' + o.pinX + '; --pin-y:' + o.pinY + ';">?</div>';
+            var premiumPin = premiumDndImage && premiumDndImage.pins && premiumDndImage.pins[i];
+            var pinX = premiumPin ? premiumPin[0] : o.pinX;
+            var pinY = premiumPin ? premiumPin[1] : o.pinY;
+            if (pinX !== undefined && pinY !== undefined) {
+                html += '        <div class="quiz-dnd-anchor" style="--pin-x:' + pinX + '; --pin-y:' + pinY + ';"></div>';
+                html += '        <div class="quiz-dnd-connector" style="--pin-x:' + pinX + '; --pin-y:' + pinY + ';"></div>';
+                html += '        <div class="quiz-dnd-slot" id="dnd-slot-' + i + '" data-idx="' + i + '" onclick="clickDndSlot(' + i + ')" style="--pin-x:' + pinX + '; --pin-y:' + pinY + ';">?</div>';
             }
         }
         html += '      </div>';

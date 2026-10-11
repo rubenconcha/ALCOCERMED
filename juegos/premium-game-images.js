@@ -304,5 +304,129 @@ window.premiumGameImages = {
   "ab65b469-e058-5eba-be6e-ba7fe29af7ef": {
     "src": "/juegos/assets/preguntas-premium/bc02-relacionar-cultivo.webp",
     "alt": "Placa de cultivo, medio nutritivo, incubador, línea celular y ensayo de viabilidad"
+  },
+  "0e799f9f-4d1b-2aec-a58a-18da85ea4359": {
+    "src": "/juegos/assets/preguntas-premium/demo-salud-prevencion.webp",
+    "alt": "Seis escenas de salud pública, promoción y los cuatro niveles de prevención",
+    "prompt": "Relaciona cada escena con su acción de salud pública.",
+    "pins": [
+      [
+        17,
+        25
+      ],
+      [
+        50,
+        25
+      ],
+      [
+        83,
+        25
+      ],
+      [
+        17,
+        75
+      ],
+      [
+        50,
+        75
+      ],
+      [
+        83,
+        75
+      ]
+    ]
+  },
+  "813370fb-850e-5be3-c117-3cc97e3cd903": {
+    "src": "/juegos/assets/preguntas-premium/demo-salud-prevencion.webp",
+    "alt": "Seis escenas de salud pública, promoción y los cuatro niveles de prevención",
+    "prompt": "Relaciona cada escena con su acción de salud pública.",
+    "pins": [
+      [
+        17,
+        25
+      ],
+      [
+        50,
+        25
+      ],
+      [
+        83,
+        25
+      ],
+      [
+        17,
+        75
+      ],
+      [
+        50,
+        75
+      ],
+      [
+        83,
+        75
+      ]
+    ]
+  },
+  "2fe32dbc-9da5-dbe8-35bb-82d39a50ee58": {
+    "src": "/juegos/assets/preguntas-premium/demo-salud-aplicaciones.webp",
+    "alt": "Tamizaje, rehabilitación, prevención cuaternaria, atención primaria, determinantes sociales y Carta de Ottawa",
+    "prompt": "Identifica los enfoques de salud representados en cada escena.",
+    "pins": [
+      [
+        17,
+        25
+      ],
+      [
+        50,
+        25
+      ],
+      [
+        83,
+        25
+      ],
+      [
+        17,
+        75
+      ],
+      [
+        50,
+        75
+      ],
+      [
+        83,
+        75
+      ]
+    ]
+  },
+  "54a5a1b9-61cf-58b9-cb37-b02c3dbda08b": {
+    "src": "/juegos/assets/preguntas-premium/demo-salud-aplicaciones.webp",
+    "alt": "Tamizaje, rehabilitación, prevención cuaternaria, atención primaria, determinantes sociales y Carta de Ottawa",
+    "prompt": "Identifica los enfoques de salud representados en cada escena.",
+    "pins": [
+      [
+        17,
+        25
+      ],
+      [
+        50,
+        25
+      ],
+      [
+        83,
+        25
+      ],
+      [
+        17,
+        75
+      ],
+      [
+        50,
+        75
+      ],
+      [
+        83,
+        75
+      ]
+    ]
   }
 };

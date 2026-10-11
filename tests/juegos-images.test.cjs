@@ -59,4 +59,12 @@ for (const [id, image] of Object.entries(context.window.premiumGameImages)) {
   assert(image.alt.length > 25, `${id} requiere descripción útil`);
 }
 
+for (const id of ['0e799f9f-4d1b-2aec-a58a-18da85ea4359', '2fe32dbc-9da5-dbe8-35bb-82d39a50ee58']) {
+  const art = context.window.premiumGameImages[id];
+  assert.equal(art.pins.length, 6, `${id} debe tener un punto por escena`);
+  assert.equal(new Set(art.pins.map(([x, y]) => `${x},${y}`)).size, 6, `${id} tiene puntos superpuestos`);
+  assert(art.prompt.length > 35, `${id} necesita una indicación concreta`);
+  assert.equal(context.getQuizQuestionImage({ id, opciones: [] }, 'dnd'), art.src);
+}
+
 console.log(`Juegos: ${Object.keys(context.window.premiumGameImages).length} preguntas con ilustraciones premium, incluidas las dos versiones de procariota.`);
