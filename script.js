@@ -153,6 +153,11 @@ async function initAuth() {
 
 /** Muestra login y oculta app */
 function showLoginScreen() {
+    if (flashcardReviewTimer) clearTimeout(flashcardReviewTimer);
+    flashcardReviewTimer = null;
+    flashcardTopicCards = [];
+    deck = [];
+    currentIndex = 0;
     document.body.classList.add('login-active');
     var loginScreen = document.getElementById('login-screen');
     if (loginScreen) loginScreen.classList.remove('hidden');
@@ -304,9 +309,10 @@ window.handleLogout = function() {
     if (typeof DeviceGuard !== 'undefined') DeviceGuard.stopChecking();
 
     // 1. Limpiar datos locales inmediatamente
-    var _savedDeviceId = localStorage.getItem('alcocer_device_id');
-    localStorage.clear();
-    if (_savedDeviceId) localStorage.setItem('alcocer_device_id', _savedDeviceId);
+    // Conservar las fechas de repaso, separadas por cuenta, al cerrar sesión.
+    Object.keys(localStorage).forEach(function (key) {
+        if (key !== 'alcocer_device_id' && !key.startsWith('srs_v2_')) localStorage.removeItem(key);
+    });
     sessionStorage.clear();
 
     // 2. Intentar cerrar sesión en Supabase
@@ -402,6 +408,9 @@ function isMissingSupabaseTableError(error) {
 
 let deck = [];
 let currentIndex = 0;
+let flashcardTopicCards = [];
+let flashcardReviewTimer = null;
+let flashcardRatingPending = false;
 let totalReviews = 0;
 let temasVistos = new Set();
 let ultimaMateria = '—';
@@ -431,6 +440,10 @@ function showScreen(screenId, fromBack) {
         currentCampusScreen = screenId;
     }
     closeMobileSidebar();
+    if (screenId !== 'study-area' && flashcardReviewTimer) {
+        clearTimeout(flashcardReviewTimer);
+        flashcardReviewTimer = null;
+    }
     if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
     const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen'];
@@ -444,6 +457,7 @@ function showScreen(screenId, fromBack) {
             }
         }
     });
+    if (screenId === 'study-area') refreshFlashcardReviews();
 }
 
 window.openResumenes = function () {
@@ -611,18 +625,21 @@ window.quickStartSubject = async function (asignatura) {
 // INICIAR MAZO
 // ──────────────────────────────────────────────
 function startDeck(tema, asignatura, data) {
-    deck = [];
+    if (flashcardReviewTimer) clearTimeout(flashcardReviewTimer);
+    flashcardReviewTimer = null;
+    flashcardRatingPending = false;
+    flashcardTopicCards = [];
     for (let i = 0; i < data.length; i++) {
         // Soportar columna TEMA en mayúsculas o minúsculas
         const temaVal = campo(data[i], 'tema');
-        if (normalizeDbText(temaVal) === normalizeDbText(tema)) deck.push(data[i]);
+        if (normalizeDbText(temaVal) === normalizeDbText(tema)) flashcardTopicCards.push(data[i]);
     }
-    // Aleatorizar el mazo en cada revisión (Fix: orden aleatorio)
-    deck = shuffleArray(deck);
-    if (deck.length === 0) {
+    if (flashcardTopicCards.length === 0) {
         showToast('no se encontraron tarjetas para este tema', 'error');
         return;
     }
+    // Las tarjetas programadas esperan su fecha; las nuevas están disponibles.
+    deck = shuffleArray(flashcardTopicCards.filter(isCardDue));
     currentIndex = 0;
     ultimaMateria = asignatura.toLowerCase();
 
@@ -640,6 +657,7 @@ function startDeck(tema, asignatura, data) {
 
     showScreen('study-area');
     renderCard();
+    scheduleFlashcardReview();
 }
 
 // ──────────────────────────────────────────────
@@ -651,10 +669,12 @@ function renderCard() {
     const ankiBtns = document.getElementById('anki-buttons');
     const qText = document.getElementById('q-text');
     const aText = document.getElementById('a-text');
+    const counter = document.querySelector('#study-area .study-progress-row');
+    if (counter) counter.hidden = currentIndex >= deck.length;
 
     if (currentIndex >= deck.length) {
         card.classList.remove('flipped');
-        qText.innerText = '¡terminaste este tema! 🎉';
+        qText.innerText = '¡Estás al día con este tema! Tus tarjetas volverán cuando toque repasarlas.';
         aText.innerText = '';
         btnReveal.classList.add('hidden');
         ankiBtns.classList.add('hidden');
@@ -696,19 +716,27 @@ function renderCard() {
 // SISTEMA DE REPETICION ESPACIADA (SRS)
 // ──────────────────────────────────────────────
 const SRS_INTERVALS = {
-    0: 3 * 60 * 1000,           // mal      -> 3 min
+    0: 60 * 1000,               // mal      -> 1 min
     1: 10 * 60 * 1000,          // regular  -> 10 min
-    2: 12 * 60 * 60 * 1000,     // bien     -> 12 horas
-    3: 24 * 60 * 60 * 1000      // facil    -> 1 dia
+    2: 24 * 60 * 60 * 1000,     // bien     -> 1 día
+    3: 3 * 24 * 60 * 60 * 1000  // fácil    -> 3 días
 };
 
 function getSrsKey(card) {
-    // Clave única por usuario + contenido de la tarjeta
-    const uid = (currentUser && currentUser.id) ? currentUser.id.substring(0, 8) : 'anon';
-    const raw = (campo(card, 'materia') + '|' + campo(card, 'tema') + '|' + campo(card, 'pregunta')).substring(0, 90);
-    // Simple hash: encodeURI + take 24 chars
-    const h = encodeURIComponent(raw).replace(/%/g, '').substring(0, 24);
-    return 'srs_' + uid + '_' + h;
+    const uid = (currentUser && currentUser.id) ? currentUser.id : 'anon';
+    const id = campo(card, 'id');
+    const identity = id != null && id !== '' ? 'id:' + id : JSON.stringify([
+        campo(card, 'materia'), campo(card, 'tema'), campo(card, 'pregunta')
+    ]);
+    // La clave anterior truncaba el texto y mezclaba fechas de distintas tarjetas.
+    return 'srs_v2_' + uid + '_' + encodeURIComponent(identity);
+}
+
+function getCardReviewTime(card) {
+    try {
+        const value = Number(localStorage.getItem(getSrsKey(card)));
+        return Number.isFinite(value) && value > 0 ? value : null;
+    } catch (e) { return null; }
 }
 
 function saveSrs(card, intervalMs) {
@@ -718,11 +746,46 @@ function saveSrs(card, intervalMs) {
 }
 
 function isCardDue(card) {
-    try {
-        const stored = localStorage.getItem(getSrsKey(card));
-        return !stored || Date.now() >= parseInt(stored);
-    } catch (e) { return true; }
+    const dueAt = getCardReviewTime(card);
+    return dueAt === null || Date.now() >= dueAt;
 }
+
+function enqueueDueFlashcards(insertionIndex) {
+    const queued = new Set(deck.slice(currentIndex).map(getSrsKey));
+    const due = flashcardTopicCards.filter(function (card) {
+        const dueAt = getCardReviewTime(card);
+        return dueAt !== null && dueAt <= Date.now() && !queued.has(getSrsKey(card));
+    }).sort(function (a, b) { return getCardReviewTime(a) - getCardReviewTime(b); });
+    if (due.length) {
+        deck.splice(insertionIndex, 0, ...due);
+        document.getElementById('card-total').innerText = deck.length;
+    }
+    return due.length;
+}
+
+function refreshFlashcardReviews() {
+    if (currentCampusScreen !== 'study-area') return;
+    const waiting = currentIndex >= deck.length;
+    // No interrumpir la pregunta actual: lo vencido va inmediatamente después.
+    const added = enqueueDueFlashcards(waiting ? currentIndex : currentIndex + 1);
+    if (waiting && added) renderCard();
+    scheduleFlashcardReview();
+}
+
+function scheduleFlashcardReview() {
+    if (flashcardReviewTimer) clearTimeout(flashcardReviewTimer);
+    flashcardReviewTimer = null;
+    if (currentCampusScreen !== 'study-area') return;
+    const now = Date.now();
+    const future = flashcardTopicCards.map(getCardReviewTime).filter(function (time) { return time !== null && time > now; });
+    if (future.length) {
+        flashcardReviewTimer = setTimeout(refreshFlashcardReviews, Math.min(Math.min(...future) - now, 2147483647));
+    }
+}
+
+document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) refreshFlashcardReviews();
+});
 
 function getCardNextReviewLabel(card) {
     try {
@@ -897,7 +960,8 @@ function playFlashcardRatingSound() {
 }
 
 window.rateCard = function (score) {
-    if (!deck.length || currentIndex >= deck.length) return;
+    if (!deck.length || currentIndex >= deck.length || flashcardRatingPending || !SRS_INTERVALS[score]) return;
+    flashcardRatingPending = true;
     playFlashcardRatingSound();
     const selectedButton = window.event && window.event.currentTarget && window.event.currentTarget.classList
         ? window.event.currentTarget
@@ -913,6 +977,9 @@ window.rateCard = function (score) {
     if (interval) saveSrs(card, interval);
 
     currentIndex++;
+    while (currentIndex < deck.length && !isCardDue(deck[currentIndex])) currentIndex++;
+    enqueueDueFlashcards(currentIndex);
+    scheduleFlashcardReview();
 
     // Registrar en meta diaria y sincronizar con la nube cada 5 cartas
     const newCount = incrementDailyCount();
@@ -922,6 +989,7 @@ window.rateCard = function (score) {
     }
 
     const finishRatingUi = function () {
+        flashcardRatingPending = false;
         renderCard();
         actualizarProgreso();
         if (selectedButton) selectedButton.classList.remove('is-selected');

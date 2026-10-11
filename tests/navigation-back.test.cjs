@@ -59,7 +59,7 @@ test('los botones Volver del campus regresan por el recorrido y Volver al inicio
   const context = {
     window: { scrollTo() {}, innerWidth: 1200 },
     document: { getElementById: id => elements[id] || null },
-    closeMobileSidebar() {}, quizTimer: null, bancoState: null,
+    closeMobileSidebar() {}, quizTimer: null, flashcardReviewTimer: null, bancoState: null,
     updateHomeStats() {}, confirm: () => true
   };
   vm.runInNewContext(source.slice(start, end), context);
