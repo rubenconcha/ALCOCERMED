@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f5fbff"/><stop offset="1" stop-color="#fff8e9"/></linearGradient>
+<linearGradient id="cell" x2="1" y2="1"><stop stop-color="#c8edfa"/><stop offset="1" stop-color="#e5d8fa"/></linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1e3a5f" flood-opacity=".14"/></filter></defs>
+<rect width="960" height="480" rx="28" fill="url(#bg)"/>
+<path d="M0 378C202 301 285 420 478 370S796 334 960 398V480H0Z" fill="#e9f4fb" opacity=".65"/>
+<g transform="translate(248 241) scale(1.08)" filter="url(#shadow)">
+<path d="M0-91C55-93 98-47 94 6C89 66 45 94-11 90C-71 87-99 38-92-17C-86-67-51-91 0-91Z" fill="url(#cell)" stroke="#3b9bc4" stroke-width="7"/>
+<ellipse cx="-8" cy="-4" rx="33" ry="29" fill="#b69bd6" stroke="#6e54a5" stroke-width="5"/>
+<circle cx="-6" cy="-6" r="11" fill="#674792"/>
+<ellipse cx="46" cy="-42" rx="15" ry="8" transform="rotate(-25 46 -42)" fill="#f3ad6b" stroke="#d5804d" stroke-width="3"/>
+<ellipse cx="38" cy="44" rx="15" ry="8" transform="rotate(26 38 44)" fill="#f3ad6b" stroke="#d5804d" stroke-width="3"/>
+<path d="M-70 13q15-14 23-2m-23 19q18-7 22 4M15-69q17-2 21 9" fill="none" stroke="#4eb3ab" stroke-width="6" stroke-linecap="round"/></g><path d="M364 238L490 238" stroke="#e8a543" stroke-width="9" stroke-linecap="round"/><path d="M471.2 249.5L490 238L471.2 226.5" fill="none" stroke="#e8a543" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(615 239)"><path d="M-86-8c8-59 78-63 86-12 8-51 78-47 86 12 10 65-86 118-86 118S-96 57-86-8Z" fill="#f2a09a" stroke="#c86770" stroke-width="8"/></g><g transform="translate(810 252) scale(0.65)" stroke="#1d688d" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<path d="M-45-116l40-30 54 66-40 30Z" fill="#d6eff7"/><path d="M23-36q84 41 25 116m-100 15h117m-45-57h-96"/><circle cx="-11" cy="-44" r="13" fill="#edae55"/></g></svg>
