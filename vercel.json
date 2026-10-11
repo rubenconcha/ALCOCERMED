@@ -2,6 +2,16 @@
   "functions": {
     "api/resumen.js": { "includeFiles": "api/_pdf/**" }
   },
+  "headers": [
+    {
+      "source": "/admin",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }]
+    },
+    {
+      "source": "/admin.html",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }]
+    }
+  ],
   "rewrites": [
     {
       "source": "/registro",
