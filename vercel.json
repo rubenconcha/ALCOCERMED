@@ -19,11 +19,11 @@
     },
     {
       "source": "/campus",
-      "destination": "/index.html"
+      "destination": "/campus.html"
     },
     {
       "source": "/ingresar",
-      "destination": "/index.html"
+      "destination": "/campus.html"
     },
     {
       "source": "/registro",

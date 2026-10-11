@@ -28,7 +28,7 @@ test('al elegir un plan desde mapas se recuerda materia, búsqueda y posición',
   window.CampusAccess.unlock();
   assert.equal(window.location.href, '/planes?desde=campus');
   assert.deepEqual(JSON.parse(sessionStorage.getItem('alcocer_plan_return')), {
-    screen: 'mapas', materia: 'Biología Celular', search: 'mitocondrias', scrollY: 420
+    screen: 'mapas', materia: 'Biología Celular', tema: null, search: 'mitocondrias', scrollY: 420
   });
 });
 
