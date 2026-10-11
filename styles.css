@@ -7093,7 +7093,7 @@ body.login-active .overlay {
 }
 .resumenes-card-body button:hover { filter: brightness(.97); }
 .resumenes-card-locked .resumenes-card-body button { background: #e9eef3; color: #344961; }
-.resumenes-viewer { width: min(1100px, calc(100vw - 32px)); height: min(92vh, 900px); max-width: none; max-height: none; padding: 0; border: 1px solid #cbd9e7; border-radius: 17px; overflow: hidden; background: #fff; color: #18263f; box-shadow: 0 25px 80px #14223d55; }
+.resumenes-viewer { position: fixed; inset: 0; width: 100vw; height: 100dvh; max-width: 100vw; max-height: 100dvh; margin: 0; padding: 0; border: 0; border-radius: 0; overflow: hidden; background: #fff; color: #18263f; }
 .resumenes-viewer::backdrop { background: #14223db8; }
 .resumenes-viewer[open] { display: flex; flex-direction: column; }
 .resumenes-viewer-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 15px 20px; border-bottom: 1px solid #dbe6ee; }
@@ -7116,7 +7116,6 @@ body.login-active .overlay {
     .resumenes-results { width: 100%; }
     .resumenes-grid { grid-template-columns: 1fr; }
     .resumenes-card-image { height: 225px; }
-    .resumenes-viewer { width: 100vw; height: 100dvh; border: 0; border-radius: 0; }
     .resumenes-viewer-head { align-items: flex-start; flex-direction: column; padding: 12px 15px; }
     .resumenes-viewer-actions { width: 100%; justify-content: space-between; }
 }
