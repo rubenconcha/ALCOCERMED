@@ -17,7 +17,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=25">
+    <link rel="stylesheet" href="styles.css?v=26">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
@@ -753,127 +753,59 @@
         <section id="simulacro-screen" class="simulacro-section hidden">
 
             <!-- SUB-PANTALLA 1: Configuración -->
-            <div id="sim-config">
+            <div id="sim-config" class="entrance-config">
                 <div class="sim-header">
                     <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
                     <div>
-                        <h2 class="sim-title"><img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80"> simulacros</h2>
-                        <p class="sim-subtitle">Practica con preguntas de la bibliografía, elige tu tiempo y revisa tus respuestas al terminar.</p>
+                        <span class="entrance-eyebrow">PREPARATORIA BEN CARSON · MEDICINA</span>
+                        <h2 class="sim-title">Simulacros de ingreso</h2>
+                        <p class="sim-subtitle">Elige una prueba. El tiempo comienza al entrar y las respuestas se revisan al finalizar.</p>
                     </div>
                 </div>
 
-                <div class="sim-config-grid">
-
-                    <!-- Modo de simulacro -->
-                    <div class="sim-config-card sim-mode-card">
-                        <h3 class="sim-config-section-title"><i class="fas fa-sliders-h"></i> modo de examen</h3>
-                        <div class="sim-mode-grid">
-                            <button class="sim-mode-btn sim-mode-active" id="sim-mode-oficial"
-                                onclick="setSimMode('oficial')">
-                                <i class="fas fa-file-invoice"></i>
-                                <span>simulacros preparados</span>
-                                <small>por materia o integral</small>
-                                <b class="section-lock" data-free-lock hidden><i class="fas fa-lock" aria-hidden="true"></i> Con un plan</b>
-                            </button>
-                            <button class="sim-mode-btn" id="sim-mode-completo" onclick="setSimMode('completo')">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>aleatorio</span>
-                                <small>todas las materias</small>
-                            </button>
-                            <button class="sim-mode-btn" id="sim-mode-materia" onclick="setSimMode('materia')">
-                                <i class="fas fa-book-medical"></i>
-                                <span>por materia</span>
-                                <small>elige qué repasar</small>
-                            </button>
-                        </div>
-
-                        <!-- Selector Examen Oficial -->
-                        <div id="sim-oficial-group" class="sim-materia-group">
-                            <label class="banco-select-label"><i class="fas fa-clipboard-check"></i> seleccionar simulacro</label>
-                            <div class="banco-custom-select">
-                                <button class="banco-select-btn" id="sim-oficial-btn"
-                                    onclick="toggleSimOficialDropdown()">
-                                    <span id="sim-oficial-text">cargando exámenes...</span>
-                                    <i class="fas fa-chevron-down" id="sim-oficial-arrow"></i>
-                                </button>
-                                <div class="banco-dropdown hidden" id="sim-oficial-dropdown">
-                                    <div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando...
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Selector materia (oculto por defecto) -->
-                        <div id="sim-materia-group" class="sim-materia-group hidden">
-                            <label class="banco-select-label"><i class="fas fa-book-medical"></i> filtrar por
-                                materia</label>
-                            <div class="banco-custom-select">
-                                <button class="banco-select-btn" id="sim-materia-btn" onclick="toggleSimDropdown()">
-                                    <span id="sim-materia-text">seleccionar materia</span>
-                                    <i class="fas fa-chevron-down" id="sim-materia-arrow"></i>
-                                </button>
-                                <div class="banco-dropdown hidden" id="sim-materia-dropdown">
-                                    <div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando...
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Duración del examen -->
-                    <div class="sim-config-card">
-                        <h3 class="sim-config-section-title"><i class="fas fa-clock"></i> duración</h3>
-                        <div class="sim-duration-grid">
-                            <button class="sim-dur-btn" id="sim-dur-30" onclick="setSimDuracion(30)">30 min</button>
-                            <button class="sim-dur-btn sim-dur-active" id="sim-dur-60" onclick="setSimDuracion(60)">60
-                                min</button>
-                            <button class="sim-dur-btn" id="sim-dur-90" onclick="setSimDuracion(90)">90 min</button>
-                            <button class="sim-dur-btn" id="sim-dur-120" onclick="setSimDuracion(120)">120 min</button>
-                        </div>
-                    </div>
-
-                    <!-- Número de preguntas -->
-                    <div class="sim-config-card" id="sim-nq-card">
-                        <h3 class="sim-config-section-title"><i class="fas fa-list-ol"></i> número de preguntas</h3>
-                        <div class="sim-nq-row">
-                            <input type="range" id="sim-nq-slider" class="sim-nq-slider" min="10" max="50" value="30"
-                                step="5" oninput="updateSimNQ()">
-                            <div class="sim-nq-display">
-                                <span id="sim-nq-value">30</span>
-                                <label>preguntas</label>
-                            </div>
-                        </div>
-                        <p class="sim-nq-note" id="sim-nq-note">Elige cuántas preguntas quieres resolver.</p>
-                    </div>
-
-                    <!-- Resumen y lanzar -->
-                    <div class="sim-config-card sim-launch-card">
-                        <div class="sim-summary-row">
-                            <div class="sim-summary-item">
-                                <i class="fas fa-clock"></i>
-                                <div><strong id="sim-sum-tiempo">60 min</strong><span>tiempo</span></div>
-                            </div>
-                            <div class="sim-summary-divider"></div>
-                            <div class="sim-summary-item">
-                                <i class="fas fa-list-ol"></i>
-                                <div><strong id="sim-sum-nq">30</strong><span>preguntas</span></div>
-                            </div>
-                            <div class="sim-summary-divider"></div>
-                            <div class="sim-summary-item">
-                                <i class="fas fa-file-alt"></i>
-                                <div><strong id="sim-sum-materia">oficial</strong><span>tipo</span></div>
-                            </div>
-                        </div>
-                        <button class="btn-primary sim-start-btn" id="sim-start-btn" onclick="iniciarSimulacro()">
-                            <i class="fas fa-play"></i> comenzar simulacro
-                        </button>
-                        <p class="sim-warning-text"><i class="fas fa-exclamation-triangle"></i> durante el simulacro no
-                            podrás ver las respuestas. se revelan al finalizar.</p>
-                    </div>
-
-                    <button class="section-locked-card" data-free-lock hidden onclick="CampusAccess.unlock()"><i class="fas fa-lock" aria-hidden="true"></i><span><strong>Simulacros completos</strong><small>Más preguntas y modos al elegir un plan</small></span><span class="section-locked-arrow" aria-hidden="true">→</span></button>
-
+                <div class="entrance-overview" aria-label="Distribución del simulacro completo">
+                    <div class="entrance-overview-main"><span>Formato completo</span><strong>100 preguntas · 100 minutos</strong></div>
+                    <div class="entrance-subject"><b>50</b><span>Morfofunción</span></div>
+                    <div class="entrance-subject"><b>30</b><span>Biología celular</span></div>
+                    <div class="entrance-subject"><b>20</b><span>Educación para la Salud</span></div>
                 </div>
+
+                <div class="entrance-choices" role="group" aria-label="Elegir simulacro">
+                    <button type="button" id="entrance-full" class="entrance-choice is-selected" onclick="selectEntranceExam('full')" aria-pressed="true">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">DEMO ABIERTO</span><span class="entrance-choice-radio" aria-hidden="true"></span></span>
+                        <strong>Simulacro completo</strong>
+                        <span class="entrance-choice-description">Una prueba integral con el reparto de las tres asignaturas.</span>
+                        <span class="entrance-choice-metrics"><span><b>100</b> preguntas</span><span><b>100</b> minutos</span></span>
+                        <span class="entrance-choice-split">50 Morfofunción · 30 Biología · 20 Salud</span>
+                    </button>
+                    <button type="button" id="entrance-mini" class="entrance-choice" onclick="selectEntranceExam('mini')" aria-pressed="false">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">DEMO ABIERTO</span><span class="entrance-choice-radio" aria-hidden="true"></span></span>
+                        <strong>Mini simulacro</strong>
+                        <span class="entrance-choice-description">La misma proporción, en una sesión más breve.</span>
+                        <span class="entrance-choice-metrics"><span><b>50</b> preguntas</span><span><b>50</b> minutos</span></span>
+                        <span class="entrance-choice-split">25 Morfofunción · 15 Biología · 10 Salud</span>
+                    </button>
+                    <button type="button" id="entrance-premium-full" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('premium-full')" aria-pressed="false">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag entrance-choice-tag-plan">CON UN PLAN</span><span class="entrance-choice-radio" aria-hidden="true"></span></span>
+                        <strong>Nuevo simulacro completo</strong>
+                        <span class="entrance-choice-description">Otra selección de preguntas del banco bibliográfico.</span>
+                        <span class="entrance-choice-metrics"><span><b>100</b> preguntas</span><span><b>100</b> minutos</span></span>
+                        <span class="entrance-choice-split">50 Morfofunción · 30 Biología · 20 Salud</span>
+                    </button>
+                    <button type="button" id="entrance-premium-mini" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('premium-mini')" aria-pressed="false">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag entrance-choice-tag-plan">CON UN PLAN</span><span class="entrance-choice-radio" aria-hidden="true"></span></span>
+                        <strong>Nuevo mini simulacro</strong>
+                        <span class="entrance-choice-description">Una práctica corta con una nueva selección.</span>
+                        <span class="entrance-choice-metrics"><span><b>50</b> preguntas</span><span><b>50</b> minutos</span></span>
+                        <span class="entrance-choice-split">25 Morfofunción · 15 Biología · 10 Salud</span>
+                    </button>
+                </div>
+
+                <div class="entrance-launch">
+                    <div><span>Prueba seleccionada</span><strong id="entrance-selected-name">Simulacro completo</strong><small id="entrance-selected-detail">100 preguntas · 100 minutos</small></div>
+                    <button class="btn-primary entrance-start" id="sim-start-btn" onclick="iniciarSimulacro()"><i class="fas fa-play"></i> Comenzar</button>
+                </div>
+                <p class="entrance-note">Puedes dejar preguntas en blanco y volver a ellas. Al terminar el tiempo, se entrega automáticamente.</p>
             </div>
 
             <!-- SUB-PANTALLA 2: Examen en curso -->
@@ -887,17 +819,19 @@
                         <div class="sim-top-meta" id="sim-top-meta">
                             <span id="sim-exam-materia">simulacro</span>
                             <span class="sim-top-sep">·</span>
-                            <span id="sim-exam-nq-info">30 preguntas</span>
+                            <span id="sim-exam-nq-info">100 preguntas</span>
                         </div>
                     </div>
                     <div class="sim-timer-wrap" id="sim-timer-wrap">
                         <i class="fas fa-clock"></i>
-                        <span id="sim-timer-display">60:00</span>
+                        <span id="sim-timer-display">100:00</span>
                     </div>
                     <div class="sim-top-counter">
-                        <span id="sim-cur-num">1</span> / <span id="sim-total-num">30</span>
+                        <span id="sim-cur-num">1</span> / <span id="sim-total-num">100</span>
                     </div>
                 </div>
+
+                <div class="entrance-exam-progress"><span id="sim-exam-section">Morfofunción</span><span id="sim-answered-count">0 de 100 respondidas</span></div>
 
                 <!-- Tarjeta de pregunta -->
                 <div class="bq-question-card sim-question-card">
@@ -976,6 +910,8 @@
                         <span id="sim-grade-pct">0%</span>
                         <span>100%</span>
                     </div>
+
+                    <div id="sim-subject-breakdown" class="entrance-result-breakdown"></div>
 
                     <!-- Revisión pregunta a pregunta -->
                     <div class="sim-review-section">
@@ -1332,7 +1268,8 @@
     <script src="config.js"></script>
     <script src="device_guard.js?v=4"></script>
     <script src="campus-access.js?v=7"></script>
-    <script src="script.js?v=37"></script>
+    <script src="script.js?v=38"></script>
+    <script src="simulacro-ingreso.js?v=1"></script>
     <script src="student-library.js?v=8"></script>
     <script src="study-summaries.js?v=2"></script>
 </body>

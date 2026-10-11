@@ -3048,6 +3048,13 @@ function renderSimQuestion() {
     var ans = simState.answers[idx];
 
     document.getElementById('sim-cur-num').textContent = idx + 1;
+    document.getElementById('sim-exam-section').textContent = ({
+        MORFOFUNCION: 'Morfofunción', 'BIOLOGIA CELULAR': 'Biología celular',
+        'SALUD PUBLICA': 'Educación para la Salud'
+    })[normalizeDbText(campo(q, 'materia'))] || 'Simulacro';
+    document.getElementById('sim-answered-count').textContent =
+        simState.answers.filter(function (answer) { return answer.selected !== null; }).length +
+        ' de ' + simState.preguntas.length + ' respondidas';
     document.getElementById('sim-num-badge').textContent = 'N° ' + (idx + 1);
     document.getElementById('sim-question-text').textContent = campo(q, 'pregunta') || '';
     renderBqDificultad_sim(campo(q, 'dificultad') || 'facil');
@@ -3113,13 +3120,26 @@ function selectSimAnswer(selectedIdx) {
         b.classList.toggle('sim-opt-selected', i === selectedIdx);
     });
     updateSimCircles();
+    document.getElementById('sim-answered-count').textContent =
+        simState.answers.filter(function (answer) { return answer.selected !== null; }).length +
+        ' de ' + simState.preguntas.length + ' respondidas';
 }
 
 function buildSimCircles() {
     var container = document.getElementById('sim-circles');
     if (!container) return;
     container.innerHTML = '';
-    simState.preguntas.forEach(function (_, i) {
+    var labels = { MORFOFUNCION: 'Morfofunción', 'BIOLOGIA CELULAR': 'Biología celular', 'SALUD PUBLICA': 'Educación para la Salud' };
+    var currentSubject = '';
+    simState.preguntas.forEach(function (question, i) {
+        var subject = normalizeDbText(campo(question, 'materia'));
+        if (subject !== currentSubject) {
+            currentSubject = subject;
+            var heading = document.createElement('div');
+            heading.className = 'entrance-nav-heading';
+            heading.textContent = labels[subject] || subject;
+            container.appendChild(heading);
+        }
         var btn = document.createElement('button');
         btn.className = 'bq-circle';
         btn.textContent = i + 1;
@@ -3211,6 +3231,8 @@ window.finalizarSimulacro = function () {
                 ? 'linear-gradient(90deg,#f59e0b,#d97706)'
                 : 'linear-gradient(90deg,#ef4444,#dc2626)';
     }
+
+    if (window.renderEntranceBreakdown) window.renderEntranceBreakdown();
 
     // Revisión pregunta a pregunta
     var reviewList = document.getElementById('sim-review-list');
