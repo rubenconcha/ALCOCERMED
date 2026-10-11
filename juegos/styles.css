@@ -7125,6 +7125,32 @@ body.quiz-focus-mode #quiz-container {
 .games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-score { flex-direction: row; gap: 3px; justify-content: center; min-height: 0; margin: 0; white-space: nowrap; }
 .games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-score span { font-size: clamp(6px, 1.7cqw, 9px); line-height: 1; }
 
+/* Give the runners-up the same full-figure treatment as first place. */
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-2 {
+  left: 12.2% !important;
+  top: 32% !important;
+  width: 24% !important;
+  height: 24% !important;
+}
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-3 {
+  left: 65.3% !important;
+  top: 37% !important;
+  width: 23% !important;
+  height: 23% !important;
+}
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-2,
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-3,
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-2 .rp-ov-avatar,
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-3 .rp-ov-avatar,
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-2 .avatar-render,
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-3 .avatar-render {
+  overflow: visible !important;
+}
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-2 .avatar-render-base,
+.games-app-theme #page-jugar .game-podium-bg-showcase .rp-ov-circle-3 .avatar-render-base {
+  transform: scale(1.08) translateY(5%) !important;
+}
+
 @media (max-width: 768px) {
   .games-app-theme #page-jugar .explorar-grid { display: grid; grid-template-columns: 1fr; }
 }

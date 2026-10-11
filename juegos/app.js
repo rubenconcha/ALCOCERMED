@@ -4164,12 +4164,54 @@ function showFeedbackAnimation(isCorrect, ptsEarned, timedOut) {
 
 var splashInterval = null;
 
+// Load upcoming question art while the countdown or the current question is on screen.
+// Keep the Image objects alive so the browser can reuse both the response and decode.
+var quizImagePreloads = new Map();
+var quizImagePreloadQueue = [];
+var quizImagePreloadsActive = 0;
+
+function pumpQuizImagePreloads() {
+    while (quizImagePreloadsActive < 3 && quizImagePreloadQueue.length) {
+        var next = quizImagePreloadQueue.shift();
+        quizImagePreloadsActive++;
+        (function(image, src) {
+            function done() {
+                quizImagePreloadsActive--;
+                pumpQuizImagePreloads();
+            }
+            image.onload = function() {
+                if (image.decode) image.decode().catch(function() {});
+                done();
+            };
+            image.onerror = done;
+            image.src = src;
+        })(next.image, next.src);
+    }
+}
+
+function preloadQuizQuestionImages(start, count) {
+    if (!quizData || !quizData.preguntas) return;
+    var end = Math.min(quizData.preguntas.length, start + count);
+    for (var i = start; i < end; i++) {
+        var question = quizData.preguntas[i];
+        var src = getQuizQuestionImage(question, question.tipo || 'mc');
+        if (!src || quizImagePreloads.has(src)) continue;
+        var image = new Image();
+        image.decoding = 'async';
+        quizImagePreloads.set(src, image);
+        quizImagePreloadQueue.push({ image: image, src: src });
+    }
+    pumpQuizImagePreloads();
+}
+
 function showSplashAndStart() {
     // Asegurar que no se ejecute dos veces
     if (splashInterval) {
         clearInterval(splashInterval);
         splashInterval = null;
     }
+
+    preloadQuizQuestionImages(quizCurrentQ, 5);
 
     unlockQuizAudio(function() {
         // Asegurar que la sala de espera se oculte (música sigue)
@@ -4384,7 +4426,7 @@ function renderQuizQuestionImageWrap(pregunta, tipo) {
     var questionImage = getQuizQuestionImage(pregunta, tipo);
     if (questionImage && tipo !== 'dnd') {
         wrap.hidden = false;
-        wrap.innerHTML = '<img class="quiz-question-image" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(premium ? premium.alt : (morfoIllustration ? morfoIllustration.alt : (illustration ? illustration.alt : (contextual ? contextual.alt : 'Imagen de la pregunta')))) + '">';
+        wrap.innerHTML = '<img class="quiz-question-image" decoding="async" loading="eager" fetchpriority="high" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(premium ? premium.alt : (morfoIllustration ? morfoIllustration.alt : (illustration ? illustration.alt : (contextual ? contextual.alt : 'Imagen de la pregunta')))) + '">';
         if (illustration) {
             wrap.innerHTML += illustration.credit
                 ? '<small class="quiz-image-credit">' + escapeHtml(illustration.credit) + '</small>'
@@ -4506,6 +4548,7 @@ function renderQuizQuestion() {
         questionCard.innerHTML = '<h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">' + escapeHtml(formatQuizCopy((premiumQuestion && premiumQuestion.prompt) || pregunta.texto || '', 'question')) + '</h2>';
     }
     renderQuizQuestionImageWrap(pregunta, tipo);
+    preloadQuizQuestionImages(quizCurrentQ + 1, 4);
 
     // Calculate score and streak
     var currentScore = 0;
@@ -4686,7 +4729,23 @@ function renderQuizQuestion() {
         initQuizDndMapLayout();
     }
 
-    startQuestionTimer(getQuestionTimerSeconds(pregunta));
+    var art = document.querySelector(tipo === 'dnd' ? '#quiz-options-list .quiz-dnd-image' : '#quiz-question-image-wrap .quiz-question-image');
+    if (art && !art.complete) {
+        var questionIndex = quizCurrentQ;
+        var timerStarted = false;
+        var beginTimer = function() {
+            if (timerStarted || currentPage !== 'quiz' || quizCurrentQ !== questionIndex || quizConfirmed) return;
+            timerStarted = true;
+            quizQuestionStartTime = Date.now();
+            startQuestionTimer(getQuestionTimerSeconds(pregunta));
+        };
+        art.addEventListener('load', beginTimer, { once: true });
+        art.addEventListener('error', beginTimer, { once: true });
+        setTimeout(beginTimer, 6000);
+    } else {
+        quizQuestionStartTime = Date.now();
+        startQuestionTimer(getQuestionTimerSeconds(pregunta));
+    }
 }
 
 var quizConfirmed = false;
