@@ -518,7 +518,7 @@
         <!-- ══ JUEGO: QUIZ RELÁMPAGO ══ -->
         <section id="game-quiz" class="game-section hidden">
             <div class="game-header">
-                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
                 <h2><i class="fas fa-bolt"></i> quiz relámpago</h2>
             </div>
             <div class="quiz-wrapper">
@@ -555,7 +555,7 @@
             <!-- PANTALLA 1: Selector de materia/tema -->
             <div id="banco-selector">
                 <div class="banco-header">
-                    <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                    <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
                     <div>
                         <h2 class="banco-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg> banco de preguntas</h2>
                         <p class="banco-subtitle">Elige una materia y un tema. Responde y revisa la explicación.</p>
@@ -762,7 +762,7 @@
             <!-- SUB-PANTALLA 1: Configuración -->
             <div id="sim-config" class="entrance-config">
                 <div class="sim-header">
-                    <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                    <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
                     <div>
                         <span class="entrance-eyebrow">PREPARATORIA BEN CARSON · MEDICINA</span>
                         <h2 class="sim-title">Simulacros de ingreso</h2>
@@ -942,7 +942,7 @@
         <section id="evaluacion-screen" class="evaluacion-section hidden">
 
             <div class="eval-header">
-                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
                 <div>
                     <h2 class="eval-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#progress"></use></svg> mis evaluaciones</h2>
                     <p class="eval-subtitle">Revisa tus resultados y las materias que necesitas volver a practicar.</p>
@@ -995,7 +995,7 @@
         <!-- ══ JUEGO: AHORCADO ══ -->
         <section id="game-hangman" class="game-section hidden">
             <div class="game-header">
-                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
                 <h2><i class="fas fa-brain"></i> ahorcado médico</h2>
             </div>
             <div class="hangman-wrapper">
@@ -1045,7 +1045,7 @@
         <section id="videoclases-screen" class="vc-section hidden">
 
             <div class="vc-header">
-                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
                 <div>
                     <h2 class="vc-title"><i class="fas fa-play-circle"></i> videoclases</h2>
                     <p class="vc-subtitle">clases grabadas por materia · selecciona y repasa</p>
@@ -1103,7 +1103,7 @@
         <!-- ══ RESÚMENES ══ -->
         <section id="resumenes-screen" class="resumenes-screen hidden">
             <div class="resumenes-header">
-                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
                 <div>
                     <span class="resumenes-eyebrow">PREPARATORIA BEN CARSON</span>
                     <h2>Resúmenes</h2>
@@ -1145,7 +1145,7 @@
         </section>
 
         <section id="intocables-hub-screen" class="itc-page hidden" aria-labelledby="itc-title">
-            <div class="itc-top"><button type="button" class="itc-back" onclick="goHome()"><span aria-hidden="true">←</span> Volver</button><span>PREPARATORIA BEN CARSON · BIBLIOTECA</span></div>
+            <div class="itc-top"><button type="button" class="itc-back" onclick="goBack()"><span aria-hidden="true">←</span> Volver</button><span>PREPARATORIA BEN CARSON · BIBLIOTECA</span></div>
             <div class="itc-hero">
                 <div class="itc-hero-copy"><span class="itc-eyebrow">INTOCABLES</span><h1 id="itc-title">Conceptos que debes dominar</h1><p>Una idea central, el error que suele confundirse y una pregunta para comprobarla.</p><div class="itc-hero-actions"><a href="#itc-coleccion" class="itc-primary">Explorar fichas <span aria-hidden="true">→</span></a><button type="button" class="itc-secondary" onclick="openMindMaps()">Ver mapas mentales</button></div></div>
                 <div class="itc-hero-art" aria-hidden="true"><span class="itc-orbit itc-orbit-one"></span><span class="itc-orbit itc-orbit-two"></span><span class="itc-core">01</span><span class="itc-orbit-label itc-label-a">MORFO</span><span class="itc-orbit-label itc-label-b">BIOLOGÍA</span><span class="itc-orbit-label itc-label-c">SALUD</span></div>
@@ -1162,7 +1162,7 @@
         <section id="intocables-screen" class="intoc-section hidden">
 
             <div class="intoc-header">
-                <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
+                <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
                 <div>
                     <h2 class="intoc-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#core"></use></svg> Mapas mentales</h2>
                     <p class="intoc-subtitle">Explora los mapas por materia y tema.</p>
@@ -1303,7 +1303,7 @@
     <script src="config.js"></script>
     <script src="device_guard.js?v=4"></script>
     <script src="campus-access.js?v=8"></script>
-    <script src="script.js?v=40"></script>
+    <script src="script.js?v=41"></script>
     <script src="intocables-hub.js?v=1"></script>
     <script src="simulacro-ingreso.js?v=1"></script>
     <script src="student-library.js?v=8"></script>

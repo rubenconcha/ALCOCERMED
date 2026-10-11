@@ -47,6 +47,28 @@ test('el enlace de planes dice volver a mapas mentales cuando corresponde', asyn
   assert.match(backLink.textContent, /Volver a mapas mentales/);
 });
 
+test('desde planes el botón vuelve al inicio de Juegos y sustituye la página de pago', () => {
+  const sessionStorage = storage({ alcocer_plan_return: JSON.stringify({ screen: 'juegos', subject: 'EDUCACION PARA LA SALUD' }) });
+  const backLink = {
+    href: '/', textContent: '',
+    setAttribute(name, value) { this[name] = value; },
+    addEventListener(name, callback) { this[name] = callback; }
+  };
+  let destination = '';
+  const context = {
+    location: { search: '?desde=campus', pathname: '/planes', replace: url => { destination = url; } },
+    window: {},
+    document: { documentElement: {}, querySelector: selector => selector === '.back-to-campus' ? backLink : null },
+    sessionStorage,
+    URLSearchParams
+  };
+  vm.runInNewContext(fs.readFileSync('sales-session.js', 'utf8'), context);
+  assert.equal(backLink.href, '/juegos/jugar?salir=1');
+  assert.equal(backLink.textContent, '← Volver a Juegos');
+  backLink.click({ preventDefault() {} });
+  assert.equal(destination, '/juegos/jugar?salir=1');
+});
+
 test('al volver del pago se recupera el listado filtrado de mapas', async () => {
   const source = fs.readFileSync('script.js', 'utf8');
   const start = source.indexOf('async function restoreCampusAfterPlans()');

@@ -1103,8 +1103,8 @@ function exitQuizToHome() {
     quizStreak = 0;
     setQuizFocusMode(false);
     
-    // Volver al inicio usando la navegación de la SPA
-    navigateTo('inicio');
+    // Salir de la partida lleva al listado principal de Juegos.
+    navigateTo(isAdmin ? 'inicio' : 'jugar', false, true);
 }
 window.exitQuizToHome = exitQuizToHome;
 
@@ -1243,9 +1243,19 @@ function enterApp() {
     var urlCode = urlParams.get('code');
     
     // Verificar si hay una sesión de quiz pendiente (por si recargó la página)
-    var pendingCode = sessionStorage.getItem('alcocer_quiz_code');
+    var planReturn = null;
+    try { planReturn = JSON.parse(sessionStorage.getItem('alcocer_plan_return') || 'null'); }
+    catch (e) { sessionStorage.removeItem('alcocer_plan_return'); }
+    var returnToGames = urlParams.get('salir') === '1' || (planReturn && planReturn.screen === 'juegos');
+    if (returnToGames) {
+        clearSelfSession();
+        quizData = null;
+        sessionStorage.removeItem('alcocer_plan_return');
+        window.history.replaceState({page: 'jugar'}, '', '/juegos/jugar');
+    }
+    var pendingCode = returnToGames ? null : sessionStorage.getItem('alcocer_quiz_code');
     
-    if (urlCode && !isAdmin) {
+    if (urlCode && !isAdmin && !returnToGames) {
         // Limpiar el parámetro de la URL para evitar re-joins
         window.history.replaceState({}, document.title, window.location.pathname);
         searchAndStartQuiz(urlCode);
@@ -1267,7 +1277,7 @@ function enterApp() {
         var pathPage = pathParts[pathParts.length - 1];
         if (pathPage === 'index.html' || pathPage === 'juegos' || pathPage === '') pathPage = 'inicio';
         
-        var defaultPage = urlParams.get('page') || pathPage;
+        var defaultPage = returnToGames ? 'jugar' : (urlParams.get('page') || pathPage);
         // Students land on JUGAR by default
         if (defaultPage === 'inicio' && !isAdmin) defaultPage = 'jugar';
         if (window.location.pathname.includes('index.html') || urlParams.has('page')) {
@@ -1277,16 +1287,6 @@ function enterApp() {
             window.history.replaceState({page: defaultPage}, '', window.location.pathname);
         }
         navigateTo(defaultPage, true);
-        try {
-            var planReturn = JSON.parse(sessionStorage.getItem('alcocer_plan_return') || 'null');
-            if (planReturn && planReturn.screen === 'juegos') {
-                sessionStorage.removeItem('alcocer_plan_return');
-                if (SUBJECTS.some(function(item) { return item.name === planReturn.subject; })) {
-                    if (currentPage !== 'jugar') navigateTo('jugar', true);
-                    loadSubjectEvaluations(planReturn.subject);
-                }
-            }
-        } catch (e) { /* Mantener la navegación normal si el dato quedó dañado. */ }
     }
 }
 
@@ -1837,13 +1837,14 @@ function setQuizFocusMode(active) {
     }
 }
 
-function navigateTo(page, skipPush) {
+function navigateTo(page, skipPush, replaceCurrent) {
     if (typeof nervousClassMode !== "undefined" && nervousClassMode) {
         if (page !== "quiz") page = "nervioso";
         skipPush = true;
     }
-    if (page === 'quiz' && typeof quizData === 'undefined' || (page === 'quiz' && !quizData)) {
-        page = 'historial'; // Redirect to historial if reloading the quiz page without active session
+    if (page === 'quiz' && !quizData) {
+        page = 'jugar';
+        replaceCurrent = true;
     }
     if (currentPage === 'quiz' && page !== 'quiz') {
         if (quizTimerInterval) clearInterval(quizTimerInterval);
@@ -1855,6 +1856,8 @@ function navigateTo(page, skipPush) {
         var powerupOverlay = document.getElementById('powerup-cards-overlay');
         if (powerupOverlay) powerupOverlay.remove();
         stopGameMusic();
+        clearSelfSession();
+        quizData = null;
     }
     currentPage = page;
     setQuizFocusMode(page === 'quiz');
@@ -1885,9 +1888,10 @@ function navigateTo(page, skipPush) {
     closeSidebar();
 
     // Update URL
-    if (!skipPush) {
+    if (!skipPush || replaceCurrent) {
         var cleanUrl = page === 'inicio' ? '/juegos/' : '/juegos/' + page;
-        window.history.pushState({page: page}, '', cleanUrl);
+        if (replaceCurrent) window.history.replaceState({page: page}, '', cleanUrl);
+        else window.history.pushState({page: page}, '', cleanUrl);
     }
 }
 
@@ -3396,6 +3400,10 @@ function updateShowcasePodium(entries) {
 }
 
 function rememberSubjectPlanReturn(subject) {
+    clearSelfSession();
+    quizData = null;
+    // Si el navegador vuelve desde planes, también debe encontrar Juegos en el historial.
+    navigateTo('jugar', true, true);
     try { sessionStorage.setItem('alcocer_plan_return', JSON.stringify({ screen: 'juegos', subject: subject })); }
     catch (e) { /* El enlace a planes sigue funcionando sin almacenamiento. */ }
 }

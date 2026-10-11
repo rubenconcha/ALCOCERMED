@@ -423,7 +423,13 @@ const tips = [
 // ──────────────────────────────────────────────
 // NAVEGACIÓN ENTRE PANTALLAS
 // ──────────────────────────────────────────────
-function showScreen(screenId) {
+let currentCampusScreen = 'home-screen';
+const campusScreenHistory = [];
+function showScreen(screenId, fromBack) {
+    if (screenId !== currentCampusScreen) {
+        if (!fromBack) campusScreenHistory.push(currentCampusScreen);
+        currentCampusScreen = screenId;
+    }
     closeMobileSidebar();
     if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
@@ -451,13 +457,24 @@ window.goHome = function () {
     if (bancoEnProgreso) {
         if (!confirm('¿salir del banco? perderás tu progreso.')) return;
     }
-    showScreen('home-screen');
+    campusScreenHistory.length = 0;
+    showScreen('home-screen', true);
     updateHomeStats();
     if (window.innerWidth <= 768) {
         document.getElementById('sidebar').classList.remove('open');
         document.getElementById('overlay').classList.remove('active');
         document.body.classList.remove('sidebar-open');
     }
+};
+
+window.goBack = function () {
+    const bancoEnProgreso = currentCampusScreen === 'banco-screen' && bancoState &&
+        bancoState.preguntas.length > 0 && !bancoState.finalized &&
+        bancoState.answers.some(function (a) { return a.selected !== null; });
+    if (bancoEnProgreso && !confirm('¿salir del banco? perderás tu progreso.')) return;
+    const previous = campusScreenHistory.pop() || 'home-screen';
+    showScreen(previous, true);
+    if (previous === 'home-screen') updateHomeStats();
 };
 
 function updateHomeStats() {

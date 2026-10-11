@@ -14,9 +14,13 @@
                 backLink.textContent = '← Volver a mapas mentales';
                 backLink.setAttribute('aria-label', 'Volver a mapas mentales en el campus');
             } else if (saved?.screen === 'juegos') {
-                backLink.href = '/juegos/jugar';
-                backLink.textContent = '← Volver a ' + (saved.subject || 'Juegos');
-                backLink.setAttribute('aria-label', 'Volver a los juegos de la asignatura');
+                backLink.href = '/juegos/jugar?salir=1';
+                backLink.textContent = '← Volver a Juegos';
+                backLink.setAttribute('aria-label', 'Volver a la página principal de Juegos');
+                backLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    location.replace(backLink.href);
+                });
             }
         } catch (_) { /* Mantener el regreso general al campus. */ }
     }

@@ -50,6 +50,12 @@ const context = vm.createContext({
   adjustColor: () => '#A00000',
   escapeHtml: value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;'),
   sessionStorage: { setItem: (key, value) => saved.set(key, value) },
+  clearSelfSession: () => saved.delete('alcocer_quiz_code'),
+  navigateTo: (page, skipPush, replaceCurrent) => {
+    assert.equal(page, 'jugar');
+    assert.equal(skipPush, true);
+    assert.equal(replaceCurrent, true);
+  },
   Promise
 });
 
