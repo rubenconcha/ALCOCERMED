@@ -1,4 +1,7 @@
 {
+  "functions": {
+    "api/resumen.js": { "includeFiles": "api/_pdf/**" }
+  },
   "rewrites": [
     {
       "source": "/registro",

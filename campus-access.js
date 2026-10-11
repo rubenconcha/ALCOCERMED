@@ -28,6 +28,7 @@ window.CampusAccess = (() => {
         document.querySelectorAll('[data-premium-label]').forEach(el => { el.hidden = !isFree(); });
         document.querySelectorAll('[data-premium-only]').forEach(el => { el.hidden = isFree(); });
         document.querySelectorAll('[data-free-lock]').forEach(el => { el.hidden = !isFree(); });
+        window.dispatchEvent(new Event('campus-access-change'));
         return state;
     }
     async function catalog() {

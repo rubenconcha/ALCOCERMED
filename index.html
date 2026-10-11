@@ -17,7 +17,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=24">
+    <link rel="stylesheet" href="styles.css?v=25">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
@@ -1163,15 +1163,42 @@
                 <button class="btn-back-game" onclick="goHome()"><i class="fas fa-arrow-left"></i> volver</button>
                 <div>
                     <span class="resumenes-eyebrow">PREPARATORIA BEN CARSON</span>
-                    <h2>Resúmenes para estudiar con claridad</h2>
-                    <p>PDF ilustrados por materia y tema para repasar los conceptos esenciales.</p>
+                    <h2>Resúmenes</h2>
                 </div>
             </div>
-            <div class="resumenes-notice">
-                <i class="fas fa-file-pdf" aria-hidden="true"></i>
-                <div><strong>Dieciséis resúmenes completos</strong><span>Elige un tema para abrir su PDF. Seguiremos agregando los próximos capítulos.</span></div>
+            <div class="resumenes-layout">
+                <div class="resumenes-results">
+                    <p id="resumenes-count" class="resumenes-count" aria-live="polite"></p>
+                    <div class="resumenes-grid" id="resumenes-grid"></div>
+                    <p id="resumenes-empty" class="resumenes-empty" hidden>No hay resúmenes que coincidan con la búsqueda.</p>
+                </div>
+                <aside class="resumenes-filters" aria-label="Buscar resúmenes">
+                    <h3>Buscar resúmenes</h3>
+                    <label for="resumenes-search">Palabra clave</label>
+                    <input id="resumenes-search" type="search" placeholder="Escribe un tema o concepto" autocomplete="off">
+                    <label for="resumenes-subject">Materia</label>
+                    <select id="resumenes-subject">
+                        <option value="">Todas las materias</option>
+                        <option value="Biología celular">Biología celular</option>
+                        <option value="Morfofunción">Morfofunción</option>
+                        <option value="Educación para la Salud">Educación para la Salud</option>
+                    </select>
+                    <label for="resumenes-topic">Tema</label>
+                    <select id="resumenes-topic"><option value="">Todos los temas</option></select>
+                    <button id="resumenes-clear" type="button" class="resumenes-clear">Limpiar filtros</button>
+                </aside>
             </div>
-            <div class="resumenes-grid" id="resumenes-grid"></div>
+            <dialog id="resumenes-viewer" class="resumenes-viewer" aria-labelledby="resumenes-viewer-title">
+                <div class="resumenes-viewer-head">
+                    <div><span id="resumenes-viewer-subject"></span><h3 id="resumenes-viewer-title"></h3></div>
+                    <div class="resumenes-viewer-actions">
+                        <a id="resumenes-download" class="resumenes-download" href="#" download>Descargar PDF</a>
+                        <button id="resumenes-close" type="button" aria-label="Cerrar PDF">Cerrar</button>
+                    </div>
+                </div>
+                <p id="resumenes-loading" class="resumenes-loading">Cargando PDF…</p>
+                <iframe id="resumenes-frame" title="Lector de resúmenes en PDF"></iframe>
+            </dialog>
         </section>
 
         <!-- ══ INTOCABLES ══ -->
@@ -1304,10 +1331,10 @@
     <script src="platform-polish.js?v=1"></script>
     <script src="config.js"></script>
     <script src="device_guard.js?v=4"></script>
-    <script src="campus-access.js?v=6"></script>
+    <script src="campus-access.js?v=7"></script>
     <script src="script.js?v=37"></script>
     <script src="student-library.js?v=8"></script>
-    <script src="study-summaries.js?v=1"></script>
+    <script src="study-summaries.js?v=2"></script>
 </body>
 
 </html>

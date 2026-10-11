@@ -7001,7 +7001,7 @@ body.login-active .overlay {
     display: flex;
     gap: 28px;
     align-items: flex-start;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
 }
 .resumenes-header .btn-back-game { flex: 0 0 auto; }
 .resumenes-eyebrow {
@@ -7013,27 +7013,21 @@ body.login-active .overlay {
     margin-bottom: 8px;
 }
 .resumenes-header h2 {
-    margin: 0 0 7px;
+    margin: 0;
     font-size: clamp(1.8rem, 3vw, 2.55rem);
     line-height: 1.13;
 }
-.resumenes-header p { margin: 0; color: #65758c; font-size: 1rem; }
-.resumenes-notice {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 18px 21px;
-    border: 1px solid #f5dba8;
-    border-radius: 18px;
-    background: #fff9ec;
-    margin-bottom: 25px;
-}
-.resumenes-notice i { color: #cf8e15; font-size: 1.25rem; margin-top: 4px; }
-.resumenes-notice strong,
-.resumenes-notice span { display: block; }
-.resumenes-notice strong { margin-bottom: 4px; }
-.resumenes-notice span { color: #655b4a; line-height: 1.45; }
-.resumenes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 19px; }
+.resumenes-layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+.resumenes-results { min-width: 0; }
+.resumenes-count { margin: 0 0 14px; color: #607189; font-size: .9rem; }
+.resumenes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 19px; }
+.resumenes-filters { position: sticky; top: 22px; padding: 21px; border: 1px solid #dbe6ee; border-radius: 18px; background: #fff; box-shadow: 0 12px 28px rgba(24, 38, 63, .05); }
+.resumenes-filters h3 { margin: 0 0 17px; color: #18263f; font-size: 1.08rem; }
+.resumenes-filters label { display: block; margin: 14px 0 6px; font-size: .82rem; font-weight: 750; color: #334962; }
+.resumenes-filters input, .resumenes-filters select { width: 100%; min-height: 43px; padding: 9px 11px; border: 1px solid #cddde9; border-radius: 10px; background: #fff; color: #18263f; font: inherit; font-size: .88rem; }
+.resumenes-filters input:focus-visible, .resumenes-filters select:focus-visible { outline: 2px solid #238cc1; outline-offset: 2px; }
+.resumenes-clear { margin-top: 17px; padding: 0; border: 0; background: transparent; color: #146f9d; font: inherit; font-size: .84rem; font-weight: 750; cursor: pointer; }
+.resumenes-empty { padding: 35px 20px; border: 1px dashed #cddde9; border-radius: 14px; background: #fff; color: #607189; text-align: center; }
 .resumenes-card {
     overflow: hidden;
     border: 1px solid #dbe6ee;
@@ -7046,6 +7040,7 @@ body.login-active .overlay {
     overflow: hidden;
     background: #f2f6fa;
     border-bottom: 1px solid #e4edf3;
+    position: relative;
 }
 .resumenes-card-image img {
     width: 100%;
@@ -7053,6 +7048,9 @@ body.login-active .overlay {
     display: block;
 }
 .resumenes-card-body { padding: 19px 20px 21px; }
+.resumenes-card-locked .resumenes-card-image img { filter: blur(2px) brightness(.88); }
+.resumenes-lock { position: absolute; right: 12px; top: 12px; display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border-radius: 100px; background: #fff; color: #1c3552; font-size: .78rem; font-weight: 800; box-shadow: 0 4px 15px #14223d20; }
+.resumenes-demo { display: inline-flex; align-items: center; margin-left: 8px; color: #317b42; font-size: .78rem; font-weight: 800; }
 .resumenes-card-body > span {
     display: inline-block;
     padding: 6px 10px;
@@ -7066,27 +7064,47 @@ body.login-active .overlay {
 .resumenes-card-salud .resumenes-card-body > span { background: #edf6e4; color: #567d2d; }
 .resumenes-card-body h3 { font-size: 1.18rem; line-height: 1.3; margin: 13px 0 8px; }
 .resumenes-card-body p { min-height: 54px; margin: 0 0 18px; color: #65758c; line-height: 1.43; }
-.resumenes-card-body a {
+.resumenes-card-body button {
     display: inline-flex;
     align-items: center;
     gap: 9px;
     padding: 11px 15px;
+    border: 0;
     border-radius: 10px;
     background: linear-gradient(100deg, #f7a31c, #ffdc50);
     color: #14223d;
+    font: inherit;
     font-weight: 800;
-    text-decoration: none;
+    cursor: pointer;
 }
-.resumenes-card-body a:hover { filter: brightness(.97); }
+.resumenes-card-body button:hover { filter: brightness(.97); }
+.resumenes-card-locked .resumenes-card-body button { background: #e9eef3; color: #344961; }
+.resumenes-viewer { width: min(1100px, calc(100vw - 32px)); height: min(92vh, 900px); max-width: none; max-height: none; padding: 0; border: 1px solid #cbd9e7; border-radius: 17px; overflow: hidden; background: #fff; color: #18263f; box-shadow: 0 25px 80px #14223d55; }
+.resumenes-viewer::backdrop { background: #14223db8; }
+.resumenes-viewer[open] { display: flex; flex-direction: column; }
+.resumenes-viewer-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 15px 20px; border-bottom: 1px solid #dbe6ee; }
+.resumenes-viewer-head span { color: #238cc1; font-size: .75rem; font-weight: 800; }
+.resumenes-viewer-head h3 { margin: 3px 0 0; font-size: 1.05rem; }
+.resumenes-viewer-actions { display: flex; align-items: center; gap: 9px; flex: 0 0 auto; }
+.resumenes-viewer-actions a, .resumenes-viewer-actions button { display: inline-flex; align-items: center; min-height: 38px; padding: 8px 12px; border: 1px solid #cbd9e7; border-radius: 9px; background: #fff; color: #183552; font: inherit; font-size: .83rem; font-weight: 750; text-decoration: none; cursor: pointer; }
+.resumenes-viewer-actions a { background: #ffce45; border-color: #ffce45; }
+.resumenes-loading { margin: 0; padding: 12px 20px; color: #607189; }
+.resumenes-viewer iframe { display: block; width: 100%; min-height: 0; flex: 1; border: 0; background: #f4f7fa; }
 @media (max-width: 920px) {
-    .resumenes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .resumenes-layout { grid-template-columns: minmax(0, 1fr) 220px; gap: 16px; }
 }
 @media (max-width: 650px) {
     .resumenes-screen { padding: 24px 16px 55px; }
     .resumenes-header { display: block; }
     .resumenes-header .btn-back-game { margin-bottom: 17px; }
+    .resumenes-layout { display: flex; flex-direction: column-reverse; }
+    .resumenes-filters { position: static; width: 100%; }
+    .resumenes-results { width: 100%; }
     .resumenes-grid { grid-template-columns: 1fr; }
     .resumenes-card-image { height: 225px; }
+    .resumenes-viewer { width: 100vw; height: 100dvh; border: 0; border-radius: 0; }
+    .resumenes-viewer-head { align-items: flex-start; flex-direction: column; padding: 12px 15px; }
+    .resumenes-viewer-actions { width: 100%; justify-content: space-between; }
 }
 .home-mobile-redesign {
     max-width: 980px;

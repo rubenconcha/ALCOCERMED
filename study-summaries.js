@@ -1,18 +1,18 @@
 'use strict';
 (() => {
     const summaries = [
-        { subject: 'Biología celular', topic: 'Tema 1', title: 'Introducción a la biología de las células', pages: 6, file: 'biologia-tema-1', kind: 'bio' },
-        { subject: 'Biología celular', topic: 'Capítulo 2', title: 'Cómo se estudian las células', pages: 7, file: 'biologia-capitulo-2', kind: 'bio' },
+        { subject: 'Biología celular', topic: 'Tema 1', title: 'Introducción a la biología de las células', pages: 6, file: 'biologia-tema-1', kind: 'bio', free: true },
+        { subject: 'Biología celular', topic: 'Capítulo 2', title: 'Cómo se estudian las células', pages: 7, file: 'biologia-capitulo-2', kind: 'bio', free: true },
         { subject: 'Biología celular', topic: 'Capítulo 3', title: 'Estructura de la membrana plasmática', pages: 6, file: 'biologia-capitulo-3', kind: 'bio' },
         { subject: 'Biología celular', topic: 'Capítulo 4', title: 'Microtransporte a través de la membrana plasmática', pages: 8, file: 'biologia-capitulo-4', kind: 'bio' },
         { subject: 'Biología celular', topic: 'Capítulo 5', title: 'Macrotransporte a través de la membrana plasmática', pages: 8, file: 'biologia-capitulo-5', kind: 'bio' },
-        { subject: 'Educación para la Salud', topic: 'Tema 1', title: 'Evolución del concepto de salud', pages: 2, file: 'educacion-salud-tema-1', kind: 'salud' },
-        { subject: 'Educación para la Salud', topic: 'Tema 2', title: 'Determinantes de la salud', pages: 2, file: 'educacion-salud-tema-2', kind: 'salud' },
+        { subject: 'Educación para la Salud', topic: 'Tema 1', title: 'Evolución del concepto de salud', pages: 2, file: 'educacion-salud-tema-1', kind: 'salud', free: true },
+        { subject: 'Educación para la Salud', topic: 'Tema 2', title: 'Determinantes de la salud', pages: 2, file: 'educacion-salud-tema-2', kind: 'salud', free: true },
         { subject: 'Educación para la Salud', topic: 'Tema 3', title: 'Salud pública', pages: 1, file: 'educacion-salud-tema-3', kind: 'salud' },
         { subject: 'Educación para la Salud', topic: 'Tema 4', title: 'Enfoques y paradigmas de intervención en salud', pages: 2, file: 'educacion-salud-tema-4', kind: 'salud' },
         { subject: 'Educación para la Salud', topic: 'Tema 5', title: 'Bases normativas y políticas internacionales', pages: 2, file: 'educacion-salud-tema-5', kind: 'salud' },
-        { subject: 'Morfofunción', topic: 'Tema 1', title: 'Temas principales de anatomía y fisiología', pages: 8, file: 'morfofuncion-tema-1', kind: 'morfo' },
-        { subject: 'Morfofunción', topic: 'Tema 2', title: 'La química de la vida', pages: 8, file: 'morfofuncion-tema-2', kind: 'morfo' },
+        { subject: 'Morfofunción', topic: 'Tema 1', title: 'Temas principales de anatomía y fisiología', pages: 8, file: 'morfofuncion-tema-1', kind: 'morfo', free: true },
+        { subject: 'Morfofunción', topic: 'Tema 2', title: 'La química de la vida', pages: 8, file: 'morfofuncion-tema-2', kind: 'morfo', free: true },
         { subject: 'Morfofunción', topic: 'Tema 3', title: 'Forma y función celulares', pages: 8, file: 'morfofuncion-tema-3', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 4', title: 'Genética y función celular', pages: 8, file: 'morfofuncion-tema-4', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 5', title: 'Histología', pages: 8, file: 'morfofuncion-tema-5', kind: 'morfo' },
@@ -21,19 +21,45 @@
 
     const grid = document.getElementById('resumenes-grid');
     if (!grid) return;
+    const search = document.getElementById('resumenes-search');
+    const subject = document.getElementById('resumenes-subject');
+    const topic = document.getElementById('resumenes-topic');
+    const count = document.getElementById('resumenes-count');
+    const empty = document.getElementById('resumenes-empty');
+    const dialog = document.getElementById('resumenes-viewer');
+    const frame = document.getElementById('resumenes-frame');
+    const loading = document.getElementById('resumenes-loading');
+    const download = document.getElementById('resumenes-download');
+    let blobUrl = '';
 
-    summaries.forEach(item => {
+    const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    const isLocked = item => !item.free && (!window.CampusAccess || CampusAccess.isFree());
+
+    function fillTopics() {
+        const previous = topic.value;
+        const available = summaries.filter(item => !subject.value || item.subject === subject.value);
+        topic.replaceChildren(new Option('Todos los temas', ''));
+        available.forEach(item => topic.add(new Option(`${item.topic} · ${item.title}`, item.file)));
+        topic.value = available.some(item => item.file === previous) ? previous : '';
+    }
+
+    function createCard(item) {
+        const locked = isLocked(item);
         const article = document.createElement('article');
-        article.className = `resumenes-card resumenes-card-${item.kind}`;
-
+        article.className = `resumenes-card resumenes-card-${item.kind}${locked ? ' resumenes-card-locked' : ''}`;
         const preview = document.createElement('div');
         preview.className = 'resumenes-card-image';
         const image = document.createElement('img');
         image.src = `/assets/resumenes-portadas/${item.file}.png`;
-        image.alt = `Portada del resumen ${item.subject}, ${item.topic}`;
+        image.alt = `Portada de ${item.subject}, ${item.topic}`;
         image.loading = 'lazy';
         preview.append(image);
-
+        if (locked) {
+            const lock = document.createElement('span');
+            lock.className = 'resumenes-lock';
+            lock.textContent = '🔒 Con un plan';
+            preview.append(lock);
+        }
         const body = document.createElement('div');
         body.className = 'resumenes-card-body';
         const label = document.createElement('span');
@@ -41,20 +67,81 @@
         const title = document.createElement('h3');
         title.textContent = item.title;
         const detail = document.createElement('p');
-        detail.textContent = `${item.pages} páginas · PDF ilustrado`;
-        const link = document.createElement('a');
-        link.href = `/resumenes/${item.file}.pdf`;
-        link.target = '_blank';
-        link.rel = 'noopener';
-        link.textContent = 'Abrir PDF →';
-        link.addEventListener('click', event => {
-            if (window.CampusAccess && CampusAccess.isFree()) {
-                event.preventDefault();
-                CampusAccess.unlock();
-            }
-        });
-        body.append(label, title, detail, link);
+        detail.textContent = `${item.pages} páginas · PDF`;
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = locked ? 'Ver planes →' : 'Leer PDF →';
+        button.addEventListener('click', () => locked ? CampusAccess.unlock() : openSummary(item));
+        body.append(label, title, detail, button);
         article.append(preview, body);
-        grid.append(article);
+        return article;
+    }
+
+    function render() {
+        const query = normalize(search.value.trim());
+        const visible = summaries.filter(item =>
+            (!subject.value || item.subject === subject.value) &&
+            (!topic.value || item.file === topic.value) &&
+            (!query || normalize(`${item.subject} ${item.topic} ${item.title}`).includes(query))
+        );
+        grid.replaceChildren(...visible.map(createCard));
+        count.textContent = `${visible.length} ${visible.length === 1 ? 'resumen' : 'resúmenes'}`;
+        empty.hidden = visible.length !== 0;
+    }
+
+    async function openSummary(item) {
+        if (isLocked(item)) return CampusAccess.unlock();
+        if (blobUrl) URL.revokeObjectURL(blobUrl);
+        blobUrl = '';
+        frame.removeAttribute('src');
+        document.getElementById('resumenes-viewer-subject').textContent = `${item.subject} · ${item.topic}`;
+        document.getElementById('resumenes-viewer-title').textContent = item.title;
+        download.hidden = true;
+        loading.textContent = 'Cargando PDF…';
+        loading.hidden = false;
+        dialog.showModal();
+        try {
+            const headers = {};
+            if (!item.free) {
+                const { data } = await getSupabase().auth.getSession();
+                if (!data.session?.access_token) throw new Error('Inicia sesión para abrir este resumen.');
+                headers.Authorization = `Bearer ${data.session.access_token}`;
+            }
+            const url = item.free ? `/resumenes/${item.file}.pdf` : `/api/resumen?file=${encodeURIComponent(item.file)}`;
+            const response = await fetch(url, { headers, cache: 'no-store' });
+            if (!response.ok) throw new Error(response.status === 403 ? 'Este resumen requiere una suscripción activa.' : 'No se pudo cargar el PDF. Intenta otra vez.');
+            const blob = await response.blob();
+            if (!blob.type.includes('pdf')) throw new Error('El archivo no se recibió como PDF.');
+            if (!dialog.open) return;
+            blobUrl = URL.createObjectURL(blob);
+            frame.src = blobUrl;
+            download.href = blobUrl;
+            download.download = `${item.file}.pdf`;
+            download.hidden = false;
+            loading.hidden = true;
+        } catch (error) {
+            loading.textContent = error.message;
+        }
+    }
+
+    search.addEventListener('input', render);
+    subject.addEventListener('change', () => { fillTopics(); render(); });
+    topic.addEventListener('change', render);
+    document.getElementById('resumenes-clear').addEventListener('click', () => {
+        search.value = '';
+        subject.value = '';
+        topic.value = '';
+        fillTopics();
+        render();
+        search.focus();
     });
+    document.getElementById('resumenes-close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', () => {
+        frame.removeAttribute('src');
+        if (blobUrl) URL.revokeObjectURL(blobUrl);
+        blobUrl = '';
+    });
+    window.addEventListener('campus-access-change', render);
+    fillTopics();
+    render();
 })();
