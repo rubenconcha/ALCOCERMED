@@ -43,11 +43,11 @@
                 backLink.href = '/campus?volver=campus';
                 backLink.textContent = '← Volver al campus';
             }
-            document.querySelector('.campus-session-note').textContent = 'Tu sesión sigue activa. Al elegir un plan, conservarás tu cuenta y tu avance.';
+            document.querySelector('.campus-session-note').textContent = 'Continúa con tu cuenta';
         } else if (!fromCampus && location.pathname === '/planes') {
-            document.querySelector('.campus-session-note').textContent = 'Elige tu plan. Puedes crear tu cuenta gratis desde la página principal.';
+            document.querySelector('.campus-session-note').textContent = 'Elige tu plan';
         } else if (fromCampus) {
-            document.querySelector('.campus-session-note').textContent = 'Elige tu plan y vuelve a tu material desde el botón superior.';
+            document.querySelector('.campus-session-note').textContent = 'Elige tu plan';
         }
     } catch (error) {
         // Un fallo de red no debe sacar al estudiante de su cuenta.
