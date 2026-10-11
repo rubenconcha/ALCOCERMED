@@ -1,0 +1,1563 @@
+{
+  "id": "2023-2024-3",
+  "year": "2023–2024",
+  "type": "Examen final",
+  "title": "Examen final · 2023–2024",
+  "count": 100,
+  "duration": 90,
+  "pattern": "/api/past-exam?id=2023-2024-3&pattern=1",
+  "missingNumbers": [],
+  "excludedQuestions": [],
+  "questions": [
+    {
+      "id": "2023-2024-3-1",
+      "numero_original": 1,
+      "pregunta": "Los huesos faciales:\n1.- Por el foramen incisivo se transportan ramos del nervio nasopalatino y vasos sanguíneos del palatino mayor.\n2.- El foramen infraorbitario del hueso maxilar da paso a un ramo del nervio mandibular del trigémino.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-2",
+      "numero_original": 2,
+      "pregunta": "La información visual en la retina:\n1.- Los neurotransmisores liberados por los conos y bastones inducen potenciales locales graduados.\n2.- En el ojo izquierdo hay 1 millón de células ganglionares.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-3",
+      "numero_original": 3,
+      "pregunta": "La función de los fotorreceptores:\n1.- En la fase de isomerización el trans-retinal vuelve a ser cis-retinal.\n2.- En la fase de regeneración actúa la enzima retinal isomerasa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-4",
+      "numero_original": 4,
+      "pregunta": "Los uréteres:\n1.- Los uréteres son intraperitoneales al igual que los riñones.\n2.- En la entrada de cada uréter en la vejiga hay una válvula anatómica que evita el reflujo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-5",
+      "numero_original": 5,
+      "pregunta": "Respecto al antebrazo:\n1.- El extremo distal del cúbito se articula con el semilunar, escafoides, piramidal.\n2.- Proximalmente la cabeza del radio se articula con la escotadura radial del cúbito.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-6",
+      "numero_original": 6,
+      "pregunta": "Los líquidos corporales:\n1.- El plasma es el líquido extracelular dentro los vasos sanguíneos.\n2.- El líquido intersticial llena los espacios entre las células de los tejidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-7",
+      "numero_original": 7,
+      "pregunta": "A formación reticular:\n1.- El SARA recibe aferencias de los ojos, los oídos.\n2.- El ESARA no recibe impulsos para los receptores del sentido del olfato.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-8",
+      "numero_original": 8,
+      "pregunta": "En el intestino delgado:\n1.- Las glándulas de Brunner secretan mucus ayudando a neutralizar el jugo gástrico.\n2.- Los pliegues circulares son plegamientos de la lámina propia de la mucosa y la submucosa intestinal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-9",
+      "numero_original": 9,
+      "pregunta": "El pericardio:\n1.- El pericardio fibroso compuesto por tejido conectivo denso regular.\n2.- El pericardio fibroso en la punta del corazón está fusionado al diafragma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-10",
+      "numero_original": 10,
+      "pregunta": "En la mujer la hormona luteinizante:\n1.- Promueve la gametogénesis.\n2.- Estimula la ovulación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-11",
+      "numero_original": 11,
+      "pregunta": "Respecto a las glándulas suprarrenales:\n1.- Los glucocorticoides estimulan la degradación de los triglicéridos.\n2.- Los glucocorticoides aceleran la glucólisis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-12",
+      "numero_original": 12,
+      "pregunta": "La reabsorción en el asa de Henle:\n1.- Se reabsorbe sodio y potasio en 20 a 30% por cotransportadores en su rama ascendente.\n2.- Se reabsorbe coro y carbonato en un 35% principalmente por difusión facilitada.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-13",
+      "numero_original": 13,
+      "pregunta": "Las válvulas cardiacas semilunares:\n1.- Las valvas semilunares se unen a la pared arterial por su borde convexo externo.\n2.- El ventrículo se relaja, la sangre empuja las cúspides valvulares y las válvulas semilunares se cierran.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-14",
+      "numero_original": 14,
+      "pregunta": "El potencial de acción de la fibra contráctil:\n1.- La despolarización rápida se produce cuando se abren los canales rápidos dependientes de voltaje.\n2.- La despolarización sostenida se produce cuando se abren los canales de calcio lentos con compuerta de voltaje y algunos canales de potasio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-15",
+      "numero_original": 15,
+      "pregunta": "Los senos paranasales:\n1.- Aumentan el área de superficie de la mucosa nasal.\n2.- Para el momento del nacimiento están totalmente formados.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-16",
+      "numero_original": 16,
+      "pregunta": "Ejemplo de articulaciones trocleares:\n1.- Interfalángicas.\n2.- Del hombro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-17",
+      "numero_original": 17,
+      "pregunta": "Circulación coronaria:\n1.- La arteria coronaria izquierda da origen a la arteria descendente anterior izquierda.\n2.- La arteria descendente anterior izquierda se encuentra en el surco interventricular posterior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-18",
+      "numero_original": 18,
+      "pregunta": "Músculos de la región anterior del cuello que intervienen en la deglución y el habla:\n1.- El vientre posterior del músculo digástrico está inervado por el nervio trigémino.\n2.- El músculo milohioideo está inervado por el ramo mandibular del nervio trigémino.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-19",
+      "numero_original": 19,
+      "pregunta": "Ramas de anatomía y fisiología:\n1.- Histología estudia alteraciones estructurales microscópicas asociadas con enfermedades.\n2.- Es función de la endocrinología, la secreción de hormonas y cómo controlan las funciones del cuerpo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-20",
+      "numero_original": 20,
+      "pregunta": "Las células receptoras gustativas:\n1.- Tienen un ciclo de vida de 10 días.\n2.- Se originan por transformación de las células basales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-21",
+      "numero_original": 21,
+      "pregunta": "El epineuro:\n1.- Se fusiona con la duramadre a medida que los nervios raquídeos atraviesan el foramen intervertebral.\n2.- Presenta hasta 15 capas de fibroblastos, cubre a los fascículos que forman un nervio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-22",
+      "numero_original": 22,
+      "pregunta": "El interior del globo ocular:\n1.- La cámara anterior está llena de humor vítreo.\n2.- La cámara posterior está detrás del iris, delante de las fibras zonulares y el cristalino.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-23",
+      "numero_original": 23,
+      "pregunta": "La articulación del hombro:\n1.- Produce movimientos de: hiperextensión, rotación medial, rotación lateral y otros.\n2.- Tiene un rodete glenoideo ancho de fibrocartílago.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-24",
+      "numero_original": 24,
+      "pregunta": "El equilibrio:\n1.- Las máculas tienen tres tipos de células: células ciliadas, de sostén y células otolíticas.\n2.- Las dos máculas contienen receptores para la aceleración o desaceleración lineal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-25",
+      "numero_original": 25,
+      "pregunta": "Huesos del pie:\n1.- El calcáneo está ubicado en la parte. posterior del pie.\n2.- Los huesos del metatarso forman la región intermedia del pie.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-26",
+      "numero_original": 26,
+      "pregunta": "En relación a los hitos históricos de la estructura celular:\n1.- Cajal y otros histólogos desarrollan métodos de tinción que revelan la estructura de las células nerviosas.\n2.- Lazarides y Cols utilizan anticuerpos fluorescentes para teñir el citoesqueleto.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-27",
+      "numero_original": 27,
+      "pregunta": "En relación a las enzimas:\n1.- La fosfatasa cataliza la eliminación hidrolítica de un grupo fosfato de una molécula.\n2.- La isomerasa cataliza el reordenamiento de enlaces dentro de una molécula agrupada.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-28",
+      "numero_original": 28,
+      "pregunta": "En relación a las enzimas:\n1.- La nucleasa degrada los ácidos nucleicos por hidrólisis de los enlaces entre nucleótidos.\n2.- La hexocinasa agrega un grupo fosfato a D-glucosa, pero ignora a su isómero óptico L-glucosa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-29",
+      "numero_original": 29,
+      "pregunta": "En relación a la inhibición por retroalimentación:\n1.- Regula el flujo a través de las vías biodegradables.\n2.- En múltiples puntos regula vías metabólicas desconectadas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-30",
+      "numero_original": 30,
+      "pregunta": "En relación a la conformación de ADN:\n1.- Una molécula de ADN está formada por una cadena de polinucleótidos larga y cada hebra posee cuatro tipos de subunidades nucleotídicas.\n2.- Los nucleótidos están constituidos por una base nitrogenada y un azúcar de cinco carbonos, al cual se une un grupo fosfato.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-31",
+      "numero_original": 31,
+      "pregunta": "En relación a la estructura de los cromosomas eucariontes:\n1.- La tarea compleja de empaquetar el ADN es llevada a cabo por proteínas especializadas que se unen al DNA y lo pliegan.\n2.- Cada célula humana posee alrededor de 3 metros de ADN, aun así, el núcleo celular mide 5-8 um de diámetro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-32",
+      "numero_original": 32,
+      "pregunta": "En relación al glucocalix:\n1.- Se llama también capa de hidratos de carbono\n2.- Ayuda a proteger la superficie celular del daño térmico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-33",
+      "numero_original": 33,
+      "pregunta": "En relación a las proteínas de membrana:\n1.- Una célula puede restringir el movimiento de sus proteínas de membrana.\n2.- Las proteínas de membrana pueden moverse con límites dentro del plano de la bicapa lipídica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-34",
+      "numero_original": 34,
+      "pregunta": "En relación a los detergentes:\n1.- El SDA y el tritón X-100 son dos detergentes utilizados con frecuencia.\n2.- El detergente también solubiliza los fosfolípidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-35",
+      "numero_original": 35,
+      "pregunta": "Las células ciliadas auditivas:\n1.- Dependen de canales regulados por ligando acetilcolina.\n2.- Dependen de canales regulados mecánicamente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-36",
+      "numero_original": 36,
+      "pregunta": "Con respecto a la proteína canalrodopsina:\n1.- Se puede usar canalrodopsina para manipular la actividad de neuronas y circuitos neurales.\n2.- Permite que el Na+ fluya al exterior de la célula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-37",
+      "numero_original": 37,
+      "pregunta": "El curare causa parálisis muscular, por el siguiente mecanismo:\n1.- Bloquea a los receptores de acetilcolina inhibidores en la unión neuromuscular.\n2.- Bloquea los receptores de glicina en el encéfalo y la medula espinal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-38",
+      "numero_original": 38,
+      "pregunta": "En relación a la formación de CO2:\n1.- Los grupos oxidrilo de la acetil CoA son oxidados a CO2 a través del ciclo del ácido cítrico.\n2.- El dióxido de carbono se forma tras la oxidación de NAD+ y GAD+.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-39",
+      "numero_original": 39,
+      "pregunta": "En relación a la señalización celular:\n1.- Las moléculas pequeñas o hidrófobas cruzan la membrana plasmática y llegan al citosol de la célula diana, donde se unen a receptores proteicos intracelulares.\n2.- En el músculo esquelético, la acetilcolina se une a un receptor proteico diferente, lo que causa una relajación de la célula muscular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-40",
+      "numero_original": 40,
+      "pregunta": "En relación a los filamentos de actina:\n1.- Se visualizan como hebras de alrededor de 17 m de diámetro.\n2.- Son más cortos que los microtúbulos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-41",
+      "numero_original": 41,
+      "pregunta": "En relación de los mitógenos:\n1.- Estos liberan el freno de la proteína de Retinoblastoma.\n2.- Los complejos Cdk fosforilan la proteína Rb y no modifican su conformación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-42",
+      "numero_original": 42,
+      "pregunta": "El daño del DNA en el periodo G1:\n1.- Causa un aumento en la concentración y actividad de la proteína P53.\n2.- La proteína P53 puede inducir a la célula a la autodestrucción.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-43",
+      "numero_original": 43,
+      "pregunta": "En relación a la fase M del ciclo celular:\n1.- Es breve e incluye la mitosis mas la citocinesis.\n2.- Tiene una duración aproximada de dos horas en las células de los mamíferos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-44",
+      "numero_original": 44,
+      "pregunta": "En relación a las cohesinas y las condensinas:\n1.- Ayudan a configurar los cromosomas duplicados para la segregación.\n2.- Forman anillos proteicos que rodean a las cromátidas hermanas, permitiendo la separación de las cromátidas hermanas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-45",
+      "numero_original": 45,
+      "pregunta": "La prometafase se caracteriza por:\n1.- El aumento del tamaño de la célula.\n2.- Duplicar el centrosoma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-46",
+      "numero_original": 46,
+      "pregunta": "Los gametos humanos:\n1.- Tienen 22 cromosomas recesivos y 2 dominantes.\n2.- El óvulo por diferencia de tamaño contribuye más a las características genéticas de la descendencia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-47",
+      "numero_original": 47,
+      "pregunta": "En relación a la reproducción sexual:\n1.- El reordenamiento de la información genética puede ayudar a una especie a sobrevivir en un medioambiente que varía de manera impredecible.\n2.- Puede acelerar la eliminación de estos alelos deletéreos y ayudar a impedir que se acumulen en la población.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-48",
+      "numero_original": 48,
+      "pregunta": "En relación a la herencia:\n1.- Según planteaba Mendel los alelos que recibirá el cigoto durante la fecundación es totalmente aleatorio.\n2.- El fenotipo de la descendencia depende de la combinación de alelos que reciba.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-49",
+      "numero_original": 49,
+      "pregunta": "En relación a la herencia:\n1.- El albinismo tipo II se hereda en forma recesiva en muchos animales.\n2.- La ley de segregación de Mendel se limita a las plantas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-50",
+      "numero_original": 50,
+      "pregunta": "En relación a la herencia:\n1.- Todos los alelos dominantes siguen las mismas leyes mendelianas de la herencia.\n2.- La melanotina es el pigmento responsable de la mayor parte de color marrón y negro del cabello, piel y retina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-51",
+      "numero_original": 51,
+      "pregunta": "Los forámenes del cráneo:\n1.- El foramen que se encuentra entre las porciones superiores e inferiores de las alas mayores del esfenoides es el óptico.\n2.- El foramen mastoideo está en la porción anterior de la apófisis mastoides.\n3.- El foramen lacerum esta posterior al conducto carotídeo en la porción mastoidea del temporal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-52",
+      "numero_original": 52,
+      "pregunta": "En relación a las órbitas:\n1.- El techo de la órbita está formada por frontal, esfenoides, cigomático y temporal.\n2.- El maxilar, cigomático y palatino forman parte de la pared medial.\n3.- El maxilar, lagrimal, etmoides, esfenoides forman parte de la pared medial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-53",
+      "numero_original": 53,
+      "pregunta": "Enzimas del borde en cepillo de las microvellosidades:\n1.- La sacarasa degrada la lactosa en glucosa y fructuosa.\n2.- La enterocinasa degrada los dipéptidos en aminoácidos.\n3.- La maltasa degrada beta dextrinas en glucosa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-54",
+      "numero_original": 54,
+      "pregunta": "La cóclea:\n1.- Está situada anterior al vestíbulo.\n2.- Es un conducto membranoso en forma de espiral.\n3.- Describe dos vueltas en torno al modiolo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-55",
+      "numero_original": 55,
+      "pregunta": "El fémur:\n1.- Su extremo proximal presenta el cóndilo medial y lateral.\n2.- La tuberosidad glútea se une a la línea áspera.\n3.- Por encima de los cóndilos están los tubérculos medial y lateral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-56",
+      "numero_original": 56,
+      "pregunta": "Respecto a la extremidad superior:\n1.- Los carpianos de la hilera proximal son: pisiforme, ganchoso y semilunar.\n2.- El túnel carpiano es el espacio cóncavo entre el pisiforme y el ganchoso.\n3.- Los carpianos de la hilera distal son: grande, trapezoide y piramidal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-57",
+      "numero_original": 57,
+      "pregunta": "Respecto a la extremidad superior:\n1.- En la vida adulta la placa epifisaria del húmero será el cuello quirúrgico de este hueso.\n2.- El tubérculo mayor del húmero se sitúa lateral, proximal al cuello quirúrgico.\n3.- El capitulum humeral se articula con la fosa glenoidea.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-58",
+      "numero_original": 58,
+      "pregunta": "Origen del músculo piriforme:\n1.- Cresta iliaca y sacro.\n2.- Fosa iliaca y sacro.\n3.- Región anterior del sacro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-59",
+      "numero_original": 59,
+      "pregunta": "Respecto a la glándula tiroides:\n1.- Las hormonas tiroideas disminuyen los receptores beta adrenérgicos en las células.\n2.- Las hormonas tiroideas promueven la formación de centros de osificación en los huesos en desarrollo.\n3.- Inhibe la respuesta simpática.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-60",
+      "numero_original": 60,
+      "pregunta": "Si aumenta la temperatura:\n1.- Aumenta la cantidad de O2 liberado por la hemoglobina.\n2.- Disminuye la cantidad de oxígeno liberado por la hemoglobina.\n3.- No aumenta ni disminuye la cantidad de O2 liberado por la hemoglobina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-61",
+      "numero_original": 61,
+      "pregunta": "Respecto a las hormonas de la neurohipófisis:\n1.- El alcohol inhibe la secreción de hormona antidiurética.\n2.- La deshidratación inhibe la secreción de hormona antidiurética.\n3.- La presión osmótica sanguínea elevada inhibe la secreción de hormona antidiurética.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-62",
+      "numero_original": 62,
+      "pregunta": "Fases de la digestión:\n1.- En la fase gástrica el tronco encefálico activa los nervios VII, IX y X.\n2.- En la fase intestinal las células G glandulares producen y liberan secretina.\n3.- En la fase cefálica el estiramiento del duodeno emite impulsos al bulbo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-63",
+      "numero_original": 63,
+      "pregunta": "La regulación neural de la tasa del filtrado glomerular:\n1.- Los receptores alfa 1 abundan en la arteriola aferente siendo receptores para noradrenalina.\n2.- La estimulación simpática moderada cierra completamente a la arteriola aferente.\n3.- La estimulación moderada parasimpática cierra completamente la arteriola aferente y eferente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-64",
+      "numero_original": 64,
+      "pregunta": "Según la clasificación química de las hormonas:\n1.- La adrenalina es una hormona liposoluble secretada por la médula suprarrenal.\n2.- Los leucotrienos son hormonas hidrosolubles secretadas por los eritrocitos.\n3. El óxido nítrico es una hormona hidrosoluble secretada por las células endoteliales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-65",
+      "numero_original": 65,
+      "pregunta": "Función de las hormonas reproductoras:\n1.- La FSH estimula a los folículos ováricos para que secreten estrógenos.\n2.- La LH estimula a los folículos ováricos para que secreten estrógenos.\n3.- Los estrógenos disminuyen los niveles de concentración de colesterol.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-66",
+      "numero_original": 66,
+      "pregunta": "Respecto a los huesos del tórax:\n1.- Los segmentos del esternón se fusionan antes de los 20 años.\n2.- El manubrio esternal se articula con la primera, segunda y tercera costilla.\n3.- La apófisis xifoides se osifica completamente a los 25 años.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-67",
+      "numero_original": 67,
+      "pregunta": "Las articulaciones sinoviales:\n1.- Las superficies articulares están revestidas por fibrocartílago.\n2.- Los ligamentos intracapsulares atraviesan la cavidad sinovial.\n3.- Su membrana interna corresponde a la membrana sinovial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-68",
+      "numero_original": 68,
+      "pregunta": "Los ligamentos dentados:\n1.- Son extensiones triangulares de la aracnoides.\n2.- Corresponde al perineuro que es vascular.\n3.- Mantiene suspendida la médula en el medio de la vaina dural.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-69",
+      "numero_original": 69,
+      "pregunta": "La transducción del sonido:\n1.- Las células ciliadas internas transducen las vibraciones mecánicas y generan señales eléctricas.\n2.- Cuando la membrana vestibular vibra los estereocilios se doblan para atrás y hacia adelante.\n3.- Cuando la célula ciliada está en reposo, los canales de cationes se encuentran cerrados.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-70",
+      "numero_original": 70,
+      "pregunta": "Los nervios intercostales:\n1.- T7 inerva la región posteromedial del antebrazo.\n2.- T7-T12 dan inervación a los músculos abdominales.\n3.- Todos inervan los músculos intercostales y la piel de la axila.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-71",
+      "numero_original": 71,
+      "pregunta": "Respecto a las vértebras cervicales, torácicas y lumbares:\n1.- Las apófisis espinosas de las vértebras torácicas son gruesas largas y bífidas.\n2.- Las vértebras cervicales tienen carillas articulares para las costillas en dirección anteroinferior.\n3.- Los forámenes transversales se encuentran en las vértebras torácicas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-72",
+      "numero_original": 72,
+      "pregunta": "El peroné:\n1.- Su extremo distal tiene forma de punta de flecha.\n2.- Es medial a la tibia.\n3.- Se articula con la tibia en la escotadura peronea, para formar la articulación tibioperonea lateral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-73",
+      "numero_original": 73,
+      "pregunta": "Estructuras a las que dan origen las vesículas encefálicas:\n1.- Del metencéfalo se forman los ventrículos laterales.\n2.- Del telencéfalo se forma el cerebelo.\n3.- Del mielencéfalo se forma la protuberancia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-74",
+      "numero_original": 74,
+      "pregunta": "Respecto a los tipos de hueso:\n1.- Los huesos largos contienen tejido óseo esponjoso en la diáfisis y compacto en la epífisis.\n2.- Los huesos irregulares son: las vértebras, los huesos de la cadera y los carpianos. y\n3.- Los huesos sesamoideos protegen los tendones del desgaste y la fricción excesivos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-75",
+      "numero_original": 75,
+      "pregunta": "El músculo plantar:\n1.- Se origina en el epicóndilo lateral del fémur.\n2.- Se inserta en el calcáneo por medio del tendón calcáneo.\n3.- Inervado por el nervio tibial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-76",
+      "numero_original": 76,
+      "pregunta": "En la fotosíntesis:\n1.- Una quinona relacionada funciona de manera similar durante el transporte de protones.\n2.- Las quinonas transportan electrones dentro la bicapa lipídica.\n3.- La ubiquinona sirve como punto de ingreso para los electrones donados por el NADH2.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-77",
+      "numero_original": 77,
+      "pregunta": "En relación a la señalización celular:\n1.- La fosfolipasa C genera moléculas de segundos mensajeros como: inositol 1,4,5-trifosfato (IP3), fosfolípido de inositol y diacilglicerol (DAG).\n2.- La vasopresina (una hormona peptídica) en el hígado produce degradación de glucógeno.\n3.- La trombina (una enzima proteolítica) estimula la contracción muscular esquelética.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-78",
+      "numero_original": 78,
+      "pregunta": "En relación a la señalización celular:\n1.- Una señal extracelular de supervivencia, como IGF, activa un RTK que recluta y desactiva la PI-3-cinasa.\n2.- La Akt inactivada promueve la supervivencia celular.\n3.- Akt estimula el aumento de tamaño de las células por activación de la serina/tirosina cinasa Tor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-79",
+      "numero_original": 79,
+      "pregunta": "En relación a la señalización celular:\n1.- El receptor Notch es, en sí mismo, un regulador de la ampliación de señales.\n2.- Algunas homonas hidrófobas pequeñas se unen a receptores extracelulares que actúan como reguladores de la transcripción.\n3.- La señalización de Notch controla la producción de células nerviosas en el humano.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-80",
+      "numero_original": 80,
+      "pregunta": "En relación a los cloroplastos:\n1.- Su estructura es simple en relación con las mitocondrias.\n2.- Poseen pilas internas de membranas que contienen el pigmento verde clorofila.\n3.- Atrapan la energía de la luz solar en sus moléculas de clorofila y utilizan esta energía para impulsar la síntesis de moléculas de azúcar bajas en energía.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-81",
+      "numero_original": 81,
+      "pregunta": "En relación a la sulfobacteria:\n1.- Un eucarionte que vive en medios sulfurosos.\n2.- Obtiene su energía del H3S.\n3.- Oxida H2S para producir azufre y puede fijar carbono aun en la oscuridad.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-82",
+      "numero_original": 82,
+      "pregunta": "En relación a los cromosomas en interfase:\n1.- La estructura de la cromatina varía a lo largo de un cromosoma en interfase grupal.\n2.- Las modificaciones de las histonas inespecíficas de heterocromatina permiten la formación y propagación de la cromatina.\n3.- Uno de los dos cromosomas X es inactivado en las células de mamíferos hembra mediante la formación de heterocromatina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-83",
+      "numero_original": 83,
+      "pregunta": "En relación a los cromosomas:\n1.- El centrómero permite que los cromosomas duplicados se separen durante la fase S.\n2.- Una vez que los cromosomas se han condensado, el centrómero se opone a que el huso mitótico se una a cada cromosoma duplicado.\n3.- Durante la fase S del ciclo celular, el ADN se enrolla y adopta una estructura cada vez más compacta.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-84",
+      "numero_original": 84,
+      "pregunta": "Con relación a la estructura de la membrana:\n1.- Las membranas internas forman muchos compartimientos diferentes en una célula procarionte.\n2.- Una membrana celular está formada por una bicapa lipídica en la no hay proteínas incluidas.\n3.- Las membranas celulares están separadas con fosfolípidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-85",
+      "numero_original": 85,
+      "pregunta": "Sobre el bombeo de protones:\n1.- Se utiliza para bombear neutrones a través de la membrana mitocondrial interna, desde la matriz al espacio intermembranoso.\n2.- Generan un pH del espacio intermembranoso de 7,5.\n3.- Genera un gradiente de voltaje o potencial de membrana a través de la membrana externa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-86",
+      "numero_original": 86,
+      "pregunta": "Sobre la ATP sintasa:\n1.- Es una molécula nueva evolutivamente presente únicamente en las células eucariotas.\n2.- Permite la conversión de una deformación mecánica en energía de enlaces químicos de ATP.\n3.- Permite el flujo unidireccional de protones únicamente cuesta abajo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-87",
+      "numero_original": 87,
+      "pregunta": "En relación a la señalización celular:\n1.- Los segundos mensajeros, como el AMP cíclico y el calcio, son moléculas hidrófobas que suelen actuar dentro de la célula en la que son producidos.\n2.- La distancia de difusión del gas se ve limitada por su reacción con el oxígeno y el agua del medio extracelular, lo que convierte al NO en superóxido.\n3.- El NO difunde con facilidad desde su lugar de síntesis y se desliza a sus células vecinas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-88",
+      "numero_original": 88,
+      "pregunta": "En relación a la señalización celular:\n1.- El óxido nítrico NO se une a la enzima guanilil ciclasa y la activa, lo que estimula la formación de GMP cíclico a partir del nucleótido GDP.\n2.- El fármaco sildenafil aumenta la erección del pene mediante bloqueo de la enzima que degrada el GMP cíclico, lo que prolonga la señal de NO.\n3.- El óxido nítrico (NO) desencadena la contracción del músculo liso de la pared de un vaso sanguíneo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-89",
+      "numero_original": 89,
+      "pregunta": "En relación a la señalización celular:\n1.- La célula fotorreceptora bastón de la retina es poco sensible a la luz.\n2.- En las vías de señalización extracelular que responden a moléculas de señalización extracelular suele haber adaptación.\n3.- La cascada de señalización inducida por luz en los fotorreceptores de tipo bastón disminuye mucho la señal lumínica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-90",
+      "numero_original": 90,
+      "pregunta": "En relación a los microtúbulos:\n1.- Desempeñan un papel crucial en la organización de todas las células procariontes.\n2.- Crecen a partir de una estructura localizada cerca del centro de la célula (centriolo).\n3.- Los flagelos bacterianos tienen una estructura totalmente distinta y permiten que las células naden mediante un mecanismo muy diferente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-91",
+      "numero_original": 91,
+      "pregunta": "En relación al centrosoma:\n1.- Organiza la disposición de los microtúbulos que irradian hacia adentro a través del citoplasma.\n2.- Los centriolos desempeñan un papel importante en la nucleación de los microtúbulos del centrosoma.\n3.- Los centriolos si actúan como los centros organizadores de los microtúbulos de cilios y flagelos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-92",
+      "numero_original": 92,
+      "pregunta": "En relación al fármaco Taxol:\n1.- Detiene la mitosis de las células en división.\n2.- Ejerce el efecto opuesto sobre el crecimiento de los microtúbulos.\n3.- Se une estrechamente a los microtúbulos e impide que pierdan subunidades.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-93",
+      "numero_original": 93,
+      "pregunta": "El sistema de control del ciclo celular puede detener el ciclo de diversas maneras:\n1.- Monitoriza el estado externo de la célula.\n2.- Permite el ingreso de la fase S si las condiciones ambientales son adversas.\n3.- Descandenada la mitosis solo después de la replicación del DNA.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-94",
+      "numero_original": 94,
+      "pregunta": "La metafase se caracteriza por:\n1.- Se forma la placa prometafásica.\n2.- Los cromosomas se reúnen en un punto intermedio entre los dos polos del huso.\n3.- La tensión une a las cromátidas hermanas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-95",
+      "numero_original": 95,
+      "pregunta": "En relación a la segunda división meiótica:\n1.- Los cinetocoros apuntan en direcciones opuestas como lo harían en una división meiótica habitual.\n2.- Se forma un huso mitótico y los cinetocoros de cada par de cromátidas hermanas se unen a los microtúbulos.\n3.- Con replicación adicional de DNA y un periodo de interfase significativo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-96",
+      "numero_original": 96,
+      "pregunta": "En la meiosis II:\n1.- En la anafase las cohesinas que mantienen unidas a las cromátidas hermanas en el centrómero son degradadas.\n2.- Los microtúbulos del cinetocoro arrastran a las cromátidas hermanas hacia polos opuestos.\n3.- En la metafase los cinetocoros de las cromátidas hermanas apuntan en direcciones opuestas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-97",
+      "numero_original": 97,
+      "pregunta": "En relación a genética:\n1.- Los cribados genéticos en organismos modelo de experimentación ayudan a identificar genes y relacionarlos con diversos genotipos.\n2.- Cuando coexisten dos variantes de la secuencia en el mismo sitio y ambas son frecuentes en la población, estas variantes se denominan polimorfismos.\n3.- Las variantes pueden hallarse en partes del genoma, se encuentran dispersas al azar y de manera independiente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-98",
+      "numero_original": 98,
+      "pregunta": "En relación a la exploración de la genética humana:\n1.- Son bloques haplotípicos combinaciones de polimorfismos u otros marcadores de ADN que se heredan como una unidad.\n2.- Se dice que los seres humanos modernos se expandieron desde una población bastante pequeña que existió en África hace alrededor 100.000 años.\n3.- Ciertos grupos de secuencias de ADN y sus polimorfismos asociados presentaron gran reordenamiento a lo largo de las generaciones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-99",
+      "numero_original": 99,
+      "pregunta": "Con respecto a la permeabilidad de membrana:\n1.- Cuanto más pequeña e hidrófoba es la molécula más lento difundirá a través de la bicapa lipídica.\n2.- Moléculas no polares como la glucosa (180 daltons), no pueden atravesar la membrana.\n3.- La velocidad a la que un soluto cruza una bicapa lipídica artificial sin proteínas mediante difusión simple depende solo de su tamaño.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2023-2024-3-100",
+      "numero_original": 100,
+      "pregunta": "Con relación a la permeabilidad de la membrana:\n1.- El gradiente de concentración de K+ y los canales de filtración de K+ desempeñan papeles importantes en la generación del potencial de membrana plasmática en reposo.\n2.- La ecuación de Nernst se puede utilizar para calcular la contribución de cada ion al potencial de membrana en reposo.\n3.- Para controlar la actividad de los canales iónicos se utiliza un registro de fijación de membrana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    }
+  ]
+}

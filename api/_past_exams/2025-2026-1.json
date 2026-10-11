@@ -1,0 +1,1563 @@
+{
+  "id": "2025-2026-1",
+  "year": "2025–2026",
+  "type": "Primer parcial",
+  "title": "Primer parcial · 2025–2026",
+  "count": 100,
+  "duration": 90,
+  "pattern": "/api/past-exam?id=2025-2026-1&pattern=1",
+  "missingNumbers": [],
+  "excludedQuestions": [],
+  "questions": [
+    {
+      "id": "2025-2026-1-1",
+      "numero_original": 1,
+      "pregunta": "1.- El musculo geniogloso tiene su origen en la espina mentoniana superior.\n2.- El musculo pterigoideo medio tiene su inserción en la superficie lateral de la rama de la mandíbula, y",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-2",
+      "numero_original": 2,
+      "pregunta": "Sobre los elementos del cuerpo humano:\n1.- El Hidrógeno representa el 10.0 % del peso corporal.\n2.- El cloro representa el 0.20% del peso corporal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-3",
+      "numero_original": 3,
+      "pregunta": "Es cierto sobre las células del tejido conectivo fibroso:\n1.- Los mastocitos producen histamina, una sustancia que contrae los vasos.\n2.- El fibroblasto significa: fibr = fibra; blasto= que produce.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-4",
+      "numero_original": 4,
+      "pregunta": "1.- Las lineas temporales son parte del aspecto externo del hueso parietal. 2.- Los hueso parietales presentan posteriormente la sutura lambdoidea.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-5",
+      "numero_original": 5,
+      "pregunta": "Es cierto sobre los miofilamentos:\n1.- Los filamentos gruesos miden casi 15 nm de diámetro.\n2.- Los filamentos elásticos de 1 nm de diámetro, están compuestos por una proteína grande y elástica llamada actina globular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-6",
+      "numero_original": 6,
+      "pregunta": "1.- Cada osteoclasto está formado por la fusión de varios citoblastos, de modo que los osteoclastos suelen ser células grandes.\n2.- El lado del osteoclasto que da a la superficie ósea tiene un borde liso, con muchos dobleces hacia dentro de la membrana plasmática",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-7",
+      "numero_original": 7,
+      "pregunta": "En relación a la cavidad abdominopelvica:\n1.- Los riñones, uréteres, uretra, páncreas, vena cava inferior son retroperitoneales.\n2.- Al mesenterio posterior del intestino grueso se le denomina mesosigmoides.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-8",
+      "numero_original": 8,
+      "pregunta": "1.- El musculo trapecio se inserta en: acromión y espina de la escápula; tercio lateral de la clavícula.\n2.- El musculo semiespinoso de la cabeza esta inervado por: Ramas anteriores de los nervios cervicales y torácicos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-9",
+      "numero_original": 9,
+      "pregunta": "1.-El calcitriol aumenta la absorción de calcio por parte del intestino delgado.\n2.- El calcitriol se fija a osteoblastos, que liberan otro mensajero quimico, RANKL.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-10",
+      "numero_original": 10,
+      "pregunta": "La vesícula biliar presenta el siguiente epitelio:\n1.-Epitelio cilindrico seudoestratificado y ciliado.\n2.- Epitelio cilindrico simple.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-11",
+      "numero_original": 11,
+      "pregunta": "1.- El grosor de la dermis va de 0.02 mm en los párpados a casi 4 mm en las palmas y las plantas.\n2.- La dermis tiene dos zonas: las capas papilar y facicular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-12",
+      "numero_original": 12,
+      "pregunta": "Es cierto sobre la homeostasis del calcio:\n1.- el cuerpo de un adulto contiene casi 1100 g de calcio, 99% del cual se encuentra en los huesos. 2.-La concentración de calcio en el plasma sanguineo es, por lo general, de 8.2 a 10.4 mg/100 ml.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-13",
+      "numero_original": 13,
+      "pregunta": "Es cierto sobre el tejido conectivo denso regular.\n1.- Las fibras de colágeno se encuentran muy juntas y dejan poco espacio abierto.\n2.- Las fibras son paralelas entre sí y se encuentra sobre todo en tendones y ligamentos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-14",
+      "numero_original": 14,
+      "pregunta": "1.- Las siete vértebras cervicales tienen un prominente agujero transverso redondeado en cada apófisis transversa. Estos agujeros permiten el paso de las arterias vertebrales.\n2.- La vértebra C7 es un poco diferente: su apófisis espinosa no es bifida.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-15",
+      "numero_original": 15,
+      "pregunta": "Sobre el hueso etmoides:\n1.- La superficie medial del laberinto es una lámina orbitaria que se ve en la pared medial de la órbita.\n2-Forma parte de la pared medial de la órbita, el techo y las paredes de la cavidad nasal, y el tabique nasal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-16",
+      "numero_original": 16,
+      "pregunta": "Los músculos intercostales internos:\n1-En la inspiración, la parte intercartilaginosa ayuda a elevar la costilla y expandir la cavidad torácica.\n2.- En la espiración, la parte interósea eleva y retrae las costillas, comprimiendo la cavidad torácica y expeliendo aire.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-17",
+      "numero_original": 17,
+      "pregunta": "1-El musculo corrugador superciliar tiene su origen en la piel de la ceja.\n2-El musculo elevador del parpado superior esta inervado por el nervio motor ocular común.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-18",
+      "numero_original": 18,
+      "pregunta": "1-El pH del pan es de 3.5.\n2- El pH del amoniaco casero es de 9.5.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-19",
+      "numero_original": 19,
+      "pregunta": "1.- La energía potencial es la contenida en un objeto debido a su posición o estado interno, pero que efectúa trabajo en determinado momento.\n2-El agua de una represa tiene energía potencial debido a su posición.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-20",
+      "numero_original": 20,
+      "pregunta": "1.- El símbolo químico del grupo carboxilo es --COOH.\n2-Cuando un átomo cede un electrón y adquiere una carga positiva, se le denomina catión.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-21",
+      "numero_original": 21,
+      "pregunta": "1.- En un corte frontal de la articulación glenohumeral se observa la bosa subdeltoidea\n2-En un corte frontal de la articulación glenohumeral se observa la bolsa subescapular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-22",
+      "numero_original": 22,
+      "pregunta": "Sobre el tejido conectivo:\n1.- Funciones de los tejidos conectivos: Soporte, protección física, absorción, movimiento, transporte.\n2.- El metabolismo del tejido adiposo pardo genera calor en lactantes y niños.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-23",
+      "numero_original": 23,
+      "pregunta": "1.-Los electrólitos en los líquidos corporales tienen concentraciones mayores a 1 eq/L.\n2.- un mol (98 g) de ácido sulfúrico (H2SO4) libera dos moles de cargas positivas (H+).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-24",
+      "numero_original": 24,
+      "pregunta": "Es cierto sobre la hipocalcemia:\n1.- Un signo de hipocalcemia es la fuerte flexión espasmódica de la muñeca y el pulgar.\n2.- Lleva a temblores musculares, espasmos o a tetania (la incapacidad de los músculos para contraerse).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-25",
+      "numero_original": 25,
+      "pregunta": "Es cierto sobre los hemangiomas:\n1.- Un hemangioma plano es de color rosado a morado oscuro. Puede ser muy grande y permanece de por vida.\n2.- Los hemangiomas cavernosos son más planos y de color más opaco. Se presentan al nacer, siguen creciendo hasta los 3 años y luego se revierten.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-26",
+      "numero_original": 26,
+      "pregunta": "Sobre el colágeno:\n1.- Colágenos que forman fibrillas largas: tipos I, II, III, V y VIII\n2-Colágenos de cadena corta: tipos VII y XI.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-27",
+      "numero_original": 27,
+      "pregunta": "Sobre el uso clínico de CD4:\n1.- La disminución progresiva de CD4+ ocurre durante la infección por VIH.\n2-El análisis de CD4+ permite seguimiento de la evolución de la enfermedad.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-28",
+      "numero_original": 28,
+      "pregunta": "Acerca de FSC/SSC para distinguir linfocitos B:\n1.- FSC y SSC por si solos permiten distinguir linfocitos B de Ty NK.\n2.- Se requiere un fluorocromo unido a anticuerpos como anti-CD19 para distinguir linfocitos B.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-29",
+      "numero_original": 29,
+      "pregunta": "Sobre cápsulas bacterianas:\n1.- La cápsula sirve como protección contra la fagocitosis y permite adherencia a sustratos.\n2.- Solo las bacterias grampositivas pueden poseer capsula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-30",
+      "numero_original": 30,
+      "pregunta": "Microtomia de muestras congeladas:\n1.- Se utiliza un criostato manteniendo 20 °C durante el corte\n2.- Requiere deshidratación previa de la muestra para facilitar el corte.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-31",
+      "numero_original": 31,
+      "pregunta": "Sobre protozoos tipo Plasmodium:\n1.- La fiebre de la malaria está asociada a la liberación de productos tóxicos de la hemólisis durante la ruptura de eritrocitos.\n2- En Plasmodium, la fase de esquizonte ocurre exclusivamente en los eritrocitos humanos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-32",
+      "numero_original": 32,
+      "pregunta": "Sobre las limitaciones de la técnica FISH, señale lo correcto:\n1.- FISH no es una técnica de cribado porque requiere conocer previamente la región genética a estudiar.\n2-FISH permite detectar todas las alteraciones del genoma sin necesidad de sondas específicas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-33",
+      "numero_original": 33,
+      "pregunta": "Sobre el contraste en el MET:\n1.- Las zonas que dejan pasar electrones se observan oscuras.\n2.- Las estructuras que absorben más sales de acetato de uranio generan zonas electrodensas por impedir el paso de electrones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-34",
+      "numero_original": 34,
+      "pregunta": "Sobre el límite de resolución del microscopio óptico:\n1.- El LR del microscopio óptico convencional está limitado por la naturaleza ondulatoria de la luz.\n2-El LR se define como el cociente entre la longitud de onda empleada, multiplicada por una constante, dividido por la apertura numérica del objetivo",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-35",
+      "numero_original": 35,
+      "pregunta": "Sobre el vacío en el MET:\n1.- Se requiere alto vacío para la conducción del haz de electrones.\n2.- El uso de alto vacío permite estudiar células vivas en su ambiente natural. En los estudios históricos de Langmuir",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-36",
+      "numero_original": 36,
+      "pregunta": "En los estudios históricos de Langmuir\n1-Estudió los lípidos de membrana como moléculas anfipáticas y propuso una organización en monocapa\n2.- Comprobó la existencia de la membrana plasmática con el microscopio electrónico, que reveló que se trataba de una estructura trilaminar de unos 10 nm de espesor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-37",
+      "numero_original": 37,
+      "pregunta": "Sobre la vitamina C:\n1.- La vitamina C es necesaria para la hidroxilación de prolina y lisina en la síntesis de colágeno.\n2-La deficiencia de vitamina C afecta primero a tejidos con bajo recambio de colágeno.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-38",
+      "numero_original": 38,
+      "pregunta": "Sobre difracción óptica:\n1.- La difracción hace que los bordes de los objetos se observen difusos\n2.- Si dos objetos están muy juntos, la difracción permite separarlos mejor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-39",
+      "numero_original": 39,
+      "pregunta": "Microarrays:\n1.- Permiten estudiar la expresión de miles de genes simultáneamente.\n2.- Solo analizan proteínas, no ARNm.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-40",
+      "numero_original": 40,
+      "pregunta": "Homocigosis en ratones KO\n1.- Se logra mediante cruzamientos endogámicos de ratones heterocigóticos.\n2.- La progenie homocigótica representa el 50% de los descendientes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-41",
+      "numero_original": 41,
+      "pregunta": "1.- La educación en salud es independiente a la promoción de la salud y la prevención de enfermedades.\n2-La educación en salud excluye la participación comunitaria y la equidad como componentes del proceso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-42",
+      "numero_original": 42,
+      "pregunta": "1.-El Tercer Nivel de Atención se enfoca en la promoción y prevención.\n2-Los niveles especializados resuelven el 80% de los problemas de salud frecuentes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-43",
+      "numero_original": 43,
+      "pregunta": "1-Las actividades de Prevención Terciaria: disminuye complicaciones, secuelas o discapacidades en enfermedades ya establecidas.\n2- La Prevención Terciaria actúa sobre las secuelas de algunas enfermedades.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-44",
+      "numero_original": 44,
+      "pregunta": "1- Enfoque de la prevención: centrado en riesgos y factores clínicos de enfermedades, concretas.\n2.- Enfoque de la prevención: centrado en determinantes signológicos y sintomatológicos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-45",
+      "numero_original": 45,
+      "pregunta": "1.-El ODS 4 promueve educación exclusiva.\n2-El ODS 4 limita el aprendizaje únicamente a la educación básica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-46",
+      "numero_original": 46,
+      "pregunta": "1-El ODS 5 se centra exclusivamente en la producción de energía hidráulica\n2-El ODS 5 garantiza la disponibilidad y gestión sostenible del agua y saneamiento para todos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-47",
+      "numero_original": 47,
+      "pregunta": "1.- El ODS 10 busca reducir la desigualdad dentro de los países.\n2.- El ODS 10 busca reducir la desigualdad entre los países",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-48",
+      "numero_original": 48,
+      "pregunta": "1.-El ODS 8 promueve estabilidad plena y reproducción planificada.\n2-El ODS 8 promueve empleo pleno, productivo y trabajo decente para todos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-49",
+      "numero_original": 49,
+      "pregunta": "1-La puerta de entrada al Sistema Único de Salud de Bolivia es la Seguridad de Salud\n2.- El Primer Nivel de Atención resuelve el 80% de problemas de salud frecuentes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-50",
+      "numero_original": 50,
+      "pregunta": "1.-El ODS 9 busca construir infraestructuras resilientes y fomentar la innovación.\n2-El ODS 9 promueve una industrialización inclusiva y sostenible.\nA PARTIR DE ESTA PREGUNTA CONSIDERE LA SIGUIENTE CLAVE:",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-51",
+      "numero_original": 51,
+      "pregunta": "Es definición de contracción isométrica:\n1.- Que es una contracción sin cambio en la longitud.\n2- Que se da con un cambio en la longitud, pero no en la tensión.\n3.- Que se da cambio en la longitud extendiéndose el musculo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-52",
+      "numero_original": 52,
+      "pregunta": "1.- La 6 costilla verdadera se articula con los cuerpos vertebrales T6 y T7.\n2-La 10° costilla no presenta tuberosidad costal.\n3.- la 11 costilla es falsa, flotante y se articula con las vértebras T11 y T12.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-53",
+      "numero_original": 53,
+      "pregunta": "Cuál es la inserción del musculo braquial:\n1.- Tuberosidad radial; fascia del antebrazo. 2-Margen superior de la cavidad glenoidea. 3.- Apófisis coronoides y tuberosidad cubital.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-54",
+      "numero_original": 54,
+      "pregunta": "Es cierto sobre las fracturas:\n1.- En una fractura conminuta, el hueso se rompe de manera incompleta de un lado pero sólo se dobla por el opuesto.\n2-En una fractura en tallo verde, un hueso se parte en tres o más piezas\n3.- Una fractura sin complicaciones sana en casi 6 semanas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-55",
+      "numero_original": 55,
+      "pregunta": "1.- Con un solo corte coronal del cuerpo se podrían exponer ambos riñones.\n2.- El peritoneo se alinea con el interior del estómago y el intestino.\n3.- El colon sigmoide está en el cuadrante inferior derecho del abdomen.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-56",
+      "numero_original": 56,
+      "pregunta": "Sobre los agujeros craneales y lo que los atraviesa:\n1.- Agujero yugular: nervios glosofaríngeo, vago.\n2.- Agujero espinoso: Arteria meníngea anterior.\n3.- Hendidura esfenomaxilar: Nervio supraorbitario.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-57",
+      "numero_original": 57,
+      "pregunta": "En un corte transversal del tórax, ¿cuál término describe mejor la posición de la aorta en relación con el corazón:\n1.- Lateral. 2.- Posterior. 3.Inferior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-58",
+      "numero_original": 58,
+      "pregunta": "Cuál es el origen del musculo supinador largo:\n1.- Epicóndilo lateral del húmero.\n2.-Borde supracondíleo del húmero.\n3-Cresta del supinador y fosa del cúbito en sentido distal a la hendidura.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-59",
+      "numero_original": 59,
+      "pregunta": "Es cierto sobre el cartílago elástico:\n1.- Localizaciones: pabellón de la oreja; epiglotis.\"\n2-Aspecto microscópico: matriz clara, cristalina, a menudo teñida de azul claro o rojo en cortes de tejido.\n3.-Funciones: facilita el movimiento de las articulaciones; mantiene abiertas las vías respiratorias.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-60",
+      "numero_original": 60,
+      "pregunta": "Es cierto sobre los trastornos del sistema tegumentario:\n1.-Psoriasis: Lesiones cutáneas pruriginosas, rojas, exudativas causadas por alergia.\n2.- Eccema: Placas recurrentes, enrojecidas, cubiertas con escamas plateadas.\n3-Rosácea: Cualquier inflamación de la piel, por lo general marcada por prurito y enrojecimiento.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-61",
+      "numero_original": 61,
+      "pregunta": "Es cierto sobre los injertos de piel:\n1.- El injerto idóneo es un autoinjerto, porque no es rechazado por el sistema inmunitario.\n2.- Un aloinjerto u homoinjerto es un injerto de un gemelo idéntico.\n3.- Al injerto de tejido de una especie diferente se le llama isoinjerto.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-62",
+      "numero_original": 62,
+      "pregunta": "Músculos inervados por el nervio axilar.\n1-Coracobraquial - braquial\n2.- Romboides mayor - Supraespinoso.\n3.- Deltoides-Redondo menor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-63",
+      "numero_original": 63,
+      "pregunta": "Es cierto sobre la inervación del musculo coccigeo:\n1-Inervado por el nervio pudendo. 2. Nervios coccígeos 3. Nervios S3 a S4",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-64",
+      "numero_original": 64,
+      "pregunta": "Es cierto sobre las bandas H:\n1.- Banda oscura formada por filamentos gruesos paralelos que se superponen en parte con los filamentos delgados\n2-Banda clara compuesta sólo por filamentos delgados.\n3.- Una región más clara en medio de una banda A que sólo contiene filamentos gruesos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-65",
+      "numero_original": 65,
+      "pregunta": "Es cierto sobre las articulaciones sinoviales:\n1.- Ejemplo de articulación elipsoidea es la del codo.\n2.- Ejemplo de articulación trocoide es la radiocarpiana.\n3.- Ejemplo de articulación ginglimo es la interfalángica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-66",
+      "numero_original": 66,
+      "pregunta": "Es cierto sobre el tejido óseo:\n1- La mayor parte del hueso compacto está organizado en cilindros de tejido que rodean a los conductos centrales.\n2-Casi una cuarta parte del peso seco del hueso depende de fibras de colágeno y glucosaminoglucanos.\n3.-Dos terceras partes están compuestas de minerales (sobre todo sales de fosfato y magnesio).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-67",
+      "numero_original": 67,
+      "pregunta": "Es cierto sobre agentes que afectan el calcio y el metabolismo óseo:\n1.- Estrógeno: Estimula a los osteoblastos y el crecimiento en adolescentes; evita la osteoporosis.\n2.- Hormonas tiroideas: Activan los osteoclastos de manera indirecta\n3.- Vitamina C: Promueve la síntesis de glucosaminoglucano.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-68",
+      "numero_original": 68,
+      "pregunta": "Sobre el esfenoides:\n1.- El ala mayor forma la pared posterior de la órbita y contiene el conducto óptico.\n2- En vida, la duramadre se expande sobre la silla turca y se une a la apófisis clinoides anterior.\n3.-En una vista superior del cráneo, el esfenoides es anterior a la base del hueso occipital.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-69",
+      "numero_original": 69,
+      "pregunta": "Es cierto sobre la homeostasis del fosfato:\n1.- El adulto promedio tiene de 50 a 80 g de fósforo.\n2-La concentración de fósforo en el plasma va de 3.5 a 4.0 mg/100 ml.\n3.- El calcitriol disminuye la concentración de fosfato.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-70",
+      "numero_original": 70,
+      "pregunta": "Sobre el cáncer de piel:\n1.- El carcinoma basocelular es el tipo más común, resulta, también, el más mortal.\n2- El carcinoma espinocelular surge de los queratinocitos del estrato lucido.\n3-El melanoma es un cáncer de piel que surge de los melanocitos, es responsable de hasta 15% de los cánceres de piel.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-71",
+      "numero_original": 71,
+      "pregunta": "Cuál es la inserción del pectoral mayor:\n1.- Apófisis coracoides.\n2.- Labio lateral del surco intertubercular del humero.\n3.-Mitad medial de la clavícula; margen lateral del esternón",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-72",
+      "numero_original": 72,
+      "pregunta": "La tuberosidad de una costilla se articula con:\n1.- El margen del cuerpo del esternón.\n2-La apófisis transversa de una vértebra.\n3.- Las carillas costales de dos vértebras.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-73",
+      "numero_original": 73,
+      "pregunta": "Es cierto sobre el musculo Psoas:\n1.- Extiende el muslo y lo aduce\n2.- Tiene su inserción en el trocánter menor.\n3.- Tiene su origen en la cresta y fosa iliaca.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-74",
+      "numero_original": 74,
+      "pregunta": "Sobre las reacciones de transferencia de energía en el cuerpo humano:\n1.- Descomposición: Una reacción, como la digestión o la respiración celular.\n2.- Reducción: Reacción exergónica en que un reactivo gana o recibe electrones.\n3.- Oxidación: Reacción endergónica en la que un reactivo pierde electrones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-75",
+      "numero_original": 75,
+      "pregunta": "Es cierto sobre las marcas de los huesos:\n1.- Cabeza: Protuberancia redondeada que se articula con otro hueso.\n2.- Fovea: Un hueco pequeño.\n3.- Condilo: El extremo expandido y prominente de un hueso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-76",
+      "numero_original": 76,
+      "pregunta": "Sobre el VIH:\n1.- El gen gag codifica transcriptasa inversa, integrasa y proteasa\n2.- gp120 requiere unirse primero a CD4 y luego a un correceptor.\n3.- El correceptor CXCR4 está macrófagos y el CCR5 en células T cooperadoras.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-77",
+      "numero_original": 77,
+      "pregunta": "Acerca de los transportadores GLUT:\n1.- GLUT1, GLUT3 y GLUT4 poseen alta afinidad por glucosa y funcionan cerca de su Vmax a concentraciones normales de glucosa.\n2.- GLUT2 posee alta afinidad y se satura rápidamente a concentraciones bajas de glucosa.\n3.- Mutaciones en GLUT1 no afectan la captación cerebral de glucosa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-78",
+      "numero_original": 78,
+      "pregunta": "Sobre la criofractura:\n1.- La fractura ocurre por zonas hidrófobas porque son las regiones más débiles de la célula al congelarse.\n2.- Tras la fractura, se aplica metalización y luego una capa de carbono que estabiliza la réplica.\n3.- Las muestras se congelan a una temperatura de -160 grados centígrados.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-79",
+      "numero_original": 79,
+      "pregunta": "Sobre la endocitosis mediada por receptor:\n1.- Requiere la unión de ligandos a receptores específicos en la membrana.\n2.- Las vesículas pierden el recubrimiento de clatrina tras internalizarse.\n3.- Participa en la captación de colesterol extracelular contenido en las LDL.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-80",
+      "numero_original": 80,
+      "pregunta": "Sobre biología molecular y evolución de técnicas:\n1.- Watson y Crick se basaron en datos obtenidos principalmente por cristalografía para proponer la doble hélice del ADN.\n2.- La secuenciación del genoma humano facilitó estudiar regulaciones génicas con precisión sin necesidad de técnicas bioinformáticas.\n3.- El avance de la biología celular en la segunda mitad del siglo IX estuvo impulsado por nuevas técnicas de fraccionamiento celular, microscopia y cultivos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-81",
+      "numero_original": 81,
+      "pregunta": "Uso de partículas de oro o ferritina en inmunoquímica, señale lo incorrecto:\n1.- Se utilizan principalmente en microscopia electrónica.\n2.-Permiten visualizar proteínas especificas mediante densidad electrónica.\n3.- Se usan rutinariamente en laboratorios clínicos para diagnóstico de cáncer.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-82",
+      "numero_original": 82,
+      "pregunta": "RT-PCR, señale lo incorrecto:\n1.- Utiliza transcriptasa inversa para convertir ARN en ADN.\n2.- Permite analizar expresión génica a partir de ARNm.\n3.- Se aplica a varios fragmentos simultáneamente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-83",
+      "numero_original": 83,
+      "pregunta": "Sobre Vibrio cholerae, señale lo incorrecto:\n1.- Es un bacilo curvo, flagelado y gramnegativo.\n2.-Su subunidad B se une a gangliósidos en la superficie celular.\n3.- La elevación de Na+ y Cl- en el enterocito provoca que se arrastre agua hacia la luz por osmosis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-84",
+      "numero_original": 84,
+      "pregunta": "Western Blot:\n1.- No aplica normalmente para diagnóstico, pero si para investigación bio médica.\n2.- Es un método para la detección de lípidos en extractos de tejido.\n3.- Implica una separación electroforetica del lípido y una identificación antígeno anticuerpo",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-85",
+      "numero_original": 85,
+      "pregunta": "Técnicas inmunohistoquímicas:\n1.- En la técnica directa, el anticuerpo primario lleva la molécula detectable.\n2.- En la técnica indirecta, el anticuerpo primario está está conjugado para ser visible\n3.- En la técnica directa se necesita anticuerpo secundario para visualizar la señal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-86",
+      "numero_original": 86,
+      "pregunta": "Sobre mecanismos de patogenicidad, señale lo incorrecto:\n1.- Los pili intervienen en la conjugación bacteriana.\n2- Las endotoxinas para producir fiebre, activan la cascada del complemento y disminuyen las citoquinas.\n3-Las bacterias tanto grampositivas como gramnegativas pueden tener cápsula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-87",
+      "numero_original": 87,
+      "pregunta": "Sobre las selectinas:\n1.- Las selectinas median uniones temporales entre leucocitos y endotelio.\n2.- La selectina L está en leucocitos; P y E en endotelio y plaquetas.\n3.- La interacción selectina-oligosacárido facilita la migración de leucocitos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-88",
+      "numero_original": 88,
+      "pregunta": "Sobre objetos visibles al óptico o electrónico, señale la incorrecta:\n1.- La membrana plasmática (~7 nm) solo puede observarse con microscopio electrónico.\n2.- Las bacterias (0,5-10 µm) pueden verse con el microscopio óptico.\n3.- Los ribosomas (25 nm) pueden observarse con el microscopio óptico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-89",
+      "numero_original": 89,
+      "pregunta": "Sobre el virus de la gripe:\n1.- La hemaglutinina favorece la adhesión de partículas viricas a la célula huésped.\n2.- La neuroaminidasa facilita la salida de la progenie virica\n3.- El virus de la influenza es de tipo ARN monocatenario.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-90",
+      "numero_original": 90,
+      "pregunta": "Relación entre estructura de esfingolípidos y su clasificación, es incorrecto\n1.- Esfingomielinas: contienen grupos polares fosforilados.\n2.- Glucolípidos: contienen ceramida unida a glúcidos y carecen de ácido fosfórico.\n3.- Todos los esfingolípido son neutros a pH fisiológico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-91",
+      "numero_original": 91,
+      "pregunta": "¿Qué son las hipótesis según el texto?\n1.- Enunciados teóricos supuestos, no verificados pero probables.\n2-Verdades absolutas comprobadas.\n3.- Datos finales de la investigación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-92",
+      "numero_original": 92,
+      "pregunta": "¿Cuándo existe un problema de investigación según el texto?\n1.- Cuando hay vacíos del conocimiento o dificultades que demandan respuesta científica.\n2.- Cuando el investigador tiene presupuesto.\n3.- Cuando se tiene una opinión personal sobre un tema.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-93",
+      "numero_original": 93,
+      "pregunta": "En el planteamiento del problema, ¿a qué corresponde el \"Objeto Formal\"?\n1.- A la descripción de la realidad.\n2.- A la formalidad administrativa.\n3.- Al abordaje teórico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-94",
+      "numero_original": 94,
+      "pregunta": "¿Qué condición es necesaria para una hipótesis de relación causal?\n1.- Que la variable \"causa\" ocurra antes que la variable \"efecto\".\n2.- Que solo haya una variable.\n3.- Que sea un estudio cualitativo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-95",
+      "numero_original": 95,
+      "pregunta": "¿Cuáles son los elementos estructurales de las hipótesis científicas?\n1.- Sujeto, verbo y predicado.\n2.- Unidades de observación, variables y elementos lógicos (relación).\n3.- Introducción y conclusiones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-96",
+      "numero_original": 96,
+      "pregunta": "¿Cuál es el objetivo del \"Informe Final\" como último momento del proceso?\n1.- Archivar los datos para que nadie los vea\n2-Dar a conocer los resultados para incrementar el conocimiento o solucionar problemas.\n3.- Evaluar el desempeño financiero del equipo",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-97",
+      "numero_original": 97,
+      "pregunta": "¿Cuáles son los elementos para la operacionalización del marco teórico mencionados en el texto?\n1.- Categorías, conceptos, variables, dimensiones, indicadores, índice y fuentes.\n2.- Introducción, nudo y desenlace.\n3.- Encuestas, entrevistas y observación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-98",
+      "numero_original": 98,
+      "pregunta": "¿Qué función cumplen los objetivos en la investigación?\n1.- Listar los problemas personales del investigador.\n2-Resumir lo que ha de lograrse en el estudio y determinar sus límites.\n3.- Explicar la teoría detalladamente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-99",
+      "numero_original": 99,
+      "pregunta": "Según Neupert (1977), ¿cuál es el objetivo del marco teórico?\n1.-Describir la población.\n2.- Presentar los datos recolectados.\n3.- Elaborar el informe final.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-1-100",
+      "numero_original": 100,
+      "pregunta": "¿Cuál es la característica definitoria de los estudios observacionales no experimentales?\n1.- Se manipulan todas las variables.\n2.- Se realizan en laboratorios cerrados.\n3.- Dejan que la naturaleza siga su curso y no se manipulan las condiciones.\nCARRERA DE MEDICINA\nCBBA, 19 de enero de 2026",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    }
+  ]
+}

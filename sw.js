@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v59';
+const CACHE_NAME = 'alcocermed-main-v60';
 const APP_SHELL = [
     './campus',
     './campus.html',
@@ -29,15 +29,17 @@ const APP_SHELL = [
     './config.js',
     './device_guard.js?v=4',
     './campus-access.js?v=9',
-    './script.js?v=43',
+    './script.js?v=44',
     './mindmap-branch-labels.js?v=3',
     './mindmap-content.js?v=1',
     './mindmap-viewer.js?v=7',
     './mindmap-viewer.css?v=1',
     './intocables-hub.js?v=1',
-    './simulacro-ingreso.js?v=1',
+    './simulacro-ingreso.js?v=2',
     './student-library.js?v=8',
     './study-summaries.js?v=3',
+    './past-exams.js?v=1',
+    './past-exams.css?v=1',
 ];
 
 self.addEventListener('install', function (event) {

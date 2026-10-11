@@ -1,0 +1,1522 @@
+{
+  "id": "2022-2023-2",
+  "year": "2022–2023",
+  "type": "Segundo parcial",
+  "title": "Segundo parcial · 2022–2023",
+  "count": 97,
+  "duration": 90,
+  "pattern": "/api/past-exam?id=2022-2023-2&pattern=1",
+  "missingNumbers": [
+    47,
+    48,
+    49
+  ],
+  "excludedQuestions": [],
+  "questions": [
+    {
+      "id": "2022-2023-2-1",
+      "numero_original": 1,
+      "pregunta": "La presencia de endotelio, membrana basal, lámina elástica interna en la estructura básica de un vaso sanguíneo caracterizan a: 1.- Túnica interna .2.- Túnica adventicia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-2",
+      "numero_original": 2,
+      "pregunta": "Presión que empuja el líquido fuera de los capilares, hacia el líquido intersticial: 1.- Presión hidrostática sanguínea.\n2.- Presión hidrostática del líquido intersticial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-3",
+      "numero_original": 3,
+      "pregunta": "La presión neta de filtración. 1.- En el extremo arterial de los capilares es de 10 mm Hg. 2.- En el extremo venoso de los capilares es de 9 mm Hg.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-4",
+      "numero_original": 4,
+      "pregunta": "Podemos calcular el Gasto Cardiaco: 1.- Frecuencia cardíaca multiplicada por el volumen sistólico. 2.- Tensión arterial media dividido por la resistencia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-5",
+      "numero_original": 5,
+      "pregunta": "El centro cardiovascular recibe aferencias de. 1.- Desde los barorreceptores para el control del CO2 y O2. 2.- Desde los quimiorreceptores para el control de la tensión arterial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-6",
+      "numero_original": 6,
+      "pregunta": "Se considera bradicardia: 1.- Frecuencia cardíaca se encuentra por debajo de 60 latidos por minuto. 2.- Frecuencia cardíaca por debajo de 50 latidos por minuto.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-7",
+      "numero_original": 7,
+      "pregunta": "Una causa común de Shock obstructivo es: 1.- Embolismo pulmonar. 2.- Reacción alérgica grave.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-8",
+      "numero_original": 8,
+      "pregunta": "En cuanto a las cámaras cardíacas, es cierto: 1.- En el tabique interauricular del corazón adulto se encuentra una depresión la fosa oval. 2.- Las válvulas atrioventriculares están compuestas por tejido conectivo denso cubierto por endocardio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-9",
+      "numero_original": 9,
+      "pregunta": "Proporciona una ruta alternativa para que la sangre llegue a un determinado órgano, esta definición corresponde a:\n1.- Anastomosis. 2.- Circulación colateral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-10",
+      "numero_original": 10,
+      "pregunta": "Con relación a las vesículas encefálicas: 1.- El prosencéfalo se diferencia en telencéfalo y diencéfalo. 2.- El rombencéfalo se diferencia en metencéfalo y mielencéfalo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-11",
+      "numero_original": 11,
+      "pregunta": "Con relación a los tipos de leucocitos: 1.- El eosinófilo tiene varios lóbulos en su núcleo y gránulos que oscurecen el núcleo. 2.- Los basófilos se tiñen con azul purpureo y sus gránulos oscurecen el núcleo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-12",
+      "numero_original": 12,
+      "pregunta": "Con relación a los factores de coagulación: 1.- El factor IV proviene del calcio almacenado en los músculos solamente. 2.- El factor III proviene de tejidos dañados y plaquetas activadas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-13",
+      "numero_original": 13,
+      "pregunta": "Con relación a la hemólisis: 1.- El órgano más dañado en una hemólisis es el corazón por que circula toda la sangre por ese órgano. 2.- En una hemolisis la hemoglobina liberada puede causar insuficiencia renal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-14",
+      "numero_original": 14,
+      "pregunta": "Con relación a la enfermedad hemolítica del neonato: 1.- La causa más común es cuando la madre es RH positivo y el hijo es RH negativo. 2.- En esta enfermedad principalmente es afectado el sistema ABO.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-15",
+      "numero_original": 15,
+      "pregunta": "Con relación a la anemia: 1.- En la talasemia hay megaloblastos y está asociada a la anemia panrónica. 2.- Al hablar de síntesis deficiente de hemoglobina nos referimos a talasemia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-16",
+      "numero_original": 16,
+      "pregunta": "Con relación a la leucemia: 1.- La leucemia mieloide crónica tiene predilección por los adolescentes no por los adultos. 2.- La leucemia linfoblástica crónica afecta sobre todo a niños de 5 años.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-17",
+      "numero_original": 17,
+      "pregunta": "Con relación a las gammaglobulinas: 1.- Son medicamentos para uso animal no aprobados en seres humanos.\n2.- Son antisueros que reaccionan contra antígenos específicos a corto plazo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-18",
+      "numero_original": 18,
+      "pregunta": "Con relación a la ictericia: 1.- La prehepática es por obstrucción en los conductos biliares. 2.- La extrahepática se da por exceso de producción de bilirrubina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-19",
+      "numero_original": 19,
+      "pregunta": "Con relación a los párpados: 1.- La carúncula lagrimal contiene glándulas sebáceas y sudoríparas. 2.- Dentro la placa tarsal se encuentran las glándulas de Meibomio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-20",
+      "numero_original": 20,
+      "pregunta": "Con relación a la anatomía del globo ocular: 1.- En la unión de la córnea con la esclerótica se halla el conducto de Schlemm. 2.- Los procesos ciliares son pliegues en la superficie externa del cuerpo ciliar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-21",
+      "numero_original": 21,
+      "pregunta": "Con relación a la túnica vascular del ojo: 1.- La luz intensa estimula el ojo, las fibras parasimpáticas del nervio oculomotor estimulan a los músculos circulares del iris para relajarse. 2.- Ante la luz débil, las neuronas simpáticas estimulan para contraerse a los músculos radiales del iris y así disminuye el diámetro pupilar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-22",
+      "numero_original": 22,
+      "pregunta": "Con relación a la humor acuoso: 1.- El humor acuoso drena hacia el seno venoso escleral y desde allí a la sangre, es reemplazada cada 90 minutos. 2.- El humor acuoso ingresa a la cámara anterior y a través de la pupila ingresa a la cámara a la posterior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-23",
+      "numero_original": 23,
+      "pregunta": "Con relación a los andrógenos: 1.- Colabora en el inicio del crecimiento del vello axilar y púbico en varones y mujeres. 2.- En las mujeres jóvenes es la fuente principal de estrógenos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-24",
+      "numero_original": 24,
+      "pregunta": "Con relación a las hormonas liberadas por las glándulas paratiroideas: 1.- Promueve la formación de calcitriol. 2.- La hormona paratiroidea es liberada por las células principales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-25",
+      "numero_original": 25,
+      "pregunta": "La hipoglucemia estimula: 1.- La secreción de insulina. 2.- La secreción de glucagón.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-26",
+      "numero_original": 26,
+      "pregunta": "Con relación a la fosfatidilcolina: 1.- Se produce un acoplamiento de una de las cadenas hidrocarbonadas cuando hay un doble enlace entre los átomos de carbono. 2.- La parte fosfatidil del resto del fosfolípido hace referencia a la porción fosfato-glicerol-ácido graso de la molécula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-27",
+      "numero_original": 27,
+      "pregunta": "Con relación a las moléculas hidrófilas: 1.- Tanto la acetona como el agua son moléculas polares. 2.- Se forman enlaces covalentes entre acetona y las moléculas de agua circundante.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-28",
+      "numero_original": 28,
+      "pregunta": "Con relación a moléculas hidrófobas: 1.- La molécula de 2-metilpropano es por completo hidrófila. 2.- Puede establecer interacciones favorables con el agua.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-29",
+      "numero_original": 29,
+      "pregunta": "Con relación a la plectina: 1.- Es una proteína accesoria que estabiliza y refuerza los filamentos intermedios.\n2.- Establece enlaces cruzados entre los filamentos para formar haces y los conecta con microtúbulos, filamentos de actina y estructuras adhesivas de los desmosomas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-30",
+      "numero_original": 30,
+      "pregunta": "Con relación de los microtúbulos: 1.- El comportamiento notable que altera entre polimerización y despolimerización se conoce como inestabilidad dinámica. 2.- El fármaco taxol ejerce el efecto opuesto sobre el crecimiento de los microtúbulos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-31",
+      "numero_original": 31,
+      "pregunta": "Con relación al dihidrofolato (DHF): 1.- En la década de 1940 se administraron pequeñas cantidades de este compuesto sumamente tóxico a pacientes para inducir el descenso de peso. 2.- El dihidrofolato (DHF) es una pequeña molécula que toma a las membranas permeables a los electrones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-32",
+      "numero_original": 32,
+      "pregunta": "Con relación a los canales iónicos: 1.- No necesitan presentar un cambio de conformación por cada ion que pasa.\n2.- Más de un millón de iones por segundo pueden atravesar un canal abierto.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-33",
+      "numero_original": 33,
+      "pregunta": "Con relación con los potenciales de acción: 1.- Una onda itinerante de excitación eléctrica, conocida como potencial de acción, o impulso nervioso, puede transportar un mensaje sin debilitarse. 2.- El impulso nervioso transporta un mensaje de un extremo de la neurona al otro, a velocidades de hasta 1000 metros por segundo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-34",
+      "numero_original": 34,
+      "pregunta": "Con relación a las bombas de Ca2+: 1.- Las células eucariotas suelen mantener una concentración muy baja de Ca2+ libre en su citosol, alrededor de 1-2 mM. 2.- La concentración de Ca2+ libre fuera de la célula es mucho más alta alrededor de 10-4 mM.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-35",
+      "numero_original": 35,
+      "pregunta": "Con relación a las proteínas transportadoras: 1.- Las bombas impulsadas por ATP utilizan la energía liberada por la síntesis del ATP. 2.- Las bombas impulsadas por luz, que se encuentran principalmente en células humanas, utilizan la energía derivada de la luz solar para impulsar el transporte cuesta arriba.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-36",
+      "numero_original": 36,
+      "pregunta": "Con relación a los transportadores pasivos: 1.- Como la glucosa tiene carga, el componente eléctrico de su gradiente electroquímico es negativo. 2.- Cuando la glucosa es abundante fuera de las células, como después de una comida, el azúcar se une a los sitios del transportador presentados al exterior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-37",
+      "numero_original": 37,
+      "pregunta": "Con relación al movimiento del agua a través de las membranas celulares: 1.- Para facilitar el flujo de agua, algunas células contienen canales especializados en su membrana plasmática, denominados acuaporinas. 2.- En muchas células, como las del hígado y las células musculares, las acuaporinas son esenciales para su función. 3.- Cuando el canal está abierto, solo iones del tamaño y la carga apropiados pueden atravesarlo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-38",
+      "numero_original": 38,
+      "pregunta": "Con relación a las proteínas transportadoras, discriminan principalmente sobre la base del tamaño y la carga eléctrica. 1.- Los iones inorgánicos más importantes para las células son, entre otros, Na+, K+, Ca2+, Cl- y H+ (protones). 2.- El movimiento de estos iones a través de las membranas celulares desempeña un papel esencial en muchos procesos biológicos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-39",
+      "numero_original": 39,
+      "pregunta": "Con relación a la tuberculosis: 1.- Vacuna con BCG (Bacilo Calmette - Guérin) Esta vacuna protege a las niñas(os) de las formas agudas y graves de la tuberculosis miliar y meníngea. 2.- Vacunación con BCG (Bacilo Calmette - Guérin) Esta vacuna protege a las niñas(os) de las formas agudas de la tuberculosis aguda y crónica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-40",
+      "numero_original": 40,
+      "pregunta": "Con relación a la rabia humana y animales domésticos: 1.- Todo caso sospechoso diagnosticado clínicamente de rabia humana no debe ser notificado. 2.- Todo caso positivo sea registrado en los establecimientos para atención médica y notificado dentro de las 48 horas de ser declarado positivo por el laboratorio oficial.\n3.- Los ciclos de transmisión de la rabia en el país son: - Ciclo Urbano. Es el de mayor transmisión provocada por los animales domésticos de Compañía. - Ciclo Silvestre. Provocado por los animales silvestres como perros, loros, gatos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-41",
+      "numero_original": 41,
+      "pregunta": "PREVENCIÓN DE LA TUBERCULOSIS: 1.- Vacuna con BCG (Bacilo Calmette - Guérin) Esta vacuna protege a las niñas(os) de las formas agudas y graves de la tuberculosis miliar y meníngea. 2.- Vacunación con BCG (Bacilo Calmette - Guérin) Esta vacuna protege a las niñas(os) de las formas agudas de la tuberculosis aguda y crónica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-42",
+      "numero_original": 42,
+      "pregunta": "Sobre Vacunación del Covid 19: 1.- Vacuna, actualmente se tienen las vacunas Pfizer/BioNTech, Oxford-AstraZeneca, Sputnik V, Sinopharm, Sinovac, Covaxin. 2.- Sinopharm en edades de 6 a 17 años deben contar con sus 5 dosis de vacuna.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-43",
+      "numero_original": 43,
+      "pregunta": "Definiciones sobre pacientes con Covid-19: 1.- Caso Confirmado: Caso sospechoso con prueba de laboratorio para SARS-CoV-2 Positiva. 2.- Caso Descartado: Caso sospechoso con prueba de laboratorio para SARS-CoV-2 Negativa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-44",
+      "numero_original": 44,
+      "pregunta": "Con relación a la rabia humana y animales domésticos: 1.- Todo caso sospechoso diagnosticado clínicamente de rabia humana no debe ser notificado. 2.- Todo caso positivo sea registrado en los establecimientos para atención médica y notificado dentro de las 48 horas de ser declarado positivo por el laboratorio oficial. 3.- Los ciclos de transmisión de la rabia en el país son:- Ciclo Urbano. Es el de mayor transmisión provocada por los animales domésticos de Compañía.\n- Ciclo Silvestre. Provocado por los animales silvestres como perros, loros, gatos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-45",
+      "numero_original": 45,
+      "pregunta": "Ciudad Urbana. Es el de mayor transmisión provocada por los animales domésticos de Compañía. 1.- El periodo de incubación comprende desde el ingreso del parásito al organismo hasta el daño de los tejidos cardíacos e intestinales.\n2.- El periodo de incubación va desde 4 a 12 días como término medio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-46",
+      "numero_original": 46,
+      "pregunta": "Enfermedad de Chagas – periodos evolutivos: 1.- El periodo de incubación es clínicamente silente. 2.- El periodo de incubación es muy sintomático.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-50",
+      "numero_original": 50,
+      "pregunta": "Con relación al Chagas Congénito: 1.- Es transmitida por la madre chagásica al niño a través de la placenta. 2.- El recién nacido presenta exceso de peso al nacer, sin hepatomegalia y esplenomegalia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-51",
+      "numero_original": 51,
+      "pregunta": "La viscosidad de la sangre depende de: 1.- Cantidad de eritrocitos y volumen de plasma. 2.- Cantidad de eritrocitos y en gran medida de concentración de proteínas plasmáticas. 3.- Cantidad de eritrocitos, volumen de plasma, concentración de electrolitos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-52",
+      "numero_original": 52,
+      "pregunta": "La regulación del gasto cardíaco depende de: 1.- Precarga. 2.- Contractilidad. 3.- Poscarga.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-53",
+      "numero_original": 53,
+      "pregunta": "La onda P del electrocardiograma corresponde a: 1.- Despolarización ventricular. 2.- Repolarización auricular.\n3.- Repolarización ventricular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-54",
+      "numero_original": 54,
+      "pregunta": "El centro cardiovascular llegan aferencias de: 1.- Sistema límbico. 2.- Hipotálamo. 3.- Corteza cerebral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-55",
+      "numero_original": 55,
+      "pregunta": "El complejo QRS enmascara a la: 1.- Despolarización auricular. 2.- Sístole ventricular. 3.- Plateau o meseta ventricular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-56",
+      "numero_original": 56,
+      "pregunta": "Las válvulas semilunares se abren cuando:1.- La presión ventricular excede la tensión arterial.2.- Los ventrículos se relajan.3.- Durante la contracción auricular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-57",
+      "numero_original": 57,
+      "pregunta": "¿Cómo están constituidos los pedúnculos cerebelosos inferiores? 1.- Metencéfalo. 2.- Telencéfalo. 3.- Mesencéfalo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-58",
+      "numero_original": 58,
+      "pregunta": "¿Cuál de los siguientes núcleos del tálamo actúa en la expresión de las emociones? 1.- Axones de los tractos espinocerebelosos. 2.- Axones que se extienden desde el cerebelo hasta la formación reticular. 3.- Axones provenientes del núcleo olivar inferior del bulbo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-59",
+      "numero_original": 59,
+      "pregunta": "Con relación al plasma: 1.- Núcleo lateral dorsal. 2.- Núcleo ventral anterior. 3.- Núcleo ventral lateral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-60",
+      "numero_original": 60,
+      "pregunta": "Con relación a la fisiología del eritrocito: 1.- Tiene enzimas, hormonas y gases como solutos disueltos en plasma.\n2.- En el plasma encontramos como productos de desecho urea, ácido úrico, creatinina. 3.- En el plasma los antígenos interactúan con los anticuerpos durante las respuestas inmunitarias.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-61",
+      "numero_original": 61,
+      "pregunta": "Con relación a elementos formes de la sangre: 1.- Al porcentaje de sangre que llevan los elementos formes glóbulos rojos, glóbulos blancos y plaquetas se denomina hematocrito. 2.- El rango normal de hematocrito para mujeres adultas es de 25% a 35%. 3.- El rango normal de hematocrito para varones adultos es 55% a 65 %.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-62",
+      "numero_original": 62,
+      "pregunta": "Con relación a la eritropoyetina: 1.- Incrementa la cantidad de glóbulos blancos sobre todo linfocitos. 2.- Es producida por las células de los riñones que están entre los túbulos renales. 3.- En casos de falla renal la producción de eritropoyetina aumenta generando poliglobulia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-63",
+      "numero_original": 63,
+      "pregunta": "Con relación al dopaje de la sangre: 1.- Cada eritrocito contiene alrededor de 260 millones de moléculas de hemoglobina. 2.- Cada molécula de hemoglobina está conformada por cuatro cadenas alfa y dos gama. 3.- En el centro de cada anillo hemo hay dos iones fierro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-64",
+      "numero_original": 64,
+      "pregunta": "Con relación a un recuento de reticulocitos: 1.- Sirve para medir la tasa de hematopoyesis de los glóbulos blancos.\n2.- Lo normal es tener un 10% de reticulocitos circulantes. 3.- El reemplazo de reticulocitos tardará alrededor de una semana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-65",
+      "numero_original": 65,
+      "pregunta": "Con relación a los fotorreceptores:\n1.- Una ventaja del dopaje de sangre natural es poder resistir más, el ejercicio aeróbico como de la maratón.\n2.- En Kenia se realiza dopaje de sangre natural por condiciones de altura y ejercicio.\n3.- Cuando un atleta de Kenia compite en Boston mejora su rendimiento comparado con los atletas nativos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-66",
+      "numero_original": 66,
+      "pregunta": "Con relación al oído medio:1.- Retinol, un derivado de la vitamina A, es la parte absorbente de luz de todos los fotopigmentos. 2.- La conversión de cis - retinal a trans - retinal recibe el nombre de isomerización. 3.- La completa regeneración de la rodopsina demora 30 a 40 minutos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-67",
+      "numero_original": 67,
+      "pregunta": "Con relación al oído interno: 1.- La ventana oval está cerrada por otra membrana denominada membrana timpánica secundaria. 2.- El músculo tensor se articula con la cabeza del estribo y placa pedía del estribo están sobre la ventana redonda. 3.- El músculo tensor del tímpano limita el movimiento y aumenta la tensión en el tímpano para prevenir daño en el oído medio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-68",
+      "numero_original": 68,
+      "pregunta": "Con relación al oído interno: 1.- Los conductos semicirculares anterior y posterior están orientados horizontalmente.\n2.- El conducto semicircular lateral está orientado en forma vertical. 3.- Los conductos semicirculares se conectan con el utrículo del vestíbulo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-69",
+      "numero_original": 69,
+      "pregunta": "Con relación al oído interno: 1.- Sobre la membrana basilar se halla el órgano espiral u órgano de Corti. 2.- La membrana vestibular separa el conducto coclear de la rampa timpánica. 3.- La membrana basilar separa el conducto coclear de la rampa vestibular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-70",
+      "numero_original": 70,
+      "pregunta": "Con relación a la fisiología de la audición: 1.- Las células del órgano de Corti convierten una vibración mecánica en una señal eléctrica. 2.- La intensidad del sonido es determinada por la intensidad de las ondas sonoras. 3.- En los niños sordos, las emisiones otoacústicas no se producen o son de magnitud pequeña.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-71",
+      "numero_original": 71,
+      "pregunta": "Con relación a los conductos semicirculares: 1.- Los huesecillos del oído se desarrollan a partir de los arcos branquiales 1° y 2°. 2.- La vesícula óptica forma las capas neural y pigmentaria de la retina. 3.- Los conductos semicirculares detectan la aceleración o desaceleración.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-72",
+      "numero_original": 72,
+      "pregunta": "Con relación a los receptores de las células diana: 1.- Son proteínas que reconocen y se unen a una hormona específica. 2.- Las hormonas y los neurotransmisores actúan sobre sus células diana al unirse a receptores. 3.- La hormona tiroidesestimulante se une a receptores de las células de la glándula tiroides.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-73",
+      "numero_original": 73,
+      "pregunta": "La capacidad de responder de una célula diana a una hormona depende de: 1.- La sensibilidad de los receptores a la hormona. 2.- La abundancia de los receptores de la hormona en la célula diana. 3.- Si se trata de una hormona liposoluble o hidrosoluble.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-74",
+      "numero_original": 74,
+      "pregunta": "Con relación a la calcitonina: 1.- Es secretada por las células parafoliculares. 2.- Disminuye los niveles sanguíneos de calcio. 3.- Los niveles sanguíneos elevados de calcio estimulan su secreción.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-75",
+      "numero_original": 75,
+      "pregunta": "Con relación a la aldosterona: 1.- Ayudan a modificar el volumen y la presión. 2.- Es secretada por médula suprarrenal. 3.- Es el principal glucocorticoide de nuestro organismo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-76",
+      "numero_original": 76,
+      "pregunta": "Con relación al ensamblado de la membrana celular: 1.- Se agregan fosfolípidos recién sintetizados al lado citosólico de la membrana del RE. 2.- Pese a la adición desequilibrada de fosfolípidos recién sintetizados, las membranas celulares logran crecer de manera uniforme. 3.- Las transferencias de fosfolípidos son catalizadas por una escramblasa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-77",
+      "numero_original": 77,
+      "pregunta": "Con relación a las flipasas: 1.- La membrana del RE contiene esta familia de transportadores que manejan fosfolípidos. 2.- Eliminan fosfolípidos específicos del lado de la bicapa que enfrenta al citosol y los lleva a la monocapa que enfrenta el espacio exterior. 3.- Ayudan a establecer y mantener la distribución simétrica de los fosfolípidos característica de las membranas celulares animales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-78",
+      "numero_original": 78,
+      "pregunta": "Con relación a los detergentes: 1.- Son moléculas grandes anfipáticas, similares a los lípidos, se diferencian de los fosfolípidos, únicamente en que tienen solo una cola hidrófoba. 2.- Tienen forma de cono, en agua, estas moléculas cónicas tienden a agregarse en grupos denominados liposomas. 3.- El Tritón X-100 es un detergente no iónico suave; es decir, tiene un grupo no ionizado, pero estructura polar, en su extremo hidrófilo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-79",
+      "numero_original": 79,
+      "pregunta": "Con relación a los receptores tirosina cinasa: 1.- Las fosforilaciones de tirosinas son revertidas por tirosina fosfatasas. 2.- En algunos casos, los RTK activados son desactivados de una manera más drástica. 3.- Una proteína de señalización intracelular activada por casi todos los RTK es una pequeña proteína de unión a GTP denominada Ras.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-80",
+      "numero_original": 80,
+      "pregunta": "Con relación a la activación de Ras: 1.- Activa un módulo de señalización de tres cinasas, que transmite la señal en dirección retrógrada. 2.- La mutación activa la actividad GTPasa de Ras, de manera que la proteína no puede desactivarse, lo que promueve la proliferación celular no controlada. 3.- Inicia una cascada de fosforilación en la que una serie de serina/treonina cinasas se fosforilan y se activan entre sí de manera secuencial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-81",
+      "numero_original": 81,
+      "pregunta": "Con relación a los filamentos de actina: 1.- Los filamentos de actina pueden crecer por el agregado de monómeros de actina en cualquiera de los extremos. 2.- La velocidad de crecimiento es más rápida en el extremo negativo que en el positivo. 3.- La subunidad de cada filamento de actina es un dímero de actina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-82",
+      "numero_original": 82,
+      "pregunta": "Con relación a fármacos que afectan a los filamentos de actina: 1.- La faloidina, estabilizar los filamentos de actina contra la despolimerización. 2.- La Citocalasina, recubre los extremos positivos de los filamentos, lo que impide su polimerización. 3.- La Latrunculina, se une a monómeros de actina e impide su polimerización.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-83",
+      "numero_original": 83,
+      "pregunta": "Con relación a las numerosas proteínas que se unen a los filamentos de actina: 1.- Alrededor del 13% del total de proteínas de una célula animal corresponde a actina. 2.- La profilina, se une a monómeros de actina en el citosol, ayuda el agregado a los extremos de los filamentos de actina. 3.- Cuando se necesitan filamentos de actina, la timosina promueve la polimerización de la actina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-84",
+      "numero_original": 84,
+      "pregunta": "Con relación al efecto de la Capsaicina: 1.- Induce sensación urente. 2.- La exposición prolongada causa alivio del dolor. 3.- Induce sensación dolorosa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-85",
+      "numero_original": 85,
+      "pregunta": "Con relación a los receptores acoplados a canales iónicos: 1.- No modifican la permeabilidad de la membrana plasmática a determinados iones. 2.- Si las condiciones son apropiadas, generan una corriente eléctrica. 3.- Cuando son estimuladas, las enzimas activan diversas vías de señalización intracelular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-86",
+      "numero_original": 86,
+      "pregunta": "Con relación a las mitocondrias y la generación de energía: 1.- El gradiente electroquímico de protones a través de la membrana mitocondrial externa se utiliza para impulsar algunos procesos de transporte acoplados. 2.- El piruvato y el fosfato inorgánico se mueven al interior de la matriz junto con los electrones. 3.- Cuando se detiene la actividad de las mitocondrias, las concentraciones de ATP descienden de manera sustancial y se agota la batería de la célula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-87",
+      "numero_original": 87,
+      "pregunta": "Con relación a las mitocondrias y generación de energía: 1.- El potencial redox es una medida de las afinidades por los electrones. 2.- Las proteínas de la cadena respiratoria guían a los protones, de manera que estos se mueven secuencialmente de un complejo enzimático al siguiente. 3.- La tendencia de estas reacciones de oxidación-reducción o reacciones redox, a proceder en forma espontánea depende del cambio de ATP.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-88",
+      "numero_original": 88,
+      "pregunta": "Con relación a los potenciales redox: 1.- NADH es un fuerte aceptor de electrones. 2.- Una mezcla 1:1 de NADH y NAD+ tiene un potencial redox de -110mV. 3.- Cuanto más bajo es el potencial redox, más baja es la afinidad de las moléculas por los electrones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-89",
+      "numero_original": 89,
+      "pregunta": "Con relación al transporte a través de la membrana celular: 1.- Las células vegetales, bacterias y hongos tienen bombas de Na+ en su membrana plasmática. 2.- La importación de numerosos azúcares y aminoácidos a las células bacterianas es mediada por cotransportadores unidireccionales de glucosa. 3.- Los gradientes electroquímicos de Na+ impulsan el transporte de solutos en plantas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-90",
+      "numero_original": 90,
+      "pregunta": "Con relación a la Venus atrapamoscas: 1.- Utiliza señalización eléctrica para capturar a su presa. 2.- Las hojas se cierran en menos de la mitad de un segundo cuando un insecto se mueve a través de ellas. 3.- Una estimulación mecánica abre canales iónicos de la membrana plasmática, lo que activa una señal eléctrica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-91",
+      "numero_original": 91,
+      "pregunta": "Con relación a la vacuna Antineumocócica: 1.- Contribuye a reducir la mortalidad y morbilidad por neumonía, sepsis y meningitis con una eficacia mayor al 77%. 2.- Contribuye a reducir la mortalidad y morbilidad por neumonía, sepsis y meningitis con una eficacia menor al 90%. 3.- Contribuye a reducir la mortalidad y morbilidad por neumonía, sepsis y meningitis con una eficacia mayor al 97%.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-92",
+      "numero_original": 92,
+      "pregunta": "Con relación a la EPIGLOTITIS: 1.- La sintomatología es de instalación brusca. 2.- Su agente causal es Haemophilus influenzae tipo B. 3.- En el adulto la presentación es menos severa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-93",
+      "numero_original": 93,
+      "pregunta": "En la OTITIS MEDIA AGUDA, se observa otorrea cuando: 1.- Sale abundante sangre por el oído. 2.- Cuando se complica con MASTITIS. 3.- Cuando se presenta perforación de la membrana timpánica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-94",
+      "numero_original": 94,
+      "pregunta": "La tuberculosis 1.- Aumentar la tuberculosis para 2030 es una de las metas de los Objetivos de Desarrollo Sostenible (ODS) relacionadas con la salud. 2.- La OMS/ OMS, cada 24 de marzo conmemora el Día Mundial de la Tuberculosis.\n3.- Los Departamentos de La Paz y Cochabamba tienen tasas más bajas junto con Santa Cruz.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-95",
+      "numero_original": 95,
+      "pregunta": "Antecedentes sobre Covid-19: 1.- En diciembre de 2019, en la ciudad de Wuhan, se presentó un brote de neumonía de causa desconocida. 2.- En fecha 25 de febrero 2020, la Organización Panamericana de la Salud (OPS), emitió alerta epidemiológico para Oceanía. 3.- El 25 de febrero de 2020, presentan un caso positivo en Bolivia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-96",
+      "numero_original": 96,
+      "pregunta": "Definición sobre pacientes Covid-19: 1.- Caso Confirmado: Caso sospechoso con prueba de laboratorio para SARS-CoV-2 Negativa. 2.- Caso Probable: Caso sospechoso para quien las pruebas no pudieron realizarse por ningún motivo. 3.- Caso Recuperado: Caso confirmado que después de la remisión del cuadro clínico inicial presenta 1 prueba negativa de RT-PCR.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-97",
+      "numero_original": 97,
+      "pregunta": "Existencia de grupos vulnerables a la enfermedad Covid 19 entre los cuales tenemos: 1.- Mujeres sin embarazo.\n2.- Adultos mayores. 3.- Población geriátrica únicamente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-98",
+      "numero_original": 98,
+      "pregunta": "Rabia humana: 1.- Se define como una enfermedad zoonótica no mortal infectocontagiosa que afecta el sistema nervioso central produciendo una encefalitis. 2.- La rabia humana es producida por el virus de la rabia, de la familia Rhabdoviridae. 3.- Se caracteriza por una encefalitis aguda, reversible que evoluciona hasta la muerte.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-99",
+      "numero_original": 99,
+      "pregunta": "Chagas – Agente Causal :1.- En el huésped mamífero, El tripanosoma Cruzi se presenta de dos formas: los amastigotes en la sangre y los tripomastigotes intracelulares en los tejidos. 2.- En el huésped mamífero, El tripanosoma Cruzi se presenta de dos formas: los tripomastigotes en la sangre y los amastigotes intracelulares en los tejidos. 3.- En el insecto vector, los tripomastigotes en el intestino medio, epimastigotes en el intestino posterior y las heces.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-2-100",
+      "numero_original": 100,
+      "pregunta": "Chagas modalidad de transmisión: 1.- La transmisión vectorial se da por la simple picadura del insecto. 2.- El vector de mayor importancia es el Triatoma Sordida. 3.- La transmisión vectorial los parásitos atraviesan la mucosa a través del orificio de la picadura facilitada por el rascado llegando al torrente sanguíneo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    }
+  ]
+}

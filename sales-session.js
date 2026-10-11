@@ -23,7 +23,7 @@
                     location.replace(backLink.href);
                 });
             }
-            const labels = {'resumenes-screen': 'Resúmenes', 'study-library': 'Flashcards', 'resource-browser': 'Aprende jugando', 'banco-screen': 'Banco de preguntas', 'simulacro-screen': 'Simulacros', 'intocables-hub-screen': 'Intocables'};
+            const labels = {'resumenes-screen': 'Resúmenes', 'study-library': 'Flashcards', 'resource-browser': 'Aprende jugando', 'banco-screen': 'Banco de preguntas', 'past-exams-screen': 'Exámenes pasados', 'simulacro-screen': 'Simulacros', 'intocables-hub-screen': 'Intocables'};
             if (labels[saved?.screen]) backLink.textContent = '← Volver a ' + labels[saved.screen];
         } catch (_) { /* Mantener el regreso general al campus. */ }
     }

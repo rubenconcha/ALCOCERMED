@@ -1,0 +1,26 @@
+.past-exams-screen{max-width:1160px;margin:0 auto;padding:24px 0 50px}
+.past-filters{display:flex;gap:18px;align-items:end;flex-wrap:wrap;margin:26px 0 20px;padding:22px;background:#fff;border:1px solid #dae5f0;border-radius:20px;box-shadow:0 6px 20px #19284005}
+.past-filters label{display:grid;gap:8px;min-width:200px;color:#192840;font-weight:700;font-size:.88rem}
+.past-filters select{font:inherit;color:#192840;border:1px solid #d6e1ec;background:#f7faff;border-radius:12px;padding:12px 16px;min-height:46px}
+.past-filters span{margin-left:auto;align-self:center;color:#607694;font-size:.85rem}
+.past-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.past-card{background:#fff;border:1px solid #d9e5f0;border-radius:20px;padding:24px;box-shadow:0 6px 22px #19284006;display:flex;flex-direction:column;border-top:4px solid #238fbf}
+.past-card h3{margin:14px 0 4px;font-size:1.22rem;color:#192840}
+.past-card p{color:#607694;font-size:.88rem;margin:8px 0}
+.past-card .past-card-note{font-size:.76rem;line-height:1.5;margin-bottom:24px}
+.past-card .btn-primary{margin-top:auto;min-height:46px;width:100%;font-size:.86rem}
+.past-detail{background:#fff;border:1px solid #d9e5f0;border-radius:24px;padding:32px;margin-top:24px;max-width:820px}
+.past-detail h3{font-size:1.5rem;color:#192840;margin:14px 0}
+.past-detail p{line-height:1.65;color:#607694}
+.past-source-notes{background:#fff8e9;border:1px solid #f7d89e;border-radius:14px;padding:16px;font-size:.86rem;color:#79551d!important}
+.past-detail .btn-primary{margin-top:20px;min-height:50px}
+.past-result-tools{padding:20px;border:1px solid #d9e5f0;border-radius:16px;margin:24px 0;background:#f7faff}
+.past-result-tools h3{color:#192840;margin:0 0 16px}
+#past-pattern-image{display:block;max-width:100%;height:auto;margin:20px auto 0;border-radius:12px}
+#past-pattern-image[hidden],.past-result-tools[hidden],.past-exams-screen [hidden]{display:none!important}
+#sim-question-text,.sim-rev-question{white-space:pre-line}
+@media(max-width:1000px){.past-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.past-exams-screen{padding-top:8px}.past-grid{grid-template-columns:1fr;gap:14px}.past-filters{padding:16px;gap:14px}.past-filters label{width:100%;min-width:0}.past-filters span{margin-left:0}.past-detail{padding:22px}.past-exams-screen .sim-header{align-items:flex-start}}
+
+.past-exams-screen .btn-primary{color:#192840!important}
+#sim-exam .bq-dificultad-label[hidden],#sim-dificultad[hidden]{display:none!important}

@@ -1,0 +1,1563 @@
+{
+  "id": "2021-1",
+  "year": "2021",
+  "type": "Primer parcial",
+  "title": "Primer parcial · 2021",
+  "count": 100,
+  "duration": 90,
+  "pattern": "/api/past-exam?id=2021-1&pattern=1",
+  "missingNumbers": [],
+  "excludedQuestions": [],
+  "questions": [
+    {
+      "id": "2021-1-1",
+      "numero_original": 1,
+      "pregunta": "En relación a los neuropéptidos es cierto: 1.- Regulan la liberación de las hormonas generadas en la neurohipófisis.\n2.- La angiotensina II regula la sed y realiza vasoconstricción.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-2",
+      "numero_original": 2,
+      "pregunta": "Es cierto: 1.- Los síntomas en el latigazo cervical están relacionados con las hernias discales. 2.- La quiropráctica es una especialidad quirúrgica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-3",
+      "numero_original": 3,
+      "pregunta": "Es cierto: 1.- El cráneo visceral membranoso deriva del segundo arco faríngeo. 2.- La notocorda estimula a las células mesenquimales para formar los discos intervertebrales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-4",
+      "numero_original": 4,
+      "pregunta": "En relación al miembro superior es cierto: 1.- El músculo braquiorradial se inserta en la apófisis estiloides del cúbito.\n2.- La tuberosidad radial se encuentra anterolateral al cuello del radio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-5",
+      "numero_original": 5,
+      "pregunta": "Es cierto: 1.- Los rayos X atraviesan con facilidad las estructuras, por eso los huesos aparecen blancos en la radiografía. 2.- La resonancia magnética es relativamente segura, pudiendo ser usada en pacientes con piezas metálicas en su cuerpo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-6",
+      "numero_original": 6,
+      "pregunta": "Es cierto: 1.- Factores inhibidores de la neuroglía impiden la neurogénesis en el SNC. 2.- La presencia de señales estimuladoras del crecimiento permiten reparación neuronal cerebral completa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-7",
+      "numero_original": 7,
+      "pregunta": "Es cierto: 1.- La articulación que se luxa con mayor frecuencia en los adultos corresponde a la del codo. 2.- El tendón del músculo infraespinoso del manguito rotador es el más vulnerable al desgaste por uso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-8",
+      "numero_original": 8,
+      "pregunta": "Es cierto: 1.- En los varones la pérdida de calcio inicia normalmente después de los 60 años. 2.- En las mujeres se pierde 8% de masa ósea cada 10 años, una vez que se inicia la pérdida ósea.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-9",
+      "numero_original": 9,
+      "pregunta": "Es cierto: 1.- La cantidad de queratina aumenta en la célula a medida que se aleja de la capa apical y pierde la nutrición sanguínea. 2.- El epitelio pavimentoso estratificado no queratinizado es humedecido en forma constante por el moco de las glándulas salivales y mucosas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-10",
+      "numero_original": 10,
+      "pregunta": "Es cierto: 1.- El hueso esfenoides se articula anteriormente con el hueso etmoides. 2.- El hueso esfenoides forma parte de la pared anterior de la órbita.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-11",
+      "numero_original": 11,
+      "pregunta": "En relación a los neuropéptidos es cierto: 1.- La sustancia P se encuentra en las neuronas motoras y sensitivas. 2.- Las Endorfinas estimulan la liberación de sustancia P.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-12",
+      "numero_original": 12,
+      "pregunta": "Es cierto: 1.- La fusión espinal jamás se utiliza como tratamiento de fracturas vertebrales. 2.- La estenosis de la espina lumbar puede ser causada por artrosis en los discos intervertebrales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-13",
+      "numero_original": 13,
+      "pregunta": "Es cierto: 1.- El bloqueo epidural controla el dolor durante la fractura de radio. 2.- La anestesia dental local produce pérdida de sensación en una región.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-14",
+      "numero_original": 14,
+      "pregunta": "En relación al miembro superior es cierto: 1.- El radio se articula con el escafoides, piramidal y trapecioide en la muñeca. 2.- La tuberosidad radial se encuentra anterolateral al cuello del radio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-15",
+      "numero_original": 15,
+      "pregunta": "Es cierto: 1.- La enfermedad de Lyme es producida por una bacteria llamada Borrelia burgdorferi.2.- Esguince es el desplazamiento de un hueso de la articulación con desgarro de ligamentos articulares.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-16",
+      "numero_original": 16,
+      "pregunta": "Es cierto: 1.- El potencial graduado no tiene período refractario, es más prolongado y depende de la intensidad del estímulo. 2.- El potencial de acción se origina en la zona del gatillo, en las células musculares, es corto y se produce la sumación de impulsos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-17",
+      "numero_original": 17,
+      "pregunta": "En relación a la autopsia es cierto: 1.- Puede descubrir la existencia de enfermedades no detectadas durante la vida.\n2.- Puede revelar enfermedades capaces de afectar a la descendencia o a los hermanos del sujeto.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-18",
+      "numero_original": 18,
+      "pregunta": "Es cierto: 1.- En el raquitismo se pueden observar deformaciones del cráneo. 2.- La osteomalacia puede prevenirse con la exposición moderada a los rayos solares.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-19",
+      "numero_original": 19,
+      "pregunta": "Es cierto: 1.- El canal central de la médula espinal y los ventrículos cerebrales está recubierto por una única capa de células cilíndricas con un núcleo oval cerca de su base. 2.- Algunos senos paranasales se encuentran recubiertos por una capa de células cilíndricas no ciliadas con un núcleo oval cerca de su base.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-20",
+      "numero_original": 20,
+      "pregunta": "En relación a los circuitos neuronales es cierto: 1.- En el circuito convergente la neurona recibe impulsos de una sola fuente. 2.- En el circuito divergente el impulso puede originarse en una única neurona presináptica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-21",
+      "numero_original": 21,
+      "pregunta": "Es cierto: 1.- El hueso hioides tiene la forma de U. 2.- Solo el hueso hioides sufre fractura durante la estrangulación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-22",
+      "numero_original": 22,
+      "pregunta": "En relación al miembro superior es cierto: 1.- El tubérculo menor del húmero se proyecta en sentido lateral. 2.- El extremo distal del radio se articula con la cabeza del cúbito.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-23",
+      "numero_original": 23,
+      "pregunta": "Es cierto: 1.- El ligamento humeral transverso se extiende desde el tubérculo mayor hasta el tubérculo menor del húmero. 2.- El ligamento humeral transverso funciona como un retículo para sostener la cabeza larga del músculo bíceps braquial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-24",
+      "numero_original": 24,
+      "pregunta": "Es cierto que además del procesamiento de reflejos la sustancia gris de la médula espinal es el sitio donde: 1.- Se integran los potenciales postsinápticos excitatorios. 2.- Se integran los potenciales presinápticos excitatorios.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-25",
+      "numero_original": 25,
+      "pregunta": "En relación a los síntomas es cierto: 1.- Son cambios objetivos en las funciones corporales que no son evidentes para un observador. 2.- Son ejemplos de síntomas la cefalea, náuseas, tumefacción y la ansiedad.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-26",
+      "numero_original": 26,
+      "pregunta": "¿Cuál de los siguientes músculos corresponde al manguito rotador?:\n1.- Redondo mayor.   2.- Supraespinoso.          3.- Infraespinoso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-27",
+      "numero_original": 27,
+      "pregunta": "En relación al desarrollo del sistema esquelético, es cierto: 1.- La deficiencia del desarrollo del arco vertebral se denomina espina bífida. 2.- Las vértebras derivan de bloques cuboides de mesodermo (somitas). 3.- La notocorda es un cilindro de células mesodérmicas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-28",
+      "numero_original": 28,
+      "pregunta": "Es cierto: 1.- En el hueso, cartílago, conjuntiva del ojo existe gran cantidad de dermatansulfato. 2.- La fibronectina une las fibras colágenas entre sí. 3.- La sustancia fundamental sostiene las células, las une y almacena agua.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-29",
+      "numero_original": 29,
+      "pregunta": "¿Cuál de los siguientes ligamentos separa la glándula parótida de la glándula submandibular?: 1.- Ligamento estilomandibular. 2.- Ligamento esfenomandibular. 3.- Ligamento lateral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-30",
+      "numero_original": 30,
+      "pregunta": "Con relación a la mandíbula es cierto: 1.- Tres de los cuatro músculos de la masticación abren la boca. 2.- El músculo pterigoideo lateral abre la boca. 3.- La fuerza de gravedad no cumple ningún efecto sobre la mandíbula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-31",
+      "numero_original": 31,
+      "pregunta": "Es cierto: 1.- Los tejidos curan más rápido y sin cicatrices en personas más jóvenes que en adultos. 2.- La cirugía fetal deja cicatriz en forma de tejido de granulación. 3.- A medida que envejecemos la glucosa se une en forma aleatoria a proteínas dentro y fuera de las células.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-32",
+      "numero_original": 32,
+      "pregunta": "¿Cuál de los siguientes ligamentos previene la hiperextensión del fémur en la articulación coxal durante la bipedestación?: 1.- Ligamento isquiofemoral. 2.- Ligamento pubofemoral. 3.- Ligamento iliofemoral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-33",
+      "numero_original": 33,
+      "pregunta": "Es cierto: 1.- Durante el desarrollo inicial el número de vértebras es de 33. 2.- La columna vertebral en las mujeres adultas mide en promedio 61 centímetros. 3.- La columna vertebral del adulto tiene 26 vértebras.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-34",
+      "numero_original": 34,
+      "pregunta": "Es cierto: 1.- La falta de fusión de las apófisis palatinas de los huesos maxilares produce el labio leporino.\n2.- La reparación del paladar hendido generalmente se realiza entre los 12 a 18 meses de vida. 3.- El vómer conforma la porción superior del tabique nasal óseo, la división que separa la cavidad en superior e inferior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-35",
+      "numero_original": 35,
+      "pregunta": "En relación al potencial graduado es cierto: 1.- Se origina en las dendritas solamente. 2.- No se origina ni en el cuerpo ni en el axón. 3.- Su duración va desde varios milisegundos hasta varios minutos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-36",
+      "numero_original": 36,
+      "pregunta": "Es cierto: 1.- Las glándulas mamarias presentan secreción apocrina. 2.- Las glándulas de secreción holocrina se destruyen durante la secreción. 3.- Un ejemplo de glándulas holocrinas son las glándulas sebáceas de la piel.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-37",
+      "numero_original": 37,
+      "pregunta": "¿Cuál de los siguientes movimientos de la mandíbula se produce en el compartimento superior de la articulación temporomandibular?:\n1.- Circunducción.                             2.- Leve rotación.                             3.- Elevación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-38",
+      "numero_original": 38,
+      "pregunta": "¿Qué epitelio reviste la superficie húmeda de la vagina?: 1.- Epitelio pavimentoso estratificado no queratinizado. 2.- Epitelio cilíndrico simple ciliado. 3.- Epitelio cilíndrico pseudoestratificado no ciliado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-39",
+      "numero_original": 39,
+      "pregunta": "¿Cuál de los siguientes movimientos de la mandíbula se produce en el compartimento inferior de la articulación temporomandibular?: 1.- Desplazamiento hacia los lados. 2.- Movimiento de protracción.\n3.- Movimiento de depresión.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-40",
+      "numero_original": 40,
+      "pregunta": "Es cierto: 1.- Si el músculo tiene forma de pera, se denomina pectíneo. 2.- Si el músculo rota la palma en sentido posterior, se denomina rotador. 3.- Si la forma del músculo es delgado, se denomina grácil.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-41",
+      "numero_original": 41,
+      "pregunta": "¿Cuál de los siguientes ligamentos de la articulación de la cadera se distiende durante la aducción, se tensa durante la abducción y fortalece la cápsula articular?: 1.- Ligamento isquiofemoral. 2.- Ligamento iliofemoral.\n3.- Ligamento pubofemoral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-42",
+      "numero_original": 42,
+      "pregunta": "En relación al desarrollo del sistema esquelético, es cierto: 1.- El cráneo visceral cartilaginoso deriva del primer arco faríngeo. 2.- La osificación del cráneo visceral membranoso da lugar al hueso hioides. 3.- La notocorda es un cilindro de células ectodérmicas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-43",
+      "numero_original": 43,
+      "pregunta": "Es cierto: 1.- Los macrófagos son células de tejido conectivo que sintetizan fibras y actúan en los procesos de inflamación. 2.- Las células plasmáticas neutralizan sustancias extrañas. 3.- Los mastocitos producen heparina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-44",
+      "numero_original": 44,
+      "pregunta": "¿Cuál de los siguientes ligamentos se extiende desde el tubérculo de la apófisis cigomática del temporal hasta la cara lateral y posterior del cuello de la mandíbula?: 1.- Ligamento lateral. 2.- Ligamento esfenomandibular. 3.- Ligamento estilomandibular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-45",
+      "numero_original": 45,
+      "pregunta": "Es cierto: 1.- Durante la deglución los músculos suprahioides deprimen el hueso hioides. 2.- Los músculos infrahioides elevan el piso de la cavidad bucal durante la deglución. 3.- Los músculos suprahioides e infrahioides estabilizan al hueso hioides.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-46",
+      "numero_original": 46,
+      "pregunta": "¿Cuál de los siguientes ligamentos previene la excesiva abducción del fémur en la articulación coxal y fortalece la cápsula articular?: 1.- Ligamento transversal del acetábulo. 2.- Ligamento pubofemoral.\n3.- Ligamento iliofemoral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-47",
+      "numero_original": 47,
+      "pregunta": "Es cierto: 1.- Los astrocitos recaptan neurotransmisores y regulan el potasio. 2.- Los oligodendrocitos forman vainas de mielina a más de 10 fibras en SNP. 3.- Una célula de Schwann forman vainas de mielina a más de 10 nervios en SNP.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-48",
+      "numero_original": 48,
+      "pregunta": "Es cierto: 1.- El dolor que se extiende desde la región glútea hasta las caras posterolateral de la pierna y lateral del pie representa lesión del nervio obturador. 2.- El tratamiento de la ciática es única y exclusivamente con solo masajes. 3.- El nervio cutáneo posterior del muslo tiene su origen en S1 – S3.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-49",
+      "numero_original": 49,
+      "pregunta": "¿En la articulación de la rodilla, cuál de los siguientes ligamentos previene el deslizamiento posterior de la tibia y el deslizamiento anterior del fémur, cuando la rodilla está flexionada?: 1.- Ligamento cruzado anterior.\n2.- Ligamento cruzado posterior. 3.- Ligamento rotuliano.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-50",
+      "numero_original": 50,
+      "pregunta": "Es cierto: 1.- El foramen redondo se encuentra entre el ala menor del esfenoides y el cuerpo del esfenoides.\n2.- El paladar hendido es la falta de fusión de los huesos maxilares. 3.- El tabique nasal está compuesto por el vómer, cartílago septal y lámina horizontal del etmoides.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-51",
+      "numero_original": 51,
+      "pregunta": "Es cierto: 1.- El complejo de Golgi se compone de vesículas aplanadas circulares y vesículas esféricas de diversos tamaños, que parecen fluir de la primera. 2.- El aparato de Golgi se encuentra situado en una posición constante, por lo general adyacente a la membrana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-52",
+      "numero_original": 52,
+      "pregunta": "Es cierto: 1.- Los peroxisomas transfieren átomos de peróxido de hidrógeno de varios sustratos para el oxígeno. 2.- Los peroxisomas contienen la mayor parte de la catalasa celular, una enzima que convierte peróxido de nitrógeno en agua y oxígeno.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-53",
+      "numero_original": 53,
+      "pregunta": "Es cierto: 1.- El síndrome cerebro-renal es una enfermedad por defecto en la cantidad de los peroxisomas. 2.- Los peroxisomas se multiplican por un proceso todavía poco conocido de división binaria.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-54",
+      "numero_original": 54,
+      "pregunta": "Es cierto en relación a la clasificación de los seres vivos: 1.- Los hongos no tienen clorofila, pero si otros pigmentos fotosintéticos. 2.- No tienen pared de celulosa, sino más bien de quitina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-55",
+      "numero_original": 55,
+      "pregunta": "En relación a los endosomas es cierto: 1.- Forman un compartimiento que recibe las moléculas introducidas en el citoplasma de las células por las vesículas de pinocitosis. 2.- Son orgánulos de forma y tamaño muy variable, cuyo interior es ácido y contiene diversas enzimas que rompen las moléculas mediante la adición de los átomos de moléculas de agua.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-56",
+      "numero_original": 56,
+      "pregunta": "En relación a las enfermedades por defectos de los peroxisomas es cierto: 1.- El síndrome cerebro-hepato-renal conduce a una muerte tardía por lo general en la vejez. 2.- En el síndrome de Zellweger, un estudio genético detectó mutaciones en varios genes todos codificadores de ácidos grasos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-57",
+      "numero_original": 57,
+      "pregunta": "En relación a la cromatina es cierto: 1.- La observación microscópica muestra que el núcleo celular contiene gránulos de tamaño variable y forma regular, que se colorean intensamente con colorantes ácidos. 2.- Actualmente se sabe que la cromatina se compone de ADN asociado a proteínas tales como las histonas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-58",
+      "numero_original": 58,
+      "pregunta": "Es cierto: 1.- La molécula de ARNt tiene una región que es reconocida por la enzima y, por lo tanto, cada aminoácido está unido a su ARNt. 2.- Los ARNt se sintetizan inicialmente en las hebras de ADN como pequeñas moléculas que pasan a través de un procesamiento, haciéndose cada vez más grandes, antes de migrar al citoplasma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-59",
+      "numero_original": 59,
+      "pregunta": "Es cierto: 1.- El peso molecular del ARNm es del orden de cientos e incluso miles de daltons. 2.- Cada molécula de ARNm tiene una extensión de poli-A que es adicionado en el interior del núcleo celular, de manera que la molécula de ARNm es transcripta por una enzima que no requiere molde de ADN.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-60",
+      "numero_original": 60,
+      "pregunta": "Es cierto: 1.- La doble hélice de ADN, se pueden recombinar fácilmente por calentamiento suave, porque las dos cadenas están unidas por enlaces puente de hidrógeno. 2.- En las plantas, todos los triglicéridos son líquidos a temperatura ambiente y son conocidos como aceites vegetales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-61",
+      "numero_original": 61,
+      "pregunta": "Es cierto: 1- La principal característica estructural de los esfingolípidos es la presencia de una larga cadena de esfingosina, junto a dos cadenas de ácido graso, que se une a la esfingosina a través de un enlace iónico. 2- Los esteroides circulan unidos a una región hidrofóbica de la superficie de la molécula de albúmina, que es soluble en agua.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-62",
+      "numero_original": 62,
+      "pregunta": "Es cierto: 1- La D-glucosa recibida por la célula en exceso es añadida, mediante un proceso enzimático, a los extremos de la molécula de glucógeno y ácidos grasos. 2- En la fórmula de los fosfoglicéridos, el radical R puede ser la colina, la etanolamina, la serina o la treonina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-63",
+      "numero_original": 63,
+      "pregunta": "Es cierto: 1- La molécula de glucógeno tiene dimensiones variables y está muy ramificada en todas las direcciones del espacio. 2- El genoma mitocondrial es muy compacto, con la excepción del lugar de origen de replicación, su ADN y codificador a lo largo de toda su longitud, con secuencia no codificantes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-64",
+      "numero_original": 64,
+      "pregunta": "Es cierto: 1- El citoplasma contiene energía almacenada en los depósitos de moléculas de triacilglicéridos, glucógeno, y también en la forma de compuestos intermedios ricos en energía. 2- En los animales, los ácidos grasos son, desde el punto de vista cuantitativo, una fuente energética más importante que la energía aportada por los hidratos de carbono.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-65",
+      "numero_original": 65,
+      "pregunta": "Es cierto: 1- El ATP se forma a partir de ADP y de fosfato inorgánico existente en la membrana mitocondrial interna, de acuerdo con la ecuación: 2ADP más 2 Pi, resulta 2 ATP. 2- En la fosforilación oxidativa, el piruvato se oxida hasta que se forman agua y oxígeno, con una alta eficiencia energética.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-66",
+      "numero_original": 66,
+      "pregunta": "Es cierto: 1- Hay un flujo constante de ADP para el citosol y ATP dentro de la mitocondria. 2- Las mitocondrias se localizan en las células transportadoras de iones, tales como las células de los túbulos renales, e intestinales. 3- Hay moléculas tóxicas como el dinitrofenol, que desacoplan la transferencia de energía mediante el bloqueo de la síntesis del ATP y disipando la energía en forma de calor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-67",
+      "numero_original": 67,
+      "pregunta": "Es cierto: 1.- En el citosol, 1 mol de glucosa produce 2 moles de ATP, permaneciendo una gran cantidad de energía en las 5 moléculas de piruvato. 2.- La mitocondria aumenta en gran medida la capacidad celular para aprovechar la energía contenida en los nutrientes. 3.- La cardiolipina contribuye a dificultar el paso de partículas cargadas electricamente, porque una baja concentración de iones, en la matriz de la mitocondria, perturbaría el gradiente que genera el flujo de protones y la captura de energía en el ADP.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-68",
+      "numero_original": 68,
+      "pregunta": "Es cierto: 1.- La constitución molecular de las dos membranas mitocondriales está de acuerdo con el posible origen evolutivo de estos orgánulos a partir de simbiontes bacterianos. 2.- La membrana mitocondrial interna es igual a la membrana de las bacterias, y contiene el sistema de transferencia de energía para el ADP. 3.- Las mitocondrias que son capaces de sintetizar fosfolípidos, juegan un papel funcionalmente importante, modificando las moléculas recibidas a través de las proteínas de transporte.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-69",
+      "numero_original": 69,
+      "pregunta": "Es cierto: 1.- Los cuerpos elementales, de aproximadamente 20 nm. de diámetro, donde se genera ATP y calor. 2.- En la matriz mitocondrial se localizan los ribosomas midiendo 10 nm. de diámetro, por lo tanto, menores que los del citosol y similares a los de las bacterias. 3.- El análisis de la localización de las enzimas, en los componentes de las mitocondrias, fue facilitado por el cultivo de estos orgánulos con detergentes o ultrasonido.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-70",
+      "numero_original": 70,
+      "pregunta": "Es cierto: 1.- La matriz es un complejo concentrado de cientos de enzimas entre las cuales están las relacionadas con el ciclo del ácido cítrico, ß-oxidación de los ácidos grasos y con la replicación, transcripción y traducción del ADN mitocondrial. 2.- Los corpúsculos elementales con actividad de ATP-sintetasa, sin la cual la membrana no tendría la capacidad de acoplar el transporte de protones para la síntesis de ATP. 3.- Las mitocondrias participan en otros procesos metabólicos importantes, como la síntesis de hormonas esteroides, tiroideas y la apoptosis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-71",
+      "numero_original": 71,
+      "pregunta": "Es cierto que: 1.- Actualmente se admite que el desacoplamiento del proceso oxidativo mitocondrial con la síntesis de ATP a partir de ADP ocurre por un proceso quimiosmótico. 2.- La energía del flujo retrógrado de protones, a través de los corpúsculos elementales, se utiliza para convertir incluso el ATP en ADP. 3.- La proteína termogenina puede funcionar como una especie de válvula, regulando la cantidad de energía de los nutrientes que van a generar calor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-72",
+      "numero_original": 72,
+      "pregunta": "Es cierto: 1.- El ADN mitocondrial está presente en varias copias en forma de anillos de doble cadena con una circunferencia de 5 a 6 μm, con replicación dependiente del ADN nuclear. 2.- El genoma mitocondrial humano, que es relativamente pequeño, tiene 16.569 nucleótidos. 3.- Las proteínas destinadas a las mitocondrias tienen un gran segmento de la molécula que es señal de orientación para este orgánulo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-73",
+      "numero_original": 73,
+      "pregunta": "Es cierto: 1.- Los ribosomas mitocondriales son diferentes a los citosólicos, en tamaño, (30 a 50 nm) en la sensibilidad a los antibióticos, pero es muy similar en la composición de proteínas y ARNtr. 2.- En la enfermedad de Luft, existe un aumento en el número de mitocondrias en el tejido muscular cardíaco, y un aumento del metabolismo basal del paciente. 3.- En los pacientes con Luft, la fosforilación oxidativa está totalmente desacoplada, formándose poco ATP y más calor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-74",
+      "numero_original": 74,
+      "pregunta": "Es cierto: 1.- La miopatía mitocondrial infantil, es una enfermedad mortal, las células musculares y renales consumen mucha energía y son ricas en mitocondrias. 2.- Cada mitocondria tiene varias copias de su ADN y cada óvulo contiene miles de mitocondrias que son las precursoras de todas las mitocondrias del organismo adulto. 3.- Las enfermedades mitocondriales sólo aparecen cuando un determinado tejido u órgano presenta preponderancia de mitocondrias con ADN defectuoso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-75",
+      "numero_original": 75,
+      "pregunta": "En relación a los polisacáridos es cierto: 1.- Hay polisacáridos con moléculas lineales, mientras que otros tienen moléculas ramificadas. 2.- Los polisacáridos complejos, formados por muchos monosacáridos de glucosa, son menos frecuentes en las células. 3.- Los polisacáridos de información son el glucógeno en las células animales y el almidón en las células vegetales, son ambos polímeros de D-glucosa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-76",
+      "numero_original": 76,
+      "pregunta": "En relación a los polisacáridos es cierto: 1.- Algunas células, como las del hígado, liberan glucógeno a la sangre para mantener una concentración estable de glucosa en el plasma sanguíneo. 2.- El almidón se compone de dos tipos de moléculas, la amilopectina un polímero lineal y la amilosa un polímero ramificado. 3.- Los polisacáridos estructurales forman parte del glucocálix de las células animales, de la pared celular bacteriana y de las paredes celulares de las plantas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-77",
+      "numero_original": 77,
+      "pregunta": "En relación a los polisacáridos es cierto: 1.- Todos los polisacáridos estructurales y de información son heteropolímeros. 2.- Debido a su complejidad, la estructura de muchos no ha sido dilucidada. 3.- Tienen funciones energéticas, estructurales y de información (glicocálix, hormonas glicoproteicas, esteroideas).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-78",
+      "numero_original": 78,
+      "pregunta": "En relación al tema de mitocondrias es cierto: 1.- Principalmente por falta de mecanismos de reparación del ADN, el genoma mitocondrial tiene una muy alta tasa de mutación de 5 a 15 veces mayor que la del ADN nuclear. 2.- Un hombre adulto, tiene energía depositada en forma de glucógeno suficiente sólo por 12 horas. 3.- Cuando el cuerpo está en reposo, las células utilizan menos glucosa a partir del glucógeno.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-79",
+      "numero_original": 79,
+      "pregunta": "En relación al ATP es cierto: 1.- El ATP tiene dos enlaces ricos en energía, cuando uno de ellos se rompe, libera aproximadamente 20 kilocalorías por mol. 2.- Es un compuesto inestable, que contiene energía tan concentrada. 3.- Fácilmente utilizable porque la enzima que descompone la molécula de ATP (ATPasa) es muy abundante en la célula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-80",
+      "numero_original": 80,
+      "pregunta": "En relación a la glucosa en el tema de mitocondrias es cierto: 1.- La descomposición de glucosa en agua y dióxido de carbono, que se produce durante la respiración celular, rinde 690 kcal/mol. 2.- La combustión de glucosa, libera gran cantidad de energía y consume poco oxígeno 3.- Esta combustión de la glucosa es, sin embargo, un proceso abrupto, que lleva al calorímetro lentamente a altas temperaturas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-81",
+      "numero_original": 81,
+      "pregunta": "Es cierto con relación al lenguaje utilizado en la educación para la salud: 1.- El lenguaje no es un instrumento importante para la educación, por eso no merece nuestra atención. 2.- Utilizar palabras comunes y generalmente conocidas por todos, como los modismos locales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-82",
+      "numero_original": 82,
+      "pregunta": "Es cierto: 1.- Sistema procede del latín systema, identificado en español como \" unión de cosas de manera organizada \". 2.- Alma Ata enfoca al sistema de salud como un conjunto que no incluye diferentes sectores públicos, privados , con y sin fines de lucro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-83",
+      "numero_original": 83,
+      "pregunta": "Con relación a los seguros de salud, es cierto: 1.- El público se caracteriza por cubrir alguna o la totalidad de prestaciones en salud a la población que no cuenta con ningún tipo de seguro. 2.- La seguridad social está compuesta por el seguro social obligatorio para las personas pertenecientes al sector de economía formal, de corto plazo y el seguro de largo plazo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-84",
+      "numero_original": 84,
+      "pregunta": "Es cierto en relación a la ecología y medio ambiente: 1.- El nicho ecológico es la posición relativa de un organismo dentro una comunidad o ecosistema. 2.- El hábitat ecológico es la posición relativa de un organismo dentro una comunidad o ecosistema.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-85",
+      "numero_original": 85,
+      "pregunta": "Es cierto con relación a los niveles de atención en salud: 1.- El tercer nivel agrupa a los hospitales de alta complejidad y resuelven aproximadamente 5% de los problemas de salud. 2.- En el segundo nivel se ubican los hospitales y establecimientos donde se prestan servicios relacionados a medicina interna, pediatría, gineco-obstetricia, cirugía general.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-86",
+      "numero_original": 86,
+      "pregunta": "Con relación a los sistemas y servicios de salud en Bolivia es cierto: 1.- Cuenta con un sistema único de salud, en la cual el estado debe garantizar el acceso universal, equitativo, oportuno y gratuito en salud. 2.- El funcionamiento del sistema de salud en Bolivia se da en tres niveles: primer, segundo y tercer nivel.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-87",
+      "numero_original": 87,
+      "pregunta": "Con relación a la disposición de residuos es cierto: 1.- Residuos infecciosos o clase \"B\" que comprende residuos como sangre, hemoderivados y fluidos corporales. 2.- Residuos especiales o clase \"C\", comprende a los residuos radiactivos",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-88",
+      "numero_original": 88,
+      "pregunta": "La OMS establece como componentes de la promoción de la salud: 1.- Buena gobernanza sanitaria, ciudades no saludables y la educación sanitaria. 2.- En educación sanitaria las personas han de adquirir conocimientos, aptitudes e información que les permita elegir opciones saludables.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-89",
+      "numero_original": 89,
+      "pregunta": "Consejos para las visitas a la comunidad: 1.- Vaya solo a comunidad, uno ve mejor que dos. 2.- Visite en lo posible, todos los pueblos del área de influencia del centro de salud.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-90",
+      "numero_original": 90,
+      "pregunta": "Es cierto con relación a la bioseguridad: 1.- Utilizar guantes limpios, no necesariamente estériles, cuando se realizan técnicos o procedimientos invasivos. 2.- Los lentes, se debe utilizar como forma de protección de los ojos, adaptable al rostro, debe cubrir completamente el área intra ocular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-91",
+      "numero_original": 91,
+      "pregunta": "Es cierto con relación al financiamiento de los sistemas de Salud: 1.- Los recursos procedentes del estado, son denominados Gasto Internacional en Salud, fondo procedente del PIB o Producción Interno Bruto, gasto per cápita en salud, gasto total en salud. 2.- La contribución a la seguridad social, está basado en la recolección de fondos a partir de contribuciones de individuos, empleadores y algunas veces subsidios gubernamentales. 3.- El gasto privado se realiza por la vía de desembolso del hogar, quien no compra servicios de salud.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-92",
+      "numero_original": 92,
+      "pregunta": "Con relación a los siguientes términos relacionados a Ecología y Medio ambiente, es cierto: 1.- Daño ambiental, es la acción positiva o beneficiosa ejercida por un factor o varios ajenos al medio. 2.- Degradación biológica es la acción positiva que se ejerce sobre un determinado ecosistema que cambia totalmente sus características. 3.- Degradación biológica es la acción negativa que se ejerce sobre un determinado ecosistema que cambia parcial o totalmente sus características.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-93",
+      "numero_original": 93,
+      "pregunta": "Con relación al proceso ecológico de adaptación es cierto: 1.- Una característica importante en el hombre es su poder de adaptación al medio que lo rodea, esto hace que aumente su poder de supervivencia. 2.- El hombre para poder adaptarse al medio destruye o modifica su medio ambiente para vivir más confortablemente. 3.- La contaminación ambiental más el aumento de la población o concentración de la misma en un área geográfica, disminuye la capacidad de aire por persona, entrando en riesgo respiratorio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-94",
+      "numero_original": 94,
+      "pregunta": "Con relación a la capa de ozono es cierto: 1.- El ozono absorbe las radiaciones gama e impiden que llegue a la profundidad de la tierra, con sus consiguientes efectos negativos. 2.- La reducción de la capa de ozono en la población humana aumentará la incidencia de cáncer en la piel. 3.- El ozono absorbe las radiaciones ultravioletas e impiden que llegue a la superficie de la tierra, con sus consiguientes efectos positivos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-95",
+      "numero_original": 95,
+      "pregunta": "Con relación a la promoción de la Salud en Bolivia es cierto: 1.- en la Política SAFCI, tiene como objetivo modificar las determinantes de la salud en educación, saneamiento básico, producción, vivienda. 2.- Requiere de tres elementos, educación para la vida, alianzas estratégicas, movilización social y la reorientación de los servicios de salud. 3.- Las alianzas estratégicas, es la unidad de esfuerzos, recursos y capacidades solo de algunos sectores sobre todo el de salud.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-96",
+      "numero_original": 96,
+      "pregunta": "Con relación a la declaración de SHANGHAI sobre la Promoción de la Salud es cierto: 1.- La salud y el bienestar son fundamentales para el desarrollo sostenible. 2.- La buena gobernanza no es esencial para la salud. 3.- Las ciudades y las comunidades no son entornos esenciales para la salud.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-97",
+      "numero_original": 97,
+      "pregunta": "Con relación a los requerimientos de la Promoción de la Salud para su implementación es cierto: 1.- Requiere de la elaboración de una política pública sana, en la que los gobiernos a través de sus autoridades, asuman la responsabilidad de la creación de políticas, programas de promoción de la salud. 2.- Creación de ambientes favorables, para nuestras sociedades que por naturaleza son complejas y que vivan relacionadas entre sí y con su medio ecológico, social. 3.- Generar condiciones de trabajo gratificante, agradable, seguro y estimulante.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-98",
+      "numero_original": 98,
+      "pregunta": "Con relación a las características de la Atención Primaria de Salud es cierto: 1.- Son integrales porque afectan no sólo a lo curativo sino, fundamentalmente a lo preventivo. 2.- Los programas, deben ser siempre los más completos en relación a los grupos etarios existentes en la comunidad y principalmente en relación a las necesidades de las autoridades. 3.- La Participación Comunitaria no es una característica de la Atención Primaria de Salud.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-99",
+      "numero_original": 99,
+      "pregunta": "Con relación a los Programas como característica de la Atención Primaria de Salud es cierto: 1.- Deben ser programas para la prevención, protección, control de enfermedades y rehabilitación. 2.- Entre las características deben figurar la universalidad, la equidad de servicio y la continuidad. 3.- Deben garantizar el acceso de toda la población a los servicios de salud esenciales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-1-100",
+      "numero_original": 100,
+      "pregunta": "Con relación a bioseguridad y Covid-19 es cierto: 1.- La desinfección de las superficies, consiste en limpiar de forma ocasional las superficies con las que estamos en contacto con más frecuencia. 2.- La desinfección de las superficies, consiste en limpiar de forma rutinaria las superficies con las que estamos en contacto con menos frecuencia como mesas, manijas de puertas, escritorios, grifos, artículos electrónicos. 3.- La desinfección de las superficies, consiste en limpiar de forma rutinaria las superficies con las que estamos en contacto con más frecuencia como mesas, manijas de puertas, escritorios, grifos, artículos electrónicos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    }
+  ]
+}

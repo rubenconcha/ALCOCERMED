@@ -1,0 +1,1563 @@
+{
+  "id": "2024-2025-3",
+  "year": "2024–2025",
+  "type": "Examen final",
+  "title": "Examen final · 2024–2025",
+  "count": 100,
+  "duration": 90,
+  "pattern": "/api/past-exam?id=2024-2025-3&pattern=1",
+  "missingNumbers": [],
+  "excludedQuestions": [],
+  "questions": [
+    {
+      "id": "2024-2025-3-1",
+      "numero_original": 1,
+      "pregunta": "Los reparos de las superficies óseas:\n1.La fosa es una depresión profunda como la fosa coronoide del húmero.\n2.Un tubérculo es una proyección redondeada de varios tamaños",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-2",
+      "numero_original": 2,
+      "pregunta": "Aurícula derecha:\nEl espesor promedio de sus paredes de 3 a 5 mm.\nLos músculos pectíneos se extienden dentro de la orejuela.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-3",
+      "numero_original": 3,
+      "pregunta": "Con relación a las plaquetas:\nLos megacarioblastos sufren división celular y dan originan a las plaquetas.\nLas células madre linfoide son precursoras de las plaquetas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-4",
+      "numero_original": 4,
+      "pregunta": "Efecto de la acidez en el transporte de oxigeno:\n1.Esto quiere decir que una mayor acidez disminuye el desprendimiento del oxígeno de la hemoglobina.\n2.El aumento de la acidez disminuye la afinidad de la hemoglobina por el O2.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-5",
+      "numero_original": 5,
+      "pregunta": "El radio:\n1.La fractura del extremo distal del radio es la más frecuente en los adultos menores de 50 años\n2.La apófisis estiloides del radio es punto de inserción para el músculo braquioquibital.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-6",
+      "numero_original": 6,
+      "pregunta": "Respecto a la mano:\n1.El primer metacarpiano en el hueso ganchoso.\n2.El tercer metacarpiano se articula con el hueso grande.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-7",
+      "numero_original": 7,
+      "pregunta": "Respecto al esqueleto del pie:\n1.La articulación suprastragalina está compuesta por el astrágalo, la tibia y el peroné\n2.El cuboides se articula con el primer y segundo metatarsianos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-8",
+      "numero_original": 8,
+      "pregunta": "La barrera hematoencefálica:\n1.La barrera hematoencefálica está formada por uniones estrechas de ependimocitos.\n2.La barrera hematorraquídea está formada por uniones estrechas de ependimocitos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-9",
+      "numero_original": 9,
+      "pregunta": "El musculo oblicuo externo del abdomen:\n1.Se origina en las costillas 4 a 12.\n2.Se inserta en la cresta ilíaca y línea alba.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-10",
+      "numero_original": 10,
+      "pregunta": "El musculo longísimo de la cabeza:\n1.Se origina en la apófisis articulares de C7-T4\n2.Se inserta en la apófisis mastoides del hueso temporal",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-11",
+      "numero_original": 11,
+      "pregunta": "El musculo pronador cuadrado:\n1.Se origina en la porción distal del cuerpo cúbito.\n2.Se inserta en la porción proximal del cuerpo del radio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-12",
+      "numero_original": 12,
+      "pregunta": "El musculo palmar largo:\n1.Origen epicóndilo medial del humero.\n2.Inervado por el nervio cubital.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-13",
+      "numero_original": 13,
+      "pregunta": "Respecto a las hormonas hidrosolubles:\n1.La adenilatociclasa es activada por la proteína G activada\n2.La proteína G se activa en el núcleo celular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-14",
+      "numero_original": 14,
+      "pregunta": "Con relación a las hormonas que produce la placenta.\n1.Los estrógenos y progesterona ayudan a preparar la glándula mamaria para secreción leche.\n2.La somatomamotropina coriónica humana estimula el desarrollo de la glándula mamaria para la lactancia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-15",
+      "numero_original": 15,
+      "pregunta": "Los dientes:\n1.La dentina está cubierta por el esmalte en la corona.\n2.La dentina de la raíz está cubierta por el cemento.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-16",
+      "numero_original": 16,
+      "pregunta": "Movimiento de abducción:\n1.Es un movimiento que aleja el hueso de la línea media.\n2.Este movimiento acerca el hueso a la línea media",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-17",
+      "numero_original": 17,
+      "pregunta": "Estructuras que protegen la médula espinal:\n1.La superposición vertical de los forámenes vertebrales.\n2.La superposición de los agujeros intervertebrales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-18",
+      "numero_original": 18,
+      "pregunta": "Cambios de presión en la ventilación pulmonar:\n1.Si la presión alveolar es 758 mm Hg se produce la espiración.\n2.Si la presión alveolar es de 762 mm Hg se produce la inspiración.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-19",
+      "numero_original": 19,
+      "pregunta": "Con relación a los factores de crecimiento:\n1.Los factores de angiogénesis tumoral estimula la curación de heridas.\n2.Los factores de crecimiento nervioso se producen en las glándulas submandibulares.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-20",
+      "numero_original": 20,
+      "pregunta": "La articulación acromioclavicular:\n1.Es un ejemplo de articulación plana.\n2.Sus superficies articulares son planas o levemente curvas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-21",
+      "numero_original": 21,
+      "pregunta": "El palatino:\n1.Forma la mitad del paladar duro y todo el paladar blando.\n2.Forma una pequeña parte del piso de la órbita.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-22",
+      "numero_original": 22,
+      "pregunta": "Respecto al esqueleto axial:\n1.El hueso hioides se encuentra suspendido de la apófisis pterigoides del temporal\n2.El hueso hioides permite la inserción de los músculos de la lengua y faringe",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-23",
+      "numero_original": 23,
+      "pregunta": "Articulación troclear modificada:\n1.Articulación Atlantoaxoidea.\n2.Articulación del codo",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-24",
+      "numero_original": 24,
+      "pregunta": "El reflejo tendinoso:\n1.Es un reflejo contralateral, cruzado.\n2.En el centro integrador la neurona sensitiva hace sinapsis excitatoria con la neurona motosa del asta gris anterior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-25",
+      "numero_original": 25,
+      "pregunta": "Articulación temporomandibular:\n1.La cavidad sinovial está dividida en dos compartimientos por el disco articular.\n2.Los movimientos de elevación y depresión o descenso de la mandíbula ocurren en el compartimento superior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-26",
+      "numero_original": 26,
+      "pregunta": "Con relación a los genomas:\n1.La mayoría de los procariontes tienen genomas que contienen 100.000 pares de nucleótidos.\n2.Los procariontes tienen 2000-4000 genes que codifican proteínas",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-27",
+      "numero_original": 27,
+      "pregunta": "Con relación a los tipos de celulares:\n1.Los fibroblastos secretan proteínas que forman la matriz extracelular.\n2.Las células epiteliales se contraen de forma espontánea en el disco de cultivo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-28",
+      "numero_original": 28,
+      "pregunta": "En relación a la estructura y función de las proteínas:\n1.La reacción catalizada por la lisozima es una hidrólisis.\n2.La trombina fue la primera enzima cuya estructura se resolvió en el nivel atómico mediante cristalografía de rayos X",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-29",
+      "numero_original": 29,
+      "pregunta": "En relación a la estructura y función de las proteínas:\n1.Las tirosinas fosforiladas sirven como sitios de atraque para la unión y activación de un grupo de proteínas de señalización extracelular.\n2.La fosforilación es la única forma de modificación covalente que puede afectar a la función de una proteína.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-30",
+      "numero_original": 30,
+      "pregunta": "En relación a la proteína p53:\n1.Puede sufrir modificaciones covalentes en 20 sitios\n2.Desempeña un papel central en el control de la manera en que una célula responde al daño RNA.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-31",
+      "numero_original": 31,
+      "pregunta": "En relación al ADN:\n1.En la década de 1940 Maurice Wilkinis y Rosalind Franklin examinaron el ADN mediante análisis de difracción de rayos X\n2.En 1953 se da el modelo de Watson y Crick de la estructura en doble hélice de ADN.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-32",
+      "numero_original": 32,
+      "pregunta": "En relación a la estructura del ADN.\n1.Las dos hebras de la doble hélice de DNA se mantienen unidas por enlaces de hidrógeno entre pares de bases complementarias.\n2.Las dos hebras de ADN se enrollan un alrededor de la otra, para formar una hélice dextrógira con 12 bases por giro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-33",
+      "numero_original": 33,
+      "pregunta": "En relación a los cromosomas:\n1.Se denomina cariotipo humano a la presentación ordenada del conjunto de los 23 pares de cromosomas humanos.\n2.Las translocaciones cromosómicas son poco frecuentes en las células cancerosas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-34",
+      "numero_original": 34,
+      "pregunta": "En relación a las histonas:\n1.Son responsables del primer y más fundamental nivel de empaquetamiento de la cromatina: la formación del nucleosoma.\n2.Su masa total en los cromosomas equivale aproximadamente a la del propio ADN.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-35",
+      "numero_original": 35,
+      "pregunta": "La bateriorrodopsina:\n1.Es una proteína grande hallada en pequeñas cantidades en la membrana plasmática de Halobacterium halobium.\n2.Es una proteína de membrana transportadora que bombea protones fuera de la célula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-36",
+      "numero_original": 36,
+      "pregunta": "En relación a la técnica de fijación de membrana (Patch clamp):\n1.Sirve para controlar la actividad de los canales catiónicos.\n2.Permite observar el comportamiento de un canalionico individual.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-37",
+      "numero_original": 37,
+      "pregunta": "La respuesta de cierre de las hojas en la planta sensible al tacto Mimosa púdica:\n1.Depende de canales iónicos regulados mecánicamente.\n2.Depende de canales regulados por voltaje.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-38",
+      "numero_original": 38,
+      "pregunta": "Con respecto a las neurotransmisiones:\n1.La acetilcolina y el glutamato son neurotransmisiones excitadores.\n2.El GABA y la glicina son neurotransmisores excitadores.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-39",
+      "numero_original": 39,
+      "pregunta": "En relación a la generación de energía:\n1.Los procariontes deberían depender del proceso relativamente ineficiente de la glucolisis para toda su producción de ATR.\n2.La oxidación de glucosa que comienza con la hidrólisis produce alrededor de 30 moléculas de ATP.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-40",
+      "numero_original": 40,
+      "pregunta": "En relación a la epilepsia mioclónica y la enfermedad de fibras rojas rasgadas (MERRF)\n1.Los defectos de las proteínas requeridas para el transporte de protones causan MERRF.\n2.Las células musculares y nerviosas necesitan pocas cantidades de ATP.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-41",
+      "numero_original": 41,
+      "pregunta": "Sobre la estructura de la mitocondria:\n1.Las enzimas necesarias para la oxidación de piruvato y ácidos grasos están presentes en la membrana mitocondrial interna.\n2.El espacio intermembranoso posee varias enzimas y también proteínas que son liberadas durante la apoptosis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-42",
+      "numero_original": 42,
+      "pregunta": "En relación a la señalización celular:\n1.La epinefrina disminuye la presión arterial y la frecuencia cardiaca.\n2.El Óxido nítrico (NO) causa relajación del musculo liso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-43",
+      "numero_original": 43,
+      "pregunta": "En relación a la señalización celular:\n1.La misma molécula señal puede impedir distintas respuestas en diferentes células blanco.\n2.Si se priva a las células de las señales de supervivencia necesarias, la mayoría presenta una forma de suicidio celular conocida como apoptosis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-44",
+      "numero_original": 44,
+      "pregunta": "En relación a la señalización celular:\n1.Muchas de las proteínas de señalización extracelular se comportan como interruptores moleculares.\n2.Las proteínas de señalización extracelular pueden transmitir, amplificar, distribuir, integrar, distribuir y modular una señal que ingresa mediante retroalimentación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-45",
+      "numero_original": 45,
+      "pregunta": "En relación a la reptación celular:\n1.Las amebas carnívoras reptan en busca de alimentos.\n2.Los leucocitos conocidos como neutrófilos migran al torrente sanguíneo a tejidos sanos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-46",
+      "numero_original": 46,
+      "pregunta": "En relación a los cilios:\n1.Durante el golpe de potencia rápido, el cilio se extiende por completo y desplaza al líquido sobre la superficie de la célula.\n2.Durante el golpe de recuperación más lento, el cilio se ondula y retrae hasta recuperar su posición.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-47",
+      "numero_original": 47,
+      "pregunta": "En relación a la cinesina :\n1.Cuando se la examina por videomicroscopía intensificada se puede ver microtubulos agrupados.\n2.Causa el deslizamiento de los microtubulos in vitro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-48",
+      "numero_original": 48,
+      "pregunta": "En relación a la célula diploide.\n1.Cada célula contiene dos conjuntos de cromosomas uno heredado de cada progenitor.\n2.Es portadora de dos copias de cada gen sin excepción en todos los cromosomas",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-49",
+      "numero_original": 49,
+      "pregunta": "En relación a los gametos\n1.Dos gametos haploides disímiles se unen para regenerar una célula diploide denominada cigoto que tiene cromosomas heterólogos de la madre y el padre.\n2.Cada uno contiene solo un conjunto de cromosomas",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-50",
+      "numero_original": 50,
+      "pregunta": "En relación a la herencia:\n1.Para el color del guisante el alelo que codifica los guisantes verdes es dominante y el alelo de guisantes amarillos son recesivos\n2.Una consecuencia de la heterocigosis y del carácter dominante y recesivo es que no todos los alelos que porta un individuo puede detectar en su fenotipo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-51",
+      "numero_original": 51,
+      "pregunta": "El equilibrio:\n1.Las células ciliadas poseen estereocilios que en realidad son microvellosidades.\n2.La capa gelatinosa de glucolípidos encima que los cilios se denomina membrana otolítica.\n3.El haz ciliar está conformado solamente por cinetocilios.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-52",
+      "numero_original": 52,
+      "pregunta": "Las hormonas de la glándula suprarrenal:\n1.Los andrógenos son la fuente principal de la progesterona para la mujer después de la menopausia.\n2.Los mineralocorticoides aumentan los niveles sanguíneos de agua y sodio.\n3.El cortisol aumenta la degradación de proteínas en el hígado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-53",
+      "numero_original": 53,
+      "pregunta": "La transducción del sodio:\n1.Las células ciliadas externas traducen toda la electricidad de su entorno.\n2.Por la hiperpolarización se generan pocos potenciales de acción en la neurona de primer orden.\n3.Las células ciliadas externas traducen las vibraciones auditivas y genera señales eléctricas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-54",
+      "numero_original": 54,
+      "pregunta": "La pelvis:\n1.El ilion presenta la tuberosidad isquiática.\n2.En el tubérculo del isquion inicia la linea pectínea.\n3.La línea arqueada del ilion se proyecta en el sentido anterior e inferior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-55",
+      "numero_original": 55,
+      "pregunta": "Funciones de los hemisferios cerebrales:\n1.Las habilidades numéricas y científicas se localizan en el hemisferio izquierdo.\n2.El hemisferio izquierdo identifica y discrimina diferentes olores.\n3.El razonamiento se localiza en el hemisferio derecho.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-56",
+      "numero_original": 56,
+      "pregunta": "La corteza cerebral:\n1.La planificación y la producción de la palabra acontece en el lóbulo frontal izquierdo en la mayoría de los individuos.\n2.Las neuronas del área premotora se comunican con los cuerpos basales y el tálamo.\n3.La corteza orbitofrontal permite identificar los olores y discriminar entre ellos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-57",
+      "numero_original": 57,
+      "pregunta": "El musculo Grácil:\n1.Se origina en el cuerpo y rama superior del pubis.\n2.Es inervado por el nervio obturador.\n3.Se inserta en el cóndilo medial de la tibia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-58",
+      "numero_original": 58,
+      "pregunta": "El musculo peroneo corto:\n1.Se origina en la cabeza y el cuerpo del peroné.\n2.Se inserta en la base del quinto metatarsiano.\n3.es inervado por el nervio peroneo profundo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-59",
+      "numero_original": 59,
+      "pregunta": "La LH en los varones:\n1.Estimula a las células intersticiales para la segregación de testosterona.\n2.Se sintetiza a partir de aminas modificadas.\n3.Inhibe la secreción de FSH.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-60",
+      "numero_original": 60,
+      "pregunta": "Electrocardiograma:\n1.El intervalo P-Q, comienza al final de la onda P y el inicio del complejo QRS.\n2.Una cicatriz en el tejido cardiaco no altera el intervalo P-Q.\n3.El intervalo P-Q es el tiempo requerido para que un potencial de acción viaje a través de la aurícula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-61",
+      "numero_original": 61,
+      "pregunta": "Respiración interna:\n1.La presión de oxígeno en los capilares sistémicos de 100mm Hg.\n2.La presión de oxígeno en las células de los tejidos es de 105 mm Hg.\n3.La diferencia entre la presión dióxido de carbono de la sangre y las células de los tejidos es de 10mm Hg.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-62",
+      "numero_original": 62,
+      "pregunta": "Respecto al hipotálamo e hipófisis.\n1.La hipófisis mide 1 a 1.5 cm se sitúa en la silla turca del etmoides.\n2.La pars intermedia comunica al hipotálamo e hipófisis.\n3.La neurohipófisis está compuesta por pars tuberalis y pars nervosa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-63",
+      "numero_original": 63,
+      "pregunta": "El mecanismo miogénico de la autorregulación renal:\n1.Responde al estiramiento provocando la contracción de las arteriolas aferentes.\n2.Se activa con bajos niveles de presión y flujo sanguíneo.\n3.Ante el aumento de la TFG se dilatan más las arteriolas eferentes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-64",
+      "numero_original": 64,
+      "pregunta": "La vitamina K en la coagulación:\n1.Tiene un papel importante ya que participa en la activación de todos los factores de coagulación.\n2.Es una vitamina hidrosoluble, su disminución se relaciona con hemorragia descontrolada.\n3.Nueve de los trece factores de coagulación requieren vitaminas K para su activación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-65",
+      "numero_original": 65,
+      "pregunta": "Con relación a los factores de crecimiento hematopoyético:\n1.Las citosinas son glucoproteínas que estimulan la formación de leucocitos.\n2.Los eritrocitos se forman por estimulo de la eritropoyetina.\n3.Las plaquetas se forman por estimulo de la trombopoyetina que se produce en el hígado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-66",
+      "numero_original": 66,
+      "pregunta": "Según la clasificación de las hormonas:\n1.La calcitonina es una hormona liposoluble secretada por la glándula paratiroides.\n2.La leptina es una hormona liposoluble producida por el tejido adiposo.\n3.La melatonina es una hormona hidrosoluble producida por la glándula pineal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-67",
+      "numero_original": 67,
+      "pregunta": "Digestión química:\n1.La digestión de las proteínas inicia en la boca con la acción de la saliva.\n2.Las enzimas que degradan los triglicéridos y fosfolípidos son las lipasas.\n3.La amilasa pancreática fragmenta o disocia el glucógeno, la celulosa y almidones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-68",
+      "numero_original": 68,
+      "pregunta": "La reabsorción y secreción tubular:\n1.Se reabsorbe el 100% de agua filtrada sobre todo por osmosis en el túbulo renal.\n2.La glucosa, calcio, cloro, potasio, sodio se reabsorben tanto por procesos activos como pasivos.\n3.Las proteínas y péptidos son generalmente reabsorbidos por exocitosis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-69",
+      "numero_original": 69,
+      "pregunta": "Los nervios espinales:\n1.Existen 8 pares de nervios cervicales.\n2.Tenemos 12 pares de nervios torácicos.\n3.Existen 5 partes de nervios lumbares, 5 pares de nervios sacros y uno coccígeo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-70",
+      "numero_original": 70,
+      "pregunta": "Para la formación de las imágenes:\n1.La luz pasa a través de los fotorreceptores antes de llegar a las células ganglionares y bipolares.\n2.Los fotorreceptores inician el proceso por el cual los rayos luminosos se convierten en impulsos nerviosos.\n3.Existen 4 tipos de fotorreceptores: conos, bastones, células amacrinas y horizontales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-71",
+      "numero_original": 71,
+      "pregunta": "Inervación de las articulaciones sinoviales:\n1.Tiene inervación propia.\n2.No es abundante pero es muy sensible.\n3.Responde al grado de movimiento y tensión.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-72",
+      "numero_original": 72,
+      "pregunta": "El músculo romboide es mayor:\n1.Se origina en la apófisis espinosas C7-T1.\n2.Eleva y abduce la escapula y la rota hacia arriba.\n3.Esta inervado por el nervio dorsal de la escapula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-73",
+      "numero_original": 73,
+      "pregunta": "Territorio de la inervación de los ramos de los nervios espinales:\n1.El ramo posterior inerva los músculos profundos y la piel de la superficie dorsal.\n2.El ramo anterior inerva la piel de la superficie externa y anterior al tronco.\n3.El ramo meningeo tiene función simpática, inerva las vértebras, ligamentos vertebrales, vasos sanguíneos de la médula y las meninges.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-74",
+      "numero_original": 74,
+      "pregunta": "El musculo extensor de los dedos de la mano:\n1.Esta inervado por el ramo superficial del nervio radial.\n2.Extiende las falanges distal y media de cada dedo en las articulaciones interfalángicas.\n3.Se inserta en el quinto metacarpiano.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-75",
+      "numero_original": 75,
+      "pregunta": "El musculo longísimo de la cabeza:\n1.Se origina en las apófisis transversas T4 – T5.\n2.Se inserta en la apófisis transversas de C2-C6.\n3.Es inervado por nervios espinales cervicales medios e inferiores.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-76",
+      "numero_original": 76,
+      "pregunta": "En relación a la hipótesis quimiosmótica:\n1.Este mecanismo de generación de energía se postuló por primera vez en 1951.\n2.Explica como la ATPcatalasa es elemental para el transporte de electrones.\n3.Explica las seis etapas de formación de energía en la fosforilación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-77",
+      "numero_original": 77,
+      "pregunta": "En relación a la formación de ATP:\n1.Cada molécula de NADH aporta suficiente energía neta para generar alrededor de 30 moléculas de ATP.\n2.Cada molécula de NADH aporta suficiente energía neta para generar alrededor de 6 moléculas de ATP.\n3.Cada molécula de NADH aporta suficiente energía neta para generar alrededor de 2,5 moléculas de ATP.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-78",
+      "numero_original": 78,
+      "pregunta": "Con respecto al citocromo c oxidasa:\n1.Es la que menos potencial redox tiene.\n2.Se agregan electrones de la ubiquinona.\n3.Allí es donde se consume casi todo el oxígeno que respiramos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-79",
+      "numero_original": 79,
+      "pregunta": "En relación a la señalización celular:\n1.La nicotina bloquea a receptores acoplados a canales iónicos activados por acetilcolina.\n2.La capsaicina bloquea receptores acoplados a canales iónicos termosensibles.\n3.La morfina y heroína estimula receptores opioides acoplados a proteínas G.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-80",
+      "numero_original": 80,
+      "pregunta": "Los filamentos de queratinas:\n1.Se encuentran en la lengua, la córnea y el revestimiento intestinal.\n2.Los filamentos están compuestos por una mezcla de diferentes subunidades de queratina.\n3.Los extremos de los filamentos de queratina están anclados a los desmosomas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-81",
+      "numero_original": 81,
+      "pregunta": "En relación a la inestabilidad dinámica:\n1.Deriva de la capacidad extrínseca de los dímeros de tubulina para hidrolizar GTP.\n2.Cada dímero de tubulina libre contiene una molécula de GTP estrechamente unida a Beta- tubulina.\n3.El extremo de un microtúbulo que crece rápidamente está compuesto parcialmente de dímeros de GTP- tubulina, que forman un casquete de GTP.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-82",
+      "numero_original": 82,
+      "pregunta": "En relación a los factores de crecimiento extracelular.\n1.Aumentan la síntesis de micromoléculas y disminuyen su degradación.\n2.Inhibe la activación de una proteína cinasa denominada Tor.\n3.Induce la disminución de la cantidad de macromoléculas y por ende, de la división celular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-83",
+      "numero_original": 83,
+      "pregunta": "En relación al síndrome de Down:\n1.En la meiosis I, da origen a un gameto que un gameto que contiene tres copias de ese cromosoma en lugar de una.\n2.Hay una falta de disyunción del par de cromosomas 21 durante la meiosis II.\n3.Se asocia con mayor capacidad cognitiva y anomalías físicas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-84",
+      "numero_original": 84,
+      "pregunta": "En relación a la aneuploidia:\n1.Se produce con igual frecuencia en las meiosis de ovocitos y espermatozoides.\n2.Es la falta de disyunción durante la producción de gametos humanos.\n3.Es una causa de la baja tasa de abortos espontáneos en las primeras etapas de la gestación en seres humanos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-85",
+      "numero_original": 85,
+      "pregunta": "En relación a la herencia:\n1.Los experimentos de cruza que realizo Mendel fueron complicados.\n2.Los experimentos de Mendel demostraron que existen alelos dominantes y recesivos.\n3.El genotipo depende de que versiones de cada alelo hereda.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-86",
+      "numero_original": 86,
+      "pregunta": "En relación a la herencia:\n1.Se dice que un individuo que tiene dos alelos idénticos es heterocigoto.\n2.No todos los alelos que porta un individuo se pueden detectar en su genotipo.\n3.Los seres humanos tienen alrededor de 24.000 genes y cada uno de nosotros es homocigoto en gran número de ellos",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-87",
+      "numero_original": 87,
+      "pregunta": "En relación a mutaciones genéticas:\n1.Las mutaciones provocan cambios hereditarios en la secuencia del ADN y ARN\n2.Las mutaciones que reducen o anulan la actividad de un gen se denominan mutaciones de perdida de función\n3.La mayoría de mutaciones de perdida de función son dominantes y solo algunas son recesivas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-88",
+      "numero_original": 88,
+      "pregunta": "En relación a genes y fenotipo:\n1.Gen es la unidad funcional de la herencia que corresponde a un segmento de ADN que codifica una proteína o molécula de ARN codificante.\n2.Fenotipo es el conjunto específico de alelos que forman el genoma de un individuo.\n3.Genotipo es las características visibles o funcionales del individuo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-89",
+      "numero_original": 89,
+      "pregunta": "Los andamiajes celulares:\n1.Hay andamiajes no proteicos que son largas moléculas de RNA\n2.Sirven como fijaciones rígidas que aumentan mucho las colisiones entre las proteínas unidas a ellos.\n3.Contienen largas regiones estructuradas que les permite doblarse y balancearse.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-90",
+      "numero_original": 90,
+      "pregunta": "Con respecto a la fosforilación oxidativa:\n1.Las moléculas NAD+ y FAD donan electrones a la cadena de transporte de electrones.\n2.El NADH dona sus electrones de alta energía a una cadena de transporte de protones.\n3.El movimiento de los electrones por la cadena de transporte de electrones permite el bombeo de protones a través de la membrana mitocondrial interna.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-91",
+      "numero_original": 91,
+      "pregunta": "En relación a la cadena respiratoria:\n1.El primer complejo que acepta electrones es la NADH deshidrogenasa\n2.El último eslabón de la cadena de transporte de electrones es el complejo citocromo o reductasa.\n3.El NADH deshidrogenasa recibe electrones del FAD.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-92",
+      "numero_original": 92,
+      "pregunta": "En relación a la señalización celular:\n1.La acetilcolina en el páncreas produce degradación de glucógeno.\n2.El IP3 es un azúcar fosfato hidrosoluble que se libera en el citosol, donde se une canales de Ca2+ incluidos en la membrana del retículo endoplasmático (RE) y los abre.\n3.La fecundación de un ovulo por un espermatozoide desencadena un aumento de Ca2+ en el retículo endoplasmático.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-93",
+      "numero_original": 93,
+      "pregunta": "En relación a la señalización celular:\n1.La activación de un receptor tirosina cinasa (RTK) estimula el ensamblado de un complejo de señalización intracelular.\n2.Para ayudar a terminar la respuesta, las fosforilaciones de tirosinas son potenciadas por tirosina fosfatasas.\n3.La mayoría de los receptores tirosina cinasa (RTK) activan la GTPasa dimérica RAS.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-94",
+      "numero_original": 94,
+      "pregunta": "En relación a los microtúbulos:\n1.Suelen crecer desde un centro organizador.\n2.Las proteínas motoras propulsan a los orgánulos a lo largo de las vías citoesqueléticas.\n3.Están compuestos por subunidades de tubulina globular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-95",
+      "numero_original": 95,
+      "pregunta": "En relación a los microtúbulos:\n1.Ambos polos son siempre positivos\n2.Esta estructura tubular esta compuesta por 15 protofilamentos paralelos.\n3.La beta tubulina se denomina extremo positivo y la alfa tubulina expuesta se denomina extremo negativo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-96",
+      "numero_original": 96,
+      "pregunta": "La actividad de Cdk es bloqueada por:\n1.Proteínas activadoras de Cdk\n2.Proteínas que se activan en la fase G0\n3.Proteínas de mayor peso molecular en el nucléolo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-97",
+      "numero_original": 97,
+      "pregunta": "En relación al daño del DNA:\n1.Las proteínas cinasas especificas responden activando la proteína P53.\n2.Genera acumulo de proteína p53 activada que estimula la transcripción del gen que codifica a la proteína inhibidora de Cdk, p21.\n3.La proteína p21 se une a G1/S-Cdk y las desactiva deteniendo el ciclo celular en G0.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-98",
+      "numero_original": 98,
+      "pregunta": "En relación el reordenamiento aleatorio de cromosomas:\n1.Se separa de la mezcla genética del entrecruzamiento.\n2.Cada ser humano está formado por la fusión de gametos producidos por dos individuos totalmente diferentes\n3.Proporciona una fuente limitada de variación genética.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-99",
+      "numero_original": 99,
+      "pregunta": "En relación a los cribados genéticos:\n1.Un cribado genético implica estudiar a muchos miles de individuos mutagenizados para hallar a los pocos que muestran un genotipo alterado de interés.\n2.Los cribados genéticos permiten identificar mutantes con deficiencias en procesos celulares inespecíficos.\n3.En los organismos multicelulares los cribados genéticos pueden identificar genes involucrados en genotipos complejos",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-3-100",
+      "numero_original": 100,
+      "pregunta": "En relación a mutaciones en genes individuales:\n1.Alrededor de 70000 enfermedades humanas son causadas por mutaciones en genes individuales.\n2.Los trastornos monogénicos son muy frecuentes y afectan a más del 50 % de la población humana.\n3.Los trastornos monogénicos pueden ser más frecuentes en familias o poblaciones en las que los padres están\nCBBA, 22 DE DICIEMBRE DE 2025",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    }
+  ]
+}

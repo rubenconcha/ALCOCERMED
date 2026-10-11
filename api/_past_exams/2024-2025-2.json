@@ -1,0 +1,1565 @@
+{
+  "id": "2024-2025-2",
+  "year": "2024–2025",
+  "type": "Segundo parcial",
+  "title": "Segundo parcial · 2024–2025",
+  "count": 100,
+  "duration": 90,
+  "pattern": "/api/past-exam?id=2024-2025-2&pattern=1",
+  "missingNumbers": [],
+  "excludedQuestions": [],
+  "questions": [
+    {
+      "id": "2024-2025-2-1",
+      "numero_original": 1,
+      "pregunta": "En relación a la hemostasia\n1. Cuando se dañan las venas y las vénulas, el músculo liso de sus paredes se contrae inmediatamente, una reacción que se llama espasmo vascular.\n2. Un coágulo sanguíneo es un gel que contiene elementos formes de la sangre entrelazados con las hebras de fibrina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-2",
+      "numero_original": 2,
+      "pregunta": "Con relación a los factores de coagulación:\n1. El factor VII o (factor Proxer), está presente tanto en la vía extrínseca como en la vía intrínseca.\n2. El factor Hageman o factor XII tiene como vía de activación de vía intrínseca.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-3",
+      "numero_original": 3,
+      "pregunta": "Con relación al aparato reproductor masculino:\n1. Las cuatro células euploides que resultan de la mitosis II se denominan espermatides.\n2. En la meiosis I, pares heterógenos de cromosomas se alinean en la placa de la metafase.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-4",
+      "numero_original": 4,
+      "pregunta": "En relación a la histología del ovario.\n1. La túnica albugínea es una capa fibrosa densa blanca que se encuentra por debajo del mesotelio ovárico.\n2. El mesotelio ovárico es una capa de epitelio simple (pavimentoso) que recubre la superficie del ovario.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-5",
+      "numero_original": 5,
+      "pregunta": "En relación a la ovogénesis:\n1. Durante el desarrollo del feto, se termina la meiosis I.\n2. Después de la pubertad, los ovocitos primarios reinician la meiosis II.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-6",
+      "numero_original": 6,
+      "pregunta": "En relación a los cambios de presión y volumen durante el ciclo cardiaco:\n1. En el periodo de relajación, la repolarización auricular determina la diástole ventricular.\n2. En la sístole ventricular, la presión en el exterior de los ventrículos aumenta e impulsa la sangre contra las válvulas auriculoventriculares.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-7",
+      "numero_original": 7,
+      "pregunta": "Con relación a la regulación de la frecuencia cardiaca.\n1. En la regulación química, la adrenalina y la noradrenalina disminuyen la actividad cardiaca.\n2. El incremento de la temperatura corporal, produce una descarga más lenta del nódulo sinoauricular y aumento de la frecuencia cardiaca.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-8",
+      "numero_original": 8,
+      "pregunta": "En relación al pericardio.\n1. El pericardio fibroso es más profundo, compuesto por tejido conectivo denso, regular, elástico y resistente.\n2. El pericardio seroso forma una doble capa alrededor del corazón.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-9",
+      "numero_original": 9,
+      "pregunta": "Con relación al potencial de acción y contracción de las fibras contráctiles:\n1. El periodo refractario es el intervalo mediante el cual puede desencadenarse una segunda contracción.\n2. La función de bomba de los ventrículos depende de la alternancia de contracción y relajación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-10",
+      "numero_original": 10,
+      "pregunta": "En relación al desarrollo del aparato urinario:\n1. El metanefros se desarrolla a partir del primordio ureteral y el mesodermo metanéfrico.\n2. El pronefros comienza a degenerar durante la cuarta semana y desaparece hacia la sexta.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-11",
+      "numero_original": 11,
+      "pregunta": "En relación a la producción de orina diluida y concentrada.\n1. La orina concentrada se produce a la presencia de altas presiones en el líquido extracelular de la médula renal.\n2. Los cotransportadores en la rama ascendente gruesa producen acumulación de Na+ y Cl- en la médula renal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-12",
+      "numero_original": 12,
+      "pregunta": "En relación a la reabsorción y secreción en el túbulo contorneado proximal:\n1. Los hepatocitos convierten la mayor parte de bicarbonato en urea. Un compuesto menos tóxico.\n2. Los gradientes electroquímicos promueven la reabsorción pasiva de solutos por vía transcelular y paracelular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-13",
+      "numero_original": 13,
+      "pregunta": "En relación a la regulación de la tasa de filtración glomerular (TFG):\n1. La regulación neural produce la constricción de las arteriolas eferentes por activación de los receptores O2.\n2. El estiramiento de la aurícula del corazón estimula la secreción de péptido natriurético auricular, el cual disminuye el TFG.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-14",
+      "numero_original": 14,
+      "pregunta": "En relación al transporte de oxígeno:\n1. Cada 100 ml de sangre oxigenada contiene el equivalente de 20 ml de O2 gaseoso.\n2. El 98.5% del O2 unido a la hemoglobina está atrapado dentro de los glóbulos rojos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-15",
+      "numero_original": 15,
+      "pregunta": "En relación a la afinidad de la hemoglobina por el oxígeno:\n1. El aumento del pH disminuye la afinidad de la hemoglobina por el O2.\nAquí tienes la transcripción completa del texto de la imagen, manteniendo el formato original para que puedas copiarlo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-16",
+      "numero_original": 16,
+      "pregunta": "En relación al síndrome respiratorio agudo grave:\n1. Los síntomas incluyen fiebre, malestar general, dolores musculares, tos no productiva, dificultad respiratoria, escalofríos, cefalea y constipación.\n2. El síndrome respiratorio agudo grave es un ejemplo de una enfermedad infecciosa emergente, es decir, una enfermedad prevalente o cambiante.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-17",
+      "numero_original": 17,
+      "pregunta": "En relación a los efectos del cigarrillo en el sistema respiratorio:\n1. La nicotina produce constricción en los bronquios terminales, lo que disminuye el flujo de aire hacia y desde los pulmones.\n2. Los irritantes del cigarrillo también incrementan el movimiento de las cilias que revisten el aparato respiratorio por aumento de la secreción de moco.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-18",
+      "numero_original": 18,
+      "pregunta": "Con relación a la administración de hormonas:\n1. Las hormonas esteroideas y tiroideas no son efectivas cuando se administran por vía oral.\n2. Las hormonas peptídicas como la insulina son útiles por vía oral por su revestimiento lipídico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-19",
+      "numero_original": 19,
+      "pregunta": "Con relación al hipotálamo e hipófisis:\n1. La adenohipófisis o pituitaria anterior representa el 75% del peso total de la glándula.\n2. La pars distalis es la porción más pequeña de la hipófisis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-20",
+      "numero_original": 20,
+      "pregunta": "Con relación al efecto diabetogénico de la hormona del crecimiento:\n1. Un signo importante del exceso de la hormona del crecimiento es la hiperglucemia.\n2. Una estimulación excesiva del páncreas, si dura semanas o meses puede provocar agotamiento de las células alfa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-21",
+      "numero_original": 21,
+      "pregunta": "Con relación a la prolactina:\n1. La sensibilidad de la mama justo antes de la menstruación puede deberse a niveles elevados de esta hormona.\n2. No se conoce la función de la prolactina en el hombre, pero su hipersecreción produce disfunción eréctil.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-22",
+      "numero_original": 22,
+      "pregunta": "Con relación al estómago:\n1. Las glándulas gástricas incluyen un tipo de célula enteroendocrina, la célula S, situada sobre todo el antro pilórico y que secreta la hormona gástrica a la corriente sanguínea.\n2. La serosa es formada por mesotelio el cual es un epitelio plano simple y tejido conectivo laxo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-23",
+      "numero_original": 23,
+      "pregunta": "Con relación a la apendicitis.\n1. Típicamente comienza con dolor referido en la región púbica seguido por la pérdida de apetito, náuseas y vómitos.\n2. Después de varias horas de dolor se localiza en el cuadrante inferior derecho y es continuo, sordo o severo y se intensifica al toser, estornudar o con los movimientos del cuerpo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-24",
+      "numero_original": 24,
+      "pregunta": "Con relación a la fase gástrica de la digestión:\n1. En la regulación neural cuando las paredes del estómago se distienden o el pH se eleva debido a los lípidos que entraron en el estómago y actúan como amortiguador sobre parte del ácido gástrico.\n2. La gastrina es producida por las células G de las glándulas gástricas en respuesta a estímulos como un bajo pH del quimo debido a la presencia de este en el estómago.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-25",
+      "numero_original": 25,
+      "pregunta": "Con relación a las hormonas:\n1. Aldosterona, andrógenos, cortisol y calcitriol son producidos por la corteza suprarrenal.\n2. Las hormonas hidrosolubles como la serotonina es producida en las plaquetas de la sangre.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-26",
+      "numero_original": 26,
+      "pregunta": "En relación a la medida de las afinidades por los electrones:\n1. El átomo que dona el electrón se oxida, mientras el átomo que lo recibe se reduce.\n2. NADH tiene una baja afinidad por los electrones de manera que sus electrones pasan con facilidad al complejo NADH deshidrogenasa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-27",
+      "numero_original": 27,
+      "pregunta": "Respecto a los metales unidos a proteínas forman diferentes moléculas transportadoras de electrones:\n1. En la fotosíntesis, una quinona relacionada funciona de manera similar durante el transporte de electrones.\n2. La molécula de ubiquinona puede aceptar o donar dos o tres electrones y captar un H+ del agua.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-28",
+      "numero_original": 28,
+      "pregunta": "En relación del bombeo de protones y su gradiente electroquímico:\n1. Para aprovechar la energía liberada por la transferencia energética, favorable de electrones del NADH al O2, esta se liberaría, como H2O.\n2. La fuerza del gradiente electroquímico depende del voltaje a través de la membrana, medido por el potencial de reposo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-29",
+      "numero_original": 29,
+      "pregunta": "Respecto a la señalización celular:\n1. Las moléculas de señalización extracelular son proteínas, péptidos o pequeñas moléculas hidrofobas que se unen a receptores.\n2. Convertir las señales que transportan esa información de una forma a otra se denomina transducción de señales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-30",
+      "numero_original": 30,
+      "pregunta": "En relación a la organización y función de los microtúbulos\n1. La colchicina se une a trímeros que impiden la pérdida de subunidades, el huso mitótico desaparece con rapidez.\n2. El fármaco taxol se une estrechamente a los dímeros de tubulinas e impide su polimerización, detiene la mitosis de las células en división.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-31",
+      "numero_original": 31,
+      "pregunta": "En relación al movimiento de los filamentos de actina:\n1. Cuando se agrega ATP- actina en el extremo positivo de un filamento de actina a la misma velocidad con la que se pierde ADP- actina en el extremo negativo tiene lugar el Treadmiling\n2. Cuando se pierde ADP- actina en el extremo negativo de un filamento de actina a la misma velocidad con la que se gana ATP- actina en el extremo positivo, tiene lugar el Treadmiling",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-32",
+      "numero_original": 32,
+      "pregunta": "En condiciones experimentales los filamentos de actina:\n1. La citocalasina y la latrunculina impiden la despolimerización de los filamentos de actina.\n2. La faloidina y la citrunculina estabilizan los filamentos de actina contra la despolimerización.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-33",
+      "numero_original": 33,
+      "pregunta": "En relación a los movimientos de la célula por los filamentos de actina:\n1. La contracción de la parte posterior de la célula mediada por proteínas motoras miosina que se mueven a lo largo de los filamentos de actina – arrastra el cuerpo celular hacia adelante.\n2. Las proteínas nucleares miosina se deslizan a lo largo de los filamentos de actina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-34",
+      "numero_original": 34,
+      "pregunta": "En relación a las fases del ciclo celular:\n1. La fase M del ciclo celular en una célula de mamífero dura alrededor de 1 hora.\n2. La fase S del ciclo celular es precedida y seguida por tres fases gap.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-35",
+      "numero_original": 35,
+      "pregunta": "Respecto al sistema de control del ciclo celular:\n1. El sistema de control del ciclo celular regula la progresión a través de él en 4 puntos.\n2. En la transición de la fase G2 a M el sistema de control confirma que el entorno es favorable para la proliferación antes de la replicación del DNA.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-36",
+      "numero_original": 36,
+      "pregunta": "En relación a las proteínas de control del ciclo celular:\n1. Las proteínas cinasas centrales se encuentran presentes durante todo el ciclo celular.\n2. Las concentraciones de ciclina varían en forma cíclica durante el ciclo celular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-37",
+      "numero_original": 37,
+      "pregunta": "Respecto a los complejos ciclina – Cdk del ciclo celular:\n1. El complejo ciclina – Cdk contiene fosfatos excitadores y para activarse la Cdk debe ser fosforilada por una proteína fosfatasa específica.\n2. Las proteínas cinasas y las fosfatasas actúan juntas para regular la actividad de complejos ciclina-Cdk específicos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-38",
+      "numero_original": 38,
+      "pregunta": "En relación al daño del DNA durante el ciclo celular:\n1. El daño del DNA en G1 causa una aumento en la concentración y la actividad de una proteína denominada p53.\n2. La proteína p21 se une a G1/S- Cdk y a S- Cdk y les impide impulsar a la célula a la fase M.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-39",
+      "numero_original": 39,
+      "pregunta": "Respecto a la configuración de los cromosomas duplicados:\n1. Las cohesinas y las condensinas ayudan a configurar los cromosomas duplicados para la separación.\n2. Las cromátidas hermanas se mantienen unidas mediante complejos proteicos conocidos como condensinas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-40",
+      "numero_original": 40,
+      "pregunta": "Respecto a la reproducción sexual:\n1. Si dos progenitores tienen mucha descendencia, disminuye la probabilidad de que al menos uno de sus descendientes tenga la combinación de características necesarias para sobrevivir.\n2. Puede acelerar la eliminación de alelos deletéreos y ayudar a impedir que se acumulen en la población.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-41",
+      "numero_original": 41,
+      "pregunta": "Respecto a la meiosis:\n1. Entre cada par de homólogos humanos se produce en promedio de cuatro entrecruzamientos por meiosis.\n2. Cada meiosis producirá cuatro conjuntos de cromosomas enteramente nuevas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-42",
+      "numero_original": 42,
+      "pregunta": "En relación a los quiasmas:\n1. En la metafase de la meiosis mantienen unidos a los homólogos maternos y paternos.\n2. En el anafase de la meiosis I las cohesinas mantienen separadas a las cromátidas hermanas en toda su longitud.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-43",
+      "numero_original": 43,
+      "pregunta": "Con relación a los alelos:\n1. Son los responsables de que los genes paternos y maternos existan en versiones variantes.\n2. Es probable que las dos copias de cualquier gen dado de un individuo particular sean diferentes entre sí y de las presentes en otros individuos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-44",
+      "numero_original": 44,
+      "pregunta": "Respecto al crossing over:\n1. Es el proceso por el cual homólogos materno y paterno intercambian físicamente segmentos cromosómicos.\n2. Este proceso se realiza durante el anafase de la meiosis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-45",
+      "numero_original": 45,
+      "pregunta": "En relación con los homocigotos recesivos:\n1. Se presenta en los albinos por la presencia de varios genes.\n2. El albinismo se manifiesta en forma de herencia dominante.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-46",
+      "numero_original": 46,
+      "pregunta": "En relación de la célula diploide de la línea germinal de la planta progenitora:\n1. Los cromosomas son heterocigotos duplicados.\n2. Los cromosomas se alinean aleatoriamente en el huso en la metafase meiosis II.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-47",
+      "numero_original": 47,
+      "pregunta": "En relación de las mutaciones:\n1. Mutaciones del Ras genera una forma de la proteína que siempre está inactiva.\n2. Con la pérdida de función tiene un fenotipo anormal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-48",
+      "numero_original": 48,
+      "pregunta": "Respecto al enfoque genético clásico:\n1. Tiene como finalidad buscar los fenotipos mutantes.\n2. Aislar a los genes causantes de fácil manipulación como las bacterias, levaduras, pez de cebra.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-49",
+      "numero_original": 49,
+      "pregunta": "En relación a la base genética de la variación humana.\n1. El polimorfismo nos permite identificar a los genes que aumentan nuestro riesgo de enfermedad.\n2. La variante está fuera de la región codificante de un gen, se modifica la secuencia de aminoácidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-50",
+      "numero_original": 50,
+      "pregunta": "En relación de los trastornos monogénicos:\n1. Se presentan en edades tempranas de la vida.\n2. Los genes presentes son difíciles de localizar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-51",
+      "numero_original": 51,
+      "pregunta": "Con relación a la submucosa del tubo digestivo\n1. Contiene numerosos vasos sanguíneos y linfáticos que reciben las moléculas de alimentos reabsorbidos.\n2. Consiste en un tejido conectivo laxo que une la submucosa con la capa muscular.\n3. En la submucosa también se encuentra una amplia red de neuronas conocidas como plexo mucoso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-52",
+      "numero_original": 52,
+      "pregunta": "En relación a la anatomía del estómago:\n1. Cuando el estómago está lleno, la mucosa presenta grandes pliegues, observables a simple vista.\n2. El píloro se conecta con el duodeno del intestino delgado por vía de un esfínter de músculo liso denominado esfínter pilórico.\n3. El borde medial convexo del estómago se denomina curvatura menor y el borde lateral cóncavo curvatura mayor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-53",
+      "numero_original": 53,
+      "pregunta": "En relación al cáncer de mama:\n1. Se han identificado dos genes que aumentan la susceptibilidad al cáncer son: BRCA1 y BRCA2.\n2. Las mutaciones del gen p53 aumentan el riesgo de cáncer tanto en el varón como en la mujer.\n3. Mutaciones del gen receptor del andrógeno están asociadas con la aparición de cáncer en algunos varones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-54",
+      "numero_original": 54,
+      "pregunta": "Con relación a la anemia falciforme:\n1. Casi todos los individuos tienen episodios dolorosos que pueden durar desde horas hasta días.\n2. Cualquier actividad que reduzca la cantidad de oxígeno en la sangre, como el ejercicio vigoroso, pueden producir una crisis.\n3. Las personas con dos genes (homocigotas) de esta enfermedad, tienen anemias severas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-55",
+      "numero_original": 55,
+      "pregunta": "En relación a la formación de las células sanguíneas:\n1. Las células madre de la médula ósea se reproducen a sí mismas.\n2. La médula ósea amarilla está permanentemente incapacitada de revertirse a médula ósea roja.\n3. En los recién nacidos parte de la médula ósea es amarilla.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-56",
+      "numero_original": 56,
+      "pregunta": "Con relación a la formación de hormonas tiroideas:\n1. Se capta el yoduro por transporte activo secundario en la célula folicular.\n2. El yoduro debe ser oxidado antes de entrar a la célula folicular.\n3. A medida que los yoduros se oxidan pasan a través de la membrana a la luz del folículo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-57",
+      "numero_original": 57,
+      "pregunta": "Con relación a la formación de hormonas tiroideas:\n1. Más del 89% de T₃ y T₄ se combinan con la globulina de unión a tiroxina.\n2. Normalmente la tiroxina se secreta en mayores cantidades que la Triyodotironina.\n3. Después de entrar en el cuerpo celular la Triyodotironina se convierte a Tiroxina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-58",
+      "numero_original": 58,
+      "pregunta": "En relación a la calcitonina:\n1. Miacalcin, un extracto de calcitonina derivado del Salmon , que es diez veces más potente que la calcitonina humana , se prescribe para tratar la osteoporosis.\n2. Eleva los niveles de calcio, fósforo y magnesio en sangre, e inhibe la reabsorción del hueso por los osteoclastos.\n3. Acelera la excreción de calcio y fosfatos desde la matriz extracelular ósea.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-59",
+      "numero_original": 59,
+      "pregunta": "Con relación a la hormona paratiroidea:\n1. Es el principal regulador de los niveles de iones de calcio, bicarbonato y acido carbónico.\n2. Un tercer efecto de la hormona en el hígado, es promover la formación de calcitrol.\n3. Disminuye el nivel de fosfatos en la sangre e incrementa los niveles sanguíneos de calcio y magnesio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-60",
+      "numero_original": 60,
+      "pregunta": "Con relación a los glucocorticoides:\n1. Los aminoácidos pueden ser utilizados por las células corporales para la producción de ATP.\n2. Estimulan a los glóbulos blancos que participan en respuestas inflamatorias.\n3. Dosis altas deprimen las respuestas inmunitarias y se prescriben para receptores de trasplantes de órganos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A",
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original. El patrón acepta A o C."
+    },
+    {
+      "id": "2024-2025-2-61",
+      "numero_original": 61,
+      "pregunta": "En la relación a la medula suprarrenal:\n1. La hormona sintetiza sobre todo andrógenos por estar cerca de la zona fasciculada.\n2. Es un ganglio simpático sin modificar del sistema nervioso autónomo.\n3. Las células enterocromafines secretan una cantidad desigual de hormonas. 70% noradrenalina y 30% adrenalina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-62",
+      "numero_original": 62,
+      "pregunta": "En relación a los ovarios:\n1. La inhibina es una hormona lipídica que inhibe la secreción de la hormona luteinizante.\n2. Durante el embarazo, los ovarios y la placenta producen una hormona amina llamada relaxina.\n3. Producen varias hormonas aminas incluyendo dos estrógenos y progesterona.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-63",
+      "numero_original": 63,
+      "pregunta": "En relación a la nariz:\n1. La narina es la apertura interna hacia la cavidad nasal.\n2. La raíz es la unión superior de la nariz al hueso frontal.\n3. El puente es el marco cartilaginoso de la nariz formado por cartílago hialino.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-64",
+      "numero_original": 64,
+      "pregunta": "En relación a los pulmones:\n1. El líquido pleural evita que las membranas se adhieran entre sí, facilitando el deslizamiento entre ellas.\n2.La pleura se extiende desde el séptimo cartílago costal anteriormente hasta la undécima costilla posteriormente.\n3.La superficie anterior, lateral y posterior de los pulmones se apoyan sobre las costillas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-65",
+      "numero_original": 65,
+      "pregunta": "En relación al transporte de oxigeno:\nEl oxígeno se disuelve con facilidad en el agua de la misma forma en el plasma sanguíneo.\nUn 98,5% del O₂ de la sangre está unido a la hemoglobina en los glóbulos rojos.\nLa porción hemo de la hemoglobina contiene 8 átomos de hierro en su membrana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-66",
+      "numero_original": 66,
+      "pregunta": "En relación a la histología de la nefrona y el tubo colector\n1.El túbulo contorneado proximal este revestido por epitelio cúbico simple con borde en cepillo con microvellosidades\n2.Las células principales tienen receptores para la hormona antidiurética y la aldosterona\n3.La capa visceral de la cápsula glomerular se halla constituída por epitelio pavimentoso simple modificado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-67",
+      "numero_original": 67,
+      "pregunta": "En relación a la nefrona:\n1.La mayor parte del túbulo contorneado distal están revestidos por epitelio cubico simple.\n2.Las células intercaladas participan en la homeostasis del pH sanguíneo\n3.Su número es constante desde el nacimiento",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-68",
+      "numero_original": 68,
+      "pregunta": "En relación a la regulación homeostática de la reabsorción y secreción tubular:\n1.La disminución del volumen sanguíneo o la tensión arterial estimula a la producción de angiotensina II inducida por la aldosterona\n2.La disminución de la osmolaridad del liquido intersticial o el incremento del volumen sanguíneo promueve la liberación de hormona antidiurética.\n3.La hormona paratiroidea estimula la apertura de canales de fosfato en el túbulo contorneado proximal",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-69",
+      "numero_original": 69,
+      "pregunta": "En relación a la multiplicación por contracorriente:\n1.La trasferencia constante de urea entre segmentos del corpúsculo renal y el liquido intracelular de la corteza se denomina reciclado de urea.\n2.La rama ascendente gruesa, el titulo contorneado distal y la porción cortical del tubo colector son impermeables a la urea.\n3.En la rama ascendente del asa de Henle los cotransportadores Na -K -Cl del liquido tubular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-70",
+      "numero_original": 70,
+      "pregunta": "En relación a la uretra masculina\n1.La capa muscular de la uretra prostática está compuesta por fibras de musculo liso longitudinal por encima de la lámina propia.\n2.El epitelio de la uretra esponjosa es cilíndrico estratificado a excepción de la región cercana al orificio uretral externo\n3.La capa muscular de la uretra inmediata está constituida por fibras de musculo liso dispuestas en forma longitudinal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-71",
+      "numero_original": 71,
+      "pregunta": "En relación a la incontinencia urinaria:\n1.Los tratamientos incluyen ejercicios de Kegel, entrenamiento de la vejiga, medicación y posible cirugía.\n2.La incontinencia de esfuerzo es la más frecuente en mujeres menopáusicas de edad avanzada y se debe a una debilidad de los músculos profundos de piso pélvico.\n3.La incontinencia por rebosamiento se refiere a la perdida involuntaria de grandes cantidades de orina causada por contracciones intensas de músculos de la vejiga.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-72",
+      "numero_original": 72,
+      "pregunta": "Con relación al esqueleto del corazón:\n1.Además del músculo cardíaco, la pared contiene tejido conectivo laxo que forma el esqueleto fibroso del corazón.\n2.Esta estructura consiste en cinco anillos de tejido conectivo laxo que rodean las válvulas cardíacas.\n3.Estos anillos se fusionaron entre sí y no se adhieren al tabique interauricular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-73",
+      "numero_original": 73,
+      "pregunta": "en la relación al a circulación coronaria:\n1.La sangre desoxigenada del seno coronario desemboca en la aurícula derecha.\n2.Cuando la obstrucción de una arteria coronaria priva al músculo cardíaco de aporte de oxígeno, la reperfusión posterior puede generar aun mayor daño tisular\n3.Actualmente se investigan varios fármacos que posibilitarían disminuir el daño provocado por la reperfusión luego de un infarto cardíaco.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-74",
+      "numero_original": 74,
+      "pregunta": "Con relación a la regulación de la frecuencia cardiaca:\n1.El volumen sistólico puede disminuir si el miocardio ventricular está dañado.\n2.Los cambios de la frecuencia cardíaca son importantes en el control a largo plazo del volumen minuto y la tensión arterial.\n3.El nodo auriculoventricular inicia la contracción, librado a su accionar, establece una frecuencia cardíaca de 100 lpm.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-75",
+      "numero_original": 75,
+      "pregunta": "Con relación a la regulación de la frecuencia cardiaca:\n1.Existe un equilibrio dinámico continuo entre los estímulos simpáticos y parasimpáticos del corazón.\n2.En reposo predomina la estimulación simpática.\n3.La frecuencia cardíaca en reposo es más alta que la frecuencia de descarga automática del nódulo sino auricular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-76",
+      "numero_original": 76,
+      "pregunta": "En relación al bombeo de protones a través de la mitocondria interna:\n1.El bombeo de protones genera un gradiente de H+ o gradiente de pH- a través de la membrana externa.\n2.El bombeo de protones genera un gradiente de voltaje -o potencial de membrana- a través de la membrana interna.\n3.El potencial de membrana contribuye a la fuerza motriz de electrones, arrastra el H+ a través de la membrana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-77",
+      "numero_original": 77,
+      "pregunta": "Respecto a la ATP sintasa:\n1.La ATP sintasa puede operar en sentido inverso: utilizar la energía de la hidrólisis del ATP pata bombear protones \"cuesta arriba\" en contra de su gradiente electroquímico.\n2. En las bacterias que pueden crecer en condiciones aerobias o anaerobias en la que actúa la ATP sintasa se invierte cuando la bacteria se queda sin 02.\n3. La proteína de múltiples subunidades está compuesta por una cabeza relativamente estática, F1 ATPasa y una porción rotatoria, Fd.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-78",
+      "numero_original": 78,
+      "pregunta": "En relación al mecanismo molecular del transporte de electrones y bombeo de protones.\n1. Los protones del agua son poco móviles al disociarse de una molécula de agua.\n2. Un electrón aislado (o-) tiene una carga negativa, en algún caso una molécula es oxidada al adquirir un electrón.\n3. La molécula transportadora de electrones esté orientada en la membrana que done un electrón junto con un protón de agua de un lado de la membrana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-79",
+      "numero_original": 79,
+      "pregunta": "Respecto a los metales estrechamente unidos a proteínas:\n1. Los cuatro complejos de enzimas respiratorias incluyen átomos metálicos que están estrechamente unidos a proteínas.\n2. Una vez que se ha donado a un complejo respiratorio a este puede moverse dentro del complejo saltando de un ion metálico a otro ion con una afinidad aun mayor por los electrones.\n3. Los protones pasan de un complejo respiratorio al siguiente y son llevados por moléculas transportadoras de protones que pueden difundir dentro de la bicapa lipídica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-80",
+      "numero_original": 80,
+      "pregunta": "En relación con las sustancias extrañas que actúan en receptores de la superficie celular.\n1. Los barbitúricos y benzodiacepinas, inhiben receptores acoplados a canales iónicos activados por GABA.\n2. La nicotina estimula receptores acoplados a canales iónicos activados por acetilcolina.\n3. La nicotina tiene como efecto la vasodilatación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-81",
+      "numero_original": 81,
+      "pregunta": "Respecto a las respuestas celulares mediadas por AMP cíclico.\n1. La adrenalina tiene como respuesta la degradación de glucógeno.\n2. La hormona adrenocorticotropica tiene como tejido diana la glándula suprarrenal.\n3. Algunas respuestas a mediadores locales neurotransmisores también son mediadas por AMP cíclico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-82",
+      "numero_original": 82,
+      "pregunta": "Respecto a las respuestas celulares mediadas por la activación de la fosfolipasa C.\n1. La vasopresina tiene como tejido diana al hígado para la degradación del glucógeno.\n2. La acetilcolina tiene como respuesta principal, la secreción de lipasa.\n3. La trombina es una proteína proteolítica conjugada.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-83",
+      "numero_original": 83,
+      "pregunta": "En relación a la fosfolipasa C:\n1. El fosfolípido de inositol es hidrolizado por la fosfolipasa C activada, se producen dos moléculas mensajeras.\n2. El IP3 difunde a través del cytosol y desencadena la liberación del Ca2+ desde el retículo endoplasmático.\n3.El diacilglicerol permanece en la membrana plasmática y, junto con el ca2+ ayuda a activar la enzima proteína cinasa C.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-84",
+      "numero_original": 84,
+      "pregunta": "En relación con la vía de señalización del GPCR:\n1. Los segundos mensajeros como el AMP cíclico y el calcio son moléculas hidrófobas.\n2. El gas Óxido Nítrico (NO) actúa como molécula de señalización exclusiva en fibras nerviosas.\n3. La distancia de difusión del Óxido Nítrico se ve limitada por su reacción con el oxígeno y el agua, lo que convierte al NO en nitratos y nitritos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-85",
+      "numero_original": 85,
+      "pregunta": "Los microtúbulos y las proteínas motoras determinan la posición de los orgánulos.\n1. El retículo endoplasmático se extiende desde sus puntos de conexión con la envoltura nuclear a lo largo de microtúbulos.\n2. Las cinesinas unidas a la parte externa de la membrana del retículo endoplasmático traccionan al retículo endoplásmico hacia el exterior.\n3. Las dineínas citoplasmáticas, unidas a las membranas del aparato de Golgi, lo traccionan a lo largo de los microtúbulos en la dirección.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-86",
+      "numero_original": 86,
+      "pregunta": "En cuanto a la estructura de los filamentos de actina:\n1. Los filamentos de actina se visualizan como hebras de alrededor de 17 nm de diámetro y cada filamento es una cadena retorcida de monómeros de actina globular idénticos.\n2. Los filamentos de actina, al igual que los microtúbulos tienen una polaridad estructural, con un extremo positivo y un negativo.\n3. Los filamentos de actina son más semiflexibles y cortos, los microtúbulos son abundantes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-87",
+      "numero_original": 87,
+      "pregunta": "Respecto a la polimerización de los filamentos de actina:\n1. Si la concentración de monómeros de actina libres es muy alta, un filamento de actina crecerá con rapidez por adicción de monómeros en ambos extremos.\n2. La concentración de monómeros de actina libre es intermedia, los monómeros de actina se agregan al externo negativo.\n3. El filamento de actina crecerá con rapidez por adicción de dímeros en su extremo positivo, y pierde subunidades.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-88",
+      "numero_original": 88,
+      "pregunta": "Respecto a las proteínas que se regulan la apoptosis celular:\n1. Las proteínas Bax y Bak pueden evitar la apoptosis liberando el citocromo c de las mitocondrias.\n2. El citocromo C se une a una proteína adaptadora que causa su ensamblado en un complejo de 9 brazos denominado apoptosoma.\n3. Las proteínas procaspasa-9 se inactivan dentro del apoptosoma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-89",
+      "numero_original": 89,
+      "pregunta": "Con relación a la reproducción:\n1. Permite la aparición de nuevas mutaciones y dar origen a nuevos alelos.\n2. La probabilidad de generar nuevas especies capaces de sobrevivir a diversas condiciones ambientales depende la cantidad de descendencia.\n3. Le confiere a los organismos una ventaja competitiva en un entorno cambiante.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-90",
+      "numero_original": 90,
+      "pregunta": "Con relación a la meiosis y fecundación:\n1. Las células de la línea germinal contienen un número haploide de cromosomas.\n2. El apareamiento permite la segregación de pares de cromosomas homólogos durante la meiosis I.\n3. En el primer paso de la meiosis se reducen todos estos cromosomas y las copias resultantes permanecen estrechamente unidas entre sí.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-91",
+      "numero_original": 91,
+      "pregunta": "Con relación a la meiosis:\n1. Cuando finaliza la profase meiótica, el completo sinaptonémico se ha desensamblado\n2. Cada quiasma corresponde a un entrecruzamiento entre dos cromátides hermanas.\n3. Los entrecruzamientos que tienen lugar durante la meiosis son una fuente importante de variación genética.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A",
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original. El patrón acepta A o C."
+    },
+    {
+      "id": "2024-2025-2-92",
+      "numero_original": 92,
+      "pregunta": "En relación a la meiosis II:\n1. En la meiosis II los cinetocoros de cada cromatide hermana actúan de forma dependiente.\n2. Los cinetocoros de la metafase de la meiosis II apuntan en direcciones opuestas.\n3. En el anafase de la meiosis II, las cohesinas son sintetizadas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-93",
+      "numero_original": 93,
+      "pregunta": "En relación segunda división meiótica:\n1. Se replica el DNA en el periodo de la interfase\n2. Se forma un huso meiótico y los cinetocoros de cada par cromátidas hermanas.\n3. En la telofase se degradan las cohesinas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-94",
+      "numero_original": 94,
+      "pregunta": "En relación con la degeneración macular relacionada con la edad\n1. Se identifico que los alelos están más cortos.\n2. Las variaciones del RNA en las personas de la tercera edad.\n3. Es un trastorno degenerativo de la conjuntiva ocular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-95",
+      "numero_original": 95,
+      "pregunta": "Respecto a estudios genéticos de enfermedades humanas:\n1. Las mutaciones de genes específicos dan origen a la sordera congénita.\n2. Las mutaciones de genes inespecíficos dan origen a la hipertensión esencial.\n3. Las mutaciones de genes específicos originan a la anemia hemolítica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-96",
+      "numero_original": 96,
+      "pregunta": "En relación con el cuadrado de Punnet:\n1. Detecta la presencia de gemelos homocigotos.\n2. Permite rastrear la separación de los alelos.\n3. Describe los rasgos fenotípicos de los gemelos",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-97",
+      "numero_original": 97,
+      "pregunta": "Respecto al estudio de Mendel de los rasgos que se heredan por separado.\n1. Mendel estudio a las plantas de guisantes hace 120 años.\n2. Las plantas de los guisantes solo tienen una sola variedad.\n3. Polinización cruzada garantiza su linaje de cada guisante.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-98",
+      "numero_original": 98,
+      "pregunta": "Respecto al comportamiento de los cromosomas durante la meiosis:\n1. Los cromosomas, que se distribuyen durante la formación de los gametos.\n2. Los cromosomas proporcionan la base física a las leyes de Mendel.\n3. Los cromosomas tienen un comportamiento durante la meiosis y fecundación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-99",
+      "numero_original": 99,
+      "pregunta": "Respecto a la generación los individuos se rotulan.\n1. Inter diario de izquierda a derecha.\n2. Secuencialmente de izquierda a derecha\n3. Diario de derecha a izquierda.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-2-100",
+      "numero_original": 100,
+      "pregunta": "Respecto al daño del DNA durante el ciclo circular:\n1. El daño del DNA puede detener el ciclo celular en G1.\n2. Cuando el DNA está dañado, las proteínas cinasas específicas responden inactivando la proteína p53.\n3. La acumulación de la proteína p53 inactivada, estimula la transcripción del gen que codifica a la proteína inhibidora de Cdk p21.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    }
+  ]
+}

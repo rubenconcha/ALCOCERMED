@@ -266,6 +266,7 @@ async function restoreCampusAfterPlans() {
             'study-library': () => openStudyLibrary(),
             'resource-browser': () => openGameMenu(),
             'banco-screen': () => openBanco(),
+            'past-exams-screen': () => openPastExams(),
             'simulacro-screen': () => openSimulacro(),
             'intocables-hub-screen': () => openIntocables()
         };
@@ -453,6 +454,11 @@ const tips = [
 let currentCampusScreen = 'home-screen';
 const campusScreenHistory = [];
 function showScreen(screenId, fromBack) {
+    if (screenId !== 'simulacro-screen' && typeof simState !== 'undefined' && simState && simState.timerInterval) {
+        if (!confirm('Hay un examen en curso. ¿Deseas salir y descartar las respuestas?')) return false;
+        clearInterval(simState.timerInterval); simState.timerInterval = null;
+        simState.preguntas = []; simState.answers = [];
+    }
     if (screenId !== currentCampusScreen) {
         if (!fromBack) campusScreenHistory.push(currentCampusScreen);
         currentCampusScreen = screenId;
@@ -464,7 +470,7 @@ function showScreen(screenId, fromBack) {
     }
     if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
-    const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen'];
+    const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen'];
     screens.forEach(function (id) {
         const el = document.getElementById(id);
         if (el) {
@@ -476,6 +482,7 @@ function showScreen(screenId, fromBack) {
         }
     });
     if (screenId === 'study-area') refreshFlashcardReviews();
+    return true;
 }
 
 window.openResumenes = function () {
@@ -489,8 +496,8 @@ window.goHome = function () {
     if (bancoEnProgreso) {
         if (!confirm('¿salir del banco? perderás tu progreso.')) return;
     }
+    if (showScreen('home-screen', true) === false) return;
     campusScreenHistory.length = 0;
-    showScreen('home-screen', true);
     updateHomeStats();
     if (window.innerWidth <= 768) {
         document.getElementById('sidebar').classList.remove('open');
@@ -504,8 +511,9 @@ window.goBack = function () {
         bancoState.preguntas.length > 0 && !bancoState.finalized &&
         bancoState.answers.some(function (a) { return a.selected !== null; });
     if (bancoEnProgreso && !confirm('¿salir del banco? perderás tu progreso.')) return;
-    const previous = campusScreenHistory.pop() || 'home-screen';
-    showScreen(previous, true);
+    const previous = campusScreenHistory.at(-1) || 'home-screen';
+    if (showScreen(previous, true) === false) return;
+    campusScreenHistory.pop();
     if (previous === 'home-screen') updateHomeStats();
 };
 
@@ -3155,11 +3163,11 @@ function renderSimQuestion() {
     document.getElementById('sim-exam-section').textContent = ({
         MORFOFUNCION: 'Morfofunción', 'BIOLOGIA CELULAR': 'Biología celular',
         'SALUD PUBLICA': 'Educación para la Salud'
-    })[normalizeDbText(campo(q, 'materia'))] || 'Simulacro';
+    })[normalizeDbText(campo(q, 'materia'))] || (simState.mode === 'pasado' ? 'Examen pasado' : 'Simulacro');
     document.getElementById('sim-answered-count').textContent =
         simState.answers.filter(function (answer) { return answer.selected !== null; }).length +
         ' de ' + simState.preguntas.length + ' respondidas';
-    document.getElementById('sim-num-badge').textContent = 'N° ' + (idx + 1);
+    document.getElementById('sim-num-badge').textContent = 'N° ' + (q.numero_original || idx + 1);
     document.getElementById('sim-question-text').textContent = campo(q, 'pregunta') || '';
     renderBqDificultad_sim(campo(q, 'dificultad') || 'facil');
 
@@ -3198,6 +3206,11 @@ function renderBqDificultad_sim(dificultad) {
     var el = document.getElementById('sim-dificultad');
     if (!el) return;
     el.innerHTML = '';
+    const pastPaper = simState.mode === 'pasado';
+    el.hidden = pastPaper;
+    const label = document.querySelector('#sim-exam .bq-dificultad-label');
+    if (label) label.hidden = pastPaper;
+    if (pastPaper) return;
     var d = (dificultad || 'facil').toString().toLowerCase()
         .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     var isFacil = d === 'facil' || d.startsWith('fac');
@@ -3246,7 +3259,7 @@ function buildSimCircles() {
         }
         var btn = document.createElement('button');
         btn.className = 'bq-circle';
-        btn.textContent = i + 1;
+        btn.textContent = question.numero_original || i + 1;
         btn.onclick = function () { simGoTo(i); };
         container.appendChild(btn);
     });
@@ -3279,8 +3292,17 @@ window.confirmarSalirSimulacro = function () {
     if (!confirm('¿salir del simulacro? perderás todo tu progreso.')) return;
     clearInterval(simState.timerInterval);
     simState.timerInterval = null;
-    showSimScreen('sim-config');
+    if (simState.mode === 'pasado') { simState.preguntas = []; simState.answers = []; returnToExamSelection(); }
+    else showSimScreen('sim-config');
 };
+
+function simAcceptedAnswerIndices(q) {
+    var values = Array.isArray(q.respuestas_aceptadas) && q.respuestas_aceptadas.length ? q.respuestas_aceptadas : [campo(q, 'respuesta_correcta') || 'A'];
+    return values.map(function (value) {
+        var key = String(value).trim().toUpperCase();
+        return /^[A-E]$/.test(key) ? 'ABCDE'.indexOf(key) : parseInt(key, 10) - 1;
+    }).filter(function (index) { return Number.isInteger(index) && index >= 0 && index < 5; });
+}
 
 window.finalizarSimulacro = function () {
     if (simState.finalized) return;
@@ -3304,7 +3326,7 @@ window.finalizarSimulacro = function () {
             var letrasMap = { 'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4 };
             var correctIdx = letrasMap[correctaRaw] !== undefined ? letrasMap[correctaRaw] : parseInt(correctaRaw) - 1;
             simState.answers[i].correct = correctIdx;
-            if (ans.selected === correctIdx) correctas++; else incorrectas++;
+            if (simAcceptedAnswerIndices(q).includes(ans.selected)) correctas++; else incorrectas++;
         }
     });
 
@@ -3352,7 +3374,7 @@ window.finalizarSimulacro = function () {
                 campo(q, 'opcion_c'), campo(q, 'opcion_d'),
                 campo(q, 'opcion_e')
             ].filter(function (o) { return o && o.toString().trim() !== ''; });
-            var isCorrect = ans.selected !== null && ans.selected === correctIdx;
+            var isCorrect = ans.selected !== null && simAcceptedAnswerIndices(q).includes(ans.selected);
             var sinResp = ans.selected === null;
             var justif = bancoComentario(q);
 
@@ -3362,7 +3384,7 @@ window.finalizarSimulacro = function () {
             header.className = 'sim-rev-header';
             var number = document.createElement('span');
             number.className = 'sim-rev-num';
-            number.textContent = 'N° ' + (i + 1);
+            number.textContent = 'N° ' + (q.numero_original || i + 1);
             var badge = document.createElement('span');
             badge.className = 'sim-rev-badge';
             badge.textContent = isCorrect ? '✓ correcta' : sinResp ? '— sin responder' : '✗ incorrecta';
@@ -3385,7 +3407,7 @@ window.finalizarSimulacro = function () {
             correct.className = 'sim-rev-correcta';
             correct.textContent = 'respuesta correcta: ';
             var correctAnswer = document.createElement('strong');
-            correctAnswer.textContent = opciones[correctIdx] || '—';
+            correctAnswer.textContent = simAcceptedAnswerIndices(q).map(function (index) { return 'ABCDE'[index] + '. ' + (opciones[index] || '—'); }).join(' / ');
             correct.appendChild(correctAnswer);
             item.appendChild(correct);
             if (justif) {
@@ -3414,7 +3436,7 @@ window.finalizarSimulacro = function () {
 
     // Sincronizar con la nube para el Panel de Admin
     guardarResultadoSimulacroEnNube({
-        titulo: simState.mode === 'oficial' ? (simState.selectedExamen || 'Simulacro preparado') : 'Simulacro personalizado',
+        titulo: (simState.mode === 'oficial' || simState.mode === 'pasado') ? (simState.selectedExamen || 'Simulacro preparado') : 'Simulacro personalizado',
         materia: simState.mode === 'materia' ? simState.selectedMateria :
             simState.mode === 'oficial' ? (simState._oficialesCache.find(function (r) { return r.nombre === simState.selectedExamen; }) || {}).materia || 'todas' : 'todas',
         porcentaje: pct,
@@ -3424,6 +3446,7 @@ window.finalizarSimulacro = function () {
         tiempoSegundos: tiempoUsado
     });
 
+    if (window.renderPastExamResult) window.renderPastExamResult();
     showSimScreen('sim-result');
 };
 

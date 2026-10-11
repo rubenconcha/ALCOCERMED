@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="login-polish.css?v=1">
     <link rel="stylesheet" href="campus-preview.css?v=3">
     <link rel="stylesheet" href="mindmap-viewer.css?v=1">
+    <link rel="stylesheet" href="past-exams.css?v=1">
 </head>
 
 <body class="login-active">
@@ -261,6 +262,13 @@
                             <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg>
                         </span>
                         <span class="nav-label">banco de preguntas</span>
+                    </a>
+                </li>
+
+                <li class="nav-item nav-item-simple" id="nav-past-exams">
+                    <a href="#" onclick="openPastExams(); return false;" data-tooltip="exámenes pasados">
+                        <span class="nav-icon nav-icon-banco"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg></span>
+                        <span class="nav-label">exámenes pasados</span>
                     </a>
                 </li>
 
@@ -757,6 +765,31 @@
 
         </section>
 
+        <section id="past-exams-screen" class="past-exams-screen hidden">
+            <div class="sim-header">
+                <button id="past-back" type="button" class="btn-back-game" onclick="pastExamsBack()"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver</button>
+                <div><span class="entrance-eyebrow">PREPARATORIA BEN CARSON · MEDICINA UMSS</span><h2 class="sim-title">Exámenes pasados</h2><p class="sim-subtitle">Elige la gestión y el parcial. Responde el examen y revisa tus respuestas con el patrón original.</p></div>
+            </div>
+            <p id="past-status" role="status" aria-live="polite"></p>
+            <div id="past-list">
+                <div class="past-filters">
+                    <label for="past-year">Gestión<select id="past-year"><option value="">Todas las gestiones</option></select></label>
+                    <label for="past-type">Examen<select id="past-type"><option value="">Todos los exámenes</option><option>Primer parcial</option><option>Segundo parcial</option><option>Examen final</option></select></label>
+                    <span id="past-count" aria-live="polite"></span>
+                </div>
+                <div id="past-grid" class="past-grid"></div>
+                <p id="past-empty" hidden>No hay exámenes para estos filtros.</p>
+            </div>
+            <div id="past-detail" class="past-detail" hidden>
+                <span class="entrance-eyebrow">EXAMEN PASADO</span>
+                <h3 id="past-detail-title"></h3><p id="past-detail-meta"></p>
+                <p>Las preguntas conservan la numeración del documento original. Puedes cambiar tus respuestas antes de finalizar. El tiempo empieza al presionar Comenzar.</p>
+                <p>Elige una alternativa por pregunta según las afirmaciones del enunciado. Al terminar verás tu calificación, la revisión de respuestas y el patrón original.</p>
+                <p id="past-source-notes" class="past-source-notes" hidden></p>
+                <button id="past-start" type="button" class="btn-primary" onclick="startPastExam()">Comenzar examen</button>
+            </div>
+        </section>
+
         <!-- ══ SIMULACRO ══ -->
         <section id="simulacro-screen" class="simulacro-section hidden">
 
@@ -927,8 +960,13 @@
                         <div id="sim-review-list" class="sim-review-list"></div>
                     </div>
 
+                    <div id="past-result-tools" class="past-result-tools" hidden>
+                        <h3 id="past-result-title"></h3>
+                        <button id="past-pattern-button" type="button" class="btn-back-game" onclick="showPastExamPattern()">Ver patrón original</button>
+                        <img id="past-pattern-image" alt="Patrón de respuestas del examen original" hidden>
+                    </div>
                     <div class="sim-result-actions">
-                        <button class="btn-primary" onclick="openSimulacro()" style="margin-bottom:10px;">
+                        <button id="sim-another-exam" class="btn-primary" onclick="returnToExamSelection()" style="margin-bottom:10px;">
                             <i class="fas fa-redo"></i> nuevo simulacro
                         </button>
                         <button class="btn-back-game" onclick="goHome()"
@@ -1299,14 +1337,15 @@
     <script src="config.js"></script>
     <script src="device_guard.js?v=4"></script>
     <script src="campus-access.js?v=9"></script>
-    <script src="script.js?v=43"></script>
+    <script src="script.js?v=44"></script>
     <script src="mindmap-branch-labels.js?v=3"></script>
     <script src="mindmap-content.js?v=1"></script>
     <script src="mindmap-viewer.js?v=7"></script>
     <script src="intocables-hub.js?v=1"></script>
-    <script src="simulacro-ingreso.js?v=1"></script>
+    <script src="simulacro-ingreso.js?v=2"></script>
     <script src="student-library.js?v=8"></script>
     <script src="study-summaries.js?v=3"></script>
+    <script src="past-exams.js?v=1"></script>
 </body>
 
 </html>

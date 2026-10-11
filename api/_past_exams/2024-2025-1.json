@@ -1,0 +1,1549 @@
+{
+  "id": "2024-2025-1",
+  "year": "2024–2025",
+  "type": "Primer parcial",
+  "title": "Primer parcial · 2024–2025",
+  "count": 99,
+  "duration": 90,
+  "pattern": "/api/past-exam?id=2024-2025-1&pattern=1",
+  "missingNumbers": [
+    53
+  ],
+  "excludedQuestions": [],
+  "questions": [
+    {
+      "id": "2024-2025-1-1",
+      "numero_original": 1,
+      "pregunta": "Con relación al aparato urinario:\n1. Son parte de sus componentes, el conducto deferente y pene.\n2. Produce la degradación física y química de los alimentos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-2",
+      "numero_original": 2,
+      "pregunta": "Con respecto a la homeostasis de los líquidos corporales:\n1. Las células producen desechos, que ingresan en el líquido intracelular y después atraviesan la pared de los capilares.\n2. El sistema tegumentario cumple un papel importante en el intercambio de líquidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-3",
+      "numero_original": 3,
+      "pregunta": "En relación a los sistemas de retroalimentación negativa:\n1. La tensión arterial es la fuerza ejercida por la sangre que ejerce presión contra la pared del corazón.\n2. Revierte un cambio producido en una condición controlada, ejemplo: cuando se pierde una gran cantidad de sangre.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-4",
+      "numero_original": 4,
+      "pregunta": "En relación a la terminología anatómica básica:\n1. La palabra latina axila es el término anatómico para el segmento compacto bajo del hombro, entre el brazo y el tronco.\n2. En decúbito supino, el sujeto está de pie mirando al observador, con la cabeza nivelada, y los ojos dirigidos justo al frente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-5",
+      "numero_original": 5,
+      "pregunta": "En relación al hueso esfenoides:\n1. Las alas mayores del esfenoides conforman el piso posterolateral del cráneo.\n2. Sobre la base de la apófisis pterigoides lateralmente en el ala mayor, está el foramen oval.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-6",
+      "numero_original": 6,
+      "pregunta": "En relación a las fontanelas:\n1. La fontanela anterior es la primera en cerrarse a los 2 a 4 meses.\n2. Las fontanelas posterolaterales inician su cierre a los 6 meses y lo terminan a los 12 meses.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-7",
+      "numero_original": 7,
+      "pregunta": "En relación a las vértebras cervicales:\n1. El atlas tiene dos grandes masas laterales que contiene sus forámenes para el paso de las arterias vertebrales.\n2. La vértebra prominente es la última cervical con una apófisis espinosa larga y bífida.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-8",
+      "numero_original": 8,
+      "pregunta": "En relación al esternón:\n1. La apófisis xifoides no se osifica por completo hasta los 32 años.\n2. El manubrio se articula solo con la primera costilla en una articulación de tipo sínfisis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-9",
+      "numero_original": 9,
+      "pregunta": "En relación a los huesos de la cara:\n1. Los huesos lagrimales contienen una fosa lagrimal, un túnel vertical formado con los huesos nasales para contener al saco lagrimal.\n2. La unión y la fusión de los huesos maxilares normalmente sucede después del nacimiento.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-10",
+      "numero_original": 10,
+      "pregunta": "En relación al hueso etmoides:\n1. Forma la pared medial de la órbita y la mayor parte de las paredes laterales superiores de la cavidad nasal.\n2. Contiene 2 a 18 espacios aéreos denominados celdillas etmoidales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-11",
+      "numero_original": 11,
+      "pregunta": "Con relación a la fractura de clavícula:\n1. Si la fuerza transmitida a la clavícula es excesiva, como durante una caída sobre el brazo flexionado, puede causar una fractura de clavícula.\n2. Dado que la divergencia de las dos curvas de la clavícula es el punto más frágil, la región media de la clavícula es el sitio que más frecuente se fractura.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-12",
+      "numero_original": 12,
+      "pregunta": "En relación de la pelvis femenina y masculina:\n1. La pelvis femenina del borde pélvico es ancho y más oval\n2. La pelvis masculina su escotadura ciática mayor es ancha, alrededor de 70 grados, en forma de V invertida.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-13",
+      "numero_original": 13,
+      "pregunta": "En relación al sistema muscular:\n1. La hipertrofia del tejido muscular no tiene ningún efecto sobre el tejido conectivo de las inserciones.\n2. El músculo oponente del meñique, se localiza lateral al abductor del meñique.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-14",
+      "numero_original": 14,
+      "pregunta": "En relación a las articulaciones:\n1. Son componentes de la articulación lumbosacra, las carillas articulares superiores de la quinta vértebra lumbar.\n2. La articulación esternocostal entre el esternón y el primer par de costillas no tiene ningún movimiento.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-15",
+      "numero_original": 15,
+      "pregunta": "Con relación al sistema muscular:\n1. La actividad regular de los músculos esqueléticos mejora los mecanismos de acción y señalización de algunas hormonas, por ejemplo el cortisol.\n2. El corazón puede utilizar el ácido láctico producido por los músculos activos para la producción de adenosina trifosfato.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-16",
+      "numero_original": 16,
+      "pregunta": "En relación al sistema muscular:\n1. El músculo flexor corto del pulgar es un músculo situado en sentido medial al aductor del pulgar.\n2. Los músculos lumbares están adaptados para mantener la postura no para levantar objetos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-17",
+      "numero_original": 17,
+      "pregunta": "Con relación a las articulaciones:\n1. La flexión del pulgar implica un movimiento medial del pulgar que cruza la palma de la mano en la articulación carpometacarpiana.\n2. Un ejemplo de flexión es: Mover el fémur hacia adelante en la articulación de la cadera entre el fémur y el hueso coxal, como al caminar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-18",
+      "numero_original": 18,
+      "pregunta": "Con relación a las Meninges:\n1. La duramadre forma un saco desde el nivel del foramen magno o agujero occipital en el hueso homónimo hasta la segunda vértebra sacra.\n2. La flexión lateral de la columna vertebral aumenta la distancia entre las apófisis espinosas de las vértebras.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-19",
+      "numero_original": 19,
+      "pregunta": "En relación la médula espinal:\n1. Las astas grises anteriores contienen los axones motores somáticos.\n2. El asta gris lateral contiene axones de las neuronas sensitivas y cuerpos celulares de las interneuronas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-20",
+      "numero_original": 20,
+      "pregunta": "Con relación a los pedúnculos cerebelosos inferiores:\n1. Consiste en axones provenientes del núcleo olivar inferior del bulbo.\n2. Consisten en axones que se extienden desde el cerebro hasta la formación reticular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-21",
+      "numero_original": 21,
+      "pregunta": "En relación al cerebro:\n1. Aunque representa una décima parte de la masa encefálica, lo forma la mitad de neuronas del encéfalo.\n2. La función primaria es evaluar cómo se lleva a cabo un movimiento iniciado por las áreas sensitivas del cerebro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-22",
+      "numero_original": 22,
+      "pregunta": "En relación al olfato:\n1. En la olfacción la proteína G activa la adenilato ciclasa para producir una sustancia llamada adenosindifosfato cíclico.\n2. El adenosinmonofosfato cíclico abre un canal de cationes, que permite que Na y Ca+ingresen al citosol.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-23",
+      "numero_original": 23,
+      "pregunta": "En relación al gusto:\n1. El inositol trifosfato causa, en última instancia, la despolarización de la célula receptora gustativa.\n2. Las células de sostén rodean a alrededor de 30 células receptoras gustativas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-24",
+      "numero_original": 24,
+      "pregunta": "En relación al oído:\n1. Las células ciliadas del órgano utricular convierten una vibración mecánica en un potencial al receptor.\n2. Algunos de los axones de los núcleos cocleares se entrecruzan en el bulbo raquídeo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-25",
+      "numero_original": 25,
+      "pregunta": "En relación al desarrollo de ojos y oídos:\n1. Los ojos empiezan a formarse alrededor de los 22 días después de la fertilización.\n2. Los ojos comienzan a formarse a partir del ectodermo del mesencéfalo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-26",
+      "numero_original": 26,
+      "pregunta": "Con relación a la células que varían en el aspecto y funcionalidad:\n1. La célula nerviosa típica del cerebro envía sus señales eléctricas por el axón, que es 100000 veces más larga que gruesa.\n2. Las células son muy diversas en sus requerimientos químicos. Algunas requieren dióxido de carbono para vivir, para otras el gas es letal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-27",
+      "numero_original": 27,
+      "pregunta": "La vida como un proceso autocatalítico:\n1. El DNA y el RNA aportan la información sobre la secuencia que se utiliza para producir células y para copiarse a sí mismos.\n2. Las proteínas proporcionan la actividad catalítica necesaria para sintetizar el DNA, el RNA y a ellas mismas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-28",
+      "numero_original": 28,
+      "pregunta": "Respecto a la células eucariontes:\n1. La célula eucarionte se prepara para dividirse sus moléculas de DNA se compactan y forman cromosomas vermiformes.\n2. Los hongos, plantas y animales requieren de la mitocondrias para el uso de dióxido de carbono.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-29",
+      "numero_original": 29,
+      "pregunta": "En relación a los patrones de plegamiento de las proteínas:\n1. La proteína fibroína es el principal componente de la seda.\n2. La proteína alfa queratina es abundante en la piel, pelo y cuerno.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-30",
+      "numero_original": 30,
+      "pregunta": "En relación a los anticuerpos:\n1. Cada anticuerpo se une muy estrechamente a una molécula diana particular.\n2. Los anticuerpos son moléculas en forma de Y con tres sitios de unión.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-31",
+      "numero_original": 31,
+      "pregunta": "En relación al tamaño de las proteínas:\n1. Cualquier región de la proteína interactúa con otra molécula por enlaces covalentes.\n2. Una proteína contiene sitios de unión para diversos tamaños de moléculas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-32",
+      "numero_original": 32,
+      "pregunta": "Respecto a la conformación de los nucleosomas:\n1. Al liberar el DNA alrededor de cada partícula central del nucleosoma, aislada, se observa que su longitud es de 147 pares de nucleótidos.\n2. Las histonas tienen varias modificaciones químicas no covalentes irreversibles al controlar a la cromatina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-33",
+      "numero_original": 33,
+      "pregunta": "Respecto a los cambios en el nucleosomas:\n1. Las colas de las cuatro histonas centrales están particularmente sujetas a estas modificaciones covalentes, que comprenden la adición y eliminación de grupos acetilo, fosfato y metilo.\n2. La hidrólisis de lisinas incrementa la afinidad de las colas por los nucleosomas adyacentes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-34",
+      "numero_original": 34,
+      "pregunta": "En relación al funcionamiento de los nucleosomas:\n1. Los complejos remodeladores de las histonas reposicionan localmente el DNA enrollado alrededor de los nucleosomas.\n2. Los complejos utilizan energía derivada de la hidrólisis del ADP para relajar el DNA nucleosómico y empujarlo a lo largo del octámero de histonas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-35",
+      "numero_original": 35,
+      "pregunta": "En relación a la heterocromatina:\n1. En el núcleo de una célula femenina, el cromosoma X inactivado puede puede observarse como una pequeña masa definida, que se denomina cuerpo de Barr.\n2. En cada división celular el mismo cromosoma X se extiende y activa en las células originales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-36",
+      "numero_original": 36,
+      "pregunta": "Respecto a los fosfolípidos de la membrana celular:\n1. Los fosfolípidos de la membrana celular tienen cabeza hidrófila que contiene fosfato.\n2. Los fosfolípidos de la membrana celular tienen dos pares de colas hidrocarbonadas hidrófobas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-37",
+      "numero_original": 37,
+      "pregunta": "Con respecto a los lípidos, en la membrana:\n1. El 2 metilpropano es una molécula que no puede establecer interacciones favorables con el agua.\n2. La acetona y el agua son moléculas polares tienen carga negativa y positiva parcial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-38",
+      "numero_original": 38,
+      "pregunta": "Respecto a los triacilglicerol:\n1. El triacilglicerol es una molécula completamente hidrófila.\n2. Los triacilgliceroles son los principales componentes de las grasas animales y aceites vegetales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-39",
+      "numero_original": 39,
+      "pregunta": "En relación de las proteínas de membranas asociadas con la bicapa lipídica:\n1. Las proteínas transmembrana son anfipáticas con regiones tanto hidrófobas como hidrófilas.\n2. Las regiones hidrófobas están expuestas al medio acuoso a cada lado de la membrana celular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-40",
+      "numero_original": 40,
+      "pregunta": "En relación a la velocidad del soluto en la bicapa lipídica:\n1. La velocidad a la que un soluto cruza una bicapa lipídica artificial sin proteínas mediante difusión simple depende de su tamaño y solubilidad.\n2. Muchas de las moléculas inorgánicas que utiliza una célula como nutrientes son demasiado grandes y polares como para atravesar con eficiencia una bicapa artificial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-41",
+      "numero_original": 41,
+      "pregunta": "En relación a los transportadores pasivos el movimiento de los solutos de su gradiente electroquímico:\n1. La glucosa tiene carga, el componente eléctrico de su gradiente electroquímico es 0.\n2. Después de una comida, el azúcar se une a uno de los sitios del transportador presentados al exterior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-42",
+      "numero_original": 42,
+      "pregunta": "En relación a la técnica registro de fijación de membrana (patch-clamp)\n1. Provee un cuadro directo del comportamiento de canales iónicos individuales.\n2. Se utiliza un microelectrodo para aislar y establecer contacto eléctrico con una pequeña zona de la membrana en la parte profunda de la célula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-43",
+      "numero_original": 43,
+      "pregunta": "Con relación a los canales iónicos regulados por voltaje es cierto que:\n1. Tienen dominios que se denominan sensores de voltaje y son en extremos sensibles a los cambios de potencial de membrana.\n2. Un cambio en el potencial de membrana afecta al ancho de apertura de canales",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-44",
+      "numero_original": 44,
+      "pregunta": "Con relación al gradiente electroquímico de H+:\n1. En algunas bacterias fotosintéticas, el gradiente de H+ es creado por la actividad de bombas de H+ impulsadas por luz como la bacteria bacteriorrodopsina.\n2. Otras bacterias, hongos y plantas, el gradiente de H+ es generado por las bombas de H+ de la membrana plasmática que usan la energía de la hidrólisis de ATP para mover H+ a través de la membrana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-45",
+      "numero_original": 45,
+      "pregunta": "Respecto a la permeabilidad de membrana a iones específicos que rigen el potencial de membrana:\n1. El potencial de membrana resulta una delgada capa de mayor de 5nm de iones cercanos a la membrana\n2. Al lograr un equilibrio exacto de cargas a cada lado de la membrana, no existe potencial de membrana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-46",
+      "numero_original": 46,
+      "pregunta": "Respecto al potencial de membrana:\n1. La ecuación de Nerd, hace posible el cálculo del potencial de membrana en acción, si se conocen las concentraciones de iones a cada lado de la membrana.\n2. En las células animales, el potencial de membrana en reposo es de de +10 a +150 mV",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-47",
+      "numero_original": 47,
+      "pregunta": "En relación al potencial de membrana en la región local de la membrana plasmática de la neurona:\n1. Su valor de reposo es de aproximadamente -60mv\n2. El voltaje de -40m V se aleja del potencial de membrana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-48",
+      "numero_original": 48,
+      "pregunta": "Respecto a los potenciales de acción regulados por voltaje:\n1. El cerebro humano consume un 15% de la energía total generada por el metabolismo de alimentos, para impulsar las bombas de Na+.\n2. Los canales Ca+ regulados por voltaje de las terminaciones nerviosas convierten una señal eléctrica en una señal química.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-49",
+      "numero_original": 49,
+      "pregunta": "Respecto a la bomba de Na que contribuye al potencial de reposo:\n1. Establece al gradiente de potasio que bombea 2 iones de Na+ fuera de la célula\n2. Establece al gradiente de potasio que bombea 3 iones de K+ hacia su interior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-50",
+      "numero_original": 50,
+      "pregunta": "Respecto a la distribución de iones a cada lado de una membrana celular su potencial de membrana:\n1. La membrana plasmática de las células animales, es suficiente que 6000 iones K+ crucen 1 µm2 de la membrana para modificar el potencial de membrana.\n2. El número de iones K+ en 1 µm3 de citosol es de 70.000 veces mayor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-51",
+      "numero_original": 51,
+      "pregunta": "Con relación a la imagenología médica:\n1. Las tecnologías más nuevas solo contribuyen al diagnóstico de enfermedades.\n2. La resonancia magnética se utiliza para detectar tumores y placas adiposas que ocluyen venas.\n3. La resonancia magnética muestra detalles finos de tejidos blandos, pero no de hueso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-52",
+      "numero_original": 52,
+      "pregunta": "En relación a la imagenología médica:\n1. En altas dosis, la radiología es útil para examinar tejidos blandos como las mamas.\n2. La radiología con contraste se utiliza para obtener imágenes de vasos sanguíneos.\n3. En los rayos X las estructuras huecas como los pulmones aparecen en gris.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-54",
+      "numero_original": 54,
+      "pregunta": "Con relación a la gammagrafía con radionúclidos:\n1. Se inyecta en el cuerpo una sustancia que emite positrones.\n2. Los rayos gamma emitidos por el radionúclido son detectados por una cámara alfa\n3. Las áreas con color intenso indican una gran captación del radionúclido",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-55",
+      "numero_original": 55,
+      "pregunta": "Con relación a las costillas:\n1. La cabeza es una proyección en el extremo posterior de la costilla\n2. La carilla de la cabeza puede encajar en una carilla del cuerpo de una única vértebra.\n3. La carilla de la cabeza puede encajar en la hemicarilla de dos vértebras adyacentes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-56",
+      "numero_original": 56,
+      "pregunta": "En relación al sistema esquelético axial:\n1. Las luxaciones costales, son muy frecuentes en natación.\n2. En algunos casos, las costillas fracturadas pueden perforar el corazón.\n3. Las luxaciones costales, producen dolor especialmente en la exhalación profunda.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-57",
+      "numero_original": 57,
+      "pregunta": "Con relación al fémur:\n1. El extremo distal del fémur consiste en una cabeza redondeada que se articula con el acetábulo del hueso coxal para formar la articulación coxal.\n2. El ligamento de la cabeza del fémur conecta la fosa acetabular con el acetábulo del hueso coxal.\n3. Inferior a la cresta intertrocantérea en la cara posterior el cuerpo femoral hay una rugosidad vertical denominada tuberosidad glútea",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-58",
+      "numero_original": 58,
+      "pregunta": "Con relación a la rótula:\n1. El ancho extremo distal de este hueso sesamoideo se origina en el tendón del músculo cuádriceps femoral.\n2. El ligamento rotuliano se fija a la rótula a la tuberosidad del peroné.\n3. La rótula aumenta la palanca del tendón del músculo cuádriceps femoral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-59",
+      "numero_original": 59,
+      "pregunta": "En relación al esqueleto del muslo:\n1. El trocánter mayor es la prominencia que se siente y se ve lateral a la cavidad sobre el costado de la cadera.\n2. El trocánter menor es inferior y lateral al trocánter mayor.\n3. Entre las superficies laterales de los trocánteres hay una fina línea intertrocantérica",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-60",
+      "numero_original": 60,
+      "pregunta": "En relación al esqueleto del antebrazo.\n1. La diálisis del radio se ensancha distalmente y forma la apófisis estiloides en la cara medial.\n2. El extremo distal del radio contiene una concavidad ancha, la escotadura cubital, que se articula con la cabeza del cúbito.\n3. Lateral e inferior a la escotadura troclear hay una depresión, la escotadura radial, que se articula con la cabeza del radio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-61",
+      "numero_original": 61,
+      "pregunta": "Con relación a la espina bífida:\n1. La forma más grave se denomina espina bífida oculta. Sucede en L5 o S1 y no presenta síntomas.\n2. Cuanto más pequeño el quiste y la cantidad de estructuras neuronales en el saco de dicha alteración más grave los problemas neurológicos.\n3. Es un defecto congénito de la columna vertebral en la que las láminas de L1 y/o L5 no logran desarrollarse normalmente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-62",
+      "numero_original": 62,
+      "pregunta": "En relación a las fracturas de columna vertebral:\n1. A menudo involucran a C1, C2, C4-C7, T12-L3\n2. Las fracturas cervicales o lumbares generalmente son a causa de un tipo de lesión por extensión y comprensión.\n3. Las vértebras cervicales pueden fracturarse o desplazarse por un impacto en la cabeza con flexión brusca del cuello.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-63",
+      "numero_original": 63,
+      "pregunta": "En relación a la estenosis de la espina lumbar:\n1. Puede ser causada por artrosis de los discos intervertebrales de la región lumbar.\n2. Es una causa frecuente de dorsalgia y dolor costal.\n3. Puede realizarse como tratamiento de una fractura vertebral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-64",
+      "numero_original": 64,
+      "pregunta": "Con relación a la laminectomía:\n1. Puede realizarse para acceder a la cavidad vertebral.\n2. Es una disciplina de la salud holística que se enfoca en nervios.\n3. Dos o más vértebras de la columna se estabilizan con un injerto óseo",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-65",
+      "numero_original": 65,
+      "pregunta": "En relación a trastornos y desequilibrios en articulaciones:\n1. La artrosis es una enfermedad en la cual el sistema inmunitario ataca sus propios tejidos\n2. En la artrosis primero afecta a las articulaciones menores y ataca activamente el cartílago.\n3. La articulación lateral del tobillo es la que más frecuentemente sufre esguinces.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-66",
+      "numero_original": 66,
+      "pregunta": "Con respecto a la correlación clínica en articulaciones:\n1. La cirugía de Tommy John consiste en el reemplazo parcial de cadera que involucra solo el fémur.\n2. La luxación de la cabeza del cúbito es la luxación de miembro superior más frecuente en niños.\n3. El término tríada infeliz se aplica a una lesión de rodilla donde se dañan el ligamento colateral tibial, el menisco medial y el ligamento cruzado posterior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-67",
+      "numero_original": 67,
+      "pregunta": "En relación a las diversas articulaciones del esqueleto axial:\n1. Las suturas, funcionalmente son anfiartrosis y sinartrosis.\n2. Las vertebrocostales, estructuralmente son sinovial (plana)\n3. Las intervertebrales, funcionalmente son anfiartrosis entre los cuerpos vertebrales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-68",
+      "numero_original": 68,
+      "pregunta": "En relación al sistema muscular:\n1. El pellizco continuo del tendón del supraspinoso como resultado del movimiento por encima de la cabeza provoca su inflamación y dolor\n2. El músculo pronador cuadrado esta inervado por el ramo profundo del nervio radial\n3. La inserción del extensor cubital del carpo es en el primer metacarpiano.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-69",
+      "numero_original": 69,
+      "pregunta": "Con relación al sistema muscular:\n1. El músculo ileocostal torácico se origina en las costillas 1-6 y se inserta en las costillas 7-12\n2. El grácil solo abduce el muslo en la articulación de la cadera.\n3. Los interóseos plantares se originan en el borde adyacente de todos los metatarsianos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-70",
+      "numero_original": 70,
+      "pregunta": "En relación al sistema muscular:\n1. Los músculos que cruzan dos articulaciones como el sartorio llevan acciones más complejas de aquellos que solo cruzan una articulación.\n2. El vientre frontal del músculo occipitofrontal se origina en la apófisis mastoides del hueso occipital.\n3. El triángulo anterior contienen a los siguientes nervios craneales I,II, IV, y VII",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-71",
+      "numero_original": 71,
+      "pregunta": "Con relación al sistema muscular:\n1. Para comprender los movimientos de la escápula se define como protracción al movimiento posterolateral de la escápula.\n2. El flexor radial del carpo su inserción está en el hueso ganchoso y base del quinto metacarpiano.\n3. La acción principal del músculo sartorio es mover el muslo más que la pierna.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-72",
+      "numero_original": 72,
+      "pregunta": "Con relación al reflejo tendinoso\n1. Sus receptores motores son los denominados órganos tendinosos.\n2. Este arco reflejo es polisináptico.\n3. El reflejo tendinoso es arco reflejo contralateral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-73",
+      "numero_original": 73,
+      "pregunta": "Con relación a las lesiones de la médula espinal\n1. Monoplejia es la parálisis de ambos miembros superiores.\n2. Hemiplejia es la parálisis de los cuatro miembros.\n3. Diplejia es la parálisis de ambos miembros inferiores.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-74",
+      "numero_original": 74,
+      "pregunta": "Con relación a las meninges:\n1. El espacio epidural contiene líquido intersticial.\n2. Un colchón de grasa y tejido conectivo se encuentra en el espacio subdural.\n3. La piamadre está compuesta por células pavimentosas a cuboides.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-75",
+      "numero_original": 75,
+      "pregunta": "En relación al equilibrio:\n1. El oído no solo detecta sonidos, sino también cambios en el equilibrio o balance.\n2. El conjunto de enterrocilios y cinocilios se denomina haz ciliar.\n3. La mácula del utrículo y del sáculo están situadas en posición",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-76",
+      "numero_original": 76,
+      "pregunta": "En relación con las células eucariontes puedan haberse originado como predadores:\n1. Las células eucariontes tienen una longitud 100 veces mayor y un volumen 1000 veces mayor que las células procariontes.\n2. Didinium es un protozoo carnívoro de gran tamaño, con un diámetro de alrededor de 150µm, alrededor de 10 veces más que la célula humana promedio.\n3. Didinium nada a baja velocidad por medio de sus cilios ondulantes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-77",
+      "numero_original": 77,
+      "pregunta": "Respecto a lo organismos modelo:\n1. S cerevisiae, al igual que otros hongos, presenta una pared celular flexible, inmóvil y posee mitocondrias, no cloroplastos.\n2. Los genes en Arabidopsis tienen homólogos en especies agrícolas, el estudio de esta simple hierba aporta datos sobre el desarrollo y la fisiología de las plantas de cultivo de las que depende nuestra vida.\n3. Drosophila, ha mostrado de qué forma las instrucciones genéticas codificadas en el DNA dirigen el desarrollo de un óvulo fecundado a un organismo unicelular adulto.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-78",
+      "numero_original": 78,
+      "pregunta": "En relación a la comparación de las secuencias del genoma.\n1. Los procariontes tienen muy poco equipaje genético superfluo, nucleótido por nucleótido, y contienen abundante información en sus genomas relativamente pequeños.\n2. E. coli transporta sus instrucciones genéticas en una única molécula circular de DNA bicatenario que contiene 4,6 millones de pares de nucleótidos y 4300 genes que codifican problemas\n3. La bacteria más simple contiene alrededor de 500 genes que codifican proteínas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-79",
+      "numero_original": 79,
+      "pregunta": "Respecto a las células bajo el microscopio:\n1. En 1880, Eduard Strasburger dibujó una célula vegetal viva (una célula pilosa de una flor de Tradescantia), que observó dividirse en dos, durante un periodo de 2,5 horas.\n2. Robert Hooke examinó un fragmento de corcho en 1665, comunicó a la Royal Society of London que el corcho estaba compuesto por una masa de cámaras diminutas.\n3. Schleiden y Schwann documentaron los resultados de una investigación sistemática de tejidos vegetales y animales con el microscopio óptico y mostraron que las células eran los componentes universales de todos los tejidos vivos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-80",
+      "numero_original": 80,
+      "pregunta": "En relación a la estructura y reproducción de la célula procarionte:\n1. Los procariontes suelen ser esféricos, baciliformes o con forma de tirabuzón\n2. Las células se reproducen con rapidez dividiéndose en dos. En condiciones óptimas, cuando escasean los nutrientes.\n3. En solo 11 horas un procarionte puede dar origen a una progenie de más de 800 millones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-81",
+      "numero_original": 81,
+      "pregunta": "En relación con el citoesqueleto:\n1. Los filamentos más gruesos del citosol se denominan microtúbulos por que tienen la forma de grandes tubos huecos.\n2. Se encuentran filamentos intermedios en el citoplasma de la célula con paredes celulares como las células vegetales.\n3. Cuando se divide una célula, se rompe su envoltura nuclear y su DNA se condensa en cromosomas visibles.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-82",
+      "numero_original": 82,
+      "pregunta": "En relación al estudio de la biología se estudia a los seres humanos y sus células:\n1. Al igual que las bacterias o levaduras, es posible obtener y hacer crecer un cultivo muestras células individuales.\n2. Las células de embriones humanos pueden ser inducidas a diferenciarse en múltiples tipos celulares.\n3. Las células de embriones pueden auto ensamblarse en estructuras parecidas a órganos que se asemejan mucho a un órgano normal, como el ojo o el cerebro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-83",
+      "numero_original": 83,
+      "pregunta": "En relación al genoma y los genes:\n1. La bacteria más simple conocida contiene alrededor de 500 genes que codifican proteínas.\n2. Pero la mayoría de los procariontes tienen genomas que contienen, por lo menos, 1 millón de pares de nucleósidos y 1000-8000 genes que codifican proteínas.\n3. Con estos pocos miles de genes, los procariontes pueden desarrollarse aún en los ambientes menos hostiles de la Tierra.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-84",
+      "numero_original": 84,
+      "pregunta": "Con relación a las células como unidad básica de la vida:\n1. No todas las células están rodeadas por una membrana plasmática que separa el contenido celular del entorno.\n2. Microscopía de Barrido permite localizar determinadas moléculas de gran tamaño en células fijadas o vivas.\n3. Las diferentes especies de procariontes difieren en sus capacidades químicas y viven en un espectro asombrosamente amplio de hábitats.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-85",
+      "numero_original": 85,
+      "pregunta": "En relación a las proteínas de andamiaje:\n1. Las células nerviosas despliegan proteínas de andamiaje flexibles.\n2. Las proteínas de andamiaje son cortas moléculas de RNA.\n3. Las proteínas de andamiaje en menor cantidad se encuentran en las células fibrosas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-86",
+      "numero_original": 86,
+      "pregunta": "En relación a la Ligasa.\n1. La DNA ligasa cataliza la unión termino-terminal de dos hebras de DNA.\n2. La DNA ligasa hidroliza la unión termino-lateral de una hebra de DNA.\n3. Cataliza la eliminación hidrolítica del grupo fosfato.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-87",
+      "numero_original": 87,
+      "pregunta": "Con respecto a la proteína cruza la bicapa lipídica como hélice alfa:\n1. Las hélices beta son menores en las proteínas en las membranas celulares.\n2. Las cintas enrolladas están dispuestas en forma circular.\n3. Dos o tres hélices alfa se enrollan entre sí formando estructura estable.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-88",
+      "numero_original": 88,
+      "pregunta": "Con respecto a las proteínas fibrosas de la matriz extracelular\n1. La elastina se forma por cadenas polipeptídicas laxas estructuradas.\n2. La piel, arterias y pulmones se contraigan con desgarros intensos.\n3. La elasticidad de esta molécula son individuales al desarrollarse de forma reversible.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-89",
+      "numero_original": 89,
+      "pregunta": "En relación al descubrimiento del ADN:\n1. Los estudios en bacterias simples, se descubrió que la información genética consiste, principalmente, en instrucciones para sintetizar proteínas.\n2. En el 1940 fue el ácido desoxirribonucleico (DNA) es la molécula transportadora de la información genética de la célula.\n3. En 1954 James Watson y Francis Crick investigaron el modelo del ADN",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-90",
+      "numero_original": 90,
+      "pregunta": "Con relación a los liposomas\n1. Los fosfolípidos puros forman vesículas esféricas cerradas denominadas lisosomas.\n2. Los liposomas varían de alrededor de 25 mm a 1 mm de diámetro.\n3. Los liposomas son bicapas sintéticas simples.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-91",
+      "numero_original": 91,
+      "pregunta": "Con relación al colesterol:\n1. El colesterol tiende a volver más flexible a las membranas celulares\n2. El colesterol encaja en los hiatos entre las moléculas fosfolipídicas de una bicapa lipídica.\n3. La cola hidrófoba del colesterol es equivalente a las colas de los fosfolípidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-92",
+      "numero_original": 92,
+      "pregunta": "Con relación a las comparaciones intra y extracelulares una célula de mamífero típico:\n1. La concentración intracelular de Na+ es 0,5 Mm\n2. La concentración extracelular de Cl- es de 5-15 mM\n3. La concentración intracelular de K+ es de 10mM",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-93",
+      "numero_original": 93,
+      "pregunta": "Con relación a los transportadores:\n1. Son responsables del movimiento de la mayoría de las pequeñas moléculas orgánicas liposolubles.\n2. Es poco selectivo, y a menudo solo transfiere distintos tipos de soluto.\n3. Cada membrana celular contiene un conjunto característico de diferentes transportadores adecuados para esa membrana en particular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-94",
+      "numero_original": 94,
+      "pregunta": "Con relación a las bombas transmembranas:\n1. La Bacteriorrodopsina se localiza en la membrana plasmática apical de células renales e intestinales.\n2. Las bombas de Ca2+ se localizan en la membrana plasmática de células vegetales, hongos y algunas bacterias.\n3. La bomba de H+ se localiza en membrana del retículo sarcoplasmático de células musculares.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-95",
+      "numero_original": 95,
+      "pregunta": "Con relación a los canales de filtración de K+\n1. El K+ se mueve libremente a través de la membrana\n2. En una célula en reposo, son los principales canales iónicos abiertos.\n3. Cuando el K+ fluye al exterior de la célula, la pérdida de cargas positivas dentro de la célula genera un potencial de membrana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-96",
+      "numero_original": 96,
+      "pregunta": "En relación a los componentes celulares cruciales para el potencial de acción:\n1. Iones de Na+ K+\n2. La membrana plasmática.\n3. Energía positiva por los gradientes de concentración.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-97",
+      "numero_original": 97,
+      "pregunta": "En relación de los transportadores y bomba de Na:\n1. Los transportadores transfieren solutos específicos a través de una membrana\n2. La bomba de Na+ de la membrana plasmática de las células no es una ATPasa.\n3. Los transportadores transfieren solutos a través de una membrana sin cambio conformacionales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-98",
+      "numero_original": 98,
+      "pregunta": "Respecto al calamar, revela secretos de la excitabilidad de la membrana:\n1. Loligo pea posee alguno de los axones de las células nerviosas pequeñas hallados en la naturaleza\n2. Los axones gigantes del calamar pueden alcanzar 1 cm de longitud.\n3. Los axones del calamar tienen un diámetro de 1000 veces que el axón de un mamífero.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-99",
+      "numero_original": 99,
+      "pregunta": "En relación de las bombas transmembrana:\n1. El intercambiador de Na+H+ tiene la función de importación activa de iones H+\n2. El intercambiador de Na+ H+ se localiza en la membrana plasmática de las células animales.\n3. La bacteriorrodopsina tiene la función de exportación activa de K+",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2024-2025-1-100",
+      "numero_original": 100,
+      "pregunta": "Respecto a las propiedades que distinguen los canales iónicos:\n1. Permiten el paso de algunos iones pero no otros.\n2. Los canales no están continuamente abiertos.\n3. Los canales están regulados.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    }
+  ]
+}

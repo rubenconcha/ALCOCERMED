@@ -1,0 +1,1539 @@
+{
+  "id": "2025-2026-3",
+  "year": "2025–2026",
+  "type": "Examen final",
+  "title": "Examen final · 2025–2026",
+  "count": 98,
+  "duration": 90,
+  "pattern": "/api/past-exam?id=2025-2026-3&pattern=1",
+  "missingNumbers": [
+    67
+  ],
+  "excludedQuestions": [
+    {
+      "numero_original": 66,
+      "pregunta": "Son causas de destrucción de nefronas:\n2.- Glándulas bulbouretrales\n3.- Vesícula seminal.",
+      "reason": "Enunciado incompleto: falta la afirmación 1 y las afirmaciones 2 y 3 no corresponden al tema indicado."
+    }
+  ],
+  "questions": [
+    {
+      "id": "2025-2026-3-1",
+      "numero_original": 1,
+      "pregunta": "El pH vaginal es de:\n1.-6.5 a 7.5 2.-3.5 a 4.0",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-2",
+      "numero_original": 2,
+      "pregunta": "Es cierto sobre los bronquiolos:\n1.- Son continuaciones de las vias respiratorias que carecen de cartilago de soporte y miden 1 mm o menos de diámetro.\n2.- La parte del pulmón ventilada por un bronquiolo es un segmento broncopulmonar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-3",
+      "numero_original": 3,
+      "pregunta": "Es cierto sobre la aldosterona:\n1.- La aldosterona actúa sobre el segmento grueso de la extremidad ascendente del asa de Henle, en el DCT, y en la parte cortical del túbulo colector.\n2.- Estimula a estos segmentos de la nefrona para que reabsorban Na+ y secreten K+.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-4",
+      "numero_original": 4,
+      "pregunta": "Para las seis semanas el embrión tiene lo siguiente:\n1.- Un tubérculo genital, una protuberancia mediana anterior.\n2.- Pliegues urogenitales, un par de pliegues de tejido medial un poco posterior al tubérculo genital.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-5",
+      "numero_original": 5,
+      "pregunta": "Es cierto sobre la boca:\n1.- La boca está recubierta con epitelio pavimentoso estratificado.\n2.- Este epitelio está queratinizado en áreas sujetas a la mayor abrasión por parte de la comida, como las encías y la bóveda del paladar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-6",
+      "numero_original": 6,
+      "pregunta": "Cuál es el largo del conducto inguinal:\n1.-6 cm.   2.-4 cm.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-7",
+      "numero_original": 7,
+      "pregunta": "Es cierto sobre la linfa:\n1.- La linfa suele ser un líquido claro, incoloro, similar al plasma sanguineo, pero bajo en proteínas.\n2.- La linfa también puede contener macrófagos, hormonas, bacterias, virus, restos de células e incluso células cancerosas en desplazamiento.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-8",
+      "numero_original": 8,
+      "pregunta": "Es cierto sobre el útero:\n1.- Tiene forma parecida a una pera, con una curvatura inferior amplia llamada fondo.\n2.- El útero mide casi 10 cm desde el cuello hasta el fondo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-9",
+      "numero_original": 9,
+      "pregunta": "Hueso resultado de la osificación intramembranosa:\n1.- Atlas.   2.- Parietal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-10",
+      "numero_original": 10,
+      "pregunta": "Es el epitelio de la nasofaringe:\n1.- Epitelio cilindrico seudoestratificado. 2.- Epitelio pavimentoso estratificado",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-11",
+      "numero_original": 11,
+      "pregunta": "Como se conoce al esfinter hepatopancreatico:\n1.- Esfinter de Oddi 2.- Esfinter de Vater.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-12",
+      "numero_original": 12,
+      "pregunta": "El plexo submucoso se conoce también como:\n1.- De Meissner.    2.- De Auerbach",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-13",
+      "numero_original": 13,
+      "pregunta": "Es una reacción endergonica:\n1.- Oxidación. 2.- Reducción.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-14",
+      "numero_original": 14,
+      "pregunta": "Es cierto sobre el musculo cremaster:\n1.- Son tiras del musculo oblicuo externo que cubre como una malla el cordón espermático.\n2.- Cuando hace calor, el cremáster se relaja y los testículos se suspenden más lejos del cuerpo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-15",
+      "numero_original": 15,
+      "pregunta": "1.- Fibroblastos: Son células largas, fusiformes, muchas de las cuales tienen ramas delgadas en forma de manojos.\n2.- Células plasmaticas: Se trata de grandes células fagociticas que recorren los tejidos conjuntivos, donde engullen y destruyen a las bacterias.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-16",
+      "numero_original": 16,
+      "pregunta": "Es cierto sobre el escroto:\n1.- El escroto es dividido en compartimientos izquierdo y derecho por un tabique mediano interno.\n2.- La ubicación del tabique está marcada en el interior por una división denominada rafe perineal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-17",
+      "numero_original": 17,
+      "pregunta": "1.- El anabolismo es el conjunto de reacciones de síntesis con almacenamiento de energía.\n2.- Oxidación es cualquier reacción química en que una molécula cede electrones y libera energía.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-18",
+      "numero_original": 18,
+      "pregunta": "Es cierto sobre los linfocitos T:\n1.- Maduran en el timo y luego dependen de las hormonas tímicas.\n2.- Se desarrollan a partir de monocitos que han emigrado de la circulación sanguínea.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-19",
+      "numero_original": 19,
+      "pregunta": "Es cierto sobre los riñones:\n1.- Cada riñón pesa casi 150 g y mide más o menos 11 cm de largo, 6 cm de ancho y 3 cm de espesor.\n2.- Su superficie lateral es cóncava, y su superficie medial es convexa y tiene una ranura, el hilio",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-20",
+      "numero_original": 20,
+      "pregunta": "Es función del aparato respiratorio:\n1.- La respiración crea gradientes de presión entre el tórax y el abdomen que promueve el flujo de linfa y sangre venosa.\n2.- Los pulmones dan un paso en la síntesis de un vasoconstrictor llamado angiotensina I, que ayuda a regular la presión arteria",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-21",
+      "numero_original": 21,
+      "pregunta": "1.- Por el agujero rasgado penetra el nervio petroso mínimo.\n2.- Por el agujero oval atraviesa la arteria meningea posterior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-22",
+      "numero_original": 22,
+      "pregunta": "1.- El cartílago elástico se encuentra gran parte el feto.\n2.- El cartílago hialino está en la epiglotis y la oreja.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-23",
+      "numero_original": 23,
+      "pregunta": "Es cierto sobre la vagina:\n1.- Es el conducto de 5 a 7 cm de largo que permite la descarga de líquido menstrual, recibe al pene y el semen y da a luz a un bebé.\n2-La vagina no tiene glandulas, pero se lubrica por la filtración de líquido seroso a través de sus paredes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-24",
+      "numero_original": 24,
+      "pregunta": "Es cierto sobre la circulación renal:\n1.- Aunque los riñones sólo representan 0.4% del peso corporal, reciben casi 2 litros de sangre por minuto.\n2.Justo antes o después de entrar en el hilio, la arteria renal se divide en varias arterias segmentarias.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-25",
+      "numero_original": 25,
+      "pregunta": "Donde se vacia el conducto torácico:\n1.- Vena braquiocefalica izquierda.\n2.- Vena subclavia izquierda.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-26",
+      "numero_original": 26,
+      "pregunta": "1.- La ATPasa V acopla la energía del ATP al transporte de protones al interior, mediante el cual se consigue la acidificación de estos compartimentos celulares.\n2.- Los endosomas tardíos y los lisosomas son orgánulos que solo son funcionales a pH alcalino",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-27",
+      "numero_original": 27,
+      "pregunta": "1.- La proteína banda 3 lleva a cabo el contratransporte de los iones cloruro y bicarbonato.\n2.- La enfermedad de Minkowski-Chauffard se caracteriza por la falta de eritrocitos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-28",
+      "numero_original": 28,
+      "pregunta": "1.- En la clonación celular se producen billones de copias del fragmento de ADN.\n2.- La PCR es un tipo de clonación acelular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-29",
+      "numero_original": 29,
+      "pregunta": "1.- Los procariotas carecen de orgánulos de membrana, aunque algunos pueden poseer mesosomas donde se acumulan compuestos inorgánicos.\n2.- Los procariotas carecen de orgánulos de membrana, aunque algunos pueden poseer pseudo-orgánulos donde se acumulan compuestos orgánicos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-30",
+      "numero_original": 30,
+      "pregunta": "1.- El TXA2 predomina en las plaquetas, donde favorece la coagulación.\n2.- Las hormonas hidrosolubles son hormonas hidrófilas, muchas de ellas derivadas del colesterol.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-31",
+      "numero_original": 31,
+      "pregunta": "1.- El centromero, o constricción primaria, es el centro cinético del cromosoma.\n2.- En función de la posición del centromero, metacéntrico se refiere a cuando el centromero se localiza aproximadamente en el centro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-32",
+      "numero_original": 32,
+      "pregunta": "1.- Los lisosomas contienen hasta 40 tipos de enzimas hidroliticas o hidrolasas ácidas.\n2.- En situaciones de falta de alimento se activan los procesos de autofagia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-33",
+      "numero_original": 33,
+      "pregunta": "1.- Los virus de ADN pueden ser bicatenarios.\n2.- Los virus de ADN pueden ser monocatenarios.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-34",
+      "numero_original": 34,
+      "pregunta": "1.- Los procariotas son organismos pluricelulares de reproducción sexual, sin núcleo y, normalmente, sin orgánulos rodeados de membrana.\n2.- La Salmonella tiene lipopolisacáridos abundantes en su membrana interna, que evitan una respuesta inmunológica potente",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-35",
+      "numero_original": 35,
+      "pregunta": "1.-GLUT1 desempeña un importante papel en la captación de glucosa en el cerebro.\n2.- El vanadato es un agente que inhibe todas las ATPasas de tipo P.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-36",
+      "numero_original": 36,
+      "pregunta": "1.- Los hongos son eucariotas de metabolismo heterótrofo que constituyen organismos pluricelulares.\n2.- Los hongos son eucariotas de metabolismo heterótrofo que constituyen organismos unicelulares.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-37",
+      "numero_original": 37,
+      "pregunta": "1.- En las reacciones de metilación se añade uno o más grupos metilo a un residuo de lisina o arginina en una cadena polipeptídica.\n2.- La proteína precursora de amiloide es una proteína presente en la membrana plasmática de las neuronas, indispensable para su crecimiento y supervivencia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-38",
+      "numero_original": 38,
+      "pregunta": "1.- La hemoglobinuria paroxística nocturna es una enfermedad en la cual un clon de células progenitoras hematopoyéticas adquiere la mutación del gen PIGA.\n2.- La glucoforina es una proteína integral de paso único.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-39",
+      "numero_original": 39,
+      "pregunta": "1.- Un ejemplo de proteína que no debe ser proteolizada para ser funcional es la insulina.\n2.- La proteína tau es una proteína que, tras ser fosforilada, se une a las moléculas de tubulina que forman los microtubulos de las neuronas y los estabiliza.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-40",
+      "numero_original": 40,
+      "pregunta": "1.- La parafina es una mezcla de ceras compuesta por hidrocarburos de cadena larga con punto de fusión de 5 °C.\n2.- Para que la parafina pueda penetrar en el tejido hay que hacer un paso previo de deshidratación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-41",
+      "numero_original": 41,
+      "pregunta": "1.- El muestreo tiene la finalidad de optimizar recursos como el tiempo, la mano de obra y los insumos.\n2.- Los métodos estadísticos se dividen en dos categorías: probabilístico y no probabilístico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-42",
+      "numero_original": 42,
+      "pregunta": "1.- La escala de intervalo se caracteriza por tener un punto cero absoluto que indica la ausencia total de la característica medida como en el caso del peso.\n2.- La escala de razones permite realizar comparaciones de proporcionalidad, como afirmar que un objeto mide el doble que otro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-43",
+      "numero_original": 43,
+      "pregunta": "1.-La estadística descriptiva permite realizar inferencias y generalizaciones sobre una población basándose exclusivamente en una parte de ella.\n2.- La estadística inferencial utiliza técnicas de muestreo para analizar una población a partir de una muestra representativa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-44",
+      "numero_original": 44,
+      "pregunta": "1.-En la escala nominal, las categorías son mutuamente excluyentes y sirven para representar variables cualitativas como el género o el estado civil.\n2.- En la escala ordinal, la distancia entre un nivel y otro adyacente es constante y siempre la misma, lo que facilita comparaciones matemáticas directas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-45",
+      "numero_original": 45,
+      "pregunta": "1.- La Regla de Sturges permite obtener exactitud en el número de intervalos (m) para evitar extremos.\n2-La fórmula propuesta por Sturges es m = 1+ 3,3 log(n), donde n es el número total de datos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-46",
+      "numero_original": 46,
+      "pregunta": "1.- La escala nominal no determina categorías.\n2.- Normalmente, las escalas de medición pueden ser de cuatro tipos: nominal, ordinal, de intervalos y de razón.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-47",
+      "numero_original": 47,
+      "pregunta": "1.- Una variable es cuantitativa discreta si puede tomar cualquier valor intermedio entre dos puntos sucesivos, como ocurre con la estatura de una persona.\n2.- El salario de los empleados se clasifica como una variable cuantitativa continua porque entre un valor y otro siempre puede existir un valor intermedio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-48",
+      "numero_original": 48,
+      "pregunta": "1.- Para tabular variables cualitativas, se recomienda seguir un patrón exclusivamente numérico decreciente.\n2.- Es posible ordenar variables cualitativas siguiendo criterios cronológicos, alfabéticos o jerárquicos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-49",
+      "numero_original": 49,
+      "pregunta": "1.- Notación de Limites. El primer intervalo debe ser cerrado en ambos extremos, representado como [Ii-Is]\n2.- A partir del segundo intervalo, el extremo inferior es cerrado y el superior es abierto.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-50",
+      "numero_original": 50,
+      "pregunta": "1.- El Rango o Recorrido (R) Se define como la variación numérica desde el valor más pequeño hasta el más alto.\n2.- El R se calcula restando el límite inferior del límite superior (R = Ls - Li).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-51",
+      "numero_original": 51,
+      "pregunta": "Los cuerpos cavernosos están cubiertos por una túnica fibrosa denominada:\n1.- Túnica vaginal 2.- Dartos. 3.- Túnica albugínea",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-52",
+      "numero_original": 52,
+      "pregunta": "La hormona foliculoestimulante estimula a las células:\n1.- De Sertoli. 2.- De Leydig. 3.- Estromales",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-53",
+      "numero_original": 53,
+      "pregunta": "La capa muscular de la vejiga se llama:\n1.- Musculo distensible. 2.- Miometrio. 3.- Musculo detrusor",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-54",
+      "numero_original": 54,
+      "pregunta": "Es ejemplo de articulación condilea:\n1.- Del hombro. 2.- Intertarsianas. 3.- Metacarpofalángica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-55",
+      "numero_original": 55,
+      "pregunta": "Origen del musculo cuadrado lumbar:\n1.- Costilla 12. 2.- Cresta iliaca. 3.- vertebra L1",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-56",
+      "numero_original": 56,
+      "pregunta": "La gestación dura un promedio de:\n1.-290 días. 2.- 266 días. 3.- 300 días.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-57",
+      "numero_original": 57,
+      "pregunta": "Es cierto sobre los valores típicos de los volúmenes respiratorios:\n1.- Volumen corriente (TV) 300 ml.\n2.- Volumen de reserva inspiratoria (IRV) 2 000 ml.\n3.- Volumen residual (RV) 1 300 ml.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-58",
+      "numero_original": 58,
+      "pregunta": "Es la presencia de aire en la cavidad pleural:\n1.- Hemotorax. 2.- Hidrotorax 3.- Neumotorax.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-59",
+      "numero_original": 59,
+      "pregunta": "Es el principal centro visual el encéfalo:\n1.- Lóbulo frontal. 2.- Lóbulo parietal. 3.- Lóbulo occipital",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-60",
+      "numero_original": 60,
+      "pregunta": "Donde se encuentran los núcleos grácil y cuneiforme:\n1.- Protuberancia. 2.- Bulbo raquídeo. 3.- Mesencefalo",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-61",
+      "numero_original": 61,
+      "pregunta": "1.- El descenso de los testículos empieza desde la semana seis.\n2.- En el séptimo mes, los testículos pasan de manera abrupta por el conducto inguinal hacia el escroto.\n3.- Casi 3% de los hombres nacen con testículos sin descender, o criptorquidismo",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-62",
+      "numero_original": 62,
+      "pregunta": "Es cierto sobre la diabetes:\n1.- Es cualquier trastorno metabólico que produce poliuria crónica.\n2.- Hay por lo menos cuatro formas de diabetes: diabetes tipo 1 (mellitus), tipo 2, gestacional e insípida.\n3.- En la mayoría de los casos, la poliuria se debe a una concentración elevada de glucosa en el túbulo renal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-63",
+      "numero_original": 63,
+      "pregunta": "Origen del musculo esfinter anal externo:\n1.- Orificio anal. 2.- Sacro 3.- Cuerpo perineal",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-64",
+      "numero_original": 64,
+      "pregunta": "Las glándulas de Brunner se encuentran en:\n1.- Ileon. 2.- Yeyuno 3.- Duodeno.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-65",
+      "numero_original": 65,
+      "pregunta": "El largo de los uréteres es de:\n1.-25 cm 2.-12cm. 3.-18cm.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-68",
+      "numero_original": 68,
+      "pregunta": "Es una estructura amarillenta, que secreta progesterona durante la fase secretora del ciclo menstrual:\n1.- Cuerpo blanco. 2.- Ovocito fecundado 3.- Cuerpo lúteo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-69",
+      "numero_original": 69,
+      "pregunta": "Es cierto sobre el Timo:\n1.- Forma parte de los sistemas endocrino, linfático e inmunitario.\n2.- Es un órgano con dos lóbulos, localizado entre el esternón y el cayado aortico, en el mediastino superior.\n3.- La cápsula fibrosa del timo cede trabeculas (tabiques) que dividen la glándula en varios lóbulos angulares.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-70",
+      "numero_original": 70,
+      "pregunta": "La respiración relajada y tranquila es la:\n1.- Taquipnea. 2.- Eupnea. 3.- Bradipnea.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-71",
+      "numero_original": 71,
+      "pregunta": "Es la hormona que retiene sal:\n1.- Angiotensina I. 2.- Aldosterona. 3-Calcitonina",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-72",
+      "numero_original": 72,
+      "pregunta": "Es el cese temporal de la respiración:\n1.- Disnea. 2.- Hipoventilación. 3.- Apnea.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-73",
+      "numero_original": 73,
+      "pregunta": "Es cierto sobre el Bazo:\n1.- Es el órgano linfático más grande del cuerpo, con una medida de hasta 12 cm de largo y con un peso de 160 gramos.\n2.- Se localiza en el hipocondrio derecho.\n3. Esta protegido por las costillas 8 a 10",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-74",
+      "numero_original": 74,
+      "pregunta": "Función del haz corticoespinal lateral:\n1.- Reflejo de giro de la cabeza como respuesta a estimulos visuales y auditivos.\n2.- Control fino de las extremidades. 3.- Equilibrio y postura.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-75",
+      "numero_original": 75,
+      "pregunta": "Es función del intestino grueso:\n1.-Absorción de nutrientes.\n2.- Secreta colecistocinina.\n3.- Absorbe agua y electrolitos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-76",
+      "numero_original": 76,
+      "pregunta": "1.- Las ciclinas y Cdk actúan en la diferenciación celular.\n2.- Las ciclinas y Cdk actúan en transcripción y reparación del ADN.\n3.- Las ciclinas y Cdk actúan en la apoptosis celular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-77",
+      "numero_original": 77,
+      "pregunta": "1.- El producto p19 Ink4d ha sido identificado como un candidato a gen supresor tumoral.\n2.- La familia Rb comprende tres miembros: la proteína del retinoblastoma y las proteínas p170 y p103.\n3.- La proteína pRb puede interaccionar con los factores E2F-activadores.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-78",
+      "numero_original": 78,
+      "pregunta": "1.- Los dos flavivirus humanos que pueden causar cáncer son el virus del sarcoma de Kaposi y el virus de Epstein-Barr\n2.- El tratamiento antivírico de HTLV-1 incluye el uso de interferón y aciclovir.\n3.- El tratamiento contra la replicación del virus de poliomavirus del carcinoma de las células de Merkel, incluye la administración de interferón y ribavirina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-79",
+      "numero_original": 79,
+      "pregunta": "1.- En la leucemia mieloide crónica se produce una translocación del protooncogen abl del cromosoma 22 al cromosoma 9.\n2.- El oncogén N-myg está amplificado en el retinoblastoma.\n3.- Algunos protooncogenes no están relacionados con un aumento de la división celular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-80",
+      "numero_original": 80,
+      "pregunta": "1.- La Poliposis familiar adenomatosa tiene herencia autosómica dominante y tiene como tumores asociados el cáncer colorrectal\n2.- El Síndrome de Turcot tiene herencia Autosómica dominante y tiene como tumores asociados tumores cerebrales.\n3.- El Síndrome de Gardner tiene herencia Autosómica recesiva y tiene como tumores asociados ampulomas, lipomas, osteomas y hiperplasia del epitelio retiniano.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-81",
+      "numero_original": 81,
+      "pregunta": "1.- El tratamiento con dosis altas de bleomicina lleva a un riesgo de fibrosis pulmonar.\n2.- Cetuximab es una IgG2 trimérica recombinante humano/ratón, que se une específicamente al dominio intracelular del EGFR humano\n3.- Gefitinib, erlotinib y afatinib son fármacos de administración intravenosa, que están aprobados para el tratamiento del carcinoma de pulmón microcítico metastásico",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-82",
+      "numero_original": 82,
+      "pregunta": "1.- El TGF-ß inhibe la proliferación de las células neuroectodérmicas.\n2.- El NO tiene una vida media muy corta de 5-10 minutos. X\n3.- PGD2a favorece la ovulación y el parto.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-83",
+      "numero_original": 83,
+      "pregunta": "1.- El punto R es considerado el inicio del ciclo celular.\n2.- El punto de control M se corresponde con la transición de la anafase a la metafase.\n3.- Los puntos de control del ciclo celular están situados en el final de la fase G1, al inicio de la fase G2 y al final de la fase M.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-84",
+      "numero_original": 84,
+      "pregunta": "1.- Los ésteres de forbol son capaces de activar familia de proteínas quinasas C.\n2.- Los ionóforos, son moléculas hidrófilas que permiten el paso de Ca +2 desde el citoplasma al exterior.\n3.- En la vía de señalización de Wnt, la proteína a -catenina tiene funciones de señalizador intracelular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-85",
+      "numero_original": 85,
+      "pregunta": "1.- La metilación de determinados residuos de lisina o glicina a de las histonas H2 y H4 se asocia a un patrón de transcripción represor o heterocromático.\n2.- La pérdida de la acetilación de H2 y H3 produce el silenciamiento de GST como p53, sin que la isla CpG en su región 3' esté metilada.\n3.- No existen fármacos antivíricos específicos contra la infección del poliomavirus del carcinoma de las células de Merkel.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-86",
+      "numero_original": 86,
+      "pregunta": "1.- Las caspasas reconocen normalmente una secuencia tripeptídica en el sustrato y cortan específicamente antes de un residuo de ácido aspártico\n2.- Un ejemplo de regulación dependiente de energía es el aumento de la transcripción de la procaspasa 3 en células humanas leucémicas tratadas con etoposido\n3.- La proteína Smac/Diablo potencia la apoptosis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-87",
+      "numero_original": 87,
+      "pregunta": "1.- El 40% de los retinoblastomas tienen un carácter no hereditario\n2.- El 60% de los retinoblastomas ocurre por inactivaciones esporádicas independientes en ambos alelos\n3.- El 10% de los tumores de celulas pequeñas de pulmón presentan una pérdida del gen Rb11.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-88",
+      "numero_original": 88,
+      "pregunta": "1.- En una célula humana en cultivo, la interfase dura aproximadamente 23 minutos.\n2-En la fase S se sintetizan histonas.\n3.- La fase G1 contribuye a la homeostasis al presentar indicios de división.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-89",
+      "numero_original": 89,
+      "pregunta": "1.- En el mecanismo de reparación NER, se eliminan bases incorrectas generadas por oxidación, alquilación o desaminación de bases.\n2.- El síndrome de Cockayne se produce como consecuencia de mutaciones en los genes CSA y CSB.\n3.- En el cáncer de colon no hereditario lipopósico se asocia a mutaciones en la línea germinal de genes involucrados en la MMR.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-90",
+      "numero_original": 90,
+      "pregunta": "1.- En el núcleo, la fosforilación de las condensinas favorece la condensación de la corporación de la cromatina\n2.- La desfosforilación de las proteínas del complejo del poro y la lámina nuclear produce la disgregación de la envoltura del núcleo\n3.- Una vez que el primer cromosoma se ha unido a los microtubulos del huso, se produce la transición de la metafase a la anafase.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-91",
+      "numero_original": 91,
+      "pregunta": "Muestreo Bola de Nieve.\n1.- Se utiliza cuando no se conocen los elementos de la población, pero se sabe que existen.\n2.- Los individuos localizados sirven para vincular a otros hasta obtener la muestra.\n3.- Es ideal para estudiar miembros de sectas religiosas o personas que han cometido delitos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-92",
+      "numero_original": 92,
+      "pregunta": "Objetivos de la Representación Gráfica.\n1.- Diferenciar las formas de representación para un conjunto de datos.\n2.- Sustituir totalmente el uso de tablas de frecuencias en los informes.\n3.- Construir gráficas según el tipo de variable o característica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-93",
+      "numero_original": 93,
+      "pregunta": "Diagramas de Barras.\n1.- Los rectángulos representan los valores que toma la variable\n2.- Se recomienda su uso exclusivamente para variables cuantitativas continuas.\n3.- Su longitud está definida por la combinación de frecuencias absolutas y relativas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-94",
+      "numero_original": 94,
+      "pregunta": "Características del Diagrama de Barras.\n1.- Las barras consisten en líneas gruesas que constituyen rectángulos de anchura fija.\n2.- Su anchura es fija y representa los valores de la variable.\n3.- La longitud es definida por las frecuencias absolutas o relativas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-95",
+      "numero_original": 95,
+      "pregunta": "Convenciones del Número de Intervalos.\n1.- Se recomienda mantener una cantidad de entre 15 y 20 intervalos.\n2.- Sturges propone una fórmula basada en el logaritmo del número de datos.\n3.- El valor de \"m\" debe ser siempre un número decimal para asegurar precisión.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-96",
+      "numero_original": 96,
+      "pregunta": "Frecuencias en el Histograma.\n1.- El histograma de frecuencias relativas ubica porcentajes en el eje vertical.\n2.- El histograma de frecuencias absolutas ubica el número de personas en el eje vertical.\n3.- Ambos tipos de histogramas utilizan los intervalos en el eje horizontal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-97",
+      "numero_original": 97,
+      "pregunta": "Variables Cuantitativas Discretas.\n1.- Se representan habitualmente mediante diagramas de barras.\n2.- Se representan habitualmente mediante diagramas circulares.\n3.- Solo puede tomar un valor de un conjunto de números.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-98",
+      "numero_original": 98,
+      "pregunta": "Diagrama Circular.\n1.- Se divide la circunferencia de 180° conforme a las frecuencias relativas\n2.- Se usa para representar variables de tipo cualitativo o cuantitativo discreto\n3.- Es el gráfico recomendado cuando hay más de 8 categorías cualitativas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-99",
+      "numero_original": 99,
+      "pregunta": "Elección de Gráficas según Categorías.\n1.- Si las categorías cualitativas son 3, se puede usar el diagrama circular.\n2.- Si las categorías cualitativas son 6, se debe usar el diagrama de barras.\n3.- El diagrama de barras aplica si las categorías son menos de 4.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2025-2026-3-100",
+      "numero_original": 100,
+      "pregunta": "Ojivas o Polígonos de Frecuencias Acumuladas.\n1.- Representan el comportamiento acumulado de las unidades de investigación.\n2.- Pueden ser construidos con frecuencias absolutas o relativas.\n3.- Permiten visualizar el porcentaje acumulado de la variable.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    }
+  ]
+}

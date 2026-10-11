@@ -1,0 +1,1563 @@
+{
+  "id": "2022-2023-1",
+  "year": "2022–2023",
+  "type": "Primer parcial",
+  "title": "Primer parcial · 2022–2023",
+  "count": 100,
+  "duration": 90,
+  "pattern": "/api/past-exam?id=2022-2023-1&pattern=1",
+  "missingNumbers": [],
+  "excludedQuestions": [],
+  "questions": [
+    {
+      "id": "2022-2023-1-1",
+      "numero_original": 1,
+      "pregunta": "Con relación al filum terminale: 1.- Es una prolongación de la piamadre que fija la médula espinal al cóccix.\n2.- Las raíces de los nervios espinales inferiores presentan una angulación inferior a lo largo del filum terminale, a modo de mechones de cabello.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-2",
+      "numero_original": 2,
+      "pregunta": "Con relación de la sustancia gris y blanca en la médula espinal: 1.- En el segmento torácico y lumbar la cantidad de sustancia gris es máxima. 2.- La cantidad de sustancia blanca disminuye de los segmentos cervicales hacia los sacros.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-3",
+      "numero_original": 3,
+      "pregunta": "Los ramos posteriores de los nervios espinales inervan: 1.- Piel de la superficie dorsal del tronco. 2.- Músculos profundos dorsales del tronco.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-4",
+      "numero_original": 4,
+      "pregunta": "Plexo que se origina de L1-L4: 1.- Inerva la pared anterolateral del abdomen, los genitales externos y parte de los miembros inferiores. 2.- Pasa entre las porciones superficial y profunda del músculo psoas y por delante del cuadrado lumbar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-5",
+      "numero_original": 5,
+      "pregunta": "Tracto discriminativo, presión leve corresponden a: 1.- Fascículo grácil y fascículo cuneiforme. 2.- Fascículos de la vía motora directa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-6",
+      "numero_original": 6,
+      "pregunta": "Fibras del tejido conectivo: 1.- Las fibras reticulares, formadas por colágeno dispuesto en haces delgados cubiertos por glucoproteínas. 2.- Las fibras elásticas están formadas por proteína elastina rodeada por glucoproteína fibrilina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-7",
+      "numero_original": 7,
+      "pregunta": "Un ejemplo de Sindesmosis es: 1.- Articulación tibioperonea distal. 2.- Articulación dentoalveolar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-8",
+      "numero_original": 8,
+      "pregunta": "Es una articulación condílea. 1.- La articulación entre la cabeza del fémur y el acetábulo del hueso coxal. 2.- La cabeza del radio y la escotadura radial del cúbito.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-9",
+      "numero_original": 9,
+      "pregunta": "Es inervado por el nervio axilar: 1.- Músculo redondo menor. 2.- Músculo redondo mayor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-10",
+      "numero_original": 10,
+      "pregunta": "Es cierto para una sinapsis eléctrica: 1.- Permiten comunicación más rápida pero no sincronizada. 2.- La sincronización depende del tamaño de su hendidura sináptica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-11",
+      "numero_original": 11,
+      "pregunta": "Es cierto en relación al envenenamiento con estricnina: 1.- Las células de Renshaw producen el neurotransmisor glicina. 2.- La glicina es un neurotransmisor estimulador en las sinapsis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-12",
+      "numero_original": 12,
+      "pregunta": "Es cierto en relación a las aminas biógenas: 1.- La noradrenalina no influye en el estado de ánimo de las personas.\n2.- En las experiencias placenteras y adictivas esta presente la dopamina en el encéfalo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-13",
+      "numero_original": 13,
+      "pregunta": "Es cierto en la modificación de los efectos de los neurotransmisores: 1.- Los pacientes con Parkinson se benefician con el medicamento X-dopa 2.- La medicación para el Parkinson mejora al paciente con precursores de dopamina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-14",
+      "numero_original": 14,
+      "pregunta": "Es cierto para la epilepsia: 1.- Se caracterizan por accesos de disfunción solamente motora con convulsiones como principal característica. 2.- Son desencadenados por descargas eléctricas sinacrónicas normales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-15",
+      "numero_original": 15,
+      "pregunta": "Con respecto a la articulación de la cadera: 1.- La flexión está limitada por la cara anterior del muslo que se topa con la pared abdominal anterior. 2.- La extensión está restringida por la tensión de los ligamentos pubofemoral e isquiofemoral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-16",
+      "numero_original": 16,
+      "pregunta": "Acerca de los trastornos articulares: 1.- El reuma es un trastorno doloroso de las estructuras de sostén del cuerpo que no es causado por infección o lesión. 2.- La artritis es una forma de reuma en la cual las articulaciones se inflaman se endurecen y duelen.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-17",
+      "numero_original": 17,
+      "pregunta": "Referente a los procedimientos comunes de Imaginología medica: 1.- La laparoscopía se utiliza para examinar los órganos de la cavidad abdominopélvica. 2.- La PET se utiliza para estudiar la fisiología de las estructuras corporales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-18",
+      "numero_original": 18,
+      "pregunta": "Al respecto de los términos de relación: 1.- Las costillas son superficiales en relación a la piel de la espalda. 2.-El riñón izquierdo y el colon ascendente son homolaterales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-19",
+      "numero_original": 19,
+      "pregunta": "Al respecto del sistema de retroalimentación: 1.- Cuando la información fluye hacia el centro de control, esta trayectoria se denomina eferente. 2.-La aferencia del centro de control constituye hormonas,impulsos u otras señales quimicas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-20",
+      "numero_original": 20,
+      "pregunta": "Cuáles son las funciones de las hormonas sexuales en el crecimiento del óseo. 1.- Detienen el crecimiento en la placa epifisaria entre los 18 y 21 años. 2.- Facilita la recuperación de calcio iónico de la orina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-21",
+      "numero_original": 21,
+      "pregunta": "Corresponde a las vértebras cervicales: 1.- Las apófisis espinosas de C1 a C7 suelen ser bífidas. 2.- Sus arcos vertebrales son pequeños y sus cuerpos vertebrales son grandes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-22",
+      "numero_original": 22,
+      "pregunta": "Las costillas: 1.- El endodermo y duodécimo par de costillas son llamadas costillas flotantes. 2.- Los cartílagos del 8vo, 9no y 10mo par de costillas se las llaman vertebroesternales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-23",
+      "numero_original": 23,
+      "pregunta": "La escápula: 1.- El borde medial y lateral se unen en un ángulo inferior. 2.- El borde superior y medial se unen en el ángulo superior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-24",
+      "numero_original": 24,
+      "pregunta": "Los huesos de la mano: 1.- Los carpianos en hilera proximal de medial a lateral son; pisiforme, piramidal, semilunar escaloides. 2.- Los carpianos en hilera distal de medial a lateral son; trapecio, trapecioide, grande y ganchoso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-25",
+      "numero_original": 25,
+      "pregunta": "Es correcto: 1.- El ilíon femenino es más vertical. 2.- El ilíon masculino es menos vertical.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-26",
+      "numero_original": 26,
+      "pregunta": "Con relación a la unidad y diversidad de las células: 1.- Los biólogos estiman que hay hasta 10 millones distintas de especies de seres vivos en nuestro planeta. 2.- Todas las células comparten una química fundamental y otras características comunes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-27",
+      "numero_original": 27,
+      "pregunta": "Con relación a la unidad y diversidad de las células: 1.- El Paramecium, que reside en océanos, tiene la forma de un báculo y cubierto por cientos de cilios. 2.- La levadura de fisión tiene la forma de un bacilo y la levadura en gemación es esférica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-28",
+      "numero_original": 28,
+      "pregunta": "Con relación a células y virus: 1.- Sólo las células vivas pueden realizar estas asombrosas hazañas de autorreplicación. 2.- Los virus contienen DNA o RNA con la capacidad mínima de reproducirse por sus propios medios.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-29",
+      "numero_original": 29,
+      "pregunta": "Con relación a las enzimas: 1.- La lisozima agrega una molécula de agua a un enlace simple entre dos grupos de azúcar adyacentes de la cadena polisacárida, lo que causa la rotura del enlace. 2.- Las enzimas pueden estimular una reacción, manteniendo juntos los sustratos reactivos en una alineación precisa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-30",
+      "numero_original": 30,
+      "pregunta": "Con relación a la medición del rendimiento de las enzimas: 1.- Se pueden utilizar inhibidores no competitivos para tratar a pacientes que se han intoxicado con etilenglicol. 2.- El primer paso para comprender como actúa una enzima implica determinar la velocidad máxima, Vmax, de la reacción que cataliza.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-31",
+      "numero_original": 31,
+      "pregunta": "En relación con el plegamiento de proteínas con conformación de mínima energía: 1.- Una proteína puede ser plegada, o renaturalizada, mediante el tratamiento con solventes que rompen las interacciones no covalentes que mantienen plegada a la cadena. 2.- En condiciones apropiadas, cuando se elimina el solvente renaturalizante, a menudo, la proteína vuelve a desplegarse espontáneamente en su conformación original, un proceso denominado renaturalización.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-32",
+      "numero_original": 32,
+      "pregunta": "Con relación con la hélice alfa y hoja beta: 1.- El primero en ser descubierto, denominado hélice alfa, se halló en la proteína alfa-queratina, abundante en la piel y sus derivados. 2.- Se encuentra una estructura plegada, denominada hoja beta en la proteína fibroína, el principal componente de la piel.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-33",
+      "numero_original": 33,
+      "pregunta": "En relación con las estructuras amiloides: 1.- La enfermedad de Alzheimer y la enfermedad de Huntington son enfermedades proliferativas. 2.- Cuando las proteínas se pliegan en forma incorrecta, a veces, forman estructuras amiloides.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-34",
+      "numero_original": 34,
+      "pregunta": "Con relación a la función de proteínas: 1.- Para muchas proteínas, la unión a otra molécula es su principal función.\n2.- Por ejemplo, una molécula de pepsina solo necesita asociarse con otras moléculas de pepsina para formar un filamento.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-35",
+      "numero_original": 35,
+      "pregunta": "Con relación a las moléculas de mRNA que son degradadas en el citosol: 1.- En las células eucariotas, los mRNA suelen persistir más tiempo. 2.- Las proteínas producidas en altas cantidades, como la $\\beta$-globina, son traducidas a partir de mRNA con vidas prolongadas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-36",
+      "numero_original": 36,
+      "pregunta": "Con relación a las moléculas de RNA: 1.- Son moléculas pequeñas, cada uno de ellos de alrededor de 40 nucleótidos de longitud. 2.- Tres segmentos cortos del IRNA plegado son hélices dobles, lo que genera una estructura semejante a una hoja de trébol.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-37",
+      "numero_original": 37,
+      "pregunta": "Con relación a los orígenes de replicación: 1.- En células simples con levaduras, los orígenes de replicación abarcan alrededor de 100 pares de nucleótidos. 2.- En células simples como bacterias, sus orígenes de replicación es de 1000 pares de nucleótidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-38",
+      "numero_original": 38,
+      "pregunta": "Con relación a las mutaciones: 1.- Pueden tomar a las bacterias resistentes a los antibióticos que se utilizan para destruirlas. 2.- Como las mutaciones son aleatorias, es más probable que sean deletéreas que beneficiosas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-39",
+      "numero_original": 39,
+      "pregunta": "Con relación a los segmentos cortos de RNA que actúan como cebadores: 1.- El cebador de RNA aparece sus bases con la hebra molde y provee un extremo 3' con bases apareadas como punto inicial para la DNA polimerasa. 2.- La enzima que sintetiza el cebador de RNA se conoce como RNA polimerasa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-40",
+      "numero_original": 40,
+      "pregunta": "Con relación a la replicación del DNA: 1.- Los nucleótidos ingresan como desoxirribonucleótidos trifosfato 2.- Un nucleósido trifosfato entrante forma un par de bases con su compañero de la hebra molde",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-41",
+      "numero_original": 41,
+      "pregunta": "Salud – enfermedad: 1.- Es necesario comprender que el proceso de Salud – Enfermedad, está condicionada por el entorno en el que vive. 2.- El ser humano no necesita de un espacio geográfico en el cual vivir.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-42",
+      "numero_original": 42,
+      "pregunta": "Medios audiovisuales auxiliares: 1.- Estos medios pueden reforzar y complementar el mensaje del educador para la salud y reemplazarlo. 2.- En cierta manera, el material audiovisual desvía la atención que debe ir dirigida al educador.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-43",
+      "numero_original": 43,
+      "pregunta": "Entre los medios audiovisuales podemos señalar: 1.- Las demostraciones son de suma importancia; ellas reúnen la enseñanza teórica y el trabajo práctico. 2.- Una demostración debe ser siempre realista.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-44",
+      "numero_original": 44,
+      "pregunta": "El año 2016 se realizó: 1.- Novena Conferencia Mundial de Promoción de la Salud en Shanghai. 2.- Conferencia de las Naciones Unidad sobre el Desarrollo Sostenible (Río de Janeiro).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-45",
+      "numero_original": 45,
+      "pregunta": "Ampliación de la cobertura de servicios de salud: 1.- Deben satisfacer las necesidades básicas de los sectores pobres o excluidos, limitado solo a ellos. 2.- Presenta tres aspectos fundamentales: acceso de la población a los servicios; disponibilidad relativa de recursos y un sistema técnico y administrativo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-46",
+      "numero_original": 46,
+      "pregunta": "Programas: 1.- Deben ser Programas para la prevención, protección, control de enfermedades y rehabilitación.\n2.- El contenido de los programas, deben acentuarse en actividades de promoción y prevención, no combinadas con las de tratamiento y rehabilitación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-47",
+      "numero_original": 47,
+      "pregunta": "Los sistemas de salud a nivel internacional siguen recomendaciones de la OMS, basadas en acuerdos como:\n1.- Alma Ata- APS, carta de Ottawa- Promoción de la salud. 2.- Acuerdo de Shimura.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-48",
+      "numero_original": 48,
+      "pregunta": "El sector privado de Salud en Bolivia está constituido por: 1.- Compañías de seguros. 2.- Proveedores de servicios de salud privados sin fines de lucro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-49",
+      "numero_original": 49,
+      "pregunta": "Ley 1152: 1.- Fue promulgada el 30 de diciembre de 2013. 2.- Establece las bases de atención gratuita, integral y universal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-50",
+      "numero_original": 50,
+      "pregunta": "Ley 1152: 1.- La presente Ley tiene como ámbito de aplicación el nivel central del estado, las entidades territoriales privadas y las entidades del subsector público de salud. 2.- Los requisitos para el acceso al SUS son afiliarse al Centro de salud más próximo de su vivienda, contar con la boleta de pago de luz, agua y carnet de identidad.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-51",
+      "numero_original": 51,
+      "pregunta": "Desde la raíz posterior los axones de las neuronas sensitivas pueden seguir tres vías posibles: 1.- Se extienden hasta la sustancia blanca y ascienden hasta el encéfalo. 2.- En las astas grises posteriores hacen sinapsis con interneuronas, cuyos axones se extienden a la sustancia blanca de la médula espinal y ascienden al encéfalo.\n3.- En el asta gris los axones sensitivos hacen sinapsis con neuronas motoras que participan en las vías reflejas espinales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-52",
+      "numero_original": 52,
+      "pregunta": "Nervios espinales: 1.- Todos los nervios espinales de salen de la columna vertebral por los agujeros vertebrales.\n2.- El primer par cervical surge entre el hueso occipital y el atlas. 3.- Los nervios espinales conectan el SNC y SNP.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-53",
+      "numero_original": 53,
+      "pregunta": "Ramos meníngeos de los nervios espinales: 1.- Inervan las vértebras, ligamento vertebral, meninges. 2.- Salen del conducto vertebral y se dirigen hacia la región anterior o ventral.3.- Inervan músculos y estructuras del miembro superior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-54",
+      "numero_original": 54,
+      "pregunta": "Con relación a los tractos sensitivos son: 1.- Cordón posterior. 2.- Corticoespinal anterior. 3.- Reticuloespinal lateral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-55",
+      "numero_original": 55,
+      "pregunta": "Uniones adherentes: 1.- Evitan que las células epidérmicas se separen bajo tensión. 2.- Evita que el contenido de los órganos se filtre hacia la sangre. 3.- Ayuda a las superficies epiteliales a resistir la separación durante las actividades de contracción.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-56",
+      "numero_original": 56,
+      "pregunta": "Son movimientos de la articulación radiocubital: 1.- Abducción, aducción del antebrazo. 2.- Flexión, extensión, abducción, aducción del antebrazo. 3.- Rotación del antebrazo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-57",
+      "numero_original": 57,
+      "pregunta": "Son articulaciones sinoviales que tienen movimientos especiales: 1.- Articulación temporomandibular. 2.- Articulación intertarsiana. 3.- Articulación radiocubital.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-58",
+      "numero_original": 58,
+      "pregunta": "Eleva, protruye el labio inferior y tracciona hacia arriba la piel del mentón, como al hacer pucheros. 1.- Músculo mentoniano. 2.- Músculo risorio. 3.- Músculo buccinador.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-59",
+      "numero_original": 59,
+      "pregunta": "Contiene las arterias carótidas, y la vena yugular interna: 1.- Triángulo occipital. 2.- Triángulo submandibular.\n3.- Triángulo supraclavicular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-60",
+      "numero_original": 60,
+      "pregunta": "En cuanto a la reparación tisular: 1.- El tejido que tiene reparación continua es el cartílago por su abundante inervación. 2.- Las células madre del músculo son las células satélites. 3.- El musculo en el que abundan células satélites es el cardiaco.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-61",
+      "numero_original": 61,
+      "pregunta": "Es cierto en relación al lupus eritematoso sistémico (LES): 1.- Pueden estar implicados factores solo ambientales y hormonales. 2.- Las hormonas que más causan lupus al varón, son la testosterona y el cortisol. 3.- Una característica es la erupción en mariposa que afecta las mejillas y el tabique nasal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-62",
+      "numero_original": 62,
+      "pregunta": "Es cierto en relación a los canales iónicos en las membranas: 1.- Los canales permeables se encuentran en todas las células del cuerpo humano. 2.- Los canales con compuerta de ligando se encuentran en dendritas de neuronas sensitivas como receptores de dolor. 3.- Los canales de compuerta mecánica están sobre todo en axones y todos los receptores del frío y dolor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-63",
+      "numero_original": 63,
+      "pregunta": "Es cierto para los anestésicos locales: 1.- El calor extremo puede provocar anestesia en los tejidos. 2.- El frío extremo produce un grado muy elevado de dolor pero no anestesia. 3.- La novocaína es encargada de generar la anestesia al bloquear captación de potasio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-64",
+      "numero_original": 64,
+      "pregunta": "¿Cuáles son las funciones básicas del sistema esquelético? 1.- Protección de órganos y depósito de sodio y calcio. 2.- Asistencia al movimiento y depósito de carbohidratos. 3.- Producción de células sanguíneas y sostén de tejidos blandos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-65",
+      "numero_original": 65,
+      "pregunta": "Situaciones en las que tiene lugar la formación del hueso. 1.- Crecimiento de hueso durante la lactancia e infancia. 2.- Remodelación ósea a lo largo de la vida. 3.- Formación de huesos en el feto.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-66",
+      "numero_original": 66,
+      "pregunta": "¿Cuál de los siguientes activa enzimas implicadas en la síntesis de la matriz extracelular ósea? 1.- Manganeso.\n2.- Vitamina A. 3.- Vitamina D.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-67",
+      "numero_original": 67,
+      "pregunta": "¿Cuál de las siguientes hormonas es secretada por la glándula tiroides? 1.- Insulina. 2.- Calcitonina. 3.- Calcitonina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-68",
+      "numero_original": 68,
+      "pregunta": "Las células nerviosas sensitivas situadas en las paredes de determinados vasos sanguíneos, que detectan la presión elevada se denominan: 1.- Quimioreceptores 2.- Adrenérgicos 3.- Osmorreceptores",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-69",
+      "numero_original": 69,
+      "pregunta": "La porción superior de la cavidad abdominal contiene, a cuál, de las siguientes vísceras: 1.- Vejiga 2.- Órganos internos del aparato reproductor 3.- La mayor parte del intestino grueso",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-70",
+      "numero_original": 70,
+      "pregunta": "Cuál ligamento, corresponde a un componente de la ATM 1.- Esfenomandibular 2.- Estilomandibular 3.- Lateral",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-71",
+      "numero_original": 71,
+      "pregunta": "El ligamento más fuerte en la articulación de la cadera es: 1.- Iliofemoral 2.- Pubofemoral 3.- Isquiofemoral",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-72",
+      "numero_original": 72,
+      "pregunta": "Los huesos: 1.- La escama temporal forma la parte posterior y superior de la sien. 2.- De la parte superior de la escama del temporal se proyecta la apófisis cigomática. 3.- La fosa mandibular, tubérculo articular y la mandíbula forman articulación ATM.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-73",
+      "numero_original": 73,
+      "pregunta": "Los huesos de la cabeza: 1.- El hueso occipital constituye la mayor parte de las porciones inferior y posterior del cráneo. 2.- El esfenoides forma parte del piso, paredes laterales y la pared posterior de la órbita. 3.- El hueso esfenoides anteriormente se articula con el hueso frontal y etmoides.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-74",
+      "numero_original": 74,
+      "pregunta": "Es correcto: 1.- El vómer se articula por arriba con la lámina perpendicular del hueso etmoides y esfenoides. 2.- Los maxilares forman parte del piso de la órbita, de las paredes laterales y el techo de la cavidad nasal 3.- La apófisis palatina del maxilar, es una proyección vertical que forma los ¾ anteriores del paladar duro",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-75",
+      "numero_original": 75,
+      "pregunta": "Es correcto: 1.- Durante la deambulación el astrágalo transmite el 100% del peso del cuerpo al calcáneo. 2.- El astrágalo, el hueso más inferior del tarso es el único hueso que se articula con tibia y peroné. 3.- El primer metatarsiano es más grueso que el resto porque soporta más peso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-76",
+      "numero_original": 76,
+      "pregunta": "Con relación a las mitocondrias: 1.- Sin mitocondrias los hongos serían capaces de usar oxígeno para extraer la energía que necesitan de las moléculas alimenticias que las nutren. 2.- Las células utilizan la energía de la oxidación de moléculas alimenticias, como los azúcares para producir ATP. 3.- Como consume CO2 y libera O2 todo el proceso se denomina respiración celular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-77",
+      "numero_original": 77,
+      "pregunta": "Con relación a los aminoácidos: 1.- La Leucina, Metionina, Alanina, son aminoácido polar sin carga. 2.- La Serina, Tirosina, Treonina, son aminoácidos no polares. 3.- La Isoleucina, Fenilalanina son aminoácidos polares sin carga.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-78",
+      "numero_original": 78,
+      "pregunta": "Con relación a los ribosomas: 1.- Los ribosomas de eucariontes y procariontes son muy diferentes en su estructura y función. 2.- La subunidad ribosómica grande hace coincidir los tRNA con los codones del mRNA. 3.- La subunidad pequeña cataliza la formación de los enlaces peptídicos que unen en forma covalente a los aminoácidos en una cadena polipeptídica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-79",
+      "numero_original": 79,
+      "pregunta": "Con relación al ribosoma: 1.- Es una de las estructuras más grandes y complejas de la célula y compuesto por un tercio de RNA y dos de proteína. 2.- Los rRNA se pliegan en estructuras tridimensionales precisas y muy compactas, que forman el centro del ribosoma. 3.- El principal papel de las proteínas ribosómicas parece ser ayudar a plegar y estabilizar el centro del DNA.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-80",
+      "numero_original": 80,
+      "pregunta": "Referente a los modelos de replicación del DNA son: 1.- Semiconservador 2.- Dispersivo 3.- Conservador",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-81",
+      "numero_original": 81,
+      "pregunta": "Con relación al virus T2. 1.- Están formados por proteína y DNA. 2.- Un virus que infecta y finalmente destruye a la bacteria E. coli. 3.- Estos virus contienen solo dos clases de moléculas: DNA y proteínas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-82",
+      "numero_original": 82,
+      "pregunta": "Con relación a las modificaciones de histonas: 1.- Las modificaciones que dirigen la formación del tipo más frecuente de heterocromatina consisten en la metilación de la alanina 9 de la cola de la histona H3. 2.- La estructura de la cromatina no varía a lo largo de un cromosoma en interfase individual. 3.- Las modificaciones de las histonas específicas de heterocromatina permiten la formación y propagación de la heterocromatina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-83",
+      "numero_original": 83,
+      "pregunta": "Con relación a los antibióticos que inhiben la síntesis de proteínas: 1.- El Cloranfenicol bloquea la reacción de la peptidil transferasa en los ribosomas. 2.- La Estreptomicina bloquea la unión del aminoacil tRNA al sitio A del ribosoma 3.- La tetraciclina bloquea la iniciación de la transcripción.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-84",
+      "numero_original": 84,
+      "pregunta": "Con relación a las actividades o reacciones bioquímicas que pueden ser catalizadas por ribozimas: 1.- Ligadura del RNA 2.- Polimerización del RNA 3.- Corte y empalme del DNA",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-85",
+      "numero_original": 85,
+      "pregunta": "Con relación a intrones y exones: 1.- El gen beta-globina, que codifica una de las subunidades transportadoras de oxígeno hemoglobina, contiene 3 exones. 2.- El gen que codifica el factor VIII, contiene 26 exones. 3.- La mayoría de los genes humanos que codifican proteínas están divididos en múltiples exones e intrones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-86",
+      "numero_original": 86,
+      "pregunta": "Con relación a las proteínas: 1.- La aspartato transcarbamilasa de E. Coli cataliza una reacción que inicia la síntesis del anillo de purina de los nucleótidos G y A. 2.- Para ser activa, una proteína de unión al GTP requiere la presencia de moléculas de GDP estrechamente unidas. 3.- En el interior del núcleo en metafase, el nucléolo es una gran fábrica de ribosomas, RNA y maquinarias proteicas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-87",
+      "numero_original": 87,
+      "pregunta": "Con relación a la fosforilación proteica: 1.- Es la única forma de modificación covalente que puede afectar a la función de la proteína. 2.- La eliminación del grupo fosfato es catalizada por una segunda enzima, una proteína cinasa. 3.- El agregado de grupos fosfato, a la cadena lateral es catalizada por una proteína fosfatasa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-88",
+      "numero_original": 88,
+      "pregunta": "Con relación los niveles de organización de las proteínas: 1.- Estructura primaria: las hélices alpha y las hojas beta se forman dentro de ciertos segmentos de una cadena polipeptídica. 2.- Estructura secundaria: la estructura de una proteína comienza con su secuencia de aminoácidos. 3.- Un dominio proteico contiene entre 40 y 350 aminoácidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-89",
+      "numero_original": 89,
+      "pregunta": "Con relación a la reparación del DNA: 1.- Una DNA polimerasa reparadora se une al extremo 5'hidroxilo de la hebra de DNA cortada 2.- El DNA polimerasa reparadora sintetizan hebras de DNA de la misma manera. 3.- La DNA ligasa llena el hiato, permite una rotura en el esqueleto azúcar-fosfato de la hebra reparada.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-90",
+      "numero_original": 90,
+      "pregunta": "Con relación a la isozima: 1.- Es una proteína grande y estable, que puede ser aislada con facilidad. 2.- Corta las cadenas de polisacáridos que forman las paredes celulares de las bacterias. 3.- Reconoce a su sustrato mediante la formación de múltiples enlaces covalentes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-91",
+      "numero_original": 91,
+      "pregunta": "Los árabes sustentaron el proceso de salud y enfermedad en el equilibrio o desequilibrio de 6 principios: 1.- El aire puro, la moderación en el comer y en el beber. 2.- El descanso y el trabajo, la vigilia y el sueño. 3.- La evacuación de lo superfluo y las reacciones emocionales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-92",
+      "numero_original": 92,
+      "pregunta": "En relación a educación para la salud 1.- La Educación utiliza a la comunicación como instrumento o vía para desarrollar sus actividades. 2.- Son componentes de la comunicación el emisor (des-codificación), el receptor (codificación) . 3.- Son componentes de la comunicación el receptor (codificación), el emisor (des-codificación).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-93",
+      "numero_original": 93,
+      "pregunta": "Los factores más importantes que influyen en el comportamiento: 1.- El lugar de residencia y medios de transporte. 2.- Las personalidades que conforman la opinión pública. 3.- La familia y los vecinos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-94",
+      "numero_original": 94,
+      "pregunta": "Dentro de la Declaración de Alma Ata: 1.- El pueblo no debe participar en la planificación y aplicación de su atención de salud. 2.- Todos los países deben pensar solo en su salud y no en cooperar al resto. 3.- Es posible alcanzar un nivel aceptable de salud para toda la humanidad en el año 2022.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-95",
+      "numero_original": 95,
+      "pregunta": "En los Objetivos del Desarrollo Sostenible indica: 1.- Lograr la igualdad entre los géneros y empoderar a todas las mujeres y niñas. 2.- Garantizar modalidades de consumo y producción sostenibles. 3.- Revitalizar la Alianza Mundial para el Desarrollo Sostenible.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-96",
+      "numero_original": 96,
+      "pregunta": "Selección de tecnologías en Salud y Atención Primaria 1.- Los métodos y tecnologías deben ser prácticos, científicamente fundados y socialmente aceptables. 2.- Lo eficaz para lograr que la tecnología tenga una base apropiada consiste en tomar lo económico como punto de partida. 3.- La tecnología debe tener estudios científicos extremos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-97",
+      "numero_original": 97,
+      "pregunta": "¿Cuáles son los objetivos de la \"Estrategia de la OMS sobre medicina tradicional 2014-2023? 1.- Político.\n2.- Seguridad, eficacia y calidad. 3.- Acceso y uso racional.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-98",
+      "numero_original": 98,
+      "pregunta": "Bolivia cuenta con un Sistema Único de Salud, en la cual el estado debe garantizar: 1.- Acceso universal, equitativo, oportuno y con bajo costo a la atención integral en salud de la población boliviana. 2.- Acceso universal, equitativo, oportuno y gratuito a la atención integral en salud de la población boliviana. 3.- Acceso universal y equitativo para aquellas personas que no cuentan con ningún seguro de salud.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-99",
+      "numero_original": 99,
+      "pregunta": "Ley 1152 los beneficiarios son: 1.- Las bolivianas y los bolivianos que estén protegidos por el Subsector de la Seguridad Social de Corto Plazo. 2.- Las personas extranjeras que están protegidas por el Subsector de la Seguridad Social de Corto Plazo. 3.- Las personas extranjeras que se encuentren en el exterior y vengan al Estado Plurinacional de Bolivia a atender su enfermedad.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2022-2023-1-100",
+      "numero_original": 100,
+      "pregunta": "Ley 1152 financiamiento:\n1.- El Tesoro General de la Nación no financiarán los recursos humanos en salud del subsector público y el funcionamiento de los Programas Nacionales de Salud.\n2.- El financiamiento de los Productos en Salud correspondientes al Tercer y Cuarto Nivel de Atención, serán cubiertos con recursos provenientes de la gobernación.\n3.- Los Gobiernos Autónomos Municipales e indígena Originario Campesinos, garantizan el acceso a la salud de su población en el segundo y tercer nivel de atención.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original."
+    }
+  ]
+}

@@ -1,0 +1,1563 @@
+{
+  "id": "2021-2",
+  "year": "2021",
+  "type": "Segundo parcial",
+  "title": "Segundo parcial · 2021",
+  "count": 100,
+  "duration": 90,
+  "pattern": "/api/past-exam?id=2021-2&pattern=1",
+  "missingNumbers": [],
+  "excludedQuestions": [],
+  "questions": [
+    {
+      "id": "2021-2-1",
+      "numero_original": 1,
+      "pregunta": "Es cierto en relación a los receptores hormonales: 1.- La célula diana tiene 2 000 a 100 000 receptores para una hormona. 2.- La mifepristona se une a los receptores para la progesterona.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-2",
+      "numero_original": 2,
+      "pregunta": "Respecto a la anemia es cierto: 1.- El déficit de vitamina B12 puede producir megaloblastosis. 2.- El déficit de ácido fólico puede producir megaloblastosis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-3",
+      "numero_original": 3,
+      "pregunta": "Cuál de las siguientes afirmaciones es la correcta: 1.- El líquido cefalorraquídeo se forma y reabsorbe a una velocidad de 480 mL/día. 2.- Las vellosidades aracnoideas son extensiones digitiformes de la aracnoides que se proyectan dentro de los ventrículos laterales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-4",
+      "numero_original": 4,
+      "pregunta": "Es cierto con relación al oído interno: 1.- El utrículo detecta la aceleración y desaceleración lineal, producidos en dirección horizontal. 2.- El utrículo detecta la rotación de la cabeza.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-5",
+      "numero_original": 5,
+      "pregunta": "En relación a la túnica íntima de un vaso sanguíneo es cierto: 1.- La capa más interna de la túnica íntima es el endotelio que se continua con el pericardio. 2.- La membrana basal proporciona sostén físico para la capa epitelial de la túnica íntima.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-6",
+      "numero_original": 6,
+      "pregunta": "En relación a la histología del corazón es cierto: 1.- Una fibra muscular típica mide 50 a 100 mm de largo. 2.- Una fibra muscular típica mide 50 a 100 cm en longitud.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-7",
+      "numero_original": 7,
+      "pregunta": "En relación con las hormonas: 1.- Regulan la composición química y el volumen del ambiente interno. 2. Regulan todas las actividades del sistema inmunitario.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-8",
+      "numero_original": 8,
+      "pregunta": "Respecto a los trastornos de la sangre es cierto: 1.- La desmopresina es parte del tratamiento de la hemofilia. 2.- La talasemia es un tipo de anemia adquirida.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-9",
+      "numero_original": 9,
+      "pregunta": "En relación a la barrera hematoencefálica es cierto: 1.- Está formada por uniones estrechas entre las células endoteliales de capilares encefálicos, membrana basal y prolongaciones de astrocitos. 2.- Sustancias hidrosolubles como la glucosa y la mayoría de los iones, se transportan a través de la barrera con gran lentitud.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-10",
+      "numero_original": 10,
+      "pregunta": "Es cierto: 1.- El sáculo detecta los movimientos producidos en sentido horizontal. 2.- La trompa de Eustaquio ecualiza la presión de aire a ambos lados de la membrana timpánica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-11",
+      "numero_original": 11,
+      "pregunta": "En relación a la angiogénesis es cierto: 1.- Algunos péptidos son promotores y otros son inhibidores de la angiogénesis. 2.- Los factores de crecimiento angiogénico tumoral (TAF) inhiben el crecimiento de vasos sanguíneos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-12",
+      "numero_original": 12,
+      "pregunta": "En relación a la histología del corazón es cierto: 1.- Una fibra muscular típica tiene un diámetro de 50 a 100 mm. 2.- Una fibra muscular típica tiene un diámetro de 14 micras aproximadamente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-13",
+      "numero_original": 13,
+      "pregunta": "En relación al sistema nervioso: 1.- Los tipos de células diana solo son las células musculares lisas, esqueléticas y cardíacas. 2.- El sitio de acción es distante del sitio de liberación, mediante unión a receptores post sináptico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-14",
+      "numero_original": 14,
+      "pregunta": "Respecto a los trastornos de la sangre es cierto: 1.- La infección por Virus de Epstein Barr es factor de riesgo para leucemias. 2.- Las células falciformes alteran la permeabilidad de los vasos sanguíneos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-15",
+      "numero_original": 15,
+      "pregunta": "Marque la afirmación correcta: 1.- El líquido cefalorraquídeo circula por el conducto del epéndimo de la médula espinal y por el espacio epidural alrededor del encéfalo. 2.- El líquido cefalorraquídeo puede llegar al espacio subaracnoideo por 3 aberturas en el techo del tercer ventrículo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-16",
+      "numero_original": 16,
+      "pregunta": "Es cierto con relación a la enfermedad del movimiento: 1.- Los síntomas incluyen salivación excesiva, cefalea, inquietud entre otros. 2.- No existe tratamiento en la actualidad para esta enfermedad.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-17",
+      "numero_original": 17,
+      "pregunta": "Es cierto: 1.- El lado izquierdo del corazón bombea sangre hacia los pulmones. 2.- El lado derecho del corazón bombea sangre a través de 100.000 km de vasos sanguíneos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-18",
+      "numero_original": 18,
+      "pregunta": "En relación a la histología del corazón es cierto: 1.- Se unen por discos intercalares que contienen desmosomas. 2.- Se unen por discos intercalares que contienen uniones comunicantes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-19",
+      "numero_original": 19,
+      "pregunta": "En relación al sistema endocrino: 1.- El tiempo de inicio de acción es en milésimas de segundos. 2.- La duración de la acción es generalmente milisegundos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-20",
+      "numero_original": 20,
+      "pregunta": "Es cierto: 1.- Las toxinas o bacterias en la sangre causan septicemia. 2.- La trombocitopenia es una tendencia de los capilares al sangrado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-21",
+      "numero_original": 21,
+      "pregunta": "En relación al desarrollo del encéfalo es cierto: 1.- El prosencéfalo, mesencéfalo y el mielencéfalo corresponden a las vesículas encefálicas primarias. 2.- El prosencéfalo se diferencia en telencéfalo, diencéfalo y metencéfalo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-22",
+      "numero_original": 22,
+      "pregunta": "Es cierto: 1.- El glaucoma puede deberse a una presión intraocular anormalmente baja. 2.- La disminución de la cantidad de humor acuoso en la cámara anterior del ojo es una de sus causas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-23",
+      "numero_original": 23,
+      "pregunta": "En relación al aparato cardiovascular es cierto: 1.- El aparato cardiovascular contribuye a la homeostasis de otros aparatos. 2.- El aparato cardiovascular contribuye a la homeostasis de sistemas del cuerpo a través del transporte y distribución de sangre.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-24",
+      "numero_original": 24,
+      "pregunta": "En relación a la histología del corazón es cierto: 1.- Las mitocondrias ocupan el 50% del citosol miocárdico. 2.- Las mitocondrias son alrededor de un 2% en la fibra miocárdica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-25",
+      "numero_original": 25,
+      "pregunta": "Es cierto con relación al Menière: 1.- La enfermedad es resultado del aumento de la endolinfa. 2.- Puede concluir con la destrucción total del sentido de la audición.\n----------------------------------------------------------------------------------------------------------------------------------------------------------------",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-26",
+      "numero_original": 26,
+      "pregunta": "Es cierto con respecto a los tumores de la glándula suprarrenal, receptores hormonales, hormonas tiroideas: 1.- El adenoma virilizante es un tumor de la glándula suprarrenal que libera andrógenos excesivamente causando virilismo en las mujeres. 2.- Las células foliculares secretan T3 y T4 también conocidas como hormonas tiroideas. 3.- Las células parafoliculares secretan calcitonina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-27",
+      "numero_original": 27,
+      "pregunta": "Respecto a los elementos del plasma es cierto: 1.- Las globulinas gama transportan vitaminas liposolubles. 2.- La albúmina transporta el hierro. 3.- El fibrinógeno juega un papel importante en la coagulación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-28",
+      "numero_original": 28,
+      "pregunta": "Cuál de las siguientes características corresponde a los corpúsculos de Meissner: 1.- Dendritas rodeadas por una cápsula oval en tejido subcutáneo, articulaciones, periostio y algunas vísceras. 2.- Masa de dendritas rodeada por una cápsula, en las papilas dérmicas de la piel lampiña. 3.- Dendritas rodeadas por una cápsula alargada en la dermis profunda, ligamentos y tendones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-29",
+      "numero_original": 29,
+      "pregunta": "Es cierto: 1.- El olfato, gusto, vista son sentidos químicos. 2.- Las moléculas para ser detectadas por el olfato y gusto deben estar disueltas. 3.- Los impulsos para el olfato y gusto se transmiten al sistema endocrino, por lo cual ciertos olores evocan respuestas emocionales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-30",
+      "numero_original": 30,
+      "pregunta": "Con relación a las venas de la circulación sistémica es cierto: 1.- Las venas cardíacas anteriores drenan directamente en la aurícula derecha. 2.- Las venas braquiocefálicas derecha e izquierda se unen a nivel del tercer cartílago costal derecho. 3.- La vena cava inferior suele quedar comprimida durante las últimas etapas del embarazo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-31",
+      "numero_original": 31,
+      "pregunta": "En relación a la regeneración de células cardíacas es cierto: 1.- La regeneración cardíaca por fibras miocárdicas ocurre en un 95% de los casos. 2.- La regeneración cardíaca es suplantada por tejido fibroso contráctil. 3.- Por la falta de células madre y la ausencia de mitosis es que se reemplaza por tejido fibroso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-32",
+      "numero_original": 32,
+      "pregunta": "Es cierto con respecto al hiperinsulinismo, hiperhidrotismo e hirsutismo: 1.- En el hiperinsulinismo la hipoglucemia resultante estimula la secreción de glucagón, GH, epinefrina. 2.- La tormenta o crisis tiroidea es un estado severo del hipertiroidismo que puede significar pérdida de la vida. 3.- El hirsutismo es la presencia de vello corporal excesivo con patrón de distribución masculino, especialmente en mujeres.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-33",
+      "numero_original": 33,
+      "pregunta": "Respecto a la médula ósea roja es cierto: 1.- Es tejido conectivo altamente vascularizado. 2.- Se aloja en las trabéculas del hueso compacto. 3.- El 1% son células madre pluripotenciales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-34",
+      "numero_original": 34,
+      "pregunta": "Cuáles son las características del síndrome de Tourette: 1.- Se caracteriza por presentar degeneración del núcleo caudado y el putamen. 2.- Se produce una degeneración de las neuronas que liberan dopamina. 3.- Se caracteriza por movimientos corporales involuntarios y el uso de palabras inapropiadas o innecesarias.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-35",
+      "numero_original": 35,
+      "pregunta": "Es cierto: 1.- Los receptores del sentido del olfato se encuentran en la punta de la nariz. 2.- El epitelio olfatorio tiene una superficie de 5 m2. 3.- El epitelio olfatorio consiste en tres tipos de células.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-36",
+      "numero_original": 36,
+      "pregunta": "En relación a las arterias de la pelvis y extremidades inferiores es cierto: 1.- Las arterias ilíacas comunes nacen de la aorta abdominal a la altura de la tercera vértebra lumbar. 2.- Las arterias femorales constituyen la continuación de las arterias tibiales. 3.- Las arterias tibiales posteriores dan origen a las arterias peroneas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-37",
+      "numero_original": 37,
+      "pregunta": "En relación a las fibras autorítmicas del corazón es cierto: 1.- El 99% de las fibras no son autorítmicas. 2.- Las fibras autorítmicas están solo en la aurícula. 3.- Existen algunas fibras no autorítmicas que producen latido cardíaco.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-38",
+      "numero_original": 38,
+      "pregunta": "Es cierto con respecto al feocromocitoma y diabetes mellitus: 1.- El feocromocitoma causa hiposecreción de dopamina y adrenalina. 2.- La diabetes mellitus tipo 1 se controla con autocontrol de la glucosa, alimentación y otras medidas. 3.- La diabetes tipo 2 es menos común y representa el 90% de los casos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-39",
+      "numero_original": 39,
+      "pregunta": "Respecto a la formación de sangre es cierto: 1.- Los hemocitoblastos constituyen el 1% de las células de la médula ósea roja. 2.- Las células madre de la médula ósea roja dan lugar a condroblastos. 3.- La hemopoyesis en el feto ocurre en el bazo hígado y saco vitelino.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-40",
+      "numero_original": 40,
+      "pregunta": "Cuáles son las características de la afasia receptiva: 1.- Caracterizada por la comprensión defectuosa de la palabra escrita o hablada. 2.- Incapacidad para entender las palabras pronunciadas. 3.- Incapacidad para articular o formar palabras de forma adecuada.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-41",
+      "numero_original": 41,
+      "pregunta": "Es cierto: 1.- Del axón de las células receptoras olfatoria se extienden los cilios olfatorios. 2.- Los cilios olfatorios es el lugar donde se produce la traducción olfatoria. 3.- De las células receptoras olfatorias se extienden numerosos cilios móviles.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-42",
+      "numero_original": 42,
+      "pregunta": "Con respecto a las arterias viscerales pares ramas de la aorta abdominal es cierto: 1.- Las arterias suprarrenales suelen nacer a la altura de la segunda vértebra lumbar. 2.- Las arterias testiculares son mucho más cortas que las arterias ováricas. 3.- La arteria renal derecha es más larga que la izquierda.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-43",
+      "numero_original": 43,
+      "pregunta": "En relación a las funciones de las fibras autorítmicas es cierto: 1.- Actúan como marcapasos determinando el ritmo cardíaco. 2.- Forman el sistema de conducción para la inhibición de la excitación cardíaca. 3.- Forma el sistema de conducción que asegura que las cámaras cardíacas sean inervadas para su relajación voluntaria.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-44",
+      "numero_original": 44,
+      "pregunta": "Es cierto: Con respecto a las patologías tiroideas, paratiroideas y suprarrenales: 1.- La enfermedad de Graves es un trastorno autoinmune en el cual la persona produce anticuerpos que simulan la acción de la FSH. 2.- El hiperparatiroidismo frecuentemente es debido a tumor en la tiroides y causa excesiva síntesis de tejido óseo. 3.- Los niveles elevados de cortisol causan hipoglucemia, osteoporosis, debilidad, hipertensión, mayor resistencia al estrés.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-45",
+      "numero_original": 45,
+      "pregunta": "Respecto a los factores de coagulación es cierto: 1.- La tromboplastina proviene de las plaquetas inactivas. 2.- El factor IX se activa por la vía extrínseca. 3.- El factor VII se activa por la vía extrínseca.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-46",
+      "numero_original": 46,
+      "pregunta": "Cuál de las siguientes afirmaciones corresponde a la narcolepsia: 1.- Trastorno en el que una persona deja de respirar de manera reiterada mientras duerme. 2.- Cuadro en el que no se puede inhibir el sueño REM durante periodos de vigilia. 3.- Dificultad para conciliar el sueño o para permanecer dormida.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-47",
+      "numero_original": 47,
+      "pregunta": "Es cierto: 1.- En la membrana plasmática de las células receptoras olfatorias hay proteínas receptoras odoríferas. 2.- Las neuronas de primer orden de la vía olfatoria se originan en el bulbo olfatorio. 3.- Las neuronas de primer orden de la vía olfatoria son bipolares.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-48",
+      "numero_original": 48,
+      "pregunta": "En relación a las ramas de la arteria mesentérica superior es cierto: 1.- la arteria pancreatoduodenal inferior pasa en sentido lateral y a la derecha del colon. 2.- La arteria cólica derecha pasa hacia la cabeza del páncreas. 3.- La arteria cólica media se dirige hacia el colon transverso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-49",
+      "numero_original": 49,
+      "pregunta": "En relación al nodo sino auricular es cierto: 1.- Se ubica por debajo del haz de His. 2.- Se ubica en la desembocadura de la vena cava inferior. 3.- Su potencial de acción se propaga a ambas aurículas por uniones comunicantes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-50",
+      "numero_original": 50,
+      "pregunta": "Es cierto con respecto a la patología de la hipófisis y tiroides: 1.- Los síntomas comunes de la diabetes insípida es la secreción de grandes volúmenes de orina, sed y deshidratación. 2.- El tratamiento de la diabetes insípida nefrogénica implica reemplazo hormonal, usualmente durante toda la vida. 3.- El hipotiroidismo congénito causa retardo mental grave e impide el crecimiento óseo y se debe comenzar de manera tardía el tratamiento.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-51",
+      "numero_original": 51,
+      "pregunta": "El DENGUE es una enfermedad viral de carácter endémico-epidémico, transmitida por mosquitos del género Aedes es cierto: 1.- Es el virus flavivirus más importante a nivel mundial en términos de morbilidad, mortalidad y afectación económica. 2.- Es la arbovirosis más importante a nivel mundial en términos de morbilidad, mortalidad y afectación económica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-52",
+      "numero_original": 52,
+      "pregunta": "Con relación al diagnóstico de COVID-19 es cierto: 1.-Debe basarse en tres pilares, la epidemiológico, la clínica y los estudios de apoyo como laboratorios, imagenología y otros. 2.- Un diagnóstico temprano, oportuno permitirá, instaurar con prontitud las medidas de bioseguridad pertinentes para este tipo de cuadros.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-53",
+      "numero_original": 53,
+      "pregunta": "Con relación al tratamiento para COVID-19 es cierto: 1.- El tratamiento no depende de la etapa y gravedad del paciente. 2.- Al momento no se cuenta con tratamiento antiviral específico, la indicación dependerá del médico especialista sin el respectivo consentimiento informado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-54",
+      "numero_original": 54,
+      "pregunta": "En relación al dengue es cierto: 1.- La inmunidad es serotipo específica por lo que la infección con un serotipo determinado confiere inmunidad permanente contra el mismo. 2.- Cualquier serotipo puede producir formas graves de la enfermedad aunque los serotipos 2 y 3 han sido asociados a la mayor cantidad de casos graves y fallecidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-55",
+      "numero_original": 55,
+      "pregunta": "Las infecciones sintomáticas por el virus del dengue se agrupan en tres categorías: 1.- Fiebre indiferenciada, Fiebre por dengue y Fiebre hemorrágica por dengue. 2.- Los grados Grado I, Grado II corresponden al síndrome de choque por dengue.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-56",
+      "numero_original": 56,
+      "pregunta": "Con relación a las vacunas es cierto: 1.- La vacuna DT para adultos, protege de enfermedades, como Difteria, Tétanos en el adulto y Tétanos neonatal. 2.- La vacuna DT para adultos se debe administrar Vía intradérmica y no en el tejido subcutáneo o vía sub cutánea, porque podrían producirse reacciones focales severas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-57",
+      "numero_original": 57,
+      "pregunta": "Con relación a la cadena de frío es cierto: 1.- Es el Sistema que asegura el adecuado, transporte, almacenaje y manipulación de las vacunas. 2.- Busca asegurar que las vacunas sean conservadas dentro de los rangos de temperaturas establecidas para garantizar su poder antigénico, desde su fabricación hasta su llegada al refrigerador.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-58",
+      "numero_original": 58,
+      "pregunta": "En relación al Dengue es cierto: 1.- El dengue se transmite por la picadura de un mosquito infectado con el virus, que, para estarlo, debe haber picado previamente una persona infectada en periodo de pandemia. 2.- El mosquito infectado con el virus del dengue, permanecerá infectante el resto de su vida y con capacidad de infectar a individuos susceptibles.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-59",
+      "numero_original": 59,
+      "pregunta": "Con relación a los métodos de planificación familiar es cierto: 1.- La vasectomía y la ligadura u oclusión tubárica son métodos anticonceptivos definitivos. 2.- Son contraindicaciones relativas para la utilización del DIU o dispositivo intrauterino, el embarazo, sangrado uterino no filiado, anomalías de la cavidad uterina, infección genital aguda, enfermedad de Wilson y terapia anticoagulante.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-60",
+      "numero_original": 60,
+      "pregunta": "Con relación a la ITS o infección de transmisión sexual: 1.-El herpes genital es una infección producida por un virus ADN del que existen dos tipos: VHS-1 y VHS-2. 2.- La sífilis terciaria, se caracteriza por nódulos y gomas en la piel, huesos y vísceras, destructivos localmente, dejando marcadas cicatrices.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-61",
+      "numero_original": 61,
+      "pregunta": "Con relación a la Tuberculosis es cierto: 1.- La Tuberculosis pulmonar (TBP) se refiere a un solo caso bacteriológicamente confirmado, que implica solo el parénquima pulmonar. 2.- La Tuberculosis Extra pulmonar (TBE) se refiere a un solo caso bacteriológicamente confirmado que no involucra otro órgano y a los pulmones. 3.- Un paciente con Tuberculosis pulmonar y Extra pulmonar debe clasificarse como un caso de Tuberculosis Pulmonar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-62",
+      "numero_original": 62,
+      "pregunta": "Con relación al COVID -19 es cierto: 1.- La incidencia de manifestaciones cardiovasculares como el daño miocárdico aparentemente es bajo. 2.- El tiempo de incubación medio estimado es de 3 a 8 días (rango de 1.3 a 11.3). 3.- El intervalo desde el inicio de los síntomas hasta la aparición del Síndrome de Distress Respiratorio Agudo es de aproximadamente 31 días.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-63",
+      "numero_original": 63,
+      "pregunta": "Con relación al COVID -19 es cierto: 1.- En la etapa II o infección temprana los síntomas son leves, como malestar general fiebre, tos, cefalea, cefalea. 2.- La Etapa III o pulmonar se divide en dos fases IIIA y IIIB. 3.- El cuadro clínico no es variable, tiene un espectro que se extiende desde la presentación asintomática hasta la neumonía grave complicada con SDRA, choque séptico y muerte.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-64",
+      "numero_original": 64,
+      "pregunta": "Con relación a la tuberculosis es cierto: 1.-Se considera fracaso al tratamiento cuando el paciente con TB pulmonar cuya baciloscopía es positiva en el quinto mes o posterior, o el cultivo del 4º mes. 2.- Se considera pérdida en el seguimiento a aquel paciente con TB que no regresa al tratamiento, o interrumpe el tratamiento durante un mes consecutivo o más. 3.- Se considera curado al paciente con TB pulmonar con baciloscopía confirmada al inicio del tratamiento y que tiene baciloscopias negativas en los dos últimos meses de tratamiento y cultivo negativo de 4º mes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-65",
+      "numero_original": 65,
+      "pregunta": "Con relación a la tuberculosis es cierto: 1.- Es una enfermedad infecto-contagiosa, de evolución crónica, prevenible y curable que es causada por el Mycobacterium tuberculosis. 2.- Es una enfermedad infecto-contagiosa, de evolución aguda, prevenible y curable que es causada por el Mycobacterium tuberculosis. 3.- Enfermedad infecto-contagiosa, de evolución aguda - crónica, prevenible y curable que es causada por el Mycobacterium tuberculosis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-66",
+      "numero_original": 66,
+      "pregunta": "Con relación al diagnóstico COVID -19 es cierto: 1.- Instaurar con prontitud las medidas de bioseguridad pertinentes para este tipo de cuadros. 2.- Identificar enseguida a los pacientes que presentan manifestaciones moderadas o graves. 3.- Debe basarse en tres pilares la epidemiológico, la clínica y los estudios de apoyo como laboratorios, imagenología y otros.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-67",
+      "numero_original": 67,
+      "pregunta": "Con relación a la tuberculosis es cierto: 1.- A todo Sintomático Respiratorio se le debe realizar dos baciloscopías con muestras representativas de expectoración. 2.- El cultivo es el método con menor sensibilidad para el diagnóstico y seguimiento del tratamiento de tuberculosis. 3.- Se debe tratar todo paciente con sospecha de tuberculosis cuya baciloscopía seriada es negativa, no es necesario cumplir con el flujograma del Sintomático Respiratorio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-68",
+      "numero_original": 68,
+      "pregunta": "Con relación a las indicaciones de cultivo para el diagnóstico y seguimiento de tuberculosis es cierto: 1.- Sintomático Respiratorio con una baciloscopía seriada negativa, tratado con antibiótico y sin mejoría clínica. 2.- Para dar condición de egreso de curado en todo caso de TB sensible al 4º mes. 3.- Paciente con resultado de baciloscopía de 1 a 9 BAAR en una sola lámina de las dos muestras examinadas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-69",
+      "numero_original": 69,
+      "pregunta": "La forma crónica indeterminada de la enfermedad de chagas afecta en mayor proporción a: 1.- Sistema urinario. 2.- Sistema cardíaco. 3.- Sistema digestivo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-70",
+      "numero_original": 70,
+      "pregunta": "El diagnóstico de laboratorio de la enfermedad de chagas en fase aguda busca: 1.- T. cruzi. 2.- Anticuerpos. 3.- Parásitos en sangre.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-71",
+      "numero_original": 71,
+      "pregunta": "En relación a los componentes motores que promueven el desplazamiento de las partículas en los microtúbulos, es cierto: 1.- Las proteínas de la familia de las cinesinas, transportan partículas en la dirección del extremo menos hacia el extremo menos. 2.- Las proteínas de la familia de las cinesinas, transportan partículas en la dirección del extremo menos hacia el extremo más.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-72",
+      "numero_original": 72,
+      "pregunta": "Es cierto: 1.- Las vesículas cubiertas por la COP II brotan del aparato de Golgi y hacen el transporte entre los sacos golgianos, o transporte de anterógrado de las moléculas del Golgi para el retículo, el reciclaje de moléculas, como los receptores y el transporte a la membrana plasmática. 2.- La transformación de la proinsulina a insulina, que se produce en las células alfa de los islotes de Langerhans del páncreas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-73",
+      "numero_original": 73,
+      "pregunta": "En relación a la hibridación de ácidos nucleicos es cierto: 1.- Los filamentos de polinucleótidos se unen fuertemente. 2.- La homología entre el ADN de los peces y del hombre es de solo el 20%.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-74",
+      "numero_original": 74,
+      "pregunta": "En relación a la meiosis de los ovocitos es cierto: 1.- Se regula en la etapa de Zigoteno. 2.- Se regula en la etapa de Zigoteno y en la metafase I.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-75",
+      "numero_original": 75,
+      "pregunta": "Los fagosomas se fusionan con los lisosomas, es cierto que forman el: 1.- Fagolisosoma. 2.- Macrofagosoma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-76",
+      "numero_original": 76,
+      "pregunta": "En relación al núcleo interfasico es cierto: 1.- El núcleo interfasico es el que se encuentra en división y condensación. 2.- El núcleo interfasico se compone de la envoltura nuclear, la cromatina, nucléolos y nucleoplasma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-77",
+      "numero_original": 77,
+      "pregunta": "Es cierto: 1.- Los lisosomas son orgánulos con características morfológicas y dimensiones muy variables, que ocupan aproximadamente el 1% del volumen celular y están presentes en todas las células animales, excepto los glóbulos blancos. 2.- El complejo de Golgi está involucrado en el metabolismo de los lípidos, específicamente en la síntesis de glicolípidos y esfingomielina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-78",
+      "numero_original": 78,
+      "pregunta": "En relación a la hibridación in situ es cierto: 1.- Se puede hacer usando ARN radiactivo. 2.- Localiza segmentos específicos de ADN en los cromosomas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-79",
+      "numero_original": 79,
+      "pregunta": "En relación a los acontecimientos de la meiosis es cierto: 1.- Las cromátides hermanas se segregan en el Leptoteno. 2.- Después de la replicación en la profase se producen roturas en las dobles cadenas DSB.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-80",
+      "numero_original": 80,
+      "pregunta": "Es cierto que, en las neuronas y las células musculares del corazón, los cuerpos residuales se agregan, formando partículas grandes, visibles al microscopio óptico, que contienen lípidos complejos de color marrón llamados: 1.- Gránulos de melanina. 2.- Gránulos de lipofuscina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-81",
+      "numero_original": 81,
+      "pregunta": "En relación al núcleo es cierto: 1.- La mayoría de las células tiene un solo núcleo, aunque hay células con dos o más núcleos. 2.- En las células humanas no existe células con dos o más núcleos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-82",
+      "numero_original": 82,
+      "pregunta": "Es cierto: 1.- Hay cuatro tipos diferentes de adaptadores de clatrina que ya fueron caracterizados, llamadas AP1, AP2, AP3 y AP4, cada una de las cuales reconoce y se une específicamente a un receptor particular. 2.- Los lisosomas contienen alrededor de 40 tipos de enzimas hidrolíticas capaces de digerir casi todas las macromoléculas biológicas tales como proteínas, lípidos, ácidos nucleicos y oligosacáridos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-83",
+      "numero_original": 83,
+      "pregunta": "En relación a la tecnología del ADN recombinante es cierto: 1.- Los genes extraños pueden duplicarse. 2.- Los genes extraños pueden ser traducidos en el nuevo ambiente celular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-84",
+      "numero_original": 84,
+      "pregunta": "Es cierto: 1.- Las células de la línea germinal se multiplican por divisiones mitóticas. 2.- La profase meiótica de la primera división ocurre el apareamiento de los cromosomas homólogos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-85",
+      "numero_original": 85,
+      "pregunta": "Es cierto: 1.- La filamina une los filamentos de actina entre sí. 2.- La fibrina forma haces de actina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-86",
+      "numero_original": 86,
+      "pregunta": "En relación a los gránulos de lipofuscina es cierto: 1.- Son de color marrón. 2.- Aumentan en número con la edad. 3.- Aún pueden ser necesarios para la degradación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-87",
+      "numero_original": 87,
+      "pregunta": "Las células musculares lisas, dependiendo de los receptores que contienen, se pueden contraer por la acción de: 1.- La Angiotensina. 2.- La serotonina. 3.- La oxitocina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-88",
+      "numero_original": 88,
+      "pregunta": "En relación con la lámina nuclear en los vertebrados hay tres genes que codifican siete tipos de laminas es cierto: 1.- Tres de tipo A (A, AΔ10 y AΔ10). 2.- Dos de tipo B (B1, B2). 3.- Dos de tipo C (C1, C2).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-89",
+      "numero_original": 89,
+      "pregunta": "Como se denominan las regiones basófilas del citoplasma (retículo endoplasmático) manifiestas al microscopio óptico. 1.- Sarcoplasma. 2.- Ergastoplasma. 3.- Retículo/plasma",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-90",
+      "numero_original": 90,
+      "pregunta": "En relación a la tecnología del ADN recombinante es cierto: 1.- Se realiza la hibridación molecular. 2.- proporciona ventajas como la localización de los genes específicos en el genoma. 3.- Permite la caracterización de genes específicos insertados en vectores.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-91",
+      "numero_original": 91,
+      "pregunta": "El ciclo sexual sirve para: 1.- Mantener la vida en organismos multicelulares. 2.- Generar la vida en los gametos. 3.- La replicación del ADN y formar células haploides.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-92",
+      "numero_original": 92,
+      "pregunta": "En relación a la enfermedad de Pompe es cierto: 1.- Cuya aparición se produce tardío en la vida. 2.- Se produce en todas las células, especialmente las hepáticas y las musculares. 3.- Son células grandes por la acumulación de oligosacáridos y deficiencia de enzimas glucosiltransferasas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-93",
+      "numero_original": 93,
+      "pregunta": "En relación las mutaciones en los genes que codifican proteínas presentes o asociadas con la envoltura nuclear causan una serie de enfermedades genéticas es cierto: 1.- Se denominan enfermedades de la envoltura laminar. 2.- Podemos citar las laminopatías, que son causadas por mutaciones en el gen que codifica a la lamina A. 3.- Muchos de estos síndromes se describen en la literatura. La distrofia muscular de Duchenne es una de ellas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-94",
+      "numero_original": 94,
+      "pregunta": "Todas las células eucariotas contienen retículo endoplásmico (RE), que consiste en una red de membranas que delimitan cavidades, que pueden ser también llamadas: 1.- Lumen. 2.- Luz. 3.- Cisternas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-95",
+      "numero_original": 95,
+      "pregunta": "En relación a la clonación de un gen en una bacteria es cierto: 1.- La molécula del ADN sirve como molde. 2.- La cadena doble de ADN es insertada en un plásmido. 3.- El plásmido híbrido resultante se elimina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-96",
+      "numero_original": 96,
+      "pregunta": "En el caso de células eucariotas, el proceso básico de la génesis de nuevas células sigue un patrón cíclico que comienza con: 1.- La Multiplicación del número de sus orgánulos celulares. 2.- El Crecimiento Celular. 3.- La actividad metabólica del tejido.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-97",
+      "numero_original": 97,
+      "pregunta": "En relación a la enfermedad de Pompe es cierto: 1.- En esta enfermedad los lisosomas son deficientes en la enzima glucosidasa. 2.- La acumulación de glucógeno es más pronunciada en el hígado y renales, debido a que en estos tejidos hay normalmente mayor cantidad del glucógeno. 3.- Los lisosomas se forman partículas pequeñas visibles al microscopio óptico, que contienen lípidos de color marrón.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-98",
+      "numero_original": 98,
+      "pregunta": "En relación a la lámina nuclear que da forma y estabilidad a la envoltura nuclear es cierto: 1.- La lámina nuclear es responsable de la unión de las fibras de cromatina a la envoltura. 2.- Se ha observado que las alteraciones en las laminas no afectan funciones nucleares. 3.- Las funciones adicionales que no se afectan son los que participan en los procesos de replicación y transcripción del ADN.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-99",
+      "numero_original": 99,
+      "pregunta": "La composición química de los componentes del retículo endoplásmico se puede determinar por: 1.- Métodos citoquímicos. 2.- Métodos in situ. 3.- Fracciones celulares aisladas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2-100",
+      "numero_original": 100,
+      "pregunta": "En relación a los animales transgénicos son generalmente producidos por: 1.- La inserción de genes que se insertan en las larvas que disminuyen su valor nutritivo. 2.- Un tipo de ADN polimerasa donde pueden copiar millones de moléculas idénticas. 3.- La inyección de ADN clonado en el pronúcleo del huevo fertilizado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original."
+    }
+  ]
+}

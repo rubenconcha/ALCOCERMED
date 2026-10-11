@@ -76,7 +76,9 @@
             clearInterval(simState.timerInterval);
             simState.timerInterval = null;
         }
-        simState.finalized = false;
+        simState.finalized = false; simState.mode = 'oficial'; simState.pastExamId = null;
+        document.getElementById('sim-another-exam').textContent = 'Nuevo simulacro';
+        document.getElementById('past-result-tools').hidden = true;
         showSimScreen('sim-config');
         showScreen('simulacro-screen');
         selectEntranceExam('full');
@@ -127,6 +129,7 @@
         const root = document.getElementById('sim-subject-breakdown');
         if (!root) return;
         root.replaceChildren();
+        if (simState.mode === 'pasado') return;
         subjects.forEach((subject, index) => {
             const entries = simState.preguntas.map((row, questionIndex) => ({ row, questionIndex }))
                 .filter(entry => normalized(campo(entry.row, 'materia')) === subject);

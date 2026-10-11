@@ -1,0 +1,189 @@
+{
+  "source": "documento_prepa_ben_carson_editado.docx",
+  "sourceSha256": "01a6b07092cf6fe6b7102ae23a98ed489f203215ce5a96a62282a0faa9674e6e",
+  "exams": [
+    {
+      "id": "2021-1",
+      "year": "2021",
+      "type": "Primer parcial",
+      "title": "Primer parcial · 2021",
+      "count": 100,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2021-1&pattern=1",
+      "missingNumbers": [],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2021-2",
+      "year": "2021",
+      "type": "Segundo parcial",
+      "title": "Segundo parcial · 2021",
+      "count": 100,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2021-2&pattern=1",
+      "missingNumbers": [],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2021-2022-3",
+      "year": "2021–2022",
+      "type": "Examen final",
+      "title": "Examen final · 2021–2022",
+      "count": 100,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2021-2022-3&pattern=1",
+      "missingNumbers": [],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2022-2023-1",
+      "year": "2022–2023",
+      "type": "Primer parcial",
+      "title": "Primer parcial · 2022–2023",
+      "count": 100,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2022-2023-1&pattern=1",
+      "missingNumbers": [],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2022-2023-2",
+      "year": "2022–2023",
+      "type": "Segundo parcial",
+      "title": "Segundo parcial · 2022–2023",
+      "count": 97,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2022-2023-2&pattern=1",
+      "missingNumbers": [
+        47,
+        48,
+        49
+      ],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2022-2023-3",
+      "year": "2022–2023",
+      "type": "Examen final",
+      "title": "Examen final · 2022–2023",
+      "count": 100,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2022-2023-3&pattern=1",
+      "missingNumbers": [],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2023-2024-1",
+      "year": "2023–2024",
+      "type": "Primer parcial",
+      "title": "Primer parcial · 2023–2024",
+      "count": 97,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2023-2024-1&pattern=1",
+      "missingNumbers": [
+        24,
+        55,
+        65
+      ],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2023-2024-2",
+      "year": "2023–2024",
+      "type": "Segundo parcial",
+      "title": "Segundo parcial · 2023–2024",
+      "count": 100,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2023-2024-2&pattern=1",
+      "missingNumbers": [],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2023-2024-3",
+      "year": "2023–2024",
+      "type": "Examen final",
+      "title": "Examen final · 2023–2024",
+      "count": 100,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2023-2024-3&pattern=1",
+      "missingNumbers": [],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2024-2025-1",
+      "year": "2024–2025",
+      "type": "Primer parcial",
+      "title": "Primer parcial · 2024–2025",
+      "count": 99,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2024-2025-1&pattern=1",
+      "missingNumbers": [
+        53
+      ],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2024-2025-2",
+      "year": "2024–2025",
+      "type": "Segundo parcial",
+      "title": "Segundo parcial · 2024–2025",
+      "count": 100,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2024-2025-2&pattern=1",
+      "missingNumbers": [],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2024-2025-3",
+      "year": "2024–2025",
+      "type": "Examen final",
+      "title": "Examen final · 2024–2025",
+      "count": 100,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2024-2025-3&pattern=1",
+      "missingNumbers": [],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2025-2026-1",
+      "year": "2025–2026",
+      "type": "Primer parcial",
+      "title": "Primer parcial · 2025–2026",
+      "count": 100,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2025-2026-1&pattern=1",
+      "missingNumbers": [],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2025-2026-2",
+      "year": "2025–2026",
+      "type": "Segundo parcial",
+      "title": "Segundo parcial · 2025–2026",
+      "count": 100,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2025-2026-2&pattern=1",
+      "missingNumbers": [],
+      "excludedQuestions": []
+    },
+    {
+      "id": "2025-2026-3",
+      "year": "2025–2026",
+      "type": "Examen final",
+      "title": "Examen final · 2025–2026",
+      "count": 98,
+      "duration": 90,
+      "pattern": "/api/past-exam?id=2025-2026-3&pattern=1",
+      "missingNumbers": [
+        67
+      ],
+      "excludedQuestions": [
+        {
+          "numero_original": 66,
+          "pregunta": "Son causas de destrucción de nefronas:\n2.- Glándulas bulbouretrales\n3.- Vesícula seminal.",
+          "reason": "Enunciado incompleto: falta la afirmación 1 y las afirmaciones 2 y 3 no corresponden al tema indicado."
+        }
+      ]
+    }
+  ]
+}

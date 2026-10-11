@@ -2,12 +2,20 @@
   "functions": {
     "api/resumen.js": {
       "includeFiles": "api/_pdf/**"
+    },
+    "api/past-exam.js": {
+      "includeFiles": "api/_past_exams/**"
     }
   },
   "headers": [
     {
       "source": "/resumenes/(.*).pdf",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
     },
     {
       "source": "/juegos/assets/(.*)",
@@ -74,6 +82,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/_past_exams/:path*",
+      "destination": "/api/past-exam?id=invalid"
+    },
     {
       "source": "/",
       "destination": "/ventas.html"

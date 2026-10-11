@@ -1,0 +1,1563 @@
+{
+  "id": "2021-2022-3",
+  "year": "2021–2022",
+  "type": "Examen final",
+  "title": "Examen final · 2021–2022",
+  "count": 100,
+  "duration": 90,
+  "pattern": "/api/past-exam?id=2021-2022-3&pattern=1",
+  "missingNumbers": [],
+  "excludedQuestions": [],
+  "questions": [
+    {
+      "id": "2021-2022-3-1",
+      "numero_original": 1,
+      "pregunta": "Función del sistema linfático: 1.- Drenar el exceso de líquido intersticial. 2.- Transportar carbohidratos por el líquido intersticial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-2",
+      "numero_original": 2,
+      "pregunta": "En relación a la filtración glomerular: 1.- La membrana de filtración está formada en conjunto por los capilares glomerulares y los podocitos. 2.- La membrana de filtración permite la filtración de agua y de pequeños solutos e impide la de la mayoría de las proteínas plasmáticas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-3",
+      "numero_original": 3,
+      "pregunta": "Anatomía del estómago: 1.- El píloro se conecta con el duodeno por vía del esfínter pilórico. 2.- La curvatura menor se relaciona con el omento mayor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-4",
+      "numero_original": 4,
+      "pregunta": "Es función del aparato respiratorio: 1.- Ayuda a regular el pH de la sangre. 2.- Producción de energía.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-5",
+      "numero_original": 5,
+      "pregunta": "Con relación a la formación de los gametos masculinos: 1.- La espermiogénesis es la transformación de espermátides haploides en espermatozoides. 2.- Los espermatozoides secundarios tienen un número diploide de cromosomas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-6",
+      "numero_original": 6,
+      "pregunta": "El Timo: 1.- Presenta corteza que tiene los corpúsculos de Hassall al igual que la médula. 2.- Los macrófagos del timo ayudan a eliminar los restos de células muertas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-7",
+      "numero_original": 7,
+      "pregunta": "En relación a los uréteres: 1.- Cada uréter transporta orina desde la vejiga hacia el exterior del organismo. 2.- Miden 25 a 30 centímetros de longitud.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-8",
+      "numero_original": 8,
+      "pregunta": "Funciones del estómago: 1.- Secreción de jugo gástrico, que contiene HCl, pepsina, factor intrínseco, lipasa gástrica. 2.- Formación del quimo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-9",
+      "numero_original": 9,
+      "pregunta": "Son las principales estructuras productoras de la voz: 1.- Pliegues vestibulares. 2.- Pliegues vocales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-10",
+      "numero_original": 10,
+      "pregunta": "Con relación a los testículos: 1.- En los espacios entre los túbulos seminíferos adyacentes se encuentran las células sustentaculares. 2.- Las células de Leydig segregan testosterona que es el andrógeno más prevalente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-11",
+      "numero_original": 11,
+      "pregunta": "Ganglios linfáticos: 1.- Un folículo linfático es un sitio de formación de linfocitos T en la corteza del ganglio linfático. 2.- En un folículo linfático secundario encontramos al centro germinal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-12",
+      "numero_original": 12,
+      "pregunta": "Con relación a la nefrona: 1.- El corpúsculo renal está formado por el glomérulo y la cápsula de Bowman. 2.- El túbulo renal consta de: túbulo contorneado proximal, asa de Henle, túbulo contorneado distal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-13",
+      "numero_original": 13,
+      "pregunta": "Anatomía del páncreas: 1.- El pasaje del jugo pancreático y la bilis hacia el duodeno está regulado por el esfínter de Oddi. 2.- El conducto de Santorini se vacía en el duodeno en la ampolla de Vater.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-14",
+      "numero_original": 14,
+      "pregunta": "Con relación a los alveolos: 1.- Las células alveolares tipo I forman el revestimiento de su pared. 2.- Las células alveolares tipo II secretan líquido alveolar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-15",
+      "numero_original": 15,
+      "pregunta": "1.- El cuerpo lúteo segrega estrógenos, progesterona, relaxina e inhibina. 2.- Un folículo de De Graaf está lleno de líquido que está listo para romperse y expulsar su ovocito primario.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-16",
+      "numero_original": 16,
+      "pregunta": "El Bazo: 1.- Se encuentra en el hipocondrio derecho entre el hígado y el estómago por debajo del diafragma. 2.- Tiene tres impresiones: hepática, renal y gástrica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-17",
+      "numero_original": 17,
+      "pregunta": "Es función de la hormona antidiurética para la regulación de la función renal: 1.- Durante la deshidratación del cuerpo la concentración de ADH disminuye. 2.- Aumenta la permeabilidad al agua de la última porción del túbulo contorneado distal y todo el túbulo colector.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-18",
+      "numero_original": 18,
+      "pregunta": "En el hígado: 1.- Los ligamentos coronarios son extensiones del peritoneo visceral que suspenden el hígado desde el diafragma. 2.- Los hepatocitos son las principales células funcionales del hígado conforman alrededor de 80% del volumen del hígado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-19",
+      "numero_original": 19,
+      "pregunta": "Con relación al ovario: 1.- La corteza consiste en folículos ováricos rodeados de tejido conectivo irregular denso. 2.- El mesotelio del ovario es una capa de epitelio estratificado queratinizado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-20",
+      "numero_original": 20,
+      "pregunta": "En el adulto promedio en reposo: 1.- La ventilación por minuto es de unos 6000 mL/min. 2.- El número de respiraciones por minuto es de 12.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-21",
+      "numero_original": 21,
+      "pregunta": "Con relación al esófago: 1.- El músculo de su tercio superior es esquelético. 2.- El músculo de su tercio inferior es liso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-22",
+      "numero_original": 22,
+      "pregunta": "Con relación a la estructura del hueso: 1.- El periostio reviste la cavidad medular. 2.- La diáfisis son el extremo proximal y distal del hueso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-23",
+      "numero_original": 23,
+      "pregunta": "Son funciones del sistema nervioso: 1.- El estado de alerta e inmunitario. 2.- Función sensitiva, integradora y motora.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-24",
+      "numero_original": 24,
+      "pregunta": "El corazón: 1.- Su tamaño es similar al de un puño cerrado. 2.- Pesa 500 gramos en el varón.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-25",
+      "numero_original": 25,
+      "pregunta": "Las articulaciones condíleas: 1.- Un cóndilo ovalado de un hueso encaja en una cavidad elíptica de otro. 2.- Consiste en una superficie redonda que encaja dentro de una depresión en forma de copa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-26",
+      "numero_original": 26,
+      "pregunta": "En las células vegetales y en las células fúngicas, las funciones de los lisosomas son realizados por: 1.- Cloroplastos. 2.- Vacuolas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-27",
+      "numero_original": 27,
+      "pregunta": "En qué fase de la mitosis se caracteriza por la condensación progresiva de las fibras de cromatina: 1.- Profase. 2.- Telofase.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-28",
+      "numero_original": 28,
+      "pregunta": "Los fagosomas que se fusionan con los lisosomas, forman el: 1.- Fagolisosoma. 2.- Autofagosoma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-29",
+      "numero_original": 29,
+      "pregunta": "Los proteosomas que han cumplido su tiempo de actividad son degradados por: 1.- Necrosis. 2.- Autofagia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-30",
+      "numero_original": 30,
+      "pregunta": "La energía del flujo retrógrado de protones mitocondriales, a través de los corpúsculos elementales, se utiliza para convertir: 1.- El oxígeno en agua. 2.- El ADP en ATP.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-31",
+      "numero_original": 31,
+      "pregunta": "La mayor parte de la catalasa celular, una enzima que se localiza en los: 1.- Lisosomas. 2.- Proteosomas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-32",
+      "numero_original": 32,
+      "pregunta": "1.- Los microtúbulos participan en el movimiento de: 1.- Cilios. 2.- Microvellosidades.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-33",
+      "numero_original": 33,
+      "pregunta": "La diferenciación se comprenderá mejor considerando que cada célula está dotada con dos características: 1.- La diferenciación. 2.- La potencialidad.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-34",
+      "numero_original": 34,
+      "pregunta": "Se ha demostrado recientemente que una buena alternativa para el aislamiento de células madre adultas es el tejido: 1.- Muscular. 2.- Adiposo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-35",
+      "numero_original": 35,
+      "pregunta": "La molécula de alta actinina une: 1.- Los filamentos de actina entre sí. 2.- Los filamentos de actina con la fibronectina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-36",
+      "numero_original": 36,
+      "pregunta": "Las fibras elásticas son abundantes en estructuras tales como: 1.- La piel. 2.- Pulmones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-37",
+      "numero_original": 37,
+      "pregunta": "1.- Los micoplasmas son las bacterias más simples. 2.- Las cianobacterias son fotosintéticas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-38",
+      "numero_original": 38,
+      "pregunta": "Un plásmido capaz de integrar el cromosoma de la bacteria se llama: 1.- Episoma. 2.- Nucleoide.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-39",
+      "numero_original": 39,
+      "pregunta": "Con relación a la división bacteriana: 1.- Las bacterias se dividen por fisión, no por mitosis. 2.- En condiciones ideales de cultivo, puede ocurrir una división celular cada 20 minutos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-40",
+      "numero_original": 40,
+      "pregunta": "Son características de la replicación del ADN: 1.- Es semidiscontinua. 2.- Es bidireccional.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-41",
+      "numero_original": 41,
+      "pregunta": "Respecto a la salud comunitaria: 1.- Va de la mano de la intervención comunitaria y desde la comunidad. 2.- Donde la comunidad se abstiene de participación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-42",
+      "numero_original": 42,
+      "pregunta": "Respecto a la ética: \"Primero no hacer daño\" corresponde a: 1.- Principio de Autonomía. 2.- Principio de Justicia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-43",
+      "numero_original": 43,
+      "pregunta": "Respecto al Dengue: 1.- Es una enfermedad endémico-epidémico. 2.- Es una enfermedad pandémico-epidémico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-44",
+      "numero_original": 44,
+      "pregunta": "Con respecto a verruga genital: 1.- Agente causal es el Virus del Papiloma Humano. 2.- El usuario manifiesta hinchazón y/o dolor en el escroto.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-45",
+      "numero_original": 45,
+      "pregunta": "La capacidad que los hombres poseen en determinado momento para obtener cierta productividad se denomina: 1.- Poder. 2.- Relaciones sociales y producción.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-46",
+      "numero_original": 46,
+      "pregunta": "Las desventajas del condón masculino son: 1.- Su uso implica riesgos para la salud. 2.- Los varones comparten responsabilidad con sus parejas en la planificación familiar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-47",
+      "numero_original": 47,
+      "pregunta": "Sobre diagnóstico Dengue: 1.- Confirmación solo mediante nexo epidemiológico. 2.- El hemograma completo para apoyo y seguimiento de la enfermedad.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-48",
+      "numero_original": 48,
+      "pregunta": "Con respecto a la Chlamydia trachomatis: 1.- Produce infecciones oculares como el tracoma. 2.- Produce infecciones genitales, Uretritis no gonocócica y Linfogranuloma Venéreo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-49",
+      "numero_original": 49,
+      "pregunta": "Respecto a la lactancia materna: 1.- Es un método hormonal. 2.- Requiere de la estimulación del recién nacido mínimo de 3 horas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-50",
+      "numero_original": 50,
+      "pregunta": "Con respecto a la Gonorrea: 1.- La gonorrea es una enfermedad infecciosa poco frecuente. 2.- Son Cocos gramnegativos comensibles de 2 µm de tamaño que infecta la mucosa de la uretra, del cuello uterino, del recto y de la garganta.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-51",
+      "numero_original": 51,
+      "pregunta": "Es función de la sangre: 1.- Transporte de nutrientes y hormonas. 2.- Protección contra enfermedades a través de la fagocitosis. 3.- Regula el contenido de agua de la célula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-52",
+      "numero_original": 52,
+      "pregunta": "Inmunidad innata: 1.- La piel y membranas mucosas del cuerpo constituyen la segunda barrera ante las infecciones. 2.- La epidermis gracias a sus células queratinizadas proporciona una excelente barrera física contra el ingreso de microbios. 3.- Los pelos de la nariz están desprovistos de moco por lo que no pueden atrapar ni filtrar microbios.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-53",
+      "numero_original": 53,
+      "pregunta": "En relación al aparato urinario: 1.- Está formado por dos riñones. 2.- Está formado por dos uretras. 3.- Está formado por una vejiga y un uréter.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-54",
+      "numero_original": 54,
+      "pregunta": "El intestino delgado: 1.- El duodeno tiene una longitud de 25 cm y es retroperitoneal. 2.- El intestino delgado absorbe alrededor del 50% de los nutrientes. 3.- Las criptas de Lieberkühn contienen las células de Paneth.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-55",
+      "numero_original": 55,
+      "pregunta": "Corresponde a la ventilación pulmonar: 1.- Es el intercambio de CO2 y O2 entre los capilares y las células de los tejidos. 2.- Implica el intercambio de aire entre atmósfera y los alveolos pulmonares. 3.- Intercambio de oxígeno entre la atmósfera y los capilares sistémicos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-56",
+      "numero_original": 56,
+      "pregunta": "Con relación al tejido epitelial: 1.- Puede ser de revestimiento. 2.- Se clasifica según la disposición de sus células en capas. 3.- No presentan vascularización.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-57",
+      "numero_original": 57,
+      "pregunta": "Con relación a los conductos del aparato reproductor masculino: 1.- El epidídimo es el sitio de maduración de los espermatozoides. 2.- El epidídimo mide 45 cm de longitud. 3.- Los conductos eferentes de los testículos se originan en la cola del epidídimo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-58",
+      "numero_original": 58,
+      "pregunta": "Con relación a la inmunidad: 1.- La fiebre forma parte de la segunda línea de defensa. 2.- Los interferones, proteínas de unión al hierro son sustancias antimicrobianas. 3.- El sistema de complemento está formado por grupos de proteínas normalmente inactivas en el plasma sanguíneo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-59",
+      "numero_original": 59,
+      "pregunta": "Las funciones de los riñones: 1.- Regulación de la composición iónica de la sangre. 2.- Los riñones ayudan a mantener la temperatura corporal. 3.- Los riñones ajustan el volumen sanguíneo, una disminución del volumen sanguíneo causa hipertensión arterial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-60",
+      "numero_original": 60,
+      "pregunta": "El intestino delgado: 1.- Cada día se secretan 1 a 2 litros de jugo intestinal. 2.- Presenta pliegues circulares, vellosidades y microvellosidades. 3.- El jugo intestinal es ligeramente alcalino y contiene moco y agua.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-61",
+      "numero_original": 61,
+      "pregunta": "Con relación a la epiglotis: 1.- Está constituido por cartílago hialino. 2.- Durante la deglución la epiglotis desciende y cubre la glotis. 3.- La parte superior del cartílago es móvil, se mueve de lado a lado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-62",
+      "numero_original": 62,
+      "pregunta": "El nervio facial (VII): 1.- Da inervación a los músculos del cuello. 2.- Inerva los músculos de la espalda. 3.- Inerva los músculos del globo ocular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-63",
+      "numero_original": 63,
+      "pregunta": "Con relación al semen: 1.- El volumen en una eyaculación típica es de 2,5 a 5 mililitros. 2.- Cada mililitro de semen normalmente tiene 10 millones de espermatozoides. 3.- El semen es ácido por la presencia del líquido prostático.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-64",
+      "numero_original": 64,
+      "pregunta": "Con relación a la inflamación: 1.- Los síntomas más conocidos de la inflamación son el calor, el dolor y la equimosis. 2.- El calor y la equimosis se deben al exceso de histaminas en la región. 3.- El dolor es el principal signo de la inflamación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-65",
+      "numero_original": 65,
+      "pregunta": "En relación a la nefrona: 1.- Cada corpúsculo renal es un ovillo de venas arciformes. 2.- El túbulo renal es el encargado de la filtración del plasma sanguíneo. 3.- Las nefronas son las unidades funcionales de los riñones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-66",
+      "numero_original": 66,
+      "pregunta": "Con relación a la digestión química en el intestino delgado: 1.- La digestión de proteínas se logra gracias a las fosfatasas y nucleosidasas. 2.- Entre las enzimas del borde en cepillo se encuentran la maltasa, sacarasa y lactasa. 3.- La enzima que degrada los triglicéridos y fosfolípidos es la amilasa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-67",
+      "numero_original": 67,
+      "pregunta": "Con relación a la laringe: 1.- La orofaringe se encuentra posterior a la cavidad nasal. 2.- La laringofaringe comienza a nivel del cartílago tiroides, y termina a nivel del hueso hioides. 3.- En la pared posterior de la nasofaringe encontramos la amígdala faríngea.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-68",
+      "numero_original": 68,
+      "pregunta": "Son huesos del esqueleto axial: 1.- Hueso sacro. 2.- Fémur. 3.- Hueso coxal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-69",
+      "numero_original": 69,
+      "pregunta": "Con relación a la trompa uterina: 1.- El istmo es la porción medial, corta y angosta. 2.- El infundíbulo termina en un conjunto de proyecciones digitiformes llamadas fimbrias. 3.- Mide alrededor de 10 centímetros de largo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-70",
+      "numero_original": 70,
+      "pregunta": "La IgA: 1.- No está presente en las lágrimas ni en la transpiración. 2.- Representa el 10 a 15% de los anticuerpos en la sangre. 3.- Está presente en grandes cantidades en sangre y linfa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-71",
+      "numero_original": 71,
+      "pregunta": "Con relación al asa de Henle: 1.- El asa de Henle conecta los túbulos contorneados proximal y distal. 2.- Su porción descendente se origina en la corteza renal. 3.- Presenta un segmento llamado rama ascendente del asa de Henle.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-72",
+      "numero_original": 72,
+      "pregunta": "Anatomía del intestino grueso: 1.- El intestino grueso está fijado a la pared abdominal anterior por el mesocolon. 2.- El colon ascendente y descendente son retroperitoneales. 3.- El ano mide 15 cm de longitud.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-73",
+      "numero_original": 73,
+      "pregunta": "Son características de la membrana respiratoria: 1.- La constituyen tres capas. 2.- Es delgada, mide 5 mm de espesor. 3.- Permite el intercambio de CO2 y O2.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-74",
+      "numero_original": 74,
+      "pregunta": "Con relación al útero: 1.- Mide 7,5 cm de longitud, ancho de 5 cm en mujeres que tuvieron varios embarazos. 2.- Presenta una posición denominada anteflexión. 3.- El cuerpo tiene forma de cúpula superior a las trompas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-75",
+      "numero_original": 75,
+      "pregunta": "Funciones del aparato digestivo: 1.- Regulación del Ph. 2.- Defensa del cuerpo al ejecutar reacciones inmunitarias. 3.- Pasaje de productos digeridos desde el tracto gastrointestinal a la sangre y linfa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-76",
+      "numero_original": 76,
+      "pregunta": "Son características de los glucosaminoglicanos: 1.- Son polímeros lineales de disacáridos. 2.- Son moléculas con carga negativa alta. 3.- Atrae cationes (Na+).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-77",
+      "numero_original": 77,
+      "pregunta": "Son características del colágeno: 1.- Constituye el 25% de la proteína total del cuerpo. 2.- Cada polipéptido tiene aproximadamente 1000 aminoácidos. 3.- El colágeno tipo II es característico del cartílago.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-78",
+      "numero_original": 78,
+      "pregunta": "En las bacterias, hay pequeños cromosomas, que se encuentran fuera del nucleoide, también transmiten información genética y se llaman: 1.- Episoma. 2.- Bacteriófago. 3.- Plásmidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-79",
+      "numero_original": 79,
+      "pregunta": "Son características de la cápsula bacteriana: 1.- Se encuentran en Gram positivas. 2.- Se encuentran en Gram negativas. 3.- Tiene una consistencia mucosa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-80",
+      "numero_original": 80,
+      "pregunta": "La muerte celular programada puede ser iniciado por la apertura de canales no específicos localizados en la membrana mitocondrial interna, con el paso al citosol de las moléculas que inician la apoptosis, tales como el: 1.- Colesterol. 2.- Cardiolipina. 3.- Citocromo c.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-81",
+      "numero_original": 81,
+      "pregunta": "El cofactor esencial para la síntesis de colágeno es: 1.- La vitamina A. 2.- Vitamina C. 3.- Vitamina D.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-82",
+      "numero_original": 82,
+      "pregunta": "Con relación al colágeno tipo IV: 1.- Se distribuye en las láminas basales. 2.- Las células productoras son los fibroblastos. 3.- Su función es resistir la tensión.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-83",
+      "numero_original": 83,
+      "pregunta": "Con relación al flagelo bacteriano: 1.- Es un polímero de la proteína flagelina. 2.- Son extensiones igual que los estereocilios. 3.- Son más numerosos que las fimbrias.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-84",
+      "numero_original": 84,
+      "pregunta": "La transferencia de información genética entre bacterias es posible por mecanismos como: 1.- La transformación. 2.- La conjugación. 3.- La transducción.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-85",
+      "numero_original": 85,
+      "pregunta": "Con relación al ciclo de división celular: 1.- El ciclo de vida de la célula se divide en dos fases principales: la mitosis y la interfase. 2.- En la interfase ocurre la división de la célula. 3.- La división del citoplasma que da lugar a dos hijas, es la mitosis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-86",
+      "numero_original": 86,
+      "pregunta": "1.- Las células madre embrionaria iniciales son generalmente totipotentes. 2.- Las células madre embrionarias tienen la capacidad de transformarse en varios tipos de células especializadas. 3.- Durante la diferenciación celular hay activación de ciertos genes e inactivación de otros genes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-87",
+      "numero_original": 87,
+      "pregunta": "Con relación a las glándulas mamarias: 1.- Durante el embarazo dejan de diferenciarse. 2.- Su diferenciación completa antes del embarazo. 3.- Las glándulas mamarias son un ejemplo de diferenciación, porque se estancan en la etapa temprana de la diferenciación de las glándulas exocrinas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-88",
+      "numero_original": 88,
+      "pregunta": "Con relación a las células que participan en la defensa y en la respuesta inmune son: 1.- Epiteliales. 2.- Eritrocitos. 3.- Linfocitos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-89",
+      "numero_original": 89,
+      "pregunta": "En cuanto a los marcadores responsables de los grupos sanguíneos son: 1.- Glucosamina fosfato. 2.- Espectrina. 3.- Glucoproteínas y glicolípidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-90",
+      "numero_original": 90,
+      "pregunta": "Con relación a los desmosomas: 1.- Son comunes en las células del revestimiento de la lengua. 2.- Sólo es capaz de fijar las células cuando la concentración de Ca2+ en el espacio extracelular es normal. 3.- Son muy comunes en las células sometidas a tracciones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-91",
+      "numero_original": 91,
+      "pregunta": "Respecto a la planificación Familiar: 1.- Es la decisión libre, obligatoria para elegir cuándo, cuántos y cada cuánto tiempo van a tener hijos. 2.- Es la decisión libre, voluntaria e informada para elegir cuándo, cuántos y cada cuánto tiempo van a tener hijos. 3.- Es la decisión bajo presión para tener hijos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-92",
+      "numero_original": 92,
+      "pregunta": "Son recomendaciones para cumplir la salud comunitaria: 1.- papel emergente de la tecnología. 2.- cubrir el curso de la vida. 3.- ir más allá de abordar espacios tradicionales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-93",
+      "numero_original": 93,
+      "pregunta": "La ética es la ciencia que regula: 1.- El comportamiento humano. 2.- El comportamiento de la religión. 3.- El comportamiento tecnológico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-94",
+      "numero_original": 94,
+      "pregunta": "La Salud Familiar Comunitaria Intercultural consta de los siguientes principios: 1.- Intersectorialidad. 2.- Respeto. 3.- Medicina Tradicional.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-95",
+      "numero_original": 95,
+      "pregunta": "Sobre diagnóstico Dengue: 1.- Detección de IgM e IgG con sensibilidad y especificidad 100%. 2.- IgM alcanza pico más alto 6to día de iniciados los síntomas. 3.- La prueba de anticuerpos IgG, IgM son eficientes para la vigilancia epidemiológica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-96",
+      "numero_original": 96,
+      "pregunta": "Dentro las tribus se efectúa la diferenciación de las ganas en: 1.- Mayores. 2.- Ricos. 3.- Menores.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-97",
+      "numero_original": 97,
+      "pregunta": "Respecto al VIH: 1.- Virus miembro de la familia Retroviridae y pertenece al género Lentivirus. 2.- Los lentivirus están relacionados con enfermedades que tienen largos periodos de evolución. 3.- La infección por el VIH causa el síndrome de inmunodeficiencia adquirida (SIDA) por la depleción del número de linfocito CD4+.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-98",
+      "numero_original": 98,
+      "pregunta": "El método moco cervical: 1.- Requiere que la mujer aprenda a reconocer las variaciones de la humedad de sus genitales. 2.- La humedad vaginal es abundante en la etapa preovulatoria. 3.- La humedad vaginal es escasa en la etapa ovulatoria.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-99",
+      "numero_original": 99,
+      "pregunta": "La conducta del médico dentro de los principios enunciados se proyecta en: 1.- La colectividad. 2.- Colegio Médico. 3.- El paciente y su familia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    },
+    {
+      "id": "2021-2022-3-100",
+      "numero_original": 100,
+      "pregunta": "Dentro los tipos de familia: Según su estructura la familia: 1.- Familia Nuclear. 2.- Familia Inestable. 3.- Gran Familia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021–2022 · Examen final",
+      "comentario": "Respuesta según el patrón original."
+    }
+  ]
+}
