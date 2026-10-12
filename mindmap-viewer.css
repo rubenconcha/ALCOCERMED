@@ -97,7 +97,16 @@
 }
 @media(prefers-reduced-motion:reduce){.mm-lightbox *{scroll-behavior:auto}}
 
-/* Approved detailed Saladin map uses the same authenticated viewer shell. */
-.mm-lightbox.mm-approved-viewer{display:block;background:#f4f8fc}
-.mm-approved-viewer>:not(.mm-approved-frame){display:none!important}
-.mm-approved-frame{display:block;width:100%;height:100%;border:0;background:#f4f8fc}
+/* Detailed topics keep the platform's branch layout and progressive disclosure. */
+.mm-root-anatomy{display:block;width:100%;height:auto;border-radius:6px}
+.mm-detail-group{min-width:0}
+.mm-detail-nodes{display:flex;flex-direction:column;gap:9px;margin:10px 0 4px 10px;padding-left:12px;border-left:2px solid color-mix(in srgb,var(--branch-color) 30%,white)}
+.mm-detail-nodes[hidden]{display:none}
+.mm-detail-nodes>.mm-concept-leaf{position:relative}
+.mm-detail-nodes>.mm-concept-leaf:before{content:'';position:absolute;left:-14px;top:21px;width:13px;border-top:2px solid color-mix(in srgb,var(--branch-color) 30%,white)}
+.mm-detail-note{font-size:11px}
+@media(max-width:1100px){
+ .mm-concept-root.mm-detailed-root{display:flex;flex-direction:column;align-items:center;padding:16px}
+ .mm-detailed-root .mm-concept-title{text-align:center}
+ .mm-root-anatomy{max-width:240px}
+}
