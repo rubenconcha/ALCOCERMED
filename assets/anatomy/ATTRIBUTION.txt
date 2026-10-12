@@ -47,3 +47,30 @@ https://www.alcocermed.com/assets/anatomy/musculos-detallados.glb
 https://www.alcocermed.com/assets/anatomy/esqueleto-detallado.glb
 
 Skeleton display asset excludes annotation pointers and painted origin/insertion patches; anatomical bone, tooth, cartilage and suture surfaces retained without simplification.
+
+ATLAS SYSTEM EXPANSION (2026-10-12)
+Additional source files from LluisV/Z-Anatomy, PC-Version/Resources/Models/FBX:
+VisceralSystem100.fbx, NervousSystem100.fbx, CardioVascular41.fbx.
+Same Z-Anatomy CC BY-SA 4.0 / underlying BodyParts3D attribution as above.
+Converted with Assimp; removed editor annotation material; pruned unused data;
+compressed with Draco, 16-bit positions. Heart asset retains heart and selected
+major vessels from the cardiovascular source, not the complete vascular tree.
+Display colors and muscle surface texture are illustrative. No copied Astra code
+or extracted Astra assets are included. Independently implemented atlas controls.
+Adapted assets available without DRM:
+https://www.alcocermed.com/assets/anatomy/visceras-detalladas.glb
+https://www.alcocermed.com/assets/anatomy/nervioso-detallado.glb
+https://www.alcocermed.com/assets/anatomy/corazon-detallado.glb
+
+SURFACE AND VASCULAR REVISION (2026-10-12)
+Source also includes Joints100.fbx and the arterial/venous surfaces of
+CardioVascular41.fbx from the same Z-Anatomy repository and licenses.
+Shared identical positions welded and per-surface vertex normals recomputed.
+This changes lighting interpolation, not the anatomical vertex positions,
+triangle connectivity, source hierarchy or dimensions. UV muscle detail is
+illustrative. Source material boundaries are retained. No commercial medical
+atlas assets or code have been copied from the reference images or Astra.
+Hemibody muscle clipping and a heart clipping plane are display tools; they
+are not a surgical reconstruction. Arteries, veins and cartilage use study colors.
+https://www.alcocermed.com/assets/anatomy/vasos-detallados.glb
+https://www.alcocermed.com/assets/anatomy/articulaciones-detalladas.glb
