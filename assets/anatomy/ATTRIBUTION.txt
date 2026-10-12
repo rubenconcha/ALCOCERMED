@@ -25,9 +25,25 @@ Files are freely downloadable and not DRM-protected.
 Adapted mesh files:
 https://www.alcocermed.com/assets/anatomy/musculos.glb
 https://www.alcocermed.com/assets/anatomy/esqueleto.glb
-Per-mesh original provenance:
+Per-mesh provenance of the initial BodyExplorer preview (not the detailed Z-Anatomy revision):
 https://www.alcocermed.com/assets/anatomy/mesh_mapping.json
 
 Educational explanations: paraphrased from user-provided Saladin, Anatomía y fisiología,
 chapter 10; individual printed and PDF page numbers appear in the study cards.
 The source textbook is not distributed here.
+
+DETAILED MODEL REVISION (2026-10-12)
+Source: Z-Anatomy / LluisV, PC-Version branch:
+https://github.com/LluisV/Z-Anatomy/blob/PC-Version/Resources/Models/FBX/MuscularSystem100.fbx
+https://github.com/LluisV/Z-Anatomy/blob/PC-Version/Resources/Models/FBX/SkeletalSystem100.fbx
+License: Creative Commons Attribution-ShareAlike 4.0 International; retain BodyParts3D attribution.
+Converted with assimpjs / Assimp, compressed with Draco, 16-bit position quantization.
+Original named structure hierarchy preserved in GLB. Non-muscular fasciae/bursae are omitted from the default viewer.
+Mirrored triangle orientation corrected during flattening; no anatomical shape resculpting performed.
+Display muscle microtexture is procedural and illustrative, not cadaver photography or histology.
+Selection keeps the original display material without yellow recoloring.
+Adapted assets and original licenses remain freely downloadable:
+https://www.alcocermed.com/assets/anatomy/musculos-detallados.glb
+https://www.alcocermed.com/assets/anatomy/esqueleto-detallado.glb
+
+Skeleton display asset excludes annotation pointers and painted origin/insertion patches; anatomical bone, tooth, cartilage and suture surfaces retained without simplification.
