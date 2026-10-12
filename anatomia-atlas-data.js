@@ -48,3 +48,8 @@ organs.push(
 );
 systems.push({id:'arterial',name:'Arterias',color:'#b95a57'},{id:'venous',name:'Venas',color:'#5279a9'},{id:'joints',name:'Ligamentos y articulaciones',color:'#8bbeb8'});
 regions.splice(1,0,{id:'torso',name:'Torso',min:-.85,max:2.2});
+
+const muscleBones={deltoid:'clavicle|scapula|humerus',pectoral:'clavicle|sternum|rib|humerus',biceps:'scapula|humerus|radius|ulna',triceps:'scapula|humerus|ulna',brachialis:'humerus|ulna',trapezius:'occipital|vertebra|clavicle|scapula',latissimus:'vertebra|hip_bone|ilium|sacrum|rib|humerus',serratus:'rib|scapula',gluteus:'hip_bone|ilium|sacrum|coccyx|femur',rectus:'hip_bone|ilium|femur|patella|tibia',gastrocnemius:'femur|tibia|fibula|calcaneus',soleus:'tibia|fibula|calcaneus'};
+for(const m of muscles)m.bones=muscleBones[m.id];
+systems.push({id:'integumentary',name:'Tegumentario · piel y uñas',color:'#c7987b'});
+organs.push({id:'skin',name:'Piel',system:'integumentary',match:'skin',color:'#c7987b',text:'La piel constituye una barrera protectora y participa en la sensibilidad y la regulación de la temperatura corporal. Está formada por epidermis y dermis; debajo se encuentra la hipodermis. Esta vista muestra su superficie externa.'},{id:'nails',name:'Uñas',system:'integumentary',match:'nail',color:'#dcc2ad',text:'Las uñas son anexos cutáneos formados principalmente por queratina endurecida. Protegen los extremos de los dedos y ayudan a manipular objetos pequeños.'});

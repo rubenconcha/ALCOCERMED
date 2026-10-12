@@ -74,3 +74,14 @@ Hemibody muscle clipping and a heart clipping plane are display tools; they
 are not a surgical reconstruction. Arteries, veins and cartilage use study colors.
 https://www.alcocermed.com/assets/anatomy/vasos-detallados.glb
 https://www.alcocermed.com/assets/anatomy/articulaciones-detalladas.glb
+
+SPANISH NOMENCLATURE AND TEGUMENTARY SURFACES (2026-10-12)
+Spanish names adapted from LluisV/Z-Anatomy Resources/Translations0.txt,
+with AlcoCerMed orthographic corrections and missing-name translations.
+Same CC BY-SA 4.0 attribution and underlying BodyParts3D license apply.
+Skin/nail surfaces: Resources/Models/FBX/Regions of human body100.fbx.
+Skin and nail materials retained; annotation geometry excluded. Welded normals,
+Draco 16-bit positions and illustrative skin color; no resculpted anatomy.
+The 3D layer displays external skin regions and nails, not histological layers,
+hair follicles or gland anatomy. Educational skin descriptions: Saladin chapter 6.
+https://www.alcocermed.com/assets/anatomy/piel-detallada.glb
