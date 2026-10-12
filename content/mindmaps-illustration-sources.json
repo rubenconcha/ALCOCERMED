@@ -1,0 +1,834 @@
+{
+  "morfo_01_anatomia_y_fisiologia.webp": {
+    "image": "/assets/mindmaps/illustrations/morfo_01_anatomia_y_fisiologia.webp",
+    "book": "morfo",
+    "chapter": 1,
+    "pages": [
+      29,
+      55
+    ],
+    "imagePage": 41,
+    "imageRect": [
+      320.1935119628906,
+      67.56097412109375,
+      590.9906005859375,
+      462.48095703125
+    ]
+  },
+  "morfo_02_quimica_de_la_vida.webp": {
+    "image": "/assets/mindmaps/illustrations/morfo_02_quimica_de_la_vida.webp",
+    "book": "morfo",
+    "chapter": 2,
+    "pages": [
+      70,
+      105
+    ],
+    "imagePage": 78,
+    "imageRect": [
+      28.593971252441406,
+      67.56097412109375,
+      305.2235107421875,
+      351.48095703125
+    ]
+  },
+  "morfo_03_forma_y_funcion_celulares.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_03_forma_y_funcion_celulares.webp",
+    "book": "morfo",
+    "chapter": 3,
+    "pages": [
+      106,
+      141
+    ],
+    "imagePage": 111,
+    "imageRect": [
+      63.99401092529297,
+      67.56097412109375,
+      550.954345703125,
+      554.281005859375
+    ]
+  },
+  "morfo_04_genetica_y_funcion_celular.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_04_genetica_y_funcion_celular.webp",
+    "book": "morfo",
+    "chapter": 4,
+    "pages": [
+      142,
+      170
+    ],
+    "imagePage": 152,
+    "imageRect": [
+      27.393489837646484,
+      67.56103515625,
+      586.3539428710938,
+      722.281005859375
+    ]
+  },
+  "morfo_05_histologia.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_05_histologia.webp",
+    "book": "morfo",
+    "chapter": 5,
+    "pages": [
+      171,
+      207
+    ],
+    "imagePage": 176,
+    "imageRect": [
+      416.79400634765625,
+      193.37208557128906,
+      563.7168579101562,
+      316.2236328125
+    ]
+  },
+  "morfo_06_sistema_tegumentario.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_06_sistema_tegumentario.webp",
+    "book": "morfo",
+    "chapter": 6,
+    "pages": [
+      208,
+      233
+    ],
+    "imagePage": 210,
+    "imageRect": [
+      84.39350891113281,
+      56.171478271484375,
+      495.45062255859375,
+      368.6011962890625
+    ]
+  },
+  "morfo_07_tejido_oseo.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_07_tejido_oseo.webp",
+    "book": "morfo",
+    "chapter": 7,
+    "pages": [
+      234,
+      260
+    ],
+    "imagePage": 237,
+    "imageRect": [
+      50.55196762084961,
+      66.96099853515625,
+      278.1755065917969,
+      346.08099365234375
+    ]
+  },
+  "morfo_08_sistema_oseo.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_08_sistema_oseo.webp",
+    "book": "morfo",
+    "chapter": 8,
+    "pages": [
+      261,
+      305
+    ],
+    "imagePage": 263,
+    "imageRect": [
+      381.9935302734375,
+      67.56109619140625,
+      598.1328125,
+      638.8809814453125
+    ]
+  },
+  "morfo_09_articulaciones.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_09_articulaciones.webp",
+    "book": "morfo",
+    "chapter": 9,
+    "pages": [
+      306,
+      339
+    ],
+    "imagePage": 312,
+    "imageRect": [
+      28.67489242553711,
+      50.704498291015625,
+      302.9921875,
+      389.22381591796875
+    ]
+  },
+  "morfo_10_sistema_muscular.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_10_sistema_muscular.webp",
+    "book": "morfo",
+    "chapter": 10,
+    "pages": [
+      340,
+      406
+    ],
+    "imagePage": 342,
+    "imageRect": [
+      69.39350891113281,
+      65.760986328125,
+      294.01824951171875,
+      536.281005859375
+    ]
+  },
+  "morfo_11_tejido_muscular.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_11_tejido_muscular.webp",
+    "book": "morfo",
+    "chapter": 11,
+    "pages": [
+      429,
+      466
+    ],
+    "imagePage": 433,
+    "imageRect": [
+      53.79349899291992,
+      67.56103515625,
+      318.4132995605469,
+      600.4810791015625
+    ]
+  },
+  "morfo_12_tejido_nervioso.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_12_tejido_nervioso.webp",
+    "book": "morfo",
+    "chapter": 12,
+    "pages": [
+      467,
+      505
+    ],
+    "imagePage": 471,
+    "imageRect": [
+      45.393489837646484,
+      67.5609130859375,
+      604.3538208007812,
+      674.2809448242188
+    ]
+  },
+  "morfo_13_medula_reflejos.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_13_medula_reflejos.webp",
+    "book": "morfo",
+    "chapter": 13,
+    "pages": [
+      506,
+      538
+    ],
+    "imagePage": 508,
+    "imageRect": [
+      41.19350814819336,
+      68.16091918945312,
+      534.9389038085938,
+      559.680908203125
+    ]
+  },
+  "morfo_14_encefalo_pares_craneales.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_14_encefalo_pares_craneales.webp",
+    "book": "morfo",
+    "chapter": 14,
+    "pages": [
+      539,
+      588
+    ],
+    "imagePage": 543,
+    "imageRect": [
+      140.19351196289062,
+      67.56097412109375,
+      471.2695617675781,
+      374.281005859375
+    ]
+  },
+  "morfo_15_sistema_nervioso_autonomo.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_15_sistema_nervioso_autonomo.webp",
+    "book": "morfo",
+    "chapter": 15,
+    "pages": [
+      589,
+      609
+    ],
+    "imagePage": 591,
+    "imageRect": [
+      54.39350509643555,
+      68.76104736328125,
+      325.1905212402344,
+      459.48101806640625
+    ]
+  },
+  "morfo_16_organos_sentidos.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_16_organos_sentidos.webp",
+    "book": "morfo",
+    "chapter": 16,
+    "pages": [
+      610,
+      660
+    ],
+    "imagePage": 637,
+    "imageRect": [
+      120.99349975585938,
+      419.1609802246094,
+      458.7721862792969,
+      731.281005859375
+    ]
+  },
+  "morfo_17_sistema_endocrino.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_17_sistema_endocrino.webp",
+    "book": "morfo",
+    "chapter": 17,
+    "pages": [
+      661,
+      705
+    ],
+    "imagePage": 663,
+    "imageRect": [
+      50.08108139038086,
+      64.59243774414062,
+      590.38427734375,
+      571.5372924804688
+    ]
+  },
+  "morfo_18_sangre.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_18_sangre.webp",
+    "book": "morfo",
+    "chapter": 18,
+    "pages": [
+      706,
+      741
+    ],
+    "imagePage": 708,
+    "imageRect": [
+      168.3935089111328,
+      67.56097412109375,
+      428.1068115234375,
+      374.281005859375
+    ]
+  },
+  "morfo_19_corazon.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_19_corazon.webp",
+    "book": "morfo",
+    "chapter": 19,
+    "pages": [
+      742,
+      776
+    ],
+    "imagePage": 747,
+    "imageRect": [
+      189.99349975585938,
+      305.7609558105469,
+      460.79058837890625,
+      568.6810302734375
+    ]
+  },
+  "morfo_20_circulacion.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_20_circulacion.webp",
+    "book": "morfo",
+    "chapter": 20,
+    "pages": [
+      777,
+      835
+    ],
+    "imagePage": 779,
+    "imageRect": [
+      56.60763168334961,
+      261.2643127441406,
+      263.36407470703125,
+      488.8809814453125
+    ]
+  },
+  "morfo_21_sistema_linfatico_inmunitario.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_21_sistema_linfatico_inmunitario.webp",
+    "book": "morfo",
+    "chapter": 21,
+    "pages": [
+      836,
+      881
+    ],
+    "imagePage": 838,
+    "imageRect": [
+      23.79348373413086,
+      47.16107177734375,
+      582.8442993164062,
+      767.8810424804688
+    ]
+  },
+  "morfo_22_aparato_respiratorio.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_22_aparato_respiratorio.webp",
+    "book": "morfo",
+    "chapter": 22,
+    "pages": [
+      882,
+      922
+    ],
+    "imagePage": 884,
+    "imageRect": [
+      26.19350814819336,
+      75.96099853515625,
+      296.96783447265625,
+      412.0809631347656
+    ]
+  },
+  "morfo_23_aparato_urinario.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_23_aparato_urinario.webp",
+    "book": "morfo",
+    "chapter": 23,
+    "pages": [
+      923,
+      957
+    ],
+    "imagePage": 925,
+    "imageRect": [
+      41.193477630615234,
+      67.56109619140625,
+      600.1538696289062,
+      395.8810729980469
+    ]
+  },
+  "morfo_24_equilibrio_hidrico_acidobasico.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_24_equilibrio_hidrico_acidobasico.webp",
+    "book": "morfo",
+    "chapter": 24,
+    "pages": [
+      958,
+      980
+    ],
+    "imagePage": 960,
+    "imageRect": [
+      35.79348373413086,
+      64.55758666992188,
+      573.2767944335938,
+      366.8056640625
+    ]
+  },
+  "morfo_25_aparato_digestivo.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_25_aparato_digestivo.webp",
+    "book": "morfo",
+    "chapter": 25,
+    "pages": [
+      981,
+      1027
+    ],
+    "imagePage": 983,
+    "imageRect": [
+      314.79351806640625,
+      47.9122314453125,
+      598.1170654296875,
+      508.2461242675781
+    ]
+  },
+  "morfo_26_nutricion_metabolismo.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_26_nutricion_metabolismo.webp",
+    "book": "morfo",
+    "chapter": 26,
+    "pages": [
+      1028,
+      1061
+    ],
+    "imagePage": 1036,
+    "imageRect": [
+      71.79350280761719,
+      267.3609924316406,
+      586.9539184570312,
+      644.281005859375
+    ]
+  },
+  "morfo_27_reproductor_masculino.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_27_reproductor_masculino.webp",
+    "book": "morfo",
+    "chapter": 27,
+    "pages": [
+      1062,
+      1091
+    ],
+    "imagePage": 1073,
+    "imageRect": [
+      36.393489837646484,
+      56.76104736328125,
+      595.4442749023438,
+      777.4810180664062
+    ]
+  },
+  "morfo_28_reproductor_femenino.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_28_reproductor_femenino.webp",
+    "book": "morfo",
+    "chapter": 28,
+    "pages": [
+      1092,
+      1129
+    ],
+    "imagePage": 1095,
+    "imageRect": [
+      107.79350280761719,
+      66.96099853515625,
+      561.7861328125,
+      506.8809814453125
+    ]
+  },
+  "morfo_29_desarrollo_envejecimiento.png": {
+    "image": "/assets/mindmaps/illustrations/morfo_29_desarrollo_envejecimiento.webp",
+    "book": "morfo",
+    "chapter": 29,
+    "pages": [
+      1130,
+      1164
+    ],
+    "imagePage": 1132,
+    "imageRect": [
+      75.99349975585938,
+      378.9609680175781,
+      561.5135498046875,
+      769.6810302734375
+    ]
+  },
+  "biocel_01_introduccion.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_01_introduccion.webp",
+    "book": "bio",
+    "chapter": 1,
+    "pages": [
+      33,
+      53
+    ],
+    "imagePage": 38,
+    "imageRect": [
+      2.000000476837158,
+      54.514862060546875,
+      234.95001220703125,
+      203.20965576171875
+    ]
+  },
+  "biocel_02_metodos_y_tecnicas.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_02_metodos_y_tecnicas.webp",
+    "book": "bio",
+    "chapter": 2,
+    "pages": [
+      54,
+      119
+    ],
+    "imagePage": 65,
+    "imageRect": [
+      2.0,
+      54.514892578125,
+      234.9440460205078,
+      415.1148986816406
+    ]
+  },
+  "biocel_03_membrana_estructura.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_03_membrana_estructura.webp",
+    "book": "bio",
+    "chapter": 3,
+    "pages": [
+      120,
+      166
+    ],
+    "imagePage": 124,
+    "imageRect": [
+      2.0,
+      54.514862060546875,
+      234.9499969482422,
+      541.64892578125
+    ]
+  },
+  "biocel_04_microtransporte.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_04_microtransporte.webp",
+    "book": "bio",
+    "chapter": 4,
+    "pages": [
+      167,
+      213
+    ],
+    "imagePage": 173,
+    "imageRect": [
+      2.0,
+      54.514892578125,
+      234.94378662109375,
+      388.1648864746094
+    ]
+  },
+  "biocel_05_endocitosis_exocitosis.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_05_endocitosis_exocitosis.webp",
+    "book": "bio",
+    "chapter": 5,
+    "pages": [
+      214,
+      255
+    ],
+    "imagePage": 227,
+    "imageRect": [
+      2.0,
+      54.51483154296875,
+      336.23565673828125,
+      605.8648681640625
+    ]
+  },
+  "biocel_06_entorno_celular.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_06_entorno_celular.webp",
+    "book": "bio",
+    "chapter": 6,
+    "pages": [
+      256,
+      290
+    ],
+    "imagePage": 258,
+    "imageRect": [
+      2.0,
+      269.315673828125,
+      234.9499969482422,
+      599.8541870117188
+    ]
+  },
+  "biocel_07_nucleo_cromatina_adn.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_07_nucleo_cromatina_adn.webp",
+    "book": "bio",
+    "chapter": 7,
+    "pages": [
+      291,
+      349
+    ],
+    "imagePage": 293,
+    "imageRect": [
+      1.9999995231628418,
+      275.9157409667969,
+      234.937255859375,
+      575.5157470703125
+    ]
+  },
+  "biocel_08_transcripcion_arn.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_08_transcripcion_arn.webp",
+    "book": "bio",
+    "chapter": 8,
+    "pages": [
+      350,
+      384
+    ],
+    "imagePage": 352,
+    "imageRect": [
+      2.0,
+      325.7160949707031,
+      234.94577026367188,
+      629.8660888671875
+    ]
+  },
+  "biocel_09_sintesis_proteinas.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_09_sintesis_proteinas.webp",
+    "book": "bio",
+    "chapter": 9,
+    "pages": [
+      385,
+      419
+    ],
+    "imagePage": 388,
+    "imageRect": [
+      2.0,
+      172.11553955078125,
+      234.9499969482422,
+      533.0086059570312
+    ]
+  },
+  "biocel_10_endomembranas.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_10_endomembranas.webp",
+    "book": "bio",
+    "chapter": 10,
+    "pages": [
+      420,
+      455
+    ],
+    "imagePage": 433,
+    "imageRect": [
+      2.000000476837158,
+      54.514892578125,
+      234.95001220703125,
+      472.9964904785156
+    ]
+  },
+  "biocel_11_mitocondrias_peroxisomas.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_11_mitocondrias_peroxisomas.webp",
+    "book": "bio",
+    "chapter": 11,
+    "pages": [
+      456,
+      490
+    ],
+    "imagePage": 459,
+    "imageRect": [
+      2.0,
+      54.514892578125,
+      234.9499969482422,
+      312.71307373046875
+    ]
+  },
+  "biocel_12_citoesqueleto.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_12_citoesqueleto.webp",
+    "book": "bio",
+    "chapter": 12,
+    "pages": [
+      491,
+      535
+    ],
+    "imagePage": 505,
+    "imageRect": [
+      2.0,
+      54.514892578125,
+      234.942138671875,
+      581.1649169921875
+    ]
+  },
+  "biocel_13_senales.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_13_senales.webp",
+    "book": "bio",
+    "chapter": 13,
+    "pages": [
+      536,
+      579
+    ],
+    "imagePage": 539,
+    "imageRect": [
+      2.0,
+      54.514892578125,
+      234.93994140625,
+      461.9149169921875
+    ]
+  },
+  "biocel_14_ciclo_celular.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_14_ciclo_celular.webp",
+    "book": "bio",
+    "chapter": 14,
+    "pages": [
+      580,
+      617
+    ],
+    "imagePage": 583,
+    "imageRect": [
+      2.000000476837158,
+      158.315185546875,
+      234.95001220703125,
+      462.75439453125
+    ]
+  },
+  "biocel_15_division_muerte.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_15_division_muerte.webp",
+    "book": "bio",
+    "chapter": 15,
+    "pages": [
+      618,
+      649
+    ],
+    "imagePage": 622,
+    "imageRect": [
+      2.0,
+      54.51495361328125,
+      234.9293670654297,
+      406.01495361328125
+    ]
+  },
+  "biocel_16_cancer.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_16_cancer.webp",
+    "book": "bio",
+    "chapter": 16,
+    "pages": [
+      650,
+      696
+    ],
+    "imagePage": 656,
+    "imageRect": [
+      2.000000476837158,
+      116.31524658203125,
+      234.95001220703125,
+      431.2508850097656
+    ]
+  },
+  "biocel_17_respuesta_inmunitaria.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_17_respuesta_inmunitaria.webp",
+    "book": "bio",
+    "chapter": 17,
+    "pages": [
+      697,
+      737
+    ],
+    "imagePage": 701,
+    "imageRect": [
+      2.000000476837158,
+      54.51487731933594,
+      234.9337921142578,
+      244.6148681640625
+    ]
+  },
+  "biocel_18_celulas_madre.png": {
+    "image": "/assets/mindmaps/illustrations/biocel_18_celulas_madre.webp",
+    "book": "bio",
+    "chapter": 18,
+    "pages": [
+      738,
+      771
+    ],
+    "imagePage": 740,
+    "imageRect": [
+      2.0,
+      351.5163269042969,
+      234.9398651123047,
+      592.96630859375
+    ]
+  },
+  "citoesqueleto.png": {
+    "image": "/assets/mindmaps/illustrations/citoesqueleto.webp",
+    "book": "bio",
+    "chapter": 12,
+    "pages": [
+      491,
+      535
+    ],
+    "imagePage": 505,
+    "imageRect": [
+      2.0,
+      54.514892578125,
+      234.942138671875,
+      581.1649169921875
+    ]
+  },
+  "lacelula.png": {
+    "image": "/assets/mindmaps/illustrations/lacelula.webp",
+    "book": "bio",
+    "chapter": 1,
+    "pages": [
+      33,
+      53
+    ],
+    "imagePage": 38,
+    "imageRect": [
+      2.000000476837158,
+      54.514862060546875,
+      234.95001220703125,
+      203.20965576171875
+    ]
+  },
+  "membranaplasmatica.png": {
+    "image": "/assets/mindmaps/illustrations/membranaplasmatica.webp",
+    "book": "bio",
+    "chapter": 3,
+    "pages": [
+      120,
+      166
+    ],
+    "imagePage": 124,
+    "imageRect": [
+      2.0,
+      54.514862060546875,
+      234.9499969482422,
+      541.64892578125
+    ]
+  },
+  "nucleocelular.png": {
+    "image": "/assets/mindmaps/illustrations/nucleocelular.webp",
+    "book": "bio",
+    "chapter": 7,
+    "pages": [
+      291,
+      349
+    ],
+    "imagePage": 293,
+    "imageRect": [
+      1.9999995231628418,
+      275.9157409667969,
+      234.937255859375,
+      575.5157470703125
+    ]
+  },
+  "organeloscelulares.png": {
+    "image": "/assets/mindmaps/illustrations/organeloscelulares.webp",
+    "book": "bio",
+    "chapter": 10,
+    "pages": [
+      420,
+      455
+    ],
+    "imagePage": 433,
+    "imageRect": [
+      2.000000476837158,
+      54.514892578125,
+      234.95001220703125,
+      472.9964904785156
+    ]
+  }
+}

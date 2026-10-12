@@ -1,0 +1,35 @@
+@citoesqueleto
+Redes intracelulares / Tres sistemas|Actina~Forma microfilamentos polares que participan en corteza y movimiento.|Tubulina y filamentos intermedios~Los microtúbulos organizan transporte y división; los intermedios resisten tensión.
+Integración estructural / Forma y desplazamiento|Corteza~La red bajo la membrana contribuye a forma y deformación celular.|Transporte y división~Redes y motores permiten desplazar organelos y organizar reparto cromosómico.
+Filamentos de actina / Dinamismo y motores|Polaridad~Sus extremos tienen comportamientos diferentes de crecimiento.|Miosina~Genera movimiento sobre actina y participa en contracción y citocinesis.
+Microtúbulos / Organización y movimiento|Inestabilidad dinámica~Pueden alternar elongación y acortamiento según condiciones y proteínas asociadas.|Motores~Cinesinas y dineínas transportan componentes sobre la red.
+Resistencia mecánica / Diversidad de proteínas|Distribución~Queratinas, vimentina y láminas nucleares aparecen en contextos celulares distintos.|Conexión~Se relacionan con uniones y envoltura nuclear para distribuir fuerzas.
+Relaciones funcionales / Redes coordinadas|Proteínas asociadas~Regulan ensamblaje, unión y movimiento de los filamentos.|Especializaciones~Microvellosidades se apoyan en actina; cilios móviles utilizan microtúbulos y dineína.
+@lacelula
+Unidad de vida / Principios celulares|Teoría celular~Los seres vivos presentan organización celular y las células proceden de células previas.|Estructura y función~La organización de cada tipo celular se relaciona con sus tareas.
+Dos organizaciones / ADN y compartimentos|Procariota~El ADN se sitúa en un nucleoide, sin envoltura nuclear.|Eucariota~Posee núcleo delimitado y diversos compartimentos membranosos.
+Propiedades compartidas / Continuidad y regulación|Membrana y metabolismo~La membrana delimita la célula y el metabolismo transforma materia y energía.|Información~El material genético participa en mantenimiento, reproducción y expresión de funciones.
+Organización interna / Compartimentos celulares|Citosol~Medio acuoso donde ocurren numerosas reacciones y se distribuyen componentes.|Organelos~Núcleo, retículo, Golgi y mitocondrias especializan tareas en células eucariotas.
+Procesos celulares / Intercambio y respuesta|Síntesis~Ribosomas y otras estructuras permiten producir componentes necesarios.|Señalización~Receptores y vías internas permiten responder a cambios del entorno.
+Escalas de organización / De célula a organismo|Tejidos~Integran células y matriz en funciones colectivas.|Órganos y sistemas~Organizan tejidos y órganos para funciones coordinadas del organismo.
+@membranaplasmatica
+Barrera celular / Bicapa y asimetría|Anfipática~Las cabezas lipídicas contactan con agua y las colas se orientan al interior.|Dos caras~La composición de monocapas y orientación de proteínas no son iguales.
+Componentes / Posición y propiedades|Colesterol~Modula propiedades físicas de la bicapa.|Proteínas~Integrales y periféricas participan en transporte, adhesión y recepción de señales.
+Funciones coordinadas / Comunicación y anclaje|Receptores~Reconocen señales y activan respuestas celulares.|Adhesión~Moléculas de membrana conectan células entre sí y con matriz extracelular.
+Propiedades físicas / Fluidez y selectividad|Movilidad~Muchos componentes se desplazan lateralmente; su movimiento puede estar restringido.|Selectividad~El interior hidrófobo limita el paso de iones y numerosos solutos polares.
+Paso de materiales / Transporte y energía|Pasivo~Sigue un gradiente mediante bicapa, canales o transportadores.|Activo y vesicular~Utiliza energía para transporte contra gradiente o movimiento mediante vesículas.
+Integración funcional / Polaridad y daño|Dominios~La distribución de componentes contribuye a polaridad y especialización.|Integridad~Alteraciones de barrera o transporte afectan equilibrio intracelular y función.
+@nucleocelular
+Envoltura / Compartimento e intercambio|Membrana doble~La externa se continúa con retículo; la interna se relaciona con organización nuclear.|Poros~Complejos de poro regulan tráfico de proteínas y ARN.
+Actividad nuclear / Información y regulación|Transcripción~Produce ARN a partir de una plantilla de ADN.|Regulación~El acceso a cromatina y factores reguladores modifica expresión de genes.
+Empaquetamiento / ADN e histonas|Nucleosoma~Unidad básica de organización del ADN alrededor de histonas.|Estados de cromatina~La compactación y accesibilidad varían según región y actividad celular.
+Biogénesis de ribosomas / Organización nucleolar|ARNr~Su producción y procesamiento participan en formación de ribosomas.|Subunidades~Se ensamblan con proteínas y se exportan para completar su función.
+Continuidad genética / Duplicación y reparación|Replicación~Precede al reparto cromosómico durante el ciclo proliferativo.|Reparación~Distintas vías reconocen y corrigen lesiones para limitar pérdida de estabilidad.
+Estabilidad y alteraciones / Genoma y ciclo|Control del daño~Puede detener progresión del ciclo y activar reparación o muerte.|Cambios cromosómicos~Alteraciones de número o estructura pueden modificar función; el efecto depende del cambio.
+@organeloscelulares
+Compartimentos / Organización membranosa|Retículo y Golgi~Participan en síntesis, procesamiento y distribución de productos.|Mitocondrias y lisosomas~Se especializan en conversión energética y degradación, respectivamente.
+Estructuras sin membrana / Síntesis y soporte|Ribosomas~Complejos de ARN y proteínas que traducen ARNm.|Citoesqueleto~Redes de filamentos organizan estructura y movimiento.
+Coordinación / Tráfico e intercambio|Señales de destino~Orientan proteínas hacia compartimentos específicos.|Vesículas~Transportan carga entre membranas y conservan orientación de sus componentes.
+Mitocondria / Compartimentos y energía|Membrana interna~Aloja cadena respiratoria y ATP sintasa.|Matriz~Contiene enzimas, ADN mitocondrial y componentes de expresión.
+Retículo endoplásmico / Rugoso y liso|Rugoso~Ribosomas asociados producen proteínas destinadas a la ruta secretora y ciertos compartimentos.|Liso~Participa en metabolismo de lípidos y almacenamiento de calcio según tipo celular.
+Clasificación y degradación / Destinos diferentes|Golgi~Modifica y dirige carga hacia membrana, secreción o compartimentos internos.|Lisosoma~Enzimas activas en medio ácido degradan carga endocítica y componentes celulares.

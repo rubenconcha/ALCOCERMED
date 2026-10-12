@@ -4114,6 +4114,9 @@ function renderMmGrid() {
 
 }
 function getMmThumbnailUrl(url) {
+    var key = (url || '').split('/').pop().split('?')[0];
+    var asset = (window.MINDMAP_ASSETS || {})[key];
+    if (asset && asset.thumbnail) return asset.thumbnail;
     var match = /^mapas mentales\/([^/?#]+)\.(?:png|jpe?g|webp)$/i.exec(url || '');
     return match ? 'mapas mentales/thumbs/' + match[1] + '.webp' : url;
 }

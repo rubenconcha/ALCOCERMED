@@ -7,6 +7,7 @@
  function field(map,name){return map&&(map[name]??map[name.toUpperCase()]);}
  function fileFor(map){return (field(map,'url_imagen')||field(map,'url_image')||'').split('/').pop().split('?')[0];}
  function detailsFor(map){return (window.MINDMAP_DETAILED_CONTENT||{})[fileFor(map)];}
+ function assetsFor(map){return (window.MINDMAP_ASSETS||{})[fileFor(map)]||{};}
  function labelsFor(map){var detailed=detailsFor(map);return detailed?detailed.map(function(section){return section.title;}):window.MINDMAP_BRANCH_LABELS[fileFor(map)]||[];}
  function mobile(){return window.matchMedia('(max-width:1100px)').matches;}
  function el(tag,cls,text){var node=document.createElement(tag);node.className=cls;if(text)node.textContent=text;return node;}
@@ -67,7 +68,7 @@
   var root=el('div','mm-concept-root'),icon=el('span','mm-concept-icon');
   icon.innerHTML='<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 8h12v10h10v12H30v10H18V30H8V18h10z" fill="currentColor"/><circle cx="38" cy="10" r="4" fill="#ffb833"/></svg>';
   var title=(field(map,'titulo')||'Mapa mental').replace(/^Temas principales de /i,'');title=title.charAt(0).toUpperCase()+title.slice(1);
-  if(detailed){root.classList.add('mm-detailed-root');root.appendChild(el('strong','mm-concept-title',title));var anatomy=el('img','mm-root-anatomy');anatomy.src='/assets/mindmaps/encefalo/anatomia.webp';anatomy.alt='Aspecto medial del encéfalo, figura 14.2a de Saladin';anatomy.onload=scheduleDraw;root.appendChild(anatomy);tree.classList.add('mm-detailed-map');}
+  if(detailed){root.classList.add('mm-detailed-root');root.appendChild(el('strong','mm-concept-title',title));var anatomy=el('img','mm-root-anatomy');var asset=assetsFor(map);anatomy.src=asset.image||'/assets/mindmaps/encefalo/anatomia.webp';anatomy.alt=asset.alt||'Aspecto medial del encéfalo, figura 14.2a de Saladin';anatomy.decoding='async';anatomy.onload=scheduleDraw;root.appendChild(anatomy);tree.classList.add('mm-detailed-map');}
   else{root.appendChild(icon);root.appendChild(el('span','mm-concept-kicker','IDEA CENTRAL'));root.appendChild(el('strong','mm-concept-title',title));}tree.appendChild(root);
   var nav=$('mm-branch-shortcuts');nav.replaceChildren();
   labels.forEach(function(label,index){
@@ -88,7 +89,7 @@
   $('mm-branch-all').addEventListener('click',function(){setAll(true);});$('mm-branch-none').addEventListener('click',function(){setAll(false);});
   $('mm-tools-toggle').addEventListener('click',function(){var bar=$('mm-lightbox').querySelector('.mm-branch-bar'),open=!bar.classList.contains('is-expanded');bar.classList.toggle('is-expanded',open);$('mm-tools-toggle').setAttribute('aria-expanded',String(open));fit();});
   $('mm-true-fullscreen').addEventListener('click',function(){var viewer=$('mm-lightbox');if(document.fullscreenElement===viewer)document.exitFullscreen();else if(viewer.requestFullscreen)viewer.requestFullscreen().catch(function(){});});
-  $('mm-lb-download').addEventListener('click',function(){if(!objectUrl&&!detailsFor(activeMap))return;var link=el('a','');link.href=detailsFor(activeMap)?'/assets/mindmaps/encefalo/mapa-completo.png?v=2':objectUrl;link.download=detailsFor(activeMap)?'Encefalo-y-pares-craneales-Ben-Carson.png':fileFor(activeMap).replace(/\.[^.]+$/,'')+'-prepa-ben-carson.webp';document.body.appendChild(link);link.click();link.remove();});
+  $('mm-lb-download').addEventListener('click',function(){if(!objectUrl&&!detailsFor(activeMap))return;var asset=assetsFor(activeMap),link=el('a','');link.href=detailsFor(activeMap)?asset.download||'/assets/mindmaps/encefalo/mapa-completo.png?v=2':objectUrl;link.download=detailsFor(activeMap)?asset.filename||'Encefalo-y-pares-craneales-Ben-Carson.png':fileFor(activeMap).replace(/\.[^.]+$/,'')+'-prepa-ben-carson.webp';document.body.appendChild(link);link.click();link.remove();});
   var stage=document.querySelector('.mm-lb-stage'),pan=null;
   stage.addEventListener('wheel',function(event){if(!event.ctrlKey)return;event.preventDefault();setZoom(zoom+(event.deltaY<0?.1:-.1),true);},{passive:false});
   stage.addEventListener('pointerdown',function(event){if(event.pointerType!=='mouse'||event.button!==0||event.target.closest('button'))return;pan={id:event.pointerId,x:event.clientX,y:event.clientY,left:stage.scrollLeft,top:stage.scrollTop};stage.setPointerCapture(event.pointerId);stage.classList.add('is-panning');});
@@ -115,8 +116,8 @@
  window.closeMmLightbox=function(){if(!activeMap)return;++token;activeMap=null;$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;if(document.fullscreenElement===$('mm-lightbox'))document.exitFullscreen().catch(function(){});$('mm-tree').replaceChildren();$('mm-branch-shortcuts').replaceChildren();release();if(previousFocus&&previousFocus.isConnected)previousFocus.focus();};
  var requestedMapOpened=false;
  window.openRequestedMindmap=async function(){
-  if(requestedMapOpened||new URLSearchParams(location.search).get('mapa')!=='encefalo')return;
-  requestedMapOpened=true;await window.openMindMaps();var map=mmState.allMapas.find(function(item){return fileFor(item)==='morfo_14_encefalo_pares_craneales.png';});if(!map)return;
+  var requested=new URLSearchParams(location.search).get('mapa');if(requestedMapOpened||!requested)return;
+  requestedMapOpened=true;await window.openMindMaps();if(requested==='todos'){window.clearMmFilters();return;}var map=mmState.allMapas.find(function(item){var key=fileFor(item);return requested==='encefalo'?key==='morfo_14_encefalo_pares_craneales.png':key.replace(/\.[^.]+$/,'')===requested;});if(!map)return;
   window.selectMmMateria(field(map,'materia'));var topic=mmTopicKey(map),select=$('mm-tema-select');if(select)select.value=topic;window.selectMmTema(topic);window.openMmLightbox(map);
  };
 })();
