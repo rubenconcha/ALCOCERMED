@@ -85,3 +85,14 @@ Draco 16-bit positions and illustrative skin color; no resculpted anatomy.
 The 3D layer displays external skin regions and nails, not histological layers,
 hair follicles or gland anatomy. Educational skin descriptions: Saladin chapter 6.
 https://www.alcocermed.com/assets/anatomy/piel-detallada.glb
+
+SOURCE HIERARCHY ALIGNMENT RESTORATION (2026-10-12)
+Some empty FBX grouping nodes lose their transforms during Assimp conversion.
+Restored their authored local position/rotation/scale from the original source:
+https://github.com/LluisV/Z-Anatomy/blob/PC-Version/Z-Anatomy%20PC/Assets/Prefabs/%40Human%20Body.prefab
+Converted Unity local coordinates to the corresponding FBX/GLB coordinates.
+Existing nonidentity FBX transforms and all mesh vertex coordinates retained.
+This includes the Sternum.g hierarchy shared by the manubrium and sternal body.
+No arbitrary snapping, per-camera repositioning or resculpted attachment points.
+Source transforms distributed under the same Z-Anatomy CC BY-SA 4.0 terms:
+https://www.alcocermed.com/anatomia-alineacion.js
