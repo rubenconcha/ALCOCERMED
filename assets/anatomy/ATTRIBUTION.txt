@@ -1,0 +1,33 @@
+ANATOMICAL MESH ATTRIBUTION / LICENSES
+
+BodyParts3D, © The Database Center for Life Science (DBCLS), Japan.
+https://lifesciencedb.jp/bp3d/?lng=en
+License: Creative Commons Attribution-ShareAlike 2.1 Japan.
+https://creativecommons.org/licenses/by-sa/2.1/jp/
+
+Z-Anatomy, Gauthier Kervyn and contributors; based on BodyParts3D.
+https://github.com/Z-Anatomy/Models-of-human-anatomy
+License: Creative Commons Attribution-ShareAlike 4.0 International.
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Intermediate preparation: Johan Bellander, BodyExplorer.
+https://github.com/JohanBellander/BodyExplorer
+Original mesh metadata: mesh_mapping.json in that repository (data source per mesh).
+Original anatomy.glb and skeleton.glb downloaded 2026-10-12.
+Original processing: mesh simplification, coordinate alignment, aggregation.
+
+AlcoCerMed adaptation: lossily compressed with Draco at 14-bit position quantization;
+geometry shape retained, display materials and coordinate transforms applied at runtime.
+No claim of authorship or endorsement by original mesh authors.
+Adapted mesh contributions retain CC BY-SA 4.0; underlying BodyParts3D rights retained.
+Files are freely downloadable and not DRM-protected.
+
+Adapted mesh files:
+https://www.alcocermed.com/assets/anatomy/musculos.glb
+https://www.alcocermed.com/assets/anatomy/esqueleto.glb
+Per-mesh original provenance:
+https://www.alcocermed.com/assets/anatomy/mesh_mapping.json
+
+Educational explanations: paraphrased from user-provided Saladin, Anatomía y fisiología,
+chapter 10; individual printed and PDF page numbers appear in the study cards.
+The source textbook is not distributed here.
