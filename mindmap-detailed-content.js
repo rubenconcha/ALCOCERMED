@@ -447,8 +447,8 @@ window.MINDMAP_DETAILED_CONTENT = {
           "relation": "clasificación habitual",
           "items": [
             {
-              "title": "I · Olfativo",
-              "text": "Olfato. Desde la mucosa olfativa, sus fascículos atraviesan la lámina cribosa hacia el bulbo olfativo."
+              "title": "I · Olfatorio",
+              "text": "Olfato. Saladin lo denomina nervio olfativo, también llamado olfatorio. Desde la mucosa olfativa, sus fascículos atraviesan la lámina cribosa hacia el bulbo olfativo."
             },
             {
               "title": "II · Óptico",
