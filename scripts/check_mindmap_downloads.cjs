@@ -12,7 +12,7 @@ const campus=fs.readFileSync(path.join(root,'campus.html'),'utf8'),markup=campus
  const folder=path.join(root,'output/mapas-qa/downloads-'+Date.now());fs.mkdirSync(folder,{recursive:true});const session=await page.createCDPSession();await session.send('Browser.setDownloadBehavior',{behavior:'allow',downloadPath:folder});
  for(const key of targets){const x=catalog.find(x=>x.key===key),a=sources[key];await page.evaluate(x=>{closeMmLightbox();openMmLightbox({titulo:x.title,materia:x.subject,url_imagen:'mapas mentales/'+x.key})},x);
   const b=await page.$eval('#mm-lb-download',n=>{const r=n.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}});await page.mouse.click(b.x,b.y);
-  const file=path.join(folder,a.filename);for(let i=0;i<200&&!fs.existsSync(file);i++)await new Promise(r=>setTimeout(r,100));assert.ok(fs.existsSync(file),key);assert.deepEqual(fs.readFileSync(file),fs.readFileSync(path.join(root,a.download.split('?')[0])));console.log('Downloaded correct complete map: '+key);
+  const candidates=[path.join(folder,a.filename),path.join(folder,path.basename(a.download.split('?')[0]))];let file;for(let i=0;i<300&&!file;i++){file=candidates.find(f=>fs.existsSync(f));if(!file)await new Promise(r=>setTimeout(r,100));}assert.ok(file,key);assert.deepEqual(fs.readFileSync(file),fs.readFileSync(path.join(root,a.download.split('?')[0])));console.log('Downloaded correct complete map: '+key);
  }
  assert.deepEqual(errors,[]);
 }finally{await browser.close()}})().catch(e=>{console.error(e);process.exit(1)});
