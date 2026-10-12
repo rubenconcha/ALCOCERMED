@@ -86,6 +86,10 @@
   ],
   "rewrites": [
     {
+      "source": "/atlas-anatomico",
+      "destination": "/musculos-interactivos.html"
+    },
+    {
       "source": "/api/_mindmaps/:path*",
       "destination": "/api/mindmap?id=invalid"
     },
