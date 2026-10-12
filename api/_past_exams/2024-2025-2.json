@@ -4,7 +4,7 @@
   "type": "Segundo parcial",
   "title": "Segundo parcial · 2024–2025",
   "count": 100,
-  "duration": 90,
+  "duration": 100,
   "pattern": "/api/past-exam?id=2024-2025-2&pattern=1",
   "missingNumbers": [],
   "excludedQuestions": [],

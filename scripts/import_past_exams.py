@@ -126,7 +126,7 @@ def import_collection(source):
                 questions.append({'id':slug+'-'+str(n),'numero_original':n,'pregunta':'\n'.join(pieces),'opcion_a':choices[0],'opcion_b':choices[1],'opcion_c':choices[2],'opcion_d':choices[3],**({'opcion_e':choices[4]} if len(choices)>4 else {}),'respuesta_correcta':accepted[0],'respuestas_aceptadas':accepted,'fuente':f'Examen pasado · Gestión {year} · {kind}','comentario': 'Respuesta según el patrón original.'+(' El patrón acepta '+ ' o '.join(accepted)+'.' if len(accepted)>1 else '')})
             missing=sorted(set(range(1,101))-set(q['numero_original'] for q in questions+excluded))
             durations=re.findall(r'duraci[oó]n del examen es de (\d+) minutos',' '.join(all_text[a:min(a+20,b)]),re.I)
-            meta={'id':slug,'year':year,'type':kind,'title':kind+' · '+year,'count':len(questions),'duration':int(durations[0]) if durations else 90,'pattern':'/api/past-exam?id='+slug+'&pattern=1','missingNumbers':missing,'excludedQuestions':excluded}
+            meta={'id':slug,'year':year,'type':kind,'title':kind+' · '+year,'count':len(questions),'duration':100,'pattern':'/api/past-exam?id='+slug+'&pattern=1','missingNumbers':missing,'excludedQuestions':excluded}
             (output/(slug+'.json')).write_text(json.dumps({**meta,'questions':questions},ensure_ascii=False,indent=2),encoding='utf-8')
             exams.append(meta)
             print(slug,len(questions),'missing:',missing)

@@ -10,6 +10,8 @@ test('los 15 exámenes conservan gestión, numeración, preguntas y patrones com
     assert.equal(catalog.exams.reduce((total, exam) => total + exam.count, 0), 1491);
     for (const exam of catalog.exams) {
         const paper = require('../api/_past_exams/' + exam.id + '.json');
+        assert.equal(exam.duration, 100);
+        assert.equal(paper.duration, 100);
         assert.equal(paper.questions.length, exam.count);
         const numbers = paper.questions.map(q => q.numero_original);
         assert.equal(new Set(numbers).size, exam.count);
@@ -26,6 +28,30 @@ test('los 15 exámenes conservan gestión, numeración, preguntas y patrones com
     const final = catalog.exams.find(exam => exam.id === '2025-2026-3');
     assert.deepEqual(final.missingNumbers, [67]);
     assert.equal(final.excludedQuestions[0].numero_original, 66);
+});
+
+test('el cronómetro de exámenes pasados permite responder después de 100 minutos y conserva el cierre de simulacros', () => {
+    const source = fs.readFileSync('script.js', 'utf8');
+    let tick, finished = 0;
+    const display = {}, wrap = { classList: { toggle() {} } };
+    const context = {
+        simState: { mode: 'pasado', secondsLeft: 6000, endTimestamp: 6000000 },
+        Date: { now: () => 6005000 },
+        document: { getElementById: id => id === 'sim-timer-display' ? display : wrap },
+        setInterval: fn => { tick = fn; return 1; }, clearInterval() {},
+        showToast() {}, finalizarSimulacro: () => { finished++; }
+    };
+    vm.runInNewContext(source.slice(source.indexOf('function startSimTimer()'), source.indexOf('function renderSimQuestion()')), context);
+    context.startSimTimer(); tick();
+    assert.equal(finished, 0);
+    assert.equal(context.simState.secondsLeft, -5);
+    assert.equal(display.textContent, '+00:05');
+    context.Date.now = () => 6120000; tick();
+    assert.equal(display.textContent, '+02:00');
+    assert.equal(finished, 0);
+    context.simState.mode = 'aleatorio'; context.startSimTimer(); tick();
+    assert.equal(finished, 1);
+    assert.equal(display.textContent, '00:00');
 });
 
 test('las claves especiales de los exámenes originales aceptan las alternativas marcadas y corregidas', () => {

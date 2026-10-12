@@ -4,7 +4,7 @@
   "type": "Examen final",
   "title": "Examen final · 2025–2026",
   "count": 98,
-  "duration": 90,
+  "duration": 100,
   "pattern": "/api/past-exam?id=2025-2026-3&pattern=1",
   "missingNumbers": [
     67

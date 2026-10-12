@@ -6,7 +6,7 @@
     const readableError = () => 'No se pudo cargar el examen. Intenta de nuevo.';
 
     async function catalog() {
-        if (!catalogPromise) catalogPromise = fetch('/content/past-exams/catalog.json?v=2')
+        if (!catalogPromise) catalogPromise = fetch('/content/past-exams/catalog.json?v=3')
             .then(response => { if (!response.ok) throw new Error(readableError()); return response.json(); })
             .then(data => { freeYear = data.freeYear; return data; })
             .catch(error => { catalogPromise = null; throw error; });

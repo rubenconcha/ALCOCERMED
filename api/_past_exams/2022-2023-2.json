@@ -4,7 +4,7 @@
   "type": "Segundo parcial",
   "title": "Segundo parcial · 2022–2023",
   "count": 97,
-  "duration": 90,
+  "duration": 100,
   "pattern": "/api/past-exam?id=2022-2023-2&pattern=1",
   "missingNumbers": [
     47,

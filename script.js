@@ -3131,9 +3131,10 @@ function startSimTimer() {
     clearInterval(simState.timerInterval);
     updateSimTimerDisplay();
     simState.timerInterval = setInterval(function () {
-        simState.secondsLeft = Math.max(0, Math.ceil((simState.endTimestamp - Date.now()) / 1000));
+        var remaining = Math.ceil((simState.endTimestamp - Date.now()) / 1000);
+        simState.secondsLeft = simState.mode === 'pasado' ? remaining : Math.max(0, remaining);
         updateSimTimerDisplay();
-        if (simState.secondsLeft <= 0) {
+        if (simState.secondsLeft <= 0 && simState.mode !== 'pasado') {
             clearInterval(simState.timerInterval);
             simState.timerInterval = null;
             showToast('⏰ tiempo agotado — finalizando simulacro', 'info');
@@ -3143,15 +3144,17 @@ function startSimTimer() {
 }
 
 function updateSimTimerDisplay() {
-    var s = Math.max(0, simState.secondsLeft);
+    var overtime = simState.mode === 'pasado' && simState.secondsLeft < 0;
+    var s = overtime ? Math.abs(simState.secondsLeft) : Math.max(0, simState.secondsLeft);
     var m = Math.floor(s / 60);
     var sec = s % 60;
-    var txt = (m < 10 ? '0' : '') + m + ':' + (sec < 10 ? '0' : '') + sec;
+    var txt = (overtime ? '+' : '') + (m < 10 ? '0' : '') + m + ':' + (sec < 10 ? '0' : '') + sec;
     var el = document.getElementById('sim-timer-display');
     var wrap = document.getElementById('sim-timer-wrap');
     if (el) el.textContent = txt;
     if (wrap) {
-        wrap.classList.toggle('sim-timer-danger', s <= 120);
+        wrap.classList.toggle('sim-timer-danger', simState.mode !== 'pasado' && s <= 120);
+        wrap.title = simState.mode === 'pasado' ? '100 minutos de referencia. Puedes seguir respondiendo después; el signo + indica tiempo adicional.' : '';
     }
 }
 
@@ -3311,7 +3314,9 @@ window.finalizarSimulacro = function () {
     clearInterval(simState.timerInterval);
     simState.timerInterval = null;
 
-    var tiempoUsado = simState.duracion * 60 - Math.max(0, simState.secondsLeft);
+    var tiempoUsado = simState.mode === 'pasado'
+        ? Math.max(0, Math.floor((Date.now() - simState.startTimestamp) / 1000))
+        : simState.duracion * 60 - Math.max(0, simState.secondsLeft);
     var totalMin = Math.floor(tiempoUsado / 60);
     var totalSec = tiempoUsado % 60;
 
