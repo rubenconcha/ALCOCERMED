@@ -1,0 +1,2123 @@
+{
+  "morfo_01_anatomia_y_fisiologia__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_01_anatomia_y_fisiologia__03.webp",
+    "alt": "FIGURA 1.6 Uso de herramienta primitiva por un primate. Los chimpancés tienen manos prensiles y ojos hacia el frente, característicos de los primates. Estos rasgos dotan a los primates de visión estereoscópica (percepción de la profundidad) y buena coordinación entre ojos y manos, dos factores de gran importancia en la evolución del ser humano.",
+    "book": "morfo",
+    "pdfPage": 39,
+    "bbox": [
+      74.79350280761719,
+      70.56101989746094,
+      203.5933380126953,
+      208.6810302734375
+    ]
+  },
+  "morfo_01_anatomia_y_fisiologia__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_01_anatomia_y_fisiologia__04.webp",
+    "alt": "FIGURA 1.7 Jerarquía estructural del cuerpo.",
+    "book": "morfo",
+    "pdfPage": 41,
+    "bbox": [
+      323.1935119628906,
+      70.56097412109375,
+      587.9906005859375,
+      459.48095703125
+    ]
+  },
+  "morfo_01_anatomia_y_fisiologia__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_01_anatomia_y_fisiologia__05.webp",
+    "alt": "FIGURA 1.8 Variaciones anatómicas de riñones y principales arterias cerca del corazón.",
+    "book": "morfo",
+    "pdfPage": 43,
+    "bbox": [
+      57.99349594116211,
+      72.36100769042969,
+      179.0315704345703,
+      249.48101806640625
+    ]
+  },
+  "morfo_02_quimica_de_la_vida__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_02_quimica_de_la_vida__01.webp",
+    "alt": "FIGURA 2.7 Enlaces covalentes no polares y polares. a) Un enlace covalente no polar entre dos átomos de carbono, formado por electrones que pasan una cantidad de tiempo igual alrededor de cada núcleo, como lo representa la nube azul simétrica. b) Un enlace covalente polar, en que los electrones orbitan un núcleo durante más tiempo que al otro, como lo representa la nube asimétrica. Esto da como resultado una carga negativa ligera (δ–) en la región donde los electrones pasan la mayor parte de su tiempo, y una carga positiva ligera (δ+) en el otro polo.",
+    "book": "morfo",
+    "pdfPage": 77,
+    "bbox": [
+      342.9940185546875,
+      174.3609619140625,
+      504.1602783203125,
+      262.68096923828125
+    ]
+  },
+  "morfo_02_quimica_de_la_vida__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_02_quimica_de_la_vida__02.webp",
+    "alt": "FIGURA 2.9 Agua y esferas de hidratación. a) Una molécula de agua con su ángulo de enlace y su polaridad. b) Las moléculas de agua se acumulan alrededor de un ion sodio con sus polos de oxígeno con carga negativa orientados hacia el Na+ y alrededor del ion cloro con sus polos con carga positiva orientados hacia el Cl–.",
+    "book": "morfo",
+    "pdfPage": 79,
+    "bbox": [
+      81.3940200805664,
+      87.36097717285156,
+      272.9615173339844,
+      277.68096923828125
+    ]
+  },
+  "morfo_02_quimica_de_la_vida__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_02_quimica_de_la_vida__04.webp",
+    "alt": "FIGURA 2.8 Enlaces de hidrógeno en el agua. Los enlaces covalentes polares en moléculas de agua permiten que cada átomo de oxígeno forme un enlace de hidrógeno con un átomo de hidrógeno de una molécula vecina. Por tanto, las moléculas de agua se atraen de manera débil entre sí.",
+    "book": "morfo",
+    "pdfPage": 78,
+    "bbox": [
+      31.593971252441406,
+      70.56097412109375,
+      302.2235107421875,
+      348.48095703125
+    ]
+  },
+  "morfo_02_quimica_de_la_vida__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_02_quimica_de_la_vida__06.webp",
+    "alt": "FIGURA 2.13 Reacciones de descomposición, síntesis e intercambio. a) En una reacción de descomposición, moléculas grandes se descomponen en otras más simples. b) En una reacción de síntesis, moléculas más pequeñas se unen para formar otras más grandes. c) En una reacción de intercambio, dos moléculas intercambian átomos.",
+    "book": "morfo",
+    "pdfPage": 85,
+    "bbox": [
+      240.39398193359375,
+      70.56097412109375,
+      355.5487060546875,
+      310.08099365234375
+    ]
+  },
+  "morfo_03_forma_y_funcion_celulares__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_03_forma_y_funcion_celulares__02.webp",
+    "alt": "FIGURA 3.10 Microvellosidades y el glucocáliz (TEM). Las microvellosidades están ancladas por microfilamentos de actina, que ocupan la parte central de cada microvellosidad y se proyectan hacia el citoplasma. a) Corte longitudinal, perpendicular a la superficie celular. b) Corte transversal.",
+    "book": "morfo",
+    "pdfPage": 116,
+    "bbox": [
+      347.1940002441406,
+      95.760986328125,
+      513.3218994140625,
+      360.48101806640625
+    ]
+  },
+  "morfo_03_forma_y_funcion_celulares__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_03_forma_y_funcion_celulares__03.webp",
+    "alt": "FIGURA 3.19 Transporte activo secundario. En la superficie basal de la célula, una bomba de Na+ y K+ elimina los iones sodio (Na+) del citoplasma, para mantener baja concentración de sodio dentro de la célula. En la superficie apical, el Na+ entra en la célula mediante difusión facilitada, siguiendo su gradiente de concentración. Sólo puede lograr su ingreso a la célula mediante la unión a un portador, que es la molécula que transporta sodio y glucosa (SGLT) y, a la vez, fija y transporta glucosa. El SGLT no consume ATP, pero depende de la bomba de consumo de ATP en la base de la célula.",
+    "book": "morfo",
+    "pdfPage": 124,
+    "bbox": [
+      36.42279815673828,
+      348.27410888671875,
+      299.61700439453125,
+      755.684326171875
+    ]
+  },
+  "morfo_04_genetica_y_funcion_celular__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_04_genetica_y_funcion_celular__01.webp",
+    "alt": "FIGURA 4.16 Mitosis. Las fotografías muestran la mitosis en huevos de pescado blanco, en los cuales es fácil observar los cromosomas. En los dibujos, se ilustra una célula hipotética con sólo dos pares de cromosomas; en seres humanos, hay 23 pares.",
+    "book": "morfo",
+    "pdfPage": 161,
+    "bbox": [
+      44.19350814819336,
+      47.1610107421875,
+      597.1538696289062,
+      766.0809326171875
+    ]
+  },
+  "morfo_04_genetica_y_funcion_celular__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_04_genetica_y_funcion_celular__04.webp",
+    "alt": "FIGURA 4.11 Procesamiento y secreción de proteínas. Los ribosomas sintetizan algunas proteínas en el ER rugoso; las vesículas de transporte llevan estas proteínas a la cisterna más cercana del aparato de Golgi, que modifica la estructura de la proteína, la transfiere de una cisterna a la siguiente y, por último, la empaca en vesículas de Golgi; algunas de éstas permanecen dentro de la célula y se convierten en lisosomas, mientras que otras migran a la membrana plasmática y liberan el producto celular mediante exocitosis.",
+    "book": "morfo",
+    "pdfPage": 155,
+    "bbox": [
+      31.593502044677734,
+      50.76104736328125,
+      618.8466186523438,
+      519.4810180664062
+    ]
+  },
+  "morfo_04_genetica_y_funcion_celular__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_04_genetica_y_funcion_celular__05.webp",
+    "alt": "FIGURA 4.16 Mitosis. Las fotografías muestran la mitosis en huevos de pescado blanco, en los cuales es fácil observar los cromosomas. En los dibujos, se ilustra una célula hipotética con sólo dos pares de cromosomas; en seres humanos, hay 23 pares.",
+    "book": "morfo",
+    "pdfPage": 161,
+    "bbox": [
+      44.19350814819336,
+      47.1610107421875,
+      597.1538696289062,
+      766.0809326171875
+    ]
+  },
+  "morfo_04_genetica_y_funcion_celular__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_04_genetica_y_funcion_celular__06.webp",
+    "alt": "FIGURA 4.22 Funciones del entorno y la herencia en la determinación de un fenotipo. El color café de los ojos requiere fenilalanina de la dieta (entorno) y dos enzimas codificadas por vía genética (hereditarias) para convertir la fenilalanina en melanina, el pigmento de los ojos.",
+    "book": "morfo",
+    "pdfPage": 166,
+    "bbox": [
+      73.59349060058594,
+      63.36100769042969,
+      237.61094665527344,
+      303.48101806640625
+    ]
+  },
+  "morfo_05_histologia__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_05_histologia__01.webp",
+    "alt": "FIGURA 5.1 La interpretación tridimensional de imágenes bidimensionales. a) Huevo cocido. Obsérvese que los cortes superficiales (arriba a la izquierda y la derecha) no incluirían la yema, de la misma manera en que el corte de un tejido puede no incluir un núcleo u otra estructura. b) Sopa de codito, con aspecto similar al de varios conductos y túbulos curvos. Un corte alejado de la curvatura daría la impresión de dos túbulos separados; un corte cerca de la curvatura mostraría dos cavidades (luces) interconectadas; y una sección aún más alejada podría no incluir la luz (hueco interno) por completo. c) Una glándula con forma de resorte en tres dimensiones y cómo se vería en un corte vertical de un tejido como el que recubre al útero.",
+    "book": "morfo",
+    "pdfPage": 173,
+    "bbox": [
+      327.3940124511719,
+      429.3609619140625,
+      431.0302429199219,
+      676.0809936523438
+    ]
+  },
+  "morfo_05_histologia__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_05_histologia__02.webp",
+    "alt": "FIGURA 5.3 Formas de células y tipos de epitelios. El epitelio cilíndrico seudoestratificado es un tipo especial de epitelio simple que da el falso aspecto de varias capas celulares.",
+    "book": "morfo",
+    "pdfPage": 176,
+    "bbox": [
+      419.79400634765625,
+      196.37208557128906,
+      560.7168579101562,
+      313.2236328125
+    ]
+  },
+  "morfo_05_histologia__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_05_histologia__05.webp",
+    "alt": "FIGURA 5.25 Músculo estriado. (×400)",
+    "book": "morfo",
+    "pdfPage": 193,
+    "bbox": [
+      62.193992614746094,
+      290.760986328125,
+      227.91445922851562,
+      403.6809997558594
+    ]
+  },
+  "morfo_06_sistema_tegumentario__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_06_sistema_tegumentario__01.webp",
+    "alt": "FIGURA 6.5 La dermis. a) Vista bajo el microscopio de luz de piel axilar; el colágeno aparece teñido de azul. b) La capa papilar, hecha de tejido laxo (areolar), forma las papilas dérmicas. c) La capa reticular, formada por tejido conjuntivo denso irregular, forma las cuatro quintas partes más profundas de la dermis. (Tomada de R. G. Kessel y R. H. Kardon. Tissues and Organs: A Text-Atlas of Scanning Electron Microscopy [W. H. Freeman, 1979].)",
+    "book": "morfo",
+    "pdfPage": 214,
+    "bbox": [
+      311.79351806640625,
+      71.76095581054688,
+      565.5380249023438,
+      214.68096923828125
+    ]
+  },
+  "morfo_06_sistema_tegumentario__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_06_sistema_tegumentario__04.webp",
+    "alt": "FIGURA 6.5 La dermis. a) Vista bajo el microscopio de luz de piel axilar; el colágeno aparece teñido de azul. b) La capa papilar, hecha de tejido laxo (areolar), forma las papilas dérmicas. c) La capa reticular, formada por tejido conjuntivo denso irregular, forma las cuatro quintas partes más profundas de la dermis. (Tomada de R. G. Kessel y R. H. Kardon. Tissues and Organs: A Text-Atlas of Scanning Electron Microscopy [W. H. Freeman, 1979].)",
+    "book": "morfo",
+    "pdfPage": 214,
+    "bbox": [
+      311.79351806640625,
+      71.76095581054688,
+      565.5380249023438,
+      214.68096923828125
+    ]
+  },
+  "morfo_07_tejido_oseo__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_07_tejido_oseo__03.webp",
+    "alt": "FIGURA 7.3 Células óseas y su desarrollo. a) Las células osteogénicas dan lugar a osteoblastos, que depositan matriz alrededor de sí mismos y se transforman en osteocitos. b) Los citoblastos de la médula ósea se funden para formar osteoclastos.",
+    "book": "morfo",
+    "pdfPage": 238,
+    "bbox": [
+      34.593502044677734,
+      44.76092529296875,
+      587.6443481445312,
+      405.48095703125
+    ]
+  },
+  "morfo_07_tejido_oseo__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_07_tejido_oseo__04.webp",
+    "alt": "FIGURA 7.3 Células óseas y su desarrollo. a) Las células osteogénicas dan lugar a osteoblastos, que depositan matriz alrededor de sí mismos y se transforman en osteocitos. b) Los citoblastos de la médula ósea se funden para formar osteoclastos.",
+    "book": "morfo",
+    "pdfPage": 238,
+    "bbox": [
+      34.593502044677734,
+      44.76092529296875,
+      587.6443481445312,
+      405.48095703125
+    ]
+  },
+  "morfo_07_tejido_oseo__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_07_tejido_oseo__05.webp",
+    "alt": "FIGURA 7.12 Zonas de la metáfisis. En la micrografía se muestra la transición de cartílago a hueso en la zona de crecimiento de un hueso largo.",
+    "book": "morfo",
+    "pdfPage": 246,
+    "bbox": [
+      111.39347839355469,
+      69.96099853515625,
+      395.06884765625,
+      469.0810241699219
+    ]
+  },
+  "morfo_08_sistema_oseo__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_08_sistema_oseo__02.webp",
+    "alt": "FIGURA 8.17 El cráneo fetal cerca del momento del parto.",
+    "book": "morfo",
+    "pdfPage": 278,
+    "bbox": [
+      120.99349975585938,
+      263.760986328125,
+      247.71888732910156,
+      434.8809814453125
+    ]
+  },
+  "morfo_08_sistema_oseo__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_08_sistema_oseo__03.webp",
+    "alt": "FIGURA 8.18 La columna vertebral. FIGURA 8.19 Curvaturas de la columna vertebral en el adulto.",
+    "book": "morfo",
+    "pdfPage": 279,
+    "bbox": [
+      326.79351806640625,
+      84.36102294921875,
+      591.590576171875,
+      477.4810485839844
+    ]
+  },
+  "morfo_08_sistema_oseo__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_08_sistema_oseo__04.webp",
+    "alt": "FIGURA 8.27 La caja torácica y la cintura escapular (vista anterior).",
+    "book": "morfo",
+    "pdfPage": 285,
+    "bbox": [
+      186.99349975585938,
+      449.1609802246094,
+      457.8375244140625,
+      729.4810180664062
+    ]
+  },
+  "morfo_08_sistema_oseo__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_08_sistema_oseo__05.webp",
+    "alt": "FIGURA 8.29 Articulación de la 6a. costilla con las vértebras T5 y T6. a) Vista anterior. Nótese la relación de las carillas articulares de la costilla con las carillas costales de las dos vértebras. b) Vista superior. Obsérvese que la costilla se articula con una vértebra en dos puntos: la carilla costal en el cuerpo vertebral y la carilla costal transversa en la apófisis transversa.",
+    "book": "morfo",
+    "pdfPage": 287,
+    "bbox": [
+      52.593502044677734,
+      371.1609802246094,
+      220.1159210205078,
+      515.8809814453125
+    ]
+  },
+  "morfo_08_sistema_oseo__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_08_sistema_oseo__06.webp",
+    "alt": "FIGURA 8.35 La cintura pélvica. a) Vista anterosuperior, inclinada un poco hacia el lector para mostrar la base del sacro y el estrecho superior de la pelvis. b) Sección media, para mostrar la pelvis mayor y menor, así como los estrechos superior e inferior de la pelvis.",
+    "book": "morfo",
+    "pdfPage": 293,
+    "bbox": [
+      384.9934997558594,
+      578.1610107421875,
+      527.5591430664062,
+      742.0809936523438
+    ]
+  },
+  "morfo_09_articulaciones__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_09_articulaciones__02.webp",
+    "alt": "FIGURA 9.5 Estructura de una articulación sinovial simple.",
+    "book": "morfo",
+    "pdfPage": 312,
+    "bbox": [
+      31.67489242553711,
+      53.704498291015625,
+      299.9921875,
+      386.22381591796875
+    ]
+  },
+  "morfo_09_articulaciones__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_09_articulaciones__03.webp",
+    "alt": "FIGURA 9.20 Movimientos de la mandíbula.",
+    "book": "morfo",
+    "pdfPage": 324,
+    "bbox": [
+      360.3935241699219,
+      380.7610168457031,
+      465.6640625,
+      531.4810180664062
+    ]
+  },
+  "morfo_09_articulaciones__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_09_articulaciones__04.webp",
+    "alt": "FIGURA 9.12 Flexión y extensión. a) Flexión y extensión del codo. b) Flexión, extensión e hiperextensión de la muñeca. c) Flexión e hiperextensión del hombro. d) Flexión y extensión de la cadera y la rodilla.",
+    "book": "morfo",
+    "pdfPage": 320,
+    "bbox": [
+      19.593502044677734,
+      264.96099853515625,
+      236.03965759277344,
+      421.6809997558594
+    ]
+  },
+  "morfo_09_articulaciones__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_09_articulaciones__05.webp",
+    "alt": "FIGURA 9.12 Flexión y extensión. a) Flexión y extensión del codo. b) Flexión, extensión e hiperextensión de la muñeca. c) Flexión e hiperextensión del hombro. d) Flexión y extensión de la cadera y la rodilla.",
+    "book": "morfo",
+    "pdfPage": 320,
+    "bbox": [
+      19.593502044677734,
+      264.96099853515625,
+      236.03965759277344,
+      421.6809997558594
+    ]
+  },
+  "morfo_10_sistema_muscular__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_10_sistema_muscular__02.webp",
+    "alt": "FIGURA 10.11 Músculos del cuello. Los rótulos en negritas indican músculos de los grupos suprahioideos e infrahioideos. Otro músculo del grupo suprahioideo, el geniohioideo, es profundo en relación con el milohioideo y puede verse en la figura 10.8.",
+    "book": "morfo",
+    "pdfPage": 358,
+    "bbox": [
+      200.19351196289062,
+      134.76100158691406,
+      417.631103515625,
+      387.48101806640625
+    ]
+  },
+  "morfo_10_sistema_muscular__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_10_sistema_muscular__04.webp",
+    "alt": "FIGURA 10.27 Cortes transversales seriales a través de una extremidad superior. Cada corte se tomó en el nivel que corresponde a cada letra en la figura de la izquierda, se presenta con el compartimiento muscular posterior hacia la parte inferior de la página, como se ve en la extremidad superior derecha de una persona, de frente al lector con la palma hacia arriba.",
+    "book": "morfo",
+    "pdfPage": 381,
+    "bbox": [
+      240.9935302734375,
+      120.96099853515625,
+      409.51336669921875,
+      299.281005859375
+    ]
+  },
+  "morfo_10_sistema_muscular__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_10_sistema_muscular__06.webp",
+    "alt": "FIGURA 10.7 Expresiones producidas por varios de los músculos faciales. Las acciones comunes de estos músculos suelen ser más sutiles que las mostradas aquí.",
+    "book": "morfo",
+    "pdfPage": 351,
+    "bbox": [
+      339.3935241699219,
+      208.56097412109375,
+      514.4918823242188,
+      437.2809753417969
+    ]
+  },
+  "morfo_11_tejido_muscular__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_11_tejido_muscular__01.webp",
+    "alt": "FIGURA 11.22 Capas de músculo visceral en un corte transversal del esófago. Muchos órganos huecos tienen capas circulares y longitudinales adyacentes de músculo liso.",
+    "book": "morfo",
+    "pdfPage": 458,
+    "bbox": [
+      194.79351806640625,
+      70.56100463867188,
+      300.609375,
+      213.48101806640625
+    ]
+  },
+  "morfo_11_tejido_muscular__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_11_tejido_muscular__02.webp",
+    "alt": "FIGURA 11.2 Estructura de una fibra de músculo estriado. Se trata de una sola célula que contiene 11 miofibrillas (nueve mostradas en el extremo izquierdo y dos cortadas en la parte media de la fibra). Se muestran unos cuantos miofilamentos que se proyectan a partir de la miofibrilla de la izquierda. Su estructura más fina se muestra en la figura 11.3.",
+    "book": "morfo",
+    "pdfPage": 432,
+    "bbox": [
+      43.593502044677734,
+      59.1610107421875,
+      583.9785766601562,
+      452.2810363769531
+    ]
+  },
+  "morfo_11_tejido_muscular__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_11_tejido_muscular__03.webp",
+    "alt": "FIGURA 11.7 Inervación de músculo estriado. a) Uniones neuromusculares, con fibras musculares un poco separadas (LM; compárese con el SEM en la p. 401). b) Estructura de una sola unión neuromuscular.",
+    "book": "morfo",
+    "pdfPage": 437,
+    "bbox": [
+      384.9935302734375,
+      282.36102294921875,
+      505.8680419921875,
+      475.0810241699219
+    ]
+  },
+  "morfo_11_tejido_muscular__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_11_tejido_muscular__04.webp",
+    "alt": "FIGURA 11.10 Mecanismo de contracción del filamento deslizante. Se trata de un ciclo repetitivo de acontecimientos que causa que un filamento delgado se deslice sobre uno grueso y genera tensión en el músculo. Consúltense los pasos numerados correspondientes en la explicación del texto. Los números de esta figura empiezan donde terminan los de la figura 11.9. Esquina inferior izquierda: diagrama de un sarcómero contraído, que muestra el movimiento de los filamentos delgados a través de los gruesos y estrechamiento de las bandas I.",
+    "book": "morfo",
+    "pdfPage": 443,
+    "bbox": [
+      41.19350814819336,
+      60.36114501953125,
+      594.1537475585938,
+      775.0809936523438
+    ]
+  },
+  "morfo_11_tejido_muscular__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_11_tejido_muscular__06.webp",
+    "alt": "FIGURA 11.6 Unidades motoras. Una unidad motora consta de una motoneurona y todas las fibras de músculo estriado a las que inerva. Dos unidades motoras están representadas aquí por las fibras nerviosas y musculares en rojo y azul. Obsérvese que las fibras musculares de una unidad motora no están agrupadas, sino que se distribuyen por todo el músculo y se entremezclan con las fibras de las otras unidades motoras.",
+    "book": "morfo",
+    "pdfPage": 436,
+    "bbox": [
+      306.0521240234375,
+      71.76103210449219,
+      572.2279052734375,
+      311.50067138671875
+    ]
+  },
+  "morfo_12_tejido_nervioso__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_12_tejido_nervioso__01.webp",
+    "alt": "FIGURA 12.5 Variación en la estructura de las neuronas. Figura superior, de izquierda a derecha: dos neuronas multipolares del encéfalo (una célula piramidal y una de Purkinje). Segunda figura, de izquierda a derecha: dos neuronas bipolares (una célula bipolar de la retina y una neurona olfatoria). Tercera figura: una neurona unipolar del tipo que interviene en el sentido del tacto y el dolor. Figura inferior: una neurona anaxónica (célula amacrina) de la retina.",
+    "book": "morfo",
+    "pdfPage": 472,
+    "bbox": [
+      306.3935241699219,
+      70.5609130859375,
+      571.1905517578125,
+      671.2809448242188
+    ]
+  },
+  "morfo_12_tejido_nervioso__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_12_tejido_nervioso__02.webp",
+    "alt": "FIGURA 12.6 Neuroglia del sistema nervioso central.",
+    "book": "morfo",
+    "pdfPage": 475,
+    "bbox": [
+      51.393489837646484,
+      70.56101989746094,
+      584.9598999023438,
+      309.48101806640625
+    ]
+  },
+  "morfo_12_tejido_nervioso__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_12_tejido_nervioso__03.webp",
+    "alt": "FIGURA 12.11 Bases iónicas del potencial de membrana en reposo. Obsérvese que los iones sodio están mucho más concentrados en el líquido extracelular (ECF) que en el intracelular (ICF), mientras que los iones potasio lo están más en el intracelular. Los aniones grandes no pueden penetrar la membrana plasmática y dan al citoplasma una carga negativa en comparación con el líquido extracelular.",
+    "book": "morfo",
+    "pdfPage": 481,
+    "bbox": [
+      316.593505859375,
+      66.36103820800781,
+      529.1307373046875,
+      241.6810302734375
+    ]
+  },
+  "morfo_12_tejido_nervioso__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_12_tejido_nervioso__04.webp",
+    "alt": "FIGURA 12.23 Transmisión en una sinapsis adrenérgica. El receptor de norepinefrina no es un canal iónico. Activa un sistema de segundo mensajero con varios efectos posibles en la célula postsináptica. Los pasos numerados corresponden a la descripción presentada en el texto.",
+    "book": "morfo",
+    "pdfPage": 493,
+    "bbox": [
+      54.393489837646484,
+      56.16107177734375,
+      313.0133056640625,
+      407.88104248046875
+    ]
+  },
+  "morfo_13_medula_reflejos__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_13_medula_reflejos__01.webp",
+    "alt": "FIGURA 13.2 Anatomía de un corte transversal de la médula espinal. a) Relación entre la vértebra, las meninges y el nervio raquídeo. b) Detalle de la médula espinal, las meninges y los nervios raquídeos. c) Corte transversal de la médula espinal lumbar con nervios raquídeos.",
+    "book": "morfo",
+    "pdfPage": 509,
+    "bbox": [
+      107.79350280761719,
+      368.1610107421875,
+      432.8695068359375,
+      635.281005859375
+    ]
+  },
+  "morfo_13_medula_reflejos__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_13_medula_reflejos__03.webp",
+    "alt": "FIGURA 13.9 Anatomía de un ganglio nervioso (corte longitudinal). El ganglio nervioso de la raíz posterior contiene los somas de neuronas sensitivas unipolares que conducen señales de órganos de los sentidos periféricos hacia la médula espinal. Debajo de ésta se encuentra la raíz anterior del nervio raquídeo, que conduce señales motoras lejos de la médula espinal, hacia efectores periféricos. (La raíz anterior no es parte del ganglio nervioso.)",
+    "book": "morfo",
+    "pdfPage": 518,
+    "bbox": [
+      17.19350814819336,
+      200.16102600097656,
+      570.1537475585938,
+      412.08099365234375
+    ]
+  },
+  "morfo_13_medula_reflejos__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_13_medula_reflejos__04.webp",
+    "alt": "FIGURA 13.18 Los plexos sacro y coccígeo.",
+    "book": "morfo",
+    "pdfPage": 527,
+    "bbox": [
+      56.1934928894043,
+      446.1609802246094,
+      584.794189453125,
+      752.8809204101562
+    ]
+  },
+  "morfo_13_medula_reflejos__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_13_medula_reflejos__05.webp",
+    "alt": "FIGURA 13.22 Reflejos flexor y de extensión cruzada. Un estímulo de dolor desencadena un reflejo de retirada que produce una contracción de los músculos flexores de la extremidad afectada. Al mismo tiempo, un reflejo de extensión cruzada lleva a contraer los músculos extensores de la extremidad opuesta. El último reflejo ayuda al equilibrio cuando se eleva la extremidad lesionada. Obsérvese que en cada extremidad, mientras el agonista se contrae, se inhibe la motoneurona alfa que va a su antagonista, como lo indican los signos menos en rojo de la médula espinal ilustrada.",
+    "book": "morfo",
+    "pdfPage": 532,
+    "bbox": [
+      16.593502044677734,
+      54.360992431640625,
+      404.8339538574219,
+      541.0810546875
+    ]
+  },
+  "morfo_13_medula_reflejos__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_13_medula_reflejos__06.webp",
+    "alt": "FIGURA 13.22 Reflejos flexor y de extensión cruzada. Un estímulo de dolor desencadena un reflejo de retirada que produce una contracción de los músculos flexores de la extremidad afectada. Al mismo tiempo, un reflejo de extensión cruzada lleva a contraer los músculos extensores de la extremidad opuesta. El último reflejo ayuda al equilibrio cuando se eleva la extremidad lesionada. Obsérvese que en cada extremidad, mientras el agonista se contrae, se inhibe la motoneurona alfa que va a su antagonista, como lo indican los signos menos en rojo de la médula espinal ilustrada.",
+    "book": "morfo",
+    "pdfPage": 532,
+    "bbox": [
+      16.593502044677734,
+      54.360992431640625,
+      404.8339538574219,
+      541.0810546875
+    ]
+  },
+  "morfo_14_encefalo_pares_craneales__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_14_encefalo_pares_craneales__03.webp",
+    "alt": "FIGURA 14.9 Cortes transversales del tallo encefálico. El nivel de cada corte se muestra en la figura de la derecha. a) El mesencéfalo en corte oblicuo para atravesar el tubérculo cuadrigémino superior. b) La protuberancia. Los bordes rectos indican bordes cortados de los pedúnculos donde se eliminó el cerebelo. c) El bulbo raquídeo.",
+    "book": "morfo",
+    "pdfPage": 552,
+    "bbox": [
+      125.79350280761719,
+      552.9609375,
+      353.8421630859375,
+      753.48095703125
+    ]
+  },
+  "morfo_14_encefalo_pares_craneales__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_14_encefalo_pares_craneales__06.webp",
+    "alt": "FIGURA 14.27 Los pares craneales. a) Base del cerebro, que muestra los 12 pares craneales. b) Fotografía de los pares craneales.",
+    "book": "morfo",
+    "pdfPage": 575,
+    "bbox": [
+      110.79351806640625,
+      96.96099853515625,
+      266.324462890625,
+      481.0810241699219
+    ]
+  },
+  "morfo_15_sistema_nervioso_autonomo__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_15_sistema_nervioso_autonomo__02.webp",
+    "alt": "FIGURA 15.1 Un arco reflejo autónomo. Los barorreceptores detectan que en la arteria carótida se ha elevado la presión arterial. El nervio glosofaríngeo transmite señales al bulbo raquídeo, que produce una respuesta parasimpática del nervio vago para que el ritmo cardiaco se enlentezca, lo que reduce la presión arterial. Las arterias carótidas izquierda y derecha contienen barorreceptores; aquí sólo se muestra la derecha.",
+    "book": "morfo",
+    "pdfPage": 591,
+    "bbox": [
+      57.39350509643555,
+      71.76104736328125,
+      322.1905212402344,
+      456.48101806640625
+    ]
+  },
+  "morfo_15_sistema_nervioso_autonomo__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_15_sistema_nervioso_autonomo__03.webp",
+    "alt": "FIGURA 15.3 Los ganglios nerviosos de la cadena simpática. Vista lateral derecha de la cavidad torácica.",
+    "book": "morfo",
+    "pdfPage": 593,
+    "bbox": [
+      297.9935302734375,
+      500.1610412597656,
+      542.9400024414062,
+      763.0810546875
+    ]
+  },
+  "morfo_15_sistema_nervioso_autonomo__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_15_sistema_nervioso_autonomo__04.webp",
+    "alt": "FIGURA 15.1 Un arco reflejo autónomo. Los barorreceptores detectan que en la arteria carótida se ha elevado la presión arterial. El nervio glosofaríngeo transmite señales al bulbo raquídeo, que produce una respuesta parasimpática del nervio vago para que el ritmo cardiaco se enlentezca, lo que reduce la presión arterial. Las arterias carótidas izquierda y derecha contienen barorreceptores; aquí sólo se muestra la derecha.",
+    "book": "morfo",
+    "pdfPage": 591,
+    "bbox": [
+      57.39350509643555,
+      71.76104736328125,
+      322.1905212402344,
+      456.48101806640625
+    ]
+  },
+  "morfo_16_organos_sentidos__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_16_organos_sentidos__01.webp",
+    "alt": "FIGURA 16.1 Campos receptivos. a) Neurona con un campo receptivo grande, como las que se encuentran en la piel de la espalda. Si se toca la piel en dos lugares muy cercanos dentro de este campo receptivo, el encéfalo lo percibe como un solo punto de contacto. b) Neuronas con campos receptivos pequeños, como las que se encuentran en la punta de los dedos. Es probable que aquí dos puntos cercanos de contacto estimulen dos neuronas diferentes y que se perciban como contactos separados.",
+    "book": "morfo",
+    "pdfPage": 612,
+    "bbox": [
+      39.393489837646484,
+      375.3609924316406,
+      577.0533447265625,
+      715.0809936523438
+    ]
+  },
+  "morfo_16_organos_sentidos__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_16_organos_sentidos__02.webp",
+    "alt": "FIGURA 16.2 Receptores de los sentidos generales. Consúltese el cuadro 16.1 para conocer sus funciones.",
+    "book": "morfo",
+    "pdfPage": 614,
+    "bbox": [
+      36.39352035522461,
+      71.76104736328125,
+      578.6273803710938,
+      418.0810241699219
+    ]
+  },
+  "morfo_16_organos_sentidos__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_16_organos_sentidos__06.webp",
+    "alt": "FIGURA 16.30 Principios de refracción. a) Un medio refractario no desvía los rayos de luz que lo golpean en un ángulo de 90º, pero sí los rayos que entran o salen en un ángulo distinto. b) Índices de refracción del medio desde el aire hasta la retina. Cuanto mayor es la diferencia entre los índices de dos medios, mayor es la fuerza con que se refractan los rayos de luz cuando pasan de uno al otro. En la visión, la mayor parte de la refracción (enfoque) ocurre cuando la luz pasa del aire a la córnea. El cristalino sólo hace ajustes finos en la imagen.",
+    "book": "morfo",
+    "pdfPage": 644,
+    "bbox": [
+      373.2568359375,
+      183.36097717285156,
+      556.113525390625,
+      325.08099365234375
+    ]
+  },
+  "morfo_17_sistema_endocrino__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_17_sistema_endocrino__01.webp",
+    "alt": "FIGURA 17.19 Transporte y acción de las hormonas. Las hormonas hidrofílicas (cuadros amarillos) suelen viajar en la sangre como hormonas libres (no fijadas). Después de dejar la sangre, se fijan a receptores en la superficie de la célula blanco y activan segundos mensajeros. Las hormonas hidrofóbicas (triángulos azules) requieren la ayuda de proteínas de transporte para viajar en la sangre. Después de su disociación de la proteína, dejan la sangre, se difunden en la célula blanco y se fijan a receptores en el núcleo o el citoplasma.",
+    "book": "morfo",
+    "pdfPage": 688,
+    "bbox": [
+      36.050411224365234,
+      379.70989990234375,
+      300.0081787109375,
+      677.7457275390625
+    ]
+  },
+  "morfo_17_sistema_endocrino__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_17_sistema_endocrino__02.webp",
+    "alt": "FIGURA 17.6 Relación entre hipotálamo, hipófisis y órganos blanco. Las hormonas liberadoras hipotalámicas, que se muestran en la parte superior, activan la secreción de todas las hormonas de la adenohipófisis.",
+    "book": "morfo",
+    "pdfPage": 670,
+    "bbox": [
+      169.72984313964844,
+      66.96099853515625,
+      570.7062377929688,
+      539.281005859375
+    ]
+  },
+  "morfo_17_sistema_endocrino__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_17_sistema_endocrino__03.webp",
+    "alt": "FIGURA 17.10 Glándulas paratiroideas. a) Ubicación en la superficie posterior de la glándula tiroidea. b) Histología.",
+    "book": "morfo",
+    "pdfPage": 676,
+    "bbox": [
+      294.3935241699219,
+      70.56097412109375,
+      487.4315185546875,
+      359.2809753417969
+    ]
+  },
+  "morfo_17_sistema_endocrino__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_17_sistema_endocrino__04.webp",
+    "alt": "FIGURA 17.11 Glándula suprarrenal. a) Ubicación y anatomía macroscópica. b) Histología.",
+    "book": "morfo",
+    "pdfPage": 676,
+    "bbox": [
+      350.79351806640625,
+      474.3609619140625,
+      525.1536865234375,
+      762.48095703125
+    ]
+  },
+  "morfo_17_sistema_endocrino__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_17_sistema_endocrino__05.webp",
+    "alt": "FIGURA 17.13 Gónadas. a) Histología de un ovario; comparar con la fotografía por SEM de la página 633. b) Histología de los testículos. Las células granulosas del ovario y las células intersticiales de los testículos son endocrinas.",
+    "book": "morfo",
+    "pdfPage": 679,
+    "bbox": [
+      328.593505859375,
+      71.16131591796875,
+      593.3905029296875,
+      397.6501159667969
+    ]
+  },
+  "morfo_17_sistema_endocrino__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_17_sistema_endocrino__06.webp",
+    "alt": "FIGURA 17.6 Relación entre hipotálamo, hipófisis y órganos blanco. Las hormonas liberadoras hipotalámicas, que se muestran en la parte superior, activan la secreción de todas las hormonas de la adenohipófisis.",
+    "book": "morfo",
+    "pdfPage": 670,
+    "bbox": [
+      169.72984313964844,
+      66.96099853515625,
+      570.7062377929688,
+      539.281005859375
+    ]
+  },
+  "morfo_18_sangre__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_18_sangre__01.webp",
+    "alt": "FIGURA 18.2 Componentes de la sangre. Al centrifugar una muestra de sangre, se separan los eritrocitos de los leucocitos y los trombocitos (capa leucocítica) y el plasma. El hematócrito es el porcentaje del volumen integrado por los eritrocitos.",
+    "book": "morfo",
+    "pdfPage": 709,
+    "bbox": [
+      56.1934928894043,
+      70.56097412109375,
+      320.9905090332031,
+      359.281005859375
+    ]
+  },
+  "morfo_18_sangre__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_18_sangre__02.webp",
+    "alt": "FIGURA 18.2 Componentes de la sangre. Al centrifugar una muestra de sangre, se separan los eritrocitos de los leucocitos y los trombocitos (capa leucocítica) y el plasma. El hematócrito es el porcentaje del volumen integrado por los eritrocitos.",
+    "book": "morfo",
+    "pdfPage": 709,
+    "bbox": [
+      56.1934928894043,
+      70.56097412109375,
+      320.9905090332031,
+      359.281005859375
+    ]
+  },
+  "morfo_18_sangre__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_18_sangre__03.webp",
+    "alt": "FIGURA 18.6 Eritropoyesis. Etapas en el desarrollo de un eritrocito.",
+    "book": "morfo",
+    "pdfPage": 714,
+    "bbox": [
+      45.993526458740234,
+      653.1610717773438,
+      539.1942749023438,
+      730.6810302734375
+    ]
+  },
+  "morfo_18_sangre__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_18_sangre__04.webp",
+    "alt": "FIGURA 18.20 Trombocitos. a) Estructura de los trombocitos sanguíneos (TEM). b) Trombocitos formados por el desprendimiento de protrombocitos de un megacariocito. Obsérvese su tamaño y el de los trombocitos en relación con los leucocitos y los eritrocitos.",
+    "book": "morfo",
+    "pdfPage": 731,
+    "bbox": [
+      332.79351806640625,
+      300.36102294921875,
+      525.83154296875,
+      434.2810363769531
+    ]
+  },
+  "morfo_18_sangre__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_18_sangre__05.webp",
+    "alt": "FIGURA 18.17 Estructura de un leucocito (TEM). Eosinófilo. Los lisosomas mostrados son los gránulos que se ven en el citoplasma del eosinófilo en el cuadro 18.6.",
+    "book": "morfo",
+    "pdfPage": 724,
+    "bbox": [
+      306.9935302734375,
+      70.56100463867188,
+      526.2437744140625,
+      289.68096923828125
+    ]
+  },
+  "morfo_18_sangre__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_18_sangre__06.webp",
+    "alt": "FIGURA 18.21 Hemostasia. a) La vasoconstricción de un vaso sanguíneo roto reduce el sangrado. b) A medida que los trombocitos se adhieren a las fibras de colágeno expuestas de la pared vascular se forma un trombo hemostático. El trombo hemostático sella de manera temporal la rotura. c) A medida que los trombocitos forman una malla con hilos de fibrina se forma un coágulo sanguíneo, lo que crea un sello de larga duración y permite que el vaso se repare.",
+    "book": "morfo",
+    "pdfPage": 732,
+    "bbox": [
+      207.3935089111328,
+      69.96101379394531,
+      386.82684326171875,
+      242.281005859375
+    ]
+  },
+  "morfo_19_corazon__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_19_corazon__01.webp",
+    "alt": "FIGURA 19.9 Ruta de la circulación sanguínea a través del corazón. La ruta que va de 4 a 6 es el circuito pulmonar y de 9 a 11 es el circuito sistémico. Las flechas de color violeta indican sangre con deficiencia de oxígeno y las anaranjadas sangre con abundancia de éste.",
+    "book": "morfo",
+    "pdfPage": 751,
+    "bbox": [
+      75.39350891113281,
+      63.36102294921875,
+      351.1458740234375,
+      393.4809875488281
+    ]
+  },
+  "morfo_19_corazon__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_19_corazon__02.webp",
+    "alt": "FIGURA 19.3 Pericardio y pared cardiaca. En el recuadro se muestran las capas de la pared cardiaca en relación con el pericardio.",
+    "book": "morfo",
+    "pdfPage": 746,
+    "bbox": [
+      5.193508148193359,
+      54.36102294921875,
+      259.5826721191406,
+      412.6810302734375
+    ]
+  },
+  "morfo_19_corazon__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_19_corazon__03.webp",
+    "alt": "FIGURA 19.8 Válvulas cardiacas. a) Vista superior del corazón con la aurícula retirada. b) Fotografía endoscópica de la válvula aórtica vista desde arriba. c) Músculo papilar y cuerdas tendinosas vistas desde el interior del ventrículo derecho. Los extremos superiores de las cuerdas están unidos a las valvas de la válvula AV derecha.",
+    "book": "morfo",
+    "pdfPage": 750,
+    "bbox": [
+      106.65699768066406,
+      118.56097412109375,
+      305.91351318359375,
+      308.2809753417969
+    ]
+  },
+  "morfo_19_corazon__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_19_corazon__05.webp",
+    "alt": "FIGURA 19.12 Sistema cardiaco de conducción. Las señales eléctricas viajan a lo largo de rutas indicadas por las flechas.",
+    "book": "morfo",
+    "pdfPage": 755,
+    "bbox": [
+      180.3935089111328,
+      504.36102294921875,
+      353.00311279296875,
+      724.6810302734375
+    ]
+  },
+  "morfo_19_corazon__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_19_corazon__06.webp",
+    "alt": "FIGURA 19.8 Válvulas cardiacas. a) Vista superior del corazón con la aurícula retirada. b) Fotografía endoscópica de la válvula aórtica vista desde arriba. c) Músculo papilar y cuerdas tendinosas vistas desde el interior del ventrículo derecho. Los extremos superiores de las cuerdas están unidos a las valvas de la válvula AV derecha.",
+    "book": "morfo",
+    "pdfPage": 750,
+    "bbox": [
+      106.65699768066406,
+      118.56097412109375,
+      305.91351318359375,
+      308.2809753417969
+    ]
+  },
+  "morfo_20_circulacion__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_20_circulacion__01.webp",
+    "alt": "FIGURA 20.20 La circulación pulmonar. a) Anatomía macroscópica. b) Anatomía microscópica de los vasos sanguíneos que irrigan los alveolos pulmonares. Todos los alveolos están rodeados por una malla de capilares parecida a un cesto, pero para mostrar los alveolos se omiten en el dibujo los capilares de algunos de ellos.",
+    "book": "morfo",
+    "pdfPage": 801,
+    "bbox": [
+      349.593505859375,
+      232.56097412109375,
+      588.5928955078125,
+      460.6810302734375
+    ]
+  },
+  "morfo_20_circulacion__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_20_circulacion__02.webp",
+    "alt": "FIGURA 20.11 Flujo laminar y efecto del radio vascular. La sangre fluye con más lentitud cerca de la pared vascular, como lo indican las flechas más cortas, que cerca del centro del vaso. a) Cuando el radio del vaso es grande, la velocidad promedio del flujo es elevada. b) Cuando el radio es menor, la velocidad promedio es más baja porque la mayor parte de la sangre se desplaza a menor velocidad a causa de la fricción contra la pared vascular.",
+    "book": "morfo",
+    "pdfPage": 789,
+    "bbox": [
+      328.593505859375,
+      70.56097412109375,
+      529.3472290039062,
+      301.68096923828125
+    ]
+  },
+  "morfo_20_circulacion__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_20_circulacion__03.webp",
+    "alt": "FIGURA 20.11 Flujo laminar y efecto del radio vascular. La sangre fluye con más lentitud cerca de la pared vascular, como lo indican las flechas más cortas, que cerca del centro del vaso. a) Cuando el radio del vaso es grande, la velocidad promedio del flujo es elevada. b) Cuando el radio es menor, la velocidad promedio es más baja porque la mayor parte de la sangre se desplaza a menor velocidad a causa de la fricción contra la pared vascular.",
+    "book": "morfo",
+    "pdfPage": 789,
+    "bbox": [
+      328.593505859375,
+      70.56097412109375,
+      529.3472290039062,
+      301.68096923828125
+    ]
+  },
+  "morfo_20_circulacion__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_20_circulacion__04.webp",
+    "alt": "FIGURA 20.16 Rutas de intercambio capilar de fluidos. Las sustancias químicas atraviesan la pared capilar por los poros de filtración (sólo en capilares fenestrados) por transcitosis, por difusión a través de las células endoteliales y a través de las hendiduras intercelulares.",
+    "book": "morfo",
+    "pdfPage": 794,
+    "bbox": [
+      38.19350814819336,
+      57.65296936035156,
+      271.4523010253906,
+      285.38232421875
+    ]
+  },
+  "morfo_20_circulacion__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_20_circulacion__05.webp",
+    "alt": "FIGURA 20.17 Las fuerzas de filtración y reabsorción capilar. Observe el desplazamiento de la filtración neta en el extremo arterial (izquierda) hacia la reabsorción neta en el extremo venoso (derecha).",
+    "book": "morfo",
+    "pdfPage": 795,
+    "bbox": [
+      68.19349670410156,
+      60.36102294921875,
+      572.9135131835938,
+      421.0809631347656
+    ]
+  },
+  "morfo_21_sistema_linfatico_inmunitario__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_21_sistema_linfatico_inmunitario__01.webp",
+    "alt": "FIGURA 21.2 Elefantiasis, enfermedad tropical causada por obstrucción linfática. Nematodos transmitidos por un mosquito infectan los ganglios linfáticos y bloquean el flujo de linfa y la recuperación del líquido tisular. El edema crónico resultante lleva a fibrosis y engrosamiento de la piel similar al de un elefante. Las extremidades suelen verse afectadas como se muestra aquí; el escroto del hombre y las mamas de la mujer suelen verse afectados de la misma manera.",
+    "book": "morfo",
+    "pdfPage": 839,
+    "bbox": [
+      328.593505859375,
+      95.16102600097656,
+      585.0291748046875,
+      298.08099365234375
+    ]
+  },
+  "morfo_21_sistema_linfatico_inmunitario__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_21_sistema_linfatico_inmunitario__02.webp",
+    "alt": "FIGURA 21.8 Folículo linfático en la mucosa del intestino delgado. Este folículo es parte del tejido linfático relacionado con la mucosa (MALT).",
+    "book": "morfo",
+    "pdfPage": 843,
+    "bbox": [
+      326.79351806640625,
+      70.56095886230469,
+      530.5953369140625,
+      204.48095703125
+    ]
+  },
+  "morfo_21_sistema_linfatico_inmunitario__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_21_sistema_linfatico_inmunitario__04.webp",
+    "alt": "FIGURA 21.21 La acción de las células presentadoras de antígenos (APC). a) Etapas en el procesamiento y la presentación de un antígeno por APC como un macrófago. b) Macrófagos y células reticulares presentadoras de antígenos procesados a linfocitos T cooperadores. [La parte (b) fue tomada de R. G. Kessel y R. H. Kardon, Tissues and Organs: A Text-Atlas of Scanning Electron Microscopy (W. H. Freeman, 1979)].",
+    "book": "morfo",
+    "pdfPage": 862,
+    "bbox": [
+      36.393489837646484,
+      57.96099853515625,
+      298.20013427734375,
+      352.68096923828125
+    ]
+  },
+  "morfo_21_sistema_linfatico_inmunitario__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_21_sistema_linfatico_inmunitario__06.webp",
+    "alt": "FIGURA 21.29 Respuestas primaria y secundaria (anamnési- ca) en la inmunidad humoral. El individuo queda expuesto al antígeno en el día 0 en ambos casos. Obsérvense las diferencias en la velocidad de respuesta, la altura de la cifra de anticuerpos así como la velocidad de declinación en ésta.",
+    "book": "morfo",
+    "pdfPage": 869,
+    "bbox": [
+      89.79348754882812,
+      70.56103515625,
+      234.73556518554688,
+      215.281005859375
+    ]
+  },
+  "morfo_22_aparato_respiratorio__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_22_aparato_respiratorio__01.webp",
+    "alt": "FIGURA 22.3 Anatomía de las vías respiratorias superiores. a) Sección media de la cabeza. b) Anatomía interna. c) Tabique nasal y regiones de la faringe.",
+    "book": "morfo",
+    "pdfPage": 886,
+    "bbox": [
+      380.79351806640625,
+      504.36102294921875,
+      516.9774169921875,
+      703.6810302734375
+    ]
+  },
+  "morfo_22_aparato_respiratorio__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_22_aparato_respiratorio__02.webp",
+    "alt": "FIGURA 22.12 Alveolos pulmonares. a) Grupos de alveolos y su irrigación sanguínea. b) Estructura de un alveolo. c) Estructura de la membrana respiratoria.",
+    "book": "morfo",
+    "pdfPage": 893,
+    "bbox": [
+      26.19350814819336,
+      378.9609680175781,
+      514.7134399414062,
+      714.48095703125
+    ]
+  },
+  "morfo_22_aparato_respiratorio__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_22_aparato_respiratorio__04.webp",
+    "alt": "FIGURA 22.19 La ley de Henry y su relación con el intercambio gaseoso alveolar. a) La Po2 del aire alveolar es al principio más elevada que la de la sangre que llega al alveolo. El oxígeno se difunde en la sangre hasta que las dos alcanzan el equilibrio. b) La Pco2 de la sangre que llega es al principio más elevada que la del aire alveolar. El dióxido de carbono se difunde en el alveolo hasta que las dos alcanzan el equilibrio. Se requieren casi 0.25 segundos para que ambos gases alcancen el equilibrio.",
+    "book": "morfo",
+    "pdfPage": 907,
+    "bbox": [
+      57.6511344909668,
+      69.36099243164062,
+      314.7300720214844,
+      239.6119384765625
+    ]
+  },
+  "morfo_22_aparato_respiratorio__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_22_aparato_respiratorio__05.webp",
+    "alt": "FIGURA 22.25 Intercambio gaseoso sistémico. Las flechas azules muestran los tres mecanismos de carga y transporte de CO2; su grosor representa las cantidades relativas de CO2 cargadas en cada una de las tres formas. Las flechas rojas muestran los dos mecanismos de descarga de O2; su grosor indica las cantidades relativas descargadas por cada mecanismo. Obsérvese que la carga de CO2 libera iones hidrógeno en el eritrocito, y los iones hidrógeno promueven la descarga de O2.",
+    "book": "morfo",
+    "pdfPage": 911,
+    "bbox": [
+      68.19349670410156,
+      388.5610046386719,
+      572.9135131835938,
+      709.6810302734375
+    ]
+  },
+  "morfo_22_aparato_respiratorio__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_22_aparato_respiratorio__06.webp",
+    "alt": "FIGURA 22.14 Centros de control respiratorio en el sistema nervioso central. El grupo respiratorio ventral (VRG) genera el ritmo de la respiración. Su información va a un centro integrador espinal que lleva los nervios intercostales frénicos a los músculos intercostales y el diafragma. El grupo respiratorio dorsal (DRG) es un centro integrador que procesa información de varias fuentes y luego envía señales al VRG para que ajuste el ritmo respiratorio. El DRG obtiene información de los centros encefálicos más elevados que intervienen en la influencia emocional y voluntaria sobre la respiración; a partir del grupo de respiración pontino (PRG); a partir del área quimiosensitiva (quimiorreceptores centrales) del bulbo raquídeo; y de los quimiorreceptores periféricos y receptores de estiramiento por vía de los nervios vagos y glosofaríngeos. La información adicional proveniente de los centros nerviosos más altos pasa por alto el DRG y el VRG, y va a los centros de integración espinales que controlan los músculos accesorios de la respiración, como los abdominales.",
+    "book": "morfo",
+    "pdfPage": 897,
+    "bbox": [
+      232.00949096679688,
+      67.5718994140625,
+      587.2705078125,
+      759.48095703125
+    ]
+  },
+  "morfo_23_aparato_urinario__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_23_aparato_urinario__02.webp",
+    "alt": "FIGURA 23.7 El corpúsculo renal. a) Anatomía del corpúsculo. b) Micrografía de luz del corpúsculo renal y secciones del túbulo renal circundante.",
+    "book": "morfo",
+    "pdfPage": 930,
+    "bbox": [
+      333.3935241699219,
+      89.16099548339844,
+      488.7722473144531,
+      276.48101806640625
+    ]
+  },
+  "morfo_23_aparato_urinario__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_23_aparato_urinario__03.webp",
+    "alt": "FIGURA 23.6 Microcirculación del riñón. Para mayor claridad, sólo se muestran los vasos rectos a la izquierda y los capilares peritubulares a la derecha. En la nefrona yuxtamedular (izquierda), la arteriola eferente da lugar a los vasos rectos de la médula. En la nefrona cortical (derecha), el asa de Henle se hunde un poco en la médula renal y la arteriola eferente da lugar a los capilares peritubulares. (DCT, túbulo contorneado distal; PCT, túbulo contorneado proximal.)",
+    "book": "morfo",
+    "pdfPage": 929,
+    "bbox": [
+      110.19349670410156,
+      87.36102294921875,
+      471.149169921875,
+      488.8810119628906
+    ]
+  },
+  "morfo_23_aparato_urinario__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_23_aparato_urinario__04.webp",
+    "alt": "FIGURA 23.10 Estructura del glomérulo. a) Modelo en resina de un glomérulo y sus arterias cercanas (SEM). Obsérvese la diferencia entre las arteriolas aferentes y las eferentes. b) Capilares sanguíneos del glomérulo cubiertos por los podocitos parecidos a arañas que forman la capa visceral de la cápsula glomerular (SEM). c) Un capilar sanguíneo y un podocito que muestran poros de filtración del capilar perforado y ranuras de filtración entre los pedículos de los podocitos (TEM). (La parte (a) fue tomada de R. G. Kessel y R. H. Kardon, Tissues and Organs: a Text-Atlas of Scanning Electron Microscopy [W. H. Freeman, 1979].)",
+    "book": "morfo",
+    "pdfPage": 934,
+    "bbox": [
+      42.39352035522461,
+      65.76104736328125,
+      220.48114013671875,
+      276.48101806640625
+    ]
+  },
+  "morfo_23_aparato_urinario__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_23_aparato_urinario__05.webp",
+    "alt": "FIGURA 23.18 El transporte máximo. a) En una concentración normal de glucosa en sangre (normoglucemia), las proteínas de transporte de glucosa reabsorben, en el túbulo contorneado proximal, toda la glucosa filtrada por el glomérulo, y la orina está libre de glucosa. b) A una concentración elevada de glucosa en sangre (hiperglucemia), se filtra más glucosa de la que pueden absorber las proteínas de transporte, ahora saturadas. La filtración glomerular de glucosa excede en este caso el máximo de transporte (Tm del túbulo renal. El exceso de glucosa escapa a la reabsorción y aparece en la orina (glucosuria). El volumen de orina se eleva a causa del agua retenida mediante ósmosis en el túbulo renal con la glucosa.",
+    "book": "morfo",
+    "pdfPage": 940,
+    "bbox": [
+      307.1235046386719,
+      62.760986328125,
+      570.3615112304688,
+      428.89019775390625
+    ]
+  },
+  "morfo_24_equilibrio_hidrico_acidobasico__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_24_equilibrio_hidrico_acidobasico__01.webp",
+    "alt": "FIGURA 24.2 Ingesta y excreción típicas de agua en un estado de equilibrio hídrico.",
+    "book": "morfo",
+    "pdfPage": 960,
+    "bbox": [
+      309.9935302734375,
+      476.7610168457031,
+      567.6146240234375,
+      736.6810302734375
+    ]
+  },
+  "morfo_24_equilibrio_hidrico_acidobasico__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_24_equilibrio_hidrico_acidobasico__02.webp",
+    "alt": "FIGURA 24.2 Ingesta y excreción típicas de agua en un estado de equilibrio hídrico.",
+    "book": "morfo",
+    "pdfPage": 960,
+    "bbox": [
+      309.9935302734375,
+      476.7610168457031,
+      567.6146240234375,
+      736.6810302734375
+    ]
+  },
+  "morfo_24_equilibrio_hidrico_acidobasico__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_24_equilibrio_hidrico_acidobasico__06.webp",
+    "alt": "FIGURA 24.13 La relación entre desequilibrios acidobásicos y de potasio. a) En la acidosis, el H+ se difunde en las células y hace que salga K+, lo que eleva la concentración de éste en el líquido extracelular. b) En la alcalosis, el H+ se difunde fuera de las células y el K+ entra para reemplazarlo, reduciendo la concentración de K+ en el ECF.",
+    "book": "morfo",
+    "pdfPage": 974,
+    "bbox": [
+      111.99351501464844,
+      246.36102294921875,
+      302.9674072265625,
+      392.2810363769531
+    ]
+  },
+  "morfo_25_aparato_digestivo__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_25_aparato_digestivo__02.webp",
+    "alt": "FIGURA 25.11 Deglución. a) Etapas del proceso de deglución. b) Radiografía del esófago que muestra una constricción peristáltica arriba de un bolo de material ingerido.",
+    "book": "morfo",
+    "pdfPage": 992,
+    "bbox": [
+      90.39350891113281,
+      56.7611083984375,
+      482.44586181640625,
+      795.48095703125
+    ]
+  },
+  "morfo_25_aparato_digestivo__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_25_aparato_digestivo__03.webp",
+    "alt": "FIGURA 25.17 Control neural y hormonal del estómago.",
+    "book": "morfo",
+    "pdfPage": 1001,
+    "bbox": [
+      225.39349365234375,
+      67.56095886230469,
+      386.73748779296875,
+      274.68096923828125
+    ]
+  },
+  "morfo_25_aparato_digestivo__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_25_aparato_digestivo__04.webp",
+    "alt": "FIGURA 25.21 Anatomía macroscópica de la vesícula biliar, el páncreas y las vías biliares. Se omite el hígado para mostrar con más claridad la vesícula biliar, que se adhiere a su superficie anterior, y los conductos hepáticos, que surgen del tejido hepático.",
+    "book": "morfo",
+    "pdfPage": 1005,
+    "bbox": [
+      97.593505859375,
+      60.36102294921875,
+      540.394287109375,
+      482.281005859375
+    ]
+  },
+  "morfo_25_aparato_digestivo__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_25_aparato_digestivo__05.webp",
+    "alt": "FIGURA 25.28 Absorción de monosacáridos en el intestino delgado. La glucosa y la galactosa son absorbidas por el cotransporte unidireccional SGLT en la membrana apical de la célula de absorción (derecha). La glucosa también se absorbe junto con el agua a través de la ruta paracelular (entre células) mediante arrastre por solvente. La fructuosa se absorbe por separado mediante difusión facilitada. La mayor parte de la fructuosa se convierte en glucosa dentro de la célula epitelial. Los monosacáridos atraviesan la membrana basal de la célula por difusión facilitada (izquierda) y se les absorbe luego en los capilares sanguíneos de las vellosidades.",
+    "book": "morfo",
+    "pdfPage": 1013,
+    "bbox": [
+      325.1891174316406,
+      96.73846435546875,
+      586.0216064453125,
+      218.9388427734375
+    ]
+  },
+  "morfo_25_aparato_digestivo__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_25_aparato_digestivo__06.webp",
+    "alt": "FIGURA 25.31 El intestino grueso.",
+    "book": "morfo",
+    "pdfPage": 1019,
+    "bbox": [
+      203.19351196289062,
+      476.1610107421875,
+      420.5381774902344,
+      691.6810302734375
+    ]
+  },
+  "morfo_26_nutricion_metabolismo__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_26_nutricion_metabolismo__02.webp",
+    "alt": "FIGURA 26.6 Mecanismo quimioosmótico de la síntesis de ATP. Cada complejo de enzimas bombea iones hidrógeno en el espacio entre las membranas mitocondriales. Estos iones hidrógeno se diluyen en la matriz mediante la ATP sintasa, que utiliza su energía para la síntesis de ATP.",
+    "book": "morfo",
+    "pdfPage": 1045,
+    "bbox": [
+      147.99349975585938,
+      98.76092529296875,
+      515.7685546875,
+      496.6809387207031
+    ]
+  },
+  "morfo_27_reproductor_masculino__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_27_reproductor_masculino__01.webp",
+    "alt": "FIGURA 27.1 Síndrome de insensibilidad androgénica. Estas hermanas son hombres, desde el punto de vista genético (XY). Cuentan con testículos y secretan testosterona, pero las células de destino carecen de receptores para ésta, de modo que la testosterona no puede ejercer sus efectos masculinizantes. Los genitales externos y las características sexuales secundarias son femeninos, pero no hay ovarios, útero ni vagina.",
+    "book": "morfo",
+    "pdfPage": 1064,
+    "bbox": [
+      46.593502044677734,
+      294.9609680175781,
+      297.8108825683594,
+      638.8809814453125
+    ]
+  },
+  "morfo_27_reproductor_masculino__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_27_reproductor_masculino__02.webp",
+    "alt": "FIGURA 27.10 Histología de los testículos. a) Micrografía de rastreo de electrones. b) Micrografía de luz. La parte (b) es de una región del túbulo que no tenía espermatozoides maduros en ese momento. [La parte (a) se tomó de RG Kessel y RH Kardon. Tissues and Organs. A Text-Atlas of Scanning Electron Microscopy (WH Freeman, 1979).]",
+    "book": "morfo",
+    "pdfPage": 1071,
+    "bbox": [
+      128.1935272216797,
+      480.96099853515625,
+      311.16131591796875,
+      626.281005859375
+    ]
+  },
+  "morfo_27_reproductor_masculino__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_27_reproductor_masculino__05.webp",
+    "alt": "FIGURA 27.16 Espermiogénesis. En este proceso, las espermátides descartan el exceso de citoplasma, dan lugar a colas y se vuelven espermatozoides.",
+    "book": "morfo",
+    "pdfPage": 1081,
+    "bbox": [
+      464.79351806640625,
+      435.36102294921875,
+      567.05322265625,
+      718.6810302734375
+    ]
+  },
+  "morfo_27_reproductor_masculino__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_27_reproductor_masculino__06.webp",
+    "alt": "FIGURA 27.13 Relaciones hormonales entre el hipotálamo, la hipófisis y los testículos.",
+    "book": "morfo",
+    "pdfPage": 1076,
+    "bbox": [
+      35.19350814819336,
+      70.56097412109375,
+      588.1537475585938,
+      503.2809753417969
+    ]
+  },
+  "morfo_28_reproductor_femenino__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_28_reproductor_femenino__01.webp",
+    "alt": "FIGURA 28.3 El aparato reproductor femenino y los ligamentos de soporte. a) Vista posterior del aparato reproductor. b) Relación de la trompa de Falopio y el ovario con los ligamentos de soporte. c) Vista anterior de los principales órganos reproductores femeninos en un cadáver.",
+    "book": "morfo",
+    "pdfPage": 1096,
+    "bbox": [
+      65.79350280761719,
+      70.56097412109375,
+      503.54400634765625,
+      455.8810119628906
+    ]
+  },
+  "morfo_28_reproductor_femenino__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_28_reproductor_femenino__02.webp",
+    "alt": "FIGURA 28.14 El ciclo sexual femenino. a) El ciclo ovárico (acontecimientos en el ovario). b) El ciclo menstrual (acontecimientos en el útero). Las dos concentraciones hormonales en la parte (a) están dibujadas a la misma escala, pero las de la parte (b) no. La concentración máxima de progesterona es casi 17 veces más elevada que la concentración de estradiol máxima.",
+    "book": "morfo",
+    "pdfPage": 1109,
+    "bbox": [
+      114.39350891113281,
+      185.76097106933594,
+      557.9406127929688,
+      266.8809814453125
+    ]
+  },
+  "morfo_28_reproductor_femenino__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_28_reproductor_femenino__04.webp",
+    "alt": "FIGURA 28.16 Cambios endometriales a través del ciclo menstrual. a) Fase proliferativa tardía. El endometrio tiene 2 a 3 mm de grueso y cuenta con glándulas endometriales rectas y estrechas. Las arterias en espiral penetran hacia arriba entre las glándulas endometriales. b) Fase secretora. El endometrio ha engrosado a 5 o 6 mm al acumular glucógeno y moco. Las glándulas endometriales son mucho más anchas y con enroscamiento más distintivo, que muestra un aspecto de zigzag o “aserrado” en los cortes histológicos. c) Fase menstrual. El tejido isquémico ha empezado a morir y se desprende de la pared uterina, con sangrado de vasos sanguíneos rotos y acumulación de sangre en el tejido y la luz uterina.",
+    "book": "morfo",
+    "pdfPage": 1112,
+    "bbox": [
+      146.7935028076172,
+      70.56097412109375,
+      522.3941040039062,
+      436.0809631347656
+    ]
+  },
+  "morfo_28_reproductor_femenino__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_28_reproductor_femenino__05.webp",
+    "alt": "FIGURA 28.21 Parto. a) Coronación. La cabeza del bebé, entre los dedos de un ayudante, ha empezado a dilatar la vulva. b) Surgimiento de la cabeza. c) La placenta y las membranas fetales (posparto).",
+    "book": "morfo",
+    "pdfPage": 1120,
+    "bbox": [
+      310.593505859375,
+      70.56103515625,
+      575.3905029296875,
+      245.281005859375
+    ]
+  },
+  "morfo_28_reproductor_femenino__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_28_reproductor_femenino__06.webp",
+    "alt": "FIGURA 28.22 Secreción de prolactina en la mujer que amamanta. Cada vez que el lactante se alimenta, se produce un brote de secreción de prolactina materna. Ésta estimula la síntesis de leche que estará disponible en el siguiente episodio de amamantamiento.",
+    "book": "morfo",
+    "pdfPage": 1122,
+    "bbox": [
+      40.593502044677734,
+      506.1610107421875,
+      295.7064208984375,
+      700.6810302734375
+    ]
+  },
+  "morfo_29_desarrollo_envejecimiento__01": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_29_desarrollo_envejecimiento__01.webp",
+    "alt": "FIGURA 29.1 Fecundación y bloqueo lento de la poliespermia.",
+    "book": "morfo",
+    "pdfPage": 1132,
+    "bbox": [
+      78.99349975585938,
+      381.9609680175781,
+      558.5135498046875,
+      766.6810302734375
+    ]
+  },
+  "morfo_29_desarrollo_envejecimiento__02": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_29_desarrollo_envejecimiento__02.webp",
+    "alt": "FIGURA 29.2 Migración de los productos de la concepción. El óvulo es fecundado en el extremo distal de la trompa de Falopio, y el preembrión empieza la segmentación mientras migra al útero.",
+    "book": "morfo",
+    "pdfPage": 1133,
+    "bbox": [
+      60.99349594116211,
+      378.30572509765625,
+      587.436767578125,
+      774.2755126953125
+    ]
+  },
+  "morfo_29_desarrollo_envejecimiento__03": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_29_desarrollo_envejecimiento__03.webp",
+    "alt": "FIGURA 29.5 Formación de las capas germinales primarias (gastrulación). Vista compuesta del disco embrionario en los días 15 a 16. Las células del epiblasto migran sobre la superficie y hacia abajo del surco primitivo, reemplazando primero a las células del hipoblasto con endodermo, llenando luego el espacio con mesodermo. Después de completado este proceso, a la capa más superior se le considera ectodermo.",
+    "book": "morfo",
+    "pdfPage": 1137,
+    "bbox": [
+      50.9381103515625,
+      53.512176513671875,
+      270.76922607421875,
+      223.6782684326172
+    ]
+  },
+  "morfo_29_desarrollo_envejecimiento__04": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_29_desarrollo_envejecimiento__04.webp",
+    "alt": "FIGURA 29.9 Placenta y cordón umbilical. a) El lado fetal, que muestra vasos sanguíneos, el cordón umbilical y parte del saco amniótico unido al margen inferior izquierdo. b) El lado materno (uterino), donde las vellosidades coriónicas dan a la placenta una textura más rugosa.",
+    "book": "morfo",
+    "pdfPage": 1141,
+    "bbox": [
+      57.99348068237305,
+      294.9609680175781,
+      317.56103515625,
+      518.8809814453125
+    ]
+  },
+  "morfo_29_desarrollo_envejecimiento__05": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_29_desarrollo_envejecimiento__05.webp",
+    "alt": "FIGURA 29.10 Circulación sanguínea en el feto y el neonato. Los términos en negritas en la parte (a) indican las tres derivaciones en la circulación fetal, que permiten a la mayor parte de la sangre omitir el hígado y los pulmones. Los términos en negritas en la parte (b) indican los vestigios posparto de la estructura fetal.",
+    "book": "morfo",
+    "pdfPage": 1143,
+    "bbox": [
+      56.1934928894043,
+      50.76104736328125,
+      609.1538696289062,
+      765.4810180664062
+    ]
+  },
+  "morfo_29_desarrollo_envejecimiento__06": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_29_desarrollo_envejecimiento__06.webp",
+    "alt": "FIGURA 29.16 Senescencia de la piel. La piel muestra envejecimiento y fotoenvejecimiento intrínsecos. Los profundos surcos vistos en el rostro de esta mujer de edad avanzada son resultado sobre todo del fotoenvejecimiento.",
+    "book": "morfo",
+    "pdfPage": 1154,
+    "bbox": [
+      39.993465423583984,
+      71.1610107421875,
+      297.5301208496094,
+      418.08099365234375
+    ]
+  },
+  "biocel_01_introduccion__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_01_introduccion__01.webp",
+    "alt": "FIGURA 1-1 Esquema general de la organización de la célula eucariota. En las principales estructuras celulares se indica el capítulo de",
+    "book": "bio",
+    "pdfPage": 38,
+    "bbox": [
+      5.000000476837158,
+      57.514862060546875,
+      231.95001220703125,
+      200.20965576171875
+    ]
+  },
+  "biocel_01_introduccion__03": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_01_introduccion__03.webp",
+    "alt": "FIGURA 1-4 Esquema de la organización celular de las bacterias. A. Organización general con sus estructuras principales. B.",
+    "book": "bio",
+    "pdfPage": 42,
+    "bbox": [
+      5.000000476837158,
+      57.514892578125,
+      231.95001220703125,
+      509.1454772949219
+    ]
+  },
+  "biocel_01_introduccion__04": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_01_introduccion__04.webp",
+    "alt": "FIGURA 1-5 Estructura de algunos virus. A. Representación de un adenovirus. B. Esquema de un bacteriófago. C. Imagen de",
+    "book": "bio",
+    "pdfPage": 47,
+    "bbox": [
+      5.000000476837158,
+      137.9152374267578,
+      231.95001220703125,
+      337.0638122558594
+    ]
+  },
+  "biocel_02_metodos_y_tecnicas__03": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_02_metodos_y_tecnicas__03.webp",
+    "alt": "FIGURA 2-9 A. Procedimiento para realizar la técnica de la criofractura. 1, preparación de la muestra en un soporte; 2, congelación; 3,",
+    "book": "bio",
+    "pdfPage": 67,
+    "bbox": [
+      5.0,
+      57.51490783691406,
+      231.93780517578125,
+      294.6648864746094
+    ]
+  },
+  "biocel_03_membrana_estructura__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_03_membrana_estructura__01.webp",
+    "alt": "FIGURA 3-3 Esquema de la membrana según el modelo de mosaico fluido. Singer y Nicolson imaginaron la membrana como una",
+    "book": "bio",
+    "pdfPage": 128,
+    "bbox": [
+      5.0,
+      57.51487731933594,
+      231.92816162109375,
+      187.71490478515625
+    ]
+  },
+  "biocel_03_membrana_estructura__02": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_03_membrana_estructura__02.webp",
+    "alt": "FIGURA 3-8 Tipos de movimientos de las moléculas de fosfolípido en la bicapa. (Ilustración de: E. Maldonado.)",
+    "book": "bio",
+    "pdfPage": 136,
+    "bbox": [
+      5.0,
+      137.91529846191406,
+      336.6500244140625,
+      370.4121398925781
+    ]
+  },
+  "biocel_03_membrana_estructura__03": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_03_membrana_estructura__03.webp",
+    "alt": "FIGURA 3-10 Distribución de las moléculas de colesterol en la bicapa lipídica. (Ilustración de: E. Maldonado.)",
+    "book": "bio",
+    "pdfPage": 138,
+    "bbox": [
+      4.999999523162842,
+      57.51490020751953,
+      335.32110595703125,
+      172.46490478515625
+    ]
+  },
+  "biocel_03_membrana_estructura__04": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_03_membrana_estructura__04.webp",
+    "alt": "FIGURA 3-16 Proteínas de membrana. 1, proteína integral de paso único con un segmento transmembrana en hélice α; 2, proteína integral de paso múltiple con varios segmentos transmembrana en hélice α; 3, proteína integral de paso múltiple con varias hebras β enrolladas (barril β); 4, proteína integral monotópica; 5, proteína anclada a lípido unida por un enlace covalente a un ácido graso de la",
+    "book": "bio",
+    "pdfPage": 146,
+    "bbox": [
+      5.0,
+      410.2275390625,
+      231.91590881347656,
+      531.6275634765625
+    ]
+  },
+  "biocel_03_membrana_estructura__05": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_03_membrana_estructura__05.webp",
+    "alt": "FIGURA 3-20 Esquema simplificado del glucocáliz. (Ilustración de: E. Maldonado.)",
+    "book": "bio",
+    "pdfPage": 156,
+    "bbox": [
+      5.000000476837158,
+      235.715576171875,
+      231.95001220703125,
+      378.4103698730469
+    ]
+  },
+  "biocel_03_membrana_estructura__06": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_03_membrana_estructura__06.webp",
+    "alt": "FIGURA 3-14 Representación de un microdominio o balsa lipídica en la bicapa. GPI, glucosilfosfatidilinositol. (Ilustración de: E. Maldonado.)",
+    "book": "bio",
+    "pdfPage": 143,
+    "bbox": [
+      5.000000476837158,
+      217.115478515625,
+      231.95001220703125,
+      440.6611633300781
+    ]
+  },
+  "biocel_04_microtransporte__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_04_microtransporte__01.webp",
+    "alt": "FIGURA 4-3 Diferencia entre difusión de solutos y ósmosis. A. En la difusión, los solutos son permeables a la membrana y se mueven",
+    "book": "bio",
+    "pdfPage": 173,
+    "bbox": [
+      5.0,
+      57.514892578125,
+      231.94378662109375,
+      385.1648864746094
+    ]
+  },
+  "biocel_04_microtransporte__02": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_04_microtransporte__02.webp",
+    "alt": "FIGURA 4-12 Diferencia entre la cinética de la difusión simple (lineal) y de la difusión facilitada (hiperbólica). En la difusión simple, la tasa de transporte aumenta en paralelo al aumento de la concentración del soluto, mientras que en la difusión facilitada la tasa llega a",
+    "book": "bio",
+    "pdfPage": 183,
+    "bbox": [
+      5.0,
+      57.514892578125,
+      231.94497680664062,
+      356.5149230957031
+    ]
+  },
+  "biocel_04_microtransporte__03": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_04_microtransporte__03.webp",
+    "alt": "FIGURA 4-18 Ejemplos de contratransportes (transporte activo de tipo indirecto o secundario): transporte de intercambio de Na+/Ca2+ y",
+    "book": "bio",
+    "pdfPage": 193,
+    "bbox": [
+      4.999999523162842,
+      422.876953125,
+      231.92898559570312,
+      610.376953125
+    ]
+  },
+  "biocel_04_microtransporte__04": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_04_microtransporte__04.webp",
+    "alt": "FIGURA 4-15 Modelo del funcionamiento de la Na+ K+ ATPasa. La bomba alterna entre dos conformaciones: E1 y E2. En la conformación E1, la proteína está abierta hacia el interior celular y presenta afinidad por el Na+, mientras que, en la conformación E2,",
+    "book": "bio",
+    "pdfPage": 188,
+    "bbox": [
+      5.0,
+      385.7165222167969,
+      231.94166564941406,
+      550.8165283203125
+    ]
+  },
+  "biocel_04_microtransporte__06": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_04_microtransporte__06.webp",
+    "alt": "FIGURA 4-25 Modificación de la conductancia iónica durante el potencial de acción. Obsérvese que la curva de conductancia del K+",
+    "book": "bio",
+    "pdfPage": 205,
+    "bbox": [
+      5.000000476837158,
+      57.51490783691406,
+      231.91078186035156,
+      181.46490478515625
+    ]
+  },
+  "biocel_05_endocitosis_exocitosis__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_05_endocitosis_exocitosis__01.webp",
+    "alt": "FIGURA 5-1 Imágenes de microscopía electrónica que muestran el proceso de endocitosis en vesículas revestidas de clatrina. Las flechas señalan las vesículas, y las puntas de flecha, el material extracelular. En la imagen central se observa una depresión revestida",
+    "book": "bio",
+    "pdfPage": 217,
+    "bbox": [
+      4.999999523162842,
+      254.315673828125,
+      231.7890625,
+      316.11566162109375
+    ]
+  },
+  "biocel_05_endocitosis_exocitosis__04": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_05_endocitosis_exocitosis__04.webp",
+    "alt": "FIGURA 5-19 Participación de las proteínas ARF en la gemación de vesículas recubiertas por clatrina en la zona Trans del Golgi. Antes",
+    "book": "bio",
+    "pdfPage": 238,
+    "bbox": [
+      5.000000476837158,
+      193.71551513671875,
+      231.95001220703125,
+      337.26141357421875
+    ]
+  },
+  "biocel_05_endocitosis_exocitosis__05": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_05_endocitosis_exocitosis__05.webp",
+    "alt": "FIGURA 5-24 El esquema representa el proceso general de la sinapsis colinérgica en la unión neuromuscular. 1, incorporación,",
+    "book": "bio",
+    "pdfPage": 244,
+    "bbox": [
+      5.0,
+      391.7165222167969,
+      231.94891357421875,
+      552.5665283203125
+    ]
+  },
+  "biocel_06_entorno_celular__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_06_entorno_celular__01.webp",
+    "alt": "FIGURA 6-9 Estructura molecular de la ICAM-1 (molécula de adhesión intercelular perteneciente a la familia de IgSF-CAM). Estas moléculas de adhesión poseen dominios extracelulares en forma de lazo, parecidos a los de las inmunoglobulinas. (Ilustraciones de: A.",
+    "book": "bio",
+    "pdfPage": 269,
+    "bbox": [
+      5.0,
+      57.51487731933594,
+      292.1838684082031,
+      311.3648986816406
+    ]
+  },
+  "biocel_06_entorno_celular__02": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_06_entorno_celular__02.webp",
+    "alt": "FIGURA 6-4 Cadherinas. A. Representación de la estructura de las cadherinas y las proteínas que interactúan con ella en el dominio",
+    "book": "bio",
+    "pdfPage": 262,
+    "bbox": [
+      5.0,
+      57.51488494873047,
+      231.84046936035156,
+      144.56488037109375
+    ]
+  },
+  "biocel_06_entorno_celular__04": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_06_entorno_celular__04.webp",
+    "alt": "FIGURA 6-13 Membrana basal. A. La membrana de Descemet del epitelio posterior de la córnea es extraordinariamente gruesa (flecha), llegando a medir 10 µm de grosor. B. Las técnicas inmunohistoquímicas permiten identificar la membrana basal; en este caso,",
+    "book": "bio",
+    "pdfPage": 273,
+    "bbox": [
+      5.0,
+      291.51593017578125,
+      231.93661499023438,
+      501.7159423828125
+    ]
+  },
+  "biocel_06_entorno_celular__05": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_06_entorno_celular__05.webp",
+    "alt": "FIGURA 6-14 Fibras de colágeno. A. Fibras de colágeno de la matriz extracelular observadas al microscopio electrónico de transmisión. B. Mediante la técnica de contraste negativo, al microscopio electrónico se observa con claridad que las fibras de colágeno presentan una característica estriación transversal periódica. C. Esquema de la síntesis de las fibras colágenas; RER, retículo",
+    "book": "bio",
+    "pdfPage": 277,
+    "bbox": [
+      5.0,
+      57.514984130859375,
+      231.92762756347656,
+      202.4649658203125
+    ]
+  },
+  "biocel_06_entorno_celular__06": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_06_entorno_celular__06.webp",
+    "alt": "FIGURA 6-5 Cinturones de adhesión y desmosomas. A. Representación de los cinturones de adhesión, desmosomas y hemidesmosomas en células epiteliales. B. Moléculas que intervienen en los cinturones de adhesión. C. Imagen de microscopía electrónica de un desmosoma. D. Representación de las moléculas que forman parte del desmosoma. (A, B y D, ilustraciones de: A. Calvo.)",
+    "book": "bio",
+    "pdfPage": 263,
+    "bbox": [
+      5.0,
+      57.514892578125,
+      231.9499969482422,
+      294.96136474609375
+    ]
+  },
+  "biocel_07_nucleo_cromatina_adn__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_07_nucleo_cromatina_adn__01.webp",
+    "alt": "FIGURA 7-2 A. Complejo del poro nuclear (NPC, del inglés nuclear pore complex) y sus partes principales. B. Imagen de criofractura de la membrana nuclear, donde se observan con claridad numerosos poros nucleares. Flecha, poro nuclear; MB-I, membrana nuclear",
+    "book": "bio",
+    "pdfPage": 296,
+    "bbox": [
+      5.0,
+      255.51583862304688,
+      231.9426727294922,
+      611.8158569335938
+    ]
+  },
+  "biocel_07_nucleo_cromatina_adn__02": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_07_nucleo_cromatina_adn__02.webp",
+    "alt": "FIGURA 7-9 La acetilación de histonas relaja la cromatina y facilita la transcripción, mientras que la desacetilación promueve una",
+    "book": "bio",
+    "pdfPage": 306,
+    "bbox": [
+      5.0,
+      230.91580200195312,
+      305.8622131347656,
+      538.6157836914062
+    ]
+  },
+  "biocel_07_nucleo_cromatina_adn__03": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_07_nucleo_cromatina_adn__03.webp",
+    "alt": "FIGURA 7-11 Esquema de la estructura y partes fundamentales de los cromosomas. (Ilustración de: I. Baraibar.)",
+    "book": "bio",
+    "pdfPage": 312,
+    "bbox": [
+      5.000000476837158,
+      57.51495361328125,
+      231.9459991455078,
+      314.81494140625
+    ]
+  },
+  "biocel_07_nucleo_cromatina_adn__05": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_07_nucleo_cromatina_adn__05.webp",
+    "alt": "FIGURA 7-20 Proceso de replicación en procariotas. Para simplificar el esquema (por mayor claridad), se han dibujado separadas las ADN polimerasas III que van replicando tanto la hebra conductora como la retrasada. En realidad, las dos unidades de ADN polimerasa",
+    "book": "bio",
+    "pdfPage": 330,
+    "bbox": [
+      5.0,
+      447.51678466796875,
+      231.92425537109375,
+      638.4168090820312
+    ]
+  },
+  "biocel_08_transcripcion_arn__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_08_transcripcion_arn__01.webp",
+    "alt": "FIGURA 8-2 A. La diferenciación celular se asocia con una transcripción selectiva de genes. Algunos de los genes del genoma se",
+    "book": "bio",
+    "pdfPage": 354,
+    "bbox": [
+      5.000000476837158,
+      291.51593017578125,
+      231.95001220703125,
+      549.9552001953125
+    ]
+  },
+  "biocel_08_transcripcion_arn__02": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_08_transcripcion_arn__02.webp",
+    "alt": "FIGURA 8-7 A. Regulación de la expresión de un gen inducible a través de la unión de diversos factores de transcripción en regiones",
+    "book": "bio",
+    "pdfPage": 360,
+    "bbox": [
+      5.0,
+      409.7165222167969,
+      231.91925048828125,
+      574.5165405273438
+    ]
+  },
+  "biocel_08_transcripcion_arn__03": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_08_transcripcion_arn__03.webp",
+    "alt": "FIGURA 8-23 Etapas en la maduración del ARN de transferencia. (Ilustración de: I. Baraibar.)",
+    "book": "bio",
+    "pdfPage": 378,
+    "bbox": [
+      5.0,
+      294.4272766113281,
+      231.93165588378906,
+      651.2772827148438
+    ]
+  },
+  "biocel_08_transcripcion_arn__05": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_08_transcripcion_arn__05.webp",
+    "alt": "FIGURA 8-12 Los cuerpos nucleares incluyen el nucléolo, los cuerpos de Cajal y los cuerpos nucleares de la leucemia promielocítica",
+    "book": "bio",
+    "pdfPage": 367,
+    "bbox": [
+      5.0,
+      406.0278015136719,
+      231.93748474121094,
+      587.5778198242188
+    ]
+  },
+  "biocel_09_sintesis_proteinas__02": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_09_sintesis_proteinas__02.webp",
+    "alt": "FIGURA 9-5 Tabla del código genético. Los tripletes del codón del ARNm indican qué aminoácido se incorporará a la proteína en",
+    "book": "bio",
+    "pdfPage": 392,
+    "bbox": [
+      5.0,
+      328.716064453125,
+      231.9499969482422,
+      487.01373291015625
+    ]
+  },
+  "biocel_09_sintesis_proteinas__03": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_09_sintesis_proteinas__03.webp",
+    "alt": "FIGURA 9-7 A. Sitios de la subunidad ribosómica menor: E (Exit), P (Peptidyl), A (Aminoacyl). B. Factores de iniciación que se unen",
+    "book": "bio",
+    "pdfPage": 395,
+    "bbox": [
+      5.000000476837158,
+      218.315673828125,
+      231.95001220703125,
+      283.56378173828125
+    ]
+  },
+  "biocel_09_sintesis_proteinas__04": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_09_sintesis_proteinas__04.webp",
+    "alt": "FIGURA 9-6 Cada uno de los ARNt lleva unido un aminoácido específico. A. El proceso de unión tiene lugar primeramente por la formación de un aminoacil-AMP (1) y posteriormente por la formación de un aminoacil-ARNt (2), reacciones que implican la actuación",
+    "book": "bio",
+    "pdfPage": 394,
+    "bbox": [
+      5.0,
+      328.115966796875,
+      231.9499969482422,
+      499.46319580078125
+    ]
+  },
+  "biocel_09_sintesis_proteinas__05": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_09_sintesis_proteinas__05.webp",
+    "alt": "FIGURA 9-10 Terminación del proceso de traducción. La aparición de uno de los codones de parada en el sitio A determina la unión de",
+    "book": "bio",
+    "pdfPage": 399,
+    "bbox": [
+      5.0,
+      175.11553955078125,
+      231.9375762939453,
+      552.1155395507812
+    ]
+  },
+  "biocel_09_sintesis_proteinas__06": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_09_sintesis_proteinas__06.webp",
+    "alt": "FIGURA 9-12 La proteína Hsp70 es clave en el proceso de plegamiento de las proteínas (con gasto de ATP, omitido en el dibujo). El",
+    "book": "bio",
+    "pdfPage": 404,
+    "bbox": [
+      5.0,
+      137.91525268554688,
+      231.929931640625,
+      267.2652587890625
+    ]
+  },
+  "biocel_10_endomembranas__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_10_endomembranas__01.webp",
+    "alt": "FIGURA 10-3 A. Obtención de la fracción microsómica mediante fraccionamiento celular y centrifugación diferencial. B. Representación de cómo las cisternas del RER se fragmentan tras el fraccionamiento celular y se forman los microsomas rugosos.",
+    "book": "bio",
+    "pdfPage": 425,
+    "bbox": [
+      5.0,
+      57.51487731933594,
+      231.9499969482422,
+      239.35858154296875
+    ]
+  },
+  "biocel_10_endomembranas__03": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_10_endomembranas__03.webp",
+    "alt": "FIGURA 10-14 Representación esquemática del aparato de Golgi en la que se observan los distintos compartimentos, correspondientes a la zona CGN (Cis Golgi Network), Cis, medial, Trans y TGN (Trans Golgi Network). Los distintos compartimentos poseen enzimas que modifican a las glucoproteínas según avanzan de la zona Cis a la Trans. En la parte de la derecha se representan",
+    "book": "bio",
+    "pdfPage": 438,
+    "bbox": [
+      5.0,
+      155.915283203125,
+      231.89805603027344,
+      286.665283203125
+    ]
+  },
+  "biocel_10_endomembranas__04": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_10_endomembranas__04.webp",
+    "alt": "FIGURA 10-17 Esquema de los recubrimientos de las vesículas que intercambian material entre el RER, el Golgi y la membrana",
+    "book": "bio",
+    "pdfPage": 443,
+    "bbox": [
+      4.999999523162842,
+      100.715087890625,
+      231.91253662109375,
+      285.3650817871094
+    ]
+  },
+  "biocel_10_endomembranas__05": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_10_endomembranas__05.webp",
+    "alt": "FIGURA 10-20 Esquema de la formación de los lisosomas y del transporte de nuevas hidrolasas al lisosoma. (Illustración de: E. Maldonado y A.",
+    "book": "bio",
+    "pdfPage": 447,
+    "bbox": [
+      5.0,
+      57.51487731933594,
+      231.90093994140625,
+      235.06488037109375
+    ]
+  },
+  "biocel_10_endomembranas__06": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_10_endomembranas__06.webp",
+    "alt": "FIGURA 10-16 Tránsito de la insulina a través de la ruta secretora. A. Representación esquemática de los diferentes orgánulos",
+    "book": "bio",
+    "pdfPage": 442,
+    "bbox": [
+      5.0,
+      230.915771484375,
+      231.9481964111328,
+      378.7157897949219
+    ]
+  },
+  "biocel_11_mitocondrias_peroxisomas__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_11_mitocondrias_peroxisomas__01.webp",
+    "alt": "FIGURA 11-1 A. Estructura de la mitocondria. B. Imagen de una mitocondria al microscopio electrónico de transmisión. (B, reproducida a",
+    "book": "bio",
+    "pdfPage": 459,
+    "bbox": [
+      5.0,
+      57.514892578125,
+      231.9499969482422,
+      309.71307373046875
+    ]
+  },
+  "biocel_11_mitocondrias_peroxisomas__03": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_11_mitocondrias_peroxisomas__03.webp",
+    "alt": "FIGURA 11-5 Sistemas de transporte de proteínas a la mitocondria. ME, membrana externa; MI, membrana interna; MPP, peptidasa de",
+    "book": "bio",
+    "pdfPage": 465,
+    "bbox": [
+      5.0,
+      57.51487731933594,
+      231.91944885253906,
+      296.9148864746094
+    ]
+  },
+  "biocel_11_mitocondrias_peroxisomas__05": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_11_mitocondrias_peroxisomas__05.webp",
+    "alt": "FIGURA 11-6 La mitocondria en el proceso de apoptosis. AIF, factor inductor de apoptosis; IAP, inhibidor de la proteína apoptótica;",
+    "book": "bio",
+    "pdfPage": 466,
+    "bbox": [
+      5.0,
+      137.9153289794922,
+      231.9320526123047,
+      308.96533203125
+    ]
+  },
+  "biocel_11_mitocondrias_peroxisomas__06": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_11_mitocondrias_peroxisomas__06.webp",
+    "alt": "FIGURA 11-16 Micrografía electrónica de un peroxisoma de hepatocito. (Reproducida a partir de Don W. Fawcett. The Cell. Philadelphia: Saunders, 1981.)",
+    "book": "bio",
+    "pdfPage": 483,
+    "bbox": [
+      5.0,
+      185.315185546875,
+      231.9499969482422,
+      385.3147888183594
+    ]
+  },
+  "biocel_12_citoesqueleto__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_12_citoesqueleto__01.webp",
+    "alt": "FIGURA 12-1 A. Inmunofluorescencia para detectar tubulina en células en cultivo. B. Estructura de un microtúbulo. El dibujo muestra la",
+    "book": "bio",
+    "pdfPage": 494,
+    "bbox": [
+      5.0,
+      305.8271789550781,
+      231.91700744628906,
+      411.6271667480469
+    ]
+  },
+  "biocel_12_citoesqueleto__03": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_12_citoesqueleto__03.webp",
+    "alt": "FIGURA 12-26 Asociación de las proteínas que constituyen los filamentos intermedios. (Ilustración de: A. Calvo.)",
+    "book": "bio",
+    "pdfPage": 530,
+    "bbox": [
+      5.0,
+      119.31513977050781,
+      231.90475463867188,
+      262.26513671875
+    ]
+  },
+  "biocel_12_citoesqueleto__05": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_12_citoesqueleto__05.webp",
+    "alt": "FIGURA 12-3 Dinámica de polimerización/despolimerización de los microtúbulos. A. Los dímeros de α-/β-tubulina-GTP se añaden en el",
+    "book": "bio",
+    "pdfPage": 495,
+    "bbox": [
+      5.0,
+      241.264892578125,
+      231.92315673828125,
+      344.514892578125
+    ]
+  },
+  "biocel_13_senales__02": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_13_senales__02.webp",
+    "alt": "FIGURA 13-7 Señalización intracelular mediada por el NO en el sistema cardiovascular. La señal inicial de la acetilcolina en las células",
+    "book": "bio",
+    "pdfPage": 548,
+    "bbox": [
+      5.0,
+      57.514892578125,
+      231.9422149658203,
+      263.46490478515625
+    ]
+  },
+  "biocel_13_senales__03": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_13_senales__03.webp",
+    "alt": "FIGURA 13-14 Señalización mediada por receptores citoplasmáticos: ejemplo de la señalización mediada por la 5-dihidrotestosterona",
+    "book": "bio",
+    "pdfPage": 557,
+    "bbox": [
+      5.0,
+      57.514892578125,
+      231.93661499023438,
+      379.764892578125
+    ]
+  },
+  "biocel_14_ciclo_celular__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_14_ciclo_celular__01.webp",
+    "alt": "FIGURA 14-1 A. Fases del ciclo de división celular eucariota. B. Imagen histológica de células en interfase (In) y una célula en mitosis",
+    "book": "bio",
+    "pdfPage": 583,
+    "bbox": [
+      5.000000476837158,
+      161.315185546875,
+      231.95001220703125,
+      459.75439453125
+    ]
+  },
+  "biocel_15_division_muerte__01": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_15_division_muerte__01.webp",
+    "alt": "FIGURA 15-2 Fases de la mitosis. (Ilustración de: C. Bravo.)",
+    "book": "bio",
+    "pdfPage": 621,
+    "bbox": [
+      5.0,
+      392.2275390625,
+      231.93727111816406,
+      545.9775390625
+    ]
+  },
+  "biocel_15_division_muerte__04": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_15_division_muerte__04.webp",
+    "alt": "FIGURA 15-11 A. Células en apoptosis (núcleo de color negro) en una sección de testículo detectadas mediante la técnica de TUNEL.",
+    "book": "bio",
+    "pdfPage": 638,
+    "bbox": [
+      5.0,
+      249.51585388183594,
+      231.90475463867188,
+      344.81585693359375
+    ]
+  },
+  "biocel_16_cancer__02": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_16_cancer__02.webp",
+    "alt": "FIGURA 16-6 Posibles categorías de protooncogenes implicados en la promoción de la proliferación celular. 1) Factores de crecimiento; 2) receptores de factores de crecimiento; 3) proteínas implicadas en la transducción de señales; 4) factores de",
+    "book": "bio",
+    "pdfPage": 666,
+    "bbox": [
+      5.000000476837158,
+      57.51483154296875,
+      231.95001220703125,
+      291.5569763183594
+    ]
+  },
+  "biocel_16_cancer__06": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_16_cancer__06.webp",
+    "alt": "FIGURA 16-18 A. Imagen radiológica de TAC (tomografía axial computarizada) de una mujer con adenocarcinoma de pulmón con afectación metastásica, en tratamiento con el inhibidor de la actividad tirosina quinasa de EGFR gefitinib. Las imágenes muestran una",
+    "book": "bio",
+    "pdfPage": 691,
+    "bbox": [
+      5.0,
+      57.51493835449219,
+      231.922119140625,
+      279.61492919921875
+    ]
+  },
+  "citoesqueleto__04": {
+    "image": "/assets/mindmaps/premium-illustrations/citoesqueleto__04.webp",
+    "alt": "FIGURA 12-1 A. Inmunofluorescencia para detectar tubulina en células en cultivo. B. Estructura de un microtúbulo. El dibujo muestra la",
+    "book": "bio",
+    "pdfPage": 494,
+    "bbox": [
+      5.0,
+      305.8271789550781,
+      231.91700744628906,
+      411.6271667480469
+    ]
+  },
+  "citoesqueleto__05": {
+    "image": "/assets/mindmaps/premium-illustrations/citoesqueleto__05.webp",
+    "alt": "FIGURA 12-26 Asociación de las proteínas que constituyen los filamentos intermedios. (Ilustración de: A. Calvo.)",
+    "book": "bio",
+    "pdfPage": 530,
+    "bbox": [
+      5.0,
+      119.31513977050781,
+      231.90475463867188,
+      262.26513671875
+    ]
+  },
+  "nucleocelular__03": {
+    "image": "/assets/mindmaps/premium-illustrations/nucleocelular__03.webp",
+    "alt": "FIGURA 7-9 La acetilación de histonas relaja la cromatina y facilita la transcripción, mientras que la desacetilación promueve una",
+    "book": "bio",
+    "pdfPage": 306,
+    "bbox": [
+      5.0,
+      230.91580200195312,
+      305.8622131347656,
+      538.6157836914062
+    ]
+  },
+  "nucleocelular__04": {
+    "image": "/assets/mindmaps/premium-illustrations/nucleocelular__04.webp",
+    "alt": "FIGURA 7-4 Modelo molecular que explica el transporte de proteínas desde el citoplasma hasta el núcleo (parte izquierda del dibujo) y",
+    "book": "bio",
+    "pdfPage": 299,
+    "bbox": [
+      5.000000476837158,
+      57.514892578125,
+      231.9474334716797,
+      219.21490478515625
+    ]
+  },
+  "organeloscelulares__01": {
+    "image": "/assets/mindmaps/premium-illustrations/organeloscelulares__01.webp",
+    "alt": "FIGURA 10-12 Síntesis de fosfolípidos en el REL. Las aciltransferasas (1) forman ácido fosfatídico, cuyas dos cadenas hidrocarbonadas quedan ancladas a la membrana. Una fosfatasa (2) convierte el ácido fosfatídico en diacilglicerol. La fosfotransferasa",
+    "book": "bio",
+    "pdfPage": 434,
+    "bbox": [
+      5.0,
+      292.7160339355469,
+      231.94833374023438,
+      413.5660400390625
+    ]
+  },
+  "organeloscelulares__06": {
+    "image": "/assets/mindmaps/premium-illustrations/organeloscelulares__06.webp",
+    "alt": "FIGURA 10-15 Esquema que muestra el tráfico de varias macromoléculas a través del Golgi. Las proteínas pueden dirigirse al exterior celular, quedar ancladas en la membrana plasmática, permanecer residentes en el Golgi o ir destinadas a lisosomas. Los distintos tipos",
+    "book": "bio",
+    "pdfPage": 441,
+    "bbox": [
+      5.000000476837158,
+      57.51483154296875,
+      231.95001220703125,
+      361.9114685058594
+    ]
+  },
+  "biocel_01_introduccion__02": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_01_introduccion__02.webp",
+    "alt": "Organización de una bacteria; panel A de la figura 1-4 de Calvo.",
+    "book": "bio",
+    "pdfPage": 42,
+    "kind": "source panel"
+  },
+  "biocel_01_introduccion__05": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_01_introduccion__05.svg",
+    "alt": "Esquema de un viroide: ARN circular sin cápside.",
+    "book": "bio",
+    "pdfPage": 51,
+    "kind": "concept diagram"
+  },
+  "biocel_01_introduccion__06": {
+    "image": "/assets/mindmaps/premium-illustrations/biocel_01_introduccion__06.svg",
+    "alt": "Esquema de cambio de conformación de una proteína priónica.",
+    "book": "bio",
+    "pdfPage": 52,
+    "kind": "concept diagram"
+  }
+}

@@ -3952,7 +3952,8 @@ async function loadMapasMentales() {
             { titulo: 'Estadística con Excel', materia: 'Educación para la Salud', url_imagen: 'mapas mentales/salud_26_estadistica_excel.png', descripcion: 'preparar, herramienta, selección, resultados. PDF pp. 191–200 de Educación en Salud e Investigación.', fecha: new Date().toISOString() },
             { titulo: 'Estadística con SPSS', materia: 'Educación para la Salud', url_imagen: 'mapas mentales/salud_27_estadistica_spss.png', descripcion: 'preparar, ingresar, revisar, analizar. PDF pp. 201–232 de Educación en Salud e Investigación.', fecha: new Date().toISOString() }
         ];
-        mmState.allMapas = localMapas;
+        localMapas.forEach(function(m){m.acceso_gratis=true;m.tema=m.titulo;});
+        mmState.allMapas = localMapas.concat(window.MINDMAP_PREMIUM_CATALOG || []);
         populateMmMaterias();
         populateMmTemas();
         updateIntocStats();
@@ -3987,7 +3988,7 @@ function populateMmMaterias() {
 }
 
 function mmTopicKey(m) {
-    return (campo(m, 'materia') || '') + '\u001f' + (campo(m, 'titulo') || '');
+    return (campo(m, 'materia') || '') + '\u001f' + (campo(m, 'tema') || campo(m, 'titulo') || '');
 }
 
 function populateMmTemas() {
@@ -3995,7 +3996,7 @@ function populateMmTemas() {
     if (!select) return;
     var previous = mmState.selectedTema;
     var rows = mmState.allMapas.filter(function (m) {
-        return !mmState.selectedMateria || campo(m, 'materia') === mmState.selectedMateria;
+        return !campo(m, 'premium') && (!mmState.selectedMateria || campo(m, 'materia') === mmState.selectedMateria);
     });
     select.replaceChildren(new Option('Todos los temas', ''));
     rows.sort(function (a, b) {
@@ -4051,7 +4052,7 @@ window.filterMapas = function () {
     mmState.filteredMapas = mmState.allMapas.filter(function (m) {
         var matchMat = !mmState.selectedMateria || campo(m, 'materia') === mmState.selectedMateria;
         var matchTema = !mmState.selectedTema || mmTopicKey(m) === mmState.selectedTema;
-        var searchable = normalizeMmText((campo(m, 'titulo') || '') + ' ' + (campo(m, 'descripcion') || ''));
+        var searchable = normalizeMmText((campo(m, 'titulo') || '') + ' ' + (campo(m, 'descripcion') || '') + ' ' + (campo(m, 'tema') || ''));
         var matchQ = !q || searchable.includes(q);
         return matchMat && matchTema && matchQ;
     });
@@ -4085,9 +4086,9 @@ function renderMmGrid() {
         var safeMateria = escapeMmText(materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud'));
         var safeDesc = escapeMmText(desc);
         var safeUrl = escapeMmText(urlImg);
-        var previewUrl = getMmThumbnailUrl(urlImg);
+        var previewUrl = campo(m, 'preview') || getMmThumbnailUrl(urlImg);
         var safePreviewUrl = escapeMmText(previewUrl);
-        var fallbackAttr = previewUrl !== urlImg ? ' data-fallback="' + safeUrl + '"' : '';
+        var fallbackAttr = !campo(m, 'premium') && previewUrl !== urlImg ? ' data-fallback="' + safeUrl + '"' : '';
         var loadingAttr = index < 3 ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
 
         var card = document.createElement('button');
@@ -4106,6 +4107,7 @@ function renderMmGrid() {
             '</div>' +
             '<div class="mm-card-body">' +
             (materia ? '<span class="mm-card-materia">' + safeMateria + '</span>' : '') +
+            (locked ? '<span class="mm-card-access"><i class="fas fa-lock" aria-hidden="true"></i> Con plan</span>' : campo(m, 'premium') ? '' : '<span class="mm-card-access">Mapa general</span>') +
             '<h3 class="mm-card-title">' + safeTitle + '</h3>' +
             (locked ? '<span class="mm-card-preview-action">Desbloquear</span>' : desc ? '<p class="mm-card-desc">' + safeDesc + '</p>' : '') +
             '</div>';
@@ -4145,9 +4147,9 @@ window.openMmUnlockDialog = function (m) {
     document.getElementById('mm-unlock-title').textContent = campo(m, 'titulo') || 'Mapa mental';
     var image = document.getElementById('mm-unlock-image');
     var originalUrl = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
-    var previewUrl = getMmThumbnailUrl(originalUrl);
+    var previewUrl = campo(m, 'preview') || getMmThumbnailUrl(originalUrl);
     image.style.display = '';
-    image.dataset.fallback = previewUrl !== originalUrl ? originalUrl : '';
+    image.dataset.fallback = !campo(m, 'premium') && previewUrl !== originalUrl ? originalUrl : '';
     image.onerror = function () { fallbackMmPreview(image); };
     image.src = previewUrl;
     if (!dialog.open) dialog.showModal();
@@ -4179,7 +4181,7 @@ window.openMmLightbox = function (m) {
     if (!lb) return;
     var urlImg = campo(m, 'url_imagen') || campo(m, 'url_image') || '';
     var image = document.getElementById('mm-lb-img');
-    var previewUrl = getMmThumbnailUrl(urlImg);
+    var previewUrl = campo(m, 'preview') || getMmThumbnailUrl(urlImg);
     image.dataset.fullUrl = urlImg;
     image.src = previewUrl;
     if (previewUrl !== urlImg) {

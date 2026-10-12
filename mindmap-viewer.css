@@ -110,3 +110,5 @@
  .mm-detailed-root .mm-concept-title{text-align:center}
  .mm-root-anatomy{max-width:240px}
 }
+
+.mm-card-access{display:inline-flex;align-items:center;gap:5px;margin-left:8px;font-size:10px;font-weight:600;color:#74612c;background:#fff6db;border-radius:20px;padding:3px 8px}.mm-card-access .fa-lock{font-size:9px}

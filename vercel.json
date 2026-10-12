@@ -5,6 +5,9 @@
     },
     "api/past-exam.js": {
       "includeFiles": "api/_past_exams/**"
+    },
+    "api/mindmap.js": {
+      "includeFiles": "api/_mindmaps/**"
     }
   },
   "headers": [
@@ -82,6 +85,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/_mindmaps/:path*",
+      "destination": "/api/mindmap?id=invalid"
+    },
     {
       "source": "/api/_past_exams/:path*",
       "destination": "/api/past-exam?id=invalid"
