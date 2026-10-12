@@ -8,7 +8,7 @@ for d in docs:
  if not m:continue
  name=m.group(1).strip().strip("'");position=values(d,'m_LocalPosition');scale=values(d,'m_LocalScale');rotation=values(d,'m_LocalRotation');father=re.search(r'm_Father: {fileID: (-?\d+)}',d).group(1)
  objects.setdefault(name,[]).append(dict(position=position,scale=scale,rotation=rotation,father=father))
-sources={'muscular':'z-muscles-original','skeletal':'z-bones-original','visceral':'VisceralSystem100','nervous':'NervousSystem100','cardiac':'CardioVascular41','vascular':'CardioVascular41','joints':'Joints100','integumentary':'regions-original'}
+sources={'muscular':'z-muscles-original','skeletal':'z-bones-original','visceral':'VisceralSystem100','nervous':'NervousSystem100','cardiac':'CardioVascular41','vascular':'CardioVascular41','joints':'Joints100','integumentary':'regions-original','lymphatic':'LymphoidOrgans100'}
 result={}
 for source,stem in sources.items():
  b=Path('tmp/musculos-source/'+stem+'.glb').read_bytes();n=struct.unpack_from('<I',b,12)[0];j=json.loads(b[20:20+n]);records={}

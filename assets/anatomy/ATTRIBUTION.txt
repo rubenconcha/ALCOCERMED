@@ -96,3 +96,9 @@ This includes the Sternum.g hierarchy shared by the manubrium and sternal body.
 No arbitrary snapping, per-camera repositioning or resculpted attachment points.
 Source transforms distributed under the same Z-Anatomy CC BY-SA 4.0 terms:
 https://www.alcocermed.com/anatomia-alineacion.js
+
+LYMPHATIC MODEL (2026-10-12)
+Z-Anatomy / LluisV PC-Version, Resources/Models/FBX/LymphoidOrgans100.fbx.
+Same CC BY-SA 4.0 attribution above. Source annotation geometry removed; source coordinates retained, missing group transforms restored from original prefab. Smoothed shared vertices and Draco-compressed.
+https://www.alcocermed.com/assets/anatomy/linfatico-detallado.glb
+Organ neurovascular/lymphatic summaries: user-provided Saladin and anatomical references linked on each card. Small vessels and terminal autonomic plexuses are not fabricated.
