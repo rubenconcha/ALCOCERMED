@@ -102,3 +102,10 @@ Z-Anatomy / LluisV PC-Version, Resources/Models/FBX/LymphoidOrgans100.fbx.
 Same CC BY-SA 4.0 attribution above. Source annotation geometry removed; source coordinates retained, missing group transforms restored from original prefab. Smoothed shared vertices and Draco-compressed.
 https://www.alcocermed.com/assets/anatomy/linfatico-detallado.glb
 Organ neurovascular/lymphatic summaries: user-provided Saladin and anatomical references linked on each card. Small vessels and terminal autonomic plexuses are not fabricated.
+
+GLUTEAL EDUCATIONAL EXTENSION (2026-10-12)
+Inferior gluteal nerve is absent from the original NervousSystem100 mesh and Unity prefab. AlcoCerMed added bilateral schematic 3D curves with terminal branches following the original deep gluteus maximus surface. These are educational reconstructions, not segmented source anatomy, and do not represent rootlets, exact branching or individual variations. Original arteries were retained without alteration.
+Reference: Saladin, chapter 10, p. 361 (PDF 389).
+https://www.ncbi.nlm.nih.gov/books/NBK532884/
+Derived educational extension under CC BY-SA 4.0:
+https://www.alcocermed.com/anatomia-extension-glutea.js
