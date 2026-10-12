@@ -58,3 +58,21 @@ organs.push({id:'skin',name:'Piel',system:'integumentary',match:'skin',color:'#c
 const attachmentBones={
  sternocleidomastoid:['sternum|clavicle','temporal|occipital'],deltoid:['clavicle|scapula','humerus'],pectoral:['clavicle|sternum|rib','humerus'],biceps:['scapula','radius'],triceps:['scapula|humerus','ulna'],brachialis:['humerus','ulna'],trapezius:['occipital|vertebra','clavicle|scapula'],latissimus:['vertebra|hip_bone|ilium|sacrum|rib','humerus'],serratus:['rib','scapula'],gluteus:['hip_bone|ilium|sacrum|coccyx','femur'],rectus:['hip_bone|ilium','patella|tibia'],gastrocnemius:['femur','calcaneus'],soleus:['tibia|fibula','calcaneus']
 };for(const m of muscles){[m.originBones,m.insertionBones]=attachmentBones[m.id]||[]}
+
+// Named structures from the source atlas; intramuscular branches are not fabricated.
+const muscleRelations={
+sternocleidomastoid:['^accessory_nerve', 'occipital_artery|superior_thyroid_artery', 'Ramas de las arterias occipital y tiroidea superior.', 'https://jamanetwork.com/journals/jamasurgery/fullarticle/390207'],
+deltoid:['^axillary_nerve|muscular_branches_of_axillary_nerve', 'posterior_circumflex_humeral_artery|thoraco.?acromial_artery', 'Arteria circunfleja humeral posterior y ramas de la arteria toracoacromial.', 'https://pubmed.ncbi.nlm.nih.gov/9706673/'],
+pectoral:['^(medial|lateral)_pectoral_nerve', 'thoraco.?acromial_artery|lateral_thoracic_artery|internal_thoracic_artery', 'Rama pectoral de la arteria toracoacromial, arteria torácica lateral y ramas perforantes de la torácica interna.', 'https://pubmed.ncbi.nlm.nih.gov/1746231/'],
+biceps:['^musculocutaneous_nerve', '^brachial_artery', 'Ramas musculares de la arteria braquial.', 'https://pubmed.ncbi.nlm.nih.gov/8469520/'],
+triceps:['^radial_nerve|muscular_branches_of_radial_nerve', 'deep_brachial_artery|ulnar_collateral_artery', 'Arteria braquial profunda y arterias colaterales cubitales.', 'https://www.ncbi.nlm.nih.gov/books/NBK536996/'],
+brachialis:['^musculocutaneous_nerve|^radial_nerve|muscular_branches_of_radial_nerve', '^brachial_artery|inferior_ulnar_collateral_artery', 'Ramas musculares de la arteria braquial y contribución de la colateral cubital inferior.', 'https://www.ncbi.nlm.nih.gov/books/NBK537145/'],
+trapezius:['^accessory_nerve', 'transverse_cervical_artery|dorsal_scapular_artery|posterior_intercostal_arter', 'Arterias cervical transversa y dorsal de la escápula; contribución de ramas intercostales posteriores.', 'https://pubmed.ncbi.nlm.nih.gov/9678469/'],
+latissimus:['^thoracodorsal_nerve', '^thoracodorsal_artery', 'Irrigación principal por la arteria toracodorsal, rama de la subescapular. También recibe ramas perforantes intercostales y lumbares.', 'https://www.elsevier.com/resources/anatomy/muscular-system/muscles-of-back/latissimus-dorsi-muscle/20795'],
+serratus:['^long_thoracic_nerve', 'lateral_thoracic_artery|superior_thoracic_artery|thoracodorsal_artery', 'Arterias torácicas lateral y superior, y arteria toracodorsal.', 'https://www.elsevier.com/resources/anatomy/muscular-system/muscles-of-upper-limb/serratus-anterior-muscle/23628'],
+gluteus:['^inferior_gluteal_nerve', '^(inferior|superior)_gluteal_artery', 'Arterias glúteas inferior y superior.', 'https://www.ncbi.nlm.nih.gov/books/NBK538193/'],
+rectus:['^femoral_nerve', 'lateral_circumflex_femoral_artery', 'Arteria circunfleja femoral lateral, especialmente su rama descendente.', 'https://www.elsevier.com/resources/anatomy/muscular-system/muscles-of-lower-limb/rectus-femoris-muscle/17868'],
+gastrocnemius:['^tibial_nerve', '^popliteal_artery|sural_arter', 'Ramas surales de la arteria poplítea.', 'https://rad.uw.edu/muscle-atlas/gastrocnemius/'],
+soleus:['^tibial_nerve', '^posterior_tibial_artery|^fibular_artery|^popliteal_artery|sural_arter', 'Ramas de las arterias tibial posterior, fibular y poplítea.', 'https://rad.washington.edu/muscle-atlas/soleus/']
+};
+for(const m of muscles){const r=muscleRelations[m.id];m.nerveMatch=r[0];m.arteryMatch=r[1];m.irrigation=r[2];m.irrigationSource=r[3]}
