@@ -90,8 +90,19 @@
  window.openMmLightbox=function(map){
   if(window.CampusAccess&&CampusAccess.isFree()&&!field(map,'acceso_gratis'))return openMmUnlockDialog(map);if(!$('mm-lightbox'))return;
   wire();release();activeMap=map;selectedBranch=0;showAllMobile=false;branchOpen=labelsFor(map).map(function(_,i){return i===0;});var current=++token;previousFocus=document.activeElement;previousOverflow=document.body.style.overflow;
-  $('mm-lb-title').textContent=field(map,'titulo')||'Mapa mental';$('mm-lb-materia').textContent=field(map,'materia')||'';$('mm-lightbox').classList.remove('hidden');document.body.style.overflow='hidden';$('mm-lb-download').disabled=true;$('mm-lb-status').textContent='';build(map);$('mm-lightbox').querySelector('.mm-lb-close').focus();
+  $('mm-lb-title').textContent=field(map,'titulo')||'Mapa mental';$('mm-lb-materia').textContent=field(map,'materia')||'';$('mm-lightbox').classList.remove('hidden');document.body.style.overflow='hidden';$('mm-lb-download').disabled=true;$('mm-lb-status').textContent='';
+  if(fileFor(map)==='morfo_14_encefalo_pares_craneales.png'){
+   var approved=el('iframe','mm-approved-frame');approved.title='Encéfalo y pares craneales: mapa mental completo';approved.src='/assets/mindmaps/encefalo/mapa.html?v=1';approved.setAttribute('allow','fullscreen');$('mm-lightbox').classList.add('mm-approved-viewer');$('mm-lightbox').appendChild(approved);approved.focus();return;
+  }
+  build(map);$('mm-lightbox').querySelector('.mm-lb-close').focus();
   var source=new Image();sourceImage=source;source.crossOrigin='anonymous';source.onload=function(){if(current!==token)return;try{watermark(source).then(function(url){if(current!==token){URL.revokeObjectURL(url);return;}objectUrl=url;$('mm-lb-download').disabled=false;}).catch(function(){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';});}catch(_){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';}};source.onerror=function(){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';};source.src=field(map,'url_imagen')||field(map,'url_image')||'';
  };
- window.closeMmLightbox=function(){if(!activeMap)return;++token;activeMap=null;$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;if(document.fullscreenElement===$('mm-lightbox'))document.exitFullscreen().catch(function(){});$('mm-tree').replaceChildren();$('mm-branch-shortcuts').replaceChildren();release();if(previousFocus&&previousFocus.isConnected)previousFocus.focus();};
+ window.closeMmLightbox=function(){if(!activeMap)return;++token;activeMap=null;$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;if(document.fullscreenElement===$('mm-lightbox'))document.exitFullscreen().catch(function(){});$('mm-tree').replaceChildren();$('mm-branch-shortcuts').replaceChildren();$('mm-lightbox').querySelectorAll('.mm-approved-frame').forEach(function(frame){frame.remove();});$('mm-lightbox').classList.remove('mm-approved-viewer');release();if(previousFocus&&previousFocus.isConnected)previousFocus.focus();};
+ window.addEventListener('message',function(event){var frame=$('mm-lightbox')&&$('mm-lightbox').querySelector('.mm-approved-frame');if(event.origin===window.location.origin&&frame&&event.source===frame.contentWindow&&event.data&&event.data.type==='alcocer-close-approved-map')window.closeMmLightbox();});
+ var requestedMapOpened=false;
+ window.openRequestedMindmap=async function(){
+  if(requestedMapOpened||new URLSearchParams(location.search).get('mapa')!=='encefalo')return;
+  requestedMapOpened=true;await window.openMindMaps();var map=mmState.allMapas.find(function(item){return fileFor(item)==='morfo_14_encefalo_pares_craneales.png';});if(!map)return;
+  window.selectMmMateria(field(map,'materia'));var topic=mmTopicKey(map),select=$('mm-tema-select');if(select)select.value=topic;window.selectMmTema(topic);window.openMmLightbox(map);
+ };
 })();

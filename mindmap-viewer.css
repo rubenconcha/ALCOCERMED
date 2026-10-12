@@ -96,3 +96,8 @@
  .mm-concept-lines path{stroke-width:1.6;opacity:.5}
 }
 @media(prefers-reduced-motion:reduce){.mm-lightbox *{scroll-behavior:auto}}
+
+/* Approved detailed Saladin map uses the same authenticated viewer shell. */
+.mm-lightbox.mm-approved-viewer{display:block;background:#f4f8fc}
+.mm-approved-viewer>:not(.mm-approved-frame){display:none!important}
+.mm-approved-frame{display:block;width:100%;height:100%;border:0;background:#f4f8fc}

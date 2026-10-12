@@ -238,6 +238,7 @@ function enterVerifiedApp(user) {
     setTimeout(sincronizarPerfilEnNube, 2000);
 
     restoreCampusAfterPlans();
+    if (window.openRequestedMindmap) window.openRequestedMindmap().catch(function(error) { console.warn("No se pudo abrir el mapa solicitado", error); });
 
 
     // ═══ DEVICE GUARD: ya se verificó antes de mostrar el campus ═══
