@@ -127,7 +127,7 @@
                  DASHBOARD
                  ══════════════════════════════════════════════ -->
             <section id="section-dashboard" class="admin-section active">
-<form id="membership-activation" style="padding:24px;margin-bottom:24px;border:1px solid #d5e1eb;border-radius:18px;background:#fff;color:#1d2940"><h2>Activar suscripción</h2><p>Después de verificar el pago, ingresa el correo de la cuenta registrada. El período empieza hoy; reemplaza una activación anterior.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><input id="membership-email" type="email" required placeholder="Correo del estudiante" aria-label="Correo del estudiante" style="padding:12px;border:1px solid #bbcddc;border-radius:8px"><select id="membership-months" aria-label="Plan pagado" style="padding:12px;border-radius:8px"><option value="1">1 mes · Bs 200</option><option value="6">6 meses · Bs 499</option><option value="12">1 año · Bs 799</option></select><button type="submit" style="padding:12px 20px;background:#ffd343;border:0;border-radius:8px;font-weight:bold">Activar acceso</button></div><p id="membership-status" role="status" aria-live="polite"></p></form>
+<form id="membership-activation" style="padding:24px;margin-bottom:24px;border:1px solid #d5e1eb;border-radius:18px;background:#fff;color:#1d2940"><h2>Activar suscripción</h2><p>Después de verificar el pago, ingresa el correo de la cuenta registrada. El período empieza hoy; reemplaza una activación anterior.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><input id="membership-email" type="email" required placeholder="Correo del estudiante" aria-label="Correo del estudiante" style="padding:12px;border:1px solid #bbcddc;border-radius:8px"><select id="membership-months" aria-label="Plan pagado" style="padding:12px;border-radius:8px"><option value="1">1 mes · Bs 100</option><option value="6">6 meses · Bs 200</option><option value="0">De por vida · Bs 500</option></select><button type="submit" style="padding:12px 20px;background:#ffd343;border:0;border-radius:8px;font-weight:bold">Activar acceso</button></div><p id="membership-status" role="status" aria-live="polite"></p></form>
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-header"><span class="stat-label">total estudiantes</span><div class="stat-icon orange"><i class="fas fa-users"></i></div></div>
@@ -374,6 +374,6 @@
 <div class="toast-container" id="toast-container"></div>
 
 <script src="config.js"></script>
-<script src="admin.js"></script><script src="membership-admin.js?v=1"></script>
+<script src="admin.js"></script><script src="membership-offer.js?v=1"></script><script src="membership-admin.js?v=2"></script>
 </body>
 </html>
