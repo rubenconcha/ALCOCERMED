@@ -109,3 +109,8 @@ Reference: Saladin, chapter 10, p. 361 (PDF 389).
 https://www.ncbi.nlm.nih.gov/books/NBK532884/
 Derived educational extension under CC BY-SA 4.0:
 https://www.alcocermed.com/anatomia-extension-glutea.js
+
+ATLAS STUDY AND MOTION REVISION (2026-10-12)
+Recognition objectives and skeletal notes synthesized from the user-supplied Saladin, chapters 8–9, 10, 13–14 and 19–25. Guided views preserve the original coordinates and anatomical alignment.
+Respiratory expansion, atrial/ventricular contraction and oesophageal/ureteric peristalsis are explicitly schematic educational motion, not a biomechanical or patient-specific simulation. Source geometry is restored on pause; major cardiac vessels do not contract with the chambers. Joint rigs, autonomic plexuses and microscopic networks absent from the source are not claimed as completed anatomy.
+Cosmetic organ surface variation is not a histological image, lesion map or vessel map. Original source models and attribution above remain unchanged.
