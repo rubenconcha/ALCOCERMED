@@ -24,3 +24,5 @@
 
 /* The campus owns navigation while the atlas is embedded. */
 .campus-embedded header{display:none}.campus-embedded main{height:100dvh;min-height:300px}
+
+.anatomy-hover-label{position:absolute;z-index:9;max-width:280px;pointer-events:none;background:#1a2a36f5;color:#e9f4fa;border:1px solid #74b6c566;border-radius:10px;padding:9px 12px;font-size:12px;box-shadow:0 8px 24px #0005}.anatomy-hover-label[hidden]{display:none}.group-muscle-tools{padding-bottom:16px;margin-bottom:20px;border-bottom:1px solid #ffffff12}.group-muscle-tools h3{font-size:15px;margin:12px 0 8px}.group-muscle-tools p{font-size:12px;line-height:1.6;color:#a4b9c7}.group-muscle-tools button{display:block;width:100%;text-align:left;font-size:12px;margin:5px 0;padding:10px 12px}.group-muscle-tools button[aria-pressed=true]{background:#294754;border-color:#75baca;color:#fff}.group-return{color:#a5deee}
