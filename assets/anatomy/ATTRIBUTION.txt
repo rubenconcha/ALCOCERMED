@@ -119,3 +119,6 @@ tympanic membrane, cochlea, vestibular labyrinth, olfactory nerve and tongue
 meshes. No new microscopic receptor geometry is claimed. Study descriptions
 are original summaries of the supplied Saladin, chapter 16. Transparent optical
 media are illustrative display materials, not an optical simulation.
+
+Revision 21: bone landmark coordinates derive from the original Z-Anatomy annotation arrows and Spanish nomenclature. They are anchored to their owning original bone surface and projected onto the matching displayed bone. Contralateral copies are checked against the corresponding source surface. Coordinates and Spanish labels in anatomia-huesos-relieves.js are a CC BY-SA 4.0 derivative of Z-Anatomy.
+Bone study cues paraphrase the supplied Saladin, chapter 8. Variation and development notes do not claim additional variant 3D meshes.

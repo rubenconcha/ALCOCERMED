@@ -1,3 +1,4 @@
+import {boneStudy} from './anatomia-huesos-estudio.js?v=21';
 // Anatomical recognition notes: supplied Saladin, chapters 8, 9, 13–14 and 20.
 const bones=[
  [/^humerus$/,'Brazo','Reconoce cabeza, cuello, tubérculos y diáfisis; en el extremo distal, tróclea y capítulo. Se articula con la escápula, el radio y el cúbito.'],
@@ -33,7 +34,8 @@ export function structureStudy(part){
  const key=part.name.toLowerCase().replace(/\.[rlgj]$/,'').replace(/_/g,' ');
  if(part.system==='skeletal'){
   const note=bones.find(([pattern])=>pattern.test(key));
-  if(note)return {region:note[1],text:note[2],chapters:'8'};
+  if(note)return {region:note[1],text:note[2],chapters:'8',...boneStudy(part)};
+  const study=boneStudy(part);if(study.boneStudy)return {...study,region:study.classification,text:study.articulations};
  }
  return {};
 }
