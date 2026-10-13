@@ -1,4 +1,5 @@
-import {organStudy} from './anatomia-organos-estudio.js?v=14';
+import { senses } from './anatomia-sentidos.js?v=15';
+import {organStudy} from './anatomia-organos-estudio.js?v=15';
 export const muscles=[
 {id:'sternocleidomastoid',name:'Esternocleidomastoideo',region:'Cuello',match:'sternocleidomastoid',page:331,pdf:359,action:'La contracción unilateral rota la cabeza hacia el lado opuesto. La contracción bilateral flexiona la cabeza y el cuello. Con la cabeza fija, ayuda a la inspiración profunda.',origin:'Manubrio del esternón y tercio medial de la clavícula.',insertion:'Apófisis mastoides del temporal y mitad lateral de la línea superior de la nuca.',nerve:'Nervio accesorio y nervios cervicales C2–C3.'},
 {id:'deltoid',name:'Deltoides',region:'Hombro',match:'deltoid',page:346,pdf:374,action:'Las fibras medias abducen el brazo. Las anteriores lo flexionan y rotan medialmente; las posteriores lo extienden y rotan lateralmente.',origin:'Tercio lateral de la clavícula, acromion y espina de la escápula.',insertion:'Tuberosidad deltoidea del húmero.',nerve:'Nervio axilar.'},
@@ -81,3 +82,6 @@ for(const m of muscles){const r=muscleRelations[m.id];m.nerveMatch=r[0];m.artery
 systems.push({id:'lymphatic',name:'Linfático',color:'#7daf99'});
 organs.push({id:'spleen',name:'Bazo',system:'lymphatic',match:'^spleen$',color:'#987080',text:'Órgano linfático que filtra la sangre, participa en la respuesta inmunitaria y retira eritrocitos envejecidos.'},{id:'thymus',name:'Timo',system:'lymphatic',match:'lobe_of_thymus',color:'#b49e96',text:'Órgano linfático primario donde maduran los linfocitos T. Su tejido funcional disminuye después de la pubertad.'});
 for(const o of organs){const study=organStudy[o.id];if(study){Object.assign(o,study);o.studyOrgan=true;o.studySource=study.sourceURL||'https://www.ncbi.nlm.nih.gov/books/'+study.source+'/';}}
+
+systems.push({id:'sensory',name:'Órganos de los sentidos',color:'#9faccf'});
+organs.push(...senses);

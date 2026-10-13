@@ -1806,3 +1806,11 @@ export const anatomyNamesES={
   "node of ligamentum arteriosum": "Ganglio del ligamento arterioso",
   "node of arch of azygos vein": "Ganglio del arco de la vena ácigos"
 };
+
+// Terminología del capítulo 16 del texto base, aplicada a las piezas originales.
+Object.assign(anatomyNamesES,{
+ 'malleus':'Martillo','incus':'Yunque','stapes':'Estribo',
+ 'sclera':'Esclerótica','vitreous body':'Cuerpo vítreo','lens':'Cristalino',
+ 'vestibule':'Vestíbulo del oído interno','cochlea':'Cóclea',
+ 'tympanic membrane':'Membrana timpánica','tongue':'Lengua'
+});

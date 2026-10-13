@@ -1,3 +1,4 @@
+import { senses } from './anatomia-sentidos.js?v=15';
 // Study objectives based on the supplied Saladin, chapters 6 and 10–25.
 // The atlas source geometry determines which individual components can be explored.
 export const studyObjectives={
@@ -22,6 +23,8 @@ export const studyObjectives={
  spleen:['Ubica el bazo en el lado izquierdo, próximo al estómago y al diafragma.','El bazo filtra sangre; los ganglios filtran linfa. No son equivalentes.'],
  thymus:['Ubica el timo en el mediastino, por detrás del esternón.','Relaciona este órgano linfático primario con la maduración de linfocitos T y su involución con la edad.']
 };
+for(const sense of senses)studyObjectives[sense.id]=sense.objectives;
+studyObjectives.skin[1]+=' '+('Los receptores somáticos permiten percibir tacto, presión, vibración, temperatura y dolor. Los corpúsculos táctiles y laminares no están segmentados en esta superficie 3D.');
 export function lessonSteps(data){
  const objective=studyObjectives[data.id];
  const steps=[{title:'Ubicación',body:data.region||'Ubica la estructura en el cuerpo y reconoce sus relaciones con los tejidos vecinos.',mode:'location'},
@@ -29,6 +32,6 @@ export function lessonSteps(data){
  {title:data.action?'Acción':data.text?'Función':'Reconocimiento anatómico',body:(data.action||data.text||'Comprueba el nombre, el lado y la posición de esta estructura en el conjunto. Gira el modelo para identificar sus relaciones espaciales.')+(objective?' '+objective[1]:''),mode:'function'}];
  if(data.action)steps.push({title:'Origen',body:data.origin,mode:'origin'},{title:'Inserción',body:data.insertion,mode:'insertion'});
  for(const [title,mode] of [['Irrigación','irrigation'],[data.nerveTitle||'Inervación','nerve'],['Drenaje linfático','lymph']])if(data[mode])steps.push({title,mode,body:data[mode]});
- steps.push({title:'Comprueba lo aprendido',mode:'review',body:data.action?'Sin mirar la ficha, explica la acción, el origen, la inserción y la inervación. Después comprueba tu respuesta.':'Sin mirar la ficha, explica su función, identifica sus componentes y distingue irrigación, inervación y drenaje linfático.'});
+ steps.push({title:'Comprueba lo aprendido',mode:'review',body:data.action?'Sin mirar la ficha, explica la acción, el origen, la inserción y la inervación. Después comprueba tu respuesta.':data.system==='sensory'?'Sin mirar la ficha, identifica el estímulo, las estructuras receptoras y la vía nerviosa. Distingue lo que representa el modelo de lo que corresponde a escala celular.':'Sin mirar la ficha, explica su función, identifica sus componentes y distingue irrigación, inervación y drenaje linfático.'});
  return steps;
 }
