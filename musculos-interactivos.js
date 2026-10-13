@@ -8,6 +8,7 @@ import { RoomEnvironment } from './assets/vendor/three/RoomEnvironment.js';
 import { mergeGeometries } from './assets/vendor/three/BufferGeometryUtils.js';
 import { muscles, organs, systems, regions } from './anatomia-atlas-data.js?v=17';
 import { anatomyNamesES } from './anatomia-nombres-es.js?v=17';
+import { anatomySearchIndex } from './anatomia-busqueda-indice.js?v=18';
 import { structureStudy } from './anatomia-estructuras-estudio.js?v=17';
 import { finishOrganMaterial } from './anatomia-materiales.js?v=17';
 import { lessonSteps } from './anatomia-estudio.js?v=17';
@@ -45,15 +46,37 @@ let lastPanel='explore';
 function closePanel(){lastPanel=panel||lastPanel;$('#open-panel').textContent=lastPanel==='learn'?'Estudiar estructura':lastPanel==='search'?'Buscar estructuras':'Elegir sistemas';panel=null;$('#drawer').hidden=true;$('#atlas').classList.add('no-panel');$('#open-panel').hidden=false;document.querySelectorAll('[data-panel]').forEach(b=>b.setAttribute('aria-pressed','false'))}
 function selectedParts(){return selected?parts.filter(p=>selected.keys.has(p.key)):[]}
 function sideText(side){return side==='left'?'izquierdo':side==='right'?'derecho':''}
+const muscleGroups=[
+ {id:'neck',name:'Músculos del cuello',match:'sternocleidomastoid|scalene|splenius|semispinalis_capitis|semispinalis_cervicis|longus_colli|longus_capitis',text:'Músculos que participan en los movimientos de la cabeza y el cuello.'},
+ {id:'rotator',name:'Manguito rotador',match:'supraspinatus|infraspinatus|teres_minor|subscapularis',text:'Supraespinoso, infraespinoso, redondo menor y subescapular. Se relacionan con la estabilidad y el movimiento del hombro.'},
+ {id:'arm',name:'Músculos del brazo',match:'biceps_brachii|brachialis|coracobrachialis|triceps_brachii',text:'Compartimientos anterior y posterior del brazo. Selecciona un músculo en el modelo para estudiarlo por separado.'},
+ {id:'quadriceps',name:'Cuádriceps femoral',match:'rectus_femoris|vastus_lateralis|vastus_medialis|vastus_intermedius',text:'Recto femoral y vastos lateral, medial e intermedio. Forman el grupo extensor de la rodilla.'},
+ {id:'hamstrings',name:'Isquiotibiales',match:'biceps_femoris|semitendinosus|semimembranosus',text:'Bíceps femoral, semitendinoso y semimembranoso. La cabeza corta del bíceps no comparte el origen isquiático del resto.'},
+ {id:'sural',name:'Tríceps sural',match:'gastrocnemius|soleus',text:'Gastrocnemio y sóleo. Se unen distalmente al tendón calcáneo y participan en la flexión plantar.'}
+];
 let searchScope='all';
-function searchText(text){return normal(text).replace(/\bmusculos?\b/g,'').replace(/\bgemelos?\b/g,'gastrocnemio').replace(/\bperoneos?\b/g,'fibular').replace(/\bcubito\b/g,'ulna').replace(/\bperone\b/g,'fibula').trim()}
+function searchText(text){return normal(text).replace(/\bgemelos?\b/g,'gastrocnemio').replace(/\bperoneos?\b/g,'fibular').replace(/\bcubito\b/g,'ulna').replace(/\bganglios?\b/g,'nodo').replace(/\bperone\b/g,'fibula').replace(/\bsupraspinoso\b/g,'supraespinoso').replace(/\binfraspinoso\b/g,'infraespinoso').replace(/\besternocleido mastoideo\b/g,'esternocleidomastoideo').replace(/[^a-z0-9]+/g,' ').split(/\s+/).filter(t=>t&&!['de','del','el','la','los','las','un','una','y','musculo','musculos'].includes(t)).map(t=>t.length>4&&/(os|as)$/.test(t)?t.slice(0,-1):t.length>5&&/ores$/.test(t)?t.slice(0,-2):t).join(' ')}
+async function selectSearchStructure(entry){
+ stopLesson();const epoch=++filterVersion;
+ try{await ensureSystem(entry.system);if(epoch!==filterVersion)return;
+  const title=normal(entry.name),items=parts.filter(p=>p.system===entry.system&&normal(displayName(p.name))===title);
+  if(!items.length){notify('Esta estructura no está disponible en el modelo actual.');return}
+  const part=items.find(p=>p.name===entry.raw)||items[0];region='all';updateRegionUI();
+  const card=part.system==='muscular'&&catalog.find(d=>d.id===part.catalogId);
+  if(card){await selectCatalog(card.id,true,part.side||'right');return}
+  setSelection({id:part.key,name:entry.name,system:part.system,...structureStudy(part)},items,true);
+ }catch(e){notify('No se pudo cargar esta estructura. Vuelve a intentarlo.');console.error(e)}
+}
 function buildCatalog(){
  const query=$('#search').value.trim(),q=searchText(query),tokens=q.split(/\s+/).filter(Boolean),rows=[],seen=new Set();
  const matches=text=>tokens.every(t=>searchText(text).includes(t));
  const score=text=>{const n=searchText(text);return n===q?0:n.startsWith(q)?1:2};
  const add=(name,subtitle,color,id,select)=>{if(searchScope!=='all'&&id.system!=='muscular')return;if(q&&!matches(name+' '+subtitle))return;rows.push({name,subtitle,color,id,select,score:q?score(name):0})};
  for(const d of catalog){add(d.name,d.region||systems.find(s=>s.id===d.system)?.name||'',d.color,d,()=>selectCatalog(d.id,true))}
- for(const part of parts){if((part.catalogId&&part.system!=='integumentary'))continue;const title=displayName(part.name),key=part.system+':'+normal(title);if(seen.has(key))continue;seen.add(key);add(title,systems.find(s=>s.id===part.system)?.name||'',systems.find(s=>s.id===part.system)?.color||'#aab5bf',{id:part.key,system:part.system},()=>{++filterVersion;enabled.add(part.system);region='all';updateRegionUI();selectPart(part);focusSelection()})}
+ for(const g of muscleGroups)add(g.name,'Grupo muscular · '+g.text,'#ba7778',{id:'group-'+g.id,system:'muscular'},()=>groupView(g.id));
+ for(const s of systems)add(s.name,s.id==='skeletal'?'Sistema óseo · huesos':s.id==='muscular'?'Sistema muscular · músculos':'Sistema anatómico',s.color,{id:'system-'+s.id,system:s.id},()=>setSystem(s.id,true,true));
+ for(const d of catalog)seen.add(d.system+':'+normal(d.name));
+ for(const entry of anatomySearchIndex){const key=entry.system+':'+normal(entry.name);if(seen.has(key))continue;seen.add(key);add(entry.name,systems.find(s=>s.id===entry.system)?.name||'',systems.find(s=>s.id===entry.system)?.color||'#aab5bf',{id:'structure-'+entry.raw,system:entry.system},()=>selectSearchStructure(entry))}
  rows.sort((a,b)=>a.score-b.score||a.name.localeCompare(b.name,'es'));const list=$('#structure-list');list.replaceChildren();
  for(const row of rows.slice(0,80)){const b=document.createElement('button');b.dataset.id=row.id.id;b.className='search-result';b.innerHTML=`<span class="swatch" style="background:${row.color}"></span><span class="result-name">${html(row.name)}<small>${html(row.subtitle)}</small></span><span class="result-arrow" aria-hidden="true">›</span>`;b.classList.toggle('selected',selected?.id===row.id.id);b.disabled=!ready;b.onclick=row.select;list.append(b)}
  $('#clear-search').hidden=!query;$('#search-count').textContent=rows.length?(q?rows.length+(rows.length===1?' resultado':' resultados'):searchScope==='muscular'?'Músculos disponibles':'Estructuras disponibles')+(rows.length>80?' · mostrando los primeros 80':''):'';
@@ -124,14 +147,7 @@ if(innerWidth>760)openPanel('explore');
 
 for(const b of document.querySelectorAll('[data-search-scope]'))b.onclick=()=>{searchScope=b.dataset.searchScope;document.querySelectorAll('[data-search-scope]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));buildCatalog()};for(const b of document.querySelectorAll('[data-search-query]'))b.onclick=()=>{$('#search').value=b.dataset.searchQuery;buildCatalog();$('#search').focus()};$('#clear-search').onclick=()=>{$('#search').value='';buildCatalog();$('#search').focus()};
 
-const muscleGroups=[
- {id:'neck',name:'Músculos del cuello',match:'sternocleidomastoid|scalene|splenius|semispinalis_capitis|semispinalis_cervicis|longus_colli|longus_capitis',text:'Músculos que participan en los movimientos de la cabeza y el cuello.'},
- {id:'rotator',name:'Manguito rotador',match:'supraspinatus|infraspinatus|teres_minor|subscapularis',text:'Supraespinoso, infraespinoso, redondo menor y subescapular. Se relacionan con la estabilidad y el movimiento del hombro.'},
- {id:'arm',name:'Músculos del brazo',match:'biceps_brachii|brachialis|coracobrachialis|triceps_brachii',text:'Compartimientos anterior y posterior del brazo. Selecciona un músculo en el modelo para estudiarlo por separado.'},
- {id:'quadriceps',name:'Cuádriceps femoral',match:'rectus_femoris|vastus_lateralis|vastus_medialis|vastus_intermedius',text:'Recto femoral y vastos lateral, medial e intermedio. Forman el grupo extensor de la rodilla.'},
- {id:'hamstrings',name:'Isquiotibiales',match:'biceps_femoris|semitendinosus|semimembranosus',text:'Bíceps femoral, semitendinoso y semimembranoso. La cabeza corta del bíceps no comparte el origen isquiático del resto.'},
- {id:'sural',name:'Tríceps sural',match:'gastrocnemius|soleus',text:'Gastrocnemio y sóleo. Se unen distalmente al tendón calcáneo y participan en la flexión plantar.'}
-];
+
 function groupView(id){if(!ready)return;const g=muscleGroups.find(g=>g.id===id);if(!g)return;filterVersion++;const items=parts.filter(p=>p.system==='muscular'&&new RegExp(g.match).test(p.name.toLowerCase().replace(/[.\s]+/g,'_')));if(!items.length)return;enabled.clear();enabled.add('muscular');region='all';halfMuscles=false;$('#half-muscles').checked=false;isolation=false;$('#isolate').textContent='Aislar';$('#isolate').setAttribute('aria-pressed','false');hidden.clear();setSelection({id:'group-'+id,name:g.name,system:'muscular',text:g.text},items,false);studyKeys.clear();items.forEach(p=>studyKeys.add(p.key));studyMode=true;rebuild();$('#filter-summary').textContent='Solo '+g.name;focusParts(items);}
 for(const g of muscleGroups){const b=document.createElement('button');b.textContent=g.name;b.dataset.muscleGroup=g.id;b.onclick=()=>groupView(g.id);$('#muscle-groups').append(b)}
 $('#quick-muscle').onclick=()=>{stopLesson();if(!selected)return;filterVersion++;clearRelation();studyMode=false;isolation=true;$('#isolate').textContent='Ver conjunto';$('#isolate').setAttribute('aria-pressed','true');rebuild();focusSelection()};$('#quick-bones').onclick=()=>{stopLesson();attachmentView()};$('#quick-info').onclick=()=>openPanel('learn');window.musclePreview.groupView=groupView;
