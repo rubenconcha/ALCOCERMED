@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="campus-preview.css?v=3">
     <link rel="stylesheet" href="mindmap-viewer.css?v=5">
     <link rel="stylesheet" href="past-exams.css?v=2">
+    <link rel="stylesheet" href="campus-atlas.css?v=1">
 </head>
 
 <body class="login-active">
@@ -225,6 +226,13 @@
                         </span>
                         <span class="nav-label">mapas mentales</span>
 
+                    </a>
+                </li>
+
+                <li class="nav-item nav-item-simple" id="nav-atlas">
+                    <a href="/campus?seccion=atlas" onclick="openAtlas(); return false;" data-tooltip="atlas anatómico">
+                        <span class="nav-icon nav-icon-atlas"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="5" r="3"/><path d="M11 11c-3 0-4 4-5 9m15-9c3 0 4 4 5 9M11 11l5 2 5-2M16 13v9m-5-5 5 2 5-2M12 30l4-8 4 8M11 11v10m10-10v10"/></svg></span>
+                        <span class="nav-label">atlas anatómico</span>
                     </a>
                 </li>
 
@@ -1293,6 +1301,11 @@
 
         </section>
 
+        <section id="atlas-screen" class="campus-atlas hidden" aria-labelledby="campus-atlas-title">
+            <div class="campus-atlas-heading"><div><h1 id="campus-atlas-title">Atlas anatómico</h1><p>Explora los sistemas del cuerpo y estudia sus estructuras en 3D.</p></div><div class="campus-atlas-actions"><button type="button" onclick="leaveAtlas()">← Volver</button><button type="button" id="campus-atlas-fullscreen">Pantalla completa</button></div></div>
+            <div id="campus-atlas-viewport" class="campus-atlas-viewport"><iframe id="campus-atlas-frame" title="Atlas anatómico 3D interactivo" allow="fullscreen" allowfullscreen></iframe><div id="campus-atlas-loading" class="campus-atlas-loading" role="status">Preparando el atlas…</div></div>
+        </section>
+
     </main>
 
     <!-- Lector de mapas a pantalla completa -->
@@ -1339,7 +1352,7 @@
     <script src="campus-access.js?v=9"></script>
     <script src="mindmap-premium-catalog.js?v=1"></script>
     <script src="mindmap-premium.js?v=1"></script>
-    <script src="script.js?v=48"></script>
+    <script src="script.js?v=49"></script>
     <script src="mindmap-branch-labels.js?v=3"></script>
     <script src="mindmap-content.js?v=1"></script>
     <script src="mindmap-detailed-content.js?v=3"></script>
@@ -1349,6 +1362,7 @@
     <script src="student-library.js?v=8"></script>
     <script src="study-summaries.js?v=3"></script>
     <script src="past-exams.js?v=4"></script>
+    <script src="campus-atlas.js?v=1"></script>
 </body>
 
 </html>

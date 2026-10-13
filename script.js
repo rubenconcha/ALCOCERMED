@@ -237,7 +237,8 @@ function enterVerifiedApp(user) {
     setTimeout(preloadAppData, 1200);
     setTimeout(sincronizarPerfilEnNube, 2000);
 
-    restoreCampusAfterPlans();
+    if (new URLSearchParams(window.location.search).get('seccion') === 'atlas' && typeof openAtlas === 'function') openAtlas();
+    else restoreCampusAfterPlans();
     if (window.openRequestedMindmap) window.openRequestedMindmap().catch(function(error) { console.warn("No se pudo abrir el mapa solicitado", error); });
 
 
@@ -471,7 +472,7 @@ function showScreen(screenId, fromBack) {
     }
     if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
-    const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen'];
+    const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen', 'atlas-screen'];
     screens.forEach(function (id) {
         const el = document.getElementById(id);
         if (el) {
