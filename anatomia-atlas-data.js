@@ -1,5 +1,6 @@
-import { senses } from './anatomia-sentidos.js?v=16';
-import {organStudy} from './anatomia-organos-estudio.js?v=16';
+import { additionalMuscles } from './anatomia-musculos-completa.js?v=17';
+import { senses } from './anatomia-sentidos.js?v=17';
+import {organStudy} from './anatomia-organos-estudio.js?v=17';
 export const muscles=[
 {id:'sternocleidomastoid',name:'Esternocleidomastoideo',region:'Cuello',match:'sternocleidomastoid',page:331,pdf:359,action:'La contracción unilateral rota la cabeza hacia el lado opuesto. La contracción bilateral flexiona la cabeza y el cuello. Con la cabeza fija, ayuda a la inspiración profunda.',origin:'Manubrio del esternón y tercio medial de la clavícula.',insertion:'Apófisis mastoides del temporal y mitad lateral de la línea superior de la nuca.',nerve:'Nervio accesorio y nervios cervicales C2–C3.'},
 {id:'deltoid',name:'Deltoides',region:'Hombro',match:'deltoid',page:346,pdf:374,action:'Las fibras medias abducen el brazo. Las anteriores lo flexionan y rotan medialmente; las posteriores lo extienden y rotan lateralmente.',origin:'Tercio lateral de la clavícula, acromion y espina de la escápula.',insertion:'Tuberosidad deltoidea del húmero.',nerve:'Nervio axilar.'},
@@ -85,3 +86,5 @@ for(const o of organs){const study=organStudy[o.id];if(study){Object.assign(o,st
 
 systems.push({id:'sensory',name:'Órganos de los sentidos',color:'#9faccf'});
 organs.push(...senses);
+
+muscles.push(...additionalMuscles);

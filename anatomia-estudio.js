@@ -1,4 +1,4 @@
-import { senses } from './anatomia-sentidos.js?v=16';
+import { senses } from './anatomia-sentidos.js?v=17';
 // Study objectives based on the supplied Saladin, chapters 6 and 10–25.
 // The atlas source geometry determines which individual components can be explored.
 export const studyObjectives={
