@@ -8,6 +8,9 @@
     },
     "api/mindmap.js": {
       "includeFiles": "api/_mindmaps/**"
+    },
+    "api/atlas.js": {
+      "includeFiles": "api/_atlas/**"
     }
   },
   "headers": [
@@ -86,8 +89,12 @@
   ],
   "rewrites": [
     {
+      "source": "/musculos-interactivos",
+      "destination": "/api/atlas"
+    },
+    {
       "source": "/atlas-anatomico",
-      "destination": "/musculos-interactivos.html"
+      "destination": "/api/atlas"
     },
     {
       "source": "/api/_mindmaps/:path*",
@@ -135,6 +142,16 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/musculos-interactivos.html",
+      "destination": "/atlas-anatomico",
+      "permanent": false
+    },
+    {
+      "source": "/api/_atlas/:path*",
+      "destination": "/campus?seccion=atlas",
+      "permanent": false
+    },
     {
       "source": "/juego",
       "destination": "/juegos/",
