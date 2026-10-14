@@ -1,7 +1,7 @@
 'use strict';
 (() => {
  const screen=document.getElementById('atlas-screen'),frame=document.getElementById('campus-atlas-frame'),item=document.getElementById('nav-atlas');
- const source='/atlas-anatomico?embed=campus&revision=22';
+ const source='/atlas-anatomico?embed=campus&revision=23';
  window.openAtlas=function(){
   if(showScreen('atlas-screen')===false)return;
   if(!frame.hasAttribute('src')){document.getElementById('campus-atlas-loading').hidden=false;frame.src=source}
