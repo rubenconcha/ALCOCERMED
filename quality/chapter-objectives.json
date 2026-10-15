@@ -169,10 +169,11 @@
           ],
           "targeted_expansion_maps": [
             "morfo_18_sangre__10",
-            "morfo_18_sangre__11"
+            "morfo_18_sangre__11",
+            "morfo_18_sangre__12"
           ],
           "status": "targeted_expansion_available_full_objective_review_pending",
-          "targeted_scope": "Hepatic synthesis versus bile-dependent vitamin K absorption, functional preparation versus activation, conceptual comparisons and limited INR interpretation. Hemophilias and broader disorder review pending."
+          "targeted_scope": "Targeted hepatic/vitamin-K mechanisms plus hereditary hemophilias A/B/C, residual function, factor-versus-platelet comparisons and corrected inheritance. Acquired hemophilia, laboratory work-up, thrombotic and other platelet disorders remain pending."
         }
       ]
     },

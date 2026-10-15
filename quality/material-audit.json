@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "inventory_date": "2026-10-15T17:36:55.918Z",
+  "inventory_date": "2026-10-15T18:41:59.733Z",
   "scope": "Local authoring files. Database delivery and clinical accuracy require separate verification.",
   "official_topics": 74,
-  "detailed_maps": 454,
+  "detailed_maps": 455,
   "reviewed_topics": 0,
   "warning": "Existing quantities do not demonstrate sufficient depth. Pending visual flags mean not verified, not necessarily absent.",
   "topics": [
@@ -156,7 +156,7 @@
       "title": "La sangre",
       "subject": "Morfofunción",
       "general_sections": 6,
-      "detailed_maps": 11,
+      "detailed_maps": 12,
       "maps": [
         {
           "id": "morfo_18_sangre__01",
@@ -281,6 +281,18 @@
         {
           "id": "morfo_18_sangre__11",
           "title": "Hígado, bilis y vitamina K: de la absorción a la coagulación",
+          "sections": 6,
+          "concepts": 18,
+          "very_short_explanations": 0,
+          "sourced_concepts": 18,
+          "average_words": 56,
+          "academic_review": "automated_review_passed",
+          "original_logo_verified": true,
+          "generative_art_verified": true
+        },
+        {
+          "id": "morfo_18_sangre__12",
+          "title": "Hemofilias A, B y C: factores, mecanismo y herencia",
           "sections": 6,
           "concepts": 18,
           "very_short_explanations": 0,

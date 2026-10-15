@@ -138,5 +138,19 @@
     "acceso_gratis": false,
     "curated": true,
     "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__11.webp"
+  },
+  {
+    "id": "morfo_18_sangre__12",
+    "titulo": "Hemofilias A, B y C: factores, mecanismo y herencia",
+    "root_title": "Hemofilias A, B y C: factores, mecanismo y herencia",
+    "materia": "Morfofunción",
+    "tema": "Sangre",
+    "parent_key": "morfo_18_sangre.png",
+    "url_imagen": "premium/morfo_18_sangre__12.json",
+    "descripcion": "Compara VIII, IX y XI, defecto de factor frente a plaquetas, actividad residual y transmisión ligada al X. Casos razonados.",
+    "premium": true,
+    "acceso_gratis": false,
+    "curated": true,
+    "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__12.webp"
   }
 ]
