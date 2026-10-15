@@ -173,7 +173,7 @@
       "id": "morfo_16_organos_sentidos",
       "outline_pdf_page": 610,
       "chapter_review": "pending",
-      "summary_review": "Existing branded illustrated PDF requires objective-by-objective depth revision",
+      "summary_review": "15-page illustrated PDF: five targeted depth pages on chemical senses, retina, hearing and equilibrium. Full objective review and teacher approval pending.",
       "independent_exam_coverage": "pending",
       "objectives": [
         {
@@ -226,7 +226,10 @@
             621
           ],
           "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "status": "targeted_expansion_available_full_objective_review_pending",
+          "targeted_summary_pages": [
+            11
+          ]
         },
         {
           "domain": "Olfato y transducción química",
@@ -239,7 +242,10 @@
             623
           ],
           "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "status": "targeted_expansion_available_full_objective_review_pending",
+          "targeted_summary_pages": [
+            12
+          ]
         },
         {
           "domain": "Sonido y anatomía del oído",
@@ -252,7 +258,10 @@
             629
           ],
           "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "status": "targeted_expansion_available_full_objective_review_pending",
+          "targeted_summary_pages": [
+            14
+          ]
         },
         {
           "domain": "Transducción y codificación auditiva",
@@ -267,7 +276,10 @@
           "targeted_expansion_maps": [
             "morfo_16_organos_sentidos__08"
           ],
-          "status": "targeted_expansion_available_full_objective_review_pending"
+          "status": "targeted_expansion_available_full_objective_review_pending",
+          "targeted_summary_pages": [
+            14
+          ]
         },
         {
           "domain": "Vía auditiva central y relaciones clínicas",
@@ -295,7 +307,10 @@
           "targeted_expansion_maps": [
             "morfo_16_organos_sentidos__09"
           ],
-          "status": "targeted_expansion_available_full_objective_review_pending"
+          "status": "targeted_expansion_available_full_objective_review_pending",
+          "targeted_summary_pages": [
+            15
+          ]
         },
         {
           "domain": "Óptica, anatomía y formación de imagen",
@@ -323,7 +338,10 @@
           "targeted_expansion_maps": [
             "morfo_16_organos_sentidos__07"
           ],
-          "status": "targeted_expansion_available_full_objective_review_pending"
+          "status": "targeted_expansion_available_full_objective_review_pending",
+          "targeted_summary_pages": [
+            13
+          ]
         },
         {
           "domain": "Visión estereoscópica y proyección visual",

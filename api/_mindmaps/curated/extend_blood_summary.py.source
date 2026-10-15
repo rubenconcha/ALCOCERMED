@@ -24,7 +24,7 @@ PAGES=[
  ('Caso 6 · ¿Retracción o fibrinólisis?','Si plaquetas unidas a la red traccionan y compactan el coágulo, se describe retracción. Si la plasmina degrada fibrina, se describe fibrinólisis. Ambas pueden reducir el tamaño observado, pero mediante mecanismos distintos. La reparación vascular tampoco equivale a cualquiera de ellas: requiere reconstrucción tisular. Para responder, identifica qué estructura cambia y si el proceso es mecánico, reparador o proteolítico.') ]}
 ]
 
-def extend():
+def extend(slug='sangre',title='Sangre',pages=None,accent='#ae354d'):
  from reportlab.pdfgen.canvas import Canvas
  from reportlab.pdfbase import pdfmetrics
  from reportlab.pdfbase.ttfonts import TTFont
@@ -34,7 +34,9 @@ def extend():
  from reportlab.lib.colors import HexColor
  from reportlab.lib.utils import ImageReader
  from pypdf import PdfReader,PdfWriter
- target=ROOT/'api/_pdf/morfofuncion-sangre.pdf'
+ page_specs=PAGES if pages is None else pages
+ total=10+len(page_specs)
+ target=ROOT/f'api/_pdf/morfofuncion-{slug}.pdf'
  base=PdfReader(io.BytesIO(target.read_bytes()))
  assert len(base.pages)>=10
  for name,font in [('Depth','arial.ttf'),('DepthBold','arialbd.ttf')]:
@@ -44,39 +46,39 @@ def extend():
  def para(text,top,size=10.5,bold=False,color='#344258',x=m,span=width):
   p=Paragraph(text,ParagraphStyle('d',fontName='DepthBold' if bold else 'Depth',fontSize=size,leading=size*1.4,textColor=HexColor(color)))
   _,ph=p.wrap(span,1000);p.drawOn(c,x,top-ph);return top-ph
- def illustration(spec,top):
+ def illustration(spec,top,figure_height=235):
   # PDF encoding only: preserve source PNGs; avoid embedding huge hidden raster regions.
   def encoded_image(path):
    from PIL import Image
    data=io.BytesIO();Image.open(path).convert('RGB').save(data,format='JPEG',quality=92,optimize=True);data.seek(0);return ImageReader(data)
-  if spec=='diversity':
-   image=encoded_image(ROOT/'assets/summary-art/sangre-generativa.png');iw,ih=image.getSize();x0,x1=.508,1;y0,y1=.393,.577;scale=min(210/((x1-x0)*iw),140/((y1-y0)*ih));fw,fh=(x1-x0)*iw*scale,(y1-y0)*ih*scale;fx=m+(width-fw)/2;fy=top-fh
+  if spec in ('diversity','senses-olfaction'):
+   image=encoded_image(ROOT/('assets/summary-art/sangre-generativa.png' if spec=='diversity' else 'assets/summary-art/sentidos-generativa.png'));iw,ih=image.getSize();x0,x1=(.508,1) if spec=='diversity' else (0,.492);y0,y1=(.393,.577) if spec=='diversity' else (.383,.576);scale=min(210/((x1-x0)*iw),140/((y1-y0)*ih));fw,fh=(x1-x0)*iw*scale,(y1-y0)*ih*scale;fx=m+(width-fw)/2;fy=top-fh
    c.saveState();path=c.beginPath();path.rect(fx,fy,fw,fh);c.clipPath(path,stroke=0);c.drawImage(image,fx-x0*iw*scale,fy-(1-y1)*ih*scale,width=iw*scale,height=ih*scale,mask='auto');c.restoreState();return top-fh-8
-  image=encoded_image(ROOT/'api/_mindmaps'/spec);iw,ih=image.getSize();fh=235;fw=fh*iw/ih;c.drawImage(image,m+(width-fw)/2,top-fh,width=fw,height=fh,mask='auto');return top-fh-8
- for index,page in enumerate(PAGES):
-  c.setFillColor(HexColor('#ae354d'));c.rect(0,h-6,w,6,fill=1,stroke=0)
+  image=encoded_image(ROOT/'api/_mindmaps'/spec);iw,ih=image.getSize();fh=figure_height;fw=fh*iw/ih;c.drawImage(image,m+(width-fw)/2,top-fh,width=fw,height=fh,mask='auto');return top-fh-8
+ for index,page in enumerate(page_specs):
+  c.setFillColor(HexColor(accent));c.rect(0,h-6,w,6,fill=1,stroke=0)
   c.drawImage(str(ROOT/'promo-ben-carson-tiktok/public/authentic/logo.png'),m,h-78,width=58,height=58,mask='auto')
   para('PREPARATORIA BEN CARSON',h-29,11,True,'#18263f',m+68,330)
-  para('ALCOCERMED · MORFOFUNCIÓN · AMPLIACIÓN DEL RESUMEN',h-49,8,False,'#ae354d',m+68,410)
+  para('ALCOCERMED · MORFOFUNCIÓN · AMPLIACIÓN DEL RESUMEN',h-49,8,False,accent,m+68,410)
   c.setStrokeColor(HexColor('#dfe7ed'));c.line(m,h-87,w-m,h-87)
   top=para(escape(page['title']),h-104,21,True,'#18263f')-10
-  top=illustration(page['figure'],top)
+  top=illustration(page['figure'],top,page.get('figure_height',235))
   top=para(escape(page['caption']),top,8.3,False,'#60718a')-12
-  for title,text in page['blocks']:
-   top=para(escape(title),top,11,True,'#ae354d')-4
+  for block_title,text in page['blocks']:
+   top=para(escape(block_title),top,11,True,accent)-4
    top=para(escape(text),top,10.3)-10
   assert top>=87,('Overflow',index,top)
   layout.append({'page':11+index,'bottom':round(top,2)})
   para('Fuente: '+escape(page['source']),70,7.2,False,'#60718a')
   c.line(m,42,w-m,42)
   para('Ilustración generada con IA · texto original seleccionable · revisión docente pendiente',32,6.8,False,'#60718a')
-  para(f'{11+index:02d} / 14',32,8,True,'#ae354d',w-m-44,44)
+  para(f'{11+index:02d} / {total}',32,8,True,accent,w-m-44,44)
   c.showPage()
  c.save();extra=PdfReader(io.BytesIO(buffer.getvalue()));writer=PdfWriter()
  for page in list(base.pages)[:10]+list(extra.pages):writer.add_page(page)
- writer.add_metadata({'/Title':'Sangre · Resumen ilustrado ampliado','/Author':'Preparatoria Ben Carson','/Subject':'Síntesis original basada en Saladin; ampliación de leucopoyesis, diferencial y hemostasia.'})
+ writer.add_metadata({'/Title':title+' · Resumen ilustrado ampliado','/Author':'Preparatoria Ben Carson','/Subject':'Síntesis original basada en Saladin; ampliación de mecanismos y casos razonados.'})
  with open(target,'wb') as f:writer.write(f)
  out=ROOT/'output/pdf'/target.name;out.parent.mkdir(parents=True,exist_ok=True);out.write_bytes(target.read_bytes())
- qa=ROOT/'output/morfo-sangre-sentidos/pdf-depth-qa';qa.mkdir(parents=True,exist_ok=True);(qa/'layout.json').write_text(json.dumps(layout,indent=2),encoding='utf8')
+ qa=ROOT/('output/morfo-sangre-sentidos/pdf-depth-qa' if slug=='sangre' else 'output/morfo-sangre-sentidos/pdf-sentidos-depth-qa');qa.mkdir(parents=True,exist_ok=True);(qa/'layout.json').write_text(json.dumps(layout,indent=2),encoding='utf8')
  print(json.dumps({'pages':len(writer.pages),'bytes':target.stat().st_size,'layout':layout}))
 if __name__=='__main__':extend()

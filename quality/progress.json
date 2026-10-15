@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "blood_summary_depth_reviewed",
+  "status": "senses_summary_depth_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -349,7 +349,7 @@
     },
     {
       "id": "blood-summary-depth-2026-10-15",
-      "status": "reviewed_ready_to_publish",
+      "status": "published_verified",
       "summary": "morfofuncion-sangre",
       "pages_before": 10,
       "pages_after": 14,
@@ -401,10 +401,92 @@
         "This is a targeted depth expansion; remaining chapter objectives and doctor review still pending.",
         "No new bank flashcards/questions or independent simulation/evaluation in this PDF batch.",
         "Sentidos summary still needs the equivalent detailed revision."
-      ]
+      ],
+      "deployment": {
+        "commit": "92a56fc",
+        "status": "Vercel success",
+        "anonymous_pdf": "401",
+        "raw_pdf_art_and_source": "404",
+        "admin_live": "Summary card shows 14 pages; reader opens protected PDF blob; download link enabled with morfofuncion-sangre.pdf filename.",
+        "pdf_bytes": 6113237,
+        "pdf_sha256": "baa863cad3d89deb0d3bc7f81899311c745a5ad47516ac48f8406d8a834047d4"
+      }
+    },
+    {
+      "id": "senses-summary-depth-2026-10-15",
+      "summary": "api/_pdf/morfofuncion-sentidos.pdf",
+      "pages_before": 10,
+      "pages_after": 15,
+      "original_extension_words": 1544,
+      "reasoned_cases": 6,
+      "new_generative_illustrations": 1,
+      "source_pages": {
+        "pdf": [
+          619,
+          620,
+          621,
+          622,
+          623,
+          627,
+          628,
+          629,
+          630,
+          631,
+          633,
+          634,
+          635,
+          636,
+          637,
+          647,
+          648,
+          649,
+          650,
+          651,
+          652
+        ],
+        "printed": "591-595, 599-603, 605-609, 619-624"
+      },
+      "complementary_sources": [
+        {
+          "url": "https://www.nidcd.nih.gov/health/taste-disorders",
+          "scope": "No exclusive tongue map; flavor versus basic tastes and chemesthesis."
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10089886/",
+          "scope": "Original research: combinatorial odor receptor coding."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10867/",
+          "scope": "Basal presynaptic calcium entry after hair-cell depolarization."
+        }
+      ],
+      "review": "Automated academic and visual second pass. Teacher approval pending. Not full chapter completion.",
+      "corrections": [
+        "Distinguish gustatory epithelial receptor from olfactory bipolar neuron.",
+        "Avoid exclusive tongue zones and one receptor/one odorant equivalence.",
+        "Caption new drawing as functional, not topographic.",
+        "Correct auditory supplemental reference to NBK10867 after lookup.",
+        "Resolve vestibular page overflow with a smaller supporting figure; maintain 10.3 pt body text.",
+        "Prevent renderer title-variable shadowing; keep blood default compatibility."
+      ],
+      "tests": [
+        "Rendered and visually inspected all 15 pages plus all five added pages individually.",
+        "PDF integrity: sourced searchable text, six cases, logo and figures, no replacement characters, safe bounds.",
+        "Original question/card packs, independent exam selections and blood summary regression tests passed.",
+        "HTTP handler access tests reject free, invalid, traversal and unavailable authorization.",
+        "Actual UI opens and downloads byte-identical PDFs at 1440 and 390 px for both summaries."
+      ],
+      "limitations": [
+        "No new main bank, flashcards or graded exam added in this PDF batch.",
+        "Full chapter objective review and teacher approval remain pending."
+      ],
+      "deployment": {
+        "status": "pending"
+      },
+      "pdf_sha256": "ee307ea7cf9e1b946d595f19d7f472ce14b642df6cb6166693660e9bc02579c4"
     }
   ],
-  "next_action": "Expand the Sentidos summary using reviewed retina/auditory/vestibular material and read remaining taste/olfaction objectives; use quality/chapter-objectives.json to guide gaps. Add dedicated leukopoiesis practice and a factor-by-factor coagulation map in later batches. Neither chapter is fully reviewed.",
+  "next_action": "Create specific chemical-senses maps and linked practice from reviewed taste/olfaction source sections, then dedicated leukopoiesis practice and factor-by-factor coagulation. Continue remaining objective gaps; neither chapter is complete.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",
