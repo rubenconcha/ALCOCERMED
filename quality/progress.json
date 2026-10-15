@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "numbered_curriculum_scoped_simulations_reviewed_ready_to_publish",
+  "status": "erythrocyte_hemoglobin_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -1430,11 +1430,77 @@
         "No authenticated production walkthrough claimed."
       ],
       "deployment": {
+        "status": "Vercel success",
+        "commit": "726d718",
+        "public_menu": "Stage controls, numbered catalog, loader and shared scope validator verified. No year or total catalog controls.",
+        "unauthenticated_scoped_questions": 401,
+        "raw_questions_and_authoring": 404,
+        "evidence": "output/simulacro-library/scoped-deployment-check.json",
+        "authenticated_production_walkthrough": "Not claimed; actual-controller tests used fixture sessions."
+      }
+    },
+    {
+      "id": "erythrocyte-hemoglobin-2026-10-15",
+      "maps": [
+        "morfo_18_sangre__14"
+      ],
+      "gap": "Dedicated depth review of erythrocyte/Hb architecture and variants was pending; older brief maps did not fully develop relationships across cell, chain, heme and transport capacity.",
+      "authored_explanations": 18,
+      "new_flashcards": 10,
+      "reasoned_questions": 6,
+      "generative_posters": 1,
+      "source_pages": {
+        "sangre": [
+          712,
+          713,
+          714
+        ]
+      },
+      "book_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+      "supplementary_sources": [
+        {
+          "url": "https://www.rcsb.org/structure/4HHB",
+          "scope": "Experimental adult structure, quaternary assembly and heme; illustration remains schematic."
+        },
+        {
+          "url": "https://www.rcsb.org/structure/1FDH",
+          "scope": "Experimental fetal alpha/gamma composition, not a claim about all chain-length conventions."
+        }
+      ],
+      "review": "Second automated academic and visual pass. No doctor approval; no whole chapter completion.",
+      "review_decisions": [
+        "Retain textbook uncertainty about unique functional advantage of biconcavity; do not turn a proposed explanation into an exclusive fact.",
+        "Avoid claiming mature RBC has no metabolism or consumes absolutely no oxygen; distinguish absent mitochondrial oxidative phosphorylation from glucose metabolism.",
+        "Separate cell/hemoglobin/chain/heme levels and maximum capacity from actual occupancy.",
+        "HbF retains alpha chains; do not invent extra hemes or eight O2 sites when beta changes to gamma.",
+        "Check four hemes on the illustrated tetramer; separate fifth gold disk is explicitly only the key.",
+        "No clinical normal ranges, dosing, diagnoses, EPO or unsupported complete CO2 mechanism added."
+      ],
+      "checks": [
+        "16 content, paid-access, stable SRS identity and data-loader regression tests passed.",
+        "Actual map controller at 1440/390: six interactive branches, full 1536px poster, byte-identical download, ten practice cards, 24 option feedback paragraphs, free account blocked before request.",
+        "Actual main library/bank renderers: 1598 protected supplement cards and 78 questions; all ten new cards sampled, long answer sources reachable, all bank feedback rendered at 1440/390, no overflow or browser errors.",
+        "Generated full-size poster and mobile/desktop map/practice views inspected."
+      ],
+      "files": [
+        "api/_mindmaps/curated/build_erythrocyte_hemoglobin.py.source",
+        "api/_mindmaps/morfo_18_sangre__14.json",
+        "api/_mindmaps/morfo_18_sangre__14.png",
+        "api/_mindmaps/morfo_18_sangre__14.webp",
+        "api/_mindmaps/erythrocyte-hemoglobin-prompts.json"
+      ],
+      "access": "Existing active-plan/verified-admin validation unchanged. Full authoring and illustrations in blocked private paths; only generic existing thumbnail public.",
+      "limitations": [
+        "Production authenticated walkthrough not claimed; actual-controller tests use local fixture sessions.",
+        "No summary PDF extension or independent chapter exam claimed by this batch.",
+        "No student data, memberships, results or SRS IDs modified. Dot remains uncreated."
+      ],
+      "deployment": {
         "status": "pending"
       }
     }
   ],
-  "next_action": "Continue Blood erythrocyte/hemoglobin mechanisms from PDF 712–719 and Senses objective-level review; revise summaries and independent assessments against coverage. Do not equate new counts with completed chapters.",
+  "next_action": "Continue Blood erythropoiesis and EPO feedback from PDF 714–716, then erythrocyte removal/iron recycling and Senses somatic sensory mechanisms; extend summary/assessment coverage separately. No whole chapter approval implied.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

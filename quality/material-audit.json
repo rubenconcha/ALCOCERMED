@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "inventory_date": "2026-10-15T20:38:04.887858+00:00",
+  "inventory_date": "2026-10-15T22:32:47.991524+00:00",
   "scope": "Local authoring files. Database delivery and clinical accuracy require separate verification.",
   "official_topics": 74,
-  "detailed_maps": 486,
+  "detailed_maps": 487,
   "reviewed_topics": 0,
   "warning": "Existing quantities do not demonstrate sufficient depth. Pending visual flags mean not verified, not necessarily absent.",
   "topics": [
@@ -156,7 +156,7 @@
       "title": "La sangre",
       "subject": "Morfofunción",
       "general_sections": 6,
-      "detailed_maps": 13,
+      "detailed_maps": 14,
       "maps": [
         {
           "id": "morfo_18_sangre__01",
@@ -313,11 +313,23 @@
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
           "generative_art_verified": true
+        },
+        {
+          "id": "morfo_18_sangre__14",
+          "title": "Eritrocito y hemoglobina: estructura, variantes y transporte",
+          "sections": 6,
+          "concepts": 18,
+          "very_short_explanations": 0,
+          "sourced_concepts": 18,
+          "average_words": 57,
+          "academic_review": "automated_review_passed",
+          "original_logo_verified": true,
+          "generative_art_verified": true
         }
       ],
       "priority": 1,
       "workflow_status": "requires_academic_and_visual_review",
-      "next_action": "Continue objective-level review of erythrocyte lifecycle and hemoglobin; plasma comparison and hematocrit reasoning now have a targeted reviewed supplement, not full chapter approval."
+      "next_action": "Continue erythropoiesis/EPO and erythrocyte lifecycle; hemoglobin structure and variants now have a targeted reviewed supplement, not full chapter approval."
     },
     {
       "id": "biocel_01_introduccion",

@@ -66,10 +66,11 @@
             714
           ],
           "targeted_expansion_maps": [
-            "morfo_18_sangre__13"
+            "morfo_18_sangre__13",
+            "morfo_18_sangre__14"
           ],
           "status": "targeted_expansion_reviewed_full_objective_review_pending",
-          "reviewed_scope": "Plasma/serum preparation, volume fraction versus count, plasma proteins, distinct physical properties and ideal volume models. Hemoglobin structure and complete capillary exchange remain pending."
+          "reviewed_scope": "Volume fractions and measurements (__13), mature cell metabolism/membrane, HbA structure, heme/gas distinction, HbA2/HbF and capacity models (__14). Full quantitative laboratory interpretation and dissociation curves pending."
         },
         {
           "domain": "Ciclo de vida y trastornos eritrocitarios",
