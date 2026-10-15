@@ -6258,5 +6258,19 @@
     "acceso_gratis": false,
     "curated": true,
     "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__11.webp"
+  },
+  {
+    "id": "morfo_18_sangre__09",
+    "titulo": "Leucopoyesis: linajes, maduración y distribución",
+    "root_title": "Leucopoyesis: linajes, maduración y distribución",
+    "materia": "Morfofunción",
+    "tema": "Sangre",
+    "parent_key": "morfo_18_sangre.png",
+    "url_imagen": "premium/morfo_18_sangre__09.json",
+    "descripcion": "Origen de leucocitos, regulación, reserva medular y tránsito: casos para separar cantidad, madurez y función. Lámina y práctica razonada.",
+    "premium": true,
+    "acceso_gratis": false,
+    "curated": true,
+    "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__09.webp"
   }
 ]

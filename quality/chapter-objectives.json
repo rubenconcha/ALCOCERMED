@@ -116,8 +116,10 @@
             727,
             730
           ],
-          "targeted_expansion_maps": [],
-          "status": "targeted_summary_expansion_available_full_objective_review_pending",
+          "targeted_expansion_maps": [
+            "morfo_18_sangre__09"
+          ],
+          "status": "targeted_expansion_available_full_objective_review_pending",
           "summary_extension_pages": [
             11,
             12

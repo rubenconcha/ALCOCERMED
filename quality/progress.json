@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "olfaction_depth_reviewed_ready_to_publish",
+  "status": "leukopoiesis_depth_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -620,12 +620,83 @@
         "api/_mindmaps/olfaction-map-prompts.json"
       ],
       "deployment": {
-        "status": "pending"
+        "commit": "4d19be2",
+        "status": "Vercel success",
+        "anonymous_json_and_image": "401",
+        "raw_art_and_authoring_source": "404",
+        "admin_live": "Deep link opens named olfaction map; final protected image fully loads at 1536x1024; practice exposes ten cards, six questions and verified source footer."
       },
       "poster_sha256": "450b6b0afa66309608a2ab7088af2b2328eed746ab67eab50a2e709e676e2584"
+    },
+    {
+      "id": "leukopoiesis-map-practice-2026-10-15",
+      "maps": [
+        "morfo_18_sangre__09"
+      ],
+      "authored_explanations": 18,
+      "original_map_words": 1011,
+      "new_flashcards": 10,
+      "new_bank_questions": 6,
+      "per_option_explanations": 24,
+      "generative_posters": 1,
+      "source_pages": {
+        "saladin_pdf": [
+          727,
+          728,
+          729,
+          730
+        ],
+        "printed": [
+          699,
+          700,
+          701,
+          702
+        ]
+      },
+      "supplementary_sources": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK27123/",
+          "scope": "Explicit marrow precursor origin and B/T maturation-site distinction."
+        }
+      ],
+      "review": "Second automated academic and visual review; no physician approval. Full objective review pending.",
+      "corrections": [
+        "Separate common hematopoietic origin from restricted precursor routes and mature cell functions.",
+        "Distinguish production, mobilization of existing stores and lymphocyte recirculation.",
+        "Corrected generated marrow reservoir label from precursors to granulocytes and monocytes.",
+        "Reversed wrong final lymph-to-blood arrow in generated recirculation strip.",
+        "Reordered B-cell route to precursor then marrow development then B lymphocyte.",
+        "Removed unrequested cytokine examples and unsupported NK recirculation qualification.",
+        "Explicitly captioned schematic B/T drawings as insufficient for morphological subtype identification.",
+        "Avoided obsolete survival/prognosis figures and definitive diagnoses from isolated counts."
+      ],
+      "integration": "Map practice and main flashcards/bank. Reviewed supplements now total 80 cards and 48 questions. Existing identities and student records preserved.",
+      "tests": [
+        "13 source, access, per-option feedback, stable identity and real loader tests passed.",
+        "Actual viewer opens six branches and complete poster, ten cards and six questions at 1440/390 px.",
+        "Actual download button yields byte-identical protected WebP at both widths.",
+        "Main flashcard/bank renderers show sourced long answers and complete four-option feedback on desktop/mobile.",
+        "Visual review of final source poster and generated UI screenshots.",
+        "Application case: 6000 x 0.30 = 9000 x 0.20 = 1800 lymphocytes per microliter."
+      ],
+      "limitations": [
+        "No new independent graded simulation or evaluation in this map batch.",
+        "Detailed coagulation-factor map remains next.",
+        "Full chapter and teacher review remain pending."
+      ],
+      "files": [
+        "api/_mindmaps/morfo_18_sangre__09.json",
+        "api/_mindmaps/morfo_18_sangre__09.webp",
+        "api/_mindmaps/curated/build_leukopoiesis.py.source",
+        "api/_mindmaps/leukopoiesis-map-prompts.json"
+      ],
+      "deployment": {
+        "status": "pending"
+      },
+      "poster_sha256": "a461e7281004ba9dbfa1a32c35345fae37be266e05682c49428bddaa6e6c5a0e"
     }
   ],
-  "next_action": "Expand dedicated leukopoiesis practice and a factor-by-factor coagulation map from the supplied Blood chapter, then deepen remaining objective gaps in both priority chapters before continuing the official curriculum. Neither chapter is complete; independent exam coverage and teacher review remain pending.",
+  "next_action": "Read and author factor-by-factor coagulation map with independent reasoned practice, distinguishing textbook pathway model from physiological initiation and regulation. Then address remaining Blood/Senses objectives and independent simulation/evaluation coverage before other official chapters. Neither chapter is complete; teacher review pending.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

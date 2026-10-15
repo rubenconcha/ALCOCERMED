@@ -1,0 +1,108 @@
+"""Protected original synthesis: leukocyte development and compartments."""
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[3]
+ID='morfo_18_sangre__09'
+REF='https://www.ncbi.nlm.nih.gov/books/NBK27123/'
+ROWS=[
+ ('Origen común y diferenciación de linajes',[
+  ('Compartir una célula madre no vuelve idénticos los destinos','La leucopoyesis comienza en células madre hematopoyéticas, que también están en el origen de eritrocitos y de las células productoras de plaquetas. La diferenciación restringe progresivamente los destinos. El origen común explica parentesco de desarrollo; no convierte a un leucocito maduro en una célula que pueda producir indistintamente cualquier elemento forme según lo que falte en la sangre.',727),
+  ('Tres rutas del esquema, no tres leucocitos finales','El capítulo distingue precursores granulocíticos, monocíticos y linfoides. La ruta granulocítica conduce a neutrófilos, eosinófilos y basófilos; la monocítica, a monocitos; la linfoide incluye linfocitos B, T y NK. Los nombres de los precursores no deben sumarse como si fueran poblaciones maduras del diferencial. El esquema es una representación de desarrollo, no un recuento sanguíneo.',728),
+  ('Reconocer el alcance de un diagrama simplificado','La figura del libro incluye etapas intermedias, como promielocitos y mielocitos en las rutas granulocíticas, y promonocitos en la monocítica. Una flecha abreviada de precursor a célula madura no indica conversión instantánea ni ausencia de esas etapas. Saber qué se omitió permite utilizar la lámina como orientación sin confundir simplificación visual con una descripción completa de la maduración.',728)]),
+ ('Maduración y destino de linfocitos',[
+  ('El timo no reemplaza al origen medular de precursores T','Los linfocitos comienzan su desarrollo a partir de precursores originados en médula. En la precisión inmunológica complementaria, el desarrollo B ocurre en el entorno medular y los precursores T migran al timo para madurar. El lugar donde una célula completa una etapa de desarrollo no tiene por qué ser el lugar donde surgió su precursor hematopoyético.',729),
+  ('Madurar y responder a antígenos son tareas distintas','Después de su desarrollo, linfocitos maduros pueden poblar bazo, ganglios y otros tejidos linfoides. Nombrar esos destinos no significa que sean intercambiables con el timo como entorno de maduración T. La comparación separa producción del precursor, maduración y participación posterior en respuestas inmunitarias; ninguna de esas etapas se identifica solo por encontrar un linfocito en sangre.',729),
+  ('La apariencia no resuelve toda identidad funcional','El cuadro del capítulo señala que varias clases funcionales de linfocitos no se distinguen de manera fiable por el aspecto en microscopía de luz. Un núcleo redondo y poco citoplasma orientan a una categoría morfológica, pero no bastan para asignar subpoblaciones B, T o NK. Linaje, morfología y función son niveles de descripción relacionados que no deben sustituirse entre sí.',727)]),
+ ('Regulación de producción y movilización',[
+  ('La demanda se comunica mediante señales reguladoras','Los precursores poseen receptores que permiten responder a factores estimulantes de colonias. El texto describe su participación en ajustes de producción frente a desafíos inmunitarios. Una señal no es una célula nueva ni una reserva celular: modifica la respuesta de poblaciones precursoras. No debe interpretarse el esquema como un único interruptor exclusivo que fabrica el mismo tipo de leucocito ante cualquier estímulo.',729),
+  ('Producir y liberar no tienen la misma escala causal','La médula almacena granulocitos y monocitos, además de producirlos. Un aumento de células disponibles puede incluir liberación de reservas ya existentes; no obliga a suponer que cada célula observada terminó todo su desarrollo después del estímulo. Para explicar una respuesta hay que preguntar si cambió producción, salida del reservorio o distribución en otros compartimentos.',729),
+  ('La sangre no muestra directamente la actividad total de médula','Una muestra de sangre informa sobre el compartimento circulante en ese momento. No mide por sí sola todas las células en maduración ni cuantifica las reservas medulares. Dos mecanismos distintos pueden modificar un mismo recuento periférico. Por ello, el cambio observado requiere una explicación compatible con el contexto y no una inferencia automática de producción aumentada.',729)]),
+ ('Tránsito entre sangre, tejidos y linfa',[
+  ('Un destino tisular cambia lo que representa la muestra','El libro describe el paso de leucocitos desde circulación a tejidos. Una célula que deja de estar en la muestra sanguínea no desaparece necesariamente del organismo: puede estar cumpliendo una función en otro compartimento. El recuento periférico y la población total disponible no son sinónimos; distinguirlos permite explicar movimientos sin convertirlos en destrucción celular obligatoria.',729),
+  ('Monocito y macrófago se relacionan por diferenciación','Los monocitos pueden pasar a tejidos y diferenciarse en macrófagos, que participan en ingestión de material y comunicación inmunitaria. La relación explica un cambio de ubicación y de estado funcional; no convierte al macrófago en un granulocito circulante. El esquema tampoco pretende que todos los macrófagos residentes de cualquier tejido deriven continuamente de monocitos sanguíneos adultos.',727),
+  ('Recircular no es volver a fabricarse','Los linfocitos pueden transitar por sangre, tejidos y vasos linfáticos y regresar a circulación. Esa recirculación redistribuye células; no equivale a una nueva leucopoyesis cada vez que pasan al torrente sanguíneo. El recorrido tampoco debe aplicarse de forma idéntica a todos los leucocitos como si cada tipo tuviera los mismos destinos y la misma duración.',729)]),
+ ('Cantidad, madurez y competencia',[
+  ('Un total no informa todo lo que informa un diferencial','El total cuantifica leucocitos por volumen; el diferencial distribuye ese total entre categorías. Incluso al disponer de ambos, sigue siendo necesario distinguir cantidad de madurez y función. Un porcentaje aislado no identifica la tasa de producción de una línea, y una concentración elevada no demuestra que las células realicen de forma suficiente todas sus funciones defensivas.',729),
+  ('El exceso de células puede coexistir con otras deficiencias','El capítulo utiliza la proliferación anormal de células hematopoyéticas para mostrar que una médula ocupada por poblaciones anormales puede producir menos elementos normales de otras líneas. El vínculo causal conecta alteración medular, disponibilidad de células competentes y consecuencias sobre eritrocitos o plaquetas. No permite clasificar una enfermedad solo a partir de decir que hay muchos leucocitos.',730),
+  ('La duración de vida no es igual para todas las clases','El texto contrasta el tránsito relativamente breve de granulocitos con supervivencias muy variables de otras poblaciones. Tener núcleo no garantiza que cualquier leucocito viva más que un eritrocito. Para comparar duración hace falta especificar tipo celular, etapa y compartimento; una sola cifra aplicada a todos elimina diferencias que el propio capítulo intenta explicar.',729)]),
+ ('Casos de interpretación causal',[
+  ('Caso: aumento circulante antes de completar nuevas etapas','En un modelo aumenta la liberación de una reserva medular sin cambiar todavía el número de precursores. Es coherente observar más células circulantes sin atribuir todo el efecto a fabricación de novo. La respuesta correcta ubica el cambio en liberación; no concluye que nunca haya regulación de producción ni que reserva y producción sean el mismo proceso.',729),
+  ('Caso: porcentaje mayor con la misma concentración','Dos muestras tienen 1 800 linfocitos por microlitro. Con un total de 6 000 leucocitos por microlitro representan 30 %; con un total de 9 000 representan 20 %. Cambia la proporción aunque la concentración linfocitaria siga igual. El ejercicio separa denominador, concentración y producción: ninguno de esos porcentajes demuestra por sí solo mayor linfopoyesis.',729),
+  ('Caso: muchas células con menor defensa funcional','Un ejercicio describe expansión de precursores anormales y reducción de células normales competentes. La coexistencia de un recuento alto y defensa deficiente deja de parecer contradictoria al separar cantidad, madurez y función. El mecanismo ilustra el apartado del libro, pero no establece que toda leucocitosis tenga esa causa ni determina un diagnóstico individual.',730)])]
+PROMPTS=[
+ (0,0,'¿Qué explica el origen hematopoyético común y qué no permite deducir sobre una célula madura?'),
+ (0,1,'Reconstruye las rutas granulocítica, monocítica y linfoide sin confundir precursores con el diferencial.'),
+ (0,2,'¿Qué interpretación debe evitarse al abreviar etapas de maduración con una sola flecha?'),
+ (1,0,'Distingue origen del precursor T y lugar donde completa su maduración.'),
+ (1,1,'Separa producción, maduración y participación de un linfocito en respuestas periféricas.'),
+ (1,2,'¿Por qué la morfología de un linfocito no basta para asignar su subpoblación funcional?'),
+ (2,0,'¿Qué papel cumplen los factores estimulantes de colonias y por qué no equivalen a una reserva celular?'),
+ (2,1,'¿Cómo distinguir fabricar leucocitos de liberar los que ya estaban almacenados?'),
+ (3,2,'¿Qué diferencia hay entre recirculación linfocitaria y una nueva leucopoyesis?'),
+ (4,2,'¿Por qué tener núcleo no permite ordenar la vida media de todos los leucocitos frente a los eritrocitos?')]
+QUESTIONS=[
+ ('Un modelo aumenta la salida de granulocitos almacenados y no cambia todavía el número de precursores. ¿Qué explica mejor el aumento circulante inicial?',[
+ 'Liberación de una reserva ya existente','Fabricación obligatoria de cada célula desde la célula madre después del estímulo','Conversión de linfocitos maduros en granulocitos dentro de sangre','Recirculación linfática idéntica para todas las clases celulares'],0,[
+ 'Correcto: el modelo identifica movilización de células almacenadas; no necesita completar de nuevo todo el desarrollo.',
+ 'Omite la reserva descrita y atribuye toda respuesta inicial a producción de novo aunque el modelo no la cambia.',
+ 'El parentesco de desarrollo no permite esa conversión de células maduras circulantes como explicación de la reserva.',
+ 'La recirculación linfocitaria no sustituye la liberación medular planteada ni se aplica de forma idéntica a todas las clases.'],[729]),
+ ('¿Qué relación separa correctamente el origen del precursor T de su maduración?',[
+ 'El precursor hematopoyético nace en el timo y madura en sangre','El precursor procede de médula y completa desarrollo T en el timo','Encontrar linfocitos en bazo demuestra que todos se originaron allí','El mismo lugar de producción, maduración y encuentro con antígeno es obligatorio'],1,[
+ 'Intercambia los sitios y añade la sangre como entorno de maduración T; no conserva el recorrido descrito.',
+ 'Correcto: distingue el origen medular del precursor de la maduración en el microambiente tímico.',
+ 'Un destino periférico no demuestra ser el lugar de origen; confunde colonización del tejido con desarrollo inicial.',
+ 'Las etapas pueden ocurrir en entornos diferentes; exigir un único sitio elimina la distinción del mecanismo.'],[729]),
+ ('Una muestra tiene 6 000 leucocitos/µl y 30 % de linfocitos; otra, 9 000/µl y 20 %. ¿Qué comparación es correcta?',[
+ 'La primera demuestra mayor producción linfocitaria porque el porcentaje es mayor','La segunda contiene 20 linfocitos/µl porque el porcentaje se interpreta como concentración','Ambas contienen 1 800 linfocitos/µl; los porcentajes no prueban distinta producción','La segunda duplica la concentración linfocitaria porque su total es más alto'],2,[
+ 'El porcentaje depende del denominador y no mide directamente producción. Aquí ambos productos dan la misma concentración.',
+ 'El porcentaje debe convertirse en fracción y multiplicarse por el total; no se expresa directamente en células por volumen.',
+ 'Correcto: 6 000 por 0,30 y 9 000 por 0,20 producen 1 800/µl; cambia la proporción, no esa concentración.',
+ 'El total no determina por sí solo una subpoblación: también interviene su fracción, que en la segunda muestra es menor.'],[729]),
+ ('¿Qué comparación distingue una función de los CSF de la liberación de reservas?',[
+ 'Los CSF son granulocitos maduros almacenados que circulan al liberarse','Todo efecto de CSF equivale a recirculación de linfocitos por linfa','La reserva medular solo existe si cada célula inicia su desarrollo en ese instante','Los CSF son señales que actúan sobre precursores; la liberación moviliza células disponibles'],3,[
+ 'Confunde una señal reguladora con una población celular. Los factores no son los granulocitos almacenados.',
+ 'Recircular redistribuye células y no define la acción reguladora sobre el desarrollo que describe el capítulo.',
+ 'Una reserva reúne células ya disponibles; no requiere que su desarrollo comience en el momento de liberarlas.',
+ 'Correcto: separa regulación del desarrollo y movilización, que pueden contribuir de manera diferente a una respuesta.'],[729]),
+ ('Un ejercicio presenta muchas células anormales circulantes y menor disponibilidad de células normales competentes. ¿Qué razonamiento explica la defensa disminuida?',[
+ 'Cantidad, madurez y función no son equivalentes; la expansión anormal puede afectar poblaciones normales','Todo aumento de leucocitos garantiza proporcionalmente más defensa','Una célula inmadura desempeña siempre las mismas funciones que su descendiente madura','El total sanguíneo permite clasificar de inmediato cualquier enfermedad hematopoyética'],0,[
+ 'Correcto: permite entender la coexistencia de aumento numérico y menor competencia sin convertir todo aumento en la misma enfermedad.',
+ 'Confunde recuento con eficacia funcional y no considera composición, madurez ni disponibilidad de células normales.',
+ 'Las etapas de desarrollo no son funcionalmente intercambiables; asumirlo elimina la distinción del ejercicio.',
+ 'El mecanismo no identifica por sí solo una clasificación diagnóstica; el total debe integrarse con otros datos.'],[730]),
+ ('Se observa un linfocito pequeño con núcleo redondo y poco citoplasma en un frotis. ¿Qué conclusión conserva el límite de esa observación?',[
+ 'El aspecto identifica por sí solo un linfocito T maduro específico','Orienta la categoría morfológica, sin resolver por sí solo todas las subpoblaciones funcionales','Todo linfocito de ese aspecto secreta anticuerpos en ese momento','El tamaño demuestra el sitio exacto donde completó maduración'],1,[
+ 'El cuadro indica que distintas clases funcionales pueden ser indistinguibles con microscopía de luz.',
+ 'Correcto: la observación morfológica aporta información, pero no sustituye la identificación funcional de subpoblaciones.',
+ 'Asigna una actividad específica a toda una categoría por su apariencia y momento de observación, sin esa evidencia.',
+ 'La apariencia en sangre no registra el recorrido de desarrollo ni demuestra un lugar de maduración individual.'],[727])]
+
+def main():
+ sections=[]
+ for n,(title,rows) in enumerate(ROWS):
+  items=[]
+  for t,text,p in rows:
+   source={'book':'Saladin: Anatomía y fisiología','chapter':18,'pdfPage':p,'kind':'original_synthesis'}
+   if n==1 and t.startswith('El timo'):source['supplementaryUrl']=REF
+   items.append({'title':t,'text':text,'source':source})
+  sections.append({'title':title,'groups':[{'title':'Mecanismos y comparaciones','items':items}]})
+ practice={'flashcards':[{'question':q,'answer':ROWS[s][1][i][1],'pdf_pages':[ROWS[s][1][i][2]]} for s,i,q in PROMPTS],'questions':[{'question':q,'options':o,'correct':c,'reasons':r,'pdf_pages':p} for q,o,c,r,p in QUESTIONS],'source':'Saladin, cap. 18 · PDF 727–730 (libro 699–702). Precisión de maduración B/T: Immunobiology, NBK27123.','review':'Revisión automatizada; revisión docente pendiente.','supplementary_reference':REF}
+ difficulties=[
+  'Aplicar la distinción entre producción y liberación a una intervención definida.',
+  'Relacionar origen del precursor y entorno de maduración sin intercambiar sitios.',
+  'Calcular dos concentraciones y separar porcentaje de inferencia sobre producción.',
+  'Comparar el nivel molecular regulador con la movilización de poblaciones celulares.',
+  'Integrar cantidad, madurez y disponibilidad funcional en un caso causal.',
+  'Reconocer el límite de una observación morfológica frente a clasificación funcional.']
+ for question,reason in zip(practice['questions'],difficulties):
+  question.update(difficulty='medio',difficulty_reason=reason)
+ title='Leucopoyesis: linajes, maduración y distribución'
+ payload={'id':ID,'title':title,'topic':'Sangre','sections':sections,'assets':{'image':'/assets/mindmaps/illustrations/morfo_18_sangre.webp','alt':'Ilustración de apoyo de la sangre','download':'/api/mindmap?id='+ID+'&format=image','filename':ID+'-Ben-Carson.webp','source':{'book':'Saladin: Anatomía y fisiología','chapter':18,'pdfPages':[727,728,729,730],'kind':'original_synthesis'},'generative_download':True,'practice':practice},'review':{'state':'automated_review_passed','doctor_approved':False,'scope':'Leucopoyesis, compartimentos e interpretación fisiológica. No clasificación ni tratamiento de enfermedades individuales.'},'supplementary_references':[{'url':REF,'scope':'Distinción explícita de origen medular y maduración B/T.'}]}
+ (ROOT/'api/_mindmaps'/(ID+'.json')).write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+ meta={'id':ID,'titulo':title,'root_title':title,'materia':'Morfofunción','tema':'Sangre','parent_key':'morfo_18_sangre.png','url_imagen':'premium/'+ID+'.json','descripcion':'Origen de leucocitos, regulación, reserva medular y tránsito: casos para separar cantidad, madurez y función. Lámina y práctica razonada.','premium':True,'acceso_gratis':False,'curated':True,'preview':'/assets/mindmaps/premium-previews/'+ID+'.webp'}
+ for file in ['mindmaps-curated-additions.json','mindmaps-premium-catalog.json']:
+  p=ROOT/'content'/file;rows=[r for r in json.loads(p.read_text(encoding='utf8')) if r['id']!=ID]+[meta];p.write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+ rows=json.loads((ROOT/'content/mindmaps-premium-catalog.json').read_text(encoding='utf8'));(ROOT/'mindmap-premium-catalog.js').write_text('/* Public metadata only. Full explanations and downloads require verified access. */\nwindow.MINDMAP_PREMIUM_CATALOG = '+json.dumps(rows,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf8')
+ print('Leucopoyesis: 18 explanations, 10 cards, 6 reasoned questions.')
+if __name__=='__main__':main()
