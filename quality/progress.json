@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first_pilot_published_visual_corrections_reviewed",
+  "status": "practice_pilot_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -52,17 +52,74 @@
         "Public-preview separation",
         "Source and unit checks"
       ],
-      "status": "published_visual_update_ready",
+      "status": "published_verified",
       "deployment": {
         "commit": "dd6acef",
         "status": "Vercel success",
         "anonymous_full_content": "401 / 404 as expected",
         "admin_retina_view": "Loaded 1536x1024 illustrated poster and expanded explanatory nodes in production",
-        "admin_blood_view": "Loaded 1536x1024 illustrated poster in production"
+        "admin_blood_view": "Loaded 1536x1024 illustrated poster in production",
+        "visual_correction_commit": "3d31c75",
+        "visual_correction_status": "Vercel success"
       }
+    },
+    {
+      "id": "depth-practice-2026-10-15",
+      "maps": [
+        "morfo_18_sangre__07",
+        "morfo_16_organos_sentidos__07"
+      ],
+      "flashcards": 20,
+      "questions": 12,
+      "delivery": "Interactive Practicar panel inside the two protected curated maps; not yet imported into the global database flashcard/question modules.",
+      "objectives": [
+        "Absolute vs relative differential counts; arithmetic and denominator effects",
+        "Leukocyte morphology, migration, functions and contextual interpretation",
+        "Retinal optical vs neural direction; dark/light response and ON pathway",
+        "Pigment regeneration, convergence, acuity, adaptation and cone sensitivity"
+      ],
+      "sources": [
+        {
+          "book": "User supplied Saladin",
+          "blood_pdf_pages": [
+            714,
+            724,
+            725,
+            726,
+            727,
+            729,
+            730
+          ],
+          "retina_pdf_pages": [
+            647,
+            648,
+            649,
+            650,
+            651,
+            652
+          ]
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10806/",
+          "scope": "Supplementary confirmation of photoreceptor response; source book remains primary for this course"
+        }
+      ],
+      "review": "Automated second academic pass; no doctor approval. Replaced weak distractors with plausible confusions. Confirmed source-specific cone peaks and counts.",
+      "tests": [
+        "13 content/endpoint/access tests passed",
+        "16 maps tested at 1440 and 390 widths, cards expand, answer feedback and map return work",
+        "24 responsive map layouts and pinch zoom passed",
+        "Paid/expired UI gate checks passed",
+        "Screenshots visually reviewed; private content remains in authenticated JSON"
+      ],
+      "status": "reviewed_ready_to_publish",
+      "limitations": [
+        "Practice is formative, not an independent examination or graded evaluation.",
+        "The global flashcard/bank imports, chapter-wide objective review and new summaries remain pending."
+      ]
     }
   ],
-  "next_action": "Author and integrate source-reviewed flashcards and question-bank additions for these two pilot subtopics with reasoned distractors. Continue with auditory transduction, equilibrium, taste and smell, leukopoiesis and hemostasis. Revise summaries against complete chapter objectives; neither chapter is complete.",
+  "next_action": "Integrate the reviewed private practice into the existing dedicated flashcard and question-bank delivery without exposing authoring files or changing student records. Then extend auditory transduction/equilibrium and leukopoiesis/hemostasis with chapter objectives, illustrated maps and reasoned practice; expand summaries. Neither chapter is complete.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

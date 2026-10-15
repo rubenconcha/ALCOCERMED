@@ -92,4 +92,7 @@ def main():
     (ROOT/'mindmap-premium-catalog.js').write_text('/* Public metadata only. Full explanations and downloads require verified access. */\nwindow.MINDMAP_PREMIUM_CATALOG = '+json.dumps(catalog,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf8')
     print(json.dumps({'new_maps':len(curated),'authored_concepts':sum(len(s[1]) for s in BLOOD+SENSES),'catalog_maps':len(catalog)}))
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    main()
+    import runpy
+    runpy.run_path(str(Path(__file__).with_name('build_practice.py.source')),run_name='__main__')

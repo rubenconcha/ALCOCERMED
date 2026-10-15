@@ -294,7 +294,216 @@
       "chapter": 16,
       "kind": "original_synthesis"
     },
-    "generative_download": true
+    "generative_download": true,
+    "practice": {
+      "flashcards": [
+        {
+          "question": "¿En qué se oponen la dirección de entrada de luz y la vía neural en la retina?",
+          "answer": "La luz atraviesa capas internas antes de alcanzar los segmentos fotosensibles. La señal neural sigue el circuito fotorreceptor → bipolar → ganglionar, con procesamiento lateral adicional. Los axones ganglionares forman el nervio óptico. Una flecha sin rótulo puede confundir recorrido óptico con transmisión de información.",
+          "pdf_pages": [
+            647,
+            648
+          ]
+        },
+        {
+          "question": "Explica el estado de un bastón en oscuridad sin llamarlo inactivo.",
+          "answer": "El GMPc favorece la apertura de canales catiónicos del segmento externo. La corriente entrante mantiene al bastón relativamente despolarizado y sostiene liberación de glutamato. Oscuridad no significa silencio sináptico: el cambio de iluminación modifica una señal que ya existe.",
+          "pdf_pages": [
+            649,
+            650
+          ]
+        },
+        {
+          "question": "Reconstruye la respuesta del fotorreceptor a la luz en cuatro pasos.",
+          "answer": "La luz activa el fotopigmento; la cascada reduce GMPc; se cierran canales catiónicos y disminuye corriente entrante; el receptor se hiperpolariza y reduce la liberación de glutamato. No se debe sustituir esta respuesta graduada por un aumento de potenciales de acción en el bastón.",
+          "pdf_pages": [
+            649,
+            650,
+            651
+          ]
+        },
+        {
+          "question": "¿Por qué menos glutamato no significa necesariamente menos respuesta en todas las bipolares?",
+          "answer": "El efecto depende del receptor y de la vía. En las bipolares ON, disminuir glutamato permite despolarización; las vías OFF responden con otro signo. Es un cambio en la interpretación sináptica, no una inversión de la hiperpolarización que ocurre en el fotorreceptor.",
+          "pdf_pages": [
+            650
+          ]
+        },
+        {
+          "question": "Distingue blanqueado del pigmento y regeneración.",
+          "answer": "La absorción de luz cambia el retinal y activa el fotopigmento; el blanqueado se asocia a su descomposición. Recuperar rodopsina funcional requiere reconvertir retinal a su forma cis y reunirlo con opsina. La regeneración repone pigmento: no es un potencial de acción ni equivale a abrir todos los canales inmediatamente.",
+          "pdf_pages": [
+            649,
+            650
+          ]
+        },
+        {
+          "question": "¿Por qué los bastones favorecen sensibilidad y los circuitos foveales detalle?",
+          "answer": "En el sistema de bastones la convergencia suma señales débiles, pero reduce precisión espacial. Los conos y la organización foveal permiten mayor resolución con luz suficiente. Sensibilidad para detectar poca luz y capacidad para separar detalles cercanos son propiedades distintas.",
+          "pdf_pages": [
+            651,
+            652
+          ]
+        },
+        {
+          "question": "¿Qué células originan los axones del nervio óptico y qué implica?",
+          "answer": "Son las células ganglionares. La información ya ha pasado por circuitos retinianos antes de salir hacia el encéfalo. No existe una fibra óptica independiente para cada bastón y cada cono: la convergencia y el procesamiento modifican la relación entre receptores y salida.",
+          "pdf_pages": [
+            648,
+            651
+          ]
+        },
+        {
+          "question": "¿Por qué dilatar la pupila no explica toda la adaptación a la oscuridad?",
+          "answer": "La dilatación permite entrar más luz, pero la sensibilidad retiniana también depende de regeneración de pigmentos y ajustes de los circuitos. Tras pasar de luz intensa a oscuridad, la recuperación visual es progresiva; un cambio óptico inmediato no completa por sí solo la adaptación celular.",
+          "pdf_pages": [
+            651
+          ]
+        },
+        {
+          "question": "¿Cuáles son los máximos de los conos S, M y L en esta edición y qué no significan?",
+          "answer": "El Saladin suministrado usa 420, 531 y 558 nm, respectivamente. Las curvas de sensibilidad se superponen: un cono no es un interruptor exclusivo para un color. El sistema compara actividad de distintas clases; estos máximos tampoco constituyen límites rígidos de visión.",
+          "pdf_pages": [
+            652
+          ]
+        },
+        {
+          "question": "Relaciona vitamina A, retinal y visión sin convertir una asociación en diagnóstico.",
+          "answer": "El retinal deriva de vitamina A y participa en los fotopigmentos. Su disponibilidad contribuye al ciclo visual. La dificultad para ver con poca luz puede tener causas diversas, por lo que no demuestra por sí sola una deficiencia ni indica automáticamente suplementación.",
+          "pdf_pages": [
+            649,
+            651
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Al iluminar un bastón, ¿qué secuencia describe la respuesta inicial del fotorreceptor?",
+          "options": [
+            "GMPc sube → canales abren → despolarización",
+            "GMPc baja → canales cierran → hiperpolarización",
+            "El bastón dispara potenciales de acción hacia el nervio óptico",
+            "El glutamato aumenta porque la luz abre directamente los canales"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Invierte el cambio de GMPc y de conductancia que caracteriza la respuesta a la luz.",
+            "Correcto: disminuye GMPc, se reduce corriente catiónica entrante, se hiperpolariza el receptor y baja su liberación de glutamato.",
+            "Confunde la respuesta graduada del receptor con la salida por axones ganglionares.",
+            "La luz actúa mediante el fotopigmento y una cascada; la liberación de glutamato disminuye en esta respuesta."
+          ],
+          "pdf_pages": [
+            649,
+            650,
+            651
+          ]
+        },
+        {
+          "question": "La luz reduce glutamato del fotorreceptor y una bipolar ON se despolariza. ¿Cuál es la mejor explicación?",
+          "options": [
+            "Todos los neurotransmisores siempre excitan",
+            "Todas las bipolares se despolarizan cuando baja el glutamato",
+            "La vía ON invierte el signo de la señal sináptica del fotorreceptor",
+            "El bastón se despolariza con la luz y aumenta su glutamato"
+          ],
+          "correct": 2,
+          "reasons": [
+            "El efecto depende del receptor postsináptico y del circuito; no existe esa regla universal.",
+            "Generaliza la respuesta ON a todas las bipolares e ignora las vías OFF, cuyo signo sináptico es diferente.",
+            "Correcto: retirar el efecto del glutamato sobre la vía ON permite despolarización. No contradice que el fotorreceptor se hiperpolarice.",
+            "Invierte el cambio inicial del fotorreceptor: la luz lo hiperpolariza y reduce su liberación de glutamato."
+          ],
+          "pdf_pages": [
+            650
+          ]
+        },
+        {
+          "question": "¿Qué recorrido corresponde a la vía neural principal de salida, y no a la dirección de entrada de luz?",
+          "options": [
+            "Ganglionar → bipolar → fotorreceptor",
+            "Fotorreceptor → ganglionar → bipolar",
+            "Bipolar → fotorreceptor → ganglionar",
+            "Fotorreceptor → bipolar → ganglionar"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Invierte la vía neural principal representada; puede confundirse con el hecho de que la luz atraviesa capas internas.",
+            "Intercambia los niveles bipolar y ganglionar; la bipolar participa antes de la salida ganglionar en esta vía principal.",
+            "Coloca la bipolar antes del receptor y omite su papel de relevo después de la transducción.",
+            "Correcto: el receptor transduce, la bipolar participa en la transmisión y la ganglionar conduce la salida por su axón. Existen además circuitos laterales."
+          ],
+          "pdf_pages": [
+            647,
+            648,
+            651
+          ]
+        },
+        {
+          "question": "Tras apagar la luz de una habitación brillante, ¿por qué la visión mejora progresivamente durante la oscuridad?",
+          "options": [
+            "También se recuperan pigmentos y sensibilidad retiniana, además de dilatarse la pupila",
+            "Solo cambia el tamaño de la pupila; la retina no se adapta",
+            "Aumenta de inmediato la liberación de glutamato y eso completa toda la adaptación",
+            "El blanqueado de rodopsina supera a su regeneración durante la oscuridad"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: la adaptación combina mecanismos ópticos y celulares; la regeneración de rodopsina contribuye a recuperar visión escotópica.",
+            "Omite procesos retinianos que explican la recuperación gradual después del ajuste pupilar.",
+            "El cambio inicial de señal al apagar la luz no completa la recuperación gradual de pigmentos y sensibilidad.",
+            "Invierte el balance: durante la recuperación en oscuridad, la regeneración repone rodopsina funcional."
+          ],
+          "pdf_pages": [
+            650,
+            651
+          ]
+        },
+        {
+          "question": "Para separar dos puntos muy próximos con iluminación suficiente, ¿qué organización resulta más favorable?",
+          "options": [
+            "Mayor convergencia de muchos bastones sobre una salida",
+            "Circuitos de conos foveales con menor convergencia",
+            "Mayor sensibilidad del sistema de bastones a estímulos débiles",
+            "Un solo cono dedicado exclusivamente a cada color visible"
+          ],
+          "correct": 1,
+          "reasons": [
+            "La convergencia favorece detectar señales débiles, pero limita separar de qué receptor provienen estímulos próximos.",
+            "Correcto: la menor convergencia y organización foveal favorecen resolución espacial en visión con luz suficiente.",
+            "Detectar un estímulo débil no equivale a separar dos puntos próximos. La pregunta pide resolución espacial.",
+            "Las sensibilidades de las clases de conos se superponen; no hay un cono exclusivo para cada color visible."
+          ],
+          "pdf_pages": [
+            651,
+            652
+          ]
+        },
+        {
+          "question": "¿Cuál de estas afirmaciones distingue regeneración de pigmento y señal eléctrica?",
+          "options": [
+            "Ambas expresiones significan disparar un potencial de acción en el bastón",
+            "Regenerar rodopsina destruye permanentemente el retinal",
+            "Regenerar repone fotopigmento funcional; hiperpolarizar cambia el potencial de membrana",
+            "La hiperpolarización significa que se regeneró toda la rodopsina"
+          ],
+          "correct": 2,
+          "reasons": [
+            "El bastón responde con cambios graduados; los fenómenos tampoco son sinónimos.",
+            "La regeneración recupera un pigmento funcional mediante el ciclo del retinal y su asociación con opsina.",
+            "Correcto: son procesos relacionados, pero uno se refiere al estado del pigmento y el otro a la membrana celular.",
+            "El cambio eléctrico no informa que todo el pigmento ya se haya regenerado; confunde variables y escalas del proceso."
+          ],
+          "pdf_pages": [
+            649,
+            650,
+            651
+          ]
+        }
+      ],
+      "source": "Saladin, Anatomía y fisiología, capítulos 18 y 16. Páginas del PDF suministrado; página impresa = PDF − 28.",
+      "review": "Revisión automatizada de coherencia y contraste con la fuente; pendiente de revisión docente.",
+      "supplementary_reference": "https://www.ncbi.nlm.nih.gov/books/NBK10806/"
+    }
   },
   "review": {
     "state": "automated_review_passed",

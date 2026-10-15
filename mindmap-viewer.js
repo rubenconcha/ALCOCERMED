@@ -42,13 +42,14 @@
  function selectBranch(index){showAllMobile=false;selectedBranch=index;branchOpen[index]=true;update();var stage=document.querySelector('.mm-lb-stage');stage.scrollTop=0;stage.scrollLeft=0;}
  function setAll(open){showAllMobile=false;branchOpen=branchOpen.map(function(){return open;});update();}
  function setZoom(value,center){
+  if(window.MindmapPractice&&MindmapPractice.isOpen())return;
   zoom=Math.max(.05,Math.min(2.5,Math.round(value*100)/100));$('mm-zoom-value').textContent=Math.round(zoom*100)+'%';
   if(illustratedView){var image=$('mm-illustrated-image');image.style.width=Math.round(image.naturalWidth*zoom)+'px';return;}
   var tree=$('mm-tree');tree.style.transform='scale('+zoom+')';redraw();
   if(center)requestAnimationFrame(function(){var stage=document.querySelector('.mm-lb-stage');stage.scrollLeft=Math.max(0,(stage.scrollWidth-stage.clientWidth)/2);stage.scrollTop=Math.max(0,(stage.scrollHeight-stage.clientHeight)/2);});
  }
  function fit(){
-  if(!activeMap)return;var stage=document.querySelector('.mm-lb-stage');
+  if(!activeMap||(window.MindmapPractice&&MindmapPractice.isOpen()))return;var stage=document.querySelector('.mm-lb-stage');
   if(illustratedView){var image=$('mm-illustrated-image');if(image.naturalWidth)setZoom(Math.min(1,(stage.clientWidth-48)/image.naturalWidth,(stage.clientHeight-48)/image.naturalHeight),false);return;}
   var tree=$('mm-tree'),style=getComputedStyle(stage);tree.style.width='1360px';
   var rect=tree.getBoundingClientRect(),scale=rect.width/tree.offsetWidth,left=Infinity,top=Infinity,right=-Infinity,bottom=-Infinity;
@@ -59,6 +60,7 @@
  }
 
  function showIllustrated(enabled){
+  if(window.MindmapPractice&&MindmapPractice.isOpen())MindmapPractice.close();
   illustratedView=enabled;$('mm-lightbox').classList.toggle('mm-show-illustrated',enabled);
   $('mm-visual-toggle').textContent=enabled?'Explorar conceptos':'Ver mapa ilustrado';
   if(enabled){var image=$('mm-illustrated-image');image.src=assetsFor(activeMap).illustrated;image.onload=fit;}
@@ -116,14 +118,14 @@
   $('mm-lb-download').addEventListener('click',async function(){if(field(activeMap,'premium')){var button=$('mm-lb-download');button.disabled=true;try{await MindmapPremium.download(activeMap);}catch(error){$('mm-lb-status').textContent=error.message;}finally{if(activeMap)button.disabled=false;}return;}if(!objectUrl&&!detailsFor(activeMap))return;var asset=assetsFor(activeMap),link=el('a','');link.href=detailsFor(activeMap)?asset.download||'/assets/mindmaps/encefalo/mapa-completo.png?v=2':objectUrl;link.download=detailsFor(activeMap)?asset.filename||'Encefalo-y-pares-craneales-Ben-Carson.png':fileFor(activeMap).replace(/\.[^.]+$/,'')+'-prepa-ben-carson.webp';document.body.appendChild(link);link.click();link.remove();});
   var stage=document.querySelector('.mm-lb-stage'),pan=null;
   stage.addEventListener('wheel',function(event){if(!event.ctrlKey)return;event.preventDefault();setZoom(zoom+(event.deltaY<0?.1:-.1),true);},{passive:false});
-  stage.addEventListener('pointerdown',function(event){if(event.pointerType!=='mouse'||event.button!==0||event.target.closest('button'))return;pan={id:event.pointerId,x:event.clientX,y:event.clientY,left:stage.scrollLeft,top:stage.scrollTop};stage.setPointerCapture(event.pointerId);stage.classList.add('is-panning');});
+  stage.addEventListener('pointerdown',function(event){if((window.MindmapPractice&&MindmapPractice.isOpen())||event.target.closest('summary,details')||event.pointerType!=='mouse'||event.button!==0||event.target.closest('button'))return;pan={id:event.pointerId,x:event.clientX,y:event.clientY,left:stage.scrollLeft,top:stage.scrollTop};stage.setPointerCapture(event.pointerId);stage.classList.add('is-panning');});
   stage.addEventListener('pointermove',function(event){if(!pan||event.pointerId!==pan.id)return;stage.scrollLeft=pan.left-(event.clientX-pan.x);stage.scrollTop=pan.top-(event.clientY-pan.y);});
   function end(event){if(pan&&event.pointerId===pan.id){pan=null;stage.classList.remove('is-panning');}}
   stage.addEventListener('pointerup',end);stage.addEventListener('pointercancel',end);
   var pinch=null;
   function touchCenter(touches){return{x:(touches[0].clientX+touches[1].clientX)/2,y:(touches[0].clientY+touches[1].clientY)/2};}
   function touchDistance(touches){return Math.hypot(touches[0].clientX-touches[1].clientX,touches[0].clientY-touches[1].clientY);}
-  stage.addEventListener('touchstart',function(event){if(event.touches.length!==2)return;var center=touchCenter(event.touches),rect=(illustratedView?$('mm-illustrated-image'):$('mm-tree')).getBoundingClientRect();pinch={distance:touchDistance(event.touches),zoom:zoom,x:(center.x-rect.left)/zoom,y:(center.y-rect.top)/zoom};},{passive:true});
+  stage.addEventListener('touchstart',function(event){if((window.MindmapPractice&&MindmapPractice.isOpen())||event.touches.length!==2)return;var center=touchCenter(event.touches),rect=(illustratedView?$('mm-illustrated-image'):$('mm-tree')).getBoundingClientRect();pinch={distance:touchDistance(event.touches),zoom:zoom,x:(center.x-rect.left)/zoom,y:(center.y-rect.top)/zoom};},{passive:true});
   stage.addEventListener('touchmove',function(event){if(!pinch||event.touches.length!==2)return;event.preventDefault();var center=touchCenter(event.touches);setZoom(pinch.zoom*touchDistance(event.touches)/Math.max(1,pinch.distance),false);var rect=$('mm-tree').getBoundingClientRect();stage.scrollLeft+=rect.left+pinch.x*zoom-center.x;stage.scrollTop+=rect.top+pinch.y*zoom-center.y;},{passive:false});
   function endPinch(event){if(event.touches.length<2)pinch=null;}
   stage.addEventListener('touchend',endPinch,{passive:true});stage.addEventListener('touchcancel',endPinch,{passive:true});
@@ -133,22 +135,23 @@
   document.addEventListener('keydown',function(event){
    if(!activeMap)return;if(event.key==='Escape'){window.closeMmLightbox();return;}
    if(/^[1-6]$/.test(event.key)&&Number(event.key)<=branchOpen.length&&!event.ctrlKey&&!event.metaKey&&!event.altKey){var i=Number(event.key)-1;setBranch(i,!branchOpen[i]);}
-   if(event.key==='Tab'){var buttons=Array.from($('mm-lightbox').querySelectorAll('button:not(:disabled)')).filter(function(node){return node.offsetWidth&&node.offsetHeight;});var first=buttons[0],last=buttons[buttons.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
+   if(event.key==='Tab'){var buttons=Array.from($('mm-lightbox').querySelectorAll('button:not(:disabled),summary')).filter(function(node){return node.offsetWidth&&node.offsetHeight;});var first=buttons[0],last=buttons[buttons.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
   });
  }
  function watermark(source){return new Promise(function(resolve,reject){var canvas=document.createElement('canvas');canvas.width=source.naturalWidth;canvas.height=source.naturalHeight;var context=canvas.getContext('2d');context.drawImage(source,0,0);var size=Math.round(canvas.width*.075);context.font='800 '+size+'px Arial';var width=context.measureText('PREPA BEN CARSON').width;if(width>canvas.width*.8){size=Math.round(size*canvas.width*.8/width);context.font='800 '+size+'px Arial';}context.textAlign='center';context.textBaseline='middle';context.fillStyle='rgba(28,69,108,.08)';context.fillText('PREPA BEN CARSON',canvas.width/2,canvas.height/2);canvas.toBlob(function(blob){if(blob)resolve(URL.createObjectURL(blob));else reject(new Error('Descarga no disponible'));},'image/webp',.95);});}
  window.openMmLightbox=async function(map){
+  if(window.MindmapPractice)MindmapPractice.reset();
   if(window.CampusAccess&&CampusAccess.isFree()&&!field(map,'acceso_gratis'))return openMmUnlockDialog(map);if(!$('mm-lightbox'))return;
   if(field(map,'premium')){var loadingRevision=++token;wire();illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');$('mm-visual-toggle').hidden=true;release();activeMap=map;$('mm-lightbox').classList.remove('hidden');previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';$('mm-tree').replaceChildren();$('mm-lb-title').textContent=field(map,'titulo');$('mm-lb-materia').textContent=field(map,'tema');$('mm-lb-status').textContent='Cargando mapa…';$('mm-lb-download').disabled=true;try{await MindmapPremium.load(map);}catch(error){if(loadingRevision===token){$('mm-lb-status').textContent=error.message;if(error.status===403){closeMmLightbox();if(CampusAccess.isFree())openMmUnlockDialog(map);else CampusAccess.unlock();}}return;}if(loadingRevision!==token)return;$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;activeMap=null;}
   wire();illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');$('mm-visual-toggle').hidden=true;release();activeMap=map;selectedBranch=0;showAllMobile=false;branchOpen=labelsFor(map).map(function(_,i){return detailsFor(map)?startsWithContent(map)&&i===0:i===0;});var current=++token;previousFocus=document.activeElement;previousOverflow=document.body.style.overflow;
   $('mm-lb-title').textContent=field(map,'titulo')||'Mapa mental';$('mm-lb-materia').textContent=field(map,'materia')||'';$('mm-lightbox').classList.remove('hidden');document.body.style.overflow='hidden';$('mm-lb-download').disabled=true;$('mm-lb-status').textContent='';
   $('mm-lb-download').title=field(map,'curated')?'Descargar mapa ilustrado con logo':'Descargar mapa';
   illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');
-  build(map);$('mm-visual-toggle').hidden=!assetsFor(map).illustrated;if(assetsFor(map).illustrated)showIllustrated(true);$('mm-lightbox').querySelector('.mm-lb-close').focus();
+  build(map);if(window.MindmapPractice)MindmapPractice.mount(assetsFor(map).practice);$('mm-visual-toggle').hidden=!assetsFor(map).illustrated;if(assetsFor(map).illustrated)showIllustrated(true);$('mm-lightbox').querySelector('.mm-lb-close').focus();
   if(detailsFor(map)){$('mm-lb-download').disabled=false;return;}
   var source=new Image();sourceImage=source;source.crossOrigin='anonymous';source.onload=function(){if(current!==token)return;try{watermark(source).then(function(url){if(current!==token){URL.revokeObjectURL(url);return;}objectUrl=url;$('mm-lb-download').disabled=false;}).catch(function(){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';});}catch(_){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';}};source.onerror=function(){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';};source.src=field(map,'url_imagen')||field(map,'url_image')||'';
  };
- window.closeMmLightbox=function(){if(!activeMap)return;++token;activeMap=null;illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;if(document.fullscreenElement===$('mm-lightbox'))document.exitFullscreen().catch(function(){});$('mm-tree').replaceChildren();$('mm-branch-shortcuts').replaceChildren();release();if(previousFocus&&previousFocus.isConnected)previousFocus.focus();};
+ window.closeMmLightbox=function(){if(window.MindmapPractice)MindmapPractice.reset();if(!activeMap)return;++token;activeMap=null;illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;if(document.fullscreenElement===$('mm-lightbox'))document.exitFullscreen().catch(function(){});$('mm-tree').replaceChildren();$('mm-branch-shortcuts').replaceChildren();release();if(previousFocus&&previousFocus.isConnected)previousFocus.focus();};
  var requestedMapOpened=false;
  window.openRequestedMindmap=async function(){
   var requested=new URLSearchParams(location.search).get('mapa');if(requestedMapOpened||!requested)return;

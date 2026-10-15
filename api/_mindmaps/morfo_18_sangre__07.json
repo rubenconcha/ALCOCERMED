@@ -334,7 +334,210 @@
       "chapter": 18,
       "kind": "original_synthesis"
     },
-    "generative_download": true
+    "generative_download": true,
+    "practice": {
+      "flashcards": [
+        {
+          "question": "¿Por qué un 65 % de neutrófilos no basta para conocer cuántos circulan?",
+          "answer": "El porcentaje es una fracción del total de leucocitos, no una concentración. Con 8 000 leucocitos/µl, 0,65 × 8 000 = 5 200 neutrófilos/µl; con 2 000, el mismo porcentaje corresponde a 1 300/µl. Para interpretar se necesitan recuento total, diferencial y referencia del laboratorio.",
+          "pdf_pages": [
+            726,
+            729
+          ]
+        },
+        {
+          "question": "¿Cómo puede aumentar el porcentaje de linfocitos sin aumentar su número absoluto?",
+          "answer": "Si disminuyen otras poblaciones, cambia el denominador. Mantener 2 000 linfocitos/µl mientras el total baja de 8 000 a 4 000 hace que su proporción pase de 25 % a 50 %. Eso demuestra un aumento relativo; no demuestra proliferación de linfocitos.",
+          "pdf_pages": [
+            727,
+            729
+          ]
+        },
+        {
+          "question": "Reconstruye los intervalos diferenciales del Saladin utilizado y explica su límite.",
+          "answer": "Neutrófilos 60–70 %, linfocitos 25–33 %, monocitos 3–8 %, eosinófilos 2–4 % y basófilos <0,5 %. Son intervalos orientativos del cuadro 18.6 de esta edición. No se suman todos los extremos superiores como si fueran un diferencial real; tampoco sustituyen las referencias por edad y laboratorio.",
+          "pdf_pages": [
+            726,
+            727
+          ]
+        },
+        {
+          "question": "¿Qué rasgos permiten distinguir neutrófilo, eosinófilo y basófilo en un frotis teñido?",
+          "answer": "El neutrófilo tiene núcleo segmentado y gránulos finos; el eosinófilo suele mostrar dos lóbulos y gránulos naranja rosados; el basófilo contiene gránulos violeta oscuro que pueden ocultar el núcleo. Son pistas combinadas de identificación, no una prueba aislada de la enfermedad que padece la persona.",
+          "pdf_pages": [
+            726
+          ]
+        },
+        {
+          "question": "¿Por qué un neutrófilo necesita diapédesis y quimiotaxis para actuar en un foco tisular?",
+          "answer": "La diapédesis permite atravesar la pared del vaso; la quimiotaxis orienta el desplazamiento por señales químicas hacia el foco. Llegar al tejido y encontrar el blanco son pasos distintos. La fagocitosis describe después la captura e ingestión de partículas, no el cruce del endotelio.",
+          "pdf_pages": [
+            725
+          ]
+        },
+        {
+          "question": "¿Cómo se relaciona un monocito circulante con un macrófago tisular?",
+          "answer": "El monocito puede salir de la sangre y diferenciarse en macrófago. Este fagocita microorganismos y restos celulares y puede presentar antígenos, conectando eliminación de material con activación de otras células inmunitarias. La función tisular no queda reflejada por completo en un recuento de sangre periférica.",
+          "pdf_pages": [
+            727
+          ]
+        },
+        {
+          "question": "¿Por qué eosinofilia no equivale automáticamente a parasitosis?",
+          "answer": "Los eosinófilos participan en respuestas a determinados parásitos y también en procesos alérgicos y otros contextos. Un aumento es una pista que exige integrar historia y demás hallazgos. El diferencial no identifica por sí solo el agente causal ni permite escoger un tratamiento.",
+          "pdf_pages": [
+            726
+          ]
+        },
+        {
+          "question": "¿Qué diferencia hay entre leucopenia y anemia?",
+          "answer": "Leucopenia significa descenso de leucocitos; anemia se refiere a una capacidad reducida de transporte de oxígeno de la sangre, habitualmente valorada mediante hemoglobina y datos eritrocitarios. Un recuento leucocitario bajo no mide hemoglobina ni permite afirmar que también disminuyeron los eritrocitos.",
+          "pdf_pages": [
+            714,
+            729
+          ]
+        },
+        {
+          "question": "¿Por qué no se puede identificar la función de todos los linfocitos solo por su aspecto?",
+          "answer": "Varias clases funcionales son indistinguibles en un frotis corriente. Los linfocitos participan en funciones diferentes: coordinación, citotoxicidad, memoria y producción de anticuerpos por la línea B diferenciada. El núcleo redondo y el citoplasma escaso ayudan a reconocer la población, pero no determinan todas sus subclases.",
+          "pdf_pages": [
+            727
+          ]
+        },
+        {
+          "question": "¿Un recuento leucocitario muy elevado garantiza una defensa eficaz?",
+          "answer": "No. La cantidad no informa por sí sola de madurez, función ni distribución tisular. Deben examinarse el diferencial, la morfología y el contexto. Las alteraciones proliferativas pueden aumentar células sin asegurar una respuesta inmunitaria competente; tampoco toda leucocitosis tiene ese origen.",
+          "pdf_pages": [
+            729,
+            730
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Un ejercicio presenta 8 000 leucocitos/µl y 65 % de neutrófilos. ¿Cuál es su recuento absoluto?",
+          "options": [
+            "5 200 neutrófilos/µl",
+            "65 neutrófilos/µl",
+            "12 308 neutrófilos/µl",
+            "520 000 neutrófilos/µl"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: 8 000 × (65/100) = 5 200 células/µl. El resultado conserva la unidad del recuento total.",
+            "Confunde la proporción con una concentración: 65 % no significa 65 células/µl.",
+            "Dividir entre 0,65 invierte la operación. Se busca una parte del total, no un total mayor.",
+            "Multiplica por 65 sin convertir el porcentaje en fracción; por eso introduce un factor de cien."
+          ],
+          "pdf_pages": [
+            726,
+            729
+          ]
+        },
+        {
+          "question": "Hay 2 000 linfocitos/µl en dos muestras. El total de leucocitos baja de 8 000 a 4 000/µl. ¿Qué conclusión aritmética es válida?",
+          "options": [
+            "Se duplicaron los linfocitos absolutos",
+            "El porcentaje pasa de 25 % a 50 % sin cambiar el absoluto",
+            "Se confirma una leucemia",
+            "El número absoluto de linfocitos cayó a la mitad"
+          ],
+          "correct": 1,
+          "reasons": [
+            "El numerador sigue siendo 2 000; no se duplicó. Cambió el total usado como denominador.",
+            "Correcto: 2 000/8 000 = 0,25 y 2 000/4 000 = 0,50. Aumento relativo no equivale a aumento absoluto.",
+            "Estos dos números no establecen una etiología ni caracterizan células neoplásicas.",
+            "El dato de 2 000 linfocitos/µl se mantiene en ambas muestras; el descenso corresponde al total leucocitario."
+          ],
+          "pdf_pages": [
+            727,
+            729
+          ]
+        },
+        {
+          "question": "En un frotis se observa una célula con núcleo bilobulado y gránulos naranja rosados. ¿Cuál es la mejor identificación?",
+          "options": [
+            "Basófilo",
+            "Monocito",
+            "Eosinófilo",
+            "Linfocito pequeño"
+          ],
+          "correct": 2,
+          "reasons": [
+            "Los gránulos del basófilo son intensamente oscuros y pueden ocultar el núcleo; no es la combinación descrita.",
+            "El monocito suele tener núcleo arriñonado y citoplasma abundante, sin los gránulos naranja rosados característicos.",
+            "Correcto: la combinación de núcleo bilobulado y granulación naranja rosada corresponde al eosinófilo en el cuadro 18.6.",
+            "En el linfocito pequeño domina un núcleo redondo con un borde estrecho de citoplasma; no la granulación indicada."
+          ],
+          "pdf_pages": [
+            726,
+            727
+          ]
+        },
+        {
+          "question": "Un leucocito ya atravesó el endotelio y ahora se orienta siguiendo señales químicas hacia el foco. ¿Cómo se llama este segundo proceso?",
+          "options": [
+            "Fagocitosis",
+            "Degranulación",
+            "Diapédesis",
+            "Quimiotaxis"
+          ],
+          "correct": 3,
+          "reasons": [
+            "La fagocitosis consiste en ingerir material; no define la orientación del movimiento por un gradiente.",
+            "La degranulación libera contenido de gránulos; no define la orientación de la migración por señales químicas.",
+            "La diapédesis es el paso a través de la pared vascular, que en el enunciado ya terminó.",
+            "Correcto: la quimiotaxis orienta la migración por señales químicas. Es distinta del cruce vascular y de la ingestión posterior."
+          ],
+          "pdf_pages": [
+            725
+          ]
+        },
+        {
+          "question": "El único dato disponible es un aumento de eosinófilos. ¿Qué razonamiento conserva el alcance del hallazgo?",
+          "options": [
+            "Integrarlo con historia y otros datos porque admite varias causas",
+            "Diagnosticar siempre una parasitosis",
+            "Descartar cualquier proceso alérgico",
+            "Afirmar que subió el número absoluto sin conocer el total leucocitario"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: la asociación con parásitos y alergias orienta posibilidades, pero el recuento no identifica por sí mismo una causa.",
+            "Convierte una asociación en diagnóstico exclusivo e ignora otras causas descritas.",
+            "Las respuestas alérgicas forman parte de los contextos asociados; no se excluyen por eosinofilia.",
+            "Si el aumento informado es porcentual, se necesita el total leucocitario para calcular la concentración absoluta."
+          ],
+          "pdf_pages": [
+            726
+          ]
+        },
+        {
+          "question": "¿Qué combinación identifica correctamente los agranulocitos en la clasificación morfológica habitual?",
+          "options": [
+            "Neutrófilos y eosinófilos",
+            "Linfocitos y monocitos",
+            "Eosinófilos y basófilos",
+            "Basófilos y neutrófilos"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Ambos pertenecen a los granulocitos; los gránulos y el núcleo segmentado ayudan a reconocerlos.",
+            "Correcto: linfocitos y monocitos se clasifican como agranulocitos. El nombre no exige ausencia absoluta de todo gránulo microscópico.",
+            "Ambos son granulocitos, aunque tienen funciones y tinciones diferentes.",
+            "También son granulocitos; la escasa frecuencia del basófilo no cambia su clasificación."
+          ],
+          "pdf_pages": [
+            724,
+            726,
+            727
+          ]
+        }
+      ],
+      "source": "Saladin, Anatomía y fisiología, capítulos 18 y 16. Páginas del PDF suministrado; página impresa = PDF − 28.",
+      "review": "Revisión automatizada de coherencia y contraste con la fuente; pendiente de revisión docente.",
+      "supplementary_reference": null
+    }
   },
   "review": {
     "state": "automated_review_passed",
