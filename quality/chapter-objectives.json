@@ -168,9 +168,11 @@
             738
           ],
           "targeted_expansion_maps": [
-            "morfo_18_sangre__10"
+            "morfo_18_sangre__10",
+            "morfo_18_sangre__11"
           ],
-          "status": "targeted_expansion_available_full_objective_review_pending"
+          "status": "targeted_expansion_available_full_objective_review_pending",
+          "targeted_scope": "Hepatic synthesis versus bile-dependent vitamin K absorption, functional preparation versus activation, conceptual comparisons and limited INR interpretation. Hemophilias and broader disorder review pending."
         }
       ]
     },

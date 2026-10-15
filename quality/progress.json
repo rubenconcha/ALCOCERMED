@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "senses_independent_cases_reviewed_publication_pending",
+  "status": "hepatic_vitamin_k_reviewed_publication_pending",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -904,11 +904,91 @@
         "quality/assessment-coverage.json"
       ],
       "deployment": {
+        "commit": "6e5d609",
+        "status": "Vercel success",
+        "anonymous_content": 401,
+        "raw_authoring": 404,
+        "admin_live": "Both Senses choices visible in Simulacros; selected self-assessment shows six questions/eight minutes. No live timed attempt started or submitted for this batch.",
+        "local_end_to_end": "Actual timer, answering, score and complete feedback verified at desktop/mobile sizes for both independent forms."
+      }
+    },
+    {
+      "id": "hepatic-vitamin-k-2026-10-15",
+      "maps": [
+        "morfo_18_sangre__11"
+      ],
+      "authored_explanations": 18,
+      "flashcards": 10,
+      "reasoned_questions": 6,
+      "per_option_explanations": 24,
+      "generative_posters": 1,
+      "gap": "Hepatic production and bile-dependent absorption were not developed as separate causal chains in the reviewed supplements.",
+      "source_pages": {
+        "saladin_pdf": [
+          732,
+          733,
+          735,
+          736,
+          738
+        ],
+        "printed": [
+          704,
+          705,
+          707,
+          708,
+          710
+        ]
+      },
+      "source_complements": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/4528109/",
+          "scope": "Experimental prothrombin modification and calcium binding; distinct from activation to thrombin."
+        },
+        {
+          "url": "https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/",
+          "scope": "Fat-soluble vitamin, micelles, enterocyte absorption and chylomicron/lymphatic route."
+        },
+        {
+          "url": "https://www.aasld.org/liver-fellow-network/core-series/clinical-pearls/peri-procedural-management-bleeding-risk-cirrhosis",
+          "scope": "Limited interpretation of isolated INR for procedural bleeding in cirrhosis."
+        }
+      ],
+      "review": "Second automated academic/anatomical/visual pass. No teacher approval.",
+      "corrections": [
+        "Removed invented slogans from generated poster.",
+        "Changed generic carboxylated clotting-protein label to K-dependent protein.",
+        "Separated functional preparation from cascade activation; no K-to-thrombin or bile-to-fibrin shortcut.",
+        "Replaced weak distractors and replaced a repeated platelet objective with a controlled quantity-versus-function experiment.",
+        "Added intestinal micelle/enterocyte/chylomicron mechanism with explicit supplementary source.",
+        "Did not reproduce old blanket pregnancy supplementation recommendation or prescribe doses."
+      ],
+      "tests": [
+        "18 protected-access/practice/source/identity/independent-exam regression tests passed.",
+        "New map opens at 1440 and 390 px with six expandable concept branches, complete 1536x1024 poster and byte-identical protected download.",
+        "Ten map flashcards and six questions expose all 24 alternative explanations, with no page errors or horizontal overflow.",
+        "Main flashcard/bank renderers verified for 100 cards and 60 questions across ten supplements at desktop/mobile widths.",
+        "Free map choice makes no content request; server denies free/expired/anonymous access.",
+        "Original student IDs/results and roles preserved; no live grade submitted."
+      ],
+      "files": [
+        "api/_mindmaps/curated/build_hepatic_vitamin_k.py.source",
+        "api/_mindmaps/morfo_18_sangre__11.json",
+        "api/_mindmaps/morfo_18_sangre__11.png",
+        "api/_mindmaps/morfo_18_sangre__11.webp",
+        "api/_mindmaps/hepatic-vitamin-k-prompts.json"
+      ],
+      "poster_sha256": "68b76442b963e523bdac5e595d714ab9422e3923c1c8181ae7c0e5d815dd9ceb",
+      "limitations": [
+        "Targeted map and practice; not full chapter approval.",
+        "Hemophilias, other disorders and broader physiology still need source-by-source review.",
+        "Summary PDF and formal classroom evaluation not expanded in this batch."
+      ],
+      "deployment": {
         "status": "pending"
       }
     }
   ],
-  "next_action": "Continue full objective review: blood hepatic/vitamin-K and disorder mechanisms; senses general sensation, central pathways and optics. Expand targeted maps/practice and independent assessment coverage after source review. No whole-chapter or classroom approval claim.",
+  "next_action": "Review Saladin hemophilias/platelet disorders with updated source precision, then general sensory transduction and optics. Continue objective matrix before expanding remaining 74 official chapters. No whole-chapter or teacher approval claim.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

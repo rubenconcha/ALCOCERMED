@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "inventory_date": "2026-10-15T14:37:06.917Z",
+  "inventory_date": "2026-10-15T17:36:55.918Z",
   "scope": "Local authoring files. Database delivery and clinical accuracy require separate verification.",
   "official_topics": 74,
-  "detailed_maps": 453,
+  "detailed_maps": 454,
   "reviewed_topics": 0,
   "warning": "Existing quantities do not demonstrate sufficient depth. Pending visual flags mean not verified, not necessarily absent.",
   "topics": [
@@ -156,7 +156,7 @@
       "title": "La sangre",
       "subject": "Morfofunción",
       "general_sections": 6,
-      "detailed_maps": 10,
+      "detailed_maps": 11,
       "maps": [
         {
           "id": "morfo_18_sangre__01",
@@ -274,6 +274,18 @@
           "very_short_explanations": 0,
           "sourced_concepts": 24,
           "average_words": 57,
+          "academic_review": "automated_review_passed",
+          "original_logo_verified": true,
+          "generative_art_verified": true
+        },
+        {
+          "id": "morfo_18_sangre__11",
+          "title": "Hígado, bilis y vitamina K: de la absorción a la coagulación",
+          "sections": 6,
+          "concepts": 18,
+          "very_short_explanations": 0,
+          "sourced_concepts": 18,
+          "average_words": 56,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
           "generative_art_verified": true

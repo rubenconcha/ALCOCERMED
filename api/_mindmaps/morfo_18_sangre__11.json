@@ -1,0 +1,518 @@
+{
+  "id": "morfo_18_sangre__11",
+  "title": "Hígado, bilis y vitamina K: de la absorción a la coagulación",
+  "topic": "Sangre",
+  "sections": [
+    {
+      "title": "Dos funciones hepáticas que no deben confundirse",
+      "groups": [
+        {
+          "title": "Relaciones y mecanismos",
+          "items": [
+            {
+              "title": "Producir proteínas de la coagulación",
+              "text": "El hígado sintetiza gran parte de las proteínas que participan en la coagulación. Esa producción proporciona componentes que después actuarán en reacciones organizadas por una lesión. Una disminución de la capacidad de síntesis puede reducir su disponibilidad; no equivale a que ya se haya formado fibrina ni demuestra que todas las funciones hemostáticas fallen de la misma manera.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            },
+            {
+              "title": "Aportar bilis al intestino",
+              "text": "El hígado también produce bilis, que llega al intestino por las vías biliares. Allí facilita la absorción de vitamina K, una vitamina liposoluble. Este recorrido es distinto de la secreción de factores hacia la sangre: la bilis no es un factor de coagulación que deba incorporarse al complejo protrombinasa ni un sustituto del fibrinógeno.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            },
+            {
+              "title": "Separar dos rutas causales",
+              "text": "Una alteración puede reducir la síntesis de proteínas; otra puede dificultar que la vitamina K dietaria se absorba al disminuir la llegada de bilis al intestino. Ambas relaciones vinculan hígado y coagulación, pero no describen el mismo eslabón. En una comparación hay que especificar qué función permanece conservada y cuál se modifica, en lugar de explicar todo con la palabra hígado.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Desde la dieta hasta la disponibilidad",
+      "groups": [
+        {
+          "title": "Relaciones y mecanismos",
+          "items": [
+            {
+              "title": "Ingerir no equivale a absorber",
+              "text": "Que un alimento contenga vitamina K no garantiza que toda esa vitamina alcance el organismo. El capítulo relaciona la absorción con la bilis; por ello, una cantidad dietaria conservada puede coexistir con absorción disminuida si se altera su llegada al intestino. No puede deducirse automáticamente una deficiencia en una persona solo con conocer un alimento o una comida.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            },
+            {
+              "title": "Una obstrucción cambia el recorrido",
+              "text": "El ejemplo del capítulo es la obstrucción del conducto biliar: puede reducir la llegada de bilis al intestino y dificultar la absorción de vitamina K. El problema propuesto está en el transporte de la secreción hacia el tubo digestivo; no implica que la bilis haya dejado de fabricarse ni que se convierta normalmente en vitamina K.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            },
+            {
+              "title": "La absorción tiene etapas físicas",
+              "text": "La vitamina K ingerida participa en micelas mixtas antes de ser absorbida por enterocitos del intestino delgado. La bilis facilita ese entorno; no es la vitamina ni el transportador que se convierte en un factor sanguíneo. Después de absorberse, la vitamina se incorpora a quilomicrones y alcanza la circulación por la vía linfática. [Complemento: NIH ODS.]",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Preparar una proteína no es activar la cascada",
+      "groups": [
+        {
+          "title": "Relaciones y mecanismos",
+          "items": [
+            {
+              "title": "Qué significa dependencia de vitamina K",
+              "text": "El texto relaciona vitamina K con los factores II, VII, IX y X. La precisión bioquímica es la carboxilación de residuos de glutamato; en protrombina favorece la unión a calcio. Esta modificación funcional es distinta de convertir un precursor en su forma enzimática activa durante la coagulación. [Complemento experimental: Stenflo y colaboradores, PNAS 1974.]",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/4528109/",
+                  "https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/"
+                ]
+              }
+            },
+            {
+              "title": "No confundir II con IIa",
+              "text": "La protrombina, factor II, es el precursor de trombina, IIa. El complejo protrombinasa favorece esa conversión; la trombina puede actuar después sobre fibrinógeno. La vitamina K no es la enzima que convierte directamente II en IIa y tampoco sustituye el papel de la trombina. Hay que distinguir preparación de componentes, activación proteolítica y acción sobre un sustrato posterior.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            },
+            {
+              "title": "La lista II, VII, IX y X no representa todos los factores",
+              "text": "Reconocer estos cuatro factores dependientes de vitamina K no significa que todo participante de la coagulación tenga la misma dependencia. Fibrinógeno, cofactores, calcio y superficies cumplen tareas distintas. La lista tampoco establece el orden de activación: no es una cadena II→VII→IX→X. Debe leerse como una propiedad compartida por componentes situados en reacciones diferentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Disponibilidad, superficie y producto final",
+      "groups": [
+        {
+          "title": "Relaciones y mecanismos",
+          "items": [
+            {
+              "title": "Calcio y vitamina K no son intercambiables",
+              "text": "La relación funcional de vitamina K con ciertas proteínas no convierte a esa vitamina en un ion calcio. El calcio participa en condiciones necesarias para asociaciones de coagulación; la vitamina pertenece a una etapa diferente de preparación de componentes. Tener uno no permite eliminar del razonamiento la función del otro, como si fueran dos nombres para el mismo requisito.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            },
+            {
+              "title": "Conservar plaquetas no demuestra conservar factores",
+              "text": "El tapón plaquetario y las reacciones que generan fibrina se complementan. Un modelo con plaquetas conservadas puede alterar la disponibilidad de proteínas de coagulación; otro puede conservar esas proteínas y cambiar la función plaquetaria. Por ello, una cifra plaquetaria aislada no comprueba por sí misma la normalidad de todos los pasos que llevan a una red de fibrina.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 732,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            },
+            {
+              "title": "La vitamina K no es el material de la red",
+              "text": "El material de la red deriva de fibrinógeno procesado por trombina. La vitamina K contribuye a la función de ciertos componentes previos, pero no se transforma en fibrina para cerrar la lesión. Distinguir requisito funcional y material estructural evita dibujar una flecha directa desde bilis o vitamina hacia el coágulo, omitiendo las reacciones intermedias.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 735,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Comparar alteraciones sin reducirlas a una sola causa",
+      "groups": [
+        {
+          "title": "Relaciones y mecanismos",
+          "items": [
+            {
+              "title": "Síntesis reducida con absorción conservada",
+              "text": "Supón un modelo en el que la vitamina K se absorbe normalmente pero disminuye la capacidad de producir proteínas hepáticas. El dato de absorción conservada no reemplaza la función de síntesis que se ha alterado. La predicción debe seguir ese eslabón: disponer de un requisito no garantiza fabricar una cantidad normal de cada componente necesario.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            },
+            {
+              "title": "Absorción reducida con síntesis conservada",
+              "text": "Supón ahora que se conserva la capacidad de fabricar proteínas, pero llega menos bilis al intestino y se reduce la absorción de vitamina K. El problema no obliga a afirmar que desaparecen todas las proteínas hepáticas: afecta a la disponibilidad de un requisito para componentes dependientes. Comparar este caso con el anterior ayuda a localizar la diferencia y evita equiparar dos mecanismos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            },
+            {
+              "title": "La cirrosis no equivale a protección contra trombos",
+              "text": "Como precisión clínica, en cirrosis cambian componentes procoagulantes y anticoagulantes. El INR aislado no permite predecir el riesgo de sangrado de un procedimiento; tampoco demuestra protección frente a trombosis. Esta limitación impide extrapolar una cadena fisiológica del capítulo a una decisión individual. [Complemento: AASLD, evaluación del sangrado periprocedimiento en cirrosis.]",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://www.aasld.org/liver-fellow-network/core-series/clinical-pearls/peri-procedural-management-bleeding-risk-cirrhosis"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cómo reconstruir y comprobar el mecanismo",
+      "groups": [
+        {
+          "title": "Relaciones y mecanismos",
+          "items": [
+            {
+              "title": "Seguir cuatro preguntas en orden",
+              "text": "Primero pregunta si la vitamina está presente en la dieta; después, si puede absorberse en el intestino; luego, si el hígado conserva su capacidad de producir componentes; por último, si las reacciones y superficies necesarias pueden funcionar. Este orden sirve para ubicar una intervención, pero no establece que una sola variable explique todos los trastornos de la hemostasia.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            },
+            {
+              "title": "Distinguir regulación farmacológica y sustrato",
+              "text": "El capítulo usa antagonistas de vitamina K para mostrar que interferir con su utilización puede dificultar la coagulación. Eso no significa que tales sustancias disuelvan directamente la fibrina ya formada: degradar una red corresponde a la fibrinólisis, una tarea distinta. La comparación es fisiológica; no establece indicaciones, dosis ni decisiones de medicación.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 738,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            },
+            {
+              "title": "Del modelo a la aplicación razonada",
+              "text": "Un caso útil debe decir qué se mantiene y qué cambia: ingesta, bilis intestinal, absorción, síntesis, plaquetas o una reacción concreta. La respuesta tiene que recorrer los pasos afectados y reconocer qué no puede concluir. No basta con contestar que el hígado coagula la sangre; debe explicarse cómo la función modificada cambia la disponibilidad o actividad de componentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_18_sangre.webp",
+    "alt": "Hígado, bilis intestinal, vitamina K y funciones diferentes en coagulación",
+    "download": "/api/mindmap?id=morfo_18_sangre__11&format=image",
+    "filename": "morfo_18_sangre__11-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 18,
+      "pdfPages": [
+        732,
+        733,
+        735,
+        736,
+        738
+      ],
+      "kind": "original_synthesis"
+    },
+    "generative_download": true,
+    "practice": {
+      "flashcards": [
+        {
+          "question": "¿Por qué fabricar proteínas no equivale a formar fibrina en la lesión?",
+          "answer": "El hígado sintetiza gran parte de las proteínas que participan en la coagulación. Esa producción proporciona componentes que después actuarán en reacciones organizadas por una lesión. Una disminución de la capacidad de síntesis puede reducir su disponibilidad; no equivale a que ya se haya formado fibrina ni demuestra que todas las funciones hemostáticas fallen de la misma manera.",
+          "pdf_pages": [
+            736
+          ]
+        },
+        {
+          "question": "Distingue el destino de la bilis y el de los factores secretados a la sangre.",
+          "answer": "El hígado también produce bilis, que llega al intestino por las vías biliares. Allí facilita la absorción de vitamina K, una vitamina liposoluble. Este recorrido es distinto de la secreción de factores hacia la sangre: la bilis no es un factor de coagulación que deba incorporarse al complejo protrombinasa ni un sustituto del fibrinógeno.",
+          "pdf_pages": [
+            736
+          ]
+        },
+        {
+          "question": "¿Qué dos funciones separa el vínculo entre hígado y coagulación?",
+          "answer": "Una alteración puede reducir la síntesis de proteínas; otra puede dificultar que la vitamina K dietaria se absorba al disminuir la llegada de bilis al intestino. Ambas relaciones vinculan hígado y coagulación, pero no describen el mismo eslabón. En una comparación hay que especificar qué función permanece conservada y cuál se modifica, en lugar de explicar todo con la palabra hígado.",
+          "pdf_pages": [
+            736
+          ]
+        },
+        {
+          "question": "¿Por qué una ingesta conservada no garantiza absorción conservada?",
+          "answer": "Que un alimento contenga vitamina K no garantiza que toda esa vitamina alcance el organismo. El capítulo relaciona la absorción con la bilis; por ello, una cantidad dietaria conservada puede coexistir con absorción disminuida si se altera su llegada al intestino. No puede deducirse automáticamente una deficiencia en una persona solo con conocer un alimento o una comida.",
+          "pdf_pages": [
+            736
+          ]
+        },
+        {
+          "question": "Reconstruye el efecto de una obstrucción sobre la absorción de vitamina K.",
+          "answer": "El ejemplo del capítulo es la obstrucción del conducto biliar: puede reducir la llegada de bilis al intestino y dificultar la absorción de vitamina K. El problema propuesto está en el transporte de la secreción hacia el tubo digestivo; no implica que la bilis haya dejado de fabricarse ni que se convierta normalmente en vitamina K.",
+          "pdf_pages": [
+            736
+          ]
+        },
+        {
+          "question": "¿Por qué la vitamina K no sustituye a protrombinasa ni a trombina?",
+          "answer": "La protrombina, factor II, es el precursor de trombina, IIa. El complejo protrombinasa favorece esa conversión; la trombina puede actuar después sobre fibrinógeno. La vitamina K no es la enzima que convierte directamente II en IIa y tampoco sustituye el papel de la trombina. Hay que distinguir preparación de componentes, activación proteolítica y acción sobre un sustrato posterior.",
+          "pdf_pages": [
+            733
+          ]
+        },
+        {
+          "question": "¿Qué no expresa la lista II, VII, IX y X?",
+          "answer": "Reconocer estos cuatro factores dependientes de vitamina K no significa que todo participante de la coagulación tenga la misma dependencia. Fibrinógeno, cofactores, calcio y superficies cumplen tareas distintas. La lista tampoco establece el orden de activación: no es una cadena II→VII→IX→X. Debe leerse como una propiedad compartida por componentes situados en reacciones diferentes.",
+          "pdf_pages": [
+            736
+          ]
+        },
+        {
+          "question": "¿Por qué no pueden intercambiarse calcio y vitamina K en un esquema?",
+          "answer": "La relación funcional de vitamina K con ciertas proteínas no convierte a esa vitamina en un ion calcio. El calcio participa en condiciones necesarias para asociaciones de coagulación; la vitamina pertenece a una etapa diferente de preparación de componentes. Tener uno no permite eliminar del razonamiento la función del otro, como si fueran dos nombres para el mismo requisito.",
+          "pdf_pages": [
+            733
+          ]
+        },
+        {
+          "question": "¿Qué no puede comprobar una cifra plaquetaria aislada?",
+          "answer": "El tapón plaquetario y las reacciones que generan fibrina se complementan. Un modelo con plaquetas conservadas puede alterar la disponibilidad de proteínas de coagulación; otro puede conservar esas proteínas y cambiar la función plaquetaria. Por ello, una cifra plaquetaria aislada no comprueba por sí misma la normalidad de todos los pasos que llevan a una red de fibrina.",
+          "pdf_pages": [
+            732
+          ]
+        },
+        {
+          "question": "Distingue interferir con vitamina K de degradar fibrina ya formada.",
+          "answer": "El capítulo usa antagonistas de vitamina K para mostrar que interferir con su utilización puede dificultar la coagulación. Eso no significa que tales sustancias disuelvan directamente la fibrina ya formada: degradar una red corresponde a la fibrinólisis, una tarea distinta. La comparación es fisiológica; no establece indicaciones, dosis ni decisiones de medicación.",
+          "pdf_pages": [
+            738
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Un modelo conserva ingesta de vitamina K y síntesis de bilis, pero impide que la bilis llegue al intestino. ¿Qué predicción sigue el mecanismo propuesto?",
+          "options": [
+            "Puede disminuir la absorción de vitamina K aunque la ingesta permanezca igual",
+            "La absorción debe ser normal porque solo depende de cuánto se ingiere",
+            "Retener bilis fuera del intestino garantiza mayor absorción de vitamina K",
+            "La obstrucción demuestra que se detuvo toda síntesis de proteínas hepáticas"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: diferencia ingesta, producción de bilis y llegada al lugar donde facilita la absorción intestinal.",
+            "Mantener la ingesta no asegura el paso intestinal; descarta la función de la bilis que el ejercicio modifica.",
+            "La retención fuera del lugar de acción no garantiza mayor absorción; omite la localización intestinal del proceso.",
+            "El enunciado altera un recorrido biliar; no establece que toda la síntesis proteica del hígado haya cesado."
+          ],
+          "pdf_pages": [
+            736
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Localizar un bloqueo entre producción y llegada al intestino."
+        },
+        {
+          "question": "Se conserva la absorción de vitamina K, pero disminuye la capacidad hepática de producir proteínas de coagulación. ¿Qué conclusión respeta el control del modelo?",
+          "options": [
+            "Toda producción de factores debe normalizarse solo por conservar absorción",
+            "La vitamina absorbida no reemplaza la capacidad de síntesis que está reducida",
+            "La alteración obliga a que toda vitamina desaparezca del intestino",
+            "Una producción reducida solo puede alterar el tapón plaquetario y nunca la fibrina"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Elimina el defecto definido en el caso: disponer de un requisito no restaura por sí mismo la función de síntesis.",
+            "Correcto: mantiene separados disponibilidad de vitamina y capacidad para producir componentes de coagulación.",
+            "El caso conserva absorción y cambia otra función; no aporta evidencia de pérdida de toda vitamina intestinal.",
+            "Limita sin fundamento el efecto a hemostasia primaria, aunque el caso modifica proteínas necesarias para coagulación."
+          ],
+          "pdf_pages": [
+            736
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Comparar requisitos conservados y función alterada."
+        },
+        {
+          "question": "Un esquema representa vitamina K → IIa → fibrina, sin otras relaciones. ¿Qué corrección identifica el paso que falta?",
+          "options": [
+            "Añadir que la bilis es el sustrato estructural que se convierte en fibrina",
+            "Cambiar IIa por VII porque los números establecen el orden de reacción",
+            "Separar preparación de factores de II→IIa por protrombinasa y acción de trombina sobre fibrinógeno",
+            "Eliminar protrombina porque toda proteína dependiente de vitamina K circula activada"
+          ],
+          "correct": 2,
+          "reasons": [
+            "La red deriva de fibrinógeno; la bilis tiene una función intestinal y no aporta ese material estructural.",
+            "La numeración no establece una secuencia funcional II→VII; cambiar números no corrige la reacción omitida.",
+            "Correcto: distingue etapas y sustratos, sin convertir vitamina K en la enzima que activa directamente protrombina.",
+            "La dependencia de una vitamina no significa que el precursor ya sea su forma activa antes de la reacción."
+          ],
+          "pdf_pages": [
+            733,
+            735,
+            736
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Reconstruir pasos y evitar una flecha causal directa falsa."
+        },
+        {
+          "question": "Dos preparaciones contienen igual cantidad de protrombina, pero una tiene alterada la modificación dependiente de vitamina K y menor unión a calcio. ¿Por qué no basta medir su cantidad?",
+          "options": [
+            "Igual cantidad obliga a que ambas preparaciones tengan idéntica función",
+            "El calcio se une igual aunque cambien los residuos responsables de esa unión",
+            "La cantidad de precursor demuestra que toda esa proteína ya es trombina activa",
+            "Cantidad y estado funcional son variables diferentes; la modificación puede alterar la interacción con calcio"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Confunde abundancia y capacidad funcional, precisamente las variables que el experimento mantiene y modifica por separado.",
+            "Ignora el cambio de unión descrito y la relación experimental entre modificación dependiente de K y unión a calcio.",
+            "Medir protrombina no demuestra su conversión a IIa; el precursor y la enzima activa corresponden a estados distintos.",
+            "Correcto: sigue el control experimental y explica cómo igual cantidad puede coexistir con diferente función."
+          ],
+          "pdf_pages": [
+            736
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Interpretar cantidad conservada y función alterada; complemento experimental PMID 4528109."
+        },
+        {
+          "question": "¿Qué comparación evita atribuir a la vitamina K una función de fibrinólisis?",
+          "options": [
+            "Interferir con su utilización puede dificultar coagulación; degradar la red ya formada corresponde a otro mecanismo",
+            "Disminuir su utilización equivale por definición a cortar toda fibrina existente",
+            "Interferir con vitamina K y degradar fibrina afectan siempre al mismo paso",
+            "La bilis ejecuta la retracción mecánica del coágulo dentro del vaso"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: distingue contribuir a formar componentes funcionales de degradar la estructura de un coágulo.",
+            "Confunde formación y retirada de la red; una interferencia previa no equivale a proteólisis de fibrina ya presente.",
+            "Las intervenciones se sitúan en etapas distintas: funcionamiento de componentes y degradación de una red existente.",
+            "La bilis actúa en el contexto digestivo; la retracción tiene otra localización y depende de componentes del coágulo."
+          ],
+          "pdf_pages": [
+            736,
+            738
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Contrastar preparación funcional con degradación de un producto."
+        },
+        {
+          "question": "Un informe aislado muestra INR elevado en una persona con cirrosis. ¿Qué límite debe respetar el estudiante?",
+          "options": [
+            "Ese dato demuestra ausencia de riesgo trombótico en cualquier situación",
+            "Por sí solo no predice el riesgo de sangrado de un procedimiento ni establece protección frente a trombosis",
+            "Permite identificar una obstrucción biliar como causa única sin datos adicionales",
+            "Equivale a demostrar que ya no existe ninguna proteína hepática"
+          ],
+          "correct": 1,
+          "reasons": [
+            "No puede deducirse protección absoluta frente a trombosis a partir de esta medición aislada en cirrosis.",
+            "Correcto: reconoce el alcance limitado de la prueba y evita convertirla en una decisión individual automática.",
+            "Una prueba aislada no identifica ese recorrido causal específico ni excluye otros cambios de la enfermedad.",
+            "Medir un tiempo relacionado con coagulación no equivale a medir ausencia de toda proteína producida en hígado."
+          ],
+          "pdf_pages": [
+            736
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Reconocer el límite de extrapolar un indicador aislado en cirrosis."
+        }
+      ],
+      "source": "Saladin, cap. 18 · PDF 732–738 (libro 704–710); precisiones bioquímicas y límites del INR identificados por separado.",
+      "supplementary_reference": "https://pubmed.ncbi.nlm.nih.gov/4528109/ · https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/ · https://www.aasld.org/liver-fellow-network/core-series/clinical-pearls/peri-procedural-management-bleeding-risk-cirrhosis",
+      "review": "Segunda revisión automatizada; revisión docente pendiente."
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "scope": "Mecanismos de absorción, síntesis y función; no diagnóstico individual ni indicaciones de tratamiento. No reproduce recomendación general de suplementación de embarazadas del texto antiguo."
+  },
+  "supplementary_references": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/4528109/",
+      "scope": "Modificación dependiente de vitamina K y unión a calcio en protrombina."
+    },
+    {
+      "url": "https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/",
+      "scope": "Vitamina liposoluble, absorción intestinal y carboxilasa dependiente de vitamina K."
+    },
+    {
+      "url": "https://www.aasld.org/liver-fellow-network/core-series/clinical-pearls/peri-procedural-management-bleeding-risk-cirrhosis",
+      "scope": "Límite del INR aislado para predecir sangrado de procedimiento en cirrosis."
+    }
+  ]
+}

@@ -124,5 +124,19 @@
     "acceso_gratis": false,
     "curated": true,
     "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__10.webp"
+  },
+  {
+    "id": "morfo_18_sangre__11",
+    "titulo": "Hígado, bilis y vitamina K: de la absorción a la coagulación",
+    "root_title": "Hígado, bilis y vitamina K: de la absorción a la coagulación",
+    "materia": "Morfofunción",
+    "tema": "Sangre",
+    "parent_key": "morfo_18_sangre.png",
+    "url_imagen": "premium/morfo_18_sangre__11.json",
+    "descripcion": "Distingue ingesta, absorción, síntesis y actividad; compara fallos biliares y hepáticos con práctica razonada.",
+    "premium": true,
+    "acceso_gratis": false,
+    "curated": true,
+    "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__11.webp"
   }
 ]
