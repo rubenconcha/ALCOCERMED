@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "coagulation_factors_reviewed_ready_to_publish",
+  "status": "blood_independent_cases_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -769,12 +769,80 @@
         "api/_mindmaps/coagulation-factors-prompts.json"
       ],
       "deployment": {
-        "status": "pending"
+        "commit": "3f84c2e",
+        "status": "Vercel success",
+        "anonymous": {
+          "/api/mindmap?id=morfo_18_sangre__10": 401,
+          "/api/mindmap?id=morfo_18_sangre__10&format=image": 401,
+          "/api/_mindmaps/morfo_18_sangre__10.png": 404,
+          "/api/_mindmaps/curated/build_coagulation_factors.py.source": 404
+        },
+        "admin_live": "Deep link opens named factor map; final protected image fully loads at 1536x1024; practice exposes ten cards and six reasoned questions."
       },
       "poster_sha256": "83311ace3dd6353a24a0a29f320c581df1693bf91e4593ae76e8aebfb7642006"
+    },
+    {
+      "id": "blood-independent-assessments-2026-10-15",
+      "new_questions": 12,
+      "simulation_questions": 6,
+      "self_assessment_questions": 6,
+      "per_option_explanations": 48,
+      "minutes_per_set": 8,
+      "source_pages": {
+        "saladin_pdf": [
+          726,
+          727,
+          728,
+          729,
+          730,
+          733,
+          734,
+          735,
+          736
+        ]
+      },
+      "source_complements": [
+        "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+        "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK27123/"
+      ],
+      "coverage_audit": "quality/assessment-coverage.json: authoring packs have independent 40/30 stems and 4/3 items per legacy section for both topics. Equal counts are not full objective evidence. Not a remote row-by-row database audit.",
+      "delivery": "Two choices in existing Simulacros: Sangre Casos razonados and Autoevaluacion de mecanismos. Existing timer, answer selection, scoring and final feedback; private questions load through authenticated map endpoint. Not a new classroom/database evaluation.",
+      "review": "Second automated academic and visual pass; teacher approval pending.",
+      "corrections": [
+        "Separate the two sets from each other, original exams and map-practice stems.",
+        "No database question identity invented; aggregate result flow remains the existing student-initiated path.",
+        "Fail closed for free, denied and changed sessions; keep full authoring and content protected.",
+        "Clear prior review on a new test and label result as block performance, not full chapter mastery.",
+        "Preserve scientific case in options and feedback (Xa, Va, IXa, VIIIa).",
+        "Keep four-option explanations on separate readable lines."
+      ],
+      "tests": [
+        "21 access/source/identity/controller regression tests passed, including original topic exams and map access.",
+        "Actual controller starts six-question eight-minute independent sessions.",
+        "Desktop/mobile UI completes both sets with three correct, two incorrect and one unanswered; verifies 3/6 and 50 percent.",
+        "All six final review items expose all alternatives and sources; no page errors or horizontal overflow.",
+        "Verified free cards make no protected content request.",
+        "No live student attempt submitted during QA; persistence stubbed only in local test harness."
+      ],
+      "limitations": [
+        "Only targeted Blood application objectives; not full chapter coverage.",
+        "Equivalent distinct Senses sets remain next.",
+        "No new downloadable map or illustration in this examination batch; existing branded layout reused.",
+        "Classroom evaluation expansion and teacher review pending."
+      ],
+      "files": [
+        "api/_mindmaps/curated/build_blood_assessments.py.source",
+        "api/_mindmaps/morfo_18_sangre__09.json",
+        "study-assessments.js",
+        "quality/assessment-coverage.json"
+      ],
+      "deployment": {
+        "status": "pending"
+      }
     }
   ],
-  "next_action": "Audit actual independent Blood/Senses simulation and evaluation coverage against reviewed objectives; prepare distinct sourced application questions for gaps without duplicating map practice or inventing database identities. Continue hepatic/vitamin-K and disorder relationships plus remaining chapter objectives. Neither chapter is complete; teacher review pending.",
+  "next_action": "Prepare distinct application simulation and self-assessment sets for reviewed Senses mechanisms, with objective mapping and no duplicate map-practice stems. Continue full coverage audit and hepatic/vitamin-K plus disorder objectives. Do not claim whole chapters or classroom assessments fully reviewed.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

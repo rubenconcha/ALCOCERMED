@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "basis": "Repository authoring packs and actual application controller tests; not an authenticated database row-by-row audit.",
+  "teacher_approved": false,
+  "chapters": [
+    {
+      "id": "sangre",
+      "legacy_simulation_questions": 40,
+      "legacy_evaluation_questions": 30,
+      "exact_stem_overlap": 0,
+      "legacy_section_counts": [
+        {
+          "title": "Sangre como tejido y sus funciones",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Plasma, proteínas y equilibrio de líquidos",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Hematopoyesis y regulación de la producción",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Eritrocitos y hemoglobina",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Ciclo de vida, hierro y trastornos eritrocíticos",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Grupos ABO, Rh y reconocimiento inmunitario",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Leucocitos y defensa",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Plaquetas y hemostasia primaria",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Coagulación y estabilización del coágulo",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Reparación, fibrinólisis y alteraciones de la hemostasia",
+          "simulation": 4,
+          "evaluation": 3
+        }
+      ],
+      "full_objective_coverage": "pending: equal counts per legacy section do not establish mechanisms/application coverage",
+      "new_independent_sets": {
+        "simulation": 6,
+        "self_assessment": 6,
+        "scope": "Reviewed leukocyte and coagulation objectives; not full chapter or replacement of classroom evaluation."
+      }
+    },
+    {
+      "id": "sentidos",
+      "legacy_simulation_questions": 40,
+      "legacy_evaluation_questions": 30,
+      "exact_stem_overlap": 0,
+      "legacy_section_counts": [
+        {
+          "title": "Receptores, transducción y codificación sensitiva",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Tacto y propiocepción",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Nocicepción y modulación del dolor",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Gusto: receptores, sabores y vías",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Olfato y relación con la experiencia sensorial",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Oído externo, medio e interno",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Fisiología auditiva y codificación del sonido",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Equilibrio, máculas y crestas ampulares",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Ojo, medios ópticos y enfoque",
+          "simulation": 4,
+          "evaluation": 3
+        },
+        {
+          "title": "Retina, fototransducción y vías visuales",
+          "simulation": 4,
+          "evaluation": 3
+        }
+      ],
+      "full_objective_coverage": "pending: equal counts per legacy section do not establish mechanisms/application coverage",
+      "new_independent_sets": {
+        "simulation": 0,
+        "self_assessment": 0,
+        "next": "Author distinct application sets for the reviewed sensory mechanisms."
+      }
+    }
+  ]
+}

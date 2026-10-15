@@ -6,6 +6,8 @@
         'premium-full': { title: 'Nuevo simulacro completo', minutes: 100, split: [50, 30, 20] },
         'premium-mini': { title: 'Nuevo mini simulacro', minutes: 50, split: [25, 15, 10] },
         'morfo-sangre': { title: 'Sangre · Morfofunción', minutes: 40, split: [40, 0, 0], topic: 'sangre', examName: 'Práctica bibliográfica - Morfofunción - Sangre (40 preguntas)' },
+        'blood-depth-simulation': { title: 'Sangre · Casos razonados', minutes: 8, split: [6, 0, 0], topic: 'sangre', depthSet: 'simulation' },
+        'blood-depth-evaluation': { title: 'Sangre · Autoevaluación de mecanismos', minutes: 8, split: [6, 0, 0], topic: 'sangre', depthSet: 'evaluation' },
         'morfo-sentidos': { title: 'Órganos de los sentidos · Morfofunción', minutes: 40, split: [40, 0, 0], topic: 'organos de los sentidos', examName: 'Práctica bibliográfica - Morfofunción - Órganos de los sentidos (40 preguntas)' }
     };
     const subjects = ['MORFOFUNCION', 'BIOLOGIA CELULAR', 'SALUD PUBLICA'];
@@ -42,6 +44,12 @@
             return rows;
         }
         if (CampusAccess.isFree()) { CampusAccess.unlock(); return null; }
+        if (format.depthSet) {
+            const rows = await StudyAssessments.load(format.topic, format.depthSet);
+            verifyDistribution(rows, format);
+            if (rows.some(row => normalized(campo(row, 'tema')) !== normalized(format.topic))) throw new Error('La prueba contiene otro tema.');
+            return rows;
+        }
         if (format.examName) {
             const { data, error } = await getSupabase().from('simulacros').select('*')
                 .eq('nombre', format.examName).order('numero_pregunta', { ascending: true });
@@ -120,6 +128,8 @@
             simState.answers = rows.map(() => ({ selected: null }));
             simState.currentIdx = 0;
             simState.finalized = false;
+            simState.independentScope = Boolean(format.depthSet);
+            document.getElementById('sim-review-list')?.replaceChildren();
             simState.secondsLeft = format.minutes * 60;
             simState.startTimestamp = Date.now();
             simState.endTimestamp = simState.startTimestamp + simState.secondsLeft * 1000;

@@ -4168,6 +4168,12 @@ body.wayground-active .main-content {
     align-items: flex-start;
 }
 
+.sim-rev-justif span { white-space: pre-line; overflow-wrap: anywhere; }
+#sim-options .bq-option-text,
+#sim-review-list .sim-rev-justif span,
+#sim-review-list .sim-rev-tu-resp strong,
+#sim-review-list .sim-rev-correcta strong { text-transform: none; }
+
 .sim-rev-justif i {
     color: #f59e0b;
     flex-shrink: 0;

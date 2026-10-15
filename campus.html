@@ -18,7 +18,7 @@
 
     <link href="assets/mindmaps/fonts/outfit.css?v=1" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=37">
+    <link rel="stylesheet" href="styles.css?v=38">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
@@ -859,6 +859,14 @@
                         <span class="entrance-choice-top"><span class="entrance-choice-tag">MORFOFUNCIÓN · CAPÍTULO 16</span><span class="entrance-choice-radio" aria-hidden="true"></span></span><strong>Órganos de los sentidos</strong><span class="entrance-choice-description">Receptores, tacto, dolor, gusto, olfato, audición, equilibrio y visión.</span><span class="entrance-choice-metrics"><span><b>40</b> preguntas</span><span><b>40</b> minutos</span></span><span class="entrance-choice-split">Selección equilibrada de los diez bloques del capítulo.</span>
                     </button>
                 </div>
+                <div class="entrance-choices" role="group" aria-label="Ampliación de Sangre">
+                    <button type="button" id="entrance-blood-depth-simulation" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('blood-depth-simulation')" aria-pressed="false">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SANGRE · APLICACIÓN</span><span class="entrance-choice-radio" aria-hidden="true"></span></span><strong>Casos razonados</strong><span class="entrance-choice-description">Diferencial, reservas, linajes y coagulación. Predice el mecanismo y revisa cada alternativa al terminar.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Bloque específico; no sustituye el simulacro integral.</span>
+                    </button>
+                    <button type="button" id="entrance-blood-depth-evaluation" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('blood-depth-evaluation')" aria-pressed="false">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SANGRE · AUTOEVALUACIÓN</span><span class="entrance-choice-radio" aria-hidden="true"></span></span><strong>Comprueba los mecanismos</strong><span class="entrance-choice-description">Una selección distinta de casos para comprobar transferencia del aprendizaje. Corrección al finalizar.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Preguntas diferentes de Casos razonados.</span>
+                    </button>
+                </div>
                 <div class="entrance-launch">
                     <div><span>Prueba seleccionada</span><strong id="entrance-selected-name">Simulacro completo</strong><small id="entrance-selected-detail">100 preguntas · 100 minutos</small></div>
                     <button class="btn-primary entrance-start" id="sim-start-btn" onclick="iniciarSimulacro()"><i class="fas fa-play"></i> Comenzar</button>
@@ -1379,14 +1387,15 @@
     <script src="mindmap-premium-catalog.js?v=9"></script>
     <script src="mindmap-premium.js?v=2"></script>
     <script src="study-depth.js?v=8"></script>
-    <script src="script.js?v=51"></script>
+    <script src="script.js?v=52"></script>
     <script src="mindmap-branch-labels.js?v=3"></script>
     <script src="mindmap-content.js?v=2"></script>
     <script src="mindmap-detailed-content.js?v=4"></script>
     <script src="mindmap-practice.js?v=1"></script>
     <script src="mindmap-viewer.js?v=16"></script>
     <script src="intocables-hub.js?v=1"></script>
-    <script src="simulacro-ingreso.js?v=3"></script>
+    <script src="study-assessments.js?v=1"></script>
+    <script src="simulacro-ingreso.js?v=4"></script>
     <script src="student-library.js?v=8"></script>
     <script src="study-summaries.js?v=7"></script>
     <script src="past-exams.js?v=4"></script>

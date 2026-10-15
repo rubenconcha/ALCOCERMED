@@ -3355,7 +3355,8 @@ window.finalizarSimulacro = function () {
     else if (pct >= 40) { emoji = '📚'; title = 'puedes mejorar'; }
 
     document.getElementById('sim-result-emoji').textContent = emoji;
-    document.getElementById('sim-result-title').textContent = title;
+    document.getElementById('sim-result-title').textContent = simState.mode === 'oficial' && simState.independentScope
+        ? (pct >= 80 ? 'Buen resultado en este bloque' : 'Revisa los mecanismos de este bloque') : title;
     document.getElementById('sim-result-score').textContent =
         correctas + ' de ' + total + ' correctas · ' + pct + '% de acierto';
     document.getElementById('sim-rs-correct').textContent = correctas;

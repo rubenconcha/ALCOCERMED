@@ -1,0 +1,93 @@
+"""Independent application sets, attached to the already protected blood map."""
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[3]
+SETS={
+ 'simulation':[
+ ('diferencial','En una comparación hay 2 000 leucocitos/µl con 10 % de eosinófilos y 8 000/µl con 4 %. ¿Qué informe compara correctamente las concentraciones, sin diagnosticar su causa?',
+ ['La segunda tiene 320/µl frente a 200/µl en la primera, aunque su porcentaje sea menor','La primera tiene más eosinófilos por volumen porque 10 es mayor que 4','Ambas contienen 10 eosinófilos/µl porque el porcentaje expresa concentración','La segunda tiene 32/µl porque no es necesario convertir el porcentaje en fracción'],0,[
+ 'Correcto: 2 000 por 0,10 da 200 y 8 000 por 0,04 da 320; comparar porcentajes solos invertiría la conclusión.',
+ 'La proporción usa denominadores distintos; no establece por sí sola cuál concentración absoluta es mayor.',
+ 'Un porcentaje carece de la unidad células por volumen; debe aplicarse al total correspondiente de cada muestra.',
+ '8 000 por 0,04 equivale a 320, no 32. El error de escala cambia la concentración y no se corrige con una etiqueta diagnóstica.'],[726,729],'Comparar dos productos y resistir la inferencia basada solo en porcentaje.'),
+ ('reserva','En un modelo se marcan células maduras ya presentes en médula. Tras una señal, aumentan en sangre las células marcadas, antes de aparecer descendientes nuevos. ¿Qué explica directamente ese hallazgo?',
+ ['La marca demuestra que todas las células se fabricaron después de la señal','La movilización de células previamente disponibles contribuye al aumento','Las células marcadas se convirtieron en otra línea madura durante su paso por sangre','La señal eliminó necesariamente la producción medular durante toda la respuesta'],1,[
+ 'La marca se aplicó antes del estímulo a células existentes; el dato temporal contradice atribuirles producción posterior.',
+ 'Correcto: el rastreo identifica contribución de una reserva. No excluye que la producción cambie en fases posteriores.',
+ 'El experimento sigue células marcadas entre compartimentos; no aporta evidencia de conversión entre líneas maduras.',
+ 'Detectar liberación inicial no demuestra una supresión permanente de producción; son procesos que deben separarse.'],[729],'Interpretar una observación de trazado celular y su secuencia temporal.'),
+ ('protrombinasa','Una preparación con Xa, protrombina, calcio y fosfolípidos genera poca trombina. Al añadir Va aumenta la conversión, manteniendo los demás componentes. ¿Qué papel de Va concuerda con el ensayo?',
+ ['Es el sustrato que se convierte en trombina','Sustituye a Xa como proteasa que actúa sin un complejo','Actúa como cofactor que facilita la actividad de Xa sobre protrombina','Demuestra que el fibrinógeno debe ser el precursor de toda trombina'],2,[
+ 'El sustrato nombrado en el ensayo es protrombina; Va no se convierte en trombina por facilitar esa reacción.',
+ 'El aumento al añadir Va no elimina a Xa ni asigna a Va la misma función proteasa: distingue cooperación de sustitución.',
+ 'Correcto: la comparación mantiene el sustrato y la enzima y pone a prueba la contribución de un cofactor.',
+ 'Fibrinógeno es sustrato para formar fibrina en una etapa posterior; no explica la conversión medida de protrombina.'],[733,735],'Inferir función de un componente a partir de una comparación controlada.'),
+ ('fibrinolisis','Dos preparaciones contienen redes de fibrina formadas. En una aparece una enzima que corta fibrina y se acumulan productos de degradación. ¿Qué explicación se ajusta a ese cambio?',
+ ['La trombina está convirtiendo fibrinógeno en más fibrina','XIIIa está reforzando la red mediante entrecruzamiento','Solo existe retracción plaquetaria, sin degradación proteica','La actividad de plasmina favorece fibrinólisis de la red'],3,[
+ 'Describe generación de fibrina, mientras el enunciado mide corte y productos de degradación de una red ya presente.',
+ 'El entrecruzamiento estabiliza y no explica por sí solo la producción de fragmentos por degradación proteica.',
+ 'La retracción puede compactar, pero el dato de corte de fibrina exige distinguir un mecanismo proteolítico.',
+ 'Correcto: relaciona enzima y sustrato con degradación de la red, sin confundirla con formación o compactación.'],[734,736],'Separar procesos que pueden disminuir el tamaño aparente de un coágulo.'),
+ ('linajes','Se reduce selectivamente el desarrollo de la ruta granulocítica, manteniendo en el modelo las rutas monocítica y linfoide. ¿Qué conjunto de destinos se afecta de forma directa?',
+ ['Neutrófilos, eosinófilos y basófilos','Linfocitos B, T y NK por pertenecer todos al mismo linaje granulocítico','Monocitos exclusivamente, porque todo precursor produce el mismo destino','Todos los elementos formes por igual, aunque la intervención sea selectiva'],0,[
+ 'Correcto: esos tres destinos corresponden a la ruta granulocítica representada; no se extiende el efecto a rutas conservadas.',
+ 'B, T y NK pertenecen a destinos linfoides del esquema; un origen hematopoyético común no elimina la distinción.',
+ 'Monocitos corresponden a otra ruta precursora, que el ejercicio conserva; no son el destino exclusivo de granulocitos.',
+ 'Generaliza una intervención definida sobre una rama hasta todas las células sin respetar el control del modelo.'],[727,728],'Relacionar una intervención selectiva con destinos de desarrollo.'),
+ ('competencia','Dos grupos tienen el mismo total de leucocitos. En uno predominan células maduras funcionales y en otro aumenta una población anormal con menos células competentes. ¿Qué dato impide equiparar su defensa?',
+ ['El total idéntico garantiza que todas las funciones son iguales','La composición y competencia funcional no quedan determinadas por el total','La morfología nunca aporta información si el total es conocido','El segundo grupo permite clasificar de inmediato una leucemia concreta'],1,[
+ 'El número global no determina qué poblaciones lo componen ni que su maduración y función sean equivalentes.',
+ 'Correcto: el control del total permite reconocer que composición y competencia añaden información diferente.',
+ 'La morfología puede aportar información complementaria; no debe descartarse por disponer de un recuento total.',
+ 'El caso compara dimensiones fisiológicas y no ofrece los datos necesarios para clasificar una enfermedad individual.'],[727,730],'Integrar dos variables independientes sin convertir el caso en diagnóstico.')],
+ 'evaluation':[
+ ('diferencial','Una muestra tiene 10 000 leucocitos/µl y 5 % de eosinófilos; otra tiene 4 000/µl y 10 %. ¿Qué cambio absoluto acompaña al aumento porcentual?',
+ ['Aumenta de 500 a 1 000/µl','Se mantiene en 500/µl porque el porcentaje aumentó','Disminuye de 500 a 400/µl','No puede calcularse aunque se conozcan total y porcentaje'],2,[
+ 'Aplica el segundo porcentaje al primer total y mezcla denominadores que corresponden a muestras diferentes.',
+ 'La compensación no es exacta: 4 000 por 0,10 da 400, de modo que no conserva la concentración inicial.',
+ 'Correcto: 10 000 por 0,05 es 500 y 4 000 por 0,10 es 400; puede subir la proporción mientras baja la concentración.',
+ 'Total y fracción permiten calcular la concentración; otra cuestión es interpretar su causa o relevancia clínica.'],[726,729],'Calcular un cambio de dirección opuesta entre porcentaje y concentración.'),
+ ('maduracion','Un modelo mantiene precursores de origen medular, pero impide que precursores T lleguen al timo. ¿Qué inferencia respeta la separación entre origen y maduración?',
+ ['El origen hematopoyético de todo linfocito se trasladará al bazo','Los precursores conservados demuestran que toda maduración T será normal','Los linfocitos B deben perder su desarrollo medular por el mismo mecanismo','Puede mantenerse el origen medular y comprometerse una etapa de desarrollo T'],3,[
+ 'El bloqueo de migración no cambia por sí solo el sitio de origen de todos los linfocitos a un órgano periférico.',
+ 'Disponer de precursores no garantiza completar la etapa que requiere el entorno al que no pueden llegar.',
+ 'El ejercicio interviene el trayecto T; no establece una interrupción obligatoria del entorno de desarrollo B.',
+ 'Correcto: distingue producción del precursor de acceso al microambiente necesario para completar desarrollo T.'],[729],'Predecir el efecto de interrumpir tránsito sin eliminar origen.'),
+ ('superficie','En un modelo hay actividad inicial TF/VIIa, pero falta generación eficaz de Xa sobre plaquetas por alteración de IXa/VIIIa. ¿Qué propiedad explica que contar actividad inicial no resuelva toda la respuesta?',
+ ['La ubicación y asociación de factores condicionan sus funciones en propagación','Toda actividad Xa generada en cualquier lugar es funcionalmente idéntica','El factor VIII es un sustrato que se convierte directamente en trombina','El esquema clásico demuestra que iniciar siempre sustituye a propagar'],0,[
+ 'Correcto: el modelo celular distingue superficies y complejos; iniciar no asegura la misma generación posterior de trombina.',
+ 'Ignora la organización espacial que la evidencia complementaria muestra relevante para funciones de IXa y Xa.',
+ 'VIIIa cumple función de cofactor de IXa; no es la protrombina que se transforma en trombina en otra reacción.',
+ 'Convierte una representación en dos columnas en una equivalencia funcional que omite la propagación celular.'],[733,734],'Integrar organización espacial y complejos en vez de memorizar dos columnas.'),
+ ('convergencia','Se reduce de forma importante X funcional. Después se aumenta el estímulo del otro mecanismo de inicio del esquema clásico, sin reponer X. ¿Por qué no está garantizado recuperar generación normal de Xa?',
+ ['La numeración obliga a que XII se convierta directamente en trombina','Ambas rutas representadas necesitan X como sustrato para generar Xa','El calcio se convertirá en X si aumenta el estímulo inicial','La protrombina es el cofactor que reemplaza a X en cualquier complejo'],1,[
+ 'Los números no describen conversiones consecutivas entre proteínas; XII no sustituye de esa manera a X.',
+ 'Correcto: aumentar una entrada no garantiza resolver la limitación del sustrato compartido en la convergencia.',
+ 'Un ion no se transforma en ese precursor proteico por aumentar la señal; confunde componente con sustrato.',
+ 'Protrombina es sustrato de protrombinasa en otra etapa y no un cofactor intercambiable con X.'],[733,734],'Seguir una limitación compartida pese a modificar la vía de entrada.'),
+ ('estabilizacion','Se aporta fibrina ya formada a dos sistemas. Uno contiene XIIIa funcional y el otro carece de esa actividad; los demás componentes de la estabilización son adecuados. ¿Qué diferencia se pone a prueba?',
+ ['Cuánto fibrinógeno debe fabricar cada plaqueta','Si XIIIa es la enzima que produce toda trombina','La capacidad de entrecruzar la red después de su formación','Si la presencia de fibrina elimina toda necesidad de regulación'],2,[
+ 'El sustrato se aporta como fibrina; no se está midiendo producción de fibrinógeno por células del modelo.',
+ 'El diseño evalúa una red ya formada y una actividad estabilizadora, no conversión de protrombina a trombina.',
+ 'Correcto: controla la formación inicial y aísla una diferencia en la función de entrecruzamiento de XIIIa.',
+ 'Tener una red no elimina controles; la comparación se refiere a estabilización y no prueba ausencia de regulación.'],[735],'Identificar qué etapa aísla un experimento que aporta el producto previo.'),
+ ('control','Se añade antitrombina a un sistema con trombina activa y fibrina presente. ¿Qué efecto corresponde a su función, sin atribuirle una tarea de plasmina?',
+ ['Cortar directamente la red en productos de degradación como única acción','Entrecruzar la fibrina para sustituir a XIIIa','Transformar protrombina en más trombina sin otras proteínas','Limitar actividad de trombina, sin equivaler a degradación de la red'],3,[
+ 'Asigna a un inhibidor la función proteolítica sobre fibrina que se relaciona con fibrinólisis y plasmina.',
+ 'La estabilización por entrecruzamiento corresponde a otra función y no define el papel de antitrombina.',
+ 'Invierte el efecto inhibidor y lo convierte en activación del precursor que genera la enzima limitada.',
+ 'Correcto: inhibir actividad coagulante y retirar la red son tareas diferentes; una no demuestra automáticamente la otra.'],[736],'Distinguir control enzimático de eliminación del producto estructural.')]
+}
+def main():
+ result={}
+ for kind,rows in SETS.items():
+  questions=[]
+  for i,(objective,stem,options,correct,reasons,pages,difficulty_reason) in enumerate(rows):
+   refs=[]
+   if objective in ('protrombinasa','superficie'):refs=['https://pubmed.ncbi.nlm.nih.gov/3920653/','https://pubmed.ncbi.nlm.nih.gov/7655009/']
+   if objective=='maduracion':refs=['https://www.ncbi.nlm.nih.gov/books/NBK27123/']
+   questions.append(dict(content_id=f'blood-depth-{kind}-20261015-{i+1}',objective=objective,question=stem,options=options,correct=correct,reasons=reasons,pdf_pages=pages,difficulty='medio',difficulty_reason=difficulty_reason,supplementary_references=refs))
+  result[kind]=dict(title='Sangre · '+('Casos razonados' if kind=='simulation' else 'Autoevaluación de mecanismos'),questions=questions,scope='Ampliación de objetivos revisados; no examen integral del capítulo.',review='Segunda revisión automatizada; revisión docente pendiente.')
+ path=ROOT/'api/_mindmaps/morfo_18_sangre__09.json';payload=json.loads(path.read_text(encoding='utf8'));payload['assets']['independent_assessments']=result;path.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+ print('Attached independent Blood sets: 6 simulation + 6 self-assessment questions, 48 per-option explanations.')
+if __name__=='__main__':main()
