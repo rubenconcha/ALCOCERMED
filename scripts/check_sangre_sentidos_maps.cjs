@@ -32,6 +32,13 @@ try{const page=await b.newPage();page.on('pageerror',e=>errors.push(e.message));
     assert.ok((await page.$eval('.mm-practice-feedback',n=>n.textContent)).length>200);
     assert.equal(await page.$eval('.mm-practice',n=>n.scrollWidth<=n.clientWidth),true);
     await page.screenshot({path:path.join(root,'output/mapas-qa',map.id+'-practice-'+width+'.png')});
+    for(let qi=1;qi<6;qi++){
+     await page.click('.mm-practice-question:nth-of-type('+(qi+1)+') .mm-practice-option');
+     assert.equal(await page.$$eval('.mm-practice-question:nth-of-type('+(qi+1)+') .is-correct',n=>n.length),1);
+     assert.equal(await page.$$eval('.mm-practice-question:nth-of-type('+(qi+1)+') .mm-practice-feedback p',n=>n.length),4);
+    }
+    await page.evaluate(()=>document.querySelectorAll('.mm-practice-back')[1].click());
+    assert.equal(await page.$$eval('.mm-practice-option:disabled',n=>n.length),0);
     await page.click('.mm-practice-back');assert.equal(await page.$eval('#mm-lightbox',n=>n.classList.contains('mm-show-practice')),false);
     await page.click('#mm-visual-toggle');assert.ok(await page.$('.mm-institution-logo'));
    }

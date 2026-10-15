@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "practice_pilot_reviewed_ready_to_publish",
+  "status": "practice_pilot_published_verified",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -110,13 +110,22 @@
         "16 maps tested at 1440 and 390 widths, cards expand, answer feedback and map return work",
         "24 responsive map layouts and pinch zoom passed",
         "Paid/expired UI gate checks passed",
-        "Screenshots visually reviewed; private content remains in authenticated JSON"
+        "Screenshots visually reviewed; private content remains in authenticated JSON",
+        "All 12 question feedback paths exercised at both sizes; restart clears answers."
       ],
-      "status": "reviewed_ready_to_publish",
+      "status": "published_verified",
       "limitations": [
         "Practice is formative, not an independent examination or graded evaluation.",
         "The global flashcard/bank imports, chapter-wide objective review and new summaries remain pending."
-      ]
+      ],
+      "deployment": {
+        "commit": "236f2a8",
+        "status": "Vercel success",
+        "public_practice_ui": "200",
+        "anonymous_full_content": "401",
+        "raw_private_authoring": "404",
+        "admin_blood": "Practicar, 10 expandable flashcards and 6 questions rendered in production; first answer opened."
+      }
     }
   ],
   "next_action": "Integrate the reviewed private practice into the existing dedicated flashcard and question-bank delivery without exposing authoring files or changing student records. Then extend auditory transduction/equilibrium and leukopoiesis/hemostasis with chapter objectives, illustrated maps and reasoned practice; expand summaries. Neither chapter is complete.",
