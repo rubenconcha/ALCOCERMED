@@ -1,0 +1,82 @@
+"""Protected authored extension. Build after the ten original summary pages."""
+from pathlib import Path
+from html import escape
+import json,io
+ROOT=Path(__file__).resolve().parents[3]
+
+PAGES=[
+ {'title':'Leucopoyesis: del precursor a la función','figure':'leukopoiesis-summary.png','caption':'Linajes seleccionados: el esquema no representa todas las etapas intermedias ni todos los destinos hematopoyéticos. B y T no se identifican solo por su aspecto.','source':'Saladin, cap. 18: PDF 727–729 (libro 699–701). Precisión B/T: Immunobiology, NBK27123.', 'blocks':[
+ ('Producir no es lo mismo que madurar','La producción de leucocitos comienza en células madre hematopoyéticas de la médula ósea, compartidas con los demás elementos formes. La diferenciación restringe los destinos de sus descendientes. El capítulo distingue precursores granulocíticos, monocíticos y linfoides: los primeros originan neutrófilos, eosinófilos y basófilos; los segundos, monocitos. Son rutas de desarrollo, no transformaciones de un leucocito circulante maduro en cualquier otro.'),
+ ('Origen, maduración y destino','Los precursores de linfocitos también se originan en médula. Los B completan gran parte de su desarrollo allí; los precursores T migran al timo para madurar. Después, los linfocitos pueden poblar órganos y tejidos linfoides. El lugar de origen de un precursor, el de maduración y el de encuentro con antígenos son preguntas distintas. El diagrama B/T es parcial: no excluye la existencia de células NK.'),
+ ('Caso 1 · Responder a una demanda','Un foco inflamatorio requiere más células de defensa. La explicación incluye señales reguladoras, respuesta medular y movilización de reservas; no exige que cada célula disponible se fabrique desde cero en ese instante. Los factores estimulantes de colonias contribuyen a regular el desarrollo y la producción. No convierten a un recuento aislado en una prueba de la causa de la inflamación.') ]},
+ {'title':'Reserva medular, sangre y tejidos','figure':'diversity','caption':'Diversidad de leucocitos: reconocer morfología orienta, pero no demuestra todas las funciones ni distingue por sí solo subpoblaciones B y T.','source':'Saladin, cap. 18: PDF 725–730 (libro 697–702). Esquema de migración y distribución fisiológicas.', 'blocks':[
+ ('Un recuento observa un compartimento','La sangre periférica es una muestra de células que circulan, no un censo de todo el sistema inmunitario. La médula conserva reservas de granulocitos y monocitos; muchos leucocitos pasan después a tejidos. Los linfocitos además recirculan entre sangre, tejidos y linfa. Por eso, para interpretar un cambio, hay que considerar producción, liberación, distribución y desaparición del compartimento medido.'),
+ ('Cruzar, orientarse e ingerir son acciones diferentes','La diapédesis permite atravesar el endotelio. La quimiotaxis orienta el desplazamiento mediante señales químicas. La fagocitosis consiste en capturar e ingerir material. Una célula puede haber cruzado el vaso sin haber alcanzado todavía su blanco; llegar al foco tampoco significa que ya haya eliminado un microorganismo. Separar estas etapas permite explicar el proceso sin reducirlo a que el leucocito “sale y combate”.'),
+ ('Madurez y función no se deducen de cantidad','Los monocitos pueden diferenciarse en macrófagos al pasar a tejidos. Estos participan en eliminación de material y presentación de antígenos, conectando respuesta local y comunicación inmunitaria. En cambio, una proliferación de células inmaduras o disfuncionales puede elevar el recuento sin asegurar defensa competente. La suficiencia funcional no se calcula sumando células.'),
+ ('Caso 2 · Una aparente paradoja','Un ejercicio describe muchos leucocitos y susceptibilidad a infecciones. No hay contradicción obligatoria: cantidad, madurez y función son dimensiones diferentes. La respuesta debe explicar que un exceso de células puede coexistir con menor disponibilidad de células funcionales y alteraciones de otras líneas. El caso no identifica por sí solo una leucemia ni permite afirmar su subtipo; el capítulo exige integrar morfología y otros hallazgos.') ]},
+ {'title':'Diferencial: calcular antes de interpretar','figure':'morfo_18_sangre__07.png','caption':'Los intervalos de esta edición son referencias de estudio, no umbrales universales. Para interpretar se consideran edad, laboratorio y contexto.','source':'Saladin, cap. 18: PDF 726–729 (libro 698–701), cuadro 18.6. Operaciones originales de aplicación.', 'blocks':[
+ ('Caso 3 · Del porcentaje a la concentración','Con 8 000 leucocitos/µl y 65 % de neutrófilos, el recuento absoluto es 8 000 × 0,65 = 5 200 neutrófilos/µl. El porcentaje debe convertirse en fracción antes de multiplicar. Responder 65 células/µl confunde proporción con concentración; responder 520 000 omite dividir el porcentaje entre cien. El resultado mantiene la unidad del total.'),
+ ('Caso 4 · Aumento relativo sin aumento absoluto','En dos muestras hay 2 000 linfocitos/µl. Si el total leucocitario cambia de 8 000 a 4 000/µl, la proporción pasa de 25 % a 50 %: 2 000/8 000 = 0,25 y 2 000/4 000 = 0,50. No se duplicaron los linfocitos. Cambió el denominador. Para describir un aumento absoluto hace falta comparar concentraciones, no solamente porcentajes.'),
+ ('Caso 5 · Una asociación no es una causa única','El cuadro del libro relaciona eosinófilos con respuestas frente a determinados parásitos y con procesos alérgicos, entre otros contextos. Un aumento orienta posibilidades, pero no identifica por sí solo una parasitosis. Si solo se informa un porcentaje elevado, primero debe aclararse el total para conocer la concentración absoluta. La misma cautela evita convertir neutrofilia en una prueba exclusiva de infección bacteriana.') ]},
+ {'title':'Hemostasia: integrar fases y controles','figure':'morfo_18_sangre__08.png','caption':'El esquema separa tareas que se superponen. El objetivo es sellar la lesión y conservar la perfusión, no llenar todo el vaso con fibrina.','source':'Saladin, cap. 18: PDF 732–736 (libro 704–708). Síntesis original de mecanismos; no selección de tratamientos.', 'blocks':[
+ ('La secuencia causal','El espasmo vascular reduce pérdidas iniciales. La adhesión fija plaquetas a la lesión; activación y agregación contribuyen al tapón. La coagulación produce fibrina que lo refuerza. La protrombina es un precursor, la trombina una enzima y la fibrina la red estructural: no son nombres intercambiables. El factor XIII activado contribuye a estabilizar esa red mediante entrecruzamiento.'),
+ ('Amplificar y limitar al mismo tiempo','El reclutamiento plaquetario y la generación de trombina incluyen circuitos amplificadores. Endotelio sano, flujo y anticoagulantes fisiológicos ayudan a limitar propagación indebida. Un recuento plaquetario normal no garantiza adhesión o agregación normales, ni demuestra que todos los factores de coagulación funcionen. Cantidad de plaquetas y capacidad hemostática global deben distinguirse.'),
+ ('Caso 6 · ¿Retracción o fibrinólisis?','Si plaquetas unidas a la red traccionan y compactan el coágulo, se describe retracción. Si la plasmina degrada fibrina, se describe fibrinólisis. Ambas pueden reducir el tamaño observado, pero mediante mecanismos distintos. La reparación vascular tampoco equivale a cualquiera de ellas: requiere reconstrucción tisular. Para responder, identifica qué estructura cambia y si el proceso es mecánico, reparador o proteolítico.') ]}
+]
+
+def extend():
+ from reportlab.pdfgen.canvas import Canvas
+ from reportlab.pdfbase import pdfmetrics
+ from reportlab.pdfbase.ttfonts import TTFont
+ from reportlab.lib.pagesizes import A4
+ from reportlab.lib.styles import ParagraphStyle
+ from reportlab.platypus import Paragraph
+ from reportlab.lib.colors import HexColor
+ from reportlab.lib.utils import ImageReader
+ from pypdf import PdfReader,PdfWriter
+ target=ROOT/'api/_pdf/morfofuncion-sangre.pdf'
+ base=PdfReader(io.BytesIO(target.read_bytes()))
+ assert len(base.pages)>=10
+ for name,font in [('Depth','arial.ttf'),('DepthBold','arialbd.ttf')]:
+  if name not in pdfmetrics.getRegisteredFontNames():pdfmetrics.registerFont(TTFont(name,'C:/Windows/Fonts/'+font))
+ pdfmetrics.registerFontFamily('Depth',normal='Depth',bold='DepthBold',italic='Depth',boldItalic='DepthBold')
+ w,h=A4;m=36;width=w-2*m;buffer=io.BytesIO();c=Canvas(buffer,pagesize=A4);layout=[]
+ def para(text,top,size=10.5,bold=False,color='#344258',x=m,span=width):
+  p=Paragraph(text,ParagraphStyle('d',fontName='DepthBold' if bold else 'Depth',fontSize=size,leading=size*1.4,textColor=HexColor(color)))
+  _,ph=p.wrap(span,1000);p.drawOn(c,x,top-ph);return top-ph
+ def illustration(spec,top):
+  # PDF encoding only: preserve source PNGs; avoid embedding huge hidden raster regions.
+  def encoded_image(path):
+   from PIL import Image
+   data=io.BytesIO();Image.open(path).convert('RGB').save(data,format='JPEG',quality=92,optimize=True);data.seek(0);return ImageReader(data)
+  if spec=='diversity':
+   image=encoded_image(ROOT/'assets/summary-art/sangre-generativa.png');iw,ih=image.getSize();x0,x1=.508,1;y0,y1=.393,.577;scale=min(210/((x1-x0)*iw),140/((y1-y0)*ih));fw,fh=(x1-x0)*iw*scale,(y1-y0)*ih*scale;fx=m+(width-fw)/2;fy=top-fh
+   c.saveState();path=c.beginPath();path.rect(fx,fy,fw,fh);c.clipPath(path,stroke=0);c.drawImage(image,fx-x0*iw*scale,fy-(1-y1)*ih*scale,width=iw*scale,height=ih*scale,mask='auto');c.restoreState();return top-fh-8
+  image=encoded_image(ROOT/'api/_mindmaps'/spec);iw,ih=image.getSize();fh=235;fw=fh*iw/ih;c.drawImage(image,m+(width-fw)/2,top-fh,width=fw,height=fh,mask='auto');return top-fh-8
+ for index,page in enumerate(PAGES):
+  c.setFillColor(HexColor('#ae354d'));c.rect(0,h-6,w,6,fill=1,stroke=0)
+  c.drawImage(str(ROOT/'promo-ben-carson-tiktok/public/authentic/logo.png'),m,h-78,width=58,height=58,mask='auto')
+  para('PREPARATORIA BEN CARSON',h-29,11,True,'#18263f',m+68,330)
+  para('ALCOCERMED · MORFOFUNCIÓN · AMPLIACIÓN DEL RESUMEN',h-49,8,False,'#ae354d',m+68,410)
+  c.setStrokeColor(HexColor('#dfe7ed'));c.line(m,h-87,w-m,h-87)
+  top=para(escape(page['title']),h-104,21,True,'#18263f')-10
+  top=illustration(page['figure'],top)
+  top=para(escape(page['caption']),top,8.3,False,'#60718a')-12
+  for title,text in page['blocks']:
+   top=para(escape(title),top,11,True,'#ae354d')-4
+   top=para(escape(text),top,10.3)-10
+  assert top>=87,('Overflow',index,top)
+  layout.append({'page':11+index,'bottom':round(top,2)})
+  para('Fuente: '+escape(page['source']),70,7.2,False,'#60718a')
+  c.line(m,42,w-m,42)
+  para('Ilustración generada con IA · texto original seleccionable · revisión docente pendiente',32,6.8,False,'#60718a')
+  para(f'{11+index:02d} / 14',32,8,True,'#ae354d',w-m-44,44)
+  c.showPage()
+ c.save();extra=PdfReader(io.BytesIO(buffer.getvalue()));writer=PdfWriter()
+ for page in list(base.pages)[:10]+list(extra.pages):writer.add_page(page)
+ writer.add_metadata({'/Title':'Sangre · Resumen ilustrado ampliado','/Author':'Preparatoria Ben Carson','/Subject':'Síntesis original basada en Saladin; ampliación de leucopoyesis, diferencial y hemostasia.'})
+ with open(target,'wb') as f:writer.write(f)
+ out=ROOT/'output/pdf'/target.name;out.parent.mkdir(parents=True,exist_ok=True);out.write_bytes(target.read_bytes())
+ qa=ROOT/'output/morfo-sangre-sentidos/pdf-depth-qa';qa.mkdir(parents=True,exist_ok=True);(qa/'layout.json').write_text(json.dumps(layout,indent=2),encoding='utf8')
+ print(json.dumps({'pages':len(writer.pages),'bytes':target.stat().st_size,'layout':layout}))
+if __name__=='__main__':extend()

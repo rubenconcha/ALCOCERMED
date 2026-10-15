@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "vestibular_reviewed",
+  "status": "blood_summary_depth_reviewed",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -288,7 +288,7 @@
     },
     {
       "id": "vestibular-2026-10-15",
-      "status": "reviewed_ready_to_publish",
+      "status": "published_verified",
       "maps": [
         "morfo_16_organos_sentidos__09"
       ],
@@ -337,10 +337,74 @@
       "limitations": [
         "Chapter-wide summaries, leukopoiesis, dedicated coagulation pathways, taste/olfaction and other objective gaps remain pending.",
         "Supplemental bank question-level cloud-error tracking awaits database imports."
+      ],
+      "deployment": {
+        "commit": "11b5505",
+        "status": "Vercel success",
+        "anonymous_json_and_image": "401",
+        "raw_png_and_authoring": "404",
+        "admin_live": "1536x1024 poster decoded, first explanatory node visible, Practicar opens and first question renders four rationales correctly.",
+        "downloads": "Actual button downloads in desktop/mobile QA match the protected original bytes."
+      }
+    },
+    {
+      "id": "blood-summary-depth-2026-10-15",
+      "status": "reviewed_ready_to_publish",
+      "summary": "morfofuncion-sangre",
+      "pages_before": 10,
+      "pages_after": 14,
+      "new_pages": 4,
+      "new_page_words_including_headings_and_sources": 1109,
+      "worked_cases": 6,
+      "generative_figures_new": 1,
+      "existing_generative_figures_reused": 3,
+      "delivery": "Four substantial selectable-text pages integrated into the existing protected Blood PDF; original ten sections preserved. Illustrated leukopoiesis, compartments/migration, differential arithmetic and hemostasis reasoning.",
+      "sources": [
+        {
+          "book": "Supplied Saladin chapter 18",
+          "pdf_pages": [
+            725,
+            726,
+            727,
+            728,
+            729,
+            730,
+            732,
+            733,
+            734,
+            735,
+            736
+          ],
+          "printed_pages": "697–702, 704–708"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK27123/",
+          "scope": "Explicit B/T maturation-site clarification."
+        }
+      ],
+      "review": "Automated second academic and visual pass; no physician approval. Original institutional logo on all pages; selected lineage schematic explicitly partial. No new graded examination claimed.",
+      "corrections": [
+        "Distinguish marrow origin, maturation site and peripheral destinations; no T-cell origin wrongly assigned to thymus.",
+        "Keep counts separate from competence and avoid diagnosing infection/leukemia from isolated values.",
+        "Compressed PDF image encoding while retaining original PNGs, reducing the expanded PDF from 15.45 MB to 6.11 MB.",
+        "Corrected first ten page counters to /14 and library label to 14 pages.",
+        "Updated service-worker summary script version to match the current catalog."
+      ],
+      "tests": [
+        "Rendered all 14 pages with Poppler; contact sheet and all four added pages inspected",
+        "Original 160-question/card pack and independent exam-selection checks passed",
+        "New PDF integrity test: 14 pages, sources, selectable text, six worked cases, correct arithmetic, embedded logos/figures, safe page bounds",
+        "Summary endpoint returns full PDF only for verified paid/admin access; free/traversal/offline cases rejected",
+        "Actual summary UI opens authenticated blob and downloads byte-identical PDF at 1440/390 widths; free card makes no content request"
+      ],
+      "limitations": [
+        "This is a targeted depth expansion; remaining chapter objectives and doctor review still pending.",
+        "No new bank flashcards/questions or independent simulation/evaluation in this PDF batch.",
+        "Sentidos summary still needs the equivalent detailed revision."
       ]
     }
   ],
-  "next_action": "Prioritize leukopoiesis and expand the existing summaries against quality/chapter-objectives.json. Read full remaining source sections, then author focused maps/practice or summary improvements for uncovered objectives. Keep independent examination coverage and physician approval explicitly pending; verify latest deployment first.",
+  "next_action": "Expand the Sentidos summary using reviewed retina/auditory/vestibular material and read remaining taste/olfaction objectives; use quality/chapter-objectives.json to guide gaps. Add dedicated leukopoiesis practice and a factor-by-factor coagulation map in later batches. Neither chapter is fully reviewed.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

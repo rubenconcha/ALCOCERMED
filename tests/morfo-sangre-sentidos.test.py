@@ -24,8 +24,8 @@ for p in packs:
         assert len(q['opciones'])==4 and sum(o['correct'] for o in q['opciones'])==1
     correct=[next('ABCD'[i] for i,o in enumerate(q['opciones']) if o['correct']) for q in p['evaluation']['questions']]
     assert set(correct)==set('ABCD') and max(Counter(correct).values())-min(Counter(correct).values())<=1
-    reader=PdfReader(ROOT/'api/_pdf'/f'{p["summary"]}.pdf');assert len(reader.pages)==10
-    for i,page in enumerate(reader.pages):
+    reader=PdfReader(ROOT/'api/_pdf'/f'{p["summary"]}.pdf');assert len(reader.pages)==(14 if p['slug']=='sangre' else 10)
+    for i,page in enumerate(reader.pages[:10]):
         text=page.extract_text();assert 'CONCEPTOS ESENCIALES' in text and 'Fuente de este bloque' in text
         assert p['sections'][i]['title'] in re.sub(r'\s+',' ',text) and '\ufffd' not in text
         assert 'PREPARATORIA BEN CARSON' in text and 'ALCOCERMED' in text

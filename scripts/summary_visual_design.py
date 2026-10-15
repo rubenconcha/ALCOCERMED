@@ -143,7 +143,7 @@ def pdf_summary(slug, title, chapter, sections):
         paragraph(c,f'<b>Fuente de este bloque:</b> Saladin, cap. {chapter}. Libro: {first-28}-{last-28}; PDF: {section["pages"]}.',margin,66,w-margin*2,size=6.8,leading=9,color=MUTED)
         rule(c,margin,43,w-margin*2)
         paragraph(c,'Ben Carson · Ilustración generada con IA; esquema de apoyo al texto.',margin,33,w-margin*2-65,size=6.8,color=MUTED)
-        paragraph(c,f'{i+1:02d} / 10',w-margin-42,33,44,size=8,bold=True,color=accent)
+        paragraph(c,f'{i+1:02d} / {14 if slug=="sangre" else 10}',w-margin-42,33,44,size=8,bold=True,color=accent)
         c.showPage()
     c.save()
     reader=PdfReader(target);assert len(reader.pages)==10
@@ -162,3 +162,7 @@ def pdf_summary(slug, title, chapter, sections):
     (qa/f'{slug}-layout.json').write_text(json.dumps(layout,indent=2),encoding='utf8')
     out=ROOT/'output/pdf'/target.name;out.parent.mkdir(parents=True,exist_ok=True);out.write_bytes(target.read_bytes())
     print(f'{slug}: 10 branded, illustrated pages, {target.stat().st_size} bytes; lowest text baseline {min(x["bottom"] for x in layout):.1f}')
+    if slug=='sangre':
+        import runpy
+        extension=runpy.run_path(str(ROOT/'api/_mindmaps/curated/extend_blood_summary.py.source'))
+        extension['extend']()
