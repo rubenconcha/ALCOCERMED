@@ -85,6 +85,7 @@ def main():
       if chapter==16:data['supplementary_reference']={'title':'Phototransduction in Rods and Cones, Webvision','url':'https://www.ncbi.nlm.nih.gov/books/NBK52768/','scope':'Nomenclatura molecular complementaria; el esquema del Saladin entregado es más resumido.'}
       (dest/(ident+'.json')).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
       curated.append({'id':ident,'titulo':title,'root_title':title,'materia':'Morfofunción','tema':topic,'parent_key':parent,'url_imagen':'premium/'+ident+'.json','descripcion':'Ampliación con mecanismos, comparación y casos razonados. Incluye lámina ilustrada descargable.','premium':True,'acceso_gratis':False,'preview':'/assets/mindmaps/premium-previews/'+ident+'.webp','curated':True})
+    curated=[r for r in json.loads((ROOT/'content/mindmaps-curated-additions.json').read_text(encoding='utf8')) if r['id'] not in {m['id'] for m in curated}]+curated
     (ROOT/'content/mindmaps-curated-additions.json').write_text(json.dumps(curated,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     catalog=json.loads((ROOT/'content/mindmaps-premium-catalog.json').read_text(encoding='utf8'))
     catalog=[r for r in catalog if r['id'] not in {m['id'] for m in curated}]+curated

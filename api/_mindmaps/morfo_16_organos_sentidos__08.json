@@ -1,0 +1,476 @@
+{
+  "id": "morfo_16_organos_sentidos__08",
+  "title": "Audición: del sonido a la señal nerviosa",
+  "topic": "Órganos de los sentidos",
+  "sections": [
+    {
+      "title": "Del aire al movimiento coclear",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Una cadena mecánica, todavía sin señal neural",
+              "text": "El sonido hace vibrar la membrana timpánica. Martillo, yunque y estribo transmiten movimiento hasta la ventana oval, donde el estribo desplaza el líquido coclear. Nombrar las estructuras no basta: hay que distinguir el estímulo acústico en aire del movimiento mecánico que llega al oído interno. La conversión sensorial ocurre después.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 629,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Dos ventanas con funciones diferentes",
+              "text": "La ventana oval recibe el movimiento del estribo; la membrana de la ventana redonda permite compensar los cambios de presión del líquido. No son dos entradas equivalentes de aire a la cóclea. El movimiento alternante y la deformación de las estructuras cocleares importan más que imaginar un flujo unidireccional continuo de líquido.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Tres compartimentos, dos líquidos",
+              "text": "Las escalas vestibular y timpánica contienen perilinfa; el conducto coclear o escala media contiene endolinfa. La membrana vestibular separa la escala media de la vestibular y la basilar la separa de la timpánica. Conservar estas separaciones permite mantener ambientes iónicos distintos, necesarios para la transducción.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 627,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Órgano de Corti: estructura y tarea",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Dónde está el receptor",
+              "text": "El órgano de Corti se encuentra sobre la membrana basilar, dentro del conducto coclear. Incluye células pilosas, células de soporte y relaciones con membranas próximas. No es un agujero en la membrana ni otro nombre para el nervio: es el epitelio sensorial que vincula vibración y respuesta celular.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 627,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Internas y externas no son intercambiables",
+              "text": "Las células pilosas internas aportan la mayor parte de la información sensitiva que sale por el nervio coclear. Las externas participan en la regulación mecánica y la selectividad de la respuesta coclear. Las dos poblaciones son necesarias para comprender el funcionamiento, pero no deben dibujarse como receptores idénticos con la misma contribución aferente.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 628,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Estereocilios no son cilios motores",
+              "text": "Son prolongaciones apicales que se organizan en un haz escalonado. Su flexión modifica la apertura de canales mecanosensibles. El estímulo relevante es el desplazamiento relativo del haz, no un batido activo de cilios que empuje el sonido hacia el encéfalo. En el esquema se destaca una dirección excitadora y su dirección opuesta.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 628,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Deformación, canales y potencial receptor",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Hacia los estereocilios más altos",
+              "text": "La flexión en esta dirección aumenta la tensión de los enlaces apicales y favorece la apertura de canales mecanosensibles. El acoplamiento transforma una fuerza mecánica en un cambio de conductancia. La dirección contraria reduce esa apertura; por eso el receptor responde al sentido de la deformación, no solo a que exista movimiento.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Por qué puede entrar potasio",
+              "text": "La endolinfa que baña la región apical es rica en K+ y tiene un potencial positivo respecto a la perilinfa. Junto con el interior negativo de la célula, esto favorece la entrada de carga positiva al abrirse los canales. No hay que trasladar automáticamente la regla simplificada de que el K+ siempre sale de una célula.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Despolarización graduada, no impulso en la célula pilosa",
+              "text": "La corriente entrante cambia el potencial de la célula receptora de forma graduada. Una mayor respuesta receptora puede modificar la liberación sináptica; no consiste en que esta célula dispare un tren de potenciales de acción por un axón propio. La célula pilosa y la neurona aferente son elementos distintos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "De la célula pilosa al nervio",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Dos lugares de entrada iónica",
+              "text": "El paso apical relacionado con el haz permite corriente catiónica, predominantemente de K+ en ese ambiente. La despolarización favorece después la apertura de canales de Ca2+ dependientes de voltaje en la región basal. El detalle de Ca2+ amplía el esquema resumido del Saladin y se contrasta con Neuroscience, NBK10867.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "La sinapsis mantiene separados receptor y neurona",
+              "text": "El aumento de Ca2+ intracelular en la región sináptica favorece la liberación de neurotransmisor desde la célula pilosa hacia la terminación aferente. La transmisión entre ambas células es química; no se dibuja como si sus citoplasmas formaran un único conducto. El esquema no necesita inventar otra sinapsis a continuación dentro del mismo axón.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Dónde aparecen los potenciales de acción",
+              "text": "La señal de la célula pilosa modifica la actividad de la neurona sensitiva conectada a ella. Los potenciales de acción se propagan por la fibra coclear; su amplitud no representa directamente cuán fuerte fue el sonido. Debe separarse el potencial graduado receptor de la frecuencia de descarga y del reclutamiento de fibras.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 631,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Tono e intensidad: dos preguntas distintas",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Base para frecuencias altas; ápice para bajas",
+              "text": "La base de la membrana basilar es relativamente estrecha y rígida; hacia el ápice aumenta su anchura y flexibilidad. El lugar del máximo desplazamiento depende de la frecuencia. Esta organización espacial permite relacionar una región estimulada con el tono, sin suponer que cada sonido mueve toda la membrana con la misma amplitud.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 631,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Más intenso no significa más agudo",
+              "text": "Un aumento de intensidad puede producir mayor desplazamiento, cambios en la frecuencia de descarga y activación de una región más amplia. Si la frecuencia del estímulo se mantiene, no se convierte por ello en un tono más alto. Frecuencia acústica, intensidad acústica y frecuencia de disparo neural son variables relacionadas, pero diferentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 631,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El esquema es una simplificación declarada",
+              "text": "Una onda viajera y el procesamiento coclear no equivalen a un tubo por el que se desliza un solo impulso. La lámina separa etapas para aprender sus relaciones y no representa proporciones anatómicas exactas. Tampoco pretende cubrir toda la vía auditiva central ni el equilibrio vestibular: estos son objetivos posteriores.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 631,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Casos para reconstruir el mecanismo",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Caso: desaparece la diferencia iónica apical",
+              "text": "Aunque el haz pudiera flexionarse, alterar el gradiente entre endolinfa y célula puede reducir la corriente receptora y su efecto sobre la sinapsis. El caso permite identificar que la energía mecánica no basta sin el ambiente electroquímico. No autoriza a diagnosticar una causa clínica concreta a partir de una sola alteración teórica.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso: se conserva el receptor, falla su liberación basal",
+              "text": "Si la célula aún desarrolla un potencial receptor, pero no libera adecuadamente neurotransmisor, la fibra aferente no recibirá la señal normal. El lugar de la falla es distinto del cierre de canales apicales. La secuencia causal ayuda a separar transducción mecanoeléctrica de transmisión sináptica.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso: misma frecuencia, mayor intensidad",
+              "text": "La respuesta no debe justificarse como un potencial de acción de mayor tamaño. Hay que explicar mayor estimulación receptora, cambios en actividad de fibras y reclutamiento, manteniendo la distinción con la posición tonotópica. Esta interpretación responde a un ejercicio fisiológico, no a una prueba diagnóstica individual.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 631,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_16_organos_sentidos.webp",
+    "alt": "Ilustración de apoyo de órganos de los sentidos",
+    "download": "/api/mindmap?id=morfo_16_organos_sentidos__08&format=image",
+    "filename": "morfo_16_organos_sentidos__08-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 16,
+      "pdfPages": [
+        627,
+        628,
+        629,
+        630,
+        631
+      ],
+      "kind": "original_synthesis"
+    },
+    "generative_download": true,
+    "practice": {
+      "flashcards": [
+        {
+          "question": "¿Qué cambia al pasar del tímpano a la ventana oval?",
+          "answer": "La vibración se transmite por los huesecillos desde una membrana movilizada por aire hasta la interfaz con el líquido coclear. El estribo actúa en la ventana oval. Todavía se describe transmisión mecánica: no se ha sustituido el estímulo por una señal en el nervio coclear.",
+          "pdf_pages": [
+            629,
+            630
+          ]
+        },
+        {
+          "question": "¿Por qué ventana oval y ventana redonda no cumplen la misma función?",
+          "answer": "La oval recibe el desplazamiento del estribo. La membrana de la redonda compensa cambios de presión del sistema líquido, permitiendo movimiento. Presentarlas como dos orificios por los que entra sonido de forma equivalente oculta la relación mecánica que hace posible la deformación coclear.",
+          "pdf_pages": [
+            627,
+            630
+          ]
+        },
+        {
+          "question": "Reconstruye los tres compartimentos cocleares y sus líquidos.",
+          "answer": "Escala vestibular y escala timpánica: perilinfa. Conducto coclear o escala media: endolinfa. La membrana vestibular y la basilar delimitan la escala media. Esta separación conserva diferencias químicas; mezclar los líquidos en un dibujo impide explicar la corriente que participa en la respuesta receptora.",
+          "pdf_pages": [
+            627
+          ]
+        },
+        {
+          "question": "¿Cómo se relacionan membrana basilar y órgano de Corti?",
+          "answer": "El órgano de Corti se apoya en la membrana basilar dentro del conducto coclear. El movimiento de esa base participa en el desplazamiento relativo que flexiona los haces. No es una cámara vacía ni una fibra nerviosa: es una estructura sensorial con células pilosas y de soporte.",
+          "pdf_pages": [
+            627,
+            628
+          ]
+        },
+        {
+          "question": "¿Qué dirección de flexión del haz favorece la respuesta excitadora?",
+          "answer": "La flexión hacia los estereocilios más altos aumenta la tensión de los enlaces apicales y favorece la apertura de canales mecanosensibles. La flexión opuesta reduce la apertura. Por eso es necesario indicar dirección, y no responder únicamente que cualquier movimiento produce una excitación idéntica.",
+          "pdf_pages": [
+            630
+          ]
+        },
+        {
+          "question": "¿Por qué abrir canales apicales permite despolarización por entrada de K+?",
+          "answer": "La endolinfa apical es rica en K+ y positiva respecto a la perilinfa; el interior celular es negativo. El gradiente electroquímico favorece la entrada de carga positiva al abrirse los canales. La dirección no se decide memorizando que el potasio siempre debe salir de las células.",
+          "pdf_pages": [
+            630
+          ]
+        },
+        {
+          "question": "Distingue la entrada apical de K+ de la entrada basal de Ca2+.",
+          "answer": "El movimiento del haz favorece corriente catiónica apical y despolariza el receptor. Esta despolarización abre canales de Ca2+ basales dependientes de voltaje, favoreciendo liberación de neurotransmisor. El Ca2+ basal es un detalle sináptico complementario al esquema del Saladin; no sustituye al paso mecanosensible del haz.",
+          "pdf_pages": [
+            630
+          ]
+        },
+        {
+          "question": "¿Dónde se produce la respuesta graduada y dónde se propagan potenciales de acción?",
+          "answer": "La célula pilosa desarrolla un potencial receptor graduado y modifica su liberación sináptica. La neurona aferente conectada a ella conduce potenciales de acción por la fibra coclear. No hay un axón propio del receptor que se convierta directamente en nervio; son células distintas conectadas por una sinapsis.",
+          "pdf_pages": [
+            628,
+            630,
+            631
+          ]
+        },
+        {
+          "question": "¿Qué relación hay entre posición en la membrana basilar y frecuencia acústica?",
+          "answer": "Las frecuencias altas producen su máximo hacia la base, más estrecha y rígida. Las bajas lo hacen más hacia el ápice, más ancho y flexible. El lugar de máxima respuesta contribuye a codificar el tono; no debe confundirse con la frecuencia de disparo de una sola neurona.",
+          "pdf_pages": [
+            631
+          ]
+        },
+        {
+          "question": "¿Por qué aumentar intensidad no equivale a aumentar amplitud de cada potencial de acción?",
+          "answer": "Los potenciales de acción no codifican intensidad mediante un tamaño creciente. Un estímulo más intenso puede aumentar la respuesta receptora, la frecuencia de descarga y el número de fibras activadas. Tampoco implica necesariamente un tono más agudo si la frecuencia acústica del estímulo permanece constante.",
+          "pdf_pages": [
+            631
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "En un modelo, el haz se flexiona hacia los estereocilios más altos. ¿Cuál es el primer vínculo eléctrico esperado?",
+          "options": [
+            "Mayor apertura de canales mecanosensibles y corriente entrante",
+            "Cierre obligatorio de todos los canales y pérdida de corriente",
+            "Un potencial de acción en el axón propio de la célula pilosa",
+            "Aumento de Ca2+ basal sin cambio previo del potencial receptor"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: la dirección excitadora favorece apertura mecanosensible; la corriente apical inicia el cambio del potencial receptor.",
+            "Invierte el sentido de la respuesta. La flexión contraria es la que reduce la apertura del haz.",
+            "Confunde célula receptora con neurona aferente. La célula pilosa no conduce por un axón propio hacia el encéfalo.",
+            "Omite el enlace causal entre corriente apical, despolarización y apertura basal de canales dependientes de voltaje."
+          ],
+          "pdf_pages": [
+            630
+          ]
+        },
+        {
+          "question": "¿Qué asociación de líquido y compartimento conserva la organización coclear?",
+          "options": [
+            "Perilinfa en las tres escalas",
+            "Endolinfa en la escala media; perilinfa en vestibular y timpánica",
+            "Endolinfa en la timpánica y perilinfa en la media",
+            "Endolinfa solo en la escala vestibular"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Elimina la diferencia de la escala media y no permite representar el ambiente apical rico en K+.",
+            "Correcto: el conducto coclear contiene endolinfa y las otras dos escalas contienen perilinfa, separadas por membranas.",
+            "Intercambia la composición de los compartimentos que el enunciado pide distinguir.",
+            "Ubica la endolinfa en una escala que contiene perilinfa y deja fuera el conducto coclear."
+          ],
+          "pdf_pages": [
+            627
+          ]
+        },
+        {
+          "question": "Se conserva el potencial receptor, pero se reduce mucho la liberación basal de neurotransmisor. ¿Qué etapa está afectada de manera más directa?",
+          "options": [
+            "La entrada del sonido por el conducto auditivo",
+            "El movimiento inicial del tímpano",
+            "La comunicación sináptica con la neurona aferente",
+            "La selección del lugar tonotópico por la frecuencia"
+          ],
+          "correct": 2,
+          "reasons": [
+            "La hipótesis conserva una respuesta receptora; no aporta una falla de entrada acústica externa.",
+            "No es la etapa descrita: el problema se sitúa después de que la célula haya desarrollado un potencial receptor.",
+            "Correcto: el potencial receptor puede existir mientras falla la transferencia química hacia la fibra aferente.",
+            "La pregunta especifica un defecto de liberación; no describe un cambio del lugar de máximo desplazamiento."
+          ],
+          "pdf_pages": [
+            630
+          ]
+        },
+        {
+          "question": "Manteniendo la frecuencia de un tono, se eleva su intensidad. ¿Cuál es el error que debe evitarse al explicarlo?",
+          "options": [
+            "Considerar que puede aumentar la frecuencia de descarga neural",
+            "Considerar que puede participar una región receptora más amplia",
+            "Separar intensidad acústica de frecuencia acústica",
+            "Afirmar que cada potencial de acción aumenta de amplitud"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Es una posibilidad del código de intensidad; no constituye por sí misma el error pedido.",
+            "El reclutamiento puede contribuir a la señal de intensidad y es compatible con la explicación fisiológica.",
+            "Distinguir estas variables evita confundir un sonido más fuerte con uno necesariamente más agudo.",
+            "Correcto: el error es atribuir la intensidad a un mayor tamaño de cada potencial de acción, en lugar de actividad y reclutamiento."
+          ],
+          "pdf_pages": [
+            631
+          ]
+        },
+        {
+          "question": "¿Qué región de la membrana basilar se asocia mejor con el máximo de respuesta a frecuencias altas?",
+          "options": [
+            "La base relativamente estrecha y rígida",
+            "El ápice relativamente ancho y flexible",
+            "La ventana redonda como único receptor sensorial",
+            "Toda la membrana con un máximo idéntico en cada punto"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: el gradiente mecánico favorece respuestas a frecuencias altas hacia la base; las bajas se representan más hacia el ápice.",
+            "Describe la región más relacionada con frecuencias bajas y por eso invierte la tonotopía.",
+            "La ventana redonda participa en la compensación mecánica de presión, no sustituye al epitelio sensorial.",
+            "Niega la distribución espacial de la respuesta que permite relacionar posición y frecuencia."
+          ],
+          "pdf_pages": [
+            631
+          ]
+        },
+        {
+          "question": "¿Qué afirmación distingue correctamente las dos poblaciones de células pilosas?",
+          "options": [
+            "Las externas son la única fuente de aferencias y las internas solo sostienen el epitelio",
+            "Las internas aportan la mayor parte de la salida sensitiva; las externas modulan la respuesta mecánica",
+            "Ambas son neuronas con axones que forman directamente el nervio",
+            "Las internas responden solo a intensidad y las externas solo a frecuencia"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Intercambia la contribución sensitiva principal y confunde las internas con células de soporte.",
+            "Correcto: identifica tareas diferentes sin tratar las externas como irrelevantes ni atribuirles la salida aferente predominante.",
+            "Son receptores epiteliales que establecen sinapsis con neuronas; no son sus propios axones los que forman el nervio.",
+            "Impone una división exclusiva que no representa cómo se integran mecánica, frecuencia e intensidad en la cóclea."
+          ],
+          "pdf_pages": [
+            628,
+            631
+          ]
+        }
+      ],
+      "source": "Saladin, capítulo 16 · PDF 627–631 (impresas 599–603). Detalle de Ca2+ basal: Neuroscience, NBK10867.",
+      "review": "Revisión automatizada de fuente, coherencia y diseño; revisión docente pendiente.",
+      "supplementary_reference": "https://www.ncbi.nlm.nih.gov/books/NBK10867/"
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "clinical_diagnosis_tool": false,
+    "scope": "Ampliación específica de transducción auditiva; no cubre equilibrio ni toda la vía central."
+  },
+  "supplementary_reference": {
+    "title": "Hair Cells and the Mechanoelectrical Transduction of Sound Waves",
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK10867/",
+    "scope": "Ampliación del detalle basal de Ca2+; no atribuir ese detalle al texto resumido del Saladin."
+  }
+}

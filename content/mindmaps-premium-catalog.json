@@ -6188,5 +6188,19 @@
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__07.webp",
     "curated": true
+  },
+  {
+    "id": "morfo_16_organos_sentidos__08",
+    "titulo": "Audición: del sonido a la señal nerviosa",
+    "root_title": "Audición: del sonido a la señal nerviosa",
+    "materia": "Morfofunción",
+    "tema": "Órganos de los sentidos",
+    "parent_key": "morfo_16_organos_sentidos.png",
+    "url_imagen": "premium/morfo_16_organos_sentidos__08.json",
+    "descripcion": "Transmisión mecánica, transducción, sinapsis y codificación. Lámina ilustrada, explicaciones y práctica razonada.",
+    "premium": true,
+    "acceso_gratis": false,
+    "curated": true,
+    "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__08.webp"
   }
 ]

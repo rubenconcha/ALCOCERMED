@@ -1,9 +1,9 @@
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
-test('practice covers two protected maps with full per-option feedback and traceable sources',()=>{
+test('practice covers three protected maps with full per-option feedback and traceable sources',()=>{
  const prompts=new Set();
- for(const id of ['morfo_18_sangre__07','morfo_16_organos_sentidos__07']){
+ for(const id of ['morfo_18_sangre__07','morfo_16_organos_sentidos__07','morfo_16_organos_sentidos__08']){
   const payload=JSON.parse(fs.readFileSync('api/_mindmaps/'+id+'.json','utf8')),practice=payload.assets.practice;
   assert.equal(practice.flashcards.length,10);assert.equal(practice.questions.length,6);
   assert.equal(payload.review.doctor_approved,false);

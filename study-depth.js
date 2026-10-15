@@ -1,6 +1,6 @@
 /* Reviewed supplements are read from the same protected source as their maps. */
 (function(){
- const topics=[{id:'morfo_18_sangre__07',topic:'sangre',chapter:18},{id:'morfo_16_organos_sentidos__07',topic:'organos de los sentidos',chapter:16}];
+ const topics=[{id:'morfo_18_sangre__07',topic:'sangre',chapter:18},{id:'morfo_16_organos_sentidos__07',topic:'organos de los sentidos',chapter:16},{id:'morfo_16_organos_sentidos__08',topic:'organos de los sentidos',chapter:16}];
  let pending=null;
  const normalize=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim().toLowerCase().replace(/\s+/g,' ');
  const field=(row,key)=>row[key]??row[key.toUpperCase()];
@@ -22,7 +22,7 @@
    }));
    const result={flashcards:[],bank:[]};
    for(const {topic,practice} of packs){
-    const source='Saladin, Anatomía y fisiología · capítulo '+topic.chapter;
+    const source='Saladin, Anatomía y fisiología · capítulo '+topic.chapter+(practice.supplementary_reference?' · Ampliación fisiológica: '+practice.supplementary_reference:'');
     practice.flashcards.forEach(card=>result.flashcards.push({id:'depth:'+topic.id+':fc:'+identity(card.question),materia:'MORFOFUNCION',tema:topic.topic,pregunta:card.question,respuesta:card.answer+'\n\nFuente: '+source+' · páginas '+card.pdf_pages.join(', ')+' del PDF.',fuente:source,paginas_pdf:card.pdf_pages.join(', ')}));
     practice.questions.forEach(q=>{
      const row={MATERIA:'MORFOFUNCION',TEMA:topic.topic,PREGUNTA:q.question,RESPUESTA_CORRECTA:'ABCD'[q.correct],EXPLICACION:q.reasons.map((reason,i)=>'ABCD'[i]+'. '+reason).join('\n\n'),DIFICULTAD:'medio',FUENTE:source,PAGINAS_PDF:q.pdf_pages.join(', '),content_id:'depth:'+topic.id+':q:'+identity(q.question)};

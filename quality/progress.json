@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "dedicated_practice_integration_published_verified",
+  "status": "auditory_transduction_reviewed",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -165,11 +165,64 @@
         "anonymous_map_content": "401",
         "raw_authoring": "404",
         "admin_flashcards": "Sangre deck 94 and Sentidos deck 96 opened through main library in production.",
-        "admin_bank": "New relative/absolute lymphocyte question and all four options reached through main Sangre bank; no answer submitted."
+        "admin_bank": "New relative/absolute lymphocyte question and all four options reached through main Sangre bank; no answer submitted.",
+        "final_style_commit": "d7c04e8",
+        "final_style_status": "Vercel success; production CSS verified"
       }
+    },
+    {
+      "id": "auditory-transduction-2026-10-15",
+      "status": "reviewed_ready_to_publish",
+      "maps": [
+        "morfo_16_organos_sentidos__08"
+      ],
+      "authored_explanations": 18,
+      "reasoned_cases": 3,
+      "flashcards": 10,
+      "questions": 6,
+      "generative_posters": 1,
+      "delivery": "Protected illustrated/concept map and practice; flashcards and reasoned questions also merged into the normal modules.",
+      "sources": [
+        {
+          "book": "Supplied Saladin chapter 16",
+          "pdf_pages": [
+            627,
+            628,
+            629,
+            630,
+            631
+          ],
+          "printed_pages": "599–603"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10867/",
+          "scope": "Supplemental basal Ca2+ entry and transmitter-release mechanism, explicitly separated from the summarized source textbook."
+        }
+      ],
+      "review": "Automated second academic and visual pass. No doctor approval. Schematic proportions; equilibrium and central auditory pathways are not covered.",
+      "corrections": [
+        "Replaced a misleading cochlear chamber image with an explicitly schematic organ of Corti resting on the basilar membrane.",
+        "Removed an invented additional synapse from the afferent nerve illustration.",
+        "Corrected Ca2+ to enter from outside the basal hair-cell membrane.",
+        "Removed an unrequested slogan.",
+        "Preserved other curated maps when rebuilding the pilot registry.",
+        "Supplementary source attribution now carried into normal flashcard/bank rows."
+      ],
+      "tests": [
+        "13 private-access/content/adapter tests passed",
+        "Three-map practice integrity checks passed",
+        "17 Sangre/Sentidos maps checked at desktop/mobile, illustrated and concept modes, all feedback paths and reset",
+        "Normal flashcard and bank renderers checked with 30 supplemental cards and 18 questions, both viewport widths",
+        "Free and expired subscriptions denied; direct authoring blocked; preview is only the older safe illustration",
+        "Visual screenshots inspected"
+      ],
+      "limitations": [
+        "Whole chapters, equilibrium, central auditory pathways, hemostasis and expanded summaries remain pending.",
+        "Individual cloud-error tracking of supplemental questions still awaits real additive database imports."
+      ]
     }
   ],
-  "next_action": "Expand auditory transduction and equilibrium plus leukopoiesis/hemostasis against the full Saladin sections. Produce specific generative branded maps with deep explanations and associated practice, then revise summaries. If an authorized database connection becomes available, make an additive import of the 12 reviewed bank questions with real IDs so individual cloud-error tracking includes them. Neither chapter is complete.",
+  "next_action": "Next academic batch: leukopoiesis and hemostasis, then vestibular equilibrium, using full Saladin sections and specific branded generative maps with reasoned practice. Expand source-based summaries and objective coverage. Verify previous deployment before continuing. Neither chapter is complete.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",
