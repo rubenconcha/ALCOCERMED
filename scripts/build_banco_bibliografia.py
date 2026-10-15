@@ -196,11 +196,22 @@ def choose_distractors(target: dict, subject_cards: list[dict]) -> list[str]:
 
 def build() -> list[dict]:
     cards = load_cards()
+    # Retain the reviewed options and explanations when rebuilding these chapters.
+    pack_file = CONTENT / 'morfo_sangre_sentidos_2026.json'
+    curated = {}
+    if pack_file.exists():
+        for pack in json.loads(pack_file.read_text(encoding='utf-8'))['packs']:
+            for row in pack['questions']:
+                curated[(row['MATERIA'], norm(row['PREGUNTA']))] = row
     by_subject = defaultdict(list)
     for card in cards:
         by_subject[card["materia"]].append(card)
     result = []
     for card in cards:
+        reviewed = curated.get((card['materia'], norm(card['pregunta'])))
+        if reviewed:
+            result.append(reviewed.copy())
+            continue
         distractors = choose_distractors(card, by_subject[card["materia"]])
         correct_index = stable_number(card["pregunta"] + card["respuesta"]) % 4
         options = distractors.copy()

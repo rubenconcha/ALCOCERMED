@@ -17,6 +17,8 @@
         { subject: 'Morfofunción', topic: 'Tema 4', title: 'Genética y función celular', pages: 8, file: 'morfofuncion-tema-4', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 5', title: 'Histología', pages: 8, file: 'morfofuncion-tema-5', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 6', title: 'El sistema tegumentario', pages: 8, file: 'morfofuncion-tema-6', kind: 'morfo' },
+        { subject: 'Morfofunción', topic: 'Capítulo 16', title: 'Órganos de los sentidos', pages: 10, file: 'morfofuncion-sentidos', kind: 'morfo' },
+        { subject: 'Morfofunción', topic: 'Capítulo 18', title: 'Sangre', pages: 10, file: 'morfofuncion-sangre', kind: 'morfo' },
     ];
 
     const grid = document.getElementById('resumenes-grid');

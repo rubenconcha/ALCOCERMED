@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="campus-preview.css?v=3">
     <link rel="stylesheet" href="mindmap-viewer.css?v=5">
     <link rel="stylesheet" href="past-exams.css?v=2">
-    <link rel="stylesheet" href="campus-atlas.css?v=2">
+    <link rel="stylesheet" href="campus-atlas.css?v=4">
 </head>
 
 <body class="login-active">
@@ -231,7 +231,7 @@
 
                 <li class="nav-item nav-item-simple" id="nav-atlas">
                     <a href="/campus?seccion=atlas" onclick="openAtlas(); return false;" data-tooltip="atlas anatómico">
-                        <span class="nav-icon nav-icon-atlas"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="5" r="3"/><path d="M11 11c-3 0-4 4-5 9m15-9c3 0 4 4 5 9M11 11l5 2 5-2M16 13v9m-5-5 5 2 5-2M12 30l4-8 4 8M11 11v10m10-10v10"/></svg></span>
+                        <span class="nav-icon nav-icon-atlas"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 28V7a3 3 0 0 1 3-3h18v24H8a3 3 0 0 1 0-6h18M9 4v18"/><path d="M18 11c-1-3-5-3-5 1 0 3 5 6 5 6s5-3 5-6c0-4-4-4-5-1Z"/></svg></span>
                         <span class="nav-label">atlas anatómico</span>
                     </a>
                 </li>
@@ -1304,8 +1304,20 @@
         <section id="atlas-screen" class="campus-atlas hidden" aria-labelledby="campus-atlas-title">
             <div class="campus-atlas-heading"><div><h1 id="campus-atlas-title">Atlas anatómico</h1><p>Explora los sistemas del cuerpo y estudia sus estructuras en 3D.</p></div><div class="campus-atlas-actions"><button type="button" onclick="leaveAtlas()">← Volver</button><button type="button" id="campus-atlas-fullscreen" hidden>Pantalla completa</button></div></div>
             <div id="atlas-enrollment-gate" class="atlas-enrollment-gate">
-                <div class="atlas-enrollment-art" aria-hidden="true"><svg viewBox="0 0 160 220"><circle cx="80" cy="32" r="18"/><path d="M55 60c-18 0-23 14-27 43l-7 49m84-92c18 0 23 14 27 43l7 49M55 60l25 8 25-8M80 68v75M52 103l28 10 28-10M54 122l26 9 26-9M65 150l15-7 15 7M65 150l-6 52m36-52 6 52"/></svg><span>Atlas anatómico 3D</span></div>
-                <div class="atlas-enrollment-copy"><span class="atlas-enrollment-badge">Incluido con tu inscripción</span><h2>Estudia en nuestros cursos.<br>Explora el atlas sin costo adicional.</h2><p>El acceso está incluido para estudiantes inscritos en cualquiera de nuestros cursos, tanto virtuales como presenciales.</p><a id="atlas-enrollment-whatsapp" class="atlas-enrollment-cta" href="https://wa.me/59177921731?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20inscribirme%20en%20un%20curso%20virtual%20o%20presencial%20y%20acceder%20al%20atlas%20anat%C3%B3mico%20de%20AlcoCerMed." target="_blank" rel="noopener">Consultar cursos e inscribirme ↗</a><span class="atlas-enrollment-phone">WhatsApp · +591 77921731</span><button type="button" id="atlas-recheck">Ya estoy inscrito · Verificar acceso</button><p id="atlas-access-status" role="status" aria-live="polite"></p></div>
+                <div class="atlas-enrollment-hero">
+                    <div class="atlas-app-icon"><img src="/assets/atlas-preview/head-layers.webp" alt="Cabeza por capas: músculos y cráneo"><span>3D</span></div>
+                    <div class="atlas-enrollment-copy"><span class="atlas-enrollment-badge">PREPARATORIA BEN CARSON</span><h2>Aprende anatomía en 3D</h2><p>Explora el cuerpo humano, identifica sus estructuras y entiende cómo se relacionan.</p><span class="atlas-enrollment-included">Acceso incluido en nuestros cursos virtuales y presenciales.</span><a id="atlas-enrollment-whatsapp" class="atlas-enrollment-cta" href="https://wa.me/59177921731?text=Hola%2C%20quiero%20inscribirme%20al%20curso%20de%20la%20Preparatoria%20Ben%20Carson%20y%20acceder%20al%20atlas%20anat%C3%B3mico%203D." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-12 7L3 20l1.5-5A8 8 0 1 1 20 11.5Z"/><path d="M8 8c0 4 4 7 7 7l1-2-3-1-1 1-2-2 1-1-1-3Z"/></svg>Inscribirse al curso <span aria-hidden="true">↗</span></a><p id="atlas-access-status" role="status" aria-live="polite"></p></div>
+                </div>
+                <div class="atlas-feature-strip" aria-label="Funciones del atlas"><div><strong>Modelos 3D</strong><span>Gira y acerca cada vista</span></div><div><strong>Sistemas del cuerpo</strong><span>Explora por capas</span></div><div><strong>Estudio en español</strong><span>Busca e identifica estructuras</span></div></div>
+                <div class="atlas-gallery-heading"><h3>Conoce tu atlas</h3><p>Vistas del atlas que usarás para estudiar.</p></div>
+                <div class="atlas-preview-gallery" tabindex="0" role="region" aria-label="Galería de vistas anatómicas; desliza para ver más">
+                    <figure><img src="/assets/atlas-preview/head-layers.webp" alt="Cabeza con media musculatura y cráneo visible" width="600" height="820"><figcaption><span>01</span><strong>Músculos y cráneo</strong><small>Cabeza por capas</small></figcaption></figure>
+                    <figure><img src="/assets/atlas-preview/layers.webp" alt="Torso con músculos y huesos por capas" width="600" height="820" loading="lazy"><figcaption><span>02</span><strong>Músculos y huesos</strong><small>Explora sus relaciones</small></figcaption></figure>
+                    <figure><img src="/assets/atlas-preview/systems.webp" alt="Sistemas y órganos internos del cuerpo" width="600" height="820" loading="lazy"><figcaption><span>03</span><strong>Sistemas y órganos</strong><small>Conecta lo que aprendes</small></figcaption></figure>
+                    <figure><img src="/assets/atlas-preview/heart.webp" alt="Vista del corazón en el atlas" width="600" height="820" loading="lazy"><figcaption><span>04</span><strong>Corazón</strong><small>Estudia sus estructuras</small></figcaption></figure>
+                    <figure><img src="/assets/atlas-preview/shoulder.webp" alt="Huesos y músculos de la región del hombro" width="600" height="820" loading="lazy"><figcaption><span>05</span><strong>Articulaciones</strong><small>Comprende cada región</small></figcaption></figure>
+                </div>
+                <p class="atlas-preview-credit">Vistas de AlcoCerMed · Modelos de Z-Anatomy y BodyParts3D. <a href="/assets/anatomy/ATTRIBUTION.txt" target="_blank" rel="noopener">Créditos y licencias ↗</a></p>
             </div>
             <div id="campus-atlas-viewport" class="campus-atlas-viewport" hidden><iframe id="campus-atlas-frame" title="Atlas anatómico 3D interactivo" allow="fullscreen" allowfullscreen></iframe><div id="campus-atlas-loading" class="campus-atlas-loading" role="status">Preparando el atlas…</div></div>
         </section>
@@ -1364,9 +1376,9 @@
     <script src="intocables-hub.js?v=1"></script>
     <script src="simulacro-ingreso.js?v=2"></script>
     <script src="student-library.js?v=8"></script>
-    <script src="study-summaries.js?v=3"></script>
+    <script src="study-summaries.js?v=4"></script>
     <script src="past-exams.js?v=4"></script>
-    <script src="campus-atlas.js?v=8"></script>
+    <script src="campus-atlas.js?v=10"></script>
 </body>
 
 </html>

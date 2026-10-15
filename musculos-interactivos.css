@@ -37,3 +37,5 @@
 @media(max-width:760px){.reference-study-card{padding:14px}.reference-study-card h4{font-size:16px}.reference-sections{gap:10px}}
 
 @media(max-width:760px){.reference-study-open:not(.no-panel) #stage{bottom:52%}.reference-study-open:not(.no-panel) #drawer{max-height:52%}.reference-study-open:not(.no-panel) .views{bottom:calc(52% + 44px)}.reference-study-open:not(.no-panel) .bottom{display:none}.reference-study-open:not(.no-panel) #selected-label{max-width:58%;font-size:11px}.reference-study-open:not(.no-panel) #whole{top:45px;font-size:10px}}
+
+@media(max-width:700px){.viewer{top:94px}.toolbar{height:94px;padding-block:6px;display:grid;grid-template-columns:1fr 1fr auto;gap:6px}.toolbar>div{grid-column:1/-1;display:flex;width:100%}.toolbar>div button{flex:1}.toolbar>#head-view,.toolbar>#layered-view{white-space:nowrap;padding:9px 12px}.toolbar>#reset{padding:9px 12px}}
