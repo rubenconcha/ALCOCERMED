@@ -1,0 +1,472 @@
+{
+  "id": "morfo_18_sangre__08",
+  "title": "Hemostasia: formar, limitar y retirar el coágulo",
+  "topic": "La sangre",
+  "sections": [
+    {
+      "title": "Una respuesta localizada y coordinada",
+      "groups": [
+        {
+          "title": "Mecanismos, relaciones y límites",
+          "items": [
+            {
+              "title": "Hemostasia es más que coagulación",
+              "text": "La hemostasia limita la pérdida de sangre mediante respuesta vascular, plaquetas y formación de fibrina. La coagulación es la parte que genera la red proteica estabilizadora; no incluye por sí sola todos los mecanismos. Las fases se superponen y cooperan: la lista sirve para distinguir tareas, no para imponer una espera completa entre una y otra.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 732,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El espasmo reduce la pérdida inicial",
+              "text": "La constricción del vaso lesionado disminuye el flujo local y ayuda a ganar tiempo mientras se organiza el sello. Participan respuestas de la pared y señales locales. Reducir el calibre no equivale a reparar la continuidad del endotelio ni a formar fibrina: es una contribución mecánica inicial que debe integrarse con las demás.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 732,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El objetivo no es cerrar toda la circulación",
+              "text": "El tapón debe concentrarse en la rotura para limitar la salida de sangre y permitir reparación. La coagulación propagada o una masa que obstruye un vaso pueden comprometer la perfusión. El esquema de una lesión pequeña no representa que todo el lumen deba llenarse de fibrina para lograr una respuesta adecuada.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Plaquetas: adhesión, activación y agregación",
+      "groups": [
+        {
+          "title": "Mecanismos, relaciones y límites",
+          "items": [
+            {
+              "title": "Adhesión significa anclarse a la lesión",
+              "text": "El daño expone estructuras subendoteliales, como colágeno, que favorecen la fijación plaquetaria. Esa adhesión a la superficie lesionada es distinta de la unión entre plaquetas. En cambio, el endotelio sano mantiene propiedades que dificultan una respuesta innecesaria; no basta describirlo únicamente como una pared que contiene sangre.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 732,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Activación y señales de reclutamiento",
+              "text": "Las plaquetas activadas cambian de forma y liberan mediadores; ADP y tromboxano A2 participan en promover más activación y agregación. Estas señales amplifican la respuesta local. El cambio de forma no convierte a la plaqueta en una fibra de fibrina ni en un eritrocito: sigue siendo un fragmento celular funcional.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 732,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Agregación construye el tapón inicial",
+              "text": "La agregación une plaquetas entre sí y contribuye a formar un sello temprano. La adhesión explica la fijación a la lesión y la agregación explica cómo crece la masa plaquetaria. La posterior red de fibrina refuerza ese conjunto: tapón inicial y coágulo estabilizado son relacionados, pero no equivalentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 732,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Coagulación: distinguir precursor, enzima y red",
+      "groups": [
+        {
+          "title": "Mecanismos, relaciones y límites",
+          "items": [
+            {
+              "title": "Protrombina y trombina no son lo mismo",
+              "text": "La protrombina es un precursor plasmático que se convierte en trombina activa. La trombina es una enzima que participa en la generación de fibrina y en la amplificación de la respuesta. No debe dibujarse como el hilo estructural del coágulo ni confundirse con la masa completa de células y proteínas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Del fibrinógeno soluble a la fibrina",
+              "text": "La trombina actúa sobre el fibrinógeno y permite formar fibrina, que se organiza en una red. El factor XIII activado contribuye a entrecruzarla y estabilizarla. La relación causal diferencia sustrato, enzima y producto: una flecha que haga aparecer fibrinógeno a partir de fibrina invertiría la formación del sello.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Convergencia y cooperación, no dos coágulos distintos",
+              "text": "El esquema del libro distingue mecanismos intrínseco y extrínseco que convergen hacia la activación de X y la generación de trombina. No producen dos tipos independientes de fibrina. Es un modelo didáctico resumido: la interacción de factores, superficies plaquetarias y cofactores no se reduce a que cada número romano active simplemente al siguiente.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Amplificar sin perder el control",
+      "groups": [
+        {
+          "title": "Mecanismos, relaciones y límites",
+          "items": [
+            {
+              "title": "Retroalimentación positiva aumenta la respuesta",
+              "text": "El reclutamiento plaquetario favorece nuevas plaquetas activadas y la generación de trombina potencia pasos que producen más trombina. Son relaciones que aceleran la respuesta cerca de la lesión. Sin mecanismos que la limiten, la amplificación no garantizaría una hemostasia útil: podría extenderse a regiones donde el flujo debe conservarse.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 732,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El endotelio sano y el flujo también participan",
+              "text": "El endotelio intacto conserva propiedades antitrombóticas y mediadores como prostaciclina dificultan la activación plaquetaria innecesaria. El flujo contribuye a diluir y retirar factores activados. Estos controles ayudan a explicar por qué una reacción local no debe propagarse indiscriminadamente por toda la sangre circulante.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Anticoagulación fisiológica no es fibrinólisis",
+              "text": "La antitrombina limita actividad de enzimas de coagulación, entre ellas trombina. La fibrinólisis, en cambio, degrada la red de fibrina ya formada. Inhibir formación o actividad de factores y deshacer una estructura existente son tareas diferentes; no se deben presentar como una única reacción ni como instrucciones para elegir medicamentos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Compactar, reparar y retirar",
+      "groups": [
+        {
+          "title": "Mecanismos, relaciones y límites",
+          "items": [
+            {
+              "title": "Retracción es un cambio mecánico del coágulo",
+              "text": "Las plaquetas vinculadas a la red pueden contraerse y traccionar sus hebras, compactando el conjunto y aproximando bordes de la lesión. La red sigue presente durante esta retracción. El mecanismo no equivale a cortar fibrina en fragmentos y tampoco significa que la pared vascular ya se haya regenerado por completo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 734,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Reparación de la pared requiere tejido nuevo",
+              "text": "Las señales procedentes de plaquetas y endotelio favorecen actividades reparadoras, incluidas proliferación celular y formación de tejido conjuntivo. El sello limita pérdidas mientras ocurre este proceso. Detener el sangrado y restaurar una pared funcional no son acontecimientos idénticos ni necesariamente simultáneos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 735,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Plasmina degrada la fibrina",
+              "text": "El plasminógeno es un precursor que puede activarse a plasmina; esta enzima participa en la degradación de la red. La fibrinólisis debe integrarse con la evolución de la lesión y sus controles. No se confunde con la generación de trombina ni se interpreta como la transformación de plaquetas en fibras nuevas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 735,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Aplicar la secuencia a problemas concretos",
+      "groups": [
+        {
+          "title": "Mecanismos, relaciones y límites",
+          "items": [
+            {
+              "title": "Caso: el número de plaquetas es normal",
+              "text": "Un recuento normal no demuestra que la adhesión, la activación o la agregación funcionen correctamente, ni garantiza que todos los factores de coagulación sean suficientes. El dato informa cantidad, no toda la función. La conclusión debe limitarse al ejercicio y no atribuir una enfermedad concreta sin información adicional.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 732,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso: hay tapón inicial pero falla la red",
+              "text": "El ejercicio permite separar una respuesta plaquetaria inicial de una estabilización insuficiente por fibrina. No obliga a concluir que toda plaqueta está ausente o que el espasmo no ocurrió. Debe reconstruirse qué paso se conserva y cuál falla, antes de proponer interpretaciones sobre el origen del defecto.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso: compactar no es disolver",
+              "text": "Si la masa se hace más pequeña por tracción de plaquetas, se describe retracción. Si se rompen fibras mediante actividad proteolítica, se describe fibrinólisis. La observación de un menor tamaño, aislada, no identifica cuál mecanismo actuó; hacen falta datos sobre el cambio estructural o la actividad enzimática.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 735,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_18_sangre.webp",
+    "alt": "Ilustración de apoyo de la sangre",
+    "download": "/api/mindmap?id=morfo_18_sangre__08&format=image",
+    "filename": "morfo_18_sangre__08-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 18,
+      "pdfPages": [
+        732,
+        733,
+        734,
+        735,
+        736
+      ],
+      "kind": "original_synthesis"
+    },
+    "generative_download": true,
+    "practice": {
+      "flashcards": [
+        {
+          "question": "¿Por qué hemostasia y coagulación no son sinónimos?",
+          "answer": "La hemostasia limita la pérdida de sangre mediante respuesta vascular, plaquetas y formación de fibrina. La coagulación es la parte que genera la red proteica estabilizadora; no incluye por sí sola todos los mecanismos. Las fases se superponen y cooperan: la lista sirve para distinguir tareas, no para imponer una espera completa entre una y otra.",
+          "pdf_pages": [
+            732
+          ]
+        },
+        {
+          "question": "Distingue adhesión plaquetaria de agregación.",
+          "answer": "El daño expone estructuras subendoteliales, como colágeno, que favorecen la fijación plaquetaria. Esa adhesión a la superficie lesionada es distinta de la unión entre plaquetas. En cambio, el endotelio sano mantiene propiedades que dificultan una respuesta innecesaria; no basta describirlo únicamente como una pared que contiene sangre.",
+          "pdf_pages": [
+            732
+          ]
+        },
+        {
+          "question": "¿Cómo contribuyen ADP y tromboxano A2 a amplificar el tapón?",
+          "answer": "Las plaquetas activadas cambian de forma y liberan mediadores; ADP y tromboxano A2 participan en promover más activación y agregación. Estas señales amplifican la respuesta local. El cambio de forma no convierte a la plaqueta en una fibra de fibrina ni en un eritrocito: sigue siendo un fragmento celular funcional.",
+          "pdf_pages": [
+            732
+          ]
+        },
+        {
+          "question": "¿Qué diferencia hay entre protrombina, trombina y fibrina?",
+          "answer": "La protrombina es un precursor plasmático que se convierte en trombina activa. La trombina es una enzima que participa en la generación de fibrina y en la amplificación de la respuesta. No debe dibujarse como el hilo estructural del coágulo ni confundirse con la masa completa de células y proteínas.",
+          "pdf_pages": [
+            733
+          ]
+        },
+        {
+          "question": "Reconstruye la formación y estabilización de la red de fibrina.",
+          "answer": "La trombina actúa sobre el fibrinógeno y permite formar fibrina, que se organiza en una red. El factor XIII activado contribuye a entrecruzarla y estabilizarla. La relación causal diferencia sustrato, enzima y producto: una flecha que haga aparecer fibrinógeno a partir de fibrina invertiría la formación del sello.",
+          "pdf_pages": [
+            733
+          ]
+        },
+        {
+          "question": "¿Qué comparten las rutas intrínseca y extrínseca en el esquema didáctico?",
+          "answer": "El esquema del libro distingue mecanismos intrínseco y extrínseco que convergen hacia la activación de X y la generación de trombina. No producen dos tipos independientes de fibrina. Es un modelo didáctico resumido: la interacción de factores, superficies plaquetarias y cofactores no se reduce a que cada número romano active simplemente al siguiente.",
+          "pdf_pages": [
+            733
+          ]
+        },
+        {
+          "question": "¿Cómo ayudan el endotelio sano y el flujo a limitar la respuesta?",
+          "answer": "El endotelio intacto conserva propiedades antitrombóticas y mediadores como prostaciclina dificultan la activación plaquetaria innecesaria. El flujo contribuye a diluir y retirar factores activados. Estos controles ayudan a explicar por qué una reacción local no debe propagarse indiscriminadamente por toda la sangre circulante.",
+          "pdf_pages": [
+            736
+          ]
+        },
+        {
+          "question": "¿En qué se diferencian anticoagulación fisiológica y fibrinólisis?",
+          "answer": "La antitrombina limita actividad de enzimas de coagulación, entre ellas trombina. La fibrinólisis, en cambio, degrada la red de fibrina ya formada. Inhibir formación o actividad de factores y deshacer una estructura existente son tareas diferentes; no se deben presentar como una única reacción ni como instrucciones para elegir medicamentos.",
+          "pdf_pages": [
+            736
+          ]
+        },
+        {
+          "question": "¿Por qué retracción del coágulo no significa degradación de fibrina?",
+          "answer": "Las plaquetas vinculadas a la red pueden contraerse y traccionar sus hebras, compactando el conjunto y aproximando bordes de la lesión. La red sigue presente durante esta retracción. El mecanismo no equivale a cortar fibrina en fragmentos y tampoco significa que la pared vascular ya se haya regenerado por completo.",
+          "pdf_pages": [
+            734
+          ]
+        },
+        {
+          "question": "¿Por qué un recuento plaquetario normal no garantiza toda la hemostasia?",
+          "answer": "Un recuento normal no demuestra que la adhesión, la activación o la agregación funcionen correctamente, ni garantiza que todos los factores de coagulación sean suficientes. El dato informa cantidad, no toda la función. La conclusión debe limitarse al ejercicio y no atribuir una enfermedad concreta sin información adicional.",
+          "pdf_pages": [
+            732
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "¿Qué relación describe correctamente la acción central de la trombina en la formación del coágulo?",
+          "options": [
+            "Actúa sobre fibrinógeno y permite formar fibrina",
+            "Degrada la fibrina y produce fibrinólisis",
+            "Es el precursor inactivo llamado plasminógeno",
+            "Es una plaqueta que cambió de forma"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: la trombina es una enzima de la coagulación; la fibrina es el componente de la red que refuerza el sello.",
+            "Atribuye a trombina la degradación de fibrina que corresponde a la actividad fibrinolítica, incluida la de plasmina.",
+            "El plasminógeno es precursor de plasmina; no constituye otro nombre de la trombina ni su forma inactiva.",
+            "Confunde una enzima plasmática con un fragmento celular. Activación plaquetaria y generación de trombina cooperan, pero no son lo mismo."
+          ],
+          "pdf_pages": [
+            733
+          ]
+        },
+        {
+          "question": "En un modelo se observa adhesión y agregación plaquetaria, pero no se forma una red de fibrina suficiente. ¿Qué inferencia es válida?",
+          "options": [
+            "Toda respuesta hemostática está ausente",
+            "Puede existir un tapón inicial con estabilización insuficiente",
+            "Se demuestra ausencia total de plaquetas",
+            "La fibrinólisis es necesariamente la única causa"
+          ],
+          "correct": 1,
+          "reasons": [
+            "El propio enunciado conserva dos pasos de la respuesta plaquetaria; negar toda hemostasia contradice esos datos.",
+            "Correcto: permite distinguir el sello plaquetario inicial de su refuerzo por fibrina, sin adjudicar una etiología única.",
+            "Si hay adhesión y agregación de plaquetas, no se puede afirmar que estas falten por completo.",
+            "Una red insuficiente admite fallas de formación u otras posibilidades; el dato no prueba una única causa de degradación."
+          ],
+          "pdf_pages": [
+            732,
+            733
+          ]
+        },
+        {
+          "question": "¿Qué observación identifica de manera más directa fibrinólisis y no simple retracción?",
+          "options": [
+            "Aproximación de los bordes por tracción plaquetaria",
+            "Compactación de la red que permanece intacta",
+            "Degradación proteolítica de fibrina por plasmina",
+            "Reducción inicial del calibre del vaso"
+          ],
+          "correct": 2,
+          "reasons": [
+            "La aproximación mediante tracción describe un componente mecánico de retracción, sin exigir corte de la fibrina.",
+            "Compactar sin degradar la red mantiene la diferencia entre retracción y eliminación proteolítica del coágulo.",
+            "Correcto: la plasmina participa en la degradación de fibrina; ese cambio define la actividad fibrinolítica descrita.",
+            "Reducir calibre corresponde al espasmo vascular. No demuestra degradación de una red ya formada."
+          ],
+          "pdf_pages": [
+            734,
+            735
+          ]
+        },
+        {
+          "question": "Un recuento de plaquetas está dentro del intervalo de referencia. ¿Qué conclusión excede ese dato?",
+          "options": [
+            "Informa sobre la cantidad de plaquetas en la muestra",
+            "No evalúa por sí solo todas las funciones plaquetarias",
+            "No demuestra por sí solo suficiencia de factores de coagulación",
+            "Garantiza adhesión, agregación y coagulación completamente normales"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Es una interpretación compatible: el recuento aporta una medida de cantidad, dentro del alcance de la muestra.",
+            "Distinguir cantidad de función limita correctamente lo que se puede concluir del dato disponible.",
+            "La concentración de plaquetas no informa la actividad de cada factor plasmático; esta limitación es válida.",
+            "Correcto: esa garantía excede el dato. Cantidad plaquetaria, función y coagulación no son mediciones equivalentes."
+          ],
+          "pdf_pages": [
+            732,
+            733
+          ]
+        },
+        {
+          "question": "¿Qué combinación favorece que la respuesta se limite a la lesión?",
+          "options": [
+            "Endotelio sano, flujo y anticoagulantes fisiológicos",
+            "Activación plaquetaria indiscriminada en todo el endotelio",
+            "Acumulación ilimitada de trombina en toda la circulación",
+            "Ausencia de toda regulación una vez iniciada la coagulación"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: esos mecanismos contribuyen a frenar una propagación inadecuada sin negar la formación localizada del sello.",
+            "Promover activación sobre superficies no dañadas se opone a la localización de la respuesta que pide la pregunta.",
+            "La acumulación sin límite favorecería extensión de la reacción; no constituye un control que la concentre en la lesión.",
+            "La amplificación necesita límites. Que el proceso haya empezado no elimina los mecanismos reguladores."
+          ],
+          "pdf_pages": [
+            736
+          ]
+        },
+        {
+          "question": "¿Qué ejemplo expresa retroalimentación positiva en la respuesta plaquetaria?",
+          "options": [
+            "La plasmina degrada parte de una red de fibrina",
+            "Plaquetas activadas liberan señales que favorecen activación y reclutamiento de más plaquetas",
+            "La vasoconstricción reemplaza todas las fases posteriores",
+            "El endotelio intacto dificulta adhesión innecesaria"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Describe degradación de fibrina. No es el ejemplo de autoamplificación del reclutamiento plaquetario solicitado.",
+            "Correcto: el producto de la respuesta promueve más respuesta del mismo sistema, aumentando el reclutamiento local.",
+            "El espasmo aporta protección inicial, pero no sustituye a los demás mecanismos ni describe ese ciclo de reclutamiento.",
+            "Dificultar adhesión innecesaria es una función de control, distinta de amplificar la respuesta plaquetaria."
+          ],
+          "pdf_pages": [
+            732
+          ]
+        }
+      ],
+      "source": "Saladin, capítulo 18 · PDF 732–736 (impresas 704–708). Síntesis fisiológica original; no guía de diagnóstico ni tratamiento.",
+      "review": "Revisión automatizada de fuente, coherencia y diseño; revisión docente pendiente."
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "clinical_diagnosis_tool": false,
+    "scope": "Síntesis integrada de fases y controles. No cubre todos los factores, pruebas de laboratorio o trastornos; no supone aprobación del capítulo completo."
+  },
+  "verification_reference": {
+    "title": "NHLBI: How Does Blood Clot?",
+    "url": "https://www.nhlbi.nih.gov/health/clotting-disorders/how-blood-clots",
+    "scope": "Contraste institucional de etapas generales; Saladin suministrado como fuente principal."
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "auditory_transduction_reviewed",
+  "status": "hemostasis_reviewed",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -172,7 +172,7 @@
     },
     {
       "id": "auditory-transduction-2026-10-15",
-      "status": "reviewed_ready_to_publish",
+      "status": "published_verified",
       "maps": [
         "morfo_16_organos_sentidos__08"
       ],
@@ -220,10 +220,66 @@
       "limitations": [
         "Whole chapters, equilibrium, central auditory pathways, hemostasis and expanded summaries remain pending.",
         "Individual cloud-error tracking of supplemental questions still awaits real additive database imports."
+      ],
+      "deployment": {
+        "content_commit": "a6bf2fa",
+        "final_commit": "fa88a49",
+        "status": "Vercel success",
+        "anonymous_json_and_image": "401",
+        "raw_png_and_authoring": "404",
+        "admin_live": "1536x1024 poster decoded; first full explanatory node visible; Practicar opens and all four explanations of first question render correctly."
+      }
+    },
+    {
+      "id": "hemostasis-2026-10-15",
+      "status": "reviewed_ready_to_publish",
+      "maps": [
+        "morfo_18_sangre__08"
+      ],
+      "authored_explanations": 18,
+      "reasoned_cases": 3,
+      "flashcards": 10,
+      "questions": 6,
+      "generative_posters": 1,
+      "delivery": "Protected generative poster, expandable explanatory map and practice; new cards/questions integrated into normal modules.",
+      "sources": [
+        {
+          "book": "Supplied Saladin chapter 18",
+          "pdf_pages": [
+            732,
+            733,
+            734,
+            735,
+            736
+          ],
+          "printed_pages": "704–708"
+        },
+        {
+          "url": "https://www.nhlbi.nih.gov/health/clotting-disorders/how-blood-clots",
+          "scope": "Institutional cross-check of broad stages; primary course synthesis uses supplied textbook."
+        }
+      ],
+      "review": "Automated second academic and visual pass, not doctor approval. Distinguishes enzyme/substrate/product, platelet quantity/function, retraction/fibrinolysis, local amplification/control. No medication or diagnostic guidance.",
+      "corrections": [
+        "The first generated image had misleading endothelium and rupture pointers. Relocating them did not resolve accuracy; removed those two labels and leaders with image generation.",
+        "Preserved coagulation as part of hemostasis and explicitly stated overlapping phases.",
+        "Did not reproduce the simplified textbook cascade as if every numbered factor were an enzyme activating the next number. Full factor-by-factor pathway remains a separate objective."
+      ],
+      "tests": [
+        "13 private access/content/practice adapter tests passed",
+        "18 blood/senses maps tested at 1440 and 390 widths, illustrated/concept modes and all question feedback paths",
+        "Normal modules tested with 40 supplemental cards and 24 questions; mobile references reachable without horizontal overflow",
+        "24 responsive layouts and pinch zoom passed; free and expired UI checks passed",
+        "Hemostasis poster downloaded via the actual button at both viewport sizes; downloaded WebP bytes match the protected original",
+        "Poster and mobile practice screenshots visually reviewed"
+      ],
+      "limitations": [
+        "A dedicated factor-by-factor coagulation map, leukopoiesis, vestibular equilibrium and expanded summaries remain pending. Neither chapter is complete.",
+        "Supplemental question-level cloud error tracking awaits real additive database IDs."
       ]
     }
   ],
-  "next_action": "Next academic batch: leukopoiesis and hemostasis, then vestibular equilibrium, using full Saladin sections and specific branded generative maps with reasoned practice. Expand source-based summaries and objective coverage. Verify previous deployment before continuing. Neither chapter is complete.",
+  "next_action": "Next: vestibular equilibrium and leukopoiesis, then a dedicated coagulation-pathway map and substantial chapter summary expansion. Build an explicit objective matrix for full-chapter coverage rather than declaring completeness from counts. Preserve gated access and verify latest deployment first.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",
