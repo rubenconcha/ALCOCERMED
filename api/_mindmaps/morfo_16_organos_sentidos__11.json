@@ -463,6 +463,327 @@
       "source": "Saladin, cap. 16 · PDF 621–623 (libro 593–595). Código combinatorio: Malnic et al., Cell 1999, PMID 10089886.",
       "review": "Revisión automatizada; revisión docente pendiente.",
       "supplementary_reference": "https://pubmed.ncbi.nlm.nih.gov/10089886/"
+    },
+    "independent_assessments": {
+      "simulation": {
+        "title": "Sentidos · Casos razonados",
+        "questions": [
+          {
+            "content_id": "senses-depth-simulation-20261015-1",
+            "objective": "retina_on",
+            "question": "Al iluminar un fotorreceptor disminuye su liberación de glutamato, pero aumenta la respuesta de una bipolar ON del circuito. ¿Qué relación explica que ambos cambios sean compatibles?",
+            "options": [
+              "La disminución de una entrada inhibidora puede aumentar la respuesta de la célula siguiente",
+              "Toda disminución de transmisor apaga obligatoriamente todas las neuronas posteriores",
+              "La bipolar ON debe haber recibido más glutamato aunque se midió menos",
+              "La bipolar ON debe cambiar siempre su potencial en el mismo sentido que el fotorreceptor"
+            ],
+            "correct": 0,
+            "reasons": [
+              "Correcto: el efecto depende de cómo responde la célula postsináptica; menos señal inhibidora puede favorecer su activación.",
+              "Generaliza una dirección de cambio a todo el circuito e ignora que ON y OFF interpretan de forma diferente el transmisor.",
+              "Sustituye el dato del experimento por el resultado que se intenta explicar, en lugar de considerar la relación sináptica.",
+              "Una relación sináptica puede invertir el signo; exigir el mismo cambio en ambas células no explica la respuesta observada."
+            ],
+            "pdf_pages": [
+              650
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Relacionar el signo del efecto sináptico con respuestas de células sucesivas.",
+            "supplementary_references": []
+          },
+          {
+            "content_id": "senses-depth-simulation-20261015-2",
+            "objective": "tonotopia",
+            "question": "Dos sonidos tienen distinta frecuencia. En una cóclea normal, el de frecuencia más alta produce su máximo de respuesta más cerca de la base. ¿Qué variable describe esa comparación?",
+            "options": [
+              "Solo intensidad, porque toda frecuencia alcanza siempre el mismo sitio máximo",
+              "Organización espacial de la respuesta según frecuencia",
+              "La cantidad total de neurotransmisor identifica por sí sola el tono sin información de lugar",
+              "El máximo apical corresponde obligatoriamente al sonido de frecuencia más alta"
+            ],
+            "correct": 1,
+            "reasons": [
+              "Frecuencia e intensidad no son la misma variable; el caso compara la localización del máximo para frecuencias diferentes.",
+              "Correcto: relaciona tonotopía con lugar de respuesta y conserva la diferencia entre base para altas y ápice para bajas.",
+              "Reduce la codificación a una cantidad única y descarta la organización espacial que el enunciado está midiendo.",
+              "Invierte la relación descrita para la cóclea y contradice el dato del máximo basal en la frecuencia más alta."
+            ],
+            "pdf_pages": [
+              631
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Identificar qué propiedad está representada por una comparación de lugares.",
+            "supplementary_references": []
+          },
+          {
+            "content_id": "senses-depth-simulation-20261015-3",
+            "objective": "sinapsis_coclear",
+            "question": "Una célula ciliada conserva flexión del haz y despolarización, pero se limita la entrada basal de Ca2+. ¿Qué paso se pone a prueba principalmente?",
+            "options": [
+              "La llegada mecánica del sonido al tímpano, que necesariamente desaparece",
+              "La recepción apical, que debe perderse pese a la despolarización conservada",
+              "La comunicación presináptica con la aferente, aun con transducción mecánica conservada",
+              "Un cambio de la frecuencia física del sonido causado por menor liberación basal"
+            ],
+            "correct": 2,
+            "reasons": [
+              "El modelo mantiene el movimiento y la respuesta receptora; no establece que se haya perdido la transmisión inicial del oído.",
+              "El modelo conserva la respuesta receptora; no debe sustituirse ese dato por pérdida obligatoria del paso apical.",
+              "Correcto: la entrada basal de calcio participa en liberación de transmisor; separa recepción mecánica y comunicación sináptica.",
+              "La intervención altera comunicación sináptica; no impone un cambio en la frecuencia del estímulo físico externo."
+            ],
+            "pdf_pages": [
+              630
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Ubicar una intervención entre potencial receptor y comunicación con la aferente.",
+            "supplementary_references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK10867/"
+            ]
+          },
+          {
+            "content_id": "senses-depth-simulation-20261015-4",
+            "objective": "orientacion_macular",
+            "question": "La mácula utricular se describe como aproximadamente horizontal con la cabeza erguida. Si se inclina la cabeza, ¿qué interpretación conserva el marco de referencia de esa descripción?",
+            "options": [
+              "La mácula debe permanecer horizontal respecto del suelo en cualquier postura",
+              "La orientación permite deducir directamente la distancia recorrida por el cuerpo",
+              "La orientación aproximada convierte cualquier traslación en rotación",
+              "La referencia era la cabeza erguida; el órgano se orienta con ella al cambiar postura"
+            ],
+            "correct": 3,
+            "reasons": [
+              "Transforma una referencia anatómica condicionada a postura en una orientación fija respecto de la habitación.",
+              "La orientación de un receptor no lo convierte en un medidor directo de distancia absoluta recorrida.",
+              "Traslación y rotación siguen siendo componentes distintos; inclinar un órgano no vuelve idénticos ambos estímulos.",
+              "Correcto: conserva el contexto de la descripción y evita atribuir al órgano una posición absoluta independiente de la cabeza."
+            ],
+            "pdf_pages": [
+              633,
+              634
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Aplicar una descripción anatómica con referencia postural explícita.",
+            "supplementary_references": []
+          },
+          {
+            "content_id": "senses-depth-simulation-20261015-5",
+            "objective": "contexto_quimico",
+            "question": "El glutamato puede contribuir al umami de un alimento y participar como transmisor en retina. ¿Qué comparación evita deducir una función universal a partir del nombre de la molécula?",
+            "options": [
+              "Su papel depende del sitio, los receptores y el proceso; no vuelve idénticos gusto y señalización retiniana",
+              "La misma molécula obliga a que toda célula receptora produzca la misma respuesta",
+              "La sensación umami demuestra que la molécula viajó desde la lengua al espacio sináptico de la retina",
+              "Toda liberación retiniana de glutamato constituye una sensación gustativa"
+            ],
+            "correct": 0,
+            "reasons": [
+              "Correcto: la identidad química no sustituye el contexto funcional; se distinguen estímulo alimentario y señalización entre células.",
+              "Las respuestas dependen del sistema y de su mecanismo receptor, no solo de que aparezca el mismo nombre químico.",
+              "La comparación no propone ese transporte entre órganos; relaciona funciones distintas de una sustancia en contextos diferentes.",
+              "Confunde modalidad y ubicación: la señal retiniana participa en procesamiento visual, no se clasifica como gusto por su transmisor."
+            ],
+            "pdf_pages": [
+              620,
+              621,
+              650
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Integrar dos sentidos sin confundir identidad química con función.",
+            "supplementary_references": []
+          },
+          {
+            "content_id": "senses-depth-simulation-20261015-6",
+            "objective": "codigo_olfatorio",
+            "question": "En una matriz conceptual, A activa R1 y R2; B activa R1 y R3. Se elimina la respuesta R2, conservando las otras. ¿Qué lectura del patrón restante es correcta?",
+            "options": [
+              "A y B necesariamente quedan idénticos porque ambos usan R1",
+              "A conserva R1 y B conserva R1/R3; sigue habiendo una diferencia en ese ejemplo",
+              "Eliminar un receptor demuestra ausencia de toda olfacción en cualquier situación",
+              "La matriz permite asignar nombres reales a A y B sin datos adicionales"
+            ],
+            "correct": 1,
+            "reasons": [
+              "Compartir un componente no iguala las combinaciones completas: B aún conserva R3 en la matriz planteada.",
+              "Correcto: sigue la intervención y compara componentes restantes sin extrapolar el esquema a una prueba perceptiva humana.",
+              "La pérdida de un componente del ejemplo no demuestra eliminación de todas las respuestas del sistema olfatorio.",
+              "Las letras son estímulos conceptuales; no identifican sustancias medidas ni permiten inventar su nombre perceptivo."
+            ],
+            "pdf_pages": [
+              622,
+              623
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Actualizar y comparar combinaciones tras una intervención definida.",
+            "supplementary_references": [
+              "https://pubmed.ncbi.nlm.nih.gov/10089886/"
+            ]
+          }
+        ],
+        "scope": "Ampliación de objetivos revisados; no examen integral del capítulo.",
+        "review": "Segunda revisión automatizada; revisión docente pendiente."
+      },
+      "evaluation": {
+        "title": "Sentidos · Autoevaluación de mecanismos",
+        "questions": [
+          {
+            "content_id": "senses-depth-evaluation-20261015-1",
+            "objective": "gmpc",
+            "question": "En un modelo de fotorreceptor en oscuridad se reduce GMPc sin añadir luz, manteniendo la sensibilidad de sus canales a ese mensajero. ¿Qué cambio local corresponde al mecanismo estudiado?",
+            "options": [
+              "Apertura obligatoria de más canales y despolarización por cualquier caída de GMPc",
+              "Conversión de glutamato en GMPc como sustratos intercambiables",
+              "Menor apertura de canales dependientes de GMPc y tendencia a hiperpolarización",
+              "Aumento obligatorio de potenciales de acción en el propio fotorreceptor"
+            ],
+            "correct": 2,
+            "reasons": [
+              "Invierte la relación entre el mensajero y esos canales; no todos los descensos de concentración tienen el mismo efecto eléctrico.",
+              "El mensajero intracelular y el transmisor liberado cumplen funciones diferentes; no son sustratos intercambiables en ese paso.",
+              "Correcto: modifica directamente un eslabón intracelular y predice la respuesta local sin exigir la presencia de luz.",
+              "Confunde el potencial receptor graduado con potenciales de acción y salta a una salida que el modelo no establece."
+            ],
+            "pdf_pages": [
+              649,
+              650
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Predecir el efecto de intervenir un eslabón sin activar toda la cadena.",
+            "supplementary_references": []
+          },
+          {
+            "content_id": "senses-depth-evaluation-20261015-2",
+            "objective": "polaridad_coclear",
+            "question": "Dos flexiones de igual magnitud desvían el haz de una célula ciliada en direcciones opuestas. ¿Por qué no basta la magnitud para predecir la misma respuesta?",
+            "options": [
+              "Toda flexión de igual tamaño abre exactamente la misma proporción de canales",
+              "La dirección solo importa para el timbre y no para la respuesta celular",
+              "Solo importa la posición del soma, sin considerar la orientación del haz",
+              "La polaridad del haz permite cambios opuestos en apertura y potencial receptor"
+            ],
+            "correct": 3,
+            "reasons": [
+              "Ignora la relación entre dirección y funcionamiento mecanosensible; la amplitud del movimiento no resume todo el estímulo.",
+              "El enunciado compara transducción celular, donde la dirección del haz modifica la respuesta y no es un detalle solo perceptivo.",
+              "Omitir la orientación del haz descarta precisamente la relación mecánica que permite respuestas dependientes de dirección.",
+              "Correcto: distingue magnitud y dirección y conserva el papel de la polaridad en el mecanismo de transducción."
+            ],
+            "pdf_pages": [
+              630
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Separar dimensiones del estímulo mecánico y signo de respuesta.",
+            "supplementary_references": []
+          },
+          {
+            "content_id": "senses-depth-evaluation-20261015-3",
+            "objective": "salida_vestibular",
+            "question": "Un modelo conserva la señal vestibular de entrada durante giros, pero bloquea la respuesta compensadora de los músculos oculares. ¿Qué distinción permite explicar una imagen menos estable?",
+            "options": [
+              "Recibir información del movimiento no garantiza ejecutar la compensación motora de la mirada",
+              "Toda señal vestibular conservada obliga a que la imagen permanezca estable sin circuitos de salida",
+              "Los músculos oculares son la superficie que inicia la transducción vestibular",
+              "La observación demuestra por sí sola destrucción de las máculas"
+            ],
+            "correct": 0,
+            "reasons": [
+              "Correcto: entrada sensitiva y salida motora son etapas conectadas pero diferentes; el modelo interviene la segunda.",
+              "Omite la etapa motora que debe actuar sobre los ojos; conservar información no sustituye su ejecución.",
+              "La transducción se inicia en receptores vestibulares; los músculos ejecutan una salida y no sustituyen al epitelio receptor.",
+              "El ejercicio conserva la entrada y bloquea la salida; no prueba destrucción del receptor periférico ni un diagnóstico individual."
+            ],
+            "pdf_pages": [
+              637
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Ubicar un bloqueo posterior al receptor en un circuito sensoriomotor.",
+            "supplementary_references": []
+          },
+          {
+            "content_id": "senses-depth-evaluation-20261015-4",
+            "objective": "gusto_aferente",
+            "question": "Una célula gustativa mantiene su respuesta al estímulo, pero se interrumpe su comunicación basal con la fibra aferente. ¿Qué predicción distingue receptor epitelial y conducción nerviosa?",
+            "options": [
+              "El estímulo ya no debe disolverse en saliva porque se bloqueó una etapa basal",
+              "Puede conservarse la respuesta receptora sin asegurar transmisión normal por la fibra",
+              "La microvellosidad sustituye por sí sola al axón de la fibra interrumpida",
+              "La respuesta epitelial conservada demuestra integridad de todas las etapas centrales"
+            ],
+            "correct": 1,
+            "reasons": [
+              "El bloqueo basal no elimina por definición el acceso apical; confunde recepción química con comunicación posterior.",
+              "Correcto: la célula epitelial y la aferente no son la misma estructura, de modo que una etapa puede fallar mientras otra persiste.",
+              "La microvellosidad es una superficie receptora apical, no la fibra que conduce hacia el sistema nervioso central.",
+              "Una respuesta local no demuestra que estén intactas la transmisión posterior ni todas las etapas centrales del sistema."
+            ],
+            "pdf_pages": [
+              619,
+              620,
+              621
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Distinguir compartimentos celulares que cooperan en transmisión.",
+            "supplementary_references": []
+          },
+          {
+            "content_id": "senses-depth-evaluation-20261015-5",
+            "objective": "concentracion_olor",
+            "question": "Se mantiene la misma sustancia odorante y se aumenta su concentración. El conjunto de receptores que responde cambia. ¿Qué conclusión respeta el código combinatorio?",
+            "options": [
+              "Todo cambio de patrón prueba que se sustituyó la molécula por otra",
+              "La identidad del estímulo se demuestra solo contando receptores, sin importar cuáles",
+              "La concentración puede modificar el patrón sin que necesariamente cambie la sustancia",
+              "Un receptor que responde a más de un odorante invalida cualquier discriminación"
+            ],
+            "correct": 2,
+            "reasons": [
+              "El estudio complementario muestra que concentración y patrón se relacionan; variar el código no prueba sustitución química.",
+              "El patrón incluye qué componentes participan; reducirlo a una suma ignora diferencias entre combinaciones.",
+              "Correcto: conserva el control sobre identidad química y evita atribuir todo cambio de actividad a una molécula distinta.",
+              "La respuesta distribuida y combinatoria permite discriminación; no exige una correspondencia exclusiva uno a uno."
+            ],
+            "pdf_pages": [
+              622,
+              623
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Interpretar un cambio de patrón controlando identidad y concentración.",
+            "supplementary_references": [
+              "https://pubmed.ncbi.nlm.nih.gov/10089886/"
+            ]
+          },
+          {
+            "content_id": "senses-depth-evaluation-20261015-6",
+            "objective": "mensajeros",
+            "question": "Se comparan luz que reduce GMPc en un fotorreceptor y odorante que aumenta AMPc en una neurona olfatoria. ¿Qué principio permite predecir respuestas eléctricas diferentes?",
+            "options": [
+              "Todos los nucleótidos cíclicos abren los mismos canales en cualquier receptor",
+              "La respuesta depende solo del nombre químico del estímulo y no de canales",
+              "Ambas células deben hiperpolarizarse porque son receptoras sensitivas",
+              "Hay que seguir el mensajero, su cambio y los canales de cada sistema por separado"
+            ],
+            "correct": 3,
+            "reasons": [
+              "Generaliza a todos los receptores una asociación que depende del mensajero y de los canales específicos del sistema.",
+              "La transducción enlaza estímulo, señal intracelular y membrana; omitir canales impide explicar el signo del cambio.",
+              "La categoría de receptor sensitivo no impone una dirección eléctrica común: retina y olfato ilustran mecanismos diferentes.",
+              "Correcto: luz y odorante no usan idéntica cadena; seguir cada relación permite contrastar hiperpolarización y despolarización."
+            ],
+            "pdf_pages": [
+              622,
+              623,
+              649,
+              650
+            ],
+            "difficulty": "medio",
+            "difficulty_reason": "Comparar mecanismos completos sin extrapolar una regla de un sentido a otro.",
+            "supplementary_references": []
+          }
+        ],
+        "scope": "Ampliación de objetivos revisados; no examen integral del capítulo.",
+        "review": "Segunda revisión automatizada; revisión docente pendiente."
+      }
     }
   },
   "review": {

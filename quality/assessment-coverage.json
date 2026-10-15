@@ -126,9 +126,27 @@
       ],
       "full_objective_coverage": "pending: equal counts per legacy section do not establish mechanisms/application coverage",
       "new_independent_sets": {
-        "simulation": 0,
-        "self_assessment": 0,
-        "next": "Author distinct application sets for the reviewed sensory mechanisms."
+        "simulation": 6,
+        "self_assessment": 6,
+        "scope": "Targeted retinal, auditory, vestibular, gustatory and olfactory mechanism cases; not full chapter or classroom evaluation.",
+        "objectives": {
+          "simulation": [
+            "retina_on",
+            "tonotopia",
+            "sinapsis_coclear",
+            "orientacion_macular",
+            "contexto_quimico",
+            "codigo_olfatorio"
+          ],
+          "evaluation": [
+            "gmpc",
+            "polaridad_coclear",
+            "salida_vestibular",
+            "gusto_aferente",
+            "concentracion_olor",
+            "mensajeros"
+          ]
+        }
       }
     }
   ]

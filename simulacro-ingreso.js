@@ -8,6 +8,8 @@
         'morfo-sangre': { title: 'Sangre · Morfofunción', minutes: 40, split: [40, 0, 0], topic: 'sangre', examName: 'Práctica bibliográfica - Morfofunción - Sangre (40 preguntas)' },
         'blood-depth-simulation': { title: 'Sangre · Casos razonados', minutes: 8, split: [6, 0, 0], topic: 'sangre', depthSet: 'simulation' },
         'blood-depth-evaluation': { title: 'Sangre · Autoevaluación de mecanismos', minutes: 8, split: [6, 0, 0], topic: 'sangre', depthSet: 'evaluation' },
+        'senses-depth-simulation': { title: 'Sentidos · Casos razonados', minutes: 8, split: [6, 0, 0], topic: 'organos de los sentidos', depthSet: 'simulation' },
+        'senses-depth-evaluation': { title: 'Sentidos · Autoevaluación de mecanismos', minutes: 8, split: [6, 0, 0], topic: 'organos de los sentidos', depthSet: 'evaluation' },
         'morfo-sentidos': { title: 'Órganos de los sentidos · Morfofunción', minutes: 40, split: [40, 0, 0], topic: 'organos de los sentidos', examName: 'Práctica bibliográfica - Morfofunción - Órganos de los sentidos (40 preguntas)' }
     };
     const subjects = ['MORFOFUNCION', 'BIOLOGIA CELULAR', 'SALUD PUBLICA'];

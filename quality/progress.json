@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "blood_independent_cases_reviewed_ready_to_publish",
+  "status": "senses_independent_cases_reviewed_publication_pending",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -838,11 +838,77 @@
         "quality/assessment-coverage.json"
       ],
       "deployment": {
+        "commit": "fa8c5b0",
+        "status": "Vercel success",
+        "anonymous_content": "401",
+        "raw_authoring": "404",
+        "admin_live": "Both new cards visible; selected self-assessment shows six questions/eight minutes, protected first question and running timer. No manual finalization submitted.",
+        "browser_cleanup": "Exit confirmation caused browser control timeouts. Could not confirm discard; temporary unmarked tab left for automatic turn cleanup. No claim that a grade was or was not automatically persisted."
+      }
+    },
+    {
+      "id": "senses-independent-assessments-2026-10-15",
+      "new_questions": 12,
+      "simulation_questions": 6,
+      "self_assessment_questions": 6,
+      "per_option_explanations": 48,
+      "minutes_per_set": 8,
+      "source_pages": {
+        "saladin_pdf": [
+          619,
+          620,
+          621,
+          622,
+          623,
+          630,
+          631,
+          633,
+          634,
+          637,
+          649,
+          650
+        ]
+      },
+      "source_complements": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK10867/",
+        "https://pubmed.ncbi.nlm.nih.gov/10089886/"
+      ],
+      "coverage_audit": "quality/assessment-coverage.json lists the twelve targeted objectives. Stems distinct from legacy simulations, evaluations and map practice; no claim of full objective coverage.",
+      "delivery": "Two additional choices in existing Simulacros: Sentidos Casos razonados and Autoevaluacion de mecanismos, using protected content and actual timer/scoring/final review. Not a new classroom evaluation.",
+      "review": "Second automated academic and visual pass; teacher approval pending.",
+      "corrections": [
+        "Replaced weak distractors with specific mechanism confusions.",
+        "Distinguish retinal ON bipolar response from photoreceptor response.",
+        "Specify head orientation for utricular macula and separate receptor transduction from synaptic and motor outputs.",
+        "Use olfactory receptor combinations as a conceptual model without claiming a human experimental result.",
+        "Reject authenticated responses from the wrong topic."
+      ],
+      "tests": [
+        "22 access/source/identity/controller regression tests passed.",
+        "Actual controller: six questions, eight minutes; both Senses and Blood UI harnesses pass.",
+        "Both forms at 390 and 1440 pixels: three correct, two incorrect, one unanswered yields 3/6 and 50 percent.",
+        "All six review items include four alternative explanations and sources; no page errors or horizontal overflow.",
+        "Free choices make no private content request; denied or changed sessions and mismatched topic responses fail closed.",
+        "Local UI persistence stubbed; no live exam submitted for this batch."
+      ],
+      "limitations": [
+        "Targeted cases only; full chapter and classroom evaluation expansion remain pending.",
+        "No new downloadable illustration in this assessment batch; existing branded quiz design reused.",
+        "Teacher approval has not been received."
+      ],
+      "files": [
+        "api/_mindmaps/curated/build_senses_assessments.py.source",
+        "api/_mindmaps/morfo_16_organos_sentidos__11.json",
+        "study-assessments.js",
+        "simulacro-ingreso.js",
+        "quality/assessment-coverage.json"
+      ],
+      "deployment": {
         "status": "pending"
       }
     }
   ],
-  "next_action": "Prepare distinct application simulation and self-assessment sets for reviewed Senses mechanisms, with objective mapping and no duplicate map-practice stems. Continue full coverage audit and hepatic/vitamin-K plus disorder objectives. Do not claim whole chapters or classroom assessments fully reviewed.",
+  "next_action": "Continue full objective review: blood hepatic/vitamin-K and disorder mechanisms; senses general sensation, central pathways and optics. Expand targeted maps/practice and independent assessment coverage after source review. No whole-chapter or classroom approval claim.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

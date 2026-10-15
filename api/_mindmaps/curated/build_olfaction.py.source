@@ -96,4 +96,7 @@ def main():
   p=ROOT/'content'/file;rows=[r for r in json.loads(p.read_text(encoding='utf8')) if r['id']!=ID]+[meta];p.write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
  rows=json.loads((ROOT/'content/mindmaps-premium-catalog.json').read_text(encoding='utf8'));(ROOT/'mindmap-premium-catalog.js').write_text('/* Public metadata only. Full explanations and downloads require verified access. */\nwindow.MINDMAP_PREMIUM_CATALOG = '+json.dumps(rows,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf8')
  print('Olfato: 18 explanations, 10 cards, 6 questions with four-option explanations.')
+ import runpy
+ extension=ROOT/'api/_mindmaps/curated/build_senses_assessments.py.source'
+ if extension.exists():runpy.run_path(str(extension))['main']()
 if __name__=='__main__':main()
