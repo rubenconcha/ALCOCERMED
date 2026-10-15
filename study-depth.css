@@ -3,4 +3,4 @@
 #study-area .depth-card .text-inner p,#study-area .depth-card .back-text p{max-width:100%;margin:0;line-height:1.55;font-weight:500;font-size:17px;letter-spacing:normal;text-align:left;white-space:pre-line;text-transform:none;text-shadow:none;overflow-wrap:anywhere}
 #study-area .depth-card .text-inner p{font-size:21px;font-weight:700;line-height:1.4}
 #study-area .depth-card .depth-brand{position:absolute;z-index:3;top:14px;left:18px;width:42px;height:34px;object-fit:contain}
-.bq-depth .bq-option-btn,.bq-depth .bq-question-text,.bq-depth #bq-comentario-text{text-transform:none}
+.bq-depth .bq-option-btn,.bq-depth .bq-option-text,.bq-depth .bq-question-text,.bq-depth #bq-comentario-text{text-transform:none}

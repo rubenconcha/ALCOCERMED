@@ -35,6 +35,7 @@ const section=id=>{const start=campus.indexOf('<section id="'+id+'"');return cam
    for(let index=0;index<12;index++){
     await page.evaluate(index=>{document.getElementById('study-area').classList.add('hidden');document.getElementById('banco-screen').classList.remove('hidden');document.getElementById('banco-selector').classList.add('hidden');document.getElementById('banco-quiz').classList.remove('hidden');bancoState.currentIdx=index;bancoState.answers[index]={selected:0};renderBancoQuestion();document.getElementById('bq-comentario-body').classList.remove('hidden');},index);
     assert.equal(await page.$$eval('#bq-options button',n=>n.length),4);assert.ok((await page.$eval('#bq-comentario-text',n=>n.textContent)).includes('D. '));
+    assert.equal(await page.$eval('.bq-option-text',n=>getComputedStyle(n).textTransform),'none');
     if(index===0||index===6)await page.screenshot({path:path.join(root,'output/study-depth-qa',`bank-${index}-${width}.png`)});
    }
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
