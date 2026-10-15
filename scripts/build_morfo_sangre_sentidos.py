@@ -55,53 +55,9 @@ SELECT 'flashcards' recurso,count(*) cantidad FROM public.flashcards WHERE mater
     return sql,questions,simq
 
 def pdf_summary(slug,title,chapter,sections):
-    from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,PageBreak,Table,TableStyle,KeepTogether
-    from reportlab.lib.styles import ParagraphStyle
-    from reportlab.lib import colors
-    from reportlab.lib.enums import TA_LEFT
-    from reportlab.pdfbase import pdfmetrics
-    from reportlab.pdfbase.ttfonts import TTFont
-    from reportlab.lib.pagesizes import A4
-    from pypdf import PdfReader
-    import fitz
-    pdfmetrics.registerFont(TTFont('Course','C:/Windows/Fonts/arial.ttf'));pdfmetrics.registerFont(TTFont('CourseBold','C:/Windows/Fonts/arialbd.ttf'))
-    pdfmetrics.registerFontFamily('Course',normal='Course',bold='CourseBold',italic='Course',boldItalic='CourseBold')
-    navy='#18263f';accent='#b34350' if slug=='sangre' else '#177c9f';width,height=A4
-    styles={
-      'title':ParagraphStyle('title',fontName='CourseBold',fontSize=23,leading=28,textColor=colors.HexColor(navy),spaceAfter=15),
-      'body':ParagraphStyle('body',fontName='Course',fontSize=10,leading=15,textColor=colors.HexColor('#344258'),spaceAfter=12),
-      'key':ParagraphStyle('key',fontName='Course',fontSize=9.3,leading=13.4,textColor=colors.HexColor('#344258'),spaceAfter=8),
-      'small':ParagraphStyle('small',fontName='Course',fontSize=8,leading=11.5,textColor=colors.HexColor('#60718a')),
-      'label':ParagraphStyle('label',fontName='CourseBold',fontSize=10.2,leading=15,textColor=colors.HexColor(accent),spaceBefore=12,spaceAfter=10)}
-    target=ROOT/'api'/'_pdf'/f'morfofuncion-{slug}.pdf';target.parent.mkdir(parents=True,exist_ok=True)
-    def frame(c,doc):
-      c.setFillColor(colors.HexColor(navy));c.rect(0,height-58,width,58,fill=1,stroke=0)
-      c.setFillColor(colors.white);c.setFont('CourseBold',12);c.drawString(40,height-28,'PREPARATORIA BEN CARSON')
-      c.setFont('Course',8);c.drawString(40,height-43,f'MORFOFUNCIÓN  /  {title.upper()}  /  SALADIN - CAPÍTULO {chapter}')
-      c.setFillColor(colors.HexColor(accent));c.rect(0,height-62,width,4,fill=1,stroke=0)
-      c.setStrokeColor(colors.HexColor('#dce5ee'));c.line(40,46,width-40,46);c.setFillColor(colors.HexColor('#60718a'));c.setFont('Course',7)
-      c.drawString(40,31,'Síntesis original para estudio. Consulta el texto base para ampliar cada apartado.');c.drawRightString(width-40,31,f'{doc.page} / 10')
-    story=[]
-    for i,section in enumerate(sections):
-      first,last=map(int,section['pages'].split('-'));printed=f'{first-28}-{last-28}'
-      story.append(Paragraph(f'BLOQUE {i+1:02d} / 10',styles['label']))
-      story.append(Paragraph(escape(section['title']),styles['title']))
-      story.append(Paragraph(escape(section['summary']),styles['body']))
-      story.append(Paragraph('CONCEPTOS ESENCIALES',styles['label']))
-      for n,item in enumerate(section['items']):
-        text=f'<b>{escape(item["correct"])}.</b> {escape(item["explanation"])}'
-        table=Table([[Paragraph(f'{n+1:02d}',styles['small']),Paragraph(text,styles['key'])]],colWidths=[25,width-105])
-        table.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),5),('RIGHTPADDING',(0,0),(-1,-1),6),('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),4),('BACKGROUND',(0,0),(-1,-1),colors.HexColor('#f4f7fa' if n%2==0 else '#ffffff'))]))
-        story.append(table)
-      story.append(Spacer(1,12));story.append(Paragraph(f'<b>Fuente de este bloque:</b> Saladin, capítulo {chapter}. Páginas del libro {printed}; páginas del PDF {section["pages"]}.',styles['small']))
-      if i<9:story.append(PageBreak())
-    SimpleDocTemplate(str(target),pagesize=A4,rightMargin=40,leftMargin=40,topMargin=80,bottomMargin=60,title=f'{title} - Resumen de Morfofunción',author='Preparatoria Ben Carson').build(story,onFirstPage=frame,onLaterPages=frame)
-    assert len(PdfReader(target).pages)==10,f'Pagination overflow: {target}'
-    preview=ROOT/'assets'/'resumenes-portadas'/f'morfofuncion-{slug}.png';preview.parent.mkdir(parents=True,exist_ok=True)
-    doc=fitz.open(target);doc[0].get_pixmap(matrix=fitz.Matrix(1,1)).save(preview)
-    qa=ROOT/'output'/'morfo-sangre-sentidos'/'pdf-qa';qa.mkdir(parents=True,exist_ok=True)
-    for i,page in enumerate(doc):page.get_pixmap(matrix=fitz.Matrix(1.1,1.1)).save(qa/f'{slug}-{i+1:02d}.png')
-    copy=ROOT/'output'/'pdf'/target.name;copy.parent.mkdir(parents=True,exist_ok=True);copy.write_bytes(target.read_bytes())
+    from summary_visual_design import pdf_summary as build_visual
+    build_visual(slug,title,chapter,sections)
+
 
 def main():
     bank=[];packs=[];fc=json.loads((ROOT/'content'/'flashcards_morfo_2026.json').read_text(encoding='utf8'))

@@ -28,6 +28,14 @@ for p in packs:
     for i,page in enumerate(reader.pages):
         text=page.extract_text();assert 'CONCEPTOS ESENCIALES' in text and 'Fuente de este bloque' in text
         assert p['sections'][i]['title'] in re.sub(r'\s+',' ',text) and '\ufffd' not in text
+        assert 'PREPARATORIA BEN CARSON' in text and 'ALCOCERMED' in text
+        assert 'COMPRUEBA TU COMPRENSIÓN' in text and 'Ilustración generada con IA' in text
+        # Both the original institutional mark and the generated illustration must
+        # be actual embedded images, not merely references in page text.
+        images=page.images
+        assert len(images)>=2 and any(im.image.width>=700 for im in images)
+        for item in p['sections'][i]['items']:
+            assert item['correct'] in re.sub(r'\s+',' ',text)
     assert (ROOT/'assets/resumenes-portadas'/f'{p["summary"]}.png').exists()
     sql=(ROOT/f'SQL_MORFO_{p["slug"].upper()}_COMPLETO_2026.sql').read_text(encoding='utf8')
     assert 'WHERE NOT EXISTS' in sql and 'ON CONFLICT(id) DO NOTHING' in sql

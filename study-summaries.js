@@ -17,8 +17,8 @@
         { subject: 'Morfofunción', topic: 'Tema 4', title: 'Genética y función celular', pages: 8, file: 'morfofuncion-tema-4', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 5', title: 'Histología', pages: 8, file: 'morfofuncion-tema-5', kind: 'morfo' },
         { subject: 'Morfofunción', topic: 'Tema 6', title: 'El sistema tegumentario', pages: 8, file: 'morfofuncion-tema-6', kind: 'morfo' },
-        { subject: 'Morfofunción', topic: 'Capítulo 16', title: 'Órganos de los sentidos', pages: 10, file: 'morfofuncion-sentidos', kind: 'morfo' },
-        { subject: 'Morfofunción', topic: 'Capítulo 18', title: 'Sangre', pages: 10, file: 'morfofuncion-sangre', kind: 'morfo' },
+        { subject: 'Morfofunción', topic: 'Capítulo 16', title: 'Órganos de los sentidos', pages: 10, file: 'morfofuncion-sentidos', kind: 'morfo', revision: 2 },
+        { subject: 'Morfofunción', topic: 'Capítulo 18', title: 'Sangre', pages: 10, file: 'morfofuncion-sangre', kind: 'morfo', revision: 2 },
     ];
 
     const grid = document.getElementById('resumenes-grid');
@@ -67,7 +67,7 @@
         const preview = document.createElement('div');
         preview.className = 'resumenes-card-image';
         const image = document.createElement('img');
-        image.src = `/assets/resumenes-portadas/${item.file}.png`;
+        image.src = `/assets/resumenes-portadas/${item.file}.png${item.revision ? `?v=${item.revision}` : ''}`;
         image.alt = `Portada de ${item.subject}, ${item.topic}`;
         image.loading = 'lazy';
         preview.append(image);
