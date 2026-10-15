@@ -206,7 +206,8 @@
         "Corrected Ca2+ to enter from outside the basal hair-cell membrane.",
         "Removed an unrequested slogan.",
         "Preserved other curated maps when rebuilding the pilot registry.",
-        "Supplementary source attribution now carried into normal flashcard/bank rows."
+        "Supplementary source attribution now carried into normal flashcard/bank rows.",
+        "The final mobile pass caught long supplementary URLs overflowing bank feedback; added wrapping and paragraph preservation and reran all 18 question renderers successfully."
       ],
       "tests": [
         "13 private-access/content/adapter tests passed",
