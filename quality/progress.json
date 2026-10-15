@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "all_short_official_flashcard_decks_reviewed_local_qa_passed_publication_pending",
+  "status": "full_real_simulation_library_verified_publication_pending",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -1248,11 +1248,95 @@
         "Full chapter objective review, map/summary improvements and teacher approval are separate ongoing work."
       ],
       "deployment": {
-        "status": "pending"
+        "commit": "fe7e19b",
+        "status": "Vercel success",
+        "public_assets": "Campus, study-depth v12, main script v54 and mobile stylesheet v2 return 200 with new markers.",
+        "anonymous_private_library": 401,
+        "invalid_token_private_library": 401,
+        "raw_complete_json": 404,
+        "raw_authoring": 404,
+        "cache_control": "private, no-store on protected resources",
+        "production_authenticated_session": "Not verified: available Chrome connection timed out. No student grades or memberships modified.",
+        "checks": "tmp/flashcard-all/deployment-check.json"
       }
+    },
+    {
+      "id": "full-real-simulation-library-2026-10-15",
+      "request": "More complete real simulators, remove mini entries, provide a clear menu and filters.",
+      "delivered": {
+        "real_original_papers_available_as_strict_simulations": 11,
+        "questions_per_paper": 100,
+        "duration_minutes": 100,
+        "full_integral_practice_modes": 2,
+        "total_full_catalog_entries": 13,
+        "entries_per_page": 6,
+        "filters": [
+          "All / real historical exams / integral practice",
+          "Year",
+          "Exam type",
+          "Text search",
+          "Clear filters"
+        ],
+        "chapter_practices_moved_to": "Evaluación · Prácticas de capítulo; six 6/40-question activities retained, no longer advertised as full simulators.",
+        "mini_50_question_formats_removed": true
+      },
+      "source": {
+        "catalog": "content/past-exams/catalog.json",
+        "original_document_sha256": "01a6b07092cf6fe6b7102ae23a98ed489f203215ce5a96a62282a0faa9674e6e",
+        "paper_ids": [
+          "2021-1",
+          "2021-2",
+          "2021-2022-3",
+          "2022-2023-1",
+          "2022-2023-3",
+          "2023-2024-2",
+          "2023-2024-3",
+          "2024-2025-2",
+          "2024-2025-3",
+          "2025-2026-1",
+          "2025-2026-2"
+        ],
+        "provenance": "Existing supplied original past papers, newly integrated into a strict timed simulator workflow. Not 11 newly authored exams; no new or padded question counts. Original papers and accepted answer sets are unchanged.",
+        "incomplete_papers": "Four historical papers with missing/excluded questions remain in Exámenes pasados and are not presented as complete 100-question simulations."
+      },
+      "behavior": [
+        "Real simulations enforce a 100-minute deadline; archival Exámenes pasados retains its existing overtime study mode.",
+        "Original numeric and multiple accepted answers remain valid; final pattern tools remain available.",
+        "Returning from a timed historical simulation opens the simulator catalog.",
+        "Filters and pagination clear a hidden selection, preventing accidental start of another paper.",
+        "Free-year and paid permissions remain governed by existing authenticated API; no questions in public catalog.",
+        "Cross-account/session changes or a wrong response cannot launch a paper."
+      ],
+      "checks": [
+        "48 relevant content, timer, permission, SRS and existing-study regression tests passed.",
+        "Real catalog controller at 1440/390: 13 full entries; all eleven original 100-question papers start; no partial paper padded.",
+        "Year/type/search/reset, pagination and empty-selection disabled start verified.",
+        "Strict deadline auto-submission and 100/100 scoring including multiple accepted answers verified through actual renderer.",
+        "Desktop/mobile exam, final review of all 100 items, responsive results, and original answer integrity verified.",
+        "Independent chapter practice regression passed after moving entry points to Evaluation.",
+        "Catalog desktop and mobile screenshots visually inspected; removed desktop launch-panel overlap and fixed mobile result summary overflow."
+      ],
+      "visuals": "Existing typography, original platform branding and code-based interface; no generated bitmap claimed.",
+      "files": [
+        "simulacro-library.js",
+        "simulacro-library.css",
+        "simulacro-ingreso.js",
+        "past-exams.js",
+        "script.js",
+        "campus.html",
+        "tests/real-simulacros.test.cjs",
+        "scripts/check_simulacro_library.cjs"
+      ],
+      "deployment": {
+        "status": "pending"
+      },
+      "limitations": [
+        "Production authenticated browser walkthrough unavailable; local actual-controller tests and post-deployment asset/API checks are recorded separately.",
+        "No new academic approval is attributed to the doctor. No student results or membership records modified."
+      ]
     }
   ],
-  "next_action": "Confirm publication of the reviewed all-short-deck flashcard expansion. Then continue objective-level depth review beyond the first 20–24 cards per newly expanded topic, keeping paid access, existing SRS identities and student records intact. Verify any additional legacy/renamed production decks once the authenticated browser reconnects; do not equate the 68 flashcard source topics with the 74 map chapters.",
+  "next_action": "Continue objective-level depth review beyond the first 20–24 cards per newly expanded topic, keeping paid access, existing SRS identities and student records intact. Verify any additional legacy/renamed production decks once the authenticated browser reconnects; do not equate the 68 flashcard source topics with the 74 map chapters. Publication fe7e19b has been confirmed.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

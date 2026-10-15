@@ -2316,6 +2316,12 @@
     ],
     "protected_cards": 1416,
     "reviewed_selection_corrections": 36,
-    "publication": "pending"
+    "publication": "fe7e19b: Vercel success; current public assets verified; private library 401 and raw files 404; authenticated production deck counts not directly audited.",
+    "tested_topic_count": 68,
+    "tested_subject_topic_counts": {
+      "MORFOFUNCION": 29,
+      "BIOLOGIA CELULAR": 18,
+      "SALUD PUBLICA": 21
+    }
   }
 }

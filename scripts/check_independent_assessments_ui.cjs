@@ -11,10 +11,10 @@ page.on('request',r=>{const u=new URL(r.url());
  if(u.pathname==='/api/mindmap'){requests++;assert.equal(r.headers().authorization,'Bearer qa');return r.respond({contentType:'application/json',body:fs.readFileSync(path.join(root,'api/_mindmaps',u.searchParams.get('id')+'.json'))});}
  const file=path.join(root,u.pathname.slice(1));if(fs.existsSync(file)&&fs.statSync(file).isFile())return r.respond({contentType:{'.js':'application/javascript','.css':'text/css','.png':'image/png'}[path.extname(file)]||'text/plain',body:fs.readFileSync(file)});r.respond({status:404,body:''});
 });
-await page.goto('http://127.0.0.1:8771/qa');await page.click('#entrance-'+prefix+'-depth-simulation');assert.equal(requests,0);assert.equal(await page.evaluate(()=>planVisits),1);await page.evaluate(()=>free=false);
+await page.goto('http://127.0.0.1:8771/qa');await page.evaluate(k=>startTopicAssessment(k),prefix+'-depth-simulation');assert.equal(requests,0);assert.equal(await page.evaluate(()=>planVisits),1);await page.evaluate(()=>free=false);
 const out=path.join(root,'output/study-depth-qa/independent-assessments',prefix);fs.mkdirSync(out,{recursive:true});
 for(const width of [1440,390])for(const kind of ['simulation','evaluation']){
- await page.setViewport({width,height:1000});await page.evaluate(()=>showSimScreen('sim-config'));await page.click('#entrance-'+prefix+'-depth-'+kind);await page.click('#sim-start-btn');await page.waitForSelector('#sim-options button');
+ await page.setViewport({width,height:1000});await page.evaluate(()=>showSimScreen('sim-config'));await page.evaluate(k=>selectEntranceExam(k),prefix+'-depth-'+kind);await page.click('#sim-start-btn');await page.waitForSelector('#sim-options button');
  assert.equal(await page.evaluate(()=>simState.secondsLeft<=480&&simState.secondsLeft>470),true);assert.equal(await page.$$eval('#sim-options button',n=>n.length),4);assert.equal(await page.$$eval('#sim-review-list .sim-review-item',n=>n.length),0);
  await page.screenshot({path:path.join(out,kind+'-exam-'+width+'.png')});
  for(let i=0;i<5;i++){await page.evaluate(i=>simGoTo(i),i);const answer=await page.evaluate(i=>{const q=simState.preguntas[i];return i<3?'ABCD'.indexOf(q.respuesta_correcta):('ABCD'.indexOf(q.respuesta_correcta)+1)%4;},i);await page.click('#sim-options button:nth-child('+(answer+1)+')');}

@@ -1,0 +1,24 @@
+#sim-config .sim-library-hero{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;background:linear-gradient(120deg,#102640,#17466a);border-radius:22px;padding:30px;color:white;margin-bottom:22px}
+#sim-config .sim-library-hero h3{font-size:clamp(23px,3vw,32px);line-height:1.15;margin:0 0 12px;color:white;text-transform:none}
+#sim-config .sim-library-hero p{font-size:14px;color:#d7e7f1;line-height:1.6;margin:0}
+#sim-config .sim-library-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:center}
+#sim-config .sim-library-stats span{font-size:12px;color:#c5dfed;text-align:center}
+#sim-config .sim-library-stats b{display:block;color:#ffd34b;font-size:25px;margin-bottom:7px}
+#sim-config .sim-library-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+#sim-config .sim-library-tabs button,#sim-config .sim-library-filters button,.sim-library-retry{font:inherit;font-size:14px;font-weight:700;border:1px solid #cedce8;border-radius:12px;background:#fff;color:#25425b;padding:12px 17px;cursor:pointer}
+#sim-config .sim-library-tabs button[aria-pressed=true]{background:#123b58;color:#fff;border-color:#123b58}
+#sim-config .sim-library-filters{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:12px;padding:20px;border:1px solid #dbe5ee;border-radius:18px;background:#fff;align-items:end}
+#sim-config .sim-library-filters label{display:grid;gap:7px;font-size:12px;font-weight:700;color:#4e6681;min-width:0}
+#sim-config .sim-library-filters input,#sim-config .sim-library-filters select{width:100%;min-height:44px;box-sizing:border-box;border:1px solid #cbd9e6;border-radius:10px;padding:10px;background:#f8fafc;color:#203a54;font:inherit;font-size:14px}
+#sim-library-status{color:#536c81;font-size:14px;margin:20px 2px 14px}
+#sim-config .entrance-choice{min-height:205px}#sim-config .entrance-choice strong{text-transform:none}
+#sim-config .entrance-launch{position:static;box-shadow:0 8px 30px #15374a24;background:#eff8fc}
+#sim-config .entrance-start:disabled{opacity:.5;cursor:default}
+#sim-config .sim-library-provenance{font-size:12px;color:#5c748a;line-height:1.7;margin:20px 2px}
+.sim-library-empty{grid-column:1/-1;padding:32px;background:#fff;border:1px dashed #becfdd;border-radius:16px;text-align:center;color:#4e6881}
+.sim-library-pages{display:flex;justify-content:center;gap:16px;align-items:center;margin:22px 0;font-size:13px;color:#496379}.sim-library-pages[hidden]{display:none}.sim-library-pages button{font:inherit;border:1px solid #cad9e5;border-radius:10px;background:white;padding:10px 13px;color:#193e5b;cursor:pointer}.sim-library-pages button:disabled{opacity:.4;cursor:default}
+#sim-result{min-width:0}#sim-result .sim-result-wrap{width:100%;box-sizing:border-box;min-width:0}#sim-result .sim-review-item{overflow-wrap:anywhere}
+#sim-config .sim-library-hero *,#sim-config .sim-library-tabs *,#sim-config .sim-library-filters *,#sim-library-status,#sim-config .sim-library-provenance{text-transform:none}
+@media(max-width:850px){#sim-config .sim-library-hero{grid-template-columns:1fr}#sim-config .sim-library-filters{grid-template-columns:1fr 1fr}#sim-config .sim-library-filters label:first-child{grid-column:1/-1}}
+@media(max-width:550px){#sim-config .sim-library-hero{padding:22px}#sim-config .sim-library-stats b{font-size:22px}#sim-config .sim-library-filters{grid-template-columns:1fr;padding:16px}#sim-config .sim-library-tabs{display:grid;grid-template-columns:1fr}#sim-config .entrance-launch{position:static;flex-direction:column;align-items:stretch}#sim-config .entrance-choices{grid-template-columns:1fr}}
+@media(max-width:550px){#sim-result .sim-stats-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}#sim-result .sim-result-actions{flex-wrap:wrap}#sim-result .sim-result-actions button{min-width:0;width:100%;white-space:normal}}

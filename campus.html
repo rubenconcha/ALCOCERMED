@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="mindmap-viewer.css?v=7">
     <link rel="stylesheet" href="study-depth.css?v=3">
     <link rel="stylesheet" href="flashcard-workspace.css?v=2">
+    <link rel="stylesheet" href="simulacro-library.css?v=1">
     <link rel="stylesheet" href="past-exams.css?v=2">
     <link rel="stylesheet" href="campus-atlas.css?v=4">
 </head>
@@ -815,70 +816,29 @@
                     <div>
                         <span class="entrance-eyebrow">PREPARATORIA BEN CARSON · MEDICINA</span>
                         <h2 class="sim-title">Simulacros de ingreso</h2>
-                        <p class="sim-subtitle">Elige una prueba. El tiempo comienza al entrar y las respuestas se revisan al finalizar.</p>
+                        <p class="sim-subtitle">Filtra por gestión o tipo, elige tu prueba y comienza. El tiempo se inicia cuando entras al examen.</p>
                     </div>
                 </div>
 
-                <div class="entrance-overview" aria-label="Distribución del simulacro completo">
-                    <div class="entrance-overview-main"><span>Formato completo</span><strong>100 preguntas · 100 minutos</strong></div>
-                    <div class="entrance-subject"><b>50</b><span>Morfofunción</span></div>
-                    <div class="entrance-subject"><b>30</b><span>Biología celular</span></div>
-                    <div class="entrance-subject"><b>20</b><span>Educación para la Salud</span></div>
+                <div class="sim-library-hero">
+                    <div><span class="entrance-eyebrow">ENTRENA EN CONDICIONES DE EXAMEN</span><h3>Tu próximo examen empieza aquí</h3><p>Elige una prueba completa, administra tu tiempo y revisa tus respuestas al finalizar.</p></div>
+                    <div class="sim-library-stats"><span><b id="sim-real-count">11</b> exámenes reales</span><span><b>100</b> preguntas por prueba</span><span><b>100 min</b> con cierre automático</span></div>
                 </div>
-
-                <div class="entrance-choices" role="group" aria-label="Elegir simulacro">
-                    <button type="button" id="entrance-full" class="entrance-choice is-selected" onclick="selectEntranceExam('full')" aria-pressed="true">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">DEMO ABIERTO</span><span class="entrance-choice-radio" aria-hidden="true"></span></span>
-                        <strong>Simulacro completo</strong>
-                        <span class="entrance-choice-description">Una prueba integral con el reparto de las tres asignaturas.</span>
-                        <span class="entrance-choice-metrics"><span><b>100</b> preguntas</span><span><b>100</b> minutos</span></span>
-                        <span class="entrance-choice-split">50 Morfofunción · 30 Biología · 20 Salud</span>
-                    </button>
-                    <button type="button" id="entrance-mini" class="entrance-choice" onclick="selectEntranceExam('mini')" aria-pressed="false">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">DEMO ABIERTO</span><span class="entrance-choice-radio" aria-hidden="true"></span></span>
-                        <strong>Mini simulacro</strong>
-                        <span class="entrance-choice-description">La misma proporción, en una sesión más breve.</span>
-                        <span class="entrance-choice-metrics"><span><b>50</b> preguntas</span><span><b>50</b> minutos</span></span>
-                        <span class="entrance-choice-split">25 Morfofunción · 15 Biología · 10 Salud</span>
-                    </button>
-                    <button type="button" id="entrance-premium-full" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('premium-full')" aria-pressed="false">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag entrance-choice-tag-plan">CON UN PLAN</span><span class="entrance-choice-radio" aria-hidden="true"></span></span>
-                        <strong>Nuevo simulacro completo</strong>
-                        <span class="entrance-choice-description">Otra selección de preguntas del banco bibliográfico.</span>
-                        <span class="entrance-choice-metrics"><span><b>100</b> preguntas</span><span><b>100</b> minutos</span></span>
-                        <span class="entrance-choice-split">50 Morfofunción · 30 Biología · 20 Salud</span>
-                    </button>
-                    <button type="button" id="entrance-premium-mini" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('premium-mini')" aria-pressed="false">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag entrance-choice-tag-plan">CON UN PLAN</span><span class="entrance-choice-radio" aria-hidden="true"></span></span>
-                        <strong>Nuevo mini simulacro</strong>
-                        <span class="entrance-choice-description">Una práctica corta con una nueva selección.</span>
-                        <span class="entrance-choice-metrics"><span><b>50</b> preguntas</span><span><b>50</b> minutos</span></span>
-                        <span class="entrance-choice-split">25 Morfofunción · 15 Biología · 10 Salud</span>
-                    </button>
+                <nav class="sim-library-tabs" aria-label="Catálogo de simulacros">
+                    <button type="button" data-sim-category="all" aria-pressed="true">Todos</button>
+                    <button type="button" data-sim-category="real" aria-pressed="false">Exámenes reales</button>
+                    <button type="button" data-sim-category="practice" aria-pressed="false">Práctica integral</button>
+                </nav>
+                <div class="sim-library-filters">
+                    <label>Buscar una prueba<input id="sim-library-search" type="search" placeholder="Nombre, gestión o parcial…" autocomplete="off"></label>
+                    <label>Gestión<select id="sim-library-year"><option value="">Todas las gestiones</option></select></label>
+                    <label>Tipo de examen<select id="sim-library-type"><option value="">Todos los tipos</option><option>Primer parcial</option><option>Segundo parcial</option><option>Examen final</option><option>Práctica integral</option></select></label>
+                    <button type="button" id="sim-library-reset">Limpiar filtros</button>
                 </div>
-
-                <div class="morfo-topic-simulators entrance-choices" role="group" aria-label="Simulacros de Morfofunción por tema">
-                    <button type="button" id="entrance-morfo-sangre" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('morfo-sangre')" aria-pressed="false">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">MORFOFUNCIÓN · CAPÍTULO 18</span><span class="entrance-choice-radio" aria-hidden="true"></span></span><strong>Sangre</strong><span class="entrance-choice-description">Plasma, células sanguíneas, grupos ABO y Rh, hemostasia y coagulación.</span><span class="entrance-choice-metrics"><span><b>40</b> preguntas</span><span><b>40</b> minutos</span></span><span class="entrance-choice-split">Selección equilibrada de los diez bloques del capítulo.</span>
-                    </button>
-                    <button type="button" id="entrance-morfo-sentidos" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('morfo-sentidos')" aria-pressed="false">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">MORFOFUNCIÓN · CAPÍTULO 16</span><span class="entrance-choice-radio" aria-hidden="true"></span></span><strong>Órganos de los sentidos</strong><span class="entrance-choice-description">Receptores, tacto, dolor, gusto, olfato, audición, equilibrio y visión.</span><span class="entrance-choice-metrics"><span><b>40</b> preguntas</span><span><b>40</b> minutos</span></span><span class="entrance-choice-split">Selección equilibrada de los diez bloques del capítulo.</span>
-                    </button>
-                </div>
-                <div class="entrance-choices" role="group" aria-label="Casos de Morfofunción">
-                    <button type="button" id="entrance-blood-depth-simulation" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('blood-depth-simulation')" aria-pressed="false">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SANGRE · APLICACIÓN</span><span class="entrance-choice-radio" aria-hidden="true"></span></span><strong>Casos razonados</strong><span class="entrance-choice-description">Diferencial, reservas, linajes y coagulación. Predice el mecanismo y revisa cada alternativa al terminar.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Bloque específico; no sustituye el simulacro integral.</span>
-                    </button>
-                    <button type="button" id="entrance-blood-depth-evaluation" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('blood-depth-evaluation')" aria-pressed="false">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SANGRE · AUTOEVALUACIÓN</span><span class="entrance-choice-radio" aria-hidden="true"></span></span><strong>Comprueba los mecanismos</strong><span class="entrance-choice-description">Una selección distinta de casos para comprobar transferencia del aprendizaje. Corrección al finalizar.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Preguntas diferentes de Casos razonados.</span>
-                    </button>
-                    <button type="button" id="entrance-senses-depth-simulation" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('senses-depth-simulation')" aria-pressed="false">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SENTIDOS · APLICACIÓN</span><span class="entrance-choice-radio" aria-hidden="true"></span></span><strong>Sentidos · Casos razonados</strong><span class="entrance-choice-description">Retina, cóclea, equilibrio y sentidos químicos. Sigue el mecanismo y compara respuestas entre sistemas.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Bloque específico; no sustituye el simulacro integral.</span>
-                    </button>
-                    <button type="button" id="entrance-senses-depth-evaluation" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('senses-depth-evaluation')" aria-pressed="false">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SENTIDOS · AUTOEVALUACIÓN</span><span class="entrance-choice-radio" aria-hidden="true"></span></span><strong>Sentidos · Comprueba los mecanismos</strong><span class="entrance-choice-description">Intervenciones sobre receptores, mensajeros, fibras y salidas motoras. Revisa las razones al finalizar.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Selección distinta de Casos razonados de Sentidos.</span>
-                    </button>
-                </div>
+                <p id="sim-library-status" role="status" aria-live="polite">Cargando simulacros completos…</p>
+                <div id="sim-library-list" class="entrance-choices" role="group" aria-label="Elegir simulacro completo"></div>
+                <nav id="sim-library-pages" class="sim-library-pages" aria-label="Páginas de simulacros"><button type="button" id="sim-library-prev">← Anterior</button><span id="sim-library-page"></span><button type="button" id="sim-library-next">Siguiente →</button></nav>
+                <p class="sim-library-provenance">Los exámenes reales conservan las preguntas y el patrón de respuesta de su gestión. La práctica integral usa 50 preguntas de Morfofunción, 30 de Biología Celular y 20 de Educación para la Salud.</p>
                 <div class="entrance-launch">
                     <div><span>Prueba seleccionada</span><strong id="entrance-selected-name">Simulacro completo</strong><small id="entrance-selected-detail">100 preguntas · 100 minutos</small></div>
                     <button class="btn-primary entrance-start" id="sim-start-btn" onclick="iniciarSimulacro()"><i class="fas fa-play"></i> Comenzar</button>
@@ -1026,6 +986,30 @@
             </div>
 
             <section class="morfo-topic-evaluations" aria-labelledby="morfo-evaluations-title"><h3 id="morfo-evaluations-title">Evaluaciones de Morfofunción</h3><p>Comprueba lo aprendido en cada tema. Cada evaluación tiene 30 preguntas.</p><div class="entrance-choices"><a id="morfo-eval-sangre" class="entrance-choice" href="/juegos/?code=SANG26"><span class="entrance-choice-tag">CAPÍTULO 18</span><strong>Sangre</strong><span class="entrance-choice-description">De la composición sanguínea a la hemostasia.</span><span class="morfo-eval-action">Abrir evaluación →</span></a><a id="morfo-eval-sentidos" class="entrance-choice" href="/juegos/?code=SENT26"><span class="entrance-choice-tag">CAPÍTULO 16</span><strong>Órganos de los sentidos</strong><span class="entrance-choice-description">Receptores y sentidos generales y especiales.</span><span class="morfo-eval-action">Abrir evaluación →</span></a></div></section>
+            <section class="morfo-topic-evaluations" aria-labelledby="chapter-practice-title"><h3 id="chapter-practice-title">Prácticas de capítulo</h3><p>Repasa un tema o comprueba sus mecanismos. Estas actividades tienen su propia duración.</p>
+                <div class="morfo-topic-simulators entrance-choices" role="group" aria-label="Prácticas de Morfofunción por tema">
+                    <button type="button" id="entrance-morfo-sangre" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('morfo-sangre')">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">MORFOFUNCIÓN · CAPÍTULO 18</span></span><strong>Sangre</strong><span class="entrance-choice-description">Plasma, células sanguíneas, grupos ABO y Rh, hemostasia y coagulación.</span><span class="entrance-choice-metrics"><span><b>40</b> preguntas</span><span><b>40</b> minutos</span></span><span class="entrance-choice-split">Selección equilibrada de los diez bloques del capítulo.</span>
+                    <span class="morfo-eval-action">Abrir práctica →</span></button>
+                    <button type="button" id="entrance-morfo-sentidos" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('morfo-sentidos')">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">MORFOFUNCIÓN · CAPÍTULO 16</span></span><strong>Órganos de los sentidos</strong><span class="entrance-choice-description">Receptores, tacto, dolor, gusto, olfato, audición, equilibrio y visión.</span><span class="entrance-choice-metrics"><span><b>40</b> preguntas</span><span><b>40</b> minutos</span></span><span class="entrance-choice-split">Selección equilibrada de los diez bloques del capítulo.</span>
+                    <span class="morfo-eval-action">Abrir práctica →</span></button>
+                </div>
+                <div class="entrance-choices" role="group" aria-label="Casos de Morfofunción">
+                    <button type="button" id="entrance-blood-depth-simulation" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('blood-depth-simulation')">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SANGRE · APLICACIÓN</span></span><strong>Casos razonados</strong><span class="entrance-choice-description">Diferencial, reservas, linajes y coagulación. Predice el mecanismo y revisa cada alternativa al terminar.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Bloque específico; no sustituye el simulacro integral.</span>
+                    <span class="morfo-eval-action">Abrir práctica →</span></button>
+                    <button type="button" id="entrance-blood-depth-evaluation" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('blood-depth-evaluation')">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SANGRE · AUTOEVALUACIÓN</span></span><strong>Comprueba los mecanismos</strong><span class="entrance-choice-description">Una selección distinta de casos para comprobar transferencia del aprendizaje. Corrección al finalizar.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Preguntas diferentes de Casos razonados.</span>
+                    <span class="morfo-eval-action">Abrir práctica →</span></button>
+                    <button type="button" id="entrance-senses-depth-simulation" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('senses-depth-simulation')">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SENTIDOS · APLICACIÓN</span></span><strong>Sentidos · Casos razonados</strong><span class="entrance-choice-description">Retina, cóclea, equilibrio y sentidos químicos. Sigue el mecanismo y compara respuestas entre sistemas.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Bloque específico; no sustituye el simulacro integral.</span>
+                    <span class="morfo-eval-action">Abrir práctica →</span></button>
+                    <button type="button" id="entrance-senses-depth-evaluation" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('senses-depth-evaluation')">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SENTIDOS · AUTOEVALUACIÓN</span></span><strong>Sentidos · Comprueba los mecanismos</strong><span class="entrance-choice-description">Intervenciones sobre receptores, mensajeros, fibras y salidas motoras. Revisa las razones al finalizar.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Selección distinta de Casos razonados de Sentidos.</span>
+                    <span class="morfo-eval-action">Abrir práctica →</span></button>
+                </div>
+            </section>
             <!-- Métricas globales -->
             <div class="eval-metrics-grid">
                 <div class="eval-metric-card">
@@ -1399,7 +1383,7 @@
     <script src="mindmap-premium-catalog.js?v=11"></script>
     <script src="mindmap-premium.js?v=2"></script>
     <script src="study-depth.js?v=12"></script>
-    <script src="script.js?v=54"></script>
+    <script src="script.js?v=55"></script>
     <script src="mindmap-branch-labels.js?v=3"></script>
     <script src="mindmap-content.js?v=2"></script>
     <script src="mindmap-detailed-content.js?v=4"></script>
@@ -1407,11 +1391,12 @@
     <script src="mindmap-viewer.js?v=16"></script>
     <script src="intocables-hub.js?v=1"></script>
     <script src="study-assessments.js?v=2"></script>
-    <script src="simulacro-ingreso.js?v=5"></script>
+    <script src="simulacro-ingreso.js?v=6"></script>
+    <script src="simulacro-library.js?v=1"></script>
     <script src="student-library.js?v=9"></script>
     <script src="flashcard-workspace.js?v=1"></script>
     <script src="study-summaries.js?v=7"></script>
-    <script src="past-exams.js?v=4"></script>
+    <script src="past-exams.js?v=5"></script>
     <script src="campus-atlas.js?v=10"></script>
 </body>
 

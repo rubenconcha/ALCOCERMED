@@ -1,10 +1,8 @@
 'use strict';
 (() => {
     const formats = {
-        full: { title: 'Simulacro completo', minutes: 100, split: [50, 30, 20], demo: true },
-        mini: { title: 'Mini simulacro', minutes: 50, split: [25, 15, 10], demo: true },
-        'premium-full': { title: 'Nuevo simulacro completo', minutes: 100, split: [50, 30, 20] },
-        'premium-mini': { title: 'Nuevo mini simulacro', minutes: 50, split: [25, 15, 10] },
+        full: { title: 'Práctica integral · acceso abierto', minutes: 100, split: [50, 30, 20], demo: true },
+        'premium-full': { title: 'Práctica integral · nueva selección', minutes: 100, split: [50, 30, 20] },
         'morfo-sangre': { title: 'Sangre · Morfofunción', minutes: 40, split: [40, 0, 0], topic: 'sangre', examName: 'Práctica bibliográfica - Morfofunción - Sangre (40 preguntas)' },
         'blood-depth-simulation': { title: 'Sangre · Casos razonados', minutes: 8, split: [6, 0, 0], topic: 'sangre', depthSet: 'simulation' },
         'blood-depth-evaluation': { title: 'Sangre · Autoevaluación de mecanismos', minutes: 8, split: [6, 0, 0], topic: 'sangre', depthSet: 'evaluation' },
@@ -15,6 +13,9 @@
     const subjects = ['MORFOFUNCION', 'BIOLOGIA CELULAR', 'SALUD PUBLICA'];
     let selected = 'full';
     let demoPromise;
+    let launchRequest = 0;
+    const formatFor = key => formats[key] || window.EntranceLibrary?.format(key);
+    const requiresPlan = format => !format.demo && !format.free;
 
     const normalized = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toUpperCase();
     const validQuestion = row =>
@@ -39,9 +40,21 @@
     }
 
     async function loadQuestions(format) {
+        if (format.pastId) {
+            const session = (await getSupabase().auth.getSession()).data.session;
+            if (!session?.access_token) throw new Error('Vuelve a iniciar sesión para abrir el examen.');
+            const response = await fetch('/api/past-exam?id='+encodeURIComponent(format.pastId), {headers:{Authorization:'Bearer '+session.access_token},cache:'no-store',signal:AbortSignal.timeout(15000)});
+            if (response.status===403) { CampusAccess.unlock(); return null; }
+            if (!response.ok) throw new Error('No pudimos cargar el examen real. Comprueba tu sesión y vuelve a intentar.');
+            const paper=await response.json();
+            const current=(await getSupabase().auth.getSession()).data.session;
+            if(current?.access_token!==session.access_token || (requiresPlan(format)&&CampusAccess.isFree())) throw new Error('Tu sesión cambió. Vuelve a abrir el examen.');
+            if(paper.id!==format.pastId || paper.duration!==100 || paper.questions?.length!==100 || new Set(paper.questions.map(q=>q.numero_original)).size!==100 || paper.questions.some(q=>!q.pregunta||!['a','b','c','d'].every(l=>q['opcion_'+l])||!q.respuestas_aceptadas?.length)) throw new Error('El examen no contiene las 100 preguntas originales completas.');
+            return paper.questions;
+        }
         if (format.demo) {
             const bank = await demoQuestions();
-            const rows = format === formats.full ? bank.full : bank.mini;
+            const rows = bank.full;
             verifyDistribution(rows, format);
             return rows;
         }
@@ -79,9 +92,10 @@
     }
 
     window.selectEntranceExam = function (key) {
-        const format = formats[key];
+        const format = formatFor(key);
         if (!format) return;
-        if (!format.demo && CampusAccess.isFree()) return CampusAccess.unlock();
+        if (requiresPlan(format) && CampusAccess.isFree()) return CampusAccess.unlock();
+        ++launchRequest;
         selected = key;
         Object.keys(formats).forEach(id => {
             const button = document.getElementById('entrance-' + id);
@@ -91,7 +105,16 @@
         });
         document.getElementById('entrance-selected-name').textContent = format.title;
         document.getElementById('entrance-selected-detail').textContent =
-            `${format.split.reduce((sum, n) => sum + n, 0)} preguntas · ${format.minutes} minutos`;
+            `${format.pastId ? 100 : format.split.reduce((sum, n) => sum + n, 0)} preguntas · ${format.minutes} minutos`;
+        document.getElementById('sim-start-btn').disabled=false;
+        window.EntranceLibrary?.markSelected(key);
+    };
+    window.getSelectedEntranceExam=()=>selected;
+    window.clearEntranceExam=function(){selected=null;++launchRequest;document.getElementById('entrance-selected-name').textContent='Elige una prueba';document.getElementById('entrance-selected-detail').textContent='Selecciona una tarjeta del catálogo para comenzar.';document.getElementById('sim-start-btn').disabled=true;};
+    window.startTopicAssessment=async function(key){
+        if(!formats[key] || formats[key].demo)return;
+        if(CampusAccess.isFree())return CampusAccess.unlock();
+        showScreen('simulacro-screen');selectEntranceExam(key);await window.iniciarSimulacro();
     };
 
     window.openSimulacro = function () {
@@ -101,11 +124,13 @@
             simState.timerInterval = null;
         }
         simState.finalized = false; simState.mode = 'oficial'; simState.pastExamId = null;
+        simState.strictTiming = false; simState.entranceOrigin = false;
         document.getElementById('sim-another-exam').textContent = 'Nuevo simulacro';
         document.getElementById('past-result-tools').hidden = true;
         showSimScreen('sim-config');
         showScreen('simulacro-screen');
         selectEntranceExam('full');
+        window.EntranceLibrary?.open();
         if (window.innerWidth <= 768) {
             document.getElementById('sidebar').classList.remove('open');
             document.getElementById('overlay').classList.remove('active');
@@ -113,15 +138,22 @@
     };
 
     window.iniciarSimulacro = async function () {
-        const format = formats[selected];
-        if (!format.demo && CampusAccess.isFree()) return CampusAccess.unlock();
+        const format = formatFor(selected);
+        if (!format) return showToast('Elige una prueba del catálogo.', 'info');
+        if (requiresPlan(format) && CampusAccess.isFree()) return CampusAccess.unlock();
+        const request=++launchRequest,account=typeof currentUser==='undefined'?null:currentUser?.id;
         const button = document.getElementById('sim-start-btn');
         button.disabled = true;
         button.textContent = 'Preparando preguntas…';
         try {
             const rows = await loadQuestions(format);
-            if (!rows) return;
-            simState.mode = 'oficial';
+            if (!rows || request!==launchRequest || (typeof currentUser==='undefined'?null:currentUser?.id)!==account || (typeof currentCampusScreen!=='undefined'&&currentCampusScreen!=='simulacro-screen')) return;
+            simState.mode = format.pastId ? 'pasado' : 'oficial';
+            simState.pastExamId = format.pastId || null;
+            simState.strictTiming = Boolean(format.pastId);
+            simState.entranceOrigin = Boolean(format.pastId);
+            document.getElementById('sim-another-exam').textContent = format.pastId ? 'Elegir otro simulacro' : 'Nuevo simulacro';
+            document.getElementById('past-result-tools').hidden=true;
             simState.selectedExamen = format.title;
             simState._oficialesCache = [{ nombre: format.title, materia: format.topic ? 'MORFOFUNCION' : 'INTEGRAL' }];
             simState.duracion = format.minutes;
@@ -130,7 +162,7 @@
             simState.answers = rows.map(() => ({ selected: null }));
             simState.currentIdx = 0;
             simState.finalized = false;
-            simState.independentScope = Boolean(format.depthSet);
+            simState.independentScope = Boolean(format.topic);
             document.getElementById('sim-review-list')?.replaceChildren();
             simState.secondsLeft = format.minutes * 60;
             simState.startTimestamp = Date.now();
@@ -146,7 +178,7 @@
             console.error('[Simulacro]', error);
             showToast(error.message || 'No se pudo preparar el simulacro.', 'error');
         } finally {
-            button.disabled = false;
+            button.disabled = !selected;
             button.innerHTML = '<i class="fas fa-play"></i> Comenzar';
         }
     };

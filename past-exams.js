@@ -114,6 +114,7 @@
             if (currentCampusScreen !== 'past-exams-screen' || selected?.id !== exam.id || (currentUser?.id || '') !== accountId) return;
             releasePattern();
             simState.mode = 'pasado'; simState.selectedExamen = paper.title; simState.pastExamId = paper.id;
+            simState.strictTiming = false; simState.entranceOrigin = false;
             simState.duracion = paper.duration; simState.nPreguntas = paper.questions.length;
             simState.preguntas = paper.questions; simState.answers = paper.questions.map(() => ({ selected: null }));
             simState.currentIdx = 0; simState.finalized = false; simState.secondsLeft = paper.duration * 60;
@@ -126,6 +127,7 @@
         finally { loading = false; $('past-start').disabled = false; $('past-start').textContent = isLocked(exam) ? 'Desbloquear' : 'Comenzar examen'; }
     };
     window.returnToExamSelection = function () {
+        if (simState.entranceOrigin) { window.openSimulacro(); return; }
         if (simState.mode === 'pasado') {
             // Remove the completed attempt from the campus back stack.
             if (campusScreenHistory.at(-1) === 'past-exams-screen') campusScreenHistory.pop();

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v96';
+const CACHE_NAME = 'alcocermed-main-v97';
 const APP_SHELL = [
     './campus',
     './campus.html',
@@ -33,7 +33,7 @@ const APP_SHELL = [
     './study-depth.css?v=3',
     './flashcard-workspace.css?v=2',
     './flashcard-workspace.js?v=1',
-    './script.js?v=54',
+    './script.js?v=55',
     './mindmap-branch-labels.js?v=3',
     './mindmap-content.js?v=2',
     './mindmap-premium-catalog.js?v=11',
@@ -51,10 +51,12 @@ const APP_SHELL = [
 
     './intocables-hub.js?v=1',
     './study-assessments.js?v=2',
-    './simulacro-ingreso.js?v=5',
+    './simulacro-ingreso.js?v=6',
+    './simulacro-library.js?v=1',
+    './simulacro-library.css?v=1',
     './student-library.js?v=9',
     './study-summaries.js?v=7',
-    './past-exams.js?v=3',
+    './past-exams.js?v=5',
     './past-exams.css?v=2',
 ];
 

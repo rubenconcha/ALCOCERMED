@@ -3154,9 +3154,9 @@ function startSimTimer() {
     updateSimTimerDisplay();
     simState.timerInterval = setInterval(function () {
         var remaining = Math.ceil((simState.endTimestamp - Date.now()) / 1000);
-        simState.secondsLeft = simState.mode === 'pasado' ? remaining : Math.max(0, remaining);
+        simState.secondsLeft = simState.mode === 'pasado' && !simState.strictTiming ? remaining : Math.max(0, remaining);
         updateSimTimerDisplay();
-        if (simState.secondsLeft <= 0 && simState.mode !== 'pasado') {
+        if (simState.secondsLeft <= 0 && (simState.mode !== 'pasado' || simState.strictTiming)) {
             clearInterval(simState.timerInterval);
             simState.timerInterval = null;
             showToast('⏰ tiempo agotado — finalizando simulacro', 'info');
@@ -3166,7 +3166,7 @@ function startSimTimer() {
 }
 
 function updateSimTimerDisplay() {
-    var overtime = simState.mode === 'pasado' && simState.secondsLeft < 0;
+    var overtime = simState.mode === 'pasado' && !simState.strictTiming && simState.secondsLeft < 0;
     var s = overtime ? Math.abs(simState.secondsLeft) : Math.max(0, simState.secondsLeft);
     var m = Math.floor(s / 60);
     var sec = s % 60;
@@ -3176,7 +3176,7 @@ function updateSimTimerDisplay() {
     if (el) el.textContent = txt;
     if (wrap) {
         wrap.classList.toggle('sim-timer-danger', simState.mode !== 'pasado' && s <= 120);
-        wrap.title = simState.mode === 'pasado' ? '100 minutos de referencia. Puedes seguir respondiendo después; el signo + indica tiempo adicional.' : '';
+        wrap.title = simState.mode === 'pasado' && !simState.strictTiming ? '100 minutos de referencia. Puedes seguir respondiendo después; el signo + indica tiempo adicional.' : '';
     }
 }
 
