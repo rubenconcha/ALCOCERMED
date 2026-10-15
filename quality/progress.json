@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "practice_pilot_published_verified",
+  "status": "dedicated_practice_integration_reviewed",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -124,11 +124,43 @@
         "public_practice_ui": "200",
         "anonymous_full_content": "401",
         "raw_private_authoring": "404",
-        "admin_blood": "Practicar, 10 expandable flashcards and 6 questions rendered in production; first answer opened."
+        "admin_blood": "Practicar, 10 expandable flashcards and 6 questions rendered in production; first answer opened.",
+        "admin_retina": "Practicar opens in production; correct light-response answer selected and all four explanations rendered."
       }
+    },
+    {
+      "id": "dedicated-practice-integration-2026-10-15",
+      "status": "reviewed_ready_to_publish",
+      "flashcards_integrated": 20,
+      "bank_questions_integrated": 12,
+      "new_academic_items_authored": 0,
+      "delivery": "Main flashcard and question bank loaders merge the existing protected map practice. Same source, no duplicate authoring or database/student-record mutation. Also available to custom practice through its existing bank cache.",
+      "objectives": [
+        "Make the reviewed blood and retina practice discoverable in the normal study modules",
+        "Preserve all four distractor explanations and source references",
+        "Keep long flashcard answers readable and scrollable at phone widths with original logo",
+        "Preserve existing IDs, SRS dates, pagination and free-account restrictions"
+      ],
+      "review": "Automated integration and visual second pass; no doctor approval. Academic source review was completed in the preceding practice batch.",
+      "corrections": [
+        "Detected and fixed clipped long mobile answers with smaller readable type and keyboard-accessible scrolling.",
+        "Preserve case in scientific terms for the supplemented bank rows.",
+        "Updated a stale bibliography test that incorrectly required explanations to equal the answer verbatim and still counted 1300 instead of the existing 1460 records. No bibliography content changed."
+      ],
+      "tests": [
+        "28 access/content/pagination/SRS/library tests passed",
+        "2 bibliography validation tests passed after stale assertions corrected",
+        "Main flashcard and bank renderers tested at 1440 and 390 widths; all 12 questions show four options and complete feedback",
+        "Verified source at the bottom of long answers is reachable by scrolling; screenshots reviewed",
+        "No extension requests for free accounts; revoked access/session changes reject loads; duplicate database rows retain original identities"
+      ],
+      "limitations": [
+        "These 12 supplemental bank questions have no invented database ID; per-question cloud error tracking awaits a real additive database import. Existing question tracking and student records are untouched.",
+        "No new maps, summaries, independent simulations or evaluations in this integration batch; these remain in the chapter expansion queue."
+      ]
     }
   ],
-  "next_action": "Integrate the reviewed private practice into the existing dedicated flashcard and question-bank delivery without exposing authoring files or changing student records. Then extend auditory transduction/equilibrium and leukopoiesis/hemostasis with chapter objectives, illustrated maps and reasoned practice; expand summaries. Neither chapter is complete.",
+  "next_action": "Expand auditory transduction and equilibrium plus leukopoiesis/hemostasis against the full Saladin sections. Produce specific generative branded maps with deep explanations and associated practice, then revise summaries. If an authorized database connection becomes available, make an additive import of the 12 reviewed bank questions with real IDs so individual cloud-error tracking includes them. Neither chapter is complete.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

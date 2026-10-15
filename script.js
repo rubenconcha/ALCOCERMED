@@ -568,7 +568,7 @@ async function loadFlashcards() {
         all.push(...(data || []));
         if (!data || data.length < pageSize) break;
     }
-    flashcardsCache = all;
+    flashcardsCache = typeof StudyDepth !== 'undefined' ? await StudyDepth.merge(all, 'flashcards') : all;
     return flashcardsCache;
 }
 
@@ -697,6 +697,15 @@ function renderCard() {
     const ankiBtns = document.getElementById('anki-buttons');
     const qText = document.getElementById('q-text');
     const aText = document.getElementById('a-text');
+    const isDepthCard = String(campo(deck[currentIndex] || {}, 'id') || '').startsWith('depth:');
+    card.classList.toggle('depth-card', isDepthCard);
+    card.querySelectorAll('.depth-brand').forEach(function(logo){logo.remove();});
+    if (isDepthCard) card.querySelectorAll('.face').forEach(function(face){
+        const logo = document.createElement('img');
+        logo.className = 'depth-brand'; logo.src = '/promo-ben-carson-tiktok/public/authentic/logo.png';
+        logo.alt = 'Preparatoria Ben Carson'; face.appendChild(logo);
+    });
+    aText.parentElement.tabIndex = isDepthCard ? 0 : -1;
     const counter = document.querySelector('#study-area .study-progress-row');
     if (counter) counter.hidden = currentIndex >= deck.length;
 
@@ -1794,9 +1803,10 @@ async function fetchAllBancoQuestions() {
             rows.push(...(data || []));
             if (!data || data.length < pageSize) break;
         }
-        bancoState._cache = rows;
-        simState._cache = rows;
-        return rows;
+        const completeRows = typeof StudyDepth !== 'undefined' ? await StudyDepth.merge(rows, 'bank') : rows;
+        bancoState._cache = completeRows;
+        simState._cache = completeRows;
+        return completeRows;
     })();
     try {
         return await bancoQuestionsPromise;
@@ -2201,6 +2211,7 @@ window.startBanco = function () {
 function renderBancoQuestion() {
     const idx = bancoState.currentIdx;
     const q = bancoState.preguntas[idx];
+    document.getElementById('banco-quiz').classList.toggle('bq-depth', Boolean(q.content_id));
     const ans = bancoState.answers[idx];
 
     // Número de pregunta

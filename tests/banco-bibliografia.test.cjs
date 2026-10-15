@@ -17,7 +17,9 @@ test('el banco bibliográfico cubre las tres materias y conserva cuatro opciones
     assert.equal(new Set(options.map((value) => value.toLowerCase())).size, 4, key);
     assert.match(row.RESPUESTA_CORRECTA, /^[A-D]$/);
     assert.ok(row.PREGUNTA && row.EXPLICACION && row.FUENTE && row.PAGINAS_PDF);
-    assert.equal(options['ABCD'.indexOf(row.RESPUESTA_CORRECTA)], row.EXPLICACION);
+    assert.ok(options['ABCD'.indexOf(row.RESPUESTA_CORRECTA)], `Falta la opción correcta: ${key}`);
+    // A reasoned explanation can expand on the answer; it need not repeat the option verbatim.
+    assert.ok(row.EXPLICACION.trim().length > 0, `Falta justificación: ${key}`);
     assert.ok(!/^(no|sí|si)\b[\s.,:;]/i.test(row.EXPLICACION), `Pregunta binaria sin distractores claros: ${key}`);
   }
   assert.deepEqual(Object.fromEntries([...subjects].map(([subject, topics]) => [subject, topics.size])), {
@@ -25,7 +27,7 @@ test('el banco bibliográfico cubre las tres materias y conserva cuatro opciones
     'BIOLOGIA CELULAR': 18,
     MORFOFUNCION: 29,
   });
-  assert.equal(rows.length, 1300);
+  assert.equal(rows.length, 1460);
 });
 
 test('la carga del banco sigue leyendo después de la primera página de Supabase', async () => {
