@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "inventory_date": "2026-10-15T08:30:33.713Z",
+  "inventory_date": "2026-10-15T11:33:05.092Z",
   "scope": "Local authoring files. Database delivery and clinical accuracy require separate verification.",
   "official_topics": 74,
-  "detailed_maps": 449,
+  "detailed_maps": 450,
   "reviewed_topics": 0,
   "warning": "Existing quantities do not demonstrate sufficient depth. Pending visual flags mean not verified, not necessarily absent.",
   "topics": [
@@ -12,7 +12,7 @@
       "title": "Órganos de los sentidos",
       "subject": "Morfofunción",
       "general_sections": 6,
-      "detailed_maps": 9,
+      "detailed_maps": 10,
       "maps": [
         {
           "id": "morfo_16_organos_sentidos__01",
@@ -118,6 +118,18 @@
           "very_short_explanations": 0,
           "sourced_concepts": 18,
           "average_words": 51,
+          "academic_review": "automated_review_passed",
+          "original_logo_verified": true,
+          "generative_art_verified": true
+        },
+        {
+          "id": "morfo_16_organos_sentidos__10",
+          "title": "Gusto: receptores, transducción y experiencia del sabor",
+          "sections": 6,
+          "concepts": 18,
+          "very_short_explanations": 0,
+          "sourced_concepts": 18,
+          "average_words": 58,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
           "generative_art_verified": true

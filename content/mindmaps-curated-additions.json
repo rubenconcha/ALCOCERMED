@@ -68,5 +68,19 @@
     "acceso_gratis": false,
     "curated": true,
     "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__09.webp"
+  },
+  {
+    "id": "morfo_16_organos_sentidos__10",
+    "titulo": "Gusto: receptores, transducción y experiencia del sabor",
+    "root_title": "Gusto: receptores, transducción y experiencia del sabor",
+    "materia": "Morfofunción",
+    "tema": "Órganos de los sentidos",
+    "parent_key": "morfo_16_organos_sentidos.png",
+    "url_imagen": "premium/morfo_16_organos_sentidos__10.json",
+    "descripcion": "Del acceso en saliva a la señal aferente: botón gustativo, mecanismos, umbral y casos. Lámina ilustrada y práctica razonada.",
+    "premium": true,
+    "acceso_gratis": false,
+    "curated": true,
+    "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__10.webp"
   }
 ]

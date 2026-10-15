@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "senses_summary_depth_reviewed_ready_to_publish",
+  "status": "taste_depth_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -481,12 +481,77 @@
         "Full chapter objective review and teacher approval remain pending."
       ],
       "deployment": {
-        "status": "pending"
+        "commit": "da82642",
+        "status": "Vercel success",
+        "admin_live": "Production card shows 15 pages; authenticated reader opens blob PDF and enables morfofuncion-sentidos.pdf download.",
+        "anonymous_pdf": "401",
+        "raw_pdf_art_and_source": "404",
+        "pdf_bytes": 6603373
       },
       "pdf_sha256": "ee307ea7cf9e1b946d595f19d7f472ce14b642df6cb6166693660e9bc02579c4"
+    },
+    {
+      "id": "taste-map-practice-2026-10-15",
+      "maps": [
+        "morfo_16_organos_sentidos__10"
+      ],
+      "authored_explanations": 18,
+      "new_flashcards": 10,
+      "new_bank_questions": 6,
+      "per_option_explanations": 24,
+      "generative_posters": 1,
+      "source_pages": {
+        "saladin_pdf": [
+          619,
+          620,
+          621
+        ],
+        "printed": [
+          591,
+          592,
+          593
+        ]
+      },
+      "supplementary_sources": [
+        {
+          "url": "https://www.nidcd.nih.gov/health/taste-disorders",
+          "scope": "Distribution without exclusive tongue zones; multimodal flavor and chemical sensation."
+        }
+      ],
+      "review": "Second automated academic and visual pass. No physician approval. Broader chapter objective review still pending.",
+      "corrections": [
+        "Replaced weak distractors with plausible errors in ordering, polarity and generalization of transduction mechanisms.",
+        "Kept epithelial gustatory receptor separate from afferent neuron and from olfactory receptor cell.",
+        "No exclusive taste-zone map; no invented single universal second messenger or transmitter.",
+        "Public preview reuses a general orientation illustration and does not expose the full new poster.",
+        "UI fixture corrected to account for initial illustrated view and default first concept expansion; mobile fixture select constrained to match normal layout."
+      ],
+      "integration": "Map practice plus main flashcards/bank. Existing supplements now total 60 cards and 36 questions. Stable IDs preserved; no student records changed.",
+      "tests": [
+        "13 access, source, identity and practice tests passed.",
+        "Actual viewer: six branches, illustrated map, ten cards and 24 feedback paragraphs at 1440/390 px.",
+        "Actual download button yields byte-identical protected WebP at both widths.",
+        "Main flashcard and bank renderers show sourced answers and all-option feedback on desktop/mobile.",
+        "Visual inspection of full generated poster and desktop/mobile screenshots."
+      ],
+      "limitations": [
+        "Dedicated olfactory map and its practice remain next.",
+        "No new independent graded exam in this lot; existing questions remain available to custom practice.",
+        "Full chapter and teacher review pending."
+      ],
+      "files": [
+        "api/_mindmaps/morfo_16_organos_sentidos__10.json",
+        "api/_mindmaps/morfo_16_organos_sentidos__10.webp",
+        "api/_mindmaps/curated/build_taste.py.source",
+        "api/_mindmaps/taste-map-prompts.json"
+      ],
+      "deployment": {
+        "status": "pending"
+      },
+      "poster_sha256": "475acaa80c2e3a8d90c61e6cc6969e20d07a3a5ae5eb13bce3ec9f63f675c1ed"
     }
   ],
-  "next_action": "Create specific chemical-senses maps and linked practice from reviewed taste/olfaction source sections, then dedicated leukopoiesis practice and factor-by-factor coagulation. Continue remaining objective gaps; neither chapter is complete.",
+  "next_action": "Read and author the dedicated olfactory transduction/coding/projection map with linked practice (Saladin PDF 621-623 plus explicitly labeled combinatorial-code research); then dedicated leukopoiesis practice and factor-by-factor coagulation. Continue all remaining objective gaps; neither chapter is complete.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

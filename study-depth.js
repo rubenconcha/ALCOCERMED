@@ -1,6 +1,6 @@
 /* Reviewed supplements are read from the same protected source as their maps. */
 (function(){
- const topics=[{id:'morfo_18_sangre__07',topic:'sangre',chapter:18},{id:'morfo_16_organos_sentidos__07',topic:'organos de los sentidos',chapter:16},{id:'morfo_16_organos_sentidos__08',topic:'organos de los sentidos',chapter:16},{id:'morfo_18_sangre__08',topic:'sangre',chapter:18},{id:'morfo_16_organos_sentidos__09',topic:'organos de los sentidos',chapter:16}];
+ const topics=[{id:'morfo_18_sangre__07',topic:'sangre',chapter:18},{id:'morfo_16_organos_sentidos__07',topic:'organos de los sentidos',chapter:16},{id:'morfo_16_organos_sentidos__08',topic:'organos de los sentidos',chapter:16},{id:'morfo_18_sangre__08',topic:'sangre',chapter:18},{id:'morfo_16_organos_sentidos__09',topic:'organos de los sentidos',chapter:16},{id:'morfo_16_organos_sentidos__10',topic:'organos de los sentidos',chapter:16}];
  let pending=null;
  const normalize=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim().toLowerCase().replace(/\s+/g,' ');
  const field=(row,key)=>row[key]??row[key.toUpperCase()];

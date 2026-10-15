@@ -1,0 +1,472 @@
+{
+  "id": "morfo_16_organos_sentidos__10",
+  "title": "Gusto: receptores, transducción y experiencia del sabor",
+  "topic": "Órganos de los sentidos",
+  "sections": [
+    {
+      "title": "Del alimento a la superficie receptora",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "La disolución hace accesible el estímulo",
+              "text": "Una molécula presente en un alimento todavía debe alcanzar la membrana de una célula receptora. La saliva permite disolver sustancias y llevarlas hacia el poro gustativo. Este requisito explica por qué la disponibilidad física del estímulo importa: tener moléculas sobre una superficie no asegura el mismo contacto con los receptores que tenerlas disueltas y distribuidas en el medio adecuado.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Papila y botón corresponden a niveles diferentes",
+              "text": "Una papila es una protrusión de la mucosa lingual; un botón gustativo es una agrupación microscópica de células dentro del epitelio. Las papilas filiformes no contienen botones gustativos, mientras que otras clases sí se relacionan con ellos. Por ello, contar relieves visibles de la lengua no equivale a contar receptores ni a medir cuántas cualidades puede distinguir una persona.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El poro conecta el medio con las microvellosidades",
+              "text": "El botón no es una cavidad nerviosa abierta a todo el alimento: el poro permite el acceso a prolongaciones apicales de las células gustativas. Estas microvellosidades aumentan la superficie donde las sustancias alcanzan mecanismos receptores. Poro, microvellosidad y célula completa son estructuras distintas; la sustancia no necesita viajar por una fibra nerviosa para ser reconocida en la superficie apical.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 620,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Una célula epitelial comunica con una neurona",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Separar receptor epitelial de fibra sensitiva",
+              "text": "La célula gustativa especializada es epitelial y contacta fibras sensitivas en su región basal. Una modificación en su actividad se comunica a la fibra, que conduce información hacia el sistema nervioso. No debe dibujarse un axón propio de esa célula como si fuera una neurona olfatoria: ambas detectan sustancias químicas, pero su organización celular no es idéntica.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Apical y basal resuelven tareas diferentes",
+              "text": "La superficie apical recibe el estímulo mediante el poro; la comunicación con la fibra ocurre hacia la base. Mantener esa polaridad permite explicar un recorrido causal: acceso de moléculas, activación del receptor, cambio celular y transmisión. La base no es la puerta de entrada del alimento y la microvellosidad no es una fibra aferente que avance hasta el encéfalo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 620,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Renovación no equivale a nuevas modalidades",
+              "text": "Las células basales contribuyen al reemplazo de células del botón; las de sostén participan en su organización. La presencia de una población renovable ayuda a mantener el epitelio sensorial, pero no significa que cada recambio cree una cualidad gustativa nueva. Conviene distinguir mantenimiento del órgano, recepción de estímulos y conducción nerviosa como funciones relacionadas y diferentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cualidades y transducción química",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Cinco cualidades no son cinco alimentos",
+              "text": "Dulce, salado, ácido, amargo y umami son categorías gustativas básicas descritas en el capítulo. Un alimento puede estimular varias a la vez y sumar información de otras modalidades. No se clasifican alimentos enteros en casillas mutuamente excluyentes: que una sopa produzca umami no impide que también sea salada, caliente y aromática.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 620,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Proteína G no significa entrada del azúcar al nervio",
+              "text": "En la descripción del libro, sustancias relacionadas con dulce, amargo y umami se unen a receptores de membrana y activan proteínas G y señalización intracelular. El estímulo químico se convierte en un cambio de actividad de la célula. No es necesario transportar intacta la molécula de azúcar dentro de la fibra hasta el cerebro para transmitir información sobre su presencia.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Convergencia funcional sin mecanismo único",
+              "text": "Salado y ácido implican mecanismos iónicos que se distinguen de las rutas de receptores asociadas con proteínas G. El punto común es modificar la célula receptora y su comunicación con fibras sensitivas. No conviene convertir el esquema introductorio en la afirmación de que todos los sabores abren el mismo canal, utilizan el mismo segundo mensajero o se transmiten por un neurotransmisor exclusivo idéntico.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Detectar, comparar y localizar la señal",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Sensibilidad no es exclusividad territorial",
+              "text": "La presencia de diferencias de sensibilidad no obliga a asignar una zona exclusiva de la lengua a cada cualidad. En el esquema de estudio, varios tipos de células receptoras se distribuyen en regiones gustativas. Una prueba realizada en un lugar no demuestra que el resto de la lengua carezca de esa capacidad; evita colorear un mapa con fronteras rígidas de dulce, salado, ácido y amargo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Umbral es la concentración necesaria para detectar",
+              "text": "Cuando una cualidad se detecta con una concentración menor, su umbral es menor en las condiciones de comparación. Esto no significa que esa sustancia tenga mayor cantidad en la comida ni que todas las personas deban describirla como agradable. Concentración del estímulo, sensibilidad del sistema y valoración hedónica son variables diferentes que el razonamiento debe mantener separadas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El relevo central organiza más de una respuesta",
+              "text": "El capítulo reúne las aferencias gustativas de los pares VII, IX y X hacia el núcleo solitario. Desde circuitos centrales se relacionan respuestas autónomas y vías que alcanzan tálamo y corteza, incluida la ínsula. El esquema explica que un mismo alimento pueda producir percepción y respuestas como salivación; no presenta al nervio periférico como sede única del reconocimiento consciente.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Gusto y experiencia multisensorial",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Identificar una cualidad no identifica todo el sabor",
+              "text": "La experiencia del sabor incorpora aroma, textura y temperatura además de cualidades gustativas. Por ello, reconocer que dos muestras son dulces no prueba que se perciban iguales como alimentos. La información de varios sistemas permite distinguir perfiles más complejos que una lista de cualidades básicas; comparar tareas gustativas con reconocimiento de alimentos exige aclarar qué se está midiendo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 620,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Ardor y frescor no amplían la lista básica",
+              "text": "La irritación química oral y sensaciones como ardor o frescor implican terminaciones sensitivas diferentes de los receptores para las cinco cualidades. El libro relaciona el picor con aferencias trigeminales. Una muestra puede producir simultáneamente dulzor y ardor: la coexistencia no convierte al picante en sinónimo de amargo ni en un sexto gusto básico.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Textura y temperatura aportan información propia",
+              "text": "La forma de contacto, la consistencia y la temperatura modifican la experiencia oral mediante receptores somatosensitivos. Cambiar la textura puede cambiar la percepción del alimento aunque permanezca una cualidad gustativa reconocible. Esas señales convergen en la experiencia, pero no exigen que un botón gustativo sea por sí mismo un termómetro, un receptor mecánico y un detector de todos los aromas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Casos que obligan a seguir el mecanismo",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Caso: un estímulo presente con acceso reducido",
+              "text": "Un ejercicio mantiene la misma sustancia, pero dificulta su disolución y llegada al poro. El primer eslabón que debe revisarse es la disponibilidad para la membrana receptora. Afirmar de inmediato que murió la neurona o que cambió la cualidad química omite una explicación anterior y suficiente para el problema planteado: acceso y transducción son etapas distintas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso: dulce reconocible con aroma atenuado",
+              "text": "Una persona con paso nasal obstruido sigue reconociendo dulzor pero distingue peor el perfil del alimento. El ejemplo es compatible con conservar entrada gustativa mientras disminuye parte de la entrada olfatoria retronasal. La predicción correcta no es pérdida obligatoria de todas las cualidades básicas; tampoco demuestra por sí sola un daño de los botones gustativos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso: detecta menos concentración y rechaza la muestra",
+              "text": "En una comparación se detecta una sustancia a menor concentración y se la describe como desagradable. La primera observación corresponde al umbral; la segunda, a valoración. No son medidas equivalentes. Tampoco basta detectar amargor para concluir toxicidad: la relación funcional descrita por el libro no convierte una cualidad perceptiva en una prueba química de seguridad de cualquier alimento.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_16_organos_sentidos.webp",
+    "alt": "Organización del sistema sensorial",
+    "download": "/api/mindmap?id=morfo_16_organos_sentidos__10&format=image",
+    "filename": "morfo_16_organos_sentidos__10-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 16,
+      "pdfPages": [
+        619,
+        620,
+        621
+      ],
+      "kind": "original_synthesis"
+    },
+    "generative_download": true,
+    "practice": {
+      "flashcards": [
+        {
+          "question": "Reconstruye el recorrido físico de una sustancia antes de activar una célula gustativa.",
+          "answer": "Una molécula presente en un alimento todavía debe alcanzar la membrana de una célula receptora. La saliva permite disolver sustancias y llevarlas hacia el poro gustativo. Este requisito explica por qué la disponibilidad física del estímulo importa: tener moléculas sobre una superficie no asegura el mismo contacto con los receptores que tenerlas disueltas y distribuidas en el medio adecuado.",
+          "pdf_pages": [
+            619
+          ]
+        },
+        {
+          "question": "¿Por qué una papila lingual y un botón gustativo no se cuentan como la misma estructura?",
+          "answer": "Una papila es una protrusión de la mucosa lingual; un botón gustativo es una agrupación microscópica de células dentro del epitelio. Las papilas filiformes no contienen botones gustativos, mientras que otras clases sí se relacionan con ellos. Por ello, contar relieves visibles de la lengua no equivale a contar receptores ni a medir cuántas cualidades puede distinguir una persona.",
+          "pdf_pages": [
+            619
+          ]
+        },
+        {
+          "question": "Distingue poro gustativo y microvellosidades según su función.",
+          "answer": "El botón no es una cavidad nerviosa abierta a todo el alimento: el poro permite el acceso a prolongaciones apicales de las células gustativas. Estas microvellosidades aumentan la superficie donde las sustancias alcanzan mecanismos receptores. Poro, microvellosidad y célula completa son estructuras distintas; la sustancia no necesita viajar por una fibra nerviosa para ser reconocida en la superficie apical.",
+          "pdf_pages": [
+            620
+          ]
+        },
+        {
+          "question": "Compara la organización celular del receptor gustativo y del olfatorio.",
+          "answer": "La célula gustativa especializada es epitelial y contacta fibras sensitivas en su región basal. Una modificación en su actividad se comunica a la fibra, que conduce información hacia el sistema nervioso. No debe dibujarse un axón propio de esa célula como si fuera una neurona olfatoria: ambas detectan sustancias químicas, pero su organización celular no es idéntica.",
+          "pdf_pages": [
+            619
+          ]
+        },
+        {
+          "question": "¿Cómo se conectan la recepción apical y la comunicación basal en un botón gustativo?",
+          "answer": "La superficie apical recibe el estímulo mediante el poro; la comunicación con la fibra ocurre hacia la base. Mantener esa polaridad permite explicar un recorrido causal: acceso de moléculas, activación del receptor, cambio celular y transmisión. La base no es la puerta de entrada del alimento y la microvellosidad no es una fibra aferente que avance hasta el encéfalo.",
+          "pdf_pages": [
+            620
+          ]
+        },
+        {
+          "question": "Explica cómo una sustancia dulce puede generar información sin viajar intacta por el nervio.",
+          "answer": "En la descripción del libro, sustancias relacionadas con dulce, amargo y umami se unen a receptores de membrana y activan proteínas G y señalización intracelular. El estímulo químico se convierte en un cambio de actividad de la célula. No es necesario transportar intacta la molécula de azúcar dentro de la fibra hasta el cerebro para transmitir información sobre su presencia.",
+          "pdf_pages": [
+            621
+          ]
+        },
+        {
+          "question": "¿Qué convergencia funcional permite comparar rutas gustativas que usan mecanismos diferentes?",
+          "answer": "Salado y ácido implican mecanismos iónicos que se distinguen de las rutas de receptores asociadas con proteínas G. El punto común es modificar la célula receptora y su comunicación con fibras sensitivas. No conviene convertir el esquema introductorio en la afirmación de que todos los sabores abren el mismo canal, utilizan el mismo segundo mensajero o se transmiten por un neurotransmisor exclusivo idéntico.",
+          "pdf_pages": [
+            621
+          ]
+        },
+        {
+          "question": "Distingue umbral de detección, concentración presente y valoración agradable.",
+          "answer": "Cuando una cualidad se detecta con una concentración menor, su umbral es menor en las condiciones de comparación. Esto no significa que esa sustancia tenga mayor cantidad en la comida ni que todas las personas deban describirla como agradable. Concentración del estímulo, sensibilidad del sistema y valoración hedónica son variables diferentes que el razonamiento debe mantener separadas.",
+          "pdf_pages": [
+            621
+          ]
+        },
+        {
+          "question": "¿Cómo se relaciona la entrada gustativa con percepción y respuestas autónomas?",
+          "answer": "El capítulo reúne las aferencias gustativas de los pares VII, IX y X hacia el núcleo solitario. Desde circuitos centrales se relacionan respuestas autónomas y vías que alcanzan tálamo y corteza, incluida la ínsula. El esquema explica que un mismo alimento pueda producir percepción y respuestas como salivación; no presenta al nervio periférico como sede única del reconocimiento consciente.",
+          "pdf_pages": [
+            621
+          ]
+        },
+        {
+          "question": "¿Por qué ardor oral y amargor pueden coexistir sin ser la misma modalidad?",
+          "answer": "La irritación química oral y sensaciones como ardor o frescor implican terminaciones sensitivas diferentes de los receptores para las cinco cualidades. El libro relaciona el picor con aferencias trigeminales. Una muestra puede producir simultáneamente dulzor y ardor: la coexistencia no convierte al picante en sinónimo de amargo ni en un sexto gusto básico.",
+          "pdf_pages": [
+            621
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "En un ejercicio se conserva una sustancia gustativa, pero disminuye su disolución y acceso al poro. ¿Qué eslabón se modifica primero?",
+          "options": [
+            "La disponibilidad de moléculas en la superficie receptora",
+            "La comunicación basal con la fibra, sin cambiar la llegada del estímulo",
+            "La conducción del nervio, suponiendo recepción periférica intacta",
+            "La integración cortical, suponiendo idéntica entrada desde la lengua"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: la disolución y el acceso condicionan el contacto con la membrana; este cambio precede a la transducción descrita.",
+            "La comunicación basal es posterior al acceso; el caso modifica la llegada de moléculas y no la mantiene constante.",
+            "La conducción es una etapa posterior. Suponer recepción intacta omite precisamente el cambio físico planteado.",
+            "La integración es posterior y no puede asumirse idéntica entrada cuando se limita el acceso al receptor."
+          ],
+          "pdf_pages": [
+            619,
+            620
+          ]
+        },
+        {
+          "question": "¿Qué esquema conserva la diferencia entre receptor gustativo y fibra aferente?",
+          "options": [
+            "Una misma célula recibe por microvellosidades y conduce por su propio axón",
+            "Una célula epitelial receptora comunica con una fibra sensitiva distinta",
+            "La célula recibe el alimento en la base y entrega la señal al nervio por el poro",
+            "La fibra detecta directamente la saliva sin una célula receptora intermedia"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Traslada al gusto una organización neuronal receptora; la célula gustativa epitelial no conduce por un axón propio.",
+            "Correcto: separa la célula receptora epitelial de la neurona aferente con la que se comunica en la región basal.",
+            "Invierte la polaridad: el acceso al receptor es apical y la comunicación con la fibra se sitúa hacia la región basal.",
+            "El esquema omite la célula gustativa que recibe el estímulo y comunica con la aferente; no describe su organización."
+          ],
+          "pdf_pages": [
+            619,
+            620
+          ]
+        },
+        {
+          "question": "¿Qué comparación de mecanismos corresponde al esquema fisiológico del capítulo?",
+          "options": [
+            "Todas las cualidades se transducen por la misma ruta de proteína G",
+            "Todas las cualidades se transducen por entrada directa de sus moléculas a la célula",
+            "Dulce, amargo y umami activan rutas receptoras con proteínas G; salado y ácido implican mecanismos iónicos",
+            "Los cambios de membrana comienzan solo en la fibra y no en la célula receptora"
+          ],
+          "correct": 2,
+          "reasons": [
+            "La convergencia en comunicación con fibras no hace que todas las cualidades utilicen la misma ruta de proteína G.",
+            "Generaliza el mecanismo iónico e ignora las rutas receptoras y de señalización intracelular descritas para otras cualidades.",
+            "Correcto: conserva la distinción introductoria entre rutas químicas sin afirmar un canal o transmisor único para todas.",
+            "La célula receptora participa en transducción antes de comunicar con la aferente; no es un soporte pasivo del nervio."
+          ],
+          "pdf_pages": [
+            621
+          ]
+        },
+        {
+          "question": "Una muestra resulta dulce y produce ardor oral. ¿Qué explicación conserva la diferencia de modalidades?",
+          "options": [
+            "El ardor demuestra que dulce y amargo son siempre idénticos",
+            "Todo ardor es una sexta cualidad detectada por un botón exclusivo",
+            "Solo una modalidad puede percibirse en cada instante",
+            "Pueden coexistir entrada gustativa e irritación química de otras terminaciones sensitivas"
+          ],
+          "correct": 3,
+          "reasons": [
+            "La coexistencia no identifica receptores dulces con amargos ni elimina las diferencias entre cualidades gustativas.",
+            "Confunde irritación química con la lista de cinco cualidades y añade un botón exclusivo que el esquema no establece.",
+            "La experiencia oral integra señales simultáneas; no requiere alternar de forma absoluta entre una y otra modalidad.",
+            "Correcto: el dulzor y el ardor pueden coexistir porque participan mecanismos sensitivos distintos en una experiencia común."
+          ],
+          "pdf_pages": [
+            620,
+            621
+          ]
+        },
+        {
+          "question": "Al comparar dos sustancias, una se detecta a menor concentración. ¿Qué conclusión describe esa observación sin añadir una valoración?",
+          "options": [
+            "Tiene un umbral menor en las condiciones comparadas",
+            "Siempre está en mayor cantidad dentro del alimento",
+            "Debe resultar más agradable a todas las personas",
+            "Demuestra por sí sola que el alimento es tóxico"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: menor concentración necesaria para detección significa menor umbral en esa comparación, sin concluir preferencia.",
+            "La cantidad presente y la concentración necesaria para detectar son variables distintas; una no determina la otra.",
+            "La agradabilidad no se deduce de sensibilidad: detectar concentraciones pequeñas no obliga a preferir la sustancia.",
+            "Una cualidad o un umbral no constituyen una prueba de toxicidad de una muestra; falta caracterizar la sustancia."
+          ],
+          "pdf_pages": [
+            621
+          ]
+        },
+        {
+          "question": "Con obstrucción nasal se conserva la detección de dulce y salado, pero se distingue peor el perfil de un alimento. ¿Qué interpretación es compatible?",
+          "options": [
+            "La obstrucción demuestra destrucción de todas las células gustativas",
+            "Puede persistir entrada gustativa y reducirse el componente olfatorio del sabor",
+            "El sabor del alimento depende exclusivamente de un nervio lingual mecánico",
+            "La lengua ha perdido obligatoriamente toda cualidad básica"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Conservar cualidades reconocibles no demuestra destrucción global de receptores; el ejemplo dirige la atención al aroma.",
+            "Correcto: diferencia una entrada gustativa conservada de una menor contribución olfatoria a la experiencia del alimento.",
+            "Reduce una experiencia multisensorial a un mecanismo único y no explica la detección conservada de dulce y salado.",
+            "Contradice el dato del enunciado: la detección de esas cualidades permanece; no debe sustituirse por pérdida total."
+          ],
+          "pdf_pages": [
+            620,
+            621
+          ]
+        }
+      ],
+      "source": "Saladin, cap. 16 · PDF 619–621 (libro 591–593). Distribución no exclusiva de sabores contrastada con NIDCD.",
+      "review": "Revisión automatizada; revisión docente pendiente.",
+      "supplementary_reference": "https://www.nidcd.nih.gov/health/taste-disorders"
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "scope": "Fisiología gustativa y comparación de modalidades; revisión de capítulo completo pendiente."
+  },
+  "supplementary_references": [
+    {
+      "url": "https://www.nidcd.nih.gov/health/taste-disorders",
+      "scope": "Precisión explícita: no hay zonas exclusivas por cualidad; contraste de experiencia del sabor y quimioestesia."
+    }
+  ]
+}
