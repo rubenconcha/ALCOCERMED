@@ -153,6 +153,7 @@ async function initAuth() {
 
 /** Muestra login y oculta app */
 function showLoginScreen() {
+    if (window.FlashcardWorkspace) FlashcardWorkspace.clear();
     verifiedCampusUserId = null;
     if (flashcardReviewTimer) clearTimeout(flashcardReviewTimer);
     flashcardReviewTimer = null;
@@ -660,14 +661,15 @@ function startDeck(tema, asignatura, data) {
     for (let i = 0; i < data.length; i++) {
         // Soportar columna TEMA en mayúsculas o minúsculas
         const temaVal = campo(data[i], 'tema');
-        if (normalizeDbText(temaVal) === normalizeDbText(tema)) flashcardTopicCards.push(data[i]);
+        if (normalizeDbText(temaVal) === normalizeDbText(tema) && normalizeDbText(campo(data[i], 'materia')) === normalizeDbText(asignatura)) flashcardTopicCards.push(data[i]);
     }
     if (flashcardTopicCards.length === 0) {
         showToast('no se encontraron tarjetas para este tema', 'error');
         return;
     }
-    // Las tarjetas programadas esperan su fecha; las nuevas están disponibles.
-    deck = shuffleArray(flashcardTopicCards.filter(isCardDue));
+    if (window.FlashcardWorkspace) flashcardTopicCards = FlashcardWorkspace.prepare(tema, asignatura, flashcardTopicCards);
+    // La exploración no cambia las fechas guardadas del repaso programado.
+    deck = shuffleArray(window.FlashcardWorkspace?.isExploring() ? flashcardTopicCards.slice() : flashcardTopicCards.filter(isCardDue));
     currentIndex = 0;
     ultimaMateria = asignatura.toLowerCase();
 
@@ -697,7 +699,7 @@ function renderCard() {
     const ankiBtns = document.getElementById('anki-buttons');
     const qText = document.getElementById('q-text');
     const aText = document.getElementById('a-text');
-    const isDepthCard = String(campo(deck[currentIndex] || {}, 'id') || '').startsWith('depth:');
+    const isDepthCard = currentIndex < deck.length;
     card.classList.toggle('depth-card', isDepthCard);
     card.querySelectorAll('.depth-brand').forEach(function(logo){logo.remove();});
     if (isDepthCard) card.querySelectorAll('.face').forEach(function(face){
@@ -716,6 +718,7 @@ function renderCard() {
         btnReveal.classList.add('hidden');
         ankiBtns.classList.add('hidden');
         document.getElementById('card-num').innerText = deck.length;
+        if (window.FlashcardWorkspace) FlashcardWorkspace.render(null);
         actualizarProgreso();
         return;
     }
@@ -740,6 +743,7 @@ function renderCard() {
     ankiBtns.classList.add('hidden');
     btnReveal.classList.remove('hidden');
     document.getElementById('card-num').innerText = currentIndex + 1;
+    if (window.FlashcardWorkspace) FlashcardWorkspace.render(deck[currentIndex]);
 
     actualizarProgreso();
 }
@@ -801,6 +805,7 @@ function enqueueDueFlashcards(insertionIndex) {
 }
 
 function refreshFlashcardReviews() {
+    if (window.FlashcardWorkspace?.isExploring()) return;
     if (currentCampusScreen !== 'study-area') return;
     const waiting = currentIndex >= deck.length;
     // No interrumpir la pregunta actual: lo vencido va inmediatamente después.
@@ -812,6 +817,7 @@ function refreshFlashcardReviews() {
 function scheduleFlashcardReview() {
     if (flashcardReviewTimer) clearTimeout(flashcardReviewTimer);
     flashcardReviewTimer = null;
+    if (window.FlashcardWorkspace?.isExploring()) return;
     if (currentCampusScreen !== 'study-area') return;
     const now = Date.now();
     const future = flashcardTopicCards.map(getCardReviewTime).filter(function (time) { return time !== null && time > now; });
@@ -997,6 +1003,7 @@ function playFlashcardRatingSound() {
 }
 
 window.rateCard = function (score) {
+    if (window.FlashcardWorkspace?.isExploring()) return;
     if (!deck.length || currentIndex >= deck.length || flashcardRatingPending || !SRS_INTERVALS[score]) return;
     flashcardRatingPending = true;
     playFlashcardRatingSound();

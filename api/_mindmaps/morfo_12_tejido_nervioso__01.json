@@ -1,1 +1,755 @@
-{"id":"morfo_12_tejido_nervioso__01","title":"Neuronas","topic":"Tejido nervioso","sections":[{"title":"Soma y prolongaciones","color":"#429243","groups":[{"title":"Soma y prolongaciones · explicación","items":[{"title":"Idea principal","text":"Organizan recepción y transmisión."},{"title":"Desarrollo","text":"Las neuronas unipolares sólo tienen la extensión que sale del soma. Están representadas por las neuronas que portan señales sensitivas a la médula espinal. También se les denomina seudounipolares, porque empiezan como neuronas bipolares en el embrión, pero sus dos extensiones se fusionan en una a medida que la neurona madura. A una corta distancia del soma, la extensión se ramifica en forma de “T” en una fibra periférica y una fibra central.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":473,"bbox":[56.69,172.82,315.75,385.77]}}]}]},{"title":"Axón","color":"#429243","groups":[{"title":"Axón · explicación","items":[{"title":"Idea principal","text":"Conduce señales hacia otras células."},{"title":"Desarrollo","text":"La primera empieza con una terminación sensitiva que suele estar lejos del soma (p. ej., en la piel). Sus señales viajan hacia el soma, pero lo pasan por alto y siguen por la fibra central una corta distancia hacia la médula espinal. Se considera que las dendritas de estas neuronas sólo son terminaciones receptoras cortas. El resto de la extensión, tanto periférica como central, es el axón, definido por la presencia de mielina y la capacidad de generar potenciales de acción (ambos conceptos se explican más adelante en este capítulo).","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":473,"bbox":[56.69,172.82,315.75,385.77]}}]}]},{"title":"Dendritas y soma","color":"#429243","groups":[{"title":"Dendritas y soma · explicación","items":[{"title":"Idea principal","text":"Reciben e integran señales; el soma contiene organelos necesarios para mantenimiento celular."},{"title":"Desarrollo","text":"El soma suele dar lugar a unas cuantas extensiones que se ramifican en una amplia cantidad de dendritas,10 que reciben ese nombre por su gran parecido a las ramas sin hojas de un árbol en invierno. Las dendritas son el sitio principal para la recepción de señales de otras neuronas. Unas neuronas sólo tienen una dendrita y otras tienen miles. Cuantas más dendritas tiene una neurona, más información puede recibir e incorporar en su toma de decisiones.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":472,"bbox":[39.69,106.82,298.73,223.81]}}]}]},{"title":"Conducción y transporte axónico","color":"#429243","groups":[{"title":"Conducción y transporte axónico · explicación","items":[{"title":"Idea principal","text":"Conduce potenciales de acción hacia terminales; el transporte axónico desplaza materiales en ambas direcciones."},{"title":"Desarrollo","text":"Si se utiliza una comparación en la que el transporte axonal rápido fuera un tren expreso que viaja a su destino sin detenerse, el transporte axonal lento es como un tranvía local que se detiene en cada estación. Cuando se mueve, va tan rápido como el expreso, pero las frecuentes paradas llevan a un avance general de sólo 0.5 a 10 mm/día. Desplaza enzimas y componentes del citoesqueleto hacia el axón, renueva los componentes axoplásmicos desgastados en neuronas maduras y proporciona nuevo axoplasma para el desarrollo o la regeneración de neuronas.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":473,"bbox":[345.4,418.76,586.45,571.73]}}]}]}],"assets":{"image":"/assets/mindmaps/premium-illustrations/morfo_12_tejido_nervioso__01.webp","alt":"FIGURA 12.5 Variación en la estructura de las neuronas. Figura superior, de izquierda a derecha: dos neuronas multipolares del encéfalo (una célula piramidal y una de Purkinje). Segunda figura, de izquierda a derecha: dos neuronas bipolares (una célula bipolar de la retina y una neurona olfatoria). Tercera figura: una neurona unipolar del tipo que interviene en el sentido del tacto y el dolor. Figura inferior: una neurona anaxónica (célula amacrina) de la retina.","download":"/api/mindmap?id=morfo_12_tejido_nervioso__01&format=image","filename":"morfo_12_tejido_nervioso__01-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":12,"pdfPages":[467,505],"imagePdfPage":471}}}
+{
+  "id": "morfo_12_tejido_nervioso__01",
+  "title": "Neuronas",
+  "topic": "Tejido nervioso",
+  "sections": [
+    {
+      "title": "Soma y prolongaciones",
+      "color": "#429243",
+      "groups": [
+        {
+          "title": "Soma y prolongaciones · explicación",
+          "items": [
+            {
+              "title": "Idea principal",
+              "text": "Organizan recepción y transmisión."
+            },
+            {
+              "title": "Desarrollo",
+              "text": "Las neuronas unipolares sólo tienen la extensión que sale del soma. Están representadas por las neuronas que portan señales sensitivas a la médula espinal. También se les denomina seudounipolares, porque empiezan como neuronas bipolares en el embrión, pero sus dos extensiones se fusionan en una a medida que la neurona madura. A una corta distancia del soma, la extensión se ramifica en forma de “T” en una fibra periférica y una fibra central.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "pdfPage": 473,
+                "bbox": [
+                  56.69,
+                  172.82,
+                  315.75,
+                  385.77
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Axón",
+      "color": "#429243",
+      "groups": [
+        {
+          "title": "Axón · explicación",
+          "items": [
+            {
+              "title": "Idea principal",
+              "text": "Conduce señales hacia otras células."
+            },
+            {
+              "title": "Desarrollo",
+              "text": "La primera empieza con una terminación sensitiva que suele estar lejos del soma (p. ej., en la piel). Sus señales viajan hacia el soma, pero lo pasan por alto y siguen por la fibra central una corta distancia hacia la médula espinal. Se considera que las dendritas de estas neuronas sólo son terminaciones receptoras cortas. El resto de la extensión, tanto periférica como central, es el axón, definido por la presencia de mielina y la capacidad de generar potenciales de acción (ambos conceptos se explican más adelante en este capítulo).",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "pdfPage": 473,
+                "bbox": [
+                  56.69,
+                  172.82,
+                  315.75,
+                  385.77
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Dendritas y soma",
+      "color": "#429243",
+      "groups": [
+        {
+          "title": "Dendritas y soma · explicación",
+          "items": [
+            {
+              "title": "Idea principal",
+              "text": "Reciben e integran señales; el soma contiene organelos necesarios para mantenimiento celular."
+            },
+            {
+              "title": "Desarrollo",
+              "text": "El soma suele dar lugar a unas cuantas extensiones que se ramifican en una amplia cantidad de dendritas,10 que reciben ese nombre por su gran parecido a las ramas sin hojas de un árbol en invierno. Las dendritas son el sitio principal para la recepción de señales de otras neuronas. Unas neuronas sólo tienen una dendrita y otras tienen miles. Cuantas más dendritas tiene una neurona, más información puede recibir e incorporar en su toma de decisiones.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "pdfPage": 472,
+                "bbox": [
+                  39.69,
+                  106.82,
+                  298.73,
+                  223.81
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Conducción y transporte axónico",
+      "color": "#429243",
+      "groups": [
+        {
+          "title": "Conducción y transporte axónico · explicación",
+          "items": [
+            {
+              "title": "Idea principal",
+              "text": "Conduce potenciales de acción hacia terminales; el transporte axónico desplaza materiales en ambas direcciones."
+            },
+            {
+              "title": "Desarrollo",
+              "text": "Si se utiliza una comparación en la que el transporte axonal rápido fuera un tren expreso que viaja a su destino sin detenerse, el transporte axonal lento es como un tranvía local que se detiene en cada estación. Cuando se mueve, va tan rápido como el expreso, pero las frecuentes paradas llevan a un avance general de sólo 0.5 a 10 mm/día. Desplaza enzimas y componentes del citoesqueleto hacia el axón, renueva los componentes axoplásmicos desgastados en neuronas maduras y proporciona nuevo axoplasma para el desarrollo o la regeneración de neuronas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "pdfPage": 473,
+                "bbox": [
+                  345.4,
+                  418.76,
+                  586.45,
+                  571.73
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_12_tejido_nervioso__01.webp",
+    "alt": "FIGURA 12.5 Variación en la estructura de las neuronas. Figura superior, de izquierda a derecha: dos neuronas multipolares del encéfalo (una célula piramidal y una de Purkinje). Segunda figura, de izquierda a derecha: dos neuronas bipolares (una célula bipolar de la retina y una neurona olfatoria). Tercera figura: una neurona unipolar del tipo que interviene en el sentido del tacto y el dolor. Figura inferior: una neurona anaxónica (célula amacrina) de la retina.",
+    "download": "/api/mindmap?id=morfo_12_tejido_nervioso__01&format=image",
+    "filename": "morfo_12_tejido_nervioso__01-Prepa-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 12,
+      "pdfPages": [
+        467,
+        505
+      ],
+      "imagePdfPage": 471
+    },
+    "flashcard_library": {
+      "flashcards": [
+        {
+          "question": "¿Qué diferencia funcional hay entre una neurona aferente y una eferente?",
+          "answer": "La aferente lleva información hacia el sistema nervioso central; la eferente conduce una salida desde él hacia un efector. Los términos indican dirección respecto del SNC, no que una fibra sea siempre excitatoria y la otra inhibitoria. Primero identifica el punto de referencia y después la función del circuito.",
+          "pdf_pages": [
+            470
+          ],
+          "subtopic": "Organización neuronal",
+          "type": "Comparación",
+          "objective": "neural-01",
+          "reviewed": true
+        },
+        {
+          "question": "¿Cómo se relacionan dendritas, soma y axón en una neurona multipolar típica?",
+          "answer": "Las dendritas y el soma reciben e integran muchas entradas; el axón conduce señales hacia sus terminales. La zona inicial del axón permite iniciar potenciales de acción cuando la integración alcanza las condiciones necesarias. Es una organización típica, no una regla que obligue a todas las neuronas a tener idéntica forma.",
+          "pdf_pages": [
+            472
+          ],
+          "subtopic": "Organización neuronal",
+          "type": "Mecanismo",
+          "objective": "neural-02",
+          "reviewed": true
+        },
+        {
+          "question": "Si una terminal está lejos del soma, ¿cómo recibe proteínas y organelos para mantenerse?",
+          "answer": "El transporte axonal desplaza materiales a lo largo del citoesqueleto. El transporte anterógrado lleva cargas hacia la terminal; el retrógrado las lleva hacia el soma. Este movimiento de materiales es distinto de la propagación rápida de una señal eléctrica: una vesícula no recorre el axón a la velocidad del potencial de acción.",
+          "pdf_pages": [
+            473
+          ],
+          "subtopic": "Organización neuronal",
+          "type": "Aplicación",
+          "objective": "neural-03",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué una neurona seudounipolar no se describe bien como una cadena dendrita–soma–axón?",
+          "answer": "Su prolongación se divide en una rama periférica y otra central. La señal puede continuar de la rama periférica a la central sin recorrer el soma como una estación obligatoria en serie. La forma celular debe relacionarse con su recorrido real, en lugar de imponer el dibujo de una neurona multipolar a todos los receptores.",
+          "pdf_pages": [
+            473
+          ],
+          "subtopic": "Organización neuronal",
+          "type": "Comparación",
+          "objective": "neural-04",
+          "reviewed": true
+        },
+        {
+          "question": "¿Qué distingue conducción eléctrica de secreción neuronal?",
+          "answer": "La conducción propaga cambios eléctricos en la membrana; la secreción libera un mensajero químico desde una terminal. En una sinapsis química ambas funciones se enlazan: llega una señal eléctrica, se libera neurotransmisor y la célula siguiente responde. No son dos nombres para el mismo movimiento de sustancias.",
+          "pdf_pages": [
+            470,
+            472
+          ],
+          "subtopic": "Organización neuronal",
+          "type": "Concepto",
+          "objective": "neural-05",
+          "reviewed": true
+        },
+        {
+          "question": "Un bloqueo del transporte axonal conserva inicialmente la excitabilidad local. ¿Por qué no demuestra mantenimiento normal a largo plazo?",
+          "answer": "La excitabilidad depende de las propiedades eléctricas presentes; el mantenimiento de terminales requiere renovación y distribución de componentes. Conservar una respuesta inmediata no garantiza que una terminal continúe recibiendo materiales. El caso separa conducción de señales y transporte de cargas, sin atribuir a una observación breve integridad de toda la neurona.",
+          "pdf_pages": [
+            473
+          ],
+          "subtopic": "Organización neuronal",
+          "type": "Aplicación",
+          "objective": "neural-06",
+          "reviewed": true
+        },
+        {
+          "question": "Compara la mielinización por oligodendrocitos y por células de Schwann.",
+          "answer": "Los oligodendrocitos forman mielina en el SNC y pueden aportar segmentos a varios axones. En el SNP, una célula de Schwann mielinizante envuelve un segmento de un axón. No debe confundirse un segmento con la longitud total del axón: para cubrir una fibra larga intervienen sucesivos segmentos y células.",
+          "pdf_pages": [
+            474,
+            476,
+            477
+          ],
+          "subtopic": "Glía y soporte",
+          "type": "Comparación",
+          "objective": "neural-07",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué regular K+ y neurotransmisores extracelulares ayuda a las neuronas?",
+          "answer": "Los astrocitos contribuyen a controlar el entorno químico retirando K+ y ciertos neurotransmisores del espacio extracelular. Una variación de ese entorno puede cambiar excitabilidad y comunicación sin que cambie el número de neuronas. Su función va más allá de sostener físicamente el tejido; ayuda a mantener condiciones para señalizar.",
+          "pdf_pages": [
+            475
+          ],
+          "subtopic": "Glía y soporte",
+          "type": "Mecanismo",
+          "objective": "neural-08",
+          "reviewed": true
+        },
+        {
+          "question": "¿Qué diferencia la microglía de las células que forman mielina?",
+          "answer": "La microglía participa en vigilancia, fagocitosis y respuesta a daño en el SNC. Oligodendrocitos y células de Schwann se relacionan con mielinización. Reconocerlas como glía no vuelve intercambiables sus funciones: retirar desechos y producir una envoltura aislante son tareas distintas que cooperan en el mantenimiento del tejido.",
+          "pdf_pages": [
+            474
+          ],
+          "subtopic": "Glía y soporte",
+          "type": "Comparación",
+          "objective": "neural-09",
+          "reviewed": true
+        },
+        {
+          "question": "¿Qué relación tienen los ependimocitos con las cavidades del SNC?",
+          "answer": "Revisten cavidades internas del encéfalo y la médula espinal; sus cilios ayudan al movimiento del líquido cefalorraquídeo. Hay que distinguir revestimiento y circulación del líquido de las funciones de mielinización o conducción axónica. Su ubicación permite relacionar la estructura celular con la superficie y el líquido sobre los que actúa.",
+          "pdf_pages": [
+            474
+          ],
+          "subtopic": "Glía y soporte",
+          "type": "Concepto",
+          "objective": "neural-10",
+          "reviewed": true
+        },
+        {
+          "question": "¿En qué se distinguen células satélite y células de Schwann en el SNP?",
+          "answer": "Las células satélite rodean somas neuronales en los ganglios y contribuyen a regular su entorno. Las células de Schwann se relacionan con fibras nerviosas y, cuando son mielinizantes, forman segmentos de mielina. La diferencia principal del ejemplo es qué región neuronal acompañan, además de la función específica que cumplen allí.",
+          "pdf_pages": [
+            476
+          ],
+          "subtopic": "Glía y soporte",
+          "type": "Comparación",
+          "objective": "neural-11",
+          "reviewed": true
+        },
+        {
+          "question": "¿Amielínico significa que un axón periférico no tiene relación con células de Schwann?",
+          "answer": "No. Axones periféricos amielínicos pueden estar alojados en células de Schwann sin la envoltura concéntrica de múltiples capas propia de la mielina. Ausencia de mielina no equivale a ausencia de soporte celular. Esa distinción evita clasificar la fibra solo por la presencia de una célula cercana.",
+          "pdf_pages": [
+            478
+          ],
+          "subtopic": "Glía y soporte",
+          "type": "Error frecuente",
+          "objective": "neural-12",
+          "reviewed": true
+        },
+        {
+          "question": "¿Qué expresa un potencial de membrana de −70 mV en un ejemplo neuronal?",
+          "answer": "Expresa una diferencia de potencial del interior respecto del exterior: el interior es más negativo. No significa que toda neurona deba tener exactamente ese valor ni que todos los iones del citoplasma sean negativos. El voltaje refleja una separación de cargas muy próxima a la membrana.",
+          "pdf_pages": [
+            481
+          ],
+          "subtopic": "Membrana en reposo",
+          "type": "Concepto",
+          "objective": "neural-13",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué el gradiente de K+ tiende a favorecer su salida y la fuerza eléctrica puede oponerse?",
+          "answer": "Hay más K+ en el interior, por lo que el gradiente de concentración favorece su salida. Al quedar el interior relativamente negativo, la atracción eléctrica favorece el retorno de cationes. El movimiento neto depende de ambas fuerzas, no solo de comparar concentraciones ni de mirar únicamente el signo del voltaje.",
+          "pdf_pages": [
+            481
+          ],
+          "subtopic": "Membrana en reposo",
+          "type": "Mecanismo",
+          "objective": "neural-14",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué la permeabilidad selectiva importa tanto como la distribución de iones?",
+          "answer": "Un gradiente no produce el mismo flujo si la membrana ofrece distinta facilidad de paso. En reposo, la permeabilidad al K+ es importante para el voltaje, mientras la entrada de Na+ también contribuye. Cambiar qué canales están disponibles modifica la contribución de cada ion sin exigir que se igualen todas las concentraciones.",
+          "pdf_pages": [
+            481
+          ],
+          "subtopic": "Membrana en reposo",
+          "type": "Mecanismo",
+          "objective": "neural-15",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué la bomba Na+/K+ no es la explicación inmediata de la repolarización de cada pico?",
+          "answer": "La bomba consume ATP para mantener gradientes: expulsa tres Na+ e introduce dos K+ por ciclo. La repolarización rápida del potencial de acción depende sobre todo de cambios en conductancias, incluida la salida de K+ y la inactivación de canales de Na+. Mantener gradientes y producir una fase rápida son funciones diferentes.",
+          "pdf_pages": [
+            481,
+            483,
+            484
+          ],
+          "subtopic": "Membrana en reposo",
+          "type": "Comparación",
+          "objective": "neural-16",
+          "reviewed": true
+        },
+        {
+          "question": "Si aumenta K+ extracelular y lo demás se mantiene, ¿qué tendencia puede esperarse del potencial de reposo?",
+          "answer": "Al reducirse el gradiente de concentración que favorece la salida de K+, el voltaje tiende a hacerse menos negativo en el modelo. No basta decir que hay más cargas positivas fuera: hay que seguir el gradiente electroquímico y la permeabilidad. Es una predicción del modelo, no un diagnóstico clínico individual.",
+          "pdf_pages": [
+            481
+          ],
+          "subtopic": "Membrana en reposo",
+          "type": "Aplicación",
+          "objective": "neural-17",
+          "reviewed": true
+        },
+        {
+          "question": "¿Un potencial de acción vacía el Na+ externo y el K+ interno de toda la célula?",
+          "answer": "No. La señal requiere el desplazamiento de una fracción pequeña de iones cercana a la membrana; las diferencias generales de concentración persisten. Dibujar muchos iones cruzando sirve para mostrar direcciones, pero no debe interpretarse como intercambio completo de los contenidos de ambos compartimentos en cada descarga.",
+          "pdf_pages": [
+            481,
+            484
+          ],
+          "subtopic": "Membrana en reposo",
+          "type": "Error frecuente",
+          "objective": "neural-18",
+          "reviewed": true
+        },
+        {
+          "question": "¿Qué cambia al alcanzar el umbral en la zona de activación?",
+          "answer": "Se recluta suficiente actividad de canales dependientes de voltaje para producir una despolarización regenerativa. Un potencial local que llega demasiado débil puede no iniciar ese proceso. El umbral es una condición de excitabilidad, no una cantidad de neurotransmisor que viaje físicamente desde la dendrita hasta el extremo del axón.",
+          "pdf_pages": [
+            482,
+            483
+          ],
+          "subtopic": "Potencial de acción",
+          "type": "Mecanismo",
+          "objective": "neural-19",
+          "reviewed": true
+        },
+        {
+          "question": "Explica el ascenso rápido del potencial de acción más allá de «entra Na+».",
+          "answer": "La apertura de canales de Na+ dependientes de voltaje permite entrada de Na+, que despolariza y favorece la apertura de más canales. Ese circuito de retroalimentación positiva acelera el ascenso. La explicación requiere canal, fuerza impulsora y cambio de voltaje; nombrar solo el ion no describe por qué la respuesta se amplifica.",
+          "pdf_pages": [
+            483
+          ],
+          "subtopic": "Potencial de acción",
+          "type": "Mecanismo",
+          "objective": "neural-20",
+          "reviewed": true
+        },
+        {
+          "question": "¿Cerrar un canal de Na+ e inactivarlo significan lo mismo para una nueva estimulación?",
+          "answer": "No. Un canal disponible pero cerrado puede activarse con la despolarización adecuada; un canal inactivado necesita recuperar disponibilidad antes de volver a participar. Esta diferencia ayuda a explicar la refractariedad: un estímulo más fuerte no puede reclutar de inmediato canales que todavía están en un estado no disponible.",
+          "pdf_pages": [
+            483,
+            485
+          ],
+          "subtopic": "Potencial de acción",
+          "type": "Comparación",
+          "objective": "neural-21",
+          "reviewed": true
+        },
+        {
+          "question": "¿Cómo contribuye el K+ a la fase descendente del potencial de acción?",
+          "answer": "La apertura de canales de K+ permite una corriente saliente que favorece volver a valores más negativos, mientras disminuye la corriente entrante de Na+ por inactivación. No es que el K+ tenga carga negativa: sale carga positiva. Distinguir carga del ion y dirección del flujo evita invertir el mecanismo de repolarización.",
+          "pdf_pages": [
+            483,
+            484
+          ],
+          "subtopic": "Potencial de acción",
+          "type": "Mecanismo",
+          "objective": "neural-22",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué puede aparecer una hiperpolarización después del pico?",
+          "answer": "La conductancia al K+ puede permanecer elevada mientras esos canales se cierran gradualmente. El potencial se acerca transitoriamente más al determinado por K+ y queda más negativo que el reposo previo. No demuestra que se haya agotado todo el Na+ ni que la bomba invierta su dirección en esa fase.",
+          "pdf_pages": [
+            484,
+            485
+          ],
+          "subtopic": "Potencial de acción",
+          "type": "Mecanismo",
+          "objective": "neural-23",
+          "reviewed": true
+        },
+        {
+          "question": "Distingue periodo refractario absoluto y relativo.",
+          "answer": "En el absoluto, la región recién activada no puede generar otro potencial de acción mediante un estímulo adicional. En el relativo, ya puede responder, pero requiere una estimulación mayor por su estado de recuperación y conductancia. La distinción se refiere a una región de membrana, no a que toda la neurona deje simultáneamente de funcionar.",
+          "pdf_pages": [
+            485
+          ],
+          "subtopic": "Potencial de acción",
+          "type": "Comparación",
+          "objective": "neural-24",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué un estímulo más fuerte no vence el periodo refractario absoluto?",
+          "answer": "Porque la limitación no es simplemente falta de intensidad de entrada: muchos canales de Na+ aún no han recuperado disponibilidad. Aumentar el estímulo no sustituye esa recuperación. El mismo razonamiento no se aplica sin cambios al periodo relativo, en el que un estímulo mayor sí puede desencadenar otra respuesta.",
+          "pdf_pages": [
+            485
+          ],
+          "subtopic": "Potencial de acción",
+          "type": "Aplicación",
+          "objective": "neural-25",
+          "reviewed": true
+        },
+        {
+          "question": "Si aumenta la intensidad del estímulo, ¿aumenta el tamaño de cada potencial de acción?",
+          "answer": "En una misma fibra bajo condiciones comparables, los potenciales de acción siguen el principio de todo o nada; la intensidad se expresa mediante patrones como frecuencia de descarga y reclutamiento de fibras. No se codifica simplemente haciendo cada pico proporcionalmente más alto. Deben separarse amplitud del evento y organización de muchos eventos.",
+          "pdf_pages": [
+            485,
+            496,
+            497
+          ],
+          "subtopic": "Potencial de acción",
+          "type": "Error frecuente",
+          "objective": "neural-26",
+          "reviewed": true
+        },
+        {
+          "question": "Compara conducción continua y saltatoria.",
+          "answer": "En la continua se regeneran potenciales de acción en regiones sucesivas de membrana excitable. En la saltatoria, la corriente se extiende por internódulos aislados y la señal se regenera especialmente en nodos de Ranvier. «Saltar» es una descripción funcional; no significa que una molécula o un paquete de Na+ vuele entre los nodos.",
+          "pdf_pages": [
+            485,
+            486,
+            488
+          ],
+          "subtopic": "Conducción axónica",
+          "type": "Comparación",
+          "objective": "neural-27",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué son importantes los nodos de Ranvier?",
+          "answer": "Concentran canales que permiten regenerar el potencial de acción entre segmentos mielinizados. La propagación pasiva entre nodos pierde intensidad con la distancia; regenerar el evento evita que la señal completa se desvanezca. La mielina y los nodos cumplen tareas complementarias, no dos versiones de la misma función.",
+          "pdf_pages": [
+            486,
+            487
+          ],
+          "subtopic": "Conducción axónica",
+          "type": "Mecanismo",
+          "objective": "neural-28",
+          "reviewed": true
+        },
+        {
+          "question": "En un modelo con canales conservados, ¿por qué perder aislamiento mielínico puede dificultar la conducción?",
+          "answer": "Puede aumentar la pérdida de corriente y cambiar cuánto alcanza la región siguiente. Tener canales no garantiza que llegue una despolarización suficiente para activarlos. La explicación separa excitabilidad local y propagación eficaz, sin deducir a partir del modelo la evolución de una enfermedad desmielinizante concreta.",
+          "pdf_pages": [
+            476,
+            486,
+            488
+          ],
+          "subtopic": "Conducción axónica",
+          "type": "Aplicación",
+          "objective": "neural-29",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué no basta conocer la mielina para comparar velocidades entre dos fibras?",
+          "answer": "También importa el diámetro axónico. Fibras con distintos diámetros y mielinización no se comparan adecuadamente atribuyendo toda diferencia a un solo rasgo. Para estudiar el efecto de la mielina conviene mantener comparable el diámetro y las demás condiciones, de modo que la comparación identifique qué variable cambia.",
+          "pdf_pages": [
+            478
+          ],
+          "subtopic": "Conducción axónica",
+          "type": "Comparación",
+          "objective": "neural-30",
+          "reviewed": true
+        },
+        {
+          "question": "¿Qué ayuda a que la propagación fisiológica siga hacia membrana aún excitable?",
+          "answer": "La región que acaba de generar el potencial queda refractaria, mientras la región siguiente puede responder a la corriente local. Así se favorece la progresión desde la zona inicial hacia las terminales. No implica que el axón posea una válvula mecánica que solo deje pasar iones hacia un lado.",
+          "pdf_pages": [
+            485,
+            486
+          ],
+          "subtopic": "Conducción axónica",
+          "type": "Mecanismo",
+          "objective": "neural-31",
+          "reviewed": true
+        },
+        {
+          "question": "¿Son los mismos iones Na+ los que viajan desde el inicio hasta la terminal para llevar toda la señal?",
+          "answer": "No. Corrientes locales y regeneración de potenciales en distintas regiones transmiten la señal; los iones individuales se desplazan distancias mucho menores. Confundir propagación del cambio eléctrico con transporte de una misma carga material por toda la fibra mezcla dos escalas y dos procesos distintos.",
+          "pdf_pages": [
+            484,
+            486,
+            487
+          ],
+          "subtopic": "Conducción axónica",
+          "type": "Error frecuente",
+          "objective": "neural-32",
+          "reviewed": true
+        },
+        {
+          "question": "Ordena los pasos entre llegada del potencial presináptico y liberación de neurotransmisor.",
+          "answer": "El potencial despolariza la terminal, se abren canales de Ca2+ dependientes de voltaje, entra Ca2+ y se favorece la fusión de vesículas con la membrana. El mensajero liberado alcanza receptores postsinápticos. La entrada presináptica de calcio no es lo mismo que el flujo iónico producido después en la célula receptora.",
+          "pdf_pages": [
+            491
+          ],
+          "subtopic": "Sinapsis",
+          "type": "Mecanismo",
+          "objective": "neural-33",
+          "reviewed": true
+        },
+        {
+          "question": "Si llega un potencial a la terminal pero se bloquea la entrada de Ca2+, ¿qué etapa queda comprometida?",
+          "answer": "Puede disminuir la liberación vesicular aunque la señal eléctrica haya llegado. El caso localiza el defecto entre despolarización presináptica y exocitosis, sin demostrar por ello que desaparecieron los receptores postsinápticos. Llegada de la señal, liberación y respuesta de la célula siguiente deben comprobarse por separado.",
+          "pdf_pages": [
+            491
+          ],
+          "subtopic": "Sinapsis",
+          "type": "Aplicación",
+          "objective": "neural-34",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué el nombre de un neurotransmisor no basta para predecir excitación o inhibición?",
+          "answer": "La respuesta depende del receptor, los mecanismos que activa y las condiciones de la célula receptora. El capítulo compara efectos diferentes de acetilcolina según el destino. No debe asignarse automáticamente una única respuesta eléctrica a todo lugar donde aparezca una misma sustancia transmisora.",
+          "pdf_pages": [
+            491,
+            492
+          ],
+          "subtopic": "Sinapsis",
+          "type": "Comparación",
+          "objective": "neural-35",
+          "reviewed": true
+        },
+        {
+          "question": "Compara un receptor que es canal con otro que actúa mediante segundos mensajeros.",
+          "answer": "Un receptor ionotrópico modifica directamente el paso de iones al activarse; uno metabotrópico inicia una cadena intracelular que puede cambiar canales u otras funciones. No es solo una diferencia de nombre: cambia la secuencia entre unión del mensajero y respuesta. Tampoco obliga a que todo receptor de una clase produzca el mismo efecto.",
+          "pdf_pages": [
+            492
+          ],
+          "subtopic": "Sinapsis",
+          "type": "Comparación",
+          "objective": "neural-36",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué detener la descarga presináptica no elimina instantáneamente el neurotransmisor ya liberado?",
+          "answer": "El mensajero presente debe retirarse o inactivarse mediante mecanismos como difusión, recaptación o degradación, según el sistema. En la sinapsis colinérgica, acetilcolinesterasa degrada ACh y la colina puede reutilizarse. Detener la entrada de nuevas moléculas y retirar las existentes son dos aspectos diferentes del cese de señal.",
+          "pdf_pages": [
+            493
+          ],
+          "subtopic": "Sinapsis",
+          "type": "Mecanismo",
+          "objective": "neural-37",
+          "reviewed": true
+        },
+        {
+          "question": "Si se reduce la degradación de ACh sin cambiar su liberación, ¿qué proceso se altera directamente?",
+          "answer": "Se dificulta uno de los mecanismos que termina su acción en la hendidura. No se demuestra que se haya generado un potencial de acción más grande ni que aumente obligatoriamente la síntesis en el soma. El cambio propuesto afecta la retirada del mensajero, y sus efectos deben seguirse desde esa etapa.",
+          "pdf_pages": [
+            493
+          ],
+          "subtopic": "Sinapsis",
+          "type": "Aplicación",
+          "objective": "neural-38",
+          "reviewed": true
+        },
+        {
+          "question": "¿Cómo puede una sinapsis axoaxónica reducir la señal que recibirá otra neurona?",
+          "answer": "Una entrada moduladora sobre una terminal puede reducir la entrada de calcio y la liberación del transmisor de esa terminal, como en el ejemplo de inhibición presináptica del capítulo. Así se modifica la salida antes de que llegue a receptores postsinápticos. No es necesario atribuir todo efecto inhibidor a hiperpolarizar directamente la célula final.",
+          "pdf_pages": [
+            496
+          ],
+          "subtopic": "Sinapsis",
+          "type": "Mecanismo",
+          "objective": "neural-39",
+          "reviewed": true
+        },
+        {
+          "question": "¿Qué diferencia una sinapsis eléctrica de una química?",
+          "answer": "En la eléctrica, canales de uniones comunicantes conectan los citoplasmas y permiten flujo de corriente entre células. En la química, la señal requiere liberación de mensajero y activación de receptores a través de una hendidura. Las uniones comunicantes no son uniones herméticas; esa precisión evita confundir comunicación con sellado entre células.",
+          "pdf_pages": [
+            489
+          ],
+          "subtopic": "Sinapsis",
+          "type": "Comparación",
+          "objective": "neural-40",
+          "reviewed": true,
+          "supplementary_reference": "https://www.ncbi.nlm.nih.gov/books/NBK11164/"
+        },
+        {
+          "question": "Distingue sumación temporal de sumación espacial.",
+          "answer": "La temporal combina efectos de entradas próximas en el tiempo; la espacial combina entradas que provienen de sitios distintos. Ambas dependen de cuánto efecto llega a la región que integra la señal. No basta sumar el número de sinapsis: importan magnitud, localización y coincidencia temporal de sus respuestas.",
+          "pdf_pages": [
+            495
+          ],
+          "subtopic": "Integración y circuitos",
+          "type": "Comparación",
+          "objective": "neural-41",
+          "reviewed": true
+        },
+        {
+          "question": "Dos entradas despolarizantes aisladas no alcanzan umbral. ¿Cómo podrían desencadenar una descarga juntas?",
+          "answer": "Si sus efectos coinciden suficientemente en la zona de activación, la despolarización neta puede alcanzar la condición de disparo. No implica que cada entrada aislada deba convertirse primero en un potencial de acción. La sumación de respuestas graduadas permite que varias señales pequeñas cambien la salida de la neurona.",
+          "pdf_pages": [
+            482,
+            495
+          ],
+          "subtopic": "Integración y circuitos",
+          "type": "Aplicación",
+          "objective": "neural-42",
+          "reviewed": true
+        },
+        {
+          "question": "¿Qué expresan EPSP e IPSP en relación con la descarga neuronal?",
+          "answer": "Un EPSP favorece alcanzar las condiciones de disparo; un IPSP las dificulta. Son influencias que se integran con otras entradas, no órdenes que obliguen por sí solas a disparar o a mantener silencio absoluto. La respuesta final depende del efecto neto y del estado de la neurona.",
+          "pdf_pages": [
+            494,
+            495
+          ],
+          "subtopic": "Integración y circuitos",
+          "type": "Mecanismo",
+          "objective": "neural-43",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué contar más entradas excitatorias que inhibitorias no basta para asegurar una descarga?",
+          "answer": "Las entradas no tienen necesariamente igual intensidad, duración ni posición. Una comparación solo por cantidad omite el efecto que realmente alcanza la zona de integración. El modelo exige seguir las respuestas y su coincidencia, en lugar de tratar cada sinapsis como un voto de peso idéntico.",
+          "pdf_pages": [
+            495
+          ],
+          "subtopic": "Integración y circuitos",
+          "type": "Aplicación",
+          "objective": "neural-44",
+          "reviewed": true
+        },
+        {
+          "question": "Compara un circuito divergente con uno convergente.",
+          "answer": "En el divergente, una entrada se distribuye hacia varias células; en el convergente, múltiples entradas llegan a una célula o conjunto. Distribuir una señal e integrar fuentes distintas son funciones diferentes. Un circuito real puede combinar ambas disposiciones, por lo que una etiqueta no describe necesariamente toda la red nerviosa.",
+          "pdf_pages": [
+            498
+          ],
+          "subtopic": "Integración y circuitos",
+          "type": "Comparación",
+          "objective": "neural-45",
+          "reviewed": true
+        },
+        {
+          "question": "¿Qué permite mantener actividad en un circuito reverberante después de una entrada inicial?",
+          "answer": "Una conexión de retorno puede volver a estimular una parte previa del circuito. La persistencia se relaciona con la organización de las conexiones, no con que un mismo potencial de acción permanezca detenido dentro de una neurona. El funcionamiento también depende de inhibición y de las propiedades de las sinapsis implicadas.",
+          "pdf_pages": [
+            498
+          ],
+          "subtopic": "Integración y circuitos",
+          "type": "Mecanismo",
+          "objective": "neural-46",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué un circuito paralelo con descarga posterior no es necesariamente reverberante?",
+          "answer": "Rutas de distinta longitud o demora pueden hacer llegar señales en momentos diferentes y prolongar la salida después del estímulo. Eso no exige un bucle que reexcite neuronas anteriores. Distinguir retardos en rutas paralelas y retroalimentación evita atribuir toda persistencia de una respuesta al mismo tipo de circuito.",
+          "pdf_pages": [
+            498,
+            499
+          ],
+          "subtopic": "Integración y circuitos",
+          "type": "Comparación",
+          "objective": "neural-47",
+          "reviewed": true
+        },
+        {
+          "question": "¿Qué significa plasticidad sináptica al relacionar aprendizaje y redes?",
+          "answer": "La eficacia de las conexiones puede cambiar con la actividad y modificar cómo una red responde después. No significa que cada recuerdo ocupe una única neurona ni que cualquier repetición produzca siempre el mismo cambio. El concepto conecta historia de actividad, modificación de sinapsis y funcionamiento posterior de un circuito.",
+          "pdf_pages": [
+            499,
+            500,
+            501
+          ],
+          "subtopic": "Integración y circuitos",
+          "type": "Concepto",
+          "objective": "neural-48",
+          "reviewed": true
+        }
+      ],
+      "revisions": [
+        {
+          "question": "¿Qué parte de una neurona suele recibir señales de otras células?",
+          "answer": "Las dendritas y el soma reciben e integran muchas entradas; el axón conduce señales hacia sus terminales. La zona inicial del axón permite iniciar potenciales de acción cuando la integración alcanza las condiciones necesarias. Es una organización típica, no una regla que obligue a todas las neuronas a tener idéntica forma.",
+          "pdf_pages": [
+            472
+          ],
+          "subtopic": "Organización neuronal",
+          "type": "Mecanismo",
+          "objective": "neural-02",
+          "reviewed": true
+        },
+        {
+          "question": "¿Por qué la mielina acelera la conducción en muchos axones?",
+          "answer": "En la continua se regeneran potenciales de acción en regiones sucesivas de membrana excitable. En la saltatoria, la corriente se extiende por internódulos aislados y la señal se regenera especialmente en nodos de Ranvier. «Saltar» es una descripción funcional; no significa que una molécula o un paquete de Na+ vuele entre los nodos.",
+          "pdf_pages": [
+            485,
+            486,
+            488
+          ],
+          "subtopic": "Conducción axónica",
+          "type": "Comparación",
+          "objective": "neural-27",
+          "reviewed": true
+        },
+        {
+          "question": "¿Cómo se llama la unión funcional donde una neurona transmite información a otra célula?",
+          "answer": "La unión funcional se llama sinapsis. En una sinapsis química, la terminal presináptica libera un neurotransmisor que actúa sobre receptores de la célula siguiente; en una eléctrica, canales de uniones comunicantes permiten paso de corriente entre células. Identificar la unión no basta: hay que distinguir el mecanismo que transmite la señal.",
+          "pdf_pages": [
+            489
+          ],
+          "subtopic": "Sinapsis",
+          "type": "Comparación",
+          "objective": "neural-40",
+          "reviewed": true,
+          "supplementary_reference": "https://www.ncbi.nlm.nih.gov/books/NBK11164/"
+        },
+        {
+          "question": "¿Qué ocurre al inicio de un potencial de acción típico cuando se abren canales de sodio dependientes de voltaje?",
+          "answer": "La apertura de canales de Na+ dependientes de voltaje permite entrada de Na+, que despolariza y favorece la apertura de más canales. Ese circuito de retroalimentación positiva acelera el ascenso. La explicación requiere canal, fuerza impulsora y cambio de voltaje; nombrar solo el ion no describe por qué la respuesta se amplifica.",
+          "pdf_pages": [
+            483
+          ],
+          "subtopic": "Potencial de acción",
+          "type": "Mecanismo",
+          "objective": "neural-20",
+          "reviewed": true
+        }
+      ],
+      "questions": [],
+      "source": "Saladin, Anatomía y fisiología, capítulo 12. Síntesis original contrastada con páginas individuales del PDF suministrado.",
+      "review": "Segunda revisión automatizada; revisión docente pendiente.",
+      "supplementary_references": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK11164/",
+          "scope": "Uniones comunicantes, distintas de uniones herméticas."
+        }
+      ]
+    }
+  }
+}

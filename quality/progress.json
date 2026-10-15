@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "hemophilias_reviewed_publication_pending",
+  "status": "flashcard_workspace_reviewed_publication_pending",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -1061,11 +1061,112 @@
         "Summary PDF and formal classroom evaluation not expanded in this batch."
       ],
       "deployment": {
+        "commit": "0186466",
+        "status": "Vercel success",
+        "anonymous": {
+          "/api/mindmap?id=morfo_18_sangre__12": 401,
+          "/api/mindmap?id=morfo_18_sangre__12&format=image": 401,
+          "/api/_mindmaps/morfo_18_sangre__12.png": 404,
+          "/api/_mindmaps/curated/build_hemophilias.py.source": 404
+        },
+        "admin_live": "Library search locates the named map. Protected poster fully loads at 1536x1024; practice exposes ten flashcards and six questions. Returned to map view, no live graded attempt submitted."
+      }
+    },
+    {
+      "id": "flashcard-workspace-neural-2026-10-15",
+      "trigger": "Administrator screenshot showed a four-card Tejido nervioso session with a one-sentence answer. User requested flashcard section improvement.",
+      "root_cause": "Local base authoring contains four neural cards. Existing loader paginates correctly but previous reviewed supplements targeted Blood/Senses only. Session counter also mixed due-session size with topic inventory. Full live database audit remains separate.",
+      "new_flashcards": 48,
+      "original_answers_revised": 4,
+      "neural_topic_total": 52,
+      "subtopics": 7,
+      "source_pages": {
+        "saladin_pdf": [
+          470,
+          472,
+          473,
+          474,
+          475,
+          476,
+          477,
+          478,
+          481,
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501
+        ]
+      },
+      "source_complement": "https://www.ncbi.nlm.nih.gov/books/NBK11164/",
+      "coverage": [
+        "Neuronal organization and axonal transport",
+        "Glial roles and myelination",
+        "Resting membrane gradients and pump versus repolarization",
+        "Action potential phases and refractory periods",
+        "Continuous/saltatory conduction",
+        "Chemical/electrical synapses and release/termination",
+        "Summation, coding, circuits and plasticity"
+      ],
+      "delivery": "Protected map-backed flashcard supplement loaded into the actual Flashcards library. Original four database IDs and SRS dates preserved by exact normalized question matching; revisions fall back to stable supplement IDs only if originals are absent. No student records rewritten.",
+      "ui_changes": [
+        "Library exposes actual topic counts and identifies short collections.",
+        "Separate topic total, selected subtopic size and due count.",
+        "Browse-all mode keeps future cards visible without writing review dates, ratings or daily scores.",
+        "Seven subtopic filters, type labels, shuffle, session progress and original Ben Carson logo.",
+        "Readable scientific case, left-aligned explanations and sources; no oversized watermark on answer."
+      ],
+      "second_review": [
+        "Avoided old universal neuron firing and fixed glia/neuron ratio claims.",
+        "Kept microglial function without repeating obsolete monocyte-origin assertion.",
+        "Electrical synapses use gap junctions, not tight junctions.",
+        "Preserved graded-versus-action, pump-versus-repolarization, receptor-specific and presynaptic/postsynaptic distinctions.",
+        "Verified each original-answer revision maps to the correct objective and PDF pages.",
+        "Waited for flip transition to finish before screenshots to avoid false overlap diagnosis."
+      ],
+      "tests": [
+        "28 source, identity, SRS, private access and independent-exam regressions pass.",
+        "Actual library/controller harness: 52 neural cards; 51 due versus 52 total with one future card.",
+        "Subtopic filtering returns the right selection; browse-all refuses ratings and preserves local SRS storage.",
+        "Desktop 1440/mobile 390 visual QA: logos, readable answers, reachable sources and no horizontal overflow.",
+        "Main flashcard/bank renderers regression passes for 162 supplemental cards and 66 bank questions.",
+        "Original IDs 800–803 preserved in revision test; no live student grade submitted."
+      ],
+      "files": [
+        "api/_mindmaps/curated/build_neural_flashcards.py.source",
+        "api/_mindmaps/morfo_12_tejido_nervioso__01.json",
+        "flashcard-workspace.js",
+        "flashcard-workspace.css",
+        "study-depth.js",
+        "student-library.js",
+        "script.js",
+        "scripts/check_flashcard_workspace.cjs"
+      ],
+      "limitations": [
+        "This content expansion covers Tejido nervioso; other short topic decks still need objective-by-objective expansion.",
+        "No claim of full chapter approval or teacher sign-off.",
+        "No new generated illustration in this flashcard-only batch; original branding and code-based layout reused."
+      ],
+      "deployment": {
         "status": "pending"
       }
     }
   ],
-  "next_action": "Prioritize general sensory transduction/adaptation and receptor coding in Sentidos, using the real chapter outline. Blood platelet disorders/thrombosis and full objective review remain pending; no full chapter or teacher approval claim.",
+  "next_action": "Continue improving flashcard coverage across short decks using quality/flashcard-audit.json, expanding source-based mechanisms and application rather than counts alone. Keep original student IDs/dates, paid gating and Blood/Senses objectives; next verify remaining neural chapter objectives and low-count official topics.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

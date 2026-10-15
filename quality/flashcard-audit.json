@@ -1,0 +1,1402 @@
+{
+  "basis": "Local authoring inventory, not a live database count. Old expansion files are not automatically treated as reviewed or delivered.",
+  "teacher_approved": false,
+  "files": [
+    {
+      "file": "content/flashcards_ampliacion_2026.json",
+      "authored_cards": 421,
+      "live_import_verified": false
+    },
+    {
+      "file": "content/flashcards_ampliacion_lote2_2026.json",
+      "authored_cards": 100,
+      "live_import_verified": false
+    },
+    {
+      "file": "content/flashcards_ampliacion_lote3_2026.json",
+      "authored_cards": 74,
+      "live_import_verified": false
+    },
+    {
+      "file": "content/flashcards_ampliacion_lote4_2026.json",
+      "authored_cards": 104,
+      "live_import_verified": false
+    },
+    {
+      "file": "content/flashcards_ampliacion_lote5_2026.json",
+      "authored_cards": 98,
+      "live_import_verified": false
+    },
+    {
+      "file": "content/flashcards_ampliacion_lote6_2026.json",
+      "authored_cards": 100,
+      "live_import_verified": false
+    },
+    {
+      "file": "content/flashcards_ampliacion_lote7_2026.json",
+      "authored_cards": 99,
+      "live_import_verified": false
+    },
+    {
+      "file": "content/flashcards_ampliacion_lote8_2026.json",
+      "authored_cards": 105,
+      "live_import_verified": false
+    },
+    {
+      "file": "content/flashcards_morfo_2026.json",
+      "authored_cards": 278,
+      "live_import_verified": false
+    },
+    {
+      "file": "content/flashcards_oficiales_2026.json",
+      "authored_cards": 72,
+      "live_import_verified": false
+    },
+    {
+      "file": "content/flashcards_salud_investigacion_2026.json",
+      "authored_cards": 84,
+      "live_import_verified": false
+    }
+  ],
+  "base_topics": [
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "temas principales de anatomia y fisiologia",
+      "base_cards": 4,
+      "source_pdf_span": [
+        29,
+        69
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "la quimica de la vida",
+      "base_cards": 4,
+      "source_pdf_span": [
+        70,
+        105
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "forma y funcion celulares",
+      "base_cards": 4,
+      "source_pdf_span": [
+        106,
+        141
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "genetica y funcion celular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        142,
+        170
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "histologia",
+      "base_cards": 4,
+      "source_pdf_span": [
+        171,
+        207
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "sistema tegumentario",
+      "base_cards": 4,
+      "source_pdf_span": [
+        208,
+        233
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "tejido oseo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        234,
+        260
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "el sistema oseo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        261,
+        305
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "articulaciones",
+      "base_cards": 4,
+      "source_pdf_span": [
+        306,
+        339
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "el sistema muscular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        340,
+        428
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "tejido muscular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        429,
+        466
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "tejido nervioso",
+      "base_cards": 4,
+      "source_pdf_span": [
+        467,
+        505
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "medula espinal y reflejos",
+      "base_cards": 4,
+      "source_pdf_span": [
+        506,
+        538
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "encefalo y pares craneales",
+      "base_cards": 4,
+      "source_pdf_span": [
+        539,
+        588
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "sistema nervioso autonomo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        589,
+        609
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "organos de los sentidos",
+      "base_cards": 86,
+      "source_pdf_span": [
+        610,
+        660
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "sistema endocrino",
+      "base_cards": 4,
+      "source_pdf_span": [
+        661,
+        705
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "sangre",
+      "base_cards": 84,
+      "source_pdf_span": [
+        706,
+        741
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "corazon",
+      "base_cards": 4,
+      "source_pdf_span": [
+        742,
+        776
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "vasos sanguineos y circulacion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        777,
+        835
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "sistema linfatico e inmunidad",
+      "base_cards": 4,
+      "source_pdf_span": [
+        836,
+        881
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "aparato respiratorio",
+      "base_cards": 4,
+      "source_pdf_span": [
+        882,
+        922
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "aparato urinario",
+      "base_cards": 4,
+      "source_pdf_span": [
+        923,
+        957
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "equilibrio hidrico y acidobasico",
+      "base_cards": 4,
+      "source_pdf_span": [
+        958,
+        980
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "aparato digestivo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        981,
+        1027
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "nutricion y metabolismo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        1028,
+        1061
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "aparato reproductor masculino",
+      "base_cards": 4,
+      "source_pdf_span": [
+        1062,
+        1091
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "aparato reproductor femenino",
+      "base_cards": 4,
+      "source_pdf_span": [
+        1092,
+        1129
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "desarrollo humano y envejecimiento",
+      "base_cards": 4,
+      "source_pdf_span": [
+        1130,
+        1164
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "introduccion a la biologia celular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        33,
+        53
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "metodos y tecnicas basicas en biologia celular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        54,
+        119
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "estructura de la membrana plasmatica",
+      "base_cards": 4,
+      "source_pdf_span": [
+        120,
+        166
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "transporte a traves de la membrana plasmatica",
+      "base_cards": 4,
+      "source_pdf_span": [
+        167,
+        213
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "macrotransporte a traves de la membrana plasmatica",
+      "base_cards": 4,
+      "source_pdf_span": [
+        214,
+        255
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "especializaciones de la membrana plasmatica",
+      "base_cards": 4,
+      "source_pdf_span": [
+        256,
+        290
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "nucleo y cromatina",
+      "base_cards": 4,
+      "source_pdf_span": [
+        291,
+        349
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "transcripcion y maduracion del arn",
+      "base_cards": 4,
+      "source_pdf_span": [
+        350,
+        384
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "sintesis y modificacion de proteinas",
+      "base_cards": 4,
+      "source_pdf_span": [
+        385,
+        419
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "reticulo endoplasmatico golgi y lisosomas",
+      "base_cards": 4,
+      "source_pdf_span": [
+        420,
+        455
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "mitocondrias y peroxisomas",
+      "base_cards": 4,
+      "source_pdf_span": [
+        456,
+        490
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "citoesqueleto",
+      "base_cards": 4,
+      "source_pdf_span": [
+        491,
+        535
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "senalizacion celular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        536,
+        579
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "ciclo celular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        580,
+        617
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "division celular y muerte programada",
+      "base_cards": 4,
+      "source_pdf_span": [
+        618,
+        649
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "biologia celular del cancer",
+      "base_cards": 4,
+      "source_pdf_span": [
+        650,
+        696
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "respuesta inmunitaria",
+      "base_cards": 4,
+      "source_pdf_span": [
+        697,
+        737
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "celulas madre y aplicaciones terapeuticas",
+      "base_cards": 4,
+      "source_pdf_span": [
+        738,
+        771
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "educacion en salud",
+      "base_cards": 4,
+      "source_pdf_span": [
+        2,
+        3
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "concepto de salud y determinantes",
+      "base_cards": 4,
+      "source_pdf_span": [
+        2,
+        4
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "funciones de salud publica",
+      "base_cards": 4,
+      "source_pdf_span": [
+        4,
+        5
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "niveles de prevencion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        5,
+        19
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "promocion de la salud",
+      "base_cards": 4,
+      "source_pdf_span": [
+        14,
+        16
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "atencion primaria de salud",
+      "base_cards": 4,
+      "source_pdf_span": [
+        16,
+        18
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "factor de riesgo y salud comunitaria",
+      "base_cards": 4,
+      "source_pdf_span": [
+        20,
+        22
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "ods y cobertura sanitaria",
+      "base_cards": 4,
+      "source_pdf_span": [
+        6,
+        9
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "salud en bolivia y modelo safci",
+      "base_cards": 4,
+      "source_pdf_span": [
+        10,
+        14
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "epidemiologia social",
+      "base_cards": 4,
+      "source_pdf_span": [
+        32,
+        39
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "proceso de investigacion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        40,
+        48
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "problema y objetivos de investigacion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        49,
+        59
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "marco teorico e hipotesis",
+      "base_cards": 4,
+      "source_pdf_span": [
+        60,
+        72
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "variables y medicion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        72,
+        76
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "estadistica descriptiva",
+      "base_cards": 4,
+      "source_pdf_span": [
+        85,
+        94
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "muestreo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        95,
+        108
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "frecuencias y graficos",
+      "base_cards": 4,
+      "source_pdf_span": [
+        109,
+        139
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "medidas de tendencia central",
+      "base_cards": 4,
+      "source_pdf_span": [
+        145,
+        160
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "medidas de posicion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        161,
+        170
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "dispersion y forma de los datos",
+      "base_cards": 4,
+      "source_pdf_span": [
+        171,
+        190
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "analisis de datos en excel y spss",
+      "base_cards": 4,
+      "source_pdf_span": [
+        191,
+        226
+      ],
+      "status": "requires_objective_review"
+    }
+  ],
+  "current_reviewed_neural_pack": {
+    "new": 48,
+    "revised_originals": 4,
+    "total_after_exact_merge": 52,
+    "protected_source": "morfo_12_tejido_nervioso__01",
+    "full_chapter_approval": false
+  },
+  "priority_candidates": [
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "temas principales de anatomia y fisiologia",
+      "base_cards": 4,
+      "source_pdf_span": [
+        29,
+        69
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "la quimica de la vida",
+      "base_cards": 4,
+      "source_pdf_span": [
+        70,
+        105
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "forma y funcion celulares",
+      "base_cards": 4,
+      "source_pdf_span": [
+        106,
+        141
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "genetica y funcion celular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        142,
+        170
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "histologia",
+      "base_cards": 4,
+      "source_pdf_span": [
+        171,
+        207
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "sistema tegumentario",
+      "base_cards": 4,
+      "source_pdf_span": [
+        208,
+        233
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "tejido oseo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        234,
+        260
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "el sistema oseo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        261,
+        305
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "articulaciones",
+      "base_cards": 4,
+      "source_pdf_span": [
+        306,
+        339
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "el sistema muscular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        340,
+        428
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "tejido muscular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        429,
+        466
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "medula espinal y reflejos",
+      "base_cards": 4,
+      "source_pdf_span": [
+        506,
+        538
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "encefalo y pares craneales",
+      "base_cards": 4,
+      "source_pdf_span": [
+        539,
+        588
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "sistema nervioso autonomo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        589,
+        609
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "sistema endocrino",
+      "base_cards": 4,
+      "source_pdf_span": [
+        661,
+        705
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "corazon",
+      "base_cards": 4,
+      "source_pdf_span": [
+        742,
+        776
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "vasos sanguineos y circulacion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        777,
+        835
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "sistema linfatico e inmunidad",
+      "base_cards": 4,
+      "source_pdf_span": [
+        836,
+        881
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "aparato respiratorio",
+      "base_cards": 4,
+      "source_pdf_span": [
+        882,
+        922
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "aparato urinario",
+      "base_cards": 4,
+      "source_pdf_span": [
+        923,
+        957
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "equilibrio hidrico y acidobasico",
+      "base_cards": 4,
+      "source_pdf_span": [
+        958,
+        980
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "aparato digestivo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        981,
+        1027
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "nutricion y metabolismo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        1028,
+        1061
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "aparato reproductor masculino",
+      "base_cards": 4,
+      "source_pdf_span": [
+        1062,
+        1091
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "aparato reproductor femenino",
+      "base_cards": 4,
+      "source_pdf_span": [
+        1092,
+        1129
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "MORFOFUNCION",
+      "topic": "desarrollo humano y envejecimiento",
+      "base_cards": 4,
+      "source_pdf_span": [
+        1130,
+        1164
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "introduccion a la biologia celular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        33,
+        53
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "metodos y tecnicas basicas en biologia celular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        54,
+        119
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "estructura de la membrana plasmatica",
+      "base_cards": 4,
+      "source_pdf_span": [
+        120,
+        166
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "transporte a traves de la membrana plasmatica",
+      "base_cards": 4,
+      "source_pdf_span": [
+        167,
+        213
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "macrotransporte a traves de la membrana plasmatica",
+      "base_cards": 4,
+      "source_pdf_span": [
+        214,
+        255
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "especializaciones de la membrana plasmatica",
+      "base_cards": 4,
+      "source_pdf_span": [
+        256,
+        290
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "nucleo y cromatina",
+      "base_cards": 4,
+      "source_pdf_span": [
+        291,
+        349
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "transcripcion y maduracion del arn",
+      "base_cards": 4,
+      "source_pdf_span": [
+        350,
+        384
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "sintesis y modificacion de proteinas",
+      "base_cards": 4,
+      "source_pdf_span": [
+        385,
+        419
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "reticulo endoplasmatico golgi y lisosomas",
+      "base_cards": 4,
+      "source_pdf_span": [
+        420,
+        455
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "mitocondrias y peroxisomas",
+      "base_cards": 4,
+      "source_pdf_span": [
+        456,
+        490
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "citoesqueleto",
+      "base_cards": 4,
+      "source_pdf_span": [
+        491,
+        535
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "senalizacion celular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        536,
+        579
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "ciclo celular",
+      "base_cards": 4,
+      "source_pdf_span": [
+        580,
+        617
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "division celular y muerte programada",
+      "base_cards": 4,
+      "source_pdf_span": [
+        618,
+        649
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "biologia celular del cancer",
+      "base_cards": 4,
+      "source_pdf_span": [
+        650,
+        696
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "respuesta inmunitaria",
+      "base_cards": 4,
+      "source_pdf_span": [
+        697,
+        737
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "BIOLOGIA CELULAR",
+      "topic": "celulas madre y aplicaciones terapeuticas",
+      "base_cards": 4,
+      "source_pdf_span": [
+        738,
+        771
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "educacion en salud",
+      "base_cards": 4,
+      "source_pdf_span": [
+        2,
+        3
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "concepto de salud y determinantes",
+      "base_cards": 4,
+      "source_pdf_span": [
+        2,
+        4
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "funciones de salud publica",
+      "base_cards": 4,
+      "source_pdf_span": [
+        4,
+        5
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "niveles de prevencion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        5,
+        19
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "promocion de la salud",
+      "base_cards": 4,
+      "source_pdf_span": [
+        14,
+        16
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "atencion primaria de salud",
+      "base_cards": 4,
+      "source_pdf_span": [
+        16,
+        18
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "factor de riesgo y salud comunitaria",
+      "base_cards": 4,
+      "source_pdf_span": [
+        20,
+        22
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "ods y cobertura sanitaria",
+      "base_cards": 4,
+      "source_pdf_span": [
+        6,
+        9
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "salud en bolivia y modelo safci",
+      "base_cards": 4,
+      "source_pdf_span": [
+        10,
+        14
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "epidemiologia social",
+      "base_cards": 4,
+      "source_pdf_span": [
+        32,
+        39
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "proceso de investigacion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        40,
+        48
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "problema y objetivos de investigacion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        49,
+        59
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "marco teorico e hipotesis",
+      "base_cards": 4,
+      "source_pdf_span": [
+        60,
+        72
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "variables y medicion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        72,
+        76
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "estadistica descriptiva",
+      "base_cards": 4,
+      "source_pdf_span": [
+        85,
+        94
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "muestreo",
+      "base_cards": 4,
+      "source_pdf_span": [
+        95,
+        108
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "frecuencias y graficos",
+      "base_cards": 4,
+      "source_pdf_span": [
+        109,
+        139
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "medidas de tendencia central",
+      "base_cards": 4,
+      "source_pdf_span": [
+        145,
+        160
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "medidas de posicion",
+      "base_cards": 4,
+      "source_pdf_span": [
+        161,
+        170
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "dispersion y forma de los datos",
+      "base_cards": 4,
+      "source_pdf_span": [
+        171,
+        190
+      ],
+      "status": "requires_objective_review"
+    },
+    {
+      "subject": "SALUD PUBLICA",
+      "topic": "analisis de datos en excel y spss",
+      "base_cards": 4,
+      "source_pdf_span": [
+        191,
+        226
+      ],
+      "status": "requires_objective_review"
+    }
+  ]
+}

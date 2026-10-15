@@ -1,6 +1,6 @@
 /* Reviewed supplements are read from the same protected source as their maps. */
 (function(){
- const topics=[{id:'morfo_18_sangre__07',topic:'sangre',chapter:18},{id:'morfo_16_organos_sentidos__07',topic:'organos de los sentidos',chapter:16},{id:'morfo_16_organos_sentidos__08',topic:'organos de los sentidos',chapter:16},{id:'morfo_18_sangre__08',topic:'sangre',chapter:18},{id:'morfo_16_organos_sentidos__09',topic:'organos de los sentidos',chapter:16},{id:'morfo_16_organos_sentidos__10',topic:'organos de los sentidos',chapter:16},{id:'morfo_16_organos_sentidos__11',topic:'organos de los sentidos',chapter:16},{id:'morfo_18_sangre__09',topic:'sangre',chapter:18},{id:'morfo_18_sangre__10',topic:'sangre',chapter:18},{id:'morfo_18_sangre__11',topic:'sangre',chapter:18},{id:'morfo_18_sangre__12',topic:'sangre',chapter:18}];
+ const topics=[{id:'morfo_18_sangre__07',topic:'sangre',chapter:18},{id:'morfo_16_organos_sentidos__07',topic:'organos de los sentidos',chapter:16},{id:'morfo_16_organos_sentidos__08',topic:'organos de los sentidos',chapter:16},{id:'morfo_18_sangre__08',topic:'sangre',chapter:18},{id:'morfo_16_organos_sentidos__09',topic:'organos de los sentidos',chapter:16},{id:'morfo_16_organos_sentidos__10',topic:'organos de los sentidos',chapter:16},{id:'morfo_16_organos_sentidos__11',topic:'organos de los sentidos',chapter:16},{id:'morfo_18_sangre__09',topic:'sangre',chapter:18},{id:'morfo_18_sangre__10',topic:'sangre',chapter:18},{id:'morfo_18_sangre__11',topic:'sangre',chapter:18},{id:'morfo_18_sangre__12',topic:'sangre',chapter:18},{id:'morfo_12_tejido_nervioso__01',topic:'tejido nervioso',chapter:12,library:'flashcard_library'}];
  let pending=null;
  const normalize=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim().toLowerCase().replace(/\s+/g,' ');
  const field=(row,key)=>row[key]??row[key.toUpperCase()];
@@ -15,15 +15,18 @@
   const promise=(async()=>{
    const packs=await Promise.all(topics.map(async topic=>{
     const response=await fetch('/api/mindmap?id='+encodeURIComponent(topic.id),{headers:{Authorization:'Bearer '+token},cache:'no-store',signal:AbortSignal.timeout(15000)});
-    if(!response.ok)throw new Error('No pudimos cargar la ampliación de Sangre y Sentidos. Reintenta en unos momentos.');
+    if(!response.ok)throw new Error('No pudimos cargar la ampliación de estudio. Reintenta en unos momentos.');
     const payload=await response.json();
-    if(!payload.assets?.practice)throw new Error('La ampliación de estudio no está disponible.');
-    return {topic,practice:payload.assets.practice};
+    const practice=payload.assets?.[topic.library||'practice'];
+    if(payload.id!==topic.id||!practice)throw new Error('La ampliación de estudio no está disponible.');
+    return {topic,practice};
    }));
-   const result={flashcards:[],bank:[]};
+   const result={flashcards:[],bank:[],revisions:new Map()};
    for(const {topic,practice} of packs){
     const source='Saladin, Anatomía y fisiología · capítulo '+topic.chapter+(practice.supplementary_reference?' · Ampliación fisiológica: '+practice.supplementary_reference:'');
-    practice.flashcards.forEach(card=>result.flashcards.push({id:'depth:'+topic.id+':fc:'+identity(card.question),materia:'MORFOFUNCION',tema:topic.topic,pregunta:card.question,respuesta:card.answer+'\n\nFuente: '+source+' · páginas '+card.pdf_pages.join(', ')+' del PDF.',fuente:source,paginas_pdf:card.pdf_pages.join(', ')}));
+    const convert=card=>{const cardSource=source+(card.supplementary_reference?' · Complemento: '+card.supplementary_reference:'');return {id:'depth:'+topic.id+':fc:'+identity(card.question),materia:'MORFOFUNCION',tema:topic.topic,pregunta:card.question,respuesta:card.answer+'\n\nFuente: '+cardSource+' · páginas '+card.pdf_pages.join(', ')+' del PDF.',fuente:cardSource,paginas_pdf:card.pdf_pages.join(', '),subtema:card.subtopic||'',tipo:card.type||'Repaso',source_reviewed:true};};
+    practice.flashcards.forEach(card=>result.flashcards.push(convert(card)));
+    (practice.revisions||[]).forEach(card=>{const row=convert(card);result.revisions.set(key(row),row);result.flashcards.push(row);});
     practice.questions.forEach(q=>{
      const row={MATERIA:'MORFOFUNCION',TEMA:topic.topic,PREGUNTA:q.question,RESPUESTA_CORRECTA:'ABCD'[q.correct],EXPLICACION:q.reasons.map((reason,i)=>'ABCD'[i]+'. '+reason).join('\n\n'),DIFICULTAD:'medio',FUENTE:source,PAGINAS_PDF:q.pdf_pages.join(', '),content_id:'depth:'+topic.id+':q:'+identity(q.question)};
      'ABCD'.split('').forEach((letter,i)=>row['OPCION_'+letter]=q.options[i]);
@@ -41,10 +44,11 @@
  window.StudyDepth={
   async merge(rows,kind){
    if(!window.CampusAccess||CampusAccess.isFree())return rows;
-   const supplement=(await load())[kind];
+   const loaded=await load(),supplement=loaded[kind];
    if(!supplement)throw new Error('Recurso de estudio desconocido.');
    const seen=new Set(rows.map(key));
-   return rows.concat(supplement.filter(row=>{const k=key(row);if(seen.has(k))return false;seen.add(k);return true;}));
+   const revised=kind==='flashcards'?rows.map(row=>{const replacement=loaded.revisions.get(key(row));if(!replacement)return row;const copy={...row,respuesta:replacement.respuesta,subtema:replacement.subtema,tipo:replacement.tipo,fuente:replacement.fuente,paginas_pdf:replacement.paginas_pdf,source_reviewed:true};if(Object.hasOwn(row,'RESPUESTA'))copy.RESPUESTA=replacement.respuesta;return copy;}):rows;
+   return revised.concat(supplement.filter(row=>{const k=key(row);if(seen.has(k))return false;seen.add(k);return true;}));
   }
  };
 })();

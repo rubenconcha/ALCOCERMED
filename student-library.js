@@ -60,7 +60,13 @@
                 action.type = 'button';
                 action.addEventListener('click', () => startDeck(topic.name, subject, rows));
             }
-            row.append(title, action);
+            const info = document.createElement('div');
+            info.className = 'library-topic-info';
+            const count = document.createElement('span');
+            count.className = 'library-topic-count' + (!topic.locked && topic.count < 10 ? ' is-small' : '');
+            count.textContent = topic.locked ? 'Requiere un plan vigente' : topic.count + ' tarjetas en el tema' + (topic.count < 10 ? ' · colección breve' : '');
+            info.append(title, count);
+            row.append(info, action);
             list.append(row);
         });
     }

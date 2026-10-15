@@ -1,0 +1,40 @@
+/* Session controls preserve saved review dates; browsing never rates a card. */
+(function(){
+ const modeSelect=document.getElementById('flashcard-mode'),subSelect=document.getElementById('flashcard-subtopic');
+ if(!modeSelect||!subSelect)return;
+ let topic='',subject='',all=[],mode='due',subtopic='',pending=false,owner=null;
+ const value=(row,key)=>row?.[key]??row?.[key.toUpperCase()]??'';
+ function restart(){if(!all.length||typeof currentUser==='undefined'||currentUser?.id!==owner)return;pending=true;startDeck(topic,subject,all);}
+ modeSelect.addEventListener('change',()=>{mode=modeSelect.value;restart();});
+ subSelect.addEventListener('change',()=>{subtopic=subSelect.value;restart();});
+ document.getElementById('flashcard-shuffle').addEventListener('click',restart);
+ window.FlashcardWorkspace={
+  clear(){topic='';subject='';all=[];mode='due';subtopic='';pending=false;owner=null;document.getElementById('flashcard-inventory').textContent='';document.getElementById('flashcard-context').textContent='';},
+  isExploring:()=>mode==='all',
+  prepare(name,materia,cards){
+   if(!pending||name!==topic||materia!==subject){mode='due';subtopic='';}
+   pending=false;topic=name;subject=materia;all=cards;owner=typeof currentUser==='undefined'?null:currentUser?.id;
+   modeSelect.value=mode;
+   const groups=[...new Set(cards.map(c=>value(c,'subtema')||'Base del tema'))];
+   subSelect.replaceChildren();
+   for(const label of ['Todos los subtemas',...groups]){const o=document.createElement('option');o.value=label==='Todos los subtemas'?'':label;o.textContent=label;subSelect.append(o);}
+   subSelect.value=subtopic;
+   const filtered=cards.filter(c=>!subtopic||(value(c,'subtema')||'Base del tema')===subtopic);
+   const due=filtered.filter(isCardDue).length;
+   document.getElementById('flashcard-inventory').textContent=cards.length+' tarjetas en el tema · '+filtered.length+' en esta selección · '+due+' disponibles hoy';
+   document.getElementById('flashcard-mode-help').textContent=mode==='all'?'Exploración: puedes verlas todas sin cambiar tus fechas de repaso.':'Repaso programado: las tarjetas calificadas vuelven cuando llega su fecha.';
+   document.getElementById('study-area').classList.toggle('fc-exploring',mode==='all');
+   return filtered;
+  },
+  render(card){
+   const meta=document.getElementById('flashcard-context');
+   meta.textContent=card?[value(card,'subtema')||'Base del tema',value(card,'tipo')||'Repaso'].join(' · '):'';
+   const n=document.getElementById('card-total');
+   const label=document.getElementById('flashcard-session-label');
+   if(label)label.textContent=mode==='all'?'Exploración':'Repaso de hoy';
+   const fill=document.getElementById('flashcard-progress-fill');
+   const total=Number(n?.textContent)||0;
+   if(fill)fill.style.width=(total?Math.min(100,(Number(document.getElementById('card-num').textContent)||0)/total*100):0)+'%';
+  }
+ };
+})();
