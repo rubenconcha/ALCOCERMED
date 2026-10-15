@@ -54,5 +54,19 @@
     "acceso_gratis": false,
     "curated": true,
     "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__08.webp"
+  },
+  {
+    "id": "morfo_16_organos_sentidos__09",
+    "titulo": "Equilibrio vestibular: receptores, movimiento e integración",
+    "root_title": "Equilibrio vestibular: receptores, movimiento e integración",
+    "materia": "Morfofunción",
+    "tema": "Órganos de los sentidos",
+    "parent_key": "morfo_16_organos_sentidos.png",
+    "url_imagen": "premium/morfo_16_organos_sentidos__09.json",
+    "descripcion": "Máculas, otoconias, cúpula, inercia, señal vestibular y mirada. Lámina ilustrada, casos y práctica.",
+    "premium": true,
+    "acceso_gratis": false,
+    "curated": true,
+    "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__09.webp"
   }
 ]

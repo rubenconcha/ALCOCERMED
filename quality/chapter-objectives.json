@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "basis": "Supplied Saladin chapter outlines at PDF 610 and 706. Page spans guide the next reading pass; they do not imply full academic review. Existing legacy materials may cover unreviewed objectives.",
+  "doctor_approved": false,
+  "chapters": [
+    {
+      "id": "morfo_18_sangre",
+      "outline_pdf_page": 706,
+      "chapter_review": "pending",
+      "summary_review": "Existing branded illustrated PDF requires objective-by-objective depth revision",
+      "independent_exam_coverage": "pending",
+      "objectives": [
+        {
+          "domain": "Funciones y componentes de la sangre",
+          "printed_pages": [
+            679,
+            681
+          ],
+          "pdf_pages": [
+            707,
+            709
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Plasma, viscosidad y osmolaridad",
+          "printed_pages": [
+            681,
+            683
+          ],
+          "pdf_pages": [
+            709,
+            711
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Hematopoyesis y regulación de producción",
+          "printed_pages": [
+            683,
+            684
+          ],
+          "pdf_pages": [
+            711,
+            712
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Eritrocitos, hemoglobina y cantidades",
+          "printed_pages": [
+            684,
+            686
+          ],
+          "pdf_pages": [
+            712,
+            714
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Ciclo de vida y trastornos eritrocitarios",
+          "printed_pages": [
+            686,
+            691
+          ],
+          "pdf_pages": [
+            714,
+            719
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Grupos ABO, Rh y otros grupos",
+          "printed_pages": [
+            691,
+            695
+          ],
+          "pdf_pages": [
+            719,
+            723
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Leucocitos: morfología, función y diferencial",
+          "printed_pages": [
+            696,
+            699
+          ],
+          "pdf_pages": [
+            724,
+            727
+          ],
+          "targeted_expansion_maps": [
+            "morfo_18_sangre__07"
+          ],
+          "status": "targeted_expansion_available_full_objective_review_pending"
+        },
+        {
+          "domain": "Leucopoyesis y trastornos leucocitarios",
+          "printed_pages": [
+            699,
+            702
+          ],
+          "pdf_pages": [
+            727,
+            730
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Trombocitos: función y producción",
+          "printed_pages": [
+            702,
+            704
+          ],
+          "pdf_pages": [
+            730,
+            732
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Hemostasia, destinos del coágulo y controles",
+          "printed_pages": [
+            704,
+            708
+          ],
+          "pdf_pages": [
+            732,
+            736
+          ],
+          "targeted_expansion_maps": [
+            "morfo_18_sangre__08"
+          ],
+          "status": "targeted_expansion_available_full_objective_review_pending"
+        },
+        {
+          "domain": "Factores, trastornos y relaciones hepáticas",
+          "printed_pages": [
+            705,
+            710
+          ],
+          "pdf_pages": [
+            733,
+            738
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        }
+      ]
+    },
+    {
+      "id": "morfo_16_organos_sentidos",
+      "outline_pdf_page": 610,
+      "chapter_review": "pending",
+      "summary_review": "Existing branded illustrated PDF requires objective-by-objective depth revision",
+      "independent_exam_coverage": "pending",
+      "objectives": [
+        {
+          "domain": "Propiedades y clasificación de receptores",
+          "printed_pages": [
+            583,
+            585
+          ],
+          "pdf_pages": [
+            611,
+            613
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Terminaciones y vías somatosensitivas",
+          "printed_pages": [
+            585,
+            588
+          ],
+          "pdf_pages": [
+            613,
+            616
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Dolor y sus mecanismos",
+          "printed_pages": [
+            588,
+            591
+          ],
+          "pdf_pages": [
+            616,
+            619
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Gusto y transducción química",
+          "printed_pages": [
+            591,
+            593
+          ],
+          "pdf_pages": [
+            619,
+            621
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Olfato y transducción química",
+          "printed_pages": [
+            593,
+            595
+          ],
+          "pdf_pages": [
+            621,
+            623
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Sonido y anatomía del oído",
+          "printed_pages": [
+            596,
+            601
+          ],
+          "pdf_pages": [
+            624,
+            629
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Transducción y codificación auditiva",
+          "printed_pages": [
+            601,
+            604
+          ],
+          "pdf_pages": [
+            629,
+            632
+          ],
+          "targeted_expansion_maps": [
+            "morfo_16_organos_sentidos__08"
+          ],
+          "status": "targeted_expansion_available_full_objective_review_pending"
+        },
+        {
+          "domain": "Vía auditiva central y relaciones clínicas",
+          "printed_pages": [
+            604,
+            605
+          ],
+          "pdf_pages": [
+            632,
+            633
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Equilibrio vestibular e integración",
+          "printed_pages": [
+            605,
+            609
+          ],
+          "pdf_pages": [
+            633,
+            637
+          ],
+          "targeted_expansion_maps": [
+            "morfo_16_organos_sentidos__09"
+          ],
+          "status": "targeted_expansion_available_full_objective_review_pending"
+        },
+        {
+          "domain": "Óptica, anatomía y formación de imagen",
+          "printed_pages": [
+            610,
+            617
+          ],
+          "pdf_pages": [
+            638,
+            645
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        },
+        {
+          "domain": "Retina, transducción, adaptación y color",
+          "printed_pages": [
+            617,
+            624
+          ],
+          "pdf_pages": [
+            645,
+            652
+          ],
+          "targeted_expansion_maps": [
+            "morfo_16_organos_sentidos__07"
+          ],
+          "status": "targeted_expansion_available_full_objective_review_pending"
+        },
+        {
+          "domain": "Visión estereoscópica y proyección visual",
+          "printed_pages": [
+            624,
+            628
+          ],
+          "pdf_pages": [
+            652,
+            656
+          ],
+          "targeted_expansion_maps": [],
+          "status": "existing_material_requires_full_objective_review"
+        }
+      ]
+    }
+  ]
+}

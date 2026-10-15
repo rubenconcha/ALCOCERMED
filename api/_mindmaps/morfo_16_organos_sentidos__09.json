@@ -1,0 +1,479 @@
+{
+  "id": "morfo_16_organos_sentidos__09",
+  "title": "Equilibrio vestibular: receptores, movimiento e integración",
+  "topic": "Órganos de los sentidos",
+  "sections": [
+    {
+      "title": "Elegir el receptor según el estímulo",
+      "groups": [
+        {
+          "title": "Mecanismos y comparaciones",
+          "items": [
+            {
+              "title": "Orientación, traslación y rotación son preguntas distintas",
+              "text": "El aparato vestibular aporta información sobre fuerzas y movimientos de la cabeza, pero no mediante un receptor único. Utrículo y sáculo participan en la detección de gravedad y aceleración lineal; los conductos semicirculares responden a la dinámica de la rotación. Antes de nombrar una estructura conviene especificar qué cambia en el ejemplo: orientación, velocidad lineal o giro.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 633,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Acelerar no significa solamente moverse rápido",
+              "text": "Aceleración es cambio de velocidad, que puede incluir cambio de magnitud o dirección. Arrancar y frenar en línea recta son estímulos distintos de mantener una velocidad rectilínea uniforme. Iniciar un giro tampoco equivale a sostener indefinidamente la misma rotación: la respuesta vestibular depende del tiempo y de la mecánica del receptor.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 633,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El equilibrio combina más de una fuente",
+              "text": "Las señales vestibulares se integran con visión y propiocepción, incluidas señales del cuello. Esto permite relacionar movimientos de la cabeza con postura corporal y entorno. Una señal aislada no constituye una descripción completa de la posición del cuerpo ni autoriza a identificar una causa clínica de desequilibrio.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 634,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Máculas: membrana otolítica y gravedad",
+      "groups": [
+        {
+          "title": "Mecanismos y comparaciones",
+          "items": [
+            {
+              "title": "Utrículo y sáculo tienen máculas",
+              "text": "Cada mácula contiene células pilosas y de soporte. Con la cabeza erguida, la utricular se dispone aproximadamente horizontal y la sacular aproximadamente vertical. Estas orientaciones favorecen sensibilidades a componentes diferentes del estímulo; no implican que cada órgano funcione de forma aislada en toda postura de la cabeza.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 633,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Las otoconias aportan masa e inercia",
+              "text": "Los cristales asociados a la membrana otolítica aumentan su masa y permiten que gravedad e inercia produzcan desplazamiento relativo respecto del epitelio. Esa deformación flexiona los haces. Las otoconias no son neurotransmisores ni fibras nerviosas, y no deben trasladarse al interior de la cúpula normal del conducto semicircular.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 633,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Inclinación y aceleración lineal requieren integración",
+              "text": "La gravedad al inclinar la cabeza y las fuerzas de una aceleración lineal pueden desplazar la membrana otolítica. La señal periférica aislada no separa inequívocamente todos esos contextos. El encéfalo integra otras señales para interpretar la situación; esta precisión amplía el esquema del libro y evita atribuir a una mácula una lectura independiente y absoluta del movimiento.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 634,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Conductos: endolinfa, ampolla y cúpula",
+      "groups": [
+        {
+          "title": "Mecanismos y comparaciones",
+          "items": [
+            {
+              "title": "Tres planos amplían la información de rotación",
+              "text": "Los tres conductos de cada lado se orientan en planos diferentes. Sus respuestas, junto con las del lado contrario, contribuyen a representar giros en el espacio. No basta decir que todos detectan cualquier movimiento por igual: la orientación y la comparación de señales importan para interpretar qué componente de rotación está ocurriendo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 636,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "La cresta está en la ampolla",
+              "text": "La ampolla es una dilatación del conducto que contiene la cresta ampollar. Las células receptoras se relacionan con la cúpula gelatinosa, que se deforma por movimientos relativos de la endolinfa. Cresta y cúpula no son sinónimos: una es el epitelio sensorial y la otra es la estructura que transmite la deformación al haz.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 636,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Inercia al iniciar y detener un giro",
+              "text": "Al iniciar la rotación, el conducto y la endolinfa no cambian su movimiento de forma idéntica; esa diferencia puede deformar la cúpula. Tras una rotación mantenida, el desplazamiento relativo disminuye y la respuesta se adapta. Detenerse puede producir una deformación transitoria opuesta. No se debe explicar el proceso como un flujo continuo que crece sin límite mientras gira la cabeza.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 636,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "De la flexión a la señal vestibular",
+      "groups": [
+        {
+          "title": "Mecanismos y comparaciones",
+          "items": [
+            {
+              "title": "Cinetocilio y polaridad del haz",
+              "text": "Las células pilosas vestibulares tienen un cinetocilio que permite definir la polaridad funcional del haz. Desviar hacia él y desviar en sentido contrario no son estímulos equivalentes. Esta referencia distingue el haz vestibular del esquema de una célula coclear madura y ayuda a evitar aplicar exactamente el mismo dibujo a ambos sistemas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 633,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "La respuesta puede aumentar o disminuir",
+              "text": "Una flexión hacia el cinetocilio favorece despolarización y aumento de señal aferente; una flexión opuesta produce el cambio contrario. Existen descargas basales, por lo que un movimiento puede codificarse mediante aumentos o disminuciones, no únicamente como encendido desde cero. El detalle de polaridad y descarga basal se contrasta con la referencia fisiológica complementaria.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 636,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Receptor y neurona siguen siendo distintos",
+              "text": "Las células pilosas establecen sinapsis con fibras del nervio vestibular. El potencial receptor graduado modifica la liberación sináptica, y la neurona aferente transmite la señal mediante potenciales de acción. El nervio vestibular y el coclear se reúnen en el par VIII, pero reciben información de receptores con funciones diferentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 637,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Usar la señal para mirar y sostenerse",
+      "groups": [
+        {
+          "title": "Mecanismos y comparaciones",
+          "items": [
+            {
+              "title": "Reflejo vestibuloocular: compensar la cabeza",
+              "text": "Las conexiones vestibulares con núcleos motores oculares ayudan a generar movimientos de ojos compensadores de los de la cabeza. En un giro horizontal sencillo, ojos y cabeza se desplazan en sentidos opuestos para estabilizar la imagen del objetivo. El reflejo no significa que el objeto externo se mueva ni depende exclusivamente de la percepción consciente.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 637,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Postura y cerebelo: integrar y ajustar",
+              "text": "Las proyecciones vestibulares participan en ajustes de postura mediante conexiones espinales y en coordinación a través del cerebelo. No constituyen una orden directa única para todos los músculos: se integran con otras entradas y circuitos. La función de equilibrio incluye estabilizar mirada y cuerpo, además de percibir la orientación.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 637,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Un esquema no es una prueba diagnóstica",
+              "text": "Los ejemplos comparan mecanismos normales de receptores y circuitos. Una sensación de giro o inestabilidad no permite deducir por sí sola un receptor dañado ni escoger una maniobra o tratamiento. La interpretación clínica exige información adicional; este mapa no transforma ejercicios de fisiología en diagnósticos individuales.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 637,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Casos para distinguir mecanismos",
+      "groups": [
+        {
+          "title": "Mecanismos y comparaciones",
+          "items": [
+            {
+              "title": "Caso: el automóvil arranca y luego frena",
+              "text": "En ambos momentos cambia la velocidad lineal y la inercia puede desplazar la membrana otolítica respecto del epitelio. El sentido del desplazamiento cambia entre fases. Responder únicamente que actúan los conductos por existir movimiento omite la diferencia entre traslación lineal y rotación.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 634,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso: elevador con cabeza erguida",
+              "text": "Los cambios de movimiento vertical permiten relacionar la orientación de la mácula sacular con componentes verticales de la aceleración. El ejemplo no significa que el sáculo mida por sí solo el piso alcanzado o la altura absoluta. Una fase de desplazamiento uniforme no equivale a una aceleración vertical mantenida.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 635,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso: silla que gira de forma sostenida",
+              "text": "Al comienzo y al detener el giro cambian las relaciones entre endolinfa, conducto y cúpula. Durante una rotación mantenida, el sistema puede adaptar su respuesta. La explicación correcta distingue fases del movimiento; no concluye que toda actividad vestibular desaparece ni que cualquier sensación posterior demuestre enfermedad.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 636,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_16_organos_sentidos.webp",
+    "alt": "Ilustración de apoyo de los sentidos",
+    "download": "/api/mindmap?id=morfo_16_organos_sentidos__09&format=image",
+    "filename": "morfo_16_organos_sentidos__09-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 16,
+      "pdfPages": [
+        633,
+        634,
+        635,
+        636,
+        637
+      ],
+      "kind": "original_synthesis"
+    },
+    "generative_download": true,
+    "practice": {
+      "flashcards": [
+        {
+          "question": "¿Qué distinción orienta la elección entre órganos otolíticos y conductos semicirculares?",
+          "answer": "El aparato vestibular aporta información sobre fuerzas y movimientos de la cabeza, pero no mediante un receptor único. Utrículo y sáculo participan en la detección de gravedad y aceleración lineal; los conductos semicirculares responden a la dinámica de la rotación. Antes de nombrar una estructura conviene especificar qué cambia en el ejemplo: orientación, velocidad lineal o giro.",
+          "pdf_pages": [
+            633
+          ]
+        },
+        {
+          "question": "¿Por qué arrancar y avanzar a velocidad uniforme no son estímulos equivalentes?",
+          "answer": "Aceleración es cambio de velocidad, que puede incluir cambio de magnitud o dirección. Arrancar y frenar en línea recta son estímulos distintos de mantener una velocidad rectilínea uniforme. Iniciar un giro tampoco equivale a sostener indefinidamente la misma rotación: la respuesta vestibular depende del tiempo y de la mecánica del receptor.",
+          "pdf_pages": [
+            633
+          ]
+        },
+        {
+          "question": "Compara la orientación de las máculas con la cabeza erguida.",
+          "answer": "Cada mácula contiene células pilosas y de soporte. Con la cabeza erguida, la utricular se dispone aproximadamente horizontal y la sacular aproximadamente vertical. Estas orientaciones favorecen sensibilidades a componentes diferentes del estímulo; no implican que cada órgano funcione de forma aislada en toda postura de la cabeza.",
+          "pdf_pages": [
+            633
+          ]
+        },
+        {
+          "question": "¿Cómo contribuyen las otoconias al funcionamiento de la mácula?",
+          "answer": "Los cristales asociados a la membrana otolítica aumentan su masa y permiten que gravedad e inercia produzcan desplazamiento relativo respecto del epitelio. Esa deformación flexiona los haces. Las otoconias no son neurotransmisores ni fibras nerviosas, y no deben trasladarse al interior de la cúpula normal del conducto semicircular.",
+          "pdf_pages": [
+            633
+          ]
+        },
+        {
+          "question": "¿Por qué una señal otolítica aislada no resuelve toda distinción entre inclinación y traslación?",
+          "answer": "La gravedad al inclinar la cabeza y las fuerzas de una aceleración lineal pueden desplazar la membrana otolítica. La señal periférica aislada no separa inequívocamente todos esos contextos. El encéfalo integra otras señales para interpretar la situación; esta precisión amplía el esquema del libro y evita atribuir a una mácula una lectura independiente y absoluta del movimiento.",
+          "pdf_pages": [
+            634
+          ]
+        },
+        {
+          "question": "Distingue ampolla, cresta ampollar y cúpula.",
+          "answer": "La ampolla es una dilatación del conducto que contiene la cresta ampollar. Las células receptoras se relacionan con la cúpula gelatinosa, que se deforma por movimientos relativos de la endolinfa. Cresta y cúpula no son sinónimos: una es el epitelio sensorial y la otra es la estructura que transmite la deformación al haz.",
+          "pdf_pages": [
+            636
+          ]
+        },
+        {
+          "question": "Reconstruye el papel de la inercia al iniciar y detener una rotación.",
+          "answer": "Al iniciar la rotación, el conducto y la endolinfa no cambian su movimiento de forma idéntica; esa diferencia puede deformar la cúpula. Tras una rotación mantenida, el desplazamiento relativo disminuye y la respuesta se adapta. Detenerse puede producir una deformación transitoria opuesta. No se debe explicar el proceso como un flujo continuo que crece sin límite mientras gira la cabeza.",
+          "pdf_pages": [
+            636
+          ]
+        },
+        {
+          "question": "¿Por qué una respuesta vestibular puede aumentar o disminuir respecto de un nivel basal?",
+          "answer": "Una flexión hacia el cinetocilio favorece despolarización y aumento de señal aferente; una flexión opuesta produce el cambio contrario. Existen descargas basales, por lo que un movimiento puede codificarse mediante aumentos o disminuciones, no únicamente como encendido desde cero. El detalle de polaridad y descarga basal se contrasta con la referencia fisiológica complementaria.",
+          "pdf_pages": [
+            636
+          ]
+        },
+        {
+          "question": "Distingue la respuesta de la célula pilosa de la señal en el nervio vestibular.",
+          "answer": "Las células pilosas establecen sinapsis con fibras del nervio vestibular. El potencial receptor graduado modifica la liberación sináptica, y la neurona aferente transmite la señal mediante potenciales de acción. El nervio vestibular y el coclear se reúnen en el par VIII, pero reciben información de receptores con funciones diferentes.",
+          "pdf_pages": [
+            637
+          ]
+        },
+        {
+          "question": "¿Qué relación entre ojos y cabeza explica un reflejo vestibuloocular horizontal sencillo?",
+          "answer": "Las conexiones vestibulares con núcleos motores oculares ayudan a generar movimientos de ojos compensadores de los de la cabeza. En un giro horizontal sencillo, ojos y cabeza se desplazan en sentidos opuestos para estabilizar la imagen del objetivo. El reflejo no significa que el objeto externo se mueva ni depende exclusivamente de la percepción consciente.",
+          "pdf_pages": [
+            637
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Una persona mantiene la cabeza erguida mientras un elevador empieza a subir. ¿Qué relación explica mejor el componente vertical del estímulo?",
+          "options": [
+            "Orientación de la mácula sacular e inercia de su membrana otolítica",
+            "Cristales de la cúpula que estimulan exclusivamente el conducto lateral",
+            "Vibración de la membrana basilar por el desplazamiento vertical",
+            "Movimiento de la ventana oval que mide la altura del elevador"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: la disposición aproximadamente vertical de la mácula sacular ayuda a relacionarla con la aceleración vertical del ejemplo.",
+            "La cúpula normal no contiene otoconias y los conductos se relacionan con la dinámica de la rotación, no con esa explicación vertical.",
+            "La membrana basilar pertenece al mecanismo coclear de audición; no explica la respuesta otolítica a esta aceleración.",
+            "La ventana oval transmite vibración al sistema coclear y no constituye un sensor de altura absoluta."
+          ],
+          "pdf_pages": [
+            633,
+            635
+          ]
+        },
+        {
+          "question": "¿Qué comparación conserva la diferencia entre mácula y cresta ampollar?",
+          "options": [
+            "Ambas dependen de una cúpula que contiene cristales",
+            "La mácula se relaciona con membrana otolítica; la cresta con una cúpula sin otoconias",
+            "La cresta es una fibra nerviosa y la mácula un huesecillo",
+            "Solo la cresta contiene células receptoras"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Traslada indebidamente las otoconias a la cúpula y confunde las estructuras que transmiten el estímulo a cada epitelio.",
+            "Correcto: distingue los dos conjuntos de estructura sensorial y cubierta mecánica sin intercambiar sus componentes.",
+            "Ambas son estructuras sensoriales epiteliales; no equivalen a una fibra nerviosa ni a un huesecillo del oído medio.",
+            "Las máculas también contienen células pilosas receptoras y células de soporte, por lo que esa exclusión es incorrecta."
+          ],
+          "pdf_pages": [
+            633,
+            636
+          ]
+        },
+        {
+          "question": "Durante un giro sostenido de velocidad aproximadamente constante, ¿qué error debe evitarse?",
+          "options": [
+            "Distinguir el inicio del giro de su mantenimiento",
+            "Considerar que la diferencia de movimiento entre endolinfa y conducto puede disminuir",
+            "Suponer que la deformación de la cúpula crece indefinidamente mientras dure el giro",
+            "Comparar la respuesta al inicio con la respuesta al detenerse"
+          ],
+          "correct": 2,
+          "reasons": [
+            "Distinguir fases temporales es necesario para explicar la mecánica y adaptación; no es el error solicitado.",
+            "La reducción del desplazamiento relativo es compatible con la adaptación durante la rotación mantenida.",
+            "Correcto: no se acumula una deformación ilimitada. Deben considerarse inercia, adaptación y cambios al detener el movimiento.",
+            "Comparar ambas transiciones permite reconocer cambios de dirección de la deformación, sin implicar por sí solo una enfermedad."
+          ],
+          "pdf_pages": [
+            636
+          ]
+        },
+        {
+          "question": "En una respuesta vestibuloocular horizontal compensadora, ¿qué relación mantiene la mirada sobre un objetivo estable?",
+          "options": [
+            "Ojos inmóviles en la órbita mientras la cabeza gira",
+            "Ojos y cabeza siempre giran en el mismo sentido",
+            "El objeto externo gira físicamente en sentido opuesto",
+            "Los ojos se desplazan en sentido compensador respecto de la cabeza"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Mantener los ojos fijos respecto de la cabeza no compensa el cambio de orientación de la cabeza respecto del objetivo.",
+            "En el ejemplo sencillo, sumaría el desplazamiento en vez de proporcionar la compensación descrita.",
+            "El reflejo actúa sobre músculos oculares; no requiere que el objeto externo se mueva para estabilizar la mirada.",
+            "Correcto: las conexiones vestibulares con circuitos motores oculares contribuyen a ese movimiento compensador."
+          ],
+          "pdf_pages": [
+            637
+          ]
+        },
+        {
+          "question": "¿Qué afirmación describe correctamente la polaridad de una célula pilosa vestibular?",
+          "options": [
+            "Flexionar hacia el cinetocilio y en sentido contrario puede cambiar la señal en sentidos opuestos",
+            "Todo movimiento provoca exactamente la misma excitación",
+            "Solo puede codificar cambios porque nunca existe descarga aferente basal",
+            "El cinetocilio es una otoconia que entra al nervio"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: la dirección de flexión tiene significado funcional y puede aumentar o disminuir la respuesta respecto del nivel basal.",
+            "Ignora la polaridad del haz y no permite explicar respuestas diferentes según dirección del estímulo.",
+            "Existen descargas basales; el detalle fisiológico complementario permite entender aumentos y disminuciones alrededor de ellas.",
+            "El cinetocilio es una estructura del haz apical, distinta de los cristales y de las fibras del nervio."
+          ],
+          "pdf_pages": [
+            633,
+            636
+          ]
+        },
+        {
+          "question": "Un automóvil arranca y luego mantiene velocidad rectilínea uniforme. ¿Qué interpretación distingue las fases?",
+          "options": [
+            "La velocidad uniforme exige la misma aceleración lineal que el arranque",
+            "El arranque cambia velocidad; la fase uniforme no añade esa misma aceleración traslacional",
+            "Cualquier desplazamiento lineal es necesariamente una rotación de la cabeza",
+            "El utrículo mide de forma directa la distancia recorrida"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Confunde velocidad con su cambio. Mantener una velocidad rectilínea uniforme no exige esa aceleración.",
+            "Correcto: distingue el cambio de velocidad inicial de la fase uniforme, conservando por separado los efectos de la gravedad.",
+            "Traslación y rotación son componentes distintos; que ambos puedan coexistir no los convierte en equivalentes.",
+            "La respuesta otolítica no proporciona por sí sola una lectura directa de distancia o posición absoluta del vehículo."
+          ],
+          "pdf_pages": [
+            633,
+            634
+          ]
+        }
+      ],
+      "source": "Saladin, capítulo 16 · PDF 633–637 (impresas 605–609). Polaridad y descarga basal: ampliación Neuroscience NBK11135; integración otolítica: PMID 9870961.",
+      "review": "Revisión automatizada de fuente y diseño; revisión docente pendiente.",
+      "supplementary_reference": "https://www.ncbi.nlm.nih.gov/books/NBK11135/"
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "clinical_diagnosis_tool": false,
+    "scope": "Fisiología vestibular normal. No maniobras, pruebas diagnósticas ni tratamiento."
+  },
+  "supplementary_references": [
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK11135/",
+      "scope": "Polaridad del haz y actividad basal; ampliación expresamente identificada."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9870961/",
+      "scope": "Integración para interpretar señales otolíticas ambiguas."
+    }
+  ]
+}

@@ -11,7 +11,7 @@ try{const page=await b.newPage();page.on('pageerror',e=>errors.push(e.message));
  });
  await page.goto(base+'/qa-grid');await page.evaluate(()=>loadMapasMentales());
  const maps=await page.evaluate(()=>mmState.allMapas.filter(m=>/^morfo_(16_organos_sentidos|18_sangre)(?:__\d+)?\.(png|json)$/.test(m.url_imagen.split('/').pop())));
- assert.equal(maps.length,18);
+ assert.equal(maps.length,19);
  await page.evaluate(()=>{selectMmMateria('Morfofunción');document.querySelector('#mm-search-input').value='sangre';filterMapas()});
  assert.equal(await page.$$eval('.mm-card-locked',n=>n.length),9);
  await page.evaluate(()=>document.querySelector('.mm-card').click());assert.equal(await page.$eval('#mm-unlock-dialog',n=>n.open),true);assert.equal(requests,0);
@@ -24,7 +24,7 @@ try{const page=await b.newPage();page.on('pageerror',e=>errors.push(e.message));
    await page.evaluate(async()=>{await document.fonts.ready;await document.querySelector('.mm-root-anatomy').decode()});
    if(map.curated){
     await page.evaluate(()=>document.querySelector('#mm-illustrated-image').decode());assert.equal(await page.$eval('#mm-lightbox',n=>n.classList.contains('mm-show-illustrated')),true);
-    if(map.id==='morfo_18_sangre__08'){
+    if(map.id==='morfo_16_organos_sentidos__09'){
      const destination=path.join(root,'output/mapas-qa/downloads',width+'-'+Date.now());fs.mkdirSync(destination,{recursive:true});
      const session=await page.target().createCDPSession();await session.send('Page.setDownloadBehavior',{behavior:'allow',downloadPath:destination});
      await page.click('#mm-lb-download');const file=path.join(destination,map.id+'-Prepa-Ben-Carson.webp');
@@ -58,5 +58,5 @@ try{const page=await b.newPage();page.on('pageerror',e=>errors.push(e.message));
   }
  }
  await page.evaluate(()=>closeMmLightbox());assert.deepEqual(errors,[]);
- console.log('PASS: Sangre and Sentidos, 18 maps at desktop/mobile widths; opening, visible explanation, branch toggles and no page errors.');
+ console.log('PASS: Sangre and Sentidos, 19 maps at desktop/mobile widths; opening, visible explanation, branch toggles and no page errors.');
 }finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)});

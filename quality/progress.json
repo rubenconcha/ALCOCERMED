@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "hemostasis_reviewed",
+  "status": "vestibular_reviewed",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -232,7 +232,7 @@
     },
     {
       "id": "hemostasis-2026-10-15",
-      "status": "reviewed_ready_to_publish",
+      "status": "published_verified",
       "maps": [
         "morfo_18_sangre__08"
       ],
@@ -276,10 +276,71 @@
       "limitations": [
         "A dedicated factor-by-factor coagulation map, leukopoiesis, vestibular equilibrium and expanded summaries remain pending. Neither chapter is complete.",
         "Supplemental question-level cloud error tracking awaits real additive database IDs."
+      ],
+      "deployment": {
+        "commit": "80b44d3",
+        "status": "Vercel success",
+        "anonymous_json_and_image": "401",
+        "raw_png_and_authoring": "404",
+        "admin_live": "1536x1024 illustrated poster loaded. Practicar opens; first correct answer and all four explanatory rationales rendered in production.",
+        "downloads": "Actual button downloaded byte-identical WebP in headless desktop and mobile QA."
+      }
+    },
+    {
+      "id": "vestibular-2026-10-15",
+      "status": "reviewed_ready_to_publish",
+      "maps": [
+        "morfo_16_organos_sentidos__09"
+      ],
+      "authored_explanations": 18,
+      "reasoned_cases": 3,
+      "flashcards": 10,
+      "questions": 6,
+      "generative_posters": 1,
+      "delivery": "Protected illustrated/explorable map and practice; integrated in main study modules.",
+      "sources": [
+        {
+          "book": "Supplied Saladin chapter 16",
+          "pdf_pages": [
+            633,
+            634,
+            635,
+            636,
+            637
+          ],
+          "printed_pages": "605–609"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK11135/",
+          "scope": "Explicit physiological extension: hair-bundle polarity and baseline afferent activity."
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9870961/",
+          "scope": "Primary research cross-check for integration of ambiguous otolith signals."
+        }
+      ],
+      "review": "Automated second academic/visual review, no doctor approval. Verified crystal-free cupula versus otolithic layer, hair-cell polarity, velocity/acceleration distinction, adaptation and ocular compensation.",
+      "corrections": [
+        "Avoided treating otolith input as an independent unambiguous measurement of tilt versus translation.",
+        "Avoided implying cupula deformation grows indefinitely during a sustained rotation.",
+        "Identified basal-discharge and polarity details as supplementary physiology."
+      ],
+      "tests": [
+        "13 protected-content, adapter and practice-integrity tests passed",
+        "19 Sangre/Sentidos maps tested at desktop and mobile sizes, illustrated and concept modes, all feedback paths and reset",
+        "Vestibular poster downloaded through actual button at both viewport sizes; byte-identical to protected source",
+        "Normal modules tested with 50 supplemental cards and 30 reasoned questions",
+        "24 responsive layouts and pinch zoom passed; free and expired subscription UI checks passed",
+        "Rendered desktop poster and mobile practice reviewed visually"
+      ],
+      "coverage_artifact": "quality/chapter-objectives.json: 23 domains for both full chapters, explicit pending review; quantities do not indicate approval.",
+      "limitations": [
+        "Chapter-wide summaries, leukopoiesis, dedicated coagulation pathways, taste/olfaction and other objective gaps remain pending.",
+        "Supplemental bank question-level cloud-error tracking awaits database imports."
       ]
     }
   ],
-  "next_action": "Next: vestibular equilibrium and leukopoiesis, then a dedicated coagulation-pathway map and substantial chapter summary expansion. Build an explicit objective matrix for full-chapter coverage rather than declaring completeness from counts. Preserve gated access and verify latest deployment first.",
+  "next_action": "Prioritize leukopoiesis and expand the existing summaries against quality/chapter-objectives.json. Read full remaining source sections, then author focused maps/practice or summary improvements for uncovered objectives. Keep independent examination coverage and physician approval explicitly pending; verify latest deployment first.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",
