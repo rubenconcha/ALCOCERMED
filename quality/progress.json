@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first_pilot_reviewed_ready_for_publication",
+  "status": "first_pilot_published_visual_corrections_reviewed",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -42,7 +42,8 @@
       },
       "review": "Automated academic and visual second pass; doctor approval still pending.",
       "corrections": [
-        "Generated retina poster originally showed cone peaks 534 and 564 nm; corrected to 531 and 558 nm to match the supplied Saladin p. PDF 652."
+        "Generated retina poster originally showed cone peaks 534 and 564 nm; corrected to 531 and 558 nm to match the supplied Saladin p. PDF 652.",
+        "Removed an imprecise rod-terminal parenthetical added by image generation; retain the neutral label Terminal sináptica."
       ],
       "tests": [
         "Private endpoint and paid access tests",
@@ -51,10 +52,17 @@
         "Public-preview separation",
         "Source and unit checks"
       ],
-      "status": "reviewed_ready_to_publish"
+      "status": "published_visual_update_ready",
+      "deployment": {
+        "commit": "dd6acef",
+        "status": "Vercel success",
+        "anonymous_full_content": "401 / 404 as expected",
+        "admin_retina_view": "Loaded 1536x1024 illustrated poster and expanded explanatory nodes in production",
+        "admin_blood_view": "Loaded 1536x1024 illustrated poster in production"
+      }
     }
   ],
-  "next_action": "Integrate and expand source-reviewed flashcards and question bank for the two pilot subtopics with reasoned distractors; audit source coverage of each sense and blood subtopic before adding further specific branded generative maps and revised summaries. Do not mark either chapter complete.",
+  "next_action": "Author and integrate source-reviewed flashcards and question-bank additions for these two pilot subtopics with reasoned distractors. Continue with auditory transduction, equilibrium, taste and smell, leukopoiesis and hemostasis. Revise summaries against complete chapter objectives; neither chapter is complete.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",
