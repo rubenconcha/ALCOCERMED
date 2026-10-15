@@ -11,6 +11,9 @@
     },
     "api/atlas.js": {
       "includeFiles": "api/_atlas/**"
+    },
+    "api/simulation.js": {
+      "includeFiles": "api/_simulations/**"
     }
   },
   "headers": [
@@ -88,6 +91,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/_simulations/:path*",
+      "destination": "/api/simulation?id=invalid"
+    },
     {
       "source": "/assets/mindmaps/complete/morfo_18_sangre.png",
       "destination": "/api/mindmap?id=morfo_18_sangre&format=image"

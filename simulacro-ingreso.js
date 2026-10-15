@@ -1,8 +1,8 @@
 'use strict';
 (() => {
     const formats = {
-        full: { title: 'Práctica integral · acceso abierto', minutes: 100, split: [50, 30, 20], demo: true },
-        'premium-full': { title: 'Práctica integral · nueva selección', minutes: 100, split: [50, 30, 20] },
+        full: { title: 'Simulacro 7', minutes: 100, split: [50, 30, 20], demo: true },
+        'premium-full': { title: 'Simulacro 8', minutes: 100, split: [50, 30, 20] },
         'morfo-sangre': { title: 'Sangre · Morfofunción', minutes: 40, split: [40, 0, 0], topic: 'sangre', examName: 'Práctica bibliográfica - Morfofunción - Sangre (40 preguntas)' },
         'blood-depth-simulation': { title: 'Sangre · Casos razonados', minutes: 8, split: [6, 0, 0], topic: 'sangre', depthSet: 'simulation' },
         'blood-depth-evaluation': { title: 'Sangre · Autoevaluación de mecanismos', minutes: 8, split: [6, 0, 0], topic: 'sangre', depthSet: 'evaluation' },
@@ -40,6 +40,17 @@
     }
 
     async function loadQuestions(format) {
+        if (format.curatedId) {
+            const session=(await getSupabase().auth.getSession()).data.session;
+            if(!session?.access_token)throw new Error('Vuelve a iniciar sesión.');
+            const response=await fetch('/api/simulation?id='+encodeURIComponent(format.curatedId),{headers:{Authorization:'Bearer '+session.access_token},cache:'no-store',signal:AbortSignal.timeout(15000)});
+            if(response.status===403){CampusAccess.unlock();return null;}
+            if(!response.ok)throw new Error('No pudimos abrir este simulacro. Reintenta.');
+            const paper=await response.json(),current=(await getSupabase().auth.getSession()).data.session;
+            if(current?.access_token!==session.access_token||CampusAccess.isFree())throw new Error('Tu sesión cambió. Vuelve a abrir el simulacro.');
+            if(paper.id!==format.curatedId||!SimulationScope.validate(paper,format.scope))throw new Error('El contenido no corresponde al parcial elegido.');
+            return paper.questions;
+        }
         if (format.pastId) {
             const session = (await getSupabase().auth.getSession()).data.session;
             if (!session?.access_token) throw new Error('Vuelve a iniciar sesión para abrir el examen.');
@@ -49,7 +60,7 @@
             const paper=await response.json();
             const current=(await getSupabase().auth.getSession()).data.session;
             if(current?.access_token!==session.access_token || (requiresPlan(format)&&CampusAccess.isFree())) throw new Error('Tu sesión cambió. Vuelve a abrir el examen.');
-            if(paper.id!==format.pastId || paper.duration!==100 || paper.questions?.length!==100 || new Set(paper.questions.map(q=>q.numero_original)).size!==100 || paper.questions.some(q=>!q.pregunta||!['a','b','c','d'].every(l=>q['opcion_'+l])||!q.respuestas_aceptadas?.length)) throw new Error('El examen no contiene las 100 preguntas originales completas.');
+            if(paper.id!==format.pastId || paper.type!==format.type || paper.duration!==100 || paper.questions?.length!==100 || new Set(paper.questions.map(q=>q.numero_original)).size!==100 || paper.questions.some(q=>!q.pregunta||!['a','b','c','d'].every(l=>q['opcion_'+l])||!q.respuestas_aceptadas?.length)) throw new Error('El examen no contiene las 100 preguntas originales completas.');
             return paper.questions;
         }
         if (format.demo) {
@@ -85,7 +96,16 @@
             const pool = shuffleArray(bank.filter(row => normalized(campo(row, 'materia')) === subject && validQuestion(row) &&
                 !used.has(normalized(campo(row, 'pregunta'))) && !seen.has(normalized(campo(row, 'pregunta'))) &&
                 seen.add(normalized(campo(row, 'pregunta')))));
-            result.push(...pool.slice(0, format.split[index]));
+            const groups=new Map();
+            for(const row of pool){const topic=normalized(campo(row,'tema'));if(!topic)continue;if(!groups.has(topic))groups.set(topic,[]);groups.get(topic).push(row);}
+            const chosen=[];
+            while(chosen.length<format.split[index]){
+                let added=false;
+                for(const group of groups.values()){if(group.length&&chosen.length<format.split[index]){chosen.push(group.shift());added=true;}}
+                if(!added)break;
+            }
+            if(new Set(chosen.map(q=>normalized(campo(q,'tema')))).size < [29,18,20][index])throw new Error('Faltan temas del programa para preparar un final equilibrado. Reintenta cuando termine de cargar el banco.');
+            result.push(...chosen);
         });
         verifyDistribution(result, format);
         return result;
@@ -105,7 +125,7 @@
         });
         document.getElementById('entrance-selected-name').textContent = format.title;
         document.getElementById('entrance-selected-detail').textContent =
-            `${format.pastId ? 100 : format.split.reduce((sum, n) => sum + n, 0)} preguntas · ${format.minutes} minutos`;
+            `${(format.pastId || format.curatedId) ? 100 : format.split.reduce((sum, n) => sum + n, 0)} preguntas · ${format.minutes} minutos`;
         document.getElementById('sim-start-btn').disabled=false;
         window.EntranceLibrary?.markSelected(key);
     };
@@ -129,7 +149,7 @@
         document.getElementById('past-result-tools').hidden = true;
         showSimScreen('sim-config');
         showScreen('simulacro-screen');
-        selectEntranceExam('full');
+        window.clearEntranceExam();
         window.EntranceLibrary?.open();
         if (window.innerWidth <= 768) {
             document.getElementById('sidebar').classList.remove('open');
@@ -148,10 +168,10 @@
         try {
             const rows = await loadQuestions(format);
             if (!rows || request!==launchRequest || (typeof currentUser==='undefined'?null:currentUser?.id)!==account || (typeof currentCampusScreen!=='undefined'&&currentCampusScreen!=='simulacro-screen')) return;
-            simState.mode = format.pastId ? 'pasado' : 'oficial';
+            simState.mode = (format.pastId || format.curatedId) ? 'pasado' : 'oficial';
             simState.pastExamId = format.pastId || null;
-            simState.strictTiming = Boolean(format.pastId);
-            simState.entranceOrigin = Boolean(format.pastId);
+            simState.strictTiming = Boolean(format.pastId || format.curatedId);
+            simState.entranceOrigin = Boolean(format.pastId || format.curatedId);
             document.getElementById('sim-another-exam').textContent = format.pastId ? 'Elegir otro simulacro' : 'Nuevo simulacro';
             document.getElementById('past-result-tools').hidden=true;
             simState.selectedExamen = format.title;

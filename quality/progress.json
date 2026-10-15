@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "plasma_hematocrit_reviewed_ready_to_publish",
+  "status": "numbered_curriculum_scoped_simulations_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -1394,6 +1394,40 @@
         "No authenticated production walkthrough claimed; local actual-controller tests use fixture sessions.",
         "No new summary PDF or full chapter assessment claimed by this batch.",
         "No student records, subscriptions or SRS IDs modified. Dot has not been created."
+      ],
+      "deployment": {
+        "status": "Vercel success",
+        "commit": "a01c94e",
+        "public_markers": "Campus v13 loader, catalog v12 and new map metadata verified.",
+        "protected_json_and_image_without_session": 401,
+        "raw_poster_and_authoring": 404,
+        "evidence": "output/study-depth-qa/morfo_18_sangre__13/deployment-check.json",
+        "authenticated_production_walkthrough": "Not claimed; actual-controller tests used fixture sessions."
+      }
+    },
+    {
+      "id": "numbered-scoped-simulations-2026-10-15",
+      "request": "Number simulators, remove years and total model count from menu, improve menu design and respect partial content; final cumulative.",
+      "curriculum": "quality/simulacro-scope-audit.json",
+      "work": [
+        "Stage menu: Primer parcial / Segundo parcial / Examen final. Stable numbered names, no year control, catalog count or result totals.",
+        "Private 100-question partial models use per-question subject/chapter annotations, checked both server-side and at launch against confirmed ranges.",
+        "First q100 on observational design moved out of strict first-partial model and replaced with Health topic-6 item sourced PDF 60–62.",
+        "Second historical q60 and q74 duplicated the same brain-waves question; replace adapted-model q74 with sourced Saladin chapter-14 comparison, PDF 542–543.",
+        "Original archive and all original answer patterns remain unchanged; adapted papers explicitly described as models.",
+        "Cumulative bank final selects across topics round-robin, covers 29/18/20 topics with subject split 50/30/20."
+      ],
+      "checks": [
+        "23 relevant unit/regression tests passed, including paid API access and preservation of original archive.",
+        "Actual controller UI at 1440/390: numbered stage navigation, search/reset/empty selection, no years or catalog totals, correct launched chapter bounds, all catalog models 100 questions, private/free lock, strict deadline auto-submission and 100/100 accepted-key scoring.",
+        "Independent chapter assessments desktop/mobile regression passed; no live results written.",
+        "Desktop/mobile screenshots visually inspected."
+      ],
+      "assets": "Existing original branding and code/CSS editorial interface; no generated bitmap claimed.",
+      "student_records": "No membership, role, SRS or result mutations.",
+      "limitations": [
+        "Scope/topic review does not newly certify all historical medical answer keys.",
+        "No authenticated production walkthrough claimed."
       ],
       "deployment": {
         "status": "pending"

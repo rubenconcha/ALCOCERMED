@@ -1,0 +1,1231 @@
+{
+  "updated_at": "2026-10-15T21:23:19.248863+00:00",
+  "basis": "User confirmed Morfo first 1–11, second 12–20; Bio first 1–6, second 7–12; final cumulative. Health follows existing cronograma import with explicit SP01P1–SP06P1 and SP07P2–SP12P2.",
+  "scope_review": "Automated editorial pass of item topics and chapter assignment; not new medical answer-key approval.",
+  "models": [
+    {
+      "id": "partial-first",
+      "scope": "first",
+      "question_assignments": [
+        {
+          "position": 1,
+          "subject": "MORFOFUNCION",
+          "chapter": 10,
+          "source_question_id": "2025-2026-1-1"
+        },
+        {
+          "position": 2,
+          "subject": "MORFOFUNCION",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-2"
+        },
+        {
+          "position": 3,
+          "subject": "MORFOFUNCION",
+          "chapter": 5,
+          "source_question_id": "2025-2026-1-3"
+        },
+        {
+          "position": 4,
+          "subject": "MORFOFUNCION",
+          "chapter": 8,
+          "source_question_id": "2025-2026-1-4"
+        },
+        {
+          "position": 5,
+          "subject": "MORFOFUNCION",
+          "chapter": 11,
+          "source_question_id": "2025-2026-1-5"
+        },
+        {
+          "position": 6,
+          "subject": "MORFOFUNCION",
+          "chapter": 7,
+          "source_question_id": "2025-2026-1-6"
+        },
+        {
+          "position": 7,
+          "subject": "MORFOFUNCION",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-7"
+        },
+        {
+          "position": 8,
+          "subject": "MORFOFUNCION",
+          "chapter": 10,
+          "source_question_id": "2025-2026-1-8"
+        },
+        {
+          "position": 9,
+          "subject": "MORFOFUNCION",
+          "chapter": 7,
+          "source_question_id": "2025-2026-1-9"
+        },
+        {
+          "position": 10,
+          "subject": "MORFOFUNCION",
+          "chapter": 5,
+          "source_question_id": "2025-2026-1-10"
+        },
+        {
+          "position": 11,
+          "subject": "MORFOFUNCION",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-11"
+        },
+        {
+          "position": 12,
+          "subject": "MORFOFUNCION",
+          "chapter": 7,
+          "source_question_id": "2025-2026-1-12"
+        },
+        {
+          "position": 13,
+          "subject": "MORFOFUNCION",
+          "chapter": 5,
+          "source_question_id": "2025-2026-1-13"
+        },
+        {
+          "position": 14,
+          "subject": "MORFOFUNCION",
+          "chapter": 8,
+          "source_question_id": "2025-2026-1-14"
+        },
+        {
+          "position": 15,
+          "subject": "MORFOFUNCION",
+          "chapter": 8,
+          "source_question_id": "2025-2026-1-15"
+        },
+        {
+          "position": 16,
+          "subject": "MORFOFUNCION",
+          "chapter": 10,
+          "source_question_id": "2025-2026-1-16"
+        },
+        {
+          "position": 17,
+          "subject": "MORFOFUNCION",
+          "chapter": 10,
+          "source_question_id": "2025-2026-1-17"
+        },
+        {
+          "position": 18,
+          "subject": "MORFOFUNCION",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-18"
+        },
+        {
+          "position": 19,
+          "subject": "MORFOFUNCION",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-19"
+        },
+        {
+          "position": 20,
+          "subject": "MORFOFUNCION",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-20"
+        },
+        {
+          "position": 21,
+          "subject": "MORFOFUNCION",
+          "chapter": 9,
+          "source_question_id": "2025-2026-1-21"
+        },
+        {
+          "position": 22,
+          "subject": "MORFOFUNCION",
+          "chapter": 5,
+          "source_question_id": "2025-2026-1-22"
+        },
+        {
+          "position": 23,
+          "subject": "MORFOFUNCION",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-23"
+        },
+        {
+          "position": 24,
+          "subject": "MORFOFUNCION",
+          "chapter": 7,
+          "source_question_id": "2025-2026-1-24"
+        },
+        {
+          "position": 25,
+          "subject": "MORFOFUNCION",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-25"
+        },
+        {
+          "position": 26,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-26"
+        },
+        {
+          "position": 27,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-27"
+        },
+        {
+          "position": 28,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-28"
+        },
+        {
+          "position": 29,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-29"
+        },
+        {
+          "position": 30,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-30"
+        },
+        {
+          "position": 31,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-31"
+        },
+        {
+          "position": 32,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-32"
+        },
+        {
+          "position": 33,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-33"
+        },
+        {
+          "position": 34,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-34"
+        },
+        {
+          "position": 35,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-35"
+        },
+        {
+          "position": 36,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 3,
+          "source_question_id": "2025-2026-1-36"
+        },
+        {
+          "position": 37,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-37"
+        },
+        {
+          "position": 38,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-38"
+        },
+        {
+          "position": 39,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-39"
+        },
+        {
+          "position": 40,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-40"
+        },
+        {
+          "position": 41,
+          "subject": "SALUD PUBLICA",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-41"
+        },
+        {
+          "position": 42,
+          "subject": "SALUD PUBLICA",
+          "chapter": 3,
+          "source_question_id": "2025-2026-1-42"
+        },
+        {
+          "position": 43,
+          "subject": "SALUD PUBLICA",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-43"
+        },
+        {
+          "position": 44,
+          "subject": "SALUD PUBLICA",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-44"
+        },
+        {
+          "position": 45,
+          "subject": "SALUD PUBLICA",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-45"
+        },
+        {
+          "position": 46,
+          "subject": "SALUD PUBLICA",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-46"
+        },
+        {
+          "position": 47,
+          "subject": "SALUD PUBLICA",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-47"
+        },
+        {
+          "position": 48,
+          "subject": "SALUD PUBLICA",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-48"
+        },
+        {
+          "position": 49,
+          "subject": "SALUD PUBLICA",
+          "chapter": 3,
+          "source_question_id": "2025-2026-1-49"
+        },
+        {
+          "position": 50,
+          "subject": "SALUD PUBLICA",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-50"
+        },
+        {
+          "position": 51,
+          "subject": "MORFOFUNCION",
+          "chapter": 11,
+          "source_question_id": "2025-2026-1-51"
+        },
+        {
+          "position": 52,
+          "subject": "MORFOFUNCION",
+          "chapter": 8,
+          "source_question_id": "2025-2026-1-52"
+        },
+        {
+          "position": 53,
+          "subject": "MORFOFUNCION",
+          "chapter": 10,
+          "source_question_id": "2025-2026-1-53"
+        },
+        {
+          "position": 54,
+          "subject": "MORFOFUNCION",
+          "chapter": 7,
+          "source_question_id": "2025-2026-1-54"
+        },
+        {
+          "position": 55,
+          "subject": "MORFOFUNCION",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-55"
+        },
+        {
+          "position": 56,
+          "subject": "MORFOFUNCION",
+          "chapter": 8,
+          "source_question_id": "2025-2026-1-56"
+        },
+        {
+          "position": 57,
+          "subject": "MORFOFUNCION",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-57"
+        },
+        {
+          "position": 58,
+          "subject": "MORFOFUNCION",
+          "chapter": 10,
+          "source_question_id": "2025-2026-1-58"
+        },
+        {
+          "position": 59,
+          "subject": "MORFOFUNCION",
+          "chapter": 5,
+          "source_question_id": "2025-2026-1-59"
+        },
+        {
+          "position": 60,
+          "subject": "MORFOFUNCION",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-60"
+        },
+        {
+          "position": 61,
+          "subject": "MORFOFUNCION",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-61"
+        },
+        {
+          "position": 62,
+          "subject": "MORFOFUNCION",
+          "chapter": 10,
+          "source_question_id": "2025-2026-1-62"
+        },
+        {
+          "position": 63,
+          "subject": "MORFOFUNCION",
+          "chapter": 10,
+          "source_question_id": "2025-2026-1-63"
+        },
+        {
+          "position": 64,
+          "subject": "MORFOFUNCION",
+          "chapter": 11,
+          "source_question_id": "2025-2026-1-64"
+        },
+        {
+          "position": 65,
+          "subject": "MORFOFUNCION",
+          "chapter": 9,
+          "source_question_id": "2025-2026-1-65"
+        },
+        {
+          "position": 66,
+          "subject": "MORFOFUNCION",
+          "chapter": 7,
+          "source_question_id": "2025-2026-1-66"
+        },
+        {
+          "position": 67,
+          "subject": "MORFOFUNCION",
+          "chapter": 7,
+          "source_question_id": "2025-2026-1-67"
+        },
+        {
+          "position": 68,
+          "subject": "MORFOFUNCION",
+          "chapter": 8,
+          "source_question_id": "2025-2026-1-68"
+        },
+        {
+          "position": 69,
+          "subject": "MORFOFUNCION",
+          "chapter": 7,
+          "source_question_id": "2025-2026-1-69"
+        },
+        {
+          "position": 70,
+          "subject": "MORFOFUNCION",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-70"
+        },
+        {
+          "position": 71,
+          "subject": "MORFOFUNCION",
+          "chapter": 10,
+          "source_question_id": "2025-2026-1-71"
+        },
+        {
+          "position": 72,
+          "subject": "MORFOFUNCION",
+          "chapter": 8,
+          "source_question_id": "2025-2026-1-72"
+        },
+        {
+          "position": 73,
+          "subject": "MORFOFUNCION",
+          "chapter": 10,
+          "source_question_id": "2025-2026-1-73"
+        },
+        {
+          "position": 74,
+          "subject": "MORFOFUNCION",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-74"
+        },
+        {
+          "position": 75,
+          "subject": "MORFOFUNCION",
+          "chapter": 8,
+          "source_question_id": "2025-2026-1-75"
+        },
+        {
+          "position": 76,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-76"
+        },
+        {
+          "position": 77,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 4,
+          "source_question_id": "2025-2026-1-77"
+        },
+        {
+          "position": 78,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-78"
+        },
+        {
+          "position": 79,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 5,
+          "source_question_id": "2025-2026-1-79"
+        },
+        {
+          "position": 80,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-80"
+        },
+        {
+          "position": 81,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-81"
+        },
+        {
+          "position": 82,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-82"
+        },
+        {
+          "position": 83,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-83"
+        },
+        {
+          "position": 84,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-84"
+        },
+        {
+          "position": 85,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-85"
+        },
+        {
+          "position": 86,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-86"
+        },
+        {
+          "position": 87,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-87"
+        },
+        {
+          "position": 88,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 2,
+          "source_question_id": "2025-2026-1-88"
+        },
+        {
+          "position": 89,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 1,
+          "source_question_id": "2025-2026-1-89"
+        },
+        {
+          "position": 90,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 3,
+          "source_question_id": "2025-2026-1-90"
+        },
+        {
+          "position": 91,
+          "subject": "SALUD PUBLICA",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-91"
+        },
+        {
+          "position": 92,
+          "subject": "SALUD PUBLICA",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-92"
+        },
+        {
+          "position": 93,
+          "subject": "SALUD PUBLICA",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-93"
+        },
+        {
+          "position": 94,
+          "subject": "SALUD PUBLICA",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-94"
+        },
+        {
+          "position": 95,
+          "subject": "SALUD PUBLICA",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-95"
+        },
+        {
+          "position": 96,
+          "subject": "SALUD PUBLICA",
+          "chapter": 5,
+          "source_question_id": "2025-2026-1-96"
+        },
+        {
+          "position": 97,
+          "subject": "SALUD PUBLICA",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-97"
+        },
+        {
+          "position": 98,
+          "subject": "SALUD PUBLICA",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-98"
+        },
+        {
+          "position": 99,
+          "subject": "SALUD PUBLICA",
+          "chapter": 6,
+          "source_question_id": "2025-2026-1-99"
+        },
+        {
+          "position": 100,
+          "subject": "SALUD PUBLICA",
+          "chapter": 6,
+          "source_question_id": null
+        }
+      ],
+      "adaptations": [
+        "First partial historical question 100 on observational designs replaced with sourced theoretical-foundation item (Health topic 6)."
+      ],
+      "originals_retained": 99,
+      "new_sourced_replacements": 1
+    },
+    {
+      "id": "partial-second",
+      "scope": "second",
+      "question_assignments": [
+        {
+          "position": 1,
+          "subject": "MORFOFUNCION",
+          "chapter": 13,
+          "source_question_id": "2025-2026-2-1"
+        },
+        {
+          "position": 2,
+          "subject": "MORFOFUNCION",
+          "chapter": 17,
+          "source_question_id": "2025-2026-2-2"
+        },
+        {
+          "position": 3,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-3"
+        },
+        {
+          "position": 4,
+          "subject": "MORFOFUNCION",
+          "chapter": 12,
+          "source_question_id": "2025-2026-2-4"
+        },
+        {
+          "position": 5,
+          "subject": "MORFOFUNCION",
+          "chapter": 18,
+          "source_question_id": "2025-2026-2-5"
+        },
+        {
+          "position": 6,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-6"
+        },
+        {
+          "position": 7,
+          "subject": "MORFOFUNCION",
+          "chapter": 19,
+          "source_question_id": "2025-2026-2-7"
+        },
+        {
+          "position": 8,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-8"
+        },
+        {
+          "position": 9,
+          "subject": "MORFOFUNCION",
+          "chapter": 17,
+          "source_question_id": "2025-2026-2-9"
+        },
+        {
+          "position": 10,
+          "subject": "MORFOFUNCION",
+          "chapter": 18,
+          "source_question_id": "2025-2026-2-10"
+        },
+        {
+          "position": 11,
+          "subject": "MORFOFUNCION",
+          "chapter": 20,
+          "source_question_id": "2025-2026-2-11"
+        },
+        {
+          "position": 12,
+          "subject": "MORFOFUNCION",
+          "chapter": 15,
+          "source_question_id": "2025-2026-2-12"
+        },
+        {
+          "position": 13,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-13"
+        },
+        {
+          "position": 14,
+          "subject": "MORFOFUNCION",
+          "chapter": 13,
+          "source_question_id": "2025-2026-2-14"
+        },
+        {
+          "position": 15,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-15"
+        },
+        {
+          "position": 16,
+          "subject": "MORFOFUNCION",
+          "chapter": 14,
+          "source_question_id": "2025-2026-2-16"
+        },
+        {
+          "position": 17,
+          "subject": "MORFOFUNCION",
+          "chapter": 18,
+          "source_question_id": "2025-2026-2-17"
+        },
+        {
+          "position": 18,
+          "subject": "MORFOFUNCION",
+          "chapter": 13,
+          "source_question_id": "2025-2026-2-18"
+        },
+        {
+          "position": 19,
+          "subject": "MORFOFUNCION",
+          "chapter": 12,
+          "source_question_id": "2025-2026-2-19"
+        },
+        {
+          "position": 20,
+          "subject": "MORFOFUNCION",
+          "chapter": 13,
+          "source_question_id": "2025-2026-2-20"
+        },
+        {
+          "position": 21,
+          "subject": "MORFOFUNCION",
+          "chapter": 17,
+          "source_question_id": "2025-2026-2-21"
+        },
+        {
+          "position": 22,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-22"
+        },
+        {
+          "position": 23,
+          "subject": "MORFOFUNCION",
+          "chapter": 18,
+          "source_question_id": "2025-2026-2-23"
+        },
+        {
+          "position": 24,
+          "subject": "MORFOFUNCION",
+          "chapter": 18,
+          "source_question_id": "2025-2026-2-24"
+        },
+        {
+          "position": 25,
+          "subject": "MORFOFUNCION",
+          "chapter": 14,
+          "source_question_id": "2025-2026-2-25"
+        },
+        {
+          "position": 26,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 8,
+          "source_question_id": "2025-2026-2-26"
+        },
+        {
+          "position": 27,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 11,
+          "source_question_id": "2025-2026-2-27"
+        },
+        {
+          "position": 28,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 8,
+          "source_question_id": "2025-2026-2-28"
+        },
+        {
+          "position": 29,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 8,
+          "source_question_id": "2025-2026-2-29"
+        },
+        {
+          "position": 30,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 12,
+          "source_question_id": "2025-2026-2-30"
+        },
+        {
+          "position": 31,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 9,
+          "source_question_id": "2025-2026-2-31"
+        },
+        {
+          "position": 32,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-32"
+        },
+        {
+          "position": 33,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 11,
+          "source_question_id": "2025-2026-2-33"
+        },
+        {
+          "position": 34,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 8,
+          "source_question_id": "2025-2026-2-34"
+        },
+        {
+          "position": 35,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 9,
+          "source_question_id": "2025-2026-2-35"
+        },
+        {
+          "position": 36,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 9,
+          "source_question_id": "2025-2026-2-36"
+        },
+        {
+          "position": 37,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 8,
+          "source_question_id": "2025-2026-2-37"
+        },
+        {
+          "position": 38,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 11,
+          "source_question_id": "2025-2026-2-38"
+        },
+        {
+          "position": 39,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-39"
+        },
+        {
+          "position": 40,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 8,
+          "source_question_id": "2025-2026-2-40"
+        },
+        {
+          "position": 41,
+          "subject": "SALUD PUBLICA",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-41"
+        },
+        {
+          "position": 42,
+          "subject": "SALUD PUBLICA",
+          "chapter": 10,
+          "source_question_id": "2025-2026-2-42"
+        },
+        {
+          "position": 43,
+          "subject": "SALUD PUBLICA",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-43"
+        },
+        {
+          "position": 44,
+          "subject": "SALUD PUBLICA",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-44"
+        },
+        {
+          "position": 45,
+          "subject": "SALUD PUBLICA",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-45"
+        },
+        {
+          "position": 46,
+          "subject": "SALUD PUBLICA",
+          "chapter": 11,
+          "source_question_id": "2025-2026-2-46"
+        },
+        {
+          "position": 47,
+          "subject": "SALUD PUBLICA",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-47"
+        },
+        {
+          "position": 48,
+          "subject": "SALUD PUBLICA",
+          "chapter": 12,
+          "source_question_id": "2025-2026-2-48"
+        },
+        {
+          "position": 49,
+          "subject": "SALUD PUBLICA",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-49"
+        },
+        {
+          "position": 50,
+          "subject": "SALUD PUBLICA",
+          "chapter": 11,
+          "source_question_id": "2025-2026-2-50"
+        },
+        {
+          "position": 51,
+          "subject": "MORFOFUNCION",
+          "chapter": 12,
+          "source_question_id": "2025-2026-2-51"
+        },
+        {
+          "position": 52,
+          "subject": "MORFOFUNCION",
+          "chapter": 12,
+          "source_question_id": "2025-2026-2-52"
+        },
+        {
+          "position": 53,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-53"
+        },
+        {
+          "position": 54,
+          "subject": "MORFOFUNCION",
+          "chapter": 19,
+          "source_question_id": "2025-2026-2-54"
+        },
+        {
+          "position": 55,
+          "subject": "MORFOFUNCION",
+          "chapter": 19,
+          "source_question_id": "2025-2026-2-55"
+        },
+        {
+          "position": 56,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-56"
+        },
+        {
+          "position": 57,
+          "subject": "MORFOFUNCION",
+          "chapter": 17,
+          "source_question_id": "2025-2026-2-57"
+        },
+        {
+          "position": 58,
+          "subject": "MORFOFUNCION",
+          "chapter": 18,
+          "source_question_id": "2025-2026-2-58"
+        },
+        {
+          "position": 59,
+          "subject": "MORFOFUNCION",
+          "chapter": 14,
+          "source_question_id": "2025-2026-2-59"
+        },
+        {
+          "position": 60,
+          "subject": "MORFOFUNCION",
+          "chapter": 14,
+          "source_question_id": "2025-2026-2-60"
+        },
+        {
+          "position": 61,
+          "subject": "MORFOFUNCION",
+          "chapter": 15,
+          "source_question_id": "2025-2026-2-61"
+        },
+        {
+          "position": 62,
+          "subject": "MORFOFUNCION",
+          "chapter": 20,
+          "source_question_id": "2025-2026-2-62"
+        },
+        {
+          "position": 63,
+          "subject": "MORFOFUNCION",
+          "chapter": 12,
+          "source_question_id": "2025-2026-2-63"
+        },
+        {
+          "position": 64,
+          "subject": "MORFOFUNCION",
+          "chapter": 18,
+          "source_question_id": "2025-2026-2-64"
+        },
+        {
+          "position": 65,
+          "subject": "MORFOFUNCION",
+          "chapter": 14,
+          "source_question_id": "2025-2026-2-65"
+        },
+        {
+          "position": 66,
+          "subject": "MORFOFUNCION",
+          "chapter": 15,
+          "source_question_id": "2025-2026-2-66"
+        },
+        {
+          "position": 67,
+          "subject": "MORFOFUNCION",
+          "chapter": 13,
+          "source_question_id": "2025-2026-2-67"
+        },
+        {
+          "position": 68,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-68"
+        },
+        {
+          "position": 69,
+          "subject": "MORFOFUNCION",
+          "chapter": 17,
+          "source_question_id": "2025-2026-2-69"
+        },
+        {
+          "position": 70,
+          "subject": "MORFOFUNCION",
+          "chapter": 14,
+          "source_question_id": "2025-2026-2-70"
+        },
+        {
+          "position": 71,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-71"
+        },
+        {
+          "position": 72,
+          "subject": "MORFOFUNCION",
+          "chapter": 18,
+          "source_question_id": "2025-2026-2-72"
+        },
+        {
+          "position": 73,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-73"
+        },
+        {
+          "position": 74,
+          "subject": "MORFOFUNCION",
+          "chapter": 14,
+          "source_question_id": null
+        },
+        {
+          "position": 75,
+          "subject": "MORFOFUNCION",
+          "chapter": 16,
+          "source_question_id": "2025-2026-2-75"
+        },
+        {
+          "position": 76,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 11,
+          "source_question_id": "2025-2026-2-76"
+        },
+        {
+          "position": 77,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-77"
+        },
+        {
+          "position": 78,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 9,
+          "source_question_id": "2025-2026-2-78"
+        },
+        {
+          "position": 79,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 10,
+          "source_question_id": "2025-2026-2-79"
+        },
+        {
+          "position": 80,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 10,
+          "source_question_id": "2025-2026-2-80"
+        },
+        {
+          "position": 81,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 9,
+          "source_question_id": "2025-2026-2-81"
+        },
+        {
+          "position": 82,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 9,
+          "source_question_id": "2025-2026-2-82"
+        },
+        {
+          "position": 83,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 10,
+          "source_question_id": "2025-2026-2-83"
+        },
+        {
+          "position": 84,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-84"
+        },
+        {
+          "position": 85,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 8,
+          "source_question_id": "2025-2026-2-85"
+        },
+        {
+          "position": 86,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-86"
+        },
+        {
+          "position": 87,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 9,
+          "source_question_id": "2025-2026-2-87"
+        },
+        {
+          "position": 88,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 9,
+          "source_question_id": "2025-2026-2-88"
+        },
+        {
+          "position": 89,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 8,
+          "source_question_id": "2025-2026-2-89"
+        },
+        {
+          "position": 90,
+          "subject": "BIOLOGIA CELULAR",
+          "chapter": 11,
+          "source_question_id": "2025-2026-2-90"
+        },
+        {
+          "position": 91,
+          "subject": "SALUD PUBLICA",
+          "chapter": 10,
+          "source_question_id": "2025-2026-2-91"
+        },
+        {
+          "position": 92,
+          "subject": "SALUD PUBLICA",
+          "chapter": 10,
+          "source_question_id": "2025-2026-2-92"
+        },
+        {
+          "position": 93,
+          "subject": "SALUD PUBLICA",
+          "chapter": 10,
+          "source_question_id": "2025-2026-2-93"
+        },
+        {
+          "position": 94,
+          "subject": "SALUD PUBLICA",
+          "chapter": 7,
+          "source_question_id": "2025-2026-2-94"
+        },
+        {
+          "position": 95,
+          "subject": "SALUD PUBLICA",
+          "chapter": 12,
+          "source_question_id": "2025-2026-2-95"
+        },
+        {
+          "position": 96,
+          "subject": "SALUD PUBLICA",
+          "chapter": 10,
+          "source_question_id": "2025-2026-2-96"
+        },
+        {
+          "position": 97,
+          "subject": "SALUD PUBLICA",
+          "chapter": 12,
+          "source_question_id": "2025-2026-2-97"
+        },
+        {
+          "position": 98,
+          "subject": "SALUD PUBLICA",
+          "chapter": 10,
+          "source_question_id": "2025-2026-2-98"
+        },
+        {
+          "position": 99,
+          "subject": "SALUD PUBLICA",
+          "chapter": 10,
+          "source_question_id": "2025-2026-2-99"
+        },
+        {
+          "position": 100,
+          "subject": "SALUD PUBLICA",
+          "chapter": 10,
+          "source_question_id": "2025-2026-2-100"
+        }
+      ],
+      "adaptations": [
+        "Second partial original questions 60 and 74 are conceptually duplicated; replace 74 with sourced chapter-14 comparison."
+      ],
+      "originals_retained": 99,
+      "new_sourced_replacements": 1
+    }
+  ],
+  "original_archive": "All 15 past exam source files remain unchanged. Older partials are left in Exámenes pasados pending separate curriculum mapping; not exposed as current partial models.",
+  "final": "Archived final papers retain original composition. New bank final round-robins topics instead of letting largest chapters dominate; demo and generated final cover 29 Morfo topics, 18 Bio topics and 20 distinct Health topics per paper (100-question capacity). No claim that each 100-question paper asks every possible objective."
+}

@@ -41,3 +41,7 @@ El seguimiento recurrente de este chat es distinto de un Dot. No declarar que el
 Se revisaron ambas grabaciones mediante transcripción local. La crítica académica se centra en recorrer los capítulos dato por dato, desarrollar la fisiología de cada sentido, y explicar en Sangre las poblaciones leucocitarias, sus proporciones y el significado contextual de sus cambios. No basar las mejoras solo en los primeros párrafos. Hay palabras aisladas poco claras en la transcripción: no convertirlas en citas literales ni en nuevas exigencias clínicas.
 
 El primer lote incorpora dos mapas originales y 48 explicaciones, con ocho casos razonados. Una segunda pasada corrigió en la lámina de retina dos longitudes de onda introducidas por la generación de imagen: el Saladin suministrado establece 420, 531 y 558 nm. La revisión de capítulos completos y la ampliación en flashcards, bancos y exámenes continúan pendientes.
+
+## Simulacros y parciales confirmados
+
+El usuario confirmó Morfofunción 1–11 para primer parcial y 12–20 para segundo; Biología Celular 1–6 y 7–12, respectivamente. El final es acumulativo de todo el programa. Salud sigue el cronograma guardado SP01P1–SP06P1 / SP07P2–SP12P2. Los nuevos modelos por parcial requieren revisión por pregunta y validación contra esos rangos, además de fuentes y clave. Conservar el archivo histórico; no usar solo el año o rótulo para clasificar una prueba actual. En Simulacros usar nombres numerados y menú por parcial, sin exhibir el total de modelos. Consultar `quality/simulacro-scope-audit.json`.

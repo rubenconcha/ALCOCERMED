@@ -149,7 +149,7 @@
         finally { button.disabled = false; }
     };
     window.renderPastExamResult = function () {
-        const historical = simState.mode === 'pasado';
+        const historical = simState.mode === 'pasado' && Boolean(simState.pastExamId);
         $('past-result-tools').hidden = !historical;
         if (historical) $('past-result-title').textContent = simState.selectedExamen;
     };
