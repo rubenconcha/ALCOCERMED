@@ -1,0 +1,345 @@
+{
+  "id": "morfo_18_sangre__07",
+  "title": "Diferencial leucocitario: proporciones e interpretación",
+  "topic": "La sangre",
+  "sections": [
+    {
+      "title": "Cinco células: reconocer y comparar",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "Neutrófilos: 60-70 %",
+              "text": "En el cuadro 18.6 del Saladin suministrado son el tipo más abundante. Su núcleo maduro suele presentar 3-5 lóbulos, con gránulos finos en el citoplasma. La segmentación nuclear no significa que existan varios núcleos. Fagocitan bacterias y emplean sustancias antimicrobianas; su aspecto y su función deben estudiarse juntos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 726,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Linfocitos: 25-33 %",
+              "text": "Los pequeños presentan un núcleo redondo que ocupa casi toda la célula y un borde estrecho de citoplasma. La categoría incluye B, T y NK, con funciones distintas: producción de anticuerpos mediante células plasmáticas derivadas de B, regulación o citotoxicidad por subpoblaciones T y defensa citotóxica innata por NK. Un frotis habitual no distingue por sí solo todas esas funciones.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 727,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Monocitos: 3-8 %",
+              "text": "Son células grandes, con citoplasma relativamente abundante y núcleo arriñonado o en herradura. Pueden pasar a los tejidos y diferenciarse en macrófagos, participar en la fagocitosis y presentar antígenos. No son neutrófilos envejecidos ni se identifican únicamente por su tamaño: hay que integrar tamaño, núcleo y citoplasma.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 727,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Eosinófilos: 2-4 %",
+              "text": "El núcleo suele ser bilobulado y los gránulos específicos grandes adquieren tonos anaranjados o rosados. Sus mecanismos incluyen liberación de sustancias que dañan parásitos y participación en respuestas inflamatorias y alérgicas. La asociación con alergia o parasitosis orienta, pero una cifra aislada no permite identificar una enfermedad concreta.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 726,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Basófilos: menos de 0,5 %",
+              "text": "Son los menos numerosos en el cuadro del libro. Sus gránulos violeta oscuros pueden ocultar parcialmente el núcleo. Liberan mediadores como histamina y heparina. No deben confundirse con plaquetas, con eosinófilos ni asumirse como equivalentes a todos los mastocitos de los tejidos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 726,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "De la circulación al foco de defensa",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "La sangre es una vía de tránsito",
+              "text": "Muchos leucocitos no ejercen toda su función defensiva dentro del vaso. Circulan, reciben señales y pasan a los tejidos donde se encuentra la lesión. Por eso el recuento de sangre periférica es una ventana parcial de un proceso dinámico; no representa el número total de células inmunitarias del organismo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 724,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Diapédesis y quimiotaxis no son sinónimos",
+              "text": "La diapédesis es el paso del leucocito a través de la pared vascular. La quimiotaxis es su desplazamiento orientado por señales químicas. Una describe cruzar una barrera y la otra, seguir una dirección; ambas pueden formar parte del reclutamiento hacia un foco inflamatorio.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 725,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Fagocitosis: capturar, incorporar y destruir",
+              "text": "Neutrófilos y macrófagos reconocen blancos, los incorporan y los degradan mediante mecanismos intracelulares. La liberación de mediadores también modifica el entorno y atrae otras células. El material de una respuesta inflamatoria incluye células activas, microorganismos y restos; no equivale exclusivamente a bacterias vivas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 725,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Presentar antígenos conecta respuestas",
+              "text": "Un macrófago puede procesar material y exponer fragmentos antigénicos a otras células inmunitarias. La eliminación del blanco y la comunicación con linfocitos son funciones relacionadas, pero diferentes. Esta conexión explica por qué clasificar células solo como fagocitarias deja incompleta su contribución a la defensa.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 727,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Porcentaje frente a recuento absoluto",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "Qué mide el diferencial",
+              "text": "El porcentaje expresa qué fracción de los leucocitos contados pertenece a un tipo. No expresa cuántas células de ese tipo hay por unidad de volumen. Un cambio relativo puede depender de la subida o la bajada de otras poblaciones; se interpreta junto al recuento total y, cuando está disponible, al absoluto informado.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 729,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Cómo calcular el absoluto",
+              "text": "Multiplica los leucocitos totales por la fracción decimal del tipo celular. Si hay 8.000 leucocitos/µL y 65 % de neutrófilos, el cálculo es 8.000 × 0,65 = 5.200 neutrófilos/µL. No se multiplica por 65 sin dividir entre 100. La unidad final sigue siendo células por microlitro.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 729,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El mismo porcentaje no es la misma cantidad",
+              "text": "Con 50 % de neutrófilos, un total de 4.000/µL corresponde a 2.000 neutrófilos/µL; un total de 12.000/µL corresponde a 6.000/µL. Los porcentajes son iguales y los absolutos son diferentes. El ejemplo demuestra una relación aritmética; no asigna por sí mismo normalidad o enfermedad.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 729,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Un aumento relativo puede engañar",
+              "text": "Si los linfocitos aumentan como proporción porque descienden otras poblaciones, el porcentaje linfocitario puede subir sin que su recuento absoluto haya aumentado. Antes de concluir proliferación de una población, revisa el total, el absoluto y el contexto del hemograma.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 729,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Qué significan los rangos del libro",
+              "text": "Los porcentajes 60-70, 25-33, 3-8, 2-4 y menos de 0,5 corresponden al cuadro de esta edición. Son intervalos didácticos de poblaciones diferentes: no se suman todos sus mínimos o máximos para construir un individuo. Los intervalos de un laboratorio dependen además de su método y de la población de referencia.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 726,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cambios: asociaciones y límites",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "Neutrofilia: una pista, no una etiqueta",
+              "text": "El libro relaciona cifras elevadas de neutrófilos con infecciones bacterianas. Para interpretar un caso se añaden síntomas, evolución y otros datos; una elevación aislada no demuestra por sí sola una etiología bacteriana ni indica automáticamente un tratamiento. Asociación no equivale a diagnóstico confirmado.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 729,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Eosinofilia: pensar en más de una causa",
+              "text": "Alergia y parasitosis forman parte de las asociaciones destacadas en el texto. Compararlas obliga a valorar exposición, manifestaciones y otros hallazgos. La pregunta útil no es solamente qué célula subió, sino si el patrón completo respalda la explicación propuesta.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 726,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Linfocitos y monocitos: funciones distintas",
+              "text": "Los linfocitos participan en respuestas inmunitarias de distintos tipos; los monocitos también se relacionan con inflamación y actividad fagocitaria en tejidos. Un aumento de una población no transforma a todas sus células en funcionalmente idénticas ni permite determinar el agente causal con un solo número.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 727,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Leucopenia no es anemia",
+              "text": "Leucopenia describe una disminución de leucocitos; anemia se refiere a una reducción de la capacidad de transporte de oxígeno vinculada a los eritrocitos o la hemoglobina. Ambas pueden coexistir, pero son variables diferentes. Para evitar confundirlas, identifica primero qué línea celular mide el dato.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 729,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Muchos leucocitos no siempre implican buena defensa",
+              "text": "En las leucemias puede haber proliferación de células anormales y desplazamiento de la hematopoyesis normal. Un recuento alto no garantiza células maduras o competentes. Por eso deben distinguirse cantidad, maduración y función; el libro también relaciona el reemplazo medular con anemia y alteraciones plaquetarias.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 730,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Aplicar con casos razonados",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "Caso 1: 10.000/µL y 3 % de eosinófilos",
+              "text": "El absoluto calculado es 300 eosinófilos/µL: 10.000 × 0,03. El 3 % cae dentro del intervalo didáctico de Saladin para esa población. Eso no demuestra ni descarta por sí solo alergia o parasitosis: el caso solo permite calcular e identificar el alcance limitado del dato.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 726,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso 2: dos hemogramas con 30 % de linfocitos",
+              "text": "Si el primer total es 5.000/µL y el segundo 15.000/µL, los absolutos son 1.500 y 4.500 linfocitos/µL. Concluir que las cantidades son iguales porque ambos informan 30 % ignora el denominador. Esta comparación evalúa comprensión del diferencial, no memorización de una enfermedad.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 729,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso 3: gránulos naranjas y núcleo de dos lóbulos",
+              "text": "La combinación apoya identificar un eosinófilo. Un neutrófilo suele mostrar segmentación diferente y gránulos más finos; un basófilo presenta gránulos oscuros. La explicación debe justificar el rasgo positivo y por qué los distractores se ajustan peor, en lugar de responder solo con el nombre.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 726,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso 4: infección e insuficiencia medular",
+              "text": "Encontrar infección junto a un recuento leucocitario bajo obliga a recordar que la capacidad de respuesta depende de producción y función, no solo de que exista un estímulo infeccioso. El ejemplo impide aplicar la regla errónea de que toda infección necesariamente eleva los leucocitos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 729,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Integrar y evitar errores frecuentes",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "Granulocitos frente a agranulocitos",
+              "text": "Neutrófilos, eosinófilos y basófilos se agrupan por sus gránulos específicos visibles. Linfocitos y monocitos se llaman agranulocitos por la ausencia de gránulos específicos notorios en la tinción habitual, no porque carezcan de todos los orgánulos o lisosomas. La clasificación es morfológica y no sustituye el análisis funcional.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 724,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Diferencial no es hematócrito",
+              "text": "El diferencial compara tipos de leucocitos. El hematócrito expresa la fracción del volumen sanguíneo ocupada por eritrocitos. Usar el 65 % de neutrófilos como si fuera hematócrito mezcla denominadores distintos y genera una interpretación incorrecta antes de cualquier razonamiento clínico.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 714,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Secuencia para explicar un resultado",
+              "text": "Primero identifica el tipo celular y su unidad; después diferencia porcentaje de absoluto; compara con la referencia pertinente e integra morfología, función y contexto. Finalmente formula una interpretación proporcionada a la evidencia. Si la información no basta, la respuesta correcta reconoce qué dato falta en lugar de inventar un diagnóstico.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 729,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_18_sangre.webp",
+    "alt": "Ilustración de apoyo de La sangre",
+    "download": "/api/mindmap?id=morfo_18_sangre__07&format=image",
+    "filename": "morfo_18_sangre__07-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 18,
+      "kind": "original_synthesis"
+    },
+    "generative_download": true
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "clinical_diagnosis_tool": false,
+    "doctor_approved": false,
+    "scope": "Primer lote de ampliación; no supone aprobación del capítulo completo."
+  }
+}

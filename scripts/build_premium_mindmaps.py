@@ -176,6 +176,11 @@ def main():
    review.append({'id':ident,'topic':topic['title'],'subtitle':title,'paragraphs':len(matches),'concepts':len(unique),'sourceMatches':matches})
  print(json.dumps({'maps':len(metadata),'topics':len(catalog),'paragraphs':sum(x['paragraphs'] for x in review),'missingParagraphs':[x['id'] for x in review if x['paragraphs']<2]}))
  assert len(metadata)==79*6
+ # Preserve individually authored additions instead of limiting a topic to six maps.
+ curated_file=ROOT/'content/mindmaps-curated-additions.json'
+ if curated_file.exists():
+  known={m['id'] for m in metadata}
+  metadata.extend(m for m in json.loads(curated_file.read_text(encoding='utf8')) if m['id'] not in known)
  (ROOT/'mindmap-premium-catalog.js').write_text('/* Public titles and previews only; explanations are subscription protected. */\nwindow.MINDMAP_PREMIUM_CATALOG = '+json.dumps(metadata,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf8')
  (ROOT/'content/mindmaps-premium-catalog.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2),encoding='utf8')
  (ROOT/'output/mapas-qa/premium-source-review.json').write_text(json.dumps(review,ensure_ascii=False,indent=2),encoding='utf8')

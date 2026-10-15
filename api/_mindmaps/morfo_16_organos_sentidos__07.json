@@ -1,0 +1,310 @@
+{
+  "id": "morfo_16_organos_sentidos__07",
+  "title": "Retina y fototransducción: mecanismos paso a paso",
+  "topic": "Órganos de los sentidos",
+  "sections": [
+    {
+      "title": "La retina transforma y procesa",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "Tres niveles de la señal visual",
+              "text": "Fotorreceptores, células bipolares y células ganglionares forman una secuencia principal de transmisión. También intervienen circuitos laterales y vías con células amacrinas. La retina no actúa como una película que solo registra luz: modifica y organiza información antes de enviarla por el nervio óptico.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 648,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Luz y señal viajan en sentidos diferentes",
+              "text": "En la retina humana, la luz atraviesa capas internas antes de alcanzar los segmentos externos de los fotorreceptores cercanos al epitelio pigmentario. La información neural sigue la secuencia hacia bipolares y ganglionares. Una flecha de un esquema debe especificar cuál de esos recorridos representa.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 647,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Segmento externo y terminal sináptica",
+              "text": "El segmento externo contiene el sistema de membranas y fotopigmentos que capta luz. La terminal sináptica comunica cambios a las neuronas siguientes mediante liberación de neurotransmisor. Detectar el estímulo y transmitirlo son procesos conectados, pero ocurren en regiones funcionales distintas de la célula.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 649,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Comparar oscuridad y luz",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "En oscuridad el fotorreceptor no está apagado",
+              "text": "Los fotorreceptores liberan glutamato de manera tónica en oscuridad. La disponibilidad de GMPc favorece canales catiónicos abiertos y una corriente de entrada que mantiene una despolarización relativa. Decir que la oscuridad elimina toda actividad confunde ausencia de luz con ausencia de señalización celular.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 650,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "La luz reduce la entrada de cationes",
+              "text": "La activación del fotopigmento desencadena una cascada que reduce el GMPc. Se cierran canales dependientes de este mensajero y disminuye la corriente de entrada. El potencial se hace más negativo: el fotorreceptor se hiperpolariza y reduce su liberación de glutamato.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 650,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Potencial graduado no es potencial de acción",
+              "text": "La respuesta del fotorreceptor cambia de manera graduada; no consiste en disparar más potenciales de acción por recibir más luz. En la vía de salida, las células ganglionares generan potenciales de acción. Separar ambos niveles evita atribuir la respuesta del nervio óptico a la membrana del bastón.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 651,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Menos glutamato puede significar más respuesta ON",
+              "text": "El efecto del glutamato depende del circuito bipolar. En vías ON, la reducción de glutamato asociada a la iluminación permite una respuesta de signo inverso a la del fotorreceptor; las vías OFF se comportan de modo diferente. Por ello no todas las bipolares responden igual ni se debe trasladar una regla única a toda la retina.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 650,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Seguir la cascada y el pigmento",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "Del fotón al cambio del pigmento",
+              "text": "En la rodopsina, la absorción de luz modifica el retinal desde su configuración cis hacia la trans y activa el sistema de la opsina. El fotón no abre directamente un canal del nervio óptico: el cambio molecular inicia una secuencia intracelular que modifica la corriente del fotorreceptor.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 649,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Amplificación mediante una cascada",
+              "text": "El esquema molecular ampliado se resume como fotopigmento, transducina, fosfodiesterasa y reducción de GMPc. Una secuencia enzimática conecta la absorción de luz con el cierre de canales. Saladin representa la cascada de forma resumida; la terminología molecular adicional corresponde a la ampliación fisiológica, no a una cita literal del libro.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 649,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El pigmento necesita regenerarse",
+              "text": "Para mantener la respuesta, el retinal debe volver a una configuración funcional y reunirse con la opsina. La regeneración y el blanqueado ocurren con velocidades relativas que cambian según la iluminación. Estudiar solo la primera absorción del fotón deja sin explicar cómo un receptor puede seguir participando en la visión.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 650,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "No confundir reciclaje del pigmento y señal eléctrica",
+              "text": "La regeneración permite recuperar pigmento funcional; la hiperpolarización describe un cambio de potencial de membrana. Son fenómenos ligados al ciclo visual, pero no equivalentes. El primero no es un potencial de acción y el segundo no significa que la célula haya destruido permanentemente toda su rodopsina.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 650,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Bastones, conos y resolución",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "Bastones: sensibilidad con menor detalle",
+              "text": "Los bastones permiten visión con poca luz y no proporcionan la discriminación cromática de los conos. La convergencia de señales mejora la detección de estímulos débiles, pero reduce la precisión para separar puntos cercanos. La alta sensibilidad y la alta resolución son propiedades diferentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 651,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Conos y fóvea: detalle y color",
+              "text": "Los conos participan en visión diurna y cromática. La región foveal favorece la agudeza visual por su organización y menor convergencia en sus circuitos. No basta afirmar que los conos ven colores: hay que relacionar tipo de receptor, localización y circuito con la tarea visual.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 652,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Tres clases de conos en esta edición",
+              "text": "Saladin presenta máximos de sensibilidad de 420 nm para S, 531 nm para M y 558 nm para L. Son los valores que se conservan al estudiar este libro. No se interpreta cada cono como un detector exclusivo de un único color: las sensibilidades se superponen y el sistema compara patrones de actividad.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 652,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El nervio óptico transporta una señal ya procesada",
+              "text": "Los axones de las células ganglionares forman el nervio óptico. La divergencia entre el número de receptores y el de fibras de salida obliga a integrar señales en la retina. El nervio no contiene un axón independiente de cada bastón y de cada cono.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 648,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Adaptación: explicar el cambio de ambiente",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "De un ambiente oscuro a uno iluminado",
+              "text": "Al aumentar bruscamente la iluminación, la respuesta inicial cambia mientras la retina ajusta su sensibilidad y se modifica el equilibrio de los pigmentos. La constricción pupilar reduce entrada de luz, pero no explica por sí sola toda la adaptación retiniana. Hay mecanismos ópticos y celulares que deben distinguirse.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 651,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "De la luz a la oscuridad",
+              "text": "La visión escotópica mejora progresivamente cuando la regeneración de rodopsina supera su blanqueado. La dilatación pupilar ayuda, pero recuperar pigmento y reajustar la sensibilidad lleva tiempo. El libro describe una mejoría temprana seguida de un período mayor hasta alcanzar máxima sensibilidad en condiciones de oscuridad.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 651,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Vitamina A: relacionar estructura y función",
+              "text": "El retinal es un derivado de vitamina A y forma parte de los pigmentos visuales. Esta relación permite conectar nutrición con el funcionamiento de los fotorreceptores. La dificultad para ver en poca luz no identifica por sí sola una carencia: puede tener otras causas y necesita información adicional.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 649,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Aplicar sin memorizar frases sueltas",
+      "groups": [
+        {
+          "title": "Comprender y relacionar",
+          "items": [
+            {
+              "title": "Caso 1: llega luz a un bastón",
+              "text": "La respuesta esperada es disminución de GMPc, cierre de canales catiónicos, hiperpolarización y menor liberación de glutamato. La alternativa de abrir más canales y despolarizar invierte la secuencia. La de producir potenciales de acción en el bastón confunde el receptor con la salida ganglionar.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 650,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso 2: disminuye el glutamato y responde una bipolar",
+              "text": "No hay contradicción si pertenece a una vía ON. El signo de la sinapsis determina cómo la neurona siguiente interpreta la reducción del neurotransmisor. Para contestar, explica el circuito y evita afirmar que cualquier reducción de glutamato reduce necesariamente toda actividad visual.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 650,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso 3: detalle fino con iluminación intensa",
+              "text": "Los conos y la organización foveal son más adecuados para esta tarea que el sistema de bastones. La justificación incluye menor convergencia y mayor resolución; no basta responder que los conos son más sensibles, porque la mayor sensibilidad a estímulos débiles corresponde al sistema escotópico.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 652,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso 4: un dibujo confunde sus flechas",
+              "text": "Si una flecha une fotorreceptor, bipolar y ganglionar, debe rotularse como flujo de información neural. Presentarla como dirección de entrada de luz en la retina humana invierte el recorrido anatómico. Un esquema correcto distingue posición de las células, llegada del estímulo y salida de la señal.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 647,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_16_organos_sentidos.webp",
+    "alt": "Ilustración de apoyo de Órganos de los sentidos",
+    "download": "/api/mindmap?id=morfo_16_organos_sentidos__07&format=image",
+    "filename": "morfo_16_organos_sentidos__07-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 16,
+      "kind": "original_synthesis"
+    },
+    "generative_download": true
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "clinical_diagnosis_tool": false,
+    "doctor_approved": false,
+    "scope": "Primer lote de ampliación; no supone aprobación del capítulo completo."
+  },
+  "supplementary_reference": {
+    "title": "Phototransduction in Rods and Cones, Webvision",
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK52768/",
+    "scope": "Nomenclatura molecular complementaria; el esquema del Saladin entregado es más resumido."
+  }
+}

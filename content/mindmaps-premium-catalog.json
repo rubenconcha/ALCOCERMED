@@ -6160,5 +6160,33 @@
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/salud_27_estadistica_spss__06.webp"
+  },
+  {
+    "id": "morfo_18_sangre__07",
+    "titulo": "Diferencial leucocitario: proporciones e interpretación",
+    "root_title": "Diferencial leucocitario: proporciones e interpretación",
+    "materia": "Morfofunción",
+    "tema": "La sangre",
+    "parent_key": "morfo_18_sangre.png",
+    "url_imagen": "premium/morfo_18_sangre__07.json",
+    "descripcion": "Ampliación con mecanismos, comparación y casos razonados. Incluye lámina ilustrada descargable.",
+    "premium": true,
+    "acceso_gratis": false,
+    "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__07.webp",
+    "curated": true
+  },
+  {
+    "id": "morfo_16_organos_sentidos__07",
+    "titulo": "Retina y fototransducción: mecanismos paso a paso",
+    "root_title": "Retina y fototransducción: mecanismos paso a paso",
+    "materia": "Morfofunción",
+    "tema": "Órganos de los sentidos",
+    "parent_key": "morfo_16_organos_sentidos.png",
+    "url_imagen": "premium/morfo_16_organos_sentidos__07.json",
+    "descripcion": "Ampliación con mecanismos, comparación y casos razonados. Incluye lámina ilustrada descargable.",
+    "premium": true,
+    "acceso_gratis": false,
+    "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__07.webp",
+    "curated": true
   }
 ]

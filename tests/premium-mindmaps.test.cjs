@@ -10,9 +10,9 @@ test('77 general maps are free; Sangre and Sentidos and all detailed maps requir
  const start=script.indexOf('async function loadMapasMentales()'),end=script.indexOf('function populateMmMaterias()',start);
  const ctx={mmState:{},MINDMAP_PREMIUM_CATALOG:catalog,setMmState(){},populateMmMaterias(){},populateMmTemas(){},updateIntocStats(){},filterMapas(){},console};ctx.window=ctx;
  vm.runInNewContext(script.slice(start,end),ctx);await ctx.loadMapasMentales();
- assert.equal(ctx.mmState.allMapas.length,553);
+ assert.equal(ctx.mmState.allMapas.length,79+catalog.length);
  const general=ctx.mmState.allMapas.filter(m=>!m.premium||m.general);assert.equal(general.length,79);assert.equal(general.filter(m=>m.acceso_gratis).length,77);assert.equal(general.filter(m=>m.general&&m.premium&&!m.acceso_gratis).length,2);
- for(const m of general){const key=m.general?m.id+'.png':m.url_imagen.split('/').pop(),details=catalog.filter(d=>d.parent_key===key);assert.equal(details.length,6,key);assert.ok(details.every(d=>d.premium&&!d.acceso_gratis));}
+ for(const m of general){const key=m.general?m.id+'.png':m.url_imagen.split('/').pop(),details=catalog.filter(d=>d.parent_key===key);assert.ok(details.length>=6,key);assert.ok(details.every(d=>d.premium&&!d.acceso_gratis));}
  const topicStart=script.indexOf('function mmTopicKey('),topicEnd=script.indexOf('function populateMmTemas',topicStart);
  ctx.campo=(m,k)=>m[k];vm.runInNewContext(script.slice(topicStart,topicEnd),ctx);
  assert.equal(ctx.mmTopicKey(general[0]),ctx.mmTopicKey(catalog[0]));
@@ -61,6 +61,23 @@ test('Sangre and Sentidos general maps are private for both content and download
    }
   }
  }
+});
+
+test('authored visual additions keep full posters and explanations behind verified access',async()=>{
+ for(const map of catalog.filter(m=>m.curated)){
+  const data=JSON.parse(fs.readFileSync('api/_mindmaps/'+map.id+'.json','utf8'));
+  assert.ok(data.assets.generative_download);assert.equal(data.review.doctor_approved,false);
+  assert.notEqual(data.assets.image,map.preview);
+  for(const format of ['json','image']){
+   assert.equal((await call({id:map.id,format})).code,401);
+   assert.equal((await call({id:map.id,format,token:'free',access:{ready:true,premium:false}})).code,403);
+   const result=await call({id:map.id,format,token:'paid',access:{ready:true,premium:true}});
+   assert.equal(result.code,200);assert.equal(result.headers['Cache-Control'],'private, no-store');
+  }
+ }
+ const retina=JSON.parse(fs.readFileSync('api/_mindmaps/morfo_16_organos_sentidos__07.json','utf8'));
+ const content=JSON.stringify(retina.sections);assert.ok(content.includes('531 nm')&&content.includes('558 nm'));
+ assert.ok(!content.includes('534 nm')&&!content.includes('564 nm'));
 });
 test('unknown IDs, path traversal and invalid formats fail before authentication; raw files have a blocked route',async()=>{
  for(const args of [{id:'../../config'},{id:'invalid'},{format:'pdf'}]){const result=await call(args);assert.equal(result.code,404);assert.equal(result.calls,0);}

@@ -1,6 +1,8 @@
 /* Subscription-only concept maps: the public catalog contains no explanations. */
 (function () {
   const pending = new Map();
+  let illustratedUrl = null;
+  let loadRevision = 0;
   async function request(id, format) {
     const { data } = await getSupabase().auth.getSession();
     if (!data.session?.access_token) throw new Error('Inicia sesión para abrir este mapa.');
@@ -15,10 +17,20 @@
   }
   window.MindmapPremium = {
     async load(map) {
+      const revision = ++loadRevision;
+      if (illustratedUrl) URL.revokeObjectURL(illustratedUrl);
+      illustratedUrl = null;
       // Do not cache content across sessions or trust a mutable client flag.
       const id = map.id;
       if (!pending.has(id)) pending.set(id, request(id, 'json').finally(() => pending.delete(id)));
       const payload = await pending.get(id);
+      if (map.curated) {
+        const blob = await request(id, 'image');
+        if (revision !== loadRevision) return payload;
+        illustratedUrl = URL.createObjectURL(blob);
+        payload.assets.illustrated = illustratedUrl;
+      }
+      if (revision !== loadRevision) return payload;
       (window.MINDMAP_DETAILED_CONTENT ||= {})[id + '.json'] = payload.sections;
       (window.MINDMAP_ASSETS ||= {})[id + '.json'] = payload.assets;
       return payload;

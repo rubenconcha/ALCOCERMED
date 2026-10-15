@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "first_pilot_reviewed_ready_for_publication",
+  "academic_approval": "pending",
+  "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
+  "dot": {
+    "created": false,
+    "connected": false
+  },
+  "priority_queue": [
+    "morfo_18_sangre",
+    "morfo_16_organos_sentidos"
+  ],
+  "completed_batches": [
+    {
+      "id": "depth-pilot-2026-10-14",
+      "maps": [
+        "morfo_18_sangre__07",
+        "morfo_16_organos_sentidos__07"
+      ],
+      "authored_explanations": 48,
+      "reasoned_cases": 8,
+      "generative_posters": 2,
+      "source_pages": {
+        "sangre": [
+          714,
+          724,
+          725,
+          726,
+          727,
+          729,
+          730
+        ],
+        "sentidos": [
+          647,
+          648,
+          649,
+          650,
+          651,
+          652
+        ]
+      },
+      "review": "Automated academic and visual second pass; doctor approval still pending.",
+      "corrections": [
+        "Generated retina poster originally showed cone peaks 534 and 564 nm; corrected to 531 and 558 nm to match the supplied Saladin p. PDF 652."
+      ],
+      "tests": [
+        "Private endpoint and paid access tests",
+        "16 maps at desktop and mobile sizes",
+        "Illustrated view and concept exploration",
+        "Public-preview separation",
+        "Source and unit checks"
+      ],
+      "status": "reviewed_ready_to_publish"
+    }
+  ],
+  "next_action": "Integrate and expand source-reviewed flashcards and question bank for the two pilot subtopics with reasoned distractors; audit source coverage of each sense and blood subtopic before adding further specific branded generative maps and revised summaries. Do not mark either chapter complete.",
+  "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
+  "doctor_observations": [
+    "Review full chapters datum by datum, not only their opening paragraphs.",
+    "Explain the physiology and mechanisms of each sense, including retinal signal transduction.",
+    "For blood include leukocyte types, proportions and interpretation of increases; avoid treating an isolated count as a diagnosis.",
+    "Check the rest of the material for similarly superficial coverage."
+  ],
+  "supervision": {
+    "kind": "hourly_thread_heartbeat",
+    "automation_id": "ampliar-y-supervisar-material-ben-carson",
+    "status": "active",
+    "dot_created": false,
+    "dot_connected": false
+  }
+}

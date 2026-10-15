@@ -1,0 +1,9 @@
+Supervisa la ampliación académica de AlcocerMed en el chat existente «Mejora el diseño del curso», identificado como 01a13c17-5cc4-77f1-a706-ca3af5090525, en mi ordenador conectado. Continúa ese chat; no abras tareas duplicadas para lo mismo.
+
+Lee C:/Users/PC/.codex/worktrees/atlas-design/ALCOCERMED/quality/WORKFLOW.md y quality/progress.json. Revisa los resultados y las pruebas de cada lote; pide correcciones concretas si el contenido resulta superficial, repetido, incompleto, sin fuente o visualmente defectuoso. El objetivo es explicar los mecanismos y sus relaciones en todo el capítulo, no alcanzar una cifra de preguntas ni copiar los primeros párrafos.
+
+Prioriza Sangre y Órganos de los sentidos de Saladin. Exige tipos y proporciones leucocitarias, unidades, interpretación contextual y límites; fisiología de cada sentido y circuitos de transducción. Comprueba que las flashcards, preguntas, simulacros y evaluaciones cubran los objetivos y expliquen los errores. Los mapas deben tener identidad Ben Carson, el logo original e ilustraciones creadas con IA generativa, contrastadas con el libro.
+
+Mantén el acceso completo reservado a la cuenta administradora autorizada y las cuentas con pago vigente. No cambies roles, membresías ni datos de alumnos. Conserva el avance, los cambios de otros chats y las referencias. No atribuyas aprobación a la doctora si no la ha dado.
+
+Ya existe un seguimiento por hora en ese chat: revisa y coordina ese seguimiento en lugar de crear otro idéntico. Continúa la supervisión durante el día y la noche cuando estén disponibles los recursos necesarios. Avísame solo por entregas sustanciales, fallos o decisiones que requieran mi intervención. No prometas ejecución local mientras el ordenador esté apagado o desconectado.
