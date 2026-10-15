@@ -20,8 +20,11 @@
             707,
             709
           ],
-          "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "targeted_expansion_maps": [
+            "morfo_18_sangre__13"
+          ],
+          "status": "targeted_expansion_reviewed_full_objective_review_pending",
+          "reviewed_scope": "Plasma/serum preparation, volume fraction versus count, plasma proteins, distinct physical properties and ideal volume models. Hemoglobin structure and complete capillary exchange remain pending."
         },
         {
           "domain": "Plasma, viscosidad y osmolaridad",
@@ -33,8 +36,11 @@
             709,
             711
           ],
-          "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "targeted_expansion_maps": [
+            "morfo_18_sangre__13"
+          ],
+          "status": "targeted_expansion_reviewed_full_objective_review_pending",
+          "reviewed_scope": "Plasma/serum preparation, volume fraction versus count, plasma proteins, distinct physical properties and ideal volume models. Hemoglobin structure and complete capillary exchange remain pending."
         },
         {
           "domain": "Hematopoyesis y regulación de producción",
@@ -59,8 +65,11 @@
             712,
             714
           ],
-          "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "targeted_expansion_maps": [
+            "morfo_18_sangre__13"
+          ],
+          "status": "targeted_expansion_reviewed_full_objective_review_pending",
+          "reviewed_scope": "Plasma/serum preparation, volume fraction versus count, plasma proteins, distinct physical properties and ideal volume models. Hemoglobin structure and complete capillary exchange remain pending."
         },
         {
           "domain": "Ciclo de vida y trastornos eritrocitarios",

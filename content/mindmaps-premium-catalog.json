@@ -6314,5 +6314,19 @@
     "acceso_gratis": false,
     "curated": true,
     "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__12.webp"
+  },
+  {
+    "id": "morfo_18_sangre__13",
+    "titulo": "Plasma y hematocrito: composición, proporciones y volumen",
+    "root_title": "Plasma y hematocrito: composición, proporciones y volumen",
+    "materia": "Morfofunción",
+    "tema": "Sangre",
+    "parent_key": "morfo_18_sangre.png",
+    "url_imagen": "premium/morfo_18_sangre__13.json",
+    "descripcion": "Compara plasma y suero, proteínas, viscosidad y osmolaridad. Razona cambios de hematocrito con modelos de volumen y práctica explicada.",
+    "premium": true,
+    "acceso_gratis": false,
+    "curated": true,
+    "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__13.webp"
   }
 ]

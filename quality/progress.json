@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "full_real_simulation_library_verified_publication_pending",
+  "status": "plasma_hematocrit_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -1328,15 +1328,79 @@
         "scripts/check_simulacro_library.cjs"
       ],
       "deployment": {
-        "status": "pending"
+        "commit": "798597b",
+        "status": "Vercel success",
+        "public_assets": "New campus library, filter controls, stylesheet, controller v6, main v55 and past-exams v5 verified.",
+        "protected_exam_without_session": 401,
+        "raw_complete_paper": 404,
+        "evidence": "output/simulacro-library/deployment-check.json",
+        "authenticated_production_walkthrough": "Not claimed; tested actual controllers locally with fixture sessions."
       },
       "limitations": [
         "Production authenticated browser walkthrough unavailable; local actual-controller tests and post-deployment asset/API checks are recorded separately.",
         "No new academic approval is attributed to the doctor. No student results or membership records modified."
       ]
+    },
+    {
+      "id": "plasma-hematocrit-2026-10-15",
+      "maps": [
+        "morfo_18_sangre__13"
+      ],
+      "gap": "No dedicated reviewed supplement developed the plasma/serum comparison, separate physical properties and hematocrit denominator reasoning. Existing early maps remain pending full review.",
+      "authored_explanations": 18,
+      "new_flashcards": 10,
+      "reasoned_questions": 6,
+      "generative_posters": 1,
+      "source_pages": {
+        "sangre": [
+          708,
+          709,
+          710,
+          711,
+          712,
+          714
+        ]
+      },
+      "book_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+      "supplementary_sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15073281/",
+          "scope": "Experimental rat microvessel evidence for glycocalyx-localized oncotic gradient; separately labeled, no automatic venous reabsorption claim."
+        }
+      ],
+      "review": "Second automated academic and visual review; teacher approval pending. Not a completed chapter.",
+      "corrections": [
+        "Corrected generated formula lacking an explicit fraction bar; final poster has clear numerator and denominator.",
+        "Explicitly label unmeasured illustrative tube proportions and ideal numeric models separately.",
+        "Do not reproduce OCR errors in supplied protein table (fibrinogen 84%) or mix cellular volume fraction with solute osmolarity.",
+        "Do not infer RBC production or loss from a proportion change; compute both model totals explicitly.",
+        "Avoid generalized removal of all proteins/factors when describing serum and avoid universal continuous venous reabsorption."
+      ],
+      "checks": [
+        "16 content/source/access/loader regression tests passed.",
+        "Actual map UI: six branches, illustrated view, byte-identical WebP download, 10 cards and 24 per-option feedback paragraphs at 1440 and 390; free account cannot request protected data.",
+        "Actual main library and question-bank renderers: 1588 protected supplement cards, 72 bank questions, source reachable in long answers, all bank alternatives explained, 1440/390, no overflow or browser errors.",
+        "Final full-size generated poster and desktop/mobile screenshots visually inspected."
+      ],
+      "files": [
+        "api/_mindmaps/curated/build_plasma_hematocrit.py.source",
+        "api/_mindmaps/morfo_18_sangre__13.json",
+        "api/_mindmaps/morfo_18_sangre__13.png",
+        "api/_mindmaps/morfo_18_sangre__13.webp",
+        "api/_mindmaps/plasma-hematocrit-prompts.json"
+      ],
+      "access": "Complete text, image, and authoring under blocked private paths; public preview reuses generic blood thumbnail. Existing active-plan/admin server validation unchanged.",
+      "limitations": [
+        "No authenticated production walkthrough claimed; local actual-controller tests use fixture sessions.",
+        "No new summary PDF or full chapter assessment claimed by this batch.",
+        "No student records, subscriptions or SRS IDs modified. Dot has not been created."
+      ],
+      "deployment": {
+        "status": "pending"
+      }
     }
   ],
-  "next_action": "Continue objective-level depth review beyond the first 20–24 cards per newly expanded topic, keeping paid access, existing SRS identities and student records intact. Verify any additional legacy/renamed production decks once the authenticated browser reconnects; do not equate the 68 flashcard source topics with the 74 map chapters. Publication fe7e19b has been confirmed.",
+  "next_action": "Continue Blood erythrocyte/hemoglobin mechanisms from PDF 712–719 and Senses objective-level review; revise summaries and independent assessments against coverage. Do not equate new counts with completed chapters.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

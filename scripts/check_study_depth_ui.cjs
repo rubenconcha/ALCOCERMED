@@ -23,7 +23,7 @@ const section=id=>{const start=campus.indexOf('<section id="'+id+'"');return cam
   });
   fs.mkdirSync(path.join(root,'output/study-depth-qa'),{recursive:true});await page.goto('http://127.0.0.1:8771/qa');
   await page.evaluate(async()=>{deck=await loadFlashcards();bancoState.preguntas=await fetchAllBancoQuestions();});
-  assert.equal(await page.evaluate(()=>deck.length),1578);assert.equal(await page.evaluate(()=>bancoState.preguntas.length),66);
+  assert.equal(await page.evaluate(()=>deck.length),1588);assert.equal(await page.evaluate(()=>bancoState.preguntas.length),72);
   for(const width of [1440,390]){
    await page.setViewport({width,height:1000});
    for(const index of [0,60,110,150,162,181,300,500,620,750,900,1050,1200,1350,1450,1577]){
@@ -32,7 +32,7 @@ const section=id=>{const start=campus.indexOf('<section id="'+id+'"');return cam
     await page.screenshot({path:path.join(root,'output/study-depth-qa',`flashcard-${index}-${width}.png`)});
     assert.equal(await page.$eval('.depth-card .back-text',n=>{n.scrollTop=n.scrollHeight;return n.querySelector('p').getBoundingClientRect().bottom<=n.getBoundingClientRect().bottom+1;}),true,'the source at the end of long answers can be reached by scrolling');
    }
-   for(let index=0;index<66;index++){
+   for(let index=0;index<72;index++){
     await page.evaluate(index=>{document.getElementById('study-area').classList.add('hidden');document.getElementById('banco-screen').classList.remove('hidden');document.getElementById('banco-selector').classList.add('hidden');document.getElementById('banco-quiz').classList.remove('hidden');bancoState.currentIdx=index;bancoState.answers[index]={selected:0};renderBancoQuestion();document.getElementById('bq-comentario-body').classList.remove('hidden');},index);
     assert.equal(await page.$$eval('#bq-options button',n=>n.length),4);assert.ok((await page.$eval('#bq-comentario-text',n=>n.textContent)).includes('D. '));
     assert.equal(await page.$eval('.bq-option-text',n=>getComputedStyle(n).textTransform),'none');
@@ -40,6 +40,6 @@ const section=id=>{const start=campus.indexOf('<section id="'+id+'"');return cam
    }
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   }
-  assert.deepEqual(errors,[]);console.log('PASS: main flashcard and bank renderers, 1578 cards/66 questions, three subjects, desktop/mobile, all four feedback explanations.');
+  assert.deepEqual(errors,[]);console.log('PASS: main flashcard and bank renderers, 1588 cards/72 questions, three subjects, desktop/mobile, all four feedback explanations.');
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exit(1)});

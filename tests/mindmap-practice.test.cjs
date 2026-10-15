@@ -1,9 +1,9 @@
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
-test('practice covers eleven protected maps with full per-option feedback and traceable sources',()=>{
+test('practice covers twelve protected maps with full per-option feedback and traceable sources',()=>{
  const prompts=new Set();
- for(const id of ['morfo_18_sangre__07','morfo_16_organos_sentidos__07','morfo_16_organos_sentidos__08','morfo_18_sangre__08','morfo_16_organos_sentidos__09','morfo_16_organos_sentidos__10','morfo_16_organos_sentidos__11','morfo_18_sangre__09','morfo_18_sangre__10','morfo_18_sangre__11','morfo_18_sangre__12']){
+ for(const id of ['morfo_18_sangre__07','morfo_16_organos_sentidos__07','morfo_16_organos_sentidos__08','morfo_18_sangre__08','morfo_16_organos_sentidos__09','morfo_16_organos_sentidos__10','morfo_16_organos_sentidos__11','morfo_18_sangre__09','morfo_18_sangre__10','morfo_18_sangre__11','morfo_18_sangre__12','morfo_18_sangre__13']){
   const payload=JSON.parse(fs.readFileSync('api/_mindmaps/'+id+'.json','utf8')),practice=payload.assets.practice;
   assert.equal(practice.flashcards.length,10);assert.equal(practice.questions.length,6);
   assert.equal(payload.review.doctor_approved,false);
