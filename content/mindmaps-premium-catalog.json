@@ -6244,5 +6244,19 @@
     "acceso_gratis": false,
     "curated": true,
     "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__10.webp"
+  },
+  {
+    "id": "morfo_16_organos_sentidos__11",
+    "titulo": "Olfato: transducción, código combinatorio y vías centrales",
+    "root_title": "Olfato: transducción, código combinatorio y vías centrales",
+    "materia": "Morfofunción",
+    "tema": "Órganos de los sentidos",
+    "parent_key": "morfo_16_organos_sentidos.png",
+    "url_imagen": "premium/morfo_16_organos_sentidos__11.json",
+    "descripcion": "Del odorante al AMPc, axón, bulbo y percepción: código combinado, conexiones y casos con práctica razonada.",
+    "premium": true,
+    "acceso_gratis": false,
+    "curated": true,
+    "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__11.webp"
   }
 ]

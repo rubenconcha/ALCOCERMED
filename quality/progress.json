@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "taste_depth_reviewed_ready_to_publish",
+  "status": "olfaction_depth_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -546,12 +546,86 @@
         "api/_mindmaps/taste-map-prompts.json"
       ],
       "deployment": {
-        "status": "pending"
+        "commit": "93863ec",
+        "status": "Vercel success",
+        "anonymous": {
+          "/api/mindmap?id=morfo_16_organos_sentidos__10": 401,
+          "/api/mindmap?id=morfo_16_organos_sentidos__10&format=image": 401,
+          "/api/_mindmaps/morfo_16_organos_sentidos__10.png": 404,
+          "/api/_mindmaps/curated/build_taste.py.source": 404
+        },
+        "admin_live": "Deep link opens named gusto map, protected 1536x1024 illustrated poster, ten flashcards and six reasoned questions."
       },
       "poster_sha256": "475acaa80c2e3a8d90c61e6cc6969e20d07a3a5ae5eb13bce3ec9f63f675c1ed"
+    },
+    {
+      "id": "olfaction-map-practice-2026-10-15",
+      "maps": [
+        "morfo_16_organos_sentidos__11"
+      ],
+      "authored_explanations": 18,
+      "new_flashcards": 10,
+      "new_bank_questions": 6,
+      "per_option_explanations": 24,
+      "generative_posters": 1,
+      "source_pages": {
+        "saladin_pdf": [
+          621,
+          622,
+          623
+        ],
+        "printed": [
+          593,
+          594,
+          595
+        ]
+      },
+      "supplementary_sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10089886/",
+          "scope": "Original mammalian receptor coding experiment; many-to-many recognition and concentration-related code changes. Explicitly complementary to textbook simplification."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK11039/",
+          "scope": "Cross-check of intracellular olfactory signal transduction."
+        }
+      ],
+      "review": "Second automated academic and visual pass. No doctor approval. Chapter-wide objective review remains pending.",
+      "corrections": [
+        "Corrected textbook one-receptor/one-molecule simplification with explicitly attributed combinatorial code.",
+        "Distinguished initial cortical access without first thalamic relay from later thalamic participation.",
+        "Revised generated figure: removed misleading broad lateral cortex shading and unrequested slogan; used functional route boxes.",
+        "Corrected generated wording to receptor acoplado a proteina G.",
+        "Verified bulb above cribriform plate, epithelium and mucus below; axon and cilia on opposite sides.",
+        "Strengthened axonal-block distractors to test causal stages rather than impossible cell conversion.",
+        "Conceptual matrix explicitly labeled as illustrative rather than experimental data."
+      ],
+      "integration": "Map practice plus main flashcards and bank; reviewed supplements now total 70 cards and 42 questions. Existing SRS identities and student records preserved.",
+      "tests": [
+        "13 practice/access/source/identity tests passed.",
+        "Actual desktop/mobile viewer: six branches, 1536x1024 full generated map, ten flashcards and 24 option explanations.",
+        "Actual download produces byte-identical WebP at 1440/390 px.",
+        "Main flashcard and bank renderers show sources, scrollable long answers and complete option feedback at both widths.",
+        "Final poster and UI screenshots visually reviewed."
+      ],
+      "limitations": [
+        "Dedicated leukopoiesis practice and factor-by-factor coagulation remain next.",
+        "No new independent graded simulation/evaluation in this lot; questions available through existing custom practice integration.",
+        "Full chapter and teacher review pending."
+      ],
+      "files": [
+        "api/_mindmaps/morfo_16_organos_sentidos__11.json",
+        "api/_mindmaps/morfo_16_organos_sentidos__11.webp",
+        "api/_mindmaps/curated/build_olfaction.py.source",
+        "api/_mindmaps/olfaction-map-prompts.json"
+      ],
+      "deployment": {
+        "status": "pending"
+      },
+      "poster_sha256": "450b6b0afa66309608a2ab7088af2b2328eed746ab67eab50a2e709e676e2584"
     }
   ],
-  "next_action": "Read and author the dedicated olfactory transduction/coding/projection map with linked practice (Saladin PDF 621-623 plus explicitly labeled combinatorial-code research); then dedicated leukopoiesis practice and factor-by-factor coagulation. Continue all remaining objective gaps; neither chapter is complete.",
+  "next_action": "Expand dedicated leukopoiesis practice and a factor-by-factor coagulation map from the supplied Blood chapter, then deepen remaining objective gaps in both priority chapters before continuing the official curriculum. Neither chapter is complete; independent exam coverage and teacher review remain pending.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

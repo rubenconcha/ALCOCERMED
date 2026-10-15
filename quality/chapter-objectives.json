@@ -243,7 +243,9 @@
             621,
             623
           ],
-          "targeted_expansion_maps": [],
+          "targeted_expansion_maps": [
+            "morfo_16_organos_sentidos__11"
+          ],
           "status": "targeted_expansion_available_full_objective_review_pending",
           "targeted_summary_pages": [
             12

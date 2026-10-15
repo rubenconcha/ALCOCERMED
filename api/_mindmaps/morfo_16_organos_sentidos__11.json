@@ -1,0 +1,479 @@
+{
+  "id": "morfo_16_organos_sentidos__11",
+  "title": "Olfato: transducción, código combinatorio y vías centrales",
+  "topic": "Órganos de los sentidos",
+  "sections": [
+    {
+      "title": "Acceso al epitelio y organización receptora",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Que entre aire no garantiza el mismo acceso al receptor",
+              "text": "El epitelio olfativo ocupa una región superior de la cavidad nasal; no toda la mucosa respiratoria equivale a epitelio receptor. El movimiento del aire favorece que sustancias alcancen esa región y se relacionen con el moco que recubre los cilios. Por eso, el acceso del estímulo y la capacidad de la neurona para transducirlo son eslabones distintos: limitar uno no demuestra automáticamente una alteración del otro.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "La neurona bipolar reúne recepción y conducción",
+              "text": "La célula receptora olfatoria es una neurona bipolar. Una prolongación dendrítica termina en una región apical con cilios; en el extremo basal nace un axón. Esta organización permite que la misma célula reciba la información química y conduzca potenciales de acción hacia el bulbo. Contrasta con la célula gustativa epitelial, que comunica con una fibra sensitiva distinta en su base.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Los cilios aportan superficie sensorial, no el axón",
+              "text": "Los receptores moleculares se relacionan con cilios incluidos en el moco. Estos no son los fascículos que atraviesan el cráneo ni deben dibujarse como prolongaciones de una neurona del bulbo hacia el aire. El soma, la dendrita con su terminación ciliar y el axón pertenecen a una neurona con regiones funcionales diferentes; mantener esa polaridad aclara dónde empieza la señal y por dónde sale.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 622,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Convertir unión química en respuesta eléctrica",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Receptor y segundo mensajero no son el mismo objeto",
+              "text": "La unión de un odorante al receptor de membrana activa una proteína G y una vía intracelular que aumenta AMPc. La molécula del exterior y el segundo mensajero del interior desempeñan papeles diferentes. El AMPc no tiene que inhalarse ni desplazarse desde el alimento: se modifica dentro de la célula como parte del acoplamiento entre reconocimiento químico y actividad eléctrica.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 622,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "La apertura de canales cambia el potencial de membrana",
+              "text": "En la secuencia descrita, el aumento de AMPc favorece la apertura de canales que admiten cationes. La entrada de carga positiva contribuye a despolarizar la neurona receptora. Se enlazan así dos niveles: señalización intracelular y respuesta eléctrica. No basta decir que el olor produce electricidad; hay que identificar receptor, mensajero, permeabilidad y dirección del cambio de potencial.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Potencial receptor y potenciales de acción cumplen tareas diferentes",
+              "text": "La despolarización receptora es una respuesta local graduada. Cuando la actividad alcanza las condiciones para generar potenciales de acción, estos se propagan por el axón de la neurona. No se reemplaza un olor intenso por potenciales de acción individualmente más grandes: debe distinguirse la amplitud del cambio receptor de la organización temporal de las señales nerviosas que llevan información.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Del axón periférico al circuito del bulbo",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Cruzar la lámina cribosa no es cruzar una sinapsis",
+              "text": "Los axones de las neuronas receptoras se agrupan en fascículos que atraviesan orificios de la lámina cribosa del etmoides para alcanzar el bulbo olfativo. El paso por el hueso es un trayecto anatómico; no constituye por sí mismo un relevo neuronal. Esta distinción permite seguir una señal sin inventar una sinapsis cada vez que se nombra una estructura atravesada.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 622,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El glomérulo es un lugar de encuentro sináptico",
+              "text": "En los glomérulos del bulbo, las aferencias receptoras se relacionan con dendritas de células mitrales y en penacho dentro de un circuito local. No son botones gustativos ni agujeros del etmoides. Distinguir receptor, fascículo, glomérulo y neurona de salida permite explicar cómo cambia el nivel de procesamiento sin afirmar que toda la vía es una sola célula continua.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "La salida del bulbo continúa por el tracto olfatorio",
+              "text": "Las células mitrales y en penacho envían axones que contribuyen a la salida del bulbo hacia regiones olfatorias encefálicas. Sus axones no son los mismos fascículos periféricos que nacen en el epitelio. El trayecto periférico y el tracto de salida están conectados mediante circuitos sinápticos; compartir una modalidad sensitiva no los hace estructuras intercambiables.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Código de identidad y comparación de patrones",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Un tipo de receptor no equivale a una molécula única",
+              "text": "La formulación del libro que asocia un tipo de receptor con una única molécula requiere matiz. El estudio de Malnic y colaboradores mostró respuestas combinatorias: un receptor puede responder a varios odorantes y un odorante puede activar varios tipos de receptor. Esta precisión complementaria impide convertir cada neurona en una etiqueta exclusiva para un olor cotidiano.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 622,
+                "kind": "original_synthesis",
+                "supplementaryUrl": "https://pubmed.ncbi.nlm.nih.gov/10089886/",
+                "scope": "Código combinatorio: ampliación y precisión del esquema del libro."
+              }
+            },
+            {
+              "title": "El patrón distingue estímulos con componentes compartidos",
+              "text": "Dos estímulos pueden activar parte del mismo conjunto de receptores y aun así generar patrones diferentes. Compartir una respuesta periférica no exige identidad perceptiva. La matriz de la lámina es un ejemplo conceptual para comparar combinaciones; no representa mediciones de sustancias concretas ni permite deducir nombres de olores a partir de letras y casillas inventadas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis",
+                "supplementaryUrl": "https://pubmed.ncbi.nlm.nih.gov/10089886/",
+                "scope": "Código combinatorio: ampliación y precisión del esquema del libro."
+              }
+            },
+            {
+              "title": "Concentración e identidad no son preguntas equivalentes",
+              "text": "El estudio complementario también relaciona cambios de concentración con cambios en el código receptor. Por ello, aumentar concentración no debe dibujarse siempre como ampliar por igual un patrón fijo. El sistema procesa actividad distribuida y sus variaciones; no lee una sola neurona como un medidor universal de intensidad separado de toda información de identidad.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis",
+                "supplementaryUrl": "https://pubmed.ncbi.nlm.nih.gov/10089886/",
+                "scope": "Código combinatorio: ampliación y precisión del esquema del libro."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Percepción, contexto e integración",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Llegar primero a corteza no excluye al tálamo después",
+              "text": "La vía olfatoria inicial puede alcanzar corteza olfativa sin el primer relevo talámico obligatorio característico de otras vías sensitivas. El capítulo también describe participación talámica en conexiones posteriores hacia áreas de asociación. Ambas afirmaciones son compatibles. El error es convertir una diferencia en el orden de los relevos en la ausencia absoluta del tálamo en todo procesamiento olfativo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Memoria, emoción y sabor son destinos relacionados",
+              "text": "Las conexiones con áreas como amígdala, hipocampo, hipotálamo y regiones de asociación permiten relacionar olores con respuestas emocionales, memoria y componentes de la conducta alimentaria. Las áreas orbitofrontales participan en integración de gusto y olfato. Esto no significa que el receptor periférico reconozca recuerdos: la detección química y las asociaciones dependen de niveles diferentes del sistema.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "La retroalimentación hace del bulbo parte de un circuito",
+              "text": "El libro describe conexiones de retorno desde regiones olfatorias y la participación de interneuronas del bulbo en modulación de sus salidas. No se trata de una cinta transportadora que solo avanza desde la nariz. El contexto puede modificar la importancia atribuida a un estímulo sin exigir que la molécula haya cambiado; reconocer esa interacción evita ubicar toda variación perceptiva en el receptor.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Aplicar sin confundir los eslabones",
+      "groups": [
+        {
+          "title": "Mecanismos y relaciones",
+          "items": [
+            {
+              "title": "Caso: receptor activo con conducción interrumpida",
+              "text": "En un modelo se conserva la respuesta química del epitelio, pero se impide la propagación por sus axones. El primer cambio previsto es una transmisión reducida hacia el bulbo pese a transducción local conservada. No se deduce que desaparecieron los receptores moleculares ni que el AMPc debió disminuir: el defecto descrito está después de la recepción periférica.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso: AMPc sin su efecto habitual sobre canales",
+              "text": "Si un ejercicio bloquea el acoplamiento entre AMPc y apertura de canales, la unión del odorante puede ocurrir sin producir la despolarización esperada por esa ruta. La predicción debe seguir la intervención indicada. Afirmar que ninguna molécula llegó al moco confunde una alteración intracelular con falta de acceso; afirmar salida nerviosa normal omite el eslabón que se bloqueó.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Caso: irritación nasal no demuestra olfacción normal",
+              "text": "Algunas sustancias producen sensaciones irritantes mediante terminaciones trigeminales además de su posible componente olfativo. Percibir irritación no prueba por sí solo que funcionen normalmente todas las neuronas olfatorias ni que se identifique el olor. El ejercicio distingue vías y tareas perceptivas; no propone exponerse a irritantes ni usar esa sensación como prueba doméstica de integridad nerviosa.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 623,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_16_organos_sentidos.webp",
+    "alt": "Organización del sistema sensorial",
+    "download": "/api/mindmap?id=morfo_16_organos_sentidos__11&format=image",
+    "filename": "morfo_16_organos_sentidos__11-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 16,
+      "pdfPages": [
+        621,
+        622,
+        623
+      ],
+      "kind": "original_synthesis"
+    },
+    "generative_download": true,
+    "practice": {
+      "flashcards": [
+        {
+          "question": "¿Cómo distinguir acceso del odorante al epitelio de capacidad receptora?",
+          "answer": "El epitelio olfativo ocupa una región superior de la cavidad nasal; no toda la mucosa respiratoria equivale a epitelio receptor. El movimiento del aire favorece que sustancias alcancen esa región y se relacionen con el moco que recubre los cilios. Por eso, el acceso del estímulo y la capacidad de la neurona para transducirlo son eslabones distintos: limitar uno no demuestra automáticamente una alteración del otro.",
+          "pdf_pages": [
+            621
+          ]
+        },
+        {
+          "question": "Reconstruye el trayecto dentro de una neurona olfatoria bipolar.",
+          "answer": "La célula receptora olfatoria es una neurona bipolar. Una prolongación dendrítica termina en una región apical con cilios; en el extremo basal nace un axón. Esta organización permite que la misma célula reciba la información química y conduzca potenciales de acción hacia el bulbo. Contrasta con la célula gustativa epitelial, que comunica con una fibra sensitiva distinta en su base.",
+          "pdf_pages": [
+            621
+          ]
+        },
+        {
+          "question": "¿Por qué los cilios olfatorios no son equivalentes a los fascículos que atraviesan el etmoides?",
+          "answer": "Los receptores moleculares se relacionan con cilios incluidos en el moco. Estos no son los fascículos que atraviesan el cráneo ni deben dibujarse como prolongaciones de una neurona del bulbo hacia el aire. El soma, la dendrita con su terminación ciliar y el axón pertenecen a una neurona con regiones funcionales diferentes; mantener esa polaridad aclara dónde empieza la señal y por dónde sale.",
+          "pdf_pages": [
+            622
+          ]
+        },
+        {
+          "question": "Separa el papel del odorante y el del AMPc en la transducción olfatoria.",
+          "answer": "La unión de un odorante al receptor de membrana activa una proteína G y una vía intracelular que aumenta AMPc. La molécula del exterior y el segundo mensajero del interior desempeñan papeles diferentes. El AMPc no tiene que inhalarse ni desplazarse desde el alimento: se modifica dentro de la célula como parte del acoplamiento entre reconocimiento químico y actividad eléctrica.",
+          "pdf_pages": [
+            622
+          ]
+        },
+        {
+          "question": "Explica el enlace entre mensajero, canales catiónicos y despolarización.",
+          "answer": "En la secuencia descrita, el aumento de AMPc favorece la apertura de canales que admiten cationes. La entrada de carga positiva contribuye a despolarizar la neurona receptora. Se enlazan así dos niveles: señalización intracelular y respuesta eléctrica. No basta decir que el olor produce electricidad; hay que identificar receptor, mensajero, permeabilidad y dirección del cambio de potencial.",
+          "pdf_pages": [
+            623
+          ]
+        },
+        {
+          "question": "Compara el potencial receptor con los potenciales de acción en el axón olfatorio.",
+          "answer": "La despolarización receptora es una respuesta local graduada. Cuando la actividad alcanza las condiciones para generar potenciales de acción, estos se propagan por el axón de la neurona. No se reemplaza un olor intenso por potenciales de acción individualmente más grandes: debe distinguirse la amplitud del cambio receptor de la organización temporal de las señales nerviosas que llevan información.",
+          "pdf_pages": [
+            623
+          ]
+        },
+        {
+          "question": "¿Qué cambia al pasar de fascículo periférico a glomérulo y célula mitral?",
+          "answer": "En los glomérulos del bulbo, las aferencias receptoras se relacionan con dendritas de células mitrales y en penacho dentro de un circuito local. No son botones gustativos ni agujeros del etmoides. Distinguir receptor, fascículo, glomérulo y neurona de salida permite explicar cómo cambia el nivel de procesamiento sin afirmar que toda la vía es una sola célula continua.",
+          "pdf_pages": [
+            623
+          ]
+        },
+        {
+          "question": "¿Qué corrección aporta el código combinatorio a la idea de un receptor para una molécula?",
+          "answer": "La formulación del libro que asocia un tipo de receptor con una única molécula requiere matiz. El estudio de Malnic y colaboradores mostró respuestas combinatorias: un receptor puede responder a varios odorantes y un odorante puede activar varios tipos de receptor. Esta precisión complementaria impide convertir cada neurona en una etiqueta exclusiva para un olor cotidiano.",
+          "pdf_pages": [
+            622
+          ]
+        },
+        {
+          "question": "¿Cómo pueden coexistir acceso inicial a corteza sin relevo talámico y participación talámica posterior?",
+          "answer": "La vía olfatoria inicial puede alcanzar corteza olfativa sin el primer relevo talámico obligatorio característico de otras vías sensitivas. El capítulo también describe participación talámica en conexiones posteriores hacia áreas de asociación. Ambas afirmaciones son compatibles. El error es convertir una diferencia en el orden de los relevos en la ausencia absoluta del tálamo en todo procesamiento olfativo.",
+          "pdf_pages": [
+            623
+          ]
+        },
+        {
+          "question": "¿Por qué el bulbo olfativo no debe entenderse como un relevo de avance exclusivamente unidireccional?",
+          "answer": "El libro describe conexiones de retorno desde regiones olfatorias y la participación de interneuronas del bulbo en modulación de sus salidas. No se trata de una cinta transportadora que solo avanza desde la nariz. El contexto puede modificar la importancia atribuida a un estímulo sin exigir que la molécula haya cambiado; reconocer esa interacción evita ubicar toda variación perceptiva en el receptor.",
+          "pdf_pages": [
+            623
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "¿Qué secuencia conserva el orden causal de la ruta olfatoria descrita?",
+          "options": [
+            "Odorante, receptor y proteína G, AMPc, apertura de canales, despolarización",
+            "Odorante, AMPc extracelular, proteína G, cierre de todos los canales, hiperpolarización",
+            "Odorante, potencial de acción cortical, receptor periférico, apertura de canales",
+            "Odorante, apertura de canales por AMPc, reducción de cationes entrantes, despolarización"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: separa reconocimiento químico, señalización intracelular y respuesta de membrana en el orden del mecanismo.",
+            "Sitúa el AMPc fuera de la célula y cambia apertura y despolarización por cierre e hiperpolarización; no describe esta ruta.",
+            "Invierte la secuencia periférica y central: la activación cortical no es el paso que inicia el receptor del epitelio.",
+            "Contradice el enlace iónico descrito: la apertura de esos canales favorece entrada catiónica, no su reducción."
+          ],
+          "pdf_pages": [
+            622,
+            623
+          ]
+        },
+        {
+          "question": "Un modelo conserva la respuesta receptora local pero impide la propagación por el axón de la neurona olfatoria. ¿Qué predicción sigue la intervención?",
+          "options": [
+            "La molécula ya no puede alcanzar el moco porque el axón está bloqueado",
+            "Puede conservarse transducción local y disminuir la señal que llega al bulbo",
+            "El potencial receptor local basta para mantener idéntica la entrada bulbar",
+            "El bloqueo afecta solo reconocimiento cortical y conserva la llegada al bulbo"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Confunde llegada del estímulo con propagación nerviosa; el modelo establece recepción local conservada.",
+            "Correcto: ubica la alteración en conducción posterior a la recepción y no exige que falle también el mecanismo receptor.",
+            "La respuesta graduada local no sustituye la propagación por el axón hacia el bulbo que la intervención impide.",
+            "Sitúa el efecto exclusivamente en corteza aunque la intervención afecta la vía aferente antes de llegar al bulbo."
+          ],
+          "pdf_pages": [
+            621,
+            623
+          ]
+        },
+        {
+          "question": "Dos odorantes activan parcialmente los mismos tipos de receptor. ¿Qué conclusión es compatible con un código combinatorio?",
+          "options": [
+            "Deben identificarse como el mismo olor porque comparten al menos un receptor",
+            "Cada receptor compartido pierde su capacidad de responder a ambos",
+            "Pueden diferenciarse por el patrón conjunto aunque compartan algunas respuestas",
+            "La identidad depende exclusivamente del número de receptores activados, sin importar cuáles"
+          ],
+          "correct": 2,
+          "reasons": [
+            "Compartir parte del conjunto no obliga a que la combinación completa sea idéntica ni que la percepción sea la misma.",
+            "La respuesta a más de un odorante es compatible con codificación combinatoria; no exige pérdida de función del receptor.",
+            "Correcto: la comparación incluye qué receptores participan y cómo se organiza la actividad, no una etiqueta única aislada.",
+            "Reduce el patrón a una suma que descarta la identidad de sus componentes; dos combinaciones distintas pueden tener igual tamaño."
+          ],
+          "pdf_pages": [
+            622,
+            623
+          ]
+        },
+        {
+          "question": "¿Qué formulación distingue correctamente la relación del olfato con el tálamo?",
+          "options": [
+            "El tálamo debe ser el primer relevo antes de cualquier corteza olfatoria",
+            "La ausencia de primer relevo significa ausencia de participación talámica en toda fase",
+            "Las aferencias del epitelio llegan al tálamo sin pasar por el bulbo",
+            "La vía inicial puede alcanzar corteza sin ese primer relevo, con participación talámica posterior"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Impone a la vía inicial el requisito cuya excepción describe el capítulo para olfacción.",
+            "Generaliza una diferencia en el orden de relevos hasta negar conexiones posteriores que el texto sí describe.",
+            "Omite el trayecto al bulbo y sus circuitos antes de la salida hacia áreas olfatorias encefálicas.",
+            "Correcto: conserva las dos afirmaciones del capítulo sin convertirlas en exclusiones contradictorias."
+          ],
+          "pdf_pages": [
+            623
+          ]
+        },
+        {
+          "question": "Se bloquea el efecto del AMPc sobre canales, pero se mantiene la unión del odorante al receptor. ¿Qué cambio se espera en esa ruta?",
+          "options": [
+            "Menor apertura catiónica y menor despolarización dependiente de ese paso",
+            "Despolarización normal obligatoria porque la unión por sí sola completa toda la cascada",
+            "Mayor conducción por el axón aunque no cambie el potencial receptor",
+            "Pérdida necesaria de todos los cilios porque falló un acoplamiento intracelular"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: la intervención rompe el enlace entre mensajero y permeabilidad que contribuye al cambio eléctrico.",
+            "La unión inicia señalización, pero no sustituye los pasos posteriores que el modelo bloquea de forma explícita.",
+            "Aumentar conducción no se deduce de impedir una etapa excitadora; hace falta seguir la consecuencia sobre membrana.",
+            "Bloquear una función molecular no exige destruir anatómicamente todos los cilios; confunde mecanismo con estructura."
+          ],
+          "pdf_pages": [
+            622,
+            623
+          ]
+        },
+        {
+          "question": "¿Qué comparación distingue el paso por la lámina cribosa del relevo en un glomérulo?",
+          "options": [
+            "Ambos nombres designan la misma sinapsis dentro del hueso",
+            "La lámina permite paso de fascículos; el glomérulo organiza contactos sinápticos en el bulbo",
+            "El glomérulo es el poro por donde entra la molécula al epitelio",
+            "La lámina cribosa contiene las células mitrales que forman la mucosa nasal"
+          ],
+          "correct": 1,
+          "reasons": [
+            "El trayecto a través del hueso y el encuentro sináptico bulbar son estructuras y funciones diferentes.",
+            "Correcto: mantiene separados un paso anatómico y un circuito neuronal sin inventar un relevo dentro de cada orificio.",
+            "Traslada un circuito del bulbo a la superficie receptora y confunde entrada de moléculas con contactos neuronales.",
+            "Ubica indebidamente neuronas del bulbo en el epitelio y transforma la lámina ósea en el tejido receptor."
+          ],
+          "pdf_pages": [
+            622,
+            623
+          ]
+        }
+      ],
+      "source": "Saladin, cap. 16 · PDF 621–623 (libro 593–595). Código combinatorio: Malnic et al., Cell 1999, PMID 10089886.",
+      "review": "Revisión automatizada; revisión docente pendiente.",
+      "supplementary_reference": "https://pubmed.ncbi.nlm.nih.gov/10089886/"
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "scope": "Fisiología olfatoria: transducción, circuitos y comparación de patrones. Revisión de capítulo completo pendiente."
+  },
+  "supplementary_references": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10089886/",
+      "scope": "Estudio original de codificación combinatoria: relación muchos-a-muchos y efecto de concentración. No es un experimento humano ni una tabla universal de olores."
+    }
+  ]
+}
