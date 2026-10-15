@@ -45,9 +45,35 @@ const seed=JSON.parse(fs.readFileSync(path.join(root,'content/flashcards_morfo_2
  await page.select('#flashcard-subtopic','');await page.select('#flashcard-mode','due');assert.equal(await page.$eval('#card-total',n=>n.textContent),'51');
  await page.click('#btn-reveal');assert.notEqual(await page.$eval('.anki-rating-row',n=>getComputedStyle(n).display),'none');
  assert.equal(await page.evaluate(()=>totalReviews),0);
+ // Visit every delivered official topic through the real library and real session controls.
+ const audited=[];
+ for(const subject of ['MORFOFUNCION','BIOLOGIA CELULAR','SALUD PUBLICA']){
+  await page.evaluate(s=>quickStartSubject(s),subject);
+  const names=await page.$$eval('.library-topic-action',buttons=>buttons.map(n=>n.getAttribute('aria-label').replace(/^Empezar /,'')));
+  for(const name of names){
+   await page.evaluate(()=>backToStudyTopics());
+   await page.click('[aria-label='+JSON.stringify('Empezar '+name)+']');
+   await page.select('#flashcard-mode','all');
+   const snapshot=await page.evaluate(()=>({size:deck.length,subject:deck.every(c=>normalizeDbText(campo(c,'materia'))===normalizeDbText(ultimaMateria)),sources:deck.filter(c=>c.source_reviewed).every(c=>c.fuente&&c.paginas_pdf),subtopics:document.getElementById('flashcard-subtopic').options.length-1}));
+   assert.ok(snapshot.size>=20,name);assert.equal(snapshot.subject,true,name);assert.equal(snapshot.sources,true,name);assert.ok(snapshot.subtopics>=2,name);
+   await page.evaluate(()=>{currentIndex=deck.reduce((best,c,i)=>String(campo(c,'respuesta')).length>String(campo(deck[best],'respuesta')).length?i:best,0);renderCard();});
+   await page.click('#btn-reveal');await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('#card .back')).opacity)>0.999);
+   for(const width of [1440,390]){
+    await page.setViewport({width,height:1100});
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,name+' '+width);
+    assert.equal(await page.$eval('.back-text',n=>{n.scrollTop=n.scrollHeight;return n.querySelector('p').getBoundingClientRect().bottom<=n.getBoundingClientRect().bottom+2;}),true,name+' source '+width);
+    if(name===names[0])await page.screenshot({path:path.join(folder,'expanded-'+subject.replaceAll(' ','-')+'-'+width+'.png')});
+   }
+   const options=await page.$$eval('#flashcard-subtopic option',nodes=>nodes.map(n=>n.value).filter(Boolean));
+   await page.select('#flashcard-subtopic',options[options.length-1]);
+   assert.ok(Number(await page.$eval('#card-total',n=>n.textContent))>0,name+' subtopic opens');
+   audited.push({subject,topic:name,count:snapshot.size,subtopics:snapshot.subtopics});
+  }
+ }
+ assert.equal(audited.length,68);fs.writeFileSync(path.join(folder,'all-topics.json'),JSON.stringify(audited,null,2));
  await page.evaluate(()=>{FlashcardWorkspace.clear();currentUser={id:'another-account'};deck=[];});
  await page.click('#flashcard-shuffle');assert.equal(await page.evaluate(()=>deck.length),0,'cleared private cards cannot restart in another account');
  assert.deepEqual(errors,[]);
- console.log('PASS: real library shows 52, subject/subtopic filters, 51 due vs 52 total, browse keeps saved dates, original IDs, desktop/mobile layout, logos and readable answers.');
+ console.log('PASS: all 68 official decks open with >=20 cards, correct subject and sources; subtopic controls, longest answers at 390/1440, logos; 51 due vs 52 total; browse preserves dates and cleared caches cannot cross accounts.');
  }finally{await b.close();}
 })().catch(e=>{console.error(e);process.exit(1)});

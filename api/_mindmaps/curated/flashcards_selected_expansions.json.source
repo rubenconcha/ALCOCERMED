@@ -1,0 +1,4352 @@
+[
+  {
+    "base_index": 18,
+    "topic": "corazon",
+    "cards": [
+      {
+        "question": "¿En qué región del tórax se encuentra el corazón?",
+        "answer": "En el mediastino, entre los pulmones y detrás del esternón.",
+        "span": [
+          743,
+          749
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué lado del corazón envía sangre hacia los pulmones?",
+        "answer": "El derecho.",
+        "span": [
+          743,
+          749
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué circuito lleva la sangre a los tejidos del cuerpo?",
+        "answer": "La circulación sistémica.",
+        "span": [
+          743,
+          749
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué válvula pasa la sangre al salir del ventrículo izquierdo hacia la aorta?",
+        "answer": "Por la válvula aórtica.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "¿Las cuerdas tendinosas abren activamente las válvulas AV?",
+        "answer": "No. Su función es evitar que las valvas protruyan hacia las aurículas.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "¿En qué fase reciben más flujo las arterias coronarias del ventrículo izquierdo?",
+        "answer": "Durante la diástole, cuando el miocardio se relaja.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "¿Por qué el nódulo SA se considera marcapasos natural?",
+        "answer": "Porque sus células generan impulsos espontáneos que normalmente fijan el ritmo.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "¿Qué es el ritmo sinusal?",
+        "answer": "El ritmo cardiaco iniciado normalmente por el nódulo SA.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "¿Se ve fácilmente la repolarización auricular como onda separada en el ECG?",
+        "answer": "No. Suele quedar oculta por el complejo QRS.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "¿Cuándo empiezan a llenarse los ventrículos tras la relajación isovolumétrica?",
+        "answer": "Cuando su presión cae por debajo de la auricular y se abren las válvulas AV.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "Si una válvula no cierra bien y la sangre retrocede, ¿qué problema hay?",
+        "answer": "Insuficiencia o regurgitación valvular.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "¿Por qué la hipertensión aumenta el trabajo del ventrículo izquierdo?",
+        "answer": "Porque debe generar más presión para eyectar sangre hacia la circulación sistémica.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "¿Qué pasa si el ventrículo izquierdo no bombea adecuadamente hacia el cuerpo?",
+        "answer": "La sangre puede acumularse detrás de él, en la circulación pulmonar.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "¿Qué relación tienen diástole ventricular y apertura de las válvulas AV?",
+        "answer": "Al caer la presión ventricular por debajo de la auricular, las válvulas AV se abren.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "¿Por qué un ritmo excesivamente rápido puede reducir el llenado del ventrículo?",
+        "answer": "Porque acorta la diástole disponible para llenarse entre latidos.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      },
+      {
+        "question": "¿Por qué una vena pulmonar puede transportar sangre rica en oxígeno?",
+        "answer": "Porque vena se define por regresar al corazón, no por el contenido de oxígeno.",
+        "span": [
+          743,
+          773
+        ],
+        "file": "flashcards_ampliacion_lote7_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 21,
+    "topic": "aparato respiratorio",
+    "cards": [
+      {
+        "question": "Antes de que el aire llegue a los pulmones, ¿qué tres cosas hace la nariz con él?",
+        "answer": "Lo calienta, lo humedece y ayuda a limpiarlo.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué estructura separa la cavidad nasal de la boca y permite respirar mientras masticas?",
+        "answer": "El paladar, especialmente su porción dura.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "El moco atrapa polvo en la tráquea. ¿Qué lo desplaza luego hacia la faringe?",
+        "answer": "Los cilios del epitelio respiratorio.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué ramas marcan el final de la zona conductora del árbol bronquial?",
+        "answer": "Los bronquiolos terminales.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Después de los bronquios lobulares, ¿qué ramas ventilan segmentos broncopulmonares?",
+        "answer": "Los bronquios segmentarios.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué células limpian partículas que llegaron hasta los alvéolos?",
+        "answer": "Los macrófagos alveolares.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Si un conducto carece de alvéolos, ¿esperas intercambio gaseoso importante en su pared?",
+        "answer": "No. Su función principal es conducir el aire.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Si la presión dentro del pulmón supera la atmosférica, ¿hacia dónde fluye el aire?",
+        "answer": "Hacia fuera del pulmón.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Si los bronquiolos se dilatan, ¿qué pasa con la resistencia al paso del aire?",
+        "answer": "Disminuye.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Cómo se calcula de forma básica la ventilación alveolar por minuto?",
+        "answer": "Aire que llega a alvéolos por respiración multiplicado por respiraciones por minuto.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Dónde se localizan los centros automáticos principales de la respiración?",
+        "answer": "En el bulbo raquídeo y la protuberancia del tronco encefálico.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Hacia dónde difunde el dióxido de carbono en los capilares pulmonares?",
+        "answer": "De la sangre hacia el aire alveolar para ser exhalado.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué ion del grupo hemo se une reversiblemente al oxígeno?",
+        "answer": "El hierro ferroso, Fe2+.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué intercambio iónico acompaña la salida de bicarbonato del eritrocito?",
+        "answer": "Entra cloruro a cambio; se conoce como desplazamiento de cloruro.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué significa hipoxia?",
+        "answer": "Suministro insuficiente de oxígeno a los tejidos.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué otro equilibrio corporal ayuda a regular la eliminación de CO2?",
+        "answer": "El equilibrio ácido-base o pH.",
+        "span": [
+          883,
+          920
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 24,
+    "topic": "aparato digestivo",
+    "cards": [
+      {
+        "question": "Al masticar una manzana, ¿qué tipo de digestión comienza primero?",
+        "answer": "La mecánica: los dientes fragmentan el alimento y aumentan su superficie.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué capa de la pared digestiva contiene vasos y un plexo nervioso bajo la mucosa?",
+        "answer": "La submucosa.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué estructura dura separa la boca de la cavidad nasal?",
+        "answer": "El paladar duro.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué tejido duro recubre la corona del diente?",
+        "answer": "El esmalte.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Si sientes ardor por ácido que vuelve del estómago al esófago, ¿qué está ocurriendo?",
+        "answer": "Reflujo ácido que puede producir pirosis.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué células gástricas secretan pepsinógeno?",
+        "answer": "Las células principales.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué nutriente empieza a degradar la pepsina en el estómago?",
+        "answer": "Las proteínas, que rompe en fragmentos más pequeños.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "El alimento distiende el estómago y aumenta su secreción. ¿Qué fase de regulación es?",
+        "answer": "La fase gástrica.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué conducto se forma al unirse el hepático común con el cístico?",
+        "answer": "El colédoco, que conduce bilis hacia el duodeno.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué aportan los conductos pancreáticos al jugo que llega al duodeno?",
+        "answer": "Bicarbonato, que ayuda a neutralizar el ácido del quimo.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué hormona pancreática prepara el almacenamiento de nutrientes al favorecer la entrada de glucosa en tejidos?",
+        "answer": "La insulina.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué impide la válvula ileocecal además de regular el paso hacia el ciego?",
+        "answer": "Que el contenido del intestino grueso retroceda hacia el íleon.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Cómo protegen las glándulas duodenales la mucosa frente al quimo ácido?",
+        "answer": "Secretan moco rico en bicarbonato que ayuda a neutralizarlo.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Dónde empieza la digestión química de proteínas?",
+        "answer": "En el estómago, por acción de la pepsina.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué recupera principalmente el intestino grueso del residuo alimentario?",
+        "answer": "Agua y sales, con lo que ayuda a formar las heces.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué esfínter anal funciona de modo involuntario y cuál puede controlarse voluntariamente?",
+        "answer": "El interno es involuntario; el externo está bajo control voluntario.",
+        "span": [
+          981,
+          1022
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 29,
+    "topic": "introduccion a la biologia celular",
+    "cards": [
+      {
+        "question": "¿Qué estudia la biología celular además de la forma de una célula?",
+        "answer": "Su composición química, información genética y funcionamiento.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Por qué fueron importantes las tinciones de Golgi y Ramón y Cajal?",
+        "answer": "Permitieron estudiar mejor la estructura del tejido nervioso.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Para qué sirve la información del ADN de una célula?",
+        "answer": "Para dirigir la síntesis de proteínas necesarias para su estructura y actividad.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Qué tamaño de ribosoma cita el libro para el citoplasma eucariota?",
+        "answer": "80 S.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Todos los protozoos causan enfermedad humana?",
+        "answer": "No. El capítulo señala que solo algunas especies son parásitas.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Un hongo puede ser unicelular o pluricelular?",
+        "answer": "Sí. Las levaduras son unicelulares y muchos otros hongos son pluricelulares.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Por qué Candida puede vivir sin enfermar a una persona y luego causar infección?",
+        "answer": "Porque puede comportarse como comensal y aprovechar condiciones favorables, como la inmunodepresión.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Qué estructura protege del exterior a muchas bacterias?",
+        "answer": "La pared celular.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Puede haber cápsula tanto en bacterias grampositivas como gramnegativas?",
+        "answer": "Sí, puede encontrarse en ambos grupos.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Qué ventaja puede codificar un plásmido para una bacteria?",
+        "answer": "Resistencia a antibióticos o adaptación a ciertas condiciones.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Cómo se llaman las unidades que forman una cápside?",
+        "answer": "Capsómeros.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Qué enzima sintetiza ADN a partir de ARN en algunos virus?",
+        "answer": "La transcriptasa inversa.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Qué proteínas virales del HPV se relacionan con la inactivación de defensas antitumorales?",
+        "answer": "E6 y E7.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Qué células reconoce el VIH por la presencia de CD4?",
+        "answer": "Entre otras, linfocitos T cooperadores y macrófagos.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿A qué organismos afectan los viroides descritos en el capítulo?",
+        "answer": "A plantas.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      },
+      {
+        "question": "¿Qué enfermedad humana se cita como ejemplo de trastorno priónico?",
+        "answer": "La enfermedad de Creutzfeldt-Jakob.",
+        "span": [
+          34,
+          52
+        ],
+        "file": "flashcards_ampliacion_lote5_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 35,
+    "topic": "nucleo y cromatina",
+    "cards": [
+      {
+        "question": "Si dos células de tu cuerpo tienen el mismo ADN, ¿por qué pueden cumplir funciones distintas?",
+        "answer": "Porque activan y utilizan conjuntos diferentes de genes.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Por qué la envoltura nuclear no es una barrera completamente cerrada?",
+        "answer": "Porque tiene poros que permiten un intercambio controlado con el citoplasma.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Dónde predomina Ran unida a GTP en el transporte núcleo-citoplasma?",
+        "answer": "En el núcleo.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Cuál es la unidad básica del empaquetamiento de la cromatina?",
+        "answer": "El nucleosoma.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Por qué la acetilación de histonas puede facilitar la expresión de un gen?",
+        "answer": "Reduce la afinidad de la histona por el ADN y abre la cromatina.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "En una mujer, ¿se inactiva siempre el cromosoma X procedente del mismo progenitor?",
+        "answer": "No. La elección inicial puede ser paterna o materna y se mantiene en las células hijas.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Qué puede ocurrirle a un fragmento cromosómico sin centrómero durante la división?",
+        "answer": "Puede perderse porque no se segrega de manera normal.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Cuántos pares de autosomas tiene normalmente una célula somática humana?",
+        "answer": "22 pares; el par restante corresponde a los cromosomas sexuales.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Qué es una aneuploidía?",
+        "answer": "Una alteración del número de cromosomas individuales, sin añadir un juego completo.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Un gen incluye solo la parte que codifica una proteína?",
+        "answer": "No. También puede incluir secuencias necesarias para regular su producto, y algunos genes producen ARN funcional.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Qué elementos repetidos largos pueden transponerse por sí mismos?",
+        "answer": "Los LINE, porque algunos codifican proteínas necesarias para su movilización.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Qué pieza corta necesita la ADN polimerasa para comenzar a sintetizar?",
+        "answer": "Un cebador que aporta un extremo 3' disponible.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Qué problema aparece al copiar los extremos de cromosomas lineales?",
+        "answer": "La maquinaria de replicación no completa del todo un extremo, por lo que los telómeros tienden a acortarse.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "Si durante la copia queda una base mal apareada, ¿qué sistema puede corregirla?",
+        "answer": "La reparación de bases desapareadas, o mismatch repair.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Qué pasaría si fallan los mecanismos de reparación del ADN?",
+        "answer": "Se acumularían cambios genéticos que pueden alterar funciones celulares y favorecer enfermedades.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      },
+      {
+        "question": "¿Por qué el ADN necesita tanto empaquetamiento como accesibilidad?",
+        "answer": "Debe caber y protegerse en el núcleo, pero también abrirse para replicarse, repararse y expresarse.",
+        "span": [
+          292,
+          342
+        ],
+        "file": "flashcards_ampliacion_lote6_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 36,
+    "topic": "transcripcion y maduracion del arn",
+    "cards": [
+      {
+        "question": "Si todas tus células tienen el mismo genoma, ¿por qué no producen las mismas proteínas?",
+        "answer": "Porque cada tipo celular expresa solo una parte de sus genes según su función y estado.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿En qué dirección se alarga un ARN recién sintetizado?",
+        "answer": "En dirección 5' a 3'.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿Qué etapa sigue a la iniciación de la transcripción?",
+        "answer": "La elongación de la cadena de ARN.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿Qué diferencia al ARN recién transcrito del ARN maduro?",
+        "answer": "El recién transcrito todavía puede necesitar cortes, modificaciones y otras etapas de procesamiento.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿Por qué la acetilación de histonas suele favorecer un gen activo?",
+        "answer": "Tiende a abrir la cromatina y facilita que la maquinaria de transcripción acceda al ADN.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿Puede una alteración del control transcripcional contribuir al cáncer?",
+        "answer": "Sí. Puede activar genes promotores del crecimiento o silenciar genes que lo limitan.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿Qué ocurre con el precursor ribosómico 45 S antes de formar ribosomas?",
+        "answer": "Se corta y modifica para originar distintos ARN ribosómicos maduros.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿Cómo se llama la subunidad grande del ribosoma eucariota?",
+        "answer": "Subunidad 60 S.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "En un pre-ARN mensajero, ¿qué se elimina por corte y empalme?",
+        "answer": "Los intrones.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿El orden de los exones unidos importa para el producto final?",
+        "answer": "Sí. Determina la secuencia del ARN maduro y puede cambiar la proteína producida.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿Qué puede ocurrir con un ARN mensajero que pierde su cola poli(A)?",
+        "answer": "Suele volverse menos estable y más susceptible a degradación.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿Cómo sale del núcleo un ARN mensajero ya procesado?",
+        "answer": "A través de complejos de poro nuclear, asociado a proteínas de transporte.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "Si un micro-ARN se une a un ARN mensajero, ¿qué puede pasar?",
+        "answer": "Puede bloquear su traducción o favorecer su degradación.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿Qué proceso convierte ADN en ARN y cuál convierte ARN mensajero en proteína?",
+        "answer": "Transcripción convierte ADN en ARN; traducción usa el ARN mensajero para sintetizar proteína.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿Qué paso revisas si el ADN del gen está intacto pero falta su ARN mensajero?",
+        "answer": "La activación de la transcripción, el procesamiento y la estabilidad del ARN.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      },
+      {
+        "question": "¿Por qué la célula regula tanto la síntesis como la degradación del ARN?",
+        "answer": "Porque ambas determinan cuánto ARN funcional queda disponible en cada momento.",
+        "span": [
+          351,
+          381
+        ],
+        "file": "flashcards_ampliacion_lote8_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 42,
+    "topic": "ciclo celular",
+    "cards": [
+      {
+        "question": "Una célula se prepara para dividirse. ¿Qué tres tareas principales debe completar antes de producir dos hijas?",
+        "answer": "Crecer, duplicar su material genético y repartirlo durante la división.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Además de ADN, ¿qué proteínas se sintetizan durante la fase S para empaquetarlo?",
+        "answer": "Las histonas.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Cuándo se separan las cromátidas hermanas hacia polos opuestos?",
+        "answer": "Durante la anafase.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué tejido se renueva constantemente y se considera lábil?",
+        "answer": "La piel, las mucosas o la médula ósea.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué los telómeros se acortan en muchas células tras repetidas divisiones?",
+        "answer": "Porque la síntesis de la hebra retardada no completa del todo el extremo del cromosoma.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué complejo de Cdk y ciclina ayuda especialmente a iniciar la mitosis?",
+        "answer": "Cdk1 unida a ciclina B.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué dos familias de proteínas inhibidoras de Cdk destaca el texto?",
+        "answer": "Ink4 y Cip/Kip.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué evalúa el punto de control G2 antes de iniciar la mitosis?",
+        "answer": "Que el ADN se haya replicado adecuadamente y que la célula esté preparada para dividirse.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué el paso de G1 a S se considera una decisión importante?",
+        "answer": "Porque la célula se compromete a duplicar su material genético antes de dividirse.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué debe ocurrir con los cromosomas antes de que empiece la anafase?",
+        "answer": "Todos deben estar unidos correctamente al huso mitótico.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué se degradan ciclinas mitóticas al finalizar la división?",
+        "answer": "Para apagar las señales de mitosis y permitir la salida hacia G1.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué p53 se considera protector frente a la transformación tumoral?",
+        "answer": "Porque limita la proliferación de células con daño genético.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué distingue quiescencia de senescencia?",
+        "answer": "La quiescencia puede revertirse; la senescencia bloquea de modo duradero la proliferación.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué otras señales del microambiente pueden promover o frenar la división?",
+        "answer": "Factores de crecimiento y citocinas.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué estructura protege los extremos cromosómicos mientras se replica el ADN?",
+        "answer": "Los telómeros.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Cuál es el resultado esperado de una mitosis normal en una célula somática?",
+        "answer": "Dos núcleos hijos con la misma información cromosómica que el núcleo progenitor.",
+        "span": [
+          581,
+          613
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 44,
+    "topic": "biologia celular del cancer",
+    "cards": [
+      {
+        "question": "¿Por qué el cáncer se relaciona con genes aunque también influyan el ambiente y la edad?",
+        "answer": "Porque aparecen alteraciones genéticas y epigenéticas que cambian el control de la célula.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué equilibrio celular se altera cuando surge un tumor?",
+        "answer": "El que regula proliferación, diferenciación y muerte celular programada.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Todos los cánceres se originan y evolucionan de la misma manera?",
+        "answer": "No. Son enfermedades variadas con mecanismos comunes y rasgos propios de cada tipo.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué la incidencia del cáncer suele aumentar con la edad según el texto?",
+        "answer": "Porque se acumulan alteraciones celulares a lo largo de la vida.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Una célula produce sus propias señales de crecimiento. ¿Qué ventaja tumoral obtiene?",
+        "answer": "Puede mantener la proliferación sin depender de los controles habituales del tejido.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué ocurre cuando una célula tumoral evade los frenos de proliferación?",
+        "answer": "Continúa avanzando en el ciclo y multiplicándose pese a señales que deberían detenerla.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Cómo ayuda a un tumor evitar la apoptosis?",
+        "answer": "Permite que sobrevivan células alteradas que normalmente serían eliminadas.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Si aumenta Bcl-2 y disminuyen proteínas proapoptóticas, ¿qué proceso se dificulta?",
+        "answer": "La apoptosis o muerte celular programada.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué la inestabilidad genómica favorece la progresión tumoral?",
+        "answer": "Genera nuevas mutaciones entre las que pueden surgir ventajas de crecimiento o supervivencia.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué papel puede tener una inflamación crónica en ciertos tumores?",
+        "answer": "Modificar el microambiente y favorecer el desarrollo de células neoplásicas.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué significa que un tumor reprograme su metabolismo?",
+        "answer": "Que cambia el uso de nutrientes y energía para sostener su proliferación.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué sistema de defensa pueden evadir las células cancerosas?",
+        "answer": "La respuesta inmunitaria, incluida la acción de linfocitos y células NK.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Cuál es una diferencia clave entre tumor benigno y maligno?",
+        "answer": "El benigno permanece localizado; el maligno puede invadir tejidos y diseminarse.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Un tumor atraviesa la membrana basal e invade el tejido vecino. ¿Qué comportamiento muestra?",
+        "answer": "Comportamiento maligno e invasivo.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué se habla de evolución de las células dentro de un tumor?",
+        "answer": "Porque las alteraciones se acumulan y algunas células adquieren ventajas frente a otras.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué vías puede usar un tumor maligno para diseminarse a distancia?",
+        "answer": "La vía sanguínea, linfática o serosa, según el tipo de tumor.",
+        "span": [
+          653,
+          657
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 47,
+    "topic": "educacion en salud",
+    "cards": [
+      {
+        "question": "Después de una charla, un grupo sabe qué hacer pero no puede practicarlo. ¿Qué le falta a la educación en salud?",
+        "answer": "Ayudar a desarrollar habilidades y condiciones para convertir lo aprendido en prácticas sostenibles.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿A quiénes incluye la educación en salud además de cada paciente?",
+        "answer": "A las familias y a las comunidades.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué tres aspectos de la persona intenta transformar la educación en salud?",
+        "answer": "Conocimientos, actitudes y prácticas.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Una estudiante explica el lavado de manos y luego practica con su comunidad. ¿Qué aporta la segunda parte?",
+        "answer": "Pasa de la información a una habilidad y una práctica concreta.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué se habla de un proceso permanente de educación en salud?",
+        "answer": "Porque aprender y ajustar conductas saludables requiere continuidad y reflexión, no una sola charla.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué significa autogestionar la salud?",
+        "answer": "Tomar decisiones informadas y participar activamente en el cuidado propio, familiar y comunitario.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Si una campaña ignora costumbres locales, ¿qué dimensión importante está dejando fuera?",
+        "answer": "El contexto cultural y social en el que las personas aprenden y toman decisiones.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué la comunicación en educación para la salud debe ir en ambos sentidos?",
+        "answer": "Para escuchar dudas y experiencias de la comunidad, además de compartir información.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿La educación en salud puede por sí sola eliminar la pobreza o mejorar todas las viviendas?",
+        "answer": "No. Es una herramienta importante, pero esos determinantes exigen políticas y acciones sociales más amplias.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué enfoque reconoce factores biológicos, psicológicos y sociales al educar en salud?",
+        "answer": "El enfoque biopsicosocial.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué busca el empoderamiento de la comunidad en educación sanitaria?",
+        "answer": "Que pueda comprender opciones y participar en decisiones que afectan su bienestar.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Cómo se relaciona la educación en salud con la prevención?",
+        "answer": "Ayuda a reconocer riesgos y a adoptar prácticas que disminuyan la posibilidad de enfermar.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Cómo se relaciona la educación en salud con la promoción?",
+        "answer": "Fortalece capacidades personales y comunitarias para mejorar condiciones de bienestar.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué enseñar una conducta saludable sin considerar el entorno puede fallar?",
+        "answer": "Porque la posibilidad de practicarla depende también de recursos, costumbres y condiciones de vida.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué nivel de vida busca sostener la educación para la salud en la persona y su entorno?",
+        "answer": "Un estilo de vida saludable con cuidado personal, familiar y comunitario.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Una comunidad identifica sus problemas y propone soluciones con el equipo de salud. ¿Qué papel desempeña?",
+        "answer": "Participa activamente en su aprendizaje y en el cuidado colectivo de la salud.",
+        "span": [
+          2,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 48,
+    "topic": "concepto de salud y determinantes",
+    "cards": [
+      {
+        "question": "¿Cómo veía la salud el enfoque biomédico clásico?",
+        "answer": "Principalmente como ausencia de enfermedad, con énfasis en diagnóstico y tratamiento.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué añadió el enfoque biopsicosocial a la idea de salud?",
+        "answer": "La interacción de factores biológicos, psicológicos y sociales.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Según la definición de la OMS citada en el material, ¿qué tres dimensiones integran el bienestar?",
+        "answer": "La física, la mental y la social.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Una persona tiene trabajo inseguro y mala vivienda. ¿Por qué eso importa para su salud?",
+        "answer": "Porque empleo y vivienda son determinantes sociales que condicionan cómo vive y enferma.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿En qué momentos de la vida influyen los determinantes sociales?",
+        "answer": "En las condiciones en que las personas nacen, crecen, trabajan y envejecen.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué diferencia hay entre un factor individual y uno ambiental?",
+        "answer": "El individual pertenece a la persona, como edad o genética; el ambiental corresponde al entorno, como aire, agua o vivienda.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿El hábito de fumar es un determinante conductual o político?",
+        "answer": "Conductual, porque forma parte de las prácticas de la persona.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Cómo puede una ley influir en la salud aunque no sea un tratamiento médico?",
+        "answer": "Puede modificar riesgos, servicios y condiciones de vida de toda la población.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué distingue una inequidad en salud de cualquier diferencia entre personas?",
+        "answer": "Que la inequidad es una diferencia injusta y evitable vinculada a condiciones desiguales.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Un barrio tiene agua segura y otro no. ¿Qué medida apunta a la equidad?",
+        "answer": "Actuar sobre esa diferencia para que ambos tengan una oportunidad similar de mantenerse sanos.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué sucede con las enfermedades predominantes durante la transición epidemiológica descrita en el PDF?",
+        "answer": "Disminuye el peso relativo de infecciones y aumentan las enfermedades crónicas no transmisibles.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Si la población vive más años y cambian las principales causas de muerte, ¿qué dos transiciones se relacionan?",
+        "answer": "La demográfica y la epidemiológica.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué el aumento de enfermedades crónicas exige algo más que atención hospitalaria?",
+        "answer": "Requiere prevención, hábitos saludables y trabajo con los factores de riesgo de la comunidad.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué ejemplos da el material de condiciones de vida diarias que afectan la salud?",
+        "answer": "Vivienda, alimentación y acceso a servicios.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué ejemplos da de factores estructurales de la salud?",
+        "answer": "Políticas, distribución de la riqueza y educación.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué la salud se considera también un derecho y no solo una condición biológica?",
+        "answer": "Porque todas las personas deben tener oportunidades y condiciones dignas para alcanzar bienestar.",
+        "span": [
+          2,
+          4
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 49,
+    "topic": "funciones de salud publica",
+    "cards": [
+      {
+        "question": "¿Cuál es la meta general de la salud pública según el material?",
+        "answer": "Proteger y mejorar la salud de las poblaciones mediante esfuerzos organizados.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Un laboratorio informa un aumento inesperado de casos. ¿Qué función permite detectar la señal?",
+        "answer": "La vigilancia y el monitoreo de datos de salud.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Para qué se recogen y analizan datos en salud pública?",
+        "answer": "Para reconocer riesgos, brotes y prioridades antes de decidir acciones.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Si se inspeccionan alimentos vendidos en una feria, ¿qué función se ejerce?",
+        "answer": "Protección de la salud mediante el control de riesgos sanitarios.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué riesgos ambientales menciona el material que deben controlarse?",
+        "answer": "Los relacionados con alimentos, agua y aire.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿La vacunación se ubica en protección, prevención o vigilancia?",
+        "answer": "En prevención de enfermedades.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Un programa de control de vectores busca reducir nuevos casos. ¿Qué función cumple?",
+        "answer": "Prevención de enfermedades.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué diferencia la promoción de la prevención dentro de las funciones públicas?",
+        "answer": "La promoción crea condiciones y capacidades saludables; la prevención reduce riesgos o casos de enfermedad.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Una ciudad crea parques accesibles para actividad física. ¿Qué función se ve principalmente?",
+        "answer": "Promoción de la salud mediante un entorno favorable.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué añade la participación comunitaria a la identificación de problemas?",
+        "answer": "La experiencia y las prioridades de quienes viven las condiciones de salud del lugar.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Quiénes pueden organizar acciones de salud pública según el material?",
+        "answer": "La sociedad, el Estado y las comunidades.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué una sola consulta clínica no reemplaza la vigilancia poblacional?",
+        "answer": "Porque la consulta mira a una persona; la vigilancia identifica patrones y riesgos en grupos.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué función se activa cuando la comunidad participa en la toma de decisiones sanitarias?",
+        "answer": "Participación comunitaria y gobernanza.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué relación hay entre protección del agua y prevención de infecciones?",
+        "answer": "Controlar el agua elimina una exposición ambiental que podría causar enfermedad.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué cinco funciones esenciales resume el material?",
+        "answer": "Vigilancia, protección, prevención, promoción y participación comunitaria.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué la salud pública necesita esfuerzo organizado?",
+        "answer": "Porque proteger a una población exige coordinar información, recursos, servicios y decisiones colectivas.",
+        "span": [
+          4,
+          5
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 50,
+    "topic": "niveles de prevencion",
+    "cards": [
+      {
+        "question": "Una persona está sana y recibe una vacuna. ¿Qué se intenta evitar?",
+        "answer": "Que la enfermedad aparezca; por eso es prevención primaria.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿En qué momento actúa la prevención primaria?",
+        "answer": "Antes de que aparezca la enfermedad, reduciendo la exposición a sus factores de riesgo.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Si una comunidad mejora el acceso a agua segura para evitar infecciones, ¿qué prevención realiza?",
+        "answer": "Prevención primaria, porque actúa antes de que se produzca la enfermedad.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué busca un programa de detección temprana del cáncer cervicouterino?",
+        "answer": "Encontrar la enfermedad a tiempo para tratarla antes de que progrese: prevención secundaria.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué un tamizaje no se considera prevención primaria?",
+        "answer": "Porque busca una enfermedad que ya podría estar presente, aunque todavía no cause síntomas.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Una prueba de VIH permite iniciar tratamiento oportuno. ¿Qué nivel de prevención representa la detección?",
+        "answer": "Prevención secundaria.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Una persona ya tuvo un infarto y empieza rehabilitación. ¿Cuál es el objetivo preventivo?",
+        "answer": "Reducir secuelas y recuperar funciones; es prevención terciaria.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿En qué se diferencia la prevención terciaria de la secundaria?",
+        "answer": "La secundaria busca detectar y tratar temprano; la terciaria limita complicaciones de una enfermedad ya establecida.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Un examen sin indicación puede iniciar tratamientos innecesarios. ¿Qué nivel de prevención pide detenerse?",
+        "answer": "La prevención cuaternaria, que busca evitar daños por exceso de intervención médica.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué dos riesgos intenta reducir la prevención cuaternaria?",
+        "answer": "El sobrediagnóstico y el sobretratamiento.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿La prevención se limita a dar medicamentos?",
+        "answer": "No. También incluye reducir riesgos, detectar temprano y evitar secuelas o intervenciones dañinas.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué pregunta te ayuda a distinguir prevención primaria de secundaria?",
+        "answer": "Si la enfermedad aún no ha aparecido, es primaria; si se busca detectarla temprano, es secundaria.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Una citología cervical busca identificar lesiones tempranas. ¿A qué nivel corresponde?",
+        "answer": "A la prevención secundaria.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué diferencia central hay entre promoción de la salud y prevención de una enfermedad?",
+        "answer": "La promoción fortalece condiciones y capacidades para el bienestar; la prevención se centra en riesgos y enfermedades.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Si se busca reducir la discapacidad después de una enfermedad, ¿qué nivel se está aplicando?",
+        "answer": "Prevención terciaria.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué la vacunación es un ejemplo clásico de prevención primaria?",
+        "answer": "Porque protege antes de que la persona contraiga la enfermedad que se quiere evitar.",
+        "span": [
+          18,
+          20
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 51,
+    "topic": "promocion de la salud",
+    "cards": [
+      {
+        "question": "Según la Carta de Ottawa, ¿qué debe ganar una persona para mejorar su salud?",
+        "answer": "Mayor capacidad y medios para controlar los factores que influyen en ella.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿La promoción de la salud se dirige solo a personas enfermas?",
+        "answer": "No. Involucra a la población en su conjunto y a sus condiciones de vida.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Un barrio pide iluminación y espacios seguros para caminar. ¿Qué área de promoción refleja?",
+        "answer": "Crear ambientes que favorezcan la salud.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Si una comunidad decide sus prioridades sanitarias junto al equipo de salud, ¿qué se fortalece?",
+        "answer": "La acción comunitaria y la participación en las decisiones.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué pasa si un programa se diseña sin escuchar a la comunidad?",
+        "answer": "Puede perder participación real y convertirse en una acción asistencialista.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Un municipio revisa el efecto de sus decisiones de transporte sobre la salud. ¿Qué área aplica?",
+        "answer": "La construcción de políticas públicas saludables.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "En una escuela enseñan habilidades para elegir alimentos saludables. ¿Qué área de promoción es?",
+        "answer": "Desarrollar habilidades personales.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué significa reorientar los servicios de salud en la Carta de Ottawa?",
+        "answer": "Dar más espacio a la promoción y a la atención primaria, además de la atención curativa.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Basta con repartir folletos para promover salud?",
+        "answer": "No. También hacen falta entornos favorables, participación, políticas y habilidades para actuar.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué la educación y la legislación pueden trabajar juntas en promoción?",
+        "answer": "Porque la promoción combina métodos complementarios para cambiar capacidades y condiciones de vida.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Una familia no puede elegir agua segura si su barrio carece de ella. ¿Qué recuerda este caso?",
+        "answer": "Que la salud también depende de condiciones del entorno, no solo de decisiones individuales.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué papel tiene el personal de atención primaria en promoción de la salud?",
+        "answer": "Apoyar y facilitar que personas y comunidades mejoren sus condiciones de salud.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Cuál es el foco de la promoción cuando habla de determinantes?",
+        "answer": "Actuar sobre causas sociales, ambientales y conductuales que influyen en la salud.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué la promoción requiere colaboración fuera del consultorio?",
+        "answer": "Porque educación, vivienda, trabajo y otros sectores también determinan las oportunidades de estar sano.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué busca la autoayuda comunitaria dentro de la promoción?",
+        "answer": "Que las personas participen y encuentren formas propias de mejorar la salud de su comunidad.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué cinco áreas de acción resume la Carta de Ottawa?",
+        "answer": "Políticas saludables, ambientes favorables, acción comunitaria, habilidades personales y reorientación de servicios.",
+        "span": [
+          14,
+          16
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 52,
+    "topic": "atencion primaria de salud",
+    "cards": [
+      {
+        "question": "Una familia consulta primero en su centro de salud cercano. ¿Qué función cumple la atención primaria?",
+        "answer": "Ser el primer contacto de la persona, la familia y la comunidad con el sistema de salud.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué pide Alma-Ata sobre la participación de la comunidad en atención primaria?",
+        "answer": "Que las personas y familias participen plenamente en una atención esencial y accesible.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Un servicio está lejos y el transporte es caro. ¿Qué atributo de atención primaria falla?",
+        "answer": "La accesibilidad, porque hay barreras geográficas y económicas.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "El centro de salud adapta la atención a la lengua de la familia. ¿Qué barrera está reduciendo?",
+        "answer": "Una barrera cultural de acceso.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué significa coordinación en la atención primaria?",
+        "answer": "Conectar acciones del equipo y de los distintos niveles para mantener la continuidad de la atención.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Un equipo atiende prevención, tratamiento y rehabilitación. ¿Qué atributo demuestra?",
+        "answer": "Integralidad.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué ver a la misma familia a lo largo de los años aporta valor?",
+        "answer": "Favorece la longitudinalidad: conocer su historia y acompañar sus problemas en el tiempo.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué diferencia hay entre accesibilidad y longitudinalidad?",
+        "answer": "La primera permite llegar al servicio; la segunda mantiene el seguimiento a lo largo del tiempo.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Al evaluar un centro, ¿qué significa mirar su estructura?",
+        "answer": "Revisar recursos como personal, infraestructura, equipos e insumos.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Al evaluar un centro, ¿qué significa mirar su proceso?",
+        "answer": "Observar las actividades y procedimientos que realiza el equipo para brindar atención.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Al evaluar un centro, ¿qué significa mirar sus resultados?",
+        "answer": "Comprobar los efectos de la atención, como salud, satisfacción, equidad y uso de recursos.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Hay equipos, pero las derivaciones se pierden. ¿El problema principal es de estructura o proceso?",
+        "answer": "De proceso: falla la forma en que se coordinan las acciones de atención.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Por qué la atención primaria no equivale solo a curar enfermedades leves?",
+        "answer": "Porque también incluye promoción, prevención, rehabilitación y seguimiento integral.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué tres ámbitos se mencionan como primer contacto con la atención primaria?",
+        "answer": "El individuo, la familia y la comunidad.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "Un paciente recibe una derivación y después continúa sus controles en el centro. ¿Qué se conserva?",
+        "answer": "La continuidad de la atención mediante coordinación entre niveles.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      },
+      {
+        "question": "¿Qué cuatro atributos básicos debes reconocer en la atención primaria?",
+        "answer": "Accesibilidad, coordinación, integralidad y longitudinalidad.",
+        "span": [
+          16,
+          18
+        ],
+        "file": "flashcards_ampliacion_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 53,
+    "topic": "factor de riesgo y salud comunitaria",
+    "cards": [
+      {
+        "question": "Una persona fuma y tiene antecedentes familiares de cardiopatía. ¿Cuál de los dos riesgos puede cambiar?",
+        "answer": "El tabaquismo; los antecedentes familiares no se pueden modificar.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿La edad es un factor de riesgo modificable?",
+        "answer": "No. Es una característica que no puede cambiarse.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué tienen en común el sedentarismo y una dieta inadecuada como factores de riesgo?",
+        "answer": "Ambos pueden modificarse con apoyo e intervenciones adecuadas.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Si alguien tiene hipertensión, ¿puede actuar sobre ese factor de riesgo?",
+        "answer": "Sí. La presión arterial puede controlarse mediante atención y cambios apropiados.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué tener un factor de riesgo no significa que la enfermedad sea inevitable?",
+        "answer": "Porque aumenta la probabilidad de enfermar, pero no determina por sí solo el resultado.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué otras condiciones, además de las biológicas, pueden funcionar como factores de riesgo?",
+        "answer": "Las condiciones ambientales, los comportamientos y las exposiciones sociales.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Un barrio crea un comité para vigilar la calidad del agua. ¿Qué enfoque está aplicando?",
+        "answer": "Salud comunitaria: la población participa en la solución de un problema propio.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "En salud comunitaria, ¿la población solo recibe instrucciones del personal sanitario?",
+        "answer": "No. Participa en la planificación, la gestión y el control de las acciones.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué puede aportar la comunidad al planificar una intervención de salud?",
+        "answer": "Su conocimiento de las necesidades, costumbres y condiciones del lugar.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Una brigada de salud escolar organizada con las familias, ¿ilustra qué forma de trabajo?",
+        "answer": "Una acción de salud comunitaria.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué busca un programa comunitario de control de vectores?",
+        "answer": "Construir con la población una respuesta a un problema de salud del entorno.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué tres tipos de determinantes debe considerar una solución de salud comunitaria?",
+        "answer": "Los sociales, los culturales y los ambientales.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Además de prevenir enfermedades, ¿qué deben hacer los servicios de salud según el texto?",
+        "answer": "Fomentar la salud, atender de forma integral y apoyar la rehabilitación.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Una persona supera una enfermedad, pero necesita volver a sus actividades. ¿Qué función del servicio de salud entra en juego?",
+        "answer": "La rehabilitación y la reintegración social.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué prácticas cotidianas menciona el material como parte del fomento de la salud?",
+        "answer": "Higiene, actividad física, alimentación adecuada y autocuidado, entre otras.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué el saneamiento ambiental también es una acción de fomento de la salud?",
+        "answer": "Porque crea condiciones que facilitan el bienestar de la comunidad.",
+        "span": [
+          20,
+          22
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 54,
+    "topic": "ods y cobertura sanitaria",
+    "cards": [
+      {
+        "question": "¿Hasta qué año orienta la agenda de los Objetivos de Desarrollo Sostenible?",
+        "answer": "Hasta 2030.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué plantea específicamente el ODS 3?",
+        "answer": "Garantizar una vida sana y promover el bienestar para todas las personas, a todas las edades.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Cuántas metas reúnen los 17 ODS según el material?",
+        "answer": "169 metas.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Si una meta dice qué se quiere lograr, ¿qué permite observar un indicador?",
+        "answer": "Si se está avanzando hacia esa meta con una medida comparable.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué un profesional de salud debería conocer los ODS?",
+        "answer": "Porque relacionan los problemas sanitarios con prioridades sociales, económicas y ambientales.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Una población tiene agua insegura. ¿Por qué esto importa a la agenda de salud?",
+        "answer": "Porque el agua y el saneamiento son determinantes de la salud.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué ayuda a identificar los ODS al comparar el acceso a salud entre grupos?",
+        "answer": "Las inequidades y las poblaciones vulnerables o marginadas.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué estrategia sanitaria destaca el texto para avanzar hacia la cobertura universal?",
+        "answer": "Fortalecer la Atención Primaria en Salud.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Cómo pueden los ODS orientar una investigación local en salud?",
+        "answer": "Vinculando una necesidad de la comunidad con metas e indicadores de la agenda global.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿La salud dentro de los ODS depende únicamente de los hospitales?",
+        "answer": "No. También depende de educación, vivienda, trabajo, ambiente y otras condiciones.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué significa trabajar de forma intersectorial por la salud?",
+        "answer": "Coordinar salud con sectores como educación, vivienda, trabajo y medio ambiente.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué hace posible que distintos países comparen sus avances en salud?",
+        "answer": "El seguimiento mediante indicadores globales.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Si una política reduce barreras que afectan más a un grupo vulnerable, ¿qué objetivo de los ODS favorece?",
+        "answer": "La reducción de inequidades en salud.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Cuándo se adoptó la Agenda 2030 mencionada en el material?",
+        "answer": "En 2015.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué dimensiones integra la agenda de los ODS además de la sanitaria?",
+        "answer": "Dimensiones sociales, económicas, ambientales y de gobernanza.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué relación tiene la equidad de género con la salud en la agenda de los ODS?",
+        "answer": "Es una condición social que puede influir en el bienestar y el acceso a oportunidades de salud.",
+        "span": [
+          6,
+          9
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 55,
+    "topic": "salud en bolivia y modelo safci",
+    "cards": [
+      {
+        "question": "Según el curso, ¿qué dos principios de acceso destacan para los servicios de salud en Bolivia?",
+        "answer": "La gratuidad y la universalidad.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué sistema boliviano se describe como financiado con recursos públicos y basado en la atención primaria?",
+        "answer": "El Sistema Único de Salud (SUS).",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "En el modelo SAFCI, ¿la familia queda fuera de las decisiones de salud?",
+        "answer": "No. La familia y la comunidad forman parte de la atención integral.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Una comunidad consulta a sus médicos y a sus practicantes tradicionales. ¿Qué principio del SAFCI refleja?",
+        "answer": "La articulación intercultural entre saberes ancestrales y biomedicina.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué el SAFCI debe adaptar la atención a la cultura local?",
+        "answer": "Para que sea pertinente y respete los saberes de la comunidad.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué pueden hacer los comités de salud en su territorio?",
+        "answer": "Participar en la planificación, vigilancia y evaluación de las acciones sanitarias.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué aporta un agente comunitario de salud?",
+        "answer": "Trabajo cercano al territorio para prevenir enfermedades y promover hábitos saludables.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Quién define las decisiones y estrategias de una política pública de salud?",
+        "answer": "El Estado, con el fin de garantizar el derecho a la salud y reducir inequidades.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Si una norma asigna presupuesto y fija prioridades sanitarias, ¿hablamos de acción clínica o de política pública?",
+        "answer": "De política pública de salud.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Si un equipo aplica una campaña de vacunación, ¿a qué campo de acción pertenece?",
+        "answer": "A la salud pública.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué papel tiene la participación social en la política sanitaria descrita?",
+        "answer": "Permite que comunidades y organizaciones ayuden a planificar y evaluar las acciones.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿En qué se concreta una política pública de salud?",
+        "answer": "En planes, programas y normas que guían los servicios de salud.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué una política de salud debe colaborar con educación o medio ambiente?",
+        "answer": "Porque las condiciones de vida influyen en la salud y requieren respuestas entre sectores.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué misión de salud pública consiste en conocer problemas y prioridades de una población?",
+        "answer": "Evaluar y monitorizar su estado de salud.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Después de identificar un problema de salud local, ¿qué debe hacer la salud pública?",
+        "answer": "Formular programas y políticas con la comunidad y las autoridades.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué debe comprobarse al garantizar servicios de salud?",
+        "answer": "Que la población acceda a servicios adecuados y que las intervenciones se evalúen.",
+        "span": [
+          10,
+          14
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 56,
+    "topic": "epidemiologia social",
+    "cards": [
+      {
+        "question": "¿Qué intenta explicar la epidemiología social cuando dos grupos tienen distinta esperanza de vida?",
+        "answer": "Cómo las desigualdades y condiciones sociales influyen en la salud de esos grupos.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Ante un brote en una escuela, ¿qué enfoque epidemiológico busca intervenir con rapidez en el lugar?",
+        "answer": "La epidemiología de campo.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿En qué tipo de espacios suele actuar la epidemiología de campo descrita en el texto?",
+        "answer": "En espacios concretos como escuelas, hospitales o asilos.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué escala de acción destaca en la epidemiología social?",
+        "answer": "La regional o nacional, incluida la orientación de políticas públicas.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué estudiar solo el agente de una enfermedad puede dejar incompleto el análisis poblacional?",
+        "answer": "Porque puede pasar por alto pobreza, acceso a servicios y otras condiciones de vida.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué busca la epidemiología social entre la posición social y la salud?",
+        "answer": "Explicar las causas de las desigualdades sanitarias.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Si un estudio describe cuántos casos aparecen por lugar, tiempo y persona, ¿qué tipo de estudio observacional es?",
+        "answer": "Descriptivo.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Para qué puede servir un estudio descriptivo antes de probar una explicación?",
+        "answer": "Para reconocer la distribución de un problema y generar hipótesis.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Si un estudio compara grupos para evaluar una hipótesis sobre una causa, ¿es descriptivo o analítico?",
+        "answer": "Analítico.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué diferencia clave existe entre un estudio observacional y uno experimental?",
+        "answer": "En el experimental se manipula una variable bajo condiciones controladas; en el observacional no.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Un ensayo se realiza con comunidades completas. ¿Qué tipo de estudio experimental menciona el texto?",
+        "answer": "Un ensayo comunitario.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Un ensayo clínico del texto, ¿interviene principalmente sobre individuos o poblaciones enteras?",
+        "answer": "Sobre individuos.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué investiga la epidemiología sobre las necesidades de salud de una población?",
+        "answer": "Su frecuencia, distribución y determinantes.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué investiga el estudio de los sistemas de salud?",
+        "answer": "La respuesta social organizada frente a las condiciones de salud y enfermedad.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué la salud pública necesita ciencias sociales y biológicas?",
+        "answer": "Porque la salud poblacional reúne procesos de ambas dimensiones.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué dato permite a la epidemiología de campo orientar decisiones urgentes durante un brote?",
+        "answer": "Información recogida en el terreno junto con la vigilancia de los casos.",
+        "span": [
+          32,
+          37
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 57,
+    "topic": "proceso de investigacion",
+    "cards": [
+      {
+        "question": "Tienes una idea de investigación todavía vaga. ¿Qué paso ayuda a convertirla en un tema preciso?",
+        "answer": "Revisar antecedentes y analizar qué aspecto relevante falta estudiar.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿De dónde puede surgir una idea para investigar según el texto?",
+        "answer": "De la práctica, debates, publicaciones, noticias o vacíos del conocimiento, entre otras fuentes.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Antes de recolectar datos, ¿en qué momento debes definir el problema y la metodología?",
+        "answer": "En la planificación.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué tres preguntas ordenan la planificación del estudio?",
+        "answer": "Qué se investigará, cuál es su base teórica y cómo se investigará.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué documento deja explícita una parte del plan de investigación?",
+        "answer": "El protocolo.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Al construir la base teórica, ¿qué conviene revisar?",
+        "answer": "Conceptos, teorías, investigaciones previas y datos disponibles.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué debes elegir para obtener la información que responde tu pregunta?",
+        "answer": "Los métodos e instrumentos de recolección de datos.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Una encuesta necesita encuestadores entrenados. ¿En qué parte del diseño se prevé esto?",
+        "answer": "En los procedimientos de recolección de información.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Para qué se prepara un plan de tabulación y análisis antes del trabajo de campo?",
+        "answer": "Para decidir cómo ordenar, presentar e interpretar los datos que se obtengan.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué actividades integran la ejecución del estudio?",
+        "answer": "Recolectar, procesar, analizar e interpretar los datos, y elaborar conclusiones y recomendaciones.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Después de reunir los datos, ¿qué pasos ayudan a presentarlos con claridad?",
+        "answer": "Ordenarlos, clasificarlos y tabularlos.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿En qué deben basarse las conclusiones y recomendaciones?",
+        "answer": "En los resultados obtenidos e interpretados, no en suposiciones ajenas al estudio.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Para qué se comunica el informe final?",
+        "answer": "Para aportar conocimiento o ayudar a resolver el problema que motivó la investigación.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "En una investigación cualitativa, ¿las preguntas siempre quedan fijas desde el inicio?",
+        "answer": "No. Pueden precisarse o cambiar mientras se conoce el fenómeno.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué el proceso de investigación no debe verse como una lista rígida de pasos?",
+        "answer": "Porque sus momentos se relacionan y pueden revisarse conforme avanza el estudio.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Si la comunidad ayuda a identificar qué problema investigar, ¿qué enfoque se parece al descrito en el texto?",
+        "answer": "La investigación cualitativa participativa o investigación-acción.",
+        "span": [
+          40,
+          47
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 58,
+    "topic": "problema y objetivos de investigacion",
+    "cards": [
+      {
+        "question": "¿Por qué elegir un tema amplio todavía no equivale a tener un problema de investigación?",
+        "answer": "Porque falta concretar qué se estudiará, en quiénes, dónde y con qué alcance.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Si tu pregunta admite varias interpretaciones, ¿qué debes mejorar primero?",
+        "answer": "La claridad y precisión de la delimitación del problema.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué debe permitir comprobar un problema de investigación cuantitativa?",
+        "answer": "Sus variables o características mediante evidencia empírica.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué conviene indicar el lugar y el periodo de un estudio?",
+        "answer": "Para fijar sus dimensiones espacial y temporal.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Un proyecto dice 'estudiaré la salud de todos'. ¿Qué dato esencial de la pregunta falta definir?",
+        "answer": "La población concreta que será investigada.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué se revisan tiempo, personal, dinero y equipo antes de elegir un problema?",
+        "answer": "Para comprobar que el proyecto sea viable.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué condición ética debe considerarse al estudiar personas?",
+        "answer": "Su aceptación de la investigación y sus procedimientos mediante consentimiento informado.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué relación debe existir entre el método elegido y el problema?",
+        "answer": "El método debe ser capaz de aportar datos para responder ese problema.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué la urgencia de los resultados influye en el diseño del estudio?",
+        "answer": "Porque su duración debe permitir que los hallazgos sirvan para tomar decisiones a tiempo.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué se entiende por delimitar un problema?",
+        "answer": "Concentrar el estudio en una parte clara y abordable de un tema más amplio.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué riesgo existe si delimitas el problema hasta volverlo insignificante?",
+        "answer": "Perder su relación con el fenómeno general y su relevancia.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Para qué sirven los objetivos durante la investigación?",
+        "answer": "Para guiar sus fases y aclarar lo que el estudio pretende lograr.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué debe indicar un objetivo específico?",
+        "answer": "Una actividad o resultado concreto relacionado con el problema principal.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Por qué una pregunta de investigación puede ayudar más que una frase vaga?",
+        "answer": "Porque orienta de forma directa qué datos habrá que buscar para responderla.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "Si un estudio no explica por qué importa, ¿qué sección necesita fortalecer?",
+        "answer": "La justificación.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      },
+      {
+        "question": "¿Qué debe explicar la justificación de un estudio?",
+        "answer": "Por qué conviene realizarlo, a quién puede beneficiar y para qué servirán sus resultados.",
+        "span": [
+          49,
+          59
+        ],
+        "file": "flashcards_ampliacion_lote2_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 59,
+    "topic": "marco teorico e hipotesis",
+    "cards": [
+      {
+        "question": "¿Para qué sirve la fundamentación teórica después de formular un problema?",
+        "answer": "Para situarlo en el conocimiento existente y orientar su explicación y análisis.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué dos tareas centrales forman la construcción de un marco teórico?",
+        "answer": "Revisar la literatura y adoptar una teoría o desarrollar una perspectiva teórica.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Al buscar antecedentes, ¿debes reunir cualquier lectura o las relacionadas con tu problema?",
+        "answer": "Las que se relacionen con el problema y los objetivos del estudio.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué ayuda a organizar un marco conceptual?",
+        "answer": "Definir y relacionar los conceptos básicos del objeto de estudio.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué distingue a un marco teórico de un marco conceptual más simple?",
+        "answer": "Integra proposiciones y relaciones teóricas de forma más estructurada para explicar el fenómeno.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Puede una investigación carecer por completo de marco de referencia?",
+        "answer": "No. Puede quedar implícito, pero siempre parte de alguna perspectiva conceptual.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Para qué puede servir una revisión bibliográfica además de citar autores?",
+        "answer": "Para reconocer conceptos, antecedentes y relaciones que fundamenten el estudio.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué hace una hipótesis con la relación entre variables?",
+        "answer": "Propone una explicación o relación posible que se pondrá a prueba.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Una hipótesis es ya un hecho demostrado?",
+        "answer": "No. Es una propuesta probable que debe contrastarse con la evidencia.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué aporta una hipótesis bien formulada al trabajo de campo?",
+        "answer": "Ayuda a enfocar qué información hay que recoger y analizar.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "En un estudio cualitativo, ¿el marco teórico tiene que estar totalmente cerrado antes de empezar?",
+        "answer": "No. Puede construirse y ajustarse conforme avanza la investigación.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Por qué un concepto abstracto necesita operacionalizarse?",
+        "answer": "Para relacionarlo con manifestaciones observables o medibles.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué es una dimensión al operacionalizar una variable?",
+        "answer": "Un aspecto de la variable que permite examinarla y medirla con mayor precisión.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué papel cumple un indicador dentro de una dimensión?",
+        "answer": "Representar una condición observable o medible de esa dimensión.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si el estudio compara exposición y resultado, ¿qué variable se considera explicativa?",
+        "answer": "La independiente; el resultado se considera dependiente.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué conviene hacer después de identificar variables y sus relaciones?",
+        "answer": "Plantear la hipótesis y construir un esquema que muestre esas relaciones.",
+        "span": [
+          60,
+          72
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 60,
+    "topic": "variables y medicion",
+    "cards": [
+      {
+        "question": "En una investigación, ¿por qué la edad puede ser una variable?",
+        "answer": "Porque toma valores distintos entre personas o en diferentes momentos.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué variable se considera resultado cuando una hipótesis relaciona dos características?",
+        "answer": "La variable dependiente.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Cómo llamas a la variable que puede explicar un cambio en otra?",
+        "answer": "Variable independiente.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué es una variable interviniente?",
+        "answer": "Un elemento que puede influir indirectamente en la relación entre la independiente y la dependiente.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si comparas estudiar en grupo con la calificación final, ¿cuál es el resultado a explicar?",
+        "answer": "La calificación final.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si comparas estudiar en grupo con la calificación final, ¿cuál es la variable explicativa?",
+        "answer": "La forma de estudio: en grupo o individualmente.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué distingue a una variable cualitativa?",
+        "answer": "Clasifica en categorías o propiedades, en lugar de expresar una cantidad medida.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿La religión de una persona se registra como cantidad o categoría?",
+        "answer": "Como categoría; es una variable cualitativa.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Por qué el peso es una variable cuantitativa?",
+        "answer": "Porque su magnitud se expresa mediante una medida numérica.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué caracteriza a una variable cuantitativa continua?",
+        "answer": "Puede tomar valores intermedios dentro de un intervalo.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿La talla es continua o discreta?",
+        "answer": "Continua; puede medirse en metros, centímetros y subdivisiones menores.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué caracteriza a una variable cuantitativa discreta?",
+        "answer": "Se cuenta en valores separados, sin fracciones intermedias posibles para esa unidad.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Por qué el número de hijos se considera discreto?",
+        "answer": "Porque se cuentan hijos completos, no fracciones de un hijo.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿La temperatura medida en grados es un ejemplo de magnitud o categoría?",
+        "answer": "De magnitud numérica; es cuantitativa.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Puede una variable cambiar de valor en un mismo sujeto con el tiempo?",
+        "answer": "Sí. La definición admite variaciones entre sujetos o en diferentes momentos.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Para qué se especifican las variables en el marco teórico?",
+        "answer": "Para aclarar qué se estudiará y cómo se relacionan los elementos del problema.",
+        "span": [
+          72,
+          73
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 61,
+    "topic": "estadistica descriptiva",
+    "cards": [
+      {
+        "question": "¿Para qué se recogen, ordenan e interpretan datos en estadística?",
+        "answer": "Para responder preguntas y tomar decisiones fundamentadas.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Una tabla resume las edades de los encuestados sin generalizar. ¿Qué rama estadística estás usando?",
+        "answer": "Estadística descriptiva.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué necesita la estadística inferencial para hablar de una población que no estudió completa?",
+        "answer": "Una muestra seleccionada con técnicas adecuadas.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué es la unidad de análisis de un estudio?",
+        "answer": "El elemento concreto que se investiga: persona, grupo, objeto o acontecimiento.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si investigas hospitales, ¿debe quedar claro si la unidad de análisis es cada hospital o cada paciente?",
+        "answer": "Sí. La unidad debe corresponder a la pregunta y evitar ambigüedades.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Cuándo se considera finita una población según el texto?",
+        "answer": "Cuando se conoce el número de elementos que la integran.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si estudias a todas las personas de la población, ¿cómo se llama ese estudio?",
+        "answer": "Un censo.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué diferencia hay entre un parámetro y un estadígrafo?",
+        "answer": "El parámetro describe a la población; el estadígrafo describe a la muestra.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Por qué una muestra debe representar bien a la población?",
+        "answer": "Para que sus resultados permitan estimar con sentido las características del conjunto.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Que una categoría tenga código 1 o 2 la vuelve cuantitativa?",
+        "answer": "No. Un número puede ser solo una etiqueta para una variable cualitativa.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué tipo de variable es contar cuántos artículos se venden?",
+        "answer": "Cuantitativa discreta.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué escala distingue categorías sin establecer un orden?",
+        "answer": "La nominal.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si clasificas salud como buena, regular y mala, ¿qué escala utilizas?",
+        "answer": "Ordinal, porque las categorías tienen un orden.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿La distancia entre dos niveles de una escala ordinal tiene que ser igual?",
+        "answer": "No. La escala ordena, pero no asegura distancias iguales.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué caracteriza a una escala de intervalo?",
+        "answer": "Sus distancias son comparables y el cero no significa ausencia de la característica.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Por qué una longitud medida en centímetros pertenece a escala de razón?",
+        "answer": "Porque tiene cero absoluto y permite comparar proporciones, como el doble de longitud.",
+        "span": [
+          85,
+          94
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 62,
+    "topic": "muestreo",
+    "cards": [
+      {
+        "question": "¿Para qué tomar una muestra en vez de estudiar a toda la población?",
+        "answer": "Para obtener información usando menos tiempo, personal y recursos.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "En el muestreo, ¿cómo llamas a la parte de la población que seleccionas para estudiar?",
+        "answer": "La muestra.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Asignas un número a cada persona y eliges números al azar. ¿Qué método aplicas?",
+        "answer": "Muestreo aleatorio simple.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Si la población tiene N integrantes y deseas n, ¿cómo obtienes el intervalo k del muestreo sistemático?",
+        "answer": "Dividiendo N entre n.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Por qué el punto de partida del muestreo sistemático debe elegirse al azar?",
+        "answer": "Para que la selección no dependa de una preferencia del investigador.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "La población es heterogénea y quieres representar cada grupo. ¿Qué método conviene considerar?",
+        "answer": "El muestreo estratificado.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Después de definir los estratos, ¿cómo se eligen los integrantes dentro de cada uno?",
+        "answer": "Con una selección aleatoria, como el muestreo aleatorio simple.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Qué significa afijación proporcional?",
+        "answer": "Dar a cada estrato una parte de la muestra proporcional a su tamaño poblacional.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "El 70 % de estudiantes pertenece a colegios públicos. En una muestra proporcional de 600, ¿cuántos corresponden a ese estrato?",
+        "answer": "420 estudiantes.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Si eliges municipios completos al azar para estudiar a quienes viven en ellos, ¿qué método empleas?",
+        "answer": "Muestreo por conglomerados.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Primero eliges comunas, luego colegios y después alumnos. ¿Cómo se llama ese diseño?",
+        "answer": "Muestreo polietápico.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Varias personas elegidas no contestan la encuesta. ¿Qué problema debes reconocer?",
+        "answer": "Sesgo o error de no respuesta.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Puede desaparecer por completo el error de muestreo cuando estudias solo una parte de la población?",
+        "answer": "No. Puede controlarse con un diseño adecuado, pero existe variación entre muestras.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Fijas cupos por edad y entrevistarás a los primeros que cumplan cada cupo. ¿Qué método es?",
+        "answer": "Muestreo no probabilístico por cuotas.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Eliges deliberadamente participantes típicos que pueden informar sobre el problema. ¿Qué método es?",
+        "answer": "Muestreo intencional.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Por qué debes tener cuidado al generalizar resultados de una muestra no probabilística?",
+        "answer": "Porque los integrantes no tuvieron una probabilidad comparable de ser elegidos.",
+        "span": [
+          97,
+          105
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 63,
+    "topic": "frecuencias y graficos",
+    "cards": [
+      {
+        "question": "¿Qué haces primero para convertir muchas respuestas sueltas en una tabla?",
+        "answer": "Las ordenas por categorías o valores y cuentas cuántas hay de cada uno.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "En esa misma encuesta, 10 de 40 eligen A. ¿Cuál es su frecuencia relativa?",
+        "answer": "10/40 = 0,25, es decir, 25 %.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Cuánto deben sumar las frecuencias absolutas de todas las categorías?",
+        "answer": "El total de observaciones.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Qué indica que una tabla de frecuencias tenga un total distinto al número de encuestados?",
+        "answer": "Que falta alguna observación o existe un error de conteo.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Por qué la frecuencia acumulada final debe coincidir con el total de datos?",
+        "answer": "Porque al llegar a la última categoría ya se incluyeron todas las observaciones.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Si las categorías tienen un orden natural, ¿qué permite leer la frecuencia acumulada?",
+        "answer": "Cuántos casos se encuentran hasta cierto valor o intervalo.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Si el valor mayor es 80 y el menor 50, ¿cuál es el rango?",
+        "answer": "El rango es 30.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Qué es la marca de clase de un intervalo?",
+        "answer": "Su punto medio.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Para el intervalo de 50 a 60, ¿cuál es la marca de clase?",
+        "answer": "La marca de clase es 55.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "En un histograma, ¿qué representa la altura de cada barra?",
+        "answer": "La frecuencia correspondiente a ese intervalo.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Si quieres comparar respuestas como 'sí', 'no' y 'no sabe', ¿qué gráfico resulta útil?",
+        "answer": "Un diagrama de barras.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Qué diferencia visual ayuda a distinguir un diagrama de barras de un histograma?",
+        "answer": "Las barras de categorías suelen separarse; las del histograma representan intervalos contiguos.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Si una categoría representa 25 % del total, ¿cuántos grados ocupa en un gráfico circular?",
+        "answer": "90 grados, porque es una cuarta parte de 360.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Cómo se construye un polígono de frecuencias?",
+        "answer": "Uniendo los puntos que representan las frecuencias en las marcas de clase.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Si necesitas mostrar cómo se acumulan los casos hasta cada intervalo, ¿qué gráfica eliges?",
+        "answer": "Una ojiva o curva de frecuencia acumulada.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Para qué sirve una gráfica además de adornar una tabla?",
+        "answer": "Para reconocer y comunicar el comportamiento o la distribución de los datos.",
+        "span": [
+          109,
+          138
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 64,
+    "topic": "medidas de tendencia central",
+    "cards": [
+      {
+        "question": "¿Qué intenta resumir una medida de tendencia central?",
+        "answer": "El valor alrededor del cual se reúnen los datos de un conjunto.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Los tiempos son 2, 4, 3 y 5 horas. ¿Cuál es la media?",
+        "answer": "3,5 horas.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Qué sucede con la media si añades un valor extremadamente alto?",
+        "answer": "Puede desplazarse hacia arriba, aunque los demás datos no cambien.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Qué valor representa a cada intervalo cuando estimas la media de datos agrupados?",
+        "answer": "La marca de clase o punto medio del intervalo.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Antes de hallar la mediana, ¿qué debes hacer con los datos?",
+        "answer": "Ordenarlos de menor a mayor.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Si tienes un número par de observaciones, ¿cómo hallas la mediana?",
+        "answer": "Promedias los dos valores centrales de la lista ordenada.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "En 5, 7, 9 y 11, ¿cuál es la mediana?",
+        "answer": "8, porque los valores centrales son 7 y 9.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "En una tabla por intervalos, ¿qué columna ayuda a localizar el intervalo de la mediana?",
+        "answer": "La frecuencia absoluta acumulada.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Cuándo suele describir mejor el centro la mediana que la media?",
+        "answer": "Cuando hay valores extremos que alteran mucho el promedio.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Puede calcularse la moda de una categoría como color preferido?",
+        "answer": "Sí. Es la categoría que aparece más veces.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "En rojo, azul, azul y verde, ¿cuál es la moda?",
+        "answer": "Azul.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Si dos valores comparten la frecuencia máxima, ¿qué ocurre con la moda?",
+        "answer": "Hay dos modas; la distribución es bimodal.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Qué significa que un conjunto sea amodal?",
+        "answer": "Que no se identifica un valor con mayor frecuencia que los demás.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Si todas las categorías tienen la misma frecuencia, ¿conviene decir que una sola está de moda?",
+        "answer": "No. Ninguna destaca por encima de las demás.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "¿Cuál de las tres medidas centrales necesita datos numéricos para calcularse?",
+        "answer": "La media aritmética.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      },
+      {
+        "question": "Si el promedio de hijos es 2, ¿significa que todas las personas tienen dos hijos?",
+        "answer": "No. Resume al grupo; los valores individuales pueden ser distintos.",
+        "span": [
+          147,
+          158
+        ],
+        "file": "flashcards_ampliacion_lote3_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 65,
+    "topic": "medidas de posicion",
+    "cards": [
+      {
+        "question": "¿Qué otro nombre reciben las medidas de posición?",
+        "answer": "Cuantiles.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué medida de posición deja aproximadamente al 25 % de datos por debajo?",
+        "answer": "El primer cuartil, Q1.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué cuartil coincide con la mediana?",
+        "answer": "El segundo cuartil, Q2.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si Q3 es 80 puntos, ¿cómo interpretas ese valor?",
+        "answer": "Aproximadamente el 75 % de observaciones está en 80 puntos o menos.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Cuántos puntos de corte separan los datos en cuatro partes?",
+        "answer": "Tres cuartiles: Q1, Q2 y Q3.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué porcentaje representa cada una de las cuatro partes separadas por cuartiles?",
+        "answer": "25 % de los datos.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Cuántos deciles sirven de puntos de corte?",
+        "answer": "Nueve, del D1 al D9.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si D3 es 40, ¿qué proporción queda aproximadamente en 40 o menos?",
+        "answer": "El 30 % de las observaciones.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿A qué percentil equivale el primer decil?",
+        "answer": "Al percentil 10, P10.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿A qué percentil equivale el tercer cuartil?",
+        "answer": "Al percentil 75, P75.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué medida es equivalente a Q2, D5 y P50?",
+        "answer": "La mediana.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Cuántos percentiles marcan los cortes entre cien partes de una distribución?",
+        "answer": "Noventa y nueve, de P1 a P99.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si un alumno está en P90, ¿significa que respondió correctamente el 90 % de preguntas?",
+        "answer": "No necesariamente. Significa que su valor supera aproximadamente al 90 % de la distribución de referencia.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Por qué los cuantiles requieren ordenar los datos?",
+        "answer": "Porque dependen de la posición que ocupa cada observación.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Con datos agrupados, ¿qué columna ayuda a localizar la clase de un cuartil?",
+        "answer": "La frecuencia acumulada.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué diferencia principal hay entre cuartiles, deciles y percentiles?",
+        "answer": "Dividen los datos ordenados en cuatro, diez y cien partes, respectivamente.",
+        "span": [
+          161,
+          168
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 66,
+    "topic": "dispersion y forma de los datos",
+    "cards": [
+      {
+        "question": "¿Por qué conocer solo la media puede ocultar diferencias entre dos grupos?",
+        "answer": "Porque los grupos pueden tener el mismo centro y distinta variabilidad.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué limitación tiene el rango como medida de dispersión?",
+        "answer": "Solo usa los dos valores extremos e ignora cómo se distribuyen los demás.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué parte del conjunto describe el rango intercuartil?",
+        "answer": "La dispersión de la mitad central de los datos.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Por qué el rango intercuartil resiste mejor los valores extremos que el rango total?",
+        "answer": "Porque se apoya en Q1 y Q3, no en el mínimo y el máximo.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué compara la varianza de cada dato con la media?",
+        "answer": "La diferencia entre cada dato y la media, elevada al cuadrado.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Por qué se elevan al cuadrado las diferencias respecto de la media?",
+        "answer": "Para evitar que las desviaciones positivas y negativas se cancelen.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Cómo se obtiene la desviación estándar a partir de la varianza?",
+        "answer": "Tomando su raíz cuadrada positiva.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿En qué unidades se expresa la desviación estándar?",
+        "answer": "En las mismas unidades que la variable original.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué significa una desviación estándar mayor, si comparas datos de la misma clase?",
+        "answer": "Mayor dispersión alrededor de la media.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué relaciona el coeficiente de variación?",
+        "answer": "La desviación estándar con la media, expresada como porcentaje.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si la media es mayor que la mediana, ¿hacia qué lado apunta el sesgo descrito en el texto?",
+        "answer": "Hacia la derecha; es sesgo positivo.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si la media es menor que la mediana, ¿qué signo tiene la asimetría?",
+        "answer": "Negativo, o sesgo hacia la izquierda.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué indica un coeficiente de asimetría cercano a cero?",
+        "answer": "Una distribución aproximadamente simétrica.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué describe la curtosis?",
+        "answer": "El grado de concentración de los datos alrededor de los valores centrales.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Una distribución más aplanada, ¿cómo se denomina?",
+        "answer": "Platicúrtica.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué significa mesocúrtica en la clasificación del material?",
+        "answer": "Una concentración central moderada, semejante a la distribución de referencia.",
+        "span": [
+          171,
+          188
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      }
+    ]
+  },
+  {
+    "base_index": 67,
+    "topic": "analisis de datos en excel y spss",
+    "cards": [
+      {
+        "question": "¿Qué complemento de Excel menciona el material para abrir 'Análisis de datos'?",
+        "answer": "Herramientas para análisis.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "En Excel, ¿dónde compruebas si aparece la opción 'Análisis de datos'?",
+        "answer": "En la pestaña Datos.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Al indicar un rango de entrada en Excel, ¿qué debes seleccionar?",
+        "answer": "La columna de datos que vas a analizar y, si corresponde, su título.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Cuándo marcas 'Rótulos en la primera fila' en Excel?",
+        "answer": "Cuando el rango elegido incluye el nombre de la variable en su primera fila.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué opción de Excel solicita media, mediana y otras medidas en una sola salida?",
+        "answer": "Resumen de estadísticas dentro de Estadística descriptiva.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Puede la salida de Excel sustituir la interpretación del investigador?",
+        "answer": "No. Hay que explicar qué significan las medidas para el problema estudiado.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "En SPSS, ¿dónde registras las respuestas de cada participante?",
+        "answer": "En Vista de datos.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Si codificas 'sí' como 1 y 'no' como 2, ¿qué debes definir para leer la salida?",
+        "answer": "Etiquetas de valor para cada código.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Para qué se usa una etiqueta de variable en SPSS?",
+        "answer": "Para mostrar una descripción comprensible de la variable en los resultados.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Por qué debe señalarse un código como dato perdido en vez de tratarlo como respuesta real?",
+        "answer": "Para que no distorsione frecuencias y cálculos estadísticos.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué menú de SPSS conduce a los procedimientos estadísticos?",
+        "answer": "Analizar.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "Para obtener tablas por categoría en SPSS, ¿qué opción descriptiva utiliza el capítulo?",
+        "answer": "Frecuencias.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué información muestra una tabla de frecuencias generada por SPSS?",
+        "answer": "Conteos, porcentajes y, cuando corresponde, porcentajes acumulados.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué debes revisar antes de elegir un gráfico en Excel o SPSS?",
+        "answer": "El tipo de variable y la pregunta que quieres responder.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué tipo de variables puede resumirse con media y desviación estándar en SPSS?",
+        "answer": "Variables cuantitativas, cuando esas medidas son apropiadas para el análisis.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      },
+      {
+        "question": "¿Qué debes hacer si la tabla muestra una cifra extraña que no coincide con la codificación prevista?",
+        "answer": "Revisar los datos y la definición de la variable antes de interpretar el resultado.",
+        "span": [
+          191,
+          225
+        ],
+        "file": "flashcards_ampliacion_lote4_2026.json"
+      }
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "flashcard_workspace_reviewed_publication_pending",
+  "status": "all_short_official_flashcard_decks_reviewed_local_qa_passed_publication_pending",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -1144,7 +1144,8 @@
         "Subtopic filtering returns the right selection; browse-all refuses ratings and preserves local SRS storage.",
         "Desktop 1440/mobile 390 visual QA: logos, readable answers, reachable sources and no horizontal overflow.",
         "Main flashcard/bank renderers regression passes for 162 supplemental cards and 66 bank questions.",
-        "Original IDs 800–803 preserved in revision test; no live student grade submitted."
+        "Original IDs 800–803 preserved in revision test; no live student grade submitted.",
+        "Session controls clear their private card cache on login screen and cannot restart another account’s cards after clearing."
       ],
       "files": [
         "api/_mindmaps/curated/build_neural_flashcards.py.source",
@@ -1162,11 +1163,96 @@
         "No new generated illustration in this flashcard-only batch; original branding and code-based layout reused."
       ],
       "deployment": {
+        "commit": "5d58eb9",
+        "status": "Vercel success",
+        "public_campus": "200; flashcard-mode and flashcard-workspace.js v1 present",
+        "workspace_script": 200,
+        "anonymous_neural_content": 401,
+        "raw_authoring": 404,
+        "local_actual_controller": "52 total, future card remains visible in browse, subtopic filters, no rating writes, preserved IDs and responsive UI passed.",
+        "admin_live": "Unverified after publication: Chrome connection repeatedly timed out while opening/binding the verification tab; no token extraction or live grade submission."
+      }
+    },
+    {
+      "id": "flashcard-all-short-decks-2026-10-15",
+      "scope": "All 65 short decks in the 68-topic source flashcard inventory across Morfofunción, Biología Celular and Educación para la Salud. Existing Blood/Senses and 52-card neural libraries retained. The 74 map chapters are organized differently; this does not certify complete chapter coverage.",
+      "new_original_flashcards": 692,
+      "selected_prepared_cards_connected": 464,
+      "original_card_fallbacks": 260,
+      "protected_supplement_cards": 1416,
+      "minimum_cards_per_expanded_deck": 20,
+      "subjects": {
+        "MORFOFUNCION": 26,
+        "BIOLOGIA CELULAR": 18,
+        "SALUD PUBLICA": 21
+      },
+      "quality": {
+        "review_kind": "Automated content/source review and second critical pass; not teacher approval",
+        "teacher_approved": false,
+        "corrections": 42,
+        "examples": [
+          "Distinguish resolution from magnification and source context.",
+          "Fix finite population definition; known size is not its definition.",
+          "Clarify equal-width histograms versus density with unequal widths.",
+          "Correct kurtosis to tail/extreme-value behavior; do not infer normality from low skewness.",
+          "Distinguish APS strategy from first level services.",
+          "Avoid universal necrosis-is-passive, innate-immunity-recognizes-nothing and all-membrane-proteins-use-RER statements.",
+          "Fix education-source range to PDF 16–17, and include health-program material through PDF 30.",
+          "Use chapter PDF ranges explicitly; do not present them as individually verified pinpoint pages.",
+          "New explanations distinguish mechanisms, comparisons, application and common errors; no generic question generator."
+        ],
+        "sources": [
+          {
+            "book": "Saladin, Anatomía y fisiología",
+            "pages": 1251,
+            "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+          },
+          {
+            "book": "Calvo, Biología celular biomédica",
+            "pages": 829,
+            "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b"
+          },
+          {
+            "book": "Educación en Salud e Investigación, texto suministrado CB24–25",
+            "pages": 232,
+            "sha256": "e1f1ec1d33ea6b3a9c0001cd524904965bcb34ece6537d43315b42e403a4887a"
+          }
+        ],
+        "supplementary_sources": [
+          "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm",
+          "https://www.who.int/teams/health-promotion/enhanced-wellbeing/first-global-conference",
+          "https://www.minsalud.gob.bo/component/jdownloads/?Itemid=689&catid=26&id=379%3Aguia-de-procedimento-de-la-gestion-participativa-local-en-salud&task=download.send"
+        ],
+        "private_retrieval_evidence": "tmp/flashcard-all/source-evidence.json; 1416 retrieval records. Retrieval supports reading and does not independently prove every assertion. Full chapter approval remains pending.",
+        "visuals": "Original Ben Carson logo and existing card design reused; no new generated raster image requested or claimed in this flashcard-text batch."
+      },
+      "implementation": [
+        "One additional paid resource through existing API, never a public JSON asset.",
+        "Subject/topic-aware identities for the new multi-subject pack; existing published supplement identities remain unchanged.",
+        "Existing database card IDs retained while corrections update explanations/prompts in memory; no student record writes or imports.",
+        "Both count and subtopic controls use actual merged data. Existing prepared files are not blindly exposed in full.",
+        "Pending card-flip callbacks are bound to the card and account; stale callback cannot reveal a previous account answer or read an empty deck.",
+        "Mobile selectors stack vertically to keep their labels readable."
+      ],
+      "tests": [
+        "33 tests pass: content, existing IDs, SRS schedules, session isolation, private API and independent assessments.",
+        "Actual library and study controllers: all 68 source-topic decks open, all at least 20 cards, correct subject and nonempty subtopic selections.",
+        "Longest answer in every deck checked at 390 and 1440 widths; no horizontal overflow and source remains reachable by scrolling.",
+        "Existing 52-card neural session still shows 51 due versus 52 total with one future card; browse does not write ratings.",
+        "Main flashcard/bank renderer regression: 1578 supplemental/fallback cards and 66 existing bank questions.",
+        "Screenshots from three subject areas saved in output/flashcard-workspace; mobile Biology and desktop Health visually inspected."
+      ],
+      "limitations": [
+        "Live admin browser connection timed out; no direct post-change Supabase count or student-account end-to-end claim.",
+        "Counts are guaranteed by source inventory and tested loader, not a direct production database census.",
+        "Full chapter objective review, map/summary improvements and teacher approval are separate ongoing work."
+      ],
+      "deployment": {
         "status": "pending"
       }
     }
   ],
-  "next_action": "Continue improving flashcard coverage across short decks using quality/flashcard-audit.json, expanding source-based mechanisms and application rather than counts alone. Keep original student IDs/dates, paid gating and Blood/Senses objectives; next verify remaining neural chapter objectives and low-count official topics.",
+  "next_action": "Confirm publication of the reviewed all-short-deck flashcard expansion. Then continue objective-level depth review beyond the first 20–24 cards per newly expanded topic, keeping paid access, existing SRS identities and student records intact. Verify any additional legacy/renamed production decks once the authenticated browser reconnects; do not equate the 68 flashcard source topics with the 74 map chapters.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

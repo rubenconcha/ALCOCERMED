@@ -723,8 +723,10 @@ function renderCard() {
         return;
     }
 
-    // Soportar columnas en MAYÚSCULAS o minúsculas
-    qText.innerText = campo(deck[currentIndex], 'pregunta');
+    // Keep a pending flip tied to this card and this account.
+    const renderingCard = deck[currentIndex];
+    const renderingOwner = typeof currentUser === 'undefined' ? null : currentUser?.id;
+    qText.innerText = campo(renderingCard, 'pregunta');
     aText.innerText = '';
 
     if (card.classList.contains('flipped')) {
@@ -733,11 +735,12 @@ function renderCard() {
         requestAnimationFrame(function () {
             requestAnimationFrame(function () {
                 card.style.transition = '';
-                aText.innerText = campo(deck[currentIndex], 'respuesta');
+                if (deck[currentIndex] !== renderingCard || (typeof currentUser === 'undefined' ? null : currentUser?.id) !== renderingOwner) return;
+                aText.innerText = campo(renderingCard, 'respuesta');
             });
         });
     } else {
-        aText.innerText = campo(deck[currentIndex], 'respuesta');
+        aText.innerText = campo(renderingCard, 'respuesta');
     }
 
     ankiBtns.classList.add('hidden');

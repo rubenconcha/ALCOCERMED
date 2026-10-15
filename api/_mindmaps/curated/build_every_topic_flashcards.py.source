@@ -1,0 +1,115 @@
+"""Build the protected supplement. Never updates/deletes student database rows."""
+from pathlib import Path
+import json, re, unicodedata, hashlib
+
+ROOT = Path(__file__).resolve().parents[3]
+HERE = Path(__file__).resolve().parent
+ID = 'flashcards_official_2026'
+BASE_FILES = ['flashcards_morfo_2026', 'flashcards_oficiales_2026', 'flashcards_salud_investigacion_2026']
+BOOKS = {'morfo': 'Saladin, Anatomía y fisiología', 'biologia': 'Calvo, Biología celular biomédica', 'salud': 'Educación en Salud e Investigación, texto suministrado CB24–25'}
+base = []
+for name in BASE_FILES:
+    base.extend(json.loads((ROOT/'content'/f'{name}.json').read_text(encoding='utf-8'))['groups'])
+norm = lambda s: ''.join(c for c in unicodedata.normalize('NFD',s.lower()) if not unicodedata.combining(c)).strip()
+new = {}
+for file in sorted(HERE.glob('flashcards_every_topic*.tsv.source')):
+    index = None
+    for line in file.read_text(encoding='utf-8').splitlines():
+        if not line.strip() or line.startswith('#'): continue
+        if line.startswith('@'):
+            index=int(line[1:]); continue
+        subtopic, kind, question, answer = line.split('|')
+        assert index is not None and question.endswith('?') and len(answer.split()) >= 18, (file, index,question)
+        new.setdefault(index, []).append({'subtopic': subtopic, 'type':kind, 'question':question,'answer':answer,'origin':'new_synthesis'})
+
+selected = json.loads((HERE/'flashcards_selected_expansions.json.source').read_text(encoding='utf-8'))
+selected = {g['base_index']:g['cards'] for g in selected}
+# Second-pass corrections to old prepared material. Keys address the frozen selection.
+corrections = {
+ (18,1): {'answer':'El lado derecho impulsa sangre hacia el circuito pulmonar. El ventrículo derecho la eyecta por la válvula pulmonar; después de oxigenarse, regresa a la aurícula izquierda por venas pulmonares.'},
+ (18,7): {'answer':'Es el ritmo iniciado por el nódulo sinoauricular y conducido por las vías habituales. Identifica el origen de la activación, pero no demuestra por sí solo fuerza de contracción ni ausencia de otras alteraciones.'},
+ (21,1): {'question':'¿Qué separa la cavidad nasal de la boca y cómo se protege la nasofaringe al deglutir?', 'answer':'El paladar separa ambas cavidades. Durante la deglución se eleva el paladar blando y ayuda a cerrar el paso hacia la nasofaringe; la coordinación distingue respiración, masticación y deglución.'},
+ (21,9): {'answer':'Se aproxima como (volumen corriente menos espacio muerto) multiplicado por frecuencia respiratoria. La resta evita contar como intercambio alveolar todo el aire que solo ventiló vías conductoras.'},
+ (21,14): {'answer':'Es disponibilidad o utilización insuficiente de oxígeno en los tejidos. Puede relacionarse con oxigenación, transporte, perfusión o uso celular; no equivale únicamente a una saturación arterial baja.'},
+ (24,0): {'question':'¿Qué aporta la masticación a la digestión de un alimento?', 'answer':'Fragmenta y mezcla el alimento, aumentando superficie de contacto para secreciones y enzimas. La digestión mecánica y la química pueden solaparse en la boca; no deben presentarse como etapas siempre excluyentes.'},
+ (29,2): {'answer':'Contiene información para producir ARN funcionales y, mediante muchos de ellos, proteínas. También incluye regiones reguladoras; reducir su función a codificar proteínas omite productos de ARN y control de expresión.'},
+ (29,13): {'question':'¿Por qué reconocer CD4 no describe por completo la entrada del VIH en una célula?', 'answer':'CD4 participa en el reconocimiento, pero también se requieren correceptores y condiciones apropiadas. Linfocitos T colaboradores y otras células pueden ser dianas; portar una sola molécula no resume todo el mecanismo de entrada.'},
+ (35,4): {'answer':'Puede disminuir interacciones electrostáticas de histonas con ADN y favorecer reclutamiento de proteínas reguladoras. Suele asociarse con accesibilidad, pero el efecto sobre un gen depende del sitio y del contexto.'},
+ (35,5): {'question':'¿En células con dos cromosomas X se inactiva siempre el X del mismo progenitor?', 'answer':'Habitualmente la elección inicial puede ser paterna o materna y se conserva en descendientes celulares. Puede haber sesgos y genes que escapan a inactivación; no es un apagado idéntico de todos los genes del X.'},
+ (36,0): {'question':'¿Por qué distintos tipos de células somáticas pueden producir proteínas diferentes aunque compartan gran parte del genoma?', 'answer':'Regulan de manera diferente qué genes se expresan, cómo se procesa el ARN y cómo se sintetizan y degradan proteínas. Compartir información no implica utilizarla toda simultáneamente; existen también excepciones celulares y variaciones genómicas.'},
+ (42,14): {'answer':'Los telómeros, junto con proteínas asociadas, organizan y protegen los extremos cromosómicos. No eliminan por sí solos el problema de replicación terminal; su mantenimiento depende también de mecanismos celulares específicos.'},
+ (49,13): {'answer':'Reducir contaminación y asegurar calidad del agua disminuye exposiciones que favorecen infecciones. El efecto depende de implementación, mantenimiento y otros factores; controlar un riesgo no elimina automáticamente todos los agentes posibles.'},
+ (49,14): {'question':'¿Qué cinco áreas funcionales resume este apartado del curso, sin sustituir marcos más amplios de funciones esenciales?', 'answer':'Vigilancia, protección, prevención, promoción y participación comunitaria. Es una síntesis didáctica del material; no debe confundirse con una lista universal y exhaustiva de todas las funciones esenciales de salud pública.'},
+ (50,15): {'question':'¿Por qué el nivel preventivo se asigna a un objetivo específico y no solo al nombre de una actividad?', 'answer':'Una actividad puede utilizarse con finalidades distintas según el momento y la población. Debe identificarse si busca evitar aparición, detectar temprano, limitar consecuencias o reducir daño por intervenciones, en lugar de memorizar una etiqueta aislada.'},
+ (53,11): {'question':'¿Por qué un diagnóstico comunitario debe incluir dimensiones sociales, culturales y ambientales?', 'answer':'Porque influyen en exposiciones, interpretación de necesidades y posibilidad de actuar. Son dimensiones importantes, pero no una lista excluyente: también deben relacionarse con condiciones biológicas, organización de servicios y otros determinantes pertinentes.'},
+ (55,0): {'answer':'El curso destaca universalidad y gratuidad como principios orientadores. Esto describe el marco didáctico, no garantiza que cualquier prestación esté disponible para toda persona sin condiciones; el acceso concreto requiere información vigente del sistema.'},
+ (56,3): {'question':'¿La epidemiología social está limitada a la escala regional o nacional?', 'answer':'No. Examina relaciones entre condiciones sociales y salud en distintos niveles, desde comunidades hasta poblaciones amplias. La escala depende de la pregunta y de los datos; no la define una frontera geográfica única.'},
+ (56,11): {'question':'¿Cuál es la unidad de asignación que distingue un ensayo individual de uno por conglomerados?', 'answer':'En el individual se asignan personas; en uno por conglomerados se asignan grupos como comunidades o centros. Un ensayo clínico puede usar distintos diseños; clínico no obliga a asignar siempre individuos.'},
+ (58,6): {'answer':'Se requieren condiciones éticas apropiadas, incluido consentimiento informado cuando corresponda, evaluación de riesgos y protección de datos. Obtener aceptación no reemplaza revisión ética ni justifica procedimientos desproporcionados.'},
+ (59,14): {'answer':'Se considera explicativa o independiente dentro de ese modelo, y el resultado dependiente. Es una función analítica: llamarla independiente no demuestra que sea causa ni que esté libre de confusión.'},
+ (61,5): {'answer':'Una población es finita si contiene un número limitado de elementos, aunque su tamaño exacto no se conozca. Conocer el tamaño facilita el diseño, pero no es lo que define matemáticamente su finitud.'},
+ (62,11): {'answer':'Puede introducir sesgo si quienes no responden difieren de quienes sí lo hacen en características relevantes. Una tasa de respuesta incompleta exige examinar ese riesgo; no demuestra por sí sola su dirección o magnitud.'},
+ (62,15): {'answer':'Porque las probabilidades de inclusión no son conocidas bajo un diseño probabilístico. Ni siquiera en todo muestreo probabilístico son iguales; lo importante es conocer el mecanismo y respetarlo al analizar.'},
+ (63,1): {'question':'En una encuesta de 40 personas, 10 eligen A. ¿Cuál es la frecuencia relativa de A?'},
+ (63,3): {'answer':'Si las categorías son exclusivas y cada persona aporta una respuesta válida, puede indicar faltantes o un error. En preguntas de respuesta múltiple, el total de selecciones puede superar el número de personas sin ser necesariamente incorrecto.'},
+ (63,9): {'question':'En un histograma con clases de igual anchura y eje de frecuencia absoluta, ¿qué representa la altura?', 'answer':'Representa el número de observaciones de la clase. Si las anchuras difieren o se representa densidad, la interpretación cambia: el área debe relacionarse con la frecuencia y no se comparan alturas sin revisar los ejes.'},
+ (64,1): {'question':'Los tiempos son 2, 4, 3 y 5 horas. ¿Cómo se calcula su media?', 'answer':'Se suman 14 horas y se divide entre cuatro observaciones: 3,5 horas. El cálculo resume el conjunto; no significa que alguien haya tardado exactamente ese tiempo.'},
+ (64,5): {'question':'En datos cuantitativos ordenados con número par de observaciones, ¿cómo se obtiene la mediana habitual?', 'answer':'Se promedian los dos valores centrales. La regla se aplica a valores numéricos adecuados; una escala ordinal permite identificar posiciones, pero no garantiza que promediar códigos produzca una magnitud interpretable.'},
+ (64,12): {'answer':'Se usa cuando no existe una moda única o un valor que destaque, según la convención empleada. Si varias categorías empatan en la frecuencia máxima, conviene describir el empate y aclarar el criterio en lugar de ocultarlo con una etiqueta.'},
+ (66,10): {'question':'En una distribución unimodal simple con cola derecha larga, ¿cómo suele relacionarse la media con la mediana?', 'answer':'La media suele desplazarse hacia la cola y quedar por encima de la mediana. Es una orientación útil bajo esas condiciones, no un criterio universal para cualquier distribución o mezcla de grupos.'},
+ (66,11): {'question':'En una distribución unimodal simple con cola izquierda larga, ¿qué relación media-mediana suele observarse?', 'answer':'La media suele quedar por debajo de la mediana por influencia de valores bajos extremos. La forma completa debe comprobarse; esa desigualdad aislada no prueba el signo de cualquier medida de asimetría.'},
+ (66,12): {'answer':'Sugiere poca asimetría según ese coeficiente, pero no prueba simetría exacta ni normalidad. Distintas formas, mezclas y tamaños de muestra pueden producir valores cercanos a cero.'},
+ (66,13): {'answer':'Se relaciona con el peso de las colas y la presencia de valores extremos respecto de una referencia. No debe reducirse a concentración central o altura del pico; distribuciones con picos distintos pueden compartir curtosis.'},
+ (66,14): {'question':'¿Qué significa platicúrtica al comparar exceso de curtosis con la normal?', 'answer':'Tiene exceso de curtosis menor que cero, es decir, curtosis inferior a la referencia normal. No basta mirar si el pico parece aplanado: la medida depende fuertemente de las colas.'},
+ (66,15): {'answer':'Tiene la misma curtosis que la referencia normal, o exceso de curtosis cero según esa convención. No demuestra que toda la distribución sea normal ni describe de manera suficiente su simetría.'},
+}
+tags = {
+18:['Anatomía y circuitos','Válvulas y conducción','Electricidad y ciclo','Bombeo y circulación'],21:['Vías conductoras','Árbol y defensa','Mecánica y ventilación','Gases y transporte'],24:['Pared y procesamiento','Estómago y secreción','Glándulas y conductos','Absorción y eliminación'],29:['Estudio celular','Diversidad celular','Bacterias y virus','Agentes infecciosos'],35:['Núcleo y cromatina','Cromatina y cromosomas','Genoma y replicación','Extremos y reparación'],36:['Expresión de genes','Regulación y ARN ribosómico','Procesamiento del ARN','Control postranscripcional'],42:['Crecimiento y división','Reguladores del ciclo','Control de progresión','Destino y estabilidad'],44:['Bases de transformación','Supervivencia tumoral','Microambiente y metabolismo','Invasión y evolución'],47:['Aprendizaje y habilidades','Cultura y comunicación','Participación y contexto','Promoción y comunidad'],48:['Modelos y determinantes','Entorno y políticas','Equidad y transiciones','Condiciones y derechos'],49:['Vigilancia y protección','Prevención y promoción','Comunidad y gobernanza','Agua y funciones públicas'],50:['Prevención primaria y secundaria','Detección y rehabilitación','Prevención cuaternaria','Objetivos preventivos'],51:['Capacidades y comunidad','Políticas y servicios','Entornos y educación','Determinantes y acción'],52:['Primer contacto y acceso','Continuidad e integralidad','Evaluación de servicios','Coordinación y seguimiento'],53:['Riesgos modificables','Riesgo y participación','Acción comunitaria','Atención integral'],54:['Agenda y medición','Equidad y cobertura','Acción intersectorial','Metas y dimensiones'],55:['SUS y SAFCI','Participación y políticas','Estado y comunidad','Programas y evaluación'],56:['Enfoque social y territorio','Distribución y diseños','Comparación e intervención','Sistemas y decisiones'],57:['Idea y planificación','Diseño y recolección','Análisis y conclusiones','Proceso y participación'],58:['Pregunta y delimitación','Viabilidad y método','Alcance y objetivos','Justificación'],59:['Teoría y antecedentes','Perspectiva e hipótesis','Hipótesis y dimensiones','Indicadores y variables'],60:['Variables y relaciones','Categorías y magnitudes','Continuas y discretas','Medición y cambio'],61:['Descripción y población','Unidad y estimación','Variables y escalas','Escalas de medición'],62:['Selección y azar','Estratos y proporciones','Etapas y no respuesta','Error y generalización'],63:['Conteos y proporciones','Acumulación e intervalos','Histogramas y barras','Gráficas y comunicación'],64:['Media y datos agrupados','Mediana y orden','Centro y moda','Interpretación del centro'],65:['Cuartiles','Particiones y deciles','Equivalencias y percentiles','Referencia e interpretación'],66:['Rango y dispersión','Varianza y desviación','Variabilidad y asimetría','Forma y curtosis'],67:['Excel y rangos','Interpretación y etiquetas','Datos perdidos y análisis','Salidas y verificación']}
+
+base_corrections={
+ (20,2): 'La defensa innata reconoce patrones compartidos mediante receptores definidos. Es rápida y no utiliza el mismo reconocimiento clonal de la adaptativa; inespecífica no significa que carezca de reconocimiento molecular.',
+ (34,1): 'La unión estrecha regula el paso paracelular y contribuye a separar dominios de membrana. Su permeabilidad varía entre epitelios; no debe entenderse como un sello absoluto frente a cualquier sustancia.',
+ (37,3): 'Muchas proteínas destinadas a secreción o al sistema de endomembranas se sintetizan en ribosomas que se asocian al retículo al reconocer señales de la cadena naciente. Otras proteínas de membranas, como muchas mitocondriales, utilizan rutas diferentes.',
+ (43,0): 'La mitosis distribuye cromosomas en dos núcleos con dotaciones equivalentes en condiciones normales. La formación de dos células requiere además citocinesis; ambos procesos suelen coordinarse, pero no son el mismo evento.',
+ (43,3): 'La necrosis accidental se asocia con daño intenso, pérdida de integridad y liberación de contenido; la apoptosis utiliza una ejecución regulada. También existen formas reguladas de muerte necrótica, por lo que no toda necrosis es un proceso exclusivamente pasivo.',
+ (52,0): 'Habitualmente el primer nivel asistencial ofrece el primer contacto. La atención primaria de salud es una estrategia más amplia que incluye participación y acción intersectorial; no es sinónimo exacto de un nivel organizativo.',
+}
+cards=[]; coverage=[]; revisions=[]
+for i,g in enumerate(base):
+    if i in [11,15,17]: continue # Existing neural and targeted blood/senses packs remain authoritative.
+    entries=[{'question':q,'answer':base_corrections.get((i,j),a),'subtopic':'Fundamentos','type':'Concepto','origin':'original_fallback'} for j,(q,a) in enumerate(g['cards'])]
+    entries.extend(new.get(i,[]))
+    for j,c in enumerate(selected.get(i,[])):
+        c={**c,**corrections.get((i,j),{}),'origin':'prepared_selection_reviewed','subtopic':tags[i][j//4]}
+        c['type']='Comparación' if 'diferenc' in c['question'] else 'Aplicación' if not c['question'].startswith('¿') else 'Concepto'
+        entries.append(c)
+    seen=set(); group=[]
+    for c in entries:
+        k=norm(c['question'])
+        if k in seen: continue
+        seen.add(k)
+        span=c.get('span',g['pages'])
+        card={k:v for k,v in c.items() if k not in ['span','file']}
+        if i==47: span=[16,17]
+        if i==55: span=[10,30]
+        card.update(materia=g['materia'],tema=g['tema'],source=BOOKS[g['source']],pdf_span=span,pdf_pages=span)
+        if i==66 and ('curtosis' in norm(card['question']) or 'curtica' in norm(card['question'])):
+            card['supplementary_reference']='NIST, Measures of Skewness and Kurtosis: https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm'
+        group.append(card)
+        if card['origin']=='original_fallback':
+            revisions.append({**card,'existing_only':True})
+        if card['origin']=='prepared_selection_reviewed':
+            for j,old in enumerate(selected.get(i,[])):
+                correction=corrections.get((i,j))
+                if correction and card['question']==correction.get('question',old['question']):
+                    revisions.append({**card,'match_question':old['question'],'existing_only':True})
+    assert len(group)>=20,(i,g['tema'],len(group))
+    cards.extend(group)
+    coverage.append({'subject':g['materia'],'topic':g['tema'],'available_protected_cards':len(group),'new_synthesis':sum(c['origin']=='new_synthesis' for c in group),'selected_existing':sum(c['origin']=='prepared_selection_reviewed' for c in group),'original_fallback':sum(c['origin']=='original_fallback' for c in group),'pdf_span':group[0]['pdf_span'],'source':BOOKS[g['source']],'review':'automated_second_pass; teacher pending'})
+
+payload={'id':ID,'title':'Ampliación de flashcards por temas','assets':{'flashcard_library':{'flashcards':cards,'revisions':revisions,'questions':[],'review':{'kind':'automated_source_and_content_review','teacher_approved':False,'scope':'65 short official database decks; existing blood/senses/neural supplements retained','source_pagination':'Chapter PDF ranges, explicitly not pinpoint pages for each assertion.','new_synthesis':sum(c['origin']=='new_synthesis' for c in cards),'selected_prepared':sum(c['origin']=='prepared_selection_reviewed' for c in cards),'second_pass_corrections':len(corrections)+len(base_corrections)}}}}
+(ROOT/'api/_mindmaps'/f'{ID}.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+audit=json.loads((ROOT/'quality/flashcard-audit.json').read_text(encoding='utf-8'))
+audit['all_short_decks_expansion']={'scope':'65 base decks expanded; blood, senses and nervous tissue retained from existing protected reviewed packs. Counts are minimum delivered by the code path, not a direct live DB audit.','teacher_approved':False,'topics':coverage,'protected_cards':len(cards),'reviewed_selection_corrections':len(corrections),'publication':'pending'}
+(ROOT/'quality/flashcard-audit.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'protected_cards':len(cards),'topics':len(coverage),'min':min(x['available_protected_cards'] for x in coverage),'new':sum(x['new_synthesis'] for x in coverage),'selected':sum(x['selected_existing'] for x in coverage)},ensure_ascii=False))

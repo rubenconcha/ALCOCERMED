@@ -19,5 +19,5 @@
 #study-area.fc-exploring .anki-rating-row{display:none!important}
 .library-topic-info{display:grid;gap:7px;min-width:0}.library-topic-count{font-size:12px;color:#64768a;font-weight:500;text-transform:none}
 .library-topic-count.is-small{color:#996a22}
-@media(max-width:600px){#study-area .flashcard-controls{padding:14px;border-radius:16px}#study-area .flashcard-control-row label{min-width:120px}#study-area #flashcard-shuffle{width:100%}#study-area .card.depth-card .text-inner,#study-area .card.depth-card .back-text{inset:68px 18px 18px}#study-area .card.depth-card .back-text p{font-size:16px;line-height:1.65}#study-area .card-counter{font-size:13px}}
+@media(max-width:600px){#study-area .flashcard-controls{padding:14px;border-radius:16px}#study-area .flashcard-control-row label{min-width:100%}#study-area #flashcard-shuffle{width:100%}#study-area .card.depth-card .text-inner,#study-area .card.depth-card .back-text{inset:68px 18px 18px}#study-area .card.depth-card .back-text p{font-size:16px;line-height:1.65}#study-area .card-counter{font-size:13px}}
 @media(prefers-reduced-motion:reduce){#study-area #flashcard-progress-fill{transition:none}}

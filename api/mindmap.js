@@ -3,6 +3,8 @@ const path = require('node:path');
 const catalog = require('../content/mindmaps-premium-catalog.json');
 const restrictedGeneral = require('../content/mindmaps-restricted-general.json');
 const ids = new Set(catalog.concat(restrictedGeneral).map(map => map.id));
+// Library data shares the paid authorization boundary; it is not a map preview.
+ids.add('flashcards_official_2026');
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
 
@@ -14,6 +16,7 @@ module.exports = async function handler(req, res) {
   const id = typeof req.query.id === 'string' ? req.query.id : '';
   const format = req.query.format || 'json';
   if (!ids.has(id) || !['json', 'image'].includes(format)) return res.status(404).end();
+  if (id === 'flashcards_official_2026' && format !== 'json') return res.status(404).end();
   const token = /^Bearer\s+(.+)$/i.exec(req.headers.authorization || '')?.[1];
   if (!token) return res.status(401).end();
   try {

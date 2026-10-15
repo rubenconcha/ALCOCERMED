@@ -86,6 +86,18 @@ test('unknown IDs, path traversal and invalid formats fail before authentication
  assert.ok(!fs.existsSync('content/mindmaps-premium-editorial.json'));
 });
 
+test('the all-subject flashcard library requires verified paid access and has no public image variant',async()=>{
+ const id='flashcards_official_2026';
+ assert.equal((await call({id})).code,401);
+ assert.equal((await call({id,token:'free',access:{ready:true,premium:false}})).code,403);
+ assert.equal((await call({id,format:'image'})).code,404);
+ for(const admin of [false,true]){
+  const r=await call({id,token:'verified',access:{ready:true,premium:true,admin}});
+  assert.equal(r.code,200);assert.equal(r.headers['Cache-Control'],'private, no-store');
+  const data=JSON.parse(r.body.toString());assert.equal(data.assets.flashcard_library.flashcards.length,1416);
+ }
+});
+
 test('every detailed map has distinct concepts, expanded prose and recorded source references',()=>{
  for(const map of catalog){const data=JSON.parse(fs.readFileSync('api/_mindmaps/'+map.id+'.json','utf8'));assert.equal(data.id,map.id);assert.ok(data.sections.length>=3&&data.sections.length<=6,map.id);
   const items=data.sections.flatMap(s=>s.groups.flatMap(g=>g.items));assert.ok(items.length>=5,map.id);assert.ok(items.some(i=>i.text.length>=150&&i.source),map.id);

@@ -1398,5 +1398,924 @@
       ],
       "status": "requires_objective_review"
     }
-  ]
+  ],
+  "all_short_decks_expansion": {
+    "scope": "65 base decks expanded; blood, senses and nervous tissue retained from existing protected reviewed packs. Counts are minimum delivered by the code path, not a direct live DB audit.",
+    "teacher_approved": false,
+    "topics": [
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "temas principales de anatomia y fisiologia",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          29,
+          69
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "la quimica de la vida",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          70,
+          105
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "forma y funcion celulares",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          106,
+          141
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "genetica y funcion celular",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          142,
+          170
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "histologia",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          171,
+          207
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "sistema tegumentario",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          208,
+          233
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "tejido oseo",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          234,
+          260
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "el sistema oseo",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          261,
+          305
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "articulaciones",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          306,
+          339
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "el sistema muscular",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          340,
+          428
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "tejido muscular",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          429,
+          466
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "medula espinal y reflejos",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          506,
+          538
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "encefalo y pares craneales",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          539,
+          588
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "sistema nervioso autonomo",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          589,
+          609
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "sistema endocrino",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          661,
+          705
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "corazon",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          742,
+          776
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "vasos sanguineos y circulacion",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          777,
+          835
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "sistema linfatico e inmunidad",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          836,
+          881
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "aparato respiratorio",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          882,
+          922
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "aparato urinario",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          923,
+          957
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "equilibrio hidrico y acidobasico",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          958,
+          980
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "aparato digestivo",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          981,
+          1027
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "nutricion y metabolismo",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          1028,
+          1061
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "aparato reproductor masculino",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          1062,
+          1091
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "aparato reproductor femenino",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          1092,
+          1129
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "MORFOFUNCION",
+        "topic": "desarrollo humano y envejecimiento",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          1130,
+          1164
+        ],
+        "source": "Saladin, Anatomía y fisiología",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "introduccion a la biologia celular",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          33,
+          53
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "metodos y tecnicas basicas en biologia celular",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          54,
+          119
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "estructura de la membrana plasmatica",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          120,
+          166
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "transporte a traves de la membrana plasmatica",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          167,
+          213
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "macrotransporte a traves de la membrana plasmatica",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          214,
+          255
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "especializaciones de la membrana plasmatica",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          256,
+          290
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "nucleo y cromatina",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          291,
+          349
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "transcripcion y maduracion del arn",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          350,
+          384
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "sintesis y modificacion de proteinas",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          385,
+          419
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "reticulo endoplasmatico golgi y lisosomas",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          420,
+          455
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "mitocondrias y peroxisomas",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          456,
+          490
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "citoesqueleto",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          491,
+          535
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "senalizacion celular",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          536,
+          579
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "ciclo celular",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          580,
+          617
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "division celular y muerte programada",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          618,
+          649
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "biologia celular del cancer",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          650,
+          696
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "respuesta inmunitaria",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          697,
+          737
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "BIOLOGIA CELULAR",
+        "topic": "celulas madre y aplicaciones terapeuticas",
+        "available_protected_cards": 20,
+        "new_synthesis": 16,
+        "selected_existing": 0,
+        "original_fallback": 4,
+        "pdf_span": [
+          738,
+          771
+        ],
+        "source": "Calvo, Biología celular biomédica",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "educacion en salud",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          16,
+          17
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "concepto de salud y determinantes",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          2,
+          4
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "funciones de salud publica",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          4,
+          5
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "niveles de prevencion",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          5,
+          19
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "promocion de la salud",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          14,
+          16
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "atencion primaria de salud",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          16,
+          18
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "factor de riesgo y salud comunitaria",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          20,
+          22
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "ods y cobertura sanitaria",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          6,
+          9
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "salud en bolivia y modelo safci",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          10,
+          30
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "epidemiologia social",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          32,
+          39
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "proceso de investigacion",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          40,
+          48
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "problema y objetivos de investigacion",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          49,
+          59
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "marco teorico e hipotesis",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          60,
+          72
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "variables y medicion",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          72,
+          76
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "estadistica descriptiva",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          85,
+          94
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "muestreo",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          95,
+          108
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "frecuencias y graficos",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          109,
+          139
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "medidas de tendencia central",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          145,
+          160
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "medidas de posicion",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          161,
+          170
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "dispersion y forma de los datos",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          171,
+          190
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      },
+      {
+        "subject": "SALUD PUBLICA",
+        "topic": "analisis de datos en excel y spss",
+        "available_protected_cards": 24,
+        "new_synthesis": 4,
+        "selected_existing": 16,
+        "original_fallback": 4,
+        "pdf_span": [
+          191,
+          226
+        ],
+        "source": "Educación en Salud e Investigación, texto suministrado CB24–25",
+        "review": "automated_second_pass; teacher pending"
+      }
+    ],
+    "protected_cards": 1416,
+    "reviewed_selection_corrections": 36,
+    "publication": "pending"
+  }
 }
