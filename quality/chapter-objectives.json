@@ -149,7 +149,8 @@
             736
           ],
           "targeted_expansion_maps": [
-            "morfo_18_sangre__08"
+            "morfo_18_sangre__08",
+            "morfo_18_sangre__10"
           ],
           "status": "targeted_summary_expansion_available_full_objective_review_pending",
           "summary_extension_pages": [
@@ -166,8 +167,10 @@
             733,
             738
           ],
-          "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "targeted_expansion_maps": [
+            "morfo_18_sangre__10"
+          ],
+          "status": "targeted_expansion_available_full_objective_review_pending"
         }
       ]
     },

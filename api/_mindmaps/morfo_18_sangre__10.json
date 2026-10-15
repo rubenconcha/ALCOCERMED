@@ -1,0 +1,676 @@
+{
+  "id": "morfo_18_sangre__10",
+  "title": "Factores de coagulación: complejos, trombina y fibrina",
+  "topic": "Sangre",
+  "sections": [
+    {
+      "title": "Leer factores por función, no por número",
+      "groups": [
+        {
+          "title": "Funciones, complejos y comparaciones",
+          "items": [
+            {
+              "title": "El número no establece el orden de las reacciones",
+              "text": "Los números romanos reflejan una nomenclatura histórica; no indican que I active II, luego III y así sucesivamente. La letra a distingue una forma activada, como X y Xa. El término VI se abandonó al corresponder a V activado. El calcio aparece tradicionalmente como IV, pero es un ion, no una proteína que se transforme en una proteasa.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Enzima, cofactor y sustrato no son equivalentes",
+              "text": "Una enzima cataliza una reacción; un cofactor facilita la actividad de un complejo; un sustrato es la molécula sobre la que se actúa. V y VIII activados cumplen funciones de cofactor con Xa e IXa, respectivamente. Esta precisión, contrastada con la investigación complementaria, corrige la presentación del libro que puede hacer pensar que cada factor es una enzima que activa al siguiente.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 734,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Factor I: el fibrinógeno aporta el material de la red",
+              "text": "El fibrinógeno es una proteína soluble que sirve de sustrato a la trombina. Tras su procesamiento se forma fibrina, cuyas moléculas se ensamblan en una red. El factor I no es un precursor de trombina ni un receptor plaquetario: su papel permite separar el material estructural final de las enzimas y complejos que posibilitan producirlo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 735,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Factor II: protrombina no es todavía trombina",
+              "text": "La protrombina es el precursor de la trombina, denominada IIa. Su activación conecta el complejo protrombinasa con la formación de fibrina. Diferenciar precursor y enzima activa evita dos errores: atribuir a toda protrombina circulante la acción de la trombina y confundir esa conversión con el procesamiento del fibrinógeno, que es una reacción posterior sobre otra proteína.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Inicio tisular y activación del factor X",
+      "groups": [
+        {
+          "title": "Funciones, complejos y comparaciones",
+          "items": [
+            {
+              "title": "Factor III: el factor tisular organiza el inicio",
+              "text": "El factor tisular se relaciona con células expuestas a la sangre tras una lesión y forma un complejo con VIIa. No debe imaginarse como otra enzima plasmática circulante que ocupa por obligación el siguiente número de la serie. El modelo celular complementa el esquema del capítulo al situar la iniciación sobre superficies que presentan factor tisular.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Factor VII: su forma activa trabaja con factor tisular",
+              "text": "VIIa unido al factor tisular puede activar X y también IX. La relación entre ambas salidas conecta la iniciación con mecanismos de propagación, en lugar de crear dos vías completamente independientes. Esta precisión se identifica como complemento experimental: no basta con dibujar una flecha desde VII a X y concluir que VIII e IX carecen de importancia cuando existe una lesión tisular.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Factores IX y VIII: proteasa y cofactor en un complejo",
+              "text": "IXa actúa con VIIIa para activar X. VIIIa es el cofactor, no una proteasa situada entre IX y X como otro peldaño enzimático idéntico. La corrección conserva el objetivo del esquema clásico, pero modifica su lectura causal: la eficacia depende de una asociación funcional y su superficie, no solo de una cadena de números que se activan en fila.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 735,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Factor X: un precursor que conduce a una nueva etapa",
+              "text": "La activación de X genera Xa. Xa participa luego con Va en la conversión de protrombina a trombina, de modo que no debe confundirse activar X con haber formado ya fibrina. La convergencia dibujada en X es útil para ordenar reacciones; el modelo celular recuerda además que el lugar donde se genera actividad importa para su función.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Contacto, calcio y superficies",
+      "groups": [
+        {
+          "title": "Funciones, complejos y comparaciones",
+          "items": [
+            {
+              "title": "Factor XI: activación de IX en el esquema clásico",
+              "text": "La forma activa XIa puede activar IX. El capítulo sitúa XI después de XII en su representación de contacto. Nombrar esa relación ayuda a reconstruir el esquema, pero no autoriza a convertir toda hemostasia fisiológica en una única secuencia que siempre empieza en XII: la iniciación por factor tisular y las interacciones celulares deben conservarse al interpretar una lesión.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 735,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Factor XII: contexto de contacto y alcance del modelo",
+              "text": "El esquema clásico relaciona XII con activación por contacto y con XI. Su utilidad como representación de una vía no significa que el tubo y la lesión vascular reproduzcan exactamente las mismas condiciones. El complemento celular organiza iniciación, amplificación y propagación en superficies diferentes; evita presentar la cadena de contacto como descripción exhaustiva del inicio de toda coagulación dentro del organismo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 734,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Calcio: un componente iónico que facilita asociaciones",
+              "text": "El calcio participa en condiciones necesarias para distintos complejos de coagulación. No es una proteasa y no se transforma por sí mismo en Xa, trombina o fibrina. En un esquema de reacción debe anotarse como componente del entorno o del complejo, no como sustrato convertido en el producto. Esta distinción también evita contar todos los factores como proteínas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Los fosfolípidos aportan una plataforma, no otro sustrato",
+              "text": "Las superficies celulares, incluidas las de plaquetas activadas, permiten organizar asociaciones de factores. No equivalen a fibrinógeno ni se convierten en fibrina. La ubicación puede influir en la función de la actividad generada: conocer solo cuánto factor está presente no explica toda la hemostasia si se ignora dónde se reúne el complejo y en qué estado está la superficie.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 734,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Protrombinasa y estabilización de fibrina",
+      "groups": [
+        {
+          "title": "Funciones, complejos y comparaciones",
+          "items": [
+            {
+              "title": "Factor V: cofactor para la actividad de Xa",
+              "text": "La forma Va facilita la acción de Xa sobre protrombina. Va y VIIIa son cofactores, pero participan con enzimas y sustratos diferentes. Intercambiarlos en el dibujo borra la diferencia entre generación de Xa y generación de trombina. El papel de Va se contrasta con la fuente complementaria para no reproducir una cadena en la que todos los participantes parezcan proteasas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 735,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Protrombinasa: ensamblar no equivale a consumir todos sus componentes",
+              "text": "El complejo incluye Xa y Va sobre una superficie fosfolipídica, con participación de calcio, y favorece la conversión de II a IIa. El factor tisular no se añade como un componente obligatorio de este complejo. Esta precisión corrige la formulación del capítulo que incluye III en el activador de protrombina y separa iniciación tisular de la reacción posterior.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Factor XIII: entrecruzar una fibrina ya formada",
+              "text": "XIII activado contribuye a formar enlaces entre componentes de la red de fibrina y estabilizarla. No sustituye a trombina en la conversión de fibrinógeno ni produce plaquetas. El orden funcional importa: primero se genera fibrina; después se refuerza su red mediante entrecruzamiento. Una red visible no demuestra por sí sola que todos los mecanismos de estabilización estén intactos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 735,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "La red y el tapón plaquetario se complementan",
+              "text": "La fibrina refuerza el conjunto de plaquetas y elementos atrapados en el lugar lesionado. La coagulación no reemplaza adhesión, activación y agregación plaquetaria, aunque los procesos interactúen. Por ello, un número de plaquetas adecuado no demuestra normalidad de todos los factores, y la presencia de fibrina tampoco describe por sí sola la función de las plaquetas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 732,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Amplificar, limitar y retirar",
+      "groups": [
+        {
+          "title": "Funciones, complejos y comparaciones",
+          "items": [
+            {
+              "title": "El modelo celular relaciona fases superpuestas",
+              "text": "La propuesta complementaria distingue iniciación sobre células con factor tisular, amplificación que prepara plaquetas y cofactores, y propagación con generación importante de trombina en la superficie plaquetaria. Esas fases se superponen. Sirven para explicar por qué la organización espacial aporta información que falta en una representación compuesta únicamente por proteínas y flechas de dos columnas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 734,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "La trombina participa en circuitos amplificadores",
+              "text": "Además de actuar sobre fibrinógeno, la trombina contribuye a activar elementos que favorecen mayor generación de trombina. Esa retroalimentación amplifica una respuesta local. No debe convertirse en la idea de que la coagulación crece sin controles por todo el vaso: la superficie, la disponibilidad de componentes y los mecanismos inhibidores también condicionan su alcance.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Antitrombina y flujo: limitar no es degradar la red",
+              "text": "El capítulo describe inactivación de trombina por antitrombina y el efecto de distribución y dilución asociado al flujo. Ambos ayudan a limitar actividad coagulante, pero no son sinónimos de disolver fibrina ya formada. Conviene distinguir prevenir propagación excesiva de actividad enzimática, compactar el coágulo y retirar su estructura después: cada tarea exige una explicación diferente.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Plasmina: una función distinta de la trombina",
+              "text": "La fibrinólisis incluye degradación de fibrina por plasmina, derivada de plasminógeno. Trombina y plasmina no deben intercambiarse en un esquema: una favorece formación de fibrina y la otra puede degradar la red. Tampoco hay que equiparar fibrinólisis con retracción mecánica o reparación vascular, aunque todos cambien el aspecto del coágulo a lo largo del tiempo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 736,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Casos para predecir el eslabón afectado",
+      "groups": [
+        {
+          "title": "Funciones, complejos y comparaciones",
+          "items": [
+            {
+              "title": "Caso: señal inicial presente, propagación reducida",
+              "text": "Un modelo conserva factor tisular y VIIa, pero reduce la función del complejo IXa/VIIIa sobre plaquetas. La iniciación no garantiza una propagación normal: el experimento complementario muestra que las funciones dependen de asociaciones y ubicación. El caso evita concluir que el esquema de un atajo vuelve prescindibles todos los componentes del mecanismo de propagación.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 734,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Caso: reducir la disponibilidad de X",
+              "text": "Si una intervención del ejercicio reduce mucho X funcional, se compromete la posibilidad de generar Xa por las rutas representadas y, con ello, la actividad posterior dependiente de Xa. La predicción sigue el sustrato compartido antes de saltar a fibrina. No permite cuantificar por sí sola un tiempo de coagulación ni escoger un tratamiento: se trata de un modelo causal.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Caso: formar fibrina sin entrecruzamiento adecuado",
+              "text": "Si se conserva generación de trombina y fibrina, pero se altera la actividad estabilizadora de XIIIa, el defecto principal del modelo está en reforzar la red. Responder que nunca pudo existir fibrina confunde formación con estabilización. La pregunta necesita distinguir dos operaciones sobre componentes relacionados, sin convertir la observación en un diagnóstico clínico por sí sola.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 735,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            },
+            {
+              "title": "Caso: plaquetas presentes con reacción plasmática alterada",
+              "text": "Un ejercicio informa un recuento plaquetario conservado y una alteración funcional de un factor. No hay contradicción: disponer de células no asegura que todos los complejos moleculares funcionen. Tampoco demuestra que las plaquetas sean funcionalmente normales solo por su número. La respuesta debe explicar qué dimensión aporta cada dato y qué otras propiedades no fueron medidas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 733,
+                "kind": "original_synthesis",
+                "supplementaryReferences": [
+                  "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+                  "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+                  "https://pubmed.ncbi.nlm.nih.gov/11434702/"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_18_sangre.webp",
+    "alt": "Ilustración de apoyo de la sangre",
+    "download": "/api/mindmap?id=morfo_18_sangre__10&format=image",
+    "filename": "morfo_18_sangre__10-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 18,
+      "pdfPages": [
+        732,
+        733,
+        734,
+        735,
+        736
+      ],
+      "kind": "original_synthesis"
+    },
+    "generative_download": true,
+    "practice": {
+      "flashcards": [
+        {
+          "question": "¿Por qué los factores no se ordenan como una secuencia I, II, III hasta XIII?",
+          "answer": "Los números romanos reflejan una nomenclatura histórica; no indican que I active II, luego III y así sucesivamente. La letra a distingue una forma activada, como X y Xa. El término VI se abandonó al corresponder a V activado. El calcio aparece tradicionalmente como IV, pero es un ion, no una proteína que se transforme en una proteasa.",
+          "pdf_pages": [
+            733
+          ]
+        },
+        {
+          "question": "¿Cómo separar enzima, cofactor y sustrato al leer una cascada?",
+          "answer": "Una enzima cataliza una reacción; un cofactor facilita la actividad de un complejo; un sustrato es la molécula sobre la que se actúa. V y VIII activados cumplen funciones de cofactor con Xa e IXa, respectivamente. Esta precisión, contrastada con la investigación complementaria, corrige la presentación del libro que puede hacer pensar que cada factor es una enzima que activa al siguiente.",
+          "pdf_pages": [
+            734
+          ]
+        },
+        {
+          "question": "Compara la conversión de protrombina con la conversión de fibrinógeno.",
+          "answer": "La protrombina es el precursor de la trombina, denominada IIa. Su activación conecta el complejo protrombinasa con la formación de fibrina. Diferenciar precursor y enzima activa evita dos errores: atribuir a toda protrombina circulante la acción de la trombina y confundir esa conversión con el procesamiento del fibrinógeno, que es una reacción posterior sobre otra proteína.",
+          "pdf_pages": [
+            733
+          ]
+        },
+        {
+          "question": "¿Cómo conecta VIIa con factor tisular la iniciación y otras reacciones de coagulación?",
+          "answer": "VIIa unido al factor tisular puede activar X y también IX. La relación entre ambas salidas conecta la iniciación con mecanismos de propagación, en lugar de crear dos vías completamente independientes. Esta precisión se identifica como complemento experimental: no basta con dibujar una flecha desde VII a X y concluir que VIII e IX carecen de importancia cuando existe una lesión tisular.",
+          "pdf_pages": [
+            733
+          ]
+        },
+        {
+          "question": "Reconstruye el complejo IXa/VIIIa e identifica su sustrato.",
+          "answer": "IXa actúa con VIIIa para activar X. VIIIa es el cofactor, no una proteasa situada entre IX y X como otro peldaño enzimático idéntico. La corrección conserva el objetivo del esquema clásico, pero modifica su lectura causal: la eficacia depende de una asociación funcional y su superficie, no solo de una cadena de números que se activan en fila.",
+          "pdf_pages": [
+            735
+          ]
+        },
+        {
+          "question": "¿Qué límite tiene extrapolar una vía de contacto al inicio de toda lesión vascular?",
+          "answer": "El esquema clásico relaciona XII con activación por contacto y con XI. Su utilidad como representación de una vía no significa que el tubo y la lesión vascular reproduzcan exactamente las mismas condiciones. El complemento celular organiza iniciación, amplificación y propagación en superficies diferentes; evita presentar la cadena de contacto como descripción exhaustiva del inicio de toda coagulación dentro del organismo.",
+          "pdf_pages": [
+            734
+          ]
+        },
+        {
+          "question": "¿Por qué importa la superficie celular aunque se conozca la cantidad de factores?",
+          "answer": "Las superficies celulares, incluidas las de plaquetas activadas, permiten organizar asociaciones de factores. No equivalen a fibrinógeno ni se convierten en fibrina. La ubicación puede influir en la función de la actividad generada: conocer solo cuánto factor está presente no explica toda la hemostasia si se ignora dónde se reúne el complejo y en qué estado está la superficie.",
+          "pdf_pages": [
+            734
+          ]
+        },
+        {
+          "question": "Distingue componentes del complejo protrombinasa y sustrato que transforma.",
+          "answer": "El complejo incluye Xa y Va sobre una superficie fosfolipídica, con participación de calcio, y favorece la conversión de II a IIa. El factor tisular no se añade como un componente obligatorio de este complejo. Esta precisión corrige la formulación del capítulo que incluye III en el activador de protrombina y separa iniciación tisular de la reacción posterior.",
+          "pdf_pages": [
+            733
+          ]
+        },
+        {
+          "question": "¿Qué ocurre antes de la acción estabilizadora de XIIIa?",
+          "answer": "XIII activado contribuye a formar enlaces entre componentes de la red de fibrina y estabilizarla. No sustituye a trombina en la conversión de fibrinógeno ni produce plaquetas. El orden funcional importa: primero se genera fibrina; después se refuerza su red mediante entrecruzamiento. Una red visible no demuestra por sí sola que todos los mecanismos de estabilización estén intactos.",
+          "pdf_pages": [
+            735
+          ]
+        },
+        {
+          "question": "Distingue limitar trombina de degradar una red de fibrina.",
+          "answer": "El capítulo describe inactivación de trombina por antitrombina y el efecto de distribución y dilución asociado al flujo. Ambos ayudan a limitar actividad coagulante, pero no son sinónimos de disolver fibrina ya formada. Conviene distinguir prevenir propagación excesiva de actividad enzimática, compactar el coágulo y retirar su estructura después: cada tarea exige una explicación diferente.",
+          "pdf_pages": [
+            736
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "¿Qué relación identifica correctamente enzima, cofactor y sustrato en la generación de Xa?",
+          "options": [
+            "IXa actúa con VIIIa como cofactor sobre X",
+            "VIIIa es la proteasa que convierte IXa en X",
+            "IXa activa VIII como un segundo eslabón proteasa idéntico antes de llegar a X",
+            "X es un cofactor que activa por sí solo VIII"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: distingue la proteasa IXa, el cofactor VIIIa y el sustrato X que se activa a Xa.",
+            "Invierte funciones y sustrato: VIIIa no ocupa el papel de proteasa que convertiría IXa en otro factor.",
+            "Reproduce la lectura en fila que debe corregirse: VIIIa facilita la actividad de IXa y no es otra proteasa equivalente.",
+            "X es el precursor de Xa en esta reacción; no constituye el cofactor que sustituye a VIIIa."
+          ],
+          "pdf_pages": [
+            734,
+            735
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Distinguir funciones y predecir el eslabón causal; requiere integrar componentes, no solo recordar un nombre."
+        },
+        {
+          "question": "¿Qué conjunto describe protrombinasa sin confundirla con el complejo de inicio tisular?",
+          "options": [
+            "Factor tisular y VIIa como sustitutos obligatorios de Xa y Va",
+            "Xa, Va, calcio y superficie fosfolipídica actuando sobre protrombina",
+            "IXa, VIIIa, calcio y superficie fosfolipídica actuando sobre protrombina",
+            "Xa y Va con calcio y superficie considerados siempre irrelevantes"
+          ],
+          "correct": 1,
+          "reasons": [
+            "El factor tisular con VIIa participa en iniciación; no reemplaza los componentes de protrombinasa.",
+            "Correcto: identifica la asociación que favorece convertir II en IIa, sin añadir III como componente obligatorio.",
+            "Ese complejo participa en activar X, no en sustituir la asociación Xa/Va que actúa sobre protrombina.",
+            "Reconocer enzima y cofactor no permite descartar los componentes y superficie que ayudan a organizar su actividad."
+          ],
+          "pdf_pages": [
+            733,
+            735
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Distinguir funciones y predecir el eslabón causal; requiere integrar componentes, no solo recordar un nombre."
+        },
+        {
+          "question": "Un modelo produce trombina y fibrina, pero reduce la actividad de XIIIa. ¿Qué etapa queda principalmente afectada?",
+          "options": [
+            "La exposición inicial de factor tisular, aunque el resto del modelo sea idéntico",
+            "La aparición de toda fibrina, que por definición solo puede producir XIIIa",
+            "El entrecruzamiento que refuerza una red de fibrina ya formada",
+            "La conversión de II a IIa, aunque se conserve trombina en el modelo"
+          ],
+          "correct": 2,
+          "reasons": [
+            "El caso modifica una etapa de estabilización; no establece un cambio en la exposición del iniciador tisular.",
+            "La formación inicial de fibrina depende de acción de trombina sobre fibrinógeno, no de atribuirla a XIIIa.",
+            "Correcto: separa formación y estabilización y conserva el dato de fibrina presente en el enunciado.",
+            "Sitúa el defecto en generación de trombina pese a que esta se conserva; no sigue la función estabilizadora indicada."
+          ],
+          "pdf_pages": [
+            735
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Distinguir funciones y predecir el eslabón causal; requiere integrar componentes, no solo recordar un nombre."
+        },
+        {
+          "question": "Se conserva inicio por factor tisular/VIIa, pero falla el complejo IXa/VIIIa plaquetario. ¿Qué inferencia respeta el modelo celular?",
+          "options": [
+            "Toda propagación será normal porque el inicio usa menos pasos",
+            "El factor tisular transforma directamente el fibrinógeno sin complejos posteriores",
+            "La ubicación de factores no importa si existe actividad en cualquier compartimento",
+            "La iniciación puede persistir sin garantizar propagación y generación normal de trombina"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Convertir la ruta inicial en sustituto completo ignora funciones diferentes de complejos y superficies en propagación.",
+            "Omite Xa, protrombinasa y trombina; el factor tisular no actúa directamente como la enzima de esa conversión.",
+            "La evidencia complementaria muestra que ubicación y asociación funcional importan para interpretar actividad.",
+            "Correcto: distingue iniciar de propagar y evita tratar las dos columnas clásicas como rutas aisladas equivalentes."
+          ],
+          "pdf_pages": [
+            733,
+            734
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Distinguir funciones y predecir el eslabón causal; requiere integrar componentes, no solo recordar un nombre."
+        },
+        {
+          "question": "¿Qué comparación conserva la diferencia entre trombina, antitrombina y plasmina?",
+          "options": [
+            "La trombina favorece formación de fibrina, la antitrombina limita actividad y la plasmina degrada fibrina",
+            "La antitrombina entrecruza fibrina como función principal de XIIIa",
+            "La plasmina convierte protrombina en trombina y la trombina disuelve toda fibrina",
+            "Las tres son nombres del mismo proceso de retracción plaquetaria"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: separa generación, limitación de actividad y degradación de una red, sin equipararlas a retracción.",
+            "La función estabilizadora pertenece a XIIIa; antitrombina limita actividad coagulante y no ocupa ese papel.",
+            "Intercambia funciones y etapas: protrombinasa activa protrombina y plasmina participa en degradación de fibrina.",
+            "La retracción es un cambio mecánico; no vuelve idénticos estos participantes ni sus funciones bioquímicas."
+          ],
+          "pdf_pages": [
+            733,
+            735,
+            736
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Distinguir funciones y predecir el eslabón causal; requiere integrar componentes, no solo recordar un nombre."
+        },
+        {
+          "question": "¿Qué afirmación evita interpretar todos los factores como enzimas proteicas numeradas por orden de reacción?",
+          "options": [
+            "El factor I siempre activa II porque los números reflejan el orden de reacción",
+            "V y VIII son cofactores, el calcio es un ion y los números no indican orden funcional",
+            "El calcio es una proteasa que se consume para producir trombina",
+            "VI debe añadirse como una enzima nueva entre V y VII para completar la vía"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Los números corresponden a una nomenclatura histórica; no establecen esa cadena de activaciones.",
+            "Correcto: mantiene tres distinciones necesarias para leer el diagrama sin convertir todos sus componentes en enzimas.",
+            "El calcio facilita asociaciones, pero no es una proteína proteasa convertida en el producto de esa reacción.",
+            "VI es una denominación abandonada relacionada con V activado; no exige añadir una nueva proteína a la secuencia."
+          ],
+          "pdf_pages": [
+            733,
+            735
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Distinguir funciones y predecir el eslabón causal; requiere integrar componentes, no solo recordar un nombre."
+        }
+      ],
+      "source": "Saladin, cap. 18 · PDF 732–736 (libro 704–708). Precisiones de complejos y modelo celular: PMID 3920653, 7655009 y 11434702.",
+      "review": "Revisión automatizada; revisión docente pendiente.",
+      "supplementary_reference": "https://pubmed.ncbi.nlm.nih.gov/3920653/ · https://pubmed.ncbi.nlm.nih.gov/7655009/ · https://pubmed.ncbi.nlm.nih.gov/11434702/"
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "scope": "Modelo fisiológico y precisiones de funciones de factores. No interpretación individual de pruebas ni selección de tratamientos."
+  },
+  "supplementary_references": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+      "scope": "Precisión: Va y VIIIa son cofactores; complejos Xa/Va e IXa/VIIIa."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+      "scope": "Experimento celular: ubicación y funciones de IXa/Xa en iniciación por factor tisular."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11434702/",
+      "scope": "Modelo de fases celulares superpuestas, distinto del esquema clásico de dos vías."
+    }
+  ]
+}

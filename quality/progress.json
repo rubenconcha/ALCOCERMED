@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "leukopoiesis_depth_reviewed_ready_to_publish",
+  "status": "coagulation_factors_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -691,12 +691,90 @@
         "api/_mindmaps/leukopoiesis-map-prompts.json"
       ],
       "deployment": {
-        "status": "pending"
+        "commit": "ac1a7fa",
+        "status": "Vercel success",
+        "anonymous_json_and_image": "401",
+        "raw_art_and_authoring_source": "404",
+        "admin_live": "Deep link opens named leukopoiesis map; final protected image fully loads at 1536x1024; practice shows ten cards and six questions."
       },
       "poster_sha256": "a461e7281004ba9dbfa1a32c35345fae37be266e05682c49428bddaa6e6c5a0e"
+    },
+    {
+      "id": "coagulation-factors-map-practice-2026-10-15",
+      "maps": [
+        "morfo_18_sangre__10"
+      ],
+      "authored_explanations": 24,
+      "new_flashcards": 10,
+      "new_bank_questions": 6,
+      "per_option_explanations": 24,
+      "generative_posters": 1,
+      "source_pages": {
+        "saladin_pdf": [
+          732,
+          733,
+          734,
+          735,
+          736
+        ],
+        "printed": [
+          704,
+          705,
+          706,
+          707,
+          708
+        ]
+      },
+      "supplementary_sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3920653/",
+          "scope": "Primary comparative study: V/VIII cofactor functions with Xa/IXa."
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7655009/",
+          "scope": "Primary cell-model experiment: distinct IXa/Xa roles and surface-dependent propagation."
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11434702/",
+          "scope": "Cell-based model synthesis: overlapping initiation, amplification and propagation."
+        }
+      ],
+      "review": "Second automated academic, per-option and visual review. No physician approval; full objectives pending.",
+      "corrections": [
+        "Explicitly corrected book simplification that treats every factor as a sequential enzyme: Va and VIIIa are cofactors.",
+        "Corrected IXa/VIIIa reaction to activation of X, rather than an IX-to-VIII serial protease step.",
+        "Excluded factor III as an obligatory component of prothrombinase; distinguished TF/VIIa from Xa/Va.",
+        "Distinguished classic contact model from physiological cellular initiation and propagation.",
+        "Separated fibrin generation by thrombin from stabilization by XIIIa.",
+        "Replaced weak distractors with plausible errors between complexes and causal stages.",
+        "No treatment instructions, obsolete bleeding-time targets or diagnostic inference from a single result."
+      ],
+      "integration": "Protected map plus main flashcards/bank. Reviewed supplements now total 90 cards and 54 questions; existing SRS and student records preserved.",
+      "tests": [
+        "13 practice, access, identity, source and loader tests passed.",
+        "Actual viewer shows six branches, full 1536x1024 poster, ten cards and six questions at 1440/390 widths.",
+        "Actual download button yields byte-identical protected WebP in desktop/mobile checks.",
+        "Main flashcards/bank display long answers, sources and complete four-option feedback at both widths.",
+        "Final generated poster and desktop/mobile UI screenshots visually inspected."
+      ],
+      "limitations": [
+        "Independent simulation/evaluation objective coverage still pending; no new graded exam claimed.",
+        "Hepatic/vitamin K relations and disorder-specific objectives still require a dedicated pass.",
+        "Full Blood/Senses chapter and teacher review pending."
+      ],
+      "files": [
+        "api/_mindmaps/morfo_18_sangre__10.json",
+        "api/_mindmaps/morfo_18_sangre__10.webp",
+        "api/_mindmaps/curated/build_coagulation_factors.py.source",
+        "api/_mindmaps/coagulation-factors-prompts.json"
+      ],
+      "deployment": {
+        "status": "pending"
+      },
+      "poster_sha256": "83311ace3dd6353a24a0a29f320c581df1693bf91e4593ae76e8aebfb7642006"
     }
   ],
-  "next_action": "Read and author factor-by-factor coagulation map with independent reasoned practice, distinguishing textbook pathway model from physiological initiation and regulation. Then address remaining Blood/Senses objectives and independent simulation/evaluation coverage before other official chapters. Neither chapter is complete; teacher review pending.",
+  "next_action": "Audit actual independent Blood/Senses simulation and evaluation coverage against reviewed objectives; prepare distinct sourced application questions for gaps without duplicating map practice or inventing database identities. Continue hepatic/vitamin-K and disorder relationships plus remaining chapter objectives. Neither chapter is complete; teacher review pending.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",
