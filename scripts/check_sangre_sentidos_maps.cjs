@@ -11,7 +11,11 @@ try{const page=await b.newPage();page.on('pageerror',e=>errors.push(e.message));
  });
  await page.goto(base+'/qa-grid');await page.evaluate(()=>loadMapasMentales());
  const maps=await page.evaluate(()=>mmState.allMapas.filter(m=>/^morfo_(16_organos_sentidos|18_sangre)(?:__\d+)?\.(png|json)$/.test(m.url_imagen.split('/').pop())));
- assert.equal(maps.length,14);await page.evaluate(()=>{freeMode=false;filterMapas()});
+ assert.equal(maps.length,14);
+ await page.evaluate(()=>{selectMmMateria('Morfofunción');document.querySelector('#mm-search-input').value='sangre';filterMapas()});
+ assert.equal(await page.$$eval('.mm-card-locked',n=>n.length),7);
+ await page.evaluate(()=>document.querySelector('.mm-card').click());assert.equal(await page.$eval('#mm-unlock-dialog',n=>n.open),true);assert.equal(requests,0);
+ await page.evaluate(()=>{closeMmUnlockDialog();freeMode=false;filterMapas()});
  fs.mkdirSync(path.join(root,'output/mapas-qa'),{recursive:true});
  for(const width of [1440,390]){
   await page.setViewport({width,height:1000});

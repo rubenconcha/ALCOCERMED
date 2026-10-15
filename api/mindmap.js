@@ -1,7 +1,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const catalog = require('../content/mindmaps-premium-catalog.json');
-const ids = new Set(catalog.map(map => map.id));
+const restrictedGeneral = require('../content/mindmaps-restricted-general.json');
+const ids = new Set(catalog.concat(restrictedGeneral).map(map => map.id));
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
 

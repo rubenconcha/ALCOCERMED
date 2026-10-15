@@ -31,7 +31,8 @@ test('cada mapa local tiene una miniatura ligera', () => {
   for (const source of sources) {
     const thumbnail = source.replace('mapas mentales/', 'mapas mentales/thumbs/').replace(/\.[^.]+$/, '.webp');
     assert.ok(fs.existsSync(thumbnail), `Falta la miniatura: ${thumbnail}`);
-    assert.ok(fs.statSync(thumbnail).size < fs.statSync(source).size, `La miniatura no es menor: ${thumbnail}`);
+    const stored=fs.existsSync(source)?source:source.replace('mapas mentales/','api/_mindmaps/');
+    assert.ok(fs.statSync(thumbnail).size < fs.statSync(stored).size, `La miniatura no es menor: ${thumbnail}`);
   }
 });
 

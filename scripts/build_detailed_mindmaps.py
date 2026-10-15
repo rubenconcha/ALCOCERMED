@@ -102,7 +102,15 @@ def main():
                 for item in group['items']:
                     assert '\ufffd' not in item['title']+item['text'], key
                     assert not re.search(r'\b(senalados|segun el capitulo|capitulo tantos)\b', norm(item['title']+' '+item['text'])), key
-    (ROOT/'mindmap-detailed-content.js').write_text('/* Reviewed progressive hierarchies; source ranges are in MINDMAP_ASSETS. */\nwindow.MINDMAP_DETAILED_CONTENT = '+json.dumps(detailed, ensure_ascii=False, separators=(',',':'))+';\nwindow.MINDMAP_ASSETS = '+json.dumps(manifest, ensure_ascii=False, separators=(',',':'))+';\n', encoding='utf8')
+    # These two chapters require the same verified subscription as detailed maps.
+    # Rebuilding must never put their explanations back into a public script.
+    for restricted in json.loads((ROOT/'content/mindmaps-restricted-general.json').read_text(encoding='utf8')):
+        key, ident = restricted['parent_key'], restricted['id']
+        assets = dict(manifest[key], download='/api/mindmap?id='+ident+'&format=image', filename=ident+'-Prepa-Ben-Carson.webp')
+        payload = {'id': ident, 'sections': detailed.pop(key), 'assets': assets}
+        (ROOT/'api/_mindmaps'/(ident+'.json')).write_text(json.dumps(payload,ensure_ascii=False,separators=(',',':')),encoding='utf8')
+    public_assets = {key: value for key,value in manifest.items() if key in detailed}
+    (ROOT/'mindmap-detailed-content.js').write_text('/* Reviewed progressive hierarchies; subscription chapters are server-protected. */\nwindow.MINDMAP_DETAILED_CONTENT = '+json.dumps(detailed, ensure_ascii=False, separators=(',',':'))+';\nwindow.MINDMAP_ASSETS = '+json.dumps(public_assets, ensure_ascii=False, separators=(',',':'))+';\n', encoding='utf8')
     (ROOT/'content/mindmaps-sources.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n', encoding='utf8')
     print(json.dumps({'maps': len(detailed), 'concepts': sum(len(g['items']) for ss in detailed.values() for s in ss for g in s['groups'])}))
 

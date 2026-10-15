@@ -6,13 +6,13 @@ const catalog=require('../content/mindmaps-premium-catalog.json');
 const script=fs.readFileSync('script.js','utf8');
 const handler=require('../api/mindmap.js');
 
-test('all 79 general maps are free and every topic has six separately locked maps',async()=>{
+test('77 general maps are free; Sangre and Sentidos and all detailed maps require a plan',async()=>{
  const start=script.indexOf('async function loadMapasMentales()'),end=script.indexOf('function populateMmMaterias()',start);
  const ctx={mmState:{},MINDMAP_PREMIUM_CATALOG:catalog,setMmState(){},populateMmMaterias(){},populateMmTemas(){},updateIntocStats(){},filterMapas(){},console};ctx.window=ctx;
  vm.runInNewContext(script.slice(start,end),ctx);await ctx.loadMapasMentales();
  assert.equal(ctx.mmState.allMapas.length,553);
- const general=ctx.mmState.allMapas.filter(m=>!m.premium);assert.equal(general.length,79);assert.ok(general.every(m=>m.acceso_gratis));
- for(const m of general){const key=m.url_imagen.split('/').pop(),details=catalog.filter(d=>d.parent_key===key);assert.equal(details.length,6,key);assert.ok(details.every(d=>d.premium&&!d.acceso_gratis));}
+ const general=ctx.mmState.allMapas.filter(m=>!m.premium||m.general);assert.equal(general.length,79);assert.equal(general.filter(m=>m.acceso_gratis).length,77);assert.equal(general.filter(m=>m.general&&m.premium&&!m.acceso_gratis).length,2);
+ for(const m of general){const key=m.general?m.id+'.png':m.url_imagen.split('/').pop(),details=catalog.filter(d=>d.parent_key===key);assert.equal(details.length,6,key);assert.ok(details.every(d=>d.premium&&!d.acceso_gratis));}
  const topicStart=script.indexOf('function mmTopicKey('),topicEnd=script.indexOf('function populateMmTemas',topicStart);
  ctx.campo=(m,k)=>m[k];vm.runInNewContext(script.slice(topicStart,topicEnd),ctx);
  assert.equal(ctx.mmTopicKey(general[0]),ctx.mmTopicKey(catalog[0]));
@@ -36,6 +36,30 @@ test('an active subscription receives the correct private map and complete image
  for(const format of ['json','image']){
   const result=await call({token:'paid',format,access:{ready:true,premium:true}});assert.equal(result.code,200);assert.equal(result.headers['Cache-Control'],'private, no-store');
   const ext=format==='image'?'webp':'json';assert.deepEqual(result.body,fs.readFileSync('api/_mindmaps/'+catalog[0].id+'.'+ext));
+ }
+});
+
+test('Sangre and Sentidos general maps are private for both content and downloads',async()=>{
+ const publicContext={window:{}};
+ for(const file of ['mindmap-content.js','mindmap-detailed-content.js'])vm.runInNewContext(fs.readFileSync(file,'utf8'),publicContext);
+ const config=JSON.parse(fs.readFileSync('vercel.json','utf8'));
+ for(const id of ['morfo_16_organos_sentidos','morfo_18_sangre']){
+  assert.ok(!publicContext.window.MINDMAP_CONTENT[id+'.png']);
+  assert.ok(!publicContext.window.MINDMAP_DETAILED_CONTENT[id+'.png']);
+  assert.ok(!publicContext.window.MINDMAP_ASSETS[id+'.png']);
+  assert.ok(!fs.existsSync('mapas mentales/'+id+'.png'));
+  assert.ok(!fs.existsSync('assets/mindmaps/complete/'+id+'.png'));
+  assert.ok(config.rewrites.some(r=>r.source==='/assets/mindmaps/complete/'+id+'.png'&&r.destination==='/api/mindmap?id='+id+'&format=image'));
+  assert.ok(config.rewrites.some(r=>r.source==='/mapas mentales/'+id+'.png'&&r.destination==='/api/mindmap?id='+id+'&format=image'));
+  for(const format of ['json','image']){
+   assert.equal((await call({id,format})).code,401);
+   assert.equal((await call({id,format,token:'free',access:{ready:true,premium:false,admin:false}})).code,403);
+   for(const admin of [true,false]){
+    const result=await call({id,format,token:admin?'verified-admin':'paid-member',access:{ready:true,premium:true,admin}});
+    assert.equal(result.code,200);assert.equal(result.headers['Cache-Control'],'private, no-store');
+    assert.deepEqual(result.body,fs.readFileSync('api/_mindmaps/'+id+(format==='json'?'.json':'.webp')));
+   }
+  }
  }
 });
 test('unknown IDs, path traversal and invalid formats fail before authentication; raw files have a blocked route',async()=>{

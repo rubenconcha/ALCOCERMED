@@ -3958,7 +3958,15 @@ async function loadMapasMentales() {
             { titulo: 'Estadística con Excel', materia: 'Educación para la Salud', url_imagen: 'mapas mentales/salud_26_estadistica_excel.png', descripcion: 'preparar, herramienta, selección, resultados. PDF pp. 191–200 de Educación en Salud e Investigación.', fecha: new Date().toISOString() },
             { titulo: 'Estadística con SPSS', materia: 'Educación para la Salud', url_imagen: 'mapas mentales/salud_27_estadistica_spss.png', descripcion: 'preparar, ingresar, revisar, analizar. PDF pp. 201–232 de Educación en Salud e Investigación.', fecha: new Date().toISOString() }
         ];
-        localMapas.forEach(function(m){m.acceso_gratis=true;m.tema=m.titulo;});
+        localMapas.forEach(function(m){
+            m.acceso_gratis=true;m.tema=m.titulo;
+            var restricted=/\/(morfo_16_organos_sentidos|morfo_18_sangre)\.png$/.exec(m.url_imagen);
+            if(restricted){
+                m.id=restricted[1];m.general=true;m.premium=true;m.acceso_gratis=false;
+                m.preview='/assets/mindmaps/previews/'+m.id+'.webp';
+                m.url_imagen='private/'+m.id+'.json';
+            }
+        });
         mmState.allMapas = localMapas.concat(window.MINDMAP_PREMIUM_CATALOG || []);
         populateMmMaterias();
         populateMmTemas();
@@ -4002,7 +4010,7 @@ function populateMmTemas() {
     if (!select) return;
     var previous = mmState.selectedTema;
     var rows = mmState.allMapas.filter(function (m) {
-        return !campo(m, 'premium') && (!mmState.selectedMateria || campo(m, 'materia') === mmState.selectedMateria);
+        return (!campo(m, 'premium') || campo(m, 'general')) && (!mmState.selectedMateria || campo(m, 'materia') === mmState.selectedMateria);
     });
     select.replaceChildren(new Option('Todos los temas', ''));
     rows.sort(function (a, b) {
@@ -4113,7 +4121,7 @@ function renderMmGrid() {
             '</div>' +
             '<div class="mm-card-body">' +
             (materia ? '<span class="mm-card-materia">' + safeMateria + '</span>' : '') +
-            (locked ? '<span class="mm-card-access"><i class="fas fa-lock" aria-hidden="true"></i> Con plan</span>' : campo(m, 'premium') ? '' : '<span class="mm-card-access">Mapa general</span>') +
+            (locked ? '<span class="mm-card-access"><i class="fas fa-lock" aria-hidden="true"></i> Con plan</span>' : campo(m, 'premium') && !campo(m, 'general') ? '' : '<span class="mm-card-access">Mapa general</span>') +
             '<h3 class="mm-card-title">' + safeTitle + '</h3>' +
             (locked ? '<span class="mm-card-preview-action">Desbloquear</span>' : desc ? '<p class="mm-card-desc">' + safeDesc + '</p>' : '') +
             '</div>';
