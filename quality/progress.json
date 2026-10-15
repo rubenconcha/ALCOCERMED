@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "erythrocyte_hemoglobin_reviewed_ready_to_publish",
+  "status": "erythropoiesis_summary_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -1496,11 +1496,107 @@
         "No student data, memberships, results or SRS IDs modified. Dot remains uncreated."
       ],
       "deployment": {
+        "status": "Vercel success",
+        "commit": "1883bcc",
+        "public_assets": "Campus loader v14, catalog v13 and new map metadata verified.",
+        "protected_json_and_image_without_session": 401,
+        "raw_poster_and_authoring": 404,
+        "evidence": "output/study-depth-qa/morfo_18_sangre__14/deployment-check.json",
+        "authenticated_production_walkthrough": "Not claimed; actual-controller tests used fixture sessions."
+      }
+    },
+    {
+      "id": "erythropoiesis-summary-2026-10-15",
+      "maps": [
+        "morfo_18_sangre__15"
+      ],
+      "gap": "Erythrocyte production and EPO remained without dedicated reviewed depth; plasma and hemoglobin map expansions were also not yet integrated into the summary.",
+      "authored_explanations": 18,
+      "new_flashcards": 10,
+      "reasoned_questions": 6,
+      "generative_posters": 1,
+      "summary": {
+        "file": "api/_pdf/morfofuncion-sangre.pdf",
+        "pages_before": 14,
+        "pages_after": 17,
+        "added_pages": [
+          15,
+          16,
+          17
+        ],
+        "topics": [
+          "Plasma proportions and serum/physical properties",
+          "Hemoglobin assembly, units and variants",
+          "EPO, maturation, feedback and limitations"
+        ],
+        "prior_text_and_image_payloads": "All first 14 pages verified identical extracted text and individual image SHA256 payloads.",
+        "previous_pdf_sha256": "baa863cad3d89deb0d3bc7f81899311c745a5ad47516ac48f8406d8a834047d4",
+        "pdf_sha256": "b37ca61b77fd1a1a2ede29427b644d92915ab69f75e9c051032cce827100d13e",
+        "new_text": "Selectable original case explanations; original logo embedded exactly in PDF header; generated maps with provenance.",
+        "rendering": "Poppler PNG pages 14–17; all three new pages visually inspected, no overlap/cropping, body boundaries 143.87pt or higher."
+      },
+      "source_pages": {
+        "sangre": [
+          714,
+          715,
+          716
+        ],
+        "summary_added_synthesis": [
+          708,
+          709,
+          710,
+          711,
+          712,
+          713,
+          714,
+          715,
+          716
+        ]
+      },
+      "book_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+      "supplementary_sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8857934/",
+          "scope": "Explicitly labeled experimental localization of EPO production in hypoxic primate renal interstitial cells."
+        }
+      ],
+      "review": "Second automated scientific/editorial pass; doctor approval and whole chapter review pending.",
+      "review_decisions": [
+        "Reticulocyte is anucleate with RNA/ribosomal residue, not a small persistent nucleus.",
+        "Distinguish renal signal origin from erythroid marrow production and circulating terminal maturation.",
+        "Use tissue oxygen availability, not a kidney cell-counter or automatic equivalence with every arterial oxygen measurement.",
+        "Feedback conditional on improved oxygen delivery; no promise every EPO change has a single cause or every response is immediate.",
+        "Separate EPO from iron/B12/folate availability and avoid supplement doses or clinical diagnoses.",
+        "Preserve prior summary pages and add cases connecting the reviewed maps rather than substituting a raster-only summary."
+      ],
+      "checks": [
+        "17 relevant content/source/access/SRS regression tests passed; subsequent changed prose retested in eight affected content/loader checks.",
+        "PDF content/images and actual text bounds verified; all prior fourteen pages preserved.",
+        "Actual map controller 1440/390: free lock, six branches, 1536px generated poster, byte-identical image download, ten cards and 24 per-option feedback paragraphs.",
+        "Actual main library/bank at 1440/390: 1608 protected supplement cards and 84 bank questions; all ten new cards sampled and sources reachable, all feedback rendered without overflow/browser errors.",
+        "Actual summary UI 1440/390: shows 17 pages, free account cannot request full PDF, authenticated open and byte-identical download passed."
+      ],
+      "files": [
+        "api/_mindmaps/curated/build_erythropoiesis.py.source",
+        "api/_mindmaps/curated/extend_erythroid_summary.py.source",
+        "api/_mindmaps/morfo_18_sangre__15.json",
+        "api/_mindmaps/morfo_18_sangre__15.png",
+        "api/_mindmaps/morfo_18_sangre__15.webp",
+        "api/_mindmaps/erythropoiesis-prompts.json",
+        "api/_pdf/morfofuncion-sangre.pdf"
+      ],
+      "access": "Existing verified-admin/active-plan server checks unchanged; complete new images/text/authoring and summary protected.",
+      "limitations": [
+        "No production authenticated walkthrough claimed; actual-controller tests use local fixture sessions.",
+        "No full Blood/Senses chapter completion or teacher approval implied.",
+        "No membership, role, student result or SRS identity changes. Dot remains uncreated."
+      ],
+      "deployment": {
         "status": "pending"
       }
     }
   ],
-  "next_action": "Continue Blood erythropoiesis and EPO feedback from PDF 714–716, then erythrocyte removal/iron recycling and Senses somatic sensory mechanisms; extend summary/assessment coverage separately. No whole chapter approval implied.",
+  "next_action": "Develop Senses somatic receptor/pain mechanisms after reading the actual next section, then return to Blood iron handling and erythrocyte clearance with updated primary verification where old textbook diagrams simplify chemistry. Extend independent assessments against remaining objective coverage.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",

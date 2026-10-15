@@ -12,15 +12,15 @@ test('free accounts do not request or receive the protected supplement',async()=
 });
 test('library and bank share authenticated in-flight requests; feedback and stable SRS identities survive conversion',async()=>{
  const t=setup(),[cards,bank]=await Promise.all([t.merge([],'flashcards'),t.merge([],'bank')]);
- assert.equal(t.calls(),15);assert.equal(cards.length,1598);assert.equal(bank.length,78);
- assert.equal(new Set(cards.map(c=>c.id)).size,1598);assert.ok(cards.every(c=>c.id.startsWith('depth:')&&c.respuesta.includes('Fuente: ')&&c.fuente&&c.paginas_pdf));
+ assert.equal(t.calls(),16);assert.equal(cards.length,1608);assert.equal(bank.length,84);
+ assert.equal(new Set(cards.map(c=>c.id)).size,1608);assert.ok(cards.every(c=>c.id.startsWith('depth:')&&c.respuesta.includes('Fuente: ')&&c.fuente&&c.paginas_pdf));
  assert.ok(bank.every(q=>!q.id&&q.content_id&&q.EXPLICACION.includes('A. ')&&q.EXPLICACION.includes('D. ')&&q.FUENTE&&q.PAGINAS_PDF));
- assert.equal(bank.filter(q=>q.TEMA==='sangre').length,48);
- const again=await t.merge(cards,'flashcards');assert.equal(again.length,1598);assert.deepEqual(again.map(c=>c.id),cards.map(c=>c.id));
- assert.equal(t.calls(),30,'no persistent private cache in supplement');
+ assert.equal(bank.filter(q=>q.TEMA==='sangre').length,54);
+ const again=await t.merge(cards,'flashcards');assert.equal(again.length,1608);assert.deepEqual(again.map(c=>c.id),cards.map(c=>c.id));
+ assert.equal(t.calls(),32,'no persistent private cache in supplement');
 });
 test('a database row wins over a matching supplement without replacing its identity or student progress',async()=>{
- const t=setup(),cards=await t.merge([],'flashcards'),existing={...cards[0],id:123};const merged=await t.merge([existing],'flashcards');assert.equal(merged.length,1598);assert.equal(merged[0],existing);
+ const t=setup(),cards=await t.merge([],'flashcards'),existing={...cards[0],id:123};const merged=await t.merge([existing],'flashcards');assert.equal(merged.length,1608);assert.equal(merged[0],existing);
 });
 test('four original neural cards get sourced explanations without changing database identities',async()=>{
  const t=setup(),pack=JSON.parse(fs.readFileSync('content/flashcards_morfo_2026.json','utf8')).groups.find(g=>g.tema==='tejido nervioso');
@@ -71,5 +71,5 @@ test('real data loaders merge supplements after pagination and share them with c
  const sessionClient=t.context.getSupabase();t.context.getSupabase=()=>({...sessionClient,from:()=>({select:()=>({order:()=>({range:async()=>({data:[],error:null})})})})});
  vm.runInNewContext(s.slice(s.indexOf('async function loadFlashcards()'),s.indexOf('\nwindow.toggleMenu',s.indexOf('async function loadFlashcards()'))),t.context);
  vm.runInNewContext(s.slice(s.indexOf('let bancoQuestionsPromise = null;'),s.indexOf('async function preloadAppData()',s.indexOf('let bancoQuestionsPromise = null;'))),t.context);
- assert.equal((await t.context.loadFlashcards()).length,1598);assert.equal((await t.context.fetchAllBancoQuestions()).length,78);assert.equal(t.context.simState._cache.length,78);
+ assert.equal((await t.context.loadFlashcards()).length,1608);assert.equal((await t.context.fetchAllBancoQuestions()).length,84);assert.equal(t.context.simState._cache.length,84);
 });

@@ -7,7 +7,7 @@
       "id": "morfo_18_sangre",
       "outline_pdf_page": 706,
       "chapter_review": "pending",
-      "summary_review": "14-page illustrated PDF: original 10 pages plus four targeted depth pages. Full chapter objective review and doctor approval remain pending.",
+      "summary_review": "17-page protected illustrated PDF. First fourteen pages retained; three added searchable pages develop plasma proportions, hemoglobin architecture and EPO/maturation. Full chapter review and teacher approval pending.",
       "independent_exam_coverage": "Two targeted independent six-question application sets (simulation and self-assessment) on reviewed leukocyte/coagulation mechanisms. Full chapter coverage and classroom evaluation expansion remain pending.",
       "objectives": [
         {
@@ -52,8 +52,11 @@
             711,
             712
           ],
-          "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "targeted_expansion_maps": [
+            "morfo_18_sangre__15"
+          ],
+          "status": "targeted_expansion_reviewed_full_objective_review_pending",
+          "reviewed_scope": "Erythroid maturation, reticulocyte RNA, renal EPO signal vs marrow response, conditional feedback and nutrient prerequisites. Not complete hematopoietic lineage review."
         },
         {
           "domain": "Eritrocitos, hemoglobina y cantidades",
@@ -82,8 +85,11 @@
             714,
             719
           ],
-          "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "targeted_expansion_maps": [
+            "morfo_18_sangre__15"
+          ],
+          "status": "targeted_expansion_reviewed_full_objective_review_pending",
+          "reviewed_scope": "Production/maturation and compensation limits only. Clearance, iron recycling and complete disorders still pending."
         },
         {
           "domain": "Grupos ABO, Rh y otros grupos",

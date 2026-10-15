@@ -1,6 +1,6 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const p=require('C:/Users/PC/AppData/Local/npm-cache/_npx/110f701c48e68d66/node_modules/puppeteer-core');
-const slug=process.argv[2]||'sangre',label=slug==='sangre'?'Sangre':'Órganos de los sentidos',count=slug==='sangre'?14:15,qa=slug==='sangre'?'pdf-depth-qa':'pdf-sentidos-depth-qa';
+const slug=process.argv[2]||'sangre',label=slug==='sangre'?'Sangre':'Órganos de los sentidos',count=slug==='sangre'?17:15,qa=slug==='sangre'?'pdf-depth-qa':'pdf-sentidos-depth-qa';
 const root=path.resolve(__dirname,'..'),campus=fs.readFileSync(path.join(root,'campus.html'),'utf8');
 const start=campus.indexOf('<section id="resumenes-screen"'),html=campus.slice(start,campus.indexOf('</section>',start)+10).replace('resumenes-screen hidden','resumenes-screen');
 (async()=>{const browser=await p.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--no-sandbox']});

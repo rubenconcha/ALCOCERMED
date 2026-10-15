@@ -1,0 +1,501 @@
+{
+  "id": "morfo_18_sangre__15",
+  "title": "Eritropoyesis y EPO: señal renal, maduración y regulación",
+  "topic": "Sangre",
+  "sections": [
+    {
+      "title": "Del precursor al eritrocito",
+      "groups": [
+        {
+          "title": "Estructura, función y razonamiento",
+          "items": [
+            {
+              "title": "Producir es una secuencia",
+              "text": "La eritropoyesis forma eritrocitos a partir de precursores hematopoyéticos de médula ósea roja. La secuencia del capítulo incluye multiplicación de precursores, reducción progresiva del tamaño celular, síntesis de hemoglobina y pérdida del núcleo y otros organelos. No describe que un eritrocito maduro circulante se divida para originar otro: la respuesta depende del tejido productor y de etapas de diferenciación.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 714,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El núcleo se pierde antes del eritrocito maduro",
+              "text": "El eritroblasto todavía tiene núcleo y sintetiza hemoglobina durante su desarrollo. Al expulsar el núcleo pasa a la etapa de reticulocito descrita en el capítulo. Por tanto, reticulocito no significa simplemente eritroblasto con un núcleo más pequeño. La distinción permite ordenar las imágenes por una transformación celular concreta, en lugar de clasificarlas solo por el color o el tamaño.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 714,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Una respuesta requiere tiempo",
+              "text": "La formación y maduración celular no son instantáneas. El texto indica que la cifra puede empezar a aumentar unos tres o cuatro días después del estímulo. Es un esquema fisiológico aproximado, no una promesa de recuperación en una fecha exacta para cualquier persona. Aumentar una señal hormonal y disponer de nuevos eritrocitos son sucesos distintos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 715,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Reticulocito y maduración terminal",
+      "groups": [
+        {
+          "title": "Estructura, función y razonamiento",
+          "items": [
+            {
+              "title": "Retículo no es un núcleo",
+              "text": "El reticulocito ya no tiene núcleo, pero conserva ARN ribosomal y grupos de ribosomas residuales, relacionados con el aspecto reticular que da nombre a esta etapa. Ese material residual no debe dibujarse como un segundo núcleo ni confundirse con hebras de ADN nuclear. La célula se encuentra más cerca de la madurez eritrocitaria, pero no ha perdido todavía todo ese residuo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 714,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Salir de médula no termina todo el proceso",
+              "text": "El capítulo sitúa la salida de reticulocitos desde médula hacia la sangre antes de que desaparezcan los últimos grupos de ribosomas. La maduración terminal continúa en circulación, descrita aproximadamente en uno o dos días. Deben distinguirse lugar de producción, momento de liberación y fin de maduración; el esquema simplificado no exige que todo ocurra dentro del vaso o todo dentro del hueso.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 714,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Un dato sobre células jóvenes",
+              "text": "Los reticulocitos aportan información sobre células eritroides recientemente liberadas. El capítulo relaciona su incremento con una respuesta a pérdida de sangre, pero una cifra aislada no determina por sí sola la causa ni el balance final de toda la población eritrocitaria. Para explicar el dato deben considerarse la demanda, la capacidad medular y la escala temporal, no solo llamar alta o baja a una proporción.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 715,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Señal renal y respuesta medular",
+      "groups": [
+        {
+          "title": "Estructura, función y razonamiento",
+          "items": [
+            {
+              "title": "Órgano productor y tejido efector",
+              "text": "En el adulto, el riñón constituye un origen principal de la señal de eritropoyetina, EPO, mientras los precursores eritroides que responden se encuentran en la médula ósea roja. Separar esos lugares evita dos errores: afirmar que el riñón fabrica y libera los eritrocitos maduros, o afirmar que la médula necesita recibir células rojas enviadas por el riñón para comenzar a producirlas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 715,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "La información se refiere a oxigenación",
+              "text": "El circuito relaciona menor disponibilidad de oxígeno para el tejido renal con mayor señal de EPO y estimulación de la producción eritroide. No es un contador renal que mida únicamente cuántos eritrocitos circulan. La disponibilidad de oxígeno depende de más componentes que una cifra celular, de modo que un mismo recuento no describe por sí solo todo el estímulo que recibe el sistema.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 716,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Precisión experimental identificada",
+              "text": "Como complemento al esquema del libro, un estudio de riñones de monos sometidos a hipoxia localizó producción de EPO en células intersticiales. Ese resultado apoya distinguir una función endocrina renal del filtrado de orina. Aquí se identifica como evidencia experimental adicional, no como una medición realizada en estudiantes ni como prueba de la causa de un recuento individual. Referencia: PMID 8857934.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 715,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cerrar el circuito de regulación",
+      "groups": [
+        {
+          "title": "Estructura, función y razonamiento",
+          "items": [
+            {
+              "title": "Cadena causal de la respuesta",
+              "text": "El esquema puede leerse así: disminuye la disponibilidad de oxígeno renal, aumenta la señal de EPO, responden los precursores eritroides y, si el sistema dispone de recursos y funciona, aumenta la producción celular. Es una cadena entre órganos y etapas, no una transformación de la hormona en hemoglobina. Cada eslabón permite preguntar dónde podría limitarse la respuesta de un modelo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 716,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Qué significa retroalimentación negativa",
+              "text": "Si la respuesta mejora el aporte de oxígeno al tejido renal, se reduce el estímulo hipóxico que promovía la señal. La palabra negativa describe que la respuesta tiende a contrarrestar la perturbación inicial. No significa que toda función medular deba detenerse, que desaparezca toda EPO ni que el eritrocito maduro destruya directamente la hormona. El circuito mantiene una producción regulada.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 716,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "El modelo no predice toda la cronología",
+              "text": "La respuesta incluye tiempos de señalización, desarrollo y liberación celular. Por eso no basta medir un componente en un instante para reconstruir todo el circuito. Una explicación debe especificar si habla del modelo general o de una medición concreta. La retroalimentación no justifica afirmar que cada variación de EPO tenga una única causa ni que todos los eslabones cambien al mismo tiempo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 715,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Señal y recursos necesarios",
+      "groups": [
+        {
+          "title": "Estructura, función y razonamiento",
+          "items": [
+            {
+              "title": "Hierro y hemoglobina",
+              "text": "El hierro forma parte del hemo y se necesita para sintetizar hemoglobina. En el circuito, aumentar la demanda de producción no equivale a aportar automáticamente ese material. La señal que estimula una célula y los recursos con que la célula construye sus componentes son variables distintas. El metabolismo detallado del hierro requiere su propio desarrollo; aquí no se establecen dosis ni pautas de suplementación.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 715,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "B12 y folato en proliferación",
+              "text": "El capítulo relaciona vitamina B12 y ácido fólico con la síntesis de ADN y la división rápida durante eritropoyesis. Esa necesidad corresponde a los precursores que proliferan; no significa que un eritrocito maduro sin núcleo se ponga a duplicar ADN. Ubicar la etapa que utiliza cada recurso evita trasladar una función del precursor a la célula ya diferenciada.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 715,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Estimular no garantiza suficiencia",
+              "text": "En un ejercicio, conservar una señal de EPO no demuestra que estén disponibles hierro, vitaminas, precursores funcionales y condiciones adecuadas para completar la producción. Tampoco una respuesta limitada identifica por sí sola cuál de esos componentes falla. El razonamiento debe respetar los datos del caso y separar señal, sustratos y capacidad del tejido efector antes de atribuir una causa específica.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 715,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Aplicar el modelo con sus límites",
+      "groups": [
+        {
+          "title": "Estructura, función y razonamiento",
+          "items": [
+            {
+              "title": "Compensar no es reparar el problema original",
+              "text": "El capítulo utiliza una alteración pulmonar para mostrar que aumentar eritrocitos no repara por sí mismo el tejido que debe oxigenar la sangre. La respuesta compensadora puede persistir sin resolver la causa inicial. Esta relación permite distinguir la acción de un circuito regulador del éxito global de la compensación, sin deducir un diagnóstico ni establecer una conducta de tratamiento a partir del esquema.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 716,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Comparar con el hematocrito",
+              "text": "Un hematocrito mayor puede reflejar cambios en el volumen de plasma, en el volumen eritrocitario o en ambos. Por ello no es una medición exclusiva de eritropoyesis reciente. Un caso que atribuya el aumento a EPO necesita datos compatibles con producción y con su escala temporal. La comparación integra el mapa de plasma sin convertir una proporción de volumen en prueba directa de proliferación medular.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 714,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Tres preguntas para ordenar un caso",
+              "text": "Primero identifica la señal y su origen; después, el tejido que responde y los recursos que utiliza; finalmente, la célula o medición que se observa. Si el ejercicio cambia únicamente el plasma, no has demostrado producción. Si cambia la señal, no has demostrado una respuesta inmediata. Si describe reticulocitos, no has demostrado que hayan recuperado un núcleo. Las conclusiones deben seguir los cambios definidos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 18,
+                "pdfPage": 714,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_18_sangre.webp",
+    "alt": "Riñón y señal EPO hacia médula; eritroblasto nucleado, reticulocito sin núcleo y eritrocito maduro",
+    "download": "/api/mindmap?id=morfo_18_sangre__15&format=image",
+    "filename": "morfo_18_sangre__15-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 18,
+      "pdfPages": [
+        714,
+        715,
+        716
+      ],
+      "kind": "original_synthesis"
+    },
+    "generative_download": true,
+    "practice": {
+      "flashcards": [
+        {
+          "question": "¿Por qué el aumento de producción eritrocitaria depende de precursores y no de la división de eritrocitos maduros?",
+          "answer": "La eritropoyesis forma eritrocitos a partir de precursores hematopoyéticos de médula ósea roja. La secuencia del capítulo incluye multiplicación de precursores, reducción progresiva del tamaño celular, síntesis de hemoglobina y pérdida del núcleo y otros organelos. No describe que un eritrocito maduro circulante se divida para originar otro: la respuesta depende del tejido productor y de etapas de diferenciación.",
+          "pdf_pages": [
+            714
+          ],
+          "subtopic": "Del precursor al eritrocito",
+          "type": "Mecanismo y comparación"
+        },
+        {
+          "question": "¿Qué cambio separa al eritroblasto nucleado del reticulocito?",
+          "answer": "El eritroblasto todavía tiene núcleo y sintetiza hemoglobina durante su desarrollo. Al expulsar el núcleo pasa a la etapa de reticulocito descrita en el capítulo. Por tanto, reticulocito no significa simplemente eritroblasto con un núcleo más pequeño. La distinción permite ordenar las imágenes por una transformación celular concreta, en lugar de clasificarlas solo por el color o el tamaño.",
+          "pdf_pages": [
+            714
+          ],
+          "subtopic": "Del precursor al eritrocito",
+          "type": "Mecanismo y comparación"
+        },
+        {
+          "question": "¿Por qué elevar una señal hormonal no equivale a disponer inmediatamente de nuevos eritrocitos?",
+          "answer": "La formación y maduración celular no son instantáneas. El texto indica que la cifra puede empezar a aumentar unos tres o cuatro días después del estímulo. Es un esquema fisiológico aproximado, no una promesa de recuperación en una fecha exacta para cualquier persona. Aumentar una señal hormonal y disponer de nuevos eritrocitos son sucesos distintos.",
+          "pdf_pages": [
+            715
+          ],
+          "subtopic": "Del precursor al eritrocito",
+          "type": "Mecanismo y comparación"
+        },
+        {
+          "question": "¿Qué representa el retículo del reticulocito y por qué no debe dibujarse como un núcleo?",
+          "answer": "El reticulocito ya no tiene núcleo, pero conserva ARN ribosomal y grupos de ribosomas residuales, relacionados con el aspecto reticular que da nombre a esta etapa. Ese material residual no debe dibujarse como un segundo núcleo ni confundirse con hebras de ADN nuclear. La célula se encuentra más cerca de la madurez eritrocitaria, pero no ha perdido todavía todo ese residuo.",
+          "pdf_pages": [
+            714
+          ],
+          "subtopic": "Reticulocito y maduración terminal",
+          "type": "Mecanismo y comparación"
+        },
+        {
+          "question": "¿Cómo distingues producción medular, liberación y maduración terminal del reticulocito?",
+          "answer": "El capítulo sitúa la salida de reticulocitos desde médula hacia la sangre antes de que desaparezcan los últimos grupos de ribosomas. La maduración terminal continúa en circulación, descrita aproximadamente en uno o dos días. Deben distinguirse lugar de producción, momento de liberación y fin de maduración; el esquema simplificado no exige que todo ocurra dentro del vaso o todo dentro del hueso.",
+          "pdf_pages": [
+            714
+          ],
+          "subtopic": "Reticulocito y maduración terminal",
+          "type": "Mecanismo y comparación"
+        },
+        {
+          "question": "¿Qué diferencia hay entre el origen renal de EPO y el tejido que produce eritrocitos?",
+          "answer": "En el adulto, el riñón constituye un origen principal de la señal de eritropoyetina, EPO, mientras los precursores eritroides que responden se encuentran en la médula ósea roja. Separar esos lugares evita dos errores: afirmar que el riñón fabrica y libera los eritrocitos maduros, o afirmar que la médula necesita recibir células rojas enviadas por el riñón para comenzar a producirlas.",
+          "pdf_pages": [
+            715
+          ],
+          "subtopic": "Señal renal y respuesta medular",
+          "type": "Mecanismo y comparación"
+        },
+        {
+          "question": "¿Por qué el estímulo renal para EPO no puede reducirse a un simple conteo de eritrocitos?",
+          "answer": "El circuito relaciona menor disponibilidad de oxígeno para el tejido renal con mayor señal de EPO y estimulación de la producción eritroide. No es un contador renal que mida únicamente cuántos eritrocitos circulan. La disponibilidad de oxígeno depende de más componentes que una cifra celular, de modo que un mismo recuento no describe por sí solo todo el estímulo que recibe el sistema.",
+          "pdf_pages": [
+            716
+          ],
+          "subtopic": "Señal renal y respuesta medular",
+          "type": "Mecanismo y comparación"
+        },
+        {
+          "question": "¿Qué perturbación contrarresta la retroalimentación negativa del circuito de EPO?",
+          "answer": "Si la respuesta mejora el aporte de oxígeno al tejido renal, se reduce el estímulo hipóxico que promovía la señal. La palabra negativa describe que la respuesta tiende a contrarrestar la perturbación inicial. No significa que toda función medular deba detenerse, que desaparezca toda EPO ni que el eritrocito maduro destruya directamente la hormona. El circuito mantiene una producción regulada.",
+          "pdf_pages": [
+            716
+          ],
+          "subtopic": "Cerrar el circuito de regulación",
+          "type": "Mecanismo y comparación"
+        },
+        {
+          "question": "¿En qué etapa de la eritropoyesis intervienen B12 y folato para síntesis de ADN?",
+          "answer": "El capítulo relaciona vitamina B12 y ácido fólico con la síntesis de ADN y la división rápida durante eritropoyesis. Esa necesidad corresponde a los precursores que proliferan; no significa que un eritrocito maduro sin núcleo se ponga a duplicar ADN. Ubicar la etapa que utiliza cada recurso evita trasladar una función del precursor a la célula ya diferenciada.",
+          "pdf_pages": [
+            715
+          ],
+          "subtopic": "Señal y recursos necesarios",
+          "type": "Mecanismo y comparación"
+        },
+        {
+          "question": "¿Por qué una compensación con más eritrocitos no demuestra que se reparó una alteración pulmonar?",
+          "answer": "El capítulo utiliza una alteración pulmonar para mostrar que aumentar eritrocitos no repara por sí mismo el tejido que debe oxigenar la sangre. La respuesta compensadora puede persistir sin resolver la causa inicial. Esta relación permite distinguir la acción de un circuito regulador del éxito global de la compensación, sin deducir un diagnóstico ni establecer una conducta de tratamiento a partir del esquema.",
+          "pdf_pages": [
+            716
+          ],
+          "subtopic": "Aplicar el modelo con sus límites",
+          "type": "Aplicación"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Una imagen debe representar un reticulocito que acaba de salir de médula. ¿Qué rasgo corresponde?",
+          "options": [
+            "Un núcleo grande que todavía se dividirá en la circulación",
+            "Ausencia de núcleo con ARN y ribosomas residuales",
+            "ADN nuclear distribuido como un segundo núcleo dentro del hemo",
+            "Una plaqueta que se transforma en eritrocito"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Conserva un núcleo que el reticulocito ya ha expulsado; corresponde a una etapa eritroide anterior del esquema.",
+            "Correcto: el retículo residual se relaciona con ARN y ribosomas, y no con la presencia de un núcleo persistente.",
+            "Confunde el residuo citoplasmático descrito con ADN nuclear y mezcla además el hemo con una estructura nuclear.",
+            "El reticulocito pertenece al linaje eritroide; el esquema no describe conversión de una plaqueta en eritrocito."
+          ],
+          "pdf_pages": [
+            714
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Reconocer maduración por un cambio celular, no solo por tamaño."
+        },
+        {
+          "question": "Un estudiante dice que el riñón envía eritrocitos nuevos a la médula. ¿Qué corrección ordena el circuito?",
+          "options": [
+            "La médula fabrica EPO y convierte la orina en eritrocitos",
+            "Los eritrocitos maduros se dividen dentro de los túbulos renales",
+            "El riñón aporta una señal de EPO; la producción eritroide ocurre en médula ósea roja",
+            "El riñón debe enviar sus propios núcleos a los eritrocitos de la sangre"
+          ],
+          "correct": 2,
+          "reasons": [
+            "Intercambia origen de señal y tejido efector, y añade una transformación de orina que no forma parte del circuito.",
+            "El modelo no coloca la producción eritroide en los túbulos ni atribuye división a los eritrocitos maduros.",
+            "Correcto: separa el órgano que participa en la señal hormonal del tejido cuyos precursores responden a ella.",
+            "Los eritrocitos no reciben núcleos renales; este recorrido inventado contradice la maduración descrita."
+          ],
+          "pdf_pages": [
+            715,
+            716
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Diferenciar comunicación hormonal y lugar de producción celular."
+        },
+        {
+          "question": "En el modelo, la respuesta medular mejora el aporte de oxígeno al tejido renal. ¿Qué describe la retroalimentación negativa?",
+          "options": [
+            "Disminuye el estímulo hipóxico que favorecía el aumento de EPO",
+            "La respuesta debe eliminar toda EPO y toda producción basal para siempre",
+            "El oxígeno transforma directamente a EPO en hemoglobina",
+            "La mejora de oxigenación obliga a que aumente sin límite la señal de EPO"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: la respuesta tiende a reducir la perturbación inicial; no exige que desaparezca toda actividad del sistema.",
+            "Convierte regulación en desaparición permanente de la función, una conclusión que no se desprende del circuito.",
+            "La relación es de señalización y respuesta celular; no existe en el esquema esa conversión de hormona en proteína.",
+            "Invierte el sentido del circuito negativo: si mejora el estímulo definido, no se deduce una amplificación ilimitada."
+          ],
+          "pdf_pages": [
+            716
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Seguir causa y efecto al cerrarse un circuito regulador."
+        },
+        {
+          "question": "Un ejercicio mantiene alta la señal de EPO, pero declara limitado un recurso necesario para sintetizar hemoglobina. ¿Qué conclusión respeta esos datos?",
+          "options": [
+            "Toda señal alta garantiza por sí sola la producción máxima de eritrocitos",
+            "EPO reemplaza al hierro en los grupos hemo",
+            "El caso demuestra una causa clínica única aunque no se den más datos",
+            "La señal estimulante no sustituye el recurso; producción y recursos deben considerarse por separado"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Ignora la limitación expresamente definida y transforma la señal hormonal en garantía de suficiencia de todo el proceso.",
+            "La hormona y el hierro no son componentes intercambiables; señalar una demanda no aporta automáticamente material.",
+            "Una limitación conceptual no establece por sí sola etiología individual ni excluye otros eslabones del sistema.",
+            "Correcto: distingue estímulo y capacidad de construcción sin inventar una respuesta ni atribuir un diagnóstico."
+          ],
+          "pdf_pages": [
+            715
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Separar señal, sustratos y respuesta posible del tejido."
+        },
+        {
+          "question": "Dos observaciones se comparan: A solo pierde plasma; B muestra respuesta eritroide tras un intervalo compatible. ¿Cuál inferencia evita confundir mecanismos?",
+          "options": [
+            "Todo aumento de hematocrito demuestra EPO elevada",
+            "La variación de proporción en A no demuestra por sí sola producción de nuevas células",
+            "Las dos observaciones prueban división de eritrocitos maduros en sangre",
+            "Toda respuesta eritroide debe completarse en el instante en que aparece EPO"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Un hematocrito cambia también con el volumen plasmático; no es una medición exclusiva de señal hormonal.",
+            "Correcto: conserva el cambio de denominador de A y no lo convierte sin datos en una respuesta productora medular.",
+            "No se ha descrito división de células maduras; B se relaciona con precursores y A solo modifica el plasma.",
+            "El proceso necesita desarrollo y maduración celular; una señal y una población nueva no aparecen obligatoriamente juntas."
+          ],
+          "pdf_pages": [
+            714,
+            715
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Contrastar proporción inmediata y producción con su escala temporal."
+        },
+        {
+          "question": "Un modelo mantiene un defecto pulmonar que limita la oxigenación y aumenta la producción eritroide. ¿Qué límite ilustra?",
+          "options": [
+            "Compensar el transporte no repara automáticamente el tejido pulmonar alterado",
+            "Aumentar eritrocitos demuestra que el pulmón ya recuperó su estructura",
+            "La existencia de respuesta compensadora elimina cualquier limitación del sistema",
+            "El modelo permite elegir un tratamiento individual sin otras mediciones"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcto: distingue la respuesta de un circuito de la resolución de la alteración que mantiene el estímulo inicial.",
+            "La producción celular no prueba reparación pulmonar; el caso declara que la limitación de origen se mantiene.",
+            "Una respuesta puede ser insuficiente o persistir cuando la causa continúa; responder no equivale a resolver todo.",
+            "El ejercicio explica una relación fisiológica y no aporta datos suficientes para decisiones individuales de tratamiento."
+          ],
+          "pdf_pages": [
+            716
+          ],
+          "difficulty": "medio",
+          "difficulty_reason": "Distinguir compensación y reparación de la causa inicial."
+        }
+      ],
+      "source": "Saladin, cap. 18 · PDF 714–716 (libro 686–688). Síntesis y casos originales.",
+      "review": "Segunda revisión automatizada; aprobación docente pendiente."
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "scope": "Producción eritroide, reticulocito, EPO, retroalimentación y recursos. Sin dosis, diagnóstico individual, vía HIF detallada ni metabolismo completo del hierro."
+  },
+  "supplementary_references": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8857934/",
+      "scope": "Estudio experimental de producción de EPO en células intersticiales de riñones de primates sometidos a hipoxia, etiquetado como complemento."
+    }
+  ]
+}

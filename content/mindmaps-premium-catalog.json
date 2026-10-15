@@ -6342,5 +6342,19 @@
     "acceso_gratis": false,
     "curated": true,
     "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__14.webp"
+  },
+  {
+    "id": "morfo_18_sangre__15",
+    "titulo": "Eritropoyesis y EPO: señal renal, maduración y regulación",
+    "root_title": "Eritropoyesis y EPO: señal renal, maduración y regulación",
+    "materia": "Morfofunción",
+    "tema": "Sangre",
+    "parent_key": "morfo_18_sangre.png",
+    "url_imagen": "premium/morfo_18_sangre__15.json",
+    "descripcion": "Explica etapas eritroides, ARN residual, señal renal, respuesta medular y retroalimentación. Casos sobre recursos y límites de compensación.",
+    "premium": true,
+    "acceso_gratis": false,
+    "curated": true,
+    "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__15.webp"
   }
 ]
