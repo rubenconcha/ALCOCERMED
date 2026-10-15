@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=3">
-<link rel="stylesheet" href="campus-access.css?v=2"><link rel="stylesheet" href="campus-navigation.css?v=3"><link rel="stylesheet" href="campus-home.css?v=5"><link rel="stylesheet" href="campus-topics.css?v=3">
+<link rel="stylesheet" href="campus-access.css?v=2"><link rel="stylesheet" href="campus-navigation.css?v=3"><link rel="stylesheet" href="campus-home.css?v=5"><link rel="stylesheet" href="campus-topics.css?v=4">
     <link rel="stylesheet" href="login-polish.css?v=1">
     <link rel="stylesheet" href="campus-preview.css?v=3">
     <link rel="stylesheet" href="mindmap-viewer.css?v=5">
@@ -850,6 +850,14 @@
                     </button>
                 </div>
 
+                <div class="morfo-topic-simulators entrance-choices" role="group" aria-label="Simulacros de Morfofunción por tema">
+                    <button type="button" id="entrance-morfo-sangre" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('morfo-sangre')" aria-pressed="false">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">MORFOFUNCIÓN · CAPÍTULO 18</span><span class="entrance-choice-radio" aria-hidden="true"></span></span><strong>Sangre</strong><span class="entrance-choice-description">Plasma, células sanguíneas, grupos ABO y Rh, hemostasia y coagulación.</span><span class="entrance-choice-metrics"><span><b>40</b> preguntas</span><span><b>40</b> minutos</span></span><span class="entrance-choice-split">Selección equilibrada de los diez bloques del capítulo.</span>
+                    </button>
+                    <button type="button" id="entrance-morfo-sentidos" class="entrance-choice entrance-choice-premium" onclick="selectEntranceExam('morfo-sentidos')" aria-pressed="false">
+                        <span class="entrance-choice-top"><span class="entrance-choice-tag">MORFOFUNCIÓN · CAPÍTULO 16</span><span class="entrance-choice-radio" aria-hidden="true"></span></span><strong>Órganos de los sentidos</strong><span class="entrance-choice-description">Receptores, tacto, dolor, gusto, olfato, audición, equilibrio y visión.</span><span class="entrance-choice-metrics"><span><b>40</b> preguntas</span><span><b>40</b> minutos</span></span><span class="entrance-choice-split">Selección equilibrada de los diez bloques del capítulo.</span>
+                    </button>
+                </div>
                 <div class="entrance-launch">
                     <div><span>Prueba seleccionada</span><strong id="entrance-selected-name">Simulacro completo</strong><small id="entrance-selected-detail">100 preguntas · 100 minutos</small></div>
                     <button class="btn-primary entrance-start" id="sim-start-btn" onclick="iniciarSimulacro()"><i class="fas fa-play"></i> Comenzar</button>
@@ -996,6 +1004,7 @@
                 </div>
             </div>
 
+            <section class="morfo-topic-evaluations" aria-labelledby="morfo-evaluations-title"><h3 id="morfo-evaluations-title">Evaluaciones de Morfofunción</h3><p>Comprueba lo aprendido en cada tema. Cada evaluación tiene 30 preguntas.</p><div class="entrance-choices"><a id="morfo-eval-sangre" class="entrance-choice" href="/juegos/?code=SANG26"><span class="entrance-choice-tag">CAPÍTULO 18</span><strong>Sangre</strong><span class="entrance-choice-description">De la composición sanguínea a la hemostasia.</span><span class="morfo-eval-action">Abrir evaluación →</span></a><a id="morfo-eval-sentidos" class="entrance-choice" href="/juegos/?code=SENT26"><span class="entrance-choice-tag">CAPÍTULO 16</span><strong>Órganos de los sentidos</strong><span class="entrance-choice-description">Receptores y sentidos generales y especiales.</span><span class="morfo-eval-action">Abrir evaluación →</span></a></div></section>
             <!-- Métricas globales -->
             <div class="eval-metrics-grid">
                 <div class="eval-metric-card">
@@ -1374,7 +1383,7 @@
     <script src="mindmap-detailed-content.js?v=3"></script>
     <script src="mindmap-viewer.js?v=13"></script>
     <script src="intocables-hub.js?v=1"></script>
-    <script src="simulacro-ingreso.js?v=2"></script>
+    <script src="simulacro-ingreso.js?v=3"></script>
     <script src="student-library.js?v=8"></script>
     <script src="study-summaries.js?v=4"></script>
     <script src="past-exams.js?v=4"></script>

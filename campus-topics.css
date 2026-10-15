@@ -110,3 +110,5 @@
     .campus-browser .library-topic-row,
     .campus-browser .library-topic-row .library-topic-action { transition: none; }
 }
+
+.morfo-topic-simulators{margin-top:18px}.morfo-topic-evaluations{margin:22px 0 32px;color:#18263f}.morfo-topic-evaluations h3{font-size:22px;margin:0 0 8px}.morfo-topic-evaluations>p{font-size:14px;color:#60718a;margin:0 0 18px}.morfo-topic-evaluations .entrance-choice{min-height:180px;text-decoration:none;gap:10px}.morfo-topic-evaluations .entrance-choice-tag{align-self:flex-start}.morfo-eval-action{margin-top:auto;color:#1478a6;font-weight:700;font-size:14px}.morfo-topic-evaluations,.morfo-topic-evaluations *{text-transform:none}

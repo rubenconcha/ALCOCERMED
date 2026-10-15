@@ -4,7 +4,9 @@
         full: { title: 'Simulacro completo', minutes: 100, split: [50, 30, 20], demo: true },
         mini: { title: 'Mini simulacro', minutes: 50, split: [25, 15, 10], demo: true },
         'premium-full': { title: 'Nuevo simulacro completo', minutes: 100, split: [50, 30, 20] },
-        'premium-mini': { title: 'Nuevo mini simulacro', minutes: 50, split: [25, 15, 10] }
+        'premium-mini': { title: 'Nuevo mini simulacro', minutes: 50, split: [25, 15, 10] },
+        'morfo-sangre': { title: 'Sangre · Morfofunción', minutes: 40, split: [40, 0, 0], topic: 'sangre', examName: 'Práctica bibliográfica - Morfofunción - Sangre (40 preguntas)' },
+        'morfo-sentidos': { title: 'Órganos de los sentidos · Morfofunción', minutes: 40, split: [40, 0, 0], topic: 'organos de los sentidos', examName: 'Práctica bibliográfica - Morfofunción - Órganos de los sentidos (40 preguntas)' }
     };
     const subjects = ['MORFOFUNCION', 'BIOLOGIA CELULAR', 'SALUD PUBLICA'];
     let selected = 'full';
@@ -40,6 +42,17 @@
             return rows;
         }
         if (CampusAccess.isFree()) { CampusAccess.unlock(); return null; }
+        if (format.examName) {
+            const { data, error } = await getSupabase().from('simulacros').select('*')
+                .eq('nombre', format.examName).order('numero_pregunta', { ascending: true });
+            if (error) throw error;
+            const rows = data || [];
+            verifyDistribution(rows, format);
+            if (rows.some(row => normalized(campo(row, 'tema')) !== normalized(format.topic))) {
+                throw new Error('El simulacro contiene preguntas de otro tema. Intenta de nuevo.');
+            }
+            return rows;
+        }
         const demo = await demoQuestions();
         const used = new Set([...demo.full, ...demo.mini].map(row => normalized(row.pregunta)));
         const bank = await fetchAllBancoQuestions();
@@ -62,6 +75,7 @@
         selected = key;
         Object.keys(formats).forEach(id => {
             const button = document.getElementById('entrance-' + id);
+            if (!button) return;
             button.classList.toggle('is-selected', id === selected);
             button.setAttribute('aria-pressed', String(id === selected));
         });
@@ -99,7 +113,7 @@
             if (!rows) return;
             simState.mode = 'oficial';
             simState.selectedExamen = format.title;
-            simState._oficialesCache = [{ nombre: format.title, materia: 'INTEGRAL' }];
+            simState._oficialesCache = [{ nombre: format.title, materia: format.topic ? 'MORFOFUNCION' : 'INTEGRAL' }];
             simState.duracion = format.minutes;
             simState.nPreguntas = rows.length;
             simState.preguntas = rows;
@@ -133,6 +147,7 @@
         subjects.forEach((subject, index) => {
             const entries = simState.preguntas.map((row, questionIndex) => ({ row, questionIndex }))
                 .filter(entry => normalized(campo(entry.row, 'materia')) === subject);
+            if (!entries.length) return;
             const correct = entries.filter(({ row, questionIndex }) =>
                 'ABCD'[simState.answers[questionIndex].selected] === normalized(campo(row, 'respuesta_correcta'))).length;
             const box = document.createElement('div');
