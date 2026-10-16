@@ -3262,7 +3262,7 @@ function buildSimCircles() {
     var container = document.getElementById('sim-circles');
     if (!container) return;
     container.innerHTML = '';
-    var labels = { MORFOFUNCION: 'Morfofunción', 'BIOLOGIA CELULAR': 'Biología celular', 'SALUD PUBLICA': 'Educación para la Salud' };
+    var labels = { MORFOFUNCION: 'Morfofunción', 'BIOLOGIA CELULAR': 'Biología celular', 'SALUD PUBLICA': 'Educación para la Vida' };
     var currentSubject = '';
     simState.preguntas.forEach(function (question, i) {
         var subject = normalizeDbText(campo(question, 'materia'));
