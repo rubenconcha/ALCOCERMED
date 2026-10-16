@@ -16,12 +16,12 @@ test('partial models obey confirmed chapter ranges and retain traceable original
  }
  const p=require('../api/_simulations/partial-first.json');assert.match(p.questions[99].pregunta,/fundamentación teórica/);assert.match(p.questions[99].fuente,/60–62/);
 });
-test('numbered catalog separates partials and cumulative finals without years or catalog totals',()=>{
+test('numbered catalog preserves partials and cumulative finals with all scopes available',()=>{
  assert.deepEqual(catalog.entries.map(e=>e.title),Array.from({length:8},(_,i)=>'Simulacro '+(i+1)));
  assert.ok(catalog.entries.filter(e=>e.pastId).every(e=>e.scope==='final'));
  const s=fs.readFileSync('simulacro-library.js','utf8'),h=fs.readFileSync('campus.html','utf8');const config=h.slice(h.indexOf('id="sim-config"'),h.indexOf('id="sim-exam"'));
  assert.ok(!config.includes('sim-library-year')&&!config.includes('sim-real-count')&&!config.includes('data-sim-category'));
- assert.ok(!s.includes('visible.length+'));assert.ok(config.includes('data-sim-scope="first"')&&config.includes('data-sim-scope="final"'));
+ assert.ok(config.includes('id="sim-library-scope"'));assert.ok(config.includes('value=""'));assert.ok(config.includes('value="first"')&&config.includes('value="final"'));assert.ok(!config.includes('sim-library-pages'));
 });
 async function call(token,access,id='partial-first'){
  const original=global.fetch;global.fetch=async()=>({ok:true,json:async()=>access});let body=[];const r=new Writable({write(x,e,done){body.push(x);done();}});r.headers={};r.setHeader=(k,v)=>r.headers[k]=v;r.status=n=>{r.code=n;return r;};const done=new Promise(resolve=>r.on('finish',resolve));

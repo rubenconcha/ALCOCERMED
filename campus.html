@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="study-depth.css?v=3">
     <link rel="stylesheet" href="flashcard-workspace.css?v=4">
     <link rel="stylesheet" href="flashcard-approved.css?v=1">
-    <link rel="stylesheet" href="simulacro-library.css?v=2">
+    <link rel="stylesheet" href="simulacro-library.css?v=3">
     <link rel="stylesheet" href="past-exams.css?v=2">
     <link rel="stylesheet" href="topic-evaluations.css?v=1">
     <link rel="stylesheet" href="campus-atlas.css?v=4">
@@ -819,29 +819,18 @@
                     <div>
                         <span class="entrance-eyebrow">PREPARATORIA BEN CARSON · MEDICINA</span>
                         <h2 class="sim-title">Simulacros de ingreso</h2>
-                        <p class="sim-subtitle">Elige tu parcial, selecciona un simulacro y comienza. El tiempo se inicia cuando entras al examen.</p>
+                        <p class="sim-subtitle">Elige un simulacro, practica con tiempo y revisa tus respuestas al terminar.</p>
                     </div>
                 </div>
 
-                <div class="sim-library-hero">
-                    <div><span class="entrance-eyebrow">UN OBJETIVO, UNA PRUEBA</span><h3>Prepárate para tu próximo parcial</h3><p>Elige la etapa que estás estudiando. Cada prueba tiene 100 preguntas y 100 minutos, con revisión al finalizar.</p></div>
-                    <div class="sim-hero-seal" aria-hidden="true"><span>100</span><small>MINUTOS PARA DAR LO MEJOR</small></div>
-                </div>
-                <nav class="sim-library-tabs" aria-label="Elegir parcial">
-                    <button type="button" data-sim-scope="first" aria-pressed="true"><span class="sim-stage-number">01</span><span><b>Primer parcial</b><small>Construye tus bases</small></span><span aria-hidden="true">↗</span></button>
-                    <button type="button" data-sim-scope="second" aria-pressed="false"><span class="sim-stage-number">02</span><span><b>Segundo parcial</b><small>Avanza al siguiente bloque</small></span><span aria-hidden="true">↗</span></button>
-                    <button type="button" data-sim-scope="final" aria-pressed="false"><span class="sim-stage-number">03</span><span><b>Examen final</b><small>Integra todo el programa</small></span><span aria-hidden="true">↗</span></button>
-                </nav>
-                <div class="sim-scope-panel"><div><span class="entrance-eyebrow">LO QUE VAS A PRACTICAR</span><h3 id="sim-scope-title">Primer parcial</h3><p id="sim-scope-description"></p></div><span class="sim-scope-badge">Temario por etapa</span></div>
                 <div class="sim-library-filters">
-                    <label>Busca tu simulacro<input id="sim-library-search" type="search" placeholder="Por ejemplo: Simulacro 1" autocomplete="off"></label>
-                    <button type="button" id="sim-library-reset">Limpiar búsqueda</button>
+                    <label for="sim-library-search">buscar simulacro<input id="sim-library-search" type="search" placeholder="Por ejemplo: Simulacro 3" autocomplete="off"></label>
+                    <label for="sim-library-scope">parcial<select id="sim-library-scope"><option value="">todos los parciales</option><option value="first">primer parcial</option><option value="second">segundo parcial</option><option value="final">examen final</option></select></label>
+                    <p id="sim-library-status" role="status" aria-live="polite">Cargando simulacros…</p>
                 </div>
-                <p id="sim-library-status" role="status" aria-live="polite">Preparando tus pruebas…</p>
                 <div id="sim-library-list" class="entrance-choices" role="group" aria-label="Elegir simulacro completo"></div>
-                <nav id="sim-library-pages" class="sim-library-pages" aria-label="Páginas de simulacros"><button type="button" id="sim-library-prev">← Anterior</button><span id="sim-library-page"></span><button type="button" id="sim-library-next">Siguiente →</button></nav>
                 <p class="sim-library-provenance">Los modelos por parcial siguen su bloque de estudio. El final es acumulativo. Puedes consultar los documentos originales en Exámenes pasados.</p>
-                <div class="entrance-launch">
+                <div class="entrance-launch" hidden>
                     <div><span>Prueba seleccionada</span><strong id="entrance-selected-name">Simulacro completo</strong><small id="entrance-selected-detail">100 preguntas · 100 minutos</small></div>
                     <button class="btn-primary entrance-start" id="sim-start-btn" onclick="iniciarSimulacro()"><i class="fas fa-play"></i> Comenzar</button>
                 </div>
@@ -1377,7 +1366,7 @@
     <script src="study-assessments.js?v=2"></script>
     <script src="simulation-scope.js?v=1"></script>
     <script src="simulacro-ingreso.js?v=7"></script>
-    <script src="simulacro-library.js?v=2"></script>
+    <script src="simulacro-library.js?v=3"></script>
     <script src="student-library.js?v=10"></script>
     <script src="flashcard-workspace.js?v=3"></script>
     <script src="study-summaries.js?v=8"></script>
