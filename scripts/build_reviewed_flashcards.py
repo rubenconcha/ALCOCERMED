@@ -5,6 +5,7 @@ under api/_flashcards and are blocked from direct requests by the deployment con
 """
 from __future__ import annotations
 import argparse
+from collections import Counter
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -50,6 +51,20 @@ def build(pdf_dir=None):
                     landmarks.append(('appendix', page_index))
             for position, (label, start) in enumerate(landmarks[:-1]):
                 chapter_bounds[label] = (start, landmarks[position + 1][1] - 1)
+        elif doc and source_id == 'biologia':
+            covers = []
+            for sheet in doc:
+                text = sheet.get_text()
+                cover = re.search(r'CAPÍTULO\s+(\d+)', text)
+                if cover and len(text) < 100:
+                    covers.append((normalized('Capítulo ' + cover.group(1)), sheet.number + 1))
+            if len(covers) != 18:
+                raise ValueError('No se identificaron los 18 capítulos de Biología')
+            index_start = next(sheet.number + 1 for sheet in doc
+                               if sheet.number + 1 > covers[-1][1] and 'Índice alfabético' in sheet.get_text())
+            covers.append(('index', index_start))
+            for position, (label, start) in enumerate(covers[:-1]):
+                chapter_bounds[label] = (start, covers[position + 1][1] - 1)
         chapter_names = set()
         for chapter in payload['chapters']:
             if not chapter['title'] or not chapter['topic'] or not chapter['cards']:
@@ -71,7 +86,7 @@ def build(pdf_dir=None):
                 if not question.startswith('¿') or not question.endswith('?') or len(question) < 12 or len(question.split()) > 35:
                     raise ValueError('Pregunta incompleta: ' + item_id)
                 words = len(answer.split())
-                if not answer or words > 55 or '\ufffd' in question + answer:
+                if not answer or words > 25 or '\ufffd' in question + answer:
                     raise ValueError('Respuesta demasiado larga o dañada: ' + item_id)
                 if answer.casefold().strip(' .!') in {'sí', 'si', 'no'}:
                     raise ValueError('Respuesta sin criterio ni aclaración: ' + item_id)
@@ -91,6 +106,10 @@ def build(pdf_dir=None):
                             raise ValueError('La página pertenece a otro capítulo: ' + item_id)
                 elif source_id == 'biologia' and page != pdf_page:
                     raise ValueError('Numeración de Biología incorrecta: ' + item_id)
+                if doc and source_id == 'biologia':
+                    bounds = chapter_bounds.get(normalized(label))
+                    if not bounds or not bounds[0] <= pdf_page <= bounds[1]:
+                        raise ValueError('La página pertenece a otro capítulo: ' + item_id)
                 evidence = item.get('evidence')
                 if not evidence:
                     raise ValueError('Falta evidencia: ' + item_id)
@@ -127,11 +146,16 @@ def build(pdf_dir=None):
                       'source_sha256': sha256(source_path.read_bytes()).hexdigest(), 'visually_verified_cards': image_count,
                       'pdf_sha256': sha256((pdf_dir / source['filename']).read_bytes()).hexdigest() if pdf_dir else None})
     output = {'schema': 'official-flashcards-v1', 'version': '2026-10-16', 'cards': cards, 'catalog': topics}
+    subtopics = Counter((c['materia'], c['tema'], c['subtema']) for c in cards)
+    thin = [(key, count) for key, count in subtopics.items() if count < 3]
+    if thin:
+        raise ValueError('Subtemas con menos de tres tarjetas: ' + str(thin))
     target = ROOT / 'api' / '_flashcards' / 'library.json'
-    target.write_text(json.dumps(output, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    target.write_text(json.dumps(output, ensure_ascii=False, separators=(',', ':')), encoding='utf-8', newline='\n')
     report = {'version': output['version'], 'verified_against_pdf': bool(pdf_dir), 'total_cards': len(cards), 'total_topics': len(topics),
+              'total_subtopics': len(subtopics), 'minimum_cards_per_subtopic': min(subtopics.values()),
               'subjects': stats, 'topics': topics, 'library_sha256': sha256(target.read_bytes()).hexdigest()}
-    (ROOT / 'api' / '_flashcards' / 'audit.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+    (ROOT / 'api' / '_flashcards' / 'audit.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     print(json.dumps({k: v for k, v in report.items() if k != 'topics'}, ensure_ascii=False, indent=2))
 
 

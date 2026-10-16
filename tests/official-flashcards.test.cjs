@@ -73,10 +73,23 @@ test('the final library covers all 68 topics with short answers, complete chapte
   assert.deepEqual([...new Set(cards.map(c=>c.tema))].sort(),[...new Set(original.groups.map(g=>g.tema))].sort(),'every original topic remains covered');
   assert.equal(cards.length,authored.chapters.reduce((sum,ch)=>sum+ch.cards.length,0));
   assert.ok(cards.every(c=>!Object.hasOwn(c,'free_sample')),'free access is decided by the existing server policy');
-  assert.ok(cards.every(c=>c.respuesta.split(/\s+/).length<=55&&c.chapter_title&&c.reference.includes(c.chapter_title)&&c.page&&c.pdf_page));
+  assert.ok(cards.every(c=>c.respuesta.split(/\s+/).length<=25&&c.chapter_title&&c.reference.includes(c.chapter_title)&&c.page&&c.pdf_page));
   assert.ok(cards.every(c=>!c.reference.includes('página impresa')&&!c.reference.includes('rango del capítulo')));
  }
  for(const topic of data.catalog){assert.equal(topic.count,data.cards.filter(c=>c.materia===topic.materia&&c.tema===topic.tema).length);}
+});
+
+test('every selectable subtopic has several distinct cards and the published count matches its coverage audit',()=>{
+ const data=JSON.parse(fs.readFileSync(path.join(ROOT,'api/_flashcards/library.json'),'utf8'));
+ const audit=JSON.parse(fs.readFileSync(path.join(ROOT,'api/_flashcards/audit.json'),'utf8'));
+ const groups=new Map();
+ for(const card of data.cards){const key=[card.materia,card.tema,card.subtema].join('|');groups.set(key,(groups.get(key)||0)+1);}
+ assert.equal(audit.total_subtopics,groups.size);
+ assert.equal(audit.minimum_cards_per_subtopic,Math.min(...groups.values()));
+ for(const [key,count] of groups)assert.ok(count>=3,key+' contains only '+count+' cards');
+ assert.ok(data.cards.filter(c=>c.official_source==='morfo').length>984);
+ assert.ok(data.cards.filter(c=>c.official_source==='biologia').length>593);
+ assert.ok(data.cards.filter(c=>c.official_source==='salud').length>451);
 });
 test('source-specific corrections survive rebuilding the three subjects',()=>{
  const data=JSON.parse(fs.readFileSync(path.join(ROOT,'api/_flashcards/library.json'),'utf8')).cards;

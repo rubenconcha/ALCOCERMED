@@ -18,8 +18,12 @@ const root=path.resolve(__dirname,'..');
  });
  await page.goto('http://127.0.0.1:8765/campus.html',{waitUntil:'networkidle'});
  const libraryPath=path.join(root,'api/_flashcards/library.json');
- const sample=fs.existsSync(libraryPath)?JSON.parse(fs.readFileSync(libraryPath,'utf8')).cards.find(c=>c.materia==='MORFOFUNCION'&&c.tema==='medula espinal y reflejos'):{id:'qa',materia:'MORFOFUNCION',tema:'sistema endocrino',pregunta:'¿Qué causa la acromegalia en adultos?',respuesta:'La hipersecreción de somatotropina (GH).',subtema:'Trastornos endocrinos',reference:'Saladin · Anatomía y fisiología · Capítulo 17: Sistema endocrino · pág. 668'};
- await page.evaluate(card=>{currentUser={id:'qa-only'};document.body.classList.remove('login-active');document.getElementById('login-screen').classList.add('hidden');document.querySelectorAll('.login-checking').forEach(e=>e.remove());startDeck(card.tema,card.materia,[card]);},sample);
+ const cards=JSON.parse(fs.readFileSync(libraryPath,'utf8')).cards.filter(c=>c.materia==='MORFOFUNCION'&&c.tema==='medula espinal y reflejos');
+ assert.ok(cards.length>1);
+ await page.evaluate(rows=>{currentUser={id:'qa-only'};document.body.classList.remove('login-active');document.getElementById('login-screen').classList.add('hidden');document.querySelectorAll('.login-checking').forEach(e=>e.remove());startDeck(rows[0].tema,rows[0].materia,rows);document.body.append(document.createElement('vercel-live-feedback'));},cards);
+ const sample=await page.evaluate(()=>deck[currentIndex]);
+ assert.equal(await page.locator('vercel-live-feedback').evaluate(e=>getComputedStyle(e).display),'none');
+ assert.equal(await page.locator('#card-total').innerText(),String(cards.length));
  const directory=path.join(root,'tmp','official-flashcards-qa');fs.mkdirSync(directory,{recursive:true});
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:1100});await page.waitForTimeout(400);
@@ -33,6 +37,15 @@ const root=path.resolve(__dirname,'..');
   await page.screenshot({path:path.join(directory,'answer-'+width+'.png'),fullPage:true});
   await page.evaluate(()=>renderCard());
  }
+ const groups=[...new Set(cards.map(c=>c.subtema))];
+ for(const section of groups){
+  const expected=cards.filter(c=>c.subtema===section).length;
+  await page.locator('#flashcard-subtopic').selectOption(section);
+  assert.equal(await page.locator('#card-total').innerText(),String(expected));
+  assert.match(await page.locator('#flashcard-subtopic option:checked').innerText(),new RegExp(' · '+expected+' tarjetas$'));
+ }
+ await page.locator('#flashcard-subtopic').selectOption('');
+ assert.equal(await page.locator('#card-total').innerText(),String(cards.length));
  assert.deepEqual(errors,[]);
  await browser.close();
  console.log('PC and mobile study flow passed.');

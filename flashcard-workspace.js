@@ -39,9 +39,11 @@
    if(!pending||name!==topic||materia!==subject){mode='due';subtopic='';}
    pending=false;topic=name;subject=materia;all=cards;owner=typeof currentUser==='undefined'?null:currentUser?.id;
    modeSelect.value=mode;
-   const groups=[...new Set(cards.map(c=>value(c,'subtema')||'Base del tema'))];
+   const groups=new Map();
+   for(const card of cards){const label=value(card,'subtema')||'Base del tema';groups.set(label,(groups.get(label)||0)+1);}
    subSelect.replaceChildren();
-   for(const label of ['Todos los subtemas',...groups]){const o=document.createElement('option');o.value=label==='Todos los subtemas'?'':label;o.textContent=label;subSelect.append(o);}
+   const every=document.createElement('option');every.value='';every.textContent='Todos los subtemas · '+cards.length;subSelect.append(every);
+   for(const [label,count] of groups){const o=document.createElement('option');o.value=label;o.textContent=label+' · '+count+' tarjetas';subSelect.append(o);}
    subSelect.value=subtopic;
    const filtered=cards.filter(c=>!subtopic||(value(c,'subtema')||'Base del tema')===subtopic);
    const due=filtered.filter(isCardDue).length;
