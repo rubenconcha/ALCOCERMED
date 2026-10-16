@@ -3178,7 +3178,7 @@ function renderSimQuestion() {
     document.getElementById('sim-cur-num').textContent = idx + 1;
     document.getElementById('sim-exam-section').textContent = ({
         MORFOFUNCION: 'Morfofunción', 'BIOLOGIA CELULAR': 'Biología celular',
-        'SALUD PUBLICA': 'Educación para la Salud'
+        'SALUD PUBLICA': 'Educación para la Vida'
     })[normalizeDbText(campo(q, 'materia'))] || (simState.mode === 'pasado' ? 'Examen pasado' : 'Simulacro');
     document.getElementById('sim-answered-count').textContent =
         simState.answers.filter(function (answer) { return answer.selected !== null; }).length +

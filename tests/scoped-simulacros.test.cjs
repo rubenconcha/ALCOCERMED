@@ -6,6 +6,7 @@ test('partial models obey confirmed chapter ranges and retain traceable original
   const originals=require('../api/_past_exams/2025-2026-'+(stage==='first'?1:2)+'.json');
   for(const q of p.questions.filter(q=>q.source_question_id)){
    const original=originals.questions.find(o=>o.id===q.source_question_id);assert.ok(original);
+   if(q.adaptation){assert.ok(q.adaptation.length>10);continue;}
    assert.deepEqual(q.respuestas_aceptadas,original.respuestas_aceptadas);assert.equal(q.pregunta,original.pregunta);
    // Exact original question and options are checked without relying on a language-specific serializer hash.
    for(const l of ['a','b','c','d','e'])assert.equal(q['opcion_'+l],original['opcion_'+l]);
@@ -18,7 +19,7 @@ test('partial models obey confirmed chapter ranges and retain traceable original
 });
 test('numbered catalog preserves partials and cumulative finals with all scopes available',()=>{
  assert.deepEqual(catalog.entries.map(e=>e.title),Array.from({length:8},(_,i)=>'Simulacro '+(i+1)));
- assert.ok(catalog.entries.filter(e=>e.pastId).every(e=>e.scope==='final'));
+ assert.ok(catalog.entries.every(e=>e.demo||e.curatedId));assert.ok(!catalog.entries.some(e=>e.pastId));
  const s=fs.readFileSync('simulacro-library.js','utf8'),h=fs.readFileSync('campus.html','utf8');const config=h.slice(h.indexOf('id="sim-config"'),h.indexOf('id="sim-exam"'));
  assert.ok(!config.includes('sim-library-year')&&!config.includes('sim-real-count')&&!config.includes('data-sim-category'));
  assert.ok(config.includes('id="sim-library-scope"'));assert.ok(config.includes('value=""'));assert.ok(config.includes('value="first"')&&config.includes('value="final"'));assert.ok(!config.includes('sim-library-pages'));
@@ -29,7 +30,7 @@ async function call(token,access,id='partial-first'){
 }
 test('scoped full questions require active paid/admin access; raw source path is blocked',async()=>{
  assert.equal((await call()).status,401);assert.equal((await call('free',{ready:true,premium:false})).status,403);
- for(const id of ['partial-first','partial-second']){const r=await call('paid',{ready:true,premium:true},id);assert.equal(r.status,200);assert.equal(r.headers['Cache-Control'],'private, no-store');assert.ok(scope.validate(JSON.parse(r.body),id.split('-')[1]));}
+ for(const id of ['partial-first','partial-second','final-3','final-4','final-5','final-6','final-8']){assert.equal((await call('free',{ready:true,premium:false},id)).status,403);const r=await call('paid',{ready:true,premium:true},id);assert.equal(r.status,200);assert.equal(r.headers['Cache-Control'],'private, no-store');assert.ok(scope.validate(JSON.parse(r.body),id.startsWith('final-')?'final':id.split('-')[1]));}
  assert.equal((await call('paid',{ready:true,premium:true},'../../config')).status,404);
  assert.ok(require('../vercel.json').rewrites.some(r=>r.source==='/api/_simulations/:path*'));
 });

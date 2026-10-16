@@ -10,7 +10,7 @@
 .sim-library-card p{color:#607694;font-size:.88rem;margin:8px 0}
 .sim-library-card .sim-library-description{font-size:.76rem;line-height:1.6}
 .sim-library-card .sim-library-access{font-size:.72rem;margin-bottom:22px}
-.sim-library-card .btn-primary{margin-top:auto;min-height:46px;width:100%;font-size:.86rem;color:#192840!important}
+.sim-library-card .btn-primary{margin-top:24px;min-height:46px;width:100%;font-size:.86rem;color:#192840!important}
 .sim-library-card .btn-primary:disabled{opacity:.65;cursor:wait}
 .sim-library-empty{grid-column:1/-1;padding:24px;background:#fff;border:1px solid #d9e5f0;border-radius:16px;color:#607694}
 .sim-library-retry{font:inherit;padding:12px 18px;background:#fff;border:1px solid #d6e1ec;border-radius:12px;color:#192840;cursor:pointer}

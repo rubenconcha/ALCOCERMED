@@ -6,15 +6,13 @@
  const locked=e=>!e.demo&&!e.free&&CampusAccess.isFree();
  function render(){
   const query=normalize($('sim-library-search').value),scope=$('sim-library-scope').value;
-  const visible=entries.filter(e=>(!scope||e.scope===scope)&&normalize(e.title+' '+e.type+' '+e.description).includes(query));
+   const visible=entries.filter(e=>(!scope||e.scope===scope)&&normalize(e.title+' '+e.type).includes(query));
   list.replaceChildren();
   for(const e of visible){
    const card=document.createElement('article');card.id='entrance-'+e.key;card.dataset.examKey=e.key;card.className='sim-library-card';
    const tag=document.createElement('span');tag.className='sim-library-stage';tag.textContent=e.type;
    const title=document.createElement('h3');title.textContent=e.title;
    const metrics=document.createElement('p');metrics.textContent='100 preguntas · '+e.minutes+' minutos';
-   const description=document.createElement('p');description.className='sim-library-description';description.textContent=e.description;
-   const access=document.createElement('p');access.className='sim-library-access';access.textContent=e.demo?'Acceso abierto':locked(e)?'Con tu plan de estudio':'Revisión de respuestas al finalizar';
    const button=document.createElement('button');button.type='button';button.className='btn-primary';button.textContent='realizar simulacro →';button.setAttribute('aria-label','Realizar '+e.title+' · '+e.type);button.disabled=launchPending;
    button.addEventListener('click',async()=>{
     if(launchPending)return;
@@ -23,7 +21,7 @@
     launchPending=true;list.querySelectorAll('button').forEach(b=>b.disabled=true);button.textContent='Preparando preguntas…';
     try{await iniciarSimulacro();}finally{launchPending=false;render();}
    });
-   card.append(tag,title,metrics,description,access,button);list.append(card);
+   card.append(tag,title,metrics,button);list.append(card);
   }
   $('sim-library-status').textContent=visible.length+' '+(visible.length===1?'simulacro':'simulacros');
   if(!visible.length){const empty=document.createElement('p');empty.className='sim-library-empty';empty.textContent='No encontramos simulacros para esta búsqueda. Prueba otro nombre o parcial.';list.append(empty);}

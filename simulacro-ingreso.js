@@ -1,8 +1,8 @@
 'use strict';
 (() => {
     const formats = {
-        full: { title: 'Simulacro 7', minutes: 100, split: [50, 30, 20], demo: true },
-        'premium-full': { title: 'Simulacro 8', minutes: 100, split: [50, 30, 20] },
+        full: { title: 'Simulacro 7', minutes: 100, split: [50, 30, 20], scope: 'final', demo: true },
+        'premium-full': { title: 'Simulacro 8', minutes: 100, split: [50, 30, 20], curatedId: 'final-8', scope: 'final' },
         'morfo-sangre': { title: 'Sangre · Morfofunción', minutes: 40, split: [40, 0, 0], topic: 'sangre', examName: 'Práctica bibliográfica - Morfofunción - Sangre (40 preguntas)' },
         'blood-depth-simulation': { title: 'Sangre · Casos razonados', minutes: 8, split: [6, 0, 0], topic: 'sangre', depthSet: 'simulation' },
         'blood-depth-evaluation': { title: 'Sangre · Autoevaluación de mecanismos', minutes: 8, split: [6, 0, 0], topic: 'sangre', depthSet: 'evaluation' },
@@ -24,7 +24,7 @@
         ['a', 'b', 'c', 'd'].every(letter => String(campo(row, 'opcion_' + letter) || '').trim());
 
     async function demoQuestions() {
-        if (!demoPromise) demoPromise = fetch('/content/simulacros_demo_2026.json', { cache: 'force-cache' })
+        if (!demoPromise) demoPromise = fetch('/content/simulacros_demo_2026.json?v=2', { cache: 'no-cache' })
             .then(response => { if (!response.ok) throw new Error('No se pudo cargar el simulacro de prueba.'); return response.json(); })
             .catch(error => { demoPromise = null; throw error; });
         return demoPromise;
@@ -67,6 +67,7 @@
             const bank = await demoQuestions();
             const rows = bank.full;
             verifyDistribution(rows, format);
+            if(!SimulationScope.validate({scope:'final',duration:100,questions:rows},'final'))throw new Error('El simulacro no cumple la distribución 50/30/20 o el temario.');
             return rows;
         }
         if (CampusAccess.isFree()) { CampusAccess.unlock(); return null; }
@@ -87,28 +88,7 @@
             }
             return rows;
         }
-        const demo = await demoQuestions();
-        const used = new Set([...demo.full, ...demo.mini].map(row => normalized(row.pregunta)));
-        const bank = await fetchAllBancoQuestions();
-        const result = [];
-        subjects.forEach((subject, index) => {
-            const seen = new Set();
-            const pool = shuffleArray(bank.filter(row => normalized(campo(row, 'materia')) === subject && validQuestion(row) &&
-                !used.has(normalized(campo(row, 'pregunta'))) && !seen.has(normalized(campo(row, 'pregunta'))) &&
-                seen.add(normalized(campo(row, 'pregunta')))));
-            const groups=new Map();
-            for(const row of pool){const topic=normalized(campo(row,'tema'));if(!topic)continue;if(!groups.has(topic))groups.set(topic,[]);groups.get(topic).push(row);}
-            const chosen=[];
-            while(chosen.length<format.split[index]){
-                let added=false;
-                for(const group of groups.values()){if(group.length&&chosen.length<format.split[index]){chosen.push(group.shift());added=true;}}
-                if(!added)break;
-            }
-            if(new Set(chosen.map(q=>normalized(campo(q,'tema')))).size < [29,18,20][index])throw new Error('Faltan temas del programa para preparar un final equilibrado. Reintenta cuando termine de cargar el banco.');
-            result.push(...chosen);
-        });
-        verifyDistribution(result, format);
-        return result;
+        throw new Error('Este formato de simulacro no está disponible.');
     }
 
     window.selectEntranceExam = function (key) {
@@ -217,7 +197,7 @@
             const box = document.createElement('div');
             const label = document.createElement('span');
             const number = document.createElement('strong');
-            label.textContent = ['Morfofunción', 'Biología celular', 'Educación para la Salud'][index];
+            label.textContent = ['Morfofunción', 'Biología celular', 'Educación para la Vida'][index];
             number.textContent = `${correct} / ${entries.length}`;
             box.append(label, number);
             root.append(box);

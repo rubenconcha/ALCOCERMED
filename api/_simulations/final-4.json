@@ -1,0 +1,2572 @@
+{
+  "id": "final-4",
+  "scope": "final",
+  "title": "Simulacro 4",
+  "duration": 100,
+  "questions": [
+    {
+      "id": "2023-2024-3-1",
+      "numero_original": 1,
+      "pregunta": "Los huesos faciales:\n1.- Por el foramen incisivo se transportan ramos del nervio nasopalatino y vasos sanguíneos del palatino mayor.\n2.- El foramen infraorbitario del hueso maxilar da paso a un ramo del nervio mandibular del trigémino.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-1",
+      "source_sha256": "5effb861959dbd64105be1aa100c4170e70bd598e9b941e0282a29116e03ca26",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 1,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-2",
+      "numero_original": 2,
+      "pregunta": "La información visual en la retina:\n1.- Los neurotransmisores liberados por los conos y bastones inducen potenciales locales graduados.\n2.- En el ojo izquierdo hay 1 millón de células ganglionares.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-2",
+      "source_sha256": "ae24cdabb1375f813de985aa32e87de000b5992c9e0b2c629aba6174bd854596",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 2,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
+    },
+    {
+      "id": "2023-2024-3-3",
+      "numero_original": 3,
+      "pregunta": "La función de los fotorreceptores:\n1.- En la fase de isomerización el trans-retinal vuelve a ser cis-retinal.\n2.- En la fase de regeneración actúa la enzima retinal isomerasa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-3",
+      "source_sha256": "9f521aef183e4766fec9132d9a330255f20cfea36ea393a9699a6e92c70f9c33",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 3,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
+    },
+    {
+      "id": "2023-2024-3-4",
+      "numero_original": 4,
+      "pregunta": "Los uréteres:\n1.- Los uréteres son intraperitoneales al igual que los riñones.\n2.- En la entrada de cada uréter en la vejiga hay una válvula anatómica que evita el reflujo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-4",
+      "source_sha256": "9acede93bb13d2ba9700384ba784a3019ad65619c48e1c5d29b9ffd678d69ed1",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 23,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 4,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 23"
+    },
+    {
+      "id": "2023-2024-3-5",
+      "numero_original": 5,
+      "pregunta": "Respecto al antebrazo:\n1.- El extremo distal del cúbito se articula con el semilunar, escafoides, piramidal.\n2.- Proximalmente la cabeza del radio se articula con la escotadura radial del cúbito.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-5",
+      "source_sha256": "2ff3aabdab382a011c2dd4af561438cfebb73274ded11c5a2b1357e33efe2713",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 5,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-6",
+      "numero_original": 6,
+      "pregunta": "Los líquidos corporales:\n1.- El plasma es el líquido extracelular dentro los vasos sanguíneos.\n2.- El líquido intersticial llena los espacios entre las células de los tejidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-6",
+      "source_sha256": "063c189746f846b864bace3d8617d81cfb2af151fc12d88d2daacef98f6be159",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 24,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 6,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 24"
+    },
+    {
+      "id": "2023-2024-3-7",
+      "numero_original": 7,
+      "pregunta": "A formación reticular:\n1.- El SARA recibe aferencias de los ojos, los oídos.\n2.- El ESARA no recibe impulsos para los receptores del sentido del olfato.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-7",
+      "source_sha256": "769b92f7b0cb71085267ec98722c60286f4477ef4b795891a1b63e5c38fc7b04",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 7,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 14"
+    },
+    {
+      "id": "2023-2024-3-8",
+      "numero_original": 8,
+      "pregunta": "En el intestino delgado:\n1.- Las glándulas de Brunner secretan mucus ayudando a neutralizar el jugo gástrico.\n2.- Los pliegues circulares son plegamientos de la lámina propia de la mucosa y la submucosa intestinal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-8",
+      "source_sha256": "465b0bfc77937265704636d8839b6dc6b548c361b8d63610eece52994e410190",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 25,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 8,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 25"
+    },
+    {
+      "id": "2023-2024-3-9",
+      "numero_original": 9,
+      "pregunta": "El pericardio:\n1.- El pericardio fibroso compuesto por tejido conectivo denso regular.\n2.- El pericardio fibroso en la punta del corazón está fusionado al diafragma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-9",
+      "source_sha256": "1ec3af92b87825b594ffddb890ef1d788bb59420cd7afdfabe2a23072c37294f",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 19,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 9,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 19"
+    },
+    {
+      "id": "2023-2024-3-10",
+      "numero_original": 10,
+      "pregunta": "En la mujer la hormona luteinizante:\n1.- Promueve la gametogénesis.\n2.- Estimula la ovulación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-10",
+      "source_sha256": "3de8b56265c3ff2d4b08379b993bc460dcdfa12ac90b5451e686758ca738a08c",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 28,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 10,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 28"
+    },
+    {
+      "id": "2023-2024-3-11",
+      "numero_original": 11,
+      "pregunta": "Respecto a las glándulas suprarrenales:\n1.- Los glucocorticoides estimulan la degradación de los triglicéridos.\n2.- Los glucocorticoides aceleran la glucólisis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-11",
+      "source_sha256": "ddbc8486454c1a46dcd8734bffbfc969f6afe62920b1340beabf5617850e6bee",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 11,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 17"
+    },
+    {
+      "id": "2023-2024-3-12",
+      "numero_original": 12,
+      "pregunta": "La reabsorción en el asa de Henle:\n1.- Se reabsorbe sodio y potasio en 20 a 30% por cotransportadores en su rama ascendente.\n2.- Se reabsorbe coro y carbonato en un 35% principalmente por difusión facilitada.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-12",
+      "source_sha256": "7ac5ba55cb4abf411f82da66adf841292bfeb8c230443a8dd01d867e2d728d19",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 23,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 12,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 23"
+    },
+    {
+      "id": "2023-2024-3-13",
+      "numero_original": 13,
+      "pregunta": "Las válvulas cardiacas semilunares:\n1.- Las valvas semilunares se unen a la pared arterial por su borde convexo externo.\n2.- El ventrículo se relaja, la sangre empuja las cúspides valvulares y las válvulas semilunares se cierran.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-13",
+      "source_sha256": "786f782e32dea51881c881a05f4c068fcbf4bdd6894e20ae74203b9184e425c7",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 19,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 13,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 19"
+    },
+    {
+      "id": "2023-2024-3-14",
+      "numero_original": 14,
+      "pregunta": "El potencial de acción de la fibra contráctil:\n1.- La despolarización rápida se produce cuando se abren los canales rápidos dependientes de voltaje.\n2.- La despolarización sostenida se produce cuando se abren los canales de calcio lentos con compuerta de voltaje y algunos canales de potasio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-14",
+      "source_sha256": "63e46be72081e9bcd2e9d5e68cf675a045327f8e2f207258514416f682b5dd6c",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 19,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 14,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 19"
+    },
+    {
+      "id": "2023-2024-3-15",
+      "numero_original": 15,
+      "pregunta": "Los senos paranasales:\n1.- Aumentan el área de superficie de la mucosa nasal.\n2.- Para el momento del nacimiento están totalmente formados.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-15",
+      "source_sha256": "c15677a56e3330be799aff1221117f0825a27b6f6f45b34e00b9d8ffdc676f32",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 15,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-16",
+      "numero_original": 16,
+      "pregunta": "Ejemplo de articulaciones trocleares:\n1.- Interfalángicas.\n2.- Del hombro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-16",
+      "source_sha256": "76c6323cc8132dbbb400c816082ef4668f8af05768c08ed0fbe2f696e525c329",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 9,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 16,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 9"
+    },
+    {
+      "id": "2023-2024-3-17",
+      "numero_original": 17,
+      "pregunta": "Circulación coronaria:\n1.- La arteria coronaria izquierda da origen a la arteria descendente anterior izquierda.\n2.- La arteria descendente anterior izquierda se encuentra en el surco interventricular posterior.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-17",
+      "source_sha256": "6f21171aedb4d445faed9b5be77ba897c402e5175a858dcfc85ead4af2fca903",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 19,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 17,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 19"
+    },
+    {
+      "id": "2023-2024-3-18",
+      "numero_original": 18,
+      "pregunta": "Músculos de la región anterior del cuello que intervienen en la deglución y el habla:\n1.- El vientre posterior del músculo digástrico está inervado por el nervio trigémino.\n2.- El músculo milohioideo está inervado por el ramo mandibular del nervio trigémino.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-18",
+      "source_sha256": "a8f5b94f5485e47714f4c2cb98aac932465f64a665411675d53efab60e2c82e2",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 10,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 18,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
+    },
+    {
+      "id": "2023-2024-3-19",
+      "numero_original": 19,
+      "pregunta": "Ramas de anatomía y fisiología:\n1.- Histología estudia alteraciones estructurales microscópicas asociadas con enfermedades.\n2.- Es función de la endocrinología, la secreción de hormonas y cómo controlan las funciones del cuerpo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-19",
+      "source_sha256": "40be3d0fc907c6f6f150a8586c77a284f6d6b0dfb56892816793f5cb03720c6e",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 1,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 19,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2023-2024-3-20",
+      "numero_original": 20,
+      "pregunta": "Las células receptoras gustativas:\n1.- Tienen un ciclo de vida de 10 días.\n2.- Se originan por transformación de las células basales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-20",
+      "source_sha256": "d4da784311acd592f3277a1ff9148d666a85a7f6b56c46ce0633591fa2f2818e",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 20,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
+    },
+    {
+      "id": "2023-2024-3-21",
+      "numero_original": 21,
+      "pregunta": "El epineuro:\n1.- Se fusiona con la duramadre a medida que los nervios raquídeos atraviesan el foramen intervertebral.\n2.- Presenta hasta 15 capas de fibroblastos, cubre a los fascículos que forman un nervio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-21",
+      "source_sha256": "09d4f129588255d34841a0d4189eaa69879803e7922d4be6b19014cdca16c623",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 21,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-22",
+      "numero_original": 22,
+      "pregunta": "El interior del globo ocular:\n1.- La cámara anterior está llena de humor vítreo.\n2.- La cámara posterior está detrás del iris, delante de las fibras zonulares y el cristalino.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-22",
+      "source_sha256": "dc6dd8dbe8fed1ce4de8ffaf454ae1f61d40107fb9f66d426c73738bcd9be672",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 22,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
+    },
+    {
+      "id": "2023-2024-3-23",
+      "numero_original": 23,
+      "pregunta": "La articulación del hombro:\n1.- Produce movimientos de: hiperextensión, rotación medial, rotación lateral y otros.\n2.- Tiene un rodete glenoideo ancho de fibrocartílago.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-23",
+      "source_sha256": "760f5f42b4c19df67e1d186b545a21e5fdad34163b0112d19a71547364940adf",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 9,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 23,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 9"
+    },
+    {
+      "id": "2023-2024-3-24",
+      "numero_original": 24,
+      "pregunta": "El equilibrio:\n1.- Las máculas tienen tres tipos de células: células ciliadas, de sostén y células otolíticas.\n2.- Las dos máculas contienen receptores para la aceleración o desaceleración lineal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-24",
+      "source_sha256": "0e86b4d2e1bc8590ba3f334e5519f928737f4d9d8cf5f2b4c5f5f07554099001",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 24,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
+    },
+    {
+      "id": "2023-2024-3-25",
+      "numero_original": 25,
+      "pregunta": "Huesos del pie:\n1.- El calcáneo está ubicado en la parte. posterior del pie.\n2.- Los huesos del metatarso forman la región intermedia del pie.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-25",
+      "source_sha256": "57fbf774a360b4bab3c085d3b053f13888c7e48ecb8286341d1569a88e7e9346",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 25,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-51",
+      "numero_original": 26,
+      "pregunta": "Los forámenes del cráneo:\n1.- El foramen que se encuentra entre las porciones superiores e inferiores de las alas mayores del esfenoides es el óptico.\n2.- El foramen mastoideo está en la porción anterior de la apófisis mastoides.\n3.- El foramen lacerum esta posterior al conducto carotídeo en la porción mastoidea del temporal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-51",
+      "source_sha256": "400cfa16e8fe60047aa0e6f1b8151491a6b7d36497bd346ee142d9ac1eb10847",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 51,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-52",
+      "numero_original": 27,
+      "pregunta": "En relación a las órbitas:\n1.- El techo de la órbita está formada por frontal, esfenoides, cigomático y temporal.\n2.- El maxilar, cigomático y palatino forman parte de la pared medial.\n3.- El maxilar, lagrimal, etmoides, esfenoides forman parte de la pared medial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-52",
+      "source_sha256": "15e5100aeaf8296d31722c1f1f0dccd40990e74c32cfab1481f00b84314db72b",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 52,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-53",
+      "numero_original": 28,
+      "pregunta": "Enzimas del borde en cepillo de las microvellosidades:\n1.- La sacarasa degrada la lactosa en glucosa y fructuosa.\n2.- La enterocinasa degrada los dipéptidos en aminoácidos.\n3.- La maltasa degrada beta dextrinas en glucosa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-53",
+      "source_sha256": "85df41f7777005a356ae352e2b140d011c504ea50d67e86bb7ba969e5d0c26e4",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 25,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 53,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 25"
+    },
+    {
+      "id": "2023-2024-3-54",
+      "numero_original": 29,
+      "pregunta": "La cóclea:\n1.- Está situada anterior al vestíbulo.\n2.- Es un conducto membranoso en forma de espiral.\n3.- Describe dos vueltas en torno al modiolo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-54",
+      "source_sha256": "1944d9a884058fb6230ef124e1343c8a993b1e8dc4a40a2b63c44a09726608ca",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 54,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
+    },
+    {
+      "id": "2023-2024-3-55",
+      "numero_original": 30,
+      "pregunta": "El fémur:\n1.- Su extremo proximal presenta el cóndilo medial y lateral.\n2.- La tuberosidad glútea se une a la línea áspera.\n3.- Por encima de los cóndilos están los tubérculos medial y lateral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-55",
+      "source_sha256": "91f2f6524d3a8c94d7f72e7b0cb405da6c24a8e6041f2e86de58b7be898f6f7a",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 55,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-56",
+      "numero_original": 31,
+      "pregunta": "Respecto a la extremidad superior:\n1.- Los carpianos de la hilera proximal son: pisiforme, ganchoso y semilunar.\n2.- El túnel carpiano es el espacio cóncavo entre el pisiforme y el ganchoso.\n3.- Los carpianos de la hilera distal son: grande, trapezoide y piramidal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-56",
+      "source_sha256": "418973afe325b5cf492e88c375ff6798264eef438302a6443c7e71a7cea815e7",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 56,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-57",
+      "numero_original": 32,
+      "pregunta": "Respecto a la extremidad superior:\n1.- En la vida adulta la placa epifisaria del húmero será el cuello quirúrgico de este hueso.\n2.- El tubérculo mayor del húmero se sitúa lateral, proximal al cuello quirúrgico.\n3.- El capitulum humeral se articula con la fosa glenoidea.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-57",
+      "source_sha256": "bc929f72898212eb9b9cd2c86116f84107f555fc15a2060d90782eef1064332e",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 57,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-58",
+      "numero_original": 33,
+      "pregunta": "Origen del músculo piriforme:\n1.- Cresta iliaca y sacro.\n2.- Fosa iliaca y sacro.\n3.- Región anterior del sacro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-58",
+      "source_sha256": "e149f9624fc95fa0c36b22891bb324d50ee4bf93b54c2e1e5498abd7223ab159",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 10,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 58,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
+    },
+    {
+      "id": "2023-2024-3-59",
+      "numero_original": 34,
+      "pregunta": "Respecto a la glándula tiroides:\n1.- Las hormonas tiroideas disminuyen los receptores beta adrenérgicos en las células.\n2.- Las hormonas tiroideas promueven la formación de centros de osificación en los huesos en desarrollo.\n3.- Inhibe la respuesta simpática.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-59",
+      "source_sha256": "8677504e84b57f7e761131c8277d451d79b1db464914d1cafe230e7e150dccec",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 59,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 17"
+    },
+    {
+      "id": "2023-2024-3-60",
+      "numero_original": 35,
+      "pregunta": "Si aumenta la temperatura:\n1.- Aumenta la cantidad de O2 liberado por la hemoglobina.\n2.- Disminuye la cantidad de oxígeno liberado por la hemoglobina.\n3.- No aumenta ni disminuye la cantidad de O2 liberado por la hemoglobina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-60",
+      "source_sha256": "a5608d6327836f6f817c71b6307726e4ca1da9f1272dc73ce4c0991f00fcd87f",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 22,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 60,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 22"
+    },
+    {
+      "id": "2023-2024-3-61",
+      "numero_original": 36,
+      "pregunta": "Respecto a las hormonas de la neurohipófisis:\n1.- El alcohol inhibe la secreción de hormona antidiurética.\n2.- La deshidratación inhibe la secreción de hormona antidiurética.\n3.- La presión osmótica sanguínea elevada inhibe la secreción de hormona antidiurética.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-61",
+      "source_sha256": "164556b43071217bb4a7d96fb009f117a35765b6dfd00a434565d701fbce1034",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 61,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 17"
+    },
+    {
+      "id": "2023-2024-3-62",
+      "numero_original": 37,
+      "pregunta": "Fases de la digestión:\n1.- En la fase gástrica el tronco encefálico activa los nervios VII, IX y X.\n2.- En la fase intestinal las células G glandulares producen y liberan secretina.\n3.- En la fase cefálica el estiramiento del duodeno emite impulsos al bulbo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-62",
+      "source_sha256": "241b6a810b173569c98c29cc224e16c013672869e3d08d9ebb3055b5dd38a980",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 25,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 62,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 25"
+    },
+    {
+      "id": "2023-2024-3-63",
+      "numero_original": 38,
+      "pregunta": "La regulación neural de la tasa del filtrado glomerular:\n1.- Los receptores alfa 1 abundan en la arteriola aferente siendo receptores para noradrenalina.\n2.- La estimulación simpática moderada cierra completamente a la arteriola aferente.\n3.- La estimulación moderada parasimpática cierra completamente la arteriola aferente y eferente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-63",
+      "source_sha256": "d38246af66d6ed54601443431df99acd1abe632ae5207ff879c2a81818aa2c1e",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 23,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 63,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 23"
+    },
+    {
+      "id": "2023-2024-3-64",
+      "numero_original": 39,
+      "pregunta": "Según la clasificación química de las hormonas:\n1.- La adrenalina es una hormona liposoluble secretada por la médula suprarrenal.\n2.- Los leucotrienos son hormonas hidrosolubles secretadas por los eritrocitos.\n3. El óxido nítrico es una hormona hidrosoluble secretada por las células endoteliales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-64",
+      "source_sha256": "b28dee547f7853aca2f4b6c5eda6977d02386b14b76712d8ad6a632571cb3ff2",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 64,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 17"
+    },
+    {
+      "id": "2023-2024-3-65",
+      "numero_original": 40,
+      "pregunta": "Función de las hormonas reproductoras:\n1.- La FSH estimula a los folículos ováricos para que secreten estrógenos.\n2.- La LH estimula a los folículos ováricos para que secreten estrógenos.\n3.- Los estrógenos disminuyen los niveles de concentración de colesterol.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-65",
+      "source_sha256": "827e6be1bf43fc3753c456f056ac80998774628ca076f53fdbf95a5c259744f6",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 28,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 65,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 28"
+    },
+    {
+      "id": "2023-2024-3-66",
+      "numero_original": 41,
+      "pregunta": "Respecto a los huesos del tórax:\n1.- Los segmentos del esternón se fusionan antes de los 20 años.\n2.- El manubrio esternal se articula con la primera, segunda y tercera costilla.\n3.- La apófisis xifoides se osifica completamente a los 25 años.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-66",
+      "source_sha256": "f01e1c63be7dac59f9e539ab38c945c6654147eb50f1a8c754a305b19145e2e7",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 66,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-67",
+      "numero_original": 42,
+      "pregunta": "Las articulaciones sinoviales:\n1.- Las superficies articulares están revestidas por fibrocartílago.\n2.- Los ligamentos intracapsulares atraviesan la cavidad sinovial.\n3.- Su membrana interna corresponde a la membrana sinovial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-67",
+      "source_sha256": "0eae8dfe4657cd8dc3df2a54430f47d853360ea3bbb832bc6537aca15b70a85e",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 9,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 67,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 9"
+    },
+    {
+      "id": "2023-2024-3-68",
+      "numero_original": 43,
+      "pregunta": "Los ligamentos dentados:\n1.- Son extensiones triangulares de la aracnoides.\n2.- Corresponde al perineuro que es vascular.\n3.- Mantiene suspendida la médula en el medio de la vaina dural.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-68",
+      "source_sha256": "b107572ceee9304badf2b52d70fd429e7d037d35976b3cc8146e2fa40f0add1f",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 68,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-69",
+      "numero_original": 44,
+      "pregunta": "La transducción del sonido:\n1.- Las células ciliadas internas transducen las vibraciones mecánicas y generan señales eléctricas.\n2.- Cuando la membrana vestibular vibra los estereocilios se doblan para atrás y hacia adelante.\n3.- Cuando la célula ciliada está en reposo, los canales de cationes se encuentran cerrados.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-69",
+      "source_sha256": "0dae60973ae9a0f570962dcae11d7f4aadb3ec10e185386632e8181a8f24946e",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 69,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
+    },
+    {
+      "id": "2023-2024-3-70",
+      "numero_original": 45,
+      "pregunta": "Los nervios intercostales:\n1.- T7 inerva la región posteromedial del antebrazo.\n2.- T7-T12 dan inervación a los músculos abdominales.\n3.- Todos inervan los músculos intercostales y la piel de la axila.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-70",
+      "source_sha256": "3912ab9d5d957aaddf9641045e7b34ba34c2d64d547afaf12c731bdee78d63b8",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 70,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-71",
+      "numero_original": 46,
+      "pregunta": "Respecto a las vértebras cervicales, torácicas y lumbares:\n1.- Las apófisis espinosas de las vértebras torácicas son gruesas largas y bífidas.\n2.- Las vértebras cervicales tienen carillas articulares para las costillas en dirección anteroinferior.\n3.- Los forámenes transversales se encuentran en las vértebras torácicas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-71",
+      "source_sha256": "71bf0fc54f6dea9ce27747f7ef8df148dce32e9d7624eb2a46bf1eb96b111980",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 71,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-72",
+      "numero_original": 47,
+      "pregunta": "El peroné:\n1.- Su extremo distal tiene forma de punta de flecha.\n2.- Es medial a la tibia.\n3.- Se articula con la tibia en la escotadura peronea, para formar la articulación tibioperonea lateral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-72",
+      "source_sha256": "13a9eab983d3c54560ba1a78aac412e97f87bf0e69e2b0462320c151767f6b51",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 8,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 72,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2023-2024-3-73",
+      "numero_original": 48,
+      "pregunta": "Estructuras a las que dan origen las vesículas encefálicas:\n1.- Del metencéfalo se forman los ventrículos laterales.\n2.- Del telencéfalo se forma el cerebelo.\n3.- Del mielencéfalo se forma la protuberancia.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-73",
+      "source_sha256": "aa1a2a3e473065268d31140a422977932213428f32dda84636cf66aba9941d38",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 29,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 73,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 29"
+    },
+    {
+      "id": "2023-2024-3-74",
+      "numero_original": 49,
+      "pregunta": "Respecto a los tipos de hueso:\n1.- Los huesos largos contienen tejido óseo esponjoso en la diáfisis y compacto en la epífisis.\n2.- Los huesos irregulares son: las vértebras, los huesos de la cadera y los carpianos. y\n3.- Los huesos sesamoideos protegen los tendones del desgaste y la fricción excesivos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-74",
+      "source_sha256": "8e670275e7eb38de299669bae571481c3b24034b9efe3f4cec251e7998a4907c",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 7,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 74,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2023-2024-3-75",
+      "numero_original": 50,
+      "pregunta": "El músculo plantar:\n1.- Se origina en el epicóndilo lateral del fémur.\n2.- Se inserta en el calcáneo por medio del tendón calcáneo.\n3.- Inervado por el nervio tibial.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-75",
+      "source_sha256": "5cd39c33f3d786f59e4699d094548c498e4b3d8774f2f8ef2d095bb299ab6aad",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 10,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 75,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
+    },
+    {
+      "id": "2023-2024-3-26",
+      "numero_original": 51,
+      "pregunta": "En relación a los hitos históricos de la estructura celular:\n1.- Cajal y otros histólogos desarrollan métodos de tinción que revelan la estructura de las células nerviosas.\n2.- Lazarides y Cols utilizan anticuerpos fluorescentes para teñir el citoesqueleto.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-26",
+      "source_sha256": "a7218d753730656180d3b2e30f4fc3e5eb9dd8c2b2af9ab4501b3289eae32911",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 26,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
+    },
+    {
+      "id": "2023-2024-3-27",
+      "numero_original": 52,
+      "pregunta": "En relación a las enzimas:\n1.- La fosfatasa cataliza la eliminación hidrolítica de un grupo fosfato de una molécula.\n2.- La isomerasa cataliza el reordenamiento de enlaces dentro de una molécula agrupada.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-27",
+      "source_sha256": "181de4135a7ce8d558b7149d97c974bddb3a117abfcd3b50c0505d57f0a2758a",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 1,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 27,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2023-2024-3-28",
+      "numero_original": 53,
+      "pregunta": "En relación a las enzimas:\n1.- La nucleasa degrada los ácidos nucleicos por hidrólisis de los enlaces entre nucleótidos.\n2.- La hexocinasa agrega un grupo fosfato a D-glucosa, pero ignora a su isómero óptico L-glucosa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-28",
+      "source_sha256": "ae2ad43cfb4495a1f15d01b5c5d5b60bebaa2d606c046d18f3f2a689f6c8f51f",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 1,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 28,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2023-2024-3-29",
+      "numero_original": 54,
+      "pregunta": "En relación a la inhibición por retroalimentación:\n1.- Regula el flujo a través de las vías biodegradables.\n2.- En múltiples puntos regula vías metabólicas desconectadas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-29",
+      "source_sha256": "02f7683648268c61b0f320d3856521547da7744e798b51c7fb04889bb84a930f",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 29,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 11"
+    },
+    {
+      "id": "2023-2024-3-30",
+      "numero_original": 55,
+      "pregunta": "En relación a la conformación de ADN:\n1.- Una molécula de ADN está formada por una cadena de polinucleótidos larga y cada hebra posee cuatro tipos de subunidades nucleotídicas.\n2.- Los nucleótidos están constituidos por una base nitrogenada y un azúcar de cinco carbonos, al cual se une un grupo fosfato.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-30",
+      "source_sha256": "5682650c3f825663e3ced80810917a5916ed1dd34e06ac541a61c62b56590a92",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 7,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 30,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2023-2024-3-31",
+      "numero_original": 56,
+      "pregunta": "En relación a la estructura de los cromosomas eucariontes:\n1.- La tarea compleja de empaquetar el ADN es llevada a cabo por proteínas especializadas que se unen al DNA y lo pliegan.\n2.- Cada célula humana posee alrededor de 3 metros de ADN, aun así, el núcleo celular mide 5-8 um de diámetro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-31",
+      "source_sha256": "15e1c549e380e0d248e2c05d4a2a5fda939f3cb007b5871b5a0b353350046817",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 7,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 31,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2023-2024-3-32",
+      "numero_original": 57,
+      "pregunta": "En relación al glucocalix:\n1.- Se llama también capa de hidratos de carbono\n2.- Ayuda a proteger la superficie celular del daño térmico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-32",
+      "source_sha256": "8ceb758e1c157ffc1f1eab0dc06797528d2d430396a1803c6449bc3515a230ce",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 3,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 32,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 3"
+    },
+    {
+      "id": "2023-2024-3-33",
+      "numero_original": 58,
+      "pregunta": "En relación a las proteínas de membrana:\n1.- Una célula puede restringir el movimiento de sus proteínas de membrana.\n2.- Las proteínas de membrana pueden moverse con límites dentro del plano de la bicapa lipídica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-33",
+      "source_sha256": "e7930d6e858af24dbbe86e791d21d5f0937f62d1823806c05f681bbb8f898a4f",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 3,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 33,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 3"
+    },
+    {
+      "id": "2023-2024-3-34",
+      "numero_original": 59,
+      "pregunta": "En relación a los detergentes:\n1.- El SDA y el tritón X-100 son dos detergentes utilizados con frecuencia.\n2.- El detergente también solubiliza los fosfolípidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-34",
+      "source_sha256": "b0462446b4785ba7f7467d5b0e8c9e0940ae533be6416abb047dc8dac315fcf2",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 34,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
+    },
+    {
+      "id": "2023-2024-3-35",
+      "numero_original": 60,
+      "pregunta": "Las células ciliadas auditivas:\n1.- Dependen de canales regulados por ligando acetilcolina.\n2.- Dependen de canales regulados mecánicamente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-35",
+      "source_sha256": "7d0d0d80c00be2a9bbf6d373c4d375806a6b77f2b6038ee3ed2c193e865139c3",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 4,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 35,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 4"
+    },
+    {
+      "id": "2023-2024-3-36",
+      "numero_original": 61,
+      "pregunta": "Con respecto a la proteína canalrodopsina:\n1.- Se puede usar canalrodopsina para manipular la actividad de neuronas y circuitos neurales.\n2.- Permite que el Na+ fluya al exterior de la célula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-36",
+      "source_sha256": "e3b949cd8d7aa6fe0ef005d75a25da863a63429de1eff87d23c5503735c7aa4c",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 36,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-37",
+      "numero_original": 62,
+      "pregunta": "El curare causa parálisis muscular, por el siguiente mecanismo:\n1.- Bloquea a los receptores de acetilcolina inhibidores en la unión neuromuscular.\n2.- Bloquea los receptores de glicina en el encéfalo y la medula espinal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-37",
+      "source_sha256": "b94ea74e5adac76dbb80f7f09d42be3ded49215955c881c1d8977884aed25851",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 37,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-38",
+      "numero_original": 63,
+      "pregunta": "En relación a la formación de CO2:\n1.- Los grupos oxidrilo de la acetil CoA son oxidados a CO2 a través del ciclo del ácido cítrico.\n2.- El dióxido de carbono se forma tras la oxidación de NAD+ y GAD+.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-38",
+      "source_sha256": "b66ee44e0cf82d668a5996b118a60e219923ead4056fe59f77c1284c10928562",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 38,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 11"
+    },
+    {
+      "id": "2023-2024-3-39",
+      "numero_original": 64,
+      "pregunta": "En relación a la señalización celular:\n1.- Las moléculas pequeñas o hidrófobas cruzan la membrana plasmática y llegan al citosol de la célula diana, donde se unen a receptores proteicos intracelulares.\n2.- En el músculo esquelético, la acetilcolina se une a un receptor proteico diferente, lo que causa una relajación de la célula muscular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-39",
+      "source_sha256": "f3c6d6388b4775a9ea0e51f74c16d26f5a019d47a5144f8803d23d979bab138e",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 39,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-40",
+      "numero_original": 65,
+      "pregunta": "En relación a los filamentos de actina:\n1.- Se visualizan como hebras de alrededor de 17 m de diámetro.\n2.- Son más cortos que los microtúbulos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-40",
+      "source_sha256": "314eb033ce5fd1829bb92e86015081c8c1f9e07898d5ced3e9e112526e56671f",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 40,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 12"
+    },
+    {
+      "id": "2023-2024-3-76",
+      "numero_original": 66,
+      "pregunta": "En la fotosíntesis:\n1.- Una quinona relacionada funciona de manera similar durante el transporte de protones.\n2.- Las quinonas transportan electrones dentro la bicapa lipídica.\n3.- La ubiquinona sirve como punto de ingreso para los electrones donados por el NADH2.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-76",
+      "source_sha256": "187aabdc158f3f5daed78c258a75842f3b48fbb6133fc78f553801e46f238e61",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 76,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 11"
+    },
+    {
+      "id": "2023-2024-3-77",
+      "numero_original": 67,
+      "pregunta": "En relación a la señalización celular:\n1.- La fosfolipasa C genera moléculas de segundos mensajeros como: inositol 1,4,5-trifosfato (IP3), fosfolípido de inositol y diacilglicerol (DAG).\n2.- La vasopresina (una hormona peptídica) en el hígado produce degradación de glucógeno.\n3.- La trombina (una enzima proteolítica) estimula la contracción muscular esquelética.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-77",
+      "source_sha256": "9a79a6fd24fb809ed950b901f72b6936df1806f483fe7140e2bcba09500b4efa",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 77,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-78",
+      "numero_original": 68,
+      "pregunta": "En relación a la señalización celular:\n1.- Una señal extracelular de supervivencia, como IGF, activa un RTK que recluta y desactiva la PI-3-cinasa.\n2.- La Akt inactivada promueve la supervivencia celular.\n3.- Akt estimula el aumento de tamaño de las células por activación de la serina/tirosina cinasa Tor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-78",
+      "source_sha256": "3e3c8db8332fd7fa9e47df10d9d95460c60bd64c60d18bd7e9e656772f8e48b3",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 78,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-79",
+      "numero_original": 69,
+      "pregunta": "En relación a la señalización celular:\n1.- El receptor Notch es, en sí mismo, un regulador de la ampliación de señales.\n2.- Algunas homonas hidrófobas pequeñas se unen a receptores extracelulares que actúan como reguladores de la transcripción.\n3.- La señalización de Notch controla la producción de células nerviosas en el humano.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-79",
+      "source_sha256": "c1d8343f0af635bd6c349ea7d43526e6480cd6b8c8ccf284320030b16a86cde3",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 79,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-80",
+      "numero_original": 70,
+      "pregunta": "En relación a los cloroplastos:\n1.- Su estructura es simple en relación con las mitocondrias.\n2.- Poseen pilas internas de membranas que contienen el pigmento verde clorofila.\n3.- Atrapan la energía de la luz solar en sus moléculas de clorofila y utilizan esta energía para impulsar la síntesis de moléculas de azúcar bajas en energía.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-80",
+      "source_sha256": "a11d0a10bc6f88141f71b4dfbc358d3ccb7f881ccf83eb3673e9f27a7a512db9",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 80,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 11"
+    },
+    {
+      "id": "2023-2024-3-81",
+      "numero_original": 71,
+      "pregunta": "En relación a la sulfobacteria:\n1.- Un eucarionte que vive en medios sulfurosos.\n2.- Obtiene su energía del H3S.\n3.- Oxida H2S para producir azufre y puede fijar carbono aun en la oscuridad.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-81",
+      "source_sha256": "1a348b08658f5c781625f9d94b022e67e9de3feedd063e22303c3e92130dcf39",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 1,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 81,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2023-2024-3-82",
+      "numero_original": 72,
+      "pregunta": "En relación a los cromosomas en interfase:\n1.- La estructura de la cromatina varía a lo largo de un cromosoma en interfase grupal.\n2.- Las modificaciones de las histonas inespecíficas de heterocromatina permiten la formación y propagación de la cromatina.\n3.- Uno de los dos cromosomas X es inactivado en las células de mamíferos hembra mediante la formación de heterocromatina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-82",
+      "source_sha256": "214d97fe5a75d868ed3cba94ce880a1ea5e87d347e86586a6d8ec4ba6a8727e1",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 7,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 82,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2023-2024-3-83",
+      "numero_original": 73,
+      "pregunta": "En relación a los cromosomas:\n1.- El centrómero permite que los cromosomas duplicados se separen durante la fase S.\n2.- Una vez que los cromosomas se han condensado, el centrómero se opone a que el huso mitótico se una a cada cromosoma duplicado.\n3.- Durante la fase S del ciclo celular, el ADN se enrolla y adopta una estructura cada vez más compacta.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-83",
+      "source_sha256": "7224dfbdfb0e5a219f96e5d5ffe5e0d6529a9a8d9e59f91bfd2d6bc6cd501e14",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 7,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 83,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2023-2024-3-84",
+      "numero_original": 74,
+      "pregunta": "Con relación a la estructura de la membrana:\n1.- Las membranas internas forman muchos compartimientos diferentes en una célula procarionte.\n2.- Una membrana celular está formada por una bicapa lipídica en la no hay proteínas incluidas.\n3.- Las membranas celulares están separadas con fosfolípidos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-84",
+      "source_sha256": "4dda7d63bedf0832a5aaf4f43f60f3f05549f695e694384b52fc68768c963256",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 3,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 84,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 3"
+    },
+    {
+      "id": "2023-2024-3-85",
+      "numero_original": 75,
+      "pregunta": "Sobre el bombeo de protones:\n1.- Se utiliza para bombear neutrones a través de la membrana mitocondrial interna, desde la matriz al espacio intermembranoso.\n2.- Generan un pH del espacio intermembranoso de 7,5.\n3.- Genera un gradiente de voltaje o potencial de membrana a través de la membrana externa.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-85",
+      "source_sha256": "4e7026174cec1d315a348112b65f8a5fddbd84d9122e548331db2f33ab3aa13c",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 85,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 11"
+    },
+    {
+      "id": "2023-2024-3-86",
+      "numero_original": 76,
+      "pregunta": "Sobre la ATP sintasa:\n1.- Es una molécula nueva evolutivamente presente únicamente en las células eucariotas.\n2.- Permite la conversión de una deformación mecánica en energía de enlaces químicos de ATP.\n3.- Permite el flujo unidireccional de protones únicamente cuesta abajo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-86",
+      "source_sha256": "33610ea4d599b6a844450f52f0937e3d365ae973958f344d747ebdf294cb3d03",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 86,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 11"
+    },
+    {
+      "id": "2023-2024-3-87",
+      "numero_original": 77,
+      "pregunta": "En relación a la señalización celular:\n1.- Los segundos mensajeros, como el AMP cíclico y el calcio, son moléculas hidrófobas que suelen actuar dentro de la célula en la que son producidos.\n2.- La distancia de difusión del gas se ve limitada por su reacción con el oxígeno y el agua del medio extracelular, lo que convierte al NO en superóxido.\n3.- El NO difunde con facilidad desde su lugar de síntesis y se desliza a sus células vecinas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-87",
+      "source_sha256": "75ad7541b0f3ead216b664e9fae3f0709bc9fe738737bad3fed37ab9fa9f0f73",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 87,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-88",
+      "numero_original": 78,
+      "pregunta": "En relación a la señalización celular:\n1.- El óxido nítrico NO se une a la enzima guanilil ciclasa y la activa, lo que estimula la formación de GMP cíclico a partir del nucleótido GDP.\n2.- El fármaco sildenafil aumenta la erección del pene mediante bloqueo de la enzima que degrada el GMP cíclico, lo que prolonga la señal de NO.\n3.- El óxido nítrico (NO) desencadena la contracción del músculo liso de la pared de un vaso sanguíneo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-88",
+      "source_sha256": "f31836b30c6124492d80f84a9b52d65d2bd715d24e29a3901827e976cf17ef5f",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 88,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-89",
+      "numero_original": 79,
+      "pregunta": "En relación a la señalización celular:\n1.- La célula fotorreceptora bastón de la retina es poco sensible a la luz.\n2.- En las vías de señalización extracelular que responden a moléculas de señalización extracelular suele haber adaptación.\n3.- La cascada de señalización inducida por luz en los fotorreceptores de tipo bastón disminuye mucho la señal lumínica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-89",
+      "source_sha256": "ff6921f1d63d1f0c72bb5616e0a81a226283f3d5eed90cd1755d1dc973cec36e",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 89,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 13"
+    },
+    {
+      "id": "2023-2024-3-90",
+      "numero_original": 80,
+      "pregunta": "En relación a los microtúbulos:\n1.- Desempeñan un papel crucial en la organización de todas las células procariontes.\n2.- Crecen a partir de una estructura localizada cerca del centro de la célula (centriolo).\n3.- Los flagelos bacterianos tienen una estructura totalmente distinta y permiten que las células naden mediante un mecanismo muy diferente.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-3-90",
+      "source_sha256": "70e76644729ccf200b3a5cf8532d2852a946ecd15bfd99111fe26cf8ce2e4c32",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 90,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 12"
+    },
+    {
+      "id": "vida-final-2-01",
+      "source_numero_original": 41,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 16",
+      "pregunta": "Un equipo estudia asistencia a clases en una población extensa y dispone de recursos limitados. ¿Qué justifica utilizar una muestra?",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 41.",
+      "comentario": "Correcta B: Obtener información de una parte de la población mediante un diseño de selección definido, reduciendo recursos frente a un censo.",
+      "source_question_id": "2025-2026-3-41",
+      "source_sha256": "dbc2104aefbe43040ffa1142c249c73257542d8f92e5e4ac7e9f0d0f132fb5f0",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "Evitar identificar la población de la que proceden los participantes.",
+      "opcion_b": "Obtener información de una parte de la población mediante un diseño de selección definido, reduciendo recursos frente a un censo.",
+      "opcion_c": "Garantizar que desaparezca cualquier error de selección o estimación.",
+      "opcion_d": "Asegurar que cualquier grupo elegido por conveniencia represente a toda la población.",
+      "numero_original": 81
+    },
+    {
+      "id": "vida-final-2-02",
+      "source_numero_original": 42,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 14",
+      "pregunta": "En un registro sobre asistencia a clases se anota también la temperatura del aula en grados Celsius. ¿Qué escala corresponde a esa temperatura?",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 42.",
+      "comentario": "Correcta C: De intervalo: las diferencias son comparables, pero 0 °C no representa ausencia de temperatura.",
+      "source_question_id": "2025-2026-3-42",
+      "source_sha256": "e4843afc11c71890913b85da69ab1bea789f2cc22513e9fa73f4112e70f69c02",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "Nominal: los grados solo son etiquetas sin diferencias cuantificables.",
+      "opcion_b": "Ordinal: solo se conoce el orden y las diferencias entre grados no son comparables.",
+      "opcion_c": "De intervalo: las diferencias son comparables, pero 0 °C no representa ausencia de temperatura.",
+      "opcion_d": "De razón: 0 °C representa ausencia absoluta de temperatura.",
+      "numero_original": 82
+    },
+    {
+      "id": "vida-final-2-03",
+      "source_numero_original": 43,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 15",
+      "pregunta": "El equipo calcula el promedio observado de asistencia a clases en 120 participantes, sin generalizarlo a otras personas. ¿Qué está haciendo?",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 15,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 43.",
+      "comentario": "Correcta D: Estadística descriptiva de los datos observados.",
+      "source_question_id": "2025-2026-3-43",
+      "source_sha256": "144dbe3345eda9e3b5a8090d8f026996fa947ef43bbf54c1c2b4baa16b467794",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "Una generalización inferencial a toda la población, aunque no se haya formulado.",
+      "opcion_b": "Un muestreo por bola de nieve por el solo hecho de calcular un promedio.",
+      "opcion_c": "Una asignación aleatoria de tratamientos por el solo hecho de resumir datos.",
+      "opcion_d": "Estadística descriptiva de los datos observados.",
+      "numero_original": 83
+    },
+    {
+      "id": "vida-final-2-04",
+      "source_numero_original": 44,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 14",
+      "pregunta": "En el estudio de asistencia a clases, el lugar de residencia se codifica como rural=1 y urbano=2. ¿Qué interpretación es válida?",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 44.",
+      "comentario": "Correcta A: Los números identifican categorías; no indican que urbano tenga el doble de residencia que rural.",
+      "source_question_id": "2025-2026-3-44",
+      "source_sha256": "678e3f50cdc4784b725fd3b8956c3dd7aec32c6a45754006923d9b1b17dacab5",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "Los números identifican categorías; no indican que urbano tenga el doble de residencia que rural.",
+      "opcion_b": "Urbano representa necesariamente el doble de cantidad de residencia que rural.",
+      "opcion_c": "La diferencia entre 2 y 1 mide una unidad física de residencia.",
+      "opcion_d": "Los códigos convierten la residencia en una variable cuantitativa continua.",
+      "numero_original": 84
+    },
+    {
+      "id": "vida-final-2-05",
+      "source_numero_original": 45,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 17",
+      "pregunta": "Para agrupar mediciones de asistencia a clases, se considera la regla de Sturges. ¿Qué orienta esta regla?",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 45.",
+      "comentario": "Correcta B: Una estimación del número de intervalos de clase a partir del tamaño del conjunto de datos.",
+      "source_question_id": "2025-2026-3-45",
+      "source_sha256": "a4eb68d0f04fe072cae48353d6c9d6200fede6b5f32d66496e0290b8635d00df",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "La elección de la respuesta que confirmará la hipótesis del investigador.",
+      "opcion_b": "Una estimación del número de intervalos de clase a partir del tamaño del conjunto de datos.",
+      "opcion_c": "La selección del nombre de cada participante de la muestra.",
+      "opcion_d": "La demostración de que todos los datos siguen una distribución normal.",
+      "numero_original": 85
+    },
+    {
+      "id": "vida-final-2-06",
+      "source_numero_original": 46,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 14",
+      "pregunta": "En una encuesta sobre asistencia a clases, la satisfacción se registra como baja, media o alta. ¿Qué caracteriza esta escala?",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 46.",
+      "comentario": "Correcta C: Es ordinal: existe orden, sin asegurar distancias iguales entre categorías.",
+      "source_question_id": "2025-2026-3-46",
+      "source_sha256": "966ae0f45215b77b0dcb750009420a12ca60ee287f680465ad3c9abb741108c7",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "Es de razón: la categoría baja equivale a ausencia absoluta de satisfacción.",
+      "opcion_b": "Es de intervalo: la distancia de baja a media es necesariamente igual a la de media a alta.",
+      "opcion_c": "Es ordinal: existe orden, sin asegurar distancias iguales entre categorías.",
+      "opcion_d": "Es nominal: las categorías carecen de cualquier orden.",
+      "numero_original": 86
+    },
+    {
+      "id": "vida-final-2-07",
+      "source_numero_original": 47,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 14",
+      "pregunta": "El equipo de asistencia a clases cuenta cuántos participantes hay en cada hogar. ¿Cómo se clasifica ese número?",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 47.",
+      "comentario": "Correcta D: Cuantitativo discreto, porque resulta de contar unidades.",
+      "source_question_id": "2025-2026-3-47",
+      "source_sha256": "5acdfce1372915b9a6ab6b43f4e906f3ad2ba2730f16e146da35b7d170663e13",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "Cuantitativo continuo, porque admite cualquier fracción de participante.",
+      "opcion_b": "Cualitativo nominal, porque no expresa una cantidad.",
+      "opcion_c": "Cualitativo ordinal, porque solo permite ordenar sin contar.",
+      "opcion_d": "Cuantitativo discreto, porque resulta de contar unidades.",
+      "numero_original": 87
+    },
+    {
+      "id": "vida-final-2-08",
+      "source_numero_original": 48,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 17",
+      "pregunta": "Las respuestas sobre asistencia a clases incluyen nombres de categorías sin orden natural. ¿Cómo pueden organizarse para tabularlas?",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 48.",
+      "comentario": "Correcta A: Con un criterio explícito y constante, por ejemplo alfabético, conservando las frecuencias de cada categoría.",
+      "source_question_id": "2025-2026-3-48",
+      "source_sha256": "cbc832c2084f011be0ab87a1b7c52cded8ef9b189683f458806c8ddf02ddef33",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "Con un criterio explícito y constante, por ejemplo alfabético, conservando las frecuencias de cada categoría.",
+      "opcion_b": "Asignando a cada nombre una magnitud física obtenida por multiplicación.",
+      "opcion_c": "Eliminando las categorías con pocos casos antes de contar sus frecuencias.",
+      "opcion_d": "Suponiendo que la distancia entre dos nombres equivale a una unidad numérica.",
+      "numero_original": 88
+    },
+    {
+      "id": "vida-final-2-09",
+      "source_numero_original": 49,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 17",
+      "pregunta": "Una tabla de asistencia a clases usa los intervalos [15, 25) y [25, 35). ¿Dónde se registra un valor exactamente igual a 25?",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 49.",
+      "comentario": "Correcta B: En [25, 35), que incluye su extremo inferior.",
+      "source_question_id": "2025-2026-3-49",
+      "source_sha256": "5c61a9a4ae89fd49371287f4cd45cd3f1586a9c55896945282e3db317aa26784",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "En ninguno, aunque la tabla cubra ese valor.",
+      "opcion_b": "En [25, 35), que incluye su extremo inferior.",
+      "opcion_c": "En [15, 25), que excluye su extremo superior.",
+      "opcion_d": "En ambos intervalos, duplicando la observación.",
+      "numero_original": 89
+    },
+    {
+      "id": "vida-final-2-10",
+      "source_numero_original": 50,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 20",
+      "pregunta": "En los datos de asistencia a clases, el mínimo es 13 y el máximo 50. ¿Cuál es el rango?",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 20,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 50.",
+      "comentario": "Correcta C: 37",
+      "source_question_id": "2025-2026-3-50",
+      "source_sha256": "376a3022535f7ca0eb3eb0fc81dc2e498bbb6fbaaf84ed207ded7c9fbc2512a3",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "68",
+      "opcion_b": "38",
+      "opcion_c": "37",
+      "opcion_d": "63",
+      "numero_original": 90
+    },
+    {
+      "id": "vida-final-2-11",
+      "source_numero_original": 91,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 16",
+      "pregunta": "Para localizar participantes de un estudio de asistencia a clases, los primeros informantes recomiendan a otras personas que cumplen los criterios. ¿Qué método se describe?",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 91.",
+      "comentario": "Correcta D: Muestreo por bola de nieve.",
+      "source_question_id": "2025-2026-3-91",
+      "source_sha256": "80abd3f73e32f2469f8a933cb446fd9c84866cecbe88da4847819a57637655bb",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "Muestreo aleatorio simple con probabilidades iguales conocidas.",
+      "opcion_b": "Muestreo sistemático con intervalo fijo calculado como N/n.",
+      "opcion_c": "Censo completo de todos los integrantes de la población.",
+      "opcion_d": "Muestreo por bola de nieve.",
+      "numero_original": 91
+    },
+    {
+      "id": "vida-final-2-12",
+      "source_numero_original": 92,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 17",
+      "pregunta": "Se desea mostrar cómo se distribuyen mediciones continuas de asistencia a clases, agrupadas en intervalos contiguos. ¿Qué gráfica corresponde?",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 92.",
+      "comentario": "Correcta A: Un histograma.",
+      "source_question_id": "2025-2026-3-92",
+      "source_sha256": "c75bbb4b6bcbeb9d61db7509c6ab2a75139b1a0c046478e97170b879f8feb88c",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "Un histograma.",
+      "opcion_b": "Un diagrama de barras separado para categorías nominales sin intervalos.",
+      "opcion_c": "Un diagrama de dispersión de dos variables distintas que no se han medido.",
+      "opcion_d": "Un mapa conceptual sin frecuencias ni intervalos.",
+      "numero_original": 92
+    },
+    {
+      "id": "vida-final-2-13",
+      "source_numero_original": 93,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 17",
+      "pregunta": "En un diagrama de barras de asistencia a clases, una categoría tiene 21 observaciones. Si la altura representa la frecuencia absoluta, ¿qué valor debe alcanzar su barra?",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 93.",
+      "comentario": "Correcta B: 21",
+      "source_question_id": "2025-2026-3-93",
+      "source_sha256": "cd34c6947c95620866b1765a185f8bf150c38d45dd14b964eaf981286cf88787",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "22",
+      "opcion_b": "21",
+      "opcion_c": "42",
+      "opcion_d": "10.5",
+      "numero_original": 93
+    },
+    {
+      "id": "vida-final-2-14",
+      "source_numero_original": 94,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 17",
+      "pregunta": "En una gráfica de categorías de asistencia a clases, todas las barras tienen la misma anchura. ¿Qué representa su altura cuando el eje vertical indica frecuencia?",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 94.",
+      "comentario": "Correcta C: La frecuencia de la categoría correspondiente.",
+      "source_question_id": "2025-2026-3-94",
+      "source_sha256": "ba46ebb726edb8cabdc00faa129491c46e73077e7ffb680121f0717c411893e6",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "La edad de todas las personas incluidas en esa categoría.",
+      "opcion_b": "La amplitud de un intervalo continuo que no aparece en la gráfica.",
+      "opcion_c": "La frecuencia de la categoría correspondiente.",
+      "opcion_d": "El nombre de la categoría, sin relación con sus observaciones.",
+      "numero_original": 94
+    },
+    {
+      "id": "vida-final-2-15",
+      "source_numero_original": 95,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 17",
+      "pregunta": "Para 160 datos de asistencia a clases, se usa m=1+3,322·log10(n) y se redondea hacia arriba. ¿Cuántas clases se proponen?",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 95.",
+      "comentario": "Correcta D: 9",
+      "source_question_id": "2025-2026-3-95",
+      "source_sha256": "f2aca79afd3daa5ea36886632cfa7a40c0c6f90d59aba102e9f80b5ab366cd23",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "11",
+      "opcion_b": "7",
+      "opcion_c": "14",
+      "opcion_d": "9",
+      "numero_original": 95
+    },
+    {
+      "id": "vida-final-2-16",
+      "source_numero_original": 96,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 17",
+      "pregunta": "Un intervalo reúne 30 de 120 observaciones de asistencia a clases. ¿Cuál es su frecuencia relativa porcentual?",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 96.",
+      "comentario": "Correcta A: 25 %",
+      "source_question_id": "2025-2026-3-96",
+      "source_sha256": "83223dd3ab1e0580e1a5195e509d8d144c55542900fb61f1a6992f927e92c0dd",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "25 %",
+      "opcion_b": "75 %",
+      "opcion_c": "2.5 %",
+      "opcion_d": "50 %",
+      "numero_original": 96
+    },
+    {
+      "id": "vida-final-2-17",
+      "source_numero_original": 97,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 14",
+      "pregunta": "Una variable del estudio de asistencia a clases solo admite 0, 1, 2, 3 o más eventos completos. ¿Qué valor sería incompatible con esa definición?",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 97.",
+      "comentario": "Correcta B: 2,5 eventos completos.",
+      "source_question_id": "2025-2026-3-97",
+      "source_sha256": "a16273ee8f12af7073e1e801a6c87497b717a4fd5eb38015afdc4991069e05c1",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "3 eventos.",
+      "opcion_b": "2,5 eventos completos.",
+      "opcion_c": "0 eventos.",
+      "opcion_d": "2 eventos.",
+      "numero_original": 97
+    },
+    {
+      "id": "vida-final-2-18",
+      "source_numero_original": 98,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 17",
+      "pregunta": "Una categoría de asistencia a clases representa el 25 % del total. ¿Qué ángulo ocupa en un diagrama circular de 360°?",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 98.",
+      "comentario": "Correcta C: 90°",
+      "source_question_id": "2025-2026-3-98",
+      "source_sha256": "0634cba5dd389362820186110a5bd5a86817f2ce1230e891e0a56c5690fabcf0",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "25°",
+      "opcion_b": "270°",
+      "opcion_c": "90°",
+      "opcion_d": "45°",
+      "numero_original": 98
+    },
+    {
+      "id": "vida-final-2-19",
+      "source_numero_original": 99,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 17",
+      "pregunta": "Una encuesta de asistencia a clases clasifica respuestas en seis categorías nominales. Se quiere comparar con claridad sus frecuencias. ¿Qué opción es adecuada?",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 99.",
+      "comentario": "Correcta D: Un diagrama de barras con una barra por categoría.",
+      "source_question_id": "2025-2026-3-99",
+      "source_sha256": "71121c3120afdf4571a9aa0b482c4dd6b0a34b11d83d94c93d5d7c6d3c2ea93f",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "Un histograma que trate los nombres de categorías como intervalos continuos.",
+      "opcion_b": "Una gráfica de dispersión sin disponer de dos variables numéricas.",
+      "opcion_c": "Una curva temporal que suponga fechas no registradas en las categorías.",
+      "opcion_d": "Un diagrama de barras con una barra por categoría.",
+      "numero_original": 99
+    },
+    {
+      "id": "vida-final-2-20",
+      "source_numero_original": 100,
+      "materia": "SALUD PUBLICA",
+      "tema": "Estadística e investigación · tema 17",
+      "pregunta": "En una ojiva de asistencia a clases, la frecuencia relativa acumulada hasta un límite es 25 %. ¿Cómo se interpreta?",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 100.",
+      "comentario": "Correcta A: El 25 % de las observaciones está acumulado hasta ese límite, según los intervalos definidos.",
+      "source_question_id": "2025-2026-3-100",
+      "source_sha256": "d7608ccbdd189d5051954b45111b136e9e744a208fd30b5b1e5ad33f881e4ab4",
+      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
+      "opcion_a": "El 25 % de las observaciones está acumulado hasta ese límite, según los intervalos definidos.",
+      "opcion_b": "El 25 % pertenece exclusivamente al último intervalo, sin incluir los anteriores.",
+      "opcion_c": "El 25 % está necesariamente por encima del valor máximo de la muestra.",
+      "opcion_d": "La gráfica solo muestra frecuencias no acumuladas.",
+      "numero_original": 100
+    }
+  ],
+  "review": {
+    "basis": "50 Morfofunción y 30 Biología del final histórico; 20 nuevas preguntas de Vida con el temario del bloque final 2025–2026. Originales de archivo conservados.",
+    "answer_accuracy": "Claves históricas retenidas en preguntas no adaptadas; claves de las nuevas situaciones de estadística recalculadas. No constituye una aprobación clínica independiente."
+  }
+}

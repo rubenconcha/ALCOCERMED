@@ -20,10 +20,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 13
+        "chapter": 13,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-1",
-      "source_sha256": "458364dd1293da7652f693eee705420b7a027696afd970991e8f01b1f62de856"
+      "source_sha256": "458364dd1293da7652f693eee705420b7a027696afd970991e8f01b1f62de856",
+      "source_numero_original": 1,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 13"
     },
     {
       "id": "2025-2026-2-2",
@@ -41,10 +45,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 17
+        "chapter": 17,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-2",
-      "source_sha256": "da7f2506091f8c491ff818cd4afc582ddbcf7737b9153965d291613c31edf26d"
+      "source_sha256": "da7f2506091f8c491ff818cd4afc582ddbcf7737b9153965d291613c31edf26d",
+      "source_numero_original": 2,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 17"
     },
     {
       "id": "2025-2026-2-3",
@@ -62,10 +70,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-3",
-      "source_sha256": "99706b968129d242ee9ef3c80d959a70a6e537419420634624e2fd3b6a0a8b92"
+      "source_sha256": "99706b968129d242ee9ef3c80d959a70a6e537419420634624e2fd3b6a0a8b92",
+      "source_numero_original": 3,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
     },
     {
       "id": "2025-2026-2-4",
@@ -83,10 +95,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 12
+        "chapter": 12,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-4",
-      "source_sha256": "f0522593c1bea87c84e75989368f42c34e71b7d248984b397f4142f2801f30ba"
+      "source_sha256": "f0522593c1bea87c84e75989368f42c34e71b7d248984b397f4142f2801f30ba",
+      "source_numero_original": 4,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 12"
     },
     {
       "id": "2025-2026-2-5",
@@ -104,10 +120,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 18
+        "chapter": 18,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-5",
-      "source_sha256": "66fa9c3b8f38e838670998d29e039308b77148709a5a7756d64610c0bb081c62"
+      "source_sha256": "66fa9c3b8f38e838670998d29e039308b77148709a5a7756d64610c0bb081c62",
+      "source_numero_original": 5,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 18"
     },
     {
       "id": "2025-2026-2-6",
@@ -125,10 +145,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-6",
-      "source_sha256": "929bef4902aa8da415777cbf5739f256350d582e9708d1a7194a2ce856dbbbfe"
+      "source_sha256": "929bef4902aa8da415777cbf5739f256350d582e9708d1a7194a2ce856dbbbfe",
+      "source_numero_original": 6,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
     },
     {
       "id": "2025-2026-2-7",
@@ -146,10 +170,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 19
+        "chapter": 19,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-7",
-      "source_sha256": "ade61a7fed14ba2738056e34e3b203db18c365983e643e1fedb346af4cf30044"
+      "source_sha256": "ade61a7fed14ba2738056e34e3b203db18c365983e643e1fedb346af4cf30044",
+      "source_numero_original": 7,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 19"
     },
     {
       "id": "2025-2026-2-8",
@@ -167,10 +195,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-8",
-      "source_sha256": "828005b0c9b9914da5ad1a2c44c263e3742d4a77627eca431148702aa8469cc3"
+      "source_sha256": "828005b0c9b9914da5ad1a2c44c263e3742d4a77627eca431148702aa8469cc3",
+      "source_numero_original": 8,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
     },
     {
       "id": "2025-2026-2-9",
@@ -188,10 +220,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 17
+        "chapter": 17,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-9",
-      "source_sha256": "3948f8f921f1e314c0723106eb6847b720dec43d968d05398b8250c333f19323"
+      "source_sha256": "3948f8f921f1e314c0723106eb6847b720dec43d968d05398b8250c333f19323",
+      "source_numero_original": 9,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 17"
     },
     {
       "id": "2025-2026-2-10",
@@ -209,10 +245,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 18
+        "chapter": 18,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-10",
-      "source_sha256": "413180b7ca733d4793818803ce2788afa4ce58d9a8ff220ff3cf968000b4def8"
+      "source_sha256": "413180b7ca733d4793818803ce2788afa4ce58d9a8ff220ff3cf968000b4def8",
+      "source_numero_original": 10,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 18"
     },
     {
       "id": "2025-2026-2-11",
@@ -230,10 +270,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 20
+        "chapter": 20,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-11",
-      "source_sha256": "a1db933c256badfa543988e8f31eeb713cae2cabd7e555e8fc4e5af6845f72f3"
+      "source_sha256": "a1db933c256badfa543988e8f31eeb713cae2cabd7e555e8fc4e5af6845f72f3",
+      "source_numero_original": 11,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 20"
     },
     {
       "id": "2025-2026-2-12",
@@ -251,10 +295,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 15
+        "chapter": 15,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-12",
-      "source_sha256": "556b200146c903b17c7331fa7b900f2b1efde4e8d8cf6af90544943a84cc4f0e"
+      "source_sha256": "556b200146c903b17c7331fa7b900f2b1efde4e8d8cf6af90544943a84cc4f0e",
+      "source_numero_original": 12,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 15"
     },
     {
       "id": "2025-2026-2-13",
@@ -272,10 +320,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-13",
-      "source_sha256": "93837b5d6c3a25bd39f9b93e46307b667440027a6206613b94fbd0b41f088af9"
+      "source_sha256": "93837b5d6c3a25bd39f9b93e46307b667440027a6206613b94fbd0b41f088af9",
+      "source_numero_original": 13,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
     },
     {
       "id": "2025-2026-2-14",
@@ -293,10 +345,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 13
+        "chapter": 13,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-14",
-      "source_sha256": "5eef69cfeda609fece35eae82c6c6376d4e35c6c083bb44967df45dcd2cfcef8"
+      "source_sha256": "5eef69cfeda609fece35eae82c6c6376d4e35c6c083bb44967df45dcd2cfcef8",
+      "source_numero_original": 14,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 13"
     },
     {
       "id": "2025-2026-2-15",
@@ -314,10 +370,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-15",
-      "source_sha256": "9273dffa38e346c3258a449bd9fcca58caab48c9d18956f13bdad255f5aa52fe"
+      "source_sha256": "9273dffa38e346c3258a449bd9fcca58caab48c9d18956f13bdad255f5aa52fe",
+      "source_numero_original": 15,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
     },
     {
       "id": "2025-2026-2-16",
@@ -335,10 +395,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 14
+        "chapter": 14,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-16",
-      "source_sha256": "b3e1a88a87553ddf9b69172ba7dae62589583ff4a7b17ac79f883674d1c961b1"
+      "source_sha256": "b3e1a88a87553ddf9b69172ba7dae62589583ff4a7b17ac79f883674d1c961b1",
+      "source_numero_original": 16,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 14"
     },
     {
       "id": "2025-2026-2-17",
@@ -356,10 +420,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 18
+        "chapter": 18,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-17",
-      "source_sha256": "97ada3d8968ed9357c3b666e4c611a3cc6300e893747aef18f493b695e4a6c30"
+      "source_sha256": "97ada3d8968ed9357c3b666e4c611a3cc6300e893747aef18f493b695e4a6c30",
+      "source_numero_original": 17,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 18"
     },
     {
       "id": "2025-2026-2-18",
@@ -377,10 +445,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 13
+        "chapter": 13,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-18",
-      "source_sha256": "88b653b83cded82beb8685356af85d9e5a66baa23ecd96c30ba0e5447e2bb2b0"
+      "source_sha256": "88b653b83cded82beb8685356af85d9e5a66baa23ecd96c30ba0e5447e2bb2b0",
+      "source_numero_original": 18,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 13"
     },
     {
       "id": "2025-2026-2-19",
@@ -398,10 +470,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 12
+        "chapter": 12,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-19",
-      "source_sha256": "4cc2ef29ee1828b0ee7fb0e543f57497638b49a14997e30d12d4de3934ade866"
+      "source_sha256": "4cc2ef29ee1828b0ee7fb0e543f57497638b49a14997e30d12d4de3934ade866",
+      "source_numero_original": 19,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 12"
     },
     {
       "id": "2025-2026-2-20",
@@ -419,10 +495,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 13
+        "chapter": 13,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-20",
-      "source_sha256": "a0a115eea9e5a2c81278ba0532193e650d5757f5c045f227570ff58ac53c45d7"
+      "source_sha256": "a0a115eea9e5a2c81278ba0532193e650d5757f5c045f227570ff58ac53c45d7",
+      "source_numero_original": 20,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 13"
     },
     {
       "id": "2025-2026-2-21",
@@ -440,10 +520,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 17
+        "chapter": 17,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-21",
-      "source_sha256": "032b4f6c7464df4e358c8280ac0f7c6fd5df5aee5402a4a91d29452a2ba56028"
+      "source_sha256": "032b4f6c7464df4e358c8280ac0f7c6fd5df5aee5402a4a91d29452a2ba56028",
+      "source_numero_original": 21,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 17"
     },
     {
       "id": "2025-2026-2-22",
@@ -461,10 +545,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-22",
-      "source_sha256": "44047eded81fb5312a8572a5092b622799974b5f35b4029481ce88d074c2cea2"
+      "source_sha256": "44047eded81fb5312a8572a5092b622799974b5f35b4029481ce88d074c2cea2",
+      "source_numero_original": 22,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
     },
     {
       "id": "2025-2026-2-23",
@@ -482,10 +570,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 18
+        "chapter": 18,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-23",
-      "source_sha256": "cb505fa31fa4e2edc9283a63774f1e487a4f3db1b3b809f6b316f645eae3a321"
+      "source_sha256": "cb505fa31fa4e2edc9283a63774f1e487a4f3db1b3b809f6b316f645eae3a321",
+      "source_numero_original": 23,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 18"
     },
     {
       "id": "2025-2026-2-24",
@@ -503,10 +595,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 18
+        "chapter": 18,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-24",
-      "source_sha256": "da082b9bcb5909bf0d9b81d639b2a08940222fe5ed27b7400c5bed09b901a95c"
+      "source_sha256": "da082b9bcb5909bf0d9b81d639b2a08940222fe5ed27b7400c5bed09b901a95c",
+      "source_numero_original": 24,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 18"
     },
     {
       "id": "2025-2026-2-25",
@@ -524,539 +620,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 14
+        "chapter": 14,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-25",
-      "source_sha256": "7bc717ded545db4bec74b23c06ea3d0c3840622dd08d42376db77de44de1857b"
-    },
-    {
-      "id": "2025-2026-2-26",
-      "numero_original": 26,
-      "pregunta": "1.- Los micro-ARN son pequeñas moléculas de ARN de 28-34 nucleótidos capaces de unirse por complementariedad de bases a los ARN de transferencia.\n2-Los micro-ARN se transcriben por la ADN polimerasa I o la II en forma de largos precursores que luego dan lugar a sus versiones maduras.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 8
-      },
-      "source_question_id": "2025-2026-2-26",
-      "source_sha256": "96ec219faae357693b859db976f3e43519b6f45739398527258682b8c442f807"
-    },
-    {
-      "id": "2025-2026-2-27",
-      "numero_original": 27,
-      "pregunta": "1-Entre las enfermedades debidas a mutaciones puntuales del ADNmt encontramos la neuropatía óptica hereditaria de Leber\n2.- La epilepsia mioclónica con fibras rojas rotas está asociada a tres mutaciones producidas en los nucleótidos 3460, 11778 y 14484.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 11
-      },
-      "source_question_id": "2025-2026-2-27",
-      "source_sha256": "11a0f38ec67a036b198f325d7a2cd6ac49a8bfa9336a27cd925bd4a3242e54ed"
-    },
-    {
-      "id": "2025-2026-2-28",
-      "numero_original": 28,
-      "pregunta": "1.- Las proteínas nucleolina y nucleofosmina contribuyen a la intensa coloración del nucléolo en la interfase.\n2.- Los snoARN C/D participan en la metilación-2'-O del pre-ARN y se unen a la proteina fibrilarina.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 8
-      },
-      "source_question_id": "2025-2026-2-28",
-      "source_sha256": "36d8385591640e6c0fe16666ee7ad3a743719df9a1a6fe78da4a836b7aa16488"
-    },
-    {
-      "id": "2025-2026-2-29",
-      "numero_original": 29,
-      "pregunta": "1.- La a-amanitina es un tetrapeptido ciclico que inhibe a la ARN polimerasa I y III impidiendo la elongación del ARN en eucariotas.\n2.- La a-amanitina es un octapeptido ciclico que inhibe solamente a la ADN polimerasa II, impidiendo la elongación del ARN en eucariotas.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 8
-      },
-      "source_question_id": "2025-2026-2-29",
-      "source_sha256": "e0b5b0db52563873e7785285445ff42c64186782b12029fb1bd38c04beacbc01"
-    },
-    {
-      "id": "2025-2026-2-30",
-      "numero_original": 30,
-      "pregunta": "1.- La filamina entrecruza microfilamentos formando redes ortogonales.\n2-La filamina favorece el estado sol del citoplasma.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 12
-      },
-      "source_question_id": "2025-2026-2-30",
-      "source_sha256": "468bc3f034b47770b82ee85ca94deff0645664d7a4bb31fa6293a61b21dadb26"
-    },
-    {
-      "id": "2025-2026-2-31",
-      "numero_original": 31,
-      "pregunta": "1.- La traducción del ARNm de la insulina tiene lugar en el Aparato de Golgi y genera una cadena polipeptidica precursora llamada \"pre-proinsulina\".\n2.- La proinsulina pasa entonces al REL y desde ahi a gránulos de secreción maduros.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 9
-      },
-      "source_question_id": "2025-2026-2-31",
-      "source_sha256": "6b214366f6e3aa03ab5ec2761f878f50c4da6c8347a1dda0013d3674ab839f26"
-    },
-    {
-      "id": "2025-2026-2-32",
-      "numero_original": 32,
-      "pregunta": "1.- La decitabina, un análogo de la citidina, es un agente desmitilante aprobado para el tratamiento del sindrome mielodisplásico.\n2-La hipermetilación del promotor del gen p16 hace que las células tumorales crezcan de manera descontrolada.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 7
-      },
-      "source_question_id": "2025-2026-2-32",
-      "source_sha256": "c9dfcc3c3197f37849dfe7d5270311670d03789d0fa4330e77b4a1fd3d395a2b"
-    },
-    {
-      "id": "2025-2026-2-33",
-      "numero_original": 33,
-      "pregunta": "Según el sistema de transporte electrónico mitocondrial:\n1.- La sintesis de ATP se lleva a cabo por el complejo V.\n2.- El ADP se forma principalmente en el citoplasma.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 11
-      },
-      "source_question_id": "2025-2026-2-33",
-      "source_sha256": "bf07fdad39e21b30d3fde3a5d49f98cb1b9b80e532bd35b9dbfadd1925cc2297"
-    },
-    {
-      "id": "2025-2026-2-34",
-      "numero_original": 34,
-      "pregunta": "Según los cuerpos de Cajal:\n1.- Están involucrados en procesos relacionados con el metabolismo del ARN, tales como la biogénesis, maduración y reciclaje de snRNP.\n2.- Están involucrados en el procesamiento del ARNm de las histonas y el mantenimiento de los telomeros.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 8
-      },
-      "source_question_id": "2025-2026-2-34",
-      "source_sha256": "c419adcfbd4003acb59cb3c35f9039f9c4a50b8d91f2aed21a0ffaf147bbe2d8"
-    },
-    {
-      "id": "2025-2026-2-35",
-      "numero_original": 35,
-      "pregunta": "1.- El ARN mensajero transporta la información contenida en el ARN desde el núcleo a los ribosomas.\n2-El ARN de transferencia transporta los aminoácidos necesarios para la sintesis de las proteinas en los ribosomas.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 9
-      },
-      "source_question_id": "2025-2026-2-35",
-      "source_sha256": "5f72539220e2bc7b46333512477dff18ae19f40b6b43df319116d7468aa58a6a"
-    },
-    {
-      "id": "2025-2026-2-36",
-      "numero_original": 36,
-      "pregunta": "1.- La O-glucosilación tiene lugar de modo exclusivo en el REL.\n2.- En la O-glucosilación se unen azúcares a un grupo OH de los aminoácidos serina, treonina y, en el caso del colágeno, hidroxilisina.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 9
-      },
-      "source_question_id": "2025-2026-2-36",
-      "source_sha256": "8fc852cb9c3b0f9d4fb76baef1e43004a82029f54ed1c0ef27c5b1743d06c5f1"
-    },
-    {
-      "id": "2025-2026-2-37",
-      "numero_original": 37,
-      "pregunta": "1.- Existen cinco tipos de ARN nucleares pequeños que forman parte de las snRNP: U1, U2, U3, U5 y U7\n2. La proteína de supervivencia de motoneuronas (SMN) es un componente esencial en la maduración de las snRNP que se localiza en cuerpos Cajal.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 8
-      },
-      "source_question_id": "2025-2026-2-37",
-      "source_sha256": "cd857a7689ef1002abcf136d3520d985252bd6fc1233c7a451406837f0725241"
-    },
-    {
-      "id": "2025-2026-2-38",
-      "numero_original": 38,
-      "pregunta": "1.- La glutatión peroxidasa es una selenoenzima.\n2.- La glutatión reductasa regenera GSSG a partir de GSH.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 11
-      },
-      "source_question_id": "2025-2026-2-38",
-      "source_sha256": "1e6f123cfa197415d16f7c490bc3790c78a4dde3c310eb336b401b3e3cbd1452"
-    },
-    {
-      "id": "2025-2026-2-39",
-      "numero_original": 39,
-      "pregunta": "Para el análisis citogenético:\n1.- La fitohemaglutinina estimula, durante un determinado período de tiempo la entrada en división celular de las células a cultivar.\n2- La colchicina disgrega las fibras del huso acromático aumentando el indice mitótico, lo que incapacita a las células para abandonar la división celular.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 7
-      },
-      "source_question_id": "2025-2026-2-39",
-      "source_sha256": "f89139bc57b7d10308a94bdb9ec46cb88309da7a9aa19671c0a0c8b77edd452c"
-    },
-    {
-      "id": "2025-2026-2-40",
-      "numero_original": 40,
-      "pregunta": "1.- La rifampicina D, actúa de igual manera sobre células procariotas como células eucariotas\n2-La actinomicina inhibe la síntesis del ARN al unirse específicamente a una de las subunidades de la ARN polimerasa bacteriana.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 8
-      },
-      "source_question_id": "2025-2026-2-40",
-      "source_sha256": "064d5c3bad8ff9b008147fa09a8d7ff36175c2544bdded10d7661ac2c9ceaebf"
-    },
-    {
-      "id": "2025-2026-2-41",
-      "numero_original": 41,
-      "pregunta": "1.-El muestreo de \"casos extremos\" consiste en seleccionar situaciones inusuales (ej. éxitos o fracasos rotundos) para aprender a fondo de esas particularidades.\n2- El muestreo por \"bola de nieve\" o cadena se basa en identificar informantes iniciales que recomienden a otros participantes idóneo para el estudio",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7
-      },
-      "source_question_id": "2025-2026-2-41",
-      "source_sha256": "26bcbfc1cb22780b8cb9ace77f4c40099b5237e3e9358e2afd1ce91d2cd919fb"
-    },
-    {
-      "id": "2025-2026-2-42",
-      "numero_original": 42,
-      "pregunta": "1.Un diseño común de la investigación cualitativa son los ensayos clinicos controlados.\n2-Entre los diseños de la investigación cualitativa están los cartográficos.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 10
-      },
-      "source_question_id": "2025-2026-2-42",
-      "source_sha256": "836b8ce7d434289123aec0ebfadf6861dd1f46d129a27a8360c462daf819616f"
-    },
-    {
-      "id": "2025-2026-2-43",
-      "numero_original": 43,
-      "pregunta": "1-El punto de arranque o primera unidad en el muestreo sistemático debe ser siempre el número 1 de la lista para asegurar el orden.\n2.- En el muestreo sistemático, el intervalo de selección se calcula dividiendo el total de la población (N) entre el tamaño de la muestra deseada (n).",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7
-      },
-      "source_question_id": "2025-2026-2-43",
-      "source_sha256": "3e0344c1ff13dec8c5fa6584460a87b9009697c88784ba05f3e28dbee5b36e31"
-    },
-    {
-      "id": "2025-2026-2-44",
-      "numero_original": 44,
-      "pregunta": "1.- En el muestreo aleatorio simple, cada unidad de la población tiene una probabilidad equitativa y conocida de ser incluida en la muestra.\n2-El muestreo sistemático puede introducir sesgos si el intervalo de selección coincide con una variación ciclica o sistemática en la población (ej. casas de esquina).",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7
-      },
-      "source_question_id": "2025-2026-2-44",
-      "source_sha256": "31a99ef2465906c3d0de9a8283783850a94dae9bc668b4b46df4c61abce9d276"
-    },
-    {
-      "id": "2025-2026-2-45",
-      "numero_original": 45,
-      "pregunta": "1.- En un estudio cualitativo la muestra depende del grado de interés de los lectores\n2-La selección de la muestra en un estudio cualitativo se realiza mediante muestreo probabilístico.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7
-      },
-      "source_question_id": "2025-2026-2-45",
-      "source_sha256": "4ba6640724b15dd41fda76cbe35c03f1b3db179e5c8df374e26865a5e42149b0"
-    },
-    {
-      "id": "2025-2026-2-46",
-      "numero_original": 46,
-      "pregunta": "1.- Los conceptos son construcciones lógicas abstractas que no existen fuera del marco de referencia establecido y no son fenómenos en sí mismos.\n2.- Una variable compleja como \"Accesibilidad a servicios de salud\" puede medirse con un solo indicador simple sin necesidad de definir dimensiones previas.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 11
-      },
-      "source_question_id": "2025-2026-2-46",
-      "source_sha256": "7326d79a70a92f67835ca1feb73601f7bd5c4c54b8a347c6e367fc89719be045"
-    },
-    {
-      "id": "2025-2026-2-47",
-      "numero_original": 47,
-      "pregunta": "1.- El muestreo de \"máxima variabilidad\" en estudios cualitativos busca deliberadamente incluir las diferentes posibilidades de las variables más importantes (ej. rural, urbano, semiurbano).\n2.- El muestreo de casos críticos se refiere a seleccionar aquellos casos que ocurren de manera rutinaria y no tienen impacto en el sistema estudiado.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7
-      },
-      "source_question_id": "2025-2026-2-47",
-      "source_sha256": "113486f3b06c186ed3fa44448a8ed4a7d7dc8f6130b85756deb74debed437b47"
-    },
-    {
-      "id": "2025-2026-2-48",
-      "numero_original": 48,
-      "pregunta": "1.-Según Fisher, cuando los fenómenos son muy homogéneos, se requieren muestras más grandes para detectar las diferencias33.\n2- Si se utiliza la fórmula basada en cruce de variables, cuanto más pequeña sea la proporción esperada de la variable independiente, mayor deberá ser el tamaño de la muestra.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 12
-      },
-      "source_question_id": "2025-2026-2-48",
-      "source_sha256": "8779c50a3bf581303476e64e88881d8e29f2e64866993537b9edb5da51cd7d97"
-    },
-    {
-      "id": "2025-2026-2-49",
-      "numero_original": 49,
-      "pregunta": "1.- El sesgo de muestreo ocurre cuando un sector de la población está sistemáticamente sobrerrepresentado o subrepresentado en la muestra.\n2.- Utilizar voluntarios para un estudio sobre satisfacción de servicios elimina el sesgo, ya que asegura que los participantes estén motivados.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7
-      },
-      "source_question_id": "2025-2026-2-49",
-      "source_sha256": "c2ddb0c6d3bc4dcab5ece25bab6ee2aa162abe0d7d645e9a29dd0442a5272aa0"
-    },
-    {
-      "id": "2025-2026-2-50",
-      "numero_original": 50,
-      "pregunta": "1.- Al codificar variables nominales (ej. Soltero=1, Casado=2), el número asignado representa un orden jerárquico o magnitud de la variable.\n2.- En la escala nominal, los números sirven exclusivamente para categorizar o identificar, sin implicar que una categoría sea mayor",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 11
-      },
-      "source_question_id": "2025-2026-2-50",
-      "source_sha256": "49fdd7d3dd35dc589f1813b84c945d9ac0d6f686a74a170f2253cc833f8b9f25"
+      "source_sha256": "7bc717ded545db4bec74b23c06ea3d0c3840622dd08d42376db77de44de1857b",
+      "source_numero_original": 25,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 14"
     },
     {
       "id": "2025-2026-2-51",
-      "numero_original": 51,
+      "numero_original": 26,
       "pregunta": "Donde se encuentra ubicada la Glicina:\n1.- Uniones neuromusculares.\n2.- Hipotálamo y tálamo.\n3.- Neuronas inhibitorias del encéfalo, la médula espinal y la retina.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1071,14 +646,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 12
+        "chapter": 12,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-51",
-      "source_sha256": "6f8b2eab98dc9d8bc3ef6ff2718ae5a3d81e3ba6820ffe14c51f603d3ff9c7f0"
+      "source_sha256": "6f8b2eab98dc9d8bc3ef6ff2718ae5a3d81e3ba6820ffe14c51f603d3ff9c7f0",
+      "source_numero_original": 51,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 12"
     },
     {
       "id": "2025-2026-2-52",
-      "numero_original": 52,
+      "numero_original": 27,
       "pregunta": "Es cierto sobre la conducción de señales en las fibras mielínicas\n1.- Los canales iónicos con compuerta regulada por voltaje son escasos en los internódulos cubiertos por mielina.\n2-Por lo cual se presentan con facilidad potenciales de acción en los internódulos.\n3.- La mielina crea una menor separación entre los líquidos intracelular y extracelular.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1093,14 +672,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 12
+        "chapter": 12,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-52",
-      "source_sha256": "8e92b96778187f9426ec5341672d5ea2d3ec8113e9b59bc25e9d7b3afe000390"
+      "source_sha256": "8e92b96778187f9426ec5341672d5ea2d3ec8113e9b59bc25e9d7b3afe000390",
+      "source_numero_original": 52,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 12"
     },
     {
       "id": "2025-2026-2-53",
-      "numero_original": 53,
+      "numero_original": 28,
       "pregunta": "En cuál de los siguientes defectos de la formación de imagen, el globo ocular es demasiado largo:\n1.- Hipermetropia. 2.- Astigmatismo 3.- Miopia",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1115,14 +698,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-53",
-      "source_sha256": "5a8ebd95e57ce540d1f5834b8f84ce3d5c012d5fc37a46dd83c736ae618c3110"
+      "source_sha256": "5a8ebd95e57ce540d1f5834b8f84ce3d5c012d5fc37a46dd83c736ae618c3110",
+      "source_numero_original": 53,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
     },
     {
       "id": "2025-2026-2-54",
-      "numero_original": 54,
+      "numero_original": 29,
       "pregunta": "La sangre regresa de los pulmones a la auricula izquierda mediante:\n1-Venas pulmonares. 2.- Vena del seno coronario 3.- Tronco pulmonar",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1137,14 +724,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 19
+        "chapter": 19,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-54",
-      "source_sha256": "a664c396349399175937dfaa26a1a0920c861db7c39fd6e9d3b3a6a4bf76cab6"
+      "source_sha256": "a664c396349399175937dfaa26a1a0920c861db7c39fd6e9d3b3a6a4bf76cab6",
+      "source_numero_original": 54,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 19"
     },
     {
       "id": "2025-2026-2-55",
-      "numero_original": 55,
+      "numero_original": 30,
       "pregunta": "La vena marginal izquierda se vacía en:\n1-Vena cardiaca media. 2.- Vena cardiaca mayor 3.- Vena interventricular posterior.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1159,14 +750,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 19
+        "chapter": 19,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-55",
-      "source_sha256": "6ba0b3365c79e7dfc09ab41603a92fce337177d581d11be6c48de1c65d8acd5d"
+      "source_sha256": "6ba0b3365c79e7dfc09ab41603a92fce337177d581d11be6c48de1c65d8acd5d",
+      "source_numero_original": 55,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 19"
     },
     {
       "id": "2025-2026-2-56",
-      "numero_original": 56,
+      "numero_original": 31,
       "pregunta": "Es cierto sobre el órgano de Corti:\n1.- El órgano de Corti tiene un epitelio compuesto por células pilosas y células de soporte.\n2-Sobre la parte superior de los estereocilios se encuentra una membrana tectoria gelatinosa.\n3.- El órgano de Corti tiene cuatro filas de células pilosas que lo rodean en espiral en toda su extensión.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1181,14 +776,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-56",
-      "source_sha256": "de661ed2d2a8d7714f6fd0063993f0724d2fd14c60819ff6319f9379f38c045f"
+      "source_sha256": "de661ed2d2a8d7714f6fd0063993f0724d2fd14c60819ff6319f9379f38c045f",
+      "source_numero_original": 56,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
     },
     {
       "id": "2025-2026-2-57",
-      "numero_original": 57,
+      "numero_original": 32,
       "pregunta": "Es cierto sobre la histología de la hipófisis:\n1.- En el lóbulo anterior hay basófilos.\n2- El lóbulo anterior incluye tirotropos.\n3.- El lóbulo posterior incluye tejido nervioso",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1203,14 +802,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 17
+        "chapter": 17,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-57",
-      "source_sha256": "a0d2e589651c10fff62f07a4d708c01618a51a613bd9675bbffd3a8b2108ebb5"
+      "source_sha256": "a0d2e589651c10fff62f07a4d708c01618a51a613bd9675bbffd3a8b2108ebb5",
+      "source_numero_original": 57,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 17"
     },
     {
       "id": "2025-2026-2-58",
-      "numero_original": 58,
+      "numero_original": 33,
       "pregunta": "El siguiente leucocito aumenta en la varicela, sinusitis, diabetes mellitus, mixedema y policitemia:\n1.- Monocitos. 2.- Eosinofilos. 3.- Basofilos",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1225,14 +828,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 18
+        "chapter": 18,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-58",
-      "source_sha256": "24133c166223eb50a05635836e4156e04e38d06be64f23aa466a5963ea3dd68e"
+      "source_sha256": "24133c166223eb50a05635836e4156e04e38d06be64f23aa466a5963ea3dd68e",
+      "source_numero_original": 58,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 18"
     },
     {
       "id": "2025-2026-2-59",
-      "numero_original": 59,
+      "numero_original": 34,
       "pregunta": "Son centros importantes del aprendizaje y las emociones:\n1-Corteza prefrontal medial.\n2-Cuerpo mamilar, núcleos talámicos.\n3.- Hipocampo, amígdala",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1247,14 +854,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 14
+        "chapter": 14,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-59",
-      "source_sha256": "4c55078d73d1b8cda02d50ac83d6bec8bc1472bb1869e44cae0312b8f94768e7"
+      "source_sha256": "4c55078d73d1b8cda02d50ac83d6bec8bc1472bb1869e44cae0312b8f94768e7",
+      "source_numero_original": 59,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 14"
     },
     {
       "id": "2025-2026-2-60",
-      "numero_original": 60,
+      "numero_original": 35,
       "pregunta": "Es cierto sobre las ondas cerebrales:\n1-Las ondas alfa tienen una frecuencia de 8 a 13 Hz y se graban sobre todo en el área parietooccipital.\n2-Las ondas zeta tienen una frecuencia de 14 a 30 Hz y se presentan en la región frontal a parietal.\n3.- Las ondas beta tienen una frecuencia de 4 a 7 Hz.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1269,14 +880,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 14
+        "chapter": 14,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-60",
-      "source_sha256": "e33f28bc8fa9782b3bea74fa2da7a3709b547c1fe4d5dfd548631f2b30da4c2d"
+      "source_sha256": "e33f28bc8fa9782b3bea74fa2da7a3709b547c1fe4d5dfd548631f2b30da4c2d",
+      "source_numero_original": 60,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 14"
     },
     {
       "id": "2025-2026-2-61",
-      "numero_original": 61,
+      "numero_original": 36,
       "pregunta": "El nervio facial termina enviando fibras autónomas a las siguientes glándulas:\n1.-Glándulas gustativas.\n2-Glándulas salivales submandibulares y sublinguales.\n3.-Glandula salival parótida",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1291,14 +906,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 15
+        "chapter": 15,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-61",
-      "source_sha256": "ab1b5668223c025e06c861f5f8ed3c528684ea8637dbc1e36419fc136dace903"
+      "source_sha256": "ab1b5668223c025e06c861f5f8ed3c528684ea8637dbc1e36419fc136dace903",
+      "source_numero_original": 61,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 15"
     },
     {
       "id": "2025-2026-2-62",
-      "numero_original": 62,
+      "numero_original": 37,
       "pregunta": "Una persona con una presión arterial sistólica de 130 mmHg y diastólica de 85 mmHg, tendría presión arterial media de casi\n1.-115 mmHg. 2-108 mmHg. 3.-100 mmHg.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1313,14 +932,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 20
+        "chapter": 20,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-62",
-      "source_sha256": "a76e7a779d05ef0fe49bd91d05442124a70629bbce5864f5aebe68c0af976905"
+      "source_sha256": "a76e7a779d05ef0fe49bd91d05442124a70629bbce5864f5aebe68c0af976905",
+      "source_numero_original": 62,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 20"
     },
     {
       "id": "2025-2026-2-63",
-      "numero_original": 63,
+      "numero_original": 38,
       "pregunta": "El siguiente neurotrasnmisor suprime el apetito:\n1-Dopamina. 2.- Sustancia P 3.- Colecistocinina",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1335,14 +958,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 12
+        "chapter": 12,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-63",
-      "source_sha256": "6a35ac8eaec41e2a24224bd328f5b8dfee41b5d7805143de289f8738f7f3c7a2"
+      "source_sha256": "6a35ac8eaec41e2a24224bd328f5b8dfee41b5d7805143de289f8738f7f3c7a2",
+      "source_numero_original": 63,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 12"
     },
     {
       "id": "2025-2026-2-64",
-      "numero_original": 64,
+      "numero_original": 39,
       "pregunta": "Es cierto sobre los eosinófilos:\n1-También reciben el nombre de leucocitos polimorfonucleares.\n2-Hay casi 2200 células por ul, y representan 25 a 33% de la cifra de leucocitos.\n3.- Se eleva (eosinofilia) en presencia de alergias, infecciones parasitarias.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1357,14 +984,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 18
+        "chapter": 18,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-64",
-      "source_sha256": "0e6f7b3fc401f42107eecd2103bce543ae91ab647e72eb57d278fd46d6bd0638"
+      "source_sha256": "0e6f7b3fc401f42107eecd2103bce543ae91ab647e72eb57d278fd46d6bd0638",
+      "source_numero_original": 64,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 18"
     },
     {
       "id": "2025-2026-2-65",
-      "numero_original": 65,
+      "numero_original": 40,
       "pregunta": "Son neuropeptidos que actúan como interruptores del sueño:\n1.-Narcoleptidos. 2- Encefalinas. 3.- Orexinas.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1379,14 +1010,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 14
+        "chapter": 14,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-65",
-      "source_sha256": "bc08a6a5747e41e4129169da5e2ea03a070a21294292937067ae782cd86c097b"
+      "source_sha256": "bc08a6a5747e41e4129169da5e2ea03a070a21294292937067ae782cd86c097b",
+      "source_numero_original": 65,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 14"
     },
     {
       "id": "2025-2026-2-66",
-      "numero_original": 66,
+      "numero_original": 41,
       "pregunta": "Es cierto sobre los receptores nicotínicos:\n1.- Existen en todas las sinapsis de los ganglios autónomos, donde las fibras preganglionares estimulan a las células posganglionares.\n2.- También están en las células de la médula suprarrenal.\n3.- La fijación de ACh a un receptor de nicotina siempre es excitatoria.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1401,14 +1036,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 15
+        "chapter": 15,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-66",
-      "source_sha256": "7ac341668be0704a19a7d9fda5e764cd48af8f21055d65e0e263a173dd997ee8"
+      "source_sha256": "7ac341668be0704a19a7d9fda5e764cd48af8f21055d65e0e263a173dd997ee8",
+      "source_numero_original": 66,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 15"
     },
     {
       "id": "2025-2026-2-67",
-      "numero_original": 67,
+      "numero_original": 42,
       "pregunta": "Un paciente tiene una herida de bala que causo que un fragmento óseo, dañara la medula espinal. Ahora el paciente no siente dolor ni sensaciones de calor de ese nivel cuerpo hacia abajo. Lo más probable es que se haya dañado:\n1.- La vía espinotalámica. 2.- El fascículo grácil. 3.- El lemnisco medial.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1423,14 +1062,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 13
+        "chapter": 13,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-67",
-      "source_sha256": "c4ef9cd23daf6b8fbca3f453ff825d5c41f1e1eee42889461e568f37009bdec3"
+      "source_sha256": "c4ef9cd23daf6b8fbca3f453ff825d5c41f1e1eee42889461e568f37009bdec3",
+      "source_numero_original": 67,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 13"
     },
     {
       "id": "2025-2026-2-68",
-      "numero_original": 68,
+      "numero_original": 43,
       "pregunta": "Es cierto sobre la membrana timpánica:\n1.- La membrana mide casi 1 cm de diámetro y tiene una superficie externa un poco convexa\n2-La membrana timpánica cierra el extremo externo del conducto auditivo y lo separa del oído medio.\n3.- Está inervada por ramas sensitivas de los nervios vago y trigémino, y es muy sensible al dolor.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1445,14 +1088,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-68",
-      "source_sha256": "dc639ab8638d729ea4166f3fb41561e9be9caad140855b834e17d406d2739fb8"
+      "source_sha256": "dc639ab8638d729ea4166f3fb41561e9be9caad140855b834e17d406d2739fb8",
+      "source_numero_original": 68,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
     },
     {
       "id": "2025-2026-2-69",
-      "numero_original": 69,
+      "numero_original": 44,
       "pregunta": "Es cierto sobre el timo:\n1.- En adultos, la glándula pesa casi 20 g hasta los 60 años de edad.\n2-En adultos, la glándula pesa casi 60 g hasta los 60 años de edad.\n3.- En adultos, la glándula pesa casi 40 g hasta los 60 años de edad.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1467,14 +1114,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 17
+        "chapter": 17,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-69",
-      "source_sha256": "07d8a083293116ba8384ec0a3eb9f4ac57805ff075ef99b3edf01164ccf1a83e"
+      "source_sha256": "07d8a083293116ba8384ec0a3eb9f4ac57805ff075ef99b3edf01164ccf1a83e",
+      "source_numero_original": 69,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 17"
     },
     {
       "id": "2025-2026-2-70",
-      "numero_original": 70,
+      "numero_original": 45,
       "pregunta": "En que capa de la corteza cerebral (neocorteza) se encuentran las células estrelladas:\n1.-I 2.-IV 3.-III",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1489,14 +1140,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 14
+        "chapter": 14,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-70",
-      "source_sha256": "3be641bda7203df2bf91c96f8d1d9137870a0fff2d30035ab74f2c3d12bcbb78"
+      "source_sha256": "3be641bda7203df2bf91c96f8d1d9137870a0fff2d30035ab74f2c3d12bcbb78",
+      "source_numero_original": 70,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 14"
     },
     {
       "id": "2025-2026-2-71",
-      "numero_original": 71,
+      "numero_original": 46,
       "pregunta": "Es un estado en que el ojo está relajado y enfocado en un objeto a más de 6 m de distancia:\n1.- Emetropia. 2.- Miopia. 3.- Hipermetropia.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1511,14 +1166,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-71",
-      "source_sha256": "0b329b9da02e9697f9b57b3dfe291a6a221226ead0776d7d69b40dda539333bb"
+      "source_sha256": "0b329b9da02e9697f9b57b3dfe291a6a221226ead0776d7d69b40dda539333bb",
+      "source_numero_original": 71,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
     },
     {
       "id": "2025-2026-2-72",
-      "numero_original": 72,
+      "numero_original": 47,
       "pregunta": "El siguiente leucocito tiene citoplasma abundante con granulos escazos y finos:\n1-Monocitos. 2.- Eosinofilos. 3.- Neutrofilos",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1533,14 +1192,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 18
+        "chapter": 18,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-72",
-      "source_sha256": "4538b17c0da1754f3e7cd890b70ca788bc5eca1c66c63ed8a799e17bf5ce150a"
+      "source_sha256": "4538b17c0da1754f3e7cd890b70ca788bc5eca1c66c63ed8a799e17bf5ce150a",
+      "source_numero_original": 72,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 18"
     },
     {
       "id": "2025-2026-2-73",
-      "numero_original": 73,
+      "numero_original": 48,
       "pregunta": "En relación con la perilinfa, la endolinfa tiene potencial eléctrico de casi:\n-40 mV 2. +55 mV 3-80 mV",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1555,14 +1218,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-73",
-      "source_sha256": "cb62507e2161e1cb73a0fedb1b1e9255734de1e89e894729d145637a1d75bc8d"
+      "source_sha256": "cb62507e2161e1cb73a0fedb1b1e9255734de1e89e894729d145637a1d75bc8d",
+      "source_numero_original": 73,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
     },
     {
       "id": "sim-second-callosum-74",
-      "numero_original": 74,
+      "numero_original": 49,
       "pregunta": "Una descripción confunde la estructura que separa los hemisferios cerebrales con la que los conecta mediante fibras. ¿Qué corrección corresponde?",
       "opcion_a": "La cisura interhemisférica separa los hemisferios; el cuerpo calloso los conecta mediante fibras nerviosas.",
       "opcion_b": "El cuerpo calloso es la ranura profunda que separa ambos hemisferios.",
@@ -1574,15 +1241,19 @@
       ],
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 14
+        "chapter": 14,
+        "curriculum": "past-exams-2025-2026"
       },
       "fuente": "Saladin · capítulo 14 · PDF 542–543 (libro 514–515)",
       "comentario": "Correcta A: distingue una cisura anatómica de un haz de fibras que conecta los hemisferios. B atribuye la separación al haz; C convierte la cisura en fibras; D cambia las estructuras comunicadas. Síntesis original del texto y figura 14.2.",
-      "source_question_id": null
+      "source_question_id": null,
+      "source_numero_original": 74,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 14"
     },
     {
       "id": "2025-2026-2-75",
-      "numero_original": 75,
+      "numero_original": 50,
       "pregunta": "Es color de la luz está determinado por:\n1.-Su longitud de onda. 2.- La refracción. 3.- Su velocidad.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1597,14 +1268,393 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 16
+        "chapter": 16,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-75",
-      "source_sha256": "b492391c25aa9b68f193164c96a58fe6e345a291699bf0a7fa77bbeff8405489"
+      "source_sha256": "b492391c25aa9b68f193164c96a58fe6e345a291699bf0a7fa77bbeff8405489",
+      "source_numero_original": 75,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 16"
+    },
+    {
+      "id": "2025-2026-2-26",
+      "numero_original": 51,
+      "pregunta": "1.- Los micro-ARN son pequeñas moléculas de ARN de 28-34 nucleótidos capaces de unirse por complementariedad de bases a los ARN de transferencia.\n2-Los micro-ARN se transcriben por la ADN polimerasa I o la II en forma de largos precursores que luego dan lugar a sus versiones maduras.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-26",
+      "source_sha256": "96ec219faae357693b859db976f3e43519b6f45739398527258682b8c442f807",
+      "source_numero_original": 26,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2025-2026-2-27",
+      "numero_original": 52,
+      "pregunta": "1-Entre las enfermedades debidas a mutaciones puntuales del ADNmt encontramos la neuropatía óptica hereditaria de Leber\n2.- La epilepsia mioclónica con fibras rojas rotas está asociada a tres mutaciones producidas en los nucleótidos 3460, 11778 y 14484.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-27",
+      "source_sha256": "11a0f38ec67a036b198f325d7a2cd6ac49a8bfa9336a27cd925bd4a3242e54ed",
+      "source_numero_original": 27,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 11"
+    },
+    {
+      "id": "2025-2026-2-28",
+      "numero_original": 53,
+      "pregunta": "1.- Las proteínas nucleolina y nucleofosmina contribuyen a la intensa coloración del nucléolo en la interfase.\n2.- Los snoARN C/D participan en la metilación-2'-O del pre-ARN y se unen a la proteina fibrilarina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-28",
+      "source_sha256": "36d8385591640e6c0fe16666ee7ad3a743719df9a1a6fe78da4a836b7aa16488",
+      "source_numero_original": 28,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2025-2026-2-29",
+      "numero_original": 54,
+      "pregunta": "1.- La a-amanitina es un tetrapeptido ciclico que inhibe a la ARN polimerasa I y III impidiendo la elongación del ARN en eucariotas.\n2.- La a-amanitina es un octapeptido ciclico que inhibe solamente a la ADN polimerasa II, impidiendo la elongación del ARN en eucariotas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-29",
+      "source_sha256": "e0b5b0db52563873e7785285445ff42c64186782b12029fb1bd38c04beacbc01",
+      "source_numero_original": 29,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2025-2026-2-30",
+      "numero_original": 55,
+      "pregunta": "1.- La filamina entrecruza microfilamentos formando redes ortogonales.\n2-La filamina favorece el estado sol del citoplasma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 12,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-30",
+      "source_sha256": "468bc3f034b47770b82ee85ca94deff0645664d7a4bb31fa6293a61b21dadb26",
+      "source_numero_original": 30,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 12"
+    },
+    {
+      "id": "2025-2026-2-31",
+      "numero_original": 56,
+      "pregunta": "1.- La traducción del ARNm de la insulina tiene lugar en el Aparato de Golgi y genera una cadena polipeptidica precursora llamada \"pre-proinsulina\".\n2.- La proinsulina pasa entonces al REL y desde ahi a gránulos de secreción maduros.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-31",
+      "source_sha256": "6b214366f6e3aa03ab5ec2761f878f50c4da6c8347a1dda0013d3674ab839f26",
+      "source_numero_original": 31,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 9"
+    },
+    {
+      "id": "2025-2026-2-32",
+      "numero_original": 57,
+      "pregunta": "1.- La decitabina, un análogo de la citidina, es un agente desmitilante aprobado para el tratamiento del sindrome mielodisplásico.\n2-La hipermetilación del promotor del gen p16 hace que las células tumorales crezcan de manera descontrolada.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-32",
+      "source_sha256": "c9dfcc3c3197f37849dfe7d5270311670d03789d0fa4330e77b4a1fd3d395a2b",
+      "source_numero_original": 32,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2025-2026-2-33",
+      "numero_original": 58,
+      "pregunta": "Según el sistema de transporte electrónico mitocondrial:\n1.- La sintesis de ATP se lleva a cabo por el complejo V.\n2.- El ADP se forma principalmente en el citoplasma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-33",
+      "source_sha256": "bf07fdad39e21b30d3fde3a5d49f98cb1b9b80e532bd35b9dbfadd1925cc2297",
+      "source_numero_original": 33,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 11"
+    },
+    {
+      "id": "2025-2026-2-34",
+      "numero_original": 59,
+      "pregunta": "Según los cuerpos de Cajal:\n1.- Están involucrados en procesos relacionados con el metabolismo del ARN, tales como la biogénesis, maduración y reciclaje de snRNP.\n2.- Están involucrados en el procesamiento del ARNm de las histonas y el mantenimiento de los telomeros.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-34",
+      "source_sha256": "c419adcfbd4003acb59cb3c35f9039f9c4a50b8d91f2aed21a0ffaf147bbe2d8",
+      "source_numero_original": 34,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2025-2026-2-35",
+      "numero_original": 60,
+      "pregunta": "1.- El ARN mensajero transporta la información contenida en el ARN desde el núcleo a los ribosomas.\n2-El ARN de transferencia transporta los aminoácidos necesarios para la sintesis de las proteinas en los ribosomas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-35",
+      "source_sha256": "5f72539220e2bc7b46333512477dff18ae19f40b6b43df319116d7468aa58a6a",
+      "source_numero_original": 35,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 9"
+    },
+    {
+      "id": "2025-2026-2-36",
+      "numero_original": 61,
+      "pregunta": "1.- La O-glucosilación tiene lugar de modo exclusivo en el REL.\n2.- En la O-glucosilación se unen azúcares a un grupo OH de los aminoácidos serina, treonina y, en el caso del colágeno, hidroxilisina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-36",
+      "source_sha256": "8fc852cb9c3b0f9d4fb76baef1e43004a82029f54ed1c0ef27c5b1743d06c5f1",
+      "source_numero_original": 36,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 9"
+    },
+    {
+      "id": "2025-2026-2-37",
+      "numero_original": 62,
+      "pregunta": "1.- Existen cinco tipos de ARN nucleares pequeños que forman parte de las snRNP: U1, U2, U3, U5 y U7\n2. La proteína de supervivencia de motoneuronas (SMN) es un componente esencial en la maduración de las snRNP que se localiza en cuerpos Cajal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-37",
+      "source_sha256": "cd857a7689ef1002abcf136d3520d985252bd6fc1233c7a451406837f0725241",
+      "source_numero_original": 37,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2025-2026-2-38",
+      "numero_original": 63,
+      "pregunta": "1.- La glutatión peroxidasa es una selenoenzima.\n2.- La glutatión reductasa regenera GSSG a partir de GSH.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-38",
+      "source_sha256": "1e6f123cfa197415d16f7c490bc3790c78a4dde3c310eb336b401b3e3cbd1452",
+      "source_numero_original": 38,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 11"
+    },
+    {
+      "id": "2025-2026-2-39",
+      "numero_original": 64,
+      "pregunta": "Para el análisis citogenético:\n1.- La fitohemaglutinina estimula, durante un determinado período de tiempo la entrada en división celular de las células a cultivar.\n2- La colchicina disgrega las fibras del huso acromático aumentando el indice mitótico, lo que incapacita a las células para abandonar la división celular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-39",
+      "source_sha256": "f89139bc57b7d10308a94bdb9ec46cb88309da7a9aa19671c0a0c8b77edd452c",
+      "source_numero_original": 39,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2025-2026-2-40",
+      "numero_original": 65,
+      "pregunta": "1.- La rifampicina D, actúa de igual manera sobre células procariotas como células eucariotas\n2-La actinomicina inhibe la síntesis del ARN al unirse específicamente a una de las subunidades de la ARN polimerasa bacteriana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-40",
+      "source_sha256": "064d5c3bad8ff9b008147fa09a8d7ff36175c2544bdded10d7661ac2c9ceaebf",
+      "source_numero_original": 40,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
     },
     {
       "id": "2025-2026-2-76",
-      "numero_original": 76,
+      "numero_original": 66,
       "pregunta": "1.- La B-oxidación ocurre en la membrana mitocondrial.\n2-Los ácidos grasos de cadena muy larga se metabolizan en peroxisomas\n3.- Los ácidos grasos de cadena corta atraviesan la membrana por transporte activo.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1619,14 +1669,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 11
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-76",
-      "source_sha256": "68fda29444a7863b57b0bb89e721cf12f34ca4ef2c1f4b3ed81fa1f4651f3c40"
+      "source_sha256": "68fda29444a7863b57b0bb89e721cf12f34ca4ef2c1f4b3ed81fa1f4651f3c40",
+      "source_numero_original": 76,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 11"
     },
     {
       "id": "2025-2026-2-77",
-      "numero_original": 77,
+      "numero_original": 67,
       "pregunta": "1.- La transposasa activa puede actuar sobre copias inactivas de transposones.\n2.- Las familias MER1, MER2 y mariner están implicadas en reordenamientos cromosómicos.\n3.- Generalmente en el genoma humano, el gen de la transposasa aparece mutado.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1641,14 +1695,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-77",
-      "source_sha256": "a4c22c71ac0bc9fd3798f2704c07b0d29b36c0a9da64d1d4fb2bcc18b5856198"
+      "source_sha256": "a4c22c71ac0bc9fd3798f2704c07b0d29b36c0a9da64d1d4fb2bcc18b5856198",
+      "source_numero_original": 77,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-2-78",
-      "numero_original": 78,
+      "numero_original": 68,
       "pregunta": "1.-El segundo ARNt que entra en el ribosoma ya no precisa de la ayuda de factores proteicos de elongación para colocarcese en el sitio A del ribosoma.\n2-Cuando ha finalizado la translocación, se desprenden del ribosoma el factor eEF2 y el ARNt del sitio E.\n3.- Tras la formación del primer enlace peptidico, el ribosoma se desplaza en sentido 3 a 5' de los aminoácidos (Met y Phe).",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1663,14 +1721,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 9
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-78",
-      "source_sha256": "5b9c1a5723e88693dc3eeaae958b9281b9b52634738190a62b4bbf42bb97a1f2"
+      "source_sha256": "5b9c1a5723e88693dc3eeaae958b9281b9b52634738190a62b4bbf42bb97a1f2",
+      "source_numero_original": 78,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 9"
     },
     {
       "id": "2025-2026-2-79",
-      "numero_original": 79,
+      "numero_original": 69,
       "pregunta": "1.-El REL contribuye también de modo muy importante en la formación de lipoproteínas, ácidos biliares y hormonas esteroideas.\n2.- El REL tiene un importante papel en la degradación de sustancias tóxicas hidrosolubles son convertidas en productos liposolubles.\n3.- En el lado citosólico de la membrana de la célula se encuentra la glucosa 6-fosfatasa.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1685,14 +1747,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-79",
-      "source_sha256": "fa607d186efac7ccb1a9ca74cb93b3122390a22e74bd40be309461540e26fab3"
+      "source_sha256": "fa607d186efac7ccb1a9ca74cb93b3122390a22e74bd40be309461540e26fab3",
+      "source_numero_original": 79,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-2-80",
-      "numero_original": 80,
+      "numero_original": 70,
       "pregunta": "1.- Las vesículas revestidas de clatrina participan en la formación de vesículas en el aparato de Golgi que irán destinadas a lisosomas.\n2-Las vesículas revestidas COPII median el transporte del RER al aparato de Golgi.\n3.- Las vesículas revestidas COPI median el transporte entre sistemas del aparato de Golgi y de recuperación a RER.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1707,14 +1773,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-80",
-      "source_sha256": "59de0a689114fe310646ba4a3b60ec211a44f47e29f0938ade188235af62e356"
+      "source_sha256": "59de0a689114fe310646ba4a3b60ec211a44f47e29f0938ade188235af62e356",
+      "source_numero_original": 80,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-2-81",
-      "numero_original": 81,
+      "numero_original": 71,
       "pregunta": "1.- Las bacterias realizan splicing y tienen lugar muchas de las modificaciones postraduccionales necesarias para la función de las proteínas humanas.\n2-Las bacterias realizan glucosilación, pero las cadenas glucídicas son distintas a las de las células humanas.\n3-Un ejemplo de proteína recombinante utilizada en clínica es la insulina.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1729,14 +1799,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 9
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-81",
-      "source_sha256": "b5d3cff4598c13da08d2f0e51d28651b46b7868f0293de8f6507e853f4c81b9c"
+      "source_sha256": "b5d3cff4598c13da08d2f0e51d28651b46b7868f0293de8f6507e853f4c81b9c",
+      "source_numero_original": 81,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 9"
     },
     {
       "id": "2025-2026-2-82",
-      "numero_original": 82,
+      "numero_original": 72,
       "pregunta": "1.- La formación de puentes disulfuro, que se establecen entre los aminoácidos cisteína de la cadena polipeptídica, tiene lugar en el nucleolo por su ambiente oxidante y es catalizada por la proteína disulfuro isomerasa.\n2.- Conforme un complejo asociado al ribosoma se une a la primera zona hidrófila de la proteína que está en fase de síntesis, otro complejo igual se asocia con la subunidad menor y se dispone a unirse a la porción hidrófoba que surja del ribosoma.\n3.- El 90% de las proteínas se pliegan satisfactoriamente durante su síntesis.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1751,14 +1825,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 9
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-82",
-      "source_sha256": "9fa21d1427848caf5bccf03acd5a435fbcd6eb0c3cf4255203e56ab5ce9dd54e"
+      "source_sha256": "9fa21d1427848caf5bccf03acd5a435fbcd6eb0c3cf4255203e56ab5ce9dd54e",
+      "source_numero_original": 82,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 9"
     },
     {
       "id": "2025-2026-2-83",
-      "numero_original": 83,
+      "numero_original": 73,
       "pregunta": "1-Los lisosomas primarios se forman por gemación en la zona TGN del Golgi\n2-En el endosoma tardío tiene lugar, la disociación de los grupos fosfato que constituían el marcaje de las enzimas lisosómicas.\n3.- La digestión incompleta de las sustancias puede generar gránulos de lipofuscina.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1773,14 +1851,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-83",
-      "source_sha256": "9c7924aa7bb27073853a4e831f24acd2d0b4fda512d3c4901cf1ef43d31a9780"
+      "source_sha256": "9c7924aa7bb27073853a4e831f24acd2d0b4fda512d3c4901cf1ef43d31a9780",
+      "source_numero_original": 83,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-2-84",
-      "numero_original": 84,
+      "numero_original": 74,
       "pregunta": "En relación a la señal de localización nuclear, es incorrecto:\n1.- La mutación en Lys-128 del antígeno T impide su entrada al núcleo.\n2-La secuencia responsable del transporte del antígeno T está formada por siete aminoácidos consecutivos.\n3.- Las quimeras creadas al fusionar proteínas como ß-galactosidasa o piruvato quinasa con la secuencia de la señal de localización Nuclear se acumulan en el citoplasma.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1795,14 +1877,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-84",
-      "source_sha256": "3f358dec72ec1234a74fc1a0fd46627ea4ae12e48eb01e48a77a3fe9aafdbb49"
+      "source_sha256": "3f358dec72ec1234a74fc1a0fd46627ea4ae12e48eb01e48a77a3fe9aafdbb49",
+      "source_numero_original": 84,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-2-85",
-      "numero_original": 85,
+      "numero_original": 75,
       "pregunta": "1-El ARNm consiste en una secuencia monocatenaria en cuyo extremo 3' hay un nucleótido guanina metilado a modo de caperuza y en cuyo extremo 5' existe una cadena de adeninas denominada cola poli-A.\n2- Toda la secuencia del ARNm es utilizada como patrón para la síntesis de la proteína.\n3.- Los ribosomas se pueden encontrar libres en el citoplasma o adosados al lado citoplasmático de la membrana del retículo endoplasmático liso.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1817,14 +1903,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 8
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-85",
-      "source_sha256": "36fd8a40321add1c5da08fcc7406cdf84357144ec2c6d7baa2f387acd8a47374"
+      "source_sha256": "36fd8a40321add1c5da08fcc7406cdf84357144ec2c6d7baa2f387acd8a47374",
+      "source_numero_original": 85,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
     },
     {
       "id": "2025-2026-2-86",
-      "numero_original": 86,
+      "numero_original": 76,
       "pregunta": "1.-Solo el 50% de cada 100-200 nacimientos presentan una nueva inserción Alu o L2.\n2-LINE2 es el principal componente del genoma humano entre los elementos nucleares dispersos largos.\n3-Los LINE 1 pueden modificar la transcripción de los genes en los que se encuentran",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1839,14 +1929,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-86",
-      "source_sha256": "95966cea2c4ab6a0fd83d448323ddc55d02255018e2c2d8f67ca5ba9c68bab60"
+      "source_sha256": "95966cea2c4ab6a0fd83d448323ddc55d02255018e2c2d8f67ca5ba9c68bab60",
+      "source_numero_original": 86,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-2-87",
-      "numero_original": 87,
+      "numero_original": 77,
       "pregunta": "1.-La adición de un grupo fosfato está catalizada por proteínas fosfatasas.\n2.- La eliminación de un grupo fosfato está catalizada por proteínas quinasas.\n3.- Solo se pueden fosforilar las proteínas que no contienen serina, tirosina, o histidina.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1861,14 +1955,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 9
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-87",
-      "source_sha256": "d4289843381b82c17af36fae894c3a764f61a6ffc46ba8194d97ab983c5b66f8"
+      "source_sha256": "d4289843381b82c17af36fae894c3a764f61a6ffc46ba8194d97ab983c5b66f8",
+      "source_numero_original": 87,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 9"
     },
     {
       "id": "2025-2026-2-88",
-      "numero_original": 88,
+      "numero_original": 78,
       "pregunta": "1.- La hidroxilación es un tipo de modificación postraduccional donde se añade un grupo hidroxilo al anillo de una prolina.\n2.- La hidroxilación es de carácter reversible.\n3.- La hidroxilación permite dar a las fibras colágenas la consistencia estructural necesaria para servir como tejido de sostén.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1883,14 +1981,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 9
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-88",
-      "source_sha256": "6c763c5e31d8cb4325ca6f7c52d90e4c293f6e9f838ab08e45dc8fd6230f4d80"
+      "source_sha256": "6c763c5e31d8cb4325ca6f7c52d90e4c293f6e9f838ab08e45dc8fd6230f4d80",
+      "source_numero_original": 88,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 9"
     },
     {
       "id": "2025-2026-2-89",
-      "numero_original": 89,
+      "numero_original": 79,
       "pregunta": "1-La ARN polimerasa I sintetiza ARNr 28s, 18s y 5s en el nucleoplasma.\n2- La ARN polimerasa II sintetiza ARNm en el nucleoplasma.\n3.- La ARN polimerasa III sintetiza ARNt y ARNr 5,8s en el nucléolo.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1905,14 +2007,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 8
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-89",
-      "source_sha256": "63619be238096323b3bafd7333e015cea4b2fda7e3d8298b0de2a1505be64b2d"
+      "source_sha256": "63619be238096323b3bafd7333e015cea4b2fda7e3d8298b0de2a1505be64b2d",
+      "source_numero_original": 89,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
     },
     {
       "id": "2025-2026-2-90",
-      "numero_original": 90,
+      "numero_original": 80,
       "pregunta": "1.- La carnitina palmitoiltransferasa-ll transfiere el ácido graso desde la acil-CoA a la carnitina.\n2.- La carnitina palmitoiltransferasa-l cruza la membrana mitocondrial interna por una translocasa.\n3.- La CPT-II convierte la acilcarnitina en acil-CoA.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1927,10 +2033,264 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 11
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-90",
-      "source_sha256": "af3330525d230a9fb82b2821e871c5e87fba8b84de0ec0c6da239ae4b107aca9"
+      "source_sha256": "af3330525d230a9fb82b2821e871c5e87fba8b84de0ec0c6da239ae4b107aca9",
+      "source_numero_original": 90,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 11"
+    },
+    {
+      "id": "2025-2026-2-41",
+      "numero_original": 81,
+      "pregunta": "1.-El muestreo de \"casos extremos\" consiste en seleccionar situaciones inusuales (ej. éxitos o fracasos rotundos) para aprender a fondo de esas particularidades.\n2- El muestreo por \"bola de nieve\" o cadena se basa en identificar informantes iniciales que recomienden a otros participantes idóneo para el estudio",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-41",
+      "source_sha256": "26bcbfc1cb22780b8cb9ace77f4c40099b5237e3e9358e2afd1ce91d2cd919fb",
+      "source_numero_original": 41,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2025-2026-2-42",
+      "numero_original": 82,
+      "pregunta": "1.Un diseño común de la investigación cualitativa son los ensayos clinicos controlados.\n2-Entre los diseños de la investigación cualitativa están los cartográficos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-42",
+      "source_sha256": "836b8ce7d434289123aec0ebfadf6861dd1f46d129a27a8360c462daf819616f",
+      "source_numero_original": 42,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 10"
+    },
+    {
+      "id": "2025-2026-2-43",
+      "numero_original": 83,
+      "pregunta": "1-El punto de arranque o primera unidad en el muestreo sistemático debe ser siempre el número 1 de la lista para asegurar el orden.\n2.- En el muestreo sistemático, el intervalo de selección se calcula dividiendo el total de la población (N) entre el tamaño de la muestra deseada (n).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-43",
+      "source_sha256": "3e0344c1ff13dec8c5fa6584460a87b9009697c88784ba05f3e28dbee5b36e31",
+      "source_numero_original": 43,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2025-2026-2-44",
+      "numero_original": 84,
+      "pregunta": "1.- En el muestreo aleatorio simple, cada unidad de la población tiene una probabilidad equitativa y conocida de ser incluida en la muestra.\n2-El muestreo sistemático puede introducir sesgos si el intervalo de selección coincide con una variación ciclica o sistemática en la población (ej. casas de esquina).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-44",
+      "source_sha256": "31a99ef2465906c3d0de9a8283783850a94dae9bc668b4b46df4c61abce9d276",
+      "source_numero_original": 44,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2025-2026-2-45",
+      "numero_original": 85,
+      "pregunta": "1.- En un estudio cualitativo la muestra depende del grado de interés de los lectores\n2-La selección de la muestra en un estudio cualitativo se realiza mediante muestreo probabilístico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-45",
+      "source_sha256": "4ba6640724b15dd41fda76cbe35c03f1b3db179e5c8df374e26865a5e42149b0",
+      "source_numero_original": 45,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2025-2026-2-46",
+      "numero_original": 86,
+      "pregunta": "1.- Los conceptos son construcciones lógicas abstractas que no existen fuera del marco de referencia establecido y no son fenómenos en sí mismos.\n2.- Una variable compleja como \"Accesibilidad a servicios de salud\" puede medirse con un solo indicador simple sin necesidad de definir dimensiones previas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-46",
+      "source_sha256": "7326d79a70a92f67835ca1feb73601f7bd5c4c54b8a347c6e367fc89719be045",
+      "source_numero_original": 46,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 11"
+    },
+    {
+      "id": "2025-2026-2-47",
+      "numero_original": 87,
+      "pregunta": "1.- El muestreo de \"máxima variabilidad\" en estudios cualitativos busca deliberadamente incluir las diferentes posibilidades de las variables más importantes (ej. rural, urbano, semiurbano).\n2.- El muestreo de casos críticos se refiere a seleccionar aquellos casos que ocurren de manera rutinaria y no tienen impacto en el sistema estudiado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-47",
+      "source_sha256": "113486f3b06c186ed3fa44448a8ed4a7d7dc8f6130b85756deb74debed437b47",
+      "source_numero_original": 47,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2025-2026-2-48",
+      "numero_original": 88,
+      "pregunta": "1.-Según Fisher, cuando los fenómenos son muy homogéneos, se requieren muestras más grandes para detectar las diferencias33.\n2- Si se utiliza la fórmula basada en cruce de variables, cuanto más pequeña sea la proporción esperada de la variable independiente, mayor deberá ser el tamaño de la muestra.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 12,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-48",
+      "source_sha256": "8779c50a3bf581303476e64e88881d8e29f2e64866993537b9edb5da51cd7d97",
+      "source_numero_original": 48,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 12"
+    },
+    {
+      "id": "2025-2026-2-49",
+      "numero_original": 89,
+      "pregunta": "1.- El sesgo de muestreo ocurre cuando un sector de la población está sistemáticamente sobrerrepresentado o subrepresentado en la muestra.\n2.- Utilizar voluntarios para un estudio sobre satisfacción de servicios elimina el sesgo, ya que asegura que los participantes estén motivados.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-49",
+      "source_sha256": "c2ddb0c6d3bc4dcab5ece25bab6ee2aa162abe0d7d645e9a29dd0442a5272aa0",
+      "source_numero_original": 49,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 7"
+    },
+    {
+      "id": "2025-2026-2-50",
+      "numero_original": 90,
+      "pregunta": "1.- Al codificar variables nominales (ej. Soltero=1, Casado=2), el número asignado representa un orden jerárquico o magnitud de la variable.\n2.- En la escala nominal, los números sirven exclusivamente para categorizar o identificar, sin implicar que una categoría sea mayor",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-50",
+      "source_sha256": "49fdd7d3dd35dc589f1813b84c945d9ac0d6f686a74a170f2253cc833f8b9f25",
+      "source_numero_original": 50,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 11"
     },
     {
       "id": "2025-2026-2-91",
@@ -1949,10 +2309,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-91",
-      "source_sha256": "b492b257a147b6e2275f0c9dd27c182843516cdfa196b5ea929cef791dfcace6"
+      "source_sha256": "b492b257a147b6e2275f0c9dd27c182843516cdfa196b5ea929cef791dfcace6",
+      "source_numero_original": 91,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-2-92",
@@ -1971,10 +2335,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-92",
-      "source_sha256": "a50f897363d9d62c1f3fd4151db7c1c3ce3cd3ba2d8a16836e95c01c3e6189c7"
+      "source_sha256": "a50f897363d9d62c1f3fd4151db7c1c3ce3cd3ba2d8a16836e95c01c3e6189c7",
+      "source_numero_original": 92,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-2-93",
@@ -1993,10 +2361,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-93",
-      "source_sha256": "dc7cd65968ce0b37736a372551d5ad449dd32c5f9a178a4c424dd64e4fdf137a"
+      "source_sha256": "dc7cd65968ce0b37736a372551d5ad449dd32c5f9a178a4c424dd64e4fdf137a",
+      "source_numero_original": 93,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-2-94",
@@ -2015,33 +2387,40 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-94",
-      "source_sha256": "1765e763bf7569f7d1c8bf9fb02b8eb924dbf7d82f4abdf1b4f24ad6e6408f01"
+      "source_sha256": "1765e763bf7569f7d1c8bf9fb02b8eb924dbf7d82f4abdf1b4f24ad6e6408f01",
+      "source_numero_original": 94,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-2-95",
       "numero_original": 95,
-      "pregunta": "Sobre la unidad de observación o análisis:\n1.- Es donde se miden las variables de interés.\n2-Siempre coincide con la unidad de muestreo.\n3.- Puede diferir de la unidad de muestreo en algunos estudios.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si 3 es correcto",
-      "opcion_d": "Si todos son correctos",
-      "opcion_e": "Si ninguno es correcto",
+      "pregunta": "¿Qué diferencia existe entre unidad de análisis y unidad de muestreo?",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "A",
-        "C"
+        "A"
       ],
       "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original. El patrón acepta A o C.",
+      "comentario": "Correcta A. La unidad de análisis es aquella donde se miden las variables; puede diferir de la unidad seleccionada durante el muestreo. Adaptación del concepto evaluado en el examen de referencia; se eliminó la clave ambigua.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 12
+        "chapter": 12,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-95",
-      "source_sha256": "a4da465611d9f5a02af5c16135274d3b4b5fb64efa371b5bc35f211120323f99"
+      "source_sha256": "a4da465611d9f5a02af5c16135274d3b4b5fb64efa371b5bc35f211120323f99",
+      "opcion_a": "La unidad de análisis es aquella donde se miden las variables; puede diferir de la unidad seleccionada durante el muestreo.",
+      "opcion_b": "Ambas unidades coinciden obligatoriamente en cualquier estudio.",
+      "opcion_c": "La unidad de análisis es siempre la totalidad del país.",
+      "opcion_d": "La unidad de muestreo no puede identificarse antes de recoger los datos.",
+      "adaptation": "Se sustituye una pregunta con dos respuestas aceptadas por una alternativa única que conserva el concepto original.",
+      "source_numero_original": 95,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 12"
     },
     {
       "id": "2025-2026-2-96",
@@ -2060,33 +2439,40 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-96",
-      "source_sha256": "2c7ee4f2b7cfce259f321fd21d3576a818b2d53b139c5964e57334d4492b9fe0"
+      "source_sha256": "2c7ee4f2b7cfce259f321fd21d3576a818b2d53b139c5964e57334d4492b9fe0",
+      "source_numero_original": 96,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-2-97",
       "numero_original": 97,
-      "pregunta": "Respecto al elemento o unidad del estudio:\n1.- Es la unidad básica que compone la población.\n2-Siempre corresponde a personas en investigaciones de salud.\n3.- Puede ser una institución, un evento o un objeto.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si 3 es correcto",
-      "opcion_d": "Si todos son correctos",
-      "opcion_e": "Si ninguno es correcto",
+      "pregunta": "En investigación, ¿qué puede constituir un elemento o unidad de estudio?",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "A",
-        "C"
+        "A"
       ],
       "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original. El patrón acepta A o C.",
+      "comentario": "Correcta A. Una persona, una institución, un evento o un objeto, según la población definida. Adaptación del concepto evaluado en el examen de referencia; se eliminó la clave ambigua.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 12
+        "chapter": 12,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-97",
-      "source_sha256": "8bbf82049b2e64b3a07a4ead890b54277cf405933ccf635a8873c0900eb1d3ed"
+      "source_sha256": "8bbf82049b2e64b3a07a4ead890b54277cf405933ccf635a8873c0900eb1d3ed",
+      "opcion_a": "Una persona, una institución, un evento o un objeto, según la población definida.",
+      "opcion_b": "Exclusivamente una persona que recibe atención médica.",
+      "opcion_c": "Solo el investigador responsable del proyecto.",
+      "opcion_d": "Solo una cifra obtenida al calcular el promedio de la muestra.",
+      "adaptation": "Se aclara la unidad de estudio y se elimina la doble clave A/C del patrón histórico.",
+      "source_numero_original": 97,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 12"
     },
     {
       "id": "2025-2026-2-98",
@@ -2105,10 +2491,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-98",
-      "source_sha256": "e82ffc944c242236ebc2077c4915aac6dd316c8fd7f0475f16093edb330f6f63"
+      "source_sha256": "e82ffc944c242236ebc2077c4915aac6dd316c8fd7f0475f16093edb330f6f63",
+      "source_numero_original": 98,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-2-99",
@@ -2127,39 +2517,46 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-99",
-      "source_sha256": "aabec16d5fea7b4cdd8be285870984ca03176b95774cbadd0ec205491c4a1520"
+      "source_sha256": "aabec16d5fea7b4cdd8be285870984ca03176b95774cbadd0ec205491c4a1520",
+      "source_numero_original": 99,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-2-100",
       "numero_original": 100,
-      "pregunta": "La narración en los diseños narrativos puede referirse a\n1- Toda una historia de vida 2-Un grupo de personas aisladas del grupo focal. 3.- Un solo episodio.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si 3 es correcto",
-      "opcion_d": "Si todos son correctos",
-      "opcion_e": "Si ninguno es correcto",
+      "pregunta": "En un diseño narrativo, ¿qué alcance puede tener el relato estudiado?",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "A",
-        "C"
+        "A"
       ],
       "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Respuesta según el patrón original. El patrón acepta A o C.",
+      "comentario": "Correcta A. Toda una historia de vida o un episodio concreto de ella. Adaptación del concepto evaluado en el examen de referencia; se eliminó la clave ambigua.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-2-100",
-      "source_sha256": "cd90aca1e73962da8b46a2162940c0e19a0e876c9966744f7006b5ff9f71c39b"
+      "source_sha256": "cd90aca1e73962da8b46a2162940c0e19a0e876c9966744f7006b5ff9f71c39b",
+      "opcion_a": "Toda una historia de vida o un episodio concreto de ella.",
+      "opcion_b": "Solo cifras anónimas, sin relatos ni experiencias.",
+      "opcion_c": "Únicamente el inventario de equipos del investigador.",
+      "opcion_d": "Exclusivamente los resultados de un ensayo clínico aleatorizado.",
+      "adaptation": "Se elimina la doble clave A/C conservando los dos alcances narrativos válidos del original.",
+      "source_numero_original": 100,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 10"
     }
   ],
   "review": {
     "type": "automated_scope_review",
     "teacher_approved": false,
-    "basis": "Human user confirmed Morfo 1–11 / 12–20 and Bio 1–6 / 7–12; final cumulative. Health follows stored cronograma SP01P1–SP06P1 / SP07P2–SP12P2. Each item classified by subject and chapter, not by year.",
+    "basis": "Temas contrastados con los parciales 2025–2026. Morfo 1–11 / 12–20; Bio 1–6 / 7–12. Vida: salud/promoción/ODS e introducción a investigación en primero; muestreo, variables y diseños cualitativos en segundo.",
     "adaptations": [
       "Second partial original questions 60 and 74 are conceptually duplicated; replace 74 with sourced chapter-14 comparison."
     ],
