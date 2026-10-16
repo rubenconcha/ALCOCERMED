@@ -10,3 +10,4 @@
 .topic-eval-history summary{cursor:pointer;font-weight:700;color:#192840;padding:8px}
 .topic-eval-history .eval-metrics-grid{margin-top:20px}
 @media(max-width:600px){#evaluacion-screen{padding-top:8px}#evaluacion-screen .sim-header{align-items:flex-start}.topic-eval-history{padding:12px}}
+@media(max-width:600px){body:has(#simulacro-screen:not(.hidden) #sim-exam:not(.hidden)) .support-float{display:none!important}}
