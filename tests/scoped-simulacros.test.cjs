@@ -18,7 +18,7 @@ test('partial models obey confirmed chapter ranges and retain traceable original
  const p=require('../api/_simulations/partial-first.json');assert.match(p.questions[99].pregunta,/fundamentación teórica/);assert.match(p.questions[99].fuente,/60–62/);
 });
 test('numbered catalog preserves partials and cumulative finals with all scopes available',()=>{
- assert.deepEqual(catalog.entries.map(e=>e.title),Array.from({length:8},(_,i)=>'Simulacro '+(i+1)));
+ assert.deepEqual(catalog.entries.map(e=>e.title),Array.from({length:14},(_,i)=>'Simulacro '+(i+1)));
  assert.ok(catalog.entries.every(e=>e.demo||e.curatedId));assert.ok(!catalog.entries.some(e=>e.pastId));
  const s=fs.readFileSync('simulacro-library.js','utf8'),h=fs.readFileSync('campus.html','utf8');const config=h.slice(h.indexOf('id="sim-config"'),h.indexOf('id="sim-exam"'));
  assert.ok(!config.includes('sim-library-year')&&!config.includes('sim-real-count')&&!config.includes('data-sim-category'));
@@ -30,7 +30,7 @@ async function call(token,access,id='partial-first'){
 }
 test('scoped full questions require active paid/admin access; raw source path is blocked',async()=>{
  assert.equal((await call()).status,401);assert.equal((await call('free',{ready:true,premium:false})).status,403);
- for(const id of ['partial-first','partial-second','final-3','final-4','final-5','final-6','final-8']){assert.equal((await call('free',{ready:true,premium:false},id)).status,403);const r=await call('paid',{ready:true,premium:true},id);assert.equal(r.status,200);assert.equal(r.headers['Cache-Control'],'private, no-store');assert.ok(scope.validate(JSON.parse(r.body),id.startsWith('final-')?'final':id.split('-')[1]));}
+ for(const {curatedId:id,scope:expectedScope} of catalog.entries.filter(e=>e.curatedId)){assert.equal((await call('free',{ready:true,premium:false},id)).status,403);const r=await call('paid',{ready:true,premium:true},id);assert.equal(r.status,200);assert.equal(r.headers['Cache-Control'],'private, no-store');assert.ok(scope.validate(JSON.parse(r.body),expectedScope));}
  assert.equal((await call('paid',{ready:true,premium:true},'../../config')).status,404);
  assert.ok(require('../vercel.json').rewrites.some(r=>r.source==='/api/_simulations/:path*'));
 });

@@ -1,0 +1,2562 @@
+{
+  "id": "partial-second-12",
+  "scope": "second",
+  "title": "Simulacro 12",
+  "duration": 100,
+  "questions": [
+    {
+      "id": "2022-2023-1-63",
+      "numero_original": 1,
+      "pregunta": "Es cierto para los anestésicos locales: 1.- El calor extremo puede provocar anestesia en los tejidos. 2.- El frío extremo produce un grado muy elevado de dolor pero no anestesia. 3.- La novocaína es encargada de generar la anestesia al bloquear captación de potasio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2022-2023-1-63",
+      "source_sha256": "dc13bd1f069667299c825da1ef874a46a877250cfd4a85c3d9ca4deca2b40d94",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 12",
+      "source_numero_original": 63,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-1-23",
+      "numero_original": 2,
+      "pregunta": "Los nervios espinales: 1.- Son haces paralelos de axones y células neurogliales asociadas envueltas en varias capas de tejido conectivo. 2.- Los 35 pares de nervios espinales se encuentran alineados con su vertebra correspondiente, hasta la última vértebra lumbar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-23",
+      "source_sha256": "6c05df0f8261b8b1f1ad90da611fef7edc906f05094bbcaf0b1c9c5ddd1ef999",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 13",
+      "source_numero_original": 23,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-1-67",
+      "numero_original": 3,
+      "pregunta": "El sistema límbico:\n1.- El sistema límbico esta relacionado con el olfato y la memoria.\n2.- Los bulbos ópticos son cuerpos que descansan sobre la lámina cribosa del etmoides.\n3.- El hipocampo es un reborde de la superficie media de la corteza cerebral de cada hemisferio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-67",
+      "source_sha256": "66d1b560f913013cdae02e56f3fe309057f38492f2fe41e4c3337c57ef191401",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 14",
+      "source_numero_original": 67,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2025-2026-2-12",
+      "numero_original": 4,
+      "pregunta": "Es cierto sobre las divisiones del sistema nervioso autónomo:\n1-Si se cortan los nervios vagos parasimpáticos, el corazón late a su propio ritmo intrinseco de casi 70 latidos por minuto.\n2-La pérdida del tono simpático puede causar una caida tan rápida en la presión arterial que la persona sufriría choque.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 15,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-12",
+      "source_sha256": "556b200146c903b17c7331fa7b900f2b1efde4e8d8cf6af90544943a84cc4f0e",
+      "source_numero_original": 12,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 15"
+    },
+    {
+      "id": "2023-2024-1-16",
+      "numero_original": 5,
+      "pregunta": "La conjuntiva: 1.- La conjuntiva ocular reviste la cara interna de los parpados. 2.- La conjuntiva palpebral pasa de los párpados a la superficie del ojo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-16",
+      "source_sha256": "31860d42ee48b82bce2c82a70fd31455335cfd4ed3b0c17fd95ecc2ab9d42ce9",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 16",
+      "source_numero_original": 16,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2024-2025-2-25",
+      "numero_original": 6,
+      "pregunta": "Con relación a las hormonas:\n1. Aldosterona, andrógenos, cortisol y calcitriol son producidos por la corteza suprarrenal.\n2. Las hormonas hidrosolubles como la serotonina es producida en las plaquetas de la sangre.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-25",
+      "source_sha256": "ac3af9407c2dc9f8255ac1b089804515dcd3c22ece635ffa9f30eb1ec16d5fc9",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 17",
+      "source_numero_original": 25,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-2-7",
+      "numero_original": 7,
+      "pregunta": "Los glóbulos rojos:\n1.- Del proeritroblasto se forma el reticulocito.\n2.- Miden 8 a 9 micrómetros.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-2-7",
+      "source_sha256": "4a62725f66a5832c0dadf90f34b76b128a8a41726a93a80b887ef544a3540b29",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 18,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 18",
+      "source_numero_original": 7,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2024-2025-2-75",
+      "numero_original": 8,
+      "pregunta": "Con relación a la regulación de la frecuencia cardiaca:\n1.Existe un equilibrio dinámico continuo entre los estímulos simpáticos y parasimpáticos del corazón.\n2.En reposo predomina la estimulación simpática.\n3.La frecuencia cardíaca en reposo es más alta que la frecuencia de descarga automática del nódulo sino auricular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-75",
+      "source_sha256": "a291857af74777181661b8816c428f3ab0cbd7e390949d6c55a74e9490d19443",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 19,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 19",
+      "source_numero_original": 75,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-2-48",
+      "numero_original": 9,
+      "pregunta": "En relación a las ramas de la arteria mesentérica superior es cierto: 1.- la arteria pancreatoduodenal inferior pasa en sentido lateral y a la derecha del colon. 2.- La arteria cólica derecha pasa hacia la cabeza del páncreas. 3.- La arteria cólica media se dirige hacia el colon transverso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-48",
+      "source_sha256": "6987b339ed245fbe32ead726e284d0f26eed4cd0fab29f71d69667a9577a7f66",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 20,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 20",
+      "source_numero_original": 48,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-1-1",
+      "numero_original": 10,
+      "pregunta": "En relación a los neuropéptidos es cierto: 1.- Regulan la liberación de las hormonas generadas en la neurohipófisis.\n2.- La angiotensina II regula la sed y realiza vasoconstricción.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-1-1",
+      "source_sha256": "9e09183f46f084ebd4dc1360c93d4f0415e9efb53c35e8c368c937dfa5e2aa95",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 12",
+      "source_numero_original": 1,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-1-4",
+      "numero_original": 11,
+      "pregunta": "Los tractos motores y sensitivos de la médula espinal: 1.- Las columnas posteriores llevan información del encéfalo a la médula espinal. 2.- Las columnas posteriores llevan información de la médula espinal al encéfalo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-4",
+      "source_sha256": "decc36057ddd834af95dcff5aa018025f6c799b7ff87af57418ea9dbb7d39577",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 13",
+      "source_numero_original": 4,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-1-7",
+      "numero_original": 12,
+      "pregunta": "Hipotálamo: 1.- La región mamilar posee el infundíbulo, que conecta la glándula hipófisis con el hipotálamo.\n2.- La región preóptica se halla sobre el quiasma óptico y contiene los núcleos preópticos medial y lateral.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-7",
+      "source_sha256": "b1af8b36589b90ed10fc344ed20ccc1f642b5d17dd1fdfd9a79de966e8c14589",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 14",
+      "source_numero_original": 7,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2025-2026-2-61",
+      "numero_original": 13,
+      "pregunta": "El nervio facial termina enviando fibras autónomas a las siguientes glándulas:\n1.-Glándulas gustativas.\n2-Glándulas salivales submandibulares y sublinguales.\n3.-Glandula salival parótida",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 15,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-61",
+      "source_sha256": "ab1b5668223c025e06c861f5f8ed3c528684ea8637dbc1e36419fc136dace903",
+      "source_numero_original": 61,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 15"
+    },
+    {
+      "id": "2023-2024-1-66",
+      "numero_original": 14,
+      "pregunta": "La refracción de los rayos luminosos:\n1.- El mayor porcentaje de refracción ocurre en la córnea.\n2.- La refracción es el desdoblamiento de la luz al pasar por zonas oscuras.\n3.- Las Imágenes enfocadas por la retina están invertidas, pero mantienen su orientación de izquierda a derecha.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-66",
+      "source_sha256": "fb34fc92a16b04cf293730e105d2b301446dc534f6414309c0b18461f0dc1702",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 16",
+      "source_numero_original": 66,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2024-2025-2-56",
+      "numero_original": 15,
+      "pregunta": "Con relación a la formación de hormonas tiroideas:\n1. Se capta el yoduro por transporte activo secundario en la célula folicular.\n2. El yoduro debe ser oxidado antes de entrar a la célula folicular.\n3. A medida que los yoduros se oxidan pasan a través de la membrana a la luz del folículo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-56",
+      "source_sha256": "a74111a0897e882e54d93878c7edc9bfec60aa6896e9c1b6c3697aaff0069602",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 17",
+      "source_numero_original": 56,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-2-74",
+      "numero_original": 16,
+      "pregunta": "La hemoglobina:\n1.- Es la proteína que le da color al glóbulo rojo.\n2.- Su porción proteica es el hemo y la no proteica la globina.\n3.- El hemo tiene cuatro cadenas polipeptídicas, cada cadena unida a un hierro.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-2-74",
+      "source_sha256": "9ebe626a6ae649774469342ffaecd28740d6bf71487fb84d08f88bcb7bce2d26",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 18,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 18",
+      "source_numero_original": 74,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2024-2025-2-8",
+      "numero_original": 17,
+      "pregunta": "En relación al pericardio.\n1. El pericardio fibroso es más profundo, compuesto por tejido conectivo denso, regular, elástico y resistente.\n2. El pericardio seroso forma una doble capa alrededor del corazón.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-8",
+      "source_sha256": "8be7489c597235045f33beb618d3e95378909d153f8cd456a244c6926fa16bf8",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 19,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 19",
+      "source_numero_original": 8,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-2-5",
+      "numero_original": 18,
+      "pregunta": "En relación a la túnica íntima de un vaso sanguíneo es cierto: 1.- La capa más interna de la túnica íntima es el endotelio que se continua con el pericardio. 2.- La membrana basal proporciona sostén físico para la capa epitelial de la túnica íntima.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-5",
+      "source_sha256": "2785cd8d1a90047d54ad45fb7cf4bee92cb19ab6ad66959a82c560387a2c3efc",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 20,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 20",
+      "source_numero_original": 5,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-1-11",
+      "numero_original": 19,
+      "pregunta": "En relación a los neuropéptidos es cierto: 1.- La sustancia P se encuentra en las neuronas motoras y sensitivas. 2.- Las Endorfinas estimulan la liberación de sustancia P.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-1-11",
+      "source_sha256": "77047b3c7dfbdb8043e82798c7f75208abb21069c674633b4c95e67f30d563d6",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 12",
+      "source_numero_original": 11,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-1-59",
+      "numero_original": 20,
+      "pregunta": "Ramos de los nervios espinales con función autónoma:\n1.- Ramos posteriores.\n2.- Ramos comunicantes.\n3.- Ramo meníngeo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-59",
+      "source_sha256": "0d32d5a132985c32cb82e3d6bfaf929072f97f9afedcc61df8f1acd4553bd64a",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 13",
+      "source_numero_original": 59,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-2-15",
+      "numero_original": 21,
+      "pregunta": "Marque la afirmación correcta: 1.- El líquido cefalorraquídeo circula por el conducto del epéndimo de la médula espinal y por el espacio epidural alrededor del encéfalo. 2.- El líquido cefalorraquídeo puede llegar al espacio subaracnoideo por 3 aberturas en el techo del tercer ventrículo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-15",
+      "source_sha256": "8b67fb28e1a453f5777c5675de51c7a313a258129cf28dc36e8d6759532a4c1a",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 14",
+      "source_numero_original": 15,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2025-2026-2-66",
+      "numero_original": 22,
+      "pregunta": "Es cierto sobre los receptores nicotínicos:\n1.- Existen en todas las sinapsis de los ganglios autónomos, donde las fibras preganglionares estimulan a las células posganglionares.\n2.- También están en las células de la médula suprarrenal.\n3.- La fijación de ACh a un receptor de nicotina siempre es excitatoria.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 15,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-66",
+      "source_sha256": "7ac341668be0704a19a7d9fda5e764cd48af8f21055d65e0e263a173dd997ee8",
+      "source_numero_original": 66,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 15"
+    },
+    {
+      "id": "2023-2024-1-73",
+      "numero_original": 23,
+      "pregunta": "La vía auditiva:\n1.- Sus axones terminan en los colículos inferiores del cerebelo.\n2.- Los axones de los núcleos cocleras ascienden por el fascículo lemnisco medial.\n3.- Algunos axones de los núcleos cocleres se entrecruzan en el bulbo raquídeo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-73",
+      "source_sha256": "22166061e1ec23bf5187e5edae49cac81e4160441d655bea8a9393bb387672a1",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 16",
+      "source_numero_original": 73,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2024-2025-2-57",
+      "numero_original": 24,
+      "pregunta": "Con relación a la formación de hormonas tiroideas:\n1. Más del 89% de T₃ y T₄ se combinan con la globulina de unión a tiroxina.\n2. Normalmente la tiroxina se secreta en mayores cantidades que la Triyodotironina.\n3. Después de entrar en el cuerpo celular la Triyodotironina se convierte a Tiroxina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-57",
+      "source_sha256": "6f89c3bb770d402090ef4096200dce68335fed7361fb86b331318181bf74c0e7",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 17",
+      "source_numero_original": 57,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-2-14",
+      "numero_original": 25,
+      "pregunta": "Respecto a los trastornos de la sangre es cierto: 1.- La infección por Virus de Epstein Barr es factor de riesgo para leucemias. 2.- Las células falciformes alteran la permeabilidad de los vasos sanguíneos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-14",
+      "source_sha256": "ac0cd348e0fb3625cfd2020e1dfb9c697c515d8bd50d11367448c3a95481c586",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 18,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 18",
+      "source_numero_original": 14,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2024-2025-2-9",
+      "numero_original": 26,
+      "pregunta": "Con relación al potencial de acción y contracción de las fibras contráctiles:\n1. El periodo refractario es el intervalo mediante el cual puede desencadenarse una segunda contracción.\n2. La función de bomba de los ventrículos depende de la alternancia de contracción y relajación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-9",
+      "source_sha256": "05e7abd5110b8350174ef0b4cf966377f6574977e42ac8d574a45d27b593266b",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 19,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 19",
+      "source_numero_original": 9,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2025-2026-2-11",
+      "numero_original": 27,
+      "pregunta": "1.- La vena suprarrenal derecha se vacia directamente en la IVC.\n2-La vena gonadal izquierda se vacia directamente en la IVC.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 20,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-11",
+      "source_sha256": "a1db933c256badfa543988e8f31eeb713cae2cabd7e555e8fc4e5af6845f72f3",
+      "source_numero_original": 11,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 20"
+    },
+    {
+      "id": "2021-1-16",
+      "numero_original": 28,
+      "pregunta": "Es cierto: 1.- El potencial graduado no tiene período refractario, es más prolongado y depende de la intensidad del estímulo. 2.- El potencial de acción se origina en la zona del gatillo, en las células musculares, es corto y se produce la sumación de impulsos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-1-16",
+      "source_sha256": "9693afa6a569018bf8e0e8153c4ad252b09585b60146f63670e12f0d1e74b804",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 12",
+      "source_numero_original": 16,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-1-6",
+      "numero_original": 29,
+      "pregunta": "El tacto discriminativo, la presión, vibración y propiocepción consciente son transmitidos por: 1.- Tractos espinotalámicos. 2.- Tracto rubroespinal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-6",
+      "source_sha256": "1430f419e77a10c3c5ceb6ed187f52a9bce4bc86a9d7346403b5fafcdc48389b",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 13",
+      "source_numero_original": 6,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-2-21",
+      "numero_original": 30,
+      "pregunta": "En relación al desarrollo del encéfalo es cierto: 1.- El prosencéfalo, mesencéfalo y el mielencéfalo corresponden a las vesículas encefálicas primarias. 2.- El prosencéfalo se diferencia en telencéfalo, diencéfalo y metencéfalo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-21",
+      "source_sha256": "1133db9dd0cdfc7018cf872616c4564a6efe1a0822fc51e23dbd1a0275d09591",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 14",
+      "source_numero_original": 21,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "sistema nervioso autonomo",
+      "dificultad": "facil",
+      "pregunta": "En una situación de alerta, ¿qué división autónoma suele elevar la frecuencia cardiaca?",
+      "opcion_a": "La división parasimpática del sistema autónomo.",
+      "opcion_b": "La simpática.",
+      "opcion_c": "La división sensitiva somática.",
+      "opcion_d": "La división motora somática que inerva músculo esquelético.",
+      "respuesta_correcta": "B",
+      "justificacion": "La simpática.",
+      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
+      "paginas_pdf": "589–609",
+      "id": "demo-full-12",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 15,
+        "curriculum": "bibliography"
+      },
+      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
+      "source_numero_original": null,
+      "numero_original": 31
+    },
+    {
+      "id": "2021-2-10",
+      "numero_original": 32,
+      "pregunta": "Es cierto: 1.- El sáculo detecta los movimientos producidos en sentido horizontal. 2.- La trompa de Eustaquio ecualiza la presión de aire a ambos lados de la membrana timpánica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-10",
+      "source_sha256": "78863012c5ea9eff6ceecffb28e3fb7aafcb4f204a91a1a6d022d0c4ff6bae47",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 16",
+      "source_numero_original": 10,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2024-2025-2-58",
+      "numero_original": 33,
+      "pregunta": "En relación a la calcitonina:\n1. Miacalcin, un extracto de calcitonina derivado del Salmon , que es diez veces más potente que la calcitonina humana , se prescribe para tratar la osteoporosis.\n2. Eleva los niveles de calcio, fósforo y magnesio en sangre, e inhibe la reabsorción del hueso por los osteoclastos.\n3. Acelera la excreción de calcio y fosfatos desde la matriz extracelular ósea.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-58",
+      "source_sha256": "484871cf264b10c8dd0f0c80a9805f50c321f07d6a355ddc49fc24ad64d3c193",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 17",
+      "source_numero_original": 58,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-2-2",
+      "numero_original": 34,
+      "pregunta": "Respecto a la anemia es cierto: 1.- El déficit de vitamina B12 puede producir megaloblastosis. 2.- El déficit de ácido fólico puede producir megaloblastosis.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-2",
+      "source_sha256": "dbd1a7005810231b3e95eb8afeb82e7cd014a88ea2dc5aa54d49cb9bddddd9e1",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 18,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 18",
+      "source_numero_original": 2,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-2-4",
+      "numero_original": 35,
+      "pregunta": "Configuración superficial del corazón:\n1.- Los surcos contienen, vasos sanguíneos, grasa y nervios.\n2.- El surco interventricular posterior rodea casi todo el corazón.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-2-4",
+      "source_sha256": "78c982b92b88eafd82d075c33c95447524ccfcb518608c163a527d3e685986f6",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 19,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 19",
+      "source_numero_original": 4,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2025-2026-2-62",
+      "numero_original": 36,
+      "pregunta": "Una persona con una presión arterial sistólica de 130 mmHg y diastólica de 85 mmHg, tendría presión arterial media de casi\n1.-115 mmHg. 2-108 mmHg. 3.-100 mmHg.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 20,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-62",
+      "source_sha256": "a76e7a779d05ef0fe49bd91d05442124a70629bbce5864f5aebe68c0af976905",
+      "source_numero_original": 62,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 20"
+    },
+    {
+      "id": "2021-1-19",
+      "numero_original": 37,
+      "pregunta": "Es cierto: 1.- El canal central de la médula espinal y los ventrículos cerebrales está recubierto por una única capa de células cilíndricas con un núcleo oval cerca de su base. 2.- Algunos senos paranasales se encuentran recubiertos por una capa de células cilíndricas no ciliadas con un núcleo oval cerca de su base.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-1-19",
+      "source_sha256": "6efdb34f48f4b849d20f4076768210cc16cbfbe187a0ce91950431f6cb20bccb",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 12",
+      "source_numero_original": 19,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-1-64",
+      "numero_original": 38,
+      "pregunta": "Las meninges:\n1.- Son capas protectoras que revisten únicamente la medula espinal.\n2.- Cubren los nervios espinales hasta el punto en que abandonan la columna vertebral.\n3.- Entre la duramadre y la piamadre, se encuentra el espacio subaracnoideo que contiene el líquido cefalorraquídeo.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-64",
+      "source_sha256": "91057f81f03f4345c2414ba4bc76f6cace153be8c0e345f17671b3320c695756",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 13",
+      "source_numero_original": 64,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-2-3",
+      "numero_original": 39,
+      "pregunta": "Cuál de las siguientes afirmaciones es la correcta: 1.- El líquido cefalorraquídeo se forma y reabsorbe a una velocidad de 480 mL/día. 2.- Las vellosidades aracnoideas son extensiones digitiformes de la aracnoides que se proyectan dentro de los ventrículos laterales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-3",
+      "source_sha256": "42ce275fef47fe2e47b189f01be19a70db4a238743ea6dacbcca45df6c15e4b3",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 14",
+      "source_numero_original": 3,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "sistema nervioso autonomo",
+      "dificultad": "facil",
+      "pregunta": "¿Cuántas neuronas motoras suelen intervenir entre el sistema nervioso central y un órgano visceral?",
+      "opcion_a": "Dos: una preganglionar y otra posganglionar, conectadas en un ganglio.",
+      "opcion_b": "Una única neurona desde el SNC hasta el efector visceral.",
+      "opcion_c": "Tres neuronas posganglionares en serie, sin neurona preganglionar.",
+      "opcion_d": "Ninguna neurona, porque el órgano visceral se comunica directamente con el encéfalo por hormonas.",
+      "respuesta_correcta": "A",
+      "justificacion": "Dos: una preganglionar y otra posganglionar, conectadas en un ganglio.",
+      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
+      "paginas_pdf": "589–609",
+      "id": "demo-full-41",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 15,
+        "curriculum": "bibliography"
+      },
+      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
+      "source_numero_original": null,
+      "numero_original": 40
+    },
+    {
+      "id": "2021-2-16",
+      "numero_original": 41,
+      "pregunta": "Es cierto con relación a la enfermedad del movimiento: 1.- Los síntomas incluyen salivación excesiva, cefalea, inquietud entre otros. 2.- No existe tratamiento en la actualidad para esta enfermedad.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-16",
+      "source_sha256": "a453a6ec0e7abd06b25f95b88621fbfc27441f3be5c8ab026d6bff31e869f724",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 16",
+      "source_numero_original": 16,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2024-2025-2-59",
+      "numero_original": 42,
+      "pregunta": "Con relación a la hormona paratiroidea:\n1. Es el principal regulador de los niveles de iones de calcio, bicarbonato y acido carbónico.\n2. Un tercer efecto de la hormona en el hígado, es promover la formación de calcitrol.\n3. Disminuye el nivel de fosfatos en la sangre e incrementa los niveles sanguíneos de calcio y magnesio.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-59",
+      "source_sha256": "88577564e49eb545c824f2d0fa20b442e43b08be83c374f52ae0d269224e8e83",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 17",
+      "source_numero_original": 59,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-2-20",
+      "numero_original": 43,
+      "pregunta": "Es cierto: 1.- Las toxinas o bacterias en la sangre causan septicemia. 2.- La trombocitopenia es una tendencia de los capilares al sangrado.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-20",
+      "source_sha256": "bf0f32bd8a80919d1e3e2af38478f30bb60513f106442f78b8b98c7cccda90fb",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 18,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 18",
+      "source_numero_original": 20,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-2-53",
+      "numero_original": 44,
+      "pregunta": "Potencial de acción de fibras contráctiles del mecanismo de contracción cardiaca:\n1.- El calcio se une a la troponina permite interactuar a los filamentos de actina y miosina.\n2.- La noradrenalina incrementa el flujo de calcio al citosol.\n3.- La noradrenalina incrementa la fuerza de contracción cardiaca.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-2-53",
+      "source_sha256": "b9e261af6ffb88cb4cf3f7bc94f73b6fcc7e9e20b47437052be324c085c57977",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 19,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 19",
+      "source_numero_original": 53,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2022-2023-3-15",
+      "numero_original": 45,
+      "pregunta": "Son ramas de la aorta: 1.- El tronco braquiocefálico. 2.- Arteria pulmonar.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Examen final",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2022-2023-3-15",
+      "source_sha256": "78e1757d989cfacb1ee8bf2ae3f6361dadc0ae7724e92e6f03665d7d871a7895",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 20,
+        "curriculum": "bibliography"
+      },
+      "source_numero_original": 15,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 20"
+    },
+    {
+      "id": "2021-1-20",
+      "numero_original": 46,
+      "pregunta": "En relación a los circuitos neuronales es cierto: 1.- En el circuito convergente la neurona recibe impulsos de una sola fuente. 2.- En el circuito divergente el impulso puede originarse en una única neurona presináptica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-1-20",
+      "source_sha256": "cd9d69295f376578e008b7f31c32e45196bee10808abf9783638c10bb951bc79",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 12",
+      "source_numero_original": 20,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2023-2024-1-68",
+      "numero_original": 47,
+      "pregunta": "La médula espinal:\n1.- Se extiende desde el bulbo raquídeo, hasta el borde superior de la segunda vértebra lumbar.\n2.- Los nervios espinales emergen de la parte anterior de la medula a travesando los cuerpos vertebrales, ambos salen del mismo lado.\n3.- Es cilíndrica y su diámetro máximo mide 1.5 cm.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-68",
+      "source_sha256": "5024e313df50b2d0742cf0aaf82e516136d7878c8b9811f2c19ab1e412c8ca78",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 13,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 13",
+      "source_numero_original": 68,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-2-34",
+      "numero_original": 48,
+      "pregunta": "Cuáles son las características del síndrome de Tourette: 1.- Se caracteriza por presentar degeneración del núcleo caudado y el putamen. 2.- Se produce una degeneración de las neuronas que liberan dopamina. 3.- Se caracteriza por movimientos corporales involuntarios y el uso de palabras inapropiadas o innecesarias.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-34",
+      "source_sha256": "54bd0d0bd8bd66f512a2b2e3d72fa22a04876899fc19b5a0204b93b2814d7776",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 14,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 14",
+      "source_numero_original": 34,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2021-2-22",
+      "numero_original": 49,
+      "pregunta": "Es cierto: 1.- El glaucoma puede deberse a una presión intraocular anormalmente baja. 2.- La disminución de la cantidad de humor acuoso en la cámara anterior del ojo es una de sus causas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-22",
+      "source_sha256": "4288f420701fbb8da982e381642c47401ba31e853c2cf3ab3fff9fd4ea435347",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 16,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 16",
+      "source_numero_original": 22,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2024-2025-2-61",
+      "numero_original": 50,
+      "pregunta": "En la relación a la medula suprarrenal:\n1. La hormona sintetiza sobre todo andrógenos por estar cerca de la zona fasciculada.\n2. Es un ganglio simpático sin modificar del sistema nervioso autónomo.\n3. Las células enterocromafines secretan una cantidad desigual de hormonas. 70% noradrenalina y 30% adrenalina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-61",
+      "source_sha256": "a0b57320932c704361ba2137359228ac350a0d9e41fadd54e777cd9ca482e1d2",
+      "coverage": {
+        "subject": "MORFOFUNCION",
+        "chapter": 17,
+        "curriculum": "bibliography"
+      },
+      "tema": "MORFOFUNCION · tema 17",
+      "source_numero_original": 61,
+      "materia": "MORFOFUNCION"
+    },
+    {
+      "id": "2024-2025-1-35",
+      "numero_original": 51,
+      "pregunta": "En relación a la heterocromatina:\n1. En el núcleo de una célula femenina, el cromosoma X inactivado puede puede observarse como una pequeña masa definida, que se denomina cuerpo de Barr.\n2. En cada división celular el mismo cromosoma X se extiende y activa en las células originales.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-1-35",
+      "source_sha256": "0911e871dacf7d68b88d39b924d2163ff25deadc68b87e6111b2bc9a40f88390",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 7,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 7",
+      "source_numero_original": 35,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2025-2026-2-26",
+      "numero_original": 52,
+      "pregunta": "1.- Los micro-ARN son pequeñas moléculas de ARN de 28-34 nucleótidos capaces de unirse por complementariedad de bases a los ARN de transferencia.\n2-Los micro-ARN se transcriben por la ADN polimerasa I o la II en forma de largos precursores que luego dan lugar a sus versiones maduras.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-26",
+      "source_sha256": "96ec219faae357693b859db976f3e43519b6f45739398527258682b8c442f807",
+      "source_numero_original": 26,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2021-1-58",
+      "numero_original": 53,
+      "pregunta": "Es cierto: 1.- La molécula de ARNt tiene una región que es reconocida por la enzima y, por lo tanto, cada aminoácido está unido a su ARNt. 2.- Los ARNt se sintetizan inicialmente en las hebras de ADN como pequeñas moléculas que pasan a través de un procesamiento, haciéndose cada vez más grandes, antes de migrar al citoplasma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-1-58",
+      "source_sha256": "b901586680e92f52776371358d5eec329cd30cc9a604f2a2f9241a29d71950b2",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 9,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 9",
+      "source_numero_original": 58,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2021-2-75",
+      "numero_original": 54,
+      "pregunta": "Los fagosomas se fusionan con los lisosomas, es cierto que forman el: 1.- Fagolisosoma. 2.- Macrofagosoma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-75",
+      "source_sha256": "d5085e5dfc42353ca7453fd08def0e3ebabd8ec3ebfa910e4f0bfcfcd3e950aa",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 10,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 10",
+      "source_numero_original": 75,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2024-2025-2-78",
+      "numero_original": 55,
+      "pregunta": "En relación al mecanismo molecular del transporte de electrones y bombeo de protones.\n1. Los protones del agua son poco móviles al disociarse de una molécula de agua.\n2. Un electrón aislado (o-) tiene una carga negativa, en algún caso una molécula es oxidada al adquirir un electrón.\n3. La molécula transportadora de electrones esté orientada en la membrana que done un electrón junto con un protón de agua de un lado de la membrana.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-78",
+      "source_sha256": "c11892fda0c96892b124b90ff07b7d4225eadeff064e278dbde8319e5ad7e5ab",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 11",
+      "source_numero_original": 78,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2024-2025-2-85",
+      "numero_original": 56,
+      "pregunta": "Los microtúbulos y las proteínas motoras determinan la posición de los orgánulos.\n1. El retículo endoplasmático se extiende desde sus puntos de conexión con la envoltura nuclear a lo largo de microtúbulos.\n2. Las cinesinas unidas a la parte externa de la membrana del retículo endoplasmático traccionan al retículo endoplásmico hacia el exterior.\n3. Las dineínas citoplasmáticas, unidas a las membranas del aparato de Golgi, lo traccionan a lo largo de los microtúbulos en la dirección.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-85",
+      "source_sha256": "74e3021fb158061f663eca1edb61c6610f812a1501227f360413f94c65ba4d5b",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 12",
+      "source_numero_original": 85,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2023-2024-1-44",
+      "numero_original": 57,
+      "pregunta": "En relación a la estructura del ADN: 1.- Las dos hebras de DNA se enrollan una alrededor de otra, para formar una hélice dextrógira con 15 bases por giro. 2.- Se necesitan pocas cantidades de DNA para codificar toda la información necesaria para formar una bacteria unicelular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-44",
+      "source_sha256": "f54da453896e52b6fce2b56c5753ff2dfc009d2d13ae477207f3a8844ef7cb0b",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 7,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 7",
+      "source_numero_original": 44,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2025-2026-2-28",
+      "numero_original": 58,
+      "pregunta": "1.- Las proteínas nucleolina y nucleofosmina contribuyen a la intensa coloración del nucléolo en la interfase.\n2.- Los snoARN C/D participan en la metilación-2'-O del pre-ARN y se unen a la proteina fibrilarina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-28",
+      "source_sha256": "36d8385591640e6c0fe16666ee7ad3a743719df9a1a6fe78da4a836b7aa16488",
+      "source_numero_original": 28,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2021-2-89",
+      "numero_original": 59,
+      "pregunta": "Como se denominan las regiones basófilas del citoplasma (retículo endoplasmático) manifiestas al microscopio óptico. 1.- Sarcoplasma. 2.- Ergastoplasma. 3.- Retículo/plasma",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-89",
+      "source_sha256": "94c257f2d37c07d22a86a6e7da4579b6f81f97537a15baa94f6bd67510a97ece",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 9,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 9",
+      "source_numero_original": 89,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2021-2-77",
+      "numero_original": 60,
+      "pregunta": "Es cierto: 1.- Los lisosomas son orgánulos con características morfológicas y dimensiones muy variables, que ocupan aproximadamente el 1% del volumen celular y están presentes en todas las células animales, excepto los glóbulos blancos. 2.- El complejo de Golgi está involucrado en el metabolismo de los lípidos, específicamente en la síntesis de glicolípidos y esfingomielina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-77",
+      "source_sha256": "8ce2be5a8c84a8f7f75e62fca6d6a5bad00f33e22524a4244b8bed9e36e465ce",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 10,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 10",
+      "source_numero_original": 77,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2024-2025-2-79",
+      "numero_original": 61,
+      "pregunta": "Respecto a los metales estrechamente unidos a proteínas:\n1. Los cuatro complejos de enzimas respiratorias incluyen átomos metálicos que están estrechamente unidos a proteínas.\n2. Una vez que se ha donado a un complejo respiratorio a este puede moverse dentro del complejo saltando de un ion metálico a otro ion con una afinidad aun mayor por los electrones.\n3. Los protones pasan de un complejo respiratorio al siguiente y son llevados por moléculas transportadoras de protones que pueden difundir dentro de la bicapa lipídica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-79",
+      "source_sha256": "6fc716159e7b079599b983067a1f3dbb400dd1b783703d7acb7073e5b9336bb7",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 11",
+      "source_numero_original": 79,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2024-2025-2-86",
+      "numero_original": 62,
+      "pregunta": "En cuanto a la estructura de los filamentos de actina:\n1. Los filamentos de actina se visualizan como hebras de alrededor de 17 nm de diámetro y cada filamento es una cadena retorcida de monómeros de actina globular idénticos.\n2. Los filamentos de actina, al igual que los microtúbulos tienen una polaridad estructural, con un extremo positivo y un negativo.\n3. Los filamentos de actina son más semiflexibles y cortos, los microtúbulos son abundantes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-86",
+      "source_sha256": "44e64fd991fa3ef0d79b1ed5a36cd4a3b23883127e0f3631baf1d3af42cd38f1",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 12",
+      "source_numero_original": 86,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2023-2024-1-45",
+      "numero_original": 63,
+      "pregunta": "Con relación al ADN: 1.- Los gametos y los eritrocitos carecen por completo de DNA:\n2.- Cada conjunto completo de cromosomas humanos contiene alrededor de 5 X 10% pares de nucleótidos de DNA.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-45",
+      "source_sha256": "ef7e53909fc027069247f5a47ef0a92231c41b81ab7a5c948cfc95f15e63c793",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 7,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 7",
+      "source_numero_original": 45,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2025-2026-2-29",
+      "numero_original": 64,
+      "pregunta": "1.- La a-amanitina es un tetrapeptido ciclico que inhibe a la ARN polimerasa I y III impidiendo la elongación del ARN en eucariotas.\n2.- La a-amanitina es un octapeptido ciclico que inhibe solamente a la ADN polimerasa II, impidiendo la elongación del ARN en eucariotas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-29",
+      "source_sha256": "e0b5b0db52563873e7785285445ff42c64186782b12029fb1bd38c04beacbc01",
+      "source_numero_original": 29,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2025-2026-2-31",
+      "numero_original": 65,
+      "pregunta": "1.- La traducción del ARNm de la insulina tiene lugar en el Aparato de Golgi y genera una cadena polipeptidica precursora llamada \"pre-proinsulina\".\n2.- La proinsulina pasa entonces al REL y desde ahi a gránulos de secreción maduros.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-31",
+      "source_sha256": "6b214366f6e3aa03ab5ec2761f878f50c4da6c8347a1dda0013d3674ab839f26",
+      "source_numero_original": 31,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 9"
+    },
+    {
+      "id": "2021-2-80",
+      "numero_original": 66,
+      "pregunta": "Es cierto que, en las neuronas y las células musculares del corazón, los cuerpos residuales se agregan, formando partículas grandes, visibles al microscopio óptico, que contienen lípidos complejos de color marrón llamados: 1.- Gránulos de melanina. 2.- Gránulos de lipofuscina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-80",
+      "source_sha256": "c4799b777195d66abb38258b2a24abd65649a58071393e212c26c104806b39fb",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 10,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 10",
+      "source_numero_original": 80,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2023-2024-2-26",
+      "numero_original": 67,
+      "pregunta": "En relación a la clorofila en las células fotosintéticas:\n1.- Todos los organismos contienen azufre, hierro y hidrogeno como fuente de energía.\n2.- Captura energía de la luz para producir protones de alta energía.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-2-26",
+      "source_sha256": "0c319542484e32abae6d1ed1aca5e917a496dcac653406d599804c1e2f2b664e",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 11",
+      "source_numero_original": 26,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2024-2025-2-87",
+      "numero_original": 68,
+      "pregunta": "Respecto a la polimerización de los filamentos de actina:\n1. Si la concentración de monómeros de actina libres es muy alta, un filamento de actina crecerá con rapidez por adicción de monómeros en ambos extremos.\n2. La concentración de monómeros de actina libre es intermedia, los monómeros de actina se agregan al externo negativo.\n3. El filamento de actina crecerá con rapidez por adicción de dímeros en su extremo positivo, y pierde subunidades.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2024–2025 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2024-2025-2-87",
+      "source_sha256": "85d58a23ccad523a3866b23c1e838eeacb27404149451e0aebe10f03b60d0f76",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 12",
+      "source_numero_original": 87,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2023-2024-1-47",
+      "numero_original": 69,
+      "pregunta": "En relación a la estructura de los cromosomas: 1.- La cromatina de los cromosomas humanos esta plegada en dominios en bucle. 2.- Estos bucles son establecidos por proteínas cromosómicas histónicas que se unen a secuencias específicas de DNA.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-47",
+      "source_sha256": "8679f0b36671e6a5a0a929798deb9d45cf71b1e87a4ab21d3a0d646d883ec6f7",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 7,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 7",
+      "source_numero_original": 47,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2025-2026-2-34",
+      "numero_original": 70,
+      "pregunta": "Según los cuerpos de Cajal:\n1.- Están involucrados en procesos relacionados con el metabolismo del ARN, tales como la biogénesis, maduración y reciclaje de snRNP.\n2.- Están involucrados en el procesamiento del ARNm de las histonas y el mantenimiento de los telomeros.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-34",
+      "source_sha256": "c419adcfbd4003acb59cb3c35f9039f9c4a50b8d91f2aed21a0ffaf147bbe2d8",
+      "source_numero_original": 34,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2025-2026-2-35",
+      "numero_original": 71,
+      "pregunta": "1.- El ARN mensajero transporta la información contenida en el ARN desde el núcleo a los ribosomas.\n2-El ARN de transferencia transporta los aminoácidos necesarios para la sintesis de las proteinas en los ribosomas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-35",
+      "source_sha256": "5f72539220e2bc7b46333512477dff18ae19f40b6b43df319116d7468aa58a6a",
+      "source_numero_original": 35,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 9"
+    },
+    {
+      "id": "2021-2-82",
+      "numero_original": 72,
+      "pregunta": "Es cierto: 1.- Hay cuatro tipos diferentes de adaptadores de clatrina que ya fueron caracterizados, llamadas AP1, AP2, AP3 y AP4, cada una de las cuales reconoce y se une específicamente a un receptor particular. 2.- Los lisosomas contienen alrededor de 40 tipos de enzimas hidrolíticas capaces de digerir casi todas las macromoléculas biológicas tales como proteínas, lípidos, ácidos nucleicos y oligosacáridos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-82",
+      "source_sha256": "82757732ff9233ae80cd1a441eac917b3fc8f069f23f907bab75f43a97b56295",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 10,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 10",
+      "source_numero_original": 82,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2023-2024-2-27",
+      "numero_original": 73,
+      "pregunta": "En relación a la cadena respiratoria:\n1.- Esta constituida por los complejos de enzimas respiratorias.\n2.- ATP constituida por las bombas de aniones que contienen iones metálicos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-2-27",
+      "source_sha256": "5efa6a14e5a6c9915321f9956e693cd8b3bf24e95592e48e9a7ccc6f0c49c2bc",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 11",
+      "source_numero_original": 27,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2023-2024-1-29",
+      "numero_original": 74,
+      "pregunta": "En relación del citoesqueleto-y los movimientos de la célula: 1.- En una célula vegetal, los orgánulos, las mitocondrias, son arrastrados en una corriente constante alrededor del interior de la célula a lo largo de vías citoesqueléticas. 2.- Las células animales como las vegetales no dependen del citoesqueleto para separar sus componentes internos en dos células hijas durante la división celular.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-29",
+      "source_sha256": "ebf5f168581e02374d6fc83116af1d0c82d878a5445aa74aa5edc93fa78a481e",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 12",
+      "source_numero_original": 29,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2023-2024-1-48",
+      "numero_original": 75,
+      "pregunta": "En relación a la estructura de los cromosomas: 1.- El empaquetamiento inapropiado de genes en heterocromatina puede causar enfermedad. 2.- Uno de los cromosomas X es inactivado en las células de mamíferos hembra mediante la formación de heterocromatina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-1-48",
+      "source_sha256": "2208c906d61b2f41536e8e686a984fe8f21e60345d221abe131719f7cf41a755",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 7,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 7",
+      "source_numero_original": 48,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2025-2026-2-37",
+      "numero_original": 76,
+      "pregunta": "1.- Existen cinco tipos de ARN nucleares pequeños que forman parte de las snRNP: U1, U2, U3, U5 y U7\n2. La proteína de supervivencia de motoneuronas (SMN) es un componente esencial en la maduración de las snRNP que se localiza en cuerpos Cajal.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-37",
+      "source_sha256": "cd857a7689ef1002abcf136d3520d985252bd6fc1233c7a451406837f0725241",
+      "source_numero_original": 37,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2025-2026-2-36",
+      "numero_original": 77,
+      "pregunta": "1.- La O-glucosilación tiene lugar de modo exclusivo en el REL.\n2.- En la O-glucosilación se unen azúcares a un grupo OH de los aminoácidos serina, treonina y, en el caso del colágeno, hidroxilisina.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-36",
+      "source_sha256": "8fc852cb9c3b0f9d4fb76baef1e43004a82029f54ed1c0ef27c5b1743d06c5f1",
+      "source_numero_original": 36,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 9"
+    },
+    {
+      "id": "2021-2-86",
+      "numero_original": 78,
+      "pregunta": "En relación a los gránulos de lipofuscina es cierto: 1.- Son de color marrón. 2.- Aumentan en número con la edad. 3.- Aún pueden ser necesarios para la degradación.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2021 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2021-2-86",
+      "source_sha256": "115c6465813038783d2d4b55bf781e962bf2a6c8ef8225e9718557557e00c428",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 10,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 10",
+      "source_numero_original": 86,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2023-2024-2-28",
+      "numero_original": 79,
+      "pregunta": "La ATP sintasa:\n1.- Convierte la energía de protones que fluyen en favor de su gradiente electroquímico en energía acumulada en los enlaces químicos del ADP.\n2.- Puede bombear protones cuesta arriba, en contra de su gradiente electroquímico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-2-28",
+      "source_sha256": "3a990a220b7def2e5922e25cf30ec7cb2686b4c715ae0082278fe7df422c2405",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 11,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 11",
+      "source_numero_original": 28,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "2023-2024-2-50",
+      "numero_original": 80,
+      "pregunta": "En relación a los microtúbulos y proteínas motoras:\n1.- Los túbulos del Reticulo endoplasmático llega al borde celular.\n2.- El aparato de Golgi se localiza en el interior de la célula, lejos del centrosoma.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2023–2024 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "source_question_id": "2023-2024-2-50",
+      "source_sha256": "f06e4db4ee0d12d51ffc28c1ffb10728e7738fa0627d4883df29f812fc27119b",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 12,
+        "curriculum": "bibliography"
+      },
+      "tema": "BIOLOGIA CELULAR · tema 12",
+      "source_numero_original": 50,
+      "materia": "BIOLOGIA CELULAR"
+    },
+    {
+      "id": "vida-second-expansion-2-01",
+      "pregunta": "En una comunidad rural: Se seleccionan deliberadamente experiencias de éxito y fracaso muy inusuales para comprenderlas a fondo. ¿Qué selección se describe?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 41,
+      "source_question_id": "2025-2026-2-41",
+      "source_sha256": "26bcbfc1cb22780b8cb9ace77f4c40099b5237e3e9358e2afd1ce91d2cd919fb",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 41.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta B: Muestreo de casos extremos.",
+      "opcion_a": "Censo de todos los habitantes.",
+      "opcion_b": "Muestreo de casos extremos.",
+      "opcion_c": "Muestreo aleatorio simple por sorteo de toda la población.",
+      "opcion_d": "Muestreo sistemático por intervalo fijo.",
+      "numero_original": 81
+    },
+    {
+      "id": "vida-second-expansion-2-02",
+      "pregunta": "En una comunidad rural: Los primeros informantes recomiendan a otros que cumplen los criterios del estudio. ¿Qué procedimiento se utiliza?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 41,
+      "source_question_id": "2025-2026-2-41",
+      "source_sha256": "26bcbfc1cb22780b8cb9ace77f4c40099b5237e3e9358e2afd1ce91d2cd919fb",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 41.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta C: Muestreo por bola de nieve.",
+      "opcion_a": "Asignación aleatoria de un tratamiento.",
+      "opcion_b": "Censo completo de la población.",
+      "opcion_c": "Muestreo por bola de nieve.",
+      "opcion_d": "Muestreo aleatorio simple con probabilidades iguales conocidas.",
+      "numero_original": 82
+    },
+    {
+      "id": "vida-second-expansion-2-03",
+      "pregunta": "En una comunidad rural: Hay 960 personas en una lista y se desea una muestra sistemática de 120. ¿Cuál es el intervalo N/n?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 43,
+      "source_question_id": "2025-2026-2-43",
+      "source_sha256": "3e0344c1ff13dec8c5fa6584460a87b9009697c88784ba05f3e28dbee5b36e31",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 43.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta D: 8",
+      "opcion_a": "10",
+      "opcion_b": "16",
+      "opcion_c": "1080",
+      "opcion_d": "8",
+      "numero_original": 83
+    },
+    {
+      "id": "vida-second-expansion-2-04",
+      "pregunta": "En una comunidad rural: Se aplica muestreo sistemático a una lista. ¿Cómo debe elegirse el primer elemento para incorporar un arranque aleatorio?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 43,
+      "source_question_id": "2025-2026-2-43",
+      "source_sha256": "3e0344c1ff13dec8c5fa6584460a87b9009697c88784ba05f3e28dbee5b36e31",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 43.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta A: Sorteando una posición entre 1 y el intervalo de selección.",
+      "opcion_a": "Sorteando una posición entre 1 y el intervalo de selección.",
+      "opcion_b": "Eligiendo siempre la posición 1 sin sorteo.",
+      "opcion_c": "Escogiendo a la persona más cercana al investigador.",
+      "opcion_d": "Preguntando solo a quienes se ofrecen voluntariamente.",
+      "numero_original": 84
+    },
+    {
+      "id": "vida-second-expansion-2-05",
+      "pregunta": "En una comunidad rural: Se sortean participantes desde un marco completo, con la misma probabilidad conocida para cada unidad. ¿Qué muestreo se describe?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 44,
+      "source_question_id": "2025-2026-2-44",
+      "source_sha256": "31a99ef2465906c3d0de9a8283783850a94dae9bc668b4b46df4c61abce9d276",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 44.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta B: Aleatorio simple.",
+      "opcion_a": "Por bola de nieve.",
+      "opcion_b": "Aleatorio simple.",
+      "opcion_c": "Por conveniencia.",
+      "opcion_d": "De casos extremos.",
+      "numero_original": 85
+    },
+    {
+      "id": "vida-second-expansion-2-06",
+      "pregunta": "En una comunidad rural: El intervalo de selección coincide con un patrón periódico de la lista. ¿Cuál es el riesgo?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 44,
+      "source_question_id": "2025-2026-2-44",
+      "source_sha256": "31a99ef2465906c3d0de9a8283783850a94dae9bc668b4b46df4c61abce9d276",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 44.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta C: Introducir sesgo al seleccionar repetidamente un mismo tipo de unidad.",
+      "opcion_a": "Convertir automáticamente la selección en un censo.",
+      "opcion_b": "Eliminar cualquier error de muestreo.",
+      "opcion_c": "Introducir sesgo al seleccionar repetidamente un mismo tipo de unidad.",
+      "opcion_d": "Garantizar representatividad por el solo hecho de repetir el patrón.",
+      "numero_original": 86
+    },
+    {
+      "id": "vida-second-expansion-2-07",
+      "pregunta": "En una comunidad rural: Un estudio cualitativo busca experiencias pertinentes y profundidad de información. ¿Qué criterio orienta la selección?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 45,
+      "source_question_id": "2025-2026-2-45",
+      "source_sha256": "4ba6640724b15dd41fda76cbe35c03f1b3db179e5c8df374e26865a5e42149b0",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 45.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta D: La pertinencia de los participantes para comprender el fenómeno.",
+      "opcion_a": "La popularidad del informe entre sus futuros lectores.",
+      "opcion_b": "La obligación de usar siempre un sorteo probabilístico.",
+      "opcion_c": "La elección exclusiva de personas con la misma opinión del investigador.",
+      "opcion_d": "La pertinencia de los participantes para comprender el fenómeno.",
+      "numero_original": 87
+    },
+    {
+      "id": "vida-second-expansion-2-08",
+      "pregunta": "En una comunidad rural: Se estudia la accesibilidad a servicios considerando distancia, costo y disponibilidad. ¿Qué representan esos componentes?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 46,
+      "source_question_id": "2025-2026-2-46",
+      "source_sha256": "7326d79a70a92f67835ca1feb73601f7bd5c4c54b8a347c6e367fc89719be045",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 46.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta A: Dimensiones de una variable compleja que requieren indicadores definidos.",
+      "opcion_a": "Dimensiones de una variable compleja que requieren indicadores definidos.",
+      "opcion_b": "Tres nombres equivalentes que no necesitan definición.",
+      "opcion_c": "Tres resultados que deben ser idénticos en todos los participantes.",
+      "opcion_d": "Categorías elegidas después para impedir cualquier medición.",
+      "numero_original": 88
+    },
+    {
+      "id": "vida-second-expansion-2-09",
+      "pregunta": "En una comunidad rural: Se incluyen deliberadamente residentes rurales, urbanos y periurbanos para explorar diversidad de experiencias. ¿Qué selección se describe?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 47,
+      "source_question_id": "2025-2026-2-47",
+      "source_sha256": "113486f3b06c186ed3fa44448a8ed4a7d7dc8f6130b85756deb74debed437b47",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 47.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta B: Muestreo de máxima variabilidad.",
+      "opcion_a": "Censo nacional por el solo hecho de incluir tres grupos.",
+      "opcion_b": "Muestreo de máxima variabilidad.",
+      "opcion_c": "Muestreo que exige incluir un único perfil homogéneo.",
+      "opcion_d": "Sorteo aleatorio simple por el solo hecho de incluir tres lugares.",
+      "numero_original": 89
+    },
+    {
+      "id": "vida-second-expansion-2-10",
+      "pregunta": "En una comunidad rural: Un sector de la población queda sistemáticamente subrepresentado. ¿Qué problema aparece?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 49,
+      "source_question_id": "2025-2026-2-49",
+      "source_sha256": "c2ddb0c6d3bc4dcab5ece25bab6ee2aa162abe0d7d645e9a29dd0442a5272aa0",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 49.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta C: Sesgo de selección o de muestreo.",
+      "opcion_a": "Asignación aleatoria de tratamientos.",
+      "opcion_b": "Conversión automática de la muestra en población.",
+      "opcion_c": "Sesgo de selección o de muestreo.",
+      "opcion_d": "Ausencia garantizada de error.",
+      "numero_original": 90
+    },
+    {
+      "id": "vida-second-expansion-2-11",
+      "pregunta": "En una comunidad rural: El estado civil se registra con códigos 1, 2 y 3. ¿Qué significado tienen esos números en una escala nominal?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 50,
+      "source_question_id": "2025-2026-2-50",
+      "source_sha256": "49fdd7d3dd35dc589f1813b84c945d9ac0d6f686a74a170f2253cc833f8b9f25",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 50.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta D: Identifican categorías sin expresar orden ni magnitud.",
+      "opcion_a": "Indican que la categoría 3 tiene el triple de estado civil que la 1.",
+      "opcion_b": "Miden distancias físicas iguales entre estados civiles.",
+      "opcion_c": "Convierten el estado civil en una variable continua.",
+      "opcion_d": "Identifican categorías sin expresar orden ni magnitud.",
+      "numero_original": 91
+    },
+    {
+      "id": "vida-second-expansion-2-12",
+      "pregunta": "En una comunidad rural: El grupo afectado identifica un problema, participa en los cambios y evalúa la mejora. ¿Qué diseño se aproxima a esa finalidad?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 91,
+      "source_question_id": "2025-2026-2-91",
+      "source_sha256": "b492b257a147b6e2275f0c9dd27c182843516cdfa196b5ea929cef791dfcace6",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 91.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta A: Investigación-acción.",
+      "opcion_a": "Investigación-acción.",
+      "opcion_b": "Un diseño que excluye toda participación de los afectados.",
+      "opcion_c": "Un inventario de materiales sin relación con el problema.",
+      "opcion_d": "Un ensayo aleatorizado por el solo hecho de reunirse en grupo.",
+      "numero_original": 92
+    },
+    {
+      "id": "vida-second-expansion-2-13",
+      "pregunta": "En una comunidad rural: Se busca comprender en profundidad el significado de una experiencia mediante entrevistas. ¿Qué enfoque resulta congruente?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 92,
+      "source_question_id": "2025-2026-2-92",
+      "source_sha256": "a50f897363d9d62c1f3fd4151db7c1c3ce3cd3ba2d8a16836e95c01c3e6189c7",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 92.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta B: Cualitativo.",
+      "opcion_a": "Una prueba de laboratorio como única fuente admisible.",
+      "opcion_b": "Cualitativo.",
+      "opcion_c": "Exclusivamente un recuento estadístico sin interpretar experiencias.",
+      "opcion_d": "Un censo por el solo hecho de entrevistar.",
+      "numero_original": 93
+    },
+    {
+      "id": "vida-second-expansion-2-14",
+      "pregunta": "En una comunidad rural: ¿Qué papel tiene el grupo afectado en la investigación-acción?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 93,
+      "source_question_id": "2025-2026-2-93",
+      "source_sha256": "dc7cd65968ce0b37736a372551d5ad449dd32c5f9a178a4c424dd64e4fdf137a",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 93.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta C: Participa activamente en comprender el problema y mejorar la acción.",
+      "opcion_a": "Debe quedar excluido de la identificación del problema.",
+      "opcion_b": "Participa únicamente si desconoce el objetivo de cualquier cambio.",
+      "opcion_c": "Participa activamente en comprender el problema y mejorar la acción.",
+      "opcion_d": "Solo recibe decisiones externas y no puede discutirlas.",
+      "numero_original": 94
+    },
+    {
+      "id": "vida-second-expansion-2-15",
+      "pregunta": "En una comunidad rural: ¿Qué condición distingue al muestreo probabilístico?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 94,
+      "source_question_id": "2025-2026-2-94",
+      "source_sha256": "1765e763bf7569f7d1c8bf9fb02b8eb924dbf7d82f4abdf1b4f24ad6e6408f01",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 94.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta D: Cada unidad tiene una probabilidad de selección conocida y mayor que cero.",
+      "opcion_a": "Solo puede aplicarse si todas las personas son voluntarias.",
+      "opcion_b": "Exige seleccionar exclusivamente a los casos más accesibles.",
+      "opcion_c": "Prohíbe que puedan obtenerse muestras distintas de una población.",
+      "opcion_d": "Cada unidad tiene una probabilidad de selección conocida y mayor que cero.",
+      "numero_original": 95
+    },
+    {
+      "id": "vida-second-expansion-2-16",
+      "pregunta": "En una comunidad rural: Se seleccionan escuelas y luego se miden variables de cada estudiante. ¿Qué distinción corresponde?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 12,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 95,
+      "source_question_id": "2025-2026-2-95",
+      "source_sha256": "a4da465611d9f5a02af5c16135274d3b4b5fb64efa371b5bc35f211120323f99",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 95.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta A: La escuela puede ser unidad de muestreo y el estudiante unidad de análisis.",
+      "opcion_a": "La escuela puede ser unidad de muestreo y el estudiante unidad de análisis.",
+      "opcion_b": "La unidad de análisis siempre debe ser idéntica a la unidad de muestreo.",
+      "opcion_c": "El estudiante deja de ser observable porque se seleccionaron escuelas.",
+      "opcion_d": "La unidad de muestreo es obligatoriamente el promedio de las notas.",
+      "numero_original": 96
+    },
+    {
+      "id": "vida-second-expansion-2-17",
+      "pregunta": "En una comunidad rural: Una investigación evalúa características de centros educativos. ¿Cuál puede ser su unidad de estudio?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 12,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 97,
+      "source_question_id": "2025-2026-2-97",
+      "source_sha256": "8bbf82049b2e64b3a07a4ead890b54277cf405933ccf635a8873c0900eb1d3ed",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 97.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta B: Cada centro educativo definido en la población.",
+      "opcion_a": "El número de páginas del informe en cualquier estudio.",
+      "opcion_b": "Cada centro educativo definido en la población.",
+      "opcion_c": "Solo una persona, porque las instituciones nunca pueden ser unidades.",
+      "opcion_d": "Únicamente el investigador que analiza las instituciones.",
+      "numero_original": 97
+    },
+    {
+      "id": "vida-second-expansion-2-18",
+      "pregunta": "En una comunidad rural: Se reconstruyen experiencias a través de historias de vida. ¿Qué diseño cualitativo se describe?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 98,
+      "source_question_id": "2025-2026-2-98",
+      "source_sha256": "e82ffc944c242236ebc2077c4915aac6dd316c8fd7f0475f16093edb330f6f63",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 98.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta C: Narrativo.",
+      "opcion_a": "Un estudio que prohíbe cualquier relato personal.",
+      "opcion_b": "Un diseño limitado exclusivamente a contar equipos.",
+      "opcion_c": "Narrativo.",
+      "opcion_d": "Un ensayo clínico aleatorizado por definición.",
+      "numero_original": 98
+    },
+    {
+      "id": "vida-second-expansion-2-19",
+      "pregunta": "En una comunidad rural: ¿Qué combinación de fuentes es congruente con un diseño narrativo?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 99,
+      "source_question_id": "2025-2026-2-99",
+      "source_sha256": "aabec16d5fea7b4cdd8be285870984ca03176b95774cbadd0ec205491c4a1520",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 99.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta D: Biografías, autobiografías, testimonios y entrevistas.",
+      "opcion_a": "Únicamente una tabla de números sin relatos.",
+      "opcion_b": "Solo el presupuesto y los recibos del proyecto.",
+      "opcion_c": "Exclusivamente el nombre del software de análisis.",
+      "opcion_d": "Biografías, autobiografías, testimonios y entrevistas.",
+      "numero_original": 99
+    },
+    {
+      "id": "vida-second-expansion-2-20",
+      "pregunta": "En una comunidad rural: Una narración se centra en una experiencia concreta y otra recorre una vida completa. ¿Qué alcance puede ser válido?",
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_numero_original": 100,
+      "source_question_id": "2025-2026-2-100",
+      "source_sha256": "cd90aca1e73962da8b46a2162940c0e19a0e876c9966744f7006b5ff9f71c39b",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 100.",
+      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
+      "comentario": "Correcta A: Ambos, según la pregunta y el diseño del estudio.",
+      "opcion_a": "Ambos, según la pregunta y el diseño del estudio.",
+      "opcion_b": "Solo la vida completa: un episodio nunca puede estudiarse.",
+      "opcion_c": "Solo el episodio: una historia de vida nunca puede estudiarse.",
+      "opcion_d": "Ninguno, porque el diseño narrativo excluye experiencias personales.",
+      "numero_original": 100
+    }
+  ],
+  "review": {
+    "basis": "Selección explícita por capítulos del temario actual a partir de exámenes pasados 2021–2026; situaciones nuevas de Vida siguen los conceptos del parcial o final 2025–2026.",
+    "answer_accuracy": "Patrones originales conservados en preguntas archivísticas. Alternativas de las nuevas situaciones de Vida con una única clave.",
+    "teacher_approved": false
+  }
+}

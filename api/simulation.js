@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { validate } = require('../simulation-scope.js');
-const scopes = new Map([['partial-first','first'],['partial-second','second'],...['3','4','5','6','8'].map(n=>['final-'+n,'final'])]);
+const scopes = new Map([['partial-first','first'],['partial-second','second'],...['9','10'].map(n=>['partial-first-'+n,'first']),...['11','12'].map(n=>['partial-second-'+n,'second']),...['3','4','5','6','8','13','14'].map(n=>['final-'+n,'final'])]);
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
 

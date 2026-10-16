@@ -1,0 +1,83 @@
+"""Expand with archival questions selected by CURRENT topic, never archival stage alone.
+
+Called by rebuild_reviewed. Paid answers and authoring data stay under protected API.
+Original patterns remain archival keys, not independently re-marked medical advice.
+"""
+import copy
+from collections import defaultdict, Counter
+
+def expand(env):
+    read, write, norm, digest, finish = [env[k] for k in ['read','write','norm','digest','finish']]
+    subjects=env['SUBJECTS']; models=env['models']; catalog=env['catalog']
+    pool=[]; excluded=[]
+    # Explicit chapter classification; no inference from the old paper's title/year.
+    def add(paper,subject,groups):
+        source={q['numero_original']:q for q in read('api/_past_exams/'+paper+'.json')['questions']}
+        for chapter,numbers in groups.items():
+            for number in numbers:
+                original=source[number];q=copy.deepcopy(original)
+                options=[q.get('opcion_'+k,'') for k in 'abcde' if q.get('opcion_'+k)]
+                if len(q.get('respuestas_aceptadas',[]))!=1 or len(options)<4 or len(set(map(norm,options)))!=len(options):
+                    excluded.append({'id':q['id'],'reason':'Clave múltiple, alternativas repetidas o incompletas.'});continue
+                if any(t in norm(q['pregunta']) for t in ['aquitieneslatranscripcion','apartirdeestapregunta','continuaciondelatranscripcion']):
+                    excluded.append({'id':q['id'],'reason':'Instrucción ajena al enunciado.'});continue
+                q['source_question_id']=original['id'];q['source_sha256']=digest(original)
+                q['coverage']={'subject':subject,'chapter':chapter,'curriculum':'bibliography'}
+                q['tema']=f'{subject} · tema {chapter}'
+                if '---' in q['pregunta']:
+                    q['pregunta']=q['pregunta'].split('\n---')[0].strip()
+                    q['adaptation']='Se retira una línea separadora del documento; enunciado y patrón conservados.'
+                pool.append(q)
+    M,B,H=subjects
+    add('2024-2025-1',M,{1:[4,51,52,54],8:list(range(5,13))+list(range(55,65)),9:[14,17,65,66],10:[13,15,16,68,69,70,71],13:[18,19,72,73,74],14:[20],16:[22,23,24,25]})
+    add('2023-2024-1',M,{1:[17,21,57,70,74],8:[2,3,5,9,13,19,20,51,53,56,60,61,72],9:[15,69,71,75],10:[8,12,14,18,22,52,54,58],13:[4,6,23,59,64,68],14:[7,25,62,63,67],16:[10,11,16,66,73]})
+    add('2022-2023-1',M,{1:[17,18,19,69],5:[6,55,60],7:[20,64,65],8:[21,23,24,25,72,73,74,75],9:[7,8,15,16,56,57,70,71],10:[9,58],12:[10,11,12,13,14,62,63],13:[1,2,3,4,5,51,52,53,54]})
+    add('2021-1',M,{1:[5,17,25],5:[9,31,36,38,43],7:[8,18],8:[10,14,21,22,33,34,50],9:[7,12,15,23,32,37,39,41,44,46,49],10:[4,26,30,40,45],12:[1,6,11,16,19,20,35,47],13:[24,48]})
+    add('2021-2',M,{12:[13],14:[3,9,15,21,34,40,46],16:[4,10,16,22,25,28,29,35,41,47],17:[1,7,19,26,32,38,44,50],18:[2,8,14,20,27,33,39,45],19:[6,12,17,18,24,31,37,43,49],20:[5,11,23,30,36,42,48]})
+    add('2024-2025-2',M,{17:[18,19,20,21,25,56,57,58,59,60,61],18:[1,2,54,55],19:[6,7,8,9,72,73,74,75],22:[14,16,17,63,64,65],23:[10,11,12,13,66,67,68,69,70,71],25:[22,23,24,51,52],27:[3],28:[4,5,62]})
+    add('2023-2024-2',M,{17:[1,3,10,14,18,51,52,58,60,61,72],18:[7,64,74],19:[4,8,53,63,67,71,73],22:[6,9,12,16,22,24,55,66],23:[5,11,15,19,21,57,59,68,70],25:[2,13,17,20,54,62,65,69],27:[25],28:[23,56,75]})
+    add('2024-2025-1',B,{1:[26,27,28,29,30,31,76,77,78,80,83,89],2:[42,79,82],3:[36,37,38,39,87,90,91],4:[40,41,43,44,45,46,47,48,49,50,92,93,94,95,96,97,98,99,100],6:[88],7:[32,33,34,35],12:[81]})
+    add('2023-2024-1',B,{1:[26,27,28,31,35,36,37,38,49,50,77,78,81,82,83,84,88,89,90,91,92],2:[30,43,80],3:[39,40,85,86,100],4:[32,33,34,87,93,94],7:[44,45,47,48,95,96,97,98,99],12:[29]})
+    add('2022-2023-1',B,{1:[26,27,28,29,30,31,32,33,34,77,81,86,87,88,90],7:[37,38,39,40,80,82,89],8:[35,36,84,85],9:[78,79,83],11:[76]})
+    add('2021-2',B,{7:[76,81,88,93,98],9:[89],10:[72,75,77,80,82,86,92,94,97,99],12:[71,85]})
+    add('2021-1',B,{7:[57,60],8:[59],9:[58],10:[51,55],11:[52,53,56,65,66,67,68,69,70,71,72,73,74,78,79,80],1:[54]})
+    add('2023-2024-2',B,{11:[26,27,28,76],12:[50,80,81,82,83,84,85,86,87]})
+    add('2024-2025-2',B,{11:[26,27,28,76,77,78,79],12:[30,31,32,33,85,86,87],13:[29,80,81,82,83,84],14:[34,35,36,37,38,100],15:[39,40,41,42,44,46,88,89,90,91,92,93,98]})
+    # The last year's final is incomplete; use only complete, singly keyed questions.
+    add('2025-2026-3',M,{2:[13,17],5:[15,22],7:[9],8:[21],9:[54],10:[55,63],13:[74],14:[59,60],17:[62,71],21:[7,18,25,69,73],22:[2,10,20,57,58,70,72],23:[3,19,24,53,65],25:[5,11,12,64,75],27:[6,14,16,51,52,61],28:[1,8,23,68],29:[4,56]})
+    add('2025-2026-3',B,{1:[33,34,36],2:[28,40],3:[38],4:[27,35],7:[31,85],9:[37,39],10:[26,32],13:[30,82,84],14:[76,83,88],15:[86,90],16:[77,78,79,80,81,87,89]})
+
+    # Complete new Life situations use only concepts present in the 2025–26 partials.
+    health_builder=__import__('runpy').run_path(str(env['ROOT']/'api/_simulations/partial_life_variants.py.source'))['build']
+    already={norm(q['pregunta']) for p in models for q in p['questions']}
+    used_new=set(); additions=[]; scopes={'first':((1,11),(1,6)), 'second':((12,20),(7,12)), 'final':((1,29),(1,18))}
+    # Keep cumulative finals representative of BOTH partials and final-only chapters.
+    def choose(scope,subject,target,variant):
+        lo,hi=scopes[scope][subjects.index(subject)]
+        candidates=[q for q in pool if q['coverage']['subject']==subject and lo<=q['coverage']['chapter']<=hi]
+        fallback=[q for p in models for q in p['questions'] if q['coverage']['subject']==subject and lo<=q['coverage']['chapter']<=hi]
+        grouped=defaultdict(list)
+        for q in candidates+fallback:grouped[q['coverage']['chapter']].append(q)
+        # Prefer recent eligible archival material before older material within each topic.
+        for rows in grouped.values():rows.sort(key=lambda q:(norm(q['pregunta']) in used_new,norm(q['pregunta']) in already,-int((q.get('source_question_id') or '0000')[:4]),q.get('source_question_id') or q['id']))
+        chosen=[];seen=set()
+        while len(chosen)<target:
+            advanced=False
+            for chapter,rows in sorted(grouped.items()):
+                while rows and norm(rows[0]['pregunta']) in seen:rows.pop(0)
+                if rows and len(chosen)<target:
+                    q=copy.deepcopy(rows.pop(0));stem=norm(q['pregunta']);chosen.append(q);seen.add(stem);used_new.add(stem);advanced=True
+            assert advanced,(scope,subject,len(chosen))
+        return chosen
+    for number,scope,variant in [(9,'first',0),(10,'first',1),(11,'second',0),(12,'second',1),(13,'final',0),(14,'final',1)]:
+        rows=choose(scope,M,50,variant)+choose(scope,B,30,variant)
+        if scope=='final':rows+=env['build_health'](6+variant,env['health_reference'],digest)
+        else:rows+=health_builder(scope,variant,read,digest)
+        paper=finish({'id':('final-' if scope=='final' else 'partial-'+scope+'-')+str(number),'scope':scope,'title':'Simulacro '+str(number),'duration':100,'questions':rows,'review':{'basis':'Selección explícita por capítulos del temario actual a partir de exámenes pasados 2021–2026; situaciones nuevas de Vida siguen los conceptos del parcial o final 2025–2026.','answer_accuracy':'Patrones originales conservados en preguntas archivísticas. Alternativas de las nuevas situaciones de Vida con una única clave.','teacher_approved':False}})
+        write('api/_simulations/'+paper['id']+'.json',paper)
+        catalog['entries'].append({'key':'curated:'+paper['id'],'curatedId':paper['id'],'scope':scope,'title':paper['title'],'type':{'first':'Primer parcial','second':'Segundo parcial','final':'Examen final'}[scope],'minutes':100})
+        additions.append(paper)
+    catalog['version']=3;write('content/simulacros-catalog.json',catalog)
+    all_added={norm(q['pregunta']) for p in additions for q in p['questions']}
+    env['audit']['expansion']={'added_models':6,'added_question_slots':600,'distinct_added_stems':len(all_added),'stems_not_in_previous_models':len(all_added-already),'new_life_questions':120,'excluded_candidates':excluded,'stage_counts':dict(Counter(p['scope'] for p in models+additions)),'selection':'Clasificación por capítulo, preferencia por preguntas no presentes en otros modelos y distribución por temas. Puede haber repetición entre pruebas, nunca dentro de una prueba.'}
+    return additions

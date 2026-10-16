@@ -67,7 +67,55 @@
       "title": "Simulacro 8",
       "minutes": 100,
       "curatedId": "final-8"
+    },
+    {
+      "key": "curated:partial-first-9",
+      "curatedId": "partial-first-9",
+      "scope": "first",
+      "title": "Simulacro 9",
+      "type": "Primer parcial",
+      "minutes": 100
+    },
+    {
+      "key": "curated:partial-first-10",
+      "curatedId": "partial-first-10",
+      "scope": "first",
+      "title": "Simulacro 10",
+      "type": "Primer parcial",
+      "minutes": 100
+    },
+    {
+      "key": "curated:partial-second-11",
+      "curatedId": "partial-second-11",
+      "scope": "second",
+      "title": "Simulacro 11",
+      "type": "Segundo parcial",
+      "minutes": 100
+    },
+    {
+      "key": "curated:partial-second-12",
+      "curatedId": "partial-second-12",
+      "scope": "second",
+      "title": "Simulacro 12",
+      "type": "Segundo parcial",
+      "minutes": 100
+    },
+    {
+      "key": "curated:final-13",
+      "curatedId": "final-13",
+      "scope": "final",
+      "title": "Simulacro 13",
+      "type": "Examen final",
+      "minutes": 100
+    },
+    {
+      "key": "curated:final-14",
+      "curatedId": "final-14",
+      "scope": "final",
+      "title": "Simulacro 14",
+      "type": "Examen final",
+      "minutes": 100
     }
   ],
-  "version": 2
+  "version": 3
 }

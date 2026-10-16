@@ -12,12 +12,12 @@ page.on('request',r=>{const u=new URL(r.url());
  if(u.pathname==='/api/past-exam'){assert.equal(r.headers().authorization,'Bearer qa');requests.push(u.searchParams.get('id'));return r.respond({contentType:'application/json',body:fs.readFileSync(path.join(root,'api/_past_exams',u.searchParams.get('id')+'.json'))});}
  const file=path.join(root,u.pathname.slice(1));if(fs.existsSync(file)&&fs.statSync(file).isFile())return r.respond({contentType:{'.js':'application/javascript','.json':'application/json','.css':'text/css','.woff2':'font/woff2','.ttf':'font/ttf','.png':'image/png'}[path.extname(file)]||'text/plain',body:fs.readFileSync(file)});r.respond({status:404,body:''});
 });
-await page.setViewport({width:1440,height:1100});await page.goto('http://127.0.0.1:8771/qa');await page.evaluate(()=>openSimulacro());await page.waitForFunction(()=>document.querySelectorAll('#sim-library-list [data-exam-key]').length===8);
+await page.setViewport({width:1440,height:1100});await page.goto('http://127.0.0.1:8771/qa');await page.evaluate(()=>openSimulacro());await page.waitForFunction(()=>document.querySelectorAll('#sim-library-list [data-exam-key]').length===14);
 const out=path.join(root,'output/simulacro-library');fs.mkdirSync(out,{recursive:true});
 assert.equal(await page.$('.sim-library-description'),null);assert.equal(await page.$('.sim-library-access'),null);
 await page.type('#sim-library-search','Simulacro 2');assert.equal(await page.$$eval('[data-exam-key]',n=>n.length),1);
 await page.$eval('#sim-library-search',n=>{n.value='';n.dispatchEvent(new Event('input'));});
-for(const [scope,count] of [['first',1],['second',1],['final',6],['',8]]){await page.select('#sim-library-scope',scope);assert.equal(await page.$$eval('[data-exam-key]',n=>n.length),count);}
+for(const [scope,count] of [['first',3],['second',3],['final',8],['',14]]){await page.select('#sim-library-scope',scope);assert.equal(await page.$$eval('[data-exam-key]',n=>n.length),count);}
 for(const width of [1440,390]){await page.setViewport({width,height:1100});await page.screenshot({path:path.join(out,'catalog-'+width+'.png'),fullPage:true});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);}
 await page.evaluate(()=>{free=true;window.dispatchEvent(new Event('campus-access-change'));});
 await page.click('[id="entrance-partial:first"] button');assert.equal(await page.evaluate(()=>planVisits),1);assert.equal(requests.length,0);
@@ -37,6 +37,6 @@ await page.evaluate(async()=>{showSimScreen('sim-config');selectEntranceExam('pa
 for(const width of [1440,390]){await page.setViewport({width,height:1100});await page.screenshot({path:path.join(out,'exam-'+width+'.png')});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);}
 await page.evaluate(()=>{simState.answers=simState.preguntas.map(q=>({selected:simAcceptedAnswerIndices(q)[0]}));simState.endTimestamp=Date.now()-1000;});await page.waitForFunction(()=>simState.finalized);assert.equal(await page.evaluate(()=>simState.secondsLeft),0);
 for(const width of [1440,390]){await page.setViewport({width,height:1100});await page.screenshot({path:path.join(out,'result-'+width+'.png')});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);}
-assert.deepEqual(errors,[]);console.log('PASS: all eight launched models have 100 questions, actual 50/30/20, correct scope, 100/100 grading; clean cards; all/search/filter; access gates; mobile/desktop; strict timeout; no live writes.');
+assert.deepEqual(errors,[]);console.log('PASS: all fourteen launched models have 100 questions, actual 50/30/20, correct scope, 100/100 grading; clean cards; all/search/filter; access gates; mobile/desktop; strict timeout; no live writes.');
 
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1)});

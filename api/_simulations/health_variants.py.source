@@ -6,13 +6,13 @@ items define the blueprint; its original wording and keys are not republished he
 import copy
 import math
 
-CONTEXTS=['hábitos de estudio','asistencia a clases','tiempo de traslado','actividad física','uso de la biblioteca','horas de sueño']
+CONTEXTS=['hábitos de estudio','asistencia a clases','tiempo de traslado','actividad física','uso de la biblioteca','horas de sueño','tiempo de lectura','asistencia a tutorías']
 SOURCE_NUMBERS=[41,42,43,44,45,46,47,48,49,50,91,92,93,94,95,96,97,98,99,100]
 CHAPTERS=[16,14,15,14,17,14,14,17,17,20,16,17,17,17,17,17,14,17,17,17]
 
 def build_health(variant, originals, digest):
     topic=CONTEXTS[variant];n=100+variant*20;low=12+variant;high=47+variant*3
-    boundary=20+variant*5;percentage=20+variant*5;freq=18+variant*3
+    boundary=20+variant*5;percentage=20+variant*5 if variant<6 else 35+(variant-6)*5;freq=18+variant*3
     sample=120+variant*40;classes=math.ceil(1+3.322*math.log10(sample))
     data=[
       (f'Un equipo estudia {topic} en una población extensa y dispone de recursos limitados. ¿Qué justifica utilizar una muestra?',
