@@ -28,7 +28,7 @@ test('groups actual topics, searches accents, opens only selected subject data',
   assert.equal(list.children.length, 1);
   assert.equal(list.children[0].className, 'library-topic-row');
   assert.equal(list.children[0].children[1].textContent, 'Empezar');
-  assert.doesNotMatch(JSON.stringify(list.children), /2 tarjetas/);
+  assert.match(JSON.stringify(list.children), /2 tarjetas/);
   h.ids['library-search'].value = 'oseo';
   h.ids['library-search'].events.input();
   list.children[0].children[1].click();
@@ -47,7 +47,7 @@ test('stale subject responses cannot replace current subject', async () => {
   await b;
   pending[0]([{ materia: 'MORFOFUNCION', tema: 'Hueso' }]);
   await a;
-  assert.equal(h.ids['library-topics'].children[0].children[0].textContent, 'Célula');
+  assert.equal(h.ids['library-topics'].children[0].children[0].children[0].textContent, 'Célula');
 });
 test('failed load exposes retry and recovers', async () => {
   let calls = 0;
@@ -55,7 +55,7 @@ test('failed load exposes retry and recovers', async () => {
   await h.buttons[0].click();
   assert.match(h.ids['library-status'].textContent, /No pudimos/);
   await h.ids['library-topics'].children[0].click();
-  assert.equal(h.ids['library-topics'].children[0].children[0].textContent, 'Músculo');
+  assert.equal(h.ids['library-topics'].children[0].children[0].children[0].textContent, 'Músculo');
 });
 
 test('subject selection never starts a deck and returning preserves topic choices', async () => {
@@ -70,7 +70,7 @@ test('subject selection never starts a deck and returning preserves topic choice
   assert.equal(h.starts.length, 1);
   h.window.backToStudyTopics();
   assert.equal(h.ids['library-topics-panel'].hidden, false);
-  assert.equal(h.ids['library-topics'].children[0].children[0].textContent, 'Hueso');
+  assert.equal(h.ids['library-topics'].children[0].children[0].children[0].textContent, 'Hueso');
   h.window.openStudyLibrary();
   assert.equal(h.ids['library-topics-panel'].hidden, true);
 });
@@ -91,7 +91,7 @@ test('free account opens listed topics and sends locked topics directly to plans
   assert.equal(rows[0].children[1].textContent, 'Empezar');
   assert.equal(rows[1].children[1].textContent, 'Empezar');
   assert.equal(rows[2].children[1].href, '/planes?desde=campus#planes');
-  assert.match(rows[2].children[0].children[0].innerHTML, /Bloqueado/);
+  assert.match(rows[2].children[0].children[0].children[0].innerHTML, /Bloqueado/);
   rows[0].children[1].click();
   assert.equal(h.starts.length, 1);
   assert.equal(h.starts[0][2].length, 2);

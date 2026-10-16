@@ -153,6 +153,7 @@ async function initAuth() {
 
 /** Muestra login y oculta app */
 function showLoginScreen() {
+    if (window.OfficialFlashcards) OfficialFlashcards.clear();
     if (window.FlashcardWorkspace) FlashcardWorkspace.clear();
     verifiedCampusUserId = null;
     if (flashcardReviewTimer) clearTimeout(flashcardReviewTimer);
@@ -555,21 +556,8 @@ window.toggleFlashcards = function () { openStudyLibrary(); };
 // TOGGLE MATERIA: carga temas desde Supabase
 // ──────────────────────────────────────────────
 async function loadFlashcards() {
-    if (Array.isArray(flashcardsCache)) return flashcardsCache;
-    const client = getSupabase();
-    const pageSize = 1000;
-    const all = [];
-    for (let offset = 0; ; offset += pageSize) {
-        const { data, error } = await client
-            .from('flashcards')
-            .select('*')
-            .order('id', { ascending: true })
-            .range(offset, offset + pageSize - 1);
-        if (error) throw error;
-        all.push(...(data || []));
-        if (!data || data.length < pageSize) break;
-    }
-    flashcardsCache = typeof StudyDepth !== 'undefined' ? await StudyDepth.merge(all, 'flashcards') : all;
+    if (!window.OfficialFlashcards) throw new Error('La biblioteca oficial no está disponible.');
+    flashcardsCache = await OfficialFlashcards.load();
     return flashcardsCache;
 }
 

@@ -1,0 +1,77 @@
+/* Approved study layout: original palette, stripe, brand and four rating buttons. */
+@font-face{font-family:'Outfit Flashcards';font-style:normal;font-weight:900;font-display:swap;src:url('/assets/fonts/outfit-900.ttf') format('truetype')}
+#study-area .text-inner p,#study-area .back-text p,#study-area .fc-answer-lead,#study-area .fc-brand-wordmark strong,#study-area .card-face-label{font-family:'Outfit Flashcards','Outfit',sans-serif}
+#study-area.study-area{width:min(100%,960px);max-width:960px;align-items:stretch}
+#study-area .study-mobile-header,#study-area .study-progress-row,#study-area .flashcard-progress,#study-area .flashcard-controls,#study-area .card-container{width:100%;max-width:830px;margin-left:auto;margin-right:auto}
+#study-area #flashcard-context,#study-area .fc-recall-hint,#study-area .fc-context-art{display:none}
+#study-area .flashcard-controls{padding:14px 18px;margin-bottom:14px}
+#study-area .flashcard-controls #flashcard-inventory{font-size:12px;margin:10px 0 4px}
+#study-area .flashcard-controls #flashcard-mode-help{font-size:11px}
+#study-area .study-progress-row{margin:6px auto 0}
+#study-area .card-counter{margin:0;font-size:13px;letter-spacing:0;color:#687e98}
+#study-area .flashcard-progress{height:4px;margin:10px auto 16px}
+#study-area .card-container{height:auto;perspective:none;margin-bottom:16px}
+#study-area .card.depth-card{height:auto;min-height:370px;transform:none;transition:none}
+#study-area .card.depth-card.flipped{transform:none}
+#study-area .card.depth-card .face{position:relative;inset:auto;height:auto;min-height:370px;display:flex;flex-direction:column;align-items:stretch;padding:82px 28px 20px;border:1px solid #d3dfed;border-radius:25px;box-shadow:0 16px 40px #1639570a;backface-visibility:visible;transform:none;overflow:hidden}
+#study-area .card.depth-card .front{background:radial-gradient(ellipse at 100% 0,#fff0bf 0,transparent 51%),linear-gradient(140deg,#fffefa,#f3f9fc)}
+#study-area .card.depth-card .back{display:none;background:radial-gradient(ellipse at 100% 0,#dcf2ef 0,transparent 53%),linear-gradient(140deg,#fffefa,#f7fcfc)}
+#study-area .card.depth-card.flipped .front{display:none}
+#study-area .card.depth-card.flipped .back{display:flex}
+#study-area .card.depth-card .face:before{content:'';position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,#163a5d 0 36%,#159da2 36% 70%,#f5b92a 70%);transform:none}
+#study-area .card.depth-card .depth-brand{position:absolute;top:19px;left:28px;width:59px;height:51px;object-fit:contain;object-position:center;mix-blend-mode:multiply}
+#study-area .fc-brand-wordmark{position:absolute;top:30px;left:95px;line-height:1.1;gap:2px}
+#study-area .fc-brand-wordmark strong{font-size:18px;font-weight:900}
+#study-area .fc-brand-wordmark small{font-size:9px;letter-spacing:1.5px;font-weight:800}
+#study-area .card.depth-card .face .card-face-label{top:26px!important;right:28px!important;font-size:12px;font-weight:800;letter-spacing:.04em;padding:10px 14px;background:#edf1f5;color:#365779}
+#study-area .card.depth-card .back .card-face-label{background:#e0f2ed;color:#027b79}
+#study-area .card.depth-card .front .text-inner,#study-area .card.depth-card .back .back-text{position:relative;inset:auto;width:100%;height:auto;max-height:none;min-height:268px;overflow:visible;padding:18px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;flex:1}
+#study-area .card.depth-card .front .text-inner p,#study-area .card.depth-card .back-text p,#study-area .fc-answer-lead{max-width:720px;width:100%;margin:0;text-align:center;font-size:36px;line-height:1.28;font-weight:900;letter-spacing:-.02em;color:#163253;text-wrap:pretty;white-space:pre-line;overflow-wrap:break-word;border:0;padding:0}
+#study-area .fc-topic-chip{font-size:11px;font-weight:700;padding:8px 12px;background:#e3f2f4;color:#00768a}
+#study-area .card.depth-card .back .back-text{justify-content:stretch;padding:0;gap:0}
+#study-area .card.depth-card .back-text p{display:flex;align-items:center;justify-content:center;flex:1;padding:20px 16px;font-size:33px;line-height:1.32;max-width:none}
+#study-area .fc-answer-lead{font-size:inherit;line-height:inherit;font-weight:inherit;max-width:660px}
+#study-area .fc-answer-source{border:0;text-align:center;font-size:13px;font-weight:600;line-height:1.6;color:#58748a;width:100%;margin:0;padding:14px 5px 0;text-transform:none;flex:none}
+#study-area .action-zone{width:100%;max-width:760px;margin:0 auto}
+#study-area #btn-reveal{min-height:53px;font-weight:900;font-size:15px;background:linear-gradient(105deg,#f5a511,#ffde50);border-radius:16px}
+#study-area .anki-wrapper{width:100%;max-width:none;gap:12px}
+#study-area .anki-rating-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+#study-area .btn-anki{min-height:82px;padding:12px 10px;border-radius:23px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:16px;font-weight:900;letter-spacing:0;box-shadow:0 15px 24px #16335415}
+#study-area .btn-anki:before{width:43px;height:43px;flex:none;margin:0}
+#study-area .red-intense{background:#e51e25}
+#study-area .yellow-intense{background:#f4a000}
+#study-area .gold-intense{background:#10a143}
+#study-area .blue-intense{background:#214add}
+#study-area .nav-row{gap:12px;grid-template-columns:1fr 1fr}
+#study-area .btn-nav{min-height:52px;border-radius:19px;font-size:14px;font-weight:900;box-shadow:0 15px 24px #16335412}
+#study-area .btn-nav-left{background:#e8eef5;color:#263c55}
+#study-area .btn-nav-right{background:#101a2c;color:#fff}
+@media(max-width:600px){
+ #study-area.study-area{width:100%;padding-bottom:24px}
+ #study-area .study-mobile-header{gap:11px}
+ #study-area .study-mobile-header h2{font-size:24px}
+ #study-area .flashcard-controls{padding:12px}
+ #study-area .flashcard-control-row{gap:9px}
+ #study-area .flashcard-control-row label{min-width:0;flex:1}
+ #study-area .flashcard-control-row label:first-child{flex-basis:100%}
+ #study-area #flashcard-shuffle{width:auto}
+ #study-area .card.depth-card,#study-area .card.depth-card .face{min-height:353px}
+ #study-area .card.depth-card .face{padding:76px 17px 18px;border-radius:22px}
+ #study-area .card.depth-card .depth-brand{top:20px;left:17px;width:47px;height:44px}
+ #study-area .fc-brand-wordmark{top:29px;left:69px}
+ #study-area .fc-brand-wordmark strong{font-size:15px;font-weight:900}
+ #study-area .fc-brand-wordmark small{font-size:7px;letter-spacing:1px;font-weight:800}
+ #study-area .card.depth-card .face .card-face-label{font-size:11px;padding:9px 11px;top:26px!important;right:17px!important;letter-spacing:.02em}
+ #study-area .card.depth-card .front .text-inner,#study-area .card.depth-card .back .back-text{min-height:259px;padding:16px 0}
+ #study-area .card.depth-card .front .text-inner p{font-size:29px;line-height:1.3}
+ #study-area .card.depth-card .back .back-text{padding:0}
+ #study-area .card.depth-card .back-text p{font-size:28px;line-height:1.3;padding:20px 0}
+ #study-area .fc-topic-chip{font-size:10px}
+ #study-area .fc-answer-source{font-size:12px;padding:8px 0 0}
+ #study-area .anki-rating-row{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+ #study-area .btn-anki{flex-direction:column;gap:3px;min-height:80px;padding:9px 2px;border-radius:17px;font-size:13px}
+ #study-area .btn-anki:before{width:35px;height:35px}
+ #study-area .nav-row{gap:9px}
+ #study-area .btn-nav{min-height:48px;font-size:13px;border-radius:15px}
+}
+@media(prefers-reduced-motion:reduce){#study-area *{transition:none!important}}

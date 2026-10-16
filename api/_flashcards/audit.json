@@ -1,0 +1,588 @@
+{
+  "version": "2026-10-16",
+  "verified_against_pdf": true,
+  "total_cards": 2028,
+  "total_topics": 68,
+  "subjects": [
+    {
+      "materia": "MORFOFUNCION",
+      "chapters": 30,
+      "topics": 29,
+      "cards": 984,
+      "longest_answer_words": 19,
+      "median_answer_words": 4,
+      "source_sha256": "14c011249edb86694c9952beb1b2dc93920b8df3a19b05ba0a3130b4292c9167",
+      "visually_verified_cards": 0,
+      "pdf_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "chapters": 18,
+      "topics": 18,
+      "cards": 593,
+      "longest_answer_words": 16,
+      "median_answer_words": 4,
+      "source_sha256": "23f8f1ac26b4c435296b5f29789c446134bb10567f2a92d30c563b16df93f628",
+      "visually_verified_cards": 0,
+      "pdf_sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b"
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "chapters": 17,
+      "topics": 21,
+      "cards": 451,
+      "longest_answer_words": 19,
+      "median_answer_words": 7,
+      "source_sha256": "276492ce87ad7f99df9e1989757549a137dca081fddaa66c27c103a8758cc896",
+      "visually_verified_cards": 24,
+      "pdf_sha256": "e1f1ec1d33ea6b3a9c0001cd524904965bcb34ece6537d43315b42e403a4887a"
+    }
+  ],
+  "topics": [
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "temas principales de anatomia y fisiologia",
+      "chapter": 1,
+      "chapter_title": "Temas principales de anatomía y fisiología",
+      "count": 65,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "la quimica de la vida",
+      "chapter": 2,
+      "chapter_title": "La química de la vida",
+      "count": 35,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "forma y funcion celulares",
+      "chapter": 3,
+      "chapter_title": "Forma y función celulares",
+      "count": 35,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "genetica y funcion celular",
+      "chapter": 4,
+      "chapter_title": "Genética y función celular",
+      "count": 35,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "histologia",
+      "chapter": 5,
+      "chapter_title": "Histología",
+      "count": 36,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "sistema tegumentario",
+      "chapter": 6,
+      "chapter_title": "El sistema tegumentario",
+      "count": 39,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "tejido oseo",
+      "chapter": 7,
+      "chapter_title": "Tejido óseo",
+      "count": 38,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "el sistema oseo",
+      "chapter": 8,
+      "chapter_title": "El sistema óseo",
+      "count": 25,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "articulaciones",
+      "chapter": 9,
+      "chapter_title": "Articulaciones",
+      "count": 28,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "el sistema muscular",
+      "chapter": 10,
+      "chapter_title": "El sistema muscular",
+      "count": 62,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "tejido muscular",
+      "chapter": 11,
+      "chapter_title": "Tejido muscular",
+      "count": 25,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "tejido nervioso",
+      "chapter": 12,
+      "chapter_title": "Tejido nervioso",
+      "count": 45,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "medula espinal y reflejos",
+      "chapter": 13,
+      "chapter_title": "Médula espinal, nervios raquídeos y reflejos somáticos",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "encefalo y pares craneales",
+      "chapter": 14,
+      "chapter_title": "El encéfalo y los pares craneales",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "sistema nervioso autonomo",
+      "chapter": 15,
+      "chapter_title": "El sistema nervioso autónomo y los reflejos viscerales",
+      "count": 25,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "organos de los sentidos",
+      "chapter": 16,
+      "chapter_title": "Órganos de los sentidos",
+      "count": 40,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "sistema endocrino",
+      "chapter": 17,
+      "chapter_title": "Sistema endocrino",
+      "count": 28,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "sangre",
+      "chapter": 18,
+      "chapter_title": "El aparato circulatorio: sangre",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "corazon",
+      "chapter": 19,
+      "chapter_title": "El aparato circulatorio: el corazón",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "vasos sanguineos y circulacion",
+      "chapter": 20,
+      "chapter_title": "El aparato circulatorio: vasos sanguíneos y circulación",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "sistema linfatico e inmunidad",
+      "chapter": 21,
+      "chapter_title": "Los sistemas linfático e inmunitario",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "aparato respiratorio",
+      "chapter": 22,
+      "chapter_title": "El aparato respiratorio",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "aparato urinario",
+      "chapter": 23,
+      "chapter_title": "El aparato urinario",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "equilibrio hidrico y acidobasico",
+      "chapter": 24,
+      "chapter_title": "Equilibrios hídrico, hidroelectrolítico y acidobásico",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "aparato digestivo",
+      "chapter": 25,
+      "chapter_title": "El aparato digestivo",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "nutricion y metabolismo",
+      "chapter": 26,
+      "chapter_title": "Nutrición y metabolismo",
+      "count": 34,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "aparato reproductor masculino",
+      "chapter": 27,
+      "chapter_title": "Aparato reproductor masculino",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "aparato reproductor femenino",
+      "chapter": 28,
+      "chapter_title": "Aparato reproductor femenino",
+      "count": 29,
+      "free_count": 0
+    },
+    {
+      "materia": "MORFOFUNCION",
+      "tema": "desarrollo humano y envejecimiento",
+      "chapter": 29,
+      "chapter_title": "Desarrollo humano y envejecimiento",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "introduccion a la biologia celular",
+      "chapter": 1,
+      "chapter_title": "Introducción a la biología de las células",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "metodos y tecnicas basicas en biologia celular",
+      "chapter": 2,
+      "chapter_title": "Cómo se estudian las células. Métodos y técnicas básicas en biología celular",
+      "count": 38,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "estructura de la membrana plasmatica",
+      "chapter": 3,
+      "chapter_title": "Estructura de la membrana plasmática",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "transporte a traves de la membrana plasmatica",
+      "chapter": 4,
+      "chapter_title": "Microtransporte a través de la membrana plasmática",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "macrotransporte a traves de la membrana plasmatica",
+      "chapter": 5,
+      "chapter_title": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "especializaciones de la membrana plasmatica",
+      "chapter": 6,
+      "chapter_title": "Especializaciones de la membrana plasmática e interacción de la célula con su entorno",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "nucleo y cromatina",
+      "chapter": 7,
+      "chapter_title": "El núcleo. Parte I: organización de la cromatina y conservación de la información genética",
+      "count": 40,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "transcripcion y maduracion del arn",
+      "chapter": 8,
+      "chapter_title": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "sintesis y modificacion de proteinas",
+      "chapter": 9,
+      "chapter_title": "Síntesis y modificación de proteínas",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "reticulo endoplasmatico golgi y lisosomas",
+      "chapter": 10,
+      "chapter_title": "Sistema de endomembranas celulares: retículo endoplasmático, aparato de Golgi y lisosomas",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "mitocondrias y peroxisomas",
+      "chapter": 11,
+      "chapter_title": "Mitocondrias y peroxisomas. Bioenergética y metabolismo oxidativo",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "citoesqueleto",
+      "chapter": 12,
+      "chapter_title": "El citoesqueleto",
+      "count": 35,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "senalizacion celular",
+      "chapter": 13,
+      "chapter_title": "Mecanismos de señalización celular",
+      "count": 36,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "ciclo celular",
+      "chapter": 14,
+      "chapter_title": "Ciclo celular y destinos vitales de la célula",
+      "count": 35,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "division celular y muerte programada",
+      "chapter": 15,
+      "chapter_title": "División celular y muerte programada",
+      "count": 32,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "biologia celular del cancer",
+      "chapter": 16,
+      "chapter_title": "Biología celular del cáncer",
+      "count": 37,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "respuesta inmunitaria",
+      "chapter": 17,
+      "chapter_title": "Bases celulares de la respuesta inmunitaria",
+      "count": 40,
+      "free_count": 0
+    },
+    {
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "celulas madre y aplicaciones terapeuticas",
+      "chapter": 18,
+      "chapter_title": "Las células madre y sus aplicaciones terapéuticas",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "educacion en salud",
+      "chapter": 1,
+      "chapter_title": "EDUCACIÓN EN SALUD",
+      "count": 14,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "concepto de salud y determinantes",
+      "chapter": 1,
+      "chapter_title": "EDUCACIÓN EN SALUD",
+      "count": 16,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "funciones de salud publica",
+      "chapter": 1,
+      "chapter_title": "EDUCACIÓN EN SALUD",
+      "count": 14,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "niveles de prevencion",
+      "chapter": 1,
+      "chapter_title": "EDUCACIÓN EN SALUD",
+      "count": 12,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "promocion de la salud",
+      "chapter": 1,
+      "chapter_title": "EDUCACIÓN EN SALUD",
+      "count": 15,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "atencion primaria de salud",
+      "chapter": 1,
+      "chapter_title": "EDUCACIÓN EN SALUD",
+      "count": 15,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "factor de riesgo y salud comunitaria",
+      "chapter": 1,
+      "chapter_title": "EDUCACIÓN EN SALUD",
+      "count": 14,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "ods y cobertura sanitaria",
+      "chapter": 1,
+      "chapter_title": "EDUCACIÓN EN SALUD",
+      "count": 30,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "salud en bolivia y modelo safci",
+      "chapter": 1,
+      "chapter_title": "EDUCACIÓN EN SALUD",
+      "count": 31,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "epidemiologia social",
+      "chapter": 3,
+      "chapter_title": "El proceso investigativo desde la perspectiva social epidemiológica",
+      "count": 17,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "proceso de investigacion",
+      "chapter": 4,
+      "chapter_title": "Momentos del proceso de la investigación",
+      "count": 20,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "problema y objetivos de investigacion",
+      "chapter": 5,
+      "chapter_title": "Objeto de estudio",
+      "count": 20,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "marco teorico e hipotesis",
+      "chapter": 6,
+      "chapter_title": "Fundamentación teórica, hipótesis",
+      "count": 23,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "variables y medicion",
+      "chapter": 6,
+      "chapter_title": "Fundamentación teórica, hipótesis",
+      "count": 20,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "estadistica descriptiva",
+      "chapter": 1,
+      "chapter_title": "Conceptos generales sobre estadística",
+      "count": 15,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "muestreo",
+      "chapter": 2,
+      "chapter_title": "Introducción a los tipos de muestreo",
+      "count": 23,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "frecuencias y graficos",
+      "chapter": 3,
+      "chapter_title": "Tabulación de datos estadísticos",
+      "count": 43,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "medidas de tendencia central",
+      "chapter": 7,
+      "chapter_title": "Medidas de tendencia central",
+      "count": 20,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "medidas de posicion",
+      "chapter": 8,
+      "chapter_title": "Medidas de posición",
+      "count": 18,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "dispersion y forma de los datos",
+      "chapter": 9,
+      "chapter_title": "Medidas de dispersión",
+      "count": 37,
+      "free_count": 0
+    },
+    {
+      "materia": "SALUD PUBLICA",
+      "tema": "analisis de datos en excel y spss",
+      "chapter": 11,
+      "chapter_title": "Estadística descriptiva mediante Microsoft Excel",
+      "count": 34,
+      "free_count": 0
+    }
+  ],
+  "library_sha256": "46d7256a16ade67220cd91ed71a6deb53dcc7f5c319eaee56377d2df38f1ccfe"
+}

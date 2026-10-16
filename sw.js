@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v104';
+const CACHE_NAME = 'alcocermed-main-v105';
 const APP_SHELL = [
     './campus',
     './campus.html',
@@ -29,11 +29,14 @@ const APP_SHELL = [
     './config.js',
     './device_guard.js?v=4',
     './campus-access.js?v=9',
-    './study-depth.js?v=15',
+    './official-flashcards.js?v=1',
+    './study-depth.js?v=16',
     './study-depth.css?v=3',
-    './flashcard-workspace.css?v=3',
-    './flashcard-workspace.js?v=2',
-    './script.js?v=57',
+    './flashcard-workspace.css?v=4',
+    './flashcard-approved.css?v=1',
+    './assets/fonts/outfit-900.ttf',
+    './flashcard-workspace.js?v=3',
+    './script.js?v=58',
     './mindmap-branch-labels.js?v=3',
     './mindmap-content.js?v=2',
     './mindmap-premium-catalog.js?v=17',
@@ -56,7 +59,7 @@ const APP_SHELL = [
     './simulacro-ingreso.js?v=7',
     './simulacro-library.js?v=2',
     './simulacro-library.css?v=2',
-    './student-library.js?v=9',
+    './student-library.js?v=10',
     './study-summaries.js?v=8',
     './past-exams.js?v=6',
     './past-exams.css?v=2',

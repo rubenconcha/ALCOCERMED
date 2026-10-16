@@ -48,6 +48,11 @@
  }
  window.StudyDepth={
   async merge(rows,kind){
+   // Approved flashcards use the three official books exclusively. Legacy supplements remain for the question bank.
+   if(kind==='flashcards'){
+    if(!window.OfficialFlashcards)throw new Error('La biblioteca oficial no está disponible.');
+    return OfficialFlashcards.load();
+   }
    if(!window.CampusAccess||CampusAccess.isFree())return rows;
    const loaded=await load(),supplement=loaded[kind];
    if(!supplement)throw new Error('Recurso de estudio desconocido.');

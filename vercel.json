@@ -14,6 +14,9 @@
     },
     "api/simulation.js": {
       "includeFiles": "api/_simulations/**"
+    },
+    "api/flashcards.js": {
+      "includeFiles": "api/_flashcards/**"
     }
   },
   "headers": [
@@ -91,6 +94,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/_flashcards/:path*",
+      "destination": "/api/flashcards?invalid=1"
+    },
     {
       "source": "/api/_simulations/:path*",
       "destination": "/api/simulation?id=invalid"

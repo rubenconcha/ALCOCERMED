@@ -97,7 +97,11 @@
                 groups.set(key, group);
             });
             topics = [...groups.values()].sort((a, b) => a.name.localeCompare(b.name, 'es', { numeric: true }));
-            if (window.CampusAccess && CampusAccess.isFree()) {
+            if (window.OfficialFlashcards) {
+                const free = Boolean(window.CampusAccess?.isFree());
+                topics = OfficialFlashcards.catalog().filter(t => normalizeDbText(t.materia) === normalizeDbText(value))
+                    .map(t => ({name:t.tema,count:free?Number(t.free_count):Number(t.count),locked:Boolean(t.locked)}));
+            } else if (window.CampusAccess && CampusAccess.isFree()) {
                 const catalog = await CampusAccess.catalog();
                 if (token !== request) return;
                 topics = catalog.filter(t => normalizeDbText(t.materia) === normalizeDbText(value)).map(t => ({name:t.tema,count:Number(t.free_count),locked:!Number(t.free_count)}));
