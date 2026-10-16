@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="flashcard-workspace.css?v=3">
     <link rel="stylesheet" href="simulacro-library.css?v=2">
     <link rel="stylesheet" href="past-exams.css?v=2">
+    <link rel="stylesheet" href="topic-evaluations.css?v=1">
     <link rel="stylesheet" href="campus-atlas.css?v=4">
 </head>
 
@@ -977,39 +978,19 @@
         <!-- ══ EVALUACIÓN ══ -->
         <section id="evaluacion-screen" class="evaluacion-section hidden">
 
-            <div class="eval-header">
-                <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left"></i> volver</button>
-                <div>
-                    <h2 class="eval-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#progress"></use></svg> mis evaluaciones</h2>
-                    <p class="eval-subtitle">Revisa tus resultados y las materias que necesitas volver a practicar.</p>
-                </div>
+            <div class="sim-header">
+                <button class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left" aria-hidden="true"></i> volver</button>
+                <div><span class="entrance-eyebrow">PREPARATORIA BEN CARSON · MEDICINA UMSS</span>
+                <h2>evaluación por tema</h2><p>Elige una materia y un tema. Responde la evaluación y revisa tus respuestas con la bibliografía.</p></div>
             </div>
-
-            <section class="morfo-topic-evaluations" aria-labelledby="morfo-evaluations-title"><h3 id="morfo-evaluations-title">Evaluaciones de Morfofunción</h3><p>Comprueba lo aprendido en cada tema. Cada evaluación tiene 30 preguntas.</p><div class="entrance-choices"><a id="morfo-eval-sangre" class="entrance-choice" href="/juegos/?code=SANG26"><span class="entrance-choice-tag">CAPÍTULO 18</span><strong>Sangre</strong><span class="entrance-choice-description">De la composición sanguínea a la hemostasia.</span><span class="morfo-eval-action">Abrir evaluación →</span></a><a id="morfo-eval-sentidos" class="entrance-choice" href="/juegos/?code=SENT26"><span class="entrance-choice-tag">CAPÍTULO 16</span><strong>Órganos de los sentidos</strong><span class="entrance-choice-description">Receptores y sentidos generales y especiales.</span><span class="morfo-eval-action">Abrir evaluación →</span></a></div></section>
-            <section class="morfo-topic-evaluations" aria-labelledby="chapter-practice-title"><h3 id="chapter-practice-title">Prácticas de capítulo</h3><p>Repasa un tema o comprueba sus mecanismos. Estas actividades tienen su propia duración.</p>
-                <div class="morfo-topic-simulators entrance-choices" role="group" aria-label="Prácticas de Morfofunción por tema">
-                    <button type="button" id="entrance-morfo-sangre" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('morfo-sangre')">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">MORFOFUNCIÓN · CAPÍTULO 18</span></span><strong>Sangre</strong><span class="entrance-choice-description">Plasma, células sanguíneas, grupos ABO y Rh, hemostasia y coagulación.</span><span class="entrance-choice-metrics"><span><b>40</b> preguntas</span><span><b>40</b> minutos</span></span><span class="entrance-choice-split">Selección equilibrada de los diez bloques del capítulo.</span>
-                    <span class="morfo-eval-action">Abrir práctica →</span></button>
-                    <button type="button" id="entrance-morfo-sentidos" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('morfo-sentidos')">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">MORFOFUNCIÓN · CAPÍTULO 16</span></span><strong>Órganos de los sentidos</strong><span class="entrance-choice-description">Receptores, tacto, dolor, gusto, olfato, audición, equilibrio y visión.</span><span class="entrance-choice-metrics"><span><b>40</b> preguntas</span><span><b>40</b> minutos</span></span><span class="entrance-choice-split">Selección equilibrada de los diez bloques del capítulo.</span>
-                    <span class="morfo-eval-action">Abrir práctica →</span></button>
-                </div>
-                <div class="entrance-choices" role="group" aria-label="Casos de Morfofunción">
-                    <button type="button" id="entrance-blood-depth-simulation" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('blood-depth-simulation')">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SANGRE · APLICACIÓN</span></span><strong>Casos razonados</strong><span class="entrance-choice-description">Diferencial, reservas, linajes y coagulación. Predice el mecanismo y revisa cada alternativa al terminar.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Bloque específico; no sustituye el simulacro integral.</span>
-                    <span class="morfo-eval-action">Abrir práctica →</span></button>
-                    <button type="button" id="entrance-blood-depth-evaluation" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('blood-depth-evaluation')">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SANGRE · AUTOEVALUACIÓN</span></span><strong>Comprueba los mecanismos</strong><span class="entrance-choice-description">Una selección distinta de casos para comprobar transferencia del aprendizaje. Corrección al finalizar.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Preguntas diferentes de Casos razonados.</span>
-                    <span class="morfo-eval-action">Abrir práctica →</span></button>
-                    <button type="button" id="entrance-senses-depth-simulation" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('senses-depth-simulation')">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SENTIDOS · APLICACIÓN</span></span><strong>Sentidos · Casos razonados</strong><span class="entrance-choice-description">Retina, cóclea, equilibrio y sentidos químicos. Sigue el mecanismo y compara respuestas entre sistemas.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Bloque específico; no sustituye el simulacro integral.</span>
-                    <span class="morfo-eval-action">Abrir práctica →</span></button>
-                    <button type="button" id="entrance-senses-depth-evaluation" class="entrance-choice entrance-choice-premium" onclick="startTopicAssessment('senses-depth-evaluation')">
-                        <span class="entrance-choice-top"><span class="entrance-choice-tag">SENTIDOS · AUTOEVALUACIÓN</span></span><strong>Sentidos · Comprueba los mecanismos</strong><span class="entrance-choice-description">Intervenciones sobre receptores, mensajeros, fibras y salidas motoras. Revisa las razones al finalizar.</span><span class="entrance-choice-metrics"><span><b>6</b> preguntas</span><span><b>8</b> minutos</span></span><span class="entrance-choice-split">Selección distinta de Casos razonados de Sentidos.</span>
-                    <span class="morfo-eval-action">Abrir práctica →</span></button>
-                </div>
-            </section>
+            <div class="past-filters">
+                <label for="topic-eval-subject">materia<select id="topic-eval-subject"><option value="">todas las materias</option><option value="MORFOFUNCION">Morfofunción</option><option value="BIOLOGIA CELULAR">Biología celular</option><option value="SALUD PUBLICA">Educación en Salud e Investigación</option></select></label>
+                <label for="topic-eval-search">tema<input id="topic-eval-search" type="search" placeholder="Buscar un tema…" autocomplete="off"></label>
+                <span id="topic-eval-count" aria-live="polite"></span>
+            </div>
+            <p id="topic-eval-status" role="status"></p>
+            <div id="topic-eval-grid" class="past-grid"></div>
+            <details class="topic-eval-history"><summary>Mis resultados anteriores</summary>
             <!-- Métricas globales -->
             <div class="eval-metrics-grid">
                 <div class="eval-metric-card">
@@ -1051,6 +1032,7 @@
                 </div>
             </div>
 
+            </details>
         </section>
 
         <!-- ══ JUEGO: AHORCADO ══ -->
@@ -1383,7 +1365,7 @@
     <script src="mindmap-premium-catalog.js?v=17"></script>
     <script src="mindmap-premium.js?v=3"></script>
     <script src="study-depth.js?v=15"></script>
-    <script src="script.js?v=57"></script>
+    <script src="script.js?v=58"></script>
     <script src="mindmap-branch-labels.js?v=3"></script>
     <script src="mindmap-content.js?v=2"></script>
     <script src="mindmap-detailed-content.js?v=4"></script>
@@ -1398,6 +1380,7 @@
     <script src="flashcard-workspace.js?v=2"></script>
     <script src="study-summaries.js?v=8"></script>
     <script src="past-exams.js?v=6"></script>
+    <script src="topic-evaluations.js?v=1"></script>
     <script src="campus-atlas.js?v=10"></script>
 </body>
 

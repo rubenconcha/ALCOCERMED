@@ -1,0 +1,35 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');
+const catalog=require('../content/topic-evaluations/catalog.json');
+const sources=require('../api/_evaluations/source-cards.json');
+const audit=require('../api/_evaluations/source-audit.json');
+const cards=new Map(sources.flatMap(s=>s.chapters.flatMap(c=>c.cards.map(q=>[q.id,{...q,subject:s.source.id}]))));
+test('68 temas completos con respuestas y alternativas trazables a la bibliografía',()=>{
+ assert.equal(catalog.exams.length,68);assert.deepEqual(['morfo','biologia','salud'].map(p=>catalog.exams.filter(e=>e.id.startsWith(p)).length),[29,18,21]);
+ const unique=new Set();
+ for(const exam of catalog.exams){const paper=require('../api/_evaluations/'+exam.id+'.json');assert.equal(paper.count,paper.questions.length);assert.equal(exam.count,paper.count);assert.ok(paper.count>=7);assert.equal(paper.duration,paper.count);
+ for(const q of paper.questions){assert.ok(!unique.has(q.content_id));unique.add(q.content_id);const source=cards.get(q.content_id);assert.ok(source);assert.equal(q.pregunta,source.question);assert.equal(q['opcion_'+q.respuesta_correcta.toLowerCase()],source.answer);assert.equal(q.paginas_pdf,String(source.pdf_page));const entry=audit.find(a=>a.paper===exam.id&&a.question===q.content_id);assert.ok(entry);const options='abcd'.split('').map(k=>q['opcion_'+k]);assert.equal(new Set(options).size,4);entry.option_source_ids.forEach((id,i)=>{assert.equal(cards.get(id).answer,options[i]);assert.equal(cards.get(id).subject,source.subject)});}
+ }
+ assert.equal(unique.size,audit.length);
+});
+test('evaluaciones mantienen su propia navegación, protección y presentación',()=>{
+ const html=fs.readFileSync('campus.html','utf8');const section=html.slice(html.indexOf('id="evaluacion-screen"'),html.indexOf('id="videoclases-screen"'));assert.ok(section.includes('topic-eval-grid'));assert.ok(!section.includes('/juegos/'));assert.ok(html.includes('topic-evaluations.js'));
+ const config=require('../vercel.json');assert.ok(config.rewrites.some(r=>r.source==='/api/_evaluations/:path*'));
+ assert.ok(!fs.existsSync('content/topic-evaluations/morfo-01.json'));
+});
+test('API rechaza accesos no autorizados y entrega todos los temas al estudiante habilitado',async()=>{
+ const handler=require('../api/topic-evaluation.js');const original=global.fetch;let access={ready:true,premium:true};global.fetch=async()=>({ok:true,json:async()=>access});
+ async function call(id,auth='Bearer test',method='GET'){let output={headers:{}};await handler({method,query:{id},headers:{authorization:auth}},{setHeader(k,v){output.headers[k]=v},status(s){output.status=s;return this},end(body){output.body=body}});return output;}
+ try{assert.equal((await call('../source-cards')).status,404);assert.equal((await call('morfo-01','')).status,401);assert.equal((await call('morfo-01','Bearer test','POST')).status,405);access={ready:true,premium:false};assert.equal((await call('morfo-01')).status,403);access={ready:false,premium:true};assert.equal((await call('morfo-01')).status,403);access={ready:true,premium:true};for(const e of catalog.exams){const r=await call(e.id);assert.equal(r.status,200);assert.equal(JSON.parse(r.body).questions.length,e.count);assert.equal(r.headers['Cache-Control'],'private, no-store');}global.fetch=async()=>{throw new Error('offline')};assert.equal((await call('morfo-01')).status,503);}finally{global.fetch=original;}
+});
+function uiSetup({free=false,changed=false}={}){
+ const vm=require('node:vm'),nodes=new Map(),events=[];let sessions=0;
+ function element(){return {value:'',textContent:'',children:[],disabled:false,handlers:{},replaceChildren(){this.children=[]},append(...items){this.children.push(...items)},addEventListener(name,fn){this.handlers[name]=fn}};}
+ const node=id=>{if(!nodes.has(id))nodes.set(id,element());return nodes.get(id)};
+ const c={Date,AbortSignal,console,currentUser:{id:'test'},currentCampusScreen:'home-screen',campusScreenHistory:[],document:{getElementById:node,createElement:element},CampusAccess:{isFree:()=>free,unlock:()=>events.push('unlock')},getSupabase:()=>({auth:{getSession:async()=>({data:{session:{access_token:changed&&++sessions>1?'changed':'test'}}})}}),fetch:async(url)=>({ok:true,json:async()=>url.includes('/api/')?require('../api/_evaluations/'+new URL(url,'http://test').searchParams.get('id')+'.json'):catalog}),simState:{},openEvaluacion:()=>{c.currentCampusScreen='evaluacion-screen'},returnToExamSelection:()=>events.push('other'),showScreen:screen=>{c.currentCampusScreen=screen},showSimScreen:screen=>events.push(screen),buildSimCircles(){},renderSimQuestion(){},startSimTimer:()=>events.push('timer'),showToast:m=>events.push(m),addEventListener(){}};c.window=c;vm.createContext(c);vm.runInContext(fs.readFileSync('topic-evaluations.js','utf8'),c);
+ return {c,node,events,settle:()=>new Promise(resolve=>setImmediate(resolve))};
+}
+test('filtros, inicio por materia, retorno y protección ante sesión cambiada',async()=>{
+ for(const subject of ['MORFOFUNCION','BIOLOGIA CELULAR','SALUD PUBLICA']){const t=uiSetup();t.c.openEvaluacion();await t.settle();assert.equal(t.node('topic-eval-grid').children.length,68);t.node('topic-eval-subject').value=subject;await t.node('topic-eval-subject').handlers.change();const card=t.node('topic-eval-grid').children[0];await card.children[4].handlers.click();assert.equal(t.c.simState.mode,'tema');assert.equal(t.c.simState.selectedMateria,subject);assert.ok(t.events.includes('timer'));t.c.campusScreenHistory.push('evaluacion-screen');t.c.returnToExamSelection();assert.equal(t.c.currentCampusScreen,'evaluacion-screen');assert.equal(t.c.campusScreenHistory.length,0);}
+ for(const opts of [{free:true},{changed:true}]){const t=uiSetup(opts);t.c.openEvaluacion();await t.settle();await t.node('topic-eval-grid').children[0].children[4].handlers.click();assert.ok(!t.events.includes('timer'));}
+ const t=uiSetup();t.c.openEvaluacion();await t.settle();t.node('topic-eval-search').value='quimica';await t.node('topic-eval-search').handlers.input();assert.equal(t.node('topic-eval-grid').children.length,1);t.node('topic-eval-search').value='sin coincidencia';await t.node('topic-eval-search').handlers.input();assert.equal(t.node('topic-eval-grid').children.length,0);
+});

@@ -3234,7 +3234,7 @@ function renderBqDificultad_sim(dificultad) {
     var el = document.getElementById('sim-dificultad');
     if (!el) return;
     el.innerHTML = '';
-    const pastPaper = simState.mode === 'pasado';
+    const pastPaper = simState.mode === 'pasado' || simState.mode === 'tema';
     el.hidden = pastPaper;
     const label = document.querySelector('#sim-exam .bq-dificultad-label');
     if (label) label.hidden = pastPaper;
@@ -3320,7 +3320,7 @@ window.confirmarSalirSimulacro = function () {
     if (!confirm('¿salir del simulacro? perderás todo tu progreso.')) return;
     clearInterval(simState.timerInterval);
     simState.timerInterval = null;
-    if (simState.mode === 'pasado') { simState.preguntas = []; simState.answers = []; returnToExamSelection(); }
+    if (simState.mode === 'pasado' || simState.mode === 'tema') { simState.preguntas = []; simState.answers = []; returnToExamSelection(); }
     else showSimScreen('sim-config');
 };
 
@@ -3407,7 +3407,7 @@ window.finalizarSimulacro = function () {
             ].filter(function (o) { return o && o.toString().trim() !== ''; });
             var isCorrect = ans.selected !== null && simAcceptedAnswerIndices(q).includes(ans.selected);
             var sinResp = ans.selected === null;
-            var justif = bancoComentario(q);
+            var justif = simState.mode === 'tema' ? campo(q, 'justificacion') : bancoComentario(q);
 
             var item = document.createElement('div');
             item.className = 'sim-review-item' + (isCorrect ? ' sim-rev-ok' : sinResp ? ' sim-rev-pending' : ' sim-rev-fail');
@@ -3463,12 +3463,12 @@ window.finalizarSimulacro = function () {
 
     // Guardar en historial local
     guardarEnHistorial(pct, correctas, total, tiempoUsado,
-        simState.mode === 'materia' ? simState.selectedMateria : 'todas');
+        (simState.mode === 'materia' || simState.mode === 'tema') ? simState.selectedMateria : 'todas');
 
     // Sincronizar con la nube para el Panel de Admin
     guardarResultadoSimulacroEnNube({
-        titulo: (simState.mode === 'oficial' || simState.mode === 'pasado') ? (simState.selectedExamen || 'Simulacro preparado') : 'Simulacro personalizado',
-        materia: simState.mode === 'materia' ? simState.selectedMateria :
+        titulo: (simState.mode === 'oficial' || simState.mode === 'pasado' || simState.mode === 'tema') ? (simState.selectedExamen || 'Simulacro preparado') : 'Simulacro personalizado',
+        materia: (simState.mode === 'materia' || simState.mode === 'tema') ? simState.selectedMateria :
             simState.mode === 'oficial' ? (simState._oficialesCache.find(function (r) { return r.nombre === simState.selectedExamen; }) || {}).materia || 'todas' : 'todas',
         porcentaje: pct,
         correctas: correctas,
