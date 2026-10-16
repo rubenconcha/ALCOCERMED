@@ -7,7 +7,7 @@
     {
       "id": "2025-2026-1-1",
       "numero_original": 1,
-      "pregunta": "1.- El musculo geniogloso tiene su origen en la espina mentoniana superior.\n2.- El musculo pterigoideo medio tiene su inserción en la superficie lateral de la rama de la mandíbula, y",
+      "pregunta": "1.- El musculo geniogloso tiene su origen en la espina mentoniana superior.\n2.- El musculo pterigoideo medio tiene su inserción en la superficie lateral de la rama de la mandíbula",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
       "opcion_c": "Si ambos son correctos",
@@ -20,10 +20,15 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-1",
-      "source_sha256": "552c49d5d0585e6f01f4fcce67ca895677e76cadb906c84f82755b7f8090ec64"
+      "source_sha256": "552c49d5d0585e6f01f4fcce67ca895677e76cadb906c84f82755b7f8090ec64",
+      "adaptation": "Se elimina una conjunción suelta al final de la transcripción.",
+      "source_numero_original": 1,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-1-2",
@@ -41,10 +46,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-2",
-      "source_sha256": "391e6697d76de993977deb4c9fc7d8f2d4e882f39793c626279a5b7183516b49"
+      "source_sha256": "391e6697d76de993977deb4c9fc7d8f2d4e882f39793c626279a5b7183516b49",
+      "source_numero_original": 2,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-3",
@@ -62,10 +71,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 5
+        "chapter": 5,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-3",
-      "source_sha256": "dbab22b4bdb9540b650f53e05992621550badb00c26535f4bcd8aea85c07a5e1"
+      "source_sha256": "dbab22b4bdb9540b650f53e05992621550badb00c26535f4bcd8aea85c07a5e1",
+      "source_numero_original": 3,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 5"
     },
     {
       "id": "2025-2026-1-4",
@@ -83,10 +96,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 8
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-4",
-      "source_sha256": "d03863016ba3a26c5d1ea916276ab27e34743c2d96c8d42625934a019b780fce"
+      "source_sha256": "d03863016ba3a26c5d1ea916276ab27e34743c2d96c8d42625934a019b780fce",
+      "source_numero_original": 4,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
     },
     {
       "id": "2025-2026-1-5",
@@ -104,10 +121,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 11
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-5",
-      "source_sha256": "58ad5bc96a294d0d9bb56495440c398f33e126d7eecf6ee173b548c3589ae6f4"
+      "source_sha256": "58ad5bc96a294d0d9bb56495440c398f33e126d7eecf6ee173b548c3589ae6f4",
+      "source_numero_original": 5,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 11"
     },
     {
       "id": "2025-2026-1-6",
@@ -125,10 +146,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-6",
-      "source_sha256": "015ba6fdb869159eb8a444778cef56a8cb8fbe23118754666f365d58399a0235"
+      "source_sha256": "015ba6fdb869159eb8a444778cef56a8cb8fbe23118754666f365d58399a0235",
+      "source_numero_original": 6,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-1-7",
@@ -146,10 +171,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 1
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-7",
-      "source_sha256": "6871fbe2e5118040e9258dac77b1fa86749afc32d018cf8fff421d3f40613a92"
+      "source_sha256": "6871fbe2e5118040e9258dac77b1fa86749afc32d018cf8fff421d3f40613a92",
+      "source_numero_original": 7,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 1"
     },
     {
       "id": "2025-2026-1-8",
@@ -167,10 +196,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-8",
-      "source_sha256": "aa8c1f4cfd0ae3d8005fc44e1924bfb023604ff39b2b6bcdc6cee79187e41906"
+      "source_sha256": "aa8c1f4cfd0ae3d8005fc44e1924bfb023604ff39b2b6bcdc6cee79187e41906",
+      "source_numero_original": 8,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-1-9",
@@ -188,10 +221,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-9",
-      "source_sha256": "d84a000b1535b68d34e0c17346c519110998e4a8ddc19de4818cc8d4ddb515bf"
+      "source_sha256": "d84a000b1535b68d34e0c17346c519110998e4a8ddc19de4818cc8d4ddb515bf",
+      "source_numero_original": 9,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-1-10",
@@ -209,10 +246,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 5
+        "chapter": 5,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-10",
-      "source_sha256": "a40d8930913eeaa5718ba0d60716cb2b8960c340f791135b8a01082e52704a7a"
+      "source_sha256": "a40d8930913eeaa5718ba0d60716cb2b8960c340f791135b8a01082e52704a7a",
+      "source_numero_original": 10,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 5"
     },
     {
       "id": "2025-2026-1-11",
@@ -230,10 +271,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-11",
-      "source_sha256": "8726bd304289f36553d8105e1bbd2dfa7f13f74d9da97603b3c7ea8c0ddc188e"
+      "source_sha256": "8726bd304289f36553d8105e1bbd2dfa7f13f74d9da97603b3c7ea8c0ddc188e",
+      "source_numero_original": 11,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-12",
@@ -251,10 +296,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-12",
-      "source_sha256": "5c9f6321589496bad4eadbfa59f889d03fac61780ec845e9ca5360c63abcd039"
+      "source_sha256": "5c9f6321589496bad4eadbfa59f889d03fac61780ec845e9ca5360c63abcd039",
+      "source_numero_original": 12,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-1-13",
@@ -272,10 +321,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 5
+        "chapter": 5,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-13",
-      "source_sha256": "a6770ee1276cdc8601d8832b8131f36598d345173f93b0e9458f9c7d2e9ad96f"
+      "source_sha256": "a6770ee1276cdc8601d8832b8131f36598d345173f93b0e9458f9c7d2e9ad96f",
+      "source_numero_original": 13,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 5"
     },
     {
       "id": "2025-2026-1-14",
@@ -293,10 +346,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 8
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-14",
-      "source_sha256": "50534ba8889d03f191751119c244b975b7e9be14dfb5d5edf172440c83d56e3c"
+      "source_sha256": "50534ba8889d03f191751119c244b975b7e9be14dfb5d5edf172440c83d56e3c",
+      "source_numero_original": 14,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
     },
     {
       "id": "2025-2026-1-15",
@@ -314,10 +371,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 8
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-15",
-      "source_sha256": "eba161757b66bbf9c98518b07abdba07b54ea3ce6f39e018f2c608d388482669"
+      "source_sha256": "eba161757b66bbf9c98518b07abdba07b54ea3ce6f39e018f2c608d388482669",
+      "source_numero_original": 15,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
     },
     {
       "id": "2025-2026-1-16",
@@ -335,10 +396,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-16",
-      "source_sha256": "4315b00ffb4bcd9ee3a093d4a47c28fea61fbf9557440fa9dfbf677b184c5f96"
+      "source_sha256": "4315b00ffb4bcd9ee3a093d4a47c28fea61fbf9557440fa9dfbf677b184c5f96",
+      "source_numero_original": 16,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-1-17",
@@ -356,10 +421,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-17",
-      "source_sha256": "43efcca1138c9b210fc289860f41d2d3995e97072caabf0c7207c0c70ab9c8c6"
+      "source_sha256": "43efcca1138c9b210fc289860f41d2d3995e97072caabf0c7207c0c70ab9c8c6",
+      "source_numero_original": 17,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-1-18",
@@ -377,10 +446,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-18",
-      "source_sha256": "b3809ca879b03b65ee38082c6dbc32d42583e4976751f35afc81cf836f28c7c1"
+      "source_sha256": "b3809ca879b03b65ee38082c6dbc32d42583e4976751f35afc81cf836f28c7c1",
+      "source_numero_original": 18,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-19",
@@ -398,10 +471,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-19",
-      "source_sha256": "9d09e40b1cb351b335e41c691dd0a9ac52180d505e613cc0ba016b9c879168e7"
+      "source_sha256": "9d09e40b1cb351b335e41c691dd0a9ac52180d505e613cc0ba016b9c879168e7",
+      "source_numero_original": 19,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-20",
@@ -419,10 +496,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-20",
-      "source_sha256": "68f1e1d421fbe412105f16b72bea4aa07fa6692b505dc067f6fc499d07c867dd"
+      "source_sha256": "68f1e1d421fbe412105f16b72bea4aa07fa6692b505dc067f6fc499d07c867dd",
+      "source_numero_original": 20,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-21",
@@ -440,10 +521,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 9
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-21",
-      "source_sha256": "d5813e851af3bdf2a32892512c088046a9c0246307d4a04d135f04d433cd1019"
+      "source_sha256": "d5813e851af3bdf2a32892512c088046a9c0246307d4a04d135f04d433cd1019",
+      "source_numero_original": 21,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 9"
     },
     {
       "id": "2025-2026-1-22",
@@ -461,10 +546,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 5
+        "chapter": 5,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-22",
-      "source_sha256": "af488ff15d950e34979530ea5a897f46f5448bed17a7053b9a724cc549123a86"
+      "source_sha256": "af488ff15d950e34979530ea5a897f46f5448bed17a7053b9a724cc549123a86",
+      "source_numero_original": 22,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 5"
     },
     {
       "id": "2025-2026-1-23",
@@ -482,10 +571,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-23",
-      "source_sha256": "3d9dbeeb8540a1b6352e101100820e4d7d6c971d85a670cda20e6ac669691834"
+      "source_sha256": "3d9dbeeb8540a1b6352e101100820e4d7d6c971d85a670cda20e6ac669691834",
+      "source_numero_original": 23,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-24",
@@ -503,10 +596,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-24",
-      "source_sha256": "023ab70429364490e079a48a87a2261568ba84829c9d1f96c7470c9c98bc43d3"
+      "source_sha256": "023ab70429364490e079a48a87a2261568ba84829c9d1f96c7470c9c98bc43d3",
+      "source_numero_original": 24,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-1-25",
@@ -524,539 +621,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-25",
-      "source_sha256": "528f14801ee14052c22d589524ef87303b73b3cb515bb1dacf0595a0cacc3469"
-    },
-    {
-      "id": "2025-2026-1-26",
-      "numero_original": 26,
-      "pregunta": "Sobre el colágeno:\n1.- Colágenos que forman fibrillas largas: tipos I, II, III, V y VIII\n2-Colágenos de cadena corta: tipos VII y XI.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 6
-      },
-      "source_question_id": "2025-2026-1-26",
-      "source_sha256": "2b4fce8b0ba321cf9bc3480f190a9c439655f4adcb2a85cc2a974d5b746b01be"
-    },
-    {
-      "id": "2025-2026-1-27",
-      "numero_original": 27,
-      "pregunta": "Sobre el uso clínico de CD4:\n1.- La disminución progresiva de CD4+ ocurre durante la infección por VIH.\n2-El análisis de CD4+ permite seguimiento de la evolución de la enfermedad.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
-      },
-      "source_question_id": "2025-2026-1-27",
-      "source_sha256": "2ce14ee166e0858204b5db404e07324aecdc48c9efd5b81e7941ed45081baf8a"
-    },
-    {
-      "id": "2025-2026-1-28",
-      "numero_original": 28,
-      "pregunta": "Acerca de FSC/SSC para distinguir linfocitos B:\n1.- FSC y SSC por si solos permiten distinguir linfocitos B de Ty NK.\n2.- Se requiere un fluorocromo unido a anticuerpos como anti-CD19 para distinguir linfocitos B.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
-      },
-      "source_question_id": "2025-2026-1-28",
-      "source_sha256": "44df52c62af482dc6ccc8775b592f877a27430dc301f225d40593e4350d0de2d"
-    },
-    {
-      "id": "2025-2026-1-29",
-      "numero_original": 29,
-      "pregunta": "Sobre cápsulas bacterianas:\n1.- La cápsula sirve como protección contra la fagocitosis y permite adherencia a sustratos.\n2.- Solo las bacterias grampositivas pueden poseer capsula.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
-      "source_question_id": "2025-2026-1-29",
-      "source_sha256": "29b874b9e710acf1b418c627823e53949281dc8c5f927b7db406a38cad75d998"
-    },
-    {
-      "id": "2025-2026-1-30",
-      "numero_original": 30,
-      "pregunta": "Microtomia de muestras congeladas:\n1.- Se utiliza un criostato manteniendo 20 °C durante el corte\n2.- Requiere deshidratación previa de la muestra para facilitar el corte.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
-      },
-      "source_question_id": "2025-2026-1-30",
-      "source_sha256": "77d04823a0721ed892a1b5072b2d42ae26b36010f8a3fdcbca32e15913d9caff"
-    },
-    {
-      "id": "2025-2026-1-31",
-      "numero_original": 31,
-      "pregunta": "Sobre protozoos tipo Plasmodium:\n1.- La fiebre de la malaria está asociada a la liberación de productos tóxicos de la hemólisis durante la ruptura de eritrocitos.\n2- En Plasmodium, la fase de esquizonte ocurre exclusivamente en los eritrocitos humanos.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
-      "source_question_id": "2025-2026-1-31",
-      "source_sha256": "b025b9d9941b9fb4f504a8bbf92b3f925a40f07c8633520c710fe43851c8f04a"
-    },
-    {
-      "id": "2025-2026-1-32",
-      "numero_original": 32,
-      "pregunta": "Sobre las limitaciones de la técnica FISH, señale lo correcto:\n1.- FISH no es una técnica de cribado porque requiere conocer previamente la región genética a estudiar.\n2-FISH permite detectar todas las alteraciones del genoma sin necesidad de sondas específicas.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
-      },
-      "source_question_id": "2025-2026-1-32",
-      "source_sha256": "1986b9d6aa10d6ea516348edc76adbb3b40ca54f9e616ff2ff1dee4931931437"
-    },
-    {
-      "id": "2025-2026-1-33",
-      "numero_original": 33,
-      "pregunta": "Sobre el contraste en el MET:\n1.- Las zonas que dejan pasar electrones se observan oscuras.\n2.- Las estructuras que absorben más sales de acetato de uranio generan zonas electrodensas por impedir el paso de electrones.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
-      },
-      "source_question_id": "2025-2026-1-33",
-      "source_sha256": "0a12813dc56e025e95d69c059b7a240d8d71d50a41360199187c8f73150e9744"
-    },
-    {
-      "id": "2025-2026-1-34",
-      "numero_original": 34,
-      "pregunta": "Sobre el límite de resolución del microscopio óptico:\n1.- El LR del microscopio óptico convencional está limitado por la naturaleza ondulatoria de la luz.\n2-El LR se define como el cociente entre la longitud de onda empleada, multiplicada por una constante, dividido por la apertura numérica del objetivo",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
-      },
-      "source_question_id": "2025-2026-1-34",
-      "source_sha256": "812ad93285dd9c54b46f7bb9514e9dfc3cf6988f992206f90aa279b7b1af09d3"
-    },
-    {
-      "id": "2025-2026-1-35",
-      "numero_original": 35,
-      "pregunta": "Sobre el vacío en el MET:\n1.- Se requiere alto vacío para la conducción del haz de electrones.\n2.- El uso de alto vacío permite estudiar células vivas en su ambiente natural. En los estudios históricos de Langmuir",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
-      },
-      "source_question_id": "2025-2026-1-35",
-      "source_sha256": "05013b6f7e501ab31c17a7184c65f968014badabb30e8cfe08de46f7b1c41bd1"
-    },
-    {
-      "id": "2025-2026-1-36",
-      "numero_original": 36,
-      "pregunta": "En los estudios históricos de Langmuir\n1-Estudió los lípidos de membrana como moléculas anfipáticas y propuso una organización en monocapa\n2.- Comprobó la existencia de la membrana plasmática con el microscopio electrónico, que reveló que se trataba de una estructura trilaminar de unos 10 nm de espesor.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 3
-      },
-      "source_question_id": "2025-2026-1-36",
-      "source_sha256": "b02d2c8ab34e747d241309e3316edea401e1c865bfe81b1d6ce75763e13a0094"
-    },
-    {
-      "id": "2025-2026-1-37",
-      "numero_original": 37,
-      "pregunta": "Sobre la vitamina C:\n1.- La vitamina C es necesaria para la hidroxilación de prolina y lisina en la síntesis de colágeno.\n2-La deficiencia de vitamina C afecta primero a tejidos con bajo recambio de colágeno.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 6
-      },
-      "source_question_id": "2025-2026-1-37",
-      "source_sha256": "fb0ca23f16cff95b1ece88b0a40894dcc8df05d2a17ebfe15874d3ec767969ee"
-    },
-    {
-      "id": "2025-2026-1-38",
-      "numero_original": 38,
-      "pregunta": "Sobre difracción óptica:\n1.- La difracción hace que los bordes de los objetos se observen difusos\n2.- Si dos objetos están muy juntos, la difracción permite separarlos mejor.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
-      },
-      "source_question_id": "2025-2026-1-38",
-      "source_sha256": "198991ba1d9dd81e2dfafd672fb2f4b23e7336284f73a43d3b80cdad7505b785"
-    },
-    {
-      "id": "2025-2026-1-39",
-      "numero_original": 39,
-      "pregunta": "Microarrays:\n1.- Permiten estudiar la expresión de miles de genes simultáneamente.\n2.- Solo analizan proteínas, no ARNm.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
-      },
-      "source_question_id": "2025-2026-1-39",
-      "source_sha256": "45a2b7b200f7304d1a1c46927c8e2cb1fd0009dada239c010918742498ecc409"
-    },
-    {
-      "id": "2025-2026-1-40",
-      "numero_original": 40,
-      "pregunta": "Homocigosis en ratones KO\n1.- Se logra mediante cruzamientos endogámicos de ratones heterocigóticos.\n2.- La progenie homocigótica representa el 50% de los descendientes.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
-      },
-      "source_question_id": "2025-2026-1-40",
-      "source_sha256": "e29aa97c648d1797024f714f8f760e176ec6f88c2ffd3100515b7fb8f8bb50a9"
-    },
-    {
-      "id": "2025-2026-1-41",
-      "numero_original": 41,
-      "pregunta": "1.- La educación en salud es independiente a la promoción de la salud y la prevención de enfermedades.\n2-La educación en salud excluye la participación comunitaria y la equidad como componentes del proceso.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1
-      },
-      "source_question_id": "2025-2026-1-41",
-      "source_sha256": "a311003edfa6afbb0ca83ee82cf632dad5dbcc9cd09daf91e63f2be8477cc80f"
-    },
-    {
-      "id": "2025-2026-1-42",
-      "numero_original": 42,
-      "pregunta": "1.-El Tercer Nivel de Atención se enfoca en la promoción y prevención.\n2-Los niveles especializados resuelven el 80% de los problemas de salud frecuentes.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 3
-      },
-      "source_question_id": "2025-2026-1-42",
-      "source_sha256": "8a18ccd9b7bb7643f61839c33a753901588e75a81bd8848f13a8111e4d2090b7"
-    },
-    {
-      "id": "2025-2026-1-43",
-      "numero_original": 43,
-      "pregunta": "1-Las actividades de Prevención Terciaria: disminuye complicaciones, secuelas o discapacidades en enfermedades ya establecidas.\n2- La Prevención Terciaria actúa sobre las secuelas de algunas enfermedades.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1
-      },
-      "source_question_id": "2025-2026-1-43",
-      "source_sha256": "c082ee0fdf8e820f3076e09a92cf10d574e6f48c3066ea6434a01071abb44098"
-    },
-    {
-      "id": "2025-2026-1-44",
-      "numero_original": 44,
-      "pregunta": "1- Enfoque de la prevención: centrado en riesgos y factores clínicos de enfermedades, concretas.\n2.- Enfoque de la prevención: centrado en determinantes signológicos y sintomatológicos.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1
-      },
-      "source_question_id": "2025-2026-1-44",
-      "source_sha256": "942d41372ac3f34d56d56279648ea454921c859c7c5902d0132ff8f37ea07d33"
-    },
-    {
-      "id": "2025-2026-1-45",
-      "numero_original": 45,
-      "pregunta": "1.-El ODS 4 promueve educación exclusiva.\n2-El ODS 4 limita el aprendizaje únicamente a la educación básica.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1
-      },
-      "source_question_id": "2025-2026-1-45",
-      "source_sha256": "563f1d87c9c9c5f8d5dcc415c6055fa9907ab823316ecc2d6535cf3545b6d9db"
-    },
-    {
-      "id": "2025-2026-1-46",
-      "numero_original": 46,
-      "pregunta": "1-El ODS 5 se centra exclusivamente en la producción de energía hidráulica\n2-El ODS 5 garantiza la disponibilidad y gestión sostenible del agua y saneamiento para todos.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1
-      },
-      "source_question_id": "2025-2026-1-46",
-      "source_sha256": "65c2a449d4f11e06de8638d29b39b49b82f8b0cb3f7e534e3cb2d78cbceda665"
-    },
-    {
-      "id": "2025-2026-1-47",
-      "numero_original": 47,
-      "pregunta": "1.- El ODS 10 busca reducir la desigualdad dentro de los países.\n2.- El ODS 10 busca reducir la desigualdad entre los países",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1
-      },
-      "source_question_id": "2025-2026-1-47",
-      "source_sha256": "e48b0c299dd7b1b1ab02fb837f8d6cc789e6d5fa6c2f23b45caafdc0386a0ea7"
-    },
-    {
-      "id": "2025-2026-1-48",
-      "numero_original": 48,
-      "pregunta": "1.-El ODS 8 promueve estabilidad plena y reproducción planificada.\n2-El ODS 8 promueve empleo pleno, productivo y trabajo decente para todos.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1
-      },
-      "source_question_id": "2025-2026-1-48",
-      "source_sha256": "21db32a3a690fb5b90c6b2d9076818459b818d9055c356cdc5a4b08d7329567d"
-    },
-    {
-      "id": "2025-2026-1-49",
-      "numero_original": 49,
-      "pregunta": "1-La puerta de entrada al Sistema Único de Salud de Bolivia es la Seguridad de Salud\n2.- El Primer Nivel de Atención resuelve el 80% de problemas de salud frecuentes.",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 3
-      },
-      "source_question_id": "2025-2026-1-49",
-      "source_sha256": "ae9a712dbec5eccc15a0c0c2fc0e60e63bc312648795926be7b79a4d31bac755"
-    },
-    {
-      "id": "2025-2026-1-50",
-      "numero_original": 50,
-      "pregunta": "1.-El ODS 9 busca construir infraestructuras resilientes y fomentar la innovación.\n2-El ODS 9 promueve una industrialización inclusiva y sostenible.\nA PARTIR DE ESTA PREGUNTA CONSIDERE LA SIGUIENTE CLAVE:",
-      "opcion_a": "Si 1 es correcto",
-      "opcion_b": "Si 2 es correcto",
-      "opcion_c": "Si ambos son correctos",
-      "opcion_d": "Si ninguno es correcto",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
-      "comentario": "Respuesta según el patrón original.",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1
-      },
-      "source_question_id": "2025-2026-1-50",
-      "source_sha256": "c0fa82343cf8604647962b8287c97e7fbc1cd3ead1c1c83e07037ba91a72b3c0"
+      "source_sha256": "528f14801ee14052c22d589524ef87303b73b3cb515bb1dacf0595a0cacc3469",
+      "source_numero_original": 25,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-51",
-      "numero_original": 51,
+      "numero_original": 26,
       "pregunta": "Es definición de contracción isométrica:\n1.- Que es una contracción sin cambio en la longitud.\n2- Que se da con un cambio en la longitud, pero no en la tensión.\n3.- Que se da cambio en la longitud extendiéndose el musculo.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1071,14 +647,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 11
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-51",
-      "source_sha256": "22a233b590c50ef0792dedd056d1d03e37ac1e812295b2a1c0c03ae21ceed4be"
+      "source_sha256": "22a233b590c50ef0792dedd056d1d03e37ac1e812295b2a1c0c03ae21ceed4be",
+      "source_numero_original": 51,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 11"
     },
     {
       "id": "2025-2026-1-52",
-      "numero_original": 52,
+      "numero_original": 27,
       "pregunta": "1.- La 6 costilla verdadera se articula con los cuerpos vertebrales T6 y T7.\n2-La 10° costilla no presenta tuberosidad costal.\n3.- la 11 costilla es falsa, flotante y se articula con las vértebras T11 y T12.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1093,14 +673,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 8
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-52",
-      "source_sha256": "8d9bfc6193c244d5cd52b1327db42bec945422135e5631e053e1421da0da502b"
+      "source_sha256": "8d9bfc6193c244d5cd52b1327db42bec945422135e5631e053e1421da0da502b",
+      "source_numero_original": 52,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
     },
     {
       "id": "2025-2026-1-53",
-      "numero_original": 53,
+      "numero_original": 28,
       "pregunta": "Cuál es la inserción del musculo braquial:\n1.- Tuberosidad radial; fascia del antebrazo. 2-Margen superior de la cavidad glenoidea. 3.- Apófisis coronoides y tuberosidad cubital.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1115,14 +699,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-53",
-      "source_sha256": "bbfd1f7b595117ba8eea4311352b2a775b5795986907eedff8436ce8df311f4a"
+      "source_sha256": "bbfd1f7b595117ba8eea4311352b2a775b5795986907eedff8436ce8df311f4a",
+      "source_numero_original": 53,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-1-54",
-      "numero_original": 54,
+      "numero_original": 29,
       "pregunta": "Es cierto sobre las fracturas:\n1.- En una fractura conminuta, el hueso se rompe de manera incompleta de un lado pero sólo se dobla por el opuesto.\n2-En una fractura en tallo verde, un hueso se parte en tres o más piezas\n3.- Una fractura sin complicaciones sana en casi 6 semanas.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1137,14 +725,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-54",
-      "source_sha256": "9e104daed30852fb979e4c4fd6ddd3f1d7b37a9845537407d32cc0eac3f5c702"
+      "source_sha256": "9e104daed30852fb979e4c4fd6ddd3f1d7b37a9845537407d32cc0eac3f5c702",
+      "source_numero_original": 54,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-1-55",
-      "numero_original": 55,
+      "numero_original": 30,
       "pregunta": "1.- Con un solo corte coronal del cuerpo se podrían exponer ambos riñones.\n2.- El peritoneo se alinea con el interior del estómago y el intestino.\n3.- El colon sigmoide está en el cuadrante inferior derecho del abdomen.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1159,14 +751,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 1
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-55",
-      "source_sha256": "336a185597f452b195518421cf5a7b05019374fb2bd5a1be5ebb01957016a42b"
+      "source_sha256": "336a185597f452b195518421cf5a7b05019374fb2bd5a1be5ebb01957016a42b",
+      "source_numero_original": 55,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 1"
     },
     {
       "id": "2025-2026-1-56",
-      "numero_original": 56,
+      "numero_original": 31,
       "pregunta": "Sobre los agujeros craneales y lo que los atraviesa:\n1.- Agujero yugular: nervios glosofaríngeo, vago.\n2.- Agujero espinoso: Arteria meníngea anterior.\n3.- Hendidura esfenomaxilar: Nervio supraorbitario.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1181,14 +777,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 8
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-56",
-      "source_sha256": "3d9d29f7ed2b8696a45f90a264328ab7d9898b5292a880cea80b1082c6cc15fb"
+      "source_sha256": "3d9d29f7ed2b8696a45f90a264328ab7d9898b5292a880cea80b1082c6cc15fb",
+      "source_numero_original": 56,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
     },
     {
       "id": "2025-2026-1-57",
-      "numero_original": 57,
+      "numero_original": 32,
       "pregunta": "En un corte transversal del tórax, ¿cuál término describe mejor la posición de la aorta en relación con el corazón:\n1.- Lateral. 2.- Posterior. 3.Inferior.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1203,14 +803,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 1
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-57",
-      "source_sha256": "595a23f5bc21ab3a55e0407651f480e8617a6d565c8f3e2d9cb7cec6cfecd417"
+      "source_sha256": "595a23f5bc21ab3a55e0407651f480e8617a6d565c8f3e2d9cb7cec6cfecd417",
+      "source_numero_original": 57,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 1"
     },
     {
       "id": "2025-2026-1-58",
-      "numero_original": 58,
+      "numero_original": 33,
       "pregunta": "Cuál es el origen del musculo supinador largo:\n1.- Epicóndilo lateral del húmero.\n2.-Borde supracondíleo del húmero.\n3-Cresta del supinador y fosa del cúbito en sentido distal a la hendidura.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1225,14 +829,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-58",
-      "source_sha256": "76b5c389df3e1f175b9ce090686ccb178ed98af69172901d59fe8da353291f0e"
+      "source_sha256": "76b5c389df3e1f175b9ce090686ccb178ed98af69172901d59fe8da353291f0e",
+      "source_numero_original": 58,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-1-59",
-      "numero_original": 59,
+      "numero_original": 34,
       "pregunta": "Es cierto sobre el cartílago elástico:\n1.- Localizaciones: pabellón de la oreja; epiglotis.\"\n2-Aspecto microscópico: matriz clara, cristalina, a menudo teñida de azul claro o rojo en cortes de tejido.\n3.-Funciones: facilita el movimiento de las articulaciones; mantiene abiertas las vías respiratorias.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1247,14 +855,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 5
+        "chapter": 5,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-59",
-      "source_sha256": "51cb02df3aa1c4574691bc9cf5fa56b41a76847b337b5520cd8ebf8c76cff824"
+      "source_sha256": "51cb02df3aa1c4574691bc9cf5fa56b41a76847b337b5520cd8ebf8c76cff824",
+      "source_numero_original": 59,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 5"
     },
     {
       "id": "2025-2026-1-60",
-      "numero_original": 60,
+      "numero_original": 35,
       "pregunta": "Es cierto sobre los trastornos del sistema tegumentario:\n1.-Psoriasis: Lesiones cutáneas pruriginosas, rojas, exudativas causadas por alergia.\n2.- Eccema: Placas recurrentes, enrojecidas, cubiertas con escamas plateadas.\n3-Rosácea: Cualquier inflamación de la piel, por lo general marcada por prurito y enrojecimiento.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1269,14 +881,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-60",
-      "source_sha256": "2e46e93d9891d984ba1f17da1d4a6bb2e31821bc0d1bebddbdfd3fee818bf466"
+      "source_sha256": "2e46e93d9891d984ba1f17da1d4a6bb2e31821bc0d1bebddbdfd3fee818bf466",
+      "source_numero_original": 60,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-61",
-      "numero_original": 61,
+      "numero_original": 36,
       "pregunta": "Es cierto sobre los injertos de piel:\n1.- El injerto idóneo es un autoinjerto, porque no es rechazado por el sistema inmunitario.\n2.- Un aloinjerto u homoinjerto es un injerto de un gemelo idéntico.\n3.- Al injerto de tejido de una especie diferente se le llama isoinjerto.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1291,14 +907,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-61",
-      "source_sha256": "e7d7d95e44f7945832214dc9315a57fea7b3b54d5cf12e9875d21a85838ccdf4"
+      "source_sha256": "e7d7d95e44f7945832214dc9315a57fea7b3b54d5cf12e9875d21a85838ccdf4",
+      "source_numero_original": 61,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-62",
-      "numero_original": 62,
+      "numero_original": 37,
       "pregunta": "Músculos inervados por el nervio axilar.\n1-Coracobraquial - braquial\n2.- Romboides mayor - Supraespinoso.\n3.- Deltoides-Redondo menor.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1313,14 +933,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-62",
-      "source_sha256": "d116537560ce3aa31c616810fcd44e4978ded42b268ed8e9af1fb94db1e3b4fa"
+      "source_sha256": "d116537560ce3aa31c616810fcd44e4978ded42b268ed8e9af1fb94db1e3b4fa",
+      "source_numero_original": 62,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-1-63",
-      "numero_original": 63,
+      "numero_original": 38,
       "pregunta": "Es cierto sobre la inervación del musculo coccigeo:\n1-Inervado por el nervio pudendo. 2. Nervios coccígeos 3. Nervios S3 a S4",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1335,14 +959,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-63",
-      "source_sha256": "c9d55ca6f2606149e7b806c4cf8cb74eac9686fea4d14ff67cd4e64ba1083ede"
+      "source_sha256": "c9d55ca6f2606149e7b806c4cf8cb74eac9686fea4d14ff67cd4e64ba1083ede",
+      "source_numero_original": 63,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-1-64",
-      "numero_original": 64,
+      "numero_original": 39,
       "pregunta": "Es cierto sobre las bandas H:\n1.- Banda oscura formada por filamentos gruesos paralelos que se superponen en parte con los filamentos delgados\n2-Banda clara compuesta sólo por filamentos delgados.\n3.- Una región más clara en medio de una banda A que sólo contiene filamentos gruesos.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1357,14 +985,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 11
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-64",
-      "source_sha256": "515870e777555c5cf612f10e005f4c33f47c3af85f814d4f4488a368ca12e883"
+      "source_sha256": "515870e777555c5cf612f10e005f4c33f47c3af85f814d4f4488a368ca12e883",
+      "source_numero_original": 64,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 11"
     },
     {
       "id": "2025-2026-1-65",
-      "numero_original": 65,
+      "numero_original": 40,
       "pregunta": "Es cierto sobre las articulaciones sinoviales:\n1.- Ejemplo de articulación elipsoidea es la del codo.\n2.- Ejemplo de articulación trocoide es la radiocarpiana.\n3.- Ejemplo de articulación ginglimo es la interfalángica.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1379,14 +1011,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 9
+        "chapter": 9,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-65",
-      "source_sha256": "2e028b14674a4abe69506b9af7d73106ed468385550f93b4fbe93c52495cf90c"
+      "source_sha256": "2e028b14674a4abe69506b9af7d73106ed468385550f93b4fbe93c52495cf90c",
+      "source_numero_original": 65,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 9"
     },
     {
       "id": "2025-2026-1-66",
-      "numero_original": 66,
+      "numero_original": 41,
       "pregunta": "Es cierto sobre el tejido óseo:\n1- La mayor parte del hueso compacto está organizado en cilindros de tejido que rodean a los conductos centrales.\n2-Casi una cuarta parte del peso seco del hueso depende de fibras de colágeno y glucosaminoglucanos.\n3.-Dos terceras partes están compuestas de minerales (sobre todo sales de fosfato y magnesio).",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1401,14 +1037,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-66",
-      "source_sha256": "db0515fcbbe8b25c4dc9be0535d2f1c5fed71f6bcf638a485accc98845d796ce"
+      "source_sha256": "db0515fcbbe8b25c4dc9be0535d2f1c5fed71f6bcf638a485accc98845d796ce",
+      "source_numero_original": 66,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-1-67",
-      "numero_original": 67,
+      "numero_original": 42,
       "pregunta": "Es cierto sobre agentes que afectan el calcio y el metabolismo óseo:\n1.- Estrógeno: Estimula a los osteoblastos y el crecimiento en adolescentes; evita la osteoporosis.\n2.- Hormonas tiroideas: Activan los osteoclastos de manera indirecta\n3.- Vitamina C: Promueve la síntesis de glucosaminoglucano.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1423,14 +1063,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-67",
-      "source_sha256": "06fee9fab1bcdfd687d23729f9650a456a072388156782d38d38bc4affbeeeff"
+      "source_sha256": "06fee9fab1bcdfd687d23729f9650a456a072388156782d38d38bc4affbeeeff",
+      "source_numero_original": 67,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-1-68",
-      "numero_original": 68,
+      "numero_original": 43,
       "pregunta": "Sobre el esfenoides:\n1.- El ala mayor forma la pared posterior de la órbita y contiene el conducto óptico.\n2- En vida, la duramadre se expande sobre la silla turca y se une a la apófisis clinoides anterior.\n3.-En una vista superior del cráneo, el esfenoides es anterior a la base del hueso occipital.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1445,14 +1089,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 8
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-68",
-      "source_sha256": "0dc91a8d558b5bec2233ad95eda34faf3b224abdec3d80619495bdb86df22e84"
+      "source_sha256": "0dc91a8d558b5bec2233ad95eda34faf3b224abdec3d80619495bdb86df22e84",
+      "source_numero_original": 68,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
     },
     {
       "id": "2025-2026-1-69",
-      "numero_original": 69,
+      "numero_original": 44,
       "pregunta": "Es cierto sobre la homeostasis del fosfato:\n1.- El adulto promedio tiene de 50 a 80 g de fósforo.\n2-La concentración de fósforo en el plasma va de 3.5 a 4.0 mg/100 ml.\n3.- El calcitriol disminuye la concentración de fosfato.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1467,14 +1115,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 7
+        "chapter": 7,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-69",
-      "source_sha256": "8d4781d617a868be4d9e486ef153cf61d957b3db2fd34bfb553546629486535c"
+      "source_sha256": "8d4781d617a868be4d9e486ef153cf61d957b3db2fd34bfb553546629486535c",
+      "source_numero_original": 69,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 7"
     },
     {
       "id": "2025-2026-1-70",
-      "numero_original": 70,
+      "numero_original": 45,
       "pregunta": "Sobre el cáncer de piel:\n1.- El carcinoma basocelular es el tipo más común, resulta, también, el más mortal.\n2- El carcinoma espinocelular surge de los queratinocitos del estrato lucido.\n3-El melanoma es un cáncer de piel que surge de los melanocitos, es responsable de hasta 15% de los cánceres de piel.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1489,14 +1141,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-70",
-      "source_sha256": "b909d880a16b7a50ae216eacc95ffc5af7363e4866e90aa5f22241319779abbc"
+      "source_sha256": "b909d880a16b7a50ae216eacc95ffc5af7363e4866e90aa5f22241319779abbc",
+      "source_numero_original": 70,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-71",
-      "numero_original": 71,
+      "numero_original": 46,
       "pregunta": "Cuál es la inserción del pectoral mayor:\n1.- Apófisis coracoides.\n2.- Labio lateral del surco intertubercular del humero.\n3.-Mitad medial de la clavícula; margen lateral del esternón",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1511,14 +1167,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-71",
-      "source_sha256": "450c6edf347b17c56fd6ecbf96dab1dfaf406efbbc62981ec4dee00366ce5626"
+      "source_sha256": "450c6edf347b17c56fd6ecbf96dab1dfaf406efbbc62981ec4dee00366ce5626",
+      "source_numero_original": 71,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-1-72",
-      "numero_original": 72,
+      "numero_original": 47,
       "pregunta": "La tuberosidad de una costilla se articula con:\n1.- El margen del cuerpo del esternón.\n2-La apófisis transversa de una vértebra.\n3.- Las carillas costales de dos vértebras.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1533,14 +1193,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 8
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-72",
-      "source_sha256": "747e347e538d2ecd682b507bcbc8007c428e803514bcca50625e3a12ead08df8"
+      "source_sha256": "747e347e538d2ecd682b507bcbc8007c428e803514bcca50625e3a12ead08df8",
+      "source_numero_original": 72,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
     },
     {
       "id": "2025-2026-1-73",
-      "numero_original": 73,
+      "numero_original": 48,
       "pregunta": "Es cierto sobre el musculo Psoas:\n1.- Extiende el muslo y lo aduce\n2.- Tiene su inserción en el trocánter menor.\n3.- Tiene su origen en la cresta y fosa iliaca.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1555,14 +1219,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 10
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-73",
-      "source_sha256": "3aab55b1a64ca8b68d14f2984ecd24a3f8d9a48bc65fa95a379deb4e305ac7cc"
+      "source_sha256": "3aab55b1a64ca8b68d14f2984ecd24a3f8d9a48bc65fa95a379deb4e305ac7cc",
+      "source_numero_original": 73,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 10"
     },
     {
       "id": "2025-2026-1-74",
-      "numero_original": 74,
+      "numero_original": 49,
       "pregunta": "Sobre las reacciones de transferencia de energía en el cuerpo humano:\n1.- Descomposición: Una reacción, como la digestión o la respiración celular.\n2.- Reducción: Reacción exergónica en que un reactivo gana o recibe electrones.\n3.- Oxidación: Reacción endergónica en la que un reactivo pierde electrones.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1577,14 +1245,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-74",
-      "source_sha256": "e2981d6843af367495e9d02975afc09b2420285d2accbd671eb79bd1ff276821"
+      "source_sha256": "e2981d6843af367495e9d02975afc09b2420285d2accbd671eb79bd1ff276821",
+      "source_numero_original": 74,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-75",
-      "numero_original": 75,
+      "numero_original": 50,
       "pregunta": "Es cierto sobre las marcas de los huesos:\n1.- Cabeza: Protuberancia redondeada que se articula con otro hueso.\n2.- Fovea: Un hueco pequeño.\n3.- Condilo: El extremo expandido y prominente de un hueso.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1599,14 +1271,393 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 8
+        "chapter": 8,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-75",
-      "source_sha256": "3f55fb374a1131718d2e0bdfd0a5f881e1ffd02a805c4f3c49697b00e9c87317"
+      "source_sha256": "3f55fb374a1131718d2e0bdfd0a5f881e1ffd02a805c4f3c49697b00e9c87317",
+      "source_numero_original": 75,
+      "materia": "MORFOFUNCION",
+      "tema": "Tema 8"
+    },
+    {
+      "id": "2025-2026-1-26",
+      "numero_original": 51,
+      "pregunta": "Sobre el colágeno:\n1.- Colágenos que forman fibrillas largas: tipos I, II, III, V y VIII\n2-Colágenos de cadena corta: tipos VII y XI.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-26",
+      "source_sha256": "2b4fce8b0ba321cf9bc3480f190a9c439655f4adcb2a85cc2a974d5b746b01be",
+      "source_numero_original": 26,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 6"
+    },
+    {
+      "id": "2025-2026-1-27",
+      "numero_original": 52,
+      "pregunta": "Sobre el uso clínico de CD4:\n1.- La disminución progresiva de CD4+ ocurre durante la infección por VIH.\n2-El análisis de CD4+ permite seguimiento de la evolución de la enfermedad.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-27",
+      "source_sha256": "2ce14ee166e0858204b5db404e07324aecdc48c9efd5b81e7941ed45081baf8a",
+      "source_numero_original": 27,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
+    },
+    {
+      "id": "2025-2026-1-28",
+      "numero_original": 53,
+      "pregunta": "Acerca de FSC/SSC para distinguir linfocitos B:\n1.- FSC y SSC por si solos permiten distinguir linfocitos B de Ty NK.\n2.- Se requiere un fluorocromo unido a anticuerpos como anti-CD19 para distinguir linfocitos B.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-28",
+      "source_sha256": "44df52c62af482dc6ccc8775b592f877a27430dc301f225d40593e4350d0de2d",
+      "source_numero_original": 28,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
+    },
+    {
+      "id": "2025-2026-1-29",
+      "numero_original": 54,
+      "pregunta": "Sobre cápsulas bacterianas:\n1.- La cápsula sirve como protección contra la fagocitosis y permite adherencia a sustratos.\n2.- Solo las bacterias grampositivas pueden poseer capsula.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-29",
+      "source_sha256": "29b874b9e710acf1b418c627823e53949281dc8c5f927b7db406a38cad75d998",
+      "source_numero_original": 29,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2025-2026-1-30",
+      "numero_original": 55,
+      "pregunta": "Microtomia de muestras congeladas:\n1.- Se utiliza un criostato manteniendo 20 °C durante el corte\n2.- Requiere deshidratación previa de la muestra para facilitar el corte.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-30",
+      "source_sha256": "77d04823a0721ed892a1b5072b2d42ae26b36010f8a3fdcbca32e15913d9caff",
+      "source_numero_original": 30,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
+    },
+    {
+      "id": "2025-2026-1-31",
+      "numero_original": 56,
+      "pregunta": "Sobre protozoos tipo Plasmodium:\n1.- La fiebre de la malaria está asociada a la liberación de productos tóxicos de la hemólisis durante la ruptura de eritrocitos.\n2- En Plasmodium, la fase de esquizonte ocurre exclusivamente en los eritrocitos humanos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-31",
+      "source_sha256": "b025b9d9941b9fb4f504a8bbf92b3f925a40f07c8633520c710fe43851c8f04a",
+      "source_numero_original": 31,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2025-2026-1-32",
+      "numero_original": 57,
+      "pregunta": "Sobre las limitaciones de la técnica FISH, señale lo correcto:\n1.- FISH no es una técnica de cribado porque requiere conocer previamente la región genética a estudiar.\n2-FISH permite detectar todas las alteraciones del genoma sin necesidad de sondas específicas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-32",
+      "source_sha256": "1986b9d6aa10d6ea516348edc76adbb3b40ca54f9e616ff2ff1dee4931931437",
+      "source_numero_original": 32,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
+    },
+    {
+      "id": "2025-2026-1-33",
+      "numero_original": 58,
+      "pregunta": "Sobre el contraste en el MET:\n1.- Las zonas que dejan pasar electrones se observan oscuras.\n2.- Las estructuras que absorben más sales de acetato de uranio generan zonas electrodensas por impedir el paso de electrones.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-33",
+      "source_sha256": "0a12813dc56e025e95d69c059b7a240d8d71d50a41360199187c8f73150e9744",
+      "source_numero_original": 33,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
+    },
+    {
+      "id": "2025-2026-1-34",
+      "numero_original": 59,
+      "pregunta": "Sobre el límite de resolución del microscopio óptico:\n1.- El LR del microscopio óptico convencional está limitado por la naturaleza ondulatoria de la luz.\n2-El LR se define como el cociente entre la longitud de onda empleada, multiplicada por una constante, dividido por la apertura numérica del objetivo",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-34",
+      "source_sha256": "812ad93285dd9c54b46f7bb9514e9dfc3cf6988f992206f90aa279b7b1af09d3",
+      "source_numero_original": 34,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
+    },
+    {
+      "id": "2025-2026-1-35",
+      "numero_original": 60,
+      "pregunta": "Sobre el vacío en el MET:\n1.- Se requiere alto vacío para la conducción del haz de electrones.\n2.- El uso de alto vacío permite estudiar células vivas en su ambiente natural. En los estudios históricos de Langmuir",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-35",
+      "source_sha256": "05013b6f7e501ab31c17a7184c65f968014badabb30e8cfe08de46f7b1c41bd1",
+      "source_numero_original": 35,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
+    },
+    {
+      "id": "2025-2026-1-36",
+      "numero_original": 61,
+      "pregunta": "En los estudios históricos de Langmuir\n1-Estudió los lípidos de membrana como moléculas anfipáticas y propuso una organización en monocapa\n2.- Comprobó la existencia de la membrana plasmática con el microscopio electrónico, que reveló que se trataba de una estructura trilaminar de unos 10 nm de espesor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 3,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-36",
+      "source_sha256": "b02d2c8ab34e747d241309e3316edea401e1c865bfe81b1d6ce75763e13a0094",
+      "source_numero_original": 36,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 3"
+    },
+    {
+      "id": "2025-2026-1-37",
+      "numero_original": 62,
+      "pregunta": "Sobre la vitamina C:\n1.- La vitamina C es necesaria para la hidroxilación de prolina y lisina en la síntesis de colágeno.\n2-La deficiencia de vitamina C afecta primero a tejidos con bajo recambio de colágeno.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-37",
+      "source_sha256": "fb0ca23f16cff95b1ece88b0a40894dcc8df05d2a17ebfe15874d3ec767969ee",
+      "source_numero_original": 37,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 6"
+    },
+    {
+      "id": "2025-2026-1-38",
+      "numero_original": 63,
+      "pregunta": "Sobre difracción óptica:\n1.- La difracción hace que los bordes de los objetos se observen difusos\n2.- Si dos objetos están muy juntos, la difracción permite separarlos mejor.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-38",
+      "source_sha256": "198991ba1d9dd81e2dfafd672fb2f4b23e7336284f73a43d3b80cdad7505b785",
+      "source_numero_original": 38,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
+    },
+    {
+      "id": "2025-2026-1-39",
+      "numero_original": 64,
+      "pregunta": "Microarrays:\n1.- Permiten estudiar la expresión de miles de genes simultáneamente.\n2.- Solo analizan proteínas, no ARNm.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-39",
+      "source_sha256": "45a2b7b200f7304d1a1c46927c8e2cb1fd0009dada239c010918742498ecc409",
+      "source_numero_original": 39,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
+    },
+    {
+      "id": "2025-2026-1-40",
+      "numero_original": 65,
+      "pregunta": "Homocigosis en ratones KO\n1.- Se logra mediante cruzamientos endogámicos de ratones heterocigóticos.\n2.- La progenie homocigótica representa el 50% de los descendientes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "BIOLOGIA CELULAR",
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-40",
+      "source_sha256": "e29aa97c648d1797024f714f8f760e176ec6f88c2ffd3100515b7fb8f8bb50a9",
+      "source_numero_original": 40,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-76",
-      "numero_original": 76,
+      "numero_original": 66,
       "pregunta": "Sobre el VIH:\n1.- El gen gag codifica transcriptasa inversa, integrasa y proteasa\n2.- gp120 requiere unirse primero a CD4 y luego a un correceptor.\n3.- El correceptor CXCR4 está macrófagos y el CCR5 en células T cooperadoras.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1621,14 +1672,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-76",
-      "source_sha256": "0ba58bfc8400874a644ae343bb388f7ca9a4addeb3789bbe3c038fa60e2b33a1"
+      "source_sha256": "0ba58bfc8400874a644ae343bb388f7ca9a4addeb3789bbe3c038fa60e2b33a1",
+      "source_numero_original": 76,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 1"
     },
     {
       "id": "2025-2026-1-77",
-      "numero_original": 77,
+      "numero_original": 67,
       "pregunta": "Acerca de los transportadores GLUT:\n1.- GLUT1, GLUT3 y GLUT4 poseen alta afinidad por glucosa y funcionan cerca de su Vmax a concentraciones normales de glucosa.\n2.- GLUT2 posee alta afinidad y se satura rápidamente a concentraciones bajas de glucosa.\n3.- Mutaciones en GLUT1 no afectan la captación cerebral de glucosa.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1643,14 +1698,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 4
+        "chapter": 4,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-77",
-      "source_sha256": "11cfd52e2e08369edb3f651d87d6146c26ca5d7178df77ae197853ac3a838c1a"
+      "source_sha256": "11cfd52e2e08369edb3f651d87d6146c26ca5d7178df77ae197853ac3a838c1a",
+      "source_numero_original": 77,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 4"
     },
     {
       "id": "2025-2026-1-78",
-      "numero_original": 78,
+      "numero_original": 68,
       "pregunta": "Sobre la criofractura:\n1.- La fractura ocurre por zonas hidrófobas porque son las regiones más débiles de la célula al congelarse.\n2.- Tras la fractura, se aplica metalización y luego una capa de carbono que estabiliza la réplica.\n3.- Las muestras se congelan a una temperatura de -160 grados centígrados.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1665,14 +1724,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-78",
-      "source_sha256": "9a66e9b2c792f2978e9a1f87ff6d7237e6dfc5d32806a9e00949805be0b8da0b"
+      "source_sha256": "9a66e9b2c792f2978e9a1f87ff6d7237e6dfc5d32806a9e00949805be0b8da0b",
+      "source_numero_original": 78,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-79",
-      "numero_original": 79,
+      "numero_original": 69,
       "pregunta": "Sobre la endocitosis mediada por receptor:\n1.- Requiere la unión de ligandos a receptores específicos en la membrana.\n2.- Las vesículas pierden el recubrimiento de clatrina tras internalizarse.\n3.- Participa en la captación de colesterol extracelular contenido en las LDL.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1687,14 +1750,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 5
+        "chapter": 5,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-79",
-      "source_sha256": "1e2c5b68ac02c6815fe5e43d5ee2ce0c8b7be90e11a15ce7527a865ca6e0e1a8"
+      "source_sha256": "1e2c5b68ac02c6815fe5e43d5ee2ce0c8b7be90e11a15ce7527a865ca6e0e1a8",
+      "source_numero_original": 79,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 5"
     },
     {
       "id": "2025-2026-1-80",
-      "numero_original": 80,
+      "numero_original": 70,
       "pregunta": "Sobre biología molecular y evolución de técnicas:\n1.- Watson y Crick se basaron en datos obtenidos principalmente por cristalografía para proponer la doble hélice del ADN.\n2.- La secuenciación del genoma humano facilitó estudiar regulaciones génicas con precisión sin necesidad de técnicas bioinformáticas.\n3.- El avance de la biología celular en la segunda mitad del siglo IX estuvo impulsado por nuevas técnicas de fraccionamiento celular, microscopia y cultivos.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1709,14 +1776,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-80",
-      "source_sha256": "a6b061a97148d8a6abc8820802d09edcb060d5e732ccbe0f8a38ca1e57881db6"
+      "source_sha256": "a6b061a97148d8a6abc8820802d09edcb060d5e732ccbe0f8a38ca1e57881db6",
+      "source_numero_original": 80,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-81",
-      "numero_original": 81,
+      "numero_original": 71,
       "pregunta": "Uso de partículas de oro o ferritina en inmunoquímica, señale lo incorrecto:\n1.- Se utilizan principalmente en microscopia electrónica.\n2.-Permiten visualizar proteínas especificas mediante densidad electrónica.\n3.- Se usan rutinariamente en laboratorios clínicos para diagnóstico de cáncer.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1731,14 +1802,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-81",
-      "source_sha256": "ecf42c181723b152351b97b7fee4947c8fcfe20e6b21ee3f98328a4b00ec898a"
+      "source_sha256": "ecf42c181723b152351b97b7fee4947c8fcfe20e6b21ee3f98328a4b00ec898a",
+      "source_numero_original": 81,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-82",
-      "numero_original": 82,
+      "numero_original": 72,
       "pregunta": "RT-PCR, señale lo incorrecto:\n1.- Utiliza transcriptasa inversa para convertir ARN en ADN.\n2.- Permite analizar expresión génica a partir de ARNm.\n3.- Se aplica a varios fragmentos simultáneamente.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1753,14 +1828,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-82",
-      "source_sha256": "6b9331e71e11ded129daa21c1bd7423ead10b07f1c082279210e597735393e1e"
+      "source_sha256": "6b9331e71e11ded129daa21c1bd7423ead10b07f1c082279210e597735393e1e",
+      "source_numero_original": 82,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-83",
-      "numero_original": 83,
+      "numero_original": 73,
       "pregunta": "Sobre Vibrio cholerae, señale lo incorrecto:\n1.- Es un bacilo curvo, flagelado y gramnegativo.\n2.-Su subunidad B se une a gangliósidos en la superficie celular.\n3.- La elevación de Na+ y Cl- en el enterocito provoca que se arrastre agua hacia la luz por osmosis.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1775,14 +1854,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-83",
-      "source_sha256": "295924b038c10770d86ffc9750a5d42fe26b7a23c06d80e7823998d1cc97fda3"
+      "source_sha256": "295924b038c10770d86ffc9750a5d42fe26b7a23c06d80e7823998d1cc97fda3",
+      "source_numero_original": 83,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 1"
     },
     {
       "id": "2025-2026-1-84",
-      "numero_original": 84,
+      "numero_original": 74,
       "pregunta": "Western Blot:\n1.- No aplica normalmente para diagnóstico, pero si para investigación bio médica.\n2.- Es un método para la detección de lípidos en extractos de tejido.\n3.- Implica una separación electroforetica del lípido y una identificación antígeno anticuerpo",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1797,14 +1880,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-84",
-      "source_sha256": "28cd1533fa7cd82a8543961fa878a3a0979e1625210e44b1e226b684aa2c7cb0"
+      "source_sha256": "28cd1533fa7cd82a8543961fa878a3a0979e1625210e44b1e226b684aa2c7cb0",
+      "source_numero_original": 84,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-85",
-      "numero_original": 85,
+      "numero_original": 75,
       "pregunta": "Técnicas inmunohistoquímicas:\n1.- En la técnica directa, el anticuerpo primario lleva la molécula detectable.\n2.- En la técnica indirecta, el anticuerpo primario está está conjugado para ser visible\n3.- En la técnica directa se necesita anticuerpo secundario para visualizar la señal.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1819,14 +1906,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-85",
-      "source_sha256": "1d4f4169b80c30abe345d9532cc41d9d9ebc3468c15809c338a0ef9074fce73e"
+      "source_sha256": "1d4f4169b80c30abe345d9532cc41d9d9ebc3468c15809c338a0ef9074fce73e",
+      "source_numero_original": 85,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-86",
-      "numero_original": 86,
+      "numero_original": 76,
       "pregunta": "Sobre mecanismos de patogenicidad, señale lo incorrecto:\n1.- Los pili intervienen en la conjugación bacteriana.\n2- Las endotoxinas para producir fiebre, activan la cascada del complemento y disminuyen las citoquinas.\n3-Las bacterias tanto grampositivas como gramnegativas pueden tener cápsula.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1841,14 +1932,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-86",
-      "source_sha256": "da6113448583d8f1822c743367239656d27805509ea8e61fc6d114361b4a3044"
+      "source_sha256": "da6113448583d8f1822c743367239656d27805509ea8e61fc6d114361b4a3044",
+      "source_numero_original": 86,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 1"
     },
     {
       "id": "2025-2026-1-87",
-      "numero_original": 87,
+      "numero_original": 77,
       "pregunta": "Sobre las selectinas:\n1.- Las selectinas median uniones temporales entre leucocitos y endotelio.\n2.- La selectina L está en leucocitos; P y E en endotelio y plaquetas.\n3.- La interacción selectina-oligosacárido facilita la migración de leucocitos.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1863,14 +1958,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-87",
-      "source_sha256": "2f969ec8719178528dec033e3c430ed396d7d88249b362af7b262e9261d70ed4"
+      "source_sha256": "2f969ec8719178528dec033e3c430ed396d7d88249b362af7b262e9261d70ed4",
+      "source_numero_original": 87,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-88",
-      "numero_original": 88,
+      "numero_original": 78,
       "pregunta": "Sobre objetos visibles al óptico o electrónico, señale la incorrecta:\n1.- La membrana plasmática (~7 nm) solo puede observarse con microscopio electrónico.\n2.- Las bacterias (0,5-10 µm) pueden verse con el microscopio óptico.\n3.- Los ribosomas (25 nm) pueden observarse con el microscopio óptico.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1885,14 +1984,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 2
+        "chapter": 2,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-88",
-      "source_sha256": "7c9a6c1d0f9d7d5ab9977a5343251bbe35f1197d5dacb7321587868c4d8bf853"
+      "source_sha256": "7c9a6c1d0f9d7d5ab9977a5343251bbe35f1197d5dacb7321587868c4d8bf853",
+      "source_numero_original": 88,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 2"
     },
     {
       "id": "2025-2026-1-89",
-      "numero_original": 89,
+      "numero_original": 79,
       "pregunta": "Sobre el virus de la gripe:\n1.- La hemaglutinina favorece la adhesión de partículas viricas a la célula huésped.\n2.- La neuroaminidasa facilita la salida de la progenie virica\n3.- El virus de la influenza es de tipo ARN monocatenario.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1907,14 +2010,18 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-89",
-      "source_sha256": "faf44315fedb4e750febaff710d4b88e220a9b1c9011c2341c50adc52cad4a92"
+      "source_sha256": "faf44315fedb4e750febaff710d4b88e220a9b1c9011c2341c50adc52cad4a92",
+      "source_numero_original": 89,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 1"
     },
     {
       "id": "2025-2026-1-90",
-      "numero_original": 90,
+      "numero_original": 80,
       "pregunta": "Relación entre estructura de esfingolípidos y su clasificación, es incorrecto\n1.- Esfingomielinas: contienen grupos polares fosforilados.\n2.- Glucolípidos: contienen ceramida unida a glúcidos y carecen de ácido fosfórico.\n3.- Todos los esfingolípido son neutros a pH fisiológico.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
@@ -1929,10 +2036,264 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
-        "chapter": 3
+        "chapter": 3,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-90",
-      "source_sha256": "00dc5d4a0a1dac75b33e52da0fe8c1db1423e02f11172e99bf56aabf0e0ca2c3"
+      "source_sha256": "00dc5d4a0a1dac75b33e52da0fe8c1db1423e02f11172e99bf56aabf0e0ca2c3",
+      "source_numero_original": 90,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Tema 3"
+    },
+    {
+      "id": "2025-2026-1-41",
+      "numero_original": 81,
+      "pregunta": "1.- La educación en salud es independiente a la promoción de la salud y la prevención de enfermedades.\n2-La educación en salud excluye la participación comunitaria y la equidad como componentes del proceso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-41",
+      "source_sha256": "a311003edfa6afbb0ca83ee82cf632dad5dbcc9cd09daf91e63f2be8477cc80f",
+      "source_numero_original": 41,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2025-2026-1-42",
+      "numero_original": 82,
+      "pregunta": "1.-El Tercer Nivel de Atención se enfoca en la promoción y prevención.\n2-Los niveles especializados resuelven el 80% de los problemas de salud frecuentes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 3,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-42",
+      "source_sha256": "8a18ccd9b7bb7643f61839c33a753901588e75a81bd8848f13a8111e4d2090b7",
+      "source_numero_original": 42,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 3"
+    },
+    {
+      "id": "2025-2026-1-43",
+      "numero_original": 83,
+      "pregunta": "1-Las actividades de Prevención Terciaria: disminuye complicaciones, secuelas o discapacidades en enfermedades ya establecidas.\n2- La Prevención Terciaria actúa sobre las secuelas de algunas enfermedades.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-43",
+      "source_sha256": "c082ee0fdf8e820f3076e09a92cf10d574e6f48c3066ea6434a01071abb44098",
+      "source_numero_original": 43,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2025-2026-1-44",
+      "numero_original": 84,
+      "pregunta": "1- Enfoque de la prevención: centrado en riesgos y factores clínicos de enfermedades, concretas.\n2.- Enfoque de la prevención: centrado en determinantes signológicos y sintomatológicos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-44",
+      "source_sha256": "942d41372ac3f34d56d56279648ea454921c859c7c5902d0132ff8f37ea07d33",
+      "source_numero_original": 44,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2025-2026-1-45",
+      "numero_original": 85,
+      "pregunta": "1.-El ODS 4 promueve educación exclusiva.\n2-El ODS 4 limita el aprendizaje únicamente a la educación básica.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-45",
+      "source_sha256": "563f1d87c9c9c5f8d5dcc415c6055fa9907ab823316ecc2d6535cf3545b6d9db",
+      "source_numero_original": 45,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2025-2026-1-46",
+      "numero_original": 86,
+      "pregunta": "1-El ODS 5 se centra exclusivamente en la producción de energía hidráulica\n2-El ODS 5 garantiza la disponibilidad y gestión sostenible del agua y saneamiento para todos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-46",
+      "source_sha256": "65c2a449d4f11e06de8638d29b39b49b82f8b0cb3f7e534e3cb2d78cbceda665",
+      "source_numero_original": 46,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2025-2026-1-47",
+      "numero_original": 87,
+      "pregunta": "1.- El ODS 10 busca reducir la desigualdad dentro de los países.\n2.- El ODS 10 busca reducir la desigualdad entre los países",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-47",
+      "source_sha256": "e48b0c299dd7b1b1ab02fb837f8d6cc789e6d5fa6c2f23b45caafdc0386a0ea7",
+      "source_numero_original": 47,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2025-2026-1-48",
+      "numero_original": 88,
+      "pregunta": "1.-El ODS 8 promueve estabilidad plena y reproducción planificada.\n2-El ODS 8 promueve empleo pleno, productivo y trabajo decente para todos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-48",
+      "source_sha256": "21db32a3a690fb5b90c6b2d9076818459b818d9055c356cdc5a4b08d7329567d",
+      "source_numero_original": 48,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1"
+    },
+    {
+      "id": "2025-2026-1-49",
+      "numero_original": 89,
+      "pregunta": "1-La puerta de entrada al Sistema Único de Salud de Bolivia es la Seguridad de Salud\n2.- El Primer Nivel de Atención resuelve el 80% de problemas de salud frecuentes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 3,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-49",
+      "source_sha256": "ae9a712dbec5eccc15a0c0c2fc0e60e63bc312648795926be7b79a4d31bac755",
+      "source_numero_original": 49,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 3"
+    },
+    {
+      "id": "2025-2026-1-50",
+      "numero_original": 90,
+      "pregunta": "1.-El ODS 9 busca construir infraestructuras resilientes y fomentar la innovación.\n2-El ODS 9 promueve una industrialización inclusiva y sostenible.\nA PARTIR DE ESTA PREGUNTA CONSIDERE LA SIGUIENTE CLAVE:",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-50",
+      "source_sha256": "c0fa82343cf8604647962b8287c97e7fbc1cd3ead1c1c83e07037ba91a72b3c0",
+      "source_numero_original": 50,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1"
     },
     {
       "id": "2025-2026-1-91",
@@ -1951,10 +2312,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-91",
-      "source_sha256": "ed875e20cce3cee3b2de41281c6f2dfc4db0b8236aa0fea28b41bedb906922df"
+      "source_sha256": "ed875e20cce3cee3b2de41281c6f2dfc4db0b8236aa0fea28b41bedb906922df",
+      "source_numero_original": 91,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-92",
@@ -1973,10 +2338,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-92",
-      "source_sha256": "cc0e429cc47906127f0070596ed46cc14ceb24af436eb0afaaa1d7868d90682a"
+      "source_sha256": "cc0e429cc47906127f0070596ed46cc14ceb24af436eb0afaaa1d7868d90682a",
+      "source_numero_original": 92,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-93",
@@ -1995,10 +2364,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-93",
-      "source_sha256": "6de0a6f2c5d14a9178eb91c7618f78539691ac435942de1331c65be600052bf3"
+      "source_sha256": "6de0a6f2c5d14a9178eb91c7618f78539691ac435942de1331c65be600052bf3",
+      "source_numero_original": 93,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-94",
@@ -2017,10 +2390,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-94",
-      "source_sha256": "4df0beab12e476e189fdef66744a15ebe21df889c07abd4dac8a788e674190c5"
+      "source_sha256": "4df0beab12e476e189fdef66744a15ebe21df889c07abd4dac8a788e674190c5",
+      "source_numero_original": 94,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-95",
@@ -2039,10 +2416,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-95",
-      "source_sha256": "1bb64195bd298a3ec82d245b420b2935d529a71d55ce09023ddb89ce63509abd"
+      "source_sha256": "1bb64195bd298a3ec82d245b420b2935d529a71d55ce09023ddb89ce63509abd",
+      "source_numero_original": 95,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-96",
@@ -2061,10 +2442,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 5
+        "chapter": 5,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-96",
-      "source_sha256": "a757bebe9ddc5f5edadbfa2a2fbcaa3e5187205ad3e5609f80c14fb9f173f60f"
+      "source_sha256": "a757bebe9ddc5f5edadbfa2a2fbcaa3e5187205ad3e5609f80c14fb9f173f60f",
+      "source_numero_original": 96,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 5"
     },
     {
       "id": "2025-2026-1-97",
@@ -2083,10 +2468,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-97",
-      "source_sha256": "1cdf6c4a8f25c00c0c41b2249ce4f0deb8fba83ae6f670469000bbac1060d5bc"
+      "source_sha256": "1cdf6c4a8f25c00c0c41b2249ce4f0deb8fba83ae6f670469000bbac1060d5bc",
+      "source_numero_original": 97,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-98",
@@ -2105,10 +2494,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-98",
-      "source_sha256": "6f0c634bff19be41e6f1f2bb90a0f0e5c20dc7fd082f9f40c1fb8d0e890d610d"
+      "source_sha256": "6f0c634bff19be41e6f1f2bb90a0f0e5c20dc7fd082f9f40c1fb8d0e890d610d",
+      "source_numero_original": 98,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 6"
     },
     {
       "id": "2025-2026-1-99",
@@ -2127,10 +2520,14 @@
       "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-99",
-      "source_sha256": "2f3ce40858200fdb5dd87580a960dd7a7529022953e5d1fa60a2ff62eff72bc0"
+      "source_sha256": "2f3ce40858200fdb5dd87580a960dd7a7529022953e5d1fa60a2ff62eff72bc0",
+      "source_numero_original": 99,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 6"
     },
     {
       "id": "sim-first-theory-100",
@@ -2146,17 +2543,21 @@
       ],
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 6
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
       },
       "fuente": "Educación en Salud e Investigación CB24-25 · tema 6 · PDF 60–62",
       "comentario": "Correcta B: el marco organiza antecedentes y conceptos para orientar el estudio. A elimina objetivos sin fundamento; C omite las definiciones que hacen posible el análisis; D convierte una propuesta contrastable en una verdad garantizada. Síntesis original del apartado leído.",
-      "source_question_id": null
+      "source_question_id": null,
+      "source_numero_original": 100,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 6"
     }
   ],
   "review": {
     "type": "automated_scope_review",
     "teacher_approved": false,
-    "basis": "Human user confirmed Morfo 1–11 / 12–20 and Bio 1–6 / 7–12; final cumulative. Health follows stored cronograma SP01P1–SP06P1 / SP07P2–SP12P2. Each item classified by subject and chapter, not by year.",
+    "basis": "Temas contrastados con los parciales 2025–2026. Morfo 1–11 / 12–20; Bio 1–6 / 7–12. Vida: salud/promoción/ODS e introducción a investigación en primero; muestreo, variables y diseños cualitativos en segundo.",
     "adaptations": [
       "First partial historical question 100 on observational designs replaced with sourced theoretical-foundation item (Health topic 6)."
     ],

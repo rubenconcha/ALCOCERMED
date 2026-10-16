@@ -1,0 +1,74 @@
+"""New statistics MCQs using the topics of the complete Life block of final 2025–2026.
+
+The source paper is incomplete in another subject. Only its twenty complete Life
+items define the blueprint; its original wording and keys are not republished here.
+"""
+import copy
+import math
+
+CONTEXTS=['hábitos de estudio','asistencia a clases','tiempo de traslado','actividad física','uso de la biblioteca','horas de sueño']
+SOURCE_NUMBERS=[41,42,43,44,45,46,47,48,49,50,91,92,93,94,95,96,97,98,99,100]
+CHAPTERS=[16,14,15,14,17,14,14,17,17,20,16,17,17,17,17,17,14,17,17,17]
+
+def build_health(variant, originals, digest):
+    topic=CONTEXTS[variant];n=100+variant*20;low=12+variant;high=47+variant*3
+    boundary=20+variant*5;percentage=20+variant*5;freq=18+variant*3
+    sample=120+variant*40;classes=math.ceil(1+3.322*math.log10(sample))
+    data=[
+      (f'Un equipo estudia {topic} en una población extensa y dispone de recursos limitados. ¿Qué justifica utilizar una muestra?',
+       ['Obtener información de una parte de la población mediante un diseño de selección definido, reduciendo recursos frente a un censo.','Garantizar que desaparezca cualquier error de selección o estimación.','Asegurar que cualquier grupo elegido por conveniencia represente a toda la población.','Evitar identificar la población de la que proceden los participantes.']),
+      (f'En un registro sobre {topic} se anota también la temperatura del aula en grados Celsius. ¿Qué escala corresponde a esa temperatura?',
+       ['De intervalo: las diferencias son comparables, pero 0 °C no representa ausencia de temperatura.','De razón: 0 °C representa ausencia absoluta de temperatura.','Nominal: los grados solo son etiquetas sin diferencias cuantificables.','Ordinal: solo se conoce el orden y las diferencias entre grados no son comparables.']),
+      (f'El equipo calcula el promedio observado de {topic} en {n} participantes, sin generalizarlo a otras personas. ¿Qué está haciendo?',
+       ['Estadística descriptiva de los datos observados.','Una generalización inferencial a toda la población, aunque no se haya formulado.','Un muestreo por bola de nieve por el solo hecho de calcular un promedio.','Una asignación aleatoria de tratamientos por el solo hecho de resumir datos.']),
+      (f'En el estudio de {topic}, el lugar de residencia se codifica como rural=1 y urbano=2. ¿Qué interpretación es válida?',
+       ['Los números identifican categorías; no indican que urbano tenga el doble de residencia que rural.','Urbano representa necesariamente el doble de cantidad de residencia que rural.','La diferencia entre 2 y 1 mide una unidad física de residencia.','Los códigos convierten la residencia en una variable cuantitativa continua.']),
+      (f'Para agrupar mediciones de {topic}, se considera la regla de Sturges. ¿Qué orienta esta regla?',
+       ['Una estimación del número de intervalos de clase a partir del tamaño del conjunto de datos.','La selección del nombre de cada participante de la muestra.','La demostración de que todos los datos siguen una distribución normal.','La elección de la respuesta que confirmará la hipótesis del investigador.']),
+      (f'En una encuesta sobre {topic}, la satisfacción se registra como baja, media o alta. ¿Qué caracteriza esta escala?',
+       ['Es ordinal: existe orden, sin asegurar distancias iguales entre categorías.','Es nominal: las categorías carecen de cualquier orden.','Es de razón: la categoría baja equivale a ausencia absoluta de satisfacción.','Es de intervalo: la distancia de baja a media es necesariamente igual a la de media a alta.']),
+      (f'El equipo de {topic} cuenta cuántos participantes hay en cada hogar. ¿Cómo se clasifica ese número?',
+       ['Cuantitativo discreto, porque resulta de contar unidades.','Cuantitativo continuo, porque admite cualquier fracción de participante.','Cualitativo nominal, porque no expresa una cantidad.','Cualitativo ordinal, porque solo permite ordenar sin contar.']),
+      (f'Las respuestas sobre {topic} incluyen nombres de categorías sin orden natural. ¿Cómo pueden organizarse para tabularlas?',
+       ['Con un criterio explícito y constante, por ejemplo alfabético, conservando las frecuencias de cada categoría.','Asignando a cada nombre una magnitud física obtenida por multiplicación.','Eliminando las categorías con pocos casos antes de contar sus frecuencias.','Suponiendo que la distancia entre dos nombres equivale a una unidad numérica.']),
+      (f'Una tabla de {topic} usa los intervalos [{boundary-10}, {boundary}) y [{boundary}, {boundary+10}). ¿Dónde se registra un valor exactamente igual a {boundary}?',
+       [f'En [{boundary}, {boundary+10}), que incluye su extremo inferior.',f'En [{boundary-10}, {boundary}), que excluye su extremo superior.','En ambos intervalos, duplicando la observación.','En ninguno, aunque la tabla cubra ese valor.']),
+      (f'En los datos de {topic}, el mínimo es {low} y el máximo {high}. ¿Cuál es el rango?',
+       [str(high-low),str(high+low),str(high+low+5),str(high-low+1)]),
+      (f'Para localizar participantes de un estudio de {topic}, los primeros informantes recomiendan a otras personas que cumplen los criterios. ¿Qué método se describe?',
+       ['Muestreo por bola de nieve.','Muestreo aleatorio simple con probabilidades iguales conocidas.','Muestreo sistemático con intervalo fijo calculado como N/n.','Censo completo de todos los integrantes de la población.']),
+      (f'Se desea mostrar cómo se distribuyen mediciones continuas de {topic}, agrupadas en intervalos contiguos. ¿Qué gráfica corresponde?',
+       ['Un histograma.','Un diagrama de barras separado para categorías nominales sin intervalos.','Un diagrama de dispersión de dos variables distintas que no se han medido.','Un mapa conceptual sin frecuencias ni intervalos.']),
+      (f'En un diagrama de barras de {topic}, una categoría tiene {freq} observaciones. Si la altura representa la frecuencia absoluta, ¿qué valor debe alcanzar su barra?',
+       [str(freq),str(freq*2),str(freq/2),str(freq+1)]),
+      (f'En una gráfica de categorías de {topic}, todas las barras tienen la misma anchura. ¿Qué representa su altura cuando el eje vertical indica frecuencia?',
+       ['La frecuencia de la categoría correspondiente.','El nombre de la categoría, sin relación con sus observaciones.','La edad de todas las personas incluidas en esa categoría.','La amplitud de un intervalo continuo que no aparece en la gráfica.']),
+      (f'Para {sample} datos de {topic}, se usa m=1+3,322·log10(n) y se redondea hacia arriba. ¿Cuántas clases se proponen?',
+       [str(classes),str(classes+2),str(classes-2),str(classes+5)]),
+      (f'Un intervalo reúne {int(n*percentage/100)} de {n} observaciones de {topic}. ¿Cuál es su frecuencia relativa porcentual?',
+       [f'{percentage} %',f'{100-percentage} %',f'{percentage/10:g} %',f'{percentage*2} %']),
+      (f'Una variable del estudio de {topic} solo admite 0, 1, 2, 3 o más eventos completos. ¿Qué valor sería incompatible con esa definición?',
+       ['2,5 eventos completos.','0 eventos.','2 eventos.','3 eventos.']),
+      (f'Una categoría de {topic} representa el {percentage} % del total. ¿Qué ángulo ocupa en un diagrama circular de 360°?',
+       [f'{360*percentage/100:g}°',f'{180*percentage/100:g}°',f'{percentage:g}°',f'{360*(100-percentage)/100:g}°']),
+      (f'Una encuesta de {topic} clasifica respuestas en seis categorías nominales. Se quiere comparar con claridad sus frecuencias. ¿Qué opción es adecuada?',
+       ['Un diagrama de barras con una barra por categoría.','Un histograma que trate los nombres de categorías como intervalos continuos.','Una gráfica de dispersión sin disponer de dos variables numéricas.','Una curva temporal que suponga fechas no registradas en las categorías.']),
+      (f'En una ojiva de {topic}, la frecuencia relativa acumulada hasta un límite es {percentage} %. ¿Cómo se interpreta?',
+       [f'El {percentage} % de las observaciones está acumulado hasta ese límite, según los intervalos definidos.',f'El {percentage} % pertenece exclusivamente al último intervalo, sin incluir los anteriores.',f'El {percentage} % está necesariamente por encima del valor máximo de la muestra.','La gráfica solo muestra frecuencias no acumuladas.'])
+    ]
+    out=[]
+    for index,((question,options),source_number,chapter) in enumerate(zip(data,SOURCE_NUMBERS,CHAPTERS)):
+        original=originals[source_number]
+        shift=(variant+index)%4
+        choices=options[-shift:]+options[:-shift] if shift else options
+        answer='ABCD'[shift]
+        q={'id':f'vida-final-{variant+1}-{index+1:02d}','source_numero_original':source_number,'materia':'SALUD PUBLICA','tema':f'Estadística e investigación · tema {chapter}',
+           'pregunta':question,'respuesta_correcta':answer,'respuestas_aceptadas':[answer],
+           'coverage':{'subject':'SALUD PUBLICA','chapter':chapter,'curriculum':'bibliography'},
+           'fuente':f'Educación para la Vida · tema evaluado en el final 2025–2026, pregunta {source_number}.',
+           'comentario':'Correcta '+answer+': '+options[0],
+           'source_question_id':original['id'],'source_sha256':digest(original),
+           'adaptation':'Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.'}
+        q.update({'opcion_'+k:value for k,value in zip('abcd',choices)})
+        out.append(q)
+    return out

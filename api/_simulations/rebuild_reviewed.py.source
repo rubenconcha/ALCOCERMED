@@ -1,0 +1,152 @@
+"""Build and audit 100-item 50/30/20 simulations; archival papers stay unchanged.
+
+This checks composition, curriculum, duplicates, and answer provenance. It does
+not claim an independent medical re-marking of the supplied archival keys.
+"""
+import copy
+import hashlib
+import json
+import re
+import runpy
+import unicodedata
+from collections import Counter, defaultdict
+from pathlib import Path
+build_health=runpy.run_path(str(Path(__file__).with_name('health_variants.py.source')))['build_health']
+
+ROOT = Path(__file__).resolve().parents[2]
+def read(path): return json.loads((ROOT/path).read_text(encoding='utf-8-sig'))
+def write(path, data): (ROOT/path).write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+def norm(s): return re.sub(r'[^a-z0-9]', '', ''.join(c for c in unicodedata.normalize('NFD', str(s).lower()) if not unicodedata.combining(c)))
+def digest(q): return hashlib.sha256(json.dumps(q, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+SUBJECTS = ['MORFOFUNCION', 'BIOLOGIA CELULAR', 'SALUD PUBLICA']
+health_reference={q['numero_original']:q for q in read('api/_past_exams/2025-2026-3.json')['questions'] if 41<=q['numero_original']<=50 or 91<=q['numero_original']<=100}
+assert len(health_reference)==20
+TOTALS = dict(zip(SUBJECTS,[50,30,20]))
+archive_hashes = {p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (ROOT/'api/_past_exams').glob('*.json')}
+runpy.run_path(str(ROOT/'api/_simulations/build_scoped.py.source'))
+partials = {s:read('api/_simulations/partial-'+s+'.json') for s in ['first','second']}
+changes=[]
+def adapt(q, question, options, reason):
+    q['pregunta']=question
+    for k in 'abcde': q.pop('opcion_'+k,None)
+    for k,value in zip('abcde',options): q['opcion_'+k]=value
+    q['respuesta_correcta']='A';q['respuestas_aceptadas']=['A']
+    q['adaptation']=reason
+    q['comentario']='Correcta A. '+options[0]+' Adaptación del concepto evaluado en el examen de referencia; se eliminó la clave ambigua.'
+    changes.append({'question':q['id'],'reason':reason})
+
+for q in partials['first']['questions']:
+    if q['numero_original']==1:
+        q['pregunta']=q['pregunta'].removesuffix(', y');q['adaptation']='Se elimina una conjunción suelta al final de la transcripción.'
+    if ' A PARTIR DE ESTA PREGUNTA CONSIDERE LA SIGUIENTE CLAVE:' in q['pregunta']:
+        q['pregunta']=q['pregunta'].replace(' A PARTIR DE ESTA PREGUNTA CONSIDERE LA SIGUIENTE CLAVE:','')
+        q['adaptation']='Se retira una instrucción de cambio de clave que ya está incorporada en las alternativas de cada ítem.'
+for q in partials['second']['questions']:
+    n=q['numero_original']
+    if n==95: adapt(q,'¿Qué diferencia existe entre unidad de análisis y unidad de muestreo?',['La unidad de análisis es aquella donde se miden las variables; puede diferir de la unidad seleccionada durante el muestreo.','Ambas unidades coinciden obligatoriamente en cualquier estudio.','La unidad de análisis es siempre la totalidad del país.','La unidad de muestreo no puede identificarse antes de recoger los datos.'],'Se sustituye una pregunta con dos respuestas aceptadas por una alternativa única que conserva el concepto original.')
+    if n==97: adapt(q,'En investigación, ¿qué puede constituir un elemento o unidad de estudio?',['Una persona, una institución, un evento o un objeto, según la población definida.','Exclusivamente una persona que recibe atención médica.','Solo el investigador responsable del proyecto.','Solo una cifra obtenida al calcular el promedio de la muestra.'],'Se aclara la unidad de estudio y se elimina la doble clave A/C del patrón histórico.')
+    if n==100: adapt(q,'En un diseño narrativo, ¿qué alcance puede tener el relato estudiado?',['Toda una historia de vida o un episodio concreto de ella.','Solo cifras anónimas, sin relatos ni experiencias.','Únicamente el inventario de equipos del investigador.','Exclusivamente los resultados de un ensayo clínico aleatorizado.'],'Se elimina la doble clave A/C conservando los dos alcances narrativos válidos del original.')
+
+topics=read('content/topic-evaluations/catalog.json')['exams']
+topic_map={(e['subject'],norm(e['topic'])):e['number'] for e in topics}
+# Aliases used by the existing source-grounded public practice set.
+aliases={
+ 'MORFOFUNCION': ['temas principales de anatomia y fisiologia','la quimica de la vida','forma y funcion celulares','genetica y funcion celular','histologia','sistema tegumentario','tejido oseo','el sistema oseo','articulaciones','el sistema muscular','tejido muscular','tejido nervioso','medula espinal y reflejos','encefalo y pares craneales','sistema nervioso autonomo','organos de los sentidos','sistema endocrino','sangre','corazon','vasos sanguineos y circulacion','sistema linfatico e inmunidad','aparato respiratorio','aparato urinario','equilibrio hidrico y acidobasico','aparato digestivo','nutricion y metabolismo','aparato reproductor masculino','aparato reproductor femenino','desarrollo humano y envejecimiento'],
+ 'BIOLOGIA CELULAR':['introduccion a la biologia celular','metodos y tecnicas basicas en biologia celular','estructura de la membrana plasmatica','transporte a traves de la membrana plasmatica','macrotransporte a traves de la membrana plasmatica','especializaciones de la membrana plasmatica','nucleo y cromatina','transcripcion y maduracion del arn','sintesis y modificacion de proteinas','reticulo endoplasmatico golgi y lisosomas','mitocondrias y peroxisomas','citoesqueleto','senalizacion celular','ciclo celular','division celular y muerte programada','biologia celular del cancer','respuesta inmunitaria','celulas madre y aplicaciones terapeuticas']}
+for sub,names in aliases.items():
+    for i,name in enumerate(names,1):topic_map[(sub,norm(name))]=i
+
+demo=read('content/simulacros_demo_2026.json')
+demo.pop('mini',None)
+distractors=read('quality/simulation-demo-distractors.json')
+for i,q in enumerate(demo['full'][:80],1):
+    correct=q['respuesta_correcta'].lower();wrong=iter(distractors[str(i)])
+    for k in 'abcd':
+        if k!=correct:q['opcion_'+k]=next(wrong)
+    q['id']='demo-full-'+str(i);q['respuestas_aceptadas']=[correct.upper()]
+    q['coverage']={'subject':q['materia'],'chapter':topic_map[(q['materia'],norm(q['tema']))],'curriculum':'bibliography'}
+    q['review']='Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.'
+demo['full'][80:]=build_health(4,health_reference,digest)
+write('content/simulacros_demo_2026.json',demo)
+
+def finish(paper):
+    rows=paper['questions']
+    rows.sort(key=lambda q:SUBJECTS.index(q['coverage']['subject']))
+    for i,q in enumerate(rows,1):
+        q.setdefault('source_numero_original',q.get('numero_original'))
+        q['numero_original']=i;q['materia']=q['coverage']['subject']
+        q.setdefault('tema','Tema '+str(q['coverage']['chapter']))
+    assert Counter(q['materia'] for q in rows)==TOTALS,(paper['id'],Counter(q['materia'] for q in rows))
+    assert len({norm(q['pregunta']) for q in rows})==100,paper['id']
+    assert len({q['id'] for q in rows})==100,paper['id']
+    for q in rows:
+        options=[q['opcion_'+k] for k in 'abcde' if q.get('opcion_'+k)]
+        assert len({' '.join(o.lower().split()) for o in options})==len(options),(paper['id'],q['id'],'duplicate options')
+        assert len(q['respuestas_aceptadas'])==1,(paper['id'],q['id'],'ambiguous key')
+        assert q['respuesta_correcta'] in q['respuestas_aceptadas']
+        assert all(q.get('opcion_'+k.lower()) for k in q['respuestas_aceptadas'])
+    return paper
+
+for scope,p in partials.items():
+    p['review']['basis']='Temas contrastados con los parciales 2025–2026. Morfo 1–11 / 12–20; Bio 1–6 / 7–12. Vida: salud/promoción/ODS e introducción a investigación en primero; muestreo, variables y diseños cualitativos en segundo.'
+    for q in p['questions']:q['coverage']['curriculum']='past-exams-2025-2026'
+    finish(p);write('api/_simulations/'+p['id']+'.json',p)
+
+manifest=read('quality/simulation-final-coverage.json')
+finals=[]
+for i,(year,mapping) in enumerate(manifest['years'].items(),3):
+    src=read('api/_past_exams/'+year+'-3.json');by_number={q['numero_original']:q for q in src['questions']};rows=[]
+    for group,subject in [('morfo',SUBJECTS[0]),('biologia',SUBJECTS[1])]:
+        positions=[n for lo,hi in manifest['positions'][group] for n in range(lo,hi+1)]
+        assert len(positions)==len(mapping[group])
+        for n,ch in zip(positions,mapping[group]):
+            original=by_number[n]
+            if year=='2022-2023' and n==52:
+                # Annulled, malformed original. Use a complete digestive-system item.
+                original=read('api/_past_exams/2021-2022-3.json')['questions'][59];ch=25
+                changes.append({'question':year+'-3-52','reason':'Pregunta anulada y transcripción mezclada; sustituida por ítem completo de digestivo 2021–2022-3-60.'})
+            q=copy.deepcopy(original);q['source_question_id']=original['id'];q['source_sha256']=digest(original)
+            q['coverage']={'subject':subject,'chapter':ch,'curriculum':'bibliography'}
+            rows.append(q)
+    # The latest final's Life block is complete despite missing archival morphology items.
+    # Its actual sampling, measurement, frequency and graph topics define twenty new variants.
+    rows.extend(build_health(i-3,health_reference,digest))
+    p=finish({'id':'final-'+str(i),'scope':'final','title':'Simulacro '+str(i),'duration':100,'questions':rows,'review':{'basis':'50 Morfofunción y 30 Biología del final histórico; 20 nuevas preguntas de Vida con el temario del bloque final 2025–2026. Originales de archivo conservados.','answer_accuracy':'Claves históricas retenidas en preguntas no adaptadas; claves de las nuevas situaciones de estadística recalculadas. No constituye una aprobación clínica independiente.'}})
+    write('api/_simulations/'+p['id']+'.json',p);finals.append(p)
+
+# Freeze the former dynamic premium draw so every served item can be inspected and audited.
+pool=[q for p in [*partials.values(),*finals] for q in p['questions']]+demo['full']
+selected=[];seen=set()
+for sub,target in TOTALS.items():
+    grouped=defaultdict(list)
+    for q in pool:
+        if q['coverage']['subject']==sub:grouped[q['coverage']['chapter']].append(q)
+    count=0
+    while count<target:
+        advanced=False
+        for chapter,group in sorted(grouped.items()):
+            while group and norm(group[0]['pregunta']) in seen:group.pop(0)
+            if group and count<target:
+                q=copy.deepcopy(group.pop(0));selected.append(q);seen.add(norm(q['pregunta']));count+=1;advanced=True
+        assert advanced,(sub,'insufficient unique questions')
+selected=[q for q in selected if q['coverage']['subject']!=SUBJECTS[2]]+build_health(5,health_reference,digest)
+p8=finish({'id':'final-8','scope':'final','title':'Simulacro 8','duration':100,'questions':selected,'review':{'basis':'Selección fija por tema de modelos contrastados con originales y bibliografía; Vida sigue el bloque final 2025–2026.','answer_accuracy':'Claves y fuentes conservadas en ítems no adaptados; estadísticas nuevas recalculadas. No es una revisión clínica independiente.'}})
+write('api/_simulations/final-8.json',p8)
+
+catalog=read('content/simulacros-catalog.json')
+for i,e in enumerate(catalog['entries'],1):
+    if i in [3,4,5,6,8]:e.pop('pastId',None);e['curatedId']='final-'+str(i)
+    e.pop('description',None)
+catalog['version']=2
+write('content/simulacros-catalog.json',catalog)
+
+models=[*partials.values(),*finals,{'id':'demo-full','scope':'final','duration':100,'questions':demo['full']},p8]
+audit={'basis':'Composición y temario comparados con los tres exámenes de gestión 2025–2026 y los finales históricos; revisión contextual de las alternativas del modelo abierto.','limitations':'Las claves originales se contrastan con sus patrones, no se presentan como nueva aprobación médica. Pueden repetirse preguntas entre distintos modelos; no dentro de una misma prueba.','fixed':['Finales 3 y 4: 50/50/0 sustituido por 50/30/20.','Vida de los finales: 120 preguntas nuevas en seis variantes de los temas efectivamente evaluados en el final de la gestión pasada.','Modelo abierto: 80 juegos de distractores corregidos y 20 preguntas de Vida rediseñadas; se retiraron alternativas ajenas o equivalentes a la correcta.','Simulacro 8: selección aleatoria opaca sustituida por modelo fijo trazable.','Claves ambiguas del segundo parcial y pregunta anulada/malformada del final 2022–2023 adaptadas o sustituidas.'],'item_changes':changes,'models':[]}
+for p in models:
+    counts=Counter(q['coverage']['subject'] for q in p['questions'])
+    audit['models'].append({'id':p['id'],'scope':p['scope'],'counts':dict(counts),'total':len(p['questions']),'unique_stems':len({norm(q['pregunta']) for q in p['questions']}),'chapters':{s:sorted({q['coverage']['chapter'] for q in p['questions'] if q['coverage']['subject']==s}) for s in SUBJECTS},'source_question_ids':[q.get('source_question_id') for q in p['questions']]})
+assert archive_hashes=={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (ROOT/'api/_past_exams').glob('*.json')}
+audit['archival_files_unchanged']=True
+audit['cross_model_exact_stem_overlap']=[{'a':a['id'],'b':b['id'],'shared':len({norm(q['pregunta']) for q in a['questions']} & {norm(q['pregunta']) for q in b['questions']})} for i,a in enumerate(models) for b in models[i+1:]]
+write('quality/simulation-composition-audit.json',audit)
+print(json.dumps([{m['id']:m['counts']} for m in audit['models']],ensure_ascii=False))

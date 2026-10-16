@@ -6,8 +6,7 @@
       "scope": "first",
       "title": "Simulacro 1",
       "type": "Primer parcial",
-      "minutes": 100,
-      "description": "Morfofunción 1–11 · Biología Celular 1–6 · Salud: temas 1–6. Modelo adaptado al temario."
+      "minutes": 100
     },
     {
       "key": "partial:second",
@@ -15,48 +14,43 @@
       "scope": "second",
       "title": "Simulacro 2",
       "type": "Segundo parcial",
-      "minutes": 100,
-      "description": "Morfofunción 12–20 · Biología Celular 7–12 · Salud: temas 7–12. Modelo adaptado al temario, sin preguntas duplicadas."
+      "minutes": 100
     },
     {
       "key": "real:2024-2025-3",
-      "pastId": "2024-2025-3",
       "scope": "final",
       "type": "Examen final",
       "title": "Simulacro 3",
       "minutes": 100,
       "free": false,
-      "description": "Final acumulativo. Preguntas y clave del examen original; incluye contenidos de ambos parciales y del programa final."
+      "curatedId": "final-3"
     },
     {
       "key": "real:2023-2024-3",
-      "pastId": "2023-2024-3",
       "scope": "final",
       "type": "Examen final",
       "title": "Simulacro 4",
       "minutes": 100,
       "free": false,
-      "description": "Final acumulativo. Preguntas y clave del examen original; incluye contenidos de ambos parciales y del programa final."
+      "curatedId": "final-4"
     },
     {
       "key": "real:2022-2023-3",
-      "pastId": "2022-2023-3",
       "scope": "final",
       "type": "Examen final",
       "title": "Simulacro 5",
       "minutes": 100,
       "free": false,
-      "description": "Final acumulativo. Preguntas y clave del examen original; incluye contenidos de ambos parciales y del programa final."
+      "curatedId": "final-5"
     },
     {
       "key": "real:2021-2022-3",
-      "pastId": "2021-2022-3",
       "scope": "final",
       "type": "Examen final",
       "title": "Simulacro 6",
       "minutes": 100,
       "free": false,
-      "description": "Final acumulativo. Preguntas y clave del examen original; incluye contenidos de ambos parciales y del programa final."
+      "curatedId": "final-6"
     },
     {
       "key": "full",
@@ -64,8 +58,7 @@
       "type": "Examen final",
       "title": "Simulacro 7",
       "minutes": 100,
-      "demo": true,
-      "description": "Final acumulativo de práctica · acceso abierto · reparto 50 / 30 / 20."
+      "demo": true
     },
     {
       "key": "premium-full",
@@ -73,7 +66,8 @@
       "type": "Examen final",
       "title": "Simulacro 8",
       "minutes": 100,
-      "description": "Final acumulativo del banco bibliográfico · selección por asignatura · reparto 50 / 30 / 20."
+      "curatedId": "final-8"
     }
-  ]
+  ],
+  "version": 2
 }
