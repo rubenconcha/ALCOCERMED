@@ -1,1 +1,3 @@
 *.pdf binary
+api/_flashcards/*.json text eol=lf
+api/_flashcards/sources/*.json text eol=lf
