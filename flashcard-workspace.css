@@ -21,3 +21,62 @@
 .library-topic-count.is-small{color:#996a22}
 @media(max-width:600px){#study-area .flashcard-controls{padding:14px;border-radius:16px}#study-area .flashcard-control-row label{min-width:100%}#study-area #flashcard-shuffle{width:100%}#study-area .card.depth-card .text-inner,#study-area .card.depth-card .back-text{inset:68px 18px 18px}#study-area .card.depth-card .back-text p{font-size:16px;line-height:1.65}#study-area .card-counter{font-size:13px}}
 @media(prefers-reduced-motion:reduce){#study-area #flashcard-progress-fill{transition:none}}
+
+/* One branded layout for every deck, including reviewed supplemental cards. */
+#study-area{--fc-ink:#142d4e;--fc-accent:#087f8c;--fc-gold:#efae28}
+#study-area .flashcard-controls,#study-area .flashcard-progress,#study-area #flashcard-context,#study-area .card-container{max-width:740px}
+#study-area .flashcard-controls{margin-bottom:12px}
+#study-area .study-progress-row{margin:10px auto 0}
+#study-area #flashcard-context{margin:0 auto 12px;font-size:12px;color:#61758b;text-align:center}
+#study-area .card-container{height:auto;margin-bottom:18px;perspective:none}
+#study-area .card.depth-card{height:auto;min-height:410px}
+#study-area .card.depth-card .face{border-radius:26px;border:1px solid #d5dfeb;box-shadow:0 18px 45px #17365112;overflow:hidden}
+#study-area .card.depth-card .face *{text-transform:none}
+#study-area .card.depth-card .front{position:relative;height:auto;min-height:410px;padding:86px 34px 24px;background:radial-gradient(ellipse at 100% 0,#fff2cd 0,transparent 46%),linear-gradient(140deg,#fffefa,#f4f9fc)}
+#study-area .card.depth-card .back{position:absolute;inset:0;height:100%;padding:0;background:radial-gradient(ellipse at 100% 0,#d9f1ef 0,transparent 50%),#fcfefd}
+#study-area .card.depth-card .face:before{display:block;content:"";position:absolute;inset:0 0 auto;width:100%;height:6px;transform:none;background:linear-gradient(90deg,#133659 0 36%,#149a9b 36% 70%,#f2b42e 70%);opacity:1}
+#study-area .card.depth-card .face:after{display:none}
+#study-area .card.depth-card .depth-brand{width:70px;height:64px;top:12px;left:20px;object-fit:contain;object-position:left center}
+#study-area .fc-brand-wordmark{position:absolute;top:29px;left:92px;z-index:3;display:grid;gap:2px;color:#142d4e;line-height:1;text-align:left;text-transform:none}
+#study-area .fc-brand-wordmark small{font-size:8px;letter-spacing:.17em;font-weight:700;color:#687b8c}
+#study-area .fc-brand-wordmark strong{font-size:17px;letter-spacing:-.03em;font-weight:800}
+#study-area .card.depth-card .face .card-face-label{top:30px!important;right:28px!important;inset-inline-end:28px!important;background:#edf1f5;color:#36506c;padding:9px 13px;font-size:11px;letter-spacing:.07em}
+#study-area .card.depth-card .back .card-face-label{background:#e0f2ed;color:#126754}
+#study-area .card.depth-card .front .text-inner{position:relative;inset:auto;width:100%;height:auto;min-height:300px;overflow:visible;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;padding:0}
+#study-area .card.depth-card .front .text-inner p{max-width:620px;width:100%;margin:0;text-align:center;color:var(--fc-ink);font-size:clamp(23px,2.1vw,30px);line-height:1.36;font-weight:750;letter-spacing:-.02em;text-wrap:pretty}
+#study-area .fc-topic-chip{display:block;max-width:100%;border-radius:10px;padding:8px 13px;background:#e6f2f3;color:#0d6373;font-size:12px;font-weight:650;line-height:1.4;text-align:center;text-transform:none;overflow-wrap:anywhere}
+#study-area .fc-recall-hint{font-size:12px;font-weight:500;color:#718295;text-align:center;text-transform:none;margin-top:auto;padding-top:6px}
+#study-area .fc-context-art{display:flex;align-items:center;gap:15px;justify-content:center;width:100%;margin:0;border-top:1px solid #e0e8ed;padding-top:10px}
+#study-area .fc-sense-illustration{flex:none;width:155px;height:155px;background-image:url('/assets/flashcards/sentidos-contexto.png');background-size:300% 200%;background-repeat:no-repeat;mix-blend-mode:multiply;clip-path:inset(0 0 12% 0)}
+#study-area .fc-context-art figcaption{max-width:145px;color:#65798c;font-size:12px;line-height:1.5;text-transform:none;text-align:left}
+#study-area .card.depth-card .back .back-text{inset:92px 30px 24px;width:auto;min-height:0;padding:0 6px 14px;overflow:auto;scrollbar-color:#85b9b9 #eef7f5}
+#study-area .card.depth-card .back-text p{font-size:18px;line-height:1.65;color:#24415a;text-align:left;font-weight:450;white-space:pre-line}
+#study-area .fc-answer-lead{display:block;font-size:20px;line-height:1.55;font-weight:600;color:#173951;border-left:3px solid #1d9d9d;padding:0 0 0 16px;margin-bottom:18px}
+#study-area .fc-answer-paragraph{display:block;margin:0 0 16px}
+#study-area .fc-answer-source{display:block;border-top:1px solid #dce8e5;padding-top:14px;margin-top:22px;font-size:12px;line-height:1.6;font-weight:500;color:#617b80}
+#study-area .action-zone{max-width:740px;width:100%;margin:0 auto}
+#study-area #btn-reveal{width:100%;max-width:none;min-height:52px;border-radius:16px;background:linear-gradient(105deg,#f4a718,#ffda55);box-shadow:0 9px 22px #e7b64124;color:#152d49}
+@media(max-width:600px){
+ #study-area .card.depth-card .front{padding:82px 22px 20px;min-height:360px}
+ #study-area .card.depth-card{min-height:360px}
+ #study-area .card.depth-card .depth-brand{left:12px;width:60px;height:60px}
+ #study-area .fc-brand-wordmark{left:74px;top:30px}
+ #study-area .fc-brand-wordmark strong{font-size:14px}
+ #study-area .fc-brand-wordmark small{font-size:7px;letter-spacing:.08em}
+ #study-area .card.depth-card .face .card-face-label{right:20px!important;inset-inline-end:20px!important;font-size:10px;padding:8px 10px}
+ #study-area .card.depth-card .front .text-inner{min-height:255px;gap:17px}
+ #study-area .card.depth-card .front .text-inner p{font-size:23px;line-height:1.4}
+ #study-area .card.depth-card .back .back-text{inset:88px 20px 20px}
+ #study-area .fc-answer-lead{font-size:18px;padding-left:12px}
+ #study-area .card.depth-card .back-text p{font-size:16px;line-height:1.65}
+ #study-area .fc-sense-illustration{width:125px;height:125px}
+ #study-area .fc-context-art{gap:10px}
+ #study-area .fc-context-art figcaption{max-width:110px;font-size:11px}
+ #study-area .fc-topic-chip{font-size:11px}
+}
+@media(max-width:360px){
+ #study-area .fc-brand-wordmark strong{font-size:12px}
+ #study-area .fc-brand-wordmark small{font-size:6px}
+ #study-area .card.depth-card .face .card-face-label{font-size:9px;letter-spacing:.02em;padding:7px 8px;right:14px!important;inset-inline-end:14px!important}
+ #study-area .card-face-label i{display:none}
+}

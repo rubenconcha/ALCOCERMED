@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-15",
+  "request": "Rehacer la presentación de Sentidos y revisar otros temas con el mismo defecto.",
+  "scope": "Diseño compartido y lectura de tarjetas; no se cambian las preguntas, respuestas, IDs, calificaciones ni permisos.",
+  "findings": [
+    "Las reglas depth-card se aplican a todas las tarjetas activas y reemplazaban el diseño por una cara casi vacía.",
+    "El logo original quedaba ilegible por su pequeño tamaño y sus márgenes internos.",
+    "Los elementos nuevos heredaban la conversión universal a minúsculas, incluso siglas y referencias.",
+    "El desplazamiento de respuestas largas podía conservarse al cambiar de tarjeta."
+  ],
+  "changes": [
+    "Identidad Ben Carson legible, banda de color, subtema dentro de la tarjeta y pregunta centrada.",
+    "Respuesta dividida en bloques y fuente separada, usando nodos de texto seguros.",
+    "Se preserva la capitalización y cada respuesta comienza desde arriba.",
+    "Seis ilustraciones de contexto para Sentidos, seleccionadas por la pregunta y luego por el subtema; sin consultar la respuesta."
+  ],
+  "audit": {
+    "inventory": "68 mazos oficiales locales en las tres materias; no es un censo de la base de producción.",
+    "widths": [320, 390, 1440],
+    "checks": "Preguntas dentro de tarjeta, logo sin solapamiento, sin desbordamiento horizontal, respuestas largas y fuentes alcanzables, seis contextos sensoriales y pregunta de membrana basilar de la captura.",
+    "student_state": "Pruebas existentes de SRS, cambios de cuenta y permisos gratuitos conservadas.",
+    "evidence": "output/flashcard-workspace/design-audit.json y capturas de preguntas/respuestas en esa carpeta.",
+    "review": "Revisión visual y automatizada; no implica aprobación docente ni revisión científica de todos los textos."
+  },
+  "art": {
+    "file": "assets/flashcards/sentidos-contexto.png",
+    "tool": "Herramienta integrada image_gen; no se usó la API de generación mediante CLI.",
+    "source": "C:/Users/PC/.codex/generated_images/01a13a40-de09-7101-8d67-49433ef33b97/exec-733a275c-ab92-4827-92d0-06c928940369.png",
+    "prompt": "Medical educational illustration sprite sheet, exactly 1536 x 1024, six equal panels in 3 columns and 2 rows, pale ivory background, no text. Detailed medical textbook rendering with navy, teal, coral and warm gold. Top row: skin sensory nerve endings, eyeball section with lens anterior to vitreous and retina posterior, ear overview with cochlea. Bottom row: vestibular labyrinth with three semicircular canals, tongue and taste bud without a taste-zone map, sagittal nasal cavity with olfactory epithelium at roof and olfactory bulb. No words, numbers, logos or answer text. Six separate complete illustrations.",
+    "purpose": "Contexto visual del subtema; no es un diagrama de resolución ni sustituye las fuentes de cada respuesta.",
+    "brand": "Logo original reutilizado desde promo-ben-carson-tiktok/public/authentic/logo.png; no generado."
+  }
+}

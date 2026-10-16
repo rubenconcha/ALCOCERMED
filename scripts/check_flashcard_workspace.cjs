@@ -46,7 +46,7 @@ const seed=JSON.parse(fs.readFileSync(path.join(root,'content/flashcards_morfo_2
  await page.click('#btn-reveal');assert.notEqual(await page.$eval('.anki-rating-row',n=>getComputedStyle(n).display),'none');
  assert.equal(await page.evaluate(()=>totalReviews),0);
  // Visit every delivered official topic through the real library and real session controls.
- const audited=[];
+ const audited=[],designAudit=[];
  for(const subject of ['MORFOFUNCION','BIOLOGIA CELULAR','SALUD PUBLICA']){
   await page.evaluate(s=>quickStartSubject(s),subject);
   const names=await page.$$eval('.library-topic-action',buttons=>buttons.map(n=>n.getAttribute('aria-label').replace(/^Empezar /,'')));
@@ -57,6 +57,17 @@ const seed=JSON.parse(fs.readFileSync(path.join(root,'content/flashcards_morfo_2
    const snapshot=await page.evaluate(()=>({size:deck.length,subject:deck.every(c=>normalizeDbText(campo(c,'materia'))===normalizeDbText(ultimaMateria)),sources:deck.filter(c=>c.source_reviewed).every(c=>c.fuente&&c.paginas_pdf),subtopics:document.getElementById('flashcard-subtopic').options.length-1}));
    assert.ok(snapshot.size>=20,name);assert.equal(snapshot.subject,true,name);assert.equal(snapshot.sources,true,name);assert.ok(snapshot.subtopics>=2,name);
    await page.evaluate(()=>{currentIndex=deck.reduce((best,c,i)=>String(campo(c,'respuesta')).length>String(campo(deck[best],'respuesta')).length?i:best,0);renderCard();});
+   for(const width of [1440,390,320]){
+    await page.setViewport({width,height:1100});
+    const layout=await page.evaluate(()=>{
+     const rect=s=>document.querySelector(s).getBoundingClientRect();
+     const q=rect('#q-text'),f=rect('#card .front'),b=rect('#card .front .depth-brand'),w=rect('#card .front .fc-brand-wordmark'),label=rect('#card .front .card-face-label');
+     return {fits:q.left>=f.left&&q.right<=f.right&&q.bottom<=f.bottom,headerClear:w.right<label.left,brandAbove:b.bottom<q.top,sourceHidden:!document.querySelector('#card .front .fc-answer-source'),overflow:document.documentElement.scrollWidth>innerWidth};
+    });
+    assert.equal(layout.fits,true,name+' question '+width);assert.equal(layout.headerClear,true,name+' brand '+width);assert.equal(layout.brandAbove,true,name+' question under brand '+width);assert.equal(layout.sourceHidden,true);assert.equal(layout.overflow,false);
+    designAudit.push({subject,topic:name,width,...layout});
+    if(name===names[0])await page.screenshot({path:path.join(folder,'question-'+subject.replaceAll(' ','-')+'-'+width+'.png')});
+   }
    await page.click('#btn-reveal');await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('#card .back')).opacity)>0.999);
    for(const width of [1440,390]){
     await page.setViewport({width,height:1100});
@@ -71,6 +82,34 @@ const seed=JSON.parse(fs.readFileSync(path.join(root,'content/flashcards_morfo_2
   }
  }
  assert.equal(audited.length,68);fs.writeFileSync(path.join(folder,'all-topics.json'),JSON.stringify(audited,null,2));
+ fs.writeFileSync(path.join(folder,'design-audit.json'),JSON.stringify(designAudit,null,2));
+ await page.evaluate(()=>quickStartSubject('MORFOFUNCION'));
+ const sensesName=await page.$$eval('.library-topic-action',nodes=>nodes.map(n=>n.getAttribute('aria-label').replace(/^Empezar /,'')).find(n=>/sentidos/.test(n)));
+ await page.click('[aria-label='+JSON.stringify('Empezar '+sensesName)+']');await page.select('#flashcard-mode','all');
+ const samples=await page.evaluate(()=>{
+  const selected=new Map();
+  deck.forEach((card,i)=>{currentIndex=i;renderCard();const art=document.querySelector('.fc-context-art');if(art&&!selected.has(art.textContent))selected.set(art.textContent,i);});
+  const basilar=deck.findIndex(c=>/relación hay entre posición en la membrana basilar/.test(c.pregunta));
+  if(basilar>=0)selected.set('membrana-basilar',basilar);
+  return [...selected.entries()];
+ });
+ assert.ok(samples.length>=6,'six distinct sensory contexts');
+ for(const [label,index] of samples){
+  for(const width of [1440,390]){
+   await page.setViewport({width,height:1100});await page.evaluate(index=>{currentIndex=index;renderCard();},index);
+   await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('#card .front')).opacity)>.999);
+   const art=await page.$eval('.fc-sense-illustration',n=>({position:n.style.backgroundPosition,background:getComputedStyle(n).backgroundImage}));
+   assert.match(art.background,/sentidos-contexto.png/);
+   const basename=label.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/gi,'-');
+   await page.screenshot({path:path.join(folder,'sentidos-'+basename+'-'+width+'.png')});
+   await page.click('#btn-reveal');await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('#card .back')).opacity)>.999);
+   assert.equal(await page.$eval('.back-text',n=>n.scrollTop),0,'a newly revealed answer starts at the top');
+   assert.equal(await page.$eval('.fc-answer-lead',n=>getComputedStyle(n).textTransform),'none','preserve medical capitalization');
+   await page.screenshot({path:path.join(folder,'sentidos-'+basename+'-respuesta-inicio-'+width+'.png')});
+   await page.$eval('.back-text',n=>n.scrollTop=n.scrollHeight);
+   await page.screenshot({path:path.join(folder,'sentidos-'+basename+'-respuesta-'+width+'.png')});
+  }
+ }
  await page.evaluate(()=>{FlashcardWorkspace.clear();currentUser={id:'another-account'};deck=[];});
  await page.click('#flashcard-shuffle');assert.equal(await page.evaluate(()=>deck.length),0,'cleared private cards cannot restart in another account');
  assert.deepEqual(errors,[]);
