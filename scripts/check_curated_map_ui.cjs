@@ -12,11 +12,12 @@ try{const page=await b.newPage();page.on('pageerror',e=>errors.push(e.message));
 
  const id=process.argv[2]||'morfo_16_organos_sentidos__10';
  await page.goto(base+'/qa-grid');await page.evaluate(async()=>loadMapasMentales());
- await page.evaluate(id=>openMmLightbox(mmState.allMapas.find(m=>m.id===id)),id);
+ assert.equal(await page.evaluate(()=>mmState.allMapas.some(m=>m.curated||m.section==='intocables')),false);
+ await page.evaluate(id=>openMmLightbox(MINDMAP_PREMIUM_CATALOG.find(m=>m.id===id)),id);
  assert.equal(requests,0);assert.equal(await page.$eval('#mm-unlock-dialog',n=>n.open),true);
  await page.evaluate(()=>{document.getElementById('mm-unlock-dialog').close();freeMode=false;});
  for(const width of [1440,390]){
-  await page.setViewport({width,height:1000});await page.evaluate(id=>openMmLightbox(mmState.allMapas.find(m=>m.id===id)),id);
+  await page.setViewport({width,height:1000});await page.evaluate(id=>openMmLightbox(MINDMAP_PREMIUM_CATALOG.find(m=>m.id===id)),id);
   assert.equal(await page.$$eval('.mm-concept-branch',n=>n.length),6);await page.click('#mm-visual-toggle');
   const before=await page.$eval('.mm-concept-branch',n=>n.getAttribute('aria-expanded'));await page.click('.mm-concept-branch');assert.notEqual(await page.$eval('.mm-concept-branch',n=>n.getAttribute('aria-expanded')),before);
   await page.click('#mm-visual-toggle');await page.waitForFunction(()=>document.querySelector('#mm-illustrated-image').naturalWidth===1536);
@@ -36,5 +37,5 @@ try{const page=await b.newPage();page.on('pageerror',e=>errors.push(e.message));
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   await page.screenshot({path:path.join(folder,'practice.png')});await page.evaluate(()=>closeMmLightbox());
  }
- assert.deepEqual(errors,[]);console.log('PASS: free lock, six interactive branches, full generative map and byte-identical download, ten cards and 24 per-option explanations at desktop/mobile widths.');
+ assert.deepEqual(errors,[]);console.log('PASS: free lock, six interactive branches, full illustrated sheet and byte-identical download, ten cards and 24 per-option explanations at desktop/mobile widths.');
 }finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)});

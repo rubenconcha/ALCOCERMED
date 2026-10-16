@@ -3989,7 +3989,7 @@ async function loadMapasMentales() {
                 m.url_imagen='private/'+m.id+'.json';
             }
         });
-        mmState.allMapas = localMapas.concat(window.MINDMAP_PREMIUM_CATALOG || []);
+        mmState.allMapas = localMapas.concat((window.MINDMAP_PREMIUM_CATALOG || []).filter(m => !m.curated && m.section !== 'intocables'));
         populateMmMaterias();
         populateMmTemas();
         updateIntocStats();

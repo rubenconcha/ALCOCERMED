@@ -1,0 +1,24 @@
+{
+  "policy": "Only these three user-supplied official texts may supply new academic content. No supplementary external content.",
+  "approved_map_design": "Native interactive central image, six connected colored branches and + controls, as explicitly confirmed in the supplied screenshot.",
+  "texts": [
+    {
+      "subject": "morfofuncion",
+      "filename": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+      "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+      "pdf_pages": 1251
+    },
+    {
+      "subject": "salud",
+      "filename": "EDUCACION EN SALUD E INVESTIGACION CB24-25 (1).pdf",
+      "sha256": "e1f1ec1d33ea6b3a9c0001cd524904965bcb34ece6537d43315b42e403a4887a",
+      "pdf_pages": 232
+    },
+    {
+      "subject": "biologia_celular",
+      "filename": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+      "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+      "pdf_pages": 829
+    }
+  ]
+}

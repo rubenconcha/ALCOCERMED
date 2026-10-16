@@ -112,3 +112,5 @@
 .mm-practice-option{display:block;width:100%;margin:8px 0}.mm-practice-option:disabled{opacity:1;cursor:default}.mm-practice-option.is-correct{border-color:#14864b;background:#e1f6e9}.mm-practice-option.is-wrong{border-color:#bd5151;background:#fceaea}
 .mm-practice-source{border-top:1px solid #c8dce7;padding-top:16px}.mm-practice-feedback:empty{display:none}
 @media(max-width:600px){.mm-practice{padding:16px}.mm-practice h2{font-size:22px}.mm-practice-card,.mm-practice-question{padding:12px}}
+
+.mm-leaf-source{display:block;margin-top:10px;font-size:.76rem;line-height:1.4;color:#53718d;font-weight:500}

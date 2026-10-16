@@ -62,23 +62,25 @@
  function showIllustrated(enabled){
   if(window.MindmapPractice&&MindmapPractice.isOpen())MindmapPractice.close();
   illustratedView=enabled;$('mm-lightbox').classList.toggle('mm-show-illustrated',enabled);
-  $('mm-visual-toggle').textContent=enabled?'Explorar conceptos':'Ver mapa ilustrado';
+  $('mm-visual-toggle').textContent=enabled?'Explorar conceptos':(field(activeMap,'curated')?'Ver lámina':'Ver mapa ilustrado');
   if(enabled){var image=$('mm-illustrated-image');image.src=assetsFor(activeMap).illustrated;image.onload=fit;}
   fit();var stage=document.querySelector('.mm-lb-stage');stage.scrollTop=0;stage.scrollLeft=0;
  }
 
- function detailLeaf(title,text,initialOpen){
+ function detailLeaf(title,text,initialOpen,source){
   var leaf=el('button','mm-concept-leaf');leaf.type='button';leaf.setAttribute('aria-expanded',String(!!initialOpen));leaf.classList.toggle('is-expanded',!!initialOpen);var heading=el('span','mm-leaf-heading');heading.appendChild(el('span','mm-leaf-dot'));heading.appendChild(el('strong','',title));heading.appendChild(el('span','mm-leaf-toggle',initialOpen?'−':'+'));leaf.appendChild(heading);
-  var explanation=el('span','mm-leaf-explanation',text);explanation.hidden=!initialOpen;leaf.appendChild(explanation);
+  var explanation=el('span','mm-leaf-explanation',text);explanation.hidden=!initialOpen;
+  if(source){var pages=(source.pdfPages||[source.pdfPage]).filter(Boolean);if(pages.length)explanation.appendChild(el('small','mm-leaf-source',(source.book||'Texto oficial')+' · PDF '+pages.join(', ')));}
+  leaf.appendChild(explanation);
   leaf.addEventListener('click',function(){var open=leaf.getAttribute('aria-expanded')!=='true';leaf.setAttribute('aria-expanded',String(open));leaf.classList.toggle('is-expanded',open);explanation.hidden=!open;leaf.querySelector('.mm-leaf-toggle').textContent=open?'−':'+';scheduleDraw();});return leaf;
  }
- function startsWithContent(map){return /^morfo_(16_organos_sentidos|18_sangre)(?:__\d+)?\.(?:png|json)$/.test(fileFor(map));}
+ function startsWithContent(map){if(field(map,'format')==='interactive-mind-map'&&field(map,'content_revision')>=2)return false;return /^morfo_(16_organos_sentidos|18_sangre)(?:__\d+)?\.(?:png|json)$/.test(fileFor(map));}
  function buildDetails(children,section,index,showIntro){
   section.groups.forEach(function(item,groupIndex){
    var block=el('div','mm-detail-group'),parent=el('button','mm-concept-leaf mm-detail-heading');parent.type='button';var initialOpen=showIntro&&index===0&&groupIndex===0;parent.setAttribute('aria-expanded',String(initialOpen));parent.classList.toggle('is-expanded',initialOpen);var id='mm-detail-'+index+'-'+groupIndex;parent.setAttribute('aria-controls',id);
    var heading=el('span','mm-leaf-heading');heading.appendChild(el('span','mm-leaf-dot'));heading.appendChild(el('strong','',item.title));heading.appendChild(el('span','mm-leaf-toggle',initialOpen?'−':'+'));parent.appendChild(heading);
    var nodes=el('div','mm-detail-nodes');nodes.id=id;nodes.hidden=!initialOpen;
-   item.items.forEach(function(concept,itemIndex){nodes.appendChild(detailLeaf(concept.title,concept.text,initialOpen&&itemIndex===0));});
+   item.items.forEach(function(concept,itemIndex){nodes.appendChild(detailLeaf(concept.title,concept.text,initialOpen&&itemIndex===0,concept.source));});
    parent.onclick=function(){var open=parent.getAttribute('aria-expanded')!=='true';parent.setAttribute('aria-expanded',String(open));parent.classList.toggle('is-expanded',open);parent.querySelector('.mm-leaf-toggle').textContent=open?'−':'+';nodes.hidden=!open;scheduleDraw();};block.append(parent,nodes);children.appendChild(block);
   });
   if(section.note){var note=detailLeaf('Aclaración del texto',section.note);note.classList.add('mm-detail-note');children.appendChild(note);}
@@ -110,7 +112,7 @@
   if(wired)return;wired=true;
   var visualToggle=el('button','mm-visual-toggle','Ver mapa ilustrado');visualToggle.type='button';visualToggle.id='mm-visual-toggle';visualToggle.hidden=true;
   $('mm-lb-download').before(visualToggle);visualToggle.onclick=function(){showIllustrated(!illustratedView);};
-  var panel=el('div','mm-illustrated-panel');panel.id='mm-illustrated-panel';var poster=el('img','');poster.id='mm-illustrated-image';poster.alt='Mapa ilustrado de Preparatoria Ben Carson';panel.appendChild(poster);document.querySelector('.mm-lb-stage').appendChild(panel);
+  var panel=el('div','mm-illustrated-panel');panel.id='mm-illustrated-panel';var poster=el('img','');poster.id='mm-illustrated-image';poster.alt='Material ilustrado de Preparatoria Ben Carson';panel.appendChild(poster);document.querySelector('.mm-lb-stage').appendChild(panel);
   $('mm-zoom-out').addEventListener('click',function(){setZoom(zoom-.15,true);});$('mm-zoom-in').addEventListener('click',function(){setZoom(zoom+.15,true);});$('mm-zoom-center').addEventListener('click',fit);
   $('mm-branch-all').addEventListener('click',function(){setAll(true);});$('mm-branch-none').addEventListener('click',function(){setAll(false);});
   $('mm-tools-toggle').addEventListener('click',function(){var bar=$('mm-lightbox').querySelector('.mm-branch-bar'),open=!bar.classList.contains('is-expanded');bar.classList.toggle('is-expanded',open);$('mm-tools-toggle').setAttribute('aria-expanded',String(open));fit();});
@@ -142,10 +144,10 @@
  window.openMmLightbox=async function(map){
   if(window.MindmapPractice)MindmapPractice.reset();
   if(window.CampusAccess&&CampusAccess.isFree()&&!field(map,'acceso_gratis'))return openMmUnlockDialog(map);if(!$('mm-lightbox'))return;
-  if(field(map,'premium')){var loadingRevision=++token;wire();illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');$('mm-visual-toggle').hidden=true;release();activeMap=map;$('mm-lightbox').classList.remove('hidden');previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';$('mm-tree').replaceChildren();$('mm-lb-title').textContent=field(map,'titulo');$('mm-lb-materia').textContent=field(map,'tema');$('mm-lb-status').textContent='Cargando mapa…';$('mm-lb-download').disabled=true;try{await MindmapPremium.load(map);}catch(error){if(loadingRevision===token){$('mm-lb-status').textContent=error.message;if(error.status===403){closeMmLightbox();if(CampusAccess.isFree())openMmUnlockDialog(map);else CampusAccess.unlock();}}return;}if(loadingRevision!==token)return;$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;activeMap=null;}
+  if(field(map,'premium')){var loadingRevision=++token;wire();illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');$('mm-visual-toggle').hidden=true;release();activeMap=map;$('mm-lightbox').classList.remove('hidden');previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';$('mm-tree').replaceChildren();$('mm-lb-title').textContent=field(map,'titulo');$('mm-lb-materia').textContent=field(map,'tema');$('mm-lb-status').textContent=field(map,'curated')?'Cargando lámina…':'Cargando mapa…';$('mm-lb-download').disabled=true;try{await MindmapPremium.load(map);}catch(error){if(loadingRevision===token){$('mm-lb-status').textContent=error.message;if(error.status===403){closeMmLightbox();if(CampusAccess.isFree())openMmUnlockDialog(map);else CampusAccess.unlock();}}return;}if(loadingRevision!==token)return;$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;activeMap=null;}
   wire();illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');$('mm-visual-toggle').hidden=true;release();activeMap=map;selectedBranch=0;showAllMobile=false;branchOpen=labelsFor(map).map(function(_,i){return detailsFor(map)?startsWithContent(map)&&i===0:i===0;});var current=++token;previousFocus=document.activeElement;previousOverflow=document.body.style.overflow;
   $('mm-lb-title').textContent=field(map,'titulo')||'Mapa mental';$('mm-lb-materia').textContent=field(map,'materia')||'';$('mm-lightbox').classList.remove('hidden');document.body.style.overflow='hidden';$('mm-lb-download').disabled=true;$('mm-lb-status').textContent='';
-  $('mm-lb-download').title=field(map,'curated')?'Descargar mapa ilustrado con logo':'Descargar mapa';
+  $('mm-lb-download').title=field(map,'curated')?'Descargar lámina ilustrada con logo':'Descargar mapa';
   illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');
   build(map);if(window.MindmapPractice)MindmapPractice.mount(assetsFor(map).practice);$('mm-visual-toggle').hidden=!assetsFor(map).illustrated;if(assetsFor(map).illustrated)showIllustrated(true);$('mm-lightbox').querySelector('.mm-lb-close').focus();
   if(detailsFor(map)){$('mm-lb-download').disabled=false;return;}
@@ -155,7 +157,7 @@
  var requestedMapOpened=false;
  window.openRequestedMindmap=async function(){
   var requested=new URLSearchParams(location.search).get('mapa');if(requestedMapOpened||!requested)return;
-  requestedMapOpened=true;await window.openMindMaps();if(requested==='todos'){window.clearMmFilters();return;}var map=mmState.allMapas.find(function(item){var key=fileFor(item);return requested==='encefalo'?key==='morfo_14_encefalo_pares_craneales.png':key.replace(/\.[^.]+$/,'')===requested;});if(!map)return;
+  var sheet=(window.MINDMAP_PREMIUM_CATALOG||[]).find(function(m){return m.curated&&m.id===requested;});if(sheet){requestedMapOpened=true;window.openIntocables();await window.IntocablesHub.openSheet(sheet.id);return;}requestedMapOpened=true;await window.openMindMaps();if(requested==='todos'){window.clearMmFilters();return;}var map=mmState.allMapas.find(function(item){var key=fileFor(item);return requested==='encefalo'?key==='morfo_14_encefalo_pares_craneales.png':key.replace(/\.[^.]+$/,'')===requested;});if(!map)return;
   window.selectMmMateria(field(map,'materia'));var topic=mmTopicKey(map),select=$('mm-tema-select');if(select)select.value=topic;window.selectMmTema(topic);window.openMmLightbox(map);
  };
 })();

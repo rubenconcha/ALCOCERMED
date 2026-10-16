@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v101';
+const CACHE_NAME = 'alcocermed-main-v104';
 const APP_SHELL = [
     './campus',
     './campus.html',
@@ -33,15 +33,15 @@ const APP_SHELL = [
     './study-depth.css?v=3',
     './flashcard-workspace.css?v=2',
     './flashcard-workspace.js?v=1',
-    './script.js?v=55',
+    './script.js?v=56',
     './mindmap-branch-labels.js?v=3',
     './mindmap-content.js?v=2',
-    './mindmap-premium-catalog.js?v=14',
-    './mindmap-premium.js?v=2',
+    './mindmap-premium-catalog.js?v=17',
+    './mindmap-premium.js?v=3',
     './mindmap-detailed-content.js?v=4',
-    './mindmap-practice.js?v=1',
-    './mindmap-viewer.js?v=16',
-    './mindmap-viewer.css?v=7',
+    './mindmap-practice.js?v=2',
+    './mindmap-viewer.js?v=18',
+    './mindmap-viewer.css?v=8',
     './assets/mindmaps/fonts/outfit.css?v=1',
     './assets/mindmaps/fonts/outfit-0.ttf',
     './assets/mindmaps/fonts/outfit-1.ttf',
@@ -49,7 +49,8 @@ const APP_SHELL = [
     './assets/mindmaps/fonts/outfit-3.ttf',
     './assets/mindmaps/fonts/outfit-4.ttf',
 
-    './intocables-hub.js?v=1',
+    './intocables-hub.js?v=2',
+    './intocables-sheets.css?v=1',
     './study-assessments.js?v=2',
     './simulation-scope.js?v=1',
     './simulacro-ingreso.js?v=7',

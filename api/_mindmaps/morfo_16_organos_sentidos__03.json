@@ -1,1 +1,297 @@
-{"id":"morfo_16_organos_sentidos__03","title":"Gusto y olfato","topic":"Órganos de los sentidos","sections":[{"title":"Quimiorrecepción","color":"#8c59b0","groups":[{"title":"Quimiorrecepción · explicación","items":[{"title":"Idea principal","text":"Detecta sustancias químicas."},{"title":"Desarrollo","text":"Los termorreceptores responden al frío o el calor. • Los fotorreceptores —los ojos— responden a la luz. • Los nocirreceptores son receptores del dolor; responden a lesión tisular o situaciones que amenazan con daño al tejido. • Los quimiorreceptores responden a sustancias químicas, como olores y sabores, además de la composición del líquido corporal. • Los mecanorreceptores responden a la deformación física de una célula o un tejido causada por vibración, contacto, presión, estiramiento o tensión.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":613,"bbox":[56.7,520.82,315.74,697.79]}}]}]},{"title":"Vías","color":"#8c59b0","groups":[{"title":"Vías · explicación","items":[{"title":"Idea principal","text":"La información alcanza centros de procesamiento."},{"title":"Desarrollo","text":"El espacio de este libro no permite abordar de forma extensa los mecanismos muy complejos del procesamiento de información visual en el encéfalo. Una parte del procesamiento, como el contraste, el brillo, el movimiento y la estereopsia, empieza en la retina. La corteza visual primaria del lóbulo occipital se conecta mediante vías de asociación con áreas de asociación visual cercanas en la parte posterior del lóbulo parietal y la parte inferior del lóbulo temporal.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":655,"bbox":[56.68,166.81,315.73,331.77]}}]}]},{"title":"Botones gustativos","color":"#8c59b0","groups":[{"title":"Botones gustativos · explicación","items":[{"title":"Idea principal","text":"Contienen células receptoras que responden a sustancias disueltas."},{"title":"Desarrollo","text":"Sin importar su ubicación ni la especialización sensitiva, todos los botones gustativos tienen un aspecto similar (figura 16.6c y d). Se trata de grupos parecidos a un limón que tienen 50 a 150 células gustativas, de soporte y basales. Las células gustativas tienen forma de plátano y cuentan con una cresta de microvellosidades apicales denominadas cilios gustativos, los cuales sirven como superficies receptoras de las moléculas del gusto.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":619,"bbox":[327.4,328.82,586.45,565.76]}}]}]},{"title":"Epitelio olfativo","color":"#8c59b0","groups":[{"title":"Epitelio olfativo · explicación","items":[{"title":"Idea principal","text":"Sus neuronas receptoras detectan moléculas odorantes y proyectan hacia el bulbo olfativo."},{"title":"Desarrollo","text":"A partir de la corteza olfativa primaria, las señales viajan a otros destinos secundarios en el cerebro y el tallo encefálico. Dos destinos encefálicos importantes son la ínsula y la corteza orbitofrontal. En ésta se identifican y discriminan los olores. Recibe información del gusto y el olfato y la integra en una percepción general de sabor. Otros destinos secundarios para las señales olfativas son el hipocampo, la amígdala y el hipotálamo.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":623,"bbox":[327.39,445.55,586.43,586.52]}}]}]}],"assets":{"image":"/assets/mindmaps/illustrations/morfo_16_organos_sentidos.webp","alt":"Ilustración de Órganos de los sentidos","download":"/api/mindmap?id=morfo_16_organos_sentidos__03&format=image","filename":"morfo_16_organos_sentidos__03-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":16,"pdfPages":[610,660],"imagePdfPage":637}}}
+{
+  "id": "morfo_16_organos_sentidos__03",
+  "title": "Gusto: de la lengua al encéfalo",
+  "topic": "Órganos de los sentidos",
+  "sections": [
+    {
+      "title": "Anatomía de lengua y papilas",
+      "groups": [
+        {
+          "title": "Anatomía de lengua y papilas",
+          "items": [
+            {
+              "title": "Papila, botón y célula: tres niveles",
+              "text": "Una papila es un relieve de la superficie lingual; un botón es una agrupación microscópica de células; la célula gustativa es uno de sus componentes receptores. El libro estima casi 4 000 botones, sobre todo linguales, pero también en otras superficies orales y faríngeas. Esta cifra no es un recuento de papilas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Filiformes: textura, sin botones",
+              "text": "Son pequeñas, puntiagudas y las más abundantes en la lengua humana. No contienen botones gustativos, por lo que no se les asigna un sabor. Participan en la percepción de textura; la sensibilidad somática de la lengua debe diferenciarse de la modalidad gustativa, aunque ambas contribuyan a la experiencia al comer.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Fungiformes y foliadas",
+              "text": "Las fungiformes tienen forma de hongo, se distribuyen ampliamente y se concentran en punta y bordes; el texto describe cerca de tres botones por papila. Las foliadas forman crestas laterales próximas a la zona de masticación. Son formas anatómicas de organización de los botones, no regiones exclusivas para un único sabor.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Valadas: siete a doce en V",
+              "text": "Las papilas grandes posteriores forman una V y están rodeadas por surcos. Cada una contiene numerosos botones en las paredes orientadas hacia la ranura; el libro aproxima 250 por papila y hasta la mitad del conjunto de botones en este grupo. Pocas papilas pueden contener muchos botones: son cantidades distintas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#429243"
+    },
+    {
+      "title": "Botón gustativo y renovación",
+      "groups": [
+        {
+          "title": "Botón gustativo y renovación",
+          "items": [
+            {
+              "title": "Poro y superficie receptora",
+              "text": "Las sustancias disueltas alcanzan el poro gustativo y contactan las microvellosidades apicales de las células gustativas, denominadas cilios gustativos en el texto. El botón comprende aproximadamente 50 a 150 células gustativas, de soporte y basales. No se debe confundir este número celular con el de botones en una papila.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Célula gustativa: epitelio que comunica",
+              "text": "La célula gustativa no es la neurona aferente. Detecta la sustancia y modifica la liberación de neurotransmisor en su región basal, donde contacta fibras sensitivas. Separar receptor epitelial y neurona permite seguir correctamente la secuencia: molécula, respuesta de la célula, señal química y actividad en la vía nerviosa.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Soporte y reemplazo celular",
+              "text": "Las células de soporte sostienen el conjunto y las basales permiten renovar células gustativas. El texto describe una vida aproximada de siete a diez días para estas últimas. La renovación mantiene la población receptora a pesar de su recambio; no significa que cada sabor aparezca en una célula basal diferente.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#267dd0"
+    },
+    {
+      "title": "Cinco sabores y experiencia",
+      "groups": [
+        {
+          "title": "Cinco sabores y experiencia",
+          "items": [
+            {
+              "title": "Salado y ácido",
+              "text": "El sabor salado se relaciona con iones como sodio y potasio; el ácido, con hidrogeniones. Para activar el botón, las sustancias deben estar disueltas y alcanzar la superficie receptora. La saliva facilita ese acceso: ver un cristal de sal sobre una lengua seca no equivale a que ya haya estimulado eficazmente todos sus receptores.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Dulce, amargo y umami",
+              "text": "El dulce se relaciona con diversos compuestos orgánicos, especialmente azúcares. El amargo se vincula, entre otros, con alcaloides; el umami, con aminoácidos como glutamato. Estos son cinco sabores primarios junto a salado y ácido, pero la experiencia de un alimento incluye más información que una simple lista de cinco categorías.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 620,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Sensibilidad regional, no exclusividad",
+              "text": "El libro describe diferencias regionales de sensibilidad, pero también señala que los sabores primarios pueden detectarse a lo largo de la lengua. No se dibuja una lengua partida en zonas exclusivas de dulce, salado, ácido o amargo. Tener mayor sensibilidad a una categoría no implica incapacidad absoluta para detectar las demás.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Gusto no es todo el sabor de un alimento",
+              "text": "Olor, temperatura y textura participan en la impresión global. La sensibilidad a sustancias irritantes puede involucrar terminaciones del trigémino en vez de botones gustativos. Por ello, detectar el picante o reconocer la textura no demuestra que exista una sexta zona gustativa ni que todo lo percibido al comer sea gusto.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#8c59b0"
+    },
+    {
+      "title": "Transducción: estímulo a aferente",
+      "groups": [
+        {
+          "title": "Transducción: estímulo a aferente",
+          "items": [
+            {
+              "title": "Primer paso: disolver y contactar",
+              "text": "La molécula debe disolverse en saliva y pasar al poro para alcanzar la membrana apical de la célula gustativa. Ese acceso precede a cualquier cambio eléctrico. La papila organiza el tejido, pero no sustituye el contacto molecular con la célula receptora; nombrar la papila por sí solo deja incompleto el mecanismo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 619,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Dos mecanismos en esta edición",
+              "text": "Saladin presenta sodio y ácidos como estímulos que despolarizan directamente la célula, mientras azúcares, alcaloides y glutamato activan receptores asociados a proteínas G y segundos mensajeros. Se conserva el nivel de detalle de esta edición: no se añaden aquí canales o moléculas de otras fuentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Salida sináptica y señal nerviosa",
+              "text": "Ambas rutas modifican la respuesta de la célula gustativa y su liberación de neurotransmisor. Las fibras sensitivas de la base reciben esa señal y conducen la información hacia el tronco encefálico. El potencial de acción de la vía pertenece a la neurona aferente, no a una papila entendida como si fuese una neurona.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#e58929"
+    },
+    {
+      "title": "Nervios y primer relevo",
+      "groups": [
+        {
+          "title": "Nervios y primer relevo",
+          "items": [
+            {
+              "title": "VII: dos tercios anteriores",
+              "text": "El facial recoge información gustativa de los dos tercios anteriores de la lengua. Este territorio no debe confundirse con toda su sensibilidad al contacto: el texto relaciona la textura con el nervio lingual, rama del trigémino. Modalidad gustativa y sensibilidad somática pueden compartir región anatómica sin viajar por la misma vía.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "IX y X: otros territorios",
+              "text": "El glosofaríngeo lleva gusto del tercio posterior; el vago participa desde regiones como faringe y epiglotis. Esta distribución permite seguir la procedencia de la señal antes de su convergencia central. No se asigna al vago la función de recoger todos los botones de la lengua ni al facial todo el tercio posterior.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Núcleo solitario: bulbo raquídeo",
+              "text": "Las aferencias gustativas convergen en el núcleo solitario del bulbo. Desde ese relevo la información puede seguir hacia destinos relacionados con percepción y con respuestas autónomas. Por tanto, la vía no salta directamente del botón a la corteza: debe distinguirse el primer nervio de su primer relevo encefálico.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#209caa"
+    },
+    {
+      "title": "Corteza, reflejos e integración",
+      "groups": [
+        {
+          "title": "Corteza, reflejos e integración",
+          "items": [
+            {
+              "title": "Del tálamo a percepción consciente",
+              "text": "Desde el núcleo solitario se retransmite información al tálamo y de allí a ínsula y región poscentral, según la descripción del libro. Este recorrido permite adquirir conciencia del gusto. Dibujar sólo una flecha a un cerebro genérico omite los relevos y no explica dónde se transforma la señal en percepción.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Hipotálamo y amígdala",
+              "text": "Otras proyecciones se relacionan con respuestas autónomas como salivación y respuestas de rechazo. No toda salida gustativa termina en una decisión consciente. La separación entre una rama perceptiva y otra autonómica ayuda a explicar por qué un alimento puede desencadenar respuestas corporales además de una sensación identificable.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Corteza orbitofrontal: integración",
+              "text": "La señal procesada se integra con información olfativa y visual en la corteza orbitofrontal. El resultado contribuye a la impresión del alimento y su atractivo. Reconstruye el trayecto completo: sustancia en saliva, botón, célula epitelial, fibra aferente, VII/IX/X, núcleo solitario, relevos superiores e integración cortical.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 621,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#d76387"
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_16_organos_sentidos__03-r2.webp",
+    "alt": "Figura 16.6: lengua, papilas y botón gustativo",
+    "download": "/api/mindmap?id=morfo_16_organos_sentidos__03&format=image",
+    "filename": "morfo_16_organos_sentidos__03-Prepa-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 16,
+      "pdfPages": [
+        619,
+        620,
+        621
+      ],
+      "book_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+      "kind": "original_synthesis"
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "scope": "Specific requested anatomy, cell/receptor locations, physiology, central routes and vision alterations. Supplied Saladin only. Native six-branch interactive design preserved. Full chapter approval pending."
+  },
+  "format": "interactive-mind-map",
+  "content_revision": 2
+}

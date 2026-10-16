@@ -190,3 +190,7 @@ if __name__=='__main__':
  if (ROOT/'api/_mindmaps/editorial.json').exists():
   from apply_premium_mindmap_editorial import main as apply_reviewed
   apply_reviewed()
+ # Keep the manually authored, official-text-only native maps after regeneration.
+ if (ROOT/'api/_mindmaps/curated/revise_senses_native.py.source').exists():
+  import runpy
+  runpy.run_path(str(ROOT/'api/_mindmaps/curated/revise_senses_native.py.source'),run_name='__main__')

@@ -3,7 +3,7 @@ const fs=require('fs'),path=require('path'),assert=require('node:assert/strict')
 const p=require(process.env.MINDMAP_PUPPETEER||'C:/Users/PC/AppData/Local/npm-cache/_npx/110f701c48e68d66/node_modules/puppeteer-core');
 const root=path.resolve(__dirname,'..'),base=process.env.MINDMAP_BASE_URL||'http://127.0.0.1:8771';
 const all=JSON.parse(fs.readFileSync(path.join(root,'content/mindmaps-premium-catalog.json'),'utf8'));
-const selected=(process.env.MINDMAP_KEYS||'').split(',').filter(Boolean),catalog=selected.length?all.filter(x=>selected.includes(x.id)):all;
+const selected=(process.env.MINDMAP_KEYS||'').split(',').filter(Boolean),maps=all.filter(x=>!x.curated&&x.section!=='intocables'),catalog=selected.length?maps.filter(x=>selected.includes(x.id)):maps;
 const campus=fs.readFileSync(path.join(root,'campus.html'),'utf8'),markup=campus.slice(campus.indexOf('<div id="mm-lightbox"'),campus.indexOf('<dialog id="mm-unlock-dialog"'));
 const css=fs.readFileSync(path.join(root,'mindmap-viewer.css'),'utf8'),out=path.join(root,'assets/mindmaps/premium-previews');fs.mkdirSync(out,{recursive:true});
 fs.mkdirSync(path.join(root,'output/mapas-qa'),{recursive:true});

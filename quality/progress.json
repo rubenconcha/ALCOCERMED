@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "erythropoiesis_summary_reviewed_ready_to_publish",
+  "status": "official_senses_native_maps_reviewed_ready_to_publish",
   "academic_approval": "pending",
   "doctor_audio_review": "Both supplied audios transcribed locally and reviewed. Some isolated words are ambiguous; no uncertain literal quotations are used.",
   "dot": {
@@ -1592,11 +1592,94 @@
         "No membership, role, student result or SRS identity changes. Dot remains uncreated."
       ],
       "deployment": {
+        "status": "Vercel success",
+        "commit": "72f4d88",
+        "public_assets": "Summary JS v8 shows 17 pages/revision4; map catalog v14, supplement v15 and campus markers verified.",
+        "map_json_image_and_summary_without_session": 401,
+        "raw_poster_pdf_and_authoring": 404,
+        "evidence": "output/study-depth-qa/morfo_18_sangre__15/deployment-check.json",
+        "authenticated_production_walkthrough": "Not claimed; actual-controller tests used fixture sessions."
+      }
+    },
+    {
+      "id": "official-senses-native-2026-10-15",
+      "maps": [
+        "morfo_16_organos_sentidos__01",
+        "morfo_16_organos_sentidos__03",
+        "morfo_16_organos_sentidos__04",
+        "morfo_16_organos_sentidos__06"
+      ],
+      "format": "approved_native_interactive",
+      "scope": "User audio: general sensory receptors incl. exact location and encapsulation, dedicated taste, hearing and vision incl. image-formation alterations. Four previous shallow maps revised; stable IDs retained.",
+      "source": "Supplied Saladin chapter16 only",
+      "source_pdf_pages": [
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        619,
+        620,
+        621,
+        625,
+        626,
+        628,
+        629,
+        630,
+        631,
+        632,
+        633,
+        641,
+        642,
+        643,
+        644,
+        645,
+        646,
+        647,
+        648,
+        649,
+        650,
+        651,
+        652,
+        653,
+        654
+      ],
+      "explanations": 88,
+      "review": "Second automated source/editorial pass; no teacher approval or whole chapter completion claimed.",
+      "corrections": [
+        "Papilla, taste bud and receptor cell counts distinguished. No exclusive tongue taste zones.",
+        "Receptor-specific location, capsule and adaptation contrasted; Krause not relabeled a cold-only receptor.",
+        "Hair cell distinguished from afferent neuron; K+ entry from endolymph and basal versus apical tone representation preserved.",
+        "Retinal cells located individually; bipolar subcircuits not generalized from the single example. Nasal hemiretina crossing distinguished from crossing every fiber.",
+        "Saladin PDF646 table calls the myopia lens convex but Figure16.33/caption identifies concave: explanation explicitly follows that figure.",
+        "Generated poster variants were not selected after user supplied the exact approved native UI. New maps use figures from their own official text, with six initially closed branches."
+      ],
+      "checks": [
+        "16 existing source/access/SRS/library regression tests passed.",
+        "Actual native viewer: four maps, 1440/390 widths, six branches closed initially, nested + controls, visible Saladin page references, correct central figures, byte-identical protected downloads; no horizontal overflow or browser errors.",
+        "Native export renderer: all 88 explanations expanded; no leaf text overflow at desktop/mobile; four full downloads regenerated.",
+        "Actual Intocables hub: 14 sheets, subjects/topics/search, private exact covers, 18 existing essential cards retained, account change cleans images and lesson dialog."
+      ],
+      "limitations": [
+        "Production authenticated walkthrough not claimed; local actual-viewer tests use fixture sessions.",
+        "No student data, memberships, SRS identities or automatic supervision restarted.",
+        "Prior unpublished pain sheet used supplementary sources; retained privately and excluded from this official-only release."
+      ],
+      "deployment": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "sheets-in-intocables-2026-10-15",
+      "scope": "Move 14 existing published illustrated sheets to Intocables / Láminas ilustradas, excluding them from Mapas mentales; keep IDs, private API, practice and downloads.",
+      "checks": "Actual hub 1440/390 passed; protected originals fetched only for paid sessions and discarded on access/session/navigation changes.",
+      "deployment": {
         "status": "pending"
       }
     }
   ],
-  "next_action": "Develop Senses somatic receptor/pain mechanisms after reading the actual next section, then return to Blood iron handling and erythrocyte clearance with updated primary verification where old textbook diagrams simplify chemistry. Extend independent assessments against remaining objective coverage.",
+  "next_action": "User-directed work only while recurring supervision is paused. Continue official-text-only coverage using the approved native map format. Finish remaining chapter objectives without relabeling infographics as mental maps.",
   "access_policy": "Verified administrator and active paid access only for full new content; preserve all existing student records.",
   "doctor_observations": [
     "Review full chapters datum by datum, not only their opening paragraphs.",
@@ -1607,8 +1690,9 @@
   "supervision": {
     "kind": "hourly_thread_heartbeat",
     "automation_id": "ampliar-y-supervisar-material-ben-carson",
-    "status": "active",
+    "status": "paused_by_user",
     "dot_created": false,
     "dot_connected": false
-  }
+  },
+  "source_policy": "New academic content restricted to the three user-supplied official PDFs in quality/official-texts.json. Follow the approved native interactive map design; illustrated sheets stay in Intocables."
 }

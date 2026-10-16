@@ -1,1 +1,322 @@
-{"id":"morfo_16_organos_sentidos__04","title":"Audición","topic":"Órganos de los sentidos","sections":[{"title":"Oído","color":"#e58929","groups":[{"title":"Oído · explicación","items":[{"title":"Idea principal","text":"Capta y transforma vibraciones."},{"title":"Desarrollo","text":"La otitis media crónica también puede causar fusión de los huesos del oído medio y llevar a pérdida de la audición. En ocasiones, es necesario drenar el líquido de la cavidad timpánica, para lo cual se abre la membrana timpánica con una lanceta y se inserta un pequeño dren (procedimiento denominado timpanostomía).20 El dren, que con el tiempo se desprende del oído, alivia la presión y permite que la infección sane.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":626,"bbox":[49.68,538.13,298.43,701.72]}}]}]},{"title":"Cóclea","color":"#e58929","groups":[{"title":"Cóclea · explicación","items":[{"title":"Idea principal","text":"Contiene estructuras receptoras de audición."},{"title":"Desarrollo","text":"Los laberintos empiezan con una cámara denominada vestíbulo, que contiene órganos del equilibrio (que se explican más adelante). El órgano de la audición es el caracol (o cóclea), un tubo o trompa enrollada que surge del lado anterior del vestíbulo. En otros vertebrados, el caracol es recto o un poco curvo. Sin embargo, en la mayor parte de los mamíferos toma la forma de una espiral parecida a un caracol, lo que permite que una cóclea más larga quepa en un espacio compacto.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":626,"bbox":[310.4,596.93,569.45,725.9]}}]}]},{"title":"Oído medio","color":"#e58929","groups":[{"title":"Oído medio · explicación","items":[{"title":"Idea principal","text":"Tímpano y huesecillos transmiten vibraciones hacia la ventana oval."},{"title":"Desarrollo","text":"El término sordera se refiere a cualquier pérdida de la audición, de leve y temporal a completa e irreversible. La sordera conductiva se debe a cualquier trastorno que interfiere con la transmisión de vibraciones al oído interno. Entre estos trastornos se incluyen membrana timpánica dañada, otitis media, bloqueo del conducto auditivo y otoesclerosis.25 Esta última es la fusión de los huesecillos auditivos, o la del estribo con la ventana oval.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":633,"bbox":[66.69,129.05,315.5,291.57]}}]}]},{"title":"Órgano espiral","color":"#e58929","groups":[{"title":"Órgano espiral · explicación","items":[{"title":"Idea principal","text":"Las células ciliadas de la cóclea transforman movimientos mecánicos en señales nerviosas."},{"title":"Desarrollo","text":"Las fibras nerviosas sensitivas que se encuentran en la base de las células pilosas pertenecen a neuronas sensitivas bipolares. Sus somas forman una espiral, el ganglio espiral, que rodea la columela (véase la figura 16.13); sus axones se alejan del caracol y forman el nervio coclear. Éste se une al nervio vestibular, que se estudia más adelante, y juntos se vuelven el nervio auditivo o vestibulococlear (par craneal VIII).","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":633,"bbox":[56.69,353.9,315.74,434.88]}}]}]}],"assets":{"image":"/assets/mindmaps/illustrations/morfo_16_organos_sentidos.webp","alt":"Ilustración de Órganos de los sentidos","download":"/api/mindmap?id=morfo_16_organos_sentidos__04&format=image","filename":"morfo_16_organos_sentidos__04-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":16,"pdfPages":[610,660],"imagePdfPage":637}}}
+{
+  "id": "morfo_16_organos_sentidos__04",
+  "title": "Audición: anatomía, transducción y vía",
+  "topic": "Órganos de los sentidos",
+  "sections": [
+    {
+      "title": "Oído externo: captar y conducir",
+      "groups": [
+        {
+          "title": "Oído externo: captar y conducir",
+          "items": [
+            {
+              "title": "Aurícula y conducto auditivo",
+              "text": "La aurícula orienta las vibraciones hacia el conducto auditivo externo. El conducto las conduce a la membrana timpánica; su piel, pelos y cerumen contribuyen a protegerlo. Todavía se trata de una vibración mecánica transportada por aire, no de potenciales de acción que nazcan en la piel de la oreja.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 625,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Membrana timpánica: frontera funcional",
+              "text": "El tímpano vibra por las variaciones de presión y transmite el movimiento al martillo. Separa el conducto externo de la cavidad timpánica. Para entender una alteración conductiva debe seguirse la continuidad mecánica entre aire, tímpano y huesecillos, antes de llegar al receptor del oído interno.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 625,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Frecuencia y amplitud no son lo mismo",
+              "text": "La frecuencia de la onda se relaciona con el tono; la amplitud, con su intensidad y sonoridad percibida. Un sonido agudo no es necesariamente fuerte. Estas dos propiedades requieren códigos diferentes en la cóclea y en la actividad de sus aferentes, que se desarrollan en la rama de codificación.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 625,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#429243"
+    },
+    {
+      "title": "Oído medio: transmisión mecánica",
+      "groups": [
+        {
+          "title": "Oído medio: transmisión mecánica",
+          "items": [
+            {
+              "title": "Martillo, yunque y estribo",
+              "text": "El martillo se une al tímpano y transmite el movimiento al yunque; éste lo transmite al estribo, cuya base ocupa la ventana oval. Esta cadena acopla la vibración del aire con el movimiento del líquido del oído interno. La ventana redonda no es el punto donde se fija la base del estribo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 626,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Trompa auditiva: igualar presión",
+              "text": "La trompa comunica la cavidad timpánica con la nasofaringe y se abre, por ejemplo, al deglutir. Facilita igualar la presión a ambos lados del tímpano para que pueda vibrar. No debe confundirse con el conducto auditivo externo: tienen comunicaciones y funciones anatómicas diferentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 625,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Concentración de energía y reflejo",
+              "text": "La energía recogida por el tímpano se transmite a un área menor en la ventana oval, aumentando la presión aplicada al líquido. El tensor del tímpano y el músculo del estribo pueden reducir la transmisión. El reflejo tiene límites temporales y no garantiza protección frente a todo ruido intenso.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 629,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#267dd0"
+    },
+    {
+      "title": "Oído interno: cóclea y receptor",
+      "groups": [
+        {
+          "title": "Oído interno: cóclea y receptor",
+          "items": [
+            {
+              "title": "Laberintos, escalas y líquidos",
+              "text": "El laberinto membranoso contiene endolinfa y está rodeado por perilinfa dentro del laberinto óseo. En la cóclea, las escalas vestibular y timpánica contienen perilinfa; el conducto coclear contiene endolinfa. Confundir ambos líquidos impide explicar por qué el potasio entra en la célula pilosa durante la estimulación.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 626,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Membranas y órgano de Corti",
+              "text": "El órgano de Corti se sitúa sobre la membrana basilar del conducto coclear. Incluye células pilosas y de soporte; sobre sus superficies apicales se relaciona la membrana tectoria. La vibración del conjunto modifica la inclinación de los estereocilios y conecta el movimiento del líquido con la respuesta eléctrica receptora.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 628,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Internas frente a externas",
+              "text": "El texto organiza las células pilosas internas en una fila y las externas en tres. Las internas proporcionan la mayor parte de la señal sensitiva que se escucha; las externas intervienen en el ajuste de la respuesta coclear. Son células receptoras epiteliales, diferentes de las neuronas del ganglio espiral.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 628,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Estereocilio y aferente: no confundir",
+              "text": "Los estereocilios son prolongaciones apicales que se deforman mecánicamente; no son axones ni cilios motores que batan para generar el sonido. Las fibras nerviosas contactan la base de las células pilosas. Entre movimiento del haz apical y actividad del nervio debe producirse una respuesta celular y una sinapsis.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 628,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#8c59b0"
+    },
+    {
+      "title": "Transducción paso a paso",
+      "groups": [
+        {
+          "title": "Transducción paso a paso",
+          "items": [
+            {
+              "title": "Presión a desplazamiento basilar",
+              "text": "El estribo mueve la ventana oval y genera variaciones de presión en los líquidos cocleares. La membrana basilar se desplaza y la ventana redonda permite aliviar esa presión. La cadena completa empieza en el tímpano, pasa por huesecillos y líquidos y termina moviendo la estructura que sostiene a las células pilosas.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Puentes apicales y entrada de K+",
+              "text": "Al inclinarse el haz hacia los estereocilios más altos, aumenta la tensión de los puentes apicales y se abren canales mecánicos. La endolinfa es rica en potasio; su gradiente favorece la entrada de K+ y la despolarización. Aquí la entrada de potasio, y no su simple salida, inicia la respuesta.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Despolarización y comunicación basal",
+              "text": "La célula pilosa despolarizada aumenta la liberación de neurotransmisor en su base y modifica la actividad de la neurona aferente. La señal conducida por el nervio coclear es una salida posterior a esa sinapsis. Inclinación del haz, potencial de receptor y potencial de acción del nervio son pasos distintos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Movimiento contrario y patrón temporal",
+              "text": "Cuando el haz se inclina en sentido opuesto se reduce la apertura de canales y disminuye la respuesta excitadora. Las oscilaciones mecánicas se traducen así en cambios temporales de la señal. No basta escribir «vibración produce impulso»: deben explicarse la dirección del movimiento, el canal y la salida sináptica.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 630,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#e58929"
+    },
+    {
+      "title": "Codificación y alteraciones",
+      "groups": [
+        {
+          "title": "Codificación y alteraciones",
+          "items": [
+            {
+              "title": "Tono: base y ápice",
+              "text": "La membrana basilar cambia de propiedades a lo largo de la cóclea. Su región basal, más estrecha y rígida, responde mejor a frecuencias altas; la región apical, más ancha y flexible, a bajas. El sistema utiliza el lugar de mayor actividad para discriminar tono: no inviertas base y ápice.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 631,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Intensidad: frecuencia y reclutamiento",
+              "text": "Una vibración más intensa aumenta la respuesta de las células pilosas y la frecuencia de actividad en sus aferentes; también puede activar una región más amplia. El encéfalo interpreta el patrón combinado. Esto no significa que cada potencial de acción del nervio se haga proporcionalmente más alto.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 631,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Modulación y comparación binaural",
+              "text": "Las células pilosas externas y las proyecciones eferentes participan en ajustar el contraste de la respuesta coclear. Más adelante, los centros del tronco comparan información de ambos oídos para localizar el sonido. Afinar la respuesta local y comparar los dos lados son procesos relacionados, pero no ocurren en el mismo punto.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 632,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Conductiva frente a neurosensitiva",
+              "text": "La alteración conductiva interfiere con la llegada de la vibración al oído interno, por ejemplo por una obstrucción del conducto o un problema timpánico. La neurosensitiva afecta células pilosas o elementos nerviosos. La distinción se basa en el eslabón alterado; este esquema es conceptual y no diagnostica por sí solo una pérdida auditiva.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 633,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#209caa"
+    },
+    {
+      "title": "Vía auditiva hasta la corteza",
+      "groups": [
+        {
+          "title": "Vía auditiva hasta la corteza",
+          "items": [
+            {
+              "title": "Ganglio espiral y nervio VIII",
+              "text": "Las neuronas aferentes bipolares tienen sus somas en el ganglio espiral. Reciben señales en la base de las células pilosas y sus axones centrales forman el nervio coclear. Éste se une al componente vestibular para integrar el VIII par, pero la información auditiva debe distinguirse de la información de equilibrio.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 633,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Relevos del tronco encefálico",
+              "text": "La vía alcanza los núcleos cocleares del bulbo y continúa por conexiones bilaterales hacia centros como la oliva superior y los colículos inferiores del mesencéfalo. La oliva participa en comparar señales de ambos oídos; los colículos contribuyen a localización y respuestas al sonido. No todo axón sigue una única cadena lineal idéntica.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 633,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Tálamo y corteza temporal",
+              "text": "Desde los relevos mesencefálicos la señal alcanza el tálamo y después la corteza auditiva primaria, en la región superior del lóbulo temporal, profunda respecto a la cisura lateral. Allí participa en la percepción consciente. La ruta termina en territorio auditivo temporal, no en la corteza visual occipital.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 633,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Por qué importa la bilateralidad",
+              "text": "Tras los relevos iniciales existen abundantes conexiones y cruces entre lados. Por eso una lesión cortical auditiva unilateral no equivale simplemente a dejar sordo el oído opuesto. Reconstruye el trayecto desde célula pilosa hasta corteza y explica en cada relevo qué se está transmitiendo o procesando.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 633,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#d76387"
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_16_organos_sentidos__04-r2.webp",
+    "alt": "Figura 16.11: anatomía del oído externo, medio e interno",
+    "download": "/api/mindmap?id=morfo_16_organos_sentidos__04&format=image",
+    "filename": "morfo_16_organos_sentidos__04-Prepa-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 16,
+      "pdfPages": [
+        625,
+        626,
+        628,
+        629,
+        630,
+        631,
+        632,
+        633
+      ],
+      "book_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+      "kind": "original_synthesis"
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "scope": "Specific requested anatomy, cell/receptor locations, physiology, central routes and vision alterations. Supplied Saladin only. Native six-branch interactive design preserved. Full chapter approval pending."
+  },
+  "format": "interactive-mind-map",
+  "content_revision": 2
+}

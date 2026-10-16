@@ -5,12 +5,12 @@
   let loadRevision = 0;
   async function request(id, format) {
     const { data } = await getSupabase().auth.getSession();
-    if (!data.session?.access_token) throw new Error('Inicia sesión para abrir este mapa.');
+    if (!data.session?.access_token) throw new Error('Inicia sesión para abrir este material.');
     const response = await fetch('/api/mindmap?id=' + encodeURIComponent(id) + '&format=' + format, {
       headers: { Authorization: 'Bearer ' + data.session.access_token }, cache: 'no-store', signal: AbortSignal.timeout(30000)
     });
     if (!response.ok) {
-      const error = new Error(response.status === 403 ? 'Este mapa requiere un plan activo.' : 'No se pudo cargar el mapa. Intenta otra vez.');
+      const error = new Error(response.status === 403 ? 'Este material requiere un plan activo.' : 'No se pudo cargar el material. Intenta otra vez.');
       error.status = response.status; throw error;
     }
     return format === 'image' ? response.blob() : response.json();

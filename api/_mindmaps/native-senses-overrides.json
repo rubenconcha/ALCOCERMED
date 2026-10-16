@@ -1,0 +1,38 @@
+[
+  {
+    "id": "morfo_16_organos_sentidos__01",
+    "titulo": "Sentidos generales y receptores",
+    "root_title": "Sentidos generales y receptores",
+    "descripcion": "Anatomía, receptores, mecanismos y recorrido de la señal. Síntesis del Saladin oficial.",
+    "format": "interactive-mind-map",
+    "content_revision": 2,
+    "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__01.webp?v=2"
+  },
+  {
+    "id": "morfo_16_organos_sentidos__03",
+    "titulo": "Gusto: de la lengua al encéfalo",
+    "root_title": "Gusto: de la lengua al encéfalo",
+    "descripcion": "Anatomía, receptores, mecanismos y recorrido de la señal. Síntesis del Saladin oficial.",
+    "format": "interactive-mind-map",
+    "content_revision": 2,
+    "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__03.webp?v=2"
+  },
+  {
+    "id": "morfo_16_organos_sentidos__04",
+    "titulo": "Audición: anatomía, transducción y vía",
+    "root_title": "Audición: anatomía, transducción y vía",
+    "descripcion": "Anatomía, receptores, mecanismos y recorrido de la señal. Síntesis del Saladin oficial.",
+    "format": "interactive-mind-map",
+    "content_revision": 2,
+    "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__04.webp?v=2"
+  },
+  {
+    "id": "morfo_16_organos_sentidos__06",
+    "titulo": "Visión: del ojo a la corteza",
+    "root_title": "Visión: del ojo a la corteza",
+    "descripcion": "Anatomía, receptores, mecanismos y recorrido de la señal. Síntesis del Saladin oficial.",
+    "format": "interactive-mind-map",
+    "content_revision": 2,
+    "preview": "/assets/mindmaps/premium-previews/morfo_16_organos_sentidos__06.webp?v=2"
+  }
+]

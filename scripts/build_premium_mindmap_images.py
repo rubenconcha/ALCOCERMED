@@ -13,6 +13,7 @@ def main():
  catalog=json.loads((ROOT/'content/mindmaps-premium-catalog.json').read_text(encoding='utf8'))
  docs={b:pymupdf.open(p) for b,p in BOOKS.items()};cache={};ledger={};out=ROOT/'assets/mindmaps/premium-illustrations';out.mkdir(exist_ok=True)
  for entry in catalog:
+  if entry.get('format')=='interactive-mind-map' and entry.get('content_revision',0)>=2:continue
   ident=entry['id'];p=ROOT/'api/_mindmaps'/f'{ident}.json';data=json.loads(p.read_text(encoding='utf8'))
   book='morfo' if ident.startswith('morfo') else 'salud' if ident.startswith('salud') else 'bio'
   if book not in docs:continue

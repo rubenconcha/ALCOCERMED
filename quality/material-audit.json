@@ -17,14 +17,17 @@
         {
           "id": "morfo_16_organos_sentidos__01",
           "title": "Receptores",
-          "sections": 4,
-          "concepts": 8,
-          "very_short_explanations": 4,
-          "sourced_concepts": 4,
-          "average_words": 36,
-          "academic_review": "pending",
+          "sections": 6,
+          "concepts": 20,
+          "very_short_explanations": 0,
+          "sourced_concepts": 20,
+          "average_words": 47,
+          "academic_review": "targeted_automated_review_passed_whole_chapter_pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map",
+          "approved_native_design_verified": true,
+          "source_policy": "Supplied Saladin chapter16 only"
         },
         {
           "id": "morfo_16_organos_sentidos__02",
@@ -36,31 +39,38 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_16_organos_sentidos__03",
           "title": "Gusto y olfato",
-          "sections": 4,
-          "concepts": 8,
-          "very_short_explanations": 4,
-          "sourced_concepts": 4,
-          "average_words": 40,
-          "academic_review": "pending",
+          "sections": 6,
+          "concepts": 20,
+          "very_short_explanations": 0,
+          "sourced_concepts": 20,
+          "average_words": 50,
+          "academic_review": "targeted_automated_review_passed_whole_chapter_pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map",
+          "approved_native_design_verified": true,
+          "source_policy": "Supplied Saladin chapter16 only"
         },
         {
           "id": "morfo_16_organos_sentidos__04",
           "title": "Audición",
-          "sections": 4,
-          "concepts": 8,
-          "very_short_explanations": 4,
-          "sourced_concepts": 4,
-          "average_words": 40,
-          "academic_review": "pending",
+          "sections": 6,
+          "concepts": 22,
+          "very_short_explanations": 0,
+          "sourced_concepts": 22,
+          "average_words": 49,
+          "academic_review": "targeted_automated_review_passed_whole_chapter_pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map",
+          "approved_native_design_verified": true,
+          "source_policy": "Supplied Saladin chapter16 only"
         },
         {
           "id": "morfo_16_organos_sentidos__05",
@@ -72,19 +82,23 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_16_organos_sentidos__06",
           "title": "Visión",
-          "sections": 4,
-          "concepts": 8,
-          "very_short_explanations": 3,
-          "sourced_concepts": 4,
-          "average_words": 35,
-          "academic_review": "pending",
+          "sections": 6,
+          "concepts": 26,
+          "very_short_explanations": 0,
+          "sourced_concepts": 26,
+          "average_words": 50,
+          "academic_review": "targeted_automated_review_passed_whole_chapter_pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map",
+          "approved_native_design_verified": true,
+          "source_policy": "Supplied Saladin chapter16 only"
         },
         {
           "id": "morfo_16_organos_sentidos__07",
@@ -96,7 +110,8 @@
           "average_words": 46,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_16_organos_sentidos__08",
@@ -108,7 +123,8 @@
           "average_words": 50,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_16_organos_sentidos__09",
@@ -120,7 +136,8 @@
           "average_words": 51,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_16_organos_sentidos__10",
@@ -132,7 +149,8 @@
           "average_words": 58,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_16_organos_sentidos__11",
@@ -144,7 +162,8 @@
           "average_words": 58,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         }
       ],
       "priority": 1,
@@ -168,7 +187,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_18_sangre__02",
@@ -180,7 +200,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_18_sangre__03",
@@ -192,7 +213,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_18_sangre__04",
@@ -204,7 +226,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_18_sangre__05",
@@ -216,7 +239,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_18_sangre__06",
@@ -228,7 +252,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_18_sangre__07",
@@ -240,7 +265,8 @@
           "average_words": 45,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_18_sangre__08",
@@ -252,7 +278,8 @@
           "average_words": 49,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_18_sangre__09",
@@ -264,7 +291,8 @@
           "average_words": 56,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_18_sangre__10",
@@ -276,7 +304,8 @@
           "average_words": 57,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_18_sangre__11",
@@ -288,7 +317,8 @@
           "average_words": 56,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_18_sangre__12",
@@ -300,7 +330,8 @@
           "average_words": 56,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_18_sangre__13",
@@ -312,7 +343,8 @@
           "average_words": 57,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_18_sangre__14",
@@ -324,7 +356,8 @@
           "average_words": 57,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         },
         {
           "id": "morfo_18_sangre__15",
@@ -336,7 +369,8 @@
           "average_words": 61,
           "academic_review": "automated_review_passed",
           "original_logo_verified": true,
-          "generative_art_verified": true
+          "generative_art_verified": true,
+          "format": "illustrated-sheet"
         }
       ],
       "priority": 1,
@@ -360,7 +394,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_01_introduccion__02",
@@ -372,7 +407,8 @@
           "average_words": 14,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_01_introduccion__03",
@@ -384,7 +420,8 @@
           "average_words": 29,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_01_introduccion__04",
@@ -396,7 +433,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_01_introduccion__05",
@@ -408,7 +446,8 @@
           "average_words": 19,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_01_introduccion__06",
@@ -420,7 +459,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -444,7 +484,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_02_metodos_y_tecnicas__02",
@@ -456,7 +497,8 @@
           "average_words": 24,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_02_metodos_y_tecnicas__03",
@@ -468,7 +510,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_02_metodos_y_tecnicas__04",
@@ -480,7 +523,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_02_metodos_y_tecnicas__05",
@@ -492,7 +536,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_02_metodos_y_tecnicas__06",
@@ -504,7 +549,8 @@
           "average_words": 44,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -528,7 +574,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_03_membrana_estructura__02",
@@ -540,7 +587,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_03_membrana_estructura__03",
@@ -552,7 +600,8 @@
           "average_words": 46,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_03_membrana_estructura__04",
@@ -564,7 +613,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_03_membrana_estructura__05",
@@ -576,7 +626,8 @@
           "average_words": 24,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_03_membrana_estructura__06",
@@ -588,7 +639,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -612,7 +664,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_04_microtransporte__02",
@@ -624,7 +677,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_04_microtransporte__03",
@@ -636,7 +690,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_04_microtransporte__04",
@@ -648,7 +703,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_04_microtransporte__05",
@@ -660,7 +716,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_04_microtransporte__06",
@@ -672,7 +729,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -696,7 +754,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_05_endocitosis_exocitosis__02",
@@ -708,7 +767,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_05_endocitosis_exocitosis__03",
@@ -720,7 +780,8 @@
           "average_words": 25,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_05_endocitosis_exocitosis__04",
@@ -732,7 +793,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_05_endocitosis_exocitosis__05",
@@ -744,7 +806,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_05_endocitosis_exocitosis__06",
@@ -756,7 +819,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -780,7 +844,8 @@
           "average_words": 29,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_06_entorno_celular__02",
@@ -792,7 +857,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_06_entorno_celular__03",
@@ -804,7 +870,8 @@
           "average_words": 45,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_06_entorno_celular__04",
@@ -816,7 +883,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_06_entorno_celular__05",
@@ -828,7 +896,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_06_entorno_celular__06",
@@ -840,7 +909,8 @@
           "average_words": 29,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -864,7 +934,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_07_nucleo_cromatina_adn__02",
@@ -876,7 +947,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_07_nucleo_cromatina_adn__03",
@@ -888,7 +960,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_07_nucleo_cromatina_adn__04",
@@ -900,7 +973,8 @@
           "average_words": 46,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_07_nucleo_cromatina_adn__05",
@@ -912,7 +986,8 @@
           "average_words": 46,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_07_nucleo_cromatina_adn__06",
@@ -924,7 +999,8 @@
           "average_words": 44,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -948,7 +1024,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_08_transcripcion_arn__02",
@@ -960,7 +1037,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_08_transcripcion_arn__03",
@@ -972,7 +1050,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_08_transcripcion_arn__04",
@@ -984,7 +1063,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_08_transcripcion_arn__05",
@@ -996,7 +1076,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_08_transcripcion_arn__06",
@@ -1008,7 +1089,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1032,7 +1114,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_09_sintesis_proteinas__02",
@@ -1044,7 +1127,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_09_sintesis_proteinas__03",
@@ -1056,7 +1140,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_09_sintesis_proteinas__04",
@@ -1068,7 +1153,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_09_sintesis_proteinas__05",
@@ -1080,7 +1166,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_09_sintesis_proteinas__06",
@@ -1092,7 +1179,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1116,7 +1204,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_10_endomembranas__02",
@@ -1128,7 +1217,8 @@
           "average_words": 45,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_10_endomembranas__03",
@@ -1140,7 +1230,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_10_endomembranas__04",
@@ -1152,7 +1243,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_10_endomembranas__05",
@@ -1164,7 +1256,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_10_endomembranas__06",
@@ -1176,7 +1269,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1200,7 +1294,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_11_mitocondrias_peroxisomas__02",
@@ -1212,7 +1307,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_11_mitocondrias_peroxisomas__03",
@@ -1224,7 +1320,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_11_mitocondrias_peroxisomas__04",
@@ -1236,7 +1333,8 @@
           "average_words": 31,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_11_mitocondrias_peroxisomas__05",
@@ -1248,7 +1346,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_11_mitocondrias_peroxisomas__06",
@@ -1260,7 +1359,8 @@
           "average_words": 46,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1284,7 +1384,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_12_citoesqueleto__02",
@@ -1296,7 +1397,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_12_citoesqueleto__03",
@@ -1308,7 +1410,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_12_citoesqueleto__04",
@@ -1320,7 +1423,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_12_citoesqueleto__05",
@@ -1332,7 +1436,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_12_citoesqueleto__06",
@@ -1344,7 +1449,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1368,7 +1474,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_13_senales__02",
@@ -1380,7 +1487,8 @@
           "average_words": 31,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_13_senales__03",
@@ -1392,7 +1500,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_13_senales__04",
@@ -1404,7 +1513,8 @@
           "average_words": 26,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_13_senales__05",
@@ -1416,7 +1526,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_13_senales__06",
@@ -1428,7 +1539,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1452,7 +1564,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_14_ciclo_celular__02",
@@ -1464,7 +1577,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_14_ciclo_celular__03",
@@ -1476,7 +1590,8 @@
           "average_words": 48,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_14_ciclo_celular__04",
@@ -1488,7 +1603,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_14_ciclo_celular__05",
@@ -1500,7 +1616,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_14_ciclo_celular__06",
@@ -1512,7 +1629,8 @@
           "average_words": 31,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1536,7 +1654,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_15_division_muerte__02",
@@ -1548,7 +1667,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_15_division_muerte__03",
@@ -1560,7 +1680,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_15_division_muerte__04",
@@ -1572,7 +1693,8 @@
           "average_words": 44,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_15_division_muerte__05",
@@ -1584,7 +1706,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_15_division_muerte__06",
@@ -1596,7 +1719,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1620,7 +1744,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_16_cancer__02",
@@ -1632,7 +1757,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_16_cancer__03",
@@ -1644,7 +1770,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_16_cancer__04",
@@ -1656,7 +1783,8 @@
           "average_words": 44,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_16_cancer__05",
@@ -1668,7 +1796,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_16_cancer__06",
@@ -1680,7 +1809,8 @@
           "average_words": 35,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1704,7 +1834,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_17_respuesta_inmunitaria__02",
@@ -1716,7 +1847,8 @@
           "average_words": 44,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_17_respuesta_inmunitaria__03",
@@ -1728,7 +1860,8 @@
           "average_words": 45,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_17_respuesta_inmunitaria__04",
@@ -1740,7 +1873,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_17_respuesta_inmunitaria__05",
@@ -1752,7 +1886,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_17_respuesta_inmunitaria__06",
@@ -1764,7 +1899,8 @@
           "average_words": 29,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1788,7 +1924,8 @@
           "average_words": 44,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_18_celulas_madre__02",
@@ -1800,7 +1937,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_18_celulas_madre__03",
@@ -1812,7 +1950,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_18_celulas_madre__04",
@@ -1824,7 +1963,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_18_celulas_madre__05",
@@ -1836,7 +1976,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "biocel_18_celulas_madre__06",
@@ -1848,7 +1989,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1872,7 +2014,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_01_anatomia_y_fisiologia__02",
@@ -1884,7 +2027,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_01_anatomia_y_fisiologia__03",
@@ -1896,7 +2040,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_01_anatomia_y_fisiologia__04",
@@ -1908,7 +2053,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_01_anatomia_y_fisiologia__05",
@@ -1920,7 +2066,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_01_anatomia_y_fisiologia__06",
@@ -1932,7 +2079,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -1956,7 +2104,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_02_quimica_de_la_vida__02",
@@ -1968,7 +2117,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_02_quimica_de_la_vida__03",
@@ -1980,7 +2130,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_02_quimica_de_la_vida__04",
@@ -1992,7 +2143,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_02_quimica_de_la_vida__05",
@@ -2004,7 +2156,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_02_quimica_de_la_vida__06",
@@ -2016,7 +2169,8 @@
           "average_words": 45,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2040,7 +2194,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_03_forma_y_funcion_celulares__02",
@@ -2052,7 +2207,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_03_forma_y_funcion_celulares__03",
@@ -2064,7 +2220,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_03_forma_y_funcion_celulares__04",
@@ -2076,7 +2233,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_03_forma_y_funcion_celulares__05",
@@ -2088,7 +2246,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_03_forma_y_funcion_celulares__06",
@@ -2100,7 +2259,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2124,7 +2284,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_04_genetica_y_funcion_celular__02",
@@ -2136,7 +2297,8 @@
           "average_words": 24,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_04_genetica_y_funcion_celular__03",
@@ -2148,7 +2310,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_04_genetica_y_funcion_celular__04",
@@ -2160,7 +2323,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_04_genetica_y_funcion_celular__05",
@@ -2172,7 +2336,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_04_genetica_y_funcion_celular__06",
@@ -2184,7 +2349,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2208,7 +2374,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_05_histologia__02",
@@ -2220,7 +2387,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_05_histologia__03",
@@ -2232,7 +2400,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_05_histologia__04",
@@ -2244,7 +2413,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_05_histologia__05",
@@ -2256,7 +2426,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_05_histologia__06",
@@ -2268,7 +2439,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2292,7 +2464,8 @@
           "average_words": 45,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_06_sistema_tegumentario__02",
@@ -2304,7 +2477,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_06_sistema_tegumentario__03",
@@ -2316,7 +2490,8 @@
           "average_words": 44,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_06_sistema_tegumentario__04",
@@ -2328,7 +2503,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_06_sistema_tegumentario__05",
@@ -2340,7 +2516,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_06_sistema_tegumentario__06",
@@ -2352,7 +2529,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2376,7 +2554,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_07_tejido_oseo__02",
@@ -2388,7 +2567,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_07_tejido_oseo__03",
@@ -2400,7 +2580,8 @@
           "average_words": 35,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_07_tejido_oseo__04",
@@ -2412,7 +2593,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_07_tejido_oseo__05",
@@ -2424,7 +2606,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_07_tejido_oseo__06",
@@ -2436,7 +2619,8 @@
           "average_words": 31,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2460,7 +2644,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_08_sistema_oseo__02",
@@ -2472,7 +2657,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_08_sistema_oseo__03",
@@ -2484,7 +2670,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_08_sistema_oseo__04",
@@ -2496,7 +2683,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_08_sistema_oseo__05",
@@ -2508,7 +2696,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_08_sistema_oseo__06",
@@ -2520,7 +2709,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2544,7 +2734,8 @@
           "average_words": 48,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_09_articulaciones__02",
@@ -2556,7 +2747,8 @@
           "average_words": 45,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_09_articulaciones__03",
@@ -2568,7 +2760,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_09_articulaciones__04",
@@ -2580,7 +2773,8 @@
           "average_words": 45,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_09_articulaciones__05",
@@ -2592,7 +2786,8 @@
           "average_words": 35,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_09_articulaciones__06",
@@ -2604,7 +2799,8 @@
           "average_words": 46,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2628,7 +2824,8 @@
           "average_words": 46,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_10_sistema_muscular__02",
@@ -2640,7 +2837,8 @@
           "average_words": 48,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_10_sistema_muscular__03",
@@ -2652,7 +2850,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_10_sistema_muscular__04",
@@ -2664,7 +2863,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_10_sistema_muscular__05",
@@ -2676,7 +2876,8 @@
           "average_words": 47,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_10_sistema_muscular__06",
@@ -2688,7 +2889,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2712,7 +2914,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_11_tejido_muscular__02",
@@ -2724,7 +2927,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_11_tejido_muscular__03",
@@ -2736,7 +2940,8 @@
           "average_words": 31,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_11_tejido_muscular__04",
@@ -2748,7 +2953,8 @@
           "average_words": 44,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_11_tejido_muscular__05",
@@ -2760,7 +2966,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_11_tejido_muscular__06",
@@ -2772,7 +2979,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2796,7 +3004,8 @@
           "average_words": 46,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_12_tejido_nervioso__02",
@@ -2808,7 +3017,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_12_tejido_nervioso__03",
@@ -2820,7 +3030,8 @@
           "average_words": 47,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_12_tejido_nervioso__04",
@@ -2832,7 +3043,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_12_tejido_nervioso__05",
@@ -2844,7 +3056,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_12_tejido_nervioso__06",
@@ -2856,7 +3069,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2880,7 +3094,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_13_medula_reflejos__02",
@@ -2892,7 +3107,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_13_medula_reflejos__03",
@@ -2904,7 +3120,8 @@
           "average_words": 29,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_13_medula_reflejos__04",
@@ -2916,7 +3133,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_13_medula_reflejos__05",
@@ -2928,7 +3146,8 @@
           "average_words": 35,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_13_medula_reflejos__06",
@@ -2940,7 +3159,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -2964,7 +3184,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_14_encefalo_pares_craneales__02",
@@ -2976,7 +3197,8 @@
           "average_words": 46,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_14_encefalo_pares_craneales__03",
@@ -2988,7 +3210,8 @@
           "average_words": 47,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_14_encefalo_pares_craneales__04",
@@ -3000,7 +3223,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_14_encefalo_pares_craneales__05",
@@ -3012,7 +3236,8 @@
           "average_words": 50,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_14_encefalo_pares_craneales__06",
@@ -3024,7 +3249,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3048,7 +3274,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_15_sistema_nervioso_autonomo__02",
@@ -3060,7 +3287,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_15_sistema_nervioso_autonomo__03",
@@ -3072,7 +3300,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_15_sistema_nervioso_autonomo__04",
@@ -3084,7 +3313,8 @@
           "average_words": 35,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_15_sistema_nervioso_autonomo__05",
@@ -3096,7 +3326,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_15_sistema_nervioso_autonomo__06",
@@ -3108,7 +3339,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3132,7 +3364,8 @@
           "average_words": 29,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_17_sistema_endocrino__02",
@@ -3144,7 +3377,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_17_sistema_endocrino__03",
@@ -3156,7 +3390,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_17_sistema_endocrino__04",
@@ -3168,7 +3403,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_17_sistema_endocrino__05",
@@ -3180,7 +3416,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_17_sistema_endocrino__06",
@@ -3192,7 +3429,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3216,7 +3454,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_19_corazon__02",
@@ -3228,7 +3467,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_19_corazon__03",
@@ -3240,7 +3480,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_19_corazon__04",
@@ -3252,7 +3493,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_19_corazon__05",
@@ -3264,7 +3506,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_19_corazon__06",
@@ -3276,7 +3519,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3300,7 +3544,8 @@
           "average_words": 44,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_20_circulacion__02",
@@ -3312,7 +3557,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_20_circulacion__03",
@@ -3324,7 +3570,8 @@
           "average_words": 54,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_20_circulacion__04",
@@ -3336,7 +3583,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_20_circulacion__05",
@@ -3348,7 +3596,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_20_circulacion__06",
@@ -3360,7 +3609,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3384,7 +3634,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_21_sistema_linfatico_inmunitario__02",
@@ -3396,7 +3647,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_21_sistema_linfatico_inmunitario__03",
@@ -3408,7 +3660,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_21_sistema_linfatico_inmunitario__04",
@@ -3420,7 +3673,8 @@
           "average_words": 31,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_21_sistema_linfatico_inmunitario__05",
@@ -3432,7 +3686,8 @@
           "average_words": 35,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_21_sistema_linfatico_inmunitario__06",
@@ -3444,7 +3699,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3468,7 +3724,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_22_aparato_respiratorio__02",
@@ -3480,7 +3737,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_22_aparato_respiratorio__03",
@@ -3492,7 +3750,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_22_aparato_respiratorio__04",
@@ -3504,7 +3763,8 @@
           "average_words": 49,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_22_aparato_respiratorio__05",
@@ -3516,7 +3776,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_22_aparato_respiratorio__06",
@@ -3528,7 +3789,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3552,7 +3814,8 @@
           "average_words": 44,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_23_aparato_urinario__02",
@@ -3564,7 +3827,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_23_aparato_urinario__03",
@@ -3576,7 +3840,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_23_aparato_urinario__04",
@@ -3588,7 +3853,8 @@
           "average_words": 52,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_23_aparato_urinario__05",
@@ -3600,7 +3866,8 @@
           "average_words": 48,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_23_aparato_urinario__06",
@@ -3612,7 +3879,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3636,7 +3904,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_24_equilibrio_hidrico_acidobasico__02",
@@ -3648,7 +3917,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_24_equilibrio_hidrico_acidobasico__03",
@@ -3660,7 +3930,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_24_equilibrio_hidrico_acidobasico__04",
@@ -3672,7 +3943,8 @@
           "average_words": 45,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_24_equilibrio_hidrico_acidobasico__05",
@@ -3684,7 +3956,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_24_equilibrio_hidrico_acidobasico__06",
@@ -3696,7 +3969,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3720,7 +3994,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_25_aparato_digestivo__02",
@@ -3732,7 +4007,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_25_aparato_digestivo__03",
@@ -3744,7 +4020,8 @@
           "average_words": 29,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_25_aparato_digestivo__04",
@@ -3756,7 +4033,8 @@
           "average_words": 25,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_25_aparato_digestivo__05",
@@ -3768,7 +4046,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_25_aparato_digestivo__06",
@@ -3780,7 +4059,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3804,7 +4084,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_26_nutricion_metabolismo__02",
@@ -3816,7 +4097,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_26_nutricion_metabolismo__03",
@@ -3828,7 +4110,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_26_nutricion_metabolismo__04",
@@ -3840,7 +4123,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_26_nutricion_metabolismo__05",
@@ -3852,7 +4136,8 @@
           "average_words": 26,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_26_nutricion_metabolismo__06",
@@ -3864,7 +4149,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3888,7 +4174,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_27_reproductor_masculino__02",
@@ -3900,7 +4187,8 @@
           "average_words": 31,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_27_reproductor_masculino__03",
@@ -3912,7 +4200,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_27_reproductor_masculino__04",
@@ -3924,7 +4213,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_27_reproductor_masculino__05",
@@ -3936,7 +4226,8 @@
           "average_words": 41,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_27_reproductor_masculino__06",
@@ -3948,7 +4239,8 @@
           "average_words": 49,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -3972,7 +4264,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_28_reproductor_femenino__02",
@@ -3984,7 +4277,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_28_reproductor_femenino__03",
@@ -3996,7 +4290,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_28_reproductor_femenino__04",
@@ -4008,7 +4303,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_28_reproductor_femenino__05",
@@ -4020,7 +4316,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_28_reproductor_femenino__06",
@@ -4032,7 +4329,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4056,7 +4354,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_29_desarrollo_envejecimiento__02",
@@ -4068,7 +4367,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_29_desarrollo_envejecimiento__03",
@@ -4080,7 +4380,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_29_desarrollo_envejecimiento__04",
@@ -4092,7 +4393,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_29_desarrollo_envejecimiento__05",
@@ -4104,7 +4406,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "morfo_29_desarrollo_envejecimiento__06",
@@ -4116,7 +4419,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4140,7 +4444,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_01_educacion_en_salud__02",
@@ -4152,7 +4457,8 @@
           "average_words": 21,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_01_educacion_en_salud__03",
@@ -4164,7 +4470,8 @@
           "average_words": 18,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_01_educacion_en_salud__04",
@@ -4176,7 +4483,8 @@
           "average_words": 12,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_01_educacion_en_salud__05",
@@ -4188,7 +4496,8 @@
           "average_words": 20,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_01_educacion_en_salud__06",
@@ -4200,7 +4509,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4224,7 +4534,8 @@
           "average_words": 13,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_02_determinantes__02",
@@ -4236,7 +4547,8 @@
           "average_words": 15,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_02_determinantes__03",
@@ -4248,7 +4560,8 @@
           "average_words": 15,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_02_determinantes__04",
@@ -4260,7 +4573,8 @@
           "average_words": 21,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_02_determinantes__05",
@@ -4272,7 +4586,8 @@
           "average_words": 16,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_02_determinantes__06",
@@ -4284,7 +4599,8 @@
           "average_words": 19,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4308,7 +4624,8 @@
           "average_words": 16,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_03_promocion_prevencion__02",
@@ -4320,7 +4637,8 @@
           "average_words": 20,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_03_promocion_prevencion__03",
@@ -4332,7 +4650,8 @@
           "average_words": 21,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_03_promocion_prevencion__04",
@@ -4344,7 +4663,8 @@
           "average_words": 18,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_03_promocion_prevencion__05",
@@ -4356,7 +4676,8 @@
           "average_words": 19,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_03_promocion_prevencion__06",
@@ -4368,7 +4689,8 @@
           "average_words": 14,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4392,7 +4714,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_04_marcos_internacionales__02",
@@ -4404,7 +4727,8 @@
           "average_words": 13,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_04_marcos_internacionales__03",
@@ -4416,7 +4740,8 @@
           "average_words": 15,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_04_marcos_internacionales__04",
@@ -4428,7 +4753,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_04_marcos_internacionales__05",
@@ -4440,7 +4766,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_04_marcos_internacionales__06",
@@ -4452,7 +4779,8 @@
           "average_words": 19,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4476,7 +4804,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_05_salud_publica_bolivia__02",
@@ -4488,7 +4817,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_05_salud_publica_bolivia__03",
@@ -4500,7 +4830,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_05_salud_publica_bolivia__04",
@@ -4512,7 +4843,8 @@
           "average_words": 17,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_05_salud_publica_bolivia__05",
@@ -4524,7 +4856,8 @@
           "average_words": 15,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_05_salud_publica_bolivia__06",
@@ -4536,7 +4869,8 @@
           "average_words": 14,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4560,7 +4894,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_06_politicas_salud__02",
@@ -4572,7 +4907,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_06_politicas_salud__03",
@@ -4584,7 +4920,8 @@
           "average_words": 25,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_06_politicas_salud__04",
@@ -4596,7 +4933,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_06_politicas_salud__05",
@@ -4608,7 +4946,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_06_politicas_salud__06",
@@ -4620,7 +4959,8 @@
           "average_words": 21,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4644,7 +4984,8 @@
           "average_words": 16,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_07_educacion_para_salud__02",
@@ -4656,7 +4997,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_07_educacion_para_salud__03",
@@ -4668,7 +5010,8 @@
           "average_words": 19,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_07_educacion_para_salud__04",
@@ -4680,7 +5023,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_07_educacion_para_salud__05",
@@ -4692,7 +5036,8 @@
           "average_words": 16,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_07_educacion_para_salud__06",
@@ -4704,7 +5049,8 @@
           "average_words": 13,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4728,7 +5074,8 @@
           "average_words": 19,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_08_factores_riesgo__02",
@@ -4740,7 +5087,8 @@
           "average_words": 17,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_08_factores_riesgo__03",
@@ -4752,7 +5100,8 @@
           "average_words": 17,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_08_factores_riesgo__04",
@@ -4764,7 +5113,8 @@
           "average_words": 17,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_08_factores_riesgo__05",
@@ -4776,7 +5126,8 @@
           "average_words": 17,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_08_factores_riesgo__06",
@@ -4788,7 +5139,8 @@
           "average_words": 17,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4812,7 +5164,8 @@
           "average_words": 25,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_09_salud_comunitaria__02",
@@ -4824,7 +5177,8 @@
           "average_words": 19,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_09_salud_comunitaria__03",
@@ -4836,7 +5190,8 @@
           "average_words": 21,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_09_salud_comunitaria__04",
@@ -4848,7 +5203,8 @@
           "average_words": 15,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_09_salud_comunitaria__05",
@@ -4860,7 +5216,8 @@
           "average_words": 21,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_09_salud_comunitaria__06",
@@ -4872,7 +5229,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4896,7 +5254,8 @@
           "average_words": 24,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_10_programas_salud__02",
@@ -4908,7 +5267,8 @@
           "average_words": 17,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_10_programas_salud__03",
@@ -4920,7 +5280,8 @@
           "average_words": 21,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_10_programas_salud__04",
@@ -4932,7 +5293,8 @@
           "average_words": 18,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_10_programas_salud__05",
@@ -4944,7 +5306,8 @@
           "average_words": 21,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_10_programas_salud__06",
@@ -4956,7 +5319,8 @@
           "average_words": 24,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -4980,7 +5344,8 @@
           "average_words": 19,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_11_vigilancia_prioritaria__02",
@@ -4992,7 +5357,8 @@
           "average_words": 42,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_11_vigilancia_prioritaria__03",
@@ -5004,7 +5370,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_11_vigilancia_prioritaria__04",
@@ -5016,7 +5383,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_11_vigilancia_prioritaria__05",
@@ -5028,7 +5396,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_11_vigilancia_prioritaria__06",
@@ -5040,7 +5409,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5064,7 +5434,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_12_epidemiologia_social__02",
@@ -5076,7 +5447,8 @@
           "average_words": 44,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_12_epidemiologia_social__03",
@@ -5088,7 +5460,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_12_epidemiologia_social__04",
@@ -5100,7 +5473,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_12_epidemiologia_social__05",
@@ -5112,7 +5486,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_12_epidemiologia_social__06",
@@ -5124,7 +5499,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5148,7 +5524,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_13_proceso_investigativo__02",
@@ -5160,7 +5537,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_13_proceso_investigativo__03",
@@ -5172,7 +5550,8 @@
           "average_words": 19,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_13_proceso_investigativo__04",
@@ -5184,7 +5563,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_13_proceso_investigativo__05",
@@ -5196,7 +5576,8 @@
           "average_words": 32,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_13_proceso_investigativo__06",
@@ -5208,7 +5589,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5232,7 +5614,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_14_problema_investigacion__02",
@@ -5244,7 +5627,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_14_problema_investigacion__03",
@@ -5256,7 +5640,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_14_problema_investigacion__04",
@@ -5268,7 +5653,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_14_problema_investigacion__05",
@@ -5280,7 +5666,8 @@
           "average_words": 20,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_14_problema_investigacion__06",
@@ -5292,7 +5679,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5316,7 +5704,8 @@
           "average_words": 20,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_15_marco_teorico_hipotesis__02",
@@ -5328,7 +5717,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_15_marco_teorico_hipotesis__03",
@@ -5340,7 +5730,8 @@
           "average_words": 25,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_15_marco_teorico_hipotesis__04",
@@ -5352,7 +5743,8 @@
           "average_words": 38,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_15_marco_teorico_hipotesis__05",
@@ -5364,7 +5756,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_15_marco_teorico_hipotesis__06",
@@ -5376,7 +5769,8 @@
           "average_words": 25,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5400,7 +5794,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_16_conceptos_estadistica__02",
@@ -5412,7 +5807,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_16_conceptos_estadistica__03",
@@ -5424,7 +5820,8 @@
           "average_words": 26,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_16_conceptos_estadistica__04",
@@ -5436,7 +5833,8 @@
           "average_words": 43,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_16_conceptos_estadistica__05",
@@ -5448,7 +5846,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_16_conceptos_estadistica__06",
@@ -5460,7 +5859,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5484,7 +5884,8 @@
           "average_words": 39,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_17_muestreo__02",
@@ -5496,7 +5897,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_17_muestreo__03",
@@ -5508,7 +5910,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_17_muestreo__04",
@@ -5520,7 +5923,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_17_muestreo__05",
@@ -5532,7 +5936,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_17_muestreo__06",
@@ -5544,7 +5949,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5568,7 +5974,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_18_tabulacion_datos__02",
@@ -5580,7 +5987,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_18_tabulacion_datos__03",
@@ -5592,7 +6000,8 @@
           "average_words": 29,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_18_tabulacion_datos__04",
@@ -5604,7 +6013,8 @@
           "average_words": 29,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_18_tabulacion_datos__05",
@@ -5616,7 +6026,8 @@
           "average_words": 26,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_18_tabulacion_datos__06",
@@ -5628,7 +6039,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5652,7 +6064,8 @@
           "average_words": 17,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_19_frecuencias__02",
@@ -5664,7 +6077,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_19_frecuencias__03",
@@ -5676,7 +6090,8 @@
           "average_words": 18,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_19_frecuencias__04",
@@ -5688,7 +6103,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_19_frecuencias__05",
@@ -5700,7 +6116,8 @@
           "average_words": 21,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_19_frecuencias__06",
@@ -5712,7 +6129,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5736,7 +6154,8 @@
           "average_words": 35,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_20_graficas_datos__02",
@@ -5748,7 +6167,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_20_graficas_datos__03",
@@ -5760,7 +6180,8 @@
           "average_words": 17,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_20_graficas_datos__04",
@@ -5772,7 +6193,8 @@
           "average_words": 19,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_20_graficas_datos__05",
@@ -5784,7 +6206,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_20_graficas_datos__06",
@@ -5796,7 +6219,8 @@
           "average_words": 24,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5820,7 +6244,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_21_tablas_cruzadas__02",
@@ -5832,7 +6257,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_21_tablas_cruzadas__03",
@@ -5844,7 +6270,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_21_tablas_cruzadas__04",
@@ -5856,7 +6283,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_21_tablas_cruzadas__05",
@@ -5868,7 +6296,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_21_tablas_cruzadas__06",
@@ -5880,7 +6309,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5904,7 +6334,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_22_tendencia_central__02",
@@ -5916,7 +6347,8 @@
           "average_words": 35,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_22_tendencia_central__03",
@@ -5928,7 +6360,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_22_tendencia_central__04",
@@ -5940,7 +6373,8 @@
           "average_words": 35,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_22_tendencia_central__05",
@@ -5952,7 +6386,8 @@
           "average_words": 37,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_22_tendencia_central__06",
@@ -5964,7 +6399,8 @@
           "average_words": 40,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -5988,7 +6424,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_23_medidas_posicion__02",
@@ -6000,7 +6437,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_23_medidas_posicion__03",
@@ -6012,7 +6450,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_23_medidas_posicion__04",
@@ -6024,7 +6463,8 @@
           "average_words": 17,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_23_medidas_posicion__05",
@@ -6036,7 +6476,8 @@
           "average_words": 21,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_23_medidas_posicion__06",
@@ -6048,7 +6489,8 @@
           "average_words": 29,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -6072,7 +6514,8 @@
           "average_words": 25,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_24_dispersion__02",
@@ -6084,7 +6527,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_24_dispersion__03",
@@ -6096,7 +6540,8 @@
           "average_words": 23,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_24_dispersion__04",
@@ -6108,7 +6553,8 @@
           "average_words": 24,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_24_dispersion__05",
@@ -6120,7 +6566,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_24_dispersion__06",
@@ -6132,7 +6579,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -6156,7 +6604,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_25_medidas_forma__02",
@@ -6168,7 +6617,8 @@
           "average_words": 29,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_25_medidas_forma__03",
@@ -6180,7 +6630,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_25_medidas_forma__04",
@@ -6192,7 +6643,8 @@
           "average_words": 36,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_25_medidas_forma__05",
@@ -6204,7 +6656,8 @@
           "average_words": 31,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_25_medidas_forma__06",
@@ -6216,7 +6669,8 @@
           "average_words": 34,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -6240,7 +6694,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_26_estadistica_excel__02",
@@ -6252,7 +6707,8 @@
           "average_words": 33,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_26_estadistica_excel__03",
@@ -6264,7 +6720,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_26_estadistica_excel__04",
@@ -6276,7 +6733,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_26_estadistica_excel__05",
@@ -6288,7 +6746,8 @@
           "average_words": 26,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_26_estadistica_excel__06",
@@ -6300,7 +6759,8 @@
           "average_words": 30,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
@@ -6324,7 +6784,8 @@
           "average_words": 25,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_27_estadistica_spss__02",
@@ -6336,7 +6797,8 @@
           "average_words": 24,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_27_estadistica_spss__03",
@@ -6348,7 +6810,8 @@
           "average_words": 22,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_27_estadistica_spss__04",
@@ -6360,7 +6823,8 @@
           "average_words": 28,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_27_estadistica_spss__05",
@@ -6372,7 +6836,8 @@
           "average_words": 27,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         },
         {
           "id": "salud_27_estadistica_spss__06",
@@ -6384,12 +6849,16 @@
           "average_words": 17,
           "academic_review": "pending",
           "original_logo_verified": false,
-          "generative_art_verified": false
+          "generative_art_verified": false,
+          "format": "interactive-mind-map"
         }
       ],
       "priority": 2,
       "workflow_status": "requires_academic_and_visual_review",
       "next_action": "Contrast the actual chapter with its objectives; author missing mechanisms, relationships, comparisons and reasoned practice. Verify original branding and generated illustrations."
     }
-  ]
+  ],
+  "format_note": "Legacy detailed_maps counts catalog resources. Curated illustrated sheets belong to Intocables; native maps remain in Mapas mentales.",
+  "illustrated_sheets": 14,
+  "native_detailed_maps": 474
 }

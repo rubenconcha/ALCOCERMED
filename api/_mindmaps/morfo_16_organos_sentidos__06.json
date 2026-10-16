@@ -1,1 +1,373 @@
-{"id":"morfo_16_organos_sentidos__06","title":"Visión","topic":"Órganos de los sentidos","sections":[{"title":"Óptica","color":"#d76387","groups":[{"title":"Óptica · explicación","items":[{"title":"Idea principal","text":"Las estructuras oculares enfocan la luz."},{"title":"Desarrollo","text":"En animales con visión panorámica, casi 100% de las fibras nerviosas ópticas del ojo derecho se decusan hacia el encéfalo izquierdo y viceversa.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":654,"bbox":[310.4,555.94,569.45,624.93]}}]}]},{"title":"Retina","color":"#d76387","groups":[{"title":"Retina · explicación","items":[{"title":"Idea principal","text":"Fotorreceptores convierten luz en señales."},{"title":"Desarrollo","text":"Un cristalino más convexo refracta la luz con más fuerza y enfoca los rayos de luz divergentes en la retina. La distancia más cercana a la que puede estar enfocado un objeto es el punto de visión cercano. Depende de la flexibilidad del cristalino, que se endurece con la edad; por tanto, el punto cercano promedio es de casi 9 cm a los 10 años de edad y de 83 cm a los 60 años.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":645,"bbox":[345.4,373.49,586.45,574.44]}}]}]},{"title":"Enfoque","color":"#d76387","groups":[{"title":"Enfoque · explicación","items":[{"title":"Idea principal","text":"Córnea y cristalino refractan luz; la acomodación modifica la curvatura del cristalino."},{"title":"Desarrollo","text":"Cuando la luz pasa del aire a la córnea, el índice de refracción cambia en 0.38; pero cuando pasa del humor acuoso al cristalino, el índice de refracción sólo cambia 0.07. Por tanto, la córnea refracta la luz más que el cristalino. Éste sólo afina la imagen, sobre todo cuando se cambia el enfoque entre objetivos cercanos y lejanos.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":644,"bbox":[310.4,482.91,569.44,551.89]}}]}]},{"title":"Bastones y conos","color":"#d76387","groups":[{"title":"Bastones y conos · explicación","items":[{"title":"Idea principal","text":"Los bastones favorecen visión con poca luz; los conos permiten color y mayor agudeza visual."},{"title":"Desarrollo","text":"Es posible que el lector se pregunte por qué se tienen bastones y conos, por qué no se cuenta tan sólo con un tipo de célula receptora que produzca una visión a color detallada de día y de noche. La teoría de la duplicidad de la visión sostiene que un solo sistema de receptores no puede producir alta sensitividad y resolución. Se requiere un tipo de célula y de circuito neural que dé visión nocturna sensitiva y un tipo diferente que ofrezca visión diurna de alta resolución.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":651,"bbox":[56.69,633.83,315.74,726.81]}}]}]}],"assets":{"image":"/assets/mindmaps/premium-illustrations/morfo_16_organos_sentidos__06.webp","alt":"FIGURA 16.30 Principios de refracción. a) Un medio refractario no desvía los rayos de luz que lo golpean en un ángulo de 90º, pero sí los rayos que entran o salen en un ángulo distinto. b) Índices de refracción del medio desde el aire hasta la retina. Cuanto mayor es la diferencia entre los índices de dos medios, mayor es la fuerza con que se refractan los rayos de luz cuando pasan de uno al otro. En la visión, la mayor parte de la refracción (enfoque) ocurre cuando la luz pasa del aire a la córnea. El cristalino sólo hace ajustes finos en la imagen.","download":"/api/mindmap?id=morfo_16_organos_sentidos__06&format=image","filename":"morfo_16_organos_sentidos__06-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":16,"pdfPages":[610,660],"imagePdfPage":637}}}
+{
+  "id": "morfo_16_organos_sentidos__06",
+  "title": "Visión: del ojo a la corteza",
+  "topic": "Órganos de los sentidos",
+  "sections": [
+    {
+      "title": "Anatomía y medios ópticos",
+      "groups": [
+        {
+          "title": "Anatomía y medios ópticos",
+          "items": [
+            {
+              "title": "Tres túnicas del globo ocular",
+              "text": "La túnica fibrosa comprende esclerótica y córnea; la vascular o úvea incluye coroides, cuerpo ciliar e iris; la interna contiene la retina. Cada capa tiene funciones distintas: soporte y transparencia anterior, nutrición y regulación óptica, y recepción/procesamiento de señales. No son tres nombres intercambiables de la retina.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 641,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Trayecto de la luz",
+              "text": "La luz atraviesa córnea, humor acuoso, pupila, cristalino y cuerpo vítreo para alcanzar la retina. La córnea aporta la mayor refracción; el cristalino ajusta el enfoque. La pupila es la abertura del iris, no una lente independiente, y la retina recibe la imagen después de atravesar esos medios transparentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 642,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Humor acuoso y cámaras",
+              "text": "El cuerpo ciliar secreta humor acuoso hacia la cámara posterior; el líquido cruza la pupila, pasa a la cámara anterior y se drena hacia el seno venoso escleral. La cámara posterior está entre iris y cristalino, mientras la gran cavidad detrás del cristalino contiene vítreo. No confundas ambos espacios.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 642,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Fóvea, mácula y disco óptico",
+              "text": "La fóvea ocupa el centro de la mácula y permite visión muy detallada. El disco óptico es el lugar de salida de axones y paso de vasos, sin fotorreceptores para formar imagen: origina el punto ciego. Son regiones retinianas diferentes; la mayor agudeza no se localiza en el disco de salida del nervio.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 643,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#429243"
+    },
+    {
+      "title": "Enfoque, pupila y acomodación",
+      "groups": [
+        {
+          "title": "Enfoque, pupila y acomodación",
+          "items": [
+            {
+              "title": "Córnea y cristalino: contribuciones distintas",
+              "text": "La córnea desvía intensamente los rayos al pasar del aire al ojo; el cristalino afina el enfoque, sobre todo al cambiar la distancia del objeto. Una imagen nítida requiere que el foco coincida con la retina. Cambiar solamente la cantidad de luz mediante la pupila no sustituye la refracción y la acomodación.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 644,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Visión cercana: tres ajustes",
+              "text": "La respuesta de cerca combina convergencia de los ojos, constricción de las pupilas y acomodación del cristalino. La convergencia orienta ambos ejes hacia el mismo objeto; la pupila pequeña reduce rayos periféricos; el cristalino más convexo ayuda a enfocar rayos divergentes de un objeto cercano.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 645,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Músculo ciliar y ligamento",
+              "text": "Al mirar de cerca se contrae el músculo ciliar, disminuye la tensión del ligamento suspensorio y el cristalino adquiere mayor convexidad. En visión lejana ocurre el patrón inverso y se aplana. No dibujes contracción ciliar tensando más el ligamento para visión cercana: invierte la relación mecánica descrita.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 646,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Reflejo pupilar y percepción",
+              "text": "La luz puede activar rutas hacia la región pretectal y una salida parasimpática que viaja por el III par hasta el ganglio ciliar y el constrictor pupilar. La respuesta consensual afecta ambas pupilas. Esta vía refleja debe distinguirse de la ruta que termina en corteza occipital para visión consciente.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 644,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#267dd0"
+    },
+    {
+      "title": "Retina: células y ubicación",
+      "groups": [
+        {
+          "title": "Retina: células y ubicación",
+          "items": [
+            {
+              "title": "Epitelio pigmentario y fotorreceptores",
+              "text": "El epitelio pigmentario está junto a los segmentos externos de bastones y conos, hacia la pared posterior. Absorbe luz sobrante y participa en la eliminación de discos receptores antiguos. Los segmentos externos contienen pigmentos; las regiones internas albergan organelos y se continúan con la zona celular y sináptica.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 647,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Bastones: sensibilidad con luz tenue",
+              "text": "Los bastones contienen rodopsina y participan en visión escotópica sin discriminación de color. Su convergencia permite sumar señales débiles, a costa de menor resolución espacial. La sensibilidad nocturna no significa que cada bastón sea responsable de identificar por separado todos los detalles de una imagen fina.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 651,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Conos: color y agudeza",
+              "text": "Los conos permiten visión fotópica y discriminación del color. En la fóvea hay alta resolución y poca convergencia; fuera de ella la organización cambia. Esta edición sitúa los máximos de sensibilidad de S, M y L en 420, 531 y 558 nm. Son sensibilidades superpuestas, no tres detectores de colores exclusivos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 652,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Bipolares, ganglionares y salida",
+              "text": "Las células bipolares reciben la información de los receptores y la transmiten hacia ganglionares. Las ganglionares están hacia el lado vítreo y sus axones forman el nervio óptico. El trayecto de la señal receptora hacia estas células no es el mismo que el recorrido de entrada de los rayos de luz.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 648,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Horizontales, amacrinas y glía",
+              "text": "Horizontales y amacrinas establecen conexiones laterales entre circuitos retinianos y contribuyen al contraste, contornos y cambios de iluminación. La glía da soporte al tejido. Incluir estas células evita reducir la retina a una cadena de tres nombres que omite el procesamiento que ocurre antes de salir del ojo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 648,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#8c59b0"
+    },
+    {
+      "title": "Fototransducción y adaptación",
+      "groups": [
+        {
+          "title": "Fototransducción y adaptación",
+          "items": [
+            {
+              "title": "Pigmento: opsina y retinal",
+              "text": "La rodopsina de los bastones contiene opsina y retinal, derivado de vitamina A. La luz modifica la configuración del retinal y activa una cascada asociada al pigmento; la figura del libro incluye la reducción del cGMP. La regeneración recupera pigmento funcional, por lo que absorción de luz y recuperación son procesos diferentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 649,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Oscuridad y luz: cambia la secreción",
+              "text": "En oscuridad el bastón libera glutamato de forma sostenida. La luz reduce esa liberación y cambia la respuesta de las células bipolares. El ejemplo de la figura 16.38 muestra una bipolar que se activa cuando disminuye la inhibición, pero el libro aclara que otras bipolares responden de manera diferente; no universalices un solo circuito.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 650,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "La señal del nervio óptico",
+              "text": "Las respuestas graduadas de los receptores y de los circuitos retinianos modifican la frecuencia de actividad de las células ganglionares. Sus axones conducen la salida hacia el encéfalo. Así se distinguen absorción de luz, comunicación sináptica dentro de la retina y conducción del potencial de acción fuera de ella.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 651,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Adaptación a luz y oscuridad",
+              "text": "Al pasar a luz intensa cambian la pupila y el estado de los pigmentos; los conos predominan en iluminación alta. Al entrar en oscuridad, la recuperación de rodopsina aumenta progresivamente la sensibilidad de los bastones. El texto aproxima veinte a treinta minutos para máxima sensibilidad nocturna; el ajuste no depende sólo del diámetro pupilar.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 651,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#e58929"
+    },
+    {
+      "title": "Proyección y percepción visual",
+      "groups": [
+        {
+          "title": "Proyección y percepción visual",
+          "items": [
+            {
+              "title": "Nervio, quiasma y cintillas",
+              "text": "Los axones ganglionares salen por el nervio óptico y llegan al quiasma. Cruzan las fibras procedentes de las mitades nasales de las retinas, mientras las temporales permanecen del mismo lado. Las cintillas llevan información de un hemicampo visual, no simplemente todo lo que ve un único ojo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 654,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Tálamo y corteza occipital",
+              "text": "La mayor parte de la información para visión consciente releva en el núcleo geniculado lateral del tálamo. Desde allí las radiaciones ópticas alcanzan la corteza visual primaria del lóbulo occipital. El esquema y la figura 16.43 muestran destinos a ambos lados; no se interpreta como una terminación exclusiva en el tálamo izquierdo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 654,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Campo visual contralateral",
+              "text": "El hemisferio derecho procesa el hemicampo visual izquierdo y el izquierdo, el derecho. Esta organización se explica combinando la proyección óptica de la imagen sobre cada hemirretina con el cruce parcial del quiasma. No significa que el ojo derecho proyecte únicamente al hemisferio izquierdo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 654,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Profundidad e integración binocular",
+              "text": "Los dos ojos observan un objeto desde ángulos diferentes. La comparación de sus imágenes en campos superpuestos permite estimar profundidad. La convergencia y la correspondencia de las imágenes son importantes: una alteración de alineación puede producir visión doble aunque la retina de cada ojo siga recibiendo luz.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 653,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#209caa"
+    },
+    {
+      "title": "Alteraciones: mecanismo y estructura",
+      "groups": [
+        {
+          "title": "Alteraciones: mecanismo y estructura",
+          "items": [
+            {
+              "title": "Miopía e hipermetropía",
+              "text": "En la miopía el foco queda delante de la retina; en la hipermetropía, detrás. El cuadro relaciona estos patrones con un ojo relativamente largo o corto. La figura 16.33 distingue corrección divergente cóncava para miopía y convergente convexa para hipermetropía. Se sigue la figura, ya que una frase del cuadro de esta edición invierte el término para miopía.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 646,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Presbicia y astigmatismo",
+              "text": "La presbicia es reducción de la capacidad de acomodación de cerca por pérdida de flexibilidad del cristalino con la edad. El astigmatismo implica diferente enfoque según el plano de entrada de la luz, asociado a la forma de la córnea en el texto. Son mecanismos diferentes: no todo desenfoque se explica por longitud del globo ocular.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 646,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Catarata: transparencia del cristalino",
+              "text": "La catarata consiste en opacificación del cristalino, que altera el paso de luz y la calidad de imagen. El problema central es la transparencia del medio, no una papila, un receptor gustativo ni un cambio de territorio del nervio óptico. Esta relación estructura-función permite distinguirla de un defecto puramente refractivo.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 642,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Glaucoma: relación con humor acuoso",
+              "text": "El recuadro del libro explica un mecanismo de daño asociado a alteración del drenaje del humor acuoso y aumento de presión intraocular. Se presenta como el mecanismo descrito en esta edición, sin convertirlo en una definición exhaustiva de toda forma de glaucoma ni añadir criterios diagnósticos o tratamientos de otras fuentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 642,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Retina, color y alineación",
+              "text": "El libro también trata desprendimiento de retina, alteración de fotopsinas en daltonismo y diplopía por falta de alineación adecuada. Localiza cada problema: separación del tejido receptor, discriminación cromática o correspondencia binocular. La misma queja de «ver mal» puede relacionarse con estructuras y procesos muy diferentes.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 652,
+                "kind": "original_synthesis",
+                "pdfPages": [
+                  643,
+                  645,
+                  652
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#d76387"
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_16_organos_sentidos__06-r2.webp",
+    "alt": "Figura 16.25: corte sagital del ojo",
+    "download": "/api/mindmap?id=morfo_16_organos_sentidos__06&format=image",
+    "filename": "morfo_16_organos_sentidos__06-Prepa-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 16,
+      "pdfPages": [
+        641,
+        642,
+        643,
+        644,
+        645,
+        646,
+        647,
+        648,
+        649,
+        650,
+        651,
+        652,
+        653,
+        654
+      ],
+      "book_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+      "kind": "original_synthesis"
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "scope": "Specific requested anatomy, cell/receptor locations, physiology, central routes and vision alterations. Supplied Saladin only. Native six-branch interactive design preserved. Full chapter approval pending."
+  },
+  "format": "interactive-mind-map",
+  "content_revision": 2
+}

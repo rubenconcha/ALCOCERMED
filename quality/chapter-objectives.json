@@ -211,7 +211,10 @@
             613
           ],
           "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "status": "audio_requested_targeted_expansion_reviewed_whole_objective_review_pending",
+          "revised_native_maps": [
+            "morfo_16_organos_sentidos__01"
+          ]
         },
         {
           "domain": "Terminaciones y vías somatosensitivas",
@@ -224,7 +227,10 @@
             616
           ],
           "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "status": "audio_requested_targeted_expansion_reviewed_whole_objective_review_pending",
+          "revised_native_maps": [
+            "morfo_16_organos_sentidos__01"
+          ]
         },
         {
           "domain": "Dolor y sus mecanismos",
@@ -252,9 +258,12 @@
           "targeted_expansion_maps": [
             "morfo_16_organos_sentidos__10"
           ],
-          "status": "targeted_expansion_available_full_objective_review_pending",
+          "status": "audio_requested_targeted_expansion_reviewed_whole_objective_review_pending",
           "targeted_summary_pages": [
             11
+          ],
+          "revised_native_maps": [
+            "morfo_16_organos_sentidos__03"
           ]
         },
         {
@@ -286,9 +295,12 @@
             629
           ],
           "targeted_expansion_maps": [],
-          "status": "targeted_expansion_available_full_objective_review_pending",
+          "status": "audio_requested_targeted_expansion_reviewed_whole_objective_review_pending",
           "targeted_summary_pages": [
             14
+          ],
+          "revised_native_maps": [
+            "morfo_16_organos_sentidos__04"
           ]
         },
         {
@@ -304,9 +316,12 @@
           "targeted_expansion_maps": [
             "morfo_16_organos_sentidos__08"
           ],
-          "status": "targeted_expansion_available_full_objective_review_pending",
+          "status": "audio_requested_targeted_expansion_reviewed_whole_objective_review_pending",
           "targeted_summary_pages": [
             14
+          ],
+          "revised_native_maps": [
+            "morfo_16_organos_sentidos__04"
           ]
         },
         {
@@ -320,7 +335,10 @@
             633
           ],
           "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "status": "audio_requested_targeted_expansion_reviewed_whole_objective_review_pending",
+          "revised_native_maps": [
+            "morfo_16_organos_sentidos__04"
+          ]
         },
         {
           "domain": "Equilibrio vestibular e integración",
@@ -351,7 +369,10 @@
             645
           ],
           "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "status": "audio_requested_targeted_expansion_reviewed_whole_objective_review_pending",
+          "revised_native_maps": [
+            "morfo_16_organos_sentidos__06"
+          ]
         },
         {
           "domain": "Retina, transducción, adaptación y color",
@@ -366,9 +387,12 @@
           "targeted_expansion_maps": [
             "morfo_16_organos_sentidos__07"
           ],
-          "status": "targeted_expansion_available_full_objective_review_pending",
+          "status": "audio_requested_targeted_expansion_reviewed_whole_objective_review_pending",
           "targeted_summary_pages": [
             13
+          ],
+          "revised_native_maps": [
+            "morfo_16_organos_sentidos__06"
           ]
         },
         {
@@ -382,7 +406,10 @@
             656
           ],
           "targeted_expansion_maps": [],
-          "status": "existing_material_requires_full_objective_review"
+          "status": "audio_requested_targeted_expansion_reviewed_whole_objective_review_pending",
+          "revised_native_maps": [
+            "morfo_16_organos_sentidos__06"
+          ]
         }
       ]
     }

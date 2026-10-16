@@ -22,7 +22,7 @@ Usar la herramienta integrada de generación de imágenes para ilustraciones y c
 
 1. Leer este documento, `material-audit.json` y `progress.json`. Incorporar las observaciones verificadas de los audios privados si la transcripción local está disponible en `tmp/doctor-review`; no divulgar ni subir esas grabaciones o transcripciones al sitio público.
 2. Elegir el objetivo pendiente de mayor prioridad y revisar la fuente completa de ese apartado. Registrar la brecha concreta antes de escribir.
-3. Completar un lote coherente y útil: explicación, mapa específico ilustrado y práctica asociada. No rehacer todo con un generador genérico ni detenerse en un inventario sin producir material.
+3. Completar un lote coherente y útil: explicación, recurso con formato adecuado y práctica asociada. Las láminas e infografías generativas corresponden a Intocables, no a Mapas mentales. No rehacer todo con un generador genérico ni detenerse en un inventario sin producir material.
 4. Revisar el lote en una segunda pasada crítica: exactitud, profundidad, coherencia de respuestas y distractores, originalidad y diseño. Registrar defectos y corregirlos. Identificar esta revisión como revisión automatizada; nunca atribuir aprobación a la doctora sin recibirla.
 5. Verificar aplicación y permisos con pruebas pertinentes, incluyendo apertura, descarga, enlaces, móvil/escritorio y acceso gratuito denegado. No modificar membresías, roles ni datos de estudiantes.
 6. Guardar material verificable y actualizar `progress.json` con fuentes, archivos, objetivos cubiertos, defectos pendientes, pruebas y siguiente acción. Nunca declarar completado un capítulo por alcanzar una cifra.
@@ -45,3 +45,15 @@ El primer lote incorpora dos mapas originales y 48 explicaciones, con ocho casos
 ## Simulacros y parciales confirmados
 
 El usuario confirmó Morfofunción 1–11 para primer parcial y 12–20 para segundo; Biología Celular 1–6 y 7–12, respectivamente. El final es acumulativo de todo el programa. Salud sigue el cronograma guardado SP01P1–SP06P1 / SP07P2–SP12P2. Los nuevos modelos por parcial requieren revisión por pregunta y validación contra esos rangos, además de fuentes y clave. Conservar el archivo histórico; no usar solo el año o rótulo para clasificar una prueba actual. En Simulacros usar nombres numerados y menú por parcial, sin exhibir el total de modelos. Consultar `quality/simulacro-scope-audit.json`.
+
+## Formatos y ubicación corregidos por el usuario
+
+Las láminas, infografías y composiciones ilustradas de estudio van en **Intocables → Láminas ilustradas**. No publicarlas en Mapas mentales aunque incluyan varios cuadros o un esquema central. Mapas mentales queda reservado para mapas con conceptos y conexiones propios de ese formato. Conservar los identificadores y rutas protegidas existentes para no romper tarjetas, preguntas ni descargas; la clasificación visible depende del formato. Las entradas `curated` del catálogo histórico se muestran en Intocables y se excluyen del listado de mapas. La automatización fue actualizada con esta distinción explícita.
+
+## Corrección vigente: textos oficiales, diseño aprobado y pausa
+
+El usuario restringió todo nuevo contenido a los tres PDF oficiales registrados en `quality/official-texts.json`. No incorporar fuentes suplementarias ni completar datos con otras bibliografías. En caso de contradicción interna, contrastar texto, cuadro y figura del mismo libro y registrar la decisión.
+
+El diseño aprobado de Mapas mentales es el visor nativo: imagen central del texto pertinente, seis ramas conectadas de colores y controles + para abrir detalles. No sustituirlo por un póster generativo. La ampliación se desarrolla dentro de las ramas y conserva referencias de página. Las láminas ilustradas continúan en Intocables.
+
+La supervisión recurrente está PAUSADA por petición del usuario. Este lote es trabajo puntual solicitado; no reactivar la automatización ni afirmar que el Dot existe. Audio nuevo revisado mediante transcripción privada: separar sentidos generales/receptores, gusto, audición y visión con anatomía, fisiología, vías y alteraciones visuales del libro.

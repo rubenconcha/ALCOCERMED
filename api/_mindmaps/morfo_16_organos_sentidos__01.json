@@ -1,1 +1,300 @@
-{"id":"morfo_16_organos_sentidos__01","title":"Receptores","topic":"Órganos de los sentidos","sections":[{"title":"Transducción","color":"#429243","groups":[{"title":"Transducción · explicación","items":[{"title":"Idea principal","text":"Convierten estímulos en señales nerviosas."},{"title":"Desarrollo","text":"¿Cuáles son las similitudes entre la transducción en los conductos semicirculares y en el sáculo y el utrículo?","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":638,"bbox":[48.68,275.29,267.02,295.82]}}]}]},{"title":"Tipos","color":"#429243","groups":[{"title":"Tipos · explicación","items":[{"title":"Idea principal","text":"Se clasifican por estímulo y localización."},{"title":"Desarrollo","text":"Un receptor es cualquier estructura especializada para detectar un estímulo. Algunos receptores son simples terminaciones nerviosas, como los del calor y el dolor, en tanto que otros son verdaderos órganos de los sentidos. Un órgano de los sentidos es una estructura compuesta por tejido nervioso y otros tejidos que mejoran su respuesta a ciertos tipos de estímulo. Los tejidos accesorios pueden incluir tejido epitelial, muscular y conjuntivo.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":611,"bbox":[327.4,127.23,586.45,244.2]}}]}]},{"title":"De estímulo a señal eléctrica","color":"#429243","groups":[{"title":"De estímulo a señal eléctrica · explicación","items":[{"title":"Idea principal","text":"Un receptor transforma energía del estímulo en una señal eléctrica."},{"title":"Desarrollo","text":"El efecto inicial de un estímulo en una célula sensitiva es una pequeña carga eléctrica local denominada potencial de receptor. En muchos casos —como en los sentidos del tacto y el olfato— la célula sensitiva es una neurona. Si el potencial de receptor es bastante fuerte, la neurona activa una descarga de potenciales de acción, con lo cual genera una señal nerviosa para el sistema nervioso central (CNS).","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":611,"bbox":[327.4,364.21,586.45,505.17]}}]}]},{"title":"Adaptación","color":"#429243","groups":[{"title":"Adaptación · explicación","items":[{"title":"Idea principal","text":"La respuesta puede disminuir durante un estímulo sostenido; varía según el receptor."},{"title":"Desarrollo","text":"Todos los receptores tienen la propiedad de adaptación sensitiva: si el estímulo es prolongado, la activación de la neurona se vuelve más lenta con el tiempo y con ello se tiene menos conciencia del estímulo. La adaptación al agua caliente es un ejemplo. Los receptores se clasifican de acuerdo con la rapidez de su adaptación. Los receptores fásicos generan una gran cantidad de potenciales de acción cuando se les estimula por primera vez y luego se adaptan con gran rapidez y reducen en gran medida el envío de señales, o lo detienen por completo, aunque el estímulo continúe.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":613,"bbox":[74.69,70.83,315.74,355.76]}}]}]}],"assets":{"image":"/assets/mindmaps/premium-illustrations/morfo_16_organos_sentidos__01.webp","alt":"FIGURA 16.1 Campos receptivos. a) Neurona con un campo receptivo grande, como las que se encuentran en la piel de la espalda. Si se toca la piel en dos lugares muy cercanos dentro de este campo receptivo, el encéfalo lo percibe como un solo punto de contacto. b) Neuronas con campos receptivos pequeños, como las que se encuentran en la punta de los dedos. Es probable que aquí dos puntos cercanos de contacto estimulen dos neuronas diferentes y que se perciban como contactos separados.","download":"/api/mindmap?id=morfo_16_organos_sentidos__01&format=image","filename":"morfo_16_organos_sentidos__01-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":16,"pdfPages":[610,660],"imagePdfPage":637}}}
+{
+  "id": "morfo_16_organos_sentidos__01",
+  "title": "Sentidos generales y receptores",
+  "topic": "Órganos de los sentidos",
+  "sections": [
+    {
+      "title": "Panorama y función",
+      "groups": [
+        {
+          "title": "Panorama y función",
+          "items": [
+            {
+              "title": "Generales: receptores distribuidos",
+              "text": "Tacto, presión, estiramiento, temperatura y dolor se detectan en piel, músculos, tendones, articulaciones y vísceras. Su distribución extensa los distingue de los sentidos especiales. La información puede producir una sensación consciente o participar en reflejos y regulación interna sin llamar nuestra atención.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 613,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Especiales: órganos y partes",
+              "text": "Visión: ojo y retina. Audición: oído externo, medio e interno, con receptores en la cóclea. Equilibrio: utrículo, sáculo y conductos semicirculares. Gusto: botones gustativos, principalmente linguales. Olfato: mucosa olfativa del techo nasal. Son modalidades distintas, con órganos especializados e inervación por pares craneales.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 613,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Por qué importan los receptores",
+              "text": "Un receptor detecta una condición física o química y convierte la energía del estímulo en una señal eléctrica. El sistema nervioso utiliza esas señales para localizar cambios, reconocer el entorno y regular respuestas. Un órgano sensitivo incluye además tejidos accesorios que favorecen la detección; receptor y órgano no son sinónimos.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 611,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#429243"
+    },
+    {
+      "title": "Sin cápsula: tacto y temperatura",
+      "groups": [
+        {
+          "title": "Sin cápsula: tacto y temperatura",
+          "items": [
+            {
+              "title": "Libres: piel y mucosas",
+              "text": "Son terminaciones sensitivas sin una cubierta conjuntiva especializada. Son abundantes en piel y mucosas y participan en dolor, calor y frío. La modalidad depende de la especialización de la terminación, no de que toda terminación libre detecte obligatoriamente los tres estímulos a la vez.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 614,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Merkel: epidermis basal",
+              "text": "El disco táctil es una terminación aplanada asociada a una célula de Merkel en el estrato basal de la epidermis. Responde al contacto ligero y contribuye a reconocer bordes, formas y textura. Su adaptación lenta permite mantener información mientras continúa el contacto: es un receptor tónico.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 614,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Pilosos: alrededor del folículo",
+              "text": "Las dendritas rodean la base del folículo y responden cuando un contacto dobla el pelo. La adaptación rápida destaca el movimiento nuevo y reduce la señal durante una deformación sostenida. No son corpúsculos de Meissner: en este caso el desplazamiento del propio pelo transmite el estímulo a la terminación.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 614,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#267dd0"
+    },
+    {
+      "title": "Con cápsula: ubicación y función",
+      "groups": [
+        {
+          "title": "Con cápsula: ubicación y función",
+          "items": [
+            {
+              "title": "Meissner: papilas dérmicas",
+              "text": "Los corpúsculos táctiles se concentran en piel muy sensible sin pelo, como dedos y palmas. Su ubicación superficial y adaptación fásica favorecen detectar contactos ligeros y cambios de textura. No deben confundirse con los discos de Merkel, que se asocian a la capa basal epidérmica y responden de forma más sostenida.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 615,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Krause: mucosas",
+              "text": "Los bulbos terminales son terminaciones rodeadas por tejido conjuntivo. El libro los sitúa en mucosas como labios y lengua, y en la conjuntiva, con funciones similares a los corpúsculos táctiles. Aquí se clasifican por la descripción del texto: no se les atribuye automáticamente la función exclusiva de receptor de frío.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 615,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Pacini: dermis profunda y otros tejidos",
+              "text": "Los corpúsculos laminares poseen una terminación central rodeada por capas concéntricas. El texto los describe como fásicos, relacionados con presión profunda, vibración y estiramiento. Se encuentran en dermis profunda, cápsulas articulares, periostio y algunas vísceras. Su localización contrasta con los receptores cutáneos más superficiales.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 615,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Ruffini: dermis y cápsulas articulares",
+              "text": "Los corpúsculos bulbosos son cápsulas alargadas presentes en dermis, tejido subcutáneo y cápsulas articulares. Detectan contacto o presión mantenidos, estiramiento cutáneo y movimiento articular. Su carácter tónico ayuda a conservar información sobre una deformación que persiste, en vez de señalar solamente el cambio inicial.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 615,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#8c59b0"
+    },
+    {
+      "title": "Propiocepción y clasificación",
+      "groups": [
+        {
+          "title": "Propiocepción y clasificación",
+          "items": [
+            {
+              "title": "Husos musculares y órganos tendinosos",
+              "text": "Los husos se localizan en músculos estriados y detectan su estiramiento. Los órganos tendinosos se encuentran en tendones e informan de la tensión ejercida sobre ellos. Ambos aportan información cinestésica: distinguir su ubicación evita confundir longitud muscular con tensión tendinosa como si fueran la misma variable.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 615,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Por modalidad del estímulo",
+              "text": "Termorreceptores: temperatura; mecanorreceptores: deformación, presión, contacto o vibración; quimiorreceptores: composición química; fotorreceptores: luz; nociceptores: estímulos nocivos. Esta clasificación no sustituye la anatómica. Un receptor puede ser a la vez mecanorreceptor, encapsulado y propioceptor, porque cada palabra describe un criterio diferente.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 613,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Por origen del estímulo",
+              "text": "Los exterorreceptores informan del entorno externo; los interorreceptores, de condiciones viscerales; los propioceptores, de posición y movimiento corporal. Piel, víscera y tendón ayudan a identificar el origen, pero deben relacionarse con la función concreta. No todos los estímulos internos llegan a convertirse en una sensación consciente.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 613,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#e58929"
+    },
+    {
+      "title": "Transducción y código sensitivo",
+      "groups": [
+        {
+          "title": "Transducción y código sensitivo",
+          "items": [
+            {
+              "title": "Del estímulo al potencial de receptor",
+              "text": "El estímulo genera un cambio eléctrico local. Si la célula receptora es una neurona y alcanza la condición necesaria, origina potenciales de acción en su vía aferente. En gusto y audición la célula receptora es epitelial: modifica su liberación de neurotransmisor y activa una neurona sensitiva adyacente.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 611,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Modalidad y ubicación",
+              "text": "La modalidad se reconoce por la vía activada y su origen, no porque cada sentido tenga potenciales de acción de distinta forma. La ubicación depende de qué receptores y campos receptivos se activan. Campos pequeños y una mayor densidad de aferentes permiten discriminar contactos próximos con más precisión.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 612,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Intensidad y duración",
+              "text": "La intensidad se representa mediante cambios en frecuencia de descarga y en el conjunto de fibras reclutadas. La duración se relaciona con el patrón de actividad a lo largo del tiempo. Una señal más intensa no equivale a que cada potencial de acción individual tenga una amplitud arbitrariamente mayor.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 612,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#209caa"
+    },
+    {
+      "title": "Adaptación y llegada al SNC",
+      "groups": [
+        {
+          "title": "Adaptación y llegada al SNC",
+          "items": [
+            {
+              "title": "Fásicos frente a tónicos",
+              "text": "Los fásicos responden con fuerza al cambio inicial y se adaptan con rapidez, como los receptores pilosos. Los tónicos mantienen la información durante más tiempo, como los discos de Merkel y muchos propioceptores. Adaptación significa cambio de respuesta ante un estímulo sostenido; no significa que el estímulo haya desaparecido.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 613,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Ruta consciente: receptor a corteza",
+              "text": "La mayoría de las vías somatosensitivas se organiza en neuronas de primer, segundo y tercer orden. La información alcanza relevos en médula o tronco encefálico, luego el tálamo y finalmente la corteza somatosensitiva. Los puntos de cruce varían entre vías: no se debe dibujar toda modalidad cruzando en un único lugar.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 615,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Cabeza, cuerpo y cerebelo",
+              "text": "En la cabeza participa sobre todo el trigémino para la sensibilidad somática; desde el cuerpo entran aferentes en la médula espinal. Las señales destinadas a percepción consciente y las cinestésicas hacia el cerebelo tienen destinos diferentes. Por ello, recibir información sensitiva no implica necesariamente hacerse consciente de ella.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 616,
+                "kind": "original_synthesis"
+              }
+            },
+            {
+              "title": "Comprueba la relación estructura-función",
+              "text": "Si un contacto dobla un pelo, relaciona el estímulo con el receptor piloso y su adaptación rápida. Si se mantiene presión sobre un borde, compara la respuesta tónica de Merkel. Para justificar la diferencia debes mencionar dónde se encuentra la terminación, cómo recibe la deformación y qué aspecto temporal de la señal conserva.",
+              "source": {
+                "book": "Saladin: Anatomía y fisiología",
+                "chapter": 16,
+                "pdfPage": 614,
+                "kind": "original_synthesis"
+              }
+            }
+          ]
+        }
+      ],
+      "color": "#d76387"
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/premium-illustrations/morfo_16_organos_sentidos__01-r2.webp",
+    "alt": "Figura 16.2: receptores de los sentidos generales",
+    "download": "/api/mindmap?id=morfo_16_organos_sentidos__01&format=image",
+    "filename": "morfo_16_organos_sentidos__01-Prepa-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin: Anatomía y fisiología",
+      "chapter": 16,
+      "pdfPages": [
+        611,
+        612,
+        613,
+        614,
+        615,
+        616
+      ],
+      "book_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+      "kind": "original_synthesis"
+    }
+  },
+  "review": {
+    "state": "automated_review_passed",
+    "doctor_approved": false,
+    "scope": "Specific requested anatomy, cell/receptor locations, physiology, central routes and vision alterations. Supplied Saladin only. Native six-branch interactive design preserved. Full chapter approval pending."
+  },
+  "format": "interactive-mind-map",
+  "content_revision": 2
+}

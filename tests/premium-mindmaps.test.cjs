@@ -10,7 +10,9 @@ test('77 general maps are free; Sangre and Sentidos and all detailed maps requir
  const start=script.indexOf('async function loadMapasMentales()'),end=script.indexOf('function populateMmMaterias()',start);
  const ctx={mmState:{},MINDMAP_PREMIUM_CATALOG:catalog,setMmState(){},populateMmMaterias(){},populateMmTemas(){},updateIntocStats(){},filterMapas(){},console};ctx.window=ctx;
  vm.runInNewContext(script.slice(start,end),ctx);await ctx.loadMapasMentales();
- assert.equal(ctx.mmState.allMapas.length,79+catalog.length);
+ assert.equal(ctx.mmState.allMapas.length,79+catalog.filter(m=>!m.curated&&m.section!=='intocables').length);
+ assert.ok(ctx.mmState.allMapas.every(m=>!m.curated&&m.section!=='intocables'));
+ assert.ok(catalog.filter(m=>m.curated).every(m=>m.section==='intocables'&&m.format==='illustrated-sheet'));
  const general=ctx.mmState.allMapas.filter(m=>!m.premium||m.general);assert.equal(general.length,79);assert.equal(general.filter(m=>m.acceso_gratis).length,77);assert.equal(general.filter(m=>m.general&&m.premium&&!m.acceso_gratis).length,2);
  for(const m of general){const key=m.general?m.id+'.png':m.url_imagen.split('/').pop(),details=catalog.filter(d=>d.parent_key===key);assert.ok(details.length>=6,key);assert.ok(details.every(d=>d.premium&&!d.acceso_gratis));}
  const topicStart=script.indexOf('function mmTopicKey('),topicEnd=script.indexOf('function populateMmTemas',topicStart);
