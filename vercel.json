@@ -17,6 +17,9 @@
     },
     "api/flashcards.js": {
       "includeFiles": "api/_flashcards/**"
+    },
+    "api/topic-evaluation.js": {
+      "includeFiles": "api/_evaluations/**"
     }
   },
   "headers": [
@@ -97,6 +100,10 @@
     {
       "source": "/api/_flashcards/:path*",
       "destination": "/api/flashcards?invalid=1"
+    },
+    {
+      "source": "/api/_evaluations/:path*",
+      "destination": "/api/topic-evaluation?id=invalid"
     },
     {
       "source": "/api/_simulations/:path*",

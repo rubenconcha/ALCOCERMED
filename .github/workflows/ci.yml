@@ -36,6 +36,8 @@ jobs:
           node --check official-flashcards.js
           node --check api/flashcards.js
           node --test tests/official-flashcards.test.cjs tests/flashcard-pagination.test.cjs tests/flashcard-render.test.cjs tests/flashcard-srs.test.cjs tests/student-library.test.cjs tests/study-depth.test.cjs
+          node --check topic-evaluations.js
+          node --test tests/topic-evaluations.test.cjs tests/past-exams.test.cjs tests/navigation-back.test.cjs
       - name: Check required files
         run: |
           test -f index.html

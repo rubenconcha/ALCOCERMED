@@ -1,0 +1,12 @@
+#evaluacion-screen{max-width:1160px;margin:0 auto;padding:24px 0 50px}
+#evaluacion-screen .past-filters input{font:inherit;color:#192840;border:1px solid #d6e1ec;background:#f7faff;border-radius:12px;padding:12px 16px;min-height:46px;box-sizing:border-box;width:100%}
+#evaluacion-screen .past-filters label{min-width:0;flex:1 1 230px}
+#evaluacion-screen .past-filters select{max-width:100%;width:100%}
+#evaluacion-screen .past-card h3{line-height:1.4;overflow-wrap:anywhere}
+#evaluacion-screen .btn-primary{color:#192840!important}
+#evaluacion-screen .past-card .entrance-eyebrow{line-height:1.7}
+#topic-eval-status{color:#607694}
+.topic-eval-history{margin-top:36px;padding:20px;background:white;border:1px solid #d9e5f0;border-radius:20px}
+.topic-eval-history summary{cursor:pointer;font-weight:700;color:#192840;padding:8px}
+.topic-eval-history .eval-metrics-grid{margin-top:20px}
+@media(max-width:600px){#evaluacion-screen{padding-top:8px}#evaluacion-screen .sim-header{align-items:flex-start}.topic-eval-history{padding:12px}}

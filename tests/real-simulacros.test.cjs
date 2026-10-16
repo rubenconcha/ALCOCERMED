@@ -17,7 +17,7 @@ test('incomplete historical papers and mini formats cannot be selected as comple
  const t=setup();for(const id of ['real:2025-2026-3','real:2024-2025-1','mini','premium-mini']){t.c.clearEntranceExam();t.c.selectEntranceExam(id);assert.equal(t.c.getSelectedEntranceExam(),null);}
  const h=fs.readFileSync('campus.html','utf8'),config=h.slice(h.indexOf('id="sim-config"'),h.indexOf('id="sim-exam"'));
  assert.ok(!config.includes('6</b>')&&!config.includes('40</b>')&&!config.includes('Mini simulacro'));
- const evaluation=h.slice(h.indexOf('id="evaluacion-screen"'));assert.ok(evaluation.includes('id="entrance-blood-depth-simulation"')&&evaluation.includes('startTopicAssessment'));
+ const evaluation=h.slice(h.indexOf('id="evaluacion-screen"'));assert.ok(evaluation.includes('id="topic-eval-grid"')&&evaluation.includes('topic-evaluations.js'));
 });
 test('free access remains limited to the existing free year; locked selection does not fetch questions',async()=>{
  const t=setup({free:true});t.c.clearEntranceExam();t.c.selectEntranceExam('real:2024-2025-2');assert.equal(t.c.getSelectedEntranceExam(),null);assert.ok(t.events.includes('unlock'));assert.equal(t.calls(),0);
