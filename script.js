@@ -737,10 +737,12 @@ function renderCard() {
                 card.style.transition = '';
                 if (deck[currentIndex] !== renderingCard || (typeof currentUser === 'undefined' ? null : currentUser?.id) !== renderingOwner) return;
                 aText.innerText = campo(renderingCard, 'respuesta');
+                if (window.FlashcardWorkspace?.renderAnswer) FlashcardWorkspace.renderAnswer(aText, renderingCard);
             });
         });
     } else {
         aText.innerText = campo(renderingCard, 'respuesta');
+        if (window.FlashcardWorkspace?.renderAnswer) FlashcardWorkspace.renderAnswer(aText, renderingCard);
     }
 
     ankiBtns.classList.add('hidden');
