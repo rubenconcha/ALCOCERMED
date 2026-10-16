@@ -3305,7 +3305,7 @@ window.simNavigate = function (dir) {
 };
 
 window.confirmarSalirSimulacro = function () {
-    if (!confirm('¿salir del simulacro? perderás todo tu progreso.')) return;
+    if (!confirm(simState.mode === 'tema' ? '¿Salir de la evaluación? Se descartarán tus respuestas.' : '¿salir del simulacro? perderás todo tu progreso.')) return;
     clearInterval(simState.timerInterval);
     simState.timerInterval = null;
     if (simState.mode === 'pasado' || simState.mode === 'tema') { simState.preguntas = []; simState.answers = []; returnToExamSelection(); }
