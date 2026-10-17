@@ -139,12 +139,27 @@ def build(pdf_dir=None):
                         raise ValueError('Cuadro incompleto: ' + item_id)
                     if any(len(row) != len(table['columns']) for row in table['rows']):
                         raise ValueError('Columnas del cuadro inconsistentes: ' + item_id)
-                    if source_id != 'morfo' or table['page'] != table['pdf_page'] - 28:
+                    if not isinstance(table.get('page'), int) or not isinstance(table.get('pdf_page'), int) or min(table['page'], table['pdf_page']) < 1:
                         raise ValueError('Referencia del cuadro incorrecta: ' + item_id)
+                    if source_id == 'morfo' and table['page'] != table['pdf_page'] - 28:
+                        raise ValueError('Numeración del cuadro de Saladin incorrecta: ' + item_id)
+                    if source_id == 'biologia' and table['page'] != table['pdf_page']:
+                        raise ValueError('Numeración del cuadro de Biología incorrecta: ' + item_id)
+                    if any(not isinstance(cell, str) or not cell.strip() or len(cell.split()) > 20
+                           for row in [table['columns'], *table['rows']] for cell in row):
+                        raise ValueError('El cuadro contiene una celda vacía o demasiado extensa: ' + item_id)
                     bounds = chapter_bounds.get(normalized(label))
-                    if doc and (not bounds or not bounds[0] <= table['pdf_page'] <= bounds[1]
-                                or normalized(table['evidence']) not in normalized(doc[table['pdf_page'] - 1].get_text())):
-                        raise ValueError('Evidencia del cuadro ausente: ' + item_id)
+                    if doc:
+                        if table['pdf_page'] > len(doc) or (source_id in {'morfo','biologia'}
+                                and (not bounds or not bounds[0] <= table['pdf_page'] <= bounds[1])):
+                            raise ValueError('El cuadro pertenece a otro capítulo: ' + item_id)
+                        excerpts = table.get('evidence')
+                        if not excerpts:
+                            raise ValueError('Falta evidencia del cuadro: ' + item_id)
+                        table_text = normalized(doc[table['pdf_page'] - 1].get_text())
+                        for excerpt in excerpts if isinstance(excerpts, list) else [excerpts]:
+                            if normalized(excerpt) not in table_text:
+                                raise ValueError('Evidencia del cuadro ausente: ' + item_id)
                     cards[-1]['answer_table'] = {key: table[key] for key in ['title', 'columns', 'rows', 'note']}
                     cards[-1]['answer_table']['reference'] = source['title'] + ' · ' + chapter_label + ' · pág. ' + str(table['page'])
                 source_count += 1

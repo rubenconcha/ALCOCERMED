@@ -142,5 +142,53 @@
     "page": 24,
     "review": "Verified visually against the supplied PDF page; 2026-10-16",
     "card_sha256": "5e3804af9f9bb533a08c970e25eea0de385b67d963755f6c07f17b526c1b8ead"
+  },
+  "salud-detail-sturges": {
+    "page": 36,
+    "pdf_page": 111,
+    "review": "Revisión visual de fórmula, subíndices, denominador y símbolos; transcripción lineal para lectura en PC y celular.",
+    "card_sha256": "eaf34139d2a8b56c20262193891a9cd54d8cb1416497f1e4cc981cc0580930c0"
+  },
+  "salud-detail-mediana": {
+    "page": 78,
+    "pdf_page": 153,
+    "review": "Revisión visual de fórmula, subíndices, denominador y símbolos; transcripción lineal para lectura en PC y celular.",
+    "card_sha256": "562419e0c46f107f77ffcbbced6b510363c24a56cf3caf6e9d63534781463bea"
+  },
+  "salud-detail-moda": {
+    "page": 82,
+    "pdf_page": 157,
+    "review": "Revisión visual de fórmula, subíndices, denominador y símbolos; transcripción lineal para lectura en PC y celular.",
+    "card_sha256": "c51db26a40d82e58b786d8a06019e1ff1f32be157ec59ac579515acda7c4a75b"
+  },
+  "salud-detail-cuartil-posicion": {
+    "page": 87,
+    "pdf_page": 162,
+    "review": "Revisión visual de fórmula, subíndices, denominador y símbolos; transcripción lineal para lectura en PC y celular.",
+    "card_sha256": "26fc84fc5be18a3d15f4efa634c815f349f644219bf9b00698f20904fd1236a0"
+  },
+  "salud-detail-decil-posicion": {
+    "page": 92,
+    "pdf_page": 167,
+    "review": "Revisión visual de fórmula, subíndices, denominador y símbolos; transcripción lineal para lectura en PC y celular.",
+    "card_sha256": "624e6a474523ae9e4e717346f449f5a6706be92cbe1d8bf2b0d085cc9f488f7c"
+  },
+  "salud-detail-percentil-posicion": {
+    "page": 93,
+    "pdf_page": 168,
+    "review": "Revisión visual de fórmula, subíndices, denominador y símbolos; transcripción lineal para lectura en PC y celular.",
+    "card_sha256": "feed24a16e38f303683ec163c28cf3b0747914354c9de280b3b7b7b67dcabf26"
+  },
+  "salud-detail-varianza-poblacion": {
+    "page": 99,
+    "pdf_page": 174,
+    "review": "Revisión visual de fórmula, subíndices, denominador y símbolos; transcripción lineal para lectura en PC y celular.",
+    "card_sha256": "2029abc7f083cc506d0551edec3e7d6ace20819ec5dd677b8401c408f4470eb7"
+  },
+  "salud-detail-varianza-muestra": {
+    "page": 99,
+    "pdf_page": 174,
+    "review": "Revisión visual de fórmula, subíndices, denominador y símbolos; transcripción lineal para lectura en PC y celular.",
+    "card_sha256": "271f0680e8a1791f5b79f7187d88ceb8879a9672d9806bf44dfca959da349b8c"
   }
 }

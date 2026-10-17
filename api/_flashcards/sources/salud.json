@@ -800,6 +800,49 @@
           "pdf_page": 19,
           "evidence": "CURSO BASICO 2025-2026 Facultad de Medicina “Dr. Aurelio Melean” Universidad Mayor de San Simón UNIVERSIDAD MAYOR DE SAN SIMÓN 18 rehabilitación y reinserción social, en coordinación con los diferentes niveles del Sistema Nacional de Salud. Se entiende como el conjunto de acciones orientadas a evitar la aparición de enfermedades, limitar su progreso y reducir sus consecuencias, abordando factores de riesgo individuales, comunitarios y ambientales. Por ello, la prevención incluye no solo la detección temprana y el manejo clínico, sino también intervenciones que disminuyen complicaciones, discapacidades y recaídas. Niveles de Prevención 1. Prevención primaria: busca evitar la aparición de la enfermedad actuando sobre los factores de riesgo (p. ej., vacunación, control de tabaquismo, uso de agua segura). 2. Prevención secundaria: orientada a la detección temprana y tratamiento oportuno, limitando la progresión (p. ej., tamizaje de hipertensión, citología cervical, pruebas de VIH). 3. Prevención terciaria: enfocada en disminuir complicaciones, secuelas o discapacidades una vez establecida la enfermedad (p. ej., rehabilitación post-infarto, programas de reinserción social en salud mental). 4. Prevención cuaternaria: (concepto",
           "section": "Promoción frente a prevención"
+        },
+        {
+          "id": "salud-detail-prevencion",
+          "question": "¿Qué objetivo y ejemplo distinguen los cuatro niveles de prevención?",
+          "answer": "Primaria: evitar enfermedad. Secundaria: detectar temprano. Terciaria: limitar secuelas. Cuaternaria: evitar intervenciones dañinas o innecesarias.",
+          "page": 18,
+          "pdf_page": 19,
+          "evidence": "CURSO BASICO 2025-2026 \nFacultad de Medicina “Dr. Aurelio Melean” \nUniversidad Mayor de San Simón \n                                                                                               UNIVERSIDAD MAYOR DE SAN SIMÓN  \n \n \n \n \n \n \n18 \n \nrehabilitación y reinserción social, en coordinación con los diferentes niveles del Sistema Nacional \nde Salud. \nSe entiende como el conjunto de acciones orientadas a evitar la aparición de enfermedades, limitar \nsu progreso y reducir sus consecuencias, abordando factores de riesgo individuales, comunitarios  \ny ambientales. Por ello, la prevención incluye no solo la detección temprana y el manejo clínico, \nsino también intervenciones que disminuyen complicaciones, discapacidades y recaídas. \nNiveles de Prevención \n1. Prevención primaria: busca evitar la aparición de la enfermedad actuando sobre los \nfactores de riesgo (p. ej., vacunación, control de tabaquismo, uso de agua segura). \n2. Prevención secundaria: orientada a la detección temprana y tratamiento oportuno, \nlimitando la progresión (p. ej., tamizaje de hipertensión, citología cervical, pruebas de \nVIH). \n3. Prevención terciaria: enfocada en disminuir complicaciones, secuelas o discapacidades \nuna vez establecida la enfermedad (p. ej., rehabilitación post-infarto, programas de \nreinserción social en salud mental). \n4. Prevención cuaternaria: (concepto contemporáneo) se dirige a evitar intervenciones \nmédicas innecesarias o iatrogénicas, protegiendo al paciente de sobrediagnóstico o \nsobretratamiento. \nDiferencia con Promoción de la Salud \nAunque complementarias, prevención se centra en enfermedad y riesgo, mientras que la \npromoción aborda los determinantes sociales y el empoderamiento de la población sana para \nmejorar su bienestar global. \nEntonces la prevención de la enfermedad es un proceso continuo que integra intervenciones \nindividuales, comunitarias y de política pública para reducir la carga de enfermedad y sus secuelas, \nsiendo pilar de la salud pública moderna.",
+          "section": "Niveles de prevención",
+          "answer_table": {
+            "title": "Niveles de prevención",
+            "columns": [
+              "Nivel",
+              "Objetivo",
+              "Ejemplo"
+            ],
+            "rows": [
+              [
+                "Primaria",
+                "Evitar aparición",
+                "Vacunación"
+              ],
+              [
+                "Secundaria",
+                "Detección temprana",
+                "Citología cervical"
+              ],
+              [
+                "Terciaria",
+                "Reducir secuelas",
+                "Rehabilitación postinfarto"
+              ],
+              [
+                "Cuaternaria",
+                "Evitar daño innecesario",
+                "Evitar sobretratamiento"
+              ]
+            ],
+            "note": "",
+            "page": 18,
+            "pdf_page": 19,
+            "evidence": "CURSO BASICO 2025-2026 \nFacultad de Medicina “Dr. Aurelio Melean” \nUniversidad Mayor de San Simón \n                                                                                               UNIVERSIDAD MAYOR DE SAN SIMÓN  \n \n \n \n \n \n \n18 \n \nrehabilitación y reinserción social, en coordinación con los diferentes niveles del Sistema Nacional \nde Salud. \nSe entiende como el conjunto de acciones orientadas a evitar la aparición de enfermedades, limitar \nsu progreso y reducir sus consecuencias, abordando factores de riesgo individuales, comunitarios  \ny ambientales. Por ello, la prevención incluye no solo la detección temprana y el manejo clínico, \nsino también intervenciones que disminuyen complicaciones, discapacidades y recaídas. \nNiveles de Prevención \n1. Prevención primaria: busca evitar la aparición de la enfermedad actuando sobre los \nfactores de riesgo (p. ej., vacunación, control de tabaquismo, uso de agua segura). \n2. Prevención secundaria: orientada a la detección temprana y tratamiento oportuno, \nlimitando la progresión (p. ej., tamizaje de hipertensión, citología cervical, pruebas de \nVIH). \n3. Prevención terciaria: enfocada en disminuir complicaciones, secuelas o discapacidades \nuna vez establecida la enfermedad (p. ej., rehabilitación post-infarto, programas de \nreinserción social en salud mental). \n4. Prevención cuaternaria: (concepto contemporáneo) se dirige a evitar intervenciones \nmédicas innecesarias o iatrogénicas, protegiendo al paciente de sobrediagnóstico o \nsobretratamiento. \nDiferencia con Promoción de la Salud \nAunque complementarias, prevención se centra en enfermedad y riesgo, mientras que la \npromoción aborda los determinantes sociales y el empoderamiento de la población sana para \nmejorar su bienestar global. \nEntonces la prevención de la enfermedad es un proceso continuo que integra intervenciones \nindividuales, comunitarias y de política pública para reducir la carga de enfermedad y sus secuelas, \nsiendo pilar de la salud pública moderna."
+          }
         }
       ]
     },
@@ -4733,6 +4776,16 @@
           "pdf_page": 114,
           "evidence": "La marca de clase, conocida también como punto medio, es el valor representativo para cada intervalo. Se representa por ix • y se calcula promediando el límite inferior il y superior sl en cada intervalo. La fórmula para el cálculo es: Tabla 7. Marca de clase para los intervalos del tiempo (en minutos) requerido por un grupo personas para realizar una actividad Nº. de Intervalo Intervalo (minutos) Marca de Clase 1 [45 - 50] 47,5 2 (50 - 55] 52,5 3 (55 - 60] 57,5 4 (60 - 65] 62,5 5 (65 - 70] 67,5 6 (70 - 75] 72,5 Elaboración propia Es importante resaltar que la marca de clase al pasar de un intervalo a otro, aumenta la misma cantidad del intervalo C. 3.7 Ejercicios de aplicación 1. Explique la razón por la cual se recomienda agrupar un conjunto de datos para el análisis estadístico. _________________________________________________ _________________________________________________ 2. La siguiente información corresponde a la evaluación del nivel de afectación que generó la construcción de una vía sobre los recursos naturales. Para ello se tomaron como referencia diez puntos de control ubicados cada dos kiló- metros. Los resultados fueron: ( )",
           "section": "Límites y marca de clase"
+        },
+        {
+          "id": "salud-detail-sturges",
+          "question": "¿Cuál es la fórmula de Sturges para estimar el número de clases?",
+          "answer": "m = 1 + 3,3 × log₁₀(n). n: número total de datos.",
+          "page": 36,
+          "pdf_page": 111,
+          "evidence": "Fórmula y definición de símbolos comprobadas visualmente en la página indicada del PDF oficial.",
+          "section": "Intervalos y amplitud",
+          "evidence_kind": "image_transcription"
         }
       ],
       "component_title": "Elementos básicos de estadística descriptiva para el análisis de datos"
@@ -5588,6 +5641,26 @@
           "pdf_page": 157,
           "evidence": "elementos básicos de estadística descriptiva para el análisis de datos 82 1. Ubicar el intervalo (o los intervalos) con mayor frecuencia absoluta in 2. Calcular la moda (o las modas) con la fórmula: Donde: il : límite inferior del intervalo con mayor frecuencia absoluta 1 ∆: diferencia entre la mayor frecuencia absoluta y la anterior 2 ∆: diferencia entre la mayor frecuencia absoluta y la siguiente c : amplitud del intervalo con mayor frecuencia absoluta Al retomar el ejemplo mencionado anteriormente en la tabla 12, sobre el tiempo que tarda un grupo de personas en realizar una actividad, se toma la siguiente información para el cálculo de la moda (ver tabla 31): Tabla 31. Moda para el ejemplo del tiempo (en minutos) requerido por un grupo de personas para realizar una actividad Nº. de Intervalo Minutos 1 [45 - 50] 2 4% 2 4% 47,5 2 (50 - 55] 9 18% 11 22% 52,5 3 (55 - 60] 12 24% 23 46% 57,5 4 (60 - 65] 11 22% 34 68% 62,5 5 (65 - 70] 9 18% 43 86% 67,5 6 (70 - 75] 7 14% 50 100% 72,5 Elaboración propia 1. El intervalo de mayor frecuencia absoluta es el 3. 2. Los valores para el cálculo de la moda son: 1 12 ∆ ∆+ ∆",
           "section": "Moda"
+        },
+        {
+          "id": "salud-detail-mediana",
+          "question": "¿Cómo se calcula la mediana de datos agrupados en intervalos?",
+          "answer": "Me = lᵢ + [(N/2 − Nᵢ₋₁)/nᵢ] × c.\nlᵢ: límite inferior; N: total; Nᵢ₋₁: acumulada previa; nᵢ: frecuencia; c: amplitud.",
+          "page": 78,
+          "pdf_page": 153,
+          "evidence": "Fórmula y definición de símbolos comprobadas visualmente en la página indicada del PDF oficial.",
+          "section": "Mediana",
+          "evidence_kind": "image_transcription"
+        },
+        {
+          "id": "salud-detail-moda",
+          "question": "¿Cuál es la fórmula de la moda para datos agrupados en intervalos?",
+          "answer": "Mo = lᵢ + [Δ₁/(Δ₁ + Δ₂)] × c.\nlᵢ: límite inferior; c: amplitud; Δ₁/Δ₂: diferencias entre frecuencia modal y anterior/siguiente.",
+          "page": 82,
+          "pdf_page": 157,
+          "evidence": "Fórmula y definición de símbolos comprobadas visualmente en la página indicada del PDF oficial.",
+          "section": "Moda",
+          "evidence_kind": "image_transcription"
         }
       ],
       "component_title": "Elementos básicos de estadística descriptiva para el análisis de datos"
@@ -5840,6 +5913,36 @@
           "pdf_page": 168,
           "evidence": "93 demás percentiles hasta llegar al percentil P99 que acumula el 99% de los datos. Para el cálculo de los percentiles se usa un procedimiento similar al empleado para los cuartiles y deciles: 1. Ordenar los datos de forma ascendente. 2. Calcular la posición con la ecuación: . Donde K es el nú- mero del percentil (k = 1, 2, 3, 4, 5… 10, 11, 12… 98, 99) y n el número total de datos. 3. Si no es un número entero, se debe redondear al entero siguiente y el valor que ocupa esta posición será el cuartil requerido. Si es un número entero, el percentil es el promedio de los valores e . Para datos agrupados en intervalos: Al analizar los cuartiles, deciles y percentiles se pueden deducir las siguientes relaciones: Q2 = D5 = P50 = Me Q1 = P25 Q3 = P75 D1 = P10 D2 = P20 D3 = P30 D4 = P40 D6 = P60 D7 = P70",
           "section": "Percentiles"
+        },
+        {
+          "id": "salud-detail-cuartil-posicion",
+          "question": "¿Cómo se calcula la posición del cuartil k en datos sin agrupar según el texto?",
+          "answer": "i = kn/4. k: 1, 2 o 3; n: total de datos.",
+          "page": 87,
+          "pdf_page": 162,
+          "evidence": "Fórmula y definición de símbolos comprobadas visualmente en la página indicada del PDF oficial.",
+          "section": "Cuartiles",
+          "evidence_kind": "image_transcription"
+        },
+        {
+          "id": "salud-detail-decil-posicion",
+          "question": "¿Cómo se calcula la posición del decil k en datos sin agrupar según el texto?",
+          "answer": "i = kn/10. k: 1 a 9; n: total de datos.",
+          "page": 92,
+          "pdf_page": 167,
+          "evidence": "Fórmula y definición de símbolos comprobadas visualmente en la página indicada del PDF oficial.",
+          "section": "Deciles",
+          "evidence_kind": "image_transcription"
+        },
+        {
+          "id": "salud-detail-percentil-posicion",
+          "question": "¿Cómo se calcula la posición del percentil k en datos sin agrupar según el texto?",
+          "answer": "i = kn/100. k: 1 a 99; n: total de datos.",
+          "page": 93,
+          "pdf_page": 168,
+          "evidence": "Fórmula y definición de símbolos comprobadas visualmente en la página indicada del PDF oficial.",
+          "section": "Percentiles",
+          "evidence_kind": "image_transcription"
         }
       ],
       "component_title": "Elementos básicos de estadística descriptiva para el análisis de datos"
@@ -6182,6 +6285,26 @@
           "pdf_page": 180,
           "evidence": "medidas de dispersión 105 Al interpretar los datos, es posible establecer que la desviación repre- senta el 17,6% de la media. En términos del ejercicio, podría interpre- tarse que los datos varían 17,6% alrededor de la media, lo cual intuye que la precisión de estimación de los parámetros para esta población es regular. El coeficiente de variación, por ser una medida de dispersión rela- tiva, se utiliza para comparar la variabilidad de distintas muestras o poblaciones, aunque tengan unidades de medida diferentes (Triola, 2000). En el siguiente ejemplo se muestra esta situación: Una persona desea realizar una inversión en un negocio que tenga buena rentabilidad, para ello se le presentan dos proyectos con posi- bilidades diferentes. El primer proyecto ha presentado utilidades pro- medio en el último año de $150 millones y desviación de $50 millones. En el mismo año, el promedio de utilidades para el segundo proyecto fueron de $120 millones con una desviación estándar de $12 millo- nes. ¿Cuál proyecto presenta más estabilidad para generar confianza al",
           "section": "Coeficiente de variación"
+        },
+        {
+          "id": "salud-detail-varianza-poblacion",
+          "question": "¿Cuál es la fórmula de la varianza poblacional para datos sin agrupar?",
+          "answer": "σ² = Σ(xᵢ − μ)²/N. μ: media poblacional; N: tamaño poblacional.",
+          "page": 99,
+          "pdf_page": 174,
+          "evidence": "Fórmula y definición de símbolos comprobadas visualmente en la página indicada del PDF oficial.",
+          "section": "Varianza",
+          "evidence_kind": "image_transcription"
+        },
+        {
+          "id": "salud-detail-varianza-muestra",
+          "question": "¿Cuál es la fórmula de la varianza muestral para datos sin agrupar?",
+          "answer": "s² = Σ(xᵢ − x̄)²/(n − 1). x̄: media muestral; n: tamaño muestral.",
+          "page": 99,
+          "pdf_page": 174,
+          "evidence": "Fórmula y definición de símbolos comprobadas visualmente en la página indicada del PDF oficial.",
+          "section": "Varianza",
+          "evidence_kind": "image_transcription"
         }
       ],
       "component_title": "Elementos básicos de estadística descriptiva para el análisis de datos"

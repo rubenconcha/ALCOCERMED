@@ -8,6 +8,32 @@ const ROOT=path.join(__dirname,'..');
 const row={id:'morfo-01-001',materia:'MORFOFUNCION',tema:'anatomia',pregunta:'¿Qué estudia la anatomía?',respuesta:'La estructura del cuerpo.',chapter_title:'Temas principales',reference:'Saladin · Capítulo 1: Temas principales · pág. 1',official_source:'morfo',free_sample:true};
 const library={schema:'official-flashcards-v1',version:'test',cards:[row,{...row,id:'morfo-01-002',free_sample:false}],catalog:[{materia:'MORFOFUNCION',tema:'anatomia',count:2,free_count:1},{materia:'MORFOFUNCION',tema:'hueso',count:10,free_count:0}]};
 
+test('detail review preserves exact formulas and comparative tables from all three official subjects',()=>{
+ const directory=path.join(ROOT,'api','_flashcards');
+ const cards=JSON.parse(fs.readFileSync(path.join(directory,'library.json'),'utf8')).cards;
+ const byId=id=>{const card=cards.find(c=>c.id===id);assert.ok(card,id);return card;};
+ assert.match(byId('salud-detail-sturges').respuesta,/1 \+ 3,3 × log₁₀\(n\)/);
+ assert.match(byId('salud-detail-mediana').respuesta,/N\/2 − Nᵢ₋₁/);
+ assert.match(byId('salud-detail-moda').respuesta,/Δ₁\/\(Δ₁ \+ Δ₂\)/);
+ assert.match(byId('salud-detail-varianza-muestra').respuesta,/\(n − 1\)/);
+ assert.match(byId('salud-detail-varianza-poblacion').respuesta,/²\/N/);
+ assert.match(byId('biologia-detail-cdk-e').respuesta,/Cdk2–ciclina E/);
+ assert.match(byId('biologia-detail-meiosis-i-adn').respuesta,/haploides.*2c/);
+ assert.match(byId('biologia-detail-cadena-bombas').respuesta,/II no bombea/);
+ for(const [id,rows,cols,page] of [['morfo-detail-musculos',6,4,429],['morfo-detail-anticuerpos',5,3,840],['morfo-detail-hormonas-renales',4,3,917],['biologia-detail-polimerasas',3,3,356],['salud-detail-prevencion',4,3,18]]){
+  const card=byId(id),table=card.answer_table;
+  assert.equal(table.rows.length,rows);assert.equal(table.columns.length,cols);
+  assert.equal(card.page,page);assert.equal(table.reference,card.reference);
+  assert.equal(table.evidence,undefined,'source excerpts stay protected in authoring data');
+ }
+ const report=JSON.parse(fs.readFileSync(path.join(ROOT,'quality/flashcards-detail-review.json'),'utf8'));
+ assert.equal(report.topics.length,68);
+ for(const topic of report.topics){
+  assert.equal(topic.cards,cards.filter(c=>c.official_source===topic.source&&c.tema===topic.topic).length);
+  assert.ok(Object.values(topic.subtopics).every(n=>n>=3));
+ }
+});
+
 function frontend({status=200,changed=false,payload=library}={}){
  let sessions=0,calls=0;const events={};
  const c={AbortSignal,window:null,fetch:async()=>{calls++;return {ok:status===200,json:async()=>payload};},getSupabase:()=>({auth:{getSession:async()=>({data:{session:{access_token:changed&&++sessions>1?'other':'account'}}})}}),addEventListener:(name,cb)=>events[name]=cb};c.window=c;

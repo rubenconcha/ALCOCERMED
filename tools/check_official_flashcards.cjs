@@ -56,6 +56,25 @@ const root=path.resolve(__dirname,'..');
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await page.screenshot({path:path.join(directory,'abo-'+width+'.png'),fullPage:true});
  }
+ const details=JSON.parse(fs.readFileSync(libraryPath,'utf8')).cards.filter(c=>c.id.includes('-detail-')&&(c.answer_table||['salud-detail-mediana','salud-detail-moda','salud-detail-varianza-muestra'].includes(c.id)));
+ for(const width of [1440,390,320]){
+  await page.setViewportSize({width,height:1100});
+  for(const card of details){
+   await page.evaluate(row=>startDeck(row.tema,row.materia,[row]),card);
+   await page.locator('#btn-reveal').click();
+   assert.equal(await page.locator('#anki-buttons .btn-anki:visible').count(),4);
+   assert.equal(await page.locator('.fc-answer-source').innerText(),card.reference);
+   if(card.answer_table){
+    assert.equal(await page.locator('.fc-answer-table tbody tr').count(),card.answer_table.rows.length);
+    assert.equal(await page.locator('.fc-answer-table thead th').count(),card.answer_table.columns.length);
+    assert.equal(await page.locator('.fc-answer-table').evaluate(el=>[...el.querySelectorAll('th,td')].filter(cell=>cell.scrollWidth>cell.clientWidth+1).length),0,'clipped table cells: '+card.id+' at '+width);
+   }else assert.equal(await page.locator('.fc-answer-table').count(),0);
+   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'overflow: '+card.id+' at '+width);
+   if(['morfo-detail-musculos','biologia-detail-polimerasas','salud-detail-mediana','salud-detail-prevencion'].includes(card.id)){
+    await page.screenshot({path:path.join(directory,card.id+'-'+width+'.png'),fullPage:true});
+   }
+  }
+ }
  await page.evaluate(rows=>startDeck(rows[0].tema,rows[0].materia,rows),cards);
  await page.locator('#btn-reveal').click();
  assert.equal(await page.locator('.fc-answer-table').count(),0,'the table must not remain on unrelated answers');

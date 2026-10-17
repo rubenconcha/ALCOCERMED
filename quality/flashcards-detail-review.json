@@ -1,0 +1,2169 @@
+{
+  "date": "2026-10-16",
+  "scope": "Comprobación estructural de los 68 temas y revisión focal de omisiones concretas contra los tres PDF oficiales. No equivale a revisión docente exhaustiva de cada afirmación de los libros.",
+  "preserved": "Diseño aprobado, paleta, botones, subtemas y cuadro ABO.",
+  "changes": [
+    {
+      "id": "morfo-detail-fundamentos-01",
+      "source": "morfo",
+      "topic": "temas principales de anatomia y fisiologia",
+      "chapter": 1,
+      "page": 9,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-02",
+      "source": "morfo",
+      "topic": "temas principales de anatomia y fisiologia",
+      "chapter": 1,
+      "page": 9,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-03",
+      "source": "morfo",
+      "topic": "temas principales de anatomia y fisiologia",
+      "chapter": 1,
+      "page": 9,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-04",
+      "source": "morfo",
+      "topic": "temas principales de anatomia y fisiologia",
+      "chapter": "A",
+      "page": 31,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-05",
+      "source": "morfo",
+      "topic": "temas principales de anatomia y fisiologia",
+      "chapter": "A",
+      "page": 31,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-06",
+      "source": "morfo",
+      "topic": "temas principales de anatomia y fisiologia",
+      "chapter": "A",
+      "page": 37,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-07",
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "chapter": 2,
+      "page": 53,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-08",
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "chapter": 2,
+      "page": 53,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-09",
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "chapter": 2,
+      "page": 53,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-10",
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "chapter": 2,
+      "page": 54,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-11",
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "chapter": 2,
+      "page": 53,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-12",
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "chapter": 2,
+      "page": 53,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-13",
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "chapter": 2,
+      "page": 54,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-14",
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "chapter": 2,
+      "page": 56,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-15",
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "chapter": 2,
+      "page": 58,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-16",
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "chapter": 2,
+      "page": 58,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-17",
+      "source": "morfo",
+      "topic": "forma y funcion celulares",
+      "chapter": 3,
+      "page": 94,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-18",
+      "source": "morfo",
+      "topic": "forma y funcion celulares",
+      "chapter": 3,
+      "page": 94,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-19",
+      "source": "morfo",
+      "topic": "forma y funcion celulares",
+      "chapter": 3,
+      "page": 109,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-20",
+      "source": "morfo",
+      "topic": "forma y funcion celulares",
+      "chapter": 3,
+      "page": 109,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-21",
+      "source": "morfo",
+      "topic": "genetica y funcion celular",
+      "chapter": 4,
+      "page": 137,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-22",
+      "source": "morfo",
+      "topic": "genetica y funcion celular",
+      "chapter": 4,
+      "page": 137,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-23",
+      "source": "morfo",
+      "topic": "genetica y funcion celular",
+      "chapter": 4,
+      "page": 137,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-24",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 147,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-25",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 149,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-26",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 150,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-27",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 150,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-28",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 157,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-29",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 160,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-30",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 160,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-31",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 169,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-32",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 169,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-33",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 169,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-34",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 169,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-35",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 169,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-36",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 170,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-37",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 170,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-fundamentos-38",
+      "source": "morfo",
+      "topic": "histologia",
+      "chapter": 5,
+      "page": 170,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-mezclas",
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "chapter": 2,
+      "page": 53,
+      "kind": "comparison"
+    },
+    {
+      "id": "morfo-detail-musculos",
+      "source": "morfo",
+      "topic": "tejido muscular",
+      "chapter": 11,
+      "page": 429,
+      "kind": "comparison"
+    },
+    {
+      "id": "morfo-detail-autonomo",
+      "source": "morfo",
+      "topic": "sistema nervioso autonomo",
+      "chapter": 15,
+      "page": 571,
+      "kind": "comparison"
+    },
+    {
+      "id": "morfo-detail-igd",
+      "source": "morfo",
+      "topic": "sistema linfatico e inmunidad",
+      "chapter": 21,
+      "page": 840,
+      "kind": "detail"
+    },
+    {
+      "id": "morfo-detail-anticuerpos",
+      "source": "morfo",
+      "topic": "sistema linfatico e inmunidad",
+      "chapter": 21,
+      "page": 840,
+      "kind": "comparison"
+    },
+    {
+      "id": "morfo-detail-hormonas-renales",
+      "source": "morfo",
+      "topic": "aparato urinario",
+      "chapter": 23,
+      "page": 917,
+      "kind": "comparison"
+    },
+    {
+      "id": "biologia-detail-met-muestra",
+      "source": "biologia",
+      "topic": "metodos y tecnicas basicas en biologia celular",
+      "chapter": 2,
+      "page": 63,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-meb-superficie",
+      "source": "biologia",
+      "topic": "metodos y tecnicas basicas en biologia celular",
+      "chapter": 2,
+      "page": 64,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-flipasa",
+      "source": "biologia",
+      "topic": "estructura de la membrana plasmatica",
+      "chapter": 3,
+      "page": 141,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-escramblasa",
+      "source": "biologia",
+      "topic": "estructura de la membrana plasmatica",
+      "chapter": 3,
+      "page": 141,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-ps-apoptosis",
+      "source": "biologia",
+      "topic": "estructura de la membrana plasmatica",
+      "chapter": 3,
+      "page": 141,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-nak-e1",
+      "source": "biologia",
+      "topic": "transporte a traves de la membrana plasmatica",
+      "chapter": 4,
+      "page": 188,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-nak-e2",
+      "source": "biologia",
+      "topic": "transporte a traves de la membrana plasmatica",
+      "chapter": 4,
+      "page": 188,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-nak-fosforilacion",
+      "source": "biologia",
+      "topic": "transporte a traves de la membrana plasmatica",
+      "chapter": 4,
+      "page": 188,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-nak-desfosforilacion",
+      "source": "biologia",
+      "topic": "transporte a traves de la membrana plasmatica",
+      "chapter": 4,
+      "page": 188,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-cadena-bombas",
+      "source": "biologia",
+      "topic": "mitocondrias y peroxisomas",
+      "chapter": 11,
+      "page": 471,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-fi-neuronas",
+      "source": "biologia",
+      "topic": "citoesqueleto",
+      "chapter": 12,
+      "page": 529,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-fi-mesenquima",
+      "source": "biologia",
+      "topic": "citoesqueleto",
+      "chapter": 12,
+      "page": 529,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-cdk-e",
+      "source": "biologia",
+      "topic": "ciclo celular",
+      "chapter": 14,
+      "page": 591,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-cdk-d",
+      "source": "biologia",
+      "topic": "ciclo celular",
+      "chapter": 14,
+      "page": 591,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-cdk-a",
+      "source": "biologia",
+      "topic": "ciclo celular",
+      "chapter": 14,
+      "page": 591,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-meiosis-i-adn",
+      "source": "biologia",
+      "topic": "division celular y muerte programada",
+      "chapter": 15,
+      "page": 633,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-meiosis-ii-adn",
+      "source": "biologia",
+      "topic": "division celular y muerte programada",
+      "chapter": 15,
+      "page": 633,
+      "kind": "detail"
+    },
+    {
+      "id": "biologia-detail-polimerasas",
+      "source": "biologia",
+      "topic": "transcripcion y maduracion del arn",
+      "chapter": 8,
+      "page": 356,
+      "kind": "comparison"
+    },
+    {
+      "id": "salud-detail-sturges",
+      "source": "salud",
+      "topic": "frecuencias y graficos",
+      "chapter": 3,
+      "page": 36,
+      "kind": "formula"
+    },
+    {
+      "id": "salud-detail-mediana",
+      "source": "salud",
+      "topic": "medidas de tendencia central",
+      "chapter": 7,
+      "page": 78,
+      "kind": "formula"
+    },
+    {
+      "id": "salud-detail-moda",
+      "source": "salud",
+      "topic": "medidas de tendencia central",
+      "chapter": 7,
+      "page": 82,
+      "kind": "formula"
+    },
+    {
+      "id": "salud-detail-cuartil-posicion",
+      "source": "salud",
+      "topic": "medidas de posicion",
+      "chapter": 8,
+      "page": 87,
+      "kind": "formula"
+    },
+    {
+      "id": "salud-detail-decil-posicion",
+      "source": "salud",
+      "topic": "medidas de posicion",
+      "chapter": 8,
+      "page": 92,
+      "kind": "formula"
+    },
+    {
+      "id": "salud-detail-percentil-posicion",
+      "source": "salud",
+      "topic": "medidas de posicion",
+      "chapter": 8,
+      "page": 93,
+      "kind": "formula"
+    },
+    {
+      "id": "salud-detail-varianza-poblacion",
+      "source": "salud",
+      "topic": "dispersion y forma de los datos",
+      "chapter": 9,
+      "page": 99,
+      "kind": "formula"
+    },
+    {
+      "id": "salud-detail-varianza-muestra",
+      "source": "salud",
+      "topic": "dispersion y forma de los datos",
+      "chapter": 9,
+      "page": 99,
+      "kind": "formula"
+    },
+    {
+      "id": "salud-detail-prevencion",
+      "source": "salud",
+      "topic": "niveles de prevencion",
+      "chapter": 1,
+      "page": 18,
+      "kind": "comparison"
+    }
+  ],
+  "topics": [
+    {
+      "source": "morfo",
+      "topic": "temas principales de anatomia y fisiologia",
+      "cards": 96,
+      "subtopics": {
+        "Fundamentos": 8,
+        "Exploración": 4,
+        "Historia y teoría celular": 5,
+        "Método científico": 10,
+        "Evolución y adaptaciones humanas": 6,
+        "Organización y características de la vida": 8,
+        "Homeostasis": 9,
+        "Terminología médica": 4,
+        "Posición anatómica": 6,
+        "Planos anatómicos": 5,
+        "Direcciones anatómicas": 8,
+        "Regiones corporales": 7,
+        "Cavidades corporales": 7,
+        "Membranas serosas": 5,
+        "Peritoneo y mesenterios": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "morfo-detail-fundamentos-01",
+        "morfo-detail-fundamentos-02",
+        "morfo-detail-fundamentos-03",
+        "morfo-detail-fundamentos-04",
+        "morfo-detail-fundamentos-05",
+        "morfo-detail-fundamentos-06"
+      ]
+    },
+    {
+      "source": "morfo",
+      "topic": "la quimica de la vida",
+      "cards": 72,
+      "subtopics": {
+        "Átomos": 8,
+        "Iones": 7,
+        "Radicales libres": 4,
+        "Enlaces": 6,
+        "Agua": 12,
+        "Ácidos y bases": 6,
+        "Reacciones": 8,
+        "Enzimas": 3,
+        "Proteínas": 3,
+        "Carbohidratos": 6,
+        "Lípidos": 3,
+        "Nucleótidos, ATP y señalización": 6
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "morfo-detail-fundamentos-07",
+        "morfo-detail-fundamentos-08",
+        "morfo-detail-fundamentos-09",
+        "morfo-detail-fundamentos-10",
+        "morfo-detail-fundamentos-11",
+        "morfo-detail-fundamentos-12",
+        "morfo-detail-fundamentos-13",
+        "morfo-detail-fundamentos-14",
+        "morfo-detail-fundamentos-15",
+        "morfo-detail-fundamentos-16",
+        "morfo-detail-mezclas"
+      ]
+    },
+    {
+      "source": "morfo",
+      "topic": "forma y funcion celulares",
+      "cards": 57,
+      "subtopics": {
+        "Organización celular": 3,
+        "Membrana y canales": 8,
+        "Superficie celular": 7,
+        "Transporte": 10,
+        "Tonicidad": 3,
+        "Transporte activo": 5,
+        "Transporte vesicular": 5,
+        "Organelos": 13,
+        "Citoesqueleto": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "morfo-detail-fundamentos-17",
+        "morfo-detail-fundamentos-18",
+        "morfo-detail-fundamentos-19",
+        "morfo-detail-fundamentos-20"
+      ]
+    },
+    {
+      "source": "morfo",
+      "topic": "genetica y funcion celular",
+      "cards": 57,
+      "subtopics": {
+        "ADN": 6,
+        "ARN": 3,
+        "Genes y expresión genética": 7,
+        "Transcripción": 3,
+        "Procesamiento del ARN": 4,
+        "Traducción": 4,
+        "Replicación": 4,
+        "Ciclo celular": 4,
+        "Mitosis": 4,
+        "Cromosomas": 4,
+        "Herencia": 11,
+        "Mutaciones": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "morfo-detail-fundamentos-21",
+        "morfo-detail-fundamentos-22",
+        "morfo-detail-fundamentos-23"
+      ]
+    },
+    {
+      "source": "morfo",
+      "topic": "histologia",
+      "cards": 70,
+      "subtopics": {
+        "Organización y desarrollo tisular": 6,
+        "Matriz extracelular": 3,
+        "Epitelio": 11,
+        "Tejido conjuntivo": 8,
+        "Cartílago y hueso": 7,
+        "Sangre": 3,
+        "Músculo": 3,
+        "Tejido nervioso": 3,
+        "Uniones celulares": 3,
+        "Glándulas": 9,
+        "Crecimiento y diferenciación tisular": 6,
+        "Reparación, degeneración y muerte celular": 8
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "morfo-detail-fundamentos-24",
+        "morfo-detail-fundamentos-25",
+        "morfo-detail-fundamentos-26",
+        "morfo-detail-fundamentos-27",
+        "morfo-detail-fundamentos-28",
+        "morfo-detail-fundamentos-29",
+        "morfo-detail-fundamentos-30",
+        "morfo-detail-fundamentos-31",
+        "morfo-detail-fundamentos-32",
+        "morfo-detail-fundamentos-33",
+        "morfo-detail-fundamentos-34",
+        "morfo-detail-fundamentos-35",
+        "morfo-detail-fundamentos-36",
+        "morfo-detail-fundamentos-37",
+        "morfo-detail-fundamentos-38"
+      ]
+    },
+    {
+      "source": "morfo",
+      "topic": "sistema tegumentario",
+      "cards": 55,
+      "subtopics": {
+        "Capas de la piel y dermis": 6,
+        "Epidermis": 9,
+        "Tipos de piel": 3,
+        "Color de la piel": 5,
+        "Pelo": 8,
+        "Glándulas cutáneas": 7,
+        "Funciones de la piel": 3,
+        "Quemaduras": 5,
+        "Uñas": 5,
+        "Trastornos de la piel": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "tejido oseo",
+      "cards": 57,
+      "subtopics": {
+        "Células óseas": 8,
+        "Matriz ósea": 7,
+        "Anatomía del hueso": 6,
+        "Histología ósea": 6,
+        "Médula ósea": 3,
+        "Osificación": 4,
+        "Crecimiento óseo": 6,
+        "Regulación del calcio": 5,
+        "Trastornos óseos": 4,
+        "Fracturas y reparación": 8
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "el sistema oseo",
+      "cards": 65,
+      "subtopics": {
+        "Organización del esqueleto": 4,
+        "Cráneo": 14,
+        "Columna vertebral": 10,
+        "Caja torácica": 6,
+        "Cinturas": 5,
+        "Pelvis": 7,
+        "Extremidades": 19
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "articulaciones",
+      "cards": 46,
+      "subtopics": {
+        "Clasificación": 4,
+        "Articulaciones fibrosas": 3,
+        "Articulaciones cartilaginosas": 3,
+        "Estructura y estabilidad de las articulaciones sinoviales": 11,
+        "Movimientos": 13,
+        "Tipos sinoviales": 9,
+        "Palancas": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "el sistema muscular",
+      "cards": 72,
+      "subtopics": {
+        "Organización muscular": 3,
+        "Inserciones": 3,
+        "Acción muscular": 4,
+        "Cabeza y cuello": 9,
+        "Músculos respiratorios": 5,
+        "Pared abdominal": 5,
+        "Brazo y antebrazo": 7,
+        "Cadera y muslo": 10,
+        "Espalda": 3,
+        "Piso pélvico": 4,
+        "Cintura escapular": 3,
+        "Hombro y manguito rotador": 8,
+        "Mano": 4,
+        "Pierna y pie": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "tejido muscular",
+      "cards": 49,
+      "subtopics": {
+        "Organización de la fibra muscular": 7,
+        "Sarcómero": 3,
+        "Contracción y puentes cruzados": 7,
+        "Unión neuromuscular y control de fuerza": 7,
+        "Tipos de contracción": 3,
+        "Energía muscular": 7,
+        "Músculo cardíaco": 3,
+        "Músculo liso": 9,
+        "Trastornos musculares": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "morfo-detail-musculos"
+      ]
+    },
+    {
+      "source": "morfo",
+      "topic": "tejido nervioso",
+      "cards": 61,
+      "subtopics": {
+        "Organización nerviosa": 4,
+        "Morfología neuronal": 7,
+        "Neuroglia y regeneración": 6,
+        "Mielina y conducción nerviosa": 3,
+        "Potenciales eléctricos": 11,
+        "Transmisión sináptica": 11,
+        "Integración sináptica": 4,
+        "Transporte axonal": 3,
+        "Circuitos neurales": 4,
+        "Memoria": 4,
+        "Codificación neural": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "medula espinal y reflejos",
+      "cards": 53,
+      "subtopics": {
+        "Anatomía de la médula": 7,
+        "Meninges": 6,
+        "Vías sensitivas y motoras": 11,
+        "Nervios raquídeos": 9,
+        "Plexos nerviosos": 13,
+        "Reflejos": 7
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "encefalo y pares craneales",
+      "cards": 52,
+      "subtopics": {
+        "Diencéfalo y tallo encefálico": 5,
+        "Corteza y hemisferios cerebrales": 11,
+        "Ventrículos y líquido cefalorraquídeo": 6,
+        "Cerebelo": 7,
+        "Lenguaje y memoria": 3,
+        "Pares craneales": 11,
+        "Formación reticular": 3,
+        "Sistema límbico": 3,
+        "Sueño y actividad eléctrica": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "sistema nervioso autonomo",
+      "cards": 49,
+      "subtopics": {
+        "Organización y vías autónomas": 8,
+        "Divisiones simpática y parasimpática": 6,
+        "Receptores y neurotransmisores": 10,
+        "Efectos autónomos": 14,
+        "Tono y control autónomo": 5,
+        "Sistema entérico": 3,
+        "Control central autónomo": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "morfo-detail-autonomo"
+      ]
+    },
+    {
+      "source": "morfo",
+      "topic": "organos de los sentidos",
+      "cards": 62,
+      "subtopics": {
+        "Receptores y adaptación sensitiva": 6,
+        "Dolor": 5,
+        "Gusto y olfato": 11,
+        "Audición": 14,
+        "Equilibrio": 6,
+        "Ojo": 4,
+        "Óptica": 4,
+        "Retina y fototransducción": 12
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "sistema endocrino",
+      "cards": 42,
+      "subtopics": {
+        "Comunicación y mecanismos hormonales": 7,
+        "Hipotálamo e hipófisis": 7,
+        "Tiroides y paratiroides": 5,
+        "Suprarrenales": 4,
+        "Páncreas endocrino": 10,
+        "Gónadas y otros órganos endocrinos": 9
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "sangre",
+      "cards": 60,
+      "subtopics": {
+        "Composición sanguínea": 3,
+        "Plasma sanguíneo": 11,
+        "Eritrocitos y hemoglobina": 7,
+        "Producción y recambio eritrocitario": 3,
+        "Hematopoyesis": 3,
+        "Grupos sanguíneos": 12,
+        "Leucocitos": 8,
+        "Plaquetas y hemostasia": 7,
+        "Coagulación y sus trastornos": 6
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "corazon",
+      "cards": 51,
+      "subtopics": {
+        "Pericardio y pared cardíaca": 7,
+        "Cavidades y recorrido sanguíneo": 4,
+        "Válvulas": 4,
+        "Circulación coronaria": 5,
+        "Músculo y conducción cardíacos": 8,
+        "Electrocardiograma": 3,
+        "Ciclo cardíaco": 6,
+        "Gasto y regulación cardíaca": 14
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "vasos sanguineos y circulacion",
+      "cards": 56,
+      "subtopics": {
+        "Tipos de vasos sanguíneos": 5,
+        "Pared vascular": 3,
+        "Hemodinámica y resistencia vascular": 4,
+        "Microcirculación e intercambio capilar": 6,
+        "Presión y regulación vascular": 7,
+        "Control del flujo": 4,
+        "Retorno venoso": 5,
+        "Circulación abdominal": 5,
+        "Circuitos pulmonar y sistémico": 4,
+        "Circulación cerebral": 5,
+        "Edema y choque circulatorio": 5,
+        "Vasos de las extremidades": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "sistema linfatico e inmunidad",
+      "cards": 56,
+      "subtopics": {
+        "Sistema y drenaje linfático": 5,
+        "Órganos linfáticos": 11,
+        "Defensas innatas e inflamación": 13,
+        "Respuesta inmunitaria celular": 9,
+        "Anticuerpos e inmunidad humoral": 11,
+        "Adquisición y trastornos de la inmunidad": 4,
+        "Hipersensitividad": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "morfo-detail-igd",
+        "morfo-detail-anticuerpos"
+      ]
+    },
+    {
+      "source": "morfo",
+      "topic": "aparato respiratorio",
+      "cards": 48,
+      "subtopics": {
+        "Vías aéreas y fonación": 7,
+        "Pulmones, pleuras y alvéolos": 7,
+        "Ventilación y mecánica respiratoria": 11,
+        "Volúmenes y capacidades": 7,
+        "Intercambio y transporte de gases": 10,
+        "Control y alteraciones respiratorias": 6
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "aparato urinario",
+      "cards": 56,
+      "subtopics": {
+        "Anatomía y circulación renal": 9,
+        "Filtración glomerular": 8,
+        "Reabsorción y secreción": 8,
+        "Concentración de la orina": 8,
+        "Regulación de la filtración": 7,
+        "Análisis de orina y función renal": 8,
+        "Vías urinarias y micción": 5,
+        "Volumen de orina": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "morfo-detail-hormonas-renales"
+      ]
+    },
+    {
+      "source": "morfo",
+      "topic": "equilibrio hidrico y acidobasico",
+      "cards": 52,
+      "subtopics": {
+        "Agua y compartimientos": 5,
+        "Electrólitos y su regulación": 11,
+        "Balance del agua y sed": 10,
+        "Desequilibrios hídricos": 6,
+        "Regulación y compensación acidobásica": 11,
+        "Amortiguadores químicos": 5,
+        "Trastornos acidobásicos": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "aparato digestivo",
+      "cards": 54,
+      "subtopics": {
+        "Procesos y control digestivos": 8,
+        "Dientes y cavidad bucal": 7,
+        "Estómago": 10,
+        "Digestión y absorción intestinal": 9,
+        "Hígado, bilis y páncreas": 6,
+        "Enzimas digestivas": 6,
+        "Intestino grueso y defecación": 5,
+        "Peritoneo y mesenterios": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "nutricion y metabolismo",
+      "cards": 61,
+      "subtopics": {
+        "Nutrimentos y nutrición": 8,
+        "Vitaminas": 10,
+        "Regulación del apetito": 3,
+        "Carbohidratos, reservas y ayuno": 9,
+        "Respiración aeróbica": 5,
+        "Lípidos y lipoproteínas": 6,
+        "Proteínas y nitrógeno": 6,
+        "Estados metabólicos y gasto energético": 3,
+        "Temperatura y pérdida de calor": 7,
+        "Minerales": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "aparato reproductor masculino",
+      "cards": 49,
+      "subtopics": {
+        "Anatomía del testículo": 6,
+        "Termorregulación testicular": 3,
+        "Meiosis y espermatogénesis": 5,
+        "Espermatozoide": 3,
+        "Conductos y glándulas accesorias": 6,
+        "Genitales externos": 4,
+        "Respuesta sexual masculina": 5,
+        "Control endocrino": 7,
+        "Determinación y desarrollo sexual": 6,
+        "Descenso de las gónadas": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "aparato reproductor femenino",
+      "cards": 53,
+      "subtopics": {
+        "Anatomía ovárica": 6,
+        "Ovogénesis": 6,
+        "Foliculogénesis y ciclo ovárico": 10,
+        "Trompas uterinas": 3,
+        "Útero": 4,
+        "Ciclo uterino y climaterio": 4,
+        "Hormonas del embarazo": 6,
+        "Lactancia": 7,
+        "Parto": 4,
+        "Vagina y vulva": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "morfo",
+      "topic": "desarrollo humano y envejecimiento",
+      "cards": 70,
+      "subtopics": {
+        "Fecundación": 4,
+        "Desarrollo temprano e implantación": 9,
+        "Capas germinales y neurulación": 5,
+        "Membranas fetales y placenta": 4,
+        "Circulación fetal": 6,
+        "Defectos congénitos": 5,
+        "Envejecimiento y senescencia": 3,
+        "Adaptación neonatal": 6,
+        "Evaluación neonatal": 3,
+        "Inmadurez neonatal": 5,
+        "Cambios tegumentarios": 3,
+        "Cambios musculoesqueléticos": 3,
+        "Cambios inmunitarios y renales": 3,
+        "Nutrición y ejercicio en la vejez": 3,
+        "Mecanismos de senescencia": 5,
+        "Cambios sensitivos": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "biologia",
+      "topic": "introduccion a la biologia celular",
+      "cards": 57,
+      "subtopics": {
+        "Teoría celular y organización eucariota": 8,
+        "Protozoos": 3,
+        "Hongos": 5,
+        "Organización procariota y bacterias": 17,
+        "Estructura y replicación de los virus": 8,
+        "Virus del papiloma humano": 4,
+        "Virus de la gripe": 3,
+        "VIH": 4,
+        "Viroides y priones": 5
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "biologia",
+      "topic": "metodos y tecnicas basicas en biologia celular",
+      "cards": 66,
+      "subtopics": {
+        "Microscopía óptica y fluorescencia": 7,
+        "Microscopía electrónica": 9,
+        "Preparación y tinción de muestras": 7,
+        "Anticuerpos e inmunohistoquímica": 4,
+        "ADN recombinante y terapia génica": 7,
+        "PCR y sus variantes": 9,
+        "Secuenciación y huella genética": 4,
+        "Citogenética e hibridación molecular": 9,
+        "ELISA": 3,
+        "Cultivo, análisis y fraccionamiento celular": 7
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "biologia-detail-met-muestra",
+        "biologia-detail-meb-superficie"
+      ]
+    },
+    {
+      "source": "biologia",
+      "topic": "estructura de la membrana plasmatica",
+      "cards": 59,
+      "subtopics": {
+        "Modelo de mosaico fluido": 3,
+        "Bicapa y agregados lipídicos": 6,
+        "Ácidos grasos": 3,
+        "Fosfolípidos": 7,
+        "Glucolípidos": 4,
+        "Fluidez, colesterol y temperatura de fusión": 9,
+        "Síntesis, asimetría y microdominios lipídicos": 7,
+        "Proteínas de membrana": 9,
+        "Membrana eritrocitaria": 6,
+        "Glucocáliz": 5
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "biologia-detail-flipasa",
+        "biologia-detail-escramblasa",
+        "biologia-detail-ps-apoptosis"
+      ]
+    },
+    {
+      "source": "biologia",
+      "topic": "transporte a traves de la membrana plasmatica",
+      "cards": 60,
+      "subtopics": {
+        "Transporte pasivo y difusión": 7,
+        "Ósmosis": 3,
+        "Canales iónicos": 5,
+        "Acuaporinas y regulación renal del agua": 8,
+        "Transportadores y transporte acoplado": 10,
+        "Bombas y transportadores dependientes de ATP": 8,
+        "Potencial de reposo y electrofisiología": 6,
+        "Potencial de acción y períodos refractarios": 6,
+        "Mielina y conducción saltatoria": 3,
+        "Sinapsis": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "biologia-detail-nak-e1",
+        "biologia-detail-nak-e2",
+        "biologia-detail-nak-fosforilacion",
+        "biologia-detail-nak-desfosforilacion"
+      ]
+    },
+    {
+      "source": "biologia",
+      "topic": "macrotransporte a traves de la membrana plasmatica",
+      "cards": 56,
+      "subtopics": {
+        "Formas de endocitosis": 8,
+        "Captación de LDL": 5,
+        "Cubiertas y separación vesicular": 6,
+        "Clasificación, reciclaje y tránsito endosomal": 7,
+        "Fagocitosis y digestión celular": 3,
+        "Exocitosis constitutiva y regulada": 3,
+        "Gemación y tráfico vesicular": 6,
+        "Reconocimiento y fusión de membranas": 4,
+        "Exocitosis y reciclaje sináptico": 6,
+        "Unión neuromuscular": 4,
+        "Macrotransporte e infección intracelular": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "biologia",
+      "topic": "especializaciones de la membrana plasmatica",
+      "cards": 57,
+      "subtopics": {
+        "Microvellosidades": 4,
+        "Interdigitaciones y pliegues basales": 3,
+        "Moléculas de adhesión celular": 5,
+        "Uniones adherentes y desmosomas": 6,
+        "Integrinas y adhesiones focales": 6,
+        "Hemidesmosomas": 3,
+        "Uniones estrechas y comunicantes": 5,
+        "Membrana basal": 8,
+        "Colágeno": 7,
+        "Fibras elásticas": 5,
+        "Sustancia fundamental y glucoproteínas de matriz": 5
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "biologia",
+      "topic": "nucleo y cromatina",
+      "cards": 67,
+      "subtopics": {
+        "Núcleo, envoltura y poros nucleares": 7,
+        "Transporte nuclear": 6,
+        "Cromatina, nucleosomas y empaquetamiento": 8,
+        "Histonas y estados de la cromatina": 7,
+        "Cromosomas y cariotipo": 10,
+        "Replicación del ADN": 12,
+        "Telómeros y telomerasa": 3,
+        "Mutación y recombinación": 6,
+        "Reparación del ADN": 5,
+        "Organización del genoma": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "biologia",
+      "topic": "transcripcion y maduracion del arn",
+      "cards": 58,
+      "subtopics": {
+        "Transcripción y ARN polimerasas": 13,
+        "Tipos y funciones del ARN": 3,
+        "Regulación de la expresión génica": 13,
+        "Nucléolo, ARNr y formación de ribosomas": 9,
+        "Maduración del ARNm y splicing": 9,
+        "Caperuza y poliadenilación": 4,
+        "Maduración, transporte y degradación del ARN": 4,
+        "Micro-ARN": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "biologia-detail-polimerasas"
+      ]
+    },
+    {
+      "source": "biologia",
+      "topic": "sintesis y modificacion de proteinas",
+      "cards": 56,
+      "subtopics": {
+        "Aminoácidos y estructura de las proteínas": 5,
+        "Maquinaria de traducción y código genético": 8,
+        "ARNt y carga de aminoácidos": 6,
+        "Iniciación de la traducción": 5,
+        "Elongación y terminación": 6,
+        "Plegamiento y chaperonas": 5,
+        "Destino y localización de proteínas": 4,
+        "Modificaciones postraduccionales": 7,
+        "Procesamiento proteolítico": 3,
+        "Alteraciones proteicas en Alzheimer": 3,
+        "Degradación proteica": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "biologia",
+      "topic": "reticulo endoplasmatico golgi y lisosomas",
+      "cards": 57,
+      "subtopics": {
+        "Estructura y funciones del RER": 6,
+        "Importación cotraduccional al RER": 8,
+        "Maduración y plegamiento en el RER": 6,
+        "Control de calidad y estrés del RER": 4,
+        "Retículo liso y sarcoplásmico": 4,
+        "Aparato de Golgi y maduración proteica": 7,
+        "Tráfico vesicular y señales de destino": 9,
+        "Lisosomas y enfermedades de depósito": 8,
+        "Autofagia": 5
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "biologia",
+      "topic": "mitocondrias y peroxisomas",
+      "cards": 57,
+      "subtopics": {
+        "Estructura y compartimentos mitocondriales": 6,
+        "Genoma y traducción mitocondrial": 9,
+        "Herencia y enfermedades mitocondriales": 5,
+        "Importación de proteínas mitocondriales": 6,
+        "Mitocondria y apoptosis": 3,
+        "Metabolismo oxidativo y cadena respiratoria": 8,
+        "Síntesis y transporte de ATP": 3,
+        "Defensa antioxidante": 6,
+        "Peroxisomas, metabolismo e importación": 11
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "biologia-detail-cadena-bombas"
+      ]
+    },
+    {
+      "source": "biologia",
+      "topic": "citoesqueleto",
+      "cards": 67,
+      "subtopics": {
+        "Microtúbulos y dinámica del citoesqueleto": 13,
+        "Centrosomas, centríolos y huso mitótico": 7,
+        "Proteínas motoras y asociadas a microtúbulos": 4,
+        "Cilios, flagelos y ciliogénesis": 11,
+        "Actina y proteínas reguladoras": 9,
+        "Movimiento celular y miosinas": 6,
+        "Contracción muscular y distrofia": 9,
+        "Filamentos intermedios": 8
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "biologia-detail-fi-neuronas",
+        "biologia-detail-fi-mesenquima"
+      ]
+    },
+    {
+      "source": "biologia",
+      "topic": "senalizacion celular",
+      "cards": 66,
+      "subtopics": {
+        "Estrategias de señalización y receptores": 10,
+        "Factores de crecimiento y citoquinas": 6,
+        "Óxido nítrico y nucleótidos cíclicos": 7,
+        "Mediadores lipídicos y hormonas": 4,
+        "Proteínas G y vía del AMPc": 8,
+        "Fosfolipasa C, IP3, DAG y calcio": 7,
+        "Fototransducción": 4,
+        "Receptores enzimáticos y vías MAPK-PI3K": 8,
+        "Señalización de la insulina": 3,
+        "Vías JAK-STAT, Wnt y respuesta inflamatoria": 5,
+        "Adhesión y señalización por contacto": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "biologia",
+      "topic": "ciclo celular",
+      "cards": 65,
+      "subtopics": {
+        "Fases del ciclo y duplicación del ADN": 10,
+        "Fase M y citocinesis": 5,
+        "Capacidad proliferativa de los tejidos": 3,
+        "Puntos de control del ciclo": 4,
+        "Ciclinas, Cdk y sus inhibidores": 12,
+        "Control de mitosis y anafase": 7,
+        "Control de G1/S por Rb y E2F": 4,
+        "Daño del ADN y regulación de p53": 9,
+        "Senescencia y quiescencia": 4,
+        "Señales extrínsecas y destinos celulares": 7
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "biologia-detail-cdk-e",
+        "biologia-detail-cdk-d",
+        "biologia-detail-cdk-a"
+      ]
+    },
+    {
+      "source": "biologia",
+      "topic": "division celular y muerte programada",
+      "cards": 64,
+      "subtopics": {
+        "División celular y mitosis": 13,
+        "Citocinesis": 3,
+        "Meiosis I y recombinación": 12,
+        "Meiosis II y gametogénesis": 11,
+        "Características de la apoptosis": 4,
+        "Vías extrínseca e intrínseca de apoptosis": 9,
+        "Regulación de apoptosis y caspasas": 9,
+        "Impronta genómica": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "biologia-detail-meiosis-i-adn",
+        "biologia-detail-meiosis-ii-adn"
+      ]
+    },
+    {
+      "source": "biologia",
+      "topic": "biologia celular del cancer",
+      "cards": 64,
+      "subtopics": {
+        "Características y clasificación tumoral": 10,
+        "Carcinogénesis y agentes causales": 7,
+        "Reparación del ADN y cáncer": 3,
+        "Oncogenes y mecanismos de activación": 6,
+        "Supresores tumorales y epigenética": 5,
+        "Virus oncogénicos": 4,
+        "Modelo del cáncer colorrectal": 5,
+        "Progresión, angiogénesis y metástasis": 6,
+        "Evasión inmunitaria": 4,
+        "Tratamientos clásicos y toxicidad": 7,
+        "Dianas terapéuticas": 7
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "biologia",
+      "topic": "respuesta inmunitaria",
+      "cards": 71,
+      "subtopics": {
+        "Inmunidad innata, adaptativa y hematopoyesis": 10,
+        "Tolerancia y regulación inmunitaria": 5,
+        "Anticuerpos": 12,
+        "Histocompatibilidad y reconocimiento antigénico": 8,
+        "Activación y subpoblaciones T": 10,
+        "Procesamiento y presentación de antígenos": 7,
+        "Activación B y memoria inmunitaria": 5,
+        "Sistema del complemento": 4,
+        "Citotoxicidad celular": 5,
+        "Hipersensibilidad, autoinmunidad e inmunodeficiencia": 5
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "biologia",
+      "topic": "celulas madre y aplicaciones terapeuticas",
+      "cards": 56,
+      "subtopics": {
+        "Definición, origen y potencia celular": 10,
+        "Células iPS y modelos de enfermedad": 5,
+        "Plasticidad y reprogramación": 7,
+        "Fuentes hematopoyéticas y vasculares": 5,
+        "Terapia génica celular": 4,
+        "Células mesenquimales y tejido adiposo": 8,
+        "Injerto, supervivencia y mecanismos paracrinos": 6,
+        "Ingeniería tisular y soportes": 7,
+        "Aplicaciones y seguridad de la terapia celular": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "educacion en salud",
+      "cards": 19,
+      "subtopics": {
+        "Educación y cambio de conductas": 14,
+        "Comunicación, participación y equidad": 5
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "concepto de salud y determinantes",
+      "cards": 26,
+      "subtopics": {
+        "Evolución del concepto de salud": 9,
+        "Transición epidemiológica": 7,
+        "Determinantes sociales": 10
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "funciones de salud publica",
+      "cards": 21,
+      "subtopics": {
+        "Funciones esenciales": 6,
+        "Misiones de salud pública": 8,
+        "Política pública sanitaria": 7
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "niveles de prevencion",
+      "cards": 20,
+      "subtopics": {
+        "Niveles de prevención": 14,
+        "Prevención cuaternaria": 3,
+        "Promoción frente a prevención": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "salud-detail-prevencion"
+      ]
+    },
+    {
+      "source": "salud",
+      "topic": "promocion de la salud",
+      "cards": 22,
+      "subtopics": {
+        "Carta de Ottawa y conferencias": 8,
+        "Acción comunitaria y entornos": 11,
+        "Habilidades y reorientación de servicios": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "atencion primaria de salud",
+      "cards": 24,
+      "subtopics": {
+        "Principios de Alma-Ata": 5,
+        "Atributos de la APS": 9,
+        "Evaluación de calidad en APS": 7,
+        "Atención primaria y medicina social": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "factor de riesgo y salud comunitaria",
+      "cards": 20,
+      "subtopics": {
+        "Factores de riesgo": 8,
+        "Servicios y restauración de la salud": 6,
+        "Salud comunitaria y fomento": 6
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "ods y cobertura sanitaria",
+      "cards": 32,
+      "subtopics": {
+        "Agenda ODS e indicadores": 9,
+        "ODS y cobertura sanitaria": 7,
+        "Infografía ODS": 16
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "salud en bolivia y modelo safci",
+      "cards": 45,
+      "subtopics": {
+        "Marco nacional y SAFCI": 7,
+        "Programas nacionales": 13,
+        "Vigilancia de enfermedades": 17,
+        "Niveles de atención del SUS": 8
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "epidemiologia social",
+      "cards": 33,
+      "subtopics": {
+        "Epidemiología de campo y social": 10,
+        "Tipos de investigación en salud": 10,
+        "Diseños epidemiológicos": 8,
+        "Proceso salud-enfermedad": 5
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "proceso de investigacion",
+      "cards": 34,
+      "subtopics": {
+        "Origen y planificación": 10,
+        "Diseño metodológico": 7,
+        "Ejecución e informe": 9,
+        "Investigación cualitativa": 8
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "problema y objetivos de investigacion",
+      "cards": 36,
+      "subtopics": {
+        "Objeto y planteamiento": 5,
+        "Delimitación del problema": 11,
+        "Selección y factibilidad": 7,
+        "Preguntas y justificación": 6,
+        "Objetivos de investigación": 7
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "marco teorico e hipotesis",
+      "cards": 49,
+      "subtopics": {
+        "Fundamentación y literatura": 5,
+        "Marcos conceptual y teórico": 9,
+        "Marco cualitativo": 7,
+        "Operacionalización": 5,
+        "Estructura de hipótesis": 10,
+        "Relaciones entre variables": 8,
+        "Hipótesis estadísticas": 5
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "variables y medicion",
+      "cards": 39,
+      "subtopics": {
+        "Variables según función": 8,
+        "Variables cualitativas y cuantitativas": 5,
+        "Tipos de variables": 9,
+        "Escalas de medición": 17
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "estadistica descriptiva",
+      "cards": 24,
+      "subtopics": {
+        "Conceptos estadísticos": 3,
+        "Descripción e inferencia": 4,
+        "Unidad, población y muestra": 9,
+        "Parámetros y estadígrafos": 3,
+        "Historia de la estadística": 5
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "muestreo",
+      "cards": 40,
+      "subtopics": {
+        "Muestreo probabilístico": 6,
+        "Muestreo sistemático": 5,
+        "Muestreo estratificado": 10,
+        "Conglomerados y etapas": 5,
+        "Errores de muestreo y medición": 7,
+        "Muestreo no probabilístico": 7
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    },
+    {
+      "source": "salud",
+      "topic": "frecuencias y graficos",
+      "cards": 81,
+      "subtopics": {
+        "Tabulación y ordenación": 6,
+        "Intervalos y amplitud": 10,
+        "Límites y marca de clase": 8,
+        "Frecuencias absolutas": 3,
+        "Frecuencias relativas": 5,
+        "Frecuencias acumuladas": 10,
+        "Histogramas y polígonos": 9,
+        "Ojivas": 3,
+        "Barras y sectores": 7,
+        "Elección del gráfico": 3,
+        "Estructura de tablas cruzadas": 7,
+        "Porcentajes condicionales": 7,
+        "Lectura de tablas cruzadas": 3
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "salud-detail-sturges"
+      ]
+    },
+    {
+      "source": "salud",
+      "topic": "medidas de tendencia central",
+      "cards": 36,
+      "subtopics": {
+        "Media aritmética": 9,
+        "Mediana": 14,
+        "Moda": 13
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "salud-detail-mediana",
+        "salud-detail-moda"
+      ]
+    },
+    {
+      "source": "salud",
+      "topic": "medidas de posicion",
+      "cards": 30,
+      "subtopics": {
+        "Cuartiles": 16,
+        "Deciles": 7,
+        "Percentiles": 7
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "salud-detail-cuartil-posicion",
+        "salud-detail-decil-posicion",
+        "salud-detail-percentil-posicion"
+      ]
+    },
+    {
+      "source": "salud",
+      "topic": "dispersion y forma de los datos",
+      "cards": 61,
+      "subtopics": {
+        "Rango y rango intercuartil": 10,
+        "Varianza": 12,
+        "Desviación estándar": 7,
+        "Coeficiente de variación": 10,
+        "Asimetría": 8,
+        "Coeficientes de asimetría": 7,
+        "Curtosis": 7
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": [
+        "salud-detail-varianza-poblacion",
+        "salud-detail-varianza-muestra"
+      ]
+    },
+    {
+      "source": "salud",
+      "topic": "analisis de datos en excel y spss",
+      "cards": 65,
+      "subtopics": {
+        "Preparación en Excel": 11,
+        "Interpretación en Excel": 11,
+        "Definición de variables en SPSS": 7,
+        "Formatos y valores perdidos": 5,
+        "Medida y rol en SPSS": 11,
+        "Ingreso de datos en SPSS": 3,
+        "Análisis y salida de SPSS": 13,
+        "Menús de SPSS": 4
+      },
+      "checked": [
+        "Referencia completa y evidencia en su página por el compilador",
+        "Respuesta de hasta 25 palabras",
+        "IDs y preguntas sin duplicados exactos",
+        "Tres o más tarjetas por subtema"
+      ],
+      "focused_additions": []
+    }
+  ]
+}
