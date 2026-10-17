@@ -46,16 +46,26 @@
 #study-area .btn-nav{min-height:52px;border-radius:19px;font-size:14px;font-weight:900;box-shadow:0 15px 24px #16335412}
 #study-area .btn-nav-left{background:#e8eef5;color:#263c55}
 #study-area .btn-nav-right{background:#101a2c;color:#fff}
+#study-area #flashcard-settings-toggle{display:none}
+body:has(#study-area:not(.hidden)) .support-float{display:none!important}
 @media(max-width:600px){
- #study-area.study-area{width:100%;padding-bottom:24px}
- #study-area .study-mobile-header{gap:11px}
- #study-area .study-mobile-header h2{font-size:24px}
+ body:has(#study-area:not(.hidden)) #mobile-topbar{display:none!important}
+ #study-area.study-area{width:100%;min-height:100svh;padding-top:max(16px,env(safe-area-inset-top));padding-bottom:max(18px,env(safe-area-inset-bottom))}
+ #study-area .study-mobile-header{grid-template-columns:auto minmax(0,1fr) auto;gap:10px;margin-bottom:12px}
+ #study-area .study-mobile-header h2{font-size:18px;line-height:1.2;margin:0}
+ #study-area .study-subject-pill{display:none}
+ #study-area .btn-back-game{font-size:12px;min-height:44px;padding:0 11px;box-shadow:none}
+ #study-area #flashcard-settings-toggle{display:block;min-height:44px;padding:0 11px;border:1px solid #d3dfed;border-radius:14px;background:#fff;color:#365779;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+ #study-area #flashcard-settings-toggle:focus-visible{outline:3px solid #159da2;outline-offset:3px}
+ #study-area #flashcard-settings-toggle[aria-expanded=true]{background:#e3f2f4;color:#00768a;border-color:#a8d5d6}
+ #study-area .flashcard-controls{display:none}
+ #study-area.fc-settings-open .flashcard-controls{display:block}
  #study-area .flashcard-controls{padding:12px}
  #study-area .flashcard-control-row{gap:9px}
  #study-area .flashcard-control-row label{min-width:0;flex:1}
  #study-area .flashcard-control-row label:first-child{flex-basis:100%}
  #study-area #flashcard-shuffle{width:auto}
- #study-area .card.depth-card,#study-area .card.depth-card .face{min-height:353px}
+ #study-area .card.depth-card,#study-area .card.depth-card .face{min-height:clamp(353px,calc(100svh - 310px),560px)}
  #study-area .card.depth-card .face{padding:76px 17px 18px;border-radius:22px}
  #study-area .card.depth-card .depth-brand{top:20px;left:17px;width:47px;height:44px}
  #study-area .fc-brand-wordmark{top:29px;left:69px}

@@ -30,6 +30,12 @@ const root=path.resolve(__dirname,'..');
   const metrics=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,study:document.getElementById('study-area').getBoundingClientRect().toJSON(),overflow:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width&&r.right>innerWidth+1&&getComputedStyle(e).display!=='none';}).slice(0,10).map(e=>({id:e.id,cls:e.className,right:e.getBoundingClientRect().right}))}));
   console.log(JSON.stringify({width,metrics}));
   assert.ok(metrics.scroll<=width+1,'horizontal overflow at '+width);
+  if(width<600){
+   assert.equal(await page.locator('#mobile-topbar').isVisible(),false);
+   assert.equal(await page.locator('.support-float').isVisible(),false);
+   assert.equal(await page.locator('#flashcard-settings').isVisible(),false);
+   assert.equal(await page.locator('#flashcard-settings-toggle').getAttribute('aria-expanded'),'false');
+  }else assert.equal(await page.locator('#flashcard-settings').isVisible(),true);
   await page.screenshot({path:path.join(directory,'question-'+width+'.png'),fullPage:true});
   await page.locator('#btn-reveal').click();
   assert.equal(await page.locator('.fc-answer-source').innerText(),sample.reference);
@@ -38,6 +44,9 @@ const root=path.resolve(__dirname,'..');
   await page.evaluate(()=>renderCard());
  }
  const groups=[...new Set(cards.map(c=>c.subtema))];
+ await page.locator('#flashcard-settings-toggle').click();
+ assert.equal(await page.locator('#flashcard-settings').isVisible(),true);
+ assert.equal(await page.locator('#flashcard-settings-toggle').getAttribute('aria-expanded'),'true');
  for(const section of groups){
   const expected=cards.filter(c=>c.subtema===section).length;
   await page.locator('#flashcard-subtopic').selectOption(section);
@@ -46,6 +55,8 @@ const root=path.resolve(__dirname,'..');
  }
  await page.locator('#flashcard-subtopic').selectOption('');
  assert.equal(await page.locator('#card-total').innerText(),String(cards.length));
+ await page.locator('#flashcard-settings-toggle').click();
+ assert.equal(await page.locator('#flashcard-settings').isVisible(),false);
  const blood=JSON.parse(fs.readFileSync(libraryPath,'utf8')).cards.find(c=>c.id==='morfo-18-abo-overview');
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:1100});
@@ -78,6 +89,9 @@ const root=path.resolve(__dirname,'..');
  await page.evaluate(rows=>startDeck(rows[0].tema,rows[0].materia,rows),cards);
  await page.locator('#btn-reveal').click();
  assert.equal(await page.locator('.fc-answer-table').count(),0,'the table must not remain on unrelated answers');
+ await page.evaluate(()=>document.getElementById('study-area').classList.add('hidden'));
+ assert.equal(await page.locator('#mobile-topbar').isVisible(),true,'the campus header returns when leaving study');
+ assert.equal(await page.locator('.support-float').isVisible(),true,'support remains available outside study');
  assert.deepEqual(errors,[]);
  await browser.close();
  console.log('PC and mobile study flow passed.');

@@ -2,6 +2,12 @@
 (function(){
  const modeSelect=document.getElementById('flashcard-mode'),subSelect=document.getElementById('flashcard-subtopic');
  if(!modeSelect||!subSelect)return;
+ const settingsToggle=document.getElementById('flashcard-settings-toggle');
+ function setSettings(open){
+  document.getElementById('study-area').classList.toggle('fc-settings-open',open);
+  if(settingsToggle){settingsToggle.setAttribute('aria-expanded',String(open));settingsToggle.textContent=open?'Cerrar':'Ajustes';}
+ }
+ settingsToggle?.addEventListener('click',()=>setSettings(settingsToggle.getAttribute('aria-expanded')!=='true'));
  let topic='',subject='',all=[],mode='due',subtopic='',pending=false,owner=null;
  const value=(row,key)=>row?.[key]??row?.[key.toUpperCase()]??'';
  const make=(tag,cls,text)=>{const n=document.createElement(tag);n.className=cls;if(text)n.textContent=text;return n;};
@@ -24,7 +30,7 @@
  subSelect.addEventListener('change',()=>{subtopic=subSelect.value;restart();});
  document.getElementById('flashcard-shuffle').addEventListener('click',restart);
  window.FlashcardWorkspace={
-  clear(){topic='';subject='';all=[];mode='due';subtopic='';pending=false;owner=null;document.getElementById('flashcard-inventory').textContent='';document.getElementById('flashcard-context').textContent='';},
+  clear(){setSettings(false);topic='';subject='';all=[];mode='due';subtopic='';pending=false;owner=null;document.getElementById('flashcard-inventory').textContent='';document.getElementById('flashcard-context').textContent='';},
   isExploring:()=>mode==='all',
   renderAnswer(node,card){
    node.replaceChildren();
@@ -49,7 +55,7 @@
    node.parentElement.scrollTop=0;
   },
   prepare(name,materia,cards){
-   if(!pending||name!==topic||materia!==subject){mode='due';subtopic='';}
+   if(!pending||name!==topic||materia!==subject){mode='due';subtopic='';setSettings(false);}
    pending=false;topic=name;subject=materia;all=cards;owner=typeof currentUser==='undefined'?null:currentUser?.id;
    modeSelect.value=mode;
    const groups=new Map();

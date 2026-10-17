@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="intocables-sheets.css?v=1">
     <link rel="stylesheet" href="study-depth.css?v=3">
     <link rel="stylesheet" href="flashcard-workspace.css?v=4">
-    <link rel="stylesheet" href="flashcard-approved.css?v=3">
+    <link rel="stylesheet" href="flashcard-approved.css?v=4">
     <link rel="stylesheet" href="simulacro-library.css?v=4">
     <link rel="stylesheet" href="past-exams.css?v=2">
     <link rel="stylesheet" href="topic-evaluations.css?v=2">
@@ -503,9 +503,10 @@
                     <span id="current-subject" class="study-subject-pill">flashcards</span>
                     <h2 id="card-tema-name">elige un tema</h2>
                 </div>
+                <button id="flashcard-settings-toggle" type="button" aria-expanded="false" aria-controls="flashcard-settings">Ajustes</button>
             </div>
 
-            <div class="flashcard-controls">
+            <div class="flashcard-controls" id="flashcard-settings">
                 <div class="flashcard-control-row"><label>Sesión<select id="flashcard-mode"><option value="due">Repaso programado</option><option value="all">Explorar todas</option></select></label><label>Subtema<select id="flashcard-subtopic"><option value="">Todos los subtemas</option></select></label><button id="flashcard-shuffle" type="button">Mezclar</button></div>
                 <p id="flashcard-inventory" role="status"></p><p id="flashcard-mode-help"></p>
             </div>
@@ -1369,7 +1370,7 @@
     <script src="simulacro-ingreso.js?v=8"></script>
     <script src="simulacro-library.js?v=4"></script>
     <script src="student-library.js?v=10"></script>
-    <script src="flashcard-workspace.js?v=5"></script>
+    <script src="flashcard-workspace.js?v=6"></script>
     <script src="study-summaries.js?v=8"></script>
     <script src="past-exams.js?v=6"></script>
     <script src="topic-evaluations.js?v=1"></script>
