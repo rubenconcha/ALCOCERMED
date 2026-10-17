@@ -3432,7 +3432,8 @@ var gameSearchQuery = '';
 function updateGameFilterContext(subject) {
     var title = document.getElementById('game-filter-title');
     var input = document.getElementById('game-search');
-    if (title) title.textContent = subject ? 'PARTIDAS DE ' + subject : 'FILTRAR PARTIDAS';
+    var names = {'MORFOFUNCION':'Morfofunción','BIOLOGIA CELULAR':'Biología celular','EDUCACION PARA LA SALUD':'Educación para la salud'};
+    if (title) title.textContent = subject ? (names[subject] || subject) : 'Explora las partidas';
     if (input) input.placeholder = subject ? 'Filtrar temas de esta materia…' : 'Filtrar por tema o materia…';
 }
 

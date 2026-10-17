@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=84">
+  <link rel="stylesheet" href="styles.css?v=85">
   <link rel="stylesheet" href="tejido-nervioso.css?v=8">
   
   <!-- PWA Meta Tags -->
@@ -500,12 +500,17 @@
       </div>
       <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap" id="explorar-filter-bar"></div>
       <div class="game-search-panel game-topic-filter" role="search" aria-label="Filtrar partidas">
-        <label id="game-filter-title" for="game-search">FILTRAR PARTIDAS</label>
+        <div class="game-filter-intro">
+          <span class="game-filter-emblem" aria-hidden="true"><i class="fas fa-gamepad"></i></span>
+          <div class="game-filter-copy"><span class="game-filter-eyebrow">ELIGE TU SIGUIENTE RETO</span>
+            <label id="game-filter-title" for="game-search">Explora las partidas</label>
+            <p id="game-search-status" role="status" aria-live="polite">Filtra por tema o entra a una materia para ver sus partidas.</p>
+          </div>
+        </div>
         <div class="game-search-field"><i class="fas fa-search" aria-hidden="true"></i>
           <input id="game-search" type="search" placeholder="Filtrar por tema o materia…" autocomplete="off" oninput="searchGameCatalog(this.value)" onkeydown="if(event.key === 'Escape') clearGameSearch()" aria-describedby="game-search-status">
           <button id="game-search-clear" type="button" onclick="clearGameSearch()" aria-label="Borrar búsqueda" hidden><i class="fas fa-times" aria-hidden="true"></i></button>
         </div>
-        <p id="game-search-status" role="status" aria-live="polite">Busca en las tres materias o entra a una para filtrar sus temas.</p>
       </div>
       <div id="explorar-subject-grid" class="explorar-grid"></div>
       <div id="explorar-eval-list" class="explorar-eval-list" style="display:none"></div>
@@ -858,7 +863,7 @@
 <script src="game-rounds.js?v=1"></script>
 <script src="game-practice.js?v=1"></script>
 <script src="game-question-images.js?v=1"></script>
-<script src="app.js?v=103"></script>
+<script src="app.js?v=104"></script>
 <script src="tejido-nervioso.js?v=14"></script>
 
 <!-- PWA Service Worker Registration -->

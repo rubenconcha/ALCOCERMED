@@ -1,10 +1,10 @@
-const CACHE_NAME = 'alcocermed-juegos-v104';
+const CACHE_NAME = 'alcocermed-juegos-v105';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
     './game-practice.js?v=1',
     './game-question-images.js?v=1',
-    './app.js?v=103',
-    './styles.css?v=84',
+    './app.js?v=104',
+    './styles.css?v=85',
     './assets/preguntas-apoyo/mano-muneca.svg',
     './',
     './index.html',
