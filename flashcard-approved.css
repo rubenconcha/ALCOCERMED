@@ -84,5 +84,6 @@
 #study-area .fc-answer-table tr:last-child>*{border-bottom:0}
 #study-area .fc-answer-table tr>*:last-child{border-right:0}
 #study-area .fc-answer-table figcaption,#study-area .fc-table-reference{display:block;text-align:center;font-size:12px;line-height:1.5;color:#58748a;margin-top:9px}
+body:has(#study-area:not(.hidden) .has-answer-table) .support-float{display:none}
 @media(max-width:600px){#study-area .has-answer-table p{font-size:23px!important;min-height:75px}#study-area .fc-answer-table table{font-size:11px}#study-area .fc-answer-table th,#study-area .fc-answer-table td{padding:8px 3px}#study-area .fc-answer-table td{overflow-wrap:normal}#study-area .fc-answer-table th:first-child{font-size:10px;width:29%}#study-area .fc-answer-table caption{font-size:13px}}
 @media(prefers-reduced-motion:reduce){#study-area *{transition:none!important}}

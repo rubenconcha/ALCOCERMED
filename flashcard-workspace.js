@@ -41,7 +41,7 @@
     const head=make('thead',''),header=make('tr','');
     data.columns.forEach(label=>{const cell=make('th','',label);cell.scope='col';header.append(cell);});head.append(header);table.append(head);
     const body=make('tbody','');
-    data.rows.forEach(row=>{const tr=make('tr','');row.forEach((text,index)=>{const cell=make(index?'td':'th','',text);if(!index)cell.scope='row';tr.append(cell);});body.append(tr);});
+    data.rows.forEach(row=>{const tr=make('tr','');row.forEach((text,index)=>{const cell=make(index?'td':'th','',String(text).replace(/\bAnti-/g,'Anti‑'));if(!index)cell.scope='row';tr.append(cell);});body.append(tr);});
     table.append(body);figure.append(table,make('figcaption','',data.note));
     if(data.reference!==value(card,'reference'))figure.append(make('small','fc-table-reference',data.reference));
     back.insertBefore(figure,source);
