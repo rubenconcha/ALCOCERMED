@@ -1,4 +1,4 @@
-/* Pantalla de ingreso compacta con acceso claro al registro. */
+/* Pantalla de ingreso con formulario y ayuda al estudiante. */
 body.login-active .login-screen {
     min-height: 100dvh;
     padding: 24px;
@@ -23,32 +23,33 @@ body.login-active .auth-separator { margin: 12px 0 14px; }
 body.login-active .login-form { gap: 16px; }
 body.login-active .login-input { min-height: 48px; }
 body.login-active .login-btn { min-height: 50px; margin-top: 5px; }
-body.login-active .login-create-account {
+body.login-active .login-assistance {
     display: grid;
-    gap: 8px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #637287;
-}
-body.login-active .login-create-account a {
-    color: #142944;
-    font-weight: 750;
-    text-decoration: none;
-}
-body.login-active .login-create-account a:first-of-type {
-    display: block;
-    padding: 12px;
-    border: 1px solid #f4bb3f;
-    border-radius: 12px;
-    background: #fff7e5;
-}
-body.login-active .login-create-account a:hover { text-decoration: underline; }
-body.login-active .login-create-account .login-back-home { color: #2183aa; font-size: 13px; }
-body.login-active .login-footer {
-    margin-top: 27px;
-    padding-top: 19px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 20px;
     border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+body.login-active .login-assistance a {
+    color: #2386b6;
+    font-size: 12px;
+    line-height: 1.5;
+    text-decoration: none;
+    text-underline-offset: 3px;
+}
+body.login-active .login-assistance a:hover { text-decoration: underline; }
+body.login-active .login-assistance a:focus-visible {
+    outline: 2px solid #2386b6;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+body.login-active .login-footer {
+    margin-top: 22px;
+    padding-top: 0;
+    border-top: 0;
     font-size: 11px;
     line-height: 1.4;
 }
@@ -59,4 +60,8 @@ body.login-active .login-footer {
     body.login-active .login-logo-wrap { margin-bottom: 24px; }
     body.login-active .login-title { font-size: 26px; }
     body.login-active .login-footer { margin-top: 24px; }
+}
+
+@media (max-width: 360px) {
+    body.login-active .login-assistance { grid-template-columns: 1fr; gap: 14px; }
 }
