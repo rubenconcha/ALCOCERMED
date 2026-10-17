@@ -7173,8 +7173,8 @@ body.quiz-focus-mode #quiz-container {
 .game-filter-copy p{margin:5px 0 0;color:var(--text-mid);font-size:.76rem;line-height:1.5}
 .game-search-field{display:flex;align-items:center;gap:12px;flex:0 1 460px;min-width:220px;padding:0 17px;min-height:52px;border:1px solid var(--border);border-radius:14px;background:var(--bg-main,var(--bg));transition:border-color .18s,box-shadow .18s}
 .game-search-field:focus-within{border-color:rgba(234,179,8,.65);box-shadow:0 0 0 3px rgba(234,179,8,.08)}
-.game-search-field>i{color:var(--text-mid);font-size:.95rem;transition:color .18s}
-.game-search-field:focus-within>i{color:#eab308}
+.game-search-field>svg{flex-shrink:0;color:var(--text-mid);font-size:.95rem;transition:color .18s}
+.game-search-field:focus-within>svg{color:#eab308}
 .game-search-field input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--text);font:inherit;font-size:.9rem;padding:15px 0}
 .game-search-field input::placeholder{color:var(--text-mid);opacity:.8}
 .game-search-field input::-webkit-search-cancel-button{display:none}
