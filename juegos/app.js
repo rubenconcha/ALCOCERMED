@@ -2866,6 +2866,14 @@ function renderSubjectMissions(grid) {
 }
 
 function loadExploreSubjects() {
+    exploreCurrentSubject = null;
+    gameSearchQuery = '';
+    var searchField = document.getElementById('game-search');
+    if (searchField) searchField.value = '';
+    var searchClear = document.getElementById('game-search-clear');
+    if (searchClear) searchClear.hidden = true;
+    updateGameFilterContext(null);
+    updateGameSearchStatus(null);
     var grid = document.getElementById('explorar-subject-grid');
     if (!grid) return;
     document.getElementById('explorar-subject-grid').style.display = '';
@@ -3417,8 +3425,60 @@ function rememberSubjectPlanReturn(subject) {
     catch (e) { /* El enlace a planes sigue funcionando sin almacenamiento. */ }
 }
 
+var gameCatalogRows = null;
+var gameCatalogPromise = null;
+var gameSearchQuery = '';
+
+function updateGameFilterContext(subject) {
+    var title = document.getElementById('game-filter-title');
+    var input = document.getElementById('game-search');
+    var names = {'MORFOFUNCION':'Morfofunción','BIOLOGIA CELULAR':'Biología celular','EDUCACION PARA LA SALUD':'Educación para la salud'};
+    if (title) title.textContent = subject ? (names[subject] || subject) : 'Explora las partidas';
+    if (input) input.placeholder = subject ? 'Filtrar temas de esta materia…' : 'Filtrar por tema o materia…';
+}
+
+function updateGameSearchStatus(count) {
+    var status = document.getElementById('game-search-status');
+    if (status) status.textContent = count === null ? (exploreCurrentSubject ? 'Escribe el nombre de un tema para filtrar estas partidas.' : 'Filtra por tema o entra a una materia para ver sus partidas.') : count + (count === 1 ? ' tema encontrado' : ' temas encontrados');
+}
+
+function normalizedGameSearch(value) {
+    return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+function matchesGameSearch(ev, query) {
+    var text = normalizedGameSearch([ev.titulo, ev.tema, resolveEvaluationSubject(ev)].join(' '));
+    return normalizedGameSearch(query).split(/\s+/).filter(Boolean).every(function(word) { return text.indexOf(word) !== -1; });
+}
+
+function fetchGameCatalog(client) {
+    if (gameCatalogRows) return Promise.resolve({ data: gameCatalogRows });
+    if (!gameCatalogPromise) gameCatalogPromise = client.rpc('campus_game_catalog').then(function(result) {
+        gameCatalogPromise = null;
+        if (!result.error) gameCatalogRows = result.data || [];
+        return result;
+    }).catch(function() { gameCatalogPromise = null; return {error: true}; });
+    return gameCatalogPromise;
+}
+
+function searchGameCatalog(value) {
+    gameSearchQuery = String(value || '');
+    var clear = document.getElementById('game-search-clear');
+    if (clear) clear.hidden = !gameSearchQuery;
+    if (gameSearchQuery.trim() || exploreCurrentSubject) loadSubjectEvaluations(exploreCurrentSubject || '');
+    else loadExploreSubjects();
+}
+
+function clearGameSearch() {
+    var field = document.getElementById('game-search');
+    if (field) { field.value = ''; field.focus(); }
+    searchGameCatalog('');
+}
+
 function loadSubjectEvaluations(subject) {
     exploreCurrentSubject = subject;
+    updateGameFilterContext(subject);
+    updateGameSearchStatus(null);
     var client = getSupabase();
     var grid = document.getElementById('explorar-subject-grid');
     if (grid) grid.style.display = 'none';
@@ -3439,7 +3499,7 @@ function loadSubjectEvaluations(subject) {
 
     // El catálogo expone solo títulos y temas. La política existente de Supabase
     // sigue protegiendo el contenido y las preguntas de las partidas de pago.
-    client.rpc('campus_game_catalog').then(function(evRes) {
+    fetchGameCatalog(client).then(function(evRes) {
         if (exploreCurrentSubject !== subject) return;
         if (evRes.error) {
             listEl.innerHTML = '<div class="empty-state"><p>No se pudieron cargar las partidas.</p><button type="button" class="explorar-btn-study" onclick="loadSubjectEvaluations(\'' + subject + '\')">Reintentar</button></div>';
@@ -3447,12 +3507,13 @@ function loadSubjectEvaluations(subject) {
         }
         var matching = [];
         for (var i = 0; i < evRes.data.length; i++) {
-            if (subjectMatch(evRes.data[i], subject)) {
+            if ((!subject || subjectMatch(evRes.data[i], subject)) && matchesGameSearch(evRes.data[i], gameSearchQuery)) {
                 matching.push(evRes.data[i]);
             }
         }
         if (matching.length === 0) {
-            listEl.innerHTML = '<div class="empty-state"><i class="fas fa-folder-open" aria-hidden="true"></i><p>Aún no hay partidas publicadas para ' + escapeHtml(subject) + '.</p></div>';
+            listEl.innerHTML = '<div class="empty-state"><i class="fas fa-search" aria-hidden="true"></i><p>' + (gameSearchQuery.trim() ? 'No encontramos temas con esa búsqueda. Prueba otro nombre o materia.' : 'Aún no hay partidas publicadas para ' + escapeHtml(subject) + '.') + '</p></div>';
+            updateGameSearchStatus(0);
             return;
         }
 
@@ -3460,22 +3521,32 @@ function loadSubjectEvaluations(subject) {
 
         Promise.resolve().then(function() {
             if (exploreCurrentSubject !== subject) return;
-            var html = '<div class="subject-game-list-heading"><span>PARTIDAS DE ' + escapeHtml(subject) + '</span><p>Elige un tema y juega con las preguntas, imágenes, sonidos y animaciones del juego original.</p></div>';
+            updateGameSearchStatus(matching.length);
+            var html = '';
             for (var i = 0; i < matching.length; i++) {
                 var ev = matching[i];
                 var isDemo = isDemoEvaluation(ev);
                 var isLocked = !canAccessEvaluation(ev);
                 html += '<div class="explorar-eval-card' + (isLocked ? ' explorar-eval-locked' : '') + '" style="border-left:4px solid ' + color + '">';
                 html += '<div style="flex:1;min-width:180px">';
-                html += '<h4 style="font-size:1.05rem;font-weight:800;color:var(--text);margin:0 0 6px">' + escapeHtml(ev.titulo || 'Sin título') + (isDemo ? ' <span style="background:var(--badge-draft-bg,#FEF3C7);color:var(--badge-draft-color,#92400E);font-size:0.65rem;padding:2px 8px;border-radius:8px;font-weight:700">🎯 DEMO</span>' : '') + '</h4>';
+                html += '<h4 style="font-size:1.05rem;font-weight:800;color:var(--text);margin:0 0 6px">' + escapeHtml(GameRounds.cleanTitle(ev.titulo || 'Sin título')) + (isDemo ? ' <span style="background:var(--badge-draft-bg,#FEF3C7);color:var(--badge-draft-color,#92400E);font-size:0.65rem;padding:2px 8px;border-radius:8px;font-weight:700">🎯 DEMO</span>' : '') + '</h4>';
                 html += '<div class="eval-meta" style="display:flex;flex-wrap:wrap;gap:10px;font-size:0.78rem;color:#94A3B8">';
-                if (ev.tema) html += '<span>' + escapeHtml(ev.tema) + '</span>';
+                if (!subject) html += '<span>' + escapeHtml(resolveEvaluationSubject(ev)) + '</span>';
+                if (ev.tema) html += '<span>' + escapeHtml(GameRounds.cleanTitle(ev.tema)) + '</span>';
                 if (isLocked) html += '<span class="locked-access-badge"><i class="fas fa-lock"></i> BLOQUEADO</span>';
                 html += '</div></div>';
                 if (isLocked) {
                     html += '<a class="explorar-btn-study explorar-btn-locked" href="/planes?desde=campus#planes" onclick="rememberSubjectPlanReturn(\'' + subject + '\')" style="font-size:0.82rem;padding:12px 18px;border-radius:16px;font-weight:800;letter-spacing:0.02em;max-width:220px;line-height:1.25"><i class="fas fa-lock"></i> Desbloquear</a>';
                 } else {
-                    html += '<button class="explorar-btn-study" onclick="event.stopPropagation();startSelfStudy(\'' + ev.id + '\')" style="background:linear-gradient(135deg,' + color + ', ' + adjustColor(color, -20) + ');font-size:0.9rem;padding:14px 32px;border-radius:16px;font-weight:800;letter-spacing:0.5px"><i class="fas fa-play"></i> ' + (isDemo ? 'JUGAR DEMO' : 'JUGAR') + '</button>';
+                    var round = GameRounds.existingRound(ev);
+                    html += '<div class="game-round-actions">';
+                    var rounds = round ? [0] : [1, 2];
+                    for (var ri = 0; ri < rounds.length; ri++) {
+                        var roundValue = rounds[ri];
+                        var roundLabel = roundValue || round;
+                        html += '<button class="explorar-btn-study game-round-play" onclick="event.stopPropagation();startSelfStudy(\'' + ev.id + '\',' + roundValue + ')" style="background:linear-gradient(135deg,' + color + ', ' + adjustColor(color, -20) + ')"><i class="fas fa-play" aria-hidden="true"></i> <span>Ronda ' + roundLabel + '<small>' + (isDemo ? 'JUGAR DEMO' : 'JUGAR') + '</small></span></button>';
+                    }
+                    html += '</div>';
                 }
                 html += '</div>';
             }
@@ -3484,7 +3555,8 @@ function loadSubjectEvaluations(subject) {
     });
 }
 
-function startSelfStudy(evalId) {
+function startSelfStudy(evalId, round) {
+    round = GameRounds.roundNumber(round);
     if (!currentUser) { alert('Inicia sesión primero'); return; }
     var client = getSupabase();
     if (!client) return;
@@ -3493,6 +3565,7 @@ function startSelfStudy(evalId) {
     quizLiveResultId = null;
     sessionStorage.setItem('alcocer_quiz_code', code);
     sessionStorage.setItem('alcocer_self_evalid', evalId);
+    sessionStorage.setItem('alcocer_self_round_' + code, String(round));
     sessionStorage.removeItem('alcocer_quiz_state_' + code);
     sessionStorage.removeItem('alcocer_quiz_qids_' + code);
 
@@ -3512,14 +3585,18 @@ function startSelfStudy(evalId) {
         evaluacion.codigo = code;
         evaluacion.publicado = true;
 
-        client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evaluacion.id).order('orden').then(function(pResult) {
+        client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evaluacion.id).order('orden').then(async function(pResult) {
             if (pResult.error || !pResult.data || pResult.data.length === 0) {
                 alert('Esta evaluación no tiene preguntas');
                 sessionStorage.removeItem('alcocer_quiz_code');
                 return;
             }
 
-            var preguntas = resolveQuizQuestionsForEval(evaluacion, pResult.data);
+            var originalCount = pResult.data.length;
+            if (typeof GamePractice !== 'undefined') pResult.data = await GamePractice.load(client, evaluacion, pResult.data, code, false);
+            evaluacion._practiceRound = round;
+            var preguntas = round ? GameRounds.questions(evaluacion, pResult.data, round) : (pResult.data.length > originalCount ? pResult.data : resolveQuizQuestionsForEval(evaluacion, pResult.data));
+            if (!preguntas.length) { clearSelfSession(); showCustomAlert('Esta ronda todavía no tiene preguntas disponibles.'); return; }
             var qids = preguntas.map(function(q) { return q.id; });
             sessionStorage.setItem('alcocer_quiz_qids_' + code, JSON.stringify(qids));
 
@@ -3540,14 +3617,15 @@ function startSelfStudy(evalId) {
             // Usar el MISMO flujo que searchAndStartQuiz para modo test
             navigateTo('quiz');
             applyTestModeUI();
-            document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
-            document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
+            document.getElementById('quiz-live-title').textContent = GameRounds.displayTitle(evaluacion);
+            document.getElementById('quiz-live-subtitle').textContent = 'Modo práctica';
             unlockQuizAudio(function() { showSplashAndStart(); });
         });
     });
 }
 
 function restoreSelfStudy(evalId, code) {
+    var round = GameRounds.roundNumber(sessionStorage.getItem('alcocer_self_round_' + code));
     var client = getSupabase();
     if (!client) { navigateTo('jugar', true); return; }
 
@@ -3560,17 +3638,24 @@ function restoreSelfStudy(evalId, code) {
             navigateTo('jugar', true);
             return;
         }
+        evaluacion._practiceRound = round;
         evaluacion.codigo = code;
         evaluacion.publicado = true;
 
-        client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evalId).order('orden').then(function(pResult) {
+        client.from('evaluacion_preguntas').select('*').eq('evaluacion_id', evalId).order('orden').then(async function(pResult) {
             if (pResult.error || !pResult.data || pResult.data.length === 0) { clearSelfSession(); navigateTo('jugar', true); return; }
 
-            var preguntas = pResult.data;
+            if (typeof GamePractice !== 'undefined') pResult.data = await GamePractice.load(client, evaluacion, pResult.data, code, true);
+            var preguntas = round ? GameRounds.questions(evaluacion, pResult.data, round) : pResult.data;
             var savedQidsStr = sessionStorage.getItem('alcocer_quiz_qids_' + code);
             if (savedQidsStr) {
                 try {
                     var savedQids = JSON.parse(savedQidsStr);
+                    if (savedQids.some(function(id) { return !preguntas.some(function(q) { return q.id === id; }); })) {
+                        showCustomAlert('No pudimos recuperar todas las preguntas de tu partida. Vuelve a abrirla cuando tengas conexión.');
+                        navigateTo('jugar', true);
+                        return;
+                    }
                     var ordered = [];
                     for (var qi = 0; qi < savedQids.length; qi++) {
                         var found = preguntas.find(function(q) { return q.id === savedQids[qi]; });
@@ -3598,8 +3683,8 @@ function restoreSelfStudy(evalId, code) {
 
             navigateTo('quiz');
             applyTestModeUI();
-            document.getElementById('quiz-live-title').textContent = evaluacion.titulo || 'Autoestudio';
-            document.getElementById('quiz-live-subtitle').textContent = preguntas.length + ' preguntas • Modo práctica';
+            document.getElementById('quiz-live-title').textContent = GameRounds.displayTitle(evaluacion);
+            document.getElementById('quiz-live-subtitle').textContent = 'Modo práctica';
             if (quizCurrentQ > 0) {
                 if (quizCurrentQ >= preguntas.length) {
                     showQuizResults();
@@ -3622,6 +3707,8 @@ function clearSelfSession() {
     if (code) {
         sessionStorage.removeItem('alcocer_quiz_state_' + code);
         sessionStorage.removeItem('alcocer_quiz_qids_' + code);
+        sessionStorage.removeItem('alcocer_self_round_' + code);
+        sessionStorage.removeItem('alcocer_self_extra_' + code);
     }
     sessionStorage.removeItem('alcocer_quiz_code');
     sessionStorage.removeItem('alcocer_self_evalid');
@@ -4415,16 +4502,17 @@ function getQuizQuestionImage(pregunta, tipo) {
     if (typeof opts === 'string') {
         try { opts = JSON.parse(opts); } catch (e) { opts = []; }
     }
-    if (!opts || !opts.length) return '';
+    if (!opts || !opts.length) opts = [];
     for (var i = 0; i < opts.length; i++) {
         var url = opts[i] && opts[i].pregunta_imagen;
         if (url && String(url).trim()) {
             url = String(url).trim();
-            if (tipo !== 'dnd' && isGameOverviewImage(url)) return '';
+            if (tipo !== 'dnd' && isGameOverviewImage(url)) continue;
             return url;
         }
     }
-    return '';
+    var extra = pregunta && window.gameQuestionImages && window.gameQuestionImages[pregunta.id];
+    return extra && tipo !== 'dnd' ? extra.src : '';
 }
 
 function getNervousQuestionIllustration(pregunta) {
@@ -4441,9 +4529,13 @@ function renderQuizQuestionImageWrap(pregunta, tipo) {
     var contextual = pregunta && contextualGameImages[pregunta.id];
     wrap.classList.toggle('quiz-image-illustrated', !!illustration);
     var questionImage = getQuizQuestionImage(pregunta, tipo);
+    var extra = pregunta && window.gameQuestionImages && window.gameQuestionImages[pregunta.id];
     if (questionImage && tipo !== 'dnd') {
         wrap.hidden = false;
-        wrap.innerHTML = '<img class="quiz-question-image" decoding="async" loading="eager" fetchpriority="high" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(premium ? premium.alt : (morfoIllustration ? morfoIllustration.alt : (illustration ? illustration.alt : (contextual ? contextual.alt : 'Imagen de la pregunta')))) + '">';
+        wrap.innerHTML = '<img class="quiz-question-image" decoding="async" loading="eager" fetchpriority="high" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(premium ? premium.alt : (morfoIllustration ? morfoIllustration.alt : (illustration ? illustration.alt : (contextual ? contextual.alt : (extra && questionImage === extra.src ? extra.alt : 'Imagen de la pregunta'))))) + '">';
+        if (extra && questionImage === extra.src && extra.source) {
+            wrap.innerHTML += '<small class="quiz-image-credit"><a href="' + escapeHtml(extra.source) + '" target="_blank" rel="noopener noreferrer">Servier Medical Art</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></small>';
+        }
         if (illustration) {
             wrap.innerHTML += illustration.credit
                 ? '<small class="quiz-image-credit">' + escapeHtml(illustration.credit) + '</small>'
@@ -4559,6 +4651,12 @@ function renderQuizQuestion() {
     }
 
     document.getElementById('quiz-question-number').textContent = (quizCurrentQ + 1) + ' / ' + total;
+    var roundLabel = document.getElementById('quiz-round-label');
+    if (roundLabel) {
+        var currentRound = GameRounds.roundNumber(quizData.evaluacion._practiceRound) || GameRounds.existingRound(quizData.evaluacion);
+        roundLabel.hidden = !currentRound;
+        roundLabel.textContent = currentRound ? 'Ronda ' + currentRound : '';
+    }
     var questionCard = document.getElementById('quiz-question-card');
     if (questionCard) {
         var premiumQuestion = window.premiumGameImages && window.premiumGameImages[pregunta.id];

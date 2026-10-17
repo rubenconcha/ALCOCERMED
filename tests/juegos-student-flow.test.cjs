@@ -37,11 +37,13 @@ const context = vm.createContext({
       return Promise.resolve({ data: rows, error: null });
     }
   }),
+  GameRounds: require('../juegos/game-rounds.js'),
   SUBJECTS: subjects,
   exploreCurrentSubject: null,
   isAdmin: false,
   isLegacyClassEvaluation: () => false,
   subjectMatch: (ev, subject) => ev.asignatura === subject,
+  resolveEvaluationSubject: ev => ev.asignatura,
   sortSubjectEvaluations: list => list.sort((a, b) => Number(b.codigo.startsWith('DEMO')) - Number(a.codigo.startsWith('DEMO'))),
   subjectColor: () => '#EF4444',
   subjectEmoji: () => 'M',
@@ -70,10 +72,11 @@ assert.equal((nodes['explorar-subject-grid'].innerHTML.match(/class="explorar-su
       { id: 'paid-id', codigo: 'T1', titulo: 'Tema completo', tema: 'Anatomía', asignatura: subject.name },
       { id: 'demo-id', codigo: 'DEMO26', titulo: 'Muestra', tema: 'Primer tema', asignatura: subject.name }
     ];
+    context.gameCatalogRows = null;
     context.loadSubjectEvaluations(subject.name);
     await new Promise(resolve => setImmediate(resolve));
     const html = nodes['explorar-eval-list'].innerHTML;
-    assert.match(html, /startSelfStudy\('demo-id'\)/, 'The original quiz engine opens the demo');
+    assert.match(html, /startSelfStudy\('demo-id',1\)/, 'The original quiz engine opens the demo');
     assert.match(html, /JUGAR DEMO/);
     assert.match(html, /Tema completo/);
     assert.match(html, /Desbloquear/);
@@ -84,6 +87,7 @@ assert.equal((nodes['explorar-subject-grid'].innerHTML.match(/class="explorar-su
   }
 
   rows = [];
+  context.gameCatalogRows = null;
   context.loadSubjectEvaluations('MORFOFUNCION');
   await new Promise(resolve => setImmediate(resolve));
   assert.match(nodes['explorar-eval-list'].innerHTML, /Aún no hay partidas publicadas/);

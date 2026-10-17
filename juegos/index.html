@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=81">
+  <link rel="stylesheet" href="styles.css?v=85">
   <link rel="stylesheet" href="tejido-nervioso.css?v=8">
   
   <!-- PWA Meta Tags -->
@@ -444,6 +444,8 @@
           <div class="game-app-kicker"><i class="fas fa-bolt"></i> AlcocerMed Arena</div>
           <h1><i class="fas fa-gamepad"></i> JUGAR</h1>
           <p>Elige una asignatura y empieza a jugar. Aquí también puedes ver a los estudiantes con más puntos.</p>
+
+
           <div class="game-download-row" aria-label="Descargar app">
             <button type="button" class="game-download-btn install-pwa-trigger" data-platform="android">
               <i class="fab fa-android"></i>
@@ -497,6 +499,19 @@
         </div>
       </div>
       <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap" id="explorar-filter-bar"></div>
+      <div class="game-search-panel game-topic-filter" role="search" aria-label="Filtrar partidas">
+        <div class="game-filter-intro">
+          <span class="game-filter-emblem" aria-hidden="true"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10c2 0 3 2 3.5 4l1 5c.4 2-1.7 3.2-3.1 1.8L16 15H8l-2.4 2.8C4.2 19.2 2.1 18 2.5 16l1-5C4 9 5 7 7 7Z"/><path d="M8 10v4m-2-2h4"/><circle cx="16" cy="10.5" r=".7" fill="currentColor" stroke="none"/><circle cx="18" cy="13" r=".7" fill="currentColor" stroke="none"/></svg></span>
+          <div class="game-filter-copy"><span class="game-filter-eyebrow">ELIGE TU SIGUIENTE RETO</span>
+            <label id="game-filter-title" for="game-search">Explora las partidas</label>
+            <p id="game-search-status" role="status" aria-live="polite">Filtra por tema o entra a una materia para ver sus partidas.</p>
+          </div>
+        </div>
+        <div class="game-search-field"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+          <input id="game-search" type="search" placeholder="Filtrar por tema o materia…" autocomplete="off" oninput="searchGameCatalog(this.value)" onkeydown="if(event.key === 'Escape') clearGameSearch()" aria-describedby="game-search-status">
+          <button id="game-search-clear" type="button" onclick="clearGameSearch()" aria-label="Borrar búsqueda" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m5 5 10 10M15 5 5 15"/></svg></button>
+        </div>
+      </div>
       <div id="explorar-subject-grid" class="explorar-grid"></div>
       <div id="explorar-eval-list" class="explorar-eval-list" style="display:none"></div>
       <button id="explorar-back-btn" onclick="loadExploreSubjects()" style="display:none;padding:10px 24px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;font-weight:600;cursor:pointer;margin-bottom:16px;color:var(--text-mid);font-size:14px"><i class="fas fa-arrow-left"></i> Volver a materias</button>
@@ -675,6 +690,7 @@
         <div id="powerup-bar" style="display:none;justify-content:center;gap:10px;margin-bottom:16px;flex-wrap:wrap"></div>
 
         <!-- Pregunta actual -->
+        <div id="quiz-round-label" class="quiz-round-label" hidden></div>
         <div id="quiz-question-card" style="background:var(--bg-card); border-radius:24px; padding:40px; box-shadow:0 10px 30px rgba(0,0,0,0.2); margin-bottom:32px; text-align:center; min-height:180px; display:flex; align-items:center; justify-content:center;">
           <h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">Cargando...</h2>
         </div>
@@ -844,7 +860,10 @@
 <script src="game-access.js?v=2"></script>
 <script src="premium-game-images.js?v=6"></script>
 <script src="quiz-copy.js?v=1"></script>
-<script src="app.js?v=100"></script>
+<script src="game-rounds.js?v=1"></script>
+<script src="game-practice.js?v=1"></script>
+<script src="game-question-images.js?v=1"></script>
+<script src="app.js?v=104"></script>
 <script src="tejido-nervioso.js?v=14"></script>
 
 <!-- PWA Service Worker Registration -->
@@ -885,20 +904,13 @@
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js').then((reg) => {
-        console.log('Service Worker registrado', reg.scope);
-        
-        // Lógica de auto-actualización silenciosa
-        reg.addEventListener('updatefound', () => {
-          const newWorker = reg.installing;
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              // Hay una nueva versión disponible, recargar silenciosamente para aplicarla
-              console.log('Nueva versión detectada, recargando...');
-              window.location.reload();
-            }
-          });
-        });
+      var hadController = !!navigator.serviceWorker.controller;
+      var reloading = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (hadController && !reloading) { reloading = true; window.location.reload(); }
+      });
+      navigator.serviceWorker.register('/juegos/sw.js', {updateViaCache: 'none'}).then((reg) => {
+        reg.update().catch(() => {});
       }).catch((err) => console.log('Error SW:', err));
     });
   }
