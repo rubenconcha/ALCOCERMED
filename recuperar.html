@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <title>Recuperar contraseña · AlcocerMed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=38">
+    <link rel="stylesheet" href="student-white.css?v=2">
+    <link rel="stylesheet" href="campus-theme.css?v=4">
+    <link rel="stylesheet" href="campus-access.css?v=2">
+    <style>
+        [hidden] { display:none !important; }
+        .recovery-status { font-size:.95rem;line-height:1.5;color:#35586c; }
+        .recovery-status[data-error="true"] { color:#ad2831; }
+        .recovery-back { display:block;margin-top:24px;text-align:center;color:#2386b6; }
+        .recovery-note { color:#6d7c94;font-size:.9rem;line-height:1.5; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="config.js" defer></script>
+    <script src="password-recovery.js?v=1" defer></script>
+</head>
+<body class="registration-page login-active">
+    <main class="login-screen">
+        <div class="login-card">
+            <div class="login-title-wrap">
+                <h1 class="login-title" id="recovery-title">Recupera tu contraseña</h1>
+                <p class="login-subtitle" id="recovery-description">Escribe el correo con el que te registraste. Te enviaremos un enlace para crear una contraseña nueva.</p>
+            </div>
+            <form id="recovery-request" class="login-form">
+                <div class="login-field">
+                    <label class="login-label" for="recovery-email">Correo electrónico</label>
+                    <input class="login-input" id="recovery-email" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+                </div>
+                <button class="login-btn" type="submit" id="recovery-send">Enviar enlace de recuperación</button>
+                <p class="recovery-note">Revisa también la carpeta de spam. Si entras con Google, puedes usar «Continuar con Google».</p>
+            </form>
+            <form id="recovery-reset" class="login-form" hidden>
+                <div class="login-field">
+                    <label class="login-label" for="recovery-password">Nueva contraseña</label>
+                    <input class="login-input" id="recovery-password" type="password" autocomplete="new-password" minlength="8" placeholder="Mínimo 8 caracteres" required>
+                </div>
+                <div class="login-field">
+                    <label class="login-label" for="recovery-confirm">Repite la nueva contraseña</label>
+                    <input class="login-input" id="recovery-confirm" type="password" autocomplete="new-password" minlength="8" required>
+                </div>
+                <button class="login-btn" type="submit" id="recovery-save" disabled>Guardar nueva contraseña</button>
+            </form>
+            <p id="recovery-status" class="recovery-status" role="status" aria-live="polite"></p>
+            <a class="recovery-back" href="/campus">Volver a iniciar sesión</a>
+        </div>
+    </main>
+</body>
+</html>

@@ -102,6 +102,10 @@ if (new URLSearchParams(window.location.search).get("logout") === "1") {
 
 // ── initAuth ────────────────────────────────────
 async function initAuth() {
+    if (new URLSearchParams(window.location.hash.slice(1)).get("type") === "recovery") {
+        window.location.replace("/recuperar.html" + window.location.hash);
+        return;
+    }
     document.body.classList.add('login-active');
 
     var checker = document.createElement('div');
