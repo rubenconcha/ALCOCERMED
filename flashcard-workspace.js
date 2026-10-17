@@ -33,6 +33,19 @@
    let source=back.querySelector('.fc-answer-source');
    if(!source){source=make('div','fc-answer-source');back.append(source);}
    source.textContent=value(card,'reference');
+   back.querySelectorAll('.fc-answer-table').forEach(table=>table.remove());
+   back.classList.toggle('has-answer-table',Boolean(card.answer_table));
+   if(card.answer_table){
+    const data=card.answer_table,figure=make('figure','fc-answer-table');
+    const table=make('table','');table.append(make('caption','',data.title));
+    const head=make('thead',''),header=make('tr','');
+    data.columns.forEach(label=>{const cell=make('th','',label);cell.scope='col';header.append(cell);});head.append(header);table.append(head);
+    const body=make('tbody','');
+    data.rows.forEach(row=>{const tr=make('tr','');row.forEach((text,index)=>{const cell=make(index?'td':'th','',text);if(!index)cell.scope='row';tr.append(cell);});body.append(tr);});
+    table.append(body);figure.append(table,make('figcaption','',data.note));
+    if(data.reference!==value(card,'reference'))figure.append(make('small','fc-table-reference',data.reference));
+    back.insertBefore(figure,source);
+   }
    node.parentElement.scrollTop=0;
   },
   prepare(name,materia,cards){

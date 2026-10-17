@@ -133,6 +133,20 @@ def build(pdf_dir=None):
                               'chapter': number, 'chapter_title': chapter['title'], 'source_title': source['title'],
                               'page': page, 'pdf_page': pdf_page, 'reference': reference,
                               'official_source': source_id, 'source_reviewed': True})
+                if item.get('answer_table'):
+                    table = item['answer_table']
+                    if not table.get('title') or not 2 <= len(table['columns']) <= 6 or not 1 <= len(table['rows']) <= 8:
+                        raise ValueError('Cuadro incompleto: ' + item_id)
+                    if any(len(row) != len(table['columns']) for row in table['rows']):
+                        raise ValueError('Columnas del cuadro inconsistentes: ' + item_id)
+                    if source_id != 'morfo' or table['page'] != table['pdf_page'] - 28:
+                        raise ValueError('Referencia del cuadro incorrecta: ' + item_id)
+                    bounds = chapter_bounds.get(normalized(label))
+                    if doc and (not bounds or not bounds[0] <= table['pdf_page'] <= bounds[1]
+                                or normalized(table['evidence']) not in normalized(doc[table['pdf_page'] - 1].get_text())):
+                        raise ValueError('Evidencia del cuadro ausente: ' + item_id)
+                    cards[-1]['answer_table'] = {key: table[key] for key in ['title', 'columns', 'rows', 'note']}
+                    cards[-1]['answer_table']['reference'] = source['title'] + ' · ' + chapter_label + ' · pág. ' + str(table['page'])
                 source_count += 1
                 word_counts.append(words)
             existing = next((topic for topic in topics if topic['materia'] == materia and topic['tema'] == group['tema']), None)

@@ -74,4 +74,15 @@
  #study-area .nav-row{gap:9px}
  #study-area .btn-nav{min-height:48px;font-size:13px;border-radius:15px}
 }
+#study-area .has-answer-table p{min-height:90px;font-size:27px!important;padding:18px 8px!important}
+#study-area .fc-answer-table{width:100%;margin:0 auto 12px;max-width:740px;color:#163253}
+#study-area .fc-answer-table table{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:14px;line-height:1.4;border:1px solid #c7dddd;border-radius:12px;overflow:hidden;background:#fff}
+#study-area .fc-answer-table caption{font-weight:800;font-size:15px;margin-bottom:12px;color:#087c82}
+#study-area .fc-answer-table th,#study-area .fc-answer-table td{padding:10px 7px;border-right:1px solid #dce9e9;border-bottom:1px solid #dce9e9;text-align:center;overflow-wrap:break-word;vertical-align:middle}
+#study-area .fc-answer-table thead th{background:#dcf1ee;font-weight:800}
+#study-area .fc-answer-table th:first-child{width:30%;text-align:left;font-size:12px;background:#f1f8f7;font-weight:700}
+#study-area .fc-answer-table tr:last-child>*{border-bottom:0}
+#study-area .fc-answer-table tr>*:last-child{border-right:0}
+#study-area .fc-answer-table figcaption,#study-area .fc-table-reference{display:block;text-align:center;font-size:12px;line-height:1.5;color:#58748a;margin-top:9px}
+@media(max-width:600px){#study-area .has-answer-table p{font-size:23px!important;min-height:75px}#study-area .fc-answer-table table{font-size:11px}#study-area .fc-answer-table th,#study-area .fc-answer-table td{padding:8px 3px}#study-area .fc-answer-table td{overflow-wrap:normal}#study-area .fc-answer-table th:first-child{font-size:10px;width:29%}#study-area .fc-answer-table caption{font-size:13px}}
 @media(prefers-reduced-motion:reduce){#study-area *{transition:none!important}}

@@ -46,6 +46,19 @@ const root=path.resolve(__dirname,'..');
  }
  await page.locator('#flashcard-subtopic').selectOption('');
  assert.equal(await page.locator('#card-total').innerText(),String(cards.length));
+ const blood=JSON.parse(fs.readFileSync(libraryPath,'utf8')).cards.find(c=>c.id==='morfo-18-abo-overview');
+ for(const width of [1440,390,320]){
+  await page.setViewportSize({width,height:1100});
+  await page.evaluate(card=>startDeck(card.tema,card.materia,[card]),blood);
+  await page.locator('#btn-reveal').click();
+  assert.equal(await page.locator('.fc-answer-table tbody tr').count(),5);
+  assert.equal(await page.locator('.fc-answer-table thead th').count(),5);
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  await page.screenshot({path:path.join(directory,'abo-'+width+'.png'),fullPage:true});
+ }
+ await page.evaluate(rows=>startDeck(rows[0].tema,rows[0].materia,rows),cards);
+ await page.locator('#btn-reveal').click();
+ assert.equal(await page.locator('.fc-answer-table').count(),0,'the table must not remain on unrelated answers');
  assert.deepEqual(errors,[]);
  await browser.close();
  console.log('PC and mobile study flow passed.');

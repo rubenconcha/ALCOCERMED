@@ -1,7 +1,7 @@
 {
   "version": "2026-10-16",
   "verified_against_pdf": true,
-  "total_cards": 3462,
+  "total_cards": 3470,
   "total_topics": 68,
   "total_subtopics": 547,
   "minimum_cards_per_subtopic": 3,
@@ -10,10 +10,10 @@
       "materia": "MORFOFUNCION",
       "chapters": 30,
       "topics": 29,
-      "cards": 1629,
+      "cards": 1637,
       "longest_answer_words": 19,
       "median_answer_words": 4,
-      "source_sha256": "fe1a371ed618e604a63aafd8884fbfe78db041f9d28856b4de1f07d9ca5fa0e7",
+      "source_sha256": "00c181d54af87b5e4c41c6081b6178d87c8573a99632467759e246cb237a9b91",
       "visually_verified_cards": 0,
       "pdf_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
     },
@@ -182,7 +182,7 @@
       "tema": "sangre",
       "chapter": 18,
       "chapter_title": "El aparato circulatorio: sangre",
-      "count": 52,
+      "count": 60,
       "free_count": 0
     },
     {
@@ -586,5 +586,5 @@
       "free_count": 0
     }
   ],
-  "library_sha256": "66eff2e323d7dc67d4d92b4e42bd0de990f9f3d25f0b475ce1115e2caacc45fe"
+  "library_sha256": "ee000af1b20386593d52e3a76e7205112a58af805dbbe8defa9216e469e5806f"
 }

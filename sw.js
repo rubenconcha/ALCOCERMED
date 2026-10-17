@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v110';
+const CACHE_NAME = 'alcocermed-main-v111';
 const APP_SHELL = [
     './campus',
     './campus.html',
@@ -33,9 +33,9 @@ const APP_SHELL = [
     './study-depth.js?v=16',
     './study-depth.css?v=3',
     './flashcard-workspace.css?v=4',
-    './flashcard-approved.css?v=1',
+    './flashcard-approved.css?v=2',
     './assets/fonts/outfit-900.ttf',
-    './flashcard-workspace.js?v=4',
+    './flashcard-workspace.js?v=5',
     './script.js?v=61',
     './mindmap-branch-labels.js?v=3',
     './mindmap-content.js?v=2',

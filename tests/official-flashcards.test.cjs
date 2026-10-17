@@ -103,3 +103,21 @@ test('source-specific corrections survive rebuilding the three subjects',()=>{
  const chapare=data.find(c=>c.id==='salud-09-016');assert.doesNotMatch(chapare.pregunta,/familia viral/);
  const senescence=data.find(c=>c.id==='bio-14-029');assert.match(senescence.respuesta,/irreversible/);
 });
+
+test('the ABO chart reproduces Saladin table 18.5 and clearly limits compatibility to erythrocytes',()=>{
+ const cards=JSON.parse(fs.readFileSync(path.join(ROOT,'api/_flashcards/library.json'),'utf8')).cards;
+ const overview=cards.find(c=>c.id==='morfo-18-abo-overview');
+ assert.equal(overview.page,691);assert.equal(overview.chapter,18);
+ assert.match(overview.reference,/El aparato circulatorio: sangre.*691/);
+ assert.deepEqual(overview.answer_table.columns,['Dato','O','A','B','AB']);
+ assert.deepEqual(overview.answer_table.rows,[
+  ['Genotipos','ii','IᴬIᴬ o Iᴬi','IᴮIᴮ o Iᴮi','IᴬIᴮ'],
+  ['Antígenos eritrocitarios','Ninguno','A','B','A y B'],
+  ['Anticuerpos plasmáticos','Anti-A y anti-B','Anti-B','Anti-A','Ninguno'],
+  ['Recibe eritrocitos de','O','O y A','O y B','O, A, B y AB'],
+  ['Dona eritrocitos a','O, A, B y AB','A y AB','B y AB','AB']
+ ]);
+ assert.match(overview.answer_table.note,/eritrocitos.*ABO/);
+ assert.ok(cards.find(c=>c.id==='morfo-18-017').answer_table);
+ assert.equal(cards.find(c=>c.id==='morfo-18-020').answer_table,undefined,'ABO compatibility is not presented as Rh compatibility');
+});

@@ -9055,7 +9055,58 @@
           "page": 691,
           "pdf_page": 719,
           "evidence": "Estos nombres hacen referencia a que interactúan para aglutinar eritrocitos en el caso de un problema de compatibilidad en la transfusión. El grupo ABO Los tipos sanguíneos A, B, AB y O forman el grupo sanguíneo ABO (cuadro 18.5). Un tipo sanguíneo ABO está determinado por la presencia o ausencia congénita de antígenos A y B en los CUADRO 18.5 El grupo sanguíneo ABO Características Tipo sanguíneo ABO Tipo O Tipo A Tipo B Tipo AB Genotipos posibles* ii IA IA o IAi IB IB o IBi lA lB Antígeno de eritrocito Ninguno A B A, B Anticuerpo de plasma Anti-A, Anti-B Anti-B Anti-A Ninguno Puede recibir con seguridad eritrocitos de tipo O O, A O, B O, A, B, AB Puede donar con seguridad eritrocitos a O, A, B, AB A, AB B, AB AB Frecuencia en la población de Estados Unidos Blancos 45% 40% 11% 4% Negros 49% 27% 20% 4% Hispanos 63% 14% 20% 3% Japoneses 31% 38% 22% 9% Nativos estadounidenses 79% 16% 4% < 1% *IA es el alelo dominante para el aglutinógeno A, IB es el dominante para el B, y el alelo i es recesivo para ambos.",
-          "section": "Grupos sanguíneos"
+          "section": "Grupos sanguíneos",
+          "answer_table": {
+            "title": "Cuadro 18.5 · Grupo sanguíneo ABO",
+            "columns": [
+              "Dato",
+              "O",
+              "A",
+              "B",
+              "AB"
+            ],
+            "rows": [
+              [
+                "Genotipos",
+                "ii",
+                "IᴬIᴬ o Iᴬi",
+                "IᴮIᴮ o Iᴮi",
+                "IᴬIᴮ"
+              ],
+              [
+                "Antígenos eritrocitarios",
+                "Ninguno",
+                "A",
+                "B",
+                "A y B"
+              ],
+              [
+                "Anticuerpos plasmáticos",
+                "Anti-A y anti-B",
+                "Anti-B",
+                "Anti-A",
+                "Ninguno"
+              ],
+              [
+                "Recibe eritrocitos de",
+                "O",
+                "O y A",
+                "O y B",
+                "O, A, B y AB"
+              ],
+              [
+                "Dona eritrocitos a",
+                "O, A, B y AB",
+                "A y AB",
+                "B y AB",
+                "AB"
+              ]
+            ],
+            "note": "Compatibilidad de eritrocitos según el sistema ABO.",
+            "page": 691,
+            "pdf_page": 719,
+            "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n"
+          }
         },
         {
           "id": "morfo-18-018",
@@ -9064,7 +9115,58 @@
           "page": 693,
           "pdf_page": 721,
           "evidence": "CAPÍTULO 18 El aparato circulatorio: sangre 693 túbulos renales y causar la muerte por insufi ciencia renal aguda en una semana, más o menos. Por esta razón, una persona con tipo de sangre A (anti-B) nunca debe recibir una transfusión de tipo B o AB; una persona con tipo B (anti-A) nunca debe recibir sangre de tipo A o AB, y una con tipo O (anti-A y anti-B) no puede recibir sangre tipo A, B ni AB. Al tipo AB suele denominársele receptor universal porque este tipo de sangre carece de anticuerpos anti-A y anti-B y, por tanto, no aglutina los eritrocitos del donador de ningún tipo ABO. Sin embargo, esto pasa por alto el hecho de que el plasma del donador puede aglutinar los eritrocitos del receptor, si contiene anti-A, anti-B o ambos. Por razones similares, al tipo O suele denominársele donador universal, pero el plasma de un donador de tipo O puede aglutinar los eritrocitos de tipo A, B o AB del receptor. Sin embargo, hay procedimientos para reducir el riesgo de una reacción en ciertas transfusiones incompatibles, como transfundir concentrados de eritrocitos con un mínimo de plasma.",
-          "section": "Grupos sanguíneos"
+          "section": "Grupos sanguíneos",
+          "answer_table": {
+            "title": "Cuadro 18.5 · Grupo sanguíneo ABO",
+            "columns": [
+              "Dato",
+              "O",
+              "A",
+              "B",
+              "AB"
+            ],
+            "rows": [
+              [
+                "Genotipos",
+                "ii",
+                "IᴬIᴬ o Iᴬi",
+                "IᴮIᴮ o Iᴮi",
+                "IᴬIᴮ"
+              ],
+              [
+                "Antígenos eritrocitarios",
+                "Ninguno",
+                "A",
+                "B",
+                "A y B"
+              ],
+              [
+                "Anticuerpos plasmáticos",
+                "Anti-A y anti-B",
+                "Anti-B",
+                "Anti-A",
+                "Ninguno"
+              ],
+              [
+                "Recibe eritrocitos de",
+                "O",
+                "O y A",
+                "O y B",
+                "O, A, B y AB"
+              ],
+              [
+                "Dona eritrocitos a",
+                "O, A, B y AB",
+                "A y AB",
+                "B y AB",
+                "AB"
+              ]
+            ],
+            "note": "Compatibilidad de eritrocitos según el sistema ABO.",
+            "page": 691,
+            "pdf_page": 719,
+            "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n"
+          }
         },
         {
           "id": "morfo-18-019",
@@ -9073,7 +9175,58 @@
           "page": 691,
           "pdf_page": 719,
           "evidence": "El grupo ABO Los tipos sanguíneos A, B, AB y O forman el grupo sanguíneo ABO (cuadro 18.5). Un tipo sanguíneo ABO está determinado por la presencia o ausencia congénita de antígenos A y B en los CUADRO 18.5 El grupo sanguíneo ABO Características Tipo sanguíneo ABO Tipo O Tipo A Tipo B Tipo AB Genotipos posibles* ii IA IA o IAi IB IB o IBi lA lB Antígeno de eritrocito Ninguno A B A, B Anticuerpo de plasma Anti-A, Anti-B Anti-B Anti-A Ninguno Puede recibir con seguridad eritrocitos de tipo O O, A O, B O, A, B, AB Puede donar con seguridad eritrocitos a O, A, B, AB A, AB B, AB AB Frecuencia en la población de Estados Unidos Blancos 45% 40% 11% 4% Negros 49% 27% 20% 4% Hispanos 63% 14% 20% 3% Japoneses 31% 38% 22% 9% Nativos estadounidenses 79% 16% 4% < 1% *IA es el alelo dominante para el aglutinógeno A, IB es el dominante para el B, y el alelo i es recesivo para ambos.",
-          "section": "Grupos sanguíneos"
+          "section": "Grupos sanguíneos",
+          "answer_table": {
+            "title": "Cuadro 18.5 · Grupo sanguíneo ABO",
+            "columns": [
+              "Dato",
+              "O",
+              "A",
+              "B",
+              "AB"
+            ],
+            "rows": [
+              [
+                "Genotipos",
+                "ii",
+                "IᴬIᴬ o Iᴬi",
+                "IᴮIᴮ o Iᴮi",
+                "IᴬIᴮ"
+              ],
+              [
+                "Antígenos eritrocitarios",
+                "Ninguno",
+                "A",
+                "B",
+                "A y B"
+              ],
+              [
+                "Anticuerpos plasmáticos",
+                "Anti-A y anti-B",
+                "Anti-B",
+                "Anti-A",
+                "Ninguno"
+              ],
+              [
+                "Recibe eritrocitos de",
+                "O",
+                "O y A",
+                "O y B",
+                "O, A, B y AB"
+              ],
+              [
+                "Dona eritrocitos a",
+                "O, A, B y AB",
+                "A y AB",
+                "B y AB",
+                "AB"
+              ]
+            ],
+            "note": "Compatibilidad de eritrocitos según el sistema ABO.",
+            "page": 691,
+            "pdf_page": 719,
+            "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n"
+          }
         },
         {
           "id": "morfo-18-020",
@@ -9371,6 +9524,486 @@
           "page": 708,
           "pdf_page": 736,
           "evidence": "18.5”). Una defi ciencia de cualquier factor de la coagulación pue- de desactivar la cascada de la coagulación, como en la hemofi - lia, una familia de enfermedades congénitas caracterizada por defi ciencias de un factor u otro. Debido al mecanismo recesivo vinculado al sexo, la hemofi lia predomina en los varones. Sin embargo, sólo pueden heredarla de sus madres, como sucedió con los descendientes de la reina Victoria. La falta del factor VIII causa la hemofi lia clásica (hemofi lia A), responsable de 83% de los casos y afl ige a 1 de cada 5 000 hombres de todo el mundo. La falta del factor IX causa hemofi lia B, que representa 15% de los casos y ocurre en 1 de cada 30 000 hombres. Por tanto, a los factores VIII y IX se les conoce como factores anti- hemofílicos A y B. Una forma menos común, la hemofi lia C (defi ciencia del factor XI) es autosómica y no está vinculada al sexo, de modo que ocurre por igual en hombres y mujeres. Antes de que se dispusiera de factor VIII purifi cado, en la década de 1960, más de la mitad de quienes padecían hemofi - lia morían antes de los 5 años de edad, y sólo 10% alcanzaba los 21 años. El ejercicio físico causa hemorragia en los múscu- los y las articulaciones y el dolor insoportable y la inmovilidad de la articulación pueden ser resultado de hematomas28 (masas de sangre coagulada en los tejidos) intramusculares y articula- res. Sin embargo, la gravedad de la hemofi lia es variable y la"
+        },
+        {
+          "id": "morfo-18-abo-overview",
+          "question": "¿Cómo se comparan los grupos sanguíneos del sistema ABO?",
+          "answer": "Comparación de los grupos ABO.",
+          "page": 691,
+          "pdf_page": 719,
+          "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n",
+          "section": "Grupos sanguíneos",
+          "answer_table": {
+            "title": "Cuadro 18.5 · Grupo sanguíneo ABO",
+            "columns": [
+              "Dato",
+              "O",
+              "A",
+              "B",
+              "AB"
+            ],
+            "rows": [
+              [
+                "Genotipos",
+                "ii",
+                "IᴬIᴬ o Iᴬi",
+                "IᴮIᴮ o Iᴮi",
+                "IᴬIᴮ"
+              ],
+              [
+                "Antígenos eritrocitarios",
+                "Ninguno",
+                "A",
+                "B",
+                "A y B"
+              ],
+              [
+                "Anticuerpos plasmáticos",
+                "Anti-A y anti-B",
+                "Anti-B",
+                "Anti-A",
+                "Ninguno"
+              ],
+              [
+                "Recibe eritrocitos de",
+                "O",
+                "O y A",
+                "O y B",
+                "O, A, B y AB"
+              ],
+              [
+                "Dona eritrocitos a",
+                "O, A, B y AB",
+                "A y AB",
+                "B y AB",
+                "AB"
+              ]
+            ],
+            "note": "Compatibilidad de eritrocitos según el sistema ABO.",
+            "page": 691,
+            "pdf_page": 719,
+            "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n"
+          }
+        },
+        {
+          "id": "morfo-18-abo-b-antigens",
+          "question": "¿Qué antígenos ABO presentan los eritrocitos del grupo B?",
+          "answer": "Antígenos B.",
+          "page": 691,
+          "pdf_page": 719,
+          "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n",
+          "section": "Grupos sanguíneos",
+          "answer_table": {
+            "title": "Cuadro 18.5 · Grupo sanguíneo ABO",
+            "columns": [
+              "Dato",
+              "O",
+              "A",
+              "B",
+              "AB"
+            ],
+            "rows": [
+              [
+                "Genotipos",
+                "ii",
+                "IᴬIᴬ o Iᴬi",
+                "IᴮIᴮ o Iᴮi",
+                "IᴬIᴮ"
+              ],
+              [
+                "Antígenos eritrocitarios",
+                "Ninguno",
+                "A",
+                "B",
+                "A y B"
+              ],
+              [
+                "Anticuerpos plasmáticos",
+                "Anti-A y anti-B",
+                "Anti-B",
+                "Anti-A",
+                "Ninguno"
+              ],
+              [
+                "Recibe eritrocitos de",
+                "O",
+                "O y A",
+                "O y B",
+                "O, A, B y AB"
+              ],
+              [
+                "Dona eritrocitos a",
+                "O, A, B y AB",
+                "A y AB",
+                "B y AB",
+                "AB"
+              ]
+            ],
+            "note": "Compatibilidad de eritrocitos según el sistema ABO.",
+            "page": 691,
+            "pdf_page": 719,
+            "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n"
+          }
+        },
+        {
+          "id": "morfo-18-abo-b-antibodies",
+          "question": "¿Qué anticuerpos ABO tiene el plasma del grupo B?",
+          "answer": "Anti-A.",
+          "page": 691,
+          "pdf_page": 719,
+          "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n",
+          "section": "Grupos sanguíneos",
+          "answer_table": {
+            "title": "Cuadro 18.5 · Grupo sanguíneo ABO",
+            "columns": [
+              "Dato",
+              "O",
+              "A",
+              "B",
+              "AB"
+            ],
+            "rows": [
+              [
+                "Genotipos",
+                "ii",
+                "IᴬIᴬ o Iᴬi",
+                "IᴮIᴮ o Iᴮi",
+                "IᴬIᴮ"
+              ],
+              [
+                "Antígenos eritrocitarios",
+                "Ninguno",
+                "A",
+                "B",
+                "A y B"
+              ],
+              [
+                "Anticuerpos plasmáticos",
+                "Anti-A y anti-B",
+                "Anti-B",
+                "Anti-A",
+                "Ninguno"
+              ],
+              [
+                "Recibe eritrocitos de",
+                "O",
+                "O y A",
+                "O y B",
+                "O, A, B y AB"
+              ],
+              [
+                "Dona eritrocitos a",
+                "O, A, B y AB",
+                "A y AB",
+                "B y AB",
+                "AB"
+              ]
+            ],
+            "note": "Compatibilidad de eritrocitos según el sistema ABO.",
+            "page": 691,
+            "pdf_page": 719,
+            "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n"
+          }
+        },
+        {
+          "id": "morfo-18-abo-ab-antigens",
+          "question": "¿Qué antígenos ABO presentan los eritrocitos del grupo AB?",
+          "answer": "Antígenos A y B.",
+          "page": 691,
+          "pdf_page": 719,
+          "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n",
+          "section": "Grupos sanguíneos",
+          "answer_table": {
+            "title": "Cuadro 18.5 · Grupo sanguíneo ABO",
+            "columns": [
+              "Dato",
+              "O",
+              "A",
+              "B",
+              "AB"
+            ],
+            "rows": [
+              [
+                "Genotipos",
+                "ii",
+                "IᴬIᴬ o Iᴬi",
+                "IᴮIᴮ o Iᴮi",
+                "IᴬIᴮ"
+              ],
+              [
+                "Antígenos eritrocitarios",
+                "Ninguno",
+                "A",
+                "B",
+                "A y B"
+              ],
+              [
+                "Anticuerpos plasmáticos",
+                "Anti-A y anti-B",
+                "Anti-B",
+                "Anti-A",
+                "Ninguno"
+              ],
+              [
+                "Recibe eritrocitos de",
+                "O",
+                "O y A",
+                "O y B",
+                "O, A, B y AB"
+              ],
+              [
+                "Dona eritrocitos a",
+                "O, A, B y AB",
+                "A y AB",
+                "B y AB",
+                "AB"
+              ]
+            ],
+            "note": "Compatibilidad de eritrocitos según el sistema ABO.",
+            "page": 691,
+            "pdf_page": 719,
+            "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n"
+          }
+        },
+        {
+          "id": "morfo-18-abo-ab-antibodies",
+          "question": "¿Qué anticuerpos anti-A y anti-B tiene el grupo AB?",
+          "answer": "Ninguno de los dos.",
+          "page": 691,
+          "pdf_page": 719,
+          "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n",
+          "section": "Grupos sanguíneos",
+          "answer_table": {
+            "title": "Cuadro 18.5 · Grupo sanguíneo ABO",
+            "columns": [
+              "Dato",
+              "O",
+              "A",
+              "B",
+              "AB"
+            ],
+            "rows": [
+              [
+                "Genotipos",
+                "ii",
+                "IᴬIᴬ o Iᴬi",
+                "IᴮIᴮ o Iᴮi",
+                "IᴬIᴮ"
+              ],
+              [
+                "Antígenos eritrocitarios",
+                "Ninguno",
+                "A",
+                "B",
+                "A y B"
+              ],
+              [
+                "Anticuerpos plasmáticos",
+                "Anti-A y anti-B",
+                "Anti-B",
+                "Anti-A",
+                "Ninguno"
+              ],
+              [
+                "Recibe eritrocitos de",
+                "O",
+                "O y A",
+                "O y B",
+                "O, A, B y AB"
+              ],
+              [
+                "Dona eritrocitos a",
+                "O, A, B y AB",
+                "A y AB",
+                "B y AB",
+                "AB"
+              ]
+            ],
+            "note": "Compatibilidad de eritrocitos según el sistema ABO.",
+            "page": 691,
+            "pdf_page": 719,
+            "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n"
+          }
+        },
+        {
+          "id": "morfo-18-abo-o-antibodies",
+          "question": "¿Qué anticuerpos ABO tiene el plasma del grupo O?",
+          "answer": "Anti-A y anti-B.",
+          "page": 691,
+          "pdf_page": 719,
+          "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n",
+          "section": "Grupos sanguíneos",
+          "answer_table": {
+            "title": "Cuadro 18.5 · Grupo sanguíneo ABO",
+            "columns": [
+              "Dato",
+              "O",
+              "A",
+              "B",
+              "AB"
+            ],
+            "rows": [
+              [
+                "Genotipos",
+                "ii",
+                "IᴬIᴬ o Iᴬi",
+                "IᴮIᴮ o Iᴮi",
+                "IᴬIᴮ"
+              ],
+              [
+                "Antígenos eritrocitarios",
+                "Ninguno",
+                "A",
+                "B",
+                "A y B"
+              ],
+              [
+                "Anticuerpos plasmáticos",
+                "Anti-A y anti-B",
+                "Anti-B",
+                "Anti-A",
+                "Ninguno"
+              ],
+              [
+                "Recibe eritrocitos de",
+                "O",
+                "O y A",
+                "O y B",
+                "O, A, B y AB"
+              ],
+              [
+                "Dona eritrocitos a",
+                "O, A, B y AB",
+                "A y AB",
+                "B y AB",
+                "AB"
+              ]
+            ],
+            "note": "Compatibilidad de eritrocitos según el sistema ABO.",
+            "page": 691,
+            "pdf_page": 719,
+            "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n"
+          }
+        },
+        {
+          "id": "morfo-18-abo-ab-receives",
+          "question": "¿De qué grupos puede recibir eritrocitos el grupo AB según el sistema ABO?",
+          "answer": "De O, A, B y AB.",
+          "page": 691,
+          "pdf_page": 719,
+          "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n",
+          "section": "Grupos sanguíneos",
+          "answer_table": {
+            "title": "Cuadro 18.5 · Grupo sanguíneo ABO",
+            "columns": [
+              "Dato",
+              "O",
+              "A",
+              "B",
+              "AB"
+            ],
+            "rows": [
+              [
+                "Genotipos",
+                "ii",
+                "IᴬIᴬ o Iᴬi",
+                "IᴮIᴮ o Iᴮi",
+                "IᴬIᴮ"
+              ],
+              [
+                "Antígenos eritrocitarios",
+                "Ninguno",
+                "A",
+                "B",
+                "A y B"
+              ],
+              [
+                "Anticuerpos plasmáticos",
+                "Anti-A y anti-B",
+                "Anti-B",
+                "Anti-A",
+                "Ninguno"
+              ],
+              [
+                "Recibe eritrocitos de",
+                "O",
+                "O y A",
+                "O y B",
+                "O, A, B y AB"
+              ],
+              [
+                "Dona eritrocitos a",
+                "O, A, B y AB",
+                "A y AB",
+                "B y AB",
+                "AB"
+              ]
+            ],
+            "note": "Compatibilidad de eritrocitos según el sistema ABO.",
+            "page": 691,
+            "pdf_page": 719,
+            "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n"
+          }
+        },
+        {
+          "id": "morfo-18-abo-o-receives",
+          "question": "¿De qué grupo puede recibir eritrocitos el grupo O según el sistema ABO?",
+          "answer": "Solo del grupo O.",
+          "page": 691,
+          "pdf_page": 719,
+          "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n",
+          "section": "Grupos sanguíneos",
+          "answer_table": {
+            "title": "Cuadro 18.5 · Grupo sanguíneo ABO",
+            "columns": [
+              "Dato",
+              "O",
+              "A",
+              "B",
+              "AB"
+            ],
+            "rows": [
+              [
+                "Genotipos",
+                "ii",
+                "IᴬIᴬ o Iᴬi",
+                "IᴮIᴮ o Iᴮi",
+                "IᴬIᴮ"
+              ],
+              [
+                "Antígenos eritrocitarios",
+                "Ninguno",
+                "A",
+                "B",
+                "A y B"
+              ],
+              [
+                "Anticuerpos plasmáticos",
+                "Anti-A y anti-B",
+                "Anti-B",
+                "Anti-A",
+                "Ninguno"
+              ],
+              [
+                "Recibe eritrocitos de",
+                "O",
+                "O y A",
+                "O y B",
+                "O, A, B y AB"
+              ],
+              [
+                "Dona eritrocitos a",
+                "O, A, B y AB",
+                "A y AB",
+                "B y AB",
+                "AB"
+              ]
+            ],
+            "note": "Compatibilidad de eritrocitos según el sistema ABO.",
+            "page": 691,
+            "pdf_page": 719,
+            "evidence": "CUADRO 18.5 \nEl grupo sanguíneo ABO\nCaracterísticas\nTipo sanguíneo ABO\nTipo O\nTipo A\nTipo B\nTipo AB\nGenotipos posibles*\nii\nIA IA o IAi\nIB IB o IBi\nlA lB\nAntígeno de eritrocito\nNinguno\nA\nB\nA, B\nAnticuerpo de plasma\nAnti-A, Anti-B\nAnti-B\nAnti-A\nNinguno\nPuede recibir con seguridad eritrocitos de tipo\nO\nO, A\nO, B\nO, A, B, AB\nPuede donar con seguridad eritrocitos a\nO, A, B, AB\nA, AB\nB, AB\nAB\n"
+          }
         }
       ]
     },
