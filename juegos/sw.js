@@ -1,5 +1,11 @@
-const CACHE_NAME = 'alcocermed-juegos-v101';
+const CACHE_NAME = 'alcocermed-juegos-v104';
 const ASSETS_TO_CACHE = [
+    './game-rounds.js?v=1',
+    './game-practice.js?v=1',
+    './game-question-images.js?v=1',
+    './app.js?v=103',
+    './styles.css?v=84',
+    './assets/preguntas-apoyo/mano-muneca.svg',
     './',
     './index.html',
     './assets/result_arena_bg.png',
@@ -30,7 +36,6 @@ const ASSETS_TO_CACHE = [
     './assets/preguntas-contextuales/salud-colectiva.svg',
     './assets/preguntas-contextuales/promocion-salud.svg',
     './assets/preguntas-contextuales/prevencion.svg',
-    './styles.css?v=81',
     './tejido-nervioso.css?v=8',
     './manifest.json',
     '././logo_app.png',
@@ -44,7 +49,6 @@ const ASSETS_TO_CACHE = [
     './game-access.js?v=2',
     './premium-game-images.js?v=6',
     './quiz-copy.js?v=1',
-    './app.js?v=100',
     './tejido-nervioso.js?v=14',
 ];
 
@@ -53,7 +57,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        return cache.addAll(ASSETS_TO_CACHE);
+        return Promise.allSettled(ASSETS_TO_CACHE.map((asset) => cache.add(asset)));
       })
   );
   self.skipWaiting();

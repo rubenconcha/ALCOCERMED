@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=81">
+  <link rel="stylesheet" href="styles.css?v=84">
   <link rel="stylesheet" href="tejido-nervioso.css?v=8">
   
   <!-- PWA Meta Tags -->
@@ -444,6 +444,8 @@
           <div class="game-app-kicker"><i class="fas fa-bolt"></i> AlcocerMed Arena</div>
           <h1><i class="fas fa-gamepad"></i> JUGAR</h1>
           <p>Elige una asignatura y empieza a jugar. Aquí también puedes ver a los estudiantes con más puntos.</p>
+
+
           <div class="game-download-row" aria-label="Descargar app">
             <button type="button" class="game-download-btn install-pwa-trigger" data-platform="android">
               <i class="fab fa-android"></i>
@@ -497,6 +499,14 @@
         </div>
       </div>
       <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap" id="explorar-filter-bar"></div>
+      <div class="game-search-panel game-topic-filter" role="search" aria-label="Filtrar partidas">
+        <label id="game-filter-title" for="game-search">FILTRAR PARTIDAS</label>
+        <div class="game-search-field"><i class="fas fa-search" aria-hidden="true"></i>
+          <input id="game-search" type="search" placeholder="Filtrar por tema o materia…" autocomplete="off" oninput="searchGameCatalog(this.value)" onkeydown="if(event.key === 'Escape') clearGameSearch()" aria-describedby="game-search-status">
+          <button id="game-search-clear" type="button" onclick="clearGameSearch()" aria-label="Borrar búsqueda" hidden><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+        <p id="game-search-status" role="status" aria-live="polite">Busca en las tres materias o entra a una para filtrar sus temas.</p>
+      </div>
       <div id="explorar-subject-grid" class="explorar-grid"></div>
       <div id="explorar-eval-list" class="explorar-eval-list" style="display:none"></div>
       <button id="explorar-back-btn" onclick="loadExploreSubjects()" style="display:none;padding:10px 24px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;font-weight:600;cursor:pointer;margin-bottom:16px;color:var(--text-mid);font-size:14px"><i class="fas fa-arrow-left"></i> Volver a materias</button>
@@ -675,6 +685,7 @@
         <div id="powerup-bar" style="display:none;justify-content:center;gap:10px;margin-bottom:16px;flex-wrap:wrap"></div>
 
         <!-- Pregunta actual -->
+        <div id="quiz-round-label" class="quiz-round-label" hidden></div>
         <div id="quiz-question-card" style="background:var(--bg-card); border-radius:24px; padding:40px; box-shadow:0 10px 30px rgba(0,0,0,0.2); margin-bottom:32px; text-align:center; min-height:180px; display:flex; align-items:center; justify-content:center;">
           <h2 id="quiz-question-text" style="font-size:1.8rem; font-weight:800; line-height:1.4; color:var(--text); margin:0;">Cargando...</h2>
         </div>
@@ -844,7 +855,10 @@
 <script src="game-access.js?v=2"></script>
 <script src="premium-game-images.js?v=6"></script>
 <script src="quiz-copy.js?v=1"></script>
-<script src="app.js?v=100"></script>
+<script src="game-rounds.js?v=1"></script>
+<script src="game-practice.js?v=1"></script>
+<script src="game-question-images.js?v=1"></script>
+<script src="app.js?v=103"></script>
 <script src="tejido-nervioso.js?v=14"></script>
 
 <!-- PWA Service Worker Registration -->
@@ -885,20 +899,13 @@
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js').then((reg) => {
-        console.log('Service Worker registrado', reg.scope);
-        
-        // Lógica de auto-actualización silenciosa
-        reg.addEventListener('updatefound', () => {
-          const newWorker = reg.installing;
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              // Hay una nueva versión disponible, recargar silenciosamente para aplicarla
-              console.log('Nueva versión detectada, recargando...');
-              window.location.reload();
-            }
-          });
-        });
+      var hadController = !!navigator.serviceWorker.controller;
+      var reloading = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (hadController && !reloading) { reloading = true; window.location.reload(); }
+      });
+      navigator.serviceWorker.register('/juegos/sw.js', {updateViaCache: 'none'}).then((reg) => {
+        reg.update().catch(() => {});
       }).catch((err) => console.log('Error SW:', err));
     });
   }

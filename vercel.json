@@ -20,6 +20,9 @@
     },
     "api/topic-evaluation.js": {
       "includeFiles": "api/_evaluations/**"
+    },
+    "api/game-practice.js": {
+      "includeFiles": "api/_game-practice/**"
     }
   },
   "headers": [
@@ -94,9 +97,76 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/juegos",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/juegos/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/juegos/jugar",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/juegos/index.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/juegos/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/juegos/:file.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/juegos/:file.css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/_game-practice/:path*",
+      "destination": "/api/game-practice?id=invalid"
+    },
     {
       "source": "/api/_flashcards/:path*",
       "destination": "/api/flashcards?invalid=1"
