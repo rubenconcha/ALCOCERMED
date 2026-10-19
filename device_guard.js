@@ -1,6 +1,6 @@
 // ═══════════════════════════════════════════════════════
 // DEVICE GUARD — Control de dispositivos AlcocerMed
-// Máximo 3 dispositivos registrados por estudiante, los 3 pueden estar activos.
+// Máximo 2 navegadores autorizados por estudiante.
 // Compartido entre página principal y /juegos
 // ═══════════════════════════════════════════════════════
 
@@ -26,16 +26,17 @@ var DeviceGuard = (function() {
     // Detectar nombre del dispositivo
     function getDeviceName() {
         var ua = navigator.userAgent || '';
+        var browser = /Edg|EdgiOS|EdgA/i.test(ua) ? 'Edge' : /OPR|OPiOS/i.test(ua) ? 'Opera' : /Firefox|FxiOS/i.test(ua) ? 'Firefox' : /Chrome|CriOS/i.test(ua) ? 'Chrome' : /Safari/i.test(ua) ? 'Safari' : 'Navegador';
         if (/Mobile|Android|iPhone|iPad/i.test(ua)) {
-            if (/iPhone/i.test(ua)) return 'iPhone';
-            if (/iPad/i.test(ua)) return 'iPad';
-            if (/Android/i.test(ua)) return 'Android';
-            return 'Móvil';
+            if (/iPhone/i.test(ua)) return 'iPhone · ' + browser;
+            if (/iPad/i.test(ua)) return 'iPad · ' + browser;
+            if (/Android/i.test(ua)) return 'Android · ' + browser;
+            return 'Móvil · ' + browser;
         }
-        if (/Windows/i.test(ua)) return 'PC Windows';
-        if (/Mac/i.test(ua)) return 'Mac';
-        if (/Linux/i.test(ua)) return 'PC Linux';
-        return 'Navegador';
+        if (/Windows/i.test(ua)) return 'PC Windows · ' + browser;
+        if (/Mac/i.test(ua)) return 'Mac · ' + browser;
+        if (/Linux/i.test(ua)) return 'PC Linux · ' + browser;
+        return 'Navegador · ' + browser;
     }
 
     // Activar este dispositivo después del login
