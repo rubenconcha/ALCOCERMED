@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v115';
+const CACHE_NAME = 'alcocermed-main-v116';
 const APP_SHELL = [
     './campus',
     './campus.html',
@@ -63,7 +63,7 @@ const APP_SHELL = [
     './simulacro-library.js?v=4',
     './simulacro-library.css?v=4',
     './student-library.js?v=10',
-    './study-summaries.js?v=8',
+    './study-summaries.js?v=9',
     './past-exams.js?v=6',
     './past-exams.css?v=2',
 ];

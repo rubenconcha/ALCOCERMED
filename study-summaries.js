@@ -32,7 +32,7 @@
     const frame = document.getElementById('resumenes-frame');
     const loading = document.getElementById('resumenes-loading');
     const download = document.getElementById('resumenes-download');
-    const pdfVersion = '20261011';
+    const pdfVersion = '20261019';
     const pdfCache = new Map();
     let pendingRequest = null;
     let openRevision = 0;
