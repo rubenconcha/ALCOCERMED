@@ -1983,6 +1983,105 @@ window.selectBancoMateria = async function (materia) {
     await loadBancoPreguntas();
 };
 
+// Orden de los capítulos del curso. Salud reúne sus módulos en una secuencia continua.
+const BANCO_TOPIC_ORDER = {
+    "MORFOFUNCION": [
+        "temas principales de anatomia y fisiologia",
+        "la quimica de la vida",
+        "forma y funcion celulares",
+        "genetica y funcion celular",
+        "histologia",
+        "sistema tegumentario",
+        "tejido oseo",
+        "el sistema oseo",
+        "articulaciones",
+        "el sistema muscular",
+        "tejido muscular",
+        "tejido nervioso",
+        "medula espinal y reflejos",
+        "encefalo y pares craneales",
+        "sistema nervioso autonomo",
+        "organos de los sentidos",
+        "sistema endocrino",
+        "sangre",
+        "corazon",
+        "vasos sanguineos y circulacion",
+        "sistema linfatico e inmunidad",
+        "aparato respiratorio",
+        "aparato urinario",
+        "equilibrio hidrico y acidobasico",
+        "aparato digestivo",
+        "nutricion y metabolismo",
+        "aparato reproductor masculino",
+        "aparato reproductor femenino",
+        "desarrollo humano y envejecimiento"
+    ],
+    "BIOLOGIA CELULAR": [
+        "introduccion a la biologia celular",
+        "metodos y tecnicas basicas en biologia celular",
+        "estructura de la membrana plasmatica",
+        "transporte a traves de la membrana plasmatica",
+        "macrotransporte a traves de la membrana plasmatica",
+        "especializaciones de la membrana plasmatica",
+        "nucleo y cromatina",
+        "transcripcion y maduracion del arn",
+        "sintesis y modificacion de proteinas",
+        "reticulo endoplasmatico golgi y lisosomas",
+        "mitocondrias y peroxisomas",
+        "citoesqueleto",
+        "senalizacion celular",
+        "ciclo celular",
+        "division celular y muerte programada",
+        "biologia celular del cancer",
+        "respuesta inmunitaria",
+        "celulas madre y aplicaciones terapeuticas"
+    ],
+    "SALUD PUBLICA": [
+        "educacion en salud",
+        "concepto de salud y determinantes",
+        "funciones de salud publica",
+        "niveles de prevencion",
+        "promocion de la salud",
+        "atencion primaria de salud",
+        "factor de riesgo y salud comunitaria",
+        "ods y cobertura sanitaria",
+        "salud en bolivia y modelo safci",
+        "epidemiologia social",
+        "proceso de investigacion",
+        "problema y objetivos de investigacion",
+        "marco teorico e hipotesis",
+        "variables y medicion",
+        "estadistica descriptiva",
+        "muestreo",
+        "frecuencias y graficos",
+        "medidas de tendencia central",
+        "medidas de posicion",
+        "dispersion y forma de los datos",
+        "analisis de datos en excel y spss"
+    ]
+};
+
+function bancoTopicChapter(materia, tema) {
+    const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase().replace(/\s+/g, ' ');
+    const subject = Object.keys(BANCO_TOPIC_ORDER).find(key => normalize(key) === normalize(materia));
+    const index = subject ? BANCO_TOPIC_ORDER[subject].findIndex(topic => normalize(topic) === normalize(tema)) : -1;
+    return index < 0 ? null : index + 1;
+}
+
+function bancoTopicLabel(materia, tema) {
+    const chapter = bancoTopicChapter(materia, tema);
+    return chapter ? 'Capítulo ' + chapter + ' · ' + String(tema).toLowerCase() : String(tema).toLowerCase();
+}
+
+function sortBancoTopics(materia, topics) {
+    return topics.slice().sort((a, b) => {
+        const chapterA = bancoTopicChapter(materia, a) ?? Infinity;
+        const chapterB = bancoTopicChapter(materia, b) ?? Infinity;
+        return chapterA - chapterB || a.localeCompare(b, 'es', { numeric: true });
+    });
+}
+// Fin del orden de capítulos del banco.
+
 async function loadBancoTemas(materia) {
     const ddEl = document.getElementById('banco-tema-dropdown');
     ddEl.innerHTML = '<div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando temas...</div>';
@@ -2006,7 +2105,7 @@ async function loadBancoTemas(materia) {
                 if (t) temasSet.add(t);
             }
         });
-        bancoState.temas = Array.from(temasSet).sort();
+        bancoState.temas = sortBancoTopics(materia, Array.from(temasSet));
 
         ddEl.innerHTML = '';
 
@@ -2020,7 +2119,8 @@ async function loadBancoTemas(materia) {
         bancoState.temas.forEach(function (t) {
             const btn = document.createElement('button');
             btn.className = 'banco-dropdown-item';
-            btn.textContent = t.toLowerCase();
+            btn.textContent = bancoTopicLabel(materia, t);
+            btn.dataset.tema = t;
             btn.onclick = function () { selectBancoTema(t); };
             ddEl.appendChild(btn);
         });
@@ -2037,14 +2137,14 @@ async function loadBancoTemas(materia) {
 window.selectBancoTema = async function (tema) {
     bancoState.selectedTema = tema;
 
-    document.getElementById('banco-tema-text').textContent = tema ? tema.toLowerCase() : 'todos los temas';
+    document.getElementById('banco-tema-text').textContent = tema ? bancoTopicLabel(bancoState.selectedMateria, tema) : 'todos los temas';
     document.getElementById('banco-tema-dropdown').classList.add('hidden');
     document.getElementById('banco-tema-btn').classList.remove('open');
 
     // Highlight
     document.querySelectorAll('#banco-tema-dropdown .banco-dropdown-item').forEach(function (el) {
         const isAll = (el.textContent === 'todos los temas' && tema === null);
-        const isThis = tema && el.textContent === tema.toLowerCase();
+        const isThis = tema && el.dataset.tema === tema;
         el.classList.toggle('selected', isAll || isThis);
     });
 
@@ -2098,7 +2198,7 @@ async function loadBancoPreguntas() {
             : '';
         if (bancoState.selectedTema) {
             filterRow.classList.remove('hidden');
-            filterText.textContent = 'tema: ' + bancoState.selectedTema.toLowerCase() + difLabel;
+            filterText.textContent = 'tema: ' + bancoTopicLabel(bancoState.selectedMateria, bancoState.selectedTema) + difLabel;
         } else {
             filterRow.classList.remove('hidden');
             filterText.textContent = 'materia: ' + bancoState.selectedMateria.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + ' · todos los temas' + difLabel;
