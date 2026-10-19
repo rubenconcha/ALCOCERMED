@@ -9,8 +9,11 @@
   catch(_){return false;}
  }
  function failure(error){return error?.status===429||/rate|seconds|too many/i.test(error?.message||'')?'Demasiados intentos. Espera unos minutos y vuelve a intentarlo.':'No se pudo completar la solicitud. Revisa tu conexión e inténtalo de nuevo.';}
+ async function sessionWithDeadline(){
+  let timer;try{return await Promise.race([client.auth.getSession(),new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('connection_timeout')),12000);})]);}finally{clearTimeout(timer);}
+ }
  async function refresh(){
-  const result=await client.auth.getSession();
+  const result=await sessionWithDeadline();
   if(result.error)throw result.error;
   const session=result.data.session;
   if(!session){user=null;el('account').hidden=true;el('verify').hidden=false;status('Confirma tu correo para ver los dispositivos y reemplazar uno.');return;}
