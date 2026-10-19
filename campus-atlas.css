@@ -12,3 +12,25 @@ body.campus-atlas-active .main-content{padding:0}body.campus-atlas-active .suppo
 .campus-atlas,.campus-atlas *{text-transform:none}.atlas-app-icon img{transform:none;object-fit:contain;object-position:center}.atlas-enrollment-copy>p,.atlas-enrollment-included,.atlas-feature-strip span,.atlas-gallery-heading p,.atlas-preview-gallery small{font-weight:400}.atlas-preview-credit{margin:0;font-size:10px;color:#718499;line-height:1.6}.atlas-preview-credit a{color:#486b80;text-underline-offset:3px}.atlas-preview-credit a:focus-visible{outline:3px solid #218bc1;outline-offset:3px}
 
 .atlas-preview-gallery figure:first-child img{height:82%;object-fit:contain;object-position:center}
+
+/* Keep the atlas inside the visible phone screen, including landscape and iOS. */
+.campus-atlas.atlas-expanded{position:fixed;inset:0;z-index:10000;background:#f3f7fa;width:100%;height:100dvh;max-width:none;margin:0;padding:12px;display:flex;flex-direction:column;overflow:hidden}
+.campus-atlas.atlas-expanded .campus-atlas-heading{flex:none}
+.campus-atlas.atlas-expanded .campus-atlas-viewport{flex:1;min-height:0;height:auto;width:100%}
+@media(max-width:760px){
+ .campus-atlas{width:100%;min-width:0;padding:10px 8px 16px}
+ .campus-atlas-heading{gap:8px;margin-bottom:10px}
+ .campus-atlas-heading h1{font-size:21px}
+ .campus-atlas-heading p{font-size:12px;line-height:1.4}
+ .campus-atlas-actions{width:100%;gap:8px}
+ .campus-atlas-actions button{min-height:44px;flex:1;font-size:12px}
+ .campus-atlas-viewport{min-height:0;height:calc(100dvh - 220px);height:max(260px,calc(100dvh - 220px));border-radius:12px}
+ .campus-atlas.atlas-expanded{padding:env(safe-area-inset-top,0px) 8px env(safe-area-inset-bottom,0px)}
+ .campus-atlas.atlas-expanded .campus-atlas-heading{flex-direction:row;align-items:center;padding-top:8px}
+ .campus-atlas.atlas-expanded .campus-atlas-heading p{display:none}
+ .campus-atlas.atlas-expanded .campus-atlas-actions{width:auto}
+ .campus-atlas.atlas-expanded .campus-atlas-heading h1{font-size:16px}
+}
+@media(max-height:500px) and (max-width:950px){.campus-atlas-heading p{display:none}.campus-atlas-heading{flex-direction:row;align-items:center}.campus-atlas-actions{width:auto}.campus-atlas-viewport{height:calc(100dvh - 135px);min-height:0}}
+
+#campus-atlas-retry{display:block;margin-top:14px;min-height:44px;padding:10px 14px;border:1px solid #aecbd4;border-radius:10px;background:#ffffff12;color:#fff;font:inherit;font-size:13px;cursor:pointer}

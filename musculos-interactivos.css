@@ -39,3 +39,35 @@
 @media(max-width:760px){.reference-study-open:not(.no-panel) #stage{bottom:52%}.reference-study-open:not(.no-panel) #drawer{max-height:52%}.reference-study-open:not(.no-panel) .views{bottom:calc(52% + 44px)}.reference-study-open:not(.no-panel) .bottom{display:none}.reference-study-open:not(.no-panel) #selected-label{max-width:58%;font-size:11px}.reference-study-open:not(.no-panel) #whole{top:45px;font-size:10px}}
 
 @media(max-width:700px){.viewer{top:94px}.toolbar{height:94px;padding-block:6px;display:grid;grid-template-columns:1fr 1fr auto;gap:6px}.toolbar>div{grid-column:1/-1;display:flex;width:100%}.toolbar>div button{flex:1}.toolbar>#head-view,.toolbar>#layered-view{white-space:nowrap;padding:9px 12px}.toolbar>#reset{padding:9px 12px}}
+
+/* A mobile bottom sheet reserves its own space instead of covering anatomy. */
+@media(max-width:760px){
+ main,.campus-embedded main{min-height:0}
+ #drawer{max-height:50%;bottom:0;left:0;right:0;border-radius:18px 18px 0 0}
+ #atlas:not(.no-panel) #stage{bottom:calc(50% + 60px)}
+ #atlas:not(.no-panel) .views{bottom:calc(50% + 68px)}
+ #atlas:not(.no-panel) .bottom,#atlas:not(.no-panel) #study-shortcuts{display:none}
+ #atlas:not(.no-panel) #selected-label{font-size:11px;max-width:65%;top:42px}
+ #atlas:not(.no-panel) #whole{top:40px;min-height:44px}
+ #atlas.reference-study-open:not(.no-panel) #stage{bottom:calc(52% + 60px)}
+ #atlas.reference-study-open:not(.no-panel) .views{bottom:calc(52% + 68px)}
+ #atlas.reference-study-open:not(.no-panel) #drawer{max-height:52%}
+ .toolbar button,.views button,.bottom button,#open-panel,#close-panel{min-height:44px}
+ .toolbar{height:104px}
+ .viewer{top:104px}
+ .toolbar>div button{font-size:12px}
+ .search input{font-size:16px!important}
+ .drawer-content{padding-bottom:max(16px,env(safe-area-inset-bottom))}
+ #loading,#error{top:16%;left:8%;right:8%;padding:18px}
+ #error button{min-height:44px}
+}
+@media(max-width:950px) and (max-height:480px){
+ .toolbar{height:52px;display:flex;flex-wrap:nowrap;padding:0 6px;gap:4px;overflow-x:auto}
+ .toolbar>div{width:auto;flex:none}
+ .toolbar button{white-space:nowrap;padding:8px;font-size:11px}
+ .viewer{top:52px}
+ #drawer{left:auto;right:0;top:56px;bottom:0;width:48%;max-height:none;border-radius:14px 0 0 0}
+ #atlas:not(.no-panel) #stage,#atlas.reference-study-open:not(.no-panel) #stage{left:0;bottom:0;right:49%}
+ #atlas:not(.no-panel) .views,#atlas.reference-study-open:not(.no-panel) .views{left:25%;bottom:8px}
+ #atlas.reference-study-open:not(.no-panel) #drawer{max-height:none}
+}
