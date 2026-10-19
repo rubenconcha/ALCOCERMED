@@ -1,0 +1,25 @@
+.resumenes-viewer-head { flex-shrink: 0; }
+.resumenes-viewer-head > div:first-child { min-width: 0; }
+.summary-pdf-reader { display: flex; flex: 1; flex-direction: column; min-height: 0; overflow: hidden; background: #e8edf2; }
+.summary-pdf-toolbar { display: flex; flex-shrink: 0; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 12px; border-bottom: 1px solid #cbd7e2; background: #fff; color: #183552; }
+.summary-pdf-toolbar button { min-width: 44px; min-height: 44px; padding: 6px 12px; border: 1px solid #cbd9e7; border-radius: 9px; background: #f5f8fb; color: #183552; font-family: inherit; font-weight: 700; font-size: 16px; line-height: 1.2; cursor: pointer; }
+.summary-pdf-toolbar button:disabled { opacity: .45; cursor: default; }
+.summary-pdf-toolbar button:focus-visible, .summary-pdf-scroll:focus-visible { outline: 3px solid #147ba2; outline-offset: -3px; }
+.summary-pdf-toolbar output { min-width: 48px; text-align: center; font-size: 14px; font-weight: 700; }
+.summary-pdf-counter { margin-left: auto; padding: 0 4px; font-size: 14px; font-weight: 700; }
+.summary-pdf-scroll { flex: 1; min-height: 0; overflow: auto; padding: 12px; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y pinch-zoom; overflow-anchor: none; scrollbar-gutter: stable; }
+.summary-pdf-page { position: relative; margin: 0 auto 16px; background: #fff; box-shadow: 0 2px 9px #19304720; }
+.summary-pdf-page canvas { display: block; max-width: none; }
+.summary-pdf-placeholder, .summary-pdf-page-retry { position: absolute; top: 32px; left: 24px; color: #52697c; font-size: 14px; }
+.summary-pdf-accessible { position: absolute; top: 0; left: 0; margin: 0; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.resumenes-retry { align-self: flex-start; margin: 0 20px 12px; padding: 10px 16px; border: 1px solid #b7c8d8; border-radius: 9px; background: #fff; color: #183552; font: inherit; cursor: pointer; }
+.resumenes-retry[hidden] { display: none; }
+@media (max-width: 600px) {
+    .resumenes-viewer { height: 100vh; height: 100dvh; }
+    .resumenes-viewer-head { gap: 8px; padding: 10px 12px; }
+    .resumenes-viewer-head h3 { font-size: .95rem; line-height: 1.3; }
+    .resumenes-viewer-actions a, .resumenes-viewer-actions button { min-height: 44px; }
+    .summary-pdf-toolbar { gap: 4px; padding: 6px 10px; }
+    .summary-pdf-toolbar button { padding: 6px 10px; }
+    .summary-pdf-scroll { padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+}

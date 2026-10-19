@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="past-exams.css?v=2">
     <link rel="stylesheet" href="topic-evaluations.css?v=2">
     <link rel="stylesheet" href="campus-atlas.css?v=4">
+    <link rel="stylesheet" href="summary-pdf-reader.css?v=1">
 </head>
 
 <body class="login-active">
@@ -1174,8 +1175,9 @@
                         <button id="resumenes-close" type="button" aria-label="Cerrar PDF">Cerrar</button>
                     </div>
                 </div>
-                <p id="resumenes-loading" class="resumenes-loading">Cargando PDF…</p>
-                <iframe id="resumenes-frame" title="Lector de resúmenes en PDF"></iframe>
+                <p id="resumenes-loading" class="resumenes-loading" role="status">Cargando PDF…</p>
+                <button id="resumenes-retry" class="resumenes-retry" type="button" hidden>Reintentar</button>
+                <div id="resumenes-frame" aria-label="Lector de resúmenes en PDF"></div>
             </dialog>
         </section>
 
@@ -1371,7 +1373,8 @@
     <script src="simulacro-library.js?v=4"></script>
     <script src="student-library.js?v=10"></script>
     <script src="flashcard-workspace.js?v=6"></script>
-    <script src="study-summaries.js?v=9"></script>
+    <script src="summary-pdf-reader.js?v=1"></script>
+    <script src="study-summaries.js?v=10"></script>
     <script src="past-exams.js?v=6"></script>
     <script src="topic-evaluations.js?v=1"></script>
     <script src="campus-atlas.js?v=10"></script>

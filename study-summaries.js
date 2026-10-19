@@ -29,7 +29,9 @@
     const count = document.getElementById('resumenes-count');
     const empty = document.getElementById('resumenes-empty');
     const dialog = document.getElementById('resumenes-viewer');
-    const frame = document.getElementById('resumenes-frame');
+    const reader = new SummaryPdfReader(document.getElementById('resumenes-frame'));
+    const retry = document.getElementById('resumenes-retry');
+    let currentItem = null;
     const loading = document.getElementById('resumenes-loading');
     const download = document.getElementById('resumenes-download');
     const pdfVersion = '20261019';
@@ -42,11 +44,12 @@
         pdfCache.clear();
     }
 
-    function showPdf(url, item) {
-        frame.src = url;
+    async function showPdf(url, item, revision, signal) {
         download.href = url;
         download.download = `${item.file}.pdf`;
         download.hidden = false;
+        await reader.open(url);
+        if (revision === openRevision && dialog.open && !signal.aborted) loading.hidden = true;
     }
 
     const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
@@ -111,22 +114,31 @@
         const revision = ++openRevision;
         if (pendingRequest) pendingRequest.abort();
         pendingRequest = null;
-        frame.removeAttribute('src');
+        reader.destroy();
         document.getElementById('resumenes-viewer-subject').textContent = `${item.subject} · ${item.topic}`;
         document.getElementById('resumenes-viewer-title').textContent = item.title;
+        currentItem = item;
+        retry.hidden = true;
         download.hidden = true;
         loading.textContent = 'Cargando PDF…';
         loading.hidden = false;
-        dialog.showModal();
-        // Let the browser stream public PDFs and reuse its HTTP cache.
-        if (item.free) {
-            showPdf(`/resumenes/${item.file}.pdf?v=${pdfVersion}`, item);
-            return;
-        }
+        if (!dialog.open) dialog.showModal();
         const controller = new AbortController();
         pendingRequest = controller;
-        const timeout = setTimeout(() => controller.abort(), 30000);
+        const timeout = setTimeout(() => {
+            controller.abort();
+            if (revision === openRevision && dialog.open) {
+                reader.destroy();
+                loading.hidden = false;
+                retry.hidden = false;
+                loading.textContent = 'La conexión está tardando. Pulsa Reintentar para volver a cargar el resumen.';
+            }
+        }, 30000);
         try {
+            if (item.free) {
+                await showPdf(`/resumenes/${item.file}.pdf?v=${pdfVersion}`, item, revision, controller.signal);
+                return;
+            }
             const { data } = await getSupabase().auth.getSession();
             if (revision !== openRevision || !dialog.open) return;
             if (!data.session?.access_token) throw new Error('Inicia sesión para abrir este resumen.');
@@ -135,7 +147,7 @@
                 const url = pdfCache.get(key);
                 pdfCache.delete(key);
                 pdfCache.set(key, url);
-                showPdf(url, item);
+                await showPdf(url, item, revision, controller.signal);
                 return;
             }
             const response = await fetch(`/api/resumen?file=${encodeURIComponent(item.file)}`, {
@@ -153,10 +165,13 @@
                 URL.revokeObjectURL(pdfCache.get(oldest));
                 pdfCache.delete(oldest);
             }
-            showPdf(url, item);
+            await showPdf(url, item, revision, controller.signal);
         } catch (error) {
             if (revision === openRevision && dialog.open) {
-                loading.textContent = error.name === 'AbortError' ? 'La conexión está tardando. Cierra y vuelve a abrir el resumen.' : error.message;
+                reader.destroy();
+                loading.hidden = false;
+                retry.hidden = false;
+                loading.textContent = controller.signal.aborted ? 'La conexión está tardando. Cierra y vuelve a abrir el resumen.' : error.message;
             }
         } finally {
             clearTimeout(timeout);
@@ -164,9 +179,7 @@
         }
     }
 
-    frame.addEventListener('load', () => {
-        if (frame.getAttribute('src')) loading.hidden = true;
-    });
+    retry.addEventListener('click', () => { if (currentItem) openSummary(currentItem); });
 
     search.addEventListener('input', render);
     subject.addEventListener('change', () => { fillTopics(); render(); });
@@ -184,7 +197,7 @@
         ++openRevision;
         if (pendingRequest) pendingRequest.abort();
         pendingRequest = null;
-        frame.removeAttribute('src');
+        reader.destroy();
     });
     window.addEventListener('campus-access-change', () => { clearPdfCache(); render(); });
     window.addEventListener('pagehide', clearPdfCache);
