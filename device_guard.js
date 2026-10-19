@@ -58,6 +58,7 @@ var DeviceGuard = (function() {
             }
             var data = result.data;
             if (!data || data.ok !== true) {
+                if (data && data.code === 'DEVICE_LIMIT') showDeviceLimit(supabaseClient, userEmail);
                 return { ok: false, error: data && data.error || 'No pudimos verificar este dispositivo.', code: data && data.code };
             }
             return { ok: true, limit: data && data.limit, registered: data && data.registered };
@@ -113,6 +114,33 @@ var DeviceGuard = (function() {
             clearInterval(_checkTimer);
             _checkTimer = null;
         }
+    }
+
+    function showDeviceLimit(client, email) {
+        var previous = document.getElementById('device-limit-dialog');
+        if (previous) previous.remove();
+        var dialog = document.createElement('dialog');
+        dialog.id = 'device-limit-dialog'; dialog.className = 'device-limit-dialog';
+        dialog.setAttribute('aria-labelledby', 'device-limit-title');
+        dialog.innerHTML = '<h2 id="device-limit-title">Ya usas tu cuenta en 2 dispositivos</h2><p>¿Cambiaste de celular o de navegador? Te enviamos un enlace a tu correo para reemplazar uno.</p><button type="button" class="device-limit-send">Cambiar un dispositivo</button><button type="button" class="device-limit-cancel">Volver</button><p class="device-limit-status" role="status" aria-live="polite"></p>';
+        var send = dialog.querySelector('.device-limit-send');
+        var message = dialog.querySelector('.device-limit-status');
+        dialog.querySelector('.device-limit-cancel').onclick = function () { dialog.close(); };
+        send.onclick = async function () {
+            send.disabled = true;
+            message.textContent = 'Enviando…';
+            try {
+                var result = await client.auth.signInWithOtp({ email: email, options: { shouldCreateUser: false, emailRedirectTo: new URL('/dispositivos.html', location.origin).href } });
+                if (result.error) throw result.error;
+                message.textContent = 'Te enviamos un enlace a ' + email + '. Ábrelo en este navegador para elegir cuál reemplazar.';
+                send.hidden = true;
+            } catch (_) {
+                message.textContent = 'No pudimos enviar el correo. Espera un momento y vuelve a intentarlo.';
+                send.disabled = false;
+            }
+        };
+        dialog.addEventListener('close', function () { dialog.remove(); });
+        document.body.appendChild(dialog); dialog.showModal();
     }
 
     // API pública

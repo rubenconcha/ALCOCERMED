@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-juegos-v105-devices2';
+const CACHE_NAME = 'alcocermed-juegos-v105-devices3';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
     './game-practice.js?v=1',
@@ -40,7 +40,7 @@ const ASSETS_TO_CACHE = [
     './manifest.json',
     '././logo_app.png',
     './bg_music.mp4',
-    '../device_guard.js?v=5',
+    '../device_guard.js?v=6',
     './tejido-nervioso-imagenes.js?v=5',
     './encefalo-native-data.js?v=1',
     './sentidos-imagenes.js?v=1',
