@@ -1,0 +1,301 @@
+{
+  "date": "2026-10-20",
+  "request": "Remove personal signature and bibliographic footer from all existing Intocables sheet images.",
+  "tool": "Built-in image generation for text removal; lossless assembly restricted to the requested text regions.",
+  "sheet_count": 15,
+  "academic_text_json_unchanged": true,
+  "checks": "Every decoded pixel outside the approved footer/signature rectangles is identical to the original.",
+  "sheets": [
+    {
+      "id": "morfo_18_sangre__07",
+      "original_sha256": "bf889c633367e621f3bed5dc709761382f8c6965c4c4df288ecec388a8cc2139",
+      "updated_sha256": "243b58c34cfa403599f2037dd5a7b1102e7a1972f10e144bcac434db67012ac7",
+      "regions": [
+        [
+          470,
+          980,
+          595,
+          35
+        ]
+      ],
+      "unchanged_teaching_pixels": 1552039,
+      "changed_text_region_pixels": 18027,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_16_organos_sentidos__10",
+      "original_sha256": "475acaa80c2e3a8d90c61e6cc6969e20d07a3a5ae5eb13bce3ec9f63f675c1ed",
+      "updated_sha256": "cb6667de5ba5ff8ebd0ee3c82b175b7fd7269f1d9180d1fe693fc14b600ce008",
+      "regions": [
+        [
+          480,
+          975,
+          565,
+          35
+        ]
+      ],
+      "unchanged_teaching_pixels": 1553089,
+      "changed_text_region_pixels": 17460,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_16_organos_sentidos__07",
+      "original_sha256": "5735d8b668c878c201ca22c983abf906a9dbd52eebdb2362e8134d1a084aa57b",
+      "updated_sha256": "200196cf7d991a83df54eb1d1b8ee89f2cf2f4b08de59ad6a171ec0b3a860aa2",
+      "regions": [
+        [
+          580,
+          994,
+          375,
+          27
+        ]
+      ],
+      "unchanged_teaching_pixels": 1562739,
+      "changed_text_region_pixels": 8666,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_16_organos_sentidos__11",
+      "original_sha256": "450b6b0afa66309608a2ab7088af2b2328eed746ab67eab50a2e709e676e2584",
+      "updated_sha256": "996bbc47a7a22d8362cbecb2c6d594a03816d9ac64b52dd3db3da0fcc0384fcf",
+      "regions": [
+        [
+          950,
+          941,
+          552,
+          55
+        ]
+      ],
+      "unchanged_teaching_pixels": 1542504,
+      "changed_text_region_pixels": 29145,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_18_sangre__09",
+      "original_sha256": "a461e7281004ba9dbfa1a32c35345fae37be266e05682c49428bddaa6e6c5a0e",
+      "updated_sha256": "b9d6de602ef2943a47108362e71d054bbb3b129bd27c4e55d9e35d13c44e8717",
+      "regions": [
+        [
+          523,
+          975,
+          488,
+          33
+        ]
+      ],
+      "unchanged_teaching_pixels": 1556760,
+      "changed_text_region_pixels": 14821,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_16_organos_sentidos__08",
+      "original_sha256": "8a43bb9b54e0e61f853ad22a280a4d14f9cc2497e672060e5991c81c1b3778ca",
+      "updated_sha256": "d92deea758c8c5a656b681dde77fa7c73d9c78f9dabec689425a4a831c0bae46",
+      "regions": [
+        [
+          982,
+          965,
+          548,
+          43
+        ]
+      ],
+      "unchanged_teaching_pixels": 1549300,
+      "changed_text_region_pixels": 21548,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_18_sangre__11",
+      "original_sha256": "68b76442b963e523bdac5e595d714ab9422e3923c1c8181ae7c0e5d815dd9ceb",
+      "updated_sha256": "57911e2b899431867898631179a20fb72bcfb7398db7281bc2bd69021c3add47",
+      "regions": [
+        [
+          15,
+          965,
+          680,
+          43
+        ]
+      ],
+      "unchanged_teaching_pixels": 1543624,
+      "changed_text_region_pixels": 27144,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_18_sangre__10",
+      "original_sha256": "83311ace3dd6353a24a0a29f320c581df1693bf91e4593ae76e8aebfb7642006",
+      "updated_sha256": "ba43a5059a296803743be461601519d6a1c84ba14d1a8de1c9fc53cb14911841",
+      "regions": [
+        [
+          420,
+          984,
+          800,
+          31
+        ]
+      ],
+      "unchanged_teaching_pixels": 1548064,
+      "changed_text_region_pixels": 22091,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_18_sangre__12",
+      "original_sha256": "e79b171fc6afe9ef9d8103ca3999e1cd35a3c8a92c87e01cafd834f79ae45b65",
+      "updated_sha256": "d52aa2f3f0c61e652514490a6a3f82d919c16ba684d9557a0139ace07d22a8e8",
+      "regions": [
+        [
+          475,
+          984,
+          580,
+          34
+        ]
+      ],
+      "unchanged_teaching_pixels": 1553144,
+      "changed_text_region_pixels": 17937,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_18_sangre__08",
+      "original_sha256": "7b25e531b0504bd9db953dd258471b59b7f76062763e58de2202056e9f850749",
+      "updated_sha256": "0caace55f0b56b9372eae75ebe2fd780414f5dd97d1a115ee4ad1984af9acb16",
+      "regions": [
+        [
+          415,
+          978,
+          710,
+          35
+        ]
+      ],
+      "unchanged_teaching_pixels": 1548014,
+      "changed_text_region_pixels": 21556,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_18_sangre__13",
+      "original_sha256": "48b2cc36c7541669813b114b6edb8bb4bfde3057d318898f4f0fb4daf28eb521",
+      "updated_sha256": "a42261e14bed75b04012c42c5b0302ba75d9a593340894a73357d11b18d3b0cf",
+      "regions": [
+        [
+          362,
+          984,
+          785,
+          32
+        ]
+      ],
+      "unchanged_teaching_pixels": 1547744,
+      "changed_text_region_pixels": 22526,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_16_organos_sentidos__09",
+      "original_sha256": "57f173e69fdcc38c05912c91dc9529076db65db5a2acfcfebec034f8d73d70ea",
+      "updated_sha256": "7bc64c0f6827acfd3ec571b4f95f8a482c7f520047771773e1d51287663708de",
+      "regions": [
+        [
+          515,
+          979,
+          510,
+          35
+        ]
+      ],
+      "unchanged_teaching_pixels": 1555014,
+      "changed_text_region_pixels": 14083,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_18_sangre__15",
+      "original_sha256": "f4ae88a21b77c9ba03422cfca3519e3fe4bd45c7d8833d07d4e06c739a1165c4",
+      "updated_sha256": "d06056c5cf459266cf5b11fbfd8f2c3dcaccd5c0c49fb454d784c1f504fecd3d",
+      "regions": [
+        [
+          338,
+          982,
+          865,
+          35
+        ]
+      ],
+      "unchanged_teaching_pixels": 1542589,
+      "changed_text_region_pixels": 28043,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_18_sangre__14",
+      "original_sha256": "e63e845cbbf3f5406803def63929cd8ad9fbfc8ee6c9b3116b99fb80ef4af0d5",
+      "updated_sha256": "b16f352978803d57cadf47297792bbfc5424c3ab9357be804cf3bbf36078fce3",
+      "regions": [
+        [
+          423,
+          983,
+          710,
+          34
+        ]
+      ],
+      "unchanged_teaching_pixels": 1548724,
+      "changed_text_region_pixels": 22344,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "morfo_01_anatomia_y_fisiologia__07",
+      "original_sha256": "69299d490ef61ca4937a42662ed143f35f7849b6034402eaf1f1a78091f0b98f",
+      "updated_sha256": "96282eb4ded64204a2e23fcfe9a4163b3f155aff546dc91f16b2096f2b2df73b",
+      "regions": [
+        [
+          610,
+          994,
+          325,
+          29
+        ],
+        [
+          1300,
+          38,
+          205,
+          116
+        ]
+      ],
+      "unchanged_teaching_pixels": 1539659,
+      "changed_text_region_pixels": 26953,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ]
+}
