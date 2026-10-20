@@ -51,8 +51,8 @@ test('Six maps align with lecture slides and retain official PDF references',()=
  const covered=new Set();
  for(let i=1;i<=6;i++){
   const map=require('../api/_mindmaps/morfo_01_anatomia_y_fisiologia__0'+i+'.json');
-  assert.equal(map.content_revision,3);
-  for(const slide of map.lecture_slides){assert.ok(slide>=2&&slide<=37);covered.add(slide)}
+  assert.equal(map.content_revision,3);assert.equal(map.lecture_slide_count,41);
+  for(const slide of map.lecture_slides){assert.ok(slide>=2&&slide<=39);covered.add(slide)}
   const items=map.sections.flatMap(s=>s.groups.flatMap(g=>g.items));
   assert.equal(items.length,9);
   assert.ok(items.every(n=>n.text.length>40&&n.source));
