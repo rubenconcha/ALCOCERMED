@@ -4,9 +4,9 @@ const fs=require('node:fs');
 const vm=require('node:vm');
 const paper=require('../api/_evaluations/morfo-01.json');
 
-test('Tema 1: thirty distinct questions, balanced keys and feedback for every alternative',()=>{
- assert.equal(paper.count,30);assert.equal(paper.duration,30);
- assert.equal(new Set(paper.questions.map(q=>q.pregunta)).size,30);
+test('Tema 1: twenty distinct questions, balanced keys and feedback for every alternative',()=>{
+ assert.equal(paper.count,20);assert.equal(paper.duration,20);
+ assert.equal(new Set(paper.questions.map(q=>q.pregunta)).size,20);
  const keys={A:0,B:0,C:0,D:0};
  for(const q of paper.questions){
   keys[q.respuesta_correcta]++;
@@ -17,7 +17,7 @@ test('Tema 1: thirty distinct questions, balanced keys and feedback for every al
   assert.ok(q.pagina_impresa);assert.ok(q.paginas_pdf);
   assert.ok(q.source.pdf_pages.includes(q.source.evidence_page));
  }
- assert.deepEqual(Object.values(keys),[8,8,7,7]);
+ assert.deepEqual(Object.values(keys),[5,5,5,5]);
 });
 
 test('Actual review renderer places each explanation below its option and scopes it to topic evaluation',()=>{
@@ -33,7 +33,7 @@ test('Actual review renderer places each explanation below its option and scopes
  const state={mode:'tema',preguntas:paper.questions,answers:paper.questions.map((_,i)=>({selected:i%3===0?null:i%4}))};
  const context={document:{getElementById:()=>list,createElement:tag=>new Node(tag)},simState:state,campo:(q,k)=>q[k],simAcceptedAnswerIndices:q=>['ABCD'.indexOf(q.respuesta_correcta)],bancoComentario:()=>''};
  vm.runInNewContext(review,context);
- assert.equal(list.children.length,30);
+ assert.equal(list.children.length,20);
  list.children.forEach((item,i)=>{
   const comments=item.children.find(n=>n.className==='sim-rev-option-comments');
   assert.equal(comments.children.length,4);

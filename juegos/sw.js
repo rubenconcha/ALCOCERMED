@@ -1,7 +1,7 @@
-const CACHE_NAME = 'alcocermed-juegos-v105-devices3';
+const CACHE_NAME = 'alcocermed-juegos-v106-tema1';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
-    './game-practice.js?v=1',
+    './game-practice.js?v=2',
     './game-question-images.js?v=1',
     './app.js?v=104',
     './styles.css?v=85',

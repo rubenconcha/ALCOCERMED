@@ -6404,5 +6404,21 @@
     "preview": "/assets/mindmaps/premium-previews/morfo_18_sangre__15.webp",
     "section": "intocables",
     "format": "illustrated-sheet"
+  },
+  {
+    "id": "morfo_01_anatomia_y_fisiologia__07",
+    "titulo": "Organización corporal: forma, función y ubicación",
+    "root_title": "Organización corporal: forma, función y ubicación",
+    "materia": "Morfofunción",
+    "tema": "Temas principales de anatomía y fisiología",
+    "parent_key": "morfo_01_anatomia_y_fisiologia.webp",
+    "url_imagen": "premium/morfo_01_anatomia_y_fisiologia__07.json",
+    "descripcion": "Síntesis de la presentación: conceptos relacionados, lámina ilustrada, 20 flashcards y 20 preguntas razonadas.",
+    "premium": true,
+    "acceso_gratis": false,
+    "preview": "/assets/mindmaps/premium-previews/morfo_01_anatomia_y_fisiologia__07.webp",
+    "curated": true,
+    "section": "intocables",
+    "format": "illustrated-sheet"
   }
 ]

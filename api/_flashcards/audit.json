@@ -1,19 +1,19 @@
 {
-  "version": "2026-10-16",
+  "version": "2026-10-20-tema1",
   "verified_against_pdf": true,
-  "total_cards": 3541,
+  "total_cards": 3465,
   "total_topics": 68,
-  "total_subtopics": 547,
+  "total_subtopics": 538,
   "minimum_cards_per_subtopic": 3,
   "subjects": [
     {
       "materia": "MORFOFUNCION",
       "chapters": 30,
       "topics": 29,
-      "cards": 1681,
+      "cards": 1605,
       "longest_answer_words": 19,
       "median_answer_words": 4,
-      "source_sha256": "b32131a39aad8abd155e34337cebe306e6bea504391f2286a01dbbb603ea3654",
+      "source_sha256": "7130f1080563c06a046923d4f3b46996a68e573598dde7c7ace3998e09293fac",
       "visually_verified_cards": 0,
       "pdf_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
     },
@@ -46,7 +46,7 @@
       "tema": "temas principales de anatomia y fisiologia",
       "chapter": 1,
       "chapter_title": "Temas principales de anatomía y fisiología",
-      "count": 96,
+      "count": 20,
       "free_count": 0
     },
     {
@@ -586,5 +586,5 @@
       "free_count": 0
     }
   ],
-  "library_sha256": "f7af03366900e32b8b9a35e085b96173448ab11f14026fcac609d85b943db90a"
+  "library_sha256": "152e2899735a56419283946d0e8b286c3bbad6cbf05b902507992bc7357a999b"
 }

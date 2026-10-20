@@ -90,7 +90,7 @@
             },
             {
               "title": "Sagital, frontal y transversal",
-              "text": "Sagital divide derecha e izquierda; frontal, anterior y posterior; transversal, superior e inferior. El mediano pasa por la línea media.",
+              "text": "Sagital: divide derecha e izquierda; el mediano pasa por la línea media. Frontal o coronal: divide anterior y posterior. Transversal u horizontal: divide superior e inferior. Relaciona cada nombre con las dos porciones que separa.",
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
                 "pdfPage": 58,
@@ -112,7 +112,7 @@
           "items": [
             {
               "title": "Términos relativos",
-              "text": "Superior e inferior, anterior y posterior, medial y lateral, superficial y profundo comparan la ubicación de dos estructuras.",
+              "text": "Los términos comparan dos estructuras: corazón superior al diafragma; esternón anterior al corazón; ojos laterales a la nariz; piel superficial al músculo. Ipsilateral significa mismo lado (hígado y apéndice); contralateral, lados opuestos (bazo e hígado), en la disposición habitual.",
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
                 "pdfPage": 59,
@@ -168,7 +168,7 @@
     "doctor_approved": false,
     "source_only": true,
     "date": "2026-10-20",
-    "note": "Contenido verificado con el PDF oficial. Las ilustraciones generadas son esquemas didácticos."
+    "note": "Alineado con las 41 diapositivas. Planos con sus sinónimos y ejemplos explícitos de dirección y lateralidad, verificados en el PDF oficial."
   },
   "lecture_slide_count": 41
 }

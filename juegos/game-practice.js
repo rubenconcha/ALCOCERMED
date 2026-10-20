@@ -10,7 +10,7 @@
  }
  async function load(client,ev,original,code,restore){
   var key='alcocer_self_extra_'+code,extra;
-  if(restore){try{extra=JSON.parse(sessionStorage.getItem(key)||'null');}catch(_){}if(Array.isArray(extra))return merge(original,extra);}
+  if(restore){try{extra=JSON.parse(sessionStorage.getItem(key)||'null');}catch(_){}if(Array.isArray(extra))return merge(original,extra);if(extra&&Array.isArray(extra.questions))return extra.replace?merge([],extra.questions):merge(original,extra.questions);}
   try{
    if(!client.auth||!client.auth.getSession)return original;
    var session=await client.auth.getSession(),token=session.data&&session.data.session&&session.data.session.access_token;
@@ -18,8 +18,8 @@
    var response=await fetch('/api/game-practice?id='+encodeURIComponent(ev.id),{headers:{Authorization:'Bearer '+token},cache:'no-store',signal:AbortSignal.timeout(12000)});
    if(!response.ok)return original;
    var data=await response.json();extra=Array.isArray(data.questions)?data.questions:[];
-   var combined=merge(original,extra);
-   try{sessionStorage.setItem(key,JSON.stringify(extra));}catch(_){}
+   var combined=data.replace===true&&extra.length?merge([],extra):merge(original,extra);
+   try{sessionStorage.setItem(key,JSON.stringify({replace:data.replace===true&&extra.length>0,questions:extra}));}catch(_){}
    return combined;
   }catch(_){return original;}
  }

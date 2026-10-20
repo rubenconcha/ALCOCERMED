@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-20",
+  "topic": "morfo-01",
+  "presentation": "Alcocermed_Tema_1_Atlas_Actualizado.pptx",
+  "presentation_slides": 41,
+  "flashcards": 20,
+  "evaluation_questions": 20,
+  "game_rounds": 2,
+  "questions_per_game_round": 10,
+  "intocables_sheet": "morfo_01_anatomia_y_fisiologia__07",
+  "design": "Existing flashcard workspace, topic evaluation renderer, concept-map viewer, Intocables illustrated-sheet format and game-round engine; no layout or style changes.",
+  "verification": {
+    "official_pdf_compiler": "All three official PDFs verified; other 67 topics unchanged.",
+    "unit_and_integration_tests": 34,
+    "intocables_responsive_widths": [
+      1440,
+      390
+    ],
+    "source_book": "Saladin · Anatomía y fisiología · 6.ª edición",
+    "source_pdf_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+    "coronal_synonym_reference": {
+      "section": "Glosario: plano coronal = plano frontal",
+      "pdf_page": 1193,
+      "printed_page": "G-15"
+    },
+    "live_ui": {
+      "flashcards_catalog": "20 tarjetas en el tema",
+      "evaluation_catalog": "20 preguntas · 20 minutos",
+      "intocables": "Lámina publicada; práctica 20 flashcards y 20 preguntas; feedback por alternativa comprobado",
+      "game_round_1": "1 / 10; pregunta de anatomía",
+      "game_round_2": "1 / 10; pregunta de plano sagital",
+      "test_games": "Sin responder ni completar las partidas."
+    }
+  },
+  "generative_sheet": {
+    "tool": "Built-in image generation",
+    "reference": "Existing morfo_18_sangre__07 Intocables sheet",
+    "prompt_summary": "Match the existing Intocables illustration, colors, typography, logo and modules. Synthesize shape/function, organization, homeostasis, sagittal/frontal/transverse planes, directional relationships, and cavities/membranes. Preserve Dr. Ruben Concha Cayola. Correct the coronal plane to span both shoulders left-to-right, separating anterior/posterior."
+  },
+  "deployment": "https://alcocermed-1h0ulvzdd-pichon4488-2410s-projects.vercel.app"
+}

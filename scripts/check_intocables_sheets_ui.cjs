@@ -7,7 +7,7 @@ const catalog=require('../content/mindmaps-premium-catalog.json'),sheets=catalog
 try{const page=await browser.newPage(),errors=[];let privateRequests=0;page.on('pageerror',e=>errors.push(e.message));await page.setRequestInterception(true);
 page.on('request',r=>{const url=new URL(r.url());
  if(url.pathname==='/qa-sheets')return r.respond({contentType:'text/html',body:`<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/assets/mindmaps/fonts/outfit.css"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/intocables-sheets.css"></head><body>${hub}<script>
- window.freeMode=true;window.planVisits=0;window.openedSheet=null;
+ window.fixtureSheetCount=${sheets.length};window.freeMode=true;window.planVisits=0;window.openedSheet=null;
  window.CampusAccess={isFree:()=>freeMode,unlock:()=>planVisits++};
  window.ensureSupabaseSdk=async()=>{};window.getSupabase=()=>({auth:{getSession:async()=>({data:{session:{access_token:freeMode?'qa-free':'qa-paid'}}})},from:()=>({select:()=>({order:async()=>({data:window.cardFixtures,error:null})})})});
  window.openMmLightbox=async meta=>{window.openedSheet=meta};window.goBack=()=>{};window.openMindMaps=()=>{};
@@ -32,7 +32,7 @@ for(const width of [1440,390]){
  const fixture=JSON.parse(fs.readFileSync(path.join(root,'content/intocables_catalogo_2026.json'),'utf8')).map(n=>({...n,clave:'Idea central',explicacion:'Explicación de prueba',error_comun:'Confusión',pregunta:'Pregunta',respuesta:'Respuesta',fuente:'Fuente de prueba'}));await page.evaluate(data=>{window.cardFixtures=data},fixture);
  await page.click('[data-format="cards"]');await page.waitForFunction(()=>document.querySelectorAll('.itc-card:not(.itc-sheet-card)').length===18);await page.$eval('.itc-card',n=>n.click());assert.equal(await page.$eval('#itc-dialog',n=>n.open),true);await page.click('#itc-reveal');assert.equal(await page.$eval('#itc-answer',n=>n.hidden),false);
  await page.evaluate(()=>{freeMode=true;window.dispatchEvent(new Event('campus-access-change'))});assert.equal(await page.$eval('#itc-dialog',n=>n.open),false);assert.equal(await page.$eval('#itc-explain',n=>n.textContent),'');
- await page.click('[data-format="sheets"]');await page.waitForFunction(()=>document.querySelectorAll('.itc-sheet-card').length===14);assert.equal(await page.$$eval('img[data-sheet-id][src]',a=>a.length),0);
+ await page.click('[data-format="sheets"]');await page.waitForFunction(()=>document.querySelectorAll('.itc-sheet-card').length===window.fixtureSheetCount);assert.equal(await page.$$eval('img[data-sheet-id][src]',a=>a.length),0);
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
  await page.evaluate(()=>{freeMode=false;window.dispatchEvent(new Event('campus-access-change'))});await page.waitForFunction(()=>document.querySelector('.itc-sheet-cover img[data-sheet-id]')?.naturalWidth===1536);
  await page.waitForFunction(()=>document.querySelectorAll('.itc-sheet-card.is-locked').length===0);
@@ -40,5 +40,6 @@ for(const width of [1440,390]){
  await page.evaluate(()=>document.getElementById('intocables-hub-screen').classList.add('hidden'));await page.waitForFunction(()=>document.querySelectorAll('img[data-sheet-id][src]').length===0);
  privateRequests=0;
 }
-assert.deepEqual(errors,[]);console.log('PASS: actual Intocables hub at 1440/390; 14 protected sheets, exact private covers, filters/search, opening route, 18 essential cards, answer reveal, session cleanup, no overflow/errors.');
+assert.deepEqual(errors,[]);console.log('PASS: actual Intocables hub at 1440/390; 15 protected sheets, exact private covers, filters/search, opening route, 18 essential cards, answer reveal, session cleanup, no overflow/errors.');
 }finally{await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});
+

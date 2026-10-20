@@ -5,8 +5,8 @@
   "topic": "temas principales de anatomia y fisiologia",
   "title": "Temas principales de anatomía y fisiología",
   "number": 1,
-  "count": 30,
-  "duration": 30,
+  "count": 20,
+  "duration": 20,
   "source": "Saladin · Anatomía y fisiología",
   "questions": [
     {
@@ -28,7 +28,7 @@
       "pagina_impresa": "2",
       "dificultad": "medio",
       "diapositivas_origen": [
-        14
+        2
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -64,7 +64,7 @@
       "pagina_impresa": "2",
       "dificultad": "medio",
       "diapositivas_origen": [
-        14
+        3
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -100,7 +100,7 @@
       "pagina_impresa": "3",
       "dificultad": "medio",
       "diapositivas_origen": [
-        15
+        4
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -118,61 +118,28 @@
       "opcion_d": "Neurofisiología"
     },
     {
-      "content_id": "morfo-01-clase-004",
-      "materia": "MORFOFUNCION",
-      "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 4,
-      "pregunta": "¿Qué asociación entre escala y método es correcta?",
-      "respuesta_correcta": "D",
-      "justificacion": "El texto relaciona la ultraestructura con el detalle fino observado mediante microscopía electrónica.",
-      "comentarios_opciones": {
-        "A": "Revisa. El detalle ultraestructural no se identifica mediante observación a simple vista.",
-        "B": "Revisa. Histología estudia tejidos al microscopio. Explorar mediante tacto es palpación.",
-        "C": "Revisa. Citología estudia células y sus componentes. No corresponde al estudio exclusivo de órganos completos.",
-        "D": "Correcta. El texto relaciona la ultraestructura con el detalle fino observado mediante microscopía electrónica."
-      },
-      "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
-      "paginas_pdf": "31",
-      "pagina_impresa": "3",
-      "dificultad": "medio",
-      "diapositivas_origen": [
-        15
-      ],
-      "source": {
-        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
-        "pdf_pages": [
-          31
-        ],
-        "anchor": "ultraestructura",
-        "evidence_page": 31,
-        "evidence_excerpt": "io, en busca de alguna enfermedad. La citología7 es el estudio de la estructura y la fun- ción de células individuales. La ultraestructura alude al detalle fi no, en el nivel molecular, visto por el microscopio electrónico. Fisiología: el estudio de la función La fi siología8 utiliza los métodos de la ciencia experimental que se analizarán más adelante. Cuenta con muchas subdisci- plinas como la neurofi siología (la fi siología del sistema nervio- so), la endocrinología (la fi siología hormonal) y la fi s"
-      },
-      "opcion_a": "Ultraestructura: solo observación a simple vista",
-      "opcion_b": "Histología: exclusivamente exploración por tacto",
-      "opcion_c": "Citología: estudio exclusivo de órganos completos",
-      "opcion_d": "Ultraestructura: microscopía electrónica"
-    },
-    {
       "content_id": "morfo-01-clase-005",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 5,
+      "numero_pregunta": 4,
       "pregunta": "¿Qué comparación entre técnicas de imagen es correcta?",
-      "respuesta_correcta": "A",
+      "respuesta_correcta": "D",
       "justificacion": "Las imágenes médicas permiten observar el interior. La ecografía forma imágenes a partir de ecos y la radiografía utiliza rayos X.",
       "comentarios_opciones": {
-        "A": "Correcta. Las imágenes médicas permiten observar el interior. La ecografía forma imágenes a partir de ecos y la radiografía utiliza rayos X.",
-        "B": "Revisa. Intercambia mecanismos: ecografía usa sonido, mientras que la RM emplea campo magnético y radiofrecuencia.",
-        "C": "Revisa. Las técnicas descritas permiten estudiar el interior sin cirugía exploratoria.",
-        "D": "Revisa. La radiografía usa rayos X. La RM combina un campo magnético con ondas de radio, un mecanismo diferente."
+        "A": "Revisa. Intercambia mecanismos: ecografía usa sonido, mientras que la RM emplea campo magnético y radiofrecuencia.",
+        "B": "Revisa. Las técnicas descritas permiten estudiar el interior sin cirugía exploratoria.",
+        "C": "Revisa. La radiografía usa rayos X. La RM combina un campo magnético con ondas de radio, un mecanismo diferente.",
+        "D": "Correcta. Las imágenes médicas permiten observar el interior. La ecografía forma imágenes a partir de ecos y la radiografía utiliza rayos X."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
       "paginas_pdf": "31, 51, 52",
       "pagina_impresa": "3, 23, 24",
       "dificultad": "medio",
       "diapositivas_origen": [
-        15
+        24,
+        25,
+        26,
+        27
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -186,125 +153,16 @@
         "evidence_page": 51,
         "evidence_excerpt": " aplicar- se al cuerpo humano y cite un ejemplo específico de anatomía que la apoye. CONOCIMIENTO MÁS A FONDO 1.5 Aplicación clínica Imágenes médicas El desarrollo de técnicas para ver el interior del cuerpo humano sin tener que realizar una cirugía exploratoria aceleró en gran medida el progreso en medicina. A continuación se describen algunas de estas técnicas. Radiografía Los rayos X, una forma de radiación de alta energía, fueron descu- biertos por William Roentgen en 1885. Pueden penetrar tejidos sua"
       },
-      "opcion_a": "La ecografía usa sonido y la radiografía rayos X",
-      "opcion_b": "La ecografía usa rayos X y la RM sonido",
-      "opcion_c": "Todas requieren cirugía para ver el interior",
-      "opcion_d": "La RM usa el mismo mecanismo que la radiografía"
-    },
-    {
-      "content_id": "morfo-01-clase-006",
-      "materia": "MORFOFUNCION",
-      "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 6,
-      "pregunta": "¿Qué postura atribuye el texto a Hipócrates?",
-      "respuesta_correcta": "B",
-      "justificacion": "El texto destaca que Hipócrates exigía buscar causas naturales, como base racional del tratamiento.",
-      "comentarios_opciones": {
-        "A": "Revisa. Es la atribución que Hipócrates pidió abandonar. La pregunta evalúa la postura histórica descrita por el libro.",
-        "B": "Correcta. El texto destaca que Hipócrates exigía buscar causas naturales, como base racional del tratamiento.",
-        "C": "Revisa. La obra corresponde a Vesalio y al desarrollo renacentista de la anatomía.",
-        "D": "Revisa. Harvey pertenece a un período posterior. No se deben intercambiar sus contribuciones con las de Hipócrates."
-      },
-      "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
-      "paginas_pdf": "31",
-      "pagina_impresa": "3",
-      "dificultad": "medio",
-      "diapositivas_origen": [
-        16
-      ],
-      "source": {
-        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
-        "pdf_pages": [
-          31
-        ],
-        "anchor": "Hipócrates",
-        "evidence_page": 31,
-        "evidence_excerpt": "o ya tra- taban a los pacientes con fármacos vegetales, sales, fi sioterapia y sanación mediante la fe. Sin embargo, suele considerarse que el “padre de la medicina” es el médico griego Hipócrates (cerca de 460 a cerca de 375 a.C.). Él y sus seguidores establecieron un código de ética para los médicos: el juramento hipocrático, que muchos estudiantes que se gradúan en medicina aún repiten en su forma moderna. Hipócrates exigía a los médicos que dejaran de atribuir la enfermedad a las actividades de dioses"
-      },
-      "opcion_a": "Explicar toda enfermedad solo por dioses y demonios",
-      "opcion_b": "Buscar causas naturales de la enfermedad",
-      "opcion_c": "Publicar De humani corporis fabrica",
-      "opcion_d": "Demostrar la circulación mediante los trabajos de Harvey"
-    },
-    {
-      "content_id": "morfo-01-clase-007",
-      "materia": "MORFOFUNCION",
-      "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 7,
-      "pregunta": "¿Qué idea de Aristóteles se relaciona con la organización corporal?",
-      "respuesta_correcta": "C",
-      "justificacion": "El texto relaciona a Aristóteles con la construcción de estructuras complejas a partir de componentes más pequeños.",
-      "comentarios_opciones": {
-        "A": "Revisa. Confunde órgano con célula. Un órgano integra tejidos y no equivale a una sola célula.",
-        "B": "Revisa. Los sistemas de órganos se componen de órganos identificables y relacionados.",
-        "C": "Correcta. El texto relaciona a Aristóteles con la construcción de estructuras complejas a partir de componentes más pequeños.",
-        "D": "Revisa. Estudiar componentes no significa que actúen aislados. El organismo también se comprende por sus relaciones."
-      },
-      "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
-      "paginas_pdf": "31, 41",
-      "pagina_impresa": "3, 13",
-      "dificultad": "medio",
-      "diapositivas_origen": [
-        16
-      ],
-      "source": {
-        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
-        "pdf_pages": [
-          31,
-          41
-        ],
-        "anchor": "componentes",
-        "evidence_page": 31,
-        "evidence_excerpt": " de anatomía, Sobre las partes de los animales, Aristóteles trató de identifi car temas unifi cadores en la naturaleza. Entre otras características, argu- mentaba que las estructuras complejas están construidas a par- tir de varios componentes más pequeños (una perspectiva que resulta útil en este capítulo). Aplicación de lo aprendido Al terminar el estudio de este capítulo, analice la relevan- cia de la filosofía aristotélica para el razonamiento actual acerca de la estructura humana. Antes de proseguir "
-      },
-      "opcion_a": "Cada órgano es una única célula sin especialización",
-      "opcion_b": "Los sistemas carecen de partes identificables",
-      "opcion_c": "Las estructuras complejas reúnen componentes más pequeños",
-      "opcion_d": "Las partes de una estructura siempre funcionan aisladas"
-    },
-    {
-      "content_id": "morfo-01-clase-008",
-      "materia": "MORFOFUNCION",
-      "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 8,
-      "pregunta": "¿Qué afirmación sobre Galeno coincide con el texto?",
-      "respuesta_correcta": "D",
-      "justificacion": "El texto sitúa a Galeno entre los gladiadores romanos y explica sus estudios en animales ante las limitaciones para disección humana.",
-      "comentarios_opciones": {
-        "A": "Revisa. La obra citada pertenece a Vesalio, no a Galeno. Se distinguen sus contextos históricos.",
-        "B": "Revisa. El libro describe restricciones para la disección humana en su época y el empleo de otros animales.",
-        "C": "Revisa. El desarrollo de la microscopía corresponde a una etapa posterior. Hooke es una figura de esa historia.",
-        "D": "Correcta. El texto sitúa a Galeno entre los gladiadores romanos y explica sus estudios en animales ante las limitaciones para disección humana."
-      },
-      "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
-      "paginas_pdf": "32",
-      "pagina_impresa": "4",
-      "dificultad": "medio",
-      "diapositivas_origen": [
-        17
-      ],
-      "source": {
-        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
-        "pdf_pages": [
-          32
-        ],
-        "anchor": "gladiadores",
-        "evidence_page": 32,
-        "evidence_excerpt": "RTE UNO Organización corporal Claudio Galeno (cerca de 130 a cerca de 200 dC), médico de los gladiadores romanos, escribió el texto médico más infl u- yente de la antigüedad: un libro que fue adorado de manera excesiva por los profesores de medicina de los siglos que siguieron. La disección de cadáveres estaba prohibida en la época de Galeno debido a ciertos excesos horribles que la ante- cedieron, incluso la disección pública de esclavos y prisione- ros vivos. Por tanto, aparte de lo que podía aprender a"
-      },
-      "opcion_a": "Publicó el atlas de Vesalio en 1543",
-      "opcion_b": "Estudió únicamente cadáveres humanos sin restricciones",
-      "opcion_c": "Inventó el microscopio compuesto descrito por Hooke",
-      "opcion_d": "Fue médico de gladiadores y recurrió a disecciones de animales"
+      "opcion_a": "La ecografía usa rayos X y la RM sonido",
+      "opcion_b": "Todas requieren cirugía para ver el interior",
+      "opcion_c": "La RM usa el mismo mecanismo que la radiografía",
+      "opcion_d": "La ecografía usa sonido y la radiografía rayos X"
     },
     {
       "content_id": "morfo-01-clase-009",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 9,
+      "numero_pregunta": 5,
       "pregunta": "¿Qué pareja de contribuciones es correcta?",
       "respuesta_correcta": "A",
       "justificacion": "Vesalio renovó la anatomía mediante disección y publicaciones. Harvey investigó la circulación sanguínea.",
@@ -319,7 +177,7 @@
       "pagina_impresa": "4, 5",
       "dificultad": "medio",
       "diapositivas_origen": [
-        18
+        7
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -338,98 +196,25 @@
       "opcion_d": "Harvey: juramento hipocrático; Vesalio: medicina romana"
     },
     {
-      "content_id": "morfo-01-clase-010",
-      "materia": "MORFOFUNCION",
-      "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 10,
-      "pregunta": "¿Qué asociación conserva los aportes de Hooke y Servet descritos en el capítulo?",
-      "respuesta_correcta": "B",
-      "justificacion": "El texto vincula a Hooke con instrumentos y microscopía, y a Servet con el reconocimiento de la circulación.",
-      "comentarios_opciones": {
-        "A": "Revisa. El juramento corresponde a la tradición hipocrática. Esa pareja no identifica las contribuciones descritas.",
-        "B": "Correcta. El texto vincula a Hooke con instrumentos y microscopía, y a Servet con el reconocimiento de la circulación.",
-        "C": "Revisa. Intercambia las contribuciones destacadas en las preguntas originales de la presentación.",
-        "D": "Revisa. Atribuye a estas personas obras o ideas de otros autores y períodos."
-      },
-      "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
-      "paginas_pdf": "33, 34",
-      "pagina_impresa": "5, 6",
-      "dificultad": "medio",
-      "diapositivas_origen": [
-        20
-      ],
-      "source": {
-        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
-        "pdf_pages": [
-          33,
-          34
-        ],
-        "anchor": "Hooke",
-        "evidence_page": 33,
-        "evidence_excerpt": "imental: el método que generó la mayor parte de la infor- mación que se encuentra en este libro. La medicina moderna también tiene una enorme deuda con dos inventores de esta época, Robert Hooke y Antony van Leeuwenhoek, quienes extendieron la visión de los biólogos al nivel celular. Robert Hooke (1635 a 1703), inglés, diseñó instrumentos científi cos de varios tipos e hizo muchas mejoras al microsco- pio compuesto. Se trata de un tubo con una lente en cada extre- mo (una lente objetivo cerca de la muestr"
-      },
-      "opcion_a": "Hooke: juramento; Servet: tejidos patológicos",
-      "opcion_b": "Hooke: microscopía; Servet: circulación de la sangre",
-      "opcion_c": "Hooke: circulación; Servet: mejoras al microscopio",
-      "opcion_d": "Hooke: atlas de Vesalio; Servet: teoría celular de Schwann"
-    },
-    {
-      "content_id": "morfo-01-clase-011",
-      "materia": "MORFOFUNCION",
-      "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 11,
-      "pregunta": "Tras observar muchos cuerpos, un investigador generaliza un patrón anatómico. ¿Qué método utiliza?",
-      "respuesta_correcta": "C",
-      "justificacion": "El método inductivo reúne numerosas observaciones y permite elaborar generalizaciones. El capítulo lo relaciona con Bacon.",
-      "comentarios_opciones": {
-        "A": "Revisa. El punto de partida descrito es una serie de observaciones. El hipotético-deductivo parte de una pregunta e hipótesis contrastable.",
-        "B": "Revisa. La revisión externa evalúa trabajos y conclusiones, pero no es el nombre del razonamiento descrito.",
-        "C": "Correcta. El método inductivo reúne numerosas observaciones y permite elaborar generalizaciones. El capítulo lo relaciona con Bacon.",
-        "D": "Revisa. Una generalización basada en observaciones no es una afirmación aceptada solo por la autoridad de una persona."
-      },
-      "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
-      "paginas_pdf": "35",
-      "pagina_impresa": "7",
-      "dificultad": "medio",
-      "diapositivas_origen": [
-        21
-      ],
-      "source": {
-        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
-        "pdf_pages": [
-          35
-        ],
-        "anchor": "inductivo",
-        "evidence_page": 35,
-        "evidence_excerpt": " El método científico Resultados esperados del aprendizaje Cuando haya completado esta sección, el estudiante podrá: a) Describir los métodos inductivo e hipotético-deductivo para obtener conocimiento científico. b) Describir algunos aspectos del diseño experimental que ayudan a asegurar resultados objetivos y confiables. c) Explicar lo que significan hipótesis, hecho, ley y teoría en ciencias. Antes del siglo XVII, sólo unos cuantos individuos aislados habían llevado a la ciencia por un camino azaroso. L"
-      },
-      "opcion_a": "Hipotético-deductivo como punto de partida",
-      "opcion_b": "Solo revisión científica externa",
-      "opcion_c": "Inductivo",
-      "opcion_d": "Solo una afirmación de autoridad"
-    },
-    {
       "content_id": "morfo-01-clase-012",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 12,
+      "numero_pregunta": 6,
       "pregunta": "En el método hipotético-deductivo, ¿qué sigue a una hipótesis útil?",
-      "respuesta_correcta": "D",
+      "respuesta_correcta": "B",
       "justificacion": "La hipótesis permite deducir una predicción. Los resultados pueden respaldarla, modificarla o llevar a abandonarla.",
       "comentarios_opciones": {
-        "A": "Revisa. Una hipótesis científica requiere contraste. Su formulación no demuestra por sí misma que sea verdadera.",
-        "B": "Revisa. Una observación incompatible puede obligar a revisar la hipótesis. Excluirla arbitrariamente introduce sesgo.",
-        "C": "Revisa. La evidencia y la posibilidad de refutación son centrales. La autoridad del autor no reemplaza la prueba.",
-        "D": "Correcta. La hipótesis permite deducir una predicción. Los resultados pueden respaldarla, modificarla o llevar a abandonarla."
+        "A": "Revisa. La evidencia y la posibilidad de refutación son centrales. La autoridad del autor no reemplaza la prueba.",
+        "B": "Correcta. La hipótesis permite deducir una predicción. Los resultados pueden respaldarla, modificarla o llevar a abandonarla.",
+        "C": "Revisa. Una hipótesis científica requiere contraste. Su formulación no demuestra por sí misma que sea verdadera.",
+        "D": "Revisa. Una observación incompatible puede obligar a revisar la hipótesis. Excluirla arbitrariamente introduce sesgo."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
       "paginas_pdf": "36",
       "pagina_impresa": "8",
       "dificultad": "medio",
       "diapositivas_origen": [
-        21
+        8
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -441,32 +226,31 @@
         "evidence_page": 36,
         "evidence_excerpt": "hipotético-deductivo. Un investigador empieza por plantear una interrogante y formular una hipótesis (una espe- culación informada o una respuesta posible a la pregunta). Una buena hipótesis debe ser 1) compatible con lo que ya se sabe y 2) contar con posibilidades de ser demostrada y, tal vez, ser refutada con pruebas. Capacidad de refutación signifi ca que cuando se asegura que algo es científi camente verdadero, se debe tener capacidad de especifi car qué prueba se realizaría para demostrar que es inco"
       },
-      "opcion_a": "Aceptar la explicación sin buscar evidencia",
-      "opcion_b": "Descartar toda observación que no coincida",
-      "opcion_c": "Sustituir los datos por la autoridad del autor",
-      "opcion_d": "Una predicción que puede ponerse a prueba"
+      "opcion_a": "Sustituir los datos por la autoridad del autor",
+      "opcion_b": "Una predicción que puede ponerse a prueba",
+      "opcion_c": "Aceptar la explicación sin buscar evidencia",
+      "opcion_d": "Descartar toda observación que no coincida"
     },
     {
       "content_id": "morfo-01-clase-013",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 13,
+      "numero_pregunta": 7,
       "pregunta": "¿Qué secuencia aumenta la complejidad estructural?",
-      "respuesta_correcta": "A",
+      "respuesta_correcta": "C",
       "justificacion": "El orden asciende desde componentes químicos hasta el organismo. Las macromoléculas son un nivel intermedio dentro del nivel molecular.",
       "comentarios_opciones": {
-        "A": "Correcta. El orden asciende desde componentes químicos hasta el organismo. Las macromoléculas son un nivel intermedio dentro del nivel molecular.",
-        "B": "Revisa. Coloca el átomo después de la célula y separa las relaciones de composición descritas por el texto.",
-        "C": "Revisa. Empieza por un órgano y luego retrocede a tejido. No mantiene un aumento continuo de complejidad.",
-        "D": "Revisa. Mezcla niveles: un sistema reúne órganos y no precede al átomo en un orden de menor a mayor complejidad."
+        "A": "Revisa. Empieza por un órgano y luego retrocede a tejido. No mantiene un aumento continuo de complejidad.",
+        "B": "Revisa. Mezcla niveles: un sistema reúne órganos y no precede al átomo en un orden de menor a mayor complejidad.",
+        "C": "Correcta. El orden asciende desde componentes químicos hasta el organismo. Las macromoléculas son un nivel intermedio dentro del nivel molecular.",
+        "D": "Revisa. Coloca el átomo después de la célula y separa las relaciones de composición descritas por el texto."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
       "paginas_pdf": "41",
       "pagina_impresa": "13",
       "dificultad": "medio",
       "diapositivas_origen": [
-        22,
-        23
+        10
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -478,89 +262,16 @@
         "evidence_page": 41,
         "evidence_excerpt": "están compuestos por tejidos, los tejidos están compuestos por células, las células están compuestas, en parte, por organelos, los organelos están compuestos por moléculas y las moléculas están compuestas por átomos. El organismo es un individuo único y completo. Un sistema de órganos es un grupo de órganos con una función colectiva única, como la circulación, la respiración o la digestión. El cuerpo humano tiene 11 sistemas de órganos (ilustrados en el Atlas A que sigue a este capítulo): tegumenta- rio, "
       },
-      "opcion_a": "Átomo, molécula, organelo, célula, tejido, órgano, sistema, organismo",
-      "opcion_b": "Célula, átomo, tejido, molécula, órgano, organismo, sistema, organelo",
-      "opcion_c": "Órgano, tejido, organismo, célula, sistema, molécula, átomo, organelo",
-      "opcion_d": "Sistema, órgano, átomo, tejido, célula, organismo, molécula, organelo"
-    },
-    {
-      "content_id": "morfo-01-clase-014",
-      "materia": "MORFOFUNCION",
-      "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 14,
-      "pregunta": "¿Qué diferencia correctamente órgano y sistema?",
-      "respuesta_correcta": "B",
-      "justificacion": "El capítulo define al órgano por sus tejidos y al sistema por la función colectiva de sus órganos. Enumera once sistemas.",
-      "comentarios_opciones": {
-        "A": "Revisa. Confunde niveles distintos de la jerarquía. Célula y molécula no son sinónimos de sistema y órgano.",
-        "B": "Correcta. El capítulo define al órgano por sus tejidos y al sistema por la función colectiva de sus órganos. Enumera once sistemas.",
-        "C": "Revisa. El páncreas demuestra que un órgano puede participar en más de un sistema.",
-        "D": "Revisa. El recuento presentado es de once sistemas. Masculino y femenino pertenecen al reproductor en ese total."
-      },
-      "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
-      "paginas_pdf": "41",
-      "pagina_impresa": "13",
-      "dificultad": "medio",
-      "diapositivas_origen": [
-        22,
-        24
-      ],
-      "source": {
-        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
-        "pdf_pages": [
-          41
-        ],
-        "anchor": "11 sistemas",
-        "evidence_page": 41,
-        "evidence_excerpt": "po de órganos con una función colectiva única, como la circulación, la respiración o la digestión. El cuerpo humano tiene 11 sistemas de órganos (ilustrados en el Atlas A que sigue a este capítulo): tegumenta- rio, esquelético, muscular, nervioso, endocrino, circulatorio, linfático, respiratorio, urinario, digestivo y reproductivo. Por lo general, los órganos de un mismo sistema están interconec- tados de manera física, como los riñones, los uréteres, la vejiga urinaria y la uretra, que integran el sistem"
-      },
-      "opcion_a": "Un sistema es una célula; un órgano es una molécula",
-      "opcion_b": "Un órgano integra tejidos; un sistema reúne órganos con función colectiva",
-      "opcion_c": "Un órgano siempre pertenece a un único sistema",
-      "opcion_d": "El cuerpo tiene diez sistemas según el recuento del capítulo"
-    },
-    {
-      "content_id": "morfo-01-clase-015",
-      "materia": "MORFOFUNCION",
-      "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 15,
-      "pregunta": "¿Cuál describe correctamente organelos y moléculas?",
-      "respuesta_correcta": "C",
-      "justificacion": "Los organelos realizan funciones particulares dentro de la célula. Sus componentes están formados por moléculas.",
-      "comentarios_opciones": {
-        "A": "Revisa. El enunciado original que los llama macroscópicos es falso. El texto los define como estructuras microscópicas.",
-        "B": "Revisa. Invierte la jerarquía: los órganos se componen de tejidos y células, cuyos componentes incluyen moléculas.",
-        "C": "Correcta. Los organelos realizan funciones particulares dentro de la célula. Sus componentes están formados por moléculas.",
-        "D": "Revisa. Una molécula no realiza por sí sola todas las funciones básicas de la vida. La célula es la unidad viva más simple."
-      },
-      "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
-      "paginas_pdf": "41",
-      "pagina_impresa": "13",
-      "dificultad": "medio",
-      "diapositivas_origen": [
-        23
-      ],
-      "source": {
-        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
-        "pdf_pages": [
-          41
-        ],
-        "anchor": "microscópicas",
-        "evidence_page": 41,
-        "evidence_excerpt": "ene un núcleo, que es un organito u organelo que contiene su DNA. El estudio de las células y los organelos se llama citología y es el tema de los capítulos 3 y 4. Los organelos13 son estructuras microscópicas de una célula y efectúan funciones particulares. Algunos ejemplos son mitocondrias, centriolos y lisosomas. Los organelos y otros componentes están formados por moléculas; de éstas, las más grandes, como las de proteínas, grasas y DNA, son las macromoléculas. Una molécula es una partícula compuesta "
-      },
-      "opcion_a": "Los organelos son siempre visibles a simple vista",
-      "opcion_b": "Las moléculas están formadas por varios órganos",
-      "opcion_c": "Los organelos son estructuras celulares microscópicas formadas por componentes moleculares",
-      "opcion_d": "Toda molécula es por sí sola una célula viva"
+      "opcion_a": "Órgano, tejido, organismo, célula, sistema, molécula, átomo, organelo",
+      "opcion_b": "Sistema, órgano, átomo, tejido, célula, organismo, molécula, organelo",
+      "opcion_c": "Átomo, molécula, organelo, célula, tejido, órgano, sistema, organismo",
+      "opcion_d": "Célula, átomo, tejido, molécula, órgano, organismo, sistema, organelo"
     },
     {
       "content_id": "morfo-01-clase-016",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 16,
+      "numero_pregunta": 8,
       "pregunta": "¿Qué ejemplo muestra que un órgano participa en dos sistemas?",
       "respuesta_correcta": "D",
       "justificacion": "El texto utiliza al páncreas como ejemplo de participación en los sistemas endocrino y digestivo. También identifica a la piel como el órgano más grande.",
@@ -575,7 +286,8 @@
       "pagina_impresa": "13",
       "dificultad": "medio",
       "diapositivas_origen": [
-        24
+        12,
+        14
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -596,7 +308,7 @@
       "content_id": "morfo-01-clase-017",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 17,
+      "numero_pregunta": 9,
       "pregunta": "¿Qué distingue reduccionismo y holismo?",
       "respuesta_correcta": "A",
       "justificacion": "El reduccionismo examina partes más simples; el holismo considera propiedades emergentes del conjunto. Son perspectivas complementarias.",
@@ -611,7 +323,7 @@
       "pagina_impresa": "13, 14",
       "dificultad": "medio",
       "diapositivas_origen": [
-        25
+        9
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -633,7 +345,7 @@
       "content_id": "morfo-01-clase-018",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 18,
+      "numero_pregunta": 10,
       "pregunta": "¿Qué asociación metabólica es correcta?",
       "respuesta_correcta": "B",
       "justificacion": "El metabolismo incluye reacciones de degradación, catabólicas, y de síntesis, anabólicas.",
@@ -648,7 +360,7 @@
       "pagina_impresa": "15, 16",
       "dificultad": "medio",
       "diapositivas_origen": [
-        33
+        18
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -670,7 +382,7 @@
       "content_id": "morfo-01-clase-019",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 19,
+      "numero_pregunta": 11,
       "pregunta": "Una célula adquiere una función especializada. ¿Qué proceso del desarrollo ilustra?",
       "respuesta_correcta": "C",
       "justificacion": "La diferenciación transforma células hacia funciones especializadas. El desarrollo también incluye crecimiento.",
@@ -685,8 +397,7 @@
       "pagina_impresa": "16",
       "dificultad": "medio",
       "diapositivas_origen": [
-        34,
-        35
+        19
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -707,7 +418,7 @@
       "content_id": "morfo-01-clase-020",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 20,
+      "numero_pregunta": 12,
       "pregunta": "¿Qué situación corresponde a situs inversus en el ejemplo presentado?",
       "respuesta_correcta": "D",
       "justificacion": "El texto describe inversión derecha–izquierda de órganos torácicos y abdominales. Dextrocardia designa la transposición del corazón; riñón pélvico ilustra ubicación atípica de un órgano.",
@@ -722,7 +433,7 @@
       "pagina_impresa": "14, 15",
       "dificultad": "medio",
       "diapositivas_origen": [
-        31
+        16
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -744,7 +455,7 @@
       "content_id": "morfo-01-clase-021",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 21,
+      "numero_pregunta": 13,
       "pregunta": "¿Qué describe mejor la homeostasis?",
       "respuesta_correcta": "A",
       "justificacion": "El cuerpo detecta cambios y activa mecanismos que mantienen condiciones relativamente estables. Las variables fluctúan dentro de límites.",
@@ -759,7 +470,7 @@
       "pagina_impresa": "16, 17",
       "dificultad": "aplicacion",
       "diapositivas_origen": [
-        37
+        21
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -778,64 +489,26 @@
       "opcion_d": "Una característica exclusiva de un órgano aislado"
     },
     {
-      "content_id": "morfo-01-clase-022",
-      "materia": "MORFOFUNCION",
-      "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 22,
-      "pregunta": "Ante calor corporal, la sudoración ayuda a perder calor. ¿Qué dirección tiene esa respuesta?",
-      "respuesta_correcta": "B",
-      "justificacion": "Al favorecer pérdida de calor, la respuesta se opone al aumento inicial. Negativa describe la dirección, no un efecto perjudicial.",
-      "comentarios_opciones": {
-        "A": "Revisa. La sudoración del ejemplo ayuda a corregir el aumento, en lugar de reforzarlo.",
-        "B": "Correcta. Al favorecer pérdida de calor, la respuesta se opone al aumento inicial. Negativa describe la dirección, no un efecto perjudicial.",
-        "C": "Revisa. La regulación térmica no implica detener todos los cambios químicos del cuerpo.",
-        "D": "Revisa. Se trata de una respuesta fisiológica, no de una variante de ubicación anatómica."
-      },
-      "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
-      "paginas_pdf": "45, 46",
-      "pagina_impresa": "17, 18",
-      "dificultad": "aplicacion",
-      "diapositivas_origen": [
-        38,
-        39
-      ],
-      "source": {
-        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
-        "pdf_pages": [
-          45,
-          46
-        ],
-        "anchor": "temperatura",
-        "evidence_page": 45,
-        "evidence_excerpt": "no son constantes de manera absoluta, sino que fl uctúan dentro de límites defi nidos, como los de las temperaturas corporales indicadas antes. La mejor manera de describir la estabilidad del estado interno del cuerpo como un equilibrio dinámico (cambio balanceado), con ciertos puntos de equilibrio o un valor promedio para una variable determinada (como 37°C para la temperatura corporal) y las condiciones fl uctúan de manera ligera cerca de ese punto. El mecanismo fundamental que mantiene una variable cer"
-      },
-      "opcion_a": "Amplifica el aumento: retroalimentación positiva",
-      "opcion_b": "Contrarresta el cambio inicial: retroalimentación negativa",
-      "opcion_c": "Detiene todo metabolismo del organismo",
-      "opcion_d": "Solo cambia la posición de un órgano"
-    },
-    {
       "content_id": "morfo-01-clase-023",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 23,
+      "numero_pregunta": 14,
       "pregunta": "¿Qué asignación de funciones en un circuito es correcta?",
-      "respuesta_correcta": "C",
+      "respuesta_correcta": "B",
       "justificacion": "Los tres componentes desempeñan funciones diferentes dentro del circuito de regulación.",
       "comentarios_opciones": {
-        "A": "Revisa. Intercambia las funciones generales de detección e integración y omite la respuesta del efector.",
-        "B": "Revisa. Integrar información y ejecutar la respuesta son papeles distintos, aunque el circuito los conecte.",
-        "C": "Correcta. Los tres componentes desempeñan funciones diferentes dentro del circuito de regulación.",
-        "D": "Revisa. Pueden existir relaciones complejas, pero los términos designan funciones distintas en este esquema."
+        "A": "Revisa. Integrar información y ejecutar la respuesta son papeles distintos, aunque el circuito los conecte.",
+        "B": "Correcta. Los tres componentes desempeñan funciones diferentes dentro del circuito de regulación.",
+        "C": "Revisa. Pueden existir relaciones complejas, pero los términos designan funciones distintas en este esquema.",
+        "D": "Revisa. Intercambia las funciones generales de detección e integración y omite la respuesta del efector."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
       "paginas_pdf": "45, 46",
       "pagina_impresa": "17, 18",
       "dificultad": "aplicacion",
       "diapositivas_origen": [
-        38,
-        40
+        21,
+        23
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -848,31 +521,32 @@
         "evidence_page": 46,
         "evidence_excerpt": ", un desequilibrio local en la homeostasis (fi gura 1.11). Esto es detectado por ter- minales nerviosas sensibles llamadas barorreceptores en las grandes arterias cercanas al corazón; éstas transmiten señales nerviosas al tronco encefálico, donde se tiene un centro car- diaco que regula el ritmo de los latidos. Este centro responde mediante la transmisión de señales nerviosas al corazón para acelerarlo. El ritmo cardiaco acelerado eleva con rapidez la presión arterial y restaura la homeostasis normal. En "
       },
-      "opcion_a": "Efector detecta siempre; receptor integra toda señal",
-      "opcion_b": "Centro integrador ejecuta necesariamente la contracción muscular",
-      "opcion_c": "Receptor detecta; centro integrador procesa; efector responde",
-      "opcion_d": "Receptor y efector son nombres para el mismo papel"
+      "opcion_a": "Centro integrador ejecuta necesariamente la contracción muscular",
+      "opcion_b": "Receptor detecta; centro integrador procesa; efector responde",
+      "opcion_c": "Receptor y efector son nombres para el mismo papel",
+      "opcion_d": "Efector detecta siempre; receptor integra toda señal"
     },
     {
       "content_id": "morfo-01-clase-024",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 24,
+      "numero_pregunta": 15,
       "pregunta": "Durante el parto, una respuesta refuerza las contracciones hasta el nacimiento. ¿Qué mecanismo ilustra?",
-      "respuesta_correcta": "D",
+      "respuesta_correcta": "C",
       "justificacion": "La respuesta amplifica el cambio inicial mientras persiste el estímulo. El nacimiento interrumpe este circuito.",
       "comentarios_opciones": {
-        "A": "Revisa. La negativa contrarresta la desviación inicial. El ejemplo describe refuerzo de la respuesta.",
-        "B": "Revisa. El texto incluye oxitocina en el mecanismo. No se trata de ausencia de señal.",
-        "C": "Revisa. Las contracciones y su regulación son procesos fisiológicos, relacionados con estructuras anatómicas.",
-        "D": "Correcta. La respuesta amplifica el cambio inicial mientras persiste el estímulo. El nacimiento interrumpe este circuito."
+        "A": "Revisa. El texto incluye oxitocina en el mecanismo. No se trata de ausencia de señal.",
+        "B": "Revisa. Las contracciones y su regulación son procesos fisiológicos, relacionados con estructuras anatómicas.",
+        "C": "Correcta. La respuesta amplifica el cambio inicial mientras persiste el estímulo. El nacimiento interrumpe este circuito.",
+        "D": "Revisa. La negativa contrarresta la desviación inicial. El ejemplo describe refuerzo de la respuesta."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
       "paginas_pdf": "46, 47",
       "pagina_impresa": "18, 19",
       "dificultad": "aplicacion",
       "diapositivas_origen": [
-        41
+        22,
+        23
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -885,32 +559,32 @@
         "evidence_page": 46,
         "evidence_excerpt": "la cabeza del feto empuja contra el cuello uterino y estimula sus terminaciones nerviosas (fi gura 1.12). Las señales nervio- sas viajan al encéfalo que, a su vez, estimula la producción de la hormona oxitocina en la hipófi sis. La oxitocina viaja en la sangre y estimula las contracciones uterinas. Esto empuja el feto hacia abajo, con lo que estimula aún más al cuello uterino La sangre se aleja de la parte superior del cuerpo, creando un desequilibrio homeostático Los barorreceptores arriba del corazón re"
       },
-      "opcion_a": "Retroalimentación negativa por definición",
-      "opcion_b": "Ausencia de señal hormonal",
-      "opcion_c": "Un cambio anatómico sin función fisiológica",
-      "opcion_d": "Retroalimentación positiva"
+      "opcion_a": "Ausencia de señal hormonal",
+      "opcion_b": "Un cambio anatómico sin función fisiológica",
+      "opcion_c": "Retroalimentación positiva",
+      "opcion_d": "Retroalimentación negativa por definición"
     },
     {
       "content_id": "morfo-01-clase-025",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 25,
+      "numero_pregunta": 16,
       "pregunta": "¿Qué combinación de posiciones es correcta?",
-      "respuesta_correcta": "A",
+      "respuesta_correcta": "D",
       "justificacion": "Las posiciones se describen desde una referencia fija. Supino y prono son decúbitos diferentes.",
       "comentarios_opciones": {
-        "A": "Correcta. Las posiciones se describen desde una referencia fija. Supino y prono son decúbitos diferentes.",
-        "B": "Revisa. Invierte tanto la orientación de las palmas como los dos decúbitos.",
-        "C": "Revisa. La posición anatómica es una referencia definida. Supino y prono no son equivalentes.",
-        "D": "Revisa. Ambos términos se refieren aquí a estar acostado, no a permanecer de pie o sentado."
+        "A": "Revisa. Invierte tanto la orientación de las palmas como los dos decúbitos.",
+        "B": "Revisa. La posición anatómica es una referencia definida. Supino y prono no son equivalentes.",
+        "C": "Revisa. Ambos términos se refieren aquí a estar acostado, no a permanecer de pie o sentado.",
+        "D": "Correcta. Las posiciones se describen desde una referencia fija. Supino y prono son decúbitos diferentes."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
       "paginas_pdf": "57, 58",
       "pagina_impresa": "29, 30",
       "dificultad": "aplicacion",
       "diapositivas_origen": [
-        48,
-        49
+        28,
+        29
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -923,32 +597,31 @@
         "evidence_page": 58,
         "evidence_excerpt": "30 PARTE UNO Organización corporal por completo. Una persona está en decúbito supino (posición supina) si está boca arriba y en decúbito prono (posición pro- na) si está boca abajo. Planos anatómicos Muchas imágenes o ilustraciones del cuerpo se basan en cortes reales o imaginarios llamados secciones o planos. Sección (o corte) alude a un corte real para revelar la anatomía interna, mientras que plano alude a una superfi cie plana imaginaria que atraviesa el cuerpo. Los tres principales plano"
       },
-      "opcion_a": "Anatómica: palmas al frente; supino: boca arriba; prono: boca abajo",
-      "opcion_b": "Anatómica: palmas atrás; supino: boca abajo; prono: boca arriba",
-      "opcion_c": "Anatómica: cualquier postura; supino y prono son sinónimos",
-      "opcion_d": "Supino: de pie; prono: sentado"
+      "opcion_a": "Anatómica: palmas atrás; supino: boca abajo; prono: boca arriba",
+      "opcion_b": "Anatómica: cualquier postura; supino y prono son sinónimos",
+      "opcion_c": "Supino: de pie; prono: sentado",
+      "opcion_d": "Anatómica: palmas al frente; supino: boca arriba; prono: boca abajo"
     },
     {
       "content_id": "morfo-01-clase-026",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 26,
+      "numero_pregunta": 17,
       "pregunta": "¿Qué plano separa las porciones anterior y posterior?",
-      "respuesta_correcta": "B",
+      "respuesta_correcta": "A",
       "justificacion": "El plano frontal o coronal divide anterior y posterior.",
       "comentarios_opciones": {
-        "A": "Revisa. El sagital divide derecha e izquierda. El mediano es el sagital que pasa por la línea media.",
-        "B": "Correcta. El plano frontal o coronal divide anterior y posterior.",
-        "C": "Revisa. El transversal divide porciones superior e inferior.",
-        "D": "Revisa. Mediano no significa horizontal. Designa el plano sagital que coincide con la línea media."
+        "A": "Correcta. El plano frontal o coronal divide anterior y posterior.",
+        "B": "Revisa. El transversal divide porciones superior e inferior.",
+        "C": "Revisa. Mediano no significa horizontal. Designa el plano sagital que coincide con la línea media.",
+        "D": "Revisa. El sagital divide derecha e izquierda. El mediano es el sagital que pasa por la línea media."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
       "paginas_pdf": "57, 58, 59",
       "pagina_impresa": "29, 30, 31",
       "dificultad": "aplicacion",
       "diapositivas_origen": [
-        50,
-        51
+        30
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -962,31 +635,31 @@
         "evidence_page": 58,
         "evidence_excerpt": "cie plana imaginaria que atraviesa el cuerpo. Los tres principales planos anatómicos son el sagital, el frontal y el transversal (fi gura A.3). Un plano sagital1 pasa de manera vertical por el cuerpo o un órgano y lo divide en las porciones derecha e izquierda. Al plano sagital que divide el cuerpo u órgano en mitades iguales también se le llama plano medio (sagital). La cabeza y los órga- nos pélvicos suelen ilustrarse en el plano medio (fi gura A.4a). Otros planos sagitales paralelos a éstos (fuera de l"
       },
-      "opcion_a": "Sagital",
-      "opcion_b": "Frontal o coronal",
-      "opcion_c": "Transversal",
-      "opcion_d": "Mediano por ser horizontal"
+      "opcion_a": "Frontal o coronal",
+      "opcion_b": "Transversal",
+      "opcion_c": "Mediano por ser horizontal",
+      "opcion_d": "Sagital"
     },
     {
       "content_id": "morfo-01-clase-027",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 27,
+      "numero_pregunta": 18,
       "pregunta": "La muñeca está más lejos del origen del miembro que el codo. ¿Cómo se describe?",
-      "respuesta_correcta": "C",
+      "respuesta_correcta": "B",
       "justificacion": "Distal indica mayor distancia del punto de unión u origen. El codo es proximal a la muñeca.",
       "comentarios_opciones": {
-        "A": "Revisa. Proximal significa más cerca de la unión u origen. Sería la relación del codo respecto de la muñeca.",
-        "B": "Revisa. Medial alude al plano medio. No expresa la distancia a la raíz del miembro.",
-        "C": "Correcta. Distal indica mayor distancia del punto de unión u origen. El codo es proximal a la muñeca.",
-        "D": "Revisa. Superficial se refiere a la superficie corporal. No indica distancia desde el origen del miembro."
+        "A": "Revisa. Medial alude al plano medio. No expresa la distancia a la raíz del miembro.",
+        "B": "Correcta. Distal indica mayor distancia del punto de unión u origen. El codo es proximal a la muñeca.",
+        "C": "Revisa. Superficial se refiere a la superficie corporal. No indica distancia desde el origen del miembro.",
+        "D": "Revisa. Proximal significa más cerca de la unión u origen. Sería la relación del codo respecto de la muñeca."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
       "paginas_pdf": "59, 60",
       "pagina_impresa": "31, 32",
       "dificultad": "aplicacion",
       "diapositivas_origen": [
-        52
+        32
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -999,75 +672,32 @@
         "evidence_page": 59,
         "evidence_excerpt": " desde el punto de vista técnico, por lo general no se dice que el codo es superior a la muñeca, sino que es proximal a ella. Debido a la bipedestación (la postura erguida de los seres humanos), algunos términos de localización tienen diferentes signifi cados para los seres humanos que para otros animales. Por ejemplo, anterior denota la región del cuerpo que marca el camino en la locomoción normal. Para un animal que camina a cuatro patas, como un gato, éste es el extremo de la cabeza del cuerpo; sin emb"
       },
-      "opcion_a": "Proximal respecto del codo",
-      "opcion_b": "Medial por esa única razón",
-      "opcion_c": "Distal respecto del codo",
-      "opcion_d": "Superficial por esa única razón"
-    },
-    {
-      "content_id": "morfo-01-clase-028",
-      "materia": "MORFOFUNCION",
-      "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 28,
-      "pregunta": "¿Qué distinción entre regiones es correcta?",
-      "respuesta_correcta": "D",
-      "justificacion": "Axial y axilar son términos diferentes. La región apendicular comprende las extremidades. La orientación pertenece al paciente.",
-      "comentarios_opciones": {
-        "A": "Revisa. Confunde el eje corporal con la región de la axila. Esta diferencia corrige un rótulo del archivo original.",
-        "B": "Revisa. La cabeza pertenece a la región axial. Apendicular se refiere a las extremidades.",
-        "C": "Revisa. Derecha e izquierda se atribuyen a la persona descrita. Frente a ella, sus lados se invierten para el observador.",
-        "D": "Correcta. Axial y axilar son términos diferentes. La región apendicular comprende las extremidades. La orientación pertenece al paciente."
-      },
-      "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
-      "paginas_pdf": "59, 60, 61, 62",
-      "pagina_impresa": "31, 32, 33, 34",
-      "dificultad": "aplicacion",
-      "diapositivas_origen": [
-        53,
-        54,
-        55
-      ],
-      "source": {
-        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
-        "pdf_pages": [
-          59,
-          60,
-          61,
-          62
-        ],
-        "anchor": "axial",
-        "evidence_page": 59,
-        "evidence_excerpt": "alizar una explora- ción física y muchos otros procedimientos clínicos. Para facili- tar el estudio, se divide al cuerpo en dos regiones principales llamadas axial y apendicular. En los siguientes párrafos se describen las áreas pequeñas dentro de las regiones principa- les y están ilustradas en la fi gura A.5. Región axial La región axial abarca cabeza, cuello (región cervical)3 y tron- co. Este último se subdivide en región torácica, arriba del dia- fragma, y región abdominal, debajo de dicho músculo. U"
-      },
-      "opcion_a": "Axial y axilar nombran exactamente la misma región",
-      "opcion_b": "Apendicular: únicamente la cabeza",
-      "opcion_c": "Los cuadrantes abdominales se orientan desde la derecha del observador",
-      "opcion_d": "Axial: cabeza, cuello y tronco; axilar: axila"
+      "opcion_a": "Medial por esa única razón",
+      "opcion_b": "Distal respecto del codo",
+      "opcion_c": "Superficial por esa única razón",
+      "opcion_d": "Proximal respecto del codo"
     },
     {
       "content_id": "morfo-01-clase-029",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 29,
+      "numero_pregunta": 19,
       "pregunta": "¿Qué relación entre cavidad y estructura es correcta?",
-      "respuesta_correcta": "A",
+      "respuesta_correcta": "C",
       "justificacion": "El Atlas A relaciona estas cavidades con las estructuras indicadas. Las meninges protegen encéfalo y médula espinal; pleura y pericardio son serosas relacionadas con pulmón y corazón.",
       "comentarios_opciones": {
-        "A": "Correcta. El Atlas A relaciona estas cavidades con las estructuras indicadas. Las meninges protegen encéfalo y médula espinal; pleura y pericardio son serosas relacionadas con pulmón y corazón.",
-        "B": "Revisa. Intercambia órganos y cavidades sin respetar las relaciones de la figura A.7 y el cuadro A.2.",
-        "C": "Revisa. El diafragma separa el tórax del abdomen. La línea media es una referencia de orientación diferente.",
-        "D": "Revisa. El texto explica que las cavidades abdominal y pélvica son continuas, sin una pared de separación entre ellas."
+        "A": "Revisa. El diafragma separa el tórax del abdomen. La línea media es una referencia de orientación diferente.",
+        "B": "Revisa. El texto explica que las cavidades abdominal y pélvica son continuas, sin una pared de separación entre ellas.",
+        "C": "Correcta. El Atlas A relaciona estas cavidades con las estructuras indicadas. Las meninges protegen encéfalo y médula espinal; pleura y pericardio son serosas relacionadas con pulmón y corazón.",
+        "D": "Revisa. Intercambia órganos y cavidades sin respetar las relaciones de la figura A.7 y el cuadro A.2."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
       "paginas_pdf": "62, 63, 64",
       "pagina_impresa": "34, 35, 36",
       "dificultad": "aplicacion",
       "diapositivas_origen": [
-        56,
-        57,
-        58,
-        59
+        36,
+        37
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -1081,32 +711,32 @@
         "evidence_page": 62,
         "evidence_excerpt": "al). El concepto de segmento es de especial utilidad para describir la ubicación de los huesos y músculos, así como los movimientos de las articulaciones. A.3 Cavidades y membranas corporales El organismo tiene múltiples cavidades corporales (fi gura A.7, cuadro A.2), cada una de ellas cubierta por una membrana, y contiene órganos llamados vísceras10 en su interior. Cavidad craneana y conducto vertebral La cavidad craneana está encerrada en el cráneo y contiene el encéfalo. El conducto vertebral se encuen"
       },
-      "opcion_a": "Craneana: encéfalo; pericárdica: corazón; pleural: pulmón",
-      "opcion_b": "Craneana: riñón; pleural: encéfalo; pericárdica: vejiga",
-      "opcion_c": "Torácica y abdominal están separadas por la línea media",
-      "opcion_d": "Abdomen y pelvis están separados por una pared completa"
+      "opcion_a": "Torácica y abdominal están separadas por la línea media",
+      "opcion_b": "Abdomen y pelvis están separados por una pared completa",
+      "opcion_c": "Craneana: encéfalo; pericárdica: corazón; pleural: pulmón",
+      "opcion_d": "Craneana: riñón; pleural: encéfalo; pericárdica: vejiga"
     },
     {
       "content_id": "morfo-01-clase-030",
       "materia": "MORFOFUNCION",
       "tema": "temas principales de anatomia y fisiologia",
-      "numero_pregunta": 30,
+      "numero_pregunta": 20,
       "pregunta": "¿Qué asociación describe el peritoneo y el retroperitoneo?",
-      "respuesta_correcta": "B",
+      "respuesta_correcta": "D",
       "justificacion": "La hoja parietal tapiza la pared y la visceral se relaciona con las vísceras. Los riñones están en posición retroperitoneal. El libro también incluye suprarrenales, uréteres, gran parte del páncreas y grandes vasos.",
       "comentarios_opciones": {
-        "A": "Revisa. Confunde peritoneo con pleura y no conserva los significados de parietal y visceral.",
-        "B": "Correcta. La hoja parietal tapiza la pared y la visceral se relaciona con las vísceras. Los riñones están en posición retroperitoneal. El libro también incluye suprarrenales, uréteres, gran parte del páncreas y grandes vasos.",
-        "C": "Revisa. Abdominal y peritoneal no son sinónimos. El texto distingue órganos retroperitoneales y relaciones intraperitoneales.",
-        "D": "Revisa. Que un órgano se encuentre en el abdomen no significa que sea intraperitoneal. La relación con el peritoneo define esa clasificación."
+        "A": "Revisa. Abdominal y peritoneal no son sinónimos. El texto distingue órganos retroperitoneales y relaciones intraperitoneales.",
+        "B": "Revisa. Que un órgano se encuentre en el abdomen no significa que sea intraperitoneal. La relación con el peritoneo define esa clasificación.",
+        "C": "Revisa. Confunde peritoneo con pleura y no conserva los significados de parietal y visceral.",
+        "D": "Correcta. La hoja parietal tapiza la pared y la visceral se relaciona con las vísceras. Los riñones están en posición retroperitoneal. El libro también incluye suprarrenales, uréteres, gran parte del páncreas y grandes vasos."
       },
       "fuente": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 1 y Atlas A",
       "paginas_pdf": "63, 64, 65",
       "pagina_impresa": "35, 36, 37",
       "dificultad": "aplicacion",
       "diapositivas_origen": [
-        60,
-        61
+        38,
+        39
       ],
       "source": {
         "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
@@ -1120,18 +750,19 @@
         "evidence_page": 64,
         "evidence_excerpt": "red posterior del cuerpo y sólo están cubiertos por peritoneo en el lado que da a la cavidad perito- neal. Se dice que su posición es retroperitoneal16 (fi gura A.9). Entre estos órganos se cuentan riñones, uréteres, glándulas suprarrenales, la mayor parte del páncreas y segmentos abdo- minales de dos principales vasos sanguíneos: la aorta y la vena cava inferior (véase la fi gura B-6, p. 386). Los órganos están rodeados por peritoneo y se comunican con la pared posterior del cuerpo por hojas peritoneales"
       },
-      "opcion_a": "Parietal: superficie del pulmón; visceral: solo hueso",
-      "opcion_b": "Parietal: pared; visceral: órgano; riñones: retroperitoneales",
-      "opcion_c": "Todos los órganos abdominales ocupan la cavidad peritoneal de igual manera",
-      "opcion_d": "Los riñones son intraperitoneales por encontrarse en el abdomen"
+      "opcion_a": "Todos los órganos abdominales ocupan la cavidad peritoneal de igual manera",
+      "opcion_b": "Los riñones son intraperitoneales por encontrarse en el abdomen",
+      "opcion_c": "Parietal: superficie del pulmón; visceral: solo hueso",
+      "opcion_d": "Parietal: pared; visceral: órgano; riñones: retroperitoneales"
     }
   ],
-  "content_revision": 2,
-  "alignment": "Presentación visual Organización corporal, revisión 20/10/2026",
+  "content_revision": 3,
+  "alignment": "Selección de 20 preguntas alineada con la presentación Atlas visual de 41 diapositivas, Dr. Ruben Concha Cayola.",
   "review": {
     "source_only": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "doctor_approved": false,
     "date": "2026-10-20",
     "method": "Conceptos y explicaciones contrastados con el PDF oficial. Revisión docente independiente no registrada."
-  }
+  },
+  "lecture_slide_count": 41
 }

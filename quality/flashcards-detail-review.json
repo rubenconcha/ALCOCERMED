@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-20",
   "scope": "Comprobación estructural de los 68 temas y revisión focal de omisiones concretas contra los tres PDF oficiales. No equivale a revisión docente exhaustiva de cada afirmación de los libros.",
   "preserved": "Diseño aprobado, paleta, botones, subtemas y cuadro ABO.",
   "changes": [
@@ -576,23 +576,14 @@
     {
       "source": "morfo",
       "topic": "temas principales de anatomia y fisiologia",
-      "cards": 96,
+      "cards": 20,
       "subtopics": {
-        "Fundamentos": 8,
-        "Exploración": 4,
-        "Historia y teoría celular": 5,
-        "Método científico": 10,
-        "Evolución y adaptaciones humanas": 6,
-        "Organización y características de la vida": 8,
-        "Homeostasis": 9,
-        "Terminología médica": 4,
-        "Posición anatómica": 6,
-        "Planos anatómicos": 5,
-        "Direcciones anatómicas": 8,
-        "Regiones corporales": 7,
-        "Cavidades corporales": 7,
-        "Membranas serosas": 5,
-        "Peritoneo y mesenterios": 4
+        "Forma, exploración y método": 4,
+        "Historia y organización": 3,
+        "Vida y variación": 3,
+        "Homeostasis": 4,
+        "Posición y planos": 3,
+        "Relaciones y cavidades": 3
       },
       "checked": [
         "Referencia completa y evidencia en su página por el compilador",
@@ -601,13 +592,28 @@
         "Tres o más tarjetas por subtema"
       ],
       "focused_additions": [
-        "morfo-detail-fundamentos-01",
-        "morfo-detail-fundamentos-02",
-        "morfo-detail-fundamentos-03",
-        "morfo-detail-fundamentos-04",
-        "morfo-detail-fundamentos-05",
-        "morfo-detail-fundamentos-06"
-      ]
+        "morfo-clase1-20261020-01",
+        "morfo-clase1-20261020-02",
+        "morfo-clase1-20261020-03",
+        "morfo-clase1-20261020-04",
+        "morfo-clase1-20261020-05",
+        "morfo-clase1-20261020-06",
+        "morfo-clase1-20261020-07",
+        "morfo-clase1-20261020-08",
+        "morfo-clase1-20261020-09",
+        "morfo-clase1-20261020-10",
+        "morfo-clase1-20261020-11",
+        "morfo-clase1-20261020-12",
+        "morfo-clase1-20261020-13",
+        "morfo-clase1-20261020-14",
+        "morfo-clase1-20261020-15",
+        "morfo-clase1-20261020-16",
+        "morfo-clase1-20261020-17",
+        "morfo-clase1-20261020-18",
+        "morfo-clase1-20261020-19",
+        "morfo-clase1-20261020-20"
+      ],
+      "lecture_slide_count": 41
     },
     {
       "source": "morfo",

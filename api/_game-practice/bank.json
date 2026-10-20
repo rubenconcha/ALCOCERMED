@@ -7105,396 +7105,332 @@
     "topic": "temas principales de anatomia y fisiologia",
     "questions": [
       {
-        "key": "morfo-01-001",
-        "text": "¿Qué estudia la anatomía?",
+        "key": "morfo-clase1-juego-01",
+        "text": "¿Qué campo estudia la estructura del corazón?",
         "options": [
-          "Su significado fundamental.",
-          "Amplifica el cambio inicial.",
-          "Retroalimentación positiva.",
-          "La estructura del cuerpo."
+          "Anatomía",
+          "Fisiología",
+          "Endocrinología",
+          "Fisiopatología"
         ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "30"
+        "answer": 0,
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · cap. 1 · pág. 2 · PDF 30",
+        "pages": "30",
+        "lecture_slides": [
+          2
+        ]
       },
       {
-        "key": "morfo-01-002",
-        "text": "¿Qué estudia la fisiología?",
+        "key": "morfo-clase1-juego-02",
+        "text": "¿Qué plano separa derecha e izquierda?",
         "options": [
-          "Su significado fundamental.",
-          "Amplifica el cambio inicial.",
-          "Retroalimentación positiva.",
-          "El funcionamiento del cuerpo."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "30"
-      },
-      {
-        "key": "morfo-01-006",
-        "text": "¿Qué método de exploración utiliza el tacto?",
-        "options": [
-          "La célula.",
-          "La selección natural.",
-          "Retroalimentación positiva.",
-          "La palpación."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "30"
-      },
-      {
-        "key": "morfo-01-007",
-        "text": "¿Qué método de exploración escucha los sonidos corporales?",
-        "options": [
-          "La célula.",
-          "La palpación.",
-          "La selección natural.",
-          "La auscultación."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "30"
-      },
-      {
-        "key": "morfo-01-008",
-        "text": "¿Qué método de exploración golpea suavemente el cuerpo para escuchar su respuesta?",
-        "options": [
-          "La selección natural.",
-          "La percusión.",
-          "La palpación.",
-          "La célula."
+          "Frontal",
+          "Sagital",
+          "Transversal",
+          "Horizontal"
         ],
         "answer": 1,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "30"
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · Atlas A · pág. 30 · PDF 58",
+        "pages": "58",
+        "lecture_slides": [
+          30
+        ]
       },
       {
-        "key": "morfo-01-009",
-        "text": "¿Qué procedimiento corta y separa tejidos para estudiar su estructura?",
+        "key": "morfo-clase1-juego-03",
+        "text": "Escuchar sonidos pulmonares con un estetoscopio es…",
         "options": [
-          "La célula.",
-          "La selección natural.",
-          "La disección.",
-          "La palpación."
+          "Inspección",
+          "Palpación",
+          "Auscultación",
+          "Percusión"
         ],
         "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "30"
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · cap. 1 · pág. 2 · PDF 30",
+        "pages": "30",
+        "lecture_slides": [
+          3
+        ]
       },
       {
-        "key": "morfo-01-003",
-        "text": "¿Qué diferencia a la anatomía macroscópica de la microscópica?",
+        "key": "morfo-clase1-juego-04",
+        "text": "¿Qué plano separa anterior y posterior?",
         "options": [
-          "La innata responde de forma general; la adaptativa reconoce antígenos específicos y genera memoria.",
-          "Que las expectativas del participante o investigador influyan en los resultados.",
-          "Átomo → molécula → macromolécula → organelo → célula → tejido → órgano → sistema de órganos → organismo.",
-          "La macroscópica estudia estructuras visibles a simple vista; la microscópica requiere microscopio."
+          "Mediano",
+          "Sagital",
+          "Transversal",
+          "Frontal o coronal"
         ],
         "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "31"
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · Atlas A · pág. 30 · PDF 58",
+        "pages": "58",
+        "lecture_slides": [
+          30
+        ]
       },
       {
-        "key": "morfo-01-004",
+        "key": "morfo-clase1-juego-05",
         "text": "¿Qué estudia la histología?",
         "options": [
-          "Receptor → centro integrador → efector.",
-          "Todos los organismos están compuestos por células.",
-          "La estructura microscópica de los tejidos.",
-          "La estructura y función de las células."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "31"
-      },
-      {
-        "key": "morfo-01-005",
-        "text": "¿Qué estudia la citología?",
-        "options": [
-          "La estructura y función de las células.",
-          "La estructura microscópica de los tejidos.",
-          "Todos los organismos están compuestos por células.",
-          "Receptor → centro integrador → efector."
+          "Tejidos al microscopio",
+          "Órganos a simple vista solamente",
+          "Únicamente hormonas",
+          "Sólo los sonidos del cuerpo"
         ],
         "answer": 0,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "31"
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · cap. 1 · pág. 3 · PDF 31",
+        "pages": "31",
+        "lecture_slides": [
+          4
+        ]
       },
       {
-        "key": "morfo-01-012",
-        "text": "¿Qué afirma la teoría celular sobre la composición de los organismos?",
+        "key": "morfo-clase1-juego-06",
+        "text": "¿Cómo están orientadas las palmas en posición anatómica?",
         "options": [
-          "La estructura y función de las células.",
-          "La estructura microscópica de los tejidos.",
-          "Todos los organismos están compuestos por células.",
-          "Debe poder refutarse mediante observaciones o experimentos."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "34"
-      },
-      {
-        "key": "morfo-01-014",
-        "text": "¿Qué característica debe tener una hipótesis para ser científica?",
-        "options": [
-          "La estructura microscópica de los tejidos.",
-          "Todos los organismos están compuestos por células.",
-          "Debe poder refutarse mediante observaciones o experimentos.",
-          "Catabolismo: descompone moléculas. Anabolismo: construye moléculas."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "35"
-      },
-      {
-        "key": "morfo-01-013",
-        "text": "¿Qué es una hipótesis científica?",
-        "options": [
-          "Una palabra formada con las letras iniciales de una expresión.",
-          "El mantenimiento de condiciones internas relativamente estables.",
-          "Un término formado a partir del nombre de una persona.",
-          "Una explicación provisional que puede someterse a prueba."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "36"
-      },
-      {
-        "key": "morfo-01-015",
-        "text": "¿Qué evita un experimento de doble ciego?",
-        "options": [
-          "Hematoma y tejido de granulación → callo blando → callo duro → remodelación ósea.",
-          "La macroscópica estudia estructuras visibles a simple vista; la microscópica requiere microscopio.",
-          "Átomo → molécula → macromolécula → organelo → célula → tejido → órgano → sistema de órganos → organismo.",
-          "Que las expectativas del participante o investigador influyan en los resultados."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "36"
-      },
-      {
-        "key": "morfo-01-016",
-        "text": "¿Para qué sirve el grupo de referencia de un experimento?",
-        "options": [
-          "Detecta el cambio de una variable.",
-          "Ejecuta la respuesta que modifica la variable.",
-          "Percibir la profundidad y las relaciones tridimensionales.",
-          "Para comparar sus resultados con los del grupo que recibe el tratamiento."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "36"
-      },
-      {
-        "key": "morfo-01-017",
-        "text": "¿Qué proceso favorece la reproducción de individuos mejor adaptados al entorno?",
-        "options": [
-          "Retroalimentación positiva.",
-          "La auscultación.",
-          "La selección natural.",
-          "La estructura del cuerpo."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "38"
-      },
-      {
-        "key": "morfo-01-018",
-        "text": "¿Qué adaptación permite al pulgar tocar los otros dedos?",
-        "options": [
-          "Detecta el cambio de una variable.",
-          "Percibir la profundidad y las relaciones tridimensionales.",
-          "Ejecuta la respuesta que modifica la variable.",
-          "La oposición del pulgar."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "39"
-      },
-      {
-        "key": "morfo-01-019",
-        "text": "¿Qué permite la visión estereoscópica?",
-        "options": [
-          "Percibir la profundidad y las relaciones tridimensionales.",
-          "Detecta el cambio de una variable.",
-          "Ejecuta la respuesta que modifica la variable.",
-          "Para comparar sus resultados con los del grupo que recibe el tratamiento."
-        ],
-        "answer": 0,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "39"
-      },
-      {
-        "key": "morfo-01-020",
-        "text": "¿Cuál es el orden de organización desde el átomo hasta el organismo?",
-        "options": [
-          "Receptor → neurona sensitiva → centro integrador → neurona motora → músculo esquelético.",
-          "La macroscópica estudia estructuras visibles a simple vista; la microscópica requiere microscopio.",
-          "Átomo → molécula → macromolécula → organelo → célula → tejido → órgano → sistema de órganos → organismo.",
-          "Que las expectativas del participante o investigador influyan en los resultados."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "41"
-      },
-      {
-        "key": "morfo-01-021",
-        "text": "¿Qué es un tejido?",
-        "options": [
-          "El mantenimiento de condiciones internas relativamente estables.",
-          "Una palabra formada con las letras iniciales de una expresión.",
-          "Una estructura formada por dos o más tipos de tejido que actúan juntos.",
-          "Un conjunto de células semejantes y material extracelular que realizan una función."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "41"
-      },
-      {
-        "key": "morfo-01-022",
-        "text": "¿Qué es un órgano?",
-        "options": [
-          "Una estructura formada por dos o más tipos de tejido que actúan juntos.",
-          "Una palabra formada con las letras iniciales de una expresión.",
-          "Un conjunto de células semejantes y material extracelular que realizan una función.",
-          "El mantenimiento de condiciones internas relativamente estables."
-        ],
-        "answer": 0,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "41"
-      },
-      {
-        "key": "morfo-01-023",
-        "text": "¿Cuál es la estructura más simple que se considera viva?",
-        "options": [
-          "La disección.",
-          "La percusión.",
-          "La célula.",
-          "La palpación."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "41"
-      },
-      {
-        "key": "morfo-01-024",
-        "text": "¿Qué es el metabolismo?",
-        "options": [
-          "Una palabra formada con las letras iniciales de una expresión.",
-          "Una explicación provisional que puede someterse a prueba.",
-          "Un término formado a partir del nombre de una persona.",
-          "El conjunto de reacciones químicas del organismo."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "43"
-      },
-      {
-        "key": "morfo-01-025",
-        "text": "¿Qué diferencia al catabolismo del anabolismo?",
-        "options": [
-          "La estructura microscópica de los tejidos.",
-          "Catabolismo: descompone moléculas. Anabolismo: construye moléculas.",
-          "Debe poder refutarse mediante observaciones o experimentos.",
-          "Todos los organismos están compuestos por células."
+          "Hacia atrás",
+          "Hacia delante",
+          "Siempre hacia las piernas",
+          "Una delante y otra detrás"
         ],
         "answer": 1,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "43"
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · Atlas A · pág. 29 · PDF 57",
+        "pages": "57",
+        "lecture_slides": [
+          28
+        ]
       },
       {
-        "key": "morfo-01-026",
-        "text": "¿Qué es la homeostasis?",
+        "key": "morfo-clase1-juego-07",
+        "text": "¿Qué sigue a una hipótesis en el método hipotético-deductivo?",
         "options": [
-          "Una estructura formada por dos o más tipos de tejido que actúan juntos.",
-          "Una palabra formada con las letras iniciales de una expresión.",
-          "El mantenimiento de condiciones internas relativamente estables.",
-          "Una explicación provisional que puede someterse a prueba."
+          "Declararla verdad definitiva",
+          "Evitar ponerla a prueba",
+          "Deducir predicciones comprobables",
+          "Reemplazar las observaciones"
         ],
         "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "44"
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · cap. 1 · pág. 8 · PDF 36",
+        "pages": "36",
+        "lecture_slides": [
+          8
+        ]
       },
       {
-        "key": "morfo-01-027",
-        "text": "¿Qué hace la retroalimentación negativa ante una desviación?",
+        "key": "morfo-clase1-juego-08",
+        "text": "La muñeca, comparada con el codo, es…",
         "options": [
-          "Disminuye la tensión superficial y ayuda a evitar el colapso alveolar.",
-          "Aumenta la reabsorción de sodio y la secreción de potasio.",
-          "Se opone al cambio y acerca la variable a su valor normal.",
-          "Es más rápida y más intensa por las células de memoria."
+          "Proximal",
+          "Medial por definición",
+          "Superior por definición",
+          "Distal"
+        ],
+        "answer": 3,
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · Atlas A · pág. 31 · PDF 59",
+        "pages": "59",
+        "lecture_slides": [
+          32
+        ]
+      },
+      {
+        "key": "morfo-clase1-juego-09",
+        "text": "¿Qué secuencia aumenta la complejidad?",
+        "options": [
+          "Célula → tejido → órgano",
+          "Órgano → tejido → célula",
+          "Sistema → célula → tejido",
+          "Tejido → molécula → célula"
+        ],
+        "answer": 0,
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · cap. 1 · pág. 13 · PDF 41",
+        "pages": "41",
+        "lecture_slides": [
+          10
+        ]
+      },
+      {
+        "key": "morfo-clase1-juego-10",
+        "text": "La nariz, respecto de los ojos, es…",
+        "options": [
+          "Lateral",
+          "Medial",
+          "Distal",
+          "Profunda"
+        ],
+        "answer": 1,
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · Atlas A · pág. 31 · PDF 59",
+        "pages": "59",
+        "lecture_slides": [
+          32
+        ]
+      },
+      {
+        "key": "morfo-clase1-juego-11",
+        "text": "¿Qué órgano participa en digestión y función endocrina?",
+        "options": [
+          "Bazo",
+          "Esófago",
+          "Páncreas",
+          "Vejiga urinaria"
         ],
         "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "45"
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · cap. 1 · pág. 13 · PDF 41",
+        "pages": "41",
+        "lecture_slides": [
+          12,
+          14
+        ]
       },
       {
-        "key": "morfo-01-028",
-        "text": "¿Qué tres componentes integran un circuito de retroalimentación?",
+        "key": "morfo-clase1-juego-12",
+        "text": "En la disposición habitual, hígado y apéndice son…",
         "options": [
-          "Receptor → centro integrador → efector.",
-          "La estructura y función de las células.",
-          "Todos los organismos están compuestos por células.",
-          "La estructura microscópica de los tejidos."
+          "Contralaterales",
+          "El mismo órgano",
+          "Siempre mediales",
+          "Ipsilaterales"
+        ],
+        "answer": 3,
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · Atlas A · pág. 31 · PDF 59",
+        "pages": "59",
+        "lecture_slides": [
+          33
+        ]
+      },
+      {
+        "key": "morfo-clase1-juego-13",
+        "text": "¿Qué proceso construye moléculas?",
+        "options": [
+          "Anabolismo",
+          "Catabolismo",
+          "Disección",
+          "Percusión"
         ],
         "answer": 0,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "46"
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · cap. 1 · pág. 15 · PDF 43",
+        "pages": "43",
+        "lecture_slides": [
+          18
+        ]
       },
       {
-        "key": "morfo-01-029",
-        "text": "¿Qué función cumple el receptor en un circuito homeostático?",
+        "key": "morfo-clase1-juego-14",
+        "text": "El diafragma separa…",
         "options": [
-          "Detecta el cambio de una variable.",
-          "Percibir la profundidad y las relaciones tridimensionales.",
-          "Para comparar sus resultados con los del grupo que recibe el tratamiento.",
-          "Ejecuta la respuesta que modifica la variable."
+          "Cráneo y columna",
+          "Tórax y abdomen",
+          "Pulmón derecho e izquierdo",
+          "Piel y músculo"
         ],
-        "answer": 0,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "46"
+        "answer": 1,
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · Atlas A · pág. 34 · PDF 62",
+        "pages": "62",
+        "lecture_slides": [
+          36
+        ]
       },
       {
-        "key": "morfo-01-033",
-        "text": "¿Qué expresa una raíz en un término médico?",
+        "key": "morfo-clase1-juego-15",
+        "text": "Adquirir una función celular especializada corresponde a…",
         "options": [
-          "Su significado fundamental.",
-          "Retroalimentación positiva.",
-          "La estructura del cuerpo.",
-          "Amplifica el cambio inicial."
-        ],
-        "answer": 0,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "48"
-      },
-      {
-        "key": "morfo-01-034",
-        "text": "¿Qué es un epónimo médico?",
-        "options": [
-          "Una explicación provisional que puede someterse a prueba.",
-          "El conjunto de reacciones químicas del organismo.",
-          "Un término formado a partir del nombre de una persona.",
-          "Una palabra formada con las letras iniciales de una expresión."
+          "Crecimiento solamente",
+          "Retroalimentación positiva",
+          "Diferenciación",
+          "Situs inversus"
         ],
         "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "48"
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · cap. 1 · pág. 16 · PDF 44",
+        "pages": "44",
+        "lecture_slides": [
+          19
+        ]
       },
       {
-        "key": "morfo-01-035",
-        "text": "¿Qué es un acrónimo?",
+        "key": "morfo-clase1-juego-16",
+        "text": "¿Qué recubre directamente la superficie de un órgano?",
         "options": [
-          "Una palabra formada con las letras iniciales de una expresión.",
-          "El mantenimiento de condiciones internas relativamente estables.",
-          "Una explicación provisional que puede someterse a prueba.",
-          "Un término formado a partir del nombre de una persona."
+          "Serosa parietal",
+          "Pared muscular de la cavidad",
+          "Piel",
+          "Serosa visceral"
+        ],
+        "answer": 3,
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · Atlas A · pág. 36 · PDF 64",
+        "pages": "64",
+        "lecture_slides": [
+          38
+        ]
+      },
+      {
+        "key": "morfo-clase1-juego-17",
+        "text": "La sudoración que ayuda a corregir un aumento de temperatura es…",
+        "options": [
+          "Retroalimentación negativa",
+          "Retroalimentación positiva",
+          "Catabolismo por definición",
+          "Una variación de posición"
         ],
         "answer": 0,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "49"
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · cap. 1 · pág. 17 · PDF 45",
+        "pages": "45",
+        "lecture_slides": [
+          22
+        ]
+      },
+      {
+        "key": "morfo-clase1-juego-18",
+        "text": "¿Qué órganos son retroperitoneales?",
+        "options": [
+          "Pulmones",
+          "Riñones",
+          "Corazón",
+          "Encéfalo"
+        ],
+        "answer": 1,
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · Atlas A · pág. 36 · PDF 64",
+        "pages": "64",
+        "lecture_slides": [
+          39
+        ]
+      },
+      {
+        "key": "morfo-clase1-juego-19",
+        "text": "En un circuito homeostático, ¿qué componente ejecuta la respuesta?",
+        "options": [
+          "Receptor",
+          "Centro integrador",
+          "Efector",
+          "Variable regulada"
+        ],
+        "answer": 2,
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · cap. 1 · pág. 18 · PDF 46",
+        "pages": "46",
+        "lecture_slides": [
+          21,
+          23
+        ]
+      },
+      {
+        "key": "morfo-clase1-juego-20",
+        "text": "¿Qué técnica de imagen utiliza ondas sonoras y ecos?",
+        "options": [
+          "Radiografía",
+          "Tomografía computarizada",
+          "PET",
+          "Ecografía"
+        ],
+        "answer": 3,
+        "source": "Saladin · Anatomía y fisiología · 6.ª ed. · cap. 1 · pág. 24 · PDF 52",
+        "pages": "52",
+        "lecture_slides": [
+          27
+        ]
       }
-    ]
+    ],
+    "content_revision": 2,
+    "lecture_slide_count": 41,
+    "rounds": 2,
+    "questions_per_round": 10
   },
   {
     "id": "morfo-02",

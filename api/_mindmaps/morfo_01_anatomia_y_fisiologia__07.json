@@ -1,0 +1,874 @@
+{
+  "id": "morfo_01_anatomia_y_fisiologia__07",
+  "title": "Organización corporal: forma, función y ubicación",
+  "topic": "Temas principales de anatomía y fisiología",
+  "sections": [
+    {
+      "title": "Forma, exploración y escalas",
+      "color": "#19787c",
+      "groups": [
+        {
+          "title": "Relaciona y recuerda",
+          "items": [
+            {
+              "title": "Anatomía",
+              "text": "Estudia la estructura y las relaciones del cuerpo. Una válvula cardíaca es una estructura anatómica. Al estudiar una estructura interesa comprender qué hace; la anatomía hace posible la función y la fisiología explica por qué importa esa estructura.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 30,
+                "printedPage": 2,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Inspección y palpación",
+              "text": "La inspección observa la superficie. La palpación examina estructuras mediante las manos.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 30,
+                "printedPage": 2,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Macroscópica",
+              "text": "Estudia estructuras visibles a simple vista, mediante observación de la superficie, disección o imágenes.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 31,
+                "printedPage": 3,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Historia y método científico",
+      "color": "#8c1239",
+      "groups": [
+        {
+          "title": "Relaciona y recuerda",
+          "items": [
+            {
+              "title": "Hipócrates y Aristóteles",
+              "text": "Hipócrates defendió buscar causas naturales de enfermedad. Aristóteles escribió sobre anatomía y fisiología y describió estructuras complejas construidas con componentes menores. El libro también atribuye a Aristóteles la consideración de causas sobrenaturales.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 31,
+                "printedPage": 3,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Inducción",
+              "text": "Reúne numerosas observaciones hasta formular generalizaciones y predicciones. El capítulo vincula esta formulación con Bacon.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 35,
+                "printedPage": 7,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Reduccionismo",
+              "text": "Estudia un sistema complejo mediante componentes más simples.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 41,
+                "printedPage": 13,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Organización y sistemas",
+      "color": "#ba910e",
+      "groups": [
+        {
+          "title": "Relaciona y recuerda",
+          "items": [
+            {
+              "title": "Nivel químico y celular",
+              "text": "Átomos forman moléculas y macromoléculas. Los componentes moleculares integran organelos y células. La célula es la unidad más simple que realiza las funciones básicas de la vida. Un organelo realiza funciones particulares dentro de ella.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 41,
+                "printedPage": 13,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Protección y movimiento",
+              "text": "Tegumentario, esquelético y muscular. Relacionar las figuras con protección, soporte y movimiento.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 65,
+                "printedPage": 37,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Cuatro tejidos",
+              "text": "Epitelial, conjuntivo, nervioso y muscular son las cuatro clases principales de tejidos.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 41,
+                "printedPage": 13,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Vida, variación y homeostasis",
+      "color": "#19787c",
+      "groups": [
+        {
+          "title": "Relaciona y recuerda",
+          "items": [
+            {
+              "title": "Metabolismo",
+              "text": "Incluye todos los cambios químicos internos. El catabolismo degrada moléculas y el anabolismo las sintetiza. La respuesta, el movimiento y el desarrollo complementan estos procesos; no basta con que un objeto cambie de tamaño para considerarlo vivo.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 43,
+                "printedPage": 15,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Anatómica y fisiológica",
+              "text": "La estructura puede diferir entre personas. La fisiología varía con sexo, edad, peso, dieta, actividad y entorno.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 42,
+                "printedPage": 14,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Equilibrio dinámico",
+              "text": "Las condiciones internas fluctúan dentro de límites. La homeostasis detecta cambios y activa mecanismos que sostienen una estabilidad relativa.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 45,
+                "printedPage": 17,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Imagen y orientación anatómica",
+      "color": "#156a83",
+      "groups": [
+        {
+          "title": "Relaciona y recuerda",
+          "items": [
+            {
+              "title": "Posición anatómica",
+              "text": "Persona erguida, cara al frente, brazos a los lados y palmas hacia delante. Derecha e izquierda pertenecen a la persona descrita.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 57,
+                "printedPage": 29,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Sagital, frontal y transversal",
+              "text": "Sagital: divide derecha e izquierda; el mediano pasa por la línea media. Frontal o coronal: divide anterior y posterior. Transversal u horizontal: divide superior e inferior. Relaciona cada nombre con las dos porciones que separa.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 58,
+                "printedPage": 30,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Términos relativos",
+              "text": "Los términos comparan dos estructuras: corazón superior al diafragma; esternón anterior al corazón; ojos laterales a la nariz; piel superficial al músculo. Ipsilateral significa mismo lado (hígado y apéndice); contralateral, lados opuestos (bazo e hígado), en la disposición habitual.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 59,
+                "printedPage": 31,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cavidades y membranas",
+      "color": "#683394",
+      "groups": [
+        {
+          "title": "Relaciona y recuerda",
+          "items": [
+            {
+              "title": "Craneana y conducto vertebral",
+              "text": "Contienen encéfalo y médula espinal. Son continuas entre sí y están cubiertas por meninges. Las cavidades se describen junto con sus límites y órganos relacionados para orientar la interpretación anatómica.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 62,
+                "printedPage": 34,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Pleura y pericardio",
+              "text": "Se relacionan con pulmón y corazón. Las hojas visceral y parietal delimitan espacios lubricados.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 63,
+                "printedPage": 35,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Espacio peritoneal",
+              "text": "Es el espacio entre las hojas parietal y visceral, lubricado por líquido peritoneal. No equivale a toda la cavidad abdominal.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 64,
+                "printedPage": 36,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lecture_slide_count": 41,
+  "lecture_slides": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/tema1-clase/escalas.webp",
+    "alt": "Organización corporal: lámina de síntesis del tema 1",
+    "download": "/api/mindmap?id=morfo_01_anatomia_y_fisiologia__07&format=image",
+    "filename": "Organizacion-corporal-Dr-Ruben-Concha-Cayola.webp",
+    "source": {
+      "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+      "chapter": 1,
+      "atlas": "A",
+      "pdfPages": [
+        30,
+        31,
+        33,
+        36,
+        41,
+        42,
+        44,
+        45,
+        47,
+        52,
+        57,
+        58,
+        59,
+        62,
+        64,
+        65
+      ]
+    },
+    "generative_download": true,
+    "practice": {
+      "flashcards": [
+        {
+          "question": "¿Qué diferencia hay entre anatomía y fisiología?",
+          "answer": "Anatomía estudia estructuras; fisiología estudia funciones.",
+          "pdf_pages": [
+            30
+          ]
+        },
+        {
+          "question": "¿Qué distinguen inspección, palpación y auscultación?",
+          "answer": "Inspección: observar. Palpación: explorar con las manos. Auscultación: escuchar sonidos corporales.",
+          "pdf_pages": [
+            30
+          ]
+        },
+        {
+          "question": "¿Qué estudian histología y citología?",
+          "answer": "Histología: tejidos. Citología: células y organelos.",
+          "pdf_pages": [
+            31
+          ]
+        },
+        {
+          "question": "¿Cómo se pone a prueba una hipótesis mediante el método hipotético-deductivo?",
+          "answer": "Se deducen predicciones comprobables y se contrastan con observaciones o experimentos.",
+          "pdf_pages": [
+            36
+          ]
+        },
+        {
+          "question": "¿Qué aportes se relacionan con Vesalio y Harvey?",
+          "answer": "Vesalio impulsó la anatomía humana mediante disección; Harvey explicó la circulación sanguínea.",
+          "pdf_pages": [
+            33
+          ]
+        },
+        {
+          "question": "¿Qué secuencia ordena cinco niveles desde célula hasta organismo?",
+          "answer": "Célula → tejido → órgano → sistema de órganos → organismo.",
+          "pdf_pages": [
+            41
+          ]
+        },
+        {
+          "question": "¿Por qué el páncreas pertenece a dos sistemas?",
+          "answer": "Participa en la digestión y produce hormonas: integra los sistemas digestivo y endocrino.",
+          "pdf_pages": [
+            41
+          ]
+        },
+        {
+          "question": "¿Cómo se distinguen catabolismo y anabolismo?",
+          "answer": "Catabolismo: descompone moléculas. Anabolismo: construye moléculas.",
+          "pdf_pages": [
+            43
+          ]
+        },
+        {
+          "question": "¿Qué diferencia el crecimiento de la diferenciación?",
+          "answer": "Crecimiento aumenta el tamaño; diferenciación desarrolla formas y funciones especializadas.",
+          "pdf_pages": [
+            44
+          ]
+        },
+        {
+          "question": "¿Qué diferencia el situs inversus de una dextrocardia aislada?",
+          "answer": "Situs inversus: inversión derecha-izquierda de vísceras torácicas y abdominales. Dextrocardia aislada: corazón a la derecha sin inversión visceral completa.",
+          "pdf_pages": [
+            42
+          ]
+        },
+        {
+          "question": "¿Qué significa homeostasis?",
+          "answer": "Mantener condiciones internas relativamente estables mediante ajustes continuos: es equilibrio dinámico.",
+          "pdf_pages": [
+            45
+          ]
+        },
+        {
+          "question": "¿Cuál es la secuencia funcional de un circuito homeostático?",
+          "answer": "Receptor detecta → centro integrador procesa → efector responde.",
+          "pdf_pages": [
+            46
+          ]
+        },
+        {
+          "question": "¿Por qué sudar ante calor corporal ejemplifica retroalimentación negativa?",
+          "answer": "La pérdida de calor contrarresta el aumento inicial de temperatura.",
+          "pdf_pages": [
+            45
+          ]
+        },
+        {
+          "question": "¿Qué refuerza la retroalimentación positiva del parto y qué interrumpe el circuito?",
+          "answer": "Refuerza las contracciones; el nacimiento elimina el estímulo que mantiene el circuito.",
+          "pdf_pages": [
+            47
+          ]
+        },
+        {
+          "question": "¿Cómo se orientan las palmas y de quién son derecha e izquierda en posición anatómica?",
+          "answer": "Palmas hacia delante; derecha e izquierda corresponden al paciente.",
+          "pdf_pages": [
+            57
+          ]
+        },
+        {
+          "question": "¿Qué divide cada plano: sagital, frontal y transversal?",
+          "answer": "Sagital: derecha/izquierda. Frontal: anterior/posterior. Transversal: superior/inferior.",
+          "pdf_pages": [
+            58
+          ]
+        },
+        {
+          "question": "¿Qué significa proximal y distal al comparar codo y muñeca?",
+          "answer": "El codo es proximal a la muñeca; la muñeca es distal al codo, respecto al origen del miembro.",
+          "pdf_pages": [
+            59
+          ]
+        },
+        {
+          "question": "¿Qué ejemplo distingue ipsilateral de contralateral?",
+          "answer": "Hígado y apéndice son ipsilaterales; bazo e hígado son contralaterales en la disposición habitual.",
+          "pdf_pages": [
+            59
+          ]
+        },
+        {
+          "question": "¿Qué separa el diafragma y qué órganos ocupan las cavidades pleurales?",
+          "answer": "El diafragma separa tórax y abdomen; las cavidades pleurales contienen los pulmones.",
+          "pdf_pages": [
+            62
+          ]
+        },
+        {
+          "question": "¿Qué recubre la serosa parietal y qué recubre la visceral?",
+          "answer": "Parietal: pared de la cavidad. Visceral: superficie del órgano. Entre ambas hay líquido que reduce fricción.",
+          "pdf_pages": [
+            64
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Una válvula cardíaca y el flujo que dirige ilustran, respectivamente…",
+          "options": [
+            "Anatomía y fisiología",
+            "Fisiología y citología",
+            "Histología e histopatología",
+            "Fisiopatología y anatomía"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcta. La válvula es una estructura y dirigir el flujo es una función. Ambas perspectivas se complementan.",
+            "Revisa. Fisiología estudia función, mientras que citología estudia células. No corresponden a la pareja estructura–función planteada.",
+            "Revisa. Histología e histopatología estudian tejidos y sus alteraciones. Aquí se compara una estructura con lo que hace.",
+            "Revisa. Fisiopatología trata mecanismos de enfermedad. El enunciado no describe una alteración patológica."
+          ],
+          "pdf_pages": [
+            30
+          ]
+        },
+        {
+          "question": "El examinador observa la piel, toca una masa y escucha el tórax. ¿Qué secuencia emplea?",
+          "options": [
+            "Palpación, percusión e inspección",
+            "Inspección, palpación y auscultación",
+            "Auscultación, inspección y disección",
+            "Percusión, auscultación y palpación"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Revisa. La primera acción es mirar, no palpar. Percusión implica pequeños golpes y no equivale a tocar una masa.",
+            "Correcta. Inspección observa, palpación explora con las manos y auscultación escucha sonidos internos.",
+            "Revisa. Escuchar es auscultar, pero no es la primera acción de la secuencia. Disección corta y separa tejidos.",
+            "Revisa. La secuencia descrita no comienza con golpes. Cada técnica debe asociarse con su acción específica."
+          ],
+          "pdf_pages": [
+            30
+          ]
+        },
+        {
+          "question": "Un especialista examina al microscopio un tejido para buscar enfermedad. ¿Qué campo aplica?",
+          "options": [
+            "Citología exclusivamente",
+            "Anatomía macroscópica",
+            "Histopatología",
+            "Neurofisiología"
+          ],
+          "correct": 2,
+          "reasons": [
+            "Revisa. Citología se centra en células. El enunciado especifica tejido y búsqueda de enfermedad.",
+            "Revisa. La anatomía macroscópica estudia estructuras visibles a simple vista, no el análisis microscópico planteado.",
+            "Correcta. La histopatología busca alteraciones de enfermedad en los tejidos. Histología es el estudio de tejidos en general.",
+            "Revisa. La neurofisiología estudia la función nerviosa. No es el nombre del examen histológico de enfermedad."
+          ],
+          "pdf_pages": [
+            31
+          ]
+        },
+        {
+          "question": "¿Qué comparación entre técnicas de imagen es correcta?",
+          "options": [
+            "La ecografía usa rayos X y la RM sonido",
+            "Todas requieren cirugía para ver el interior",
+            "La RM usa el mismo mecanismo que la radiografía",
+            "La ecografía usa sonido y la radiografía rayos X"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Revisa. Intercambia mecanismos: ecografía usa sonido, mientras que la RM emplea campo magnético y radiofrecuencia.",
+            "Revisa. Las técnicas descritas permiten estudiar el interior sin cirugía exploratoria.",
+            "Revisa. La radiografía usa rayos X. La RM combina un campo magnético con ondas de radio, un mecanismo diferente.",
+            "Correcta. Las imágenes médicas permiten observar el interior. La ecografía forma imágenes a partir de ecos y la radiografía utiliza rayos X."
+          ],
+          "pdf_pages": [
+            31,
+            51,
+            52
+          ]
+        },
+        {
+          "question": "¿Qué pareja de contribuciones es correcta?",
+          "options": [
+            "Vesalio: disección y atlas; Harvey: circulación",
+            "Harvey: atlas de Vesalio; Vesalio: circulación de Harvey",
+            "Vesalio: microscopio; Harvey: células del corcho",
+            "Harvey: juramento hipocrático; Vesalio: medicina romana"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcta. Vesalio renovó la anatomía mediante disección y publicaciones. Harvey investigó la circulación sanguínea.",
+            "Revisa. Intercambia los aportes que el texto diferencia. El atlas anatómico corresponde a Vesalio.",
+            "Revisa. Las observaciones del corcho y el desarrollo microscópico se relacionan con Hooke, no con esta pareja.",
+            "Revisa. El juramento se relaciona con Hipócrates, y la medicina de gladiadores con Galeno."
+          ],
+          "pdf_pages": [
+            32,
+            33
+          ]
+        },
+        {
+          "question": "En el método hipotético-deductivo, ¿qué sigue a una hipótesis útil?",
+          "options": [
+            "Sustituir los datos por la autoridad del autor",
+            "Una predicción que puede ponerse a prueba",
+            "Aceptar la explicación sin buscar evidencia",
+            "Descartar toda observación que no coincida"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Revisa. La evidencia y la posibilidad de refutación son centrales. La autoridad del autor no reemplaza la prueba.",
+            "Correcta. La hipótesis permite deducir una predicción. Los resultados pueden respaldarla, modificarla o llevar a abandonarla.",
+            "Revisa. Una hipótesis científica requiere contraste. Su formulación no demuestra por sí misma que sea verdadera.",
+            "Revisa. Una observación incompatible puede obligar a revisar la hipótesis. Excluirla arbitrariamente introduce sesgo."
+          ],
+          "pdf_pages": [
+            36
+          ]
+        },
+        {
+          "question": "¿Qué secuencia aumenta la complejidad estructural?",
+          "options": [
+            "Órgano, tejido, organismo, célula, sistema, molécula, átomo, organelo",
+            "Sistema, órgano, átomo, tejido, célula, organismo, molécula, organelo",
+            "Átomo, molécula, organelo, célula, tejido, órgano, sistema, organismo",
+            "Célula, átomo, tejido, molécula, órgano, organismo, sistema, organelo"
+          ],
+          "correct": 2,
+          "reasons": [
+            "Revisa. Empieza por un órgano y luego retrocede a tejido. No mantiene un aumento continuo de complejidad.",
+            "Revisa. Mezcla niveles: un sistema reúne órganos y no precede al átomo en un orden de menor a mayor complejidad.",
+            "Correcta. El orden asciende desde componentes químicos hasta el organismo. Las macromoléculas son un nivel intermedio dentro del nivel molecular.",
+            "Revisa. Coloca el átomo después de la célula y separa las relaciones de composición descritas por el texto."
+          ],
+          "pdf_pages": [
+            41
+          ]
+        },
+        {
+          "question": "¿Qué ejemplo muestra que un órgano participa en dos sistemas?",
+          "options": [
+            "La piel, que por ello deja de ser un órgano",
+            "Una mitocondria, que constituye por sí sola un sistema",
+            "Un átomo, que forma a la vez dos tejidos completos",
+            "El páncreas, en los sistemas endocrino y digestivo"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Revisa. Ser parte de un sistema o contener estructuras más pequeñas no elimina la condición de órgano de la piel.",
+            "Revisa. La mitocondria es un organelo, no un órgano ni un sistema de órganos.",
+            "Revisa. El átomo es un nivel químico. No es el ejemplo de un órgano compartido entre sistemas.",
+            "Correcta. El texto utiliza al páncreas como ejemplo de participación en los sistemas endocrino y digestivo. También identifica a la piel como el órgano más grande."
+          ],
+          "pdf_pages": [
+            41
+          ]
+        },
+        {
+          "question": "¿Qué distingue reduccionismo y holismo?",
+          "options": [
+            "Estudio de componentes y estudio de propiedades del conjunto",
+            "Observación al microscopio y abandono de la evidencia",
+            "Enfermedad y ausencia de enfermedad",
+            "Anatomía humana y anatomía sin órganos"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcta. El reduccionismo examina partes más simples; el holismo considera propiedades emergentes del conjunto. Son perspectivas complementarias.",
+            "Revisa. El holismo del capítulo no implica abandonar la ciencia ni sustituir evidencia por creencias.",
+            "Revisa. No son estados de salud. Son maneras complementarias de comprender sistemas complejos.",
+            "Revisa. Ambas perspectivas pueden aplicarse al mismo cuerpo y a sus órganos."
+          ],
+          "pdf_pages": [
+            41,
+            42
+          ]
+        },
+        {
+          "question": "¿Qué asociación metabólica es correcta?",
+          "options": [
+            "Anabolismo degrada moléculas; catabolismo las sintetiza",
+            "Catabolismo degrada moléculas; anabolismo las sintetiza",
+            "Ambos términos significan solo crecimiento corporal",
+            "Metabolismo equivale exclusivamente a movimiento"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Revisa. Invierte las dos subdivisiones. Las mnemotecnias de la diapositiva ayudan a conservar el orden correcto.",
+            "Correcta. El metabolismo incluye reacciones de degradación, catabólicas, y de síntesis, anabólicas.",
+            "Revisa. El crecimiento puede depender de síntesis, pero metabolismo incluye muchos cambios químicos más allá del tamaño.",
+            "Revisa. Movimiento es una característica de la vida, pero no define la suma de cambios químicos internos."
+          ],
+          "pdf_pages": [
+            43,
+            44
+          ]
+        },
+        {
+          "question": "Una célula adquiere una función especializada. ¿Qué proceso del desarrollo ilustra?",
+          "options": [
+            "Solo aumento de tamaño",
+            "Evolución de una población en una generación",
+            "Diferenciación",
+            "Transposición visceral"
+          ],
+          "correct": 2,
+          "reasons": [
+            "Revisa. Aumentar tamaño es crecimiento. La pregunta describe especialización funcional.",
+            "Revisa. Evolución se refiere a cambios heredables de poblaciones entre generaciones, no a especialización de una célula.",
+            "Correcta. La diferenciación transforma células hacia funciones especializadas. El desarrollo también incluye crecimiento.",
+            "Revisa. Transposición visceral describe una disposición anatómica, no la especialización celular."
+          ],
+          "pdf_pages": [
+            44
+          ]
+        },
+        {
+          "question": "¿Qué situación corresponde a situs inversus en el ejemplo presentado?",
+          "options": [
+            "Solo un riñón ubicado en la pelvis",
+            "Todo cambio del pulso después de ejercicio",
+            "Cualquier variante de una arteria renal",
+            "Distribución de vísceras torácicas y abdominales en espejo"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Revisa. El riñón pélvico es una ubicación renal atípica. Por sí solo no describe inversión visceral completa.",
+            "Revisa. El pulso tras ejercicio es variación funcional, no disposición en espejo de órganos.",
+            "Revisa. Una variante vascular aislada no establece situs inversus. Es necesario distinguir patrón global y variación localizada.",
+            "Correcta. El texto describe inversión derecha–izquierda de órganos torácicos y abdominales. Dextrocardia designa la transposición del corazón; riñón pélvico ilustra ubicación atípica de un órgano."
+          ],
+          "pdf_pages": [
+            42,
+            43
+          ]
+        },
+        {
+          "question": "¿Qué describe mejor la homeostasis?",
+          "options": [
+            "Estabilidad dinámica de condiciones internas dentro de límites",
+            "Ausencia absoluta de toda fluctuación",
+            "Una respuesta que siempre amplifica cualquier cambio",
+            "Una característica exclusiva de un órgano aislado"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcta. El cuerpo detecta cambios y activa mecanismos que mantienen condiciones relativamente estables. Las variables fluctúan dentro de límites.",
+            "Revisa. El texto advierte que las condiciones internas no son absolutamente constantes: existe equilibrio dinámico.",
+            "Revisa. Amplificar el cambio describe retroalimentación positiva. No define toda regulación homeostática.",
+            "Revisa. La homeostasis implica cooperación de células, órganos y sistemas; no se limita a una estructura aislada."
+          ],
+          "pdf_pages": [
+            44,
+            45
+          ]
+        },
+        {
+          "question": "¿Qué asignación de funciones en un circuito es correcta?",
+          "options": [
+            "Centro integrador ejecuta necesariamente la contracción muscular",
+            "Receptor detecta; centro integrador procesa; efector responde",
+            "Receptor y efector son nombres para el mismo papel",
+            "Efector detecta siempre; receptor integra toda señal"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Revisa. Integrar información y ejecutar la respuesta son papeles distintos, aunque el circuito los conecte.",
+            "Correcta. Los tres componentes desempeñan funciones diferentes dentro del circuito de regulación.",
+            "Revisa. Pueden existir relaciones complejas, pero los términos designan funciones distintas en este esquema.",
+            "Revisa. Intercambia las funciones generales de detección e integración y omite la respuesta del efector."
+          ],
+          "pdf_pages": [
+            45,
+            46
+          ]
+        },
+        {
+          "question": "Durante el parto, una respuesta refuerza las contracciones hasta el nacimiento. ¿Qué mecanismo ilustra?",
+          "options": [
+            "Ausencia de señal hormonal",
+            "Un cambio anatómico sin función fisiológica",
+            "Retroalimentación positiva",
+            "Retroalimentación negativa por definición"
+          ],
+          "correct": 2,
+          "reasons": [
+            "Revisa. El texto incluye oxitocina en el mecanismo. No se trata de ausencia de señal.",
+            "Revisa. Las contracciones y su regulación son procesos fisiológicos, relacionados con estructuras anatómicas.",
+            "Correcta. La respuesta amplifica el cambio inicial mientras persiste el estímulo. El nacimiento interrumpe este circuito.",
+            "Revisa. La negativa contrarresta la desviación inicial. El ejemplo describe refuerzo de la respuesta."
+          ],
+          "pdf_pages": [
+            46,
+            47
+          ]
+        },
+        {
+          "question": "¿Qué combinación de posiciones es correcta?",
+          "options": [
+            "Anatómica: palmas atrás; supino: boca abajo; prono: boca arriba",
+            "Anatómica: cualquier postura; supino y prono son sinónimos",
+            "Supino: de pie; prono: sentado",
+            "Anatómica: palmas al frente; supino: boca arriba; prono: boca abajo"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Revisa. Invierte tanto la orientación de las palmas como los dos decúbitos.",
+            "Revisa. La posición anatómica es una referencia definida. Supino y prono no son equivalentes.",
+            "Revisa. Ambos términos se refieren aquí a estar acostado, no a permanecer de pie o sentado.",
+            "Correcta. Las posiciones se describen desde una referencia fija. Supino y prono son decúbitos diferentes."
+          ],
+          "pdf_pages": [
+            57,
+            58
+          ]
+        },
+        {
+          "question": "¿Qué plano separa las porciones anterior y posterior?",
+          "options": [
+            "Frontal o coronal",
+            "Transversal",
+            "Mediano por ser horizontal",
+            "Sagital"
+          ],
+          "correct": 0,
+          "reasons": [
+            "Correcta. El plano frontal o coronal divide anterior y posterior.",
+            "Revisa. El transversal divide porciones superior e inferior.",
+            "Revisa. Mediano no significa horizontal. Designa el plano sagital que coincide con la línea media.",
+            "Revisa. El sagital divide derecha e izquierda. El mediano es el sagital que pasa por la línea media."
+          ],
+          "pdf_pages": [
+            57,
+            58,
+            59
+          ]
+        },
+        {
+          "question": "La muñeca está más lejos del origen del miembro que el codo. ¿Cómo se describe?",
+          "options": [
+            "Medial por esa única razón",
+            "Distal respecto del codo",
+            "Superficial por esa única razón",
+            "Proximal respecto del codo"
+          ],
+          "correct": 1,
+          "reasons": [
+            "Revisa. Medial alude al plano medio. No expresa la distancia a la raíz del miembro.",
+            "Correcta. Distal indica mayor distancia del punto de unión u origen. El codo es proximal a la muñeca.",
+            "Revisa. Superficial se refiere a la superficie corporal. No indica distancia desde el origen del miembro.",
+            "Revisa. Proximal significa más cerca de la unión u origen. Sería la relación del codo respecto de la muñeca."
+          ],
+          "pdf_pages": [
+            59,
+            60
+          ]
+        },
+        {
+          "question": "¿Qué relación entre cavidad y estructura es correcta?",
+          "options": [
+            "Torácica y abdominal están separadas por la línea media",
+            "Abdomen y pelvis están separados por una pared completa",
+            "Craneana: encéfalo; pericárdica: corazón; pleural: pulmón",
+            "Craneana: riñón; pleural: encéfalo; pericárdica: vejiga"
+          ],
+          "correct": 2,
+          "reasons": [
+            "Revisa. El diafragma separa el tórax del abdomen. La línea media es una referencia de orientación diferente.",
+            "Revisa. El texto explica que las cavidades abdominal y pélvica son continuas, sin una pared de separación entre ellas.",
+            "Correcta. El Atlas A relaciona estas cavidades con las estructuras indicadas. Las meninges protegen encéfalo y médula espinal; pleura y pericardio son serosas relacionadas con pulmón y corazón.",
+            "Revisa. Intercambia órganos y cavidades sin respetar las relaciones de la figura A.7 y el cuadro A.2."
+          ],
+          "pdf_pages": [
+            62,
+            63,
+            64
+          ]
+        },
+        {
+          "question": "¿Qué asociación describe el peritoneo y el retroperitoneo?",
+          "options": [
+            "Todos los órganos abdominales ocupan la cavidad peritoneal de igual manera",
+            "Los riñones son intraperitoneales por encontrarse en el abdomen",
+            "Parietal: superficie del pulmón; visceral: solo hueso",
+            "Parietal: pared; visceral: órgano; riñones: retroperitoneales"
+          ],
+          "correct": 3,
+          "reasons": [
+            "Revisa. Abdominal y peritoneal no son sinónimos. El texto distingue órganos retroperitoneales y relaciones intraperitoneales.",
+            "Revisa. Que un órgano se encuentre en el abdomen no significa que sea intraperitoneal. La relación con el peritoneo define esa clasificación.",
+            "Revisa. Confunde peritoneo con pleura y no conserva los significados de parietal y visceral.",
+            "Correcta. La hoja parietal tapiza la pared y la visceral se relaciona con las vísceras. Los riñones están en posición retroperitoneal. El libro también incluye suprarrenales, uréteres, gran parte del páncreas y grandes vasos."
+          ],
+          "pdf_pages": [
+            63,
+            64,
+            65
+          ]
+        }
+      ],
+      "source": "Saladin · 6.ª ed. · cap. 1 y Atlas A · página impresa = página PDF − 28."
+    }
+  },
+  "review": {
+    "source_only": true,
+    "doctor_approved": false,
+    "date": "2026-10-20"
+  }
+}
