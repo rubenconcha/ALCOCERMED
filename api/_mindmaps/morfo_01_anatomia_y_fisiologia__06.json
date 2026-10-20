@@ -1,1 +1,163 @@
-{"id":"morfo_01_anatomia_y_fisiologia__06","title":"Homeostasis","topic":"Temas principales de anatomía y fisiología","sections":[{"title":"Medio interno","color":"#d76387","groups":[{"title":"Medio interno · explicación","items":[{"title":"Idea principal","text":"Mantiene condiciones relativamente estables."},{"title":"Desarrollo","text":"El objetivo de la mayor parte de la fisiología normal consiste en mantener condiciones estables dentro del cuerpo. En esencia, la fisiología humana consiste en un grupo de mecanismos homeostáticos que producen condiciones internas estables para la función celular. Cualquier desviación de estas condiciones puede ser dañina o letal para las células y, por tanto, para todo el cuerpo. • Evolución.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":50,"bbox":[310.39,501.74,569.44,762.68]}}]}]},{"title":"Retroalimentación negativa","color":"#d76387","groups":[{"title":"Retroalimentación negativa · explicación","items":[{"title":"Idea principal","text":"La respuesta contrarresta el cambio inicial."},{"title":"Desarrollo","text":"El mecanismo fundamental que mantiene una variable cerca de su punto de equilibrio es la retroalimentación negativa: un proceso en que el cuerpo percibe un cambio y activa mecanismos que lo anulan o invierten. Ya que mantiene la estabilidad, la retroalimentación negativa constituye el mecanismo clave para conservar la salud.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":45,"bbox":[56.69,476.79,315.73,545.77]}}]}]},{"title":"Retroalimentación positiva","color":"#d76387","groups":[{"title":"Retroalimentación positiva · explicación","items":[{"title":"Idea principal","text":"La respuesta amplifica el cambio hasta completar un proceso."},{"title":"Desarrollo","text":"Sin embargo, con frecuencia la retroalimentación positiva es dañina o incluso constituye un proceso que pone en riesgo la vida. Esto se debe a que su naturaleza de autoamplificación puede cambiar con rapidez el estado interno del cuerpo y desviarlo en gran medida del punto de equilibrio homeostático. Por ejemplo, considérese la fiebre. La elevación de la temperatura desencadenada por una infección es benéfica hasta cierto punto, pero si la temperatura corporal sube por arriba de los 40°C (104°F), puede crear un ciclo peligroso de retroalimentación positiva.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":47,"bbox":[56.69,597.09,315.74,762.05]}}]}]},{"title":"Receptor, integrador y efector","color":"#d76387","groups":[{"title":"Receptor, integrador y efector · explicación","items":[{"title":"Idea principal","text":"El receptor detecta el cambio; el centro integrador procesa la información y el efector produce la respuesta."},{"title":"Desarrollo","text":"Esta corrección reflexiva de la presión arterial (barorreflejo) ilustra tres componentes comunes, aunque no universales, de un ciclo de retroalimentación: un receptor, un centro integrador y un efector. Los receptores son estructuras que perciben un cambio en el cuerpo, como los receptores de distensión que vigilan la presión arterial.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":46,"bbox":[39.69,454.73,298.73,547.71]}}]}]},{"title":"Ejemplos de retroalimentación","color":"#d76387","groups":[{"title":"Ejemplos de retroalimentación · explicación","items":[{"title":"Idea principal","text":"La termorregulación suele contrarrestar cambios; el parto amplifica contracciones hasta concluir el proceso."},{"title":"Desarrollo","text":"La retroalimentación positiva es un ciclo de autoamplificación en que un cambio fisiológico lleva a otro aun mayor en la misma dirección, en lugar de producir los efectos correctivos de la retroalimentación negativa. Este tipo de retroalimentación suele ser una manera normal de generar un cambio rápido. Por ejemplo, cuando una mujer está en el proceso de parto, la cabeza del feto empuja contra el cuello uterino y estimula sus terminaciones nerviosas (figura 1.12).","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":46,"bbox":[310.39,620.96,569.44,761.93]}}]}]}],"assets":{"image":"/assets/mindmaps/illustrations/morfo_01_anatomia_y_fisiologia.webp","alt":"Ilustración de Temas principales de anatomía y fisiología","download":"/api/mindmap?id=morfo_01_anatomia_y_fisiologia__06&format=image","filename":"morfo_01_anatomia_y_fisiologia__06-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":1,"pdfPages":[29,55],"imagePdfPage":41}}}
+{
+  "id": "morfo_01_anatomia_y_fisiologia__06",
+  "title": "Cavidades y membranas",
+  "topic": "Temas principales de anatomía y fisiología",
+  "content_revision": 3,
+  "lecture_slides": [
+    34,
+    35,
+    36,
+    37
+  ],
+  "sections": [
+    {
+      "title": "Cavidades",
+      "color": "#b15462",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Craneana y conducto vertebral",
+              "text": "Contienen encéfalo y médula espinal. Son continuas entre sí y están cubiertas por meninges. Las cavidades se describen junto con sus límites y órganos relacionados para orientar la interpretación anatómica.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 62,
+                "printedPage": 34,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Tórax y diafragma",
+              "text": "El diafragma separa cavidad torácica y abdominopélvica. El mediastino se encuentra entre los pulmones.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 63,
+                "printedPage": 35,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Abdomen y pelvis",
+              "text": "Son continuos y no están separados por una pared completa. El abdomen ocupa la porción superior y la pelvis la inferior.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 64,
+                "printedPage": 36,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Membranas serosas",
+      "color": "#b15462",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Pleura y pericardio",
+              "text": "Se relacionan con pulmón y corazón. Las hojas visceral y parietal delimitan espacios lubricados.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 63,
+                "printedPage": 35,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Parietal y visceral",
+              "text": "Parietal tapiza la pared de la cavidad. Visceral se relaciona con la superficie del órgano. El peritoneo sigue ese patrón en abdomen y pelvis.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 64,
+                "printedPage": 36,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Mesenterios y epiplones",
+              "text": "Son pliegues y continuidades del peritoneo relacionados con sostén y conexión de vísceras. El libro diferencia epiplón mayor y menor.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 64,
+                "printedPage": 36,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Relaciones peritoneales",
+      "color": "#b15462",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Espacio peritoneal",
+              "text": "Es el espacio entre las hojas parietal y visceral, lubricado por líquido peritoneal. No equivale a toda la cavidad abdominal.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 64,
+                "printedPage": 36,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Retroperitoneo",
+              "text": "Riñones, uréteres, suprarrenales, gran parte del páncreas y segmentos abdominales de grandes vasos se relacionan con la pared posterior y el peritoneo.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 64,
+                "printedPage": 36,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Regiones como referencia",
+              "text": "Los cuatro cuadrantes y las nueve regiones ayudan a describir localizaciones. Siempre se orientan desde la derecha e izquierda del paciente.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 61,
+                "printedPage": 33,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/tema1-clase/cavidades.webp",
+    "alt": "Cavidades y membranas; esquema conceptual alineado con la clase",
+    "download": "/api/mindmap?id=morfo_01_anatomia_y_fisiologia__06&format=image",
+    "filename": "morfo_01_anatomia_y_fisiologia__06-Prepa-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+      "chapter": 1,
+      "atlas": "A",
+      "pdfPages": [
+        61,
+        62,
+        63,
+        64
+      ]
+    }
+  },
+  "review": {
+    "doctor_approved": false,
+    "source_only": true,
+    "date": "2026-10-20",
+    "note": "Contenido verificado con el PDF oficial. Las ilustraciones generadas son esquemas didácticos."
+  }
+}

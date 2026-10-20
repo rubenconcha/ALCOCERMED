@@ -1,1 +1,171 @@
-{"id":"morfo_01_anatomia_y_fisiologia__05","title":"Variación humana","topic":"Temas principales de anatomía y fisiología","sections":[{"title":"Anatomía","color":"#209caa","groups":[{"title":"Anatomía · explicación","items":[{"title":"Idea principal","text":"Existen diferencias estructurales entre personas."},{"title":"Desarrollo","text":"En páginas anteriores, se consideró la importancia clínica de las variaciones en la anatomía humana, pero la fisiología suele ser más cambiante. Las variables fisiológicas difieren según sexo, edad, peso, dieta, grado de actividad física y entorno, entre otras cosas. Si no se consideran estas variaciones, se cae en errores médicos como la medicación excesiva a las personas de edad avanzada o administrar a mujeres fármacos investigados en varones.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":44,"bbox":[310.39,228.83,569.45,453.78]}}]}]},{"title":"Función","color":"#209caa","groups":[{"title":"Función · explicación","items":[{"title":"Idea principal","text":"La edad, el sexo y la actividad influyen en la fisiología."},{"title":"Desarrollo","text":"Las MRI permiten “ver” con claridad a través del cráneo y la columna vertebral para producir imágenes del tejido nervioso (figura 1.13e). Más aún, tiene mayor capacidad que la CT para distinguir entre tejidos blandos, como las materias gris y blanca del sistema nervioso. Con las MRI también se elimina la exposición a los dañinos rayos X. La MRI funcional (fMRI) es una variación de esta técnica que permite visualizar cambios en la función del tejido con el paso del tiempo.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":52,"bbox":[320.39,71.18,569.21,299.68]}}]}]},{"title":"Importancia clínica","color":"#209caa","groups":[{"title":"Importancia clínica · explicación","items":[{"title":"Idea principal","text":"La variación debe considerarse al estudiar el cuerpo."},{"title":"Desarrollo","text":"En la figura 1.8 se ilustran algunas variaciones comunes en la anatomía humana y en el recuadro Conocimiento más a fondo 1.2 se describe una variación de gran efecto e importancia clínica.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":42,"bbox":[39.69,560.76,298.72,605.76]}}]}]},{"title":"Variación anatómica","color":"#209caa","groups":[{"title":"Variación anatómica · explicación","items":[{"title":"Idea principal","text":"Una estructura puede presentar variantes sin constituir enfermedad; la descripción del libro representa patrones frecuentes."},{"title":"Desarrollo","text":"¿Bastaría para concluir que el tratamiento resultó eficaz? Los científicos disponen de una buena cantidad de pruebas estadísticas que pueden aplicarse a los datos para determinar su confiabilidad. Tal vez el lector haya escuchado algo acerca de la prueba de chicuadrada, la prueba t o el análisis de varianza, por ejemplo. Un resultado característico de una prueba estadística podría expresarse de la siguiente manera: “Se puede estar 99.5% seguro de que la diferencia entre los grupos A y B se debió al tratamiento experimental y no a una variación aleatoria.” La ciencia no se basa en aseveraciones absolutamente verídicas, sino en afirmaciones de probabilidad.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":37,"bbox":[74.69,70.83,315.74,211.8]}}]}]},{"title":"Variación fisiológica","color":"#209caa","groups":[{"title":"Variación fisiológica · explicación","items":[{"title":"Idea principal","text":"Los valores de referencia dependen de condiciones como edad, actividad y estado del organismo."},{"title":"Desarrollo","text":"Por ejemplo, las fMRI del encéfalo muestran una variación en los patrones de actividad cuando el cerebro se aplica a una tarea específica, sea sensitiva, mental o motora. La fMRI ha reemplazado desde hace poco a la PET como el método más importante para la visualización de las funciones cerebrales. En el recuadro Conocimiento más a fondo 14.5 (p. 557) se analiza con mayor detalle el empleo de la fMRI para obtener imágenes cerebrales.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":52,"bbox":[320.39,71.18,569.21,299.68]}}]}]}],"assets":{"image":"/assets/mindmaps/premium-illustrations/morfo_01_anatomia_y_fisiologia__05.webp","alt":"FIGURA 1.8 Variaciones anatómicas de riñones y principales arterias cerca del corazón.","download":"/api/mindmap?id=morfo_01_anatomia_y_fisiologia__05&format=image","filename":"morfo_01_anatomia_y_fisiologia__05-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":1,"pdfPages":[29,55],"imagePdfPage":41}}}
+{
+  "id": "morfo_01_anatomia_y_fisiologia__05",
+  "title": "Imagen y orientación anatómica",
+  "topic": "Temas principales de anatomía y fisiología",
+  "content_revision": 3,
+  "lecture_slides": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "sections": [
+    {
+      "title": "Imágenes médicas",
+      "color": "#3d8047",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Radiografía y TC",
+              "text": "Ambas emplean rayos X. La radiografía produce una proyección y la tomografía computarizada combina datos para reconstruir cortes y estructuras. Sus imágenes se interpretan en relación con la anatomía y la pregunta que se intenta responder.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 51,
+                "printedPage": 23,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "RM y PET",
+              "text": "La RM usa campo magnético y ondas de radio. La PET utiliza un radiotrazador para obtener información vinculada con actividad metabólica.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 52,
+                "printedPage": 24,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Ecografía",
+              "text": "Utiliza sonido de alta frecuencia y sus ecos. No se deben confundir las ondas sonoras con rayos X.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 52,
+                "printedPage": 24,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Posiciones y planos",
+      "color": "#3d8047",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Posición anatómica",
+              "text": "Persona erguida, cara al frente, brazos a los lados y palmas hacia delante. Derecha e izquierda pertenecen a la persona descrita.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 57,
+                "printedPage": 29,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Supino y prono",
+              "text": "En decúbito supino se está boca arriba; en prono, boca abajo. La terminología conserva su referencia anatómica.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 58,
+                "printedPage": 30,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Sagital, frontal y transversal",
+              "text": "Sagital divide derecha e izquierda; frontal, anterior y posterior; transversal, superior e inferior. El mediano pasa por la línea media.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 58,
+                "printedPage": 30,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Dirección y regiones",
+      "color": "#3d8047",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Términos relativos",
+              "text": "Superior e inferior, anterior y posterior, medial y lateral, superficial y profundo comparan la ubicación de dos estructuras.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 59,
+                "printedPage": 31,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Proximal y distal",
+              "text": "Indican más cerca o más lejos del punto de unión u origen. El codo es proximal a la muñeca.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 59,
+                "printedPage": 31,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Axial, apendicular y abdomen",
+              "text": "Axial comprende cabeza, cuello y tronco. Apendicular comprende extremidades. Axilar significa axila. El abdomen se divide en cuatro cuadrantes o nueve regiones.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 60,
+                "printedPage": 32,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/tema1-clase/imagenologia.webp",
+    "alt": "Imagen y orientación anatómica; esquema conceptual alineado con la clase",
+    "download": "/api/mindmap?id=morfo_01_anatomia_y_fisiologia__05&format=image",
+    "filename": "morfo_01_anatomia_y_fisiologia__05-Prepa-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+      "chapter": 1,
+      "atlas": "A",
+      "pdfPages": [
+        51,
+        52,
+        57,
+        58,
+        59,
+        60
+      ]
+    }
+  },
+  "review": {
+    "doctor_approved": false,
+    "source_only": true,
+    "date": "2026-10-20",
+    "note": "Contenido verificado con el PDF oficial. Las ilustraciones generadas son esquemas didácticos."
+  }
+}

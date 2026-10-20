@@ -1,1 +1,166 @@
-{"id":"morfo_01_anatomia_y_fisiologia__02","title":"Método científico","topic":"Temas principales de anatomía y fisiología","sections":[{"title":"Observación","color":"#267dd0","groups":[{"title":"Observación · explicación","items":[{"title":"Idea principal","text":"Identificar un fenómeno y formular preguntas."},{"title":"Desarrollo","text":"Los métodos de la ciencia son muy variables. Método científico alude menos a los procedimientos observacionales que a ciertos hábitos de creatividad disciplinada, observación cuidadosa, razonamiento lógico y análisis honesto de las observaciones y conclusiones de alguien. En el caso de las ciencias de la salud, resulta importante comprender estos hábitos. Este campo está sembrado con más fruslerías y fraudes que cualquier otro.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":35,"bbox":[327.4,298.75,586.46,523.7]}}]}]},{"title":"Hipótesis","color":"#267dd0","groups":[{"title":"Hipótesis · explicación","items":[{"title":"Idea principal","text":"Proponer una explicación comprobable."},{"title":"Desarrollo","text":"La mayor parte del conocimiento fisiológico se adquirió por el método hipotético-deductivo. Un investigador empieza por plantear una interrogante y formular una hipótesis (una especulación informada o una respuesta posible a la pregunta). Una buena hipótesis debe ser 1) compatible con lo que ya se sabe y 2) contar con posibilidades de ser demostrada y, tal vez, ser refutada con pruebas.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":36,"bbox":[39.69,89.95,298.73,218.92]}}]}]},{"title":"Comprobación","color":"#267dd0","groups":[{"title":"Comprobación · explicación","items":[{"title":"Idea principal","text":"Experimentar, analizar y revisar los resultados."},{"title":"Desarrollo","text":"Al decir “científico”, se quiere decir que este razonamiento se basa en suposiciones y métodos que pueden proporcionar información confiable, objetiva y comprobable acerca de la naturaleza. Las suposiciones de la ciencia son ideas que, según se ha demostrado, fueron fructíferas en el pasado (p. ej., la idea de que los fenómenos naturales tienen causas naturales y que, por tanto, la naturaleza es predecible y comprensible).","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":35,"bbox":[327.4,298.75,586.46,523.7]}}]}]},{"title":"Grupo de control","color":"#267dd0","groups":[{"title":"Grupo de control · explicación","items":[{"title":"Idea principal","text":"Permite comparar con el grupo experimental y distinguir el efecto de la variable estudiada."},{"title":"Desarrollo","text":"¿Se trató de una reducción significativa y se debió al ajo? Es imposible saberlo sin comparar el resultado con el de un grupo de referencia de personas similares que no recibieron tratamiento. En dicho estudio, el grupo de referencia sólo promedió 3% de reducción, de modo que al parecer el ajo propició una diferencia. • Efectos psicosomáticos. Son los que ejerce el estado mental en la fisiología; su influencia puede ser indeseable en los resultados de experimentos, si no son controlados.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":36,"bbox":[310.39,70.83,569.46,763.66]}}]}]},{"title":"Teoría científica","color":"#267dd0","groups":[{"title":"Teoría científica · explicación","items":[{"title":"Idea principal","text":"Integra explicaciones respaldadas por múltiples observaciones; puede revisarse ante nueva evidencia."},{"title":"Desarrollo","text":"En ciencia los términos ley y teoría tienen un significado distinto del que tienen para la mayoría de las personas. En el uso común, una ley es una regla creada e impuesta por la gente; se debe obedecerla so pena de un castigo. Sin embargo, una ley natural es una descripción; las leyes no gobiernan el universo, lo describen. Los legos tienden a usar la palabra teoría para designar lo que un científico llamaría hipótesis (p. ej., “Tengo una teoría que explica por qué mi carro no arranca”).","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":37,"bbox":[327.41,118.74,586.46,295.7]}}]}]}],"assets":{"image":"/assets/mindmaps/illustrations/morfo_01_anatomia_y_fisiologia.webp","alt":"Ilustración de Temas principales de anatomía y fisiología","download":"/api/mindmap?id=morfo_01_anatomia_y_fisiologia__02&format=image","filename":"morfo_01_anatomia_y_fisiologia__02-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":1,"pdfPages":[29,55],"imagePdfPage":41}}}
+{
+  "id": "morfo_01_anatomia_y_fisiologia__02",
+  "title": "Historia y método científico",
+  "topic": "Temas principales de anatomía y fisiología",
+  "content_revision": 3,
+  "lecture_slides": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "sections": [
+    {
+      "title": "Aportes históricos",
+      "color": "#bc641c",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Hipócrates y Aristóteles",
+              "text": "Hipócrates defendió buscar causas naturales de enfermedad. Aristóteles escribió sobre anatomía y fisiología y describió estructuras complejas construidas con componentes menores. El libro también atribuye a Aristóteles la consideración de causas sobrenaturales.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 31,
+                "printedPage": 3,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Galeno",
+              "text": "Fue médico de gladiadores romanos. Ante las restricciones para disección humana estudió animales, lo que produjo conocimientos y también errores al trasladarlos al ser humano.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 32,
+                "printedPage": 4,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Vesalio, Harvey y microscopía",
+              "text": "Vesalio renovó la disección humana y el atlas anatómico. Harvey estudió la circulación. Hooke y Leeuwenhoek ampliaron la observación microscópica.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 33,
+                "printedPage": 5,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Investigación",
+      "color": "#bc641c",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Inducción",
+              "text": "Reúne numerosas observaciones hasta formular generalizaciones y predicciones. El capítulo vincula esta formulación con Bacon.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 35,
+                "printedPage": 7,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Hipótesis y predicción",
+              "text": "El investigador propone una hipótesis compatible con lo conocido y susceptible de refutación. A partir de ella deduce una predicción comprobable.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 36,
+                "printedPage": 8,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Prueba y revisión",
+              "text": "Un experimento puede apoyar una hipótesis o exigir que se modifique o abandone. Controles, tamaño de muestra y revisión externa ayudan a evaluar conclusiones.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 36,
+                "printedPage": 8,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Partes y conjunto",
+      "color": "#bc641c",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Reduccionismo",
+              "text": "Estudia un sistema complejo mediante componentes más simples.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 41,
+                "printedPage": 13,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Holismo",
+              "text": "Considera propiedades del conjunto que no se pueden predecir únicamente a partir de las partes aisladas.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 42,
+                "printedPage": 14,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Relación entre enfoques",
+              "text": "Las partes importan, y también sus interacciones. El holismo de esta sección es un enfoque de sistemas, no una sustitución de la evidencia por creencias.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 42,
+                "printedPage": 14,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/tema1-clase/historia.webp",
+    "alt": "Historia y método científico; esquema conceptual alineado con la clase",
+    "download": "/api/mindmap?id=morfo_01_anatomia_y_fisiologia__02&format=image",
+    "filename": "morfo_01_anatomia_y_fisiologia__02-Prepa-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+      "chapter": 1,
+      "atlas": "A",
+      "pdfPages": [
+        31,
+        32,
+        33,
+        35,
+        36,
+        41,
+        42
+      ]
+    }
+  },
+  "review": {
+    "doctor_approved": false,
+    "source_only": true,
+    "date": "2026-10-20",
+    "note": "Contenido verificado con el PDF oficial. Las ilustraciones generadas son esquemas didácticos."
+  }
+}

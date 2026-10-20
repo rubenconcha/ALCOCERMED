@@ -11,3 +11,8 @@
 .topic-eval-history .eval-metrics-grid{margin-top:20px}
 @media(max-width:600px){#evaluacion-screen{padding-top:8px}#evaluacion-screen .sim-header{align-items:flex-start}.topic-eval-history{padding:12px}}
 @media(max-width:600px){body:has(#simulacro-screen:not(.hidden) #sim-exam:not(.hidden)) .support-float{display:none!important}}
+/* Per-option reasoning appears only in the submitted evaluation review. */
+.sim-rev-option-comments { margin-top: 16px; }
+.sim-rev-option-comment { margin: 0 0 14px; padding-left: 12px; border-left: 2px solid #dce7ec; }
+.sim-rev-option-comment strong { display: block; font-size: .9rem; line-height: 1.5; }
+.sim-rev-option-comment p { margin: 4px 0 0; font-size: .88rem; line-height: 1.6; }

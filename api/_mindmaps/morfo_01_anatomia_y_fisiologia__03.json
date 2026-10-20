@@ -1,1 +1,162 @@
-{"id":"morfo_01_anatomia_y_fisiologia__03","title":"Evolución y adaptación","topic":"Temas principales de anatomía y fisiología","sections":[{"title":"Selección natural","color":"#8c59b0","groups":[{"title":"Selección natural · explicación","items":[{"title":"Idea principal","text":"Las características heredables influyen en la supervivencia y reproducción."},{"title":"Desarrollo","text":"El cuerpo humano es producto de la evolución. Como todos los seres vivos, el ser humano ha sido moldeado por millones de años de selección natural para funcionar en un entorno cambiante. Muchos aspectos de la anatomía y fisiología humanas reflejan las adaptaciones de los seres humanos primitivos a su entorno. La forma y la función humanas no se pueden comprender por completo si no es a la luz de su historia evolutiva.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":50,"bbox":[310.39,501.74,569.44,762.68]}}]}]},{"title":"Adaptación","color":"#8c59b0","groups":[{"title":"Adaptación · explicación","items":[{"title":"Idea principal","text":"Los rasgos de una población cambian a lo largo de generaciones."},{"title":"Desarrollo","text":"Nada de esto busca implicar que los seres humanos evolucionaron de los simios (un concepto común y erróneo acerca de la evolución y que ningún biólogo cree). La relación entre simios y seres humanos no es como la de padres e hijos, sino, más bien, como la de primos que tienen los mismos abuelos. La observación de los monos proporciona conocimientos sobre cómo los primates se adaptaron al hábitat arborícola y, por tanto, cómo pudieron originarse ciertas adaptaciones humanas.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":39,"bbox":[327.41,566.91,586.46,659.89]}}]}]},{"title":"Bipedestación","color":"#8c59b0","groups":[{"title":"Bipedestación · explicación","items":[{"title":"Idea principal","text":"La marcha en dos pies se relaciona con cambios en pelvis, columna y extremidades."},{"title":"Desarrollo","text":"La anatomía de la pelvis, el fémur, la rodilla, el dedo gordo y el arco del pie, la columna vertebral, el cráneo, los brazos y muchos músculos humanos se adaptaron a la locomoción sobre dos pies, al igual que muchos aspectos de la vida familiar y la sociedad humanas. A medida que el esqueleto y los músculos se adaptaban a la bipedestación, el volumen del cerebro aumentó en gran medida (cuadro 1.1).","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":40,"bbox":[39.68,166.81,298.72,427.77]}}]}]},{"title":"Selección y población","color":"#8c59b0","groups":[{"title":"Selección y población · explicación","items":[{"title":"Idea principal","text":"La selección actúa sobre diferencias heredables; la evolución se observa en poblaciones a lo largo de generaciones."},{"title":"Desarrollo","text":"Evolución significa cambio en la composición genética de una población de organismos. Algunos ejemplos importantes son la evolución de la resistencia bacteriana a los antibióticos, el aspecto de las nuevas cepas del virus del sida y el surgimiento de nuevas especies de organismos.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":38,"bbox":[39.69,320.83,298.74,377.82]}}]}]},{"title":"Bipedestación y manos","color":"#8c59b0","groups":[{"title":"Bipedestación y manos · explicación","items":[{"title":"Idea principal","text":"La postura erguida libera las manos; los cambios del esqueleto se relacionan con locomoción y manipulación."},{"title":"Desarrollo","text":"Estas ventajas son tan grandes que favorecieron modificaciones del esqueleto que facilitan la bipedestación (mantenerse y caminar en dos pies). Las pruebas fósiles indican que la bipedestación se estableció con firmeza hace más de cuatro millones de años; en cenizas volcánicas de Tanzania, se han preservado huellas de pies de primates que caminaban sobre dos patas hace 3.6 millones de años.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":40,"bbox":[39.68,166.81,298.72,427.77]}}]}]}],"assets":{"image":"/assets/mindmaps/premium-illustrations/morfo_01_anatomia_y_fisiologia__03.webp","alt":"FIGURA 1.6 Uso de herramienta primitiva por un primate. Los chimpancés tienen manos prensiles y ojos hacia el frente, característicos de los primates. Estos rasgos dotan a los primates de visión estereoscópica (percepción de la profundidad) y buena coordinación entre ojos y manos, dos factores de gran importancia en la evolución del ser humano.","download":"/api/mindmap?id=morfo_01_anatomia_y_fisiologia__03&format=image","filename":"morfo_01_anatomia_y_fisiologia__03-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":1,"pdfPages":[29,55],"imagePdfPage":41}}}
+{
+  "id": "morfo_01_anatomia_y_fisiologia__03",
+  "title": "Organización y sistemas",
+  "topic": "Temas principales de anatomía y fisiología",
+  "content_revision": 3,
+  "lecture_slides": [
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "sections": [
+    {
+      "title": "Jerarquía",
+      "color": "#526c9d",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Nivel químico y celular",
+              "text": "Átomos forman moléculas y macromoléculas. Los componentes moleculares integran organelos y células. La célula es la unidad más simple que realiza las funciones básicas de la vida. Un organelo realiza funciones particulares dentro de ella.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 41,
+                "printedPage": 13,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Tejidos y órganos",
+              "text": "Los tejidos contienen células y productos celulares con funciones específicas. Un órgano integra dos o más tipos de tejidos.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 41,
+                "printedPage": 13,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Sistemas y organismo",
+              "text": "Un sistema reúne órganos con una función colectiva. El organismo es el individuo completo.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 41,
+                "printedPage": 13,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Once sistemas",
+      "color": "#526c9d",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Protección y movimiento",
+              "text": "Tegumentario, esquelético y muscular. Relacionar las figuras con protección, soporte y movimiento.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 65,
+                "printedPage": 37,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Comunicación y transporte",
+              "text": "Nervioso y endocrino coordinan funciones. Circulatorio y linfático transportan líquidos y participan en funciones complementarias.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 65,
+                "printedPage": 37,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Intercambio y reproducción",
+              "text": "Respiratorio, digestivo y urinario intervienen en ingresos y egresos. El reproductor se representa en sus variantes masculina y femenina.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 65,
+                "printedPage": 37,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Relaciones entre niveles",
+      "color": "#526c9d",
+      "groups": [
+        {
+          "title": "Conceptos relacionados",
+          "relation": "se explica por",
+          "items": [
+            {
+              "title": "Cuatro tejidos",
+              "text": "Epitelial, conjuntivo, nervioso y muscular son las cuatro clases principales de tejidos.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 41,
+                "printedPage": 13,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Órganos compartidos",
+              "text": "El páncreas participa en los sistemas endocrino y digestivo. Pertenecer a más de un sistema no lo convierte en dos órganos diferentes.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 41,
+                "printedPage": 13,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "La piel",
+              "text": "El libro la identifica como el órgano más grande y explica que contiene estructuras menores. No confundir órgano, tejido y sistema.",
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 41,
+                "printedPage": 13,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/tema1-clase/escalas.webp",
+    "alt": "Organización y sistemas; esquema conceptual alineado con la clase",
+    "download": "/api/mindmap?id=morfo_01_anatomia_y_fisiologia__03&format=image",
+    "filename": "morfo_01_anatomia_y_fisiologia__03-Prepa-Ben-Carson.webp",
+    "source": {
+      "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+      "chapter": 1,
+      "atlas": "A",
+      "pdfPages": [
+        41,
+        65
+      ]
+    }
+  },
+  "review": {
+    "doctor_approved": false,
+    "source_only": true,
+    "date": "2026-10-20",
+    "note": "Contenido verificado con el PDF oficial. Las ilustraciones generadas son esquemas didácticos."
+  }
+}

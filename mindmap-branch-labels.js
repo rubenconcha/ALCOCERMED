@@ -23,7 +23,7 @@ window.MINDMAP_BRANCH_LABELS = {
   'biocel_16_cancer.png': ['Origen','Proliferación','Supervivencia','Tumor','Diseminación','Tratamiento'],
   'biocel_17_respuesta_inmunitaria.png': ['Defensa innata','Defensa adaptativa','Linfocitos B','Linfocitos T','Presentación de antígeno','Regulación'],
   'biocel_18_celulas_madre.png': ['Propiedades','Origen','Potencia','Progenitoras','Terapia celular','Límites y seguridad'],
-  'morfo_01_anatomia_y_fisiologia.webp': ['Forma y función','Método científico','Evolución y adaptación','Organización del cuerpo','Variación humana','Homeostasis'],
+  'morfo_01_anatomia_y_fisiologia.webp': ["Forma, exploración y escalas", "Historia y método científico", "Organización y sistemas", "Vida, variación y homeostasis", "Imagen y orientación anatómica", "Cavidades y membranas"],
   'morfo_02_quimica_de_la_vida.webp': ['Átomos y moléculas','Agua y pH','Metabolismo','Moléculas de la vida','ATP'],
   'morfo_03_forma_y_funcion_celulares.png': ['Teoría celular','Superficie celular','Transporte','Interior celular','Control y síntesis','Energía y reciclaje'],
   'morfo_04_genetica_y_funcion_celular.png': ['ADN y cromosomas','ARN','Genes y código','Síntesis de proteínas','Replicación y mitosis','Herencia'],

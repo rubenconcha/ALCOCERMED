@@ -3543,10 +3543,30 @@ window.finalizarSimulacro = function () {
                 explanation.append(explanationIcon, explanationText);
                 item.appendChild(explanation);
             }
+            // Keep feedback in the existing review, after submission. Each option
+            // explains its reasoning without revealing answers during the exam.
+            if (simState.mode === 'tema' && q.comentarios_opciones) {
+                var optionComments = document.createElement('div');
+                optionComments.className = 'sim-rev-option-comments';
+                opciones.forEach(function (option, optionIndex) {
+                    var letter = 'ABCDE'[optionIndex];
+                    var comment = q.comentarios_opciones[letter];
+                    if (!comment) return;
+                    var optionBlock = document.createElement('div');
+                    optionBlock.className = 'sim-rev-option-comment';
+                    var optionTitle = document.createElement('strong');
+                    optionTitle.textContent = letter + '. ' + option;
+                    var optionReason = document.createElement('p');
+                    optionReason.textContent = comment;
+                    optionBlock.append(optionTitle, optionReason);
+                    optionComments.appendChild(optionBlock);
+                });
+                item.appendChild(optionComments);
+            }
             if (q.fuente) {
                 var source = document.createElement('p');
                 source.className = 'sim-rev-source';
-                source.textContent = 'Fuente: ' + q.fuente + (q.paginas_pdf ? ' · páginas PDF ' + q.paginas_pdf : '');
+                source.textContent = 'Fuente: ' + q.fuente + (q.pagina_impresa ? ' · páginas impresas ' + q.pagina_impresa : '') + (q.paginas_pdf ? ' · páginas PDF ' + q.paginas_pdf : '');
                 item.appendChild(source);
             }
             reviewList.appendChild(item);
