@@ -1,0 +1,14 @@
+const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs');
+const {selectQuestions,replacesQuestions}=require('../api/_game-practice/select.cjs'),rounds=require('../juegos/game-rounds.js');
+test('Topic 8 has 20 concise cards with matching answers and official citations',()=>{
+ const lib=require('../api/_flashcards/library.json'),cards=lib.cards.filter(c=>c.tema==='el sistema oseo'&&c.official_source==='morfo');assert.equal(cards.length,20);assert.equal(new Set(cards.map(c=>c.pregunta)).size,20);assert.ok(cards.every(c=>c.respuesta.split(/\s+/).length<=25&&c.page===c.pdf_page-28&&c.pdf_page>=262&&c.pdf_page<=300));assert.match(cards.find(c=>c.pregunta.includes('sutura coronal')).respuesta,/frontal.*parietales/i);assert.match(cards.find(c=>c.pregunta.includes('radio y ulna')).respuesta,/Radio lateral.*ulna medial/i);
+});
+test('Topic 8 evaluation has 20 balanced questions, four explained options and final-slide links',()=>{
+ const p=require('../api/_evaluations/morfo-08.json');assert.equal(p.count,20);assert.equal(p.duration,20);assert.equal(p.lecture_slide_count,42);for(const letter of 'ABCD')assert.equal(p.questions.filter(q=>q.respuesta_correcta===letter).length,5);for(const q of p.questions){assert.equal(new Set('abcd'.split('').map(k=>q['opcion_'+k])).size,4);assert.equal(Object.keys(q.comentarios_opciones).length,4);assert.ok(Object.values(q.comentarios_opciones).every(s=>s.length>30));assert.ok(q.diapositivas_origen.every(n=>n>=2&&n<=41));assert.equal(q.source.sha256,'e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148');}
+});
+test('The native system-oseo game replaces the old bank and splits into two disjoint rounds of ten',()=>{
+ const ev={id:'22222222-2222-2222-2222-222222222222',codigo:'T8MORF',asignatura:'MORFOFUNCION',titulo:'Tema 8 Sistema óseo',tema:'El sistema óseo'},all=selectQuestions(ev);assert.equal(all.length,20);assert.ok(replacesQuestions(ev));const a=rounds.questions(ev,all,1),b=rounds.questions(ev,all,2);assert.equal(a.length,10);assert.equal(b.length,10);assert.equal(new Set([...a,...b].map(q=>q.id)).size,20);assert.equal(replacesQuestions({...ev,codigo:'DEMO8'}),false);
+});
+test('Mental maps and protected Intocables sheet follow the same 42-slide source',()=>{
+ const base='morfo_08_sistema_oseo';for(let i=1;i<=7;i++){const id=base+'__'+String(i).padStart(2,'0'),m=require('../api/_mindmaps/'+id+'.json');assert.equal(m.lecture_slide_count,42);assert.ok(m.sections.flatMap(s=>s.groups.flatMap(g=>g.items)).every(x=>x.source?.pdfPage>=262&&x.lecture_slides.length));assert.ok(fs.statSync('api/_mindmaps/'+id+'.webp').size>20000)}const m=require('../api/_mindmaps/'+base+'__07.json');assert.equal(m.assets.practice.flashcards.length,20);assert.equal(m.assets.practice.questions.length,20);assert.equal(m.assets.generative_download,true);
+});

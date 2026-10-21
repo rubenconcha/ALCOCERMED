@@ -9827,329 +9827,332 @@
     "topic": "el sistema oseo",
     "questions": [
       {
-        "key": "morfo-08-001",
-        "text": "¿Cuántos huesos tiene habitualmente el esqueleto adulto?",
+        "key": "morfo-08-clase-001",
+        "text": "Al separar el esqueleto en axial y apendicular, ¿qué distribución corresponde al adulto típico?",
         "options": [
-          "80.",
-          "206.",
-          "126.",
-          "14."
-        ],
-        "answer": 1,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "262"
-      },
-      {
-        "key": "morfo-08-002",
-        "text": "¿Qué dos divisiones forman el esqueleto?",
-        "options": [
-          "Anillo fibroso y núcleo pulposo.",
-          "Ilion, isquion y pubis.",
-          "Axial y apendicular.",
-          "Los agujeros transversos."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "262"
-      },
-      {
-        "key": "morfo-08-004",
-        "text": "¿Cuántos huesos forman el esqueleto apendicular?",
-        "options": [
-          "Los pares 1 a 7.",
-          "80.",
-          "126.",
-          "El axis, C2."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "262"
-      },
-      {
-        "key": "morfo-08-013",
-        "text": "¿Cuántas vértebras cervicales, torácicas y lumbares hay?",
-        "options": [
-          "7 cervicales, 12 torácicas y 5 lumbares.",
-          "Los pares 11 y 12.",
-          "C1: atlas. C2: axis o eje.",
-          "Los pares 1 a 7."
+          "80 axiales y 126 apendiculares",
+          "126 axiales y 80 apendiculares",
+          "22 axiales y 184 apendiculares",
+          "206 axiales y 126 apendiculares"
         ],
         "answer": 0,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "262"
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "262",
+        "lecture_slides": [
+          2
+        ]
       },
       {
-        "key": "morfo-08-023",
-        "text": "¿Qué huesos forman cada coxal?",
+        "key": "morfo-08-clase-002",
+        "text": "Una prominencia ósea presenta una superficie articular redondeada. ¿Qué término la describe?",
         "options": [
-          "El esfenoides.",
-          "La mandíbula.",
-          "Axial y apendicular.",
-          "Ilion, isquion y pubis."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "262"
-      },
-      {
-        "key": "morfo-08-010",
-        "text": "¿Qué hueso contiene la lámina cribosa?",
-        "options": [
-          "El esfenoides.",
-          "El etmoides.",
-          "El occipital.",
-          "La mandíbula."
+          "Fosa",
+          "Cóndilo",
+          "Foramen",
+          "Tuberosidad"
         ],
         "answer": 1,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "266"
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "264",
+        "lecture_slides": [
+          3,
+          4,
+          5
+        ]
       },
       {
-        "key": "morfo-08-007",
-        "text": "¿Qué hueso contiene el agujero magno?",
+        "key": "morfo-08-clase-003",
+        "text": "¿Qué cuenta correctamente los huesos propios del cráneo, excluyendo los asociados?",
         "options": [
-          "La tibia.",
-          "La mandíbula.",
-          "El esfenoides.",
-          "El occipital."
+          "14 craneales y 8 faciales",
+          "22 craneales y 7 faciales",
+          "8 craneales y 14 faciales",
+          "8 craneales y 21 faciales"
+        ],
+        "answer": 2,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "277",
+        "lecture_slides": [
+          6,
+          18
+        ]
+      },
+      {
+        "key": "morfo-08-clase-004",
+        "text": "¿Qué sutura separa el frontal de los parietales?",
+        "options": [
+          "Sagital",
+          "Lambdoidea",
+          "Escamosa",
+          "Coronal"
         ],
         "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "267"
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "270",
+        "lecture_slides": [
+          7,
+          9
+        ]
       },
       {
-        "key": "morfo-08-006",
-        "text": "¿Cuántos huesos forman la cara?",
+        "key": "morfo-08-clase-005",
+        "text": "Al explicar el tabique nasal, ¿qué asociación conserva las relaciones correctas?",
         "options": [
-          "206.",
-          "80.",
-          "126.",
-          "14."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "269"
-      },
-      {
-        "key": "morfo-08-005",
-        "text": "¿Cuántos huesos forman el cráneo propiamente dicho?",
-        "options": [
-          "8.",
-          "El axis, C2.",
-          "126.",
-          "206."
+          "Lámina perpendicular del etmoides y vómer",
+          "Cornete inferior y cigomático",
+          "Apófisis coronoides y palatino",
+          "Porción mastoidea y hueso nasal"
         ],
         "answer": 0,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "270"
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "274",
+        "lecture_slides": [
+          13,
+          16
+        ]
       },
       {
-        "key": "morfo-08-011",
-        "text": "¿Qué hueso forma la mandíbula inferior?",
+        "key": "morfo-08-clase-006",
+        "text": "¿Qué relación corresponde a las láminas cribosas del etmoides?",
         "options": [
-          "El esfenoides.",
-          "La tibia.",
-          "La mandíbula.",
-          "El etmoides."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "271"
-      },
-      {
-        "key": "morfo-08-008",
-        "text": "¿Qué hueso contiene la silla turca?",
-        "options": [
-          "El occipital.",
-          "El esfenoides.",
-          "El etmoides.",
-          "La mandíbula."
+          "Articulación con el fémur",
+          "Paso de fibras olfatorias",
+          "Paso del nervio óptico",
+          "Inserción del ligamento patelar"
         ],
         "answer": 1,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "272"
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "273",
+        "lecture_slides": [
+          13,
+          17
+        ]
       },
       {
-        "key": "morfo-08-009",
-        "text": "¿Qué glándula se aloja en la silla turca?",
+        "key": "morfo-08-clase-007",
+        "text": "Una imagen muestra el cóndilo mandibular. ¿Con qué superficie se relaciona?",
         "options": [
-          "El occipital.",
-          "La mandíbula.",
-          "La hipófisis.",
-          "Las torácicas."
+          "Cavidad glenoidea de la escápula",
+          "Cóndilo occipital",
+          "Fosa mandibular del temporal",
+          "Acetábulo del coxal"
         ],
         "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "272"
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "277",
+        "lecture_slides": [
+          10,
+          16
+        ]
       },
       {
-        "key": "morfo-08-012",
-        "text": "¿Qué son las fontanelas?",
+        "key": "morfo-08-clase-008",
+        "text": "¿Cuál de estos huesos está suspendido por músculos y ligamentos sin articular directamente con otro hueso?",
         "options": [
-          "El deterioro gradual de la función asociado al envejecimiento.",
-          "Espacios membranosos entre los huesos del cráneo del lactante.",
-          "El volumen de filtrado producido por ambos riñones por minuto.",
-          "Una palabra formada con las letras iniciales de una expresión."
-        ],
-        "answer": 1,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "277"
-      },
-      {
-        "key": "morfo-08-018",
-        "text": "¿Qué dos partes principales forman un disco intervertebral?",
-        "options": [
-          "Ilion, isquion y pubis.",
-          "Axial y apendicular.",
-          "Los agujeros transversos.",
-          "Anillo fibroso y núcleo pulposo."
+          "Mandíbula",
+          "Occipital",
+          "Temporal",
+          "Hioides"
         ],
         "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "281"
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "277",
+        "lecture_slides": [
+          18
+        ]
       },
       {
-        "key": "morfo-08-014",
-        "text": "¿Cómo se llaman C1 y C2?",
+        "key": "morfo-08-clase-009",
+        "text": "¿Qué secuencia corresponde a las regiones móviles cervical, torácica y lumbar?",
         "options": [
-          "Los pares 1 a 7.",
-          "Los pares 11 y 12.",
-          "7 cervicales, 12 torácicas y 5 lumbares.",
-          "C1: atlas. C2: axis o eje."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "282"
-      },
-      {
-        "key": "morfo-08-015",
-        "text": "¿Qué vértebra tiene la apófisis odontoides?",
-        "options": [
-          "206.",
-          "14.",
-          "Los pares 1 a 7.",
-          "El axis, C2."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "282"
-      },
-      {
-        "key": "morfo-08-016",
-        "text": "¿Qué rasgo identifica a las vértebras cervicales?",
-        "options": [
-          "Anillo fibroso y núcleo pulposo.",
-          "Axial y apendicular.",
-          "Los agujeros transversos.",
-          "Ilion, isquion y pubis."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "283"
-      },
-      {
-        "key": "morfo-08-019",
-        "text": "¿Cuántos pares de costillas hay?",
-        "options": [
-          "80.",
-          "14.",
-          "12.",
-          "206."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "283"
-      },
-      {
-        "key": "morfo-08-017",
-        "text": "¿Qué vértebras se articulan con las costillas?",
-        "options": [
-          "El occipital.",
-          "Los agujeros transversos.",
-          "Las torácicas.",
-          "El esfenoides."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "284"
-      },
-      {
-        "key": "morfo-08-021",
-        "text": "¿Qué costillas son flotantes?",
-        "options": [
-          "El axis, C2.",
-          "206.",
-          "Los pares 1 a 7.",
-          "Los pares 11 y 12."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "285"
-      },
-      {
-        "key": "morfo-08-020",
-        "text": "¿Qué costillas se denominan verdaderas?",
-        "options": [
-          "126.",
-          "Los pares 11 y 12.",
-          "Los pares 1 a 7.",
-          "El axis, C2."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "287"
-      },
-      {
-        "key": "morfo-08-022",
-        "text": "¿Qué huesos forman la cintura escapular?",
-        "options": [
-          "Anillo fibroso y núcleo pulposo.",
-          "Axial y apendicular.",
-          "Ilion, isquion y pubis.",
-          "Clavícula y escápula de cada lado."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "287"
-      },
-      {
-        "key": "morfo-08-024",
-        "text": "¿Cuántas falanges tiene cada mano o pie?",
-        "options": [
-          "12.",
-          "El axis, C2.",
-          "206.",
-          "14."
-        ],
-        "answer": 3,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "289"
-      },
-      {
-        "key": "morfo-08-003",
-        "text": "¿Cuántos huesos forman el esqueleto axial?",
-        "options": [
-          "14.",
-          "126.",
-          "80.",
-          "206."
-        ],
-        "answer": 2,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "291"
-      },
-      {
-        "key": "morfo-08-025",
-        "text": "¿Qué hueso del miembro inferior soporta principalmente el peso de la pierna?",
-        "options": [
-          "La tibia.",
-          "El etmoides.",
-          "La mandíbula.",
-          "El occipital."
+          "7 cervicales, 12 torácicas y 5 lumbares",
+          "12 cervicales, 7 torácicas y 5 lumbares",
+          "7 cervicales, 5 torácicas y 12 lumbares",
+          "5 cervicales, 12 torácicas y 7 lumbares"
         ],
         "answer": 0,
-        "source": "Saladin · Anatomía y fisiología",
-        "pages": "295"
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "278",
+        "lecture_slides": [
+          20
+        ]
+      },
+      {
+        "key": "morfo-08-clase-010",
+        "text": "En una vértebra y su disco se señalan una región central gelatinosa y una envoltura fibrosa. ¿Qué son?",
+        "options": [
+          "Anillo fibroso y núcleo pulposo",
+          "Núcleo pulposo y anillo fibroso",
+          "Cuerpo vertebral y pedículo",
+          "Apófisis espinosa y lámina"
+        ],
+        "answer": 1,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "281",
+        "lecture_slides": [
+          23
+        ]
+      },
+      {
+        "key": "morfo-08-clase-011",
+        "text": "¿A qué vértebra pertenece el diente que actúa como pivote en la rotación de la cabeza?",
+        "options": [
+          "Atlas, C1",
+          "Séptima cervical, C7",
+          "Axis, C2",
+          "Primera torácica, T1"
+        ],
+        "answer": 2,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "281",
+        "lecture_slides": [
+          24
+        ]
+      },
+      {
+        "key": "morfo-08-clase-012",
+        "text": "¿Qué clasificación de las costillas evita contar dos veces un subgrupo?",
+        "options": [
+          "1–7 verdaderas; 8–10 falsas; 11–12 verdaderas",
+          "1–5 verdaderas; 6–12 flotantes",
+          "1–12 verdaderas porque todas se unen directamente al esternón",
+          "1–7 verdaderas; 8–12 falsas; 11–12 son falsas flotantes"
+        ],
+        "answer": 3,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "285",
+        "lecture_slides": [
+          28
+        ]
+      },
+      {
+        "key": "morfo-08-clase-013",
+        "text": "En el codo, ¿qué pareja de superficies está correctamente relacionada?",
+        "options": [
+          "Capítulo–radio y tróclea–ulna",
+          "Capítulo–ulna y tróclea–radio",
+          "Capítulo–escápula y tróclea–clavícula",
+          "Capítulo–carpo y tróclea–metacarpo"
+        ],
+        "answer": 0,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "289",
+        "lecture_slides": [
+          30
+        ]
+      },
+      {
+        "key": "morfo-08-clase-014",
+        "text": "Con las palmas orientadas hacia delante, ¿qué hueso del antebrazo se encuentra del lado del pulgar?",
+        "options": [
+          "Ulna",
+          "Radio",
+          "Húmero",
+          "Pisiforme"
+        ],
+        "answer": 1,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "290",
+        "lecture_slides": [
+          31
+        ]
+      },
+      {
+        "key": "morfo-08-clase-015",
+        "text": "¿Qué hueso del carpo es sesamoideo y se desarrolla en el tendón del flexor ulnar del carpo?",
+        "options": [
+          "Piramidal",
+          "Grande",
+          "Pisiforme",
+          "Ganchoso"
+        ],
+        "answer": 2,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "291",
+        "lecture_slides": [
+          32
+        ]
+      },
+      {
+        "key": "morfo-08-clase-016",
+        "text": "¿Qué recuento corresponde a los huesos de una mano?",
+        "options": [
+          "7 carpianos, 5 metacarpianos y 14 falanges",
+          "8 carpianos, 5 metacarpianos y 15 falanges",
+          "8 carpianos, 7 metacarpianos y 14 falanges",
+          "8 carpianos, 5 metacarpianos y 14 falanges"
+        ],
+        "answer": 3,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "291",
+        "lecture_slides": [
+          32
+        ]
+      },
+      {
+        "key": "morfo-08-clase-017",
+        "text": "¿Qué tres componentes se fusionan para formar un coxal adulto?",
+        "options": [
+          "Ilion, isquion y pubis",
+          "Sacro, cóccix y fémur",
+          "Ilion, sacro y patela",
+          "Pubis, tibia y fíbula"
+        ],
+        "answer": 0,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "294",
+        "lecture_slides": [
+          33
+        ]
+      },
+      {
+        "key": "morfo-08-clase-018",
+        "text": "La salida pélvica constituye el límite inferior de…",
+        "options": [
+          "La pelvis mayor",
+          "La pelvis menor",
+          "La cavidad torácica",
+          "La cintura escapular"
+        ],
+        "answer": 1,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "294",
+        "lecture_slides": [
+          34
+        ]
+      },
+      {
+        "key": "morfo-08-clase-019",
+        "text": "¿Qué asociación orienta correctamente los dos huesos de la pierna?",
+        "options": [
+          "Tibia lateral; fíbula medial",
+          "Ambos mediales al fémur",
+          "Tibia medial; fíbula lateral",
+          "Fíbula medial y articulada directamente con el fémur"
+        ],
+        "answer": 2,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "297",
+        "lecture_slides": [
+          37
+        ]
+      },
+      {
+        "key": "morfo-08-clase-020",
+        "text": "¿Qué recorrido corresponde a cada arco longitudinal del pie?",
+        "options": [
+          "Medial: talón a dedo pequeño; lateral: talón a dedo gordo",
+          "Ambos cruzan transversalmente solo las falanges",
+          "El medial está en la mano y el lateral en el pie",
+          "Medial: talón a dedo gordo; lateral: talón a dedo pequeño"
+        ],
+        "answer": 3,
+        "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
+        "pages": "300",
+        "lecture_slides": [
+          38,
+          39
+        ]
       }
     ]
   },

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "scope": "Comprobación estructural de los 68 temas y revisión focal de omisiones concretas contra los tres PDF oficiales. No equivale a revisión docente exhaustiva de cada afirmación de los libros.",
   "preserved": "Diseño aprobado, paleta, botones, subtemas y cuadro ABO.",
   "changes": [
@@ -804,15 +804,13 @@
     {
       "source": "morfo",
       "topic": "el sistema oseo",
-      "cards": 65,
+      "cards": 20,
       "subtopics": {
-        "Organización del esqueleto": 4,
-        "Cráneo": 14,
-        "Columna vertebral": 10,
-        "Caja torácica": 6,
-        "Cinturas": 5,
-        "Pelvis": 7,
-        "Extremidades": 19
+        "Organización y cráneo": 4,
+        "Relaciones craneofaciales": 4,
+        "Columna y tórax": 4,
+        "Miembro superior": 4,
+        "Pelvis y miembro inferior": 4
       },
       "checked": [
         "Referencia completa y evidencia en su página por el compilador",
@@ -820,7 +818,29 @@
         "IDs y preguntas sin duplicados exactos",
         "Tres o más tarjetas por subtema"
       ],
-      "focused_additions": []
+      "focused_additions": [
+        "morfo-clase8-20261021-01",
+        "morfo-clase8-20261021-02",
+        "morfo-clase8-20261021-03",
+        "morfo-clase8-20261021-04",
+        "morfo-clase8-20261021-05",
+        "morfo-clase8-20261021-06",
+        "morfo-clase8-20261021-07",
+        "morfo-clase8-20261021-08",
+        "morfo-clase8-20261021-09",
+        "morfo-clase8-20261021-10",
+        "morfo-clase8-20261021-11",
+        "morfo-clase8-20261021-12",
+        "morfo-clase8-20261021-13",
+        "morfo-clase8-20261021-14",
+        "morfo-clase8-20261021-15",
+        "morfo-clase8-20261021-16",
+        "morfo-clase8-20261021-17",
+        "morfo-clase8-20261021-18",
+        "morfo-clase8-20261021-19",
+        "morfo-clase8-20261021-20"
+      ],
+      "lecture_slide_count": 42
     },
     {
       "source": "morfo",

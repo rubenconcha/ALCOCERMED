@@ -1,1 +1,201 @@
-{"id":"morfo_08_sistema_oseo__01","title":"Organización","topic":"Sistema óseo","sections":[{"title":"Axial","color":"#429243","groups":[{"title":"Axial · explicación","items":[{"title":"Idea principal","text":"Cráneo, columna y caja torácica."},{"title":"Desarrollo","text":"El esqueleto (figura 8.1) se divide en dos regiones: los huesos de la cabeza y el tronco (que en ocasiones se denominan esqueleto axial) y los huesos de las extremidades (esqueleto apendicular). Los primeros forman el eje de soporte central del cuerpo y están constituidos por el cráneo, los huesos pequeños del oído, el hioides, la columna vertebral y la caja torácica (también llamada parrilla costal), que incluye las costillas y el esternón.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":262,"bbox":[39.73,578.44,298.79,683.41]}}]}]},{"title":"Apendicular","color":"#429243","groups":[{"title":"Apendicular · explicación","items":[{"title":"Idea principal","text":"Cinturas y extremidades."}]}]},{"title":"Esqueleto axial","color":"#429243","groups":[{"title":"Esqueleto axial · explicación","items":[{"title":"Idea principal","text":"Incluye cráneo, columna vertebral y caja torácica."},{"title":"Desarrollo","text":"La cara de un recién nacido es plana y el cráneo es más o menos largo. Para acomodar el encéfalo que continúa en crecimiento, el cráneo aumenta de tamaño durante la infancia con más rapidez que el resto del esqueleto. Alcanza casi la mitad de su tamaño adulto a los nueve meses, tres cuartas partes a los dos años y casi el tamaño final a los 8 o 9 años de edad.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":277,"bbox":[327.4,615.4,586.49,720.37]}}]}]},{"title":"Esqueleto apendicular","color":"#429243","groups":[{"title":"Esqueleto apendicular · explicación","items":[{"title":"Idea principal","text":"Incluye cinturas escapular y pélvica, y huesos de los miembros."},{"title":"Desarrollo","text":"A menudo se afirma que el esqueleto tiene 206 huesos, pero esta cifra sólo representa los de un adulto típico y no es invariable. El recién nacido tiene casi 270 huesos y se forman aún más durante la infancia.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":262,"bbox":[39.73,718.44,298.78,763.43]}}]}]}],"assets":{"image":"/assets/mindmaps/illustrations/morfo_08_sistema_oseo.webp","alt":"Ilustración de Sistema óseo","download":"/api/mindmap?id=morfo_08_sistema_oseo__01&format=image","filename":"morfo_08_sistema_oseo__01-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":8,"pdfPages":[261,305],"imagePdfPage":263}}}
+{
+  "id": "morfo_08_sistema_oseo__01",
+  "title": "Organización y lenguaje óseo",
+  "topic": "Sistema óseo",
+  "content_revision": 3,
+  "lecture_slide_count": 42,
+  "lecture_slides": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    18
+  ],
+  "sections": [
+    {
+      "title": "Dos divisiones, un esqueleto",
+      "color": "#429243",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Dos divisiones, un esqueleto",
+              "text": "El esqueleto axial comprende cráneo, huesos asociados, columna vertebral y caja torácica. El apendicular comprende las cinturas escapular y pélvica y los miembros superiores e inferiores. La cifra de 206 corresponde al adulto típico; no es una constante absoluta. Las fusiones durante el desarrollo y la variabilidad de huesos sesamoideos y suturales explican diferencias individuales.",
+              "lecture_slides": [
+                2
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 262,
+                "printedPage": 234,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Superficies que articulan",
+              "text": "Un cóndilo es una prominencia articular redondeada. La cabeza es un extremo expandido que suele conectarse con la diáfisis mediante un cuello. Una carilla es una superficie articular relativamente lisa, plana o ligeramente curva. Compara el cóndilo occipital, la cabeza femoral y las carillas vertebrales. No todo relieve sirve para articulación: hay prominencias dedicadas a inserciones musculares o ligamentosas.",
+              "lecture_slides": [
+                3
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Relieves para reconocer e insertar",
+              "text": "La cresta es un borde estrecho y prominente, como la cresta ilíaca. La espina es una proyección puntiaguda. Los trocánteres son grandes prominencias propias del fémur; las tuberosidades suelen ser redondeadas y rugosas. Una línea es un relieve más discreto. El epicóndilo se sitúa por encima de un cóndilo. Utiliza estos términos para describir la figura antes de intentar memorizar el nombre completo.",
+              "lecture_slides": [
+                4
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Huecos, pasos y cavidades",
+      "color": "#429243",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Huecos, pasos y cavidades",
+              "text": "Una fosa es una depresión relativamente amplia; una fóvea es una pequeña depresión. El alvéolo es un alojamiento, como el de un diente. Un surco suele alojar un vaso, nervio o tendón. Un foramen es una abertura que permite el paso de estructuras; un conducto es un trayecto óseo. Un seno es una cavidad dentro de un hueso. En las imágenes se comparan la fosa mandibular, el alvéolo dental y el agujero magno.",
+              "lecture_slides": [
+                5
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Cráneo: 8 + 14",
+              "text": "Los ocho huesos craneales son frontal, dos parietales, dos temporales, occipital, esfenoides y etmoides. Los catorce faciales comprenden dos maxilares, dos palatinos, dos cigomáticos, dos lagrimales, dos nasales, dos cornetes nasales inferiores, vómer y mandíbula. Los seis osículos auditivos y el hioides son huesos asociados, no parte del recuento de 22.",
+              "lecture_slides": [
+                6
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Suturas: reconoce sus límites",
+              "text": "La coronal se sitúa entre frontal y parietales. La sagital une ambos parietales. La lambdoidea está entre parietales y occipital. La escamosa relaciona temporal y parietal. Antes de buscar la línea de sutura, orienta el cráneo e identifica los huesos de cada lado. La vista superior facilita la sagital y la coronal; la lateral permite reconocer la escamosa.",
+              "lecture_slides": [
+                7
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 266,
+                "printedPage": 238,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cavidades del cráneo",
+      "color": "#429243",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Cavidades del cráneo",
+              "text": "El cráneo forma la cavidad craneal, las órbitas y las cavidades nasal y oral. Las fosas craneales anterior, media y posterior se disponen a distinta altura y sostienen regiones del encéfalo. Los senos paranasales son espacios aéreos de frontal, etmoides, esfenoides y maxilares. No identifiques toda una pared por un solo hueso: las órbitas y el tabique nasal reúnen varias piezas.",
+              "lecture_slides": [
+                8
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 267,
+                "printedPage": 239,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Frontal y parietales",
+              "text": "El frontal forma la frente y contribuye al techo de las órbitas y a la fosa craneal anterior. Los dos parietales forman gran parte de las paredes laterales y del techo del cráneo. La sutura coronal los separa del frontal y la sagital relaciona ambos parietales. Los senos frontales son cavidades del hueso frontal.",
+              "lecture_slides": [
+                9
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 270,
+                "printedPage": 242,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Asociados al cráneo",
+              "text": "En cada oído medio hay tres osículos: martillo, yunque y estribo. Ambos lados suman seis. El hioides es un hueso en forma de U que se encuentra en el cuello y se sostiene por músculos y ligamentos. No establece una articulación ósea directa con otra pieza. Estos siete huesos se estudian junto al cráneo, pero no pertenecen al recuento de sus 22 huesos.",
+              "lecture_slides": [
+                18
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 277,
+                "printedPage": 249,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_08_sistema_oseo.webp",
+    "alt": "Sistema óseo: relaciones del tema 8",
+    "download": "/api/mindmap?id=morfo_08_sistema_oseo__01&format=image",
+    "filename": "morfo_08_sistema_oseo__01-AlcocerMed.webp",
+    "source": {
+      "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+      "chapter": 8,
+      "pdfPages": [
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        275,
+        277
+      ]
+    }
+  },
+  "review": {
+    "source_only": true,
+    "doctor_approved": false,
+    "date": "2026-10-21"
+  }
+}

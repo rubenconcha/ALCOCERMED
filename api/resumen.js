@@ -5,7 +5,7 @@ const premiumFiles = new Set([
   'biologia-capitulo-3', 'biologia-capitulo-4', 'biologia-capitulo-5',
   'educacion-salud-tema-3', 'educacion-salud-tema-4', 'educacion-salud-tema-5',
   'morfofuncion-tema-3', 'morfofuncion-tema-4', 'morfofuncion-tema-5', 'morfofuncion-tema-6',
-  'morfofuncion-sangre', 'morfofuncion-sentidos'
+  'morfofuncion-sangre', 'morfofuncion-sentidos', 'morfofuncion-tema-8', 'morfofuncion-tema-8'
 ]);
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';

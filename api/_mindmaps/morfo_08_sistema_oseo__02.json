@@ -1,1 +1,200 @@
-{"id":"morfo_08_sistema_oseo__02","title":"Cráneo","topic":"Sistema óseo","sections":[{"title":"Protección","color":"#267dd0","groups":[{"title":"Protección · explicación","items":[{"title":"Idea principal","text":"Resguarda el encéfalo."},{"title":"Desarrollo","text":"Se considera que tanto en seres humanos como en otras especies animales, las cabezas grandes y redondeadas de los individuos jóvenes promueven la supervivencia al estimular los instintos de protección por parte de los padres.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":278,"bbox":[39.69,502.96,298.67,559.95]}}]}]},{"title":"Regiones","color":"#267dd0","groups":[{"title":"Regiones · explicación","items":[{"title":"Idea principal","text":"Incluye huesos craneales y faciales."},{"title":"Desarrollo","text":"El esqueleto (figura 8.1) se divide en dos regiones: los huesos de la cabeza y el tronco (que en ocasiones se denominan esqueleto axial) y los huesos de las extremidades (esqueleto apendicular). Los primeros forman el eje de soporte central del cuerpo y están constituidos por el cráneo, los huesos pequeños del oído, el hioides, la columna vertebral y la caja torácica (también llamada parrilla costal), que incluye las costillas y el esternón.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":262,"bbox":[39.73,578.44,298.79,683.41]}}]}]},{"title":"Neurocráneo y cara","color":"#267dd0","groups":[{"title":"Neurocráneo y cara · explicación","items":[{"title":"Idea principal","text":"El neurocráneo rodea el encéfalo; los huesos faciales forman estructuras de la cara."},{"title":"Desarrollo","text":"La cara de un recién nacido es plana y el cráneo es más o menos largo. Para acomodar el encéfalo que continúa en crecimiento, el cráneo aumenta de tamaño durante la infancia con más rapidez que el resto del esqueleto. Alcanza casi la mitad de su tamaño adulto a los nueve meses, tres cuartas partes a los dos años y casi el tamaño final a los 8 o 9 años de edad.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":277,"bbox":[327.4,615.4,586.49,720.37]}}]}]},{"title":"Suturas y agujeros","color":"#267dd0","groups":[{"title":"Suturas y agujeros · explicación","items":[{"title":"Idea principal","text":"Las suturas unen numerosos huesos craneales; los agujeros permiten el paso de vasos y nervios."},{"title":"Desarrollo","text":"Los huesos del cráneo tienen agujeros notorios que permiten el paso de nervios y vasos sanguíneos. El cuadro 8.3 presenta un resumen de los principales agujeros. Los detalles que incluye este cuadro de referencia adquirirán más sentido cuando se estudien los nervios craneales y los vasos sanguíneos en capítulos posteriores.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":268,"bbox":[310.39,405.94,569.44,474.93]}}]}]}],"assets":{"image":"/assets/mindmaps/premium-illustrations/morfo_08_sistema_oseo__02.webp","alt":"FIGURA 8.17 El cráneo fetal cerca del momento del parto.","download":"/api/mindmap?id=morfo_08_sistema_oseo__02&format=image","filename":"morfo_08_sistema_oseo__02-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":8,"pdfPages":[261,305],"imagePdfPage":263}}}
+{
+  "id": "morfo_08_sistema_oseo__02",
+  "title": "Cráneo y relaciones",
+  "topic": "Sistema óseo",
+  "content_revision": 3,
+  "lecture_slide_count": 42,
+  "lecture_slides": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    19
+  ],
+  "sections": [
+    {
+      "title": "Temporal: cuatro porciones",
+      "color": "#267dd0",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Temporal: cuatro porciones",
+              "text": "El temporal comprende porciones escamosa, timpánica, mastoidea y petrosa. La apófisis cigomática participa en el arco cigomático. La fosa mandibular recibe el cóndilo de la mandíbula. El meato acústico externo conduce hacia la membrana timpánica y la región petrosa alberga estructuras del oído. Reconoce también las apófisis mastoides y estiloides.",
+              "lecture_slides": [
+                10
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 271,
+                "printedPage": 243,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Occipital: conexión con la columna",
+              "text": "El occipital forma la parte posterior e inferior del cráneo. El agujero magno permite la continuidad entre médula espinal y encéfalo y el paso de vasos y otras estructuras descritas en la tabla de forámenes. Los cóndilos occipitales se articulan con las carillas superiores del atlas. El conducto del hipogloso está relacionado con el nervio del mismo nombre.",
+              "lecture_slides": [
+                11
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 272,
+                "printedPage": 244,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Esfenoides: el centro de la base",
+              "text": "El esfenoides ocupa una posición central en la base del cráneo. Presenta un cuerpo, alas mayores y menores y apófisis pterigoides. La silla turca contiene la fosa hipofisaria. El conducto óptico y la fisura orbitaria superior comunican regiones de la base craneal y la órbita. Relaciona su aspecto extendido con la contribución a distintas paredes del cráneo, sin reducirlo a una silueta para memorizar.",
+              "lecture_slides": [
+                12
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 272,
+                "printedPage": 244,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Etmoides: techo, tabique y pared",
+      "color": "#267dd0",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Etmoides: techo, tabique y pared",
+              "text": "El etmoides se sitúa entre las órbitas y participa en las cavidades craneal y nasal. La lámina cribosa presenta orificios para fibras olfatorias. La lámina perpendicular participa en el tabique nasal. Los laberintos contienen celdillas etmoidales y forman los cornetes superior y medio. El cornete nasal inferior no pertenece al etmoides: es una pieza facial independiente.",
+              "lecture_slides": [
+                13
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 273,
+                "printedPage": 245,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Maxilar y palatino: el paladar duro",
+              "text": "Los maxilares sostienen los dientes superiores y contribuyen a las órbitas y a las cavidades nasal y oral. Sus apófisis palatinas forman la porción anterior del paladar duro; las láminas horizontales de los palatinos completan la parte posterior. En una vista inferior, identifica primero los alvéolos dentales y después la sutura entre maxilar y palatino. Las figuras de las páginas citadas muestran la relación entre boca y cavidad nasal.",
+              "lecture_slides": [
+                14
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 274,
+                "printedPage": 246,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Pequeños huesos, relaciones precisas",
+              "text": "El cigomático forma la prominencia de la mejilla y parte de la órbita. El lagrimal participa en la pared medial de la órbita, junto al trayecto de drenaje lagrimal. Los nasales forman el puente óseo de la nariz. El cornete nasal inferior forma parte de la pared lateral de la cavidad nasal y es un hueso facial independiente. Compara las cuatro imágenes por localización y relación, en lugar de atribuirles una función genérica.",
+              "lecture_slides": [
+                15
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 276,
+                "printedPage": 248,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Vómer y mandíbula",
+      "color": "#267dd0",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Vómer y mandíbula",
+              "text": "El vómer forma parte inferior y posterior del tabique nasal. La mandíbula comprende cuerpo, ramas, ángulos, apófisis condilares y coronoides. El cóndilo mandibular se articula con la fosa mandibular del temporal. La apófisis coronoides recibe la inserción del músculo temporal. El foramen mandibular da acceso al conducto mandibular; el foramen mentoniano se abre en la superficie del cuerpo.",
+              "lecture_slides": [
+                16
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 276,
+                "printedPage": 248,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Forámenes: une paso y contenido",
+              "text": "Para un primer recorrido, prioriza lámina cribosa–fibras olfatorias, conducto óptico–nervio óptico y arteria oftálmica, agujero magno–médula y arterias vertebrales, conducto carotídeo–carótida interna y agujero estilomastoideo–nervio facial. La tabla ampliada del guion permite repasar otros trayectos. Un orificio puede transportar más de una estructura; el rótulo breve de la diapositiva destaca la relación que debe reconocerse primero.",
+              "lecture_slides": [
+                17
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 269,
+                "printedPage": 241,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Fontanelas: crecimiento y adaptación",
+              "text": "Las fontanelas son áreas de tejido conjuntivo entre huesos del cráneo infantil. Permiten que los huesos se ajusten durante el parto y acompañan el crecimiento del encéfalo. Se reconocen fontanelas anterior y posterior y pares esfenoidales y mastoideas. El libro sitúa el cierre de la anterior alrededor de los 18 a 24 meses; esta cifra se presenta como referencia del texto, no como valoración clínica individual.",
+              "lecture_slides": [
+                19
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 277,
+                "printedPage": 249,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_08_sistema_oseo.webp",
+    "alt": "Sistema óseo: relaciones del tema 8",
+    "download": "/api/mindmap?id=morfo_08_sistema_oseo__02&format=image",
+    "filename": "morfo_08_sistema_oseo__02-AlcocerMed.webp",
+    "source": {
+      "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+      "chapter": 8,
+      "pdfPages": [
+        269,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        281
+      ]
+    }
+  },
+  "review": {
+    "source_only": true,
+    "doctor_approved": false,
+    "date": "2026-10-21"
+  }
+}

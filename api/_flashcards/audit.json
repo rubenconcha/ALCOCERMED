@@ -1,19 +1,19 @@
 {
-  "version": "2026-10-20-tema1",
+  "version": "2026-10-21",
   "verified_against_pdf": true,
-  "total_cards": 3465,
+  "total_cards": 3420,
   "total_topics": 68,
-  "total_subtopics": 538,
+  "total_subtopics": 536,
   "minimum_cards_per_subtopic": 3,
   "subjects": [
     {
       "materia": "MORFOFUNCION",
       "chapters": 30,
       "topics": 29,
-      "cards": 1605,
+      "cards": 1560,
       "longest_answer_words": 19,
       "median_answer_words": 4,
-      "source_sha256": "7130f1080563c06a046923d4f3b46996a68e573598dde7c7ace3998e09293fac",
+      "source_sha256": "35bb8f56db71ec0cef7eaf5ef64ed9a3e07de87b30436b6aa6c9fb16c6f1ed51",
       "visually_verified_cards": 0,
       "pdf_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
     },
@@ -102,7 +102,7 @@
       "tema": "el sistema oseo",
       "chapter": 8,
       "chapter_title": "El sistema óseo",
-      "count": 65,
+      "count": 20,
       "free_count": 0
     },
     {
@@ -586,5 +586,5 @@
       "free_count": 0
     }
   ],
-  "library_sha256": "152e2899735a56419283946d0e8b286c3bbad6cbf05b902507992bc7357a999b"
+  "library_sha256": "398360ad352446813d1ac755ac1ac249f800e0ee1447eb2a9c3dece9ccadbe90"
 }

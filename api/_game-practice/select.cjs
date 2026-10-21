@@ -27,7 +27,7 @@ function topicIds(ev) {
 }
 function selectQuestions(ev) {
  const ids=topicIds(ev),text=norm(ev.titulo),round=/\bronda (\d+)\b/.exec(text);
- const lecture=ids.length===1&&ids[0]==='morfo-01'&&!/^DEMO/i.test(String(ev.codigo||''));
+ const lecture=ids.length===1&&['morfo-01','morfo-08'].includes(ids[0])&&!/^DEMO/i.test(String(ev.codigo||''));
  let pool=bank.filter(b=>ids.includes(b.id)).flatMap(b=>b.questions);
  // Existing topical rounds retain their scope instead of adding the same bank twice.
  if(text.includes('sentidos')&&round)pool=pool.filter(q=>{const t=norm(q.text),second=/oido|auditiv|audicion|equilibrio|vision|retina|cristalino|cornea|coclea|pupila|luz|conos|bastones|macula|sonido|fotorreceptor/.test(t);return round[1]==='1'?!second&&/receptor|dolor|gusto|olfat|papila|nocicep|sabor/.test(t):second;});
@@ -40,5 +40,5 @@ function selectQuestions(ev) {
   return {id:hash.slice(0,8)+'-'+hash.slice(8,12)+'-'+hash.slice(12,16)+'-'+hash.slice(16,20)+'-'+hash.slice(20),evaluacion_id:ev.id,tipo:'mc',texto:q.text,opciones:q.options.map((text,index)=>({text,correct:index===q.answer})),multiple_correctas:false,orden:10000+i,puntos:1,temporizador:40,fuente:q.source,paginas:q.pages};
  });
 }
-function replacesQuestions(ev){return !/^DEMO/i.test(String(ev.codigo||''))&&topicIds(ev).join(',')==='morfo-01';}
+function replacesQuestions(ev){return !/^DEMO/i.test(String(ev.codigo||''))&&['morfo-01','morfo-08'].includes(topicIds(ev).join(','));}
 module.exports={norm,topicIds,selectQuestions,replacesQuestions};

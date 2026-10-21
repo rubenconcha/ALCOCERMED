@@ -1,1 +1,201 @@
-{"id":"morfo_08_sistema_oseo__04","title":"Caja torácica","topic":"Sistema óseo","sections":[{"title":"Costillas y esternón","color":"#e58929","groups":[{"title":"Costillas y esternón · explicación","items":[{"title":"Idea principal","text":"Constituyen parte de la caja torácica."},{"title":"Desarrollo","text":"La caja torácica o parrilla costal (figura 8.27) está integrada por las vértebras torácicas, el esternón y las costillas. Forma una cubierta de forma cónica para los pulmones y el corazón, y proporciona unión para la cintura escapular y las extremidades superiores. Tiene una base amplia y un ápice superior un poco más estrecho. Su borde inferior es el arco de las costillas inferiores, denominado margen costal.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":284,"bbox":[310.39,604.83,569.43,697.81]}}]}]},{"title":"Función","color":"#e58929","groups":[{"title":"Función · explicación","items":[{"title":"Idea principal","text":"Protege órganos y participa en mecánica respiratoria."},{"title":"Desarrollo","text":"Hay 12 vértebras torácicas o dorsales (T1 a T12), que corresponden a los 12 pares de costillas unidas a ellas; ninguna otra vértebra tiene costillas. La función de las torácicas consiste en dar soporte a la caja torácica que cubre el corazón y los pulmones.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":283,"bbox":[327.4,627.98,586.45,708.96]}}]}]},{"title":"Esternón","color":"#e58929","groups":[{"title":"Esternón · explicación","items":[{"title":"Idea principal","text":"Presenta manubrio, cuerpo y apófisis xifoides; participa en la unión anterior de la caja torácica."},{"title":"Desarrollo","text":"El esqueleto (figura 8.1) se divide en dos regiones: los huesos de la cabeza y el tronco (que en ocasiones se denominan esqueleto axial) y los huesos de las extremidades (esqueleto apendicular). Los primeros forman el eje de soporte central del cuerpo y están constituidos por el cráneo, los huesos pequeños del oído, el hioides, la columna vertebral y la caja torácica (también llamada parrilla costal), que incluye las costillas y el esternón.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":262,"bbox":[39.73,578.44,298.79,683.41]}}]}]},{"title":"Costillas","color":"#e58929","groups":[{"title":"Costillas · explicación","items":[{"title":"Idea principal","text":"Las verdaderas se unen directamente al esternón; las falsas incluyen uniones indirectas y las flotantes."},{"title":"Desarrollo","text":"La escápula (figura 8.31) recibe este nombre por su parecido con una espada o pala. Es una lámina triangular que se superpone en sentido posterior a la 2a. a 7a. costillas. Su unión directa con el tórax ocurre sólo por medio de músculos; se desliza por la caja torácica mientras el brazo y el hombro se mueven. Los tres lados del triángulo son los bordes superior, medial (vertebral) y lateral (axilar).","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":288,"bbox":[310.39,480.07,569.44,634.01]}}]}]}],"assets":{"image":"/assets/mindmaps/premium-illustrations/morfo_08_sistema_oseo__04.webp","alt":"FIGURA 8.27 La caja torácica y la cintura escapular (vista anterior).","download":"/api/mindmap?id=morfo_08_sistema_oseo__04&format=image","filename":"morfo_08_sistema_oseo__04-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":8,"pdfPages":[261,305],"imagePdfPage":263}}}
+{
+  "id": "morfo_08_sistema_oseo__04",
+  "title": "Tórax y miembro superior",
+  "topic": "Sistema óseo",
+  "content_revision": 3,
+  "lecture_slide_count": 42,
+  "lecture_slides": [
+    3,
+    4,
+    5,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "sections": [
+    {
+      "title": "Caja torácica y esternón",
+      "color": "#e58929",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Caja torácica y esternón",
+              "text": "La caja torácica incluye vértebras torácicas, costillas, cartílagos costales y esternón. Protege vísceras torácicas y participa en la mecánica respiratoria. El esternón tiene manubrio, cuerpo y apófisis xifoides. La incisura yugular es superior; el ángulo esternal marca la unión entre manubrio y cuerpo y ayuda a ubicar la segunda costilla.",
+              "lecture_slides": [
+                27
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 284,
+                "printedPage": 256,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Costillas: 7 · 5 · 2",
+              "text": "Las primeras siete parejas de costillas se llaman verdaderas porque su cartílago llega directamente al esternón. Las parejas ocho a doce son falsas: ocho a diez se unen indirectamente por cartílagos superiores, mientras once y doce carecen de unión anterior al esternón y son flotantes. La cabeza de una costilla se relaciona con los cuerpos vertebrales torácicos; el tubérculo se relaciona con la apófisis transversa cuando existe esa articulación.",
+              "lecture_slides": [
+                28
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 285,
+                "printedPage": 257,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Cintura escapular",
+              "text": "La cintura escapular está formada por clavícula y escápula. La clavícula se articula medialmente con el esternón y lateralmente con el acromion. La escápula presenta espina, acromion, apófisis coracoides y cavidad glenoidea. En vista posterior, la espina separa las fosas supraespinosa e infraespinosa. La cara anterior contiene la fosa subescapular.",
+              "lecture_slides": [
+                29
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 288,
+                "printedPage": 260,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Húmero: orienta sus extremos",
+      "color": "#e58929",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Húmero: orienta sus extremos",
+              "text": "La cabeza proximal del húmero se articula con la cavidad glenoidea de la escápula. En el extremo distal, el capítulo se relaciona con la cabeza del radio y la tróclea con la incisura troclear de la ulna. Los epicóndilos son referencias de inserción y posición. La fosa del olécranon se encuentra en la cara posterior distal.",
+              "lecture_slides": [
+                30
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 289,
+                "printedPage": 261,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Radio y ulna: mira el pulgar",
+              "text": "El radio ocupa el lado lateral del antebrazo en posición anatómica y se sitúa del lado del pulgar. La ulna o cúbito es medial y se relaciona con el lado del dedo pequeño. La cabeza radial es proximal; la ulna destaca proximalmente por olécranon e incisura troclear. La membrana interósea une ambas diáfisis. Al cambiar la posición del antebrazo, la relación visual puede variar; por ello se enseña primero la posición anatómica.",
+              "lecture_slides": [
+                31
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 290,
+                "printedPage": 262,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Mano: 8 + 5 + 14",
+              "text": "El carpo tiene ocho huesos. La fila proximal, de lateral a medial, comprende escafoides, semilunar, piramidal y pisiforme. La distal incluye trapecio, trapezoide, grande y ganchoso. El pisiforme es un sesamoideo relacionado con el tendón del flexor ulnar del carpo. El ganchoso presenta el gancho que contribuye a la fijación del retináculo flexor. Después se encuentran cinco metacarpianos y catorce falanges.",
+              "lecture_slides": [
+                32
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 291,
+                "printedPage": 263,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Superficies que articulan",
+      "color": "#e58929",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Superficies que articulan",
+              "text": "Un cóndilo es una prominencia articular redondeada. La cabeza es un extremo expandido que suele conectarse con la diáfisis mediante un cuello. Una carilla es una superficie articular relativamente lisa, plana o ligeramente curva. Compara el cóndilo occipital, la cabeza femoral y las carillas vertebrales. No todo relieve sirve para articulación: hay prominencias dedicadas a inserciones musculares o ligamentosas.",
+              "lecture_slides": [
+                3
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Relieves para reconocer e insertar",
+              "text": "La cresta es un borde estrecho y prominente, como la cresta ilíaca. La espina es una proyección puntiaguda. Los trocánteres son grandes prominencias propias del fémur; las tuberosidades suelen ser redondeadas y rugosas. Una línea es un relieve más discreto. El epicóndilo se sitúa por encima de un cóndilo. Utiliza estos términos para describir la figura antes de intentar memorizar el nombre completo.",
+              "lecture_slides": [
+                4
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Huecos, pasos y cavidades",
+              "text": "Una fosa es una depresión relativamente amplia; una fóvea es una pequeña depresión. El alvéolo es un alojamiento, como el de un diente. Un surco suele alojar un vaso, nervio o tendón. Un foramen es una abertura que permite el paso de estructuras; un conducto es un trayecto óseo. Un seno es una cavidad dentro de un hueso. En las imágenes se comparan la fosa mandibular, el alvéolo dental y el agujero magno.",
+              "lecture_slides": [
+                5
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_08_sistema_oseo.webp",
+    "alt": "Sistema óseo: relaciones del tema 8",
+    "download": "/api/mindmap?id=morfo_08_sistema_oseo__04&format=image",
+    "filename": "morfo_08_sistema_oseo__04-AlcocerMed.webp",
+    "source": {
+      "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+      "chapter": 8,
+      "pdfPages": [
+        264,
+        265,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292
+      ]
+    }
+  },
+  "review": {
+    "source_only": true,
+    "doctor_approved": false,
+    "date": "2026-10-21"
+  }
+}

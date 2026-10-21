@@ -25,24 +25,25 @@ function setup({ open = async () => {}, status = 200 } = {}) {
         fetch: async (url, options) => { requests.push({ url, options }); return { ok: status === 200, status, blob: async () => ({ type: 'application/pdf' }) }; }
     });
     const card = index => ids['resumenes-grid'].children[index].children[1].children[3];
-    return { ids, calls, requests, revoked, card };
+    const byTitle = title => ids['resumenes-grid'].children.find(n => n.children[1].children[1].textContent === title).children[1].children[3];
+    return { ids, calls, requests, revoked, card, byTitle };
 }
 test('public summaries render in the reader and keep the original download', async () => {
     const t = setup(); await t.card(0).click();
-    assert.equal(t.calls[0], '/resumenes/biologia-tema-1.pdf?v=20261019');
+    assert.equal(t.calls[0], '/resumenes/biologia-tema-1.pdf?v=20261021');
     assert.equal(t.requests.length, 0);
     assert.equal(t.ids['resumenes-loading'].hidden, true);
     assert.equal(t.ids['resumenes-download'].download, 'biologia-tema-1.pdf');
 });
 test('Sangre passes through authenticated access before its temporary URL reaches the reader', async () => {
-    const t = setup(); await t.card(17).click();
+    const t = setup(); await t.byTitle('Sangre').click();
     assert.equal(t.requests[0].url, '/api/resumen?file=morfofuncion-sangre');
     assert.equal(t.requests[0].options.headers.Authorization, 'Bearer test-token');
     assert.equal(t.requests[0].options.cache, 'no-store');
     assert.deepEqual(t.calls, ['blob:summary-test']);
 });
 test('a denied premium response never reaches the renderer', async () => {
-    const t = setup({ status: 403 }); await t.card(17).click();
+    const t = setup({ status: 403 }); await t.byTitle('Sangre').click();
     assert.equal(t.calls.length, 0);
     assert.match(t.ids['resumenes-loading'].textContent, /suscripción activa/);
     assert.equal(t.ids['resumenes-retry'].hidden, false);

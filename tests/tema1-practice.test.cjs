@@ -15,7 +15,7 @@ test('Topic 1 uses exactly 20 concise sourced cards; all other published cards r
  assert.equal(library.catalog.find(c=>c.tema===cards[0].tema).count,20);
  const {execFileSync}=require('node:child_process');
  const before=JSON.parse(execFileSync('git',['show','HEAD:api/_flashcards/library.json'],{maxBuffer:20*1024*1024,encoding:'utf8'}));
- const remaining=data=>data.cards.filter(c=>!(c.tema===cards[0].tema&&c.official_source==='morfo'));
+ const remaining=data=>data.cards.filter(c=>!(['temas principales de anatomia y fisiologia','el sistema oseo'].includes(c.tema)&&c.official_source==='morfo'));
  assert.deepEqual(remaining(library),remaining(before));
 });
 

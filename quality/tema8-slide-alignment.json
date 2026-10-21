@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-21",
+  "slide_count": 42,
+  "guide_pages": 45,
+  "flashcards": 20,
+  "evaluation": 20,
+  "rounds": [
+    10,
+    10
+  ],
+  "map_concepts": 24,
+  "original_deck_slides": 152,
+  "source_file": "Capitulo 8 SISTEMA OSEO SALADIN.pptx",
+  "official_pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+  "official_pdf_pages": [
+    262,
+    302
+  ],
+  "source_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+  "guide_route": "morfofuncion-tema-8",
+  "source_only": true,
+  "doctor_approved": false
+}

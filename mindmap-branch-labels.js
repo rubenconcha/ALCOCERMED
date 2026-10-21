@@ -80,3 +80,5 @@ window.MINDMAP_BRANCH_LABELS = {
   'salud_26_estadistica_excel.png': ['Preparar','Herramienta','Selección','Resultados','Revisión','Interpretar'],
   'salud_27_estadistica_spss.png': ['Preparar','Ingresar','Revisar','Analizar','Resultados','Interpretar']
 };
+
+window.MINDMAP_BRANCH_LABELS["morfo_08_sistema_oseo.png"] = ["Organización y lenguaje óseo", "Cráneo y cara", "Columna vertebral", "Tórax y cintura escapular", "Mano, antebrazo y pelvis", "Miembro inferior y apoyo"];

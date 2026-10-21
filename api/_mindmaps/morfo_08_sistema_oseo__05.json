@@ -1,1 +1,203 @@
-{"id":"morfo_08_sistema_oseo__05","title":"Miembro superior","topic":"Sistema óseo","sections":[{"title":"Cintura escapular","color":"#209caa","groups":[{"title":"Cintura escapular · explicación","items":[{"title":"Idea principal","text":"Conecta la extremidad con el tronco."},{"title":"Desarrollo","text":"La cintura escapular da soporte al brazo y lo vincula con los huesos del tronco y la cabeza. Consta de dos huesos en cada lado del cuerpo: la clavícula y la escápula (omóplato). El extremo medial de la clavícula se articula con el esternón en la articulación esternoclavicular, y su extremo lateral se articula con la escápula en la articulación acromioclavicular (véase la figura 8.27).","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":287,"bbox":[327.4,644.76,586.45,761.73]}}]}]},{"title":"Huesos","color":"#209caa","groups":[{"title":"Huesos · explicación","items":[{"title":"Idea principal","text":"Húmero, radio, ulna y huesos de la mano."},{"title":"Desarrollo","text":"Consta de dos partes principales: la bóveda craneal y la base. La primera no es un hueso único, sino el domo de la parte superior del cráneo; está integrada por partes de varios huesos que forman el techo y las paredes (véase la figura 8.6). En los cráneos para estudio suele aserrarse para que parte de ella pueda levantarse, de modo que permita explorar su interior. Esto revela la base (piso) de la cavidad craneana (véase la figura 8.5b), en la cual se observan tres pares de depresiones: las fosas craneales.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":270,"bbox":[39.69,382.96,298.74,499.94]}}]}]},{"title":"Clavícula y escápula","color":"#209caa","groups":[{"title":"Clavícula y escápula · explicación","items":[{"title":"Idea principal","text":"Clavícula y escápula conectan el miembro superior con el tronco."},{"title":"Desarrollo","text":"El esternón es una placa ósea anterior al corazón. Está subdividida en tres regiones: el mango, el cuerpo y la apófisis xifoides. El mango o manubrio es la parte superior ancha y tiene forma de nudo de corbata. Está situado al nivel de las vértebras T3 y T4. Tiene una muesca supraesternal (yugular) que puede palparse con facilidad entre las clavículas y las muescas claviculares derecha e izquierda, donde se articula con las clavículas.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":286,"bbox":[39.68,151.83,298.73,412.82]}}]}]},{"title":"Brazo, antebrazo y mano","color":"#209caa","groups":[{"title":"Brazo, antebrazo y mano · explicación","items":[{"title":"Idea principal","text":"Húmero; radio y cúbito; carpo, metacarpo y falanges forman sus segmentos."},{"title":"Desarrollo","text":"El radio tiene en su extremo proximal una cabeza discoide distintiva (figura 8.33). Cuando se gira el antebrazo y la palma se vuelve hacia el frente y hacia atrás, la superficie superior circular de este disco gira sobre la cabeza del húmero, y la orilla del disco gira sobre la muesca del radio del cúbito.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":290,"bbox":[39.69,690.82,298.73,759.81]}}]}]}],"assets":{"image":"/assets/mindmaps/premium-illustrations/morfo_08_sistema_oseo__05.webp","alt":"FIGURA 8.29 Articulación de la 6a. costilla con las vértebras T5 y T6. a) Vista anterior. Nótese la relación de las carillas articulares de la costilla con las carillas costales de las dos vértebras. b) Vista superior. Obsérvese que la costilla se articula con una vértebra en dos puntos: la carilla costal en el cuerpo vertebral y la carilla costal transversa en la apófisis transversa.","download":"/api/mindmap?id=morfo_08_sistema_oseo__05&format=image","filename":"morfo_08_sistema_oseo__05-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":8,"pdfPages":[261,305],"imagePdfPage":263}}}
+{
+  "id": "morfo_08_sistema_oseo__05",
+  "title": "Pelvis y miembro inferior",
+  "topic": "Sistema óseo",
+  "content_revision": 3,
+  "lecture_slide_count": 42,
+  "lecture_slides": [
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "sections": [
+    {
+      "title": "Coxal: tres piezas fusionadas",
+      "color": "#209caa",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Coxal: tres piezas fusionadas",
+              "text": "Cada coxal adulto resulta de la fusión de ilion, isquion y pubis. El ilion forma la región superior y presenta la cresta ilíaca. El isquion forma parte posteroinferior y su tuberosidad participa en el apoyo al sentarse. El pubis forma parte anterior y se relaciona con el pubis contralateral mediante la sínfisis. El acetábulo recibe la cabeza femoral.",
+              "lecture_slides": [
+                33
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 293,
+                "printedPage": 265,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Pelvis: entrada y salida",
+              "text": "La cintura pélvica comprende dos coxales. La pelvis ósea incluye además sacro y cóccix. El borde pélvico separa pelvis mayor y menor; la entrada pélvica conduce a la pelvis menor. La salida pélvica está en el límite inferior de la pelvis menor. La orientación de la figura debe permitir distinguir el contorno superior de entrada y el inferior de salida.",
+              "lecture_slides": [
+                34
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 293,
+                "printedPage": 265,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Pelvis: compara conjuntos de rasgos",
+              "text": "El texto compara rasgos típicos de pelvis masculina y femenina. La femenina suele ser más ancha y menos profunda, con entrada más oval o redondeada y arco púbico más amplio. La masculina suele ser más estrecha y profunda y presentar entrada de contorno más acorazonado. La tabla es una comparación de tendencias, no una regla para identificar de manera absoluta a una persona mediante un único rasgo.",
+              "lecture_slides": [
+                35
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 296,
+                "printedPage": 268,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fémur y patela",
+      "color": "#209caa",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Fémur y patela",
+              "text": "El fémur es el hueso del muslo. Su cabeza se articula con el acetábulo y su cuello conecta con el cuerpo. Los trocánteres mayor y menor son referencias de inserción. Distalmente se reconocen cóndilos y superficie patelar. La patela o rótula es un hueso sesamoideo incluido en el tendón del cuádriceps; su cara posterior articula con el fémur. El ligamento patelar continúa inferiormente hacia la tuberosidad tibial.",
+              "lecture_slides": [
+                36
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 295,
+                "printedPage": 267,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Tibia y fíbula: soporte y estabilidad",
+              "text": "La tibia es el hueso medial y robusto de la pierna. Sus cóndilos reciben los cóndilos femorales; la tuberosidad tibial se relaciona con el ligamento patelar. Su extremo distal forma el maléolo medial. La fíbula o peroné es lateral, delgada y participa en la estabilidad del tobillo; su extremo distal forma el maléolo lateral. No articula directamente con el fémur.",
+              "lecture_slides": [
+                37
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 297,
+                "printedPage": 269,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Pie: 7 + 5 + 14",
+              "text": "El tarso comprende talus o astrágalo, calcáneo, navicular, cuboides y tres cuneiformes: medial, intermedio y lateral. El talus se articula superiormente con la tibia y transmite cargas hacia el pie. El calcáneo forma el talón. Los metatarsianos se numeran I a V de medial a lateral. El dedo gordo tiene dos falanges y los demás, tres cada uno.",
+              "lecture_slides": [
+                38
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 298,
+                "printedPage": 270,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Arcos del pie: tres direcciones",
+      "color": "#209caa",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Arcos del pie: tres direcciones",
+              "text": "El arco longitudinal medial va del talón al lado del dedo gordo e incluye calcáneo, talus, navicular, cuneiformes y los primeros metatarsianos. El longitudinal lateral sigue el lado del dedo pequeño y comprende calcáneo, cuboides y metatarsianos laterales. El arco transverso cruza la región del mediopié. Los ligamentos contribuyen al mantenimiento de los arcos, que distribuyen las cargas y aportan adaptación al apoyo.",
+              "lecture_slides": [
+                39
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 299,
+                "printedPage": 271,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Bipedestación: relaciona todo el trayecto",
+              "text": "El capítulo relaciona la bipedestación con cambios en la base craneal, curvaturas vertebrales, forma de la pelvis, orientación del miembro inferior y arcos del pie. La comparación permite seguir el soporte desde el tronco hacia la pelvis, el fémur y el pie. La rotación del miembro inferior durante el desarrollo ayuda a comprender la orientación de rodilla y pie. La exposición prioriza las relaciones anatómicas visibles sobre detalles evolutivos secundarios.",
+              "lecture_slides": [
+                40
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 299,
+                "printedPage": 271,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Reconocer antes de memorizar",
+              "text": "El cierre integra tres ejemplos ya estudiados: una vértebra, la mandíbula y el pie. En cada figura se aplica el mismo procedimiento: identificar región y vista, localizar una referencia, nombrar la estructura y relacionarla con una articulación, un trayecto o una función. Esta secuencia organiza el recuerdo y prepara el simulacro de identificación. No introduce contenido nuevo ni una lista adicional.",
+              "lecture_slides": [
+                41
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_08_sistema_oseo.webp",
+    "alt": "Sistema óseo: relaciones del tema 8",
+    "download": "/api/mindmap?id=morfo_08_sistema_oseo__05&format=image",
+    "filename": "morfo_08_sistema_oseo__05-AlcocerMed.webp",
+    "source": {
+      "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+      "chapter": 8,
+      "pdfPages": [
+        264,
+        277,
+        281,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302
+      ]
+    }
+  },
+  "review": {
+    "source_only": true,
+    "doctor_approved": false,
+    "date": "2026-10-21"
+  }
+}

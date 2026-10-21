@@ -1,1 +1,203 @@
-{"id":"morfo_08_sistema_oseo__03","title":"Columna","topic":"Sistema óseo","sections":[{"title":"Vértebras","color":"#8c59b0","groups":[{"title":"Vértebras · explicación","items":[{"title":"Idea principal","text":"Forman el eje del tronco."},{"title":"Desarrollo","text":"El esqueleto (figura 8.1) se divide en dos regiones: los huesos de la cabeza y el tronco (que en ocasiones se denominan esqueleto axial) y los huesos de las extremidades (esqueleto apendicular). Los primeros forman el eje de soporte central del cuerpo y están constituidos por el cráneo, los huesos pequeños del oído, el hioides, la columna vertebral y la caja torácica (también llamada parrilla costal), que incluye las costillas y el esternón.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":262,"bbox":[39.73,578.44,298.79,683.41]}}]}]},{"title":"Protección y soporte","color":"#8c59b0","groups":[{"title":"Protección y soporte · explicación","items":[{"title":"Idea principal","text":"Protege la médula y transmite cargas."},{"title":"Desarrollo","text":"La columna vertebral da soporte al cráneo y el tronco, permite su movimiento, protege la médula espinal y absorbe tensiones producidas por caminar, correr y levantar objetos. También proporciona unión para las extremidades, la caja torácica y los músculos posturales. Aunque suele llamársele espina dorsal, no consta de un hueso único sino de una cadena de 33 vértebras que tienen discos intervertebrales de fibrocartílago entre la mayor parte de ellas.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":278,"bbox":[310.39,429.05,569.44,546.03]}}]}]},{"title":"Regiones","color":"#8c59b0","groups":[{"title":"Regiones · explicación","items":[{"title":"Idea principal","text":"Cervical, torácica, lumbar, sacra y coccígea; las vértebras muestran diferencias según su función."},{"title":"Desarrollo","text":"Ahora es momento de considerar las diferencias que hay entre las vértebras de una región de la columna vertebral y otra, además de las que mantienen con la anatomía generalizada que se acaba de describir. El conocimiento de estas variaciones permite identificar la región de la espina dorsal de la que se tomó una vértebra aislada. Aún más importante es que estas variaciones en la forma reflejan diferencias funcionales entre las vértebras.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":281,"bbox":[327.4,300.95,586.44,381.94]}}]}]},{"title":"Discos intervertebrales","color":"#8c59b0","groups":[{"title":"Discos intervertebrales · explicación","items":[{"title":"Idea principal","text":"Amortiguan y permiten movimiento entre cuerpos vertebrales; combinan anillo fibroso y núcleo pulposo."},{"title":"Desarrollo","text":"Un disco intervertebral es una almohadilla cartilaginosa que se localiza entre los cuerpos de dos vértebras adyacentes. Está formado por un núcleo pulposo interno de consistencia gelatinosa, rodeado por un anillo de fibrocartílago, el anillo fibroso (figura 8.22b). Hay 23 discos; el primero se encuentra entre las vértebras cervicales 2 y 3 y el último entre la última vértebra lumbar y el sacro.","source":{"book":"Saladin: Anatomía y fisiología","pdfPage":281,"bbox":[327.4,87.95,586.44,252.92]}}]}]}],"assets":{"image":"/assets/mindmaps/premium-illustrations/morfo_08_sistema_oseo__03.webp","alt":"FIGURA 8.18 La columna vertebral. FIGURA 8.19 Curvaturas de la columna vertebral en el adulto.","download":"/api/mindmap?id=morfo_08_sistema_oseo__03&format=image","filename":"morfo_08_sistema_oseo__03-Prepa-Ben-Carson.webp","source":{"book":"Saladin: Anatomía y fisiología","chapter":8,"pdfPages":[261,305],"imagePdfPage":263}}}
+{
+  "id": "morfo_08_sistema_oseo__03",
+  "title": "Columna vertebral",
+  "topic": "Sistema óseo",
+  "content_revision": 3,
+  "lecture_slide_count": 42,
+  "lecture_slides": [
+    11,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    40
+  ],
+  "sections": [
+    {
+      "title": "Columna: 7 · 12 · 5",
+      "color": "#8c59b0",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Columna: 7 · 12 · 5",
+              "text": "La columna típica deriva de 33 vértebras: siete cervicales, doce torácicas, cinco lumbares, cinco sacras y habitualmente cuatro coccígeas. En el adulto, las sacras se fusionan en el sacro y las coccígeas forman el cóccix, por lo que el recuento habitual de huesos de la columna es 26. La columna sostiene cabeza y tronco, protege la médula y participa en la absorción de cargas.",
+              "lecture_slides": [
+                20
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 278,
+                "printedPage": 250,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Curvas que aparecen al crecer",
+              "text": "En el feto predomina una curvatura en C. Las curvaturas torácica y pélvica conservan la orientación primaria. Las cervical y lumbar son secundarias y se desarrollan relacionadas con sostener la cabeza y la postura erguida. La comparación de la figura fetal con la adulta permite comprender la transición sin memorizar solo una lista.",
+              "lecture_slides": [
+                21
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 279,
+                "printedPage": 251,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Vértebra típica: soporte y protección",
+              "text": "Una vértebra típica presenta un cuerpo anterior y un arco posterior formado por pedículos y láminas. Ambos delimitan el agujero vertebral. La sucesión de agujeros forma el conducto vertebral. Las apófisis espinosa y transversas se proyectan desde el arco; las articulares relacionan vértebras adyacentes. Los agujeros intervertebrales quedan entre vértebras vecinas y permiten el paso de nervios espinales.",
+              "lecture_slides": [
+                22
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 279,
+                "printedPage": 251,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Disco: anillo y núcleo",
+      "color": "#8c59b0",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Disco: anillo y núcleo",
+              "text": "Los discos intervertebrales se sitúan entre cuerpos vertebrales adyacentes. Cada disco contiene un núcleo pulposo de consistencia gelatinosa rodeado por un anillo fibroso. El texto describe 23 discos, desde C2–C3 hasta la unión lumbosacra. Su estructura contribuye a unir vértebras, soportar peso y absorber choques. Una rotura del anillo puede permitir la herniación del núcleo y comprimir estructuras nerviosas.",
+              "lecture_slides": [
+                23
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 281,
+                "printedPage": 253,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Atlas y axis: sostener y girar",
+              "text": "El atlas carece de cuerpo y recibe los cóndilos occipitales en sus carillas superiores. La articulación atlantooccipital permite el movimiento de asentir. El axis presenta el diente o apófisis odontoides, relacionado con la rotación del atlas y la cabeza. La articulación atlantoaxial participa en el gesto de negar. Las vértebras cervicales se reconocen además por sus agujeros transversos.",
+              "lecture_slides": [
+                24
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 281,
+                "printedPage": 253,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Torácicas y lumbares",
+              "text": "Las vértebras torácicas presentan superficies articulares para las costillas. Sus apófisis espinosas suelen ser largas y dirigirse inferiormente. Las lumbares tienen cuerpos grandes adaptados al soporte de peso y apófisis espinosas más gruesas. No es suficiente identificar una región solo por el tamaño de una imagen: compara carillas costales, forma del cuerpo y apófisis.",
+              "lecture_slides": [
+                25
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 282,
+                "printedPage": 254,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sacro y cóccix",
+      "color": "#8c59b0",
+      "groups": [
+        {
+          "title": "Conceptos de la clase",
+          "relation": "se relaciona con",
+          "items": [
+            {
+              "title": "Sacro y cóccix",
+              "text": "El sacro deriva de cinco vértebras fusionadas y se articula superiormente con L5 y lateralmente con los coxales. Presenta promontorio, conducto sacro y agujeros sacros por donde pasan estructuras nerviosas. El cóccix se sitúa inferior al sacro y suele derivar de cuatro segmentos, con variabilidad individual. La vista lateral muestra su continuidad y su inclinación.",
+              "lecture_slides": [
+                26
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 284,
+                "printedPage": 256,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Occipital: conexión con la columna",
+              "text": "El occipital forma la parte posterior e inferior del cráneo. El agujero magno permite la continuidad entre médula espinal y encéfalo y el paso de vasos y otras estructuras descritas en la tabla de forámenes. Los cóndilos occipitales se articulan con las carillas superiores del atlas. El conducto del hipogloso está relacionado con el nervio del mismo nombre.",
+              "lecture_slides": [
+                11
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 272,
+                "printedPage": 244,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            },
+            {
+              "title": "Bipedestación: relaciona todo el trayecto",
+              "text": "El capítulo relaciona la bipedestación con cambios en la base craneal, curvaturas vertebrales, forma de la pelvis, orientación del miembro inferior y arcos del pie. La comparación permite seguir el soporte desde el tronco hacia la pelvis, el fémur y el pie. La rotación del miembro inferior durante el desarrollo ayuda a comprender la orientación de rodilla y pie. La exposición prioriza las relaciones anatómicas visibles sobre detalles evolutivos secundarios.",
+              "lecture_slides": [
+                40
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 299,
+                "printedPage": 271,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "image": "/assets/mindmaps/illustrations/morfo_08_sistema_oseo.webp",
+    "alt": "Sistema óseo: relaciones del tema 8",
+    "download": "/api/mindmap?id=morfo_08_sistema_oseo__03&format=image",
+    "filename": "morfo_08_sistema_oseo__03-AlcocerMed.webp",
+    "source": {
+      "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+      "chapter": 8,
+      "pdfPages": [
+        272,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        299,
+        300,
+        301,
+        302
+      ]
+    }
+  },
+  "review": {
+    "source_only": true,
+    "doctor_approved": false,
+    "date": "2026-10-21"
+  }
+}
