@@ -168,9 +168,9 @@ function showContentTab(btn, tabId) {
 }
 
 async function refreshAdminData() {
-  const active = document.querySelector('.admin-section.active');
   setText('last-updated', 'actualizando...');
   await loadAllData();
+  const active = document.querySelector('.admin-section.active');
   renderCurrentSection(active ? active.id.replace('section-', '') : 'dashboard');
 }
 
@@ -189,6 +189,7 @@ function renderCurrentSection(section) {
 async function loadAllData() {
   const sb = getSupabase();
   cachedData.errors = [];
+  cachedData.loading = true;
 
   const [devices, sims, banco, videos, flashcards, directory, activity, games, gameCatalog] = await Promise.all([
     safeSelect(sb, 'user_devices', '*'),
@@ -211,6 +212,7 @@ async function loadAllData() {
   cachedData.userMap = buildUserMap(directory, cachedData);
   cachedData.estudiantes = buildStudentRows(cachedData);
 
+  cachedData.loading = false;
   setText('last-updated', 'actualizado: ' + new Date().toLocaleTimeString());
   return cachedData;
 }

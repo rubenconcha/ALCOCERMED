@@ -63,6 +63,7 @@
     if (!currentAdmin || !currentExam) return;
     const error = (cachedData.errors || []).find(e => e.table === 'resultados_simulacros');
     const target = $('topic-report-results');target.replaceChildren();
+    if(cachedData.loading){currentModel=null;$('topic-report-stats').replaceChildren();$('topic-report-export').disabled=true;$('topic-report-status').textContent='Cargando las entregas. Espera a que termine la consulta.';return;}
     $('topic-report-export').disabled=!!error;
     if(error){currentModel=null;$('topic-report-stats').replaceChildren();$('topic-report-status').textContent='No se pudieron consultar las entregas. Pulsa Actualizar. No se puede determinar quién entregó hasta recuperar los datos.';return;}
     const from=$('topic-report-from').value,to=$('topic-report-to').value;

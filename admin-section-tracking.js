@@ -40,6 +40,7 @@
     $('tracking-general').hidden=evalOnly;
     if(evalOnly)return;
     const target=$('tracking-results');target.replaceChildren();
+    if(cachedData.loading){visible=[];$('tracking-export').disabled=true;$('tracking-status').textContent='Cargando los registros de esta sección…';return;}
     const from=$('tracking-from').value,to=$('tracking-to').value;
     if(from&&to&&from>to){$('tracking-status').textContent='La fecha inicial debe ser anterior o igual a la final.';visible=[];$('tracking-export').disabled=true;return;}
     const sources={examenes:['resultados_simulacros','campus_section_activity'],simulacros:['resultados_simulacros','campus_section_activity'],banco:['resultados_banco'],flashcards:['progreso_flashcards','campus_section_activity'],juegos:['evaluacion_resultados','evaluaciones'],historico:['resultados_simulacros']};
