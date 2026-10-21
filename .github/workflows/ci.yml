@@ -23,6 +23,8 @@ jobs:
         run: |
           node --check script.js
           node --check admin.js
+          node --check question-review.js
+          node --test tests/question-review.test.cjs
           node --check admin-section-tracking.js
           node --check campus-section-tracking.js
           node --test tests/admin-section-tracking.test.cjs

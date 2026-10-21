@@ -81,14 +81,15 @@
     });
     target.append(table(['Estudiante','Entrega','Intentos','Última nota','Mejor nota','Aciertos / preguntas','Última entrega','Seguimiento'],rows));
   }
+  function reviewButton(r){const button=text('button','Revisar preguntas','btn btn-secondary');button.type='button';button.onclick=()=>QuestionReview.open('resultados_simulacros',r.id,r.simulacro_titulo,r.question_review);return button;}
   function detail(s) {
     $('topic-report-person').textContent=s.display;
     const body=$('topic-report-detail');body.replaceChildren();body.append(text('p',(currentExam.subjectLabel||currentExam.subject||'Todas las materias')+' · '+currentExam.title));
     if(s.attempts.length){
       const first=s.attempts.at(-1),last=s.attempts[0];
       if(s.attempts.length>1 && currentExam.id!=='all'){const delta=Math.round(score(last)-score(first));body.append(text('p',total(first)===total(last)?'Cambio entre primera y última entrega: '+(delta>0?'+':'')+delta+' puntos porcentuales.':'Hay entregas de distinta cantidad de preguntas. Consulta cada intento; no se calcula un avance entre esas versiones.'));}
-      body.append(table(['Evaluación','Fecha','Nota','Correctas','Incorrectas','Sin responder','Preguntas','Tiempo'],s.attempts.map(r=>[r.simulacro_titulo||'Evaluación',dateLabel(r.created_at),percent(score(r)),Number(r.correctas||0),Number(r.incorrectas||0),Number(r.sin_respuesta||0),total(r),Math.floor(Number(r.tiempo_segundos||0)/60)+' min '+Number(r.tiempo_segundos||0)%60+' s'])));
-      body.append(text('p','Estos registros conservan el resultado global. Las respuestas elegidas en cada pregunta no están almacenadas en los intentos históricos.','topic-report-note'));
+      body.append(table(['Evaluación','Fecha','Nota','Correctas','Incorrectas','Sin responder','Preguntas','Tiempo','Respuestas'],s.attempts.map(r=>[r.simulacro_titulo||'Evaluación',dateLabel(r.created_at),percent(score(r)),Number(r.correctas||0),Number(r.incorrectas||0),Number(r.sin_respuesta||0),total(r),Math.floor(Number(r.tiempo_segundos||0)/60)+' min '+Number(r.tiempo_segundos||0)%60+' s',reviewButton(r)])));
+      body.append(text('p','Las nuevas entregas permiten revisar las respuestas por pregunta. Las respuestas elegidas en cada pregunta no están almacenadas en los intentos históricos.','topic-report-note'));
     }else body.append(text('p','No hay una entrega guardada de este tema para esta cuenta y el período seleccionado. Esto no permite saber si abrió la evaluación sin entregarla.'));
     const profile=text('button','Abrir perfil completo','btn btn-secondary');profile.type='button';profile.addEventListener('click',()=>{$('topic-report-dialog').close();verDetalleEstudiante(s.user_id);});body.append(profile);
     $('topic-report-dialog').showModal();

@@ -97,7 +97,7 @@ async function adminLogout() {
     console.warn('[Admin] error cerrando sesión:', err);
   }
   currentAdmin = null;
-  window.AdminTopicResults?.clear(); window.AdminSectionTracking?.clear();
+  window.QuestionReview?.clear(); window.AdminTopicResults?.clear(); window.AdminSectionTracking?.clear();
   cachedData = { devices: [], sims: [], banco: [], videos: [], estudiantes: [], userMap: {}, errors: [] };
   document.getElementById('admin-login-screen').classList.remove('hidden');
   document.getElementById('admin-app').style.display = 'none';
@@ -193,8 +193,8 @@ async function loadAllData() {
 
   const [devices, sims, banco, videos, flashcards, directory, activity, games, gameCatalog] = await Promise.all([
     safeSelect(sb, 'user_devices', '*'),
-    safeSelect(sb, 'resultados_simulacros', '*', {paged:true}),
-    safeSelect(sb, 'resultados_banco', '*', {paged:true}),
+    safeSelect(sb, 'resultados_simulacros', 'id,user_id,user_email,user_name,simulacro_titulo,materia,porcentaje,correctas,incorrectas,sin_respuesta,tiempo_segundos,menu_section,created_at', {paged:true}),
+    safeSelect(sb, 'resultados_banco', 'id,user_id,user_email,user_name,materia,tema,dificultad,total,correctas,incorrectas,porcentaje,created_at', {paged:true}),
     safeSelect(sb, 'progreso_videoclases', '*'),
     safeSelect(sb, 'progreso_flashcards', '*', {paged:true,order:'user_id'}),
     getUserDirectory(sb),
@@ -697,7 +697,7 @@ async function verDetalleEstudiante(userId) {
 function closeModal(e) {
   if (!e || !e.target || e.target.id === 'modal-estudiante' || e.currentTarget?.classList?.contains('modal-close')) {
     const modal = document.getElementById('modal-estudiante');
-    if (modal) modal.classList.remove('open');
+    if (modal) { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
   }
 }
 

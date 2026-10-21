@@ -2600,6 +2600,7 @@ window.finalizarBanco = function () {
 
     // Sincronizar con la nube para el Panel de Admin
     guardarResultadoBancoEnNube({
+        questionReview: window.QuestionReview?.snapshot(bancoState.preguntas,bancoState.answers,campo,function(q){const raw=String(campo(q,'respuesta_correcta')||'A').trim().toUpperCase();return [/^[A-E]$/.test(raw)?'ABCDE'.indexOf(raw):parseInt(raw,10)-1];}) || null,
         materia: bancoState.selectedMateria || 'todas',
         tema: 'práctica general',
         dificultad: bancoState.selectedDificultad || 'todos',
@@ -3586,6 +3587,7 @@ window.finalizarSimulacro = function () {
 
     // Sincronizar con la nube para el Panel de Admin
     guardarResultadoSimulacroEnNube({
+        questionReview: window.QuestionReview?.snapshot(simState.preguntas,simState.answers,campo,simAcceptedAnswerIndices) || null,
         menuSection: simState.mode === 'tema' ? 'evaluaciones' : simState.mode === 'pasado' && !simState.entranceOrigin ? 'examenes' : 'simulacros',
         titulo: (simState.mode === 'oficial' || simState.mode === 'pasado' || simState.mode === 'tema') ? (simState.selectedExamen || 'Simulacro preparado') : 'Simulacro personalizado',
         materia: (simState.mode === 'materia' || simState.mode === 'tema') ? simState.selectedMateria :
@@ -4412,7 +4414,8 @@ async function guardarResultadoSimulacroEnNube(resultado) {
             incorrectas: Math.round(Number(resultado.incorrectas || 0)),
             sin_respuesta: Math.round(Number(resultado.sinRespuesta || 0)),
             tiempo_segundos: Math.round(Number(resultado.tiempoSegundos || 0)),
-            menu_section: resultado.menuSection || 'simulacros'
+            menu_section: resultado.menuSection || 'simulacros',
+            question_review: resultado.questionReview || null
         };
         let { error } = await sb.from('resultados_simulacros').insert(payload);
         if (error?.code === 'PGRST204' && /menu_section/.test(error.message)) { delete payload.menu_section; ({error} = await sb.from('resultados_simulacros').insert(payload)); }
@@ -4436,7 +4439,8 @@ async function guardarResultadoBancoEnNube(resultado) {
             total: Math.round(Number(resultado.total || 0)),
             correctas: Math.round(Number(resultado.correctas || 0)),
             incorrectas: Math.round(Number(resultado.incorrectas || 0)),
-            porcentaje: Math.round(Number(resultado.porcentaje || 0))
+            porcentaje: Math.round(Number(resultado.porcentaje || 0)),
+            question_review: resultado.questionReview || null
         });
         if (error) console.error('[Banco] Error guardando resultado:', error.message);
     } catch (e) {
