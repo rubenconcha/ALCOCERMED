@@ -5467,16 +5467,21 @@ function showQuizResults() {
         loadLeaderboard(evalIdForBoard);
     }
 
-    // En modo test, mostrar mensaje de confirmación sin leaderboard
+    // Keep the podium structure recoverable when a test is followed by a game.
     if (isTestMode) {
         var podiumEl = document.getElementById('quiz-podium');
         if (podiumEl) {
             podiumEl.style.display = 'block';
-            podiumEl.innerHTML = '<div style="text-align:center;padding:32px;background:rgba(37,99,235,0.1);border:2px solid rgba(37,99,235,0.25);border-radius:20px;margin-bottom:24px;">' +
-                '<div style="font-size:3rem;margin-bottom:12px;">📋</div>' +
-                '<h3 style="color:#fff;font-size:1.3rem;font-weight:900;margin-bottom:8px;">Examen Enviado</h3>' +
-                '<p style="color:rgba(255,255,255,0.6);font-size:0.95rem;font-weight:500;margin:0;">Tu profesor revisará los resultados. ¡Buen trabajo!</p>' +
-                '</div>';
+            setDailyRankingVisible(false);
+            var sent = document.getElementById('quiz-exam-confirmation');
+            if (!sent) {
+                sent = document.createElement('div');
+                sent.id = 'quiz-exam-confirmation';
+                sent.className = 'quiz-ranking-notice';
+                sent.innerHTML = '<h3>📋 Examen enviado</h3><p>Tu profesor revisará los resultados. ¡Buen trabajo!</p>';
+                podiumEl.appendChild(sent);
+            }
+            sent.hidden = false;
         }
     }
 
@@ -5489,6 +5494,16 @@ function showQuizResults() {
             breakdownEl2.innerHTML = teamBadge + breakdownEl2.innerHTML;
         }
     }
+}
+
+function setDailyRankingVisible(visible) {
+    var podium = document.getElementById('quiz-podium');
+    if (!podium) return;
+    podium.querySelectorAll('.quiz-podium-arena, .quiz-daily-ranking-list').forEach(function(el) { el.hidden = !visible; el.style.display = visible ? '' : 'none'; });
+    var sent = document.getElementById('quiz-exam-confirmation');
+    if (sent && visible) sent.hidden = true;
+    var link = document.getElementById('quiz-result-top-link');
+    if (link && !visible) link.hidden = true;
 }
 
 function prepareDailyLeaderboard(rows) {
@@ -5523,6 +5538,7 @@ function showDailyRankingError(message) {
 }
 
 function loadLeaderboard(evalId) {
+    setDailyRankingVisible(true);
     if (!window.studentLeaderboardInterval) {
         window.studentLeaderboardInterval = setInterval(function() {
             loadLeaderboard(evalId);
