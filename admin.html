@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin-topic-results.css?v=1">
 </head>
 <body>
 
@@ -234,6 +235,23 @@
                  EVALUACIONES (BANCO DE PREGUNTAS)
                  ══════════════════════════════════════════════ -->
             <section id="section-evaluaciones" class="admin-section">
+                <section id="topic-report" aria-labelledby="topic-report-title">
+                    <h2 id="topic-report-title">Evaluaciones por tema · seguimiento individual</h2>
+                    <p>Consulta las entregas guardadas de cada tema y abre el historial de cada estudiante.</p>
+                    <div class="topic-report-filters">
+                        <label>Materia<select id="topic-report-subject"><option value="MORFOFUNCION">Morfofunción</option><option value="BIOLOGIA CELULAR">Biología celular</option><option value="SALUD PUBLICA">Educación en Salud e Investigación</option></select></label>
+                        <label>Tema<select id="topic-report-topic"><option value="">Cargando temas…</option></select></label>
+                        <label>Desde<input id="topic-report-from" type="date"></label>
+                        <label>Hasta<input id="topic-report-to" type="date"></label>
+                        <label>Buscar estudiante<input id="topic-report-search" type="search" placeholder="Nombre o correo"></label>
+                        <label>Entrega<select id="topic-report-state"><option value="">Todos</option><option value="delivered">Con entrega</option><option value="pending">Sin entrega registrada</option></select></label>
+                    </div>
+                    <div id="topic-report-stats"></div>
+                    <p class="topic-report-note">«Sin entrega registrada» significa que no se encontró un resultado guardado para este tema y período; no indica si el estudiante abrió la evaluación. El listado incluye las cuentas conocidas por el panel y excluye las administradoras. Los contadores corresponden al tema y período; la búsqueda filtra el listado.</p>
+                    <div class="topic-report-actions"><p id="topic-report-status" role="status">Cargando seguimiento…</p><button id="topic-report-export" class="btn btn-secondary" type="button" disabled>Descargar listado CSV</button></div>
+                    <div id="topic-report-results"></div>
+                </section>
+                <details class="topic-report-bank"><summary>Prácticas del banco de preguntas</summary>
                 <div class="two-col-grid">
                     <div class="chart-card">
                         <div class="chart-header"><div><div class="chart-title"><i class="fas fa-layer-group" style="color:var(--orange);"></i> progreso por dificultad</div><div class="chart-subtitle">tasa de acierto según nivel</div></div></div>
@@ -264,6 +282,7 @@
                         </table>
                     </div>
                 </div>
+                </details>
             </section>
 
             <!-- ══════════════════════════════════════════════
@@ -372,9 +391,10 @@
 </div>
 
 <!-- Toast container -->
+<dialog id="topic-report-dialog" aria-labelledby="topic-report-person"><header><h2 id="topic-report-person">Historial de evaluaciones</h2><button id="topic-report-close" class="btn btn-secondary" type="button">Cerrar historial</button></header><div id="topic-report-detail"></div></dialog>
 <div class="toast-container" id="toast-container"></div>
 
 <script src="config.js"></script>
-<script src="admin.js"></script><script src="membership-offer.js?v=1"></script><script src="membership-admin.js?v=2"></script><script src="atlas-course-admin.js?v=1"></script>
+<script src="admin.js?v=2"></script><script src="admin-topic-results.js?v=1"></script><script src="membership-offer.js?v=1"></script><script src="membership-admin.js?v=2"></script><script src="atlas-course-admin.js?v=1"></script>
 </body>
 </html>

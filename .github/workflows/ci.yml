@@ -23,6 +23,8 @@ jobs:
         run: |
           node --check script.js
           node --check admin.js
+          node --check admin-topic-results.js
+          node --test tests/admin-topic-results.test.cjs
           node --check juegos/app.js
           node --check juegos/editor.js
           node --check juegos/encefalo.js

@@ -97,6 +97,7 @@ async function adminLogout() {
     console.warn('[Admin] error cerrando sesión:', err);
   }
   currentAdmin = null;
+  window.AdminTopicResults?.clear();
   cachedData = { devices: [], sims: [], banco: [], videos: [], estudiantes: [], userMap: {}, errors: [] };
   document.getElementById('admin-login-screen').classList.remove('hidden');
   document.getElementById('admin-app').style.display = 'none';
@@ -136,7 +137,7 @@ const SECTION_TITLES = {
   dashboard: ['dashboard', 'resumen general de la plataforma'],
   estudiantes: ['estudiantes', 'seguimiento individual de cada alumno'],
   simulacros: ['simulacros', 'resultados y rendimiento de exámenes'],
-  evaluaciones: ['evaluaciones', 'historial del banco de preguntas'],
+  evaluaciones: ['evaluaciones', 'seguimiento por tema y por estudiante'],
   videoclases: ['videoclases', 'tracking de visualización de contenido'],
   contenido: ['gestión de contenido', 'administra flashcards, banco, videos y simulacros']
 };
@@ -177,7 +178,7 @@ function renderCurrentSection(section) {
   if (section === 'dashboard') renderDashboard();
   else if (section === 'estudiantes') renderEstudiantes(cachedData.estudiantes);
   else if (section === 'simulacros') renderSimulacros(cachedData.sims);
-  else if (section === 'evaluaciones') renderEvaluaciones(cachedData.banco);
+  else if (section === 'evaluaciones') { renderEvaluaciones(cachedData.banco); window.AdminTopicResults?.render(); }
   else if (section === 'videoclases') renderVideoclases(cachedData.videos);
   else if (section === 'contenido') loadContenido(getSupabase());
 }
@@ -191,7 +192,7 @@ async function loadAllData() {
 
   const [devices, sims, banco, videos, flashcards, directory] = await Promise.all([
     safeSelect(sb, 'user_devices', '*'),
-    safeSelect(sb, 'resultados_simulacros', '*'),
+    safeSelect(sb, 'resultados_simulacros', '*', {paged:true}),
     safeSelect(sb, 'resultados_banco', '*'),
     safeSelect(sb, 'progreso_videoclases', '*'),
     safeSelect(sb, 'progreso_flashcards', '*'),
@@ -212,15 +213,22 @@ async function loadAllData() {
 
 async function safeSelect(sb, table, select, options = {}) {
   try {
-    let query = sb.from(table).select(select);
-    if (options.limit) query = query.limit(options.limit);
-    const { data, error } = await query;
-    if (error) {
-      cachedData.errors.push({ table, message: error.message });
-      console.warn(`[Admin] ${table}:`, error.message);
-      return [];
-    }
-    return Array.isArray(data) ? data : [];
+    const rows = [], pageSize = 500;
+    let page;
+    do {
+      let query = sb.from(table).select(select);
+      if (options.limit) query = query.limit(options.limit);
+      if (options.paged) query = query.order('created_at', {ascending:true}).range(rows.length, rows.length + pageSize - 1);
+      const { data, error } = await query;
+      if (error) {
+        cachedData.errors.push({ table, message: error.message });
+        console.warn(`[Admin] ${table}:`, error.message);
+        return [];
+      }
+      page = Array.isArray(data) ? data : [];
+      rows.push(...page);
+    } while(options.paged && page.length === pageSize);
+    return rows;
   } catch (err) {
     cachedData.errors.push({ table, message: err.message });
     console.error(`[Admin] ${table}:`, err);
@@ -287,6 +295,7 @@ function buildUserMap(directory, data) {
 
 function buildStudentRows(data) {
   const ids = new Set();
+  Object.keys(data.userMap || {}).forEach(id => ids.add(String(id)));
   [...data.devices, ...data.sims, ...data.banco, ...data.videos, ...(data.flashcards || [])].forEach(r => {
     if (r.user_id) ids.add(String(r.user_id));
   });
@@ -709,9 +718,9 @@ async function verDetalleEstudiante(userId) {
           ${progressItem('videoclases', `${vids.filter(v => v.visto).length} vistas de ${vids.length}`, vids.length ? Math.round(vids.filter(v => v.visto).length / vids.length * 100) : 0, 'purple')}
         </div>
       </div>
-      ${detailTable('últimos simulacros', ['examen','materia','nota','fecha'], sims.slice(0,8).map(r => [r.simulacro_titulo || '—', r.materia || 'general', renderScore(number(r.porcentaje ?? r.score)), formatDateShort(r.created_at)]))}
-      ${detailTable('banco de preguntas', ['materia','tema','correctas','nota','fecha'], bancos.slice(0,8).map(r => [r.materia || '—', r.tema || '—', `${number(r.correctas)}/${number(r.total)}`, renderScore(number(r.porcentaje ?? pct(r.correctas, r.total))), formatDateShort(r.created_at)]))}
-      ${detailTable('videoclases', ['video','materia','progreso','estado','fecha'], vids.slice(0,8).map(v => [v.video_titulo || '—', v.materia || '—', `${number(v.progreso_pct)}%`, v.visto ? '<span class="tag tag-success">vista</span>' : '<span class="tag tag-warning">en progreso</span>', formatDateShort(v.fecha_visto || v.created_at)]))}
+      ${detailTable('últimos simulacros', ['examen','materia','nota','fecha'], sims.slice(0,8).map(r => [escapeHtml(r.simulacro_titulo || '—'), escapeHtml(r.materia || 'general'), renderScore(number(r.porcentaje ?? r.score)), formatDateShort(r.created_at)]))}
+      ${detailTable('banco de preguntas', ['materia','tema','correctas','nota','fecha'], bancos.slice(0,8).map(r => [escapeHtml(r.materia || '—'), escapeHtml(r.tema || '—'), `${number(r.correctas)}/${number(r.total)}`, renderScore(number(r.porcentaje ?? pct(r.correctas, r.total))), formatDateShort(r.created_at)]))}
+      ${detailTable('videoclases', ['video','materia','progreso','estado','fecha'], vids.slice(0,8).map(v => [escapeHtml(v.video_titulo || '—'), escapeHtml(v.materia || '—'), `${number(v.progreso_pct)}%`, v.visto ? '<span class="tag tag-success">vista</span>' : '<span class="tag tag-warning">en progreso</span>', formatDateShort(v.fecha_visto || v.created_at)]))}
     `;
   } catch (err) {
     console.error('[Admin] detalle estudiante:', err);
