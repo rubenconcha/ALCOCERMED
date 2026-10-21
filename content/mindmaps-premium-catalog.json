@@ -559,33 +559,33 @@
   },
   {
     "id": "morfo_08_sistema_oseo__01",
-    "titulo": "Organización y lenguaje óseo",
-    "root_title": "Organización y lenguaje óseo · Sistema óseo",
+    "titulo": "Organización y accidentes óseos",
+    "root_title": "Organización y accidentes óseos · Sistema óseo",
     "materia": "Morfofunción",
     "tema": "Sistema óseo",
     "parent_key": "morfo_08_sistema_oseo.png",
     "url_imagen": "premium/morfo_08_sistema_oseo__01.json",
-    "descripcion": "Relaciones explicadas en las 42 diapositivas finales del tema 8.",
+    "descripcion": "Conceptos visibles de Alcocermed_Sistema_Oseo_Corregido.pptx, vinculados a sus diapositivas.",
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__01.webp",
-    "visual_revision": "20261021-tema8",
-    "lecture_slide_count": 42
+    "visual_revision": "20261021-diapos47",
+    "lecture_slide_count": 47
   },
   {
     "id": "morfo_08_sistema_oseo__02",
-    "titulo": "Cráneo y relaciones",
-    "root_title": "Cráneo y relaciones · Sistema óseo",
+    "titulo": "Cráneo y cara",
+    "root_title": "Cráneo y cara · Sistema óseo",
     "materia": "Morfofunción",
     "tema": "Sistema óseo",
     "parent_key": "morfo_08_sistema_oseo.png",
     "url_imagen": "premium/morfo_08_sistema_oseo__02.json",
-    "descripcion": "Relaciones explicadas en las 42 diapositivas finales del tema 8.",
+    "descripcion": "Conceptos visibles de Alcocermed_Sistema_Oseo_Corregido.pptx, vinculados a sus diapositivas.",
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__02.webp",
-    "visual_revision": "20261021-tema8",
-    "lecture_slide_count": 42
+    "visual_revision": "20261021-diapos47",
+    "lecture_slide_count": 47
   },
   {
     "id": "morfo_08_sistema_oseo__03",
@@ -595,12 +595,12 @@
     "tema": "Sistema óseo",
     "parent_key": "morfo_08_sistema_oseo.png",
     "url_imagen": "premium/morfo_08_sistema_oseo__03.json",
-    "descripcion": "Relaciones explicadas en las 42 diapositivas finales del tema 8.",
+    "descripcion": "Conceptos visibles de Alcocermed_Sistema_Oseo_Corregido.pptx, vinculados a sus diapositivas.",
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__03.webp",
-    "visual_revision": "20261021-tema8",
-    "lecture_slide_count": 42
+    "visual_revision": "20261021-diapos47",
+    "lecture_slide_count": 47
   },
   {
     "id": "morfo_08_sistema_oseo__04",
@@ -610,12 +610,12 @@
     "tema": "Sistema óseo",
     "parent_key": "morfo_08_sistema_oseo.png",
     "url_imagen": "premium/morfo_08_sistema_oseo__04.json",
-    "descripcion": "Relaciones explicadas en las 42 diapositivas finales del tema 8.",
+    "descripcion": "Conceptos visibles de Alcocermed_Sistema_Oseo_Corregido.pptx, vinculados a sus diapositivas.",
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__04.webp",
-    "visual_revision": "20261021-tema8",
-    "lecture_slide_count": 42
+    "visual_revision": "20261021-diapos47",
+    "lecture_slide_count": 47
   },
   {
     "id": "morfo_08_sistema_oseo__05",
@@ -625,27 +625,27 @@
     "tema": "Sistema óseo",
     "parent_key": "morfo_08_sistema_oseo.png",
     "url_imagen": "premium/morfo_08_sistema_oseo__05.json",
-    "descripcion": "Relaciones explicadas en las 42 diapositivas finales del tema 8.",
+    "descripcion": "Conceptos visibles de Alcocermed_Sistema_Oseo_Corregido.pptx, vinculados a sus diapositivas.",
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__05.webp",
-    "visual_revision": "20261021-tema8",
-    "lecture_slide_count": 42
+    "visual_revision": "20261021-diapos47",
+    "lecture_slide_count": 47
   },
   {
     "id": "morfo_08_sistema_oseo__06",
-    "titulo": "Relaciones imprescindibles",
-    "root_title": "Relaciones imprescindibles · Sistema óseo",
+    "titulo": "Relaciones de la presentación",
+    "root_title": "Relaciones de la presentación · Sistema óseo",
     "materia": "Morfofunción",
     "tema": "Sistema óseo",
     "parent_key": "morfo_08_sistema_oseo.png",
     "url_imagen": "premium/morfo_08_sistema_oseo__06.json",
-    "descripcion": "Relaciones explicadas en las 42 diapositivas finales del tema 8.",
+    "descripcion": "Conceptos visibles de Alcocermed_Sistema_Oseo_Corregido.pptx, vinculados a sus diapositivas.",
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__06.webp",
-    "visual_revision": "20261021-tema8",
-    "lecture_slide_count": 42
+    "visual_revision": "20261021-diapos47",
+    "lecture_slide_count": 47
   },
   {
     "id": "morfo_09_articulaciones__01",
@@ -6456,13 +6456,14 @@
     "tema": "Sistema óseo",
     "parent_key": "morfo_08_sistema_oseo.png",
     "url_imagen": "premium/morfo_08_sistema_oseo__07.json",
-    "descripcion": "Síntesis de las 42 diapositivas: lámina, mapa, 20 flashcards y 20 preguntas con comentarios.",
+    "descripcion": "Síntesis de la presentación corregida: mapa, lámina, 20 flashcards y 20 preguntas del sistema óseo.",
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__07.webp",
     "curated": true,
     "section": "intocables",
     "format": "illustrated-sheet",
-    "visual_revision": "20261021-tema8"
+    "visual_revision": "20261021-diapos47",
+    "lecture_slide_count": 47
   }
 ]

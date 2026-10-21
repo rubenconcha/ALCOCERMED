@@ -1,11 +1,10 @@
 {
   "id": "morfo_08_sistema_oseo__02",
-  "title": "Cráneo y relaciones",
+  "title": "Cráneo y cara",
   "topic": "Sistema óseo",
-  "content_revision": 3,
-  "lecture_slide_count": 42,
+  "content_revision": 4,
+  "lecture_slide_count": 47,
   "lecture_slides": [
-    10,
     11,
     12,
     13,
@@ -13,156 +12,330 @@
     15,
     16,
     17,
-    19
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
   ],
   "sections": [
     {
-      "title": "Temporal: cuatro porciones",
+      "title": "Organización y huesos craneales",
       "color": "#267dd0",
       "groups": [
         {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
           "items": [
             {
-              "title": "Temporal: cuatro porciones",
-              "text": "El temporal comprende porciones escamosa, timpánica, mastoidea y petrosa. La apófisis cigomática participa en el arco cigomático. La fosa mandibular recibe el cóndilo de la mandíbula. El meato acústico externo conduce hacia la membrana timpánica y la región petrosa alberga estructuras del oído. Reconoce también las apófisis mastoides y estiloides.",
-              "lecture_slides": [
-                10
-              ],
-              "source": {
-                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 271,
-                "printedPage": 243,
-                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
-              }
-            },
-            {
-              "title": "Occipital: conexión con la columna",
-              "text": "El occipital forma la parte posterior e inferior del cráneo. El agujero magno permite la continuidad entre médula espinal y encéfalo y el paso de vasos y otras estructuras descritas en la tabla de forámenes. Los cóndilos occipitales se articulan con las carillas superiores del atlas. El conducto del hipogloso está relacionado con el nervio del mismo nombre.",
+              "title": "8 craneales + 14 faciales",
+              "text": "Los 22 huesos del cráneo excluyen el hioides y los osículos auditivos. Los craneales protegen el encéfalo y los faciales forman la cara y sostienen los dientes.",
               "lecture_slides": [
                 11
-              ],
-              "source": {
-                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 272,
-                "printedPage": 244,
-                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
-              }
-            },
-            {
-              "title": "Esfenoides: el centro de la base",
-              "text": "El esfenoides ocupa una posición central en la base del cráneo. Presenta un cuerpo, alas mayores y menores y apófisis pterigoides. La silla turca contiene la fosa hipofisaria. El conducto óptico y la fisura orbitaria superior comunican regiones de la base craneal y la órbita. Relaciona su aspecto extendido con la contribución a distintas paredes del cráneo, sin reducirlo a una silueta para memorizar.",
-              "lecture_slides": [
-                12
-              ],
-              "source": {
-                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 272,
-                "printedPage": 244,
-                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Etmoides: techo, tabique y pared",
-      "color": "#267dd0",
-      "groups": [
-        {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
-          "items": [
-            {
-              "title": "Etmoides: techo, tabique y pared",
-              "text": "El etmoides se sitúa entre las órbitas y participa en las cavidades craneal y nasal. La lámina cribosa presenta orificios para fibras olfatorias. La lámina perpendicular participa en el tabique nasal. Los laberintos contienen celdillas etmoidales y forman los cornetes superior y medio. El cornete nasal inferior no pertenece al etmoides: es una pieza facial independiente.",
-              "lecture_slides": [
-                13
-              ],
-              "source": {
-                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 273,
-                "printedPage": 245,
-                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
-              }
-            },
-            {
-              "title": "Maxilar y palatino: el paladar duro",
-              "text": "Los maxilares sostienen los dientes superiores y contribuyen a las órbitas y a las cavidades nasal y oral. Sus apófisis palatinas forman la porción anterior del paladar duro; las láminas horizontales de los palatinos completan la parte posterior. En una vista inferior, identifica primero los alvéolos dentales y después la sutura entre maxilar y palatino. Las figuras de las páginas citadas muestran la relación entre boca y cavidad nasal.",
-              "lecture_slides": [
-                14
-              ],
-              "source": {
-                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 274,
-                "printedPage": 246,
-                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
-              }
-            },
-            {
-              "title": "Pequeños huesos, relaciones precisas",
-              "text": "El cigomático forma la prominencia de la mejilla y parte de la órbita. El lagrimal participa en la pared medial de la órbita, junto al trayecto de drenaje lagrimal. Los nasales forman el puente óseo de la nariz. El cornete nasal inferior forma parte de la pared lateral de la cavidad nasal y es un hueso facial independiente. Compara las cuatro imágenes por localización y relación, en lugar de atribuirles una función genérica.",
-              "lecture_slides": [
-                15
-              ],
-              "source": {
-                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 276,
-                "printedPage": 248,
-                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Vómer y mandíbula",
-      "color": "#267dd0",
-      "groups": [
-        {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
-          "items": [
-            {
-              "title": "Vómer y mandíbula",
-              "text": "El vómer forma parte inferior y posterior del tabique nasal. La mandíbula comprende cuerpo, ramas, ángulos, apófisis condilares y coronoides. El cóndilo mandibular se articula con la fosa mandibular del temporal. La apófisis coronoides recibe la inserción del músculo temporal. El foramen mandibular da acceso al conducto mandibular; el foramen mentoniano se abre en la superficie del cuerpo.",
-              "lecture_slides": [
-                16
-              ],
-              "source": {
-                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 276,
-                "printedPage": 248,
-                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
-              }
-            },
-            {
-              "title": "Forámenes: une paso y contenido",
-              "text": "Para un primer recorrido, prioriza lámina cribosa–fibras olfatorias, conducto óptico–nervio óptico y arteria oftálmica, agujero magno–médula y arterias vertebrales, conducto carotídeo–carótida interna y agujero estilomastoideo–nervio facial. La tabla ampliada del guion permite repasar otros trayectos. Un orificio puede transportar más de una estructura; el rótulo breve de la diapositiva destaca la relación que debe reconocerse primero.",
-              "lecture_slides": [
-                17
-              ],
-              "source": {
-                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 269,
-                "printedPage": 241,
-                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
-              }
-            },
-            {
-              "title": "Fontanelas: crecimiento y adaptación",
-              "text": "Las fontanelas son áreas de tejido conjuntivo entre huesos del cráneo infantil. Permiten que los huesos se ajusten durante el parto y acompañan el crecimiento del encéfalo. Se reconocen fontanelas anterior y posterior y pares esfenoidales y mastoideas. El libro sitúa el cierre de la anterior alrededor de los 18 a 24 meses; esta cifra se presenta como referencia del texto, no como valoración clínica individual.",
-              "lecture_slides": [
-                19
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
                 "pdfPage": 277,
                 "printedPage": 249,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 11,
+                "quote": "Cráneo: 8 + 14\n8 huesos craneales\nForman la caja que protege el encéfalo.\n14 huesos faciales\nForman la cara y sostienen los dientes.\n22 huesos del cráneo\nExcluyen el hioides y los osículos auditivos.\n11",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Suturas",
+              "text": "Coronal: frontal–parietales. Sagital: parietal derecho–izquierdo. Lambdoidea: parietales–occipital. Escamosa: parietal–temporal.",
+              "lecture_slides": [
+                12
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 268,
+                "printedPage": 240,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 12,
+                "quote": "Suturas: reconoce sus límites\nCoronal\nSagital\nLambdoidea\nEscamosa\n12\nCoronal\nFrontal con parietales.\nSagital\nParietal derecho con izquierdo.\nLambdoidea\nParietales con occipital.\nEscamosa\nParietal con temporal.",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Cavidades del cráneo",
+              "text": "Órbita: aloja ojo y estructuras asociadas. Cavidad nasal: dividida por el tabique y limitada lateralmente por cornetes. Fosas craneales: depresiones de la base que alojan partes del encéfalo.",
+              "lecture_slides": [
+                13
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 268,
+                "printedPage": 240,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 13,
+                "quote": "Cavidades del cráneo\nÓrbita\nCavidad ósea que aloja el ojo y sus estructuras asociadas.\nCavidad nasal\nEspacio dividido por el tabique y limitado lateralmente por cornetes.\nFosas craneales\nDepresiones de la base que alojan partes del encéfalo.\n13",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Frontal y parietales",
+              "text": "El frontal forma frente, techo orbitario y parte de la base. Los parietales forman gran parte del techo y las paredes craneales.",
+              "lecture_slides": [
+                14
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 270,
+                "printedPage": 242,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 14,
+                "quote": "Frontal y parietales\nFrontal\nForma la frente, el techo orbitario y parte de la base craneal.\nParietales\nDos huesos que forman gran parte del techo y las paredes craneales.\n14",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Temporal",
+              "text": "Porciones escamosa y timpánica: pared lateral y región del conducto auditivo externo. Mastoidea: celdillas aéreas. Petrosa: aloja el oído medio e interno.",
+              "lecture_slides": [
+                15
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 271,
+                "printedPage": 243,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 15,
+                "quote": "Temporal: cuatro porciones\nEscamosa y timpánica\nLa escamosa forma pared lateral. La timpánica rodea el conducto auditivo externo.\nMastoidea y petrosa\nLa mastoidea contiene celdillas aéreas. La petrosa aloja el oído medio e interno.\n15",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Occipital",
+              "text": "El agujero magno corresponde a la continuidad entre encéfalo y médula. Los cóndilos occipitales articulan con el atlas, C1.",
+              "lecture_slides": [
+                16
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 272,
+                "printedPage": 244,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 16,
+                "quote": "Occipital: conexión con la columna\nAgujero magno\nGran abertura occipital donde se continúan encéfalo y médula.\nCóndilos occipitales\nSuperficies redondeadas que articulan con el atlas, C1.\n16",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Esfenoides y silla turca",
+              "text": "Cuerpo y alas participan en la base y las órbitas. La fosa hipofisaria de la silla turca aloja la hipófisis. El esfenoides contribuye a la pared posterior orbitaria.",
+              "lecture_slides": [
+                17
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 272,
+                "printedPage": 244,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 17,
+                "quote": "Esfenoides: el centro de la base\nCuerpo y alas\nRegión central y expansiones que participan en la base y las órbitas.\nSilla turca\nRelieve del cuerpo cuya fosa hipofisaria aloja la hipófisis.\nÓrbita\nEl esfenoides contribuye a su pared posterior.\n17",
+                "scope": "visible_slide_text_only"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cara y cavidad nasal",
+      "color": "#267dd0",
+      "groups": [
+        {
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
+          "items": [
+            {
+              "title": "Etmoides",
+              "text": "Lámina cribosa: nervios olfatorios. Lámina perpendicular: tabique nasal. Cornetes superior y medio: pared lateral nasal.",
+              "lecture_slides": [
+                18
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 273,
+                "printedPage": 245,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 18,
+                "quote": "Etmoides: techo, tabique y pared\nLámina cribosa\nPlaca perforada del techo nasal para los nervios olfatorios.\nLámina perpendicular\nPlaca vertical que forma parte del tabique nasal.\nCornetes del etmoides\nLáminas curvas superior y media en la pared nasal lateral.\n18",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Paladar duro",
+              "text": "Las apófisis palatinas del maxilar forman la porción anterior; las láminas horizontales del palatino completan la posterior.",
+              "lecture_slides": [
+                19
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 276,
+                "printedPage": 248,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 19,
+                "quote": "Maxilar y palatino: el paladar duro\nMaxilar\nSus apófisis palatinas forman la porción anterior del paladar duro.\nPalatino\nSus láminas horizontales completan la porción posterior del paladar duro.\n19",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Cigomático, lagrimal y nasal",
+              "text": "Cigomático: pómulo y parte de la órbita. Lagrimal: pared medial de la órbita. Nasal: puente óseo de la nariz.",
+              "lecture_slides": [
+                20
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 276,
+                "printedPage": 248,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 20,
+                "quote": "Pequeños huesos, relaciones precisas\nCigomático\nLagrimal\nNasal\nCornete inferior\n20\nCigomático\nForma el pómulo y parte de la órbita.\nLagrimal\nHueso de la pared medial de la órbita.\nNasal\nForma el puente óseo de la nariz.\nCornete inferior\nHueso independiente de la pared nasal lateral.",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Cornete inferior",
+              "text": "Hueso independiente de la pared nasal lateral.",
+              "lecture_slides": [
+                20
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 276,
+                "printedPage": 248,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 20,
+                "quote": "Pequeños huesos, relaciones precisas\nCigomático\nLagrimal\nNasal\nCornete inferior\n20\nCigomático\nForma el pómulo y parte de la órbita.\nLagrimal\nHueso de la pared medial de la órbita.\nNasal\nForma el puente óseo de la nariz.\nCornete inferior\nHueso independiente de la pared nasal lateral.",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Vómer y mandíbula",
+              "text": "Vómer: parte inferior del tabique nasal óseo. Mandíbula: hueso móvil con cuerpo y ramas que sostiene los dientes inferiores.",
+              "lecture_slides": [
+                21
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 276,
+                "printedPage": 248,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 21,
+                "quote": "Vómer y mandíbula\nVómer\nLámina que forma la parte inferior del tabique nasal óseo.\nMandíbula\nHueso móvil con cuerpo y ramas que sostiene los dientes inferiores.\n21",
+                "scope": "visible_slide_text_only"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Pasos y desarrollo",
+      "color": "#267dd0",
+      "groups": [
+        {
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
+          "items": [
+            {
+              "title": "Forámenes y contenido",
+              "text": "Agujeros cribosos: nervios olfatorios, I. Conducto óptico: nervio óptico, II, y arteria oftálmica. Agujero magno: médula, arterias vertebrales y raíces del XI.",
+              "lecture_slides": [
+                22
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 269,
+                "printedPage": 241,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 22,
+                "quote": "Forámenes: une paso y contenido\nAgujeros cribosos\nEtmoides: paso de los nervios olfatorios, I.\nConducto óptico\nEsfenoides: nervio óptico, II, y arteria oftálmica.\nAgujero magno\nOccipital: médula, arterias vertebrales y raíces del XI.\n22",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Osículos e hioides",
+              "text": "Martillo, yunque y estribo en cada oído medio: seis osículos. Hioides: hueso en U, suspendido por músculos y ligamentos en el cuello.",
+              "lecture_slides": [
+                23
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 277,
+                "printedPage": 249,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 23,
+                "quote": "Asociados al cráneo\n6 osículos auditivos\nMartillo, yunque y estribo en cada oído medio.\nHioides\nHueso en U, suspendido por músculos y ligamentos en el cuello.\n23",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Fontanelas",
+              "text": "Anterior: entre frontal y parietales. Posterior: entre parietales y occipital. Laterales: esfenoidales anteriores y mastoideas posteriores, ambas pares.",
+              "lecture_slides": [
+                24
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 277,
+                "printedPage": 249,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 24,
+                "quote": "Fontanelas: crecimiento y adaptación\nFontanela anterior\nÁrea fibrosa entre frontal y parietales.\nFontanela posterior\nÁrea fibrosa entre parietales y occipital.\nFontanelas laterales\nEsfenoidales, anteriores, y mastoideas, posteriores. Son pares.\n24",
+                "scope": "visible_slide_text_only"
               }
             }
           ]
@@ -196,5 +369,10 @@
     "source_only": true,
     "doctor_approved": false,
     "date": "2026-10-21"
+  },
+  "presentation_source": {
+    "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+    "scope": "visible_slide_text_only"
   }
 }

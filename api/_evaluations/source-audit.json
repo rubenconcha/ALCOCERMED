@@ -24436,270 +24436,330 @@
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-001",
+    "question": "morfo-08-diapos-001",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 262,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "3e860ddaea0514232f157b24bae42e0b7bec8ad87f84ad4dd43c4fd30359bfec",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      2
-    ]
+      2,
+      11
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-002",
+    "question": "morfo-08-diapos-002",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 264,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "1f1d50f02eb6a0e229cde7c1b4031c9dea4d56b64c7662db9af1954e99a86164",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
       3,
-      4,
-      5
-    ]
+      7,
+      8
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-003",
+    "question": "morfo-08-diapos-003",
+    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+    "pdf_page": 264,
+    "evidence_kind": "pdf_text",
+    "evidence_sha256": "1f1d50f02eb6a0e229cde7c1b4031c9dea4d56b64c7662db9af1954e99a86164",
+    "authored_options": true,
+    "option_source_ids": [],
+    "lecture_slides": [
+      4,
+      5,
+      7,
+      9
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
+  },
+  {
+    "paper": "morfo-08",
+    "question": "morfo-08-diapos-004",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 277,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "1576c50a79702c55a77f9406759501f2e2cbeef2a79044518558801de8e4627a",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      6,
-      18
-    ]
+      11,
+      23
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-004",
+    "question": "morfo-08-diapos-005",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 270,
+    "pdf_page": 268,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "2ffb19f9b5caa2f59de371d9a410ac283b8ea74f9743e54cc1a844b76a152fa2",
-    "option_source_ids": [],
+    "evidence_sha256": "8558b5df8d517a89203543d9802ad0030df1181aa08febe6023b664ac359e9cb",
     "authored_options": true,
+    "option_source_ids": [],
+    "lecture_slides": [
+      12
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
+  },
+  {
+    "paper": "morfo-08",
+    "question": "morfo-08-diapos-006",
+    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+    "pdf_page": 272,
+    "evidence_kind": "pdf_text",
+    "evidence_sha256": "9fbe2f060bb0938d0974b77fc431be7eb802fdcf330e64173f3ca02fea9be5fe",
+    "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
       7,
-      9
-    ]
+      16,
+      17,
+      34
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-005",
-    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 274,
-    "evidence_kind": "pdf_text",
-    "evidence_sha256": "c0ccb6f19ab17e8d3891fdbbf8a592c3057dd2b51ea54b38278e03c76d1bbee1",
-    "option_source_ids": [],
-    "authored_options": true,
-    "lecture_slides": [
-      13,
-      16
-    ]
-  },
-  {
-    "paper": "morfo-08",
-    "question": "morfo-08-clase-006",
+    "question": "morfo-08-diapos-007",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 273,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "42bd16ff4488d412b438231ec767e053d7ef02bfdf20160a284f2c0de715daf9",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      13,
-      17
-    ]
+      18,
+      20
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-007",
+    "question": "morfo-08-diapos-008",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 277,
+    "pdf_page": 276,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "1576c50a79702c55a77f9406759501f2e2cbeef2a79044518558801de8e4627a",
-    "option_source_ids": [],
+    "evidence_sha256": "0c4258c3fd558945921558b2f8b9bddb54132cdc6f4a0943d46a603cb8921a11",
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      10,
-      16
-    ]
+      19,
+      20,
+      21
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-008",
-    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 277,
-    "evidence_kind": "pdf_text",
-    "evidence_sha256": "1576c50a79702c55a77f9406759501f2e2cbeef2a79044518558801de8e4627a",
-    "option_source_ids": [],
-    "authored_options": true,
-    "lecture_slides": [
-      18
-    ]
-  },
-  {
-    "paper": "morfo-08",
-    "question": "morfo-08-clase-009",
+    "question": "morfo-08-diapos-009",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 278,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "b6f403ed3f778f5116b57ddfed46537b1f7746a943fdee6e7b7f8eaf001e7504",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      20
-    ]
+      25
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-010",
+    "question": "morfo-08-diapos-010",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 281,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "f6db66a7c9fb2df9645c44b6660dc9bc56856c7a175722fb15a95f088985dbd0",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      23
-    ]
+      27,
+      28
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-011",
+    "question": "morfo-08-diapos-011",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 281,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "f6db66a7c9fb2df9645c44b6660dc9bc56856c7a175722fb15a95f088985dbd0",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      24
-    ]
+      29,
+      30
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-012",
+    "question": "morfo-08-diapos-012",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 285,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "126bedb8d7aad407757030983f2108629ed220a8efbe2c98e2bbcc0fad2926d4",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      28
-    ]
+      33
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-013",
+    "question": "morfo-08-diapos-013",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 289,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "c2c48053fee41c98ddf533b9cd56f12c03c6dd9fd90988b5e1ccc9e3133306d1",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      30
-    ]
+      34,
+      35,
+      42
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-014",
+    "question": "morfo-08-diapos-014",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 290,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "59295d2373b1faab36f56b5191a65a26acdccf1b846cb58fbf84d81cbbfc8fd3",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      31
-    ]
+      36,
+      37,
+      42
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-015",
-    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 291,
-    "evidence_kind": "pdf_text",
-    "evidence_sha256": "cd78d8015e71da9d5154834177b4ad1450d5397696f6f89e9394aff1a7911486",
-    "option_source_ids": [],
-    "authored_options": true,
-    "lecture_slides": [
-      32
-    ]
-  },
-  {
-    "paper": "morfo-08",
-    "question": "morfo-08-clase-016",
-    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 291,
-    "evidence_kind": "pdf_text",
-    "evidence_sha256": "cd78d8015e71da9d5154834177b4ad1450d5397696f6f89e9394aff1a7911486",
-    "option_source_ids": [],
-    "authored_options": true,
-    "lecture_slides": [
-      32
-    ]
-  },
-  {
-    "paper": "morfo-08",
-    "question": "morfo-08-clase-017",
+    "question": "morfo-08-diapos-015",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 294,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "d4141ae5fae13990d387e3aba407ad4ca197b979f94b65c97cc55a3eaad7acdd",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      33
-    ]
+      31,
+      38,
+      41,
+      42
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-018",
+    "question": "morfo-08-diapos-016",
+    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+    "pdf_page": 291,
+    "evidence_kind": "pdf_text",
+    "evidence_sha256": "cd78d8015e71da9d5154834177b4ad1450d5397696f6f89e9394aff1a7911486",
+    "authored_options": true,
+    "option_source_ids": [],
+    "lecture_slides": [
+      37,
+      43
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
+  },
+  {
+    "paper": "morfo-08",
+    "question": "morfo-08-diapos-017",
+    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+    "pdf_page": 298,
+    "evidence_kind": "pdf_text",
+    "evidence_sha256": "53bab19a45a6a8de37873515333a170ce144e6a273cb6f2e32e64957e505343b",
+    "authored_options": true,
+    "option_source_ids": [],
+    "lecture_slides": [
+      37,
+      43
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
+  },
+  {
+    "paper": "morfo-08",
+    "question": "morfo-08-diapos-018",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 294,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "d4141ae5fae13990d387e3aba407ad4ca197b979f94b65c97cc55a3eaad7acdd",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      34
-    ]
+      13,
+      32,
+      39
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-019",
+    "question": "morfo-08-diapos-019",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 297,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "114b8134fd8f59911b978005e87d6e801f1ec26e6ed58b46b17cd499478daa14",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      37
-    ]
+      36,
+      37,
+      42
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   },
   {
     "paper": "morfo-08",
-    "question": "morfo-08-clase-020",
+    "question": "morfo-08-diapos-020",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 300,
     "evidence_kind": "pdf_text",
     "evidence_sha256": "6b77cf7475b6ed466d64a02195e7c030bce68a5b27c33f9be5a19cbe59f6da60",
-    "option_source_ids": [],
     "authored_options": true,
+    "option_source_ids": [],
     "lecture_slides": [
-      38,
-      39
-    ]
+      44
+    ],
+    "presentation_file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "presentation_sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33"
   }
 ]

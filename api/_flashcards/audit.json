@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-21",
+  "version": "2026-10-21-diapos47",
   "verified_against_pdf": true,
   "total_cards": 3420,
   "total_topics": 68,
@@ -13,7 +13,7 @@
       "cards": 1560,
       "longest_answer_words": 19,
       "median_answer_words": 4,
-      "source_sha256": "35bb8f56db71ec0cef7eaf5ef64ed9a3e07de87b30436b6aa6c9fb16c6f1ed51",
+      "source_sha256": "f69b4c623764fc6e8920dd34379dbe8e1d2692c41c64ca32186c3e3d119a2899",
       "visually_verified_cards": 0,
       "pdf_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
     },
@@ -586,5 +586,5 @@
       "free_count": 0
     }
   ],
-  "library_sha256": "398360ad352446813d1ac755ac1ac249f800e0ee1447eb2a9c3dece9ccadbe90"
+  "library_sha256": "94e8ede274c9b88b8a7248d708017055cea79a308bbb6e47c7e06bd3102065a3"
 }

@@ -9827,143 +9827,305 @@
     "topic": "el sistema oseo",
     "questions": [
       {
-        "key": "morfo-08-clase-001",
-        "text": "Al separar el esqueleto en axial y apendicular, ¿qué distribución corresponde al adulto típico?",
+        "key": "morfo-08-diapos-001",
+        "text": "¿Qué distribución del esqueleto adulto se muestra en la presentación?",
         "options": [
-          "80 axiales y 126 apendiculares",
+          "80 huesos axiales y 126 apendiculares",
           "126 axiales y 80 apendiculares",
-          "22 axiales y 184 apendiculares",
+          "22 axiales y 14 apendiculares",
           "206 axiales y 126 apendiculares"
         ],
         "answer": 0,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "262",
         "lecture_slides": [
-          2
-        ]
+          2,
+          11
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 2,
+              "text": "Dos divisiones, un esqueleto\nAxial: 80 huesos\nEje de la cabeza y el tronco.\nApendicular: 126\nCinturas y huesos de los miembros.\nAdulto: unos 206\nEl total puede variar entre personas.\n02"
+            },
+            {
+              "number": 11,
+              "text": "Cráneo: 8 + 14\n8 huesos craneales\nForman la caja que protege el encéfalo.\n14 huesos faciales\nForman la cara y sostienen los dientes.\n22 huesos del cráneo\nExcluyen el hioides y los osículos auditivos.\n11"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-002",
-        "text": "Una prominencia ósea presenta una superficie articular redondeada. ¿Qué término la describe?",
+        "key": "morfo-08-diapos-002",
+        "text": "¿Qué accidente óseo es una prominencia redondeada que articula con otro hueso?",
         "options": [
           "Fosa",
           "Cóndilo",
-          "Foramen",
-          "Tuberosidad"
+          "Surco",
+          "Alvéolo"
         ],
         "answer": 1,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "264",
         "lecture_slides": [
           3,
-          4,
-          5
-        ]
+          7,
+          8
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 3,
+              "text": "Superficies que articulan\nCóndilo\nProminencia redondeada que articula con otro hueso.\nCabeza\nExtremo óseo expandido y prominente, a veces redondeado.\nCarilla\nSuperficie articular lisa, plana o ligeramente curva.\n03"
+            },
+            {
+              "number": 7,
+              "text": "Huecos, pasos y cavidades\nFosa\nDepresión amplia o alargada en un hueso.\nAlvéolo\nHueco que aloja una estructura, como la raíz dental.\nForamen o agujero\nAbertura ósea, por lo general redondeada.\n07"
+            },
+            {
+              "number": 8,
+              "text": "Fóvea y surco\nFóvea o fosita\nDepresión pequeña. Ejemplo: fóvea de la cabeza femoral.\nSurco\nRanura que aloja un tendón, nervio o vaso sanguíneo.\n08"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-003",
-        "text": "¿Qué cuenta correctamente los huesos propios del cráneo, excluyendo los asociados?",
+        "key": "morfo-08-diapos-003",
+        "text": "¿Qué asociación entre accidente óseo y descripción coincide con las diapositivas?",
         "options": [
-          "14 craneales y 8 faciales",
-          "22 craneales y 7 faciales",
-          "8 craneales y 14 faciales",
-          "8 craneales y 21 faciales"
+          "Fosa: pasaje tubular por un hueso",
+          "Foramen: borde óseo estrecho",
+          "Alvéolo: hueco que aloja una estructura",
+          "Conducto: proyección fina o estrecha"
         ],
         "answer": 2,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
-        "pages": "277",
+        "pages": "264",
         "lecture_slides": [
-          6,
-          18
-        ]
+          4,
+          5,
+          7,
+          9
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 4,
+              "text": "Relieves para reconocer e insertar\nCresta\nBorde óseo estrecho, como la cresta ilíaca.\nTrocánter\nCada una de las dos grandes apófisis del fémur.\nTuberosidad\nApófisis pequeña y redondeada, o superficie elevada y rugosa.\n04"
+            },
+            {
+              "number": 5,
+              "text": "Apófisis, espina y línea\nApófisis\nCualquier prominencia ósea. Ejemplo: apófisis mastoides.\nEspina\nProyección fina o estrecha. Ejemplo: espina de la escápula.\n05\nLínea\nBorde alargado y poco elevado. Ejemplo: líneas del cráneo."
+            },
+            {
+              "number": 7,
+              "text": "Huecos, pasos y cavidades\nFosa\nDepresión amplia o alargada en un hueso.\nAlvéolo\nHueco que aloja una estructura, como la raíz dental.\nForamen o agujero\nAbertura ósea, por lo general redondeada.\n07"
+            },
+            {
+              "number": 9,
+              "text": "Conducto y meato\nConducto\nPasaje tubular o túnel que recorre un hueso.\nMeato\nAbertura o entrada de un conducto. Ejemplo: meato acústico externo.\n09"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-004",
-        "text": "¿Qué sutura separa el frontal de los parietales?",
+        "key": "morfo-08-diapos-004",
+        "text": "¿Qué recuento corresponde a los huesos del cráneo?",
         "options": [
-          "Sagital",
-          "Lambdoidea",
-          "Escamosa",
-          "Coronal"
+          "14 craneales y 8 faciales: 22 en total",
+          "22 craneales y 6 faciales: 28 en total",
+          "8 craneales y 22 faciales: 30 en total",
+          "8 craneales y 14 faciales: 22 en total"
         ],
         "answer": 3,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
-        "pages": "270",
+        "pages": "277",
         "lecture_slides": [
-          7,
-          9
-        ]
+          11,
+          23
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 11,
+              "text": "Cráneo: 8 + 14\n8 huesos craneales\nForman la caja que protege el encéfalo.\n14 huesos faciales\nForman la cara y sostienen los dientes.\n22 huesos del cráneo\nExcluyen el hioides y los osículos auditivos.\n11"
+            },
+            {
+              "number": 23,
+              "text": "Asociados al cráneo\n6 osículos auditivos\nMartillo, yunque y estribo en cada oído medio.\nHioides\nHueso en U, suspendido por músculos y ligamentos en el cuello.\n23"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-005",
-        "text": "Al explicar el tabique nasal, ¿qué asociación conserva las relaciones correctas?",
+        "key": "morfo-08-diapos-005",
+        "text": "¿Qué sutura une el frontal con los parietales?",
         "options": [
-          "Lámina perpendicular del etmoides y vómer",
-          "Cornete inferior y cigomático",
-          "Apófisis coronoides y palatino",
-          "Porción mastoidea y hueso nasal"
+          "Coronal",
+          "Sagital",
+          "Lambdoidea",
+          "Escamosa"
         ],
         "answer": 0,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
-        "pages": "274",
+        "pages": "268",
         "lecture_slides": [
-          13,
-          16
-        ]
+          12
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 12,
+              "text": "Suturas: reconoce sus límites\nCoronal\nSagital\nLambdoidea\nEscamosa\n12\nCoronal\nFrontal con parietales.\nSagital\nParietal derecho con izquierdo.\nLambdoidea\nParietales con occipital.\nEscamosa\nParietal con temporal."
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-006",
-        "text": "¿Qué relación corresponde a las láminas cribosas del etmoides?",
+        "key": "morfo-08-diapos-006",
+        "text": "¿Qué estructura del esfenoides contiene la fosa que aloja la hipófisis?",
         "options": [
-          "Articulación con el fémur",
-          "Paso de fibras olfatorias",
-          "Paso del nervio óptico",
-          "Inserción del ligamento patelar"
+          "Agujero magno",
+          "Silla turca",
+          "Alvéolo dental",
+          "Cavidad glenoidea"
         ],
         "answer": 1,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
-        "pages": "273",
+        "pages": "272",
         "lecture_slides": [
-          13,
-          17
-        ]
+          7,
+          16,
+          17,
+          34
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 7,
+              "text": "Huecos, pasos y cavidades\nFosa\nDepresión amplia o alargada en un hueso.\nAlvéolo\nHueco que aloja una estructura, como la raíz dental.\nForamen o agujero\nAbertura ósea, por lo general redondeada.\n07"
+            },
+            {
+              "number": 16,
+              "text": "Occipital: conexión con la columna\nAgujero magno\nGran abertura occipital donde se continúan encéfalo y médula.\nCóndilos occipitales\nSuperficies redondeadas que articulan con el atlas, C1.\n16"
+            },
+            {
+              "number": 17,
+              "text": "Esfenoides: el centro de la base\nCuerpo y alas\nRegión central y expansiones que participan en la base y las órbitas.\nSilla turca\nRelieve del cuerpo cuya fosa hipofisaria aloja la hipófisis.\nÓrbita\nEl esfenoides contribuye a su pared posterior.\n17"
+            },
+            {
+              "number": 34,
+              "text": "Cintura escapular\nClavícula\nHueso en S que conecta el esternón con el acromion de la escápula.\nEscápula\nHueso plano triangular. Su cavidad glenoidea recibe la cabeza humeral.\n34"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-007",
-        "text": "Una imagen muestra el cóndilo mandibular. ¿Con qué superficie se relaciona?",
+        "key": "morfo-08-diapos-007",
+        "text": "¿Qué parte del etmoides permite el paso de los nervios olfatorios?",
         "options": [
-          "Cavidad glenoidea de la escápula",
-          "Cóndilo occipital",
-          "Fosa mandibular del temporal",
-          "Acetábulo del coxal"
+          "Lámina perpendicular",
+          "Cornete inferior",
+          "Lámina cribosa",
+          "Hueso nasal"
         ],
         "answer": 2,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
-        "pages": "277",
+        "pages": "273",
         "lecture_slides": [
-          10,
-          16
-        ]
+          18,
+          20
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 18,
+              "text": "Etmoides: techo, tabique y pared\nLámina cribosa\nPlaca perforada del techo nasal para los nervios olfatorios.\nLámina perpendicular\nPlaca vertical que forma parte del tabique nasal.\nCornetes del etmoides\nLáminas curvas superior y media en la pared nasal lateral.\n18"
+            },
+            {
+              "number": 20,
+              "text": "Pequeños huesos, relaciones precisas\nCigomático\nLagrimal\nNasal\nCornete inferior\n20\nCigomático\nForma el pómulo y parte de la órbita.\nLagrimal\nHueso de la pared medial de la órbita.\nNasal\nForma el puente óseo de la nariz.\nCornete inferior\nHueso independiente de la pared nasal lateral."
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-008",
-        "text": "¿Cuál de estos huesos está suspendido por músculos y ligamentos sin articular directamente con otro hueso?",
+        "key": "morfo-08-diapos-008",
+        "text": "¿Qué huesos forman las porciones anterior y posterior del paladar duro, respectivamente?",
         "options": [
-          "Mandíbula",
-          "Occipital",
-          "Temporal",
-          "Hioides"
+          "Palatino y maxilar",
+          "Cigomático y lagrimal",
+          "Vómer y mandíbula",
+          "Maxilar y palatino"
         ],
         "answer": 3,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
-        "pages": "277",
+        "pages": "276",
         "lecture_slides": [
-          18
-        ]
+          19,
+          20,
+          21
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 19,
+              "text": "Maxilar y palatino: el paladar duro\nMaxilar\nSus apófisis palatinas forman la porción anterior del paladar duro.\nPalatino\nSus láminas horizontales completan la porción posterior del paladar duro.\n19"
+            },
+            {
+              "number": 20,
+              "text": "Pequeños huesos, relaciones precisas\nCigomático\nLagrimal\nNasal\nCornete inferior\n20\nCigomático\nForma el pómulo y parte de la órbita.\nLagrimal\nHueso de la pared medial de la órbita.\nNasal\nForma el puente óseo de la nariz.\nCornete inferior\nHueso independiente de la pared nasal lateral."
+            },
+            {
+              "number": 21,
+              "text": "Vómer y mandíbula\nVómer\nLámina que forma la parte inferior del tabique nasal óseo.\nMandíbula\nHueso móvil con cuerpo y ramas que sostiene los dientes inferiores.\n21"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-009",
-        "text": "¿Qué secuencia corresponde a las regiones móviles cervical, torácica y lumbar?",
+        "key": "morfo-08-diapos-009",
+        "text": "¿Qué secuencia corresponde a las regiones cervical, torácica y lumbar?",
         "options": [
           "7 cervicales, 12 torácicas y 5 lumbares",
           "12 cervicales, 7 torácicas y 5 lumbares",
@@ -9974,108 +10136,244 @@
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "278",
         "lecture_slides": [
-          20
-        ]
+          25
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 25,
+              "text": "Columna: 7 · 12 · 5\n7 cervicales\nVértebras del cuello que sostienen la cabeza.\n12 torácicas\nVértebras del tórax que articulan con las costillas.\n5 lumbares\nVértebras de la espalda baja, de gran capacidad de soporte.\n25"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-010",
-        "text": "En una vértebra y su disco se señalan una región central gelatinosa y una envoltura fibrosa. ¿Qué son?",
+        "key": "morfo-08-diapos-010",
+        "text": "¿Qué asociación describe los componentes del disco intervertebral?",
         "options": [
-          "Anillo fibroso y núcleo pulposo",
-          "Núcleo pulposo y anillo fibroso",
-          "Cuerpo vertebral y pedículo",
-          "Apófisis espinosa y lámina"
+          "Núcleo pulposo externo y anillo fibroso central",
+          "Anillo fibroso externo y núcleo pulposo gelatinoso central",
+          "Cuerpo vertebral externo y núcleo óseo central",
+          "Pedículos externos y láminas centrales"
         ],
         "answer": 1,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "281",
         "lecture_slides": [
-          23
-        ]
+          27,
+          28
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 27,
+              "text": "Vértebra típica: soporte y protección\nCuerpo vertebral\nMasa anterior que soporta el peso.\nArco vertebral\nPorción posterior formada por pedículos y láminas.\nAgujero vertebral\nEspacio entre cuerpo y arco. Su sucesión forma el conducto vertebral.\n27"
+            },
+            {
+              "number": 28,
+              "text": "Disco: anillo y núcleo\nAnillo fibroso\nEnvoltura de fibrocartílago que rodea y contiene el núcleo.\nNúcleo pulposo\nCentro gelatinoso del disco que contribuye a absorber cargas.\n28"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-011",
-        "text": "¿A qué vértebra pertenece el diente que actúa como pivote en la rotación de la cabeza?",
+        "key": "morfo-08-diapos-011",
+        "text": "¿Qué vértebra posee el diente que sirve de pivote para la rotación del atlas?",
         "options": [
           "Atlas, C1",
-          "Séptima cervical, C7",
+          "Una vértebra torácica",
           "Axis, C2",
-          "Primera torácica, T1"
+          "Una vértebra lumbar"
         ],
         "answer": 2,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "281",
         "lecture_slides": [
-          24
-        ]
+          29,
+          30
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 29,
+              "text": "Atlas y axis: sostener y girar\nAtlas, C1\nVértebra sin cuerpo que recibe los cóndilos occipitales.\nAxis, C2\nSegunda cervical, que sostiene el diente o apófisis odontoides.\nDiente del axis\nProyección que sirve de pivote para la rotación del atlas.\n29"
+            },
+            {
+              "number": 30,
+              "text": "Torácicas y lumbares\nTorácica: costillas\nLumbar: cuerpo voluminoso\nVértebras torácicas\nPoseen carillas costales para articular con las costillas.\nVértebras lumbares\nTienen cuerpos voluminosos y apófisis robustas para soportar peso.\n30"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-012",
-        "text": "¿Qué clasificación de las costillas evita contar dos veces un subgrupo?",
+        "key": "morfo-08-diapos-012",
+        "text": "¿Qué relación entre costillas verdaderas, falsas y flotantes es correcta?",
         "options": [
           "1–7 verdaderas; 8–10 falsas; 11–12 verdaderas",
-          "1–5 verdaderas; 6–12 flotantes",
-          "1–12 verdaderas porque todas se unen directamente al esternón",
-          "1–7 verdaderas; 8–12 falsas; 11–12 son falsas flotantes"
+          "1–12 verdaderas por tener cada par su cartílago esternal propio",
+          "1–7 flotantes; 8–12 verdaderas",
+          "1–7 verdaderas; 8–12 falsas; 11–12 flotantes dentro de las falsas"
         ],
         "answer": 3,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "285",
         "lecture_slides": [
-          28
-        ]
+          33
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 33,
+              "text": "Costillas verdaderas, falsas y flotantes\nVerdaderas: 1–7\nCada par se une al esternón mediante su propio cartílago.\nFalsas: 8–12\nNo tienen unión esternal mediante un cartílago propio.\nFlotantes: 11–12\nSubgrupo de las falsas, sin unión anterior al esternón.\n33"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-013",
-        "text": "En el codo, ¿qué pareja de superficies está correctamente relacionada?",
+        "key": "morfo-08-diapos-013",
+        "text": "¿Con qué huesos se relacionan el capítulo y la tróclea del húmero, respectivamente?",
         "options": [
-          "Capítulo–radio y tróclea–ulna",
-          "Capítulo–ulna y tróclea–radio",
-          "Capítulo–escápula y tróclea–clavícula",
-          "Capítulo–carpo y tróclea–metacarpo"
+          "Radio y ulna",
+          "Ulna y radio",
+          "Escápula y clavícula",
+          "Tibia y fíbula"
         ],
         "answer": 0,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "289",
         "lecture_slides": [
-          30
-        ]
+          34,
+          35,
+          42
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 34,
+              "text": "Cintura escapular\nClavícula\nHueso en S que conecta el esternón con el acromion de la escápula.\nEscápula\nHueso plano triangular. Su cavidad glenoidea recibe la cabeza humeral.\n34"
+            },
+            {
+              "number": 35,
+              "text": "Húmero: orienta sus extremos\nCabeza humeral\nSuperficie proximal redondeada que articula con la escápula.\nCapítulo\nSuperficie distal lateral que articula con la cabeza del radio.\nTróclea\nSuperficie distal medial, en polea, que articula con la ulna.\n35"
+            },
+            {
+              "number": 42,
+              "text": "Tibia y fíbula: soporte y estabilidad\nTibia\nHueso medial y robusto de la pierna. Transmite la mayor parte de la carga.\nFíbula o peroné\nHueso lateral y delgado. Su extremo distal forma el maléolo lateral.\n42"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-014",
-        "text": "Con las palmas orientadas hacia delante, ¿qué hueso del antebrazo se encuentra del lado del pulgar?",
+        "key": "morfo-08-diapos-014",
+        "text": "¿Cómo se sitúan radio y ulna en el antebrazo?",
         "options": [
-          "Ulna",
-          "Radio",
-          "Húmero",
-          "Pisiforme"
+          "Radio medial; ulna lateral, del lado del pulgar",
+          "Radio lateral, del lado del pulgar; ulna medial",
+          "Ambos forman la palma de la mano",
+          "Radio en el brazo y ulna en la pierna"
         ],
         "answer": 1,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "290",
         "lecture_slides": [
-          31
-        ]
+          36,
+          37,
+          42
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 36,
+              "text": "Radio y ulna: mira el pulgar\nRadio\nHueso lateral del antebrazo, situado del lado del pulgar.\nUlna o cúbito\nHueso medial del antebrazo, cuyo olécranon forma la punta del codo.\n36"
+            },
+            {
+              "number": 37,
+              "text": "Mano: 8 + 5 + 14\n8 carpianos\nHuesos de la muñeca, dispuestos en dos filas.\n5 metacarpianos\nHuesos de la palma, numerados desde el pulgar.\n14 falanges\nHuesos de los dedos. El pulgar tiene dos, los demás tres.\n37"
+            },
+            {
+              "number": 42,
+              "text": "Tibia y fíbula: soporte y estabilidad\nTibia\nHueso medial y robusto de la pierna. Transmite la mayor parte de la carga.\nFíbula o peroné\nHueso lateral y delgado. Su extremo distal forma el maléolo lateral.\n42"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-015",
-        "text": "¿Qué hueso del carpo es sesamoideo y se desarrolla en el tendón del flexor ulnar del carpo?",
+        "key": "morfo-08-diapos-015",
+        "text": "¿Qué tres componentes forman el coxal que muestra la presentación?",
         "options": [
-          "Piramidal",
-          "Grande",
-          "Pisiforme",
-          "Ganchoso"
+          "Ilion, sacro y cóccix",
+          "Pubis, fémur y patela",
+          "Ilion, isquion y pubis",
+          "Isquion, tibia y fíbula"
         ],
         "answer": 2,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
-        "pages": "291",
+        "pages": "294",
         "lecture_slides": [
-          32
-        ]
+          31,
+          38,
+          41,
+          42
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 31,
+              "text": "Sacro y cóccix\nSacro\nCinco vértebras fusionadas. Articula con L5 y los coxales.\nCóccix\nExtremo de la columna, formado habitualmente por cuatro segmentos.\n31"
+            },
+            {
+              "number": 38,
+              "text": "Coxal: tres piezas fusionadas\nIlion\nPorción superior y amplia del coxal, coronada por la cresta ilíaca.\nIsquion\nPorción posteroinferior. Su tuberosidad soporta el peso al sentarse.\nPubis\nPorción anterior que se une al pubis opuesto en la sínfisis.\n38"
+            },
+            {
+              "number": 41,
+              "text": "Fémur y patela\nFémur\nHueso del muslo. Su cabeza articula con el acetábulo del coxal.\nPatela o rótula\nSesamoideo del tendón del cuádriceps que articula con el fémur.\n41"
+            },
+            {
+              "number": 42,
+              "text": "Tibia y fíbula: soporte y estabilidad\nTibia\nHueso medial y robusto de la pierna. Transmite la mayor parte de la carga.\nFíbula o peroné\nHueso lateral y delgado. Su extremo distal forma el maléolo lateral.\n42"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-016",
-        "text": "¿Qué recuento corresponde a los huesos de una mano?",
+        "key": "morfo-08-diapos-016",
+        "text": "¿Qué recuento corresponde a una mano?",
         "options": [
           "7 carpianos, 5 metacarpianos y 14 falanges",
           "8 carpianos, 5 metacarpianos y 15 falanges",
@@ -10086,75 +10384,176 @@
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "291",
         "lecture_slides": [
-          32
-        ]
+          37,
+          43
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 37,
+              "text": "Mano: 8 + 5 + 14\n8 carpianos\nHuesos de la muñeca, dispuestos en dos filas.\n5 metacarpianos\nHuesos de la palma, numerados desde el pulgar.\n14 falanges\nHuesos de los dedos. El pulgar tiene dos, los demás tres.\n37"
+            },
+            {
+              "number": 43,
+              "text": "Pie: 7 + 5 + 14\n7 tarsianos\nHuesos del tobillo y la región posterior del pie.\n5 metatarsianos\nHuesos entre tarso y dedos, numerados desde el dedo gordo.\n14 falanges\nEl dedo gordo tiene dos. Cada uno de los otros dedos tiene tres.\n43"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-017",
-        "text": "¿Qué tres componentes se fusionan para formar un coxal adulto?",
+        "key": "morfo-08-diapos-017",
+        "text": "¿Qué recuento corresponde a un pie?",
         "options": [
-          "Ilion, isquion y pubis",
-          "Sacro, cóccix y fémur",
-          "Ilion, sacro y patela",
-          "Pubis, tibia y fíbula"
+          "7 tarsianos, 5 metatarsianos y 14 falanges",
+          "8 tarsianos, 5 metatarsianos y 14 falanges",
+          "7 tarsianos, 8 metatarsianos y 14 falanges",
+          "7 tarsianos, 5 metatarsianos y 15 falanges"
         ],
         "answer": 0,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
-        "pages": "294",
+        "pages": "298",
         "lecture_slides": [
-          33
-        ]
+          37,
+          43
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 37,
+              "text": "Mano: 8 + 5 + 14\n8 carpianos\nHuesos de la muñeca, dispuestos en dos filas.\n5 metacarpianos\nHuesos de la palma, numerados desde el pulgar.\n14 falanges\nHuesos de los dedos. El pulgar tiene dos, los demás tres.\n37"
+            },
+            {
+              "number": 43,
+              "text": "Pie: 7 + 5 + 14\n7 tarsianos\nHuesos del tobillo y la región posterior del pie.\n5 metatarsianos\nHuesos entre tarso y dedos, numerados desde el dedo gordo.\n14 falanges\nEl dedo gordo tiene dos. Cada uno de los otros dedos tiene tres.\n43"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-018",
-        "text": "La salida pélvica constituye el límite inferior de…",
+        "key": "morfo-08-diapos-018",
+        "text": "¿A qué región corresponden las aberturas superior e inferior llamadas entrada y salida pélvicas?",
         "options": [
-          "La pelvis mayor",
-          "La pelvis menor",
-          "La cavidad torácica",
-          "La cintura escapular"
+          "Pelvis mayor",
+          "Pelvis menor",
+          "Órbita",
+          "Caja torácica"
         ],
         "answer": 1,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "294",
         "lecture_slides": [
-          34
-        ]
+          13,
+          32,
+          39
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 13,
+              "text": "Cavidades del cráneo\nÓrbita\nCavidad ósea que aloja el ojo y sus estructuras asociadas.\nCavidad nasal\nEspacio dividido por el tabique y limitado lateralmente por cornetes.\nFosas craneales\nDepresiones de la base que alojan partes del encéfalo.\n13"
+            },
+            {
+              "number": 32,
+              "text": "Caja torácica y esternón\nManubrio\nPorción superior del esternón, unida a clavículas y primeras costillas.\nCuerpo esternal\nPorción central y alargada que recibe cartílagos costales.\nApófisis xifoides\nExtremo inferior del esternón, pequeño y variable.\n32"
+            },
+            {
+              "number": 39,
+              "text": "Pelvis: entrada y salida\nPelvis mayor\nRegión amplia por encima del borde pélvico.\nPelvis menor\nRegión por debajo del borde pélvico que rodea la cavidad pélvica.\nEntrada y salida\nAberturas superior e inferior de la pelvis menor.\n39"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-019",
-        "text": "¿Qué asociación orienta correctamente los dos huesos de la pierna?",
+        "key": "morfo-08-diapos-019",
+        "text": "¿Qué relación entre tibia y fíbula coincide con la presentación?",
         "options": [
-          "Tibia lateral; fíbula medial",
-          "Ambos mediales al fémur",
-          "Tibia medial; fíbula lateral",
-          "Fíbula medial y articulada directamente con el fémur"
+          "Tibia lateral y delgada; fíbula medial y robusta",
+          "Tibia del lado del pulgar; fíbula medial del antebrazo",
+          "Tibia medial y robusta; fíbula lateral y delgada",
+          "Tibia y fíbula forman los huesos de la palma"
         ],
         "answer": 2,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "297",
         "lecture_slides": [
-          37
-        ]
+          36,
+          37,
+          42
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 36,
+              "text": "Radio y ulna: mira el pulgar\nRadio\nHueso lateral del antebrazo, situado del lado del pulgar.\nUlna o cúbito\nHueso medial del antebrazo, cuyo olécranon forma la punta del codo.\n36"
+            },
+            {
+              "number": 37,
+              "text": "Mano: 8 + 5 + 14\n8 carpianos\nHuesos de la muñeca, dispuestos en dos filas.\n5 metacarpianos\nHuesos de la palma, numerados desde el pulgar.\n14 falanges\nHuesos de los dedos. El pulgar tiene dos, los demás tres.\n37"
+            },
+            {
+              "number": 42,
+              "text": "Tibia y fíbula: soporte y estabilidad\nTibia\nHueso medial y robusto de la pierna. Transmite la mayor parte de la carga.\nFíbula o peroné\nHueso lateral y delgado. Su extremo distal forma el maléolo lateral.\n42"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       },
       {
-        "key": "morfo-08-clase-020",
-        "text": "¿Qué recorrido corresponde a cada arco longitudinal del pie?",
+        "key": "morfo-08-diapos-020",
+        "text": "¿Qué recorrido corresponde a los arcos longitudinales del pie?",
         "options": [
-          "Medial: talón a dedo pequeño; lateral: talón a dedo gordo",
-          "Ambos cruzan transversalmente solo las falanges",
-          "El medial está en la mano y el lateral en el pie",
-          "Medial: talón a dedo gordo; lateral: talón a dedo pequeño"
+          "Medial hacia el dedo pequeño; lateral hacia el dedo gordo",
+          "Ambos cruzan el pie solo de lado a lado",
+          "El transverso va del talón al lado del dedo gordo",
+          "Medial hacia el dedo gordo; lateral hacia el dedo pequeño"
         ],
         "answer": 3,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
         "pages": "300",
         "lecture_slides": [
-          38,
-          39
-        ]
+          44
+        ],
+        "presentation_source": {
+          "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+          "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+          "slide_count": 47,
+          "slides": [
+            {
+              "number": 44,
+              "text": "Arcos del pie: tres direcciones\nLongitudinal medial\nDel talón al lado del dedo gordo. Incluye metatarsianos I–III.\nLongitudinal lateral\nDel talón al lado del dedo pequeño. Incluye metatarsianos IV–V.\nArco transverso\nCruza el pie por cuboides, cuneiformes y bases metatarsianas.\n44"
+            }
+          ],
+          "scope": "visible_slide_text_only"
+        },
+        "practice_topic": "sistema_oseo"
       }
-    ]
+    ],
+    "content_revision": 4,
+    "lecture_slide_count": 47,
+    "presentation_source": {
+      "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+      "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+      "scope": "visible_slide_text_only"
+    }
   },
   {
     "id": "morfo-09",

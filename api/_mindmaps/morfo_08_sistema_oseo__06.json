@@ -1,66 +1,84 @@
 {
   "id": "morfo_08_sistema_oseo__06",
-  "title": "Relaciones imprescindibles",
+  "title": "Relaciones de la presentación",
   "topic": "Sistema óseo",
-  "content_revision": 3,
-  "lecture_slide_count": 42,
+  "content_revision": 4,
+  "lecture_slide_count": 47,
   "lecture_slides": [
-    6,
-    13,
-    17,
-    24,
-    28,
-    31,
-    32,
-    34,
-    39
+    3,
+    16,
+    22,
+    35,
+    36,
+    41,
+    42,
+    44,
+    46
   ],
   "sections": [
     {
-      "title": "Cráneo: 8 + 14",
+      "title": "Reconocimiento",
       "color": "#d76387",
       "groups": [
         {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
           "items": [
             {
-              "title": "Cráneo: 8 + 14",
-              "text": "Los ocho huesos craneales son frontal, dos parietales, dos temporales, occipital, esfenoides y etmoides. Los catorce faciales comprenden dos maxilares, dos palatinos, dos cigomáticos, dos lagrimales, dos nasales, dos cornetes nasales inferiores, vómer y mandíbula. Los seis osículos auditivos y el hioides son huesos asociados, no parte del recuento de 22.",
+              "title": "Reconocimiento",
+              "text": "Orientar: región, vista y lados. Localizar: accidente óseo por forma y posición. Relacionar: explicar qué articula, se inserta o atraviesa la estructura.",
               "lecture_slides": [
-                6
+                46
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
                 "pdfPage": 264,
                 "printedPage": 236,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 46,
+                "quote": "Reconocer antes de memorizar\n1. Orientar\nIdentificar la región, la vista y los lados anatómicos.\n2. Localizar\nReconocer un accidente óseo por su forma y posición.\n3. Relacionar\nExplicar qué articula, se inserta o atraviesa esa estructura.\n46",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Etmoides: techo, tabique y pared",
-              "text": "El etmoides se sitúa entre las órbitas y participa en las cavidades craneal y nasal. La lámina cribosa presenta orificios para fibras olfatorias. La lámina perpendicular participa en el tabique nasal. Los laberintos contienen celdillas etmoidales y forman los cornetes superior y medio. El cornete nasal inferior no pertenece al etmoides: es una pieza facial independiente.",
+              "title": "Cóndilo",
+              "text": "Prominencia redondeada que articula con otro hueso.",
               "lecture_slides": [
-                13
+                3
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 273,
-                "printedPage": 245,
+                "pdfPage": 264,
+                "printedPage": 236,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 3,
+                "quote": "Superficies que articulan\nCóndilo\nProminencia redondeada que articula con otro hueso.\nCabeza\nExtremo óseo expandido y prominente, a veces redondeado.\nCarilla\nSuperficie articular lisa, plana o ligeramente curva.\n03",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Forámenes: une paso y contenido",
-              "text": "Para un primer recorrido, prioriza lámina cribosa–fibras olfatorias, conducto óptico–nervio óptico y arteria oftálmica, agujero magno–médula y arterias vertebrales, conducto carotídeo–carótida interna y agujero estilomastoideo–nervio facial. La tabla ampliada del guion permite repasar otros trayectos. Un orificio puede transportar más de una estructura; el rótulo breve de la diapositiva destaca la relación que debe reconocerse primero.",
+              "title": "Forámenes y contenido",
+              "text": "Agujeros cribosos: nervios olfatorios, I. Conducto óptico: nervio óptico, II, y arteria oftálmica. Agujero magno: médula, arterias vertebrales y raíces del XI.",
               "lecture_slides": [
-                17
+                22
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
                 "pdfPage": 269,
                 "printedPage": 241,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 22,
+                "quote": "Forámenes: une paso y contenido\nAgujeros cribosos\nEtmoides: paso de los nervios olfatorios, I.\nConducto óptico\nEsfenoides: nervio óptico, II, y arteria oftálmica.\nAgujero magno\nOccipital: médula, arterias vertebrales y raíces del XI.\n22",
+                "scope": "visible_slide_text_only"
               }
             }
           ]
@@ -68,101 +86,137 @@
       ]
     },
     {
-      "title": "Atlas y axis: sostener y girar",
+      "title": "Articulaciones",
       "color": "#d76387",
       "groups": [
         {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
           "items": [
             {
-              "title": "Atlas y axis: sostener y girar",
-              "text": "El atlas carece de cuerpo y recibe los cóndilos occipitales en sus carillas superiores. La articulación atlantooccipital permite el movimiento de asentir. El axis presenta el diente o apófisis odontoides, relacionado con la rotación del atlas y la cabeza. La articulación atlantoaxial participa en el gesto de negar. Las vértebras cervicales se reconocen además por sus agujeros transversos.",
+              "title": "Occipital",
+              "text": "El agujero magno corresponde a la continuidad entre encéfalo y médula. Los cóndilos occipitales articulan con el atlas, C1.",
               "lecture_slides": [
-                24
+                16
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 281,
-                "printedPage": 253,
+                "pdfPage": 272,
+                "printedPage": 244,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 16,
+                "quote": "Occipital: conexión con la columna\nAgujero magno\nGran abertura occipital donde se continúan encéfalo y médula.\nCóndilos occipitales\nSuperficies redondeadas que articulan con el atlas, C1.\n16",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Costillas: 7 · 5 · 2",
-              "text": "Las primeras siete parejas de costillas se llaman verdaderas porque su cartílago llega directamente al esternón. Las parejas ocho a doce son falsas: ocho a diez se unen indirectamente por cartílagos superiores, mientras once y doce carecen de unión anterior al esternón y son flotantes. La cabeza de una costilla se relaciona con los cuerpos vertebrales torácicos; el tubérculo se relaciona con la apófisis transversa cuando existe esa articulación.",
+              "title": "Húmero",
+              "text": "Cabeza proximal: articula con escápula. Capítulo distal lateral: radio. Tróclea distal medial, en polea: ulna.",
               "lecture_slides": [
-                28
+                35
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 285,
-                "printedPage": 257,
+                "pdfPage": 289,
+                "printedPage": 261,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 35,
+                "quote": "Húmero: orienta sus extremos\nCabeza humeral\nSuperficie proximal redondeada que articula con la escápula.\nCapítulo\nSuperficie distal lateral que articula con la cabeza del radio.\nTróclea\nSuperficie distal medial, en polea, que articula con la ulna.\n35",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Radio y ulna: mira el pulgar",
-              "text": "El radio ocupa el lado lateral del antebrazo en posición anatómica y se sitúa del lado del pulgar. La ulna o cúbito es medial y se relaciona con el lado del dedo pequeño. La cabeza radial es proximal; la ulna destaca proximalmente por olécranon e incisura troclear. La membrana interósea une ambas diáfisis. Al cambiar la posición del antebrazo, la relación visual puede variar; por ello se enseña primero la posición anatómica.",
+              "title": "Fémur y patela",
+              "text": "Fémur: hueso del muslo; su cabeza articula con el acetábulo. Patela: sesamoideo del tendón del cuádriceps que articula con el fémur.",
               "lecture_slides": [
-                31
+                41
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 296,
+                "printedPage": 268,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 41,
+                "quote": "Fémur y patela\nFémur\nHueso del muslo. Su cabeza articula con el acetábulo del coxal.\nPatela o rótula\nSesamoideo del tendón del cuádriceps que articula con el fémur.\n41",
+                "scope": "visible_slide_text_only"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Orientación y apoyo",
+      "color": "#d76387",
+      "groups": [
+        {
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
+          "items": [
+            {
+              "title": "Radio y ulna",
+              "text": "Radio: lateral y del lado del pulgar. Ulna o cúbito: medial; su olécranon forma la punta del codo.",
+              "lecture_slides": [
+                36
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
                 "pdfPage": 290,
                 "printedPage": 262,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Mano: 8 + 5 + 14",
-      "color": "#d76387",
-      "groups": [
-        {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
-          "items": [
-            {
-              "title": "Mano: 8 + 5 + 14",
-              "text": "El carpo tiene ocho huesos. La fila proximal, de lateral a medial, comprende escafoides, semilunar, piramidal y pisiforme. La distal incluye trapecio, trapezoide, grande y ganchoso. El pisiforme es un sesamoideo relacionado con el tendón del flexor ulnar del carpo. El ganchoso presenta el gancho que contribuye a la fijación del retináculo flexor. Después se encuentran cinco metacarpianos y catorce falanges.",
-              "lecture_slides": [
-                32
-              ],
-              "source": {
-                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 291,
-                "printedPage": 263,
-                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 36,
+                "quote": "Radio y ulna: mira el pulgar\nRadio\nHueso lateral del antebrazo, situado del lado del pulgar.\nUlna o cúbito\nHueso medial del antebrazo, cuyo olécranon forma la punta del codo.\n36",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Pelvis: entrada y salida",
-              "text": "La cintura pélvica comprende dos coxales. La pelvis ósea incluye además sacro y cóccix. El borde pélvico separa pelvis mayor y menor; la entrada pélvica conduce a la pelvis menor. La salida pélvica está en el límite inferior de la pelvis menor. La orientación de la figura debe permitir distinguir el contorno superior de entrada y el inferior de salida.",
+              "title": "Tibia y fíbula",
+              "text": "Tibia: medial y robusta, transmite la mayor parte de la carga. Fíbula: lateral y delgada; forma el maléolo lateral en su extremo distal.",
               "lecture_slides": [
-                34
+                42
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 293,
-                "printedPage": 265,
+                "pdfPage": 297,
+                "printedPage": 269,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 42,
+                "quote": "Tibia y fíbula: soporte y estabilidad\nTibia\nHueso medial y robusto de la pierna. Transmite la mayor parte de la carga.\nFíbula o peroné\nHueso lateral y delgado. Su extremo distal forma el maléolo lateral.\n42",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Arcos del pie: tres direcciones",
-              "text": "El arco longitudinal medial va del talón al lado del dedo gordo e incluye calcáneo, talus, navicular, cuneiformes y los primeros metatarsianos. El longitudinal lateral sigue el lado del dedo pequeño y comprende calcáneo, cuboides y metatarsianos laterales. El arco transverso cruza la región del mediopié. Los ligamentos contribuyen al mantenimiento de los arcos, que distribuyen las cargas y aportan adaptación al apoyo.",
+              "title": "Arcos del pie",
+              "text": "Medial: talón hacia el dedo gordo, metatarsianos I–III. Lateral: talón hacia el dedo pequeño, IV–V. Transverso: cuboides, cuneiformes y bases metatarsianas.",
               "lecture_slides": [
-                39
+                44
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 299,
-                "printedPage": 271,
+                "pdfPage": 300,
+                "printedPage": 272,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 44,
+                "quote": "Arcos del pie: tres direcciones\nLongitudinal medial\nDel talón al lado del dedo gordo. Incluye metatarsianos I–III.\nLongitudinal lateral\nDel talón al lado del dedo pequeño. Incluye metatarsianos IV–V.\nArco transverso\nCruza el pie por cuboides, cuneiformes y bases metatarsianas.\n44",
+                "scope": "visible_slide_text_only"
               }
             }
           ]
@@ -206,5 +260,10 @@
     "source_only": true,
     "doctor_approved": false,
     "date": "2026-10-21"
+  },
+  "presentation_source": {
+    "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+    "scope": "visible_slide_text_only"
   }
 }

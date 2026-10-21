@@ -1,7 +1,6 @@
 {
   "date": "2026-10-21",
-  "slide_count": 42,
-  "guide_pages": 45,
+  "slide_count": 47,
   "flashcards": 20,
   "evaluation": 20,
   "rounds": [
@@ -19,5 +18,328 @@
   "source_sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
   "guide_route": "morfofuncion-tema-8",
   "source_only": true,
-  "doctor_approved": false
+  "doctor_approved": false,
+  "scope": "visible_slide_text_only",
+  "presentation": {
+    "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+    "slide_count": 47,
+    "tissues_included": false,
+    "questions": [
+      {
+        "id": "morfo-08-diapos-001",
+        "slides": [
+          2,
+          11
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-002",
+        "slides": [
+          3,
+          7,
+          8
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-003",
+        "slides": [
+          4,
+          5,
+          7,
+          9
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-004",
+        "slides": [
+          11,
+          23
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-005",
+        "slides": [
+          12
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-006",
+        "slides": [
+          7,
+          16,
+          17,
+          34
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-007",
+        "slides": [
+          18,
+          20
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-008",
+        "slides": [
+          19,
+          20,
+          21
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-009",
+        "slides": [
+          25
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-010",
+        "slides": [
+          27,
+          28
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-011",
+        "slides": [
+          29,
+          30
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-012",
+        "slides": [
+          33
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-013",
+        "slides": [
+          34,
+          35,
+          42
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-014",
+        "slides": [
+          36,
+          37,
+          42
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-015",
+        "slides": [
+          31,
+          38,
+          41,
+          42
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-016",
+        "slides": [
+          37,
+          43
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-017",
+        "slides": [
+          37,
+          43
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-018",
+        "slides": [
+          13,
+          32,
+          39
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-019",
+        "slides": [
+          36,
+          37,
+          42
+        ]
+      },
+      {
+        "id": "morfo-08-diapos-020",
+        "slides": [
+          44
+        ]
+      }
+    ]
+  },
+  "mental_map": {
+    "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+    "slide_count": 47,
+    "general_concepts": 24,
+    "concept_slides": [
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        4
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7
+      ],
+      [
+        7
+      ],
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        11
+      ],
+      [
+        12
+      ],
+      [
+        13
+      ],
+      [
+        14
+      ],
+      [
+        15
+      ],
+      [
+        16
+      ],
+      [
+        17
+      ],
+      [
+        18
+      ],
+      [
+        19
+      ],
+      [
+        20
+      ],
+      [
+        20
+      ],
+      [
+        21
+      ],
+      [
+        22
+      ],
+      [
+        23
+      ],
+      [
+        24
+      ],
+      [
+        25
+      ],
+      [
+        26
+      ],
+      [
+        27
+      ],
+      [
+        28
+      ],
+      [
+        29
+      ],
+      [
+        30
+      ],
+      [
+        31
+      ],
+      [
+        32
+      ],
+      [
+        33
+      ],
+      [
+        34
+      ],
+      [
+        35
+      ],
+      [
+        36
+      ],
+      [
+        37
+      ],
+      [
+        38
+      ],
+      [
+        39
+      ],
+      [
+        40
+      ],
+      [
+        41
+      ],
+      [
+        42
+      ],
+      [
+        43
+      ],
+      [
+        44
+      ],
+      [
+        45
+      ],
+      [
+        46
+      ]
+    ]
+  },
+  "tissues_included": false,
+  "tissues_unchanged": true
 }

@@ -1,9 +1,9 @@
 {
   "id": "morfo_08_sistema_oseo__01",
-  "title": "Organización y lenguaje óseo",
+  "title": "Organización y accidentes óseos",
   "topic": "Sistema óseo",
-  "content_revision": 3,
-  "lecture_slide_count": 42,
+  "content_revision": 4,
+  "lecture_slide_count": 47,
   "lecture_slides": [
     2,
     3,
@@ -13,20 +13,20 @@
     7,
     8,
     9,
-    18
+    10
   ],
   "sections": [
     {
-      "title": "Dos divisiones, un esqueleto",
+      "title": "Divisiones y superficies",
       "color": "#429243",
       "groups": [
         {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
           "items": [
             {
-              "title": "Dos divisiones, un esqueleto",
-              "text": "El esqueleto axial comprende cráneo, huesos asociados, columna vertebral y caja torácica. El apendicular comprende las cinturas escapular y pélvica y los miembros superiores e inferiores. La cifra de 206 corresponde al adulto típico; no es una constante absoluta. Las fusiones durante el desarrollo y la variabilidad de huesos sesamoideos y suturales explican diferencias individuales.",
+              "title": "Axial y apendicular",
+              "text": "Axial: 80 huesos, eje de la cabeza y el tronco. Apendicular: 126, cinturas y huesos de los miembros. Adulto: unos 206; puede variar entre personas.",
               "lecture_slides": [
                 2
               ],
@@ -35,11 +35,17 @@
                 "pdfPage": 262,
                 "printedPage": 234,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 2,
+                "quote": "Dos divisiones, un esqueleto\nAxial: 80 huesos\nEje de la cabeza y el tronco.\nApendicular: 126\nCinturas y huesos de los miembros.\nAdulto: unos 206\nEl total puede variar entre personas.\n02",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Superficies que articulan",
-              "text": "Un cóndilo es una prominencia articular redondeada. La cabeza es un extremo expandido que suele conectarse con la diáfisis mediante un cuello. Una carilla es una superficie articular relativamente lisa, plana o ligeramente curva. Compara el cóndilo occipital, la cabeza femoral y las carillas vertebrales. No todo relieve sirve para articulación: hay prominencias dedicadas a inserciones musculares o ligamentosas.",
+              "title": "Cóndilo",
+              "text": "Prominencia redondeada que articula con otro hueso.",
               "lecture_slides": [
                 3
               ],
@@ -48,11 +54,67 @@
                 "pdfPage": 264,
                 "printedPage": 236,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 3,
+                "quote": "Superficies que articulan\nCóndilo\nProminencia redondeada que articula con otro hueso.\nCabeza\nExtremo óseo expandido y prominente, a veces redondeado.\nCarilla\nSuperficie articular lisa, plana o ligeramente curva.\n03",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Relieves para reconocer e insertar",
-              "text": "La cresta es un borde estrecho y prominente, como la cresta ilíaca. La espina es una proyección puntiaguda. Los trocánteres son grandes prominencias propias del fémur; las tuberosidades suelen ser redondeadas y rugosas. Una línea es un relieve más discreto. El epicóndilo se sitúa por encima de un cóndilo. Utiliza estos términos para describir la figura antes de intentar memorizar el nombre completo.",
+              "title": "Cabeza",
+              "text": "Extremo óseo expandido y prominente, a veces redondeado.",
+              "lecture_slides": [
+                3
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 3,
+                "quote": "Superficies que articulan\nCóndilo\nProminencia redondeada que articula con otro hueso.\nCabeza\nExtremo óseo expandido y prominente, a veces redondeado.\nCarilla\nSuperficie articular lisa, plana o ligeramente curva.\n03",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Carilla",
+              "text": "Superficie articular lisa, plana o ligeramente curva.",
+              "lecture_slides": [
+                3
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 3,
+                "quote": "Superficies que articulan\nCóndilo\nProminencia redondeada que articula con otro hueso.\nCabeza\nExtremo óseo expandido y prominente, a veces redondeado.\nCarilla\nSuperficie articular lisa, plana o ligeramente curva.\n03",
+                "scope": "visible_slide_text_only"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Prominencias",
+      "color": "#429243",
+      "groups": [
+        {
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
+          "items": [
+            {
+              "title": "Cresta",
+              "text": "Borde óseo estrecho, como la cresta ilíaca.",
               "lecture_slides": [
                 4
               ],
@@ -61,23 +123,55 @@
                 "pdfPage": 264,
                 "printedPage": 236,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 4,
+                "quote": "Relieves para reconocer e insertar\nCresta\nBorde óseo estrecho, como la cresta ilíaca.\nTrocánter\nCada una de las dos grandes apófisis del fémur.\nTuberosidad\nApófisis pequeña y redondeada, o superficie elevada y rugosa.\n04",
+                "scope": "visible_slide_text_only"
               }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Huecos, pasos y cavidades",
-      "color": "#429243",
-      "groups": [
-        {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
-          "items": [
+            },
             {
-              "title": "Huecos, pasos y cavidades",
-              "text": "Una fosa es una depresión relativamente amplia; una fóvea es una pequeña depresión. El alvéolo es un alojamiento, como el de un diente. Un surco suele alojar un vaso, nervio o tendón. Un foramen es una abertura que permite el paso de estructuras; un conducto es un trayecto óseo. Un seno es una cavidad dentro de un hueso. En las imágenes se comparan la fosa mandibular, el alvéolo dental y el agujero magno.",
+              "title": "Trocánter",
+              "text": "Cada una de las dos grandes apófisis del fémur.",
+              "lecture_slides": [
+                4
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 4,
+                "quote": "Relieves para reconocer e insertar\nCresta\nBorde óseo estrecho, como la cresta ilíaca.\nTrocánter\nCada una de las dos grandes apófisis del fémur.\nTuberosidad\nApófisis pequeña y redondeada, o superficie elevada y rugosa.\n04",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Tuberosidad",
+              "text": "Apófisis pequeña y redondeada, o superficie elevada y rugosa.",
+              "lecture_slides": [
+                4
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 4,
+                "quote": "Relieves para reconocer e insertar\nCresta\nBorde óseo estrecho, como la cresta ilíaca.\nTrocánter\nCada una de las dos grandes apófisis del fémur.\nTuberosidad\nApófisis pequeña y redondeada, o superficie elevada y rugosa.\n04",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Apófisis",
+              "text": "Cualquier prominencia ósea. Ejemplo: apófisis mastoides.",
               "lecture_slides": [
                 5
               ],
@@ -86,11 +180,36 @@
                 "pdfPage": 264,
                 "printedPage": 236,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 5,
+                "quote": "Apófisis, espina y línea\nApófisis\nCualquier prominencia ósea. Ejemplo: apófisis mastoides.\nEspina\nProyección fina o estrecha. Ejemplo: espina de la escápula.\n05\nLínea\nBorde alargado y poco elevado. Ejemplo: líneas del cráneo.",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Cráneo: 8 + 14",
-              "text": "Los ocho huesos craneales son frontal, dos parietales, dos temporales, occipital, esfenoides y etmoides. Los catorce faciales comprenden dos maxilares, dos palatinos, dos cigomáticos, dos lagrimales, dos nasales, dos cornetes nasales inferiores, vómer y mandíbula. Los seis osículos auditivos y el hioides son huesos asociados, no parte del recuento de 22.",
+              "title": "Espina y línea",
+              "text": "Espina: proyección fina o estrecha. Línea: borde alargado y poco elevado.",
+              "lecture_slides": [
+                5
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 5,
+                "quote": "Apófisis, espina y línea\nApófisis\nCualquier prominencia ósea. Ejemplo: apófisis mastoides.\nEspina\nProyección fina o estrecha. Ejemplo: espina de la escápula.\n05\nLínea\nBorde alargado y poco elevado. Ejemplo: líneas del cráneo.",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Epicóndilo y protuberancia",
+              "text": "Epicóndilo: región expandida por encima de un cóndilo. Protuberancia: protrusión o crecimiento saliente del hueso.",
               "lecture_slides": [
                 6
               ],
@@ -99,19 +218,12 @@
                 "pdfPage": 264,
                 "printedPage": 236,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
-              }
-            },
-            {
-              "title": "Suturas: reconoce sus límites",
-              "text": "La coronal se sitúa entre frontal y parietales. La sagital une ambos parietales. La lambdoidea está entre parietales y occipital. La escamosa relaciona temporal y parietal. Antes de buscar la línea de sutura, orienta el cráneo e identifica los huesos de cada lado. La vista superior facilita la sagital y la coronal; la lateral permite reconocer la escamosa.",
-              "lecture_slides": [
-                7
-              ],
-              "source": {
-                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 266,
-                "printedPage": 238,
-                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 6,
+                "quote": "Epicóndilo y protuberancia\nEpicóndilo\nRegión expandida situada por encima de un cóndilo.\nProtuberancia\nProtrusión o crecimiento saliente del hueso.\n06",
+                "scope": "visible_slide_text_only"
               }
             }
           ]
@@ -119,50 +231,106 @@
       ]
     },
     {
-      "title": "Cavidades del cráneo",
+      "title": "Depresiones y pasos",
       "color": "#429243",
       "groups": [
         {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
           "items": [
             {
-              "title": "Cavidades del cráneo",
-              "text": "El cráneo forma la cavidad craneal, las órbitas y las cavidades nasal y oral. Las fosas craneales anterior, media y posterior se disponen a distinta altura y sostienen regiones del encéfalo. Los senos paranasales son espacios aéreos de frontal, etmoides, esfenoides y maxilares. No identifiques toda una pared por un solo hueso: las órbitas y el tabique nasal reúnen varias piezas.",
+              "title": "Fosa y alvéolo",
+              "text": "Fosa: depresión amplia o alargada. Alvéolo: hueco que aloja una estructura, como la raíz dental.",
+              "lecture_slides": [
+                7
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 7,
+                "quote": "Huecos, pasos y cavidades\nFosa\nDepresión amplia o alargada en un hueso.\nAlvéolo\nHueco que aloja una estructura, como la raíz dental.\nForamen o agujero\nAbertura ósea, por lo general redondeada.\n07",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Foramen o agujero",
+              "text": "Abertura ósea, por lo general redondeada.",
+              "lecture_slides": [
+                7
+              ],
+              "source": {
+                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
+                "pdfPage": 264,
+                "printedPage": 236,
+                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 7,
+                "quote": "Huecos, pasos y cavidades\nFosa\nDepresión amplia o alargada en un hueso.\nAlvéolo\nHueco que aloja una estructura, como la raíz dental.\nForamen o agujero\nAbertura ósea, por lo general redondeada.\n07",
+                "scope": "visible_slide_text_only"
+              }
+            },
+            {
+              "title": "Fóvea y surco",
+              "text": "Fóvea: depresión pequeña. Surco: ranura que aloja un tendón, nervio o vaso sanguíneo.",
               "lecture_slides": [
                 8
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 267,
-                "printedPage": 239,
+                "pdfPage": 264,
+                "printedPage": 236,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 8,
+                "quote": "Fóvea y surco\nFóvea o fosita\nDepresión pequeña. Ejemplo: fóvea de la cabeza femoral.\nSurco\nRanura que aloja un tendón, nervio o vaso sanguíneo.\n08",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Frontal y parietales",
-              "text": "El frontal forma la frente y contribuye al techo de las órbitas y a la fosa craneal anterior. Los dos parietales forman gran parte de las paredes laterales y del techo del cráneo. La sutura coronal los separa del frontal y la sagital relaciona ambos parietales. Los senos frontales son cavidades del hueso frontal.",
+              "title": "Conducto y meato",
+              "text": "Conducto: pasaje tubular por un hueso. Meato: abertura o entrada de un conducto.",
               "lecture_slides": [
                 9
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 270,
-                "printedPage": 242,
+                "pdfPage": 264,
+                "printedPage": 236,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 9,
+                "quote": "Conducto y meato\nConducto\nPasaje tubular o túnel que recorre un hueso.\nMeato\nAbertura o entrada de un conducto. Ejemplo: meato acústico externo.\n09",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Asociados al cráneo",
-              "text": "En cada oído medio hay tres osículos: martillo, yunque y estribo. Ambos lados suman seis. El hioides es un hueso en forma de U que se encuentra en el cuello y se sostiene por músculos y ligamentos. No establece una articulación ósea directa con otra pieza. Estos siete huesos se estudian junto al cráneo, pero no pertenecen al recuento de sus 22 huesos.",
+              "title": "Fisura y seno",
+              "text": "Fisura: abertura estrecha y alargada. Seno óseo: cavidad llena de aire dentro de un hueso del cráneo.",
               "lecture_slides": [
-                18
+                10
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 277,
-                "printedPage": 249,
+                "pdfPage": 264,
+                "printedPage": 236,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 10,
+                "quote": "Fisura y seno\nFisura o cisura\nAbertura estrecha y alargada en forma de hendidura.\nSeno óseo\nCavidad llena de aire dentro de un hueso del cráneo.\n10",
+                "scope": "visible_slide_text_only"
               }
             }
           ]
@@ -197,5 +365,10 @@
     "source_only": true,
     "doctor_approved": false,
     "date": "2026-10-21"
+  },
+  "presentation_source": {
+    "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+    "scope": "visible_slide_text_only"
   }
 }

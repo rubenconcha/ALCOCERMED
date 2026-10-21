@@ -2,65 +2,82 @@
   "id": "morfo_08_sistema_oseo__05",
   "title": "Pelvis y miembro inferior",
   "topic": "Sistema óseo",
-  "content_revision": 3,
-  "lecture_slide_count": 42,
+  "content_revision": 4,
+  "lecture_slide_count": 47,
   "lecture_slides": [
-    33,
-    34,
-    35,
-    36,
-    37,
     38,
     39,
     40,
-    41
+    41,
+    42,
+    43,
+    44,
+    45
   ],
   "sections": [
     {
-      "title": "Coxal: tres piezas fusionadas",
+      "title": "Pelvis",
       "color": "#209caa",
       "groups": [
         {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
           "items": [
             {
-              "title": "Coxal: tres piezas fusionadas",
-              "text": "Cada coxal adulto resulta de la fusión de ilion, isquion y pubis. El ilion forma la región superior y presenta la cresta ilíaca. El isquion forma parte posteroinferior y su tuberosidad participa en el apoyo al sentarse. El pubis forma parte anterior y se relaciona con el pubis contralateral mediante la sínfisis. El acetábulo recibe la cabeza femoral.",
+              "title": "Ilion, isquion y pubis",
+              "text": "Ilion: superior y amplio, con cresta ilíaca. Isquion: posteroinferior, con tuberosidad de apoyo al sentarse. Pubis: anterior, unido al opuesto en la sínfisis.",
               "lecture_slides": [
-                33
+                38
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 293,
-                "printedPage": 265,
+                "pdfPage": 294,
+                "printedPage": 266,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 38,
+                "quote": "Coxal: tres piezas fusionadas\nIlion\nPorción superior y amplia del coxal, coronada por la cresta ilíaca.\nIsquion\nPorción posteroinferior. Su tuberosidad soporta el peso al sentarse.\nPubis\nPorción anterior que se une al pubis opuesto en la sínfisis.\n38",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Pelvis: entrada y salida",
-              "text": "La cintura pélvica comprende dos coxales. La pelvis ósea incluye además sacro y cóccix. El borde pélvico separa pelvis mayor y menor; la entrada pélvica conduce a la pelvis menor. La salida pélvica está en el límite inferior de la pelvis menor. La orientación de la figura debe permitir distinguir el contorno superior de entrada y el inferior de salida.",
+              "title": "Pelvis mayor y menor",
+              "text": "Mayor: región amplia por encima del borde pélvico. Menor: región por debajo. La entrada y la salida son las aberturas superior e inferior de la pelvis menor.",
               "lecture_slides": [
-                34
+                39
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 293,
-                "printedPage": 265,
+                "pdfPage": 294,
+                "printedPage": 266,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 39,
+                "quote": "Pelvis: entrada y salida\nPelvis mayor\nRegión amplia por encima del borde pélvico.\nPelvis menor\nRegión por debajo del borde pélvico que rodea la cavidad pélvica.\nEntrada y salida\nAberturas superior e inferior de la pelvis menor.\n39",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Pelvis: compara conjuntos de rasgos",
-              "text": "El texto compara rasgos típicos de pelvis masculina y femenina. La femenina suele ser más ancha y menos profunda, con entrada más oval o redondeada y arco púbico más amplio. La masculina suele ser más estrecha y profunda y presentar entrada de contorno más acorazonado. La tabla es una comparación de tendencias, no una regla para identificar de manera absoluta a una persona mediante un único rasgo.",
+              "title": "Rasgos pélvicos típicos",
+              "text": "Entrada masculina acorazonada y femenina redonda u oval. Pelvis menor masculina estrecha y profunda, femenina ancha y menos profunda. Ángulo subpúbico habitualmente mayor en la mujer.",
               "lecture_slides": [
-                35
+                40
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
                 "pdfPage": 296,
                 "printedPage": 268,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 40,
+                "quote": "Pelvis: compara conjuntos de rasgos\nEntrada pélvica\nTípicamente acorazonada en el varón y redonda u oval en la mujer.\nPelvis menor\nTípicamente estrecha y profunda en el varón, ancha y menos profunda en la mujer.\nÁngulo subpúbico\nÁngulo bajo la sínfisis púbica, habitualmente mayor en la mujer.\n40",
+                "scope": "visible_slide_text_only"
               }
             }
           ]
@@ -68,50 +85,49 @@
       ]
     },
     {
-      "title": "Fémur y patela",
+      "title": "Muslo y pierna",
       "color": "#209caa",
       "groups": [
         {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
           "items": [
             {
               "title": "Fémur y patela",
-              "text": "El fémur es el hueso del muslo. Su cabeza se articula con el acetábulo y su cuello conecta con el cuerpo. Los trocánteres mayor y menor son referencias de inserción. Distalmente se reconocen cóndilos y superficie patelar. La patela o rótula es un hueso sesamoideo incluido en el tendón del cuádriceps; su cara posterior articula con el fémur. El ligamento patelar continúa inferiormente hacia la tuberosidad tibial.",
+              "text": "Fémur: hueso del muslo; su cabeza articula con el acetábulo. Patela: sesamoideo del tendón del cuádriceps que articula con el fémur.",
               "lecture_slides": [
-                36
+                41
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 295,
-                "printedPage": 267,
+                "pdfPage": 296,
+                "printedPage": 268,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 41,
+                "quote": "Fémur y patela\nFémur\nHueso del muslo. Su cabeza articula con el acetábulo del coxal.\nPatela o rótula\nSesamoideo del tendón del cuádriceps que articula con el fémur.\n41",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Tibia y fíbula: soporte y estabilidad",
-              "text": "La tibia es el hueso medial y robusto de la pierna. Sus cóndilos reciben los cóndilos femorales; la tuberosidad tibial se relaciona con el ligamento patelar. Su extremo distal forma el maléolo medial. La fíbula o peroné es lateral, delgada y participa en la estabilidad del tobillo; su extremo distal forma el maléolo lateral. No articula directamente con el fémur.",
+              "title": "Tibia y fíbula",
+              "text": "Tibia: medial y robusta, transmite la mayor parte de la carga. Fíbula: lateral y delgada; forma el maléolo lateral en su extremo distal.",
               "lecture_slides": [
-                37
+                42
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
                 "pdfPage": 297,
                 "printedPage": 269,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
-              }
-            },
-            {
-              "title": "Pie: 7 + 5 + 14",
-              "text": "El tarso comprende talus o astrágalo, calcáneo, navicular, cuboides y tres cuneiformes: medial, intermedio y lateral. El talus se articula superiormente con la tibia y transmite cargas hacia el pie. El calcáneo forma el talón. Los metatarsianos se numeran I a V de medial a lateral. El dedo gordo tiene dos falanges y los demás, tres cada uno.",
-              "lecture_slides": [
-                38
-              ],
-              "source": {
-                "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 298,
-                "printedPage": 270,
-                "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 42,
+                "quote": "Tibia y fíbula: soporte y estabilidad\nTibia\nHueso medial y robusto de la pierna. Transmite la mayor parte de la carga.\nFíbula o peroné\nHueso lateral y delgado. Su extremo distal forma el maléolo lateral.\n42",
+                "scope": "visible_slide_text_only"
               }
             }
           ]
@@ -119,50 +135,68 @@
       ]
     },
     {
-      "title": "Arcos del pie: tres direcciones",
+      "title": "Pie y apoyo",
       "color": "#209caa",
       "groups": [
         {
-          "title": "Conceptos de la clase",
-          "relation": "se relaciona con",
+          "title": "Conceptos de las diapositivas",
+          "relation": "se describe como",
           "items": [
             {
-              "title": "Arcos del pie: tres direcciones",
-              "text": "El arco longitudinal medial va del talón al lado del dedo gordo e incluye calcáneo, talus, navicular, cuneiformes y los primeros metatarsianos. El longitudinal lateral sigue el lado del dedo pequeño y comprende calcáneo, cuboides y metatarsianos laterales. El arco transverso cruza la región del mediopié. Los ligamentos contribuyen al mantenimiento de los arcos, que distribuyen las cargas y aportan adaptación al apoyo.",
+              "title": "Pie: 7 + 5 + 14",
+              "text": "Siete tarsianos, cinco metatarsianos desde el dedo gordo y catorce falanges. El dedo gordo tiene dos; los demás, tres.",
               "lecture_slides": [
-                39
+                43
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 299,
-                "printedPage": 271,
+                "pdfPage": 298,
+                "printedPage": 270,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 43,
+                "quote": "Pie: 7 + 5 + 14\n7 tarsianos\nHuesos del tobillo y la región posterior del pie.\n5 metatarsianos\nHuesos entre tarso y dedos, numerados desde el dedo gordo.\n14 falanges\nEl dedo gordo tiene dos. Cada uno de los otros dedos tiene tres.\n43",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Bipedestación: relaciona todo el trayecto",
-              "text": "El capítulo relaciona la bipedestación con cambios en la base craneal, curvaturas vertebrales, forma de la pelvis, orientación del miembro inferior y arcos del pie. La comparación permite seguir el soporte desde el tronco hacia la pelvis, el fémur y el pie. La rotación del miembro inferior durante el desarrollo ayuda a comprender la orientación de rodilla y pie. La exposición prioriza las relaciones anatómicas visibles sobre detalles evolutivos secundarios.",
+              "title": "Arcos del pie",
+              "text": "Medial: talón hacia el dedo gordo, metatarsianos I–III. Lateral: talón hacia el dedo pequeño, IV–V. Transverso: cuboides, cuneiformes y bases metatarsianas.",
               "lecture_slides": [
-                40
+                44
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 299,
-                "printedPage": 271,
+                "pdfPage": 300,
+                "printedPage": 272,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 44,
+                "quote": "Arcos del pie: tres direcciones\nLongitudinal medial\nDel talón al lado del dedo gordo. Incluye metatarsianos I–III.\nLongitudinal lateral\nDel talón al lado del dedo pequeño. Incluye metatarsianos IV–V.\nArco transverso\nCruza el pie por cuboides, cuneiformes y bases metatarsianas.\n44",
+                "scope": "visible_slide_text_only"
               }
             },
             {
-              "title": "Reconocer antes de memorizar",
-              "text": "El cierre integra tres ejemplos ya estudiados: una vértebra, la mandíbula y el pie. En cada figura se aplica el mismo procedimiento: identificar región y vista, localizar una referencia, nombrar la estructura y relacionarla con una articulación, un trayecto o una función. Esta secuencia organiza el recuerdo y prepara el simulacro de identificación. No introduce contenido nuevo ni una lista adicional.",
+              "title": "Bipedestación",
+              "text": "Las curvaturas contribuyen al equilibrio del tronco; la pelvis sostiene vísceras; la inclinación femoral aproxima rodillas al eje. Los arcos distribuyen peso y absorben impactos.",
               "lecture_slides": [
-                41
+                45
               ],
               "source": {
                 "book": "Saladin · Anatomía y fisiología · 6.ª edición",
-                "pdfPage": 264,
-                "printedPage": 236,
+                "pdfPage": 301,
+                "printedPage": 273,
                 "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf"
+              },
+              "presentation_source": {
+                "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+                "slide": 45,
+                "quote": "Bipedestación: relaciona todo el trayecto\nColumna\nSus curvaturas contribuyen al equilibrio del tronco erguido.\nPelvis y fémur\nLa pelvis sostiene vísceras. La inclinación femoral aproxima las rodillas al eje.\nPie\nSus arcos distribuyen el peso y absorben impactos durante la marcha.\n45",
+                "scope": "visible_slide_text_only"
               }
             }
           ]
@@ -199,5 +233,10 @@
     "source_only": true,
     "doctor_approved": false,
     "date": "2026-10-21"
+  },
+  "presentation_source": {
+    "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",
+    "sha256": "446349fcbf8b765eb11bb646a54a6e6972e4a134144e6958b408edd3e025ce33",
+    "scope": "visible_slide_text_only"
   }
 }
