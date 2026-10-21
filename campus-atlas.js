@@ -26,7 +26,7 @@
  frame.addEventListener('load',()=>{
   if(!frame.hasAttribute('src')||frame.contentWindow?.location.href==='about:blank')return;
   document.getElementById('campus-atlas-loading').hidden=true;
-  try{if(!frame.contentDocument?.getElementById('atlas')){viewport.hidden=true;fullscreen.hidden=true;gate.hidden=false;status.textContent='No se pudo abrir el atlas. Vuelve a comprobar tu acceso.'}}catch(_){}
+  try{if(frame.contentDocument?.getElementById('atlas'))window.CampusTracking?.record('atlas','opened','MORFOFUNCION','Atlas anatómico','atlas');if(!frame.contentDocument?.getElementById('atlas')){viewport.hidden=true;fullscreen.hidden=true;gate.hidden=false;status.textContent='No se pudo abrir el atlas. Vuelve a comprobar tu acceso.'}}catch(_){}
  });
  document.getElementById('campus-atlas-retry').onclick=()=>window.openAtlas();
  document.getElementById('campus-atlas-fullscreen').onclick=async()=>{

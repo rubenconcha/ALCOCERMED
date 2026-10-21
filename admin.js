@@ -97,7 +97,7 @@ async function adminLogout() {
     console.warn('[Admin] error cerrando sesión:', err);
   }
   currentAdmin = null;
-  window.AdminTopicResults?.clear();
+  window.AdminTopicResults?.clear(); window.AdminSectionTracking?.clear();
   cachedData = { devices: [], sims: [], banco: [], videos: [], estudiantes: [], userMap: {}, errors: [] };
   document.getElementById('admin-login-screen').classList.remove('hidden');
   document.getElementById('admin-app').style.display = 'none';
@@ -178,7 +178,7 @@ function renderCurrentSection(section) {
   if (section === 'dashboard') renderDashboard();
   else if (section === 'estudiantes') renderEstudiantes(cachedData.estudiantes);
   else if (section === 'simulacros') renderSimulacros(cachedData.sims);
-  else if (section === 'evaluaciones') { renderEvaluaciones(cachedData.banco); window.AdminTopicResults?.render(); }
+  else if (section === 'evaluaciones') { renderEvaluaciones(cachedData.banco); window.AdminTopicResults?.render(); window.AdminSectionTracking?.render(); }
   else if (section === 'videoclases') renderVideoclases(cachedData.videos);
   else if (section === 'contenido') loadContenido(getSupabase());
 }
@@ -190,13 +190,16 @@ async function loadAllData() {
   const sb = getSupabase();
   cachedData.errors = [];
 
-  const [devices, sims, banco, videos, flashcards, directory] = await Promise.all([
+  const [devices, sims, banco, videos, flashcards, directory, activity, games, gameCatalog] = await Promise.all([
     safeSelect(sb, 'user_devices', '*'),
     safeSelect(sb, 'resultados_simulacros', '*', {paged:true}),
-    safeSelect(sb, 'resultados_banco', '*'),
+    safeSelect(sb, 'resultados_banco', '*', {paged:true}),
     safeSelect(sb, 'progreso_videoclases', '*'),
-    safeSelect(sb, 'progreso_flashcards', '*'),
-    getUserDirectory(sb)
+    safeSelect(sb, 'progreso_flashcards', '*', {paged:true,order:'user_id'}),
+    getUserDirectory(sb),
+    safeSelect(sb, 'campus_section_activity', '*', {paged:true}),
+    safeSelect(sb, 'evaluacion_resultados', 'id,user_id,evaluacion_id,puntaje,total,porcentaje,created_at', {paged:true}),
+    safeSelect(sb, 'evaluaciones', 'id,titulo,asignatura')
   ]);
 
   cachedData.devices = sortByDate(devices, ['updated_at', 'last_login', 'created_at']);
@@ -204,6 +207,7 @@ async function loadAllData() {
   cachedData.banco = sortByDate(banco, ['created_at']);
   cachedData.videos = sortByDate(videos, ['fecha_visto', 'created_at']);
   cachedData.flashcards = flashcards;
+  cachedData.activity = activity; cachedData.games = games; cachedData.gameCatalog = gameCatalog;
   cachedData.userMap = buildUserMap(directory, cachedData);
   cachedData.estudiantes = buildStudentRows(cachedData);
 
@@ -218,7 +222,7 @@ async function safeSelect(sb, table, select, options = {}) {
     do {
       let query = sb.from(table).select(select);
       if (options.limit) query = query.limit(options.limit);
-      if (options.paged) query = query.order('created_at', {ascending:true}).range(rows.length, rows.length + pageSize - 1);
+      if (options.paged) query = query.order(options.order || 'created_at', {ascending:true}).range(rows.length, rows.length + pageSize - 1);
       const { data, error } = await query;
       if (error) {
         cachedData.errors.push({ table, message: error.message });

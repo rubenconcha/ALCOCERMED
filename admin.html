@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="admin.css">
-    <link rel="stylesheet" href="admin-topic-results.css?v=1">
+    <link rel="stylesheet" href="admin-topic-results.css?v=2">
 </head>
 <body>
 
@@ -112,6 +112,7 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="top-bar">
+            <button id="admin-menu-toggle" type="button" aria-controls="admin-sidebar" aria-expanded="false" class="btn btn-secondary">Menú</button>
             <div class="top-bar-left">
                 <h1 id="page-title">dashboard</h1>
                 <p id="page-subtitle">resumen general de la plataforma</p>
@@ -235,6 +236,24 @@
                  EVALUACIONES (BANCO DE PREGUNTAS)
                  ══════════════════════════════════════════════ -->
             <section id="section-evaluaciones" class="admin-section">
+                <section id="section-tracking" class="topic-report-bank">
+                    <h2>Seguimiento de la preparatoria</h2>
+                    <p>Consulta a cada estudiante según las herramientas del menú.</p>
+                    <label>Sección del menú<select id="tracking-section"></select></label>
+                    <div id="tracking-general" hidden>
+                        <div class="topic-report-filters">
+                            <label>Materia<select id="tracking-subject"></select></label>
+                            <label>Tema<select id="tracking-topic"></select></label>
+                            <label>Desde<input id="tracking-from" type="date"></label>
+                            <label>Hasta<input id="tracking-to" type="date"></label>
+                            <label>Estudiante<input id="tracking-search" type="search" placeholder="Nombre o correo"></label>
+                            <label>Actividad<select id="tracking-state"><option value="">Todos</option><option value="active">Con registros</option><option value="missing">Sin registros</option></select></label>
+                        </div>
+                        <p id="tracking-status" role="status"></p>
+                        <button id="tracking-export" type="button" class="btn btn-secondary">Descargar CSV de esta sección</button>
+                        <div id="tracking-results"></div>
+                    </div>
+                </section>
                 <section id="topic-report" aria-labelledby="topic-report-title">
                     <h2 id="topic-report-title">Evaluaciones por tema · seguimiento individual</h2>
                     <p>Consulta las entregas guardadas de cada tema y abre el historial de cada estudiante.</p>
@@ -391,10 +410,11 @@
 </div>
 
 <!-- Toast container -->
+<dialog id="tracking-dialog" aria-labelledby="tracking-person"><header><h2 id="tracking-person">Historial por sección</h2><button id="tracking-close" type="button" class="btn btn-secondary">Cerrar</button></header><div id="tracking-detail"></div></dialog>
 <dialog id="topic-report-dialog" aria-labelledby="topic-report-person"><header><h2 id="topic-report-person">Historial de evaluaciones</h2><button id="topic-report-close" class="btn btn-secondary" type="button">Cerrar historial</button></header><div id="topic-report-detail"></div></dialog>
 <div class="toast-container" id="toast-container"></div>
 
 <script src="config.js"></script>
-<script src="admin.js?v=2"></script><script src="admin-topic-results.js?v=1"></script><script src="membership-offer.js?v=2"></script><script src="membership-admin.js?v=2"></script><script src="atlas-course-admin.js?v=1"></script>
+<script src="admin.js?v=3"></script><script src="admin-topic-results.js?v=1"></script><script src="admin-section-tracking.js?v=1"></script><script src="membership-offer.js?v=2"></script><script src="membership-admin.js?v=3"></script><script src="atlas-course-admin.js?v=1"></script>
 </body>
 </html>

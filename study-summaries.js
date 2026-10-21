@@ -49,7 +49,7 @@
         download.download = `${item.file}.pdf`;
         download.hidden = false;
         await reader.open(url);
-        if (revision === openRevision && dialog.open && !signal.aborted) loading.hidden = true;
+        if (revision === openRevision && dialog.open && !signal.aborted) { loading.hidden = true; window.CampusTracking?.record('resumenes','opened',item.subject,item.topic,item.file); }
     }
 
     const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();

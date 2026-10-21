@@ -471,6 +471,8 @@ function showScreen(screenId, fromBack) {
         if (!fromBack) campusScreenHistory.push(currentCampusScreen);
         currentCampusScreen = screenId;
     }
+    const trackingSections = {'study-library':'flashcards','intocables-screen':'mapas','atlas-screen':'atlas','resumenes-screen':'resumenes','intocables-hub-screen':'intocables','banco-screen':'banco','past-exams-screen':'examenes','simulacro-screen':'simulacros','evaluacion-screen':'evaluaciones','game-quiz':'quiz','game-hangman':'ahorcado'};
+    if (trackingSections[screenId]) window.CampusTracking?.record(trackingSections[screenId],'opened','','','menu');
     closeMobileSidebar();
     if (screenId !== 'study-area' && flashcardReviewTimer) {
         clearTimeout(flashcardReviewTimer);
@@ -1014,6 +1016,7 @@ window.rateCard = function (score) {
     if (repasosCount) repasosCount.innerText = totalReviews;
 
     const card = deck[currentIndex];
+    window.CampusTracking?.record('flashcards','reviewed',document.getElementById('current-subject')?.textContent,document.getElementById('card-tema-name')?.textContent,String(card.id || ''));
     const interval = SRS_INTERVALS[score];
     if (interval) saveSrs(card, interval);
 
@@ -1485,6 +1488,7 @@ function showQuizResult() {
         'obtuviste ' + quizScore + ' puntos (' + pct + '% del máximo posible)';
 
     resultEl.classList.remove('hidden');
+    window.CampusTracking?.record('quiz','completed','','Ronda de quiz relámpago','quiz',pct);
 }
 
 // ══════════════════════════════════════════════
@@ -1593,10 +1597,12 @@ function checkHmEnd() {
     if (allRevealed) {
         resultEl.classList.remove('hidden');
         resultText.innerHTML = '🎉 <strong>¡lo lograste!</strong> la palabra era: <strong>' + hmWord.toLowerCase() + '</strong>';
+        window.CampusTracking?.record('ahorcado','completed','','Ronda de ahorcado médico','hangman',100);
         disableHmKeyboard();
     } else if (hmErrors >= HM_MAX_ERRORS) {
         resultEl.classList.remove('hidden');
         resultText.innerHTML = '💀 <strong>fallaste.</strong> la palabra era: <strong>' + hmWord.toLowerCase() + '</strong>';
+        window.CampusTracking?.record('ahorcado','completed','','Ronda de ahorcado médico','hangman',0);
         disableHmKeyboard();
     }
 }
@@ -3579,6 +3585,7 @@ window.finalizarSimulacro = function () {
 
     // Sincronizar con la nube para el Panel de Admin
     guardarResultadoSimulacroEnNube({
+        menuSection: simState.mode === 'tema' ? 'evaluaciones' : simState.mode === 'pasado' && !simState.entranceOrigin ? 'examenes' : 'simulacros',
         titulo: (simState.mode === 'oficial' || simState.mode === 'pasado' || simState.mode === 'tema') ? (simState.selectedExamen || 'Simulacro preparado') : 'Simulacro personalizado',
         materia: (simState.mode === 'materia' || simState.mode === 'tema') ? simState.selectedMateria :
             simState.mode === 'oficial' ? (simState._oficialesCache.find(function (r) { return r.nombre === simState.selectedExamen; }) || {}).materia || 'todas' : 'todas',
@@ -4393,7 +4400,7 @@ async function guardarResultadoSimulacroEnNube(resultado) {
     if (!currentUser) return;
     try {
         const sb = getSupabase();
-        const { error } = await sb.from('resultados_simulacros').insert({
+        const payload = {
             user_id: currentUser.id,
             user_email: currentUser.email,
             user_name: (currentUser.user_metadata && currentUser.user_metadata.full_name) || currentUser.email.split('@')[0],
@@ -4403,8 +4410,11 @@ async function guardarResultadoSimulacroEnNube(resultado) {
             correctas: Math.round(Number(resultado.correctas || 0)),
             incorrectas: Math.round(Number(resultado.incorrectas || 0)),
             sin_respuesta: Math.round(Number(resultado.sinRespuesta || 0)),
-            tiempo_segundos: Math.round(Number(resultado.tiempoSegundos || 0))
-        });
+            tiempo_segundos: Math.round(Number(resultado.tiempoSegundos || 0)),
+            menu_section: resultado.menuSection || 'simulacros'
+        };
+        let { error } = await sb.from('resultados_simulacros').insert(payload);
+        if (error?.code === 'PGRST204' && /menu_section/.test(error.message)) { delete payload.menu_section; ({error} = await sb.from('resultados_simulacros').insert(payload)); }
         if (error) console.error('[Simulacro] Error guardando resultado:', error.message);
     } catch (e) {
         console.warn('[Simulacro] Error fatal en la nube:', e);

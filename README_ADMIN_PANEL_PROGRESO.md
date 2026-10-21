@@ -31,3 +31,14 @@ Por eso el panel muestra los correos si encuentra una de estas opciones:
 Si no existe ninguna, el panel igual muestra el progreso, pero identifica al alumno como `estudiante ...XXXXXX`.
 
 El archivo `SQL_OPCIONAL_CORREOS_ADMIN.sql` permite activar la opcion 1 para ver los correos reales del Auth de Supabase.
+
+
+### Seguimiento según el menú de la preparatoria
+
+En Administración → Evaluaciones, el selector «Sección del menú» permite consultar flashcards, mapas, atlas, resúmenes, intocables, banco, exámenes, simulacros, evaluaciones y juegos, con estudiante, materia, tema, fechas e historial CSV. Conserva el estilo del panel. Evaluación abre el informe de entregas por tema.
+
+Aplicar `SQL_CAMPUS_SECTION_TRACKING.sql` antes de publicar el registro de nuevas actividades. Se aplicó al proyecto `asnwhddmurstzmghuyin` el 20/10/2026. RLS limita lecturas a la propia cuenta o al administrador; el RPC fija usuario y fecha en servidor. No hay acceso anónimo ni inserción directa desde el navegador. Las visitas, aperturas y repasos son indicadores de uso declarados por el cliente, no constancia de lectura ni evaluación supervisada.
+
+El pasado se conserva con sus límites: flashcards solo tiene un total histórico sin tema; los exámenes/simulacros antiguos sin sección explícita se consultan en «sin clasificación histórica». Los nuevos resultados incluyen `menu_section`. Los juegos por materias conservan sus resultados y se vinculan por UUID, nunca por coincidencia de nombre; una cuenta invitada no puede atribuirse automáticamente a una cuenta de alumno. Las secciones que antes no guardaban actividad empiezan a registrar con esta versión. Menú visitado no equivale a recurso abierto o finalizado. El atlas solo registra el recurso cargado y no cada estructura interna. Quiz y ahorcado registran rondas; no tienen desglose de tema si la ronda no lo proporciona. No se reconstruyen respuestas individuales que no fueron almacenadas.
+
+El nuevo módulo consulta datos existentes y registra uso futuro; no cambia preguntas, bibliografía ni calificaciones. Las fallas de consulta se muestran como consulta incompleta. CSV exporta únicamente el filtro visible, con protección contra fórmulas. No publicar `tmp/`, capturas privadas ni fuentes extraídas.
