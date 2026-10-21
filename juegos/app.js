@@ -5491,6 +5491,37 @@ function showQuizResults() {
     }
 }
 
+function prepareDailyLeaderboard(rows) {
+    var best = new Map();
+    function compare(a, b) {
+        return b.porcentaje - a.porcentaje || b.puntaje - a.puntaje ||
+            String(a.created_at || '').localeCompare(String(b.created_at || '')) || String(a.user_id).localeCompare(String(b.user_id));
+    }
+    (rows || []).forEach(function(row) {
+        if (!row.user_id) return;
+        var item = Object.assign({}, row, {puntaje: Number(row.puntaje) || 0, porcentaje: Number(row.porcentaje) || 0});
+        var previous = best.get(item.user_id);
+        if (!previous || compare(item, previous) < 0) best.set(item.user_id, item);
+    });
+    return Array.from(best.values()).sort(compare);
+}
+
+function showDailyRankingError(message) {
+    var podium = document.getElementById('quiz-podium');
+    if (!podium) return;
+    podium.style.display = 'block';
+    var notice = document.getElementById('quiz-ranking-notice');
+    if (!notice) {
+        notice = document.createElement('p');
+        notice.id = 'quiz-ranking-notice';
+        notice.className = 'quiz-ranking-notice';
+        notice.setAttribute('role', 'status');
+        podium.insertBefore(notice, podium.firstChild);
+    }
+    notice.textContent = message;
+    notice.hidden = false;
+}
+
 function loadLeaderboard(evalId) {
     if (!window.studentLeaderboardInterval) {
         window.studentLeaderboardInterval = setInterval(function() {
@@ -5511,19 +5542,18 @@ function loadLeaderboard(evalId) {
         .order('porcentaje', { ascending: false })
         .order('puntaje', { ascending: false })
         .then(function(r) {
-        console.log('Leaderboard data:', r.data, 'Error:', r.error);
         if (typeof sentidosTeacherMode !== 'undefined' && sentidosTeacherMode && sentidosTeacherEvalId !== evalId) return;
         if (r.error) { 
             console.warn('Leaderboard error:', r.error.message); 
-            // Mostrar error visual si es por permisos (RLS)
-            var podiumEl = document.getElementById('quiz-podium');
-            if (podiumEl) {
-                podiumEl.style.display = 'block';
-                podiumEl.innerHTML = '<div style="padding:20px;background:rgba(255,0,0,0.2);color:#fff;border-radius:12px;margin-bottom:20px;border:2px solid red;"><b>⚠️ ERROR DE BASE DE DATOS</b><br>Las políticas RLS de Supabase están bloqueando a los estudiantes.<br>El profesor debe ir al panel de Supabase y ejecutar el código SQL de permisos.</div>';
-            }
+            showDailyRankingError('No se pudo actualizar el ranking. Conservamos los últimos resultados; volveremos a intentarlo.');
             return; 
         }
+        var notice = document.getElementById('quiz-ranking-notice');
+        if (notice) notice.hidden = true;
         if (!r.data || r.data.length === 0) {
+            window._lastPodiumData = null;
+            var topLink = document.getElementById('quiz-result-top-link');
+            if (topLink) topLink.hidden = true;
             var emptyPodium = document.getElementById('quiz-podium');
             if (emptyPodium) emptyPodium.style.display = 'block';
             updateBgPodium('#quiz-podium-showcase', []);
@@ -5556,7 +5586,7 @@ function loadLeaderboard(evalId) {
                 }
             }
 
-            var results = r.data;
+            var results = prepareDailyLeaderboard(r.data);
             // Build leaderboard entries
             var entries = [];
             for (var k = 0; k < results.length; k++) {
@@ -5580,6 +5610,8 @@ function loadLeaderboard(evalId) {
 }
 
 function renderPodium(entries) {
+    var topLink = document.getElementById('quiz-result-top-link');
+    if (topLink) topLink.hidden = !entries.length;
     var podiumEl = document.getElementById('quiz-podium');
     if (!podiumEl || entries.length === 0) return;
     podiumEl.style.display = 'block';
@@ -5616,6 +5648,8 @@ function renderPodium(entries) {
     });
     updateBgPodium('#quiz-podium-showcase', podiumEntries);
 
+    var previousRankPill = document.getElementById('my-rank-pill');
+    if (previousRankPill) previousRankPill.style.display = 'none';
     if (currentUser) {
         var myRank = -1;
         for (var m = 0; m < entries.length; m++) {
@@ -5636,18 +5670,18 @@ function renderPodium(entries) {
     }
 
     var listHtml = '';
-    for (var l = 3; l < entries.length; l++) {
+    for (var l = 0; l < entries.length; l++) {
         var isMe      = currentUser && entries[l].user_id === currentUser.id;
-        var rClass    = 'tr-normal';
-        var rowAccent = '';
+        var rClass    = l < 3 ? 'tr-top-' + (l + 1) : 'tr-normal';
+        var rowAccent = l < 3 ? 'podium-table-top podium-table-top-' + (l + 1) + ' ' : '';
         var rankIcon  = l + 1;
         listHtml += '<tr class="' + rowAccent + (isMe ? ' is-me-row' : '') + '">';
         listHtml += '<td style="width:56px;"><div class="tr-rank-circle ' + rClass + '">' + rankIcon + '</div></td>';
         listHtml += '<td><div style="display:flex;align-items:center;gap:12px;">';
         listHtml += '<div class="podium-mini-avatar">' + avatarMarkup(entries[l].avatar, entries[l].nombre, 'podium-mini-avatar-media') + '</div>';
-        listHtml += '<div class="player-name">' + entries[l].nombre + (isMe ? ' <span style="font-size:10px;background:#E91E63;color:#fff;padding:2px 7px;border-radius:6px;margin-left:5px;">TÚ</span>' : '') + '</div>';
+        listHtml += '<div class="player-name">' + escapeHtml(entries[l].nombre) + (isMe ? ' <span style="font-size:10px;background:#E91E63;color:#fff;padding:2px 7px;border-radius:6px;margin-left:5px;">TÚ</span>' : '') + '</div>';
         listHtml += '</div></td>';
-        listHtml += '<td style="text-align:right;"><div class="player-score">' + entries[l].puntaje + ' <span>pts</span></div></td>';
+        listHtml += '<td style="text-align:right;"><div class="player-score">' + Number(entries[l].puntaje || 0).toLocaleString('es-BO') + ' <span>pts</span></div></td>';
         listHtml += '<td style="text-align:right;width:80px;"><div class="player-pct">' + entries[l].porcentaje + '%</div></td>';
         listHtml += '</tr>';
     }

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=85">
+  <link rel="stylesheet" href="styles.css?v=86">
   <link rel="stylesheet" href="tejido-nervioso.css?v=8">
   
   <!-- PWA Meta Tags -->
@@ -723,6 +723,7 @@
         <h2 id="quiz-result-title" style="font-size:1.8rem;font-weight:900;margin-bottom:8px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,0.4)">¡Evaluación completada!</h2>
         <p id="quiz-result-score" style="font-size:1.2rem;color:rgba(255,255,255,0.9);margin-bottom:4px;font-weight:700"></p>
         <p id="quiz-result-detail" style="font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:20px"></p>
+        <button id="quiz-result-top-link" class="quiz-result-top-link" type="button" hidden onclick="document.getElementById('quiz-podium-showcase').scrollIntoView({behavior:'smooth',block:'start'});"><i class="fas fa-trophy" aria-hidden="true"></i> Ver el top 3</button>
         <div class="quiz-result-progress" style="background:var(--border);border-radius:20px;height:12px;margin-bottom:16px;overflow:hidden">
           <div id="quiz-result-fill" style="height:100%;border-radius:20px;transition:width 1s"></div>
         </div>
@@ -737,6 +738,7 @@
               <span class="quiz-podium-chip"><i class="fas fa-bolt"></i> Ranking de hoy</span>
               <h2><i class="fas fa-trophy"></i> Podio de Ganadores</h2>
               <p id="quiz-podium-date-label">Solo resultados del día actual</p>
+              <p class="quiz-ranking-order">Orden: aciertos (%) · en empate, puntos</p>
             </div>
 
             <div class="rp-bg-wrap quiz-rp-bg-wrap" id="quiz-podium-showcase">
@@ -784,7 +786,7 @@
           <!-- 2. Total Ranking (List) -->
           <div class="quiz-daily-ranking-list" style="max-width:800px;margin:0 auto;">
             <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:16px;color:#fff;text-shadow: 0 1px 3px rgba(0,0,0,0.5);">
-              <i class="fas fa-list-ol"></i> Más estudiantes de hoy
+              <i class="fas fa-list-ol"></i> Clasificación completa de hoy
             </h3>
             
             <!-- Tu posición -->
@@ -793,8 +795,8 @@
               <button type="button" class="podium-action-btn podium-action-home" onclick="exitQuizToHome()">
                 <i class="fas fa-home"></i> Menu Principal
               </button>
-              <button type="button" class="podium-action-btn podium-action-ranking" onclick="document.getElementById('total-ranking-table').scrollIntoView({behavior:'smooth',block:'center'});">
-                <i class="fas fa-chart-simple"></i> Ver ranking
+              <button type="button" class="podium-action-btn podium-action-ranking" onclick="document.getElementById('quiz-podium-showcase').scrollIntoView({behavior:'smooth',block:'start'});">
+                <i class="fas fa-trophy"></i> Ver top 3
               </button>
             </div>
 
@@ -864,7 +866,7 @@
 <script src="game-rounds.js?v=1"></script>
 <script src="game-practice.js?v=2"></script>
 <script src="game-question-images.js?v=1"></script>
-<script src="app.js?v=104"></script>
+<script src="app.js?v=105"></script>
 <script src="tejido-nervioso.js?v=14"></script>
 
 <!-- PWA Service Worker Registration -->

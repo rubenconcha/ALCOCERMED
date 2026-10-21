@@ -32,6 +32,7 @@ jobs:
           node tests/sentidos.test.cjs
           node tests/juegos-student-flow.test.cjs
           node tests/juegos-rounds.test.cjs
+          node tests/juegos-ranking-top.test.cjs
           node tests/juegos-search-practice.test.cjs
           node tests/juegos-images.test.cjs
           node --check sw.js

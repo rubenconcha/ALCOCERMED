@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),fs=require('fs'),vm=require('vm');
+const src=fs.readFileSync('juegos/app.js','utf8');
+function fn(name){let i=src.indexOf('function '+name+'(');return src.slice(i,src.indexOf('\n}',i)+2)}
+const nodes={'quiz-podium':{style:{},insertBefore(n){nodes[n.id]=n;this.inserted=n}},'podium-full-list':{innerHTML:''},'my-rank-pill':{style:{}}};let leaders;
+const ctx={window:{_triumphPlayed:true,_quizPodiumConfettiPlayed:true},currentUser:null,Map,document:{getElementById:id=>nodes[id]||null,createElement:()=>({setAttribute(){}})},updateBgPodium:(selector,entries)=>leaders=entries,avatarMarkup:()=>'<span>avatar</span>',escapeHtml:s=>String(s).replace(/</g,'&lt;'),spawnConfetti(){}};
+vm.createContext(ctx);for(const name of ['prepareDailyLeaderboard','showDailyRankingError','renderPodium'])vm.runInContext(fn(name),ctx);
+const input=[{user_id:'b',porcentaje:'80',puntaje:'50000',created_at:'2026-10-20T12:00:00Z'},{user_id:'a',porcentaje:'100',puntaje:'956',created_at:'2026-10-20T12:01:00Z'},{user_id:'a',porcentaje:'70',puntaje:'99000',created_at:'2026-10-20T12:02:00Z'},{user_id:'c',porcentaje:100,puntaje:3060,created_at:'2026-10-20T12:03:00Z'}];
+const sorted=ctx.prepareDailyLeaderboard(input);assert.deepEqual(Array.from(sorted,x=>x.user_id),['c','a','b']);assert.equal(sorted[1].puntaje,956);assert.equal(input.length,4);
+const entries=sorted.map(x=>({...x,nombre:'Persona '+x.user_id,avatar:'👤'}));ctx.renderPodium(entries);assert.equal(leaders.length,3);const html=nodes['podium-full-list'].innerHTML;assert.equal((html.match(/<tr /g)||[]).length,3);for(let i=1;i<=3;i++)assert(html.includes('podium-table-top-'+i));assert(html.indexOf('Persona c')<html.indexOf('Persona a'));assert(html.includes('white-space')===false);
+ctx.showDailyRankingError('Sin conexión');assert(nodes['quiz-ranking-notice']);assert.equal(nodes['podium-full-list'].innerHTML,html);assert.equal(nodes['quiz-podium'].innerHTML,undefined);
+const page=fs.readFileSync('juegos/index.html','utf8');assert(page.includes('Ver top 3'));assert(page.includes("getElementById('quiz-podium-showcase').scrollIntoView"));assert(page.includes('Clasificación completa de hoy'));console.log('OK: Top 3 incluido en clasificación completa, mejor intento único, orden numérico estable, botón al podio y error transitorio sin borrar ganadores.');

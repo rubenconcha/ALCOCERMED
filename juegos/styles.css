@@ -7183,3 +7183,33 @@ body.quiz-focus-mode #quiz-container {
 .game-search-field button:focus-visible{outline:2px solid #eab308;outline-offset:2px}
 .game-search-field button[hidden]{display:none}
 @media(max-width:760px){.game-topic-filter{align-items:stretch;flex-direction:column;gap:17px;padding:18px;border-radius:18px}.game-search-field{flex:auto;min-width:0;min-height:50px}.game-filter-emblem{flex-basis:43px;width:43px;height:43px;border-radius:13px}.game-filter-copy label{font-size:1.03rem}.game-filter-copy p{font-size:.74rem}}
+
+/* Keep the leaders accessible in both the podium and the complete ranking. */
+#quiz-podium-showcase{scroll-margin-top:80px}
+.quiz-podium-head .quiz-ranking-order{margin-top:8px;font-size:.75rem;color:#cbd5e1}
+.quiz-ranking-notice{padding:12px 16px;border:1px solid rgba(250,204,21,.35);border-radius:12px;background:rgba(250,204,21,.08);color:var(--text);line-height:1.5}
+.quiz-daily-ranking-list .podium-table-top-1{box-shadow:inset 3px 0 #facc15,0 8px 22px rgba(0,0,0,.18)}
+.quiz-daily-ranking-list .podium-table-top-2{box-shadow:inset 3px 0 #cbd5e1,0 8px 22px rgba(0,0,0,.18)}
+.quiz-daily-ranking-list .podium-table-top-3{box-shadow:inset 3px 0 #fb923c,0 8px 22px rgba(0,0,0,.18)}
+.tr-rank-circle.tr-top-1{background:rgba(250,204,21,.18);border:1px solid #facc15;color:#fde047}
+.tr-rank-circle.tr-top-2{background:rgba(203,213,225,.15);border:1px solid #cbd5e1;color:#e2e8f0}
+.tr-rank-circle.tr-top-3{background:rgba(251,146,60,.15);border:1px solid #fb923c;color:#fdba74}
+.total-ranking-table .player-score{white-space:nowrap;font-variant-numeric:tabular-nums}
+.total-ranking-table .player-name{overflow-wrap:anywhere}
+@media(max-width:600px){.quiz-daily-ranking-list{padding:14px 8px}.quiz-daily-ranking-list .total-ranking-table td{padding-left:6px;padding-right:6px}.quiz-daily-ranking-list .player-score{font-size:1rem}.quiz-daily-ranking-list .player-score span{font-size:.65rem}.quiz-daily-ranking-list .player-name{font-size:.8rem}.quiz-daily-ranking-list .podium-mini-avatar{flex-shrink:0}}
+
+@media(max-width:600px){
+ #quiz-podium .total-ranking-table,#quiz-podium .total-ranking-table tbody{display:block;width:100%}
+ #quiz-podium .total-ranking-table tr{display:grid;grid-template-columns:30px minmax(0,1fr)85px;column-gap:8px;align-items:center;padding:12px 8px;margin-bottom:10px}
+ #quiz-podium .total-ranking-table td{width:auto!important;padding:0!important;min-width:0}
+ #quiz-podium .total-ranking-table td:nth-child(1){grid-column:1;grid-row:1 / 3}
+ #quiz-podium .total-ranking-table td:nth-child(2){grid-column:2;grid-row:1 / 3}
+ #quiz-podium .total-ranking-table td:nth-child(2)>div{gap:8px!important}
+ #quiz-podium .total-ranking-table td:nth-child(3){grid-column:3;grid-row:1}
+ #quiz-podium .total-ranking-table td:nth-child(4){grid-column:3;grid-row:2;justify-self:end;margin-top:4px}
+ #quiz-podium .tr-rank-circle{width:28px;height:28px;font-size:.8rem}
+ #quiz-podium .podium-mini-avatar{width:30px;height:36px}
+ #quiz-podium .player-pct{font-size:.75rem;padding:3px 8px}
+}
+.quiz-result-top-link{display:inline-flex;align-items:center;gap:8px;justify-content:center;margin:4px auto 18px;padding:11px 18px;border:1px solid rgba(250,204,21,.4);border-radius:999px;background:rgba(250,204,21,.12);color:#fde047;font:800 .9rem Inter,sans-serif;cursor:pointer}
+.quiz-result-top-link[hidden]{display:none}
