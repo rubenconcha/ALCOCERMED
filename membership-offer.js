@@ -1,5 +1,5 @@
 'use strict';
-// One deadline for every visitor; reloading never restarts the promotion.
+// Promotional prices remain available after the original countdown ends.
 window.MembershipOffer = (() => {
  const endsAt = Date.parse('2026-10-15T02:12:43Z');
  const plans = {
@@ -8,17 +8,18 @@ window.MembershipOffer = (() => {
   lifetime: {name:'Acceso de por vida', price:500, regularPrice:500, duration:'por vida'}
  };
  const active = () => Date.now() < endsAt;
- const getPlan = id => plans[id] ? {...plans[id], price:active()?plans[id].price:plans[id].regularPrice} : null;
+ const getPlan = id => plans[id] ? {...plans[id], price:plans[id].price} : null;
  function render(){
   const on=active(),seconds=Math.max(0,Math.floor((endsAt-Date.now())/1000));
   const timer=document.getElementById('offer-countdown');
+  if(timer?.closest('.offer-clock'))timer.closest('.offer-clock').hidden=!on;
   if(timer)timer.textContent=[Math.floor(seconds/3600),Math.floor(seconds/60)%60,seconds%60].map(n=>String(n).padStart(2,'0')).join(' : ');
-  const title=document.getElementById('offer-title');if(title)title.textContent=on?'Oferta por 48 horas':'La oferta ha finalizado';
-  const label=document.getElementById('offer-timer-label');if(label)label.textContent=on?'La oferta termina en':'Plazo cerrado';
+  const title=document.getElementById('offer-title');if(title)title.textContent=on?'Oferta por 48 horas':'Precios especiales';
+  const label=document.getElementById('offer-timer-label');if(label)label.textContent=on?'La oferta termina en':'Precios especiales';
   for(const card of document.querySelectorAll('.membership-card')){
    const id=card.querySelector('[data-plan]')?.dataset.plan,plan=getPlan(id);if(!plan)continue;
    card.querySelector('.membership-price strong').textContent=plan.price;
-   const discount=card.querySelector('.membership-discount');if(discount)discount.hidden=!on;
+   const discount=card.querySelector('.membership-discount');if(discount)discount.hidden=false;
   }
   const faq=document.getElementById('plans-price-faq');if(faq)faq.textContent=`El plan mensual cuesta Bs ${getPlan('monthly').price} por un mes. El semestral cuesta Bs ${getPlan('semester').price} por 6 meses. El acceso de por vida cuesta Bs 500 en un solo pago, sin renovaciones. El acceso comienza cuando activamos tu cuenta.`;
   // Keep an open purchase dialog consistent when the offer closes.
