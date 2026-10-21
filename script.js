@@ -3653,12 +3653,12 @@ async function renderEvaluacion() {
             var sb = getSupabase();
             var [simRes, bancoRes] = await Promise.all([
                 sb.from('resultados_simulacros')
-                    .select('*')
+                    .select('materia,created_at,porcentaje,correctas,incorrectas,sin_respuesta,tiempo_segundos')
                     .eq('user_id', currentUser.id)
                     .order('created_at', { ascending: false })
                     .limit(100),
                 sb.from('resultados_banco')
-                    .select('*')
+                    .select('materia,created_at,porcentaje,correctas,total')
                     .eq('user_id', currentUser.id)
                     .order('created_at', { ascending: false })
                     .limit(100)
