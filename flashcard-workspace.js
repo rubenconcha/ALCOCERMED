@@ -24,6 +24,8 @@
    }
   });
   front.prepend(make('span','fc-topic-chip',value(card,'subtema')||value(card,'tema')));
+  const art=window.StudyMedia?.create(card.study_image);
+  if(art){const figure=make('figure','fc-context-art fc-study-figure');figure.append(art);front.append(figure);}
  }
  function restart(){if(!all.length||typeof currentUser==='undefined'||currentUser?.id!==owner)return;pending=true;startDeck(topic,subject,all);}
  modeSelect.addEventListener('change',()=>{mode=modeSelect.value;restart();});

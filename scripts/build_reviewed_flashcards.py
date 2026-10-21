@@ -133,6 +133,13 @@ def build(pdf_dir=None):
                               'chapter': number, 'chapter_title': chapter['title'], 'source_title': source['title'],
                               'page': page, 'pdf_page': pdf_page, 'reference': reference,
                               'official_source': source_id, 'source_reviewed': True})
+                if item.get('study_image'):
+                    media = item['study_image']
+                    if not re.fullmatch(r'/assets/study/oseo/[a-z0-9.-]+', media.get('src', '')) or not media.get('alt'):
+                        raise ValueError('Figura anatómica inválida: ' + item_id)
+                    if not (ROOT / media['src'].lstrip('/')).is_file():
+                        raise ValueError('Figura anatómica ausente: ' + item_id)
+                    cards[-1]['study_image'] = media
                 if item.get('answer_table'):
                     table = item['answer_table']
                     if not table.get('title') or not 2 <= len(table['columns']) <= 6 or not 1 <= len(table['rows']) <= 8:

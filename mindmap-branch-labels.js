@@ -81,4 +81,4 @@ window.MINDMAP_BRANCH_LABELS = {
   'salud_27_estadistica_spss.png': ['Preparar','Ingresar','Revisar','Analizar','Resultados','Interpretar']
 };
 
-window.MINDMAP_BRANCH_LABELS["morfo_08_sistema_oseo.png"] = ["Organización y accidentes", "Cráneo y cara", "Columna", "Tórax y miembro superior", "Pelvis y pierna", "Pie y reconocimiento"];
+window.MINDMAP_BRANCH_LABELS["morfo_08_sistema_oseo.png"] = ["Esqueleto y formas óseas", "Cráneo y cara", "Columna", "Tórax y miembro superior", "Pelvis y pierna", "Pie y reconocimiento"];

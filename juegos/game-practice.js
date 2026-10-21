@@ -9,7 +9,8 @@
   }));
  }
  async function load(client,ev,original,code,restore){
-  var key='alcocer_self_extra_'+code,extra;
+  var skeleton=norm([ev.titulo,ev.tema].join(' ')).includes('sistema oseo');
+  var key='alcocer_self_extra_'+code+(skeleton?'_oseo_visual5':''),extra;
   if(restore){try{extra=JSON.parse(sessionStorage.getItem(key)||'null');}catch(_){}if(Array.isArray(extra))return merge(original,extra);if(extra&&Array.isArray(extra.questions))return extra.replace?merge([],extra.questions):merge(original,extra.questions);}
   try{
    if(!client.auth||!client.auth.getSession)return original;

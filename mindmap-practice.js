@@ -20,10 +20,11 @@
    var heading=node('h2','Comprueba lo que entendiste');heading.tabIndex=-1;panel.append(heading,node('p','Responde antes de abrir cada tarjeta. En las preguntas, elige una alternativa para revisar el razonamiento.'));
    var back=node('button','Volver al material','mm-practice-back');back.type='button';back.onclick=close;panel.append(back);
    panel.append(node('h3','Flashcards · '+data.flashcards.length));
-   data.flashcards.forEach(function(card,i){var d=node('details','','mm-practice-card'),s=node('summary',(i+1)+'. '+card.question);d.append(s,node('p',card.answer),node('small','Saladin · PDF '+card.pdf_pages.join(', ')));panel.append(d);});
+   data.flashcards.forEach(function(card,i){var d=node('details','','mm-practice-card'),s=node('summary',(i+1)+'. '+card.question),img=window.StudyMedia&&StudyMedia.create(card.study_image);if(img)s.append(img);d.append(s,node('p',card.answer),node('small','Saladin · PDF '+card.pdf_pages.join(', ')));panel.append(d);});
    panel.append(node('h3','Preguntas razonadas · '+data.questions.length));
    data.questions.forEach(function(q,i){
     var item=node('section','','mm-practice-question');item.append(node('h4',(i+1)+'. '+q.question));
+    var img=window.StudyMedia&&StudyMedia.create(q.study_image);if(img)item.append(img);
     var feedback=node('div','','mm-practice-feedback');feedback.setAttribute('aria-live','polite');var choices=[];
     q.options.forEach(function(option,index){var choice=node('button',String.fromCharCode(65+index)+'. '+option,'mm-practice-option');choice.type='button';choices.push(choice);choice.onclick=function(){
      choices.forEach(function(c,j){c.disabled=true;c.classList.toggle('is-correct',j===q.correct);c.classList.toggle('is-wrong',j===index&&j!==q.correct);});

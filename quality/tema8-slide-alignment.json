@@ -27,14 +27,14 @@
     "tissues_included": false,
     "questions": [
       {
-        "id": "morfo-08-diapos-001",
+        "id": "morfo-08-visual-001",
         "slides": [
           2,
           11
         ]
       },
       {
-        "id": "morfo-08-diapos-002",
+        "id": "morfo-08-visual-002",
         "slides": [
           3,
           7,
@@ -42,7 +42,7 @@
         ]
       },
       {
-        "id": "morfo-08-diapos-003",
+        "id": "morfo-08-visual-003",
         "slides": [
           4,
           5,
@@ -51,20 +51,20 @@
         ]
       },
       {
-        "id": "morfo-08-diapos-004",
+        "id": "morfo-08-visual-004",
         "slides": [
           11,
           23
         ]
       },
       {
-        "id": "morfo-08-diapos-005",
+        "id": "morfo-08-visual-005",
         "slides": [
           12
         ]
       },
       {
-        "id": "morfo-08-diapos-006",
+        "id": "morfo-08-visual-006",
         "slides": [
           7,
           16,
@@ -73,14 +73,14 @@
         ]
       },
       {
-        "id": "morfo-08-diapos-007",
+        "id": "morfo-08-visual-007",
         "slides": [
           18,
           20
         ]
       },
       {
-        "id": "morfo-08-diapos-008",
+        "id": "morfo-08-visual-008",
         "slides": [
           19,
           20,
@@ -88,33 +88,33 @@
         ]
       },
       {
-        "id": "morfo-08-diapos-009",
+        "id": "morfo-08-visual-009",
         "slides": [
           25
         ]
       },
       {
-        "id": "morfo-08-diapos-010",
+        "id": "morfo-08-visual-010",
         "slides": [
           27,
           28
         ]
       },
       {
-        "id": "morfo-08-diapos-011",
+        "id": "morfo-08-visual-011",
         "slides": [
           29,
           30
         ]
       },
       {
-        "id": "morfo-08-diapos-012",
+        "id": "morfo-08-visual-012",
         "slides": [
           33
         ]
       },
       {
-        "id": "morfo-08-diapos-013",
+        "id": "morfo-08-visual-013",
         "slides": [
           34,
           35,
@@ -122,7 +122,7 @@
         ]
       },
       {
-        "id": "morfo-08-diapos-014",
+        "id": "morfo-08-visual-014",
         "slides": [
           36,
           37,
@@ -130,7 +130,7 @@
         ]
       },
       {
-        "id": "morfo-08-diapos-015",
+        "id": "morfo-08-visual-015",
         "slides": [
           31,
           38,
@@ -139,21 +139,21 @@
         ]
       },
       {
-        "id": "morfo-08-diapos-016",
+        "id": "morfo-08-visual-016",
         "slides": [
           37,
           43
         ]
       },
       {
-        "id": "morfo-08-diapos-017",
+        "id": "morfo-08-visual-017",
         "slides": [
           37,
           43
         ]
       },
       {
-        "id": "morfo-08-diapos-018",
+        "id": "morfo-08-visual-018",
         "slides": [
           13,
           32,
@@ -161,7 +161,7 @@
         ]
       },
       {
-        "id": "morfo-08-diapos-019",
+        "id": "morfo-08-visual-019",
         "slides": [
           36,
           37,
@@ -169,7 +169,7 @@
         ]
       },
       {
-        "id": "morfo-08-diapos-020",
+        "id": "morfo-08-visual-020",
         "slides": [
           44
         ]
@@ -341,5 +341,8 @@
     ]
   },
   "tissues_included": false,
-  "tissues_unchanged": true
+  "tissues_unchanged": true,
+  "content_revision": 5,
+  "illustrated_questions": 14,
+  "wording": "Direct anatomical questions; no references to slides or presentation in learner questions or feedback."
 }

@@ -9827,13 +9827,13 @@
     "topic": "el sistema oseo",
     "questions": [
       {
-        "key": "morfo-08-diapos-001",
-        "text": "¿Qué distribución del esqueleto adulto se muestra en la presentación?",
+        "key": "morfo-08-visual-001",
+        "text": "¿Cómo se clasifica el esqueleto humano?",
         "options": [
-          "80 huesos axiales y 126 apendiculares",
-          "126 axiales y 80 apendiculares",
-          "22 axiales y 14 apendiculares",
-          "206 axiales y 126 apendiculares"
+          "Axial y apendicular",
+          "Craneal y facial",
+          "Cervical y lumbar",
+          "Carpiano y tarsiano"
         ],
         "answer": 0,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -9858,16 +9858,20 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p263-1.jpeg",
+          "alt": "Esqueleto completo en vista anterior"
+        }
       },
       {
-        "key": "morfo-08-diapos-002",
-        "text": "¿Qué accidente óseo es una prominencia redondeada que articula con otro hueso?",
+        "key": "morfo-08-visual-002",
+        "text": "¿Qué es un cóndilo?",
         "options": [
-          "Fosa",
-          "Cóndilo",
-          "Surco",
-          "Alvéolo"
+          "Una depresión amplia en un hueso",
+          "Un relieve redondeado que articula con otro hueso",
+          "Una ranura para un tendón, nervio o vaso",
+          "Un hueco que aloja una raíz dental"
         ],
         "answer": 1,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -9897,16 +9901,17 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": null
       },
       {
-        "key": "morfo-08-diapos-003",
-        "text": "¿Qué asociación entre accidente óseo y descripción coincide con las diapositivas?",
+        "key": "morfo-08-visual-003",
+        "text": "¿Qué estructura ósea aloja la raíz de un diente?",
         "options": [
-          "Fosa: pasaje tubular por un hueso",
-          "Foramen: borde óseo estrecho",
-          "Alvéolo: hueco que aloja una estructura",
-          "Conducto: proyección fina o estrecha"
+          "Fosa",
+          "Foramen",
+          "Alvéolo",
+          "Conducto"
         ],
         "answer": 2,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -9941,16 +9946,17 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": null
       },
       {
-        "key": "morfo-08-diapos-004",
-        "text": "¿Qué recuento corresponde a los huesos del cráneo?",
+        "key": "morfo-08-visual-004",
+        "text": "¿Cuántos huesos forman el cráneo?",
         "options": [
-          "14 craneales y 8 faciales: 22 en total",
-          "22 craneales y 6 faciales: 28 en total",
-          "8 craneales y 22 faciales: 30 en total",
-          "8 craneales y 14 faciales: 22 en total"
+          "8",
+          "14",
+          "6",
+          "22"
         ],
         "answer": 3,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -9975,10 +9981,14 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p265-5.jpeg",
+          "alt": "Cráneo en vista anterior"
+        }
       },
       {
-        "key": "morfo-08-diapos-005",
+        "key": "morfo-08-visual-005",
         "text": "¿Qué sutura une el frontal con los parietales?",
         "options": [
           "Coronal",
@@ -10004,11 +10014,15 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p268-2.jpeg",
+          "alt": "Bóveda del cráneo vista desde arriba"
+        }
       },
       {
-        "key": "morfo-08-diapos-006",
-        "text": "¿Qué estructura del esfenoides contiene la fosa que aloja la hipófisis?",
+        "key": "morfo-08-visual-006",
+        "text": "¿Qué estructura del esfenoides aloja la hipófisis?",
         "options": [
           "Agujero magno",
           "Silla turca",
@@ -10048,10 +10062,14 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p273-2.jpeg",
+          "alt": "Hueso de la base craneal en dos vistas"
+        }
       },
       {
-        "key": "morfo-08-diapos-007",
+        "key": "morfo-08-visual-007",
         "text": "¿Qué parte del etmoides permite el paso de los nervios olfatorios?",
         "options": [
           "Lámina perpendicular",
@@ -10082,11 +10100,15 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p273-3.jpeg",
+          "alt": "Pieza ósea de la región nasal"
+        }
       },
       {
-        "key": "morfo-08-diapos-008",
-        "text": "¿Qué huesos forman las porciones anterior y posterior del paladar duro, respectivamente?",
+        "key": "morfo-08-visual-008",
+        "text": "¿Qué huesos forman la parte anterior y posterior del paladar duro?",
         "options": [
           "Palatino y maxilar",
           "Cigomático y lagrimal",
@@ -10121,11 +10143,12 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": null
       },
       {
-        "key": "morfo-08-diapos-009",
-        "text": "¿Qué secuencia corresponde a las regiones cervical, torácica y lumbar?",
+        "key": "morfo-08-visual-009",
+        "text": "¿Cuántas vértebras cervicales, torácicas y lumbares hay?",
         "options": [
           "7 cervicales, 12 torácicas y 5 lumbares",
           "12 cervicales, 7 torácicas y 5 lumbares",
@@ -10150,16 +10173,17 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": null
       },
       {
-        "key": "morfo-08-diapos-010",
-        "text": "¿Qué asociación describe los componentes del disco intervertebral?",
+        "key": "morfo-08-visual-010",
+        "text": "¿Qué estructura forma el centro gelatinoso del disco intervertebral?",
         "options": [
-          "Núcleo pulposo externo y anillo fibroso central",
-          "Anillo fibroso externo y núcleo pulposo gelatinoso central",
-          "Cuerpo vertebral externo y núcleo óseo central",
-          "Pedículos externos y láminas centrales"
+          "Anillo fibroso",
+          "Núcleo pulposo",
+          "Cuerpo vertebral",
+          "Arco vertebral"
         ],
         "answer": 1,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -10184,11 +10208,15 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p281-1.jpeg",
+          "alt": "Disco intervertebral en vista superior"
+        }
       },
       {
-        "key": "morfo-08-diapos-011",
-        "text": "¿Qué vértebra posee el diente que sirve de pivote para la rotación del atlas?",
+        "key": "morfo-08-visual-011",
+        "text": "¿Qué vértebra posee la apófisis odontoides?",
         "options": [
           "Atlas, C1",
           "Una vértebra torácica",
@@ -10218,16 +10246,20 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p282-6.jpeg",
+          "alt": "Unión de las dos primeras vértebras cervicales"
+        }
       },
       {
-        "key": "morfo-08-diapos-012",
-        "text": "¿Qué relación entre costillas verdaderas, falsas y flotantes es correcta?",
+        "key": "morfo-08-visual-012",
+        "text": "¿Qué pares de costillas son flotantes?",
         "options": [
-          "1–7 verdaderas; 8–10 falsas; 11–12 verdaderas",
-          "1–12 verdaderas por tener cada par su cartílago esternal propio",
-          "1–7 flotantes; 8–12 verdaderas",
-          "1–7 verdaderas; 8–12 falsas; 11–12 flotantes dentro de las falsas"
+          "1 y 2",
+          "6 y 7",
+          "8 y 9",
+          "11 y 12"
         ],
         "answer": 3,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -10247,16 +10279,20 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p285-1.jpeg",
+          "alt": "Caja torácica en vista anterior"
+        }
       },
       {
-        "key": "morfo-08-diapos-013",
-        "text": "¿Con qué huesos se relacionan el capítulo y la tróclea del húmero, respectivamente?",
+        "key": "morfo-08-visual-013",
+        "text": "¿Con qué hueso articula la tróclea del húmero?",
         "options": [
-          "Radio y ulna",
-          "Ulna y radio",
-          "Escápula y clavícula",
-          "Tibia y fíbula"
+          "Ulna o cúbito",
+          "Radio",
+          "Clavícula",
+          "Escápula"
         ],
         "answer": 0,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -10286,16 +10322,20 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p290-2.jpeg",
+          "alt": "Hueso del brazo en dos vistas"
+        }
       },
       {
-        "key": "morfo-08-diapos-014",
-        "text": "¿Cómo se sitúan radio y ulna en el antebrazo?",
+        "key": "morfo-08-visual-014",
+        "text": "¿Qué hueso del antebrazo está del lado del pulgar en posición anatómica?",
         "options": [
-          "Radio medial; ulna lateral, del lado del pulgar",
-          "Radio lateral, del lado del pulgar; ulna medial",
-          "Ambos forman la palma de la mano",
-          "Radio en el brazo y ulna en la pierna"
+          "Ulna o cúbito",
+          "Radio",
+          "Húmero",
+          "Escápula"
         ],
         "answer": 1,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -10325,11 +10365,15 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p290-1.jpeg",
+          "alt": "Huesos del antebrazo en dos vistas"
+        }
       },
       {
-        "key": "morfo-08-diapos-015",
-        "text": "¿Qué tres componentes forman el coxal que muestra la presentación?",
+        "key": "morfo-08-visual-015",
+        "text": "¿Qué tres huesos forman el coxal?",
         "options": [
           "Ilion, sacro y cóccix",
           "Pubis, fémur y patela",
@@ -10369,16 +10413,20 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p294-1.jpeg",
+          "alt": "Hueso de la cintura pélvica"
+        }
       },
       {
-        "key": "morfo-08-diapos-016",
-        "text": "¿Qué recuento corresponde a una mano?",
+        "key": "morfo-08-visual-016",
+        "text": "¿Cuántas falanges tiene el pulgar?",
         "options": [
-          "7 carpianos, 5 metacarpianos y 14 falanges",
-          "8 carpianos, 5 metacarpianos y 15 falanges",
-          "8 carpianos, 7 metacarpianos y 14 falanges",
-          "8 carpianos, 5 metacarpianos y 14 falanges"
+          "Tres",
+          "Cinco",
+          "Ocho",
+          "Dos"
         ],
         "answer": 3,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -10403,16 +10451,20 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p292-2.jpeg",
+          "alt": "Esqueleto de una mano"
+        }
       },
       {
-        "key": "morfo-08-diapos-017",
-        "text": "¿Qué recuento corresponde a un pie?",
+        "key": "morfo-08-visual-017",
+        "text": "¿Cuántos huesos forman el tarso de un pie?",
         "options": [
-          "7 tarsianos, 5 metatarsianos y 14 falanges",
-          "8 tarsianos, 5 metatarsianos y 14 falanges",
-          "7 tarsianos, 8 metatarsianos y 14 falanges",
-          "7 tarsianos, 5 metatarsianos y 15 falanges"
+          "Siete",
+          "Ocho",
+          "Cinco",
+          "Catorce"
         ],
         "answer": 0,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -10437,15 +10489,19 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p299-4.jpeg",
+          "alt": "Esqueleto del pie en dos vistas"
+        }
       },
       {
-        "key": "morfo-08-diapos-018",
-        "text": "¿A qué región corresponden las aberturas superior e inferior llamadas entrada y salida pélvicas?",
+        "key": "morfo-08-visual-018",
+        "text": "¿Qué región de la pelvis tiene una entrada superior y una salida inferior?",
         "options": [
           "Pelvis mayor",
           "Pelvis menor",
-          "Órbita",
+          "Cintura escapular",
           "Caja torácica"
         ],
         "answer": 1,
@@ -10476,16 +10532,17 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": null
       },
       {
-        "key": "morfo-08-diapos-019",
-        "text": "¿Qué relación entre tibia y fíbula coincide con la presentación?",
+        "key": "morfo-08-visual-019",
+        "text": "¿Cuál es el hueso medial que soporta la mayor parte del peso de la pierna?",
         "options": [
-          "Tibia lateral y delgada; fíbula medial y robusta",
-          "Tibia del lado del pulgar; fíbula medial del antebrazo",
-          "Tibia medial y robusta; fíbula lateral y delgada",
-          "Tibia y fíbula forman los huesos de la palma"
+          "Fíbula o peroné",
+          "Fémur",
+          "Tibia",
+          "Patela o rótula"
         ],
         "answer": 2,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -10515,16 +10572,17 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": null
       },
       {
-        "key": "morfo-08-diapos-020",
-        "text": "¿Qué recorrido corresponde a los arcos longitudinales del pie?",
+        "key": "morfo-08-visual-020",
+        "text": "¿Hacia qué dedo se dirige el arco longitudinal medial del pie?",
         "options": [
-          "Medial hacia el dedo pequeño; lateral hacia el dedo gordo",
-          "Ambos cruzan el pie solo de lado a lado",
-          "El transverso va del talón al lado del dedo gordo",
-          "Medial hacia el dedo gordo; lateral hacia el dedo pequeño"
+          "Dedo pequeño",
+          "Dedo medio",
+          "Segundo dedo",
+          "Dedo gordo"
         ],
         "answer": 3,
         "source": "Saladin · Anatomía y fisiología · 6.ª edición · cap. 8",
@@ -10544,10 +10602,14 @@
           ],
           "scope": "visible_slide_text_only"
         },
-        "practice_topic": "sistema_oseo"
+        "practice_topic": "sistema_oseo",
+        "study_image": {
+          "src": "/assets/study/oseo/p300-1.jpeg",
+          "alt": "Pie en una radiografía lateral"
+        }
       }
     ],
-    "content_revision": 4,
+    "content_revision": 5,
     "lecture_slide_count": 47,
     "presentation_source": {
       "file": "Alcocermed_Sistema_Oseo_Corregido.pptx",

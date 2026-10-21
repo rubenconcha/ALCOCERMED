@@ -559,8 +559,8 @@
   },
   {
     "id": "morfo_08_sistema_oseo__01",
-    "titulo": "Organización y accidentes óseos",
-    "root_title": "Organización y accidentes óseos · Sistema óseo",
+    "titulo": "Organización y formas óseas",
+    "root_title": "Organización y formas óseas · Sistema óseo",
     "materia": "Morfofunción",
     "tema": "Sistema óseo",
     "parent_key": "morfo_08_sistema_oseo.png",
@@ -569,7 +569,7 @@
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__01.webp",
-    "visual_revision": "20261021-diapos47",
+    "visual_revision": "20261021-visual5",
     "lecture_slide_count": 47
   },
   {
@@ -584,7 +584,7 @@
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__02.webp",
-    "visual_revision": "20261021-diapos47",
+    "visual_revision": "20261021-visual5",
     "lecture_slide_count": 47
   },
   {
@@ -599,7 +599,7 @@
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__03.webp",
-    "visual_revision": "20261021-diapos47",
+    "visual_revision": "20261021-visual5",
     "lecture_slide_count": 47
   },
   {
@@ -614,7 +614,7 @@
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__04.webp",
-    "visual_revision": "20261021-diapos47",
+    "visual_revision": "20261021-visual5",
     "lecture_slide_count": 47
   },
   {
@@ -629,7 +629,7 @@
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__05.webp",
-    "visual_revision": "20261021-diapos47",
+    "visual_revision": "20261021-visual5",
     "lecture_slide_count": 47
   },
   {
@@ -644,7 +644,7 @@
     "premium": true,
     "acceso_gratis": false,
     "preview": "/assets/mindmaps/premium-previews/morfo_08_sistema_oseo__06.webp",
-    "visual_revision": "20261021-diapos47",
+    "visual_revision": "20261021-visual5",
     "lecture_slide_count": 47
   },
   {
@@ -6463,7 +6463,7 @@
     "curated": true,
     "section": "intocables",
     "format": "illustrated-sheet",
-    "visual_revision": "20261021-diapos47",
+    "visual_revision": "20261021-visual5",
     "lecture_slide_count": 47
   }
 ]

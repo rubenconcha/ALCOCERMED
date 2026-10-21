@@ -3297,6 +3297,7 @@ function renderSimQuestion() {
         ' de ' + simState.preguntas.length + ' respondidas';
     document.getElementById('sim-num-badge').textContent = 'N° ' + (q.numero_original || idx + 1);
     document.getElementById('sim-question-text').textContent = campo(q, 'pregunta') || '';
+    window.StudyMedia?.render(document.getElementById('sim-question-text'),q.study_image);
     renderBqDificultad_sim(campo(q, 'dificultad') || 'facil');
 
     var optsEl = document.getElementById('sim-options');

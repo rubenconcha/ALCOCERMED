@@ -37,7 +37,7 @@ function selectQuestions(ev) {
  const max=lecture?20:/^DEMO/.test(String(ev.codigo||''))?8:30;
  return pool.slice(0,max).map((q,i)=>{
   const hash=crypto.createHash('sha256').update('game-expansion-v1:'+ev.id+':'+q.key).digest('hex').slice(0,32);
-  return {id:hash.slice(0,8)+'-'+hash.slice(8,12)+'-'+hash.slice(12,16)+'-'+hash.slice(16,20)+'-'+hash.slice(20),evaluacion_id:ev.id,tipo:'mc',texto:q.text,opciones:q.options.map((text,index)=>({text,correct:index===q.answer})),multiple_correctas:false,orden:10000+i,puntos:1,temporizador:40,fuente:q.source,paginas:q.pages};
+  return {id:hash.slice(0,8)+'-'+hash.slice(8,12)+'-'+hash.slice(12,16)+'-'+hash.slice(16,20)+'-'+hash.slice(20),evaluacion_id:ev.id,tipo:'mc',texto:q.text,opciones:q.options.map((text,index)=>({text,correct:index===q.answer})),multiple_correctas:false,orden:10000+i,puntos:1,temporizador:40,fuente:q.source,paginas:q.pages,...(q.study_image?{study_image:q.study_image}:{})};
  });
 }
 function replacesQuestions(ev){return !/^DEMO/i.test(String(ev.codigo||''))&&['morfo-01','morfo-08'].includes(topicIds(ev).join(','));}

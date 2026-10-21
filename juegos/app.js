@@ -3652,7 +3652,8 @@ function restoreSelfStudy(evalId, code) {
                 try {
                     var savedQids = JSON.parse(savedQidsStr);
                     if (savedQids.some(function(id) { return !preguntas.some(function(q) { return q.id === id; }); })) {
-                        showCustomAlert('No pudimos recuperar todas las preguntas de tu partida. Vuelve a abrirla cuando tengas conexión.');
+                        var updatedSkeleton=String(evaluacion.titulo+' '+evaluacion.tema).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes('sistema oseo');
+                        showCustomAlert(updatedSkeleton?'Actualizamos las preguntas de sistema óseo. Abre una nueva ronda para usar la versión corregida.':'No pudimos recuperar todas las preguntas de tu partida. Vuelve a abrirla cuando tengas conexión.');
                         navigateTo('jugar', true);
                         return;
                     }
@@ -4490,6 +4491,7 @@ var contextualGameImages = {
 };
 
 function getQuizQuestionImage(pregunta, tipo) {
+    if (pregunta && pregunta.study_image && tipo !== 'dnd') return pregunta.study_image.src;
     var premium = pregunta && window.premiumGameImages && window.premiumGameImages[pregunta.id];
     if (premium) return premium.src;
     var morfoIllustration = pregunta && morfoConceptImages[pregunta.id];
@@ -4532,7 +4534,7 @@ function renderQuizQuestionImageWrap(pregunta, tipo) {
     var extra = pregunta && window.gameQuestionImages && window.gameQuestionImages[pregunta.id];
     if (questionImage && tipo !== 'dnd') {
         wrap.hidden = false;
-        wrap.innerHTML = '<img class="quiz-question-image" decoding="async" loading="eager" fetchpriority="high" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(premium ? premium.alt : (morfoIllustration ? morfoIllustration.alt : (illustration ? illustration.alt : (contextual ? contextual.alt : (extra && questionImage === extra.src ? extra.alt : 'Imagen de la pregunta'))))) + '">';
+        wrap.innerHTML = '<img class="quiz-question-image" decoding="async" loading="eager" fetchpriority="high" src="' + escapeHtml(questionImage) + '" alt="' + escapeHtml(pregunta.study_image ? pregunta.study_image.alt : (premium ? premium.alt : (morfoIllustration ? morfoIllustration.alt : (illustration ? illustration.alt : (contextual ? contextual.alt : (extra && questionImage === extra.src ? extra.alt : 'Imagen de la pregunta')))))) + '">';
         if (extra && questionImage === extra.src && extra.source) {
             wrap.innerHTML += '<small class="quiz-image-credit"><a href="' + escapeHtml(extra.source) + '" target="_blank" rel="noopener noreferrer">Servier Medical Art</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></small>';
         }
