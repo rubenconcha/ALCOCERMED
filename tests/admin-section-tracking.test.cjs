@@ -15,3 +15,9 @@ test('client never writes another user ID and does not queue across accounts',as
 test('new activity is protected by own-or-admin RLS and server actor/time',()=>{
  const sql=fs.readFileSync('SQL_CAMPUS_SECTION_TRACKING.sql','utf8');assert.match(sql,/enable row level security/);assert.match(sql,/user_id=auth.uid\(\) or public.campus_is_admin\(\)/);assert.match(sql,/values\(event_id,auth.uid\(\)/);assert.match(sql,/revoke all .* from public,anon/);assert.match(sql,/on conflict\(id\) do nothing/);assert.doesNotMatch(sql,/disable row level|grant .* to anon;/);
 });
+test('a section selected while loading is refreshed instead of the old tab',async()=>{
+ const source=fs.readFileSync('admin.js','utf8');let finish,active='dashboard',rendered;
+ const context={setText(){},loadAllData:()=>new Promise(resolve=>{finish=resolve;}),document:{querySelector:()=>({id:'section-'+active})},renderCurrentSection:id=>{rendered=id;}};
+ vm.createContext(context);vm.runInContext(source.slice(source.indexOf('async function refreshAdminData()'),source.indexOf('function renderCurrentSection(')),context);
+ const pending=context.refreshAdminData();active='evaluaciones';finish();await pending;assert.equal(rendered,'evaluaciones');
+});
