@@ -26,7 +26,7 @@
   const picker=$('tracking-section'),subject=$('tracking-subject'),topic=$('tracking-topic');
   Object.entries(sections).forEach(([id,label])=>picker.add(new Option(label,id)));
   picker.value='evaluaciones';
-  function selectedRows(){return records(cachedData).filter(r=>r.section===picker.value);}
+  function selectedRows(){return records(cachedData).filter(r=>r.section===picker.value && r.user_id!==currentAdmin?.id && !ADMIN_EMAILS.includes(String(cachedData.userMap?.[r.user_id]?.email||r.source.user_email||'').toLowerCase()));}
   function populate(which){
     const rows=selectedRows();
     if(which!=='topic'){subject.replaceChildren(new Option('Todas las materias',''));[...new Set(rows.map(r=>r.subject))].sort().forEach(v=>subject.add(new Option(v,v)));}
@@ -53,7 +53,7 @@
     $('tracking-status').textContent=errors.length?'Consulta incompleta: no se pudieron leer '+errors.map(e=>e.table).join(', ')+'. La ausencia de datos no permite determinar la actividad.':visible.length+' estudiantes · '+rows.length+(rows.length===1?' registro':' registros')+' en esta sección. Abrir un recurso no acredita haberlo terminado. Las fechas se muestran en hora de Bolivia.';
     $('tracking-export').disabled=!!errors.length;
     const table=el('table'),head=el('thead'),tr=el('tr');['Estudiante','Registros','Última actividad','Seguimiento'].forEach(v=>tr.append(el('th',v)));head.append(tr);table.append(head);const body=el('tbody');
-    visible.forEach(s=>{const row=el('tr');[s.display,s.rows.length,s.rows[0]?formatDate(s.rows[0].date):errors.length?'Consulta incompleta':'Sin actividad registrada'].forEach(v=>row.append(el('td',v)));const cell=el('td'),button=el('button','Ver historial','btn btn-secondary');button.type='button';button.onclick=()=>detail(s);cell.append(button);row.append(cell);body.append(row);});
+    visible.forEach(s=>{const row=el('tr');[s.display,errors.length&&!s.rows.length?'—':s.rows.length,s.rows[0]?formatDate(s.rows[0].date):errors.length?'Consulta incompleta':'Sin actividad registrada'].forEach(v=>row.append(el('td',v)));const cell=el('td'),button=el('button','Ver historial','btn btn-secondary');button.type='button';button.onclick=()=>detail(s);cell.append(button);row.append(cell);body.append(row);});
     table.append(body);const wrap=el('div',null,'table-wrap');wrap.append(table);target.append(wrap);
     if(!rows.length)target.prepend(el('p','Esta sección no tiene registros en los filtros elegidos. Las herramientas que antes no guardaban actividad no permiten reconstruir el uso pasado.'));
   }
