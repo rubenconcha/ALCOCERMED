@@ -1,6 +1,6 @@
 .study-question-figure{margin:14px auto 18px;text-align:center;background:#fff;border-radius:12px;padding:10px;max-width:640px}
 .study-anatomy-image{display:block;margin:auto;max-width:100%;width:auto;height:auto;max-height:250px;object-fit:contain}
-#study-area .fc-study-figure{border:0;padding:0;flex-shrink:0}
+#study-area .fc-context-art.fc-study-figure{display:flex;border:0;padding:0;flex-shrink:0}
 #study-area .fc-study-figure .study-anatomy-image{max-height:210px;max-width:280px}
 .mm-practice-card summary .study-anatomy-image{margin-top:12px;max-height:190px}
 @media(max-width:600px){.study-anatomy-image{max-height:200px}#study-area .fc-study-figure .study-anatomy-image{max-height:180px;max-width:230px}}
