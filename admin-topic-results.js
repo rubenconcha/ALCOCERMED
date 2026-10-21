@@ -10,6 +10,7 @@
   };
   function matches(row, exam) {
     const title = String(row.simulacro_titulo || row.titulo || '').trim();
+    if(exam.id==='all')return /^evaluaci[oó]n\s*:/i.test(title) && (!exam.subject || norm(row.materia)===norm(exam.subject));
     return /^evaluaci[oó]n\s*:/i.test(title) && norm(title.replace(/^evaluaci[oó]n\s*:/i, '')) === norm(exam.title)
       && norm(row.materia) === norm(exam.subject);
   }
@@ -71,7 +72,7 @@
     currentModel=roster();
     const stats=$('topic-report-stats');stats.replaceChildren();
     [['Cuentas conocidas',currentModel.people.length],['Con entrega',currentModel.delivered],['Sin entrega registrada',currentModel.pending],['Promedio de última entrega',percent(currentModel.average)]].forEach(([label,value])=>{const box=text('div','','topic-report-stat');box.append(text('strong',value),text('span',label));stats.append(box);});
-    $('topic-report-status').textContent=currentModel.visible.length+' estudiantes visibles · '+currentModel.attempts+(currentModel.attempts===1?' entrega':' entregas')+' del tema en el período. Fechas y horas de Bolivia.';
+    $('topic-report-status').textContent=currentModel.visible.length+(currentModel.visible.length===1?' estudiante visible · ':' estudiantes visibles · ')+currentModel.attempts+(currentModel.attempts===1?' entrega':' entregas')+' de las evaluaciones seleccionadas en el período. Fechas y horas de Bolivia.';
     if(!currentModel.visible.length){target.append(text('p','No hay estudiantes que coincidan con estos filtros.'));return;}
     const rows=currentModel.visible.map(s=>{
       const identity=text('div','');identity.append(text('strong',s.display),text('small',s.email || 'Correo no disponible'));
@@ -82,11 +83,11 @@
   }
   function detail(s) {
     $('topic-report-person').textContent=s.display;
-    const body=$('topic-report-detail');body.replaceChildren();body.append(text('p',currentExam.subjectLabel+' · '+currentExam.title));
+    const body=$('topic-report-detail');body.replaceChildren();body.append(text('p',(currentExam.subjectLabel||currentExam.subject||'Todas las materias')+' · '+currentExam.title));
     if(s.attempts.length){
       const first=s.attempts.at(-1),last=s.attempts[0];
-      if(s.attempts.length>1){const delta=Math.round(score(last)-score(first));body.append(text('p',total(first)===total(last)?'Cambio entre primera y última entrega: '+(delta>0?'+':'')+delta+' puntos porcentuales.':'Hay entregas de distinta cantidad de preguntas. Consulta cada intento; no se calcula un avance entre esas versiones.'));}
-      body.append(table(['Fecha','Nota','Correctas','Incorrectas','Sin responder','Preguntas','Tiempo'],s.attempts.map(r=>[dateLabel(r.created_at),percent(score(r)),Number(r.correctas||0),Number(r.incorrectas||0),Number(r.sin_respuesta||0),total(r),Math.floor(Number(r.tiempo_segundos||0)/60)+' min '+Number(r.tiempo_segundos||0)%60+' s'])));
+      if(s.attempts.length>1 && currentExam.id!=='all'){const delta=Math.round(score(last)-score(first));body.append(text('p',total(first)===total(last)?'Cambio entre primera y última entrega: '+(delta>0?'+':'')+delta+' puntos porcentuales.':'Hay entregas de distinta cantidad de preguntas. Consulta cada intento; no se calcula un avance entre esas versiones.'));}
+      body.append(table(['Evaluación','Fecha','Nota','Correctas','Incorrectas','Sin responder','Preguntas','Tiempo'],s.attempts.map(r=>[r.simulacro_titulo||'Evaluación',dateLabel(r.created_at),percent(score(r)),Number(r.correctas||0),Number(r.incorrectas||0),Number(r.sin_respuesta||0),total(r),Math.floor(Number(r.tiempo_segundos||0)/60)+' min '+Number(r.tiempo_segundos||0)%60+' s'])));
       body.append(text('p','Estos registros conservan el resultado global. Las respuestas elegidas en cada pregunta no están almacenadas en los intentos históricos.','topic-report-note'));
     }else body.append(text('p','No hay una entrega guardada de este tema para esta cuenta y el período seleccionado. Esto no permite saber si abrió la evaluación sin entregarla.'));
     const profile=text('button','Abrir perfil completo','btn btn-secondary');profile.type='button';profile.addEventListener('click',()=>{$('topic-report-dialog').close();verDetalleEstudiante(s.user_id);});body.append(profile);
@@ -94,9 +95,9 @@
   }
   function populate() {
     const subject=$('topic-report-subject').value,select=$('topic-report-topic'),previous=select.value;
-    select.replaceChildren();exams.filter(e=>e.subject===subject).forEach(e=>{const option=text('option','Tema '+e.number+' · '+e.title);option.value=e.id;select.append(option);});
-    if([...select.options].some(o=>o.value===previous))select.value=previous;
-    currentExam=exams.find(e=>e.id===select.value);renderRows();
+    select.replaceChildren(new Option('Todos los temas','all'));exams.filter(e=>!subject || e.subject===subject).forEach(e=>{const option=text('option','Tema '+e.number+' · '+e.title);option.value=e.id;select.append(option);});
+    select.value=[...select.options].some(o=>o.value===previous)?previous:subject?(exams.find(e=>e.subject===subject)?.id||'all'):'all';
+    currentExam=select.value==='all'?{id:'all',title:'Todos los temas',subject}:exams.find(e=>e.id===select.value);renderRows();
   }
   async function render() {
     const request=++generation,account=currentAdmin?.id;if(!account)return;
@@ -114,9 +115,16 @@
     const blob=new Blob(['\ufeff'+lines.map(row=>row.map(csvCell).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='seguimiento-'+currentExam.id+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   }
   $('topic-report-subject').addEventListener('change',populate);
-  $('topic-report-topic').addEventListener('change',()=>{currentExam=exams.find(e=>e.id===$('topic-report-topic').value);renderRows();});
+  $('topic-report-topic').addEventListener('change',()=>{currentExam=$('topic-report-topic').value==='all'?{id:'all',title:'Todos los temas',subject:$('topic-report-subject').value}:exams.find(e=>e.id===$('topic-report-topic').value);renderRows();});
   ['topic-report-search','topic-report-from','topic-report-to','topic-report-state'].forEach(id=>$(id).addEventListener(id==='topic-report-search'?'input':'change',renderRows));
+  ['topic-report-from','topic-report-to'].forEach(id=>$(id).addEventListener('change',()=>{$('topic-report-exact').value=$('topic-report-from').value===$('topic-report-to').value?$('topic-report-from').value:'';}));
   $('topic-report-export').addEventListener('click',exportCsv);
+  const exactDate=$('topic-report-exact');
+  const filterDay=value=>{exactDate.value=value;$('topic-report-from').value=value;$('topic-report-to').value=value;$('topic-report-state').value=value?'delivered':$('topic-report-state').value;renderRows();};
+  exactDate.addEventListener('change',()=>filterDay(exactDate.value));
+  $('topic-report-today').onclick=()=>filterDay(day(new Date().toISOString()));
+  $('topic-report-all-history').onclick=()=>{$('topic-report-subject').value='';populate();$('topic-report-topic').value='all';currentExam={id:'all',title:'Todos los temas',subject:''};$('topic-report-state').value='delivered';renderRows();};
+  $('topic-report-reset-date').onclick=()=>filterDay('');
   $('topic-report-close').addEventListener('click',()=>$('topic-report-dialog').close());
   function clear() {
     ++generation;currentModel=null;currentExam=null;

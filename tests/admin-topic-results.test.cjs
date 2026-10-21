@@ -20,6 +20,17 @@ test('date filters use Bolivia midnight, retain pending known accounts and separ
 test('CSV escapes quotes, line breaks and spreadsheet formula prefixes',()=>{
  assert.equal(M.csvCell('Ana "Prueba"'),'"Ana ""Prueba"""');assert.equal(M.csvCell('=1+1'),'"\'=1+1"');assert.equal(M.csvCell('  @SUM(1)'),'"\'  @SUM(1)"');assert.equal(M.csvCell('90'),'"90"');
 });
+test('evaluation history selects submitters on one Bolivia day across topics and subjects',()=>{
+ const rows=[
+  {user_id:'a',simulacro_titulo:'Evaluación: Tema 1',materia:'MORFOFUNCION',created_at:'2026-10-21T01:12:00Z',porcentaje:85},
+  {user_id:'b',simulacro_titulo:'Evaluación: Tema 2',materia:'BIOLOGIA CELULAR',created_at:'2026-10-20T18:00:00Z',porcentaje:0},
+  {user_id:'c',simulacro_titulo:'Evaluación: Tema 3',materia:'MORFOFUNCION',created_at:'2026-10-21T04:00:00Z',porcentaje:90},
+  {user_id:'d',simulacro_titulo:'Simulacro personalizado',materia:'MORFOFUNCION',created_at:'2026-10-20T18:00:00Z',porcentaje:100}
+ ];
+ const result=M.build({exam:{id:'all',subject:''},sims:rows,from:'2026-10-20',to:'2026-10-20',state:'delivered'});
+ assert.deepEqual(result.visible.map(s=>s.user_id).sort(),['a','b']);assert.equal(result.attempts,2);
+ assert.equal(M.build({exam:{id:'all',subject:'MORFOFUNCION'},sims:rows,from:'2026-10-20',to:'2026-10-20',state:'delivered'}).visible.length,1);
+});
 test('result pagination loads beyond one database page and never reports a partial fetch as complete',async()=>{
  const src=fs.readFileSync('admin.js','utf8');let calls=0,fail=false;const ctx={cachedData:{errors:[]},console};vm.createContext(ctx);vm.runInContext(src.slice(src.indexOf('async function safeSelect('),src.indexOf('async function getUserDirectory(')),ctx);
  const sb={from(){return {select(){return this},order(){return this},range(from,to){calls++;assert.equal(to-from,499);return Promise.resolve(fail&&from>0?{error:{message:'unavailable'}}:{data:Array.from({length:from===0?500:7},(_,i)=>({id:from+i}))})}}}};

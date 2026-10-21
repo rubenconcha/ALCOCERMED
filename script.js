@@ -680,6 +680,7 @@ function startDeck(tema, asignatura, data) {
     }
 
     showScreen('study-area');
+    window.CampusTracking?.record('flashcards','opened',asignatura,tema,'deck');
     renderCard();
     scheduleFlashcardReview();
 }

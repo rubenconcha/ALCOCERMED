@@ -69,5 +69,43 @@
   ['tracking-search','tracking-state','tracking-from','tracking-to'].forEach(id=>$(id).addEventListener(id==='tracking-search'?'input':'change',render));
   $('tracking-close').onclick=()=>$('tracking-dialog').close();
   $('tracking-export').onclick=()=>{if(!currentAdmin||$('tracking-export').disabled)return;const lines=[['Sección','Estudiante','Correo','Materia','Tema','Actividad','Nota (%)','Fecha Bolivia']];visible.forEach(s=>s.rows.length?s.rows.forEach(r=>lines.push([sections[picker.value],s.display,s.email,r.subject,r.topic,r.action,r.grade??'',formatDate(r.date)])):lines.push([sections[picker.value],s.display,s.email,'','','Sin actividad registrada','','']));const url=URL.createObjectURL(new Blob(['\ufeff'+lines.map(r=>r.map(TopicResultsModel.csvCell).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'}));const a=el('a');a.href=url;a.download='seguimiento-'+picker.value+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
-  root.AdminSectionTracking={render:()=>populate(),clear:()=>{visible=[];$('tracking-results').replaceChildren();$('tracking-detail').replaceChildren();$('tracking-export').disabled=true;if($('tracking-dialog').open)$('tracking-dialog').close();}};
+  function openStudent(userId){
+    if(!currentAdmin)return;
+    const student=getStudent(userId),body=$('modal-est-body');
+    $('modal-est-name').textContent='Progreso de '+student.display;
+    $('modal-estudiante').classList.add('open');body.replaceChildren();
+    body.append(el('h3',student.display),el('p',student.email||student.sub||''));
+    const controls=el('div',null,'topic-report-actions'),dateLabel=el('label','Fecha de actividad'),date=el('input');date.type='date';dateLabel.append(date);
+    const today=el('button','Hoy','btn btn-secondary'),all=el('button','Todas las fechas','btn btn-secondary');today.type=all.type='button';controls.append(dateLabel,today,all);body.append(controls);
+    body.append(el('p','Las evaluaciones y los simulacros se muestran por separado. «Sin actividad registrada» no demuestra que no haya estudiado. El uso anterior al registro por herramienta no se puede reconstruir.'));
+    const content=el('div');body.append(content);
+    function draw(){
+      content.replaceChildren();
+      const history=records(cachedData).filter(r=>r.user_id===String(userId)&&(!date.value||TopicResultsModel.day(r.date)===date.value));
+      const overview=el('div',null,'student-tool-overview');
+      const evaluationCount=history.filter(r=>r.section==='evaluaciones'&&r.grade!==null).length, simulationCount=history.filter(r=>r.section==='simulacros'&&r.grade!==null).length, openings=history.filter(r=>r.section==='flashcards'&&r.source.action==='opened'&&r.source.resource_key!=='menu').length;
+      [['Evaluaciones',evaluationCount?evaluationCount+(evaluationCount===1?' entrega guardada':' entregas guardadas'):'Sin entregas registradas'],['Simulacros identificados',simulationCount?simulationCount+(simulationCount===1?' entrega guardada':' entregas guardadas'):'Sin entregas registradas'],['Aperturas nuevas de flashcards',openings?openings+(openings===1?' apertura registrada':' aperturas registradas'):'Sin aperturas registradas']].forEach(([label,value])=>{const card=el('div',null,'topic-report-stat');card.append(el('strong',label),el('span',value));overview.append(card);});content.append(overview);
+      Object.entries(sections).forEach(([section,label])=>{
+        const group=history.filter(r=>r.section===section).sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
+        const block=el('details',null,'student-tool-history');
+        const latestResult=group.find(r=>r.grade!==null);
+        block.append(el('summary',label+' · '+(group.length?group.length+(group.length===1?' registro':' registros')+(latestResult?' · Último resultado: '+latestResult.grade+'%':''):'Sin actividad registrada')));
+        block.open=group.length>0 && (section==='evaluaciones'||section==='flashcards');
+        if(cachedData.loading){block.append(el('p','Consulta en curso. Actualiza el perfil al terminar.'));content.append(block);return;}
+        const errors=(cachedData.errors||[]).filter(e=>section==='evaluaciones'||section==='historico'?e.table==='resultados_simulacros':section==='flashcards'?['campus_section_activity','progreso_flashcards'].includes(e.table):section==='banco'?e.table==='resultados_banco':section==='juegos'?['evaluacion_resultados','evaluaciones'].includes(e.table):['campus_section_activity','resultados_simulacros'].includes(e.table));
+        if(errors.length)block.append(el('p','Consulta incompleta: '+errors.map(e=>e.table).join(', ')));
+        if(!group.length){block.append(el('p',errors.length?'No se puede determinar la actividad.':'Sin actividad registrada'+(date.value?' en esta fecha.':'.')));content.append(block);return;}
+        const graded=group.filter(r=>r.grade!==null);
+        block.append(el('p',group.length+(group.length===1?' registro':' registros')+(graded.length?' · '+graded.length+(graded.length===1?' resultado guardado':' resultados guardados'):'')));
+        if(section==='flashcards')block.append(el('p','Los totales históricos son acumulados; la fecha indica la última sincronización, no los repasos realizados ese día. No indican cuántas tarjetas distintas vio ni de qué tema. Los repasos nuevos aparecen por tema; no se suman al total histórico porque pueden estar incluidos en él.'));
+        const wrap=el('div',null,'table-wrap'),table=el('table'),head=el('thead'),tr=el('tr'),tbody=el('tbody');
+        ['Actividad / tema','Materia','Resultado','Fecha (Bolivia)'].forEach(v=>tr.append(el('th',v)));head.append(tr);
+        group.forEach(r=>{const row=el('tr'),name=el('td');name.append(el('strong',r.topic),el('p',r.action));row.append(name,el('td',r.subject),el('td',r.grade===null?'—':r.grade+'%'+(r.source.correctas!=null?' · '+r.source.correctas+'/'+(Number(r.source.correctas||0)+Number(r.source.incorrectas||0)+Number(r.source.sin_respuesta||0))+' aciertos · '+Number(r.source.incorrectas||0)+' incorrectas · '+Number(r.source.sin_respuesta||0)+' sin responder':'')),el('td',formatDate(r.date)));tbody.append(row);});table.append(head,tbody);wrap.append(table);block.append(wrap);content.append(block);
+      });
+      const videos=(cachedData.videos||[]).filter(r=>String(r.user_id)===String(userId)&&(!date.value||TopicResultsModel.day(r.fecha_visto||r.created_at)===date.value));
+      if(videos.length){content.append(el('h4','Videoclases'));videos.forEach(v=>content.append(el('p',(v.video_titulo||'Videoclase')+' · '+Number(v.progreso_pct||0)+'% · '+formatDate(v.fecha_visto||v.created_at))));}
+    }
+    date.onchange=draw;today.onclick=()=>{date.value=TopicResultsModel.day(new Date().toISOString());draw();};all.onclick=()=>{date.value='';draw();};draw();
+  }
+  root.AdminSectionTracking={openStudent,render:()=>populate(),clear:()=>{visible=[];$('tracking-results').replaceChildren();$('tracking-detail').replaceChildren();$('tracking-export').disabled=true;$('modal-est-body').replaceChildren();$('modal-estudiante').classList.remove('open');if($('tracking-dialog').open)$('tracking-dialog').close();}};
 })(typeof window==='undefined'?globalThis:window);

@@ -94,7 +94,7 @@
             <ul class="nav-links">
                 <li class="nav-item active" id="nav-dashboard"><a href="#" onclick="showSection('dashboard')" data-tooltip="dashboard"><span class="nav-icon"><i class="fas fa-chart-pie"></i></span><span class="nav-label">dashboard</span></a></li>
                 <li class="nav-item" id="nav-estudiantes"><a href="#" onclick="showSection('estudiantes')" data-tooltip="estudiantes"><span class="nav-icon"><i class="fas fa-users"></i></span><span class="nav-label">estudiantes</span></a></li>
-                <li class="nav-item" id="nav-simulacros"><a href="#" onclick="showSection('simulacros')" data-tooltip="simulacros"><span class="nav-icon"><i class="fas fa-clipboard-list"></i></span><span class="nav-label">simulacros</span></a></li>
+                <li class="nav-item" id="nav-simulacros"><a href="#" onclick="showSection('simulacros')" data-tooltip="historial de resultados"><span class="nav-icon"><i class="fas fa-clipboard-list"></i></span><span class="nav-label">historial de resultados</span></a></li>
                 <li class="nav-item" id="nav-evaluaciones"><a href="#" onclick="showSection('evaluaciones')" data-tooltip="evaluaciones"><span class="nav-icon"><i class="fas fa-star"></i></span><span class="nav-label">evaluaciones</span></a></li>
                 <li class="nav-item" id="nav-videoclases"><a href="#" onclick="showSection('videoclases')" data-tooltip="videoclases"><span class="nav-icon"><i class="fas fa-play-circle"></i></span><span class="nav-label">videoclases</span></a></li>
                 <li class="nav-item" id="nav-contenido"><a href="#" onclick="showSection('contenido')" data-tooltip="contenido"><span class="nav-icon"><i class="fas fa-layer-group"></i></span><span class="nav-label">gestión de contenido</span></a></li>
@@ -138,14 +138,14 @@
                         <div class="stat-delta up" id="dash-users-delta"><i class="fas fa-arrow-up"></i> registrados en auth</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-header"><span class="stat-label">simulacros realizados</span><div class="stat-icon blue"><i class="fas fa-clipboard-check"></i></div></div>
+                        <div class="stat-header"><span class="stat-label">evaluaciones y exámenes entregados</span><div class="stat-icon blue"><i class="fas fa-clipboard-check"></i></div></div>
                         <div class="stat-value" id="dash-total-sims">—</div>
                         <div class="stat-delta up" id="dash-sims-delta"><i class="fas fa-arrow-up"></i> este mes</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-header"><span class="stat-label">promedio global</span><div class="stat-icon green"><i class="fas fa-trophy"></i></div></div>
                         <div class="stat-value" id="dash-promedio">—%</div>
-                        <div class="stat-delta up" id="dash-promedio-delta"><i class="fas fa-arrow-up"></i> de todos los simulacros</div>
+                        <div class="stat-delta up" id="dash-promedio-delta"><i class="fas fa-arrow-up"></i> de las entregas guardadas</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-header"><span class="stat-label">videos vistos</span><div class="stat-icon purple"><i class="fas fa-play-circle"></i></div></div>
@@ -157,7 +157,7 @@
                 <div class="two-col-grid">
                     <div class="chart-card">
                         <div class="chart-header">
-                            <div><div class="chart-title"><i class="fas fa-chart-bar" style="color:var(--orange);"></i> rendimiento por materia</div><div class="chart-subtitle">promedio de aciertos en simulacros y bancos</div></div>
+                            <div><div class="chart-title"><i class="fas fa-chart-bar" style="color:var(--orange);"></i> rendimiento por materia</div><div class="chart-subtitle">promedio de aciertos en evaluaciones, exámenes y bancos</div></div>
                         </div>
                         <div class="progress-list" id="dash-materias-chart">
                             <div class="loading-overlay"><i class="fas fa-spinner fa-spin"></i> cargando datos...</div>
@@ -195,7 +195,7 @@
                     <div class="table-wrap">
                         <table>
                             <thead>
-                                <tr><th>estudiante</th><th>última conexión</th><th>simulacros</th><th>promedio</th><th>videos vistos</th><th>bancos</th><th>flashcards</th><th>estado</th><th>acciones</th></tr>
+                                <tr><th>estudiante</th><th>última conexión</th><th>evaluaciones y exámenes</th><th>promedio</th><th>videos vistos</th><th>bancos</th><th>repasos históricos</th><th>estado</th><th>acciones</th></tr>
                             </thead>
                             <tbody id="tabla-estudiantes">
                                 <tr><td colspan="8"><div class="loading-overlay"><i class="fas fa-spinner fa-spin"></i> cargando estudiantes...</div></td></tr>
@@ -210,13 +210,13 @@
                  ══════════════════════════════════════════════ -->
             <section id="section-simulacros" class="admin-section">
                 <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
-                    <div class="stat-card"><div class="stat-header"><span class="stat-label">simulacros totales</span><div class="stat-icon orange"><i class="fas fa-clipboard-list"></i></div></div><div class="stat-value" id="sim-total">—</div></div>
+                    <div class="stat-card"><div class="stat-header"><span class="stat-label">entregas totales</span><div class="stat-icon orange"><i class="fas fa-clipboard-list"></i></div></div><div class="stat-value" id="sim-total">—</div></div>
                     <div class="stat-card"><div class="stat-header"><span class="stat-label">promedio general</span><div class="stat-icon green"><i class="fas fa-trophy"></i></div></div><div class="stat-value" id="sim-promedio">—%</div></div>
                     <div class="stat-card"><div class="stat-header"><span class="stat-label">tiempo total</span><div class="stat-icon blue"><i class="fas fa-clock"></i></div></div><div class="stat-value" id="sim-tiempo">—</div></div>
                 </div>
                 <div class="table-card">
                     <div class="table-header">
-                        <div class="table-title"><i class="fas fa-clipboard-check"></i> resultados de simulacros</div>
+                        <div class="table-title"><i class="fas fa-clipboard-check"></i> historial de evaluaciones y exámenes</div>
                         <div class="table-search"><i class="fas fa-search"></i><input type="text" id="search-simulacros" placeholder="buscar estudiante..." oninput="filterSimulacros()"></div>
                     </div>
                     <div class="table-wrap">
@@ -225,7 +225,7 @@
                                 <tr><th>estudiante</th><th>examen</th><th>materia</th><th>calificación</th><th>correctas</th><th>incorrectas</th><th>sin respuesta</th><th>tiempo</th><th>fecha</th></tr>
                             </thead>
                             <tbody id="tabla-simulacros">
-                                <tr><td colspan="9"><div class="loading-overlay"><i class="fas fa-spinner fa-spin"></i> cargando simulacros...</div></td></tr>
+                                <tr><td colspan="9"><div class="loading-overlay"><i class="fas fa-spinner fa-spin"></i> cargando resultados...</div></td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -257,8 +257,9 @@
                 <section id="topic-report" aria-labelledby="topic-report-title">
                     <h2 id="topic-report-title">Evaluaciones por tema · seguimiento individual</h2>
                     <p>Consulta las entregas guardadas de cada tema y abre el historial de cada estudiante.</p>
+                    <div class="topic-report-actions"><button id="topic-report-all-history" type="button" class="btn btn-secondary">Historial de todas las evaluaciones</button><button id="topic-report-today" type="button" class="btn btn-secondary">Hoy</button><label>Fecha exacta<input id="topic-report-exact" type="date"></label><button id="topic-report-reset-date" type="button" class="btn btn-secondary">Todas las fechas</button></div>
                     <div class="topic-report-filters">
-                        <label>Materia<select id="topic-report-subject"><option value="MORFOFUNCION">Morfofunción</option><option value="BIOLOGIA CELULAR">Biología celular</option><option value="SALUD PUBLICA">Educación en Salud e Investigación</option></select></label>
+                        <label>Materia<select id="topic-report-subject"><option value="">Todas las materias</option><option value="MORFOFUNCION" selected>Morfofunción</option><option value="BIOLOGIA CELULAR">Biología celular</option><option value="SALUD PUBLICA">Educación en Salud e Investigación</option></select></label>
                         <label>Tema<select id="topic-report-topic"><option value="">Cargando temas…</option></select></label>
                         <label>Desde<input id="topic-report-from" type="date"></label>
                         <label>Hasta<input id="topic-report-to" type="date"></label>
@@ -415,6 +416,6 @@
 <div class="toast-container" id="toast-container"></div>
 
 <script src="config.js"></script>
-<script src="admin.js?v=3"></script><script src="admin-topic-results.js?v=1"></script><script src="admin-section-tracking.js?v=1"></script><script src="membership-offer.js?v=2"></script><script src="membership-admin.js?v=3"></script><script src="atlas-course-admin.js?v=1"></script>
+<script src="admin.js?v=4"></script><script src="admin-topic-results.js?v=2"></script><script src="admin-section-tracking.js?v=2"></script><script src="membership-offer.js?v=2"></script><script src="membership-admin.js?v=4"></script><script src="atlas-course-admin.js?v=1"></script>
 </body>
 </html>
