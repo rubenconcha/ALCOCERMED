@@ -31,7 +31,9 @@
     const people = [...byId.values()].filter(s => !excluded(s)).map(s => {
       const history = (groups.get(s.user_id) || []).slice().sort((a,b) => (Date.parse(b.created_at) || 0) - (Date.parse(a.created_at) || 0));
       return {...s,display:s.name || s.display || s.email || 'Estudiante …' + s.user_id.slice(-6),attempts:history,last:history[0] || null,best:history.length ? Math.max(...history.map(score)) : null};
-    }).sort((a,b) => a.display.localeCompare(b.display,'es'));
+    }).sort((a,b) => Number(!!b.last) - Number(!!a.last)
+      || (Date.parse(b.last?.created_at) || 0) - (Date.parse(a.last?.created_at) || 0)
+      || a.display.localeCompare(b.display,'es'));
     const delivered = people.filter(s => s.last);
     const visible = people.filter(s => (!query || norm([s.display,s.email,s.user_id].join(' ')).includes(norm(query))) && (!state || (state === 'delivered' ? !!s.last : !s.last)));
     return {people,visible,delivered:delivered.length,pending:people.length-delivered.length,attempts:attempts.length,average:delivered.length ? Math.round(delivered.reduce((sum,s) => sum + score(s.last),0)/delivered.length) : null};
