@@ -115,7 +115,22 @@
       "title": "Simulacro 14",
       "type": "Examen final",
       "minutes": 100
+    },
+    {
+      "key": "mini-foundations",
+      "curatedId": "mini-foundations",
+      "scope": "mini-foundations",
+      "kind": "mini",
+      "title": "Minisimulacro · Morfo 1 y 8 + Biología 1",
+      "type": "Minisimulacro",
+      "minutes": 50,
+      "questionCount": 50,
+      "split": [
+        30,
+        20,
+        0
+      ]
     }
   ],
-  "version": 3
+  "version": 4
 }

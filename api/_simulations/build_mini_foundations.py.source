@@ -1,0 +1,105 @@
+"""Build the requested 15+15+20 practice from the user's two official PDFs.
+Usage: python api/_simulations/build_mini_foundations.py.source <referencias-oficiales>
+Paid questions and this authoring source are protected by the simulation API rewrite.
+"""
+import copy, hashlib, json, random, re, sys
+from collections import Counter
+from pathlib import Path
+import pymupdf
+
+ROOT=Path(__file__).resolve().parents[2]
+REF=Path(sys.argv[1]).resolve()
+manifest=json.loads((REF/'manifest.json').read_text(encoding='utf-8-sig'))
+def read(p):return json.loads((ROOT/p).read_text(encoding='utf-8-sig'))
+def write(p,value):(ROOT/p).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+def clean(text):return ' '.join(re.sub(r'(\w)-\s*\n\s*(\w)',r'\1\2',text).replace('fi ', 'fi').split())
+sources={}
+for item in manifest['archivos']:
+    name=item['archivo']
+    if name.startswith(('morfo','Biologia')):
+        path=REF/name;assert hashlib.sha256(path.read_bytes()).hexdigest()==item['sha256']
+        sources[name]={'doc':pymupdf.open(path),'sha256':item['sha256']}
+M='morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf'
+B='Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf'
+rows=[]
+def cite(q,file,chapter,pages,section,anchor):
+    doc=sources[file]['doc'];texts=[clean(doc[n-1].get_text()) for n in pages]
+    # Locate the evidence in the actual PDF, not in an auxiliary OCR export.
+    matches=[(n,t) for n,t in zip(pages,texts) if anchor.lower() in t.lower()]
+    assert matches,(q['id'],pages,anchor)
+    n,t=matches[0];pos=t.lower().index(anchor.lower())
+    printed=[str(p-28) for p in pages] if file==M else None
+    q['source']={'file':file,'sha256':sources[file]['sha256'],'chapter':chapter,'section':section,'pdf_pages':pages,'printed_pages':printed,'printed_page_note':None if printed else 'Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.','evidence_page':n,'anchor':anchor,'evidence_excerpt':t[max(0,pos-60):pos+500]}
+    title='Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición' if file==M else 'Alfonso Calvo · Biología celular biomédica · Elsevier, 2015'
+    locator=('p. impresa '+', '.join(printed)+' · ' if printed else 'archivo electrónico repaginado · ')+ 'p. PDF '+', '.join(map(str,pages))
+    q['fuente']=f'{title} · cap. {chapter} · {section} · {locator}'
+    q['paginas_pdf']=', '.join(map(str,pages));q['pagina_impresa']=', '.join(printed) if printed else None
+    q['coverage']={'subject':q['materia'],'chapter':chapter,'curriculum':'official-pdfs-2026-10-19'}
+    q['respuestas_aceptadas']=[q['respuesta_correcta']]
+    q['comentario']=q['justificacion']
+    # Deterministically shuffle answer locations instead of repeating A/B/C/D patterns.
+    old=list('ABCD');order=old[:];random.Random(q['id']).shuffle(order)
+    notes=q.get('comentarios_opciones',{});options={key:q['opcion_'+key.lower()] for key in old};answer=q['respuesta_correcta']
+    for key,previous in zip(old,order):q['opcion_'+key.lower()]=options[previous]
+    q['respuesta_correcta']=old[order.index(answer)];q['respuestas_aceptadas']=[q['respuesta_correcta']]
+    if notes:q['comentarios_opciones']={key:notes[previous] for key,previous in zip(old,order)}
+    rows.append(q)
+
+# These reviewed evaluation items are rechecked against the official PDF here.
+# No slide deck or historical answer key is used as the academic authority.
+spec1=[([30],'El ámbito de la anatomía y la fisiología','Anatomía es'),([30],'Exploración física','Palpación'),([31],'Histología e histopatología','histopatología'),([51,52],'Imágenes médicas','Ecografía'),([33],'Nacimiento de la medicina moderna','Vesalius rompió'),([36],'Método hipotético-deductivo','hipótesis'),([41],'Jerarquía estructural','Jerarquía estructural'),([41],'Órganos y sistemas','páncreas'),([41,42],'Reduccionismo y holismo','holismo'),([43,44],'Características de la vida: metabolismo','catabolis'),([44],'Desarrollo y diferenciación','diferenciación'),([42],'Transposición visceral','situs inversus'),([44,45],'Homeostasis y retroalimentación negativa','equilibrio dinámico'),([46],'Componentes del ciclo de retroalimentación','Los receptores'),([46,47],'Retroalimentación positiva','contracciones del parto')]
+for i,(q,(pages,section,anchor)) in enumerate(zip(read('api/_evaluations/morfo-01.json')['questions'][:15],spec1),1):
+    q=copy.deepcopy(q);q['id']=f'mini-morfo-01-{i:02d}';q['origin_content_id']=q['content_id']
+    for key in ['source','presentation_source','diapositivas_origen','study_image']:q.pop(key,None)
+    if i==1:
+        q['pregunta']='El estudio de la forma de un órgano y el de su función corresponden, respectivamente, a…'
+        q['justificacion']='La anatomía estudia la estructura y la fisiología estudia la función; ambas perspectivas se complementan.'
+        q.pop('comentarios_opciones',None)
+    if i==12:q['pregunta']='¿Qué distribución de las vísceras corresponde a situs inversus?'
+    cite(q,M,1,pages,section,anchor)
+
+spec8=[(0,[262],'Divisiones del esqueleto','El esqueleto'),(1,[264],'Características anatómicas: cóndilo','Cóndilo'),(3,[262,264],'Huesos del cráneo','22 huesos'),(4,[268],'Suturas del cráneo: figura 8.6','Sutura coronaria'),(5,[272],'Esfenoides','silla turca'),(6,[274],'Etmoides','lámina cribosa'),(8,[278],'Regiones de la columna vertebral','siete'),(9,[281],'Discos intervertebrales','núcleo pulposo'),(10,[281],'Vértebras cervicales: axis','La vértebra C2'),(11,[285],'Caja torácica: figura 8.27','Costillas flotantes'),(12,[289],'Húmero','tróclea'),(13,[290],'Radio','El radio'),(14,[294],'Hueso iliaco o coxal','fusión de tres'),(16,[298],'Huesos del pie: tarso','siete'),(18,[297],'Tibia y peroné','tibia')]
+for i,(index,pages,section,anchor) in enumerate(spec8,1):
+    q=copy.deepcopy(read('api/_evaluations/morfo-08.json')['questions'][index]);q['id']=f'mini-morfo-08-{i:02d}';q['origin_content_id']=q['content_id']
+    for key in ['source','presentation_source','diapositivas_origen','study_image','comentarios_opciones']:q.pop(key,None)
+    if index==0:q['justificacion']='El esqueleto axial comprende la cabeza y el tronco; el apendicular incluye las cinturas y los huesos de las extremidades.'
+    if index==4:
+        q['opcion_a']='Coronaria';q['justificacion']='La figura 8.6 identifica la sutura coronaria entre el frontal y los parietales.'
+    cite(q,M,8,pages,section,anchor)
+
+# New, context-appropriate alternatives for Calvo chapter 1; no bank-generated distractors.
+biology=[
+ (35,'Introducción: teoría celular','todas las células provienen', '¿Qué afirmación completa la teoría celular según la aportación de Virchow?', ['Las células se originan a partir de otras células.','Las células aparecen siempre a partir de materia inanimada.','Solo los organismos animales están formados por células.','La célula es únicamente una unidad estructural, sin actividad funcional.'],'Virchow añadió que toda célula procede de otra célula.'),
+ (35,'Introducción: historia del estudio celular','Robert Hooke', '¿Qué observación dio lugar al término «célula» utilizado por Robert Hooke?', ['Las pequeñas celdillas observadas en láminas de corcho.','Los ribosomas aislados mediante centrifugación diferencial.','Las membranas internas vistas con microscopía electrónica.','La secuencia completa del genoma humano.'],'Hooke describió las celdillas del corcho que observó al microscopio.'),
+ (37,'Organización de las células eucariotas','presencia de núcleo','Al comparar una célula eucariota con una procariota, ¿qué característica fundamental destaca el texto?', ['La presencia de un núcleo que contiene el material genético.','La ausencia de material genético en las células eucariotas.','La presencia obligatoria de una pared de peptidoglucano en las células animales.','La organización de todo el ADN eucariota como un único cromosoma circular sin núcleo.'],'La organización eucariota se caracteriza por el núcleo que contiene el material genético.'),
+ (37,'Organización de las células eucariotas','múltiples cromosomas lineales','¿Cómo se organiza el material genético en los núcleos eucariotas descritos en el capítulo?', ['En múltiples cromosomas lineales.','En un único cromosoma circular libre en el citoplasma.','Exclusivamente en plásmidos extracromosómicos.','En cápsides proteicas independientes del núcleo.'],'El texto contrapone los múltiples cromosomas lineales del núcleo eucariota al cromosoma circular procariota.'),
+ (37,'Organización de las células eucariotas','80 S','¿Qué tamaño de ribosoma citoplasmático se asocia a las células eucariotas animales en el texto?', ['80 S.','70 S.','50 S como ribosoma completo.','30 S como ribosoma completo.'],'Calvo indica ribosomas de 80 S en las células eucariotas animales, frente a 70 S en las procariotas.'),
+ (37,'Organización de las células vegetales','pared de celulosa','¿Qué combinación corresponde a una célula vegetal fotosintética descrita en el capítulo?', ['Pared de celulosa, cloroplastos y grandes vacuolas.','Pared de peptidoglucano y ausencia de núcleo.','Cápside proteica y genoma vírico sin organización celular.','Pared de quitina y metabolismo propio de una levadura.'],'La célula vegetal descrita posee pared de celulosa, cloroplastos para la fotosíntesis y grandes vacuolas.'),
+ (38,'Protozoos','organismos unicelulares','¿Qué organización caracteriza a los protozoos?', ['Son organismos unicelulares eucariotas.','Son organismos pluricelulares procariotas.','Son partículas de ARN sin cubierta proteica.','Son proteínas infecciosas sin organización celular.'],'Los protozoos son organismos unicelulares con organización estructural eucariota.'),
+ (38,'Protozoos: Plasmodium','se instalan en el hígado','En el ciclo de Plasmodium descrito, ¿dónde se instalan los esporozoítos tras pasar al ser humano?', ['En el hígado, donde se replican antes de liberar merozoítos a la sangre.','Directamente en los eritrocitos, sin una fase previa en el hígado.','En las hifas de los hongos, donde forman micelios.','En los plásmidos de las bacterias intestinales.'],'El texto sitúa a los esporozoítos en el hígado; posteriormente se liberan merozoítos que invaden eritrocitos.'),
+ (39,'Hongos','hifas','¿Cómo se llaman los filamentos que forman las células alargadas de los hongos pluricelulares?', ['Hifas, que pueden crecer y formar micelios.','Capsómeros, que forman cromosomas bacterianos.','Pili, que constituyen la cápside vírica.','Plásmidos, que constituyen el núcleo del hongo.'],'Las células alargadas dispuestas linealmente forman hifas; su crecimiento origina micelios.'),
+ (39,'Hongos: organización y pared','quitina','¿Qué composición de la pared corresponde a los hongos descritos?', ['Polisacáridos como quitina, glucanos y mananos.','Únicamente una bicapa lipídica, sin pared.','Una cápside formada solo por capsómeros.','Una pared formada exclusivamente por ADN circular.'],'La pared fúngica contiene polisacáridos fibrilares como quitina y estructuras de glucanos y mananos.'),
+ (41,'Organización de las células procariotas','bacterias y archaea','¿En qué dos grandes grupos se clasifican los procariotas en este capítulo?', ['Bacterias y archaea.','Protozoos y hongos.','Plantas y animales.','Virus y priones.'],'El capítulo distingue los dominios bacterias y archaea entre los procariotas.'),
+ (43,'Bacterias: material genético','plásmidos','Además del cromosoma bacteriano, se detectan pequeñas moléculas circulares de ADN extracromosómico. ¿Cómo se denominan?', ['Plásmidos.','Capsómeros.','Hifas.','Priones.'],'Los plásmidos son secuencias circulares de ADN mucho menores que el cromosoma bacteriano y pueden aportar ventajas de supervivencia.'),
+ (43,'Bacterias: pared celular','peptidoglucano','¿Qué comparación entre paredes bacterianas coincide con el texto?', ['Peptidoglucano grueso en grampositivas y fino en gramnegativas, con membrana externa en estas últimas.','Peptidoglucano fino en grampositivas y grueso en gramnegativas, sin membrana externa en estas últimas.','Ausencia de peptidoglucano tanto en grampositivas como en gramnegativas.','Pared de celulosa en grampositivas y pared de quitina en gramnegativas.'],'El peptidoglucano proporciona rigidez; es grueso en grampositivas y fino en gramnegativas, que presentan una membrana externa con lipopolisacáridos.'),
+ (43,'Bacterias: conjugación','conjugación bacteriana','¿Qué función se atribuye específicamente a los pili bacterianos?', ['Participar en la conjugación y transferencia de material genético entre bacterias.','Constituir el núcleo rodeado por envoltura nuclear.','Sintetizar la cápside proteica de todos los virus.','Formar los micelios característicos de los hongos.'],'Los pili están especializados en la conjugación bacteriana, que transfiere material genético de una bacteria a otra.'),
+ (43,'Bacterias: endosporas','endosporas','¿Qué estructura permite a ciertas bacterias permanecer latentes y resistir condiciones adversas?', ['La endospora.','El capsómero.','El cloroplasto.','La hifa.'],'Algunas bacterias forman endosporas muy resistentes, que pueden germinar cuando reaparecen condiciones favorables.'),
+ (46,'Virus: estructura y replicación','parásitos intracelulares obligados','¿Por qué se consideran los virus parásitos intracelulares obligados?', ['Necesitan entrar en una célula huésped y utilizar sus enzimas y sustratos para replicarse.','Realizan su replicación completa de manera autónoma fuera de las células.','Poseen siempre núcleo, mitocondrias y ribosomas propios.','Son células procariotas que se dividen por fisión binaria.'],'Los virus no pueden replicarse independientemente; dependen de una célula huésped.'),
+ (46,'Virus: estructura','capsómeros','¿Qué relación entre las estructuras de un virus es correcta?', ['Los capsómeros constituyen la cápside que recubre el genoma.','La cápside es una pared de peptidoglucano bacteriano.','Los capsómeros son los cromosomas lineales del núcleo eucariota.','La envoltura lipídica constituye obligatoriamente la única cubierta de todo virus.'],'La cápside es la cubierta formada por unidades de naturaleza fundamentalmente proteica denominadas capsómeros; solo algunos virus tienen envoltura adicional.'),
+ (47,'Virus: transcriptasa inversa','ADN a partir de un molde de ARN','¿Qué síntesis permite la transcriptasa inversa de los virus que la requieren?', ['ADN utilizando ARN como molde.','Proteínas utilizando lípidos como molde.','Peptidoglucano utilizando proteínas como molde.','ARN sin utilizar ninguna información molde.'],'La transcriptasa inversa sintetiza ADN a partir de un molde de ARN.'),
+ (51,'Organización de agentes subcelulares: viroides','ARN circular de cadena simple','¿Qué organización corresponde a un viroide?', ['ARN circular monocatenario, sin cápside ni otra envoltura.','ADN bicatenario rodeado por un núcleo y orgánulos.','Una proteína mal plegada que transforma otras proteínas.','Un cromosoma bacteriano rodeado por una pared de peptidoglucano.'],'Los viroides descritos son agentes de plantas formados esencialmente por ARN circular de cadena simple y carecen de cubierta proteica.'),
+ (52,'Organización de agentes subcelulares: priones','cambio conformacional','¿Cómo puede una PrP patógena favorecer la propagación del proceso priónico?', ['Induciendo un cambio de plegamiento en proteínas PrP normales.','Aportando un genoma de ADN circular dentro de una cápside.','Dividiéndose como una célula mediante fisión binaria.','Transfiriendo plásmidos por pili entre bacterias.'],'La PrP patógena induce cambios conformacionales que convierten PrP normales en la forma patógena, propagando el proceso.')
+]
+for i,(page,section,anchor,stem,options,explanation) in enumerate(biology,1):
+    q={'id':f'mini-bio-01-{i:02d}','materia':'BIOLOGIA CELULAR','tema':'introduccion a la biologia celular','pregunta':stem,'respuesta_correcta':'A','justificacion':explanation,'dificultad':'medio'}
+    q.update({'opcion_'+key:value for key,value in zip('abcd',options)})
+    cite(q,B,1,[page],section,anchor)
+for i,q in enumerate(rows,1):q['numero_original']=i;q['numero_pregunta']=i
+assert len(rows)==50 and len({q['pregunta'] for q in rows})==50
+assert Counter((q['materia'],q['coverage']['chapter']) for q in rows)=={('MORFOFUNCION',1):15,('MORFOFUNCION',8):15,('BIOLOGIA CELULAR',1):20}
+paper={'id':'mini-foundations','scope':'mini-foundations','title':'Minisimulacro · Morfo 1 y 8 + Biología 1','duration':50,'questions':rows,'review':{'basis':'Solo los PDF oficiales del usuario: Saladin, 6.ª edición, capítulos 1 y 8; Calvo, Biología celular biomédica, capítulo 1. Cada pregunta incluye página y evidencia comprobada en PDF.','composition':{'morfo_tema_1':15,'morfo_tema_8':15,'biologia_tema_1':20},'source_authority':'Las evaluaciones existentes solo aportan redacción reutilizada; los libros oficiales son la autoridad académica.'}}
+write('api/_simulations/mini-foundations.json',paper)
+entry={'key':'mini-foundations','curatedId':'mini-foundations','scope':'mini-foundations','kind':'mini','title':paper['title'],'type':'Minisimulacro','minutes':50,'questionCount':50,'split':[30,20,0]}
+catalog=read('content/simulacros-catalog.json');catalog['entries']=[e for e in catalog['entries'] if e['key']!=entry['key']]+[entry];catalog['version']=4;write('content/simulacros-catalog.json',catalog)
+write('quality/mini-foundations-audit.json',{'id':paper['id'],'total':50,'duration_minutes':50,'composition':paper['review']['composition'],'official_files':{name:source['sha256'] for name,source in sources.items()},'answers':dict(Counter(q['respuesta_correcta'] for q in rows)),'items':[{'id':q['id'],'source':q['source']} for q in rows]})
+print('Built 50 questions: 15 Morfo 1 + 15 Morfo 8 + 20 Calvo 1; all PDF evidence anchors verified.')

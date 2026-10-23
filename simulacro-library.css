@@ -16,6 +16,8 @@
 .sim-library-retry{font:inherit;padding:12px 18px;background:#fff;border:1px solid #d6e1ec;border-radius:12px;color:#192840;cursor:pointer}
 #sim-config .sim-library-provenance{font-size:.76rem;color:#607694;line-height:1.6;margin:20px 0}
 #sim-config .entrance-launch[hidden]{display:none!important}
+.sim-mini .sim-top-meta{flex-wrap:wrap;min-width:0}.sim-mini #sim-exam-nq-info{white-space:nowrap}
+@media(max-width:600px){.sim-mini #sim-exam-materia{flex-basis:100%;line-height:1.45}.sim-mini .sim-top-sep{display:none}}
 #sim-config button:focus-visible,#sim-config input:focus-visible,#sim-config select:focus-visible{outline:3px solid #238fbf;outline-offset:3px}
 #sim-result{min-width:0}#sim-result .sim-result-wrap{width:100%;box-sizing:border-box;min-width:0}#sim-result .sim-review-item{overflow-wrap:anywhere}
 @media(max-width:1000px){#sim-config #sim-library-list{grid-template-columns:repeat(2,minmax(0,1fr))}#sim-config .sim-library-filters{grid-template-columns:1.3fr 1fr}#sim-library-status{grid-column:1/-1}}

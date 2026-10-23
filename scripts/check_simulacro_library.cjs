@@ -12,12 +12,12 @@ page.on('request',r=>{const u=new URL(r.url());
  if(u.pathname==='/api/past-exam'){assert.equal(r.headers().authorization,'Bearer qa');requests.push(u.searchParams.get('id'));return r.respond({contentType:'application/json',body:fs.readFileSync(path.join(root,'api/_past_exams',u.searchParams.get('id')+'.json'))});}
  const file=path.join(root,u.pathname.slice(1));if(fs.existsSync(file)&&fs.statSync(file).isFile())return r.respond({contentType:{'.js':'application/javascript','.json':'application/json','.css':'text/css','.woff2':'font/woff2','.ttf':'font/ttf','.png':'image/png'}[path.extname(file)]||'text/plain',body:fs.readFileSync(file)});r.respond({status:404,body:''});
 });
-await page.setViewport({width:1440,height:1100});await page.goto('http://127.0.0.1:8771/qa');await page.evaluate(()=>openSimulacro());await page.waitForFunction(()=>document.querySelectorAll('#sim-library-list [data-exam-key]').length===14);
+await page.setViewport({width:1440,height:1100});await page.goto('http://127.0.0.1:8771/qa');await page.evaluate(()=>openSimulacro());await page.waitForFunction(()=>document.querySelectorAll('#sim-library-list [data-exam-key]').length===15);
 const out=path.join(root,'output/simulacro-library');fs.mkdirSync(out,{recursive:true});
 assert.equal(await page.$('.sim-library-description'),null);assert.equal(await page.$('.sim-library-access'),null);
 await page.type('#sim-library-search','Simulacro 2');assert.equal(await page.$$eval('[data-exam-key]',n=>n.length),1);
 await page.$eval('#sim-library-search',n=>{n.value='';n.dispatchEvent(new Event('input'));});
-for(const [scope,count] of [['first',3],['second',3],['final',8],['',14]]){await page.select('#sim-library-scope',scope);assert.equal(await page.$$eval('[data-exam-key]',n=>n.length),count);}
+for(const [scope,count] of [['first',3],['second',3],['final',8],['mini-foundations',1],['',15]]){await page.select('#sim-library-scope',scope);assert.equal(await page.$$eval('[data-exam-key]',n=>n.length),count);}
 for(const width of [1440,390]){await page.setViewport({width,height:1100});await page.screenshot({path:path.join(out,'catalog-'+width+'.png'),fullPage:true});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);}
 await page.evaluate(()=>{free=true;window.dispatchEvent(new Event('campus-access-change'));});
 await page.click('[id="entrance-partial:first"] button');assert.equal(await page.evaluate(()=>planVisits),1);assert.equal(requests.length,0);
@@ -26,17 +26,22 @@ const entries=JSON.parse(fs.readFileSync(path.join(root,'content/simulacros-cata
 for(const entry of entries){
  await page.evaluate(k=>{showSimScreen('sim-config');selectEntranceExam(k);return iniciarSimulacro();},entry.key);
  const result=await page.evaluate(()=>({count:simState.preguntas.length,counts:['MORFOFUNCION','BIOLOGIA CELULAR','SALUD PUBLICA'].map(s=>simState.preguntas.filter(q=>campo(q,'materia')===s).length),seconds:simState.secondsLeft,scope:simState.preguntas.map(q=>q.coverage)}));
- assert.equal(result.count,100);assert.deepEqual(result.counts,[50,30,20]);assert.ok(result.seconds>5990);
+ const total=entry.questionCount||100;assert.equal(result.count,total);assert.deepEqual(result.counts,entry.split||[50,30,20]);assert.ok(result.seconds>entry.minutes*60-10);
+ if(entry.kind==='mini'){for(const width of [1440,390]){await page.setViewport({width,height:1000});await page.mouse.move(0,0);await page.screenshot({path:path.join(out,'mini-exam-'+width+'.png')});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);}}
  const rules=require('../simulation-scope.js').rules[entry.scope];assert.ok(result.scope.every(c=>c.chapter>=rules[c.subject][0]&&c.chapter<=rules[c.subject][1]));
- await page.evaluate(()=>{simState.currentIdx=80;renderSimQuestion();});assert.equal(await page.$eval('#sim-exam-section',n=>n.textContent),'Educación para la Vida');
+ await page.evaluate(()=>{simState.currentIdx=simState.preguntas.length===50?30:80;renderSimQuestion();});assert.equal(await page.$eval('#sim-exam-section',n=>n.textContent),entry.kind==='mini'?'Biología celular':'Educación para la Vida');
  await page.evaluate(()=>{simState.answers=simState.preguntas.map(q=>({selected:simAcceptedAnswerIndices(q)[0]}));finalizarSimulacro();});
- assert.match(await page.$eval('#sim-result-score',n=>n.textContent),/100 de 100 correctas.*100%/);
- assert.equal(await page.$$eval('#sim-review-list .sim-review-item',n=>n.length),100);
+ assert.match(await page.$eval('#sim-result-score',n=>n.textContent),new RegExp(total+' de '+total+' correctas.*100%'));
+ assert.equal(await page.$$eval('#sim-review-list .sim-review-item',n=>n.length),total);
 }
 await page.evaluate(async()=>{showSimScreen('sim-config');selectEntranceExam('partial:second');await iniciarSimulacro();});
 for(const width of [1440,390]){await page.setViewport({width,height:1100});await page.screenshot({path:path.join(out,'exam-'+width+'.png')});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);}
 await page.evaluate(()=>{simState.answers=simState.preguntas.map(q=>({selected:simAcceptedAnswerIndices(q)[0]}));simState.endTimestamp=Date.now()-1000;});await page.waitForFunction(()=>simState.finalized);assert.equal(await page.evaluate(()=>simState.secondsLeft),0);
 for(const width of [1440,390]){await page.setViewport({width,height:1100});await page.screenshot({path:path.join(out,'result-'+width+'.png')});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);}
-assert.deepEqual(errors,[]);console.log('PASS: all fourteen launched models have 100 questions, actual 50/30/20, correct scope, 100/100 grading; clean cards; all/search/filter; access gates; mobile/desktop; strict timeout; no live writes.');
+await page.evaluate(async()=>{showSimScreen('sim-config');selectEntranceExam('mini-foundations');await iniciarSimulacro();simState.answers=simState.preguntas.map((q,i)=>({selected:i<30?simAcceptedAnswerIndices(q)[0]:i<40?(simAcceptedAnswerIndices(q)[0]+1)%4:null}));simState.startTimestamp=Date.now()-1200000;finalizarSimulacro();});
+assert.match(await page.$eval('#sim-result-score',n=>n.textContent),/30 de 50 correctas.*60%/);
+assert.equal(await page.$$eval('#sim-review-list .sim-review-item',n=>n.length),50);
+for(const width of [1440,390]){await page.setViewport({width,height:1000});await page.screenshot({path:path.join(out,'mini-result-'+width+'.png')});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);}
+assert.deepEqual(errors,[]);console.log('PASS: 14 full models have 50/30/20; new mini has 50 questions with 30/20/0 and 50-minute timer, correct scope, 100/100 grading; clean cards; all/search/filter; access gates; mobile/desktop; strict timeout; no live writes.');
 
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1)});

@@ -1,5 +1,5 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),{Writable}=require('node:stream'),scope=require('../simulation-scope.js');
-const catalog=require('../content/simulacros-catalog.json');
+const catalog={entries:require('../content/simulacros-catalog.json').entries.filter(e=>e.kind!=='mini')};
 test('partial models obey confirmed chapter ranges and retain traceable original items',()=>{
  for(const stage of ['first','second']){
   const p=require('../api/_simulations/partial-'+stage+'.json');assert.ok(scope.validate(p,stage));assert.ok(!scope.validate(p,stage==='first'?'second':'first'));

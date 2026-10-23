@@ -49,7 +49,7 @@ jobs:
           node --check topic-evaluations.js
           node --test tests/topic-evaluations.test.cjs tests/past-exams.test.cjs tests/navigation-back.test.cjs
           node --check simulacro-ingreso.js
-          node --test tests/simulation-composition.test.cjs tests/scoped-simulacros.test.cjs tests/real-simulacros.test.cjs
+          node --test tests/simulation-composition.test.cjs tests/scoped-simulacros.test.cjs tests/real-simulacros.test.cjs tests/mini-foundations.test.cjs
       - name: Check required files
         run: |
           test -f index.html

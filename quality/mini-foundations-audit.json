@@ -1,0 +1,944 @@
+{
+  "id": "mini-foundations",
+  "total": 50,
+  "duration_minutes": 50,
+  "composition": {
+    "morfo_tema_1": 15,
+    "morfo_tema_8": 15,
+    "biologia_tema_1": 20
+  },
+  "official_files": {
+    "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+    "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148"
+  },
+  "answers": {
+    "A": 19,
+    "C": 8,
+    "D": 11,
+    "B": 12
+  },
+  "items": [
+    {
+      "id": "mini-morfo-01-01",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "El ámbito de la anatomía y la fisiología",
+        "pdf_pages": [
+          30
+        ],
+        "printed_pages": [
+          "2"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 30,
+        "anchor": "Anatomía es",
+        "evidence_excerpt": " c) Definir algunas subdisciplinas de la fisiología humana. Anatomía es el estudio de la estructura, y fisiología es el estudio de la función. Ambos métodos son complementarios y nunca se separan por completo. Juntos, integran el fundamento de las ciencias de la salud. Cuando se estudia una estructura, se quiere saber qué hace. Por tanto, la fisiología da significado a la anatomía; a la inversa, la anatomía es lo que hace posible la fisiología. Esta unidad entre forma y función es un tema importante que se debe tener en cuenta mientras se estudia el cuer"
+      }
+    },
+    {
+      "id": "mini-morfo-01-02",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Exploración física",
+        "pdf_pages": [
+          30
+        ],
+        "printed_pages": [
+          "2"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 30,
+        "anchor": "Palpación",
+        "evidence_excerpt": "ísica también requiere que se toque y se escuche el cuerpo. Palpación1 es la percepción de la estructura con las manos, como cuando se palpa un ganglio linfático edematoso o se toma el pulso. La auscultación2 consiste en escuchar los sonidos naturales producidos por el cuerpo, como los cardiacos y los pulmonares. En la percusión, el examinador da pequeños golpes al cuerpo, percibe una resistencia anormal y escucha el sonido emitido en busca de signos de anormalidades como bolsas de líquido o aire. Pero una compresión más profunda del cuerpo depende de la"
+      }
+    },
+    {
+      "id": "mini-morfo-01-03",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Histología e histopatología",
+        "pdf_pages": [
+          31
+        ],
+        "printed_pages": [
+          "3"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 31,
+        "anchor": "histopatología",
+        "evidence_excerpt": "e campo se le llama histología6 (anatomía microscópica). La histopatología es la exploración de tejidos bajo el microscopio, en busca de alguna enfermedad. La citología7 es el estudio de la estructura y la función de células individuales. La ultraestructura alude al detalle fino, en el nivel molecular, visto por el microscopio electrónico. Fisiología: el estudio de la función La fisiología8 utiliza los métodos de la ciencia experimental que se analizarán más adelante. Cuenta con muchas subdisciplinas como la neurofisiología (la fisiología del sistema ner"
+      }
+    },
+    {
+      "id": "mini-morfo-01-04",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Imágenes médicas",
+        "pdf_pages": [
+          51,
+          52
+        ],
+        "printed_pages": [
+          "23",
+          "24"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 52,
+        "anchor": "Ecografía",
+        "evidence_excerpt": "alle el empleo de la fMRI para obtener imágenes cerebrales. Ecografía La ecografía21 es el segundo método de obtención de imágenes más antiguo, y el segundo más utilizado. Constituye una extensión de la tecnología del sonar, desarrollada durante la Segunda Guerra Mundial. Se utiliza un dispositivo manual, que se sostiene con firmeza sobre la piel; el dispositivo emite ondas ultrasónicas de alta frecuencia y, luego, capta el eco de las ondas que “rebotan” en los órganos internos. Aunque la ecografía se empleó por primera vez en el terreno médico en la déc"
+      }
+    },
+    {
+      "id": "mini-morfo-01-05",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Nacimiento de la medicina moderna",
+        "pdf_pages": [
+          33
+        ],
+        "printed_pages": [
+          "5"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 33,
+        "anchor": "Vesalius rompió",
+        "evidence_excerpt": "ra, y las tiras roja y blanca simbolizan sangre y vendajes. Vesalius rompió con la tradición al descender de la cátedra y hacer las disecciones por sí mismo. Pronto pudo señalar que gran parte de la anatomía en los libros de Galeno era incorrecta, y fue el primero en publicar ilustraciones exactas para la enseñanza de la anatomía (figura 1.3). Cuando otros empezaron a plagiar sus ilustraciones, Vesalius publicó el primer atlas de anatomía, De humani corporis fabrica (Sobre la estructura del cuerpo humano), en 1543. Este libro inició una rica tradición de"
+      }
+    },
+    {
+      "id": "mini-morfo-01-06",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Método hipotético-deductivo",
+        "pdf_pages": [
+          36
+        ],
+        "printed_pages": [
+          "8"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 36,
+        "anchor": "hipótesis",
+        "evidence_excerpt": "igador empieza por plantear una interrogante y formular una hipótesis (una especulación informada o una respuesta posible a la pregunta). Una buena hipótesis debe ser 1) compatible con lo que ya se sabe y 2) contar con posibilidades de ser demostrada y, tal vez, ser refutada con pruebas. Capacidad de refutación significa que cuando se asegura que algo es científicamente verdadero, se debe tener capacidad de especificar qué prueba se realizaría para demostrar que es incorrecto. Cualquier cosa que no fuera posible refutar como incorrecta, entonces no sería"
+      }
+    },
+    {
+      "id": "mini-morfo-01-07",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Jerarquía estructural",
+        "pdf_pages": [
+          41
+        ],
+        "printed_pages": [
+          "13"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 41,
+        "anchor": "Jerarquía estructural",
+        "evidence_excerpt": "do Células Organelo Macromolécula Molécula Átomo FIGURA 1.7 Jerarquía estructural del cuerpo. 13 elo = pequeño."
+      }
+    },
+    {
+      "id": "mini-morfo-01-08",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Órganos y sistemas",
+        "pdf_pages": [
+          41
+        ],
+        "printed_pages": [
+          "13"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 41,
+        "anchor": "páncreas",
+        "evidence_excerpt": " órgano puede formar parte de dos sistemas. Por ejemplo, el páncreas pertenece a los sistemas endocrino y digestivo. Un tejido es una masa de células similares y productos celulares que forma una región discreta de un órgano y realiza una función específica. El cuerpo está compuesto por sólo cuatro clases de tejidos principales: epitelial, conjuntivo, nervioso y muscular. La histología, el estudio de los tejidos, es el tema del capítulo 5. Las células son las unidades más pequeñas de un organismo que realizan todas las funciones básicas de la vida; no ha"
+      }
+    },
+    {
+      "id": "mini-morfo-01-09",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Reduccionismo y holismo",
+        "pdf_pages": [
+          41,
+          42
+        ],
+        "printed_pages": [
+          "13",
+          "14"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 42,
+        "anchor": "holismo",
+        "evidence_excerpt": "los circuitos cerebrales o la secuencia genética de DNA. El holismo14 es la teoría complementaria y afirma que el organismo, como un todo, tiene “nuevas propiedades” que no es posible pronosticar a partir de las propiedades de las partes separadas (el ser humano es más que la suma de sus partes). Para lograr una mayor eficacia, un proveedor de cuidados de la salud no trata sólo una enfermedad o un sistema de órganos, sino a toda una persona. Las percepciones, las respuestas emocionales ante la vida y la confianza en el profesional de enfermería, el terap"
+      }
+    },
+    {
+      "id": "mini-morfo-01-10",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Características de la vida: metabolismo",
+        "pdf_pages": [
+          43,
+          44
+        ],
+        "printed_pages": [
+          "15",
+          "16"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 43,
+        "anchor": "catabolis",
+        "evidence_excerpt": "r de otras más sencillas (p. ej., síntesis de proteínas), y catabolismo,17 por el que se desdoblan o degradan moléculas de complejidad relativa en otras más sencillas (p. ej., digestión de proteínas). De manera inevitable, el metabolismo produce desperdicios químicos, algunos de los cuales Variaciones en ramas de la aorta Normal Normal Riñón pélvico Riñón en herradura 15 metabol = cambio; ismo = proceso. 16 ana = arriba. 17 cata = abajo. FIGURA 1.8 Variaciones anatómicas de riñones y principales arterias cerca del corazón."
+      }
+    },
+    {
+      "id": "mini-morfo-01-11",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Desarrollo y diferenciación",
+        "pdf_pages": [
+          44
+        ],
+        "printed_pages": [
+          "16"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 44,
+        "anchor": "diferenciación",
+        "evidence_excerpt": "oría de los organismos, abarca dos procesos principales: 1) diferenciación, que es la transformación de células sin una función especializada en otras que están relacionadas con una tarea específica, y 2) crecimiento, un aumento en el tamaño. Algunas cosas inanimadas crecen, pero no como lo hace el cuerpo. Cuando se deja evaporar una solución azucarada, crecerán cristales a partir de ella, pero no mediante un cambio en la composición del azúcar. Tan sólo se agregan más moléculas de azúcar de la solución a la superficie del cristal. Por el contrario, el c"
+      }
+    },
+    {
+      "id": "mini-morfo-01-12",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Transposición visceral",
+        "pdf_pages": [
+          42
+        ],
+        "printed_pages": [
+          "14"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 42,
+        "anchor": "situs inversus",
+        "evidence_excerpt": "as nace con una anormalidad llamada transposición visceral (situs inversus): los órganos de las cavidades torácica y abdominal están invertidos entre la izquierda y la derecha. A la transposición selectiva del corazón, de izquierda a derecha, se le llama dextrocardia. En la anormalidad denominada situs perversus, un solo órgano ocupa una posición atípica (p. ej., un riñón se localiza en la parte baja de la cavidad pélvica en lugar de la parte superior de la cavidad abdominal). Trastornos como la dextrocardia, cuando no hay transposición visceral completa"
+      }
+    },
+    {
+      "id": "mini-morfo-01-13",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Homeostasis y retroalimentación negativa",
+        "pdf_pages": [
+          44,
+          45
+        ],
+        "printed_pages": [
+          "16",
+          "17"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 45,
+        "anchor": "equilibrio dinámico",
+        "evidence_excerpt": "cribir la estabilidad del estado interno del cuerpo como un equilibrio dinámico (cambio balanceado), con ciertos puntos de equilibrio o un valor promedio para una variable determinada (como 37°C para la temperatura corporal) y las condiciones fl uctúan de manera ligera cerca de ese punto. El mecanismo fundamental que mantiene una variable cerca de su punto de equilibrio es la retroalimentación negativa: un proceso en que el cuerpo percibe un cambio y activa mecanismos que lo anulan o invierten. Ya que mantiene la estabilidad, la retroalimentación negativ"
+      }
+    },
+    {
+      "id": "mini-morfo-01-14",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Componentes del ciclo de retroalimentación",
+        "pdf_pages": [
+          46
+        ],
+        "printed_pages": [
+          "18"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 46,
+        "anchor": "Los receptores",
+        "evidence_excerpt": "imentación: un receptor, un centro integrador y un efector. Los receptores son estructuras que perciben un cambio en el cuerpo, como los receptores de distensión que vigilan la presión arterial. Los centros de integración (control), como el centro cardiaco del encéfalo, son mecanismos que procesan esta información, la relacionan con otra disponible (p. ej., al comparar la presión arterial real con la que se debe tener) y “toma una decisión” sobre cuál debe ser la respuesta apropiada. Los efectores son las células o el órgano que realiza la acción correct"
+      }
+    },
+    {
+      "id": "mini-morfo-01-15",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 1,
+        "section": "Retroalimentación positiva",
+        "pdf_pages": [
+          46,
+          47
+        ],
+        "printed_pages": [
+          "18",
+          "19"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 47,
+        "anchor": "contracciones del parto",
+        "evidence_excerpt": "ión del ciclo de retroalimentación positiva. Por tanto, las contracciones del parto se vuelven cada vez más intensas, hasta que se expulsa al feto. Otros casos de retroalimentación positiva benéfica se verán más adelante en este libro, como la coagulación sanguínea, la digestión de proteínas y la generación de señales nerviosas. Sin embargo, con frecuencia la retroalimentación positiva es dañina o incluso constituye un proceso que pone en riesgo la vida. Esto se debe a que su naturaleza de autoamplificación puede cambiar con rapidez el estado interno del"
+      }
+    },
+    {
+      "id": "mini-morfo-08-01",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Divisiones del esqueleto",
+        "pdf_pages": [
+          262
+        ],
+        "printed_pages": [
+          "234"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 262,
+        "anchor": "El esqueleto",
+        "evidence_excerpt": " en el cuadro A-1 (p. 31). • La comprensión de la anatomía del esqueleto también depende de la familiaridad que se tenga con la terminología de las regiones y cavidades corporales descritas en el atlas A (p. 31-36). 8.1 Revisión general del esqueleto Resultados esperados del aprendizaje Cuando haya completado esta sección, el estudiante podrá: a) Definir las dos subdivisiones del esqueleto. b) Determinar el número aproximado de huesos del cuerpo adulto. c) Explicar por qué este número varía con la edad y de una persona a otra. d) Definir varios términos "
+      }
+    },
+    {
+      "id": "mini-morfo-08-02",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Características anatómicas: cóndilo",
+        "pdf_pages": [
+          264
+        ],
+        "printed_pages": [
+          "236"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 264,
+        "anchor": "Cóndilo",
+        "evidence_excerpt": " breve cada una de las siguientes características óseas: un cóndilo, una cresta, una tuberosidad, una fosa, un saco y un agujero. 8.2 El cráneo Resultados esperados del aprendizaje Cuando haya completado esta sección, el estudiante podrá: a) Distinguir entre huesos craneales y faciales. b) Mencionar los huesos del cráneo y sus características anatómicas. c) Identificar las cavidades en el cráneo y en algunos de sus huesos individuales. d) Nombrar las principales suturas que unen los huesos del cráneo. e) Describir algunos huesos relacionados de forma est"
+      }
+    },
+    {
+      "id": "mini-morfo-08-03",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Huesos del cráneo",
+        "pdf_pages": [
+          262,
+          264
+        ],
+        "printed_pages": [
+          "234",
+          "236"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 262,
+        "anchor": "22 huesos",
+        "evidence_excerpt": "sistema óseo adulto Huesos de la cabeza y el tronco Cráneo (22 huesos) Huesecillos del oído (6 huesos) Huesos craneales Martillo (2) Hueso frontal (1) Yunque (2) Hueso parietal (2) Estribo (2) Hueso occipital (1) Hioides (1 hueso) Hueso temporal (2) Esfenoides (1) Columna vertebral (26 huesos) Etmoides (1) Vértebras cervicales (7) Huesos faciales Vértebras torácicas (12) Maxilares superiores (2) Vértebras lumbares (5) Hueso palatino (2) Sacro (1) Hueso cigomático (2) Cóccix (1) Unguis (2) Hueso propio de la nariz (2) Vómer (1) Cornete nasal inferior (2) "
+      }
+    },
+    {
+      "id": "mini-morfo-08-04",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Suturas del cráneo: figura 8.6",
+        "pdf_pages": [
+          268
+        ],
+        "printed_pages": [
+          "240"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 268,
+        "anchor": "Sutura coronaria",
+        "evidence_excerpt": "os vasos sanguíneos en capítulos posteriores. Hueso frontal Sutura coronaria Sutura sagital Hueso wormiano Hueso parietal Agujero parietal Sutura parietooccipital Hueso occipital Posterior Anterior Hueso frontal Hueso cigomático Celdillas neumáticas etmoidales Etmoides Medio Superior Inferior Maxilar superior Senos maxilares Cavidad nasal Cavidad oral Mandíbula Vómer Órbita Cavidad craneana Cornetes nasales FIGURA 8.7 Cavidades mayores del cráneo (corte frontal). FIGURA 8.8 Los senos paranasales. Seno frontal Seno etmoidal Seno maxilar Seno esfenoidal FI"
+      }
+    },
+    {
+      "id": "mini-morfo-08-05",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Esfenoides",
+        "pdf_pages": [
+          272
+        ],
+        "printed_pages": [
+          "244"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 272,
+        "anchor": "silla turca",
+        "evidence_excerpt": "arecida a una silla de montar a la que se llama con acierto silla turca. Ésta consta de un hueco profundo denominado fosa hipofisaria, que alberga la hipófi- sis, así como un margen anterior elevado (la tuberosidad hipofisaria) y uno posterior (la lámina cuadrilátera). En vida, la duramadre se expande sobre la silla turca y se une a la apófisis clinoides anterior. Un tallo penetra la duramadre para conectar la hipófisis con la base del encéfalo. Varios agujeros perforan el esfenoides (véase la figura 8.5a) en sentido lateral a la silla turca. El agujero "
+      }
+    },
+    {
+      "id": "mini-morfo-08-06",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Etmoides",
+        "pdf_pages": [
+          274
+        ],
+        "printed_pages": [
+          "246"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 274,
+        "anchor": "lámina cribosa",
+        "evidence_excerpt": "tabique está a menudo desviado hacia una fosa nasal. 2. Una lámina cribosa16 que forma el techo de la cavidad nasal. Esta lámina tiene una hoja en la parte media, la cresta de gallo (crista galli) que constituye un punto de unión para la duramadre. A cada lado de la cresta se encuentra un área alargada y deprimida, con varios agujeros: los agujeros cribosos (olfatorios). En estas depresiones descansan un par de bulbos olfativos del cerebro, relacionados con el sentido del olfato, y los agujeros permiten el paso de los nervios olfativos por la cavidad nas"
+      }
+    },
+    {
+      "id": "mini-morfo-08-07",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Regiones de la columna vertebral",
+        "pdf_pages": [
+          278
+        ],
+        "printed_pages": [
+          "250"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 278,
+        "anchor": "siete",
+        "evidence_excerpt": "en cinco grupos que suelen tener las siguientes cantidades: siete vértebras cervicales en el cuello, 12 vértebras torácicas (o dorsales) en el tórax, cinco vértebras lumbares en la zona lumbar o espalda baja, cinco huesos sacros en la base de la columna y cuatro pequeñas vértebras coccígeas. Para recordar las cantidades de vértebras cervicales, torácicas y lumbares (siete, 12 y cinco, respectivamente), el estudiante puede pensar en un día de trabajo en que saldrá de casa a las 7:00 am, almorzará a las 12:00 am y regresará a casa a las 5:00 pm. Todos los "
+      }
+    },
+    {
+      "id": "mini-morfo-08-08",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Discos intervertebrales",
+        "pdf_pages": [
+          281
+        ],
+        "printed_pages": [
+          "253"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 281,
+        "anchor": "núcleo pulposo",
+        "evidence_excerpt": "os cuerpos de dos vértebras adyacentes. Está formado por un núcleo pulposo interno de consistencia gelatinosa, rodeado por un anillo de fibrocartílago, el anillo fibroso (figura 8.22b). Hay 23 discos; el primero se encuentra entre las vértebras cervicales 2 y 3 y el último entre la última vértebra lumbar y el sacro. Ayudan a unir vértebras adyacentes, dar soporte al peso del cuerpo y absorber el choque. Bajo tensión (p. ej., cuando se levanta un objeto pesado) los discos se abultan de manera lateral. La tensión excesiva puede fisurar el anillo y provocar"
+      }
+    },
+    {
+      "id": "mini-morfo-08-09",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Vértebras cervicales: axis",
+        "pdf_pages": [
+          281
+        ],
+        "printed_pages": [
+          "253"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 281,
+        "anchor": "La vértebra C2",
+        "evidence_excerpt": "llamadas tuberosidad anterior y posterior, respectivamente. La vértebra C2, el axis, permite la rotación de la cabeza, como cuando se niega algo. Su característica más distintiva es una prominente protuberancia anterior en el lado anterosuperior, la apófisis odontoides,23 que ninguna otra vértebra tiene. Ésta se empieza a formar como centro de osificación independiente durante el primer año de vida y se fusiona con el axis entre los 3 y 6 años de edad. Se proyecta en el agujero vertebral del atlas, donde se anida en una carilla y se mantiene en su c) Dis"
+      }
+    },
+    {
+      "id": "mini-morfo-08-10",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Caja torácica: figura 8.27",
+        "pdf_pages": [
+          285
+        ],
+        "printed_pages": [
+          "257"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 285,
+        "anchor": "Costillas flotantes",
+        "evidence_excerpt": " 5 6 7 8 9 10 11 12 T12 T1 L1 Costillas falsas (8a. a 12a.) Costillas flotantes (11a. y 12a.) Esternón: Cintura escapular: FIGURA 8.26 El sacro y el cóccix. a) La superficie anterior, que se orienta hacia las vísceras de la cavidad pélvica. b) La superficie posterior. Las apófisis de esta superficie pueden palparse en la región sacra. FIGURA 8.27 La caja torácica y la cintura escapular (vista anterior)."
+      }
+    },
+    {
+      "id": "mini-morfo-08-11",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Húmero",
+        "pdf_pages": [
+          289
+        ],
+        "printed_pages": [
+          "261"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 289,
+        "anchor": "tróclea",
+        "evidence_excerpt": "o neumático ancho y se articula con el radio; el medial, la tróclea,37 tiene forma de polea y se articula con el cúbito. De manera proximal e inmediata a estos cóndilos, el húmero forma dos apófisis óseas: los epicóndilos lateral y medial. El segundo protege al nervio cubital, que pasa cerca de la superficie en la parte posterior del codo. Este epicóndilo recibe el nombre popular de “hueso de la suerte” porque un golpe del codo en la orilla de una mesa, por ejemplo, estimula al nervio cubital y produce una aguda sensación de hormigueo. Los márgenes del h"
+      }
+    },
+    {
+      "id": "mini-morfo-08-12",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Radio",
+        "pdf_pages": [
+          290
+        ],
+        "printed_pages": [
+          "262"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 290,
+        "anchor": "El radio",
+        "evidence_excerpt": "el antebrazo está fl exionado. El hueco lateral es la fosa del radio, que recibe su nombre de la cabeza cercana del radio. El radio El radio tiene en su extremo proximal una cabeza discoide distintiva (figura 8.33). Cuando se gira el antebrazo y la palma se vuelve hacia el frente y hacia atrás, la superficie superior circular de este disco gira sobre la cabeza del húmero, y la orilla del disco gira sobre la muesca del radio del cúbito. En sentido distal a la cabeza e inmediato a ésta, el radio tiene un pedículo más estrecho y luego se ensancha a una prom"
+      }
+    },
+    {
+      "id": "mini-morfo-08-13",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Hueso iliaco o coxal",
+        "pdf_pages": [
+          294
+        ],
+        "printed_pages": [
+          "266"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 294,
+        "anchor": "fusión de tres",
+        "evidence_excerpt": "bturadora). El hueso iliaco del adulto se forma mediante la fusión de tres huesos infantiles: el ilion, el isquion y el pubis, que aparecen identificados con diferentes colores en la figura 8.36. El más grande es el ilion, que se extiende de la cresta iliaca al centro del acetábulo. Esta cresta se extiende de un Ilion Isquion Pubis Espina iliaca posterosuperior Espina iliaca anterosuperior Espina iliaca posteroinferior Espina iliaca posteroinferior Escotadura ciática mayor Escotadura ciática mayor Línea glútea inferior Línea glútea anterior Línea glútea "
+      }
+    },
+    {
+      "id": "mini-morfo-08-14",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Huesos del pie: tarso",
+        "pdf_pages": [
+          298
+        ],
+        "printed_pages": [
+          "270"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 298,
+        "anchor": "siete",
+        "evidence_excerpt": " hay ocho huesos carpianos en las extremidades superiores y siete tarsianos en las inferiores. ¿Qué marca la diferencia en las extremidades inferiores? Los huesos restantes del pie son similares en organización y nomenclatura a los de la mano. Los metatarsos53 proximales son similares a los metacarpos. Del medial al lateral se les denomina metatarsos I al V; el I es proximal al dedo gordo. Del metatarso I al III se articulan con los cuneiformes primero al tercero; los metatarsos IV y V se articulan con el cuboide. Los huesos de los dedos de los pies se l"
+      }
+    },
+    {
+      "id": "mini-morfo-08-15",
+      "source": {
+        "file": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "sha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+        "chapter": 8,
+        "section": "Tibia y peroné",
+        "pdf_pages": [
+          297
+        ],
+        "printed_pages": [
+          "269"
+        ],
+        "printed_page_note": null,
+        "evidence_page": 297,
+        "anchor": "tibia",
+        "evidence_excerpt": "CAPÍTULO 8 El sistema óseo 269 La tibia La pierna tiene dos huesos: una tibia gruesa y fuerte en el lado medial y un peroné más delgado en el lado lateral (figura 8.39). La tibia es el único hueso que carga peso de la región crural. Su amplia cabeza superior tiene dos superficies articulares muy planas, los cóndilos medial y lateral, separados por un borde, la eminencia intercondilar. Los cóndilos de la tibia se articulan con los del fémur. La superficie anterior rugosa de la tibia, la tuberosidad tibial, puede palparse justo de"
+      }
+    },
+    {
+      "id": "mini-bio-01-01",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Introducción: teoría celular",
+        "pdf_pages": [
+          35
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 35,
+        "anchor": "todas las células provienen",
+        "evidence_excerpt": "atólogo Virchow completó la teoría celular, al afirmar que «todas las células provienen de otra célula». El posterior desarrollo de microscopios más precisos y de técnicas de tinción de las preparaciones permitió conocer la estructura microscópica de los diferentes tejidos. En este aspecto, merece la pena destacar los trabajos de Camilo Golgi (1843-1926) y Santiago Ramón y Cajal (1852-1934), quienes utilizaron tinciones de sales de plata, oro y osmio que permitieron extender la teoría celular al sistema nervioso. En 1906 ambos obtuvieron el premio Nobel "
+      }
+    },
+    {
+      "id": "mini-bio-01-02",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Introducción: historia del estudio celular",
+        "pdf_pages": [
+          35
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 35,
+        "anchor": "Robert Hooke",
+        "evidence_excerpt": "s, que tuvo lugar a partir del siglo xvi. En el siglo xvii, Robert Hooke (1635-1703) fue el primero en acuñar el término «célula», observando al microscopio finas láminas de corcho en las que describió las celdillas que componían su estructura. Estas observaciones fueron publicadas en su libro Micrographia (1665). Antony Van Leeuwenhoek (16321723) fabricó microscopios muy simples pero muy precisos, con los que describió la presencia de células sanguíneas, protozoos, espermatozoides y bacterias, a los que denominó animáculos. En 1837-1839, Schleiden y Sch"
+      }
+    },
+    {
+      "id": "mini-bio-01-03",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Organización de las células eucariotas",
+        "pdf_pages": [
+          37
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 37,
+        "anchor": "presencia de núcleo",
+        "evidence_excerpt": "s distintos organismos. Su característica fundamental es la presencia de núcleo, que es la parte esencial de la célula, pues contiene el material genético. El ADN posee la información necesaria para sintetizar las proteínas requeridas para la estructura y el funcionamiento normal de la célula. A diferencia de los procariotas, que contienen solamente un cromosoma circular, los núcleos eucariotas tienen múltiples cromosomas lineales, cada uno de los cuales puede ser replicado, condensado y separado de su copia (su cromátida hermana) antes de la división ce"
+      }
+    },
+    {
+      "id": "mini-bio-01-04",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Organización de las células eucariotas",
+        "pdf_pages": [
+          37
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 37,
+        "anchor": "múltiples cromosomas lineales",
+        "evidence_excerpt": "amente un cromosoma circular, los núcleos eucariotas tienen múltiples cromosomas lineales, cada uno de los cuales puede ser replicado, condensado y separado de su copia (su cromátida hermana) antes de la división celular. Las células eucariotas animales poseen distintos orgánulos celulares, citoesqueleto, ribosomas de un tamaño de 80 S y centrosomas, y realizan procesos de tráfico intracelular de vesículas (como la endocitosis, la exocitosis, etc.). La división celular tiene lugar por mecanismos complejos que ocurren durante la mitosis (o meiosis, en el "
+      }
+    },
+    {
+      "id": "mini-bio-01-05",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Organización de las células eucariotas",
+        "pdf_pages": [
+          37
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 37,
+        "anchor": "80 S",
+        "evidence_excerpt": "gánulos celulares, citoesqueleto, ribosomas de un tamaño de 80 S y centrosomas, y realizan procesos de tráfico intracelular de vesículas (como la endocitosis, la exocitosis, etc.). La división celular tiene lugar por mecanismos complejos que ocurren durante la mitosis (o meiosis, en el caso de las células germinales). En el caso de organismos vegetales, las células están rodeadas por una pared de celulosa y contienen cloroplastos (para la realización de la fotosíntesis) y grandes vacuolas, pero carecen de centrosomas y lisosomas. La figura 1-1 muestra un"
+      }
+    },
+    {
+      "id": "mini-bio-01-06",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Organización de las células vegetales",
+        "pdf_pages": [
+          37
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 37,
+        "anchor": "pared de celulosa",
+        "evidence_excerpt": "de organismos vegetales, las células están rodeadas por una pared de celulosa y contienen cloroplastos (para la realización de la fotosíntesis) y grandes vacuolas, pero carecen de centrosomas y lisosomas. La figura 1-1 muestra un esquema de la organización de las células eucariotas humanas, con la indicación del capítulo de este libro en el que se hará referencia a cada una de dichas estructuras. A continuación hablaremos brevemente de la organización biológica de protozoos y hongos (células eucariotas), por ser algunos de ellos agentes patógenos en huma"
+      }
+    },
+    {
+      "id": "mini-bio-01-07",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Protozoos",
+        "pdf_pages": [
+          38
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 38,
+        "anchor": "organismos unicelulares",
+        "evidence_excerpt": "Protozoos El término «protozoo» se refiere a una familia de organismos unicelulares con organización estructural de célula eucariota, que incluye miles de especies. La mayoría de las especies de protozoos se reproducen asexualmente por fisión binaria, mientras que otros son capaces de llevar a cabo reproducción sexual. Algunas especies son parásitas y pueden infectar a las células sanguíneas, los aparatos urogenital y digestivo y otros tejidos. Como ejemplo general, comentaremos brevemente la estructura y el ciclo biológico del género Plasmodium (fig. 1-"
+      }
+    },
+    {
+      "id": "mini-bio-01-08",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Protozoos: Plasmodium",
+        "pdf_pages": [
+          38
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 38,
+        "anchor": "se instalan en el hígado",
+        "evidence_excerpt": "s, los plasmodios (que en esta fase se llaman esporozoítos) se instalan en el hígado, donde se replican de modo asexual. Los parásitos permanecen en el hígado en forma de esquizonte, hasta que se liberan (en forma de merozoítos) al torrente sanguíneo, e invaden los eritrocitos. Dentro de cada eritrocito infectado, los parásitos (llamados ahora «trofozoítos») se nutren de la hemoglobina y, en un momento dado, se replican, lo que causa lisis celular. Los picos de fiebre alta y los escalofríos típicamente asociados a la malaria son causados por los producto"
+      }
+    },
+    {
+      "id": "mini-bio-01-09",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Hongos",
+        "pdf_pages": [
+          39
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 39,
+        "anchor": "hifas",
+        "evidence_excerpt": "uestas linealmente para constituir filamentos, denominados «hifas». Las hifas pueden crecer hasta formar micelios, visibles macroscópicamente. La organización de estos organismos es la de una típica célula eucariota, pero con la peculiaridad de estar rodeada por una pared de polisacáridos fibrilares (como la quitina) y estructuras amorfas de glucanos y mananos (que contienen los principales antígenos de la pared). La pared forma un exoesqueleto rígido que posee una función protectora, pero no permite la endocitosis. Las enfermedades causadas por hongos s"
+      }
+    },
+    {
+      "id": "mini-bio-01-10",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Hongos: organización y pared",
+        "pdf_pages": [
+          39
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 39,
+        "anchor": "quitina",
+        "evidence_excerpt": " rodeada por una pared de polisacáridos fibrilares (como la quitina) y estructuras amorfas de glucanos y mananos (que contienen los principales antígenos de la pared). La pared forma un exoesqueleto rígido que posee una función protectora, pero no permite la endocitosis. Las enfermedades causadas por hongos se denominan micosis. Hay ciertas especies de hongos que son muy importantes desde el punto de vista clínico, porque constituyen patógenos oportunistas que causan enfermedades en pacientes inmunodeprimidos (como los géneros Candida y Aspergillus). Los"
+      }
+    },
+    {
+      "id": "mini-bio-01-11",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Organización de las células procariotas",
+        "pdf_pages": [
+          41
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 41,
+        "anchor": "bacterias y archaea",
+        "evidence_excerpt": "den clasificar en dos grandes grupos (llamados «dominios»): bacterias y archaea (antiguamente denominados «arqueobacterias»). Este último grupo incluye organismos extremófilos (con capacidad de sobrevivir en ambientes adversos) que no tienen gran relevancia médica, por lo que nos centraremos únicamente en las bacterias. Tabla 1-1 Resumen de las diferencias entre células eucariotas y procariotas Eucariotas Procariotas Tamaño de la célula (diámetro promedio) 10-100 μm 0,2-2 μm Localización del genoma Dentro del núcleo, recubierto por la envoltura nuclear E"
+      }
+    },
+    {
+      "id": "mini-bio-01-12",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Bacterias: material genético",
+        "pdf_pages": [
+          43
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 43,
+        "anchor": "plásmidos",
+        "evidence_excerpt": "ias cadenas de material genético extracromosómico, llamadas plásmidos. Estas secuencias circulares de ADN son mucho más pequeñas que el cromosoma y codifican para genes que les confieren algunas ventajas para la supervivencia, como, por ejemplo, la capacidad de resistencia frente a antibióticos, la adaptación a determinados medios o la capacidad de ser más virulentas. Entre otras características típicas de los procariotas podemos decir que la traducción de proteínas tiene lugar en ribosomas de un tamaño de 70 S y la membrana celular carece de colesterol "
+      }
+    },
+    {
+      "id": "mini-bio-01-13",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Bacterias: pared celular",
+        "pdf_pages": [
+          43
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 43,
+        "anchor": "peptidoglucano",
+        "evidence_excerpt": "s y gramnegativas. El componente esencial de la pared es el peptidoglucano, que proporciona rigidez y estabiliza la estructura de la misma. En la pared de las bacterias grampositivas hay una capa gruesa de peptidoglucano, mientras que en las bacterias gramnegativas constituye una capa fina, separada de la membrana plasmática por el espacio periplasmático y recubierta exteriormente por otra membrana que contiene lipopolisacáridos. El lipopolisacárido es conocido como endotoxina, ya que produce fiebre, activación de la cascada del complemento, elevación de"
+      }
+    },
+    {
+      "id": "mini-bio-01-14",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Bacterias: conjugación",
+        "pdf_pages": [
+          43
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 43,
+        "anchor": "conjugación bacteriana",
+        "evidence_excerpt": "aunque son más largos y gruesos; están especializados en la conjugación bacteriana para transferir material genético de una bacteria a otra. Algunas especies (la mayoría de las cuales son bacilos grampositivos) son capaces de formar endosporas en condiciones adversas, que constituyen una forma muy resistente frente a agentes químicos o físicos. Las endosporas pueden sobrevivir en estas condiciones latentes durante cientos de años, y pueden germinar de nuevo, retornando a su estado normal cuando se exponen a condiciones favorables. Existen innumerables ej"
+      }
+    },
+    {
+      "id": "mini-bio-01-15",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Bacterias: endosporas",
+        "pdf_pages": [
+          43
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 43,
+        "anchor": "endosporas",
+        "evidence_excerpt": "las cuales son bacilos grampositivos) son capaces de formar endosporas en condiciones adversas, que constituyen una forma muy resistente frente a agentes químicos o físicos. Las endosporas pueden sobrevivir en estas condiciones latentes durante cientos de años, y pueden germinar de nuevo, retornando a su estado normal cuando se exponen a condiciones favorables. Existen innumerables ejemplos de bacterias patógenas; de entre ellas, nos referiremos a algunas que serán citadas posteriormente en capítulos de este libro. Helicobacter pylori es una especie acid"
+      }
+    },
+    {
+      "id": "mini-bio-01-16",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Virus: estructura y replicación",
+        "pdf_pages": [
+          46
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 46,
+        "anchor": "parásitos intracelulares obligados",
+        "evidence_excerpt": " capacidad de replicarse independientemente (fig. 1-5). Son parásitos intracelulares obligados, lo que significa que deben entrar en una célula huésped y aprovecharse de sus enzimas y sustratos para poder replicarse. Aunque los virus pueden tener una gran variedad de formas y estructuras, así como estrategias de replicación y capacidad de invadir diferentes células huésped, hay unos rasgos básicos característicos de todos ellos. Su cubierta, llamada «cápside», está formada por unidades (fundamentalmente de naturaleza proteica) denominadas «capsómeros». P"
+      }
+    },
+    {
+      "id": "mini-bio-01-17",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Virus: estructura",
+        "pdf_pages": [
+          46
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 46,
+        "anchor": "capsómeros",
+        "evidence_excerpt": "ades (fundamentalmente de naturaleza proteica) denominadas «capsómeros». Por encima, algunos pueden presentar una envoltura lipoproteica (membrana que adquieren de la célula en la que se replicaron). Sus genomas pueden consistir en ADN o ARN, que pueden ser de cadena doble o simple, lineal o circular, segmentado o no. Para simplificar, vamos a dividir los virus en tres clases de acuerdo al tipo de ácido nucleico y modelo de replicación: 1) virus de ADN; 2) virus de ARN, y 3) virus que requieren transcriptasa inversa. 1. Los virus de ADN pueden ser de cad"
+      }
+    },
+    {
+      "id": "mini-bio-01-18",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Virus: transcriptasa inversa",
+        "pdf_pages": [
+          47
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 47,
+        "anchor": "ADN a partir de un molde de ARN",
+        "evidence_excerpt": "para la enzima transcriptasa inversa, con la que sintetizan ADN a partir de un molde de ARN. El genoma vírico puede consistir en ADN, como en los hepadnavirus (que incluyen los virus que causan la hepatitis B), o en ARN, en el caso de la familia de retrovirus, en cuyo grupo está el virus del VIH (causante del sida); en ambos casos se requiere la transcriptasa inversa para completar su ciclo de multiplicación. FIGURA 1-5 Estructura de algunos virus. A. Representación de un adenovirus. B. Esquema de un bacteriófago. C. Imagen de microscopía electrónica de "
+      }
+    },
+    {
+      "id": "mini-bio-01-19",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Organización de agentes subcelulares: viroides",
+        "pdf_pages": [
+          51
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 51,
+        "anchor": "ARN circular de cadena simple",
+        "evidence_excerpt": "imples y pequeños que los virus. Consisten esencialmente en ARN circular de cadena simple sin una cubierta de proteínas ni otra envoltura, y son capaces de autorreplicarse dentro de la célula huésped."
+      }
+    },
+    {
+      "id": "mini-bio-01-20",
+      "source": {
+        "file": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "sha256": "6a9e9d5f3bada584603d87ef954237ce9f8d5f02f28a16c90b3228bd7328d72b",
+        "chapter": 1,
+        "section": "Organización de agentes subcelulares: priones",
+        "pdf_pages": [
+          52
+        ],
+        "printed_pages": null,
+        "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
+        "evidence_page": 52,
+        "anchor": "cambio conformacional",
+        "evidence_excerpt": "na PrP normal (PrPC, del inglés celular isoform), induce un cambio conformacional en la PrPC que la transforma en PrPSc (y, por lo tanto, en patógena e infecciosa). Aunque no se han elucidado plenamente los detalles de esta transformación priónica, se ha postulado que la conversión de PrPC en PrPSc depende de la actividad catalítica del prión y/o de la polimerización dependiente de nucleación. El prión patógeno puede ser el resultado de mutaciones del gen que codifica la PrP (localizado en el cromosoma 20p en los humanos), o puede ser transmitido por la "
+      }
+    }
+  ]
+}

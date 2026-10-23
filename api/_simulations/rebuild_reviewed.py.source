@@ -149,5 +149,9 @@ for p in models:
 assert archive_hashes=={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (ROOT/'api/_past_exams').glob('*.json')}
 audit['archival_files_unchanged']=True
 audit['cross_model_exact_stem_overlap']=[{'a':a['id'],'b':b['id'],'shared':len({norm(q['pregunta']) for q in a['questions']} & {norm(q['pregunta']) for q in b['questions']})} for i,a in enumerate(models) for b in models[i+1:]]
+# Preserve the separately sourced 50-item profile when rebuilding full papers.
+mini_entry={'key':'mini-foundations','curatedId':'mini-foundations','scope':'mini-foundations','kind':'mini','title':'Minisimulacro · Morfo 1 y 8 + Biología 1','type':'Minisimulacro','minutes':50,'questionCount':50,'split':[30,20,0]}
+if (ROOT/'api/_simulations/mini-foundations.json').exists():
+    catalog['entries'].append(mini_entry);catalog['version']=4;write('content/simulacros-catalog.json',catalog)
 write('quality/simulation-composition-audit.json',audit)
 print(json.dumps([{m['id']:m['counts']} for m in audit['models']],ensure_ascii=False))

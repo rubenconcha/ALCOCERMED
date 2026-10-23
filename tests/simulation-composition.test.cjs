@@ -1,5 +1,5 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),scope=require('../simulation-scope.js');
-const catalog=require('../content/simulacros-catalog.json');
+const catalog={entries:require('../content/simulacros-catalog.json').entries.filter(e=>e.kind!=='mini')};
 const demo=require('../content/simulacros_demo_2026.json');
 const archives=new Map();
 for(const f of fs.readdirSync('api/_past_exams').filter(f=>f.endsWith('.json'))){const p=JSON.parse(fs.readFileSync('api/_past_exams/'+f,'utf8'));for(const q of p.questions||[])archives.set(q.id,q);}

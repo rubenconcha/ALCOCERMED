@@ -105,7 +105,7 @@
         });
         document.getElementById('entrance-selected-name').textContent = format.title;
         document.getElementById('entrance-selected-detail').textContent =
-            `${(format.pastId || format.curatedId) ? 100 : format.split.reduce((sum, n) => sum + n, 0)} preguntas · ${format.minutes} minutos`;
+            `${format.questionCount || ((format.pastId || format.curatedId) ? 100 : format.split.reduce((sum, n) => sum + n, 0))} preguntas · ${format.minutes} minutos`;
         document.getElementById('sim-start-btn').disabled=false;
         window.EntranceLibrary?.markSelected(key);
     };
@@ -155,6 +155,7 @@
             document.getElementById('sim-another-exam').textContent = format.pastId ? 'Elegir otro simulacro' : 'Nuevo simulacro';
             document.getElementById('past-result-tools').hidden=true;
             simState.selectedExamen = format.title;
+            document.getElementById('sim-exam').classList.toggle('sim-mini', format.kind === 'mini');
             simState._oficialesCache = [{ nombre: format.title, materia: format.topic ? 'MORFOFUNCION' : 'INTEGRAL' }];
             simState.duracion = format.minutes;
             simState.nPreguntas = rows.length;

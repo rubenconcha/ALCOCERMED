@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v130';
+const CACHE_NAME = 'alcocermed-main-v131';
 const APP_SHELL = [
     './campus',
     './campus.html',
@@ -58,10 +58,10 @@ const APP_SHELL = [
     './intocables-hub.js?v=2',
     './intocables-sheets.css?v=1',
     './study-assessments.js?v=2',
-    './simulation-scope.js?v=2',
-    './simulacro-ingreso.js?v=8',
-    './simulacro-library.js?v=4',
-    './simulacro-library.css?v=4',
+    './simulation-scope.js?v=3',
+    './simulacro-ingreso.js?v=9',
+    './simulacro-library.js?v=5',
+    './simulacro-library.css?v=5',
     './student-library.js?v=10',
     './study-summaries.js?v=10',
     './summary-pdf-reader.js?v=1',
