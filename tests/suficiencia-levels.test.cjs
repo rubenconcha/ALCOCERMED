@@ -157,4 +157,3 @@ test('restoring a configured attempt preserves its chosen theme and rejects mism
  assert.equal(C.restore({...saved,configuration:{...configuration,level:'dificil'}},bank,'a'),null);
  assert.equal(C.restore(saved,bank,'b'),null);
 });
-
