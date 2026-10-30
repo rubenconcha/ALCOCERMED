@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="summary-pdf-reader.css?v=1">
 <link rel="stylesheet" href="/device-limit.css?v=1">
 <link rel="stylesheet" href="study-media.css?v=20261021-visual5c">
-    <link rel="stylesheet" href="suficiencia.css?v=1">
+    <link rel="stylesheet" href="suficiencia.css?v=2">
 </head>
 
 <body class="login-active">
@@ -271,42 +271,6 @@
             </ul>
         </div>
 
-        <div class="nav-section" id="nav-suficiencia">
-            <span class="section-title">SUFICIENCIA ACADÉMICA</span>
-            <ul class="nav-links">
-                <li class="nav-item nav-item-simple" data-sf-area="integral">
-                    <a href="/campus?seccion=suficiencia" onclick="Sufficiency.open('integral'); return false;" data-tooltip="simulacro integral">
-                        <span class="nav-icon nav-icon-sim"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg></span>
-                        <span class="nav-label">simulacro integral</span>
-                    </a>
-                </li>
-                <li class="nav-item nav-item-simple" data-sf-area="matematicas">
-                    <a href="/campus?seccion=suficiencia" onclick="Sufficiency.open('matematicas'); return false;" data-tooltip="matemáticas">
-                        <span class="nav-icon nav-icon-sim"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg></span>
-                        <span class="nav-label">matemáticas</span>
-                    </a>
-                </li>
-                <li class="nav-item nav-item-simple" data-sf-area="fisica">
-                    <a href="/campus?seccion=suficiencia" onclick="Sufficiency.open('fisica'); return false;" data-tooltip="física">
-                        <span class="nav-icon nav-icon-sim"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg></span>
-                        <span class="nav-label">física</span>
-                    </a>
-                </li>
-                <li class="nav-item nav-item-simple" data-sf-area="quimica">
-                    <a href="/campus?seccion=suficiencia" onclick="Sufficiency.open('quimica'); return false;" data-tooltip="química">
-                        <span class="nav-icon nav-icon-sim"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg></span>
-                        <span class="nav-label">química</span>
-                    </a>
-                </li>
-                <li class="nav-item nav-item-simple" data-sf-area="lectura">
-                    <a href="/campus?seccion=suficiencia" onclick="Sufficiency.open('lectura'); return false;" data-tooltip="lectura comprensiva">
-                        <span class="nav-icon nav-icon-sim"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#summary"></use></svg></span>
-                        <span class="nav-label">lectura comprensiva</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
         <!-- ══ EVALUACIÓN Y PRÁCTICA ══ -->
         <div class="nav-section">
             <span class="section-title">EVALUACIÓN Y PRÁCTICA</span>
@@ -329,11 +293,11 @@
                 </li>
 
                 <li class="nav-item nav-item-simple" id="nav-simulacro">
-                    <a href="#" onclick="openSimulacro(); return false;" data-tooltip="simulacros">
+                    <a href="#" onclick="Sufficiency.open(); return false;" data-tooltip="simulacro">
                         <span class="nav-icon nav-icon-sim">
                             <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg>
                         </span>
-                        <span class="nav-label">simulacros</span>
+                        <span class="nav-label">simulacro</span>
 
                     </a>
                 </li>
@@ -1351,7 +1315,7 @@
             <div id="campus-atlas-viewport" class="campus-atlas-viewport" hidden><iframe id="campus-atlas-frame" title="Atlas anatómico 3D interactivo" allow="fullscreen" allowfullscreen></iframe><div id="campus-atlas-loading" class="campus-atlas-loading" role="status">Preparando el atlas…</div></div>
         </section>
 
-        <section id="suficiencia-screen" class="hidden" aria-label="Suficiencia académica"></section>
+        <section id="suficiencia-screen" class="hidden" aria-label="Simulacro"></section>
     </main>
 
     <!-- Lector de mapas a pantalla completa -->
@@ -1422,7 +1386,7 @@
     <script src="topic-evaluations.js?v=20261021-visual5b"></script>
     <script src="campus-atlas.js?v=12"></script>
     <script src="suficiencia-core.js?v=1"></script>
-    <script src="suficiencia.js?v=1"></script>
+    <script src="suficiencia.js?v=2"></script>
 </body>
 
 </html>

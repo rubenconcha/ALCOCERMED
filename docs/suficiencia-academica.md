@@ -1,6 +1,6 @@
 # Suficiencia académica
 
-Menú lateral: simulacro integral, matemáticas, física, química y lectura comprensiva. El simulacro elige 10 preguntas por área, incluyendo dos lecturas completas de cinco preguntas cada una; 40 preguntas y 60 minutos de práctica. La selección cambia en cada intento. Práctica por materia con el banco completo y seis lecturas individuales.
+Menú lateral: una sola entrada «simulacro». El catálogo usa el formato de tarjetas de los simulacros existentes, con filtro por materia y acceso al catálogo anterior por temas. El simulacro elige 10 preguntas por área, incluyendo dos lecturas completas de cinco preguntas cada una; 40 preguntas y 60 minutos de práctica. La selección cambia en cada intento. Práctica por materia con el banco completo y seis lecturas individuales.
 
 Fuente nueva autorizada expresamente por el usuario el 30/10/2026: `MEDICINA EXÁMENES PASADOS ABP.pdf` (44 páginas escaneadas, UMSA). Se conserva el SHA-256 y la referencia de cada pregunta en el banco privado. Claves razonadas; no se recibió un patrón oficial. El origen UMSA se distingue de la plataforma de preparación UMSS.
 

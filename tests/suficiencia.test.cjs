@@ -129,8 +129,11 @@ test('active subscriber receives validated private bank, with bearer forwarded o
 });
 test('sidebar and screen integration do not remove the original three-subject simulator', () => {
     const html = fs.readFileSync(path.join(__dirname, '../campus.html'), 'utf8');
-    for (const area of ['integral', ...Object.keys(C.subjects)]) assert.ok(html.includes(`Sufficiency.open('${area}')`));
-    assert.ok(html.includes('id="suficiencia-screen"')); assert.ok(html.includes('openSimulacro()'));
+    assert.ok(html.includes('onclick="Sufficiency.open(); return false;"'));
+    assert.ok(html.includes('<span class="nav-label">simulacro</span>'));
+    assert.ok(!html.includes('id="nav-suficiencia"'));
+    assert.ok(!html.includes('data-sf-area='));
+    assert.ok(html.includes('id="suficiencia-screen"')); assert.ok(html.includes('id="simulacro-screen"'));
     const config = require('../vercel.json');
     assert.ok(config.rewrites.some(r => r.source === '/api/_sufficiency/:path*' && r.destination === '/api/suficiencia?invalid=1'));
     assert.equal(config.functions['api/suficiencia.js'].includeFiles, 'api/_sufficiency/**');
@@ -140,13 +143,13 @@ test('sidebar and screen integration do not remove the original three-subject si
 });
 test('student module finishes automatically at the absolute deadline and clears content on logout', async () => {
     const vm = require('node:vm');
-    let now = 1700000000000, authCallback;
+    let now = 1700000000000, authCallback, topicOpens = 0;
     const handlers = {}, intervals = new Map(), storage = new Map();
     const root = { innerHTML: '', classList: { contains: () => false }, addEventListener: (type, fn) => { handlers[type] = fn; }, replaceChildren() { this.innerHTML = ''; }, scrollIntoView() {}, querySelector: () => null };
     let intervalId = 0;
     const context = {
         currentUser: { id: 'student-a' },
-        document: { hidden: false, getElementById: () => root, querySelectorAll: () => [], addEventListener() {} },
+        document: { hidden: false, getElementById: id => id === 'nav-simulacro' ? { classList: { add() {}, remove() {} } } : root, querySelectorAll: () => [], addEventListener() {} },
         location: { search: '' }, URLSearchParams, Uint32Array, AbortSignal,
         crypto: { getRandomValues: arr => { arr[0] = 27; return arr; } },
         Date: class extends Date { static now() { return now; } },
@@ -155,12 +158,14 @@ test('student module finishes automatically at the absolute deadline and clears 
         showScreen: () => true, ensureSupabaseSdk: async () => {},
         fetch: async () => ({ ok: true, json: async () => structuredClone(bank) })
     };
-    context.window = { SufficiencyCore: C, CampusAccess: { isFree: () => false }, addEventListener() {} };
+    context.window = { SufficiencyCore: C, CampusAccess: { isFree: () => false }, openSimulacro: () => { topicOpens++; }, addEventListener() {} };
     context.getSupabase = () => ({ auth: { getSession: async () => ({ data: { session: { user: context.currentUser, access_token: 'fixture' } } }), onAuthStateChange: fn => { authCallback = fn; } } });
     vm.createContext(context);
     vm.runInContext(fs.readFileSync(path.join(__dirname, '../suficiencia.js'), 'utf8'), context);
     await context.window.Sufficiency.open('integral');
     const click = action => handlers.click({ target: { closest: () => ({ disabled: false, dataset: { sf: action } }) } });
+    await click('topics');
+    assert.equal(topicOpens, 1); // Original catalogue remains reachable without calling the new wrapper recursively.
     await click('start');
     assert.match(root.innerHTML, /Pregunta 1/);
     const saved = JSON.parse([...storage.values()][0]);
@@ -179,4 +184,7 @@ test('student module finishes automatically at the absolute deadline and clears 
     await context.window.Sufficiency.open('matematicas');
     assert.ok(!root.innerHTML.includes('Tu último resultado'));
     assert.ok(!root.innerHTML.includes('Tienes una práctica en curso'));
+    context.window.CampusAccess.isFree = () => true;
+    await context.window.openSimulacro();
+    assert.equal(topicOpens, 2); // Free mini simulations from the previous catalogue remain accessible.
 });
