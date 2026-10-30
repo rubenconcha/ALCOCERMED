@@ -54,12 +54,12 @@ var DeviceGuard = (function() {
         }).then(function(result) {
             if (result.error) {
                 console.error('activate_device RPC error:', result.error);
-                return { ok: false, error: result.error.message || 'Error al activar dispositivo' };
+                return { ok: false, error: 'No pudimos verificar este navegador. Vuelve a intentarlo.' };
             }
             var data = result.data;
             if (!data || data.ok !== true) {
                 if (data && data.code === 'DEVICE_LIMIT') showDeviceLimit(supabaseClient, userEmail, data.limit);
-                return { ok: false, error: data && data.error || 'No pudimos verificar este dispositivo.', code: data && data.code };
+                return { ok: false, error: data && data.code === 'DEVICE_LIMIT' ? 'Confirma tu correo para usar este navegador.' : 'No pudimos verificar este navegador. Vuelve a intentarlo.', code: data && data.code };
             }
             return { ok: true, limit: data && data.limit, registered: data && data.registered };
         }).catch(function(err) {
@@ -92,7 +92,7 @@ var DeviceGuard = (function() {
                 console.warn('Dispositivo desactivado:', data.reason);
                 stopChecking();
                 if (typeof _onKicked === 'function') {
-                    _onKicked(data.reason || 'Tu sesión se abrió en otro dispositivo');
+                    _onKicked('Tu cuenta se abrió en otro navegador. Vuelve a iniciar sesión.');
                 }
             }
         }).catch(function(err) {

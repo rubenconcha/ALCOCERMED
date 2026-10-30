@@ -64,8 +64,8 @@
   busy=true;el('send').disabled=true;status('Enviando código…');
   try{
    const response=await client.auth.signInWithOtp({email,options:{shouldCreateUser:false}});if(response.error)throw response.error;
-   sentEmail=email;resendAt=Date.now()+60000;el('email').readOnly=true;el('code-form').hidden=false;el('send').textContent='Enviar otro código';
-   status('Enviamos un código a '+email+'. Revisa también Spam.');el('code').focus();
+   sentEmail=email;resendAt=Date.now()+60000;el('email').readOnly=true;el('code-form').hidden=false;el('send').textContent='Reenviar código';el('send').className='secondary';el('title').textContent='Escribe tu código';el('intro').textContent='Al confirmarlo, este navegador ocupará el lugar del anterior.';
+   status('Solicitamos un código para '+email+'. Revisa también Spam. Si no llega, pide ayuda a la preparatoria.');el('code').focus();
   }catch(error){status(failure(error),true);}finally{busy=false;el('send').disabled=false;}
  });
  el('code-form').addEventListener('submit',async event=>{
