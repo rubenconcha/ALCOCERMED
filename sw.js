@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v131-individual1';
+const CACHE_NAME = 'alcocermed-main-v132-device-code';
 const APP_SHELL = [
     './campus',
     './campus.html',
@@ -27,7 +27,7 @@ const APP_SHELL = [
     './campus-preview.css?v=3',
     './platform-polish.js?v=1',
     './config.js',
-    './device_guard.js?v=7',
+    './device_guard.js?v=8',
     './campus-access.js?v=9',
     './official-flashcards.js?v=1',
     './study-depth.js?v=16',

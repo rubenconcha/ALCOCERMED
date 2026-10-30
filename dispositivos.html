@@ -1,1 +1,22 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow"><title>Cambiar dispositivo · Ben Carson</title><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/dispositivos.css?v=2"><script src="/assets/vendor/supabase.js?v=2.118.0" defer></script><script src="/config.js" defer></script><script src="/device_guard.js?v=6" defer></script><script src="/dispositivos.js?v=3" defer></script></head><body><main><h1>¿Cuál quieres reemplazar?</h1><p>Este navegador ocupará su lugar.</p><p id="status" role="status" aria-live="polite">Un momento…</p><section id="account" hidden><p id="email-label" hidden></p><span id="count" hidden></span><div id="device-list"></div><p id="cooldown"></p><p id="current-note" hidden></p></section><section id="success" hidden><h2>Listo, ya puedes entrar</h2><a class="primary" href="/campus">Entrar</a></section><a class="back" href="/campus">Volver al inicio</a></main><dialog id="confirm"><form method="dialog"><h2>¿Confirmas el cambio?</h2><p id="confirm-text"></p><p>Podrás hacer otro cambio dentro de 7 días.</p><div class="actions"><button value="cancel" class="secondary">Volver</button><button value="replace">Sí, cambiar</button></div></form></dialog></body></html>
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow">
+<title>Cambiar navegador · AlcocerMed</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/dispositivos.css?v=3">
+<script src="/assets/vendor/supabase.js?v=2.118.0" defer></script><script src="/config.js" defer></script>
+<script src="/device_guard.js?v=8" defer></script><script src="/dispositivos.js?v=4" defer></script>
+</head><body><main>
+<h1 id="title">Confirma que eres tú</h1>
+<p id="intro">Te enviaremos un código para autorizar este navegador y cerrar el acceso del anterior.</p>
+<section id="verification">
+<form id="send-form"><label for="email">Correo de tu cuenta</label><input id="email" type="email" autocomplete="email" required maxlength="254"><button id="send" type="submit">Enviar código</button></form>
+<form id="code-form" hidden><label for="code">Código de 6 dígitos</label><input id="code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" minlength="6" placeholder="000000" required aria-describedby="code-note"><p id="code-note">Al confirmar, este navegador ocupará el lugar del anterior. Podrás hacer otro cambio dentro de 7 días.</p><button id="verify" type="submit">Confirmar y entrar</button></form>
+</section>
+<p id="status" role="status" aria-live="polite">Un momento…</p>
+<button id="retry" type="button" hidden>Volver a intentar</button>
+<section id="account" hidden><div id="device-list"></div></section>
+<section id="success" hidden><p>El cambio se completó correctamente.</p><a class="primary" href="/campus">Entrar al campus</a></section>
+<a class="back" href="/campus">Volver al inicio</a>
+</main></body></html>
