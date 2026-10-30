@@ -3,7 +3,7 @@
     'use strict';
     const C = window.SufficiencyCore, labels = C.subjects;
     const root = document.getElementById('suficiencia-screen');
-    let bank = null, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'integral', ending = false, starting = false, pendingConfirmation = null;
+    let bank = null, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'integral', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null;
     const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
     const key = id => 'alcocermed:suficiencia:v1:' + id;
     const user = () => typeof currentUser !== 'undefined' ? currentUser?.id : null;
@@ -13,7 +13,7 @@
     function stopClock() { clearInterval(clock); clock = null; }
     function clear() {
         generation++; stopClock(); if (pendingConfirmation) pendingConfirmation(false);
-        bank = null; owner = null; attempt = null; questions = []; ending = false; starting = false;
+        bank = null; owner = null; attempt = null; questions = []; ending = false; starting = false; renderedPassage = null;
         root.replaceChildren();
     }
     function ask(message) {
@@ -104,7 +104,7 @@
             if (!questions.length) throw new Error('Esta lectura no está disponible.');
             const minutes = area === 'integral' ? 60 : Math.ceil(questions.length * 1.5);
             attempt = { owner, version: bank.version, area, seed, ids: questions.map(q => q.id), answers: {}, flags: [], index: 0, deadline: Date.now() + minutes * 60000, startedAt: Date.now(), finished: false };
-            save(); renderQuestion(); startClock();
+            renderedPassage = null; save(); renderQuestion(); root.scrollIntoView({ block: 'start', behavior: 'instant' }); startClock();
         } catch (e) {
             const notice = document.createElement('p'); notice.className = 'sf-notice'; notice.setAttribute('role', 'alert'); notice.textContent = e.message; root.prepend(notice);
             if (startButton) startButton.disabled = false;
@@ -118,7 +118,11 @@
         if (!attempt || attempt.finished) return;
         const q = questions[attempt.index], answered = Object.keys(attempt.answers).length;
         root.innerHTML = `<div class="sf-exam-top"><div><span class="sf-eyebrow">${esc(title(attempt.area))}</span><h1>Pregunta ${attempt.index + 1} <small>de ${questions.length}</small></h1></div><div class="sf-timer" role="timer" aria-label="Tiempo restante" id="sf-timer"></div></div><div class="sf-progress" role="progressbar" aria-label="Preguntas respondidas" aria-valuenow="${answered}" aria-valuemin="0" aria-valuemax="${questions.length}"><span style="width:${answered / questions.length * 100}%"></span></div><p class="sf-progress-label">${answered} de ${questions.length} respondidas <span data-save-status></span></p><div class="sf-exam-layout"><div>${passage(q)}<section class="sf-question"><div class="sf-question-meta">${esc(labels[q.subject])} · ${esc(q.topic)}</div><h2 id="sf-question-title" tabindex="-1">${esc(q.text)}</h2><fieldset class="sf-options"><legend class="sf-sr-only">Elige una respuesta</legend>${q.options.map((option, i) => `<label class="${attempt.answers[q.id] === i ? 'is-selected' : ''}"><input type="radio" name="sf-answer" value="${i}" ${attempt.answers[q.id] === i ? 'checked' : ''}><span class="sf-letter">${String.fromCharCode(65 + i)}</span><span>${esc(option)}</span></label>`).join('')}</fieldset><div class="sf-question-tools">${button('flag', attempt.flags.includes(q.id) ? '★ Marcada para revisar' : '☆ Marcar para revisar')}${button('erase', 'Borrar respuesta')}</div><div class="sf-bottom-nav">${button('prev', '← Anterior').replace('data-sf="prev"', `data-sf="prev" ${attempt.index === 0 ? 'disabled' : ''}`)}${attempt.index < questions.length - 1 ? button('next', 'Siguiente →', 'sf-primary') : button('finish', 'Terminar y corregir', 'sf-primary')}</div></section></div><aside class="sf-question-nav"><h3>Tus preguntas</h3><div class="sf-number-grid">${questions.map((item, index) => `<button type="button" data-sf="jump" data-index="${index}" class="${attempt.answers[item.id] !== undefined ? 'is-answered' : ''} ${attempt.flags.includes(item.id) ? 'is-flagged' : ''}" ${index === attempt.index ? 'aria-current="step"' : ''} aria-label="Pregunta ${index + 1}${attempt.answers[item.id] !== undefined ? ', respondida' : ', pendiente'}${attempt.flags.includes(item.id) ? ', marcada' : ''}">${index + 1}</button>`).join('')}</div><p>Las preguntas respondidas aparecen en azul. ★ indica una pregunta marcada.</p>${button('finish', 'Terminar y corregir')}${button('catalogue', 'Volver a las materias')}</aside></div>`;
-        tick(); if (focus) root.querySelector('#sf-question-title')?.focus();
+        const changedReading = q.passageId && q.passageId !== renderedPassage;
+        renderedPassage = q.passageId || null;
+        tick();
+        if (changedReading) root.scrollIntoView({ block: 'start', behavior: 'instant' });
+        else if (focus) root.querySelector('#sf-question-title')?.focus();
     }
     function tick() {
         if (!attempt || attempt.finished) return stopClock();
@@ -141,7 +145,7 @@
     }
     function results(filter = 'all') {
         const score = C.grade(questions, attempt.answers);
-        root.innerHTML = header() + `<section class="sf-result"><div class="sf-score">${score.percent}<small>%</small></div><div><h2>Así te fue</h2><p>${attempt.timedOut ? 'Se terminó el tiempo. ' : ''}${score.correct} correctas · ${score.wrong} incorrectas · ${score.skipped} sin responder.</p><p>Revisa las explicaciones y vuelve a practicar lo que te costó.</p></div></section><div class="sf-breakdown">${Object.entries(score.subjects).map(([s, result]) => `<div><strong>${labels[s]}</strong><span>${result.correct} / ${result.total}</span></div>`).join('')}</div><div class="sf-result-actions">${button('catalogue', 'Volver a las materias', 'sf-primary')}${button('start', 'Practicar otra vez')}</div><h2 class="sf-section-title">Revisa tus respuestas</h2><div class="sf-tabs">${button('review-all', 'Todas (' + score.total + ')').replace('data-sf="review-all"', `data-sf="review-all" ${filter === 'all' ? 'aria-current="page"' : ''}`)}${button('review-errors', 'Incorrectas y pendientes (' + (score.wrong + score.skipped) + ')').replace('data-sf="review-errors"', `data-sf="review-errors" ${filter === 'errors' ? 'aria-current="page"' : ''}`)}</div><div class="sf-review-list">${questions.map((q, i) => {
+        root.innerHTML = header() + `<section class="sf-result"><div class="sf-score">${score.percent}<small>%</small></div><div><h2>Así te fue</h2><p>${attempt.timedOut ? 'Se terminó el tiempo. ' : ''}${score.correct} ${score.correct === 1 ? 'correcta' : 'correctas'} · ${score.wrong} ${score.wrong === 1 ? 'incorrecta' : 'incorrectas'} · ${score.skipped} sin responder.</p><p>Revisa las explicaciones y vuelve a practicar lo que te costó.</p></div></section><div class="sf-breakdown">${Object.entries(score.subjects).map(([s, result]) => `<div><strong>${labels[s]}</strong><span>${result.correct} / ${result.total}</span></div>`).join('')}</div><div class="sf-result-actions">${button('catalogue', 'Volver a las materias', 'sf-primary')}${button('start', 'Practicar otra vez')}</div><h2 class="sf-section-title">Revisa tus respuestas</h2><div class="sf-tabs">${button('review-all', 'Todas (' + score.total + ')').replace('data-sf="review-all"', `data-sf="review-all" ${filter === 'all' ? 'aria-current="page"' : ''}`)}${button('review-errors', 'Incorrectas y pendientes (' + (score.wrong + score.skipped) + ')').replace('data-sf="review-errors"', `data-sf="review-errors" ${filter === 'errors' ? 'aria-current="page"' : ''}`)}</div><div class="sf-review-list">${questions.map((q, i) => {
             const a = attempt.answers[q.id], right = a === q.correct;
             if (filter === 'errors' && right) return '';
             return `<details class="sf-review ${right ? 'sf-correct' : 'sf-incorrect'}"><summary><span>${right ? '✓' : a === undefined ? '—' : '✕'} ${i + 1}. ${esc(q.text)}</span><small>${esc(labels[q.subject])}</small></summary>${passage(q)}<p><b>Tu respuesta:</b> ${a === undefined ? 'Sin responder' : esc(String.fromCharCode(65 + a) + '. ' + q.options[a])}</p><p class="sf-answer"><b>Respuesta correcta:</b> ${esc(String.fromCharCode(65 + q.correct) + '. ' + q.options[q.correct])}</p><p>${esc(q.explanation)}</p><small class="sf-reference">${esc(sourceText(q.source))}${q.source.note ? '<br>' + esc(q.source.note) : ''}</small></details>`;
