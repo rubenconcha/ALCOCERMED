@@ -23,6 +23,9 @@
     },
     "api/game-practice.js": {
       "includeFiles": "api/_game-practice/**"
+    },
+    "api/suficiencia.js": {
+      "includeFiles": "api/_sufficiency/**"
     }
   },
   "headers": [
@@ -185,6 +188,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/_sufficiency/:path*",
+      "destination": "/api/suficiencia?invalid=1"
+    },
     {
       "source": "/api/_game-practice/:path*",
       "destination": "/api/game-practice?id=invalid"

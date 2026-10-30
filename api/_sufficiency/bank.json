@@ -1,0 +1,3391 @@
+{
+  "version": 1,
+  "source": {
+    "title": "Medicina: exámenes pasados ABP",
+    "institution": "UMSA",
+    "pdfPages": 44,
+    "sha256": "624b1f217dfa9f63f3d87603958e2b7c9c27b9b8f2799f114e39dd8d46a0fc31",
+    "authorizedByUser": "2026-10-30",
+    "originalPatternIncluded": false
+  },
+  "questions": [
+    {
+      "id": "abp-05-01",
+      "subject": "matematicas",
+      "topic": "Conjuntos",
+      "text": "Sea U={−10,−9,…,−1}, A={−4,−3,−2,−1}, B={−8,−4,−2,−1}, C={−7,−5,−3,−2,−1} y D={−8,−6,−4,−2}. Halla [(C ∪ D) ∩ Aᶜ] ∩ B.",
+      "options": [
+        "{−8,−1}",
+        "{−8,−4,−1}",
+        "{−8}",
+        "{−4,−1}",
+        "{−4}"
+      ],
+      "correct": 2,
+      "explanation": "C ∪ D contiene los enteros de −8 a −1. Al retirar A quedan −8,−7,−6 y −5; solamente −8 pertenece también a B.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          5
+        ],
+        "printedPage": null,
+        "question": 1,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-05-04",
+      "subject": "matematicas",
+      "topic": "Polinomios",
+      "text": "P(x)=2x³+5x−3 y Q(x)=5x³−2x−7. ¿Qué tipo de polinomio resulta de Q(x)−P(x)?",
+      "options": [
+        "De segundo grado",
+        "Nulo",
+        "Homogéneo",
+        "Heterogéneo",
+        "Completo"
+      ],
+      "correct": 3,
+      "explanation": "Q−P=3x³−7x−4. Sus términos tienen grados distintos y falta el término de grado 2; es heterogéneo e incompleto.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          5
+        ],
+        "printedPage": null,
+        "question": 4,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-05-05",
+      "subject": "matematicas",
+      "topic": "Teorema del resto",
+      "text": "Al dividir P(x)=a³x³+3a²bx²+3ab²x−b³ entre Q(x)=ax+b, con a≠0, ¿cuál es el resto?",
+      "options": [
+        "b³",
+        "2b³",
+        "−2b³",
+        "−(a+b)",
+        "0"
+      ],
+      "correct": 2,
+      "explanation": "P(x)=(ax+b)³−2b³. Al evaluar en x=−b/a, el cubo se anula y el resto es −2b³.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          5
+        ],
+        "printedPage": null,
+        "question": 5,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-05-08",
+      "subject": "matematicas",
+      "topic": "Conjuntos",
+      "text": "A es el conjunto de letras de «aprobé el examen» y B el de «mi amigo se copió». Sin distinguir tildes ni espacios, halla |A ∩ B|.",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 3,
+      "explanation": "Las letras comunes son a, e, m, o y p. Cada letra cuenta una sola vez.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          5
+        ],
+        "printedPage": null,
+        "question": 8,
+        "kind": "adaptada",
+        "note": "Se explicita que las vocales tildadas representan la misma letra para evitar ambigüedad."
+      }
+    },
+    {
+      "id": "abp-05-09",
+      "subject": "matematicas",
+      "topic": "Expresiones algebraicas",
+      "text": "Simplifica A=[(x²/y+y²/x)·xy/(x+y)] ÷ [1/x²+1/y²−1/(xy)], para valores reales donde esté definida.",
+      "options": [
+        "x²+y²",
+        "x²y²",
+        "x²−y²",
+        "x²/y²",
+        "1"
+      ],
+      "correct": 1,
+      "explanation": "El numerador se reduce a (x³+y³)/(x+y)=x²−xy+y². El divisor es (x²−xy+y²)/(x²y²); el cociente es x²y².",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          5
+        ],
+        "printedPage": null,
+        "question": 9,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-10-33",
+      "subject": "matematicas",
+      "topic": "Aritmética",
+      "text": "Suma el menor número primo de dos cifras y el mayor número de tres cifras cuyas cifras sean pares y todas diferentes.",
+      "options": [
+        "0",
+        "875",
+        "99",
+        "123",
+        "458"
+      ],
+      "correct": 1,
+      "explanation": "El menor primo de dos cifras es 11. El mayor número con tres cifras pares distintas es 864. La suma es 875.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          10
+        ],
+        "printedPage": null,
+        "question": 33,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-10-35",
+      "subject": "matematicas",
+      "topic": "Notación científica",
+      "text": "Sean a=6,37×10⁻⁸, b=5×10⁻⁵ y c=7×10⁻¹². Identifica la desigualdad verdadera.",
+      "options": [
+        "2a > a+b > b+c",
+        "2b > a+b > b+c",
+        "b+c > 2c > a+c",
+        "a+b > b+c > 2b",
+        "2c > a+c > b+c"
+      ],
+      "correct": 1,
+      "explanation": "b es mucho mayor que a y a es mayor que c. Por tanto 2b>a+b y, al sumar b a a>c, a+b>b+c.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          10
+        ],
+        "printedPage": null,
+        "question": 35,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-10-36",
+      "subject": "matematicas",
+      "topic": "División de polinomios",
+      "text": "P(x)=2x⁴−3x³−15x²+10x+24 y Q(x)=x²−3. Si C(x) y R(x) son el cociente y el resto de P/Q, halla el resto de C/R.",
+      "options": [
+        "0",
+        "10",
+        "2x",
+        "4",
+        "21"
+      ],
+      "correct": 0,
+      "explanation": "La división da C=2x²−3x−9 y R=x−3. El resto de C/(x−3) es C(3)=18−9−9=0.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          10
+        ],
+        "printedPage": null,
+        "question": 36,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-13-04",
+      "subject": "matematicas",
+      "topic": "Identidades algebraicas",
+      "text": "Si a³+b³=10 y ab=6, calcula E=(a+b)³−18(a+b)+20.",
+      "options": [
+        "10",
+        "−15",
+        "20",
+        "26",
+        "30"
+      ],
+      "correct": 4,
+      "explanation": "(a+b)³=a³+b³+3ab(a+b)=10+18(a+b). Al sustituir, E=10+20=30.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 4,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-13-05",
+      "subject": "matematicas",
+      "topic": "Media aritmética",
+      "text": "Las alturas de ocho barras de un histograma son 60,50,40,x,20,20,10,10. Si la media de esas ocho alturas es 30,5, halla x.",
+      "options": [
+        "30",
+        "38",
+        "34",
+        "26",
+        "29"
+      ],
+      "correct": 2,
+      "explanation": "Las siete alturas conocidas suman 210. Entonces (210+x)/8=30,5, de donde x=34.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 5,
+        "kind": "adaptada",
+        "note": "Se transcriben los valores de las barras para que el gráfico sea accesible sin imagen."
+      }
+    },
+    {
+      "id": "abp-13-06",
+      "subject": "matematicas",
+      "topic": "Sistemas de ecuaciones",
+      "text": "x e y, con y≠0, satisfacen bx−ay=0 y x+y=(a+b)/(a²b), con denominadores no nulos. Halla x/y.",
+      "options": [
+        "−b/a",
+        "b/a²",
+        "a/b",
+        "a²/b",
+        "−ab"
+      ],
+      "correct": 2,
+      "explanation": "De bx=ay se obtiene directamente x/y=a/b.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 6,
+        "kind": "adaptada",
+        "note": "Se hace explícito y≠0 para que el cociente solicitado esté definido."
+      }
+    },
+    {
+      "id": "abp-13-07",
+      "subject": "matematicas",
+      "topic": "Ecuaciones racionales",
+      "text": "Con a,b≠0 y a≠b, resuelve (2ab−x)/(x−ab)=(a²+b²−x)/(x−a²).",
+      "options": [
+        "(a−b)(a+b)",
+        "a(a+b)",
+        "(a−b)+(b+a)",
+        "a(a−b)",
+        "(ab)²"
+      ],
+      "correct": 1,
+      "explanation": "Al multiplicar en cruz y simplificar queda b(a−b)[x−a(a+b)]=0. Las condiciones permiten dividir y obtener x=a(a+b); no anula los denominadores.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 7,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-13-09",
+      "subject": "matematicas",
+      "topic": "Inecuaciones",
+      "text": "Resuelve en ℝ: (x+1)(2x+3)<x²+4x+1.",
+      "options": [
+        "(−∞,−2)",
+        "[1/2,+∞)",
+        "(−∞,−2) ∪ [2,+∞)",
+        "∅",
+        "ℝ"
+      ],
+      "correct": 3,
+      "explanation": "La desigualdad equivale a x²+x+2<0. Su discriminante es −7 y el coeficiente principal es positivo: nunca es negativa.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 9,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-13-10",
+      "subject": "matematicas",
+      "topic": "Logaritmos",
+      "text": "Resuelve log₂[log₁₀(x³)−(log₁₀x)²]=1.",
+      "options": [
+        "x=−10 o −100",
+        "x=100 o 10000",
+        "x=1 o −10",
+        "x=100 o −1000",
+        "x=10 o 100"
+      ],
+      "correct": 4,
+      "explanation": "Sea t=log₁₀x. Entonces 3t−t²=2, así que (t−1)(t−2)=0. Resultan x=10 y x=100, ambos en el dominio.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 10,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-18-41",
+      "subject": "matematicas",
+      "topic": "Lógica",
+      "text": "Si (p→¬q) ∨ (¬r→s) es falsa, ¿cuáles son los valores de p,q,r,s?",
+      "options": [
+        "V,F,V,F",
+        "V,V,F,F",
+        "F,F,F,V",
+        "F,F,V,V",
+        "V,V,V,V"
+      ],
+      "correct": 1,
+      "explanation": "Una disyunción falsa tiene ambos componentes falsos. p→¬q falsa exige p=V,q=V; ¬r→s falsa exige r=F,s=F.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          18
+        ],
+        "printedPage": null,
+        "question": 41,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-18-42",
+      "subject": "matematicas",
+      "topic": "Conjuntos",
+      "text": "¿Cuándo se describe un conjunto por comprensión?",
+      "options": [
+        "Cuando se proporciona una regla que permite identificar sus elementos",
+        "Cuando una norma solo permite comprender los elementos",
+        "Cuando una regla permite renombrar los elementos",
+        "Cuando se mencionan individualmente todos los elementos",
+        "Cuando una regla extiende indefinidamente sus elementos"
+      ],
+      "correct": 0,
+      "explanation": "La comprensión caracteriza los elementos mediante una propiedad o regla; la enumeración individual corresponde a extensión.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          18
+        ],
+        "printedPage": null,
+        "question": 42,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-26-38",
+      "subject": "matematicas",
+      "topic": "Término independiente",
+      "text": "P(x,y)=(x²y²−1)/4 y Q(x,y)=(xy+1)/(3xy+6). Halla el término independiente de P/Q, donde el cociente esté definido.",
+      "options": [
+        "−2/3",
+        "2/3",
+        "3/2",
+        "−3/2",
+        "3"
+      ],
+      "correct": 3,
+      "explanation": "P/Q=(xy−1)(3xy+6)/4. El producto de los términos constantes es (−1)·6/4=−3/2.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          26
+        ],
+        "printedPage": null,
+        "question": 38,
+        "kind": "adaptada",
+        "note": "La última línea del original dice A/Q, aunque solo define P y Q. Se corrige ese nombre a P/Q."
+      }
+    },
+    {
+      "id": "abp-26-40",
+      "subject": "matematicas",
+      "topic": "Potencias y radicales",
+      "text": "Halla [(2+√3)³−(2−√3)³]/[(2+√3)⁶−1].",
+      "options": [
+        "(2−√3)⁰",
+        "(1−√9)³",
+        "(2+√3)⁹",
+        "(2−√3)³",
+        "(√2)³"
+      ],
+      "correct": 3,
+      "explanation": "Como (2+√3)(2−√3)=1, si t=2+√3 el numerador es t³−t⁻³=(t⁶−1)/t³. El cociente es t⁻³=(2−√3)³.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          26
+        ],
+        "printedPage": null,
+        "question": 40,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-30-34",
+      "subject": "matematicas",
+      "topic": "Logaritmos",
+      "text": "Resuelve log₄(x²+12)·log₍ₓ²₎2=1.",
+      "options": [
+        "x=±4",
+        "x=±2",
+        "x=4",
+        "x=−2",
+        "x=2"
+      ],
+      "correct": 1,
+      "explanation": "Por cambio de base, ln(x²+12)/(2 ln(x²))=1. Con t=x² queda t+12=t²; t=4 o −3. Solo t=4 es admisible: x=±2.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          30
+        ],
+        "printedPage": null,
+        "question": 34,
+        "kind": "adaptada",
+        "note": "Se normaliza la notación de los logaritmos del escaneo."
+      }
+    },
+    {
+      "id": "abp-30-35",
+      "subject": "matematicas",
+      "topic": "Estadística",
+      "text": "¿Cuáles son las dos grandes ramas de la estadística?",
+      "options": [
+        "Descriptiva y cuantitativa",
+        "Cualitativa e inferencial",
+        "Teórica y experimental",
+        "Predictiva y probabilística",
+        "Descriptiva e inferencial"
+      ],
+      "correct": 4,
+      "explanation": "La estadística descriptiva organiza y resume datos; la inferencial obtiene conclusiones a partir de muestras.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          30,
+          31
+        ],
+        "printedPage": null,
+        "question": 35,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-31-40",
+      "subject": "matematicas",
+      "topic": "Frecuencias",
+      "text": "En una tabla, n₁=6, f₁=0,12, n₂=11, n₄=4 y N₄=29. Halla E=n₃f₃+N₃; n es frecuencia absoluta, f relativa y N acumulada.",
+      "options": [
+        "1,78",
+        "26,28",
+        "9,53",
+        "13,78",
+        "55,44"
+      ],
+      "correct": 1,
+      "explanation": "El total es 6/0,12=50. N₃=29−4=25, n₃=25−6−11=8 y f₃=8/50=0,16. E=8·0,16+25=26,28.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          31
+        ],
+        "printedPage": null,
+        "question": 40,
+        "kind": "adaptada",
+        "note": "Se usan solo las filas necesarias de la tabla: otras filas del original son inconsistentes."
+      }
+    },
+    {
+      "id": "abp-36-61",
+      "subject": "matematicas",
+      "topic": "Conjuntos",
+      "text": "A={5k:k=1,2,3,…} y B={10k:k=1,2,3,…}. Halla A ∩ B.",
+      "options": [
+        "{1,10,15,…}",
+        "{10,20,30,…}",
+        "{15k:k=1,2,3,…}",
+        "∅"
+      ],
+      "correct": 1,
+      "explanation": "Todo múltiplo positivo de 10 es múltiplo de 5; por ello B⊂A y la intersección es B.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 61,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-36-62",
+      "subject": "matematicas",
+      "topic": "Conjuntos",
+      "text": "Sea U={1,2,…,20}, A el conjunto de primos de U, B={x∈U:−3≤x<8} y C={x∈U:x²=4}. ¿Qué afirmación es verdadera?",
+      "options": [
+        "A ∩ B ⊂ Cᶜ",
+        "Aᶜ = B ∪ C",
+        "Aᶜ ∩ B ⊂ Cᶜ",
+        "Bᶜ ∩ A ⊂ B ∩ C"
+      ],
+      "correct": 2,
+      "explanation": "C={2}, B={1,…,7} y Aᶜ∩B={1,4,6}. Estos tres números pertenecen al complemento de C.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 62,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-36-64",
+      "subject": "matematicas",
+      "topic": "Cardinalidad",
+      "text": "¿Cuál de los siguientes conjuntos tiene exactamente seis elementos?",
+      "options": [
+        "{x:x=6}",
+        "{…,6,…}",
+        "{0,1,…,5}",
+        "{k:k=1,2,3,4,5,6,…}"
+      ],
+      "correct": 2,
+      "explanation": "La lista {0,1,2,3,4,5} tiene seis elementos distintos.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 64,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-36-65",
+      "subject": "matematicas",
+      "topic": "Números racionales",
+      "text": "¿Cuál describe correctamente el conjunto ℚ?",
+      "options": [
+        "{p/q:p,q∈ℝ; q≠0}",
+        "{p/q:p,q∈ℕ}",
+        "{p/q:p,q∈ℤ; q≠0}",
+        "{p/q:p,q∈ℚᶜ}"
+      ],
+      "correct": 2,
+      "explanation": "Un racional es un cociente de dos enteros con denominador distinto de cero. Las otras descripciones omiten restricciones o cambian el conjunto.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 65,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-36-67",
+      "subject": "matematicas",
+      "topic": "Expresiones decimales",
+      "text": "¿Cuál de estos números tiene desarrollo decimal periódico no terminante?",
+      "options": [
+        "2/7",
+        "√2",
+        "π",
+        "1/10"
+      ],
+      "correct": 0,
+      "explanation": "2/7=0,285714285714… repite un bloque. 1/10 termina; √2 y π son irracionales.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 67,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-36-69",
+      "subject": "matematicas",
+      "topic": "Notación científica",
+      "text": "Una cantidad en notación científica se representa como:",
+      "options": [
+        "La suma de un número y una potencia de 10",
+        "El producto de un número y una potencia de 10",
+        "La diferencia de un número y una potencia de 10",
+        "La división de un número entre una potencia de 10"
+      ],
+      "correct": 1,
+      "explanation": "Su forma es a×10ⁿ, con n entero y 1≤|a|<10 para una cantidad no nula.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 69,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-36-71",
+      "subject": "matematicas",
+      "topic": "Notación científica",
+      "text": "¿Cuál expresión está correctamente escrita en notación científica normalizada?",
+      "options": [
+        "−9,9×10⁻³",
+        "−9,9×(−10)⁻⁵",
+        "−9,9×10⁻⁰˒⁵",
+        "−9,9×(−10)⁻⁸"
+      ],
+      "correct": 0,
+      "explanation": "La base es 10, el exponente es entero y el valor absoluto del coeficiente es 9,9, entre 1 y 10.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 71,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-36-73",
+      "subject": "matematicas",
+      "topic": "Polinomios",
+      "text": "A(x)=5x²−7x−6, B(x)=5x+7 y C(x)=74x+38. ¿Cuántos términos tiene A(x)B(x)+C(x), una vez reducido?",
+      "options": [
+        "2 términos",
+        "3 términos",
+        "4 términos",
+        "5 términos"
+      ],
+      "correct": 1,
+      "explanation": "El producto es 25x³−79x−42. Al sumar C se obtiene 25x³−5x−4: tres términos.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 73,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-36-74",
+      "subject": "matematicas",
+      "topic": "División de polinomios",
+      "text": "P(x)=4x³−17x²+7x−4 y Q(x)=x−3. Si C(x) es el cociente de P/Q, ¿cuál es el cociente de C/Q?",
+      "options": [
+        "3x+8",
+        "4x−7",
+        "3x−8",
+        "4x+7"
+      ],
+      "correct": 3,
+      "explanation": "Primero C(x)=4x²−5x−8. Su división entre x−3 produce el cociente 4x+7 y resto 13.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 74,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-37-77",
+      "subject": "matematicas",
+      "topic": "Expresiones algebraicas",
+      "text": "Sean P(x)=(√x−x/√x)(√x+x/√x)+x⁴, Q(x)=(x−3)²+8(x−1) y R(x)=x²+x+1. Para x>0, simplifica [P(x)−Q(x)]/R(x).",
+      "options": [
+        "x²−x−1",
+        "x³+2x−1",
+        "x⁴−x²+2",
+        "x²+x−1"
+      ],
+      "correct": 0,
+      "explanation": "x/√x=√x, así que P=x⁴ y Q=x²+2x+1. El numerador factoriza como (x²+x+1)(x²−x−1).",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          37
+        ],
+        "printedPage": null,
+        "question": 77,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-41-22",
+      "subject": "matematicas",
+      "topic": "Números primos",
+      "text": "Un entero positivo es primo si:",
+      "options": [
+        "No es compuesto",
+        "Puede ser expresado sin restricciones",
+        "Es mayor que 1",
+        "Es cociente de dos enteros",
+        "Es distinto de 1 y no es compuesto"
+      ],
+      "correct": 4,
+      "explanation": "Entre los enteros positivos, 1 no es primo ni compuesto. Excluirlo hace válida la última caracterización.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          41
+        ],
+        "printedPage": null,
+        "question": 22,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-41-24",
+      "subject": "matematicas",
+      "topic": "División algebraica",
+      "text": "Efectúa (24x⁴−18x³+12x²)/(6x²), con x≠0.",
+      "options": [
+        "4x²−3x+2",
+        "4x²+3x+2",
+        "2x²−3x+2",
+        "4x²−3x−2",
+        "2x²+3x−2"
+      ],
+      "correct": 0,
+      "explanation": "Se divide cada término entre 6x²: 24x⁴/(6x²)=4x²; −18x³/(6x²)=−3x; 12x²/(6x²)=2.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          41
+        ],
+        "printedPage": null,
+        "question": 24,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-41-25",
+      "subject": "matematicas",
+      "topic": "División algebraica",
+      "text": "Calcula [(15/2)x⁵−(5/2)x⁴+(45/2)x³]/[(5/2)x³], con x≠0.",
+      "options": [
+        "3x²−x+9",
+        "3x²+x+9",
+        "6x²−x+9",
+        "3x²−2x+9",
+        "3x²−x−9"
+      ],
+      "correct": 0,
+      "explanation": "Los tres cocientes de coeficientes son 3, −1 y 9; las potencias resultantes son x², x y 1.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          41
+        ],
+        "printedPage": null,
+        "question": 25,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-41-26",
+      "subject": "matematicas",
+      "topic": "Conjuntos",
+      "text": "Si todos los elementos de A pertenecen a B y todos los de B pertenecen a A, entonces:",
+      "options": [
+        "A≠B y B⊂A",
+        "A∈B o B⊂A",
+        "A=B",
+        "A⊂B y B∉A",
+        "A∈B y B⊂A"
+      ],
+      "correct": 2,
+      "explanation": "Las inclusiones A⊆B y B⊆A implican que los conjuntos tienen exactamente los mismos elementos.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          41
+        ],
+        "printedPage": null,
+        "question": 26,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-41-30",
+      "subject": "matematicas",
+      "topic": "Productos notables",
+      "text": "Simplifica (ax+by−cz)(ax−by+cz)−2bcyz.",
+      "options": [
+        "(ax−by−cz)²",
+        "a²x²−b²y²−c²z²",
+        "a²x³−b²y²+c²z³",
+        "a³x²+b²y³+c³z³",
+        "a²x²+b²y²−c²z²"
+      ],
+      "correct": 1,
+      "explanation": "Es una diferencia de cuadrados: a²x²−(by−cz)²−2bcyz. Los términos cruzados se cancelan.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          41
+        ],
+        "printedPage": null,
+        "question": 30,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-21-31",
+      "subject": "matematicas",
+      "topic": "Factorización",
+      "text": "Factoriza p²+q²+r²+2pq−2pr−2qr.",
+      "options": [
+        "(p+q−r)²",
+        "(p−q+r)²",
+        "(q+r+p)²",
+        "(p−q−r)²",
+        "(p−r)(p+q+r)"
+      ],
+      "correct": 0,
+      "explanation": "El cuadrado de p+q−r contiene p²+q²+r² y los productos cruzados +2pq−2pr−2qr.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          21
+        ],
+        "printedPage": null,
+        "question": 31,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-21-32",
+      "subject": "matematicas",
+      "topic": "Sistemas lineales",
+      "text": "Resuelve 12(x+2y)−8(2x+y)=2(5x+6y) y 20(2x+y)=−10.",
+      "options": [
+        "x=7/11; y=−1/22",
+        "x=1/11; y=7/22",
+        "x=1/11; y=−7/22",
+        "x=−1/11; y=7/22",
+        "x=−1/11; y=−7/22"
+      ],
+      "correct": 4,
+      "explanation": "La primera ecuación se reduce a −14x+4y=0, de donde y=7x/2. La segunda da 2x+y=−1/2. Resultan x=−1/11 y y=−7/22.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          21
+        ],
+        "printedPage": null,
+        "question": 32,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-21-35",
+      "subject": "matematicas",
+      "topic": "Factorización",
+      "text": "Factoriza a⁴−2a²(b²+d²)+(b²−d²)² en factores lineales mónicos respecto de a y halla la suma de esos cuatro factores.",
+      "options": [
+        "2a+b",
+        "bd",
+        "ab²+a²d",
+        "4a",
+        "abd"
+      ],
+      "correct": 3,
+      "explanation": "Los factores son a−b−d, a−b+d, a+b−d y a+b+d. Al sumarlos se cancelan b y d y queda 4a.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          21
+        ],
+        "printedPage": null,
+        "question": 35,
+        "kind": "adaptada",
+        "note": "Se explicita la normalización de los factores para que su suma sea única."
+      }
+    },
+    {
+      "id": "abp-21-39",
+      "subject": "matematicas",
+      "topic": "Ecuaciones cuadráticas",
+      "text": "Halla la diferencia entre la mayor y la menor raíz de (2x−5)²−(5x−3)²=0.",
+      "options": [
+        "10/21",
+        "7/5",
+        "3/8",
+        "38/21",
+        "44/35"
+      ],
+      "correct": 3,
+      "explanation": "La diferencia de cuadrados es (−3x−2)(7x−8)=0. Las raíces son −2/3 y 8/7; su diferencia es 38/21.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          21
+        ],
+        "printedPage": null,
+        "question": 39,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-05-11",
+      "subject": "fisica",
+      "topic": "Cinemática",
+      "text": "Un móvil parte del reposo y alcanza 180000 cm/s en media hora, con aceleración constante. Halla su aceleración en m/s².",
+      "options": [
+        "100",
+        "180",
+        "10",
+        "1",
+        "18"
+      ],
+      "correct": 3,
+      "explanation": "180000 cm/s=1800 m/s y media hora=1800 s. a=Δv/Δt=1 m/s².",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          5
+        ],
+        "printedPage": null,
+        "question": 11,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-05-12",
+      "subject": "fisica",
+      "topic": "Cinemática",
+      "text": "En una carrera de 100 m, un atleta parte del reposo, acelera uniformemente durante 40 m hasta 2√10 m/s y mantiene esa rapidez los 60 m restantes. ¿Qué tiempo total emplea?",
+      "options": [
+        "√10 s",
+        "10√7 s",
+        "√7 s",
+        "14√10 s",
+        "7√10 s"
+      ],
+      "correct": 4,
+      "explanation": "En la primera etapa t₁=2s/v=4√10 s. En la segunda t₂=60/(2√10)=3√10 s. En total 7√10 s.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          5
+        ],
+        "printedPage": null,
+        "question": 12,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-05-13",
+      "subject": "fisica",
+      "topic": "Energía",
+      "text": "En ausencia de resistencia del aire y otras fuerzas disipativas, la suma de energía potencial y cinética permanece constante si no se añade energía externa. ¿Qué principio se describe?",
+      "options": [
+        "Trabajo de una fuerza constante",
+        "Conservación de la fuerza de fricción",
+        "Conservación de la energía mecánica",
+        "Energía cinética",
+        "Teorema trabajo y energía"
+      ],
+      "correct": 2,
+      "explanation": "El enunciado afirma directamente que se conserva la suma K+U, llamada energía mecánica.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          5
+        ],
+        "printedPage": null,
+        "question": 13,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-05-14",
+      "subject": "fisica",
+      "topic": "Unidades",
+      "text": "Un cuerpo tiene una masa de 6 kg. Con g=9,81 m/s², determina su peso en kgf. Usa 1 kgf=9,81 N.",
+      "options": [
+        "42,20 kgf",
+        "180,25 kgf",
+        "52,84 kgf",
+        "6,00 kgf",
+        "38,00 kgf"
+      ],
+      "correct": 3,
+      "explanation": "P=mg=58,86 N. Al dividir por 9,81 N/kgf se obtiene 6 kgf.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          5
+        ],
+        "printedPage": null,
+        "question": 14,
+        "kind": "adaptada",
+        "note": "Se explicita la definición de kgf."
+      }
+    },
+    {
+      "id": "abp-05-15",
+      "subject": "fisica",
+      "topic": "Energía cinética",
+      "text": "Una cebra de 55 kg corre a 25 m/s. ¿Por qué factor cambia su energía cinética si su rapidez se triplica?",
+      "options": [
+        "1",
+        "3",
+        "4",
+        "6",
+        "9"
+      ],
+      "correct": 4,
+      "explanation": "K=mv²/2. Al multiplicar v por 3, K se multiplica por 3²=9.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          5
+        ],
+        "printedPage": null,
+        "question": 15,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-05-16",
+      "subject": "fisica",
+      "topic": "Movimiento relativo",
+      "text": "Dos esferas separadas 13 km se mueven una hacia la otra a 5 km/h y 8 km/h, sin detenerse después de cruzarse. ¿Qué distancia las separa a las 3 h?",
+      "options": [
+        "26 km",
+        "36 km",
+        "46 km",
+        "39 km",
+        "15 km"
+      ],
+      "correct": 0,
+      "explanation": "Se encuentran tras 13/(5+8)=1 h. En las 2 h siguientes se separan a 13 km/h: 26 km.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          5
+        ],
+        "printedPage": null,
+        "question": 16,
+        "kind": "adaptada",
+        "note": "Se explicita que continúan moviéndose tras el encuentro."
+      }
+    },
+    {
+      "id": "abp-11-17",
+      "subject": "fisica",
+      "topic": "Movimiento relativo",
+      "text": "A está 100 m detrás de B. Ambos parten del reposo al mismo tiempo y en el mismo sentido, con aceleraciones constantes de 7 y 5 m/s². ¿Cuánto tarda A en alcanzar a B?",
+      "options": [
+        "8 s",
+        "10 s",
+        "12 s",
+        "14 s",
+        "16 s"
+      ],
+      "correct": 1,
+      "explanation": "La distancia relativa ganada es (7−5)t²/2=t². Igualando a 100, t=10 s.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          11
+        ],
+        "printedPage": null,
+        "question": 17,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-11-19",
+      "subject": "fisica",
+      "topic": "Dinámica",
+      "text": "Un automóvil de 1200 kg parte del reposo y alcanza 144 km/h en 8 s. Si la aceleración es constante, halla la fuerza neta.",
+      "options": [
+        "3000 N",
+        "4000 N",
+        "5000 N",
+        "6000 N",
+        "7000 N"
+      ],
+      "correct": 3,
+      "explanation": "144 km/h=40 m/s; a=40/8=5 m/s² y F=1200·5=6000 N.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          11
+        ],
+        "printedPage": null,
+        "question": 19,
+        "kind": "adaptada",
+        "note": "Se formula como fuerza neta, sin suponer datos de rozamiento no dados."
+      }
+    },
+    {
+      "id": "abp-13-11",
+      "subject": "fisica",
+      "topic": "Dilatación",
+      "text": "Una barra pasa de 10,00 cm a 10,20 cm al aumentar su temperatura 80 °C. ¿Cuál es su coeficiente de dilatación lineal?",
+      "options": [
+        "0,00015 °C⁻¹",
+        "0,00020 °C⁻¹",
+        "0,00025 °C⁻¹",
+        "0,00030 °C⁻¹",
+        "0,00035 °C⁻¹"
+      ],
+      "correct": 2,
+      "explanation": "α=ΔL/(L₀ΔT)=0,20/(10·80)=0,00025 °C⁻¹.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 11,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-13-13",
+      "subject": "fisica",
+      "topic": "Ondas",
+      "text": "En un estanque se produce un sonido de 500 Hz con longitud de onda de 2,5 m. Halla su rapidez de propagación.",
+      "options": [
+        "0,005 m/s",
+        "200 m/s",
+        "750 m/s",
+        "1250 m/s",
+        "2500 m/s"
+      ],
+      "correct": 3,
+      "explanation": "v=fλ=500·2,5=1250 m/s.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 13,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-13-14",
+      "subject": "fisica",
+      "topic": "Óptica",
+      "text": "Una lente divergente tiene distancia focal de −12 cm. Se coloca un objeto a 12 cm. ¿Cuál es el aumento lateral?",
+      "options": [
+        "0,1",
+        "0,2",
+        "0,3",
+        "0,4",
+        "0,5"
+      ],
+      "correct": 4,
+      "explanation": "1/f=1/s+1/s′ da s′=−6 cm. El aumento es −s′/s=0,5.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 14,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-13-15",
+      "subject": "fisica",
+      "topic": "Campo eléctrico",
+      "text": "Una carga produce un campo de 2 N/C a cierta distancia. ¿Cuál será el campo a una distancia doble, manteniendo la misma carga?",
+      "options": [
+        "1 N/C",
+        "2 N/C",
+        "4 N/C",
+        "0,25 N/C",
+        "0,5 N/C"
+      ],
+      "correct": 4,
+      "explanation": "El campo de una carga puntual es inversamente proporcional a r². Al duplicar r queda 2/4=0,5 N/C.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 15,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-13-19",
+      "subject": "fisica",
+      "topic": "Circuitos",
+      "text": "Se conectan en paralelo resistencias de 3 Ω, 4 Ω y 5 Ω. ¿Cuál es la resistencia equivalente aproximada?",
+      "options": [
+        "4,28 Ω",
+        "3,28 Ω",
+        "1,28 Ω",
+        "5,28 Ω",
+        "6,28 Ω"
+      ],
+      "correct": 2,
+      "explanation": "1/R=1/3+1/4+1/5=47/60. Por tanto R=60/47≈1,28 Ω.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 19,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-13-20",
+      "subject": "fisica",
+      "topic": "Temperatura",
+      "text": "Convierte 104 °F a grados Celsius.",
+      "options": [
+        "30 °C",
+        "60 °C",
+        "50 °C",
+        "40 °C",
+        "70 °C"
+      ],
+      "correct": 3,
+      "explanation": "T°C=(104−32)·5/9=40 °C.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          13
+        ],
+        "printedPage": null,
+        "question": 20,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-17-31",
+      "subject": "fisica",
+      "topic": "Medición",
+      "text": "Comparar una magnitud física con un patrón corresponde a:",
+      "options": [
+        "La opinión de un perito",
+        "Medir",
+        "Una magnitud escalar",
+        "Utilizar un instrumento",
+        "Una conversión fraccionaria"
+      ],
+      "correct": 1,
+      "explanation": "El enunciado describe la operación de medir: comparar con una unidad o patrón.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          17
+        ],
+        "printedPage": null,
+        "question": 31,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-17-32",
+      "subject": "fisica",
+      "topic": "Magnitudes",
+      "text": "La combinación de magnitudes fundamentales da origen a:",
+      "options": [
+        "Unidades del SI",
+        "Redondeo de unidades",
+        "Magnitudes derivadas",
+        "Conversiones de unidades",
+        "Factores de conversión"
+      ],
+      "correct": 2,
+      "explanation": "El resultado de combinar magnitudes fundamentales se denomina magnitud derivada.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          17
+        ],
+        "printedPage": null,
+        "question": 32,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-17-33",
+      "subject": "fisica",
+      "topic": "Prefijos",
+      "text": "¿A qué potencia de 10 corresponde el prefijo pico?",
+      "options": [
+        "10⁻⁸",
+        "10⁻⁹",
+        "10⁻¹⁰",
+        "10⁻¹¹",
+        "10⁻¹²"
+      ],
+      "correct": 4,
+      "explanation": "El prefijo pico expresa una billonésima: 10⁻¹².",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          17
+        ],
+        "printedPage": null,
+        "question": 33,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-17-34",
+      "subject": "fisica",
+      "topic": "Unidades",
+      "text": "Un tumor tiene masa de 2340 g. Con g=9,81 m/s² y 1 lbf=4,448 N, ¿cuál es su peso aproximado en lbf?",
+      "options": [
+        "324 lbf",
+        "5,16 lbf",
+        "6,86 lbf",
+        "8,02 lbf",
+        "9,55 lbf"
+      ],
+      "correct": 1,
+      "explanation": "El peso es 2,34·9,81=22,9554 N. Dividido entre 4,448 N/lbf da aproximadamente 5,16 lbf.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          17
+        ],
+        "printedPage": null,
+        "question": 34,
+        "kind": "adaptada",
+        "note": "Se explicita la equivalencia lbf–N y se normaliza el redondeo de la alternativa B de 5,15 a 5,16 lbf."
+      }
+    },
+    {
+      "id": "abp-17-35",
+      "subject": "fisica",
+      "topic": "Rotación",
+      "text": "La tendencia de una fuerza a producir un cambio en el movimiento rotacional corresponde a:",
+      "options": [
+        "La RDA del amoniaco",
+        "La dinámica del movimiento",
+        "Momento de torsión",
+        "Mecánica cuántica",
+        "La ductilidad"
+      ],
+      "correct": 2,
+      "explanation": "El efecto rotacional de una fuerza se cuantifica mediante su momento de torsión.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          17
+        ],
+        "printedPage": null,
+        "question": 35,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-17-39",
+      "subject": "fisica",
+      "topic": "Caída libre",
+      "text": "Se deja caer un objeto desde el reposo y tarda 17 s en llegar al piso. Con g=9,81 m/s² y eje positivo hacia arriba, determina la rapidez final y el desplazamiento aproximados.",
+      "options": [
+        "166,8 m/s; −1417,5 m",
+        "223,1 m/s; 88,2 m",
+        "25 m/s; 895 m",
+        "250 m/s; 1625 m",
+        "7 m/s; 0,57 m"
+      ],
+      "correct": 0,
+      "explanation": "La rapidez es gt=166,77 m/s, aproximadamente 166,8 m/s. El desplazamiento es −gt²/2=−1417,545 m, aproximadamente −1417,5 m.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          17
+        ],
+        "printedPage": null,
+        "question": 39,
+        "kind": "adaptada",
+        "note": "Se aclara el eje y se normaliza el redondeo: gt=166,77 m/s y −gt²/2=−1417,545 m."
+      }
+    },
+    {
+      "id": "abp-17-40",
+      "subject": "fisica",
+      "topic": "Cinemática",
+      "text": "Un avión parte del reposo con aceleración constante de 8,5 m/s². Halla su rapidez después de recorrer 150 ft. Usa 1 ft=0,3048 m.",
+      "options": [
+        "400 m/s",
+        "3,25 m/s",
+        "27,88 m/s",
+        "555 m/s",
+        "911,2 m/s"
+      ],
+      "correct": 2,
+      "explanation": "150 ft=45,72 m. v²=2as=2·8,5·45,72; v≈27,88 m/s.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          17
+        ],
+        "printedPage": null,
+        "question": 40,
+        "kind": "adaptada",
+        "note": "Se explicita la conversión exacta de pie a metro y se normaliza el redondeo de 27,87 a 27,88 m/s."
+      }
+    },
+    {
+      "id": "abp-34-27",
+      "subject": "fisica",
+      "topic": "Vectores",
+      "text": "Tres vectores coplanares suman cero. Dos son 3i y 4j. ¿Cuál es el módulo del tercero?",
+      "options": [
+        "5",
+        "7",
+        "1",
+        "0"
+      ],
+      "correct": 0,
+      "explanation": "El tercero es −3i−4j; su módulo es √(3²+4²)=5.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          34
+        ],
+        "printedPage": null,
+        "question": 27,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-34-28",
+      "subject": "fisica",
+      "topic": "Tiro vertical",
+      "text": "Desde una ventana a 50 m se lanza una piedra hacia arriba a 15 m/s. Con g=10 m/s², ¿cuándo llega al suelo?",
+      "options": [
+        "2 s",
+        "3,5 s",
+        "4,3 s",
+        "5 s"
+      ],
+      "correct": 3,
+      "explanation": "La altura es y=50+15t−5t². Al igualar a cero, las raíces son 5 y −2; el tiempo físico es 5 s.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          34
+        ],
+        "printedPage": null,
+        "question": 28,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-34-29",
+      "subject": "fisica",
+      "topic": "Movimiento relativo",
+      "text": "A se mueve a 8 m/s desde x=0. B parte 5 m delante y su posición es xB=5+2t+t², en metros. ¿En qué instantes se encuentran?",
+      "options": [
+        "4,2 s",
+        "1 s y 5 s",
+        "2,5 s",
+        "3,3 s"
+      ],
+      "correct": 1,
+      "explanation": "8t=5+2t+t² equivale a (t−1)(t−5)=0.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          34
+        ],
+        "printedPage": null,
+        "question": 29,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-34-36",
+      "subject": "fisica",
+      "topic": "Trabajo",
+      "text": "Si el trabajo neto de una fuerza en cualquier trayectoria cerrada es cero, la fuerza es:",
+      "options": [
+        "Conservativa",
+        "No conservativa",
+        "De reposo",
+        "De desplazamiento"
+      ],
+      "correct": 0,
+      "explanation": "La independencia del trabajo respecto del camino equivale a trabajo cero en trayectorias cerradas.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          34
+        ],
+        "printedPage": null,
+        "question": 36,
+        "kind": "adaptada",
+        "note": "Se explicita «cualquier trayectoria», condición necesaria de la caracterización."
+      }
+    },
+    {
+      "id": "abp-34-39",
+      "subject": "fisica",
+      "topic": "Potencia y rendimiento",
+      "text": "¿Cómo se expresa el rendimiento porcentual de un sistema?",
+      "options": [
+        "Potencia útil / potencia entregada ×100",
+        "Potencia entregada / potencia útil ×100",
+        "Potencia útil + potencia entregada",
+        "Potencia útil × potencia entregada"
+      ],
+      "correct": 0,
+      "explanation": "El rendimiento compara la salida útil con la entrada de energía o potencia, y se multiplica por 100 para expresarlo en porcentaje.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          34
+        ],
+        "printedPage": null,
+        "question": 39,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-43-39",
+      "subject": "fisica",
+      "topic": "Trabajo",
+      "text": "Un objeto se desplaza horizontalmente 15 m sobre una superficie horizontal. ¿Qué trabajo realiza la fuerza normal vertical?",
+      "options": [
+        "250 J",
+        "200 J",
+        "562 J",
+        "0 J",
+        "−450 J"
+      ],
+      "correct": 3,
+      "explanation": "La normal es perpendicular al desplazamiento: W=Fd cos90°=0. Las fuerzas horizontales no cambian este resultado.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          43
+        ],
+        "printedPage": null,
+        "question": 39,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-43-40",
+      "subject": "fisica",
+      "topic": "Plano inclinado",
+      "text": "Un bloque parte del reposo y baja sin rozamiento por un plano de 45°. Llega a la base a 10 m/s. Con g=9,8 m/s², ¿qué distancia recorre sobre el plano?",
+      "options": [
+        "5,1 m",
+        "7,2 m",
+        "10,3 m",
+        "2,1 m",
+        "9,8 m"
+      ],
+      "correct": 1,
+      "explanation": "a=g sen45°. De v²=2as resulta s=100/(2·9,8·sen45°)≈7,2 m.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          43
+        ],
+        "printedPage": null,
+        "question": 40,
+        "kind": "adaptada",
+        "note": "Se explicita g para hacer reproducible el cálculo."
+      }
+    },
+    {
+      "id": "abp-21-27",
+      "subject": "fisica",
+      "topic": "Óptica",
+      "text": "Una lente convergente tiene distancia focal de 10 cm y un objeto se sitúa a 30 cm. Halla la distancia de la imagen.",
+      "options": [
+        "15 cm",
+        "20 cm",
+        "30 cm",
+        "40 cm",
+        "50 cm"
+      ],
+      "correct": 0,
+      "explanation": "1/s′=1/10−1/30=1/15, por lo que s′=15 cm.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          21
+        ],
+        "printedPage": null,
+        "question": 27,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-21-28",
+      "subject": "fisica",
+      "topic": "Campo eléctrico",
+      "text": "Una carga de prueba de 24 mC experimenta una fuerza de 2 N. ¿Cuál es el módulo del campo eléctrico?",
+      "options": [
+        "83,33 N/C",
+        "73,33 N/C",
+        "63,33 N/C",
+        "53,33 N/C",
+        "43,33 N/C"
+      ],
+      "correct": 0,
+      "explanation": "E=F/q=2/0,024≈83,33 N/C.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          21
+        ],
+        "printedPage": null,
+        "question": 28,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-21-29",
+      "subject": "fisica",
+      "topic": "Corriente eléctrica",
+      "text": "Una corriente constante de 500 mA atraviesa un conductor durante 4 minutos. ¿Qué carga pasa por una sección?",
+      "options": [
+        "2 C",
+        "95 C",
+        "120 C",
+        "140 C",
+        "160 C"
+      ],
+      "correct": 2,
+      "explanation": "Q=It=0,5 A·240 s=120 C.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          21
+        ],
+        "printedPage": null,
+        "question": 29,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-21-30",
+      "subject": "fisica",
+      "topic": "Circuitos",
+      "text": "Dos resistencias de 120 Ω y 100 Ω están en serie. Si circula una corriente de 55 mA, ¿cuál es el voltaje de la fuente?",
+      "options": [
+        "3,1 V",
+        "6,1 V",
+        "9,1 V",
+        "12,1 V",
+        "24,1 V"
+      ],
+      "correct": 3,
+      "explanation": "La resistencia total es 220 Ω. V=IR=0,055·220=12,1 V.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          21
+        ],
+        "printedPage": null,
+        "question": 30,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-17-28",
+      "subject": "quimica",
+      "topic": "Masa molar",
+      "text": "Calcula la masa molar del perclorato de sodio, NaClO₄. Usa Na=22,99; Cl=35,5 y O=15,99 g/mol.",
+      "options": [
+        "122,45 g/mol",
+        "87,96 g/mol",
+        "90,47 g/mol",
+        "75,48 g/mol",
+        "106,46 g/mol"
+      ],
+      "correct": 0,
+      "explanation": "M=22,99+35,5+4·15,99=122,45 g/mol.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          17
+        ],
+        "printedPage": null,
+        "question": 28,
+        "kind": "adaptada",
+        "note": "Se explicita la fórmula para centrar el ejercicio en la suma de masas atómicas."
+      }
+    },
+    {
+      "id": "abp-17-29",
+      "subject": "quimica",
+      "topic": "Cantidad de sustancia",
+      "text": "¿Cuántos átomos contienen 3,7 g de azufre? Usa M(S)=32,06 g/mol y Nₐ=6,022×10²³ mol⁻¹.",
+      "options": [
+        "0,12 átomos",
+        "2,23×10²⁴ átomos",
+        "5,22×10²⁴ átomos",
+        "6,95×10²² átomos",
+        "1,97×10⁻²² átomos"
+      ],
+      "correct": 3,
+      "explanation": "N=(3,7/32,06)·6,022×10²³≈6,95×10²² átomos.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          17
+        ],
+        "printedPage": null,
+        "question": 29,
+        "kind": "adaptada",
+        "note": "Se explicita la constante de Avogadro empleada."
+      }
+    },
+    {
+      "id": "abp-24-23",
+      "subject": "quimica",
+      "topic": "Moles y moléculas",
+      "text": "Determina la masa y el número de moléculas en 0,250 mol de H₂SO₄. Usa H=1, S=32, O=16 y Nₐ=6,022×10²³ mol⁻¹.",
+      "options": [
+        "66 g y 9,9×10²³",
+        "55 g y 1,1×10²³",
+        "10 g y 3,2×10²³",
+        "24,5 g y 1,5×10²³",
+        "Ninguno"
+      ],
+      "correct": 3,
+      "explanation": "La masa molar es 98 g/mol: m=0,250·98=24,5 g. El número de moléculas es 0,250·6,022×10²³≈1,5×10²³.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          24,
+          25
+        ],
+        "printedPage": null,
+        "question": 23,
+        "kind": "adaptada",
+        "note": "Se explicitan las constantes de cálculo."
+      }
+    },
+    {
+      "id": "abp-25-25",
+      "subject": "quimica",
+      "topic": "Estequiometría y pureza",
+      "text": "Una muestra de 400 kg contiene Fe₂O₃, que reacciona según Fe₂O₃+3CO→2Fe+3CO₂. Se obtienen 134,4 m³ de CO₂ en CN. Usa 22,4 L/mol, Fe=56 y O=16. ¿Cuál es la pureza de Fe₂O₃?",
+      "options": [
+        "10 %",
+        "20 %",
+        "60 %",
+        "80 %",
+        "Ninguno"
+      ],
+      "correct": 3,
+      "explanation": "134400/22,4=6000 mol de CO₂ corresponden a 2000 mol de Fe₂O₃. Su masa es 2000·160=320000 g=320 kg. Pureza=320/400·100=80 %.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          25
+        ],
+        "printedPage": null,
+        "question": 25,
+        "kind": "adaptada",
+        "note": "Se escribe la reacción balanceada y se explicitan los valores convencionales de CN."
+      }
+    },
+    {
+      "id": "abp-35-48",
+      "subject": "quimica",
+      "topic": "Balance de ecuaciones",
+      "text": "Balancea Al+O₂→Al₂O₃ y calcula cuántos moles de O₂ reaccionan con 8,24 mol de Al.",
+      "options": [
+        "8,24 mol",
+        "24,72 mol",
+        "6,18 mol",
+        "12,36 mol"
+      ],
+      "correct": 2,
+      "explanation": "4Al+3O₂→2Al₂O₃. La proporción es 3/4: 8,24·3/4=6,18 mol de O₂.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          35
+        ],
+        "printedPage": null,
+        "question": 48,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-35-56",
+      "subject": "quimica",
+      "topic": "Masa de un átomo",
+      "text": "Si la masa molar del azufre es 32 g/mol y Nₐ=6,022×10²³ mol⁻¹, ¿cuál es la masa de un átomo de S?",
+      "options": [
+        "5,3130×10⁻²³ g",
+        "1,1713×10⁻²⁵ g",
+        "6,023×10⁻²³ g",
+        "1,66033×10⁻²⁴ g"
+      ],
+      "correct": 0,
+      "explanation": "La masa de un átomo es 32/(6,022×10²³)≈5,313×10⁻²³ g.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          35
+        ],
+        "printedPage": null,
+        "question": 56,
+        "kind": "adaptada",
+        "note": "Se explicita Nₐ."
+      }
+    },
+    {
+      "id": "abp-36-57",
+      "subject": "quimica",
+      "topic": "Estequiometría de gases",
+      "text": "¿Cuántos gramos de etano se necesitan para obtener 250 L de CO₂ en CN? Reacción: 2C₂H₆+7O₂→4CO₂+6H₂O. Usa 22,4 L/mol, C=12 y H=1.",
+      "options": [
+        "83,7 g",
+        "167,4 g",
+        "251,1 g",
+        "41,85 g"
+      ],
+      "correct": 1,
+      "explanation": "250 L corresponden a 250/22,4 mol de CO₂. Se requiere la mitad de moles de etano; m=(250/22,4)·(1/2)·30≈167,4 g.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 57,
+        "kind": "adaptada",
+        "note": "Se corrige la unidad de las alternativas: el original imprime L aunque solicita gramos."
+      }
+    },
+    {
+      "id": "abp-36-58",
+      "subject": "quimica",
+      "topic": "Balance de ecuaciones",
+      "text": "Balancea CO₂+I₂→CO+I₂O₅ con los menores coeficientes enteros y halla la suma de coeficientes.",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "16"
+      ],
+      "correct": 2,
+      "explanation": "La ecuación es 5CO₂+I₂→5CO+I₂O₅. Se conservan C, O e I. Suma: 5+1+5+1=12.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 58,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-43-43",
+      "subject": "quimica",
+      "topic": "Estequiometría",
+      "text": "¿Cuántos gramos de K₂Cr₂O₇ se necesitan para obtener 100 g de I₂ en K₂Cr₂O₇+KI+H₂SO₄→K₂SO₄+I₂+Cr₂(SO₄)₃+H₂O? Usa K=39, Cr=52, O=16 e I=127.",
+      "options": [
+        "38,6 g",
+        "115,7 g",
+        "30,7 g",
+        "50,5 g",
+        "120,4 g"
+      ],
+      "correct": 0,
+      "explanation": "La ecuación balanceada tiene coeficientes 1,6,7,4,3,1,7. Un mol de K₂Cr₂O₇ (294 g) produce tres moles de I₂ (3·254 g): m=100·294/762≈38,6 g.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          43
+        ],
+        "printedPage": null,
+        "question": 43,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-44-46",
+      "subject": "quimica",
+      "topic": "Estequiometría de gases",
+      "text": "En la oxidación de alanina C₃H₇NO₂ se forma N₂: C₃H₇NO₂+O₂→CO₂+H₂O+N₂. ¿Qué volumen de N₂ en CN se forma a partir de 10 g de alanina? Usa C=12,H=1,N=14,O=16 y 22,4 L/mol.",
+      "options": [
+        "2,0 L",
+        "1,26 L",
+        "1,6 L",
+        "1,76 L",
+        "2,26 L"
+      ],
+      "correct": 1,
+      "explanation": "M(alanina)=89 g/mol. Dos moles de alanina producen un mol de N₂. V=(10/89)·(1/2)·22,4≈1,26 L.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          44
+        ],
+        "printedPage": null,
+        "question": 46,
+        "kind": "adaptada",
+        "note": "Se explicita el volumen molar empleado para CN."
+      }
+    },
+    {
+      "id": "abp-44-48",
+      "subject": "quimica",
+      "topic": "Masa y número de átomos",
+      "text": "Se dispone de 10 g de cada elemento: Fe, Cr, I, Na y C. ¿Cuál contiene mayor número de átomos? Masas molares: Fe=56, Cr=52, I=127, Na=23 y C=12 g/mol.",
+      "options": [
+        "Hierro",
+        "Cromo",
+        "Yodo",
+        "Sodio",
+        "Carbono"
+      ],
+      "correct": 4,
+      "explanation": "Con la misma masa, el número de átomos es inversamente proporcional a la masa molar. Carbono tiene la menor masa molar y, por tanto, el mayor número de átomos.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          44
+        ],
+        "printedPage": null,
+        "question": 48,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-16-22",
+      "subject": "quimica",
+      "topic": "Balance de ecuaciones",
+      "text": "¿Qué reacción expresa la obtención de oxígeno por descomposición de óxido de mercurio?",
+      "options": [
+        "CH₄+O₂→CO₂+2H₂",
+        "2HgO→2Hg+O₂",
+        "2H₂→2H₂+O₂",
+        "SO₂→S+O₂",
+        "2KClO₃→2KCl+3O₂"
+      ],
+      "correct": 1,
+      "explanation": "2HgO→2Hg+O₂ es la alternativa que parte del óxido de mercurio y conserva los átomos de Hg y O.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          16
+        ],
+        "printedPage": null,
+        "question": 22,
+        "kind": "adaptada",
+        "note": "Se formula como identificación de la reacción para no evaluar la atribución histórica."
+      }
+    },
+    {
+      "id": "abp-16-24",
+      "subject": "quimica",
+      "topic": "Estructura atómica",
+      "text": "¿Cuántos electrones puede albergar como máximo un orbital?",
+      "options": [
+        "2",
+        "6",
+        "8",
+        "10",
+        "14"
+      ],
+      "correct": 0,
+      "explanation": "Un orbital admite dos electrones con espines opuestos.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          16
+        ],
+        "printedPage": null,
+        "question": 24,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-35-45",
+      "subject": "quimica",
+      "topic": "Tipos de reacción",
+      "text": "Mg+H₂SO₄→MgSO₄+H₂ es una reacción de:",
+      "options": [
+        "Neutralización",
+        "Descomposición",
+        "Doble sustitución",
+        "Sustitución simple"
+      ],
+      "correct": 3,
+      "explanation": "El magnesio desplaza al hidrógeno del ácido: un elemento reemplaza a otro en un compuesto.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          35
+        ],
+        "printedPage": null,
+        "question": 45,
+        "kind": "adaptada",
+        "note": "Se reemplaza un distractor duplicado en el original; se conserva la reacción y la respuesta única."
+      }
+    },
+    {
+      "id": "abp-35-53",
+      "subject": "quimica",
+      "topic": "Sustancias y mezclas",
+      "text": "¿Cuál de las opciones corresponde a una sustancia pura?",
+      "options": [
+        "Gasolina",
+        "Aire",
+        "Carbonato de calcio",
+        "Madera"
+      ],
+      "correct": 2,
+      "explanation": "El carbonato de calcio es el compuesto CaCO₃. Gasolina, aire y madera corresponden a mezclas de componentes.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          35
+        ],
+        "printedPage": null,
+        "question": 53,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-35-54",
+      "subject": "quimica",
+      "topic": "Masa atómica",
+      "text": "La doceava parte de la masa de un átomo de carbono-12 define:",
+      "options": [
+        "Peso específico",
+        "Unidad de masa atómica",
+        "Número de Avogadro",
+        "Átomo-gramo"
+      ],
+      "correct": 1,
+      "explanation": "La unidad de masa atómica unificada se define como 1/12 de la masa de un átomo de carbono-12.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          35
+        ],
+        "printedPage": null,
+        "question": 54,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-35-55",
+      "subject": "quimica",
+      "topic": "Enlaces químicos",
+      "text": "¿Qué propiedad NO corresponde a los compuestos iónicos?",
+      "options": [
+        "Puntos de fusión y ebullición elevados",
+        "Conducen electricidad fundidos o disueltos",
+        "Son solubles en compuestos apolares",
+        "Son sólidos cristalinos"
+      ],
+      "correct": 2,
+      "explanation": "La alternativa sobre disolventes apolares contradice la interacción de cargas propia de los compuestos iónicos; las otras son propiedades habituales de estos sólidos.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          35
+        ],
+        "printedPage": null,
+        "question": 55,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-36-59",
+      "subject": "quimica",
+      "topic": "Composición química",
+      "text": "NaHCO₃ contiene Na, H, C y O. Según el número de elementos diferentes, ¿cómo se clasifica?",
+      "options": [
+        "Binario",
+        "Ternario",
+        "Cuaternario",
+        "Complejo"
+      ],
+      "correct": 2,
+      "explanation": "Hay cuatro elementos distintos en la fórmula: sodio, hidrógeno, carbono y oxígeno.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          36
+        ],
+        "printedPage": null,
+        "question": 59,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-44-49",
+      "subject": "quimica",
+      "topic": "Nomenclatura",
+      "text": "¿Cuál es la fórmula del óxido nítrico?",
+      "options": [
+        "NO",
+        "N₂O₃",
+        "N₂O₅",
+        "N₂O₄",
+        "NO₂"
+      ],
+      "correct": 0,
+      "explanation": "El óxido nítrico es el monóxido de nitrógeno, NO.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          44
+        ],
+        "printedPage": null,
+        "question": 49,
+        "kind": "transcrita",
+        "note": "Notación y puntuación normalizadas. Clave razonada de práctica; el PDF no incluye patrón oficial."
+      }
+    },
+    {
+      "id": "abp-35-46",
+      "subject": "quimica",
+      "topic": "Ácidos y bases",
+      "text": "H₂SO₄+Ca(OH)₂→CaSO₄+2H₂O. ¿Qué nombre específico recibe la reacción entre el ácido y la base que forma sal y agua?",
+      "options": [
+        "Doble sustitución",
+        "Sustitución simple",
+        "Neutralización",
+        "Descomposición"
+      ],
+      "correct": 2,
+      "explanation": "La descripción específica de una reacción ácido-base que forma sal y agua es neutralización. Doble sustitución es una clasificación más general.",
+      "source": {
+        "document": "MEDICINA EXÁMENES PASADOS ABP.pdf",
+        "institution": "UMSA",
+        "pdfPages": [
+          35
+        ],
+        "printedPage": null,
+        "question": 46,
+        "kind": "adaptada",
+        "note": "El original duplica neutralización en C y D. Se sustituye el distractor duplicado y se precisa que se solicita el nombre específico de la reacción ácido-base."
+      }
+    },
+    {
+      "id": "lectura-hipotesis-1",
+      "subject": "lectura",
+      "topic": "Idea principal",
+      "passageId": "lectura-hipotesis",
+      "text": "¿Cuál es la idea principal del texto?",
+      "options": [
+        "Una hipótesis permite orientar pruebas que pueden apoyarla o refutarla.",
+        "La autoridad del investigador garantiza la verdad.",
+        "Una predicción reemplaza cualquier experimento.",
+        "Investigar consiste en conservar siempre la primera explicación."
+      ],
+      "correct": 0,
+      "explanation": "Ambos párrafos describen la hipótesis como punto de partida de un proceso de contraste, no como una conclusión definitiva.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "El método hipotético-deductivo",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-hipotesis-2",
+      "subject": "lectura",
+      "topic": "Vocabulario en contexto",
+      "passageId": "lectura-hipotesis",
+      "text": "En este texto, «provisional» significa:",
+      "options": [
+        "Imposible de poner a prueba.",
+        "Aceptada temporalmente y sujeta a revisión.",
+        "Demostrada para siempre.",
+        "Rechazada antes de investigar."
+      ],
+      "correct": 1,
+      "explanation": "La respuesta es provisional porque los resultados pueden exigir modificarla o abandonarla.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "El método hipotético-deductivo",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-hipotesis-3",
+      "subject": "lectura",
+      "topic": "Inferencia",
+      "passageId": "lectura-hipotesis",
+      "text": "¿Qué puede inferirse si una hipótesis no coincide con las observaciones?",
+      "options": [
+        "Deben ignorarse las observaciones.",
+        "Se confirma la autoridad del autor.",
+        "Puede ser necesario revisar o abandonar la hipótesis.",
+        "No es posible formular otra explicación."
+      ],
+      "correct": 2,
+      "explanation": "El segundo párrafo indica expresamente que los resultados pueden motivar una modificación o el abandono de la hipótesis.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "El método hipotético-deductivo",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-hipotesis-4",
+      "subject": "lectura",
+      "topic": "Relación entre ideas",
+      "passageId": "lectura-hipotesis",
+      "text": "¿Qué función cumple la expresión «si ocurre esto, entonces se observará aquello»?",
+      "options": [
+        "Presentar una predicción derivada de la hipótesis.",
+        "Describir una opinión sin relación con las pruebas.",
+        "Prohibir la revisión de una explicación.",
+        "Resumir la autoridad del investigador."
+      ],
+      "correct": 0,
+      "explanation": "La relación condicional conecta la hipótesis con un resultado que puede buscarse mediante una prueba.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "El método hipotético-deductivo",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-hipotesis-5",
+      "subject": "lectura",
+      "topic": "Información explícita",
+      "passageId": "lectura-hipotesis",
+      "text": "¿Qué característica de una explicación NO corresponde a lo defendido en el texto?",
+      "options": [
+        "Permitir que se examine su coherencia.",
+        "Admitir que una prueba muestre que es incorrecta.",
+        "Servir para organizar la investigación.",
+        "Ser imposible de refutar mediante cualquier prueba."
+      ],
+      "correct": 3,
+      "explanation": "El texto exige la posibilidad de refutación como condición de la explicación científica.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "El método hipotético-deductivo",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-experimento-1",
+      "subject": "lectura",
+      "topic": "Idea principal",
+      "passageId": "lectura-experimento",
+      "text": "¿Qué idea articula el texto?",
+      "options": [
+        "Toda mejoría demuestra que un tratamiento funciona.",
+        "La comparación y el control de expectativas ayudan a interpretar un experimento.",
+        "El grupo de referencia debe ser completamente diferente del tratado.",
+        "Los códigos reemplazan la observación de resultados."
+      ],
+      "correct": 1,
+      "explanation": "El primer párrafo desarrolla la comparación entre grupos y el segundo explica cómo se controlan expectativas y sesgos.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Diseño de experimentos",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-experimento-2",
+      "subject": "lectura",
+      "topic": "Información explícita",
+      "passageId": "lectura-experimento",
+      "text": "¿En qué deben diferir principalmente el grupo tratado y el de referencia?",
+      "options": [
+        "En todas sus características personales.",
+        "En el lugar donde se registran sus nombres.",
+        "En la variable o intervención que se desea estudiar.",
+        "En la obligación de participar."
+      ],
+      "correct": 2,
+      "explanation": "El primer párrafo pide grupos semejantes salvo respecto de la variable estudiada.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Diseño de experimentos",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-experimento-3",
+      "subject": "lectura",
+      "topic": "Inferencia",
+      "passageId": "lectura-experimento",
+      "text": "Si solo se informa que mejoró el grupo tratado, ¿qué información falta para valorar el efecto?",
+      "options": [
+        "Qué ocurrió en el grupo de referencia.",
+        "La opinión de alguien que no participó.",
+        "El color elegido para las gráficas.",
+        "La fama de la sustancia administrada."
+      ],
+      "correct": 0,
+      "explanation": "El texto rechaza atribuir una mejoría al tratamiento sin compararla con otras variaciones.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Diseño de experimentos",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-experimento-4",
+      "subject": "lectura",
+      "topic": "Vocabulario en contexto",
+      "passageId": "lectura-experimento",
+      "text": "¿Qué expresa «sesgo» en el último párrafo?",
+      "options": [
+        "Una operación para ordenar los códigos.",
+        "El efecto garantizado de un fármaco.",
+        "Una diferencia de tamaño entre tabletas.",
+        "Una influencia que puede desviar la interpretación de resultados."
+      ],
+      "correct": 3,
+      "explanation": "Las precauciones buscan reducir la influencia de expectativas y tendencias del investigador sobre la interpretación.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Diseño de experimentos",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-experimento-5",
+      "subject": "lectura",
+      "topic": "Información explícita",
+      "passageId": "lectura-experimento",
+      "text": "¿Qué caracteriza al procedimiento doble ciego descrito?",
+      "options": [
+        "Solo el participante conoce el tratamiento.",
+        "Participantes y personal que administra y recoge resultados desconocen la intervención asignada.",
+        "El personal modifica los resultados antes de registrarlos.",
+        "Se omite el grupo de referencia."
+      ],
+      "correct": 1,
+      "explanation": "Es la condición que establece el segundo párrafo para limitar las expectativas de ambas partes.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Diseño de experimentos",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-revision-1",
+      "subject": "lectura",
+      "topic": "Idea principal",
+      "passageId": "lectura-revision",
+      "text": "¿Cuál sería el título más adecuado para la idea central?",
+      "options": [
+        "La publicación elimina todas las dudas.",
+        "La revisión de una investigación es un proceso limitado al laboratorio.",
+        "El examen crítico continúa incluso después de publicar.",
+        "Solo el autor puede juzgar su investigación."
+      ],
+      "correct": 2,
+      "explanation": "El texto presenta la evaluación por otros especialistas y la posible reproducción posterior a la publicación.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "La revisión científica externa",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-revision-2",
+      "subject": "lectura",
+      "topic": "Información explícita",
+      "passageId": "lectura-revision",
+      "text": "¿Quiénes realizan la revisión externa descrita?",
+      "options": [
+        "Otros especialistas del mismo campo.",
+        "Únicamente quienes reciben el tratamiento.",
+        "Personas escogidas por desconocer el tema.",
+        "Solo el autor del manuscrito."
+      ],
+      "correct": 0,
+      "explanation": "El primer párrafo atribuye la evaluación a otros especialistas del mismo campo.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "La revisión científica externa",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-revision-3",
+      "subject": "lectura",
+      "topic": "Inferencia",
+      "passageId": "lectura-revision",
+      "text": "¿Qué implica que un trabajo haya sido publicado?",
+      "options": [
+        "Que ya no puede recibir críticas.",
+        "Que necesariamente todos los intentos de reproducirlo tendrán éxito.",
+        "Que no se requieren nuevas comprobaciones.",
+        "Que otros pueden conocerlo, examinarlo e intentar comprobar sus resultados."
+      ],
+      "correct": 3,
+      "explanation": "El último enunciado distingue la difusión de un trabajo de una garantía de verdad definitiva.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "La revisión científica externa",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-revision-4",
+      "subject": "lectura",
+      "topic": "Vocabulario en contexto",
+      "passageId": "lectura-revision",
+      "text": "La palabra «escrutinio» alude aquí a:",
+      "options": [
+        "La repetición automática de una conclusión.",
+        "Un examen cuidadoso y crítico.",
+        "Una prohibición de publicar resultados.",
+        "Una decisión basada solo en prestigio."
+      ],
+      "correct": 1,
+      "explanation": "En el contexto, escrutinio resume la evaluación crítica que se realiza en diferentes etapas.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "La revisión científica externa",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-revision-5",
+      "subject": "lectura",
+      "topic": "Relación entre ideas",
+      "passageId": "lectura-revision",
+      "text": "¿Para qué se menciona la reproducción de resultados?",
+      "options": [
+        "Para negar que existan publicaciones científicas.",
+        "Para afirmar que todos los estudios son idénticos.",
+        "Para mostrar una forma de comprobación posterior a la publicación.",
+        "Para evitar la participación de otros especialistas."
+      ],
+      "correct": 2,
+      "explanation": "Es un ejemplo concreto del examen que la comunidad científica puede continuar después de publicar.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "La revisión científica externa",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-teorias-1",
+      "subject": "lectura",
+      "topic": "Idea principal",
+      "passageId": "lectura-teorias",
+      "text": "¿Qué busca principalmente el texto?",
+      "options": [
+        "Explicar por qué toda teoría es una opinión sin pruebas.",
+        "Distinguir los sentidos científicos de dato, ley y teoría.",
+        "Sostener que las leyes naturales son órdenes humanas.",
+        "Reemplazar las teorías por normas sociales."
+      ],
+      "correct": 1,
+      "explanation": "El texto define las tres nociones y contrasta su uso científico con significados cotidianos.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Datos, leyes y teorías",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-teorias-2",
+      "subject": "lectura",
+      "topic": "Información explícita",
+      "passageId": "lectura-teorias",
+      "text": "Según el texto, una ley natural:",
+      "options": [
+        "Impone castigos a quien no la cumple.",
+        "Es cualquier opinión de una persona capacitada.",
+        "Describe una regularidad de la naturaleza.",
+        "Solo puede expresarse mediante palabras."
+      ],
+      "correct": 2,
+      "explanation": "El primer párrafo la presenta como una descripción de regularidades, verbal o matemática.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Datos, leyes y teorías",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-teorias-3",
+      "subject": "lectura",
+      "topic": "Inferencia",
+      "passageId": "lectura-teorias",
+      "text": "¿Qué conclusión es compatible con el texto sobre las teorías científicas?",
+      "options": [
+        "No se reducen a resumir: también orientan nuevas investigaciones.",
+        "Son necesariamente simples suposiciones.",
+        "No guardan relación con los datos.",
+        "Evitan formular predicciones."
+      ],
+      "correct": 0,
+      "explanation": "El segundo párrafo añade que permiten proponer preguntas y predecir resultados.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Datos, leyes y teorías",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-teorias-4",
+      "subject": "lectura",
+      "topic": "Relación entre ideas",
+      "passageId": "lectura-teorias",
+      "text": "¿Qué función cumple «en cambio» al introducir la teoría?",
+      "options": [
+        "Repetir exactamente la definición de ley.",
+        "Presentar una secuencia de fechas.",
+        "Añadir una orden para el lector.",
+        "Marcar una distinción entre la descripción de regularidades y la explicación."
+      ],
+      "correct": 3,
+      "explanation": "El conector introduce un contraste entre la ley, que describe, y la teoría, que reúne explicaciones.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Datos, leyes y teorías",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-teorias-5",
+      "subject": "lectura",
+      "topic": "Vocabulario en contexto",
+      "passageId": "lectura-teorias",
+      "text": "En «verificar de manera independiente», «independiente» significa:",
+      "options": [
+        "Sin realizar ninguna observación.",
+        "Sin tener que aceptar solamente la palabra de quien lo afirma.",
+        "Sin formación para examinar el dato.",
+        "Sin distinguir datos de opiniones."
+      ],
+      "correct": 1,
+      "explanation": "El texto atribuye la verificación a otra persona capacitada; no exige aceptar el dato solo por autoridad.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Datos, leyes y teorías",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-homeostasis-1",
+      "subject": "lectura",
+      "topic": "Idea principal",
+      "passageId": "lectura-homeostasis",
+      "text": "¿Cuál es la idea central?",
+      "options": [
+        "La estabilidad corporal exige ausencia total de cambios.",
+        "Todo cambio se amplifica sin límite.",
+        "La estabilidad puede mantenerse mediante cambios y respuestas correctivas.",
+        "Los termostatos permanecen siempre encendidos."
+      ],
+      "correct": 2,
+      "explanation": "El texto define equilibrio dinámico y explica cómo la retroalimentación limita las desviaciones.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Homeostasis y retroalimentación negativa",
+        "pdfPages": [
+          45
+        ],
+        "printedPages": [
+          17
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-homeostasis-2",
+      "subject": "lectura",
+      "topic": "Vocabulario en contexto",
+      "passageId": "lectura-homeostasis",
+      "text": "¿Qué significa «contrarrestan» en este contexto?",
+      "options": [
+        "Actúan contra el efecto de la desviación.",
+        "Aumentan indefinidamente la desviación.",
+        "Impiden detectar cualquier cambio.",
+        "Eliminan la necesidad de un valor de referencia."
+      ],
+      "correct": 0,
+      "explanation": "La respuesta de retroalimentación negativa actúa en sentido contrario a la desviación inicial.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Homeostasis y retroalimentación negativa",
+        "pdfPages": [
+          45
+        ],
+        "printedPages": [
+          17
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-homeostasis-3",
+      "subject": "lectura",
+      "topic": "Inferencia",
+      "passageId": "lectura-homeostasis",
+      "text": "¿Cuál situación sería contraria al mecanismo descrito?",
+      "options": [
+        "Apagar el calentador después de recuperar la temperatura.",
+        "Encender el calentador cuando la habitación se enfría.",
+        "Fluctuar cerca del valor seleccionado.",
+        "Aumentar el enfriamiento en respuesta a que la habitación se enfría."
+      ],
+      "correct": 3,
+      "explanation": "La última opción amplifica la desviación; el texto describe una respuesta que la corrige.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Homeostasis y retroalimentación negativa",
+        "pdfPages": [
+          45
+        ],
+        "printedPages": [
+          17
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-homeostasis-4",
+      "subject": "lectura",
+      "topic": "Relación entre ideas",
+      "passageId": "lectura-homeostasis",
+      "text": "¿Para qué se introduce el sistema de calefacción?",
+      "options": [
+        "Para afirmar que el cuerpo contiene un aparato doméstico.",
+        "Para explicar mediante una analogía un mecanismo de regulación.",
+        "Para sustituir el concepto de equilibrio dinámico.",
+        "Para demostrar que no existen cambios de temperatura."
+      ],
+      "correct": 1,
+      "explanation": "El segundo párrafo lo presenta expresamente como una comparación que facilita comprender la retroalimentación.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Homeostasis y retroalimentación negativa",
+        "pdfPages": [
+          45
+        ],
+        "printedPages": [
+          17
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-homeostasis-5",
+      "subject": "lectura",
+      "topic": "Información explícita",
+      "passageId": "lectura-homeostasis",
+      "text": "En el ejemplo, ¿qué ocurre después de que la temperatura se recupera?",
+      "options": [
+        "Se elimina el valor de referencia.",
+        "Se intensifica el enfriamiento.",
+        "El termostato apaga el calentador.",
+        "El calentador queda encendido para siempre."
+      ],
+      "correct": 2,
+      "explanation": "La secuencia del ejemplo indica que el termostato lo enciende con el frío y lo apaga al recuperarse la temperatura.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Homeostasis y retroalimentación negativa",
+        "pdfPages": [
+          45
+        ],
+        "printedPages": [
+          17
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-variacion-1",
+      "subject": "lectura",
+      "topic": "Idea principal",
+      "passageId": "lectura-variacion",
+      "text": "¿Qué idea sostiene el texto?",
+      "options": [
+        "Los atlas carecen de utilidad para estudiar.",
+        "Todos los cuerpos son idénticos a un dibujo.",
+        "Las variaciones solo aparecen entre personas no emparentadas.",
+        "Una representación típica es útil, pero no elimina las diferencias individuales."
+      ],
+      "correct": 3,
+      "explanation": "El texto reconoce tanto la función del modelo general como los límites de aplicarlo a un individuo.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Variación anatómica",
+        "pdfPages": [
+          42
+        ],
+        "printedPages": [
+          14
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-variacion-2",
+      "subject": "lectura",
+      "topic": "Inferencia",
+      "passageId": "lectura-variacion",
+      "text": "¿Qué actitud sería coherente con la lectura?",
+      "options": [
+        "Suponer que un esquema describe cada detalle de cualquier persona.",
+        "Usar el atlas como guía y reconocer posibles variaciones individuales.",
+        "Ignorar toda estructura frecuente.",
+        "Negar las diferencias entre gemelos."
+      ],
+      "correct": 1,
+      "explanation": "El segundo párrafo plantea que el esquema sirve para aprender y comparar, sin garantizar identidad absoluta.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Variación anatómica",
+        "pdfPages": [
+          42
+        ],
+        "printedPages": [
+          14
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-variacion-3",
+      "subject": "lectura",
+      "topic": "Información explícita",
+      "passageId": "lectura-variacion",
+      "text": "¿Entre quiénes afirma el texto que también pueden encontrarse diferencias?",
+      "options": [
+        "Solo entre personas de edades muy distintas.",
+        "Solo entre especies diferentes.",
+        "Incluso entre gemelos idénticos.",
+        "Únicamente entre quienes no tienen parentesco."
+      ],
+      "correct": 2,
+      "explanation": "La última oración del primer párrafo menciona de forma explícita a los gemelos idénticos.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Variación anatómica",
+        "pdfPages": [
+          42
+        ],
+        "printedPages": [
+          14
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-variacion-4",
+      "subject": "lectura",
+      "topic": "Vocabulario en contexto",
+      "passageId": "lectura-variacion",
+      "text": "En el texto, «típica» significa:",
+      "options": [
+        "Frecuente o usada como representación general.",
+        "Exactamente idéntica en todos los individuos.",
+        "Imposible de observar en un cuerpo real.",
+        "Exclusiva de una persona determinada."
+      ],
+      "correct": 0,
+      "explanation": "El primer párrafo relaciona las representaciones de atlas con las estructuras más frecuentes.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Variación anatómica",
+        "pdfPages": [
+          42
+        ],
+        "printedPages": [
+          14
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-variacion-5",
+      "subject": "lectura",
+      "topic": "Relación entre ideas",
+      "passageId": "lectura-variacion",
+      "text": "La última oración indica que:",
+      "options": [
+        "La diversidad vuelve inútil todo modelo.",
+        "Aprender una estructura obliga a negar las otras.",
+        "Solo puede aceptarse una de las dos ideas.",
+        "La utilidad de un modelo y la diversidad individual pueden coexistir."
+      ],
+      "correct": 3,
+      "explanation": "La conclusión explica que ambas afirmaciones son compatibles.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Variación anatómica",
+        "pdfPages": [
+          42
+        ],
+        "printedPages": [
+          14
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    }
+  ],
+  "passages": [
+    {
+      "id": "lectura-hipotesis",
+      "title": "Una explicación que puede ponerse a prueba",
+      "text": "Una investigación puede comenzar con una pregunta y una respuesta provisional: la hipótesis. Esta no es una afirmación que deba aceptarse por la autoridad de quien la propone. Para ser útil en ciencia, debe ser compatible con el conocimiento disponible y permitir pruebas capaces de mostrar que es incorrecta. Esa posibilidad de refutación distingue una explicación científica de una afirmación que no admite ninguna comprobación.\n\nA partir de la hipótesis se deduce una predicción, frecuentemente expresada como «si ocurre esto, entonces se observará aquello». Después se realiza una prueba y se examinan sus resultados. Las observaciones pueden apoyar la hipótesis, pero también obligar a modificarla o abandonarla. Por ello, formular una hipótesis no cierra la investigación: permite organizar un proceso de contraste entre las ideas y las pruebas.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "El método hipotético-deductivo",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-experimento",
+      "title": "Comparar para interpretar un resultado",
+      "text": "Observar una mejoría después de administrar una sustancia no basta para concluir que la sustancia la causó. Para interpretar un experimento biomédico se compara un grupo que recibe el tratamiento con otro de referencia, semejante en sus características, pero distinto respecto de la variable que se desea estudiar. Esta comparación ayuda a separar el posible efecto del tratamiento de otras variaciones.\n\nLas expectativas también pueden influir. Por eso, el grupo de referencia puede recibir un placebo con apariencia similar a la sustancia investigada. En un estudio doble ciego, ni los participantes ni quienes administran el tratamiento y recogen los resultados saben qué intervención recibe cada persona. Los tratamientos se identifican mediante códigos, cuyo significado se consulta después del registro de los resultados. El propósito de estas precauciones es reducir la influencia de las expectativas y del sesgo del investigador.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Diseño de experimentos",
+        "pdfPages": [
+          36
+        ],
+        "printedPages": [
+          8
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-revision",
+      "title": "La ciencia también necesita revisión",
+      "text": "Una investigación no se examina únicamente dentro del laboratorio de quien la realiza. Cuando se solicita financiamiento o se envían resultados para su publicación, otros especialistas del mismo campo pueden evaluar críticamente el proyecto o el manuscrito. A este proceso se lo llama revisión científica externa.\n\nLa evaluación no termina necesariamente cuando el trabajo se publica. Si los resultados son importantes o poco convencionales, otros investigadores pueden intentar reproducirlos para comprobar si llegan a conclusiones semejantes. Así, el conocimiento permanece sujeto al examen de la comunidad científica desde la planificación hasta después de la publicación. Este escrutinio busca favorecer la honestidad, la objetividad y la calidad. Publicar un resultado lo pone al alcance de otros investigadores; no lo vuelve inmune a la crítica ni hace innecesarias las comprobaciones posteriores.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "La revisión científica externa",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-teorias",
+      "title": "Describir no es lo mismo que explicar",
+      "text": "El conocimiento científico puede expresarse mediante datos, leyes y teorías. Un dato es información que una persona capacitada puede verificar de manera independiente. Una ley natural describe una regularidad en el comportamiento de la materia o la energía; puede formularse con palabras o mediante una relación matemática.\n\nUna teoría, en cambio, reúne explicaciones apoyadas en datos, leyes e hipótesis confirmadas. Además de organizar lo conocido, permite proponer nuevas preguntas y predecir resultados. Por eso, el uso cotidiano de «teoría» como simple suposición puede producir confusión al hablar de ciencia. También se confunde a veces una ley natural con una norma impuesta por personas. La diferencia es importante: la ley natural describe cómo se comporta la naturaleza, mientras que una norma social indica cómo se espera que actúen las personas. Emplear términos semejantes no significa atribuirles el mismo sentido.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Datos, leyes y teorías",
+        "pdfPages": [
+          37
+        ],
+        "printedPages": [
+          9
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-homeostasis",
+      "title": "Una estabilidad que incluye cambios",
+      "text": "La estabilidad del medio interno del cuerpo no significa que sus condiciones permanezcan absolutamente fijas. Las variables pueden fluctuar dentro de ciertos límites alrededor de un valor de referencia. Por eso se habla de equilibrio dinámico: existe cambio, pero también mecanismos que limitan sus desviaciones.\n\nLa retroalimentación negativa permite mantener una variable cerca de ese valor. Cuando se detecta una desviación, se activan respuestas que la contrarrestan. Un sistema de calefacción ofrece una comparación: si la habitación se enfría, el termostato enciende el calentador; cuando la temperatura se recupera, lo apaga. El ambiente no conserva una temperatura exacta en cada instante, sino que oscila alrededor del valor seleccionado. En este ejemplo, la respuesta no amplifica el enfriamiento que la puso en marcha: actúa en sentido contrario. Así se ilustra cómo una variación puede activar su propia corrección.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Homeostasis y retroalimentación negativa",
+        "pdfPages": [
+          45
+        ],
+        "printedPages": [
+          17
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    },
+    {
+      "id": "lectura-variacion",
+      "title": "El dibujo de un cuerpo no representa a todos",
+      "text": "Los libros y atlas de anatomía presentan habitualmente las estructuras más frecuentes del cuerpo humano. Esta selección permite organizar el estudio, pero puede producir la impresión equivocada de que todas las personas son iguales por dentro. Una revisión cuidadosa muestra diferencias incluso entre gemelos idénticos.\n\nLas variaciones pueden afectar la presencia, el número o la disposición de determinadas estructuras. Por eso, conocer una representación típica no permite anticipar todos los detalles de un cuerpo particular. Para quien estudia anatomía y para quien interviene sobre el cuerpo, reconocer esta diversidad es importante. El esquema de un atlas es una guía para aprender y comparar, no una promesa de identidad absoluta entre todas las personas. La utilidad de un modelo general y la existencia de diferencias individuales pueden aceptarse al mismo tiempo; no son afirmaciones incompatibles.",
+      "source": {
+        "document": "Anatomía y fisiología: la unidad entre forma y función",
+        "author": "Kenneth S. Saladin",
+        "edition": "6.ª edición",
+        "chapter": "1. Temas principales de anatomía y fisiología",
+        "section": "Variación anatómica",
+        "pdfPages": [
+          42
+        ],
+        "printedPages": [
+          14
+        ],
+        "kind": "adaptación didáctica para lectura comprensiva"
+      }
+    }
+  ],
+  "readingSource": {
+    "author": "Kenneth S. Saladin",
+    "edition": "6.ª edición",
+    "title": "Anatomía y fisiología: la unidad entre forma y función",
+    "chapter": 1,
+    "pdfPages": [
+      36,
+      37,
+      42,
+      45
+    ],
+    "printedPages": [
+      8,
+      9,
+      14,
+      17
+    ],
+    "adapted": true,
+    "creditVerifiedPdfPages": [
+      5,
+      6
+    ]
+  }
+}

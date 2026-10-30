@@ -1,5 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v135-device-code-resume';
+const CACHE_NAME = 'alcocermed-main-v136-suficiencia';
 const APP_SHELL = [
+    './suficiencia-core.js?v=1',
+    './suficiencia.js?v=1',
+    './suficiencia.css?v=1',
     './campus',
     './campus.html',
     './index.html',
@@ -36,7 +39,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=4',
     './assets/fonts/outfit-900.ttf',
     './flashcard-workspace.js?v=6',
-    './script.js?v=64',
+    './script.js?v=20261030-suficiencia1',
     './recuperar.html',
     './password-recovery.js?v=1',
     './password-recovery-redirect.js?v=1',

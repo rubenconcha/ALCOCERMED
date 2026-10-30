@@ -462,6 +462,7 @@ const tips = [
 let currentCampusScreen = 'home-screen';
 const campusScreenHistory = [];
 function showScreen(screenId, fromBack) {
+    if (screenId !== 'suficiencia-screen' && window.Sufficiency?.beforeLeave() === false) return false;
     if (screenId !== 'simulacro-screen' && typeof simState !== 'undefined' && simState && simState.timerInterval) {
         if (!confirm('Hay un examen en curso. ¿Deseas salir y descartar las respuestas?')) return false;
         clearInterval(simState.timerInterval); simState.timerInterval = null;
@@ -471,7 +472,7 @@ function showScreen(screenId, fromBack) {
         if (!fromBack) campusScreenHistory.push(currentCampusScreen);
         currentCampusScreen = screenId;
     }
-    const trackingSections = {'study-library':'flashcards','intocables-screen':'mapas','atlas-screen':'atlas','resumenes-screen':'resumenes','intocables-hub-screen':'intocables','banco-screen':'banco','past-exams-screen':'examenes','simulacro-screen':'simulacros','evaluacion-screen':'evaluaciones','game-quiz':'quiz','game-hangman':'ahorcado'};
+    const trackingSections = {'suficiencia-screen':'suficiencia','study-library':'flashcards','intocables-screen':'mapas','atlas-screen':'atlas','resumenes-screen':'resumenes','intocables-hub-screen':'intocables','banco-screen':'banco','past-exams-screen':'examenes','simulacro-screen':'simulacros','evaluacion-screen':'evaluaciones','game-quiz':'quiz','game-hangman':'ahorcado'};
     if (trackingSections[screenId]) window.CampusTracking?.record(trackingSections[screenId],'opened','','','menu');
     closeMobileSidebar();
     if (screenId !== 'study-area' && flashcardReviewTimer) {
@@ -480,7 +481,7 @@ function showScreen(screenId, fromBack) {
     }
     if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
-    const screens = ['home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen', 'atlas-screen'];
+    const screens = ['suficiencia-screen', 'home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen', 'atlas-screen'];
     screens.forEach(function (id) {
         const el = document.getElementById(id);
         if (el) {

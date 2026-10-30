@@ -1,0 +1,391 @@
+{
+  "reviewedAt": "2026-10-30",
+  "scope": "Selección de preguntas legibles con datos suficientes y una respuesta defendible; no es una transcripción completa ni un patrón oficial de admisión.",
+  "source": {
+    "title": "Medicina: exámenes pasados ABP",
+    "institution": "UMSA",
+    "pdfPages": 44,
+    "sha256": "624b1f217dfa9f63f3d87603958e2b7c9c27b9b8f2799f114e39dd8d46a0fc31",
+    "authorizedByUser": "2026-10-30",
+    "originalPatternIncluded": false
+  },
+  "counts": {
+    "matematicas": 40,
+    "fisica": 32,
+    "quimica": 20,
+    "lectura": 30
+  },
+  "method": "Se revisaron visualmente las páginas escaneadas, se normalizó la notación y se resolvieron los problemas. Las claves son razonadas para práctica; no se suministró patrón oficial. No se modificaron los PDF originales.",
+  "excluded": [
+    {
+      "pdfPage": 13,
+      "question": 2,
+      "reason": "La quinta nota requerida es 100 y no figura entre las alternativas."
+    },
+    {
+      "pdfPage": 13,
+      "question": 12,
+      "reason": "El cálculo da 31325 cal; no hay una alternativa coincidente."
+    },
+    {
+      "pdfPage": 17,
+      "question": 25,
+      "reason": "Las alternativas C, D y E representan la misma ocupación electrónica reordenada."
+    },
+    {
+      "pdfPage": 17,
+      "question": 30,
+      "reason": "Nomenclatura sin precisión suficiente para una sola alternativa defendible."
+    },
+    {
+      "pdfPage": 17,
+      "question": 37,
+      "reason": "El módulo calculado del vector resultante es aproximadamente 24,16; las opciones no coinciden."
+    },
+    {
+      "pdfPage": 17,
+      "question": 38,
+      "reason": "El tiempo calculado es 400/(60+45)≈3,81 s; las opciones no coinciden."
+    },
+    {
+      "pdfPage": 41,
+      "question": 21,
+      "reason": "El complemento pedido es {1,10}; no coincide con las alternativas."
+    },
+    {
+      "pdfPage": 41,
+      "question": 23,
+      "reason": "La operación da 5,3842×10⁶; no coincide con las alternativas."
+    },
+    {
+      "pdfPage": 41,
+      "question": 28,
+      "reason": "La operación da 3,136541×10⁷; no coincide con las alternativas."
+    },
+    {
+      "pdfPage": 42,
+      "question": 32,
+      "reason": "La altura de la pirámide es aproximadamente 8,35 cm; no coincide con las alternativas."
+    }
+  ],
+  "adaptations": [
+    {
+      "id": "abp-05-08",
+      "pdfPages": [
+        5
+      ],
+      "note": "Se explicita que las vocales tildadas representan la misma letra para evitar ambigüedad."
+    },
+    {
+      "id": "abp-13-05",
+      "pdfPages": [
+        13
+      ],
+      "note": "Se transcriben los valores de las barras para que el gráfico sea accesible sin imagen."
+    },
+    {
+      "id": "abp-13-06",
+      "pdfPages": [
+        13
+      ],
+      "note": "Se hace explícito y≠0 para que el cociente solicitado esté definido."
+    },
+    {
+      "id": "abp-26-38",
+      "pdfPages": [
+        26
+      ],
+      "note": "La última línea del original dice A/Q, aunque solo define P y Q. Se corrige ese nombre a P/Q."
+    },
+    {
+      "id": "abp-30-34",
+      "pdfPages": [
+        30
+      ],
+      "note": "Se normaliza la notación de los logaritmos del escaneo."
+    },
+    {
+      "id": "abp-31-40",
+      "pdfPages": [
+        31
+      ],
+      "note": "Se usan solo las filas necesarias de la tabla: otras filas del original son inconsistentes."
+    },
+    {
+      "id": "abp-21-35",
+      "pdfPages": [
+        21
+      ],
+      "note": "Se explicita la normalización de los factores para que su suma sea única."
+    },
+    {
+      "id": "abp-05-14",
+      "pdfPages": [
+        5
+      ],
+      "note": "Se explicita la definición de kgf."
+    },
+    {
+      "id": "abp-05-16",
+      "pdfPages": [
+        5
+      ],
+      "note": "Se explicita que continúan moviéndose tras el encuentro."
+    },
+    {
+      "id": "abp-11-19",
+      "pdfPages": [
+        11
+      ],
+      "note": "Se formula como fuerza neta, sin suponer datos de rozamiento no dados."
+    },
+    {
+      "id": "abp-17-34",
+      "pdfPages": [
+        17
+      ],
+      "note": "Se explicita la equivalencia lbf–N y se normaliza el redondeo de la alternativa B de 5,15 a 5,16 lbf."
+    },
+    {
+      "id": "abp-17-39",
+      "pdfPages": [
+        17
+      ],
+      "note": "Se aclara el eje y se normaliza el redondeo: gt=166,77 m/s y −gt²/2=−1417,545 m."
+    },
+    {
+      "id": "abp-17-40",
+      "pdfPages": [
+        17
+      ],
+      "note": "Se explicita la conversión exacta de pie a metro y se normaliza el redondeo de 27,87 a 27,88 m/s."
+    },
+    {
+      "id": "abp-34-36",
+      "pdfPages": [
+        34
+      ],
+      "note": "Se explicita «cualquier trayectoria», condición necesaria de la caracterización."
+    },
+    {
+      "id": "abp-43-40",
+      "pdfPages": [
+        43
+      ],
+      "note": "Se explicita g para hacer reproducible el cálculo."
+    },
+    {
+      "id": "abp-17-28",
+      "pdfPages": [
+        17
+      ],
+      "note": "Se explicita la fórmula para centrar el ejercicio en la suma de masas atómicas."
+    },
+    {
+      "id": "abp-17-29",
+      "pdfPages": [
+        17
+      ],
+      "note": "Se explicita la constante de Avogadro empleada."
+    },
+    {
+      "id": "abp-24-23",
+      "pdfPages": [
+        24,
+        25
+      ],
+      "note": "Se explicitan las constantes de cálculo."
+    },
+    {
+      "id": "abp-25-25",
+      "pdfPages": [
+        25
+      ],
+      "note": "Se escribe la reacción balanceada y se explicitan los valores convencionales de CN."
+    },
+    {
+      "id": "abp-35-56",
+      "pdfPages": [
+        35
+      ],
+      "note": "Se explicita Nₐ."
+    },
+    {
+      "id": "abp-36-57",
+      "pdfPages": [
+        36
+      ],
+      "note": "Se corrige la unidad de las alternativas: el original imprime L aunque solicita gramos."
+    },
+    {
+      "id": "abp-44-46",
+      "pdfPages": [
+        44
+      ],
+      "note": "Se explicita el volumen molar empleado para CN."
+    },
+    {
+      "id": "abp-16-22",
+      "pdfPages": [
+        16
+      ],
+      "note": "Se formula como identificación de la reacción para no evaluar la atribución histórica."
+    },
+    {
+      "id": "abp-35-45",
+      "pdfPages": [
+        35
+      ],
+      "note": "Se reemplaza un distractor duplicado en el original; se conserva la reacción y la respuesta única."
+    },
+    {
+      "id": "abp-35-46",
+      "pdfPages": [
+        35
+      ],
+      "note": "El original duplica neutralización en C y D. Se sustituye el distractor duplicado y se precisa que se solicita el nombre específico de la reacción ácido-base."
+    }
+  ],
+  "reading": {
+    "author": "Kenneth S. Saladin",
+    "edition": "6.ª edición",
+    "title": "Anatomía y fisiología: la unidad entre forma y función",
+    "chapter": 1,
+    "pdfPages": [
+      36,
+      37,
+      42,
+      45
+    ],
+    "printedPages": [
+      8,
+      9,
+      14,
+      17
+    ],
+    "adapted": true,
+    "creditVerifiedPdfPages": [
+      5,
+      6
+    ],
+    "note": "El documento ABP no aporta pasajes completos de lectura comprensiva. Los seis pasajes y sus treinta preguntas son adaptaciones didácticas del texto oficial autorizado de Saladin, no preguntas del examen ABP.",
+    "passages": [
+      {
+        "id": "lectura-hipotesis",
+        "title": "Una explicación que puede ponerse a prueba",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "El método hipotético-deductivo",
+          "pdfPages": [
+            36
+          ],
+          "printedPages": [
+            8
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva"
+        }
+      },
+      {
+        "id": "lectura-experimento",
+        "title": "Comparar para interpretar un resultado",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Diseño de experimentos",
+          "pdfPages": [
+            36
+          ],
+          "printedPages": [
+            8
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva"
+        }
+      },
+      {
+        "id": "lectura-revision",
+        "title": "La ciencia también necesita revisión",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "La revisión científica externa",
+          "pdfPages": [
+            37
+          ],
+          "printedPages": [
+            9
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva"
+        }
+      },
+      {
+        "id": "lectura-teorias",
+        "title": "Describir no es lo mismo que explicar",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Datos, leyes y teorías",
+          "pdfPages": [
+            37
+          ],
+          "printedPages": [
+            9
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva"
+        }
+      },
+      {
+        "id": "lectura-homeostasis",
+        "title": "Una estabilidad que incluye cambios",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Homeostasis y retroalimentación negativa",
+          "pdfPages": [
+            45
+          ],
+          "printedPages": [
+            17
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva"
+        }
+      },
+      {
+        "id": "lectura-variacion",
+        "title": "El dibujo de un cuerpo no representa a todos",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Variación anatómica",
+          "pdfPages": [
+            42
+          ],
+          "printedPages": [
+            14
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva"
+        }
+      }
+    ]
+  },
+  "grading": {
+    "integralQuestions": 40,
+    "perSubject": 10,
+    "minutes": 60,
+    "wrongPenalty": 0,
+    "officialDistribution": false,
+    "officialScore": false
+  }
+}

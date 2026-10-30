@@ -21,6 +21,8 @@ jobs:
           node-version: '20'
       - name: Check device email code flow
         run: node tests/device-email-code.test.cjs
+      - name: Check sufficiency exam bank and student flow
+        run: node --test tests/suficiencia.test.cjs
       - name: Syntax check JavaScript
         run: |
           node --check script.js
