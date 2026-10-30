@@ -91,7 +91,7 @@ test('level validation rejects mixed levels, duplicated questions, missing cover
  ]){const broken=structuredClone(bank);mutate(broken);assert.equal(C.validate(broken),false);}
 });
 
-test('the catalogue defaults to easy mathematics and switches subject and level without reloading content',async()=>{
+test('bank-style selector requires subject and topic, filters difficulty and retains the selected configuration',async()=>{
  const handlers={},storage=new Map();let loads=0;
  const root={innerHTML:'',classList:{contains:()=>false,add(){},remove(){}},addEventListener:(e,fn)=>{handlers[e]=fn;},replaceChildren(){this.innerHTML='';},scrollIntoView(){},querySelector:()=>null};
  const context={currentUser:{id:'levels-fixture'},document:{getElementById:()=>root,addEventListener(){}},location:{search:''},URLSearchParams,Uint32Array,AbortSignal,Date,
@@ -100,17 +100,61 @@ test('the catalogue defaults to easy mathematics and switches subject and level 
  context.window={SufficiencyCore:C,CampusAccess:{isFree:()=>false},addEventListener(){}};
  context.getSupabase=()=>({auth:{getSession:async()=>({data:{session:{user:context.currentUser,access_token:'fixture'}}}),onAuthStateChange:()=>{}}});
  vm.createContext(context);vm.runInContext(fs.readFileSync(require.resolve('../suficiencia.js'),'utf8'),context);
- await context.window.Sufficiency.open();assert.match(root.innerHTML,/Elige la materia/);
- assert.match(root.innerHTML,/data-area="matematicas"[^>]*aria-pressed="true"/);
- assert.match(root.innerHTML,/data-level="facil"[^>]*aria-pressed="true"/);
+ await context.window.Sufficiency.open();
+ assert.match(root.innerHTML,/banco-config-card/);assert.ok(!root.innerHTML.includes('sf-matter-grid'));
+ assert.match(root.innerHTML,/id="sf-config-topic"[^>]*disabled/);
+ assert.match(root.innerHTML,/data-area="config"[^>]*disabled/);
+ assert.match(root.innerHTML,/data-level="todos"[^>]*aria-pressed="true"/);
+ const change=(id,value)=>handlers.change({target:{id,value}});
  const click=(sf,extra={})=>handlers.click({target:{closest:()=>({disabled:false,dataset:{sf,...extra}})}});
- click('subject',{area:'quimica'});click('level',{level:'dificil'});
- assert.match(root.innerHTML,/data-area="quimica"[^>]*aria-pressed="true"/);
- assert.match(root.innerHTML,/data-level="dificil"[^>]*aria-pressed="true"/);
- assert.equal(loads,1);
- await click('run',{area:'simulacro:nivel-quimica-dificil-01'});
+ await click('run',{area:'config'});assert.equal(storage.size,0);
+ change('sf-config-subject','matematicas');change('sf-config-topic','conjuntos');click('config-level',{level:'dificil'});
+ assert.match(root.innerHTML,/no hay preguntas con esta combinación/);
+ change('sf-config-subject','quimica');assert.match(root.innerHTML,/seleccionar tema/);assert.match(root.innerHTML,/data-area="config"[^>]*disabled/);
+ change('sf-config-topic','reacciones');assert.match(root.innerHTML,/data-level="dificil"[^>]*aria-pressed="true"/);assert.equal(loads,1);
+ await click('run',{area:'config'});
  const saved=JSON.parse(storage.get('alcocermed:suficiencia:v1:levels-fixture'));
- assert.ok(saved.ids.every(id=>bank.questions.find(q=>q.id===id).subject==='quimica'&&bank.questions.find(q=>q.id===id).difficulty==='dificil'));
- click('catalogue');assert.match(root.innerHTML,/data-area="quimica"[^>]*aria-pressed="true"/);
+ assert.equal(saved.configuration.subject,'quimica');assert.equal(saved.configuration.topic,'reacciones');assert.equal(saved.configuration.level,'dificil');
+ assert.ok(saved.ids.every(id=>{const q=bank.questions.find(q=>q.id===id);return q.subject==='quimica'&&q.difficulty==='dificil'&&C.topicFor(q,bank).key==='reacciones';}));
+ assert.match(root.innerHTML,/Ver resolución paso a paso/);
+ click('catalogue');assert.match(root.innerHTML,/value="quimica" selected/);assert.match(root.innerHTML,/value="reacciones" selected/);
  assert.match(root.innerHTML,/data-level="dificil"[^>]*aria-pressed="true"/);
+ click('legacy');assert.match(root.innerHTML,/Simulacros anteriores/);
+ click('config');assert.match(root.innerHTML,/value="quimica" selected/);assert.match(root.innerHTML,/value="reacciones" selected/);
 });
+
+test('subject-topic-difficulty sampling stays within the chosen pool and preserves whole readings',()=>{
+ for(const subject of Object.keys(C.subjects))for(const topic of ['*',...C.topics(bank,subject).map(t=>t.key)])for(const level of ['todos',...Object.keys(C.levels)]){
+  const config={subject,topic,level},pool=C.configurationPool(bank,config),rows=C.selectConfiguration(bank,config,17);
+  assert.equal(rows.length,Math.min(20,pool.length),JSON.stringify(config));
+  assert.equal(C.configurationCount(bank,config),rows.length);
+  assert.equal(new Set(rows.map(q=>q.id)).size,rows.length);
+  assert.ok(rows.every(q=>q.subject===subject&&(level==='todos'||q.difficulty===level)&&(topic==='*'||C.topicFor(q,bank).key===topic)));
+  if(subject==='lectura')for(const id of new Set(rows.map(q=>q.passageId)))assert.equal(rows.filter(q=>q.passageId===id).length,5);
+ }
+ const config={subject:'matematicas',topic:'conjuntos',level:'facil'};
+ assert.deepEqual(C.selectConfiguration(bank,config,3),C.selectConfiguration(bank,config,3));
+ assert.notDeepEqual(C.selectConfiguration(bank,config,3).map(q=>q.id),C.selectConfiguration(bank,config,9).map(q=>q.id));
+});
+
+test('complete configured practices use five questions per subject and one full reading',()=>{
+ for(const level of ['todos',...Object.keys(C.levels)]){
+  const config={subject:'integral',topic:'*',level},rows=C.selectConfiguration(bank,config,9);
+  assert.equal(rows.length,20);for(const subject of Object.keys(C.subjects))assert.equal(rows.filter(q=>q.subject===subject).length,5);
+  assert.equal(new Set(rows.filter(q=>q.subject==='lectura').map(q=>q.passageId)).size,1);
+  assert.ok(rows.every(q=>level==='todos'||q.difficulty===level));
+ }
+ assert.equal(C.configurationCount(bank,{subject:'bad',topic:'*',level:'facil'}),0);
+ assert.equal(C.configurationCount(bank,{subject:'matematicas',topic:'missing',level:'facil'}),0);
+ assert.deepEqual(C.selectConfiguration(bank,{subject:'matematicas',topic:'conjuntos',level:'bad'},5),[]);
+});
+
+test('restoring a configured attempt preserves its chosen theme and rejects mismatched filters',()=>{
+ const configuration={subject:'fisica',topic:'electricidad',level:'facil'},rows=C.selectConfiguration(bank,configuration,8);
+ const saved={owner:'a',version:bank.version,area:'config',configuration,ids:rows.map(q=>q.id),answers:{[rows[0].id]:1},deadline:Date.now()+60000};
+ const restored=C.restore(saved,bank,'a');assert.ok(restored);assert.deepEqual(restored.configuration,configuration);assert.equal(restored.answers[rows[0].id],1);
+ assert.equal(C.restore({...saved,configuration:{...configuration,subject:'matematicas'}},bank,'a'),null);
+ assert.equal(C.restore({...saved,configuration:{...configuration,level:'dificil'}},bank,'a'),null);
+ assert.equal(C.restore(saved,bank,'b'),null);
+});
+

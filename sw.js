@@ -1,8 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v141-simulacros-por-niveles';
+const CACHE_NAME = 'alcocermed-main-v142-selector-formato-banco';
 const APP_SHELL = [
-    './suficiencia-core.js?v=5',
-    './suficiencia.js?v=6',
-    './suficiencia.css?v=6',
+    './suficiencia-core.js?v=6',
+    './suficiencia.js?v=7',
+    './suficiencia.css?v=7',
     './campus',
     './campus.html',
     './index.html',

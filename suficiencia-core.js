@@ -41,6 +41,67 @@
         if (q.id === 'abp-36-64') return ['Solo el número 6', 'Una lista que continúa antes y después del 6', '{0, 1, 2, 3, 4, 5}', '{1, 2, 3, 4, 5, 6, …} (la lista continúa)'][index];
         return q.options[index];
     }
+    function topicFor(q, bank) {
+        if (q.subject === 'lectura') return {key:q.passageId,label:bank.passages.find(p=>p.id===q.passageId)?.title || q.topic};
+        const t=q.topic.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+        let key,label;
+        if(q.subject==='matematicas') {
+            [key,label]=/conjunt|cardinal|elementos|listas|numeros comunes/.test(t)?['conjuntos','Conjuntos']:
+                /media|frecuen|promedio|estadistic|dato.*falta/.test(t)?['estadistica','Estadística y promedios']:
+                /logarit/.test(t)?['logaritmos','Logaritmos']:/logic/.test(t)?['logica','Lógica']:
+                /sistem|ecuacion|inecuacion|raiz|razon|dividir dos/.test(t)?['ecuaciones','Ecuaciones, razones e inecuaciones']:
+                /aritmet|decimal|primo|racional|notacion|potencias de diez|multiplo/.test(t)?['numeros','Números y operaciones']:
+                ['algebra','Álgebra y polinomios'];
+        } else if(q.subject==='fisica') {
+            [key,label]=/campo|carga|corriente|ohm|circuit|resisten/.test(t)?['electricidad','Electricidad']:
+                /lente|optica/.test(t)?['optica','Óptica']:/onda/.test(t)?['ondas','Ondas']:
+                /temper|dilat/.test(t)?['temperatura','Temperatura y dilatación']:
+                /medici|magnitud|prefij|unidad|centimet|minutos/.test(t)?['unidades','Unidades y mediciones']:
+                /fuerza|peso|newton|dinamic|plano|rotacion/.test(t)?['fuerzas','Fuerzas y peso']:
+                /energia|trabajo|potencia/.test(t)?['energia','Trabajo y energía']:['movimiento','Movimiento y vectores'];
+        } else {
+            [key,label]=/pureza/.test(t)?['pureza','Composición y pureza']:
+                /reaccion|estequi|balance|proporcion|agua|neutraliz|acido|sustit|relacion|descompos|uno a uno/.test(t)?['reacciones','Reacciones y estequiometría']:
+                /masa|mol|cantidad|numero.*atom/.test(t)?['moles','Moles y masas']:
+                /nomenclatur/.test(t)?['nomenclatura','Nomenclatura']:
+                /sustanci|mezcla|enlace/.test(t)?['sustancias','Sustancias y propiedades']:['estructura','Estructura y fórmulas químicas'];
+        }
+        return {key,label};
+    }
+    function topics(bank, subject) {
+        if(subject==='integral')return [{key:'*',label:'Todos los temas'}];
+        const values=new Map();
+        for(const q of bank.questions.filter(q=>q.subject===subject)){const t=topicFor(q,bank);values.set(t.key,t);}
+        return [...values.values()].sort((a,b)=>a.label.localeCompare(b.label,'es'));
+    }
+    function configurationPool(bank, config) {
+        if(!config || (!subjects[config.subject] && config.subject!=='integral') || (!levels[config.level] && config.level!=='todos') || !config.topic) return [];
+        if(config.topic!=='*' && !topics(bank,config.subject).some(t=>t.key===config.topic))return [];
+        return bank.questions.filter(q=>(config.subject==='integral'||q.subject===config.subject) && (config.level==='todos'||q.difficulty===config.level) && (config.topic==='*'||topicFor(q,bank).key===config.topic));
+    }
+    function configurationCount(bank, config) {
+        const pool=configurationPool(bank,config);
+        if(config?.subject==='integral')return Object.keys(subjects).every(s=>pool.filter(q=>q.subject===s).length>=5)?20:0;
+        return Math.min(20,pool.length);
+    }
+    function selectConfiguration(bank, config, seed) {
+        if(!validate(bank))throw new Error('Banco incompleto');
+        if(!configurationCount(bank,config))return [];
+        const pool=configurationPool(bank,config),rng=random(seed);
+        if(config.subject==='integral'){
+            if(!configurationCount(bank,config))return [];
+            const rows=['matematicas','fisica','quimica'].flatMap(s=>shuffle(pool.filter(q=>q.subject===s),rng).slice(0,5));
+            const reading=pool.filter(q=>q.subject==='lectura'),id=shuffle([...new Set(reading.map(q=>q.passageId))],rng)[0];
+            return rows.concat(reading.filter(q=>q.passageId===id));
+        }
+        if(config.subject==='lectura')return shuffle([...new Set(pool.map(q=>q.passageId))],rng).slice(0,4).flatMap(id=>pool.filter(q=>q.passageId===id));
+        return shuffle(pool,rng).slice(0,20);
+    }
+    function configurationLabel(bank, config) {
+        if(!config)return 'Simulacro';
+        const topic=config.topic==='*'?'Todos los temas':topics(bank,config.subject).find(t=>t.key===config.topic)?.label || '';
+        return [subjects[config.subject]||'Completo',topic,levels[config.level]||'Todos los niveles'].filter(Boolean).join(' · ');
+    }
     function validate(bank) {
         if (!bank || !Array.isArray(bank.questions) || !Array.isArray(bank.passages)) return false;
         const ids = new Set(), passages = new Set(bank.passages.map(p => p.id));
@@ -144,6 +205,10 @@
         if (!saved || saved.owner !== owner || saved.version !== bank.version || !Array.isArray(saved.ids) || !saved.ids.length || new Set(saved.ids).size !== saved.ids.length || !Number.isFinite(saved.deadline) || saved.deadline <= 0) return null;
         const lookup = new Map(bank.questions.map(q => [q.id, q]));
         if (!saved.ids.every(id => lookup.has(id))) return null;
+        if(saved.area==='config') {
+            const permitted=new Set(configurationPool(bank,saved.configuration).map(q=>q.id));
+            if(!saved.configuration || !saved.ids.every(id=>permitted.has(id)))return null;
+        }
         const answers = {};
         for (const id of saved.ids) {
             const value = saved.answers?.[id];
@@ -152,5 +217,5 @@
         return { ...saved, answers, helpOpen: Array.isArray(saved.helpOpen) ? [...new Set(saved.helpOpen.filter(id => saved.ids.includes(id)))] : [], flags: Array.isArray(saved.flags) ? saved.flags.filter(id => saved.ids.includes(id)) : [], index: Math.max(0, Math.min(saved.ids.length - 1, Number.isInteger(saved.index) ? saved.index : 0)), finished: saved.finished === true };
     }
     function paper(bank, area) { return ['inicial', 'simulacro:inicial'].includes(area) ? bank?.introPaper || null : bank?.papers?.find(p => 'simulacro:' + p.id === area) || bank?.levelPapers?.find(p => 'simulacro:' + p.id === area) || null; }
-    return { subjects, levels, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText };
+    return { subjects, levels, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText, topics, topicFor, configurationPool, configurationCount, selectConfiguration, configurationLabel };
 });
