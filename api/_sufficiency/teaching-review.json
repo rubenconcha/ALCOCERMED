@@ -20,7 +20,7 @@
   "originalAbpLessons": 92,
   "readingLessons": 200,
   "questionAndKeySha256": "a163f0f0f60d01405b762b0d37650762e86d10038ea392d95b6c603dd50f8bec",
-  "bankBytes": 2582226,
+  "bankBytes": 2583640,
   "preserved": [
     "ids",
     "questions",
@@ -35,5 +35,12 @@
     "Each numeric family has an explicit formula/substitution/arithmetic lesson; no splitting of the former paragraph.",
     "Reading evidence is checked as an exact substring of the named paragraph.",
     "The closest printed alternative in abp-35-56 is explicitly identified as such; original options remain unchanged."
-  ]
+  ],
+  "introPractice": {
+    "questions": 40,
+    "perArea": 10,
+    "newQuestions": 0,
+    "startsWith": "abp-36-64",
+    "wholeReadings": 2
+  }
 }

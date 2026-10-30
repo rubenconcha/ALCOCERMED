@@ -21,3 +21,4 @@ review['questionDataSha256']=hashlib.sha256((work/'calculation-questions.json').
 (ROOT/'api/_sufficiency/calculation-review.json').write_text(json.dumps(review,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print('Rebuild complete: 800 questions, 40 passages and 60 named simulations. Original PDFs unchanged.')
 subprocess.run([sys.executable,str(Path(__file__).parent/'teach_steps.py')],check=True,cwd=ROOT)
+subprocess.run([sys.executable,str(Path(__file__).parent/'build_guided.py')],check=True,cwd=ROOT)

@@ -26,6 +26,20 @@
         if (!s) return `<section class="sf-worked-comment"><h3>Explicación</h3><p>${esc(q.explanation)}</p></section>`;
         return `<section class="sf-worked-comment sf-lesson" aria-label="Explicación paso a paso"><h3>Paso a paso</h3><p class="sf-lesson-goal">${esc(s.goal)}</p><div class="sf-basics"><h4>Antes de empezar</h4><p>${esc(s.basics)}</p></div><ol class="sf-steps">${s.steps.map(row => `<li><div><h4>${esc(row.title)}</h4><p>${esc(row.text)}</p>${row.formula ? `<div class="sf-formula">${esc(row.formula)}</div>` : ''}${row.quote ? `<blockquote>${esc(row.quote)}</blockquote><small class="sf-evidence-label">Párrafo ${esc(row.paragraph)} de la lectura</small>` : ''}</div></li>`).join('')}</ol><div class="sf-lesson-note"><h4>Ojo con esto</h4><p>${esc(s.mistake)}</p></div><div class="sf-lesson-check"><h4>Comprueba tu respuesta</h4><p>${esc(s.check)}</p></div></section>`;
     }
+    function promptHtml(q) {
+        const esc = escapeHtml;
+        if (q.id === 'abp-36-64') return '<h2 id="sf-question-title" tabindex="-1">¿Qué opción tiene exactamente seis números distintos?</h2>';
+        if (q.id === 'abp-05-01') {
+            const sets = [...q.text.matchAll(/([UABCD])=\{([^}]+)\}/g)];
+            return `<h2 id="sf-question-title" tabindex="-1">¿Qué números cumplen estas tres condiciones?</h2><ul class="sf-task-list"><li>Están en C o en D.</li><li>No están en A.</li><li>También están en B.</li></ul><dl class="sf-given">${sets.map(([_, name, values]) => `<div><dt>${name === 'U' ? 'Universo U' : name}</dt><dd>{${esc(name === 'U' ? '−10, −9, −8, −7, −6, −5, −4, −3, −2, −1' : values.replace(/,/g, ', '))}}</dd></div>`).join('')}</dl><details class="sf-original"><summary>Ver la pregunta con símbolos</summary><p>${esc(q.text)}</p></details>`;
+        }
+        const sentences = q.text.split(/(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚÜÑ¿])/);
+        return `<h2 id="sf-question-title" tabindex="-1">${sentences.map(sentence => `<span class="sf-prompt-line">${esc(sentence)}</span>`).join('')}</h2>`;
+    }
+    function optionText(q, index) {
+        if (q.id === 'abp-36-64') return ['Solo el número 6', 'Una lista que continúa antes y después del 6', '{0, 1, 2, 3, 4, 5}', '{1, 2, 3, 4, 5, 6, …} (la lista continúa)'][index];
+        return q.options[index];
+    }
     function validate(bank) {
         if (!bank || !Array.isArray(bank.questions) || !Array.isArray(bank.passages)) return false;
         const ids = new Set(), passages = new Set(bank.passages.map(p => p.id));
@@ -41,6 +55,13 @@
         }) && Object.keys(subjects).every(s => bank.questions.some(q => q.subject === s)) &&
             bank.passages.every(p => typeof p.text === 'string' && p.text.length > 100 && p.source?.pdfPages?.length > 0);
         if (!validQuestions) return false;
+        if (bank.introPaper) {
+            const p = bank.introPaper, lookup = new Map(bank.questions.map(q => [q.id, q]));
+            if (p.id !== 'inicial' || p.questionCount !== 40 || p.minutes !== 60 || !Array.isArray(p.questionIds) || p.questionIds.length !== 40 || new Set(p.questionIds).size !== 40) return false;
+            const rows = p.questionIds.map(id => lookup.get(id));
+            if (rows.some(q => !q) || Object.keys(subjects).some(s => rows.filter(q => q.subject === s).length !== 10)) return false;
+            if (rows.filter(q => q.subject === 'lectura').some(q => rows.filter(r => r.passageId === q.passageId).length !== bank.questions.filter(r => r.passageId === q.passageId).length)) return false;
+        }
         if (!bank.papers) return true;
         if (!Array.isArray(bank.papers) || !bank.papers.length) return false;
         const paperIds = new Set(), lookup = new Map(bank.questions.map(q => [q.id, q]));
@@ -67,7 +88,7 @@
     function select(bank, area, seed) {
         if (!validate(bank)) throw new Error('Banco incompleto');
         const rng = random(seed);
-        if (area.startsWith('simulacro:')) {
+        if (area === 'inicial' || area.startsWith('simulacro:')) {
             const selected = paper(bank, area);
             if (!selected) throw new Error('Simulacro no encontrado');
             const lookup = new Map(bank.questions.map(q => [q.id, q]));
@@ -104,8 +125,8 @@
             const value = saved.answers?.[id];
             if (Number.isInteger(value) && value >= 0 && value < lookup.get(id).options.length) answers[id] = value;
         }
-        return { ...saved, answers, flags: Array.isArray(saved.flags) ? saved.flags.filter(id => saved.ids.includes(id)) : [], index: Math.max(0, Math.min(saved.ids.length - 1, Number.isInteger(saved.index) ? saved.index : 0)), finished: saved.finished === true };
+        return { ...saved, answers, helpOpen: Array.isArray(saved.helpOpen) ? [...new Set(saved.helpOpen.filter(id => saved.ids.includes(id)))] : [], flags: Array.isArray(saved.flags) ? saved.flags.filter(id => saved.ids.includes(id)) : [], index: Math.max(0, Math.min(saved.ids.length - 1, Number.isInteger(saved.index) ? saved.index : 0)), finished: saved.finished === true };
     }
-    function paper(bank, area) { return bank?.papers?.find(p => 'simulacro:' + p.id === area) || null; }
-    return { subjects, validate, select, grade, restore, paper, solutionHtml };
+    function paper(bank, area) { return ['inicial', 'simulacro:inicial'].includes(area) ? bank?.introPaper || null : bank?.papers?.find(p => 'simulacro:' + p.id === area) || null; }
+    return { subjects, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText };
 });

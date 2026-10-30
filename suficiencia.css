@@ -1,5 +1,14 @@
 #suficiencia-screen{max-width:1160px;margin:0 auto;padding:28px 28px 70px;color:#1c2942;font-family:inherit}
 #suficiencia-screen *{box-sizing:border-box;text-transform:none}
+.sf-start-easy{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px;background:#fff;border:1px solid #dce7ef;border-top:4px solid #238fbf;border-radius:18px;margin:22px 0}.sf-start-easy>div{max-width:720px}#suficiencia-screen .sf-start-easy h2{margin:0 0 9px;font-size:23px}#suficiencia-screen .sf-start-easy p{font-size:16px;margin:0 0 10px;color:#4e647a}.sf-start-easy small{font-size:12px;color:#6c8196}.sf-start-easy>.sf-button{flex-shrink:0}
+.sf-prompt-line{display:block;margin-bottom:12px}.sf-prompt-line:last-child{margin-bottom:0}
+#suficiencia-screen .sf-task-list{padding-left:22px;font-size:17px;line-height:1.9;margin:8px 0 20px}
+.sf-given{padding:15px 18px;background:#f4f8fc;border-radius:12px;margin:18px 0;display:grid;gap:10px;font-size:17px;line-height:1.8}.sf-given>div{display:grid;grid-template-columns:90px minmax(0,1fr);gap:14px}.sf-given dt{font-size:14px;font-weight:700;color:#526d85}.sf-given dd{margin:0;overflow-wrap:anywhere;font-variant-numeric:lining-nums}
+.sf-original{margin:18px 0;color:#60748a}.sf-original summary{font-size:13px;cursor:pointer}.sf-original p{font-size:16px!important;line-height:1.8!important}
+.sf-question-help{border-top:1px solid #e4ebf2;padding-top:20px;margin:22px 0}.sf-help-button{font-size:16px!important;color:#1e658d!important;background:#edf6fc!important;border:1px solid #b5d1e4!important;border-radius:10px!important;padding:13px 18px!important;min-height:48px}
+#suficiencia-screen .sf-help-caption{font-size:13px;color:#688097;margin:9px 0 0}.sf-help-answer{font-size:16px!important;line-height:1.7;color:#246b52;padding:15px;border:1px solid #cbe1d5;background:#f0f8f4;border-radius:10px;overflow-wrap:anywhere}
+#suficiencia-screen .sf-options label>span:last-child{font-size:16px}
+@media(max-width:600px){.sf-start-easy{flex-direction:column;align-items:stretch;padding:20px;gap:18px}.sf-start-easy>.sf-button{width:100%}.sf-given{padding:14px;font-size:16px}.sf-given>div{grid-template-columns:1fr;gap:1px}.sf-given dt{font-size:13px}.sf-help-button{width:100%;font-size:15px!important}#suficiencia-screen .sf-task-list{font-size:16px}}
 #suficiencia-screen button{font:inherit;cursor:pointer}
 #suficiencia-screen button:disabled{opacity:.45;cursor:default}
 #suficiencia-screen button:focus-visible,#suficiencia-screen summary:focus-visible,#suficiencia-screen input:focus-visible{outline:3px solid #f9b421;outline-offset:3px}

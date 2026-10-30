@@ -171,6 +171,24 @@ test('student module finishes automatically at the absolute deadline and clears 
     const saved = JSON.parse([...storage.values()][0]);
     assert.equal(saved.ids.length, 40); assert.equal(saved.deadline - now, 3600000);
     assert.equal(saved.questions, undefined); assert.equal(saved.correct, undefined);
+    assert.match(root.innerHTML, /Ver resolución paso a paso/);
+    assert.ok(!root.innerHTML.includes('<div id="sf-current-help">'));
+    assert.match(root.innerHTML, /¿Qué números cumplen estas tres condiciones/);
+    await click('help');
+    assert.ok(root.innerHTML.includes('<div id="sf-current-help">'));
+    assert.match(root.innerHTML, /Construimos el complemento/);
+    assert.match(root.innerHTML, /Respuesta del ejercicio/);
+    let assisted = JSON.parse(storage.get('alcocermed:suficiencia:v1:student-a'));
+    assert.deepEqual(assisted.answers, {}); // Opening a solution must never choose a radio answer.
+    assert.equal(assisted.deadline, saved.deadline);
+    assert.deepEqual(assisted.helpOpen, [saved.ids[0]]);
+    await click('next');
+    assert.ok(!root.innerHTML.includes('<div id="sf-current-help">')); // The next question starts collapsed.
+    await click('prev');
+    assert.ok(root.innerHTML.includes('<div id="sf-current-help">')); // Returning preserves the help state.
+    await click('hide-help');
+    assert.ok(!root.innerHTML.includes('<div id="sf-current-help">'));
+    assert.deepEqual(JSON.parse(storage.get('alcocermed:suficiencia:v1:student-a')).answers, {});
     assert.ok(intervals.size > 0);
     now += 3600001;
     for (const fn of [...intervals.values()]) fn();
@@ -338,4 +356,48 @@ test('lesson rendering escapes text, formulas and quotes and keeps the legacy fa
     assert.ok(!/<(?:img|script|iframe)\b/.test(html));
     assert.match(html, /&lt;img/); assert.match(html, /&lt;script/); assert.match(html, /&lt;iframe/);
     assert.match(C.solutionHtml({ explanation: '<img src=x>' }), /&lt;img/);
+});
+
+test('the initial practice starts with counting and includes ten questions per area and whole readings', () => {
+    const rows = C.select(bank, 'inicial', 1);
+    assert.equal(rows.length, 40);
+    assert.equal(rows[0].id, 'abp-36-64');
+    assert.deepEqual(rows.map(q => q.id), C.select(bank, 'inicial', 999).map(q => q.id));
+    for (const subject of Object.keys(C.subjects)) assert.equal(rows.filter(q => q.subject === subject).length, 10);
+    const readingIds = [...new Set(rows.filter(q => q.subject === 'lectura').map(q => q.passageId))];
+    assert.equal(readingIds.length, 2);
+    for (const id of readingIds) assert.equal(rows.filter(q => q.passageId === id).length, bank.questions.filter(q => q.passageId === id).length);
+    assert.equal(C.paper(bank, 'inicial').minutes, 60);
+    assert.equal(C.paper(bank, 'simulacro:inicial').id, 'inicial');
+    assert.equal(bank.papers.length, 60); // Existing exam series and saved attempts are preserved.
+    for (const id of ['missing', rows[1].id]) {
+        const broken = structuredClone(bank); broken.introPaper.questionIds[0] = id;
+        assert.equal(C.validate(broken), false);
+    }
+});
+
+test('restored help only refers to questions in this account attempt and preserves selected answers', () => {
+    const q = bank.questions[0];
+    const saved = {owner:'a',version:bank.version,ids:[q.id],answers:{[q.id]:1},helpOpen:[q.id,q.id,'missing'],deadline:Date.now()+60000};
+    const restored = C.restore(saved,bank,'a');
+    assert.deepEqual(restored.helpOpen,[q.id]);
+    assert.deepEqual(restored.answers,{[q.id]:1});
+    assert.equal(C.restore(saved,bank,'b'),null);
+    delete saved.helpOpen;
+    assert.deepEqual(C.restore(saved,bank,'a').helpOpen,[]); // Older saves remain compatible.
+});
+
+test('readable prompts preserve the source expression and escape any HTML', () => {
+    const q=bank.questions.find(q=>q.id==='abp-05-01');
+    const html=C.promptHtml(q);
+    assert.match(html,/Están en C o en D/);
+    assert.match(html,/No están en A/);
+    assert.match(html,/También están en B/);
+    assert.match(html,/Ver la pregunta con símbolos/);
+    assert.match(html,/\[\(C ∪ D\) ∩ Aᶜ\] ∩ B/);
+    assert.ok(!C.promptHtml({id:'custom',text:'<img src=x>. Otro dato.'}).includes('<img'));
+    const first=bank.questions.find(q=>q.id==='abp-36-64');
+    assert.equal(C.optionText(first,first.correct),'{0, 1, 2, 3, 4, 5}');
+    assert.equal(C.optionText(first,0),'Solo el número 6');
+    for (const q of bank.questions) for (let i=0;i<q.options.length;i++) assert.equal(typeof C.optionText(q,i),'string');
 });
