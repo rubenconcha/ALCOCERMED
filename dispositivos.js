@@ -1,14 +1,32 @@
 (function () {
  'use strict';
  const el=id=>document.getElementById(id);
- let client,user,state,currentId,busy=false,verified=false,sentEmail='',resendAt=0;
+ let client,user,state,currentId,busy=false,verified=false,sentEmail='',resendAt=0,resendTimer=null,sendBlocked=false;
  function status(text,error=false){el('status').textContent=text;el('status').dataset.error=String(error);}
  function date(value){return new Date(value).toLocaleString('es-BO',{dateStyle:'short',timeStyle:'short'});}
  function failure(error,verifying=false){
-  if(error?.status===429||/rate|seconds|too many/i.test(error?.message||''))return 'Demasiados intentos. Espera unos minutos y vuelve a intentarlo.';
+  if(error?.code==='over_email_send_rate_limit')return 'Se alcanzó el límite de envíos de correo. Esperar un minuto no lo resuelve. Pide ayuda a la preparatoria.';
+  if(error?.status===429||/rate|too many/i.test(error?.message||''))return verifying?'Demasiados intentos de verificación. Espera unos minutos antes de volver a probar.':'Por ahora no podemos enviar otro código. Espera unos minutos o pide ayuda a la preparatoria.';
   if(error?.code==='email_address_not_authorized'||/not authorized|smtp|sending.*email/i.test(error?.message||''))return 'El envío de correos no está disponible. Contacta con la preparatoria.';
   if(verifying&&(error?.code==='otp_expired'||error?.status===403))return 'El código es incorrecto o venció. Revísalo o pide uno nuevo.';
   return 'No se pudo completar la solicitud. Revisa tu conexión e inténtalo de nuevo.';
+ }
+ function updateResend(){
+  const seconds=Math.max(0,Math.ceil((resendAt-Date.now())/1000));
+  el('send').disabled=busy||seconds>0||sendBlocked;
+  el('send').textContent=sendBlocked?'Envío temporalmente no disponible':seconds?'Reenviar en '+seconds+' s':sentEmail?'Reenviar código':'Enviar código';
+  if(!seconds&&resendTimer!==null){clearInterval(resendTimer);resendTimer=null;}
+ }
+ function rememberRequest(email,sent){
+  try{sessionStorage.setItem('alcocer_code_request',JSON.stringify({email,until:resendAt,sent,at:Date.now()}));sessionStorage.setItem('alcocer_device_change_email',email);}catch(_){}
+ }
+ function startCooldown(seconds){
+  resendAt=Date.now()+seconds*1000;updateResend();
+  if(resendTimer===null)resendTimer=setInterval(updateResend,1000);
+ }
+ function showCodeForm(email){
+  sentEmail=email;el('email').readOnly=true;el('code-form').hidden=false;el('send').className='secondary';
+  el('title').textContent='Escribe tu código';el('intro').textContent='Al confirmarlo, este navegador ocupará el lugar del anterior.';
  }
  function freshEmail(session){
   try{const claims=JSON.parse(atob(session.access_token.split('.')[1].replace(/-/g,'+').replace(/_/g,'/')));const now=Date.now()/1000;return claims.amr?.some(a=>a.method==='otp'&&a.timestamp>=now-600&&a.timestamp<=now+30)===true;}catch(_){return false;}
@@ -16,7 +34,8 @@
  function finish(){
   el('verification').hidden=true;el('account').hidden=true;el('success').hidden=false;
   el('title').textContent='Listo, ya puedes entrar';el('intro').textContent='Este navegador está autorizado.';status('');el('retry').hidden=true;
-  try{sessionStorage.removeItem('alcocer_device_change_email');}catch(_){}
+  if(resendTimer!==null){clearInterval(resendTimer);resendTimer=null;}
+  try{sessionStorage.removeItem('alcocer_device_change_email');sessionStorage.removeItem('alcocer_code_request');}catch(_){}
  }
  async function replace(device){
   status('Autorizando este navegador…');
@@ -59,14 +78,21 @@
  }
  el('send-form').addEventListener('submit',async event=>{
   event.preventDefault();if(busy)return;
-  if(Date.now()<resendAt){status('Espera un minuto antes de pedir otro código.',true);return;}
+  if(sendBlocked)return;
+  if(Date.now()<resendAt){updateResend();status('Ya solicitaste un código. Puedes escribirlo mientras termina la cuenta regresiva.');return;}
   const email=el('email').value.trim().toLowerCase();if(!email||!el('email').checkValidity())return;
   busy=true;el('send').disabled=true;status('Enviando código…');
   try{
    const response=await client.auth.signInWithOtp({email,options:{shouldCreateUser:false}});if(response.error)throw response.error;
-   sentEmail=email;resendAt=Date.now()+60000;el('email').readOnly=true;el('code-form').hidden=false;el('send').textContent='Reenviar código';el('send').className='secondary';el('title').textContent='Escribe tu código';el('intro').textContent='Al confirmarlo, este navegador ocupará el lugar del anterior.';
+   showCodeForm(email);startCooldown(60);rememberRequest(email,true);
    status('Solicitamos un código para '+email+'. Revisa también Spam. Si no llega, pide ayuda a la preparatoria.');el('code').focus();
-  }catch(error){status(failure(error),true);}finally{busy=false;el('send').disabled=false;}
+  }catch(error){
+   const match=String(error?.message||'').match(/(?:after|in|wait)\s+(\d+)\s*(?:seconds?|s\b)/i);
+   if(match&&(error?.status===429||/security|request/i.test(error?.message||''))){
+    showCodeForm(email);startCooldown(Math.max(1,Math.min(3600,Number(match[1]))));rememberRequest(email,true);
+    status('Ya se solicitó un código. Revisa tu correo y espera la cuenta regresiva antes de pedir otro.');
+   }else{if(error?.code==='over_email_send_rate_limit')sendBlocked=true;status(failure(error),true);}
+  }finally{busy=false;updateResend();}
  });
  el('code-form').addEventListener('submit',async event=>{
   event.preventDefault();if(busy||!sentEmail)return;
@@ -86,7 +112,13 @@
  async function init(){
   try{
    currentId=DeviceGuard.getDeviceId();const cfg=window.ALCOCER_CONFIG;client=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_KEY);
-   let pending='';try{pending=sessionStorage.getItem('alcocer_device_change_email')||'';}catch(_){}el('email').value=pending;
+   let pending='',saved=null;
+   try{pending=sessionStorage.getItem('alcocer_device_change_email')||'';saved=JSON.parse(sessionStorage.getItem('alcocer_code_request')||'null');}catch(_){}
+   el('email').value=pending;
+   if(saved?.email===pending&&saved.sent&&saved.at>Date.now()-3600000){
+    showCodeForm(pending);
+    if(saved.until>Date.now())startCooldown(Math.ceil((saved.until-Date.now())/1000));else updateResend();
+   }
    // Support previously delivered links during the rollout.
    if(location.hash){
     const result=await client.auth.getSession();history.replaceState(null,'',location.pathname);
