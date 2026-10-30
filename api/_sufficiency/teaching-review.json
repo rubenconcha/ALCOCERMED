@@ -1,0 +1,39 @@
+{
+  "revision": 1,
+  "date": "2026-10-30",
+  "questions": 800,
+  "areas": {
+    "matematicas": 200,
+    "fisica": 200,
+    "quimica": 200,
+    "lectura": 200
+  },
+  "stepCount": {
+    "4": 167,
+    "5": 501,
+    "6": 119,
+    "7": 11,
+    "8": 1,
+    "10": 1
+  },
+  "numericFamilies": 59,
+  "originalAbpLessons": 92,
+  "readingLessons": 200,
+  "questionAndKeySha256": "a163f0f0f60d01405b762b0d37650762e86d10038ea392d95b6c603dd50f8bec",
+  "bankBytes": 2582226,
+  "preserved": [
+    "ids",
+    "questions",
+    "options",
+    "answer keys",
+    "sources",
+    "passages",
+    "papers",
+    "saved-attempt version"
+  ],
+  "notes": [
+    "Each numeric family has an explicit formula/substitution/arithmetic lesson; no splitting of the former paragraph.",
+    "Reading evidence is checked as an exact substring of the named paragraph.",
+    "The closest printed alternative in abp-35-56 is explicitly identified as such; original options remain unchanged."
+  ]
+}

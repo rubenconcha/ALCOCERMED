@@ -225,7 +225,10 @@ test('20 fixed complete papers and 40 subject papers cover the entire bank witho
 test('new content is explicit practice with source anchors, not attributed to an original official paper', () => {
     const base = require('../api/_sufficiency/base-selection.json');
     const original = new Map(base.questions.map(q => [q.id, q]));
-    for (const q of base.questions) assert.deepEqual(bank.questions.find(row => row.id === q.id), q);
+    for (const q of base.questions) {
+        const { solution, ...unchanged } = bank.questions.find(row => row.id === q.id);
+        assert.deepEqual(unchanged, q);
+    }
     const variants = bank.questions.filter(q => q.source.kind === 'variante de práctica');
     assert.equal(variants.length, 508);
     for (const q of variants) {
@@ -269,4 +272,70 @@ test('paper integrity rejects split texts, unknown questions, repeated identifie
         const changed = structuredClone(bank); mutate(changed); assert.equal(C.validate(changed), false);
     }
     assert.throws(() => C.select(bank, 'simulacro:missing', 1), /no encontrado/);
+});
+
+test('all 800 questions have beginner lessons and the final answer agrees with the preserved key', () => {
+    assert.equal(bank.teachingRevision, 1);
+    assert.equal(bank.questions.length, 800);
+    for (const q of bank.questions) {
+        const s = q.solution;
+        assert.equal(s.level, 'desde-cero', q.id);
+        assert.equal(s.answer, q.options[q.correct], q.id);
+        assert.ok(s.steps.length >= 4 && s.steps.length <= 12, q.id);
+        for (const field of ['goal', 'basics', 'mistake', 'check']) assert.ok(s[field].length > 20, q.id + ':' + field);
+        for (const row of s.steps) assert.ok(row.title.length > 5 && row.text.length > 10, q.id);
+        assert.ok(!/\b(?:NaN|Infinity|undefined)\b|\{(?:a|b|c|value)\}/.test(JSON.stringify(s)), q.id);
+        assert.match(C.solutionHtml(q), /<ol class="sf-steps">/);
+    }
+    // The private response stays below Vercel's response-size limit.
+    assert.ok(Buffer.byteLength(JSON.stringify(bank)) < 4_000_000);
+});
+
+test('reading explanations cite exact evidence from the identified paragraph and keep negative questions negative', () => {
+    const passages = new Map(bank.passages.map(p => [p.id, p]));
+    for (const q of bank.questions.filter(q => q.subject === 'lectura')) {
+        const quotes = q.solution.steps.filter(s => s.quote);
+        assert.ok(quotes.length >= 1, q.id);
+        for (const row of quotes) assert.ok(passages.get(q.passageId).text.split('\n\n')[row.paragraph - 1].includes(row.quote), q.id);
+        if (q.topic === 'Idea principal') assert.deepEqual([...new Set(quotes.map(row => row.paragraph))], [1, 2]);
+    }
+    for (const id of ['lectura-hipotesis-5', 'lectura-homeostasis-3', 'lectura-ampliada-agua-3']) {
+        const q = bank.questions.find(q => q.id === id);
+        assert.match(q.solution.steps.at(-1).text, /rechazar|no se puede suponer/);
+        assert.match(q.solution.check, /pregunta negativa/);
+    }
+});
+
+test('worked examples expose unit conversions, intermediate arithmetic and sign changes', () => {
+    const text = id => JSON.stringify(bank.questions.find(q => q.id === id).solution);
+    for (const expected of ['144000', '3600', '40', '5', '6000']) assert.ok(text('abp-11-19').includes(expected));
+    assert.match(text('abp-13-19'), /20\+15\+12/);
+    assert.match(text('abp-13-19'), /47\/60/);
+    assert.match(text('abp-41-30'), /−2bcyz.*positivo/);
+    assert.match(text('abp-35-56'), /no son un redondeo exacto/);
+    assert.match(text('abp-43-43'), /3\(d\+3\)−4d=5/);
+    assert.match(text('abp-31-40'), /600\/12=50/);
+});
+
+test('a damaged lesson, mismatched answer or invented reading citation is rejected', () => {
+    for (const mutate of [
+        b => { delete b.questions[0].solution; },
+        b => { b.questions[0].solution.steps = []; },
+        b => { b.questions[0].solution.answer = 'incorrect key'; },
+        b => { b.questions.find(q => q.subject === 'lectura').solution.steps.find(s => s.quote).quote = 'This is not in the text.'; },
+        b => { b.questions.find(q => q.subject === 'lectura').solution.steps.find(s => s.quote).paragraph = 999; }
+    ]) {
+        const changed = structuredClone(bank); mutate(changed); assert.equal(C.validate(changed), false);
+    }
+});
+
+test('lesson rendering escapes text, formulas and quotes and keeps the legacy fallback', () => {
+    const q = structuredClone(bank.questions.find(q => q.subject === 'lectura'));
+    q.solution.basics = '<img src=x onerror=alert(1)>';
+    q.solution.steps[0].formula = '<script>alert(1)</script>';
+    q.solution.steps[1].quote = '<iframe src=x></iframe>';
+    const html = C.solutionHtml(q);
+    assert.ok(!/<(?:img|script|iframe)\b/.test(html));
+    assert.match(html, /&lt;img/); assert.match(html, /&lt;script/); assert.match(html, /&lt;iframe/);
+    assert.match(C.solutionHtml({ explanation: '<img src=x>' }), /&lt;img/);
 });

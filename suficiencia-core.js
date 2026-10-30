@@ -5,6 +5,27 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
     'use strict';
     const subjects = { matematicas: 'Matemáticas', fisica: 'Física', quimica: 'Química', lectura: 'Lectura comprensiva' };
+    const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+    function validSolution(q, bank) {
+        const s = q.solution;
+        if (!s || s.version !== 1 || s.level !== 'desde-cero' || s.answer !== q.options[q.correct]) return false;
+        if (!['goal', 'basics', 'mistake', 'check'].every(k => typeof s[k] === 'string' && s[k].trim())) return false;
+        if (!Array.isArray(s.steps) || s.steps.length < 4 || s.steps.length > 12) return false;
+        return s.steps.every(row => {
+            if (!row || !['title', 'text'].every(k => typeof row[k] === 'string' && row[k].trim())) return false;
+            if (row.formula !== undefined && typeof row.formula !== 'string') return false;
+            if (row.quote !== undefined) {
+                const text = bank.passages.find(p => p.id === q.passageId)?.text;
+                if (typeof row.quote !== 'string' || !row.quote.trim() || !Number.isInteger(row.paragraph) || row.paragraph < 1 || !text?.split('\n\n')[row.paragraph - 1]?.includes(row.quote)) return false;
+            }
+            return true;
+        }) && (q.subject !== 'lectura' || s.steps.some(row => row.quote));
+    }
+    function solutionHtml(q) {
+        const s = q.solution, esc = escapeHtml;
+        if (!s) return `<section class="sf-worked-comment"><h3>Explicación</h3><p>${esc(q.explanation)}</p></section>`;
+        return `<section class="sf-worked-comment sf-lesson" aria-label="Explicación paso a paso"><h3>Paso a paso</h3><p class="sf-lesson-goal">${esc(s.goal)}</p><div class="sf-basics"><h4>Antes de empezar</h4><p>${esc(s.basics)}</p></div><ol class="sf-steps">${s.steps.map(row => `<li><div><h4>${esc(row.title)}</h4><p>${esc(row.text)}</p>${row.formula ? `<div class="sf-formula">${esc(row.formula)}</div>` : ''}${row.quote ? `<blockquote>${esc(row.quote)}</blockquote><small class="sf-evidence-label">Párrafo ${esc(row.paragraph)} de la lectura</small>` : ''}</div></li>`).join('')}</ol><div class="sf-lesson-note"><h4>Ojo con esto</h4><p>${esc(s.mistake)}</p></div><div class="sf-lesson-check"><h4>Comprueba tu respuesta</h4><p>${esc(s.check)}</p></div></section>`;
+    }
     function validate(bank) {
         if (!bank || !Array.isArray(bank.questions) || !Array.isArray(bank.passages)) return false;
         const ids = new Set(), passages = new Set(bank.passages.map(p => p.id));
@@ -15,7 +36,8 @@
                 Array.isArray(q.options) && [4, 5].includes(q.options.length) && q.options.every(o => typeof o === 'string' && o.trim()) &&
                 new Set(q.options).size === q.options.length && Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length &&
                 typeof q.explanation === 'string' && q.explanation.length > 0 && q.source?.pdfPages?.length > 0 &&
-                (q.subject !== 'lectura' || passages.has(q.passageId));
+                (q.subject !== 'lectura' || passages.has(q.passageId)) &&
+                (!bank.teachingRevision || validSolution(q, bank));
         }) && Object.keys(subjects).every(s => bank.questions.some(q => q.subject === s)) &&
             bank.passages.every(p => typeof p.text === 'string' && p.text.length > 100 && p.source?.pdfPages?.length > 0);
         if (!validQuestions) return false;
@@ -85,5 +107,5 @@
         return { ...saved, answers, flags: Array.isArray(saved.flags) ? saved.flags.filter(id => saved.ids.includes(id)) : [], index: Math.max(0, Math.min(saved.ids.length - 1, Number.isInteger(saved.index) ? saved.index : 0)), finished: saved.finished === true };
     }
     function paper(bank, area) { return bank?.papers?.find(p => 'simulacro:' + p.id === area) || null; }
-    return { subjects, validate, select, grade, restore, paper };
+    return { subjects, validate, select, grade, restore, paper, solutionHtml };
 });

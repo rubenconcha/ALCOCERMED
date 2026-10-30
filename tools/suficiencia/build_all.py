@@ -20,3 +20,4 @@ review['date']='2026-10-30';review['sourcePdfSha256']=expected
 review['questionDataSha256']=hashlib.sha256((work/'calculation-questions.json').read_bytes()).hexdigest()
 (ROOT/'api/_sufficiency/calculation-review.json').write_text(json.dumps(review,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print('Rebuild complete: 800 questions, 40 passages and 60 named simulations. Original PDFs unchanged.')
+subprocess.run([sys.executable,str(Path(__file__).parent/'teach_steps.py')],check=True,cwd=ROOT)
