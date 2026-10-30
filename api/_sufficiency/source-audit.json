@@ -10,10 +10,10 @@
     "originalPatternIncluded": false
   },
   "counts": {
-    "matematicas": 40,
-    "fisica": 32,
-    "quimica": 20,
-    "lectura": 30
+    "matematicas": 200,
+    "fisica": 200,
+    "quimica": 200,
+    "lectura": 200
   },
   "method": "Se revisaron visualmente las páginas escaneadas, se normalizó la notación y se resolvieron los problemas. Las claves son razonadas para práctica; no se suministró patrón oficial. No se modificaron los PDF originales.",
   "excluded": [
@@ -250,25 +250,68 @@
     "author": "Kenneth S. Saladin",
     "edition": "6.ª edición",
     "title": "Anatomía y fisiología: la unidad entre forma y función",
-    "chapter": 1,
     "pdfPages": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
       36,
       37,
+      38,
+      39,
+      40,
+      41,
       42,
-      45
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      79,
+      80,
+      81,
+      82,
+      83
     ],
     "printedPages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
       8,
       9,
+      10,
+      11,
+      12,
+      13,
       14,
-      17
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      51,
+      52,
+      53,
+      54,
+      55
     ],
     "adapted": true,
     "creditVerifiedPdfPages": [
       5,
       6
     ],
-    "note": "El documento ABP no aporta pasajes completos de lectura comprensiva. Los seis pasajes y sus treinta preguntas son adaptaciones didácticas del texto oficial autorizado de Saladin, no preguntas del examen ABP.",
+    "note": "El documento ABP no aporta pasajes completos de lectura comprensiva. Los 40 textos y sus 200 preguntas son adaptaciones didácticas de los capítulos 1 y 2 del texto oficial de Saladin, no preguntas del examen ABP. Incluyen las seis lecturas iniciales y 34 nuevas.",
     "passages": [
       {
         "id": "lectura-hipotesis",
@@ -377,7 +420,689 @@
           ],
           "kind": "adaptación didáctica para lectura comprensiva"
         }
+      },
+      {
+        "id": "lectura-ampliada-forma-funcion",
+        "title": "Dos preguntas sobre el mismo cuerpo",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "El ámbito de la anatomía y la fisiología",
+          "pdfPages": [
+            30
+          ],
+          "printedPages": [
+            2
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-exploracion",
+        "title": "Observar no es la única manera de examinar",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Anatomía: el estudio de la forma",
+          "pdfPages": [
+            30
+          ],
+          "printedPages": [
+            2
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-escala",
+        "title": "El detalle cambia la pregunta",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Anatomía macroscópica e histología",
+          "pdfPages": [
+            31
+          ],
+          "printedPages": [
+            3
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-comparacion",
+        "title": "Comparar para comprender funciones",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Fisiología comparada y modelos de investigación",
+          "pdfPages": [
+            31,
+            38
+          ],
+          "printedPages": [
+            3,
+            10
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-autoridad",
+        "title": "Seguir un consejo y cuestionar un libro",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "El legado de griegos y romanos",
+          "pdfPages": [
+            32
+          ],
+          "printedPages": [
+            4
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-vesalio",
+        "title": "Bajar de la cátedra",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "El nacimiento de la medicina moderna",
+          "pdfPages": [
+            33
+          ],
+          "printedPages": [
+            5
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-circulacion",
+        "title": "Cuando una explicación necesita revisión",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "William Harvey y la fisiología experimental",
+          "pdfPages": [
+            33
+          ],
+          "printedPages": [
+            5
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-microscopios",
+        "title": "Un instrumento más simple no siempre muestra menos",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Hooke, Leeuwenhoek y la microscopia",
+          "pdfPages": [
+            33,
+            34
+          ],
+          "printedPages": [
+            5,
+            6
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-ciencia-cooperativa",
+        "title": "La investigación como empresa compartida",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "El método científico",
+          "pdfPages": [
+            35
+          ],
+          "printedPages": [
+            7
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-induccion",
+        "title": "De muchas observaciones a una generalización",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "El método inductivo",
+          "pdfPages": [
+            35
+          ],
+          "printedPages": [
+            7
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-muestras",
+        "title": "El tamaño de una prueba",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Diseño de experimentos: tamaño de muestra",
+          "pdfPages": [
+            36
+          ],
+          "printedPages": [
+            8
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-probabilidad",
+        "title": "Una diferencia no se interpreta sola",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Diseño de experimentos y análisis estadístico",
+          "pdfPages": [
+            36,
+            37
+          ],
+          "printedPages": [
+            8,
+            9
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-replicacion",
+        "title": "Después de publicar",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "La revisión científica externa",
+          "pdfPages": [
+            37
+          ],
+          "printedPages": [
+            9
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-historia-evolutiva",
+        "title": "Comprender una forma exige conocer su historia",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Orígenes y adaptaciones; repaso de temas principales",
+          "pdfPages": [
+            37,
+            38,
+            50
+          ],
+          "printedPages": [
+            9,
+            10,
+            22
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-seleccion",
+        "title": "Ventajas que cambian una población",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Evolución, selección y adaptación",
+          "pdfPages": [
+            38,
+            44
+          ],
+          "printedPages": [
+            10,
+            16
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-vision",
+        "title": "Una mirada adecuada al entorno",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Las adaptaciones básicas del ser humano como primate",
+          "pdfPages": [
+            39
+          ],
+          "printedPages": [
+            11
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-bipedestacion",
+        "title": "Caminar cambia más que la marcha",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Bipedestación",
+          "pdfPages": [
+            39,
+            40
+          ],
+          "printedPages": [
+            11,
+            12
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-jerarquia",
+        "title": "Un conjunto de niveles relacionados",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "La jerarquía de la complejidad",
+          "pdfPages": [
+            40,
+            41
+          ],
+          "printedPages": [
+            12,
+            13
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-celulas",
+        "title": "La unidad no es una pieza cualquiera",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Células, organelos y moléculas",
+          "pdfPages": [
+            41
+          ],
+          "printedPages": [
+            13
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-reduccionismo",
+        "title": "Desarmar para entender",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Reduccionismo y holismo",
+          "pdfPages": [
+            41,
+            42
+          ],
+          "printedPages": [
+            13,
+            14
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-holismo",
+        "title": "La persona y sus relaciones",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Reduccionismo y holismo",
+          "pdfPages": [
+            42
+          ],
+          "printedPages": [
+            14
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-vida",
+        "title": "Una característica aislada no basta",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Características de la vida",
+          "pdfPages": [
+            43,
+            44
+          ],
+          "printedPages": [
+            15,
+            16
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-desarrollo",
+        "title": "Aumentar de tamaño y adquirir una tarea",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Características de la vida: desarrollo",
+          "pdfPages": [
+            44
+          ],
+          "printedPages": [
+            16
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-referencia",
+        "title": "Un valor característico tiene contexto",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Variación fisiológica",
+          "pdfPages": [
+            44
+          ],
+          "printedPages": [
+            16
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-ciclo",
+        "title": "Detectar, integrar y responder",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Componentes de un ciclo de retroalimentación",
+          "pdfPages": [
+            46
+          ],
+          "printedPages": [
+            18
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-amplificacion",
+        "title": "La dirección de una respuesta",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Retroalimentación positiva y cambio rápido",
+          "pdfPages": [
+            46,
+            47
+          ],
+          "printedPages": [
+            18,
+            19
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-eponimos",
+        "title": "Cuando un nombre dice poco",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "La historia de la terminología anatómica",
+          "pdfPages": [
+            48
+          ],
+          "printedPages": [
+            20
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-palabras",
+        "title": "Desarmar una palabra para aprenderla",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Análisis de los términos médicos",
+          "pdfPages": [
+            48,
+            49
+          ],
+          "printedPages": [
+            20,
+            21
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-precision",
+        "title": "Una letra puede cambiar la referencia",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "La importancia de la precisión",
+          "pdfPages": [
+            50
+          ],
+          "printedPages": [
+            22
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-agua",
+        "title": "Disolver requiere una interacción",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "2. La química de la vida",
+          "section": "El agua: polaridad y capacidad de solvente",
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            51
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-calor",
+        "title": "Absorber calor sin cambiar tanto",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "2. La química de la vida",
+          "section": "Estabilidad térmica del agua",
+          "pdfPages": [
+            79,
+            80
+          ],
+          "printedPages": [
+            51,
+            52
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-mezclas",
+        "title": "Lo que una mezcla deja ver",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "2. La química de la vida",
+          "section": "Soluciones, coloides y suspensiones",
+          "pdfPages": [
+            80,
+            81
+          ],
+          "printedPages": [
+            52,
+            53
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-concentracion",
+        "title": "Misma masa no siempre significa misma cantidad de partículas",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "2. La química de la vida",
+          "section": "Medidas de concentración y molaridad",
+          "pdfPages": [
+            81,
+            82
+          ],
+          "printedPages": [
+            53,
+            54
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-ph",
+        "title": "Una escala que cambia por factores",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "2. La química de la vida",
+          "section": "Ácidos, bases y pH",
+          "pdfPages": [
+            82,
+            83
+          ],
+          "printedPages": [
+            54,
+            55
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
       }
+    ],
+    "chapters": [
+      1,
+      2
     ]
   },
   "grading": {
@@ -386,6 +1111,719 @@
     "minutes": 60,
     "wrongPenalty": 0,
     "officialDistribution": false,
-    "officialScore": false
+    "officialScore": false,
+    "completeSimulations": 20,
+    "subjectSimulations": 40,
+    "subjectQuestions": 20,
+    "subjectMinutes": 30
+  },
+  "expansion": {
+    "date": "2026-10-30",
+    "authorizedBy": "Solicitud expresa de mucho material nuevo siguiendo la lógica del documento de La Paz, con comentarios.",
+    "statistics": {
+      "questions": 800,
+      "perSubject": {
+        "matematicas": 200,
+        "fisica": 200,
+        "quimica": 200,
+        "lectura": 200
+      },
+      "passages": 40,
+      "completeSimulations": 20,
+      "subjectSimulations": 40,
+      "sourceSelection": 122,
+      "newPractice": 678,
+      "uniqueQuestionCount": 800,
+      "abpDocumentQuestions": 92,
+      "newABPStyleExercises": 508,
+      "readingQuestions": 200
+    },
+    "calculationFamilies": {
+      "matematicas": 160,
+      "fisica": 168,
+      "quimica": 180
+    },
+    "basis": "508 variantes nuevas ancladas a ejercicios concretos del ABP; 34 lecturas nuevas y 170 preguntas adaptadas de los capítulos 1 y 2 de Saladin. Se distinguen expresamente de la selección original.",
+    "fixedPapers": "Los 20 completos cubren las 800 preguntas una sola vez. Los 40 por materia vuelven a distribuir el mismo banco para repaso focalizado; no representan otras 800 preguntas diferentes.",
+    "readingReferences": [
+      {
+        "id": "lectura-ampliada-forma-funcion",
+        "title": "Dos preguntas sobre el mismo cuerpo",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "El ámbito de la anatomía y la fisiología",
+          "pdfPages": [
+            30
+          ],
+          "printedPages": [
+            2
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-exploracion",
+        "title": "Observar no es la única manera de examinar",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Anatomía: el estudio de la forma",
+          "pdfPages": [
+            30
+          ],
+          "printedPages": [
+            2
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-escala",
+        "title": "El detalle cambia la pregunta",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Anatomía macroscópica e histología",
+          "pdfPages": [
+            31
+          ],
+          "printedPages": [
+            3
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-comparacion",
+        "title": "Comparar para comprender funciones",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Fisiología comparada y modelos de investigación",
+          "pdfPages": [
+            31,
+            38
+          ],
+          "printedPages": [
+            3,
+            10
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-autoridad",
+        "title": "Seguir un consejo y cuestionar un libro",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "El legado de griegos y romanos",
+          "pdfPages": [
+            32
+          ],
+          "printedPages": [
+            4
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-vesalio",
+        "title": "Bajar de la cátedra",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "El nacimiento de la medicina moderna",
+          "pdfPages": [
+            33
+          ],
+          "printedPages": [
+            5
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-circulacion",
+        "title": "Cuando una explicación necesita revisión",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "William Harvey y la fisiología experimental",
+          "pdfPages": [
+            33
+          ],
+          "printedPages": [
+            5
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-microscopios",
+        "title": "Un instrumento más simple no siempre muestra menos",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Hooke, Leeuwenhoek y la microscopia",
+          "pdfPages": [
+            33,
+            34
+          ],
+          "printedPages": [
+            5,
+            6
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-ciencia-cooperativa",
+        "title": "La investigación como empresa compartida",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "El método científico",
+          "pdfPages": [
+            35
+          ],
+          "printedPages": [
+            7
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-induccion",
+        "title": "De muchas observaciones a una generalización",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "El método inductivo",
+          "pdfPages": [
+            35
+          ],
+          "printedPages": [
+            7
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-muestras",
+        "title": "El tamaño de una prueba",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Diseño de experimentos: tamaño de muestra",
+          "pdfPages": [
+            36
+          ],
+          "printedPages": [
+            8
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-probabilidad",
+        "title": "Una diferencia no se interpreta sola",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Diseño de experimentos y análisis estadístico",
+          "pdfPages": [
+            36,
+            37
+          ],
+          "printedPages": [
+            8,
+            9
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-replicacion",
+        "title": "Después de publicar",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "La revisión científica externa",
+          "pdfPages": [
+            37
+          ],
+          "printedPages": [
+            9
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-historia-evolutiva",
+        "title": "Comprender una forma exige conocer su historia",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Orígenes y adaptaciones; repaso de temas principales",
+          "pdfPages": [
+            37,
+            38,
+            50
+          ],
+          "printedPages": [
+            9,
+            10,
+            22
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-seleccion",
+        "title": "Ventajas que cambian una población",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Evolución, selección y adaptación",
+          "pdfPages": [
+            38,
+            44
+          ],
+          "printedPages": [
+            10,
+            16
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-vision",
+        "title": "Una mirada adecuada al entorno",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Las adaptaciones básicas del ser humano como primate",
+          "pdfPages": [
+            39
+          ],
+          "printedPages": [
+            11
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-bipedestacion",
+        "title": "Caminar cambia más que la marcha",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Bipedestación",
+          "pdfPages": [
+            39,
+            40
+          ],
+          "printedPages": [
+            11,
+            12
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-jerarquia",
+        "title": "Un conjunto de niveles relacionados",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "La jerarquía de la complejidad",
+          "pdfPages": [
+            40,
+            41
+          ],
+          "printedPages": [
+            12,
+            13
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-celulas",
+        "title": "La unidad no es una pieza cualquiera",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Células, organelos y moléculas",
+          "pdfPages": [
+            41
+          ],
+          "printedPages": [
+            13
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-reduccionismo",
+        "title": "Desarmar para entender",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Reduccionismo y holismo",
+          "pdfPages": [
+            41,
+            42
+          ],
+          "printedPages": [
+            13,
+            14
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-holismo",
+        "title": "La persona y sus relaciones",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Reduccionismo y holismo",
+          "pdfPages": [
+            42
+          ],
+          "printedPages": [
+            14
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-vida",
+        "title": "Una característica aislada no basta",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Características de la vida",
+          "pdfPages": [
+            43,
+            44
+          ],
+          "printedPages": [
+            15,
+            16
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-desarrollo",
+        "title": "Aumentar de tamaño y adquirir una tarea",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Características de la vida: desarrollo",
+          "pdfPages": [
+            44
+          ],
+          "printedPages": [
+            16
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-referencia",
+        "title": "Un valor característico tiene contexto",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Variación fisiológica",
+          "pdfPages": [
+            44
+          ],
+          "printedPages": [
+            16
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-ciclo",
+        "title": "Detectar, integrar y responder",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Componentes de un ciclo de retroalimentación",
+          "pdfPages": [
+            46
+          ],
+          "printedPages": [
+            18
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-amplificacion",
+        "title": "La dirección de una respuesta",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Retroalimentación positiva y cambio rápido",
+          "pdfPages": [
+            46,
+            47
+          ],
+          "printedPages": [
+            18,
+            19
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-eponimos",
+        "title": "Cuando un nombre dice poco",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "La historia de la terminología anatómica",
+          "pdfPages": [
+            48
+          ],
+          "printedPages": [
+            20
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-palabras",
+        "title": "Desarmar una palabra para aprenderla",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "Análisis de los términos médicos",
+          "pdfPages": [
+            48,
+            49
+          ],
+          "printedPages": [
+            20,
+            21
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-precision",
+        "title": "Una letra puede cambiar la referencia",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "1. Temas principales de anatomía y fisiología",
+          "section": "La importancia de la precisión",
+          "pdfPages": [
+            50
+          ],
+          "printedPages": [
+            22
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-agua",
+        "title": "Disolver requiere una interacción",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "2. La química de la vida",
+          "section": "El agua: polaridad y capacidad de solvente",
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            51
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-calor",
+        "title": "Absorber calor sin cambiar tanto",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "2. La química de la vida",
+          "section": "Estabilidad térmica del agua",
+          "pdfPages": [
+            79,
+            80
+          ],
+          "printedPages": [
+            51,
+            52
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-mezclas",
+        "title": "Lo que una mezcla deja ver",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "2. La química de la vida",
+          "section": "Soluciones, coloides y suspensiones",
+          "pdfPages": [
+            80,
+            81
+          ],
+          "printedPages": [
+            52,
+            53
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-concentracion",
+        "title": "Misma masa no siempre significa misma cantidad de partículas",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "2. La química de la vida",
+          "section": "Medidas de concentración y molaridad",
+          "pdfPages": [
+            81,
+            82
+          ],
+          "printedPages": [
+            53,
+            54
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      },
+      {
+        "id": "lectura-ampliada-ph",
+        "title": "Una escala que cambia por factores",
+        "source": {
+          "document": "Anatomía y fisiología: la unidad entre forma y función",
+          "author": "Kenneth S. Saladin",
+          "edition": "6.ª edición",
+          "chapter": "2. La química de la vida",
+          "section": "Ácidos, bases y pH",
+          "pdfPages": [
+            82,
+            83
+          ],
+          "printedPages": [
+            54,
+            55
+          ],
+          "kind": "adaptación didáctica para lectura comprensiva",
+          "original": false
+        }
+      }
+    ]
   }
 }

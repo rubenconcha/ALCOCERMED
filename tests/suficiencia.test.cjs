@@ -6,11 +6,11 @@ const C = require('../suficiencia-core.js');
 const bank = require('../api/_sufficiency/bank.json');
 const handler = require('../api/suficiencia.js');
 
-test('122 reviewed questions, four areas and six complete readings with page references', () => {
+test('800 questions, four areas and forty complete readings with page references', () => {
     assert.equal(C.validate(bank), true);
-    assert.equal(bank.questions.length, 122);
-    assert.deepEqual(Object.keys(C.subjects).map(s => bank.questions.filter(q => q.subject === s).length), [40, 32, 20, 30]);
-    assert.equal(bank.passages.length, 6);
+    assert.equal(bank.questions.length, 800);
+    assert.deepEqual(Object.keys(C.subjects).map(s => bank.questions.filter(q => q.subject === s).length), [200, 200, 200, 200]);
+    assert.equal(bank.passages.length, 40);
     assert.equal(bank.source.institution, 'UMSA');
     assert.equal(bank.source.originalPatternIncluded, false);
     for (const q of bank.questions) {
@@ -123,7 +123,7 @@ test('active subscriber receives validated private bank, with bearer forwarded o
             return { ok: true, json: async () => ({ ready: true, premium: true, expires_at: '2099-01-01' }) };
         };
         const res = response(); await handler({ method: 'GET', headers: { authorization: 'Bearer student-token' }, query: {} }, res);
-        assert.equal(res.code, 200); assert.equal(JSON.parse(res.body).questions.length, 122);
+        assert.equal(res.code, 200); assert.equal(JSON.parse(res.body).questions.length, 800);
         assert.equal(res.headers['Cache-Control'], 'private, no-store');
     } finally { global.fetch = originalFetch; process.chdir(originalCwd); }
 });
@@ -163,10 +163,10 @@ test('student module finishes automatically at the absolute deadline and clears 
     vm.createContext(context);
     vm.runInContext(fs.readFileSync(path.join(__dirname, '../suficiencia.js'), 'utf8'), context);
     await context.window.Sufficiency.open('integral');
-    const click = action => handlers.click({ target: { closest: () => ({ disabled: false, dataset: { sf: action } }) } });
+    const click = (action, area) => handlers.click({ target: { closest: () => ({ disabled: false, dataset: { sf: action, area } }) } });
     await click('topics');
     assert.equal(topicOpens, 1); // Original catalogue remains reachable without calling the new wrapper recursively.
-    await click('start');
+    await click('run', 'simulacro:completo-01');
     assert.match(root.innerHTML, /Pregunta 1/);
     const saved = JSON.parse([...storage.values()][0]);
     assert.equal(saved.ids.length, 40); assert.equal(saved.deadline - now, 3600000);
@@ -178,6 +178,9 @@ test('student module finishes automatically at the absolute deadline and clears 
     assert.match(root.innerHTML, /40 sin responder/);
     assert.equal(intervals.size, 0);
     assert.equal(JSON.parse([...storage.values()][0]).finished, true);
+    const completed = JSON.parse(storage.get('alcocermed:suficiencia:v1:student-a:papers'));
+    assert.equal(completed['completo-01'].owner, 'student-a');
+    assert.equal(completed['completo-01'].total, 40);
     authCallback('SIGNED_OUT', null); context.currentUser = null;
     assert.equal(root.innerHTML, '');
     context.currentUser = { id: 'student-b' };
@@ -187,4 +190,83 @@ test('student module finishes automatically at the absolute deadline and clears 
     context.window.CampusAccess.isFree = () => true;
     await context.window.openSimulacro();
     assert.equal(topicOpens, 2); // Free mini simulations from the previous catalogue remain accessible.
+});
+
+test('20 fixed complete papers and 40 subject papers cover the entire bank without repetition in either series', () => {
+    assert.equal(bank.papers.length, 60);
+    const lookup = new Map(bank.questions.map(q => [q.id, q]));
+    const complete = bank.papers.filter(p => p.subject === 'integral');
+    const subject = bank.papers.filter(p => p.subject !== 'integral');
+    assert.equal(complete.length, 20); assert.equal(subject.length, 40);
+    for (const p of bank.papers) {
+        const selected = C.select(bank, 'simulacro:' + p.id, 1);
+        assert.deepEqual(selected.map(q => q.id), C.select(bank, 'simulacro:' + p.id, 9981).map(q => q.id));
+        assert.equal(selected.length, p.subject === 'integral' ? 40 : 20);
+        assert.equal(p.minutes, p.subject === 'integral' ? 60 : 30);
+        assert.equal(p.commented, true);
+        for (const pid of new Set(selected.filter(q => q.passageId).map(q => q.passageId))) {
+            assert.equal(selected.filter(q => q.passageId === pid).length, 5);
+        }
+        if (p.subject === 'integral') {
+            for (const area of Object.keys(C.subjects)) assert.equal(selected.filter(q => q.subject === area).length, 10);
+            for (const area of ['matematicas', 'fisica', 'quimica']) {
+                assert.ok(new Set(selected.filter(q => q.subject === area).map(q => q.family || 'original:' + q.topic)).size >= 8);
+            }
+        } else assert.ok(selected.every(q => q.subject === p.subject));
+    }
+    for (const series of [complete, subject]) {
+        const ids = series.flatMap(p => p.questionIds);
+        assert.equal(ids.length, 800); assert.equal(new Set(ids).size, 800);
+        assert.ok(ids.every(id => lookup.has(id)));
+    }
+    for (const area of Object.keys(C.subjects)) assert.equal(subject.filter(p => p.subject === area).length, 10);
+});
+
+test('new content is explicit practice with source anchors, not attributed to an original official paper', () => {
+    const base = require('../api/_sufficiency/base-selection.json');
+    const original = new Map(base.questions.map(q => [q.id, q]));
+    for (const q of base.questions) assert.deepEqual(bank.questions.find(row => row.id === q.id), q);
+    const variants = bank.questions.filter(q => q.source.kind === 'variante de práctica');
+    assert.equal(variants.length, 508);
+    for (const q of variants) {
+        assert.equal(q.source.original, false);
+        const parent = original.get(q.source.parentId); assert.ok(parent);
+        assert.deepEqual(q.source.pdfPages, parent.source.pdfPages);
+        assert.ok(q.explanation.length > 80);
+        assert.ok(!/\b(?:NaN|Infinity|undefined|null)\b/.test([q.text, ...q.options, q.explanation].join(' ')));
+    }
+    assert.equal(new Set(bank.questions.filter(q => q.subject !== 'lectura').map(q => q.text)).size, 600);
+    assert.equal(new Set(bank.passages.map(p => p.text)).size, 40);
+    for (const p of bank.passages) {
+        assert.ok(p.text.split(/\s+/).length >= 90);
+        assert.equal(p.source.author, 'Kenneth S. Saladin');
+        assert.deepEqual(p.source.printedPages, p.source.pdfPages.map(n => n - 28));
+    }
+    assert.equal(bank.statistics.newPractice, 678);
+});
+
+test('508 generated keys match the independent numerical and symbolic verification across 59 problem families', () => {
+    const report = require('../api/_sufficiency/calculation-review.json');
+    assert.equal(report.verified, 508);
+    assert.equal(report.checks.length, 508);
+    assert.equal(Object.keys(report.families).length, 59);
+    for (const check of report.checks) {
+        const q = bank.questions.find(q => q.id === check.id); assert.ok(q);
+        assert.equal(check.verified, true);
+        assert.equal(check.answer, q.options[q.correct]);
+        assert.ok(check.expected.length > 0);
+    }
+});
+
+test('paper integrity rejects split texts, unknown questions, repeated identifiers and invalid duration', () => {
+    for (const mutate of [
+        b => { b.papers[1].id = b.papers[0].id; },
+        b => { b.papers[0].questionIds[0] = 'missing'; },
+        b => { b.papers[0].minutes = -1; },
+        b => { b.papers[20].subject = 'lectura'; },
+        b => { b.papers[0].questionIds[31] = b.questions.find(q => q.subject === 'lectura' && !b.papers[0].questionIds.includes(q.id)).id; }
+    ]) {
+        const changed = structuredClone(bank); mutate(changed); assert.equal(C.validate(changed), false);
+    }
+    assert.throws(() => C.select(bank, 'simulacro:missing', 1), /no encontrado/);
 });

@@ -4,13 +4,13 @@
     const C = window.SufficiencyCore, labels = C.subjects;
     const openTopicSimulacro = window.openSimulacro;
     const root = document.getElementById('suficiencia-screen');
-    let bank = null, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'integral', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null;
+    let bank = null, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'integral', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
     const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
     const key = id => 'alcocermed:suficiencia:v1:' + id;
     const user = () => typeof currentUser !== 'undefined' ? currentUser?.id : null;
-    const title = value => labels[value] || (value.startsWith('texto:') ? bank?.passages.find(p => p.id === value.slice(6))?.title : 'Simulacro');
+    const title = value => C.paper(bank, value)?.title || labels[value] || (value.startsWith('texto:') ? bank?.passages.find(p => p.id === value.slice(6))?.title : 'Simulacro');
     const button = (action, text, extra = '') => `<button type="button" class="sf-button ${extra}" data-sf="${action}">${text}</button>`;
-    const header = () => `<div class="sim-header sf-heading"><button type="button" class="btn-back-game" data-sf="home" aria-label="Volver al inicio"><i class="fas fa-arrow-left" aria-hidden="true"></i></button><div><h1 class="sim-title">Simulacro</h1><p class="sim-subtitle">Elige qué quieres practicar y revisa tus respuestas al terminar.</p></div></div>`;
+    const header = () => `<div class="sim-header sf-heading"><button type="button" class="btn-back-game" data-sf="home" aria-label="Volver al inicio"><i class="fas fa-arrow-left" aria-hidden="true"></i></button><div><h1 class="sim-title">Simulacro</h1><p class="sim-subtitle">${bank?.statistics ? `${bank.statistics.questions} preguntas comentadas · 20 simulacros completos · 40 por materia` : 'Elige un simulacro y revisa sus comentarios al terminar.'}</p></div></div>`;
     function stopClock() { clearInterval(clock); clock = null; }
     function clear() {
         generation++; stopClock(); if (pendingConfirmation) pendingConfirmation(false);
@@ -42,6 +42,7 @@
     }
     function sourceText(source) {
         const pages = 'pág. PDF ' + source.pdfPages.join(', ');
+        if (source.kind === 'variante de práctica') return `Práctica nueva de AlcocerMed, basada en el documento ABP de La Paz · ${pages} · ejercicio de referencia ${source.question}.`;
         if (source.document === 'MEDICINA EXÁMENES PASADOS ABP.pdf') return `Exámenes pasados ABP · UMSA · ${pages} · pregunta ${source.question}. ${source.kind === 'adaptada' ? 'Adaptada para la práctica.' : 'Notación normalizada.'}`;
         return `${source.author || 'Kenneth S. Saladin'}, ${source.edition || '6.ª edición'} · ${source.chapter || 'cap. 1'} · ${pages}${source.printedPages ? ' · pág. impresa ' + source.printedPages.join(', ') : ''}. Texto adaptado para lectura comprensiva.`;
     }
@@ -64,10 +65,10 @@
         return true;
     }
     async function open(next = 'integral') {
-        if (!labels[next] && next !== 'integral') next = 'integral';
+        if (!labels[next] && next !== 'integral' && next !== 'completos') next = 'integral';
         if (window.CampusAccess?.isFree()) return typeof openTopicSimulacro === 'function' ? openTopicSimulacro() : window.CampusAccess.unlock();
         if (typeof showScreen === 'function' && showScreen('suficiencia-screen') === false) return;
-        area = next;
+        area = next; cataloguePage = 0; catalogueQuery = '';
         document.getElementById('nav-simulacro')?.classList.add('nav-item-active');
         root.innerHTML = header() + '<p role="status" class="sf-notice">Cargando preguntas…</p>';
         try {
@@ -80,17 +81,48 @@
             root.innerHTML = header() + `<div class="sf-notice" role="alert">${esc(error.message)}</div>` + button('reload', 'Volver a intentar');
         }
     }
+    function previousScores() {
+        try {
+            const records = JSON.parse(localStorage.getItem(key(owner) + ':papers')) || {};
+            return Object.fromEntries(Object.entries(records).filter(([id, result]) => result && result.owner === owner && result.paperId === id && Number.isFinite(result.percent) && result.percent >= 0 && result.percent <= 100 && Number.isInteger(result.correct) && Number.isInteger(result.total) && result.correct >= 0 && result.correct <= result.total && result.total === C.paper(bank, 'simulacro:' + id)?.questionCount));
+        } catch (_) { return {}; }
+    }
+    function rememberResult() {
+        const selected = C.paper(bank, attempt.area);
+        if (!selected || owner !== user()) return;
+        const score = C.grade(questions, attempt.answers), records = previousScores();
+        records[selected.id] = { owner, paperId: selected.id, percent: score.percent, correct: score.correct, total: score.total, at: attempt.finishedAt };
+        try { localStorage.setItem(key(owner) + ':papers', JSON.stringify(records)); } catch (_) { /* Last attempt remains available even if history cannot be saved. */ }
+    }
+    function filteredPapers() {
+        const normalized = text => String(text).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+        const query = normalized(catalogueQuery).trim();
+        return bank.papers.filter(p => (area === 'integral' || (area === 'completos' ? p.subject === 'integral' : p.subject === area)) && (!query || normalized(p.title + ' ' + p.description + ' ' + (labels[p.subject] || 'completo')).includes(query)));
+    }
+    function renderCatalogueCards() {
+        const grid = root.querySelector('[data-sf-cards]'); if (!grid) return;
+        const matches = filteredPapers(), pages = Math.max(1, Math.ceil(matches.length / 12));
+        cataloguePage = Math.max(0, Math.min(cataloguePage, pages - 1));
+        const scores = previousScores();
+        grid.innerHTML = matches.slice(cataloguePage * 12, cataloguePage * 12 + 12).map(p => {
+            const result = scores[p.id], icon = p.subject === 'integral' ? 'exam' : p.subject === 'lectura' ? 'summary' : 'bank';
+            return `<article class="sim-library-card sf-catalogue-card" data-paper="${p.id}"><div class="sf-card-top"><span class="sim-library-stage">${p.subject === 'integral' ? 'CUATRO ÁREAS' : esc(labels[p.subject])}</span><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#${icon}"></use></svg></div><h2>${esc(p.title)}</h2><p class="sim-library-description">${esc(p.description)}</p><div class="sf-card-meta"><span><i class="far fa-file-alt" aria-hidden="true"></i> ${p.questionCount} preguntas</span><span><i class="far fa-clock" aria-hidden="true"></i> ${p.minutes} min</span></div><span class="sf-comment-label">Con comentario en cada pregunta</span>${result ? `<span class="sf-completed">Último resultado: ${result.correct}/${result.total} · ${result.percent}%</span>` : ''}${button('run', result ? 'Volver a practicar' : 'Empezar', 'sf-primary btn-primary').replace('data-sf="run"', `data-sf="run" data-area="simulacro:${p.id}"`)}</article>`;
+        }).join('') || '<p class="sf-notice">No encontramos simulacros con esa búsqueda.</p>';
+        const status = root.querySelector('[data-sf-status]');
+        if (status) status.textContent = matches.length + ' simulacros' + (matches.length ? ` · ${cataloguePage * 12 + 1}–${Math.min(matches.length, (cataloguePage + 1) * 12)}` : '');
+        const pager = root.querySelector('[data-sf-pagination]');
+        if (pager) pager.innerHTML = pages > 1 ? `${button('page-prev', '← Anterior').replace('data-sf="page-prev"', `data-sf="page-prev" ${cataloguePage === 0 ? 'disabled' : ''}`)}<span>Página ${cataloguePage + 1} de ${pages}</span>${button('page-next', 'Siguiente →').replace('data-sf="page-next"', `data-sf="page-next" ${cataloguePage === pages - 1 ? 'disabled' : ''}`)}` : '';
+    }
     function catalogue() {
         stopClock();
-        const choices = [{ id: 'integral', name: 'Examen completo', description: 'Matemáticas, física, química y lectura comprensiva.', count: 40, minutes: 60, tag: 'CUATRO ÁREAS', icon: 'exam' }, ...Object.entries(labels).map(([id, name]) => ({ id, name, description: id === 'lectura' ? 'Lee los textos y responde preguntas de comprensión.' : 'Practica los ejercicios y revisa cómo se resuelven.', count: bank.questions.filter(q => q.subject === id).length, minutes: Math.ceil(bank.questions.filter(q => q.subject === id).length * 1.5), tag: 'POR MATERIA', icon: id === 'lectura' ? 'summary' : 'bank' }))];
-        const shown = area === 'integral' ? choices : choices.filter(choice => choice.id === area);
         root.innerHTML = header() +
-            (attempt ? `<aside class="sf-resume"><div><strong>${attempt.finished ? 'Tu último resultado' : 'Continúa donde te quedaste'}</strong><p>${esc(title(attempt.area))} · ${attempt.ids.length} preguntas${attempt.finished ? '' : ' · el tiempo sigue corriendo'}</p></div>${button('resume', attempt.finished ? 'Ver resultado' : 'Continuar')}</aside>` : '') +
-            `<div class="sf-catalogue-filter"><label for="sf-area-filter">Materia<select id="sf-area-filter"><option value="integral" ${area === 'integral' ? 'selected' : ''}>Todas las materias</option>${Object.entries(labels).map(([id, name]) => `<option value="${id}" ${area === id ? 'selected' : ''}>${name}</option>`).join('')}</select></label><p>${area === 'integral' ? 'Un examen completo o práctica por materia' : esc(labels[area])}</p></div>` +
-            `<div class="sf-catalogue">${shown.map(choice => `<article class="sim-library-card sf-catalogue-card" data-subject="${choice.id}"><div class="sf-card-top"><span class="sim-library-stage">${choice.tag}</span><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#${choice.icon}"></use></svg></div><h2>${esc(choice.name)}</h2><p class="sim-library-description">${esc(choice.description)}</p><div class="sf-card-meta"><span><i class="far fa-file-alt" aria-hidden="true"></i> ${choice.count} preguntas</span><span><i class="far fa-clock" aria-hidden="true"></i> ${choice.minutes} min</span></div>${button('run', 'Empezar', 'sf-primary btn-primary').replace('data-sf="run"', `data-sf="run" data-area="${choice.id}"`)}</article>`).join('')}${area === 'integral' && typeof openTopicSimulacro === 'function' ? `<article class="sim-library-card sf-catalogue-card sf-topic-card"><div class="sf-card-top"><span class="sim-library-stage">POR TEMAS</span><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#cards"></use></svg></div><h2>Más simulacros</h2><p class="sim-library-description">Biología celular, morfofisiología y salud pública.</p><div class="sf-card-meta"><span>Parciales y exámenes finales</span></div>${button('topics', 'Ver simulacros', 'btn-primary')}</article>` : ''}</div>` +
-            (area === 'lectura' ? `<h2 class="sf-section-title">Lecturas</h2><div class="sf-readings">${bank.passages.map(p => `<article><span class="sf-eyebrow">5 PREGUNTAS</span><h3>${esc(p.title)}</h3><p>${esc(p.text.slice(0, 120))}…</p>${button('passage', 'Leer y responder').replace('data-sf="passage"', `data-sf="passage" data-passage="${esc(p.id)}"`)}</article>`).join('')}</div>` : '') +
-            `<details class="sf-sources"><summary>Sobre las preguntas y las lecturas</summary><p>Matemáticas, física y química: selección de <em>Medicina: exámenes pasados ABP</em>, documento de 44 páginas de la UMSA facilitado para esta plataforma. Las claves y explicaciones son razonadas para la práctica; el PDF no contiene un patrón oficial. Algunos enunciados se adaptaron para aclarar datos o corregir alternativas, y se indican al revisar.</p><p>Lectura comprensiva: seis textos adaptados del capítulo 1 de <em>Anatomía y fisiología: la unidad entre forma y función</em>, Kenneth S. Saladin, 6.ª edición. No son preguntas extraídas del examen ABP.</p><p>Este simulacro es una herramienta de repaso. La distribución, duración y nota porcentual son de práctica; no representan el formato o criterio oficial de admisión de la UMSS ni de la UMSA.</p><p>Tu avance se guarda por cuenta en este navegador.</p></details>`;
-        root.scrollIntoView({ block: 'start', behavior: 'instant' });
+            (attempt ? `<aside class="sf-resume"><div><strong>${attempt.finished ? 'Tu último resultado' : 'Continúa donde te quedaste'}</strong><p>${esc(title(attempt.area))} · ${attempt.ids.length} preguntas${attempt.finished ? '' : ' · el tiempo sigue corriendo'}</p></div>${button('resume', attempt.finished ? 'Ver resultado y comentarios' : 'Continuar')}</aside>` : '') +
+            `<div class="sf-catalogue-filter"><label for="sf-area-filter">Tipo o materia<select id="sf-area-filter" aria-label="Tipo o materia"><option value="integral" ${area === 'integral' ? 'selected' : ''}>Todos los simulacros</option><option value="completos" ${area === 'completos' ? 'selected' : ''}>Simulacros completos</option>${Object.entries(labels).map(([id, name]) => `<option value="${id}" ${area === id ? 'selected' : ''}>${name}</option>`).join('')}</select></label><label for="sf-search">Buscar<input id="sf-search" type="search" placeholder="Nombre, número o materia" value="${esc(catalogueQuery)}"></label><p data-sf-status role="status" aria-live="polite"></p></div>` +
+            '<div class="sf-catalogue" data-sf-cards></div><nav class="sf-pagination" data-sf-pagination aria-label="Páginas de simulacros"></nav>' +
+            (area === 'lectura' ? `<details class="sf-single-reading"><summary>Practicar una lectura por separado</summary><p>40 textos con cinco preguntas cada uno.</p><label for="sf-reading-choice">Elige una lectura</label><select id="sf-reading-choice">${bank.passages.map((p, i) => `<option value="${esc(p.id)}">${String(i + 1).padStart(2, '0')} · ${esc(p.title)}</option>`).join('')}</select>${button('chosen-passage', 'Leer y responder')}</details>` : '') +
+            (typeof openTopicSimulacro === 'function' ? `<div class="sf-previous-catalogue"><p>Biología celular, morfofisiología y salud pública</p>${button('topics', 'Ver los simulacros por temas →')}</div>` : '') +
+            `<details class="sf-sources"><summary>Sobre el material</summary><p>Práctica comentada basada en el documento de exámenes ABP de La Paz (UMSA) que se facilitó a la plataforma. Incluye 92 preguntas revisadas del documento y 508 ejercicios nuevos que siguen sus tipos de problemas. Las nuevas variantes están identificadas al revisar. Las claves son razonadas; no se recibió un patrón oficial.</p><p>Lectura comprensiva: 40 textos y 200 preguntas adaptados de los capítulos 1 y 2 de <em>Anatomía y fisiología: la unidad entre forma y función</em>, Kenneth S. Saladin, 6.ª edición. Estas lecturas son material didáctico adicional; no pertenecen al documento ABP.</p><p>Los 20 simulacros completos distribuyen las 800 preguntas sin repetirlas entre ellos. Los 40 por materia reúnen ese mismo banco para repaso dirigido. Cada simulacro tiene un conjunto fijo de preguntas y comentarios de resolución.</p><p>La distribución, el tiempo y la nota son de práctica, sin penalización por error. No representan una prueba ni un criterio oficial de admisión. El avance y los resultados se guardan para tu cuenta en este navegador.</p></details>`;
+        renderCatalogueCards(); root.scrollIntoView({ block: 'start', behavior: 'instant' });
     }
     async function start(selectedArea) {
         if (starting) return;
@@ -103,7 +135,7 @@
             const seed = crypto.getRandomValues(new Uint32Array(1))[0];
             questions = C.select(bank, area, seed);
             if (!questions.length) throw new Error('Esta lectura no está disponible.');
-            const minutes = area === 'integral' ? 60 : Math.ceil(questions.length * 1.5);
+            const minutes = C.paper(bank, area)?.minutes || (area === 'integral' ? 60 : Math.ceil(questions.length * 1.5));
             attempt = { owner, version: bank.version, area, seed, ids: questions.map(q => q.id), answers: {}, flags: [], index: 0, deadline: Date.now() + minutes * 60000, startedAt: Date.now(), finished: false };
             renderedPassage = null; save(); renderQuestion(); root.scrollIntoView({ block: 'start', behavior: 'instant' }); startClock();
         } catch (e) {
@@ -142,14 +174,14 @@
         if (!timed && !await ask(pending ? `Te faltan ${pending} preguntas por responder. ¿Quieres terminar y corregir?` : '¿Quieres terminar y ver tu resultado?')) { ending = false; return; }
         if (!attempt || attempt.finished) { ending = false; return; }
         if (pendingConfirmation) pendingConfirmation(false);
-        attempt.finished = true; attempt.timedOut = timed; attempt.finishedAt = Date.now(); stopClock(); save(); results(); ending = false;
+        attempt.finished = true; attempt.timedOut = timed; attempt.finishedAt = Date.now(); stopClock(); save(); rememberResult(); results(); ending = false;
     }
     function results(filter = 'all') {
         const score = C.grade(questions, attempt.answers);
-        root.innerHTML = header() + `<section class="sf-result"><div class="sf-score">${score.percent}<small>%</small></div><div><h2>Así te fue</h2><p>${attempt.timedOut ? 'Se terminó el tiempo. ' : ''}${score.correct} ${score.correct === 1 ? 'correcta' : 'correctas'} · ${score.wrong} ${score.wrong === 1 ? 'incorrecta' : 'incorrectas'} · ${score.skipped} sin responder.</p><p>Revisa las explicaciones y vuelve a practicar lo que te costó.</p></div></section><div class="sf-breakdown">${Object.entries(score.subjects).map(([s, result]) => `<div><strong>${labels[s]}</strong><span>${result.correct} / ${result.total}</span></div>`).join('')}</div><div class="sf-result-actions">${button('catalogue', 'Volver a las materias', 'sf-primary')}${button('start', 'Practicar otra vez')}</div><h2 class="sf-section-title">Revisa tus respuestas</h2><div class="sf-tabs">${button('review-all', 'Todas (' + score.total + ')').replace('data-sf="review-all"', `data-sf="review-all" ${filter === 'all' ? 'aria-current="page"' : ''}`)}${button('review-errors', 'Incorrectas y pendientes (' + (score.wrong + score.skipped) + ')').replace('data-sf="review-errors"', `data-sf="review-errors" ${filter === 'errors' ? 'aria-current="page"' : ''}`)}</div><div class="sf-review-list">${questions.map((q, i) => {
+        root.innerHTML = header() + `<section class="sf-result"><div class="sf-score">${score.percent}<small>%</small></div><div><h2>Así te fue</h2><p>${attempt.timedOut ? 'Se terminó el tiempo. ' : ''}${score.correct} ${score.correct === 1 ? 'correcta' : 'correctas'} · ${score.wrong} ${score.wrong === 1 ? 'incorrecta' : 'incorrectas'} · ${score.skipped} sin responder.</p><p>Revisa las explicaciones y vuelve a practicar lo que te costó.</p></div></section><div class="sf-breakdown">${Object.entries(score.subjects).map(([s, result]) => `<div><strong>${labels[s]}</strong><span>${result.correct} / ${result.total}</span></div>`).join('')}</div><div class="sf-result-actions">${button('catalogue', 'Volver a las materias', 'sf-primary')}${button('start', 'Practicar otra vez')}</div><h2 class="sf-section-title">Respuestas y comentarios</h2><div class="sf-tabs">${button('review-all', 'Todas (' + score.total + ')').replace('data-sf="review-all"', `data-sf="review-all" ${filter === 'all' ? 'aria-current="page"' : ''}`)}${button('review-errors', 'Incorrectas y pendientes (' + (score.wrong + score.skipped) + ')').replace('data-sf="review-errors"', `data-sf="review-errors" ${filter === 'errors' ? 'aria-current="page"' : ''}`)}</div><div class="sf-review-list">${questions.map((q, i) => {
             const a = attempt.answers[q.id], right = a === q.correct;
             if (filter === 'errors' && right) return '';
-            return `<details class="sf-review ${right ? 'sf-correct' : 'sf-incorrect'}"><summary><span>${right ? '✓' : a === undefined ? '—' : '✕'} ${i + 1}. ${esc(q.text)}</span><small>${esc(labels[q.subject])}</small></summary>${passage(q)}<p><b>Tu respuesta:</b> ${a === undefined ? 'Sin responder' : esc(String.fromCharCode(65 + a) + '. ' + q.options[a])}</p><p class="sf-answer"><b>Respuesta correcta:</b> ${esc(String.fromCharCode(65 + q.correct) + '. ' + q.options[q.correct])}</p><p>${esc(q.explanation)}</p><small class="sf-reference">${esc(sourceText(q.source))}${q.source.note ? '<br>' + esc(q.source.note) : ''}</small></details>`;
+            return `<details class="sf-review ${right ? 'sf-correct' : 'sf-incorrect'}" ${i === 0 ? 'open' : ''}><summary><span>${right ? '✓' : a === undefined ? '—' : '✕'} ${i + 1}. ${esc(q.text)}</span><small>${esc(labels[q.subject])}</small></summary>${passage(q)}<p><b>Tu respuesta:</b> ${a === undefined ? 'Sin responder' : esc(String.fromCharCode(65 + a) + '. ' + q.options[a])}</p><p class="sf-answer"><b>Respuesta correcta:</b> ${esc(String.fromCharCode(65 + q.correct) + '. ' + q.options[q.correct])}</p><div class="sf-worked-comment"><h3>Comentario</h3><p>${esc(q.explanation)}</p></div><small class="sf-reference">${esc(sourceText(q.source))}${q.source.note ? '<br>' + esc(q.source.note) : ''}</small></details>`;
         }).join('') || '<p class="sf-notice">¡Todas tus respuestas fueron correctas!</p>'}</div><p class="sf-disclaimer">Resultado de práctica, sin penalización por error. Claves razonadas; no es una calificación oficial de admisión. Guardado solo para tu cuenta en este navegador.</p>`;
         root.scrollIntoView({ block: 'start', behavior: 'instant' });
     }
@@ -158,6 +190,9 @@
         area = attempt.area;
         if (attempt.finished) results(); else { renderQuestion(true); startClock(); }
     }
+    root.addEventListener('input', event => {
+        if (event.target.id === 'sf-search') { catalogueQuery = event.target.value; cataloguePage = 0; renderCatalogueCards(); }
+    });
     root.addEventListener('change', event => {
         if (event.target.id === 'sf-area-filter') return open(event.target.value);
         if (!event.target.matches('input[name="sf-answer"]') || !attempt || attempt.finished || owner !== user()) return;
@@ -177,6 +212,8 @@
         if (action === 'reload') return open(area);
         if (action === 'home') return typeof goHome === 'function' && goHome();
         if (action === 'topics') return typeof openTopicSimulacro === 'function' && openTopicSimulacro();
+        if (action === 'page-prev' || action === 'page-next') { cataloguePage += action === 'page-next' ? 1 : -1; renderCatalogueCards(); root.querySelector('[data-sf-cards]')?.scrollIntoView({ block: 'start', behavior: 'instant' }); return; }
+        if (action === 'chosen-passage') return start('texto:' + root.querySelector('#sf-reading-choice').value);
         if (action === 'run') { target.disabled = true; return start(target.dataset.area).finally(() => { target.disabled = false; }); }
         if (action === 'start') return start();
         if (action === 'passage') return start('texto:' + target.dataset.passage);

@@ -1,0 +1,3625 @@
+{
+  "verified": 508,
+  "families": {
+    "matematicas:conjuntos": 8,
+    "matematicas:resto": 8,
+    "matematicas:division": 8,
+    "matematicas:promedio": 8,
+    "matematicas:frecuencias": 8,
+    "matematicas:sistema": 8,
+    "matematicas:raices": 8,
+    "matematicas:trinomio": 8,
+    "matematicas:logaritmos": 8,
+    "matematicas:log-base-variable": 8,
+    "matematicas:termino-independiente": 8,
+    "matematicas:identidad-cubica": 8,
+    "matematicas:notacion-cientifica": 8,
+    "matematicas:resto-cuadratico": 8,
+    "matematicas:diferencia-cuadrados": 8,
+    "matematicas:inecuacion": 8,
+    "matematicas:logica": 8,
+    "matematicas:multiplos": 8,
+    "matematicas:razon": 8,
+    "matematicas:operaciones-polinomios": 8,
+    "fisica:conversion-aceleracion": 8,
+    "fisica:dos-etapas": 8,
+    "fisica:energia-cinetica": 8,
+    "fisica:encuentro": 8,
+    "fisica:alcance": 8,
+    "fisica:fuerza-neta": 8,
+    "fisica:dilatacion": 8,
+    "fisica:ondas": 8,
+    "fisica:lente-divergente": 8,
+    "fisica:campo-distancia": 8,
+    "fisica:paralelo": 8,
+    "fisica:temperatura": 8,
+    "fisica:vectores": 8,
+    "fisica:tiro-vertical": 8,
+    "fisica:dos-encuentros": 8,
+    "fisica:plano-inclinado": 8,
+    "fisica:lente-convergente": 8,
+    "fisica:campo-fuerza": 8,
+    "fisica:carga-corriente": 8,
+    "fisica:serie-ohm": 8,
+    "fisica:conversion-longitud": 8,
+    "quimica:masa-molar": 10,
+    "quimica:numero-atomos": 10,
+    "quimica:masa-moleculas": 10,
+    "quimica:pureza": 10,
+    "quimica:balance-aluminio": 10,
+    "quimica:masa-atomica": 10,
+    "quimica:combustion-etano": 10,
+    "quimica:dicromato-yodo": 10,
+    "quimica:nitrogeno-alanina": 10,
+    "quimica:comparar-atomos": 10,
+    "quimica:descomposicion-hgo": 10,
+    "quimica:neutralizacion": 10,
+    "quimica:sustitucion-magnesio": 10,
+    "quimica:composicion": 10,
+    "quimica:orbitales": 10,
+    "quimica:unidad-masa": 10,
+    "quimica:balance-oxigeno-yodo": 10,
+    "quimica:fraccion-masica": 10
+  },
+  "checks": [
+    {
+      "id": "practica-matematicas-conjuntos-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{2, 4, 5, 7, 8, 10}",
+      "answer": "{2, 4, 5, 7, 8, 10}"
+    },
+    {
+      "id": "practica-matematicas-resto-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "31.0",
+      "answer": "31"
+    },
+    {
+      "id": "practica-matematicas-division-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3*x**2 - 5*x + 6",
+      "answer": "3x²−5x+6"
+    },
+    {
+      "id": "practica-matematicas-promedio-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "15",
+      "answer": "15"
+    },
+    {
+      "id": "practica-matematicas-frecuencias-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "999/50",
+      "answer": "999/50"
+    },
+    {
+      "id": "practica-matematicas-sistema-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(2, 4)",
+      "answer": "x=2; y=4"
+    },
+    {
+      "id": "practica-matematicas-raices-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "12/5",
+      "answer": "12/5"
+    },
+    {
+      "id": "practica-matematicas-trinomio-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9*a**2 + 30*a*b - 6*a*c + 25*b**2 - 10*b*c + c**2",
+      "answer": "(3a+5b−c)²"
+    },
+    {
+      "id": "practica-matematicas-logaritmos-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[2, 8]",
+      "answer": "x=2 o x=8"
+    },
+    {
+      "id": "practica-matematicas-log-base-variable-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "sqrt(5)",
+      "answer": "x=±√5"
+    },
+    {
+      "id": "practica-matematicas-termino-independiente-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-4/3",
+      "answer": "−4/3"
+    },
+    {
+      "id": "practica-matematicas-identidad-cubica-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "38",
+      "answer": "38"
+    },
+    {
+      "id": "practica-matematicas-notacion-cientifica-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3/5000",
+      "answer": "6×10^-4"
+    },
+    {
+      "id": "practica-matematicas-resto-cuadratico-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.0",
+      "answer": "4"
+    },
+    {
+      "id": "practica-matematicas-diferencia-cuadrados-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9*x**2 - 16*y**2 - 25*z**2",
+      "answer": "9x²−16y²−25z²"
+    },
+    {
+      "id": "practica-matematicas-inecuacion-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "Interval.open(-3, 4)",
+      "answer": "(-3,4)"
+    },
+    {
+      "id": "practica-matematicas-logica-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "F",
+      "answer": "F"
+    },
+    {
+      "id": "practica-matematicas-multiplos-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{12, 24, 36}",
+      "answer": "{12, 24, 36}"
+    },
+    {
+      "id": "practica-matematicas-razon-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3/7",
+      "answer": "3/7"
+    },
+    {
+      "id": "practica-matematicas-operaciones-polinomios-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2*x**3 + 6*x + 4",
+      "answer": "2x³+6x+4"
+    },
+    {
+      "id": "practica-matematicas-conjuntos-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{2, 4, 5, 7, 8, 10, 14}",
+      "answer": "{2, 4, 5, 7, 8, 10, 14}"
+    },
+    {
+      "id": "practica-matematicas-resto-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "117.0",
+      "answer": "117"
+    },
+    {
+      "id": "practica-matematicas-division-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4*x**2 - 7*x + 7",
+      "answer": "4x²−7x+7"
+    },
+    {
+      "id": "practica-matematicas-promedio-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "18",
+      "answer": "18"
+    },
+    {
+      "id": "practica-matematicas-frecuencias-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "487/20",
+      "answer": "487/20"
+    },
+    {
+      "id": "practica-matematicas-sistema-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(3, 5)",
+      "answer": "x=3; y=5"
+    },
+    {
+      "id": "practica-matematicas-raices-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9/4",
+      "answer": "9/4"
+    },
+    {
+      "id": "practica-matematicas-trinomio-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "16*a**2 + 48*a*b - 8*a*c + 36*b**2 - 12*b*c + c**2",
+      "answer": "(4a+6b−c)²"
+    },
+    {
+      "id": "practica-matematicas-logaritmos-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[3, 9]",
+      "answer": "x=3 o x=9"
+    },
+    {
+      "id": "practica-matematicas-log-base-variable-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "sqrt(6)",
+      "answer": "x=±√6"
+    },
+    {
+      "id": "practica-matematicas-termino-independiente-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-9/7",
+      "answer": "−9/7"
+    },
+    {
+      "id": "practica-matematicas-identidad-cubica-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "97",
+      "answer": "97"
+    },
+    {
+      "id": "practica-matematicas-notacion-cientifica-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9/1000",
+      "answer": "9×10^-3"
+    },
+    {
+      "id": "practica-matematicas-resto-cuadratico-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "26.0",
+      "answer": "26"
+    },
+    {
+      "id": "practica-matematicas-diferencia-cuadrados-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "16*x**2 - 25*y**2 - 36*z**2",
+      "answer": "16x²−25y²−36z²"
+    },
+    {
+      "id": "practica-matematicas-inecuacion-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "Interval.open(-4, 5)",
+      "answer": "(-4,5)"
+    },
+    {
+      "id": "practica-matematicas-logica-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "V",
+      "answer": "V"
+    },
+    {
+      "id": "practica-matematicas-multiplos-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{20, 40, 60}",
+      "answer": "{20, 40, 60}"
+    },
+    {
+      "id": "practica-matematicas-razon-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2/5",
+      "answer": "2/5"
+    },
+    {
+      "id": "practica-matematicas-operaciones-polinomios-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3*x**3 + 7*x + 5",
+      "answer": "3x³+7x+5"
+    },
+    {
+      "id": "practica-matematicas-conjuntos-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{2, 4, 5, 7, 8, 10, 14, 16}",
+      "answer": "{2, 4, 5, 7, 8, 10, 14, 16}"
+    },
+    {
+      "id": "practica-matematicas-resto-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10.0",
+      "answer": "10"
+    },
+    {
+      "id": "practica-matematicas-division-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5*x**2 - 9*x + 8",
+      "answer": "5x²−9x+8"
+    },
+    {
+      "id": "practica-matematicas-promedio-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "21",
+      "answer": "21"
+    },
+    {
+      "id": "practica-matematicas-frecuencias-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2011/70",
+      "answer": "2011/70"
+    },
+    {
+      "id": "practica-matematicas-sistema-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(4, 6)",
+      "answer": "x=4; y=6"
+    },
+    {
+      "id": "practica-matematicas-raices-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "76/35",
+      "answer": "76/35"
+    },
+    {
+      "id": "practica-matematicas-trinomio-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "25*a**2 + 70*a*b - 10*a*c + 49*b**2 - 14*b*c + c**2",
+      "answer": "(5a+7b−c)²"
+    },
+    {
+      "id": "practica-matematicas-logaritmos-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[4, 64]",
+      "answer": "x=4 o x=64"
+    },
+    {
+      "id": "practica-matematicas-log-base-variable-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "sqrt(7)",
+      "answer": "x=±√7"
+    },
+    {
+      "id": "practica-matematicas-termino-independiente-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-5/4",
+      "answer": "−5/4"
+    },
+    {
+      "id": "practica-matematicas-identidad-cubica-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "198",
+      "answer": "198"
+    },
+    {
+      "id": "practica-matematicas-notacion-cientifica-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3/25",
+      "answer": "1,2×10^-1"
+    },
+    {
+      "id": "practica-matematicas-resto-cuadratico-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "68.0",
+      "answer": "68"
+    },
+    {
+      "id": "practica-matematicas-diferencia-cuadrados-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "25*x**2 - 36*y**2 - 49*z**2",
+      "answer": "25x²−36y²−49z²"
+    },
+    {
+      "id": "practica-matematicas-inecuacion-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "Interval.open(-5, 6)",
+      "answer": "(-5,6)"
+    },
+    {
+      "id": "practica-matematicas-logica-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "F",
+      "answer": "F"
+    },
+    {
+      "id": "practica-matematicas-multiplos-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{30, 60, 90}",
+      "answer": "{30, 60, 90}"
+    },
+    {
+      "id": "practica-matematicas-razon-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5/13",
+      "answer": "5/13"
+    },
+    {
+      "id": "practica-matematicas-operaciones-polinomios-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4*x**3 + 8*x + 6",
+      "answer": "4x³+8x+6"
+    },
+    {
+      "id": "practica-matematicas-conjuntos-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{2, 4, 5, 7, 8, 10, 11, 14, 16}",
+      "answer": "{2, 4, 5, 7, 8, 10, 11, 14, 16}"
+    },
+    {
+      "id": "practica-matematicas-resto-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "58.0",
+      "answer": "58"
+    },
+    {
+      "id": "practica-matematicas-division-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6*x**2 - 11*x + 9",
+      "answer": "6x²−11x+9"
+    },
+    {
+      "id": "practica-matematicas-promedio-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "24",
+      "answer": "24"
+    },
+    {
+      "id": "practica-matematicas-frecuencias-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2649/80",
+      "answer": "2649/80"
+    },
+    {
+      "id": "practica-matematicas-sistema-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(5, 7)",
+      "answer": "x=5; y=7"
+    },
+    {
+      "id": "practica-matematicas-raices-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "17/8",
+      "answer": "17/8"
+    },
+    {
+      "id": "practica-matematicas-trinomio-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "36*a**2 + 96*a*b - 12*a*c + 64*b**2 - 16*b*c + c**2",
+      "answer": "(6a+8b−c)²"
+    },
+    {
+      "id": "practica-matematicas-logaritmos-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[5, 25]",
+      "answer": "x=5 o x=25"
+    },
+    {
+      "id": "practica-matematicas-log-base-variable-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2*sqrt(2)",
+      "answer": "x=±√8"
+    },
+    {
+      "id": "practica-matematicas-termino-independiente-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-11/9",
+      "answer": "−11/9"
+    },
+    {
+      "id": "practica-matematicas-identidad-cubica-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "353",
+      "answer": "353"
+    },
+    {
+      "id": "practica-matematicas-notacion-cientifica-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3/2",
+      "answer": "1,5×10^0"
+    },
+    {
+      "id": "practica-matematicas-resto-cuadratico-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "136.0",
+      "answer": "136"
+    },
+    {
+      "id": "practica-matematicas-diferencia-cuadrados-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "36*x**2 - 49*y**2 - 64*z**2",
+      "answer": "36x²−49y²−64z²"
+    },
+    {
+      "id": "practica-matematicas-inecuacion-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "Interval.open(-6, 7)",
+      "answer": "(-6,7)"
+    },
+    {
+      "id": "practica-matematicas-logica-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "F",
+      "answer": "F"
+    },
+    {
+      "id": "practica-matematicas-multiplos-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{42, 84, 126}",
+      "answer": "{42, 84, 126}"
+    },
+    {
+      "id": "practica-matematicas-razon-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3/8",
+      "answer": "3/8"
+    },
+    {
+      "id": "practica-matematicas-operaciones-polinomios-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5*x**3 + 9*x + 7",
+      "answer": "5x³+9x+7"
+    },
+    {
+      "id": "practica-matematicas-conjuntos-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{2, 4, 7, 8, 10, 11, 14, 16, 20}",
+      "answer": "{2, 4, 7, 8, 10, 11, 14, 16, 20}"
+    },
+    {
+      "id": "practica-matematicas-resto-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "210.0",
+      "answer": "210"
+    },
+    {
+      "id": "practica-matematicas-division-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "7*x**2 - 13*x + 10",
+      "answer": "7x²−13x+10"
+    },
+    {
+      "id": "practica-matematicas-promedio-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "27",
+      "answer": "27"
+    },
+    {
+      "id": "practica-matematicas-frecuencias-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "75/2",
+      "answer": "75/2"
+    },
+    {
+      "id": "practica-matematicas-sistema-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(6, 8)",
+      "answer": "x=6; y=8"
+    },
+    {
+      "id": "practica-matematicas-raices-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "44/21",
+      "answer": "44/21"
+    },
+    {
+      "id": "practica-matematicas-trinomio-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "49*a**2 + 126*a*b - 14*a*c + 81*b**2 - 18*b*c + c**2",
+      "answer": "(7a+9b−c)²"
+    },
+    {
+      "id": "practica-matematicas-logaritmos-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[6, 216]",
+      "answer": "x=6 o x=216"
+    },
+    {
+      "id": "practica-matematicas-log-base-variable-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3",
+      "answer": "x=±3"
+    },
+    {
+      "id": "practica-matematicas-termino-independiente-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-6/5",
+      "answer": "−6/5"
+    },
+    {
+      "id": "practica-matematicas-identidad-cubica-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "574",
+      "answer": "574"
+    },
+    {
+      "id": "practica-matematicas-notacion-cientifica-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "18",
+      "answer": "1,8×10^1"
+    },
+    {
+      "id": "practica-matematicas-resto-cuadratico-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "236.0",
+      "answer": "236"
+    },
+    {
+      "id": "practica-matematicas-diferencia-cuadrados-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "49*x**2 - 64*y**2 - 81*z**2",
+      "answer": "49x²−64y²−81z²"
+    },
+    {
+      "id": "practica-matematicas-inecuacion-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "Interval.open(-7, 8)",
+      "answer": "(-7,8)"
+    },
+    {
+      "id": "practica-matematicas-logica-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "V",
+      "answer": "V"
+    },
+    {
+      "id": "practica-matematicas-multiplos-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{56, 112, 168}",
+      "answer": "{56, 112, 168}"
+    },
+    {
+      "id": "practica-matematicas-razon-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "7/19",
+      "answer": "7/19"
+    },
+    {
+      "id": "practica-matematicas-operaciones-polinomios-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6*x**3 + 10*x + 8",
+      "answer": "6x³+10x+8"
+    },
+    {
+      "id": "practica-matematicas-conjuntos-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{2, 4, 7, 8, 10, 11, 13, 14, 16, 20, 22}",
+      "answer": "{2, 4, 7, 8, 10, 11, 13, 14, 16, 20, 22}"
+    },
+    {
+      "id": "practica-matematicas-resto-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "13.0",
+      "answer": "13"
+    },
+    {
+      "id": "practica-matematicas-division-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8*x**2 - 15*x + 11",
+      "answer": "8x²−15x+11"
+    },
+    {
+      "id": "practica-matematicas-promedio-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "30",
+      "answer": "30"
+    },
+    {
+      "id": "practica-matematicas-frecuencias-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4189/100",
+      "answer": "4189/100"
+    },
+    {
+      "id": "practica-matematicas-sistema-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(7, 9)",
+      "answer": "x=7; y=9"
+    },
+    {
+      "id": "practica-matematicas-raices-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "83/40",
+      "answer": "83/40"
+    },
+    {
+      "id": "practica-matematicas-trinomio-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "64*a**2 + 160*a*b - 16*a*c + 100*b**2 - 20*b*c + c**2",
+      "answer": "(8a+10b−c)²"
+    },
+    {
+      "id": "practica-matematicas-logaritmos-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[7, 49]",
+      "answer": "x=7 o x=49"
+    },
+    {
+      "id": "practica-matematicas-log-base-variable-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "sqrt(10)",
+      "answer": "x=±√10"
+    },
+    {
+      "id": "practica-matematicas-termino-independiente-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-13/11",
+      "answer": "−13/11"
+    },
+    {
+      "id": "practica-matematicas-identidad-cubica-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "873",
+      "answer": "873"
+    },
+    {
+      "id": "practica-matematicas-notacion-cientifica-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "210",
+      "answer": "2,1×10^2"
+    },
+    {
+      "id": "practica-matematicas-resto-cuadratico-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "374.0",
+      "answer": "374"
+    },
+    {
+      "id": "practica-matematicas-diferencia-cuadrados-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "64*x**2 - 81*y**2 - 100*z**2",
+      "answer": "64x²−81y²−100z²"
+    },
+    {
+      "id": "practica-matematicas-inecuacion-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "Interval.open(-8, 9)",
+      "answer": "(-8,9)"
+    },
+    {
+      "id": "practica-matematicas-logica-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "V",
+      "answer": "V"
+    },
+    {
+      "id": "practica-matematicas-multiplos-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{72, 144, 216}",
+      "answer": "{72, 144, 216}"
+    },
+    {
+      "id": "practica-matematicas-razon-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4/11",
+      "answer": "4/11"
+    },
+    {
+      "id": "practica-matematicas-operaciones-polinomios-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "7*x**3 + 11*x + 9",
+      "answer": "7x³+11x+9"
+    },
+    {
+      "id": "practica-matematicas-conjuntos-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{2, 4, 8, 10, 11, 13, 14, 16, 20, 22}",
+      "answer": "{2, 4, 8, 10, 11, 13, 14, 16, 20, 22}"
+    },
+    {
+      "id": "practica-matematicas-resto-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "85.0",
+      "answer": "85"
+    },
+    {
+      "id": "practica-matematicas-division-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9*x**2 - 17*x + 12",
+      "answer": "9x²−17x+12"
+    },
+    {
+      "id": "practica-matematicas-promedio-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "33",
+      "answer": "33"
+    },
+    {
+      "id": "practica-matematicas-frecuencias-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5091/110",
+      "answer": "5091/110"
+    },
+    {
+      "id": "practica-matematicas-sistema-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(8, 10)",
+      "answer": "x=8; y=10"
+    },
+    {
+      "id": "practica-matematicas-raices-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "68/33",
+      "answer": "68/33"
+    },
+    {
+      "id": "practica-matematicas-trinomio-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "81*a**2 + 198*a*b - 18*a*c + 121*b**2 - 22*b*c + c**2",
+      "answer": "(9a+11b−c)²"
+    },
+    {
+      "id": "practica-matematicas-logaritmos-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[8, 512]",
+      "answer": "x=8 o x=512"
+    },
+    {
+      "id": "practica-matematicas-log-base-variable-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "sqrt(11)",
+      "answer": "x=±√11"
+    },
+    {
+      "id": "practica-matematicas-termino-independiente-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-7/6",
+      "answer": "−7/6"
+    },
+    {
+      "id": "practica-matematicas-identidad-cubica-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "1262",
+      "answer": "1262"
+    },
+    {
+      "id": "practica-matematicas-notacion-cientifica-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2400",
+      "answer": "2,4×10^3"
+    },
+    {
+      "id": "practica-matematicas-resto-cuadratico-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "556.0",
+      "answer": "556"
+    },
+    {
+      "id": "practica-matematicas-diferencia-cuadrados-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "81*x**2 - 100*y**2 - 121*z**2",
+      "answer": "81x²−100y²−121z²"
+    },
+    {
+      "id": "practica-matematicas-inecuacion-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "Interval.open(-9, 10)",
+      "answer": "(-9,10)"
+    },
+    {
+      "id": "practica-matematicas-logica-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "F",
+      "answer": "F"
+    },
+    {
+      "id": "practica-matematicas-multiplos-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{90, 180, 270}",
+      "answer": "{90, 180, 270}"
+    },
+    {
+      "id": "practica-matematicas-razon-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9/25",
+      "answer": "9/25"
+    },
+    {
+      "id": "practica-matematicas-operaciones-polinomios-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8*x**3 + 12*x + 10",
+      "answer": "8x³+12x+10"
+    },
+    {
+      "id": "practica-matematicas-conjuntos-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{2, 4, 8, 10, 11, 13, 14, 16, 20, 22, 26}",
+      "answer": "{2, 4, 8, 10, 11, 13, 14, 16, 20, 22, 26}"
+    },
+    {
+      "id": "practica-matematicas-resto-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "303.0",
+      "answer": "303"
+    },
+    {
+      "id": "practica-matematicas-division-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10*x**2 - 19*x + 13",
+      "answer": "10x²−19x+13"
+    },
+    {
+      "id": "practica-matematicas-promedio-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "36",
+      "answer": "36"
+    },
+    {
+      "id": "practica-matematicas-frecuencias-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2027/40",
+      "answer": "2027/40"
+    },
+    {
+      "id": "practica-matematicas-sistema-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(9, 11)",
+      "answer": "x=9; y=11"
+    },
+    {
+      "id": "practica-matematicas-raices-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "41/20",
+      "answer": "41/20"
+    },
+    {
+      "id": "practica-matematicas-trinomio-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "100*a**2 + 240*a*b - 20*a*c + 144*b**2 - 24*b*c + c**2",
+      "answer": "(10a+12b−c)²"
+    },
+    {
+      "id": "practica-matematicas-logaritmos-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[9, 81]",
+      "answer": "x=9 o x=81"
+    },
+    {
+      "id": "practica-matematicas-log-base-variable-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2*sqrt(3)",
+      "answer": "x=±√12"
+    },
+    {
+      "id": "practica-matematicas-termino-independiente-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-15/13",
+      "answer": "−15/13"
+    },
+    {
+      "id": "practica-matematicas-identidad-cubica-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "1753",
+      "answer": "1753"
+    },
+    {
+      "id": "practica-matematicas-notacion-cientifica-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "27000",
+      "answer": "2,7×10^4"
+    },
+    {
+      "id": "practica-matematicas-resto-cuadratico-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "788.0",
+      "answer": "788"
+    },
+    {
+      "id": "practica-matematicas-diferencia-cuadrados-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "100*x**2 - 121*y**2 - 144*z**2",
+      "answer": "100x²−121y²−144z²"
+    },
+    {
+      "id": "practica-matematicas-inecuacion-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "Interval.open(-10, 11)",
+      "answer": "(-10,11)"
+    },
+    {
+      "id": "practica-matematicas-logica-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "V",
+      "answer": "V"
+    },
+    {
+      "id": "practica-matematicas-multiplos-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "{110, 220, 330}",
+      "answer": "{110, 220, 330}"
+    },
+    {
+      "id": "practica-matematicas-razon-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5/14",
+      "answer": "5/14"
+    },
+    {
+      "id": "practica-matematicas-operaciones-polinomios-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9*x**3 + 13*x + 11",
+      "answer": "9x³+13x+11"
+    },
+    {
+      "id": "practica-fisica-conversion-aceleracion-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.4",
+      "answer": "0,4 m/s²"
+    },
+    {
+      "id": "practica-fisica-dos-etapas-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "15.0",
+      "answer": "15 s"
+    },
+    {
+      "id": "practica-fisica-energia-cinetica-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "1080.0",
+      "answer": "1080 J"
+    },
+    {
+      "id": "practica-fisica-encuentro-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "30",
+      "answer": "30 km"
+    },
+    {
+      "id": "practica-fisica-alcance-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.0",
+      "answer": "4 s"
+    },
+    {
+      "id": "practica-fisica-fuerza-neta-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2250.0",
+      "answer": "2250 N"
+    },
+    {
+      "id": "practica-fisica-dilatacion-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.007500000000000001",
+      "answer": "0,01 cm"
+    },
+    {
+      "id": "practica-fisica-ondas-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "150.0",
+      "answer": "150 m/s"
+    },
+    {
+      "id": "practica-fisica-lente-divergente-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-3.333333333333333",
+      "answer": "−3,33 cm"
+    },
+    {
+      "id": "practica-fisica-campo-distancia-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2.6666666666666665",
+      "answer": "2,67 N/C"
+    },
+    {
+      "id": "practica-fisica-paralelo-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2.0",
+      "answer": "2 Ω"
+    },
+    {
+      "id": "practica-fisica-temperatura-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-5.0",
+      "answer": "−5 °C"
+    },
+    {
+      "id": "practica-fisica-vectores-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10.0",
+      "answer": "10"
+    },
+    {
+      "id": "practica-fisica-tiro-vertical-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.0",
+      "answer": "4 s"
+    },
+    {
+      "id": "practica-fisica-dos-encuentros-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[1, 5]",
+      "answer": "1 s y 5 s"
+    },
+    {
+      "id": "practica-fisica-plano-inclinado-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.6",
+      "answer": "3,6 m"
+    },
+    {
+      "id": "practica-fisica-lente-convergente-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "19.499999999999996",
+      "answer": "19,5 cm"
+    },
+    {
+      "id": "practica-fisica-campo-fuerza-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "200.0",
+      "answer": "200 N/C"
+    },
+    {
+      "id": "practica-fisica-carga-corriente-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "26.999999999999996",
+      "answer": "27 C"
+    },
+    {
+      "id": "practica-fisica-serie-ohm-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "1.95",
+      "answer": "1,95 V"
+    },
+    {
+      "id": "practica-fisica-conversion-longitud-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "11.71153277756588",
+      "answer": "11,71 m/s"
+    },
+    {
+      "id": "practica-fisica-conversion-aceleracion-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.45",
+      "answer": "0,45 m/s²"
+    },
+    {
+      "id": "practica-fisica-dos-etapas-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "13.75",
+      "answer": "13,75 s"
+    },
+    {
+      "id": "practica-fisica-energia-cinetica-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4000.0",
+      "answer": "4000 J"
+    },
+    {
+      "id": "practica-fisica-encuentro-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "36",
+      "answer": "36 km"
+    },
+    {
+      "id": "practica-fisica-alcance-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5.0",
+      "answer": "5 s"
+    },
+    {
+      "id": "practica-fisica-fuerza-neta-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2800.0",
+      "answer": "2800 N"
+    },
+    {
+      "id": "practica-fisica-dilatacion-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.018000000000000002",
+      "answer": "0,02 cm"
+    },
+    {
+      "id": "practica-fisica-ondas-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "250.0",
+      "answer": "250 m/s"
+    },
+    {
+      "id": "practica-fisica-lente-divergente-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-4.0",
+      "answer": "−4 cm"
+    },
+    {
+      "id": "practica-fisica-campo-distancia-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2.25",
+      "answer": "2,25 N/C"
+    },
+    {
+      "id": "practica-fisica-paralelo-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.0",
+      "answer": "3 Ω"
+    },
+    {
+      "id": "practica-fisica-temperatura-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5.0",
+      "answer": "5 °C"
+    },
+    {
+      "id": "practica-fisica-vectores-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "15.0",
+      "answer": "15"
+    },
+    {
+      "id": "practica-fisica-tiro-vertical-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5.0",
+      "answer": "5 s"
+    },
+    {
+      "id": "practica-fisica-dos-encuentros-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[2, 6]",
+      "answer": "2 s y 6 s"
+    },
+    {
+      "id": "practica-fisica-plano-inclinado-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.4",
+      "answer": "6,4 m"
+    },
+    {
+      "id": "practica-fisica-lente-convergente-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "21.0",
+      "answer": "21 cm"
+    },
+    {
+      "id": "practica-fisica-campo-fuerza-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "200.0",
+      "answer": "200 N/C"
+    },
+    {
+      "id": "practica-fisica-carga-corriente-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "48.0",
+      "answer": "48 C"
+    },
+    {
+      "id": "practica-fisica-serie-ohm-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.2",
+      "answer": "3,2 V"
+    },
+    {
+      "id": "practica-fisica-conversion-longitud-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "15.615377036754508",
+      "answer": "15,62 m/s"
+    },
+    {
+      "id": "practica-fisica-conversion-aceleracion-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.48",
+      "answer": "0,48 m/s²"
+    },
+    {
+      "id": "practica-fisica-dos-etapas-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "13.0",
+      "answer": "13 s"
+    },
+    {
+      "id": "practica-fisica-energia-cinetica-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "11250.0",
+      "answer": "11250 J"
+    },
+    {
+      "id": "practica-fisica-encuentro-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "42",
+      "answer": "42 km"
+    },
+    {
+      "id": "practica-fisica-alcance-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.0",
+      "answer": "6 s"
+    },
+    {
+      "id": "practica-fisica-fuerza-neta-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3333.3333333333335",
+      "answer": "3333,33 N"
+    },
+    {
+      "id": "practica-fisica-dilatacion-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.035",
+      "answer": "0,04 cm"
+    },
+    {
+      "id": "practica-fisica-ondas-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "375.0",
+      "answer": "375 m/s"
+    },
+    {
+      "id": "practica-fisica-lente-divergente-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-4.666666666666667",
+      "answer": "−4,67 cm"
+    },
+    {
+      "id": "practica-fisica-campo-distancia-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "12.0",
+      "answer": "12 N/C"
+    },
+    {
+      "id": "practica-fisica-paralelo-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.0",
+      "answer": "4 Ω"
+    },
+    {
+      "id": "practica-fisica-temperatura-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "15.0",
+      "answer": "15 °C"
+    },
+    {
+      "id": "practica-fisica-vectores-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "20.0",
+      "answer": "20"
+    },
+    {
+      "id": "practica-fisica-tiro-vertical-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.0",
+      "answer": "6 s"
+    },
+    {
+      "id": "practica-fisica-dos-encuentros-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[3, 7]",
+      "answer": "3 s y 7 s"
+    },
+    {
+      "id": "practica-fisica-plano-inclinado-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10.0",
+      "answer": "10 m"
+    },
+    {
+      "id": "practica-fisica-lente-convergente-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "22.500000000000004",
+      "answer": "22,5 cm"
+    },
+    {
+      "id": "practica-fisica-campo-fuerza-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "200.0",
+      "answer": "200 N/C"
+    },
+    {
+      "id": "practica-fisica-carga-corriente-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "75.0",
+      "answer": "75 C"
+    },
+    {
+      "id": "practica-fisica-serie-ohm-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.75",
+      "answer": "4,75 V"
+    },
+    {
+      "id": "practica-fisica-conversion-longitud-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "19.519221295943137",
+      "answer": "19,52 m/s"
+    },
+    {
+      "id": "practica-fisica-conversion-aceleracion-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.5",
+      "answer": "0,5 m/s²"
+    },
+    {
+      "id": "practica-fisica-dos-etapas-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "12.5",
+      "answer": "12,5 s"
+    },
+    {
+      "id": "practica-fisica-energia-cinetica-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2940.0",
+      "answer": "2940 J"
+    },
+    {
+      "id": "practica-fisica-encuentro-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "48",
+      "answer": "48 km"
+    },
+    {
+      "id": "practica-fisica-alcance-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "7.0",
+      "answer": "7 s"
+    },
+    {
+      "id": "practica-fisica-fuerza-neta-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3857.1428571428573",
+      "answer": "3857,14 N"
+    },
+    {
+      "id": "practica-fisica-dilatacion-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.060000000000000005",
+      "answer": "0,06 cm"
+    },
+    {
+      "id": "practica-fisica-ondas-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "525.0",
+      "answer": "525 m/s"
+    },
+    {
+      "id": "practica-fisica-lente-divergente-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-5.333333333333333",
+      "answer": "−5,33 cm"
+    },
+    {
+      "id": "practica-fisica-campo-distancia-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.666666666666667",
+      "answer": "6,67 N/C"
+    },
+    {
+      "id": "practica-fisica-paralelo-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5.0",
+      "answer": "5 Ω"
+    },
+    {
+      "id": "practica-fisica-temperatura-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "25.0",
+      "answer": "25 °C"
+    },
+    {
+      "id": "practica-fisica-vectores-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "25.0",
+      "answer": "25"
+    },
+    {
+      "id": "practica-fisica-tiro-vertical-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "7.0",
+      "answer": "7 s"
+    },
+    {
+      "id": "practica-fisica-dos-encuentros-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[4, 8]",
+      "answer": "4 s y 8 s"
+    },
+    {
+      "id": "practica-fisica-plano-inclinado-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "14.4",
+      "answer": "14,4 m"
+    },
+    {
+      "id": "practica-fisica-lente-convergente-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "23.999999999999996",
+      "answer": "24 cm"
+    },
+    {
+      "id": "practica-fisica-campo-fuerza-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "200.0",
+      "answer": "200 N/C"
+    },
+    {
+      "id": "practica-fisica-carga-corriente-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "107.99999999999999",
+      "answer": "108 C"
+    },
+    {
+      "id": "practica-fisica-serie-ohm-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.6000000000000005",
+      "answer": "6,6 V"
+    },
+    {
+      "id": "practica-fisica-conversion-longitud-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "23.42306555513176",
+      "answer": "23,42 m/s"
+    },
+    {
+      "id": "practica-fisica-conversion-aceleracion-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.5142857142857142",
+      "answer": "0,51 m/s²"
+    },
+    {
+      "id": "practica-fisica-dos-etapas-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "12.142857142857142",
+      "answer": "12,14 s"
+    },
+    {
+      "id": "practica-fisica-energia-cinetica-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10080.0",
+      "answer": "10080 J"
+    },
+    {
+      "id": "practica-fisica-encuentro-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "54",
+      "answer": "54 km"
+    },
+    {
+      "id": "practica-fisica-alcance-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8.0",
+      "answer": "8 s"
+    },
+    {
+      "id": "practica-fisica-fuerza-neta-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4375.0",
+      "answer": "4375 N"
+    },
+    {
+      "id": "practica-fisica-dilatacion-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.09450000000000001",
+      "answer": "0,09 cm"
+    },
+    {
+      "id": "practica-fisica-ondas-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "700.0",
+      "answer": "700 m/s"
+    },
+    {
+      "id": "practica-fisica-lente-divergente-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-6.0",
+      "answer": "−6 cm"
+    },
+    {
+      "id": "practica-fisica-campo-distancia-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.5",
+      "answer": "4,5 N/C"
+    },
+    {
+      "id": "practica-fisica-paralelo-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.0",
+      "answer": "6 Ω"
+    },
+    {
+      "id": "practica-fisica-temperatura-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "35.0",
+      "answer": "35 °C"
+    },
+    {
+      "id": "practica-fisica-vectores-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "30.0",
+      "answer": "30"
+    },
+    {
+      "id": "practica-fisica-tiro-vertical-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8.0",
+      "answer": "8 s"
+    },
+    {
+      "id": "practica-fisica-dos-encuentros-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[5, 9]",
+      "answer": "5 s y 9 s"
+    },
+    {
+      "id": "practica-fisica-plano-inclinado-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "19.6",
+      "answer": "19,6 m"
+    },
+    {
+      "id": "practica-fisica-lente-convergente-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "25.5",
+      "answer": "25,5 cm"
+    },
+    {
+      "id": "practica-fisica-campo-fuerza-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "200.0",
+      "answer": "200 N/C"
+    },
+    {
+      "id": "practica-fisica-carga-corriente-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "147.0",
+      "answer": "147 C"
+    },
+    {
+      "id": "practica-fisica-serie-ohm-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8.75",
+      "answer": "8,75 V"
+    },
+    {
+      "id": "practica-fisica-conversion-longitud-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "27.326909814320388",
+      "answer": "27,33 m/s"
+    },
+    {
+      "id": "practica-fisica-conversion-aceleracion-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.525",
+      "answer": "0,53 m/s²"
+    },
+    {
+      "id": "practica-fisica-dos-etapas-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "11.875",
+      "answer": "11,88 s"
+    },
+    {
+      "id": "practica-fisica-energia-cinetica-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "25920.0",
+      "answer": "25920 J"
+    },
+    {
+      "id": "practica-fisica-encuentro-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "60",
+      "answer": "60 km"
+    },
+    {
+      "id": "practica-fisica-alcance-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9.0",
+      "answer": "9 s"
+    },
+    {
+      "id": "practica-fisica-fuerza-neta-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4888.888888888889",
+      "answer": "4888,89 N"
+    },
+    {
+      "id": "practica-fisica-dilatacion-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.14",
+      "answer": "0,14 cm"
+    },
+    {
+      "id": "practica-fisica-ondas-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "900.0",
+      "answer": "900 m/s"
+    },
+    {
+      "id": "practica-fisica-lente-divergente-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-6.666666666666666",
+      "answer": "−6,67 cm"
+    },
+    {
+      "id": "practica-fisica-campo-distancia-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "21.0",
+      "answer": "21 N/C"
+    },
+    {
+      "id": "practica-fisica-paralelo-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "7.0",
+      "answer": "7 Ω"
+    },
+    {
+      "id": "practica-fisica-temperatura-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "45.0",
+      "answer": "45 °C"
+    },
+    {
+      "id": "practica-fisica-vectores-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "35.0",
+      "answer": "35"
+    },
+    {
+      "id": "practica-fisica-tiro-vertical-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9.0",
+      "answer": "9 s"
+    },
+    {
+      "id": "practica-fisica-dos-encuentros-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[6, 10]",
+      "answer": "6 s y 10 s"
+    },
+    {
+      "id": "practica-fisica-plano-inclinado-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "25.6",
+      "answer": "25,6 m"
+    },
+    {
+      "id": "practica-fisica-lente-convergente-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "27.0",
+      "answer": "27 cm"
+    },
+    {
+      "id": "practica-fisica-campo-fuerza-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "199.99999999999997",
+      "answer": "200 N/C"
+    },
+    {
+      "id": "practica-fisica-carga-corriente-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "192.0",
+      "answer": "192 C"
+    },
+    {
+      "id": "practica-fisica-serie-ohm-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "11.200000000000001",
+      "answer": "11,2 V"
+    },
+    {
+      "id": "practica-fisica-conversion-longitud-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "31.230754073509015",
+      "answer": "31,23 m/s"
+    },
+    {
+      "id": "practica-fisica-conversion-aceleracion-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.5333333333333333",
+      "answer": "0,53 m/s²"
+    },
+    {
+      "id": "practica-fisica-dos-etapas-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "11.666666666666666",
+      "answer": "11,67 s"
+    },
+    {
+      "id": "practica-fisica-energia-cinetica-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "56250.0",
+      "answer": "56250 J"
+    },
+    {
+      "id": "practica-fisica-encuentro-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "66",
+      "answer": "66 km"
+    },
+    {
+      "id": "practica-fisica-alcance-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10.0",
+      "answer": "10 s"
+    },
+    {
+      "id": "practica-fisica-fuerza-neta-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5400.0",
+      "answer": "5400 N"
+    },
+    {
+      "id": "practica-fisica-dilatacion-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.198",
+      "answer": "0,2 cm"
+    },
+    {
+      "id": "practica-fisica-ondas-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "1125.0",
+      "answer": "1125 m/s"
+    },
+    {
+      "id": "practica-fisica-lente-divergente-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-7.333333333333334",
+      "answer": "−7,33 cm"
+    },
+    {
+      "id": "practica-fisica-campo-distancia-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10.666666666666666",
+      "answer": "10,67 N/C"
+    },
+    {
+      "id": "practica-fisica-paralelo-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8.0",
+      "answer": "8 Ω"
+    },
+    {
+      "id": "practica-fisica-temperatura-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "55.0",
+      "answer": "55 °C"
+    },
+    {
+      "id": "practica-fisica-vectores-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "40.0",
+      "answer": "40"
+    },
+    {
+      "id": "practica-fisica-tiro-vertical-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10.0",
+      "answer": "10 s"
+    },
+    {
+      "id": "practica-fisica-dos-encuentros-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[7, 11]",
+      "answer": "7 s y 11 s"
+    },
+    {
+      "id": "practica-fisica-plano-inclinado-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "32.4",
+      "answer": "32,4 m"
+    },
+    {
+      "id": "practica-fisica-lente-convergente-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "28.5",
+      "answer": "28,5 cm"
+    },
+    {
+      "id": "practica-fisica-campo-fuerza-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "200.0",
+      "answer": "200 N/C"
+    },
+    {
+      "id": "practica-fisica-carga-corriente-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "243.0",
+      "answer": "243 C"
+    },
+    {
+      "id": "practica-fisica-serie-ohm-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "13.950000000000001",
+      "answer": "13,95 V"
+    },
+    {
+      "id": "practica-fisica-conversion-longitud-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "35.13459833269764",
+      "answer": "35,13 m/s"
+    },
+    {
+      "id": "practica-fisica-conversion-aceleracion-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.54",
+      "answer": "0,54 m/s²"
+    },
+    {
+      "id": "practica-fisica-dos-etapas-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "11.5",
+      "answer": "11,5 s"
+    },
+    {
+      "id": "practica-fisica-energia-cinetica-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "12100.0",
+      "answer": "12100 J"
+    },
+    {
+      "id": "practica-fisica-encuentro-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "72",
+      "answer": "72 km"
+    },
+    {
+      "id": "practica-fisica-alcance-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "11.0",
+      "answer": "11 s"
+    },
+    {
+      "id": "practica-fisica-fuerza-neta-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5909.090909090909",
+      "answer": "5909,09 N"
+    },
+    {
+      "id": "practica-fisica-dilatacion-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "0.27",
+      "answer": "0,27 cm"
+    },
+    {
+      "id": "practica-fisica-ondas-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "1375.0",
+      "answer": "1375 m/s"
+    },
+    {
+      "id": "practica-fisica-lente-divergente-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "-8.0",
+      "answer": "−8 cm"
+    },
+    {
+      "id": "practica-fisica-campo-distancia-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.75",
+      "answer": "6,75 N/C"
+    },
+    {
+      "id": "practica-fisica-paralelo-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9.0",
+      "answer": "9 Ω"
+    },
+    {
+      "id": "practica-fisica-temperatura-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "65.0",
+      "answer": "65 °C"
+    },
+    {
+      "id": "practica-fisica-vectores-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "45.0",
+      "answer": "45"
+    },
+    {
+      "id": "practica-fisica-tiro-vertical-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "11.0",
+      "answer": "11 s"
+    },
+    {
+      "id": "practica-fisica-dos-encuentros-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "[8, 12]",
+      "answer": "8 s y 12 s"
+    },
+    {
+      "id": "practica-fisica-plano-inclinado-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "40.0",
+      "answer": "40 m"
+    },
+    {
+      "id": "practica-fisica-lente-convergente-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "29.999999999999993",
+      "answer": "30 cm"
+    },
+    {
+      "id": "practica-fisica-campo-fuerza-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "200.0",
+      "answer": "200 N/C"
+    },
+    {
+      "id": "practica-fisica-carga-corriente-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "300.0",
+      "answer": "300 C"
+    },
+    {
+      "id": "practica-fisica-serie-ohm-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "17.0",
+      "answer": "17 V"
+    },
+    {
+      "id": "practica-fisica-conversion-longitud-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "39.03844259188627",
+      "answer": "39,04 m/s"
+    },
+    {
+      "id": "practica-quimica-masa-molar-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "122.5",
+      "answer": "122,5 g/mol"
+    },
+    {
+      "id": "practica-quimica-numero-atomos-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "1.2044",
+      "answer": "1,2044×10²³ átomos"
+    },
+    {
+      "id": "practica-quimica-masa-moleculas-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(49.0, 2.4088000000000003)",
+      "answer": "49 g; 2,4088×10²³ unidades de fórmula"
+    },
+    {
+      "id": "practica-quimica-pureza-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "30.0",
+      "answer": "30 %"
+    },
+    {
+      "id": "practica-quimica-balance-aluminio-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.0",
+      "answer": "6 mol"
+    },
+    {
+      "id": "practica-quimica-masa-atomica-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9.299236134174693",
+      "answer": "9,2992×10⁻²³ g"
+    },
+    {
+      "id": "practica-quimica-combustion-etano-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "60.0",
+      "answer": "60 g"
+    },
+    {
+      "id": "practica-quimica-dicromato-yodo-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "19.291338582677167",
+      "answer": "19,29 g"
+    },
+    {
+      "id": "practica-quimica-nitrogeno-alanina-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2.2399999999999998",
+      "answer": "2,24 L"
+    },
+    {
+      "id": "practica-quimica-comparar-atomos-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "hierro",
+      "answer": "hierro"
+    },
+    {
+      "id": "practica-quimica-descomposicion-hgo-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2.0",
+      "answer": "2 mol"
+    },
+    {
+      "id": "practica-quimica-neutralizacion-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4",
+      "answer": "4 mol"
+    },
+    {
+      "id": "practica-quimica-sustitucion-magnesio-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "1.0",
+      "answer": "1 mol"
+    },
+    {
+      "id": "practica-quimica-composicion-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "18",
+      "answer": "18"
+    },
+    {
+      "id": "practica-quimica-orbitales-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4",
+      "answer": "4 electrones"
+    },
+    {
+      "id": "practica-quimica-unidad-masa-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "24",
+      "answer": "24 u"
+    },
+    {
+      "id": "practica-quimica-balance-oxigeno-yodo-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2.0",
+      "answer": "2 mol"
+    },
+    {
+      "id": "practica-quimica-fraccion-masica-01",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "12.8",
+      "answer": "12,8 g"
+    },
+    {
+      "id": "practica-quimica-masa-molar-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "98",
+      "answer": "98 g/mol"
+    },
+    {
+      "id": "practica-quimica-numero-atomos-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "1.8066",
+      "answer": "1,8066×10²³ átomos"
+    },
+    {
+      "id": "practica-quimica-masa-moleculas-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(58.8, 3.6132)",
+      "answer": "294/5 g; 3,6132×10²³ unidades de fórmula"
+    },
+    {
+      "id": "practica-quimica-pureza-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "35.0",
+      "answer": "35 %"
+    },
+    {
+      "id": "practica-quimica-balance-aluminio-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9.0",
+      "answer": "9 mol"
+    },
+    {
+      "id": "practica-quimica-masa-atomica-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8.635004981733642",
+      "answer": "8,635×10⁻²³ g"
+    },
+    {
+      "id": "practica-quimica-combustion-etano-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "89.99999999999999",
+      "answer": "90 g"
+    },
+    {
+      "id": "practica-quimica-dicromato-yodo-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "28.937007874015745",
+      "answer": "28,94 g"
+    },
+    {
+      "id": "practica-quimica-nitrogeno-alanina-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.3600000000000003",
+      "answer": "3,36 L"
+    },
+    {
+      "id": "practica-quimica-comparar-atomos-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "azufre",
+      "answer": "azufre"
+    },
+    {
+      "id": "practica-quimica-descomposicion-hgo-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.0",
+      "answer": "3 mol"
+    },
+    {
+      "id": "practica-quimica-neutralizacion-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6",
+      "answer": "6 mol"
+    },
+    {
+      "id": "practica-quimica-sustitucion-magnesio-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "1.5",
+      "answer": "1,5 mol"
+    },
+    {
+      "id": "practica-quimica-composicion-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "28",
+      "answer": "28"
+    },
+    {
+      "id": "practica-quimica-orbitales-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6",
+      "answer": "6 electrones"
+    },
+    {
+      "id": "practica-quimica-unidad-masa-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "36",
+      "answer": "36 u"
+    },
+    {
+      "id": "practica-quimica-balance-oxigeno-yodo-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.0",
+      "answer": "3 mol"
+    },
+    {
+      "id": "practica-quimica-fraccion-masica-02",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "19.2",
+      "answer": "19,2 g"
+    },
+    {
+      "id": "practica-quimica-masa-molar-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "84",
+      "answer": "84 g/mol"
+    },
+    {
+      "id": "practica-quimica-numero-atomos-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2.4088000000000003",
+      "answer": "2,4088×10²³ átomos"
+    },
+    {
+      "id": "practica-quimica-masa-moleculas-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(67.2, 4.8176000000000005)",
+      "answer": "336/5 g; 4,8176×10²³ unidades de fórmula"
+    },
+    {
+      "id": "practica-quimica-pureza-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "40.0",
+      "answer": "40 %"
+    },
+    {
+      "id": "practica-quimica-balance-aluminio-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "12.0",
+      "answer": "12 mol"
+    },
+    {
+      "id": "practica-quimica-masa-atomica-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "21.08933909000332",
+      "answer": "21,0893×10⁻²³ g"
+    },
+    {
+      "id": "practica-quimica-combustion-etano-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "120.0",
+      "answer": "120 g"
+    },
+    {
+      "id": "practica-quimica-dicromato-yodo-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "38.58267716535433",
+      "answer": "38,58 g"
+    },
+    {
+      "id": "practica-quimica-nitrogeno-alanina-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.4799999999999995",
+      "answer": "4,48 L"
+    },
+    {
+      "id": "practica-quimica-comparar-atomos-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "sodio",
+      "answer": "sodio"
+    },
+    {
+      "id": "practica-quimica-descomposicion-hgo-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.0",
+      "answer": "4 mol"
+    },
+    {
+      "id": "practica-quimica-neutralizacion-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8",
+      "answer": "8 mol"
+    },
+    {
+      "id": "practica-quimica-sustitucion-magnesio-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2.0",
+      "answer": "2 mol"
+    },
+    {
+      "id": "practica-quimica-composicion-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "30",
+      "answer": "30"
+    },
+    {
+      "id": "practica-quimica-orbitales-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8",
+      "answer": "8 electrones"
+    },
+    {
+      "id": "practica-quimica-unidad-masa-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "48",
+      "answer": "48 u"
+    },
+    {
+      "id": "practica-quimica-balance-oxigeno-yodo-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.0",
+      "answer": "4 mol"
+    },
+    {
+      "id": "practica-quimica-fraccion-masica-03",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "25.6",
+      "answer": "25,6 g"
+    },
+    {
+      "id": "practica-quimica-masa-molar-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "102",
+      "answer": "102 g/mol"
+    },
+    {
+      "id": "practica-quimica-numero-atomos-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.011",
+      "answer": "3,011×10²³ átomos"
+    },
+    {
+      "id": "practica-quimica-masa-moleculas-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(102.0, 6.022)",
+      "answer": "102 g; 6,022×10²³ unidades de fórmula"
+    },
+    {
+      "id": "practica-quimica-pureza-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "45.0",
+      "answer": "45 %"
+    },
+    {
+      "id": "practica-quimica-balance-aluminio-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "15.0",
+      "answer": "15 mol"
+    },
+    {
+      "id": "practica-quimica-masa-atomica-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2.656924609764198",
+      "answer": "2,6569×10⁻²³ g"
+    },
+    {
+      "id": "practica-quimica-combustion-etano-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "150.0",
+      "answer": "150 g"
+    },
+    {
+      "id": "practica-quimica-dicromato-yodo-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "48.22834645669292",
+      "answer": "48,23 g"
+    },
+    {
+      "id": "practica-quimica-nitrogeno-alanina-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5.6",
+      "answer": "5,6 L"
+    },
+    {
+      "id": "practica-quimica-comparar-atomos-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "carbono",
+      "answer": "carbono"
+    },
+    {
+      "id": "practica-quimica-descomposicion-hgo-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5.0",
+      "answer": "5 mol"
+    },
+    {
+      "id": "practica-quimica-neutralizacion-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10",
+      "answer": "10 mol"
+    },
+    {
+      "id": "practica-quimica-sustitucion-magnesio-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "2.5",
+      "answer": "2,5 mol"
+    },
+    {
+      "id": "practica-quimica-composicion-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "30",
+      "answer": "30"
+    },
+    {
+      "id": "practica-quimica-orbitales-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10",
+      "answer": "10 electrones"
+    },
+    {
+      "id": "practica-quimica-unidad-masa-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "60",
+      "answer": "60 u"
+    },
+    {
+      "id": "practica-quimica-balance-oxigeno-yodo-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5.0",
+      "answer": "5 mol"
+    },
+    {
+      "id": "practica-quimica-fraccion-masica-04",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "32.0",
+      "answer": "32 g"
+    },
+    {
+      "id": "practica-quimica-masa-molar-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "160",
+      "answer": "160 g/mol"
+    },
+    {
+      "id": "practica-quimica-numero-atomos-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.6132",
+      "answer": "3,6132×10²³ átomos"
+    },
+    {
+      "id": "practica-quimica-masa-moleculas-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(192.0, 7.2264)",
+      "answer": "192 g; 7,2264×10²³ unidades de fórmula"
+    },
+    {
+      "id": "practica-quimica-pureza-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "50.000000000000014",
+      "answer": "50 %"
+    },
+    {
+      "id": "practica-quimica-balance-aluminio-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "18.0",
+      "answer": "18 mol"
+    },
+    {
+      "id": "practica-quimica-masa-atomica-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.483560278977084",
+      "answer": "4,4836×10⁻²³ g"
+    },
+    {
+      "id": "practica-quimica-combustion-etano-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "179.99999999999997",
+      "answer": "180 g"
+    },
+    {
+      "id": "practica-quimica-dicromato-yodo-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "57.87401574803149",
+      "answer": "57,87 g"
+    },
+    {
+      "id": "practica-quimica-nitrogeno-alanina-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.720000000000001",
+      "answer": "6,72 L"
+    },
+    {
+      "id": "practica-quimica-comparar-atomos-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "cromo",
+      "answer": "cromo"
+    },
+    {
+      "id": "practica-quimica-descomposicion-hgo-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.0",
+      "answer": "6 mol"
+    },
+    {
+      "id": "practica-quimica-neutralizacion-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "12",
+      "answer": "12 mol"
+    },
+    {
+      "id": "practica-quimica-sustitucion-magnesio-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.0",
+      "answer": "3 mol"
+    },
+    {
+      "id": "practica-quimica-composicion-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "35",
+      "answer": "35"
+    },
+    {
+      "id": "practica-quimica-orbitales-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "12",
+      "answer": "12 electrones"
+    },
+    {
+      "id": "practica-quimica-unidad-masa-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "72",
+      "answer": "72 u"
+    },
+    {
+      "id": "practica-quimica-balance-oxigeno-yodo-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.0",
+      "answer": "6 mol"
+    },
+    {
+      "id": "practica-quimica-fraccion-masica-05",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "38.4",
+      "answer": "38,4 g"
+    },
+    {
+      "id": "practica-quimica-masa-molar-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "30",
+      "answer": "30 g/mol"
+    },
+    {
+      "id": "practica-quimica-numero-atomos-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.215400000000001",
+      "answer": "4,2154×10²³ átomos"
+    },
+    {
+      "id": "practica-quimica-masa-moleculas-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(42.0, 8.4308)",
+      "answer": "42 g; 8,4308×10²³ unidades de fórmula"
+    },
+    {
+      "id": "practica-quimica-pureza-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "55.00000000000001",
+      "answer": "55 %"
+    },
+    {
+      "id": "practica-quimica-balance-aluminio-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "21.0",
+      "answer": "21 mol"
+    },
+    {
+      "id": "practica-quimica-masa-atomica-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.9853869146462966",
+      "answer": "3,9854×10⁻²³ g"
+    },
+    {
+      "id": "practica-quimica-combustion-etano-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "210.0",
+      "answer": "210 g"
+    },
+    {
+      "id": "practica-quimica-dicromato-yodo-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "67.51968503937007",
+      "answer": "67,52 g"
+    },
+    {
+      "id": "practica-quimica-nitrogeno-alanina-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "7.84",
+      "answer": "7,84 L"
+    },
+    {
+      "id": "practica-quimica-comparar-atomos-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "hierro",
+      "answer": "hierro"
+    },
+    {
+      "id": "practica-quimica-descomposicion-hgo-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "7.0",
+      "answer": "7 mol"
+    },
+    {
+      "id": "practica-quimica-neutralizacion-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "14",
+      "answer": "14 mol"
+    },
+    {
+      "id": "practica-quimica-sustitucion-magnesio-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.5",
+      "answer": "3,5 mol"
+    },
+    {
+      "id": "practica-quimica-composicion-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "64",
+      "answer": "64"
+    },
+    {
+      "id": "practica-quimica-orbitales-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "14",
+      "answer": "14 electrones"
+    },
+    {
+      "id": "practica-quimica-unidad-masa-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "84",
+      "answer": "84 u"
+    },
+    {
+      "id": "practica-quimica-balance-oxigeno-yodo-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "7.0",
+      "answer": "7 mol"
+    },
+    {
+      "id": "practica-quimica-fraccion-masica-06",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "44.8",
+      "answer": "44,8 g"
+    },
+    {
+      "id": "practica-quimica-masa-molar-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "74",
+      "answer": "74 g/mol"
+    },
+    {
+      "id": "practica-quimica-numero-atomos-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.8176000000000005",
+      "answer": "4,8176×10²³ átomos"
+    },
+    {
+      "id": "practica-quimica-masa-moleculas-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(118.4, 9.635200000000001)",
+      "answer": "592/5 g; 9,6352×10²³ unidades de fórmula"
+    },
+    {
+      "id": "practica-quimica-pureza-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "60.0",
+      "answer": "60 %"
+    },
+    {
+      "id": "practica-quimica-balance-aluminio-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "24.0",
+      "answer": "24 mol"
+    },
+    {
+      "id": "practica-quimica-masa-atomica-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.476253736300232",
+      "answer": "6,4763×10⁻²³ g"
+    },
+    {
+      "id": "practica-quimica-combustion-etano-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "240.0",
+      "answer": "240 g"
+    },
+    {
+      "id": "practica-quimica-dicromato-yodo-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "77.16535433070867",
+      "answer": "77,17 g"
+    },
+    {
+      "id": "practica-quimica-nitrogeno-alanina-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8.959999999999999",
+      "answer": "8,96 L"
+    },
+    {
+      "id": "practica-quimica-comparar-atomos-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "azufre",
+      "answer": "azufre"
+    },
+    {
+      "id": "practica-quimica-descomposicion-hgo-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8.0",
+      "answer": "8 mol"
+    },
+    {
+      "id": "practica-quimica-neutralizacion-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "16",
+      "answer": "16 mol"
+    },
+    {
+      "id": "practica-quimica-sustitucion-magnesio-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.0",
+      "answer": "4 mol"
+    },
+    {
+      "id": "practica-quimica-composicion-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "45",
+      "answer": "45"
+    },
+    {
+      "id": "practica-quimica-orbitales-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "16",
+      "answer": "16 electrones"
+    },
+    {
+      "id": "practica-quimica-unidad-masa-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "96",
+      "answer": "96 u"
+    },
+    {
+      "id": "practica-quimica-balance-oxigeno-yodo-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "8.0",
+      "answer": "8 mol"
+    },
+    {
+      "id": "practica-quimica-fraccion-masica-07",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "51.2",
+      "answer": "51,2 g"
+    },
+    {
+      "id": "practica-quimica-masa-molar-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "120",
+      "answer": "120 g/mol"
+    },
+    {
+      "id": "practica-quimica-numero-atomos-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5.4198",
+      "answer": "5,4198×10²³ átomos"
+    },
+    {
+      "id": "practica-quimica-masa-moleculas-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(216.0, 10.8396)",
+      "answer": "216 g; 10,8396×10²³ unidades de fórmula"
+    },
+    {
+      "id": "practica-quimica-pureza-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "65.0",
+      "answer": "65 %"
+    },
+    {
+      "id": "practica-quimica-balance-aluminio-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "27.0",
+      "answer": "27 mol"
+    },
+    {
+      "id": "practica-quimica-masa-atomica-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "1.9926934573231483",
+      "answer": "1,9927×10⁻²³ g"
+    },
+    {
+      "id": "practica-quimica-combustion-etano-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "270.0",
+      "answer": "270 g"
+    },
+    {
+      "id": "practica-quimica-dicromato-yodo-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "86.81102362204723",
+      "answer": "86,81 g"
+    },
+    {
+      "id": "practica-quimica-nitrogeno-alanina-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10.08",
+      "answer": "10,08 L"
+    },
+    {
+      "id": "practica-quimica-comparar-atomos-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "sodio",
+      "answer": "sodio"
+    },
+    {
+      "id": "practica-quimica-descomposicion-hgo-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9.0",
+      "answer": "9 mol"
+    },
+    {
+      "id": "practica-quimica-neutralizacion-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "18",
+      "answer": "18 mol"
+    },
+    {
+      "id": "practica-quimica-sustitucion-magnesio-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "4.5",
+      "answer": "4,5 mol"
+    },
+    {
+      "id": "practica-quimica-composicion-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "60",
+      "answer": "60"
+    },
+    {
+      "id": "practica-quimica-orbitales-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "18",
+      "answer": "18 electrones"
+    },
+    {
+      "id": "practica-quimica-unidad-masa-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "108",
+      "answer": "108 u"
+    },
+    {
+      "id": "practica-quimica-balance-oxigeno-yodo-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "9.0",
+      "answer": "9 mol"
+    },
+    {
+      "id": "practica-quimica-fraccion-masica-08",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "57.6",
+      "answer": "57,6 g"
+    },
+    {
+      "id": "practica-quimica-masa-molar-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "294",
+      "answer": "294 g/mol"
+    },
+    {
+      "id": "practica-quimica-numero-atomos-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.022",
+      "answer": "6,022×10²³ átomos"
+    },
+    {
+      "id": "practica-quimica-masa-moleculas-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(588.0, 12.044)",
+      "answer": "588 g; 12,044×10²³ unidades de fórmula"
+    },
+    {
+      "id": "practica-quimica-pureza-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "70.0",
+      "answer": "70 %"
+    },
+    {
+      "id": "practica-quimica-balance-aluminio-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "30.0",
+      "answer": "30 mol"
+    },
+    {
+      "id": "practica-quimica-masa-atomica-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "3.8193291265360343",
+      "answer": "3,8193×10⁻²³ g"
+    },
+    {
+      "id": "practica-quimica-combustion-etano-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "300.0",
+      "answer": "300 g"
+    },
+    {
+      "id": "practica-quimica-dicromato-yodo-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "96.45669291338584",
+      "answer": "96,46 g"
+    },
+    {
+      "id": "practica-quimica-nitrogeno-alanina-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "11.2",
+      "answer": "11,2 L"
+    },
+    {
+      "id": "practica-quimica-comparar-atomos-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "carbono",
+      "answer": "carbono"
+    },
+    {
+      "id": "practica-quimica-descomposicion-hgo-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10.0",
+      "answer": "10 mol"
+    },
+    {
+      "id": "practica-quimica-neutralizacion-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "20",
+      "answer": "20 mol"
+    },
+    {
+      "id": "practica-quimica-sustitucion-magnesio-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5.0",
+      "answer": "5 mol"
+    },
+    {
+      "id": "practica-quimica-composicion-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "121",
+      "answer": "121"
+    },
+    {
+      "id": "practica-quimica-orbitales-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "20",
+      "answer": "20 electrones"
+    },
+    {
+      "id": "practica-quimica-unidad-masa-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "120",
+      "answer": "120 u"
+    },
+    {
+      "id": "practica-quimica-balance-oxigeno-yodo-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "10.0",
+      "answer": "10 mol"
+    },
+    {
+      "id": "practica-quimica-fraccion-masica-09",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "64.0",
+      "answer": "64 g"
+    },
+    {
+      "id": "practica-quimica-masa-molar-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "89",
+      "answer": "89 g/mol"
+    },
+    {
+      "id": "practica-quimica-numero-atomos-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "6.624199999999999",
+      "answer": "6,6242×10²³ átomos"
+    },
+    {
+      "id": "practica-quimica-masa-moleculas-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "(195.8, 13.248400000000002)",
+      "answer": "979/5 g; 13,2484×10²³ unidades de fórmula"
+    },
+    {
+      "id": "practica-quimica-pureza-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "75.0",
+      "answer": "75 %"
+    },
+    {
+      "id": "practica-quimica-balance-aluminio-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "33.0",
+      "answer": "33 mol"
+    },
+    {
+      "id": "practica-quimica-masa-atomica-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5.313849219528396",
+      "answer": "5,3138×10⁻²³ g"
+    },
+    {
+      "id": "practica-quimica-combustion-etano-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "330.0",
+      "answer": "330 g"
+    },
+    {
+      "id": "practica-quimica-dicromato-yodo-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "106.10236220472443",
+      "answer": "106,1 g"
+    },
+    {
+      "id": "practica-quimica-nitrogeno-alanina-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "12.32",
+      "answer": "12,32 L"
+    },
+    {
+      "id": "practica-quimica-comparar-atomos-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "cromo",
+      "answer": "cromo"
+    },
+    {
+      "id": "practica-quimica-descomposicion-hgo-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "11.0",
+      "answer": "11 mol"
+    },
+    {
+      "id": "practica-quimica-neutralizacion-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "22",
+      "answer": "22 mol"
+    },
+    {
+      "id": "practica-quimica-sustitucion-magnesio-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "5.5",
+      "answer": "5,5 mol"
+    },
+    {
+      "id": "practica-quimica-composicion-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "156",
+      "answer": "156"
+    },
+    {
+      "id": "practica-quimica-orbitales-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "22",
+      "answer": "22 electrones"
+    },
+    {
+      "id": "practica-quimica-unidad-masa-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "132",
+      "answer": "132 u"
+    },
+    {
+      "id": "practica-quimica-balance-oxigeno-yodo-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "11.0",
+      "answer": "11 mol"
+    },
+    {
+      "id": "practica-quimica-fraccion-masica-10",
+      "verified": true,
+      "method": "symbolic or independent numerical calculation",
+      "expected": "70.4",
+      "answer": "70,4 g"
+    }
+  ],
+  "date": "2026-10-30",
+  "sourcePdfSha256": "e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148",
+  "questionDataSha256": "2fcb1d583bfd7dbc6a424f2d60c85b5b4459bdc916d68ba0d93d52c2604965d5"
+}

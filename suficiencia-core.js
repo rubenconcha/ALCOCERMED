@@ -8,7 +8,7 @@
     function validate(bank) {
         if (!bank || !Array.isArray(bank.questions) || !Array.isArray(bank.passages)) return false;
         const ids = new Set(), passages = new Set(bank.passages.map(p => p.id));
-        return bank.questions.length > 0 && bank.questions.every(q => {
+        const validQuestions = bank.questions.length > 0 && bank.questions.every(q => {
             if (!q.id || ids.has(q.id)) return false;
             ids.add(q.id);
             return subjects[q.subject] && typeof q.text === 'string' && q.text.length > 0 &&
@@ -18,6 +18,20 @@
                 (q.subject !== 'lectura' || passages.has(q.passageId));
         }) && Object.keys(subjects).every(s => bank.questions.some(q => q.subject === s)) &&
             bank.passages.every(p => typeof p.text === 'string' && p.text.length > 100 && p.source?.pdfPages?.length > 0);
+        if (!validQuestions) return false;
+        if (!bank.papers) return true;
+        if (!Array.isArray(bank.papers) || !bank.papers.length) return false;
+        const paperIds = new Set(), lookup = new Map(bank.questions.map(q => [q.id, q]));
+        return bank.papers.every(p => {
+            if (!p.id || paperIds.has(p.id) || !p.title || !['integral', ...Object.keys(subjects)].includes(p.subject)) return false;
+            paperIds.add(p.id);
+            if (!Array.isArray(p.questionIds) || p.questionIds.length !== p.questionCount || new Set(p.questionIds).size !== p.questionCount || !Number.isFinite(p.minutes) || p.minutes <= 0 || p.minutes > 180) return false;
+            const rows = p.questionIds.map(id => lookup.get(id));
+            if (rows.some(q => !q || (p.subject !== 'integral' && q.subject !== p.subject))) return false;
+            if (p.subject === 'integral' && (p.questionCount !== 40 || Object.keys(subjects).some(s => rows.filter(q => q.subject === s).length !== 10))) return false;
+            const reading = rows.filter(q => q.subject === 'lectura');
+            return [...new Set(reading.map(q => q.passageId))].every(id => reading.filter(q => q.passageId === id).length === bank.questions.filter(q => q.passageId === id).length);
+        });
     }
     function random(seed) {
         let n = Number(seed) >>> 0;
@@ -31,6 +45,12 @@
     function select(bank, area, seed) {
         if (!validate(bank)) throw new Error('Banco incompleto');
         const rng = random(seed);
+        if (area.startsWith('simulacro:')) {
+            const selected = paper(bank, area);
+            if (!selected) throw new Error('Simulacro no encontrado');
+            const lookup = new Map(bank.questions.map(q => [q.id, q]));
+            return selected.questionIds.map(id => lookup.get(id));
+        }
         if (area === 'integral') {
             const questions = ['matematicas', 'fisica', 'quimica'].flatMap(s => shuffle(bank.questions.filter(q => q.subject === s), rng).slice(0, 10));
             const texts = shuffle(bank.passages, rng).slice(0, 2);
@@ -64,5 +84,6 @@
         }
         return { ...saved, answers, flags: Array.isArray(saved.flags) ? saved.flags.filter(id => saved.ids.includes(id)) : [], index: Math.max(0, Math.min(saved.ids.length - 1, Number.isInteger(saved.index) ? saved.index : 0)), finished: saved.finished === true };
     }
-    return { subjects, validate, select, grade, restore };
+    function paper(bank, area) { return bank?.papers?.find(p => 'simulacro:' + p.id === area) || null; }
+    return { subjects, validate, select, grade, restore, paper };
 });
