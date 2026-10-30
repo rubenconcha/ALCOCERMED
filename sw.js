@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v134-device-code-timer';
+const CACHE_NAME = 'alcocermed-main-v135-device-code-resume';
 const APP_SHELL = [
     './campus',
     './campus.html',

@@ -1,7 +1,7 @@
 (function () {
  'use strict';
  const el=id=>document.getElementById(id);
- let client,user,state,currentId,busy=false,verified=false,sentEmail='',resendAt=0,resendTimer=null,sendBlocked=false;
+ let client,user,state,currentId,initializing=true,busy=false,verified=false,sentEmail='',resendAt=0,resendTimer=null,sendBlocked=false;
  function status(text,error=false){el('status').textContent=text;el('status').dataset.error=String(error);}
  function date(value){return new Date(value).toLocaleString('es-BO',{dateStyle:'short',timeStyle:'short'});}
  function failure(error,verifying=false){
@@ -13,7 +13,7 @@
  }
  function updateResend(){
   const seconds=Math.max(0,Math.ceil((resendAt-Date.now())/1000));
-  el('send').disabled=busy||seconds>0||sendBlocked;
+  el('send').disabled=initializing||busy||seconds>0||sendBlocked;
   el('send').textContent=sendBlocked?'Envío temporalmente no disponible':seconds?'Reenviar en '+seconds+' s':sentEmail?'Reenviar código':'Enviar código';
   if(!seconds&&resendTimer!==null){clearInterval(resendTimer);resendTimer=null;}
  }
@@ -28,6 +28,19 @@
   sentEmail=email;el('email').readOnly=true;el('code-form').hidden=false;el('send').className='secondary';
   el('title').textContent='Escribe tu código';el('intro').textContent='Al confirmarlo, este navegador ocupará el lugar del anterior.';
  }
+ async function deadline(promise){
+  let timer;try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('connection_timeout')),12000);})]);}finally{clearTimeout(timer);}
+ }
+ function rpc(name,args){return deadline(client.rpc(name,args));}
+ function preparingAccess(){
+  el('verification').hidden=true;el('account').hidden=true;el('retry').hidden=true;
+  el('title').textContent='Estamos iniciando tu sesión';el('intro').textContent='Un momento, estamos autorizando este navegador.';
+ }
+ function showCooldown(value){
+  el('verification').hidden=true;el('account').hidden=true;el('retry').hidden=true;
+  el('title').textContent='Ya cambiaste de navegador';el('intro').textContent='Puedes hacer un cambio cada 7 días.';
+  status('Podrás hacer otro cambio el '+date(value)+'.',true);
+ }
  function freshEmail(session){
   try{const claims=JSON.parse(atob(session.access_token.split('.')[1].replace(/-/g,'+').replace(/_/g,'/')));const now=Date.now()/1000;return claims.amr?.some(a=>a.method==='otp'&&a.timestamp>=now-600&&a.timestamp<=now+30)===true;}catch(_){return false;}
  }
@@ -36,26 +49,28 @@
   el('title').textContent='Listo, ya puedes entrar';el('intro').textContent='Este navegador está autorizado.';status('');el('retry').hidden=true;
   if(resendTimer!==null){clearInterval(resendTimer);resendTimer=null;}
   try{sessionStorage.removeItem('alcocer_device_change_email');sessionStorage.removeItem('alcocer_code_request');}catch(_){}
+  location.replace('/campus');
  }
  async function replace(device){
   status('Autorizando este navegador…');
-  const response=await client.rpc('campus_replace_device',{p_old_device_id:device.device_id,p_new_device_id:currentId,p_device_name:DeviceGuard.getDeviceName()});
+  const response=await rpc('campus_replace_device',{p_old_device_id:device.device_id,p_new_device_id:currentId,p_device_name:DeviceGuard.getDeviceName()});
   if(response.error)throw response.error;
   if(!response.data?.ok){
    const code=response.data?.code;
    if(code==='EMAIL_VERIFICATION_REQUIRED'){
-    verified=false;el('verification').hidden=false;el('account').hidden=true;status('La verificación venció. Pide un código nuevo.',true);
+    verified=false;el('verification').hidden=false;el('account').hidden=true;showCodeForm(user.email);status('La verificación venció. Pide un código nuevo.',true);
    }else if(code==='CHANGE_COOLDOWN'){
-    el('account').hidden=true;status('Podrás cambiar de navegador el '+date(response.data.next_change_at)+'.',true);
+    showCooldown(response.data.next_change_at);
    }else{status('No se pudo cambiar el navegador. Vuelve a intentarlo.',true);}
    return;
   }
   finish();
  }
  async function afterVerification(){
-  const response=await client.rpc('campus_my_devices');if(response.error)throw response.error;state=response.data;
+  preparingAccess();
+  const response=await rpc('campus_my_devices');if(response.error)throw response.error;state=response.data;
   if(state.devices.some(d=>d.device_id===currentId)){finish();return;}
-  if(!state.can_replace){el('account').hidden=true;status('Podrás cambiar de navegador el '+date(state.next_change_at)+'.',true);return;}
+  if(!state.can_replace){showCooldown(state.next_change_at);return;}
   if(!state.devices.length){
    const activated=await DeviceGuard.activateDevice(client,user.email);if(!activated.ok)throw new Error(activated.error);finish();return;
   }
@@ -77,7 +92,7 @@
   status('Código verificado. Elige el navegador que dejarás de usar.');
  }
  el('send-form').addEventListener('submit',async event=>{
-  event.preventDefault();if(busy)return;
+  event.preventDefault();if(initializing||busy)return;
   if(sendBlocked)return;
   if(Date.now()<resendAt){updateResend();status('Ya solicitaste un código. Puedes escribirlo mientras termina la cuenta regresiva.');return;}
   const email=el('email').value.trim().toLowerCase();if(!email||!el('email').checkValidity())return;
@@ -95,7 +110,7 @@
   }finally{busy=false;updateResend();}
  });
  el('code-form').addEventListener('submit',async event=>{
-  event.preventDefault();if(busy||!sentEmail)return;
+  event.preventDefault();if(initializing||busy||!sentEmail)return;
   const token=el('code').value.trim();if(!/^\d{6}$/.test(token)){status('Escribe los 6 dígitos del código.',true);return;}
   busy=true;el('verify').disabled=true;status('Comprobando código…');
   try{
@@ -103,7 +118,7 @@
    user=result.data?.user;
    if(!user||user.email?.toLowerCase()!==sentEmail||!freshEmail(result.data.session))throw new Error('verification_failed');
    verified=true;el('code').value='';el('verification').hidden=true;await afterVerification();
-  }catch(error){if(verified)el('retry').hidden=false;status(failure(error,true),true);}finally{busy=false;el('verify').disabled=false;}
+  }catch(error){if(verified){el('retry').hidden=false;el('title').textContent='No pudimos terminar el ingreso';}status(failure(error,!verified),true);}finally{busy=false;el('verify').disabled=false;}
  });
  el('retry').onclick=async()=>{
   if(busy||!verified)return;busy=true;el('retry').disabled=true;
@@ -119,16 +134,23 @@
     showCodeForm(pending);
     if(saved.until>Date.now())startCooldown(Math.ceil((saved.until-Date.now())/1000));else updateResend();
    }
-   // Support previously delivered links during the rollout.
-   if(location.hash){
-    const result=await client.auth.getSession();history.replaceState(null,'',location.pathname);
-    if(result.data?.session&&freshEmail(result.data.session)){
-     const checked=await client.auth.getUser();if(checked.error)throw checked.error;
-     user=checked.data.user;verified=true;el('verification').hidden=true;await afterVerification();return;
+   // Resume a verified transfer after refresh, including a previously completed transfer.
+   const sessionResult=await deadline(client.auth.getSession());
+   if(location.hash)history.replaceState(null,'',location.pathname);
+   const session=sessionResult.data?.session;
+   if(!sessionResult.error&&session&&(!pending||session.user?.email?.toLowerCase()===pending.toLowerCase())){
+    const checked=await deadline(client.auth.getUser());
+    if(!checked.error&&checked.data?.user){
+     user=checked.data.user;
+     const active=await rpc('check_device_active',{p_device_id:currentId});
+     if(active.error)throw active.error;
+     if(active.data?.active===true){finish();return;}
+     if(freshEmail(session)){verified=true;await afterVerification();return;}
     }
    }
    status('');
-  }catch(error){el('send').disabled=true;status(failure(error),true);}
+  }catch(error){if(verified){el('retry').hidden=false;el('title').textContent='No pudimos terminar el ingreso';}status(failure(error),true);}
+  finally{initializing=false;el('verify').disabled=false;updateResend();}
  }
  init();
 })();
