@@ -1,0 +1,2051 @@
+{
+  "questions": 180,
+  "families": 30,
+  "checks": [
+    {
+      "id": "basico-matematicas-contar-01",
+      "family": "contar",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          1,
+          2,
+          3
+        ]
+      },
+      "answer": "3"
+    },
+    {
+      "id": "basico-matematicas-union-01",
+      "family": "union",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          1,
+          2,
+          4
+        ],
+        "B": [
+          4,
+          5
+        ]
+      },
+      "answer": "{1, 2, 4, 5}"
+    },
+    {
+      "id": "basico-matematicas-interseccion-01",
+      "family": "interseccion",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          1,
+          2,
+          3
+        ],
+        "B": [
+          3,
+          4
+        ]
+      },
+      "answer": "{3}"
+    },
+    {
+      "id": "basico-matematicas-complemento-01",
+      "family": "complemento",
+      "subject": "matematicas",
+      "inputs": {
+        "U": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "A": [
+          2,
+          4
+        ]
+      },
+      "answer": "{1, 3, 5}"
+    },
+    {
+      "id": "basico-matematicas-media-01",
+      "family": "media",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          2,
+          4,
+          6
+        ]
+      },
+      "answer": "4"
+    },
+    {
+      "id": "basico-matematicas-dato-faltante-01",
+      "family": "dato-faltante",
+      "subject": "matematicas",
+      "inputs": {
+        "a": 1,
+        "b": 3,
+        "mean": 3
+      },
+      "answer": "5"
+    },
+    {
+      "id": "basico-matematicas-razon-directa-01",
+      "family": "razon-directa",
+      "subject": "matematicas",
+      "inputs": {
+        "x": 3,
+        "y": 2
+      },
+      "answer": "3/2"
+    },
+    {
+      "id": "basico-matematicas-division-simple-01",
+      "family": "division-simple",
+      "subject": "matematicas",
+      "inputs": {
+        "raw": 6,
+        "divisor": 2
+      },
+      "answer": "3x"
+    },
+    {
+      "id": "basico-matematicas-potencia-diez-01",
+      "family": "potencia-diez",
+      "subject": "matematicas",
+      "inputs": {
+        "coefficient": 2,
+        "power": 2
+      },
+      "answer": "200"
+    },
+    {
+      "id": "basico-matematicas-multiplo-01",
+      "family": "multiplo",
+      "subject": "matematicas",
+      "inputs": {
+        "number": 2,
+        "position": 3
+      },
+      "answer": "6"
+    },
+    {
+      "id": "basico-fisica-centimetros-01",
+      "family": "centimetros",
+      "subject": "fisica",
+      "inputs": {
+        "cm": 100
+      },
+      "answer": "1 m"
+    },
+    {
+      "id": "basico-fisica-segundos-01",
+      "family": "segundos",
+      "subject": "fisica",
+      "inputs": {
+        "minutes": 1
+      },
+      "answer": "60 s"
+    },
+    {
+      "id": "basico-fisica-rapidez-01",
+      "family": "rapidez",
+      "subject": "fisica",
+      "inputs": {
+        "distance": 30,
+        "time": 5
+      },
+      "answer": "6 m/s"
+    },
+    {
+      "id": "basico-fisica-aceleracion-01",
+      "family": "aceleracion",
+      "subject": "fisica",
+      "inputs": {
+        "finalVelocity": 2,
+        "initialVelocity": 0,
+        "time": 2
+      },
+      "answer": "1 m/s²"
+    },
+    {
+      "id": "basico-fisica-fuerza-01",
+      "family": "fuerza",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 2,
+        "acceleration": 3
+      },
+      "answer": "6 N"
+    },
+    {
+      "id": "basico-fisica-peso-01",
+      "family": "peso",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 1,
+        "g": 10
+      },
+      "answer": "10 N"
+    },
+    {
+      "id": "basico-fisica-energia-01",
+      "family": "energia",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 2,
+        "speed": 2
+      },
+      "answer": "4 J"
+    },
+    {
+      "id": "basico-fisica-onda-01",
+      "family": "onda",
+      "subject": "fisica",
+      "inputs": {
+        "frequency": 10,
+        "wavelength": 2
+      },
+      "answer": "20 m/s"
+    },
+    {
+      "id": "basico-fisica-carga-01",
+      "family": "carga",
+      "subject": "fisica",
+      "inputs": {
+        "current": 1,
+        "time": 10
+      },
+      "answer": "10 C"
+    },
+    {
+      "id": "basico-fisica-voltaje-01",
+      "family": "voltaje",
+      "subject": "fisica",
+      "inputs": {
+        "current": 1,
+        "resistance": 3
+      },
+      "answer": "3 V"
+    },
+    {
+      "id": "basico-quimica-elementos-01",
+      "family": "elementos",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "H": 2,
+          "S": 1,
+          "O": 4
+        }
+      },
+      "answer": "3"
+    },
+    {
+      "id": "basico-quimica-atomos-formula-01",
+      "family": "atomos-formula",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "H": 2,
+          "S": 1,
+          "O": 4
+        }
+      },
+      "answer": "7"
+    },
+    {
+      "id": "basico-quimica-masa-molar-basica-01",
+      "family": "masa-molar-basica",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "H": 2,
+          "S": 1,
+          "O": 4
+        },
+        "atomicMasses": {
+          "H": 1,
+          "S": 32,
+          "O": 16
+        }
+      },
+      "answer": "98 g/mol"
+    },
+    {
+      "id": "basico-quimica-moles-a-masa-01",
+      "family": "moles-a-masa",
+      "subject": "quimica",
+      "inputs": {
+        "moles": 1,
+        "M": 98
+      },
+      "answer": "98 g"
+    },
+    {
+      "id": "basico-quimica-masa-a-moles-01",
+      "family": "masa-a-moles",
+      "subject": "quimica",
+      "inputs": {
+        "grams": 98,
+        "M": 98
+      },
+      "answer": "1 mol"
+    },
+    {
+      "id": "basico-quimica-orbitales-basicos-01",
+      "family": "orbitales-basicos",
+      "subject": "quimica",
+      "inputs": {
+        "orbitals": 1,
+        "capacity": 2
+      },
+      "answer": "2 electrones"
+    },
+    {
+      "id": "basico-quimica-hgo-basico-01",
+      "family": "hgo-basico",
+      "subject": "quimica",
+      "inputs": {
+        "hgoMoles": 2
+      },
+      "answer": "1 mol de O₂"
+    },
+    {
+      "id": "basico-quimica-agua-basica-01",
+      "family": "agua-basica",
+      "subject": "quimica",
+      "inputs": {
+        "acidMoles": 1
+      },
+      "answer": "2 mol de H₂O"
+    },
+    {
+      "id": "basico-quimica-mg-basico-01",
+      "family": "mg-basico",
+      "subject": "quimica",
+      "inputs": {
+        "magnesiumMoles": 1
+      },
+      "answer": "1 mol de H₂"
+    },
+    {
+      "id": "basico-quimica-unidades-formula-01",
+      "family": "unidades-formula",
+      "subject": "quimica",
+      "inputs": {
+        "units": 1,
+        "atomsPerUnit": 6
+      },
+      "answer": "6 átomos"
+    },
+    {
+      "id": "basico-matematicas-contar-02",
+      "family": "contar",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "answer": "4"
+    },
+    {
+      "id": "basico-matematicas-union-02",
+      "family": "union",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          1,
+          2,
+          5
+        ],
+        "B": [
+          5,
+          6
+        ]
+      },
+      "answer": "{1, 2, 5, 6}"
+    },
+    {
+      "id": "basico-matematicas-interseccion-02",
+      "family": "interseccion",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          2,
+          3,
+          4
+        ],
+        "B": [
+          4,
+          5
+        ]
+      },
+      "answer": "{4}"
+    },
+    {
+      "id": "basico-matematicas-complemento-02",
+      "family": "complemento",
+      "subject": "matematicas",
+      "inputs": {
+        "U": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "A": [
+          3,
+          5
+        ]
+      },
+      "answer": "{2, 4, 6}"
+    },
+    {
+      "id": "basico-matematicas-media-02",
+      "family": "media",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          4,
+          6,
+          8
+        ]
+      },
+      "answer": "6"
+    },
+    {
+      "id": "basico-matematicas-dato-faltante-02",
+      "family": "dato-faltante",
+      "subject": "matematicas",
+      "inputs": {
+        "a": 2,
+        "b": 4,
+        "mean": 4
+      },
+      "answer": "6"
+    },
+    {
+      "id": "basico-matematicas-razon-directa-02",
+      "family": "razon-directa",
+      "subject": "matematicas",
+      "inputs": {
+        "x": 4,
+        "y": 2
+      },
+      "answer": "2"
+    },
+    {
+      "id": "basico-matematicas-division-simple-02",
+      "family": "division-simple",
+      "subject": "matematicas",
+      "inputs": {
+        "raw": 12,
+        "divisor": 3
+      },
+      "answer": "4x"
+    },
+    {
+      "id": "basico-matematicas-potencia-diez-02",
+      "family": "potencia-diez",
+      "subject": "matematicas",
+      "inputs": {
+        "coefficient": 3,
+        "power": 2
+      },
+      "answer": "300"
+    },
+    {
+      "id": "basico-matematicas-multiplo-02",
+      "family": "multiplo",
+      "subject": "matematicas",
+      "inputs": {
+        "number": 3,
+        "position": 3
+      },
+      "answer": "9"
+    },
+    {
+      "id": "basico-fisica-centimetros-02",
+      "family": "centimetros",
+      "subject": "fisica",
+      "inputs": {
+        "cm": 200
+      },
+      "answer": "2 m"
+    },
+    {
+      "id": "basico-fisica-segundos-02",
+      "family": "segundos",
+      "subject": "fisica",
+      "inputs": {
+        "minutes": 2
+      },
+      "answer": "120 s"
+    },
+    {
+      "id": "basico-fisica-rapidez-02",
+      "family": "rapidez",
+      "subject": "fisica",
+      "inputs": {
+        "distance": 60,
+        "time": 5
+      },
+      "answer": "12 m/s"
+    },
+    {
+      "id": "basico-fisica-aceleracion-02",
+      "family": "aceleracion",
+      "subject": "fisica",
+      "inputs": {
+        "finalVelocity": 4,
+        "initialVelocity": 0,
+        "time": 2
+      },
+      "answer": "2 m/s²"
+    },
+    {
+      "id": "basico-fisica-fuerza-02",
+      "family": "fuerza",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 4,
+        "acceleration": 3
+      },
+      "answer": "12 N"
+    },
+    {
+      "id": "basico-fisica-peso-02",
+      "family": "peso",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 2,
+        "g": 10
+      },
+      "answer": "20 N"
+    },
+    {
+      "id": "basico-fisica-energia-02",
+      "family": "energia",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 2,
+        "speed": 3
+      },
+      "answer": "9 J"
+    },
+    {
+      "id": "basico-fisica-onda-02",
+      "family": "onda",
+      "subject": "fisica",
+      "inputs": {
+        "frequency": 20,
+        "wavelength": 2
+      },
+      "answer": "40 m/s"
+    },
+    {
+      "id": "basico-fisica-carga-02",
+      "family": "carga",
+      "subject": "fisica",
+      "inputs": {
+        "current": 2,
+        "time": 10
+      },
+      "answer": "20 C"
+    },
+    {
+      "id": "basico-fisica-voltaje-02",
+      "family": "voltaje",
+      "subject": "fisica",
+      "inputs": {
+        "current": 2,
+        "resistance": 3
+      },
+      "answer": "6 V"
+    },
+    {
+      "id": "basico-quimica-elementos-02",
+      "family": "elementos",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "Na": 1,
+          "Cl": 1,
+          "O": 4
+        }
+      },
+      "answer": "3"
+    },
+    {
+      "id": "basico-quimica-atomos-formula-02",
+      "family": "atomos-formula",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "Na": 1,
+          "Cl": 1,
+          "O": 4
+        }
+      },
+      "answer": "6"
+    },
+    {
+      "id": "basico-quimica-masa-molar-basica-02",
+      "family": "masa-molar-basica",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "Na": 1,
+          "Cl": 1,
+          "O": 4
+        },
+        "atomicMasses": {
+          "Na": 22.99,
+          "Cl": 35.5,
+          "O": 15.99
+        }
+      },
+      "answer": "122,45 g/mol"
+    },
+    {
+      "id": "basico-quimica-moles-a-masa-02",
+      "family": "moles-a-masa",
+      "subject": "quimica",
+      "inputs": {
+        "moles": 2,
+        "M": 98
+      },
+      "answer": "196 g"
+    },
+    {
+      "id": "basico-quimica-masa-a-moles-02",
+      "family": "masa-a-moles",
+      "subject": "quimica",
+      "inputs": {
+        "grams": 196,
+        "M": 98
+      },
+      "answer": "2 mol"
+    },
+    {
+      "id": "basico-quimica-orbitales-basicos-02",
+      "family": "orbitales-basicos",
+      "subject": "quimica",
+      "inputs": {
+        "orbitals": 2,
+        "capacity": 2
+      },
+      "answer": "4 electrones"
+    },
+    {
+      "id": "basico-quimica-hgo-basico-02",
+      "family": "hgo-basico",
+      "subject": "quimica",
+      "inputs": {
+        "hgoMoles": 4
+      },
+      "answer": "2 mol de O₂"
+    },
+    {
+      "id": "basico-quimica-agua-basica-02",
+      "family": "agua-basica",
+      "subject": "quimica",
+      "inputs": {
+        "acidMoles": 2
+      },
+      "answer": "4 mol de H₂O"
+    },
+    {
+      "id": "basico-quimica-mg-basico-02",
+      "family": "mg-basico",
+      "subject": "quimica",
+      "inputs": {
+        "magnesiumMoles": 2
+      },
+      "answer": "2 mol de H₂"
+    },
+    {
+      "id": "basico-quimica-unidades-formula-02",
+      "family": "unidades-formula",
+      "subject": "quimica",
+      "inputs": {
+        "units": 2,
+        "atomsPerUnit": 6
+      },
+      "answer": "12 átomos"
+    },
+    {
+      "id": "basico-matematicas-contar-03",
+      "family": "contar",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "answer": "5"
+    },
+    {
+      "id": "basico-matematicas-union-03",
+      "family": "union",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          1,
+          2,
+          6
+        ],
+        "B": [
+          6,
+          7
+        ]
+      },
+      "answer": "{1, 2, 6, 7}"
+    },
+    {
+      "id": "basico-matematicas-interseccion-03",
+      "family": "interseccion",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          3,
+          4,
+          5
+        ],
+        "B": [
+          5,
+          6
+        ]
+      },
+      "answer": "{5}"
+    },
+    {
+      "id": "basico-matematicas-complemento-03",
+      "family": "complemento",
+      "subject": "matematicas",
+      "inputs": {
+        "U": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "A": [
+          4,
+          6
+        ]
+      },
+      "answer": "{3, 5, 7}"
+    },
+    {
+      "id": "basico-matematicas-media-03",
+      "family": "media",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          6,
+          8,
+          10
+        ]
+      },
+      "answer": "8"
+    },
+    {
+      "id": "basico-matematicas-dato-faltante-03",
+      "family": "dato-faltante",
+      "subject": "matematicas",
+      "inputs": {
+        "a": 3,
+        "b": 5,
+        "mean": 5
+      },
+      "answer": "7"
+    },
+    {
+      "id": "basico-matematicas-razon-directa-03",
+      "family": "razon-directa",
+      "subject": "matematicas",
+      "inputs": {
+        "x": 5,
+        "y": 2
+      },
+      "answer": "5/2"
+    },
+    {
+      "id": "basico-matematicas-division-simple-03",
+      "family": "division-simple",
+      "subject": "matematicas",
+      "inputs": {
+        "raw": 20,
+        "divisor": 4
+      },
+      "answer": "5x"
+    },
+    {
+      "id": "basico-matematicas-potencia-diez-03",
+      "family": "potencia-diez",
+      "subject": "matematicas",
+      "inputs": {
+        "coefficient": 4,
+        "power": 2
+      },
+      "answer": "400"
+    },
+    {
+      "id": "basico-matematicas-multiplo-03",
+      "family": "multiplo",
+      "subject": "matematicas",
+      "inputs": {
+        "number": 4,
+        "position": 3
+      },
+      "answer": "12"
+    },
+    {
+      "id": "basico-fisica-centimetros-03",
+      "family": "centimetros",
+      "subject": "fisica",
+      "inputs": {
+        "cm": 300
+      },
+      "answer": "3 m"
+    },
+    {
+      "id": "basico-fisica-segundos-03",
+      "family": "segundos",
+      "subject": "fisica",
+      "inputs": {
+        "minutes": 3
+      },
+      "answer": "180 s"
+    },
+    {
+      "id": "basico-fisica-rapidez-03",
+      "family": "rapidez",
+      "subject": "fisica",
+      "inputs": {
+        "distance": 90,
+        "time": 5
+      },
+      "answer": "18 m/s"
+    },
+    {
+      "id": "basico-fisica-aceleracion-03",
+      "family": "aceleracion",
+      "subject": "fisica",
+      "inputs": {
+        "finalVelocity": 6,
+        "initialVelocity": 0,
+        "time": 2
+      },
+      "answer": "3 m/s²"
+    },
+    {
+      "id": "basico-fisica-fuerza-03",
+      "family": "fuerza",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 6,
+        "acceleration": 3
+      },
+      "answer": "18 N"
+    },
+    {
+      "id": "basico-fisica-peso-03",
+      "family": "peso",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 3,
+        "g": 10
+      },
+      "answer": "30 N"
+    },
+    {
+      "id": "basico-fisica-energia-03",
+      "family": "energia",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 2,
+        "speed": 4
+      },
+      "answer": "16 J"
+    },
+    {
+      "id": "basico-fisica-onda-03",
+      "family": "onda",
+      "subject": "fisica",
+      "inputs": {
+        "frequency": 30,
+        "wavelength": 2
+      },
+      "answer": "60 m/s"
+    },
+    {
+      "id": "basico-fisica-carga-03",
+      "family": "carga",
+      "subject": "fisica",
+      "inputs": {
+        "current": 3,
+        "time": 10
+      },
+      "answer": "30 C"
+    },
+    {
+      "id": "basico-fisica-voltaje-03",
+      "family": "voltaje",
+      "subject": "fisica",
+      "inputs": {
+        "current": 3,
+        "resistance": 3
+      },
+      "answer": "9 V"
+    },
+    {
+      "id": "basico-quimica-elementos-03",
+      "family": "elementos",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "C": 3,
+          "H": 7,
+          "N": 1,
+          "O": 2
+        }
+      },
+      "answer": "4"
+    },
+    {
+      "id": "basico-quimica-atomos-formula-03",
+      "family": "atomos-formula",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "C": 3,
+          "H": 7,
+          "N": 1,
+          "O": 2
+        }
+      },
+      "answer": "13"
+    },
+    {
+      "id": "basico-quimica-masa-molar-basica-03",
+      "family": "masa-molar-basica",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "C": 3,
+          "H": 7,
+          "N": 1,
+          "O": 2
+        },
+        "atomicMasses": {
+          "C": 12,
+          "H": 1,
+          "N": 14,
+          "O": 16
+        }
+      },
+      "answer": "89 g/mol"
+    },
+    {
+      "id": "basico-quimica-moles-a-masa-03",
+      "family": "moles-a-masa",
+      "subject": "quimica",
+      "inputs": {
+        "moles": 3,
+        "M": 98
+      },
+      "answer": "294 g"
+    },
+    {
+      "id": "basico-quimica-masa-a-moles-03",
+      "family": "masa-a-moles",
+      "subject": "quimica",
+      "inputs": {
+        "grams": 294,
+        "M": 98
+      },
+      "answer": "3 mol"
+    },
+    {
+      "id": "basico-quimica-orbitales-basicos-03",
+      "family": "orbitales-basicos",
+      "subject": "quimica",
+      "inputs": {
+        "orbitals": 3,
+        "capacity": 2
+      },
+      "answer": "6 electrones"
+    },
+    {
+      "id": "basico-quimica-hgo-basico-03",
+      "family": "hgo-basico",
+      "subject": "quimica",
+      "inputs": {
+        "hgoMoles": 6
+      },
+      "answer": "3 mol de O₂"
+    },
+    {
+      "id": "basico-quimica-agua-basica-03",
+      "family": "agua-basica",
+      "subject": "quimica",
+      "inputs": {
+        "acidMoles": 3
+      },
+      "answer": "6 mol de H₂O"
+    },
+    {
+      "id": "basico-quimica-mg-basico-03",
+      "family": "mg-basico",
+      "subject": "quimica",
+      "inputs": {
+        "magnesiumMoles": 3
+      },
+      "answer": "3 mol de H₂"
+    },
+    {
+      "id": "basico-quimica-unidades-formula-03",
+      "family": "unidades-formula",
+      "subject": "quimica",
+      "inputs": {
+        "units": 3,
+        "atomsPerUnit": 6
+      },
+      "answer": "18 átomos"
+    },
+    {
+      "id": "basico-matematicas-contar-04",
+      "family": "contar",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "answer": "6"
+    },
+    {
+      "id": "basico-matematicas-union-04",
+      "family": "union",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          1,
+          2,
+          7
+        ],
+        "B": [
+          7,
+          8
+        ]
+      },
+      "answer": "{1, 2, 7, 8}"
+    },
+    {
+      "id": "basico-matematicas-interseccion-04",
+      "family": "interseccion",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          4,
+          5,
+          6
+        ],
+        "B": [
+          6,
+          7
+        ]
+      },
+      "answer": "{6}"
+    },
+    {
+      "id": "basico-matematicas-complemento-04",
+      "family": "complemento",
+      "subject": "matematicas",
+      "inputs": {
+        "U": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "A": [
+          5,
+          7
+        ]
+      },
+      "answer": "{4, 6, 8}"
+    },
+    {
+      "id": "basico-matematicas-media-04",
+      "family": "media",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          8,
+          10,
+          12
+        ]
+      },
+      "answer": "10"
+    },
+    {
+      "id": "basico-matematicas-dato-faltante-04",
+      "family": "dato-faltante",
+      "subject": "matematicas",
+      "inputs": {
+        "a": 4,
+        "b": 6,
+        "mean": 6
+      },
+      "answer": "8"
+    },
+    {
+      "id": "basico-matematicas-razon-directa-04",
+      "family": "razon-directa",
+      "subject": "matematicas",
+      "inputs": {
+        "x": 6,
+        "y": 2
+      },
+      "answer": "3"
+    },
+    {
+      "id": "basico-matematicas-division-simple-04",
+      "family": "division-simple",
+      "subject": "matematicas",
+      "inputs": {
+        "raw": 30,
+        "divisor": 5
+      },
+      "answer": "6x"
+    },
+    {
+      "id": "basico-matematicas-potencia-diez-04",
+      "family": "potencia-diez",
+      "subject": "matematicas",
+      "inputs": {
+        "coefficient": 5,
+        "power": 2
+      },
+      "answer": "500"
+    },
+    {
+      "id": "basico-matematicas-multiplo-04",
+      "family": "multiplo",
+      "subject": "matematicas",
+      "inputs": {
+        "number": 5,
+        "position": 3
+      },
+      "answer": "15"
+    },
+    {
+      "id": "basico-fisica-centimetros-04",
+      "family": "centimetros",
+      "subject": "fisica",
+      "inputs": {
+        "cm": 400
+      },
+      "answer": "4 m"
+    },
+    {
+      "id": "basico-fisica-segundos-04",
+      "family": "segundos",
+      "subject": "fisica",
+      "inputs": {
+        "minutes": 4
+      },
+      "answer": "240 s"
+    },
+    {
+      "id": "basico-fisica-rapidez-04",
+      "family": "rapidez",
+      "subject": "fisica",
+      "inputs": {
+        "distance": 120,
+        "time": 5
+      },
+      "answer": "24 m/s"
+    },
+    {
+      "id": "basico-fisica-aceleracion-04",
+      "family": "aceleracion",
+      "subject": "fisica",
+      "inputs": {
+        "finalVelocity": 8,
+        "initialVelocity": 0,
+        "time": 2
+      },
+      "answer": "4 m/s²"
+    },
+    {
+      "id": "basico-fisica-fuerza-04",
+      "family": "fuerza",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 8,
+        "acceleration": 3
+      },
+      "answer": "24 N"
+    },
+    {
+      "id": "basico-fisica-peso-04",
+      "family": "peso",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 4,
+        "g": 10
+      },
+      "answer": "40 N"
+    },
+    {
+      "id": "basico-fisica-energia-04",
+      "family": "energia",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 2,
+        "speed": 5
+      },
+      "answer": "25 J"
+    },
+    {
+      "id": "basico-fisica-onda-04",
+      "family": "onda",
+      "subject": "fisica",
+      "inputs": {
+        "frequency": 40,
+        "wavelength": 2
+      },
+      "answer": "80 m/s"
+    },
+    {
+      "id": "basico-fisica-carga-04",
+      "family": "carga",
+      "subject": "fisica",
+      "inputs": {
+        "current": 4,
+        "time": 10
+      },
+      "answer": "40 C"
+    },
+    {
+      "id": "basico-fisica-voltaje-04",
+      "family": "voltaje",
+      "subject": "fisica",
+      "inputs": {
+        "current": 4,
+        "resistance": 3
+      },
+      "answer": "12 V"
+    },
+    {
+      "id": "basico-quimica-elementos-04",
+      "family": "elementos",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "C": 2,
+          "H": 6
+        }
+      },
+      "answer": "2"
+    },
+    {
+      "id": "basico-quimica-atomos-formula-04",
+      "family": "atomos-formula",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "C": 2,
+          "H": 6
+        }
+      },
+      "answer": "8"
+    },
+    {
+      "id": "basico-quimica-masa-molar-basica-04",
+      "family": "masa-molar-basica",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "C": 2,
+          "H": 6
+        },
+        "atomicMasses": {
+          "C": 12,
+          "H": 1
+        }
+      },
+      "answer": "30 g/mol"
+    },
+    {
+      "id": "basico-quimica-moles-a-masa-04",
+      "family": "moles-a-masa",
+      "subject": "quimica",
+      "inputs": {
+        "moles": 4,
+        "M": 98
+      },
+      "answer": "392 g"
+    },
+    {
+      "id": "basico-quimica-masa-a-moles-04",
+      "family": "masa-a-moles",
+      "subject": "quimica",
+      "inputs": {
+        "grams": 392,
+        "M": 98
+      },
+      "answer": "4 mol"
+    },
+    {
+      "id": "basico-quimica-orbitales-basicos-04",
+      "family": "orbitales-basicos",
+      "subject": "quimica",
+      "inputs": {
+        "orbitals": 4,
+        "capacity": 2
+      },
+      "answer": "8 electrones"
+    },
+    {
+      "id": "basico-quimica-hgo-basico-04",
+      "family": "hgo-basico",
+      "subject": "quimica",
+      "inputs": {
+        "hgoMoles": 8
+      },
+      "answer": "4 mol de O₂"
+    },
+    {
+      "id": "basico-quimica-agua-basica-04",
+      "family": "agua-basica",
+      "subject": "quimica",
+      "inputs": {
+        "acidMoles": 4
+      },
+      "answer": "8 mol de H₂O"
+    },
+    {
+      "id": "basico-quimica-mg-basico-04",
+      "family": "mg-basico",
+      "subject": "quimica",
+      "inputs": {
+        "magnesiumMoles": 4
+      },
+      "answer": "4 mol de H₂"
+    },
+    {
+      "id": "basico-quimica-unidades-formula-04",
+      "family": "unidades-formula",
+      "subject": "quimica",
+      "inputs": {
+        "units": 4,
+        "atomsPerUnit": 6
+      },
+      "answer": "24 átomos"
+    },
+    {
+      "id": "basico-matematicas-contar-05",
+      "family": "contar",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "answer": "7"
+    },
+    {
+      "id": "basico-matematicas-union-05",
+      "family": "union",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          1,
+          2,
+          8
+        ],
+        "B": [
+          8,
+          9
+        ]
+      },
+      "answer": "{1, 2, 8, 9}"
+    },
+    {
+      "id": "basico-matematicas-interseccion-05",
+      "family": "interseccion",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          5,
+          6,
+          7
+        ],
+        "B": [
+          7,
+          8
+        ]
+      },
+      "answer": "{7}"
+    },
+    {
+      "id": "basico-matematicas-complemento-05",
+      "family": "complemento",
+      "subject": "matematicas",
+      "inputs": {
+        "U": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "A": [
+          6,
+          8
+        ]
+      },
+      "answer": "{5, 7, 9}"
+    },
+    {
+      "id": "basico-matematicas-media-05",
+      "family": "media",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          10,
+          12,
+          14
+        ]
+      },
+      "answer": "12"
+    },
+    {
+      "id": "basico-matematicas-dato-faltante-05",
+      "family": "dato-faltante",
+      "subject": "matematicas",
+      "inputs": {
+        "a": 5,
+        "b": 7,
+        "mean": 7
+      },
+      "answer": "9"
+    },
+    {
+      "id": "basico-matematicas-razon-directa-05",
+      "family": "razon-directa",
+      "subject": "matematicas",
+      "inputs": {
+        "x": 7,
+        "y": 2
+      },
+      "answer": "7/2"
+    },
+    {
+      "id": "basico-matematicas-division-simple-05",
+      "family": "division-simple",
+      "subject": "matematicas",
+      "inputs": {
+        "raw": 42,
+        "divisor": 6
+      },
+      "answer": "7x"
+    },
+    {
+      "id": "basico-matematicas-potencia-diez-05",
+      "family": "potencia-diez",
+      "subject": "matematicas",
+      "inputs": {
+        "coefficient": 6,
+        "power": 2
+      },
+      "answer": "600"
+    },
+    {
+      "id": "basico-matematicas-multiplo-05",
+      "family": "multiplo",
+      "subject": "matematicas",
+      "inputs": {
+        "number": 6,
+        "position": 3
+      },
+      "answer": "18"
+    },
+    {
+      "id": "basico-fisica-centimetros-05",
+      "family": "centimetros",
+      "subject": "fisica",
+      "inputs": {
+        "cm": 500
+      },
+      "answer": "5 m"
+    },
+    {
+      "id": "basico-fisica-segundos-05",
+      "family": "segundos",
+      "subject": "fisica",
+      "inputs": {
+        "minutes": 5
+      },
+      "answer": "300 s"
+    },
+    {
+      "id": "basico-fisica-rapidez-05",
+      "family": "rapidez",
+      "subject": "fisica",
+      "inputs": {
+        "distance": 150,
+        "time": 5
+      },
+      "answer": "30 m/s"
+    },
+    {
+      "id": "basico-fisica-aceleracion-05",
+      "family": "aceleracion",
+      "subject": "fisica",
+      "inputs": {
+        "finalVelocity": 10,
+        "initialVelocity": 0,
+        "time": 2
+      },
+      "answer": "5 m/s²"
+    },
+    {
+      "id": "basico-fisica-fuerza-05",
+      "family": "fuerza",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 10,
+        "acceleration": 3
+      },
+      "answer": "30 N"
+    },
+    {
+      "id": "basico-fisica-peso-05",
+      "family": "peso",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 5,
+        "g": 10
+      },
+      "answer": "50 N"
+    },
+    {
+      "id": "basico-fisica-energia-05",
+      "family": "energia",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 2,
+        "speed": 6
+      },
+      "answer": "36 J"
+    },
+    {
+      "id": "basico-fisica-onda-05",
+      "family": "onda",
+      "subject": "fisica",
+      "inputs": {
+        "frequency": 50,
+        "wavelength": 2
+      },
+      "answer": "100 m/s"
+    },
+    {
+      "id": "basico-fisica-carga-05",
+      "family": "carga",
+      "subject": "fisica",
+      "inputs": {
+        "current": 5,
+        "time": 10
+      },
+      "answer": "50 C"
+    },
+    {
+      "id": "basico-fisica-voltaje-05",
+      "family": "voltaje",
+      "subject": "fisica",
+      "inputs": {
+        "current": 5,
+        "resistance": 3
+      },
+      "answer": "15 V"
+    },
+    {
+      "id": "basico-quimica-elementos-05",
+      "family": "elementos",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "Fe": 2,
+          "O": 3
+        }
+      },
+      "answer": "2"
+    },
+    {
+      "id": "basico-quimica-atomos-formula-05",
+      "family": "atomos-formula",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "Fe": 2,
+          "O": 3
+        }
+      },
+      "answer": "5"
+    },
+    {
+      "id": "basico-quimica-masa-molar-basica-05",
+      "family": "masa-molar-basica",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "Fe": 2,
+          "O": 3
+        },
+        "atomicMasses": {
+          "Fe": 56,
+          "O": 16
+        }
+      },
+      "answer": "160 g/mol"
+    },
+    {
+      "id": "basico-quimica-moles-a-masa-05",
+      "family": "moles-a-masa",
+      "subject": "quimica",
+      "inputs": {
+        "moles": 5,
+        "M": 98
+      },
+      "answer": "490 g"
+    },
+    {
+      "id": "basico-quimica-masa-a-moles-05",
+      "family": "masa-a-moles",
+      "subject": "quimica",
+      "inputs": {
+        "grams": 490,
+        "M": 98
+      },
+      "answer": "5 mol"
+    },
+    {
+      "id": "basico-quimica-orbitales-basicos-05",
+      "family": "orbitales-basicos",
+      "subject": "quimica",
+      "inputs": {
+        "orbitals": 5,
+        "capacity": 2
+      },
+      "answer": "10 electrones"
+    },
+    {
+      "id": "basico-quimica-hgo-basico-05",
+      "family": "hgo-basico",
+      "subject": "quimica",
+      "inputs": {
+        "hgoMoles": 10
+      },
+      "answer": "5 mol de O₂"
+    },
+    {
+      "id": "basico-quimica-agua-basica-05",
+      "family": "agua-basica",
+      "subject": "quimica",
+      "inputs": {
+        "acidMoles": 5
+      },
+      "answer": "10 mol de H₂O"
+    },
+    {
+      "id": "basico-quimica-mg-basico-05",
+      "family": "mg-basico",
+      "subject": "quimica",
+      "inputs": {
+        "magnesiumMoles": 5
+      },
+      "answer": "5 mol de H₂"
+    },
+    {
+      "id": "basico-quimica-unidades-formula-05",
+      "family": "unidades-formula",
+      "subject": "quimica",
+      "inputs": {
+        "units": 5,
+        "atomsPerUnit": 6
+      },
+      "answer": "30 átomos"
+    },
+    {
+      "id": "basico-matematicas-contar-06",
+      "family": "contar",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "answer": "8"
+    },
+    {
+      "id": "basico-matematicas-union-06",
+      "family": "union",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          1,
+          2,
+          9
+        ],
+        "B": [
+          9,
+          10
+        ]
+      },
+      "answer": "{1, 2, 9, 10}"
+    },
+    {
+      "id": "basico-matematicas-interseccion-06",
+      "family": "interseccion",
+      "subject": "matematicas",
+      "inputs": {
+        "A": [
+          6,
+          7,
+          8
+        ],
+        "B": [
+          8,
+          9
+        ]
+      },
+      "answer": "{8}"
+    },
+    {
+      "id": "basico-matematicas-complemento-06",
+      "family": "complemento",
+      "subject": "matematicas",
+      "inputs": {
+        "U": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "A": [
+          7,
+          9
+        ]
+      },
+      "answer": "{6, 8, 10}"
+    },
+    {
+      "id": "basico-matematicas-media-06",
+      "family": "media",
+      "subject": "matematicas",
+      "inputs": {
+        "values": [
+          12,
+          14,
+          16
+        ]
+      },
+      "answer": "14"
+    },
+    {
+      "id": "basico-matematicas-dato-faltante-06",
+      "family": "dato-faltante",
+      "subject": "matematicas",
+      "inputs": {
+        "a": 6,
+        "b": 8,
+        "mean": 8
+      },
+      "answer": "10"
+    },
+    {
+      "id": "basico-matematicas-razon-directa-06",
+      "family": "razon-directa",
+      "subject": "matematicas",
+      "inputs": {
+        "x": 8,
+        "y": 2
+      },
+      "answer": "4"
+    },
+    {
+      "id": "basico-matematicas-division-simple-06",
+      "family": "division-simple",
+      "subject": "matematicas",
+      "inputs": {
+        "raw": 56,
+        "divisor": 7
+      },
+      "answer": "8x"
+    },
+    {
+      "id": "basico-matematicas-potencia-diez-06",
+      "family": "potencia-diez",
+      "subject": "matematicas",
+      "inputs": {
+        "coefficient": 7,
+        "power": 2
+      },
+      "answer": "700"
+    },
+    {
+      "id": "basico-matematicas-multiplo-06",
+      "family": "multiplo",
+      "subject": "matematicas",
+      "inputs": {
+        "number": 7,
+        "position": 3
+      },
+      "answer": "21"
+    },
+    {
+      "id": "basico-fisica-centimetros-06",
+      "family": "centimetros",
+      "subject": "fisica",
+      "inputs": {
+        "cm": 600
+      },
+      "answer": "6 m"
+    },
+    {
+      "id": "basico-fisica-segundos-06",
+      "family": "segundos",
+      "subject": "fisica",
+      "inputs": {
+        "minutes": 6
+      },
+      "answer": "360 s"
+    },
+    {
+      "id": "basico-fisica-rapidez-06",
+      "family": "rapidez",
+      "subject": "fisica",
+      "inputs": {
+        "distance": 180,
+        "time": 5
+      },
+      "answer": "36 m/s"
+    },
+    {
+      "id": "basico-fisica-aceleracion-06",
+      "family": "aceleracion",
+      "subject": "fisica",
+      "inputs": {
+        "finalVelocity": 12,
+        "initialVelocity": 0,
+        "time": 2
+      },
+      "answer": "6 m/s²"
+    },
+    {
+      "id": "basico-fisica-fuerza-06",
+      "family": "fuerza",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 12,
+        "acceleration": 3
+      },
+      "answer": "36 N"
+    },
+    {
+      "id": "basico-fisica-peso-06",
+      "family": "peso",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 6,
+        "g": 10
+      },
+      "answer": "60 N"
+    },
+    {
+      "id": "basico-fisica-energia-06",
+      "family": "energia",
+      "subject": "fisica",
+      "inputs": {
+        "mass": 2,
+        "speed": 7
+      },
+      "answer": "49 J"
+    },
+    {
+      "id": "basico-fisica-onda-06",
+      "family": "onda",
+      "subject": "fisica",
+      "inputs": {
+        "frequency": 60,
+        "wavelength": 2
+      },
+      "answer": "120 m/s"
+    },
+    {
+      "id": "basico-fisica-carga-06",
+      "family": "carga",
+      "subject": "fisica",
+      "inputs": {
+        "current": 6,
+        "time": 10
+      },
+      "answer": "60 C"
+    },
+    {
+      "id": "basico-fisica-voltaje-06",
+      "family": "voltaje",
+      "subject": "fisica",
+      "inputs": {
+        "current": 6,
+        "resistance": 3
+      },
+      "answer": "18 V"
+    },
+    {
+      "id": "basico-quimica-elementos-06",
+      "family": "elementos",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "Na": 1,
+          "H": 1,
+          "C": 1,
+          "O": 3
+        }
+      },
+      "answer": "4"
+    },
+    {
+      "id": "basico-quimica-atomos-formula-06",
+      "family": "atomos-formula",
+      "subject": "quimica",
+      "inputs": {
+        "composition": {
+          "Na": 1,
+          "H": 1,
+          "C": 1,
+          "O": 3
+        }
+      },
+      "answer": "6"
+    },
+    {
+      "id": "basico-quimica-masa-molar-basica-06",
+      "family": "masa-molar-basica",
+      "subject": "quimica",
+      "inputs": {
+        "moles": 2,
+        "M": 98
+      },
+      "answer": "196 g"
+    },
+    {
+      "id": "basico-quimica-moles-a-masa-06",
+      "family": "moles-a-masa",
+      "subject": "quimica",
+      "inputs": {
+        "moles": 6,
+        "M": 98
+      },
+      "answer": "588 g"
+    },
+    {
+      "id": "basico-quimica-masa-a-moles-06",
+      "family": "masa-a-moles",
+      "subject": "quimica",
+      "inputs": {
+        "grams": 588,
+        "M": 98
+      },
+      "answer": "6 mol"
+    },
+    {
+      "id": "basico-quimica-orbitales-basicos-06",
+      "family": "orbitales-basicos",
+      "subject": "quimica",
+      "inputs": {
+        "orbitals": 6,
+        "capacity": 2
+      },
+      "answer": "12 electrones"
+    },
+    {
+      "id": "basico-quimica-hgo-basico-06",
+      "family": "hgo-basico",
+      "subject": "quimica",
+      "inputs": {
+        "hgoMoles": 12
+      },
+      "answer": "6 mol de O₂"
+    },
+    {
+      "id": "basico-quimica-agua-basica-06",
+      "family": "agua-basica",
+      "subject": "quimica",
+      "inputs": {
+        "acidMoles": 6
+      },
+      "answer": "12 mol de H₂O"
+    },
+    {
+      "id": "basico-quimica-mg-basico-06",
+      "family": "mg-basico",
+      "subject": "quimica",
+      "inputs": {
+        "magnesiumMoles": 6
+      },
+      "answer": "6 mol de H₂"
+    },
+    {
+      "id": "basico-quimica-unidades-formula-06",
+      "family": "unidades-formula",
+      "subject": "quimica",
+      "inputs": {
+        "units": 6,
+        "atomsPerUnit": 6
+      },
+      "answer": "36 átomos"
+    }
+  ]
+}

@@ -6,10 +6,10 @@ const C = require('../suficiencia-core.js');
 const bank = require('../api/_sufficiency/bank.json');
 const handler = require('../api/suficiencia.js');
 
-test('800 questions, four areas and forty complete readings with page references', () => {
+test('980 questions, four areas and forty complete readings with page references', () => {
     assert.equal(C.validate(bank), true);
-    assert.equal(bank.questions.length, 800);
-    assert.deepEqual(Object.keys(C.subjects).map(s => bank.questions.filter(q => q.subject === s).length), [200, 200, 200, 200]);
+    assert.equal(bank.questions.length, 980);
+    assert.deepEqual(Object.keys(C.subjects).map(s => bank.questions.filter(q => q.subject === s).length), [260, 260, 260, 200]);
     assert.equal(bank.passages.length, 40);
     assert.equal(bank.source.institution, 'UMSA');
     assert.equal(bank.source.originalPatternIncluded, false);
@@ -123,7 +123,7 @@ test('active subscriber receives validated private bank, with bearer forwarded o
             return { ok: true, json: async () => ({ ready: true, premium: true, expires_at: '2099-01-01' }) };
         };
         const res = response(); await handler({ method: 'GET', headers: { authorization: 'Bearer student-token' }, query: {} }, res);
-        assert.equal(res.code, 200); assert.equal(JSON.parse(res.body).questions.length, 800);
+        assert.equal(res.code, 200); assert.equal(JSON.parse(res.body).questions.length, 980);
         assert.equal(res.headers['Cache-Control'], 'private, no-store');
     } finally { global.fetch = originalFetch; process.chdir(originalCwd); }
 });
@@ -210,7 +210,7 @@ test('student module finishes automatically at the absolute deadline and clears 
     assert.equal(topicOpens, 2); // Free mini simulations from the previous catalogue remain accessible.
 });
 
-test('20 fixed complete papers and 40 subject papers cover the entire bank without repetition in either series', () => {
+test('20 fixed complete papers and 40 subject papers preserve the original 800-question bank without repetition in either series', () => {
     assert.equal(bank.papers.length, 60);
     const lookup = new Map(bank.questions.map(q => [q.id, q]));
     const complete = bank.papers.filter(p => p.subject === 'integral');
@@ -244,7 +244,7 @@ test('new content is explicit practice with source anchors, not attributed to an
     const base = require('../api/_sufficiency/base-selection.json');
     const original = new Map(base.questions.map(q => [q.id, q]));
     for (const q of base.questions) {
-        const { solution, ...unchanged } = bank.questions.find(row => row.id === q.id);
+        const { solution, difficulty, difficultyReason, ...unchanged } = bank.questions.find(row => row.id === q.id);
         assert.deepEqual(unchanged, q);
     }
     const variants = bank.questions.filter(q => q.source.kind === 'variante de práctica');
@@ -256,14 +256,14 @@ test('new content is explicit practice with source anchors, not attributed to an
         assert.ok(q.explanation.length > 80);
         assert.ok(!/\b(?:NaN|Infinity|undefined|null)\b/.test([q.text, ...q.options, q.explanation].join(' ')));
     }
-    assert.equal(new Set(bank.questions.filter(q => q.subject !== 'lectura').map(q => q.text)).size, 600);
+    assert.equal(new Set(bank.questions.filter(q => q.subject !== 'lectura').map(q => q.text)).size, 780);
     assert.equal(new Set(bank.passages.map(p => p.text)).size, 40);
     for (const p of bank.passages) {
         assert.ok(p.text.split(/\s+/).length >= 90);
         assert.equal(p.source.author, 'Kenneth S. Saladin');
         assert.deepEqual(p.source.printedPages, p.source.pdfPages.map(n => n - 28));
     }
-    assert.equal(bank.statistics.newPractice, 678);
+    assert.equal(bank.statistics.newPractice, 858);
 });
 
 test('508 generated keys match the independent numerical and symbolic verification across 59 problem families', () => {
@@ -292,9 +292,9 @@ test('paper integrity rejects split texts, unknown questions, repeated identifie
     assert.throws(() => C.select(bank, 'simulacro:missing', 1), /no encontrado/);
 });
 
-test('all 800 questions have beginner lessons and the final answer agrees with the preserved key', () => {
+test('all 980 questions have beginner lessons and the final answer agrees with the preserved key', () => {
     assert.equal(bank.teachingRevision, 1);
-    assert.equal(bank.questions.length, 800);
+    assert.equal(bank.questions.length, 980);
     for (const q of bank.questions) {
         const s = q.solution;
         assert.equal(s.level, 'desde-cero', q.id);

@@ -4,17 +4,21 @@
     const C = window.SufficiencyCore, labels = C.subjects;
     const openTopicSimulacro = window.openSimulacro;
     const root = document.getElementById('suficiencia-screen');
-    let bank = null, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'integral', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
+    let bank = null, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'matematicas', level = 'facil', catalogueArea = 'matematicas', catalogueMode = 'levels', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
     const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
     const key = id => 'alcocermed:suficiencia:v1:' + id;
     const user = () => typeof currentUser !== 'undefined' ? currentUser?.id : null;
-    const title = value => C.paper(bank, value)?.title || labels[value] || (value.startsWith('texto:') ? bank?.passages.find(p => p.id === value.slice(6))?.title : 'Simulacro');
+    const title = value => {
+        const p = C.paper(bank, value);
+        if (p) return p.difficulty ? `${labels[p.subject] || 'Completo'} · ${C.levels[p.difficulty]} · ${p.title}` : p.title;
+        return labels[value] || (value.startsWith('texto:') ? bank?.passages.find(p => p.id === value.slice(6))?.title : 'Simulacro');
+    };
     const button = (action, text, extra = '') => `<button type="button" class="sf-button ${extra}" data-sf="${action}">${text}</button>`;
-    const header = () => `<div class="sim-header sf-heading"><button type="button" class="btn-back-game" data-sf="home" aria-label="Volver al inicio"><i class="fas fa-arrow-left" aria-hidden="true"></i></button><div><h1 class="sim-title">Simulacro</h1><p class="sim-subtitle">${bank?.statistics ? `${bank.statistics.questions} preguntas comentadas · 20 simulacros completos · 40 por materia` : 'Elige un simulacro y revisa sus comentarios al terminar.'}</p></div></div>`;
+    const header = () => `<div class="sim-header sf-heading"><button type="button" class="btn-back-game" data-sf="home" aria-label="Volver al inicio"><i class="fas fa-arrow-left" aria-hidden="true"></i></button><div><h1 class="sim-title">Simulacro</h1><p class="sim-subtitle">${bank?.statistics ? `${bank.statistics.questions} preguntas · resolución paso a paso en cada una` : 'Elige una materia y un nivel para practicar.'}</p></div></div>`;
     function stopClock() { clearInterval(clock); clock = null; }
     function clear() {
         generation++; stopClock(); if (pendingConfirmation) pendingConfirmation(false);
-        bank = null; owner = null; attempt = null; questions = []; ending = false; starting = false; renderedPassage = null;
+        bank = null; owner = null; attempt = null; questions = []; level = 'facil'; catalogueArea = 'matematicas'; catalogueMode = 'levels'; ending = false; starting = false; renderedPassage = null;
         root.replaceChildren();
     }
     function ask(message) {
@@ -64,16 +68,18 @@
         }
         return true;
     }
-    async function open(next = 'integral') {
-        if (!labels[next] && next !== 'integral' && next !== 'completos') next = 'integral';
+    async function open(next = 'matematicas') {
+        if (next === 'completos') next = 'integral';
+        if (!labels[next] && next !== 'integral' && next !== 'completos') next = 'matematicas';
         if (window.CampusAccess?.isFree()) return typeof openTopicSimulacro === 'function' ? openTopicSimulacro() : window.CampusAccess.unlock();
         if (typeof showScreen === 'function' && showScreen('suficiencia-screen') === false) return;
-        area = next; cataloguePage = 0; catalogueQuery = '';
+        area = next; catalogueArea = next; catalogueMode = 'levels'; cataloguePage = 0; catalogueQuery = '';
         document.getElementById('nav-simulacro')?.classList.add('nav-item-active');
         root.innerHTML = header() + '<p role="status" class="sf-notice">Cargando preguntas…</p>';
         try {
             if (owner !== user()) { clear(); root.innerHTML = header() + '<p role="status">Cargando preguntas…</p>'; }
             if (!await load()) return;
+            area = next; catalogueArea = next;
             catalogue();
             if (attempt && !attempt.finished) startClock();
         } catch (error) {
@@ -97,7 +103,14 @@
     function filteredPapers() {
         const normalized = text => String(text).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
         const query = normalized(catalogueQuery).trim();
-        return bank.papers.filter(p => (area === 'integral' || (area === 'completos' ? p.subject === 'integral' : p.subject === area)) && (!query || normalized(p.title + ' ' + p.description + ' ' + (labels[p.subject] || 'completo')).includes(query)));
+        const papers = catalogueMode === 'levels' ? bank.levelPapers : bank.papers;
+        return (papers || []).filter(p => (catalogueMode === 'levels' ? p.subject === area && p.difficulty === level : area === 'integral' || (area === 'completos' ? p.subject === 'integral' : p.subject === area)) &&
+            (!query || normalized(p.title + ' ' + p.description + ' ' + (labels[p.subject] || 'completo') + ' ' + (C.levels[p.difficulty] || '')).includes(query)));
+    }
+    function selectionControls() {
+        if (catalogueMode === 'legacy') return `<div class="sf-legacy-heading"><h2>Simulacros anteriores</h2>${button('levels', 'Volver a materias y niveles')}</div>`;
+        const subjects = { ...labels, integral: 'Completo' }, symbols = { matematicas:'∑', fisica:'F', quimica:'H₂O', lectura:'Aa', integral:'✓' };
+        return `<section class="sf-selection" aria-label="Materia y dificultad"><h2>Elige la materia</h2><div class="sf-matter-grid">${Object.entries(subjects).map(([id,label]) => `<button type="button" data-sf="subject" data-area="${id}" class="sf-matter-button ${area === id ? 'is-active' : ''}" aria-pressed="${area === id}"><span class="sf-matter-symbol" aria-hidden="true">${symbols[id]}</span><span>${label}</span></button>`).join('')}</div><h2>Nivel de dificultad</h2><div class="sf-level-options" role="group" aria-label="Nivel de dificultad">${Object.entries(C.levels).map(([id,label]) => `<button type="button" data-sf="level" data-level="${id}" class="sf-level-button sf-level-${id} ${level === id ? 'is-active' : ''}" aria-pressed="${level === id}"><span>${label}</span><small>${{facil:'Para empezar',intermedio:'Para aplicar',dificil:'Para profundizar'}[id]}</small></button>`).join('')}</div><p class="sf-level-description">${area === 'lectura' ? {facil:'Lecturas de introducción para identificar ideas, datos y palabras en contexto.',intermedio:'Relaciona las ideas del texto y distingue sus matices.',dificil:'Analiza textos con conceptos y relaciones más complejos.'}[level] : {facil:'Empieza con conceptos, conteos y cuentas directas.',intermedio:'Practica fórmulas, conversiones y problemas con pasos previos.',dificil:'Resuelve ejercicios que combinan varias ideas y operaciones.'}[level]}</p></section>`;
     }
     function renderCatalogueCards() {
         const grid = root.querySelector('[data-sf-cards]'); if (!grid) return;
@@ -106,10 +119,10 @@
         const scores = previousScores();
         grid.innerHTML = matches.slice(cataloguePage * 12, cataloguePage * 12 + 12).map(p => {
             const result = scores[p.id], icon = p.subject === 'integral' ? 'exam' : p.subject === 'lectura' ? 'summary' : 'bank';
-            return `<article class="sim-library-card sf-catalogue-card" data-paper="${p.id}"><div class="sf-card-top"><span class="sim-library-stage">${p.subject === 'integral' ? 'CUATRO ÁREAS' : esc(labels[p.subject])}</span><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#${icon}"></use></svg></div><h2>${esc(p.title)}</h2><p class="sim-library-description">${esc(p.description)}</p><div class="sf-card-meta"><span><i class="far fa-file-alt" aria-hidden="true"></i> ${p.questionCount} preguntas</span><span><i class="far fa-clock" aria-hidden="true"></i> ${p.minutes} min</span></div><span class="sf-comment-label">Con explicación paso a paso</span>${result ? `<span class="sf-completed">Último resultado: ${result.correct}/${result.total} · ${result.percent}%</span>` : ''}${button('run', result ? 'Volver a practicar' : 'Empezar', 'sf-primary btn-primary').replace('data-sf="run"', `data-sf="run" data-area="simulacro:${p.id}"`)}</article>`;
+            return `<article class="sim-library-card sf-catalogue-card" data-paper="${p.id}"><div class="sf-card-top"><span class="sim-library-stage">${p.subject === 'integral' ? 'CUATRO MATERIAS' : esc(labels[p.subject])}${p.difficulty ? ' · ' + esc(C.levels[p.difficulty]) : ''}</span><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#${icon}"></use></svg></div><h2>${esc(p.title)}</h2><p class="sim-library-description">${esc(p.description)}</p><div class="sf-card-meta"><span><i class="far fa-file-alt" aria-hidden="true"></i> ${p.questionCount} preguntas</span><span><i class="far fa-clock" aria-hidden="true"></i> ${p.minutes} min</span></div><span class="sf-comment-label">Con explicación paso a paso</span>${result ? `<span class="sf-completed">Último resultado: ${result.correct}/${result.total} · ${result.percent}%</span>` : ''}${button('run', result ? 'Volver a practicar' : 'Empezar', 'sf-primary btn-primary').replace('data-sf="run"', `data-sf="run" data-area="simulacro:${p.id}"`)}</article>`;
         }).join('') || '<p class="sf-notice">No encontramos simulacros con esa búsqueda.</p>';
         const status = root.querySelector('[data-sf-status]');
-        if (status) status.textContent = matches.length + ' simulacros' + (matches.length ? ` · ${cataloguePage * 12 + 1}–${Math.min(matches.length, (cataloguePage + 1) * 12)}` : '');
+        if (status) status.textContent = matches.length + ' simulacros' + (catalogueMode === 'levels' && area !== 'integral' ? ' · ' + new Set(matches.flatMap(p => p.questionIds)).size + ' preguntas' : '') + (matches.length ? ` · ${cataloguePage * 12 + 1}–${Math.min(matches.length, (cataloguePage + 1) * 12)}` : '');
         const pager = root.querySelector('[data-sf-pagination]');
         if (pager) pager.innerHTML = pages > 1 ? `${button('page-prev', '← Anterior').replace('data-sf="page-prev"', `data-sf="page-prev" ${cataloguePage === 0 ? 'disabled' : ''}`)}<span>Página ${cataloguePage + 1} de ${pages}</span>${button('page-next', 'Siguiente →').replace('data-sf="page-next"', `data-sf="page-next" ${cataloguePage === pages - 1 ? 'disabled' : ''}`)}` : '';
     }
@@ -117,12 +130,13 @@
         stopClock();
         root.innerHTML = header() +
             (attempt ? `<aside class="sf-resume"><div><strong>${attempt.finished ? 'Tu último resultado' : 'Continúa donde te quedaste'}</strong><p>${esc(title(attempt.area))} · ${attempt.ids.length} preguntas${attempt.finished ? '' : ' · el tiempo sigue corriendo'}</p></div>${button('resume', attempt.finished ? 'Ver resultado y comentarios' : 'Continuar')}</aside>` : '') +
-            (bank.introPaper && area === 'integral' ? `<section class="sf-start-easy"><div><h2>Empieza por lo básico</h2><p>Un simulacro inicial con preguntas más sencillas de las cuatro materias. Si te trabas, abre la resolución en esa misma pregunta.</p><small>40 preguntas · puedes consultar los pasos mientras respondes</small></div>${button('run', 'Empezar el inicial', 'sf-primary').replace('data-sf="run"', 'data-sf="run" data-area="inicial"')}</section>` : '') +
-            `<div class="sf-catalogue-filter"><label for="sf-area-filter">Tipo o materia<select id="sf-area-filter" aria-label="Tipo o materia"><option value="integral" ${area === 'integral' ? 'selected' : ''}>Todos los simulacros</option><option value="completos" ${area === 'completos' ? 'selected' : ''}>Simulacros completos</option>${Object.entries(labels).map(([id, name]) => `<option value="${id}" ${area === id ? 'selected' : ''}>${name}</option>`).join('')}</select></label><label for="sf-search">Buscar<input id="sf-search" type="search" placeholder="Nombre, número o materia" value="${esc(catalogueQuery)}"></label><p data-sf-status role="status" aria-live="polite"></p></div>` +
+            selectionControls() +
+            `<div class="sf-catalogue-filter">${catalogueMode === 'legacy' ? `<label for="sf-area-filter">Materia<select id="sf-area-filter"><option value="integral">Todos los anteriores</option>${Object.entries(labels).map(([id,name])=>`<option value="${id}" ${area===id?'selected':''}>${name}</option>`).join('')}</select></label>` : ''}<label for="sf-search">Buscar simulacro<input id="sf-search" type="search" placeholder="Nombre o número" value="${esc(catalogueQuery)}"></label><p data-sf-status role="status" aria-live="polite"></p></div>` +
             '<div class="sf-catalogue" data-sf-cards></div><nav class="sf-pagination" data-sf-pagination aria-label="Páginas de simulacros"></nav>' +
-            (area === 'lectura' ? `<details class="sf-single-reading"><summary>Practicar una lectura por separado</summary><p>40 textos con cinco preguntas cada uno.</p><label for="sf-reading-choice">Elige una lectura</label><select id="sf-reading-choice">${bank.passages.map((p, i) => `<option value="${esc(p.id)}">${String(i + 1).padStart(2, '0')} · ${esc(p.title)}</option>`).join('')}</select>${button('chosen-passage', 'Leer y responder')}</details>` : '') +
+            (area === 'lectura' && catalogueMode === 'levels' ? `<details class="sf-single-reading"><summary>Practicar una lectura por separado</summary><label for="sf-reading-choice">Elige una lectura de nivel ${esc(C.levels[level])}</label><select id="sf-reading-choice">${bank.passages.filter(p=>p.difficulty===level).map((p,i)=>`<option value="${esc(p.id)}">${String(i+1).padStart(2,'0')} · ${esc(p.title)}</option>`).join('')}</select>${button('chosen-passage','Leer y responder')}</details>` : '') +
+            (catalogueMode === 'levels' ? `<div class="sf-previous-catalogue"><p>Conservamos los simulacros y resultados anteriores.</p>${button('legacy','Ver simulacros anteriores')}</div>` : '') +
             (typeof openTopicSimulacro === 'function' ? `<div class="sf-previous-catalogue"><p>Biología celular, morfofisiología y salud pública</p>${button('topics', 'Ver los simulacros por temas →')}</div>` : '') +
-            `<details class="sf-sources"><summary>Sobre el material</summary><p>Práctica comentada basada en el documento de exámenes ABP de La Paz (UMSA) que se facilitó a la plataforma. Incluye 92 preguntas revisadas del documento y 508 ejercicios nuevos que siguen sus tipos de problemas. Las nuevas variantes están identificadas al revisar. Las claves son razonadas; no se recibió un patrón oficial.</p><p>Lectura comprensiva: 40 textos y 200 preguntas adaptados de los capítulos 1 y 2 de <em>Anatomía y fisiología: la unidad entre forma y función</em>, Kenneth S. Saladin, 6.ª edición. Estas lecturas son material didáctico adicional; no pertenecen al documento ABP.</p><p>Los 20 simulacros completos distribuyen las 800 preguntas sin repetirlas entre ellos. Los 40 por materia reúnen ese mismo banco para repaso dirigido. Cada simulacro tiene un conjunto fijo de preguntas y comentarios de resolución.</p><p>La distribución, el tiempo y la nota son de práctica, sin penalización por error. No representan una prueba ni un criterio oficial de admisión. El avance y los resultados se guardan para tu cuenta en este navegador.</p></details>`;
+            `<details class="sf-sources"><summary>Sobre el material</summary><p>980 preguntas: 260 de matemáticas, 260 de física, 260 de química y 200 de lectura. Se incluyen 180 ejercicios básicos nuevos, con sus pasos y referencias. La dificultad se organiza por los conceptos y las operaciones que requiere cada ejercicio; en lectura se mantiene cada texto completo.</p><p>Las preguntas de las tres primeras materias siguen el documento ABP de La Paz facilitado a la plataforma: 92 preguntas revisadas y 688 variantes de práctica. Las 40 lecturas y sus preguntas son adaptaciones de los capítulos 1 y 2 de Saladin, 6.ª edición. Las referencias se conservan en la revisión. No se recibió un patrón oficial de respuestas. Los simulacros por nivel reutilizan este banco; no se cuentan como preguntas nuevas cada vez que aparecen en un simulacro.</p></details>`;
         renderCatalogueCards(); root.scrollIntoView({ block: 'start', behavior: 'instant' });
     }
     async function start(selectedArea) {
@@ -133,6 +147,8 @@
         try {
             if (!await load()) return;
             area = selectedArea || area;
+            const chosen = C.paper(bank, area);
+            if (chosen) { catalogueArea = chosen.subject; if (chosen.difficulty) level = chosen.difficulty; }
             const seed = crypto.getRandomValues(new Uint32Array(1))[0];
             questions = C.select(bank, area, seed);
             if (!questions.length) throw new Error('Esta lectura no está disponible.');
@@ -155,7 +171,7 @@
     function renderQuestion(focus = false) {
         if (!attempt || attempt.finished) return;
         const q = questions[attempt.index], answered = Object.keys(attempt.answers).length;
-        root.innerHTML = `<div class="sf-exam-top"><div><span class="sf-eyebrow">${esc(title(attempt.area))}</span><h1>Pregunta ${attempt.index + 1} <small>de ${questions.length}</small></h1></div><div class="sf-timer" role="timer" aria-label="Tiempo restante" id="sf-timer"></div></div><div class="sf-progress" role="progressbar" aria-label="Preguntas respondidas" aria-valuenow="${answered}" aria-valuemin="0" aria-valuemax="${questions.length}"><span style="width:${answered / questions.length * 100}%"></span></div><p class="sf-progress-label">${answered} de ${questions.length} respondidas <span data-save-status></span></p><div class="sf-exam-layout"><div>${passage(q)}<section class="sf-question"><div class="sf-question-meta">${esc(labels[q.subject])} · ${esc(q.topic)}</div>${C.promptHtml(q)}${helpBlock(q)}<fieldset class="sf-options"><legend class="sf-sr-only">Elige una respuesta</legend>${q.options.map((option, i) => `<label class="${attempt.answers[q.id] === i ? 'is-selected' : ''}"><input type="radio" name="sf-answer" value="${i}" ${attempt.answers[q.id] === i ? 'checked' : ''}><span class="sf-letter">${String.fromCharCode(65 + i)}</span><span>${esc(C.optionText(q, i))}</span></label>`).join('')}</fieldset><div class="sf-question-tools">${button('flag', attempt.flags.includes(q.id) ? '★ Marcada para revisar' : '☆ Marcar para revisar')}${button('erase', 'Borrar respuesta')}</div><div class="sf-bottom-nav">${button('prev', '← Anterior').replace('data-sf="prev"', `data-sf="prev" ${attempt.index === 0 ? 'disabled' : ''}`)}${attempt.index < questions.length - 1 ? button('next', 'Siguiente →', 'sf-primary') : button('finish', 'Terminar y corregir', 'sf-primary')}</div></section></div><aside class="sf-question-nav"><h3>Tus preguntas</h3><div class="sf-number-grid">${questions.map((item, index) => `<button type="button" data-sf="jump" data-index="${index}" class="${attempt.answers[item.id] !== undefined ? 'is-answered' : ''} ${attempt.flags.includes(item.id) ? 'is-flagged' : ''}" ${index === attempt.index ? 'aria-current="step"' : ''} aria-label="Pregunta ${index + 1}${attempt.answers[item.id] !== undefined ? ', respondida' : ', pendiente'}${attempt.flags.includes(item.id) ? ', marcada' : ''}">${index + 1}</button>`).join('')}</div><p>Las preguntas respondidas aparecen en azul. ★ indica una pregunta marcada.</p>${button('finish', 'Terminar y corregir')}${button('catalogue', 'Volver a las materias')}</aside></div>`;
+        root.innerHTML = `<div class="sf-exam-top"><div><span class="sf-eyebrow">${esc(title(attempt.area))}</span><h1>Pregunta ${attempt.index + 1} <small>de ${questions.length}</small></h1></div><div class="sf-timer" role="timer" aria-label="Tiempo restante" id="sf-timer"></div></div><div class="sf-progress" role="progressbar" aria-label="Preguntas respondidas" aria-valuenow="${answered}" aria-valuemin="0" aria-valuemax="${questions.length}"><span style="width:${answered / questions.length * 100}%"></span></div><p class="sf-progress-label">${answered} de ${questions.length} respondidas <span data-save-status></span></p><div class="sf-exam-layout"><div>${passage(q)}<section class="sf-question"><div class="sf-question-meta">${esc(labels[q.subject])} · ${esc(q.topic)}${q.difficulty ? `<span class="sf-level-badge sf-level-${q.difficulty}">${esc(C.levels[q.difficulty])}</span>` : ''}</div>${C.promptHtml(q)}${helpBlock(q)}<fieldset class="sf-options"><legend class="sf-sr-only">Elige una respuesta</legend>${q.options.map((option, i) => `<label class="${attempt.answers[q.id] === i ? 'is-selected' : ''}"><input type="radio" name="sf-answer" value="${i}" ${attempt.answers[q.id] === i ? 'checked' : ''}><span class="sf-letter">${String.fromCharCode(65 + i)}</span><span>${esc(C.optionText(q, i))}</span></label>`).join('')}</fieldset><div class="sf-question-tools">${button('flag', attempt.flags.includes(q.id) ? '★ Marcada para revisar' : '☆ Marcar para revisar')}${button('erase', 'Borrar respuesta')}</div><div class="sf-bottom-nav">${button('prev', '← Anterior').replace('data-sf="prev"', `data-sf="prev" ${attempt.index === 0 ? 'disabled' : ''}`)}${attempt.index < questions.length - 1 ? button('next', 'Siguiente →', 'sf-primary') : button('finish', 'Terminar y corregir', 'sf-primary')}</div></section></div><aside class="sf-question-nav"><h3>Tus preguntas</h3><div class="sf-number-grid">${questions.map((item, index) => `<button type="button" data-sf="jump" data-index="${index}" class="${attempt.answers[item.id] !== undefined ? 'is-answered' : ''} ${attempt.flags.includes(item.id) ? 'is-flagged' : ''}" ${index === attempt.index ? 'aria-current="step"' : ''} aria-label="Pregunta ${index + 1}${attempt.answers[item.id] !== undefined ? ', respondida' : ', pendiente'}${attempt.flags.includes(item.id) ? ', marcada' : ''}">${index + 1}</button>`).join('')}</div><p>Las preguntas respondidas aparecen en azul. ★ indica una pregunta marcada.</p>${button('finish', 'Terminar y corregir')}${button('catalogue', 'Volver a las materias')}</aside></div>`;
         const changedReading = q.passageId && q.passageId !== renderedPassage;
         renderedPassage = q.passageId || null;
         tick();
@@ -193,13 +209,15 @@
     function resume() {
         if (!attempt) return;
         area = attempt.area;
+        const selected = C.paper(bank, area);
+        if (selected) { catalogueArea = selected.subject; if (selected.difficulty) level = selected.difficulty; }
         if (attempt.finished) results(); else { renderQuestion(true); startClock(); }
     }
     root.addEventListener('input', event => {
         if (event.target.id === 'sf-search') { catalogueQuery = event.target.value; cataloguePage = 0; renderCatalogueCards(); }
     });
     root.addEventListener('change', event => {
-        if (event.target.id === 'sf-area-filter') return open(event.target.value);
+        if (event.target.id === 'sf-area-filter') { area = event.target.value; cataloguePage = 0; renderCatalogueCards(); return; }
         if (!event.target.matches('input[name="sf-answer"]') || !attempt || attempt.finished || owner !== user()) return;
         if (attempt.deadline <= Date.now()) return finish(true);
         const index = Number(event.target.value), q = questions[attempt.index];
@@ -214,6 +232,15 @@
         if (action === 'accept-confirm') return pendingConfirmation?.(true);
         if (owner && owner !== user()) return clear();
         if (action === 'area') return open(target.dataset.area);
+        if (action === 'subject' || action === 'level' || action === 'legacy' || action === 'levels') {
+            if (action === 'subject' && (labels[target.dataset.area] || target.dataset.area === 'integral')) catalogueArea = target.dataset.area;
+            if (action === 'level' && C.levels[target.dataset.level]) level = target.dataset.level;
+            catalogueMode = action === 'legacy' ? 'legacy' : 'levels';
+            area = catalogueMode === 'legacy' ? 'integral' : catalogueArea;
+            cataloguePage = 0; catalogueQuery = ''; catalogue();
+            if (attempt && !attempt.finished) startClock();
+            return;
+        }
         if (action === 'reload') return open(area);
         if (action === 'home') return typeof goHome === 'function' && goHome();
         if (action === 'topics') return typeof openTopicSimulacro === 'function' && openTopicSimulacro();
@@ -223,7 +250,7 @@
         if (action === 'start') return start();
         if (action === 'passage') return start('texto:' + target.dataset.passage);
         if (action === 'resume') return resume();
-        if (action === 'catalogue') { area = labels[area] ? area : 'integral'; catalogue(); if (attempt && !attempt.finished) startClock(); return; }
+        if (action === 'catalogue') { area = catalogueArea; catalogue(); if (attempt && !attempt.finished) startClock(); return; }
         if (!attempt) return;
         if (action === 'review-all') return results('all');
         if (action === 'review-errors') return results('errors');

@@ -10,9 +10,9 @@
     "originalPatternIncluded": false
   },
   "counts": {
-    "matematicas": 200,
-    "fisica": 200,
-    "quimica": 200,
+    "matematicas": 260,
+    "fisica": 260,
+    "quimica": 260,
     "lectura": 200
   },
   "method": "Se revisaron visualmente las páginas escaneadas, se normalizó la notación y se resolvieron los problemas. Las claves son razonadas para práctica; no se suministró patrón oficial. No se modificaron los PDF originales.",
@@ -1825,5 +1825,60 @@
         }
       }
     ]
+  },
+  "progressivePractice": {
+    "date": "2026-10-30",
+    "beginnerExercises": 180,
+    "families": 30,
+    "source": "Variantes básicas de los problemas ABP autorizados; cada una conserva página, ejercicio padre y datos de cálculo.",
+    "difficultyCriteria": {
+      "facil": "Reconocimiento, conteo o una relación directa; se añaden 180 ejercicios de iniciación con cantidades sencillas.",
+      "intermedio": "Fórmulas y una o dos transformaciones, conversiones o comparaciones.",
+      "dificil": "Álgebra, modelos o conversiones encadenadas. En lectura, relaciones abstractas y científicas con matices."
+    },
+    "statistics": {
+      "questions": 980,
+      "perSubject": {
+        "matematicas": 260,
+        "fisica": 260,
+        "quimica": 260,
+        "lectura": 200
+      },
+      "passages": 40,
+      "completeSimulations": 20,
+      "subjectSimulations": 40,
+      "sourceSelection": 122,
+      "newPractice": 858,
+      "uniqueQuestionCount": 980,
+      "abpDocumentQuestions": 92,
+      "newABPStyleExercises": 688,
+      "readingQuestions": 200,
+      "beginnerPractice": 180,
+      "levelSimulations": 120,
+      "perDifficulty": {
+        "matematicas": {
+          "intermedio": 124,
+          "facil": 95,
+          "dificil": 41
+        },
+        "fisica": {
+          "intermedio": 130,
+          "facil": 84,
+          "dificil": 46
+        },
+        "quimica": {
+          "intermedio": 98,
+          "dificil": 54,
+          "facil": 108
+        },
+        "lectura": {
+          "facil": 70,
+          "intermedio": 65,
+          "dificil": 65
+        }
+      },
+      "legacyPaperQuestions": 800
+    },
+    "independentCheck": "beginner-checks.json: datos usados por las pruebas independientes de las 180 claves."
   }
 }

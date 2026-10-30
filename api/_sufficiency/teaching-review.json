@@ -1,15 +1,15 @@
 {
   "revision": 1,
   "date": "2026-10-30",
-  "questions": 800,
+  "questions": 980,
   "areas": {
-    "matematicas": 200,
-    "fisica": 200,
-    "quimica": 200,
+    "matematicas": 260,
+    "fisica": 260,
+    "quimica": 260,
     "lectura": 200
   },
   "stepCount": {
-    "4": 167,
+    "4": 347,
     "5": 501,
     "6": 119,
     "7": 11,
@@ -19,8 +19,7 @@
   "numericFamilies": 59,
   "originalAbpLessons": 92,
   "readingLessons": 200,
-  "questionAndKeySha256": "a163f0f0f60d01405b762b0d37650762e86d10038ea392d95b6c603dd50f8bec",
-  "bankBytes": 2583640,
+  "bankBytes": 3269146,
   "preserved": [
     "ids",
     "questions",
@@ -42,5 +41,7 @@
     "newQuestions": 0,
     "startsWith": "abp-36-64",
     "wholeReadings": 2
-  }
+  },
+  "original800QuestionAndKeySha256": "a163f0f0f60d01405b762b0d37650762e86d10038ea392d95b6c603dd50f8bec",
+  "beginnerLessons": 180
 }

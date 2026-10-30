@@ -5,6 +5,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
     'use strict';
     const subjects = { matematicas: 'Matemáticas', fisica: 'Física', quimica: 'Química', lectura: 'Lectura comprensiva' };
+    const levels = { facil: 'Fácil', intermedio: 'Intermedio', dificil: 'Difícil' };
     const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
     function validSolution(q, bank) {
         const s = q.solution;
@@ -51,10 +52,33 @@
                 new Set(q.options).size === q.options.length && Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length &&
                 typeof q.explanation === 'string' && q.explanation.length > 0 && q.source?.pdfPages?.length > 0 &&
                 (q.subject !== 'lectura' || passages.has(q.passageId)) &&
+                (!bank.difficultyRevision || (!!levels[q.difficulty] && (q.subject !== 'lectura' || bank.passages.find(p => p.id === q.passageId)?.difficulty === q.difficulty))) &&
                 (!bank.teachingRevision || validSolution(q, bank));
         }) && Object.keys(subjects).every(s => bank.questions.some(q => q.subject === s)) &&
             bank.passages.every(p => typeof p.text === 'string' && p.text.length > 100 && p.source?.pdfPages?.length > 0);
         if (!validQuestions) return false;
+        if (bank.difficultyRevision) {
+            if (!Array.isArray(bank.levelPapers) || !bank.levelPapers.length) return false;
+            const lookup = new Map(bank.questions.map(q => [q.id,q])), seen = new Set(), covered = new Set();
+            const combinations = new Set();
+            for (const p of bank.levelPapers) {
+                if (!p.id?.startsWith('nivel-') || seen.has(p.id) || (Array.isArray(bank.papers) && bank.papers.some(old => old.id === p.id)) || !levels[p.difficulty] || !p.title || !['integral',...Object.keys(subjects)].includes(p.subject)) return false;
+                seen.add(p.id);
+                if (!Array.isArray(p.questionIds) || p.questionIds.length !== p.questionCount || new Set(p.questionIds).size !== p.questionCount || !Number.isFinite(p.minutes) || p.minutes < 5 || p.minutes > 180) return false;
+                const rows=p.questionIds.map(id=>lookup.get(id));
+                if (rows.some(q=>!q || q.difficulty !== p.difficulty || (p.subject !== 'integral' && q.subject !== p.subject))) return false;
+                if (p.subject === 'integral') {
+                    if (p.questionCount !== 40 || Object.keys(subjects).some(s=>rows.filter(q=>q.subject===s).length!==10)) return false;
+                } else {
+                    if (p.questionCount < 1 || p.questionCount > 10) return false;
+                    combinations.add(p.subject+':'+p.difficulty);
+                    for (const q of rows) { if (covered.has(q.id)) return false; covered.add(q.id); }
+                }
+                const reading=rows.filter(q=>q.subject==='lectura');
+                if (reading.some(q=>rows.filter(r=>r.passageId===q.passageId).length !== bank.questions.filter(r=>r.passageId===q.passageId).length)) return false;
+            }
+            if (covered.size !== bank.questions.length || combinations.size !== 12) return false;
+        }
         if (bank.introPaper) {
             const p = bank.introPaper, lookup = new Map(bank.questions.map(q => [q.id, q]));
             if (p.id !== 'inicial' || p.questionCount !== 40 || p.minutes !== 60 || !Array.isArray(p.questionIds) || p.questionIds.length !== 40 || new Set(p.questionIds).size !== 40) return false;
@@ -127,6 +151,6 @@
         }
         return { ...saved, answers, helpOpen: Array.isArray(saved.helpOpen) ? [...new Set(saved.helpOpen.filter(id => saved.ids.includes(id)))] : [], flags: Array.isArray(saved.flags) ? saved.flags.filter(id => saved.ids.includes(id)) : [], index: Math.max(0, Math.min(saved.ids.length - 1, Number.isInteger(saved.index) ? saved.index : 0)), finished: saved.finished === true };
     }
-    function paper(bank, area) { return ['inicial', 'simulacro:inicial'].includes(area) ? bank?.introPaper || null : bank?.papers?.find(p => 'simulacro:' + p.id === area) || null; }
-    return { subjects, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText };
+    function paper(bank, area) { return ['inicial', 'simulacro:inicial'].includes(area) ? bank?.introPaper || null : bank?.papers?.find(p => 'simulacro:' + p.id === area) || bank?.levelPapers?.find(p => 'simulacro:' + p.id === area) || null; }
+    return { subjects, levels, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText };
 });

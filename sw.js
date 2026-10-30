@@ -1,8 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v140-ayuda-en-cada-pregunta';
+const CACHE_NAME = 'alcocermed-main-v141-simulacros-por-niveles';
 const APP_SHELL = [
-    './suficiencia-core.js?v=4',
-    './suficiencia.js?v=5',
-    './suficiencia.css?v=5',
+    './suficiencia-core.js?v=5',
+    './suficiencia.js?v=6',
+    './suficiencia.css?v=6',
     './campus',
     './campus.html',
     './index.html',
