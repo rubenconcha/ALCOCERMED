@@ -58,7 +58,7 @@ var DeviceGuard = (function() {
             }
             var data = result.data;
             if (!data || data.ok !== true) {
-                if (data && data.code === 'DEVICE_LIMIT') showDeviceLimit(supabaseClient, userEmail);
+                if (data && data.code === 'DEVICE_LIMIT') showDeviceLimit(supabaseClient, userEmail, data.limit);
                 return { ok: false, error: data && data.error || 'No pudimos verificar este dispositivo.', code: data && data.code };
             }
             return { ok: true, limit: data && data.limit, registered: data && data.registered };
@@ -116,13 +116,14 @@ var DeviceGuard = (function() {
         }
     }
 
-    function showDeviceLimit(client, email) {
+    function showDeviceLimit(client, email, limit) {
         var previous = document.getElementById('device-limit-dialog');
         if (previous) previous.remove();
         var dialog = document.createElement('dialog');
         dialog.id = 'device-limit-dialog'; dialog.className = 'device-limit-dialog';
         dialog.setAttribute('aria-labelledby', 'device-limit-title');
         dialog.innerHTML = '<h2 id="device-limit-title">Ya usas tu cuenta en 2 dispositivos</h2><p>¿Cambiaste de celular o de navegador? Te enviamos un enlace a tu correo para reemplazar uno.</p><button type="button" class="device-limit-send">Cambiar un dispositivo</button><button type="button" class="device-limit-cancel">Volver</button><p class="device-limit-status" role="status" aria-live="polite"></p>';
+        dialog.querySelector('h2').textContent = limit === 1 ? 'Tu cuenta permite un solo dispositivo' : 'Ya usas tu cuenta en 2 dispositivos';
         var send = dialog.querySelector('.device-limit-send');
         var message = dialog.querySelector('.device-limit-status');
         dialog.querySelector('.device-limit-cancel').onclick = function () { dialog.close(); };
