@@ -4,1596 +4,2422 @@
   "title": "Simulacro Semana 2 – Test B – Grupo Virtual",
   "duration": 50,
   "total_points": 50,
+  "review_status": "approved",
+  "source": {
+    "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+    "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+    "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+    "size_bytes": 380929
+  },
+  "pattern3": [
+    "Si considera que 1 es correcto",
+    "Si considera que 2 es correcto",
+    "Si considera que 3 es correcto",
+    "Si considera que 1-2-3 son correctos",
+    "Si considera que 1-2-3 son falsos"
+  ],
+  "pattern2": [
+    "Si considera que 1 es correcto",
+    "Si considera que 2 es correcto",
+    "Si considera que 1-2 son correctos",
+    "Si considera que 1-2 son falsos"
+  ],
   "questions": [
     {
       "id": "semana2-testb-1",
       "numero_original": 1,
       "numero_pregunta": 1,
+      "source_numero_original": 1,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": "Clasificación de las articulaciones. Seleccione las premisas correctas.\nI. Una sinostosis se forma cuando dos huesos quedan unidos por tejido óseo.\nII. Las articulaciones fibrosas se caracterizan por poseer una cavidad sinovial.\nIII. Una diartrosis es una articulación que permite movimiento libre.",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "comentario": "La sinostosis es una unión ósea. Las fibrosas unen los huesos por tejido conjuntivo fibroso y carecen de cavidad sinovial. Diartrosis describe una articulación libremente móvil.",
-      "justificacion": "La sinostosis es una unión ósea. Las fibrosas unen los huesos por tejido conjuntivo fibroso y carecen de cavidad sinovial. Diartrosis describe una articulación libremente móvil.",
-      "fuente": "Cap. 9; diap. 3–7.",
-      "dificultad": "medio",
+      "pregunta": "1. La articulación temporomandibular combina elementos de articulación condilar, enartrosis y artrodia. \n2. La TMJ desliza hacia adelante como una artrodia cada vez que la boca se abre o la mandíbula se protrae para dar una mordida.\n3. El ligamento estilomandibular se extiende de la apófisis estiloides a la rama de la mandíbula.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 1
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 1,
+        "original_header": "1",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          326,
+          327
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I y III",
-      "opcion_b": "Solo I y II",
-      "opcion_c": "I, II y III",
-      "opcion_d": "Solo I",
-      "opcion_e": "Solo III"
+      "truth_values": [
+        false,
+        true,
+        false
+      ],
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "Clave B según el patrón docente aportado. La premisa 1 cambia gínglimo por enartrosis y no coincide con Saladin; la 2 reproduce el deslizamiento anterior descrito en el libro. Para la 3, el criterio docente sigue la distinción textual de Saladin: esfenomandibular hacia la rama y estilomandibular hacia el ángulo mandibular. Se conserva literalmente «rama» del examen; esa denominación amplia puede ser ambigua fuera de este criterio específico del curso.",
+      "justificacion": "Clave B según el patrón docente aportado. La premisa 1 cambia gínglimo por enartrosis y no coincide con Saladin; la 2 reproduce el deslizamiento anterior descrito en el libro. Para la 3, el criterio docente sigue la distinción textual de Saladin: esfenomandibular hacia la rama y estilomandibular hacia el ángulo mandibular. Se conserva literalmente «rama» del examen; esa denominación amplia puede ser ambigua fuera de este criterio específico del curso.",
+      "paginas_pdf": "326, 327",
+      "pagina_impresa": "298, 299",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 298, 299; páginas PDF 326, 327.",
+      "key_basis": {
+        "type": "explicit_teacher_pattern_course_context",
+        "teacher_key": "B",
+        "source_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "pdf_pages": [
+          326,
+          327
+        ],
+        "scope": "Se sigue la distinción específica de Saladin entre esfenomandibular a rama y estilomandibular a ángulo, como criterio del patrón docente B. «Rama» es una denominación anatómica amplia y no se interpreta como una negación anatómica universal."
+      },
+      "teacher_key": "B"
     },
     {
       "id": "semana2-testb-2",
       "numero_original": 2,
       "numero_pregunta": 2,
+      "source_numero_original": 2,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": "Articulaciones fibrosas. Seleccione las premisas correctas.\nI. Las suturas se encuentran entre huesos del cráneo.\nII. La gonfosis une la raíz de un diente con su alvéolo mediante el ligamento periodontal.\nIII. La sindesmosis es una unión de huesos mediante cartílago hialino.",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "comentario": "Suturas, gonfosis y sindesmosis son articulaciones fibrosas. En una sindesmosis los huesos se unen mediante un ligamento o una membrana interósea.",
-      "justificacion": "Suturas, gonfosis y sindesmosis son articulaciones fibrosas. En una sindesmosis los huesos se unen mediante un ligamento o una membrana interósea.",
-      "fuente": "Cap. 9; diap. 8–13.",
-      "dificultad": "medio",
+      "pregunta": "1. El músculo supraespinoso, infraespinoso, romboides menor y subescapular, cuyos tendones forman el manguito de los rotadores. \n2. El manguito de los rotadores que se fusiona con la cápsula articular en todos los lados de la articulación del hombro. \n3. En el hombro hay cuatro bolsas los cuales son; subdeltoides, subacromial, subcoracoidea y subescapular.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 2
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 2,
+        "original_header": "2",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          328
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo II y III",
-      "opcion_b": "Solo I y III",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "Solo I y II",
-      "opcion_e": "Solo II"
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "1 es falsa: el manguito incluye redondo menor, no romboides menor. 2 es falsa: se fusiona con la cápsula excepto en el lado inferior. 3 coincide con las cuatro bolsas nombradas por Saladin. Clave C.",
+      "justificacion": "1 es falsa: el manguito incluye redondo menor, no romboides menor. 2 es falsa: se fusiona con la cápsula excepto en el lado inferior. 3 coincide con las cuatro bolsas nombradas por Saladin. Clave C.",
+      "paginas_pdf": "328",
+      "pagina_impresa": "300",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 300; páginas PDF 328.",
+      "teacher_key": "C"
     },
     {
       "id": "semana2-testb-3",
       "numero_original": 3,
       "numero_pregunta": 3,
+      "source_numero_original": 3,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": "Articulaciones cartilaginosas. Seleccione las premisas correctas.\nI. En una sincondrosis los huesos están unidos principalmente por fibrocartílago.\nII. La sínfisis púbica es un ejemplo de articulación cartilaginosa.\nIII. Las uniones entre cuerpos vertebrales mediante discos intervertebrales son sínfisis.",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "comentario": "La sincondrosis une huesos mediante cartílago hialino. Las sínfisis contienen fibrocartílago, como la sínfisis púbica y las uniones entre cuerpos vertebrales.",
-      "justificacion": "La sincondrosis une huesos mediante cartílago hialino. Las sínfisis contienen fibrocartílago, como la sínfisis púbica y las uniones entre cuerpos vertebrales.",
-      "fuente": "Cap. 9; diap. 14–17.",
-      "dificultad": "medio",
+      "pregunta": "1. La articulación trapeciometacarpiana, entre el trapecio de la muñeca y el metacarpo II es un ejemplo de articulación silla de montar. \n2. La clavícula se mueve de manera vertical en el plano sagital cuando se levanta una maleta.\n3. La articulación trocoide es una articulación monoaxial en que un hueso gira sobre su eje longitudinal.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 3
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 3,
+        "original_header": "3",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          317,
+          319
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "teacher_key_correction": {
+          "original": "A",
+          "revised": "C",
+          "reason": "Saladin PDF 317–319: la primera premisa dice metacarpo II en vez de I; la segunda usa sagital en vez de frontal; solo la tercera describe correctamente una trocoide."
+        }
       },
-      "opcion_a": "Solo I y II",
-      "opcion_b": "Solo I",
-      "opcion_c": "Solo I y III",
-      "opcion_d": "Solo II y III",
-      "opcion_e": "Ninguna es correcta"
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "1 es falsa: la articulación en silla de montar descrita corresponde al primer metacarpiano, no al segundo. 2 es falsa: al levantar una maleta la clavícula se mueve verticalmente en el plano frontal, no sagital. 3 es verdadera: la trocoide permite rotación monoaxial alrededor del eje longitudinal. Clave C. Revisión docente: el patrón aportado marca A; se ajustó a C por la siguiente razón: Saladin PDF 317–319: la primera premisa dice metacarpo II en vez de I; la segunda usa sagital en vez de frontal; solo la tercera describe correctamente una trocoide.",
+      "justificacion": "1 es falsa: la articulación en silla de montar descrita corresponde al primer metacarpiano, no al segundo. 2 es falsa: al levantar una maleta la clavícula se mueve verticalmente en el plano frontal, no sagital. 3 es verdadera: la trocoide permite rotación monoaxial alrededor del eje longitudinal. Clave C. Revisión docente: el patrón aportado marca A; se ajustó a C por la siguiente razón: Saladin PDF 317–319: la primera premisa dice metacarpo II en vez de I; la segunda usa sagital en vez de frontal; solo la tercera describe correctamente una trocoide.",
+      "paginas_pdf": "317, 319",
+      "pagina_impresa": "289, 291",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 289, 291; páginas PDF 317, 319.",
+      "teacher_key": "A"
     },
     {
       "id": "semana2-testb-4",
       "numero_original": 4,
       "numero_pregunta": 4,
+      "source_numero_original": 4,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": "Componentes de las articulaciones sinoviales. Seleccione las premisas correctas.\nI. Presentan una cavidad articular que contiene líquido sinovial.\nII. El cartílago articular ayuda a reducir la fricción entre las superficies óseas.\nIII. La membrana sinovial reviste la cara interna de la cápsula, excepto las superficies cubiertas por cartílago articular.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "La cavidad, el líquido sinovial, el cartílago articular y la cápsula son componentes básicos. La membrana sinovial contribuye a producir el líquido sinovial.",
-      "justificacion": "La cavidad, el líquido sinovial, el cartílago articular y la cápsula son componentes básicos. La membrana sinovial contribuye a producir el líquido sinovial.",
-      "fuente": "Cap. 9; diap. 18–24.",
-      "dificultad": "medio",
+      "pregunta": "1. Las articulaciones se clasifican en cuatro categorías principales: sinostosis, sinartrosis, anfiartrosis y diartrosis. \n2. Una articulación ósea tiene leve movimiento y se forma cuando la separación entre dos huesos se osifica y se vuelve un solo hueso.\n3. Las articulaciones óseas pueden formar se por osificación de articulaciones fibrosas, sinoviales o cartilaginosas.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 4
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 4,
+        "original_header": "4",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          308
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I y III",
-      "opcion_b": "I, II y III",
-      "opcion_c": "Solo II",
-      "opcion_d": "Ninguna es correcta",
-      "opcion_e": "Solo I"
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "Según la clasificación y formulación del apartado de Saladin, 1 es verdadera. 2 es falsa porque la sinostosis carece de movimiento. 3 añade sinoviales a la enumeración de uniones fibrosas o cartilaginosas que da el texto en ese apartado. Se evalúa conforme a esa clasificación del curso, no como una revisión de todos los mecanismos patológicos de anquilosis. Clave A.",
+      "justificacion": "Según la clasificación y formulación del apartado de Saladin, 1 es verdadera. 2 es falsa porque la sinostosis carece de movimiento. 3 añade sinoviales a la enumeración de uniones fibrosas o cartilaginosas que da el texto en ese apartado. Se evalúa conforme a esa clasificación del curso, no como una revisión de todos los mecanismos patológicos de anquilosis. Clave A.",
+      "paginas_pdf": "308",
+      "pagina_impresa": "280",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 280; páginas PDF 308.",
+      "teacher_key": "A"
     },
     {
       "id": "semana2-testb-5",
       "numero_original": 5,
       "numero_pregunta": 5,
+      "source_numero_original": 5,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": "Tipos de articulaciones sinoviales. Seleccione las premisas correctas.\nI. Una articulación de bisagra permite principalmente flexión y extensión.\nII. Una articulación esferoidea permite movimiento alrededor de un solo eje.\nIII. La articulación radiocubital proximal es de tipo pivote o trocoide.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "Las bisagras son principalmente uniaxiales. Las esferoideas son multiaxiales, como el hombro y la cadera. La radiocubital proximal permite la rotación propia de una articulación de pivote.",
-      "justificacion": "Las bisagras son principalmente uniaxiales. Las esferoideas son multiaxiales, como el hombro y la cadera. La radiocubital proximal permite la rotación propia de una articulación de pivote.",
-      "fuente": "Cap. 9; diap. 38–45.",
-      "dificultad": "medio",
+      "pregunta": "1. Las suturas pueden clasificarse en dentadas, escamosas y coronarias.\n2. Las articulaciones cartilaginosas se dividen en sindesmosis y sínfisis\n3. Una sindesmosis menos móvil es la que une los extremos distales de la tibia y el peroné.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 5
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 5,
+        "original_header": "5",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          309,
+          310
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Ninguna es correcta",
-      "opcion_b": "Solo I y III",
-      "opcion_c": "Solo I y II",
-      "opcion_d": "Solo II y III",
-      "opcion_e": "Solo III"
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "1 es falsa: los tipos de sutura son dentadas, escamosas y planas, no coronarias. 2 es falsa: las cartilaginosas se dividen en sincondrosis y sínfisis. 3 es verdadera: la sindesmosis tibiofibular distal es menos móvil. Clave C.",
+      "justificacion": "1 es falsa: los tipos de sutura son dentadas, escamosas y planas, no coronarias. 2 es falsa: las cartilaginosas se dividen en sincondrosis y sínfisis. 3 es verdadera: la sindesmosis tibiofibular distal es menos móvil. Clave C.",
+      "paginas_pdf": "309, 310",
+      "pagina_impresa": "281, 282",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 281, 282; páginas PDF 309, 310.",
+      "teacher_key": "C"
     },
     {
       "id": "semana2-testb-6",
       "numero_original": 6,
       "numero_pregunta": 6,
+      "source_numero_original": 6,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": "Flexión, extensión, abducción y aducción. Seleccione las premisas correctas.\nI. La flexión del codo disminuye el ángulo entre el brazo y el antebrazo.\nII. La abducción del brazo lo aleja del plano medio del cuerpo.\nIII. La aducción del brazo lo aleja del tronco.",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "comentario": "La flexión disminuye el ángulo articular. La abducción aleja del plano medio y la aducción aproxima al plano medio.",
-      "justificacion": "La flexión disminuye el ángulo articular. La abducción aleja del plano medio y la aducción aproxima al plano medio.",
-      "fuente": "Cap. 9; diap. 48–51.",
-      "dificultad": "medio",
+      "pregunta": "Respecto a las articulaciones fibrosas:\n1.Los huesos se unen mediante tejido conectivo fibroso.\n2.Poseen siempre una cavidad sinovial.\n3.Permiten movimientos amplios.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 6
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 6,
+        "original_header": "6  Respecto a las articulaciones fibrosas: ",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          308,
+          309,
+          311
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I y III",
-      "opcion_b": "Ninguna es correcta",
-      "opcion_c": "Solo I",
-      "opcion_d": "Solo I y II",
-      "opcion_e": "Solo III"
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "1 es verdadera: las articulaciones fibrosas unen los huesos mediante tejido conjuntivo fibroso. No tienen siempre cavidad sinovial ni permiten movimientos amplios. Clave A.",
+      "justificacion": "1 es verdadera: las articulaciones fibrosas unen los huesos mediante tejido conjuntivo fibroso. No tienen siempre cavidad sinovial ni permiten movimientos amplios. Clave A.",
+      "paginas_pdf": "308, 309, 311",
+      "pagina_impresa": "280, 281, 283",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 280, 281, 283; páginas PDF 308, 309, 311.",
+      "teacher_key": "A"
     },
     {
       "id": "semana2-testb-7",
       "numero_original": 7,
       "numero_pregunta": 7,
+      "source_numero_original": 7,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": "Pronación, supinación y circunducción. Seleccione las premisas correctas.\nI. Durante la pronación, el radio y el cúbito permanecen paralelos.\nII. En la supinación, el radio y el cúbito se disponen paralelos.\nIII. La circunducción hace que el extremo distal de una extremidad describa un círculo.",
-      "respuesta_correcta": "E",
-      "respuestas_aceptadas": [
-        "E"
-      ],
-      "comentario": "En la pronación el radio cruza sobre el cúbito. En la supinación quedan paralelos. La circunducción combina flexión, abducción, extensión y aducción.",
-      "justificacion": "En la pronación el radio cruza sobre el cúbito. En la supinación quedan paralelos. La circunducción combina flexión, abducción, extensión y aducción.",
-      "fuente": "Cap. 9; diap. 54–56.",
-      "dificultad": "medio",
+      "pregunta": ".Respecto a una sindesmosis:\n1.Los huesos están unidos exclusivamente por cartílago hialino.\n2.Los huesos se unen mediante ligamentos o membranas interóseas.\n3.Siempre es completamente inmóvil.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 7
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 7,
+        "original_header": "7.Respecto a una sindesmosis:",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          310
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo II",
-      "opcion_b": "Ninguna es correcta",
-      "opcion_c": "Solo III",
-      "opcion_d": "I, II y III",
-      "opcion_e": "Solo II y III"
+      "truth_values": [
+        false,
+        true,
+        false
+      ],
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "1 es falsa: el cartílago hialino caracteriza una sincondrosis. 2 es verdadera: la sindesmosis une huesos mediante fibras ligamentosas o membranas interóseas. 3 es falsa porque puede permitir movimiento. Clave B.",
+      "justificacion": "1 es falsa: el cartílago hialino caracteriza una sincondrosis. 2 es verdadera: la sindesmosis une huesos mediante fibras ligamentosas o membranas interóseas. 3 es falsa porque puede permitir movimiento. Clave B.",
+      "paginas_pdf": "310",
+      "pagina_impresa": "282",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 282; páginas PDF 310.",
+      "teacher_key": "B"
     },
     {
       "id": "semana2-testb-8",
       "numero_original": 8,
       "numero_pregunta": 8,
+      "source_numero_original": 8,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": "Movimientos especiales del pie y de la mano. Seleccione las premisas correctas.\nI. La dorsiflexión consiste en alejar el dorso del pie de la cara anterior de la pierna.\nII. La inversión orienta la planta del pie hacia lateral.\nIII. La oposición del pulgar consiste en separar su pulpejo de los demás dedos sin aproximarlo a ellos.",
+      "pregunta": "Sobre la gonfosis:\n1.Une dos huesos mediante un disco fibrocartilaginoso.\n2.Es una articulación sinovial.\n3.Une el diente con su alvéolo.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "source": {
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 8,
+        "original_header": "8 Sobre la gonfosis:",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          309,
+          310
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+      },
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
-      "comentario": "Las tres son falsas: la dorsiflexión aproxima el dorso del pie a la pierna; la inversión orienta la planta hacia medial; la oposición aproxima el pulpejo del pulgar al de otro dedo.",
-      "justificacion": "Las tres son falsas: la dorsiflexión aproxima el dorso del pie a la pierna; la inversión orienta la planta hacia medial; la oposición aproxima el pulpejo del pulgar al de otro dedo.",
-      "fuente": "Cap. 9; diap. 60–64.",
-      "dificultad": "medio",
-      "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
-      "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 8
-      },
-      "opcion_a": "Solo I y II",
-      "opcion_b": "Solo II",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "Solo III",
-      "opcion_e": "Solo I y III"
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "La gonfosis es una unión fibrosa del diente con su alvéolo mediante el ligamento periodontal; no es sinovial ni una unión por disco fibrocartilaginoso. Solo 3 es verdadera. Clave C.",
+      "justificacion": "La gonfosis es una unión fibrosa del diente con su alvéolo mediante el ligamento periodontal; no es sinovial ni una unión por disco fibrocartilaginoso. Solo 3 es verdadera. Clave C.",
+      "paginas_pdf": "309, 310",
+      "pagina_impresa": "281, 282",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 281, 282; páginas PDF 309, 310.",
+      "teacher_key": "C"
     },
     {
       "id": "semana2-testb-9",
       "numero_original": 9,
       "numero_pregunta": 9,
+      "source_numero_original": 9,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": "Articulación temporomandibular. Seleccione las premisas correctas.\nI. Se establece entre la mandíbula y el hueso temporal.\nII. Un disco articular divide su cavidad en dos compartimientos.\nIII. Permite únicamente movimientos de rotación y no de deslizamiento.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "La ATM une el cóndilo mandibular con el temporal. Su disco divide la cavidad. Combina movimientos de bisagra y deslizamiento durante la apertura y el cierre de la boca.",
-      "justificacion": "La ATM une el cóndilo mandibular con el temporal. Su disco divide la cavidad. Combina movimientos de bisagra y deslizamiento durante la apertura y el cierre de la boca.",
-      "fuente": "Cap. 9; diap. 65–69.",
-      "dificultad": "medio",
+      "pregunta": "Respecto a las articulaciones cartilaginosas:\n1.Los huesos están unidos por cartílago.\n2.Carecen de cavidad sinovial.\n3.Se dividen en sincondrosis y sínfisis.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 9
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 9,
+        "original_header": "9 Respecto a las articulaciones cartilaginosas:",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          310,
+          311
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo II",
-      "opcion_b": "Solo I y II",
-      "opcion_c": "Solo I",
-      "opcion_d": "I, II y III",
-      "opcion_e": "Solo I y III"
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "Las articulaciones cartilaginosas unen los huesos por cartílago, carecen de cavidad sinovial y se dividen en sincondrosis y sínfisis. Las tres premisas son verdaderas. Clave D.",
+      "justificacion": "Las articulaciones cartilaginosas unen los huesos por cartílago, carecen de cavidad sinovial y se dividen en sincondrosis y sínfisis. Las tres premisas son verdaderas. Clave D.",
+      "paginas_pdf": "310, 311",
+      "pagina_impresa": "282, 283",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 282, 283; páginas PDF 310, 311.",
+      "teacher_key": "D"
     },
     {
       "id": "semana2-testb-10",
       "numero_original": 10,
       "numero_pregunta": 10,
+      "source_numero_original": 10,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": "Articulaciones del hombro y de la cadera. Seleccione las premisas correctas.\nI. La articulación glenohumeral une la cabeza del húmero con la cavidad glenoidea de la escápula.\nII. La articulación de la cadera une la cabeza del fémur con el acetábulo.\nIII. Ambas son articulaciones sinoviales esferoideas y multiaxiales.",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "comentario": "Hombro y cadera son esferoideas. El hombro destaca por su gran movilidad y la cadera por su mayor estabilidad y función de soporte de peso.",
-      "justificacion": "Hombro y cadera son esferoideas. El hombro destaca por su gran movilidad y la cadera por su mayor estabilidad y función de soporte de peso.",
-      "fuente": "Cap. 9; diap. 70–79.",
-      "dificultad": "medio",
+      "pregunta": "...Sobre las sincondrosis:\n1.Los huesos están unidos principalmente por cartílago hialino.\n2.La sínfisis del pubis es el ejemplo clásico de sincondrosis.\n3.Presentan siempre una cápsula articular",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 10
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 10,
+        "original_header": "10...Sobre las sincondrosis:",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          310,
+          311
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo II",
-      "opcion_b": "Solo I y II",
-      "opcion_c": "I, II y III",
-      "opcion_d": "Solo I y III",
-      "opcion_e": "Solo III"
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "La sincondrosis une huesos mediante cartílago hialino. La sínfisis púbica es una sínfisis, no una sincondrosis, y estas uniones no presentan siempre una cápsula articular. Solo 1 es verdadera. Clave A.",
+      "justificacion": "La sincondrosis une huesos mediante cartílago hialino. La sínfisis púbica es una sínfisis, no una sincondrosis, y estas uniones no presentan siempre una cápsula articular. Solo 1 es verdadera. Clave A.",
+      "paginas_pdf": "310, 311",
+      "pagina_impresa": "282, 283",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 282, 283; páginas PDF 310, 311.",
+      "teacher_key": "A"
     },
     {
       "id": "semana2-testb-11",
       "numero_original": 11,
       "numero_pregunta": 11,
+      "source_numero_original": 11,
       "materia": "MORFOFUNCION",
-      "tema": "Articulaciones",
-      "pregunta": "Articulación del codo. Seleccione las premisas correctas.\nI. Su movimiento principal es la abducción y aducción del antebrazo.\nII. La articulación humerocubital permite principalmente flexión y extensión.\nIII. El olécranon pertenece al cúbito y participa en la articulación del codo.",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "comentario": "El codo funciona principalmente como una bisagra para flexión y extensión. El olécranon es una prominencia proximal del cúbito. La pronación y supinación involucran las articulaciones radiocubitales.",
-      "justificacion": "El codo funciona principalmente como una bisagra para flexión y extensión. El olécranon es una prominencia proximal del cúbito. La pronación y supinación involucran las articulaciones radiocubitales.",
-      "fuente": "Cap. 9; diap. 75–77.",
-      "dificultad": "medio",
+      "tema": "Músculos",
+      "pregunta": "1. El elevador del párpado superior está inervado por el nervio facial.\n2. El orbicular del ojo actúa como esfínter de los párpados y cierra el ojo al parpadear, guiñar o dormir.\n3. El corrugador superciliar desplaza las cejas lateralmente y hacia arriba.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 11
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 11,
+        "original_header": "11",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          351,
+          352
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I y II",
-      "opcion_b": "Solo III",
-      "opcion_c": "Solo I y III",
-      "opcion_d": "Solo II y III",
-      "opcion_e": "Solo II"
+      "truth_values": [
+        false,
+        true,
+        false
+      ],
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "El elevador del párpado superior depende del III, no del VII. El orbicular del ojo cierra los párpados. El corrugador tira de las cejas medialmente y hacia abajo, no lateralmente y arriba. Solo 2 es verdadera. Clave B.",
+      "justificacion": "El elevador del párpado superior depende del III, no del VII. El orbicular del ojo cierra los párpados. El corrugador tira de las cejas medialmente y hacia abajo, no lateralmente y arriba. Solo 2 es verdadera. Clave B.",
+      "paginas_pdf": "351, 352",
+      "pagina_impresa": "323, 324",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 323, 324; páginas PDF 351, 352.",
+      "teacher_key": "B"
     },
     {
       "id": "semana2-testb-12",
       "numero_original": 12,
       "numero_pregunta": 12,
+      "source_numero_original": 12,
       "materia": "MORFOFUNCION",
-      "tema": "Articulaciones",
-      "pregunta": "Rodilla y tobillo. Seleccione las premisas correctas.\nI. Los meniscos de la rodilla son estructuras de fibrocartílago.\nII. El ligamento cruzado anterior evita principalmente el desplazamiento posterior de la tibia respecto al fémur.\nIII. La articulación talocrural o del tobillo permite principalmente dorsiflexión y flexión plantar.",
-      "respuesta_correcta": "E",
-      "respuestas_aceptadas": [
-        "E"
-      ],
-      "comentario": "Los meniscos mejoran la congruencia y distribuyen las cargas. El cruzado anterior limita el desplazamiento ANTERIOR de la tibia; el posterior limita el desplazamiento posterior. El tobillo funciona principalmente como bisagra.",
-      "justificacion": "Los meniscos mejoran la congruencia y distribuyen las cargas. El cruzado anterior limita el desplazamiento ANTERIOR de la tibia; el posterior limita el desplazamiento posterior. El tobillo funciona principalmente como bisagra.",
-      "fuente": "Cap. 9; diap. 80–86.",
-      "dificultad": "medio",
+      "tema": "Músculos",
+      "pregunta": "1. El vientre frontal del occipitofrontal se origina en la galea aponeurótica y actúa elevando las cejas.\n2. El vientre occipital del occipitofrontal desplaza el cuero cabelludo hacia delante.\n3. El músculo nasal está inervado por el nervio motor ocular común (III).",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 12
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 12,
+        "original_header": "12",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          352
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I",
-      "opcion_b": "Solo III",
-      "opcion_c": "Solo I y II",
-      "opcion_d": "Solo II y III",
-      "opcion_e": "Solo I y III"
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "El frontal nace de la galea aponeurótica y eleva las cejas. El occipital retrae el cuero cabelludo. El nasal recibe el nervio facial, no el III. Solo 1 es verdadera. Clave A.",
+      "justificacion": "El frontal nace de la galea aponeurótica y eleva las cejas. El occipital retrae el cuero cabelludo. El nasal recibe el nervio facial, no el III. Solo 1 es verdadera. Clave A.",
+      "paginas_pdf": "352",
+      "pagina_impresa": "324",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 324; páginas PDF 352.",
+      "teacher_key": "A"
     },
     {
       "id": "semana2-testb-13",
       "numero_original": 13,
       "numero_pregunta": 13,
+      "source_numero_original": 13,
       "materia": "MORFOFUNCION",
-      "tema": "Articulaciones",
-      "pregunta": "Palancas corporales. Seleccione las premisas correctas.\nI. En una palanca de primer género, el punto de apoyo queda entre la fuerza y la resistencia.\nII. En una palanca de segundo género, la resistencia queda entre el apoyo y la fuerza.\nIII. En una palanca de tercer género, el apoyo queda entre la fuerza y la resistencia.",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "comentario": "En el primer género el apoyo ocupa la posición intermedia; en el segundo, la resistencia; en el tercero, la fuerza. Muchas palancas musculares del cuerpo son de tercer género.",
-      "justificacion": "En el primer género el apoyo ocupa la posición intermedia; en el segundo, la resistencia; en el tercero, la fuerza. Muchas palancas musculares del cuerpo son de tercer género.",
-      "fuente": "Cap. 9; diap. 25–32.",
-      "dificultad": "medio",
+      "tema": "Músculos",
+      "pregunta": "1. El cigomático mayor se origina en el maxilar superior.\n2. El depresor del ángulo de la boca eleva la comisura labial durante la sonrisa.\n3. El mentoniano deprime y retrae el labio inferior.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 13
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 13,
+        "original_header": "13",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          352,
+          354
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I y II",
-      "opcion_b": "Solo II",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "Solo II y III",
-      "opcion_e": "Solo I"
+      "truth_values": [
+        false,
+        false,
+        false
+      ],
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "El cigomático mayor se origina en el hueso cigomático; el depresor del ángulo baja la comisura; el mentoniano eleva y protruye el labio inferior. Las tres premisas son falsas. Clave E.",
+      "justificacion": "El cigomático mayor se origina en el hueso cigomático; el depresor del ángulo baja la comisura; el mentoniano eleva y protruye el labio inferior. Las tres premisas son falsas. Clave E.",
+      "paginas_pdf": "352, 354",
+      "pagina_impresa": "324, 326",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 324, 326; páginas PDF 352, 354.",
+      "teacher_key": "E"
     },
     {
       "id": "semana2-testb-14",
       "numero_original": 14,
       "numero_pregunta": 14,
+      "source_numero_original": 14,
       "materia": "MORFOFUNCION",
-      "tema": "Articulaciones",
-      "pregunta": "Bolsas sinoviales y vainas tendinosas. Seleccione las premisas correctas.\nI. Las bolsas sinoviales ayudan a reducir el roce entre estructuras vecinas, como un tendón y un hueso.\nII. Las vainas tendinosas facilitan el deslizamiento de los tendones en zonas sometidas a fricción.\nIII. Todas las articulaciones sinoviales poseen obligatoriamente dos meniscos.",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "comentario": "Las bolsas y las vainas tendinosas disminuyen la fricción. Los meniscos se encuentran en determinadas articulaciones, como la rodilla, y no son componentes obligatorios de todas las sinoviales.",
-      "justificacion": "Las bolsas y las vainas tendinosas disminuyen la fricción. Los meniscos se encuentran en determinadas articulaciones, como la rodilla, y no son componentes obligatorios de todas las sinoviales.",
-      "fuente": "Saladin, cap. 9; diap. 19–24 de articulaciones.",
-      "dificultad": "medio",
+      "tema": "Músculos",
+      "pregunta": "1. El buccinador está inervado por la rama mandibular del trigémino.\n2. El platisma se origina en la fascia del deltoides y del pectoral menor.\n3. El platisma puede colaborar en la apertura amplia de la boca.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 9
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 14
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 14,
+        "original_header": "14",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          354
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I y III",
-      "opcion_b": "Solo II",
-      "opcion_c": "Solo I",
-      "opcion_d": "Solo I y II",
-      "opcion_e": "Solo II y III"
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "El buccinador recibe el nervio facial. El platisma nace de la fascia del deltoides y del pectoral mayor, no menor; puede ayudar a abrir ampliamente la boca. Solo 3 es verdadera. Clave C.",
+      "justificacion": "El buccinador recibe el nervio facial. El platisma nace de la fascia del deltoides y del pectoral mayor, no menor; puede ayudar a abrir ampliamente la boca. Solo 3 es verdadera. Clave C.",
+      "paginas_pdf": "354",
+      "pagina_impresa": "326",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 326; páginas PDF 354.",
+      "teacher_key": "C"
     },
     {
       "id": "semana2-testb-15",
       "numero_original": 15,
       "numero_pregunta": 15,
+      "source_numero_original": 15,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "Músculos de la expresión facial. Seleccione las premisas correctas.\nI. El orbicular de la boca participa en el cierre y la protrusión de los labios.\nII. El buccinador comprime la mejilla y ayuda a mantener el alimento entre los dientes.\nIII. El masetero es un músculo de la expresión facial inervado por el nervio facial.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "Orbicular de la boca y buccinador reciben inervación del nervio facial (VII). El masetero es un músculo de la masticación y recibe inervación de la división mandibular del trigémino (V3).",
-      "justificacion": "Orbicular de la boca y buccinador reciben inervación del nervio facial (VII). El masetero es un músculo de la masticación y recibe inervación de la división mandibular del trigémino (V3).",
-      "fuente": "Cap. 10, cuadros 10.1–10.2; diap. 20–47.",
-      "dificultad": "medio",
+      "pregunta": "1. El masetero se origina en el arco cigomático y participa principalmente en la elevación de la mandíbula.\n2. El pterigoideo lateral participa en la depresión, protracción y excursión lateral y medial de la mandíbula.\n3. Los músculos de la masticación descritos están inervados por el nervio mandibular, rama del trigémino.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 15
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 15,
+        "original_header": "15",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          356
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo II",
-      "opcion_b": "Solo I y II",
-      "opcion_c": "Solo I y III",
-      "opcion_d": "Solo II y III",
-      "opcion_e": "Solo I"
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "El masetero se origina en el arco cigomático y eleva la mandíbula; el pterigoideo lateral participa en depresión, protracción y excursiones; estos músculos masticadores reciben V3. Las tres son verdaderas. Clave D.",
+      "justificacion": "El masetero se origina en el arco cigomático y eleva la mandíbula; el pterigoideo lateral participa en depresión, protracción y excursiones; estos músculos masticadores reciben V3. Las tres son verdaderas. Clave D.",
+      "paginas_pdf": "356",
+      "pagina_impresa": "328",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 328; páginas PDF 356.",
+      "teacher_key": "D"
     },
     {
       "id": "semana2-testb-16",
       "numero_original": 16,
       "numero_pregunta": 16,
+      "source_numero_original": 16,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "Apertura y cierre de los párpados. Seleccione las premisas correctas.\nI. El orbicular del ojo cierra los párpados y está inervado por el nervio facial (VII).\nII. El elevador del párpado superior está inervado por el nervio facial (VII).\nIII. El elevador del párpado superior eleva el párpado y está inervado por el nervio oculomotor (III).",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "comentario": "El orbicular del ojo cierra los párpados y depende del VII. El elevador del párpado superior los abre y depende del III, también llamado motor ocular común.",
-      "justificacion": "El orbicular del ojo cierra los párpados y depende del VII. El elevador del párpado superior los abre y depende del III, también llamado motor ocular común.",
-      "fuente": "Cap. 10, cuadro 10.1; diap. 20–26.",
-      "dificultad": "medio",
+      "pregunta": "1. El temporal se origina en la superficie lateral de la rama mandibular.\n2. El pterigoideo medial se inserta en la apófisis coronoides de la mandíbula.\n3. El masetero es el músculo principal de la depresión de la mandíbula.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 16
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 16,
+        "original_header": "16",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          356
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo II y III",
-      "opcion_b": "I, II y III",
-      "opcion_c": "Solo I y III",
-      "opcion_d": "Solo III",
-      "opcion_e": "Solo II"
+      "truth_values": [
+        false,
+        false,
+        false
+      ],
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "El temporal se origina en la región temporal; el pterigoideo medial se inserta en la cara medial de la rama y ángulo mandibulares; el masetero eleva, no deprime principalmente, la mandíbula. Las tres son falsas. Clave E.",
+      "justificacion": "El temporal se origina en la región temporal; el pterigoideo medial se inserta en la cara medial de la rama y ángulo mandibulares; el masetero eleva, no deprime principalmente, la mandíbula. Las tres son falsas. Clave E.",
+      "paginas_pdf": "356",
+      "pagina_impresa": "328",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 328; páginas PDF 356.",
+      "teacher_key": "E"
     },
     {
       "id": "semana2-testb-17",
       "numero_original": 17,
       "numero_pregunta": 17,
+      "source_numero_original": 17,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "Músculos de la masticación. Seleccione las premisas correctas.\nI. El temporal recibe su inervación motora del nervio facial (VII).\nII. El masetero y el temporal participan en la elevación de la mandíbula.\nIII. El masetero, el temporal y los pterigoideos medial y lateral reciben inervación de V3.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "Los cuatro pares principales son maseteros, temporales y pterigoideos mediales y laterales. Su inervación motora procede de la división mandibular del trigémino (V3).",
-      "justificacion": "Los cuatro pares principales son maseteros, temporales y pterigoideos mediales y laterales. Su inervación motora procede de la división mandibular del trigémino (V3).",
-      "fuente": "Cap. 10, cuadro 10.2; diap. 43–47.",
-      "dificultad": "medio",
+      "pregunta": "1. La contracción bilateral del geniogloso deprime la línea media de la lengua o la protruye.\n2. El hiogloso eleva la lengua.\n3. El palatogloso está inervado por el nervio hipogloso.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 17
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 17,
+        "original_header": "17",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          355
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I y III",
-      "opcion_b": "Solo II y III",
-      "opcion_c": "Solo III",
-      "opcion_d": "Solo I y II",
-      "opcion_e": "I, II y III"
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "El geniogloso bilateral deprime la línea media o protruye la lengua. El hiogloso la deprime y el palatogloso no depende del hipogloso. Solo 1 es verdadera. Clave A.",
+      "justificacion": "El geniogloso bilateral deprime la línea media o protruye la lengua. El hiogloso la deprime y el palatogloso no depende del hipogloso. Solo 1 es verdadera. Clave A.",
+      "paginas_pdf": "355",
+      "pagina_impresa": "327",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 327; páginas PDF 355.",
+      "teacher_key": "A"
     },
     {
       "id": "semana2-testb-18",
       "numero_original": 18,
       "numero_pregunta": 18,
+      "source_numero_original": 18,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "Identificación de los músculos suprahioideos. Seleccione las premisas correctas.\nI. El digástrico y el estilohioideo pertenecen al grupo suprahioideo.\nII. El milohioideo y el genihioideo pertenecen al grupo suprahioideo.\nIII. Estos músculos ayudan a elevar el hioides durante la deglución.",
+      "pregunta": "1. El geniogloso está inervado por el nervio vago.\n2. El palatogloso se origina en el hueso hioides.\n3. El hiogloso está inervado por el nervio hipogloso.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "source": {
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 18,
+        "original_header": "18",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          355
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+      },
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
-      "comentario": "El grupo suprahioideo incluye digástrico, estilohioideo, milohioideo y genihioideo. Con el hioides fijo, algunos también ayudan a deprimir la mandíbula.",
-      "justificacion": "El grupo suprahioideo incluye digástrico, estilohioideo, milohioideo y genihioideo. Con el hioides fijo, algunos también ayudan a deprimir la mandíbula.",
-      "fuente": "Cap. 10, cuadro 10.2; diap. 48–52.",
-      "dificultad": "medio",
-      "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
-      "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 18
-      },
-      "opcion_a": "Solo II",
-      "opcion_b": "Solo I",
-      "opcion_c": "I, II y III",
-      "opcion_d": "Solo I y III",
-      "opcion_e": "Solo III"
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "El geniogloso recibe el hipogloso, no el vago. El palatogloso nace del paladar blando, no del hioides. El hiogloso recibe el hipogloso. Solo 3 es verdadera. Clave C.",
+      "justificacion": "El geniogloso recibe el hipogloso, no el vago. El palatogloso nace del paladar blando, no del hioides. El hiogloso recibe el hipogloso. Solo 3 es verdadera. Clave C.",
+      "paginas_pdf": "355",
+      "pagina_impresa": "327",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 327; páginas PDF 355.",
+      "teacher_key": "C"
     },
     {
       "id": "semana2-testb-19",
       "numero_original": 19,
       "numero_pregunta": 19,
+      "source_numero_original": 19,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "Identificación de los músculos infrahioideos. Seleccione las premisas correctas.\nI. El esternohioideo y el omohioideo son músculos suprahioideos.\nII. El esternotiroideo y el tirohioideo son músculos de la masticación.\nIII. El digástrico y el genihioideo integran el grupo infrahioideo.",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "comentario": "Los cuatro infrahioideos son esternohioideo, omohioideo, esternotiroideo y tirohioideo. Digástrico y genihioideo son suprahioideos. Los infrahioideos actúan sobre el hioides y la laringe.",
-      "justificacion": "Los cuatro infrahioideos son esternohioideo, omohioideo, esternotiroideo y tirohioideo. Digástrico y genihioideo son suprahioideos. Los infrahioideos actúan sobre el hioides y la laringe.",
-      "fuente": "Cap. 10, cuadro 10.2; diap. 53–57.",
-      "dificultad": "medio",
+      "pregunta": "…\n1. El grupo suprahioideo está formado por digástrico, geniohioideo, omohioideo y estilohioideo.\n2. El estilohioideo está inervado por el asa cervical.\n3. El geniohioideo recibe fibras de C1 que viajan con el nervio hipogloso.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 19
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 19,
+        "original_header": "19…",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          357,
+          358
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "I, II y III",
-      "opcion_b": "Solo III",
-      "opcion_c": "Solo I y II",
-      "opcion_d": "Ninguna es correcta",
-      "opcion_e": "Solo I y III"
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "El grupo suprahioideo incluye milohioideo, no omohioideo; el estilohioideo recibe el facial. El geniohioideo recibe C1 que viaja con el hipogloso. Solo 3 es verdadera. Clave C.",
+      "justificacion": "El grupo suprahioideo incluye milohioideo, no omohioideo; el estilohioideo recibe el facial. El geniohioideo recibe C1 que viaja con el hipogloso. Solo 3 es verdadera. Clave C.",
+      "paginas_pdf": "357, 358",
+      "pagina_impresa": "329, 330",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 329, 330; páginas PDF 357, 358.",
+      "teacher_key": "C"
     },
     {
       "id": "semana2-testb-20",
       "numero_original": 20,
       "numero_pregunta": 20,
+      "source_numero_original": 20,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "Músculos de la inspiración. Seleccione las premisas correctas.\nI. El diafragma es el principal músculo inspiratorio y recibe inervación de los nervios frénicos.\nII. Los intercostales externos deprimen las costillas como acción principal durante la inspiración.\nIII. Los escalenos pueden elevar las primeras costillas y colaborar con la inspiración.",
+      "pregunta": "…\n1. La contracción bilateral del esternocleidomastoideo lleva la cabeza directamente hacia delante y abajo.\n2. La contracción unilateral del esternocleidomastoideo rota la cabeza hacia el mismo lado.\n3. El esternocleidomastoideo está inervado principalmente por el nervio facial",
+      "puntos": 1,
+      "dificultad": "medio",
+      "source": {
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 20,
+        "original_header": "20…",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          359
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "teacher_key_correction": {
+          "original": "B",
+          "revised": "A",
+          "reason": "Saladin PDF 359, impresa 331: la acción bilateral descrita en 1 es correcta; la unilateral rota al lado contrario, no al mismo; no recibe como inervación principal el facial."
+        }
+      },
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
-      "comentario": "El diafragma se contrae y desciende durante la inspiración. Los intercostales externos elevan las costillas. Los escalenos colaboran elevando las costillas superiores.",
-      "justificacion": "El diafragma se contrae y desciende durante la inspiración. Los intercostales externos elevan las costillas. Los escalenos colaboran elevando las costillas superiores.",
-      "fuente": "Cap. 10, cuadros 10.3–10.4; diap. 61–73.",
-      "dificultad": "medio",
-      "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
-      "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 20
-      },
-      "opcion_a": "Solo I y III",
-      "opcion_b": "Solo I y II",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "Solo I",
-      "opcion_e": "I, II y III"
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "La contracción bilateral del esternocleidomastoideo lleva la cabeza hacia delante y abajo. La unilateral rota la cara al lado opuesto; su inervación principal no es facial. Solo 1 es verdadera. Clave A. Revisión docente: el patrón aportado marca B; se ajustó a A por la siguiente razón: Saladin PDF 359, impresa 331: la acción bilateral descrita en 1 es correcta; la unilateral rota al lado contrario, no al mismo; no recibe como inervación principal el facial.",
+      "justificacion": "La contracción bilateral del esternocleidomastoideo lleva la cabeza hacia delante y abajo. La unilateral rota la cara al lado opuesto; su inervación principal no es facial. Solo 1 es verdadera. Clave A. Revisión docente: el patrón aportado marca B; se ajustó a A por la siguiente razón: Saladin PDF 359, impresa 331: la acción bilateral descrita en 1 es correcta; la unilateral rota al lado contrario, no al mismo; no recibe como inervación principal el facial.",
+      "paginas_pdf": "359",
+      "pagina_impresa": "331",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 331; páginas PDF 359.",
+      "teacher_key": "B"
     },
     {
       "id": "semana2-testb-21",
       "numero_original": 21,
       "numero_pregunta": 21,
-      "materia": "MORFOFUNCION",
-      "tema": "Músculos",
-      "pregunta": "Espiración tranquila y espiración forzada. Seleccione las premisas correctas.\nI. La espiración tranquila requiere una contracción intensa de los músculos abdominales en cada ciclo.\nII. La porción interósea de los intercostales internos ayuda a deprimir las costillas en la espiración forzada.\nIII. Los músculos abdominales colaboran con la espiración forzada al comprimir el contenido abdominal.",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "comentario": "La espiración tranquila es principalmente pasiva. La espiración forzada utiliza, entre otros, la porción interósea de los intercostales internos y los músculos abdominales. La porción intercartilaginosa de los internos puede ayudar a inspirar.",
-      "justificacion": "La espiración tranquila es principalmente pasiva. La espiración forzada utiliza, entre otros, la porción interósea de los intercostales internos y los músculos abdominales. La porción intercartilaginosa de los internos puede ayudar a inspirar.",
-      "fuente": "Cap. 10, cuadros 10.4–10.5; diap. 66–80.",
-      "dificultad": "medio",
+      "source_numero_original": 21,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Biología Celular",
+      "pregunta": ".Con relación al microscopio.\n1. Poder de resolución, que se define como la capacidad que tiene un microscopio para distinguir como separados o diferentes dos puntos muy cercanos entre sí.\n2. El LR para el ojo humano es de alrededor de O, 1 mm.\n3. Estructuras como los ribosomas (25 nm), los virus (30-100 nm), la membrana plasmática (7 nm), solo se pueden observar con microscopio electrónico.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 21
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 21,
+        "original_header": "21.Con relación al microscopio.",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          58
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I",
-      "opcion_b": "I, II y III",
-      "opcion_c": "Solo II y III",
-      "opcion_d": "Solo I y II",
-      "opcion_e": "Solo II"
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "Las tres premisas reproducen el apartado de resolución de Calvo: poder de resolución como separación de dos puntos; límite del ojo de 0,1 mm; estructuras citadas por debajo de la resolución óptica convencional. La comparación del texto es con microscopía óptica convencional, no con técnicas de superresolución. Son verdaderas 1, 2 y 3: D.",
+      "justificacion": "Las tres premisas reproducen el apartado de resolución de Calvo: poder de resolución como separación de dos puntos; límite del ojo de 0,1 mm; estructuras citadas por debajo de la resolución óptica convencional. La comparación del texto es con microscopía óptica convencional, no con técnicas de superresolución. Son verdaderas 1, 2 y 3: D.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 58.",
+      "paginas_pdf": "58",
+      "key_basis": {
+        "type": "course_textbook_context",
+        "author": "Alfonso Calvo",
+        "chapter": 2,
+        "pdf_pages": [
+          58
+        ],
+        "scope": "Resolución estructural en la comparación de microscopía óptica convencional y electrónica del apartado; no detección de señales ni superresolución."
+      }
     },
     {
       "id": "semana2-testb-22",
       "numero_original": 22,
       "numero_pregunta": 22,
-      "materia": "MORFOFUNCION",
-      "tema": "Músculos",
-      "pregunta": "Inervación del oblicuo externo del abdomen, según Saladin. Seleccione las premisas correctas.\nI. Recibe ramas anteriores de los nervios espinales T7 a T12.\nII. Su contracción comprime el contenido abdominal.\nIII. Su contracción unilateral contribuye a la rotación contralateral del tronco.",
+      "source_numero_original": 22,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Biología Celular",
+      "pregunta": ".Con relación al contraste.\n1. El contraste es la propiedad que nos permite distinguir estructuras celulares por su diferente color o brillo.\n2. La hematoxilina que nos permitirá ver los núcleos celulares de color azulado. \n3. La eosina que tiñe de rosa el citoplasma proporciona un mejor contraste.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "source": {
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 22,
+        "original_header": "22.Con relación al contraste.",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          59
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+      },
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
       "respuesta_correcta": "D",
       "respuestas_aceptadas": [
         "D"
       ],
-      "comentario": "El cuadro 10.5 de esta edición indica ramas anteriores T7–T12 para el oblicuo externo. Comprime el abdomen y contribuye a girar el tronco hacia el lado opuesto al músculo que se contrae.",
-      "justificacion": "El cuadro 10.5 de esta edición indica ramas anteriores T7–T12 para el oblicuo externo. Comprime el abdomen y contribuye a girar el tronco hacia el lado opuesto al músculo que se contrae.",
-      "fuente": "Cap. 10, cuadro 10.5, p. 335; diap. 74–80.",
-      "dificultad": "medio",
-      "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
-      "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 22
-      },
-      "opcion_a": "Solo III",
-      "opcion_b": "Solo I y III",
-      "opcion_c": "Solo I",
-      "opcion_d": "I, II y III",
-      "opcion_e": "Solo II"
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "El contraste permite distinguir estructuras por color o brillo. Calvo describe la hematoxilina para núcleos azulados y la eosina para citoplasma rosado. Las tres premisas son verdaderas: D.",
+      "justificacion": "El contraste permite distinguir estructuras por color o brillo. Calvo describe la hematoxilina para núcleos azulados y la eosina para citoplasma rosado. Las tres premisas son verdaderas: D.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 59.",
+      "paginas_pdf": "59"
     },
     {
       "id": "semana2-testb-23",
       "numero_original": 23,
       "numero_pregunta": 23,
-      "materia": "MORFOFUNCION",
-      "tema": "Músculos",
-      "pregunta": "Inervación del oblicuo interno del abdomen, según Saladin. Seleccione las premisas correctas.\nI. Recibe ramas anteriores de los nervios espinales T7 a L1.\nII. Su inervación motora principal depende del nervio frénico.\nIII. Su contracción unilateral contribuye a la rotación ipsilateral del tronco.",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "comentario": "El cuadro 10.5 indica T7–L1. La contracción unilateral favorece la rotación hacia el mismo lado. El frénico inerva el diafragma, no es la inervación motora del oblicuo interno.",
-      "justificacion": "El cuadro 10.5 indica T7–L1. La contracción unilateral favorece la rotación hacia el mismo lado. El frénico inerva el diafragma, no es la inervación motora del oblicuo interno.",
-      "fuente": "Cap. 10, cuadro 10.5, p. 335; diap. 74–80.",
-      "dificultad": "medio",
+      "source_numero_original": 23,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Biología Celular",
+      "pregunta": ".Con relación al microscopio de fluorescencia.\n1.La microscopía de fluorescencia se basa en la propiedad que tienen las sustancias fluorescentes de absorber luz de una determinada (λ) y emitir luz con una (λ)mayor.\n2.El microscopio de fluorescencia tiene una serie de filtros que permiten seleccionar la (λ).\n3.Algunas estructuras de los tejidos son autofluorescentes, como las fibras elásticas.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 23
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 23,
+        "original_header": "23.Con relación al microscopio de fluorescencia.",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          60,
+          61
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I y III",
-      "opcion_b": "Solo II",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "Solo I y II",
-      "opcion_e": "Solo II y III"
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "La emisión fluorescente tiene mayor longitud de onda que la excitación. Los filtros seleccionan longitudes de onda y las fibras elásticas pueden mostrar autofluorescencia. Las tres premisas son verdaderas: D.",
+      "justificacion": "La emisión fluorescente tiene mayor longitud de onda que la excitación. Los filtros seleccionan longitudes de onda y las fibras elásticas pueden mostrar autofluorescencia. Las tres premisas son verdaderas: D.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 60, 61.",
+      "paginas_pdf": "60, 61"
     },
     {
       "id": "semana2-testb-24",
       "numero_original": 24,
       "numero_pregunta": 24,
-      "materia": "MORFOFUNCION",
-      "tema": "Músculos",
-      "pregunta": "Inervación del transverso del abdomen, según Saladin. Seleccione las premisas correctas.\nI. Recibe su inervación motora principal del nervio obturador.\nII. Recibe ramas anteriores de los nervios espinales T7 a L1.\nIII. Comprime el contenido abdominal y presenta fibras de orientación principalmente transversal.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "El cuadro 10.5 indica T7–L1. El transverso es el más profundo de los tres músculos planos de la pared anterolateral y comprime el contenido abdominal.",
-      "justificacion": "El cuadro 10.5 indica T7–L1. El transverso es el más profundo de los tres músculos planos de la pared anterolateral y comprime el contenido abdominal.",
-      "fuente": "Cap. 10, cuadro 10.5, p. 335; diap. 74–80.",
-      "dificultad": "medio",
+      "source_numero_original": 24,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Biología Celular",
+      "pregunta": ".Con relación al microscopio confocal.\n1. El microscopio confocal se puede considerar una variante mejorada del microscopio de fluorescencia.\n2. El microscopio confocal ilumina solo un punto concreto de la muestra, de un modo menos intenso.\n3. La fuente de iluminación utilizada es, en este caso, una luz focal.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 24
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 24,
+        "original_header": "24.Con relación al microscopio confocal.",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          61
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo III",
-      "opcion_b": "Solo II y III",
-      "opcion_c": "Solo I y III",
-      "opcion_d": "Solo I y II",
-      "opcion_e": "Solo II"
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "Según el confocal de barrido láser descrito por Calvo (página PDF 61): 1 es verdadera, pues es una variante mejorada del microscopio de fluorescencia; 2 es falsa, pues el punto se ilumina de modo muy intenso, no menos intenso; 3 es falsa, pues la fuente nombrada es un rayo láser. «Focal» describe la localización de la luz, no sustituye el tipo de fuente del apartado. Clave A.",
+      "justificacion": "Según el confocal de barrido láser descrito por Calvo (página PDF 61): 1 es verdadera, pues es una variante mejorada del microscopio de fluorescencia; 2 es falsa, pues el punto se ilumina de modo muy intenso, no menos intenso; 3 es falsa, pues la fuente nombrada es un rayo láser. «Focal» describe la localización de la luz, no sustituye el tipo de fuente del apartado. Clave A.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 61.",
+      "paginas_pdf": "61",
+      "key_basis": {
+        "type": "course_textbook_context",
+        "author": "Alfonso Calvo",
+        "chapter": 2,
+        "pdf_pages": [
+          61
+        ],
+        "scope": "La fuente de luz de otras variantes confocales no está siendo evaluada. La clave sigue la descripción de confocal de barrido láser del capítulo."
+      }
     },
     {
       "id": "semana2-testb-25",
       "numero_original": 25,
       "numero_pregunta": 25,
-      "materia": "MORFOFUNCION",
-      "tema": "Músculos",
-      "pregunta": "Inervación del recto abdominal, según Saladin. Seleccione las premisas correctas.\nI. Recibe ramas anteriores de los nervios espinales T6 a T12.\nII. Su contracción bilateral participa en la flexión de la región lumbar de la columna.\nIII. Recibe su inervación motora principal del nervio torácico largo.",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "comentario": "Esta edición de Saladin indica T6–T12 en el cuadro 10.5. El recto abdominal flexiona la región lumbar. El nervio torácico largo inerva el serrato anterior.",
-      "justificacion": "Esta edición de Saladin indica T6–T12 en el cuadro 10.5. El recto abdominal flexiona la región lumbar. El nervio torácico largo inerva el serrato anterior.",
-      "fuente": "Cap. 10, cuadro 10.5, p. 335; diap. 74–80.",
-      "dificultad": "medio",
+      "source_numero_original": 25,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Biología Celular",
+      "pregunta": ".Con relación al MET.\n1. MET consiste en un tubo de rayos catódicos con una columna de aproximadamente 1 m de longitud.\n2. El microscopio electrónico de transmisión se puedan realizar estudios in vivo.\n3. Las sustancias menos tipicas para el contraste son el citrato de plomo y el acetato de uranio.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 25
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 25,
+        "original_header": "25.Con relación al MET.",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          63
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "I, II y III",
-      "opcion_b": "Solo II",
-      "opcion_c": "Solo II y III",
-      "opcion_d": "Solo I y II",
-      "opcion_e": "Solo I"
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "1 reproduce la descripción del MET de Calvo: tubo de rayos catódicos con columna de aproximadamente un metro. 2 es falsa: las condiciones del MET convencional impiden estudios in vivo. 3 es falsa: el citrato de plomo y el acetato de uranio figuran entre los contrastantes más típicos, no los menos típicos. Clave A.",
+      "justificacion": "1 reproduce la descripción del MET de Calvo: tubo de rayos catódicos con columna de aproximadamente un metro. 2 es falsa: las condiciones del MET convencional impiden estudios in vivo. 3 es falsa: el citrato de plomo y el acetato de uranio figuran entre los contrastantes más típicos, no los menos típicos. Clave A.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 63.",
+      "paginas_pdf": "63",
+      "key_basis": {
+        "type": "course_textbook_context",
+        "author": "Alfonso Calvo",
+        "chapter": 2,
+        "pdf_pages": [
+          63
+        ],
+        "scope": "Descripción del MET convencional del apartado, que emplea literalmente tubo de rayos catódicos y columna de aproximadamente un metro."
+      }
     },
     {
       "id": "semana2-testb-26",
       "numero_original": 26,
       "numero_pregunta": 26,
-      "materia": "MORFOFUNCION",
-      "tema": "Músculos",
-      "pregunta": "Abducción del brazo en el hombro. Seleccione las premisas correctas.\nI. El supraespinoso ayuda a iniciar la abducción del brazo.\nII. Las fibras medias del deltoides son importantes para continuar la abducción del brazo.\nIII. El trapecio y el serrato anterior colaboran en la rotación superior de la escápula al elevar el brazo por encima de la horizontal.",
+      "source_numero_original": 26,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Biología Celular",
+      "pregunta": ".Con relación al MET.\n1. MET que se utiliza para observar superficies de células y tejidos a gran aumento y con gran resolución.\n2. El MET permite observar muestras de tamaño considerable, como trozos de tejido, organismos enteros, insectos.\n3. El MET los electrones secundarios son recogidos por un sensor y proyectados en un monitor de televisión, donde se observa la imagen con un aspecto metalizado y tridimensional",
+      "puntos": 1,
+      "dificultad": "medio",
+      "source": {
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 26,
+        "original_header": "26.Con relación al MET.",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          64
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+      },
+      "truth_values": [
+        false,
+        false,
+        false
+      ],
       "respuesta_correcta": "E",
       "respuestas_aceptadas": [
         "E"
       ],
-      "comentario": "Supraespinoso y deltoides participan directamente en la abducción glenohumeral. Para elevar el brazo por encima de la horizontal también se necesita rotación escapular, con participación del trapecio y el serrato anterior.",
-      "justificacion": "Supraespinoso y deltoides participan directamente en la abducción glenohumeral. Para elevar el brazo por encima de la horizontal también se necesita rotación escapular, con participación del trapecio y el serrato anterior.",
-      "fuente": "Cap. 10, cuadros 10.8–10.9; diap. 103–123.",
-      "dificultad": "medio",
-      "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
-      "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 26
-      },
-      "opcion_a": "Solo III",
-      "opcion_b": "Solo II y III",
-      "opcion_c": "Solo I y III",
-      "opcion_d": "Solo I y II",
-      "opcion_e": "I, II y III"
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "Las tres premisas describen el microscopio electrónico de barrido (MEB), no el MET: estudio de superficies, muestras relativamente grandes y detección de electrones secundarios con imagen de relieve. Son falsas respecto al MET. Clave E.",
+      "justificacion": "Las tres premisas describen el microscopio electrónico de barrido (MEB), no el MET: estudio de superficies, muestras relativamente grandes y detección de electrones secundarios con imagen de relieve. Son falsas respecto al MET. Clave E.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 64.",
+      "paginas_pdf": "64"
     },
     {
       "id": "semana2-testb-27",
       "numero_original": 27,
       "numero_pregunta": 27,
-      "materia": "MORFOFUNCION",
-      "tema": "Músculos",
-      "pregunta": "Grupo anterior que actúa sobre la cintura escapular. Seleccione las premisas correctas.\nI. El trapecio y los romboideos constituyen el grupo anterior de la cintura escapular.\nII. El pectoral menor y el serrato anterior integran el grupo anterior que actúa sobre la escápula.\nIII. El serrato anterior recibe inervación del nervio torácico largo.",
-      "respuesta_correcta": "E",
-      "respuestas_aceptadas": [
-        "E"
-      ],
-      "comentario": "En el cuadro 10.8, el grupo anterior comprende pectoral menor y serrato anterior. Trapecio y romboideos corresponden al grupo posterior. El serrato anterior contribuye a protracción y fijación de la escápula.",
-      "justificacion": "En el cuadro 10.8, el grupo anterior comprende pectoral menor y serrato anterior. Trapecio y romboideos corresponden al grupo posterior. El serrato anterior contribuye a protracción y fijación de la escápula.",
-      "fuente": "Cap. 10, cuadro 10.8; diap. 104–106.",
-      "dificultad": "medio",
+      "source_numero_original": 27,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Biología Celular",
+      "pregunta": ".Con relación a técnicas que permiten ver al MET.\n1. El sombreado metálico es otra técnica que permite observar macromoléculas al MET.\n2. En la criofractura las muestras se congelan rápidamente a la temperatura del nitrógeno líquido -196 °C, se someten al vacío y se golpean con el borde de una cuchilla afilada.\n3. El contraste negativo es una técnica que permite observar macromoléculas al MET con una alta resolución.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 27
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 27,
+        "original_header": "27.Con relación a técnicas que permiten ver al MET.",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          65,
+          66
+        ],
+        "authorized_adjustments": [
+          {
+            "premise": 2,
+            "original": "-160 °C",
+            "revised": "-196 °C",
+            "reason": "Corrección física autorizada necesaria para una clave válida en el patrón fijo.",
+            "basis_url": "https://www.ars.usda.gov/northeast-area/docs/safety-health-and-environmental-training/liquid-nitrogen-safety/"
+          }
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo III",
-      "opcion_b": "Solo I",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "Solo II",
-      "opcion_e": "Solo II y III"
+      "truth_values": [
+        true,
+        true,
+        true
+      ],
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "Las tres premisas son verdaderas: el sombreado metálico y el contraste negativo permiten estudiar macromoléculas mediante MET; la criofractura combina congelación, vacío y fractura. Ajuste docente autorizado: el Word y la página PDF 66 de Calvo indican −160 °C; se corrigió explícitamente a aproximadamente −196 °C para el nitrógeno líquido a presión atmosférica. No se presenta −160 °C como valor físico correcto. Con el valor corregido corresponde D: 1, 2 y 3 son correctas.",
+      "justificacion": "Las tres premisas son verdaderas: el sombreado metálico y el contraste negativo permiten estudiar macromoléculas mediante MET; la criofractura combina congelación, vacío y fractura. Ajuste docente autorizado: el Word y la página PDF 66 de Calvo indican −160 °C; se corrigió explícitamente a aproximadamente −196 °C para el nitrógeno líquido a presión atmosférica. No se presenta −160 °C como valor físico correcto. Con el valor corregido corresponde D: 1, 2 y 3 son correctas.",
+      "fuente": "Calvo, Biología celular biomédica, capítulo 2, páginas PDF 65–66; corrección física: USDA Agricultural Research Service, Liquid Nitrogen Safety, punto de ebullición a 1 atm −195,8 °C. https://www.ars.usda.gov/northeast-area/docs/safety-health-and-environmental-training/liquid-nitrogen-safety/",
+      "paginas_pdf": "65, 66"
     },
     {
       "id": "semana2-testb-28",
       "numero_original": 28,
       "numero_pregunta": 28,
-      "materia": "MORFOFUNCION",
-      "tema": "Músculos",
-      "pregunta": "Grupo posterior que actúa sobre la cintura escapular. Seleccione las premisas correctas.\nI. El trapecio y el elevador de la escápula forman parte del grupo posterior.\nII. Los romboideos mayor y menor forman parte del grupo posterior y ayudan a retraer la escápula.\nIII. El pectoral menor pertenece al grupo posterior que actúa sobre la escápula.",
-      "respuesta_correcta": "E",
-      "respuestas_aceptadas": [
-        "E"
-      ],
-      "comentario": "El grupo posterior comprende trapecio, elevador de la escápula y romboideos mayor y menor. El pectoral menor pertenece al grupo anterior.",
-      "justificacion": "El grupo posterior comprende trapecio, elevador de la escápula y romboideos mayor y menor. El pectoral menor pertenece al grupo anterior.",
-      "fuente": "Cap. 10, cuadro 10.8; diap. 107–110.",
-      "dificultad": "medio",
+      "source_numero_original": 28,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Biología Celular",
+      "pregunta": ".Con relación a la fijación.\n1. El método físico es un método de fijación muy lento, por lo que se suele utilizar cuando se necesita un diagnóstico urgente.\n2. El tejido se expone a temperaturas inferiores a -70 °C disminuyendo así la actividad de lisis enzimática e inmovilizando las estructuras celulares.\n3. El método químico más utilizado es la criofijación o congelación.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 28
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 28,
+        "original_header": "28.Con relación a la fijación. ",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          68
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo II",
-      "opcion_b": "Ninguna es correcta",
-      "opcion_c": "Solo I y III",
-      "opcion_d": "Solo II y III",
-      "opcion_e": "Solo I y II"
+      "truth_values": [
+        false,
+        true,
+        false
+      ],
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "1 es falsa: la congelación es un método físico rápido, utilizado para diagnóstico urgente. 2 es verdadera: temperaturas inferiores a −70 °C reducen la lisis enzimática e inmovilizan estructuras. 3 es falsa: congelación o criofijación es un método físico, no químico. Clave B.",
+      "justificacion": "1 es falsa: la congelación es un método físico rápido, utilizado para diagnóstico urgente. 2 es verdadera: temperaturas inferiores a −70 °C reducen la lisis enzimática e inmovilizan estructuras. 3 es falsa: congelación o criofijación es un método físico, no químico. Clave B.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 68.",
+      "paginas_pdf": "68"
     },
     {
       "id": "semana2-testb-29",
       "numero_original": 29,
       "numero_pregunta": 29,
-      "materia": "MORFOFUNCION",
-      "tema": "Músculos",
-      "pregunta": "Compartimientos anterior y posterior del brazo. Seleccione las premisas correctas.\nI. El bíceps braquial, el braquial y el coracobraquial se encuentran en el compartimiento anterior del brazo.\nII. El tríceps braquial pertenece al compartimiento anterior y su acción principal es flexionar el codo.\nIII. El tríceps braquial se encuentra en el compartimiento posterior y es un extensor principal del codo.",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "comentario": "El compartimiento anterior contiene bíceps, braquial y coracobraquial, inervados principalmente por el musculocutáneo. El tríceps es posterior, extiende el codo y recibe inervación del radial. El coracobraquial actúa sobre el hombro.",
-      "justificacion": "El compartimiento anterior contiene bíceps, braquial y coracobraquial, inervados principalmente por el musculocutáneo. El tríceps es posterior, extiende el codo y recibe inervación del radial. El coracobraquial actúa sobre el hombro.",
-      "fuente": "Cap. 10, cuadros 10.9–10.10; diap. 115–128.",
-      "dificultad": "medio",
+      "source_numero_original": 29,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Biología Celular",
+      "pregunta": ". Con relación a la inclusión.\n1. La inclusión puede tener lugar en parafina para muestras procesadas para el microscopio electrónico.\n2. La parafina es una mezcla de ceras compuesta por hidrocarburos de cadena larga con punto de fusión de 50°C. \n3. El objetivo de la inclusión es mantener el agua de los tejidos y reemplazarla por un medio que solidifica.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 29
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 29,
+        "original_header": "29. Con relación a la inclusión. ",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          69
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Ninguna es correcta",
-      "opcion_b": "Solo III",
-      "opcion_c": "Solo II",
-      "opcion_d": "Solo I y III",
-      "opcion_e": "Solo II y III"
+      "truth_values": [
+        false,
+        true,
+        false
+      ],
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "Según Calvo, página PDF 69: 1 es falsa porque la parafina se emplea en microscopía óptica y las resinas en electrónica; 2 reproduce el valor de 50 °C indicado en ese texto y se considera verdadera en ese contexto didáctico; 3 es falsa porque el procesamiento elimina el agua y la sustituye por el medio de inclusión. La temperatura de fusión no se generaliza a todos los grados comerciales de parafina. Clave B.",
+      "justificacion": "Según Calvo, página PDF 69: 1 es falsa porque la parafina se emplea en microscopía óptica y las resinas en electrónica; 2 reproduce el valor de 50 °C indicado en ese texto y se considera verdadera en ese contexto didáctico; 3 es falsa porque el procesamiento elimina el agua y la sustituye por el medio de inclusión. La temperatura de fusión no se generaliza a todos los grados comerciales de parafina. Clave B.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 69.",
+      "paginas_pdf": "69",
+      "key_basis": {
+        "type": "course_textbook_context",
+        "author": "Alfonso Calvo",
+        "chapter": 2,
+        "pdf_pages": [
+          69
+        ],
+        "scope": "50 °C no se presenta como punto de fusión universal de todos los grados comerciales de parafina; la clave depende explícitamente de la formulación de Calvo."
+      }
     },
     {
       "id": "semana2-testb-30",
       "numero_original": 30,
       "numero_pregunta": 30,
-      "materia": "MORFOFUNCION",
-      "tema": "Músculos",
-      "pregunta": "Coordinación de los músculos. Seleccione las premisas correctas.\nI. El agonista es un músculo que contribuye de forma principal a producir un movimiento determinado.\nII. Un antagonista se opone a la acción de otro músculo.\nIII. Un sinergista siempre impide la acción del agonista.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "Un agonista produce una acción, el antagonista se opone y el sinergista ayuda a realizarla o estabiliza estructuras que participan en ella.",
-      "justificacion": "Un agonista produce una acción, el antagonista se opone y el sinergista ayuda a realizarla o estabiliza estructuras que participan en ella.",
-      "fuente": "Saladin, cap. 10; diap. 16 de músculos.",
-      "dificultad": "medio",
+      "source_numero_original": 30,
+      "materia": "BIOLOGIA CELULAR",
+      "tema": "Biología Celular",
+      "pregunta": ". Con relación a los cortes.\n1. Para microscopía electrónica se hacen cortes finos (10-100 um) con un ultramicrotomo.\n2. Los cortes finos se colocan en redes de cobre o níquel para su observación al MEB.\n3. Criostato, que mantiene las muestras a una temperatura de -20°C. durante el corte.",
       "puntos": 1,
-      "coverage": {
-        "subject": "MORFOFUNCION",
-        "chapter": 10
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 30
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 30,
+        "original_header": "30. Con relación a los cortes.",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          69
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I y III",
-      "opcion_b": "Solo I y II",
-      "opcion_c": "I, II y III",
-      "opcion_d": "Solo I",
-      "opcion_e": "Ninguna es correcta"
+      "truth_values": [
+        false,
+        false,
+        true
+      ],
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 3 es correcto",
+      "opcion_d": "Si considera que 1-2-3 son correctos",
+      "opcion_e": "Si considera que 1-2-3 son falsos",
+      "comentario": "1 es falsa: para MET los cortes ultrafinos se expresan en nanómetros, no en micrómetros. 2 es falsa: las rejillas de cobre o níquel se destinan al MET, no al MEB. 3 es verdadera: el criostato descrito mantiene la muestra a −20 °C durante el corte. Clave C.",
+      "justificacion": "1 es falsa: para MET los cortes ultrafinos se expresan en nanómetros, no en micrómetros. 2 es falsa: las rejillas de cobre o níquel se destinan al MET, no al MEB. 3 es verdadera: el criostato descrito mantiene la muestra a −20 °C durante el corte. Clave C.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 69.",
+      "paginas_pdf": "69"
     },
     {
       "id": "semana2-testb-31",
       "numero_original": 31,
       "numero_pregunta": 31,
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "Biología Celular",
-      "pregunta": "microscopio. Seleccione las premisas correctas.\nI. Poder de resolución, que se define como la capacidad que tiene un microscopio para distinguir como separados o diferentes dos puntos muy cercanos entre sí.\nII. El LR para el ojo humano es de alrededor de 0,1 mm.\nIII. Estructuras de alrededor de 25 nm, como los ribosomas, virus de 30–100 nm y la membrana plasmática de unos 7 nm no se resuelven estructuralmente con microscopía óptica convencional y pueden estudiarse mediante microscopía electrónica.",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "comentario": "La resolución permite distinguir dos puntos próximos. El límite aproximado del ojo humano es 0,1 mm y el del microscopio óptico convencional, 0,2 μm (200 nm). Las estructuras citadas están por debajo de este último límite. La afirmación se refiere a resolución estructural convencional, no a detectar señales fluorescentes de partículas aisladas.",
-      "justificacion": "La resolución permite distinguir dos puntos próximos. El límite aproximado del ojo humano es 0,1 mm y el del microscopio óptico convencional, 0,2 μm (200 nm). Las estructuras citadas están por debajo de este último límite. La afirmación se refiere a resolución estructural convencional, no a detectar señales fluorescentes de partículas aisladas.",
-      "fuente": "Patrón de Biología Celular, pregunta original 21.",
-      "dificultad": "medio",
+      "source_numero_original": 31,
+      "materia": "MORFOFUNCION",
+      "tema": "Músculos",
+      "pregunta": "forman el grupo posterior que actúa sobre el hombro\n1.Trapecio, elevador de la escápula, romboides menor y romboides mayor.\n2.Pectoral mayor + fibras anteriores del deltoides + coracobraquial.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 31
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 31,
+        "original_header": "31 forman el grupo posterior que actúa sobre el hombro",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          373
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Ninguna es correcta",
-      "opcion_b": "Solo I",
-      "opcion_c": "I, II y III",
-      "opcion_d": "Solo I y III",
-      "opcion_e": "Solo II"
+      "truth_values": [
+        true,
+        false
+      ],
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "El grupo posterior de la cintura escapular incluye trapecio, elevador de la escápula y romboideos. La segunda lista corresponde a músculos que actúan sobre el húmero y no a ese grupo posterior. Clave A.",
+      "justificacion": "El grupo posterior de la cintura escapular incluye trapecio, elevador de la escápula y romboideos. La segunda lista corresponde a músculos que actúan sobre el húmero y no a ese grupo posterior. Clave A.",
+      "paginas_pdf": "373",
+      "pagina_impresa": "345",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 345; páginas PDF 373."
     },
     {
       "id": "semana2-testb-32",
       "numero_original": 32,
       "numero_pregunta": 32,
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "Biología Celular",
-      "pregunta": "contraste. Seleccione las premisas correctas.\nI. El contraste es la propiedad que nos permite distinguir estructuras celulares por su diferente color o brillo.\nII. La hematoxilina que nos permitirá ver los núcleos celulares de color azulado.\nIII. La eosina que tiñe de rosa el citoplasma proporciona un mejor contraste.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "El contraste diferencia estructuras por su color o brillo. En la tinción H–E, la hematoxilina tiñe los núcleos de azul o violeta y la eosina tiñe de rosa el citoplasma y otros componentes eosinófilos.",
-      "justificacion": "El contraste diferencia estructuras por su color o brillo. En la tinción H–E, la hematoxilina tiñe los núcleos de azul o violeta y la eosina tiñe de rosa el citoplasma y otros componentes eosinófilos.",
-      "fuente": "Patrón de Biología Celular, pregunta original 22.",
-      "dificultad": "medio",
+      "source_numero_original": 32,
+      "materia": "MORFOFUNCION",
+      "tema": "Músculos",
+      "pregunta": "…Músculos que participan en la ROTACIÓN MEDIAL del húmero.\n1.Pectoral mayor + dorsal ancho + redondo mayor + deltoides anterior + coracobraquial + subescapular.\n2.Dorsal ancho + redondo mayor + fibras posteriores del deltoides.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 32
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 32,
+        "original_header": "32…Músculos que participan en la ROTACIÓN MEDIAL del húmero.",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          374,
+          377
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I y II",
-      "opcion_b": "I, II y III",
-      "opcion_c": "Solo I y III",
-      "opcion_d": "Ninguna es correcta",
-      "opcion_e": "Solo II y III"
+      "truth_values": [
+        true,
+        false
+      ],
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "La primera lista reúne rotadores mediales del húmero. La segunda incluye fibras posteriores del deltoides, que producen rotación lateral. Solo 1 es verdadera. Clave A.",
+      "justificacion": "La primera lista reúne rotadores mediales del húmero. La segunda incluye fibras posteriores del deltoides, que producen rotación lateral. Solo 1 es verdadera. Clave A.",
+      "paginas_pdf": "374, 377",
+      "pagina_impresa": "346, 349",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 346, 349; páginas PDF 374, 377."
     },
     {
       "id": "semana2-testb-33",
       "numero_original": 33,
       "numero_pregunta": 33,
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "Biología Celular",
-      "pregunta": "microscopio de fluorescencia. Seleccione las premisas correctas.\nI. La microscopía de fluorescencia se basa en la propiedad que tienen las sustancias fluorescentes de absorber luz de una determinada (λ) y emitir luz con una (λ)mayor.\nII. El microscopio de fluorescencia tiene una serie de filtros que permiten seleccionar la (λ).\nIII. Algunas estructuras de los tejidos son autofluorescentes, como las fibras elásticas.",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "comentario": "En la fluorescencia habitual, la emisión tiene mayor longitud de onda que la excitación. Los filtros seleccionan las bandas de excitación y emisión. Las fibras elásticas pueden mostrar autofluorescencia.",
-      "justificacion": "En la fluorescencia habitual, la emisión tiene mayor longitud de onda que la excitación. Los filtros seleccionan las bandas de excitación y emisión. Las fibras elásticas pueden mostrar autofluorescencia.",
-      "fuente": "Patrón de Biología Celular, pregunta original 23.",
-      "dificultad": "medio",
+      "source_numero_original": 33,
+      "materia": "MORFOFUNCION",
+      "tema": "Músculos",
+      "pregunta": "…Los músculos forman el grupo anterior que actúa sobre el hombro:\n1.Pectoral menor y serrato anterior.\n2.Pectoral mayor y serrato anterior.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 33
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 33,
+        "original_header": "33…Los músculos forman el grupo anterior que actúa sobre el hombro:",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          373
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo II",
-      "opcion_b": "Solo I",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "I, II y III",
-      "opcion_e": "Solo II y III"
+      "truth_values": [
+        true,
+        false
+      ],
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "El grupo anterior que actúa sobre la escápula está formado por pectoral menor y serrato anterior, no pectoral mayor y serrato anterior. Clave A.",
+      "justificacion": "El grupo anterior que actúa sobre la escápula está formado por pectoral menor y serrato anterior, no pectoral mayor y serrato anterior. Clave A.",
+      "paginas_pdf": "373",
+      "pagina_impresa": "345",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 345; páginas PDF 373."
     },
     {
       "id": "semana2-testb-34",
       "numero_original": 34,
       "numero_pregunta": 34,
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "Biología Celular",
-      "pregunta": "microscopio confocal. Seleccione las premisas correctas.\nI. El microscopio confocal se puede considerar una variante mejorada del microscopio de fluorescencia.\nII. El microscopio confocal de barrido láser ilumina simultáneamente todos los puntos de la muestra.\nIII. La fuente de iluminación característica del microscopio confocal de barrido láser es una lámpara halógena.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "El confocal de barrido láser ilumina un punto y barre la muestra. Utiliza un láser y una apertura que rechaza luz fuera de foco. No ilumina simultáneamente toda la preparación ni utiliza como fuente característica una lámpara halógena.",
-      "justificacion": "El confocal de barrido láser ilumina un punto y barre la muestra. Utiliza un láser y una apertura que rechaza luz fuera de foco. No ilumina simultáneamente toda la preparación ni utiliza como fuente característica una lámpara halógena.",
-      "fuente": "Patrón de Biología Celular, pregunta original 24.",
-      "dificultad": "medio",
+      "source_numero_original": 34,
+      "materia": "MORFOFUNCION",
+      "tema": "Músculos",
+      "pregunta": "…\n1. Los 11 pares de músculos intercostales externos se extienden desde el ángulo de la costilla en sentido posterior, hasta casi el principio del cartílago costal en sentido anterior.\n2. Los 11 pares de músculos intercostales internos son profundos a los intercostales externos y se extienden desde el margen del esternón al tubérculo de las costillas.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 34
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 34,
+        "original_header": "34…",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          361
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "teacher_key_correction": {
+          "original": "E",
+          "revised": "D",
+          "reason": "Saladin PDF 361, impresa 333: ambas premisas intercambian los límites posteriores; son falsas. La E del patrón docente no existe en la leyenda A–D de esta sección."
+        }
       },
-      "opcion_a": "Ninguna es correcta",
-      "opcion_b": "Solo I",
-      "opcion_c": "Solo II",
-      "opcion_d": "Solo II y III",
-      "opcion_e": "Solo I y II"
+      "truth_values": [
+        false,
+        false
+      ],
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "Los intercostales externos se extienden desde el tubérculo costal hasta cerca del cartílago costal; los internos desde el esternón hasta el ángulo de las costillas. El documento intercambia los puntos posteriores por ángulo y tubérculo, respectivamente. Ambas son falsas. Clave D. Revisión docente: el patrón aportado marca E; se ajustó a D por la siguiente razón: Saladin PDF 361, impresa 333: ambas premisas intercambian los límites posteriores; son falsas. La E del patrón docente no existe en la leyenda A–D de esta sección.",
+      "justificacion": "Los intercostales externos se extienden desde el tubérculo costal hasta cerca del cartílago costal; los internos desde el esternón hasta el ángulo de las costillas. El documento intercambia los puntos posteriores por ángulo y tubérculo, respectivamente. Ambas son falsas. Clave D. Revisión docente: el patrón aportado marca E; se ajustó a D por la siguiente razón: Saladin PDF 361, impresa 333: ambas premisas intercambian los límites posteriores; son falsas. La E del patrón docente no existe en la leyenda A–D de esta sección.",
+      "paginas_pdf": "361",
+      "pagina_impresa": "333",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 333; páginas PDF 361.",
+      "teacher_key": "E"
     },
     {
       "id": "semana2-testb-35",
       "numero_original": 35,
       "numero_pregunta": 35,
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "Biología Celular",
-      "pregunta": "MET. Seleccione las premisas correctas.\nI. El MET utiliza un haz de electrones que recorre una columna con un sistema de lentes electromagnéticas.\nII. El microscopio electrónico de transmisión convencional permite estudiar células vivas in vivo.\nIII. El citrato de plomo y el acetato de uranilo son sustancias poco habituales para el contraste en MET.",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "comentario": "El MET emplea electrones que atraviesan una muestra ultrafina. El MET convencional no permite estudiar células vivas. El citrato de plomo y el acetato de uranilo son contrastantes habituales.",
-      "justificacion": "El MET emplea electrones que atraviesan una muestra ultrafina. El MET convencional no permite estudiar células vivas. El citrato de plomo y el acetato de uranilo son contrastantes habituales.",
-      "fuente": "Patrón de Biología Celular, pregunta original 25.",
-      "dificultad": "medio",
+      "source_numero_original": 35,
+      "materia": "MORFOFUNCION",
+      "tema": "Músculos",
+      "pregunta": "1. El esfínter uretral externo retiene la orina en la vejiga hasta que se decide vaciarla voluntariamente.\n2. El compresor de la uretra se encuentra sólo en la mujer y ayuda a retener la orina.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 35
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 35,
+        "original_header": "35",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          369
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo II",
-      "opcion_b": "Solo I y II",
-      "opcion_c": "Solo III",
-      "opcion_d": "Solo I",
-      "opcion_e": "I, II y III"
+      "truth_values": [
+        true,
+        true
+      ],
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "El esfínter uretral externo permite retención voluntaria de orina; el compresor de la uretra aparece solo en mujeres y ayuda a la retención. Ambas son verdaderas. Clave C.",
+      "justificacion": "El esfínter uretral externo permite retención voluntaria de orina; el compresor de la uretra aparece solo en mujeres y ayuda a la retención. Ambas son verdaderas. Clave C.",
+      "paginas_pdf": "369",
+      "pagina_impresa": "341",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 341; páginas PDF 369.",
+      "teacher_key": "C"
     },
     {
       "id": "semana2-testb-36",
       "numero_original": 36,
       "numero_pregunta": 36,
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "Biología Celular",
-      "pregunta": "MET. Seleccione las premisas correctas.\nI. MET que se utiliza para observar superficies de células y tejidos a gran aumento y con gran resolución.\nII. El MET permite observar muestras de tamaño considerable, como trozos de tejido, organismos enteros, insectos.\nIII. El MET los electrones secundarios son recogidos por un sensor y proyectados en un monitor de televisión, donde se observa la imagen con un aspecto metalizado y tridimensional",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "Las tres premisas atribuyen al MET características del MEB: estudio de superficies, posibilidad de examinar especímenes relativamente grandes y obtención de imágenes de relieve a partir de electrones secundarios.",
-      "justificacion": "Las tres premisas atribuyen al MET características del MEB: estudio de superficies, posibilidad de examinar especímenes relativamente grandes y obtención de imágenes de relieve a partir de electrones secundarios.",
-      "fuente": "Patrón de Biología Celular, pregunta original 26.",
-      "dificultad": "medio",
+      "source_numero_original": 36,
+      "materia": "MORFOFUNCION",
+      "tema": "Músculos",
+      "pregunta": "1. El esfínter anal externo está inervado por el nervio facial.\n2. El compresor de la uretra rodea el canal anal.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 36
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 36,
+        "original_header": "36",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          369
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "I, II y III",
-      "opcion_b": "Ninguna es correcta",
-      "opcion_c": "Solo I y II",
-      "opcion_d": "Solo II y III",
-      "opcion_e": "Solo III"
+      "truth_values": [
+        false,
+        false
+      ],
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "El esfínter anal externo no recibe el facial; el compresor de la uretra se relaciona con la uretra y no rodea el canal anal. Ambas son falsas. Clave D.",
+      "justificacion": "El esfínter anal externo no recibe el facial; el compresor de la uretra se relaciona con la uretra y no rodea el canal anal. Ambas son falsas. Clave D.",
+      "paginas_pdf": "369",
+      "pagina_impresa": "341",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 341; páginas PDF 369.",
+      "teacher_key": "D"
     },
     {
       "id": "semana2-testb-37",
       "numero_original": 37,
       "numero_pregunta": 37,
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "Biología Celular",
-      "pregunta": "técnicas que permiten ver al MET. Seleccione las premisas correctas.\nI. El sombreado metálico es otra técnica que permite observar macromoléculas al MET.\nII. En la criofractura las muestras se congelan rápidamente, por ejemplo con nitrógeno líquido a aproximadamente −196 °C, y se fracturan en condiciones de vacío.\nIII. El contraste negativo es una técnica que permite observar macromoléculas al MET con una alta resolución.",
-      "respuesta_correcta": "E",
-      "respuestas_aceptadas": [
-        "E"
-      ],
-      "comentario": "Sombreado metálico y contraste negativo permiten estudiar macromoléculas por MET. La criofractura combina congelación rápida, fractura y obtención de réplicas. La temperatura de ebullición del nitrógeno líquido a presión atmosférica es aproximadamente −196 °C, no −160 °C.",
-      "justificacion": "Sombreado metálico y contraste negativo permiten estudiar macromoléculas por MET. La criofractura combina congelación rápida, fractura y obtención de réplicas. La temperatura de ebullición del nitrógeno líquido a presión atmosférica es aproximadamente −196 °C, no −160 °C.",
-      "fuente": "Patrón de Biología Celular, pregunta original 27.",
-      "dificultad": "medio",
+      "source_numero_original": 37,
+      "materia": "MORFOFUNCION",
+      "tema": "Músculos",
+      "pregunta": "…\n1. El elevador del ano está compuesto únicamente por puborrectal y coccígeo.\n2. Los elevadores del ano derecho e izquierdo convergen en el cuerpo anococcígeo fibroso, que se inserta en el cóccix.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 37
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 37,
+        "original_header": "37…",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          369
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo III",
-      "opcion_b": "Solo II y III",
-      "opcion_c": "Solo I",
-      "opcion_d": "Solo I y II",
-      "opcion_e": "I, II y III"
+      "truth_values": [
+        false,
+        true
+      ],
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "El elevador del ano incluye iliococcígeo, pubococcígeo y puborrectal; el coccígeo es otro músculo del diafragma pélvico. Los elevadores derecho e izquierdo convergen en el cuerpo anococcígeo que se inserta en el cóccix. Solo 2 es verdadera. Clave B.",
+      "justificacion": "El elevador del ano incluye iliococcígeo, pubococcígeo y puborrectal; el coccígeo es otro músculo del diafragma pélvico. Los elevadores derecho e izquierdo convergen en el cuerpo anococcígeo que se inserta en el cóccix. Solo 2 es verdadera. Clave B.",
+      "paginas_pdf": "369",
+      "pagina_impresa": "341",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 341; páginas PDF 369.",
+      "teacher_key": "B"
     },
     {
       "id": "semana2-testb-38",
       "numero_original": 38,
       "numero_pregunta": 38,
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "Biología Celular",
-      "pregunta": "la fijación. Seleccione las premisas correctas.\nI. El método físico es un método de fijación muy lento, por lo que se suele utilizar cuando se necesita un diagnóstico urgente.\nII. El tejido se expone a temperaturas inferiores a -70 °C disminuyendo así la actividad de lisis enzimática e inmovilizando las estructuras celulares.\nIII. El método químico más utilizado es la criofijación o congelación.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "La congelación es un método físico rápido que reduce la degradación y permite cortes para diagnóstico urgente. No es un método químico. Los fijadores químicos incluyen formaldehído y glutaraldehído.",
-      "justificacion": "La congelación es un método físico rápido que reduce la degradación y permite cortes para diagnóstico urgente. No es un método químico. Los fijadores químicos incluyen formaldehído y glutaraldehído.",
-      "fuente": "Patrón de Biología Celular, pregunta original 28.",
-      "dificultad": "medio",
+      "source_numero_original": 38,
+      "materia": "MORFOFUNCION",
+      "tema": "Músculos",
+      "pregunta": "1. En el varón, las contracciones del bulboesponjoso ayudan a expulsar el semen durante la eyaculación.\n2. El esfínter anal externo retiene las heces hasta su evacuación voluntaria.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 38
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 38,
+        "original_header": "38",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          369
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "teacher_key_correction": {
+          "original": "B",
+          "revised": "C",
+          "reason": "Saladin PDF 369, impresa 341: ambas acciones descritas son verdaderas; corresponde C, no solo la segunda."
+        }
       },
-      "opcion_a": "Solo I y III",
-      "opcion_b": "Solo II",
-      "opcion_c": "Solo I y II",
-      "opcion_d": "Solo III",
-      "opcion_e": "Solo I"
+      "truth_values": [
+        true,
+        true
+      ],
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "El bulboesponjoso masculino ayuda a expulsar semen durante la eyaculación y el esfínter anal externo retiene heces hasta la evacuación voluntaria. Ambas son verdaderas. Clave C. Revisión docente: el patrón aportado marca B; se ajustó a C por la siguiente razón: Saladin PDF 369, impresa 341: ambas acciones descritas son verdaderas; corresponde C, no solo la segunda.",
+      "justificacion": "El bulboesponjoso masculino ayuda a expulsar semen durante la eyaculación y el esfínter anal externo retiene heces hasta la evacuación voluntaria. Ambas son verdaderas. Clave C. Revisión docente: el patrón aportado marca B; se ajustó a C por la siguiente razón: Saladin PDF 369, impresa 341: ambas acciones descritas son verdaderas; corresponde C, no solo la segunda.",
+      "paginas_pdf": "369",
+      "pagina_impresa": "341",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 341; páginas PDF 369.",
+      "teacher_key": "B"
     },
     {
       "id": "semana2-testb-39",
       "numero_original": 39,
       "numero_pregunta": 39,
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "Biología Celular",
-      "pregunta": "la inclusión. Seleccione las premisas correctas.\nI. La inclusión puede tener lugar en parafina para muestras procesadas para el microscopio electrónico.\nII. La parafina histológica es una mezcla de hidrocarburos de cadena larga cuyo intervalo de fusión depende de la formulación y suele situarse aproximadamente entre 50 y 60 °C.\nIII. El objetivo de la inclusión es mantener el agua de los tejidos y reemplazarla por un medio que solidifica.",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "comentario": "La inclusión rutinaria en parafina corresponde a microscopía óptica; para MET se usan habitualmente resinas. La parafina es una mezcla de hidrocarburos con un intervalo de fusión que depende de su formulación. El procesamiento implica deshidratar, no mantener el agua.",
-      "justificacion": "La inclusión rutinaria en parafina corresponde a microscopía óptica; para MET se usan habitualmente resinas. La parafina es una mezcla de hidrocarburos con un intervalo de fusión que depende de su formulación. El procesamiento implica deshidratar, no mantener el agua.",
-      "fuente": "Patrón de Biología Celular, pregunta original 29.",
-      "dificultad": "medio",
+      "source_numero_original": 39,
+      "materia": "MORFOFUNCION",
+      "tema": "Músculos",
+      "pregunta": "Músculos inervados por el nervio axilar.\n1.- Romboides mayor - Supraespinoso.\n2.- Deltoides-Redondo menor.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 39
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 39,
+        "original_header": "39  Músculos inervados por el nervio axilar.",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          374,
+          377
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I y III",
-      "opcion_b": "Solo II y III",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "Solo II",
-      "opcion_e": "Solo I"
+      "truth_values": [
+        false,
+        true
+      ],
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "Romboideo mayor y supraespinoso no reciben el nervio axilar. Deltoides y redondo menor sí lo reciben. Solo 2 es verdadera. Clave B.",
+      "justificacion": "Romboideo mayor y supraespinoso no reciben el nervio axilar. Deltoides y redondo menor sí lo reciben. Solo 2 es verdadera. Clave B.",
+      "paginas_pdf": "374, 377",
+      "pagina_impresa": "346, 349",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 346, 349; páginas PDF 374, 377.",
+      "teacher_key": "B"
     },
     {
       "id": "semana2-testb-40",
       "numero_original": 40,
       "numero_pregunta": 40,
-      "materia": "BIOLOGIA CELULAR",
-      "tema": "Biología Celular",
-      "pregunta": "los cortes. Seleccione las premisas correctas.\nI. Para microscopía electrónica se hacen cortes finos (10-100 μm) con un ultramicrotomo.\nII. Los cortes finos se colocan en redes de cobre o níquel para su observación al MEB.\nIII. Un criostato puede mantener las muestras alrededor de −20 °C durante el corte.",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "comentario": "Los cortes ultrafinos para MET se expresan en nanómetros y se colocan en rejillas, habitualmente de cobre o níquel. No se destinan al MEB. Un criostato puede funcionar alrededor de −20 °C; la temperatura se ajusta al tejido.",
-      "justificacion": "Los cortes ultrafinos para MET se expresan en nanómetros y se colocan en rejillas, habitualmente de cobre o níquel. No se destinan al MEB. Un criostato puede funcionar alrededor de −20 °C; la temperatura se ajusta al tejido.",
-      "fuente": "Patrón de Biología Celular, pregunta original 30.",
-      "dificultad": "medio",
+      "source_numero_original": 40,
+      "materia": "MORFOFUNCION",
+      "tema": "Músculos",
+      "pregunta": "Es cierto sobre la inervación del musculo coccigeo:\n1-Inervado por el nervio pudendo. 2. . Nervios S3 a S4",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 40
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 40,
+        "original_header": "40 Es cierto sobre la inervación del musculo coccigeo:",
+        "literal_import": true,
+        "official_book": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+        "pdf_pages": [
+          369
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "I, II y III",
-      "opcion_b": "Solo II y III",
-      "opcion_c": "Solo III",
-      "opcion_d": "Ninguna es correcta",
-      "opcion_e": "Solo I y III"
+      "truth_values": [
+        false,
+        true
+      ],
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "El coccígeo recibe nervios S3–S4 según el cuadro de Saladin, no el pudendo. Solo 2 es verdadera. Clave B.",
+      "justificacion": "El coccígeo recibe nervios S3–S4 según el cuadro de Saladin, no el pudendo. Solo 2 es verdadera. Clave B.",
+      "paginas_pdf": "369",
+      "pagina_impresa": "341",
+      "fuente": "Saladin, Anatomía y fisiología, 6.ª edición; páginas impresas 341; páginas PDF 369.",
+      "teacher_key": "B"
     },
     {
       "id": "semana2-testb-41",
       "numero_original": 41,
       "numero_pregunta": 41,
+      "source_numero_original": 41,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": "la inclusión. Seleccione las premisas correctas.\nI. En el procesamiento convencional para inclusión se elimina el agua de los tejidos y se infiltra un medio que posteriormente solidifica.\nII. Proporciona soporte estructural para obtener cortes suficientemente gruesos.",
+      "pregunta": ".Con relación a la inclusión\n1.El objetivo es eliminar el agua de los tejidos y reemplazarla por un medio que solidifica.\n2. Proporciona soporte estructural para obtener cortes suficientemente gruesos.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "source": {
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 41,
+        "original_header": "41.Con relación a la inclusión ",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          69
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+      },
+      "truth_values": [
+        true,
+        false
+      ],
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
-      "comentario": "En el procesamiento convencional para inclusión se elimina el agua y se infiltra un medio que solidifica. Este soporte facilita cortes suficientemente delgados, no gruesos.",
-      "justificacion": "En el procesamiento convencional para inclusión se elimina el agua y se infiltra un medio que solidifica. Este soporte facilita cortes suficientemente delgados, no gruesos.",
-      "fuente": "Patrón de Biología Celular, pregunta original 41.",
-      "dificultad": "medio",
-      "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
-      "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 41
-      },
-      "opcion_a": "Solo I",
-      "opcion_b": "I y II",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "Solo II"
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "1 es verdadera: la inclusión elimina el agua y la sustituye por un medio que solidifica. 2 es falsa: el soporte permite obtener cortes suficientemente finos, no gruesos. Clave A.",
+      "justificacion": "1 es verdadera: la inclusión elimina el agua y la sustituye por un medio que solidifica. 2 es falsa: el soporte permite obtener cortes suficientemente finos, no gruesos. Clave A.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 69.",
+      "paginas_pdf": "69"
     },
     {
       "id": "semana2-testb-42",
       "numero_original": 42,
       "numero_pregunta": 42,
+      "source_numero_original": 42,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": "microtomo. Seleccione las premisas correctas.\nI. Los cortes histológicos rutinarios en parafina deben tener siempre 13–15 μm de grosor.\nII. Para MET se obtienen cortes ultrafinos, del orden de 10–100 nm, mediante un ultramicrotomo.",
+      "pregunta": ". Con relación al microtomo\n1.Los cortes se realizan con un microtomo y tienen 13-15 um de grosor \n2.Para microscopía electrónica se hacen cortes finos (10-100 nm) con un aparato denominado ultramicrotomo.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "source": {
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 42,
+        "original_header": "42. Con relación al microtomo ",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          63,
+          69
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+      },
+      "truth_values": [
+        false,
+        true
+      ],
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
-      "comentario": "Los cortes histológicos rutinarios en parafina suelen medir unos pocos micrómetros, frecuentemente 3–7 μm. El ultramicrotomo permite obtener cortes de decenas de nanómetros para MET; el intervalo citado es una aproximación didáctica.",
-      "justificacion": "Los cortes histológicos rutinarios en parafina suelen medir unos pocos micrómetros, frecuentemente 3–7 μm. El ultramicrotomo permite obtener cortes de decenas de nanómetros para MET; el intervalo citado es una aproximación didáctica.",
-      "fuente": "Patrón de Biología Celular, pregunta original 42.",
-      "dificultad": "medio",
-      "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
-      "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 42
-      },
-      "opcion_a": "Solo I",
-      "opcion_b": "Solo II",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "I y II"
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "En el procesamiento rutinario descrito por Calvo (página PDF 69), los cortes ópticos habituales tienen 3–5 µm, por lo que la premisa 1, que les asigna 13–15 µm, es falsa en este contexto. Esto no excluye otros grosores en preparaciones especiales. La premisa 2 coincide con los cortes de 10–100 nm obtenidos con ultramicrotomo para microscopía electrónica. Clave B.",
+      "justificacion": "En el procesamiento rutinario descrito por Calvo (página PDF 69), los cortes ópticos habituales tienen 3–5 µm, por lo que la premisa 1, que les asigna 13–15 µm, es falsa en este contexto. Esto no excluye otros grosores en preparaciones especiales. La premisa 2 coincide con los cortes de 10–100 nm obtenidos con ultramicrotomo para microscopía electrónica. Clave B.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 63, 69.",
+      "paginas_pdf": "63, 69",
+      "key_basis": {
+        "type": "course_textbook_context",
+        "author": "Alfonso Calvo",
+        "chapter": 2,
+        "pdf_pages": [
+          69
+        ],
+        "scope": "No afirma que 13–15 µm sean físicamente imposibles ni que ninguna preparación óptica especial pueda usar esos grosores."
+      }
     },
     {
       "id": "semana2-testb-43",
       "numero_original": 43,
       "numero_pregunta": 43,
+      "source_numero_original": 43,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": "la fijación. Seleccione las premisas correctas.\nI. Permite detener los procesos de degradación que ocurren tras la muerte celular\nII. Provoca reacciones fisicoquímicas que preservan las estructuras y componentes químicos de las células",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "La fijación detiene o reduce los procesos de degradación posmórtem y estabiliza estructuras. Los fijadores químicos preservan componentes mediante reacciones fisicoquímicas, aunque pueden introducir artefactos.",
-      "justificacion": "La fijación detiene o reduce los procesos de degradación posmórtem y estabiliza estructuras. Los fijadores químicos preservan componentes mediante reacciones fisicoquímicas, aunque pueden introducir artefactos.",
-      "fuente": "Patrón de Biología Celular, pregunta original 43.",
-      "dificultad": "medio",
+      "pregunta": ". Con relación a la fijación\n 1.Permite detener los procesos de degradación que ocurren tras la muerte celular\n 2.Provoca reacciones fisicoquímicas que preservan las estructuras y componentes químicos de las células",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 43
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 43,
+        "original_header": " 43. Con relación a la fijación ",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          68
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Ninguna es correcta",
-      "opcion_b": "I y II",
-      "opcion_c": "Solo II",
-      "opcion_d": "Solo I"
+      "truth_values": [
+        true,
+        true
+      ],
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "La fijación detiene la degradación posterior a la muerte celular y preserva estructuras y componentes químicos mediante reacciones fisicoquímicas. Ambas premisas son verdaderas. Clave C.",
+      "justificacion": "La fijación detiene la degradación posterior a la muerte celular y preserva estructuras y componentes químicos mediante reacciones fisicoquímicas. Ambas premisas son verdaderas. Clave C.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 68.",
+      "paginas_pdf": "68"
     },
     {
       "id": "semana2-testb-44",
       "numero_original": 44,
       "numero_pregunta": 44,
+      "source_numero_original": 44,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": "MEB. Seleccione las premisas correctas.\nI. Las muestras van a ser barridas por el haz de electrones\nII. Las muestras van a ser atravesadas por el haz de electrones",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "En el MEB el haz barre la superficie de la muestra. La transmisión de electrones a través de una sección ultrafina caracteriza al MET.",
-      "justificacion": "En el MEB el haz barre la superficie de la muestra. La transmisión de electrones a través de una sección ultrafina caracteriza al MET.",
-      "fuente": "Patrón de Biología Celular, pregunta original 44.",
-      "dificultad": "medio",
+      "pregunta": ". Con relación al MEB:\n1.Las muestras van a ser barridas por el haz de electrones\n2.Las muestras van a ser atravesadas por el haz de electrones",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 44
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 44,
+        "original_header": "44. Con relación al MEB:",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          64
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "I y II",
-      "opcion_b": "Solo I",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "Solo II"
+      "truth_values": [
+        true,
+        false
+      ],
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "El haz del MEB barre la superficie de la muestra; no atraviesa una sección como en el MET. Es verdadera 1 y falsa 2. Clave A.",
+      "justificacion": "El haz del MEB barre la superficie de la muestra; no atraviesa una sección como en el MET. Es verdadera 1 y falsa 2. Clave A.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 64.",
+      "paginas_pdf": "64"
     },
     {
       "id": "semana2-testb-45",
       "numero_original": 45,
       "numero_pregunta": 45,
+      "source_numero_original": 45,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": "microscopio electrónico. Seleccione las premisas correctas.\nI. Utiliza como fuente de iluminación una lámpara de luz brillante\nII. Para que el haz de electrones atraviese una muestra biológica en el MET rutinario, su espesor debe ser obligatoriamente de 100–500 nm.",
+      "pregunta": ". Con relación al microscopio electrónico\n1. Utiliza como fuente de iluminación una lámpara de luz brillante\n2. Para que el haz de electrones atraviese la muestra, tiene que tener un espesor de 100-500nm",
+      "puntos": 1,
+      "dificultad": "medio",
+      "source": {
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 45,
+        "original_header": "45. Con relación al microscopio electrónico ",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          63
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+      },
+      "truth_values": [
+        false,
+        false
+      ],
       "respuesta_correcta": "D",
       "respuestas_aceptadas": [
         "D"
       ],
-      "comentario": "La microscopía electrónica usa un haz de electrones. En el MET biológico rutinario los cortes suelen tener decenas de nanómetros, a menudo alrededor de 50–100 nm; 100–500 nm no es un espesor obligatorio general.",
-      "justificacion": "La microscopía electrónica usa un haz de electrones. En el MET biológico rutinario los cortes suelen tener decenas de nanómetros, a menudo alrededor de 50–100 nm; 100–500 nm no es un espesor obligatorio general.",
-      "fuente": "Patrón de Biología Celular, pregunta original 45.",
-      "dificultad": "medio",
-      "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
-      "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 45
-      },
-      "opcion_a": "Solo I",
-      "opcion_b": "Solo II",
-      "opcion_c": "I y II",
-      "opcion_d": "Ninguna es correcta"
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "Según el MET biológico descrito por Calvo (página PDF 63), 1 es falsa porque se utiliza un haz de electrones; 2 es falsa porque el texto describe espesores de unos 10–100 nm y el enunciado impone 100–500 nm como necesidad general. La clave no extrapola a todo modo o voltaje posible de microscopía electrónica. Ambas premisas son falsas: D.",
+      "justificacion": "Según el MET biológico descrito por Calvo (página PDF 63), 1 es falsa porque se utiliza un haz de electrones; 2 es falsa porque el texto describe espesores de unos 10–100 nm y el enunciado impone 100–500 nm como necesidad general. La clave no extrapola a todo modo o voltaje posible de microscopía electrónica. Ambas premisas son falsas: D.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 63.",
+      "paginas_pdf": "63",
+      "key_basis": {
+        "type": "course_textbook_context",
+        "author": "Alfonso Calvo",
+        "chapter": 2,
+        "pdf_pages": [
+          63
+        ],
+        "scope": "No extrapola a todas las tensiones aceleradoras, tomografía, modos especiales o espesores técnicamente posibles. Es falsa la necesidad general planteada."
+      }
     },
     {
       "id": "semana2-testb-46",
       "numero_original": 46,
       "numero_pregunta": 46,
+      "source_numero_original": 46,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": "microscopio confocal. Seleccione las premisas correctas.\nI. La fuente de iluminación es un láser, cuya utilización implica necesariamente una excitación menos eficaz de los fluorocromos que la iluminación convencional.\nII. El microscopio confocal de barrido láser puede desplazar el punto iluminado en las dos dimensiones del plano x–y de la preparación.",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "comentario": "El barrido láser de una sección se realiza en el plano x–y, por lo que la segunda premisa es verdadera. Desplazar el foco en z permite obtener una serie de secciones y reconstruir un volumen. No es correcto afirmar que el láser implica necesariamente excitación menos eficaz.",
-      "justificacion": "El barrido láser de una sección se realiza en el plano x–y, por lo que la segunda premisa es verdadera. Desplazar el foco en z permite obtener una serie de secciones y reconstruir un volumen. No es correcto afirmar que el láser implica necesariamente excitación menos eficaz.",
-      "fuente": "Patrón de Biología Celular, pregunta original 46.",
-      "dificultad": "medio",
+      "pregunta": ". Con relación al microscopio confocal:\n1.La fuente de iluminación es un rayo láser, que permite una excitación de los fluorocromos menos eficaz que el uso de la luz.\n2.Posee un sistema de barrido, capaz de desplazar el rayo láser por la preparación en las dos dimensiones del espacio.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 46
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 46,
+        "original_header": " 46. Con relación al microscopio confocal:",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          61
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo II",
-      "opcion_b": "I y II",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "Solo I"
+      "truth_values": [
+        false,
+        true
+      ],
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "1 es falsa: Calvo describe una excitación más eficaz, no menos eficaz. 2 es verdadera como capacidad de barrido en el plano de la preparación: el barrido x–y construye una sección bidimensional; la adquisición de secciones a distintas profundidades permite reconstruir el volumen. La frase no dice que el equipo esté limitado exclusivamente a dos dimensiones. Clave B.",
+      "justificacion": "1 es falsa: Calvo describe una excitación más eficaz, no menos eficaz. 2 es verdadera como capacidad de barrido en el plano de la preparación: el barrido x–y construye una sección bidimensional; la adquisición de secciones a distintas profundidades permite reconstruir el volumen. La frase no dice que el equipo esté limitado exclusivamente a dos dimensiones. Clave B.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 61.",
+      "paginas_pdf": "61"
     },
     {
       "id": "semana2-testb-47",
       "numero_original": 47,
       "numero_pregunta": 47,
+      "source_numero_original": 47,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": "los colorantes. Seleccione las premisas correctas.\nI. La hematoxilina permite ver núcleos de color rosa y la eosina tiñe citoplasma de color azulado.\nII. Los colorantes absorben selectivamente determinadas longitudes de onda y su uso combinado puede proporcionar un mejor contraste.",
+      "pregunta": ". Con relación a los colorantes.\n1.La hematoxilina permite ver núcleos de color rosa y la eosina tiñe citoplasma de color azulado.\n 2.Los colorantes modifican la λ y, el uso combinado de varios colorantes, proporciona un mejor contraste.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "source": {
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 47,
+        "original_header": "47. Con relación a los colorantes.",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          59
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+      },
+      "truth_values": [
+        false,
+        true
+      ],
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
-      "comentario": "La primera premisa invierte los colores: hematoxilina, núcleos azules o violetas; eosina, citoplasma rosado. Los colorantes absorben selectivamente longitudes de onda y su combinación mejora el contraste.",
-      "justificacion": "La primera premisa invierte los colores: hematoxilina, núcleos azules o violetas; eosina, citoplasma rosado. Los colorantes absorben selectivamente longitudes de onda y su combinación mejora el contraste.",
-      "fuente": "Patrón de Biología Celular, pregunta original 47.",
-      "dificultad": "medio",
-      "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
-      "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 47
-      },
-      "opcion_a": "Solo I",
-      "opcion_b": "Solo II",
-      "opcion_c": "I y II",
-      "opcion_d": "Ninguna es correcta"
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "La premisa 1 invierte los colores: hematoxilina, núcleos azulados; eosina, citoplasma rosado. La premisa 2 reproduce la formulación «modifican la λ» de Calvo (página PDF 59). El mismo apartado la explica como absorción selectiva: cada colorante impide el paso de determinadas longitudes de onda y permite otras, modificando la composición espectral transmitida. No se interpreta como transformación de la frecuencia de cada fotón. Conforme a este contexto del libro, 2 es verdadera. Clave B.",
+      "justificacion": "La premisa 1 invierte los colores: hematoxilina, núcleos azulados; eosina, citoplasma rosado. La premisa 2 reproduce la formulación «modifican la λ» de Calvo (página PDF 59). El mismo apartado la explica como absorción selectiva: cada colorante impide el paso de determinadas longitudes de onda y permite otras, modificando la composición espectral transmitida. No se interpreta como transformación de la frecuencia de cada fotón. Conforme a este contexto del libro, 2 es verdadera. Clave B.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 59.",
+      "paginas_pdf": "59",
+      "key_basis": {
+        "type": "course_textbook_context",
+        "author": "Alfonso Calvo",
+        "chapter": 2,
+        "pdf_pages": [
+          59
+        ],
+        "scope": "No se afirma que una tinción ordinaria transforme la frecuencia de cada fotón transmitido. Si «modifican λ» se leyera como conversión de frecuencia, sería otra interpretación; el criterio del curso se deja explícito en la explicación."
+      }
     },
     {
       "id": "semana2-testb-48",
       "numero_original": 48,
       "numero_pregunta": 48,
+      "source_numero_original": 48,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": "TÉCNICA INMUNOHISTOQUÍMICA DIRECTA. Seleccione las premisas correctas.\nI. El anticuerpo primario no está conjugado, sino que se utiliza un anticuerpo secundario conjugado con la molécula detectable al microscopio.\nII. La señal vendrá del anticuerpo secundario.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "Ambas premisas describen la técnica indirecta. En inmunohistoquímica directa, el anticuerpo primario está conjugado con el marcador detectable; no se requiere un anticuerpo secundario marcado.",
-      "justificacion": "Ambas premisas describen la técnica indirecta. En inmunohistoquímica directa, el anticuerpo primario está conjugado con el marcador detectable; no se requiere un anticuerpo secundario marcado.",
-      "fuente": "Patrón de Biología Celular, pregunta original 48.",
-      "dificultad": "medio",
+      "pregunta": ".Con relación a TÉCNICA INMUNOHISTOQUÍMICA DIRECTA:\n1. El anticuerpo primario no está conjugado, sino que se utiliza un anticuerpo secundario conjugado con la molécula detectable al microscopio.\n2.La señal vendrá del anticuerpo secundario.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 48
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 48,
+        "original_header": "48.Con relación a TÉCNICA INMUNOHISTOQUÍMICA DIRECTA:",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          70,
+          71
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "I y II",
-      "opcion_b": "Ninguna es correcta",
-      "opcion_c": "Solo I",
-      "opcion_d": "Solo II"
+      "truth_values": [
+        false,
+        false
+      ],
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "Las dos premisas describen la técnica indirecta. En la directa, el anticuerpo primario está conjugado con el marcador y no se requiere un secundario marcado para generar la señal. Ambas son falsas en el contexto de técnica directa. Clave D.",
+      "justificacion": "Las dos premisas describen la técnica indirecta. En la directa, el anticuerpo primario está conjugado con el marcador y no se requiere un secundario marcado para generar la señal. Ambas son falsas en el contexto de técnica directa. Clave D.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 70, 71.",
+      "paginas_pdf": "70, 71"
     },
     {
       "id": "semana2-testb-49",
       "numero_original": 49,
       "numero_pregunta": 49,
+      "source_numero_original": 49,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": "CÁNCER DE MAMA E INMUNOHISTOQUIMICA. Seleccione las premisas correctas.\nI. La sobreexpresión de HER2/ErbB2 puede orientar el uso de tratamientos dirigidos, como trastuzumab, según las características del cáncer de mama.\nII. La positividad para receptores de estrógenos puede orientar el uso de terapia hormonal, como tamoxifeno, según el contexto clínico.",
+      "pregunta": ". Con relación a CÁNCER DE MAMA E INMUNOHISTOQUIMICA:\n1. Las pacientes con tumores Her-2/ErbB2 positivos tienen peor pronóstico, pueden ser tratadas con un fármaco específico (transtuzumab).\n2.Las pacientes con tumores positivos para el receptor de estrógenos tienen mejor pronóstico y se pueden tratar con tamoxifeno.",
+      "puntos": 1,
+      "dificultad": "medio",
+      "source": {
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 49,
+        "original_header": "49. Con relación a CÁNCER DE MAMA E INMUNOHISTOQUIMICA:",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          73,
+          74
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+      },
+      "truth_values": [
+        true,
+        true
+      ],
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
-      "comentario": "La expresión de HER2 y de receptores hormonales permite orientar tratamientos dirigidos. Trastuzumab se utiliza en determinados cánceres HER2 positivos y tamoxifeno puede emplearse en cánceres con receptores hormonales positivos. El pronóstico no se determina solo con un marcador.",
-      "justificacion": "La expresión de HER2 y de receptores hormonales permite orientar tratamientos dirigidos. Trastuzumab se utiliza en determinados cánceres HER2 positivos y tamoxifeno puede emplearse en cánceres con receptores hormonales positivos. El pronóstico no se determina solo con un marcador.",
-      "fuente": "Patrón de Biología Celular, pregunta original 49.",
-      "dificultad": "medio",
-      "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
-      "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 49
-      },
-      "opcion_a": "Solo II",
-      "opcion_b": "Ninguna es correcta",
-      "opcion_c": "I y II",
-      "opcion_d": "Solo I"
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "Las dos premisas reproducen el ejemplo de Calvo sobre cáncer de mama: receptores estrogénicos asociados con mejor pronóstico y tratamiento con tamoxifeno; HER2/ErbB2 con peor pronóstico y tratamiento dirigido. La grafía «transtuzumab» se conserva en el enunciado original; el nombre del fármaco es trastuzumab. Esta clave sigue el contexto comparativo del libro y no afirma que el pronóstico individual se determine solo con un marcador. Clave C.",
+      "justificacion": "Las dos premisas reproducen el ejemplo de Calvo sobre cáncer de mama: receptores estrogénicos asociados con mejor pronóstico y tratamiento con tamoxifeno; HER2/ErbB2 con peor pronóstico y tratamiento dirigido. La grafía «transtuzumab» se conserva en el enunciado original; el nombre del fármaco es trastuzumab. Esta clave sigue el contexto comparativo del libro y no afirma que el pronóstico individual se determine solo con un marcador. Clave C.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 73, 74.",
+      "paginas_pdf": "73, 74",
+      "key_basis": {
+        "type": "course_textbook_context",
+        "author": "Alfonso Calvo",
+        "chapter": 2,
+        "pdf_pages": [
+          73,
+          74
+        ],
+        "scope": "Comparación pronóstica y utilidad terapéutica en el ejemplo de cáncer de mama del texto del curso; no pronóstico individual ni comparación de resultados actuales bajo todas las terapias."
+      }
     },
     {
       "id": "semana2-testb-50",
       "numero_original": 50,
       "numero_pregunta": 50,
+      "source_numero_original": 50,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": "límite de resolución. Seleccione las premisas correctas.\nI. El LR para el ojo humano es de alrededor de 0,1 mm.\nII. El LR para el microscopio óptico convencional es de 0,2um.",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "comentario": "Los valores aproximados son 0,1 mm (100 μm) para el ojo humano y 0,2 μm (200 nm) para el microscopio óptico convencional.",
-      "justificacion": "Los valores aproximados son 0,1 mm (100 μm) para el ojo humano y 0,2 μm (200 nm) para el microscopio óptico convencional.",
-      "fuente": "Patrón de Biología Celular, pregunta original 50.",
-      "dificultad": "medio",
+      "pregunta": ". Con relación al límite de resolución:\n1. El LR para el ojo humano es de alrededor de O, 1 mm.\n2. El LR para el microscopio óptico convencional es de 0,2um.",
       "puntos": 1,
-      "coverage": {
-        "subject": "BIOLOGIA CELULAR",
-        "chapter": 1
-      },
+      "dificultad": "medio",
       "source": {
-        "library_file_id": "libfile_4d1b0a9d40e08191ae9748164693b47f",
-        "file_id": "file_00000000f3548230bba207f2099cc1b1",
-        "file_name": "Examen_Semana2_Integrado_50_Preguntas(1).txt",
-        "question_number": 50
+        "library_file_id": "libfile_f07bb5b6ade08191ada6ac361f117fdc",
+        "file_id": "file_000000009c4c81f5b8567b3dc8cd7a59",
+        "file_name": "EXAMEN ESTUDIANTES SEMANA 2  GRUPO VIRTUAL 2 (2).docx",
+        "size_bytes": 380929,
+        "question_number": 50,
+        "original_header": "50. Con relación al límite de resolución:",
+        "literal_import": true,
+        "official_book": "Biologia_Celular_Biomedica_St_Alfonso_Ca (1).pdf",
+        "pdf_pages": [
+          58
+        ],
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
       },
-      "opcion_a": "Solo I",
-      "opcion_b": "I y II",
-      "opcion_c": "Ninguna es correcta",
-      "opcion_d": "Solo II"
+      "truth_values": [
+        true,
+        true
+      ],
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "opcion_a": "Si considera que 1 es correcto",
+      "opcion_b": "Si considera que 2 es correcto",
+      "opcion_c": "Si considera que 1-2 son correctos",
+      "opcion_d": "Si considera que 1-2 son falsos",
+      "comentario": "Calvo indica un límite de resolución aproximado de 0,1 mm para el ojo y de 0,2 µm para el microscopio óptico convencional. Ambas premisas son verdaderas. Clave C.",
+      "justificacion": "Calvo indica un límite de resolución aproximado de 0,1 mm para el ojo y de 0,2 µm para el microscopio óptico convencional. Ambas premisas son verdaderas. Clave C.",
+      "fuente": "Alfonso Calvo, Biología celular biomédica, cap. 2; páginas PDF 58.",
+      "paginas_pdf": "58"
     }
-  ]
+  ],
+  "content_version": "official-docx-fixed-pattern-20261031",
+  "coverage": {
+    "morfo_questions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "biology_questions": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ]
+  },
+  "teacher_pattern_source": {
+    "library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+    "file_id": "file_000000004f7c81f598f27f4a6289bf7f",
+    "file_name": "_examen semana 2virtuales patron.docx",
+    "header_note": "Encabezado SEMANA 6; aportado por el usuario como patrón para el mismo examen Semana 2."
+  },
+  "documented_adjustments": {
+    "premise_text": [
+      {
+        "question": 27,
+        "change": "-160 °C → -196 °C",
+        "reason": "Corrección física autorizada; la criofractura queda con tres premisas verdaderas y clave D."
+      }
+    ],
+    "teacher_keys": [
+      {
+        "question": 3,
+        "teacher_key": "A",
+        "final_key": "C",
+        "reason": "Saladin PDF 317–319: la primera premisa dice metacarpo II en vez de I; la segunda usa sagital en vez de frontal; solo la tercera describe correctamente una trocoide."
+      },
+      {
+        "question": 20,
+        "teacher_key": "B",
+        "final_key": "A",
+        "reason": "Saladin PDF 359, impresa 331: la acción bilateral descrita en 1 es correcta; la unilateral rota al lado contrario, no al mismo; no recibe como inervación principal el facial."
+      },
+      {
+        "question": 34,
+        "teacher_key": "E",
+        "final_key": "D",
+        "reason": "Saladin PDF 361, impresa 333: ambas premisas intercambian los límites posteriores; son falsas. La E del patrón docente no existe en la leyenda A–D de esta sección."
+      },
+      {
+        "question": 38,
+        "teacher_key": "B",
+        "final_key": "C",
+        "reason": "Saladin PDF 369, impresa 341: ambas acciones descritas son verdaderas; corresponde C, no solo la segunda."
+      }
+    ],
+    "q1_note": "Enunciado literal; clave docente B preservada con explicación contextual del curso."
+  }
 }

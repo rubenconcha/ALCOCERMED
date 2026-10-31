@@ -2,15 +2,22 @@
 (function(root){
  const rules={first:{MORFOFUNCION:[1,11],'BIOLOGIA CELULAR':[1,6],'SALUD PUBLICA':[1,6]},second:{MORFOFUNCION:[12,20],'BIOLOGIA CELULAR':[7,12],'SALUD PUBLICA':[7,12]},final:{MORFOFUNCION:[1,29],'BIOLOGIA CELULAR':[1,18],'SALUD PUBLICA':[1,21]},'mini-foundations':{MORFOFUNCION:[1,8],'BIOLOGIA CELULAR':[1,1]}};
  function validateWeek2(paper){
-  if(paper.id!=='semana2-testb-virtual'||paper.scope!=='semana2-testb-virtual'||paper.duration!==50||paper.total_points!==50||paper.questions?.length!==50)return false;
+  if(paper.id!=='semana2-testb-virtual'||paper.scope!=='semana2-testb-virtual'||paper.duration!==50||paper.total_points!==50||paper.questions?.length!==50||paper.review_status!=='approved'||paper.source?.library_file_id!=='libfile_f07bb5b6ade08191ada6ac361f117fdc')return false;
   const ids=new Set(),stems=new Set();
+  const three=['Si considera que 1 es correcto','Si considera que 2 es correcto','Si considera que 3 es correcto','Si considera que 1-2-3 son correctos','Si considera que 1-2-3 son falsos'];
+  const two=['Si considera que 1 es correcto','Si considera que 2 es correcto','Si considera que 1-2 son correctos','Si considera que 1-2 son falsos'];
+  const keys3={'100':'A','010':'B','001':'C','111':'D','000':'E'},keys2={'10':'A','01':'B','11':'C','00':'D'};
   return paper.questions.every((q,i)=>{
-   const n=i+1,subject=n<=30?'MORFOFUNCION':'BIOLOGIA CELULAR',topic=n<=14?'Articulaciones':n<=30?'Músculos':'Biología Celular';
-   const letters=n<=40?'ABCDE':'ABCD',stem=String(q.pregunta||'').trim();
-   if(q.numero_original!==n||q.numero_pregunta!==n||q.puntos!==1||q.materia!==subject||q.tema!==topic||!q.id||ids.has(q.id)||!stem||stems.has(stem)||!q.comentario||q.respuestas_aceptadas?.length!==1||q.respuestas_aceptadas[0]!==q.respuesta_correcta||!letters.includes(q.respuesta_correcta)||q.respuesta_correcta.length!==1)return false;
-   const options=[...letters].map(l=>q['opcion_'+l.toLowerCase()]);
-   if(options.some(o=>!String(o||'').trim())||new Set(options).size!==letters.length||(n>40&&q.opcion_e))return false;
-   if((stem.match(/^(?:I|II|III)\./gm)||[]).length!==(n<=40?3:2))return false;
+   const n=i+1,count=n<=30?3:2,options=count===3?three:two;
+   const biology=(n>=21&&n<=30)||n>=41,subject=biology?'BIOLOGIA CELULAR':'MORFOFUNCION',topic=biology?'Biología Celular':n<=10?'Articulaciones':'Músculos';
+   const stem=String(q.pregunta||'').trim(),v=q.truth_values;
+   if(q.numero_original!==n||q.numero_pregunta!==n||q.puntos!==1||q.materia!==subject||q.tema!==topic||!q.id||ids.has(q.id)||!stem||stems.has(stem)||!q.comentario||q.respuestas_aceptadas?.length!==1||q.respuestas_aceptadas[0]!==q.respuesta_correcta)return false;
+   if(!Array.isArray(v)||v.length!==count||v.some(value=>typeof value!=='boolean'))return false;
+   const key=(count===3?keys3:keys2)[v.map(value=>value?'1':'0').join('')];
+   if(!key||key!==q.respuesta_correcta||options.some((text,j)=>q['opcion_'+'abcde'[j]]!==text)||(count===2&&q.opcion_e))return false;
+   const premiseNumbers=Array.from(stem.matchAll(/(?:^|\s)([123])(?:\.(?:-)?|-)/g),match=>Number(match[1]));
+   if(premiseNumbers.length!==count||premiseNumbers.some((number,j)=>number!==j+1))return false;
+   if(q.source_numero_original!==n||q.source?.library_file_id!==paper.source.library_file_id)return false;
    ids.add(q.id);stems.add(stem);return true;
   });
  }

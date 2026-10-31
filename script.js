@@ -3299,7 +3299,7 @@ function renderSimQuestion() {
         ' de ' + simState.preguntas.length + ' respondidas';
     document.getElementById('sim-num-badge').textContent = 'N° ' + (q.numero_original || idx + 1);
     document.getElementById('sim-question-text').textContent = campo(q, 'pregunta') || '';
-    document.getElementById('sim-question-text').style.whiteSpace = q.source?.library_file_id === 'libfile_4d1b0a9d40e08191ae9748164693b47f' ? 'pre-line' : '';
+    document.getElementById('sim-question-text').style.whiteSpace = q.id?.startsWith('semana2-testb-') ? 'pre-line' : '';
     window.StudyMedia?.render(document.getElementById('sim-question-text'),q.study_image);
     renderBqDificultad_sim(campo(q, 'dificultad') || 'facil');
 
@@ -3528,6 +3528,7 @@ window.finalizarSimulacro = function () {
             var question = document.createElement('p');
             question.className = 'sim-rev-question';
             question.textContent = campo(q, 'pregunta') || '';
+            if (q.id?.startsWith('semana2-testb-')) question.style.whiteSpace = 'pre-line';
             item.appendChild(question);
             if (ans.selected !== null && opciones[ans.selected]) {
                 var selected = document.createElement('p');
