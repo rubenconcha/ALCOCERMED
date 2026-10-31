@@ -130,7 +130,22 @@
         20,
         0
       ]
+    },
+    {
+      "key": "semana2-testb-virtual",
+      "curatedId": "semana2-testb-virtual",
+      "scope": "semana2-testb-virtual",
+      "kind": "mini",
+      "title": "Simulacro Semana 2 – Test B – Grupo Virtual",
+      "type": "Simulacro Semana 2",
+      "minutes": 50,
+      "questionCount": 50,
+      "split": [
+        30,
+        20,
+        0
+      ]
     }
   ],
-  "version": 4
+  "version": 5
 }

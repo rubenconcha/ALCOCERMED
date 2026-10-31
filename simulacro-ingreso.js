@@ -137,6 +137,20 @@
         }
     };
 
+    const openEntranceLibrary = window.openSimulacro;
+    window.openRequestedSimulation = async function () {
+        const key = new URLSearchParams(window.location.search).get('simulacro');
+        if (!key) return;
+        openEntranceLibrary();
+        await window.EntranceLibrary.open();
+        const format = window.EntranceLibrary.format(key);
+        if (!format) return showToast('No encontramos el simulacro solicitado.', 'info');
+        const search = document.getElementById('sim-library-search');
+        search.value = format.title;
+        search.dispatchEvent(new Event('input'));
+        window.selectEntranceExam(key);
+    };
+
     window.iniciarSimulacro = async function () {
         const format = formatFor(selected);
         if (!format) return showToast('Elige una prueba del catálogo.', 'info');

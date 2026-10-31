@@ -244,6 +244,7 @@ function enterVerifiedApp(user) {
     setTimeout(sincronizarPerfilEnNube, 2000);
 
     if (new URLSearchParams(window.location.search).get('seccion') === 'atlas' && typeof openAtlas === 'function') openAtlas();
+    else if (new URLSearchParams(window.location.search).get('simulacro') && window.openRequestedSimulation) window.openRequestedSimulation().catch(function(error) { showToast(error.message, 'error'); });
     else restoreCampusAfterPlans();
     if (window.openRequestedMindmap) window.openRequestedMindmap().catch(function(error) { console.warn("No se pudo abrir el mapa solicitado", error); });
 
@@ -3298,6 +3299,7 @@ function renderSimQuestion() {
         ' de ' + simState.preguntas.length + ' respondidas';
     document.getElementById('sim-num-badge').textContent = 'N° ' + (q.numero_original || idx + 1);
     document.getElementById('sim-question-text').textContent = campo(q, 'pregunta') || '';
+    document.getElementById('sim-question-text').style.whiteSpace = q.source?.library_file_id === 'libfile_4d1b0a9d40e08191ae9748164693b47f' ? 'pre-line' : '';
     window.StudyMedia?.render(document.getElementById('sim-question-text'),q.study_image);
     renderBqDificultad_sim(campo(q, 'dificultad') || 'facil');
 
@@ -3472,7 +3474,7 @@ window.finalizarSimulacro = function () {
     document.getElementById('sim-result-title').textContent = simState.mode === 'oficial' && simState.independentScope
         ? (pct >= 80 ? 'Buen resultado en este bloque' : 'Revisa los mecanismos de este bloque') : title;
     document.getElementById('sim-result-score').textContent =
-        correctas + ' de ' + total + ' correctas · ' + pct + '% de acierto';
+        correctas + ' de ' + total + ' correctas · ' + pct + '% de acierto' + (simState.selectedExamen === 'Simulacro Semana 2 – Test B – Grupo Virtual' ? ' · ' + correctas + '/50 puntos' : '');
     document.getElementById('sim-rs-correct').textContent = correctas;
     document.getElementById('sim-rs-wrong').textContent = incorrectas;
     document.getElementById('sim-rs-pending').textContent = sinResponder;
