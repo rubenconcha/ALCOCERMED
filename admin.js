@@ -172,6 +172,7 @@ async function refreshAdminData() {
   await loadAllData();
   const active = document.querySelector('.admin-section.active');
   renderCurrentSection(active ? active.id.replace('section-', '') : 'dashboard');
+  if(typeof window!=='undefined')window.AdminSectionTracking?.refreshProfile();
 }
 
 function renderCurrentSection(section) {

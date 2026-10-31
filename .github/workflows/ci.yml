@@ -29,6 +29,8 @@ jobs:
           node --check admin.js
           node --check question-review.js
           node --test tests/question-review.test.cjs
+          node --check admin-subject-errors.js
+          node --test tests/admin-subject-errors.test.cjs
           node --check admin-section-tracking.js
           node --check campus-section-tracking.js
           node --test tests/admin-section-tracking.test.cjs
