@@ -6,7 +6,7 @@
  const locked=e=>!e.demo&&!e.free&&CampusAccess.isFree();
  function render(){
   const query=normalize($('sim-library-search').value),scope=$('sim-library-scope').value;
-   const visible=entries.filter(e=>(!scope||e.scope===scope)&&normalize(e.title+' '+e.type).includes(query));
+   const visible=entries.filter(e=>(!scope||(scope==='mini-foundations'?e.kind==='mini':e.scope===scope))&&normalize(e.title+' '+e.type).includes(query));
   list.replaceChildren();
   for(const e of visible){
    const card=document.createElement('article');card.id='entrance-'+e.key;card.dataset.examKey=e.key;card.className='sim-library-card';
