@@ -4,8 +4,8 @@
  function validateWeek2(paper){
   if(paper.id!=='semana2-testb-virtual'||paper.scope!=='semana2-testb-virtual'||paper.duration!==50||paper.total_points!==50||paper.questions?.length!==50||paper.review_status!=='approved'||paper.source?.library_file_id!=='libfile_f07bb5b6ade08191ada6ac361f117fdc')return false;
   const ids=new Set(),stems=new Set();
-  const three=['Si considera que 1 es correcto','Si considera que 2 es correcto','Si considera que 3 es correcto','Si considera que 1-2-3 son correctos','Si considera que 1-2-3 son falsos'];
-  const two=['Si considera que 1 es correcto','Si considera que 2 es correcto','Si considera que 1-2 son correctos','Si considera que 1-2 son falsos'];
+  const three=['1 es correcto','2 es correcto','3 es correcto','Todos son correctos','Ninguno es correcto'];
+  const two=['1 es correcto','2 es correcto','Ambos son correctos','Ninguno es correcto'];
   const keys3={'100':'A','010':'B','001':'C','111':'D','000':'E'},keys2={'10':'A','01':'B','11':'C','00':'D'};
   return paper.questions.every((q,i)=>{
    const n=i+1,count=n<=30?3:2,options=count===3?three:two;
