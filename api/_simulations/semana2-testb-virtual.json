@@ -322,7 +322,7 @@
       "source_numero_original": 7,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": ".Respecto a una sindesmosis:\n1.Los huesos están unidos exclusivamente por cartílago hialino.\n2.Los huesos se unen mediante ligamentos o membranas interóseas.\n3.Siempre es completamente inmóvil.",
+      "pregunta": "Respecto a una sindesmosis:\n1.Los huesos están unidos exclusivamente por cartílago hialino.\n2.Los huesos se unen mediante ligamentos o membranas interóseas.\n3.Siempre es completamente inmóvil.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -337,7 +337,8 @@
         "pdf_pages": [
           310
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -459,7 +460,7 @@
       "source_numero_original": 10,
       "materia": "MORFOFUNCION",
       "tema": "Articulaciones",
-      "pregunta": "...Sobre las sincondrosis:\n1.Los huesos están unidos principalmente por cartílago hialino.\n2.La sínfisis del pubis es el ejemplo clásico de sincondrosis.\n3.Presentan siempre una cápsula articular",
+      "pregunta": "Sobre las sincondrosis:\n1.Los huesos están unidos principalmente por cartílago hialino.\n2.La sínfisis del pubis es el ejemplo clásico de sincondrosis.\n3.Presentan siempre una cápsula articular",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -475,7 +476,8 @@
           310,
           311
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -867,7 +869,7 @@
       "source_numero_original": 19,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "…\n1. El grupo suprahioideo está formado por digástrico, geniohioideo, omohioideo y estilohioideo.\n2. El estilohioideo está inervado por el asa cervical.\n3. El geniohioideo recibe fibras de C1 que viajan con el nervio hipogloso.",
+      "pregunta": "1. El grupo suprahioideo está formado por digástrico, geniohioideo, omohioideo y estilohioideo.\n2. El estilohioideo está inervado por el asa cervical.\n3. El geniohioideo recibe fibras de C1 que viajan con el nervio hipogloso.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -883,7 +885,8 @@
           357,
           358
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -913,7 +916,7 @@
       "source_numero_original": 20,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "…\n1. La contracción bilateral del esternocleidomastoideo lleva la cabeza directamente hacia delante y abajo.\n2. La contracción unilateral del esternocleidomastoideo rota la cabeza hacia el mismo lado.\n3. El esternocleidomastoideo está inervado principalmente por el nervio facial",
+      "pregunta": "1. La contracción bilateral del esternocleidomastoideo lleva la cabeza directamente hacia delante y abajo.\n2. La contracción unilateral del esternocleidomastoideo rota la cabeza hacia el mismo lado.\n3. El esternocleidomastoideo está inervado principalmente por el nervio facial",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -933,7 +936,8 @@
           "original": "B",
           "revised": "A",
           "reason": "Saladin PDF 359, impresa 331: la acción bilateral descrita en 1 es correcta; la unilateral rota al lado contrario, no al mismo; no recibe como inervación principal el facial."
-        }
+        },
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -963,7 +967,7 @@
       "source_numero_original": 21,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ".Con relación al microscopio.\n1. Poder de resolución, que se define como la capacidad que tiene un microscopio para distinguir como separados o diferentes dos puntos muy cercanos entre sí.\n2. El LR para el ojo humano es de alrededor de O, 1 mm.\n3. Estructuras como los ribosomas (25 nm), los virus (30-100 nm), la membrana plasmática (7 nm), solo se pueden observar con microscopio electrónico.",
+      "pregunta": "Con relación al microscopio.\n1. Poder de resolución, que se define como la capacidad que tiene un microscopio para distinguir como separados o diferentes dos puntos muy cercanos entre sí.\n2. El LR para el ojo humano es de alrededor de O, 1 mm.\n3. Estructuras como los ribosomas (25 nm), los virus (30-100 nm), la membrana plasmática (7 nm), solo se pueden observar con microscopio electrónico.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -978,7 +982,8 @@
         "pdf_pages": [
           58
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -1015,7 +1020,7 @@
       "source_numero_original": 22,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ".Con relación al contraste.\n1. El contraste es la propiedad que nos permite distinguir estructuras celulares por su diferente color o brillo.\n2. La hematoxilina que nos permitirá ver los núcleos celulares de color azulado. \n3. La eosina que tiñe de rosa el citoplasma proporciona un mejor contraste.",
+      "pregunta": "Con relación al contraste.\n1. El contraste es la propiedad que nos permite distinguir estructuras celulares por su diferente color o brillo.\n2. La hematoxilina que nos permitirá ver los núcleos celulares de color azulado. \n3. La eosina que tiñe de rosa el citoplasma proporciona un mejor contraste.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1030,7 +1035,8 @@
         "pdf_pages": [
           59
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -1058,7 +1064,7 @@
       "source_numero_original": 23,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ".Con relación al microscopio de fluorescencia.\n1.La microscopía de fluorescencia se basa en la propiedad que tienen las sustancias fluorescentes de absorber luz de una determinada (λ) y emitir luz con una (λ)mayor.\n2.El microscopio de fluorescencia tiene una serie de filtros que permiten seleccionar la (λ).\n3.Algunas estructuras de los tejidos son autofluorescentes, como las fibras elásticas.",
+      "pregunta": "Con relación al microscopio de fluorescencia.\n1.La microscopía de fluorescencia se basa en la propiedad que tienen las sustancias fluorescentes de absorber luz de una determinada (λ) y emitir luz con una (λ)mayor.\n2.El microscopio de fluorescencia tiene una serie de filtros que permiten seleccionar la (λ).\n3.Algunas estructuras de los tejidos son autofluorescentes, como las fibras elásticas.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1074,7 +1080,8 @@
           60,
           61
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -1102,7 +1109,7 @@
       "source_numero_original": 24,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ".Con relación al microscopio confocal.\n1. El microscopio confocal se puede considerar una variante mejorada del microscopio de fluorescencia.\n2. El microscopio confocal ilumina solo un punto concreto de la muestra, de un modo menos intenso.\n3. La fuente de iluminación utilizada es, en este caso, una luz focal.",
+      "pregunta": "Con relación al microscopio confocal.\n1. El microscopio confocal se puede considerar una variante mejorada del microscopio de fluorescencia.\n2. El microscopio confocal ilumina solo un punto concreto de la muestra, de un modo menos intenso.\n3. La fuente de iluminación utilizada es, en este caso, una luz focal.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1117,7 +1124,8 @@
         "pdf_pages": [
           61
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -1154,7 +1162,7 @@
       "source_numero_original": 25,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ".Con relación al MET.\n1. MET consiste en un tubo de rayos catódicos con una columna de aproximadamente 1 m de longitud.\n2. El microscopio electrónico de transmisión se puedan realizar estudios in vivo.\n3. Las sustancias menos tipicas para el contraste son el citrato de plomo y el acetato de uranio.",
+      "pregunta": "Con relación al MET.\n1. MET consiste en un tubo de rayos catódicos con una columna de aproximadamente 1 m de longitud.\n2. El microscopio electrónico de transmisión se puedan realizar estudios in vivo.\n3. Las sustancias menos tipicas para el contraste son el citrato de plomo y el acetato de uranio.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1169,7 +1177,8 @@
         "pdf_pages": [
           63
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -1206,7 +1215,7 @@
       "source_numero_original": 26,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ".Con relación al MET.\n1. MET que se utiliza para observar superficies de células y tejidos a gran aumento y con gran resolución.\n2. El MET permite observar muestras de tamaño considerable, como trozos de tejido, organismos enteros, insectos.\n3. El MET los electrones secundarios son recogidos por un sensor y proyectados en un monitor de televisión, donde se observa la imagen con un aspecto metalizado y tridimensional",
+      "pregunta": "Con relación al MET.\n1. MET que se utiliza para observar superficies de células y tejidos a gran aumento y con gran resolución.\n2. El MET permite observar muestras de tamaño considerable, como trozos de tejido, organismos enteros, insectos.\n3. El MET los electrones secundarios son recogidos por un sensor y proyectados en un monitor de televisión, donde se observa la imagen con un aspecto metalizado y tridimensional",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1221,7 +1230,8 @@
         "pdf_pages": [
           64
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -1249,7 +1259,7 @@
       "source_numero_original": 27,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ".Con relación a técnicas que permiten ver al MET.\n1. El sombreado metálico es otra técnica que permite observar macromoléculas al MET.\n2. En la criofractura las muestras se congelan rápidamente a la temperatura del nitrógeno líquido -196 °C, se someten al vacío y se golpean con el borde de una cuchilla afilada.\n3. El contraste negativo es una técnica que permite observar macromoléculas al MET con una alta resolución.",
+      "pregunta": "Con relación a técnicas que permiten ver al MET.\n1. El sombreado metálico es otra técnica que permite observar macromoléculas al MET.\n2. En la criofractura las muestras se congelan rápidamente a la temperatura del nitrógeno líquido -196 °C, se someten al vacío y se golpean con el borde de una cuchilla afilada.\n3. El contraste negativo es una técnica que permite observar macromoléculas al MET con una alta resolución.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1274,7 +1284,8 @@
             "basis_url": "https://www.ars.usda.gov/northeast-area/docs/safety-health-and-environmental-training/liquid-nitrogen-safety/"
           }
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -1302,7 +1313,7 @@
       "source_numero_original": 28,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ".Con relación a la fijación.\n1. El método físico es un método de fijación muy lento, por lo que se suele utilizar cuando se necesita un diagnóstico urgente.\n2. El tejido se expone a temperaturas inferiores a -70 °C disminuyendo así la actividad de lisis enzimática e inmovilizando las estructuras celulares.\n3. El método químico más utilizado es la criofijación o congelación.",
+      "pregunta": "Con relación a la fijación.\n1. El método físico es un método de fijación muy lento, por lo que se suele utilizar cuando se necesita un diagnóstico urgente.\n2. El tejido se expone a temperaturas inferiores a -70 °C disminuyendo así la actividad de lisis enzimática e inmovilizando las estructuras celulares.\n3. El método químico más utilizado es la criofijación o congelación.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1317,7 +1328,8 @@
         "pdf_pages": [
           68
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -1345,7 +1357,7 @@
       "source_numero_original": 29,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ". Con relación a la inclusión.\n1. La inclusión puede tener lugar en parafina para muestras procesadas para el microscopio electrónico.\n2. La parafina es una mezcla de ceras compuesta por hidrocarburos de cadena larga con punto de fusión de 50°C. \n3. El objetivo de la inclusión es mantener el agua de los tejidos y reemplazarla por un medio que solidifica.",
+      "pregunta": "Con relación a la inclusión.\n1. La inclusión puede tener lugar en parafina para muestras procesadas para el microscopio electrónico.\n2. La parafina es una mezcla de ceras compuesta por hidrocarburos de cadena larga con punto de fusión de 50°C. \n3. El objetivo de la inclusión es mantener el agua de los tejidos y reemplazarla por un medio que solidifica.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1360,7 +1372,8 @@
         "pdf_pages": [
           69
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -1397,7 +1410,7 @@
       "source_numero_original": 30,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ". Con relación a los cortes.\n1. Para microscopía electrónica se hacen cortes finos (10-100 um) con un ultramicrotomo.\n2. Los cortes finos se colocan en redes de cobre o níquel para su observación al MEB.\n3. Criostato, que mantiene las muestras a una temperatura de -20°C. durante el corte.",
+      "pregunta": "Con relación a los cortes.\n1. Para microscopía electrónica se hacen cortes finos (10-100 um) con un ultramicrotomo.\n2. Los cortes finos se colocan en redes de cobre o níquel para su observación al MEB.\n3. Criostato, que mantiene las muestras a una temperatura de -20°C. durante el corte.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1412,7 +1425,8 @@
         "pdf_pages": [
           69
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -1482,7 +1496,7 @@
       "source_numero_original": 32,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "…Músculos que participan en la ROTACIÓN MEDIAL del húmero.\n1.Pectoral mayor + dorsal ancho + redondo mayor + deltoides anterior + coracobraquial + subescapular.\n2.Dorsal ancho + redondo mayor + fibras posteriores del deltoides.",
+      "pregunta": "Músculos que participan en la ROTACIÓN MEDIAL del húmero.\n1.Pectoral mayor + dorsal ancho + redondo mayor + deltoides anterior + coracobraquial + subescapular.\n2.Dorsal ancho + redondo mayor + fibras posteriores del deltoides.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1498,7 +1512,8 @@
           374,
           377
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -1525,7 +1540,7 @@
       "source_numero_original": 33,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "…Los músculos forman el grupo anterior que actúa sobre el hombro:\n1.Pectoral menor y serrato anterior.\n2.Pectoral mayor y serrato anterior.",
+      "pregunta": "Los músculos forman el grupo anterior que actúa sobre el hombro:\n1.Pectoral menor y serrato anterior.\n2.Pectoral mayor y serrato anterior.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1540,7 +1555,8 @@
         "pdf_pages": [
           373
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -1567,7 +1583,7 @@
       "source_numero_original": 34,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "…\n1. Los 11 pares de músculos intercostales externos se extienden desde el ángulo de la costilla en sentido posterior, hasta casi el principio del cartílago costal en sentido anterior.\n2. Los 11 pares de músculos intercostales internos son profundos a los intercostales externos y se extienden desde el margen del esternón al tubérculo de las costillas.",
+      "pregunta": "1. Los 11 pares de músculos intercostales externos se extienden desde el ángulo de la costilla en sentido posterior, hasta casi el principio del cartílago costal en sentido anterior.\n2. Los 11 pares de músculos intercostales internos son profundos a los intercostales externos y se extienden desde el margen del esternón al tubérculo de las costillas.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1587,7 +1603,8 @@
           "original": "E",
           "revised": "D",
           "reason": "Saladin PDF 361, impresa 333: ambas premisas intercambian los límites posteriores; son falsas. La E del patrón docente no existe en la leyenda A–D de esta sección."
-        }
+        },
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -1701,7 +1718,7 @@
       "source_numero_original": 37,
       "materia": "MORFOFUNCION",
       "tema": "Músculos",
-      "pregunta": "…\n1. El elevador del ano está compuesto únicamente por puborrectal y coccígeo.\n2. Los elevadores del ano derecho e izquierdo convergen en el cuerpo anococcígeo fibroso, que se inserta en el cóccix.",
+      "pregunta": "1. El elevador del ano está compuesto únicamente por puborrectal y coccígeo.\n2. Los elevadores del ano derecho e izquierdo convergen en el cuerpo anococcígeo fibroso, que se inserta en el cóccix.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1716,7 +1733,8 @@
         "pdf_pages": [
           369
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -1879,7 +1897,7 @@
       "source_numero_original": 41,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ".Con relación a la inclusión\n1.El objetivo es eliminar el agua de los tejidos y reemplazarla por un medio que solidifica.\n2. Proporciona soporte estructural para obtener cortes suficientemente gruesos.",
+      "pregunta": "Con relación a la inclusión\n1.El objetivo es eliminar el agua de los tejidos y reemplazarla por un medio que solidifica.\n2. Proporciona soporte estructural para obtener cortes suficientemente gruesos.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1894,7 +1912,8 @@
         "pdf_pages": [
           69
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -1920,7 +1939,7 @@
       "source_numero_original": 42,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ". Con relación al microtomo\n1.Los cortes se realizan con un microtomo y tienen 13-15 um de grosor \n2.Para microscopía electrónica se hacen cortes finos (10-100 nm) con un aparato denominado ultramicrotomo.",
+      "pregunta": "Con relación al microtomo\n1.Los cortes se realizan con un microtomo y tienen 13-15 um de grosor \n2.Para microscopía electrónica se hacen cortes finos (10-100 nm) con un aparato denominado ultramicrotomo.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1936,7 +1955,8 @@
           63,
           69
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -1971,7 +1991,7 @@
       "source_numero_original": 43,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ". Con relación a la fijación\n 1.Permite detener los procesos de degradación que ocurren tras la muerte celular\n 2.Provoca reacciones fisicoquímicas que preservan las estructuras y componentes químicos de las células",
+      "pregunta": "Con relación a la fijación\n 1.Permite detener los procesos de degradación que ocurren tras la muerte celular\n 2.Provoca reacciones fisicoquímicas que preservan las estructuras y componentes químicos de las células",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -1986,7 +2006,8 @@
         "pdf_pages": [
           68
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -2012,7 +2033,7 @@
       "source_numero_original": 44,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ". Con relación al MEB:\n1.Las muestras van a ser barridas por el haz de electrones\n2.Las muestras van a ser atravesadas por el haz de electrones",
+      "pregunta": "Con relación al MEB:\n1.Las muestras van a ser barridas por el haz de electrones\n2.Las muestras van a ser atravesadas por el haz de electrones",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -2027,7 +2048,8 @@
         "pdf_pages": [
           64
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -2053,7 +2075,7 @@
       "source_numero_original": 45,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ". Con relación al microscopio electrónico\n1. Utiliza como fuente de iluminación una lámpara de luz brillante\n2. Para que el haz de electrones atraviese la muestra, tiene que tener un espesor de 100-500nm",
+      "pregunta": "Con relación al microscopio electrónico\n1. Utiliza como fuente de iluminación una lámpara de luz brillante\n2. Para que el haz de electrones atraviese la muestra, tiene que tener un espesor de 100-500nm",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -2068,7 +2090,8 @@
         "pdf_pages": [
           63
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -2103,7 +2126,7 @@
       "source_numero_original": 46,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ". Con relación al microscopio confocal:\n1.La fuente de iluminación es un rayo láser, que permite una excitación de los fluorocromos menos eficaz que el uso de la luz.\n2.Posee un sistema de barrido, capaz de desplazar el rayo láser por la preparación en las dos dimensiones del espacio.",
+      "pregunta": "Con relación al microscopio confocal:\n1.La fuente de iluminación es un rayo láser, que permite una excitación de los fluorocromos menos eficaz que el uso de la luz.\n2.Posee un sistema de barrido, capaz de desplazar el rayo láser por la preparación en las dos dimensiones del espacio.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -2118,7 +2141,8 @@
         "pdf_pages": [
           61
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -2144,7 +2168,7 @@
       "source_numero_original": 47,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ". Con relación a los colorantes.\n1.La hematoxilina permite ver núcleos de color rosa y la eosina tiñe citoplasma de color azulado.\n 2.Los colorantes modifican la λ y, el uso combinado de varios colorantes, proporciona un mejor contraste.",
+      "pregunta": "Con relación a los colorantes.\n1.La hematoxilina permite ver núcleos de color rosa y la eosina tiñe citoplasma de color azulado.\n 2.Los colorantes modifican la λ y, el uso combinado de varios colorantes, proporciona un mejor contraste.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -2159,7 +2183,8 @@
         "pdf_pages": [
           59
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -2194,7 +2219,7 @@
       "source_numero_original": 48,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ".Con relación a TÉCNICA INMUNOHISTOQUÍMICA DIRECTA:\n1. El anticuerpo primario no está conjugado, sino que se utiliza un anticuerpo secundario conjugado con la molécula detectable al microscopio.\n2.La señal vendrá del anticuerpo secundario.",
+      "pregunta": "Con relación a TÉCNICA INMUNOHISTOQUÍMICA DIRECTA:\n1. El anticuerpo primario no está conjugado, sino que se utiliza un anticuerpo secundario conjugado con la molécula detectable al microscopio.\n2.La señal vendrá del anticuerpo secundario.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -2210,7 +2235,8 @@
           70,
           71
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         false,
@@ -2236,7 +2262,7 @@
       "source_numero_original": 49,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ". Con relación a CÁNCER DE MAMA E INMUNOHISTOQUIMICA:\n1. Las pacientes con tumores Her-2/ErbB2 positivos tienen peor pronóstico, pueden ser tratadas con un fármaco específico (transtuzumab).\n2.Las pacientes con tumores positivos para el receptor de estrógenos tienen mejor pronóstico y se pueden tratar con tamoxifeno.",
+      "pregunta": "Con relación a CÁNCER DE MAMA E INMUNOHISTOQUIMICA:\n1. Las pacientes con tumores Her-2/ErbB2 positivos tienen peor pronóstico, pueden ser tratadas con un fármaco específico (transtuzumab).\n2.Las pacientes con tumores positivos para el receptor de estrógenos tienen mejor pronóstico y se pueden tratar con tamoxifeno.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -2252,7 +2278,8 @@
           73,
           74
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -2288,7 +2315,7 @@
       "source_numero_original": 50,
       "materia": "BIOLOGIA CELULAR",
       "tema": "Biología Celular",
-      "pregunta": ". Con relación al límite de resolución:\n1. El LR para el ojo humano es de alrededor de O, 1 mm.\n2. El LR para el microscopio óptico convencional es de 0,2um.",
+      "pregunta": "Con relación al límite de resolución:\n1. El LR para el ojo humano es de alrededor de O, 1 mm.\n2. El LR para el microscopio óptico convencional es de 0,2um.",
       "puntos": 1,
       "dificultad": "medio",
       "source": {
@@ -2303,7 +2330,8 @@
         "pdf_pages": [
           58
         ],
-        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da"
+        "teacher_pattern_library_file_id": "libfile_4b42c6aa3ca081918b8ee1610b7d26da",
+        "display_normalization": "Se omite la puntuación separadora del número de pregunta; se conservan título y premisas."
       },
       "truth_values": [
         true,
@@ -2420,6 +2448,7 @@
         "reason": "Saladin PDF 369, impresa 341: ambas acciones descritas son verdaderas; corresponde C, no solo la segunda."
       }
     ],
-    "q1_note": "Enunciado literal; clave docente B preservada con explicación contextual del curso."
+    "q1_note": "Enunciado literal; clave docente B preservada con explicación contextual del curso.",
+    "display_format": "Se elimina únicamente puntuación separadora que quedaba al retirar el número del encabezado original. No cambia ninguna premisa."
   }
 }
