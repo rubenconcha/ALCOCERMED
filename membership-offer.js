@@ -5,6 +5,7 @@ window.MembershipOffer = (() => {
  const plans = {
   monthly: {name:'Plan mensual', price:100, regularPrice:200, duration:'1 mes'},
   semester: {name:'Plan semestral', price:200, regularPrice:499, duration:'6 meses'},
+  annual: {name:'Plan anual', price:500, regularPrice:799, duration:'1 año (12 meses)'},
   lifetime: {name:'Acceso de por vida', price:500, regularPrice:500, duration:'por vida'}
  };
  const active = () => Date.now() < endsAt;
@@ -21,7 +22,7 @@ window.MembershipOffer = (() => {
    card.querySelector('.membership-price strong').textContent=plan.price;
    const discount=card.querySelector('.membership-discount');if(discount)discount.hidden=false;
   }
-  const faq=document.getElementById('plans-price-faq');if(faq)faq.textContent=`El plan mensual cuesta Bs ${getPlan('monthly').price} por un mes. El semestral cuesta Bs ${getPlan('semester').price} por 6 meses. El acceso de por vida cuesta Bs 500 en un solo pago, sin renovaciones. El acceso comienza cuando activamos tu cuenta.`;
+  const faq=document.getElementById('plans-price-faq');if(faq)faq.textContent=`El plan mensual cuesta Bs ${getPlan('monthly').price} por un mes. El semestral cuesta Bs ${getPlan('semester').price} por 6 meses. El plan anual cuesta Bs ${getPlan('annual').price} en un solo pago por 12 meses. El acceso comienza cuando activamos tu cuenta.`;
   // Keep an open purchase dialog consistent when the offer closes.
   const dialog=document.getElementById('planDialog');if(dialog?.open&&dialog.dataset.plan)updatePurchase(dialog.dataset.plan);
  }
