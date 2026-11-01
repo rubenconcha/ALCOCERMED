@@ -98,7 +98,7 @@
         const selected = C.paper(bank, attempt.area);
         if (!selected || owner !== user()) return;
         const score = C.grade(questions, attempt.answers), records = previousScores();
-        records[selected.id] = { owner, paperId: selected.id, percent: score.percent, correct: score.correct, total: score.total, at: attempt.finishedAt };
+        records[selected.id] = { owner, paperId: selected.id, percent: score.percent, correct: score.correct, total: score.total, at: attempt.finishedAt, ...(attempt.result_snapshot || {}) };
         try { localStorage.setItem(key(owner) + ':papers', JSON.stringify(records)); } catch (_) { /* Last attempt remains available even if history cannot be saved. */ }
     }
     function filteredPapers() {
@@ -203,7 +203,7 @@
         if (!timed && !await ask(pending ? `Te faltan ${pending} preguntas por responder. ¿Quieres terminar y corregir?` : '¿Quieres terminar y ver tu resultado?')) { ending = false; return; }
         if (!attempt || attempt.finished) { ending = false; return; }
         if (pendingConfirmation) pendingConfirmation(false);
-        attempt.finished = true; attempt.timedOut = timed; attempt.finishedAt = Date.now(); stopClock(); save(); rememberResult(); results(); ending = false;
+        attempt.finished = true; attempt.timedOut = timed; attempt.finishedAt = Date.now(); attempt.result_snapshot = window.StudentResultsModel?.freezeSufficiency(questions, attempt, bank, C, title(attempt.area)) || null; stopClock(); save(); rememberResult(); results(); ending = false;
     }
     function results(filter = 'all') {
         root.classList.remove?.('sf-bank-layout');

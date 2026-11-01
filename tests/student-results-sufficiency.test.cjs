@@ -1,0 +1,30 @@
+// Exercise the real submission writer with the real bank, but synthetic accounts/storage only.
+const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const C=require('../suficiencia-core.js'),M=require('../student-results.js'),bank=require('../api/_sufficiency/bank.json');
+test('Suficiencia submission freezes the presented responses without changing score, then isolates logout',async()=>{
+ let now=1700000000000,authCallback;
+ const handlers={},storage=new Map(),intervals=new Map();let intervalId=0;
+ const root={innerHTML:'',classList:{contains:()=>false,add(){},remove(){}},addEventListener:(type,fn)=>handlers[type]=fn,replaceChildren(){this.innerHTML='';},scrollIntoView(){},querySelector:()=>null};
+ const context={currentUser:{id:'fixture-a'},document:{hidden:false,getElementById:id=>id==='nav-simulacro'?{classList:{add(){},remove(){}}}:root,querySelectorAll:()=>[],addEventListener(){}},location:{search:''},URLSearchParams,Uint32Array,AbortSignal,crypto:{getRandomValues:a=>{a[0]=27;return a;}},Date:class extends Date{static now(){return now;}},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},setInterval:fn=>{intervals.set(++intervalId,fn);return intervalId;},clearInterval:id=>intervals.delete(id),setTimeout(){},showScreen:()=>true,ensureSupabaseSdk:async()=>{},fetch:async()=>({ok:true,json:async()=>structuredClone(bank)})};
+ context.window={SufficiencyCore:C,StudentResultsModel:M,CampusAccess:{isFree:()=>false},addEventListener(){}};
+ context.getSupabase=()=>({auth:{getSession:async()=>({data:{session:{user:context.currentUser,access_token:'fixture'}}}),onAuthStateChange:fn=>authCallback=fn}});
+ vm.createContext(context);vm.runInContext(fs.readFileSync(require.resolve('../suficiencia.js'),'utf8'),context);
+ await context.window.Sufficiency.open('integral');
+ const click=(action,area)=>handlers.click({target:{closest:()=>({disabled:false,dataset:{sf:action,area}})}});
+ await click('run','simulacro:completo-01');
+ const initial=JSON.parse(storage.get('alcocermed:suficiencia:v1:fixture-a'));
+ handlers.change({target:{matches:selector=>selector==='input[name="sf-answer"]',value:'1'}});
+ const answered=JSON.parse(storage.get('alcocermed:suficiencia:v1:fixture-a'));
+ const questions=initial.ids.map(id=>bank.questions.find(q=>q.id===id)),expected=C.grade(questions,answered.answers);
+ now=initial.deadline+1;for(const fn of [...intervals.values()])fn();
+ const finished=JSON.parse(storage.get('alcocermed:suficiencia:v1:fixture-a'));
+ const record=JSON.parse(storage.get('alcocermed:suficiencia:v1:fixture-a:papers'))['completo-01'];
+ assert.equal(finished.finished,true);assert.deepEqual(finished.answers,answered.answers);
+ assert.equal(record.percent,expected.percent);assert.equal(record.correct,expected.correct);assert.equal(record.total,expected.total);
+ assert.equal(record.question_review.items.length,questions.length);
+ const first=record.question_review.items[0];assert.equal(first.selected,1);assert.deepEqual(first.options,questions[0].options.map((_,i)=>C.optionText(questions[0],i)));assert.deepEqual(first.accepted,[questions[0].correct]);
+ assert.equal(M.localRows(context.localStorage,'fixture-a').length,1);assert.equal(M.localRows(context.localStorage,'fixture-b').length,0);
+ const frozen=JSON.stringify(record.question_review);const changed=structuredClone(bank);changed.questions[0].correct=(changed.questions[0].correct+1)%changed.questions[0].options.length;
+ assert.equal(JSON.stringify(JSON.parse(storage.get('alcocermed:suficiencia:v1:fixture-a:papers'))['completo-01'].question_review),frozen);
+ authCallback('SIGNED_OUT',null);context.currentUser=null;assert.equal(root.innerHTML,'');assert.equal(intervals.size,0);
+});

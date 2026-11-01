@@ -1,7 +1,10 @@
-const CACHE_NAME = 'alcocermed-main-v142-selector-formato-banco';
+const CACHE_NAME = 'alcocermed-main-v143-student-results';
 const APP_SHELL = [
+    './student-results.js?v=1',
+    './student-results.css?v=1',
+    './question-review.js?v=2',
     './suficiencia-core.js?v=6',
-    './suficiencia.js?v=7',
+    './suficiencia.js?v=8',
     './suficiencia.css?v=7',
     './campus',
     './campus.html',
@@ -39,7 +42,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=4',
     './assets/fonts/outfit-900.ttf',
     './flashcard-workspace.js?v=6',
-    './script.js?v=20261030-suficiencia1',
+    './script.js?v=20261031-student-results1',
     './recuperar.html',
     './password-recovery.js?v=1',
     './password-recovery-redirect.js?v=1',

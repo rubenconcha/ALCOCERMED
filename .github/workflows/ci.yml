@@ -23,6 +23,10 @@ jobs:
         run: node tests/device-email-code.test.cjs
       - name: Check sufficiency exam bank and student flow
         run: node --test tests/suficiencia.test.cjs tests/suficiencia-levels.test.cjs
+      - name: Check student result history and isolation
+        run: |
+          node --check student-results.js
+          node --test tests/student-results.test.cjs tests/student-results-sufficiency.test.cjs
       - name: Syntax check JavaScript
         run: |
           node --check script.js

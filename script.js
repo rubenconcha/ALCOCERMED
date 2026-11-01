@@ -157,6 +157,7 @@ async function initAuth() {
 
 /** Muestra login y oculta app */
 function showLoginScreen() {
+    window.StudentResults?.clear();
     if (window.OfficialFlashcards) OfficialFlashcards.clear();
     if (window.FlashcardWorkspace) FlashcardWorkspace.clear();
     verifiedCampusUserId = null;
@@ -482,7 +483,7 @@ function showScreen(screenId, fromBack) {
     }
     if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
-    const screens = ['suficiencia-screen', 'home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen', 'atlas-screen'];
+    const screens = ['student-results-screen', 'suficiencia-screen', 'home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen', 'atlas-screen'];
     screens.forEach(function (id) {
         const el = document.getElementById(id);
         if (el) {

@@ -4,7 +4,7 @@
   return {version:1,items:questions.map((q,i)=>{
    const options=['a','b','c','d','e'].map(k=>read(q,'opcion_'+k)).filter(v=>v!=null&&String(v).trim()!=='').map(String);
    const selected=answers[i]?.selected??null;
-   return {number:q.numero_original||i+1,id:String(q.id||''),question:String(read(q,'pregunta')||''),options,selected,accepted:accepted(q,i),option_explanations:options.map((_,index)=>String(q.comentarios_opciones?.['ABCDE'[index]]||'')),explanation:String(read(q,'justificacion')||read(q,'comentario')||''),source:String(q.fuente||''),printed_page:String(q.pagina_impresa||''),pdf_page:String(q.paginas_pdf||'')};
+   return {number:q.numero_original||i+1,id:String(q.id||''),materia:String(read(q,'materia')||q.subject||''),tema:String(read(q,'tema')||q.topic||''),question:String(read(q,'pregunta')||''),options,selected,accepted:accepted(q,i),option_explanations:options.map((_,index)=>String(q.comentarios_opciones?.['ABCDE'[index]]||'')),explanation:String(read(q,'justificacion')||read(q,'comentario')||''),source:String(q.fuente||''),printed_page:String(q.pagina_impresa||''),pdf_page:String(q.paginas_pdf||'')};
   })};
  }
  function inspect(payload){
