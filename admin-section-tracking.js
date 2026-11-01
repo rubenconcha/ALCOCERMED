@@ -5,7 +5,7 @@
   const subjectLabel=v=>{const s=norm(v);return s.startsWith('morfo')?'Morfofunción':s.includes('biolog')?'Biología celular':/salud|educacion/.test(s)?'Educación en Salud e Investigación':v||'Sin materia registrada';};
   function records(data){
     const rows=[];
-    const add=(r,section,action,topic,subject,grade,date)=>{if(r.user_id)rows.push({user_id:String(r.user_id),section,action,topic:topic||'Sin tema registrado',subject:subjectLabel(subject),grade:grade==null?null:Number(grade),date:date||r.created_at,source:r});};
+    const add=(r,section,action,topic,subject,grade,date)=>{if(r.user_id)rows.push({user_id:String(r.user_id),section,action,topic:topic||'Sin tema registrado',subject:section==='flashcards'&&root.AdminFlashcardTopics?root.AdminFlashcardTopics.subjectLabel(subject):subjectLabel(subject),grade:grade==null?null:Number(grade),date:date||r.created_at,source:r});};
     (data.activity||[]).forEach(r=>{if(sections[r.section])add(r,r.section,r.resource_key==='menu'?'Sección visitada':r.action==='reviewed'?'Tarjeta repasada':r.action==='completed'?'Intento finalizado':'Recurso abierto',r.topic,r.subject,r.grade);});
     (data.sims||[]).forEach(r=>add(r,['evaluaciones','examenes','simulacros'].includes(r.menu_section)?r.menu_section:/^evaluaci[oó]n\s*:/i.test(r.simulacro_titulo||'')?'evaluaciones':'historico','Entrega guardada',r.simulacro_titulo,r.materia,r.porcentaje??r.score));
     (data.banco||[]).forEach(r=>add(r,'banco','Entrega guardada',r.tema,r.materia,r.porcentaje));
@@ -19,7 +19,7 @@
   if(typeof document==='undefined')return;
   const $=id=>document.getElementById(id),host=$('section-tracking');if(!host)return;
   const el=(tag,value,cls)=>{const e=document.createElement(tag);if(value!=null)e.textContent=value;if(cls)e.className=cls;return e;};
-  let visible=[],refreshProfile=null;
+  let visible=[],refreshProfile=null,refreshHistory=null;
   const menu=$('admin-menu-toggle'),sidebar=$('admin-sidebar');
   menu?.addEventListener('click',()=>{const open=sidebar.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
   sidebar?.addEventListener('click',e=>{if(e.target.closest('a')){sidebar.classList.remove('open');menu?.setAttribute('aria-expanded','false');}});
@@ -27,10 +27,13 @@
   Object.entries(sections).forEach(([id,label])=>picker.add(new Option(label,id)));
   picker.value='evaluaciones';
   function selectedRows(){return records(cachedData).filter(r=>r.section===picker.value && r.user_id!==currentAdmin?.id && !ADMIN_EMAILS.includes(String(cachedData.userMap?.[r.user_id]?.email||r.source.user_email||'').toLowerCase()));}
-  function populate(which){
+  function populate(which,preserve=false){
+    const previousSubject=subject.value,previousTopic=topic.value;
     const rows=selectedRows();
     if(which!=='topic'){subject.replaceChildren(new Option('Todas las materias',''));[...new Set(rows.map(r=>r.subject))].sort().forEach(v=>subject.add(new Option(v,v)));}
+    if(preserve&&[...subject.options].some(o=>o.value===previousSubject))subject.value=previousSubject;
     topic.replaceChildren(new Option('Todos los temas',''));[...new Set(rows.filter(r=>!subject.value||r.subject===subject.value).map(r=>r.topic))].sort().forEach(v=>topic.add(new Option(v,v)));
+    if(preserve&&[...topic.options].some(o=>o.value===previousTopic))topic.value=previousTopic;
     render();
   }
   function render(){
@@ -60,7 +63,14 @@
   }
   const formatDate=v=>v&&Number.isFinite(Date.parse(v))?new Date(v).toLocaleString('es-BO',{timeZone:'America/La_Paz'}):'Sin fecha registrada';
   function detail(s){
+    if(!currentAdmin)return;
     $('tracking-person').textContent=s.display+' · '+sections[picker.value];const content=$('tracking-detail');content.replaceChildren();
+    if(picker.value==='flashcards'&&root.AdminFlashcardTopics){
+      content.append(root.AdminFlashcardTopics.render(s.rows,s.user_id,{period:[$('tracking-from').value||'Inicio del registro',$('tracking-to').value||'Hoy'].join(' → ')+(subject.value?' · '+subject.value:'')+(topic.value?' · '+topic.value:''),historical:cachedData.flashcards,errors:(cachedData.errors||[]).filter(e=>['campus_section_activity','progreso_flashcards'].includes(e.table)),loading:cachedData.loading}));
+      const actor=currentAdmin.id;refreshHistory=()=>{if(currentAdmin?.id!==actor||!$('tracking-dialog').open)return;if(picker.value!=='flashcards'){$('tracking-dialog').close();refreshHistory=null;return;}const current=visible.find(person=>person.user_id===s.user_id);if(current)detail(current);else $('tracking-dialog').close();};
+      if(!$('tracking-dialog').open)$('tracking-dialog').showModal();return;
+    }
+    refreshHistory=null;
     if(!s.rows.length)content.append(el('p','Sin actividad registrada. Esto no demuestra que el estudiante no haya utilizado el recurso.'));
     s.rows.forEach(r=>{const card=el('article',null,'topic-report-stat');card.append(el('strong',r.topic),el('p',r.subject+' · '+r.action),el('p',formatDate(r.date)+(r.grade==null?'':' · Nota: '+r.grade+'%')));content.append(card);});
     $('tracking-dialog').showModal();
@@ -102,7 +112,12 @@
         const block=el('details',null,'student-tool-history');
         const latestResult=group.find(r=>r.grade!==null);
         block.append(el('summary',label+' · '+(group.length?group.length+(group.length===1?' registro':' registros')+(latestResult?' · Último resultado: '+latestResult.grade+'%':''):'Sin actividad registrada')));
-        block.open=group.length>0 && section==='evaluaciones';
+        block.open=group.length>0 && ['evaluaciones','flashcards'].includes(section);
+        if(section==='flashcards'&&root.AdminFlashcardTopics){
+          const errors=(cachedData.errors||[]).filter(e=>['campus_section_activity','progreso_flashcards'].includes(e.table));
+          block.append(root.AdminFlashcardTopics.render(group,userId,{period:date.value?'Fecha: '+date.value+' · Hora de Bolivia':'Todas las fechas',historical:cachedData.flashcards,errors,loading:cachedData.loading}));
+          (group.length||errors.length?content:inactive).append(block);return;
+        }
         if(cachedData.loading){block.append(el('p','Consulta en curso. Actualiza el perfil al terminar.'));content.append(block);return;}
         const errors=(cachedData.errors||[]).filter(e=>section==='evaluaciones'||section==='historico'?e.table==='resultados_simulacros':section==='flashcards'?['campus_section_activity','progreso_flashcards'].includes(e.table):section==='banco'?e.table==='resultados_banco':section==='juegos'?['evaluacion_resultados','evaluaciones'].includes(e.table):['campus_section_activity','resultados_simulacros'].includes(e.table));
         if(errors.length)block.append(el('p','Consulta incompleta: '+errors.map(e=>e.table).join(', ')));
@@ -124,5 +139,5 @@
     refreshProfile=()=>{if(currentAdmin?.id===actor&&content.isConnected&&$('modal-estudiante').classList.contains('open')){refreshErrors();draw();}};
     draw();refreshErrors();
   }
-  root.AdminSectionTracking={openStudent,refreshProfile:()=>refreshProfile?.(),render:()=>populate(),clear:()=>{refreshProfile=null;visible=[];$('tracking-results').replaceChildren();$('tracking-detail').replaceChildren();$('tracking-export').disabled=true;$('modal-est-body').replaceChildren();$('modal-estudiante').classList.remove('open');$('modal-estudiante').setAttribute('aria-hidden','true');if($('tracking-dialog').open)$('tracking-dialog').close();}};
+  root.AdminSectionTracking={openStudent,refreshProfile:()=>refreshProfile?.(),render:()=>{populate(undefined,true);refreshHistory?.();},clear:()=>{refreshHistory=null;refreshProfile=null;visible=[];$('tracking-results').replaceChildren();$('tracking-detail').replaceChildren();$('tracking-export').disabled=true;$('modal-est-body').replaceChildren();$('modal-estudiante').classList.remove('open');$('modal-estudiante').setAttribute('aria-hidden','true');if($('tracking-dialog').open)$('tracking-dialog').close();}};
 })(typeof window==='undefined'?globalThis:window);
