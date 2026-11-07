@@ -145,7 +145,18 @@
         20,
         0
       ]
+    },
+    {
+      "key": "semana3-grupo-virtual-2",
+      "curatedId": "semana3-grupo-virtual-2",
+      "scope": "semana3-grupo-virtual-2",
+      "kind": "mini",
+      "title": "Simulacro Semana 3 – Grupo Virtual 2",
+      "type": "Simulacro Semana 3",
+      "minutes": 50,
+      "questionCount": 50,
+      "split": [30, 20, 0]
     }
   ],
-  "version": 5
+  "version": 6
 }

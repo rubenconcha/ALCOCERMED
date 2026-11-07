@@ -3285,6 +3285,10 @@ function updateSimTimerDisplay() {
     }
 }
 
+function isWeeklySimQuestion(q) {
+    return /^semana(?:2-testb|3-virtual)-/.test(q.id || '');
+}
+
 function renderSimQuestion() {
     var idx = simState.currentIdx;
     var q = simState.preguntas[idx];
@@ -3300,7 +3304,7 @@ function renderSimQuestion() {
         ' de ' + simState.preguntas.length + ' respondidas';
     document.getElementById('sim-num-badge').textContent = 'N° ' + (q.numero_original || idx + 1);
     document.getElementById('sim-question-text').textContent = campo(q, 'pregunta') || '';
-    document.getElementById('sim-question-text').style.whiteSpace = q.id?.startsWith('semana2-testb-') ? 'pre-line' : '';
+    document.getElementById('sim-question-text').style.whiteSpace = isWeeklySimQuestion(q) ? 'pre-line' : '';
     window.StudyMedia?.render(document.getElementById('sim-question-text'),q.study_image);
     renderBqDificultad_sim(campo(q, 'dificultad') || 'facil');
 
@@ -3475,7 +3479,8 @@ window.finalizarSimulacro = function () {
     document.getElementById('sim-result-title').textContent = simState.mode === 'oficial' && simState.independentScope
         ? (pct >= 80 ? 'Buen resultado en este bloque' : 'Revisa los mecanismos de este bloque') : title;
     document.getElementById('sim-result-score').textContent =
-        correctas + ' de ' + total + ' correctas · ' + pct + '% de acierto' + (simState.selectedExamen === 'Simulacro Semana 2 – Test B – Grupo Virtual' ? ' · ' + correctas + '/50 puntos' : '');
+        correctas + ' de ' + total + ' correctas · ' + pct + '% de acierto' +
+        (simState.preguntas.every(isWeeklySimQuestion) ? ' · ' + correctas + '/' + total + ' puntos' : '');
     document.getElementById('sim-rs-correct').textContent = correctas;
     document.getElementById('sim-rs-wrong').textContent = incorrectas;
     document.getElementById('sim-rs-pending').textContent = sinResponder;
@@ -3529,7 +3534,7 @@ window.finalizarSimulacro = function () {
             var question = document.createElement('p');
             question.className = 'sim-rev-question';
             question.textContent = campo(q, 'pregunta') || '';
-            if (q.id?.startsWith('semana2-testb-')) question.style.whiteSpace = 'pre-line';
+            if (isWeeklySimQuestion(q)) question.style.whiteSpace = 'pre-line';
             item.appendChild(question);
             if (ans.selected !== null && opciones[ans.selected]) {
                 var selected = document.createElement('p');

@@ -21,8 +21,21 @@
    ids.add(q.id);stems.add(stem);return true;
   });
  }
+ function validateWeek3(paper, scope){
+  if(paper?.id!==scope||paper.scope!==scope||paper.duration!==50||paper.total_points!==50||paper.questions?.length!==50)return false;
+  return paper.questions.every((q,i)=>{
+   const n=i+1, count=n<=30?3:2, letters=count===3?'ABCDE':'ABCD';
+   const biology=(n>=21&&n<=30)||n>=41, subject=biology?'BIOLOGIA CELULAR':'MORFOFUNCION';
+   const statements=Array.from(String(q.pregunta||'').matchAll(/^([123])\. .+/gm),match=>Number(match[1]));
+   return q.id===`semana3-virtual-${n}`&&q.numero_pregunta===n&&q.numero_original===n&&q.materia===subject&&Boolean(q.tema)&&q.puntos===1&&
+    statements.length===count&&statements.every((number,j)=>number===j+1)&&
+    [...letters].every(l=>Boolean(q['opcion_'+l.toLowerCase()]))&&(count===3||!q.opcion_e)&&
+    [...letters].includes(q.respuesta_correcta)&&q.respuestas_aceptadas?.length===1&&q.respuestas_aceptadas[0]===q.respuesta_correcta;
+  });
+ }
  function validate(paper,scope){
   if(scope==='semana2-testb-virtual')return validateWeek2(paper);
+  if(scope==='semana3-grupo-virtual-2')return validateWeek3(paper,scope);
   const mini=scope==='mini-foundations',total=mini?50:100;
   const rule=rules[scope];if(!rule||paper.scope!==scope||paper.duration!==total||paper.questions?.length!==total)return false;
   if(mini&&(paper.questions.filter(q=>q.coverage?.subject==='MORFOFUNCION'&&q.coverage.chapter===1).length!==15||paper.questions.filter(q=>q.coverage?.subject==='MORFOFUNCION'&&q.coverage.chapter===8).length!==15))return false;
