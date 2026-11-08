@@ -139,6 +139,10 @@
         return small.matches ? 'listWeek' : 'dayGridMonth';
     }
 
+    function calendarHeight() {
+        return small.matches ? 'auto' : 'max(790px, calc(100dvh - var(--shell-top, 63px) - 60px))';
+    }
+
     async function downloadProgram() {
         const control = board.querySelector('.fc-program-button');
         if (!calendar || control?.disabled) return;
@@ -182,7 +186,7 @@
                     headerToolbar: { left: 'prev,next today', center: 'title', right: 'dayGridMonth,listWeek program' },
                     buttonText: { month: 'Mes', list: 'Agenda', today: 'Hoy' },
                     customButtons: { program: { text: 'Descargar programa', click: downloadProgram } },
-                    height: small.matches ? 'auto' : '79vh', fixedWeekCount: true, dayMaxEvents: 2,
+                    height: calendarHeight(), fixedWeekCount: true, dayMaxEvents: 2,
                     eventDisplay: 'block', displayEventTime: false,
                     eventTimeFormat: { hour: '2-digit', minute: '2-digit', hour12: false },
                     views: { listWeek: { displayEventTime: true, displayEventEnd: true } },
@@ -419,7 +423,7 @@
 
     small.addEventListener('change', () => {
         if (!calendar) return;
-        calendar.setOption('height', small.matches ? 'auto' : '79vh');
+        calendar.setOption('height', calendarHeight());
         calendar.changeView(defaultView());
     });
     new ResizeObserver(([entry]) => {
