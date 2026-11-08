@@ -11,6 +11,58 @@
         return library;
     }
 
+    const pdfOptions = {
+        cMapUrl: '/vendor/pdfjs/cmaps/', cMapPacked: true,
+        standardFontDataUrl: '/vendor/pdfjs/standard_fonts/',
+        wasmUrl: '/vendor/pdfjs/wasm/',
+        isEvalSupported: false
+    };
+
+    function segmentedDocument({ numPages, starts, fetchSegment }) {
+        const segments = new Map();
+        let worker;
+        function dispose(segment) {
+            if (segment.controller.signal.aborted) return;
+            segment.controller.abort();
+            return segment.task?.destroy();
+        }
+        return {
+            numPages,
+            async getPage(number) {
+                const start = starts.findLast(page => page <= number);
+                let segment = segments.get(start);
+                if (segment) segments.delete(start);
+                else {
+                    const controller = new AbortController();
+                    segment = { controller };
+                    segment.result = Promise.all([loadLibrary(), fetchSegment(start, controller.signal)])
+                        .then(([pdfjs, data]) => {
+                            controller.signal.throwIfAborted();
+                            worker ||= pdfjs.PDFWorker.create();
+                            segment.task = pdfjs.getDocument({ ...pdfOptions, data, worker });
+                            return segment.task.promise;
+                        }).catch(error => {
+                            if (segments.get(start) === segment) segments.delete(start);
+                            dispose(segment)?.catch(() => {});
+                            throw error;
+                        });
+                }
+                segments.set(start, segment);
+                if (segments.size > 5) {
+                    const oldest = segments.keys().next().value;
+                    dispose(segments.get(oldest))?.catch(() => {});
+                    segments.delete(oldest);
+                }
+                const pdf = await segment.result;
+                return pdf.getPage(number - start + 1);
+            },
+            destroy() {
+                Promise.allSettled(Array.from(segments.values(), dispose)).then(() => worker?.destroy());
+                segments.clear();
+            },
+        };
+    }
+
     // Render PDF pages ourselves: Android browsers may replace embedded PDFs with an Open button.
     class SummaryPdfReader {
         static preload() { return loadLibrary(); }
@@ -99,15 +151,12 @@
             const pdfjs = await loadLibrary();
             if (revision !== this.revision) return;
             this.loading = pdfjs.getDocument({
+                ...pdfOptions,
                 url,
                 httpHeaders: headers,
                 disableStream: rangeOnly,
                 disableAutoFetch: rangeOnly,
                 rangeChunkSize: rangeOnly ? 256 * 1024 : undefined,
-                cMapUrl: '/vendor/pdfjs/cmaps/', cMapPacked: true,
-                standardFontDataUrl: '/vendor/pdfjs/standard_fonts/',
-                wasmUrl: '/vendor/pdfjs/wasm/',
-                isEvalSupported: false
             });
             const pdf = await this.loading.promise;
             if (revision !== this.revision) return;
@@ -119,6 +168,17 @@
             this.currentPage = initialPage;
             this.layout();
             await this.renderPage(initialPage, this.revision);
+        }
+
+        async openBook(book, cover) {
+            this.destroy();
+            this.host.hidden = false;
+            this.pdf = this.book = segmentedDocument(book);
+            this.cover = cover;
+            this.pageSize = { width: cover.width, height: cover.height };
+            this.currentPage = cover.page;
+            this.layout();
+            await this.renderPage(cover.page, this.revision);
         }
 
         layout() {
@@ -147,15 +207,10 @@
             this.pages.replaceChildren(fragment);
             this.pages.scrollTop = (pageNumber - 1) * (height + 16);
             this.pages.scrollLeft = 0;
-            this.queue = Promise.resolve();
             this.observer = new IntersectionObserver(records => {
                 for (const record of records) {
-                    if (record.isIntersecting) {
-                        const number = Number(record.target.dataset.page);
-                        this.queue = this.queue.then(() => {
-                            if (revision === this.revision) return this.renderPage(number, revision);
-                        }).catch(() => { /* The page itself exposes a retry button. */ });
-                    }
+                    if (record.isIntersecting) this.renderPage(Number(record.target.dataset.page), revision)
+                        .catch(() => { /* The page itself exposes a retry button. */ });
                 }
             }, { root: this.pages, rootMargin: '200px 0px' });
             this.entries.forEach(entry => this.observer.observe(entry.el));
@@ -164,8 +219,19 @@
 
         async renderPage(number, revision) {
             const entry = this.entries[number - 1];
-            if (!entry || revision !== this.revision || entry.canvas) return;
+            if (!entry || revision !== this.revision || entry.canvas || entry.preview) return;
             if (entry.pending) return entry.pending;
+            if (number === this.cover?.page && this.zoom === 1) {
+                const image = document.createElement('img');
+                image.src = this.cover.url;
+                image.alt = this.cover.alt;
+                image.style.width = '100%';
+                image.style.height = '100%';
+                image.style.objectFit = 'contain';
+                entry.el.replaceChildren(image);
+                entry.preview = true;
+                return;
+            }
             const pdf = this.pdf;
             entry.pending = (async () => {
                 const page = await pdf.getPage(number);
@@ -186,8 +252,8 @@
                 if (revision !== this.revision) return;
                 entry.page = page; entry.canvas = canvas;
                 entry.el.replaceChildren(canvas);
-                const text = await page.getTextContent();
-                if (revision !== this.revision || entry.canvas !== canvas) return;
+                const text = await page.getTextContent().catch(() => null);
+                if (!text || revision !== this.revision || entry.canvas !== canvas) return;
                 const accessible = document.createElement('p');
                 accessible.className = 'summary-pdf-accessible';
                 accessible.textContent = text.items.map(item => item.str || '').join(' ');
@@ -270,6 +336,8 @@
             this.cancelRendering();
             const loading = this.loading;
             this.loading = null; this.pdf = null; this.pageSize = null;
+            this.book?.destroy();
+            this.book = null; this.cover = null;
             this.entries = []; this.pages.replaceChildren();
             this.zoom = 1; this.currentPage = 1;
             this.updateControls();

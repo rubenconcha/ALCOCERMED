@@ -18,7 +18,7 @@
     const monthFormat = new Intl.DateTimeFormat('es-BO', { month: 'long', year: 'numeric', timeZone: 'UTC' });
     const actions = {
         calendar: () => window.CampusCalendar?.open(),
-        texts: () => window.OfficialTexts?.open(),
+        texts: () => window.openOfficialTexts(),
         practice: () => window.showScreen('sufficiency-practice-screen'),
         results: () => window.openStudentResults(),
         logout: () => window.handleLogout(),

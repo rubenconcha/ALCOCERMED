@@ -27,7 +27,7 @@
     const downloadButton = $('official-texts-download');
     const readerDownloadStatus = $('official-texts-reader-download-status');
     const resourceUrl = text => '/api/texto-oficial?materia=' + text.slug;
-    let reader, current, loaded, releaseTimer, revision = 0, opening, previewUrl;
+    let reader, current, loaded, releaseTimer, revision = 0, opening, previewUrl, bookCoverUrl;
 
     async function authorization() {
         const { data } = await getSupabase().auth.getSession();
@@ -46,17 +46,57 @@
         clearTimeout(releaseTimer);
         loaded = null;
         reader?.destroy();
+        if (bookCoverUrl) URL.revokeObjectURL(bookCoverUrl);
+        bookCoverUrl = null;
     }
 
-    async function showPreview(text, headers, signal) {
+    async function prepareBook(text, headers, signal) {
         const response = await fetch(resourceUrl(text) + '&vista=portada', { headers, signal });
-        if (!response.ok) return;
+        if (!response.ok) return false;
+        const grant = response.headers.get('X-Official-Reader');
+        if (grant) headers['X-Official-Reader'] = grant;
+        const starts = (response.headers.get('X-Official-Page-Starts') || '').split(',').map(Number);
         const blob = await response.blob();
-        if (signal.aborted) return;
+        if (signal.aborted) return false;
         previewUrl = URL.createObjectURL(blob);
         preview.alt = 'Portada de ' + text.title;
         preview.src = previewUrl;
         preview.hidden = false;
+        if (starts[0] !== 1 || !starts.every((page, i) => Number.isInteger(page) && page <= text.pages && (!i || page > starts[i - 1]))) return false;
+        await preview.decode();
+        if (signal.aborted) return false;
+        const url = previewUrl;
+        await reader.openBook({
+            numPages: text.pages,
+            starts,
+            async fetchSegment(start, cancel) {
+                const path = resourceUrl(text) + '&vista=tramo&desde=' + start;
+                const signal = AbortSignal.any([cancel, AbortSignal.timeout(45000)]);
+                let result = await fetch(path, { headers, signal });
+                if (result.status === 401) {
+                    Object.assign(headers, await authorization());
+                    result = await fetch(path, { headers, signal });
+                }
+                if (!result.ok) throw new Error('No pudimos cargar estas páginas.');
+                return new Uint8Array(await result.arrayBuffer());
+            },
+        }, { page: text.coverPage || 1, url, alt: preview.alt, width: preview.naturalWidth, height: preview.naturalHeight });
+        if (signal.aborted) return false;
+        bookCoverUrl = url;
+        previewUrl = null;
+        return true;
+    }
+
+    async function openFullReader(text, headers, signal) {
+        const url = resourceUrl(text) + '&vista=lector';
+        if (!headers['X-Official-Reader']) {
+            const response = await fetch(url, { method: 'POST', headers, signal });
+            if (!response.ok) throw new Error('Lector no disponible');
+            const { grant } = await response.json();
+            if (typeof grant !== 'string') throw new Error('Lector no disponible');
+            headers['X-Official-Reader'] = grant;
+        }
+        if (!signal.aborted) await reader.open(url, { headers, rangeOnly: true, initialPage: text.coverPage });
     }
 
     async function read(text) {
@@ -79,16 +119,10 @@
         try {
             const headers = await authorization();
             if (version !== revision || !dialog.open) return;
-            const url = resourceUrl(text) + '&vista=lector';
-            const response = await fetch(url, { method: 'POST', headers, signal });
-            if (!response.ok) throw new Error('Lector no disponible');
-            const { grant } = await response.json();
-            if (signal.aborted) return;
-            if (typeof grant !== 'string') throw new Error('Lector no disponible');
-            headers['X-Official-Reader'] = grant;
-            showPreview(text, headers, signal).catch(() => { /* The PDF stays usable without a preview. */ });
             reader ||= new SummaryPdfReader(pages, { label: 'texto oficial', pageJump: true });
-            await reader.open(url, { headers, rangeOnly: true, initialPage: text.coverPage });
+            const ready = await prepareBook(text, headers, signal).catch(() => false);
+            if (signal.aborted) return;
+            if (!ready) await openFullReader(text, headers, signal);
             if (version !== revision || !dialog.open) return;
             controller.abort();
             clearPreview();
@@ -178,7 +212,9 @@
     });
     window.OfficialTexts = {
         open() {
-            if (showScreen('official-texts-screen') === false) return;
+            return showScreen('official-texts-screen');
+        },
+        preload() {
             if (!navigator.connection?.saveData) SummaryPdfReader.preload().catch(() => {});
         },
         close() {

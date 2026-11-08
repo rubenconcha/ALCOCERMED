@@ -29,8 +29,6 @@
 <link rel="stylesheet" href="campus-access.css?v=2"><link rel="stylesheet" href="campus-navigation.css?v=3"><link rel="stylesheet" href="campus-home.css?v=5"><link rel="stylesheet" href="campus-topics.css?v=4">
     <link rel="stylesheet" href="login-polish.css?v=2">
     <link rel="stylesheet" href="campus-preview.css?v=3">
-    <link rel="stylesheet" href="mindmap-viewer.css?v=8">
-    <link rel="stylesheet" href="intocables-sheets.css?v=1">
     <link rel="stylesheet" href="study-depth.css?v=3">
     <link rel="stylesheet" href="flashcard-workspace.css?v=4">
     <link rel="stylesheet" href="flashcard-approved.css?v=4">
@@ -38,14 +36,12 @@
     <link rel="stylesheet" href="past-exams.css?v=4">
     <link rel="stylesheet" href="topic-evaluations.css?v=4">
     <link rel="stylesheet" href="campus-atlas.css?v=5">
-    <link rel="stylesheet" href="summary-pdf-reader.css?v=2">
-    <link rel="stylesheet" href="campus-study-resources.css?v=3">
     <link rel="stylesheet" href="study-calendar.css?v=3">
 <link rel="stylesheet" href="/device-limit.css?v=1">
 <link rel="stylesheet" href="study-media.css?v=20261021-visual5c">
     <link rel="stylesheet" href="suficiencia.css?v=7">
     <link rel="stylesheet" href="student-results.css?v=1">
-    <link rel="stylesheet" href="campus-shell.css?v=2">
+    <link id="campus-shell-style" rel="stylesheet" href="campus-shell.css?v=2">
 </head>
 
 <body class="login-active campus-shell">
@@ -251,7 +247,7 @@
                 <!-- Intocables -->
 
                 <li class="nav-item nav-item-simple" id="nav-official-texts">
-                    <a data-campus-screen="official-texts-screen" href="/campus?seccion=textos-oficiales" onclick="if (window.OfficialTexts) { OfficialTexts.open(); return false; }" aria-label="Textos oficiales" data-tooltip="textos oficiales">
+                    <a data-campus-screen="official-texts-screen" href="/campus?seccion=textos-oficiales" onclick="openOfficialTexts(); return false;" aria-label="Textos oficiales" data-tooltip="textos oficiales">
                         <span class="nav-icon nav-icon-summary"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/calendar-icons.svg#book"></use></svg></span>
                         <span class="nav-label">Textos oficiales</span>
                     </a>
@@ -1756,39 +1752,45 @@
     <script defer src="platform-polish.js?v=1"></script>
     <script defer src="config.js"></script>
     <script defer src="device_guard.js?v=9"></script>
-    <script defer src="campus-access.js?v=9"></script>
-    <script defer src="mindmap-premium.js?v=3"></script>
+    <script defer src="campus-access.js?v=10"></script>
     <script defer src="official-flashcards.js?v=1"></script>
     <script defer src="study-depth.js?v=16"></script>
     <script defer src="campus-section-tracking.js?v=1"></script>
     <script defer src="question-review.js?v=3"></script>
     <script defer src="study-media.js?v=20261021-visual5b"></script>
-    <script defer src="script.js?v=20261108-fluidez"></script>
-    <script defer src="mindmap-practice.js?v=20261021-visual5b"></script>
-    <script defer src="mindmap-viewer.js?v=20"></script>
-    <script defer src="intocables-hub.js?v=4"></script>
+    <script defer src="script.js?v=20261108-fluidez-2"></script>
     <script defer src="study-assessments.js?v=2"></script>
     <script defer src="simulation-scope.js?v=7"></script>
     <script defer src="simulacro-ingreso.js?v=10"></script>
     <script defer src="simulacro-library.js?v=6"></script>
     <script defer src="student-library.js?v=10"></script>
     <script defer src="flashcard-workspace.js?v=20261021-visual5b"></script>
-    <script defer src="summary-pdf-reader.js?v=4"></script>
-    <script defer src="official-texts.js?v=3"></script>
-    <script defer src="sufficiency-practice-content.js?v=1"></script>
-    <script defer src="sufficiency-practice.js?v=1"></script>
     <script defer src="study-calendar-data.js?v=1"></script>
     <script defer src="study-calendar-pdf.js?v=1"></script>
     <script defer src="study-calendar.js?v=2"></script>
-    <script defer src="campus-shell.js?v=1"></script>
-    <script defer src="study-summaries.js?v=20261021-visual5b"></script>
+    <script defer src="campus-shell.js?v=2"></script>
     <script defer src="past-exam-breakdown.js?v=3"></script>
     <script defer src="past-exams.js?v=9"></script>
     <script defer src="topic-evaluations.js?v=20261107-suficiencia"></script>
     <script defer src="campus-atlas.js?v=12"></script>
     <script defer src="suficiencia-core.js?v=10"></script>
-    <script defer src="suficiencia.js?v=11"></script>
+    <script defer src="suficiencia.js?v=12"></script>
     <script defer src="student-results.js?v=2"></script>
+    <template id="campus-section-assets">
+        <link rel="stylesheet" data-campus-assets="maps" href="mindmap-viewer.css?v=8">
+        <link rel="stylesheet" data-campus-assets="maps" href="intocables-sheets.css?v=1">
+        <link rel="stylesheet" data-campus-assets="summaries texts" href="summary-pdf-reader.css?v=2">
+        <link rel="stylesheet" data-campus-assets="texts practice" href="campus-study-resources.css?v=3">
+        <script data-campus-assets="maps" src="mindmap-premium.js?v=3"></script>
+        <script data-campus-assets="maps" src="mindmap-practice.js?v=20261021-visual5b"></script>
+        <script data-campus-assets="maps" src="mindmap-viewer.js?v=20"></script>
+        <script data-campus-assets="maps" src="intocables-hub.js?v=4"></script>
+        <script data-campus-assets="summaries texts" src="summary-pdf-reader.js?v=5"></script>
+        <script data-campus-assets="texts" src="official-texts.js?v=4"></script>
+        <script data-campus-assets="practice" src="sufficiency-practice-content.js?v=1"></script>
+        <script data-campus-assets="practice" src="sufficiency-practice.js?v=1"></script>
+        <script data-campus-assets="summaries" src="study-summaries.js?v=20261021-visual5b"></script>
+    </template>
 </body>
 
 </html>

@@ -21,10 +21,13 @@ window.CampusAccess = (() => {
         } catch (_) { /* La navegación al plan debe funcionar aunque el navegador limite el almacenamiento. */ }
         window.location.href = '/planes?desde=campus';
     }
-    async function resolve(client) {
+    async function check(client) {
         const { data, error } = await client.rpc('campus_access');
         if (error || !data?.ready) throw new Error('No pudimos verificar tu acceso. Intenta de nuevo.');
-        state = data;
+        return data;
+    }
+    function apply(access) {
+        state = access;
         catalogPromise = null;
         document.body.classList.toggle('campus-free', Boolean(isFree()));
         document.getElementById('free-account-banner').hidden = !isFree();
@@ -52,7 +55,8 @@ window.CampusAccess = (() => {
             });
         } catch (_) { /* Existing sample remains usable when catalogue is unavailable. */ }
     }
-    return { resolve, isFree, unlock, catalog, appendLocks };
+    async function resolve(client) { return apply(await check(client)); }
+    return { check, apply, resolve, isFree, unlock, catalog, appendLocks };
 })();
 
 window.continueWithGoogle = async function(button) {

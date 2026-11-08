@@ -22,7 +22,7 @@ let _supabase = null;
 let _supabaseSdkPromise = null;
 const scriptRequests = new Map();
 
-function loadScriptOnce(src) {
+function loadScriptOnce(src, ordered = false) {
     const url = new URL(src, document.baseURI).href;
     if (scriptRequests.has(url)) return scriptRequests.get(url);
     const request = new Promise(function(resolve, reject) {
@@ -58,13 +58,47 @@ function loadScriptOnce(src) {
 
         if (!existing) {
             script.src = url;
-            script.async = true;
+            script.async = !ordered;
             document.head.appendChild(script);
         }
     }).catch(error => { scriptRequests.delete(url); throw error; });
     scriptRequests.set(url, request);
     return request;
 }
+
+const campusAssetRequests = new Map();
+const campusAssetStyles = new Map();
+function loadCampusStyle(url) {
+    if (campusAssetStyles.has(url)) return campusAssetStyles.get(url);
+    const request = new Promise((resolve, reject) => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = url;
+        const timeout = setTimeout(() => link.onerror(), 25000);
+        link.onload = () => { clearTimeout(timeout); resolve(); };
+        link.onerror = () => {
+            clearTimeout(timeout);
+            link.remove();
+            reject(new Error('No se pudo cargar ' + url));
+        };
+        document.head.insertBefore(link, document.getElementById('campus-shell-style'));
+    }).catch(error => { campusAssetStyles.delete(url); throw error; });
+    campusAssetStyles.set(url, request);
+    return request;
+}
+
+window.loadCampusAssets = function (group) {
+    if (campusAssetRequests.has(group)) return campusAssetRequests.get(group);
+    const template = document.getElementById('campus-section-assets');
+    if (!template) return Promise.resolve();
+    const nodes = template.content.querySelectorAll(`[data-campus-assets~="${group}"]`);
+    const request = Promise.all(Array.from(nodes, node => node.localName === 'link'
+        ? loadCampusStyle(node.getAttribute('href'))
+        : loadScriptOnce(node.getAttribute('src'), true)))
+        .catch(error => { campusAssetRequests.delete(group); throw error; });
+    campusAssetRequests.set(group, request);
+    return request;
+};
 
 window.loadMindmapCatalog = () => window.MINDMAP_PREMIUM_CATALOG
     ? Promise.resolve() : loadScriptOnce('/mindmap-premium-catalog.js?v=20261021-visual5b');
@@ -211,27 +245,28 @@ function setAdminSectionVisible(visible) {
 /** Oculta login y muestra app */
 let campusEntry = null;
 let verifiedCampusUserId = null;
+async function verifyCampusDevice(client, user) {
+    if (!user.email || ADMIN_EMAILS.includes(user.email.toLowerCase())) return;
+    if (typeof DeviceGuard === 'undefined') throw new Error('No pudimos verificar tus dispositivos. Recarga la página.');
+    const device = await DeviceGuard.activateDevice(client, user.email);
+    if (device.ok) return;
+    if (device.code === 'DEVICE_LIMIT') {
+        await client.auth.signOut({ scope: 'local' });
+        if (currentUser?.id === user.id) currentUser = null;
+    }
+    throw new Error(device.error || 'No pudimos verificar este dispositivo.');
+}
 function enterApp(user) {
     if (!user || currentUser?.id !== user.id) return Promise.resolve();
     if (verifiedCampusUserId === user?.id && !document.body.classList.contains('login-active')) return Promise.resolve();
     if (campusEntry) return campusEntry;
     campusEntry = (async function () {
         try {
-            var client = getSupabase();
-            var isStudent = Boolean(user && user.email && !ADMIN_EMAILS.includes(user.email.toLowerCase()));
-            if (isStudent) {
-                if (typeof DeviceGuard === 'undefined') throw new Error('No pudimos verificar tus dispositivos. Recarga la página.');
-                var device = await DeviceGuard.activateDevice(client, user.email);
-                if (!device.ok) {
-                    if (device.code === 'DEVICE_LIMIT') {
-                        await client.auth.signOut({ scope: 'local' });
-                        currentUser = null;
-                    }
-                    throw new Error(device.error || 'No pudimos verificar este dispositivo.');
-                }
-            }
-            await CampusAccess.resolve(client);
+            const client = getSupabase();
+            const [, access] = await Promise.all([verifyCampusDevice(client, user), CampusAccess.check(client)]);
+            await campusDomReady;
             if (currentUser?.id !== user.id) return;
+            CampusAccess.apply(access);
             window.TopicEvaluations?.clear();
             clearBancoSuficiencia();
             flashcardsCache = null;
@@ -278,14 +313,16 @@ function enterVerifiedApp(user) {
     const campusParams = new URLSearchParams(window.location.search);
     const section = campusParams.get('seccion');
     if (section === 'atlas' && typeof openAtlas === 'function') openAtlas();
-    else if (section === 'textos-oficiales') window.OfficialTexts?.open();
+    else if (section === 'textos-oficiales') window.openOfficialTexts();
     else if (section === 'practica-suficiencia') showScreen('sufficiency-practice-screen');
     else if (section === 'calendario') window.CampusCalendar?.open();
     else if (section === 'examenes-pasados') window.openPastExams(campusParams.get('vista') === 'temas');
     else if (section === 'contacto') showScreen('campus-contact-screen');
     else if (campusParams.get('simulacro') && window.openRequestedSimulation) window.openRequestedSimulation().catch(function(error) { showToast(error.message, 'error'); });
     else restoreCampusAfterPlans();
-    if (window.openRequestedMindmap) window.openRequestedMindmap().catch(function(error) { console.warn("No se pudo abrir el mapa solicitado", error); });
+    if (campusParams.has('mapa')) window.loadCampusAssets('maps')
+        .then(() => { if (verifiedCampusUserId === user.id) return window.openRequestedMindmap?.(); })
+        .catch(() => showToast('No pudimos abrir el mapa solicitado.', 'error'));
 
 
     // ═══ DEVICE GUARD: ya se verificó antes de mostrar el campus ═══
@@ -536,9 +573,20 @@ function showScreen(screenId, fromBack) {
     window.CampusShell?.screenChanged(screenId);
     window.CampusPastExams?.screenChanged(screenId === 'past-exams-screen');
     if (screenId === 'study-area') refreshFlashcardReviews();
+    const group = {
+        'resumenes-screen': 'summaries',
+        'official-texts-screen': 'texts',
+        'sufficiency-practice-screen': 'practice',
+    }[screenId];
+    if (group) window.loadCampusAssets?.(group).then(() => {
+        if (screenId === currentCampusScreen && group === 'texts') window.OfficialTexts?.preload();
+    }).catch(() => {
+        if (screenId === currentCampusScreen) showToast('No pudimos cargar esta sección. Vuelve a abrirla.', 'error');
+    });
     return true;
 }
 
+window.openOfficialTexts = () => showScreen('official-texts-screen');
 window.openResumenes = function () {
     showScreen('resumenes-screen');
 };
@@ -1774,7 +1822,7 @@ window.addEventListener('appinstalled', function () {
 // PROTECCIÓN ANTI-COPIA EN CARDS
 // ──────────────────────────────────────────────
 // Inicialización unificada al cargar el DOM
-document.addEventListener('DOMContentLoaded', function () {
+const campusDomReady = new Promise(resolve => document.addEventListener('DOMContentLoaded', function () {
     initPwaInstall();
 
     // Botón revelar respuesta
@@ -1797,9 +1845,8 @@ document.addEventListener('DOMContentLoaded', function () {
         cc.addEventListener('selectstart', function (e) { e.preventDefault(); return false; });
     }
 
-    // Inicializar autenticación (gestiona sesión, login y acceso a la app)
-    initAuth();
-});
+    resolve();
+}, { once: true }));
 
 document.addEventListener('copy', function (e) {
     const sel = window.getSelection();
@@ -4096,7 +4143,7 @@ var mmState = {
 };
 
 window.openMindMaps = async function () {
-    showScreen('intocables-screen');
+    if (showScreen('intocables-screen') === false) return;
     switchIntocTab('mapas');
     mmState.selectedMateria = null;
     mmState.selectedTema = null;
@@ -4105,9 +4152,14 @@ window.openMindMaps = async function () {
     await loadMapasMentales();
     closeMobileSidebar();
 };
-window.openIntocables = function () {
-    showScreen('intocables-hub-screen');
-    if (window.IntocablesHub) window.IntocablesHub.open();
+window.openIntocables = async function () {
+    if (showScreen('intocables-hub-screen') === false) return;
+    try {
+        await window.loadCampusAssets('maps');
+        if (currentCampusScreen === 'intocables-hub-screen') return window.IntocablesHub?.open();
+    } catch (_) {
+        if (currentCampusScreen === 'intocables-hub-screen') showToast('No pudimos cargar Intocables. Vuelve a abrirlo.', 'error');
+    }
 };
 
 window.switchIntocTab = function (tab) {
@@ -4123,7 +4175,7 @@ window.switchIntocTab = function (tab) {
 async function loadMapasMentales() {
     setMmState('loading');
     try {
-        await window.loadMindmapCatalog();
+        await Promise.all([window.loadMindmapCatalog(), window.loadCampusAssets?.('maps')]);
         var localMapas = [
             { titulo: 'Temas principales de anatomía y fisiología', materia: 'Morfofunción', url_imagen: 'mapas mentales/morfo_01_anatomia_y_fisiologia.webp', descripcion: 'Anatomía, fisiología, organización del cuerpo y homeostasis. Basado en el capítulo 1 de Saladin.', acceso_gratis: true, fecha: new Date().toISOString() },
             { titulo: 'La química de la vida', materia: 'Morfofunción', url_imagen: 'mapas mentales/morfo_02_quimica_de_la_vida.webp', descripcion: 'Átomos, agua, metabolismo, biomoléculas y ATP. Basado en el capítulo 2 de Saladin.', acceso_gratis: true, fecha: new Date().toISOString() },
@@ -4493,7 +4545,6 @@ function closeMobileSidebar() {
 // ══════════════════════════════════════════════
 // ██  ARRANQUE DE LA APLICACIÓN  ██
 // ══════════════════════════════════════════════
-// initAuth() se llama dentro del DOMContentLoaded principal (arriba).
 // NOTA: NO duplicar aquí — causaría doble listener onAuthStateChange.
 
 // ══════════════════════════════════════════════════════
@@ -4638,3 +4689,6 @@ async function sincronizarPerfilEnNube() {
         console.warn('[Auth] Error sincronizando perfil:', e);
     }
 }
+
+// Start verification while the deferred study modules finish loading.
+initAuth();

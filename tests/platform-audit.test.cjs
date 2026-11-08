@@ -61,6 +61,30 @@ test('una comprobación repetida de la misma sesión conserva la sección del ca
   await context.enterApp({ id: 'student-1' });
 });
 
+test('la verificación paralela no abre el campus si se rechaza el dispositivo', async () => {
+  const source = fs.readFileSync('script.js', 'utf8');
+  const start = source.indexOf('let campusEntry = null;');
+  const end = source.indexOf('function enterVerifiedApp(user)', start);
+  const student = { id: 'student-1', email: 'student@example.invalid' };
+  const events = [];
+  let finishDevice;
+  const context = {
+    currentUser: student, ADMIN_EMAILS: [],
+    getSupabase: () => ({ auth: { signOut: async () => { events.push('sign-out'); } } }),
+    DeviceGuard: { activateDevice: () => new Promise(resolve => { finishDevice = resolve; }) },
+    CampusAccess: { check: async () => { events.push('check'); return { ready: true }; }, apply: () => events.push('apply') },
+    showLoginScreen() {},
+    showLoginError(message) { events.push(message); },
+    campusDomReady: Promise.resolve(),
+  };
+  vm.runInNewContext(source.slice(start, end), context);
+  const entry = context.enterApp(student);
+  assert.deepEqual(events, ['check']);
+  finishDevice({ ok: false, code: 'DEVICE_LIMIT', error: 'Dispositivo bloqueado' });
+  await entry;
+  assert.deepEqual(events, ['check', 'sign-out', 'Dispositivo bloqueado']);
+});
+
 test('los archivos precargados coinciden con las versiones actuales de campus y juegos', () => {
   for (const [html, sw] of [['campus.html', 'sw.js'], ['juegos/index.html', 'juegos/sw.js']]) {
     const page = fs.readFileSync(html, 'utf8'), worker = fs.readFileSync(sw, 'utf8');

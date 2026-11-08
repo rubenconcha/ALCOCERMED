@@ -2,6 +2,7 @@ const assert = require('node:assert/strict');
 const { createHmac } = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
+const { createRequire } = require('node:module');
 const { PassThrough } = require('node:stream');
 const test = require('node:test');
 const vm = require('node:vm');
@@ -50,11 +51,14 @@ test('conversion reference uses the corrected acre, joule, kelvin and SI prefix 
     assert.equal(rows['deca (da)'], '10¹');
 });
 
-test('the three verified UMSS books open their PDF and request a temporary download', async () => {
+test('the three verified UMSS books open their private page segments and download the originals', async () => {
     const downloads = [];
     function node() {
         return {
             children: [],
+            naturalWidth: 480,
+            naturalHeight: 640,
+            async decode() {},
             append(...children) { this.children.push(...children); },
             replaceChildren(...children) { this.children = children; },
             setAttribute(name, value) { this[name] = value; },
@@ -79,13 +83,22 @@ test('the three verified UMSS books open their PDF and request a temporary downl
     const loaded = [];
     const window = {};
     vm.runInNewContext(read('official-texts.js'), {
-        document, window, AbortController, URL, clearTimeout,
+        document, window, AbortController, AbortSignal, URL, clearTimeout,
         getSupabase: () => ({ auth: { getSession: async () => ({ data: { session: { access_token: 'test' } } }) } }),
         fetch: async (url, options) => {
             assert.equal(options.headers.Authorization, 'Bearer test');
             if (url.endsWith('&vista=portada')) {
+                assert.equal(options.headers['X-Official-Reader'], undefined);
+                return new Response('portada', { headers: { 'X-Official-Reader': 'reader', 'X-Official-Page-Starts': '1,9,10' } });
+            }
+            if (url.includes('&vista=tramo')) {
+                assert.equal(options.headers['X-Official-Reader'], 'reader');
+                loaded.push(url);
+                return new Response('%PDF-');
+            }
+            if (url.endsWith('&vista=lector')) {
                 assert.equal(options.headers['X-Official-Reader'], 'fixture');
-                return new Response('portada');
+                assert.fail('A segmented reader should not open the whole book');
             }
             assert.equal(options.method, 'POST');
             return Response.json({ grant: 'fixture' });
@@ -97,12 +110,12 @@ test('the three verified UMSS books open their PDF and request a temporary downl
                 assert.equal(options.label, 'texto oficial');
                 assert.equal(options.pageJump, true);
             }
-            async open(url, options) {
-                assert.equal(options.headers.Authorization, 'Bearer test');
-                assert.equal(options.headers['X-Official-Reader'], 'fixture');
-                assert.equal(options.rangeOnly, true);
-                assert.equal(options.initialPage, url.includes('biologia-celular') ? 9 : undefined);
-                loaded.push(url);
+            async openBook(book, cover) {
+                assert.equal(book.starts.join(','), '1,9,10');
+                assert.equal(cover.width, 480);
+                assert.equal(cover.page, book.numPages === 829 ? 9 : 1);
+                const bytes = await book.fetchSegment(10, new AbortController().signal);
+                assert.equal(Buffer.from(bytes).toString(), '%PDF-');
             }
         },
     });
@@ -116,13 +129,13 @@ test('the three verified UMSS books open their PDF and request a temporary downl
         const url = '/api/texto-oficial?materia=' + ['morfofuncion', 'biologia-celular', 'educacion-salud'][index];
         await open.onclick();
         await save.onclick();
-        assert.equal(loaded[index], url + '&vista=lector');
+        assert.equal(loaded[index], url + '&vista=tramo&desde=10');
         assert.equal(downloads[index], url + '&descarga=fixture');
         assert.equal(get('reader-title').textContent, card.children[2].textContent);
         assert.equal(get('status').hidden, true);
     }
     await get('download').onclick();
-    assert.equal(downloads.at(-1), loaded.at(-1).replace('&vista=lector', '&descarga=fixture'));
+    assert.equal(downloads.at(-1), loaded.at(-1).replace('&vista=tramo&desde=10', '&descarga=fixture'));
     assert.equal(new Set(loaded).size, 3);
 });
 
@@ -137,7 +150,7 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
     const secret = 'test-blob-key';
     const module = { exports: {} };
     vm.runInNewContext(read('api/texto-oficial.js'), {
-        module, require, URL, AbortSignal, Buffer,
+        module, require: createRequire(path.join(__dirname, '..', 'api', 'texto-oficial.js')), URL, AbortSignal, Buffer,
         process: { env: { SUPABASE_ANON_KEY: 'test-anon-key', BLOB_READ_WRITE_TOKEN: secret } },
         fetch: async (url, options) => {
             calls.push([new URL(url), options]);
@@ -145,7 +158,7 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
             return upstream();
         },
     });
-    async function request(subject, { method = 'GET', authorization, grant, view, reader } = {}) {
+    async function request(subject, { method = 'GET', authorization, grant, view, reader, start } = {}) {
         const res = new PassThrough();
         const chunks = [];
         const headers = {};
@@ -153,7 +166,7 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
         res.setHeader = (name, value) => { headers[name] = value; };
         await module.exports({
             method,
-            query: { materia: subject, descarga: grant, vista: view },
+            query: { materia: subject, descarga: grant, vista: view, desde: start },
             headers: { range: 'bytes=0-4', authorization, 'x-official-reader': reader, cookie: 'session=test' },
         }, res);
         return { status: res.statusCode, headers, body: Buffer.concat(chunks).toString() };
@@ -204,7 +217,29 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
     const cover = await request('morfofuncion', { view: 'portada', reader });
     assert.equal(cover.status, 200);
     assert.equal(cover.headers['Content-Type'], 'image/webp');
+    assert.equal(cover.headers['X-Official-Reader'], reader);
+    assert.match(cover.headers['X-Official-Page-Starts'], /^1,2,/);
     assert.equal(calls.length, before + 2);
+    const coverWithSession = await request('morfofuncion', { view: 'portada', authorization });
+    const readerFromCover = coverWithSession.headers['X-Official-Reader'];
+    assert.match(readerFromCover, /^\d{10}\.[\w-]{43}$/);
+    const segmentParams = { view: 'tramo', start: '2' };
+    assert.equal((await request('morfofuncion', segmentParams)).status, 401);
+    assert.equal((await request('morfofuncion', { ...segmentParams, reader: readerFromCover, start: '9999' })).status, 404);
+    assert.equal((await request('morfofuncion', { ...segmentParams, reader: readerFromCover })).status, 502);
+    const book = require('../api/_official_texts/segments.json').morfofuncion;
+    const [offset, length] = book.segments[2];
+    upstream = () => new Response(new Uint8Array(length), { status: 206, headers: {
+        'Content-Type': 'application/octet-stream',
+        'Content-Length': length,
+        'Content-Range': `bytes ${offset}-${offset + length - 1}/${book.bytes}`,
+    } });
+    const segment = await request('morfofuncion', { ...segmentParams, reader: readerFromCover });
+    assert.equal(segment.status, 200);
+    assert.equal(segment.headers['Content-Type'], 'application/pdf');
+    assert.equal(segment.headers['Cache-Control'], 'private, no-store');
+    assert.equal(segment.body.length, length);
+    assert.equal(calls.at(-1)[1].headers.Range, `bytes=${offset}-${offset + length - 1}`);
     upstream = () => new Response('<h1>Denied</h1>', { headers: { 'Content-Type': 'text/html' } });
     const rejected = await request('morfofuncion', { authorization });
     assert.equal(rejected.status, 502);

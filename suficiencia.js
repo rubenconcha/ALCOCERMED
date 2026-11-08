@@ -11,6 +11,7 @@
     const root = document.getElementById('suficiencia-screen');
     let bank = null, hasMedicine = false, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'matematicas', level = 'facil', catalogueArea = 'matematicas', catalogueMode = 'config', configSubject = '', configTopic = '', configLevel = 'todos', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
     let catalogueRequest = null, viewRevision = 0;
+    let preparation, preparationTimer;
     const details = new Map(), pendingPacks = new Map();
     const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
     const key = id => 'alcocermed:suficiencia:v1:' + id;
@@ -24,8 +25,13 @@
     const button = (action, text, extra = '') => `<button type="button" class="sf-button ${extra}" data-sf="${action}">${text}</button>`;
     const header = () => `<div class="banco-header sf-heading"><button type="button" class="btn-back-game" data-sf="home" aria-label="Volver al inicio"><i class="fas fa-arrow-left" aria-hidden="true"></i> volver</button><div><h1 class="banco-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg> Simulacro</h1><p class="banco-subtitle">Elige una materia y un tema. Responde y revisa la explicación.</p></div></div>`;
     function stopClock() { clearInterval(clock); clock = null; }
+    function cancelPreparation() {
+        if (preparationTimer) clearTimeout(preparationTimer);
+        preparationTimer = null;
+        preparation = null;
+    }
     function clear() {
-        generation++; stopClock(); if (pendingConfirmation) pendingConfirmation(false);
+        generation++; stopClock(); cancelPreparation(); if (pendingConfirmation) pendingConfirmation(false);
         bank = null; hasMedicine = false; owner = null; attempt = null; questions = []; level = 'facil'; catalogueArea = 'matematicas'; catalogueMode = 'config'; configSubject = ''; configTopic = ''; configLevel = 'todos'; ending = false; starting = false; renderedPassage = null;
         catalogueRequest = null; details.clear(); pendingPacks.clear();
         root.replaceChildren();
@@ -124,10 +130,13 @@
         document.getElementById('nav-simulacro')?.classList.add('nav-item-active');
         try {
             const loading = load();
-            if (!bank) root.innerHTML = header() + '<p role="status" class="sf-notice">Cargando materias…</p>';
+            if (!bank) catalogue();
             if (!await loading || revision !== viewRevision) return;
             area = next; catalogueArea = next;
-            catalogue();
+            const focused = document.activeElement?.id;
+            catalogue(false);
+            if (focused === 'sf-config-subject') root.querySelector('#sf-config-subject')?.focus({ preventScroll: true });
+            prepareConfiguration();
             const saved = attempt;
             if (saved && !saved.finished) questionPack(saved.ids).then(restored => {
                 if (restored.length && attempt === saved && revision === viewRevision) { questions = restored; startClock(); }
@@ -159,19 +168,32 @@
             (!query || normalized(p.title + ' ' + p.description + ' ' + (labels[p.subject] || 'completo') + ' ' + (C.levels[p.difficulty] || '')).includes(query)));
     }
     const configuration = () => ({subject:configSubject,topic:configTopic,level:configLevel});
+    function prepareConfiguration() {
+        cancelPreparation();
+        if (!bank || !configTopic || window.navigator?.connection?.saveData) return;
+        const config = configuration();
+        const seed = crypto.getRandomValues(new Uint32Array(1))[0];
+        const selection = C.selectConfiguredRows(bank, config, seed);
+        if (!selection.length) return;
+        const planned = preparation = { key: JSON.stringify(config), seed };
+        preparationTimer = setTimeout(() => {
+            if (preparation === planned) questionPack(selection.map(q => q.id)).catch(() => {});
+        }, 200);
+    }
     function subjectOptions() {
-        const option = ([id,label]) => `<option value="${id}" ${configSubject===id?'selected':''} ${Object.hasOwn(C.biomedicalSubjects,id)&&!hasMedicine?'disabled':''}>${esc(label)}</option>`;
+        const option = ([id,label]) => `<option value="${id}" ${configSubject===id?'selected':''} ${bank&&Object.hasOwn(C.biomedicalSubjects,id)&&!hasMedicine?'disabled':''}>${esc(label)}</option>`;
         return '<optgroup label="Materias de Medicina">' + Object.entries(C.biomedicalSubjects).map(option).join('') +
             '</optgroup><optgroup label="Suficiencia académica">' + Object.entries({...C.subjects,integral:'Completo · cuatro materias'}).map(option).join('') + '</optgroup>';
     }
     function configurationControls() {
-        const cfg=configuration(),count=C.configurationCount(bank,cfg),options=configSubject?C.topics(bank,configSubject):[];
+        const cfg=configuration(),count=bank ? C.configurationCount(bank,cfg) : 0,options=bank && configSubject ? C.topics(bank,configSubject) : [];
+        const topicLabel = configSubject ? (bank ? 'seleccionar tema' : 'cargando temas…') : 'primero selecciona una materia';
         const official = options.filter(t=>t.key.startsWith(C.officialTopicPrefix));
         const optionHtml = t => `<option value="${esc(t.key)}" ${configTopic===t.key?'selected':''}>${esc(t.label)}</option>`;
         const topicOptions = options.filter(t=>!t.key.startsWith(C.officialTopicPrefix)).map(optionHtml).join('') +
             (official.length ? '<optgroup label="Textos oficiales UMSA 2026">' + official.map(optionHtml).join('') + '</optgroup>' : '');
         const difficulties={todos:'Todos',...C.levels},icons={todos:'th',facil:'seedling',intermedio:'fire',dificil:'skull-crossbones'};
-        return `<section class="banco-config-card sf-bank-config" aria-label="Configurar simulacro"><div class="banco-selects-row"><div class="banco-select-group"><label class="banco-select-label" for="sf-config-subject"><i class="fas fa-book-medical" aria-hidden="true"></i> MATERIA</label><select id="sf-config-subject" class="banco-select-btn sf-bank-select"><option value="">seleccionar materia</option>${subjectOptions()}</select></div><div class="banco-select-group"><label class="banco-select-label" for="sf-config-topic"><i class="fas fa-tag" aria-hidden="true"></i> TEMA</label><select id="sf-config-topic" class="banco-select-btn sf-bank-select" ${configSubject?'':'disabled'}><option value="">${configSubject?'seleccionar tema':'primero selecciona una materia'}</option>${configSubject && configSubject!=='integral'?`<option value="*" ${configTopic==='*'?'selected':''}>Todos los temas</option>`:''}${topicOptions}</select></div></div><div class="banco-dificultad-row"><div class="banco-select-label"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"> NIVEL DE DIFICULTAD</div><div class="banco-dificultad-btns" role="group" aria-label="Nivel de dificultad">${Object.entries(difficulties).map(([id,label])=>`<button type="button" data-sf="config-level" data-level="${id}" class="banco-dif-btn banco-dif-${id==='intermedio'?'medio':id} ${configLevel===id?(id==='todos'?'banco-dif-active':'active-selected'):''}" aria-pressed="${configLevel===id}"><i class="fas fa-${icons[id]}" aria-hidden="true"></i> ${label}</button>`).join('')}</div></div><div class="banco-config-summary" role="status" aria-live="polite"><div class="banco-summary-item"><i class="fas fa-question-circle" aria-hidden="true"></i><span>${!configSubject||!configTopic?'se mostrarán hasta <strong>—</strong> preguntas en orden aleatorio':count?'se mostrarán <strong>'+count+'</strong> preguntas en orden aleatorio':'no hay preguntas con esta combinación; elige otro tema o nivel'}</span></div></div><button type="button" data-sf="run" data-area="config" class="btn-primary banco-start-btn sf-bank-start" ${count?'':'disabled'}><i class="fas fa-play" aria-hidden="true"></i> Iniciar simulacro</button></section>`;
+        return `<section class="banco-config-card sf-bank-config" aria-label="Configurar simulacro"><div class="banco-selects-row"><div class="banco-select-group"><label class="banco-select-label" for="sf-config-subject"><i class="fas fa-book-medical" aria-hidden="true"></i> MATERIA</label><select id="sf-config-subject" class="banco-select-btn sf-bank-select"><option value="">seleccionar materia</option>${subjectOptions()}</select></div><div class="banco-select-group"><label class="banco-select-label" for="sf-config-topic"><i class="fas fa-tag" aria-hidden="true"></i> TEMA</label><select id="sf-config-topic" class="banco-select-btn sf-bank-select" ${bank && configSubject?'':'disabled'}><option value="">${topicLabel}</option>${bank && configSubject && configSubject!=='integral'?`<option value="*" ${configTopic==='*'?'selected':''}>Todos los temas</option>`:''}${topicOptions}</select></div></div><div class="banco-dificultad-row"><div class="banco-select-label"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"> NIVEL DE DIFICULTAD</div><div class="banco-dificultad-btns" role="group" aria-label="Nivel de dificultad">${Object.entries(difficulties).map(([id,label])=>`<button type="button" data-sf="config-level" data-level="${id}" class="banco-dif-btn banco-dif-${id==='intermedio'?'medio':id} ${configLevel===id?(id==='todos'?'banco-dif-active':'active-selected'):''}" aria-pressed="${configLevel===id}"><i class="fas fa-${icons[id]}" aria-hidden="true"></i> ${label}</button>`).join('')}</div></div><div class="banco-config-summary" role="status" aria-live="polite"><div class="banco-summary-item"><i class="fas fa-question-circle" aria-hidden="true"></i><span>${!configSubject||!configTopic?'se mostrarán hasta <strong>—</strong> preguntas en orden aleatorio':count?'se mostrarán <strong>'+count+'</strong> preguntas en orden aleatorio':'no hay preguntas con esta combinación; elige otro tema o nivel'}</span></div></div><button type="button" data-sf="run" data-area="config" class="btn-primary banco-start-btn sf-bank-start" ${count?'':'disabled'}><i class="fas fa-play" aria-hidden="true"></i> Iniciar simulacro</button></section>`;
     }
     function progressPanel() {
         const snapshot = attempt?.result_snapshot;
@@ -197,6 +219,10 @@
         stopClock();
         if(catalogueMode==='config') {
             root.classList.add?.('sf-bank-layout');
+            if (!bank) {
+                root.innerHTML = header() + configurationControls() + '<p role="status" class="sf-notice">Cargando temas y progreso…</p>';
+                return;
+            }
             const count = bank.questions.filter(C.isOfficial).length;
             const guides = count ? `<details class="sf-sources"><summary>Textos oficiales UMSA 2026</summary><p>${count} ejercicios de AlcocerMed basados en las guías de Medicina UMSA. Elige una materia y busca el grupo «Textos oficiales UMSA 2026» en el selector de temas. Cada resolución indica la sección y las páginas de referencia.</p><ul>${Object.entries(officialGuides).map(([s,url])=>`<li><a href="${url}" target="_blank" rel="noopener noreferrer">Abrir guía de ${labels[s]}</a></li>`).join('')}</ul></details>` : '';
             const medicine = hasMedicine ? `<details class="sf-sources"><summary>Bibliografía de las materias de Medicina</summary><ul><li>Kenneth S. Saladin, <i>Anatomía y fisiología: la unidad entre forma y función</i>, 6.ª edición.</li><li>Alfonso Calvo González, <i>Biología celular biomédica</i>, Elsevier, 2015.</li><li>UMSS, <i>Educación en Salud e Investigación</i>, Curso Básico 2025–2026.</li></ul><p>Cada explicación indica la sección y las páginas de referencia.</p></details>` : `<div class="sf-notice" role="status">No pudimos cargar las materias de Medicina. ${button('reload','Volver a cargar')}</div>`;
@@ -212,14 +238,16 @@
         if (starting) return;
         const target = selectedArea || area;
         const configured = target === 'config' ? { ...(selectedArea ? configuration() : attempt?.configuration || configuration()) } : null;
-        if (configured && !C.configurationCount(bank, configured)) return;
+        if (configured && (!bank || !C.configurationCount(bank, configured))) return;
         const revision = generation, view = viewRevision;
         starting = true;
         if (attempt && !attempt.finished && !await ask('Hay una práctica en curso. ¿Quieres reemplazarla por una nueva?')) { starting = false; return; }
         const startButton = root.querySelector('[data-sf="start"]'); if (startButton) startButton.disabled = true;
         try {
             if (!await load() || view !== viewRevision) return;
-            const seed = crypto.getRandomValues(new Uint32Array(1))[0];
+            const seed = configured && preparation?.key === JSON.stringify(configured)
+                ? preparation.seed : crypto.getRandomValues(new Uint32Array(1))[0];
+            cancelPreparation();
             const selection = configured ? C.selectConfiguredRows(bank, configured, seed) : C.selectRows(bank, target, seed);
             if (!selection.length) throw new Error('No hay preguntas disponibles para esta selección.');
             const prepared = await questionPack(selection.map(q => q.id));
@@ -316,6 +344,7 @@
             if(id==='sf-config-subject') { configSubject=event.target.value; configTopic=''; }
             else configTopic=event.target.value;
             catalogue(false); root.querySelector('#'+id)?.focus({preventScroll:true});
+            prepareConfiguration();
             if(attempt&&!attempt.finished)startClock();
             return;
         }
@@ -337,11 +366,13 @@
         if(action==='config-level' || action==='config') {
             if(action==='config-level' && (C.levels[target.dataset.level] || target.dataset.level==='todos'))configLevel=target.dataset.level;
             catalogueMode='config';catalogue(action==='config');
+            prepareConfiguration();
             if(action==='config-level')root.querySelector(`[data-sf="config-level"][data-level="${configLevel}"]`)?.focus({preventScroll:true});
             if(attempt&&!attempt.finished)startClock();
             return;
         }
         if (action === 'legacy') {
+            cancelPreparation();
             catalogueMode='legacy';area='integral';cataloguePage=0;catalogueQuery='';catalogue();
             if(attempt&&!attempt.finished)startClock();
             return;
@@ -398,6 +429,7 @@
         return { questions: loaded, passages: bank.passages };
     }, beforeLeave() {
         viewRevision++;
+        cancelPreparation();
         if (pendingConfirmation) pendingConfirmation(false);
         document.getElementById('nav-simulacro')?.classList.remove('nav-item-active');
         return true;
