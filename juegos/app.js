@@ -6659,7 +6659,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initTheme() {
     try {
-        var theme = localStorage.getItem('alcocermed_theme') || 'dark';
+        var calendarTheme = localStorage.getItem('alcocermed-calendar-dark');
+        var theme = localStorage.getItem('alcocermed-campus-theme') || (calendarTheme === null
+            ? localStorage.getItem('alcocermed_theme') || 'light' : calendarTheme === '1' ? 'dark' : 'light');
         applyTheme(theme);
     } catch(e) {}
 }
@@ -6686,7 +6688,7 @@ function toggleTheme() {
         var current = document.documentElement.getAttribute('data-theme');
         var next = current === 'dark' ? 'light' : 'dark';
         applyTheme(next);
-        localStorage.setItem('alcocermed_theme', next);
+        localStorage.setItem('alcocermed-campus-theme', next);
     } catch(e) {}
 }
 initTheme();

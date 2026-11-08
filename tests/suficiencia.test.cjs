@@ -139,7 +139,7 @@ test('active subscriber receives validated private bank, with bearer forwarded o
 test('sidebar and screen integration do not remove the original three-subject simulator', () => {
     const html = fs.readFileSync(path.join(__dirname, '../campus.html'), 'utf8');
     assert.ok(html.includes('onclick="Sufficiency.open(); return false;"'));
-    assert.ok(html.includes('<span class="nav-label">simulacro</span>'));
+    assert.match(html, /id="nav-simulacro">\s*<a[^>]+data-campus-screen="suficiencia-screen simulacro-screen"/);
     assert.ok(!html.includes('id="nav-suficiencia"'));
     assert.ok(!html.includes('data-sf-area='));
     assert.ok(html.includes('id="suficiencia-screen"')); assert.ok(html.includes('id="simulacro-screen"'));

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v150-calendario';
+const CACHE_NAME = 'alcocermed-main-v151-campus';
 const APP_SHELL = [
     './student-results.js?v=2',
     './student-results.css?v=1',
@@ -42,7 +42,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=4',
     './assets/fonts/outfit-900.ttf',
     './flashcard-workspace.js?v=6',
-    './script.js?v=20261108-calendario',
+    './script.js?v=20261108-campus',
     './topic-evaluations.js?v=20261107-suficiencia',
     './topic-evaluations.css?v=4',
     './recuperar.html',
@@ -75,11 +75,13 @@ const APP_SHELL = [
     './summary-pdf-reader.js?v=2',
     './summary-pdf-reader.css?v=2',
     './campus-study-resources.css?v=1',
-    './study-calendar.css?v=1',
+    './study-calendar.css?v=2',
     './study-calendar-data.js?v=1',
     './study-calendar-pdf.js?v=1',
-    './study-calendar.js?v=1',
-    './assets/calendar-brand.svg',
+    './study-calendar.js?v=2',
+    './campus-shell.css?v=1',
+    './campus-shell.js?v=1',
+    './assets/campus-moods.webp',
     './assets/calendar-icons.svg',
     './assets/calendar-study-art.svg',
     './assets/fonts/poppins/400.woff2',

@@ -162,6 +162,9 @@ function showLoginScreen() {
     window.OfficialTexts?.close();
     window.SufficiencyPractice?.reset();
     window.CampusCalendar?.setUser();
+    window.CampusShell?.setUser();
+    closeMobileSidebar();
+    window.CampusShell?.syncMenu();
     clearBancoSuficiencia();
     if (window.OfficialFlashcards) OfficialFlashcards.clear();
     if (window.FlashcardWorkspace) FlashcardWorkspace.clear();
@@ -240,11 +243,13 @@ function enterVerifiedApp(user) {
         var display = (user.user_metadata && user.user_metadata.full_name)
             ? user.user_metadata.full_name
             : user.email.split('@')[0];
-        nameEl.textContent = display.toLowerCase();
+        nameEl.textContent = display;
     }
 
     setAdminSectionVisible(Boolean(user && user.email && ADMIN_EMAILS.includes(user.email.toLowerCase())));
-    window.CampusCalendar?.setUser(user.id, nameEl?.textContent);
+    window.CampusCalendar?.setUser(user.id);
+    window.CampusShell?.setUser(user.id, nameEl?.textContent);
+    window.CampusShell?.screenChanged(currentCampusScreen);
     restoreSidebarState();
     updateHomeStats();
     updateDailyGoalUI();
@@ -258,6 +263,7 @@ function enterVerifiedApp(user) {
     else if (section === 'textos-oficiales') window.OfficialTexts?.open();
     else if (section === 'practica-suficiencia') showScreen('sufficiency-practice-screen');
     else if (section === 'calendario') window.CampusCalendar?.open();
+    else if (section === 'contacto') showScreen('campus-contact-screen');
     else if (campusParams.get('simulacro') && window.openRequestedSimulation) window.openRequestedSimulation().catch(function(error) { showToast(error.message, 'error'); });
     else restoreCampusAfterPlans();
     if (window.openRequestedMindmap) window.openRequestedMindmap().catch(function(error) { console.warn("No se pudo abrir el mapa solicitado", error); });
@@ -496,7 +502,7 @@ function showScreen(screenId, fromBack) {
     }
     if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
-    const screens = ['student-results-screen', 'suficiencia-screen', 'home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen', 'atlas-screen', 'official-texts-screen', 'sufficiency-practice-screen', 'study-calendar-screen'];
+    const screens = ['student-results-screen', 'suficiencia-screen', 'home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen', 'atlas-screen', 'official-texts-screen', 'sufficiency-practice-screen', 'study-calendar-screen', 'campus-contact-screen'];
     screens.forEach(function (id) {
         const el = document.getElementById(id);
         if (el) {
@@ -507,9 +513,8 @@ function showScreen(screenId, fromBack) {
             }
         }
     });
-    document.getElementById('nav-official-texts')?.classList.toggle('nav-item-active', screenId === 'official-texts-screen');
-    document.getElementById('nav-sufficiency-practice')?.classList.toggle('nav-item-active', screenId === 'sufficiency-practice-screen');
     window.CampusCalendar?.screenChanged(screenId === 'study-calendar-screen');
+    window.CampusShell?.screenChanged(screenId);
     if (screenId === 'study-area') refreshFlashcardReviews();
     return true;
 }
@@ -1130,6 +1135,7 @@ window.toggleSidebar = function () {
     sidebar.classList.toggle('open');
     overlay.classList.toggle('active');
     document.body.classList.toggle('sidebar-open', sidebar.classList.contains('open'));
+    window.CampusShell?.syncMenu(true);
 };
 
 // Función unificada: mobile cierra sidebar, desktop colapsa
@@ -1143,6 +1149,7 @@ window.handleSidebarToggle = function () {
 
 // Desktop: colapsar/expandir sidebar (rail)
 window.toggleSidebarDesktop = function () {
+    if (window.CampusShell) return window.CampusShell.toggleMenu();
     const sidebar = document.getElementById('sidebar');
     if (!sidebar) return;
     const isCollapsed = sidebar.classList.toggle('collapsed');
@@ -1156,6 +1163,7 @@ window.toggleSidebarDesktop = function () {
 
 // Restaurar estado guardado del sidebar al entrar a la app
 function restoreSidebarState() {
+    if (window.CampusShell) return window.CampusShell.restoreMenu();
     if (window.innerWidth <= 768) return;
     try {
         if (localStorage.getItem('bc_sidebar_collapsed') === '1') {
@@ -1174,10 +1182,11 @@ function restoreSidebarState() {
 
 let selectedGameSubject = '';
 function resourceChooser(tool, names, select, description) {
-    showScreen('resource-browser');
+    if (showScreen('resource-browser') === false) return false;
     document.getElementById('resource-tool').textContent = tool;
     document.getElementById('resource-title').textContent = tool === 'Juegos' ? 'Elige un juego' : tool === 'Intocables' ? 'Elige un recurso' : 'Elige una materia';
     document.getElementById('resource-description').textContent = description || 'Selecciona el contenido que quieres practicar.';
+    window.CampusShell?.screenChanged('resource-browser');
     const options = document.getElementById('resource-options');
     options.replaceChildren();
     options.classList.toggle('games-chooser', tool === 'Juegos');
@@ -1193,6 +1202,7 @@ function resourceChooser(tool, names, select, description) {
         button.onclick = () => select(name);
         options.append(button);
     });
+    return true;
 }
 window.openGameMenu = function () {
     const games = [
@@ -1200,7 +1210,7 @@ window.openGameMenu = function () {
         { name: 'Ahorcado médico', description: 'Adivina conceptos de Morfofunción, Biología celular y Salud.', action: () => openGame('hangman') },
         { name: 'Juegos por materias', description: 'Entra a AlcocerMed Juegos: evaluaciones, ranking y demos por materia.', action: () => { window.location.href = '/juegos/'; } }
     ];
-    resourceChooser('Juegos', games.map(game => game.name), name => games.find(game => game.name === name).action(), 'Tres formas de practicar. Si tienes una cuenta gratuita, podrás jugar las versiones demo.');
+    if (!resourceChooser('Juegos', games.map(game => game.name), name => games.find(game => game.name === name).action(), 'Tres formas de practicar. Si tienes una cuenta gratuita, podrás jugar las versiones demo.')) return;
     document.querySelectorAll('#resource-options button').forEach((button, index) => {
         const game = games[index];
         if (index === 2) {
@@ -1219,11 +1229,11 @@ window.openGameMenu = function () {
 window.openGame = function (gameType) {
     const source = gameType === 'quiz' ? QUIZ_QUESTIONS : HANGMAN_WORDS;
     const key = gameType === 'quiz' ? 'subject' : 'category';
-    resourceChooser(gameType === 'quiz' ? 'Quiz relámpago' : 'Ahorcado médico', [...new Set(source.map(q => q[key]))], name => {
+    if (!resourceChooser(gameType === 'quiz' ? 'Quiz relámpago' : 'Ahorcado médico', [...new Set(source.map(q => q[key]))], name => {
         selectedGameSubject = name;
         showScreen(gameType === 'quiz' ? 'game-quiz' : 'game-hangman');
         if (gameType === 'quiz') startQuiz(); else startHangman();
-    });
+    })) return;
     if (window.CampusAccess && CampusAccess.isFree()) {
         const locked = document.createElement('button');
         locked.type = 'button';
@@ -4616,58 +4626,3 @@ async function sincronizarPerfilEnNube() {
         console.warn('[Auth] Error sincronizando perfil:', e);
     }
 }
-
-// ══════════════════════════════════════════════
-// MINI CALENDAR
-// ══════════════════════════════════════════════
-(function() {
-    var calMonth = new Date().getMonth();
-    var calYear = new Date().getFullYear();
-    var months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
-
-    function renderCalendar() {
-        var label = document.getElementById('cal-month-label');
-        var grid = document.getElementById('cal-days-grid');
-        if (!label || !grid) return;
-
-        label.textContent = months[calMonth] + ' ' + calYear;
-
-        var firstDay = new Date(calYear, calMonth, 1).getDay();
-        firstDay = firstDay === 0 ? 6 : firstDay - 1;
-        var daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
-        var daysInPrev = new Date(calYear, calMonth, 0).getDate();
-
-        var today = new Date();
-        var html = '';
-
-        for (var i = firstDay - 1; i >= 0; i--) {
-            html += '<span class="cal-day other-month">' + (daysInPrev - i) + '</span>';
-        }
-        for (var d = 1; d <= daysInMonth; d++) {
-            var isToday = (d === today.getDate() && calMonth === today.getMonth() && calYear === today.getFullYear());
-            html += '<span class="cal-day' + (isToday ? ' today' : '') + '">' + d + '</span>';
-        }
-        var totalCells = firstDay + daysInMonth;
-        var remaining = (7 - (totalCells % 7)) % 7;
-        for (var r = 1; r <= remaining; r++) {
-            html += '<span class="cal-day other-month">' + r + '</span>';
-        }
-        grid.innerHTML = html;
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        renderCalendar();
-        var prevBtn = document.getElementById('cal-prev');
-        var nextBtn = document.getElementById('cal-next');
-        if (prevBtn) prevBtn.addEventListener('click', function() {
-            calMonth--;
-            if (calMonth < 0) { calMonth = 11; calYear--; }
-            renderCalendar();
-        });
-        if (nextBtn) nextBtn.addEventListener('click', function() {
-            calMonth++;
-            if (calMonth > 11) { calMonth = 0; calYear++; }
-            renderCalendar();
-        });
-    });
-})();

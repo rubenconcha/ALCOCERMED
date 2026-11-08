@@ -1,10 +1,11 @@
-const CACHE_NAME = 'alcocermed-juegos-v109-device-code-es';
+const CACHE_NAME = 'alcocermed-juegos-v110-campus';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
     './game-practice.js?v=2',
     './game-question-images.js?v=1',
-    './app.js?v=105',
-    './styles.css?v=86',
+    './app.js?v=20261108-campus',
+    './styles.css?v=87',
+    '/promo-ben-carson-tiktok/public/authentic/logo.png',
     './assets/preguntas-apoyo/mano-muneca.svg',
     './',
     './index.html',

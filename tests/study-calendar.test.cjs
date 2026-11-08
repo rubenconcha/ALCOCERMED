@@ -44,9 +44,10 @@ test('the authenticated campus and cache use the same calendar resources', () =>
     assert.match(html, /Plan de práctica de muestra/);
     assert.match(script, /section === 'calendario'/);
     assert.match(script, /CampusCalendar\?\.setUser\(\)/);
-    for (const asset of ['study-calendar.css', 'study-calendar-data.js', 'study-calendar-pdf.js', 'study-calendar.js']) {
-        assert.ok(html.includes(asset + '?v=1'), asset);
-        assert.ok(worker.includes('./' + asset + '?v=1'), asset);
+    for (const asset of ['study-calendar.css', 'study-calendar-data.js', 'study-calendar-pdf.js', 'study-calendar.js', 'campus-shell.css', 'campus-shell.js']) {
+        const loaded = html.match(new RegExp(asset.replace(/\./g, '\\.') + '\\?v=\\d+'))?.[0];
+        assert.ok(loaded, asset);
+        assert.ok(worker.includes('./' + loaded), asset);
     }
     for (const asset of ['vendor/fullcalendar/index.global.min.js', 'vendor/fullcalendar/es.global.min.js', 'vendor/jspdf/jspdf.umd.min.js']) {
         assert.ok(worker.includes('./' + asset), asset);

@@ -1,0 +1,787 @@
+@font-face { font-family:Poppins; src:url('/assets/fonts/poppins/400.woff2') format('woff2'); font-weight:400; font-display:swap }
+@font-face { font-family:Poppins; src:url('/assets/fonts/poppins/500.woff2') format('woff2'); font-weight:500; font-display:swap }
+@font-face { font-family:Poppins; src:url('/assets/fonts/poppins/600.woff2') format('woff2'); font-weight:600; font-display:swap }
+@font-face { font-family:Poppins; src:url('/assets/fonts/poppins/700.woff2') format('woff2'); font-weight:700; font-display:swap }
+
+.campus-shell {
+    --shell-top: 63px;
+    --shell-rail: 80px;
+    --shell-gap: 20px;
+    --shell-radius: 8px;
+    --shell-bg: #eef2f8;
+    --shell-panel: #fff;
+    --shell-soft: #f6f8fb;
+    --shell-line: #dce3eb;
+    --shell-ink: #1e293b;
+    --shell-muted: #53647a;
+    --shell-blue: #166f9e;
+    --shell-blue-soft: #e9f4fb;
+    --shell-gold: #f6a43a;
+    --shell-gold-hover: #ffb651;
+    --shell-shadow: 0 4px 15px #263a4d08;
+    --shell-font: Poppins, Outfit, system-ui, sans-serif;
+}
+.campus-shell.campus-dark {
+    --shell-bg: #0f172a;
+    --shell-panel: #1e293b;
+    --shell-soft: #26364b;
+    --shell-line: #405067;
+    --shell-ink: #f1f5f9;
+    --shell-muted: #bfccdb;
+    --shell-blue: #8fd5f9;
+    --shell-blue-soft: #203e53;
+    --shell-shadow: 0 4px 15px #0002;
+}
+.campus-shell:not(.login-active) {
+    background: var(--shell-bg);
+    color: var(--shell-ink);
+}
+.campus-shell:not(.login-active) :where(.main-content, #sidebar, .campus-dialog) :where(
+    a, button, div, input, select, option, optgroup, label, legend, textarea, summary,
+    h1, h2, h3, h4, p, small, span, strong, time, li, td, th, output
+):not([class*="fa-"]) {
+    font-family: var(--shell-font);
+    text-transform: none;
+}
+.campus-shell .main-content {
+    --campus-paper: var(--shell-bg);
+    --campus-navy: var(--shell-ink);
+    --campus-line: var(--shell-line);
+    --text-dark: var(--shell-ink);
+    --bg-white: var(--shell-panel);
+    --bg-soft: var(--shell-soft);
+    --calendar-top: var(--shell-top);
+    --calendar-rail: var(--shell-rail);
+    flex: none;
+    min-width: 0;
+    min-height: 100dvh;
+    padding: 0;
+    width: calc(100% - var(--shell-rail));
+    margin-left: var(--shell-rail);
+    background: var(--shell-bg);
+    color: var(--shell-ink);
+}
+.campus-shell.campus-dark .main-content { color-scheme: dark }
+.campus-shell #sidebar {
+    width: 280px;
+    height: 100dvh;
+    inset: 0 auto 0 0;
+    background: #1e1e2d;
+    border-right: 1px solid #ffffff14;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #444455 transparent;
+    z-index: 201;
+}
+.campus-shell #sidebar > * { flex-shrink: 0 }
+.campus-shell #sidebar .sidebar-header {
+    display: flex;
+    align-items: center;
+    height: var(--shell-top);
+    padding: 0 16px;
+    border-bottom: 1px solid #ffffff1a;
+}
+.campus-shell #sidebar .sidebar-logo { min-width: 0; display: flex; align-items: center; gap: 10px }
+.campus-shell #sidebar .logo-icon { display: grid; place-items: center; width: 42px; height: 42px; flex: 0 0 42px; background: #fff; border-radius: 8px }
+.campus-shell #sidebar .logo-img { width: 100%; height: 100%; object-fit: contain }
+.campus-shell #sidebar .logo-name { font-size: 15px; line-height: 1.25; text-transform: capitalize }
+.campus-shell #sidebar .logo-pre, .campus-shell #sidebar .logo-sub { font-size: 9px }
+.campus-shell #sidebar .sidebar-toggle-btn { display: none }
+.campus-shell #sidebar .sidebar-toggle-btn svg { width: 18px; height: 18px }
+.campus-shell #sidebar .user-session {
+    height: 79px;
+    width: 100%;
+    margin: 0;
+    padding: 0 15px;
+    gap: 12px;
+    border: 0;
+    border-bottom: 1px solid #ffffff1a;
+    border-radius: 0;
+    background: transparent;
+}
+.campus-shell #sidebar .user-avatar, .campus-initials {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border: 1px solid #dce3eb;
+    border-radius: 50%;
+    background: #f3f5f7;
+    color: #374151;
+    font: 600 13px var(--shell-font);
+}
+.campus-shell #sidebar .user-avatar { cursor: pointer }
+.campus-shell #sidebar .user-avatar:hover { background: #deebf5 }
+.campus-shell #sidebar .user-name { text-transform: capitalize }
+.campus-shell #sidebar .sidebar-logout-btn { flex: none; margin-left: auto }
+.campus-shell #sidebar .nav-section { padding: 12px; margin: 0; border-bottom: 1px solid #ffffff15 }
+.campus-shell #sidebar .section-title { display: none }
+.campus-shell #sidebar .nav-links { gap: 4px; padding: 0; margin: 0; list-style: none }
+.campus-shell #sidebar :is(.nav-item > a, .campus-nav-group > summary) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 44px;
+    margin: 0;
+    padding: 0 12px;
+    gap: 12px;
+    border: 0;
+    border-radius: 6px;
+    color: #d4d7e1;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    cursor: pointer;
+}
+.campus-shell #sidebar :is(.nav-item > a, .campus-nav-group > summary):hover { background: #ffffff17 }
+.campus-shell #sidebar .nav-item-active > a {
+    background: var(--shell-gold) !important;
+    color: #272331 !important;
+    padding-left: 12px !important;
+    font-weight: 600;
+}
+.campus-shell #sidebar .campus-nav-group > summary { list-style: none }
+.campus-shell #sidebar .campus-nav-group > summary::-webkit-details-marker { display: none }
+.campus-shell #sidebar .campus-nav-group[open] > summary { color: #ffc06e; margin-bottom: 4px }
+.campus-shell #sidebar .campus-nav-group .nav-item > a { padding-left: 36px }
+.campus-shell #sidebar .campus-nav-group .nav-item-active > a { padding-left: 36px !important }
+.campus-shell #sidebar .campus-nav-chevron {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    margin: 0 4px 0 auto;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(-45deg);
+}
+.campus-shell #sidebar .campus-nav-group[open] > summary .campus-nav-chevron { transform: rotate(45deg) }
+.campus-shell #sidebar .nav-label { display: inline; min-width: 0; white-space: normal; color: inherit }
+.campus-shell #sidebar .nav-icon {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    min-width: 24px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    transform: none;
+    color: inherit;
+}
+.campus-shell #sidebar .nav-icon svg { display: block; width: 22px; height: 22px; fill: none }
+.campus-shell #sidebar :is(a, button, summary):focus-visible { outline: 2px solid #ffcf86; outline-offset: -2px }
+.campus-shell #overlay { z-index: 200 }
+.campus-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    height: var(--shell-top);
+    padding: 0 var(--shell-gap);
+    gap: 8px;
+    background: var(--shell-panel);
+    border-bottom: 1px solid var(--shell-line);
+}
+.campus-toolbar-brand { display: none }
+.campus-toolbar-actions { display: flex; align-items: center; gap: 5px; margin-left: auto }
+.campus-shell .campus-icon-button {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    padding: 0;
+    border: 0;
+    border-radius: 7px;
+    color: var(--shell-muted);
+    background: transparent;
+    cursor: pointer;
+}
+.campus-shell .campus-icon-button:hover, .campus-shell .campus-icon-button[aria-pressed="true"] {
+    color: var(--shell-blue);
+    background: var(--shell-blue-soft);
+}
+.campus-shell .campus-icon-button svg { width: 20px; height: 20px; fill: none }
+.campus-shell .campus-icon-button:disabled { opacity: .4; cursor: default }
+.campus-shell :is(.campus-toolbar, .campus-box, .campus-dialog) :is(button, a, summary):focus-visible {
+    outline: 2px solid var(--shell-blue);
+    outline-offset: 2px;
+}
+.campus-shell #install-pwa-btn:not(.is-hidden) { display: grid }
+.campus-shell .support-float svg { width: 26px; height: 26px }
+
+@media (min-width: 769px) {
+    .campus-shell.campus-menu-pinned { --shell-rail: 280px }
+    .campus-shell #sidebar .sidebar-toggle-btn { display: grid; place-items: center; margin-left: auto }
+    .campus-shell:not(.campus-menu-pinned) #sidebar:not(:hover, :has(:focus-visible)) { width: var(--shell-rail) }
+    .campus-shell:not(.campus-menu-pinned) #sidebar:not(:hover, :has(:focus-visible)) :is(.sidebar-header, .user-session) {
+        justify-content: center;
+        padding-inline: 0;
+    }
+    .campus-shell:not(.campus-menu-pinned) #sidebar:not(:hover, :has(:focus-visible)) :is(
+        .sidebar-logo-text, .user-info, .sidebar-logout-btn, .nav-label, .nav-badge, .arrow, .campus-lock-badge,
+        .campus-nav-chevron, .campus-nav-group > ul, .sidebar-toggle-btn
+    ) { display: none }
+    .campus-shell:not(.campus-menu-pinned) #sidebar:not(:hover, :has(:focus-visible)) :is(.nav-item > a, .campus-nav-group > summary) {
+        justify-content: center;
+        padding: 0;
+        gap: 0;
+    }
+    .campus-shell:not(.campus-menu-pinned) #sidebar:not(:hover, :has(:focus-visible)) .nav-item-active > a { padding-left: 0 !important }
+    .campus-shell:not(.campus-menu-pinned) #sidebar:not(:hover, :has(:focus-visible)) .campus-nav-group:has(.nav-item-active) > summary {
+        background: var(--shell-gold);
+        color: #272331;
+    }
+}
+@media (max-width: 768px) {
+    .campus-shell { --shell-top: 57px; --shell-rail: 0px; --shell-gap: 12px }
+    .campus-shell #sidebar { width: min(280px, 87vw) }
+    .campus-shell #sidebar .sidebar-toggle-btn { display: flex; margin-left: auto }
+    .campus-shell #overlay.active { display: block }
+    .campus-shell.sidebar-open { overflow: hidden }
+    .campus-toolbar-brand { display: inline; font-size: 12px; font-weight: 600; line-height: 1.2 }
+    .campus-toolbar { padding-inline: 8px }
+    .campus-toolbar-actions { gap: 0 }
+}
+@media (max-width: 350px) {
+    .campus-toolbar-brand { font-size: 11px }
+    .campus-toolbar .campus-icon-button { width: 36px; flex-basis: 36px }
+}
+
+/* Inicio, planificación y avisos. */
+.campus-shell #home-screen {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 var(--shell-gap) 66px;
+    background: transparent;
+    color: var(--shell-ink);
+}
+.campus-shell .campus-greeting {
+    min-height: 63px;
+    gap: 10px 20px;
+    margin: 0 calc(0px - var(--shell-gap)) var(--shell-gap);
+    padding: 14px var(--shell-gap);
+    border: 0;
+    border-bottom: 1px solid var(--shell-line);
+    background: var(--shell-panel);
+}
+.campus-shell .campus-greeting h1 {
+    color: var(--shell-ink);
+    font-size: clamp(18px, 2.2vw, 24px);
+    letter-spacing: -.45px;
+    line-height: 1.25;
+    margin: 0;
+}
+.campus-shell .campus-greeting h1 span { color: var(--shell-blue); text-transform: capitalize }
+.campus-shell .campus-greeting p { margin: 4px 0 0; color: var(--shell-muted); font-size: 12px }
+.campus-shell .campus-course-tag, .campus-example-label {
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: var(--shell-blue-soft);
+    color: var(--shell-blue);
+    font-size: 11px;
+    font-weight: 600;
+}
+.campus-home-overview { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 12px; margin-bottom: var(--shell-gap) }
+.campus-home-schedule { display: grid; gap: 12px; min-width: 0 }
+.campus-box {
+    min-width: 0;
+    padding: var(--shell-gap);
+    border: 1px solid var(--shell-line);
+    border-radius: var(--shell-radius);
+    background: var(--shell-panel);
+    color: var(--shell-ink);
+    box-shadow: var(--shell-shadow);
+}
+.campus-box-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 30px; margin-bottom: 12px }
+.campus-box-heading h2 { color: var(--shell-ink); font-size: 16px; line-height: 1.35; font-weight: 600 }
+.campus-box-heading .campus-icon-button { width: 32px; height: 32px; flex-basis: 32px }
+.campus-link-button {
+    min-height: 32px;
+    padding: 4px 0;
+    border: 0;
+    background: transparent;
+    color: var(--shell-blue);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+}
+.campus-link-button:hover { text-decoration: underline; text-underline-offset: 3px }
+.campus-mood-grid { display: grid; grid-template-columns: repeat(9, minmax(54px, 1fr)); gap: 7px; margin: -3px; padding: 3px 3px 6px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x proximity }
+.campus-mood-grid button {
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    color: var(--shell-ink);
+    background: transparent;
+    cursor: pointer;
+    scroll-snap-align: start;
+}
+.campus-mood-art {
+    display: block;
+    width: 100%;
+    aspect-ratio: .63;
+    border-radius: 9px;
+    background: #d6dce9 url('/assets/campus-moods.webp') var(--mood-x, 0%) var(--mood-y, 0%) / 306% var(--mood-height, 303%) no-repeat;
+}
+[data-mood="1"], [data-mood="4"], [data-mood="7"], [data-portrait="1"], [data-portrait="4"], [data-portrait="7"] { --mood-x: 50% }
+[data-mood="2"], [data-mood="5"], [data-mood="8"], [data-portrait="2"], [data-portrait="5"], [data-portrait="8"] { --mood-x: 100% }
+[data-mood="3"], [data-mood="4"], [data-mood="5"], [data-portrait="3"], [data-portrait="4"], [data-portrait="5"] { --mood-y: 49.2%; --mood-height: 318% }
+[data-mood="6"], [data-mood="7"], [data-mood="8"], [data-portrait="6"], [data-portrait="7"], [data-portrait="8"] { --mood-y: 100%; --mood-height: 289% }
+.campus-mood-grid button[aria-pressed="true"] .campus-mood-art { outline: 2px solid var(--shell-blue); outline-offset: 2px }
+.campus-mood-grid button[aria-pressed="true"] .campus-mood-label { color: var(--shell-blue); font-weight: 700 }
+.campus-mood-label { display: block; margin-top: 6px; font-size: 10px; line-height: 1.3; overflow-wrap: anywhere }
+.campus-mood-status { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; padding: 4px 9px; border-radius: 7px; background: var(--shell-blue-soft); font-size: 12px }
+.campus-mood-status p { color: var(--shell-blue) }
+.campus-example-label { margin: 0 0 13px }
+.campus-day-preview-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 14px }
+.campus-day-preview h3 { color: var(--shell-ink); font-size: 12px; line-height: 1.4; font-weight: 600 }
+.campus-shell #campus-plan-date { margin-bottom: 9px }
+.campus-shell #campus-plan-date::first-letter { text-transform: uppercase }
+.campus-day-preview ul { display: grid; gap: 5px; padding: 0; margin: 0 0 10px; list-style: none }
+.campus-plan-item {
+    display: grid;
+    gap: 3px;
+    width: 100%;
+    padding: 7px 9px;
+    border: 0;
+    border-left: 3px solid var(--activity-accent);
+    border-radius: 5px;
+    color: var(--shell-ink);
+    background: var(--shell-soft);
+    text-align: left;
+    font-size: 11px;
+    cursor: pointer;
+}
+.campus-plan-item:hover { color: var(--shell-blue); background: var(--shell-blue-soft) }
+.campus-plan-item time, .campus-plan-empty { color: var(--shell-muted); font-size: 11px }
+.campus-month { min-width: 0; padding: 5px 8px 8px; border: 1px solid var(--shell-line); border-radius: 8px }
+.campus-month-heading { display: flex; align-items: center; justify-content: space-between; gap: 4px; padding-left: 3px }
+.campus-month-heading > div { display: flex; flex: none }
+.campus-month-heading h3::first-letter { text-transform: uppercase }
+.campus-month-heading .campus-icon-button { width: 31px; height: 32px; flex-basis: 31px }
+.campus-month-heading svg { width: 16px !important; height: 16px !important }
+.campus-month-weekdays, .campus-month-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 2px }
+.campus-month-weekdays span, .campus-month-days > * { display: grid; place-items: center; min-width: 0; min-height: 29px; border-radius: 5px; font-size: 11px }
+.campus-month-weekdays span, .campus-month-days > span { color: var(--shell-muted); font-weight: 500 }
+.campus-month-days > span { opacity: .5 }
+.campus-month-days button { color: var(--shell-ink); background: transparent; border: 1px solid transparent; cursor: pointer }
+.campus-month-days button:hover { background: var(--shell-blue-soft) }
+.campus-month-days [aria-current="date"] { border-color: var(--shell-blue); font-weight: 600 }
+.campus-month-days [aria-pressed="true"] { background: var(--shell-blue-soft); color: var(--shell-blue); border-color: var(--shell-blue); font-weight: 700 }
+.campus-notice-list { display: grid; gap: 8px }
+.campus-notice-list details { min-width: 0; border: 1px solid var(--shell-line); border-radius: 7px; background: var(--shell-panel); overflow: hidden }
+.campus-notice-list details > summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px 12px;
+    min-height: 44px;
+    padding: 10px 12px;
+    color: var(--shell-ink);
+    font-size: 13px;
+    font-weight: 600;
+    list-style: none;
+    cursor: pointer;
+}
+.campus-notice-list summary::-webkit-details-marker { display: none }
+.campus-notice-list summary::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    margin: 0 3px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(45deg);
+}
+.campus-notice-list details[open] > summary { background: var(--shell-soft) }
+.campus-notice-list details[open] > summary::after { transform: rotate(225deg) }
+.campus-notice-list summary small { margin-left: auto; color: var(--shell-muted); font-size: 11px; font-weight: 500 }
+.campus-notice-list details > p { margin: 10px 12px 2px; color: var(--shell-muted); font-size: 12px; line-height: 1.55 }
+.campus-notice-list details > button { margin: 0 12px 8px }
+.campus-dialog {
+    width: min(440px, calc(100% - 24px));
+    max-height: calc(100dvh - 24px);
+    padding: 0;
+    margin: auto;
+    overflow: auto;
+    border: 1px solid var(--shell-line);
+    border-radius: 11px;
+    background: var(--shell-panel);
+    color: var(--shell-ink);
+    box-shadow: 0 16px 70px #10182943;
+    font: 400 14px var(--shell-font);
+}
+.campus-dialog::backdrop { background: #10182885 }
+.campus-dialog-inner { display: grid; gap: 12px; padding: 16px }
+.campus-dialog header, .campus-dialog footer, .campus-profile-summary { display: flex; align-items: center; gap: 8px }
+.campus-dialog header { justify-content: space-between }
+.campus-dialog header h2 { font-size: 17px; font-weight: 600; line-height: 1.35 }
+.campus-dialog footer { justify-content: flex-end; flex-wrap: wrap }
+.campus-dialog p { color: var(--shell-muted); line-height: 1.55; overflow-wrap: anywhere }
+.campus-profile-summary p { text-transform: capitalize !important; font-weight: 600 }
+.campus-notice-dialog { width: min(485px, calc(100% - 24px)); margin: 70px 12px auto auto }
+.campus-mood-dialog-body { display: flex; align-items: center; gap: 12px }
+.campus-mood-dialog-body .campus-mood-art { width: 68px; flex: 0 0 68px }
+.campus-primary, .campus-secondary {
+    min-height: 39px;
+    padding: 8px 12px;
+    border: 1px solid var(--shell-line);
+    border-radius: 7px;
+    background: var(--shell-panel);
+    color: var(--shell-ink);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.campus-primary { background: var(--shell-gold); border-color: var(--shell-gold); color: #272331 }
+.campus-primary:hover { background: var(--shell-gold-hover) }
+.campus-secondary:hover { color: var(--shell-blue); background: var(--shell-blue-soft) }
+.campus-shell .dashboard-columns { gap: 12px }
+.campus-shell :is(.dashboard-launch, .dashboard-progress, .dashboard-more > button) {
+    background: var(--shell-panel);
+    color: var(--shell-ink);
+    border: 1px solid var(--shell-line);
+    border-radius: var(--shell-radius);
+    box-shadow: var(--shell-shadow);
+}
+.campus-shell :is(.dashboard-launch, .dashboard-progress) { padding: var(--shell-gap) }
+.campus-shell .dashboard-progress { top: calc(var(--shell-top) + 12px) }
+.campus-shell :is(.dashboard-launch h2, .dashboard-progress h2) { color: var(--shell-ink); font-size: 18px; letter-spacing: -.25px }
+.campus-shell :is(.dashboard-eyebrow, .dashboard-progress-heading span) { color: var(--shell-blue); font-size: 10px }
+.campus-shell .dashboard-activity { border-radius: var(--shell-radius) }
+.campus-shell .dashboard-more button small { color: var(--shell-muted) }
+
+@media (max-width: 1140px) and (min-width: 769px) {
+    .campus-shell .campus-day-preview-layout { grid-template-columns: 1fr }
+}
+@media (max-width: 768px) {
+    .campus-shell .campus-greeting { display: grid; justify-content: start }
+    .campus-shell .campus-greeting p { line-height: 1.45 }
+    .campus-home-overview { grid-template-columns: minmax(0, 1fr) }
+    .campus-mood-grid { grid-template-columns: repeat(9, minmax(57px, 1fr)); scrollbar-width: thin }
+}
+@media (max-width: 440px) {
+    .campus-day-preview-layout { grid-template-columns: minmax(0, 1fr) }
+    .campus-month-days > *, .campus-month-weekdays span { min-height: 34px }
+    .campus-notice-list summary small { max-width: 76px; overflow-wrap: anywhere }
+}
+
+/* Encabezados, catálogos y vistas de trabajo del campus. */
+.campus-shell .main-content > :is(
+    #study-library, #resource-browser, #study-area, #banco-screen, #suficiencia-screen,
+    #past-exams-screen, #simulacro-screen, #evaluacion-screen, #videoclases-screen,
+    #resumenes-screen, #official-texts-screen, #sufficiency-practice-screen, #intocables-screen,
+    #intocables-hub-screen, #atlas-screen, #game-quiz, #game-hangman, #student-results-screen, #campus-contact-screen
+) {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: var(--shell-gap) var(--shell-gap) 64px;
+    color: var(--shell-ink);
+}
+.campus-shell .main-content > :is(#study-area, #banco-screen, #suficiencia-screen.sf-bank-layout, #game-quiz, #game-hangman) {
+    max-width: 1050px;
+}
+.campus-shell :is(.campus-page-head, .sf-heading, .itc-top, .student-results .sim-header, #study-area .study-mobile-header) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    margin: 0 0 14px;
+    padding: 15px var(--shell-gap);
+    border: 1px solid var(--shell-line);
+    border-radius: var(--shell-radius);
+    background: var(--shell-panel);
+    color: var(--shell-ink);
+    box-shadow: var(--shell-shadow);
+}
+.campus-shell :is(.campus-page-head, .sf-heading, .student-results .sim-header, #study-area .study-mobile-header) h1,
+.campus-shell :is(.campus-page-head, .sf-heading, .student-results .sim-header, #study-area .study-mobile-header) h2 {
+    color: var(--shell-ink);
+    font-size: clamp(18px, 2.5vw, 23px);
+    font-weight: 600;
+    letter-spacing: -.4px;
+    line-height: 1.3;
+    margin: 0;
+}
+.campus-shell :is(.campus-page-head, .sf-heading, #study-area .study-mobile-header) :is(h1, h2, p)::first-letter { text-transform: uppercase }
+.campus-shell :is(.campus-page-head, .sf-heading, .student-results .sim-header) p:not(.library-kicker) {
+    margin: 3px 0 0;
+    color: var(--shell-muted);
+    font-size: 12px;
+    line-height: 1.55;
+}
+.campus-shell :is(.campus-page-head, .sf-heading, .student-results .sim-header) :is(.entrance-eyebrow, .resumenes-eyebrow, .library-kicker) {
+    display: inline-block;
+    margin: 0 0 3px;
+    color: var(--shell-blue) !important;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .6px;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+.campus-shell :is(.btn-back-game, .campus-back, .itc-back, .campus-atlas-actions button) {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 6px;
+    min-height: 36px;
+    padding: 7px 11px;
+    border: 1px solid var(--shell-line);
+    border-radius: 6px;
+    background: var(--shell-panel);
+    color: var(--shell-ink);
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: none;
+    cursor: pointer;
+}
+.campus-shell :is(.btn-back-game, .campus-back, .itc-back, .campus-atlas-actions button):hover {
+    background: var(--shell-blue-soft);
+    color: var(--shell-blue);
+}
+.campus-shell .main-content :is(
+    .past-filters, .sim-library-filters, .banco-config-card, .sf-catalogue-filter, .sf-selection, .sf-previous-catalogue,
+    .vc-filters, .resumenes-filters, .intoc-filter-row, .itc-controls, #library-topics-panel, #flashcard-settings
+) {
+    padding: var(--shell-gap);
+    border: 1px solid var(--shell-line);
+    border-radius: var(--shell-radius);
+    background: var(--shell-panel);
+    color: var(--shell-ink);
+    box-shadow: var(--shell-shadow);
+}
+.campus-shell .main-content :is(.past-filters, .sim-library-filters, .sf-catalogue-filter, .intoc-filter-row, .vc-filters) {
+    gap: 12px;
+    margin: 0 0 14px;
+}
+.campus-shell .main-content :is(.past-filters, .sim-library-filters, .banco-config-card, .vc-filters, .sf-catalogue-filter, .intoc-filter-row, .resumenes-filters, #library-topics-panel) label {
+    color: var(--shell-ink);
+    font-weight: 600;
+}
+.campus-shell .main-content :is(
+    .past-filters, .sim-library-filters, .banco-config-card, .sf-catalogue-filter, .vc-filters, .resumenes-filters, .intoc-filter-row,
+    .itc-controls, #library-topics-panel, #flashcard-settings, .sr-review-filters
+) :is(select, input[type="search"], .banco-select-btn, .vc-search-wrap) {
+    min-width: 0;
+    min-height: 41px;
+    border-color: var(--shell-line);
+    border-radius: 7px;
+    background-color: var(--shell-soft);
+    color: var(--shell-ink);
+    font-size: 12px;
+}
+.campus-shell .main-content :is(.vc-search-input, .itc-search input) { color: var(--shell-ink); background-color: transparent }
+.campus-shell .main-content .vc-search-wrap { padding: 0 12px }
+.campus-shell .main-content .vc-search-wrap input { min-height: 39px; padding-block: 0 }
+.campus-shell .main-content :is(input, select)::placeholder { color: var(--shell-muted); opacity: .92 }
+.campus-shell .main-content :is(.past-filters > span, .sim-library-filters > p, .sf-card-meta, .resumenes-count, #library-status) {
+    color: var(--shell-muted);
+    font-size: 12px;
+}
+.campus-shell :is(.past-grid, #sim-library-list, .sf-catalogue, .resumenes-grid, .mm-grid, .vc-grid) { gap: 14px }
+.campus-shell .main-content :is(
+    .past-card, .past-detail, .sim-library-card, #suficiencia-screen .sf-catalogue-card, .mm-card, .vc-card,
+    .resumenes-card, .itc-sheet-card, .itc-card, .eval-section-card, .eval-metric-card, .practice-reference,
+    .practice-session, .sf-lesson, .sf-single-reading, .atlas-enrollment-gate, .atlas-gallery, .topic-eval-history,
+    .quiz-question-card, .hangman-card, .banco-question-card, .bq-question-card, .sim-question-wrap, .sf-question, .sf-result
+) {
+    min-width: 0;
+    border: 1px solid var(--shell-line);
+    border-radius: var(--shell-radius);
+    background-color: var(--shell-panel);
+    color: var(--shell-ink);
+    box-shadow: var(--shell-shadow);
+}
+.campus-shell :is(.past-card, .sim-library-card, #suficiencia-screen .sf-catalogue-card) { padding: 18px; border-top: 3px solid #2e94c6 }
+.campus-shell :is(.past-card-locked, .sim-library-card:has(.sim-library-lock)) { border-top-color: #d49732 }
+.campus-shell .main-content :is(.past-card, .past-detail, .sim-library-card, .vc-card, .resumenes-card-body, .itc-card, .eval-section-card, .practice-session) :is(h3, h4) {
+    color: var(--shell-ink);
+    font-weight: 600;
+    line-height: 1.4;
+}
+.campus-shell :is(.past-card, .sim-library-card, .resumenes-card-body) h3 { font-size: 16px; margin-top: 10px; margin-bottom: 5px }
+.campus-shell :is(.past-card, .past-detail, .sim-library-card, .resumenes-card-body, .eval-section-card) p,
+.campus-shell :is(.vc-card-desc, .vc-card-tema, .mm-card-count, .mm-card-tema) { color: var(--shell-muted); line-height: 1.55 }
+.campus-shell :is(.past-card .entrance-eyebrow, .sim-library-stage) {
+    width: fit-content;
+    padding: 4px 7px;
+    border-radius: 5px;
+    color: var(--shell-blue);
+    background: var(--shell-blue-soft);
+    font-size: 10px;
+    letter-spacing: .35px;
+}
+.campus-shell .main-content :is(
+    .past-card .btn-primary, .past-detail .btn-primary, #sim-config .btn-primary, #suficiencia-screen .sf-bank-start,
+    #suficiencia-screen .sf-catalogue-card > .sf-button, .banco-config-card .btn-primary, .practice-session .btn-primary,
+    .resumenes-card:not(.resumenes-card-locked) .resumenes-card-body > button, #study-area #btn-reveal, .intoc-hero .intoc-primary
+) {
+    min-height: 42px;
+    border-radius: 7px;
+    background: var(--shell-gold);
+    color: #272331;
+    box-shadow: none;
+    font-weight: 600;
+}
+.campus-shell .main-content :is(
+    .past-card .btn-primary, .past-detail .btn-primary, #sim-config .btn-primary, #suficiencia-screen .sf-bank-start,
+    #suficiencia-screen .sf-catalogue-card > .sf-button, .banco-config-card .btn-primary, .practice-session .btn-primary,
+    .resumenes-card:not(.resumenes-card-locked) .resumenes-card-body > button, #study-area #btn-reveal
+):not(:disabled):hover { background: var(--shell-gold-hover) }
+
+/* Biblioteca de flashcards, juegos y material multimedia. */
+.campus-shell #library-subjects, .campus-shell #resource-options { gap: 14px }
+.campus-shell .campus-browser :is(.subject-picker > button, .library-topics > button) {
+    min-width: 0;
+    border-radius: var(--shell-radius);
+    border-color: var(--shell-line);
+    color: var(--shell-ink);
+    background: var(--shell-panel);
+    box-shadow: var(--shell-shadow);
+}
+.campus-shell .campus-browser :is(.subject-picker > button, .library-topics > button):hover {
+    background: var(--shell-blue-soft);
+    border-color: var(--shell-blue);
+    transform: none;
+}
+.campus-shell .campus-browser .subject-picker > button { min-height: 184px; padding: 20px 16px; gap: 8px }
+.campus-shell .campus-browser .subject-picker :is(span, strong) { color: var(--shell-ink); font-size: 17px; font-weight: 600 }
+.campus-shell .campus-browser .subject-picker small, .campus-shell .campus-browser .library-topics span { color: var(--shell-muted) }
+.campus-shell #resource-options.games-chooser > button { min-height: 210px }
+.campus-shell #resource-options.games-chooser .game-choice-action { color: var(--shell-blue); font-size: 12px }
+.campus-shell #library-back { margin-bottom: 12px }
+.campus-shell #study-area .study-mobile-header { max-width: none }
+.campus-shell #study-area .flashcard-controls { margin-bottom: 12px }
+.campus-shell #study-area #flashcard-context { color: var(--shell-muted) }
+.campus-shell #study-area .flashcard-progress { background: var(--shell-line) }
+.campus-shell .intoc-hero, .campus-shell .itc-hero, .campus-shell .atlas-enrollment-hero {
+    border: 1px solid var(--shell-line);
+    border-radius: var(--shell-radius);
+    box-shadow: none;
+}
+.campus-shell .intoc-hero { background: var(--shell-panel); color: var(--shell-ink) }
+.campus-shell .intoc-hero-text h3 { color: var(--shell-ink) }
+.campus-shell .intoc-hero-text p { color: var(--shell-muted) }
+.campus-shell :is(.intoc-tab, .itc-formats button, .itc-subjects button) { border-radius: 7px }
+.campus-shell .intoc-filter-row { align-items: end }
+.campus-shell .mm-card:hover, .campus-shell .vc-card:hover, .campus-shell .itc-sheet-card:hover {
+    transform: none;
+    border-color: var(--shell-blue);
+}
+.campus-shell :is(.mm-card-title, .vc-card-title, .resumenes-filters h3, .itc-collection-head h2, .itc-card-title, .campus-atlas-heading h1) {
+    color: var(--shell-ink);
+}
+.campus-shell .vc-thumb-wrap { border-radius: 7px 7px 0 0 }
+.campus-shell :is(.vc-state-wrap, .resumenes-empty) {
+    border: 1px dashed var(--shell-line);
+    border-radius: var(--shell-radius);
+    background: var(--shell-panel);
+    color: var(--shell-muted);
+}
+.campus-shell :is(.vc-state-wrap h3, .vc-state-wrap p, .practice-reference > p, .practice-question-text) { color: var(--shell-muted) }
+.campus-shell .resumenes-filters { top: calc(var(--shell-top) + 12px) }
+.campus-shell :is(.resumenes-viewer, .official-texts-reader) { background: var(--shell-panel); color: var(--shell-ink) }
+.campus-shell :is(.resumenes-viewer-head, .official-texts-reader-head) { border-color: var(--shell-line) }
+.campus-shell .practice-reference { margin-bottom: 14px }
+.campus-shell :is(.practice-reference, .topic-eval-history) > summary { color: var(--shell-ink) }
+.campus-shell .practice-reference table { color: var(--shell-ink); border-color: var(--shell-line) }
+.campus-shell .practice-reference :is(th, td) { border-color: var(--shell-line) }
+.campus-shell .practice-reference thead { color: var(--shell-ink); background: var(--shell-soft) }
+.campus-shell #itc-coleccion { scroll-margin-top: calc(var(--shell-top) + 10px) }
+.campus-shell .calendar-overview { padding: var(--shell-gap) }
+.campus-contact-form { display: grid; gap: 14px; max-width: 720px }
+.campus-contact-form h3 { color: var(--shell-ink); font-size: 17px; font-weight: 600 }
+.campus-contact-form p { color: var(--shell-muted); font-size: 13px; line-height: 1.55 }
+.campus-contact-form label { display: grid; gap: 5px; font-size: 12px; font-weight: 600 }
+.campus-contact-form :is(input, select, textarea), #campus-notice-search {
+    width: 100%;
+    min-height: 41px;
+    padding: 8px 10px;
+    border: 1px solid var(--shell-line);
+    border-radius: 7px;
+    background: var(--shell-soft);
+    color: var(--shell-ink);
+    font-size: 13px;
+}
+.campus-contact-form textarea { resize: vertical }
+.campus-contact-form > button { justify-self: start }
+.campus-notice-search { margin-bottom: -7px; color: var(--shell-muted); font-size: 12px; font-weight: 600 }
+
+/* Paleta de estudio para los estados internos de los módulos. */
+.campus-shell.campus-dark .main-content :is(
+    .banco-select-btn, .banco-dropdown, .banco-dropdown-opt, .banco-info-bar, .banco-dif-btn,
+    .sf-bank-select, .sf-matter-button, .sf-level-button, .sf-previous-catalogue, .sf-button,
+    .study-area .btn-nav, #flashcard-shuffle, .past-result-tools, .sim-top-bar, .sim-question-nav,
+    .sim-result-wrap, .bq-explanation, .bq-result-card, .bq-question-card, .sim-option,
+    .sim-question-card, .sim-review-item, .sf-choice, .sf-review, .sf-options button, .sf-steps-item,
+    .sf-basics, .sf-given, .sf-formula, .sr-review-filters, .sr-question, .itc-card, .itc-search,
+    .itc-formats button, .itc-subjects button, .mm-practice-card, .mm-practice-question, .intoc-tab,
+    .atlas-gallery, .atlas-course-card, .dashboard-progress .progress-stats-row, .dashboard-progress .daily-goal-card
+) {
+    background-color: var(--shell-soft);
+    color: var(--shell-ink);
+    border-color: var(--shell-line);
+    box-shadow: none;
+}
+.campus-shell.campus-dark .main-content :is(
+    .banco-select-btn, .banco-dif-btn, .sim-option, .sf-matter-button, .sf-level-button,
+    .sf-options button, .itc-formats button, .itc-subjects button, .intoc-tab, .sr-review-filters button
+):is([aria-pressed="true"], .is-active, .active, .selected, .intoc-tab-active, .banco-dif-active, :hover) {
+    color: var(--shell-blue);
+    border-color: var(--shell-blue);
+    background-color: var(--shell-blue-soft);
+}
+.campus-shell.campus-dark :is(
+    .sf-bank-links button, .sf-card-meta, .sf-original, .sf-time, .sf-level-description, .sf-level-badge, .sf-question p,
+    .sr-count, .eval-metric-card span, .eval-section-title, .card-counter, #flashcard-inventory, #flashcard-mode-help,
+    .dashboard-progress :is(.daily-goal-title, .daily-goal-count, .daily-goal-msg, .prog-label, .prog-materia-row, .prog-bar-labels),
+    .banco-select-label, .vc-search-wrap i, .mm-filter-field label, .resumenes-filters label
+) { color: var(--shell-muted) }
+.campus-shell.campus-dark :is(.itc-card, .itc-sheet-card, .practice-session, .sf-result, .sf-lesson, .sim-result-wrap, .bq-question-card, .sim-question-card) :is(h2, h3, h4) { color: var(--shell-ink) }
+.campus-shell.campus-dark :is(.itc-card, .itc-sheet-card, .practice-session, .sf-lesson, .sim-result-wrap, .bq-question-card, .sim-question-card) p { color: var(--shell-muted) }
+.campus-shell.campus-dark #study-area .card .face {
+    background: var(--shell-panel);
+    border-color: var(--shell-line);
+    color: var(--shell-ink);
+}
+.campus-shell.campus-dark #study-area :is(.text-inner, .back-text) p { color: var(--shell-ink) }
+.campus-shell.campus-dark :is(.past-card .btn-primary, .sim-library-card .btn-primary, .sf-bank-start) { color: #272331 }
+.campus-shell.campus-dark :is(.calendar-outline, .resumenes-viewer-actions button, .campus-resource-secondary) {
+    background: var(--shell-panel);
+    border-color: var(--shell-line);
+    color: var(--shell-ink);
+}
+
+@media (max-width: 768px) {
+    .campus-shell :is(.campus-page-head, .sf-heading, .student-results .sim-header) { padding: 12px; gap: 8px 10px }
+    .campus-shell .campus-page-head > div { min-width: 0 }
+    .campus-shell .main-content :is(.past-filters, .sim-library-filters, .vc-filters, .sf-catalogue-filter, .intoc-filter-row) { gap: 9px }
+    .campus-shell .main-content :is(.past-card, .sim-library-card, #suficiencia-screen .sf-catalogue-card) { padding: 14px }
+    .campus-shell .resumenes-layout { display: flex; flex-direction: column }
+    .campus-shell .resumenes-layout > * { width: 100% }
+    .campus-shell .resumenes-filters { order: -1; position: static }
+    .campus-shell .campus-browser .subject-picker > button { min-height: 115px; padding: 13px; }
+    .campus-shell #resource-options.games-chooser > button { min-height: 155px }
+}
+@media (max-width: 500px) {
+    .campus-shell .main-content :is(.past-grid, #sim-library-list, .sf-catalogue, .resumenes-grid, .vc-grid) { grid-template-columns: minmax(0, 1fr) }
+    .campus-shell .campus-page-head > .btn-back-game { align-self: flex-start }
+}
+@media (prefers-reduced-motion: reduce) {
+    .campus-shell :is(.main-content, #sidebar, .campus-mood-grid button) { transition: none }
+}

@@ -75,7 +75,7 @@
         } catch (_) { /* The current session can still use the calendar. */ }
     }
 
-    function setUser(id = '', name = '') {
+    function setUser(id = '') {
         if (state.user !== id) {
             state.user = id;
             state.completed = new Set();
@@ -89,8 +89,6 @@
             }
             showOverview();
         }
-        byId('calendar-avatar').textContent = (name.trim().split(/\s+/).filter(Boolean)
-            .slice(0, 2).map(word => [...word][0]).join('') || 'A').toLocaleUpperCase('es');
         if (!id) screenChanged(false);
     }
 
@@ -183,7 +181,7 @@
                     navLinks: true,
                     navLinkDayClick: date => showDay(currentDateKey(date)),
                     dateClick: info => showDay(info.dateStr.slice(0, 10)),
-                    eventClick: info => showDay(info.event.extendedProps.date),
+                    eventClick: info => showDay(info.event.extendedProps.date, true, info.event.id),
                     eventDidMount: info => {
                         const control = info.el.querySelector('.fc-list-event-title a') || info.el;
                         control.tabIndex = 0;
@@ -192,7 +190,7 @@
                         control.addEventListener('keydown', event => {
                             if (event.key !== 'Enter' && event.key !== ' ') return;
                             event.preventDefault();
-                            showDay(info.event.extendedProps.date);
+                            showDay(info.event.extendedProps.date, true, info.event.id);
                         });
                     },
                     datesSet: () => requestAnimationFrame(decorateToolbar),
@@ -332,9 +330,10 @@
         renderProgress();
     }
 
-    function showDay(date, focus = true) {
+    function showDay(date, focus = true, activityId = '') {
         state.date = date;
-        state.active = activities()[0] || null;
+        const items = activities();
+        state.active = items.find(item => item.id === activityId) || items[0] || null;
         overview.hidden = true;
         dayPanel.hidden = false;
         renderActivity();
@@ -353,49 +352,11 @@
     }
 
     function screenChanged(active) {
-        document.body.classList.toggle('study-calendar-active', active);
-        const item = byId('nav-study-calendar');
-        item.classList.toggle('nav-item-active', active);
         if (active) {
-            item.querySelector('a').setAttribute('aria-current', 'page');
             if (calendar && !overview.hidden) requestAnimationFrame(() => calendar.updateSize());
-        } else {
-            item.querySelector('a').removeAttribute('aria-current');
-            document.body.classList.remove('calendar-menu-expanded');
-            byId('calendar-menu').setAttribute('aria-expanded', 'false');
-            if (dialog.open) dialog.close();
-        }
+        } else if (dialog.open) dialog.close();
     }
 
-    function setTheme(dark) {
-        screen.classList.toggle('calendar-dark', dark);
-        const control = byId('calendar-theme');
-        control.replaceChildren(icon(dark ? 'sun' : 'moon'));
-        const label = dark ? 'Activar modo claro' : 'Activar modo oscuro';
-        control.setAttribute('aria-label', label);
-        control.setAttribute('aria-pressed', String(dark));
-        control.title = label;
-    }
-
-    byId('calendar-theme').onclick = () => {
-        const dark = !screen.classList.contains('calendar-dark');
-        setTheme(dark);
-        try { localStorage.setItem('alcocermed-calendar-dark', dark ? '1' : '0'); } catch (_) {}
-    };
-    try { setTheme(localStorage.getItem('alcocermed-calendar-dark') === '1'); } catch (_) {}
-    byId('calendar-menu').onclick = () => {
-        const expanded = small.matches
-            ? (window.toggleSidebar(), byId('sidebar').classList.contains('open'))
-            : document.body.classList.toggle('calendar-menu-expanded');
-        byId('calendar-menu').setAttribute('aria-expanded', String(expanded));
-    };
-    byId('calendar-fullscreen').hidden = !document.fullscreenEnabled;
-    byId('calendar-fullscreen').onclick = async () => {
-        try {
-            if (document.fullscreenElement) await document.exitFullscreen();
-            else await document.documentElement.requestFullscreen();
-        } catch (_) { /* The browser may limit fullscreen in embedded contexts. */ }
-    };
     small.addEventListener('change', () => {
         if (!calendar) return;
         calendar.setOption('height', small.matches ? 'auto' : '79vh');
@@ -425,6 +386,11 @@
             if (showScreen('study-calendar-screen') === false) return;
             showOverview();
             initCalendar();
+        },
+        openDate(date, activityId) {
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || showScreen('study-calendar-screen') === false) return;
+            initCalendar();
+            showDay(date, true, activityId);
         },
         screenChanged,
         setUser,

@@ -1,43 +1,11 @@
-@font-face { font-family:Poppins; src:url('/assets/fonts/poppins/400.woff2') format('woff2'); font-weight:400; font-display:swap }
-@font-face { font-family:Poppins; src:url('/assets/fonts/poppins/500.woff2') format('woff2'); font-weight:500; font-display:swap }
-@font-face { font-family:Poppins; src:url('/assets/fonts/poppins/600.woff2') format('woff2'); font-weight:600; font-display:swap }
-@font-face { font-family:Poppins; src:url('/assets/fonts/poppins/700.woff2') format('woff2'); font-weight:700; font-display:swap }
-
-.calendar-brand, .calendar-avatar { display:none }
-body.study-calendar-active { --calendar-rail:80px; --calendar-top:63px }
-body.study-calendar-active #mobile-topbar { display:none }
-body.study-calendar-active .main-content { padding:0; min-width:0 }
-body.study-calendar-active #sidebar { background:#1e1e2d; border-right:1px solid #ffffff16; color:#fff; font-family:Poppins, sans-serif }
-body.study-calendar-active #sidebar .sidebar-header { height:63px; min-height:63px; padding:0 18px; border-bottom:1px solid #ffffff1a }
-body.study-calendar-active #sidebar .sidebar-logo { display:none }
-body.study-calendar-active #sidebar .calendar-brand { display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; white-space:nowrap }
-.calendar-brand img { width:43px; height:40px }
-.calendar-brand-name { font-size:21px; font-weight:700; letter-spacing:-.7px; text-transform:none }
-.calendar-brand-short { display:none; font-size:13px; font-weight:700; letter-spacing:.2px; text-transform:uppercase }
-body.study-calendar-active #sidebar .user-session { width:100%; height:79px; margin:0; padding:0 15px; gap:12px; border-radius:0; background:transparent; border-bottom:1px solid #ffffff1a }
-body.study-calendar-active #sidebar .user-avatar { width:48px; height:48px; flex:0 0 48px; border-radius:50%; background:#f3f5f7; color:#374151; font:600 13px Poppins,sans-serif }
-body.study-calendar-active #sidebar .user-avatar i { display:none }
-body.study-calendar-active #sidebar .calendar-avatar { display:inline; text-transform:uppercase }
-body.study-calendar-active #sidebar .user-name { text-transform:capitalize }
-body.study-calendar-active #sidebar .nav-section { padding:13px 12px; margin:0; border-bottom:1px solid #ffffff16 }
-body.study-calendar-active #sidebar .section-title { display:none!important }
-body.study-calendar-active #sidebar .nav-links { gap:4px; padding:0; margin:0 }
-body.study-calendar-active #sidebar .nav-item > a { width:auto; min-height:44px; margin:0; padding:0 15px; gap:14px; justify-content:flex-start; border:0; border-radius:7px; color:#d1d5df; font-size:13px; font-weight:500 }
-body.study-calendar-active #sidebar .nav-item-active > a { background:#f6a43a!important; color:#242330!important }
-body.study-calendar-active #sidebar .nav-item > a .nav-icon { width:26px; height:26px; min-width:26px; border:0; border-radius:0; background:none; color:inherit; box-shadow:none }
-body.study-calendar-active #sidebar .nav-icon svg { width:24px; height:24px }
-body.study-calendar-active #sidebar .nav-label { display:inline-block!important; opacity:1; max-width:190px; white-space:nowrap; text-transform:capitalize; color:inherit }
-body.study-calendar-active #sidebar .user-info { display:block!important; opacity:1; max-width:160px }
-body.study-calendar-active #sidebar .sidebar-logout-btn { display:grid; place-items:center; opacity:1; max-width:34px; margin-left:auto }
-
 .study-calendar {
     --cal-bg:#eef2f8; --cal-panel:#fff; --cal-ink:#1e293b; --cal-muted:#64748b;
     --cal-border:#dce2ea; --cal-grid:#ddd; --cal-day-band:#efefef; --cal-hover:#f4f7fb;
     --cal-blue:#288cc7; --cal-action:#11678e; --cal-gold:#f6a43a; --cal-shadow:#10203914;
-    --cal-today:#fff9df; min-height:100dvh; background:var(--cal-bg); color:var(--cal-ink);
+    --cal-today:#fff9df; min-height:calc(100dvh - var(--shell-top, 63px)); background:var(--cal-bg); color:var(--cal-ink);
     font:400 14px Poppins, Outfit, system-ui, sans-serif;
 }
-.study-calendar.calendar-dark {
+.campus-dark .study-calendar {
     --cal-bg:#0f172a; --cal-panel:#1e293b; --cal-ink:#f8fafc; --cal-muted:#b1bfce;
     --cal-border:#37465b; --cal-grid:#435166; --cal-day-band:#26354b; --cal-hover:#293b52;
     --cal-action:#85cbf1; --cal-today:#3e3d2e; --cal-shadow:#0004;
@@ -46,19 +14,9 @@ body.study-calendar-active #sidebar .sidebar-logout-btn { display:grid; place-it
 .study-calendar button { font-family:inherit; cursor:pointer }
 .study-calendar :is(button,a,[role="button"]):focus-visible { outline:3px solid #3997d5; outline-offset:2px }
 .study-calendar svg:not(.fc-icon) { display:block; width:22px; height:22px; flex:none }
-.calendar-topbar {
-    position:sticky; top:0; z-index:5; min-height:var(--calendar-top); display:flex; align-items:center;
-    gap:9px; padding:0 20px; border-bottom:1px solid var(--cal-border); background:var(--cal-panel); color:var(--cal-ink);
-}
-.calendar-topbar-label { display:none; font-weight:600 }
-.calendar-top-actions { display:flex; align-items:center; gap:8px; margin-left:auto }
-.calendar-icon-button {
-    width:36px; height:36px; display:grid; place-items:center; padding:0; border:0; border-radius:7px;
-    background:transparent; color:var(--cal-muted);
-}
-.calendar-icon-button:hover { background:var(--cal-hover); color:var(--cal-ink) }
 .calendar-overview { padding:20px }
 .calendar-sheet { padding:18px 20px 20px; background:var(--cal-panel); border:1px solid var(--cal-border); border-radius:8px; min-width:0 }
+.calendar-overview-title { margin:0 0 8px; font-size:19px; font-weight:600; line-height:1.35 }
 .calendar-sample { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:12px; color:var(--cal-muted); font-size:11px }
 .calendar-sample-badge { padding:4px 9px; border-radius:6px; color:var(--cal-action); background:var(--cal-hover); font-weight:600 }
 .calendar-load-status { margin:8px 0; color:var(--cal-muted) }
@@ -177,31 +135,12 @@ body.study-calendar-active #sidebar .sidebar-logout-btn { display:grid; place-it
 .calendar-plan-complete[aria-pressed="true"] svg { opacity:1 }
 .calendar-plan-empty { padding:12px 0; color:var(--cal-muted); font-size:12px }
 
-@media (min-width:769px) {
-    body.study-calendar-active.calendar-menu-expanded { --calendar-rail:280px }
-    body.study-calendar-active .main-content { margin-left:var(--calendar-rail); width:calc(100% - var(--calendar-rail)) }
-    body.study-calendar-active #sidebar { width:280px; min-width:0; overflow-x:hidden; z-index:25 }
-    body.study-calendar-active #sidebar .sidebar-toggle-btn { display:none }
-    body.study-calendar-active:not(.calendar-menu-expanded) #sidebar:not(:hover):not(:has(:focus-visible)) { width:var(--calendar-rail) }
-    body.study-calendar-active:not(.calendar-menu-expanded) #sidebar:not(:hover):not(:has(:focus-visible)) .sidebar-header { justify-content:center; padding:0 }
-    body.study-calendar-active:not(.calendar-menu-expanded) #sidebar:not(:hover):not(:has(:focus-visible)) .calendar-brand { flex-direction:column; gap:0 }
-    body.study-calendar-active:not(.calendar-menu-expanded) #sidebar:not(:hover):not(:has(:focus-visible)) .calendar-brand img { width:35px; height:29px }
-    body.study-calendar-active:not(.calendar-menu-expanded) #sidebar:not(:hover):not(:has(:focus-visible)) .calendar-brand-short { display:inline }
-    body.study-calendar-active:not(.calendar-menu-expanded) #sidebar:not(:hover):not(:has(:focus-visible)) :is(.calendar-brand-name,.user-info,.sidebar-logout-btn,.nav-label,.nav-badge,.arrow,.progress-section,.submenu) { display:none!important }
-    body.study-calendar-active:not(.calendar-menu-expanded) #sidebar:not(:hover):not(:has(:focus-visible)) .nav-item > a { justify-content:center; padding:0; gap:0 }
-}
 @media (max-width:960px) {
     #calendar-board .fc-toolbar { flex-wrap:wrap; justify-content:space-between }
     #calendar-board .fc-toolbar-chunk:nth-child(2) { justify-content:center }
     #calendar-board .fc-button { padding-inline:10px }
 }
 @media (max-width:768px) {
-    body.study-calendar-active { --calendar-rail:0px; --calendar-top:55px }
-    body.study-calendar-active .main-content { width:100%; margin-left:0 }
-    body.study-calendar-active #sidebar { width:min(280px,87vw) }
-    body.study-calendar-active #sidebar .sidebar-toggle-btn { display:flex; margin-left:auto }
-    .calendar-topbar { padding:0 10px }
-    .calendar-topbar-label { display:inline }
     .calendar-overview { padding:10px }
     .calendar-sheet { padding:10px 9px 12px }
     .calendar-sample { gap:3px 8px }
