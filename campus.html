@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="campus-atlas.css?v=5">
     <link rel="stylesheet" href="summary-pdf-reader.css?v=2">
     <link rel="stylesheet" href="campus-study-resources.css?v=1">
+    <link rel="stylesheet" href="study-calendar.css?v=1">
 <link rel="stylesheet" href="/device-limit.css?v=1">
 <link rel="stylesheet" href="study-media.css?v=20261021-visual5c">
     <link rel="stylesheet" href="suficiencia.css?v=7">
@@ -144,6 +145,11 @@
 
         <!-- ══ HEADER DEL SIDEBAR ══ -->
         <div class="sidebar-header">
+            <a href="/campus?seccion=calendario" class="calendar-brand" onclick="CampusCalendar.open(); return false;" aria-label="AlcocerMed, calendario">
+                <img src="/assets/calendar-brand.svg" alt="">
+                <span class="calendar-brand-short" aria-hidden="true">ACM</span>
+                <span class="calendar-brand-name" aria-hidden="true">AlcocerMed</span>
+            </a>
             <div class="sidebar-logo">
                 <div class="logo-icon">
                     <img src="https://asnwhddmurstzmghuyin.supabase.co/storage/v1/object/public/logo_preparatoria/logo%20prepa%20bencarson.jpg"
@@ -167,6 +173,7 @@
         <div class="user-session" id="user-session-block">
             <div class="user-avatar">
                 <i class="fas fa-user"></i>
+                <span id="calendar-avatar" class="calendar-avatar" aria-hidden="true"></span>
             </div>
             <div class="user-info">
                 <span class="user-name" id="sidebar-user-name">estudiante</span>
@@ -189,6 +196,12 @@
                             <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#home"></use></svg>
                         </span>
                         <span class="nav-label">inicio</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-item-simple" id="nav-study-calendar">
+                    <a href="/campus?seccion=calendario" onclick="CampusCalendar.open(); return false;" aria-label="Calendario" data-tooltip="calendario">
+                        <span class="nav-icon"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/calendar-icons.svg#calendar"></use></svg></span>
+                        <span class="nav-label">Calendario</span>
                     </a>
                 </li>
 
@@ -262,7 +275,7 @@
 
                 <li class="nav-item nav-item-simple" id="nav-official-texts">
                     <a href="/campus?seccion=textos-oficiales" onclick="if (window.OfficialTexts) { OfficialTexts.open(); return false; }" data-tooltip="textos oficiales">
-                        <span class="nav-icon nav-icon-summary"><i class="fas fa-book-open" aria-hidden="true"></i></span>
+                        <span class="nav-icon nav-icon-summary"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/calendar-icons.svg#book"></use></svg></span>
                         <span class="nav-label">Textos oficiales</span>
                     </a>
                 </li>
@@ -296,7 +309,7 @@
 
                 <li class="nav-item nav-item-simple" id="nav-sufficiency-practice">
                     <a href="/campus?seccion=practica-suficiencia" onclick="showScreen('sufficiency-practice-screen'); return false;" data-tooltip="práctica de suficiencia">
-                        <span class="nav-icon nav-icon-summary"><i class="fas fa-square-root-variable" aria-hidden="true"></i></span>
+                        <span class="nav-icon nav-icon-summary"><svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/calendar-icons.svg#practice"></use></svg></span>
                         <span class="nav-label">Práctica de suficiencia</span>
                     </a>
                 </li>
@@ -1225,6 +1238,75 @@
             </dialog>
         </section>
 
+        <section id="study-calendar-screen" class="study-calendar hidden" aria-label="Calendario de estudio">
+            <header class="calendar-topbar">
+                <button id="calendar-menu" class="calendar-icon-button" type="button" aria-label="Menú del campus" aria-controls="sidebar" aria-expanded="false">
+                    <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#menu"></use></svg>
+                </button>
+                <span class="calendar-topbar-label">Calendario</span>
+                <div class="calendar-top-actions">
+                    <button id="calendar-fullscreen" class="calendar-icon-button" type="button" aria-label="Pantalla completa" title="Pantalla completa">
+                        <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#fullscreen"></use></svg>
+                    </button>
+                    <button id="calendar-theme" class="calendar-icon-button" type="button" aria-label="Activar modo oscuro" title="Activar modo oscuro">
+                        <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#moon"></use></svg>
+                    </button>
+                </div>
+            </header>
+            <div id="calendar-overview" class="calendar-overview">
+                <div class="calendar-sheet">
+                    <div class="calendar-sample">
+                        <span class="calendar-sample-badge">Plan de práctica de muestra</span>
+                        <span>Horarios de ejemplo · Bolivia</span>
+                    </div>
+                    <p id="calendar-load-status" class="calendar-load-status" role="status" hidden></p>
+                    <button id="calendar-retry" class="calendar-outline" type="button" hidden>Reintentar</button>
+                    <div id="calendar-board"></div>
+                </div>
+            </div>
+            <section id="calendar-day" class="calendar-day" aria-labelledby="calendar-activity-title" hidden>
+                <header class="calendar-day-header">
+                    <button id="calendar-open-plan" class="calendar-plan-trigger" type="button" aria-haspopup="dialog" title="Abrir cronograma del día">
+                        <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#panel"></use></svg>
+                        <span>Cronograma</span>
+                    </button>
+                    <div class="calendar-day-titles">
+                        <p id="calendar-day-label"></p>
+                        <h2 id="calendar-activity-title"></h2>
+                    </div>
+                    <div id="calendar-rating" class="calendar-rating" aria-label="Valora esta actividad"></div>
+                </header>
+                <div class="calendar-day-body">
+                    <button id="calendar-back" class="calendar-outline" type="button">
+                        <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#previous"></use></svg> Calendario
+                    </button>
+                    <article id="calendar-activity" class="calendar-activity"></article>
+                </div>
+            </section>
+            <dialog id="calendar-plan" class="calendar-plan" aria-labelledby="calendar-plan-title">
+                <div class="calendar-plan-head">
+                    <progress id="calendar-plan-progress" max="1" value="0" aria-label="Avance del día"></progress>
+                    <div class="calendar-plan-heading">
+                        <h3 id="calendar-plan-title">Estudio del día</h3>
+                        <button id="calendar-plan-close" class="calendar-icon-button" type="button" aria-label="Cerrar cronograma">
+                            <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#close"></use></svg>
+                        </button>
+                    </div>
+                    <div class="calendar-plan-date">
+                        <button id="calendar-day-prev" class="calendar-outline" type="button" aria-label="Día anterior">
+                            <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#previous"></use></svg>
+                        </button>
+                        <time id="calendar-plan-date"></time>
+                        <button id="calendar-day-next" class="calendar-outline" type="button" aria-label="Día siguiente">
+                            <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#next"></use></svg>
+                        </button>
+                    </div>
+                    <p id="calendar-plan-count" aria-live="polite"></p>
+                </div>
+                <ul id="calendar-plan-list" class="calendar-plan-list"></ul>
+            </dialog>
+        </section>
+
         <section id="official-texts-screen" class="campus-resource-screen hidden" aria-labelledby="official-texts-title">
             <div class="sim-header">
                 <button type="button" class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver</button>
@@ -1466,7 +1548,7 @@
     <script src="campus-section-tracking.js?v=1"></script>
     <script src="question-review.js?v=3"></script>
     <script src="study-media.js?v=20261021-visual5b"></script>
-    <script src="script.js?v=20261108-recursos-suficiencia"></script>
+    <script src="script.js?v=20261108-calendario"></script>
     <script src="mindmap-branch-labels.js?v=20261021-visual5b"></script>
     <script src="mindmap-content.js?v=3"></script>
     <script src="mindmap-detailed-content.js?v=20261021-visual5b"></script>
@@ -1483,6 +1565,9 @@
     <script src="official-texts.js?v=1"></script>
     <script src="sufficiency-practice-content.js?v=1"></script>
     <script src="sufficiency-practice.js?v=1"></script>
+    <script src="study-calendar-data.js?v=1"></script>
+    <script src="study-calendar-pdf.js?v=1"></script>
+    <script src="study-calendar.js?v=1"></script>
     <script src="study-summaries.js?v=20261021-visual5b"></script>
     <script src="past-exams.js?v=6"></script>
     <script src="topic-evaluations.js?v=20261107-suficiencia"></script>

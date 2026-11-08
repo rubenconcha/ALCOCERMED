@@ -30,6 +30,11 @@ jobs:
           node --check sufficiency-practice.js
           node --check summary-pdf-reader.js
           node --test tests/campus-study-resources.test.cjs tests/study-summaries.test.cjs
+      - name: Check study calendar and sample schedule
+        run: |
+          node --check study-calendar.js
+          node --check study-calendar-pdf.js
+          node --test tests/study-calendar.test.cjs
       - name: Check student result history and isolation
         run: |
           node --check student-results.js
