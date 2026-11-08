@@ -4,7 +4,9 @@ const C = require('../suficiencia-core.js');
 const results = require('../student-results.js');
 const base = require('../api/_sufficiency/bank.json');
 const official = require('../api/_sufficiency/umsa-2026.cjs');
-const medical = require('../api/_sufficiency/medicina-oficial.json');
+const baseMedical = require('../api/_sufficiency/medicina-oficial.json');
+const reviewed = require('../api/_sufficiency/articulaciones-examen.json');
+const medical = { ...baseMedical, questions: baseMedical.questions.concat(reviewed) };
 const topics = require('../content/topic-evaluations/catalog.json').exams;
 const endpoint = require('../api/suficiencia.js');
 
@@ -12,7 +14,9 @@ const bank = { ...base, questions: base.questions.concat(official, medical.quest
 
 test('every Medicine topic offers all three levels with official, identifiable references', () => {
     assert.equal(medical.collection, C.biomedicalCollection);
-    assert.equal(medical.questions.length, 680);
+    assert.equal(baseMedical.questions.length, 680);
+    assert.equal(reviewed.length, 12);
+    assert.equal(new Set(medical.questions.map(q => q.id)).size, 692);
     assert.equal(C.validate(bank), true);
     const subjects = [
         ['morfofuncion', 'morfo-', 'Kenneth S. Saladin', 29, 1251],
@@ -25,8 +29,9 @@ test('every Medicine topic offers all three levels with official, identifiable r
         assert.deepEqual(C.topics(bank, subject).map(t => t.key), expected.map(t => t.id));
         for (const topic of expected) {
             const configuration = { subject, topic: topic.id, level: 'todos' };
-            assert.equal(C.configurationCount(bank, configuration), 10);
-            for (const [level, size] of [['facil', 4], ['intermedio', 4], ['dificil', 2]]) {
+            const revised = topic.id === 'morfo-09';
+            assert.equal(C.configurationCount(bank, configuration), revised ? 20 : 10);
+            for (const [level, size] of [['facil', 4], ['intermedio', 4], ['dificil', revised ? 14 : 2]]) {
                 const rows = C.configurationPool(bank, { ...configuration, level });
                 assert.equal(rows.length, size);
                 for (const q of rows) {
@@ -111,13 +116,13 @@ test('Medicine API is private and only returns the new collection to active acco
     assert.ok(index.questions.every(q => q.optionCount > 1 && !q.options && !q.text && !q.solution));
     assert.ok(index.questions.some(C.isBiomedical));
     const reading = index.questions.find(q => q.passageId);
-    const ids = [medical.questions[0].id, reading.id];
+    const ids = [reviewed[0].id, reading.id];
     const packQuery = { ...catalogueQuery, vista: 'preguntas' };
     assert.equal((await request(packQuery, undefined, ids)).code, 401);
     assert.equal((await request(packQuery, 'Bearer fixture', [reading.id, reading.id])).code, 400);
     const pack = JSON.parse((await request(packQuery, 'Bearer fixture', ids)).body);
     assert.deepEqual(pack.questions.map(q => q.id), ids);
-    assert.deepEqual(pack.questions[0], medical.questions[0]);
+    assert.deepEqual(pack.questions[0], reviewed[0]);
     assert.deepEqual(pack.passages.map(p => p.id), [reading.passageId]);
     assert.ok(pack.passages[0].text.length);
 });

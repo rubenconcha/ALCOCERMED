@@ -2,14 +2,15 @@
 (function () {
     'use strict';
     const C = window.SufficiencyCore, labels = C.practiceSubjects;
+    const examLevel = 'dificil';
     const officialGuides = {
         matematicas: 'https://drive.google.com/file/d/1IRuuJCW8oBAOqL2uqwHZv4eWSVtZkwqF/view',
         fisica: 'https://drive.google.com/file/d/1L1z3zmyHNpzaB4HGrlJNEjMs6QWF7XUz/view',
         quimica: 'https://drive.google.com/file/d/1kVK0xS3ULILT3oB98-RCbH2aRV4ffqWA/view'
     };
-    const openTopicSimulacro = window.openSimulacro;
+    const openEntranceLibrary = window.openSimulacro;
     const root = document.getElementById('suficiencia-screen');
-    let bank = null, hasMedicine = false, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'matematicas', level = 'facil', catalogueArea = 'matematicas', catalogueMode = 'config', configSubject = '', configTopic = '', configLevel = 'todos', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
+    let bank = null, hasMedicine = false, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'matematicas', level = 'facil', catalogueArea = 'matematicas', catalogueMode = 'config', configSubject = '', configTopic = '', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
     let catalogueRequest = null, viewRevision = 0;
     let preparation, preparationTimer;
     const details = new Map(), pendingPacks = new Map();
@@ -23,7 +24,7 @@
         return labels[value] || (value.startsWith('texto:') ? bank?.passages.find(p => p.id === value.slice(6))?.title : 'Simulacro');
     };
     const button = (action, text, extra = '') => `<button type="button" class="sf-button ${extra}" data-sf="${action}">${text}</button>`;
-    const header = () => `<div class="banco-header sf-heading"><button type="button" class="btn-back-game" data-sf="home" aria-label="Volver al inicio"><i class="fas fa-arrow-left" aria-hidden="true"></i> volver</button><div><h1 class="banco-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg> Simulacro</h1><p class="banco-subtitle">Elige una materia y un tema. Responde y revisa la explicación.</p></div></div>`;
+    const header = () => `<div class="banco-header sf-heading"><button type="button" class="btn-back-game" data-sf="topics" aria-label="Volver a simulacros"><i class="fas fa-arrow-left" aria-hidden="true"></i> volver</button><div><h1 class="banco-title"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg> Práctica por materia</h1><p class="banco-subtitle">Elige materia y tema. La prueba usa preguntas difíciles y la revisión se abre al terminar.</p></div></div>`;
     function stopClock() { clearInterval(clock); clock = null; }
     function cancelPreparation() {
         if (preparationTimer) clearTimeout(preparationTimer);
@@ -32,7 +33,7 @@
     }
     function clear() {
         generation++; stopClock(); cancelPreparation(); if (pendingConfirmation) pendingConfirmation(false);
-        bank = null; hasMedicine = false; owner = null; attempt = null; questions = []; level = 'facil'; catalogueArea = 'matematicas'; catalogueMode = 'config'; configSubject = ''; configTopic = ''; configLevel = 'todos'; ending = false; starting = false; renderedPassage = null;
+        bank = null; hasMedicine = false; owner = null; attempt = null; questions = []; level = 'facil'; catalogueArea = 'matematicas'; catalogueMode = 'config'; configSubject = ''; configTopic = ''; ending = false; starting = false; renderedPassage = null;
         catalogueRequest = null; details.clear(); pendingPacks.clear();
         root.replaceChildren();
     }
@@ -123,7 +124,7 @@
     async function open(next = 'matematicas') {
         if (next === 'completos') next = 'integral';
         if (!labels[next] && next !== 'integral' && next !== 'completos') next = 'matematicas';
-        if (window.CampusAccess?.isFree()) return typeof openTopicSimulacro === 'function' ? openTopicSimulacro() : window.CampusAccess.unlock();
+        if (window.CampusAccess?.isFree()) return window.CampusAccess.unlock();
         if (typeof showScreen === 'function' && showScreen('suficiencia-screen') === false) return;
         const revision = ++viewRevision;
         area = next; catalogueArea = next; catalogueMode = 'config'; cataloguePage = 0; catalogueQuery = '';
@@ -167,7 +168,7 @@
         return (papers || []).filter(p => (catalogueMode === 'levels' ? p.subject === area && p.difficulty === level : area === 'integral' || (area === 'completos' ? p.subject === 'integral' : p.subject === area)) &&
             (!query || normalized(p.title + ' ' + p.description + ' ' + (labels[p.subject] || 'completo') + ' ' + (C.levels[p.difficulty] || '')).includes(query)));
     }
-    const configuration = () => ({subject:configSubject,topic:configTopic,level:configLevel});
+    const configuration = () => ({ subject: configSubject, topic: configTopic, level: examLevel });
     function prepareConfiguration() {
         cancelPreparation();
         if (!bank || !configTopic || window.navigator?.connection?.saveData) return;
@@ -192,8 +193,30 @@
         const optionHtml = t => `<option value="${esc(t.key)}" ${configTopic===t.key?'selected':''}>${esc(t.label)}</option>`;
         const topicOptions = options.filter(t=>!t.key.startsWith(C.officialTopicPrefix)).map(optionHtml).join('') +
             (official.length ? '<optgroup label="Textos oficiales UMSA 2026">' + official.map(optionHtml).join('') + '</optgroup>' : '');
-        const difficulties={todos:'Todos',...C.levels},icons={todos:'th',facil:'seedling',intermedio:'fire',dificil:'skull-crossbones'};
-        return `<section class="banco-config-card sf-bank-config" aria-label="Configurar simulacro"><div class="banco-selects-row"><div class="banco-select-group"><label class="banco-select-label" for="sf-config-subject"><i class="fas fa-book-medical" aria-hidden="true"></i> MATERIA</label><select id="sf-config-subject" class="banco-select-btn sf-bank-select"><option value="">seleccionar materia</option>${subjectOptions()}</select></div><div class="banco-select-group"><label class="banco-select-label" for="sf-config-topic"><i class="fas fa-tag" aria-hidden="true"></i> TEMA</label><select id="sf-config-topic" class="banco-select-btn sf-bank-select" ${bank && configSubject?'':'disabled'}><option value="">${topicLabel}</option>${bank && configSubject && configSubject!=='integral'?`<option value="*" ${configTopic==='*'?'selected':''}>Todos los temas</option>`:''}${topicOptions}</select></div></div><div class="banco-dificultad-row"><div class="banco-select-label"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"> NIVEL DE DIFICULTAD</div><div class="banco-dificultad-btns" role="group" aria-label="Nivel de dificultad">${Object.entries(difficulties).map(([id,label])=>`<button type="button" data-sf="config-level" data-level="${id}" class="banco-dif-btn banco-dif-${id==='intermedio'?'medio':id} ${configLevel===id?(id==='todos'?'banco-dif-active':'active-selected'):''}" aria-pressed="${configLevel===id}"><i class="fas fa-${icons[id]}" aria-hidden="true"></i> ${label}</button>`).join('')}</div></div><div class="banco-config-summary" role="status" aria-live="polite"><div class="banco-summary-item"><i class="fas fa-question-circle" aria-hidden="true"></i><span>${!configSubject||!configTopic?'se mostrarán hasta <strong>—</strong> preguntas en orden aleatorio':count?'se mostrarán <strong>'+count+'</strong> preguntas en orden aleatorio':'no hay preguntas con esta combinación; elige otro tema o nivel'}</span></div></div><button type="button" data-sf="run" data-area="config" class="btn-primary banco-start-btn sf-bank-start" ${count?'':'disabled'}><i class="fas fa-play" aria-hidden="true"></i> Iniciar simulacro</button></section>`;
+        const summary = !configSubject || !configTopic ? 'Elige una materia y un tema para ver las preguntas disponibles.' :
+            count ? 'La prueba tiene <strong>' + count + '</strong> ' + (count === 1 ? 'pregunta difícil' : 'preguntas difíciles') + '.' :
+                'Este tema todavía no tiene preguntas difíciles. Elige otro tema.';
+        return `<section class="banco-config-card sf-bank-config" aria-label="Elegir tema para la práctica">
+            <div class="banco-selects-row">
+                <div class="banco-select-group">
+                    <label class="banco-select-label" for="sf-config-subject"><i class="fas fa-book-medical" aria-hidden="true"></i> MATERIA</label>
+                    <select id="sf-config-subject" class="banco-select-btn sf-bank-select"><option value="">seleccionar materia</option>${subjectOptions()}</select>
+                </div>
+                <div class="banco-select-group">
+                    <label class="banco-select-label" for="sf-config-topic"><i class="fas fa-tag" aria-hidden="true"></i> TEMA</label>
+                    <select id="sf-config-topic" class="banco-select-btn sf-bank-select" ${bank && configSubject ? '' : 'disabled'}>
+                        <option value="">${topicLabel}</option>${bank && configSubject && configSubject !== 'integral' ?
+                            `<option value="*" ${configTopic === '*' ? 'selected' : ''}>Todos los temas</option>` : ''}${topicOptions}
+                    </select>
+                </div>
+            </div>
+            <div class="banco-config-summary" role="status" aria-live="polite"><div class="banco-summary-item">
+                <i class="fas fa-question-circle" aria-hidden="true"></i><span>${summary}</span>
+            </div></div>
+            <button type="button" data-sf="run" data-area="config" class="btn-primary banco-start-btn sf-bank-start" ${count ? '' : 'disabled'}>
+                <i class="fas fa-play" aria-hidden="true"></i> Iniciar prueba
+            </button>
+        </section>`;
     }
     function progressPanel() {
         const snapshot = attempt?.result_snapshot;
@@ -226,7 +249,7 @@
             const count = bank.questions.filter(C.isOfficial).length;
             const guides = count ? `<details class="sf-sources"><summary>Textos oficiales UMSA 2026</summary><p>${count} ejercicios de AlcocerMed basados en las guías de Medicina UMSA. Elige una materia y busca el grupo «Textos oficiales UMSA 2026» en el selector de temas. Cada resolución indica la sección y las páginas de referencia.</p><ul>${Object.entries(officialGuides).map(([s,url])=>`<li><a href="${url}" target="_blank" rel="noopener noreferrer">Abrir guía de ${labels[s]}</a></li>`).join('')}</ul></details>` : '';
             const medicine = hasMedicine ? `<details class="sf-sources"><summary>Bibliografía de las materias de Medicina</summary><ul><li>Kenneth S. Saladin, <i>Anatomía y fisiología: la unidad entre forma y función</i>, 6.ª edición.</li><li>Alfonso Calvo González, <i>Biología celular biomédica</i>, Elsevier, 2015.</li><li>UMSS, <i>Educación en Salud e Investigación</i>, Curso Básico 2025–2026.</li></ul><p>Cada explicación indica la sección y las páginas de referencia.</p></details>` : `<div class="sf-notice" role="status">No pudimos cargar las materias de Medicina. ${button('reload','Volver a cargar')}</div>`;
-            root.innerHTML=header()+configurationControls()+medicine+guides+progressPanel()+`<div class="sf-bank-links">${button('legacy','Ver simulacros anteriores')}${typeof openTopicSimulacro==='function'?button('topics','Simulacros completos y semanales'):''}</div><details class="sf-sources"><summary>Sobre el material</summary><p>${bank.questions.length} preguntas con explicación. Las referencias aparecen al revisar las respuestas.</p></details>`;
+            root.innerHTML=header()+configurationControls()+medicine+guides+progressPanel()+`<div class="sf-bank-links">${button('legacy','Ver simulacros anteriores')}${typeof openEntranceLibrary==='function'?button('topics','Simulacros completos y semanales'):''}</div><details class="sf-sources"><summary>Sobre el material</summary><p>${bank.questions.length} preguntas con explicación. Las referencias aparecen al revisar las respuestas.</p></details>`;
         } else {
             root.classList.remove?.('sf-bank-layout');
             root.innerHTML=header()+`<div class="sf-legacy-heading"><h2>Simulacros anteriores</h2>${button('config','Volver al selector')}</div><div class="sf-catalogue-filter"><label for="sf-area-filter">Materia<select id="sf-area-filter"><option value="integral">Todos</option>${Object.entries(C.subjects).map(([id,name])=>`<option value="${id}" ${area===id?'selected':''}>${name}</option>`).join('')}</select></label><label for="sf-search">Buscar simulacro<input id="sf-search" type="search" placeholder="Nombre o número" value="${esc(catalogueQuery)}"></label><p data-sf-status role="status" aria-live="polite"></p></div><div class="sf-catalogue" data-sf-cards></div><nav class="sf-pagination" data-sf-pagination aria-label="Páginas de simulacros"></nav>`;
@@ -237,8 +260,11 @@
     async function start(selectedArea) {
         if (starting) return;
         const target = selectedArea || area;
-        const configured = target === 'config' ? { ...(selectedArea ? configuration() : attempt?.configuration || configuration()) } : null;
-        if (configured && (!bank || !C.configurationCount(bank, configured))) return;
+        const configured = target === 'config' ? { ...(selectedArea ? configuration() : attempt?.configuration || configuration()), level: examLevel } : null;
+        if (configured && (!bank || !C.configurationCount(bank, configured))) {
+            if (!selectedArea) showLoadError(new Error('Este tema todavía no tiene preguntas difíciles. Elige otro tema.'));
+            return;
+        }
         const revision = generation, view = viewRevision;
         starting = true;
         if (attempt && !attempt.finished && !await ask('Hay una práctica en curso. ¿Quieres reemplazarla por una nueva?')) { starting = false; return; }
@@ -255,7 +281,7 @@
             questions = prepared; area = target;
             const chosen = C.paper(bank, area);
             if (chosen) { catalogueArea = chosen.subject; if (chosen.difficulty) level = chosen.difficulty; }
-            const minutes = configured ? Math.ceil(questions.length * ({facil:2,intermedio:2.5,dificil:3,todos:2.5}[configured.level])) : C.paper(bank, area)?.minutes || (area === 'integral' ? 60 : Math.ceil(questions.length * 1.5));
+            const minutes = configured ? questions.length * 3 : C.paper(bank, area)?.minutes || (area === 'integral' ? 60 : Math.ceil(questions.length * 1.5));
             attempt = { owner, version: bank.version, area, seed, ...(configured ? {configuration: configured} : {}), ids: questions.map(q => q.id), answers: {}, flags: [], index: 0, deadline: Date.now() + minutes * 60000, startedAt: Date.now(), finished: false };
             renderedPassage = null; save(); renderQuestion(); root.scrollIntoView({ block: 'start', behavior: 'instant' }); startClock();
         } catch (e) {
@@ -282,7 +308,7 @@
         if (!attempt || attempt.finished) return;
         root.classList.remove?.('sf-bank-layout');
         const q = questions[attempt.index], answered = Object.keys(attempt.answers).length;
-        root.innerHTML = `<div class="sf-exam-top"><div><span class="sf-eyebrow">${esc(title(attempt.area))}</span><h1>Pregunta ${attempt.index + 1} <small>de ${questions.length}</small></h1></div><div class="sf-timer" role="timer" aria-label="Tiempo restante" id="sf-timer"></div></div><div class="sf-progress" role="progressbar" aria-label="Preguntas respondidas" aria-valuenow="${answered}" aria-valuemin="0" aria-valuemax="${questions.length}"><span style="width:${answered / questions.length * 100}%"></span></div><p class="sf-progress-label">${answered} de ${questions.length} respondidas <span data-save-status></span></p><div class="sf-exam-layout"><div>${passage(q)}<section class="sf-question"><div class="sf-question-meta">${esc(labels[q.subject])} · ${esc(q.topic)}${q.difficulty ? `<span class="sf-level-badge sf-level-${q.difficulty}">${esc(C.levels[q.difficulty])}</span>` : ''}</div>${C.promptHtml(q)}${helpBlock(q)}<fieldset class="sf-options"><legend class="sf-sr-only">Elige una respuesta</legend>${q.options.map((option, i) => `<label class="${attempt.answers[q.id] === i ? 'is-selected' : ''}"><input type="radio" name="sf-answer" value="${i}" ${attempt.answers[q.id] === i ? 'checked' : ''}><span class="sf-letter">${String.fromCharCode(65 + i)}</span><span>${esc(C.optionText(q, i))}</span></label>`).join('')}</fieldset><div class="sf-question-tools">${button('flag', attempt.flags.includes(q.id) ? '★ Marcada para revisar' : '☆ Marcar para revisar')}${button('erase', 'Borrar respuesta')}</div><div class="sf-bottom-nav">${button('prev', '← Anterior').replace('data-sf="prev"', `data-sf="prev" ${attempt.index === 0 ? 'disabled' : ''}`)}${attempt.index < questions.length - 1 ? button('next', 'Siguiente →', 'sf-primary') : button('finish', 'Terminar y corregir', 'sf-primary')}</div></section></div><aside class="sf-question-nav"><h3>Tus preguntas</h3><div class="sf-number-grid">${questions.map((item, index) => `<button type="button" data-sf="jump" data-index="${index}" class="${attempt.answers[item.id] !== undefined ? 'is-answered' : ''} ${attempt.flags.includes(item.id) ? 'is-flagged' : ''}" ${index === attempt.index ? 'aria-current="step"' : ''} aria-label="Pregunta ${index + 1}${attempt.answers[item.id] !== undefined ? ', respondida' : ', pendiente'}${attempt.flags.includes(item.id) ? ', marcada' : ''}">${index + 1}</button>`).join('')}</div><p>Las preguntas respondidas aparecen en azul. ★ indica una pregunta marcada.</p>${button('finish', 'Terminar y corregir')}${button('catalogue', 'Volver a las materias')}</aside></div>`;
+        root.innerHTML = `<div class="sf-exam-top"><div><span class="sf-eyebrow">${esc(title(attempt.area))}</span><h1>Pregunta ${attempt.index + 1} <small>de ${questions.length}</small></h1></div><div class="sf-timer" role="timer" aria-label="Tiempo restante" id="sf-timer"></div></div><div class="sf-progress" role="progressbar" aria-label="Preguntas respondidas" aria-valuenow="${answered}" aria-valuemin="0" aria-valuemax="${questions.length}"><span style="width:${answered / questions.length * 100}%"></span></div><p class="sf-progress-label">${answered} de ${questions.length} respondidas <span data-save-status></span></p><div class="sf-exam-layout"><div>${passage(q)}<section class="sf-question"><div class="sf-question-meta">${esc(labels[q.subject])} · ${esc(q.topic)}${q.difficulty ? `<span class="sf-level-badge sf-level-${q.difficulty}">${esc(C.levels[q.difficulty])}</span>` : ''}</div>${C.promptHtml(q)}${attempt.area === 'config' ? '' : helpBlock(q)}<fieldset class="sf-options"><legend class="sf-sr-only">Elige una respuesta</legend>${q.options.map((option, i) => `<label class="${attempt.answers[q.id] === i ? 'is-selected' : ''}"><input type="radio" name="sf-answer" value="${i}" ${attempt.answers[q.id] === i ? 'checked' : ''}><span class="sf-letter">${String.fromCharCode(65 + i)}</span><span>${esc(C.optionText(q, i))}</span></label>`).join('')}</fieldset><div class="sf-question-tools">${button('flag', attempt.flags.includes(q.id) ? '★ Marcada para revisar' : '☆ Marcar para revisar')}${button('erase', 'Borrar respuesta')}</div><div class="sf-bottom-nav">${button('prev', '← Anterior').replace('data-sf="prev"', `data-sf="prev" ${attempt.index === 0 ? 'disabled' : ''}`)}${attempt.index < questions.length - 1 ? button('next', 'Siguiente →', 'sf-primary') : button('finish', 'Terminar y corregir', 'sf-primary')}</div></section></div><aside class="sf-question-nav"><h3>Tus preguntas</h3><div class="sf-number-grid">${questions.map((item, index) => `<button type="button" data-sf="jump" data-index="${index}" class="${attempt.answers[item.id] !== undefined ? 'is-answered' : ''} ${attempt.flags.includes(item.id) ? 'is-flagged' : ''}" ${index === attempt.index ? 'aria-current="step"' : ''} aria-label="Pregunta ${index + 1}${attempt.answers[item.id] !== undefined ? ', respondida' : ', pendiente'}${attempt.flags.includes(item.id) ? ', marcada' : ''}">${index + 1}</button>`).join('')}</div><p>Las preguntas respondidas aparecen en azul. ★ indica una pregunta marcada.</p>${button('finish', 'Terminar y corregir')}${button('catalogue', 'Volver a las materias')}</aside></div>`;
         const changedReading = q.passageId && q.passageId !== renderedPassage;
         renderedPassage = q.passageId || null;
         tick();
@@ -330,7 +356,7 @@
             return;
         }
         area = attempt.area;
-        if (attempt.configuration) { configSubject = attempt.configuration.subject; configTopic = attempt.configuration.topic; configLevel = attempt.configuration.level; }
+        if (attempt.configuration) { configSubject = attempt.configuration.subject; configTopic = attempt.configuration.topic; }
         const selected = C.paper(bank, area);
         if (selected) { catalogueArea = selected.subject; if (selected.difficulty) level = selected.difficulty; }
         if (attempt.finished) results(); else { renderQuestion(true); startClock(); }
@@ -363,11 +389,10 @@
         if (action === 'accept-confirm') return pendingConfirmation?.(true);
         if (owner && owner !== user()) return clear();
         if (action === 'area') return open(target.dataset.area);
-        if(action==='config-level' || action==='config') {
-            if(action==='config-level' && (C.levels[target.dataset.level] || target.dataset.level==='todos'))configLevel=target.dataset.level;
-            catalogueMode='config';catalogue(action==='config');
+        if (action === 'config') {
+            catalogueMode = 'config';
+            catalogue();
             prepareConfiguration();
-            if(action==='config-level')root.querySelector(`[data-sf="config-level"][data-level="${configLevel}"]`)?.focus({preventScroll:true});
             if(attempt&&!attempt.finished)startClock();
             return;
         }
@@ -378,8 +403,7 @@
             return;
         }
         if (action === 'reload') return open(area);
-        if (action === 'home') return typeof goHome === 'function' && goHome();
-        if (action === 'topics') return typeof openTopicSimulacro === 'function' && openTopicSimulacro();
+        if (action === 'topics') return typeof openEntranceLibrary === 'function' && openEntranceLibrary();
         if (action === 'page-prev' || action === 'page-next') { cataloguePage += action === 'page-next' ? 1 : -1; renderCatalogueCards(); root.querySelector('[data-sf-cards]')?.scrollIntoView({ block: 'start', behavior: 'instant' }); return; }
         if (action === 'chosen-passage') return start('texto:' + root.querySelector('#sf-reading-choice').value);
         if (action === 'run') { target.disabled = true; return start(target.dataset.area).finally(() => { target.disabled = false; }); }
@@ -394,7 +418,7 @@
         if (attempt.deadline <= Date.now()) return finish(true);
         const q = questions[attempt.index];
         if (action === 'finish') return finish();
-        if (action === 'help' || action === 'hide-help') {
+        if (attempt.area !== 'config' && (action === 'help' || action === 'hide-help')) {
             const open = Array.isArray(attempt.helpOpen) ? attempt.helpOpen : [];
             const closing = action === 'hide-help' || open.includes(q.id);
             attempt.helpOpen = closing ? open.filter(id => id !== q.id) : open.concat(q.id);
@@ -438,7 +462,6 @@
     ensureSupabaseSdk().then(() => getSupabase().auth.onAuthStateChange((event, session) => {
         if (event === 'SIGNED_OUT' || (owner && session?.user.id !== owner)) clear();
     })).catch(() => { /* The campus login reports SDK connectivity errors. */ });
-    window.openSimulacro = () => open();
     const requested = new URLSearchParams(location.search).get('seccion');
     if (requested === 'suficiencia') {
         const wait = setInterval(() => { if (user() && !window.CampusAccess?.isFree()) { clearInterval(wait); open(); } }, 500);

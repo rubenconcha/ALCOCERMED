@@ -8,10 +8,34 @@ test('68 temas completos con respuestas y alternativas trazables a la bibliograf
  assert.equal(catalog.exams.length,68);assert.deepEqual(['morfo','biologia','salud'].map(p=>catalog.exams.filter(e=>e.id.startsWith(p)).length),[29,18,21]);
  const unique=new Set();
  for(const exam of catalog.exams){const paper=require('../api/_evaluations/'+exam.id+'.json');assert.equal(paper.count,paper.questions.length);assert.equal(exam.count,paper.count);assert.ok(paper.count>=7);assert.equal(paper.duration,paper.count);
- for(const q of paper.questions){assert.ok(!unique.has(q.content_id));unique.add(q.content_id);if(['morfo-01','morfo-08'].includes(exam.id)){assert.equal(paper.content_revision,exam.id==='morfo-08'?5:3);assert.equal(q.source.sha256,'e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148');assert.ok(q.source.evidence_excerpt.length>100);assert.equal(Object.keys(q.comentarios_opciones).length,4);assert.ok(q.source.pdf_pages.every(n=>(exam.id==='morfo-08'?n>=262&&n<=302:n>=30&&n<=65)));continue;}const source=cards.get(q.content_id);assert.ok(source);assert.equal(q.pregunta,source.question);assert.equal(q['opcion_'+q.respuesta_correcta.toLowerCase()],source.answer);assert.equal(q.paginas_pdf,String(source.pdf_page));const entry=audit.find(a=>a.paper===exam.id&&a.question===q.content_id);assert.ok(entry);const options='abcd'.split('').map(k=>q['opcion_'+k]);assert.equal(new Set(options).size,4);entry.option_source_ids.forEach((id,i)=>{assert.equal(cards.get(id).answer,options[i]);assert.equal(cards.get(id).subject,source.subject)});}
+ for(const q of paper.questions){assert.ok(!unique.has(q.content_id));unique.add(q.content_id);
+  if (exam.id === 'morfo-09') {
+   assert.equal(paper.content_revision, 1);
+   assert.equal(q.dificultad, 'dificil');
+   assert.equal(q.source.sha256, paper.review.source_sha256);
+   assert.ok(q.source.verified_anchors.every(ref => ref.pdf_page - ref.printed_page === 28 && ref.anchor));
+   const entry = audit.find(a => a.paper === exam.id && a.question === q.content_id);
+   assert.equal(entry?.authored_options, true);
+   assert.equal(new Set(Array.from('abcd', letter => q['opcion_' + letter])).size, 4);
+   assert.deepEqual(Object.keys(q.comentarios_opciones), ['A','B','C','D']);
+   continue;
+  }
+  if(['morfo-01','morfo-08'].includes(exam.id)){assert.equal(paper.content_revision,exam.id==='morfo-08'?5:3);assert.equal(q.source.sha256,'e00074c7105c10052637b1c2a82f2b8959cf7c4cb9a91c4abd058ce958e58148');assert.ok(q.source.evidence_excerpt.length>100);assert.equal(Object.keys(q.comentarios_opciones).length,4);assert.ok(q.source.pdf_pages.every(n=>(exam.id==='morfo-08'?n>=262&&n<=302:n>=30&&n<=65)));continue;}const source=cards.get(q.content_id);assert.ok(source);assert.equal(q.pregunta,source.question);assert.equal(q['opcion_'+q.respuesta_correcta.toLowerCase()],source.answer);assert.equal(q.paginas_pdf,String(source.pdf_page));const entry=audit.find(a=>a.paper===exam.id&&a.question===q.content_id);assert.ok(entry);const options='abcd'.split('').map(k=>q['opcion_'+k]);assert.equal(new Set(options).size,4);entry.option_source_ids.forEach((id,i)=>{assert.equal(cards.get(id).answer,options[i]);assert.equal(cards.get(id).subject,source.subject)});}
  }
  assert.equal(unique.size,audit.length);
 });
+test('Articulaciones evalúa la clasificación con cuatro alternativas comparables', () => {
+ const { questions } = require('../api/_evaluations/morfo-09.json');
+ assert.equal(questions.length, 28);
+ const first = questions[0];
+ assert.match(first.pregunta, /clasificación estructural de I a IV/);
+ for (const letter of 'abcd') {
+  const classes = first['opcion_' + letter].replace(/\.$/, '').toLowerCase().split(', ').sort();
+  assert.deepEqual(classes, ['cartilaginosa', 'fibrosa', 'sinovial', 'ósea']);
+ }
+ assert.equal(first['opcion_' + first.respuesta_correcta.toLowerCase()], 'Ósea, fibrosa, cartilaginosa, sinovial.');
+});
+
 test('evaluaciones mantienen su propia navegación, protección y presentación',()=>{
  const html=fs.readFileSync('campus.html','utf8');const section=html.slice(html.indexOf('id="evaluacion-screen"'),html.indexOf('id="videoclases-screen"'));assert.ok(section.includes('topic-eval-grid'));assert.ok(!section.includes('/juegos/'));assert.ok(html.includes('topic-evaluations.js'));
  const config=require('../vercel.json');assert.ok(config.rewrites.some(r=>r.source==='/api/_evaluations/:path*'));

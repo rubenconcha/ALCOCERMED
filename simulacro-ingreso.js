@@ -164,8 +164,8 @@
             if (!rows || request!==launchRequest || (typeof currentUser==='undefined'?null:currentUser?.id)!==account || (typeof currentCampusScreen!=='undefined'&&currentCampusScreen!=='simulacro-screen')) return;
             simState.mode = (format.pastId || format.curatedId) ? 'pasado' : 'oficial';
             simState.pastExamId = format.pastId || null;
-            simState.strictTiming = Boolean(format.pastId || format.curatedId);
-            simState.entranceOrigin = Boolean(format.pastId || format.curatedId);
+            simState.strictTiming = true;
+            simState.entranceOrigin = !format.topic;
             document.getElementById('sim-another-exam').textContent = format.pastId ? 'Elegir otro simulacro' : 'Nuevo simulacro';
             document.getElementById('past-result-tools').hidden=true;
             simState.selectedExamen = format.title;

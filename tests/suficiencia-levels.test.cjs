@@ -113,7 +113,7 @@ test('level validation rejects mixed levels, duplicated questions, missing cover
  ]){const broken=structuredClone(bank);mutate(broken);assert.equal(C.validate(broken),false);}
 });
 
-test('bank-style selector requires subject and topic, filters difficulty and retains the selected configuration',async()=>{
+test('topic practice always uses difficult items and retains the selected subject and topic',async()=>{
  const handlers={},storage=new Map();let loads=0,packs=0,prepare;
  const rows=bank.questions.concat(official);
  const compact={...bank,view:'catalogo',passages:bank.passages.map(({id,title})=>({id,title})),
@@ -138,26 +138,27 @@ test('bank-style selector requires subject and topic, filters difficulty and ret
  assert.match(root.innerHTML,/banco-config-card/);assert.ok(!root.innerHTML.includes('sf-matter-grid'));
  assert.match(root.innerHTML,/id="sf-config-topic"[^>]*disabled/);
  assert.match(root.innerHTML,/data-area="config"[^>]*disabled/);
- assert.match(root.innerHTML,/data-level="todos"[^>]*aria-pressed="true"/);
+ assert.doesNotMatch(root.innerHTML,/data-sf="config-level"|Nivel de dificultad/i);
  const change=(id,value)=>handlers.change({target:{id,value}});
  const click=(sf,extra={})=>handlers.click({target:{closest:()=>({disabled:false,dataset:{sf,...extra}})}});
  await click('run',{area:'config'});assert.equal(storage.size,0);assert.equal(packs,0);
  change('sf-config-subject','matematicas');
  assert.match(root.innerHTML,/<optgroup label="Textos oficiales UMSA 2026">[^]*Tema 5 · Productos y cocientes notables/);
- change('sf-config-topic','umsa-2026:5');assert.match(root.innerHTML,/se mostrarán <strong>5<\/strong> preguntas/);
- change('sf-config-topic','conjuntos');click('config-level',{level:'dificil'});
- assert.match(root.innerHTML,/no hay preguntas con esta combinación/);
+ change('sf-config-topic','umsa-2026:5');assert.match(root.innerHTML,/todavía no tiene preguntas difíciles/);
+ change('sf-config-topic','conjuntos');
+ assert.match(root.innerHTML,/todavía no tiene preguntas difíciles/);
+ await click('run',{area:'config'});assert.equal(packs,0);
  change('sf-config-subject','quimica');assert.match(root.innerHTML,/seleccionar tema/);assert.match(root.innerHTML,/data-area="config"[^>]*disabled/);
- change('sf-config-topic','reacciones');assert.match(root.innerHTML,/data-level="dificil"[^>]*aria-pressed="true"/);assert.equal(loads,1);
+ change('sf-config-topic','reacciones');assert.match(root.innerHTML,/<strong>20<\/strong> preguntas difíciles/);assert.equal(loads,1);
  assert.equal(typeof prepare,'function');
  prepare();assert.equal(storage.size,0);
  await click('run',{area:'config'});assert.equal(packs,1);
  const saved=JSON.parse(storage.get('alcocermed:suficiencia:v1:levels-fixture'));
  assert.equal(saved.configuration.subject,'quimica');assert.equal(saved.configuration.topic,'reacciones');assert.equal(saved.configuration.level,'dificil');
  assert.ok(saved.ids.every(id=>{const q=bank.questions.find(q=>q.id===id);return q.subject==='quimica'&&q.difficulty==='dificil'&&C.topicFor(q,bank).key==='reacciones';}));
- assert.match(root.innerHTML,/Ver resolución paso a paso/);
+ assert.doesNotMatch(root.innerHTML,/Ver resolución paso a paso|data-sf="help"/);
  click('catalogue');assert.match(root.innerHTML,/value="quimica" selected/);assert.match(root.innerHTML,/value="reacciones" selected/);
- assert.match(root.innerHTML,/data-level="dificil"[^>]*aria-pressed="true"/);
+ assert.doesNotMatch(root.innerHTML,/data-sf="config-level"|Nivel de dificultad/i);
  click('legacy');assert.match(root.innerHTML,/Simulacros anteriores/);
  click('config');assert.match(root.innerHTML,/value="quimica" selected/);assert.match(root.innerHTML,/value="reacciones" selected/);
 });

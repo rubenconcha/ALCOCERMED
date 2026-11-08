@@ -15,7 +15,7 @@
         practice: ['Abrir ejercicio', item => openStudyAsset(item, 'practice', () => {
             if (showScreen('sufficiency-practice-screen') !== false) window.SufficiencyPractice.openExercise(item.practice.id);
         })],
-        simulation: ['Ver simulacros', () => window.Sufficiency.open()],
+        simulation: ['Ver simulacros', () => window.openSimulacro()],
         results: ['Ver mis resultados', () => window.openStudentResults()],
         flashcards: ['Repasar con flashcards', () => window.openStudyLibrary()],
     };

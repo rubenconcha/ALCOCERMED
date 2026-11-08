@@ -1,8 +1,9 @@
 .simulacro-section:has(#sim-config:not(.hidden)){max-width:1160px;margin:0 auto}
-#sim-config .sim-library-filters{display:grid;grid-template-columns:minmax(220px,1.4fr) minmax(190px,.8fr) auto;align-items:end;gap:18px;margin:26px 0 20px;padding:22px;background:#fff;border:1px solid #dae5f0;border-radius:20px;box-shadow:0 6px 20px #19284005}
+#sim-config .sim-library-filters{display:grid;grid-template-columns:minmax(220px,1.4fr) minmax(190px,.8fr);align-items:end;gap:18px;margin:26px 0 20px;padding:22px;background:#fff;border:1px solid #dae5f0;border-radius:20px;box-shadow:0 6px 20px #19284005}
 #sim-config .sim-library-filters label{display:grid;gap:8px;min-width:0;color:#192840;font-weight:700;font-size:.88rem}
 #sim-config .sim-library-filters input,#sim-config .sim-library-filters select{width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;color:#192840;border:1px solid #d6e1ec;background:#f7faff;border-radius:12px;padding:12px 16px;min-height:46px}
-#sim-library-status{margin:0;align-self:center;color:#607694;font-size:.85rem;white-space:nowrap}
+#sim-library-status:empty{display:none}
+#sim-library-status{grid-column:1/-1;margin:0;align-self:center;color:#607694;font-size:.85rem;white-space:nowrap}
 #sim-config #sim-library-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .sim-library-card{background:#fff;border:1px solid #d9e5f0;border-top:4px solid #238fbf;border-radius:20px;padding:24px;box-shadow:0 6px 22px #19284006;display:flex;flex-direction:column;min-width:0}
 .sim-library-stage{color:#0785c5;font-size:.7rem;font-weight:800;letter-spacing:.1em}
@@ -13,6 +14,8 @@
 .sim-library-card .btn-primary{margin-top:24px;min-height:46px;width:100%;font-size:.86rem;color:#192840!important}
 .sim-library-card .btn-primary:disabled{opacity:.65;cursor:wait}
 .sim-library-empty{grid-column:1/-1;padding:24px;background:#fff;border:1px solid #d9e5f0;border-radius:16px;color:#607694}
+#sim-config .sim-library-tools{display:flex;justify-content:flex-end;margin:0 0 14px}
+#sim-config .sim-library-practice{min-height:44px;white-space:normal}
 .sim-library-retry{font:inherit;padding:12px 18px;background:#fff;border:1px solid #d6e1ec;border-radius:12px;color:#192840;cursor:pointer}
 #sim-config .sim-library-provenance{font-size:.76rem;color:#607694;line-height:1.6;margin:20px 0}
 #sim-config .entrance-launch[hidden]{display:none!important}

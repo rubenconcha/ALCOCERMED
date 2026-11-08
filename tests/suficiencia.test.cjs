@@ -138,7 +138,8 @@ test('active subscriber receives validated private bank, with bearer forwarded o
 });
 test('sidebar and screen integration do not remove the original three-subject simulator', () => {
     const html = fs.readFileSync(path.join(__dirname, '../campus.html'), 'utf8');
-    assert.ok(html.includes('onclick="Sufficiency.open(); return false;"'));
+    assert.ok(html.includes('href="/campus?seccion=simulacros" onclick="openSimulacro(); return false;"'));
+    assert.match(html, /onclick="Sufficiency.open\(\)">Práctica por materia y tema/);
     assert.match(html, /id="nav-simulacro">\s*<a[^>]+data-campus-screen="suficiencia-screen simulacro-screen"/);
     assert.ok(!html.includes('id="nav-suficiencia"'));
     assert.ok(!html.includes('data-sf-area='));

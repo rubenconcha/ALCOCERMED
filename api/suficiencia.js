@@ -13,6 +13,7 @@ function loadBank(collection) {
             .then(contents => {
                 const bank = JSON.parse(contents);
                 if (collection === officialCollection) bank.questions.push(...require('./_sufficiency/umsa-2026.cjs'));
+                if (medical) bank.questions.push(...require('./_sufficiency/articulaciones-examen.json'));
                 if (medical ? bank.collection !== biomedicalCollection || !bank.questions?.length || !bank.questions.every(isBiomedical) : !validate(bank)) {
                     throw new Error('Invalid question bank');
                 }

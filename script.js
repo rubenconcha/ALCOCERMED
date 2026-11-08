@@ -319,6 +319,7 @@ function enterVerifiedApp(user) {
         const day = campusParams.get('dia');
         if (!day || !window.CampusCalendar?.openDate(day)) window.CampusCalendar?.open();
     }
+    else if (section === 'simulacros') window.openSimulacro();
     else if (section === 'examenes-pasados') window.openPastExams(campusParams.get('vista') === 'temas');
     else if (section === 'contacto') showScreen('campus-contact-screen');
     else if (campusParams.get('simulacro') && window.openRequestedSimulation) window.openRequestedSimulation().catch(function(error) { showToast(error.message, 'error'); });
@@ -573,7 +574,9 @@ function showScreen(screenId, fromBack) {
         }
     });
     window.CampusCalendar?.screenChanged(screenId === 'study-calendar-screen');
-    window.CampusShell?.screenChanged(screenId);
+    const navScreen = screenId === 'simulacro-screen' && typeof simState !== 'undefined' && simState.mode === 'tema'
+        ? 'evaluacion-screen' : screenId;
+    window.CampusShell?.screenChanged(navScreen);
     window.CampusPastExams?.screenChanged(screenId === 'past-exams-screen');
     if (screenId === 'study-area') refreshFlashcardReviews();
     const group = {
@@ -3447,9 +3450,9 @@ function renderSimQuestion() {
         simState.answers.filter(function (answer) { return answer.selected !== null; }).length +
         ' de ' + simState.preguntas.length + ' respondidas';
     document.getElementById('sim-num-badge').textContent = 'N° ' + (q.numero_original || idx + 1);
-    document.getElementById('sim-question-text').textContent = campo(q, 'pregunta') || '';
-    document.getElementById('sim-question-text').style.whiteSpace =
-        isWeeklySimQuestion(q) || (simState.mode === 'tema' && simState.topicEvaluationId?.startsWith('suf-')) ? 'pre-line' : '';
+    const questionText = document.getElementById('sim-question-text');
+    questionText.textContent = campo(q, 'pregunta') || '';
+    questionText.style.whiteSpace = questionText.textContent.includes('\n') ? 'pre-line' : '';
     if (q.passage || document.getElementById('sim-passage')?.dataset?.passage) renderPracticePassage('sim', q.passage);
     window.StudyMedia?.render(document.getElementById('sim-question-text'),q.study_image);
     renderBqDificultad_sim(campo(q, 'dificultad') || 'facil');
@@ -3489,11 +3492,11 @@ function renderBqDificultad_sim(dificultad) {
     var el = document.getElementById('sim-dificultad');
     if (!el) return;
     el.innerHTML = '';
-    const pastPaper = simState.mode === 'pasado' || (simState.mode === 'tema' && !simState.topicEvaluationId?.startsWith('suf-'));
-    el.hidden = pastPaper;
+    const hideDifficulty = simState.entranceOrigin || simState.mode === 'pasado' || (simState.mode === 'tema' && !simState.topicEvaluationId?.startsWith('suf-'));
+    el.hidden = hideDifficulty;
     const label = document.querySelector('#sim-exam .bq-dificultad-label');
-    if (label) label.hidden = pastPaper;
-    if (pastPaper) return;
+    if (label) label.hidden = hideDifficulty;
+    if (hideDifficulty) return;
     var d = (dificultad || 'facil').toString().toLowerCase()
         .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     var isFacil = d === 'facil' || d.startsWith('fac');
@@ -3680,9 +3683,7 @@ window.finalizarSimulacro = function () {
             var question = document.createElement('p');
             question.className = 'sim-rev-question';
             question.textContent = campo(q, 'pregunta') || '';
-            if (isWeeklySimQuestion(q) || (simState.mode === 'tema' && simState.topicEvaluationId?.startsWith('suf-'))) {
-                question.style.whiteSpace = 'pre-line';
-            }
+            if (question.textContent.includes('\n')) question.style.whiteSpace = 'pre-line';
             item.appendChild(question);
             if (q.passage) {
                 const passage = document.createElement('details');

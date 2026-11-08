@@ -2521,395 +2521,283 @@
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-001",
-    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 307,
-    "evidence_kind": "pdf_text",
-    "evidence_sha256": "f901cbff862e089533d68e562959274976890cca164dcd7ba82f4f296f8b1a74",
-    "option_source_ids": [
-      "morfo-09-001",
-      "morfo-09-003",
-      "morfo-09-025",
-      "morfo-09-004"
-    ]
-  },
-  {
-    "paper": "morfo-09",
-    "question": "morfo-09-005",
-    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 307,
-    "evidence_kind": "pdf_text",
-    "evidence_sha256": "f915c7c6b28e2593f5cbb412ca97fd70aa25803938517372b2ee9c60bf28f42a",
-    "option_source_ids": [
-      "morfo-09-007",
-      "morfo-09-006",
-      "morfo-09-008",
-      "morfo-09-005"
-    ]
-  },
-  {
-    "paper": "morfo-09",
-    "question": "morfo-09-002",
+    "question": "morfo-09-razonamiento-001",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 308,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "8b114e5f2e4f15bedcefb34d0bac8fc7ae03346045f08f7edc7594aa44866880",
-    "option_source_ids": [
-      "morfo-09-009",
-      "morfo-09-004",
-      "morfo-09-003",
-      "morfo-09-002"
-    ]
+    "evidence_sha256": "beada2366a73716fa8dfedeabe98ae203ac26be30a81f3289adf839d03f7d301",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-006",
+    "question": "morfo-09-razonamiento-002",
+    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+    "pdf_page": 309,
+    "evidence_kind": "pdf_text",
+    "evidence_sha256": "0fcb379adea734a70edc5fed5abd00e2c72ccacc2c98bf2c6ea2206029b8ab39",
+    "authored_options": true,
+    "option_source_ids": []
+  },
+  {
+    "paper": "morfo-09",
+    "question": "morfo-09-razonamiento-003",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 308,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "9ae2800952d0f7fe82d2e04da74e7312fd4395f70fa600e7b177465673a12251",
-    "option_source_ids": [
-      "morfo-09-007",
-      "morfo-09-008",
-      "morfo-09-014",
-      "morfo-09-006"
-    ]
+    "evidence_sha256": "82e992b983917f430071609be69dcd43540435d824233c83032a0b41758a4705",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-007",
+    "question": "morfo-09-razonamiento-004",
+    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+    "pdf_page": 309,
+    "evidence_kind": "pdf_text",
+    "evidence_sha256": "401595e304408810585ebea82c86bd58625bb0419e41ab9e6d601b27ba44809d",
+    "authored_options": true,
+    "option_source_ids": []
+  },
+  {
+    "paper": "morfo-09",
+    "question": "morfo-09-razonamiento-005",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 310,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "6ca160655b8a57262092b4b770d54b20310f9389d97e7639bf7242a3a74370ec",
-    "option_source_ids": [
-      "morfo-09-008",
-      "morfo-09-007",
-      "morfo-09-005",
-      "morfo-09-013"
-    ]
+    "evidence_sha256": "2d2c721138697fe6093b8f4d49a2b31444926314878522ac569f83009922c178",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-008",
+    "question": "morfo-09-razonamiento-006",
+    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+    "pdf_page": 311,
+    "evidence_kind": "pdf_text",
+    "evidence_sha256": "9bf18ebac6d413acdb05a1a482f80505244ee868881c2a9e194d20ee078c8595",
+    "authored_options": true,
+    "option_source_ids": []
+  },
+  {
+    "paper": "morfo-09",
+    "question": "morfo-09-razonamiento-007",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 310,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "1b94281b2859d999c046293db052454b5967c71913cc1a4aa5e75c3184b7b041",
-    "option_source_ids": [
-      "morfo-09-013",
-      "morfo-09-014",
-      "morfo-09-005",
-      "morfo-09-008"
-    ]
+    "evidence_sha256": "67e5efc71b0c9496b8076c1a4bc44d96f579b369b862c38ca334ca07b0d91286",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-003",
+    "question": "morfo-09-razonamiento-008",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 311,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "42e6173d7fc283ec9a7ab26d15275ba4fb6e4c60281e3bd1a827c5465798d86e",
-    "option_source_ids": [
-      "morfo-09-024",
-      "morfo-09-001",
-      "morfo-09-003",
-      "morfo-09-004"
-    ]
+    "evidence_sha256": "7ce5feb0b81f640caeb289fc2f7f383353ffa1913554ebcffff9ed05f04046e1",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-004",
+    "question": "morfo-09-razonamiento-009",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 311,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "f00aaaa1689a603a1299f11921286115dc23a9e2f59d1ae941bd679cd24a931c",
-    "option_source_ids": [
-      "morfo-09-025",
-      "morfo-09-004",
-      "morfo-09-003",
-      "morfo-09-001"
-    ]
+    "evidence_sha256": "16a553caa046fc7e94c2881e1e2a6fb92fd374a2e9274e58a878a474b937e185",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-009",
+    "question": "morfo-09-razonamiento-010",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 311,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "a7519c0e7104df68cd5d6504c8b5e02a3ddd5883e917e8804f6d3b038cf99a33",
-    "option_source_ids": [
-      "morfo-09-002",
-      "morfo-09-001",
-      "morfo-09-003",
-      "morfo-09-009"
-    ]
+    "evidence_sha256": "87440ff6d6535b73c0bfc21c5df5308a0398d79c3e538cd4885c6433936049b3",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-010",
+    "question": "morfo-09-razonamiento-011",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 311,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "ddd14a4716af490403f3709514adfc9ebc025e1611f4743815b1c14b4858e8c2",
-    "option_source_ids": [
-      "morfo-09-021",
-      "morfo-09-007",
-      "morfo-09-022",
-      "morfo-09-010"
-    ]
+    "evidence_sha256": "87b9a7838f14dde459df07157b0012f74b7f216354391eed30342ad6de660dcb",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-012",
-    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 311,
-    "evidence_kind": "pdf_text",
-    "evidence_sha256": "a7519c0e7104df68cd5d6504c8b5e02a3ddd5883e917e8804f6d3b038cf99a33",
-    "option_source_ids": [
-      "morfo-11-004",
-      "morfo-09-023",
-      "morfo-25-020",
-      "morfo-09-012"
-    ]
-  },
-  {
-    "paper": "morfo-09",
-    "question": "morfo-09-014",
+    "question": "morfo-09-razonamiento-012",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 312,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "bc034bf2ca27c2941239d17e46317de7b55fcbdce050b4f0d6b3db1fe807071b",
-    "option_source_ids": [
-      "morfo-09-014",
-      "morfo-09-007",
-      "morfo-09-013",
-      "morfo-09-017"
-    ]
+    "evidence_sha256": "5ad8935985e2c8ce186fb651cb1975f956871849c725183feb263ceb9f60ee1b",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-015",
+    "question": "morfo-09-razonamiento-013",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 312,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "bc034bf2ca27c2941239d17e46317de7b55fcbdce050b4f0d6b3db1fe807071b",
-    "option_source_ids": [
-      "morfo-23-008",
-      "morfo-09-015",
-      "morfo-01-021",
-      "morfo-26-004"
-    ]
+    "evidence_sha256": "2746287b230ebb726a87c4eeefbf0147af24f059e0a07fbf36027728a1b5c276",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-026",
+    "question": "morfo-09-razonamiento-014",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 313,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "56024d1d4a04dff3cc45228c06b08b2793c805283449ba8470d00f7e858c80a0",
-    "option_source_ids": [
-      "morfo-09-026",
-      "morfo-09-025",
-      "morfo-09-024",
-      "morfo-09-006"
-    ]
+    "evidence_sha256": "18b8563d2a44a3ab1e13d12cf39c159f77c511388e2d55e228009bcef7842b75",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-016",
+    "question": "morfo-09-razonamiento-015",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 314,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "d2edb4283715ec00b423888812cca3bcbaed669b730cb836d49230b7040d7c06",
-    "option_source_ids": [
-      "morfo-09-017",
-      "morfo-09-013",
-      "morfo-09-014",
-      "morfo-09-016"
-    ]
+    "evidence_sha256": "20e2a5c6321b97189ebe8dbd8ac0387f9302778f0c93dbe29a84a47d50348c93",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-027",
+    "question": "morfo-09-razonamiento-016",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 314,
+    "pdf_page": 313,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "7c50b0511201473ebb47f9b8b1719ebe06a3c3163eda428dee2d7f7d6b98b7bf",
-    "option_source_ids": [
-      "morfo-09-006",
-      "morfo-09-025",
-      "morfo-09-024",
-      "morfo-09-027"
-    ]
+    "evidence_sha256": "c2c4d0aad754a599ccfcc1e409cb05049269ec0d737823267ad82498d1691177",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-028",
-    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 314,
-    "evidence_kind": "pdf_text",
-    "evidence_sha256": "3be91fedc29221b119a4d92665baad64c2b4742dabd5e1fc18c61b0c91100e85",
-    "option_source_ids": [
-      "morfo-09-006",
-      "morfo-09-024",
-      "morfo-09-028",
-      "morfo-09-025"
-    ]
-  },
-  {
-    "paper": "morfo-09",
-    "question": "morfo-09-013",
+    "question": "morfo-09-razonamiento-017",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 316,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "fa701e8b1d5070bed3e1adc97964257919ff626c1c9cffba0defd86faaf1da89",
-    "option_source_ids": [
-      "morfo-09-013",
-      "morfo-09-007",
-      "morfo-09-014",
-      "morfo-09-008"
-    ]
+    "evidence_sha256": "89fa96d88dabe1b0b8b1ccd609e538a7c8777ac9732f90101897464b5b55dce2",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-017",
+    "question": "morfo-09-razonamiento-018",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 316,
+    "pdf_page": 318,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "e16cf22f8dec76468681ceb4a704105541117429a8eaa07596a4b466fd39e703",
-    "option_source_ids": [
-      "morfo-09-007",
-      "morfo-09-017",
-      "morfo-09-016",
-      "morfo-09-014"
-    ]
+    "evidence_sha256": "8a7f41331e879a5d22fd15dfba06203386cafc124ad513acc54407e7795844ca",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-023",
+    "question": "morfo-09-razonamiento-019",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 317,
+    "pdf_page": 320,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "0ea0a1cd4fbfc13b4b56a80a28cdf01ea1e973af8f921152e26bd96889e5b3d7",
-    "option_source_ids": [
-      "morfo-03-007",
-      "morfo-09-023",
-      "morfo-09-012",
-      "morfo-23-023"
-    ]
+    "evidence_sha256": "060467096482648d4164138d2a4c3cad6cb4eca5c00217ff7b41f6fe2fc13938",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-020",
+    "question": "morfo-09-razonamiento-020",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 321,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "c35bcd307745e85b66ea669cc9f43ddffb20397b43d97708010896654fa414ce",
-    "option_source_ids": [
-      "morfo-05-029",
-      "morfo-04-028",
-      "morfo-09-020",
-      "morfo-29-028"
-    ]
+    "evidence_sha256": "308c58b60e223c895084cb9a0a3c12f54e275891907fac6aeda2889e46db275b",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-018",
+    "question": "morfo-09-razonamiento-021",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 324,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "1a959d9da2f05e1a7e3acbd7e7bb0113fa9574f762e591169e808904d7226855",
-    "option_source_ids": [
-      "morfo-09-017",
-      "morfo-09-016",
-      "morfo-09-018",
-      "morfo-09-021"
-    ]
+    "evidence_sha256": "cff83a7d83e9cf52e8c1813697ebd2697289487108716256c4630d466427cdc2",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-019",
-    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 324,
-    "evidence_kind": "pdf_text",
-    "evidence_sha256": "5a4c40fe3960ca59ee157e93396532dd4205ef81eebf5142b99bf3e376281044",
-    "option_source_ids": [
-      "morfo-09-019",
-      "morfo-09-021",
-      "morfo-09-017",
-      "morfo-09-016"
-    ]
-  },
-  {
-    "paper": "morfo-09",
-    "question": "morfo-09-021",
+    "question": "morfo-09-razonamiento-022",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 325,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "fe4242171d6e080eafff626b9967172d2b0a579ba5d2fa6b030e5d285943d60d",
-    "option_source_ids": [
-      "morfo-09-018",
-      "morfo-09-022",
-      "morfo-09-021",
-      "morfo-09-019"
-    ]
+    "evidence_sha256": "446522a8dad2bdfc22da18a2fdf7d324873b07e6bc7f0f4fc1c44a5c4ee08533",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-022",
+    "question": "morfo-09-razonamiento-023",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 325,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "4e4dd587ff2933564066c39cae57525d6f39dd533b746ec86beaa94bd89c791d",
-    "option_source_ids": [
-      "morfo-09-018",
-      "morfo-09-022",
-      "morfo-09-017",
-      "morfo-09-021"
-    ]
+    "evidence_sha256": "485e4658bcf8382e27eab5cb25e5a7bfb79bb0517390ee71865af97d54b50413",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-024",
+    "question": "morfo-09-razonamiento-024",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 329,
+    "pdf_page": 312,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "8aa996573ee5c06fc5cd92ddc4e9d26951ec5133a2f360777765139174782988",
-    "option_source_ids": [
-      "morfo-09-025",
-      "morfo-09-004",
-      "morfo-09-024",
-      "morfo-09-027"
-    ]
+    "evidence_sha256": "1bd9bc0a44ab1d55d856ea4db4ae7bada623b397e2f39b992c92326a908a0ca8",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-09",
-    "question": "morfo-09-025",
+    "question": "morfo-09-razonamiento-025",
+    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+    "pdf_page": 328,
+    "evidence_kind": "pdf_text",
+    "evidence_sha256": "aea026d330e295cb40b69d386a2578450685431f74e05741f8842e473b190d6d",
+    "authored_options": true,
+    "option_source_ids": []
+  },
+  {
+    "paper": "morfo-09",
+    "question": "morfo-09-razonamiento-026",
+    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+    "pdf_page": 330,
+    "evidence_kind": "pdf_text",
+    "evidence_sha256": "d7c36950ee8fcf2ca7d666b0153bbc89dc7f4ebad221bc4538b23509f0315428",
+    "authored_options": true,
+    "option_source_ids": []
+  },
+  {
+    "paper": "morfo-09",
+    "question": "morfo-09-razonamiento-027",
+    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
+    "pdf_page": 330,
+    "evidence_kind": "pdf_text",
+    "evidence_sha256": "2b6d6894bf4661e9e1ae33d7b1f34c74f095879f1ba8babf04cf827036f239b7",
+    "authored_options": true,
+    "option_source_ids": []
+  },
+  {
+    "paper": "morfo-09",
+    "question": "morfo-09-razonamiento-028",
     "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
     "pdf_page": 333,
     "evidence_kind": "pdf_text",
-    "evidence_sha256": "141ef97d985890734ed05789b06edcc1ebbef36cbbe66a18207160de720a3ce5",
-    "option_source_ids": [
-      "morfo-09-025",
-      "morfo-09-024",
-      "morfo-09-027",
-      "morfo-09-004"
-    ]
-  },
-  {
-    "paper": "morfo-09",
-    "question": "morfo-09-011",
-    "pdf": "morfofisiliologia-saladin-anatomia-y-fisiologia (1) (3).pdf",
-    "pdf_page": 335,
-    "evidence_kind": "pdf_text",
-    "evidence_sha256": "396c6a848e589891b275c904e28f97dcf5d2e67d91c70fcfc6f1c2b66c888eac",
-    "option_source_ids": [
-      "morfo-09-022",
-      "morfo-09-010",
-      "morfo-09-021",
-      "morfo-09-011"
-    ]
+    "evidence_sha256": "85d2adbe0dacf32df548ce1f9729cb39134e470836e11a91154360277f27e434",
+    "authored_options": true,
+    "option_source_ids": []
   },
   {
     "paper": "morfo-10",
