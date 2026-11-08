@@ -39,7 +39,7 @@ window.IntocablesHub = (() => {
   showCovers().catch(()=>{});
  }
  async function load(){const current=++requestId;status('Cargando material…');try{
-  if(!catalogue.length){const response=await fetch('/content/intocables_catalogo_2026.json',{cache:'no-store'});if(!response.ok)throw Error();const cards=await response.json();catalogue=cards.map(i=>({...i,kind:'cards'})).concat((window.MINDMAP_PREMIUM_CATALOG||[]).filter(m=>m.curated||m.section==='intocables').map((m,i)=>({...m,kind:'sheets',tema:m.id.startsWith('morfo_18_sangre__')?'Sangre':m.tema,orden:i+1,original:m})));}
+  if(!catalogue.length){const [response]=await Promise.all([fetch('/content/intocables_catalogo_2026.json'),window.loadMindmapCatalog?.()]);if(!response.ok)throw Error();const cards=await response.json();catalogue=cards.map(i=>({...i,kind:'cards'})).concat((window.MINDMAP_PREMIUM_CATALOG||[]).filter(m=>m.curated||m.section==='intocables').map((m,i)=>({...m,kind:'sheets',tema:m.id.startsWith('morfo_18_sangre__')?'Sangre':m.tema,orden:i+1,original:m})));}
   if(current!==requestId)return;render();if(format==='sheets'){status('');return;}
   await ensureSupabaseSdk();const {data,error}=await getSupabase().from('intocables_esenciales').select('*').order('orden');if(error)throw error;if(current!==requestId)return;lessons=new Map((data||[]).map(i=>[i.id,i]));status(lessons.size?'':'Inicia sesión para leer las fichas disponibles.');render();
  }catch(_){if(current===requestId){status('No pudimos cargar este material. Comprueba tu conexión y vuelve a entrar.');render();}}}

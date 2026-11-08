@@ -7,6 +7,7 @@ window.createPastExamBreakdown = function (request, scope) {
     const questionSearch = $('past-question-search');
     const unconfirmed = $('past-unconfirmed');
     const answers = new Map();
+    const recent = new Map();
     let data, controller, active = false, showAll = false, cursor = 0, search = '';
     let subjects = new Set(), topics = new Set(), draftSubjects = new Set(), draftTopics = new Set();
     const fold = text => text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -192,13 +193,23 @@ window.createPastExamBreakdown = function (request, scope) {
         controller?.abort();
         const next = new AbortController();
         controller = next;
-        $('past-status').textContent = 'Cargando preguntas…';
-        $('past-count').textContent = '';
-        $('past-breakdown-results').hidden = true;
-        $('past-breakdown-empty').hidden = true;
+        const query = parameters(page);
+        const key = JSON.stringify(query);
+        const cached = recent.get(key);
+        const saved = cached && cached.expires > Date.now() ? cached.result : null;
+        if (!saved) {
+            $('past-status').textContent = 'Cargando preguntas…';
+            $('past-count').textContent = '';
+            $('past-breakdown-results').hidden = true;
+            $('past-breakdown-empty').hidden = true;
+        }
         try {
-            const result = await request(parameters(page), next.signal);
+            const result = saved || await request(query, next.signal);
             if (!active || next.signal.aborted || !result) return;
+            if (!saved) {
+                recent.set(key, { result, expires: Date.now() + 90000 });
+                if (recent.size > 12) recent.delete(recent.keys().next().value);
+            }
             data = result;
             updatePickerLabels();
             $('past-status').textContent = '';
@@ -214,6 +225,7 @@ window.createPastExamBreakdown = function (request, scope) {
                 empty('No hay preguntas con estos filtros', 'Prueba con otro tema o amplía la gestión.');
             } else {
                 cursor = last ? data.questions.length - 1 : 0;
+                $('past-breakdown-empty').hidden = true;
                 $('past-breakdown-results').hidden = false;
                 renderQuestion(focus);
             }
@@ -341,6 +353,7 @@ window.createPastExamBreakdown = function (request, scope) {
         clear() {
             controller?.abort();
             answers.clear();
+            recent.clear();
             data = null;
             resetFilters();
             $('past-question-stem').textContent = '';

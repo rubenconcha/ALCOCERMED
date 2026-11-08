@@ -13,6 +13,8 @@
 
     // Render PDF pages ourselves: Android browsers may replace embedded PDFs with an Open button.
     class SummaryPdfReader {
+        static preload() { return loadLibrary(); }
+
         constructor(host, { label = 'resumen', pageJump = false } = {}) {
             this.host = host;
             this.label = label;
@@ -81,7 +83,7 @@
                 });
             }, { passive: true });
             this.resizeObserver = new ResizeObserver(() => {
-                if (this.pdf && Math.abs(this.pages.clientWidth - this.lastWidth) > 2) {
+                if (this.pdf && this.pages.clientWidth > 0 && Math.abs(this.pages.clientWidth - this.lastWidth) > 2) {
                     clearTimeout(this.resizeTimer);
                     this.resizeTimer = setTimeout(() => this.layout(), 120);
                 }
@@ -101,7 +103,7 @@
                 httpHeaders: headers,
                 disableStream: rangeOnly,
                 disableAutoFetch: rangeOnly,
-                rangeChunkSize: rangeOnly ? 1024 * 1024 : undefined,
+                rangeChunkSize: rangeOnly ? 256 * 1024 : undefined,
                 cMapUrl: '/vendor/pdfjs/cmaps/', cMapPacked: true,
                 standardFontDataUrl: '/vendor/pdfjs/standard_fonts/',
                 wasmUrl: '/vendor/pdfjs/wasm/',
@@ -220,7 +222,13 @@
         updateCurrentPage() {
             if (!this.entries.length) return;
             const top = this.pages.getBoundingClientRect().top + 30;
-            const current = this.entries.find(entry => entry.el.getBoundingClientRect().bottom > top);
+            let first = 0, last = this.entries.length;
+            while (first < last) {
+                const mid = Math.floor((first + last) / 2);
+                if (this.entries[mid].el.getBoundingClientRect().bottom <= top) first = mid + 1;
+                else last = mid;
+            }
+            const current = this.entries[first];
             if (current && current.number !== this.currentPage) {
                 this.currentPage = current.number;
                 this.updateControls();

@@ -12,7 +12,7 @@
             .catch(error => { catalogPromise = null; throw error; });
         return catalogPromise;
     }
-    async function requestExam(id, pattern = false, filters = {}, signal) {
+    async function requestExam(id, pattern = false, filters = {}, signal, background = false) {
         const { data } = await getSupabase().auth.getSession();
         const token = data?.session?.access_token;
         if (!token) throw new Error('Vuelve a iniciar sesión para abrir el examen.');
@@ -21,7 +21,10 @@
         const response = await fetch('/api/past-exam?' + params, {
             headers: { Authorization: 'Bearer ' + token }, cache: 'no-store', signal
         });
-        if (response.status === 403) { CampusAccess.unlock(); return null; }
+        if (response.status === 403) {
+            if (background) throw Object.assign(new Error(readableError()), { status: 403 });
+            CampusAccess.unlock(); return null;
+        }
         if (response.status === 401) throw new Error('Tu sesión venció. Vuelve a iniciar sesión.');
         if (!response.ok) throw new Error(readableError());
         return pattern ? response.blob() : response.json();
@@ -29,6 +32,16 @@
     const scope = () => ({ year: $('past-year').value, type: $('past-type').value });
     const breakdown = window.createPastExamBreakdown?.((filters, signal) => requestExam('desglose', false, filters, signal), scope);
     const isLocked = exam => CampusAccess.isFree() && exam.year !== freeYear;
+    function prepareExam(exam) {
+        const key = (currentUser?.id || '') + ':' + exam.id;
+        const cached = examCache.get(key);
+        if (cached?.expires > Date.now()) return cached.pending;
+        const pending = requestExam(exam.id, false, {}, AbortSignal.timeout(15000), true)
+            .catch(error => { if (examCache.get(key)?.pending === pending) examCache.delete(key); throw error; });
+        examCache.set(key, { expires: Date.now() + 120000, pending });
+        if (examCache.size > 4) examCache.delete(examCache.keys().next().value);
+        return pending;
+    }
     function sourceNotes(exam) {
         const notes = [];
         if (exam.missingNumbers.length) notes.push('En el Word original faltan las preguntas ' + exam.missingNumbers.join(', ') + '.');
@@ -78,6 +91,7 @@
         $('past-source-notes').hidden = !sourceNotes(exam);
         $('past-back-label').textContent = 'Volver a los exámenes';
         $('past-start').textContent = isLocked(exam) ? 'Desbloquear' : 'Comenzar examen';
+        if (!isLocked(exam) && !window.navigator?.connection?.saveData) prepareExam(exam).catch(() => {});
     }
     function showList() {
         $('past-list').hidden = false; $('past-detail').hidden = true;
@@ -137,10 +151,7 @@
         const accountId = currentUser?.id || '';
         loading = true; $('past-start').disabled = true; $('past-start').textContent = 'Preparando preguntas…';
         try {
-            // Keep each loaded paper only for the current signed-in account.
-            const cacheKey = accountId + ':' + exam.id;
-            let paper = examCache.get(cacheKey);
-            if (!paper) { paper = await requestExam(exam.id); if (!paper) return; examCache.set(cacheKey, paper); }
+            const paper = await prepareExam(exam);
             if (currentCampusScreen !== 'past-exams-screen' || selected?.id !== exam.id || (currentUser?.id || '') !== accountId) return;
             releasePattern();
             simState.mode = 'pasado'; simState.selectedExamen = paper.title; simState.pastExamId = paper.id;
@@ -153,7 +164,11 @@
             $('sim-exam-nq-info').textContent = paper.questions.length + ' preguntas'; $('sim-total-num').textContent = paper.questions.length;
             $('sim-another-exam').textContent = 'Elegir otro examen pasado';
             showScreen('simulacro-screen'); showSimScreen('sim-exam'); buildSimCircles(); renderSimQuestion(); startSimTimer();
-        } catch (error) { showToast(error.message, 'error'); }
+        } catch (error) {
+            if (currentCampusScreen !== 'past-exams-screen' || selected?.id !== exam.id || (currentUser?.id || '') !== accountId) return;
+            if (error.status === 403) CampusAccess.unlock();
+            else showToast(error.message, 'error');
+        }
         finally { loading = false; $('past-start').disabled = false; $('past-start').textContent = isLocked(exam) ? 'Desbloquear' : 'Comenzar examen'; }
     };
     window.returnToExamSelection = function () {

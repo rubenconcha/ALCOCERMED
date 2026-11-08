@@ -1,10 +1,10 @@
-const CACHE_NAME = 'alcocermed-main-v154-textos-umss';
+const CACHE_NAME = 'alcocermed-main-v155-fluidez';
 const APP_SHELL = [
     './student-results.js?v=2',
     './student-results.css?v=1',
     './question-review.js?v=3',
-    './suficiencia-core.js?v=9',
-    './suficiencia.js?v=10',
+    './suficiencia-core.js?v=10',
+    './suficiencia.js?v=11',
     './suficiencia.css?v=7',
     './campus',
     './campus.html',
@@ -45,7 +45,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=4',
     './assets/fonts/outfit-900.ttf',
     './flashcard-workspace.js?v=20261021-visual5b',
-    './script.js?v=20261108-desglose',
+    './script.js?v=20261108-fluidez',
     './topic-evaluations.js?v=20261107-suficiencia',
     './topic-evaluations.css?v=4',
     './recuperar.html',
@@ -57,7 +57,7 @@ const APP_SHELL = [
     './mindmap-premium.js?v=3',
     './mindmap-detailed-content.js?v=20261021-visual5b',
     './mindmap-practice.js?v=20261021-visual5b',
-    './mindmap-viewer.js?v=19',
+    './mindmap-viewer.js?v=20',
     './mindmap-viewer.css?v=8',
     './assets/mindmaps/fonts/outfit.css?v=1',
     './assets/mindmaps/fonts/outfit-0.ttf',
@@ -66,7 +66,7 @@ const APP_SHELL = [
     './assets/mindmaps/fonts/outfit-3.ttf',
     './assets/mindmaps/fonts/outfit-4.ttf',
 
-    './intocables-hub.js?v=3',
+    './intocables-hub.js?v=4',
     './intocables-sheets.css?v=1',
     './study-assessments.js?v=2',
     './simulation-scope.js?v=7',
@@ -75,9 +75,9 @@ const APP_SHELL = [
     './simulacro-library.css?v=5',
     './student-library.js?v=10',
     './study-summaries.js?v=20261021-visual5b',
-    './summary-pdf-reader.js?v=3',
+    './summary-pdf-reader.js?v=4',
     './summary-pdf-reader.css?v=2',
-    './campus-study-resources.css?v=2',
+    './campus-study-resources.css?v=3',
     './study-calendar.css?v=3',
     './study-calendar-data.js?v=1',
     './study-calendar-pdf.js?v=1',
@@ -98,18 +98,32 @@ const APP_SHELL = [
     './vendor/fullcalendar/index.global.min.js',
     './vendor/fullcalendar/es.global.min.js',
     './vendor/jspdf/jspdf.umd.min.js',
-    './official-texts.js?v=2',
+    './vendor/pdfjs/pdf.min.mjs',
+    './vendor/pdfjs/pdf.worker.min.mjs',
+    './official-texts.js?v=3',
     './sufficiency-practice-content.js?v=1',
     './sufficiency-practice.js?v=1',
-    './past-exams.js?v=8',
-    './past-exam-breakdown.js?v=2',
+    './past-exams.js?v=9',
+    './past-exam-breakdown.js?v=3',
     './past-exams.css?v=4',
+    './content/past-exams/catalog.json?v=timer-100-cccd41b',
 ];
+
+const BOOTSTRAP = new Set([
+    './campus', './campus.html', './index.html', './ventas.html', './config.js',
+    './styles.css', './campus-shell.css', './script.js', './assets/calendar-icons.svg',
+]);
+const staticUrls = new Set(APP_SHELL
+    .filter(url => !/\.html$|\/campus$/.test(url))
+    .map(url => new URL(url, self.location.origin + '/').href));
 
 self.addEventListener('install', function (event) {
     event.waitUntil(
         caches.open(CACHE_NAME)
-            .then(function (cache) { return cache.addAll(APP_SHELL); })
+            .then(function (cache) {
+                return Promise.allSettled(APP_SHELL.filter(url => BOOTSTRAP.has(url.split('?')[0]))
+                    .map(url => cache.add(url)));
+            })
             .catch(function () { return undefined; })
     );
     self.skipWaiting();
@@ -133,11 +147,10 @@ self.addEventListener('fetch', function (event) {
     const request = event.request;
     const url = new URL(request.url);
 
-    if (request.method !== 'GET' || url.protocol.indexOf('http') !== 0) return;
+    if (request.method !== 'GET' || url.protocol.indexOf('http') !== 0 || request.headers?.has('Authorization')) return;
     if (url.origin !== self.location.origin || url.pathname.startsWith('/api/') || url.pathname.endsWith('.pdf')) return;
 
-    event.respondWith(
-        fetch(request)
+    const network = () => fetch(request)
             .then(function (response) {
                 if (response && response.ok && response.type !== 'opaque' && !/no-store|private/i.test(response.headers.get('Cache-Control') || '')) {
                     const copy = response.clone();
@@ -155,6 +168,9 @@ self.addEventListener('fetch', function (event) {
                     }
                     return undefined;
                 });
-            })
-    );
+            });
+    event.respondWith(staticUrls.has(url.href) && request.mode !== 'navigate'
+        ? caches.match(request, { cacheName: CACHE_NAME }).catch(() => undefined)
+            .then(cached => cached || network())
+        : network());
 });

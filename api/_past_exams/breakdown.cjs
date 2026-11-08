@@ -8,6 +8,9 @@ const files = new Map();
 const normalize = value => String(value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]+/g, ' ').trim();
 const selected = value => new Set(typeof value === 'string' ? value.slice(0, 1024).split(',').filter(Boolean) : []);
+const classification = code => index.topics[code]
+    ? { subject: index.topics[code].subject, topic: code }
+    : { subject: code || '', topic: '' };
 
 function questionsFor(exam) {
     if (!files.has(exam.id)) {
@@ -16,15 +19,10 @@ function questionsFor(exam) {
                 const paper = JSON.parse(contents);
                 const assignments = index.exams[exam.id] || [];
                 return paper.questions.map(question => {
-                    const code = assignments[question.numero_original - 1];
-                    const topic = index.topics[code];
                     return {
                         examId: exam.id, year: exam.year, type: exam.type,
-                        subject: topic?.subject || code || '',
-                        topic: topic ? code : '',
+                        ...classification(assignments[question.numero_original - 1]),
                         question,
-                        terms: normalize([question.pregunta, question.opcion_a, question.opcion_b, question.opcion_c,
-                            question.opcion_d, question.opcion_e].join(' ')),
                     };
                 });
             })
@@ -34,6 +32,15 @@ function questionsFor(exam) {
     return files.get(exam.id);
 }
 
+function matchesSearch(row, search) {
+    if (!search.length) return true;
+    if (row.terms === undefined) {
+        const q = row.question;
+        row.terms = normalize([q.pregunta, q.opcion_a, q.opcion_b, q.opcion_c, q.opcion_d, q.opcion_e].join(' '));
+    }
+    return search.every(term => row.terms.includes(term));
+}
+
 async function breakdown(catalog, access, query) {
     const year = typeof query.year === 'string' ? query.year : '';
     const type = typeof query.type === 'string' ? query.type : '';
@@ -41,20 +48,22 @@ async function breakdown(catalog, access, query) {
     const subjects = selected(query.subjects);
     const topics = selected(query.topics);
     const unconfirmed = query.unconfirmed === '1';
+    const requested = Boolean(year || type || subjects.size || topics.size || unconfirmed || search.length || query.all === '1');
     const scope = catalog.exams.filter(exam => (!year || year === exam.year) && (!type || type === exam.type));
     const visible = scope.filter(exam => access.premium || exam.year === catalog.freeYear);
-    const rows = (await Promise.all(visible.slice().reverse().map(questionsFor))).flat();
+    const rows = requested
+        ? (await Promise.all(visible.slice().reverse().map(questionsFor))).flat()
+        : visible.flatMap(exam => (index.exams[exam.id] || []).filter(Boolean).map(classification));
     const subjectCounts = new Map();
     const topicCounts = new Map();
     for (const row of rows) {
         subjectCounts.set(row.subject, (subjectCounts.get(row.subject) || 0) + 1);
         if (row.topic) topicCounts.set(row.topic, (topicCounts.get(row.topic) || 0) + 1);
     }
-    const filtered = rows.filter(row => (!subjects.size || subjects.has(row.subject))
+    const filtered = requested ? rows.filter(row => (!subjects.size || subjects.has(row.subject))
         && (!topics.size || topics.has(row.topic)) && (!unconfirmed || !row.topic)
-        && search.every(term => row.terms.includes(term)));
-    const requested = Boolean(year || type || subjects.size || topics.size || unconfirmed || search.length || query.all === '1');
-    const count = requested ? filtered.length : 0;
+        && matchesSearch(row, search)) : [];
+    const count = filtered.length;
     const pages = Math.max(1, Math.ceil(count / pageSize));
     const requestPage = typeof query.page === 'string' && /^\d{1,5}$/.test(query.page) ? Number(query.page) : 1;
     const page = Math.min(pages, Math.max(1, requestPage));

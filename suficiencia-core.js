@@ -102,6 +102,9 @@
     }
     function selectConfiguration(bank, config, seed) {
         if(!validate(bank))throw new Error('Banco incompleto');
+        return selectConfiguredRows(bank, config, seed);
+    }
+    function selectConfiguredRows(bank, config, seed) {
         if(!configurationCount(bank,config))return [];
         const pool=configurationPool(bank,config),rng=random(seed);
         if(config.subject==='integral'){
@@ -136,22 +139,27 @@
         if (source.document === 'MEDICINA EXÁMENES PASADOS ABP.pdf') return `Exámenes pasados ABP · UMSA · ${pages} · pregunta ${source.question}. ${source.kind === 'adaptada' ? 'Adaptada para la práctica.' : 'Notación normalizada.'}`;
         return `${source.author || 'Kenneth S. Saladin'}, ${source.edition || '6.ª edición'} · ${source.chapter || 'cap. 1'} · ${pages}${source.printedPages ? ' · pág. impresa ' + source.printedPages.join(', ') : ''}. Texto adaptado para lectura comprensiva.`;
     }
+    function toQuestionIndexRow(q, bank) {
+        return {
+            content_id: 'suficiencia:' + q.id,
+            materia: subjects[q.subject],
+            tema: topicFor(q, bank).label,
+            dificultad: q.difficulty === 'intermedio' ? 'medio' : q.difficulty,
+            guiaUmsa: isOfficial(q),
+        };
+    }
     function toQuestionRow(q, bank) {
         const steps = (q.solution?.steps || []).map((step, i) => [
             (i + 1) + '. ' + step.title, step.text, step.formula,
             step.quote && 'Párrafo ' + step.paragraph + ' · «' + step.quote + '»'
         ].filter(Boolean).join('\n'));
         const row = {
-            content_id: 'suficiencia:' + q.id,
-            materia: subjects[q.subject],
-            tema: topicFor(q, bank).label,
-            dificultad: q.difficulty === 'intermedio' ? 'medio' : q.difficulty,
+            ...toQuestionIndexRow(q, bank),
             pregunta: q.text,
             respuesta_correcta: 'ABCDE'[q.correct],
             justificacion: [q.explanation, ...steps].join('\n\n'),
             fuente: referenceText(q.source),
             passage: q.passageId ? bank.passages.find(p => p.id === q.passageId) : undefined,
-            guiaUmsa: isOfficial(q),
         };
         q.options.forEach((_, i) => { row['opcion_' + 'abcde'[i]] = optionText(q, i); });
         return row;
@@ -233,6 +241,9 @@
     }
     function select(bank, area, seed) {
         if (!validate(bank)) throw new Error('Banco incompleto');
+        return selectRows(bank, area, seed);
+    }
+    function selectRows(bank, area, seed) {
         const rng = random(seed);
         if (area === 'inicial' || area.startsWith('simulacro:')) {
             const selected = paper(bank, area);
@@ -273,10 +284,11 @@
         const answers = {};
         for (const id of saved.ids) {
             const value = saved.answers?.[id];
-            if (Number.isInteger(value) && value >= 0 && value < lookup.get(id).options.length) answers[id] = value;
+            const question = lookup.get(id);
+            if (Number.isInteger(value) && value >= 0 && value < (question.options?.length ?? question.optionCount)) answers[id] = value;
         }
         return { ...saved, answers, helpOpen: Array.isArray(saved.helpOpen) ? [...new Set(saved.helpOpen.filter(id => saved.ids.includes(id)))] : [], flags: Array.isArray(saved.flags) ? saved.flags.filter(id => saved.ids.includes(id)) : [], index: Math.max(0, Math.min(saved.ids.length - 1, Number.isInteger(saved.index) ? saved.index : 0)), finished: saved.finished === true };
     }
     function paper(bank, area) { return ['inicial', 'simulacro:inicial'].includes(area) ? bank?.introPaper || null : bank?.papers?.find(p => 'simulacro:' + p.id === area) || bank?.levelPapers?.find(p => 'simulacro:' + p.id === area) || null; }
-    return { subjects: sufficiencySubjects, practiceSubjects: subjects, biomedicalSubjects, levels, officialCollection, officialTopicPrefix, isOfficial, biomedicalCollection, isBiomedical, referenceText, toQuestionRow, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText, topics, topicFor, configurationPool, configurationCount, selectConfiguration, configurationLabel };
+    return { subjects: sufficiencySubjects, practiceSubjects: subjects, biomedicalSubjects, levels, officialCollection, officialTopicPrefix, isOfficial, biomedicalCollection, isBiomedical, referenceText, toQuestionIndexRow, toQuestionRow, validate, select, selectRows, grade, restore, paper, solutionHtml, promptHtml, optionText, topics, topicFor, configurationPool, configurationCount, selectConfiguration, selectConfiguredRows, configurationLabel };
 });

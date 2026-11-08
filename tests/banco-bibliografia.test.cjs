@@ -32,14 +32,15 @@ test('el banco bibliográfico cubre las tres materias y conserva cuatro opciones
 
 test('la carga del banco sigue leyendo después de la primera página de Supabase', async () => {
   const script = fs.readFileSync('script.js', 'utf8');
-  const start = script.indexOf('let bancoQuestionsPromise = null;');
-  const end = script.indexOf('async function preloadAppData()', start);
+  const start = script.indexOf('let bancoQuestionsRequest = null;');
+  const end = script.indexOf('let bancoState =', start);
   assert.ok(start >= 0 && end > start);
   const records = Array.from({ length: 1300 }, (_, i) => ({ id: i + 1 }));
   const ranges = [];
   const context = {
     bancoState: { _cache: [] },
     simState: { _cache: [] },
+    currentUser: { id: 'fixture' },
     getSupabase: () => ({
       from: (table) => {
         assert.equal(table, 'banco_preguntas');

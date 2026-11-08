@@ -8,17 +8,19 @@ const subjects = new Set(['morfofuncion', 'biologia-celular', 'educacion-salud']
 const library = 'https://ln3dltv3md2wx5wh.private.blob.vercel-storage.com/umss/curso-basico-2025-2026/';
 const campusAccess = 'https://asnwhddmurstzmghuyin.supabase.co/rest/v1/rpc/campus_access';
 const anonKey = process.env.SUPABASE_ANON_KEY || require('./_flashcards/config.json').anonKey;
-const grantLifetime = 120;
+const downloadLifetime = 120;
+const readerLifetime = 300;
 
-function signature(secret, subject, expires) {
-    return createHmac('sha256', secret).update('texto-oficial:' + subject + ':' + expires).digest('base64url');
+function signature(secret, subject, expires, reader) {
+    const scope = reader ? 'lector-oficial:' : 'texto-oficial:';
+    return createHmac('sha256', secret).update(scope + subject + ':' + expires).digest('base64url');
 }
 
-function validDownload(secret, subject, grant) {
+function validGrant(secret, subject, grant, reader = false) {
     if (!secret || typeof grant !== 'string' || !/^\d{10}\.[\w-]{43}$/.test(grant)) return false;
     const [expires, proof] = grant.split('.');
     return Number(expires) > Math.floor(Date.now() / 1000)
-        && timingSafeEqual(Buffer.from(proof), Buffer.from(signature(secret, subject, expires)));
+        && timingSafeEqual(Buffer.from(proof), Buffer.from(signature(secret, subject, expires, reader)));
 }
 
 async function authorize(header) {
@@ -49,10 +51,22 @@ module.exports = async function handler(req, res) {
         return res.end();
     }
 
+    const view = req.query.vista;
+    if (view !== undefined && view !== 'lector' && view !== 'portada') {
+        res.statusCode = 404;
+        return res.end();
+    }
+    const cover = view === 'portada';
+    if (cover && req.method === 'POST') {
+        res.setHeader('Allow', 'GET, HEAD');
+        res.statusCode = 405;
+        return res.end();
+    }
     const secret = process.env.BLOB_READ_WRITE_TOKEN;
-    const download = req.method !== 'POST' && validDownload(secret, subject, req.query.descarga);
+    const download = !view && req.method !== 'POST' && validGrant(secret, subject, req.query.descarga);
+    const reading = Boolean(view) && req.method !== 'POST' && validGrant(secret, subject, req.headers['x-official-reader'], true);
     try {
-        if (!download) {
+        if (!download && !reading) {
             const access = await authorize(req.headers.authorization);
             if (access !== 200) {
                 res.statusCode = access;
@@ -68,14 +82,17 @@ module.exports = async function handler(req, res) {
         return res.end();
     }
     if (req.method === 'POST') {
-        const expires = Math.floor(Date.now() / 1000) + grantLifetime;
-        const grant = expires + '.' + signature(secret, subject, expires);
+        const expires = Math.floor(Date.now() / 1000) + (view ? readerLifetime : downloadLifetime);
+        const grant = expires + '.' + signature(secret, subject, expires, Boolean(view));
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         return res.end(JSON.stringify({ grant }));
     }
 
-    const upstream = new URL(subject + '.pdf', library);
+    const extension = cover ? 'webp' : 'pdf';
+    const upstream = new URL((view ? 'lector/' : '') + subject + '.' + extension, library);
+    const contentType = cover ? 'image/webp' : 'application/pdf';
+    const allowedType = cover ? /^(image\/webp|application\/octet-stream)(?:;|$)/i : /^application\/(pdf|octet-stream)(?:;|$)/i;
     const headers = { Authorization: 'Bearer ' + secret, 'Accept-Encoding': 'identity' };
     const range = req.headers.range;
     if (typeof range === 'string' && /^bytes=(?:\d+-\d*|-\d+)$/.test(range)) headers.Range = range;
@@ -87,14 +104,14 @@ module.exports = async function handler(req, res) {
             res.statusCode = 416;
             return res.end();
         }
-        if (!pdf.ok || !/^(application\/(pdf|octet-stream))(?:;|$)/i.test(pdf.headers.get('content-type') || '')) {
+        if (!pdf.ok || !allowedType.test(pdf.headers.get('content-type') || '')) {
             await pdf.body?.cancel();
             res.statusCode = 502;
             return res.end();
         }
         res.statusCode = pdf.status;
-        res.setHeader('Content-Type', 'application/pdf');
-        res.setHeader('Content-Disposition', `${download ? 'attachment' : 'inline'}; filename="UMSS-2025-2026-${subject}.pdf"`);
+        res.setHeader('Content-Type', contentType);
+        res.setHeader('Content-Disposition', `${download ? 'attachment' : 'inline'}; filename="UMSS-2025-2026-${subject}.${extension}"`);
         for (const header of ['Accept-Ranges', 'Content-Length', 'Content-Range']) {
             const value = pdf.headers.get(header);
             if (value) res.setHeader(header, value);

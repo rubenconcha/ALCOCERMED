@@ -14,6 +14,9 @@
     <meta name="apple-mobile-web-app-title" content="AlcocerMed">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="apple-touch-icon" href="logo%20app%20juegos.png">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://asnwhddmurstzmghuyin.supabase.co" crossorigin>
+    <link rel="preload" href="/content/past-exams/catalog.json?v=timer-100-cccd41b" as="fetch" crossorigin="anonymous" fetchpriority="low">
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" async data-supabase-sdk></script>
 
@@ -36,7 +39,7 @@
     <link rel="stylesheet" href="topic-evaluations.css?v=4">
     <link rel="stylesheet" href="campus-atlas.css?v=5">
     <link rel="stylesheet" href="summary-pdf-reader.css?v=2">
-    <link rel="stylesheet" href="campus-study-resources.css?v=2">
+    <link rel="stylesheet" href="campus-study-resources.css?v=3">
     <link rel="stylesheet" href="study-calendar.css?v=3">
 <link rel="stylesheet" href="/device-limit.css?v=1">
 <link rel="stylesheet" href="study-media.css?v=20261021-visual5c">
@@ -483,13 +486,13 @@
 
     <section class="dashboard-launch" aria-labelledby="dashboard-launch-title"><div class="dashboard-launch-heading"><div><span class="dashboard-eyebrow">TU ESPACIO DE ESTUDIO</span><h2 id="dashboard-launch-title">¿Qué vas a estudiar hoy?</h2></div></div>
       <div class="dashboard-activity-grid">
-        <button class="dashboard-activity dashboard-activity-gold" onclick="openStudyLibrary()"><img src="/assets/study-art/cards.png" alt=""><span><strong>Flashcards</strong><small>Repasa por materia y tema</small></span></button>
-        <button class="dashboard-activity dashboard-activity-blue" onclick="openMindMaps()"><img src="/assets/study-art/map.png" alt=""><span><strong>Mapas mentales</strong><small>Visualiza las ideas del tema</small></span></button>
+        <button class="dashboard-activity dashboard-activity-gold" onclick="openStudyLibrary()"><img src="/assets/study-art/cards.png" alt="" loading="lazy" decoding="async"><span><strong>Flashcards</strong><small>Repasa por materia y tema</small></span></button>
+        <button class="dashboard-activity dashboard-activity-blue" onclick="openMindMaps()"><img src="/assets/study-art/map.png" alt="" loading="lazy" decoding="async"><span><strong>Mapas mentales</strong><small>Visualiza las ideas del tema</small></span></button>
         <button class="dashboard-activity dashboard-activity-olive" onclick="openBanco()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg><span><strong>Banco de preguntas</strong><small>Practica por materia</small></span></button>
-        <button class="dashboard-activity dashboard-activity-navy" onclick="openSimulacro()"><img src="/assets/study-art/quiz.png" alt=""><span><strong>Simulacros</strong><small>Resuelve un examen con tiempo</small></span></button>
+        <button class="dashboard-activity dashboard-activity-navy" onclick="openSimulacro()"><img src="/assets/study-art/quiz.png" alt="" loading="lazy" decoding="async"><span><strong>Simulacros</strong><small>Resuelve un examen con tiempo</small></span></button>
       </div>
     </section>
-    <div class="dashboard-more"><button onclick="openGameMenu()"><img src="/assets/study-art/word.png" alt=""><span><strong>Aprende jugando</strong><small>Quiz, ahorcado y Juegos por materias</small></span><span class="dashboard-more-arrow" aria-hidden="true">→</span></button><button onclick="openStudentResults()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#progress"></use></svg><span><strong>Mis resultados</strong><small>Consulta tu historial y métricas</small></span><span aria-hidden="true">→</span></button></div>
+    <div class="dashboard-more"><button onclick="openGameMenu()"><img src="/assets/study-art/word.png" alt="" loading="lazy" decoding="async"><span><strong>Aprende jugando</strong><small>Quiz, ahorcado y Juegos por materias</small></span><span class="dashboard-more-arrow" aria-hidden="true">→</span></button><button onclick="openStudentResults()"><svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#progress"></use></svg><span><strong>Mis resultados</strong><small>Consulta tu historial y métricas</small></span><span aria-hidden="true">→</span></button></div>
   </div><aside class="dashboard-progress" aria-label="Tu progreso"><div class="dashboard-progress-heading"><span>TU AVANCE</span><h2>Tu progreso</h2></div>        <!-- ══ MI PROGRESO ══ -->
         <div class="nav-section progress-section">
             <span class="section-title">MI PROGRESO</span>
@@ -581,9 +584,9 @@
             <section class="study-library campus-browser hidden" id="study-library" aria-labelledby="library-title">
 <div class="home-section-head campus-page-head"><div><p class="library-kicker">FLASHCARDS</p><h2 id="library-title">Elige una materia</h2></div><p id="library-instruction">Selecciona una materia para ver sus temas.</p></div>
 <button id="library-back" class="campus-back" onclick="openStudyLibrary()" hidden>← Materias</button><div id="library-subjects" class="subject-picker" aria-label="Materias">
-<button type="button" data-subject="MORFOFUNCION" aria-pressed="false"><img src="/assets/study-art/morphology.png" alt=""><span>Morfofunción<small>Anatomía y fisiología</small></span><i class="fas fa-arrow-right"></i></button>
-<button type="button" data-subject="BIOLOGIA CELULAR" aria-pressed="false"><img src="/assets/study-art/cell.png" alt=""><span>Biología celular<small>Célula, membrana y organelos</small></span><i class="fas fa-arrow-right"></i></button>
-<button type="button" data-subject="SALUD PUBLICA" aria-pressed="false"><img src="/assets/study-art/health-education.png" alt=""><span>Educación para la Salud<small>Población, prevención y salud</small></span><i class="fas fa-arrow-right"></i></button>
+<button type="button" data-subject="MORFOFUNCION" aria-pressed="false"><img src="/assets/study-art/morphology.png" alt="" loading="lazy" decoding="async"><span>Morfofunción<small>Anatomía y fisiología</small></span><i class="fas fa-arrow-right"></i></button>
+<button type="button" data-subject="BIOLOGIA CELULAR" aria-pressed="false"><img src="/assets/study-art/cell.png" alt="" loading="lazy" decoding="async"><span>Biología celular<small>Célula, membrana y organelos</small></span><i class="fas fa-arrow-right"></i></button>
+<button type="button" data-subject="SALUD PUBLICA" aria-pressed="false"><img src="/assets/study-art/health-education.png" alt="" loading="lazy" decoding="async"><span>Educación para la Salud<small>Población, prevención y salud</small></span><i class="fas fa-arrow-right"></i></button>
 </div>
 <div id="library-topics-panel" hidden><label for="library-search">Buscar un tema</label><input type="search" id="library-search" placeholder="Escribe el nombre del tema…"><p id="library-status" role="status"></p><div id="library-topics" class="library-topics"></div></div>
 </section>
@@ -719,7 +722,7 @@
 
                     <!-- Fila de dificultad — ocupa ancho completo -->
                     <div class="banco-dificultad-row">
-                        <label class="banco-select-label"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"> nivel de dificultad</label>
+                        <label class="banco-select-label"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80" loading="lazy" decoding="async"> nivel de dificultad</label>
                         <div class="banco-dificultad-btns" id="banco-dificultad-btns">
                             <button class="banco-dif-btn banco-dif-active" id="banco-dif-todos" onclick="selectBancoDificultad(null)">
                                 <i class="fas fa-th"></i> todos
@@ -1141,7 +1144,7 @@
                             <label>sin responder</label>
                         </div>
                         <div class="bq-rs-box bq-rs-time">
-                            <img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80">
+                            <img class="study-art" src="/assets/study-art/quiz.png" alt="" aria-hidden="true" width="80" height="80" loading="lazy" decoding="async">
                             <span id="sim-rs-time">—</span>
                             <label>tiempo usado</label>
                         </div>
@@ -1492,7 +1495,10 @@
                     <a href="https://med.umss.edu.bo/bibliografia-curso-basico-2025-2026-carrera-de-medicina/" class="campus-resource-secondary" target="_blank" rel="noopener noreferrer">Consultar la bibliografía oficial ↗</a>
                 </div>
                 <p id="official-texts-reader-download-status" class="resumenes-loading" role="status" hidden></p>
-                <div id="official-texts-pages"></div>
+                <div class="official-texts-stage">
+                    <img id="official-texts-preview" alt="" decoding="async" hidden>
+                    <div id="official-texts-pages"></div>
+                </div>
             </dialog>
         </section>
 
@@ -1562,7 +1568,7 @@
             <!-- Tabs -->
             <div class="intoc-tabs">
                 <button class="intoc-tab intoc-tab-active" id="tab-mapas" onclick="switchIntocTab('mapas')">
-                    <img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80"> mapas mentales
+                    <img class="study-art" src="/assets/study-art/map.png" alt="" aria-hidden="true" width="80" height="80" loading="lazy" decoding="async"> mapas mentales
                 </button>
                 <button class="intoc-tab" hidden id="tab-conceptos" onclick="switchIntocTab('conceptos')">
                     <i class="fas fa-lightbulb"></i> conceptos clave
@@ -1640,13 +1646,13 @@
             <div class="campus-atlas-heading campus-page-head"><div><h1 id="campus-atlas-title">Atlas anatómico</h1><p>Explora los sistemas del cuerpo y estudia sus estructuras en 3D.</p></div><div class="campus-atlas-actions"><button type="button" onclick="leaveAtlas()">← Volver</button><button type="button" id="campus-atlas-fullscreen" hidden>Pantalla completa</button></div></div>
             <div id="atlas-enrollment-gate" class="atlas-enrollment-gate">
                 <div class="atlas-enrollment-hero">
-                    <div class="atlas-app-icon"><img src="/assets/atlas-preview/head-layers.webp" alt="Cabeza por capas: músculos y cráneo"><span>3D</span></div>
+                    <div class="atlas-app-icon"><img src="/assets/atlas-preview/head-layers.webp" alt="Cabeza por capas: músculos y cráneo" loading="lazy" decoding="async"><span>3D</span></div>
                     <div class="atlas-enrollment-copy"><span class="atlas-enrollment-badge">PREPARATORIA BEN CARSON</span><h2>Aprende anatomía en 3D</h2><p>Explora el cuerpo humano, identifica sus estructuras y entiende cómo se relacionan.</p><span class="atlas-enrollment-included">Acceso incluido en nuestros cursos virtuales y presenciales.</span><a id="atlas-enrollment-whatsapp" class="atlas-enrollment-cta" href="https://wa.me/59177921731?text=Hola%2C%20quiero%20inscribirme%20al%20curso%20de%20la%20Preparatoria%20Ben%20Carson%20y%20acceder%20al%20atlas%20anat%C3%B3mico%203D." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-12 7L3 20l1.5-5A8 8 0 1 1 20 11.5Z"/><path d="M8 8c0 4 4 7 7 7l1-2-3-1-1 1-2-2 1-1-1-3Z"/></svg>Inscribirse al curso <span aria-hidden="true">↗</span></a><p id="atlas-access-status" role="status" aria-live="polite"></p><button type="button" id="campus-atlas-retry">Volver a comprobar mi acceso</button></div>
                 </div>
                 <div class="atlas-feature-strip" aria-label="Funciones del atlas"><div><strong>Modelos 3D</strong><span>Gira y acerca cada vista</span></div><div><strong>Sistemas del cuerpo</strong><span>Explora por capas</span></div><div><strong>Estudio en español</strong><span>Busca e identifica estructuras</span></div></div>
                 <div class="atlas-gallery-heading"><h3>Conoce tu atlas</h3><p>Vistas del atlas que usarás para estudiar.</p></div>
                 <div class="atlas-preview-gallery" tabindex="0" role="region" aria-label="Galería de vistas anatómicas; desliza para ver más">
-                    <figure><img src="/assets/atlas-preview/head-layers.webp" alt="Cabeza con media musculatura y cráneo visible" width="600" height="820"><figcaption><span>01</span><strong>Músculos y cráneo</strong><small>Cabeza por capas</small></figcaption></figure>
+                    <figure><img src="/assets/atlas-preview/head-layers.webp" alt="Cabeza con media musculatura y cráneo visible" width="600" height="820" loading="lazy" decoding="async"><figcaption><span>01</span><strong>Músculos y cráneo</strong><small>Cabeza por capas</small></figcaption></figure>
                     <figure><img src="/assets/atlas-preview/layers.webp" alt="Torso con músculos y huesos por capas" width="600" height="820" loading="lazy"><figcaption><span>02</span><strong>Músculos y huesos</strong><small>Explora sus relaciones</small></figcaption></figure>
                     <figure><img src="/assets/atlas-preview/systems.webp" alt="Sistemas y órganos internos del cuerpo" width="600" height="820" loading="lazy"><figcaption><span>03</span><strong>Sistemas y órganos</strong><small>Conecta lo que aprendes</small></figcaption></figure>
                     <figure><img src="/assets/atlas-preview/heart.webp" alt="Vista del corazón en el atlas" width="600" height="820" loading="lazy"><figcaption><span>04</span><strong>Corazón</strong><small>Estudia sus estructuras</small></figcaption></figure>
@@ -1747,46 +1753,42 @@
     </dialog>
 
 <a class="support-float" href="https://wa.me/59173752688?text=Hola%2C%20tengo%20una%20consulta%20sobre%20AlcocerMed" target="_blank" rel="noopener noreferrer" aria-label="Hablar con AlcocerMed por WhatsApp" title="¿Te ayudamos? Escríbenos"><svg aria-hidden="true"><use href="/assets/calendar-icons.svg#whatsapp"></use></svg></a>
-    <script src="platform-polish.js?v=1"></script>
-    <script src="config.js"></script>
-    <script src="device_guard.js?v=9"></script>
-    <script src="campus-access.js?v=9"></script>
-    <script src="mindmap-premium-catalog.js?v=20261021-visual5b"></script>
-    <script src="mindmap-premium.js?v=3"></script>
-    <script src="official-flashcards.js?v=1"></script>
-    <script src="study-depth.js?v=16"></script>
-    <script src="campus-section-tracking.js?v=1"></script>
-    <script src="question-review.js?v=3"></script>
-    <script src="study-media.js?v=20261021-visual5b"></script>
-    <script src="script.js?v=20261108-desglose"></script>
-    <script src="mindmap-branch-labels.js?v=20261021-visual5b"></script>
-    <script src="mindmap-content.js?v=3"></script>
-    <script src="mindmap-detailed-content.js?v=20261021-visual5b"></script>
-    <script src="mindmap-practice.js?v=20261021-visual5b"></script>
-    <script src="mindmap-viewer.js?v=19"></script>
-    <script src="intocables-hub.js?v=3"></script>
-    <script src="study-assessments.js?v=2"></script>
-    <script src="simulation-scope.js?v=7"></script>
-    <script src="simulacro-ingreso.js?v=10"></script>
-    <script src="simulacro-library.js?v=6"></script>
-    <script src="student-library.js?v=10"></script>
-    <script src="flashcard-workspace.js?v=20261021-visual5b"></script>
-    <script src="summary-pdf-reader.js?v=3"></script>
-    <script src="official-texts.js?v=2"></script>
-    <script src="sufficiency-practice-content.js?v=1"></script>
-    <script src="sufficiency-practice.js?v=1"></script>
-    <script src="study-calendar-data.js?v=1"></script>
-    <script src="study-calendar-pdf.js?v=1"></script>
-    <script src="study-calendar.js?v=2"></script>
-    <script src="campus-shell.js?v=1"></script>
-    <script src="study-summaries.js?v=20261021-visual5b"></script>
-    <script src="past-exam-breakdown.js?v=2"></script>
-    <script src="past-exams.js?v=8"></script>
-    <script src="topic-evaluations.js?v=20261107-suficiencia"></script>
-    <script src="campus-atlas.js?v=12"></script>
-    <script src="suficiencia-core.js?v=9"></script>
-    <script src="suficiencia.js?v=10"></script>
-    <script src="student-results.js?v=2"></script>
+    <script defer src="platform-polish.js?v=1"></script>
+    <script defer src="config.js"></script>
+    <script defer src="device_guard.js?v=9"></script>
+    <script defer src="campus-access.js?v=9"></script>
+    <script defer src="mindmap-premium.js?v=3"></script>
+    <script defer src="official-flashcards.js?v=1"></script>
+    <script defer src="study-depth.js?v=16"></script>
+    <script defer src="campus-section-tracking.js?v=1"></script>
+    <script defer src="question-review.js?v=3"></script>
+    <script defer src="study-media.js?v=20261021-visual5b"></script>
+    <script defer src="script.js?v=20261108-fluidez"></script>
+    <script defer src="mindmap-practice.js?v=20261021-visual5b"></script>
+    <script defer src="mindmap-viewer.js?v=20"></script>
+    <script defer src="intocables-hub.js?v=4"></script>
+    <script defer src="study-assessments.js?v=2"></script>
+    <script defer src="simulation-scope.js?v=7"></script>
+    <script defer src="simulacro-ingreso.js?v=10"></script>
+    <script defer src="simulacro-library.js?v=6"></script>
+    <script defer src="student-library.js?v=10"></script>
+    <script defer src="flashcard-workspace.js?v=20261021-visual5b"></script>
+    <script defer src="summary-pdf-reader.js?v=4"></script>
+    <script defer src="official-texts.js?v=3"></script>
+    <script defer src="sufficiency-practice-content.js?v=1"></script>
+    <script defer src="sufficiency-practice.js?v=1"></script>
+    <script defer src="study-calendar-data.js?v=1"></script>
+    <script defer src="study-calendar-pdf.js?v=1"></script>
+    <script defer src="study-calendar.js?v=2"></script>
+    <script defer src="campus-shell.js?v=1"></script>
+    <script defer src="study-summaries.js?v=20261021-visual5b"></script>
+    <script defer src="past-exam-breakdown.js?v=3"></script>
+    <script defer src="past-exams.js?v=9"></script>
+    <script defer src="topic-evaluations.js?v=20261107-suficiencia"></script>
+    <script defer src="campus-atlas.js?v=12"></script>
+    <script defer src="suficiencia-core.js?v=10"></script>
+    <script defer src="suficiencia.js?v=11"></script>
+    <script defer src="student-results.js?v=2"></script>
 </body>
 
 </html>

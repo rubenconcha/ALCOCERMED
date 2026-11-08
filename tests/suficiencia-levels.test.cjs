@@ -114,13 +114,19 @@ test('level validation rejects mixed levels, duplicated questions, missing cover
 });
 
 test('bank-style selector requires subject and topic, filters difficulty and retains the selected configuration',async()=>{
- const handlers={},storage=new Map();let loads=0;
+ const handlers={},storage=new Map();let loads=0,packs=0;
+ const rows=bank.questions.concat(official);
+ const compact={...bank,view:'catalogo',passages:bank.passages.map(({id,title})=>({id,title})),
+  questions:rows.map(({id,subject,topic,difficulty,options,passageId,source})=>({id,subject,topic,difficulty,optionCount:options.length,passageId,source}))};
  const root={innerHTML:'',classList:{contains:()=>false,add(){},remove(){}},addEventListener:(e,fn)=>{handlers[e]=fn;},replaceChildren(){this.innerHTML='';},scrollIntoView(){},querySelector:()=>null};
  const context={currentUser:{id:'levels-fixture'},document:{getElementById:()=>root,addEventListener(){}},location:{search:''},URLSearchParams,Uint32Array,AbortSignal,Date,
   crypto:{getRandomValues:a=>a},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},setInterval:()=>1,clearInterval(){},setTimeout(){},
-  showScreen:()=>true,ensureSupabaseSdk:async()=>{},fetch:async url=>{
-   if(url==='/api/suficiencia?collection=medicina-oficial')return{ok:false,status:503};
-   assert.equal(url,'/api/suficiencia?collection=umsa-2026');loads++;return{ok:true,json:async()=>structuredClone({...bank,questions:bank.questions.concat(official)})};
+  showScreen:()=>true,ensureSupabaseSdk:async()=>{},fetch:async (url,options)=>{
+   if(url.endsWith('&vista=catalogo')){loads++;return{ok:true,json:async()=>structuredClone(compact)};}
+   assert.equal(url,'/api/suficiencia?collection=umsa-2026&vista=preguntas');
+   assert.equal(options.method,'POST');packs++;
+   const {ids}=JSON.parse(options.body);
+   return{ok:true,json:async()=>({version:bank.version,questions:ids.map(id=>rows.find(q=>q.id===id)),passages:[]})};
   }};
  context.window={SufficiencyCore:C,CampusAccess:{isFree:()=>false},addEventListener(){}};
  context.getSupabase=()=>({auth:{getSession:async()=>({data:{session:{user:context.currentUser,access_token:'fixture'}}}),onAuthStateChange:()=>{}}});
@@ -132,7 +138,7 @@ test('bank-style selector requires subject and topic, filters difficulty and ret
  assert.match(root.innerHTML,/data-level="todos"[^>]*aria-pressed="true"/);
  const change=(id,value)=>handlers.change({target:{id,value}});
  const click=(sf,extra={})=>handlers.click({target:{closest:()=>({disabled:false,dataset:{sf,...extra}})}});
- await click('run',{area:'config'});assert.equal(storage.size,0);
+ await click('run',{area:'config'});assert.equal(storage.size,0);assert.equal(packs,0);
  change('sf-config-subject','matematicas');
  assert.match(root.innerHTML,/<optgroup label="Textos oficiales UMSA 2026">[^]*Tema 5 · Productos y cocientes notables/);
  change('sf-config-topic','umsa-2026:5');assert.match(root.innerHTML,/se mostrarán <strong>5<\/strong> preguntas/);
@@ -140,7 +146,7 @@ test('bank-style selector requires subject and topic, filters difficulty and ret
  assert.match(root.innerHTML,/no hay preguntas con esta combinación/);
  change('sf-config-subject','quimica');assert.match(root.innerHTML,/seleccionar tema/);assert.match(root.innerHTML,/data-area="config"[^>]*disabled/);
  change('sf-config-topic','reacciones');assert.match(root.innerHTML,/data-level="dificil"[^>]*aria-pressed="true"/);assert.equal(loads,1);
- await click('run',{area:'config'});
+ await click('run',{area:'config'});assert.equal(packs,1);
  const saved=JSON.parse(storage.get('alcocermed:suficiencia:v1:levels-fixture'));
  assert.equal(saved.configuration.subject,'quimica');assert.equal(saved.configuration.topic,'reacciones');assert.equal(saved.configuration.level,'dificil');
  assert.ok(saved.ids.every(id=>{const q=bank.questions.find(q=>q.id===id);return q.subject==='quimica'&&q.difficulty==='dificil'&&C.topicFor(q,bank).key==='reacciones';}));

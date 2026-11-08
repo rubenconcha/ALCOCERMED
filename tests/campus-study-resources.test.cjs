@@ -58,6 +58,7 @@ test('the three verified UMSS books open their PDF and request a temporary downl
             append(...children) { this.children.push(...children); },
             replaceChildren(...children) { this.children = children; },
             setAttribute(name, value) { this[name] = value; },
+            removeAttribute(name) { delete this[name]; },
             addEventListener(event, handler) { this[event] = handler; },
             showModal() { this.open = true; },
             close() { this.open = false; },
@@ -78,14 +79,19 @@ test('the three verified UMSS books open their PDF and request a temporary downl
     const loaded = [];
     const window = {};
     vm.runInNewContext(read('official-texts.js'), {
-        document, window,
+        document, window, AbortController, URL, clearTimeout,
         getSupabase: () => ({ auth: { getSession: async () => ({ data: { session: { access_token: 'test' } } }) } }),
         fetch: async (url, options) => {
-            assert.equal(options.method, 'POST');
             assert.equal(options.headers.Authorization, 'Bearer test');
+            if (url.endsWith('&vista=portada')) {
+                assert.equal(options.headers['X-Official-Reader'], 'fixture');
+                return new Response('portada');
+            }
+            assert.equal(options.method, 'POST');
             return Response.json({ grant: 'fixture' });
         },
         SummaryPdfReader: class {
+            destroy() {}
             constructor(host, options) {
                 assert.equal(host, get('pages'));
                 assert.equal(options.label, 'texto oficial');
@@ -93,8 +99,9 @@ test('the three verified UMSS books open their PDF and request a temporary downl
             }
             async open(url, options) {
                 assert.equal(options.headers.Authorization, 'Bearer test');
+                assert.equal(options.headers['X-Official-Reader'], 'fixture');
                 assert.equal(options.rangeOnly, true);
-                assert.equal(options.initialPage, url.endsWith('biologia-celular') ? 9 : undefined);
+                assert.equal(options.initialPage, url.includes('biologia-celular') ? 9 : undefined);
                 loaded.push(url);
             }
         },
@@ -109,13 +116,13 @@ test('the three verified UMSS books open their PDF and request a temporary downl
         const url = '/api/texto-oficial?materia=' + ['morfofuncion', 'biologia-celular', 'educacion-salud'][index];
         await open.onclick();
         await save.onclick();
-        assert.equal(loaded[index], url);
+        assert.equal(loaded[index], url + '&vista=lector');
         assert.equal(downloads[index], url + '&descarga=fixture');
         assert.equal(get('reader-title').textContent, card.children[2].textContent);
         assert.equal(get('status').hidden, true);
     }
     await get('download').onclick();
-    assert.equal(downloads.at(-1), loaded.at(-1) + '&descarga=fixture');
+    assert.equal(downloads.at(-1), loaded.at(-1).replace('&vista=lector', '&descarga=fixture'));
     assert.equal(new Set(loaded).size, 3);
 });
 
@@ -138,7 +145,7 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
             return upstream();
         },
     });
-    async function request(subject, { method = 'GET', authorization, grant } = {}) {
+    async function request(subject, { method = 'GET', authorization, grant, view, reader } = {}) {
         const res = new PassThrough();
         const chunks = [];
         const headers = {};
@@ -146,8 +153,8 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
         res.setHeader = (name, value) => { headers[name] = value; };
         await module.exports({
             method,
-            query: { materia: subject, descarga: grant },
-            headers: { range: 'bytes=0-4', authorization, cookie: 'session=test' },
+            query: { materia: subject, descarga: grant, vista: view },
+            headers: { range: 'bytes=0-4', authorization, 'x-official-reader': reader, cookie: 'session=test' },
         }, res);
         return { status: res.statusCode, headers, body: Buffer.concat(chunks).toString() };
     }
@@ -185,6 +192,19 @@ test('the PDF relay checks campus access, streams private PDFs and grants one sh
     const old = Math.floor(Date.now() / 1000) - 1;
     const proof = createHmac('sha256', secret).update('texto-oficial:morfofuncion:' + old).digest('base64url');
     assert.equal((await request('morfofuncion', { grant: old + '.' + proof })).status, 401);
+    const readerPass = await request('morfofuncion', { method: 'POST', authorization, view: 'lector' });
+    const reader = JSON.parse(readerPass.body).grant;
+    assert.equal((await request('biologia-celular', { view: 'lector', reader })).status, 401);
+    assert.equal((await request('morfofuncion', { view: 'lector', grant, reader: grant })).status, 401);
+    assert.equal((await request('morfofuncion', { reader, grant: reader })).status, 401);
+    const before = calls.length;
+    assert.equal((await request('morfofuncion', { view: 'lector', reader })).status, 206);
+    assert.match(calls.at(-1)[0].pathname, /\/lector\/morfofuncion\.pdf$/);
+    upstream = () => new Response('webp', { headers: { 'Content-Type': 'image/webp' } });
+    const cover = await request('morfofuncion', { view: 'portada', reader });
+    assert.equal(cover.status, 200);
+    assert.equal(cover.headers['Content-Type'], 'image/webp');
+    assert.equal(calls.length, before + 2);
     upstream = () => new Response('<h1>Denied</h1>', { headers: { 'Content-Type': 'text/html' } });
     const rejected = await request('morfofuncion', { authorization });
     assert.equal(rejected.status, 502);

@@ -20,10 +20,13 @@ function shuffleArray(arr) {
 
 let _supabase = null;
 let _supabaseSdkPromise = null;
+const scriptRequests = new Map();
 
 function loadScriptOnce(src) {
-    return new Promise(function(resolve, reject) {
-        const existing = Array.from(document.scripts).find(function(script) { return script.src === src; });
+    const url = new URL(src, document.baseURI).href;
+    if (scriptRequests.has(url)) return scriptRequests.get(url);
+    const request = new Promise(function(resolve, reject) {
+        const existing = Array.from(document.scripts).find(function(script) { return script.src === url; });
         if (existing && existing.dataset.loaded === '1') {
             resolve();
             return;
@@ -34,8 +37,9 @@ function loadScriptOnce(src) {
         const timer = setTimeout(function() {
             if (done) return;
             done = true;
+            if (!existing) script.remove();
             reject(new Error('timeout cargando ' + src));
-        }, 8000);
+        }, existing ? 8000 : 25000);
 
         script.onload = function() {
             if (done) return;
@@ -48,16 +52,27 @@ function loadScriptOnce(src) {
             if (done) return;
             done = true;
             clearTimeout(timer);
+            if (!existing) script.remove();
             reject(new Error('no se pudo cargar ' + src));
         };
 
         if (!existing) {
-            script.src = src;
+            script.src = url;
             script.async = true;
             document.head.appendChild(script);
         }
-    });
+    }).catch(error => { scriptRequests.delete(url); throw error; });
+    scriptRequests.set(url, request);
+    return request;
 }
+
+window.loadMindmapCatalog = () => window.MINDMAP_PREMIUM_CATALOG
+    ? Promise.resolve() : loadScriptOnce('/mindmap-premium-catalog.js?v=20261021-visual5b');
+window.loadMindmapContent = () => Promise.all([
+    window.MINDMAP_BRANCH_LABELS || loadScriptOnce('/mindmap-branch-labels.js?v=20261021-visual5b'),
+    window.MINDMAP_CONTENT || loadScriptOnce('/mindmap-content.js?v=3'),
+    window.MINDMAP_DETAILED_CONTENT || loadScriptOnce('/mindmap-detailed-content.js?v=20261021-visual5b'),
+]);
 
 async function ensureSupabaseSdk() {
     if (window.supabase && window.supabase.createClient) return window.supabase;
@@ -164,6 +179,8 @@ function showLoginScreen() {
     window.CampusCalendar?.setUser();
     window.CampusShell?.setUser();
     window.CampusPastExams?.clear();
+    window.Sufficiency?.clear?.();
+    bancoQuestionsRequest = null;
     closeMobileSidebar();
     window.CampusShell?.syncMenu();
     clearBancoSuficiencia();
@@ -254,9 +271,9 @@ function enterVerifiedApp(user) {
     restoreSidebarState();
     updateHomeStats();
     updateDailyGoalUI();
-    setTimeout(testConnection, 800);
-    setTimeout(preloadAppData, 1200);
-    setTimeout(sincronizarPerfilEnNube, 2000);
+    setTimeout(() => {
+        if (verifiedCampusUserId === user.id) sincronizarPerfilEnNube();
+    }, 2500);
 
     const campusParams = new URLSearchParams(window.location.search);
     const section = campusParams.get('seccion');
@@ -1732,9 +1749,12 @@ function initPwaInstall() {
     }
 
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js').catch(function (error) {
+        const register = () => navigator.serviceWorker.register('./sw.js').catch(function (error) {
             console.warn('[PWA] no se pudo registrar el service worker:', error);
         });
+        const afterLoad = () => setTimeout(register, 3500);
+        if (document.readyState === 'complete') afterLoad();
+        else window.addEventListener('load', afterLoad, { once: true });
     }
 }
 
@@ -1749,35 +1769,6 @@ window.addEventListener('appinstalled', function () {
     setPwaInstallButtonsHidden(true);
     showToast('app instalada correctamente', 'success');
 });
-
-// ──────────────────────────────────────────────
-// PRUEBA DE CONEXIÓN A SUPABASE
-// ──────────────────────────────────────────────
-async function testConnection() {
-    try {
-        const client = getSupabase();
-        // Consulta mínima para verificar conexión
-        const { error } = await client
-            .from('banco_preguntas')
-            .select('MATERIA', { count: 'exact', head: true });
-        if (error) throw error;
-        // Conectado — no mostrar toast de éxito (menos ruido)
-        console.log('[DB] conexión verificada OK');
-    } catch (e) {
-        // Si falla con MATERIA mayúscula, intentar con materia minúscula
-        try {
-            const client = getSupabase();
-            const { error } = await client
-                .from('banco_preguntas')
-                .select('materia', { count: 'exact', head: true });
-            if (error) throw error;
-            console.log('[DB] conexión verificada OK (fallback)');
-        } catch (e2) {
-            console.warn('Aviso de conexión:', e2.message);
-            showToast('⚠ verifica tu conexión a internet', 'error');
-        }
-    }
-}
 
 // ──────────────────────────────────────────────
 // PROTECCIÓN ANTI-COPIA EN CARDS
@@ -1823,18 +1814,17 @@ document.addEventListener('copy', function (e) {
 
 
 // ──────────────────────────────────────────────
-// PRECARGA DE DATOS (mejora velocidad de apertura)
-// Carga banco_preguntas en background al iniciar la app
-// así cuando el usuario abre banco/simulacro ya está en caché
+// BANCO DEL CURSO · CARGA BAJO DEMANDA
 // ──────────────────────────────────────────────
-let bancoQuestionsPromise = null;
+let bancoQuestionsRequest = null;
 
 // Supabase entrega como máximo 1.000 filas por petición. Cargar por páginas
 // evita que desaparezcan materias o temas al crecer la bibliografía.
 async function fetchAllBancoQuestions() {
     if (bancoState._cache && bancoState._cache.length) return bancoState._cache;
-    if (bancoQuestionsPromise) return bancoQuestionsPromise;
-    bancoQuestionsPromise = (async function () {
+    const owner = currentUser?.id;
+    if (bancoQuestionsRequest && bancoQuestionsRequest.owner === owner) return bancoQuestionsRequest.promise;
+    const request = { owner, promise: (async function () {
         const client = getSupabase();
         const rows = [];
         const pageSize = 500;
@@ -1847,27 +1837,19 @@ async function fetchAllBancoQuestions() {
             if (!data || data.length < pageSize) break;
         }
         const completeRows = typeof StudyDepth !== 'undefined' ? await StudyDepth.merge(rows, 'bank') : rows;
+        if (bancoQuestionsRequest !== request || currentUser?.id !== owner) return [];
         bancoState._cache = completeRows;
         simState._cache = completeRows;
         return completeRows;
-    })();
+    })() };
+    bancoQuestionsRequest = request;
     try {
-        return await bancoQuestionsPromise;
+        return await request.promise;
     } finally {
-        bancoQuestionsPromise = null;
+        if (bancoQuestionsRequest === request) bancoQuestionsRequest = null;
     }
 }
 
-async function preloadAppData() {
-    if (CampusAccess.isFree()) return;
-    if (bancoState._cache && bancoState._cache.length > 0) return; // ya cargado
-    try {
-        await fetchAllBancoQuestions();
-        console.log('[Preload] banco_preguntas cargado:', bancoState._cache.length, 'preguntas');
-    } catch (e) {
-        console.warn('[Preload] error:', e.message);
-    }
-}
 // ══════════════════════════════════════════════════════
 // ██  BANCO DE PREGUNTAS  ██
 // ══════════════════════════════════════════════════════
@@ -1911,6 +1893,14 @@ window.addEventListener('campus-access-change', function () {
 
 async function fetchBancoSuficiencia(owner) {
     const core = window.SufficiencyCore;
+    if (window.Sufficiency?.readIndex) {
+        const bank = await window.Sufficiency.readIndex();
+        return bank.questions.filter(q => Object.hasOwn(core.subjects, q.subject)).map(q => ({
+            ...core.toQuestionIndexRow(q, bank),
+            sufficiencyId: q.id,
+            passage: q.passageId ? { id: q.passageId } : undefined,
+        }));
+    }
     const { data, error } = await getSupabase().auth.getSession();
     const session = data?.session;
     if (!core || error || !owner || session?.user?.id !== owner || !session.access_token ||
@@ -1949,9 +1939,6 @@ window.openBanco = async function () {
     bancoState.answers = [];
     bancoState.currentIdx = 0;
     bancoState.finalized = false;
-    // No limpiar caché si ya hay datos precargados (acelera apertura)
-    // bancoState._cache = []; // desactivado: se mantiene caché entre aperturas
-
     // Reset UI selector
     document.getElementById('banco-materia-text').textContent = 'seleccionar materia';
     document.getElementById('banco-materia-btn').classList.remove('open');
@@ -2337,11 +2324,32 @@ document.addEventListener('click', function (e) {
 // ──────────────────────────────────────────────
 // INICIAR BANCO
 // ──────────────────────────────────────────────
-window.startBanco = function () {
+window.startBanco = async function () {
     if (!bancoState.allPreguntas.length) return;
 
     const rows = bancoState.allPreguntas;
-    bancoState.preguntas = sampleBancoQuestions(rows);
+    let chosen = sampleBancoQuestions(rows);
+    const ids = chosen.filter(q => q.sufficiencyId).map(q => q.sufficiencyId);
+    if (ids.length) {
+        const request = bancoMateriaRequest;
+        const start = document.getElementById('banco-start-btn');
+        if (start.disabled) return;
+        start.disabled = true;
+        start.setAttribute('aria-busy', 'true');
+        try {
+            const pack = await window.Sufficiency.readQuestions(ids);
+            if (request !== bancoMateriaRequest || currentCampusScreen !== 'banco-screen' || bancoState.allPreguntas !== rows) return;
+            const hydrated = new Map(pack.questions.map(q => [q.id, window.SufficiencyCore.toQuestionRow(q, pack)]));
+            chosen = chosen.map(q => hydrated.get(q.sufficiencyId) || q);
+        } catch (_) {
+            if (request === bancoMateriaRequest && currentCampusScreen === 'banco-screen') showToast('No pudimos abrir estas preguntas. Intenta de nuevo.', 'error');
+            return;
+        } finally {
+            start.removeAttribute('aria-busy');
+            if (request === bancoMateriaRequest && bancoState.allPreguntas === rows) start.disabled = false;
+        }
+    }
+    bancoState.preguntas = chosen;
     bancoState.currentIdx = 0;
     bancoState.finalized = false;
 
@@ -4115,6 +4123,7 @@ window.switchIntocTab = function (tab) {
 async function loadMapasMentales() {
     setMmState('loading');
     try {
+        await window.loadMindmapCatalog();
         var localMapas = [
             { titulo: 'Temas principales de anatomía y fisiología', materia: 'Morfofunción', url_imagen: 'mapas mentales/morfo_01_anatomia_y_fisiologia.webp', descripcion: 'Anatomía, fisiología, organización del cuerpo y homeostasis. Basado en el capítulo 1 de Saladin.', acceso_gratis: true, fecha: new Date().toISOString() },
             { titulo: 'La química de la vida', materia: 'Morfofunción', url_imagen: 'mapas mentales/morfo_02_quimica_de_la_vida.webp', descripcion: 'Átomos, agua, metabolismo, biomoléculas y ATP. Basado en el capítulo 2 de Saladin.', acceso_gratis: true, fecha: new Date().toISOString() },

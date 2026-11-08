@@ -123,7 +123,7 @@ test('la cuenta gratuita ve tres exámenes abiertos de la última gestión y doc
         CampusAccess: { isFree: () => free, unlock: () => { planVisits++; } },
         currentUser: { id: 'student' }, simState: { timerInterval: null },
         sessionStorage: { getItem: () => null }, showScreen() {},
-        URL: { revokeObjectURL() {} }
+        URL: { revokeObjectURL() {} }, AbortSignal
     };
     vm.runInNewContext(fs.readFileSync('past-exams.js', 'utf8'), context);
     await context.window.openPastExams();

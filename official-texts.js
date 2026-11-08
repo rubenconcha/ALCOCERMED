@@ -22,10 +22,12 @@
     const dialog = $('official-texts-reader');
     const status = $('official-texts-status');
     const fallback = $('official-texts-fallback');
+    const preview = $('official-texts-preview');
+    const pages = $('official-texts-pages');
     const downloadButton = $('official-texts-download');
     const readerDownloadStatus = $('official-texts-reader-download-status');
     const resourceUrl = text => '/api/texto-oficial?materia=' + text.slug;
-    let reader, current, revision = 0;
+    let reader, current, loaded, releaseTimer, revision = 0, opening, previewUrl;
 
     async function authorization() {
         const { data } = await getSupabase().auth.getSession();
@@ -33,21 +35,66 @@
         return { Authorization: 'Bearer ' + data.session.access_token };
     }
 
+    function clearPreview() {
+        preview.hidden = true;
+        preview.removeAttribute('src');
+        if (previewUrl) URL.revokeObjectURL(previewUrl);
+        previewUrl = null;
+    }
+
+    function discardReader() {
+        clearTimeout(releaseTimer);
+        loaded = null;
+        reader?.destroy();
+    }
+
+    async function showPreview(text, headers, signal) {
+        const response = await fetch(resourceUrl(text) + '&vista=portada', { headers, signal });
+        if (!response.ok) return;
+        const blob = await response.blob();
+        if (signal.aborted) return;
+        previewUrl = URL.createObjectURL(blob);
+        preview.alt = 'Portada de ' + text.title;
+        preview.src = previewUrl;
+        preview.hidden = false;
+    }
+
     async function read(text) {
         const version = ++revision;
+        opening?.abort();
+        clearPreview();
+        clearTimeout(releaseTimer);
         current = text;
         $('official-texts-reader-title').textContent = text.title;
         readerDownloadStatus.hidden = true;
-        status.textContent = 'Cargando PDF…';
-        status.hidden = false;
         fallback.hidden = true;
         if (!dialog.open) dialog.showModal();
+        if (loaded === text) return;
+        discardReader();
+        const controller = opening = new AbortController();
+        const { signal } = controller;
+        status.textContent = 'Cargando PDF…';
+        status.hidden = false;
+        pages.inert = true;
         try {
             const headers = await authorization();
             if (version !== revision || !dialog.open) return;
-            reader ||= new SummaryPdfReader($('official-texts-pages'), { label: 'texto oficial', pageJump: true });
-            await reader.open(resourceUrl(text), { headers, rangeOnly: true, initialPage: text.coverPage });
-            if (version === revision && dialog.open) status.hidden = true;
+            const url = resourceUrl(text) + '&vista=lector';
+            const response = await fetch(url, { method: 'POST', headers, signal });
+            if (!response.ok) throw new Error('Lector no disponible');
+            const { grant } = await response.json();
+            if (signal.aborted) return;
+            if (typeof grant !== 'string') throw new Error('Lector no disponible');
+            headers['X-Official-Reader'] = grant;
+            showPreview(text, headers, signal).catch(() => { /* The PDF stays usable without a preview. */ });
+            reader ||= new SummaryPdfReader(pages, { label: 'texto oficial', pageJump: true });
+            await reader.open(url, { headers, rangeOnly: true, initialPage: text.coverPage });
+            if (version !== revision || !dialog.open) return;
+            controller.abort();
+            clearPreview();
+            loaded = text;
+            pages.inert = false;
+            status.hidden = true;
         } catch (_) {
             if (version !== revision || !dialog.open) return;
             reader?.destroy();
@@ -124,10 +171,21 @@
         if (dialog.open) return;
         ++revision;
         current = null;
-        reader?.destroy();
+        opening?.abort();
+        clearPreview();
+        if (loaded) releaseTimer = setTimeout(discardReader, 120000);
+        else discardReader();
     });
     window.OfficialTexts = {
-        open: () => showScreen('official-texts-screen'),
-        close: () => { if (dialog.open) dialog.close(); },
+        open() {
+            if (showScreen('official-texts-screen') === false) return;
+            if (!navigator.connection?.saveData) SummaryPdfReader.preload().catch(() => {});
+        },
+        close() {
+            ++revision;
+            opening?.abort();
+            discardReader();
+            if (dialog.open) dialog.close();
+        },
     };
 })();

@@ -144,12 +144,28 @@
  window.openMmLightbox=async function(map){
   if(window.MindmapPractice)MindmapPractice.reset();
   if(window.CampusAccess&&CampusAccess.isFree()&&!field(map,'acceso_gratis'))return openMmUnlockDialog(map);if(!$('mm-lightbox'))return;
-  if(field(map,'premium')){var loadingRevision=++token;wire();illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');$('mm-visual-toggle').hidden=true;release();activeMap=map;$('mm-lightbox').classList.remove('hidden');previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';$('mm-tree').replaceChildren();$('mm-lb-title').textContent=field(map,'titulo');$('mm-lb-materia').textContent=field(map,'tema');$('mm-lb-status').textContent=field(map,'curated')?'Cargando lámina…':'Cargando mapa…';$('mm-lb-download').disabled=true;try{await MindmapPremium.load(map);}catch(error){if(loadingRevision===token){$('mm-lb-status').textContent=error.message;if(error.status===403){closeMmLightbox();if(CampusAccess.isFree())openMmUnlockDialog(map);else CampusAccess.unlock();}}return;}if(loadingRevision!==token)return;window.CampusTracking?.record(map.section==='intocables'?'intocables':'mapas','opened',field(map,'materia'),field(map,'tema'),String(field(map,'id')||field(map,'titulo')));$('mm-lightbox').classList.add('hidden');document.body.style.overflow=previousOverflow;activeMap=null;}
-  wire();illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');$('mm-visual-toggle').hidden=true;release();activeMap=map;selectedBranch=0;showAllMobile=false;branchOpen=labelsFor(map).map(function(_,i){return detailsFor(map)?startsWithContent(map)&&i===0:i===0;});var current=++token;previousFocus=document.activeElement;previousOverflow=document.body.style.overflow;
-  $('mm-lb-title').textContent=field(map,'titulo')||'Mapa mental';$('mm-lb-materia').textContent=field(map,'materia')||'';$('mm-lightbox').classList.remove('hidden');document.body.style.overflow='hidden';$('mm-lb-download').disabled=true;$('mm-lb-status').textContent='';
+  var loadingRevision=++token;
+  if(!activeMap){previousFocus=document.activeElement;previousOverflow=document.body.style.overflow;}
+  wire();release();activeMap=map;illustratedView=false;
+  $('mm-lightbox').classList.remove('hidden','mm-show-illustrated');$('mm-visual-toggle').hidden=true;
+  document.body.style.overflow='hidden';branchOpen=[];
+  $('mm-tree').replaceChildren();$('mm-branch-shortcuts').replaceChildren();$('mm-lb-title').textContent=field(map,'titulo')||'Mapa mental';
+  $('mm-lb-materia').textContent=field(map,'tema')||field(map,'materia')||'';
+  $('mm-lb-status').textContent=field(map,'curated')?'Cargando lámina…':'Cargando mapa…';$('mm-lb-download').disabled=true;
+  $('mm-lightbox').querySelector('.mm-lb-close').focus();
+  try{
+   await window.loadMindmapContent?.();
+   if(loadingRevision!==token)return;
+   if(field(map,'premium'))await MindmapPremium.load(map);
+  }catch(error){
+   if(loadingRevision===token){$('mm-lb-status').textContent=error.message;if(error.status===403){closeMmLightbox();if(CampusAccess.isFree())openMmUnlockDialog(map);else CampusAccess.unlock();}}
+   return;
+  }
+  if(loadingRevision!==token)return;
+  selectedBranch=0;showAllMobile=false;branchOpen=labelsFor(map).map(function(_,i){return detailsFor(map)?startsWithContent(map)&&i===0:i===0;});var current=loadingRevision;
+  $('mm-lb-materia').textContent=field(map,'materia')||'';$('mm-lb-status').textContent='';
   $('mm-lb-download').title=field(map,'curated')?'Descargar lámina ilustrada con logo':'Descargar mapa';
-  illustratedView=false;$('mm-lightbox').classList.remove('mm-show-illustrated');
-  build(map);window.CampusTracking?.record(map.section==='intocables'?'intocables':'mapas','opened',field(map,'materia'),field(map,'tema'),String(field(map,'id')||field(map,'titulo')));if(window.MindmapPractice)MindmapPractice.mount(assetsFor(map).practice);$('mm-visual-toggle').hidden=!assetsFor(map).illustrated;if(assetsFor(map).illustrated)showIllustrated(true);$('mm-lightbox').querySelector('.mm-lb-close').focus();
+  build(map);window.CampusTracking?.record(map.section==='intocables'?'intocables':'mapas','opened',field(map,'materia'),field(map,'tema'),String(field(map,'id')||field(map,'titulo')));if(window.MindmapPractice)MindmapPractice.mount(assetsFor(map).practice);$('mm-visual-toggle').hidden=!assetsFor(map).illustrated;if(assetsFor(map).illustrated)showIllustrated(true);
   if(detailsFor(map)){$('mm-lb-download').disabled=false;return;}
   var source=new Image();sourceImage=source;source.crossOrigin='anonymous';source.onload=function(){if(current!==token)return;try{watermark(source).then(function(url){if(current!==token){URL.revokeObjectURL(url);return;}objectUrl=url;$('mm-lb-download').disabled=false;}).catch(function(){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';});}catch(_){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';}};source.onerror=function(){if(current===token)$('mm-lb-status').textContent='La descarga no está disponible en este momento.';};source.src=field(map,'url_imagen')||field(map,'url_image')||'';
  };
@@ -157,6 +173,7 @@
  var requestedMapOpened=false;
  window.openRequestedMindmap=async function(){
   var requested=new URLSearchParams(location.search).get('mapa');if(requestedMapOpened||!requested)return;
+  await window.loadMindmapCatalog?.();if(requestedMapOpened)return;
   var sheet=(window.MINDMAP_PREMIUM_CATALOG||[]).find(function(m){return m.curated&&m.id===requested;});if(sheet){requestedMapOpened=true;window.openIntocables();await window.IntocablesHub.openSheet(sheet.id);return;}requestedMapOpened=true;await window.openMindMaps();if(requested==='todos'){window.clearMmFilters();return;}var map=mmState.allMapas.find(function(item){var key=fileFor(item);return requested==='encefalo'?key==='morfo_14_encefalo_pares_craneales.png':key.replace(/\.[^.]+$/,'')===requested;});if(!map)return;
   window.selectMmMateria(field(map,'materia'));var topic=mmTopicKey(map),select=$('mm-tema-select');if(select)select.value=topic;window.selectMmTema(topic);window.openMmLightbox(map);
  };

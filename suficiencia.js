@@ -9,7 +9,9 @@
     };
     const openTopicSimulacro = window.openSimulacro;
     const root = document.getElementById('suficiencia-screen');
-    let bank = null, medicalQuestions = null, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'matematicas', level = 'facil', catalogueArea = 'matematicas', catalogueMode = 'config', configSubject = '', configTopic = '', configLevel = 'todos', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
+    let bank = null, hasMedicine = false, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'matematicas', level = 'facil', catalogueArea = 'matematicas', catalogueMode = 'config', configSubject = '', configTopic = '', configLevel = 'todos', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
+    let catalogueRequest = null, viewRevision = 0;
+    const details = new Map(), pendingPacks = new Map();
     const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
     const key = id => 'alcocermed:suficiencia:v1:' + id;
     const user = () => typeof currentUser !== 'undefined' ? currentUser?.id : null;
@@ -24,7 +26,8 @@
     function stopClock() { clearInterval(clock); clock = null; }
     function clear() {
         generation++; stopClock(); if (pendingConfirmation) pendingConfirmation(false);
-        bank = null; medicalQuestions = null; owner = null; attempt = null; questions = []; level = 'facil'; catalogueArea = 'matematicas'; catalogueMode = 'config'; configSubject = ''; configTopic = ''; configLevel = 'todos'; ending = false; starting = false; renderedPassage = null;
+        bank = null; hasMedicine = false; owner = null; attempt = null; questions = []; level = 'facil'; catalogueArea = 'matematicas'; catalogueMode = 'config'; configSubject = ''; configTopic = ''; configLevel = 'todos'; ending = false; starting = false; renderedPassage = null;
+        catalogueRequest = null; details.clear(); pendingPacks.clear();
         root.replaceChildren();
     }
     function ask(message) {
@@ -51,48 +54,86 @@
         catch (_) { const notice = root.querySelector('[data-save-status]'); if (notice) notice.textContent = 'Este navegador no permite guardar el avance. Mantén la página abierta.'; }
     }
     const sourceText = C.referenceText;
-    async function load() {
-        const request = ++generation;
-        const client = getSupabase();
-        const { data, error } = await client.auth.getSession();
-        if (error || !data.session || data.session.user.id !== user()) throw new Error('Vuelve a iniciar sesión para abrir esta sección.');
-        const id = data.session.user.id;
-        const requestCollection = collection => fetch('/api/suficiencia?collection=' + collection, { headers: { Authorization: 'Bearer ' + data.session.access_token }, cache: 'no-store', signal: AbortSignal.timeout(20000) });
-        const medical = (owner===id && medicalQuestions) ? Promise.resolve(medicalQuestions) :
-            requestCollection(C.biomedicalCollection).then(r=>r.ok?r.json():null).then(payload=>
-                payload?.collection===C.biomedicalCollection && payload.questions?.length && payload.questions.every(C.isBiomedical)?payload.questions:null
-            ).catch(()=>null);
-        const response = await requestCollection(C.officialCollection);
+    async function requestResources(view, ids) {
+        const { data, error } = await getSupabase().auth.getSession();
+        const session = data?.session;
+        if (error || !session || session.user.id !== user() || session.user.id !== owner) throw new Error('Vuelve a iniciar sesión para abrir esta sección.');
+        const headers = { Authorization: 'Bearer ' + session.access_token };
+        if (ids) headers['Content-Type'] = 'application/json';
+        const response = await fetch('/api/suficiencia?collection=' + C.officialCollection + '&vista=' + view, {
+            headers, cache: 'no-store', signal: AbortSignal.timeout(20000),
+            ...(ids ? { method: 'POST', body: JSON.stringify({ ids }) } : {}),
+        });
         if (!response.ok) throw new Error(response.status === 403 ? 'Necesitas una suscripción activa para practicar.' : 'No pudimos cargar las preguntas. Intenta de nuevo.');
-        const [content, extra] = await Promise.all([response.json(), medical]);
-        if (request !== generation || user() !== id) return false;
-        if (!C.validate(content)) throw new Error('El banco está en revisión. Intenta de nuevo más tarde.');
-        if (extra) {
-            const combined = {...content, questions:content.questions.concat(extra)};
-            if (C.validate(combined)) { content.questions=combined.questions; medicalQuestions=extra; }
-        }
-        bank = content; owner = id;
-        if (!attempt) {
+        return response.json();
+    }
+    function load() {
+        const id = user();
+        if (!id) return Promise.reject(new Error('Vuelve a iniciar sesión para abrir esta sección.'));
+        if (owner !== id) { clear(); owner = id; }
+        if (bank) return Promise.resolve(true);
+        if (catalogueRequest) return catalogueRequest;
+        const revision = generation;
+        const request = requestResources('catalogo').then(content => {
+            if (revision !== generation || user() !== id) return false;
+            const compact = content?.view === 'catalogo';
+            if (compact ? !Array.isArray(content.questions) || !Array.isArray(content.passages) : !C.validate(content)) {
+                throw new Error('El banco está en revisión. Intenta de nuevo más tarde.');
+            }
+            if (!compact) for (const question of content.questions) details.set(question.id, question);
+            bank = content;
+            hasMedicine = content.questions.some(C.isBiomedical);
             try { attempt = C.restore(JSON.parse(localStorage.getItem(key(id))), bank, id); } catch (_) { attempt = null; }
-            if (attempt) questions = attempt.ids.map(qid => bank.questions.find(q => q.id === qid));
+            if (attempt?.ids.every(qid => details.has(qid))) questions = attempt.ids.map(qid => details.get(qid));
+            return true;
+        }).finally(() => { if (catalogueRequest === request) catalogueRequest = null; });
+        catalogueRequest = request;
+        return request;
+    }
+    async function questionPack(ids) {
+        if (owner !== user() || window.CampusAccess?.isFree()) return [];
+        const needed = ids.filter(id => !details.has(id));
+        if (needed.length) {
+            const revision = generation, requestKey = needed.join(',');
+            if (!pendingPacks.has(requestKey)) {
+                const request = requestResources('preguntas', needed).then(content => {
+                    if (revision !== generation || owner !== user()) return;
+                    if (content.version !== bank.version || !Array.isArray(content.questions) ||
+                        content.questions.length !== needed.length || !content.questions.every((q, i) => q?.id === needed[i] && Array.isArray(q.options)) ||
+                        !Array.isArray(content.passages)) throw new Error('No pudimos abrir estas preguntas. Intenta de nuevo.');
+                    for (const q of content.questions) details.set(q.id, q);
+                    for (const passage of content.passages) {
+                        const index = bank.passages.findIndex(p => p.id === passage.id);
+                        if (index >= 0) bank.passages[index] = passage;
+                    }
+                }).finally(() => { if (pendingPacks.get(requestKey) === request) pendingPacks.delete(requestKey); });
+                pendingPacks.set(requestKey, request);
+            }
+            await pendingPacks.get(requestKey);
+            if (revision !== generation || owner !== user()) return [];
         }
-        return true;
+        return ids.map(id => details.get(id));
     }
     async function open(next = 'matematicas') {
         if (next === 'completos') next = 'integral';
         if (!labels[next] && next !== 'integral' && next !== 'completos') next = 'matematicas';
         if (window.CampusAccess?.isFree()) return typeof openTopicSimulacro === 'function' ? openTopicSimulacro() : window.CampusAccess.unlock();
         if (typeof showScreen === 'function' && showScreen('suficiencia-screen') === false) return;
+        const revision = ++viewRevision;
         area = next; catalogueArea = next; catalogueMode = 'config'; cataloguePage = 0; catalogueQuery = '';
         document.getElementById('nav-simulacro')?.classList.add('nav-item-active');
-        root.innerHTML = header() + '<p role="status" class="sf-notice">Cargando preguntas…</p>';
         try {
-            if (owner !== user()) { clear(); root.innerHTML = header() + '<p role="status">Cargando preguntas…</p>'; }
-            if (!await load()) return;
+            const loading = load();
+            if (!bank) root.innerHTML = header() + '<p role="status" class="sf-notice">Cargando materias…</p>';
+            if (!await loading || revision !== viewRevision) return;
             area = next; catalogueArea = next;
             catalogue();
-            if (attempt && !attempt.finished) startClock();
+            const saved = attempt;
+            if (saved && !saved.finished) questionPack(saved.ids).then(restored => {
+                if (restored.length && attempt === saved && revision === viewRevision) { questions = restored; startClock(); }
+            }).catch(() => { /* Continuing the attempt offers another chance to load its questions. */ });
         } catch (error) {
+            if (revision !== viewRevision) return;
             if (!user()) return clear();
             root.innerHTML = header() + `<div class="sf-notice" role="alert">${esc(error.message)}</div>` + button('reload', 'Volver a intentar');
         }
@@ -119,7 +160,7 @@
     }
     const configuration = () => ({subject:configSubject,topic:configTopic,level:configLevel});
     function subjectOptions() {
-        const option = ([id,label]) => `<option value="${id}" ${configSubject===id?'selected':''} ${Object.hasOwn(C.biomedicalSubjects,id)&&!medicalQuestions?'disabled':''}>${esc(label)}</option>`;
+        const option = ([id,label]) => `<option value="${id}" ${configSubject===id?'selected':''} ${Object.hasOwn(C.biomedicalSubjects,id)&&!hasMedicine?'disabled':''}>${esc(label)}</option>`;
         return '<optgroup label="Materias de Medicina">' + Object.entries(C.biomedicalSubjects).map(option).join('') +
             '</optgroup><optgroup label="Suficiencia académica">' + Object.entries({...C.subjects,integral:'Completo · cuatro materias'}).map(option).join('') + '</optgroup>';
     }
@@ -133,7 +174,9 @@
         return `<section class="banco-config-card sf-bank-config" aria-label="Configurar simulacro"><div class="banco-selects-row"><div class="banco-select-group"><label class="banco-select-label" for="sf-config-subject"><i class="fas fa-book-medical" aria-hidden="true"></i> MATERIA</label><select id="sf-config-subject" class="banco-select-btn sf-bank-select"><option value="">seleccionar materia</option>${subjectOptions()}</select></div><div class="banco-select-group"><label class="banco-select-label" for="sf-config-topic"><i class="fas fa-tag" aria-hidden="true"></i> TEMA</label><select id="sf-config-topic" class="banco-select-btn sf-bank-select" ${configSubject?'':'disabled'}><option value="">${configSubject?'seleccionar tema':'primero selecciona una materia'}</option>${configSubject && configSubject!=='integral'?`<option value="*" ${configTopic==='*'?'selected':''}>Todos los temas</option>`:''}${topicOptions}</select></div></div><div class="banco-dificultad-row"><div class="banco-select-label"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"> NIVEL DE DIFICULTAD</div><div class="banco-dificultad-btns" role="group" aria-label="Nivel de dificultad">${Object.entries(difficulties).map(([id,label])=>`<button type="button" data-sf="config-level" data-level="${id}" class="banco-dif-btn banco-dif-${id==='intermedio'?'medio':id} ${configLevel===id?(id==='todos'?'banco-dif-active':'active-selected'):''}" aria-pressed="${configLevel===id}"><i class="fas fa-${icons[id]}" aria-hidden="true"></i> ${label}</button>`).join('')}</div></div><div class="banco-config-summary" role="status" aria-live="polite"><div class="banco-summary-item"><i class="fas fa-question-circle" aria-hidden="true"></i><span>${!configSubject||!configTopic?'se mostrarán hasta <strong>—</strong> preguntas en orden aleatorio':count?'se mostrarán <strong>'+count+'</strong> preguntas en orden aleatorio':'no hay preguntas con esta combinación; elige otro tema o nivel'}</span></div></div><button type="button" data-sf="run" data-area="config" class="btn-primary banco-start-btn sf-bank-start" ${count?'':'disabled'}><i class="fas fa-play" aria-hidden="true"></i> Iniciar simulacro</button></section>`;
     }
     function progressPanel() {
-        const score=attempt?.finished?C.grade(questions,attempt.answers):null;
+        const snapshot = attempt?.result_snapshot;
+        const savedScore = snapshot && snapshot.owner === owner && ['correct', 'total', 'percent'].every(key => Number.isInteger(snapshot[key])) ? snapshot : null;
+        const score = attempt?.finished ? (questions.length ? C.grade(questions, attempt.answers) : savedScore) : null;
         return `<section class="banco-dificiles-panel sf-bank-progress" aria-label="Tu seguimiento"><div class="banco-dificiles-header"><div class="banco-dificiles-title-row"><div class="banco-dificiles-icon"><i class="fas fa-brain" aria-hidden="true"></i></div><div><h2 class="banco-dificiles-title">tu seguimiento personalizado</h2><p class="banco-dificiles-subtitle">tu última práctica y las respuestas que puedes repasar</p></div></div></div><div class="banco-dificiles-state">${attempt?`<strong>${attempt.finished?'Tu último resultado':'Continúa donde te quedaste'}</strong><p>${esc(title(attempt.area))}</p><p>${score?score.correct+' de '+score.total+' correctas · '+score.percent+'%':Object.keys(attempt.answers).length+' de '+attempt.ids.length+' respondidas'}</p>${button('resume',attempt.finished?'Ver resultado y explicaciones':'Continuar simulacro')}`:`<i class="fas fa-bullseye" aria-hidden="true"></i><strong>¡Tu seguimiento empieza aquí!</strong><p>Responde un simulacro y aquí podrás consultar tu resultado<br>y revisar las explicaciones de lo que te costó.</p>`}</div></section>`;
     }
     function renderCatalogueCards() {
@@ -156,7 +199,7 @@
             root.classList.add?.('sf-bank-layout');
             const count = bank.questions.filter(C.isOfficial).length;
             const guides = count ? `<details class="sf-sources"><summary>Textos oficiales UMSA 2026</summary><p>${count} ejercicios de AlcocerMed basados en las guías de Medicina UMSA. Elige una materia y busca el grupo «Textos oficiales UMSA 2026» en el selector de temas. Cada resolución indica la sección y las páginas de referencia.</p><ul>${Object.entries(officialGuides).map(([s,url])=>`<li><a href="${url}" target="_blank" rel="noopener noreferrer">Abrir guía de ${labels[s]}</a></li>`).join('')}</ul></details>` : '';
-            const medicine = medicalQuestions ? `<details class="sf-sources"><summary>Bibliografía de las materias de Medicina</summary><ul><li>Kenneth S. Saladin, <i>Anatomía y fisiología: la unidad entre forma y función</i>, 6.ª edición.</li><li>Alfonso Calvo González, <i>Biología celular biomédica</i>, Elsevier, 2015.</li><li>UMSS, <i>Educación en Salud e Investigación</i>, Curso Básico 2025–2026.</li></ul><p>Cada explicación indica la sección y las páginas de referencia.</p></details>` : `<div class="sf-notice" role="status">No pudimos cargar las materias de Medicina. ${button('reload','Volver a cargar')}</div>`;
+            const medicine = hasMedicine ? `<details class="sf-sources"><summary>Bibliografía de las materias de Medicina</summary><ul><li>Kenneth S. Saladin, <i>Anatomía y fisiología: la unidad entre forma y función</i>, 6.ª edición.</li><li>Alfonso Calvo González, <i>Biología celular biomédica</i>, Elsevier, 2015.</li><li>UMSS, <i>Educación en Salud e Investigación</i>, Curso Básico 2025–2026.</li></ul><p>Cada explicación indica la sección y las páginas de referencia.</p></details>` : `<div class="sf-notice" role="status">No pudimos cargar las materias de Medicina. ${button('reload','Volver a cargar')}</div>`;
             root.innerHTML=header()+configurationControls()+medicine+guides+progressPanel()+`<div class="sf-bank-links">${button('legacy','Ver simulacros anteriores')}${typeof openTopicSimulacro==='function'?button('topics','Simulacros completos y semanales'):''}</div><details class="sf-sources"><summary>Sobre el material</summary><p>${bank.questions.length} preguntas con explicación. Las referencias aparecen al revisar las respuestas.</p></details>`;
         } else {
             root.classList.remove?.('sf-bank-layout');
@@ -170,24 +213,30 @@
         const target = selectedArea || area;
         const configured = target === 'config' ? { ...(selectedArea ? configuration() : attempt?.configuration || configuration()) } : null;
         if (configured && !C.configurationCount(bank, configured)) return;
+        const revision = generation, view = viewRevision;
         starting = true;
         if (attempt && !attempt.finished && !await ask('Hay una práctica en curso. ¿Quieres reemplazarla por una nueva?')) { starting = false; return; }
         const startButton = root.querySelector('[data-sf="start"]'); if (startButton) startButton.disabled = true;
         try {
-            if (!await load()) return;
-            area = target;
+            if (!await load() || view !== viewRevision) return;
+            const seed = crypto.getRandomValues(new Uint32Array(1))[0];
+            const selection = configured ? C.selectConfiguredRows(bank, configured, seed) : C.selectRows(bank, target, seed);
+            if (!selection.length) throw new Error('No hay preguntas disponibles para esta selección.');
+            const prepared = await questionPack(selection.map(q => q.id));
+            if (!prepared.length || view !== viewRevision || revision !== generation) return;
+            questions = prepared; area = target;
             const chosen = C.paper(bank, area);
             if (chosen) { catalogueArea = chosen.subject; if (chosen.difficulty) level = chosen.difficulty; }
-            const seed = crypto.getRandomValues(new Uint32Array(1))[0];
-            questions = configured ? C.selectConfiguration(bank, configured, seed) : C.select(bank, area, seed);
-            if (!questions.length) throw new Error('No hay preguntas disponibles para esta selección.');
             const minutes = configured ? Math.ceil(questions.length * ({facil:2,intermedio:2.5,dificil:3,todos:2.5}[configured.level])) : C.paper(bank, area)?.minutes || (area === 'integral' ? 60 : Math.ceil(questions.length * 1.5));
             attempt = { owner, version: bank.version, area, seed, ...(configured ? {configuration: configured} : {}), ids: questions.map(q => q.id), answers: {}, flags: [], index: 0, deadline: Date.now() + minutes * 60000, startedAt: Date.now(), finished: false };
             renderedPassage = null; save(); renderQuestion(); root.scrollIntoView({ block: 'start', behavior: 'instant' }); startClock();
         } catch (e) {
-            const notice = document.createElement('p'); notice.className = 'sf-notice'; notice.setAttribute('role', 'alert'); notice.textContent = e.message; root.prepend(notice);
+            if (view === viewRevision && revision === generation) showLoadError(e);
             if (startButton) startButton.disabled = false;
-        } finally { starting = false; }
+        } finally { if (revision === generation) starting = false; }
+    }
+    function showLoadError(error) {
+        const notice = document.createElement('p'); notice.className = 'sf-notice'; notice.setAttribute('role', 'alert'); notice.textContent = error.message; root.prepend(notice);
     }
     function passage(q) {
         const p = bank.passages.find(p => p.id === q.passageId);
@@ -213,14 +262,14 @@
         else if (focus) root.querySelector('#sf-question-title')?.focus();
     }
     function tick() {
-        if (!attempt || attempt.finished) return stopClock();
+        if (!attempt || attempt.finished || !questions.length) return stopClock();
         if (owner !== user() || window.CampusAccess?.isFree()) { clear(); return; }
         const seconds = Math.max(0, Math.ceil((attempt.deadline - Date.now()) / 1000));
         const el = root.querySelector('#sf-timer');
         if (el) { el.textContent = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`; el.classList.toggle('sf-time-low', seconds <= 300); }
         if (!seconds) finish(true);
     }
-    function startClock() { stopClock(); tick(); if (attempt && !attempt.finished) clock = setInterval(tick, 1000); }
+    function startClock() { stopClock(); tick(); if (attempt && !attempt.finished && questions.length) clock = setInterval(tick, 1000); }
     async function finish(timed = false) {
         if (!attempt || attempt.finished) return;
         if (ending && !timed) return;
@@ -241,8 +290,17 @@
         }).join('') || '<p class="sf-notice">¡Todas tus respuestas fueron correctas!</p>'}</div><p class="sf-disclaimer">Resultado de práctica, sin penalización por error. Claves razonadas; no es una calificación oficial de admisión. Guardado solo para tu cuenta en este navegador.</p>`;
         root.scrollIntoView({ block: 'start', behavior: 'instant' });
     }
-    function resume() {
+    async function resume() {
         if (!attempt) return;
+        const saved = attempt, view = viewRevision;
+        try {
+            const prepared = await questionPack(saved.ids);
+            if (!prepared.length || attempt !== saved || view !== viewRevision) return;
+            questions = prepared;
+        } catch (error) {
+            if (attempt === saved && view === viewRevision) showLoadError(error);
+            return;
+        }
         area = attempt.area;
         if (attempt.configuration) { configSubject = attempt.configuration.subject; configTopic = attempt.configuration.topic; configLevel = attempt.configuration.level; }
         const selected = C.paper(bank, area);
@@ -296,7 +354,7 @@
         if (action === 'run') { target.disabled = true; return start(target.dataset.area).finally(() => { target.disabled = false; }); }
         if (action === 'start') return start();
         if (action === 'passage') return start('texto:' + target.dataset.passage);
-        if (action === 'resume') return resume();
+        if (action === 'resume') { target.disabled = true; return resume().finally(() => { target.disabled = false; }); }
         if (action === 'catalogue') { area = catalogueArea; catalogueMode = 'config'; catalogue(); if (attempt && !attempt.finished) startClock(); return; }
         if (!attempt) return;
         if (action === 'review-all') return results('all');
@@ -331,11 +389,20 @@
             } catch (_) { /* Ignore storage values from older versions. */ }
         }
     });
-    window.Sufficiency = { open, beforeLeave() {
+    window.Sufficiency = { open, clear, async readIndex() {
+        if (window.CampusAccess?.isFree() || !await load() || owner !== user()) throw new Error('Acceso a Suficiencia no disponible.');
+        return bank;
+    }, async readQuestions(ids) {
+        const loaded = await questionPack(ids);
+        if (!loaded.length || loaded.length !== ids.length || owner !== user()) throw new Error('Acceso a Suficiencia no disponible.');
+        return { questions: loaded, passages: bank.passages };
+    }, beforeLeave() {
+        viewRevision++;
         if (pendingConfirmation) pendingConfirmation(false);
         document.getElementById('nav-simulacro')?.classList.remove('nav-item-active');
         return true;
     } };
+    window.addEventListener('campus-access-change', clear);
     ensureSupabaseSdk().then(() => getSupabase().auth.onAuthStateChange((event, session) => {
         if (event === 'SIGNED_OUT' || (owner && session?.user.id !== owner)) clear();
     })).catch(() => { /* The campus login reports SDK connectivity errors. */ });

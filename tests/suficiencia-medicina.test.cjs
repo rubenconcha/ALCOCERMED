@@ -80,14 +80,14 @@ test('Medicine practice grades, restores its filters and freezes a citable revie
 });
 
 test('Medicine API is private and only returns the new collection to active accounts', async t => {
-    const request = async (query, authorization) => {
+    const request = async (query, authorization, ids) => {
         const res = {
             headers: {}, code: 0, body: '',
             setHeader(name, value) { this.headers[name] = value; },
             status(code) { this.code = code; return this; },
             end(body = '') { this.body = body; },
         };
-        await endpoint({ method: 'GET', headers: { authorization }, query }, res);
+        await endpoint({ method: ids ? 'POST' : 'GET', headers: { authorization }, query, body: ids && { ids } }, res);
         return res;
     };
     const query = { collection: C.biomedicalCollection };
@@ -96,9 +96,28 @@ test('Medicine API is private and only returns the new collection to active acco
     assert.equal((await request(query)).code, 401);
     assert.equal((await request({ ...query, invalid: '1' }, 'Bearer fixture')).code, 404);
     assert.equal((await request(query, 'Bearer fixture')).code, 403);
+    const catalogueQuery = { collection: C.officialCollection, vista: 'catalogo' };
+    assert.equal((await request(catalogueQuery, 'Bearer fixture')).code, 403);
     premium = true;
     const res = await request(query, 'Bearer fixture');
     assert.equal(res.code, 200);
     assert.equal(res.headers['Cache-Control'], 'private, no-store');
     assert.deepEqual(JSON.parse(res.body), medical);
+
+    const indexResponse = await request(catalogueQuery, 'Bearer fixture');
+    assert.equal(indexResponse.code, 200);
+    assert.equal(indexResponse.headers['Cache-Control'], 'private, no-store');
+    const index = JSON.parse(indexResponse.body);
+    assert.ok(index.questions.every(q => q.optionCount > 1 && !q.options && !q.text && !q.solution));
+    assert.ok(index.questions.some(C.isBiomedical));
+    const reading = index.questions.find(q => q.passageId);
+    const ids = [medical.questions[0].id, reading.id];
+    const packQuery = { ...catalogueQuery, vista: 'preguntas' };
+    assert.equal((await request(packQuery, undefined, ids)).code, 401);
+    assert.equal((await request(packQuery, 'Bearer fixture', [reading.id, reading.id])).code, 400);
+    const pack = JSON.parse((await request(packQuery, 'Bearer fixture', ids)).body);
+    assert.deepEqual(pack.questions.map(q => q.id), ids);
+    assert.deepEqual(pack.questions[0], medical.questions[0]);
+    assert.deepEqual(pack.passages.map(p => p.id), [reading.passageId]);
+    assert.ok(pack.passages[0].text.length);
 });
