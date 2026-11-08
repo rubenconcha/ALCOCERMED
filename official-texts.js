@@ -2,17 +2,17 @@
 (() => {
     const texts = [
         {
-            subject: 'Morfofunción', slug: 'morfofuncion', symbol: 'M', pages: 1251,
+            subject: 'Morfofunción', slug: 'morfofuncion', pages: 1251,
             title: 'Anatomía y fisiología. La unidad entre forma y función',
             credit: 'Kenneth S. Saladin', edition: '6.ª edición · McGraw-Hill Interamericana',
         },
         {
-            subject: 'Biología Celular y Molecular', slug: 'biologia-celular', symbol: 'B', pages: 829, coverPage: 9,
+            subject: 'Biología Celular y Molecular', slug: 'biologia-celular', pages: 829, coverPage: 9,
             title: 'Biología celular biomédica',
             credit: 'Alfonso Calvo González', edition: '1.ª edición · Elsevier España · 2015',
         },
         {
-            subject: 'Educación en Salud e Investigación', slug: 'educacion-salud', symbol: 'E', pages: 232,
+            subject: 'Educación en Salud e Investigación', slug: 'educacion-salud', pages: 232,
             title: 'Compendio de Educación en Salud e Investigación',
             credit: 'Departamento de Medicina Social y Familiar · Facultad de Medicina, UMSS',
             edition: '1.ª edición · 2025',
@@ -168,10 +168,12 @@
     function card(text) {
         const article = document.createElement('article');
         article.className = 'past-card campus-resource-card official-text-card';
-        const badge = document.createElement('span');
-        badge.className = 'campus-resource-symbol';
-        badge.textContent = text.symbol;
-        badge.setAttribute('aria-hidden', 'true');
+        const badge = document.createElement('img');
+        badge.className = 'official-text-icon';
+        badge.src = '/assets/official-texts/' + text.slug + '.svg';
+        badge.alt = '';
+        badge.width = badge.height = 56;
+        badge.decoding = 'async';
         const subject = document.createElement('p');
         subject.className = 'official-text-area';
         subject.textContent = text.subject;

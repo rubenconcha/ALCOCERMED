@@ -6,7 +6,8 @@ const base = require('../api/_sufficiency/bank.json');
 const official = require('../api/_sufficiency/umsa-2026.cjs');
 const baseMedical = require('../api/_sufficiency/medicina-oficial.json');
 const reviewed = require('../api/_sufficiency/articulaciones-examen.json');
-const medical = { ...baseMedical, questions: baseMedical.questions.concat(reviewed) };
+const additional = require('../api/_sufficiency/medicina-preguntas-por-tema.json');
+const medical = { ...baseMedical, questions: baseMedical.questions.concat(reviewed, additional) };
 const topics = require('../content/topic-evaluations/catalog.json').exams;
 const endpoint = require('../api/suficiencia.js');
 
@@ -16,7 +17,10 @@ test('every Medicine topic offers all three levels with official, identifiable r
     assert.equal(medical.collection, C.biomedicalCollection);
     assert.equal(baseMedical.questions.length, 680);
     assert.equal(reviewed.length, 12);
-    assert.equal(new Set(medical.questions.map(q => q.id)).size, 692);
+    assert.equal(new Set(medical.questions.map(q => q.id)).size, medical.questions.length);
+    const difficultCounts = new Map([
+        ['morfo-01', 20], ['morfo-08', 17], ['morfo-09', 18], ['biologia-01', 22],
+    ]);
     assert.equal(C.validate(bank), true);
     const subjects = [
         ['morfofuncion', 'morfo-', 'Kenneth S. Saladin', 29, 1251],
@@ -29,9 +33,10 @@ test('every Medicine topic offers all three levels with official, identifiable r
         assert.deepEqual(C.topics(bank, subject).map(t => t.key), expected.map(t => t.id));
         for (const topic of expected) {
             const configuration = { subject, topic: topic.id, level: 'todos' };
-            const revised = topic.id === 'morfo-09';
-            assert.equal(C.configurationCount(bank, configuration), revised ? 20 : 10);
-            for (const [level, size] of [['facil', 4], ['intermedio', 4], ['dificil', revised ? 14 : 2]]) {
+            const hard = difficultCounts.get(topic.id) ?? 6;
+            assert.equal(C.configurationCount(bank, configuration), Math.min(hard + 8, 20));
+            assert.equal(C.selectConfiguration(bank, { ...configuration, level: 'dificil' }, 44).length, Math.min(hard, 20));
+            for (const [level, size] of [['facil', 4], ['intermedio', 4], ['dificil', hard]]) {
                 const rows = C.configurationPool(bank, { ...configuration, level });
                 assert.equal(rows.length, size);
                 for (const q of rows) {
@@ -39,19 +44,38 @@ test('every Medicine topic offers all three levels with official, identifiable r
                     assert.equal(q.subject, subject);
                     assert.equal(q.topic, topic.title);
                     assert.equal(q.difficulty, level);
-                    assert.equal(new Set(q.options).size, 4);
+                    assert.equal(new Set(q.options).size, q.options.length);
                     assert.ok(q.source.document.startsWith(title));
                     assert.ok(q.source.pdfPages.every(page => page <= pdfSize));
                     assert.equal(q.source.printedPages.length === 0, subject === 'biologia-celular');
                     if (level === 'dificil') {
-                        assert.match(q.text, /^Señala cuáles.+\n1\. .+\n2\. .+$/);
-                        assert.match(q.explanation, /^1\. (Correcta|Incorrecta)\. .+\n2\. (Correcta|Incorrecta)\. /);
+                        const triple = q.truth_values.length === 3;
+                        assert.match(q.text, /^Señala cuáles.+\n1\. .+\n2\. .+(?:\n3\. .+)?$/);
+                        assert.equal(q.text.split('\n').length, triple ? 4 : 3);
+                        const reasons = q.explanation.split('\n');
+                        assert.equal(reasons.length, q.truth_values.length);
+                        reasons.forEach((reason, i) => {
+                            const label = q.truth_values[i] ? 'Correcta' : 'Incorrecta';
+                            assert.ok(reason.startsWith((i + 1) + '. ' + label + '. '));
+                        });
                         assert.deepEqual(q.options, [
                             'Solo la afirmación 1 es correcta', 'Solo la afirmación 2 es correcta',
-                            'Ambas afirmaciones son correctas', 'Ninguna afirmación es correcta',
+                            ...(triple ? ['Solo la afirmación 3 es correcta', 'Todas las afirmaciones son correctas']
+                                : ['Ambas afirmaciones son correctas']),
+                            'Ninguna afirmación es correcta',
                         ]);
-                        assert.equal(q.correct, ['10', '01', '11', '00'].indexOf(q.truth_values.map(Number).join('')));
-                        assert.deepEqual(Object.keys(q.comentarios_opciones), ['A','B','C','D']);
+                        const keys = triple ? ['100', '010', '001', '111', '000'] : ['10', '01', '11', '00'];
+                        assert.equal(q.correct, keys.indexOf(q.truth_values.map(Number).join('')));
+                        assert.deepEqual(Object.keys(q.comentarios_opciones), [...'ABCDE'.slice(0, keys.length)]);
+                        if (q.id.includes('-ampliacion-')) {
+                            assert.equal(q.source.statements.length, q.truth_values.length);
+                            for (const reference of q.source.statements) {
+                                assert.ok(reference.anchor || reference.cardId);
+                                assert.ok(reference.section);
+                                assert.ok(q.source.pdfPages.includes(reference.pdfPage));
+                                if (subject !== 'biologia-celular') assert.ok(q.source.printedPages.includes(reference.printedPage));
+                            }
+                        }
                         assert.ok(q.id.endsWith('-umss'));
                     }
                 }
@@ -66,7 +90,9 @@ test('every Medicine topic offers all three levels with official, identifiable r
 test('Medicine practice grades, restores its filters and freezes a citable review', () => {
     const configuration = { subject: 'morfofuncion', topic: 'morfo-08', level: 'dificil' };
     const rows = C.selectConfiguration(bank, configuration, 77);
-    assert.equal(rows.length, 2);
+    const savedRows = rows.filter(q => baseMedical.questions.some(original => original.id === q.id));
+    assert.equal(rows.length, 17);
+    assert.equal(savedRows.length, 2);
     const answers = { [rows[0].id]: rows[0].correct };
     const owner = 'fixture';
     const attempt = {
@@ -75,12 +101,14 @@ test('Medicine practice grades, restores its filters and freezes a citable revie
     };
     assert.deepEqual(C.restore(attempt, bank, owner).answers, answers);
     assert.equal(C.restore(attempt, bank, 'other'), null);
+    assert.deepEqual(C.restore({ ...attempt, ids: savedRows.map(q => q.id), answers: {} }, bank, owner).ids,
+        savedRows.map(q => q.id));
     const oldIds = attempt.ids.map(id => id.replace(/-umss$/, ''));
     assert.equal(C.restore({ ...attempt, ids: oldIds }, bank, owner), null);
     assert.equal(C.restore({ ...attempt, configuration: { ...configuration, level: 'facil' } }, bank, owner), null);
     assert.deepEqual(C.grade(rows, answers), {
-        correct: 1, wrong: 0, skipped: 1, total: 2, percent: 50,
-        subjects: { morfofuncion: { correct: 1, wrong: 0, skipped: 1, total: 2 } },
+        correct: 1, wrong: 0, skipped: 16, total: 17, percent: 6,
+        subjects: { morfofuncion: { correct: 1, wrong: 0, skipped: 16, total: 17 } },
     });
     const snapshot = results.freezeSufficiency(rows, attempt, bank, C, 'Simulacro de Medicina');
     const item = snapshot.question_review.items[0];
@@ -123,13 +151,16 @@ test('Medicine API is private and only returns the new collection to active acco
     assert.ok(index.questions.every(q => q.optionCount > 1 && !q.options && !q.text && !q.solution));
     assert.ok(index.questions.some(C.isBiomedical));
     const reading = index.questions.find(q => q.passageId);
-    const ids = [reviewed[0].id, reading.id];
+    const expanded = additional.find(q => q.source.topicId === 'morfo-01' && q.options.length === 5);
+    assert.ok(expanded);
+    assert.equal(index.questions.find(q => q.id === expanded.id).optionCount, 5);
+    const ids = [expanded.id, reading.id];
     const packQuery = { ...catalogueQuery, vista: 'preguntas' };
     assert.equal((await request(packQuery, undefined, ids)).code, 401);
     assert.equal((await request(packQuery, 'Bearer fixture', [reading.id, reading.id])).code, 400);
     const pack = JSON.parse((await request(packQuery, 'Bearer fixture', ids)).body);
     assert.deepEqual(pack.questions.map(q => q.id), ids);
-    assert.deepEqual(pack.questions[0], reviewed[0]);
+    assert.deepEqual(pack.questions[0], expanded);
     assert.deepEqual(pack.passages.map(p => p.id), [reading.passageId]);
     assert.ok(pack.passages[0].text.length);
 });

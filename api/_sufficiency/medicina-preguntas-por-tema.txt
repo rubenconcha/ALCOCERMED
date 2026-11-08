@@ -1,0 +1,901 @@
+# Una pregunta por bloque. Cada afirmación lleva el folio o la ficha del PDF que la fundamenta.
+[morfo-01]
++ @31;1.1 Anatomía microscópica;La histopatología es la exploración | Examinar un corte de tejido al microscopio para buscar signos de enfermedad es un estudio histopatológico. | El material observado es un tejido y el objetivo es identificar alteraciones de origen patológico.
+- @31;1.1 Anatomía microscópica;La citología | El estudio de la estructura y la función de células individuales corresponde a la histología, aunque no se evalúe su organización en tejidos. | Ese nivel de observación corresponde a la citología. La histología aborda la organización microscópica de los tejidos.
+
+- @36;1.3 Método hipotético-deductivo;Capacidad de refutación | Si una hipótesis concuerda con los conocimientos previos, puede considerarse científica aunque ninguna observación imaginable pueda contradecirla. | Además de concordar con lo que ya se sabe, debe ser posible especificar una prueba cuyos resultados permitan refutarla.
++ @37;1.3 Datos, leyes y teorías;Una teoría es una aseveración explicativa | Una teoría puede integrar datos verificados, leyes e hipótesis confirmadas para explicar un conjunto de fenómenos. | En la distinción del texto, la teoría organiza y explica los resultados y puede orientar nuevas investigaciones.
+
++ @36;1.3 Diseño de experimentos;al grupo de referencia | En una prueba farmacológica con tabletas de apariencia idéntica, el placebo administrado al grupo de referencia permite comparar los resultados con los del tratamiento. | El grupo de referencia proporciona una comparación para estimar el efecto asociado con el fármaco bajo condiciones semejantes.
++ @36;1.3 Diseño de experimentos;estudios doble ciego | Para cumplir el doble ciego descrito, también debe desconocer la asignación la persona que administra el tratamiento y recibe los resultados. | Ocultar la asignación a ambos reduce la influencia de las expectativas del participante y de quien administra el tratamiento.
+
+- @38;1.4 Evolución, selección y adaptación;composición genética de una población | Un cambio en la composición genética de una población solo cuenta como evolución si ya ha dado origen a una nueva especie. | La evolución se reconoce por el cambio genético de la población. El surgimiento de una especie nueva es una posibilidad, sin ser un requisito.
+- @38;1.4 Evolución, selección y adaptación;ventajas hereditarias | Una ventaja adquirida que no se transmite puede hacerse más común por selección natural solo porque su portador deja más descendientes. | El aumento generacional descrito depende de que los descendientes hereden la característica que favoreció el éxito reproductivo.
+
+- @39;1.4 Adaptaciones de los primates;Los pulgares se volvieron opuestos | En los primates, la oposición del pulgar describe la capacidad de tocar los demás dedos sin cruzar la palma. | Un pulgar plenamente oponible puede cruzar la palma hasta las puntas de los dedos. Así facilita rodear una rama o manipular objetos pequeños.
++ @39;1.4 Adaptaciones de los primates;visión estereoscópica | La visión estereoscópica ayuda a estimar la distancia al saltar entre ramas y a coordinar la mano con lo que se está viendo. | La percepción de profundidad aporta información sobre la distancia que el primate usa al saltar o al manipular una presa.
+
++ @41;1.5 La jerarquía de la complejidad;Un órgano es una estructura | Para distinguir un órgano de un solo tejido, importa que en el órgano actúen juntos dos o más tipos de tejido. | La presencia de tejidos diferentes que cooperan en una función distingue al órgano de una región formada por un solo tipo de tejido.
+- @41;1.5 La jerarquía de la complejidad;Las células son las unidades más pequeñas | Un organelo que realiza una función particular constituye la unidad más pequeña a la que el texto atribuye las funciones propias de la vida. | El organelo desempeña una tarea dentro de la célula. En esta jerarquía, la célula es la unidad más pequeña que realiza las funciones vitales.
+
++ @42;Recuadro 1.2 Transposición visceral;los órganos de las cavidades torácica y abdominal están invertidos | En la transposición visceral completa se invierte la posición derecha e izquierda de los órganos torácicos y abdominales. | El situs inversus comprende una inversión en ambas cavidades. La posición del corazón por sí sola no permite identificarla.
++ @42;Recuadro 1.2 Transposición visceral;un solo órgano ocupa una posición atípica | Si el único hallazgo es un riñón en la pelvis, corresponde describirlo como un órgano en posición atípica, en lugar de inferir una inversión de todas las vísceras. | El texto usa el riñón pélvico como ejemplo de situs perversus, en el que un órgano ocupa una posición atípica.
+
+- @43;1.6 Características de la vida;síntesis de proteínas | Sintetizar una proteína a partir de moléculas más sencillas es catabolismo si la reacción requiere energía. | La clasificación se basa en construir o degradar moléculas. Formar una molécula más compleja es anabolismo.
++ @44;1.6 Características de la vida;extraer desperdicios de los tejidos | Retirar de los tejidos los desechos producidos por el metabolismo y expulsarlos del cuerpo es un proceso de excreción. | Los desechos se generan durante el metabolismo. Su retiro y su eliminación corresponden a la excreción.
+
+- @44;1.6 Características de la vida;la transformación de células sin una función especializada | Una célula que adquiere una tarea especializada sin aumentar de tamaño ejemplifica crecimiento, pero no diferenciación. | La especialización es el criterio de diferenciación. El crecimiento describe un aumento de tamaño.
+- @44;1.6 Características de la vida;se agregan más moléculas de azúcar | El aumento de tamaño de un cristal al evaporarse el agua se produce por el mismo mecanismo químico de crecimiento descrito para un organismo. | El cristal aumenta al incorporar moléculas de azúcar que ya estaban en la disolución. El crecimiento biológico implica transformar materiales químicamente.
+
++ @45;1.6 Homeostasis y retroalimentación negativa;equilibrio dinámico | Las fluctuaciones leves alrededor del punto de equilibrio son compatibles con una regulación homeostática eficaz. | La variable puede oscilar en límites estrechos. El equilibrio dinámico no exige un valor idéntico en cada medición.
+- @45;1.6 Homeostasis y retroalimentación negativa;activa mecanismos que lo anulan o invierten | Si la temperatura se eleva, un mecanismo que eleva aún más la temperatura actúa por retroalimentación negativa. | Para ser negativa, la respuesta debe contrarrestar el cambio inicial. Una respuesta que eleva aún más la temperatura amplifica ese cambio.
+
++ @46;1.6 Termorregulación;vasos sanguíneos de la piel se dilatan | La vasodilatación cutánea favorece la pérdida de calor al llevar más sangre caliente cerca de la superficie corporal. | Al pasar más sangre cerca de la piel, se facilita la transferencia de calor al ambiente.
+- @46;1.6 Termorregulación;evaporación del agua de la piel | La sudación enfría con la misma eficacia aunque el agua que llega a la piel no pueda evaporarse. | En el mecanismo descrito, la evaporación del agua de la piel es la que produce el efecto enfriador.
+- @46;1.6 Termorregulación;El primero en activarse es la vasoconstricción | Cuando baja la temperatura corporal, el ajuste vascular inicial para conservar calor es aumentar el calibre de los vasos cutáneos. | El primer ajuste descrito es la vasoconstricción. Al reducir el flujo cutáneo, ayuda a conservar el calor.
+
+- @46;1.6 Regulación de la presión arterial;Los barorreceptores envían señales | Al ponerse de pie, los barorreceptores son los efectores que aceleran los latidos para recuperar la presión arterial. | Los barorreceptores detectan el cambio y envían la señal. El corazón ejecuta el ajuste de la frecuencia.
++ @46;1.6 Regulación de la presión arterial;El centro cardiaco acelera los latidos | El centro cardíaco del tallo encefálico participa como integrador en el ajuste que compensa la disminución inicial de la presión al ponerse de pie. | Recibe la señal de los barorreceptores y dirige una respuesta que incrementa la frecuencia cardíaca y favorece la recuperación de la presión.
+
++ @46;1.6 Retroalimentación positiva en el parto;estimula la producción de la hormona oxitocina | Durante el parto, la presión del feto contra el cuello uterino contribuye a reforzar las contracciones a través de la oxitocina. | El estímulo cervical favorece la respuesta con oxitocina. Las contracciones empujan el feto y aumentan el estímulo cervical.
++ @47;1.6 Retroalimentación positiva y cambio rápido;la coagulación sanguínea | Además del parto, la coagulación sanguínea figura entre los procesos en que una retroalimentación positiva puede cumplir una función normal. | El libro distingue la amplificación útil en procesos como la coagulación de los ciclos que se salen de control.
+
+- @47;1.6 Retroalimentación positiva y cambio rápido;incrementa el metabolismo | Si el aumento de temperatura acelera el metabolismo y la producción adicional de calor, se trata de una respuesta compensadora que reduce la desviación inicial. | La producción adicional de calor aumenta la misma desviación que aceleró el metabolismo. El cambio se amplifica.
+- @44;1.6 Variación fisiológica;difieren según sexo, edad, peso | La edad y el grado de actividad física influyen en la anatomía, pero el texto los excluye al interpretar variables fisiológicas. | La fisiología puede variar con edad, actividad física, dieta, peso y entorno. El contexto influye en cómo se interpreta una medición.
+
++ @48;1.7 Elementos de los términos médicos;las raíces son | En «cardiomiopatía», la presencia de varias raíces permite identificar que se habla de una enfermedad del músculo cardíaco. | Cardio, mio y pato aportan, respectivamente, los significados de corazón, músculo y enfermedad.
+- @49;1.7 Significado literal;acrónimos | PET se interpreta como un epónimo porque la palabra proviene del apellido de quien desarrolló la técnica. | PET se forma a partir de las iniciales inglesas de la denominación de la técnica. El libro lo presenta como un acrónimo.
+
++ @51;Recuadro 1.5 Imágenes médicas · Radiografía;tejido denso de huesos | En la radiografía convencional, las zonas de la película a las que llegan menos rayos X debido a la absorción por el hueso aparecen más claras. | El hueso absorbe más rayos que los tejidos blandos. La parte de la película que recibe menos radiación se oscurece menos.
++ @52;Recuadro 1.5 Imágenes médicas · Tomografía computarizada;aplicación más elaborada de los rayos X | Tanto la radiografía como la tomografía computarizada usan rayos X, pero la tomografía utiliza múltiples proyecciones para reconstruir secciones. | La tomografía obtiene lecturas desde distintos ángulos y la computadora las usa para reconstruir la sección explorada.
+
+- @52;Recuadro 1.5 Imágenes médicas · Resonancia magnética;Los átomos de hidrógeno | En la resonancia magnética descrita, la señal se obtiene registrando qué cantidad de rayos X atraviesa los tejidos desde distintos ángulos. | Esa descripción corresponde a la tomografía computarizada. En resonancia se emplean un campo magnético y señales asociadas con el hidrógeno.
++ @52;Recuadro 1.5 Imágenes médicas · Ecografía;ondas ultrasónicas de alta frecuencia | En ecografía, el mismo transductor que emite ultrasonido detecta ecos que se usan para reconstruir la imagen. | Las ondas se reflejan al encontrar límites entre tejidos. Los ecos que recoge el transductor proporcionan la información para la imagen.
+
+- @52;Recuadro 1.5 Imágenes médicas · Tomografía por emisión de positrones;estado metabólico de un tejido | La PET descrita se utiliza para comparar la densidad de los tejidos a partir de cuánto atenúan un haz de rayos X. | La PET registra la distribución de un marcador para estimar la actividad metabólica. La atenuación de rayos X corresponde a otras técnicas.
+- @52;Recuadro 1.5 Imágenes médicas · Tomografía por emisión de positrones;un par de rayos gamma | En la PET, la colisión de un positrón con un electrón genera ondas ultrasónicas que el equipo registra como ecos. | La aniquilación de un positrón y un electrón genera un par de rayos gamma detectables. Los ecos ultrasónicos se usan en ecografía.
+
+[morfo-02]
+- morfo-02-004 | Dos isótopos neutros del mismo elemento tienen diferente número de protones pero el mismo número de neutrones. | La identidad del elemento depende de los protones. Sus isótopos difieren en neutrones.
++ morfo-02-003 | Si dos núcleos tienen igual número de protones, sus átomos comparten el número atómico aunque difieran en masa. | El número atómico cuenta protones, sin sumar los neutrones.
+
++ morfo-02-016 | Una sustancia que acepta protones de la disolución se comporta como una base en ese intercambio. | El intercambio define a la base como aceptora de H⁺ y al ácido como donador.
+- morfo-02-018 | Al bajar el pH de 7 a 6, la concentración de H⁺ se reduce a una décima parte. | La escala es inversa y logarítmica. La concentración de H⁺ aumenta diez veces.
+
++ morfo-02-021 | Separar los monómeros de un polímero por hidrólisis requiere agua para romper el enlace. | En la hidrólisis, el agua se consume al romper el enlace entre las subunidades.
++ morfo-02-020 | Al unir monómeros por síntesis por deshidratación, se libera una molécula de agua por el enlace que se forma. | Se retiran componentes que forman agua al quedar unidas las subunidades.
+
+- morfo-02-022 | Un catalizador acelera una reacción porque aumenta la energía necesaria para iniciar la transformación. | La catálisis reduce la barrera de activación que deben superar los reactivos.
+- morfo-02-029 | La presencia de un doble enlace entre carbonos permite clasificar a un ácido graso como saturado. | La cadena saturada carece de esos dobles enlaces. Un doble enlace implica insaturación.
+
+[morfo-03]
+- morfo-03-017 | Por cada ATP, la bomba sodio-potasio introduce tres Na⁺ y expulsa dos K⁺. | La proporción se invierte. Salen tres Na⁺ y entran dos K⁺.
++ morfo-03-015 | Si el paso neto de líquido a través de una membrana se debe a una diferencia de presión hidrostática, el mecanismo es filtración. | La presión empuja el líquido a través de la membrana durante la filtración.
+
++ morfo-03-012 | Una célula pierde volumen si se coloca en una solución hipertónica. | El agua sale por ósmosis y la célula se encoge.
+- @122;3.3 Tonicidad;ganan y pierden agua a velocidades iguales | Que una solución sea isotónica implica que las moléculas de agua dejan de cruzar la membrana. | El volumen permanece estable porque no hay flujo neto de agua. Puede haber intercambio en ambos sentidos.
+
+- morfo-03-033 | El armazón de los microtúbulos se construye con actina, del mismo modo que los microfilamentos. | Los microtúbulos se forman con tubulina. La actina forma los microfilamentos.
+- morfo-03-034 | Si el canal se abre al cambiar el potencial de membrana, se clasifica como regulado por ligando. | El estímulo de apertura es eléctrico. En un canal regulado por ligando, el estímulo es la unión de una sustancia.
+
++ morfo-03-029 | Las proteínas pueden llegar al aparato de Golgi para ser modificadas y clasificadas antes de continuar hacia su destino. | El Golgi procesa y empaqueta productos que luego se distribuyen a destinos celulares diferentes.
++ morfo-03-031 | Los peroxisomas intervienen en reacciones oxidativas y pueden descomponer el peróxido de hidrógeno. | Usan oxígeno para oxidar ciertas sustancias y contienen sistemas que degradan el peróxido resultante.
+
+[morfo-04]
++ morfo-04-008 | Retirar intrones de un precursor de ARNm es una etapa del procesamiento, previa a la traducción. | Los intrones se eliminan cuando se procesa el transcrito.
+- morfo-04-014 | La región del ARNt que se aparea con el codón se llama codón porque pertenece al ARNt. | La región del ARNt es el anticodón. El codón correspondiente está en el ARNm.
+
+- morfo-04-019 | La duplicación del ADN nuclear se inicia cuando los cromosomas se alinean en el ecuador durante la metafase. | El ADN ya se replicó en la fase S de la interfase.
++ morfo-04-023 | En mitosis, la separación de cromátides hermanas corresponde a una etapa posterior a la alineación ecuatorial. | La separación se produce en la anafase, después de la metafase.
+
++ morfo-04-031 | Cuando los dos alelos se expresan simultáneamente en el heterocigoto, la relación es codominante. | En la codominancia se pueden reconocer los productos de ambos alelos en el heterocigoto.
++ morfo-04-033 | Si la variación de un solo gen afecta a varios rasgos, se habla de pleiotropía. | Se considera el efecto de un único gen sobre más de un carácter.
+
+- morfo-04-026 | Un gameto humano habitual contiene el mismo número de cromosomas que una célula somática. | El gameto tiene un juego de 23 cromosomas. La célula somática contiene dos juegos.
+- morfo-04-015 | En un polirribosoma, cada ribosoma traduce necesariamente una molécula de ARNm diferente. | Los ribosomas del conjunto pueden traducir de forma simultánea una sola molécula de ARNm.
+
+[morfo-05]
++ morfo-05-013 | La disposición regular del tejido conjuntivo denso es característica de gran parte de tendones y ligamentos. | La organización de sus fibras favorece resistir tracción en la dirección predominante.
+- morfo-05-012 | La capacidad de estirarse y recuperar la forma de una fibra elástica se debe principalmente al colágeno. | La elastina aporta esa propiedad. El colágeno proporciona resistencia a la tracción.
+
+- morfo-05-022 | Una unión comunicante sella los bordes apicales e impide el paso de sustancias entre células epiteliales. | El sellado corresponde a las uniones herméticas. Las comunicantes forman canales entre células.
++ morfo-05-024 | Si se busca explicar una adhesión firme entre células que resisten tracción, los desmosomas son una unión pertinente. | Los desmosomas unen firmemente las células y contribuyen a distribuir la tensión.
+
++ morfo-05-026 | Liberar el contenido de una vesícula sin perder la célula secretora es compatible con secreción merocrina. | En la secreción merocrina, el producto se libera por exocitosis.
++ morfo-05-027 | En la secreción holocrina, la célula que se desintegra pasa a formar parte del producto liberado. | El producto incluye el material de la célula secretora que se rompe.
+
+- morfo-05-029 | Un tejido aumenta de tamaño por hipertrofia si el único cambio observado es el aumento del número de células. | Aumentar el número corresponde a hiperplasia. En la hipertrofia crece el tamaño de las células.
+- morfo-05-030 | El reemplazo de un tejido maduro por otro tipo maduro se denomina regeneración del tejido original. | El cambio de tipo tisular se llama metaplasia. En la regeneración se recupera el mismo tipo.
+
+[morfo-06]
+- morfo-06-002 | La hipodermis constituye la capa profunda de la piel, al mismo nivel que la dermis papilar. | La hipodermis está debajo de la dermis. La capa papilar es parte de la dermis.
++ morfo-06-016 | La capa reticular contiene predominantemente tejido conjuntivo denso irregular. | Es la porción profunda de la dermis y sus fibras se distribuyen en múltiples direcciones.
+
++ morfo-06-010 | Encontrar un estrato lúcido bien delimitado favorece identificar la muestra como piel gruesa. | El estrato lúcido se distingue en la epidermis de la piel gruesa.
+- morfo-06-011 | La renovación ordinaria de los estratos superficiales comienza con divisiones en el estrato córneo. | La población que se divide para renovar la epidermis reside en el estrato basal.
+
++ morfo-06-019 | Durante la fase anágena, la matriz pilosa contribuye a que aumente la longitud del pelo. | La anágena es la fase de crecimiento activo.
++ morfo-06-021 | Al producir sebo, las glándulas sebáceas liberan el contenido de células que se desintegran. | Es una secreción holocrina. Las células pasan a formar parte de la secreción.
+
+- morfo-06-025 | Una lesión que destruye todo el espesor de la dermis todavía se clasifica como quemadura de primer grado si compromete la epidermis. | La destrucción de todo el espesor cutáneo corresponde al tercer grado.
+- morfo-06-039 | Si una quemadura afecta la epidermis y parte de la dermis, queda limitada al primer grado. | La afectación parcial de la dermis corresponde al segundo grado.
+
+[morfo-07]
++ morfo-07-006 | Quitar las sales minerales de una matriz ósea reduce una fuente importante de su resistencia a la compresión. | La fase mineral proporciona rigidez y ayuda al hueso a resistir compresión.
+- morfo-07-007 | Las fibras de colágeno explican la resistencia mineral del hueso y aportan poco a la resistencia frente a la tracción. | Las fibras colágenas ayudan a resistir la tracción. La parte mineral aporta principalmente rigidez y resistencia a compresión.
+
+- morfo-07-011 | El endostio recubre la superficie externa del hueso y continúa sobre el cartílago articular. | El endostio reviste superficies internas, entre ellas la cavidad medular.
++ morfo-07-014 | Los canalículos permiten la comunicación entre lagunas donde se alojan los osteocitos. | Los conductos delgados conectan las lagunas en la matriz ósea.
+
++ @242;7.3 Osificación endocondral;modelo de cartílago hialino reemplazado por tejido óseo | Que primero exista un molde de cartílago y que luego sea sustituido por tejido óseo identifica la osificación endocondral. | El proceso endocondral depende de un molde cartilaginoso previo.
++ morfo-07-021 | El aumento del grosor por depósito de matriz en la superficie corresponde a crecimiento aposicional. | En la aposición se agregan capas en la superficie. El alargamiento del hueso se asocia a la placa epifisaria.
+
+- morfo-07-035 | El callo blando de una fractura está constituido ya por hueso de reemplazo producido por osteoblastos. | En el callo blando predominan el colágeno y el fibrocartílago.
+- morfo-07-036 | El callo duro se forma por la resorción de matriz a cargo de los osteoclastos, antes de que haya depósito de hueso. | Los osteoblastos forman el tejido óseo del callo duro. La resorción participa en la remodelación posterior.
+
+[morfo-09]
++ morfo-09-015 | Una bolsa sinovial puede amortiguar el roce de un tendón contra una estructura vecina sin constituir la superficie que une ambos huesos. | La bolsa es un saco lubricado situado donde estructuras próximas se deslizan una sobre otra.
+- morfo-09-023 | Una articulación que permite moverse en varios ejes y rotar se clasifica como troclear. | La capacidad multiaxial de ese tipo corresponde a una enartrosis. La articulación troclear funciona como una bisagra.
+
+- morfo-09-020 | Girar el antebrazo para que la palma quede orientada hacia arriba con el codo flexionado es pronación. | La orientación de la palma hacia arriba en esa posición corresponde a la supinación.
++ morfo-09-021 | Al levantar la punta del pie hacia la pierna, disminuye el ángulo anterior del tobillo por dorsiflexión. | En dorsiflexión, el dorso del pie se acerca a la cara anterior de la pierna.
+
++ morfo-09-024 | La rodilla incluye dos meniscos fibrocartilaginosos, uno medial y otro lateral. | Los dos meniscos se interponen en la articulación entre el fémur y la tibia.
++ morfo-09-025 | El ligamento cruzado anterior limita que la tibia se desplace hacia delante con respecto al fémur. | La dirección que restringe ese ligamento es el desplazamiento tibial anterior.
+
+- morfo-09-026 | Si el punto de apoyo queda entre la resistencia y el esfuerzo, la disposición es de segunda clase. | Tener el punto de apoyo en el centro define la primera clase.
+- morfo-09-027 | Se reconoce una palanca de segunda clase porque el esfuerzo queda entre la resistencia y el punto de apoyo. | En la segunda clase, la resistencia queda en medio. Si queda el esfuerzo, se trata de la tercera.
+
+[morfo-10]
+- morfo-10-002 | El perimisio rodea individualmente cada fibra contráctil antes de que estas se agrupen. | El perimisio rodea el fascículo. La envoltura de una fibra individual es el endomisio.
++ morfo-10-003 | El epimisio delimita al músculo completo, con independencia de cuántos fascículos lo formen. | Esta capa cubre el conjunto de fascículos y corresponde a la envoltura externa.
+
++ morfo-10-004 | Una lámina tendinosa ancha y aplanada puede corresponder a una aponeurosis. | Se trata de una forma de tendón que distribuye la fijación sobre una superficie amplia.
+- morfo-10-005 | El origen se define habitualmente como el punto de unión muscular que se desplaza más durante la contracción. | Por convención, el origen suele ser el extremo más fijo y la inserción el más móvil.
+
++ morfo-10-013 | El buccinador contribuye a mantener el alimento en la zona de masticación al comprimir la mejilla. | Su acción empuja el contenido de la mejilla hacia la zona de contacto de los dientes.
++ morfo-10-018 | El bíceps braquial puede participar tanto en la flexión del codo como en la supinación. | Actúa sobre el antebrazo al flexionarlo y también al girarlo hacia la posición supinada.
+
+- morfo-10-021 | La combinación de flexión plantar y eversión es la acción característica del tibial anterior. | El tibial anterior se asocia a dorsiflexión e inversión del pie.
+- morfo-10-022 | El tendón calcáneo transmite principalmente la acción del tibial anterior al calcáneo. | El tendón calcáneo es compartido por gastrocnemio y sóleo.
+
+[morfo-11]
++ morfo-11-006 | Una tríada del músculo esquelético incluye un túbulo T situado entre dos cisternas terminales. | Las dos cisternas son partes del retículo sarcoplásmico adyacentes al túbulo.
+- morfo-11-005 | Las cisternas del retículo sarcoplásmico sirven principalmente como depósito de acetilcolina. | Almacenan calcio que se libera para activar el proceso contráctil.
+
+- morfo-11-012 | En el acortamiento normal de un sarcómero, los filamentos individuales de actina y miosina se hacen más cortos. | Los filamentos conservan su longitud y se deslizan, aumentando el solapamiento.
++ morfo-11-014 | La banda A puede mantener su longitud aunque disminuya la distancia entre los discos Z. | La banda A corresponde a la longitud de los filamentos gruesos, que no se acortan.
+
++ morfo-11-015 | La unión de una molécula nueva de ATP a la cabeza de miosina permite que esta se libere de la actina. | La fijación del ATP favorece la separación del puente cruzado.
++ morfo-11-016 | Al faltar ATP después de la muerte, los puentes actina-miosina no se separan con normalidad. | La falta del ATP necesario para disociarlos explica la rigidez descrita.
+
+- morfo-11-020 | Si la tensión aumenta y la longitud no cambia, la contracción se clasifica como isotónica. | Un aumento de tensión sin cambio de longitud caracteriza la contracción isométrica.
+- morfo-11-021 | Al descender una carga de forma controlada, si el músculo activo se alarga, la contracción es concéntrica. | Al alargarse mientras mantiene tensión, la contracción es excéntrica.
+
+[morfo-12]
+- morfo-12-003 | Una señal que va del sistema nervioso central a un músculo es aferente porque llega a un efector. | Aferente significa que se dirige al sistema nervioso central. La señal que sale hacia un efector es eferente.
++ morfo-12-014 | En la conducción saltatoria, el potencial de acción se regenera de un nodo de Ranvier al siguiente. | Los nodos interrumpen la mielina y permiten regenerar la señal a lo largo del axón.
+
++ morfo-12-016 | En la fase ascendente del potencial de acción neuronal, la entrada de Na⁺ contribuye a despolarizar la membrana. | El influjo de sodio reduce e invierte transitoriamente la diferencia de potencial.
+- morfo-12-017 | Durante la repolarización, la salida de Na⁺ por los canales de K⁺ explica la recuperación del potencial. | Durante la repolarización sale principalmente K⁺. La dirección de ese flujo devuelve el interior hacia un potencial más negativo.
+
+- @485;12.4 Período refractario;ningún estímulo de ninguna fuerza disparará un nuevo potencial de acción | Un estímulo suficientemente intenso genera otro potencial de acción durante el período refractario absoluto. | En el período absoluto no puede iniciarse otro potencial, incluso con un estímulo intenso.
+- morfo-12-020 | La entrada de K⁺ en la terminal presináptica es el estímulo inmediato para liberar neurotransmisor. | La llegada de la señal favorece la entrada de Ca²⁺, que desencadena la liberación.
+
++ morfo-12-024 | Los potenciales postsinápticos rápidos de una sola entrada pueden sumarse temporalmente. | Si las señales llegan antes de que se disipe la anterior, sus efectos se superponen.
++ @495;12.6 Sumatoria espacial;los EPSP de varias sinapsis se suman | La activación coincidente de distintas entradas sobre una neurona puede producir sumación espacial. | En este caso los potenciales se originan en sitios distintos de la membrana.
+
+[morfo-13]
++ morfo-13-005 | Por debajo del cono medular pueden encontrarse raíces raquídeas aunque haya terminado la médula espinal. | Las raíces que descienden desde la médula forman la cola de caballo.
+- morfo-13-007 | La aracnoides es la meninge que sigue de manera inmediata los contornos de la médula. | La piamadre está aplicada a la médula y sigue sus contornos.
+
+- morfo-13-009 | El líquido cefalorraquídeo ocupa en condiciones normales el espacio epidural vertebral. | El líquido ocupa el espacio subaracnoideo, situado entre la aracnoides y la piamadre.
++ morfo-13-010 | En el canal vertebral, el espacio epidural contiene grasa y vasos. | Este espacio rodea la duramadre y tiene tejido conjuntivo laxo, grasa y vasos sanguíneos.
+
++ morfo-13-012 | En un corte de la médula espinal, la sustancia gris central tiene una disposición que recuerda a una H. | Las astas de sustancia gris forman esa figura en la zona central.
++ morfo-13-017 | La raíz anterior conduce fibras motoras que salen de la médula. | Las fibras que salen hacia los efectores pasan por la raíz anterior.
+
+- morfo-13-018 | Los somas de las neuronas sensitivas raquídeas se concentran en el ganglio de la raíz anterior. | El ganglio que aloja esos somas está en la raíz posterior.
+- morfo-13-030 | Un arco que incluye una interneurona entre la neurona sensitiva y la motora sigue siendo monosináptico. | Al interponerse una interneurona aparecen al menos dos sinapsis. Un arco monosináptico contiene una.
+
+[morfo-14]
+- morfo-14-007 | El líquido cefalorraquídeo pasa de cada ventrículo lateral al tercero por el acueducto cerebral. | Los ventrículos laterales comunican con el tercero por los agujeros interventriculares.
++ morfo-14-008 | El acueducto cerebral comunica el tercero y el cuarto ventrículo. | Constituye el paso estrecho entre ambos ventrículos.
+
++ morfo-14-006 | Los plexos coroideos aportan la mayor parte del líquido cefalorraquídeo. | La producción principal ocurre en estos plexos de los ventrículos.
+- morfo-14-009 | El retorno de líquido cefalorraquídeo a la sangre se realiza principalmente por los plexos coroideos. | El retorno venoso ocurre a través de granulaciones aracnoideas. Los plexos producen el líquido.
+
++ morfo-14-017 | Una alteración del área de Broca puede comprometer la producción del habla. | Esta área interviene en organizar la expresión verbal.
++ morfo-14-018 | Una alteración del área de Wernicke puede comprometer la comprensión del lenguaje. | Esta área interviene en interpretar el lenguaje.
+
+- morfo-14-024 | Si una lesión de un par craneal afecta selectivamente la acción del recto lateral, el nervio relacionado es el troclear. | El recto lateral recibe al abducens (VI). El troclear (IV) se dirige al oblicuo superior.
+- morfo-14-026 | La información sobre el equilibrio discurre por el facial, mientras que el octavo par transporta solo la audición. | Las dos modalidades se conducen por el vestibulococlear (VIII).
+
+[morfo-15]
++ morfo-15-002 | La vía motora autónoma típica puede transmitir una señal a través de dos neuronas en serie. | La preganglionar contacta con la posganglionar en un ganglio.
+- morfo-15-004 | Los somas de la neurona posganglionar y de la preganglionar se localizan ambos en el sistema nervioso central. | El soma posganglionar reside en un ganglio periférico.
+
+- morfo-15-007 | Una fibra preganglionar corta y una posganglionar larga constituyen la disposición típica de la vía parasimpática. | Esa disposición es típica de la vía simpática. En la parasimpática suele ocurrir lo contrario.
++ morfo-15-008 | La cercanía habitual del ganglio parasimpático al órgano se asocia con una fibra posganglionar corta. | La fibra preganglionar recorre la mayor parte de la distancia al órgano.
+
++ morfo-15-013 | La acetilcolina liberada en un ganglio autónomo actúa sobre receptores nicotínicos de la neurona posganglionar. | Los ganglios de ambas divisiones tienen receptores colinérgicos nicotínicos.
++ morfo-15-014 | En los efectores parasimpáticos, la respuesta a la acetilcolina se media generalmente por receptores muscarínicos. | El receptor típico del efector parasimpático difiere del nicotínico ganglionar.
+
+- @597;División simpática · Médula suprarrenal;epinefrina (adrenalina), 15% de norepinefrina (noradrenalina) | Ante un estímulo simpático, la médula suprarrenal libera solo acetilcolina a la sangre. | La médula libera adrenalina y noradrenalina. La acetilcolina participa en la señal que llega a ella.
+- morfo-15-018 | La contracción pupilar que reduce el diámetro de la pupila corresponde a la respuesta simpática típica. | La miosis es parasimpática. La respuesta simpática tiende a dilatar la pupila.
+
+[morfo-16]
+- morfo-16-007 | Un receptor de adaptación rápida mantiene su descarga con la misma intensidad durante todo un estímulo constante. | Su respuesta destaca al cambiar el estímulo y decae si se mantiene.
++ morfo-16-008 | Un receptor de adaptación lenta puede seguir informando de un estímulo que permanece. | Continúa respondiendo mientras dura el estímulo, aunque la descarga pueda cambiar.
+
++ morfo-16-017 | Desde el tímpano hacia el oído interno, la vibración pasa primero al martillo y luego al yunque y al estribo. | Ese es el orden de transmisión en la cadena de huesecillos.
+- morfo-16-022 | La perilinfa llena el interior del laberinto membranoso. | El líquido interior es la endolinfa. La perilinfa rodea al laberinto membranoso.
+
++ morfo-16-024 | Un giro de la cabeza proporciona un estímulo que pueden detectar los conductos semicirculares. | Estos conductos responden a la aceleración angular.
++ morfo-16-025 | El utrículo y el sáculo aportan información durante una aceleración lineal. | Sus receptores también informan de la posición respecto de la gravedad.
+
+- morfo-16-035 | El disco óptico produce un punto ciego porque contiene bastones, pero carece de conos. | En el punto de salida del nervio óptico faltan ambos tipos de fotorreceptor.
+- morfo-16-038 | Si la luz de un objeto distante se enfoca por delante de la retina, el defecto es hipermetropía. | El enfoque anterior corresponde a miopía. En hipermetropía el foco quedaría detrás de la retina.
+
+[morfo-17]
++ morfo-17-005 | Un receptor de una hormona esteroidea puede encontrarse en el núcleo o en el citoplasma de la célula diana. | Estos receptores se localizan dentro de la célula y pueden influir en la expresión de genes.
+- morfo-17-006 | Muchas hormonas peptídicas inician su acción uniéndose directamente a receptores intracelulares. | Por lo general, reconocen receptores en la membrana plasmática.
+
+- @669;17.2 Hormonas de la neurohipófisis;Se almacenan en la neurohipófisis y se liberan de allí | La neurohipófisis sintetiza oxitocina y hormona antidiurética antes de liberarlas. | Las hormonas se sintetizan en el hipotálamo y llegan a la neurohipófisis para su liberación.
++ @670;17.2 Hormonas de la neurohipófisis;Aumenta la retención de agua en los riñones | Al favorecer la reabsorción renal de agua, la hormona antidiurética reduce la cantidad que se pierde en orina. | El efecto aumenta la recuperación de agua desde el filtrado.
+
++ morfo-17-017 | Las células parafoliculares tiroideas son la fuente de calcitonina. | Estas células también se denominan células C.
++ morfo-17-019 | La parathormona contribuye a elevar la concentración sanguínea de calcio. | El efecto neto de la PTH es aumentar el calcio circulante.
+
+- morfo-17-021 | La fuente principal de aldosterona es la zona reticular, la más interna de la corteza suprarrenal. | La aldosterona procede sobre todo de la zona glomerulosa, la capa externa.
+- morfo-17-023 | En el riñón, la aldosterona aumenta la pérdida de sodio y reduce la secreción de potasio. | El efecto descrito es mayor reabsorción de sodio y mayor secreción de potasio.
+
+[morfo-18]
+- morfo-18-003 | El hematócrito expresa el porcentaje de todo el volumen sanguíneo que corresponde al plasma. | El hematócrito mide la fracción ocupada por eritrocitos.
++ morfo-18-007 | Tras permitir la coagulación y separar el coágulo, el líquido restante es suero y carece del fibrinógeno del plasma. | El fibrinógeno se utiliza para formar fibrina durante la coagulación.
+
++ morfo-18-005 | Una disminución de la albúmina compromete una fuerza que normalmente favorece retener agua en el plasma. | La albúmina contribuye a la presión osmótica coloide de la sangre.
+- morfo-18-011 | Si cada molécula de hemoglobina transporta oxígeno al máximo de su capacidad, solo se une a una molécula de O₂. | Una hemoglobina tiene cuatro grupos hemo y puede transportar cuatro moléculas de oxígeno.
+
+- morfo-18-018 | Una persona del grupo A tiene habitualmente anticuerpos anti-A en el plasma. | El grupo A presenta antígeno A en sus eritrocitos y anticuerpos anti-B.
+- morfo-18-020 | Clasificar una muestra como Rh positiva significa que los eritrocitos carecen de antígeno D. | El Rh positivo indica presencia del antígeno D.
+
++ morfo-18-027 | Durante la coagulación, la trombina transforma fibrinógeno soluble en fibrina. | La fibrina participa en la malla que estabiliza el coágulo.
++ morfo-18-029 | La plasmina puede descomponer la fibrina durante la disolución del coágulo. | Degrada la red de fibrina en el proceso de fibrinólisis.
+
+[morfo-19]
++ morfo-19-011 | Durante la sístole ventricular, las cuerdas tendinosas ayudan a evitar que las válvulas auriculoventriculares se vuelvan hacia las aurículas. | Al tensarse con los músculos papilares, limitan el prolapso de las valvas.
+- morfo-19-013 | La sangre que retorna por el seno coronario desemboca en la aurícula izquierda. | El seno coronario vierte su contenido en la aurícula derecha.
+
+- morfo-19-016 | El retraso en el nodo auriculoventricular hace que los ventrículos se contraigan antes de completarse su llenado. | La demora da tiempo al llenado ventricular antes de la contracción.
++ morfo-19-018 | El complejo QRS registra la despolarización ventricular. | Señala la activación eléctrica de los ventrículos. La onda T corresponde a su repolarización.
+
++ morfo-19-020 | El primer ruido cardíaco se asocia al cierre de las válvulas auriculoventriculares. | Ocurre al inicio de la sístole ventricular, cuando cierran mitral y tricúspide.
++ morfo-19-021 | El cierre de las válvulas semilunares contribuye al segundo ruido cardíaco. | Las válvulas aórtica y pulmonar se cierran al terminar la eyección.
+
+- morfo-19-025 | A frecuencia cardíaca constante, expulsar más sangre por latido reduce el gasto cardíaco. | El gasto es el producto de la frecuencia por el volumen sistólico. Si solo aumenta este último, aumenta el producto.
+- morfo-19-029 | La presión que el ventrículo debe superar para expulsar sangre se denomina precarga. | Se llama poscarga. La precarga se refiere al estiramiento previo a la contracción.
+
+[morfo-20]
+- morfo-20-010 | Para calcular la presión de pulso se suma la presión sistólica a la diastólica. | La presión de pulso es la diferencia entre las dos.
++ morfo-20-011 | Con 120/75 mmHg, la fórmula de reposo del libro estima la presión arterial media en unos 90 mmHg. | La presión de pulso es 45 mmHg. Se suma un tercio de ella a la diastólica de 75 mmHg.
+
++ morfo-20-013 | Con el resto de las variables constantes, estrechar el radio del vaso eleva la resistencia al flujo. | Un descenso del radio aumenta de forma marcada la resistencia.
+- morfo-20-014 | Si aumenta la viscosidad y se conserva el mismo calibre, disminuye la resistencia al flujo. | Una sangre más viscosa ofrece mayor resistencia al desplazamiento.
+
++ morfo-20-019 | La presión hidrostática de la sangre tiende a impulsar líquido hacia fuera del capilar. | Esta presión contribuye al componente de filtración.
++ morfo-20-020 | Las proteínas plasmáticas aportan una presión osmótica que favorece el retorno de agua al capilar. | La presión osmótica coloide se opone a la pérdida de líquido del capilar.
+
+- morfo-20-021 | El exceso de líquido intersticial retorna a la sangre exclusivamente por los mismos capilares de los que se filtró. | La vía linfática recoge el excedente y lo devuelve a la circulación.
+- morfo-20-023 | La contracción de los músculos de la pierna bloquea el retorno venoso porque sus válvulas dirigen la sangre hacia el pie. | La contracción comprime las venas y sus válvulas ayudan a impulsar la sangre hacia el corazón.
+
+[morfo-21]
+- morfo-21-005 | El conducto linfático derecho recoge la linfa del miembro superior izquierdo y de ambos lados de la cabeza. | Drena el miembro superior derecho y el lado derecho de cabeza, cuello y tórax.
++ morfo-21-006 | Un ganglio linfático puede filtrar la linfa antes de que vuelva a la circulación venosa. | La linfa atraviesa los ganglios, donde se retiene material y se facilita la vigilancia inmunitaria.
+
++ morfo-21-008 | El timo es el sitio donde maduran los linfocitos T. | Estas células completan allí etapas de diferenciación y selección.
+- morfo-21-009 | Los linfocitos B completan su maduración normalmente en el timo. | La médula ósea es su principal sitio de maduración.
+
++ morfo-21-013 | Una célula NK puede actuar contra una célula tumoral sin sensibilización específica previa. | Las NK pertenecen a la defensa innata y pueden destruir células alteradas.
++ morfo-21-022 | La memoria inmunitaria permite que una exposición posterior al mismo antígeno produzca una respuesta más rápida. | La respuesta secundaria se apoya en células de memoria generadas durante la exposición previa.
+
+- morfo-21-027 | Transferir anticuerpos ya formados provoca inmunidad activa en quien los recibe. | La inmunidad activa requiere que la propia persona monte la respuesta.
+- morfo-21-028 | La protección pasiva se define por la formación de anticuerpos a partir de la propia respuesta al antígeno. | En la protección pasiva se reciben anticuerpos elaborados por otra fuente.
+
+[morfo-22]
++ morfo-22-006 | La hoja pleural que acompaña estrechamente la superficie del pulmón es la visceral. | La pleura visceral recubre directamente el órgano.
+- morfo-22-007 | La pleura que tapiza la cara interna de la pared torácica es la visceral. | La hoja que reviste la pared es la parietal.
+
+- morfo-22-008 | Los neumocitos tipo II forman la mayor parte de la superficie alveolar especializada para el intercambio gaseoso. | La superficie de intercambio está cubierta sobre todo por neumocitos tipo I.
++ morfo-22-010 | Una reducción del surfactante elimina parte del efecto que contrarresta la tensión superficial alveolar. | El surfactante reduce la tensión en la interfaz aire-líquido y ayuda a mantener abierto el alvéolo.
+
++ morfo-22-013 | Para que entre aire durante la inspiración, la presión intrapulmonar cae por debajo de la atmosférica. | El gradiente impulsa el aire desde el exterior hasta los pulmones.
++ @900;22.2 Espiración;La espiración relajada es un proceso pasivo | La espiración tranquila puede producirse por el retroceso elástico sin reclutar activamente los músculos espiratorios. | Al cesar el esfuerzo inspiratorio, el retroceso reduce el volumen pulmonar y favorece la salida de aire.
+
+- morfo-22-022 | La mayor parte del CO₂ se transporta unido al hierro de los grupos hemo de la hemoglobina. | La fracción más grande se transporta en forma de bicarbonato.
+- morfo-22-024 | Si sube el CO₂ y baja el pH en un tejido, aumenta la afinidad de la hemoglobina por el oxígeno. | Esas condiciones reducen la afinidad y facilitan la descarga de oxígeno.
+
+[morfo-23]
+- morfo-23-004 | El corpúsculo renal se compone del asa de la nefrona y del túbulo distal. | Sus partes son el glomérulo y la cápsula glomerular.
++ morfo-23-008 | Los podocitos forman parte de la capa de la cápsula aplicada a los capilares del glomérulo. | Son células de la capa visceral y sus prolongaciones participan en la filtración.
+
++ @933;23.3 Filtro glomerular;Los pedículos tienen ranuras de filtración | Antes de llegar al espacio capsular, el líquido filtrado atraviesa el endotelio, la membrana basal y las hendiduras entre pedicelos. | Esas capas constituyen la barrera glomerular a lo largo de la vía de filtración.
+- morfo-23-010 | Los eritrocitos atraviesan normalmente la barrera glomerular junto con las proteínas plasmáticas de mayor tamaño. | La barrera retiene las células y la mayor parte de las proteínas.
+
++ morfo-23-015 | El segmento que recupera la mayor fracción de agua y solutos filtrados es el túbulo contorneado proximal. | Es el primer segmento tubular y tiene una gran capacidad de reabsorción.
++ morfo-23-018 | La rama ascendente gruesa puede reabsorber sales sin que el agua la siga a través de su pared. | La pared de esa rama es poco permeable al agua mientras transporta sales.
+
+- morfo-23-021 | La mácula densa vierte renina, mientras que las células yuxtaglomerulares detectan el NaCl tubular. | La renina procede de las células yuxtaglomerulares. La mácula densa monitoriza el NaCl tubular.
+- morfo-23-028 | El esfínter uretral externo está bajo control exclusivamente involuntario. | El externo puede controlarse voluntariamente.
+
+[morfo-24]
++ morfo-24-001 | El compartimento intracelular almacena más agua que el conjunto de los compartimentos extracelulares. | Cerca del 65 % del agua corporal está dentro de las células.
+- morfo-24-005 | El Na⁺ predomina entre los cationes del líquido intracelular. | El K⁺ es el catión predominante dentro de las células y el Na⁺ predomina fuera.
+
+- morfo-24-007 | Cuando aumenta la osmolaridad extracelular, se reduce la señal osmótica que estimula la sed. | Una mayor osmolaridad extracelular estimula la sed.
++ morfo-24-011 | El péptido natriurético auricular favorece la eliminación renal de sodio. | Su efecto natriurético aumenta la excreción de sodio.
+
++ morfo-24-013 | Si el líquido extracelular se vuelve hipertónico, el agua puede salir de las células y disminuir su volumen. | La diferencia osmótica favorece el movimiento neto de agua hacia fuera.
++ morfo-24-014 | La hipotonía extracelular puede hacer que aumente el volumen de las células. | El agua entra por ósmosis hacia el interior relativamente más concentrado.
+
+- morfo-24-029 | La compensación respiratoria de una acidosis metabólica comienza disminuyendo la ventilación para retener CO₂. | La compensación aumenta la ventilación y favorece la eliminación de CO₂.
+- morfo-24-030 | Una respuesta renal que corrige la acidosis consiste en perder bicarbonato y retener H⁺. | Se elimina H⁺ y se conserva o genera bicarbonato para contribuir a recuperar el pH.
+
+[morfo-25]
+- morfo-25-002 | El plexo mientérico regula la secreción mucosa como función principal y apenas participa en la motilidad. | El plexo mientérico interviene principalmente en el control de la motilidad.
++ morfo-25-003 | El plexo submucoso influye sobre secreciones y circulación local de la mucosa. | Su función se vincula a la actividad de la mucosa.
+
++ morfo-25-009 | Las células parietales del estómago secretan tanto ácido clorhídrico como factor intrínseco. | La misma población de células participa en la acidificación y aporta factor intrínseco.
+- morfo-25-010 | Las células principales son la fuente directa de ácido clorhídrico que activa sus productos. | Las principales liberan pepsinógeno. El ácido procede de las células parietales.
+
+- morfo-25-023 | La secretina actúa principalmente contrayendo la vesícula biliar para liberar bilis. | La secretina estimula la secreción pancreática de bicarbonato.
+- morfo-25-024 | La colecistocinina inhibe las enzimas pancreáticas al mismo tiempo que relaja la vesícula biliar. | Estimula la secreción enzimática y favorece la contracción de la vesícula.
+
++ morfo-25-027 | Una parte de los lípidos absorbidos sale del intestino en quilomicrones a través de la linfa. | Los quilomicrones empaquetados en los enterocitos entran en los vasos linfáticos intestinales.
++ @1006;25.4 Circulación enterohepática;los ácidos biliares se reabsorbe en el íleon | El íleon participa en recuperar sales biliares que pueden regresar al hígado. | La absorción ileal es parte de la circulación enterohepática de las sales biliares.
+
+[morfo-26]
++ morfo-26-003 | Para una masa igual de grasa y carbohidratos, la grasa proporciona más energía según los valores del texto. | Un gramo de grasa aporta alrededor de 9 kcal, frente a unas 4 kcal por gramo de carbohidrato.
+- morfo-26-004 | Un nutriente es esencial si el organismo puede sintetizarlo en cantidad suficiente aunque no lo reciba de la dieta. | La condición es la necesidad de aporte dietético porque la síntesis resulta insuficiente.
+
+- morfo-26-012 | La glucólisis se realiza dentro de la matriz mitocondrial. | La glucólisis tiene lugar en el citosol.
++ morfo-26-013 | La ganancia neta de la glucólisis por cada glucosa es de dos ATP. | La ganancia neta resulta de restar el ATP que la vía consume del que produce.
+
++ morfo-26-017 | La cadena respiratoria se encuentra en la membrana mitocondrial interna. | Allí se organizan los complejos por los que se transfieren electrones.
++ morfo-26-019 | El gradiente de protones proporciona energía para que la ATP sintasa forme ATP. | El flujo de protones a través de la enzima se acopla a la síntesis de ATP.
+
+- morfo-26-026 | La desaminación de un aminoácido consiste en retirar su grupo carboxilo. | El grupo que se retira en la desaminación es el amino.
+- morfo-26-029 | Durante el estado posabsortivo, el glucagón estimula principalmente el almacenamiento de reservas, como la insulina después de una comida. | En el estado posabsortivo, el glucagón favorece movilizar reservas.
+
+[morfo-27]
+- morfo-27-006 | La barrera hematotesticular se forma principalmente por uniones entre las células de Leydig. | Se forma por uniones herméticas entre células sustentaculares de Sertoli.
++ morfo-27-009 | El plexo pampiniforme ayuda a enfriar la sangre arterial antes de que llegue al testículo. | La proximidad entre venas y arterias permite intercambio térmico.
+
++ morfo-27-012 | Durante la espermiogénesis una espermátide se transforma en espermatozoide. | Es una etapa de diferenciación que sigue a la producción de espermátides por meiosis.
+- morfo-27-013 | El acrosoma contiene las mitocondrias que suministran energía para mover el flagelo. | El acrosoma contiene enzimas relacionadas con la penetración de las cubiertas del ovocito. Las mitocondrias se concentran en la pieza media.
+
++ morfo-27-024 | La vía parasimpática participa en producir la erección. | La actividad parasimpática favorece el aumento del flujo de sangre hacia el tejido eréctil.
++ morfo-27-026 | La emisión seminal implica principalmente actividad simpática. | La actividad simpática favorece el paso de secreciones y espermatozoides hacia la uretra.
+
+- morfo-27-028 | En el testículo, el efecto principal de la LH es estimular a las células de Sertoli. | La LH estimula a las células de Leydig.
+- morfo-27-030 | La inhibina aumenta la secreción de FSH como parte de una retroalimentación positiva. | La inhibina reduce la secreción de FSH mediante retroalimentación.
+
+[morfo-28]
++ morfo-28-006 | En el momento habitual de la ovulación, el ovocito secundario permanece detenido en metafase II. | La segunda división meiótica todavía no termina.
+- morfo-28-007 | El ovocito completa la meiosis II antes de la ovulación, sin estímulo de la fecundación. | La fecundación desencadena la finalización de la segunda meiosis.
+
+- morfo-28-012 | Las contracciones uterinas del parto se originan en la capa funcional del endometrio. | Se originan en la capa muscular del útero, el miometrio.
++ morfo-28-014 | Tras la menstruación, la capa basal permite recuperar la capa funcional del endometrio. | La basal permanece después del desprendimiento y sirve para regenerar la capa superficial.
+
++ morfo-28-018 | Tras la ovulación, el cuerpo lúteo se convierte en una fuente importante de progesterona. | La progesterona es su principal secreción durante la fase lútea.
++ morfo-28-022 | La caída de progesterona y estrógenos contribuye al inicio de la menstruación. | Al perderse el apoyo hormonal, se desencadena el desprendimiento de la capa funcional.
+
+- morfo-28-025 | La prolactina se encarga de expulsar la leche, mientras que la oxitocina se encarga de producirla. | La prolactina favorece la síntesis de leche y la oxitocina su eyección.
+- morfo-28-027 | El calostro es una secreción tardía que aparece al agotarse los anticuerpos de la leche. | Es la secreción inicial y contiene abundantes proteínas y anticuerpos.
+
+[morfo-29]
+- morfo-29-003 | La reacción acrosómica es el mecanismo del ovocito que impide la entrada de espermatozoides adicionales. | La reacción acrosómica libera enzimas del espermatozoide. El bloqueo de la polispermia se vincula a la reacción cortical del ovocito.
++ morfo-29-004 | La reacción cortical contribuye a impedir la entrada de espermatozoides adicionales. | La modificación de las cubiertas del ovocito reduce la posibilidad de polispermia.
+
++ morfo-29-005 | En la segmentación temprana, aumenta el número de células sin un aumento importante del tamaño total. | Las divisiones reparten el material inicial en blastómeros más pequeños.
+- morfo-29-007 | La mórula se identifica por una gran cavidad interna rodeada de células. | La mórula es una masa sólida. La cavidad aparece en el blastocisto.
+
++ morfo-29-009 | La masa celular interna del blastocisto contribuye principalmente a formar el embrión. | El embrioblasto ocupa el interior del blastocisto y aporta las células del embrión.
++ morfo-29-010 | La capa externa del blastocisto participa en la formación de la placenta. | El trofoblasto contribuye a las estructuras placentarias fetales.
+
+- morfo-29-013 | El sistema nervioso se origina principalmente del endodermo, igual que la epidermis. | Tanto el sistema nervioso como la epidermis se originan del ectodermo.
+- morfo-29-015 | Gran parte del revestimiento del tubo digestivo se origina del mesodermo. | Gran parte de ese epitelio procede del endodermo.
+
+[biologia-02]
++ bio-02-003 | Para observar células vivas sin recurrir a una tinción no vital, puede emplearse contraste de fases. | Esta técnica vuelve visibles diferencias ópticas de la muestra sin exigir esa tinción.
+- bio-02-004 | En fluorescencia, la luz que emite el fluorocromo tiene una longitud de onda menor que la de excitación. | La emisión se produce a una longitud de onda mayor que la de excitación.
+
+- bio-02-006 | En una imagen electrónica de transmisión, las zonas electrodensas dejan pasar más electrones y aparecen claras. | Las regiones electrodensas dispersan más electrones y se ven oscuras.
++ bio-02-013 | En una inmunotinción indirecta, el anticuerpo secundario puede portar el marcador que permite localizar al primario. | El primario reconoce el antígeno y el secundario marcado reconoce al primario.
+
++ bio-02-017 | En un ciclo de PCR, los cebadores se aparean con sus secuencias diana después de separar las cadenas de ADN. | La hibridación sigue a la desnaturalización y precede a la extensión.
++ bio-02-022 | En la secuenciación de Sanger, incorporar un didesoxirribonucleótido detiene la elongación de esa cadena. | El nucleótido incorporado no permite formar el siguiente enlace de la cadena.
+
+- bio-02-029 | Para escoger una sonda de FISH basta conocer el número total de cromosomas, aun sin saber qué región se busca. | La sonda debe reconocer una secuencia de la región que se pretende localizar.
+- bio-02-030 | La hibridación genómica comparada detecta una translocación equilibrada porque esta incrementa la cantidad total de ADN. | Los reordenamientos equilibrados no producen ganancias ni pérdidas que detecte esa comparación.
+
+[biologia-03]
+- bio-03-015 | A igualdad de las otras condiciones, acortar las cadenas y añadir dobles enlaces cis eleva la temperatura de fusión de la membrana. | Las cadenas cortas y los dobles enlaces cis favorecen la fluidez a temperaturas menores.
++ bio-03-016 | Los esteroles pueden reducir el paso a través de la bicapa de ciertos solutos polares. | Al intercalarse entre lípidos, disminuyen la permeabilidad a esos solutos.
+
++ bio-03-011 | La cardiolipina caracteriza, entre otras, a la membrana interna mitocondrial. | Este fosfolípido también se encuentra en membranas bacterianas.
+- bio-03-017 | En el retículo liso, los glicerofosfolípidos se sintetizan inicialmente en la cara orientada a la luz del retículo. | La síntesis tiene lugar en la hemimembrana que mira al citoplasma.
+
++ bio-03-019 | Durante la activación plaquetaria, la fosfatidilserina puede pasar a quedar expuesta en la superficie externa. | La exposición refleja un cambio en la asimetría entre ambas caras de la membrana.
++ bio-03-023 | Una porina puede delimitar su canal con una estructura de barril β. | Las láminas β se organizan formando el barril transmembrana.
+
+- bio-03-021 | Las proteínas integrales suelen separarse intactas de una membrana usando solo un cambio de fuerza iónica que conserva la bicapa. | Para extraer proteínas integrales se requiere disgregar la bicapa, por ejemplo con detergentes.
+- bio-03-026 | En el eritrocito, la banda 3 se une a la espectrina a través de disacaridasas del glucocáliz. | La anquirina enlaza la banda 3 con la espectrina del citoesqueleto.
+
+[biologia-04]
++ bio-04-010 | La vasopresina favorece que AQP2 se incorpore a la membrana apical de la célula renal. | La incorporación aumenta la permeabilidad apical al agua.
+- bio-04-012 | Entre dos transportadores del mismo sustrato, un valor menor de Km indica menor afinidad. | En la comparación del texto, un valor menor indica mayor afinidad.
+
+- bio-04-013 | Transportar al mismo tiempo un soluto hacia dentro y otro hacia fuera se denomina simporte. | Ese acoplamiento es antiporte. El simporte mueve los solutos en el mismo sentido.
++ bio-04-019 | El cotransportador Na⁺/glucosa puede usar la energía del gradiente de Na⁺ que genera la ATPasa Na⁺/K⁺. | El gradiente de sodio impulsa el transporte acoplado, sin que el cotransportador hidrolice el ATP directamente.
+
++ bio-04-016 | Bombear Ca²⁺ al interior del retículo ayuda a mantener baja su concentración en el citoplasma. | La ATPasa retira calcio del citosol y lo acumula dentro del retículo.
++ bio-04-017 | Un transportador MDR puede contribuir a la resistencia al reducir la acumulación intracelular de un fármaco. | Lo expulsa de la célula y con ello limita su concentración interna.
+
+- bio-04-024 | El canal de Na⁺ dependiente de voltaje carece de compuerta de inactivación en el modelo del texto. | Tiene compuertas de activación e inactivación.
+- bio-04-027 | En el período refractario relativo es imposible disparar otro potencial, independientemente de la intensidad del estímulo. | Durante ese período un estímulo de intensidad suficiente sí puede provocarlo.
+
+[biologia-05]
+- bio-05-004 | Después de liberar su LDL, los receptores de LDL se destinan necesariamente a degradación junto con la carga. | Los receptores pueden reciclarse a la membrana tras separarse de la carga.
++ bio-05-008 | Una ATPasa de protones tipo V ayuda a acidificar la luz del endosoma. | Transporta protones al interior y contribuye a reducir el pH.
+
++ bio-05-010 | En el endosoma temprano pueden separarse componentes endocitados que seguirán destinos diferentes. | Este compartimento actúa como estación de clasificación.
+- bio-05-011 | Si una carga ingresa por un lado de un epitelio y se libera por el otro, la ruta termina por reciclaje al mismo dominio. | El traslado entre dominios de la membrana se denomina transcitosis.
+
++ bio-05-017 | La exposición de fosfatidilserina puede ayudar a reconocer una célula apoptótica para retirarla. | Este fosfolípido expuesto actúa como señal de reconocimiento.
++ bio-05-024 | Las proteínas Rab ayudan a acercar vesículas a su membrana diana antes de la fusión. | Sus efectores coordinan el acercamiento y facilitan la acción de las SNARE.
+
+- bio-05-025 | La acetilcolinesterasa vesicular funciona como el sensor de Ca²⁺ que dispara la exocitosis sináptica. | En la vesícula, el sensor de Ca²⁺ descrito es la sinaptotagmina.
+- bio-05-029 | La hidrólisis de acetilcolina produce noradrenalina y acetato en la hendidura. | La acetilcolinesterasa produce colina y acetato.
+
+[biologia-06]
++ bio-06-010 | Los hemidesmosomas ayudan a evitar que un epitelio se desprenda de su soporte cuando se estira. | Fijan las células epiteliales a la lámina basal y favorecen la estabilidad del tejido.
+- bio-06-006 | Un desmosoma forma un cinturón continuo alrededor de todo el borde celular. | El desmosoma es una unión puntual. No rodea por completo la célula.
+
+- bio-06-017 | El canal de una unión comunicante se forma por el encuentro de cadherinas de dos células vecinas. | El canal se organiza mediante conexones, formados por conexinas.
++ bio-06-016 | La claudina 16 interviene en el paso paracelular de magnesio. | Forma parte de uniones estrechas que regulan el paso selectivo entre células.
+
++ bio-06-020 | Una tinción dirigida al colágeno IV puede ayudar a localizar la membrana basal. | El colágeno IV es uno de sus componentes característicos.
++ bio-06-022 | El nidógeno enlaza componentes como laminina y colágeno IV en la membrana basal. | La entactina o nidógeno contribuye a conectar esas redes de la matriz.
+
+- bio-06-024 | El tropocolágeno se forma cuando al procolágeno se le añaden propéptidos en los extremos. | Los propéptidos terminales se eliminan para formar tropocolágeno.
+- bio-06-028 | El hialuronato se diferencia por ser el glucosaminoglucano con mayor sulfatación. | El hialuronato es el glucosaminoglucano no sulfatado.
+
+[biologia-07]
+- bio-07-005 | La forma Ran-GTP predomina en el citoplasma y Ran-GDP en el núcleo. | Ran-GTP predomina en el núcleo y Ran-GDP en el citoplasma.
++ bio-07-006 | Una señal de localización nuclear puede ser reconocida durante la importación mediada por importinas. | Las importinas contribuyen a transportar al núcleo proteínas con esa señal.
+
++ bio-07-008 | El octámero de un nucleosoma contiene dos copias de cada una de las histonas H2A, H2B, H3 y H4. | Esas cuatro parejas forman el núcleo proteico alrededor del que se organiza el ADN.
+- bio-07-012 | La desacetilación de histonas se asocia con la apertura de cromatina y la activación de la transcripción. | El texto la relaciona con compactación y represión transcripcional.
+
++ bio-07-014 | Una región que permanece condensada en los distintos tipos celulares puede corresponder a heterocromatina constitutiva. | La constitutiva se mantiene condensada, a diferencia de la facultativa.
++ bio-07-015 | Un cromosoma X inactivado puede verse como un corpúsculo de Barr. | Es el resultado de empaquetar el cromosoma X inactivo.
+
+- bio-07-029 | Los fragmentos de Okazaki se forman en la hebra que puede sintetizarse de modo continuo hacia la horquilla. | Se producen en la hebra retrasada, que se sintetiza de modo discontinuo.
+- bio-07-035 | Sustituir una purina por una pirimidina es una transición. | Ese intercambio es una transversión. En una transición se conserva el tipo de base.
+
+[biologia-08]
++ bio-08-013 | Si un factor facilita reclutar la ARN polimerasa al promotor, puede actuar como activador de la transcripción. | Aumenta la probabilidad de que se ensamble la maquinaria para iniciar la síntesis de ARN.
+- bio-08-015 | La hipermetilación del promotor de p16 facilita su transcripción al dejarlo más accesible. | El cambio descrito se asocia al silenciamiento de p16.
+
+- bio-08-018 | El ARNr 5 S se obtiene por escisión del precursor 45 S en el nucléolo. | El 5 S se transcribe por separado y fuera del nucléolo.
++ bio-08-026 | Ribonucleoproteínas nucleolares pequeñas participan en procesar el precursor ribosómico 45 S. | Las snoRNP intervienen en la maduración del precursor nucleolar.
+
++ bio-08-022 | En la maduración de muchos transcritos nucleares, el espliceosoma retira intrones. | El corte y empalme elimina esas secuencias y liga exones.
++ bio-08-023 | Si se seleccionan combinaciones diferentes de exones, un mismo gen puede originar productos proteicos distintos. | El empalme alternativo permite generar más de un ARNm a partir del transcrito.
+
+- bio-08-024 | La caperuza 5′ acelera la degradación del ARNm al facilitar el acceso de ARNasas. | La caperuza contribuye a proteger el transcrito y aumentar su estabilidad.
+- bio-08-030 | Los micro-ARN elevan habitualmente la expresión de sus dianas porque estabilizan el ARNm y estimulan la traducción. | Pueden reducir la expresión al bloquear la traducción o favorecer la degradación de la diana.
+
+[biologia-09]
+- bio-09-007 | Durante la elongación, el sitio A se especializa en liberar el ARNt que ya cedió su cadena peptídica. | El sitio A recibe el aminoacil-ARNt entrante. La salida ocurre por el sitio E.
++ bio-09-011 | El ARNt iniciador se ubica en el sitio P durante la iniciación eucariota. | Se incorpora en P antes de que el siguiente aminoacil-ARNt llegue a A.
+
++ bio-09-012 | La formación del enlace peptídico depende de actividad catalítica del ARNr de la subunidad mayor. | El centro peptidil-transferasa del ribosoma cataliza la unión de aminoácidos.
+- bio-09-014 | Al llegar a un codón de terminación, eRF1 introduce otro aminoácido en la cadena. | Es un factor de liberación. Favorece que la proteína recién sintetizada se separe del ARNt.
+
++ bio-09-018 | Las cadenas laterales hidrófobas suelen quedar hacia el interior de una proteína globular soluble. | El plegamiento reduce el contacto de esas regiones con el agua.
++ bio-09-020 | Una chaperonina en forma de barril puede ayudar al plegamiento de proteínas complejas. | El complejo TRiC/CCT aporta un entorno que favorece su plegamiento.
+
+- bio-09-021 | Una proteína sin señales de clasificación se envía necesariamente a la luz del retículo endoplasmático. | Muchas proteínas sin señal de clasificación permanecen en el citosol.
+- bio-09-027 | La proteólisis durante la maduración de la insulina indica degradación de un producto ya activo. | Los cortes de maduración convierten un precursor en un producto funcional.
+
+[biologia-10]
++ bio-10-005 | La partícula de reconocimiento de la señal puede dirigir hacia el RER la síntesis de una proteína con el péptido apropiado. | La partícula reconoce el péptido señal y ayuda a acercar el ribosoma al retículo.
+- bio-10-008 | En la N-glucosilación del RER, el oligosacárido se une a la serina de la secuencia Asn-X-Ser/Thr. | El receptor del oligosacárido es la asparagina de esa secuencia.
+
+- bio-10-010 | El ambiente del RER facilita puentes disulfuro porque favorece que los grupos tiol permanezcan reducidos. | Un ambiente oxidante favorece la formación de los enlaces disulfuro.
++ bio-10-011 | BiP y otras chaperonas del RER contribuyen a retener proteínas cuyo plegamiento todavía no es adecuado. | Forman parte del control de calidad previo a la salida del retículo.
+
++ bio-10-018 | Una proteína que atraviesa la pila del Golgi madura desde la cara cis hacia la trans. | La entrada y la salida se organizan en caras distintas.
++ bio-10-021 | La red trans-Golgi participa en la salida de vesículas con enzimas dirigidas al compartimento lisosómico. | En esta región se clasifican cargas que se enviarán a destinos distintos.
+
+- bio-10-025 | Un pH cercano a 7,4 es el ambiente habitual de la luz lisosómica en el texto. | El lisosoma mantiene un pH ácido, de alrededor de 5.
+- bio-10-028 | La crinofagia consiste en secretar los gránulos intactos para que se degraden fuera de la célula. | Es la digestión de los propios gránulos secretores dentro del sistema lisosómico.
+
+[biologia-11]
+- bio-11-001 | Las crestas se originan en pliegues de la membrana mitocondrial externa. | Son pliegues de la membrana interna.
++ bio-11-008 | Una proteína que entra desde el citosol puede atravesar la membrana externa mediante el complejo TOM. | TOM proporciona la vía de paso por la membrana mitocondrial externa.
+
++ bio-11-010 | La liberación de citocromo c desde la mitocondria puede contribuir a formar el apoptosoma. | El citocromo c liberado interviene en la activación de la vía intrínseca.
+- bio-11-012 | La primera caspasa activada por el apoptosoma en la vía mitocondrial es la caspasa 8. | La caspasa iniciadora de esta vía es la 9.
+
++ bio-11-019 | El espacio intermembrana es más ácido que la matriz durante el funcionamiento de la cadena respiratoria. | El bombeo de protones al espacio intermembrana crea esa diferencia.
++ bio-11-021 | Los protones pueden regresar hacia la matriz por el componente F₀ de la ATP sintasa. | F₀ forma el canal que aprovecha el gradiente a través de la membrana interna.
+
+- bio-11-023 | La superóxido dismutasa reduce directamente el H₂O₂ a agua. | Convierte el superóxido en peróxido de hidrógeno. La catalasa puede degradar ese peróxido.
+- bio-11-026 | La heteroplasmia significa que todas las copias del ADN mitocondrial de una célula son iguales y mutadas. | Implica que coexisten copias de ADN mitocondrial normal y mutado.
+
+[biologia-12]
++ bio-12-006 | Un microtúbulo puede pasar de una fase de crecimiento a una pérdida rápida de subunidades. | Esa alternancia es la inestabilidad dinámica.
+- bio-12-008 | La colchicina promueve el alargamiento al favorecer que la tubulina libre se incorpore al microtúbulo. | Se une a tubulina libre e impide su incorporación normal.
+
+- bio-12-010 | La proteína tau debilita de forma habitual los microtúbulos axónicos para impedir que formen haces. | Tau los estabiliza y favorece su organización en haces.
++ bio-12-013 | Los microtúbulos cinetocóricos se acoplan a una estructura asociada al centrómero. | El sitio de unión es el cinetocoro del cromosoma.
+
++ bio-12-018 | La nexina contribuye a mantener vinculados dobletes vecinos de microtúbulos en el axonema. | Establece uniones entre dobletes adyacentes.
++ bio-12-022 | La actina F se forma por ensamblaje de subunidades de actina G. | Actina G es la forma monomérica y actina F la filamentosa.
+
+- bio-12-027 | La timosina acelera la incorporación espontánea de actina G a los filamentos. | Secuestra el monómero y limita su polimerización espontánea.
+- bio-12-032 | En músculo liso, la MLCK activa la contracción al fosforilar la cadena ligera de la actina. | La diana es la cadena ligera de miosina.
+
+[biologia-13]
+- bio-13-002 | Una célula que responde al mensajero que ella misma secreta realiza señalización paracrina. | Es señalización autocrina. La paracrina actúa sobre células vecinas.
++ bio-13-004 | Una GEF puede favorecer el paso de una GTPasa pequeña de su forma unida a GDP a la unida a GTP. | Facilita el intercambio del nucleótido y la activación de la proteína.
+
++ bio-13-007 | El óxido nítrico puede aumentar el calibre vascular al relajar músculo liso. | La relajación de la pared vascular favorece vasodilatación.
+- bio-13-025 | La guanilato ciclasa produce GMPc directamente a partir de ATP. | El sustrato de esa ciclasa es el GTP.
+
++ bio-13-021 | Al escindir PIP₂, la fosfolipasa C genera dos mensajeros, IP₃ y DAG. | La ruptura del fosfolípido produce esas dos señales.
++ bio-13-028 | En la cascada Ras-MAPK descrita, Raf se activa antes que MEK y ERK. | La secuencia es Ras, Raf, MEK y ERK.
+
+- bio-13-030 | La acumulación de PIP₃ aleja AKT de la membrana plasmática e impide su reclutamiento. | PIP₃ sirve para reclutar AKT hacia la membrana.
+- bio-13-032 | En la vía JAK-STAT, las JAK llevan por sí mismas la señal al núcleo y las STAT permanecen inactivas. | Las JAK fosforilan STAT. Estas pueden dimerizar y actuar sobre la transcripción.
+
+[biologia-14]
++ bio-14-009 | El punto de control mitótico evalúa si los cromosomas se han unido correctamente al huso. | La unión adecuada se comprueba antes de permitir la separación cromosómica.
+- bio-14-011 | La entrada en mitosis depende en el modelo del texto del complejo Cdk4-ciclina D. | El complejo que promueve la entrada en mitosis es Cdk1-ciclina B.
+
+- bio-14-016 | La unión de pRb a E2F activador estimula la transcripción de los genes de entrada en S. | Cuando pRb está unida a E2F, esos genes permanecen reprimidos.
++ bio-14-017 | La fosforilación de pRb favorece la liberación de E2F activador. | E2F liberado puede inducir genes necesarios para entrar en fase S.
+
++ bio-14-020 | Degradar la segurina permite activar separasa. | Al perder su inhibidor, la separasa puede participar en liberar la cohesión entre cromátidas.
++ bio-14-023 | Ante una lesión del ADN, p53 puede participar tanto en detener el ciclo como en activar apoptosis. | La respuesta permite frenar la proliferación y, según el daño, inducir muerte celular.
+
+- bio-14-028 | Una célula senescente conserva intacta su capacidad de división, aunque se detenga transitoriamente. | La pérdida persistente de capacidad de división caracteriza a la senescencia.
+- bio-14-029 | La quiescencia impide que la célula vuelva a dividirse aun cuando se restaure la señal mitógena. | La quiescencia puede revertirse con estímulos adecuados. La senescencia es el estado persistente.
+
+[biologia-15]
+- bio-15-011 | Los complejos sinaptonémicos comienzan a formarse en la segunda división meiótica. | Se forman durante el cigoteno de la profase I, cuando se aparean los homólogos.
++ bio-15-012 | Durante el paquiteno ocurre recombinación entre cromosomas homólogos. | Es una etapa de la primera profase meiótica asociada al intercambio de material.
+
++ bio-15-017 | Entre la primera y la segunda división meiótica no se repite la fase de replicación. | La duplicación previa del ADN sirve para ambas divisiones.
+- bio-15-018 | En la segunda división meiótica se separan principalmente los cromosomas homólogos emparejados. | En la segunda división se separan las cromátidas hermanas. Los homólogos se separan en la primera.
+
++ bio-15-024 | Los cuerpos apoptóticos son fragmentos delimitados por membrana que pueden ser fagocitados. | La fragmentación empaqueta restos celulares y facilita su retirada.
++ bio-15-025 | La exposición de fosfatidilserina puede marcar a una célula apoptótica para su reconocimiento. | El cambio desplaza el fosfolípido hacia la superficie externa de la membrana.
+
+- bio-15-026 | La vía extrínseca de apoptosis se define por iniciarse exclusivamente con la salida mitocondrial de citocromo c. | Se inicia con receptores de muerte en la membrana. La salida de citocromo c se vincula a la vía intrínseca.
+- bio-15-030 | Las caspasas se sintetizan como proteasas plenamente activas, listas para degradar sustratos. | Se producen como procaspasas inactivas y necesitan activación.
+
+[biologia-16]
++ bio-16-004 | Que un tumor permanezca localizado y no produzca metástasis concuerda con el comportamiento de un tumor benigno. | En esta clasificación, la capacidad metastásica distingue a los tumores malignos.
+- bio-16-005 | Un tumor maligno que proviene de un epitelio glandular se clasifica como adenoma. | Su denominación es adenocarcinoma.
+
+- bio-16-012 | Para que un oncogén aporte una señal proliferativa anormal siempre deben activarse los dos alelos. | Una alteración activadora de un solo alelo puede bastar.
++ bio-16-020 | En el modelo de retinoblastoma descrito se requiere alterar ambos alelos de RB1. | RB1 es un supresor tumoral y el modelo implica la pérdida de las dos copias funcionales.
+
++ bio-16-025 | La pérdida de APC puede favorecer que β-catenina se acumule en el núcleo y active genes proliferativos. | La ausencia de APC altera el mecanismo que normalmente limita su acumulación.
++ bio-16-026 | La hipermetilación puede contribuir al silenciamiento de genes supresores de tumores. | Cambiar el patrón de metilación puede modificar la expresión aunque no cambie la secuencia del gen.
+
+- bio-16-027 | Formar vasos nuevos que aporten nutrientes al tumor se denomina metástasis. | Formar vasos es angiogénesis. La metástasis implica diseminación de células tumorales.
+- bio-16-030 | Perder un antígeno tumoral reconocible facilita que los linfocitos T detecten esa misma diana. | La pérdida de antígeno puede dificultar el reconocimiento y favorecer el escape inmunitario.
+
+[biologia-17]
+- bio-17-008 | La región constante de una inmunoglobulina es la que se acopla de forma específica a su epítopo. | El sitio de unión al antígeno se forma con regiones variables aminoterminales.
++ bio-17-012 | Las dos cadenas ligeras de una inmunoglobulina pueden ser κ o λ, pero del mismo tipo entre sí. | Cada inmunoglobulina tiene dos cadenas ligeras del mismo tipo.
+
++ bio-17-015 | El receptor de un linfocito T reconoce un péptido en el contexto de la molécula del CPH que lo presenta. | La unidad reconocida es el complejo de péptido y CPH.
+- bio-17-016 | La cooperación del correceptor CD4 se establece con CPH de clase I y la de CD8 con clase II. | CD4 interactúa con clase II y CD8 con clase I.
+
++ bio-17-022 | La cadena invariante ocupa y protege la hendidura de CPH II durante su síntesis en el RER. | Evita la ocupación prematura del sitio destinado al péptido.
++ bio-17-023 | La interacción entre B7 y CTLA-4 puede enviar una señal inhibitoria al linfocito T. | Esta interacción limita su activación.
+
+- bio-17-030 | Los linfocitos T CD8⁺ destruyen sus dianas principalmente mediante la secreción de anticuerpos propios. | La citotoxicidad descrita emplea perforinas y granzimas.
+- bio-17-032 | El reconocimiento de CPH I normal en una célula diana es siempre una señal de ataque para una NK. | El reconocimiento del CPH I normal aporta una señal inhibitoria a la NK.
+
+[biologia-18]
++ bio-18-001 | La autorrenovación a largo plazo y la capacidad de generar descendencia diferenciada son dos propiedades que definen a una célula madre. | Una mantiene la población original y la otra permite generar células especializadas.
+- bio-18-003 | Las células madre embrionarias se obtienen exclusivamente de la cubierta externa del blastocisto. | Se obtienen de la masa celular interna.
+
+- bio-18-007 | Una célula pluripotente solo puede generar descendientes de una capa embrionaria. | La pluripotencia abarca células de ectodermo, mesodermo y endodermo.
++ bio-18-012 | Una población de células embrionarias indiferenciadas puede presentar un riesgo tumorigénico al usarse en terapia. | Ese riesgo es una limitación del empleo de células sin diferenciar.
+
++ bio-18-014 | Tras una transferencia nuclear somática a un ovocito, el ADN mitocondrial procede del ovocito receptor en el esquema descrito. | El material nuclear y las mitocondrias tienen orígenes diferentes en ese procedimiento.
++ bio-18-017 | Las iPS derivadas de una persona con una enfermedad pueden usarse para estudiar mecanismos y probar fármacos. | Pueden generar células relevantes para modelar el trastorno en el laboratorio.
+
+- bio-18-021 | Las células madre mesenquimales solo producen efectos si sustituyen de forma directa a las células dañadas. | También pueden actuar mediante señales paracrinas y efectos inmunomoduladores.
+- bio-18-028 | Un soporte obtenido de otra persona de la misma especie se denomina autólogo. | Es alogénico. Autólogo se reserva para material del propio paciente.
+
+[salud-01]
++ salud-01-001 | Un programa que comprueba si cambiaron conocimientos, actitudes y prácticas está evaluando tres resultados de la educación en salud. | El compendio distingue aprender, desarrollar actitudes y adoptar prácticas saludables.
+- salud-01-002 | Si el trabajo se realiza con familias y comunidades en lugar de con pacientes individuales, deja de ser educación en salud. | La educación en salud puede dirigirse a individuos, familias y comunidades.
+
+- salud-01-003 | Un cambio breve de conducta durante una charla basta para cumplir el propósito de cambio que describe el texto. | Se busca que los cambios del estilo de vida sean sostenibles.
++ salud-01-004 | Enseñar a reconocer y actuar sobre factores que afectan la salud concuerda con la idea de control activo. | La educación busca que las personas puedan intervenir sobre sus determinantes de salud.
+
++ salud-01-006 | El enfoque biopsicosocial permite abordar la conducta y el contexto social junto con los factores biológicos. | La educación en salud considera la interacción de esas dimensiones.
++ salud-01-009 | Una intervención de promoción puede usar la educación como parte de un conjunto más amplio de acciones. | El compendio presenta la educación como una herramienta de promoción.
+
+- salud-01-008 | La educación por sí sola transforma determinantes como las condiciones de vivienda aunque no cambien los recursos ni las políticas. | Los determinantes estructurales requieren acciones que van más allá de informar o educar.
+- salud-01-011 | La educación en salud se limita a sustituir conductas individuales y excluye las prácticas colectivas. | También puede reforzar, modificar o sustituir conductas familiares y colectivas.
+
+[salud-02]
+- salud-02-003 | Para el enfoque biopsicosocial, el contexto social y la dimensión psicológica son ajenos a la explicación del proceso de salud. | El enfoque considera la interacción de factores biológicos, psicológicos y sociales.
++ salud-02-004 | Según la definición de salud de la OMS reproducida en el compendio, la ausencia de enfermedad resulta insuficiente para valorar el bienestar. | La definición incluye bienestar físico, mental y social.
+
++ salud-02-005 | Reconocer la salud como derecho humano implica que el Estado debe ocuparse de las condiciones de vida. | El texto vincula ese derecho con la obligación de garantizar condiciones dignas.
+- salud-02-007 | La transición demográfica se caracteriza por aumento de la natalidad y la mortalidad y menor esperanza de vida. | La transición descrita combina descensos de natalidad y mortalidad con aumento de la esperanza de vida.
+
++ salud-02-008 | El predominio de infecciones, desnutrición y alta mortalidad infantil corresponde al escenario inicial de la transición epidemiológica descrita. | El patrón inicial difiere del predominio de enfermedades crónicas en etapas avanzadas.
++ salud-02-009 | El mayor peso de enfermedades no transmisibles y lesiones se asocia con etapas avanzadas de esa transición. | Cambia el perfil de las principales causas de enfermedad y muerte.
+
+- salud-02-010 | Los determinantes sociales empiezan a incidir en la salud cuando se ingresa al mercado laboral. | Actúan durante todo el curso de vida, desde el nacimiento hasta el envejecimiento.
+- salud-02-016 | Si persisten causas sociales evitables de enfermedad, la equidad se alcanza limitándose a tratar los casos existentes. | Promover la equidad exige actuar sobre esas causas y garantizar oportunidades de bienestar.
+
+[salud-03]
++ salud-03-006 | Comparar el estado de salud de comunidades para detectar grupos en riesgo ayuda a fijar prioridades de salud pública. | Corresponde a evaluar y monitorizar la salud poblacional.
+- salud-03-007 | La vigilancia queda concluida al recoger datos, aunque estos no se analicen ni se comuniquen. | La secuencia incluye recolección, recopilación, análisis y difusión de los resultados.
+
+- salud-03-008 | En la formulación de programas y políticas, el compendio ubica la participación comunitaria exclusivamente después de decidir las medidas. | La formulación puede hacerse con la comunidad y las autoridades.
++ salud-03-009 | Formular una política pública de salud requiere conocimiento científico y valorar sus resultados. | El texto integra evidencia, participación comunitaria y evaluación.
+
++ salud-03-010 | Garantizar el acceso poblacional a servicios adecuados y costo-efectivos forma parte de las misiones de salud pública. | La garantía de acceso es una función junto con evaluar la salud y desarrollar políticas.
++ salud-03-014 | En la formulación de Winslow, organizar los servicios y sanear el ambiente son partes de un esfuerzo colectivo. | La definición reúne esas acciones con otras medidas de prevención, educación y protección.
+
+- salud-03-011 | La salud pública se restringe a redactar normas y delega todo el trabajo técnico y operativo a la política pública. | Como campo de acción, la salud pública tiene un componente científico, técnico y operativo.
+- salud-03-013 | La política pública de salud equivale por completo al conjunto de acciones técnicas del campo de la salud pública. | Las políticas orientan decisiones y recursos. El campo incluye las acciones que los llevan a la práctica.
+
+[salud-04]
+- salud-04-002 | Aplicar una vacuna antes de que se manifieste una enfermedad se clasifica como prevención secundaria porque protege frente a un riesgo identificado. | La vacunación es primaria porque busca evitar que aparezca la enfermedad.
++ salud-04-005 | Un programa de medición de presión para detectar hipertensión en personas sin diagnóstico es un ejemplo de prevención secundaria. | Es un tamizaje que busca detectar el problema de forma temprana.
+
++ salud-04-007 | La rehabilitación después de un infarto corresponde a prevención terciaria. | Actúa después del evento para limitar sus consecuencias y recuperar función.
+- salud-04-008 | La reinserción social de una persona con un trastorno mental establecido se clasifica como tamizaje secundario. | Se orienta a rehabilitación e integración, objetivos de la prevención terciaria.
+
++ salud-04-010 | Evitar una intervención innecesaria que podría causar daño corresponde al propósito de la prevención cuaternaria. | Busca reducir la medicalización excesiva y los riesgos de iatrogenia.
++ salud-04-003 | Facilitar el uso de agua segura para evitar que aparezcan enfermedades es una medida de prevención primaria. | La medida reduce la exposición antes de que se presente la enfermedad.
+
+- salud-04-011 | La promoción se limita a personas predispuestas a una enfermedad concreta, del mismo modo que la prevención dirigida a riesgos específicos. | La promoción se orienta al bienestar y a los determinantes de salud de manera amplia.
+- salud-04-012 | La prevención de enfermedades se dirige exclusivamente a quienes ya presentan una patología diagnosticada. | También puede dirigirse a personas o grupos con riesgo antes de que exista diagnóstico.
+
+[salud-05]
++ salud-05-001 | Dar a una comunidad medios para decidir y actuar sobre su salud concuerda con la definición de promoción de la Carta de Ottawa. | La promoción favorece que las personas ejerzan mayor control sobre su salud.
+- salud-05-004 | El alcance de la promoción se restringe a pacientes atendidos por enfermedad en un centro sanitario. | Implica a toda la población en el contexto de su vida cotidiana.
+
+- salud-05-003 | La Carta de Ottawa propone desarrollar habilidades personales, pero deja fuera las políticas saludables y los entornos favorables. | Las habilidades, las políticas y los entornos son tres de sus cinco áreas de acción.
++ salud-05-006 | Combinar educación con cambios organizativos o medidas legislativas es compatible con la promoción de la salud. | El texto presenta esos métodos como complementarios.
+
++ salud-05-009 | Reorientar los servicios hacia la promoción y la atención primaria es una de las acciones descritas. | La reorientación amplía el trabajo de los servicios más allá de la atención curativa.
++ salud-05-012 | La conferencia de Yakarta destacó las alianzas entre sectores y la participación del sector privado. | El compendio atribuye a Yakarta el énfasis en alianzas multisectoriales.
+
+- salud-05-013 | La conferencia de Bangkok dejó de lado la globalización y los determinantes sociales. | Ambos aparecen entre los retos que esa conferencia destacó.
+- salud-05-014 | Shanghai propuso separar la promoción de salud de la Agenda 2030 y mantenerla solo en el sector sanitario. | La conferencia impulsó su integración en la Agenda 2030 y en el enfoque de salud en todas las políticas.
+
+[salud-06]
+- salud-06-002 | Alma-Ata define la APS por aplicar la tecnología más compleja, aunque la comunidad no la considere aceptable. | Los métodos deben ser prácticos, científicamente fundados y socialmente aceptables.
++ salud-06-003 | El costo de la APS debe poder ser asumido por la comunidad y el país. | La definición incluye la viabilidad económica en su contexto.
+
++ salud-06-004 | La APS proporciona un primer punto de contacto para personas, familias y comunidades. | Acerca el sistema de salud a la población en su vida cotidiana.
+- salud-06-005 | La integralidad y la continuidad en el tiempo quedan fuera de las características básicas de la APS. | Integralidad y longitudinalidad figuran junto a accesibilidad y coordinación.
+
++ salud-06-011 | Contar personal disponible y revisar la infraestructura son mediciones de estructura. | La estructura examina con qué recursos humanos, físicos y organizativos se cuenta.
++ salud-06-012 | Examinar si el equipo realiza los procedimientos acordados evalúa el proceso. | El proceso se refiere a las acciones que efectivamente se llevan a cabo.
+
+- salud-06-013 | En el modelo de Donabedian, la satisfacción de los usuarios se clasifica como estructura. | La satisfacción se valora como un resultado de la atención.
+- salud-06-015 | La medicina social estudia la enfermedad sin considerar cómo las condiciones sociales pueden causarla o agravarla. | Su análisis relaciona enfermedad y problemas sociales y considera cómo contribuir a resolverlos.
+
+[salud-07]
++ salud-07-002 | Una exposición puede considerarse factor de riesgo aunque no se haya demostrado que sea una causa directa de la enfermedad. | El criterio es que se vincule a mayor probabilidad, sin exigir causalidad directa.
+- salud-07-006 | La hipertensión y la dislipidemia se clasifican como no modificables porque requieren seguimiento. | El compendio las clasifica entre los factores modificables.
+
+- salud-07-007 | Un servicio orientado a la comunidad solo debería ofrecer recuperación clínica y dejar fuera el fomento y la rehabilitación. | Los servicios abarcan fomento, protección, recuperación y rehabilitación.
++ salud-07-008 | La comunidad puede intervenir tanto en planificar como en gestionar y controlar acciones de salud. | La participación que describe el texto se extiende a varias etapas de la acción comunitaria.
+
++ salud-07-009 | Una intervención comunitaria puede considerar al mismo tiempo factores ambientales y prácticas culturales. | El compendio incluye determinantes sociales, culturales y ambientales al construir soluciones.
++ salud-07-010 | Organizar un comité vecinal de agua segura es un ejemplo de salud comunitaria. | El texto lo incluye como ejemplo de participación en una solución colectiva.
+
+- salud-07-012 | El saneamiento ambiental queda fuera de las actividades de fomento de la salud. | El saneamiento ayuda a crear condiciones colectivas que favorecen la salud.
+- salud-07-014 | Los problemas que requieren mayor complejidad diagnóstica y terapéutica se resuelven necesariamente en el primer contacto. | El texto ubica los problemas de mayor complejidad en la atención especializada y hospitalaria.
+
+[salud-08]
+- salud-08-006 | Los ODS se plantean como enunciados generales sin metas ni indicadores. | Los objetivos se despliegan en metas e indicadores que permiten concretar y seguir avances.
++ salud-08-007 | Los indicadores ayudan a comparar el progreso hacia metas acordadas. | Las metas orientan la acción y los indicadores permiten monitorizarla.
+
++ salud-08-008 | Promover el bienestar de personas de todas las edades forma parte del ODS 3. | El objetivo se refiere a una vida sana y al bienestar en todo el curso de vida.
+- salud-08-009 | La agenda de los ODS se restringe al ámbito ambiental y excluye dimensiones sociales y económicas. | Integra lo social, lo económico, lo ambiental y la gobernanza.
+
++ salud-08-010 | Fortalecer la atención primaria es una estrategia para avanzar hacia la cobertura sanitaria universal. | El compendio relaciona la APS con el acceso a servicios esenciales.
++ salud-08-011 | Coordinar acciones de salud con vivienda, educación y ambiente concuerda con la aplicación intersectorial de los ODS. | Esas áreas intervienen en determinantes que no puede resolver un sector aislado.
+
+- salud-08-012 | Para evaluar las inequidades conviene excluir del seguimiento a los grupos vulnerables y usar solo el promedio nacional. | El texto indica visibilizar a las poblaciones vulnerables y marginadas.
+- salud-08-013 | En el seguimiento de los ODS, los indicadores se diseñan para impedir la comparación de avances entre lugares. | Los indicadores comparables permiten valorar el progreso de forma consistente.
+
+[salud-09]
++ salud-09-001 | En el marco boliviano que describe el compendio, garantizar la salud es una responsabilidad indelegable del Estado. | El texto presenta la salud como un derecho fundamental y atribuye al Estado la responsabilidad de garantizarlo.
+- salud-09-004 | El modelo SAFCI propone sustituir los saberes ancestrales por la biomedicina para evitar que ambos intervengan en la atención. | Su enfoque intercultural busca articular los saberes ancestrales con la biomedicina.
+
+- salud-09-008 | El programa Mi Salud descrito se concentra en atención de alta complejidad y excluye las visitas domiciliarias. | Sus equipos realizan visitas domiciliarias, atención primaria y educación en salud.
++ salud-09-013 | Las metas e indicadores constituyen un componente distinto de las estrategias de intervención de un programa sanitario. | Un componente permite valorar el avance. El otro describe las acciones previstas para lograrlo.
+
++ salud-09-018 | El compendio identifica ciertas viviendas de adobe con techo de paja como un entorno que favorece al vector de Chagas. | Las características de la vivienda forman parte del contexto en que puede encontrarse el vector.
++ salud-09-023 | La atención prenatal puede servir como punto de detección de infecciones transmisibles de madre a hijo. | El compendio propone integrar la detección en el control prenatal.
+
+- salud-09-019 | En las zonas urbanas y periurbanas del ejemplo, la única vía que destaca el texto para el Chagas es la picadura del vector. | El material destaca la transmisión congénita, de madre a hijo, en esas zonas.
+- salud-09-020 | La vacuna SRP incluye protección contra hepatitis B en lugar de parotiditis. | La sigla reúne sarampión, rubéola y parotiditis.
+
+[salud-10]
+- salud-10-002 | Ante un brote, la epidemiología de campo tiene como objetivo inmediato elaborar un diagnóstico nacional de desigualdad. | El objetivo inmediato descrito es controlar el brote y evitar su propagación.
++ salud-10-005 | Estudiar desigualdades de salud a escala regional o nacional concuerda con el nivel de intervención de la epidemiología social. | La epidemiología social interviene en macroespacios que permiten analizar problemas poblacionales.
+
++ salud-10-010 | Investigar cómo funcionan los sistemas de atención pertenece a una rama de la investigación en salud pública. | Esta se divide en investigación epidemiológica e investigación en sistemas de salud.
+- salud-10-013 | Si el investigador asigna deliberadamente una intervención y evalúa su efecto, el estudio sigue siendo observacional. | La manipulación deliberada de las condiciones distingue el diseño experimental.
+
++ salud-10-015 | Describir cómo se distribuyen los casos por edad, lugar y momento es un objetivo descriptivo. | Los estudios descriptivos organizan la ocurrencia de eventos según persona, lugar y tiempo.
++ salud-10-016 | Los diseños de cohortes y de casos y controles se incluyen entre los estudios analíticos. | Ambos se usan para estudiar relaciones entre exposiciones y eventos.
+
+- salud-10-017 | Los ensayos comunitarios se definen por realizar la intervención exclusivamente sobre individuos aislados. | El texto contrasta ensayos comunitarios en poblaciones con ensayos clínicos en individuos.
+- salud-10-006 | El epidemiólogo social interviene únicamente mientras hay un brote activo. | El compendio sitúa parte de su trabajo en los períodos entre epidemias.
+
+[salud-11]
++ salud-11-002 | Si una idea inicial resulta muy amplia, conocer mejor el tema permite precisar el problema. | Analizar la idea y revisar el tema ayuda a convertirla en una pregunta abordable.
+- salud-11-003 | Revisar antecedentes sirve para confirmar que la idea puede mantenerse sin conocer investigaciones anteriores. | Busca conocer qué se ha investigado y cuál es la importancia del problema propuesto.
+
+- salud-11-004 | El informe final debe preceder a la ejecución en la secuencia cuantitativa que adopta el compendio. | La secuencia es planificación, ejecución e informe final.
++ salud-11-008 | Al definir el diseño metodológico, se decide si el estudio observará un momento o seguirá el fenómeno en el tiempo. | La distinción entre transversal y longitudinal forma parte de precisar el tipo de estudio.
+
++ salud-11-010 | Capacitar al personal y estandarizar el modo de aplicar los instrumentos son tareas de preparación de la recolección. | Ayudan a aplicar procedimientos consistentes al obtener la información.
++ salud-11-011 | El plan de análisis puede prever las tablas y gráficos que servirán para interpretar los resultados. | Las formas de tabulación y análisis deben responder al problema de investigación.
+
+- salud-11-016 | La investigación cualitativa debe retirar el fenómeno de su ambiente para poder comprenderlo en condiciones uniformes. | Busca comprenderlo en su ambiente natural.
+- salud-11-019 | En la investigación participativa descrita, el investigador identifica el problema por su cuenta y la comunidad solo responde preguntas. | La comunidad identifica el problema con la asesoría del investigador guía.
+
+[salud-12]
+- salud-12-001 | El objeto formal es la descripción del problema y el objeto material es la perspectiva teórica desde la cual se examina. | La descripción es el objeto material. El enfoque con el que se estudia es el formal.
++ salud-12-004 | Precisar en qué lugar y período se investigará ayuda a delimitar el objeto de estudio. | Los límites espaciales y temporales acotan el problema.
+
++ salud-12-007 | La disposición de las autoridades a apoyar el proyecto forma parte de su viabilidad política. | El apoyo institucional contribuye a que el proyecto pueda ejecutarse.
+- salud-12-008 | Si las autoridades apoyan el estudio, el consentimiento informado de los sujetos deja de ser un criterio. | La aprobación de autoridades y la aceptación informada de los sujetos son cuestiones diferentes.
+
++ salud-12-012 | Una formulación que permite observar y verificar sus elementos cumple el criterio de prueba empírica. | La pregunta debe poder contrastarse con información del estudio.
++ salud-12-013 | Precisar quiénes serán estudiados forma parte de formular un problema investigable. | Delimitar la población concreta a la que se refiere el problema ayuda a responderlo.
+
+- salud-12-017 | En un estudio cuantitativo se recomienda usar objetivos que no permitan observación ni cuantificación. | Los objetivos cuantitativos deben poder observarse y cuantificarse.
+- salud-12-019 | En el enfoque cualitativo, cualquier modificación de las preguntas durante el estudio invalida el diseño por definición. | Las preguntas pueden afinarse conforme se desarrolla la investigación.
+
+[salud-13]
++ salud-13-001 | La revisión de literatura aporta información para adoptar una teoría o desarrollar una perspectiva propia. | El compendio reconoce ambas tareas en la elaboración del marco.
+- salud-13-004 | Los conceptos teóricos son los que se observan y miden directamente, a diferencia de los empíricos. | Los conceptos empíricos se vinculan a observaciones directas. Los teóricos requieren una formulación que permita relacionarlos con datos.
+
+- salud-13-007 | En investigación cualitativa, el modelo teórico debe quedar completo antes de iniciar el contacto con el fenómeno. | El modelo puede construirse y precisarse a medida que avanza la investigación.
++ salud-13-008 | Al operacionalizar un marco, se pueden especificar variables, dimensiones e indicadores. | Estos elementos ayudan a traducir los conceptos en aspectos que el estudio puede examinar.
+
++ salud-13-014 | Una hipótesis de covariación puede plantear que dos variables cambian en correspondencia sin afirmar por ello una causa. | La asociación se refiere al patrón conjunto entre variables.
++ salud-13-016 | Sostener una relación causal requiere que la causa propuesta ocurra antes del efecto. | La precedencia temporal es una condición de la hipótesis causal.
+
+- salud-13-018 | Una hipótesis que surge de observar hechos particulares se denomina deductiva por partir de la observación. | Avanzar desde observaciones particulares hacia una propuesta general es inducción.
+- salud-13-023 | No rechazar la hipótesis nula demuestra que es verdadera para toda la población. | Solo indica que los datos del estudio no aportan evidencia suficiente para rechazarla.
+
+[salud-14]
+- salud-14-001 | Una característica que no puede adoptar distintos valores satisface la definición de variable del compendio. | Una variable se distingue por poder adoptar valores diferentes.
++ salud-14-003 | En una hipótesis, la variable independiente puede plantearse como condición que explica el cambio en otra. | Cumple la función explicativa con respecto a la variable dependiente.
+
++ salud-14-004 | Si el estudio busca explicar por qué cambia un resultado, ese resultado puede formularse como variable dependiente. | La dependiente es el fenómeno explicado por otra variable en la hipótesis.
+- salud-14-005 | Una variable interviniente no puede influir en la relación entre la independiente y la dependiente. | Su papel es influir indirectamente en esa relación.
+
++ salud-14-007 | El número de hijos es cuantitativo discreto porque se cuenta en unidades que no se fraccionan. | Entre dos valores consecutivos del conteo no hay resultados intermedios.
++ salud-15-003 | Medir un atributo que admite valores intermedios dentro de un intervalo concuerda con una variable continua. | La variable continua no se limita a valores aislados.
+
+- salud-15-002 | Registrar categorías con números las convierte automáticamente en cantidades comparables por aritmética. | Un código numérico puede limitarse a identificar una categoría cualitativa.
+- salud-15-010 | Una escala que permite comparar razones requiere un cero arbitrario y carece de distancias iguales. | La escala de razón admite intervalos comparables y tiene un cero absoluto.
+
+[salud-15]
++ salud-16-001 | La interpretación de datos forma parte del trabajo estadístico después de su organización y análisis. | La estadística abarca las etapas de recolección, organización, resumen, análisis e interpretación.
+- salud-16-002 | La estadística se divide únicamente en dos ramas llamadas muestreo y censo. | Las grandes categorías que enumera el texto son descriptiva e inferencial.
+
+- salud-16-005 | Si se investiga a cada barrio de una ciudad, la unidad de análisis debe ser necesariamente una persona. | La unidad es el elemento estudiado. En ese diseño puede ser el barrio.
++ salud-16-008 | Para que los datos de una muestra reflejen la población, importa que la muestra sea representativa. | Seleccionar un subconjunto no garantiza que represente las características de la población.
+
++ salud-16-009 | Si se recogen datos de todos los elementos de la población definida, se realiza un censo. | El censo incluye todos los elementos. El muestreo toma solo una parte.
++ salud-16-010 | La media calculada en una muestra es un estadígrafo y puede emplearse para estimar la media poblacional. | Un estadígrafo resume la muestra. El parámetro describe la población.
+
+- salud-16-011 | La varianza deja de ser un parámetro cuando se calcula con todos los elementos de la población. | Calculada para toda la población, la varianza es un parámetro.
+- salud-16-012 | El muestreo busca usar necesariamente más tiempo y dinero que estudiar la población completa. | Tomar una muestra puede optimizar recursos como tiempo y dinero.
+
+[salud-16]
+- salud-17-005 | Si una población tiene 600 unidades y la muestra debe incluir 60, el intervalo de muestreo sistemático es 0,1. | Se divide el tamaño poblacional por el muestral. El intervalo es 600/60 = 10.
++ salud-17-006 | Si el intervalo sistemático es de 10 unidades, puede sortearse el primer elemento entre las posiciones 1 y 10. | El punto de arranque se elige al azar entre 1 y k.
+
++ salud-17-007 | Una lista cuyo patrón se repite cada 10 posiciones puede sesgar una selección sistemática que también avance de 10 en 10. | El intervalo puede seleccionar siempre la misma posición del patrón repetido.
+- salud-17-012 | La asignación proporcional exige elegir el mismo número de personas de cada estrato aunque sus tamaños difieran. | La asignación proporcional respeta el tamaño relativo de cada estrato. La simple usa la misma cantidad.
+
++ salud-17-016 | Si el padrón omite viviendas que forman parte de la población, puede haber error de cobertura. | Las viviendas omitidas no tienen oportunidad de entrar en la muestra.
++ salud-17-017 | Si algunas viviendas sorteadas no contestan, puede haber error de no respuesta. | Se seleccionaron las unidades, pero no se obtuvieron sus datos.
+
+- salud-17-020 | Completar cuotas seleccionando a los primeros disponibles equivale a un muestreo estratificado con selección aleatoria. | Las cuotas así completadas carecen de selección aleatoria dentro del grupo.
+- salud-17-022 | En el muestreo de bola de nieve, cada participante se selecciona de un padrón completo y de forma independiente de los demás. | Los primeros participantes facilitan el contacto con otras personas de la misma población.
+
+[salud-17]
++ salud-18-010 | La marca de clase de un intervalo de 20 a 30 es 25. | Es el punto medio entre los límites, calculado como (20 + 30)/2.
+- salud-18-009 | En el intervalo (50–55], una observación de 50 entra y una de 55 queda fuera. | El paréntesis excluye el límite de 50 y el corchete incluye 55.
+
+- salud-19-009 | Si 8 de 40 observaciones pertenecen a una categoría, la frecuencia relativa de la categoría es 40 %. | Se divide 8 entre 40. La proporción 0,20 equivale a 20 %.
++ salud-19-007 | Si la frecuencia acumulada hasta 55 minutos es 11, once observaciones son de 55 minutos o menos. | La acumulación incluye los intervalos anteriores hasta el límite indicado.
+
++ salud-20-005 | Las marcas de clase sirven para ubicar en el eje horizontal los puntos de un polígono de frecuencias. | Cada intervalo se representa en su punto medio.
++ salud-20-007 | Una ojiva permite ver cómo se acumulan las frecuencias hasta un determinado valor. | Es una representación de la distribución acumulada.
+
+- salud-21-004 | En una tabla cruzada, los totales marginales muestran únicamente las frecuencias conjuntas de cada par de categorías. | Las frecuencias conjuntas están en las celdas interiores. Los márgenes resumen cada variable por separado.
+- salud-21-005 | Para obtener un porcentaje de fila, se divide la frecuencia de la celda entre el total de la columna correspondiente. | El denominador debe ser el total de esa fila.
+
+[salud-18]
+- salud-22-005 | Si hay tres observaciones de 2 y una de 10, la media es 6 porque solo se promedian los dos valores distintos. | Se pondera cada valor por su frecuencia. La media es (3 × 2 + 1 × 10)/4 = 4.
++ salud-22-010 | Para 2, 4, 9 y 11, la mediana es 6,5. | Al ser par el número de datos ordenados, se promedian las posiciones centrales, 4 y 9.
+
++ salud-22-009 | En una lista ordenada de siete observaciones, la cuarta es la mediana. | La posición central es (7 + 1)/2 = 4.
+- salud-22-014 | Si un valor extremo distorsiona la media y se necesita un centro más resistente, la mediana es la medida que más cambia. | La mediana depende del orden y suele verse menos afectada por magnitudes extremas.
+
++ salud-22-016 | Es posible hallar la moda de una variable cualitativa sin convertir sus categorías en magnitudes. | Basta identificar la categoría de mayor frecuencia.
++ salud-22-018 | Si dos valores comparten la mayor frecuencia y los demás aparecen menos, la distribución es bimodal. | Ambos valores son modas.
+
+- salud-22-013 | Para encontrar la clase mediana se debe buscar directamente la mayor frecuencia absoluta de un intervalo. | La clase mediana se localiza mediante la frecuencia acumulada que contiene N/2.
+- salud-22-020 | El intervalo modal se reconoce por ser el último de la tabla, aun cuando otra clase tenga más observaciones. | En el método del texto, la clase modal es la de mayor frecuencia absoluta.
+
+[salud-19]
++ salud-23-004 | Se necesitan tres valores de corte cuartílicos para separar una distribución ordenada en cuatro partes. | Q₁, Q₂ y Q₃ delimitan las cuatro partes.
+- salud-23-003 | Al dividir un conjunto en cuartiles, cada una de las cuatro partes representa el 20 % de los datos. | Cada cuarto representa el 25 % de la distribución.
+
+- salud-23-010 | Si la posición de un cuartil resulta 3,25, el método de datos sin agrupar del texto exige promediar los datos en las posiciones 3 y 4. | Cuando la posición no es entera, se toma el dato en el entero siguiente, aquí la cuarta posición.
++ salud-23-011 | Si la posición calculada resulta exactamente 4, el procedimiento del texto promedia los datos en las posiciones 4 y 5. | La regla para una posición entera usa esa posición y la siguiente.
+
++ salud-23-013 | Nueve deciles de corte separan la distribución en diez partes. | Cada corte se ubica entre dos partes consecutivas.
++ salud-23-017 | Q₃ y P₇₅ señalan la misma posición relativa. | Ambos representan el corte del 75 % de los datos ordenados.
+
+- salud-23-015 | Se requieren cien valores de corte percentílicos internos para dividir los datos en cien partes. | Se necesitan 99 cortes internos.
+- salud-23-016 | La mediana equivale a D₅ y a P₂₅ al expresar su posición de dos maneras. | La mediana equivale al quinto decil y al percentil 50.
+
+[salud-20]
+- salud-24-002 | El rango considera la distancia de todos los valores respecto a la media. | Solo usa el máximo y el mínimo.
++ salud-24-006 | El rango intercuartil mide la amplitud del 50 % central del conjunto. | Es la diferencia entre Q₃ y Q₁.
+
++ salud-24-009 | Elevar al cuadrado las desviaciones respecto a la media evita que las positivas y negativas se anulen. | La varianza combina las desviaciones cuadráticas.
+- salud-24-010 | Si la variable se mide en centímetros, la varianza se expresa en centímetros. | Se expresa en centímetros cuadrados. La desviación estándar recupera las unidades originales.
+
++ salud-24-011 | Para una muestra de seis valores, el denominador de la varianza muestral del texto es cinco. | El denominador es n − 1.
++ salud-24-016 | En una distribución aproximadamente normal, cerca del 95 % de los datos queda a dos desviaciones estándar o menos de la media. | Es la segunda banda de la regla empírica para ese tipo de distribución.
+
+- salud-25-002 | Un coeficiente de asimetría positivo indica que la cola se extiende hacia la izquierda. | La asimetría positiva indica sesgo a la derecha.
+- salud-25-011 | En la clasificación del texto, una distribución leptocúrtica tiene exceso de curtosis negativo. | El exceso es positivo en la leptocúrtica y negativo en la platicúrtica.
+
+[salud-21]
++ salud-26-003 | En la ruta de Excel del compendio, activar Herramientas para análisis habilita el comando Análisis de datos. | Es el complemento que el texto utiliza antes de abrir el cuadro de análisis.
+- salud-26-005 | El procedimiento de estadística descriptiva del ejemplo calcula una media directamente sobre etiquetas de texto. | La herramienta descrita requiere valores numéricos para esos cálculos.
+
+- salud-26-008 | El resumen descriptivo de Excel debe sobrescribir obligatoriamente el rango de datos de origen. | La salida puede dirigirse a un rango elegido, una hoja nueva o un libro nuevo.
++ salud-26-010 | El rótulo «Cuenta» de la salida descriptiva indica cuántos datos entraron en el análisis. | Se refiere al número de observaciones contabilizadas.
+
++ salud-27-001 | En SPSS se pueden definir variables en una vista e ingresar los registros en otra. | La vista de variables establece sus propiedades. La vista de datos recibe los registros.
++ salud-27-019 | En el cuadro Frecuencias de SPSS, la opción Estadísticos permite solicitar varianza y cuartiles. | El texto reúne en ese cuadro distintas medidas descriptivas que se eligen antes de ejecutar.
+
+- salud-27-008 | Una variable con categorías que tienen un orden intrínseco debe clasificarse como nominal en SPSS. | El nivel que reconoce ese orden es ordinal.
+- salud-27-022 | Si el resultado de SPSS avisa que existen varias modas, el valor mostrado es necesariamente el de mayor magnitud. | En el ejemplo, la salida muestra el menor de los valores que comparten la frecuencia máxima.

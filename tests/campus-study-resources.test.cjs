@@ -127,8 +127,13 @@ test('the three verified UMSS books open their private page segments and downloa
     assert.equal(get('grid').children[1].children[3].textContent, 'Alfonso Calvo González');
     assert.match(get('grid').children[1].children[4].textContent, /1.ª edición · Elsevier España · 2015/);
     for (const [index, card] of get('grid').children.entries()) {
+        const subject = ['morfofuncion', 'biologia-celular', 'educacion-salud'][index];
+        const icon = card.children[0];
+        assert.equal(icon.src, '/assets/official-texts/' + subject + '.svg');
+        assert.equal(icon.alt, '');
+        assert.match(read(icon.src.slice(1)), /<svg[^>]+viewBox="0 0 56 56"/);
         const [open, save] = card.children[5].children;
-        const url = '/api/texto-oficial?materia=' + ['morfofuncion', 'biologia-celular', 'educacion-salud'][index];
+        const url = '/api/texto-oficial?materia=' + subject;
         await open.onclick();
         await save.onclick();
         assert.equal(loaded[index], url + '&vista=tramo&desde=10');

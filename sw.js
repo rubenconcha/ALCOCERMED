@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v161-examen-umss';
+const CACHE_NAME = 'alcocermed-main-v162-temas-umss';
 const APP_SHELL = [
     './student-results.js?v=3',
     './student-results.css?v=1',
@@ -77,7 +77,7 @@ const APP_SHELL = [
     './study-summaries.js?v=20261021-visual5b',
     './summary-pdf-reader.js?v=6',
     './summary-pdf-reader.css?v=2',
-    './campus-study-resources.css?v=3',
+    './campus-study-resources.css?v=4',
     './study-calendar.css?v=4',
     './study-calendar-data.js?v=2',
     './study-calendar-pdf.js?v=2',
@@ -101,7 +101,10 @@ const APP_SHELL = [
     './vendor/jspdf/jspdf.umd.min.js',
     './vendor/pdfjs/pdf.min.mjs',
     './vendor/pdfjs/pdf.worker.min.mjs',
-    './official-texts.js?v=5',
+    './official-texts.js?v=6',
+    './assets/official-texts/morfofuncion.svg',
+    './assets/official-texts/biologia-celular.svg',
+    './assets/official-texts/educacion-salud.svg',
     './sufficiency-practice-content.js?v=1',
     './sufficiency-practice.js?v=2',
     './past-exams.js?v=10',

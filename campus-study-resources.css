@@ -36,17 +36,12 @@
     font-size: .79rem;
 }
 
-.campus-resource-symbol {
-    display: grid;
-    place-items: center;
-    width: 46px;
-    height: 46px;
-    border-radius: 13px;
-    background: #eaf5fc;
-    color: #166b96;
-    font-size: 1.3rem;
-    font-weight: 800;
-    text-transform: none;
+.official-text-icon {
+    display: block;
+    width: 56px;
+    height: 56px;
+    flex: 0 0 auto;
+    margin-bottom: 8px;
 }
 
 .campus-resource-actions {

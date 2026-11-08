@@ -22,7 +22,11 @@ BOOKS = {
 }
 # Folios del bloque escaneado de Metodología de la investigación, legibles en
 # el encabezado de la imagen aunque el OCR no los incluye en el texto.
-HEALTH_PRINTED = {35: 28, 41: 34, 44: 37, 53: 46, 55: 48, 56: 49, 59: 52, 66: 59, 71: 64}
+HEALTH_PRINTED = {
+    34: 27, 35: 28, 37: 30, 41: 34, 43: 36, 44: 37, 45: 38, 51: 44,
+    52: 45, 53: 46, 55: 48, 56: 49, 57: 50, 59: 52, 61: 54, 62: 55,
+    64: 57, 66: 59, 68: 61, 69: 62, 71: 64, 72: 65, 73: 66,
+}
 
 
 @dataclass(frozen=True)
