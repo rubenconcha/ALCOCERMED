@@ -1,8 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v145-medicina-oficial';
+const CACHE_NAME = 'alcocermed-main-v146-banco-suficiencia';
 const APP_SHELL = [
     './student-results.js?v=2',
     './student-results.css?v=1',
-    './question-review.js?v=2',
+    './question-review.js?v=3',
     './suficiencia-core.js?v=8',
     './suficiencia.js?v=10',
     './suficiencia.css?v=7',
@@ -21,7 +21,7 @@ const APP_SHELL = [
     './assets/flashcard-icons/bien-smile-3d.png',
     './assets/flashcard-icons/facil-3d.png',
     './manifest.webmanifest',
-    './styles.css?v=38',
+    './styles.css?v=39',
     './commerce.css?v=1',
     './student-white.css?v=2',
     './campus-theme.css?v=4',
@@ -42,7 +42,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=4',
     './assets/fonts/outfit-900.ttf',
     './flashcard-workspace.js?v=6',
-    './script.js?v=20261031-student-results1',
+    './script.js?v=20261107-banco-suficiencia',
     './recuperar.html',
     './password-recovery.js?v=1',
     './password-recovery-redirect.js?v=1',

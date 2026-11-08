@@ -19,7 +19,7 @@
 
     <link href="assets/mindmaps/fonts/outfit.css?v=1" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=38">
+    <link rel="stylesheet" href="styles.css?v=39">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=4">
@@ -640,7 +640,7 @@
                                 <i class="fas fa-seedling"></i> fácil
                             </button>
                             <button class="banco-dif-btn banco-dif-medio" id="banco-dif-medio" onclick="selectBancoDificultad('medio')">
-                                <i class="fas fa-fire"></i> medio <i class="fas fa-lock" data-free-lock hidden aria-label="Solo con un plan"></i>
+                                <i class="fas fa-fire"></i> intermedio <i class="fas fa-lock" data-free-lock hidden aria-label="Solo con un plan"></i>
                             </button>
                             <button class="banco-dif-btn banco-dif-dificil" id="banco-dif-dificil" onclick="selectBancoDificultad('dificil')">
                                 <i class="fas fa-skull-crossbones"></i> difícil <i class="fas fa-lock" data-free-lock hidden aria-label="Solo con un plan"></i>
@@ -713,6 +713,11 @@
                         <span class="bq-total" id="bq-total">0</span>
                     </div>
                 </div>
+
+                <details class="bq-passage" id="bq-passage" hidden>
+                    <summary id="bq-passage-title"></summary>
+                    <p id="bq-passage-text"></p>
+                </details>
 
                 <!-- Tarjeta de pregunta -->
                 <div class="bq-question-card">
@@ -1366,9 +1371,9 @@
     <script src="official-flashcards.js?v=1"></script>
     <script src="study-depth.js?v=16"></script>
     <script src="campus-section-tracking.js?v=1"></script>
-    <script src="question-review.js?v=2"></script>
+    <script src="question-review.js?v=3"></script>
     <script src="study-media.js?v=20261021-visual5b"></script>
-    <script src="script.js?v=20261107-semana3"></script>
+    <script src="script.js?v=20261107-banco-suficiencia"></script>
     <script src="mindmap-branch-labels.js?v=20261021-visual5b"></script>
     <script src="mindmap-content.js?v=3"></script>
     <script src="mindmap-detailed-content.js?v=20261021-visual5b"></script>

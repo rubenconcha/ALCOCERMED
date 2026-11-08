@@ -158,6 +158,7 @@ async function initAuth() {
 /** Muestra login y oculta app */
 function showLoginScreen() {
     window.StudentResults?.clear();
+    clearBancoSuficiencia();
     if (window.OfficialFlashcards) OfficialFlashcards.clear();
     if (window.FlashcardWorkspace) FlashcardWorkspace.clear();
     verifiedCampusUserId = null;
@@ -206,6 +207,7 @@ function enterApp(user) {
             }
             await CampusAccess.resolve(client);
             if (currentUser?.id !== user.id) return;
+            clearBancoSuficiencia();
             flashcardsCache = null;
             bancoState._cache = [];
             bancoState.allPreguntas = [];
@@ -1846,7 +1848,6 @@ async function preloadAppData() {
 // Estado del banco
 let bancoState = {
     materias: [],
-    temas: [],
     selectedMateria: null,
     selectedTema: null,       // null = todas
     selectedDificultad: null, // null = todas | 'facil' | 'medio' | 'dificil'
@@ -1855,8 +1856,69 @@ let bancoState = {
     currentIdx: 0,
     answers: [],              // { selected: null|idx, correct: idx }
     finalized: false,
+    suficiencia: [],          // colección autenticada para este selector
     _cache: []                // caché de todas las filas (evita re-queries)
 };
+let bancoMateriaRequest = 0;
+const BANCO_MAX_QUESTIONS = 50;
+
+function clearBancoSuficiencia() {
+    ++bancoMateriaRequest;
+    bancoState.suficiencia = [];
+    const esSuficiencia = row => typeof row.content_id === 'string' && row.content_id.startsWith('suficiencia:');
+    if (!bancoState.allPreguntas.some(esSuficiencia) && !bancoState.preguntas.some(esSuficiencia)) return;
+    bancoState.allPreguntas = [];
+    bancoState.preguntas = [];
+    bancoState.answers = [];
+    document.getElementById('bq-question-text').textContent = '';
+    document.getElementById('bq-comentario-text').textContent = '';
+    renderBancoPassage(null);
+    document.getElementById('bq-options').replaceChildren();
+    document.getElementById('banco-start-btn').disabled = true;
+    showBancoScreen('banco-selector');
+}
+
+window.addEventListener('campus-access-change', function () {
+    if (CampusAccess.isFree()) clearBancoSuficiencia();
+});
+
+async function fetchBancoSuficiencia(owner) {
+    const core = window.SufficiencyCore;
+    const { data, error } = await getSupabase().auth.getSession();
+    const session = data?.session;
+    if (!core || error || !owner || session?.user?.id !== owner || !session.access_token ||
+        currentUser?.id !== owner || CampusAccess.isFree()) throw new Error('Acceso a Suficiencia no disponible.');
+    const response = await fetch('/api/suficiencia?collection=' + core.officialCollection, {
+        headers: { Authorization: 'Bearer ' + session.access_token },
+        cache: 'no-store',
+        signal: AbortSignal.timeout(15000)
+    });
+    if (!response.ok) throw new Error('No pudimos cargar las preguntas de Suficiencia.');
+    const bank = await response.json();
+    if (!core.validate(bank)) throw new Error('Las preguntas de Suficiencia no están disponibles.');
+
+    const passages = new Map(bank.passages.map(p => [p.id, p]));
+    return bank.questions.filter(q => Object.hasOwn(core.subjects, q.subject)).map(q => {
+        const steps = (q.solution?.steps || []).map((step, i) => [
+            (i + 1) + '. ' + step.title, step.text, step.formula,
+            step.quote && 'Párrafo ' + step.paragraph + ' · «' + step.quote + '»'
+        ].filter(Boolean).join('\n'));
+        const row = {
+            content_id: 'suficiencia:' + q.id,
+            materia: core.subjects[q.subject],
+            tema: core.topicFor(q, bank).label,
+            dificultad: q.difficulty === 'intermedio' ? 'medio' : q.difficulty,
+            pregunta: q.text,
+            respuesta_correcta: 'ABCDE'[q.correct],
+            justificacion: [q.explanation, ...steps].join('\n\n'),
+            fuente: core.referenceText(q.source),
+            passage: passages.get(q.passageId),
+            guiaUmsa: core.isOfficial(q),
+        };
+        q.options.forEach((_, i) => { row['opcion_' + 'abcde'[i]] = core.optionText(q, i); });
+        return row;
+    });
+}
 
 // ──────────────────────────────────────────────
 // ABRIR BANCO (pantalla selector)
@@ -1868,6 +1930,9 @@ window.openBanco = async function () {
     if (enProgreso) {
         if (!confirm('¿salir del banco actual? perderás tu progreso.')) return;
     }
+    if (showScreen('banco-screen') === false) return;
+    clearBancoSuficiencia();
+
     // Reset estado
     bancoState.selectedMateria = null;
     bancoState.selectedTema = null;
@@ -1897,9 +1962,7 @@ window.openBanco = async function () {
     document.getElementById('banco-materia-dropdown').classList.add('hidden');
     document.getElementById('banco-tema-dropdown').classList.add('hidden');
 
-    // Mostrar sección
     showBancoScreen('banco-selector');
-    showScreen('banco-screen');
 
     if (window.innerWidth <= 768) {
         document.getElementById('sidebar').classList.remove('open');
@@ -1912,54 +1975,66 @@ window.openBanco = async function () {
 };
 
 async function loadBancoMaterias() {
-    const ddEl = document.getElementById('banco-materia-dropdown');
+    const menu = document.getElementById('banco-materia-dropdown');
+    const request = ++bancoMateriaRequest;
+    const owner = currentUser?.id;
+    const free = CampusAccess.isFree();
+    menu.innerHTML = '<div class="banco-loading-opts" role="status">Cargando materias…</div>';
+    const [curso, suficiencia] = await Promise.allSettled([
+        free ? freePracticeRows() : fetchAllBancoQuestions(),
+        free ? [] : fetchBancoSuficiencia(owner)
+    ]);
+    if (request !== bancoMateriaRequest || currentUser?.id !== owner || free !== CampusAccess.isFree()) return;
 
-    // Si hay caché, construir UI inmediatamente (Fix: velocidad de apertura)
-    let data = CampusAccess.isFree() ? freePracticeRows() : (bancoState._cache || []);
-    if (!CampusAccess.isFree() && data.length === 0) {
-        ddEl.innerHTML = '<div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando materias...</div>';
-        try {
-            data = await fetchAllBancoQuestions();
-            bancoState._cache = data;
-        } catch (e) {
-            console.error('Error cargando materias del banco:', e);
-            ddEl.innerHTML = '<div class="banco-loading-opts" style="color:#ef4444;"><i class="fas fa-exclamation-triangle"></i> error al conectar: ' + e.message + '</div>';
-            showToast('⚠ error al cargar materias', 'error');
-            return;
-        }
-    }
-
-    try {
-        // Obtener materias únicas usando campo() que detecta MAYÚSCULAS/minúsculas
-        const materiasSet = new Set();
-        data.forEach(function (r) {
-            const m = campo(r, 'materia');
-            if (m) materiasSet.add(m);
-        });
-        bancoState.materias = Array.from(materiasSet).sort();
-        // Guardar todos los datos en caché para evitar re-queries
-        if (!CampusAccess.isFree()) bancoState._cache = data;
-
-        ddEl.innerHTML = '';
-        if (bancoState.materias.length === 0) {
-            ddEl.innerHTML = '<div class="banco-loading-opts">sin materias disponibles</div>';
-            return;
-        }
-
-        bancoState.materias.forEach(function (m) {
+    bancoState.suficiencia = suficiencia.status === 'fulfilled' ? suficiencia.value : [];
+    const subjects = rows => [...new Set(rows.map(row => campo(row, 'materia')).filter(Boolean))];
+    const extra = subjects(bancoState.suficiencia);
+    const original = curso.status === 'fulfilled' ? subjects(curso.value).filter(m => !extra.includes(m)).sort() : [];
+    bancoState.materias = original.concat(extra);
+    menu.replaceChildren();
+    function appendSubjects(label, names) {
+        if (!names.length) return;
+        const group = label ? bancoDropdownGroup(label) : menu;
+        names.forEach(function (materia) {
             const btn = document.createElement('button');
+            btn.type = 'button';
             btn.className = 'banco-dropdown-item';
-            btn.textContent = m.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
-            btn.onclick = function () { selectBancoMateria(m); };
-            ddEl.appendChild(btn);
+            btn.classList.toggle('selected', bancoState.selectedMateria === materia);
+            btn.textContent = bancoMateriaLabel(materia);
+            btn.dataset.materia = materia;
+            btn.onclick = function () { selectBancoMateria(materia); };
+            group.appendChild(btn);
         });
-
-        // Silenciar toast de éxito (menos ruido)
-    } catch (e) {
-        console.error('Error cargando materias del banco:', e);
-        ddEl.innerHTML = '<div class="banco-loading-opts" style="color:#ef4444;"><i class="fas fa-exclamation-triangle"></i> error al conectar: ' + e.message + '</div>';
-        showToast('⚠ error al cargar materias', 'error');
+        if (label) menu.appendChild(group);
     }
+    appendSubjects(extra.length ? 'Materias de Medicina' : '', original);
+    appendSubjects('Suficiencia académica', extra);
+    if (curso.status === 'rejected' || suficiencia.status === 'rejected') {
+        const retry = document.createElement('button');
+        retry.type = 'button';
+        retry.className = 'banco-dropdown-item';
+        const unavailable = curso.status === 'fulfilled' ? 'Suficiencia académica' : suficiencia.status === 'fulfilled' ? 'materias del curso' : 'materias';
+        retry.textContent = 'Volver a cargar ' + unavailable;
+        retry.onclick = window.openBanco;
+        menu.appendChild(retry);
+    } else if (!bancoState.materias.length) {
+        menu.innerHTML = '<div class="banco-loading-opts">Sin materias disponibles</div>';
+    }
+}
+
+function bancoDropdownGroup(label) {
+    const group = document.createElement('div');
+    group.setAttribute('role', 'group');
+    group.setAttribute('aria-label', label);
+    const heading = document.createElement('div');
+    heading.className = 'banco-dropdown-heading';
+    heading.textContent = label;
+    group.appendChild(heading);
+    return group;
+}
+
+function bancoMateriaLabel(materia) {
+    return materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
 }
 
 // (fallback eliminado, ahora siempre usamos select('*'))
@@ -1969,17 +2044,18 @@ async function loadBancoMaterias() {
 // SELECCIONAR MATERIA
 // ──────────────────────────────────────────────
 window.selectBancoMateria = async function (materia) {
+    if (!bancoState.materias.includes(materia)) return;
     bancoState.selectedMateria = materia;
     bancoState.selectedTema = null;
 
     // Actualizar UI materia
-    document.getElementById('banco-materia-text').textContent = materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
+    document.getElementById('banco-materia-text').textContent = bancoMateriaLabel(materia);
     document.getElementById('banco-materia-dropdown').classList.add('hidden');
     document.getElementById('banco-materia-btn').classList.remove('open');
 
     // Highlight item seleccionado
     document.querySelectorAll('#banco-materia-dropdown .banco-dropdown-item').forEach(function (el) {
-        el.classList.toggle('selected', el.textContent === materia.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud'));
+        el.classList.toggle('selected', el.dataset.materia === materia);
     });
 
     // Habilitar select tema
@@ -2090,54 +2166,35 @@ function sortBancoTopics(materia, topics) {
         return chapterA - chapterB || a.localeCompare(b, 'es', { numeric: true });
     });
 }
+
+function bancoMateriaRows(materia) {
+    const rows = CampusAccess.isFree() ? freePracticeRows() : bancoState._cache.concat(bancoState.suficiencia || []);
+    return rows.filter(row => campo(row, 'materia') === materia);
+}
 // Fin del orden de capítulos del banco.
 
 async function loadBancoTemas(materia) {
     const ddEl = document.getElementById('banco-tema-dropdown');
-    ddEl.innerHTML = '<div class="banco-loading-opts"><i class="fas fa-spinner fa-spin"></i> cargando temas...</div>';
+    const rows = bancoMateriaRows(materia);
+    const guias = new Set(rows.filter(q => q.guiaUmsa).map(q => q.tema));
+    const temas = sortBancoTopics(materia, [...new Set(rows.map(row => campo(row, 'tema')).filter(Boolean))]);
+    ddEl.innerHTML = '';
 
-    try {
-        // Usar caché si está disponible para evitar re-query
-        let rows = CampusAccess.isFree() ? freePracticeRows() : (bancoState._cache || []);
-        let usandoCache = rows.length > 0;
-
-        if (!usandoCache) {
-            rows = await fetchAllBancoQuestions();
-            bancoState._cache = rows;
-        }
-
-        // Filtrar por la materia seleccionada
-        const temasSet = new Set();
-        rows.forEach(function (r) {
-            const m = campo(r, 'materia');
-            if (m && m === materia) {
-                const t = campo(r, 'tema');
-                if (t) temasSet.add(t);
-            }
-        });
-        bancoState.temas = sortBancoTopics(materia, Array.from(temasSet));
-
-        ddEl.innerHTML = '';
-
-        // Opción "todos"
-        const allBtn = document.createElement('button');
-        allBtn.className = 'banco-dropdown-item all-option selected';
-        allBtn.textContent = 'todos los temas';
-        allBtn.onclick = function () { selectBancoTema(null); };
-        ddEl.appendChild(allBtn);
-
-        bancoState.temas.forEach(function (t) {
-            const btn = document.createElement('button');
-            btn.className = 'banco-dropdown-item';
-            btn.textContent = bancoTopicLabel(materia, t);
-            btn.dataset.tema = t;
-            btn.onclick = function () { selectBancoTema(t); };
-            ddEl.appendChild(btn);
-        });
-
-    } catch (e) {
-        console.error('Error cargando temas:', e);
-        ddEl.innerHTML = '<div class="banco-loading-opts" style="color:#ef4444;">error: ' + e.message + '</div>';
+    function appendTopic(target, tema) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = tema ? 'banco-dropdown-item' : 'banco-dropdown-item all-option selected';
+        btn.textContent = tema ? bancoTopicLabel(materia, tema) : 'todos los temas';
+        btn.dataset.tema = tema || '';
+        btn.onclick = function () { selectBancoTema(tema); };
+        target.appendChild(btn);
+    }
+    appendTopic(ddEl, null);
+    temas.filter(t => !guias.has(t)).forEach(t => appendTopic(ddEl, t));
+    if (guias.size) {
+        const group = bancoDropdownGroup('Textos oficiales UMSA 2026');
+        temas.filter(t => guias.has(t)).forEach(t => appendTopic(group, t));
+        ddEl.appendChild(group);
     }
 }
 
@@ -2168,19 +2225,7 @@ async function loadBancoPreguntas() {
     if (!bancoState.selectedMateria) return;
 
     try {
-        // Usar caché para filtrar (ya cargado en loadBancoMaterias)
-        let rows = CampusAccess.isFree() ? freePracticeRows() : (bancoState._cache || []);
-
-        // Si no hay caché, hacer query completa
-        if (rows.length === 0) {
-            rows = await fetchAllBancoQuestions();
-            bancoState._cache = rows;
-        }
-
-        // Filtrar por materia y tema usando campo()
-        let filtradas = rows.filter(function (r) {
-            return campo(r, 'materia') === bancoState.selectedMateria;
-        });
+        let filtradas = bancoMateriaRows(bancoState.selectedMateria);
 
         if (bancoState.selectedTema) {
             filtradas = filtradas.filter(function (r) {
@@ -2197,21 +2242,21 @@ async function loadBancoPreguntas() {
         }
 
         bancoState.allPreguntas = filtradas;
-        const count = Math.min(filtradas.length, 50);
+        const count = Math.min(filtradas.length, BANCO_MAX_QUESTIONS);
         document.getElementById('banco-count-display').textContent = count;
 
         // Mostrar filtro activo
         const filterRow = document.getElementById('banco-summary-filter-row');
         const filterText = document.getElementById('banco-summary-filter-text');
         const difLabel = bancoState.selectedDificultad
-            ? ' · nivel: ' + bancoState.selectedDificultad
+            ? ' · nivel: ' + ({facil:'fácil', medio:'intermedio', dificil:'difícil'}[bancoState.selectedDificultad] || bancoState.selectedDificultad)
             : '';
         if (bancoState.selectedTema) {
             filterRow.classList.remove('hidden');
             filterText.textContent = 'tema: ' + bancoTopicLabel(bancoState.selectedMateria, bancoState.selectedTema) + difLabel;
         } else {
             filterRow.classList.remove('hidden');
-            filterText.textContent = 'materia: ' + bancoState.selectedMateria.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud') + ' · todos los temas' + difLabel;
+            filterText.textContent = 'materia: ' + bancoMateriaLabel(bancoState.selectedMateria) + ' · todos los temas' + difLabel;
         }
 
         // Habilitar botón start si hay preguntas
@@ -2288,9 +2333,8 @@ document.addEventListener('click', function (e) {
 window.startBanco = function () {
     if (!bancoState.allPreguntas.length) return;
 
-    // Mezclar y limitar a 50
-    const shuffled = shuffleArray(bancoState.allPreguntas.slice());
-    bancoState.preguntas = shuffled.slice(0, 50);
+    const rows = bancoState.allPreguntas;
+    bancoState.preguntas = sampleBancoQuestions(rows);
     bancoState.currentIdx = 0;
     bancoState.finalized = false;
 
@@ -2300,7 +2344,7 @@ window.startBanco = function () {
     });
 
     // Actualizar meta header
-    document.getElementById('bq-materia').textContent = bancoState.selectedMateria.toLowerCase().replace(/^salud p[úu]blica$/, 'educación para la salud');
+    document.getElementById('bq-materia').textContent = bancoMateriaLabel(bancoState.selectedMateria);
     document.getElementById('bq-tema').textContent = bancoState.selectedTema
         ? bancoState.selectedTema.toLowerCase()
         : 'todos los temas';
@@ -2319,6 +2363,38 @@ window.startBanco = function () {
     renderBancoQuestion();
 };
 
+function sampleBancoQuestions(rows) {
+    if (!rows.every(q => q.passage)) return shuffleArray(rows.slice()).slice(0, BANCO_MAX_QUESTIONS);
+    // En Lectura se sortean textos completos y se conserva el orden de sus preguntas.
+    const passages = new Map();
+    for (const row of rows) {
+        if (!passages.has(row.passage.id)) passages.set(row.passage.id, []);
+        passages.get(row.passage.id).push(row);
+    }
+    const selected = [];
+    for (const group of shuffleArray([...passages.values()])) {
+        if (selected.length + group.length <= BANCO_MAX_QUESTIONS) selected.push(...group);
+    }
+    return selected;
+}
+
+function bancoClave(q) {
+    const answer = String(campo(q, 'respuesta_correcta') || 'A').trim().toUpperCase();
+    return /^[A-E]$/.test(answer) ? 'ABCDE'.indexOf(answer) : parseInt(answer, 10) - 1;
+}
+
+function renderBancoPassage(passage) {
+    const box = document.getElementById('bq-passage');
+    const id = passage?.id || '';
+    box.hidden = !passage;
+    if (box.dataset.passage === id) return false;
+    box.dataset.passage = id;
+    box.open = Boolean(passage);
+    document.getElementById('bq-passage-title').textContent = passage?.title || '';
+    document.getElementById('bq-passage-text').textContent = passage?.text || '';
+    return Boolean(passage);
+}
+
 // ──────────────────────────────────────────────
 // RENDERIZAR PREGUNTA
 // ──────────────────────────────────────────────
@@ -2334,6 +2410,7 @@ function renderBancoQuestion() {
 
     // Texto de pregunta — soportar columnas en MAYÚSCULAS o minúsculas
     document.getElementById('bq-question-text').textContent = campo(q, 'pregunta') || campo(q, 'PREGUNTA') || '';
+    const newPassage = renderBancoPassage(q.passage);
 
     // Dificultad — normalizar a minúsculas para comparación
     renderBqDificultad(campo(q, 'dificultad') || 'facil');
@@ -2342,19 +2419,10 @@ function renderBancoQuestion() {
     const optsEl = document.getElementById('bq-options');
     optsEl.innerHTML = '';
 
-    const opciones = [
-        campo(q, 'opcion_a'),
-        campo(q, 'opcion_b'),
-        campo(q, 'opcion_c'),
-        campo(q, 'opcion_d')
-    ].filter(function (o) { return o && o.toString().trim() !== ''; });
+    const letras = ['a', 'b', 'c', 'd', 'e'];
+    const opciones = letras.map(l => campo(q, 'opcion_' + l)).filter(o => o && String(o).trim());
+    const correctIdx = bancoClave(q);
 
-    // Determinar índice de respuesta correcta
-    const correctaRaw = (campo(q, 'respuesta_correcta') || 'A').toString().trim().toUpperCase();
-    const letrasMap = { 'A': 0, 'B': 1, 'C': 2, 'D': 3 };
-    const correctIdx = letrasMap[correctaRaw] !== undefined ? letrasMap[correctaRaw] : parseInt(correctaRaw) - 1;
-
-    const letras = ['a', 'b', 'c', 'd'];
     opciones.forEach(function (opcion, i) {
         const btn = document.createElement('button');
         btn.className = 'bq-option-btn';
@@ -2412,6 +2480,7 @@ function renderBancoQuestion() {
     const nextBtn = document.getElementById('bq-btn-next');
     prevBtn.disabled = idx === 0;
     nextBtn.disabled = idx === bancoState.preguntas.length - 1;
+    if (newPassage) document.getElementById('banco-quiz').scrollIntoView({ block: 'start', behavior: 'instant' });
 }
 
 function bancoComentario(q) {
@@ -2451,11 +2520,9 @@ function selectBancoAnswer(selectedIdx, correctIdx) {
     }
 
     // Registrar respuesta y recargar panel de seguimiento en background
-    registrarRespuestaBanco(q, selectedIdx === correctIdx).then(function () {
-        // Recargar panel silenciosamente después de guardar
-        var panel = document.getElementById('banco-dificiles-panel');
-        if (panel) loadPreguntasDificiles();
-    });
+    if (campo(q, 'id') && !CampusAccess.isFree()) {
+        registrarRespuestaBanco(q, selectedIdx === correctIdx).then(loadPreguntasDificiles);
+    }
 
     // Actualizar círculo
     updateBqCircles();
@@ -2559,18 +2626,9 @@ window.finalizarBanco = function () {
         if (ans.selected === null) {
             sinResponder++;
         } else {
-            const q = bancoState.preguntas[i];
-            // Usar campo() para soportar MAYÚSCULAS o minúsculas
-            const correctaRaw = (campo(q, 'respuesta_correcta') || 'A').toString().trim().toUpperCase();
-            const letrasMap = { 'A': 0, 'B': 1, 'C': 2, 'D': 3 };
-            const correctIdx = letrasMap[correctaRaw] !== undefined ? letrasMap[correctaRaw] : parseInt(correctaRaw) - 1;
-            if (ans.selected === correctIdx) {
-                correctas++;
-                bancoState.answers[i].correct = correctIdx;
-            } else {
-                incorrectas++;
-                bancoState.answers[i].correct = correctIdx;
-            }
+            ans.correct = bancoClave(bancoState.preguntas[i]);
+            if (ans.selected === ans.correct) correctas++;
+            else incorrectas++;
         }
     });
 
@@ -2603,9 +2661,9 @@ window.finalizarBanco = function () {
 
     // Sincronizar con la nube para el Panel de Admin
     guardarResultadoBancoEnNube({
-        questionReview: window.QuestionReview?.snapshot(bancoState.preguntas,bancoState.answers,campo,function(q){const raw=String(campo(q,'respuesta_correcta')||'A').trim().toUpperCase();return [/^[A-E]$/.test(raw)?'ABCDE'.indexOf(raw):parseInt(raw,10)-1];}) || null,
+        questionReview: window.QuestionReview?.snapshot(bancoState.preguntas,bancoState.answers,campo,q => [bancoClave(q)]) || null,
         materia: bancoState.selectedMateria || 'todas',
-        tema: 'práctica general',
+        tema: bancoState.selectedTema || 'práctica general',
         dificultad: bancoState.selectedDificultad || 'todos',
         total: total,
         correctas: correctas,

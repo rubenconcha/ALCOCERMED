@@ -4,7 +4,7 @@
   return {version:1,items:questions.map((q,i)=>{
    const options=['a','b','c','d','e'].map(k=>read(q,'opcion_'+k)).filter(v=>v!=null&&String(v).trim()!=='').map(String);
    const selected=answers[i]?.selected??null;
-   return {number:q.numero_original||i+1,id:String(q.id||''),materia:String(read(q,'materia')||q.subject||''),tema:String(read(q,'tema')||q.topic||''),question:String(read(q,'pregunta')||''),options,selected,accepted:accepted(q,i),option_explanations:options.map((_,index)=>String(q.comentarios_opciones?.['ABCDE'[index]]||'')),explanation:String(read(q,'justificacion')||read(q,'comentario')||''),source:String(q.fuente||''),printed_page:String(q.pagina_impresa||''),pdf_page:String(q.paginas_pdf||'')};
+   return {number:q.numero_original||i+1,id:String(q.id??q.content_id??''),materia:String(read(q,'materia')||q.subject||''),tema:String(read(q,'tema')||q.topic||''),question:String(read(q,'pregunta')||''),options,selected,accepted:accepted(q,i),option_explanations:options.map((_,index)=>String(q.comentarios_opciones?.['ABCDE'[index]]||'')),explanation:String(read(q,'justificacion')||read(q,'comentario')||''),source:String(q.fuente||''),printed_page:String(q.pagina_impresa||''),pdf_page:String(q.paginas_pdf||''),...(q.passage?.text?{passage:q.passage.text}:{})};
   })};
  }
  function inspect(payload){
@@ -42,6 +42,7 @@
     if(!rows.length)list.append(el('p','No hay preguntas en esta categoría.'));
     rows.forEach(q=>{
      const card=el('article',null,'review-question '+q.status);card.append(el('span','Pregunta '+q.number+' · '+({wrong:'Incorrecta',correct:'Correcta',unanswered:'Sin responder',unknown:'Detalle incompleto'}[q.status]),'review-question-label'),el('h3',q.question));
+     if(q.passage)card.append(el('p',q.passage,'review-explanation'));
      (q.options||[]).forEach((option,index)=>{const answer=el('p',String.fromCharCode(65+index)+'. '+option,'review-option');if(q.accepted?.includes(index)){answer.classList.add('accepted');answer.append(el('strong',' · Correcta'));}if(q.selected===index){answer.classList.add('selected');answer.append(el('strong',' · Eligió el estudiante'));}card.append(answer);});
      if(q.selected===null)card.append(el('p','El estudiante no respondió esta pregunta.'));
      if(q.selected!==null&&q.option_explanations?.[q.selected])card.append(el('p','Sobre la opción elegida: '+q.option_explanations[q.selected],'review-explanation'));

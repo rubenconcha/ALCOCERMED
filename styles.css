@@ -2528,6 +2528,23 @@ body.wayground-active .main-content {
     border-radius: 4px;
 }
 
+#banco-materia-dropdown {
+    max-height: min(390px, 58vh);
+}
+
+.banco-dropdown-heading {
+    padding: 8px 14px 5px;
+    font-size: 0.76rem;
+    font-weight: 750;
+    color: #526378;
+    text-transform: none;
+}
+
+#banco-screen .banco-dropdown [role="group"] + [role="group"] {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 4px;
+}
+
 .banco-dropdown-item {
     display: block;
     width: 100%;
@@ -2782,6 +2799,34 @@ body.wayground-active .main-content {
     color: var(--text-dark);
     line-height: 1.55;
     text-transform: none;
+}
+
+#banco-quiz .bq-question-text, #bq-comentario-text {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.bq-passage {
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    border: 1px solid #dce5ef;
+    border-radius: 14px;
+    background: #f8fbff;
+    color: #263853;
+    text-transform: none;
+}
+
+.bq-passage summary {
+    font-weight: 700;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.bq-passage p {
+    margin: 12px 0 0;
+    line-height: 1.65;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
 }
 
 /* ── OPCIONES ── */
