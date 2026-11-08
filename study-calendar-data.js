@@ -7,11 +7,11 @@
 
     const zone = 'America/La_Paz';
     const kinds = {
-        study: { label: 'Lectura', color: '#a58353' },
-        exam: { label: 'Preguntas y evaluación', color: '#ad7886' },
-        rest: { label: 'Descanso', color: '#749582' },
-        practice: { label: 'Ejercicios de suficiencia', color: '#8a80a5' },
-        free: { label: 'Libre estudio', color: '#7594a9' },
+        study: { label: 'Lectura', color: '#f3a31b' },
+        exam: { label: 'Preguntas y evaluación', color: '#d74c50' },
+        rest: { label: 'Descanso', color: '#27aa5c' },
+        practice: { label: 'Ejercicios de suficiencia', color: '#4c57b4' },
+        free: { label: 'Libre estudio', color: '#3786d2' },
     };
     const books = {
         morfofuncion: {

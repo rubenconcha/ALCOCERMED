@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v163-calendario-temas';
+const CACHE_NAME = 'alcocermed-main-v164-calendario-colores';
 const APP_SHELL = [
     './student-results.js?v=3',
     './student-results.css?v=1',
@@ -78,8 +78,8 @@ const APP_SHELL = [
     './summary-pdf-reader.js?v=6',
     './summary-pdf-reader.css?v=2',
     './campus-study-resources.css?v=4',
-    './study-calendar.css?v=5',
-    './study-calendar-data.js?v=3',
+    './study-calendar.css?v=6',
+    './study-calendar-data.js?v=4',
     './study-calendar-pdf.js?v=2',
     './study-calendar.js?v=5',
     './campus-shell.css?v=3',
