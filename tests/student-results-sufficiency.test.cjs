@@ -4,7 +4,7 @@ const C=require('../suficiencia-core.js'),M=require('../student-results.js'),ban
 test('Suficiencia submission freezes the presented responses without changing score, then isolates logout',async()=>{
  let now=1700000000000,authCallback;
  const handlers={},storage=new Map(),intervals=new Map();let intervalId=0;
- const root={innerHTML:'',classList:{contains:()=>false,add(){},remove(){}},addEventListener:(type,fn)=>handlers[type]=fn,replaceChildren(){this.innerHTML='';},scrollIntoView(){},querySelector:()=>null};
+ const root={innerHTML:'',classList:{contains:()=>false,add(){},remove(){}},addEventListener:(type,fn)=>handlers[type]=fn,replaceChildren(){this.innerHTML='';},scrollIntoView(){},querySelector:()=>null,querySelectorAll:()=>[]};
  const context={currentUser:{id:'fixture-a'},document:{hidden:false,getElementById:id=>id==='nav-simulacro'?{classList:{add(){},remove(){}}}:root,querySelectorAll:()=>[],addEventListener(){}},location:{search:''},URLSearchParams,Uint32Array,AbortSignal,crypto:{getRandomValues:a=>{a[0]=27;return a;}},Date:class extends Date{static now(){return now;}},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},setInterval:fn=>{intervals.set(++intervalId,fn);return intervalId;},clearInterval:id=>intervals.delete(id),setTimeout(){},showScreen:()=>true,ensureSupabaseSdk:async()=>{},fetch:async()=>({ok:true,json:async()=>structuredClone(bank)})};
  context.window={SufficiencyCore:C,StudentResultsModel:M,CampusAccess:{isFree:()=>false},addEventListener(){}};
  context.getSupabase=()=>({auth:{getSession:async()=>({data:{session:{user:context.currentUser,access_token:'fixture'}}}),onAuthStateChange:fn=>authCallback=fn}});

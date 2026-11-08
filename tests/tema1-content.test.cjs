@@ -20,32 +20,34 @@ test('Tema 1: twenty distinct questions, balanced keys and feedback for every al
  assert.deepEqual(Object.values(keys),[5,5,5,5]);
 });
 
-test('Actual review renderer places each explanation below its option and scopes it to topic evaluation',()=>{
+test('The review displays each option and its source in both topic evaluations and mock exams',()=>{
  const code=fs.readFileSync('script.js','utf8');
- const weeklyQuestionHelper=code.slice(code.indexOf('function isWeeklySimQuestion('),code.indexOf('function renderSimQuestion('));
  const review=code.slice(code.indexOf("    var reviewList = document.getElementById('sim-review-list');"),code.indexOf('    // Guardar en historial local'));
  class Node{
-  constructor(tag){this.tag=tag;this.children=[];this.textContent='';}
+  constructor(tag){this.tag=tag;this.children=[];this.textContent='';this.classList={add:()=>{}};}
   append(...nodes){this.children.push(...nodes)}
-  appendChild(node){this.children.push(node);return node}
-  set innerHTML(value){this.children=[];}
+  replaceChildren(...nodes){this.children=nodes}
+  setAttribute(){}
+  find(className){return this.className===className?this:this.children.map(child=>child.find(className)).find(Boolean)}
  }
  const list=new Node('div');
  const state={mode:'tema',preguntas:paper.questions,answers:paper.questions.map((_,i)=>({selected:i%3===0?null:i%4}))};
- const context={document:{getElementById:()=>list,createElement:tag=>new Node(tag)},simState:state,campo:(q,k)=>q[k],simAcceptedAnswerIndices:q=>['ABCD'.indexOf(q.respuesta_correcta)],bancoComentario:()=>''};
- vm.runInNewContext(weeklyQuestionHelper+review,context);
- assert.equal(list.children.length,20);
- list.children.forEach((item,i)=>{
-  const comments=item.children.find(n=>n.className==='sim-rev-option-comments');
-  assert.equal(comments.children.length,4);
-  comments.children.forEach((block,j)=>{
-   assert.deepEqual(block.children.map(n=>n.tag),['strong','p']);
-   assert.equal(block.children[1].textContent,paper.questions[i].comentarios_opciones['ABCD'[j]]);
+ const context=vm.createContext({document:{getElementById:()=>list,createElement:tag=>new Node(tag)},simState:state,campo:(q,k)=>q[k],simAcceptedAnswerIndices:q=>['ABCD'.indexOf(q.respuesta_correcta)]});
+ vm.runInContext(fs.readFileSync('question-review.js','utf8'),context);
+ for(const mode of ['tema','oficial']){
+  state.mode=mode;
+  vm.runInContext(review,context);
+  assert.equal(list.children.length,20);
+  list.children.forEach((item,i)=>{
+   assert.equal(item.find('qr-answers').children.length,4);
+   const comments=item.find('qr-reasons');
+   assert.equal(comments.children.length,4);
+   comments.children.forEach((block,j)=>{
+    assert.equal(block.find('qr-commentary-copy').textContent,paper.questions[i].comentarios_opciones['ABCD'[j]].replace(/^(?:Correcta|Revisa)\.\s*/,''));
+   });
+   assert.match(item.find('qr-reference').children.at(-1).textContent,/Pág\. impresa .*Pág\. PDF/);
   });
-  assert.match(item.children.at(-1).textContent,/páginas impresas .*páginas PDF/);
- });
- state.mode='materia';vm.runInNewContext(review,context);
- assert.ok(list.children.every(n=>!n.children.some(c=>c.className==='sim-rev-option-comments')));
+ }
 });
 
 test('Six maps align with lecture slides and retain official PDF references',()=>{

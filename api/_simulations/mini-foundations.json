@@ -12,9 +12,9 @@
       "pregunta": "El estudio de la forma de un órgano y el de su función corresponden, respectivamente, a…",
       "respuesta_correcta": "A",
       "justificacion": "La anatomía estudia la estructura y la fisiología estudia la función; ambas perspectivas se complementan.",
-      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 1 · El ámbito de la anatomía y la fisiología · p. impresa 2 · p. PDF 30",
-      "paginas_pdf": "30",
-      "pagina_impresa": "2",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 1 · El ámbito de la anatomía y la fisiología · p. impresa 2, 3 · p. PDF 30, 31",
+      "paginas_pdf": "30, 31",
+      "pagina_impresa": "2, 3",
       "dificultad": "medio",
       "opcion_a": "Anatomía y fisiología",
       "opcion_b": "Histología e histopatología",
@@ -28,10 +28,12 @@
         "chapter": 1,
         "section": "El ámbito de la anatomía y la fisiología",
         "pdf_pages": [
-          30
+          30,
+          31
         ],
         "printed_pages": [
-          "2"
+          "2",
+          "3"
         ],
         "printed_page_note": null,
         "evidence_page": 30,
@@ -47,7 +49,13 @@
         "A"
       ],
       "comentario": "La anatomía estudia la estructura y la fisiología estudia la función; ambas perspectivas se complementan.",
-      "numero_original": 1
+      "numero_original": 1,
+      "comentarios_opciones": {
+        "A": "La forma se estudia en anatomía. Para explicar qué hace el órgano se recurre a la fisiología.",
+        "B": "Ambas se centran en tejidos. La histopatología, en particular, busca alteraciones de los tejidos; aquí se pide la relación entre estructura y función del órgano.",
+        "C": "El segundo término, anatomía, corresponde al estudio de la forma. En el enunciado, la función se pregunta en segundo lugar.",
+        "D": "La fisiología corresponde a la segunda parte. La citología se ocupa de las células individuales."
+      }
     },
     {
       "content_id": "morfo-01-clase-002",
@@ -781,9 +789,9 @@
       "pregunta": "¿Cómo se clasifica el esqueleto humano?",
       "respuesta_correcta": "A",
       "justificacion": "El esqueleto axial comprende la cabeza y el tronco; el apendicular incluye las cinturas y los huesos de las extremidades.",
-      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Divisiones del esqueleto · p. impresa 234 · p. PDF 262",
-      "paginas_pdf": "262",
-      "pagina_impresa": "234",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Divisiones del esqueleto · p. impresa 234, 250 · p. PDF 262, 278",
+      "paginas_pdf": "262, 278",
+      "pagina_impresa": "234, 250",
       "dificultad": "medio",
       "opcion_a": "Axial y apendicular",
       "opcion_b": "Cervical y lumbar",
@@ -797,10 +805,12 @@
         "chapter": 8,
         "section": "Divisiones del esqueleto",
         "pdf_pages": [
-          262
+          262,
+          278
         ],
         "printed_pages": [
-          "234"
+          "234",
+          "250"
         ],
         "printed_page_note": null,
         "evidence_page": 262,
@@ -816,7 +826,13 @@
         "A"
       ],
       "comentario": "El esqueleto axial comprende la cabeza y el tronco; el apendicular incluye las cinturas y los huesos de las extremidades.",
-      "numero_original": 16
+      "numero_original": 16,
+      "comentarios_opciones": {
+        "A": "El esqueleto axial comprende los huesos de la cabeza y el tronco. El apendicular comprende las cinturas y las extremidades.",
+        "B": "Cervical y lumbar son regiones de la columna vertebral. Ambas pertenecen al esqueleto axial.",
+        "C": "Carpo y tarso designan grupos óseos de la muñeca y el pie, respectivamente. La división pedida abarca todo el esqueleto.",
+        "D": "La distinción entre huesos craneales y faciales se aplica al cráneo, que forma parte del esqueleto axial."
+      }
     },
     {
       "content_id": "morfo-08-visual-002",
@@ -861,7 +877,13 @@
         "B"
       ],
       "comentario": "El cóndilo es una prominencia redondeada que forma parte de una articulación.",
-      "numero_original": 17
+      "numero_original": 17,
+      "comentarios_opciones": {
+        "A": "Una depresión amplia se clasifica como fosa. El cóndilo se proyecta desde la superficie ósea.",
+        "B": "El cóndilo es una prominencia redondeada con una superficie que participa en la articulación.",
+        "C": "La raíz del diente se aloja en el alvéolo dental. Es una cavidad.",
+        "D": "El paso de un tendón, nervio o vaso por una ranura describe un surco óseo."
+      }
     },
     {
       "content_id": "morfo-08-visual-004",
@@ -908,7 +930,13 @@
         "C"
       ],
       "comentario": "El cráneo tiene 22 huesos: 8 craneales y 14 faciales.",
-      "numero_original": 18
+      "numero_original": 18,
+      "comentarios_opciones": {
+        "A": "Ocho es la cantidad de huesos craneales. Al contar todo el cráneo se suman los catorce faciales.",
+        "B": "Seis es el número de huesecillos del oído, que la tabla cuenta por separado.",
+        "C": "El cráneo comprende ocho huesos craneales y catorce faciales. La suma da veintidós.",
+        "D": "Catorce es el subtotal de huesos faciales. Faltan los ocho del grupo craneal."
+      }
     },
     {
       "content_id": "morfo-08-visual-005",
@@ -918,9 +946,9 @@
       "pregunta": "¿Qué sutura une el frontal con los parietales?",
       "respuesta_correcta": "B",
       "justificacion": "La figura 8.6 identifica la sutura coronaria entre el frontal y los parietales.",
-      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Suturas del cráneo: figura 8.6 · p. impresa 240 · p. PDF 268",
-      "paginas_pdf": "268",
-      "pagina_impresa": "240",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Suturas del cráneo: figura 8.6 · p. impresa 240, 242, 243 · p. PDF 268, 270, 271",
+      "paginas_pdf": "268, 270, 271",
+      "pagina_impresa": "240, 242, 243",
       "dificultad": "medio",
       "opcion_a": "Escamosa",
       "opcion_b": "Coronaria",
@@ -934,10 +962,14 @@
         "chapter": 8,
         "section": "Suturas del cráneo: figura 8.6",
         "pdf_pages": [
-          268
+          268,
+          270,
+          271
         ],
         "printed_pages": [
-          "240"
+          "240",
+          "242",
+          "243"
         ],
         "printed_page_note": null,
         "evidence_page": 268,
@@ -953,7 +985,13 @@
         "B"
       ],
       "comentario": "La figura 8.6 identifica la sutura coronaria entre el frontal y los parietales.",
-      "numero_original": 19
+      "numero_original": 19,
+      "comentarios_opciones": {
+        "A": "La unión lateral del parietal con el temporal se distingue de la unión anterior con el frontal.",
+        "B": "La coronaria aparece entre el frontal y ambos parietales en la figura 8.6.",
+        "C": "La sagital se ubica entre los dos parietales, en la línea media.",
+        "D": "La lambdoidea, llamada también parietooccipital, está en el borde posterior de los parietales."
+      }
     },
     {
       "content_id": "morfo-08-visual-006",
@@ -963,9 +1001,9 @@
       "pregunta": "¿Qué estructura del esfenoides aloja la hipófisis?",
       "respuesta_correcta": "B",
       "justificacion": "La fosa hipofisaria de la silla turca aloja la hipófisis.",
-      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Esfenoides · p. impresa 244 · p. PDF 272",
-      "paginas_pdf": "272",
-      "pagina_impresa": "244",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Esfenoides · p. impresa 236, 243, 244, 261 · p. PDF 264, 271, 272, 289",
+      "paginas_pdf": "264, 271, 272, 289",
+      "pagina_impresa": "236, 243, 244, 261",
       "dificultad": "medio",
       "opcion_a": "Alvéolo dental",
       "opcion_b": "Silla turca",
@@ -979,10 +1017,16 @@
         "chapter": 8,
         "section": "Esfenoides",
         "pdf_pages": [
-          272
+          264,
+          271,
+          272,
+          289
         ],
         "printed_pages": [
-          "244"
+          "236",
+          "243",
+          "244",
+          "261"
         ],
         "printed_page_note": null,
         "evidence_page": 272,
@@ -998,7 +1042,13 @@
         "B"
       ],
       "comentario": "La fosa hipofisaria de la silla turca aloja la hipófisis.",
-      "numero_original": 20
+      "numero_original": 20,
+      "comentarios_opciones": {
+        "A": "El alvéolo dental es el hueco de la raíz de un diente. La hipófisis se encuentra en una fosa del esfenoides.",
+        "B": "La silla turca contiene la fosa hipofisaria, que alberga la hipófisis.",
+        "C": "La cavidad glenoidea se describe en la escápula y se articula con el húmero.",
+        "D": "El agujero magno es una abertura del occipital. La hipófisis está alojada en la silla turca."
+      }
     },
     {
       "content_id": "morfo-08-visual-007",
@@ -1008,9 +1058,9 @@
       "pregunta": "¿Qué parte del etmoides permite el paso de los nervios olfatorios?",
       "respuesta_correcta": "B",
       "justificacion": "Los nervios olfatorios atraviesan los orificios de la lámina cribosa.",
-      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Etmoides · p. impresa 246 · p. PDF 274",
-      "paginas_pdf": "274",
-      "pagina_impresa": "246",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Etmoides · p. impresa 246, 247 · p. PDF 274, 275",
+      "paginas_pdf": "274, 275",
+      "pagina_impresa": "246, 247",
       "dificultad": "medio",
       "opcion_a": "Lámina perpendicular",
       "opcion_b": "Lámina cribosa",
@@ -1024,10 +1074,12 @@
         "chapter": 8,
         "section": "Etmoides",
         "pdf_pages": [
-          274
+          274,
+          275
         ],
         "printed_pages": [
-          "246"
+          "246",
+          "247"
         ],
         "printed_page_note": null,
         "evidence_page": 274,
@@ -1043,7 +1095,13 @@
         "B"
       ],
       "comentario": "Los nervios olfatorios atraviesan los orificios de la lámina cribosa.",
-      "numero_original": 21
+      "numero_original": 21,
+      "comentarios_opciones": {
+        "A": "La lámina perpendicular contribuye al tabique nasal. Los orificios para los nervios olfatorios están en la lámina cribosa.",
+        "B": "La lámina cribosa forma parte del techo de la cavidad nasal. Sus orificios permiten el paso de los nervios olfatorios.",
+        "C": "El cornete nasal inferior es un hueso independiente del etmoides. Los orificios olfatorios se encuentran en el techo nasal.",
+        "D": "El nasal se cuenta entre los huesos faciales. La estructura perforada de la pregunta forma parte del etmoides."
+      }
     },
     {
       "content_id": "morfo-08-visual-009",
@@ -1088,7 +1146,13 @@
         "A"
       ],
       "comentario": "Hay siete cervicales, doce torácicas y cinco lumbares.",
-      "numero_original": 22
+      "numero_original": 22,
+      "comentarios_opciones": {
+        "A": "En orden de cuello a región lumbar, se cuentan siete cervicales, doce torácicas y cinco lumbares.",
+        "B": "Siete cervicales coincide. El inciso intercambia las cantidades de torácicas y lumbares.",
+        "C": "Doce torácicas coincide. Las cifras de cervicales y lumbares están intercambiadas.",
+        "D": "Cinco lumbares coincide. Doce corresponde al tórax y siete al cuello."
+      }
     },
     {
       "content_id": "morfo-08-visual-010",
@@ -1098,9 +1162,9 @@
       "pregunta": "¿Qué estructura forma el centro gelatinoso del disco intervertebral?",
       "respuesta_correcta": "D",
       "justificacion": "El núcleo pulposo ocupa el centro del disco; el anillo fibroso lo rodea.",
-      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Discos intervertebrales · p. impresa 253 · p. PDF 281",
-      "paginas_pdf": "281",
-      "pagina_impresa": "253",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Discos intervertebrales · p. impresa 252, 253 · p. PDF 280, 281",
+      "paginas_pdf": "280, 281",
+      "pagina_impresa": "252, 253",
       "dificultad": "medio",
       "opcion_a": "Arco vertebral",
       "opcion_b": "Anillo fibroso",
@@ -1114,9 +1178,11 @@
         "chapter": 8,
         "section": "Discos intervertebrales",
         "pdf_pages": [
+          280,
           281
         ],
         "printed_pages": [
+          "252",
           "253"
         ],
         "printed_page_note": null,
@@ -1133,7 +1199,13 @@
         "D"
       ],
       "comentario": "El núcleo pulposo ocupa el centro del disco; el anillo fibroso lo rodea.",
-      "numero_original": 23
+      "numero_original": 23,
+      "comentarios_opciones": {
+        "A": "El arco está por detrás del cuerpo vertebral y delimita el agujero vertebral. La pregunta señala el centro de un disco.",
+        "B": "El anillo fibroso constituye la periferia del disco y rodea su centro gelatinoso.",
+        "C": "Los cuerpos vertebrales se encuentran a cada lado del disco. Su consistencia gelatinosa corresponde al núcleo del disco.",
+        "D": "El núcleo pulposo ocupa el centro gelatinoso y queda rodeado por el anillo fibroso."
+      }
     },
     {
       "content_id": "morfo-08-visual-011",
@@ -1178,7 +1250,13 @@
         "C"
       ],
       "comentario": "El axis presenta el diente u odontoides, que sirve de pivote al atlas.",
-      "numero_original": 24
+      "numero_original": 24,
+      "comentarios_opciones": {
+        "A": "La apófisis odontoides se describe como una particularidad de C2. Una vértebra lumbar pertenece a otra región.",
+        "B": "Las torácicas forman el grupo dorsal. El diente descrito pertenece a una cervical, C2.",
+        "C": "El axis, C2, posee la odontoides, que sirve de pivote para la rotación del atlas.",
+        "D": "El atlas gira alrededor del diente. La apófisis pertenece al axis."
+      }
     },
     {
       "content_id": "morfo-08-visual-012",
@@ -1188,9 +1266,9 @@
       "pregunta": "¿Qué pares de costillas son flotantes?",
       "respuesta_correcta": "A",
       "justificacion": "Los pares once y doce no tienen unión anterior al esternón y son flotantes.",
-      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Caja torácica: figura 8.27 · p. impresa 257 · p. PDF 285",
-      "paginas_pdf": "285",
-      "pagina_impresa": "257",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Caja torácica: figura 8.27 · p. impresa 257, 258 · p. PDF 285, 286",
+      "paginas_pdf": "285, 286",
+      "pagina_impresa": "257, 258",
       "dificultad": "medio",
       "opcion_a": "11 y 12",
       "opcion_b": "1 y 2",
@@ -1204,10 +1282,12 @@
         "chapter": 8,
         "section": "Caja torácica: figura 8.27",
         "pdf_pages": [
-          285
+          285,
+          286
         ],
         "printed_pages": [
-          "257"
+          "257",
+          "258"
         ],
         "printed_page_note": null,
         "evidence_page": 285,
@@ -1223,7 +1303,13 @@
         "A"
       ],
       "comentario": "Los pares once y doce no tienen unión anterior al esternón y son flotantes.",
-      "numero_original": 25
+      "numero_original": 25,
+      "comentarios_opciones": {
+        "A": "Los pares 11 y 12 carecen de unión anterior al esternón, rasgo que distingue a las costillas flotantes.",
+        "B": "Los pares 1 y 2 pertenecen al grupo de las costillas verdaderas y se unen al esternón por sus cartílagos.",
+        "C": "Los pares 8 y 9 son falsos, pero sus cartílagos se continúan con el del par superior. Los flotantes son 11 y 12.",
+        "D": "Los pares 6 y 7 están dentro de las siete costillas verdaderas. La figura marca como flotantes las dos últimas."
+      }
     },
     {
       "content_id": "morfo-08-visual-013",
@@ -1233,9 +1319,9 @@
       "pregunta": "¿Con qué hueso articula la tróclea del húmero?",
       "respuesta_correcta": "D",
       "justificacion": "La tróclea humeral articula con la ulna o cúbito.",
-      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Húmero · p. impresa 261 · p. PDF 289",
-      "paginas_pdf": "289",
-      "pagina_impresa": "261",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Húmero · p. impresa 260, 261 · p. PDF 288, 289",
+      "paginas_pdf": "288, 289",
+      "pagina_impresa": "260, 261",
       "dificultad": "medio",
       "opcion_a": "Radio",
       "opcion_b": "Clavícula",
@@ -1249,9 +1335,11 @@
         "chapter": 8,
         "section": "Húmero",
         "pdf_pages": [
+          288,
           289
         ],
         "printed_pages": [
+          "260",
           "261"
         ],
         "printed_page_note": null,
@@ -1268,7 +1356,13 @@
         "D"
       ],
       "comentario": "La tróclea humeral articula con la ulna o cúbito.",
-      "numero_original": 26
+      "numero_original": 26,
+      "comentarios_opciones": {
+        "A": "El radio se articula con el cóndilo lateral del húmero. La tróclea es el componente medial.",
+        "B": "La clavícula se une a la escápula en la cintura escapular. La tróclea está en el extremo del húmero que forma el codo.",
+        "C": "La escápula recibe la cabeza del húmero en la cavidad glenoidea. La tróclea está en el extremo opuesto del húmero.",
+        "D": "La tróclea humeral se articula con la ulna, denominada cúbito en el texto."
+      }
     },
     {
       "content_id": "morfo-08-visual-014",
@@ -1278,9 +1372,9 @@
       "pregunta": "¿Qué hueso del antebrazo está del lado del pulgar en posición anatómica?",
       "respuesta_correcta": "D",
       "justificacion": "El radio es lateral y se sitúa del lado del pulgar.",
-      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Radio · p. impresa 262 · p. PDF 290",
-      "paginas_pdf": "290",
-      "pagina_impresa": "262",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Radio · p. impresa 260, 261, 262 · p. PDF 288, 289, 290",
+      "paginas_pdf": "288, 289, 290",
+      "pagina_impresa": "260, 261, 262",
       "dificultad": "medio",
       "opcion_a": "Escápula",
       "opcion_b": "Húmero",
@@ -1294,9 +1388,13 @@
         "chapter": 8,
         "section": "Radio",
         "pdf_pages": [
+          288,
+          289,
           290
         ],
         "printed_pages": [
+          "260",
+          "261",
           "262"
         ],
         "printed_page_note": null,
@@ -1313,7 +1411,13 @@
         "D"
       ],
       "comentario": "El radio es lateral y se sitúa del lado del pulgar.",
-      "numero_original": 27
+      "numero_original": 27,
+      "comentarios_opciones": {
+        "A": "La escápula forma parte de la cintura escapular. El antebrazo está formado por radio y cúbito.",
+        "B": "El húmero es el hueso del brazo. La pregunta pide el hueso lateral del antebrazo.",
+        "C": "En posición anatómica, el cúbito queda medial al radio.",
+        "D": "El radio está en el lado lateral del antebrazo, del lado del pulgar."
+      }
     },
     {
       "content_id": "morfo-08-visual-015",
@@ -1358,7 +1462,13 @@
         "C"
       ],
       "comentario": "El coxal está formado por ilion, isquion y pubis.",
-      "numero_original": 28
+      "numero_original": 28,
+      "comentarios_opciones": {
+        "A": "Incluye el ilion, pero el sacro y el cóccix quedan separados del hueso coxal.",
+        "B": "Incluye el pubis. La figura del coxal identifica ilion e isquion como las otras dos piezas.",
+        "C": "Las tres piezas que se fusionan para formar cada coxal son ilion, isquion y pubis.",
+        "D": "Incluye el isquion. Las otras dos partes del coxal son ilion y pubis."
+      }
     },
     {
       "content_id": "morfo-08-visual-017",
@@ -1403,7 +1513,13 @@
         "D"
       ],
       "comentario": "El tarso tiene siete huesos; le siguen cinco metatarsianos y catorce falanges.",
-      "numero_original": 29
+      "numero_original": 29,
+      "comentarios_opciones": {
+        "A": "Catorce es el número de falanges de un pie. Se cuentan por separado de los huesos del tarso.",
+        "B": "Ocho corresponde al carpo de la mano. El texto contrasta ese número con los siete tarsianos del pie.",
+        "C": "Cinco corresponde a los metatarsianos, que se encuentran entre el tarso y los dedos.",
+        "D": "El tarso de un pie está integrado por siete huesos."
+      }
     },
     {
       "content_id": "morfo-08-visual-019",
@@ -1413,9 +1529,9 @@
       "pregunta": "¿Cuál es el hueso medial que soporta la mayor parte del peso de la pierna?",
       "respuesta_correcta": "B",
       "justificacion": "La tibia es medial y robusta y transmite la mayor parte de la carga de la pierna.",
-      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Tibia y peroné · p. impresa 269 · p. PDF 297",
-      "paginas_pdf": "297",
-      "pagina_impresa": "269",
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología. La unidad entre forma y función · 6.ª edición · cap. 8 · Tibia y peroné · p. impresa 268, 269 · p. PDF 296, 297",
+      "paginas_pdf": "296, 297",
+      "pagina_impresa": "268, 269",
       "dificultad": "medio",
       "opcion_a": "Patela o rótula",
       "opcion_b": "Tibia",
@@ -1429,9 +1545,11 @@
         "chapter": 8,
         "section": "Tibia y peroné",
         "pdf_pages": [
+          296,
           297
         ],
         "printed_pages": [
+          "268",
           "269"
         ],
         "printed_page_note": null,
@@ -1448,7 +1566,13 @@
         "B"
       ],
       "comentario": "La tibia es medial y robusta y transmite la mayor parte de la carga de la pierna.",
-      "numero_original": 30
+      "numero_original": 30,
+      "comentarios_opciones": {
+        "A": "La rótula se ubica en el tendón de la rodilla. La carga de la región crural pasa por la tibia.",
+        "B": "La tibia es el hueso medial y robusto de la región crural. Es el que soporta la carga de esa región.",
+        "C": "La fíbula, llamada peroné en el texto, es el hueso más delgado y lateral.",
+        "D": "El fémur forma el muslo. El hueso medial que carga peso por debajo de la rodilla es la tibia."
+      }
     },
     {
       "id": "mini-bio-01-01",
@@ -1489,7 +1613,13 @@
       ],
       "comentario": "Virchow añadió que toda célula procede de otra célula.",
       "numero_original": 31,
-      "numero_pregunta": 31
+      "numero_pregunta": 31,
+      "comentarios_opciones": {
+        "A": "Virchow añadió un principio sobre el origen celular: las células nuevas proceden de células que ya existían.",
+        "B": "La teoría celular abarca a todos los organismos vivos. El aporte de Virchow se refiere al origen de las células.",
+        "C": "La propuesta de Virchow exige una célula previa. La aparición directa a partir de materia inanimada contradice ese principio.",
+        "D": "La teoría atribuye a las células funciones estructurales, funcionales y reproductivas. Virchow añadió el origen a partir de células previas."
+      }
     },
     {
       "id": "mini-bio-01-02",
@@ -1530,7 +1660,13 @@
       ],
       "comentario": "Hooke describió las celdillas del corcho que observó al microscopio.",
       "numero_original": 32,
-      "numero_pregunta": 32
+      "numero_pregunta": 32,
+      "comentarios_opciones": {
+        "A": "La centrifugación diferencial se desarrolló mucho después para separar componentes celulares. El nombre surgió al observar el corcho.",
+        "B": "La microscopía electrónica permitió observar orgánulos en una etapa posterior. Hooke describió la estructura del corcho con el microscopio de su época.",
+        "C": "Hooke llamó células a las pequeñas cavidades que vio al examinar láminas de corcho.",
+        "D": "La secuenciación del genoma humano corresponde a un avance posterior. El término se originó al describir las celdillas del corcho."
+      }
     },
     {
       "id": "mini-bio-01-03",
@@ -1550,7 +1686,8 @@
         "chapter": 1,
         "section": "Organización de las células eucariotas",
         "pdf_pages": [
-          37
+          37,
+          41
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -1558,8 +1695,8 @@
         "anchor": "presencia de núcleo",
         "evidence_excerpt": "s distintos organismos. Su característica fundamental es la presencia de núcleo, que es la parte esencial de la célula, pues contiene el material genético. El ADN posee la información necesaria para sintetizar las proteínas requeridas para la estructura y el funcionamiento normal de la célula. A diferencia de los procariotas, que contienen solamente un cromosoma circular, los núcleos eucariotas tienen múltiples cromosomas lineales, cada uno de los cuales puede ser replicado, condensado y separado de su copia (su cromátida hermana) antes de la división ce"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de las células eucariotas · archivo electrónico repaginado · p. PDF 37",
-      "paginas_pdf": "37",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de las células eucariotas · archivo electrónico repaginado · p. PDF 37, 41",
+      "paginas_pdf": "37, 41",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -1571,7 +1708,13 @@
       ],
       "comentario": "La organización eucariota se caracteriza por el núcleo que contiene el material genético.",
       "numero_original": 33,
-      "numero_pregunta": 33
+      "numero_pregunta": 33,
+      "comentarios_opciones": {
+        "A": "El núcleo alberga el material genético. La tabla contrasta esa localización con la del genoma procariota, en el citoplasma.",
+        "B": "Las células eucariotas contienen ADN. El núcleo es la estructura que lo alberga.",
+        "C": "La tabla atribuye el peptidoglucano a la pared de bacterias y señala que las células animales carecen de pared celular.",
+        "D": "Un cromosoma circular en el citoplasma es el modelo procariota descrito. En el núcleo eucariota hay múltiples cromosomas lineales."
+      }
     },
     {
       "id": "mini-bio-01-04",
@@ -1591,7 +1734,9 @@
         "chapter": 1,
         "section": "Organización de las células eucariotas",
         "pdf_pages": [
-          37
+          37,
+          43,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -1599,8 +1744,8 @@
         "anchor": "múltiples cromosomas lineales",
         "evidence_excerpt": "amente un cromosoma circular, los núcleos eucariotas tienen múltiples cromosomas lineales, cada uno de los cuales puede ser replicado, condensado y separado de su copia (su cromátida hermana) antes de la división celular. Las células eucariotas animales poseen distintos orgánulos celulares, citoesqueleto, ribosomas de un tamaño de 80 S y centrosomas, y realizan procesos de tráfico intracelular de vesículas (como la endocitosis, la exocitosis, etc.). La división celular tiene lugar por mecanismos complejos que ocurren durante la mitosis (o meiosis, en el "
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de las células eucariotas · archivo electrónico repaginado · p. PDF 37",
-      "paginas_pdf": "37",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de las células eucariotas · archivo electrónico repaginado · p. PDF 37, 43, 46",
+      "paginas_pdf": "37, 43, 46",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -1612,7 +1757,13 @@
       ],
       "comentario": "El texto contrapone los múltiples cromosomas lineales del núcleo eucariota al cromosoma circular procariota.",
       "numero_original": 34,
-      "numero_pregunta": 34
+      "numero_pregunta": 34,
+      "comentarios_opciones": {
+        "A": "El cromosoma circular libre de envoltura nuclear corresponde al modelo bacteriano. En el núcleo eucariota los cromosomas son lineales.",
+        "B": "Los plásmidos se describen como ADN extracromosómico bacteriano. La pregunta se refiere al ADN que se organiza en cromosomas dentro del núcleo.",
+        "C": "Una cápside recubre el genoma de un virus. El núcleo eucariota organiza su ADN en cromosomas.",
+        "D": "En el núcleo eucariota el ADN se distribuye entre múltiples cromosomas lineales."
+      }
     },
     {
       "id": "mini-bio-01-05",
@@ -1632,7 +1783,8 @@
         "chapter": 1,
         "section": "Organización de las células eucariotas",
         "pdf_pages": [
-          37
+          37,
+          41
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -1640,8 +1792,8 @@
         "anchor": "80 S",
         "evidence_excerpt": "gánulos celulares, citoesqueleto, ribosomas de un tamaño de 80 S y centrosomas, y realizan procesos de tráfico intracelular de vesículas (como la endocitosis, la exocitosis, etc.). La división celular tiene lugar por mecanismos complejos que ocurren durante la mitosis (o meiosis, en el caso de las células germinales). En el caso de organismos vegetales, las células están rodeadas por una pared de celulosa y contienen cloroplastos (para la realización de la fotosíntesis) y grandes vacuolas, pero carecen de centrosomas y lisosomas. La figura 1-1 muestra un"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de las células eucariotas · archivo electrónico repaginado · p. PDF 37",
-      "paginas_pdf": "37",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de las células eucariotas · archivo electrónico repaginado · p. PDF 37, 41",
+      "paginas_pdf": "37, 41",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -1653,7 +1805,13 @@
       ],
       "comentario": "Calvo indica ribosomas de 80 S en las células eucariotas animales, frente a 70 S en las procariotas.",
       "numero_original": 35,
-      "numero_pregunta": 35
+      "numero_pregunta": 35,
+      "comentarios_opciones": {
+        "A": "El texto identifica como 80 S el ribosoma citoplasmático de la célula eucariota animal.",
+        "B": "El inciso pregunta por el ribosoma completo del citoplasma animal, cuyo tamaño se indica como 80 S.",
+        "C": "La tabla asigna 70 S a los ribosomas procariotas y 80 S a los ribosomas citoplasmáticos eucariotas.",
+        "D": "La cifra de 30 S no corresponde a la partícula ribosómica animal completa. El valor indicado para el ribosoma citoplasmático es 80 S."
+      }
     },
     {
       "id": "mini-bio-01-06",
@@ -1673,7 +1831,10 @@
         "chapter": 1,
         "section": "Organización de las células vegetales",
         "pdf_pages": [
-          37
+          37,
+          39,
+          41,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -1681,8 +1842,8 @@
         "anchor": "pared de celulosa",
         "evidence_excerpt": "de organismos vegetales, las células están rodeadas por una pared de celulosa y contienen cloroplastos (para la realización de la fotosíntesis) y grandes vacuolas, pero carecen de centrosomas y lisosomas. La figura 1-1 muestra un esquema de la organización de las células eucariotas humanas, con la indicación del capítulo de este libro en el que se hará referencia a cada una de dichas estructuras. A continuación hablaremos brevemente de la organización biológica de protozoos y hongos (células eucariotas), por ser algunos de ellos agentes patógenos en huma"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de las células vegetales · archivo electrónico repaginado · p. PDF 37",
-      "paginas_pdf": "37",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de las células vegetales · archivo electrónico repaginado · p. PDF 37, 39, 41, 46",
+      "paginas_pdf": "37, 39, 41, 46",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -1694,7 +1855,13 @@
       ],
       "comentario": "La célula vegetal descrita posee pared de celulosa, cloroplastos para la fotosíntesis y grandes vacuolas.",
       "numero_original": 36,
-      "numero_pregunta": 36
+      "numero_pregunta": 36,
+      "comentarios_opciones": {
+        "A": "La combinación reúne las tres características vegetales que enumera Calvo. Los cloroplastos realizan la fotosíntesis.",
+        "B": "El peptidoglucano y la falta de núcleo corresponden al modelo bacteriano que contrasta la tabla.",
+        "C": "Una cápside alrededor del genoma describe un virus. Una célula vegetal tiene organización eucariota.",
+        "D": "La quitina y el metabolismo de una levadura apuntan a los hongos. La pared vegetal del ejemplo es de celulosa."
+      }
     },
     {
       "id": "mini-bio-01-07",
@@ -1714,7 +1881,9 @@
         "chapter": 1,
         "section": "Protozoos",
         "pdf_pages": [
-          38
+          38,
+          51,
+          52
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -1722,8 +1891,8 @@
         "anchor": "organismos unicelulares",
         "evidence_excerpt": "Protozoos El término «protozoo» se refiere a una familia de organismos unicelulares con organización estructural de célula eucariota, que incluye miles de especies. La mayoría de las especies de protozoos se reproducen asexualmente por fisión binaria, mientras que otros son capaces de llevar a cabo reproducción sexual. Algunas especies son parásitas y pueden infectar a las células sanguíneas, los aparatos urogenital y digestivo y otros tejidos. Como ejemplo general, comentaremos brevemente la estructura y el ciclo biológico del género Plasmodium (fig. 1-"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Protozoos · archivo electrónico repaginado · p. PDF 38",
-      "paginas_pdf": "38",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Protozoos · archivo electrónico repaginado · p. PDF 38, 51, 52",
+      "paginas_pdf": "38, 51, 52",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -1735,7 +1904,13 @@
       ],
       "comentario": "Los protozoos son organismos unicelulares con organización estructural eucariota.",
       "numero_original": 37,
-      "numero_pregunta": 37
+      "numero_pregunta": 37,
+      "comentarios_opciones": {
+        "A": "El ARN circular sin cubierta caracteriza al viroide. Un protozoo posee organización celular.",
+        "B": "Calvo describe a los protozoos como organismos de una sola célula con estructura eucariota.",
+        "C": "Los protozoos son unicelulares y tienen organización eucariota. La alternativa cambia ambas características.",
+        "D": "El prión corresponde a una proteína infecciosa. El protozoo es un organismo celular."
+      }
     },
     {
       "id": "mini-bio-01-08",
@@ -1776,7 +1951,13 @@
       ],
       "comentario": "El texto sitúa a los esporozoítos en el hígado; posteriormente se liberan merozoítos que invaden eritrocitos.",
       "numero_original": 38,
-      "numero_pregunta": 38
+      "numero_pregunta": 38,
+      "comentarios_opciones": {
+        "A": "Los esporozoítos llegan al hígado. Los merozoítos que salen de esta fase pasan a la sangre y pueden invadir eritrocitos.",
+        "B": "El ciclo descrito pasa del mosquito al hígado humano. Las hifas quedan fuera de esa secuencia.",
+        "C": "Los eritrocitos se infectan después de la fase hepática. La forma que los invade es el merozoíto.",
+        "D": "El primer sitio que coloniza el esporozoíto en el humano es el hígado. El enunciado pide un tejido de ese huésped."
+      }
     },
     {
       "id": "mini-bio-01-09",
@@ -1796,7 +1977,9 @@
         "chapter": 1,
         "section": "Hongos",
         "pdf_pages": [
-          39
+          39,
+          43,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -1804,8 +1987,8 @@
         "anchor": "hifas",
         "evidence_excerpt": "uestas linealmente para constituir filamentos, denominados «hifas». Las hifas pueden crecer hasta formar micelios, visibles macroscópicamente. La organización de estos organismos es la de una típica célula eucariota, pero con la peculiaridad de estar rodeada por una pared de polisacáridos fibrilares (como la quitina) y estructuras amorfas de glucanos y mananos (que contienen los principales antígenos de la pared). La pared forma un exoesqueleto rígido que posee una función protectora, pero no permite la endocitosis. Las enfermedades causadas por hongos s"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Hongos · archivo electrónico repaginado · p. PDF 39",
-      "paginas_pdf": "39",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Hongos · archivo electrónico repaginado · p. PDF 39, 43, 46",
+      "paginas_pdf": "39, 43, 46",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -1817,7 +2000,13 @@
       ],
       "comentario": "Las células alargadas dispuestas linealmente forman hifas; su crecimiento origina micelios.",
       "numero_original": 39,
-      "numero_pregunta": 39
+      "numero_pregunta": 39,
+      "comentarios_opciones": {
+        "A": "Los pili son proyecciones bacterianas. Las unidades de una cápside vírica reciben otro nombre y tampoco forman filamentos de hongos.",
+        "B": "Las células fúngicas alargadas se disponen en filamentos llamados hifas. Su crecimiento puede formar un micelio.",
+        "C": "Los plásmidos son ADN extracromosómico de bacterias. El término del enunciado designa un filamento formado por células fúngicas.",
+        "D": "Los capsómeros son unidades de la cápside vírica. Los filamentos de un hongo son hifas."
+      }
     },
     {
       "id": "mini-bio-01-10",
@@ -1837,7 +2026,8 @@
         "chapter": 1,
         "section": "Hongos: organización y pared",
         "pdf_pages": [
-          39
+          39,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -1845,8 +2035,8 @@
         "anchor": "quitina",
         "evidence_excerpt": " rodeada por una pared de polisacáridos fibrilares (como la quitina) y estructuras amorfas de glucanos y mananos (que contienen los principales antígenos de la pared). La pared forma un exoesqueleto rígido que posee una función protectora, pero no permite la endocitosis. Las enfermedades causadas por hongos se denominan micosis. Hay ciertas especies de hongos que son muy importantes desde el punto de vista clínico, porque constituyen patógenos oportunistas que causan enfermedades en pacientes inmunodeprimidos (como los géneros Candida y Aspergillus). Los"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Hongos: organización y pared · archivo electrónico repaginado · p. PDF 39",
-      "paginas_pdf": "39",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Hongos: organización y pared · archivo electrónico repaginado · p. PDF 39, 46",
+      "paginas_pdf": "39, 46",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -1858,7 +2048,13 @@
       ],
       "comentario": "La pared fúngica contiene polisacáridos fibrilares como quitina y estructuras de glucanos y mananos.",
       "numero_original": 40,
-      "numero_pregunta": 40
+      "numero_pregunta": 40,
+      "comentarios_opciones": {
+        "A": "Calvo describe quitina en los componentes fibrilares y glucanos y mananos en otras estructuras de la pared fúngica.",
+        "B": "Los capsómeros forman una cubierta vírica. La pared fúngica se compone de polisacáridos.",
+        "C": "El texto describe una pared rígida de polisacáridos que protege a la célula del hongo.",
+        "D": "El ADN circular no forma la pared fúngica. Su armazón contiene quitina y otros polisacáridos."
+      }
     },
     {
       "id": "mini-bio-01-11",
@@ -1878,7 +2074,10 @@
         "chapter": 1,
         "section": "Organización de las células procariotas",
         "pdf_pages": [
-          41
+          37,
+          39,
+          41,
+          52
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -1886,8 +2085,8 @@
         "anchor": "bacterias y archaea",
         "evidence_excerpt": "den clasificar en dos grandes grupos (llamados «dominios»): bacterias y archaea (antiguamente denominados «arqueobacterias»). Este último grupo incluye organismos extremófilos (con capacidad de sobrevivir en ambientes adversos) que no tienen gran relevancia médica, por lo que nos centraremos únicamente en las bacterias. Tabla 1-1 Resumen de las diferencias entre células eucariotas y procariotas Eucariotas Procariotas Tamaño de la célula (diámetro promedio) 10-100 μm 0,2-2 μm Localización del genoma Dentro del núcleo, recubierto por la envoltura nuclear E"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de las células procariotas · archivo electrónico repaginado · p. PDF 41",
-      "paginas_pdf": "41",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de las células procariotas · archivo electrónico repaginado · p. PDF 37, 39, 41, 52",
+      "paginas_pdf": "37, 39, 41, 52",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -1899,7 +2098,13 @@
       ],
       "comentario": "El capítulo distingue los dominios bacterias y archaea entre los procariotas.",
       "numero_original": 41,
-      "numero_pregunta": 41
+      "numero_pregunta": 41,
+      "comentarios_opciones": {
+        "A": "Bacterias y archaea son los dos dominios procariotas que distingue el capítulo.",
+        "B": "Virus y priones se estudian como agentes subcelulares y quedan fuera de la clasificación de células procariotas.",
+        "C": "Plantas y animales tienen células eucariotas. La clasificación solicitada separa los dos grupos de procariotas.",
+        "D": "Protozoos y hongos tienen organización eucariota. Los dominios procariotas citados son bacterias y archaea."
+      }
     },
     {
       "id": "mini-bio-01-12",
@@ -1919,7 +2124,10 @@
         "chapter": 1,
         "section": "Bacterias: material genético",
         "pdf_pages": [
-          43
+          39,
+          43,
+          46,
+          52
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -1927,8 +2135,8 @@
         "anchor": "plásmidos",
         "evidence_excerpt": "ias cadenas de material genético extracromosómico, llamadas plásmidos. Estas secuencias circulares de ADN son mucho más pequeñas que el cromosoma y codifican para genes que les confieren algunas ventajas para la supervivencia, como, por ejemplo, la capacidad de resistencia frente a antibióticos, la adaptación a determinados medios o la capacidad de ser más virulentas. Entre otras características típicas de los procariotas podemos decir que la traducción de proteínas tiene lugar en ribosomas de un tamaño de 70 S y la membrana celular carece de colesterol "
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Bacterias: material genético · archivo electrónico repaginado · p. PDF 43",
-      "paginas_pdf": "43",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Bacterias: material genético · archivo electrónico repaginado · p. PDF 39, 43, 46, 52",
+      "paginas_pdf": "39, 43, 46, 52",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -1940,7 +2148,13 @@
       ],
       "comentario": "Los plásmidos son secuencias circulares de ADN mucho menores que el cromosoma bacteriano y pueden aportar ventajas de supervivencia.",
       "numero_original": 42,
-      "numero_pregunta": 42
+      "numero_pregunta": 42,
+      "comentarios_opciones": {
+        "A": "El plásmido es una molécula circular de ADN que se encuentra separada del cromosoma bacteriano.",
+        "B": "Una hifa es un filamento de un hongo. La pregunta describe una molécula de ADN bacteriano.",
+        "C": "Los capsómeros forman parte de una cápside vírica. No designan moléculas circulares de ADN bacteriano.",
+        "D": "Un prión es una proteína infecciosa. La estructura descrita aquí es ADN extracromosómico."
+      }
     },
     {
       "id": "mini-bio-01-13",
@@ -1960,6 +2174,8 @@
         "chapter": 1,
         "section": "Bacterias: pared celular",
         "pdf_pages": [
+          41,
+          42,
           43
         ],
         "printed_pages": null,
@@ -1968,8 +2184,8 @@
         "anchor": "peptidoglucano",
         "evidence_excerpt": "s y gramnegativas. El componente esencial de la pared es el peptidoglucano, que proporciona rigidez y estabiliza la estructura de la misma. En la pared de las bacterias grampositivas hay una capa gruesa de peptidoglucano, mientras que en las bacterias gramnegativas constituye una capa fina, separada de la membrana plasmática por el espacio periplasmático y recubierta exteriormente por otra membrana que contiene lipopolisacáridos. El lipopolisacárido es conocido como endotoxina, ya que produce fiebre, activación de la cascada del complemento, elevación de"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Bacterias: pared celular · archivo electrónico repaginado · p. PDF 43",
-      "paginas_pdf": "43",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Bacterias: pared celular · archivo electrónico repaginado · p. PDF 41, 42, 43",
+      "paginas_pdf": "41, 42, 43",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -1981,7 +2197,13 @@
       ],
       "comentario": "El peptidoglucano proporciona rigidez; es grueso en grampositivas y fino en gramnegativas, que presentan una membrana externa con lipopolisacáridos.",
       "numero_original": 43,
-      "numero_pregunta": 43
+      "numero_pregunta": 43,
+      "comentarios_opciones": {
+        "A": "El peptidoglucano es grueso en las grampositivas y delgado en las gramnegativas. Estas últimas cuentan con una membrana externa adicional.",
+        "B": "La tabla describe celulosa para plantas y quitina para algunos hongos. La distinción bacteriana usa el grosor del peptidoglucano.",
+        "C": "El peptidoglucano aparece en ambas paredes. Cambia su espesor y la gramnegativa añade una membrana externa.",
+        "D": "Se invirtió el grosor en los dos grupos y se omitió la membrana externa de las gramnegativas."
+      }
     },
     {
       "id": "mini-bio-01-14",
@@ -2001,7 +2223,10 @@
         "chapter": 1,
         "section": "Bacterias: conjugación",
         "pdf_pages": [
-          43
+          39,
+          41,
+          43,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -2009,8 +2234,8 @@
         "anchor": "conjugación bacteriana",
         "evidence_excerpt": "aunque son más largos y gruesos; están especializados en la conjugación bacteriana para transferir material genético de una bacteria a otra. Algunas especies (la mayoría de las cuales son bacilos grampositivos) son capaces de formar endosporas en condiciones adversas, que constituyen una forma muy resistente frente a agentes químicos o físicos. Las endosporas pueden sobrevivir en estas condiciones latentes durante cientos de años, y pueden germinar de nuevo, retornando a su estado normal cuando se exponen a condiciones favorables. Existen innumerables ej"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Bacterias: conjugación · archivo electrónico repaginado · p. PDF 43",
-      "paginas_pdf": "43",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Bacterias: conjugación · archivo electrónico repaginado · p. PDF 39, 41, 43, 46",
+      "paginas_pdf": "39, 41, 43, 46",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -2022,7 +2247,13 @@
       ],
       "comentario": "Los pili están especializados en la conjugación bacteriana, que transfiere material genético de una bacteria a otra.",
       "numero_original": 44,
-      "numero_pregunta": 44
+      "numero_pregunta": 44,
+      "comentarios_opciones": {
+        "A": "Los pili especializados intervienen en la conjugación, durante la cual pasa material genético entre bacterias.",
+        "B": "El micelio se desarrolla a partir de hifas. Los pili son estructuras bacterianas con otra función.",
+        "C": "El modelo bacteriano descrito carece de núcleo delimitado por envoltura. Los pili participan en la transferencia de ADN.",
+        "D": "La cápside vírica está formada por capsómeros. Los pili intervienen en la conjugación de bacterias."
+      }
     },
     {
       "id": "mini-bio-01-15",
@@ -2042,7 +2273,10 @@
         "chapter": 1,
         "section": "Bacterias: endosporas",
         "pdf_pages": [
-          43
+          37,
+          39,
+          43,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -2050,8 +2284,8 @@
         "anchor": "endosporas",
         "evidence_excerpt": "las cuales son bacilos grampositivos) son capaces de formar endosporas en condiciones adversas, que constituyen una forma muy resistente frente a agentes químicos o físicos. Las endosporas pueden sobrevivir en estas condiciones latentes durante cientos de años, y pueden germinar de nuevo, retornando a su estado normal cuando se exponen a condiciones favorables. Existen innumerables ejemplos de bacterias patógenas; de entre ellas, nos referiremos a algunas que serán citadas posteriormente en capítulos de este libro. Helicobacter pylori es una especie acid"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Bacterias: endosporas · archivo electrónico repaginado · p. PDF 43",
-      "paginas_pdf": "43",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Bacterias: endosporas · archivo electrónico repaginado · p. PDF 37, 39, 43, 46",
+      "paginas_pdf": "37, 39, 43, 46",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -2063,7 +2297,13 @@
       ],
       "comentario": "Algunas bacterias forman endosporas muy resistentes, que pueden germinar cuando reaparecen condiciones favorables.",
       "numero_original": 45,
-      "numero_pregunta": 45
+      "numero_pregunta": 45,
+      "comentarios_opciones": {
+        "A": "Algunas bacterias producen endosporas, que resisten condiciones adversas y pueden germinar cuando estas mejoran.",
+        "B": "La hifa es un filamento fúngico. La forma resistente descrita para ciertas bacterias es la endospora.",
+        "C": "El cloroplasto se asocia con la fotosíntesis en células vegetales. La pregunta describe la latencia de bacterias.",
+        "D": "El capsómero es una unidad de la cubierta vírica. La latencia bacteriana del ejemplo depende de la endospora."
+      }
     },
     {
       "id": "mini-bio-01-16",
@@ -2083,6 +2323,7 @@
         "chapter": 1,
         "section": "Virus: estructura y replicación",
         "pdf_pages": [
+          41,
           46
         ],
         "printed_pages": null,
@@ -2091,8 +2332,8 @@
         "anchor": "parásitos intracelulares obligados",
         "evidence_excerpt": " capacidad de replicarse independientemente (fig. 1-5). Son parásitos intracelulares obligados, lo que significa que deben entrar en una célula huésped y aprovecharse de sus enzimas y sustratos para poder replicarse. Aunque los virus pueden tener una gran variedad de formas y estructuras, así como estrategias de replicación y capacidad de invadir diferentes células huésped, hay unos rasgos básicos característicos de todos ellos. Su cubierta, llamada «cápside», está formada por unidades (fundamentalmente de naturaleza proteica) denominadas «capsómeros». P"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Virus: estructura y replicación · archivo electrónico repaginado · p. PDF 46",
-      "paginas_pdf": "46",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Virus: estructura y replicación · archivo electrónico repaginado · p. PDF 41, 46",
+      "paginas_pdf": "41, 46",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -2104,7 +2345,13 @@
       ],
       "comentario": "Los virus no pueden replicarse independientemente; dependen de una célula huésped.",
       "numero_original": 46,
-      "numero_pregunta": 46
+      "numero_pregunta": 46,
+      "comentarios_opciones": {
+        "A": "La descripción del virus parte de un genoma empaquetado. Para replicarse necesita los recursos de la célula que invade.",
+        "B": "El virus depende de las enzimas y sustratos del huésped. Por ello, la replicación autónoma que propone este inciso es incompatible con el texto.",
+        "C": "La fisión binaria corresponde al esquema procariota. El virus es un agente subcelular que se replica dentro de un huésped.",
+        "D": "La condición de parásito intracelular obligado se debe a que la replicación exige una célula huésped y sus recursos."
+      }
     },
     {
       "id": "mini-bio-01-17",
@@ -2124,6 +2371,8 @@
         "chapter": 1,
         "section": "Virus: estructura",
         "pdf_pages": [
+          37,
+          43,
           46
         ],
         "printed_pages": null,
@@ -2132,8 +2381,8 @@
         "anchor": "capsómeros",
         "evidence_excerpt": "ades (fundamentalmente de naturaleza proteica) denominadas «capsómeros». Por encima, algunos pueden presentar una envoltura lipoproteica (membrana que adquieren de la célula en la que se replicaron). Sus genomas pueden consistir en ADN o ARN, que pueden ser de cadena doble o simple, lineal o circular, segmentado o no. Para simplificar, vamos a dividir los virus en tres clases de acuerdo al tipo de ácido nucleico y modelo de replicación: 1) virus de ADN; 2) virus de ARN, y 3) virus que requieren transcriptasa inversa. 1. Los virus de ADN pueden ser de cad"
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Virus: estructura · archivo electrónico repaginado · p. PDF 46",
-      "paginas_pdf": "46",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Virus: estructura · archivo electrónico repaginado · p. PDF 37, 43, 46",
+      "paginas_pdf": "37, 43, 46",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -2145,7 +2394,13 @@
       ],
       "comentario": "La cápside es la cubierta formada por unidades de naturaleza fundamentalmente proteica denominadas capsómeros; solo algunos virus tienen envoltura adicional.",
       "numero_original": 47,
-      "numero_pregunta": 47
+      "numero_pregunta": 47,
+      "comentarios_opciones": {
+        "A": "El peptidoglucano aporta rigidez a la pared bacteriana. La cápside vírica se forma mediante unidades de naturaleza fundamentalmente proteica.",
+        "B": "Los cromosomas lineales contienen ADN nuclear. Los capsómeros integran la cubierta del virus.",
+        "C": "La envoltura lipídica está presente solo en algunos virus y se sitúa por fuera de la cápside.",
+        "D": "Los capsómeros son las unidades que integran la cápside que rodea el genoma vírico."
+      }
     },
     {
       "id": "mini-bio-01-18",
@@ -2186,7 +2441,13 @@
       ],
       "comentario": "La transcriptasa inversa sintetiza ADN a partir de un molde de ARN.",
       "numero_original": 48,
-      "numero_pregunta": 48
+      "numero_pregunta": 48,
+      "comentarios_opciones": {
+        "A": "La enzima requiere un ARN como molde y el producto de la reacción es ADN.",
+        "B": "La transcriptasa inversa copia la información de un ARN en una molécula de ADN.",
+        "C": "El producto de la reacción es un ácido nucleico, ADN. El peptidoglucano no es el producto descrito.",
+        "D": "El molde de la reacción es ARN. La reacción copia información genética y produce ADN."
+      }
     },
     {
       "id": "mini-bio-01-19",
@@ -2206,7 +2467,8 @@
         "chapter": 1,
         "section": "Organización de agentes subcelulares: viroides",
         "pdf_pages": [
-          51
+          51,
+          52
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -2214,8 +2476,8 @@
         "anchor": "ARN circular de cadena simple",
         "evidence_excerpt": "imples y pequeños que los virus. Consisten esencialmente en ARN circular de cadena simple sin una cubierta de proteínas ni otra envoltura, y son capaces de autorreplicarse dentro de la célula huésped."
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de agentes subcelulares: viroides · archivo electrónico repaginado · p. PDF 51",
-      "paginas_pdf": "51",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de agentes subcelulares: viroides · archivo electrónico repaginado · p. PDF 51, 52",
+      "paginas_pdf": "51, 52",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -2227,7 +2489,13 @@
       ],
       "comentario": "Los viroides descritos son agentes de plantas formados esencialmente por ARN circular de cadena simple y carecen de cubierta proteica.",
       "numero_original": 49,
-      "numero_pregunta": 49
+      "numero_pregunta": 49,
+      "comentarios_opciones": {
+        "A": "La proteína mal plegada que cambia otras proteínas describe un prión. Un viroide contiene ARN.",
+        "B": "La presencia de núcleo y orgánulos implica organización celular. El viroide descrito es una molécula de ARN sin cubierta.",
+        "C": "El capítulo identifica al viroide como ARN circular de cadena simple sin cápside ni envoltura.",
+        "D": "El viroide contiene ARN y carece de cubierta. La alternativa describe una estructura celular bacteriana."
+      }
     },
     {
       "id": "mini-bio-01-20",
@@ -2247,6 +2515,9 @@
         "chapter": 1,
         "section": "Organización de agentes subcelulares: priones",
         "pdf_pages": [
+          41,
+          43,
+          46,
           52
         ],
         "printed_pages": null,
@@ -2255,8 +2526,8 @@
         "anchor": "cambio conformacional",
         "evidence_excerpt": "na PrP normal (PrPC, del inglés celular isoform), induce un cambio conformacional en la PrPC que la transforma en PrPSc (y, por lo tanto, en patógena e infecciosa). Aunque no se han elucidado plenamente los detalles de esta transformación priónica, se ha postulado que la conversión de PrPC en PrPSc depende de la actividad catalítica del prión y/o de la polimerización dependiente de nucleación. El prión patógeno puede ser el resultado de mutaciones del gen que codifica la PrP (localizado en el cromosoma 20p en los humanos), o puede ser transmitido por la "
       },
-      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de agentes subcelulares: priones · archivo electrónico repaginado · p. PDF 52",
-      "paginas_pdf": "52",
+      "fuente": "Alfonso Calvo · Biología celular biomédica · Elsevier, 2015 · cap. 1 · Organización de agentes subcelulares: priones · archivo electrónico repaginado · p. PDF 41, 43, 46, 52",
+      "paginas_pdf": "41, 43, 46, 52",
       "pagina_impresa": null,
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
@@ -2268,7 +2539,13 @@
       ],
       "comentario": "La PrP patógena induce cambios conformacionales que convierten PrP normales en la forma patógena, propagando el proceso.",
       "numero_original": 50,
-      "numero_pregunta": 50
+      "numero_pregunta": 50,
+      "comentarios_opciones": {
+        "A": "La PrP patógena induce que una PrP normal adopte el plegamiento patógeno, lo que permite propagar el cambio.",
+        "B": "La transferencia mediante pili es parte de la conjugación bacteriana. El prión actúa cambiando el plegamiento de otras proteínas.",
+        "C": "La fisión binaria es un modo de división celular procariota. La propagación del prión es un cambio de conformación proteica.",
+        "D": "Un genoma empaquetado en una cápside es una organización vírica. El mecanismo priónico descrito depende de la conformación de la PrP."
+      }
     }
   ],
   "review": {

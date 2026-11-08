@@ -18,6 +18,8 @@ test('every mini question cites verified official PDF pages and has one answer w
  for(const q of paper.questions){
   assert.equal(q.source.sha256,hashes[q.source.file]);assert.equal(q.coverage.curriculum,'official-pdfs-2026-10-19');
   assert.ok(q.source.pdf_pages.includes(q.source.evidence_page));assert.ok(q.source.evidence_excerpt.toLowerCase().includes(q.source.anchor.toLowerCase()));
+  assert.deepEqual(Object.keys(q.comentarios_opciones), ['A','B','C','D']);
+  assert.ok(Object.values(q.comentarios_opciones).every(comment=>comment.length>30));
   assert.ok(q.justificacion.length>35);assert.equal(q.comentario,q.justificacion);assert.deepEqual(q.respuestas_aceptadas,[q.respuesta_correcta]);
   assert.ok(q['opcion_'+q.respuesta_correcta.toLowerCase()]);assert.match(q.fuente,/p\. PDF/);
   if(q.materia==='BIOLOGIA CELULAR'){assert.match(q.fuente,/Alfonso Calvo/);assert.ok(!/Alberts/.test(q.fuente));assert.equal(q.source.printed_pages,null);assert.match(q.source.printed_page_note,/repaginado/);assert.ok(q.source.pdf_pages.every(n=>n>=34&&n<=52));}

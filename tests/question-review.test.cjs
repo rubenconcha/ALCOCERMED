@@ -6,6 +6,14 @@ test('snapshot preserves the options actually presented, chosen answer, source a
  const payload=review.snapshot([question],[{selected:0}],read,()=>[1]);question.opcion_a='Modificada después';
  assert.equal(payload.items[0].options[0],'Opción 1');assert.equal(payload.items[0].number,12);assert.equal(payload.items[0].source,'Fuente del material');assert.equal(review.inspect(payload)[0].status,'wrong');
 });
+test('bank and saved reviews preserve the existing rationale for each alternative and both page numbers',()=>{
+ const q={OPCION_A:'Primera',OPCION_B:'Segunda',EXPLICACION:'A. Motivo de A.\n\nB. Motivo de B.',FUENTE:'Texto de estudio',PAGINAS_PDF:'45',PAGINA_IMPRESA:'17'};
+ const detail=review.snapshot([q],[{selected:1}],read,()=>[0]).items[0];
+ assert.equal(detail.explanation,'');assert.deepEqual(detail.option_explanations,['Motivo de A.','Motivo de B.']);
+ assert.equal(detail.pdf_page,'45');assert.equal(detail.printed_page,'17');
+ q.EXPLICACION='A. Solo una explicación general.';
+ assert.equal(review.commentaryData(q,read).explanation,q.EXPLICACION);
+});
 test('review distinguishes accepted alternatives, wrong answers, omissions and malformed detail',()=>{
  const item={options:['A','B','C'],accepted:[0,2]};
  const result=review.inspect({version:1,items:[{...item,selected:0},{...item,selected:2},{...item,selected:1},{...item,selected:null},{...item,selected:9}]});

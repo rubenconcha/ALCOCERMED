@@ -94,7 +94,22 @@ for i,(page,section,anchor,stem,options,explanation) in enumerate(biology,1):
     q={'id':f'mini-bio-01-{i:02d}','materia':'BIOLOGIA CELULAR','tema':'introduccion a la biologia celular','pregunta':stem,'respuesta_correcta':'A','justificacion':explanation,'dificultad':'medio'}
     q.update({'opcion_'+key:value for key,value in zip('abcd',options)})
     cite(q,B,1,[page],section,anchor)
-for i,q in enumerate(rows,1):q['numero_original']=i;q['numero_pregunta']=i
+# Keep editorial feedback when this paper is regenerated. If a stem, key or
+# option changes, recheck the comments before publishing the new question.
+paper_path='api/_simulations/mini-foundations.json'
+previous={q['id']:q for q in read(paper_path)['questions']} if (ROOT/paper_path).exists() else {}
+for i,q in enumerate(rows,1):
+    q['numero_original']=i
+    q['numero_pregunta']=i
+    reviewed=previous.get(q['id'])
+    if not reviewed or not reviewed.get('comentarios_opciones'):
+        continue
+    fields=['pregunta','respuesta_correcta',*('opcion_'+letter for letter in 'abcd')]
+    assert all(q[field]==reviewed[field] for field in fields),(q['id'],'Revisar los comentarios antes de regenerar')
+    assert q['source']['sha256']==reviewed['source']['sha256'],(q['id'],'Revisar la bibliografía')
+    q['comentarios_opciones']=reviewed['comentarios_opciones']
+    for field in ('source','fuente','paginas_pdf','pagina_impresa'):
+        q[field]=reviewed[field]
 assert len(rows)==50 and len({q['pregunta'] for q in rows})==50
 assert Counter((q['materia'],q['coverage']['chapter']) for q in rows)=={('MORFOFUNCION',1):15,('MORFOFUNCION',8):15,('BIOLOGIA CELULAR',1):20}
 paper={'id':'mini-foundations','scope':'mini-foundations','title':'Minisimulacro · Morfo 1 y 8 + Biología 1','duration':50,'questions':rows,'review':{'basis':'Solo los PDF oficiales del usuario: Saladin, 6.ª edición, capítulos 1 y 8; Calvo, Biología celular biomédica, capítulo 1. Cada pregunta incluye página y evidencia comprobada en PDF.','composition':{'morfo_tema_1':15,'morfo_tema_8':15,'biologia_tema_1':20},'source_authority':'Las evaluaciones existentes solo aportan redacción reutilizada; los libros oficiales son la autoridad académica.'}}

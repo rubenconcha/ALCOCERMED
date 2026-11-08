@@ -25,6 +25,7 @@ with sync_playwright() as p:
         async function finish(single){calls.push({table,filters:q.filters,columns:q.columns});if(delay)await new Promise(r=>window.resolveDetail=r);if(deny)return {error:{code:'42501'}};const data=rows.filter(r=>q.filters.every(([k,v])=>r[k]===v));return {data:single?data[0]:data};}return q;}});
       window.sdkReady=false;window.ensureSupabaseSdk=async()=>{await new Promise(r=>setTimeout(r,20));sdkReady=true;};const originalClient=getSupabase;window.getSupabase=()=>{if(!sdkReady)throw Error('SDK pendiente');return originalClient();};
     }""")
+    page.add_script_tag(content=(ROOT/'question-review.js').read_text(encoding='utf-8'))
     page.add_script_tag(content=(ROOT/'student-results.js').read_text(encoding='utf-8'))
     page.evaluate('openStudentResults()')
     page.get_by_text('3 intentos realizados · más recientes primero',exact=True).wait_for()

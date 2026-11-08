@@ -1,11 +1,35 @@
 'use strict';
 (function(root){
- function snapshot(questions,answers,read,accepted){
-  return {version:1,items:questions.map((q,i)=>{
-   const options=['a','b','c','d','e'].map(k=>read(q,'opcion_'+k)).filter(v=>v!=null&&String(v).trim()!=='').map(String);
-   const selected=answers[i]?.selected??null;
-   return {number:q.numero_original||i+1,id:String(q.id??q.content_id??''),materia:String(read(q,'materia')||q.subject||''),tema:String(read(q,'tema')||q.topic||''),question:String(read(q,'pregunta')||''),options,selected,accepted:accepted(q,i),option_explanations:options.map((_,index)=>String(q.comentarios_opciones?.['ABCDE'[index]]||'')),explanation:String(read(q,'justificacion')||read(q,'comentario')||''),source:String(q.fuente||''),printed_page:String(q.pagina_impresa||''),pdf_page:String(q.paginas_pdf||''),...(q.passage?.text?{passage:q.passage.text}:{})};
-  })};
+ function commentaryData(q, read) {
+  let explanation = String(read(q, 'justificacion') || read(q, 'explicacion') || read(q, 'comentario') || '').trim();
+  const options = [...'abcde'].map(letter => read(q, 'opcion_' + letter)).filter(value => value != null && String(value).trim()).map(String);
+  const comments = read(q, 'comentarios_opciones');
+  const option_explanations = options.map((_, i) => String(comments?.['ABCDE'[i]] || '').trim());
+  const blocks = explanation.split(/\n\s*\n/);
+  // Some saved bank questions carry their existing option comments in a single field.
+  if (options.length && blocks.length === options.length && blocks.every((block, i) => block.startsWith('ABCDE'[i] + '. '))) {
+   blocks.forEach((block, i) => { option_explanations[i] ||= block.slice(3).trim(); });
+   explanation = '';
+  }
+  return {
+   options, explanation, option_explanations,
+   source: String(read(q, 'fuente') || ''),
+   printed_page: String(read(q, 'pagina_impresa') || ''),
+   pdf_page: String(read(q, 'paginas_pdf') || ''),
+  };
+ }
+ function snapshot(questions, answers, read, accepted) {
+  return {version: 1, items: questions.map((q, i) => ({
+   ...commentaryData(q, read),
+   number: q.numero_original || i + 1,
+   id: String(q.id ?? q.content_id ?? ''),
+   materia: String(read(q, 'materia') || q.subject || ''),
+   tema: String(read(q, 'tema') || q.topic || ''),
+   question: String(read(q, 'pregunta') || ''),
+   selected: answers[i]?.selected ?? null,
+   accepted: accepted(q, i),
+   ...(q.passage?.text ? {passage: q.passage.text} : {}),
+  }))};
  }
  function inspect(payload){
   if(!payload||payload.version!==1||!Array.isArray(payload.items))return null;
@@ -15,10 +39,92 @@
    return {...q,status:!valid?'unknown':q.selected===null?'unanswered':q.accepted.includes(q.selected)?'correct':'wrong'};
   });
  }
- root.QuestionReview={snapshot,inspect};
+ root.QuestionReview={snapshot,inspect,commentaryData};
  if(typeof module!=='undefined'&&module.exports)module.exports=root.QuestionReview;
  if(typeof document==='undefined')return;
  const el=(tag,value,cls)=>{const node=document.createElement(tag);if(value!=null)node.textContent=value;if(cls)node.className=cls;return node;};
+ function showCommentary(review, { lockedMessage, workedSolution, sourceNote } = {}) {
+  const panel = el('section', null, 'qr-commentary');
+  const heading = el('h4', null, 'qr-commentary-title');
+  const icon = el('i', null, 'far fa-comment-alt');
+  icon.setAttribute('aria-hidden', 'true');
+  heading.append(icon, el('span', 'Comentario'));
+  panel.append(heading);
+
+  if (lockedMessage) {
+   panel.classList.add('qr-locked');
+   panel.append(el('p', lockedMessage, 'qr-commentary-muted'));
+   return panel;
+  }
+
+  const { options = [], selected, accepted = [], option_explanations = [], source, printed_page, pdf_page } = review;
+  const explanation = typeof review.explanation === 'string' ? review.explanation.trim() : '';
+  const fromPattern = /^Examen pasado\b/i.test(source || '');
+  const patternOnly = fromPattern && (!explanation || /^Respuesta según el patrón original\./i.test(explanation));
+  const reasons = options.flatMap((_, index) => {
+   const comment = option_explanations?.[index]?.replace?.(/^(?:Correcta|Revisa)\.\s*/, '');
+   return typeof comment === 'string' && comment.trim() ? [{ index, comment: comment.trim() }] : [];
+  });
+
+  if (workedSolution) panel.append(workedSolution);
+  else if (!patternOnly && explanation && !reasons.some(({ comment }) => comment === explanation)) {
+   panel.append(el('p', explanation, 'qr-commentary-copy'));
+  }
+
+  if (reasons.length) {
+   const list = el('ul', null, 'qr-reasons');
+   for (const { index, comment } of reasons) {
+    const correct = accepted.includes(index);
+    const state = accepted.length ? (correct ? 'Correcta' : 'Incorrecta') : '';
+    const entry = el('li', null, 'qr-reason');
+    if (correct) entry.classList.add('is-correct');
+    else if (index === selected && accepted.length) entry.classList.add('is-wrong');
+    const label = el('div', null, 'qr-reason-label');
+    label.append(el('strong', 'Inciso ' + 'ABCDE'[index]));
+    if (state) label.append(el('span', state, 'qr-reason-state'));
+    if (index === selected) label.append(el('span', 'Tu respuesta', 'qr-selected'));
+    entry.append(label, el('p', comment, 'qr-commentary-copy'));
+    list.append(entry);
+   }
+   panel.append(list);
+  }
+
+  if (!workedSolution && !reasons.length && (patternOnly || !explanation)) {
+   panel.append(el('p', patternOnly
+    ? 'La clave está registrada en el patrón original. La explicación con bibliografía está pendiente.'
+    : 'Esta pregunta todavía no tiene un comentario guardado.', 'qr-commentary-muted'));
+  }
+
+  if (source) {
+   const reference = el('div', null, 'qr-reference');
+   reference.append(el('strong', fromPattern ? 'Origen de la clave' : 'Fuente del comentario'));
+   const printed = printed_page && !source.includes('p. impresa ' + printed_page) ? 'Pág. impresa ' + printed_page : '';
+   const digital = pdf_page && !source.includes('p. PDF ' + pdf_page) ? 'Pág. PDF ' + pdf_page : '';
+   reference.append(el('p', [source, printed, digital].filter(Boolean).join(' · ')));
+   if (sourceNote) reference.append(el('p', sourceNote));
+   panel.append(reference);
+  }
+  return panel;
+ }
+
+ function showOptions({ options, selected, accepted = [] }) {
+  const list = el('ul', null, 'qr-answers');
+  options.forEach((option, index) => {
+   const item = el('li', null, 'qr-answer');
+   const correct = accepted.includes(index);
+   if (correct) item.classList.add('is-correct');
+   else if (index === selected && accepted.length) item.classList.add('is-wrong');
+   const tags = el('span', null, 'qr-answer-tags');
+   if (correct) tags.append(el('span', 'Correcta', 'qr-reason-state'));
+   if (index === selected) tags.append(el('span', 'Tu respuesta', 'qr-selected'));
+   item.append(el('strong', 'ABCDE'[index], 'qr-answer-letter'), el('span', option), tags);
+   list.append(item);
+  });
+  return list;
+ }
+
+ root.QuestionReview.showCommentary = showCommentary;
+ root.QuestionReview.showOptions = showOptions;
  let dialog,body,title,generation=0;
  function clear(){++generation;if(body)body.replaceChildren();if(dialog?.open)dialog.close();}
  async function open(table,id,label,inline){

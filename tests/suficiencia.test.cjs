@@ -155,7 +155,7 @@ test('student module finishes automatically at the absolute deadline and clears 
     const vm = require('node:vm');
     let now = 1700000000000, authCallback, topicOpens = 0;
     const handlers = {}, intervals = new Map(), storage = new Map();
-    const root = { innerHTML: '', classList: { contains: () => false }, addEventListener: (type, fn) => { handlers[type] = fn; }, replaceChildren() { this.innerHTML = ''; }, scrollIntoView() {}, querySelector: () => null };
+    const root = { innerHTML: '', classList: { contains: () => false }, addEventListener: (type, fn) => { handlers[type] = fn; }, replaceChildren() { this.innerHTML = ''; }, scrollIntoView() {}, querySelector: () => null, querySelectorAll: () => [] };
     let intervalId = 0;
     const context = {
         currentUser: { id: 'student-a' },

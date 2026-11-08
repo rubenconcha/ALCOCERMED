@@ -26,10 +26,12 @@
         "chapter": 1,
         "section": "El ámbito de la anatomía y la fisiología",
         "pdf_pages": [
-          30
+          30,
+          31
         ],
         "printed_pages": [
-          "2"
+          "2",
+          "3"
         ],
         "printed_page_note": null,
         "evidence_page": 30,
@@ -321,10 +323,12 @@
         "chapter": 8,
         "section": "Divisiones del esqueleto",
         "pdf_pages": [
-          262
+          262,
+          278
         ],
         "printed_pages": [
-          "234"
+          "234",
+          "250"
         ],
         "printed_page_note": null,
         "evidence_page": 262,
@@ -380,10 +384,14 @@
         "chapter": 8,
         "section": "Suturas del cráneo: figura 8.6",
         "pdf_pages": [
-          268
+          268,
+          270,
+          271
         ],
         "printed_pages": [
-          "240"
+          "240",
+          "242",
+          "243"
         ],
         "printed_page_note": null,
         "evidence_page": 268,
@@ -399,10 +407,16 @@
         "chapter": 8,
         "section": "Esfenoides",
         "pdf_pages": [
-          272
+          264,
+          271,
+          272,
+          289
         ],
         "printed_pages": [
-          "244"
+          "236",
+          "243",
+          "244",
+          "261"
         ],
         "printed_page_note": null,
         "evidence_page": 272,
@@ -418,10 +432,12 @@
         "chapter": 8,
         "section": "Etmoides",
         "pdf_pages": [
-          274
+          274,
+          275
         ],
         "printed_pages": [
-          "246"
+          "246",
+          "247"
         ],
         "printed_page_note": null,
         "evidence_page": 274,
@@ -456,9 +472,11 @@
         "chapter": 8,
         "section": "Discos intervertebrales",
         "pdf_pages": [
+          280,
           281
         ],
         "printed_pages": [
+          "252",
           "253"
         ],
         "printed_page_note": null,
@@ -494,10 +512,12 @@
         "chapter": 8,
         "section": "Caja torácica: figura 8.27",
         "pdf_pages": [
-          285
+          285,
+          286
         ],
         "printed_pages": [
-          "257"
+          "257",
+          "258"
         ],
         "printed_page_note": null,
         "evidence_page": 285,
@@ -513,9 +533,11 @@
         "chapter": 8,
         "section": "Húmero",
         "pdf_pages": [
+          288,
           289
         ],
         "printed_pages": [
+          "260",
           "261"
         ],
         "printed_page_note": null,
@@ -532,9 +554,13 @@
         "chapter": 8,
         "section": "Radio",
         "pdf_pages": [
+          288,
+          289,
           290
         ],
         "printed_pages": [
+          "260",
+          "261",
           "262"
         ],
         "printed_page_note": null,
@@ -589,9 +615,11 @@
         "chapter": 8,
         "section": "Tibia y peroné",
         "pdf_pages": [
+          296,
           297
         ],
         "printed_pages": [
+          "268",
           "269"
         ],
         "printed_page_note": null,
@@ -642,7 +670,8 @@
         "chapter": 1,
         "section": "Organización de las células eucariotas",
         "pdf_pages": [
-          37
+          37,
+          41
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -659,7 +688,9 @@
         "chapter": 1,
         "section": "Organización de las células eucariotas",
         "pdf_pages": [
-          37
+          37,
+          43,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -676,7 +707,8 @@
         "chapter": 1,
         "section": "Organización de las células eucariotas",
         "pdf_pages": [
-          37
+          37,
+          41
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -693,7 +725,10 @@
         "chapter": 1,
         "section": "Organización de las células vegetales",
         "pdf_pages": [
-          37
+          37,
+          39,
+          41,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -710,7 +745,9 @@
         "chapter": 1,
         "section": "Protozoos",
         "pdf_pages": [
-          38
+          38,
+          51,
+          52
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -744,7 +781,9 @@
         "chapter": 1,
         "section": "Hongos",
         "pdf_pages": [
-          39
+          39,
+          43,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -761,7 +800,8 @@
         "chapter": 1,
         "section": "Hongos: organización y pared",
         "pdf_pages": [
-          39
+          39,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -778,7 +818,10 @@
         "chapter": 1,
         "section": "Organización de las células procariotas",
         "pdf_pages": [
-          41
+          37,
+          39,
+          41,
+          52
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -795,7 +838,10 @@
         "chapter": 1,
         "section": "Bacterias: material genético",
         "pdf_pages": [
-          43
+          39,
+          43,
+          46,
+          52
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -812,6 +858,8 @@
         "chapter": 1,
         "section": "Bacterias: pared celular",
         "pdf_pages": [
+          41,
+          42,
           43
         ],
         "printed_pages": null,
@@ -829,7 +877,10 @@
         "chapter": 1,
         "section": "Bacterias: conjugación",
         "pdf_pages": [
-          43
+          39,
+          41,
+          43,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -846,7 +897,10 @@
         "chapter": 1,
         "section": "Bacterias: endosporas",
         "pdf_pages": [
-          43
+          37,
+          39,
+          43,
+          46
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -863,6 +917,7 @@
         "chapter": 1,
         "section": "Virus: estructura y replicación",
         "pdf_pages": [
+          41,
           46
         ],
         "printed_pages": null,
@@ -880,6 +935,8 @@
         "chapter": 1,
         "section": "Virus: estructura",
         "pdf_pages": [
+          37,
+          43,
           46
         ],
         "printed_pages": null,
@@ -914,7 +971,8 @@
         "chapter": 1,
         "section": "Organización de agentes subcelulares: viroides",
         "pdf_pages": [
-          51
+          51,
+          52
         ],
         "printed_pages": null,
         "printed_page_note": "Archivo electrónico repaginado: los folios visibles coinciden con el PDF; no se identifica la paginación de la edición impresa.",
@@ -931,6 +989,9 @@
         "chapter": 1,
         "section": "Organización de agentes subcelulares: priones",
         "pdf_pages": [
+          41,
+          43,
+          46,
           52
         ],
         "printed_pages": null,

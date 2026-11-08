@@ -23,7 +23,7 @@
     <style>body.login-active :is(.sidebar,.main-content,.watermark,.overlay){display:none!important}</style>
     <link href="assets/mindmaps/fonts/outfit.css?v=2" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" fetchpriority="low" onload="this.media='all'">
-    <link rel="stylesheet" href="styles.css?v=40">
+    <link rel="stylesheet" href="styles.css?v=41">
     <link rel="stylesheet" href="commerce.css?v=1">
     <link rel="stylesheet" href="student-white.css?v=2">
     <link rel="stylesheet" href="campus-theme.css?v=4">
@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="study-depth.css?v=3">
     <link rel="stylesheet" href="simulacro-library.css?v=6">
     <link rel="stylesheet" href="past-exams.css?v=4">
-    <link rel="stylesheet" href="topic-evaluations.css?v=4">
+    <link rel="stylesheet" href="topic-evaluations.css?v=5">
     <link rel="stylesheet" href="campus-atlas.css?v=5">
 <link rel="stylesheet" href="/device-limit.css?v=1">
 <link rel="stylesheet" href="study-media.css?v=20261021-visual5c">
@@ -46,9 +46,9 @@
     <script defer src="official-flashcards.js?v=1"></script>
     <script defer src="study-depth.js?v=17"></script>
     <script defer src="campus-section-tracking.js?v=1"></script>
-    <script defer src="question-review.js?v=3"></script>
+    <script defer src="question-review.js?v=4"></script>
     <script defer src="study-media.js?v=20261021-visual5b"></script>
-    <script defer src="script.js?v=20261108-examen"></script>
+    <script defer src="script.js?v=20261108-comentarios"></script>
     <script defer src="study-assessments.js?v=2"></script>
     <script defer src="simulation-scope.js?v=7"></script>
     <script defer src="simulacro-ingreso.js?v=11"></script>
@@ -59,13 +59,13 @@
     <script defer src="study-calendar-pdf.js?v=2"></script>
     <script defer src="study-calendar.js?v=4"></script>
     <script defer src="campus-shell.js?v=2"></script>
-    <script defer src="past-exam-breakdown.js?v=3"></script>
+    <script defer src="past-exam-breakdown.js?v=4"></script>
     <script defer src="past-exams.js?v=9"></script>
     <script defer src="topic-evaluations.js?v=20261107-suficiencia"></script>
     <script defer src="campus-atlas.js?v=12"></script>
-    <script defer src="suficiencia-core.js?v=10"></script>
-    <script defer src="suficiencia.js?v=13"></script>
-    <script defer src="student-results.js?v=2"></script>
+    <script defer src="suficiencia-core.js?v=11"></script>
+    <script defer src="suficiencia.js?v=14"></script>
+    <script defer src="student-results.js?v=3"></script>
 </head>
 
 <body class="login-active campus-shell">
@@ -825,34 +825,29 @@
                     </div>
                 </div>
 
-                <details class="bq-passage" id="bq-passage" hidden>
-                    <summary id="bq-passage-title"></summary>
-                    <p id="bq-passage-text"></p>
-                </details>
+                <div class="qr-container">
+                    <div class="qr-layout">
+                        <div class="qr-question">
+                            <details class="bq-passage" id="bq-passage" hidden>
+                                <summary id="bq-passage-title"></summary>
+                                <p id="bq-passage-text"></p>
+                            </details>
 
-                <!-- Tarjeta de pregunta -->
-                <div class="bq-question-card">
-                    <div class="bq-question-meta">
-                        <span class="bq-dificultad-label">dificultad:</span>
-                        <div class="bq-dificultad-dots" id="bq-dificultad"></div>
-                        <span class="bq-num-badge" id="bq-num-badge">N° 1</span>
-                    </div>
-                    <div class="bq-question-bar"></div>
-                    <p class="bq-question-text" id="bq-question-text">cargando pregunta...</p>
-                </div>
+                            <!-- Tarjeta de pregunta -->
+                            <div class="bq-question-card">
+                                <div class="bq-question-meta">
+                                    <span class="bq-dificultad-label">dificultad:</span>
+                                    <div class="bq-dificultad-dots" id="bq-dificultad"></div>
+                                    <span class="bq-num-badge" id="bq-num-badge">N° 1</span>
+                                </div>
+                                <div class="bq-question-bar"></div>
+                                <p class="bq-question-text" id="bq-question-text">cargando pregunta...</p>
+                            </div>
 
-                <!-- Opciones tipo MIR -->
-                <div class="bq-options" id="bq-options"></div>
-
-                <!-- Comentario (visible tras responder) -->
-                <div class="bq-comentario-wrap hidden" id="bq-comentario-wrap">
-                    <button class="bq-comentario-toggle" onclick="toggleComentario()">
-                        <i class="fas fa-comment-medical"></i>
-                        <span>comentario</span>
-                        <i class="fas fa-chevron-down" id="bq-comentario-arrow"></i>
-                    </button>
-                    <div class="bq-comentario-body hidden" id="bq-comentario-body">
-                        <p id="bq-comentario-text">sin comentario para esta pregunta.</p>
+                            <!-- Opciones tipo MIR -->
+                            <div class="bq-options" id="bq-options"></div>
+                        </div>
+                        <div id="bq-comentario-wrap" aria-live="polite"></div>
                     </div>
                 </div>
 
@@ -989,22 +984,27 @@
                         <button type="button" class="past-action" id="past-breakdown-empty-action" hidden></button>
                     </div>
                     <div id="past-breakdown-results" class="past-breakdown-layout" hidden>
-                        <div class="past-question-card" id="past-question-card">
-                            <div class="past-question-meta" id="past-question-meta"></div>
-                            <h3 id="past-question-title" tabindex="-1"></h3>
-                            <p class="past-question-stem" id="past-question-stem"></p>
-                            <form id="past-answer-form">
-                                <fieldset id="past-answer-options"><legend>Elige una alternativa</legend></fieldset>
-                                <div id="past-answer-feedback" class="past-answer-feedback" role="status" hidden></div>
-                                <div class="past-answer-actions">
-                                    <button type="submit" class="past-action" id="past-check-answer" disabled>Comprobar respuesta</button>
-                                    <button type="button" class="past-action" id="past-after-answer-next" hidden>Siguiente pregunta →</button>
+                        <div class="past-question-card qr-container" id="past-question-card">
+                            <div class="qr-layout">
+                                <div class="qr-question">
+                                    <div class="past-question-meta" id="past-question-meta"></div>
+                                    <h3 id="past-question-title" tabindex="-1"></h3>
+                                    <p class="past-question-stem" id="past-question-stem"></p>
+                                    <form id="past-answer-form">
+                                        <fieldset id="past-answer-options"><legend>Elige una alternativa</legend></fieldset>
+                                        <div id="past-answer-feedback" class="past-answer-feedback" role="status" hidden></div>
+                                        <div class="past-answer-actions">
+                                            <button type="submit" class="past-action" id="past-check-answer" disabled>Comprobar respuesta</button>
+                                            <button type="button" class="past-action" id="past-after-answer-next" hidden>Siguiente pregunta →</button>
+                                        </div>
+                                    </form>
+                                    <details class="past-reference" id="past-bibliography">
+                                        <summary><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#summary"></use></svg> Bibliografía de consulta</summary>
+                                        <div id="past-bibliography-copy"></div>
+                                    </details>
                                 </div>
-                            </form>
-                            <details class="past-reference" id="past-bibliography">
-                                <summary><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#summary"></use></svg> Bibliografía de consulta</summary>
-                                <div id="past-bibliography-copy"></div>
-                            </details>
+                                <div id="past-commentary"></div>
+                            </div>
                         </div>
                         <aside class="past-question-navigation" aria-label="Navegación del desglose">
                             <details id="past-question-index" open>

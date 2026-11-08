@@ -17,7 +17,7 @@
  }
  function freezeSufficiency(questions,attempt,bank,C,label){
   const score=C.grade(questions,attempt.answers);
-  const question_review={version:1,items:questions.map((q,index)=>({number:index+1,id:String(q.id),question:q.text,options:q.options.map((_,i)=>C.optionText(q,i)),selected:attempt.answers[q.id]??null,accepted:[q.correct],materia:(C.practiceSubjects||C.subjects)[q.subject]||q.subject,tema:q.topic||'',explanation:q.explanation||'',source:q.source?.pdfPages?.length&&C.referenceText?C.referenceText(q.source):q.source?.document||'',passage:bank.passages?.find(p=>p.id===q.passageId)?.text||''}))};
+  const question_review={version:1,items:questions.map((q,index)=>({number:index+1,id:String(q.id),question:q.text,options:q.options.map((_,i)=>C.optionText(q,i)),selected:attempt.answers[q.id]??null,accepted:[q.correct],materia:(C.practiceSubjects||C.subjects)[q.subject]||q.subject,tema:q.topic||'',explanation:q.explanation||'',option_explanations:q.options.map((_,i)=>q.comentarios_opciones?.['ABCDE'[i]]||''),source:q.source?.pdfPages?.length&&C.referenceText?C.referenceText(q.source):q.source?.document||'',passage:bank.passages?.find(p=>p.id===q.passageId)?.text||''}))};
   return {owner:attempt.owner,paperId:C.paper(bank,attempt.area)?.id||'last-practice',title:label,at:attempt.finishedAt,percent:score.percent,correct:score.correct,total:score.total,question_review};
  }
  function localRows(storage,id){
@@ -138,7 +138,27 @@
    const stats=el('div',null,'eval-metrics-grid');[['correct','Aciertos'],['wrong','Errores'],['omitted','Omitidas'],['unknown','Sin clave / detalle incompleto']].forEach(([key,label])=>stats.append(metric(label,s[key]??'No registrado')));detail.append(stats);drawAnalysis([record],detail);
    if(!s.items){detail.append(el('p',record.question_review==null?'Este intento conserva solo el resumen. No se guardaron las respuestas individuales; no es posible reconstruir aciertos y errores por pregunta.':'El detalle guardado está incompleto o no tiene un formato compatible. Se conserva la nota original.','sr-note'));return;}
    const tabs=el('div',null,'sr-review-filters'),questions=el('div');detail.append(tabs,questions);
-   function draw(filter){tabs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===filter)));questions.replaceChildren();const items=s.items.filter(q=>filter==='all'||q.status===filter);if(!items.length)questions.append(el('p','No hay preguntas en esta categoría.'));items.forEach((q,i)=>{const card=el('article',null,'eval-section-card sr-question '+q.status);card.append(el('small','Pregunta '+(q.number||i+1)+' · '+states[q.status]),el('h3',q.question||'Enunciado no guardado'));if(q.passage)card.append(el('p',q.passage,'sr-passage'));q.options.forEach((o,index)=>{const p=el('p',String.fromCharCode(65+index)+'. '+String(o),'sr-option');if(q.selected===index){p.classList.add('selected');p.append(el('strong',' · Tu respuesta'));}if(q.key&&q.accepted.includes(index)){p.classList.add('accepted');p.append(el('strong',' · Correcta según la clave guardada'));}card.append(p);});if(q.status==='unanswered')card.append(el('p','No respondiste esta pregunta.'));if(q.status==='unknown')card.append(el('p','No hay clave o detalle válido suficiente para calificar esta respuesta.'));if(q.explanation)card.append(el('p','Comentario: '+q.explanation));if(q.option_explanations?.[q.selected])card.append(el('p','Sobre tu respuesta: '+q.option_explanations[q.selected]));if(q.source)card.append(el('small','Fuente: '+q.source));questions.append(card);});}
+   function draw(filter){
+    tabs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===filter)));
+    questions.replaceChildren();
+    const items=s.items.filter(q=>filter==='all'||q.status===filter);
+    if(!items.length)questions.append(el('p','No hay preguntas en esta categoría.'));
+    items.forEach((q,i)=>{
+     const card=el('article',null,'eval-section-card sr-question qr-container '+q.status);
+     card.append(el('small','Pregunta '+(q.number||i+1)+' · '+states[q.status]));
+     const layout=el('div',null,'qr-layout');
+     const question=el('div',null,'qr-question');
+     question.append(el('h3',q.question||'Enunciado no guardado'));
+     if(q.passage)question.append(el('p',q.passage,'sr-passage'));
+     const review={...q,accepted:q.key?q.accepted:[]};
+     question.append(root.QuestionReview.showOptions(review));
+     if(q.status==='unanswered')question.append(el('p','No respondiste esta pregunta.'));
+     if(q.status==='unknown')question.append(el('p','No hay clave o detalle válido suficiente para calificar esta respuesta.'));
+     layout.append(question,root.QuestionReview.showCommentary(review));
+     card.append(layout);
+     questions.append(card);
+    });
+   }
    [['all','Todas'],['correct','Acertadas'],['wrong','Incorrectas'],['unanswered','Omitidas'],['unknown','Sin clave / detalle incompleto']].forEach(([key,label])=>{const b=el('button',label,'btn-back-game');b.type='button';b.dataset.filter=key;b.onclick=()=>draw(key);tabs.append(b);});draw('all');
   }catch(error){if(valid())detail.replaceChildren(close,el('p',error.message));}
  }

@@ -337,11 +337,35 @@
     function results(filter = 'all') {
         root.classList.remove?.('sf-bank-layout');
         const score = C.grade(questions, attempt.answers);
-        root.innerHTML = header() + `<section class="sf-result"><div class="sf-score">${score.percent}<small>%</small></div><div><h2>Así te fue</h2><p>${attempt.timedOut ? 'Se terminó el tiempo. ' : ''}${score.correct} ${score.correct === 1 ? 'correcta' : 'correctas'} · ${score.wrong} ${score.wrong === 1 ? 'incorrecta' : 'incorrectas'} · ${score.skipped} sin responder.</p><p>Revisa las explicaciones y vuelve a practicar lo que te costó.</p></div></section><div class="sf-breakdown">${Object.entries(score.subjects).map(([s, result]) => `<div><strong>${labels[s]}</strong><span>${result.correct} / ${result.total}</span></div>`).join('')}</div><div class="sf-result-actions">${button('catalogue', 'Volver a las materias', 'sf-primary')}${button('start', 'Practicar otra vez')}</div><h2 class="sf-section-title">Respuestas y comentarios</h2><div class="sf-tabs">${button('review-all', 'Todas (' + score.total + ')').replace('data-sf="review-all"', `data-sf="review-all" ${filter === 'all' ? 'aria-current="page"' : ''}`)}${button('review-errors', 'Incorrectas y pendientes (' + (score.wrong + score.skipped) + ')').replace('data-sf="review-errors"', `data-sf="review-errors" ${filter === 'errors' ? 'aria-current="page"' : ''}`)}</div><div class="sf-review-list">${questions.map((q, i) => {
-            const a = attempt.answers[q.id], right = a === q.correct;
-            if (filter === 'errors' && right) return '';
-            return `<details class="sf-review ${right ? 'sf-correct' : 'sf-incorrect'}" ${i === 0 ? 'open' : ''}><summary><span>${right ? '✓' : a === undefined ? '—' : '✕'} ${i + 1}. ${esc(q.text)}</span><small>${esc(labels[q.subject])}</small></summary>${passage(q)}<p><b>Tu respuesta:</b> ${a === undefined ? 'Sin responder' : esc(String.fromCharCode(65 + a) + '. ' + q.options[a])}</p><p class="sf-answer"><b>Respuesta correcta:</b> ${esc(String.fromCharCode(65 + q.correct) + '. ' + q.options[q.correct])}</p>${C.solutionHtml(q)}<small class="sf-reference">${esc(sourceText(q.source))}${q.source.note ? '<br>' + esc(q.source.note) : ''}</small></details>`;
+        const visible = questions.map((q, i) => i).filter(i => filter !== 'errors' || attempt.answers[questions[i].id] !== questions[i].correct);
+        root.innerHTML = header() + `<section class="sf-result"><div class="sf-score">${score.percent}<small>%</small></div><div><h2>Así te fue</h2><p>${attempt.timedOut ? 'Se terminó el tiempo. ' : ''}${score.correct} ${score.correct === 1 ? 'correcta' : 'correctas'} · ${score.wrong} ${score.wrong === 1 ? 'incorrecta' : 'incorrectas'} · ${score.skipped} sin responder.</p><p>Revisa las explicaciones y vuelve a practicar lo que te costó.</p></div></section><div class="sf-breakdown">${Object.entries(score.subjects).map(([s, result]) => `<div><strong>${labels[s]}</strong><span>${result.correct} / ${result.total}</span></div>`).join('')}</div><div class="sf-result-actions">${button('catalogue', 'Volver a las materias', 'sf-primary')}${button('start', 'Practicar otra vez')}</div><h2 class="sf-section-title">Respuestas y comentarios</h2><div class="sf-tabs">${button('review-all', 'Todas (' + score.total + ')').replace('data-sf="review-all"', `data-sf="review-all" ${filter === 'all' ? 'aria-current="page"' : ''}`)}${button('review-errors', 'Incorrectas y pendientes (' + (score.wrong + score.skipped) + ')').replace('data-sf="review-errors"', `data-sf="review-errors" ${filter === 'errors' ? 'aria-current="page"' : ''}`)}</div><div class="sf-review-list">${visible.map((i, position) => {
+            const q = questions[i], answer = attempt.answers[q.id], right = answer === q.correct;
+            return `<details class="sf-review qr-container ${right ? 'sf-correct' : 'sf-incorrect'}" ${position === 0 ? 'open' : ''}><summary><span>${right ? '✓' : answer === undefined ? '—' : '✕'} ${i + 1}. ${esc(q.text)}</span><small>${esc(labels[q.subject])}</small></summary><div class="qr-layout" data-sf-review="${i}"><div class="qr-question">${passage(q)}</div></div></details>`;
         }).join('') || '<p class="sf-notice">¡Todas tus respuestas fueron correctas!</p>'}</div><p class="sf-disclaimer">Resultado de práctica, sin penalización por error. Claves razonadas; no es una calificación oficial de admisión. Guardado solo para tu cuenta en este navegador.</p>`;
+        root.querySelectorAll('[data-sf-review]').forEach(layout => {
+            const q = questions[Number(layout.dataset.sfReview)];
+            const review = {
+                options: q.options.map((_, i) => C.optionText(q, i)),
+                selected: attempt.answers[q.id] ?? null,
+                accepted: [q.correct],
+                explanation: q.explanation,
+                option_explanations: q.options.map((_, i) => q.comentarios_opciones?.['ABCDE'[i]]),
+                source: sourceText(q.source),
+            };
+            const question = layout.firstElementChild;
+            if (review.selected === null) {
+                const notice = document.createElement('p');
+                notice.className = 'qr-commentary-muted';
+                notice.textContent = 'Dejaste esta pregunta sin responder.';
+                question.append(notice);
+            }
+            question.append(QuestionReview.showOptions(review));
+            const solution = document.createElement('template');
+            if (q.solution) solution.innerHTML = C.solutionHtml(q);
+            layout.append(QuestionReview.showCommentary(review, {
+                workedSolution: solution.content.firstElementChild, sourceNote: q.source.note,
+            }));
+        });
         root.scrollIntoView({ block: 'start', behavior: 'instant' });
     }
     async function resume() {

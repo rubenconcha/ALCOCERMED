@@ -137,6 +137,14 @@ window.createPastExamBreakdown = function (request, scope) {
         } else {
             feedback.textContent = 'Esta pregunta no tiene una clave utilizable en el patrón.';
         }
+        const commentary = checked
+            ? { ...QuestionReview.commentaryData(question, campo), selected: state.selected, accepted }
+            : {};
+        $('past-commentary').replaceChildren(QuestionReview.showCommentary(commentary, {
+            lockedMessage: checked ? '' : accepted.length
+                ? 'Comprueba tu respuesta para ver el comentario.'
+                : 'Esta pregunta no tiene una clave disponible.',
+        }));
         reference(topic, topic?.bibliography);
         $('past-bibliography').open = false;
         $('past-question-position').textContent = ordinal + ' de ' + data.count;

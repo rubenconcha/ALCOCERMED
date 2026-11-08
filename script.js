@@ -1939,7 +1939,7 @@ function clearBancoSuficiencia() {
     bancoState.preguntas = [];
     bancoState.answers = [];
     document.getElementById('bq-question-text').textContent = '';
-    document.getElementById('bq-comentario-text').textContent = '';
+    document.getElementById('bq-comentario-wrap').replaceChildren();
     renderPracticePassage('bq', null);
     document.getElementById('bq-options').replaceChildren();
     document.getElementById('banco-start-btn').disabled = true;
@@ -2541,24 +2541,7 @@ function renderBancoQuestion() {
         optsEl.appendChild(btn);
     });
 
-    // Comentario / Justificación (soporta: JUSTIFICACION, justificacion, EXPLICACION, explicacion, COMENTARIO)
-    const comentarioWrap = document.getElementById('bq-comentario-wrap');
-    const comentarioText = document.getElementById('bq-comentario-text');
-    const comentario = bancoComentario(q);
-
-    if (ans.selected !== null || bancoState.finalized) {
-        comentarioWrap.classList.remove('hidden');
-        comentarioText.textContent = comentario || 'sin comentario para esta pregunta.';
-    } else {
-        comentarioWrap.classList.add('hidden');
-        // Cerrar el body si estaba abierto
-        var cbody = document.getElementById('bq-comentario-body');
-        var carrow = document.getElementById('bq-comentario-arrow');
-        var ctoggle = document.querySelector('.bq-comentario-toggle');
-        if (cbody) cbody.classList.add('hidden');
-        if (ctoggle) ctoggle.classList.remove('open');
-        if (carrow) carrow.style.transform = '';
-    }
+    renderBancoCommentary(q, ans.selected, correctIdx, ans.selected !== null || bancoState.finalized);
 
     // Círculo activo
     updateBqCircles();
@@ -2571,11 +2554,12 @@ function renderBancoQuestion() {
     if (newPassage) document.getElementById('banco-quiz').scrollIntoView({ block: 'start', behavior: 'instant' });
 }
 
-function bancoComentario(q) {
-    const explicacion = campo(q, 'justificacion') || campo(q, 'explicacion') || campo(q, 'comentario') || '';
-    const fuente = campo(q, 'fuente');
-    const paginas = campo(q, 'paginas_pdf');
-    return explicacion + (fuente ? '\nFuente: ' + fuente + (paginas ? ' · páginas ' + paginas + ' del PDF' : '') : '');
+function renderBancoCommentary(question, selected, correct, checked) {
+    const review = checked ? { ...QuestionReview.commentaryData(question, campo), selected, accepted: [correct] } : {};
+    const panel = QuestionReview.showCommentary(review, {
+        lockedMessage: checked ? '' : 'Responde la pregunta para ver el comentario.',
+    });
+    document.getElementById('bq-comentario-wrap').replaceChildren(panel);
 }
 
 // ──────────────────────────────────────────────
@@ -2597,15 +2581,8 @@ function selectBancoAnswer(selectedIdx, correctIdx) {
         }
     });
 
-    // Mostrar comentario con el texto de JUSTIFICACION
     const q = bancoState.preguntas[idx];
-    const comentario = bancoComentario(q);
-    const comentarioWrap = document.getElementById('bq-comentario-wrap');
-    const comentarioText = document.getElementById('bq-comentario-text');
-    comentarioWrap.classList.remove('hidden');
-    if (comentarioText) {
-        comentarioText.textContent = comentario || 'sin justificación para esta pregunta.';
-    }
+    renderBancoCommentary(q, selectedIdx, correctIdx, true);
 
     // Registrar respuesta y recargar panel de seguimiento en background
     if (campo(q, 'id') && !CampusAccess.isFree()) {
@@ -2685,19 +2662,6 @@ window.bqNavigate = function (dir) {
     if (newIdx < 0 || newIdx >= bancoState.preguntas.length) return;
     bancoState.currentIdx = newIdx;
     renderBancoQuestion();
-};
-
-// ──────────────────────────────────────────────
-// TOGGLE COMENTARIO
-// ──────────────────────────────────────────────
-window.toggleComentario = function () {
-    const body = document.getElementById('bq-comentario-body');
-    const arrow = document.getElementById('bq-comentario-arrow');
-    const toggle = document.querySelector('.bq-comentario-toggle');
-    const isHidden = body.classList.contains('hidden');
-    body.classList.toggle('hidden');
-    if (toggle) toggle.classList.toggle('open', isHidden);
-    if (arrow) arrow.style.transform = isHidden ? 'rotate(180deg)' : '';
 };
 
 // ──────────────────────────────────────────────
@@ -3653,38 +3617,34 @@ window.finalizarSimulacro = function () {
     // Revisión pregunta a pregunta
     var reviewList = document.getElementById('sim-review-list');
     if (reviewList) {
-        reviewList.innerHTML = '';
+        reviewList.replaceChildren();
         simState.preguntas.forEach(function (q, i) {
-            var ans = simState.answers[i];
-            var correctaRaw = (campo(q, 'respuesta_correcta') || 'A').toString().trim().toUpperCase();
-            var letrasMap = { 'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4 };
-            var correctIdx = letrasMap[correctaRaw] !== undefined ? letrasMap[correctaRaw] : parseInt(correctaRaw) - 1;
-            var opciones = [
-                campo(q, 'opcion_a'), campo(q, 'opcion_b'),
-                campo(q, 'opcion_c'), campo(q, 'opcion_d'),
-                campo(q, 'opcion_e')
-            ].filter(function (o) { return o && o.toString().trim() !== ''; });
-            var isCorrect = ans.selected !== null && simAcceptedAnswerIndices(q).includes(ans.selected);
-            var sinResp = ans.selected === null;
-            var justif = simState.mode === 'tema' ? campo(q, 'justificacion') : bancoComentario(q);
+            const selected = simState.answers[i].selected;
+            const accepted = simAcceptedAnswerIndices(q);
+            const review = { ...QuestionReview.commentaryData(q, campo), selected, accepted };
+            const isCorrect = accepted.includes(selected);
+            const unanswered = selected === null;
 
-            var item = document.createElement('div');
-            item.className = 'sim-review-item' + (isCorrect ? ' sim-rev-ok' : sinResp ? ' sim-rev-pending' : ' sim-rev-fail');
-            var header = document.createElement('div');
+            const item = document.createElement('article');
+            item.className = 'sim-review-item qr-container' + (isCorrect ? ' sim-rev-ok' : unanswered ? ' sim-rev-pending' : ' sim-rev-fail');
+            const header = document.createElement('div');
             header.className = 'sim-rev-header';
-            var number = document.createElement('span');
+            const number = document.createElement('span');
             number.className = 'sim-rev-num';
             number.textContent = 'N° ' + (q.numero_original || i + 1);
-            var badge = document.createElement('span');
+            const badge = document.createElement('span');
             badge.className = 'sim-rev-badge';
-            badge.textContent = isCorrect ? '✓ correcta' : sinResp ? '— sin responder' : '✗ incorrecta';
+            badge.textContent = isCorrect ? '✓ Correcta' : unanswered ? '— Sin responder' : '✗ Incorrecta';
             header.append(number, badge);
-            item.appendChild(header);
-            var question = document.createElement('p');
+
+            const layout = document.createElement('div');
+            layout.className = 'qr-layout';
+            const questionSide = document.createElement('div');
+            questionSide.className = 'qr-question';
+            const question = document.createElement('p');
             question.className = 'sim-rev-question';
             question.textContent = campo(q, 'pregunta') || '';
-            if (question.textContent.includes('\n')) question.style.whiteSpace = 'pre-line';
-            item.appendChild(question);
+            questionSide.append(question);
             if (q.passage) {
                 const passage = document.createElement('details');
                 passage.className = 'bq-passage sim-rev-passage';
@@ -3693,61 +3653,12 @@ window.finalizarSimulacro = function () {
                 const text = document.createElement('p');
                 text.textContent = q.passage.text;
                 passage.append(heading, text);
-                item.appendChild(passage);
+                questionSide.append(passage);
             }
-            if (ans.selected !== null && opciones[ans.selected]) {
-                var selected = document.createElement('p');
-                selected.className = 'sim-rev-tu-resp';
-                selected.textContent = 'tu respuesta: ';
-                var selectedAnswer = document.createElement('strong');
-                selectedAnswer.textContent = opciones[ans.selected];
-                selected.appendChild(selectedAnswer);
-                item.appendChild(selected);
-            }
-            var correct = document.createElement('p');
-            correct.className = 'sim-rev-correcta';
-            correct.textContent = 'respuesta correcta: ';
-            var correctAnswer = document.createElement('strong');
-            correctAnswer.textContent = simAcceptedAnswerIndices(q).map(function (index) { return 'ABCDE'[index] + '. ' + (opciones[index] || '—'); }).join(' / ');
-            correct.appendChild(correctAnswer);
-            item.appendChild(correct);
-            if (justif) {
-                var explanation = document.createElement('p');
-                explanation.className = 'sim-rev-justif';
-                var explanationIcon = document.createElement('i');
-                explanationIcon.className = 'fas fa-lightbulb';
-                var explanationText = document.createElement('span');
-                explanationText.textContent = justif;
-                explanation.append(explanationIcon, explanationText);
-                item.appendChild(explanation);
-            }
-            // Keep feedback in the existing review, after submission. Each option
-            // explains its reasoning without revealing answers during the exam.
-            if (simState.mode === 'tema' && q.comentarios_opciones) {
-                var optionComments = document.createElement('div');
-                optionComments.className = 'sim-rev-option-comments';
-                opciones.forEach(function (option, optionIndex) {
-                    var letter = 'ABCDE'[optionIndex];
-                    var comment = q.comentarios_opciones[letter];
-                    if (!comment) return;
-                    var optionBlock = document.createElement('div');
-                    optionBlock.className = 'sim-rev-option-comment';
-                    var optionTitle = document.createElement('strong');
-                    optionTitle.textContent = letter + '. ' + option;
-                    var optionReason = document.createElement('p');
-                    optionReason.textContent = comment;
-                    optionBlock.append(optionTitle, optionReason);
-                    optionComments.appendChild(optionBlock);
-                });
-                item.appendChild(optionComments);
-            }
-            if (q.fuente) {
-                var source = document.createElement('p');
-                source.className = 'sim-rev-source';
-                source.textContent = 'Fuente: ' + q.fuente + (q.pagina_impresa ? ' · páginas impresas ' + q.pagina_impresa : '') + (q.paginas_pdf ? ' · páginas PDF ' + q.paginas_pdf : '');
-                item.appendChild(source);
-            }
-            reviewList.appendChild(item);
+            questionSide.append(QuestionReview.showOptions(review));
+            layout.append(questionSide, QuestionReview.showCommentary(review));
+            item.append(header, layout);
+            reviewList.append(item);
         });
     }
 

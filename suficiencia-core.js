@@ -159,6 +159,7 @@
             respuesta_correcta: 'ABCDE'[q.correct],
             justificacion: [q.explanation, ...steps].join('\n\n'),
             fuente: referenceText(q.source),
+            ...(q.comentarios_opciones ? { comentarios_opciones: q.comentarios_opciones } : {}),
             passage: q.passageId ? bank.passages.find(p => p.id === q.passageId) : undefined,
         };
         q.options.forEach((_, i) => { row['opcion_' + 'abcde'[i]] = optionText(q, i); });

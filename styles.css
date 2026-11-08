@@ -2801,7 +2801,7 @@ body.wayground-active .main-content {
     text-transform: none;
 }
 
-#banco-quiz .bq-question-text, #bq-comentario-text {
+#banco-quiz .bq-question-text {
     white-space: pre-wrap;
     overflow-wrap: anywhere;
 }
@@ -2949,63 +2949,103 @@ body.wayground-active .main-content {
     display: flex;
 }
 
-/* ── COMENTARIO ── */
-.bq-comentario-wrap {
-    background: #fffbeb;
-    border: 1px solid #fde68a;
-    border-radius: 14px;
-    overflow: hidden;
-    margin-bottom: 24px;
+/* Comentarios de revisión */
+.qr-container { container-type: inline-size; }
+.qr-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(12px, 2vw, 22px);
+    align-items: start;
 }
+@container (min-width: 690px) {
+    .qr-layout { grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr); }
+}
+#banco-quiz > .qr-container { margin-bottom: 24px; }
+#banco-quiz .qr-question > .bq-options { margin-bottom: 0; }
+.sf-review > .qr-layout { padding-bottom: 20px; }
 
-.bq-comentario-toggle {
+.qr-commentary {
+    min-width: 0;
+    border: 1px solid var(--shell-line, #dce3eb);
+    border-radius: 16px;
+    background: var(--shell-panel, #fff);
+    color: var(--shell-ink, #1e293b);
+    padding: clamp(13px, 1.8vw, 20px);
+    overflow-wrap: anywhere;
+}
+.qr-commentary.qr-locked { border-style: dashed; }
+.qr-commentary h4.qr-commentary-title {
+    margin: 0 0 10px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 14px 18px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 0.88rem;
+    gap: 9px;
+    color: var(--shell-ink, #1e293b);
+    font-size: .98rem;
     font-weight: 700;
-    color: #92400e;
-    width: 100%;
-    text-align: left;
-    font-family: 'Outfit', sans-serif;
-    text-transform: lowercase;
 }
-
-.bq-comentario-toggle i:first-child {
-    color: #f59e0b;
-    font-size: 0.95rem;
+.qr-commentary-title i {
+    display: grid;
+    place-items: center;
+    inline-size: 29px;
+    block-size: 29px;
+    flex: 0 0 29px;
+    border-radius: 8px;
+    background: var(--shell-blue-soft, #e9f4fb);
+    color: var(--shell-blue, #166f9e);
+    font-size: .85rem;
 }
-
-.bq-comentario-toggle span {
-    flex: 1;
-}
-
-.bq-comentario-toggle #bq-comentario-arrow {
-    font-size: 0.72rem;
-    transition: transform 0.25s;
-    color: #b45309;
-}
-
-.bq-comentario-toggle.open #bq-comentario-arrow {
-    transform: rotate(180deg);
-}
-
-.bq-comentario-body {
-    padding: 0 18px 16px;
-}
-
-.bq-comentario-body p {
-    font-size: 0.9rem;
-    color: #78350f;
-    line-height: 1.6;
-    text-transform: none;
-    font-weight: 400;
+.qr-commentary p.qr-commentary-copy, .qr-commentary p.qr-commentary-muted {
+    margin: 0;
+    font-size: .87rem;
+    line-height: 1.65;
     white-space: pre-line;
 }
+.qr-commentary-muted { color: var(--shell-muted, #53647a); }
+.qr-reasons, .qr-answers { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.qr-commentary-copy + .qr-reasons { margin-top: 12px; }
+.qr-reason, .qr-answer {
+    min-width: 0;
+    border: 1px solid var(--shell-line, #dce3eb);
+    background: var(--shell-soft, #f6f8fb);
+    border-radius: 11px;
+    padding: 9px 10px;
+    color: var(--shell-ink, #1e293b);
+}
+.qr-reason-label, .qr-answer-tags { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 8px; }
+.qr-reason-label { margin-bottom: 3px; font-size: .8rem; }
+.qr-reason-state, .qr-selected { font-size: .72rem; font-weight: 600; }
+.qr-reason-state { color: var(--shell-muted, #53647a); }
+.qr-selected { color: var(--shell-blue, #166f9e); }
+:is(.qr-reason, .qr-answer).is-correct {
+    border-color: #83bb9c;
+    border-inline-start: 3px solid #459872;
+}
+:is(.qr-reason, .qr-answer).is-wrong {
+    border-color: #d6a09c;
+    border-inline-start: 3px solid #c16663;
+}
+.qr-answer {
+    display: grid;
+    grid-template-columns: 1.6rem minmax(0, 1fr);
+    gap: 2px 9px;
+    align-items: start;
+    font-size: .85rem;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+.qr-answer-letter { color: var(--shell-blue, #166f9e); text-align: center; }
+.qr-answer-tags { grid-column: 2; }
+.qr-answer-tags:empty { display: none; }
+.qr-reference {
+    margin-top: 12px;
+    border-top: 1px solid var(--shell-line, #dce3eb);
+    padding-top: 10px;
+    color: var(--shell-muted, #53647a);
+    font-size: .77rem;
+    line-height: 1.55;
+}
+.qr-reference strong { color: var(--shell-ink, #1e293b); }
+.qr-reference p { margin: 3px 0 0; }
 
 /* ── CÍRCULOS DE NAVEGACIÓN MIR ── */
 .bq-nav-section {
@@ -3792,13 +3832,6 @@ body.wayground-active .main-content {
     line-height: 1.45;
 }
 
-.sim-rev-source {
-    margin: 10px 0 0;
-    color: #65758c;
-    font-size: 0.75rem;
-    line-height: 1.45;
-}
-
 .sim-nq-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 22px;
@@ -4009,7 +4042,7 @@ body.wayground-active .main-content {
 
 /* ── RESULTADO SIMULACRO ── */
 .sim-result-wrap {
-    max-width: 680px;
+    max-width: 1040px;
     margin: 0 auto;
     background: #fff;
     border-radius: 28px;
@@ -4180,58 +4213,11 @@ body.wayground-active .main-content {
     line-height: 1.4;
     text-transform: none;
     margin-bottom: 8px;
-}
-
-.sim-rev-tu-resp,
-.sim-rev-correcta {
-    font-size: 0.82rem;
-    color: #6b7280;
-    text-transform: none;
-    margin-bottom: 4px;
-}
-
-.sim-rev-correcta strong {
-    color: #16a34a;
-}
-
-.sim-rev-tu-resp strong {
-    color: #dc2626;
-}
-
-.sim-rev-ok .sim-rev-tu-resp strong {
-    color: #16a34a;
-}
-
-.sim-rev-justif {
-    font-size: 0.8rem;
-    color: #78350f;
-    background: #fffbeb;
-    border: 1px solid #fde68a;
-    border-radius: 8px;
-    padding: 8px 12px;
-    margin-top: 8px;
-    text-transform: none;
-    line-height: 1.5;
-    display: flex;
-    gap: 7px;
-    align-items: flex-start;
-}
-
-.sim-rev-justif span { white-space: pre-line; overflow-wrap: anywhere; }
-#sim-options .bq-option-text,
-#sim-review-list .sim-rev-justif span,
-#sim-review-list .sim-rev-tu-resp strong,
-#sim-review-list .sim-rev-correcta strong { text-transform: none; }
-
-.sim-rev-justif i {
-    color: #f59e0b;
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
-.sim-rev-justif span {
     white-space: pre-line;
+    overflow-wrap: anywhere;
 }
+
+#sim-options .bq-option-text { text-transform: none; }
 
 .sim-result-actions {
     text-align: center;
