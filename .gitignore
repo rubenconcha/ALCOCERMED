@@ -8,5 +8,10 @@ Thumbs.db
 *.log
 *.tmp
 
+# Los PDF académicos y las extracciones se manejan en privado.
+/referencias-oficiales/*
+!/referencias-oficiales/README.md
+!/referencias-oficiales/manifest.json
+
 # Video fuente local: supera el limite de GitHub.
 /tiktok-c0245/public/source.mp4
