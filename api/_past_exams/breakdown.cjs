@@ -71,10 +71,10 @@ async function breakdown(catalog, access, query) {
         requested, count, page, pages, pageSize, available: rows.length,
         unconfirmedCount: rows.filter(row => !row.topic).length,
         locked: scope.length > 0 && visible.length === 0,
-        subjects: Object.entries(index.sources).filter(([id]) => subjectCounts.has(id))
-            .map(([id, source]) => ({ id, ...source, count: subjectCounts.get(id) })),
-        topics: Object.entries(index.topics).filter(([id]) => topicCounts.has(id))
-            .map(([id, topic]) => ({ id, ...topic, count: topicCounts.get(id),
+        subjects: Object.entries(index.sources).filter(([id]) => subjectCounts.has(id) || subjects.has(id))
+            .map(([id, source]) => ({ id, ...source, count: subjectCounts.get(id) || 0 })),
+        topics: Object.entries(index.topics).filter(([id]) => topicCounts.has(id) || topics.has(id))
+            .map(([id, topic]) => ({ id, ...topic, count: topicCounts.get(id) || 0,
                 bibliography: index.sources[topic.source || topic.subject] })),
         questions: requested ? filtered.slice((page - 1) * pageSize, page * pageSize)
             .map(({ terms, ...row }) => row) : [],

@@ -228,7 +228,11 @@ window.createPastExamBreakdown = function (request, scope) {
                 empty('Elige qué quieres practicar', 'Selecciona la gestión, el parcial, una materia o un tema. También puedes buscar por texto.',
                     'Ver todas las preguntas disponibles', () => { showAll = true; load(); });
             } else if (!data.questions.length) {
-                empty('No hay preguntas con estos filtros', 'Prueba con otro tema o amplía la gestión.');
+                if (topics.size && !query.year && !query.type && !query.search) {
+                    empty('No hay preguntas de esta selección', 'En las gestiones disponibles para tu cuenta no hay preguntas originales de los temas seleccionados.');
+                } else {
+                    empty('No hay preguntas con estos filtros', 'Prueba con otro tema o amplía la gestión.');
+                }
             } else {
                 cursor = last ? data.questions.length - 1 : 0;
                 $('past-breakdown-empty').hidden = true;
@@ -242,9 +246,9 @@ window.createPastExamBreakdown = function (request, scope) {
         }
     }
 
-    function resetFilters() {
-        subjects = new Set();
-        topics = new Set();
+    function resetFilters({ subject, topics: selectedTopics = [] } = {}) {
+        subjects = new Set(subject ? [subject] : []);
+        topics = new Set(selectedTopics);
         search = '';
         showAll = false;
         questionSearch.value = '';

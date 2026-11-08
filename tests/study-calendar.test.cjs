@@ -4,6 +4,8 @@ const path = require('node:path');
 const test = require('node:test');
 const { buildSample, today, monday, move, kinds, pageRange } = require('../study-calendar-data.js');
 const { exercises } = require('../sufficiency-practice-content.js');
+const evaluationCatalog = require('../content/topic-evaluations/catalog.json');
+const pastIndex = require('../api/_past_exams/topic-index.json');
 const { archivos } = require('../referencias-oficiales/manifest.json');
 const bookPages = {
     morfofuncion: archivos.find(book => book.archivo.startsWith('morfofisiliologia')).paginas_pdf,
@@ -54,8 +56,25 @@ test('weekdays assign the example blocks and rotate verified readings and existi
     assert.equal(pageRange(monday[0].reading.printed), '679–695');
     assert.equal(pageRange(monday[0].reading.pdf), '707–723');
     assert.equal(monday[1].bankTopic, 'sangre');
+    assert.deepEqual(monday[0].reading.topicLinks, {
+        evaluation: 'morfo-18',
+        past: { subject: 'morfo', topics: ['morfo-18'] },
+    });
+    assert.deepEqual(monday[1].topicLinks, monday[0].reading.topicLinks);
     assert.equal(monday[2].reading.slug, 'educacion-salud');
     assert.equal(monday[4].practice.subject, 'Matemáticas');
+
+    for (const items of plan.values()) {
+        if (items[0].resource !== 'reading') continue;
+        assert.deepEqual(items[1].topicLinks, items[0].reading.topicLinks);
+    }
+    const evaluations = new Map(evaluationCatalog.exams.map(exam => [exam.id, exam]));
+    const expectedSubjects = { morfofuncion: 'MORFOFUNCION', 'biologia-celular': 'BIOLOGIA CELULAR', 'educacion-salud': 'SALUD PUBLICA' };
+    for (const { reading } of [...plan.values()].flat().filter(item => item.reading)) {
+        const { evaluation, past } = reading.topicLinks;
+        assert.equal(evaluations.get(evaluation)?.subject, expectedSubjects[reading.slug], reading.topic);
+        assert.ok(past.topics.length && past.topics.every(id => pastIndex.topics[id]?.subject === past.subject), reading.topic);
+    }
 
     const weekdayStarts = [...plan.values()].filter(items => items[0].resource === 'reading').map(items => items[0].title);
     assert.equal(new Set(weekdayStarts).size, 10);

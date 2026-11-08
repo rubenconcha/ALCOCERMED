@@ -212,7 +212,19 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
         const original = require('../api/_past_exams/2025-2026-1.json').questions[0];
         assert.deepEqual(filtered.questions[0].question, original);
         assert.equal(filtered.questions[0].topic, 'morfo-10');
+        const studyTopic = { subjects: 'morfo', topics: 'morfo-18' };
+        const freeBlood = (await request(studyTopic)).body;
+        assert.equal(freeBlood.count, 8);
+        assert.ok(freeBlood.questions.every(row => row.topic === 'morfo-18' && row.year === catalog.freeYear));
         premium = true;
+        const blood = (await request(studyTopic)).body;
+        assert.equal(blood.count, 41);
+        assert.ok(blood.questions.every(row => row.topic === 'morfo-18'));
+        const emptyTopic = (await request({ subjects: 'salud', topics: 'salud-03' })).body;
+        assert.equal(emptyTopic.count, 0);
+        assert.deepEqual(emptyTopic.questions, []);
+        assert.equal(emptyTopic.topics.find(topic => topic.id === 'salud-03')?.count, 0);
+
         const available = (await request({})).body;
         assert.equal(available.available, 1491);
         assert.equal(available.requested, false);

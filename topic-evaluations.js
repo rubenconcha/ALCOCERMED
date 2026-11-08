@@ -1,7 +1,9 @@
 'use strict';
 (() => {
     const $ = id => document.getElementById(id);
-    let catalogPromise, request = 0, loading = 0;
+    const subjectFilter = $('topic-eval-subject');
+    const topicFilter = $('topic-eval-search');
+    let catalogPromise, request = 0, loading = 0, topicId = '';
     const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
     const questionCount = count => count + (count === 1 ? ' pregunta' : ' preguntas');
     async function catalog() {
@@ -12,10 +14,17 @@
     }
     async function render() {
         const data = await catalog();
-        const subject = $('topic-eval-subject').value;
-        const query = normalize($('topic-eval-search').value);
-        const exams = data.exams.filter(exam => (!subject || subject === exam.subject) &&
-            normalize([exam.title, exam.topic, exam.subjectLabel, exam.source, exam.number && 'Tema ' + exam.number].filter(Boolean).join(' ')).includes(query));
+        if (currentCampusScreen !== 'evaluacion-screen') return;
+        const requested = topicId ? data.exams.find(exam => exam.id === topicId) : null;
+        if (requested) {
+            subjectFilter.value = requested.subject;
+            topicFilter.value = requested.title;
+        }
+        const query = normalize(topicFilter.value);
+        const exams = topicId
+            ? (requested ? [requested] : [])
+            : data.exams.filter(exam => (!subjectFilter.value || subjectFilter.value === exam.subject) &&
+                normalize([exam.title, exam.topic, exam.subjectLabel, exam.source, exam.number && 'Tema ' + exam.number].filter(Boolean).join(' ')).includes(query));
         const grid = $('topic-eval-grid'); grid.replaceChildren();
         $('topic-eval-count').textContent = exams.length + (exams.length === 1 ? ' evaluación' : ' evaluaciones');
         $('topic-eval-status').textContent = exams.length ? '' : 'No hay temas que coincidan con tu búsqueda.';
@@ -33,13 +42,18 @@
         });
     }
     const originalOpen = window.openEvaluacion;
-    window.openEvaluacion = function() {
+    window.openEvaluacion = function(requestedTopicId) {
         originalOpen();
         // showScreen may retain the current exam when its discard dialog is cancelled.
         if (currentCampusScreen !== 'evaluacion-screen') return;
         ++request; loading = 0;
+        if (typeof requestedTopicId === 'string') {
+            topicId = requestedTopicId;
+            $('topic-eval-grid').replaceChildren();
+            $('topic-eval-count').textContent = '';
+        }
         $('topic-eval-status').textContent='Cargando evaluaciones…';
-        render().catch(error => { $('topic-eval-status').textContent=error.message; });
+        return render().catch(error => { $('topic-eval-status').textContent=error.message; });
     };
     async function start(exam, button) {
         if (loading) return;
@@ -89,8 +103,12 @@
             window.openEvaluacion();
         }else returnToSelection();
     };
-    $('topic-eval-subject').addEventListener('change',()=>render().catch(error=>{$('topic-eval-status').textContent=error.message;}));
-    $('topic-eval-search').addEventListener('input',()=>render().catch(error=>{$('topic-eval-status').textContent=error.message;}));
+    function filterChanged() {
+        topicId = '';
+        return render().catch(error => { $('topic-eval-status').textContent = error.message; });
+    }
+    subjectFilter.addEventListener('change', filterChanged);
+    topicFilter.addEventListener('input', filterChanged);
     function clear() {
         ++request; loading = 0;
         if (simState.mode !== 'tema') return;

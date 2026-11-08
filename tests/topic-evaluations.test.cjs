@@ -139,6 +139,27 @@ test('filtros, inicio por materia, retorno y protección ante sesión cambiada',
  for(const opts of [{free:true},{changed:true}]){const t=uiSetup(opts);t.c.openEvaluacion();await t.settle();await t.node('topic-eval-grid').children[0].children[4].handlers.click();assert.ok(!t.events.includes('timer'));}
  const t=uiSetup();t.c.openEvaluacion();await t.settle();t.node('topic-eval-subject').value='MORFOFUNCION';t.node('topic-eval-search').value='quimica';await t.node('topic-eval-search').handlers.input();assert.equal(t.node('topic-eval-grid').children.length,1);t.node('topic-eval-search').value='sin coincidencia';await t.node('topic-eval-search').handlers.input();assert.equal(t.node('topic-eval-grid').children.length,0);
 });
+test('abrir una evaluación desde el calendario selecciona su identificador y permite cambiar la búsqueda', async () => {
+ const { c, node, events } = uiSetup();
+ node('topic-eval-subject').value = 'BIOLOGIA CELULAR';
+ node('topic-eval-search').value = 'membrana';
+ await c.openEvaluacion('morfo-18');
+ const cards = node('topic-eval-grid').children;
+ assert.equal(cards.length, 1);
+ assert.equal(cards[0].children[1].textContent, 'El aparato circulatorio: sangre');
+ assert.equal(node('topic-eval-subject').value, 'MORFOFUNCION');
+ assert.equal(node('topic-eval-search').value, cards[0].children[1].textContent);
+ assert.equal(events.includes('timer'), false);
+ await cards[0].children[4].handlers.click();
+ assert.equal(c.simState.topicEvaluationId, 'morfo-18');
+ assert.ok(events.includes('timer'));
+ await c.openEvaluacion('salud-01');
+ assert.equal(node('topic-eval-grid').children[0].children[1].textContent, 'Educación en salud');
+ node('topic-eval-subject').value = '';
+ node('topic-eval-search').value = 'histología';
+ await node('topic-eval-search').handlers.input();
+ assert.ok(node('topic-eval-grid').children.some(card => card.children[1].textContent === 'Histología'));
+});
 test('al cerrar sesión se cancela el temporizador y se retira la evaluación activa', async () => {
  const t = uiSetup();
  t.c.openEvaluacion();

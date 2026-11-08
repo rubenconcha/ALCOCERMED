@@ -118,13 +118,10 @@
             if (date < start || date >= end) continue;
             for (const item of items) {
                 if (!item.show) continue;
-                const color = data.kinds[item.kind].color;
                 events.push({
                     id: item.id, title: item.title, start: date + 'T' + item.start,
                     end: item.end ? date + 'T' + item.end : undefined,
-                    backgroundColor: color, borderColor: color,
-                    textColor: item.kind === 'study' || item.kind === 'rest' ? '#201910' : '#fff',
-                    extendedProps: { date },
+                    extendedProps: { date, kind: item.kind },
                 });
             }
         }
@@ -195,6 +192,7 @@
                     dateClick: info => showDay(info.dateStr.slice(0, 10)),
                     eventClick: info => showDay(info.event.extendedProps.date, true, info.event.id),
                     eventDidMount: info => {
+                        info.el.dataset.kind = info.event.extendedProps.kind;
                         const control = info.el.querySelector('.fc-list-event-title a') || info.el;
                         control.tabIndex = 0;
                         control.setAttribute('role', 'button');
@@ -336,6 +334,18 @@
         }
         group.append(completionButton(item, 'calendar-outline calendar-complete-detail', false));
         copy.append(group);
+
+        const topicLinks = item.reading?.topicLinks || item.topicLinks;
+        if (topicLinks) {
+            const resources = element('div', 'calendar-topic-actions');
+            resources.setAttribute('role', 'group');
+            resources.setAttribute('aria-label', 'Práctica de este tema');
+            resources.append(
+                button('calendar-outline', 'Evaluación del tema', () => window.openEvaluacion(topicLinks.evaluation)),
+                button('calendar-outline', 'Exámenes pasados del tema', () => window.openPastExams(true, topicLinks.past))
+            );
+            copy.append(resources);
+        }
         target.append(copy);
         if (item.resource) {
             const illustration = element('img', 'calendar-activity-art');

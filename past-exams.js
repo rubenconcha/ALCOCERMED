@@ -1,6 +1,7 @@
 'use strict';
 (() => {
-    let catalogPromise, selected, loading = false, patternUrl, freeYear, topicsMode = false, opening = false;
+    let catalogPromise, selected, patternUrl, freeYear, scopeOwner;
+    let loading = false, topicsMode = false, opening = false, openRequest = 0;
     const examCache = new Map();
     const $ = id => document.getElementById(id);
     const readableError = () => 'No se pudo cargar el examen. Intenta de nuevo.';
@@ -101,7 +102,7 @@
         $('past-status').textContent = '';
         renderList().catch(error => { $('past-status').textContent = error.message; });
     }
-    window.openPastExams = async function (openTopics) {
+    window.openPastExams = async function (openTopics, topicFilter) {
         if (simState.timerInterval) {
             if (!confirm('Hay un examen en curso. ¿Deseas salir y descartar las respuestas?')) return;
             clearInterval(simState.timerInterval); simState.timerInterval = null;
@@ -113,22 +114,35 @@
         if (allowed === false) return;
         breakdown?.show(false);
         const account = currentUser?.id;
+        const request = ++openRequest;
+        const isCurrent = () => request === openRequest && currentUser?.id === account &&
+            (typeof currentCampusScreen === 'undefined' || currentCampusScreen === 'past-exams-screen');
         showList();
         $('past-status').textContent = 'Cargando exámenes…';
         try {
             const data = await catalog();
-            if (currentUser?.id !== account ||
-                (typeof currentCampusScreen !== 'undefined' && currentCampusScreen !== 'past-exams-screen')) return;
+            if (!isCurrent()) return;
             if ($('past-year').options.length === 1) [...new Set(data.exams.map(exam => exam.year))].reverse().forEach(year => {
                 const option = document.createElement('option'); option.value = year; option.textContent = year; $('past-year').append(option);
             });
-            try {
-                const filters = JSON.parse(sessionStorage.getItem('past-exam-filters:' + (currentUser?.id || '')) || 'null');
-                if (filters) { $('past-year').value = filters.year; $('past-type').value = filters.type; }
-            } catch (_) { /* Filters remain usable when storage is unavailable. */ }
+            if (topicFilter) {
+                $('past-year').value = '';
+                $('past-type').value = '';
+                breakdown?.resetFilters(topicFilter);
+            } else if (scopeOwner !== account) {
+                try {
+                    const filters = JSON.parse(sessionStorage.getItem('past-exam-filters:' + (account || '')) || 'null');
+                    $('past-year').value = filters?.year || '';
+                    $('past-type').value = filters?.type || '';
+                } catch (_) { /* Filters remain usable when storage is unavailable. */ }
+            }
+            scopeOwner = account;
             showMode(typeof openTopics === 'boolean' ? openTopics : topicsMode);
-            if (!topicsMode) { await renderList(); $('past-status').textContent = ''; }
-        } catch (error) { $('past-status').textContent = error.message; }
+            if (!topicsMode) {
+                await renderList();
+                if (isCurrent()) $('past-status').textContent = '';
+            }
+        } catch (error) { if (isCurrent()) $('past-status').textContent = error.message; }
     };
     window.pastExamsBack = function () {
         if (selected) { selected = null; window.openPastExams(); }
@@ -213,6 +227,7 @@
         $('past-mode-topics').focus();
     });
     function clear() {
+        scopeOwner = undefined;
         examCache.clear();
         releasePattern();
         breakdown?.clear();
