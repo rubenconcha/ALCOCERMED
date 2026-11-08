@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v147-evaluacion-suficiencia';
+const CACHE_NAME = 'alcocermed-main-v148-evaluacion-suficiencia';
 const APP_SHELL = [
     './student-results.js?v=2',
     './student-results.css?v=1',
@@ -21,7 +21,7 @@ const APP_SHELL = [
     './assets/flashcard-icons/bien-smile-3d.png',
     './assets/flashcard-icons/facil-3d.png',
     './manifest.webmanifest',
-    './styles.css?v=39',
+    './styles.css?v=40',
     './commerce.css?v=1',
     './student-white.css?v=2',
     './campus-theme.css?v=4',

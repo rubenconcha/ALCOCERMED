@@ -2822,6 +2822,10 @@ body.wayground-active .main-content {
     overflow-wrap: anywhere;
 }
 
+.bq-passage summary, .bq-passage p {
+    text-transform: none;
+}
+
 .bq-passage p {
     margin: 12px 0 0;
     line-height: 1.65;
