@@ -126,12 +126,19 @@ test('the three verified UMSS books open their private page segments and downloa
     assert.match(get('grid').children[0].children[4].textContent, /6.ª edición/);
     assert.equal(get('grid').children[1].children[3].textContent, 'Alfonso Calvo González');
     assert.match(get('grid').children[1].children[4].textContent, /1.ª edición · Elsevier España · 2015/);
+    const funnel = read('ventas.html');
+    const catalog = [
+        ['morfofuncion', 'morphology'],
+        ['biologia-celular', 'cell'],
+        ['educacion-salud', 'health-education'],
+    ];
     for (const [index, card] of get('grid').children.entries()) {
-        const subject = ['morfofuncion', 'biologia-celular', 'educacion-salud'][index];
+        const [subject, art] = catalog[index];
         const icon = card.children[0];
-        assert.equal(icon.src, '/assets/official-texts/' + subject + '.svg');
+        assert.equal(icon.src, '/assets/study-art/' + art + '.png');
         assert.equal(icon.alt, '');
-        assert.match(read(icon.src.slice(1)), /<svg[^>]+viewBox="0 0 56 56"/);
+        assert.ok(funnel.includes('src="' + icon.src + '"'), subject);
+        assert.ok(fs.existsSync(path.join(__dirname, '..', icon.src.slice(1))), icon.src);
         const [open, save] = card.children[5].children;
         const url = '/api/texto-oficial?materia=' + subject;
         await open.onclick();

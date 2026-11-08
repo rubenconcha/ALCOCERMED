@@ -38,10 +38,10 @@
 
 .official-text-icon {
     display: block;
-    width: 56px;
-    height: 56px;
     flex: 0 0 auto;
+    object-fit: contain;
     margin-bottom: 8px;
+    filter: drop-shadow(0 5px 6px #23314b15);
 }
 
 .campus-resource-actions {

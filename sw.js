@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v166-cronograma-materias';
+const CACHE_NAME = 'alcocermed-main-v167-textos-ilustraciones';
 const APP_SHELL = [
     './student-results.js?v=3',
     './student-results.css?v=1',
@@ -77,7 +77,7 @@ const APP_SHELL = [
     './study-summaries.js?v=20261021-visual5b',
     './summary-pdf-reader.js?v=6',
     './summary-pdf-reader.css?v=2',
-    './campus-study-resources.css?v=4',
+    './campus-study-resources.css?v=5',
     './study-calendar.css?v=8',
     './study-calendar-data.js?v=4',
     './study-calendar-pdf.js?v=2',
@@ -101,10 +101,10 @@ const APP_SHELL = [
     './vendor/jspdf/jspdf.umd.min.js',
     './vendor/pdfjs/pdf.min.mjs',
     './vendor/pdfjs/pdf.worker.min.mjs',
-    './official-texts.js?v=6',
-    './assets/official-texts/morfofuncion.svg',
-    './assets/official-texts/biologia-celular.svg',
-    './assets/official-texts/educacion-salud.svg',
+    './official-texts.js?v=7',
+    './assets/study-art/morphology.png',
+    './assets/study-art/cell.png',
+    './assets/study-art/health-education.png',
     './sufficiency-practice-content.js?v=1',
     './sufficiency-practice.js?v=2',
     './past-exams.js?v=11',
