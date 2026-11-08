@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-    const { formatDay, kinds } = window.StudyCalendarData;
+    const { formatDay, kinds, pageRange } = window.StudyCalendarData;
 
     function create(JsPDF, plan, start, end) {
         const pdf = new JsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4', compress: true });
@@ -38,7 +38,10 @@
             pdf.setFont('helvetica', 'normal');
             pdf.setFontSize(9);
             const rows = items.map(item => {
-                const text = pdf.splitTextToSize(item.title, contentWidth - 43);
+                const reading = item.reading;
+                const title = reading ? item.title + ' | ' + reading.section +
+                    ' | pp. ' + pageRange(reading.printed) + ' (PDF ' + pageRange(reading.pdf) + ')' : item.title;
+                const text = pdf.splitTextToSize(title, contentWidth - 43);
                 return { item, text, height: Math.max(7.5, 3.7 * text.length + 3.4) };
             });
             const space = rows.reduce((sum, row) => sum + row.height, 13);

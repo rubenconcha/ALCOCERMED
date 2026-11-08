@@ -80,7 +80,7 @@ test('the three verified UMSS books open their private page segments and downloa
         },
     };
     const get = suffix => document.getElementById('official-texts-' + suffix);
-    const loaded = [];
+    const loaded = [], firstPages = [], jumps = [];
     const window = {};
     vm.runInNewContext(read('official-texts.js'), {
         document, window, AbortController, AbortSignal, URL, clearTimeout,
@@ -110,7 +110,9 @@ test('the three verified UMSS books open their private page segments and downloa
                 assert.equal(options.label, 'texto oficial');
                 assert.equal(options.pageJump, true);
             }
-            async openBook(book, cover) {
+            goToPage(number) { jumps.push(number); }
+            async openBook(book, cover, initialPage) {
+                firstPages.push(initialPage);
                 assert.equal(book.starts.join(','), '1,9,10');
                 assert.equal(cover.width, 480);
                 assert.equal(cover.page, book.numPages === 829 ? 9 : 1);
@@ -137,6 +139,13 @@ test('the three verified UMSS books open their private page segments and downloa
     await get('download').onclick();
     assert.equal(downloads.at(-1), loaded.at(-1).replace('&vista=tramo&desde=10', '&descarga=fixture'));
     assert.equal(new Set(loaded).size, 3);
+    assert.deepEqual(firstPages, [1, 9, 1]);
+    await window.OfficialTexts.readPage('morfofuncion', 707);
+    assert.equal(firstPages.at(-1), 707);
+    await window.OfficialTexts.readPage('morfofuncion', 743);
+    assert.deepEqual(jumps, [743]);
+    await window.OfficialTexts.readPage('morfofuncion', 1252);
+    assert.deepEqual(jumps, [743]);
 });
 
 test('the PDF relay checks campus access, streams private PDFs and grants one short-lived download', async () => {

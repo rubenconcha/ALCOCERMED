@@ -2,7 +2,14 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const test = require('node:test');
-const { buildSample, today, monday, move, kinds } = require('../study-calendar-data.js');
+const { buildSample, today, monday, move, kinds, pageRange } = require('../study-calendar-data.js');
+const { exercises } = require('../sufficiency-practice-content.js');
+const { archivos } = require('../referencias-oficiales/manifest.json');
+const bookPages = {
+    morfofuncion: archivos.find(book => book.archivo.startsWith('morfofisiliologia')).paginas_pdf,
+    'biologia-celular': archivos.find(book => book.archivo.startsWith('Biologia_Celular')).paginas_pdf,
+    'educacion-salud': archivos.find(book => book.archivo.startsWith('EDUCACION')).paginas_pdf,
+};
 const read = name => fs.readFileSync(path.join(__dirname, '..', name), 'utf8');
 
 test('the sample calendar uses the Bolivian civil date and weeks starting on Monday', () => {
@@ -28,11 +35,42 @@ test('month, agenda and day use the same sample plan with stable, ordered activi
     assert.ok(entries.every(item => !item.end || item.end > item.start));
     for (const items of first.values()) {
         assert.deepEqual(items.map(item => item.start), items.map(item => item.start).sort());
-        assert.ok(items.some(item => item.show));
+        assert.ok(items.every(item => item.show));
+        assert.ok(items.every((item, i) => !i || item.start >= items[i - 1].end));
     }
     assert.equal(first.get('2026-11-08')[0].kind, 'rest');
     assert.equal(first.get('2026-11-14')[0].resource, 'simulation');
-    assert.ok(first.get('2026-11-09').some(item => !item.show));
+});
+
+test('weekdays assign the example blocks and rotate verified readings and existing exercises', () => {
+    const plan = buildSample('2026-11-09');
+    const monday = plan.get('2026-11-09');
+    assert.deepEqual(monday.map(({ start, end }) => [start, end]), [
+        ['08:00', '10:00'], ['10:00', '11:00'], ['11:00', '12:00'], ['12:00', '13:00'], ['13:00', '16:00'],
+    ]);
+    assert.deepEqual(monday.map(item => item.resource), ['reading', 'questions', 'reading', undefined, 'practice']);
+    assert.match(monday[0].title, /Morfofunción · Sangre/);
+    assert.equal(monday[0].reading.section, 'Capítulo 18');
+    assert.equal(pageRange(monday[0].reading.printed), '679–695');
+    assert.equal(pageRange(monday[0].reading.pdf), '707–723');
+    assert.equal(monday[1].bankTopic, 'sangre');
+    assert.equal(monday[2].reading.slug, 'educacion-salud');
+    assert.equal(monday[4].practice.subject, 'Matemáticas');
+
+    const weekdayStarts = [...plan.values()].filter(items => items[0].resource === 'reading').map(items => items[0].title);
+    assert.equal(new Set(weekdayStarts).size, 10);
+    assert.notEqual(plan.get('2026-11-16')[0].title, monday[0].title);
+    for (const item of [...plan.values()].flat()) {
+        if (item.reading) {
+            const [first, last] = item.reading.pdf;
+            assert.ok(first >= 1 && first <= last && last <= bookPages[item.reading.slug], item.title);
+        }
+        if (item.practice) {
+            const exercise = exercises.find(exercise => exercise.id === item.practice.id);
+            assert.equal(exercise?.title, item.practice.topic);
+            assert.equal(exercise.subject, item.practice.subject);
+        }
+    }
 });
 
 test('the authenticated campus and cache use the same calendar resources', () => {
@@ -41,6 +79,8 @@ test('the authenticated campus and cache use the same calendar resources', () =>
     const worker = read('sw.js');
     assert.match(html, /href="\/campus\?seccion=calendario"/);
     assert.match(html, /id="study-calendar-screen"/);
+    assert.match(html, /<aside id="calendar-plan"/);
+    assert.match(script, /campusParams\.get\('dia'\)/);
     assert.match(html, /Plan de práctica de muestra/);
     assert.match(script, /section === 'calendario'/);
     assert.match(script, /CampusCalendar\?\.setUser\(\)/);

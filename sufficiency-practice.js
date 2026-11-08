@@ -46,6 +46,7 @@
         const article = element('article', '', 'past-card campus-resource-card practice-card');
         const start = button('Practicar →', 'btn-primary', () => startExercise(exercise, start));
         start.setAttribute('aria-label', 'Practicar ' + exercise.title);
+        start.dataset.practiceExercise = exercise.id;
         article.append(
             element('span', exercise.subject + ' · ' + exercise.kind, 'entrance-eyebrow'),
             element('h3', exercise.title),
@@ -157,6 +158,7 @@
         );
         catalog.hidden = true;
         session.hidden = false;
+        session.dataset.exercise = exercise.id;
         heading.focus({ preventScroll: true });
         session.scrollIntoView({ block: 'nearest' });
     }
@@ -169,6 +171,19 @@
     }
     renderCatalog();
     window.SufficiencyPractice = {
+        openExercise(id) {
+            const exercise = exercises.find(item => item.id === id);
+            if (!exercise) return;
+            if (!session.hidden && session.dataset.exercise === id) {
+                session.querySelector('h3').focus();
+                return;
+            }
+            resetSession();
+            subject.value = exercise.subject;
+            kind.value = '';
+            renderCatalog();
+            catalog.querySelector('[data-practice-exercise="' + exercise.id + '"]').click();
+        },
         reset() {
             resetSession();
             subject.value = kind.value = '';

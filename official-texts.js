@@ -27,7 +27,7 @@
     const downloadButton = $('official-texts-download');
     const readerDownloadStatus = $('official-texts-reader-download-status');
     const resourceUrl = text => '/api/texto-oficial?materia=' + text.slug;
-    let reader, current, loaded, releaseTimer, revision = 0, opening, previewUrl, bookCoverUrl;
+    let reader, current, requestedPage, loaded, releaseTimer, revision = 0, opening, previewUrl, bookCoverUrl;
 
     async function authorization() {
         const { data } = await getSupabase().auth.getSession();
@@ -50,7 +50,7 @@
         bookCoverUrl = null;
     }
 
-    async function prepareBook(text, headers, signal) {
+    async function prepareBook(text, headers, signal, page) {
         const response = await fetch(resourceUrl(text) + '&vista=portada', { headers, signal });
         if (!response.ok) return false;
         const grant = response.headers.get('X-Official-Reader');
@@ -61,7 +61,7 @@
         previewUrl = URL.createObjectURL(blob);
         preview.alt = 'Portada de ' + text.title;
         preview.src = previewUrl;
-        preview.hidden = false;
+        preview.hidden = page !== (text.coverPage || 1);
         if (starts[0] !== 1 || !starts.every((page, i) => Number.isInteger(page) && page <= text.pages && (!i || page > starts[i - 1]))) return false;
         await preview.decode();
         if (signal.aborted) return false;
@@ -80,14 +80,14 @@
                 if (!result.ok) throw new Error('No pudimos cargar estas páginas.');
                 return new Uint8Array(await result.arrayBuffer());
             },
-        }, { page: text.coverPage || 1, url, alt: preview.alt, width: preview.naturalWidth, height: preview.naturalHeight });
+        }, { page: text.coverPage || 1, url, alt: preview.alt, width: preview.naturalWidth, height: preview.naturalHeight }, page);
         if (signal.aborted) return false;
         bookCoverUrl = url;
         previewUrl = null;
         return true;
     }
 
-    async function openFullReader(text, headers, signal) {
+    async function openFullReader(text, headers, signal, page) {
         const url = resourceUrl(text) + '&vista=lector';
         if (!headers['X-Official-Reader']) {
             const response = await fetch(url, { method: 'POST', headers, signal });
@@ -96,20 +96,25 @@
             if (typeof grant !== 'string') throw new Error('Lector no disponible');
             headers['X-Official-Reader'] = grant;
         }
-        if (!signal.aborted) await reader.open(url, { headers, rangeOnly: true, initialPage: text.coverPage });
+        if (!signal.aborted) await reader.open(url, { headers, rangeOnly: true, initialPage: page });
     }
 
-    async function read(text) {
+    async function read(text, page) {
         const version = ++revision;
         opening?.abort();
         clearPreview();
         clearTimeout(releaseTimer);
         current = text;
+        requestedPage = page;
         $('official-texts-reader-title').textContent = text.title;
         readerDownloadStatus.hidden = true;
         fallback.hidden = true;
         if (!dialog.open) dialog.showModal();
-        if (loaded === text) return;
+        if (loaded === text) {
+            if (page) reader.goToPage(page);
+            return;
+        }
+        const initialPage = page ?? text.coverPage ?? 1;
         discardReader();
         const controller = opening = new AbortController();
         const { signal } = controller;
@@ -120,9 +125,9 @@
             const headers = await authorization();
             if (version !== revision || !dialog.open) return;
             reader ||= new SummaryPdfReader(pages, { label: 'texto oficial', pageJump: true });
-            const ready = await prepareBook(text, headers, signal).catch(() => false);
+            const ready = await prepareBook(text, headers, signal, initialPage).catch(() => false);
             if (signal.aborted) return;
-            if (!ready) await openFullReader(text, headers, signal);
+            if (!ready) await openFullReader(text, headers, signal, initialPage);
             if (version !== revision || !dialog.open) return;
             controller.abort();
             clearPreview();
@@ -200,7 +205,7 @@
     $('official-texts-grid').replaceChildren(...texts.map(card));
     $('official-texts-close').onclick = () => dialog.close();
     downloadButton.onclick = () => { if (current) return download(current, downloadButton, readerDownloadStatus); };
-    $('official-texts-retry').onclick = () => { if (current) read(current); };
+    $('official-texts-retry').onclick = () => { if (current) read(current, requestedPage); };
     dialog.addEventListener('close', () => {
         if (dialog.open) return;
         ++revision;
@@ -213,6 +218,11 @@
     window.OfficialTexts = {
         open() {
             return showScreen('official-texts-screen');
+        },
+        readPage(slug, page) {
+            const text = texts.find(item => item.slug === slug);
+            if (!text || !Number.isInteger(page) || page < 1 || page > text.pages) return;
+            return read(text, page);
         },
         preload() {
             if (!navigator.connection?.saveData) SummaryPdfReader.preload().catch(() => {});

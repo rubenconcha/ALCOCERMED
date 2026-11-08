@@ -6,15 +6,15 @@
     const board = byId('calendar-board');
     const overview = byId('calendar-overview');
     const dayPanel = byId('calendar-day');
-    const dialog = byId('calendar-plan');
     const small = window.matchMedia('(max-width: 768px)');
     const scripts = new Map();
     const actions = {
-        videos: ['Ver videoclases', () => window.openVideoclases()],
-        summaries: ['Abrir resúmenes', () => window.openResumenes()],
-        practice: ['Abrir práctica de suficiencia', () => showScreen('sufficiency-practice-screen')],
-        questions: ['Abrir banco de preguntas', () => window.openBanco()],
-        evaluation: ['Ver evaluaciones', () => window.openEvaluacion()],
+        reading: ['Abrir lectura en el campus', item => openStudyAsset(item, 'texts',
+            () => window.OfficialTexts.readPage(item.reading.slug, item.reading.pdf[0]))],
+        questions: ['Abrir preguntas del tema', item => window.openBanco({ materia: item.bankSubject, tema: item.bankTopic })],
+        practice: ['Abrir ejercicio', item => openStudyAsset(item, 'practice', () => {
+            if (showScreen('sufficiency-practice-screen') !== false) window.SufficiencyPractice.openExercise(item.practice.id);
+        })],
         simulation: ['Ver simulacros', () => window.Sufficiency.open()],
         results: ['Ver mis resultados', () => window.openStudentResults()],
         flashcards: ['Repasar con flashcards', () => window.openStudyLibrary()],
@@ -45,6 +45,11 @@
         node.type = 'button';
         node.addEventListener('click', handler);
         return node;
+    }
+
+    async function openStudyAsset(item, group, open) {
+        await window.loadCampusAssets(group);
+        if (state.active === item && !dayPanel.hidden && !screen.classList.contains('hidden')) return open();
     }
 
     function loadScript(url) {
@@ -78,6 +83,8 @@
     function setUser(id = '') {
         if (state.user !== id) {
             state.user = id;
+            state.date = '';
+            state.active = null;
             state.completed = new Set();
             state.ratings = {};
             if (id) {
@@ -115,7 +122,8 @@
                 events.push({
                     id: item.id, title: item.title, start: date + 'T' + item.start,
                     end: item.end ? date + 'T' + item.end : undefined,
-                    backgroundColor: color, borderColor: color, textColor: '#fff',
+                    backgroundColor: color, borderColor: color,
+                    textColor: item.kind === 'study' || item.kind === 'rest' ? '#201910' : '#fff',
                     extendedProps: { date },
                 });
             }
@@ -153,7 +161,7 @@
         }
     }
 
-    async function initCalendar() {
+    function updatePlan() {
         const reference = data.today();
         if (state.reference !== reference) {
             state.reference = reference;
@@ -161,7 +169,11 @@
             calendar?.setOption('now', reference);
             calendar?.refetchEvents();
         }
-        if (calendar || loading) return;
+    }
+
+    async function initCalendar() {
+        updatePlan();
+        if (calendar || loading) return loading;
         setStatus('Cargando el calendario…');
         loading = (async () => {
             try {
@@ -169,11 +181,11 @@
                 await loadScript('/vendor/fullcalendar/es.global.min.js');
                 calendar = new window.FullCalendar.Calendar(board, {
                     locale: 'es', firstDay: 1, timeZone: 'UTC', now: state.reference,
-                    initialView: defaultView(), initialDate: state.reference,
+                    initialView: defaultView(), initialDate: state.date || state.reference,
                     headerToolbar: { left: 'prev,next today', center: 'title', right: 'dayGridMonth,listWeek program' },
                     buttonText: { month: 'Mes', list: 'Agenda', today: 'Hoy' },
                     customButtons: { program: { text: 'Descargar programa', click: downloadProgram } },
-                    height: small.matches ? 'auto' : '79vh', fixedWeekCount: true, dayMaxEvents: false,
+                    height: small.matches ? 'auto' : '79vh', fixedWeekCount: true, dayMaxEvents: 2,
                     eventDisplay: 'block', displayEventTime: false,
                     eventTimeFormat: { hour: '2-digit', minute: '2-digit', hour12: false },
                     views: { listWeek: { displayEventTime: true, displayEventEnd: true } },
@@ -267,59 +279,99 @@
     function artwork(item) {
         if (item.kind === 'exam') return '/assets/study-art/quiz.png';
         if (item.kind === 'free') return '/assets/study-art/cards.png';
-        if (item.kind === 'video') return '/assets/calendar-study-art.svg';
-        if (item.subject === 'Morfofunción') return '/assets/study-art/morphology.png';
-        if (item.subject === 'Biología celular') return '/assets/study-art/cell.png';
-        if (item.subject === 'Educación para la Vida') return '/assets/study-art/health-education.png';
-        return '/assets/calendar-study-art.svg';
+        switch (item.reading?.slug) {
+            case 'morfofuncion': return '/assets/study-art/morphology.png';
+            case 'biologia-celular': return '/assets/study-art/cell.png';
+            case 'educacion-salud': return '/assets/study-art/health-education.png';
+            default: return '/assets/calendar-study-art.svg';
+        }
     }
 
     function renderActivity() {
         const item = state.active;
         const target = byId('calendar-activity');
-        byId('calendar-day-label').textContent = data.formatDay(state.date);
-        byId('calendar-activity-title').textContent = item?.title || 'Estudio del día';
         target.classList.toggle('calendar-activity-empty', !item?.resource);
+        const heading = element('h3', '', item?.title || 'Día sin actividades de muestra');
+        heading.id = 'calendar-activity-title';
         target.replaceChildren();
         renderRating();
-        if (!item?.resource) {
-            target.append(element('strong', '', item ? item.title : 'Día sin actividades de muestra'),
-                element('p', '', item?.description || 'Puedes consultar otra fecha en el cronograma.'));
-            if (item) target.append(completionButton(item, 'calendar-outline calendar-complete-detail', false));
+
+        if (!item) {
+            target.append(heading, element('p', '', 'Usa las flechas del horario para consultar otro día.'));
             return;
         }
+
         const copy = element('div', 'calendar-activity-copy');
         const kind = element('span', 'calendar-kind', data.kinds[item.kind].label);
         kind.dataset.kind = item.kind;
         const time = item.end ? item.start + ' – ' + item.end : item.start;
+        copy.append(kind, heading, element('p', 'calendar-activity-time', time), element('p', '', item.description));
+
+        if (item.reading) {
+            const { title, credit, section, printed, pdf } = item.reading;
+            const source = element('div', 'calendar-reading-source');
+            source.append(
+                element('strong', '', title),
+                element('span', '', credit + ' · ' + section),
+                element('span', '', 'Páginas impresas ' + data.pageRange(printed) + ' · PDF ' + data.pageRange(pdf))
+            );
+            copy.append(source);
+        }
+
         const group = element('div', 'calendar-activity-actions');
-        const [label, run] = actions[item.resource];
-        group.append(button('calendar-primary', label, run), completionButton(item, 'calendar-outline calendar-complete-detail', false));
-        copy.append(kind, element('h3', '', item.title), element('p', 'calendar-activity-time', time + ' · Plan de práctica de muestra'),
-            element('p', '', item.description), group);
-        const illustration = element('img', 'calendar-activity-art');
-        illustration.alt = '';
-        illustration.src = artwork(item);
-        target.append(copy, illustration);
+        const action = actions[item.resource];
+        if (action) {
+            const [label, run] = action;
+            const launch = button('calendar-primary', label, async () => {
+                launch.disabled = true;
+                try {
+                    await run(item);
+                } catch (_) {
+                    showToast('No pudimos abrir esta actividad. Vuelve a intentarlo.', 'error');
+                } finally {
+                    launch.disabled = false;
+                }
+            });
+            group.append(launch);
+        }
+        group.append(completionButton(item, 'calendar-outline calendar-complete-detail', false));
+        copy.append(group);
+        target.append(copy);
+        if (item.resource) {
+            const illustration = element('img', 'calendar-activity-art');
+            illustration.alt = '';
+            illustration.loading = 'lazy';
+            illustration.src = artwork(item);
+            target.append(illustration);
+        }
+    }
+
+    function updateSelection() {
+        for (const select of byId('calendar-plan-list').querySelectorAll('[data-calendar-activity]')) {
+            const selected = select.dataset.calendarActivity === state.active?.id;
+            select.setAttribute('aria-current', String(selected));
+            select.parentElement.classList.toggle('is-selected', selected);
+        }
     }
 
     function renderPlan() {
         const date = byId('calendar-plan-date');
         date.dateTime = state.date;
         date.textContent = state.date.split('-').reverse().join('/');
+        byId('calendar-day-label').textContent = data.formatDay(state.date);
         const list = byId('calendar-plan-list');
         list.replaceChildren();
         for (const item of activities()) {
             const row = element('li', 'calendar-plan-row');
             row.dataset.kind = item.kind;
-            row.classList.toggle('is-selected', item.id === state.active?.id);
             const select = button('calendar-plan-item', '', () => {
                 state.active = item;
                 renderActivity();
+                updateSelection();
                 renderProgress();
-                dialog.close();
-                byId('calendar-open-plan').focus();
+                if (small.matches) byId('calendar-activity').focus();
             });
+            select.dataset.calendarActivity = item.id;
             const times = element('span', 'calendar-plan-times', item.start);
             if (item.end) times.append(element('span', '', item.end));
             select.append(times, element('span', 'calendar-plan-item-label', item.title));
@@ -327,6 +379,7 @@
             list.append(row);
         }
         if (!list.children.length) list.append(element('li', 'calendar-plan-empty', 'Este día no tiene actividades de muestra.'));
+        updateSelection();
         renderProgress();
     }
 
@@ -340,21 +393,18 @@
         renderPlan();
         if (focus) {
             window.scrollTo(0, 0);
-            byId('calendar-open-plan').focus();
+            byId('calendar-day-title').focus({ preventScroll: true });
         }
     }
 
     function showOverview() {
-        if (dialog.open) dialog.close();
         overview.hidden = false;
         dayPanel.hidden = true;
         if (calendar && !screen.classList.contains('hidden')) requestAnimationFrame(() => calendar.updateSize());
     }
 
     function screenChanged(active) {
-        if (active) {
-            if (calendar && !overview.hidden) requestAnimationFrame(() => calendar.updateSize());
-        } else if (dialog.open) dialog.close();
+        if (active && calendar && !overview.hidden) requestAnimationFrame(() => calendar.updateSize());
     }
 
     small.addEventListener('change', () => {
@@ -368,18 +418,17 @@
         lastBoardWidth = width;
         if (calendar && !overview.hidden) requestAnimationFrame(() => calendar.updateSize());
     }).observe(board);
-    byId('calendar-open-plan').onclick = () => {
-        renderPlan();
-        dialog.showModal();
+    byId('calendar-show-schedule').onclick = () => {
+        const selected = byId('calendar-plan-list').querySelector('[aria-current="true"]');
+        (selected || byId('calendar-day-prev')).focus();
     };
-    byId('calendar-plan-close').onclick = () => dialog.close();
-    dialog.addEventListener('click', event => {
-        if (event.target === dialog && (event.clientX > dialog.getBoundingClientRect().right ||
-            event.clientX < dialog.getBoundingClientRect().left || event.clientY < dialog.getBoundingClientRect().top)) dialog.close();
-    });
     byId('calendar-day-prev').onclick = () => showDay(data.move(state.date, -1), false);
     byId('calendar-day-next').onclick = () => showDay(data.move(state.date, 1), false);
-    byId('calendar-back').onclick = showOverview;
+    byId('calendar-back').onclick = () => {
+        showOverview();
+        if (calendar) calendar.gotoDate(state.date);
+        initCalendar();
+    };
     byId('calendar-retry').onclick = initCalendar;
     window.CampusCalendar = {
         open() {
@@ -388,9 +437,12 @@
             initCalendar();
         },
         openDate(date, activityId) {
-            if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || showScreen('study-calendar-screen') === false) return;
-            initCalendar();
+            const value = new Date(date + 'T00:00:00Z');
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(value.getTime()) || currentDateKey(value) !== date) return false;
+            if (showScreen('study-calendar-screen') === false) return false;
+            updatePlan();
             showDay(date, true, activityId);
+            return true;
         },
         screenChanged,
         setUser,

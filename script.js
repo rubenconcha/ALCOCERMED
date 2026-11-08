@@ -315,7 +315,10 @@ function enterVerifiedApp(user) {
     if (section === 'atlas' && typeof openAtlas === 'function') openAtlas();
     else if (section === 'textos-oficiales') window.openOfficialTexts();
     else if (section === 'practica-suficiencia') showScreen('sufficiency-practice-screen');
-    else if (section === 'calendario') window.CampusCalendar?.open();
+    else if (section === 'calendario') {
+        const day = campusParams.get('dia');
+        if (!day || !window.CampusCalendar?.openDate(day)) window.CampusCalendar?.open();
+    }
     else if (section === 'examenes-pasados') window.openPastExams(campusParams.get('vista') === 'temas');
     else if (section === 'contacto') showScreen('campus-contact-screen');
     else if (campusParams.get('simulacro') && window.openRequestedSimulation) window.openRequestedSimulation().catch(function(error) { showToast(error.message, 'error'); });
@@ -1973,7 +1976,7 @@ async function fetchBancoSuficiencia(owner) {
 // ──────────────────────────────────────────────
 // ABRIR BANCO (pantalla selector)
 // ──────────────────────────────────────────────
-window.openBanco = async function () {
+window.openBanco = async function (filter) {
     // Advertir si hay banco en progreso
     const enProgreso = bancoState.preguntas.length > 0 && !bancoState.finalized &&
         bancoState.answers.some(function (a) { return a.selected !== null; });
@@ -2017,7 +2020,14 @@ window.openBanco = async function () {
     }
 
     // Cargar materias y preguntas difíciles personalizadas
+    const request = bancoMateriaRequest + 1;
     await loadBancoMaterias();
+    if (request !== bancoMateriaRequest || currentCampusScreen !== 'banco-screen') return;
+    if (filter?.materia && !bancoState.selectedMateria) {
+        const materia = bancoState.materias.find(name => normalizeDbText(name) === normalizeDbText(filter.materia));
+        if (materia) await selectBancoMateria(materia, filter.tema);
+        else showToast('La materia de este bloque no está disponible para tu cuenta.', 'info');
+    }
     if (!CampusAccess.isFree()) loadPreguntasDificiles();
 };
 
@@ -2090,7 +2100,7 @@ function bancoMateriaLabel(materia) {
 // ──────────────────────────────────────────────
 // SELECCIONAR MATERIA
 // ──────────────────────────────────────────────
-window.selectBancoMateria = async function (materia) {
+window.selectBancoMateria = async function (materia, initialTopic) {
     if (!bancoState.materias.includes(materia)) return;
     bancoState.selectedMateria = materia;
     bancoState.selectedTema = null;
@@ -2112,6 +2122,12 @@ window.selectBancoMateria = async function (materia) {
 
     // Cargar temas de esa materia
     await loadBancoTemas(materia);
+    if (initialTopic) {
+        const topicKey = normalizeDbText(initialTopic);
+        const row = bancoMateriaRows(materia).find(question => normalizeDbText(campo(question, 'tema')) === topicKey);
+        if (row) return selectBancoTema(campo(row, 'tema'));
+        showToast('El tema de este bloque no está disponible para tu cuenta. Puedes elegir otro tema de la materia.', 'info');
+    }
     // Cargar preguntas para actualizar contador
     await loadBancoPreguntas();
 };

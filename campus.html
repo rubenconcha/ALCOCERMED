@@ -48,16 +48,16 @@
     <script defer src="campus-section-tracking.js?v=1"></script>
     <script defer src="question-review.js?v=3"></script>
     <script defer src="study-media.js?v=20261021-visual5b"></script>
-    <script defer src="script.js?v=20261108-fluidez-3"></script>
+    <script defer src="script.js?v=20261108-cronograma"></script>
     <script defer src="study-assessments.js?v=2"></script>
     <script defer src="simulation-scope.js?v=7"></script>
     <script defer src="simulacro-ingreso.js?v=10"></script>
     <script defer src="simulacro-library.js?v=6"></script>
     <script defer src="student-library.js?v=10"></script>
     <script defer src="flashcard-workspace.js?v=20261021-visual5b"></script>
-    <script defer src="study-calendar-data.js?v=1"></script>
-    <script defer src="study-calendar-pdf.js?v=1"></script>
-    <script defer src="study-calendar.js?v=2"></script>
+    <script defer src="study-calendar-data.js?v=2"></script>
+    <script defer src="study-calendar-pdf.js?v=2"></script>
+    <script defer src="study-calendar.js?v=3"></script>
     <script defer src="campus-shell.js?v=2"></script>
     <script defer src="past-exam-breakdown.js?v=3"></script>
     <script defer src="past-exams.js?v=9"></script>
@@ -1446,47 +1446,47 @@
                     <div id="calendar-board"></div>
                 </div>
             </div>
-            <section id="calendar-day" class="calendar-day" aria-labelledby="calendar-activity-title" hidden>
+            <section id="calendar-day" class="calendar-day" aria-labelledby="calendar-day-title" hidden>
                 <header class="calendar-day-header">
-                    <div class="calendar-day-titles">
-                        <p id="calendar-day-label"></p>
-                        <h2 id="calendar-activity-title"></h2>
-                    </div>
-                    <button id="calendar-open-plan" class="calendar-plan-trigger" type="button" aria-haspopup="dialog" title="Abrir cronograma del día">
-                        <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#panel"></use></svg>
-                        <span>Cronograma</span>
-                    </button>
-                    <div id="calendar-rating" class="calendar-rating" role="group" aria-label="Valora esta actividad" hidden></div>
-                </header>
-                <div class="calendar-day-body">
                     <button id="calendar-back" class="calendar-outline" type="button">
                         <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#previous"></use></svg> Calendario
                     </button>
-                    <article id="calendar-activity" class="calendar-activity"></article>
+                    <div class="calendar-day-titles">
+                        <p id="calendar-day-label"></p>
+                        <h2 id="calendar-day-title" tabindex="-1">Estudio del día</h2>
+                    </div>
+                    <span class="calendar-sample-badge">Plan de práctica de muestra</span>
+                </header>
+                <div class="calendar-day-body">
+                    <aside id="calendar-plan" class="calendar-plan" aria-labelledby="calendar-plan-title">
+                        <div class="calendar-plan-head">
+                            <div class="calendar-plan-heading">
+                                <h3 id="calendar-plan-title">Horario del día</h3>
+                                <span>Hora de Bolivia</span>
+                            </div>
+                            <div class="calendar-plan-date">
+                                <button id="calendar-day-prev" class="calendar-outline" type="button" aria-label="Día anterior">
+                                    <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#previous"></use></svg>
+                                </button>
+                                <time id="calendar-plan-date"></time>
+                                <button id="calendar-day-next" class="calendar-outline" type="button" aria-label="Día siguiente">
+                                    <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#next"></use></svg>
+                                </button>
+                            </div>
+                            <progress id="calendar-plan-progress" max="1" value="0" aria-label="Avance del día"></progress>
+                            <p id="calendar-plan-count" aria-live="polite"></p>
+                        </div>
+                        <ol id="calendar-plan-list" class="calendar-plan-list"></ol>
+                    </aside>
+                    <div class="calendar-day-detail">
+                        <button id="calendar-show-schedule" class="calendar-outline calendar-show-schedule" type="button">
+                            Volver al horario
+                        </button>
+                        <article id="calendar-activity" class="calendar-activity" tabindex="-1" aria-labelledby="calendar-activity-title"></article>
+                        <div id="calendar-rating" class="calendar-rating" role="group" aria-label="Valora esta actividad" hidden></div>
+                    </div>
                 </div>
             </section>
-            <dialog id="calendar-plan" class="calendar-plan" aria-labelledby="calendar-plan-title">
-                <div class="calendar-plan-head">
-                    <progress id="calendar-plan-progress" max="1" value="0" aria-label="Avance del día"></progress>
-                    <div class="calendar-plan-heading">
-                        <h3 id="calendar-plan-title">Estudio del día</h3>
-                        <button id="calendar-plan-close" class="calendar-icon-button" type="button" aria-label="Cerrar cronograma">
-                            <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#close"></use></svg>
-                        </button>
-                    </div>
-                    <div class="calendar-plan-date">
-                        <button id="calendar-day-prev" class="calendar-outline" type="button" aria-label="Día anterior">
-                            <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#previous"></use></svg>
-                        </button>
-                        <time id="calendar-plan-date"></time>
-                        <button id="calendar-day-next" class="calendar-outline" type="button" aria-label="Día siguiente">
-                            <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#next"></use></svg>
-                        </button>
-                    </div>
-                    <p id="calendar-plan-count" aria-live="polite"></p>
-                </div>
-                <ul id="calendar-plan-list" class="calendar-plan-list"></ul>
-            </dialog>
         </section>
 
         <section id="official-texts-screen" class="campus-resource-screen hidden" aria-labelledby="official-texts-title">
@@ -1501,26 +1501,26 @@
             <div id="official-texts-grid" class="past-grid"></div>
             <p id="official-texts-download-status" class="campus-resource-source" role="status" hidden></p>
             <p class="campus-resource-source"><a href="https://med.umss.edu.bo/bibliografia-curso-basico-2025-2026-carrera-de-medicina/" target="_blank" rel="noopener noreferrer">Bibliografía publicada por la Facultad de Medicina de la UMSS ↗</a></p>
-            <dialog id="official-texts-reader" class="resumenes-viewer" aria-labelledby="official-texts-reader-title">
-                <div class="resumenes-viewer-head">
-                    <div><span>UMSS · Curso Básico 2025–2026</span><h3 id="official-texts-reader-title"></h3></div>
-                    <div class="resumenes-viewer-actions">
-                        <button id="official-texts-download" type="button">Descargar PDF</button>
-                        <button id="official-texts-close" type="button">Cerrar lector</button>
-                    </div>
-                </div>
-                <p id="official-texts-status" class="resumenes-loading" role="status" hidden></p>
-                <div id="official-texts-fallback" class="official-texts-fallback" hidden>
-                    <button id="official-texts-retry" class="campus-resource-secondary" type="button">Reintentar</button>
-                    <a href="https://med.umss.edu.bo/bibliografia-curso-basico-2025-2026-carrera-de-medicina/" class="campus-resource-secondary" target="_blank" rel="noopener noreferrer">Consultar la bibliografía oficial ↗</a>
-                </div>
-                <p id="official-texts-reader-download-status" class="resumenes-loading" role="status" hidden></p>
-                <div class="official-texts-stage">
-                    <img id="official-texts-preview" alt="" decoding="async" hidden>
-                    <div id="official-texts-pages"></div>
-                </div>
-            </dialog>
         </section>
+        <dialog id="official-texts-reader" class="resumenes-viewer" aria-labelledby="official-texts-reader-title">
+            <div class="resumenes-viewer-head">
+                <div><span>UMSS · Curso Básico 2025–2026</span><h3 id="official-texts-reader-title"></h3></div>
+                <div class="resumenes-viewer-actions">
+                    <button id="official-texts-download" type="button">Descargar PDF</button>
+                    <button id="official-texts-close" type="button">Cerrar lector</button>
+                </div>
+            </div>
+            <p id="official-texts-status" class="resumenes-loading" role="status" hidden></p>
+            <div id="official-texts-fallback" class="official-texts-fallback" hidden>
+                <button id="official-texts-retry" class="campus-resource-secondary" type="button">Reintentar</button>
+                <a href="https://med.umss.edu.bo/bibliografia-curso-basico-2025-2026-carrera-de-medicina/" class="campus-resource-secondary" target="_blank" rel="noopener noreferrer">Consultar la bibliografía oficial ↗</a>
+            </div>
+            <p id="official-texts-reader-download-status" class="resumenes-loading" role="status" hidden></p>
+            <div class="official-texts-stage">
+                <img id="official-texts-preview" alt="" decoding="async" hidden>
+                <div id="official-texts-pages"></div>
+            </div>
+        </dialog>
 
         <section id="sufficiency-practice-screen" class="campus-resource-screen hidden" aria-labelledby="sufficiency-practice-title">
             <div class="sim-header campus-page-head">
@@ -1776,7 +1776,7 @@
     <template id="campus-section-assets">
         <link rel="stylesheet" data-campus-assets="flashcards" href="flashcard-workspace.css?v=4">
         <link rel="stylesheet" data-campus-assets="flashcards" href="flashcard-approved.css?v=5">
-        <link rel="stylesheet" data-campus-assets="calendar" href="study-calendar.css?v=3">
+        <link rel="stylesheet" data-campus-assets="calendar" href="study-calendar.css?v=4">
         <link rel="stylesheet" data-campus-assets="results" href="student-results.css?v=1">
         <link rel="stylesheet" data-campus-assets="maps" href="mindmap-viewer.css?v=8">
         <link rel="stylesheet" data-campus-assets="maps" href="intocables-sheets.css?v=1">
@@ -1786,10 +1786,10 @@
         <script data-campus-assets="maps" src="mindmap-practice.js?v=20261021-visual5b"></script>
         <script data-campus-assets="maps" src="mindmap-viewer.js?v=20"></script>
         <script data-campus-assets="maps" src="intocables-hub.js?v=4"></script>
-        <script data-campus-assets="summaries texts" src="summary-pdf-reader.js?v=5"></script>
-        <script data-campus-assets="texts" src="official-texts.js?v=4"></script>
+        <script data-campus-assets="summaries texts" src="summary-pdf-reader.js?v=6"></script>
+        <script data-campus-assets="texts" src="official-texts.js?v=5"></script>
         <script data-campus-assets="practice" src="sufficiency-practice-content.js?v=1"></script>
-        <script data-campus-assets="practice" src="sufficiency-practice.js?v=1"></script>
+        <script data-campus-assets="practice" src="sufficiency-practice.js?v=2"></script>
         <script data-campus-assets="summaries" src="study-summaries.js?v=20261021-visual5b"></script>
     </template>
 </body>

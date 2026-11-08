@@ -112,11 +112,7 @@
                 form.append(this.pageInput, this.jump);
                 form.addEventListener('submit', event => {
                     event.preventDefault();
-                    const page = this.entries[this.pageInput.valueAsNumber - 1];
-                    if (!page) return;
-                    this.pages.scrollTop += page.el.getBoundingClientRect().top - this.pages.getBoundingClientRect().top - 12;
-                    this.currentPage = page.number;
-                    this.updateControls();
+                    this.goToPage(this.pageInput.valueAsNumber);
                 });
                 toolbar.append(form);
             }
@@ -170,15 +166,23 @@
             await this.renderPage(initialPage, this.revision);
         }
 
-        async openBook(book, cover) {
+        async openBook(book, cover, initialPage = cover.page) {
             this.destroy();
             this.host.hidden = false;
             this.pdf = this.book = segmentedDocument(book);
             this.cover = cover;
             this.pageSize = { width: cover.width, height: cover.height };
-            this.currentPage = cover.page;
+            this.currentPage = initialPage;
             this.layout();
-            await this.renderPage(cover.page, this.revision);
+            await this.renderPage(initialPage, this.revision);
+        }
+
+        goToPage(number) {
+            const page = this.entries[number - 1];
+            if (!page) return;
+            this.pages.scrollTop += page.el.getBoundingClientRect().top - this.pages.getBoundingClientRect().top - 12;
+            this.currentPage = page.number;
+            this.updateControls();
         }
 
         layout() {
