@@ -1,7 +1,8 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const readBank=require('../api/_mindmaps/bank.cjs');
 function setup({free=false,status=200,changeSession=false}={}){
  let calls=0,sessions=0;const official=[{id:'morfo-01-001',pregunta:'¿Qué estudia la anatomía?',respuesta:'La estructura corporal.'}];
- const c={window:null,CampusAccess:{isFree:()=>free},OfficialFlashcards:{load:async()=>official},getSupabase:()=>({auth:{getSession:async()=>({data:{session:{access_token:changeSession&&++sessions>1?'changed':'paid-test'}}})}}),AbortSignal,fetch:async(url,options)=>{calls++;assert.equal(options.headers.Authorization,'Bearer paid-test');return {ok:status===200,json:async()=>JSON.parse(fs.readFileSync('api/_mindmaps/'+new URL(url,'https://qa.test').searchParams.get('id')+'.json','utf8'))};}};c.window=c;
+ const c={window:null,CampusAccess:{isFree:()=>free},OfficialFlashcards:{load:async()=>official},getSupabase:()=>({auth:{getSession:async()=>({data:{session:{access_token:changeSession&&++sessions>1?'changed':'paid-test'}}})}}),AbortSignal,fetch:async(url,options)=>{calls++;assert.equal(url,'/api/mindmap?id=banco-ampliado');assert.equal(options.headers.Authorization,'Bearer paid-test');return {ok:status===200,json:async()=>JSON.parse(await readBank())};}};c.window=c;
  vm.runInNewContext(fs.readFileSync('study-depth.js','utf8'),c);return {c,official,calls:()=>calls,merge:c.StudyDepth.merge};
 }
 test('legacy flashcard merging is replaced entirely, including long answers and supplemental sources',async()=>{
@@ -12,7 +13,7 @@ test('free and paid flashcards both use server-authorized official content',asyn
  const t=setup({free:true});assert.equal(await t.merge([],'flashcards'),t.official);assert.equal(t.calls(),0);
 });
 test('the existing question bank keeps its sourced answers and explanations',async()=>{
- const t=setup(),bank=await t.merge([],'bank');assert.equal(bank.length,84);
+ const t=setup(),bank=await t.merge(Promise.resolve([]),'bank');assert.equal(bank.length,84);assert.equal(t.calls(),1);
  assert.ok(bank.every(q=>q.EXPLICACION.includes('A. ')&&q.EXPLICACION.includes('D. ')&&q.FUENTE&&q.PAGINAS_PDF));
  assert.equal(bank.filter(q=>q.TEMA==='sangre').length,54);assert.equal((await t.merge(bank,'bank')).length,84);
 });

@@ -338,8 +338,9 @@
     width: 100%;
     aspect-ratio: .63;
     border-radius: 9px;
-    background: #d6dce9 url('/assets/campus-moods.webp') var(--mood-x, 0%) var(--mood-y, 0%) / 306% var(--mood-height, 303%) no-repeat;
+    background: #d6dce9 var(--mood-x, 0%) var(--mood-y, 0%) / 306% var(--mood-height, 303%) no-repeat;
 }
+.campus-shell:not(.login-active) .campus-mood-art { background-image: url('/assets/campus-moods-512.webp') }
 [data-mood="1"], [data-mood="4"], [data-mood="7"], [data-portrait="1"], [data-portrait="4"], [data-portrait="7"] { --mood-x: 50% }
 [data-mood="2"], [data-mood="5"], [data-mood="8"], [data-portrait="2"], [data-portrait="5"], [data-portrait="8"] { --mood-x: 100% }
 [data-mood="3"], [data-mood="4"], [data-mood="5"], [data-portrait="3"], [data-portrait="4"], [data-portrait="5"] { --mood-y: 49.2%; --mood-height: 318% }

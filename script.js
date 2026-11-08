@@ -574,6 +574,10 @@ function showScreen(screenId, fromBack) {
     window.CampusPastExams?.screenChanged(screenId === 'past-exams-screen');
     if (screenId === 'study-area') refreshFlashcardReviews();
     const group = {
+        'study-library': 'flashcards',
+        'study-area': 'flashcards',
+        'study-calendar-screen': 'calendar',
+        'student-results-screen': 'results',
         'resumenes-screen': 'summaries',
         'official-texts-screen': 'texts',
         'sufficiency-practice-screen': 'practice',
@@ -1873,17 +1877,19 @@ async function fetchAllBancoQuestions() {
     if (bancoQuestionsRequest && bancoQuestionsRequest.owner === owner) return bancoQuestionsRequest.promise;
     const request = { owner, promise: (async function () {
         const client = getSupabase();
-        const rows = [];
-        const pageSize = 500;
-        for (let offset = 0; ; offset += pageSize) {
-            const { data, error } = await client.from('banco_preguntas')
-                .select('*').order('id', { ascending: true })
-                .range(offset, offset + pageSize - 1);
-            if (error) throw error;
-            rows.push(...(data || []));
-            if (!data || data.length < pageSize) break;
-        }
-        const completeRows = typeof StudyDepth !== 'undefined' ? await StudyDepth.merge(rows, 'bank') : rows;
+        const course = (async () => {
+            const rows = [];
+            const pageSize = 500;
+            for (let offset = 0; ; offset += pageSize) {
+                const { data, error } = await client.from('banco_preguntas')
+                    .select('*').order('id', { ascending: true })
+                    .range(offset, offset + pageSize - 1);
+                if (error) throw error;
+                rows.push(...(data || []));
+                if (!data || data.length < pageSize) return rows;
+            }
+        })();
+        const completeRows = await (typeof StudyDepth !== 'undefined' ? StudyDepth.merge(course, 'bank') : course);
         if (bancoQuestionsRequest !== request || currentUser?.id !== owner) return [];
         bancoState._cache = completeRows;
         simState._cache = completeRows;

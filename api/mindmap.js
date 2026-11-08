@@ -2,9 +2,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const catalog = require('../content/mindmaps-premium-catalog.json');
 const restrictedGeneral = require('../content/mindmaps-restricted-general.json');
+const bankSupplement = require('./_mindmaps/bank.cjs');
 const ids = new Set(catalog.concat(restrictedGeneral).map(map => map.id));
 // Library data shares the paid authorization boundary; it is not a map preview.
 ids.add('flashcards_official_2026');
+ids.add('banco-ampliado');
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
 
@@ -16,7 +18,7 @@ module.exports = async function handler(req, res) {
   const id = typeof req.query.id === 'string' ? req.query.id : '';
   const format = req.query.format || 'json';
   if (!ids.has(id) || !['json', 'image'].includes(format)) return res.status(404).end();
-  if (id === 'flashcards_official_2026' && format !== 'json') return res.status(404).end();
+  if (['flashcards_official_2026', 'banco-ampliado'].includes(id) && format !== 'json') return res.status(404).end();
   const token = /^Bearer\s+(.+)$/i.exec(req.headers.authorization || '')?.[1];
   if (!token) return res.status(401).end();
   try {
@@ -28,6 +30,13 @@ module.exports = async function handler(req, res) {
     const access = await response.json();
     if (!access?.ready || !access.premium) return res.status(403).end();
   } catch (_) { return res.status(503).end(); }
+  if (id === 'banco-ampliado') {
+    try {
+      const body = await bankSupplement();
+      res.setHeader('Content-Type', 'application/json; charset=utf-8');
+      return res.status(200).end(body);
+    } catch (_) { return res.status(503).end(); }
+  }
   const ext = format === 'image' ? 'webp' : 'json';
   const location = path.join(process.cwd(), 'api', '_mindmaps', `${id}.${ext}`);
   let stat;

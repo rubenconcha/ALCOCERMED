@@ -1,5 +1,5 @@
 /* Approved study layout: original palette, stripe, brand and four rating buttons. */
-@font-face{font-family:'Outfit Flashcards';font-style:normal;font-weight:900;font-display:swap;src:url('/assets/fonts/outfit-900.ttf') format('truetype')}
+@font-face{font-family:'Outfit Flashcards';font-style:normal;font-weight:900;font-display:swap;src:url('/assets/fonts/outfit-900.woff2') format('woff2')}
 #study-area .text-inner p,#study-area .back-text p,#study-area .fc-answer-lead,#study-area .fc-brand-wordmark strong,#study-area .card-face-label{font-family:'Outfit Flashcards','Outfit',sans-serif}
 #study-area.study-area{width:min(100%,960px);max-width:960px;align-items:stretch}
 #study-area .study-mobile-header,#study-area .study-progress-row,#study-area .flashcard-progress,#study-area .flashcard-controls,#study-area .card-container{width:100%;max-width:830px;margin-left:auto;margin-right:auto}

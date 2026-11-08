@@ -41,6 +41,17 @@ test('an active subscription receives the correct private map and complete image
  }
 });
 
+test('the combined question supplement verifies access once and returns only bank rows',async()=>{
+ const id='banco-ampliado';
+ assert.equal((await call({id})).code,401);
+ assert.equal((await call({id,token:'free',access:{ready:true,premium:false}})).code,403);
+ const result=await call({id,token:'paid',access:{ready:true,premium:true}});
+ assert.equal(result.calls,1);assert.equal(result.code,200);assert.equal(result.headers['Cache-Control'],'private, no-store');
+ const rows=JSON.parse(result.body);
+ assert.equal(rows.length,84);
+ assert.ok(rows.every(q=>q.PREGUNTA&&q.FUENTE&&q.content_id.startsWith('depth:')&&!q.assets));
+});
+
 test('Sangre and Sentidos general maps are private for both content and downloads',async()=>{
  const publicContext={window:{}};
  for(const file of ['mindmap-content.js','mindmap-detailed-content.js'])vm.runInNewContext(fs.readFileSync(file,'utf8'),publicContext);
