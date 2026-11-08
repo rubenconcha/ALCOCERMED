@@ -118,7 +118,10 @@ test('bank-style selector requires subject and topic, filters difficulty and ret
  const root={innerHTML:'',classList:{contains:()=>false,add(){},remove(){}},addEventListener:(e,fn)=>{handlers[e]=fn;},replaceChildren(){this.innerHTML='';},scrollIntoView(){},querySelector:()=>null};
  const context={currentUser:{id:'levels-fixture'},document:{getElementById:()=>root,addEventListener(){}},location:{search:''},URLSearchParams,Uint32Array,AbortSignal,Date,
   crypto:{getRandomValues:a=>a},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},setInterval:()=>1,clearInterval(){},setTimeout(){},
-  showScreen:()=>true,ensureSupabaseSdk:async()=>{},fetch:async url=>{assert.equal(url,'/api/suficiencia?collection=umsa-2026');loads++;return{ok:true,json:async()=>structuredClone({...bank,questions:bank.questions.concat(official)})};}};
+  showScreen:()=>true,ensureSupabaseSdk:async()=>{},fetch:async url=>{
+   if(url==='/api/suficiencia?collection=medicina-oficial')return{ok:false,status:503};
+   assert.equal(url,'/api/suficiencia?collection=umsa-2026');loads++;return{ok:true,json:async()=>structuredClone({...bank,questions:bank.questions.concat(official)})};
+  }};
  context.window={SufficiencyCore:C,CampusAccess:{isFree:()=>false},addEventListener(){}};
  context.getSupabase=()=>({auth:{getSession:async()=>({data:{session:{user:context.currentUser,access_token:'fixture'}}}),onAuthStateChange:()=>{}}});
  vm.createContext(context);vm.runInContext(fs.readFileSync(require.resolve('../suficiencia.js'),'utf8'),context);

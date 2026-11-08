@@ -17,7 +17,7 @@
  }
  function freezeSufficiency(questions,attempt,bank,C,label){
   const score=C.grade(questions,attempt.answers);
-  const question_review={version:1,items:questions.map((q,index)=>({number:index+1,id:String(q.id),question:q.text,options:q.options.map((_,i)=>C.optionText(q,i)),selected:attempt.answers[q.id]??null,accepted:[q.correct],materia:C.subjects[q.subject]||q.subject,tema:q.topic||'',explanation:q.explanation||'',source:typeof q.source?.document==='string'?q.source.document:'',passage:bank.passages?.find(p=>p.id===q.passageId)?.text||''}))};
+  const question_review={version:1,items:questions.map((q,index)=>({number:index+1,id:String(q.id),question:q.text,options:q.options.map((_,i)=>C.optionText(q,i)),selected:attempt.answers[q.id]??null,accepted:[q.correct],materia:(C.practiceSubjects||C.subjects)[q.subject]||q.subject,tema:q.topic||'',explanation:q.explanation||'',source:q.source?.pdfPages?.length&&C.referenceText?C.referenceText(q.source):q.source?.document||'',passage:bank.passages?.find(p=>p.id===q.passageId)?.text||''}))};
   return {owner:attempt.owner,paperId:C.paper(bank,attempt.area)?.id||'last-practice',title:label,at:attempt.finishedAt,percent:score.percent,correct:score.correct,total:score.total,question_review};
  }
  function localRows(storage,id){

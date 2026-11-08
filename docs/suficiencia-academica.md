@@ -1,5 +1,13 @@
 # Simulacro por materia y nivel
 
+## Práctica por temas de Medicina
+
+El selector de Simulacro agrupa Morfofunción (29 temas), Biología Celular (18) y Educación en Salud e Investigación (21) bajo «Materias de Medicina». Cada tema ofrece cuatro preguntas de reconocimiento, cuatro de aplicación y dos que comparan situaciones. «Todos los temas» sortea hasta veinte preguntas de la materia y del nivel elegido. Los simulacros completos y semanales se abren desde el enlace inferior.
+
+Las explicaciones se basan en los tres PDF de `referencias-oficiales/` indicados en su manifiesto. Se consultaron Saladin, *Anatomía y fisiología: la unidad entre forma y función*, 6.ª edición (portada y créditos en PDF 5 y 6), Calvo González, *Biología celular biomédica*, Elsevier, 2015 (PDF 9 y 20), y *Educación en Salud e Investigación*, UMSS, Curso Básico 2025–2026 (PDF 1). La revisión indica tema, sección y página PDF. Incluye el folio impreso cuando se identifica de forma independiente. El archivo de Calvo tiene folios electrónicos.
+
+Para regenerar las 680 preguntas, ejecuta `python tools/suficiencia/build_medicine.py --refs RUTA_A_REFERENCIAS_OFICIALES` con PyMuPDF. El generador verifica las huellas del manifiesto y los pasajes que respaldan los ejercicios. La figura de los ODS del PDF de Salud se cotejó visualmente. La colección se sirve por `/api/suficiencia?collection=medicina-oficial` con la sesión y el acceso verificados por el campus.
+
 ## Práctica por capítulos de Medicina UMSA 2026
 
 En Simulacro, el grupo «Textos oficiales UMSA 2026» del selector de temas contiene 38 ejercicios propios de AlcocerMed: 14 de Matemática, 12 de Física y 12 de Química. Hay un ejercicio por cada capítulo y cinco en total para Productos y cocientes notables. Las preguntas muestran resolución, apartado, página impresa y página PDF. «Todos los capítulos UMSA» permite practicar con el conjunto de esa materia. Los 980 ejercicios originales y sus simulacros conservan sus datos.
@@ -27,7 +35,7 @@ Fácil prioriza reconocimiento y una relación directa; intermedio, fórmulas y 
 
 ## Ayuda y continuidad
 
-Todas las preguntas ofrecen «Ver resolución paso a paso» durante el intento, con conceptos previos, operaciones, error frecuente, comprobación y respuesta. En lectura se cita la oración y su párrafo. Abrir la ayuda no elige una respuesta ni reinicia el reloj.
+Suficiencia ofrece «Ver resolución paso a paso» durante el intento, con conceptos previos, operaciones, error frecuente, comprobación y respuesta. En lectura se cita la oración y su párrafo. Las prácticas de Medicina ofrecen «Ver explicación». La ayuda conserva la respuesta seleccionada y el tiempo del intento.
 
 Los sesenta simulacros originales y los 120 por nivel conservan sus identificadores; se abren desde «Ver simulacros anteriores». Se conserva también el antiguo inicial para restaurar intentos. La versión del guardado permanece en 1 y el avance se aísla por cuenta en el navegador; no se sincroniza entre dispositivos.
 
@@ -39,6 +47,6 @@ Las lecturas adaptan los capítulos 1 y 2 de Kenneth S. Saladin, Anatomía y fis
 
 Para reconstruir: `python tools/suficiencia/build_all.py --source-pdf RUTA_AL_PDF_OFICIAL`, con PyMuPDF y SymPy. Se verifica la huella del PDF. Tras preparar el banco anterior y sus lecciones, `build_beginner.py` genera los 180 ejercicios y `build_levels.py` asigna dificultad y compone los simulacros.
 
-`node --test tests/suficiencia.test.cjs tests/suficiencia-levels.test.cjs` comprueba permisos, progreso, ayuda, niveles, textos completos y cobertura. Las 508 variantes previas conservan su verificación numérica/simbólica en `calculation-review.json`; las 180 nuevas se recalculan independientemente a partir de `beginner-checks.json` en las pruebas.
+`node --test tests/suficiencia.test.cjs tests/suficiencia-levels.test.cjs tests/suficiencia-medicina.test.cjs` comprueba permisos, progreso, ayuda, niveles, textos completos y cobertura. Las 508 variantes previas conservan su verificación numérica y simbólica en `calculation-review.json`. Las 180 nuevas se recalculan independientemente a partir de `beginner-checks.json` en las pruebas.
 
 El contenido se sirve por `/api/suficiencia` con sesión y suscripción verificadas en Supabase. Las rutas de `_sufficiency/` están bloqueadas. No se guardan textos ni claves en el estado local del intento. El tiempo utiliza una fecha absoluta y corrige al vencer. Las notas y duraciones son de práctica, sin carácter oficial de admisión.

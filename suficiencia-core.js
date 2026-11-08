@@ -4,12 +4,18 @@
     else root.SufficiencyCore = core;
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
     'use strict';
-    const subjects = { matematicas: 'Matemáticas', fisica: 'Física', quimica: 'Química', lectura: 'Lectura comprensiva' };
+    const sufficiencySubjects = { matematicas: 'Matemáticas', fisica: 'Física', quimica: 'Química', lectura: 'Lectura comprensiva' };
+    const biomedicalSubjects = { morfofuncion: 'Morfofunción', 'biologia-celular': 'Biología Celular', 'educacion-salud': 'Educación en Salud e Investigación' };
+    const subjects = { ...biomedicalSubjects, ...sufficiencySubjects };
     const levels = { facil: 'Fácil', intermedio: 'Intermedio', dificil: 'Difícil' };
     const officialCollection = 'umsa-2026';
     const officialTopicPrefix = officialCollection + ':';
     const officialAll = officialTopicPrefix + 'todos';
+    const biomedicalCollection = 'medicina-oficial';
+    const biomedicalChapters = { morfofuncion: ['morfo', 29], 'biologia-celular': ['biologia', 18], 'educacion-salud': ['salud', 21] };
     const isOfficial = q => q.source?.collection === officialCollection;
+    const isBiomedical = q => q.source?.collection === biomedicalCollection;
+    const isLegacy = q => !isOfficial(q) && !isBiomedical(q);
     const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
     function validSolution(q, bank) {
         const s = q.solution;
@@ -28,7 +34,7 @@
     }
     function solutionHtml(q) {
         const s = q.solution, esc = escapeHtml;
-        if (!s) return `<section class="sf-worked-comment"><h3>Explicación</h3><p>${esc(q.explanation)}</p></section>`;
+        if (!s) return `<section class="sf-worked-comment"><h3>Explicación</h3>${q.explanation.split('\n').map(paragraph => `<p>${esc(paragraph)}</p>`).join('')}</section>`;
         return `<section class="sf-worked-comment sf-lesson" aria-label="Explicación paso a paso"><h3>Paso a paso</h3><p class="sf-lesson-goal">${esc(s.goal)}</p><div class="sf-basics"><h4>Antes de empezar</h4><p>${esc(s.basics)}</p></div><ol class="sf-steps">${s.steps.map(row => `<li><div><h4>${esc(row.title)}</h4><p>${esc(row.text)}</p>${row.formula ? `<div class="sf-formula">${esc(row.formula)}</div>` : ''}${row.quote ? `<blockquote>${esc(row.quote)}</blockquote><small class="sf-evidence-label">Párrafo ${esc(row.paragraph)} de la lectura</small>` : ''}</div></li>`).join('')}</ol><div class="sf-lesson-note"><h4>Ojo con esto</h4><p>${esc(s.mistake)}</p></div><div class="sf-lesson-check"><h4>Comprueba tu respuesta</h4><p>${esc(s.check)}</p></div></section>`;
     }
     function promptHtml(q) {
@@ -38,7 +44,7 @@
             const sets = [...q.text.matchAll(/([UABCD])=\{([^}]+)\}/g)];
             return `<h2 id="sf-question-title" tabindex="-1">¿Qué números cumplen estas tres condiciones?</h2><ul class="sf-task-list"><li>Están en C o en D.</li><li>No están en A.</li><li>También están en B.</li></ul><dl class="sf-given">${sets.map(([_, name, values]) => `<div><dt>${name === 'U' ? 'Universo U' : name}</dt><dd>{${esc(name === 'U' ? '−10, −9, −8, −7, −6, −5, −4, −3, −2, −1' : values.replace(/,/g, ', '))}}</dd></div>`).join('')}</dl><details class="sf-original"><summary>Ver la pregunta con símbolos</summary><p>${esc(q.text)}</p></details>`;
         }
-        const sentences = q.text.split(/(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚÜÑ¿])/);
+        const sentences = isBiomedical(q) ? q.text.split('\n') : q.text.split(/(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚÜÑ¿])/);
         return `<h2 id="sf-question-title" tabindex="-1">${sentences.map(sentence => `<span class="sf-prompt-line">${esc(sentence)}</span>`).join('')}</h2>`;
     }
     function optionText(q, index) {
@@ -46,6 +52,7 @@
         return q.options[index];
     }
     function topicFor(q, bank) {
+        if (isBiomedical(q)) return {key:q.source.topicId,label:`Tema ${q.source.chapterNumber} · ${q.topic}`,chapter:q.source.chapterNumber};
         if (isOfficial(q)) return {key:officialTopicPrefix + q.source.chapterNumber,label:`Tema ${q.source.chapterNumber} · ${q.topic}`,chapter:q.source.chapterNumber};
         if (q.subject === 'lectura') return {key:q.passageId,label:bank.passages.find(p=>p.id===q.passageId)?.title || q.topic};
         const t=q.topic.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -78,18 +85,19 @@
         const values=new Map();
         for(const q of bank.questions.filter(q=>q.subject===subject)){const t=topicFor(q,bank);values.set(t.key,t);}
         const ordered = [...values.values()].sort((a,b)=>Number(!!a.chapter)-Number(!!b.chapter) || (a.chapter && b.chapter ? a.chapter-b.chapter : a.label.localeCompare(b.label,'es')));
-        if (ordered.some(t=>t.chapter)) ordered.splice(ordered.findIndex(t=>t.chapter),0,{key:officialAll,label:'Todos los capítulos UMSA'});
+        const firstOfficial = ordered.findIndex(t=>t.key.startsWith(officialTopicPrefix));
+        if (firstOfficial !== -1) ordered.splice(firstOfficial,0,{key:officialAll,label:'Todos los capítulos UMSA'});
         return ordered;
     }
     function configurationPool(bank, config) {
-        if(!config || (!subjects[config.subject] && config.subject!=='integral') || (!levels[config.level] && config.level!=='todos') || !config.topic) return [];
+        if(!config || (!Object.hasOwn(subjects,config.subject) && config.subject!=='integral') || (!Object.hasOwn(levels,config.level) && config.level!=='todos') || !config.topic) return [];
         if(config.topic!=='*' && !topics(bank,config.subject).some(t=>t.key===config.topic))return [];
-        return bank.questions.filter(q=>(config.subject==='integral'||q.subject===config.subject) && (config.level==='todos'||q.difficulty===config.level) &&
-            (config.topic==='*' ? !isOfficial(q) : config.topic===officialAll ? isOfficial(q) : topicFor(q,bank).key===config.topic));
+        return bank.questions.filter(q=>(config.subject==='integral'?Object.hasOwn(sufficiencySubjects,q.subject):q.subject===config.subject) && (config.level==='todos'||q.difficulty===config.level) &&
+            (config.topic==='*' ? (Object.hasOwn(biomedicalSubjects,config.subject)?isBiomedical(q):isLegacy(q)) : config.topic===officialAll ? isOfficial(q) : topicFor(q,bank).key===config.topic));
     }
     function configurationCount(bank, config) {
         const pool=configurationPool(bank,config);
-        if(config?.subject==='integral')return Object.keys(subjects).every(s=>pool.filter(q=>q.subject===s).length>=5)?20:0;
+        if(config?.subject==='integral')return Object.keys(sufficiencySubjects).every(s=>pool.filter(q=>q.subject===s).length>=5)?20:0;
         return Math.min(20,pool.length);
     }
     function selectConfiguration(bank, config, seed) {
@@ -110,26 +118,45 @@
         const topic=config.topic==='*'?'Todos los temas':topics(bank,config.subject).find(t=>t.key===config.topic)?.label || '';
         return [subjects[config.subject]||'Completo',config.topic?.startsWith(officialTopicPrefix)?'UMSA 2026':'',topic,levels[config.level]||'Todos los niveles'].filter(Boolean).join(' · ');
     }
+    function validBiomedicalSource(q) {
+        const source=q.source, mapping=biomedicalChapters[q.subject];
+        if (!mapping || !isBiomedical(q) || !Object.hasOwn(biomedicalSubjects,q.subject)) return false;
+        const [prefix,max]=mapping, n=source.chapterNumber;
+        const topicId=prefix+'-'+String(n).padStart(2,'0');
+        return Number.isInteger(n) && n>=1 && n<=max && source.topicId===topicId && q.id.startsWith(`${biomedicalCollection}-${topicId}-`) &&
+            source.chapter===q.topic && [source.document,source.section].every(t=>typeof t==='string'&&t.trim()) &&
+            Array.isArray(source.pdfPages) && source.pdfPages.length>0 && source.pdfPages.every(p=>Number.isInteger(p)&&p>0) &&
+            Array.isArray(source.printedPages) && source.printedPages.length<=source.pdfPages.length && source.printedPages.every(p=>Number.isInteger(p)&&p>0);
+    }
+    function referenceText(source) {
+        const pages = 'pág. PDF ' + source.pdfPages.join(', ');
+        if (source.collection === biomedicalCollection) return `${source.document} · Tema ${source.chapterNumber}: ${source.chapter} · ${source.section}${source.printedPages.length ? ' · pág. impresa ' + source.printedPages.join(', ') : ''} · ${pages}.`;
+        if (source.collection === officialCollection) return `Ejercicio de AlcocerMed basado en UMSA · ${source.document} · Tema ${source.chapterNumber}: ${source.chapter} · ${source.section} · pág. impresa ${source.printedPages.join(', ')} · ${pages}.`;
+        if (source.kind === 'variante de práctica') return `Práctica nueva de AlcocerMed, basada en el documento ABP de La Paz · ${pages} · ejercicio de referencia ${source.question}.`;
+        if (source.document === 'MEDICINA EXÁMENES PASADOS ABP.pdf') return `Exámenes pasados ABP · UMSA · ${pages} · pregunta ${source.question}. ${source.kind === 'adaptada' ? 'Adaptada para la práctica.' : 'Notación normalizada.'}`;
+        return `${source.author || 'Kenneth S. Saladin'}, ${source.edition || '6.ª edición'} · ${source.chapter || 'cap. 1'} · ${pages}${source.printedPages ? ' · pág. impresa ' + source.printedPages.join(', ') : ''}. Texto adaptado para lectura comprensiva.`;
+    }
     function validate(bank) {
         if (!bank || !Array.isArray(bank.questions) || !Array.isArray(bank.passages)) return false;
         const ids = new Set(), passages = new Set(bank.passages.map(p => p.id));
         const validQuestions = bank.questions.length > 0 && bank.questions.every(q => {
             if (!q || typeof q.id !== 'string' || !q.id || ids.has(q.id)) return false;
             ids.add(q.id);
-            return subjects[q.subject] && typeof q.text === 'string' && q.text.length > 0 &&
-                (isOfficial(q) ? q.id.startsWith(officialCollection + '-') && q.subject !== 'lectura' &&
+            return Object.hasOwn(subjects,q.subject) && typeof q.text === 'string' && q.text.length > 0 &&
+                (isBiomedical(q) || Object.hasOwn(biomedicalSubjects,q.subject) ? validBiomedicalSource(q) :
+                 isOfficial(q) ? q.id.startsWith(officialCollection + '-') && q.subject !== 'lectura' &&
                     Number.isInteger(q.source.chapterNumber) && q.source.chapterNumber > 0 &&
                     typeof q.source.section === 'string' && q.source.section.length > 0 &&
                     q.source.chapter === q.topic && Array.isArray(q.source.printedPages) && q.source.printedPages.every(n=>Number.isInteger(n)&&n>0) &&
                     Array.isArray(q.source.pdfPages) && q.source.pdfPages.length === q.source.printedPages.length && q.source.pdfPages.every(n=>Number.isInteger(n)&&n>0) :
-                    !q.id.startsWith(officialCollection + '-')) &&
+                    !q.id.startsWith(officialCollection + '-') && !q.id.startsWith(biomedicalCollection + '-')) &&
                 Array.isArray(q.options) && [4, 5].includes(q.options.length) && q.options.every(o => typeof o === 'string' && o.trim()) &&
                 new Set(q.options).size === q.options.length && Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length &&
                 typeof q.explanation === 'string' && q.explanation.length > 0 && q.source?.pdfPages?.length > 0 &&
                 (q.subject !== 'lectura' || passages.has(q.passageId)) &&
-                (!bank.difficultyRevision || (!!levels[q.difficulty] && (q.subject !== 'lectura' || bank.passages.find(p => p.id === q.passageId)?.difficulty === q.difficulty))) &&
-                (!bank.teachingRevision || validSolution(q, bank));
-        }) && Object.keys(subjects).every(s => bank.questions.some(q => q.subject === s)) &&
+                (!bank.difficultyRevision || (Object.hasOwn(levels,q.difficulty) && (q.subject !== 'lectura' || bank.passages.find(p => p.id === q.passageId)?.difficulty === q.difficulty))) &&
+                (!bank.teachingRevision || isBiomedical(q) || validSolution(q, bank));
+        }) && Object.keys(sufficiencySubjects).every(s => bank.questions.some(q => q.subject === s)) &&
             bank.passages.every(p => typeof p.text === 'string' && p.text.length > 100 && p.source?.pdfPages?.length > 0);
         if (!validQuestions) return false;
         if (bank.difficultyRevision) {
@@ -137,13 +164,13 @@
             const lookup = new Map(bank.questions.map(q => [q.id,q])), seen = new Set(), covered = new Set();
             const combinations = new Set();
             for (const p of bank.levelPapers) {
-                if (!p.id?.startsWith('nivel-') || seen.has(p.id) || (Array.isArray(bank.papers) && bank.papers.some(old => old.id === p.id)) || !levels[p.difficulty] || !p.title || !['integral',...Object.keys(subjects)].includes(p.subject)) return false;
+                if (!p.id?.startsWith('nivel-') || seen.has(p.id) || (Array.isArray(bank.papers) && bank.papers.some(old => old.id === p.id)) || !levels[p.difficulty] || !p.title || !['integral',...Object.keys(sufficiencySubjects)].includes(p.subject)) return false;
                 seen.add(p.id);
                 if (!Array.isArray(p.questionIds) || p.questionIds.length !== p.questionCount || new Set(p.questionIds).size !== p.questionCount || !Number.isFinite(p.minutes) || p.minutes < 5 || p.minutes > 180) return false;
                 const rows=p.questionIds.map(id=>lookup.get(id));
-                if (rows.some(q=>!q || isOfficial(q) || q.difficulty !== p.difficulty || (p.subject !== 'integral' && q.subject !== p.subject))) return false;
+                if (rows.some(q=>!q || !isLegacy(q) || q.difficulty !== p.difficulty || (p.subject !== 'integral' && q.subject !== p.subject))) return false;
                 if (p.subject === 'integral') {
-                    if (p.questionCount !== 40 || Object.keys(subjects).some(s=>rows.filter(q=>q.subject===s).length!==10)) return false;
+                    if (p.questionCount !== 40 || Object.keys(sufficiencySubjects).some(s=>rows.filter(q=>q.subject===s).length!==10)) return false;
                 } else {
                     if (p.questionCount < 1 || p.questionCount > 10) return false;
                     combinations.add(p.subject+':'+p.difficulty);
@@ -152,25 +179,25 @@
                 const reading=rows.filter(q=>q.subject==='lectura');
                 if (reading.some(q=>rows.filter(r=>r.passageId===q.passageId).length !== bank.questions.filter(r=>r.passageId===q.passageId).length)) return false;
             }
-            if (covered.size !== bank.questions.filter(q=>!isOfficial(q)).length || combinations.size !== 12) return false;
+            if (covered.size !== bank.questions.filter(isLegacy).length || combinations.size !== Object.keys(sufficiencySubjects).length * Object.keys(levels).length) return false;
         }
         if (bank.introPaper) {
             const p = bank.introPaper, lookup = new Map(bank.questions.map(q => [q.id, q]));
             if (p.id !== 'inicial' || p.questionCount !== 40 || p.minutes !== 60 || !Array.isArray(p.questionIds) || p.questionIds.length !== 40 || new Set(p.questionIds).size !== 40) return false;
             const rows = p.questionIds.map(id => lookup.get(id));
-            if (rows.some(q => !q || isOfficial(q)) || Object.keys(subjects).some(s => rows.filter(q => q.subject === s).length !== 10)) return false;
+            if (rows.some(q => !q || !isLegacy(q)) || Object.keys(sufficiencySubjects).some(s => rows.filter(q => q.subject === s).length !== 10)) return false;
             if (rows.filter(q => q.subject === 'lectura').some(q => rows.filter(r => r.passageId === q.passageId).length !== bank.questions.filter(r => r.passageId === q.passageId).length)) return false;
         }
         if (!bank.papers) return true;
         if (!Array.isArray(bank.papers) || !bank.papers.length) return false;
         const paperIds = new Set(), lookup = new Map(bank.questions.map(q => [q.id, q]));
         return bank.papers.every(p => {
-            if (!p.id || paperIds.has(p.id) || !p.title || !['integral', ...Object.keys(subjects)].includes(p.subject)) return false;
+            if (!p.id || paperIds.has(p.id) || !p.title || !['integral', ...Object.keys(sufficiencySubjects)].includes(p.subject)) return false;
             paperIds.add(p.id);
             if (!Array.isArray(p.questionIds) || p.questionIds.length !== p.questionCount || new Set(p.questionIds).size !== p.questionCount || !Number.isFinite(p.minutes) || p.minutes <= 0 || p.minutes > 180) return false;
             const rows = p.questionIds.map(id => lookup.get(id));
-            if (rows.some(q => !q || isOfficial(q) || (p.subject !== 'integral' && q.subject !== p.subject))) return false;
-            if (p.subject === 'integral' && (p.questionCount !== 40 || Object.keys(subjects).some(s => rows.filter(q => q.subject === s).length !== 10))) return false;
+            if (rows.some(q => !q || !isLegacy(q) || (p.subject !== 'integral' && q.subject !== p.subject))) return false;
+            if (p.subject === 'integral' && (p.questionCount !== 40 || Object.keys(sufficiencySubjects).some(s => rows.filter(q => q.subject === s).length !== 10))) return false;
             const reading = rows.filter(q => q.subject === 'lectura');
             return [...new Set(reading.map(q => q.passageId))].every(id => reading.filter(q => q.passageId === id).length === bank.questions.filter(q => q.passageId === id).length);
         });
@@ -194,14 +221,14 @@
             return selected.questionIds.map(id => lookup.get(id));
         }
         if (area === 'integral') {
-            const questions = ['matematicas', 'fisica', 'quimica'].flatMap(s => shuffle(bank.questions.filter(q => q.subject === s && !isOfficial(q)), rng).slice(0, 10));
+            const questions = ['matematicas', 'fisica', 'quimica'].flatMap(s => shuffle(bank.questions.filter(q => q.subject === s && isLegacy(q)), rng).slice(0, 10));
             const texts = shuffle(bank.passages, rng).slice(0, 2);
             return questions.concat(texts.flatMap(p => bank.questions.filter(q => q.passageId === p.id)));
         }
         if (area.startsWith('texto:')) return bank.questions.filter(q => q.passageId === area.slice(6));
         if (!subjects[area]) throw new Error('Materia desconocida');
         if (area === 'lectura') return shuffle(bank.passages, rng).flatMap(p => bank.questions.filter(q => q.passageId === p.id));
-        return shuffle(bank.questions.filter(q => q.subject === area && !isOfficial(q)), rng);
+        return shuffle(bank.questions.filter(q => q.subject === area && (Object.hasOwn(biomedicalSubjects,area)?isBiomedical(q):isLegacy(q))), rng);
     }
     function grade(questions, answers) {
         const result = { correct: 0, wrong: 0, skipped: 0, total: questions.length, subjects: {} };
@@ -231,5 +258,5 @@
         return { ...saved, answers, helpOpen: Array.isArray(saved.helpOpen) ? [...new Set(saved.helpOpen.filter(id => saved.ids.includes(id)))] : [], flags: Array.isArray(saved.flags) ? saved.flags.filter(id => saved.ids.includes(id)) : [], index: Math.max(0, Math.min(saved.ids.length - 1, Number.isInteger(saved.index) ? saved.index : 0)), finished: saved.finished === true };
     }
     function paper(bank, area) { return ['inicial', 'simulacro:inicial'].includes(area) ? bank?.introPaper || null : bank?.papers?.find(p => 'simulacro:' + p.id === area) || bank?.levelPapers?.find(p => 'simulacro:' + p.id === area) || null; }
-    return { subjects, levels, officialCollection, officialTopicPrefix, isOfficial, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText, topics, topicFor, configurationPool, configurationCount, selectConfiguration, configurationLabel };
+    return { subjects: sufficiencySubjects, practiceSubjects: subjects, biomedicalSubjects, levels, officialCollection, officialTopicPrefix, isOfficial, biomedicalCollection, isBiomedical, referenceText, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText, topics, topicFor, configurationPool, configurationCount, selectConfiguration, configurationLabel };
 });

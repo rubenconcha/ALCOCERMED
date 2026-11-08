@@ -1,7 +1,7 @@
 /* Suficiencia académica: contenido privado, respuestas y progreso por estudiante. */
 (function () {
     'use strict';
-    const C = window.SufficiencyCore, labels = C.subjects;
+    const C = window.SufficiencyCore, labels = C.practiceSubjects;
     const officialGuides = {
         matematicas: 'https://drive.google.com/file/d/1IRuuJCW8oBAOqL2uqwHZv4eWSVtZkwqF/view',
         fisica: 'https://drive.google.com/file/d/1L1z3zmyHNpzaB4HGrlJNEjMs6QWF7XUz/view',
@@ -9,7 +9,7 @@
     };
     const openTopicSimulacro = window.openSimulacro;
     const root = document.getElementById('suficiencia-screen');
-    let bank = null, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'matematicas', level = 'facil', catalogueArea = 'matematicas', catalogueMode = 'config', configSubject = '', configTopic = '', configLevel = 'todos', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
+    let bank = null, medicalQuestions = null, owner = null, attempt = null, questions = [], clock = null, generation = 0, area = 'matematicas', level = 'facil', catalogueArea = 'matematicas', catalogueMode = 'config', configSubject = '', configTopic = '', configLevel = 'todos', ending = false, starting = false, pendingConfirmation = null, renderedPassage = null, cataloguePage = 0, catalogueQuery = '';
     const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
     const key = id => 'alcocermed:suficiencia:v1:' + id;
     const user = () => typeof currentUser !== 'undefined' ? currentUser?.id : null;
@@ -24,7 +24,7 @@
     function stopClock() { clearInterval(clock); clock = null; }
     function clear() {
         generation++; stopClock(); if (pendingConfirmation) pendingConfirmation(false);
-        bank = null; owner = null; attempt = null; questions = []; level = 'facil'; catalogueArea = 'matematicas'; catalogueMode = 'config'; configSubject = ''; configTopic = ''; configLevel = 'todos'; ending = false; starting = false; renderedPassage = null;
+        bank = null; medicalQuestions = null; owner = null; attempt = null; questions = []; level = 'facil'; catalogueArea = 'matematicas'; catalogueMode = 'config'; configSubject = ''; configTopic = ''; configLevel = 'todos'; ending = false; starting = false; renderedPassage = null;
         root.replaceChildren();
     }
     function ask(message) {
@@ -50,24 +50,27 @@
         try { localStorage.setItem(key(owner), JSON.stringify(attempt)); }
         catch (_) { const notice = root.querySelector('[data-save-status]'); if (notice) notice.textContent = 'Este navegador no permite guardar el avance. Mantén la página abierta.'; }
     }
-    function sourceText(source) {
-        const pages = 'pág. PDF ' + source.pdfPages.join(', ');
-        if (source.collection === C.officialCollection) return `Ejercicio de AlcocerMed basado en UMSA · ${source.document} · Tema ${source.chapterNumber}: ${source.chapter} · ${source.section} · pág. impresa ${source.printedPages.join(', ')} · ${pages}.`;
-        if (source.kind === 'variante de práctica') return `Práctica nueva de AlcocerMed, basada en el documento ABP de La Paz · ${pages} · ejercicio de referencia ${source.question}.`;
-        if (source.document === 'MEDICINA EXÁMENES PASADOS ABP.pdf') return `Exámenes pasados ABP · UMSA · ${pages} · pregunta ${source.question}. ${source.kind === 'adaptada' ? 'Adaptada para la práctica.' : 'Notación normalizada.'}`;
-        return `${source.author || 'Kenneth S. Saladin'}, ${source.edition || '6.ª edición'} · ${source.chapter || 'cap. 1'} · ${pages}${source.printedPages ? ' · pág. impresa ' + source.printedPages.join(', ') : ''}. Texto adaptado para lectura comprensiva.`;
-    }
+    const sourceText = C.referenceText;
     async function load() {
         const request = ++generation;
         const client = getSupabase();
         const { data, error } = await client.auth.getSession();
         if (error || !data.session || data.session.user.id !== user()) throw new Error('Vuelve a iniciar sesión para abrir esta sección.');
         const id = data.session.user.id;
-        const response = await fetch('/api/suficiencia?collection=' + C.officialCollection, { headers: { Authorization: 'Bearer ' + data.session.access_token }, cache: 'no-store', signal: AbortSignal.timeout(20000) });
+        const requestCollection = collection => fetch('/api/suficiencia?collection=' + collection, { headers: { Authorization: 'Bearer ' + data.session.access_token }, cache: 'no-store', signal: AbortSignal.timeout(20000) });
+        const medical = (owner===id && medicalQuestions) ? Promise.resolve(medicalQuestions) :
+            requestCollection(C.biomedicalCollection).then(r=>r.ok?r.json():null).then(payload=>
+                payload?.collection===C.biomedicalCollection && payload.questions?.length && payload.questions.every(C.isBiomedical)?payload.questions:null
+            ).catch(()=>null);
+        const response = await requestCollection(C.officialCollection);
         if (!response.ok) throw new Error(response.status === 403 ? 'Necesitas una suscripción activa para practicar.' : 'No pudimos cargar las preguntas. Intenta de nuevo.');
-        const content = await response.json();
+        const [content, extra] = await Promise.all([response.json(), medical]);
         if (request !== generation || user() !== id) return false;
         if (!C.validate(content)) throw new Error('El banco está en revisión. Intenta de nuevo más tarde.');
+        if (extra) {
+            const combined = {...content, questions:content.questions.concat(extra)};
+            if (C.validate(combined)) { content.questions=combined.questions; medicalQuestions=extra; }
+        }
         bank = content; owner = id;
         if (!attempt) {
             try { attempt = C.restore(JSON.parse(localStorage.getItem(key(id))), bank, id); } catch (_) { attempt = null; }
@@ -115,6 +118,11 @@
             (!query || normalized(p.title + ' ' + p.description + ' ' + (labels[p.subject] || 'completo') + ' ' + (C.levels[p.difficulty] || '')).includes(query)));
     }
     const configuration = () => ({subject:configSubject,topic:configTopic,level:configLevel});
+    function subjectOptions() {
+        const option = ([id,label]) => `<option value="${id}" ${configSubject===id?'selected':''} ${Object.hasOwn(C.biomedicalSubjects,id)&&!medicalQuestions?'disabled':''}>${esc(label)}</option>`;
+        return '<optgroup label="Materias de Medicina">' + Object.entries(C.biomedicalSubjects).map(option).join('') +
+            '</optgroup><optgroup label="Suficiencia académica">' + Object.entries({...C.subjects,integral:'Completo · cuatro materias'}).map(option).join('') + '</optgroup>';
+    }
     function configurationControls() {
         const cfg=configuration(),count=C.configurationCount(bank,cfg),options=configSubject?C.topics(bank,configSubject):[];
         const official = options.filter(t=>t.key.startsWith(C.officialTopicPrefix));
@@ -122,7 +130,7 @@
         const topicOptions = options.filter(t=>!t.key.startsWith(C.officialTopicPrefix)).map(optionHtml).join('') +
             (official.length ? '<optgroup label="Textos oficiales UMSA 2026">' + official.map(optionHtml).join('') + '</optgroup>' : '');
         const difficulties={todos:'Todos',...C.levels},icons={todos:'th',facil:'seedling',intermedio:'fire',dificil:'skull-crossbones'};
-        return `<section class="banco-config-card sf-bank-config" aria-label="Configurar simulacro"><div class="banco-selects-row"><div class="banco-select-group"><label class="banco-select-label" for="sf-config-subject"><i class="fas fa-book-medical" aria-hidden="true"></i> MATERIA</label><select id="sf-config-subject" class="banco-select-btn sf-bank-select"><option value="">seleccionar materia</option>${Object.entries({...labels,integral:'Completo · cuatro materias'}).map(([id,label])=>`<option value="${id}" ${configSubject===id?'selected':''}>${label}</option>`).join('')}</select></div><div class="banco-select-group"><label class="banco-select-label" for="sf-config-topic"><i class="fas fa-tag" aria-hidden="true"></i> TEMA</label><select id="sf-config-topic" class="banco-select-btn sf-bank-select" ${configSubject?'':'disabled'}><option value="">${configSubject?'seleccionar tema':'primero selecciona una materia'}</option>${configSubject && configSubject!=='integral'?`<option value="*" ${configTopic==='*'?'selected':''}>Todos los temas</option>`:''}${topicOptions}</select></div></div><div class="banco-dificultad-row"><div class="banco-select-label"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"> NIVEL DE DIFICULTAD</div><div class="banco-dificultad-btns" role="group" aria-label="Nivel de dificultad">${Object.entries(difficulties).map(([id,label])=>`<button type="button" data-sf="config-level" data-level="${id}" class="banco-dif-btn banco-dif-${id==='intermedio'?'medio':id} ${configLevel===id?(id==='todos'?'banco-dif-active':'active-selected'):''}" aria-pressed="${configLevel===id}"><i class="fas fa-${icons[id]}" aria-hidden="true"></i> ${label}</button>`).join('')}</div></div><div class="banco-config-summary" role="status" aria-live="polite"><div class="banco-summary-item"><i class="fas fa-question-circle" aria-hidden="true"></i><span>${!configSubject||!configTopic?'se mostrarán hasta <strong>—</strong> preguntas en orden aleatorio':count?'se mostrarán <strong>'+count+'</strong> preguntas en orden aleatorio':'no hay preguntas con esta combinación; elige otro tema o nivel'}</span></div></div><button type="button" data-sf="run" data-area="config" class="btn-primary banco-start-btn sf-bank-start" ${count?'':'disabled'}><i class="fas fa-play" aria-hidden="true"></i> Iniciar simulacro</button></section>`;
+        return `<section class="banco-config-card sf-bank-config" aria-label="Configurar simulacro"><div class="banco-selects-row"><div class="banco-select-group"><label class="banco-select-label" for="sf-config-subject"><i class="fas fa-book-medical" aria-hidden="true"></i> MATERIA</label><select id="sf-config-subject" class="banco-select-btn sf-bank-select"><option value="">seleccionar materia</option>${subjectOptions()}</select></div><div class="banco-select-group"><label class="banco-select-label" for="sf-config-topic"><i class="fas fa-tag" aria-hidden="true"></i> TEMA</label><select id="sf-config-topic" class="banco-select-btn sf-bank-select" ${configSubject?'':'disabled'}><option value="">${configSubject?'seleccionar tema':'primero selecciona una materia'}</option>${configSubject && configSubject!=='integral'?`<option value="*" ${configTopic==='*'?'selected':''}>Todos los temas</option>`:''}${topicOptions}</select></div></div><div class="banco-dificultad-row"><div class="banco-select-label"><img class="study-art" src="/assets/study-art/cards.png" alt="" aria-hidden="true" width="80" height="80"> NIVEL DE DIFICULTAD</div><div class="banco-dificultad-btns" role="group" aria-label="Nivel de dificultad">${Object.entries(difficulties).map(([id,label])=>`<button type="button" data-sf="config-level" data-level="${id}" class="banco-dif-btn banco-dif-${id==='intermedio'?'medio':id} ${configLevel===id?(id==='todos'?'banco-dif-active':'active-selected'):''}" aria-pressed="${configLevel===id}"><i class="fas fa-${icons[id]}" aria-hidden="true"></i> ${label}</button>`).join('')}</div></div><div class="banco-config-summary" role="status" aria-live="polite"><div class="banco-summary-item"><i class="fas fa-question-circle" aria-hidden="true"></i><span>${!configSubject||!configTopic?'se mostrarán hasta <strong>—</strong> preguntas en orden aleatorio':count?'se mostrarán <strong>'+count+'</strong> preguntas en orden aleatorio':'no hay preguntas con esta combinación; elige otro tema o nivel'}</span></div></div><button type="button" data-sf="run" data-area="config" class="btn-primary banco-start-btn sf-bank-start" ${count?'':'disabled'}><i class="fas fa-play" aria-hidden="true"></i> Iniciar simulacro</button></section>`;
     }
     function progressPanel() {
         const score=attempt?.finished?C.grade(questions,attempt.answers):null;
@@ -148,29 +156,31 @@
             root.classList.add?.('sf-bank-layout');
             const count = bank.questions.filter(C.isOfficial).length;
             const guides = count ? `<details class="sf-sources"><summary>Textos oficiales UMSA 2026</summary><p>${count} ejercicios de AlcocerMed basados en las guías de Medicina UMSA. Elige una materia y busca el grupo «Textos oficiales UMSA 2026» en el selector de temas. Cada resolución indica la sección y las páginas de referencia.</p><ul>${Object.entries(officialGuides).map(([s,url])=>`<li><a href="${url}" target="_blank" rel="noopener noreferrer">Abrir guía de ${labels[s]}</a></li>`).join('')}</ul></details>` : '';
-            root.innerHTML=header()+configurationControls()+guides+progressPanel()+`<div class="sf-bank-links">${button('legacy','Ver simulacros anteriores')}${typeof openTopicSimulacro==='function'?button('topics','Simulacros de otras materias'):''}</div><details class="sf-sources"><summary>Sobre el material</summary><p>${bank.questions.length} preguntas con resolución paso a paso: matemáticas, física, química y lectura comprensiva. Se conservan los simulacros anteriores y sus avances. Las referencias aparecen al revisar las respuestas.</p></details>`;
+            const medicine = medicalQuestions ? `<details class="sf-sources"><summary>Bibliografía de las materias de Medicina</summary><ul><li>Kenneth S. Saladin, <i>Anatomía y fisiología: la unidad entre forma y función</i>, 6.ª edición.</li><li>Alfonso Calvo González, <i>Biología celular biomédica</i>, Elsevier, 2015.</li><li>UMSS, <i>Educación en Salud e Investigación</i>, Curso Básico 2025–2026.</li></ul><p>Cada explicación indica la sección y las páginas de referencia.</p></details>` : `<div class="sf-notice" role="status">No pudimos cargar las materias de Medicina. ${button('reload','Volver a cargar')}</div>`;
+            root.innerHTML=header()+configurationControls()+medicine+guides+progressPanel()+`<div class="sf-bank-links">${button('legacy','Ver simulacros anteriores')}${typeof openTopicSimulacro==='function'?button('topics','Simulacros completos y semanales'):''}</div><details class="sf-sources"><summary>Sobre el material</summary><p>${bank.questions.length} preguntas con explicación. Las referencias aparecen al revisar las respuestas.</p></details>`;
         } else {
             root.classList.remove?.('sf-bank-layout');
-            root.innerHTML=header()+`<div class="sf-legacy-heading"><h2>Simulacros anteriores</h2>${button('config','Volver al selector')}</div><div class="sf-catalogue-filter"><label for="sf-area-filter">Materia<select id="sf-area-filter"><option value="integral">Todos</option>${Object.entries(labels).map(([id,name])=>`<option value="${id}" ${area===id?'selected':''}>${name}</option>`).join('')}</select></label><label for="sf-search">Buscar simulacro<input id="sf-search" type="search" placeholder="Nombre o número" value="${esc(catalogueQuery)}"></label><p data-sf-status role="status" aria-live="polite"></p></div><div class="sf-catalogue" data-sf-cards></div><nav class="sf-pagination" data-sf-pagination aria-label="Páginas de simulacros"></nav>`;
+            root.innerHTML=header()+`<div class="sf-legacy-heading"><h2>Simulacros anteriores</h2>${button('config','Volver al selector')}</div><div class="sf-catalogue-filter"><label for="sf-area-filter">Materia<select id="sf-area-filter"><option value="integral">Todos</option>${Object.entries(C.subjects).map(([id,name])=>`<option value="${id}" ${area===id?'selected':''}>${name}</option>`).join('')}</select></label><label for="sf-search">Buscar simulacro<input id="sf-search" type="search" placeholder="Nombre o número" value="${esc(catalogueQuery)}"></label><p data-sf-status role="status" aria-live="polite"></p></div><div class="sf-catalogue" data-sf-cards></div><nav class="sf-pagination" data-sf-pagination aria-label="Páginas de simulacros"></nav>`;
             renderCatalogueCards();
         }
         if(scroll)root.scrollIntoView({block:'start',behavior:'instant'});
     }
     async function start(selectedArea) {
         if (starting) return;
-        const configured = selectedArea === 'config' ? { ...configuration() } : null;
+        const target = selectedArea || area;
+        const configured = target === 'config' ? { ...(selectedArea ? configuration() : attempt?.configuration || configuration()) } : null;
         if (configured && !C.configurationCount(bank, configured)) return;
         starting = true;
         if (attempt && !attempt.finished && !await ask('Hay una práctica en curso. ¿Quieres reemplazarla por una nueva?')) { starting = false; return; }
         const startButton = root.querySelector('[data-sf="start"]'); if (startButton) startButton.disabled = true;
         try {
             if (!await load()) return;
-            area = selectedArea || area;
+            area = target;
             const chosen = C.paper(bank, area);
             if (chosen) { catalogueArea = chosen.subject; if (chosen.difficulty) level = chosen.difficulty; }
             const seed = crypto.getRandomValues(new Uint32Array(1))[0];
             questions = configured ? C.selectConfiguration(bank, configured, seed) : C.select(bank, area, seed);
-            if (!questions.length) throw new Error('Esta lectura no está disponible.');
+            if (!questions.length) throw new Error('No hay preguntas disponibles para esta selección.');
             const minutes = configured ? Math.ceil(questions.length * ({facil:2,intermedio:2.5,dificil:3,todos:2.5}[configured.level])) : C.paper(bank, area)?.minutes || (area === 'integral' ? 60 : Math.ceil(questions.length * 1.5));
             attempt = { owner, version: bank.version, area, seed, ...(configured ? {configuration: configured} : {}), ids: questions.map(q => q.id), answers: {}, flags: [], index: 0, deadline: Date.now() + minutes * 60000, startedAt: Date.now(), finished: false };
             renderedPassage = null; save(); renderQuestion(); root.scrollIntoView({ block: 'start', behavior: 'instant' }); startClock();
@@ -185,7 +195,11 @@
     }
     function helpBlock(q) {
         const expanded = attempt.helpOpen?.includes(q.id) === true;
-        return `<div class="sf-question-help"><button type="button" class="sf-button sf-help-button" data-sf="help" aria-expanded="${expanded}" aria-controls="sf-current-help">${expanded ? 'Ocultar la resolución' : 'Ver resolución paso a paso'}</button><p class="sf-help-caption">Puedes consultar los pasos y después elegir tu respuesta.</p><div id="sf-current-help"${expanded ? '' : ' hidden'}>${expanded ? `${C.solutionHtml(q)}<p class="sf-help-answer"><b>Respuesta del ejercicio:</b> ${esc(String.fromCharCode(65 + q.correct) + '. ' + C.optionText(q, q.correct))}</p>${button('hide-help', 'Volver a las respuestas')}` : ''}</div></div>`;
+        const medical = C.isBiomedical(q);
+        const show = medical ? 'Ver explicación' : 'Ver resolución paso a paso';
+        const hide = medical ? 'Ocultar la explicación' : 'Ocultar la resolución';
+        const caption = medical ? 'Puedes consultar la explicación y después elegir tu respuesta.' : 'Puedes consultar los pasos y después elegir tu respuesta.';
+        return `<div class="sf-question-help"><button type="button" class="sf-button sf-help-button" data-sf="help" aria-expanded="${expanded}" aria-controls="sf-current-help">${expanded ? hide : show}</button><p class="sf-help-caption">${caption}</p><div id="sf-current-help"${expanded ? '' : ' hidden'}>${expanded ? `${C.solutionHtml(q)}<p class="sf-help-answer"><b>Respuesta del ejercicio:</b> ${esc(String.fromCharCode(65 + q.correct) + '. ' + C.optionText(q, q.correct))}</p>${button('hide-help', 'Volver a las respuestas')}` : ''}</div></div>`;
     }
     function renderQuestion(focus = false) {
         if (!attempt || attempt.finished) return;
