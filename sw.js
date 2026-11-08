@@ -1,10 +1,10 @@
-const CACHE_NAME = 'alcocermed-main-v143-student-results';
+const CACHE_NAME = 'alcocermed-main-v144-umsa-practice';
 const APP_SHELL = [
     './student-results.js?v=1',
     './student-results.css?v=1',
     './question-review.js?v=2',
-    './suficiencia-core.js?v=6',
-    './suficiencia.js?v=8',
+    './suficiencia-core.js?v=7',
+    './suficiencia.js?v=9',
     './suficiencia.css?v=7',
     './campus',
     './campus.html',

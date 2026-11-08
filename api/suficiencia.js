@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { validate } = require('../suficiencia-core.js');
+const { validate, officialCollection } = require('../suficiencia-core.js');
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
 
@@ -21,6 +21,7 @@ module.exports = async function handler(req, res) {
         const access = await response.json();
         if (!access?.ready || !access.premium || (access.expires_at && Date.parse(access.expires_at) <= Date.now())) return res.status(403).end();
         const bank = JSON.parse(await fs.promises.readFile(path.join(process.cwd(), 'api', '_sufficiency', 'bank.json'), 'utf8'));
+        if (req.query?.collection === officialCollection) bank.questions.push(...require('./_sufficiency/umsa-2026.cjs'));
         if (!validate(bank)) return res.status(503).end();
         res.setHeader('Content-Type', 'application/json; charset=utf-8');
         return res.status(200).end(JSON.stringify(bank));

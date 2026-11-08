@@ -125,6 +125,15 @@ test('active subscriber receives validated private bank, with bearer forwarded o
         const res = response(); await handler({ method: 'GET', headers: { authorization: 'Bearer student-token' }, query: {} }, res);
         assert.equal(res.code, 200); assert.equal(JSON.parse(res.body).questions.length, 980);
         assert.equal(res.headers['Cache-Control'], 'private, no-store');
+        const official = response();
+        await handler({ method: 'GET', headers: { authorization: 'Bearer student-token' }, query: { collection: 'umsa-2026' } }, official);
+        assert.equal(official.code, 200);
+        const extended = JSON.parse(official.body);
+        assert.equal(extended.questions.filter(C.isOfficial).length, 38);
+        assert.deepEqual(extended.questions.filter(q => !C.isOfficial(q)), bank.questions);
+        const denied = response();
+        await handler({ method: 'GET', headers: {}, query: { collection: 'umsa-2026' } }, denied);
+        assert.equal(denied.code, 401); assert.equal(denied.body, '');
     } finally { global.fetch = originalFetch; process.chdir(originalCwd); }
 });
 test('sidebar and screen integration do not remove the original three-subject simulator', () => {

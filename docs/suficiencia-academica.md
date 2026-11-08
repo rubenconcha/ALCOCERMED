@@ -1,5 +1,17 @@
 # Simulacro por materia y nivel
 
+## Práctica por capítulos de Medicina UMSA 2026
+
+En Simulacro, el grupo «Textos oficiales UMSA 2026» del selector de temas contiene 38 ejercicios propios de AlcocerMed: 14 de Matemática, 12 de Física y 12 de Química. Hay un ejercicio por cada capítulo y cinco en total para Productos y cocientes notables. Las preguntas muestran resolución, apartado, página impresa y página PDF. «Todos los capítulos UMSA» permite practicar con el conjunto de esa materia. Los 980 ejercicios originales y sus simulacros conservan sus datos.
+
+Fuentes publicadas por la [Unidad de Admisión Facultativa de Medicina UMSA](https://umsa.bo/web/uafmed/inicio), portadas y créditos en las páginas PDF 1 y 2:
+
+- [Texto guía Matemática 2026](https://drive.google.com/file/d/1IRuuJCW8oBAOqL2uqwHZv4eWSVtZkwqF/view), 184 páginas. Revisión y actualización: Ysau Marte Quiroga Chambi y Ariel Natalio Cruz Limachi. SHA-256: `6f2ab1e474383751e19a3aff1c8b09ba55286454b628bda697e6c6eb78af0692`.
+- [Texto guía Física 2026](https://drive.google.com/file/d/1L1z3zmyHNpzaB4HGrlJNEjMs6QWF7XUz/view), 202 páginas. Revisión y actualización: Edwin Huanca Choque y Gerad Vicente Sánchez. SHA-256: `0cfca2cb4cef3c61d819c3c106013032f3be6b293409c862e536cf09c4671a82`.
+- [Texto guía Química 2026](https://drive.google.com/file/d/1kVK0xS3ULILT3oB98-RCbH2aRV4ffqWA/view), 296 páginas. Revisión y actualización: Juan Pablo Apaza y Maria del Carmen Sandy Serrudo. SHA-256: `39193884b8a5544e13abd441ffad3dc584276d454609a5c700ca0912fa2b397a`.
+
+Los PDF se enlazan en el campus sin subir copias al repositorio. La colección adicional se sirve con los permisos existentes de `/api/suficiencia?collection=umsa-2026`.
+
 Una sola entrada «simulacro» en el menú lateral. El selector reutiliza el formato del Banco de preguntas: materia y tema en dos campos, botones Todos/Fácil/Intermedio/Difícil, resumen de cantidad y botón amarillo «Iniciar simulacro». El tema permanece deshabilitado hasta elegir materia y el inicio exige una combinación con preguntas disponibles. El panel de seguimiento muestra la última práctica real de esa cuenta o una invitación a comenzar; no inventa métricas de dificultad personal.
 
 Los temas numéricos se agrupan por contenido; en lectura cada tema corresponde a un pasaje completo. Se sortean hasta veinte preguntas de la materia, tema y nivel elegidos. Lectura conserva las cinco preguntas de cada texto; Completo toma cinco preguntas por materia e incluye una lectura completa. Los campos elegidos se guardan junto al intento y se validan al restaurarlo. El banco se carga una vez al abrir y los cambios de filtros no vuelven a descargarlo.

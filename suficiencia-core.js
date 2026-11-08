@@ -6,6 +6,10 @@
     'use strict';
     const subjects = { matematicas: 'Matemáticas', fisica: 'Física', quimica: 'Química', lectura: 'Lectura comprensiva' };
     const levels = { facil: 'Fácil', intermedio: 'Intermedio', dificil: 'Difícil' };
+    const officialCollection = 'umsa-2026';
+    const officialTopicPrefix = officialCollection + ':';
+    const officialAll = officialTopicPrefix + 'todos';
+    const isOfficial = q => q.source?.collection === officialCollection;
     const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
     function validSolution(q, bank) {
         const s = q.solution;
@@ -42,6 +46,7 @@
         return q.options[index];
     }
     function topicFor(q, bank) {
+        if (isOfficial(q)) return {key:officialTopicPrefix + q.source.chapterNumber,label:`Tema ${q.source.chapterNumber} · ${q.topic}`,chapter:q.source.chapterNumber};
         if (q.subject === 'lectura') return {key:q.passageId,label:bank.passages.find(p=>p.id===q.passageId)?.title || q.topic};
         const t=q.topic.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
         let key,label;
@@ -72,12 +77,15 @@
         if(subject==='integral')return [{key:'*',label:'Todos los temas'}];
         const values=new Map();
         for(const q of bank.questions.filter(q=>q.subject===subject)){const t=topicFor(q,bank);values.set(t.key,t);}
-        return [...values.values()].sort((a,b)=>a.label.localeCompare(b.label,'es'));
+        const ordered = [...values.values()].sort((a,b)=>Number(!!a.chapter)-Number(!!b.chapter) || (a.chapter && b.chapter ? a.chapter-b.chapter : a.label.localeCompare(b.label,'es')));
+        if (ordered.some(t=>t.chapter)) ordered.splice(ordered.findIndex(t=>t.chapter),0,{key:officialAll,label:'Todos los capítulos UMSA'});
+        return ordered;
     }
     function configurationPool(bank, config) {
         if(!config || (!subjects[config.subject] && config.subject!=='integral') || (!levels[config.level] && config.level!=='todos') || !config.topic) return [];
         if(config.topic!=='*' && !topics(bank,config.subject).some(t=>t.key===config.topic))return [];
-        return bank.questions.filter(q=>(config.subject==='integral'||q.subject===config.subject) && (config.level==='todos'||q.difficulty===config.level) && (config.topic==='*'||topicFor(q,bank).key===config.topic));
+        return bank.questions.filter(q=>(config.subject==='integral'||q.subject===config.subject) && (config.level==='todos'||q.difficulty===config.level) &&
+            (config.topic==='*' ? !isOfficial(q) : config.topic===officialAll ? isOfficial(q) : topicFor(q,bank).key===config.topic));
     }
     function configurationCount(bank, config) {
         const pool=configurationPool(bank,config);
@@ -100,15 +108,21 @@
     function configurationLabel(bank, config) {
         if(!config)return 'Simulacro';
         const topic=config.topic==='*'?'Todos los temas':topics(bank,config.subject).find(t=>t.key===config.topic)?.label || '';
-        return [subjects[config.subject]||'Completo',topic,levels[config.level]||'Todos los niveles'].filter(Boolean).join(' · ');
+        return [subjects[config.subject]||'Completo',config.topic?.startsWith(officialTopicPrefix)?'UMSA 2026':'',topic,levels[config.level]||'Todos los niveles'].filter(Boolean).join(' · ');
     }
     function validate(bank) {
         if (!bank || !Array.isArray(bank.questions) || !Array.isArray(bank.passages)) return false;
         const ids = new Set(), passages = new Set(bank.passages.map(p => p.id));
         const validQuestions = bank.questions.length > 0 && bank.questions.every(q => {
-            if (!q.id || ids.has(q.id)) return false;
+            if (!q || typeof q.id !== 'string' || !q.id || ids.has(q.id)) return false;
             ids.add(q.id);
             return subjects[q.subject] && typeof q.text === 'string' && q.text.length > 0 &&
+                (isOfficial(q) ? q.id.startsWith(officialCollection + '-') && q.subject !== 'lectura' &&
+                    Number.isInteger(q.source.chapterNumber) && q.source.chapterNumber > 0 &&
+                    typeof q.source.section === 'string' && q.source.section.length > 0 &&
+                    q.source.chapter === q.topic && Array.isArray(q.source.printedPages) && q.source.printedPages.every(n=>Number.isInteger(n)&&n>0) &&
+                    Array.isArray(q.source.pdfPages) && q.source.pdfPages.length === q.source.printedPages.length && q.source.pdfPages.every(n=>Number.isInteger(n)&&n>0) :
+                    !q.id.startsWith(officialCollection + '-')) &&
                 Array.isArray(q.options) && [4, 5].includes(q.options.length) && q.options.every(o => typeof o === 'string' && o.trim()) &&
                 new Set(q.options).size === q.options.length && Number.isInteger(q.correct) && q.correct >= 0 && q.correct < q.options.length &&
                 typeof q.explanation === 'string' && q.explanation.length > 0 && q.source?.pdfPages?.length > 0 &&
@@ -127,7 +141,7 @@
                 seen.add(p.id);
                 if (!Array.isArray(p.questionIds) || p.questionIds.length !== p.questionCount || new Set(p.questionIds).size !== p.questionCount || !Number.isFinite(p.minutes) || p.minutes < 5 || p.minutes > 180) return false;
                 const rows=p.questionIds.map(id=>lookup.get(id));
-                if (rows.some(q=>!q || q.difficulty !== p.difficulty || (p.subject !== 'integral' && q.subject !== p.subject))) return false;
+                if (rows.some(q=>!q || isOfficial(q) || q.difficulty !== p.difficulty || (p.subject !== 'integral' && q.subject !== p.subject))) return false;
                 if (p.subject === 'integral') {
                     if (p.questionCount !== 40 || Object.keys(subjects).some(s=>rows.filter(q=>q.subject===s).length!==10)) return false;
                 } else {
@@ -138,13 +152,13 @@
                 const reading=rows.filter(q=>q.subject==='lectura');
                 if (reading.some(q=>rows.filter(r=>r.passageId===q.passageId).length !== bank.questions.filter(r=>r.passageId===q.passageId).length)) return false;
             }
-            if (covered.size !== bank.questions.length || combinations.size !== 12) return false;
+            if (covered.size !== bank.questions.filter(q=>!isOfficial(q)).length || combinations.size !== 12) return false;
         }
         if (bank.introPaper) {
             const p = bank.introPaper, lookup = new Map(bank.questions.map(q => [q.id, q]));
             if (p.id !== 'inicial' || p.questionCount !== 40 || p.minutes !== 60 || !Array.isArray(p.questionIds) || p.questionIds.length !== 40 || new Set(p.questionIds).size !== 40) return false;
             const rows = p.questionIds.map(id => lookup.get(id));
-            if (rows.some(q => !q) || Object.keys(subjects).some(s => rows.filter(q => q.subject === s).length !== 10)) return false;
+            if (rows.some(q => !q || isOfficial(q)) || Object.keys(subjects).some(s => rows.filter(q => q.subject === s).length !== 10)) return false;
             if (rows.filter(q => q.subject === 'lectura').some(q => rows.filter(r => r.passageId === q.passageId).length !== bank.questions.filter(r => r.passageId === q.passageId).length)) return false;
         }
         if (!bank.papers) return true;
@@ -155,7 +169,7 @@
             paperIds.add(p.id);
             if (!Array.isArray(p.questionIds) || p.questionIds.length !== p.questionCount || new Set(p.questionIds).size !== p.questionCount || !Number.isFinite(p.minutes) || p.minutes <= 0 || p.minutes > 180) return false;
             const rows = p.questionIds.map(id => lookup.get(id));
-            if (rows.some(q => !q || (p.subject !== 'integral' && q.subject !== p.subject))) return false;
+            if (rows.some(q => !q || isOfficial(q) || (p.subject !== 'integral' && q.subject !== p.subject))) return false;
             if (p.subject === 'integral' && (p.questionCount !== 40 || Object.keys(subjects).some(s => rows.filter(q => q.subject === s).length !== 10))) return false;
             const reading = rows.filter(q => q.subject === 'lectura');
             return [...new Set(reading.map(q => q.passageId))].every(id => reading.filter(q => q.passageId === id).length === bank.questions.filter(q => q.passageId === id).length);
@@ -180,14 +194,14 @@
             return selected.questionIds.map(id => lookup.get(id));
         }
         if (area === 'integral') {
-            const questions = ['matematicas', 'fisica', 'quimica'].flatMap(s => shuffle(bank.questions.filter(q => q.subject === s), rng).slice(0, 10));
+            const questions = ['matematicas', 'fisica', 'quimica'].flatMap(s => shuffle(bank.questions.filter(q => q.subject === s && !isOfficial(q)), rng).slice(0, 10));
             const texts = shuffle(bank.passages, rng).slice(0, 2);
             return questions.concat(texts.flatMap(p => bank.questions.filter(q => q.passageId === p.id)));
         }
         if (area.startsWith('texto:')) return bank.questions.filter(q => q.passageId === area.slice(6));
         if (!subjects[area]) throw new Error('Materia desconocida');
         if (area === 'lectura') return shuffle(bank.passages, rng).flatMap(p => bank.questions.filter(q => q.passageId === p.id));
-        return shuffle(bank.questions.filter(q => q.subject === area), rng);
+        return shuffle(bank.questions.filter(q => q.subject === area && !isOfficial(q)), rng);
     }
     function grade(questions, answers) {
         const result = { correct: 0, wrong: 0, skipped: 0, total: questions.length, subjects: {} };
@@ -217,5 +231,5 @@
         return { ...saved, answers, helpOpen: Array.isArray(saved.helpOpen) ? [...new Set(saved.helpOpen.filter(id => saved.ids.includes(id)))] : [], flags: Array.isArray(saved.flags) ? saved.flags.filter(id => saved.ids.includes(id)) : [], index: Math.max(0, Math.min(saved.ids.length - 1, Number.isInteger(saved.index) ? saved.index : 0)), finished: saved.finished === true };
     }
     function paper(bank, area) { return ['inicial', 'simulacro:inicial'].includes(area) ? bank?.introPaper || null : bank?.papers?.find(p => 'simulacro:' + p.id === area) || bank?.levelPapers?.find(p => 'simulacro:' + p.id === area) || null; }
-    return { subjects, levels, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText, topics, topicFor, configurationPool, configurationCount, selectConfiguration, configurationLabel };
+    return { subjects, levels, officialCollection, officialTopicPrefix, isOfficial, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText, topics, topicFor, configurationPool, configurationCount, selectConfiguration, configurationLabel };
 });

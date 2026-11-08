@@ -1,9 +1,31 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const C=require('../suficiencia-core.js'),bank=require('../api/_sufficiency/bank.json');
 const report=require('../api/_sufficiency/beginner-checks.json');
+const official=require('../api/_sufficiency/umsa-2026.cjs');
 const fmt=n=>String(Number(Number(n).toFixed(6))).replace('.',',').replace('-','−');
 const set=a=>'{'+[...new Set(a)].sort((a,b)=>a-b).join(', ')+'}';
 const sum=a=>a.reduce((x,y)=>x+y,0),gcd=(a,b)=>b?gcd(b,a%b):a;
+
+test('UMSA chapters appear in order and select only their referenced questions, preserving existing attempts',()=>{
+ const extended={...bank,questions:bank.questions.concat(official)};
+ assert.ok(C.validate(extended));
+ for(const [subject,count,offset] of [['matematicas',10,9],['fisica',12,10],['quimica',12,12]]){
+  const topics=C.topics(extended,subject).filter(t=>t.chapter);
+  assert.deepEqual(topics.map(t=>t.chapter),Array.from({length:count},(_,i)=>i+1));
+  for(const t of topics){
+   const selected=C.configurationPool(extended,{subject,topic:t.key,level:'todos'});
+   assert.equal(selected.length,subject==='matematicas'&&t.chapter===5?5:1);
+   assert.ok(selected.every(q=>q.subject===subject&&q.source.chapterNumber===t.chapter&&q.source.pdfPages[0]-offset===q.source.printedPages[0]));
+  }
+  assert.deepEqual(C.selectConfiguration(extended,{subject,topic:'*',level:'todos'},7),C.selectConfiguration(bank,{subject,topic:'*',level:'todos'},7));
+ }
+ const config={subject:'matematicas',topic:'umsa-2026:5',level:'intermedio'};
+ const items=C.selectConfiguration(extended,config,23);
+ assert.equal(items.length,4);
+ assert.ok(C.restore({area:'config',configuration:config,owner:'fixture',version:bank.version,deadline:1,ids:items.map(q=>q.id)},extended,'fixture'));
+ const keys=official.filter(q=>q.subject==='matematicas'&&q.source.chapterNumber===5).map(q=>q.options[q.correct]);
+ assert.deepEqual(keys,['x² + 12x + 36','9y² − 24y + 16','16z² − 49','t³ + 9t² + 27t + 27','u − 8']);
+});
 
 test('all 180 introductory answers match independent arithmetic from their recorded inputs',()=>{
  assert.equal(report.checks.length,180);
@@ -96,7 +118,7 @@ test('bank-style selector requires subject and topic, filters difficulty and ret
  const root={innerHTML:'',classList:{contains:()=>false,add(){},remove(){}},addEventListener:(e,fn)=>{handlers[e]=fn;},replaceChildren(){this.innerHTML='';},scrollIntoView(){},querySelector:()=>null};
  const context={currentUser:{id:'levels-fixture'},document:{getElementById:()=>root,addEventListener(){}},location:{search:''},URLSearchParams,Uint32Array,AbortSignal,Date,
   crypto:{getRandomValues:a=>a},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},setInterval:()=>1,clearInterval(){},setTimeout(){},
-  showScreen:()=>true,ensureSupabaseSdk:async()=>{},fetch:async()=>{loads++;return{ok:true,json:async()=>structuredClone(bank)};}};
+  showScreen:()=>true,ensureSupabaseSdk:async()=>{},fetch:async url=>{assert.equal(url,'/api/suficiencia?collection=umsa-2026');loads++;return{ok:true,json:async()=>structuredClone({...bank,questions:bank.questions.concat(official)})};}};
  context.window={SufficiencyCore:C,CampusAccess:{isFree:()=>false},addEventListener(){}};
  context.getSupabase=()=>({auth:{getSession:async()=>({data:{session:{user:context.currentUser,access_token:'fixture'}}}),onAuthStateChange:()=>{}}});
  vm.createContext(context);vm.runInContext(fs.readFileSync(require.resolve('../suficiencia.js'),'utf8'),context);
@@ -108,7 +130,10 @@ test('bank-style selector requires subject and topic, filters difficulty and ret
  const change=(id,value)=>handlers.change({target:{id,value}});
  const click=(sf,extra={})=>handlers.click({target:{closest:()=>({disabled:false,dataset:{sf,...extra}})}});
  await click('run',{area:'config'});assert.equal(storage.size,0);
- change('sf-config-subject','matematicas');change('sf-config-topic','conjuntos');click('config-level',{level:'dificil'});
+ change('sf-config-subject','matematicas');
+ assert.match(root.innerHTML,/<optgroup label="Textos oficiales UMSA 2026">[^]*Tema 5 · Productos y cocientes notables/);
+ change('sf-config-topic','umsa-2026:5');assert.match(root.innerHTML,/se mostrarán <strong>5<\/strong> preguntas/);
+ change('sf-config-topic','conjuntos');click('config-level',{level:'dificil'});
  assert.match(root.innerHTML,/no hay preguntas con esta combinación/);
  change('sf-config-subject','quimica');assert.match(root.innerHTML,/seleccionar tema/);assert.match(root.innerHTML,/data-area="config"[^>]*disabled/);
  change('sf-config-topic','reacciones');assert.match(root.innerHTML,/data-level="dificil"[^>]*aria-pressed="true"/);assert.equal(loads,1);
