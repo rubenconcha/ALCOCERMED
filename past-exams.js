@@ -76,12 +76,12 @@
         $('past-detail-meta').textContent = exam.count + ' preguntas · ' + exam.duration + ' minutos';
         $('past-source-notes').textContent = sourceNotes(exam);
         $('past-source-notes').hidden = !sourceNotes(exam);
-        $('past-back').innerHTML = '<i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a los exámenes';
+        $('past-back-label').textContent = 'Volver a los exámenes';
         $('past-start').textContent = isLocked(exam) ? 'Desbloquear' : 'Comenzar examen';
     }
     function showList() {
         $('past-list').hidden = false; $('past-detail').hidden = true;
-        $('past-back').innerHTML = '<i class="fas fa-arrow-left" aria-hidden="true"></i> Volver';
+        $('past-back-label').textContent = 'Volver';
     }
     function showMode(enabled) {
         topicsMode = Boolean(enabled && breakdown);

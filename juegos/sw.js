@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-juegos-v110-campus';
+const CACHE_NAME = 'alcocermed-juegos-v111-campus';
 const ASSETS_TO_CACHE = [
     './game-rounds.js?v=1',
     './game-practice.js?v=2',
@@ -42,6 +42,7 @@ const ASSETS_TO_CACHE = [
     '././logo_app.png',
     './bg_music.mp4',
     '../device_guard.js?v=9',
+    '/device-limit.css?v=1',
     './tejido-nervioso-imagenes.js?v=5',
     './encefalo-native-data.js?v=1',
     './sentidos-imagenes.js?v=1',

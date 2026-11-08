@@ -32,17 +32,17 @@
     <link rel="stylesheet" href="flashcard-workspace.css?v=4">
     <link rel="stylesheet" href="flashcard-approved.css?v=4">
     <link rel="stylesheet" href="simulacro-library.css?v=5">
-    <link rel="stylesheet" href="past-exams.css?v=3">
+    <link rel="stylesheet" href="past-exams.css?v=4">
     <link rel="stylesheet" href="topic-evaluations.css?v=4">
     <link rel="stylesheet" href="campus-atlas.css?v=5">
     <link rel="stylesheet" href="summary-pdf-reader.css?v=2">
     <link rel="stylesheet" href="campus-study-resources.css?v=1">
-    <link rel="stylesheet" href="study-calendar.css?v=2">
+    <link rel="stylesheet" href="study-calendar.css?v=3">
 <link rel="stylesheet" href="/device-limit.css?v=1">
 <link rel="stylesheet" href="study-media.css?v=20261021-visual5c">
     <link rel="stylesheet" href="suficiencia.css?v=7">
     <link rel="stylesheet" href="student-results.css?v=1">
-    <link rel="stylesheet" href="campus-shell.css?v=1">
+    <link rel="stylesheet" href="campus-shell.css?v=2">
 </head>
 
 <body class="login-active campus-shell">
@@ -416,6 +416,7 @@
                 <button type="button" id="campus-fullscreen" class="campus-icon-button" aria-label="Pantalla completa" title="Pantalla completa"><svg aria-hidden="true" focusable="false"><use href="/assets/calendar-icons.svg#fullscreen"></use></svg></button>
                 <button type="button" id="campus-theme" class="campus-icon-button" aria-label="Activar modo oscuro" aria-pressed="false" title="Activar modo oscuro"><svg aria-hidden="true" focusable="false"><use href="/assets/calendar-icons.svg#moon"></use></svg></button>
                 <button type="button" id="campus-open-notices" class="campus-icon-button" aria-label="Avisos del campus" aria-haspopup="dialog" title="Avisos del campus"><svg aria-hidden="true" focusable="false"><use href="/assets/calendar-icons.svg#bell"></use></svg></button>
+                <a class="campus-icon-button campus-toolbar-support" href="https://wa.me/59173752688?text=Hola%2C%20tengo%20una%20consulta%20sobre%20AlcocerMed" target="_blank" rel="noopener noreferrer" aria-label="Hablar con AlcocerMed por WhatsApp" title="Ayuda por WhatsApp"><svg aria-hidden="true" focusable="false"><use href="/assets/calendar-icons.svg#whatsapp"></use></svg></a>
             </div>
         </header>
 
@@ -885,51 +886,72 @@
         </section>
 
         <section id="past-exams-screen" class="past-exams-screen hidden">
-            <div class="sim-header campus-page-head">
-                <button id="past-back" type="button" class="btn-back-game" onclick="pastExamsBack()"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver</button>
-                <div><span class="entrance-eyebrow">PREPARATORIA BEN CARSON · MEDICINA UMSS</span><h2 class="sim-title">Exámenes pasados</h2><p class="sim-subtitle">Resuelve un examen completo o practica preguntas originales por materia y tema.</p></div>
-            </div>
+            <header class="past-hero">
+                <div class="past-hero-copy">
+                    <button id="past-back" type="button" class="past-hero-back" onclick="pastExamsBack()"><span aria-hidden="true">←</span><span id="past-back-label">Volver</span></button>
+                    <p class="past-eyebrow">Preparatoria Ben Carson · Medicina UMSS</p>
+                    <h2>Exámenes pasados</h2>
+                    <p>Resuelve un examen completo o practica preguntas originales por materia y tema.</p>
+                </div>
+                <div class="past-hero-art" aria-hidden="true"><img src="/assets/study-art/past-exams.png" alt="" width="256" height="256" loading="lazy"></div>
+            </header>
             <p id="past-status" role="status" aria-live="polite"></p>
             <div id="past-list">
-                <div class="past-mode" role="group" aria-label="Vista de exámenes pasados">
-                    <button id="past-mode-exams" type="button" aria-pressed="true" aria-controls="past-exam-cards">Exámenes completos</button>
-                    <button id="past-mode-topics" type="button" aria-pressed="false" aria-controls="past-breakdown">Desglose por temas</button>
+                <div class="past-list-bar">
+                    <div class="past-mode" role="group" aria-label="Vista de exámenes pasados">
+                        <button id="past-mode-exams" type="button" aria-pressed="true" aria-controls="past-exam-cards"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg> Exámenes completos</button>
+                        <button id="past-mode-topics" type="button" aria-pressed="false" aria-controls="past-breakdown"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#map"></use></svg> Desglose por temas</button>
+                    </div>
+                    <button type="button" class="past-filter-toggle" id="past-toggle-filters" aria-expanded="true" aria-controls="past-filters">Ocultar filtros</button>
+                    <span id="past-count" aria-live="polite"></span>
                 </div>
                 <div id="past-filters" class="past-filters">
-                    <label for="past-year">Gestión<select id="past-year"><option value="">Todas las gestiones</option></select></label>
-                    <label for="past-type">Examen<select id="past-type"><option value="">Todos los exámenes</option><option>Primer parcial</option><option>Segundo parcial</option><option>Examen final</option></select></label>
-                    <div class="past-breakdown-pickers" id="past-breakdown-pickers" hidden>
-                        <details class="past-picker" id="past-subject-picker">
-                            <summary><span>Materias</span><span id="past-subject-count" aria-hidden="true"></span></summary>
-                            <div class="past-picker-panel">
-                                <div id="past-subject-options" class="past-picker-options"></div>
-                                <div class="past-picker-actions">
-                                    <button type="button" id="past-subject-apply" class="past-action">Aplicar</button>
-                                    <button type="button" id="past-subject-clear" class="past-text-button">Limpiar</button>
+                    <div class="past-filter-fields">
+                        <label for="past-year">Gestión<select id="past-year"><option value="">Todas las gestiones</option></select></label>
+                        <label for="past-type">Examen<select id="past-type"><option value="">Todos los exámenes</option><option>Primer parcial</option><option>Segundo parcial</option><option>Examen final</option></select></label>
+                        <div class="past-breakdown-pickers" id="past-breakdown-pickers" hidden>
+                            <details class="past-picker" id="past-subject-picker">
+                                <summary>
+                                    <span class="past-picker-name">Materias</span>
+                                    <span class="past-picker-value" id="past-subject-value">Todas las materias</span>
+                                </summary>
+                                <div class="past-picker-panel">
+                                    <div id="past-subject-options" class="past-picker-options"></div>
+                                    <div class="past-picker-actions">
+                                        <button type="button" id="past-subject-apply" class="past-action">Aplicar</button>
+                                        <button type="button" id="past-subject-clear" class="past-text-button">Limpiar</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </details>
-                        <details class="past-picker" id="past-topic-picker">
-                            <summary><span>Temas</span><span id="past-topic-count" aria-hidden="true"></span></summary>
-                            <div class="past-picker-panel">
-                                <input id="past-topic-search" type="search" placeholder="Buscar un tema" aria-label="Buscar un tema" autocomplete="off">
-                                <div id="past-topic-options" class="past-picker-options"></div>
-                                <div class="past-picker-actions">
-                                    <button type="button" id="past-topic-apply" class="past-action">Aplicar</button>
-                                    <button type="button" id="past-topic-clear" class="past-text-button">Limpiar</button>
+                            </details>
+                            <details class="past-picker" id="past-topic-picker">
+                                <summary>
+                                    <span class="past-picker-name">Temas</span>
+                                    <span class="past-picker-value" id="past-topic-value">Todos los temas</span>
+                                </summary>
+                                <div class="past-picker-panel">
+                                    <input id="past-topic-search" type="search" placeholder="Buscar un tema" aria-label="Buscar un tema" autocomplete="off">
+                                    <div id="past-topic-options" class="past-picker-options"></div>
+                                    <div class="past-picker-actions">
+                                        <button type="button" id="past-topic-apply" class="past-action">Aplicar</button>
+                                        <button type="button" id="past-topic-clear" class="past-text-button">Limpiar</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </details>
+                            </details>
+                        </div>
                     </div>
-                    <span id="past-count" aria-live="polite"></span>
                     <form id="past-question-filters" class="past-question-filters" hidden>
                         <label for="past-question-search">Buscar en las preguntas</label>
                         <div class="past-query-row">
-                            <input id="past-question-search" type="search" maxlength="120" placeholder="Ej. sistema óseo, membrana…" autocomplete="off">
+                            <div class="past-query-input">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg>
+                                <input id="past-question-search" type="search" maxlength="120" placeholder="Ej. sistema óseo, membrana…" autocomplete="off">
+                            </div>
                             <button type="submit" class="past-action">Buscar</button>
+                        </div>
+                        <div class="past-filter-footer">
+                            <label class="past-check-line"><input type="checkbox" id="past-unconfirmed"> Solo preguntas sin tema confirmado</label>
                             <button type="button" id="past-reset-filters" class="past-text-button">Limpiar filtros</button>
                         </div>
-                        <label class="past-check-line"><input type="checkbox" id="past-unconfirmed"> Ver solo preguntas sin tema confirmado</label>
                     </form>
                 </div>
                 <div id="past-exam-cards">
@@ -950,18 +972,31 @@
                             <p class="past-question-stem" id="past-question-stem"></p>
                             <form id="past-answer-form">
                                 <fieldset id="past-answer-options"><legend>Elige una alternativa</legend></fieldset>
-                                <button type="submit" class="past-action" id="past-check-answer" disabled>Comprobar respuesta</button>
+                                <div id="past-answer-feedback" class="past-answer-feedback" role="status" hidden></div>
+                                <div class="past-answer-actions">
+                                    <button type="submit" class="past-action" id="past-check-answer" disabled>Comprobar respuesta</button>
+                                    <button type="button" class="past-action" id="past-after-answer-next" hidden>Siguiente pregunta →</button>
+                                </div>
                             </form>
-                            <p id="past-answer-feedback" class="past-answer-feedback" role="status" hidden></p>
                             <details class="past-reference" id="past-bibliography">
-                                <summary>Bibliografía de consulta</summary>
+                                <summary><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#summary"></use></svg> Bibliografía de consulta</summary>
                                 <div id="past-bibliography-copy"></div>
                             </details>
                         </div>
                         <aside class="past-question-navigation" aria-label="Navegación del desglose">
                             <details id="past-question-index" open>
-                                <summary>Preguntas <span id="past-question-position"></span></summary>
+                                <summary>
+                                    <span class="past-map-icon"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#progress"></use></svg></span>
+                                    <span class="past-map-heading"><strong>Mapa de preguntas</strong><span id="past-question-position"></span></span>
+                                </summary>
+                                <div class="past-map-progress">
+                                    <div><label id="past-progress-label" for="past-progress">Revisadas en esta página</label><span id="past-progress-count"></span></div>
+                                    <progress id="past-progress" max="1" value="0" aria-labelledby="past-progress-label"></progress>
+                                </div>
                                 <div id="past-question-numbers" class="past-question-numbers"></div>
+                                <ul class="past-map-legend">
+                                    <li class="is-current">Actual</li><li class="is-correct">Correcta</li><li class="is-incorrect">Incorrecta</li><li>Pendiente</li>
+                                </ul>
                             </details>
                             <div class="past-question-arrows">
                                 <button type="button" id="past-question-prev" class="past-text-button">← Anterior</button>
@@ -1390,15 +1425,15 @@
             </div>
             <section id="calendar-day" class="calendar-day" aria-labelledby="calendar-activity-title" hidden>
                 <header class="calendar-day-header">
-                    <button id="calendar-open-plan" class="calendar-plan-trigger" type="button" aria-haspopup="dialog" title="Abrir cronograma del día">
-                        <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#panel"></use></svg>
-                        <span>Cronograma</span>
-                    </button>
                     <div class="calendar-day-titles">
                         <p id="calendar-day-label"></p>
                         <h2 id="calendar-activity-title"></h2>
                     </div>
-                    <div id="calendar-rating" class="calendar-rating" aria-label="Valora esta actividad"></div>
+                    <button id="calendar-open-plan" class="calendar-plan-trigger" type="button" aria-haspopup="dialog" title="Abrir cronograma del día">
+                        <svg aria-hidden="true"><use href="/assets/calendar-icons.svg#panel"></use></svg>
+                        <span>Cronograma</span>
+                    </button>
+                    <div id="calendar-rating" class="calendar-rating" role="group" aria-label="Valora esta actividad" hidden></div>
                 </header>
                 <div class="calendar-day-body">
                     <button id="calendar-back" class="calendar-outline" type="button">
@@ -1743,8 +1778,8 @@
     <script src="study-calendar.js?v=2"></script>
     <script src="campus-shell.js?v=1"></script>
     <script src="study-summaries.js?v=20261021-visual5b"></script>
-    <script src="past-exam-breakdown.js?v=1"></script>
-    <script src="past-exams.js?v=7"></script>
+    <script src="past-exam-breakdown.js?v=2"></script>
+    <script src="past-exams.js?v=8"></script>
     <script src="topic-evaluations.js?v=20261107-suficiencia"></script>
     <script src="campus-atlas.js?v=12"></script>
     <script src="suficiencia-core.js?v=9"></script>

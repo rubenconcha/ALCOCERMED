@@ -18,10 +18,9 @@ window.createPastExamBreakdown = function (request, scope) {
         return result;
     }
 
-    function selectedCount(id, values) {
-        const count = $(id);
-        count.textContent = values.size || '';
-        count.hidden = !values.size;
+    function pickerLabel(id, values, items, fallback, plural) {
+        const item = items?.find(entry => values.has(entry.id));
+        $(id).textContent = values.size > 1 ? values.size + ' ' + plural : item?.label || item?.title || fallback;
     }
 
     function option(item, choices) {
@@ -59,8 +58,8 @@ window.createPastExamBreakdown = function (request, scope) {
     }
 
     function updatePickerLabels() {
-        selectedCount('past-subject-count', subjects);
-        selectedCount('past-topic-count', topics);
+        pickerLabel('past-subject-value', subjects, data?.subjects, 'Todas las materias', 'materias');
+        pickerLabel('past-topic-value', topics, data?.topics, 'Todos los temas', 'temas');
         if (subjectPicker.open) renderSubjects();
         if (topicPicker.open) renderTopics();
     }
@@ -89,8 +88,12 @@ window.createPastExamBreakdown = function (request, scope) {
         const accepted = simAcceptedAnswerIndices(question);
         const ordinal = (data.page - 1) * data.pageSize + cursor + 1;
         const checked = Boolean(state?.checked);
-        const meta = [row.type + ' · ' + row.year, subject?.label, topic?.title || 'Sin tema confirmado'].filter(Boolean);
-        $('past-question-meta').replaceChildren(...meta.map(text => node('span', text)));
+        const meta = [
+            node('span', row.type + ' · ' + row.year, 'past-meta-source'),
+            node('span', topic?.title || 'Sin tema confirmado', 'past-meta-topic')
+        ];
+        if (subject) meta.splice(1, 0, node('span', subject.label, 'past-meta-subject'));
+        $('past-question-meta').replaceChildren(...meta);
         $('past-question-title').textContent = 'Pregunta original ' + question.numero_original;
         $('past-question-stem').textContent = question.pregunta;
         const options = $('past-answer-options');
@@ -113,19 +116,26 @@ window.createPastExamBreakdown = function (request, scope) {
                 if (accepted.includes(position)) label.classList.add('is-correct');
                 else if (radio.checked) label.classList.add('is-incorrect');
             }
-            label.append(radio, node('b', letter), node('span', content));
+            label.append(radio, node('span', letter, 'past-option-letter'), node('span', content));
             options.append(label);
         }
         const check = $('past-check-answer');
         check.textContent = checked ? 'Volver a responder' : 'Comprobar respuesta';
+        check.classList.toggle('is-retry', checked);
         check.disabled = !accepted.length || state?.selected == null;
+        $('past-after-answer-next').hidden = !checked || ordinal >= data.count;
         const feedback = $('past-answer-feedback');
         feedback.hidden = !checked && Boolean(accepted.length);
-        feedback.classList.toggle('is-correct', checked && accepted.includes(state.selected));
+        const correct = checked && accepted.includes(state.selected);
+        feedback.classList.toggle('is-correct', correct);
+        feedback.classList.toggle('is-incorrect', checked && !correct);
         const keys = accepted.map(i => 'ABCDE'[i]).filter(Boolean).join(', ');
-        const result = checked ? (accepted.includes(state.selected) ? 'Respuesta correcta. ' : 'Revisa tu respuesta. ') : '';
-        feedback.textContent = accepted.length ? result + 'Patrón original · ' + keys
-            : 'Esta pregunta no tiene una clave utilizable en el patrón.';
+        if (accepted.length) {
+            const result = correct ? 'Respuesta correcta.' : 'Revisa tu respuesta.';
+            feedback.replaceChildren(node('strong', result), node('span', 'Patrón original · ' + keys));
+        } else {
+            feedback.textContent = 'Esta pregunta no tiene una clave utilizable en el patrón.';
+        }
         reference(topic, topic?.bibliography);
         $('past-bibliography').open = false;
         $('past-question-position').textContent = ordinal + ' de ' + data.count;
@@ -135,18 +145,28 @@ window.createPastExamBreakdown = function (request, scope) {
         $('past-page-next').disabled = data.page >= data.pages;
         $('past-question-pages').hidden = data.pages <= 1;
         $('past-page-label').textContent = 'Página ' + data.page + ' de ' + data.pages;
+        let reviewed = 0;
         $('past-question-numbers').replaceChildren(...data.questions.map((item, i) => {
             const number = node('button', String((data.page - 1) * data.pageSize + i + 1));
             number.type = 'button';
-            number.setAttribute('aria-label', 'Pregunta ' + number.textContent + ' de los resultados. Original ' +
-                item.question.numero_original + ' · ' + item.year + ' · ' + item.type);
-            if (i === cursor) number.setAttribute('aria-current', 'true');
             const attempt = answers.get(item.question.id);
-            if (attempt?.checked) number.classList.add(simAcceptedAnswerIndices(item.question).includes(attempt.selected)
-                ? 'is-correct' : 'is-incorrect');
+            let status = 'Pendiente';
+            if (attempt?.checked) {
+                reviewed += 1;
+                const correct = simAcceptedAnswerIndices(item.question).includes(attempt.selected);
+                number.classList.add(correct ? 'is-correct' : 'is-incorrect');
+                status = correct ? 'Correcta' : 'Incorrecta';
+            }
+            number.setAttribute('aria-label', 'Pregunta ' + number.textContent + ' de los resultados. Original ' +
+                item.question.numero_original + ' · ' + item.year + ' · ' + item.type + ' · ' + status);
+            if (i === cursor) number.setAttribute('aria-current', 'true');
             number.onclick = () => { cursor = i; renderQuestion(true); };
             return number;
         }));
+        $('past-progress').max = data.questions.length;
+        $('past-progress').value = reviewed;
+        $('past-progress-label').textContent = data.pages > 1 ? 'Revisadas en esta página' : 'Preguntas revisadas';
+        $('past-progress-count').textContent = reviewed + ' / ' + data.questions.length;
         if (focus) $('past-question-title').focus();
     }
 
@@ -281,9 +301,16 @@ window.createPastExamBreakdown = function (request, scope) {
     };
     $('past-question-prev').onclick = () => step(-1);
     $('past-question-next').onclick = () => step(1);
+    $('past-after-answer-next').onclick = () => step(1);
     $('past-page-prev').onclick = () => load(data.page - 1, false, true);
     $('past-page-next').onclick = () => load(data.page + 1, false, true);
-    $('past-question-index').open = !matchMedia('(max-width: 768px)').matches;
+    $('past-question-index').open = !matchMedia('(max-width: 950px)').matches;
+    $('past-toggle-filters').onclick = event => {
+        const button = event.currentTarget;
+        const open = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!open));
+        button.textContent = open ? 'Mostrar filtros' : 'Ocultar filtros';
+    };
     document.addEventListener('click', event => {
         if (event.target.closest('.past-picker')) return;
         subjectPicker.open = false;

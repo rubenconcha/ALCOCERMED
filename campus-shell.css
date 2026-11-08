@@ -214,8 +214,14 @@
     outline-offset: 2px;
 }
 .campus-shell #install-pwa-btn:not(.is-hidden) { display: grid }
+.campus-shell .campus-toolbar-support { display: none }
 .campus-shell .support-float svg { width: 26px; height: 26px }
 
+@media (max-width: 950px) {
+    .campus-shell:not(.login-active) .support-float { display: none }
+    .campus-shell .campus-toolbar-support { display: grid; color: #117143 }
+    .campus-shell.campus-dark .campus-toolbar-support { color: #82d7a9 }
+}
 @media (min-width: 769px) {
     .campus-shell.campus-menu-pinned { --shell-rail: 280px }
     .campus-shell #sidebar .sidebar-toggle-btn { display: grid; place-items: center; margin-left: auto }
