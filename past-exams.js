@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-    let catalogPromise, selected, loading = false, patternUrl, freeYear;
+    let catalogPromise, selected, loading = false, patternUrl, freeYear, topicsMode = false, opening = false;
     const examCache = new Map();
     const $ = id => document.getElementById(id);
     const readableError = () => 'No se pudo cargar el examen. Intenta de nuevo.';
@@ -12,18 +12,22 @@
             .catch(error => { catalogPromise = null; throw error; });
         return catalogPromise;
     }
-    async function requestExam(id, pattern = false) {
+    async function requestExam(id, pattern = false, filters = {}, signal) {
         const { data } = await getSupabase().auth.getSession();
         const token = data?.session?.access_token;
         if (!token) throw new Error('Vuelve a iniciar sesión para abrir el examen.');
-        const response = await fetch('/api/past-exam?id=' + encodeURIComponent(id) + (pattern ? '&pattern=1' : ''), {
-            headers: { Authorization: 'Bearer ' + token }, cache: 'no-store'
+        const params = new URLSearchParams({ id, ...filters });
+        if (pattern) params.set('pattern', '1');
+        const response = await fetch('/api/past-exam?' + params, {
+            headers: { Authorization: 'Bearer ' + token }, cache: 'no-store', signal
         });
         if (response.status === 403) { CampusAccess.unlock(); return null; }
         if (response.status === 401) throw new Error('Tu sesión venció. Vuelve a iniciar sesión.');
         if (!response.ok) throw new Error(readableError());
         return pattern ? response.blob() : response.json();
     }
+    const scope = () => ({ year: $('past-year').value, type: $('past-type').value });
+    const breakdown = window.createPastExamBreakdown?.((filters, signal) => requestExam('desglose', false, filters, signal), scope);
     const isLocked = exam => CampusAccess.isFree() && exam.year !== freeYear;
     function sourceNotes(exam) {
         const notes = [];
@@ -40,7 +44,8 @@
     }
     async function renderList() {
         const data = await catalog();
-        const year = $('past-year').value, type = $('past-type').value;
+        if (topicsMode) return;
+        const { year, type } = scope();
         const exams = data.exams.filter(exam => (!year || exam.year === year) && (!type || exam.type === type));
         const root = $('past-grid'); root.replaceChildren();
         $('past-count').textContent = exams.length + (exams.length === 1 ? ' examen' : ' exámenes');
@@ -74,18 +79,42 @@
         $('past-back').innerHTML = '<i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a los exámenes';
         $('past-start').textContent = isLocked(exam) ? 'Desbloquear' : 'Comenzar examen';
     }
-    window.openPastExams = async function () {
+    function showList() {
+        $('past-list').hidden = false; $('past-detail').hidden = true;
+        $('past-back').innerHTML = '<i class="fas fa-arrow-left" aria-hidden="true"></i> Volver';
+    }
+    function showMode(enabled) {
+        topicsMode = Boolean(enabled && breakdown);
+        $('past-mode-exams').setAttribute('aria-pressed', String(!topicsMode));
+        $('past-mode-topics').setAttribute('aria-pressed', String(topicsMode));
+        $('past-exam-cards').hidden = topicsMode;
+        $('past-breakdown-pickers').hidden = !topicsMode;
+        $('past-question-filters').hidden = !topicsMode;
+        $('past-breakdown').hidden = !topicsMode;
+        breakdown?.show(topicsMode);
+    }
+    function showFullExams() {
+        $('past-status').textContent = '';
+        renderList().catch(error => { $('past-status').textContent = error.message; });
+    }
+    window.openPastExams = async function (openTopics) {
         if (simState.timerInterval) {
             if (!confirm('Hay un examen en curso. ¿Deseas salir y descartar las respuestas?')) return;
             clearInterval(simState.timerInterval); simState.timerInterval = null;
         }
         selected = null;
-        showScreen('past-exams-screen');
-        $('past-list').hidden = false; $('past-detail').hidden = true;
-        $('past-back').innerHTML = '<i class="fas fa-arrow-left" aria-hidden="true"></i> Volver';
+        opening = true;
+        const allowed = showScreen('past-exams-screen');
+        opening = false;
+        if (allowed === false) return;
+        breakdown?.show(false);
+        const account = currentUser?.id;
+        showList();
         $('past-status').textContent = 'Cargando exámenes…';
         try {
             const data = await catalog();
+            if (currentUser?.id !== account ||
+                (typeof currentCampusScreen !== 'undefined' && currentCampusScreen !== 'past-exams-screen')) return;
             if ($('past-year').options.length === 1) [...new Set(data.exams.map(exam => exam.year))].reverse().forEach(year => {
                 const option = document.createElement('option'); option.value = year; option.textContent = year; $('past-year').append(option);
             });
@@ -93,7 +122,8 @@
                 const filters = JSON.parse(sessionStorage.getItem('past-exam-filters:' + (currentUser?.id || '')) || 'null');
                 if (filters) { $('past-year').value = filters.year; $('past-type').value = filters.type; }
             } catch (_) { /* Filters remain usable when storage is unavailable. */ }
-            await renderList(); $('past-status').textContent = '';
+            showMode(typeof openTopics === 'boolean' ? openTopics : topicsMode);
+            if (!topicsMode) { await renderList(); $('past-status').textContent = ''; }
         } catch (error) { $('past-status').textContent = error.message; }
     };
     window.pastExamsBack = function () {
@@ -153,11 +183,41 @@
         $('past-result-tools').hidden = !historical;
         if (historical) $('past-result-title').textContent = simState.selectedExamen;
     };
+    function rememberScope() {
+        try { sessionStorage.setItem('past-exam-filters:' + (currentUser?.id || ''), JSON.stringify(scope())); } catch (_) { /* Optional filter memory. */ }
+    }
     function filterChanged() {
-        try { sessionStorage.setItem('past-exam-filters:' + (currentUser?.id || ''), JSON.stringify({ year: $('past-year').value, type: $('past-type').value })); } catch (_) { /* Optional filter memory. */ }
-        renderList().catch(error => { $('past-status').textContent = error.message; });
+        rememberScope();
+        if (topicsMode) breakdown.refresh();
+        else showFullExams();
     }
     $('past-year').addEventListener('change', filterChanged);
     $('past-type').addEventListener('change', filterChanged);
-    window.addEventListener('campus-access-change', () => { examCache.clear(); releasePattern(); });
+    $('past-mode-exams').addEventListener('click', () => { showMode(false); showFullExams(); });
+    $('past-mode-topics').addEventListener('click', () => showMode(true));
+    $('past-topics-from-exam').hidden = !breakdown;
+    $('past-topics-from-exam').addEventListener('click', () => {
+        if (!selected || !breakdown) return;
+        $('past-year').value = selected.year;
+        $('past-type').value = selected.type;
+        selected = null;
+        rememberScope();
+        breakdown.resetFilters();
+        showList();
+        showMode(true);
+        $('past-mode-topics').focus();
+    });
+    function clear() {
+        examCache.clear();
+        releasePattern();
+        breakdown?.clear();
+        showMode(false);
+    }
+    window.CampusPastExams = {
+        clear,
+        screenChanged(visible) {
+            if (!opening) breakdown?.show(visible && topicsMode);
+        },
+    };
+    window.addEventListener('campus-access-change', clear);
 })();

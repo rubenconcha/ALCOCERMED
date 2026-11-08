@@ -163,6 +163,7 @@ function showLoginScreen() {
     window.SufficiencyPractice?.reset();
     window.CampusCalendar?.setUser();
     window.CampusShell?.setUser();
+    window.CampusPastExams?.clear();
     closeMobileSidebar();
     window.CampusShell?.syncMenu();
     clearBancoSuficiencia();
@@ -263,6 +264,7 @@ function enterVerifiedApp(user) {
     else if (section === 'textos-oficiales') window.OfficialTexts?.open();
     else if (section === 'practica-suficiencia') showScreen('sufficiency-practice-screen');
     else if (section === 'calendario') window.CampusCalendar?.open();
+    else if (section === 'examenes-pasados') window.openPastExams(campusParams.get('vista') === 'temas');
     else if (section === 'contacto') showScreen('campus-contact-screen');
     else if (campusParams.get('simulacro') && window.openRequestedSimulation) window.openRequestedSimulation().catch(function(error) { showToast(error.message, 'error'); });
     else restoreCampusAfterPlans();
@@ -515,6 +517,7 @@ function showScreen(screenId, fromBack) {
     });
     window.CampusCalendar?.screenChanged(screenId === 'study-calendar-screen');
     window.CampusShell?.screenChanged(screenId);
+    window.CampusPastExams?.screenChanged(screenId === 'past-exams-screen');
     if (screenId === 'study-area') refreshFlashcardReviews();
     return true;
 }

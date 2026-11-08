@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 const catalog = require('../content/past-exams/catalog.json');
+const thematicIndex = require('../api/_past_exams/topic-index.json');
 
 test('los 15 exámenes conservan gestión, numeración, preguntas y patrones completos disponibles', () => {
     assert.equal(catalog.exams.length, 15);
@@ -141,4 +142,79 @@ test('la cuenta gratuita ve tres exámenes abiertos de la última gestión y doc
     free = false;
     await context.window.openPastExams();
     assert.equal(get('past-grid').children.filter(card => card.className.includes('past-card-locked')).length, 0);
+});
+
+test('el índice temático se alinea con la numeración histórica y las fuentes oficiales', () => {
+    let tagged = 0;
+    for (const exam of catalog.exams) {
+        const indexed = thematicIndex.exams[exam.id];
+        const paper = require('../api/_past_exams/' + exam.id + '.json');
+        assert.equal(indexed.length, 100);
+        assert.equal(indexed.filter(Boolean).length, paper.questions.length);
+        for (const q of paper.questions) {
+            const key = indexed[q.numero_original - 1];
+            if (thematicIndex.topics[key]) tagged++;
+            else assert.ok(thematicIndex.sources[key], q.id + ' debe mantener su materia');
+        }
+        for (const n of [...exam.missingNumbers, ...exam.excludedQuestions.map(q => q.numero_original)]) {
+            assert.equal(indexed[n - 1], null);
+        }
+    }
+    assert.equal(tagged, 1424);
+    for (const topic of Object.values(thematicIndex.topics)) {
+        assert.ok(thematicIndex.sources[topic.subject]);
+        assert.ok(thematicIndex.sources[topic.source || topic.subject]);
+        assert.ok(topic.section && topic.title && topic.pdfPage > 0);
+        assert.ok(topic.printedPage === null || topic.printedPage > 0);
+    }
+    assert.equal(thematicIndex.exams['2025-2026-1'][0], 'morfo-10');
+    assert.equal(thematicIndex.exams['2025-2026-3'][90], 'salud-16');
+    assert.equal(thematicIndex.exams['2021-1'][89], 'salud');
+    assert.equal(thematicIndex.topics['morfo-08'].pdfPage, 261);
+    assert.equal(thematicIndex.topics['morfo-08'].printedPage, 233);
+});
+
+test('el desglose aplica filtros, conserva las claves originales y protege las preguntas de otras gestiones', async () => {
+    const handler = require('../api/past-exam.js');
+    const originalFetch = global.fetch;
+    let premium = false;
+    async function request(query, token = 'test') {
+        const res = { headers: {}, setHeader(key, val) { this.headers[key] = val; },
+            status(code) { this.code = code; return this; }, end(bytes) { this.body = bytes && JSON.parse(bytes); } };
+        await handler({ method: 'GET', query: { id: 'desglose', ...query },
+            headers: token ? { authorization: 'Bearer ' + token } : {} }, res);
+        assert.equal(res.headers['Cache-Control'], 'private, no-store');
+        return res;
+    }
+    try {
+        global.fetch = async () => ({ ok: true, json: async () => ({ ready: true, premium }) });
+        assert.equal((await request({}, '')).code, 401);
+        const locked = (await request({ year: '2021', all: '1' })).body;
+        assert.equal(locked.locked, true);
+        assert.deepEqual(locked.questions, []);
+        assert.deepEqual(locked.topics, []);
+        const free = (await request({ all: '1', page: '2' })).body;
+        assert.equal(free.available, 298);
+        assert.equal(free.page, 2);
+        assert.equal(free.questions.length, 24);
+        assert.ok(free.questions.every(row => row.year === catalog.freeYear));
+        const filtered = (await request({ year: catalog.freeYear, type: 'Primer parcial', subjects: 'morfo',
+            topics: 'morfo-10', search: 'músculo geniogloso' })).body;
+        assert.equal(filtered.count, 1);
+        const original = require('../api/_past_exams/2025-2026-1.json').questions[0];
+        assert.deepEqual(filtered.questions[0].question, original);
+        assert.equal(filtered.questions[0].topic, 'morfo-10');
+        premium = true;
+        const available = (await request({})).body;
+        assert.equal(available.available, 1491);
+        assert.equal(available.requested, false);
+        const unconfirmed = (await request({ unconfirmed: '1', page: '999' })).body;
+        assert.equal(unconfirmed.count, 67);
+        assert.equal(unconfirmed.page, unconfirmed.pages);
+        assert.ok(unconfirmed.questions.every(row => !row.topic));
+        const cross = (await request({ subjects: 'biologia', topics: 'biologia-19' })).body;
+        assert.ok(cross.count > 10);
+        assert.ok(cross.questions.every(row => row.subject === 'biologia' && row.topic === 'biologia-19'));
+        assert.match(cross.topics.find(t => t.id === 'biologia-19').bibliography.credit, /Saladin/);
+    } finally { global.fetch = originalFetch; }
 });

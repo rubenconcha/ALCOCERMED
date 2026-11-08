@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v151-campus';
+const CACHE_NAME = 'alcocermed-main-v152-desglose';
 const APP_SHELL = [
     './student-results.js?v=2',
     './student-results.css?v=1',
@@ -42,7 +42,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=4',
     './assets/fonts/outfit-900.ttf',
     './flashcard-workspace.js?v=6',
-    './script.js?v=20261108-campus',
+    './script.js?v=20261108-desglose',
     './topic-evaluations.js?v=20261107-suficiencia',
     './topic-evaluations.css?v=4',
     './recuperar.html',
@@ -94,8 +94,9 @@ const APP_SHELL = [
     './official-texts.js?v=1',
     './sufficiency-practice-content.js?v=1',
     './sufficiency-practice.js?v=1',
-    './past-exams.js?v=6',
-    './past-exams.css?v=2',
+    './past-exams.js?v=7',
+    './past-exam-breakdown.js?v=1',
+    './past-exams.css?v=3',
 ];
 
 self.addEventListener('install', function (event) {
