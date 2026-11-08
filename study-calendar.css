@@ -150,7 +150,10 @@
 .study-calendar [data-kind="study"] { --kind-color:#f3a31b; --kind-ink:#7c4b00; --kind-soft:#fff3da; --kind-month:#f4a019 }
 .study-calendar [data-kind="exam"] { --kind-color:#d74c50; --kind-ink:#9e2132; --kind-soft:#ffe5e6; --kind-month:#d74b4a }
 .study-calendar [data-kind="rest"] { --kind-color:#27aa5c; --kind-ink:#176140; --kind-soft:#e2faec; --kind-month:#27aa5c }
-.study-calendar [data-kind="practice"] { --kind-color:#4c57b4; --kind-ink:#393783; --kind-soft:#ececff; --kind-month:#8950fc }
+.study-calendar [data-kind="practice"],
+.study-calendar [data-kind="study"][data-subject="biologia-celular"] {
+    --kind-color:#4c57b4; --kind-ink:#393783; --kind-soft:#ececff; --kind-month:#8950fc;
+}
 .study-calendar [data-kind="free"] { --kind-color:#3786d2; --kind-ink:#245d89; --kind-soft:#e9f2fb; --kind-month:#3788d8 }
 .campus-dark .study-calendar [data-kind] {
     --kind-soft:color-mix(in srgb,var(--kind-color) 18%,var(--cal-panel)); --kind-ink:var(--cal-ink);
@@ -178,6 +181,12 @@
 .calendar-plan-empty { padding:8px 0; color:var(--cal-muted); font-size:12px }
 
 @media (min-width:769px) {
+    .campus-shell:has(.study-calendar:not(.hidden) #calendar-overview:not([hidden]) .fc-dayGridMonth-view) { --shell-top:54px }
+    .campus-shell .calendar-overview:has(.fc-dayGridMonth-view) { padding-inline-end:14px }
+    #calendar-board:has(.fc-dayGridMonth-view) .fc-toolbar { margin-bottom:21px }
+    #calendar-board .fc-daygrid-more-link {
+        margin-inline:4px; padding-block:0; color:var(--cal-action); font-size:11px; line-height:14px;
+    }
     .calendar-sheet { padding-bottom:10px }
     .calendar-sample { margin-top:4px }
     .calendar-sample .calendar-sample-badge { padding-block:0 }

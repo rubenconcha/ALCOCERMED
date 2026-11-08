@@ -110,18 +110,27 @@
         return date.toISOString().slice(0, 10);
     }
 
+    function setActivityStyle(node, kind, readingSlug) {
+        node.dataset.kind = kind;
+        if (readingSlug) node.dataset.subject = readingSlug;
+    }
+
     function getEvents(info, success) {
         const start = currentDateKey(info.start);
         const end = currentDateKey(info.end);
         const events = [];
         for (const [date, items] of state.plan) {
             if (date < start || date >= end) continue;
+            const kindsShown = new Set();
             for (const item of items) {
                 if (!item.show) continue;
+                // Give each activity type a turn in the two monthly preview slots.
+                const monthPriority = kindsShown.has(item.kind) ? 1 : 0;
+                kindsShown.add(item.kind);
                 events.push({
                     id: item.id, title: item.title, start: date + 'T' + item.start,
                     end: item.end ? date + 'T' + item.end : undefined,
-                    extendedProps: { date, kind: item.kind },
+                    extendedProps: { date, kind: item.kind, subject: item.reading?.slug, monthPriority },
                 });
             }
         }
@@ -140,7 +149,7 @@
     }
 
     function calendarHeight() {
-        return small.matches ? 'auto' : 'max(790px, calc(100dvh - var(--shell-top, 63px) - 60px))';
+        return small.matches ? 'auto' : 'max(785px, calc(100dvh - var(--shell-top, 63px) - 74px))';
     }
 
     async function downloadProgram() {
@@ -189,14 +198,18 @@
                     height: calendarHeight(), fixedWeekCount: true, dayMaxEvents: 2,
                     eventDisplay: 'block', displayEventTime: false,
                     eventTimeFormat: { hour: '2-digit', minute: '2-digit', hour12: false },
-                    views: { listWeek: { displayEventTime: true, displayEventEnd: true } },
+                    views: {
+                        dayGridMonth: { eventOrder: 'monthPriority,start', eventOrderStrict: true },
+                        listWeek: { displayEventTime: true, displayEventEnd: true },
+                    },
                     noEventsText: 'No hay actividades de muestra para esta semana.',
                     navLinks: true,
                     navLinkDayClick: date => showDay(currentDateKey(date)),
                     dateClick: info => showDay(info.dateStr.slice(0, 10)),
                     eventClick: info => showDay(info.event.extendedProps.date, true, info.event.id),
                     eventDidMount: info => {
-                        info.el.dataset.kind = info.event.extendedProps.kind;
+                        const { kind, subject } = info.event.extendedProps;
+                        setActivityStyle(info.el, kind, subject);
                         const control = info.el.querySelector('.fc-list-event-title a') || info.el;
                         control.tabIndex = 0;
                         control.setAttribute('role', 'button');
@@ -305,7 +318,7 @@
 
         const copy = element('div', 'calendar-activity-copy');
         const kind = element('span', 'calendar-kind', data.kinds[item.kind].label);
-        kind.dataset.kind = item.kind;
+        setActivityStyle(kind, item.kind, item.reading?.slug);
         const time = item.end ? item.start + ' – ' + item.end : item.start;
         copy.append(kind, heading, element('p', 'calendar-activity-time', time), element('p', '', item.description));
 
@@ -377,7 +390,7 @@
         list.replaceChildren();
         for (const item of activities()) {
             const row = element('li', 'calendar-plan-row');
-            row.dataset.kind = item.kind;
+            setActivityStyle(row, item.kind, item.reading?.slug);
             const select = button('calendar-plan-item', '', () => {
                 state.active = item;
                 renderActivity();
