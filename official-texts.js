@@ -1,37 +1,81 @@
 'use strict';
 (() => {
     const texts = [
-        { subject: 'Matemáticas', pages: 184, slug: 'matematicas', symbol: '∑' },
-        { subject: 'Física', pages: 202, slug: 'fisica', symbol: 'F' },
-        { subject: 'Química', pages: 296, slug: 'quimica', symbol: 'Q' },
-        { subject: 'Biología', pages: 226, slug: 'biologia', symbol: 'B' },
-        { subject: 'Lenguaje', pages: 239, slug: 'lenguaje', symbol: 'Aa' },
+        {
+            subject: 'Morfofunción', slug: 'morfofuncion', symbol: 'M', pages: 1251,
+            title: 'Anatomía y fisiología. La unidad entre forma y función',
+            credit: 'Kenneth S. Saladin', edition: '6.ª edición · McGraw-Hill Interamericana',
+        },
+        {
+            subject: 'Biología Celular y Molecular', slug: 'biologia-celular', symbol: 'B', pages: 829, coverPage: 9,
+            title: 'Biología celular biomédica',
+            credit: 'Alfonso Calvo González', edition: '1.ª edición · Elsevier España · 2015',
+        },
+        {
+            subject: 'Educación en Salud e Investigación', slug: 'educacion-salud', symbol: 'E', pages: 232,
+            title: 'Compendio de Educación en Salud e Investigación',
+            credit: 'Departamento de Medicina Social y Familiar · Facultad de Medicina, UMSS',
+            edition: '1.ª edición · 2025',
+        },
     ];
     const $ = id => document.getElementById(id);
     const dialog = $('official-texts-reader');
     const status = $('official-texts-status');
     const fallback = $('official-texts-fallback');
-    const downloadUrl = text => '/api/texto-oficial?materia=' + text.slug;
+    const downloadButton = $('official-texts-download');
+    const readerDownloadStatus = $('official-texts-reader-download-status');
+    const resourceUrl = text => '/api/texto-oficial?materia=' + text.slug;
     let reader, current, revision = 0;
+
+    async function authorization() {
+        const { data } = await getSupabase().auth.getSession();
+        if (!data?.session?.access_token) throw new Error('Inicia sesión para acceder a los textos.');
+        return { Authorization: 'Bearer ' + data.session.access_token };
+    }
 
     async function read(text) {
         const version = ++revision;
         current = text;
-        $('official-texts-reader-title').textContent = 'Texto guía de ' + text.subject;
-        $('official-texts-download').href = downloadUrl(text);
+        $('official-texts-reader-title').textContent = text.title;
+        readerDownloadStatus.hidden = true;
         status.textContent = 'Cargando PDF…';
         status.hidden = false;
         fallback.hidden = true;
         if (!dialog.open) dialog.showModal();
         try {
+            const headers = await authorization();
+            if (version !== revision || !dialog.open) return;
             reader ||= new SummaryPdfReader($('official-texts-pages'), { label: 'texto oficial', pageJump: true });
-            await reader.open(downloadUrl(text));
+            await reader.open(resourceUrl(text), { headers, rangeOnly: true, initialPage: text.coverPage });
             if (version === revision && dialog.open) status.hidden = true;
         } catch (_) {
             if (version !== revision || !dialog.open) return;
             reader?.destroy();
             status.textContent = 'No pudimos abrir el PDF. Puedes reintentar o consultar la publicación oficial.';
             fallback.hidden = false;
+        }
+    }
+
+    async function download(text, button, feedback) {
+        button.disabled = true;
+        feedback.textContent = 'Preparando descarga…';
+        feedback.hidden = false;
+        try {
+            const response = await fetch(resourceUrl(text), { method: 'POST', headers: await authorization() });
+            if (!response.ok) throw new Error('Descarga no disponible');
+            const { grant } = await response.json();
+            if (typeof grant !== 'string') throw new Error('Descarga no disponible');
+            const link = document.createElement('a');
+            link.href = resourceUrl(text) + '&descarga=' + encodeURIComponent(grant);
+            link.download = 'UMSS-2025-2026-' + text.slug + '.pdf';
+            document.body.append(link);
+            link.click();
+            link.remove();
+            feedback.hidden = true;
+        } catch (_) {
+            feedback.textContent = 'No pudimos iniciar la descarga. Vuelve a intentarlo.';
+        } finally {
+            button.disabled = false;
         }
     }
 
@@ -42,30 +86,39 @@
         badge.className = 'campus-resource-symbol';
         badge.textContent = text.symbol;
         badge.setAttribute('aria-hidden', 'true');
+        const subject = document.createElement('p');
+        subject.className = 'official-text-area';
+        subject.textContent = text.subject;
         const heading = document.createElement('h3');
-        heading.textContent = text.subject;
+        heading.textContent = text.title;
+        const credit = document.createElement('p');
+        credit.className = 'official-text-credit';
+        credit.textContent = text.credit;
         const detail = document.createElement('p');
-        detail.textContent = text.pages + ' páginas · PDF oficial';
+        detail.className = 'official-text-edition';
+        detail.textContent = text.edition + ' · ' + text.pages + ' páginas del PDF';
         const actions = document.createElement('div');
         actions.className = 'campus-resource-actions';
         const open = document.createElement('button');
         open.type = 'button';
         open.className = 'btn-primary';
         open.textContent = 'Leer en el campus';
-        open.setAttribute('aria-label', 'Leer la guía de ' + text.subject + ' en el campus');
+        open.setAttribute('aria-label', 'Leer ' + text.title + ' en el campus');
         open.onclick = () => read(text);
-        const download = document.createElement('a');
-        download.className = 'campus-resource-secondary';
-        download.href = downloadUrl(text);
-        download.textContent = 'Descargar PDF';
-        download.setAttribute('aria-label', 'Descargar la guía de ' + text.subject);
-        actions.append(open, download);
-        article.append(badge, heading, detail, actions);
+        const save = document.createElement('button');
+        save.type = 'button';
+        save.className = 'campus-resource-secondary';
+        save.textContent = 'Descargar PDF';
+        save.setAttribute('aria-label', 'Descargar ' + text.title);
+        save.onclick = () => download(text, save, $('official-texts-download-status'));
+        actions.append(open, save);
+        article.append(badge, subject, heading, credit, detail, actions);
         return article;
     }
 
     $('official-texts-grid').replaceChildren(...texts.map(card));
     $('official-texts-close').onclick = () => dialog.close();
+    downloadButton.onclick = () => { if (current) return download(current, downloadButton, readerDownloadStatus); };
     $('official-texts-retry').onclick = () => { if (current) read(current); };
     dialog.addEventListener('close', () => {
         if (dialog.open) return;

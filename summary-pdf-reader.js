@@ -90,7 +90,7 @@
             this.updateControls();
         }
 
-        async open(url) {
+        async open(url, { headers, rangeOnly = false, initialPage = 1 } = {}) {
             this.destroy();
             const revision = this.revision;
             this.host.hidden = false;
@@ -98,6 +98,10 @@
             if (revision !== this.revision) return;
             this.loading = pdfjs.getDocument({
                 url,
+                httpHeaders: headers,
+                disableStream: rangeOnly,
+                disableAutoFetch: rangeOnly,
+                rangeChunkSize: rangeOnly ? 1024 * 1024 : undefined,
                 cMapUrl: '/vendor/pdfjs/cmaps/', cMapPacked: true,
                 standardFontDataUrl: '/vendor/pdfjs/standard_fonts/',
                 wasmUrl: '/vendor/pdfjs/wasm/',
@@ -106,13 +110,13 @@
             const pdf = await this.loading.promise;
             if (revision !== this.revision) return;
             this.pdf = pdf;
-            const first = await pdf.getPage(1);
+            const first = await pdf.getPage(initialPage);
             if (revision !== this.revision) return;
             this.pageSize = first.getViewport({ scale: 1 });
             this.zoom = 1;
-            this.currentPage = 1;
+            this.currentPage = initialPage;
             this.layout();
-            await this.renderPage(1, this.revision);
+            await this.renderPage(initialPage, this.revision);
         }
 
         layout() {

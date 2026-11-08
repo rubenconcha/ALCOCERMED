@@ -18,6 +18,24 @@
     color: #192840;
 }
 
+#official-texts-screen .official-text-area {
+    margin: 11px 0 0;
+    color: var(--shell-blue, #166b96);
+    font-size: .76rem;
+    font-weight: 600;
+}
+
+#official-texts-screen .official-text-credit {
+    margin: 4px 0;
+    color: var(--shell-ink, #192840);
+    font-weight: 500;
+}
+
+#official-texts-screen .official-text-edition {
+    margin-top: 3px;
+    font-size: .79rem;
+}
+
 .campus-resource-symbol {
     display: grid;
     place-items: center;
@@ -62,9 +80,12 @@
 }
 
 .campus-resource-secondary:hover { background: #eaf4fc; }
+.campus-resource-secondary:disabled { opacity: .65; cursor: wait; }
 .campus-resource-source { margin: 18px 0; color: #4d6580; font-size: .86rem; }
 .campus-resource-source a { color: #235d87; }
 .official-texts-fallback { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 20px 12px; }
+#official-texts-download { background: var(--shell-gold, #ffce45); border-color: transparent; color: #272331; }
+#official-texts-download:disabled { opacity: .65; cursor: wait; }
 
 .practice-reference,
 .practice-session,

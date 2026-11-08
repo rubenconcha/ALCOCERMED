@@ -1,4 +1,5 @@
 const assert = require('node:assert/strict');
+const { createHmac } = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
 const { PassThrough } = require('node:stream');
@@ -49,7 +50,8 @@ test('conversion reference uses the corrected acre, joule, kelvin and SI prefix 
     assert.equal(rows['deca (da)'], '10¹');
 });
 
-test('official guide cards open the matching PDF and offer its direct download', async () => {
+test('the three verified UMSS books open their PDF and request a temporary download', async () => {
+    const downloads = [];
     function node() {
         return {
             children: [],
@@ -59,10 +61,13 @@ test('official guide cards open the matching PDF and offer its direct download',
             addEventListener(event, handler) { this[event] = handler; },
             showModal() { this.open = true; },
             close() { this.open = false; },
+            click() { downloads.push(this.href); },
+            remove() {},
         };
     }
     const nodes = new Map();
     const document = {
+        body: node(),
         createElement: node,
         getElementById(id) {
             if (!nodes.has(id)) nodes.set(id, node());
@@ -74,40 +79,66 @@ test('official guide cards open the matching PDF and offer its direct download',
     const window = {};
     vm.runInNewContext(read('official-texts.js'), {
         document, window,
+        getSupabase: () => ({ auth: { getSession: async () => ({ data: { session: { access_token: 'test' } } }) } }),
+        fetch: async (url, options) => {
+            assert.equal(options.method, 'POST');
+            assert.equal(options.headers.Authorization, 'Bearer test');
+            return Response.json({ grant: 'fixture' });
+        },
         SummaryPdfReader: class {
             constructor(host, options) {
                 assert.equal(host, get('pages'));
                 assert.equal(options.label, 'texto oficial');
                 assert.equal(options.pageJump, true);
             }
-            async open(url) { loaded.push(url); }
+            async open(url, options) {
+                assert.equal(options.headers.Authorization, 'Bearer test');
+                assert.equal(options.rangeOnly, true);
+                assert.equal(options.initialPage, url.endsWith('biologia-celular') ? 9 : undefined);
+                loaded.push(url);
+            }
         },
     });
     assert.deepEqual(get('grid').children.map(card => card.children[1].textContent),
-        ['Matemáticas', 'Física', 'Química', 'Biología', 'Lenguaje']);
+        ['Morfofunción', 'Biología Celular y Molecular', 'Educación en Salud e Investigación']);
+    assert.match(get('grid').children[0].children[4].textContent, /6.ª edición/);
+    assert.equal(get('grid').children[1].children[3].textContent, 'Alfonso Calvo González');
+    assert.match(get('grid').children[1].children[4].textContent, /1.ª edición · Elsevier España · 2015/);
     for (const [index, card] of get('grid').children.entries()) {
-        const [button, link] = card.children[3].children;
-        await button.onclick();
-        assert.equal(loaded[index], link.href);
-        assert.equal(get('download').href, link.href);
+        const [open, save] = card.children[5].children;
+        const url = '/api/texto-oficial?materia=' + ['morfofuncion', 'biologia-celular', 'educacion-salud'][index];
+        await open.onclick();
+        await save.onclick();
+        assert.equal(loaded[index], url);
+        assert.equal(downloads[index], url + '&descarga=fixture');
+        assert.equal(get('reader-title').textContent, card.children[2].textContent);
         assert.equal(get('status').hidden, true);
-        assert.equal(link.href, '/api/texto-oficial?materia=' + ['matematicas', 'fisica', 'quimica', 'biologia', 'lenguaje'][index]);
     }
-    assert.equal(new Set(loaded).size, 5);
+    await get('download').onclick();
+    assert.equal(downloads.at(-1), loaded.at(-1) + '&descarga=fixture');
+    assert.equal(new Set(loaded).size, 3);
 });
 
-test('the PDF relay only fetches official IDs, streams valid ranges and discards HTML errors', async () => {
+test('the PDF relay checks campus access, streams private PDFs and grants one short-lived download', async () => {
     const calls = [];
-    let upstream = new Response('%PDF-', {
+    const blobResponse = () => new Response('%PDF-', {
         status: 206,
         headers: { 'Content-Type': 'application/octet-stream', 'Content-Length': '5', 'Content-Range': 'bytes 0-4/2830038' },
     });
+    let upstream = blobResponse;
+    let ready = true;
+    const secret = 'test-blob-key';
     const module = { exports: {} };
     vm.runInNewContext(read('api/texto-oficial.js'), {
-        module, require, URL, AbortSignal,
-        fetch: async (url, options) => { calls.push([url, options]); return upstream; },
+        module, require, URL, AbortSignal, Buffer,
+        process: { env: { SUPABASE_ANON_KEY: 'test-anon-key', BLOB_READ_WRITE_TOKEN: secret } },
+        fetch: async (url, options) => {
+            calls.push([new URL(url), options]);
+            if (new URL(url).pathname.endsWith('/rpc/campus_access')) return Response.json({ ready });
+            return upstream();
+        },
     });
-    async function request(subject, method = 'GET') {
+    async function request(subject, { method = 'GET', authorization, grant } = {}) {
         const res = new PassThrough();
         const chunks = [];
         const headers = {};
@@ -115,25 +146,47 @@ test('the PDF relay only fetches official IDs, streams valid ranges and discards
         res.setHeader = (name, value) => { headers[name] = value; };
         await module.exports({
             method,
-            query: { materia: subject },
-            headers: { range: 'bytes=0-4', authorization: 'Bearer test', cookie: 'session=test' },
+            query: { materia: subject, descarga: grant },
+            headers: { range: 'bytes=0-4', authorization, cookie: 'session=test' },
         }, res);
         return { status: res.statusCode, headers, body: Buffer.concat(chunks).toString() };
     }
     assert.equal((await request('https://example.com')).status, 404);
-    assert.equal((await request('matematicas', 'POST')).status, 405);
+    assert.equal((await request('matematicas')).status, 404);
+    assert.equal((await request('morfofuncion', { method: 'DELETE' })).status, 405);
+    assert.equal((await request('morfofuncion')).status, 401);
     assert.equal(calls.length, 0);
-    const result = await request('matematicas');
+    const authorization = 'Bearer test';
+    ready = false;
+    assert.equal((await request('morfofuncion', { authorization })).status, 403);
+    assert.equal(calls.length, 1);
+    ready = true;
+    const result = await request('morfofuncion', { authorization });
     assert.equal(result.status, 206);
     assert.equal(result.body, '%PDF-');
     assert.equal(result.headers['Content-Range'], 'bytes 0-4/2830038');
     assert.equal(result.headers['Content-Type'], 'application/pdf');
-    assert.match(result.headers['Content-Disposition'], /attachment/);
-    assert.equal(calls[0][0].hostname, 'drive.usercontent.google.com');
-    assert.equal(calls[0][0].searchParams.get('id'), '1IRuuJCW8oBAOqL2uqwHZv4eWSVtZkwqF');
-    assert.deepEqual(Object.keys(calls[0][1].headers).sort(), ['Accept-Encoding', 'Range']);
-    upstream = new Response('<h1>Denied</h1>', { headers: { 'Content-Type': 'text/html' } });
-    const rejected = await request('matematicas');
+    assert.match(result.headers['Content-Disposition'], /^inline; filename="UMSS-2025-2026-morfofuncion.pdf"$/);
+    assert.equal(result.headers['Cache-Control'], 'private, no-store');
+    const [blobUrl, blobOptions] = calls.at(-1);
+    assert.match(blobUrl.hostname, /\.private\.blob\.vercel-storage\.com$/);
+    assert.match(blobUrl.pathname, /\/morfofuncion\.pdf$/);
+    assert.equal(blobOptions.headers.Authorization, 'Bearer ' + secret);
+    assert.equal(blobOptions.headers.Range, 'bytes=0-4');
+    assert.equal(blobOptions.headers.cookie, undefined);
+    const granted = await request('morfofuncion', { method: 'POST', authorization });
+    assert.equal(granted.status, 200);
+    assert.equal(calls.at(-1)[0].pathname, '/rest/v1/rpc/campus_access');
+    const { grant } = JSON.parse(granted.body);
+    assert.equal((await request('biologia-celular', { grant })).status, 401);
+    const attachment = await request('morfofuncion', { grant });
+    assert.equal(attachment.status, 206);
+    assert.match(attachment.headers['Content-Disposition'], /^attachment/);
+    const old = Math.floor(Date.now() / 1000) - 1;
+    const proof = createHmac('sha256', secret).update('texto-oficial:morfofuncion:' + old).digest('base64url');
+    assert.equal((await request('morfofuncion', { grant: old + '.' + proof })).status, 401);
+    upstream = () => new Response('<h1>Denied</h1>', { headers: { 'Content-Type': 'text/html' } });
+    const rejected = await request('morfofuncion', { authorization });
     assert.equal(rejected.status, 502);
     assert.equal(rejected.body, '');
 });

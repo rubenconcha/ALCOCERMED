@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="topic-evaluations.css?v=4">
     <link rel="stylesheet" href="campus-atlas.css?v=5">
     <link rel="stylesheet" href="summary-pdf-reader.css?v=2">
-    <link rel="stylesheet" href="campus-study-resources.css?v=1">
+    <link rel="stylesheet" href="campus-study-resources.css?v=2">
     <link rel="stylesheet" href="study-calendar.css?v=3">
 <link rel="stylesheet" href="/device-limit.css?v=1">
 <link rel="stylesheet" href="study-media.css?v=20261021-visual5c">
@@ -1470,26 +1470,28 @@
             <div class="sim-header campus-page-head">
                 <button type="button" class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver</button>
                 <div>
-                    <span class="entrance-eyebrow">ADMISIÓN A MEDICINA · UMSA 2026</span>
+                    <span class="entrance-eyebrow">Medicina UMSS · Curso Básico 2025–2026</span>
                     <h2 id="official-texts-title">Textos oficiales</h2>
-                    <p>Lee las guías dentro del campus o descarga el PDF para estudiar sin conexión.</p>
+                    <p>Consulta la bibliografía indicada por la Facultad de Medicina. Lee los textos en el campus o descarga los PDF.</p>
                 </div>
             </div>
             <div id="official-texts-grid" class="past-grid"></div>
-            <p class="campus-resource-source"><a href="https://umsa.bo/web/uafmed" target="_blank" rel="noopener noreferrer">Publicación de la Unidad de Admisión Facultativa de la UMSA ↗</a></p>
+            <p id="official-texts-download-status" class="campus-resource-source" role="status" hidden></p>
+            <p class="campus-resource-source"><a href="https://med.umss.edu.bo/bibliografia-curso-basico-2025-2026-carrera-de-medicina/" target="_blank" rel="noopener noreferrer">Bibliografía publicada por la Facultad de Medicina de la UMSS ↗</a></p>
             <dialog id="official-texts-reader" class="resumenes-viewer" aria-labelledby="official-texts-reader-title">
                 <div class="resumenes-viewer-head">
-                    <div><span>UMSA · GUÍA OFICIAL 2026</span><h3 id="official-texts-reader-title"></h3></div>
+                    <div><span>UMSS · Curso Básico 2025–2026</span><h3 id="official-texts-reader-title"></h3></div>
                     <div class="resumenes-viewer-actions">
-                        <a id="official-texts-download">Descargar PDF</a>
+                        <button id="official-texts-download" type="button">Descargar PDF</button>
                         <button id="official-texts-close" type="button">Cerrar lector</button>
                     </div>
                 </div>
                 <p id="official-texts-status" class="resumenes-loading" role="status" hidden></p>
                 <div id="official-texts-fallback" class="official-texts-fallback" hidden>
                     <button id="official-texts-retry" class="campus-resource-secondary" type="button">Reintentar</button>
-                    <a href="https://umsa.bo/web/uafmed" class="campus-resource-secondary" target="_blank" rel="noopener noreferrer">Consultar la publicación oficial ↗</a>
+                    <a href="https://med.umss.edu.bo/bibliografia-curso-basico-2025-2026-carrera-de-medicina/" class="campus-resource-secondary" target="_blank" rel="noopener noreferrer">Consultar la bibliografía oficial ↗</a>
                 </div>
+                <p id="official-texts-reader-download-status" class="resumenes-loading" role="status" hidden></p>
                 <div id="official-texts-pages"></div>
             </dialog>
         </section>
@@ -1769,8 +1771,8 @@
     <script src="simulacro-library.js?v=6"></script>
     <script src="student-library.js?v=10"></script>
     <script src="flashcard-workspace.js?v=20261021-visual5b"></script>
-    <script src="summary-pdf-reader.js?v=2"></script>
-    <script src="official-texts.js?v=1"></script>
+    <script src="summary-pdf-reader.js?v=3"></script>
+    <script src="official-texts.js?v=2"></script>
     <script src="sufficiency-practice-content.js?v=1"></script>
     <script src="sufficiency-practice.js?v=1"></script>
     <script src="study-calendar-data.js?v=1"></script>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alcocermed-main-v153-campus-responsive';
+const CACHE_NAME = 'alcocermed-main-v154-textos-umss';
 const APP_SHELL = [
     './student-results.js?v=2',
     './student-results.css?v=1',
@@ -75,9 +75,9 @@ const APP_SHELL = [
     './simulacro-library.css?v=5',
     './student-library.js?v=10',
     './study-summaries.js?v=20261021-visual5b',
-    './summary-pdf-reader.js?v=2',
+    './summary-pdf-reader.js?v=3',
     './summary-pdf-reader.css?v=2',
-    './campus-study-resources.css?v=1',
+    './campus-study-resources.css?v=2',
     './study-calendar.css?v=3',
     './study-calendar-data.js?v=1',
     './study-calendar-pdf.js?v=1',
@@ -98,7 +98,7 @@ const APP_SHELL = [
     './vendor/fullcalendar/index.global.min.js',
     './vendor/fullcalendar/es.global.min.js',
     './vendor/jspdf/jspdf.umd.min.js',
-    './official-texts.js?v=1',
+    './official-texts.js?v=2',
     './sufficiency-practice-content.js?v=1',
     './sufficiency-practice.js?v=1',
     './past-exams.js?v=8',
