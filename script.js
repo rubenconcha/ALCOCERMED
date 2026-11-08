@@ -159,6 +159,8 @@ async function initAuth() {
 function showLoginScreen() {
     window.StudentResults?.clear();
     window.TopicEvaluations?.clear();
+    window.OfficialTexts?.close();
+    window.SufficiencyPractice?.reset();
     clearBancoSuficiencia();
     if (window.OfficialFlashcards) OfficialFlashcards.clear();
     if (window.FlashcardWorkspace) FlashcardWorkspace.clear();
@@ -248,8 +250,12 @@ function enterVerifiedApp(user) {
     setTimeout(preloadAppData, 1200);
     setTimeout(sincronizarPerfilEnNube, 2000);
 
-    if (new URLSearchParams(window.location.search).get('seccion') === 'atlas' && typeof openAtlas === 'function') openAtlas();
-    else if (new URLSearchParams(window.location.search).get('simulacro') && window.openRequestedSimulation) window.openRequestedSimulation().catch(function(error) { showToast(error.message, 'error'); });
+    const campusParams = new URLSearchParams(window.location.search);
+    const section = campusParams.get('seccion');
+    if (section === 'atlas' && typeof openAtlas === 'function') openAtlas();
+    else if (section === 'textos-oficiales') window.OfficialTexts?.open();
+    else if (section === 'practica-suficiencia') showScreen('sufficiency-practice-screen');
+    else if (campusParams.get('simulacro') && window.openRequestedSimulation) window.openRequestedSimulation().catch(function(error) { showToast(error.message, 'error'); });
     else restoreCampusAfterPlans();
     if (window.openRequestedMindmap) window.openRequestedMindmap().catch(function(error) { console.warn("No se pudo abrir el mapa solicitado", error); });
 
@@ -487,7 +493,7 @@ function showScreen(screenId, fromBack) {
     }
     if (screenId !== 'game-quiz' && quizTimer) clearInterval(quizTimer);
     window.scrollTo({top:0,behavior:'instant'});
-    const screens = ['student-results-screen', 'suficiencia-screen', 'home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen', 'atlas-screen'];
+    const screens = ['student-results-screen', 'suficiencia-screen', 'home-screen', 'study-library', 'resource-browser', 'study-area', 'game-quiz', 'game-hangman', 'banco-screen', 'simulacro-screen', 'evaluacion-screen', 'videoclases-screen', 'intocables-screen', 'intocables-hub-screen', 'resumenes-screen', 'past-exams-screen', 'atlas-screen', 'official-texts-screen', 'sufficiency-practice-screen'];
     screens.forEach(function (id) {
         const el = document.getElementById(id);
         if (el) {
@@ -498,6 +504,8 @@ function showScreen(screenId, fromBack) {
             }
         }
     });
+    document.getElementById('nav-official-texts')?.classList.toggle('nav-item-active', screenId === 'official-texts-screen');
+    document.getElementById('nav-sufficiency-practice')?.classList.toggle('nav-item-active', screenId === 'sufficiency-practice-screen');
     if (screenId === 'study-area') refreshFlashcardReviews();
     return true;
 }

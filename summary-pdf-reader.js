@@ -13,8 +13,9 @@
 
     // Render PDF pages ourselves: Android browsers may replace embedded PDFs with an Open button.
     class SummaryPdfReader {
-        constructor(host) {
+        constructor(host, { label = 'resumen', pageJump = false } = {}) {
             this.host = host;
+            this.label = label;
             this.revision = 0;
             this.entries = [];
             this.zoom = 1;
@@ -39,12 +40,38 @@
             this.counter = document.createElement('span');
             this.counter.className = 'summary-pdf-counter';
             this.counter.setAttribute('aria-live', 'polite');
-            toolbar.append(this.less, this.percent, this.more, this.fit, this.counter);
+            toolbar.append(this.less, this.percent, this.more, this.fit);
+            if (pageJump) {
+                const form = document.createElement('form');
+                form.className = 'summary-pdf-page-jump';
+                this.pageInput = document.createElement('input');
+                this.pageInput.type = 'number';
+                this.pageInput.inputMode = 'numeric';
+                this.pageInput.min = '1';
+                this.pageInput.step = '1';
+                this.pageInput.required = true;
+                this.pageInput.setAttribute('aria-label', 'Número de página');
+                this.jump = document.createElement('button');
+                this.jump.type = 'submit';
+                this.jump.textContent = 'Ir';
+                this.jump.setAttribute('aria-label', 'Ir a la página');
+                form.append(this.pageInput, this.jump);
+                form.addEventListener('submit', event => {
+                    event.preventDefault();
+                    const page = this.entries[this.pageInput.valueAsNumber - 1];
+                    if (!page) return;
+                    this.pages.scrollTop += page.el.getBoundingClientRect().top - this.pages.getBoundingClientRect().top - 12;
+                    this.currentPage = page.number;
+                    this.updateControls();
+                });
+                toolbar.append(form);
+            }
+            toolbar.append(this.counter);
             this.pages = document.createElement('div');
             this.pages.className = 'summary-pdf-scroll';
             this.pages.tabIndex = 0;
             this.pages.setAttribute('role', 'region');
-            this.pages.setAttribute('aria-label', 'Páginas del resumen. Desliza para leer.');
+            this.pages.setAttribute('aria-label', `Páginas del ${this.label}. Desliza para leer.`);
             this.host.replaceChildren(toolbar, this.pages);
             this.pages.addEventListener('scroll', () => {
                 if (!this.scrollFrame) this.scrollFrame = requestAnimationFrame(() => {
@@ -145,7 +172,7 @@
                 canvas.height = Math.ceil(viewport.height * density);
                 canvas.style.width = viewport.width + 'px'; canvas.style.height = viewport.height + 'px';
                 canvas.setAttribute('role', 'img');
-                canvas.setAttribute('aria-label', `Página ${number} del resumen`);
+                canvas.setAttribute('aria-label', `Página ${number} del ${this.label}`);
                 entry.el.style.height = viewport.height + 'px';
                 entry.task = page.render({ canvasContext: canvas.getContext('2d', { alpha: false }), viewport,
                     transform: [density, 0, 0, density, 0, 0] });
@@ -179,6 +206,11 @@
             this.more.disabled = !this.pdf || this.zoom >= 3;
             this.fit.disabled = !this.pdf;
             this.counter.textContent = this.pdf ? `${this.currentPage} / ${this.pdf.numPages}` : '';
+            if (this.pageInput) {
+                this.pageInput.disabled = this.jump.disabled = !this.pdf;
+                this.pageInput.max = this.pdf?.numPages || 1;
+                if (document.activeElement !== this.pageInput) this.pageInput.value = this.pdf ? this.currentPage : '';
+            }
         }
 
         updateCurrentPage() {

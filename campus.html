@@ -35,7 +35,8 @@
     <link rel="stylesheet" href="past-exams.css?v=2">
     <link rel="stylesheet" href="topic-evaluations.css?v=4">
     <link rel="stylesheet" href="campus-atlas.css?v=5">
-    <link rel="stylesheet" href="summary-pdf-reader.css?v=1">
+    <link rel="stylesheet" href="summary-pdf-reader.css?v=2">
+    <link rel="stylesheet" href="campus-study-resources.css?v=1">
 <link rel="stylesheet" href="/device-limit.css?v=1">
 <link rel="stylesheet" href="study-media.css?v=20261021-visual5c">
     <link rel="stylesheet" href="suficiencia.css?v=7">
@@ -259,6 +260,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item nav-item-simple" id="nav-official-texts">
+                    <a href="/campus?seccion=textos-oficiales" onclick="if (window.OfficialTexts) { OfficialTexts.open(); return false; }" data-tooltip="textos oficiales">
+                        <span class="nav-icon nav-icon-summary"><i class="fas fa-book-open" aria-hidden="true"></i></span>
+                        <span class="nav-label">Textos oficiales</span>
+                    </a>
+                </li>
+
                 <!-- Intocables -->
                 <li class="nav-item nav-item-simple" id="nav-intocables">
                     <a href="#" onclick="openIntocables(); return false;" data-tooltip="intocables">
@@ -283,6 +291,13 @@
                             <svg class="sidebar-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#bank"></use></svg>
                         </span>
                         <span class="nav-label">banco de preguntas</span>
+                    </a>
+                </li>
+
+                <li class="nav-item nav-item-simple" id="nav-sufficiency-practice">
+                    <a href="/campus?seccion=practica-suficiencia" onclick="showScreen('sufficiency-practice-screen'); return false;" data-tooltip="práctica de suficiencia">
+                        <span class="nav-icon nav-icon-summary"><i class="fas fa-square-root-variable" aria-hidden="true"></i></span>
+                        <span class="nav-label">Práctica de suficiencia</span>
                     </a>
                 </li>
 
@@ -1210,6 +1225,64 @@
             </dialog>
         </section>
 
+        <section id="official-texts-screen" class="campus-resource-screen hidden" aria-labelledby="official-texts-title">
+            <div class="sim-header">
+                <button type="button" class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver</button>
+                <div>
+                    <span class="entrance-eyebrow">ADMISIÓN A MEDICINA · UMSA 2026</span>
+                    <h2 id="official-texts-title">Textos oficiales</h2>
+                    <p>Lee las guías dentro del campus o descarga el PDF para estudiar sin conexión.</p>
+                </div>
+            </div>
+            <div id="official-texts-grid" class="past-grid"></div>
+            <p class="campus-resource-source"><a href="https://umsa.bo/web/uafmed" target="_blank" rel="noopener noreferrer">Publicación de la Unidad de Admisión Facultativa de la UMSA ↗</a></p>
+            <dialog id="official-texts-reader" class="resumenes-viewer" aria-labelledby="official-texts-reader-title">
+                <div class="resumenes-viewer-head">
+                    <div><span>UMSA · GUÍA OFICIAL 2026</span><h3 id="official-texts-reader-title"></h3></div>
+                    <div class="resumenes-viewer-actions">
+                        <a id="official-texts-download">Descargar PDF</a>
+                        <button id="official-texts-close" type="button">Cerrar lector</button>
+                    </div>
+                </div>
+                <p id="official-texts-status" class="resumenes-loading" role="status" hidden></p>
+                <div id="official-texts-fallback" class="official-texts-fallback" hidden>
+                    <button id="official-texts-retry" class="campus-resource-secondary" type="button">Reintentar</button>
+                    <a href="https://umsa.bo/web/uafmed" class="campus-resource-secondary" target="_blank" rel="noopener noreferrer">Consultar la publicación oficial ↗</a>
+                </div>
+                <div id="official-texts-pages"></div>
+            </dialog>
+        </section>
+
+        <section id="sufficiency-practice-screen" class="campus-resource-screen hidden" aria-labelledby="sufficiency-practice-title">
+            <div class="sim-header">
+                <button type="button" class="btn-back-game" onclick="goBack()"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver</button>
+                <div>
+                    <span class="entrance-eyebrow">PREPARACIÓN PARA EL INGRESO</span>
+                    <h2 id="sufficiency-practice-title">Práctica de suficiencia</h2>
+                    <p>Resuelve conversiones y casos de cálculo. Comprueba cada respuesta y consulta el procedimiento.</p>
+                </div>
+            </div>
+            <details id="practice-reference" class="practice-reference">
+                <summary>Consultar la tabla de unidades y factores de conversión</summary>
+                <p>El signo ≈ indica un valor redondeado. En cada ejercicio usa el factor que aparece en el enunciado y redondea al final.</p>
+                <div id="practice-reference-groups" class="practice-reference-groups"></div>
+            </details>
+            <div id="sufficiency-practice-catalog">
+                <div class="past-filters practice-filters">
+                    <label for="practice-subject">Materia
+                        <select id="practice-subject"><option value="">Todas las materias</option></select>
+                    </label>
+                    <label for="practice-kind">Tipo de práctica
+                        <select id="practice-kind"><option value="">Todos los tipos</option></select>
+                    </label>
+                    <span id="practice-count" aria-live="polite"></span>
+                </div>
+                <div id="practice-grid" class="past-grid"></div>
+                <p id="practice-empty" hidden>No hay ejercicios con esta combinación. Prueba con otra materia o tipo.</p>
+            </div>
+            <div id="practice-session" class="practice-session" hidden></div>
+        </section>
+
         <section id="intocables-hub-screen" class="itc-page hidden" aria-labelledby="itc-title">
             <div class="itc-top"><button type="button" class="itc-back" onclick="goBack()"><span aria-hidden="true">←</span> Volver</button><span>PREPARATORIA BEN CARSON · BIBLIOTECA</span></div>
             <div class="itc-hero">
@@ -1393,7 +1466,7 @@
     <script src="campus-section-tracking.js?v=1"></script>
     <script src="question-review.js?v=3"></script>
     <script src="study-media.js?v=20261021-visual5b"></script>
-    <script src="script.js?v=20261107-evaluacion-suficiencia"></script>
+    <script src="script.js?v=20261108-recursos-suficiencia"></script>
     <script src="mindmap-branch-labels.js?v=20261021-visual5b"></script>
     <script src="mindmap-content.js?v=3"></script>
     <script src="mindmap-detailed-content.js?v=20261021-visual5b"></script>
@@ -1406,7 +1479,10 @@
     <script src="simulacro-library.js?v=6"></script>
     <script src="student-library.js?v=10"></script>
     <script src="flashcard-workspace.js?v=20261021-visual5b"></script>
-    <script src="summary-pdf-reader.js?v=1"></script>
+    <script src="summary-pdf-reader.js?v=2"></script>
+    <script src="official-texts.js?v=1"></script>
+    <script src="sufficiency-practice-content.js?v=1"></script>
+    <script src="sufficiency-practice.js?v=1"></script>
     <script src="study-summaries.js?v=20261021-visual5b"></script>
     <script src="past-exams.js?v=6"></script>
     <script src="topic-evaluations.js?v=20261107-suficiencia"></script>
