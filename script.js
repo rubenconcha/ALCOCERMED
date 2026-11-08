@@ -158,6 +158,7 @@ async function initAuth() {
 /** Muestra login y oculta app */
 function showLoginScreen() {
     window.StudentResults?.clear();
+    window.TopicEvaluations?.clear();
     clearBancoSuficiencia();
     if (window.OfficialFlashcards) OfficialFlashcards.clear();
     if (window.FlashcardWorkspace) FlashcardWorkspace.clear();
@@ -207,6 +208,7 @@ function enterApp(user) {
             }
             await CampusAccess.resolve(client);
             if (currentUser?.id !== user.id) return;
+            window.TopicEvaluations?.clear();
             clearBancoSuficiencia();
             flashcardsCache = null;
             bancoState._cache = [];
@@ -1872,7 +1874,7 @@ function clearBancoSuficiencia() {
     bancoState.answers = [];
     document.getElementById('bq-question-text').textContent = '';
     document.getElementById('bq-comentario-text').textContent = '';
-    renderBancoPassage(null);
+    renderPracticePassage('bq', null);
     document.getElementById('bq-options').replaceChildren();
     document.getElementById('banco-start-btn').disabled = true;
     showBancoScreen('banco-selector');
@@ -1897,27 +1899,7 @@ async function fetchBancoSuficiencia(owner) {
     const bank = await response.json();
     if (!core.validate(bank)) throw new Error('Las preguntas de Suficiencia no están disponibles.');
 
-    const passages = new Map(bank.passages.map(p => [p.id, p]));
-    return bank.questions.filter(q => Object.hasOwn(core.subjects, q.subject)).map(q => {
-        const steps = (q.solution?.steps || []).map((step, i) => [
-            (i + 1) + '. ' + step.title, step.text, step.formula,
-            step.quote && 'Párrafo ' + step.paragraph + ' · «' + step.quote + '»'
-        ].filter(Boolean).join('\n'));
-        const row = {
-            content_id: 'suficiencia:' + q.id,
-            materia: core.subjects[q.subject],
-            tema: core.topicFor(q, bank).label,
-            dificultad: q.difficulty === 'intermedio' ? 'medio' : q.difficulty,
-            pregunta: q.text,
-            respuesta_correcta: 'ABCDE'[q.correct],
-            justificacion: [q.explanation, ...steps].join('\n\n'),
-            fuente: core.referenceText(q.source),
-            passage: passages.get(q.passageId),
-            guiaUmsa: core.isOfficial(q),
-        };
-        q.options.forEach((_, i) => { row['opcion_' + 'abcde'[i]] = core.optionText(q, i); });
-        return row;
-    });
+    return bank.questions.filter(q => Object.hasOwn(core.subjects, q.subject)).map(q => core.toQuestionRow(q, bank));
 }
 
 // ──────────────────────────────────────────────
@@ -2383,15 +2365,16 @@ function bancoClave(q) {
     return /^[A-E]$/.test(answer) ? 'ABCDE'.indexOf(answer) : parseInt(answer, 10) - 1;
 }
 
-function renderBancoPassage(passage) {
-    const box = document.getElementById('bq-passage');
+function renderPracticePassage(prefix, passage) {
+    const box = document.getElementById(prefix + '-passage');
+    if (!box) return false;
     const id = passage?.id || '';
     box.hidden = !passage;
     if (box.dataset.passage === id) return false;
     box.dataset.passage = id;
     box.open = Boolean(passage);
-    document.getElementById('bq-passage-title').textContent = passage?.title || '';
-    document.getElementById('bq-passage-text').textContent = passage?.text || '';
+    document.getElementById(prefix + '-passage-title').textContent = passage?.title || '';
+    document.getElementById(prefix + '-passage-text').textContent = passage?.text || '';
     return Boolean(passage);
 }
 
@@ -2410,7 +2393,7 @@ function renderBancoQuestion() {
 
     // Texto de pregunta — soportar columnas en MAYÚSCULAS o minúsculas
     document.getElementById('bq-question-text').textContent = campo(q, 'pregunta') || campo(q, 'PREGUNTA') || '';
-    const newPassage = renderBancoPassage(q.passage);
+    const newPassage = renderPracticePassage('bq', q.passage);
 
     // Dificultad — normalizar a minúsculas para comparación
     renderBqDificultad(campo(q, 'dificultad') || 'facil');
@@ -3356,13 +3339,16 @@ function renderSimQuestion() {
     document.getElementById('sim-exam-section').textContent = ({
         MORFOFUNCION: 'Morfofunción', 'BIOLOGIA CELULAR': 'Biología celular',
         'SALUD PUBLICA': 'Educación para la Vida'
-    })[normalizeDbText(campo(q, 'materia'))] || (simState.mode === 'pasado' ? 'Examen pasado' : 'Simulacro');
+    })[normalizeDbText(campo(q, 'materia'))] ||
+        (simState.mode === 'tema' ? campo(q, 'materia') : simState.mode === 'pasado' ? 'Examen pasado' : 'Simulacro');
     document.getElementById('sim-answered-count').textContent =
         simState.answers.filter(function (answer) { return answer.selected !== null; }).length +
         ' de ' + simState.preguntas.length + ' respondidas';
     document.getElementById('sim-num-badge').textContent = 'N° ' + (q.numero_original || idx + 1);
     document.getElementById('sim-question-text').textContent = campo(q, 'pregunta') || '';
-    document.getElementById('sim-question-text').style.whiteSpace = isWeeklySimQuestion(q) ? 'pre-line' : '';
+    document.getElementById('sim-question-text').style.whiteSpace =
+        isWeeklySimQuestion(q) || (simState.mode === 'tema' && simState.topicEvaluationId?.startsWith('suf-')) ? 'pre-line' : '';
+    if (q.passage || document.getElementById('sim-passage')?.dataset?.passage) renderPracticePassage('sim', q.passage);
     window.StudyMedia?.render(document.getElementById('sim-question-text'),q.study_image);
     renderBqDificultad_sim(campo(q, 'dificultad') || 'facil');
 
@@ -3401,7 +3387,7 @@ function renderBqDificultad_sim(dificultad) {
     var el = document.getElementById('sim-dificultad');
     if (!el) return;
     el.innerHTML = '';
-    const pastPaper = simState.mode === 'pasado' || simState.mode === 'tema';
+    const pastPaper = simState.mode === 'pasado' || (simState.mode === 'tema' && !simState.topicEvaluationId?.startsWith('suf-'));
     el.hidden = pastPaper;
     const label = document.querySelector('#sim-exam .bq-dificultad-label');
     if (label) label.hidden = pastPaper;
@@ -3449,7 +3435,7 @@ function buildSimCircles() {
             currentSubject = subject;
             var heading = document.createElement('div');
             heading.className = 'entrance-nav-heading';
-            heading.textContent = labels[subject] || subject;
+            heading.textContent = labels[subject] || campo(question, 'materia') || subject;
             container.appendChild(heading);
         }
         var btn = document.createElement('button');
@@ -3592,8 +3578,20 @@ window.finalizarSimulacro = function () {
             var question = document.createElement('p');
             question.className = 'sim-rev-question';
             question.textContent = campo(q, 'pregunta') || '';
-            if (isWeeklySimQuestion(q)) question.style.whiteSpace = 'pre-line';
+            if (isWeeklySimQuestion(q) || (simState.mode === 'tema' && simState.topicEvaluationId?.startsWith('suf-'))) {
+                question.style.whiteSpace = 'pre-line';
+            }
             item.appendChild(question);
+            if (q.passage) {
+                const passage = document.createElement('details');
+                passage.className = 'bq-passage sim-rev-passage';
+                const heading = document.createElement('summary');
+                heading.textContent = q.passage.title;
+                const text = document.createElement('p');
+                text.textContent = q.passage.text;
+                passage.append(heading, text);
+                item.appendChild(passage);
+            }
             if (ans.selected !== null && opciones[ans.selected]) {
                 var selected = document.createElement('p');
                 selected.className = 'sim-rev-tu-resp';

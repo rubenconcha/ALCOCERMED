@@ -136,6 +136,26 @@
         if (source.document === 'MEDICINA EXÁMENES PASADOS ABP.pdf') return `Exámenes pasados ABP · UMSA · ${pages} · pregunta ${source.question}. ${source.kind === 'adaptada' ? 'Adaptada para la práctica.' : 'Notación normalizada.'}`;
         return `${source.author || 'Kenneth S. Saladin'}, ${source.edition || '6.ª edición'} · ${source.chapter || 'cap. 1'} · ${pages}${source.printedPages ? ' · pág. impresa ' + source.printedPages.join(', ') : ''}. Texto adaptado para lectura comprensiva.`;
     }
+    function toQuestionRow(q, bank) {
+        const steps = (q.solution?.steps || []).map((step, i) => [
+            (i + 1) + '. ' + step.title, step.text, step.formula,
+            step.quote && 'Párrafo ' + step.paragraph + ' · «' + step.quote + '»'
+        ].filter(Boolean).join('\n'));
+        const row = {
+            content_id: 'suficiencia:' + q.id,
+            materia: subjects[q.subject],
+            tema: topicFor(q, bank).label,
+            dificultad: q.difficulty === 'intermedio' ? 'medio' : q.difficulty,
+            pregunta: q.text,
+            respuesta_correcta: 'ABCDE'[q.correct],
+            justificacion: [q.explanation, ...steps].join('\n\n'),
+            fuente: referenceText(q.source),
+            passage: q.passageId ? bank.passages.find(p => p.id === q.passageId) : undefined,
+            guiaUmsa: isOfficial(q),
+        };
+        q.options.forEach((_, i) => { row['opcion_' + 'abcde'[i]] = optionText(q, i); });
+        return row;
+    }
     function validate(bank) {
         if (!bank || !Array.isArray(bank.questions) || !Array.isArray(bank.passages)) return false;
         const ids = new Set(), passages = new Set(bank.passages.map(p => p.id));
@@ -258,5 +278,5 @@
         return { ...saved, answers, helpOpen: Array.isArray(saved.helpOpen) ? [...new Set(saved.helpOpen.filter(id => saved.ids.includes(id)))] : [], flags: Array.isArray(saved.flags) ? saved.flags.filter(id => saved.ids.includes(id)) : [], index: Math.max(0, Math.min(saved.ids.length - 1, Number.isInteger(saved.index) ? saved.index : 0)), finished: saved.finished === true };
     }
     function paper(bank, area) { return ['inicial', 'simulacro:inicial'].includes(area) ? bank?.introPaper || null : bank?.papers?.find(p => 'simulacro:' + p.id === area) || bank?.levelPapers?.find(p => 'simulacro:' + p.id === area) || null; }
-    return { subjects: sufficiencySubjects, practiceSubjects: subjects, biomedicalSubjects, levels, officialCollection, officialTopicPrefix, isOfficial, biomedicalCollection, isBiomedical, referenceText, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText, topics, topicFor, configurationPool, configurationCount, selectConfiguration, configurationLabel };
+    return { subjects: sufficiencySubjects, practiceSubjects: subjects, biomedicalSubjects, levels, officialCollection, officialTopicPrefix, isOfficial, biomedicalCollection, isBiomedical, referenceText, toQuestionRow, validate, select, grade, restore, paper, solutionHtml, promptHtml, optionText, topics, topicFor, configurationPool, configurationCount, selectConfiguration, configurationLabel };
 });

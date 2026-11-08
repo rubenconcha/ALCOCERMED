@@ -1,6 +1,7 @@
 const fs = require('node:fs/promises');
 const path = require('node:path');
 const catalog = require('../content/topic-evaluations/catalog.json');
+const sufficiency = require('./_evaluations/suficiencia.cjs');
 const ids = new Set(catalog.exams.map(exam => exam.id));
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 // Same public project key and paid campus boundary as the other exam endpoints.
@@ -11,21 +12,28 @@ module.exports = async function handler(req, res) {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('X-Robots-Tag', 'noindex');
   if (req.method !== 'GET') return res.status(405).end();
-  const id = typeof req.query.id === 'string' ? req.query.id : '';
-  if (!ids.has(id)) return res.status(404).end();
-  const token = /^Bearer\s+(.+)$/i.exec(req.headers.authorization || '')?.[1];
-  if (!token) return res.status(401).end();
+  const id = typeof req.query?.id === 'string' ? req.query.id : '';
+  const json = value => {
+    res.setHeader('Content-Type', 'application/json; charset=utf-8');
+    return res.status(200).end(JSON.stringify(value));
+  };
   try {
+    if (id === 'catalogo') {
+      return json({ version: 2, exams: catalog.exams.concat(sufficiency.metadata()) });
+    }
+    const isCourse = ids.has(id);
+    if (!isCourse && (!id.startsWith('suf-') || !sufficiency.metadata().some(exam => exam.id === id))) return res.status(404).end();
+    const token = /^Bearer\s+(.+)$/i.exec(req.headers.authorization || '')?.[1];
+    if (!token) return res.status(401).end();
     const response = await fetch(`${supabaseUrl}/rest/v1/rpc/campus_access`, {
       method:'POST', headers:{apikey:anonKey,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},
       body:'{}',signal:AbortSignal.timeout(8000)
     });
     if (!response.ok) return res.status(response.status === 401 ? 401 : 503).end();
     const access = await response.json();
-    if (!access?.ready || !access.premium) return res.status(403).end();
-    const paper = JSON.parse(await fs.readFile(path.join(__dirname,'_evaluations',id+'.json'),'utf8'));
+    if (!access?.ready || !access.premium || (access.expires_at && Date.parse(access.expires_at) <= Date.now())) return res.status(403).end();
+    const paper = isCourse ? JSON.parse(await fs.readFile(path.join(__dirname,'_evaluations',id+'.json'),'utf8')) : sufficiency.paper(id);
     if (paper.id !== id || paper.questions.length !== paper.count) return res.status(503).end();
-    res.setHeader('Content-Type','application/json; charset=utf-8');
-    return res.status(200).end(JSON.stringify(paper));
+    return json(paper);
   } catch (_) { return res.status(503).end(); }
 };

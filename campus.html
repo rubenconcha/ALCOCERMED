@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="flashcard-approved.css?v=4">
     <link rel="stylesheet" href="simulacro-library.css?v=5">
     <link rel="stylesheet" href="past-exams.css?v=2">
-    <link rel="stylesheet" href="topic-evaluations.css?v=3">
+    <link rel="stylesheet" href="topic-evaluations.css?v=4">
     <link rel="stylesheet" href="campus-atlas.css?v=5">
     <link rel="stylesheet" href="summary-pdf-reader.css?v=1">
 <link rel="stylesheet" href="/device-limit.css?v=1">
@@ -874,6 +874,11 @@
 
                 <div class="entrance-exam-progress"><span id="sim-exam-section">Morfofunción</span><span id="sim-answered-count">0 de 100 respondidas</span></div>
 
+                <details class="bq-passage" id="sim-passage" hidden>
+                    <summary id="sim-passage-title"></summary>
+                    <p id="sim-passage-text"></p>
+                </details>
+
                 <!-- Tarjeta de pregunta -->
                 <div class="bq-question-card sim-question-card">
                     <div class="bq-question-bar"></div>
@@ -986,7 +991,22 @@
                 <h2>evaluación por tema</h2><p>Elige una materia y un tema. Responde la evaluación y revisa tus respuestas con la bibliografía.</p></div>
             </div>
             <div class="past-filters">
-                <label for="topic-eval-subject">materia<select id="topic-eval-subject"><option value="">todas las materias</option><option value="MORFOFUNCION">Morfofunción</option><option value="BIOLOGIA CELULAR">Biología celular</option><option value="SALUD PUBLICA">Educación en Salud e Investigación</option></select></label>
+                <label for="topic-eval-subject">materia
+                    <select id="topic-eval-subject">
+                        <option value="">todas las materias</option>
+                        <optgroup label="Materias de Medicina">
+                            <option value="MORFOFUNCION">Morfofunción</option>
+                            <option value="BIOLOGIA CELULAR">Biología celular</option>
+                            <option value="SALUD PUBLICA">Educación en Salud e Investigación</option>
+                        </optgroup>
+                        <optgroup label="Suficiencia académica">
+                            <option>Matemáticas</option>
+                            <option>Física</option>
+                            <option>Química</option>
+                            <option>Lectura comprensiva</option>
+                        </optgroup>
+                    </select>
+                </label>
                 <label for="topic-eval-search">tema<input id="topic-eval-search" type="search" placeholder="Buscar un tema…" autocomplete="off"></label>
                 <span id="topic-eval-count" aria-live="polite"></span>
             </div>
@@ -1373,7 +1393,7 @@
     <script src="campus-section-tracking.js?v=1"></script>
     <script src="question-review.js?v=3"></script>
     <script src="study-media.js?v=20261021-visual5b"></script>
-    <script src="script.js?v=20261107-banco-suficiencia"></script>
+    <script src="script.js?v=20261107-evaluacion-suficiencia"></script>
     <script src="mindmap-branch-labels.js?v=20261021-visual5b"></script>
     <script src="mindmap-content.js?v=3"></script>
     <script src="mindmap-detailed-content.js?v=20261021-visual5b"></script>
@@ -1389,9 +1409,9 @@
     <script src="summary-pdf-reader.js?v=1"></script>
     <script src="study-summaries.js?v=20261021-visual5b"></script>
     <script src="past-exams.js?v=6"></script>
-    <script src="topic-evaluations.js?v=20261021-visual5b"></script>
+    <script src="topic-evaluations.js?v=20261107-suficiencia"></script>
     <script src="campus-atlas.js?v=12"></script>
-    <script src="suficiencia-core.js?v=8"></script>
+    <script src="suficiencia-core.js?v=9"></script>
     <script src="suficiencia.js?v=10"></script>
     <script src="student-results.js?v=2"></script>
 </body>

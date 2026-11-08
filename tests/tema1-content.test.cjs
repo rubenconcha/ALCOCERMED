@@ -22,6 +22,7 @@ test('Tema 1: twenty distinct questions, balanced keys and feedback for every al
 
 test('Actual review renderer places each explanation below its option and scopes it to topic evaluation',()=>{
  const code=fs.readFileSync('script.js','utf8');
+ const weeklyQuestionHelper=code.slice(code.indexOf('function isWeeklySimQuestion('),code.indexOf('function renderSimQuestion('));
  const review=code.slice(code.indexOf("    var reviewList = document.getElementById('sim-review-list');"),code.indexOf('    // Guardar en historial local'));
  class Node{
   constructor(tag){this.tag=tag;this.children=[];this.textContent='';}
@@ -32,7 +33,7 @@ test('Actual review renderer places each explanation below its option and scopes
  const list=new Node('div');
  const state={mode:'tema',preguntas:paper.questions,answers:paper.questions.map((_,i)=>({selected:i%3===0?null:i%4}))};
  const context={document:{getElementById:()=>list,createElement:tag=>new Node(tag)},simState:state,campo:(q,k)=>q[k],simAcceptedAnswerIndices:q=>['ABCD'.indexOf(q.respuesta_correcta)],bancoComentario:()=>''};
- vm.runInNewContext(review,context);
+ vm.runInNewContext(weeklyQuestionHelper+review,context);
  assert.equal(list.children.length,20);
  list.children.forEach((item,i)=>{
   const comments=item.children.find(n=>n.className==='sim-rev-option-comments');

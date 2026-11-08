@@ -98,7 +98,7 @@
   }
   function populate() {
     const subject=$('topic-report-subject').value,select=$('topic-report-topic'),previous=select.value;
-    select.replaceChildren(new Option('Todos los temas','all'));exams.filter(e=>!subject || e.subject===subject).forEach(e=>{const option=text('option','Tema '+e.number+' · '+e.title);option.value=e.id;select.append(option);});
+    select.replaceChildren(new Option('Todos los temas','all'));exams.filter(e=>!subject || e.subject===subject).forEach(e=>{const option=text('option',(e.number?'Tema '+e.number+' · ':'')+e.title);option.value=e.id;select.append(option);});
     select.value=[...select.options].some(o=>o.value===previous)?previous:subject?(exams.find(e=>e.subject===subject)?.id||'all'):'all';
     currentExam=select.value==='all'?{id:'all',title:'Todos los temas',subject}:exams.find(e=>e.id===select.value);renderRows();
   }
@@ -106,7 +106,7 @@
     const request=++generation,account=currentAdmin?.id;if(!account)return;
     try{
       $('topic-report-status').textContent='Cargando seguimiento por tema…';
-      if(!catalogPromise)catalogPromise=fetch('/content/topic-evaluations/catalog.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('No se pudo cargar la lista de temas.');return r.json();}).catch(e=>{catalogPromise=null;throw e;});
+      if(!catalogPromise)catalogPromise=fetch('/api/topic-evaluation?id=catalogo',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('No se pudo cargar la lista de temas.');return r.json();}).catch(e=>{catalogPromise=null;throw e;});
       exams=(await catalogPromise).exams;
       if(request!==generation || account!==currentAdmin?.id)return;
       populate();
