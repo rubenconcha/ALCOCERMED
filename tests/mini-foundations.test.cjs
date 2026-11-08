@@ -1,5 +1,5 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs');
-const {validate}=require('../simulation-scope.js'),paper=require('../api/_simulations/mini-foundations.json');
+const {validate,isAssertionQuestion}=require('../simulation-scope.js'),paper=require('../api/_simulations/mini-foundations.json');
 const catalog=require('../content/simulacros-catalog.json');
 test('requested mini is exactly 15 Morfo 1, 15 Morfo 8 and 20 Calvo 1, with a 50-minute deadline',()=>{
  assert.ok(validate(paper,'mini-foundations'));assert.equal(validate(paper,'first'),false);
@@ -18,6 +18,7 @@ test('every mini question cites verified official PDF pages and has one answer w
  for(const q of paper.questions){
   assert.equal(q.source.sha256,hashes[q.source.file]);assert.equal(q.coverage.curriculum,'official-pdfs-2026-10-19');
   assert.ok(q.source.pdf_pages.includes(q.source.evidence_page));assert.ok(q.source.evidence_excerpt.toLowerCase().includes(q.source.anchor.toLowerCase()));
+  assert.ok(isAssertionQuestion(q));
   assert.deepEqual(Object.keys(q.comentarios_opciones), ['A','B','C','D']);
   assert.ok(Object.values(q.comentarios_opciones).every(comment=>comment.length>30));
   assert.ok(q.justificacion.length>35);assert.equal(q.comentario,q.justificacion);assert.deepEqual(q.respuestas_aceptadas,[q.respuesta_correcta]);

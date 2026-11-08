@@ -67,8 +67,9 @@ window.createPastExamBreakdown = function (request, scope) {
 
     function reference(topic, subject) {
         const target = $('past-bibliography-copy');
+        $('past-bibliography').hidden = !topic || !subject;
         if (!topic || !subject) {
-            target.replaceChildren(node('p', 'Esta pregunta histórica todavía no tiene un tema confirmado en la bibliografía vigente.'));
+            target.replaceChildren();
             return;
         }
         const print = topic.printedPage ? ' · pág. impresa ' + topic.printedPage : '';
@@ -90,10 +91,10 @@ window.createPastExamBreakdown = function (request, scope) {
         const ordinal = (data.page - 1) * data.pageSize + cursor + 1;
         const checked = Boolean(state?.checked);
         const meta = [
-            node('span', row.type + ' · ' + row.year, 'past-meta-source'),
-            node('span', topic?.title || 'Sin tema confirmado', 'past-meta-topic')
+            node('span', row.type + ' · ' + row.year, 'past-meta-source')
         ];
-        if (subject) meta.splice(1, 0, node('span', subject.label, 'past-meta-subject'));
+        if (subject) meta.push(node('span', subject.label, 'past-meta-subject'));
+        if (topic) meta.push(node('span', topic.title, 'past-meta-topic'));
         $('past-question-meta').replaceChildren(...meta);
         $('past-question-title').textContent = 'Pregunta original ' + question.numero_original;
         $('past-question-stem').textContent = question.pregunta;
@@ -126,16 +127,13 @@ window.createPastExamBreakdown = function (request, scope) {
         check.disabled = !accepted.length || state?.selected == null;
         $('past-after-answer-next').hidden = !checked || ordinal >= data.count;
         const feedback = $('past-answer-feedback');
-        feedback.hidden = !checked && Boolean(accepted.length);
+        feedback.hidden = !checked;
         const correct = checked && accepted.includes(state.selected);
         feedback.classList.toggle('is-correct', correct);
         feedback.classList.toggle('is-incorrect', checked && !correct);
-        const keys = accepted.map(i => 'ABCDE'[i]).filter(Boolean).join(', ');
-        if (accepted.length) {
+        if (checked) {
             const result = correct ? 'Respuesta correcta.' : 'Revisa tu respuesta.';
-            feedback.replaceChildren(node('strong', result), node('span', 'Patrón original · ' + keys));
-        } else {
-            feedback.textContent = 'Esta pregunta no tiene una clave utilizable en el patrón.';
+            feedback.replaceChildren(node('strong', result));
         }
         const commentary = checked
             ? { ...QuestionReview.commentaryData(question, campo), selected: state.selected, accepted }
@@ -143,7 +141,7 @@ window.createPastExamBreakdown = function (request, scope) {
         $('past-commentary').replaceChildren(QuestionReview.showCommentary(commentary, {
             lockedMessage: checked ? '' : accepted.length
                 ? 'Comprueba tu respuesta para ver el comentario.'
-                : 'Esta pregunta no tiene una clave disponible.',
+                : 'Selecciona otra pregunta para continuar.',
         }));
         reference(topic, topic?.bibliography);
         $('past-bibliography').open = false;

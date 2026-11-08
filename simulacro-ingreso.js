@@ -20,11 +20,12 @@
     const normalized = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toUpperCase();
     const validQuestion = row =>
         row && String(campo(row, 'pregunta') || '').trim() &&
-        ['A', 'B', 'C', 'D'].includes(normalized(campo(row, 'respuesta_correcta'))) &&
+        /^[A-E]$/.test(normalized(campo(row, 'respuesta_correcta'))) &&
+        String(campo(row, 'opcion_' + normalized(campo(row, 'respuesta_correcta')).toLowerCase()) || '').trim() &&
         ['a', 'b', 'c', 'd'].every(letter => String(campo(row, 'opcion_' + letter) || '').trim());
 
     async function demoQuestions() {
-        if (!demoPromise) demoPromise = fetch('/content/simulacros_demo_2026.json?v=2', { cache: 'no-cache' })
+        if (!demoPromise) demoPromise = fetch('/content/simulacros_demo_2026.json?v=3', { cache: 'no-cache' })
             .then(response => { if (!response.ok) throw new Error('No se pudo cargar el simulacro de prueba.'); return response.json(); })
             .catch(error => { demoPromise = null; throw error; });
         return demoPromise;
@@ -60,7 +61,7 @@
             const paper=await response.json();
             const current=(await getSupabase().auth.getSession()).data.session;
             if(current?.access_token!==session.access_token || (requiresPlan(format)&&CampusAccess.isFree())) throw new Error('Tu sesión cambió. Vuelve a abrir el examen.');
-            if(paper.id!==format.pastId || paper.type!==format.type || paper.duration!==100 || paper.questions?.length!==100 || new Set(paper.questions.map(q=>q.numero_original)).size!==100 || paper.questions.some(q=>!q.pregunta||!['a','b','c','d'].every(l=>q['opcion_'+l])||!q.respuestas_aceptadas?.length)) throw new Error('El examen no contiene las 100 preguntas originales completas.');
+            if(paper.id!==format.pastId || paper.type!==format.type || paper.duration!==100 || paper.questions?.length!==100 || new Set(paper.questions.map(q=>q.numero_original)).size!==100 || paper.questions.some(q=>!q.pregunta||!['a','b','c','d'].every(l=>q['opcion_'+l])||!q.respuestas_aceptadas?.length)) throw new Error('No pudimos abrir este simulacro. Intenta de nuevo.');
             return paper.questions;
         }
         if (format.demo) {

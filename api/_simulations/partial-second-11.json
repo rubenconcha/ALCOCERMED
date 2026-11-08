@@ -766,30 +766,40 @@
       "materia": "MORFOFUNCION"
     },
     {
+      "id": "partial-second-11-umss-031",
+      "numero_original": 31,
+      "numero_pregunta": 31,
       "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "dificultad": "facil",
-      "pregunta": "En una situación de alerta, ¿qué división autónoma suele elevar la frecuencia cardiaca?",
-      "opcion_a": "La división parasimpática del sistema autónomo.",
-      "opcion_b": "La simpática.",
-      "opcion_c": "La división sensitiva somática.",
-      "opcion_d": "La división motora somática que inerva músculo esquelético.",
-      "respuesta_correcta": "B",
-      "justificacion": "La simpática.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "589–609",
-      "id": "demo-full-12",
+      "tema": "El sistema nervioso autónomo y los reflejos viscerales",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las fibras simpáticas preganglionares liberan noradrenalina en el ganglio.\n2. Las fibras simpáticas posganglionares que llegan a las glándulas sudoríparas usan noradrenalina.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "D",
       "respuestas_aceptadas": [
-        "B"
+        "D"
       ],
+      "justificacion": "1. Incorrecta. Las fibras preganglionares de ambas divisiones autónomas liberan acetilcolina en el ganglio.\n2. Incorrecta. Las fibras simpáticas posganglionares que llegan a las glándulas sudoríparas constituyen una excepción y usan acetilcolina.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Las fibras preganglionares de ambas divisiones autónomas liberan acetilcolina en el ganglio.",
+        "B": "2. Incorrecta. Las fibras simpáticas posganglionares que llegan a las glándulas sudoríparas constituyen una excepción y usan acetilcolina.",
+        "C": "1. Incorrecta. Las fibras preganglionares de ambas divisiones autónomas liberan acetilcolina en el ganglio. 2. Incorrecta. Las fibras simpáticas posganglionares que llegan a las glándulas sudoríparas constituyen una excepción y usan acetilcolina.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "truth_values": [
+        false,
+        false
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 15 · Neurotransmisores y sus receptores",
+      "paginas_pdf": "601",
+      "pagina_impresa": "573",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 15,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 31
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2024-2025-1-25",
@@ -997,30 +1007,40 @@
       "materia": "MORFOFUNCION"
     },
     {
+      "id": "partial-second-11-umss-040",
+      "numero_original": 40,
+      "numero_pregunta": 40,
       "materia": "MORFOFUNCION",
-      "tema": "sistema nervioso autonomo",
-      "dificultad": "facil",
-      "pregunta": "¿Cuántas neuronas motoras suelen intervenir entre el sistema nervioso central y un órgano visceral?",
-      "opcion_a": "Dos: una preganglionar y otra posganglionar, conectadas en un ganglio.",
-      "opcion_b": "Una única neurona desde el SNC hasta el efector visceral.",
-      "opcion_c": "Tres neuronas posganglionares en serie, sin neurona preganglionar.",
-      "opcion_d": "Ninguna neurona, porque el órgano visceral se comunica directamente con el encéfalo por hormonas.",
-      "respuesta_correcta": "A",
-      "justificacion": "Dos: una preganglionar y otra posganglionar, conectadas en un ganglio.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "589–609",
-      "id": "demo-full-41",
+      "tema": "El sistema nervioso autónomo y los reflejos viscerales",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las fibras parasimpáticas posganglionares liberan acetilcolina sobre el órgano diana.\n2. La mayoría de las fibras simpáticas posganglionares liberan noradrenalina en el órgano efector.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "C",
       "respuestas_aceptadas": [
-        "A"
+        "C"
       ],
+      "justificacion": "1. Correcta. En la división parasimpática, la fibra posganglionar utiliza acetilcolina en el órgano diana.\n2. Correcta. Casi todas las fibras posganglionares simpáticas secretan noradrenalina en el efector.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. Casi todas las fibras posganglionares simpáticas secretan noradrenalina en el efector.",
+        "B": "1. Correcta. En la división parasimpática, la fibra posganglionar utiliza acetilcolina en el órgano diana.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. En la división parasimpática, la fibra posganglionar utiliza acetilcolina en el órgano diana. 2. Correcta. Casi todas las fibras posganglionares simpáticas secretan noradrenalina en el efector."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 15 · Neurotransmisores y sus receptores",
+      "paginas_pdf": "601",
+      "pagina_impresa": "573",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 15,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 40
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2023-2024-1-10",
@@ -2038,524 +2058,647 @@
       "materia": "BIOLOGIA CELULAR"
     },
     {
-      "id": "vida-second-expansion-1-01",
-      "pregunta": "En un colegio periurbano: Se seleccionan deliberadamente experiencias de éxito y fracaso muy inusuales para comprenderlas a fondo. ¿Qué selección se describe?",
+      "id": "partial-second-11-umss-081",
+      "numero_original": 81,
+      "numero_pregunta": 81,
       "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 41,
-      "source_question_id": "2025-2026-2-41",
-      "source_sha256": "26bcbfc1cb22780b8cb9ace77f4c40099b5237e3e9358e2afd1ce91d2cd919fb",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 41.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta A: Muestreo de casos extremos.",
-      "opcion_a": "Muestreo de casos extremos.",
-      "opcion_b": "Muestreo aleatorio simple por sorteo de toda la población.",
-      "opcion_c": "Muestreo sistemático por intervalo fijo.",
-      "opcion_d": "Censo de todos los habitantes.",
-      "numero_original": 81
-    },
-    {
-      "id": "vida-second-expansion-1-02",
-      "pregunta": "En un colegio periurbano: Los primeros informantes recomiendan a otros que cumplen los criterios del estudio. ¿Qué procedimiento se utiliza?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 41,
-      "source_question_id": "2025-2026-2-41",
-      "source_sha256": "26bcbfc1cb22780b8cb9ace77f4c40099b5237e3e9358e2afd1ce91d2cd919fb",
+      "tema": "Factor de riesgo y salud comunitaria",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La restauración de la salud agrupa las medidas de prevención que se aplican antes de que aparezca la enfermedad.\n2. La edad y la herencia son factores de riesgo no modificables.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 41.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta B: Muestreo por bola de nieve.",
-      "opcion_a": "Censo completo de la población.",
-      "opcion_b": "Muestreo por bola de nieve.",
-      "opcion_c": "Muestreo aleatorio simple con probabilidades iguales conocidas.",
-      "opcion_d": "Asignación aleatoria de un tratamiento.",
-      "numero_original": 82
-    },
-    {
-      "id": "vida-second-expansion-1-03",
-      "pregunta": "En un colegio periurbano: Hay 600 personas en una lista y se desea una muestra sistemática de 60. ¿Cuál es el intervalo N/n?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7,
-        "curriculum": "past-exams-2025-2026"
+      "justificacion": "1. Incorrecta. La restauración reúne acciones orientadas a recuperar la salud o la función tras una enfermedad.\n2. Correcta. La edad, el sexo y la herencia se clasifican como factores de riesgo no modificables.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La restauración reúne acciones orientadas a recuperar la salud o la función tras una enfermedad. 2. Correcta. La edad, el sexo y la herencia se clasifican como factores de riesgo no modificables.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La restauración reúne acciones orientadas a recuperar la salud o la función tras una enfermedad.",
+        "D": "2. Correcta. La edad, el sexo y la herencia se clasifican como factores de riesgo no modificables."
       },
-      "source_numero_original": 43,
-      "source_question_id": "2025-2026-2-43",
-      "source_sha256": "3e0344c1ff13dec8c5fa6584460a87b9009697c88784ba05f3e28dbee5b36e31",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
+      "truth_values": [
+        false,
+        true
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 43.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta C: 10",
-      "opcion_a": "20",
-      "opcion_b": "660",
-      "opcion_c": "10",
-      "opcion_d": "12",
-      "numero_original": 83
-    },
-    {
-      "id": "vida-second-expansion-1-04",
-      "pregunta": "En un colegio periurbano: Se aplica muestreo sistemático a una lista. ¿Cómo debe elegirse el primer elemento para incorporar un arranque aleatorio?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 7 · factor de riesgo y salud comunitaria",
+      "paginas_pdf": "21, 22",
+      "pagina_impresa": "20, 21",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 7,
-        "curriculum": "past-exams-2025-2026"
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-second-11-umss-082",
+      "numero_original": 82,
+      "numero_pregunta": 82,
+      "materia": "SALUD PUBLICA",
+      "tema": "Factor de riesgo y salud comunitaria",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El fomento de la salud incluye fortalecer prácticas de higiene y autocuidado.\n2. El tabaquismo se clasifica como un factor de riesgo no modificable.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. El fomento de la salud fortalece prácticas que sostienen el bienestar, como la higiene y el autocuidado.\n2. Incorrecta. Un factor modificable es susceptible de cambio. El material incluye el tabaquismo en este grupo.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El fomento de la salud fortalece prácticas que sostienen el bienestar, como la higiene y el autocuidado. 2. Incorrecta. Un factor modificable es susceptible de cambio. El material incluye el tabaquismo en este grupo.",
+        "C": "2. Incorrecta. Un factor modificable es susceptible de cambio. El material incluye el tabaquismo en este grupo.",
+        "D": "1. Correcta. El fomento de la salud fortalece prácticas que sostienen el bienestar, como la higiene y el autocuidado."
       },
-      "source_numero_original": 43,
-      "source_question_id": "2025-2026-2-43",
-      "source_sha256": "3e0344c1ff13dec8c5fa6584460a87b9009697c88784ba05f3e28dbee5b36e31",
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 7 · factor de riesgo y salud comunitaria",
+      "paginas_pdf": "21, 22",
+      "pagina_impresa": "20, 21",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 7,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-second-11-umss-083",
+      "numero_original": 83,
+      "numero_pregunta": 83,
+      "materia": "SALUD PUBLICA",
+      "tema": "ODS y cobertura sanitaria",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El agua y el saneamiento corresponden al ODS 6.\n2. El ODS 2 se dedica a la disponibilidad de agua y saneamiento.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. En la figura, la disponibilidad de agua y el saneamiento corresponden al ODS 6.\n2. Incorrecta. La figura asocia el ODS 2 con terminar con el hambre.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. En la figura, la disponibilidad de agua y el saneamiento corresponden al ODS 6. 2. Incorrecta. La figura asocia el ODS 2 con terminar con el hambre.",
+        "C": "2. Incorrecta. La figura asocia el ODS 2 con terminar con el hambre.",
+        "D": "1. Correcta. En la figura, la disponibilidad de agua y el saneamiento corresponden al ODS 6."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 8 · Infografía ODS",
+      "paginas_pdf": "9",
+      "pagina_impresa": "8",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 8,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-second-11-umss-084",
+      "numero_original": 84,
+      "numero_pregunta": 84,
+      "materia": "SALUD PUBLICA",
+      "tema": "ODS y cobertura sanitaria",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El ODS 13 se orienta a la acción frente al cambio climático.\n2. El ODS 4 es el que aborda el cambio climático y sus efectos.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. El ODS 13 se dedica a enfrentar el cambio climático y sus efectos.\n2. Incorrecta. La figura identifica la educación de calidad e inclusiva con el ODS 4.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El ODS 13 se dedica a enfrentar el cambio climático y sus efectos. 2. Incorrecta. La figura identifica la educación de calidad e inclusiva con el ODS 4.",
+        "C": "2. Incorrecta. La figura identifica la educación de calidad e inclusiva con el ODS 4.",
+        "D": "1. Correcta. El ODS 13 se dedica a enfrentar el cambio climático y sus efectos."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 8 · Infografía ODS",
+      "paginas_pdf": "9",
+      "pagina_impresa": "8",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 8,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-second-11-umss-085",
+      "numero_original": 85,
+      "numero_pregunta": 85,
+      "materia": "SALUD PUBLICA",
+      "tema": "Salud en Bolivia y modelo SAFCI",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El Programa Ampliado de Inmunizaciones da prioridad al tratamiento supervisado de la tuberculosis.\n2. El Programa Nacional de Tuberculosis se orienta a mejorar la seguridad alimentaria en la primera infancia.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "D",
       "respuestas_aceptadas": [
         "D"
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 43.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta D: Sorteando una posición entre 1 y el intervalo de selección.",
-      "opcion_a": "Eligiendo siempre la posición 1 sin sorteo.",
-      "opcion_b": "Escogiendo a la persona más cercana al investigador.",
-      "opcion_c": "Preguntando solo a quienes se ofrecen voluntariamente.",
-      "opcion_d": "Sorteando una posición entre 1 y el intervalo de selección.",
-      "numero_original": 84
-    },
-    {
-      "id": "vida-second-expansion-1-05",
-      "pregunta": "En un colegio periurbano: Se sortean participantes desde un marco completo, con la misma probabilidad conocida para cada unidad. ¿Qué muestreo se describe?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7,
-        "curriculum": "past-exams-2025-2026"
+      "justificacion": "1. Incorrecta. El programa de inmunizaciones descrito utiliza vacunación y da prioridad a la niñez y a los grupos de riesgo.\n2. Incorrecta. El programa de tuberculosis del material combina detección temprana, tratamiento supervisado y vigilancia.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El programa de inmunizaciones descrito utiliza vacunación y da prioridad a la niñez y a los grupos de riesgo.",
+        "B": "2. Incorrecta. El programa de tuberculosis del material combina detección temprana, tratamiento supervisado y vigilancia.",
+        "C": "1. Incorrecta. El programa de inmunizaciones descrito utiliza vacunación y da prioridad a la niñez y a los grupos de riesgo. 2. Incorrecta. El programa de tuberculosis del material combina detección temprana, tratamiento supervisado y vigilancia.",
+        "D": "Ninguna afirmación es correcta."
       },
-      "source_numero_original": 44,
-      "source_question_id": "2025-2026-2-44",
-      "source_sha256": "31a99ef2465906c3d0de9a8283783850a94dae9bc668b4b46df4c61abce9d276",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
+      "truth_values": [
+        false,
+        false
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 44.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta A: Aleatorio simple.",
-      "opcion_a": "Aleatorio simple.",
-      "opcion_b": "Por conveniencia.",
-      "opcion_c": "De casos extremos.",
-      "opcion_d": "Por bola de nieve.",
-      "numero_original": 85
-    },
-    {
-      "id": "vida-second-expansion-1-06",
-      "pregunta": "En un colegio periurbano: El intervalo de selección coincide con un patrón periódico de la lista. ¿Cuál es el riesgo?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 9 · salud en bolivia y modelo safci",
+      "paginas_pdf": "23",
+      "pagina_impresa": "22",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 7,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 44,
-      "source_question_id": "2025-2026-2-44",
-      "source_sha256": "31a99ef2465906c3d0de9a8283783850a94dae9bc668b4b46df4c61abce9d276",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 44.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta B: Introducir sesgo al seleccionar repetidamente un mismo tipo de unidad.",
-      "opcion_a": "Eliminar cualquier error de muestreo.",
-      "opcion_b": "Introducir sesgo al seleccionar repetidamente un mismo tipo de unidad.",
-      "opcion_c": "Garantizar representatividad por el solo hecho de repetir el patrón.",
-      "opcion_d": "Convertir automáticamente la selección en un censo.",
-      "numero_original": 86
+        "chapter": 9,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-second-expansion-1-07",
-      "pregunta": "En un colegio periurbano: Un estudio cualitativo busca experiencias pertinentes y profundidad de información. ¿Qué criterio orienta la selección?",
+      "id": "partial-second-11-umss-086",
+      "numero_original": 86,
+      "numero_pregunta": 86,
       "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 45,
-      "source_question_id": "2025-2026-2-45",
-      "source_sha256": "4ba6640724b15dd41fda76cbe35c03f1b3db179e5c8df374e26865a5e42149b0",
+      "tema": "Salud en Bolivia y modelo SAFCI",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El texto describe Mi Salud como un programa que acerca atención a comunidades pobres y vulnerables.\n2. Desnutrición Cero se dirige a mejorar la nutrición en la primera infancia.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 45.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta C: La pertinencia de los participantes para comprender el fenómeno.",
-      "opcion_a": "La obligación de usar siempre un sorteo probabilístico.",
-      "opcion_b": "La elección exclusiva de personas con la misma opinión del investigador.",
-      "opcion_c": "La pertinencia de los participantes para comprender el fenómeno.",
-      "opcion_d": "La popularidad del informe entre sus futuros lectores.",
-      "numero_original": 87
-    },
-    {
-      "id": "vida-second-expansion-1-08",
-      "pregunta": "En un colegio periurbano: Se estudia la accesibilidad a servicios considerando distancia, costo y disponibilidad. ¿Qué representan esos componentes?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "justificacion": "1. Correcta. El material describe Mi Salud como una forma de acercar atención a comunidades pobres y vulnerables.\n2. Correcta. La iniciativa que describe el texto se orienta a la nutrición y la seguridad alimentaria de la primera infancia.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. La iniciativa que describe el texto se orienta a la nutrición y la seguridad alimentaria de la primera infancia.",
+        "B": "1. Correcta. El material describe Mi Salud como una forma de acercar atención a comunidades pobres y vulnerables.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. El material describe Mi Salud como una forma de acercar atención a comunidades pobres y vulnerables. 2. Correcta. La iniciativa que describe el texto se orienta a la nutrición y la seguridad alimentaria de la primera infancia."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 9 · salud en bolivia y modelo safci",
+      "paginas_pdf": "23",
+      "pagina_impresa": "22",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 11,
-        "curriculum": "past-exams-2025-2026"
+        "chapter": 9,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-second-11-umss-087",
+      "numero_original": 87,
+      "numero_pregunta": 87,
+      "materia": "SALUD PUBLICA",
+      "tema": "Epidemiología social",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La investigación clínica puede comparar la eficacia de intervenciones terapéuticas aplicadas a personas.\n2. La investigación epidemiológica se limita a los mecanismos de la enfermedad en un individuo y excluye su distribución poblacional.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. La investigación clínica compara la eficacia de intervenciones preventivas, diagnósticas o terapéuticas aplicadas a personas.\n2. Incorrecta. La investigación epidemiológica analiza cómo se distribuyen las necesidades de salud, con qué frecuencia aparecen y qué las determina.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La investigación clínica compara la eficacia de intervenciones preventivas, diagnósticas o terapéuticas aplicadas a personas. 2. Incorrecta. La investigación epidemiológica analiza cómo se distribuyen las necesidades de salud, con qué frecuencia aparecen y qué las determina.",
+        "C": "2. Incorrecta. La investigación epidemiológica analiza cómo se distribuyen las necesidades de salud, con qué frecuencia aparecen y qué las determina.",
+        "D": "1. Correcta. La investigación clínica compara la eficacia de intervenciones preventivas, diagnósticas o terapéuticas aplicadas a personas."
       },
-      "source_numero_original": 46,
-      "source_question_id": "2025-2026-2-46",
-      "source_sha256": "7326d79a70a92f67835ca1feb73601f7bd5c4c54b8a347c6e367fc89719be045",
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 10 · epidemiologia social",
+      "paginas_pdf": "35",
+      "pagina_impresa": "28",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 10,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-second-11-umss-088",
+      "numero_original": 88,
+      "numero_pregunta": 88,
+      "materia": "SALUD PUBLICA",
+      "tema": "Proceso de investigación",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Durante la planificación se recolectan e interpretan los datos del estudio.\n2. El informe final se redacta antes de la ejecución para fijar el diseño de la investigación.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "D",
       "respuestas_aceptadas": [
         "D"
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 46.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta D: Dimensiones de una variable compleja que requieren indicadores definidos.",
-      "opcion_a": "Tres nombres equivalentes que no necesitan definición.",
-      "opcion_b": "Tres resultados que deben ser idénticos en todos los participantes.",
-      "opcion_c": "Categorías elegidas después para impedir cualquier medición.",
-      "opcion_d": "Dimensiones de una variable compleja que requieren indicadores definidos.",
-      "numero_original": 88
-    },
-    {
-      "id": "vida-second-expansion-1-09",
-      "pregunta": "En un colegio periurbano: Se incluyen deliberadamente residentes rurales, urbanos y periurbanos para explorar diversidad de experiencias. ¿Qué selección se describe?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 7,
-        "curriculum": "past-exams-2025-2026"
+      "justificacion": "1. Incorrecta. En la planificación se toman decisiones sobre qué investigar, con qué base teórica y cómo hacerlo.\n2. Incorrecta. El informe final recoge los resultados del estudio y permite darlos a conocer.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. En la planificación se toman decisiones sobre qué investigar, con qué base teórica y cómo hacerlo.",
+        "B": "2. Incorrecta. El informe final recoge los resultados del estudio y permite darlos a conocer.",
+        "C": "1. Incorrecta. En la planificación se toman decisiones sobre qué investigar, con qué base teórica y cómo hacerlo. 2. Incorrecta. El informe final recoge los resultados del estudio y permite darlos a conocer.",
+        "D": "Ninguna afirmación es correcta."
       },
-      "source_numero_original": 47,
-      "source_question_id": "2025-2026-2-47",
-      "source_sha256": "113486f3b06c186ed3fa44448a8ed4a7d7dc8f6130b85756deb74debed437b47",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
+      "truth_values": [
+        false,
+        false
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 47.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta A: Muestreo de máxima variabilidad.",
-      "opcion_a": "Muestreo de máxima variabilidad.",
-      "opcion_b": "Muestreo que exige incluir un único perfil homogéneo.",
-      "opcion_c": "Sorteo aleatorio simple por el solo hecho de incluir tres lugares.",
-      "opcion_d": "Censo nacional por el solo hecho de incluir tres grupos.",
-      "numero_original": 89
-    },
-    {
-      "id": "vida-second-expansion-1-10",
-      "pregunta": "En un colegio periurbano: Un sector de la población queda sistemáticamente subrepresentado. ¿Qué problema aparece?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 11 · proceso de investigacion",
+      "paginas_pdf": "41, 44",
+      "pagina_impresa": "34, 37",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 7,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 49,
-      "source_question_id": "2025-2026-2-49",
-      "source_sha256": "c2ddb0c6d3bc4dcab5ece25bab6ee2aa162abe0d7d645e9a29dd0442a5272aa0",
+        "chapter": 11,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-second-11-umss-089",
+      "numero_original": 89,
+      "numero_pregunta": 89,
+      "materia": "SALUD PUBLICA",
+      "tema": "Epidemiología social",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La investigación en sistemas de salud se limita a comparar dos tratamientos aplicados a un paciente.\n2. La investigación biomédica estudia mecanismos relacionados con la salud y la enfermedad a nivel individual.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 49.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta B: Sesgo de selección o de muestreo.",
-      "opcion_a": "Conversión automática de la muestra en población.",
-      "opcion_b": "Sesgo de selección o de muestreo.",
-      "opcion_c": "Ausencia garantizada de error.",
-      "opcion_d": "Asignación aleatoria de tratamientos.",
-      "numero_original": 90
-    },
-    {
-      "id": "vida-second-expansion-1-11",
-      "pregunta": "En un colegio periurbano: El estado civil se registra con códigos 1, 2 y 3. ¿Qué significado tienen esos números en una escala nominal?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "justificacion": "1. Incorrecta. La investigación en sistemas de salud estudia cómo se organiza la respuesta social ante problemas de salud de la población.\n2. Correcta. La investigación biomédica estudia procesos y mecanismos de salud y enfermedad, principalmente en el individuo.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La investigación en sistemas de salud estudia cómo se organiza la respuesta social ante problemas de salud de la población. 2. Correcta. La investigación biomédica estudia procesos y mecanismos de salud y enfermedad, principalmente en el individuo.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La investigación en sistemas de salud estudia cómo se organiza la respuesta social ante problemas de salud de la población.",
+        "D": "2. Correcta. La investigación biomédica estudia procesos y mecanismos de salud y enfermedad, principalmente en el individuo."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 10 · epidemiologia social",
+      "paginas_pdf": "35",
+      "pagina_impresa": "28",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 11,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 50,
-      "source_question_id": "2025-2026-2-50",
-      "source_sha256": "49fdd7d3dd35dc589f1813b84c945d9ac0d6f686a74a170f2253cc833f8b9f25",
+        "chapter": 10,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-second-11-umss-090",
+      "numero_original": 90,
+      "numero_pregunta": 90,
+      "materia": "SALUD PUBLICA",
+      "tema": "Proceso de investigación",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El protocolo deja por escrito decisiones adoptadas durante la planificación.\n2. En la ejecución se aplica el diseño y se recogen y procesan los datos.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 50.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta C: Identifican categorías sin expresar orden ni magnitud.",
-      "opcion_a": "Miden distancias físicas iguales entre estados civiles.",
-      "opcion_b": "Convierten el estado civil en una variable continua.",
-      "opcion_c": "Identifican categorías sin expresar orden ni magnitud.",
-      "opcion_d": "Indican que la categoría 3 tiene el triple de estado civil que la 1.",
-      "numero_original": 91
+      "justificacion": "1. Correcta. El protocolo es el documento en el que se explicitan decisiones tomadas durante la planificación.\n2. Correcta. La ejecución lleva a la práctica el diseño. Incluye recolectar, procesar e interpretar los datos.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. La ejecución lleva a la práctica el diseño. Incluye recolectar, procesar e interpretar los datos.",
+        "B": "1. Correcta. El protocolo es el documento en el que se explicitan decisiones tomadas durante la planificación.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. El protocolo es el documento en el que se explicitan decisiones tomadas durante la planificación. 2. Correcta. La ejecución lleva a la práctica el diseño. Incluye recolectar, procesar e interpretar los datos."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 11 · proceso de investigacion",
+      "paginas_pdf": "41, 44",
+      "pagina_impresa": "34, 37",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 11,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-second-expansion-1-12",
-      "pregunta": "En un colegio periurbano: El grupo afectado identifica un problema, participa en los cambios y evalúa la mejora. ¿Qué diseño se aproxima a esa finalidad?",
+      "id": "partial-second-11-umss-091",
+      "numero_original": 91,
+      "numero_pregunta": 91,
       "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "tema": "Problema y objetivos de investigación",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Delimitar el problema consiste en ampliar el estudio hasta abarcar toda la realidad a la que pertenece.\n2. Los objetivos especifican lo que se espera lograr mediante el estudio.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "justificacion": "1. Incorrecta. Delimitar el problema concreta el alcance y centra la investigación en una parte de la realidad.\n2. Correcta. Los objetivos expresan lo que se espera lograr y precisan el alcance del estudio.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Delimitar el problema concreta el alcance y centra la investigación en una parte de la realidad. 2. Correcta. Los objetivos expresan lo que se espera lograr y precisan el alcance del estudio.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Delimitar el problema concreta el alcance y centra la investigación en una parte de la realidad.",
+        "D": "2. Correcta. Los objetivos expresan lo que se espera lograr y precisan el alcance del estudio."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 12 · problema y objetivos de investigacion",
+      "paginas_pdf": "53, 55, 56, 59",
+      "pagina_impresa": "46, 48, 49, 52",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 12,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-second-11-umss-092",
+      "numero_original": 92,
+      "numero_pregunta": 92,
+      "materia": "SALUD PUBLICA",
+      "tema": "Problema y objetivos de investigación",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La viabilidad se establece a partir de los beneficios esperados, sin valorar los recursos y el tiempo disponibles.\n2. La justificación explica para qué pueden ser útiles los resultados del estudio.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "justificacion": "1. Incorrecta. Evaluar la viabilidad supone comprobar si hay tiempo, personal, equipo y recursos económicos para realizar el estudio.\n2. Correcta. La justificación explica la conveniencia del estudio, sus beneficios y la utilidad esperada de los resultados.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Evaluar la viabilidad supone comprobar si hay tiempo, personal, equipo y recursos económicos para realizar el estudio. 2. Correcta. La justificación explica la conveniencia del estudio, sus beneficios y la utilidad esperada de los resultados.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Evaluar la viabilidad supone comprobar si hay tiempo, personal, equipo y recursos económicos para realizar el estudio.",
+        "D": "2. Correcta. La justificación explica la conveniencia del estudio, sus beneficios y la utilidad esperada de los resultados."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 12 · problema y objetivos de investigacion",
+      "paginas_pdf": "53, 55, 56, 59",
+      "pagina_impresa": "46, 48, 49, 52",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 12,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-second-11-umss-093",
+      "numero_original": 93,
+      "pregunta": "¿Cuál es la característica definitoria de los estudios observacionales no experimentales?\n1.- Se manipulan todas las variables.\n2.- Se realizan en laboratorios cerrados.\n3.- Dejan que la naturaleza siga su curso y no se manipulan las condiciones.\nCARRERA DE MEDICINA\nCBBA, 19 de enero de 2026",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "materia": "SALUD PUBLICA",
+      "tema": "Epidemiología social",
+      "source_question_id": "2025-2026-1-100",
+      "source_sha256": "482261424bab89916cdc62710601c46ef6f9491abb14290d056f8759af145e45",
+      "source_numero_original": 100,
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026-1"
+      },
+      "numero_pregunta": 93
+    },
+    {
+      "id": "partial-second-11-umss-094",
+      "numero_original": 94,
+      "pregunta": "La investigación-acción se utiliza cuando:\n1.- Existe la necesidad de resolver un problema.\n2-Se requiere la participación de los afectados.\n3.- Se busca mejorar la calidad de la acción.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 10,
         "curriculum": "past-exams-2025-2026"
       },
-      "source_numero_original": 91,
       "source_question_id": "2025-2026-2-91",
       "source_sha256": "b492b257a147b6e2275f0c9dd27c182843516cdfa196b5ea929cef791dfcace6",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 91.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta D: Investigación-acción.",
-      "opcion_a": "Un diseño que excluye toda participación de los afectados.",
-      "opcion_b": "Un inventario de materiales sin relación con el problema.",
-      "opcion_c": "Un ensayo aleatorizado por el solo hecho de reunirse en grupo.",
-      "opcion_d": "Investigación-acción.",
-      "numero_original": 92
+      "source_numero_original": 91,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 10",
+      "numero_pregunta": 94
     },
     {
-      "id": "vida-second-expansion-1-13",
-      "pregunta": "En un colegio periurbano: Se busca comprender en profundidad el significado de una experiencia mediante entrevistas. ¿Qué enfoque resulta congruente?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 10,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 92,
-      "source_question_id": "2025-2026-2-92",
-      "source_sha256": "a50f897363d9d62c1f3fd4151db7c1c3ce3cd3ba2d8a16836e95c01c3e6189c7",
-      "respuesta_correcta": "A",
+      "id": "partial-second-11-umss-095",
+      "numero_original": 95,
+      "pregunta": "1.- En el muestreo aleatorio simple, cada unidad de la población tiene una probabilidad equitativa y conocida de ser incluida en la muestra.\n2-El muestreo sistemático puede introducir sesgos si el intervalo de selección coincide con una variación ciclica o sistemática en la población (ej. casas de esquina).",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
       "respuestas_aceptadas": [
-        "A"
+        "C"
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 92.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta A: Cualitativo.",
-      "opcion_a": "Cualitativo.",
-      "opcion_b": "Exclusivamente un recuento estadístico sin interpretar experiencias.",
-      "opcion_c": "Un censo por el solo hecho de entrevistar.",
-      "opcion_d": "Una prueba de laboratorio como única fuente admisible.",
-      "numero_original": 93
-    },
-    {
-      "id": "vida-second-expansion-1-14",
-      "pregunta": "En un colegio periurbano: ¿Qué papel tiene el grupo afectado en la investigación-acción?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 10,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 93,
-      "source_question_id": "2025-2026-2-93",
-      "source_sha256": "dc7cd65968ce0b37736a372551d5ad449dd32c5f9a178a4c424dd64e4fdf137a",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 93.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta B: Participa activamente en comprender el problema y mejorar la acción.",
-      "opcion_a": "Participa únicamente si desconoce el objetivo de cualquier cambio.",
-      "opcion_b": "Participa activamente en comprender el problema y mejorar la acción.",
-      "opcion_c": "Solo recibe decisiones externas y no puede discutirlas.",
-      "opcion_d": "Debe quedar excluido de la identificación del problema.",
-      "numero_original": 94
-    },
-    {
-      "id": "vida-second-expansion-1-15",
-      "pregunta": "En un colegio periurbano: ¿Qué condición distingue al muestreo probabilístico?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 7,
         "curriculum": "past-exams-2025-2026"
       },
-      "source_numero_original": 94,
-      "source_question_id": "2025-2026-2-94",
-      "source_sha256": "1765e763bf7569f7d1c8bf9fb02b8eb924dbf7d82f4abdf1b4f24ad6e6408f01",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 94.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta C: Cada unidad tiene una probabilidad de selección conocida y mayor que cero.",
-      "opcion_a": "Exige seleccionar exclusivamente a los casos más accesibles.",
-      "opcion_b": "Prohíbe que puedan obtenerse muestras distintas de una población.",
-      "opcion_c": "Cada unidad tiene una probabilidad de selección conocida y mayor que cero.",
-      "opcion_d": "Solo puede aplicarse si todas las personas son voluntarias.",
-      "numero_original": 95
+      "source_question_id": "2025-2026-2-44",
+      "source_sha256": "31a99ef2465906c3d0de9a8283783850a94dae9bc668b4b46df4c61abce9d276",
+      "source_numero_original": 44,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 7",
+      "numero_pregunta": 95
     },
     {
-      "id": "vida-second-expansion-1-16",
-      "pregunta": "En un colegio periurbano: Se seleccionan escuelas y luego se miden variables de cada estudiante. ¿Qué distinción corresponde?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 12,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 95,
-      "source_question_id": "2025-2026-2-95",
-      "source_sha256": "a4da465611d9f5a02af5c16135274d3b4b5fb64efa371b5bc35f211120323f99",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 95.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta D: La escuela puede ser unidad de muestreo y el estudiante unidad de análisis.",
-      "opcion_a": "La unidad de análisis siempre debe ser idéntica a la unidad de muestreo.",
-      "opcion_b": "El estudiante deja de ser observable porque se seleccionaron escuelas.",
-      "opcion_c": "La unidad de muestreo es obligatoriamente el promedio de las notas.",
-      "opcion_d": "La escuela puede ser unidad de muestreo y el estudiante unidad de análisis.",
-      "numero_original": 96
-    },
-    {
-      "id": "vida-second-expansion-1-17",
-      "pregunta": "En un colegio periurbano: Una investigación evalúa características de centros educativos. ¿Cuál puede ser su unidad de estudio?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 12,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 97,
-      "source_question_id": "2025-2026-2-97",
-      "source_sha256": "8bbf82049b2e64b3a07a4ead890b54277cf405933ccf635a8873c0900eb1d3ed",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 97.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta A: Cada centro educativo definido en la población.",
-      "opcion_a": "Cada centro educativo definido en la población.",
-      "opcion_b": "Solo una persona, porque las instituciones nunca pueden ser unidades.",
-      "opcion_c": "Únicamente el investigador que analiza las instituciones.",
-      "opcion_d": "El número de páginas del informe en cualquier estudio.",
-      "numero_original": 97
-    },
-    {
-      "id": "vida-second-expansion-1-18",
-      "pregunta": "En un colegio periurbano: Se reconstruyen experiencias a través de historias de vida. ¿Qué diseño cualitativo se describe?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 10,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 98,
-      "source_question_id": "2025-2026-2-98",
-      "source_sha256": "e82ffc944c242236ebc2077c4915aac6dd316c8fd7f0475f16093edb330f6f63",
+      "id": "partial-second-11-umss-096",
+      "numero_original": 96,
+      "pregunta": "1.-Según Fisher, cuando los fenómenos son muy homogéneos, se requieren muestras más grandes para detectar las diferencias33.\n2- Si se utiliza la fórmula basada en cruce de variables, cuanto más pequeña sea la proporción esperada de la variable independiente, mayor deberá ser el tamaño de la muestra.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 98.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta B: Narrativo.",
-      "opcion_a": "Un diseño limitado exclusivamente a contar equipos.",
-      "opcion_b": "Narrativo.",
-      "opcion_c": "Un ensayo clínico aleatorizado por definición.",
-      "opcion_d": "Un estudio que prohíbe cualquier relato personal.",
-      "numero_original": 98
-    },
-    {
-      "id": "vida-second-expansion-1-19",
-      "pregunta": "En un colegio periurbano: ¿Qué combinación de fuentes es congruente con un diseño narrativo?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 10,
+        "chapter": 12,
         "curriculum": "past-exams-2025-2026"
       },
-      "source_numero_original": 99,
-      "source_question_id": "2025-2026-2-99",
-      "source_sha256": "aabec16d5fea7b4cdd8be285870984ca03176b95774cbadd0ec205491c4a1520",
-      "respuesta_correcta": "C",
+      "source_question_id": "2025-2026-2-48",
+      "source_sha256": "8779c50a3bf581303476e64e88881d8e29f2e64866993537b9edb5da51cd7d97",
+      "source_numero_original": 48,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 12",
+      "numero_pregunta": 96
+    },
+    {
+      "id": "partial-second-11-umss-097",
+      "numero_original": 97,
+      "pregunta": "1.- Los conceptos son construcciones lógicas abstractas que no existen fuera del marco de referencia establecido y no son fenómenos en sí mismos.\n2.- Una variable compleja como \"Accesibilidad a servicios de salud\" puede medirse con un solo indicador simple sin necesidad de definir dimensiones previas.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "C"
+        "A"
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 99.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta C: Biografías, autobiografías, testimonios y entrevistas.",
-      "opcion_a": "Solo el presupuesto y los recibos del proyecto.",
-      "opcion_b": "Exclusivamente el nombre del software de análisis.",
-      "opcion_c": "Biografías, autobiografías, testimonios y entrevistas.",
-      "opcion_d": "Únicamente una tabla de números sin relatos.",
-      "numero_original": 99
-    },
-    {
-      "id": "vida-second-expansion-1-20",
-      "pregunta": "En un colegio periurbano: Una narración se centra en una experiencia concreta y otra recorre una vida completa. ¿Qué alcance puede ser válido?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Muestreo, variables y diseños cualitativos",
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 10,
+        "chapter": 11,
         "curriculum": "past-exams-2025-2026"
       },
-      "source_numero_original": 100,
-      "source_question_id": "2025-2026-2-100",
-      "source_sha256": "cd90aca1e73962da8b46a2162940c0e19a0e876c9966744f7006b5ff9f71c39b",
+      "source_question_id": "2025-2026-2-46",
+      "source_sha256": "7326d79a70a92f67835ca1feb73601f7bd5c4c54b8a347c6e367fc89719be045",
+      "source_numero_original": 46,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 11",
+      "numero_pregunta": 97
+    },
+    {
+      "id": "partial-second-11-umss-098",
+      "numero_original": 98,
+      "pregunta": "1.Un diseño común de la investigación cualitativa son los ensayos clinicos controlados.\n2-Entre los diseños de la investigación cualitativa están los cartográficos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
       "respuesta_correcta": "D",
       "respuestas_aceptadas": [
         "D"
       ],
-      "fuente": "Concepto evaluado en el segundo parcial 2025–2026 · pregunta 100.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta D: Ambos, según la pregunta y el diseño del estudio.",
-      "opcion_a": "Solo la vida completa: un episodio nunca puede estudiarse.",
-      "opcion_b": "Solo el episodio: una historia de vida nunca puede estudiarse.",
-      "opcion_c": "Ninguno, porque el diseño narrativo excluye experiencias personales.",
-      "opcion_d": "Ambos, según la pregunta y el diseño del estudio.",
-      "numero_original": 100
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 10,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-42",
+      "source_sha256": "836b8ce7d434289123aec0ebfadf6861dd1f46d129a27a8360c462daf819616f",
+      "source_numero_original": 42,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 10",
+      "numero_pregunta": 98
+    },
+    {
+      "id": "partial-second-11-umss-099",
+      "numero_original": 99,
+      "pregunta": "1.- Al codificar variables nominales (ej. Soltero=1, Casado=2), el número asignado representa un orden jerárquico o magnitud de la variable.\n2.- En la escala nominal, los números sirven exclusivamente para categorizar o identificar, sin implicar que una categoría sea mayor",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 11,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-2-50",
+      "source_sha256": "49fdd7d3dd35dc589f1813b84c945d9ac0d6f686a74a170f2253cc833f8b9f25",
+      "source_numero_original": 50,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 11",
+      "numero_pregunta": 99
+    },
+    {
+      "id": "partial-second-11-umss-100",
+      "numero_original": 100,
+      "pregunta": "Ley 1152 financiamiento:\n1.- El Tesoro General de la Nación no financiarán los recursos humanos en salud del subsector público y el funcionamiento de los Programas Nacionales de Salud.\n2.- El financiamiento de los Productos en Salud correspondientes al Tercer y Cuarto Nivel de Atención, serán cubiertos con recursos provenientes de la gobernación.\n3.- Los Gobiernos Autónomos Municipales e indígena Originario Campesinos, garantizan el acceso a la salud de su población en el segundo y tercer nivel de atención.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "E",
+      "respuestas_aceptadas": [
+        "E"
+      ],
+      "fuente": "Examen pasado · Gestión 2022–2023 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "materia": "SALUD PUBLICA",
+      "tema": "Salud en Bolivia y modelo SAFCI",
+      "source_question_id": "2022-2023-1-100",
+      "source_sha256": "ac2884c6288e11f706e6281a7b1569cb6ff72bbe360d41baf724435403c44540",
+      "source_numero_original": 100,
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 9,
+        "curriculum": "past-exams-2022-2023-1"
+      },
+      "numero_pregunta": 100
     }
   ],
   "review": {

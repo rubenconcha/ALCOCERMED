@@ -1228,28 +1228,40 @@
       "tema": "Tema 16"
     },
     {
-      "id": "sim-second-callosum-74",
+      "id": "partial-second-umss-049",
       "numero_original": 49,
-      "pregunta": "Una descripción confunde la estructura que separa los hemisferios cerebrales con la que los conecta mediante fibras. ¿Qué corrección corresponde?",
-      "opcion_a": "La cisura interhemisférica separa los hemisferios; el cuerpo calloso los conecta mediante fibras nerviosas.",
-      "opcion_b": "El cuerpo calloso es la ranura profunda que separa ambos hemisferios.",
-      "opcion_c": "La cisura interhemisférica es el haz de axones que comunica ambos hemisferios.",
-      "opcion_d": "El cuerpo calloso comunica exclusivamente el cerebelo con la médula espinal.",
-      "respuesta_correcta": "A",
+      "numero_pregunta": 49,
+      "materia": "MORFOFUNCION",
+      "tema": "El encéfalo y los pares craneales",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El cuerpo calloso es la ranura mediana que separa los hemisferios cerebrales.\n2. El cuerpo calloso conecta ambos hemisferios mediante fibras nerviosas.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
       "respuestas_aceptadas": [
-        "A"
+        "B"
       ],
+      "justificacion": "1. Incorrecta. La ranura se denomina cisura interhemisférica. El cuerpo calloso es un haz de fibras.\n2. Correcta. El texto sitúa ese haz en la parte inferior de la cisura interhemisférica.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La ranura se denomina cisura interhemisférica. El cuerpo calloso es un haz de fibras. 2. Correcta. El texto sitúa ese haz en la parte inferior de la cisura interhemisférica.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La ranura se denomina cisura interhemisférica. El cuerpo calloso es un haz de fibras.",
+        "D": "2. Correcta. El texto sitúa ese haz en la parte inferior de la cisura interhemisférica."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 14 · Hemisferios cerebrales / cap. 14 · Hemisferios cerebrales, figura 14.2",
+      "paginas_pdf": "542, 543",
+      "pagina_impresa": "514, 515",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 14,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "fuente": "Saladin · capítulo 14 · PDF 542–543 (libro 514–515)",
-      "comentario": "Correcta A: distingue una cisura anatómica de un haz de fibras que conecta los hemisferios. B atribuye la separación al haz; C convierte la cisura en fibras; D cambia las estructuras comunicadas. Síntesis original del texto y figura 14.2.",
-      "source_question_id": null,
-      "source_numero_original": 74,
-      "materia": "MORFOFUNCION",
-      "tema": "Tema 14"
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2025-2026-2-75",
@@ -2397,30 +2409,40 @@
       "tema": "Tema 7"
     },
     {
-      "id": "2025-2026-2-95",
+      "id": "partial-second-umss-095",
       "numero_original": 95,
-      "pregunta": "¿Qué diferencia existe entre unidad de análisis y unidad de muestreo?",
+      "numero_pregunta": 95,
+      "materia": "SALUD PUBLICA",
+      "tema": "Problema y objetivos de investigación",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si se seleccionan escuelas y se mide la edad de cada estudiante, cada estudiante puede ser una unidad de análisis.\n2. La unidad de análisis debe coincidir siempre con el grupo que se selecciona inicialmente.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Correcta A. La unidad de análisis es aquella donde se miden las variables; puede diferir de la unidad seleccionada durante el muestreo. Adaptación del concepto evaluado en el examen de referencia; se eliminó la clave ambigua.",
+      "justificacion": "1. Correcta. La unidad de análisis es el elemento que se investiga. En este caso la característica se registra para cada estudiante.\n2. Incorrecta. El muestreo por conglomerados puede seleccionar primero grupos. Las características estudiadas pueden corresponder a las unidades que integran esos grupos.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La unidad de análisis es el elemento que se investiga. En este caso la característica se registra para cada estudiante. 2. Incorrecta. El muestreo por conglomerados puede seleccionar primero grupos. Las características estudiadas pueden corresponder a las unidades que integran esos grupos.",
+        "C": "2. Incorrecta. El muestreo por conglomerados puede seleccionar primero grupos. Las características estudiadas pueden corresponder a las unidades que integran esos grupos.",
+        "D": "1. Correcta. La unidad de análisis es el elemento que se investiga. En este caso la característica se registra para cada estudiante."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 12 · Unidad de análisis y selección por conglomerados",
+      "paginas_pdf": "89, 101",
+      "pagina_impresa": "14, 26",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 12,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_question_id": "2025-2026-2-95",
-      "source_sha256": "a4da465611d9f5a02af5c16135274d3b4b5fb64efa371b5bc35f211120323f99",
-      "opcion_a": "La unidad de análisis es aquella donde se miden las variables; puede diferir de la unidad seleccionada durante el muestreo.",
-      "opcion_b": "Ambas unidades coinciden obligatoriamente en cualquier estudio.",
-      "opcion_c": "La unidad de análisis es siempre la totalidad del país.",
-      "opcion_d": "La unidad de muestreo no puede identificarse antes de recoger los datos.",
-      "adaptation": "Se sustituye una pregunta con dos respuestas aceptadas por una alternativa única que conserva el concepto original.",
-      "source_numero_original": 95,
-      "materia": "SALUD PUBLICA",
-      "tema": "Tema 12"
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2025-2026-2-96",
@@ -2449,30 +2471,40 @@
       "tema": "Tema 10"
     },
     {
-      "id": "2025-2026-2-97",
+      "id": "partial-second-umss-097",
       "numero_original": 97,
-      "pregunta": "En investigación, ¿qué puede constituir un elemento o unidad de estudio?",
-      "respuesta_correcta": "A",
+      "numero_pregunta": 97,
+      "materia": "SALUD PUBLICA",
+      "tema": "Problema y objetivos de investigación",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Un acontecimiento puede constituir una unidad de análisis si es el elemento que se investiga.\n2. Si el estudio observa características de objetos, cada objeto estudiado puede ser una unidad de análisis.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "C",
       "respuestas_aceptadas": [
-        "A"
+        "C"
       ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Correcta A. Una persona, una institución, un evento o un objeto, según la población definida. Adaptación del concepto evaluado en el examen de referencia; se eliminó la clave ambigua.",
+      "justificacion": "1. Correcta. El texto admite personas, objetos, grupos y acontecimientos como unidades de análisis.\n2. Correcta. La unidad se define por el elemento observado y por las características que interesan al estudio.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. La unidad se define por el elemento observado y por las características que interesan al estudio.",
+        "B": "1. Correcta. El texto admite personas, objetos, grupos y acontecimientos como unidades de análisis.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. El texto admite personas, objetos, grupos y acontecimientos como unidades de análisis. 2. Correcta. La unidad se define por el elemento observado y por las características que interesan al estudio."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 12 · Unidad de análisis o de investigación",
+      "paginas_pdf": "89",
+      "pagina_impresa": "14",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 12,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_question_id": "2025-2026-2-97",
-      "source_sha256": "8bbf82049b2e64b3a07a4ead890b54277cf405933ccf635a8873c0900eb1d3ed",
-      "opcion_a": "Una persona, una institución, un evento o un objeto, según la población definida.",
-      "opcion_b": "Exclusivamente una persona que recibe atención médica.",
-      "opcion_c": "Solo el investigador responsable del proyecto.",
-      "opcion_d": "Solo una cifra obtenida al calcular el promedio de la muestra.",
-      "adaptation": "Se aclara la unidad de estudio y se elimina la doble clave A/C del patrón histórico.",
-      "source_numero_original": 97,
-      "materia": "SALUD PUBLICA",
-      "tema": "Tema 12"
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2025-2026-2-98",
@@ -2527,30 +2559,40 @@
       "tema": "Tema 10"
     },
     {
-      "id": "2025-2026-2-100",
+      "id": "partial-second-umss-100",
       "numero_original": 100,
-      "pregunta": "En un diseño narrativo, ¿qué alcance puede tener el relato estudiado?",
+      "numero_pregunta": 100,
+      "materia": "SALUD PUBLICA",
+      "tema": "Epidemiología social",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La investigación biomédica estudia mecanismos relacionados con la salud y la enfermedad a nivel individual.\n2. La investigación epidemiológica se limita a los mecanismos de la enfermedad en un individuo y excluye su distribución poblacional.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
-      "fuente": "Examen pasado · Gestión 2025–2026 · Segundo parcial",
-      "comentario": "Correcta A. Toda una historia de vida o un episodio concreto de ella. Adaptación del concepto evaluado en el examen de referencia; se eliminó la clave ambigua.",
+      "justificacion": "1. Correcta. La investigación biomédica estudia procesos y mecanismos de salud y enfermedad, principalmente en el individuo.\n2. Incorrecta. La investigación epidemiológica analiza cómo se distribuyen las necesidades de salud, con qué frecuencia aparecen y qué las determina.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La investigación biomédica estudia procesos y mecanismos de salud y enfermedad, principalmente en el individuo. 2. Incorrecta. La investigación epidemiológica analiza cómo se distribuyen las necesidades de salud, con qué frecuencia aparecen y qué las determina.",
+        "C": "2. Incorrecta. La investigación epidemiológica analiza cómo se distribuyen las necesidades de salud, con qué frecuencia aparecen y qué las determina.",
+        "D": "1. Correcta. La investigación biomédica estudia procesos y mecanismos de salud y enfermedad, principalmente en el individuo."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 10 · epidemiologia social",
+      "paginas_pdf": "35",
+      "pagina_impresa": "28",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 10,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_question_id": "2025-2026-2-100",
-      "source_sha256": "cd90aca1e73962da8b46a2162940c0e19a0e876c9966744f7006b5ff9f71c39b",
-      "opcion_a": "Toda una historia de vida o un episodio concreto de ella.",
-      "opcion_b": "Solo cifras anónimas, sin relatos ni experiencias.",
-      "opcion_c": "Únicamente el inventario de equipos del investigador.",
-      "opcion_d": "Exclusivamente los resultados de un ensayo clínico aleatorizado.",
-      "adaptation": "Se elimina la doble clave A/C conservando los dos alcances narrativos válidos del original.",
-      "source_numero_original": 100,
-      "materia": "SALUD PUBLICA",
-      "tema": "Tema 10"
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     }
   ],
   "review": {

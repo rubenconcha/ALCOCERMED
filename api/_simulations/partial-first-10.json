@@ -56,56 +56,76 @@
       "tema": "Tema 2"
     },
     {
+      "id": "partial-first-10-umss-003",
+      "numero_original": 3,
+      "numero_pregunta": 3,
       "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "dificultad": "facil",
-      "pregunta": "¿Qué estructura separa el interior celular del líquido que la rodea y regula intercambios?",
-      "opcion_a": "La membrana mitocondrial interna.",
-      "opcion_b": "La membrana plasmática.",
-      "opcion_c": "La envoltura nuclear.",
-      "opcion_d": "La membrana del aparato de Golgi.",
-      "respuesta_correcta": "B",
-      "justificacion": "La membrana plasmática.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "106–141",
-      "id": "demo-full-10",
+      "tema": "Forma y función celulares",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En la transcitosis, la endocitosis y la exocitosis ocurren en la misma cara de la célula.\n2. Los electrólitos en disolución acuosa conducen corriente gracias a moléculas neutras en vez de iones.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "D",
       "respuestas_aceptadas": [
-        "B"
+        "D"
       ],
+      "justificacion": "1. Incorrecta. En la transcitosis, la endocitosis ocurre en una cara y la exocitosis en la opuesta.\n2. Incorrecta. Al disociarse en agua, el electrólito aporta iones que permiten el paso de corriente.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. En la transcitosis, la endocitosis ocurre en una cara y la exocitosis en la opuesta.",
+        "B": "2. Incorrecta. Al disociarse en agua, el electrólito aporta iones que permiten el paso de corriente.",
+        "C": "1. Incorrecta. En la transcitosis, la endocitosis ocurre en una cara y la exocitosis en la opuesta. 2. Incorrecta. Al disociarse en agua, el electrólito aporta iones que permiten el paso de corriente.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "truth_values": [
+        false,
+        false
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 3 · Transporte vesicular / cap. 2 · Radicales libres / Iones",
+      "paginas_pdf": "75, 128",
+      "pagina_impresa": "47, 100",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 3,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 3
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
+      "id": "partial-first-10-umss-004",
+      "numero_original": 4,
+      "numero_pregunta": 4,
       "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "dificultad": "facil",
-      "pregunta": "¿Qué hace un ribosoma con la información del ARN mensajero?",
-      "opcion_a": "La copia como una nueva molécula de ADN.",
-      "opcion_b": "La transcribe para producir otro ARN mensajero.",
-      "opcion_c": "La traduce en una secuencia de aminoácidos para formar una proteína.",
-      "opcion_d": "La convierte directamente en una cadena de nucleótidos de ADN.",
-      "respuesta_correcta": "C",
-      "justificacion": "La traduce en una secuencia de aminoácidos para formar una proteína.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "142–170",
-      "id": "demo-full-29",
+      "tema": "Genética y función celular",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Cada molécula hija de ADN conserva una hebra parental y contiene una hebra nueva.\n2. Durante la transcripción, un ARN sirve de molde para sintetizar ADN.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "C"
+        "A"
       ],
+      "justificacion": "1. Correcta. Cada doble hélice hija conserva una hebra del ADN inicial y recibe una recién sintetizada.\n2. Incorrecta. En la transcripción, el ADN sirve de molde para producir una molécula de ARN.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Cada doble hélice hija conserva una hebra del ADN inicial y recibe una recién sintetizada. 2. Incorrecta. En la transcripción, el ADN sirve de molde para producir una molécula de ARN.",
+        "C": "2. Incorrecta. En la transcripción, el ADN sirve de molde para producir una molécula de ARN.",
+        "D": "1. Correcta. Cada doble hélice hija conserva una hebra del ADN inicial y recibe una recién sintetizada."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 4 · Procesamiento del ARN / Replicación / cap. 4 · Expresión genética / Traducción",
+      "paginas_pdf": "150, 151, 158",
+      "pagina_impresa": "122, 123, 130",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 4,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 4
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2021-1-31",
@@ -134,30 +154,40 @@
       "materia": "MORFOFUNCION"
     },
     {
+      "id": "partial-first-10-umss-006",
+      "numero_original": 6,
+      "numero_pregunta": 6,
       "materia": "MORFOFUNCION",
-      "tema": "sistema tegumentario",
-      "dificultad": "facil",
-      "pregunta": "¿Qué capa de la piel contiene vasos, nervios y abundante tejido conjuntivo?",
-      "opcion_a": "El estrato córneo.",
-      "opcion_b": "El estrato granuloso.",
-      "opcion_c": "El estrato lúcido.",
-      "opcion_d": "La dermis.",
-      "respuesta_correcta": "D",
-      "justificacion": "La dermis.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "208–233",
-      "id": "demo-full-20",
+      "tema": "El sistema tegumentario",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La detección del tacto corresponde a las células dendríticas epidérmicas.\n2. Los queratinocitos constituyen la población celular más abundante de la epidermis.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
       "respuestas_aceptadas": [
-        "D"
+        "B"
       ],
+      "justificacion": "1. Incorrecta. Las células dendríticas epidérmicas intervienen en la vigilancia inmunitaria de la piel.\n2. Correcta. Los queratinocitos son la población más numerosa de la epidermis y elaboran queratina.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Las células dendríticas epidérmicas intervienen en la vigilancia inmunitaria de la piel. 2. Correcta. Los queratinocitos son la población más numerosa de la epidermis y elaboran queratina.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Las células dendríticas epidérmicas intervienen en la vigilancia inmunitaria de la piel.",
+        "D": "2. Correcta. Los queratinocitos son la población más numerosa de la epidermis y elaboran queratina."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 6 · Epidermis",
+      "paginas_pdf": "211, 212, 215",
+      "pagina_impresa": "183, 184, 187",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 6,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 6
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2021-1-8",
@@ -262,30 +292,40 @@
       "materia": "MORFOFUNCION"
     },
     {
+      "id": "partial-first-10-umss-011",
+      "numero_original": 11,
+      "numero_pregunta": 11,
       "materia": "MORFOFUNCION",
-      "tema": "tejido muscular",
-      "dificultad": "facil",
-      "pregunta": "¿Qué tipo de músculo forma la pared del intestino y se contrae de modo involuntario?",
-      "opcion_a": "Músculo estriado esquelético.",
-      "opcion_b": "Músculo liso.",
-      "opcion_c": "Músculo estriado cardíaco.",
-      "opcion_d": "Músculo esquelético voluntario con discos intercalares.",
+      "tema": "Tejido muscular",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La miosina constituye los filamentos delgados del sarcómero.\n2. En reposo, la tropomiosina cubre los sitios de unión a miosina en la actina.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
-      "justificacion": "Músculo liso.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "429–466",
-      "id": "demo-full-42",
       "respuestas_aceptadas": [
         "B"
       ],
+      "justificacion": "1. Incorrecta. La miosina forma los filamentos gruesos. Sus cabezas pueden unirse a la actina.\n2. Correcta. En reposo, la tropomiosina cubre sitios de unión a la miosina en la actina.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La miosina forma los filamentos gruesos. Sus cabezas pueden unirse a la actina. 2. Correcta. En reposo, la tropomiosina cubre sitios de unión a la miosina en la actina.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La miosina forma los filamentos gruesos. Sus cabezas pueden unirse a la actina.",
+        "D": "2. Correcta. En reposo, la tropomiosina cubre sitios de unión a la miosina en la actina."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 11 · Sarcómero / cap. 11 · Contracción / Acoplamiento de excitación y contracción",
+      "paginas_pdf": "433, 434, 435, 440",
+      "pagina_impresa": "405, 406, 407, 412",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 11,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 11
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2023-2024-1-70",
@@ -340,30 +380,40 @@
       "tema": "Tema 2"
     },
     {
+      "id": "partial-first-10-umss-014",
+      "numero_original": 14,
+      "numero_pregunta": 14,
       "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "dificultad": "facil",
-      "pregunta": "¿Qué función cumplen las microvellosidades de la superficie celular?",
-      "opcion_a": "Aumentan el área de superficie para procesos como la absorción.",
-      "opcion_b": "Reducen la superficie disponible para absorber.",
-      "opcion_c": "Propulsan la célula mediante ondas de batido como los cilios móviles.",
-      "opcion_d": "Producen por sí mismas el ATP mediante fosforilación oxidativa.",
-      "respuesta_correcta": "A",
-      "justificacion": "Aumentan el área de superficie para procesos como la absorción.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "106–141",
-      "id": "demo-full-39",
+      "tema": "Forma y función celulares",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Mediante pinocitosis pueden incorporarse pequeñas porciones del líquido extracelular en vesículas.\n2. La pérdida de un electrón convierte un átomo neutro en un ion positivo.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "C",
       "respuestas_aceptadas": [
-        "A"
+        "C"
       ],
+      "justificacion": "1. Correcta. La pinocitosis incorpora porciones de líquido extracelular con sustancias disueltas.\n2. Correcta. La pérdida de un electrón deja exceso de carga positiva en una partícula inicialmente neutra.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. La pérdida de un electrón deja exceso de carga positiva en una partícula inicialmente neutra.",
+        "B": "1. Correcta. La pinocitosis incorpora porciones de líquido extracelular con sustancias disueltas.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La pinocitosis incorpora porciones de líquido extracelular con sustancias disueltas. 2. Correcta. La pérdida de un electrón deja exceso de carga positiva en una partícula inicialmente neutra."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 3 · Transporte vesicular / cap. 2 · Iones",
+      "paginas_pdf": "74, 75, 127",
+      "pagina_impresa": "46, 47, 99",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 3,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 14
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2021-1-36",
@@ -392,30 +442,40 @@
       "materia": "MORFOFUNCION"
     },
     {
+      "id": "partial-first-10-umss-016",
+      "numero_original": 16,
+      "numero_pregunta": 16,
       "materia": "MORFOFUNCION",
-      "tema": "sistema tegumentario",
-      "dificultad": "facil",
-      "pregunta": "Cuando sudas para perder calor, ¿qué anexo cutáneo está trabajando?",
-      "opcion_a": "Las glándulas sebáceas.",
-      "opcion_b": "Los folículos pilosos.",
-      "opcion_c": "Los músculos erectores del pelo.",
-      "opcion_d": "Las glándulas sudoríparas.",
-      "respuesta_correcta": "D",
-      "justificacion": "Las glándulas sudoríparas.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "208–233",
-      "id": "demo-full-49",
+      "tema": "El sistema tegumentario",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las células táctiles son las encargadas de la vigilancia inmunitaria de la epidermis.\n2. Los melanocitos sintetizan el pigmento que transfieren a los queratinocitos.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
       "respuestas_aceptadas": [
-        "D"
+        "B"
       ],
+      "justificacion": "1. Incorrecta. Las células táctiles se asocian a terminaciones sensitivas y participan en la percepción del contacto.\n2. Correcta. Los melanocitos producen melanina y la transfieren a los queratinocitos.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Las células táctiles se asocian a terminaciones sensitivas y participan en la percepción del contacto. 2. Correcta. Los melanocitos producen melanina y la transfieren a los queratinocitos.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Las células táctiles se asocian a terminaciones sensitivas y participan en la percepción del contacto.",
+        "D": "2. Correcta. Los melanocitos producen melanina y la transfieren a los queratinocitos."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 6 · Epidermis",
+      "paginas_pdf": "211, 212, 215",
+      "pagina_impresa": "183, 184, 187",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 6,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 16
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2025-2026-1-12",
@@ -572,30 +632,40 @@
       "materia": "MORFOFUNCION"
     },
     {
+      "id": "partial-first-10-umss-023",
+      "numero_original": 23,
+      "numero_pregunta": 23,
       "materia": "MORFOFUNCION",
-      "tema": "la quimica de la vida",
-      "dificultad": "facil",
-      "pregunta": "¿Qué hacen las enzimas para acelerar una reacción sin consumirse?",
-      "opcion_a": "Aumentan la energía de activación de la reacción.",
-      "opcion_b": "Disminuyen la energía de activación necesaria para que la reacción ocurra.",
-      "opcion_c": "Desplazan siempre el equilibrio hacia los productos.",
-      "opcion_d": "Se consumen de forma permanente al terminar cada reacción.",
-      "respuesta_correcta": "B",
-      "justificacion": "Disminuyen la energía de activación necesaria para que la reacción ocurra.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "70–105",
-      "id": "demo-full-3",
+      "tema": "La química de la vida",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Al incorporar un electrón, un átomo neutro adquiere carga neta negativa.\n2. La carga eléctrica neta, por sí sola, define a un radical libre.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "B"
+        "A"
       ],
+      "justificacion": "1. Correcta. Ganar un electrón deja a la partícula inicialmente neutra con carga neta negativa.\n2. Incorrecta. Lo que define al radical libre es el electrón desapareado en su capa externa.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Ganar un electrón deja a la partícula inicialmente neutra con carga neta negativa. 2. Incorrecta. Lo que define al radical libre es el electrón desapareado en su capa externa.",
+        "C": "2. Incorrecta. Lo que define al radical libre es el electrón desapareado en su capa externa.",
+        "D": "1. Correcta. Ganar un electrón deja a la partícula inicialmente neutra con carga neta negativa."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 2 · Iones / cap. 2 · Radicales libres / Iones",
+      "paginas_pdf": "74, 75",
+      "pagina_impresa": "46, 47",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 2,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 23
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2021-1-38",
@@ -803,30 +873,40 @@
       "materia": "MORFOFUNCION"
     },
     {
+      "id": "partial-first-10-umss-032",
+      "numero_original": 32,
+      "numero_pregunta": 32,
       "materia": "MORFOFUNCION",
-      "tema": "la quimica de la vida",
-      "dificultad": "facil",
-      "pregunta": "¿Qué te indica un pH más bajo: mayor o menor concentración de H+?",
-      "opcion_a": "Mayor concentración de H+; por eso la solución es más ácida.",
-      "opcion_b": "Menor concentración de H+ y mayor acidez.",
-      "opcion_c": "Mayor concentración de H+ y menor acidez.",
-      "opcion_d": "La misma concentración de H+ en cualquier solución.",
-      "respuesta_correcta": "A",
-      "justificacion": "Mayor concentración de H+; por eso la solución es más ácida.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "70–105",
-      "id": "demo-full-32",
+      "tema": "Forma y función celulares",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La fagocitosis se especializa en incorporar porciones de líquido extracelular con solutos disueltos.\n2. Durante la traducción, la secuencia de nucleótidos del ARNm se copia en una molécula nueva de ARN.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "D",
       "respuestas_aceptadas": [
-        "A"
+        "D"
       ],
+      "justificacion": "1. Incorrecta. En la fagocitosis, la célula envuelve una partícula grande y la incorpora en una vesícula.\n2. Incorrecta. En la traducción, el ribosoma utiliza el mensaje del ARNm para ordenar los aminoácidos del polipéptido.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. En la fagocitosis, la célula envuelve una partícula grande y la incorpora en una vesícula.",
+        "B": "2. Incorrecta. En la traducción, el ribosoma utiliza el mensaje del ARNm para ordenar los aminoácidos del polipéptido.",
+        "C": "1. Incorrecta. En la fagocitosis, la célula envuelve una partícula grande y la incorpora en una vesícula. 2. Incorrecta. En la traducción, el ribosoma utiliza el mensaje del ARNm para ordenar los aminoácidos del polipéptido.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "truth_values": [
+        false,
+        false
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 3 · Transporte vesicular / cap. 4 · Expresión genética / Traducción",
+      "paginas_pdf": "127, 150",
+      "pagina_impresa": "99, 122",
       "coverage": {
         "subject": "MORFOFUNCION",
-        "chapter": 2,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 32
+        "chapter": 3,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2021-1-43",
@@ -1541,30 +1621,43 @@
       "materia": "BIOLOGIA CELULAR"
     },
     {
+      "id": "partial-first-10-umss-061",
+      "numero_original": 61,
+      "numero_pregunta": 61,
       "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "dificultad": "facil",
-      "pregunta": "¿Qué ocurre con la membrana cuando una vesícula libera su contenido al exterior?",
-      "opcion_a": "La vesícula se fusiona con la membrana plasmática y descarga su contenido por exocitosis.",
-      "opcion_b": "La vesícula se incorpora al núcleo y conserva allí su carga.",
-      "opcion_c": "La membrana plasmática rodea material externo para introducirlo.",
-      "opcion_d": "La vesícula se separa de la membrana plasmática hacia el interior sin liberar su carga al exterior.",
+      "tema": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La dinamina actúa en el cuello de la invaginación para facilitar la separación de la vesícula.\n2. En la endocitosis mediada por receptores, la clatrina une la carga extracelular a la porción externa del receptor.\n3. La difusión facilitada permite que un soluto cruce su membrana contra el gradiente mediante un canal.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Solo la afirmación 3 es correcta",
+      "opcion_d": "Todas las afirmaciones son correctas",
+      "opcion_e": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
-      "justificacion": "La vesícula se fusiona con la membrana plasmática y descarga su contenido por exocitosis.",
-      "fuente": "Biología celular y biomédica, St. Alfonso",
-      "paginas_pdf": "214–255",
-      "id": "demo-full-51",
       "respuestas_aceptadas": [
         "A"
       ],
+      "justificacion": "1. Correcta. La dinamina actúa en el cuello de la invaginación y facilita la separación de la vesícula.\n2. Incorrecta. La clatrina forma el revestimiento. La adaptina contribuye a vincularlo con el receptor.\n3. Incorrecta. En la difusión facilitada, un canal o un transportador permite el paso a favor del gradiente.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La dinamina actúa en el cuello de la invaginación y facilita la separación de la vesícula. 2. Incorrecta. La clatrina forma el revestimiento. La adaptina contribuye a vincularlo con el receptor.",
+        "C": "1. Correcta. La dinamina actúa en el cuello de la invaginación y facilita la separación de la vesícula. 3. Incorrecta. En la difusión facilitada, un canal o un transportador permite el paso a favor del gradiente.",
+        "D": "2. Incorrecta. La clatrina forma el revestimiento. La adaptina contribuye a vincularlo con el receptor. 3. Incorrecta. En la difusión facilitada, un canal o un transportador permite el paso a favor del gradiente.",
+        "E": "1. Correcta. La dinamina actúa en el cuello de la invaginación y facilita la separación de la vesícula."
+      },
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015 · cap. 5 · Separación vesicular / Fusión vesicular / cap. 5 · Endocitosis mediada por receptor / Cubierta vesicular / cap. 4 · Difusión simple / Difusión facilitada",
+      "paginas_pdf": "170, 174, 218, 221, 222, 238",
+      "pagina_impresa": "",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
         "chapter": 5,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 61
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2022-2023-3-40",
@@ -1693,30 +1786,43 @@
       "materia": "BIOLOGIA CELULAR"
     },
     {
+      "id": "partial-first-10-umss-067",
+      "numero_original": 67,
+      "numero_pregunta": 67,
       "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
+      "tema": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
       "dificultad": "dificil",
-      "pregunta": "¿Por qué la endocitosis mediada por receptor es selectiva?",
-      "opcion_a": "Porque incorpora cualquier soluto sin reconocimiento de carga.",
-      "opcion_b": "Porque solo depende del tamaño de una burbuja de líquido extracelular.",
-      "opcion_c": "Porque los receptores destruyen toda la carga antes de unirse a ella.",
-      "opcion_d": "Porque la carga se une primero a receptores específicos de la superficie celular.",
-      "respuesta_correcta": "D",
-      "justificacion": "Porque la carga se une primero a receptores específicos de la superficie celular.",
-      "fuente": "Biología celular y biomédica, St. Alfonso",
-      "paginas_pdf": "214–255",
-      "id": "demo-full-69",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las proteínas SNARE impiden la fusión de una vesícula con su membrana diana.\n2. La adaptina vincula la zona citosólica de receptores de carga con el revestimiento de clatrina.\n3. Si la membrana retiene el soluto, el flujo neto osmótico de agua se dirige al lado con menor concentración de ese soluto.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Solo la afirmación 3 es correcta",
+      "opcion_d": "Todas las afirmaciones son correctas",
+      "opcion_e": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
       "respuestas_aceptadas": [
-        "D"
+        "B"
       ],
+      "justificacion": "1. Incorrecta. Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión.\n2. Correcta. El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina.\n3. Incorrecta. Al estar retenido el soluto, el flujo neto de agua va hacia la solución con mayor concentración de ese soluto.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión. 2. Correcta. El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "2. Correcta. El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina. 3. Incorrecta. Al estar retenido el soluto, el flujo neto de agua va hacia la solución con mayor concentración de ese soluto.",
+        "D": "1. Incorrecta. Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión. 3. Incorrecta. Al estar retenido el soluto, el flujo neto de agua va hacia la solución con mayor concentración de ese soluto.",
+        "E": "2. Correcta. El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina."
+      },
+      "truth_values": [
+        false,
+        true,
+        false
+      ],
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015 · cap. 5 · Separación vesicular / Fusión vesicular / cap. 5 · Endocitosis mediada por receptor / Cubierta vesicular / cap. 4 · Ósmosis / Tipos de transporte",
+      "paginas_pdf": "169, 173, 218, 221, 222, 238",
+      "pagina_impresa": "",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
         "chapter": 5,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 67
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2022-2023-3-76",
@@ -2049,524 +2155,645 @@
       "tema": "Tema 2"
     },
     {
-      "id": "vida-first-expansion-2-01",
-      "pregunta": "En una comunidad rural: Se prepara un taller participativo para reconocer riesgos y mejorar hábitos. ¿Cómo se relaciona la educación en salud con la promoción?",
+      "id": "partial-first-10-umss-081",
+      "numero_original": 81,
+      "numero_pregunta": 81,
       "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
+      "tema": "Educación en salud",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La adaptación sociocultural vincula los contenidos educativos con la realidad de la población.\n2. En una comunicación bidireccional, la comunidad se limita a recibir la información sin intervenir en el intercambio.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. Ajustar el material al contexto social y cultural hace que la educación se vincule a la realidad del grupo.\n2. Incorrecta. La comunicación es bidireccional cuando la población también aporta y recibe respuesta en el intercambio.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Ajustar el material al contexto social y cultural hace que la educación se vincule a la realidad del grupo. 2. Incorrecta. La comunicación es bidireccional cuando la población también aporta y recibe respuesta en el intercambio.",
+        "C": "2. Incorrecta. La comunicación es bidireccional cuando la población también aporta y recibe respuesta en el intercambio.",
+        "D": "1. Correcta. Ajustar el material al contexto social y cultural hace que la educación se vincule a la realidad del grupo."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 1 · educacion en salud",
+      "paginas_pdf": "6, 16",
+      "pagina_impresa": "5, 15",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 1,
-        "curriculum": "past-exams-2025-2026"
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-first-10-umss-082",
+      "numero_original": 82,
+      "numero_pregunta": 82,
+      "materia": "SALUD PUBLICA",
+      "tema": "Educación en salud",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La educación para la salud desarrolla habilidades para practicar conductas saludables.\n2. El empoderamiento consiste en delegar en el personal sanitario las decisiones de salud de la comunidad.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. La educación para la salud desarrolla habilidades para que las personas puedan llevar a la práctica conductas saludables.\n2. Incorrecta. El empoderamiento facilita que las personas usen información para decidir sobre su salud.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La educación para la salud desarrolla habilidades para que las personas puedan llevar a la práctica conductas saludables. 2. Incorrecta. El empoderamiento facilita que las personas usen información para decidir sobre su salud.",
+        "C": "2. Incorrecta. El empoderamiento facilita que las personas usen información para decidir sobre su salud.",
+        "D": "1. Correcta. La educación para la salud desarrolla habilidades para que las personas puedan llevar a la práctica conductas saludables."
       },
-      "source_numero_original": 41,
-      "source_question_id": "2025-2026-1-41",
-      "source_sha256": "a311003edfa6afbb0ca83ee82cf632dad5dbcc9cd09daf91e63f2be8477cc80f",
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 1 · educacion en salud",
+      "paginas_pdf": "6, 16",
+      "pagina_impresa": "5, 15",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-first-10-umss-083",
+      "numero_original": 83,
+      "numero_pregunta": 83,
+      "materia": "SALUD PUBLICA",
+      "tema": "Funciones de salud pública",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La participación comunitaria se circunscribe a ejecutar medidas ya decididas por otras instancias.\n2. El control de la inocuidad del agua forma parte de la protección de la salud.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 41.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta B: Contribuye a la promoción mediante aprendizaje y participación.",
-      "opcion_a": "Sustituye todas las políticas sobre determinantes de la salud.",
-      "opcion_b": "Contribuye a la promoción mediante aprendizaje y participación.",
-      "opcion_c": "Es incompatible con la participación de la comunidad.",
-      "opcion_d": "Solo puede realizarse después de una enfermedad terminal.",
-      "numero_original": 81
-    },
-    {
-      "id": "vida-first-expansion-2-02",
-      "pregunta": "En una comunidad rural: El equipo diseña sus actividades sin escuchar a quienes viven allí. ¿Qué cambio incorpora participación comunitaria?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1,
-        "curriculum": "past-exams-2025-2026"
+      "justificacion": "1. Incorrecta. La participación comunitaria incorpora a la población en la identificación de problemas y las decisiones para afrontarlos.\n2. Correcta. La protección de la salud abarca el control de riesgos ambientales y la inocuidad de recursos como el agua.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La participación comunitaria incorpora a la población en la identificación de problemas y las decisiones para afrontarlos. 2. Correcta. La protección de la salud abarca el control de riesgos ambientales y la inocuidad de recursos como el agua.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La participación comunitaria incorpora a la población en la identificación de problemas y las decisiones para afrontarlos.",
+        "D": "2. Correcta. La protección de la salud abarca el control de riesgos ambientales y la inocuidad de recursos como el agua."
       },
-      "source_numero_original": 41,
-      "source_question_id": "2025-2026-1-41",
-      "source_sha256": "a311003edfa6afbb0ca83ee82cf632dad5dbcc9cd09daf91e63f2be8477cc80f",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
+      "truth_values": [
+        false,
+        true
       ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 41.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta C: Definir necesidades y acciones junto con la comunidad.",
-      "opcion_a": "Excluir a quienes tienen menor escolaridad.",
-      "opcion_b": "Reemplazar el diálogo por una lista de órdenes inmodificables.",
-      "opcion_c": "Definir necesidades y acciones junto con la comunidad.",
-      "opcion_d": "Reservar todas las decisiones a un expositor externo.",
-      "numero_original": 82
-    },
-    {
-      "id": "vida-first-expansion-2-03",
-      "pregunta": "En una comunidad rural: Una persona necesita atención especializada de alta complejidad. ¿Qué nivel corresponde a esa capacidad resolutiva?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 3 · funciones de salud publica",
+      "paginas_pdf": "5",
+      "pagina_impresa": "4",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 3,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 42,
-      "source_question_id": "2025-2026-1-42",
-      "source_sha256": "8a18ccd9b7bb7643f61839c33a753901588e75a81bd8848f13a8111e4d2090b7",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 42.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta D: Tercer nivel de atención.",
-      "opcion_a": "Primer nivel por tratarse de alta complejidad.",
-      "opcion_b": "Un taller escolar, que sustituye cualquier derivación.",
-      "opcion_c": "La atención domiciliaria sin recursos especializados en todos los casos.",
-      "opcion_d": "Tercer nivel de atención.",
-      "numero_original": 83
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-first-expansion-2-04",
-      "pregunta": "En una comunidad rural: Se organiza el ingreso habitual a la red pública y la atención de problemas frecuentes. ¿Qué nivel cumple la función de puerta de entrada?",
+      "id": "partial-first-10-umss-084",
+      "numero_original": 84,
+      "numero_pregunta": 84,
       "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
+      "tema": "Funciones de salud pública",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La vigilancia y el monitoreo se limitan a aplicar medidas una vez identificado un brote.\n2. La vacunación es una medida de prevención de enfermedades.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "justificacion": "1. Incorrecta. El seguimiento de los registros permite detectar cambios y reconocer a tiempo riesgos o brotes.\n2. Correcta. La vacunación es un ejemplo de prevención cuyo fin es reducir casos nuevos.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El seguimiento de los registros permite detectar cambios y reconocer a tiempo riesgos o brotes. 2. Correcta. La vacunación es un ejemplo de prevención cuyo fin es reducir casos nuevos.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El seguimiento de los registros permite detectar cambios y reconocer a tiempo riesgos o brotes.",
+        "D": "2. Correcta. La vacunación es un ejemplo de prevención cuyo fin es reducir casos nuevos."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 3 · funciones de salud publica",
+      "paginas_pdf": "5",
+      "pagina_impresa": "4",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 3,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 49,
-      "source_question_id": "2025-2026-1-49",
-      "source_sha256": "ae9a712dbec5eccc15a0c0c2fc0e60e63bc312648795926be7b79a4d31bac755",
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-first-10-umss-085",
+      "numero_original": 85,
+      "numero_pregunta": 85,
+      "materia": "SALUD PUBLICA",
+      "tema": "Concepto de salud y determinantes",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La edad y la genética son determinantes individuales.\n2. La calidad del agua y del aire se clasifica como determinante conductual.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 49.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta A: El primer nivel de atención.",
-      "opcion_a": "El primer nivel de atención.",
-      "opcion_b": "Exclusivamente el tercer nivel.",
-      "opcion_c": "Únicamente una unidad de cuidados intensivos.",
-      "opcion_d": "Exclusivamente un instituto de trasplantes.",
-      "numero_original": 84
-    },
-    {
-      "id": "vida-first-expansion-2-05",
-      "pregunta": "En una comunidad rural: Un programa busca limitar secuelas de una enfermedad ya establecida mediante rehabilitación. ¿Qué prevención describe?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
+      "justificacion": "1. Correcta. El texto reúne edad, sexo y genética entre los determinantes individuales.\n2. Incorrecta. El agua, el aire y la vivienda son condiciones ambientales en la clasificación del texto.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El texto reúne edad, sexo y genética entre los determinantes individuales. 2. Incorrecta. El agua, el aire y la vivienda son condiciones ambientales en la clasificación del texto.",
+        "C": "2. Incorrecta. El agua, el aire y la vivienda son condiciones ambientales en la clasificación del texto.",
+        "D": "1. Correcta. El texto reúne edad, sexo y genética entre los determinantes individuales."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 2 · concepto de salud y determinantes",
+      "paginas_pdf": "4",
+      "pagina_impresa": "3",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 1,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 43,
-      "source_question_id": "2025-2026-1-43",
-      "source_sha256": "c082ee0fdf8e820f3076e09a92cf10d574e6f48c3066ea6434a01071abb44098",
+        "chapter": 2,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-first-10-umss-086",
+      "numero_original": 86,
+      "numero_pregunta": 86,
+      "materia": "SALUD PUBLICA",
+      "tema": "Concepto de salud y determinantes",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Las normas y las medidas de protección social se clasifican como determinantes biológicos individuales.\n2. La actividad física y los hábitos de alimentación se clasifican como determinantes conductuales.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 43.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta B: Terciaria.",
-      "opcion_a": "Ninguna: la prevención nunca actúa sobre secuelas.",
-      "opcion_b": "Terciaria.",
-      "opcion_c": "Primaria, porque todavía no existe enfermedad.",
-      "opcion_d": "Primordial, porque solo modifica condiciones previas a cualquier riesgo.",
-      "numero_original": 85
-    },
-    {
-      "id": "vida-first-expansion-2-06",
-      "pregunta": "En una comunidad rural: Se identifican factores de riesgo de una enfermedad concreta para reducir su aparición. ¿Qué enfoque se aplica?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1,
-        "curriculum": "past-exams-2025-2026"
+      "justificacion": "1. Incorrecta. Las normas, políticas y medidas de protección social corresponden a determinantes políticos.\n2. Correcta. La actividad física y los hábitos de alimentación se clasifican como conductas.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Las normas, políticas y medidas de protección social corresponden a determinantes políticos. 2. Correcta. La actividad física y los hábitos de alimentación se clasifican como conductas.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Las normas, políticas y medidas de protección social corresponden a determinantes políticos.",
+        "D": "2. Correcta. La actividad física y los hábitos de alimentación se clasifican como conductas."
       },
-      "source_numero_original": 44,
-      "source_question_id": "2025-2026-1-44",
-      "source_sha256": "942d41372ac3f34d56d56279648ea454921c859c7c5902d0132ff8f37ea07d33",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
+      "truth_values": [
+        false,
+        true
       ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 44.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta C: Prevención orientada a riesgos de esa enfermedad.",
-      "opcion_a": "Una actividad ajena a la prevención por considerar riesgos.",
-      "opcion_b": "La eliminación del análisis de factores clínicos y ambientales.",
-      "opcion_c": "Prevención orientada a riesgos de esa enfermedad.",
-      "opcion_d": "Una estrategia que exige esperar a que aparezcan todas las secuelas.",
-      "numero_original": 86
-    },
-    {
-      "id": "vida-first-expansion-2-07",
-      "pregunta": "En una comunidad rural: Se propone educación inclusiva y oportunidades de aprendizaje durante toda la vida. ¿Con qué objetivo se relaciona?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 2 · concepto de salud y determinantes",
+      "paginas_pdf": "4",
+      "pagina_impresa": "3",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 1,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 45,
-      "source_question_id": "2025-2026-1-45",
-      "source_sha256": "563f1d87c9c9c5f8d5dcc415c6055fa9907ab823316ecc2d6535cf3545b6d9db",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 45.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta D: ODS 4.",
-      "opcion_a": "ODS 5, definido como construcción de carreteras.",
-      "opcion_b": "ODS 8, definido como protección exclusiva de océanos.",
-      "opcion_c": "ODS 9, definido como eliminación del aprendizaje permanente.",
-      "opcion_d": "ODS 4.",
-      "numero_original": 87
+        "chapter": 2,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-first-expansion-2-08",
-      "pregunta": "En una comunidad rural: Un proyecto elimina barreras que impiden a mujeres y niñas participar en igualdad. ¿Qué objetivo aborda?",
+      "id": "partial-first-10-umss-087",
+      "numero_original": 87,
+      "numero_pregunta": 87,
       "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 46,
-      "source_question_id": "2025-2026-1-46",
-      "source_sha256": "65c2a449d4f11e06de8638d29b39b49b82f8b0cb3f7e534e3cb2d78cbceda665",
+      "tema": "Niveles de prevención",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La rehabilitación que busca reducir la discapacidad de una enfermedad establecida corresponde a la prevención terciaria.\n2. La prevención secundaria se centra en la rehabilitación de una enfermedad establecida.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 46.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta A: ODS 5: igualdad de género.",
-      "opcion_a": "ODS 5: igualdad de género.",
-      "opcion_b": "ODS 6: igualdad de género como único contenido.",
-      "opcion_c": "ODS 7: igualdad de género como único contenido.",
-      "opcion_d": "ODS 14: igualdad de género como único contenido.",
-      "numero_original": 88
-    },
-    {
-      "id": "vida-first-expansion-2-09",
-      "pregunta": "En una comunidad rural: Un proyecto considera las brechas dentro del país y entre países. ¿Qué alcance tiene el ODS 10?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
+      "justificacion": "1. Correcta. La rehabilitación de personas con una enfermedad establecida busca reducir secuelas y discapacidad.\n2. Incorrecta. La prevención secundaria busca encontrar y tratar una enfermedad en una etapa temprana.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La rehabilitación de personas con una enfermedad establecida busca reducir secuelas y discapacidad. 2. Incorrecta. La prevención secundaria busca encontrar y tratar una enfermedad en una etapa temprana.",
+        "C": "2. Incorrecta. La prevención secundaria busca encontrar y tratar una enfermedad en una etapa temprana.",
+        "D": "1. Correcta. La rehabilitación de personas con una enfermedad establecida busca reducir secuelas y discapacidad."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 4 · niveles de prevencion",
+      "paginas_pdf": "19",
+      "pagina_impresa": "18",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 1,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 47,
-      "source_question_id": "2025-2026-1-47",
-      "source_sha256": "e48b0c299dd7b1b1ab02fb837f8d6cc789e6d5fa6c2f23b45caafdc0386a0ea7",
+        "chapter": 4,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-first-10-umss-088",
+      "numero_original": 88,
+      "numero_pregunta": 88,
+      "materia": "SALUD PUBLICA",
+      "tema": "Niveles de prevención",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La prevención primaria se inicia tras detectar una enfermedad en etapa temprana.\n2. Evitar el daño por intervenciones innecesarias forma parte de la prevención cuaternaria.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 47.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta B: Reducir las desigualdades en ambos ámbitos.",
-      "opcion_a": "Sustituir la reducción de desigualdades por la expansión exclusiva del transporte.",
-      "opcion_b": "Reducir las desigualdades en ambos ámbitos.",
-      "opcion_c": "Reducir únicamente diferencias entre barrios del mismo municipio.",
-      "opcion_d": "Eliminar toda política sobre desigualdades entre países.",
-      "numero_original": 89
-    },
-    {
-      "id": "vida-first-expansion-2-10",
-      "pregunta": "En una comunidad rural: Se busca empleo pleno y productivo en condiciones de trabajo decente. ¿Qué ODS expresa esa finalidad?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 1,
-        "curriculum": "past-exams-2025-2026"
+      "justificacion": "1. Incorrecta. La prevención primaria actúa sobre riesgos antes de que aparezca la enfermedad.\n2. Correcta. La prevención cuaternaria busca evitar el daño de intervenciones innecesarias, incluidos el sobrediagnóstico y el sobretratamiento.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La prevención primaria actúa sobre riesgos antes de que aparezca la enfermedad. 2. Correcta. La prevención cuaternaria busca evitar el daño de intervenciones innecesarias, incluidos el sobrediagnóstico y el sobretratamiento.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La prevención primaria actúa sobre riesgos antes de que aparezca la enfermedad.",
+        "D": "2. Correcta. La prevención cuaternaria busca evitar el daño de intervenciones innecesarias, incluidos el sobrediagnóstico y el sobretratamiento."
       },
-      "source_numero_original": 48,
-      "source_question_id": "2025-2026-1-48",
-      "source_sha256": "21db32a3a690fb5b90c6b2d9076818459b818d9055c356cdc5a4b08d7329567d",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
+      "truth_values": [
+        false,
+        true
       ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 48.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta C: ODS 8.",
-      "opcion_a": "ODS 9, cuyo único fin sería empleo y trabajo decente.",
-      "opcion_b": "ODS 10, cuyo único fin sería empleo y trabajo decente.",
-      "opcion_c": "ODS 8.",
-      "opcion_d": "ODS 4, cuyo único fin sería empleo y trabajo decente.",
-      "numero_original": 90
-    },
-    {
-      "id": "vida-first-expansion-2-11",
-      "pregunta": "En una comunidad rural: La propuesta combina infraestructura resiliente, innovación e industrialización inclusiva. ¿Qué objetivo integra esos componentes?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 4 · niveles de prevencion",
+      "paginas_pdf": "19",
+      "pagina_impresa": "18",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 1,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 50,
-      "source_question_id": "2025-2026-1-50",
-      "source_sha256": "c0fa82343cf8604647962b8287c97e7fbc1cd3ead1c1c83e07037ba91a72b3c0",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 50.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta D: ODS 9.",
-      "opcion_a": "ODS 4.",
-      "opcion_b": "ODS 5.",
-      "opcion_c": "ODS 6.",
-      "opcion_d": "ODS 9.",
-      "numero_original": 91
+        "chapter": 4,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-first-expansion-2-12",
-      "pregunta": "En una comunidad rural: Una investigadora propone una explicación que todavía debe contrastar con datos. ¿Cómo debe considerarla?",
+      "id": "partial-first-10-umss-089",
+      "numero_original": 89,
+      "numero_pregunta": 89,
       "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 6,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 91,
-      "source_question_id": "2025-2026-1-91",
-      "source_sha256": "ed875e20cce3cee3b2de41281c6f2dfc4db0b8236aa0fea28b41bedb906922df",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 91.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta A: Como una hipótesis, provisional y susceptible de contraste.",
-      "opcion_a": "Como una hipótesis, provisional y susceptible de contraste.",
-      "opcion_b": "Como una verdad absoluta por haber sido escrita.",
-      "opcion_c": "Como el resultado final antes de recolectar datos.",
-      "opcion_d": "Como una garantía de que los datos coincidirán con su opinión.",
-      "numero_original": 92
-    },
-    {
-      "id": "vida-first-expansion-2-13",
-      "pregunta": "En una comunidad rural: Se detecta un vacío de conocimiento que requiere respuesta científica. ¿Qué justifica esto?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 6,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 92,
-      "source_question_id": "2025-2026-1-92",
-      "source_sha256": "cc0e429cc47906127f0070596ed46cc14ceb24af436eb0afaaa1d7868d90682a",
+      "tema": "Promoción de la salud",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En la acción comunitaria, las prioridades se fijan al margen de la población y la comunidad solo ejecuta el programa.\n2. Una política pública saludable incorpora criterios de salud a decisiones y normas del gobierno.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 92.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta B: La formulación de un problema de investigación.",
-      "opcion_a": "La eliminación de los objetivos y las variables.",
-      "opcion_b": "La formulación de un problema de investigación.",
-      "opcion_c": "La aceptación automática de cualquier hipótesis.",
-      "opcion_d": "La sustitución del problema por el monto del presupuesto.",
-      "numero_original": 93
-    },
-    {
-      "id": "vida-first-expansion-2-14",
-      "pregunta": "En una comunidad rural: Un mismo fenómeno se estudia desde enfoques teóricos diferentes. ¿A qué se refiere el objeto formal?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 6,
-        "curriculum": "past-exams-2025-2026"
+      "justificacion": "1. Incorrecta. La acción comunitaria se reconoce por el papel de la comunidad al fijar prioridades y conducir programas.\n2. Correcta. Una política pública saludable incorpora la salud en decisiones, planes o normas de gobierno.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La acción comunitaria se reconoce por el papel de la comunidad al fijar prioridades y conducir programas. 2. Correcta. Una política pública saludable incorpora la salud en decisiones, planes o normas de gobierno.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La acción comunitaria se reconoce por el papel de la comunidad al fijar prioridades y conducir programas.",
+        "D": "2. Correcta. Una política pública saludable incorpora la salud en decisiones, planes o normas de gobierno."
       },
-      "source_numero_original": 93,
-      "source_question_id": "2025-2026-1-93",
-      "source_sha256": "6de0a6f2c5d14a9178eb91c7618f78539691ac435942de1331c65be600052bf3",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
+      "truth_values": [
+        false,
+        true
       ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 93.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta C: Al abordaje o perspectiva teórica desde la que se estudia el objeto.",
-      "opcion_a": "Exclusivamente al tamaño físico del lugar de estudio.",
-      "opcion_b": "Al nombre de la persona que firma el informe.",
-      "opcion_c": "Al abordaje o perspectiva teórica desde la que se estudia el objeto.",
-      "opcion_d": "A la carpeta administrativa donde se archivan recibos.",
-      "numero_original": 94
-    },
-    {
-      "id": "vida-first-expansion-2-15",
-      "pregunta": "En una comunidad rural: Se plantea que una exposición causa un resultado. ¿Qué orden temporal es necesario para esa hipótesis causal?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 6,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 94,
-      "source_question_id": "2025-2026-1-94",
-      "source_sha256": "4df0beab12e476e189fdef66744a15ebe21df889c07abd4dac8a788e674190c5",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 94.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta D: La causa debe preceder al efecto.",
-      "opcion_a": "El efecto debe ocurrir obligatoriamente antes de la causa.",
-      "opcion_b": "La secuencia temporal es siempre irrelevante.",
-      "opcion_c": "La causa y el efecto deben ser la misma variable.",
-      "opcion_d": "La causa debe preceder al efecto.",
-      "numero_original": 95
-    },
-    {
-      "id": "vida-first-expansion-2-16",
-      "pregunta": "En una comunidad rural: Una hipótesis relaciona la exposición de estudiantes con un resultado medible. ¿Qué elementos deben poder reconocerse?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 6,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 95,
-      "source_question_id": "2025-2026-1-95",
-      "source_sha256": "1bb64195bd298a3ec82d245b420b2935d529a71d55ce09023ddb89ce63509abd",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 95.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta A: Unidades de observación, variables y relación lógica.",
-      "opcion_a": "Unidades de observación, variables y relación lógica.",
-      "opcion_b": "Solo título, portada y número de páginas.",
-      "opcion_c": "Únicamente el nombre del investigador y su cargo.",
-      "opcion_d": "Solo presupuesto y cronograma, sin variables.",
-      "numero_original": 96
-    },
-    {
-      "id": "vida-first-expansion-2-17",
-      "pregunta": "En una comunidad rural: La investigación termina y sus hallazgos deben comunicarse para aportar conocimiento. ¿Qué finalidad cumple el informe final?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 5 · promocion de la salud / cap. 5 · promocion de la salud / Promoción de la salud, ambientes favorables",
+      "paginas_pdf": "6, 15, 16",
+      "pagina_impresa": "5, 14, 15",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 5,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 96,
-      "source_question_id": "2025-2026-1-96",
-      "source_sha256": "a757bebe9ddc5f5edadbfa2a2fbcaa3e5187205ad3e5609f80c14fb9f173f60f",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
-      ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 96.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta B: Dar a conocer los resultados y sus conclusiones.",
-      "opcion_a": "Demostrar que toda hipótesis inicial es verdadera.",
-      "opcion_b": "Dar a conocer los resultados y sus conclusiones.",
-      "opcion_c": "Mantener todos los resultados inaccesibles por definición.",
-      "opcion_d": "Reemplazar los datos obtenidos por opiniones posteriores.",
-      "numero_original": 97
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-first-expansion-2-18",
-      "pregunta": "En una comunidad rural: Una noción amplia se divide en dimensiones e indicadores observables. ¿Qué se está haciendo?",
+      "id": "partial-first-10-umss-090",
+      "numero_original": 90,
+      "numero_pregunta": 90,
       "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 6,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 97,
-      "source_question_id": "2025-2026-1-97",
-      "source_sha256": "1cdf6c4a8f25c00c0c41b2249ce4f0deb8fba83ae6f670469000bbac1060d5bc",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 97.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta C: Operacionalizar el concepto para orientar su medición.",
-      "opcion_a": "Convertir cada indicador en una opinión imposible de observar.",
-      "opcion_b": "Sustituir el marco conceptual por la portada del trabajo.",
-      "opcion_c": "Operacionalizar el concepto para orientar su medición.",
-      "opcion_d": "Suprimir toda definición de las variables.",
-      "numero_original": 98
-    },
-    {
-      "id": "vida-first-expansion-2-19",
-      "pregunta": "En una comunidad rural: El equipo debe precisar qué logrará y hasta dónde llegará el estudio. ¿Qué componente lo establece?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 6,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 98,
-      "source_question_id": "2025-2026-1-98",
-      "source_sha256": "6f0c634bff19be41e6f1f2bb90a0f0e5c20dc7fd082f9f40c1fb8d0e890d610d",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 98.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta D: Los objetivos de investigación.",
-      "opcion_a": "Exclusivamente el tipo de letra del informe.",
-      "opcion_b": "La lista de gastos personales del investigador.",
-      "opcion_c": "Una conclusión redactada sin datos ni objetivos previos.",
-      "opcion_d": "Los objetivos de investigación.",
-      "numero_original": 99
-    },
-    {
-      "id": "vida-first-expansion-2-20",
-      "pregunta": "En una comunidad rural: Hay presupuesto disponible, pero aún no se define una pregunta ni un vacío de conocimiento. ¿Qué falta para justificar científicamente el estudio?",
-      "materia": "SALUD PUBLICA",
-      "tema": "Educación para la Vida · Salud e introducción a investigación",
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 6,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "source_numero_original": 92,
-      "source_question_id": "2025-2026-1-92",
-      "source_sha256": "cc0e429cc47906127f0070596ed46cc14ceb24af436eb0afaaa1d7868d90682a",
+      "tema": "Promoción de la salud",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Desarrollar habilidades personales amplía los recursos que una persona puede usar para actuar a favor de su salud.\n2. La creación de entornos favorables se limita a dar instrucciones individuales sin intervenir en el ambiente.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
-      "fuente": "Concepto evaluado en el primer parcial 2025–2026 · pregunta 92.",
-      "adaptation": "Situación de práctica nueva basada en el concepto del examen de referencia, con una única alternativa correcta.",
-      "comentario": "Correcta A: Un problema de investigación delimitado y pertinente.",
-      "opcion_a": "Un problema de investigación delimitado y pertinente.",
-      "opcion_b": "La certeza previa de que la hipótesis será confirmada.",
-      "opcion_c": "La eliminación de toda referencia a conocimientos anteriores.",
-      "opcion_d": "Un resultado elegido antes de diseñar el estudio.",
-      "numero_original": 100
+      "justificacion": "1. Correcta. Desarrollar habilidades personales significa dar a cada persona recursos para decidir y actuar a favor de su salud.\n2. Incorrecta. Los entornos favorables mejoran las condiciones del ambiente en que vive la población.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Desarrollar habilidades personales significa dar a cada persona recursos para decidir y actuar a favor de su salud. 2. Incorrecta. Los entornos favorables mejoran las condiciones del ambiente en que vive la población.",
+        "C": "2. Incorrecta. Los entornos favorables mejoran las condiciones del ambiente en que vive la población.",
+        "D": "1. Correcta. Desarrollar habilidades personales significa dar a cada persona recursos para decidir y actuar a favor de su salud."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 5 · promocion de la salud / cap. 5 · promocion de la salud / Promoción de la salud, ambientes favorables",
+      "paginas_pdf": "6, 15, 16",
+      "pagina_impresa": "5, 14, 15",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 5,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-first-10-umss-091",
+      "numero_original": 91,
+      "numero_pregunta": 91,
+      "materia": "SALUD PUBLICA",
+      "tema": "Atención primaria de salud",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Reducir las barreras económicas o geográficas facilita la accesibilidad a la atención.\n2. La longitudinalidad consiste en una consulta aislada con un equipo que no realiza el seguimiento posterior.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. La accesibilidad busca reducir obstáculos al ingreso, como las barreras geográficas, económicas y culturales.\n2. Incorrecta. La longitudinalidad se reconoce por el seguimiento sostenido por el mismo profesional o equipo.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La accesibilidad busca reducir obstáculos al ingreso, como las barreras geográficas, económicas y culturales. 2. Incorrecta. La longitudinalidad se reconoce por el seguimiento sostenido por el mismo profesional o equipo.",
+        "C": "2. Incorrecta. La longitudinalidad se reconoce por el seguimiento sostenido por el mismo profesional o equipo.",
+        "D": "1. Correcta. La accesibilidad busca reducir obstáculos al ingreso, como las barreras geográficas, económicas y culturales."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 6 · atencion primaria de salud",
+      "paginas_pdf": "17",
+      "pagina_impresa": "16",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 6,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-first-10-umss-092",
+      "numero_original": 92,
+      "numero_pregunta": 92,
+      "materia": "SALUD PUBLICA",
+      "tema": "Atención primaria de salud",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La integralidad abarca el tratamiento clínico y excluye la promoción, la prevención y la rehabilitación.\n2. La coordinación vincula equipos y niveles de atención para dar continuidad al cuidado.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "justificacion": "1. Incorrecta. La integralidad reúne promoción, prevención, tratamiento y rehabilitación en la atención.\n2. Correcta. La coordinación conecta acciones de equipos y niveles para dar continuidad a la atención.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La integralidad reúne promoción, prevención, tratamiento y rehabilitación en la atención. 2. Correcta. La coordinación conecta acciones de equipos y niveles para dar continuidad a la atención.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La integralidad reúne promoción, prevención, tratamiento y rehabilitación en la atención.",
+        "D": "2. Correcta. La coordinación conecta acciones de equipos y niveles para dar continuidad a la atención."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 6 · atencion primaria de salud",
+      "paginas_pdf": "17",
+      "pagina_impresa": "16",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 6,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "partial-first-10-umss-093",
+      "numero_original": 93,
+      "pregunta": "En el planteamiento del problema, ¿a qué corresponde el \"Objeto Formal\"?\n1.- A la descripción de la realidad.\n2.- A la formalidad administrativa.\n3.- Al abordaje teórico.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si 3 es correcto",
+      "opcion_d": "Si todos son correctos",
+      "opcion_e": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 6,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-93",
+      "source_sha256": "6de0a6f2c5d14a9178eb91c7618f78539691ac435942de1331c65be600052bf3",
+      "source_numero_original": 93,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 6",
+      "numero_pregunta": 93
+    },
+    {
+      "id": "partial-first-10-umss-094",
+      "numero_original": 94,
+      "pregunta": "1.-El Tercer Nivel de Atención se enfoca en la promoción y prevención.\n2-Los niveles especializados resuelven el 80% de los problemas de salud frecuentes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 3,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-42",
+      "source_sha256": "8a18ccd9b7bb7643f61839c33a753901588e75a81bd8848f13a8111e4d2090b7",
+      "source_numero_original": 42,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 3",
+      "numero_pregunta": 94
+    },
+    {
+      "id": "partial-first-10-umss-095",
+      "numero_original": 95,
+      "pregunta": "1-La puerta de entrada al Sistema Único de Salud de Bolivia es la Seguridad de Salud\n2.- El Primer Nivel de Atención resuelve el 80% de problemas de salud frecuentes.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 3,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-49",
+      "source_sha256": "ae9a712dbec5eccc15a0c0c2fc0e60e63bc312648795926be7b79a4d31bac755",
+      "source_numero_original": 49,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 3",
+      "numero_pregunta": 95
+    },
+    {
+      "id": "partial-first-10-umss-096",
+      "numero_original": 96,
+      "pregunta": "1.-El ODS 8 promueve estabilidad plena y reproducción planificada.\n2-El ODS 8 promueve empleo pleno, productivo y trabajo decente para todos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-48",
+      "source_sha256": "21db32a3a690fb5b90c6b2d9076818459b818d9055c356cdc5a4b08d7329567d",
+      "source_numero_original": 48,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1",
+      "numero_pregunta": 96
+    },
+    {
+      "id": "partial-first-10-umss-097",
+      "numero_original": 97,
+      "pregunta": "1.-El ODS 9 busca construir infraestructuras resilientes y fomentar la innovación.\n2-El ODS 9 promueve una industrialización inclusiva y sostenible.\nA PARTIR DE ESTA PREGUNTA CONSIDERE LA SIGUIENTE CLAVE:",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-50",
+      "source_sha256": "c0fa82343cf8604647962b8287c97e7fbc1cd3ead1c1c83e07037ba91a72b3c0",
+      "source_numero_original": 50,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1",
+      "numero_pregunta": 97
+    },
+    {
+      "id": "partial-first-10-umss-098",
+      "numero_original": 98,
+      "pregunta": "1.- La educación en salud es independiente a la promoción de la salud y la prevención de enfermedades.\n2-La educación en salud excluye la participación comunitaria y la equidad como componentes del proceso.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-41",
+      "source_sha256": "a311003edfa6afbb0ca83ee82cf632dad5dbcc9cd09daf91e63f2be8477cc80f",
+      "source_numero_original": 41,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1",
+      "numero_pregunta": 98
+    },
+    {
+      "id": "partial-first-10-umss-099",
+      "numero_original": 99,
+      "pregunta": "1-El ODS 5 se centra exclusivamente en la producción de energía hidráulica\n2-El ODS 5 garantiza la disponibilidad y gestión sostenible del agua y saneamiento para todos.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-46",
+      "source_sha256": "65c2a449d4f11e06de8638d29b39b49b82f8b0cb3f7e534e3cb2d78cbceda665",
+      "source_numero_original": 46,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1",
+      "numero_pregunta": 99
+    },
+    {
+      "id": "partial-first-10-umss-100",
+      "numero_original": 100,
+      "pregunta": "1-Las actividades de Prevención Terciaria: disminuye complicaciones, secuelas o discapacidades en enfermedades ya establecidas.\n2- La Prevención Terciaria actúa sobre las secuelas de algunas enfermedades.",
+      "opcion_a": "Si 1 es correcto",
+      "opcion_b": "Si 2 es correcto",
+      "opcion_c": "Si ambos son correctos",
+      "opcion_d": "Si ninguno es correcto",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "fuente": "Examen pasado · Gestión 2025–2026 · Primer parcial",
+      "comentario": "Respuesta según el patrón original.",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 1,
+        "curriculum": "past-exams-2025-2026"
+      },
+      "source_question_id": "2025-2026-1-43",
+      "source_sha256": "c082ee0fdf8e820f3076e09a92cf10d574e6f48c3066ea6434a01071abb44098",
+      "source_numero_original": 43,
+      "materia": "SALUD PUBLICA",
+      "tema": "Tema 1",
+      "numero_pregunta": 100
     }
   ],
   "review": {

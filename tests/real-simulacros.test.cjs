@@ -1,6 +1,6 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
 const catalog=JSON.parse(fs.readFileSync('content/past-exams/catalog.json','utf8'));
-const papers=catalog.exams.filter(e=>e.count===100&&!e.missingNumbers.length&&!e.excludedQuestions.length);
+const papers=catalog.exams.filter(e=>e.count===100);
 function setup({free=false,wrong=false,change=false}={}){
  const nodes=new Map(),events=[];let calls=0,sessions=0;
  const node=id=>{if(!nodes.has(id))nodes.set(id,{textContent:'',innerHTML:'',disabled:false,classList:{toggle(){},remove(){}},setAttribute(){},replaceChildren(){}});return nodes.get(id);};

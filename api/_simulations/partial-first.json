@@ -2530,28 +2530,40 @@
       "tema": "Tema 6"
     },
     {
-      "id": "sim-first-theory-100",
+      "id": "partial-first-umss-100",
       "numero_original": 100,
-      "pregunta": "Una estudiante reúne antecedentes y conceptos pertinentes antes de analizar su problema de investigación. ¿Qué función cumple esta fundamentación teórica?",
-      "opcion_a": "Sustituye la formulación de objetivos por una lista de opiniones.",
-      "opcion_b": "Sitúa el problema en el conocimiento existente y orienta su análisis e interpretación.",
-      "opcion_c": "Permite interpretar los datos sin definir los conceptos utilizados.",
-      "opcion_d": "Garantiza que cualquier hipótesis propuesta resulte verdadera.",
-      "respuesta_correcta": "B",
+      "numero_pregunta": 100,
+      "materia": "SALUD PUBLICA",
+      "tema": "Atención primaria de salud",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La fundamentación teórica contribuye a precisar las variables del estudio.\n2. La fundamentación teórica sirve exclusivamente para interpretar datos después de recogerlos.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "B"
+        "A"
       ],
+      "justificacion": "1. Correcta. El capítulo incluye la definición de hipótesis y variables entre las funciones de la fundamentación teórica.\n2. Incorrecta. También sustenta el problema y orienta decisiones como la definición de conceptos y variables.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El capítulo incluye la definición de hipótesis y variables entre las funciones de la fundamentación teórica. 2. Incorrecta. También sustenta el problema y orienta decisiones como la definición de conceptos y variables.",
+        "C": "2. Incorrecta. También sustenta el problema y orienta decisiones como la definición de conceptos y variables.",
+        "D": "1. Correcta. El capítulo incluye la definición de hipótesis y variables entre las funciones de la fundamentación teórica."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 6 · Fundamentación teórica",
+      "paginas_pdf": "61, 62",
+      "pagina_impresa": "54, 55",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 6,
-        "curriculum": "past-exams-2025-2026"
-      },
-      "fuente": "Educación en Salud e Investigación CB24-25 · tema 6 · PDF 60–62",
-      "comentario": "Correcta B: el marco organiza antecedentes y conceptos para orientar el estudio. A elimina objetivos sin fundamento; C omite las definiciones que hacen posible el análisis; D convierte una propuesta contrastable en una verdad garantizada. Síntesis original del apartado leído.",
-      "source_question_id": null,
-      "source_numero_original": 100,
-      "materia": "SALUD PUBLICA",
-      "tema": "Tema 6"
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     }
   ],
   "review": {

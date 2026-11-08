@@ -1,8 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v160-comentarios';
+const CACHE_NAME = 'alcocermed-main-v161-examen-umss';
 const APP_SHELL = [
     './student-results.js?v=3',
     './student-results.css?v=1',
-    './question-review.js?v=4',
+    './question-review.js?v=5',
     './suficiencia-core.js?v=11',
     './suficiencia.js?v=14',
     './suficiencia.css?v=8',
@@ -69,8 +69,8 @@ const APP_SHELL = [
     './intocables-hub.js?v=4',
     './intocables-sheets.css?v=1',
     './study-assessments.js?v=2',
-    './simulation-scope.js?v=7',
-    './simulacro-ingreso.js?v=11',
+    './simulation-scope.js?v=8',
+    './simulacro-ingreso.js?v=12',
     './simulacro-library.js?v=7',
     './simulacro-library.css?v=6',
     './student-library.js?v=10',
@@ -104,10 +104,10 @@ const APP_SHELL = [
     './official-texts.js?v=5',
     './sufficiency-practice-content.js?v=1',
     './sufficiency-practice.js?v=2',
-    './past-exams.js?v=9',
-    './past-exam-breakdown.js?v=4',
-    './past-exams.css?v=4',
-    './content/past-exams/catalog.json?v=timer-100-cccd41b',
+    './past-exams.js?v=10',
+    './past-exam-breakdown.js?v=5',
+    './past-exams.css?v=5',
+    './content/past-exams/catalog.json?v=examenes-umss',
 ];
 
 const BOOTSTRAP = new Set([

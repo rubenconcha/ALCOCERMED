@@ -128,7 +128,7 @@ def import_collection(source):
             durations=re.findall(r'duraci[oó]n del examen es de (\d+) minutos',' '.join(all_text[a:min(a+20,b)]),re.I)
             meta={'id':slug,'year':year,'type':kind,'title':kind+' · '+year,'count':len(questions),'duration':100,'pattern':'/api/past-exam?id='+slug+'&pattern=1','missingNumbers':missing,'excludedQuestions':excluded}
             (output/(slug+'.json')).write_text(json.dumps({**meta,'questions':questions},ensure_ascii=False,indent=2),encoding='utf-8')
-            exams.append(meta)
+            exams.append({key: value for key, value in meta.items() if key not in {'missingNumbers', 'excludedQuestions'}})
             print(slug,len(questions),'missing:',missing)
         (ROOT/'content'/'past-exams'/'catalog.json').write_text(json.dumps({'freeYear':YEARS[-1],'source':'documento_prepa_ben_carson_editado.docx','sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'exams':exams},ensure_ascii=False,indent=2),encoding='utf-8')
         (ROOT/'tmp'/'past-exams-source'/'import-issues.json').write_text(json.dumps(issues,indent=2),encoding='utf-8')

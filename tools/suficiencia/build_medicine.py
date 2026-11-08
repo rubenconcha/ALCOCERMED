@@ -102,7 +102,52 @@ def make_question(paper, book_key, difficulty, number, prompt, options, answer, 
     }
 
 
-def questions_for(paper, book_key, concepts):
+def read_assertions():
+    groups = {}
+    for line in (STORE / 'medicina-afirmaciones.txt').read_text(encoding='utf8').splitlines():
+        if not line or line.startswith('#'):
+            continue
+        topic, *statements = [field.strip() for field in line.split('|')]
+        if topic in groups or len(statements) != 4 or any(not re.match(r'^[+-] .+\.$', item) for item in statements):
+            raise ValueError(f'Afirmaciones inválidas: {topic}')
+        groups[topic] = [(item[2:], item[0] == '+') for item in statements]
+    return groups
+
+
+def assertion_question(statements):
+    """Render independently checked statements with the UMSS answer convention."""
+    options = [
+        'Solo la afirmación 1 es correcta',
+        'Solo la afirmación 2 es correcta',
+        'Ambas afirmaciones son correctas',
+        'Ninguna afirmación es correcta',
+    ]
+    combinations = [(True, False), (False, True), (True, True), (False, False)]
+    if len(statements) == 3:
+        options[2:] = ['Solo la afirmación 3 es correcta', 'Todas las afirmaciones son correctas', 'Ninguna afirmación es correcta']
+        combinations = [(True, False, False), (False, True, False), (False, False, True), (True, True, True), (False, False, False)]
+    values = tuple(truth for _, truth, _ in statements)
+    correct = combinations.index(values)
+    reasons = [
+        f'{i}. {"Correcta" if truth else "Incorrecta"}. {reason}'
+        for i, (_, truth, reason) in enumerate(statements, start=1)
+    ]
+    comments = {}
+    for letter, assumed in zip('ABCDE'[:len(combinations)], combinations, strict=True):
+        errors = [reason for guess, truth, reason in zip(assumed, values, reasons, strict=True) if guess != truth]
+        comments[letter] = ' '.join(errors) if errors else options[correct] + '.'
+    return {
+        'text': 'Señala cuáles de las siguientes afirmaciones son correctas.\n'
+                + '\n'.join(f'{i}. {text}' for i, (text, _, _) in enumerate(statements, start=1)),
+        'options': options,
+        'correct': correct,
+        'truth_values': list(values),
+        'explanation': '\n'.join(reasons),
+        'comentarios_opciones': comments,
+    }
+
+
+def questions_for(paper, book_key, concepts, assertions):
     terms = [c.term for c in concepts]
     if len(set(terms)) != 4 or len(concepts) != 4:
         raise ValueError(f"Se requieren cuatro conceptos distintos: {paper['id']}")
@@ -110,24 +155,23 @@ def questions_for(paper, book_key, concepts):
         yield make_question(paper, book_key, 'facil', index, c.question, terms, c.term, c.explanation, [c])
         yield make_question(paper, book_key, 'intermedio', index, c.scenario + '\n¿Qué opción corresponde al caso?',
                             terms, c.term, c.explanation, [c])
-    for index, (a, b, other_a, other_b) in enumerate(
-        (concepts, concepts[2:] + concepts[:2]), start=1
-    ):
-        def option(first, second):
-            return f'A: {first.term} · B: {second.term}'
-
-        choices = [option(x, y) for x in (a, other_a) for y in (b, other_b)]
-        prompt = f'Caso A. {a.scenario}\nCaso B. {b.scenario}\n¿Qué par responde correctamente a los dos casos?'
-        explanation = f'Caso A. {a.explanation}\nCaso B. {b.explanation}'
-        yield make_question(paper, book_key, 'dificil', index, prompt, choices, option(a, b), explanation, [a, b])
+    for index, start in enumerate((0, 2), start=1):
+        pair = concepts[start:start + 2]
+        statements = [(text, truth, c.explanation) for (text, truth), c in zip(assertions[start:start + 2], pair, strict=True)]
+        item = assertion_question(statements)
+        question = make_question(paper, book_key, 'dificil', index, item['text'], item['options'],
+                                 item['options'][item['correct']], item['explanation'], pair)
+        question['id'] += '-umss'
+        yield {**question, **item}
 
 
 def build(refs):
     manifest = json.loads((refs / 'manifest.json').read_text(encoding='utf8'))
     files = {row['archivo']: row for row in manifest['archivos']}
     groups = read_concepts()
+    assertions = read_assertions()
     catalog = json.loads((ROOT / 'content/topic-evaluations/catalog.json').read_text(encoding='utf8'))['exams']
-    if set(groups) != {paper['id'] for paper in catalog}:
+    if set(groups) != set(assertions) or set(groups) != {paper['id'] for paper in catalog}:
         raise ValueError('El banco debe cubrir todos los temas del catálogo')
     sources = json.loads((ROOT / 'api/_evaluations/source-cards.json').read_text(encoding='utf8'))
     questions = []
@@ -144,7 +188,7 @@ def build(refs):
                 raise ValueError(f'El número de páginas no coincide con el manifiesto: {name}')
             for paper in (p for p in catalog if p['id'].startswith(book_key + '-')):
                 concepts = [get_concept(row, paper, cards, pdf, book_key) for row in groups[paper['id']]]
-                questions.extend(questions_for(paper, book_key, concepts))
+                questions.extend(questions_for(paper, book_key, concepts, assertions[paper['id']]))
     if len(questions) != len(catalog) * 10:
         raise ValueError('Número inesperado de preguntas')
     lines = ',\n'.join(json.dumps(row, ensure_ascii=False, separators=(',', ':')) for row in questions)

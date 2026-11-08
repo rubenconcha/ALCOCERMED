@@ -44,10 +44,15 @@ test('every Medicine topic offers all three levels with official, identifiable r
                     assert.ok(q.source.pdfPages.every(page => page <= pdfSize));
                     assert.equal(q.source.printedPages.length === 0, subject === 'biologia-celular');
                     if (level === 'dificil') {
-                        assert.match(q.text, /^Caso A\. .+\nCaso B\. .+\n/);
-                        assert.match(q.explanation, /^Caso A\. .+\nCaso B\. /);
-                        assert.equal(q.options.filter(o => o.split(' · ')[0] === q.options[q.correct].split(' · ')[0]).length, 2);
-                        assert.equal(q.options.filter(o => o.split(' · ')[1] === q.options[q.correct].split(' · ')[1]).length, 2);
+                        assert.match(q.text, /^Señala cuáles.+\n1\. .+\n2\. .+$/);
+                        assert.match(q.explanation, /^1\. (Correcta|Incorrecta)\. .+\n2\. (Correcta|Incorrecta)\. /);
+                        assert.deepEqual(q.options, [
+                            'Solo la afirmación 1 es correcta', 'Solo la afirmación 2 es correcta',
+                            'Ambas afirmaciones son correctas', 'Ninguna afirmación es correcta',
+                        ]);
+                        assert.equal(q.correct, ['10', '01', '11', '00'].indexOf(q.truth_values.map(Number).join('')));
+                        assert.deepEqual(Object.keys(q.comentarios_opciones), ['A','B','C','D']);
+                        assert.ok(q.id.endsWith('-umss'));
                     }
                 }
             }
@@ -70,6 +75,8 @@ test('Medicine practice grades, restores its filters and freezes a citable revie
     };
     assert.deepEqual(C.restore(attempt, bank, owner).answers, answers);
     assert.equal(C.restore(attempt, bank, 'other'), null);
+    const oldIds = attempt.ids.map(id => id.replace(/-umss$/, ''));
+    assert.equal(C.restore({ ...attempt, ids: oldIds }, bank, owner), null);
     assert.equal(C.restore({ ...attempt, configuration: { ...configuration, level: 'facil' } }, bank, owner), null);
     assert.deepEqual(C.grade(rows, answers), {
         correct: 1, wrong: 0, skipped: 1, total: 2, percent: 50,

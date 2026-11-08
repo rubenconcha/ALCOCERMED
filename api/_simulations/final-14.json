@@ -55,56 +55,76 @@
       "materia": "MORFOFUNCION"
     },
     {
+      "id": "final-14-umss-003",
+      "numero_original": 3,
+      "numero_pregunta": 3,
       "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "dificultad": "facil",
-      "pregunta": "¿Qué estructura separa el interior celular del líquido que la rodea y regula intercambios?",
-      "opcion_a": "La membrana mitocondrial interna.",
-      "opcion_b": "La membrana plasmática.",
-      "opcion_c": "La envoltura nuclear.",
-      "opcion_d": "La membrana del aparato de Golgi.",
+      "tema": "Forma y función celulares",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La fagocitosis se especializa en incorporar porciones de líquido extracelular con solutos disueltos.\n2. La pérdida de un electrón convierte un átomo neutro en un ion positivo.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
-      "justificacion": "La membrana plasmática.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "106–141",
-      "id": "demo-full-10",
       "respuestas_aceptadas": [
         "B"
       ],
+      "justificacion": "1. Incorrecta. En la fagocitosis, la célula envuelve una partícula grande y la incorpora en una vesícula.\n2. Correcta. La pérdida de un electrón deja exceso de carga positiva en una partícula inicialmente neutra.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. En la fagocitosis, la célula envuelve una partícula grande y la incorpora en una vesícula. 2. Correcta. La pérdida de un electrón deja exceso de carga positiva en una partícula inicialmente neutra.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. En la fagocitosis, la célula envuelve una partícula grande y la incorpora en una vesícula.",
+        "D": "2. Correcta. La pérdida de un electrón deja exceso de carga positiva en una partícula inicialmente neutra."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 3 · Transporte vesicular / cap. 2 · Iones",
+      "paginas_pdf": "74, 75, 127",
+      "pagina_impresa": "46, 47, 99",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 3,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 3
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
+      "id": "final-14-umss-004",
+      "numero_original": 4,
+      "numero_pregunta": 4,
       "materia": "MORFOFUNCION",
-      "tema": "genetica y funcion celular",
-      "dificultad": "facil",
-      "pregunta": "¿Qué hace un ribosoma con la información del ARN mensajero?",
-      "opcion_a": "La copia como una nueva molécula de ADN.",
-      "opcion_b": "La transcribe para producir otro ARN mensajero.",
-      "opcion_c": "La traduce en una secuencia de aminoácidos para formar una proteína.",
-      "opcion_d": "La convierte directamente en una cadena de nucleótidos de ADN.",
-      "respuesta_correcta": "C",
-      "justificacion": "La traduce en una secuencia de aminoácidos para formar una proteína.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "142–170",
-      "id": "demo-full-29",
+      "tema": "Genética y función celular",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Cada molécula hija de ADN conserva una hebra parental y contiene una hebra nueva.\n2. Al distenderse la vejiga, las células superficiales de su epitelio transicional conservan la misma forma.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "C"
+        "A"
       ],
+      "justificacion": "1. Correcta. Cada doble hélice hija conserva una hebra del ADN inicial y recibe una recién sintetizada.\n2. Incorrecta. Las células superficiales del epitelio transicional cambian de forma cuando se distiende la vejiga.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Cada doble hélice hija conserva una hebra del ADN inicial y recibe una recién sintetizada. 2. Incorrecta. Las células superficiales del epitelio transicional cambian de forma cuando se distiende la vejiga.",
+        "C": "2. Incorrecta. Las células superficiales del epitelio transicional cambian de forma cuando se distiende la vejiga.",
+        "D": "1. Correcta. Cada doble hélice hija conserva una hebra del ADN inicial y recibe una recién sintetizada."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 4 · Procesamiento del ARN / Replicación / cap. 5 · Epitelio",
+      "paginas_pdf": "151, 158, 176, 180",
+      "pagina_impresa": "123, 130, 148, 152",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 4,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 4
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2025-2026-1-22",
@@ -641,30 +661,40 @@
       "materia": "MORFOFUNCION"
     },
     {
+      "id": "final-14-umss-026",
+      "numero_original": 26,
+      "numero_pregunta": 26,
       "materia": "MORFOFUNCION",
-      "tema": "nutricion y metabolismo",
-      "dificultad": "facil",
-      "pregunta": "¿Qué nutriente aporta aminoácidos para fabricar proteínas corporales?",
-      "opcion_a": "Los triglicéridos de la dieta.",
-      "opcion_b": "El glucógeno de la dieta.",
-      "opcion_c": "Las proteínas de la dieta.",
-      "opcion_d": "La fibra alimentaria no digerible.",
-      "respuesta_correcta": "C",
-      "justificacion": "Las proteínas de la dieta.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "1028–1061",
-      "id": "demo-full-7",
+      "tema": "Nutrición y metabolismo",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La glucogenólisis moviliza la reserva de carbohidratos al degradar glucógeno.\n2. La gluconeogénesis obtiene glucosa exclusivamente por degradación de glucógeno.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "C"
+        "A"
       ],
+      "justificacion": "1. Correcta. La glucogenólisis rompe el glucógeno para movilizar la reserva de carbohidratos.\n2. Incorrecta. La gluconeogénesis sintetiza glucosa a partir de sustancias que no son carbohidratos.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La glucogenólisis rompe el glucógeno para movilizar la reserva de carbohidratos. 2. Incorrecta. La gluconeogénesis sintetiza glucosa a partir de sustancias que no son carbohidratos.",
+        "C": "2. Incorrecta. La gluconeogénesis sintetiza glucosa a partir de sustancias que no son carbohidratos.",
+        "D": "1. Correcta. La glucogenólisis rompe el glucógeno para movilizar la reserva de carbohidratos."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 26 · Metabolismo de los carbohidratos / cap. 26 · Ayuno / Metabolismo de lípidos",
+      "paginas_pdf": "1046, 1047, 1048",
+      "pagina_impresa": "1018, 1019, 1020",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 26,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 26
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2025-2026-3-16",
@@ -793,30 +823,40 @@
       "materia": "MORFOFUNCION"
     },
     {
+      "id": "final-14-umss-032",
+      "numero_original": 32,
+      "numero_pregunta": 32,
       "materia": "MORFOFUNCION",
-      "tema": "forma y funcion celulares",
-      "dificultad": "facil",
-      "pregunta": "¿Qué función cumplen las microvellosidades de la superficie celular?",
-      "opcion_a": "Aumentan el área de superficie para procesos como la absorción.",
-      "opcion_b": "Reducen la superficie disponible para absorber.",
-      "opcion_c": "Propulsan la célula mediante ondas de batido como los cilios móviles.",
-      "opcion_d": "Producen por sí mismas el ATP mediante fosforilación oxidativa.",
-      "respuesta_correcta": "A",
-      "justificacion": "Aumentan el área de superficie para procesos como la absorción.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "106–141",
-      "id": "demo-full-39",
+      "tema": "Forma y función celulares",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Mediante pinocitosis pueden incorporarse pequeñas porciones del líquido extracelular en vesículas.\n2. Al incorporar un electrón, un átomo neutro adquiere carga neta negativa.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "C",
       "respuestas_aceptadas": [
-        "A"
+        "C"
       ],
+      "justificacion": "1. Correcta. La pinocitosis incorpora porciones de líquido extracelular con sustancias disueltas.\n2. Correcta. Ganar un electrón deja a la partícula inicialmente neutra con carga neta negativa.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. Ganar un electrón deja a la partícula inicialmente neutra con carga neta negativa.",
+        "B": "1. Correcta. La pinocitosis incorpora porciones de líquido extracelular con sustancias disueltas.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La pinocitosis incorpora porciones de líquido extracelular con sustancias disueltas. 2. Correcta. Ganar un electrón deja a la partícula inicialmente neutra con carga neta negativa."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 3 · Transporte vesicular / cap. 2 · Iones",
+      "paginas_pdf": "74, 75, 127",
+      "pagina_impresa": "46, 47, 99",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 3,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 32
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2025-2026-1-3",
@@ -1201,30 +1241,40 @@
       "materia": "MORFOFUNCION"
     },
     {
+      "id": "final-14-umss-048",
+      "numero_original": 48,
+      "numero_pregunta": 48,
       "materia": "MORFOFUNCION",
-      "tema": "vasos sanguineos y circulacion",
-      "dificultad": "facil",
-      "pregunta": "¿En qué vasos ocurre la mayor parte del intercambio con los tejidos?",
-      "opcion_a": "En las arterias elásticas, por su pared gruesa.",
-      "opcion_b": "En las venas cavas, por su gran diámetro.",
-      "opcion_c": "En las arterias musculares, por su túnica media.",
-      "opcion_d": "En los capilares, por sus paredes muy delgadas.",
-      "respuesta_correcta": "D",
-      "justificacion": "En los capilares, por sus paredes muy delgadas.",
-      "fuente": "Saladin, Anatomía y fisiología: la unidad entre forma y función",
-      "paginas_pdf": "777–835",
-      "id": "demo-full-1",
+      "tema": "El aparato circulatorio: vasos sanguíneos y circulación",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El intercambio con el líquido tisular ocurre principalmente a través de las arterias de mayor calibre.\n2. Las venas pulmonares devuelven sangre de los pulmones al corazón.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
       "respuestas_aceptadas": [
-        "D"
+        "B"
       ],
+      "justificacion": "1. Incorrecta. Los capilares son el sitio principal de intercambio entre la sangre y el líquido tisular.\n2. Correcta. Las venas pulmonares conducen sangre desde los pulmones hacia el corazón.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Los capilares son el sitio principal de intercambio entre la sangre y el líquido tisular. 2. Correcta. Las venas pulmonares conducen sangre desde los pulmones hacia el corazón.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Los capilares son el sitio principal de intercambio entre la sangre y el líquido tisular.",
+        "D": "2. Correcta. Las venas pulmonares conducen sangre desde los pulmones hacia el corazón."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "Kenneth S. Saladin · Anatomía y fisiología: la unidad entre forma y función · 6.ª edición · cap. 20 · Resistencia vascular / Microcirculación / cap. 20 · Circulación pulmonar",
+      "paginas_pdf": "778, 789, 797, 800",
+      "pagina_impresa": "750, 761, 769, 772",
       "coverage": {
         "subject": "MORFOFUNCION",
         "chapter": 20,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 48
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2025-2026-3-7",
@@ -1691,30 +1741,43 @@
       "materia": "BIOLOGIA CELULAR"
     },
     {
+      "id": "final-14-umss-067",
+      "numero_original": 67,
+      "numero_pregunta": 67,
       "materia": "BIOLOGIA CELULAR",
-      "tema": "respuesta inmunitaria",
-      "dificultad": "facil",
-      "pregunta": "¿Cuál responde primero de forma general ante muchos microorganismos: la inmunidad innata o la adaptativa?",
-      "opcion_a": "La adaptativa, porque necesita primero una expansión clonal específica.",
-      "opcion_b": "La inmunidad innata; actúa con rapidez y reconoce patrones generales.",
-      "opcion_c": "Solo la memoria inmunitaria adquirida después de la primera infección.",
-      "opcion_d": "La producción tardía de anticuerpos específicos, sin participación innata.",
-      "respuesta_correcta": "B",
-      "justificacion": "La inmunidad innata; actúa con rapidez y reconoce patrones generales.",
-      "fuente": "Biología celular y biomédica, St. Alfonso",
-      "paginas_pdf": "697–737",
-      "id": "demo-full-58",
+      "tema": "Bases celulares de la respuesta inmunitaria",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El CPH de clase II presenta típicamente péptidos de proteínas incorporadas desde el exterior celular.\n2. Los péptidos presentados por el CPH de clase I provienen típicamente de proteínas incorporadas desde el exterior.\n3. La coinhibición del linfocito T aumenta su activación y reduce la tolerancia.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Solo la afirmación 3 es correcta",
+      "opcion_d": "Todas las afirmaciones son correctas",
+      "opcion_e": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "B"
+        "A"
       ],
+      "justificacion": "1. Correcta. En la vía de CPH de clase II se procesan y presentan típicamente péptidos de proteínas que se incorporaron desde el exterior.\n2. Incorrecta. En la vía de CPH de clase I, el proteasoma aporta péptidos derivados de proteínas intracelulares.\n3. Incorrecta. Una señal de coinhibición reduce la activación del linfocito T y contribuye a mantener la tolerancia.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. En la vía de CPH de clase II se procesan y presentan típicamente péptidos de proteínas que se incorporaron desde el exterior. 2. Incorrecta. En la vía de CPH de clase I, el proteasoma aporta péptidos derivados de proteínas intracelulares.",
+        "C": "1. Correcta. En la vía de CPH de clase II se procesan y presentan típicamente péptidos de proteínas que se incorporaron desde el exterior. 3. Incorrecta. Una señal de coinhibición reduce la activación del linfocito T y contribuye a mantener la tolerancia.",
+        "D": "2. Incorrecta. En la vía de CPH de clase I, el proteasoma aporta péptidos derivados de proteínas intracelulares. 3. Incorrecta. Una señal de coinhibición reduce la activación del linfocito T y contribuye a mantener la tolerancia.",
+        "E": "1. Correcta. En la vía de CPH de clase II se procesan y presentan típicamente péptidos de proteínas que se incorporaron desde el exterior."
+      },
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015 · cap. 17 · Presentación de clase I / Presentación de clase II / cap. 17 · Coestimulación / Coinhibición",
+      "paginas_pdf": "714, 717, 718",
+      "pagina_impresa": "",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
         "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 67
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2021-2022-3-33",
@@ -1843,30 +1906,43 @@
       "materia": "BIOLOGIA CELULAR"
     },
     {
+      "id": "final-14-umss-073",
+      "numero_original": 73,
+      "numero_pregunta": 73,
       "materia": "BIOLOGIA CELULAR",
-      "tema": "macrotransporte a traves de la membrana plasmatica",
-      "dificultad": "facil",
-      "pregunta": "¿Qué ocurre con la membrana cuando una vesícula libera su contenido al exterior?",
-      "opcion_a": "La vesícula se fusiona con la membrana plasmática y descarga su contenido por exocitosis.",
-      "opcion_b": "La vesícula se incorpora al núcleo y conserva allí su carga.",
-      "opcion_c": "La membrana plasmática rodea material externo para introducirlo.",
-      "opcion_d": "La vesícula se separa de la membrana plasmática hacia el interior sin liberar su carga al exterior.",
+      "tema": "Macrotransporte a través de la membrana plasmática: endocitosis y exocitosis",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La adaptina vincula la zona citosólica de receptores de carga con el revestimiento de clatrina.\n2. Las proteínas SNARE impiden la fusión de una vesícula con su membrana diana.\n3. La difusión facilitada permite que un soluto cruce su membrana contra el gradiente mediante un canal.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Solo la afirmación 3 es correcta",
+      "opcion_d": "Todas las afirmaciones son correctas",
+      "opcion_e": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
-      "justificacion": "La vesícula se fusiona con la membrana plasmática y descarga su contenido por exocitosis.",
-      "fuente": "Biología celular y biomédica, St. Alfonso",
-      "paginas_pdf": "214–255",
-      "id": "demo-full-51",
       "respuestas_aceptadas": [
         "A"
       ],
+      "justificacion": "1. Correcta. El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina.\n2. Incorrecta. Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión.\n3. Incorrecta. En la difusión facilitada, un canal o un transportador permite el paso a favor del gradiente.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina. 2. Incorrecta. Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión.",
+        "C": "1. Correcta. El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina. 3. Incorrecta. En la difusión facilitada, un canal o un transportador permite el paso a favor del gradiente.",
+        "D": "2. Incorrecta. Las SNARE de la vesícula y de la membrana diana se acoplan durante el proceso de fusión. 3. Incorrecta. En la difusión facilitada, un canal o un transportador permite el paso a favor del gradiente.",
+        "E": "1. Correcta. El complejo adaptina conecta la zona citosólica de receptores de carga con el revestimiento de clatrina."
+      },
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015 · cap. 5 · Endocitosis mediada por receptor / Cubierta vesicular / cap. 5 · Separación vesicular / Fusión vesicular / cap. 4 · Difusión simple / Difusión facilitada",
+      "paginas_pdf": "170, 174, 218, 221, 222, 238",
+      "pagina_impresa": "",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
         "chapter": 5,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 73
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2021-2022-3-82",
@@ -1921,30 +1997,43 @@
       "materia": "BIOLOGIA CELULAR"
     },
     {
+      "id": "final-14-umss-076",
+      "numero_original": 76,
+      "numero_pregunta": 76,
       "materia": "BIOLOGIA CELULAR",
-      "tema": "transcripcion y maduracion del arn",
+      "tema": "El núcleo. Parte II: transcripción y maduración del ARN y estructura del nucléolo",
       "dificultad": "dificil",
-      "pregunta": "¿Qué diferencia de azúcar hay entre ADN y ARN?",
-      "opcion_a": "El ARN contiene desoxirribosa y el ADN ribosa.",
-      "opcion_b": "Ambos contienen exclusivamente ribosa.",
-      "opcion_c": "Ambos contienen exclusivamente desoxirribosa.",
-      "opcion_d": "El ARN contiene ribosa; el ADN, desoxirribosa.",
-      "respuesta_correcta": "D",
-      "justificacion": "El ARN contiene ribosa; el ADN, desoxirribosa.",
-      "fuente": "Biología celular y biomédica, St. Alfonso",
-      "paginas_pdf": "351–381",
-      "id": "demo-full-66",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La poliadenilato polimerasa añade la cola poli(A) al extremo 3′ sin leer un molde de ADN.\n2. La ARN polimerasa II es la responsable de transcribir el precursor de esos tres ARNr.\n3. La ARN polimerasa III sintetiza el precursor de los ARN mensajeros que se traducen.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Solo la afirmación 3 es correcta",
+      "opcion_d": "Todas las afirmaciones son correctas",
+      "opcion_e": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "D"
+        "A"
       ],
+      "justificacion": "1. Correcta. La poliadenilato polimerasa añade la cola de poli(A) al extremo 3′ tras el corte, sin usar un molde.\n2. Incorrecta. La ARN polimerasa II produce el precursor del ARN mensajero que se utilizará para sintetizar proteínas.\n3. Incorrecta. La ARN polimerasa III transcribe el ARNt y el ARNr 5 S.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La poliadenilato polimerasa añade la cola de poli(A) al extremo 3′ tras el corte, sin usar un molde. 2. Incorrecta. La ARN polimerasa II produce el precursor del ARN mensajero que se utilizará para sintetizar proteínas.",
+        "C": "1. Correcta. La poliadenilato polimerasa añade la cola de poli(A) al extremo 3′ tras el corte, sin usar un molde. 3. Incorrecta. La ARN polimerasa III transcribe el ARNt y el ARNr 5 S.",
+        "D": "2. Incorrecta. La ARN polimerasa II produce el precursor del ARN mensajero que se utilizará para sintetizar proteínas. 3. Incorrecta. La ARN polimerasa III transcribe el ARNt y el ARNr 5 S.",
+        "E": "1. Correcta. La poliadenilato polimerasa añade la cola de poli(A) al extremo 3′ tras el corte, sin usar un molde."
+      },
+      "truth_values": [
+        true,
+        false,
+        false
+      ],
+      "fuente": "Alfonso Calvo González · Biología celular biomédica · Elsevier, 2015 · cap. 8 · ARN polimerasas / Cola poli(A) / cap. 8 · ARN polimerasas",
+      "paginas_pdf": "356, 375",
+      "pagina_impresa": "",
       "coverage": {
         "subject": "BIOLOGIA CELULAR",
         "chapter": 8,
-        "curriculum": "bibliography"
-      },
-      "review": "Distractores revisados en el contexto de la pregunta; respuesta y fuente del material suministrado conservadas.",
-      "source_numero_original": null,
-      "numero_original": 76
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
       "id": "2025-2026-2-87",
@@ -2050,524 +2139,724 @@
       "materia": "BIOLOGIA CELULAR"
     },
     {
-      "id": "vida-final-8-01",
-      "source_numero_original": 41,
+      "id": "final-14-umss-081",
+      "numero_original": 81,
+      "numero_pregunta": 81,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 16",
-      "pregunta": "Un equipo estudia asistencia a tutorías en una población extensa y dispone de recursos limitados. ¿Qué justifica utilizar una muestra?",
+      "tema": "Muestreo",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El muestreo sistemático requiere realizar un nuevo sorteo independiente para seleccionar cada unidad.\n2. Se denomina muestra al conjunto completo de unidades antes de realizar cualquier selección.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "D",
       "respuestas_aceptadas": [
         "D"
       ],
+      "justificacion": "1. Incorrecta. Tras elegir el punto de inicio al azar, el muestreo sistemático avanza con un intervalo fijo.\n2. Incorrecta. La muestra es la parte de la población que se selecciona para el estudio.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Tras elegir el punto de inicio al azar, el muestreo sistemático avanza con un intervalo fijo.",
+        "B": "2. Incorrecta. La muestra es la parte de la población que se selecciona para el estudio.",
+        "C": "1. Incorrecta. Tras elegir el punto de inicio al azar, el muestreo sistemático avanza con un intervalo fijo. 2. Incorrecta. La muestra es la parte de la población que se selecciona para el estudio.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "truth_values": [
+        false,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 16 · muestreo / cap. 15 · estadistica descriptiva",
+      "paginas_pdf": "89, 90, 98, 99",
+      "pagina_impresa": "14, 15, 23, 24",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 16,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 41.",
-      "comentario": "Correcta D: Obtener información de una parte de la población mediante un diseño de selección definido, reduciendo recursos frente a un censo.",
-      "source_question_id": "2025-2026-3-41",
-      "source_sha256": "dbc2104aefbe43040ffa1142c249c73257542d8f92e5e4ac7e9f0d0f132fb5f0",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Garantizar que desaparezca cualquier error de selección o estimación.",
-      "opcion_b": "Asegurar que cualquier grupo elegido por conveniencia represente a toda la población.",
-      "opcion_c": "Evitar identificar la población de la que proceden los participantes.",
-      "opcion_d": "Obtener información de una parte de la población mediante un diseño de selección definido, reduciendo recursos frente a un censo.",
-      "numero_original": 81
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-02",
-      "source_numero_original": 42,
+      "id": "final-14-umss-082",
+      "numero_original": 82,
+      "numero_pregunta": 82,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 14",
-      "pregunta": "En un registro sobre asistencia a tutorías se anota también la temperatura del aula en grados Celsius. ¿Qué escala corresponde a esa temperatura?",
+      "tema": "Variables y medición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si se usa una escala de intervalo, la diferencia de 5 a 6 representa la misma amplitud que la de 10 a 11.\n2. La estadística descriptiva usa los datos de una muestra para sacar conclusiones sobre toda la población.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
+      "justificacion": "1. Correcta. Ambas diferencias miden una unidad en una escala de intervalos iguales.\n2. Incorrecta. La estadística descriptiva organiza y resume el conjunto de datos disponible.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Ambas diferencias miden una unidad en una escala de intervalos iguales. 2. Incorrecta. La estadística descriptiva organiza y resume el conjunto de datos disponible.",
+        "C": "2. Incorrecta. La estadística descriptiva organiza y resume el conjunto de datos disponible.",
+        "D": "1. Correcta. Ambas diferencias miden una unidad en una escala de intervalos iguales."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 14 · Escala de intervalo / cap. 15 · estadistica descriptiva",
+      "paginas_pdf": "89, 94",
+      "pagina_impresa": "14, 19",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 14,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 42.",
-      "comentario": "Correcta A: De intervalo: las diferencias son comparables, pero 0 °C no representa ausencia de temperatura.",
-      "source_question_id": "2025-2026-3-42",
-      "source_sha256": "e4843afc11c71890913b85da69ab1bea789f2cc22513e9fa73f4112e70f69c02",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "De intervalo: las diferencias son comparables, pero 0 °C no representa ausencia de temperatura.",
-      "opcion_b": "De razón: 0 °C representa ausencia absoluta de temperatura.",
-      "opcion_c": "Nominal: los grados solo son etiquetas sin diferencias cuantificables.",
-      "opcion_d": "Ordinal: solo se conoce el orden y las diferencias entre grados no son comparables.",
-      "numero_original": 82
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-03",
-      "source_numero_original": 43,
+      "id": "final-14-umss-083",
+      "numero_original": 83,
+      "numero_pregunta": 83,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 15",
-      "pregunta": "El equipo calcula el promedio observado de asistencia a tutorías en 240 participantes, sin generalizarlo a otras personas. ¿Qué está haciendo?",
-      "respuesta_correcta": "B",
+      "tema": "Estadística descriptiva",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La estadística inferencial permite extraer conclusiones sobre una población a partir de una muestra.\n2. La población comprende el conjunto completo de unidades de interés.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "C",
       "respuestas_aceptadas": [
-        "B"
+        "C"
       ],
+      "justificacion": "1. Correcta. La estadística inferencial usa la muestra para estimar o sacar conclusiones sobre la población.\n2. Correcta. La población es todo el conjunto sobre el que interesa obtener información.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. La población es todo el conjunto sobre el que interesa obtener información.",
+        "B": "1. Correcta. La estadística inferencial usa la muestra para estimar o sacar conclusiones sobre la población.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La estadística inferencial usa la muestra para estimar o sacar conclusiones sobre la población. 2. Correcta. La población es todo el conjunto sobre el que interesa obtener información."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 15 · estadistica descriptiva",
+      "paginas_pdf": "89, 90",
+      "pagina_impresa": "14, 15",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 15,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 43.",
-      "comentario": "Correcta B: Estadística descriptiva de los datos observados.",
-      "source_question_id": "2025-2026-3-43",
-      "source_sha256": "144dbe3345eda9e3b5a8090d8f026996fa947ef43bbf54c1c2b4baa16b467794",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Una asignación aleatoria de tratamientos por el solo hecho de resumir datos.",
-      "opcion_b": "Estadística descriptiva de los datos observados.",
-      "opcion_c": "Una generalización inferencial a toda la población, aunque no se haya formulado.",
-      "opcion_d": "Un muestreo por bola de nieve por el solo hecho de calcular un promedio.",
-      "numero_original": 83
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-04",
-      "source_numero_original": 44,
+      "id": "final-14-umss-084",
+      "numero_original": 84,
+      "numero_pregunta": 84,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 14",
-      "pregunta": "En el estudio de asistencia a tutorías, el lugar de residencia se codifica como rural=1 y urbano=2. ¿Qué interpretación es válida?",
+      "tema": "Variables y medición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Los códigos de una escala nominal identifican categorías.\n2. Si el estudio se refiere a 600 estudiantes y selecciona 80 de ellos, los 80 forman una muestra.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
+      "justificacion": "1. Correcta. Los códigos de una escala nominal sirven para distinguir categorías. Su orden numérico carece de significado.\n2. Correcta. La muestra es la parte del conjunto de interés de la que se obtienen las observaciones.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. La muestra es la parte del conjunto de interés de la que se obtienen las observaciones.",
+        "B": "1. Correcta. Los códigos de una escala nominal sirven para distinguir categorías. Su orden numérico carece de significado.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Los códigos de una escala nominal sirven para distinguir categorías. Su orden numérico carece de significado. 2. Correcta. La muestra es la parte del conjunto de interés de la que se obtienen las observaciones."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 14 · variables y medicion / cap. 15 · Población y muestra",
+      "paginas_pdf": "89, 93",
+      "pagina_impresa": "14, 18",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 14,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 44.",
-      "comentario": "Correcta C: Los números identifican categorías; no indican que urbano tenga el doble de residencia que rural.",
-      "source_question_id": "2025-2026-3-44",
-      "source_sha256": "678e3f50cdc4784b725fd3b8956c3dd7aec32c6a45754006923d9b1b17dacab5",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "La diferencia entre 2 y 1 mide una unidad física de residencia.",
-      "opcion_b": "Los códigos convierten la residencia en una variable cuantitativa continua.",
-      "opcion_c": "Los números identifican categorías; no indican que urbano tenga el doble de residencia que rural.",
-      "opcion_d": "Urbano representa necesariamente el doble de cantidad de residencia que rural.",
-      "numero_original": 84
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-05",
-      "source_numero_original": 45,
+      "id": "final-14-umss-085",
+      "numero_original": 85,
+      "numero_pregunta": 85,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Para agrupar mediciones de asistencia a tutorías, se considera la regla de Sturges. ¿Qué orienta esta regla?",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 45.",
-      "comentario": "Correcta D: Una estimación del número de intervalos de clase a partir del tamaño del conjunto de datos.",
-      "source_question_id": "2025-2026-3-45",
-      "source_sha256": "a4eb68d0f04fe072cae48353d6c9d6200fede6b5f32d66496e0290b8635d00df",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "La selección del nombre de cada participante de la muestra.",
-      "opcion_b": "La demostración de que todos los datos siguen una distribución normal.",
-      "opcion_c": "La elección de la respuesta que confirmará la hipótesis del investigador.",
-      "opcion_d": "Una estimación del número de intervalos de clase a partir del tamaño del conjunto de datos.",
-      "numero_original": 85
-    },
-    {
-      "id": "vida-final-8-06",
-      "source_numero_original": 46,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 14",
-      "pregunta": "En una encuesta sobre asistencia a tutorías, la satisfacción se registra como baja, media o alta. ¿Qué caracteriza esta escala?",
+      "tema": "Frecuencias y gráficos",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si los dos primeros grupos tienen frecuencias relativas de 15 % y 25 %, el acumulado del segundo grupo es 40 %.\n2. Si las primeras frecuencias absolutas son 4, 7 y 9, el acumulado en la tercera categoría es 16.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
+      "justificacion": "1. Correcta. Las frecuencias relativas se suman hasta el grupo indicado.\n2. Incorrecta. El acumulado incluye todas las categorías hasta la tercera: 4 + 7 + 9 = 20.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Las frecuencias relativas se suman hasta el grupo indicado. 2. Incorrecta. El acumulado incluye todas las categorías hasta la tercera: 4 + 7 + 9 = 20.",
+        "C": "2. Incorrecta. El acumulado incluye todas las categorías hasta la tercera: 4 + 7 + 9 = 20.",
+        "D": "1. Correcta. Las frecuencias relativas se suman hasta el grupo indicado."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 17 · Frecuencia relativa acumulada / cap. 17 · Frecuencia absoluta acumulada",
+      "paginas_pdf": "121, 122",
+      "pagina_impresa": "46, 47",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-14-umss-086",
+      "numero_original": 86,
+      "numero_pregunta": 86,
+      "materia": "SALUD PUBLICA",
+      "tema": "Variables y medición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En una escala de razón, el cero es convencional y carece de significado comparar dos cantidades mediante un cociente.\n2. Calcular un promedio para resumir exclusivamente las observaciones registradas constituye por sí solo inferencia estadística.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "justificacion": "1. Incorrecta. Con un cero absoluto, la escala de razón admite comparaciones como el doble o la mitad.\n2. Incorrecta. Resumir los datos observados es descriptivo. La inferencia utiliza la muestra para concluir algo sobre la población.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Con un cero absoluto, la escala de razón admite comparaciones como el doble o la mitad.",
+        "B": "2. Incorrecta. Resumir los datos observados es descriptivo. La inferencia utiliza la muestra para concluir algo sobre la población.",
+        "C": "1. Incorrecta. Con un cero absoluto, la escala de razón admite comparaciones como el doble o la mitad. 2. Incorrecta. Resumir los datos observados es descriptivo. La inferencia utiliza la muestra para concluir algo sobre la población.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "truth_values": [
+        false,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 14 · variables y medicion / cap. 15 · Estadística descriptiva",
+      "paginas_pdf": "89, 94",
+      "pagina_impresa": "14, 19",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 14,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 46.",
-      "comentario": "Correcta A: Es ordinal: existe orden, sin asegurar distancias iguales entre categorías.",
-      "source_question_id": "2025-2026-3-46",
-      "source_sha256": "966ae0f45215b77b0dcb750009420a12ca60ee287f680465ad3c9abb741108c7",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Es ordinal: existe orden, sin asegurar distancias iguales entre categorías.",
-      "opcion_b": "Es nominal: las categorías carecen de cualquier orden.",
-      "opcion_c": "Es de razón: la categoría baja equivale a ausencia absoluta de satisfacción.",
-      "opcion_d": "Es de intervalo: la distancia de baja a media es necesariamente igual a la de media a alta.",
-      "numero_original": 86
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-07",
-      "source_numero_original": 47,
+      "id": "final-14-umss-087",
+      "numero_original": 87,
+      "numero_pregunta": 87,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 14",
-      "pregunta": "El equipo de asistencia a tutorías cuenta cuántos participantes hay en cada hogar. ¿Cómo se clasifica ese número?",
+      "tema": "Variables y medición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En una escala de intervalo, el cero representa ausencia absoluta de lo medido.\n2. En el muestreo por conglomerados, la selección inicial puede realizarse entre grupos como las escuelas.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
+      "justificacion": "1. Incorrecta. La escala de intervalo permite comparar diferencias. Su cero es un punto de referencia convencional.\n2. Correcta. En el muestreo por conglomerados, la selección inicial se realiza entre grupos, como las escuelas.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La escala de intervalo permite comparar diferencias. Su cero es un punto de referencia convencional. 2. Correcta. En el muestreo por conglomerados, la selección inicial se realiza entre grupos, como las escuelas.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La escala de intervalo permite comparar diferencias. Su cero es un punto de referencia convencional.",
+        "D": "2. Correcta. En el muestreo por conglomerados, la selección inicial se realiza entre grupos, como las escuelas."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 14 · variables y medicion / cap. 16 · muestreo",
+      "paginas_pdf": "94, 99, 101",
+      "pagina_impresa": "19, 24, 26",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 14,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 47.",
-      "comentario": "Correcta B: Cuantitativo discreto, porque resulta de contar unidades.",
-      "source_question_id": "2025-2026-3-47",
-      "source_sha256": "5acdfce1372915b9a6ab6b43f4e906f3ad2ba2730f16e146da35b7d170663e13",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Cualitativo ordinal, porque solo permite ordenar sin contar.",
-      "opcion_b": "Cuantitativo discreto, porque resulta de contar unidades.",
-      "opcion_c": "Cuantitativo continuo, porque admite cualquier fracción de participante.",
-      "opcion_d": "Cualitativo nominal, porque no expresa una cantidad.",
-      "numero_original": 87
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-08",
-      "source_numero_original": 48,
+      "id": "final-14-umss-088",
+      "numero_original": 88,
+      "numero_pregunta": 88,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Las respuestas sobre asistencia a tutorías incluyen nombres de categorías sin orden natural. ¿Cómo pueden organizarse para tabularlas?",
+      "tema": "Frecuencias y gráficos",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La frecuencia relativa se obtiene al dividir el total de observaciones entre las de la categoría.\n2. La media de los valores 2, 7, 7 y 8 es 6.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "justificacion": "1. Incorrecta. La frecuencia relativa divide el conteo de una categoría entre el total. Multiplicar el cociente por 100 da el porcentaje.\n2. Correcta. La suma de los cuatro valores es 24. Al dividirla entre 4 se obtiene 6.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La frecuencia relativa divide el conteo de una categoría entre el total. Multiplicar el cociente por 100 da el porcentaje. 2. Correcta. La suma de los cuatro valores es 24. Al dividirla entre 4 se obtiene 6.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La frecuencia relativa divide el conteo de una categoría entre el total. Multiplicar el cociente por 100 da el porcentaje.",
+        "D": "2. Correcta. La suma de los cuatro valores es 24. Al dividirla entre 4 se obtiene 6."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 17 · frecuencias y graficos / cap. 18 · Media aritmética",
+      "paginas_pdf": "120, 148",
+      "pagina_impresa": "45, 73",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-14-umss-089",
+      "numero_original": 89,
+      "numero_pregunta": 89,
+      "materia": "SALUD PUBLICA",
+      "tema": "Frecuencias y gráficos",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La frecuencia relativa acumulada suma las proporciones hasta la categoría indicada.\n2. Para hallar la mediana importa la posición que ocupan los datos una vez ordenados.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
+      "justificacion": "1. Correcta. La frecuencia relativa acumulada suma proporciones o porcentajes hasta la categoría indicada.\n2. Correcta. La mediana se obtiene a partir de la posición central de los datos ordenados.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. La mediana se obtiene a partir de la posición central de los datos ordenados.",
+        "B": "1. Correcta. La frecuencia relativa acumulada suma proporciones o porcentajes hasta la categoría indicada.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La frecuencia relativa acumulada suma proporciones o porcentajes hasta la categoría indicada. 2. Correcta. La mediana se obtiene a partir de la posición central de los datos ordenados."
       },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 48.",
-      "comentario": "Correcta C: Con un criterio explícito y constante, por ejemplo alfabético, conservando las frecuencias de cada categoría.",
-      "source_question_id": "2025-2026-3-48",
-      "source_sha256": "cbc832c2084f011be0ab87a1b7c52cded8ef9b189683f458806c8ddf02ddef33",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Eliminando las categorías con pocos casos antes de contar sus frecuencias.",
-      "opcion_b": "Suponiendo que la distancia entre dos nombres equivale a una unidad numérica.",
-      "opcion_c": "Con un criterio explícito y constante, por ejemplo alfabético, conservando las frecuencias de cada categoría.",
-      "opcion_d": "Asignando a cada nombre una magnitud física obtenida por multiplicación.",
-      "numero_original": 88
-    },
-    {
-      "id": "vida-final-8-09",
-      "source_numero_original": 49,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Una tabla de asistencia a tutorías usa los intervalos [45, 55) y [55, 65). ¿Dónde se registra un valor exactamente igual a 55?",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
+      "truth_values": [
+        true,
+        true
       ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 17 · frecuencias y graficos / cap. 18 · medidas de tendencia central",
+      "paginas_pdf": "121, 122, 148, 151",
+      "pagina_impresa": "46, 47, 73, 76",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 49.",
-      "comentario": "Correcta D: En [55, 65), que incluye su extremo inferior.",
-      "source_question_id": "2025-2026-3-49",
-      "source_sha256": "5c61a9a4ae89fd49371287f4cd45cd3f1586a9c55896945282e3db317aa26784",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "En [45, 55), que excluye su extremo superior.",
-      "opcion_b": "En ambos intervalos, duplicando la observación.",
-      "opcion_c": "En ninguno, aunque la tabla cubra ese valor.",
-      "opcion_d": "En [55, 65), que incluye su extremo inferior.",
-      "numero_original": 89
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-10",
-      "source_numero_original": 50,
+      "id": "final-14-umss-090",
+      "numero_original": 90,
+      "numero_pregunta": 90,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 20",
-      "pregunta": "En los datos de asistencia a tutorías, el mínimo es 19 y el máximo 68. ¿Cuál es el rango?",
+      "tema": "Dispersión y forma de los datos",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si la varianza es 25 cm², la desviación estándar es 5 cm.\n2. Una media de 50 y una desviación estándar de 5 dan un coeficiente de variación de 5 %.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
+      "justificacion": "1. Correcta. La desviación estándar es la raíz cuadrada positiva de la varianza y usa las unidades originales.\n2. Incorrecta. El porcentaje se calcula como 100 × 5/50 = 10 %.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La desviación estándar es la raíz cuadrada positiva de la varianza y usa las unidades originales. 2. Incorrecta. El porcentaje se calcula como 100 × 5/50 = 10 %.",
+        "C": "2. Incorrecta. El porcentaje se calcula como 100 × 5/50 = 10 %.",
+        "D": "1. Correcta. La desviación estándar es la raíz cuadrada positiva de la varianza y usa las unidades originales."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 20 · Desviación estándar / cap. 20 · Coeficiente de variación",
+      "paginas_pdf": "177, 179",
+      "pagina_impresa": "102, 104",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 20,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 50.",
-      "comentario": "Correcta A: 49",
-      "source_question_id": "2025-2026-3-50",
-      "source_sha256": "376a3022535f7ca0eb3eb0fc81dc2e498bbb6fbaaf84ed207ded7c9fbc2512a3",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "49",
-      "opcion_b": "87",
-      "opcion_c": "92",
-      "opcion_d": "50",
-      "numero_original": 90
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-11",
-      "source_numero_original": 91,
+      "id": "final-14-umss-091",
+      "numero_original": 91,
+      "numero_pregunta": 91,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 16",
-      "pregunta": "Para localizar participantes de un estudio de asistencia a tutorías, los primeros informantes recomiendan a otras personas que cumplen los criterios. ¿Qué método se describe?",
-      "respuesta_correcta": "B",
+      "tema": "Muestreo",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El muestreo estratificado incorpora unidades de cada estrato.\n2. Si 18 de 60 observaciones pertenecen a una categoría, su frecuencia relativa es 30 %.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "C",
       "respuestas_aceptadas": [
-        "B"
+        "C"
       ],
+      "justificacion": "1. Correcta. En el muestreo estratificado se toman unidades de cada estrato para que todos los grupos estén representados.\n2. Correcta. Se divide 18 entre 60 y se multiplica por 100.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. Se divide 18 entre 60 y se multiplica por 100.",
+        "B": "1. Correcta. En el muestreo estratificado se toman unidades de cada estrato para que todos los grupos estén representados.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. En el muestreo estratificado se toman unidades de cada estrato para que todos los grupos estén representados. 2. Correcta. Se divide 18 entre 60 y se multiplica por 100."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 16 · muestreo / cap. 17 · Frecuencia absoluta y relativa",
+      "paginas_pdf": "99, 101, 120",
+      "pagina_impresa": "24, 26, 45",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 16,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 91.",
-      "comentario": "Correcta B: Muestreo por bola de nieve.",
-      "source_question_id": "2025-2026-3-91",
-      "source_sha256": "80abd3f73e32f2469f8a933cb446fd9c84866cecbe88da4847819a57637655bb",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Censo completo de todos los integrantes de la población.",
-      "opcion_b": "Muestreo por bola de nieve.",
-      "opcion_c": "Muestreo aleatorio simple con probabilidades iguales conocidas.",
-      "opcion_d": "Muestreo sistemático con intervalo fijo calculado como N/n.",
-      "numero_original": 91
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-12",
-      "source_numero_original": 92,
+      "id": "final-14-umss-092",
+      "numero_original": 92,
+      "numero_pregunta": 92,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Se desea mostrar cómo se distribuyen mediciones continuas de asistencia a tutorías, agrupadas en intervalos contiguos. ¿Qué gráfica corresponde?",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 92.",
-      "comentario": "Correcta C: Un histograma.",
-      "source_question_id": "2025-2026-3-92",
-      "source_sha256": "c75bbb4b6bcbeb9d61db7509c6ab2a75139b1a0c046478e97170b879f8feb88c",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Un diagrama de dispersión de dos variables distintas que no se han medido.",
-      "opcion_b": "Un mapa conceptual sin frecuencias ni intervalos.",
-      "opcion_c": "Un histograma.",
-      "opcion_d": "Un diagrama de barras separado para categorías nominales sin intervalos.",
-      "numero_original": 92
-    },
-    {
-      "id": "vida-final-8-13",
-      "source_numero_original": 93,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "En un diagrama de barras de asistencia a tutorías, una categoría tiene 39 observaciones. Si la altura representa la frecuencia absoluta, ¿qué valor debe alcanzar su barra?",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 93.",
-      "comentario": "Correcta D: 39",
-      "source_question_id": "2025-2026-3-93",
-      "source_sha256": "cd34c6947c95620866b1765a185f8bf150c38d45dd14b964eaf981286cf88787",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "78",
-      "opcion_b": "19.5",
-      "opcion_c": "40",
-      "opcion_d": "39",
-      "numero_original": 93
-    },
-    {
-      "id": "vida-final-8-14",
-      "source_numero_original": 94,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "En una gráfica de categorías de asistencia a tutorías, todas las barras tienen la misma anchura. ¿Qué representa su altura cuando el eje vertical indica frecuencia?",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 94.",
-      "comentario": "Correcta A: La frecuencia de la categoría correspondiente.",
-      "source_question_id": "2025-2026-3-94",
-      "source_sha256": "ba46ebb726edb8cabdc00faa129491c46e73077e7ffb680121f0717c411893e6",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "La frecuencia de la categoría correspondiente.",
-      "opcion_b": "El nombre de la categoría, sin relación con sus observaciones.",
-      "opcion_c": "La edad de todas las personas incluidas en esa categoría.",
-      "opcion_d": "La amplitud de un intervalo continuo que no aparece en la gráfica.",
-      "numero_original": 94
-    },
-    {
-      "id": "vida-final-8-15",
-      "source_numero_original": 95,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Para 400 datos de asistencia a tutorías, se usa m=1+3,322·log10(n) y se redondea hacia arriba. ¿Cuántas clases se proponen?",
+      "tema": "Frecuencias y gráficos",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La frecuencia absoluta acumulada toma el conteo de una categoría y excluye todos los conteos que la preceden.\n2. La media aritmética se calcula dividiendo la suma de los datos entre el número de observaciones.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
+      "justificacion": "1. Incorrecta. La frecuencia absoluta acumulada suma los conteos desde el inicio hasta el intervalo elegido.\n2. Correcta. La media aritmética reparte la suma de los valores entre todas las observaciones.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La frecuencia absoluta acumulada suma los conteos desde el inicio hasta el intervalo elegido. 2. Correcta. La media aritmética reparte la suma de los valores entre todas las observaciones.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La frecuencia absoluta acumulada suma los conteos desde el inicio hasta el intervalo elegido.",
+        "D": "2. Correcta. La media aritmética reparte la suma de los valores entre todas las observaciones."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 17 · frecuencias y graficos / cap. 18 · medidas de tendencia central",
+      "paginas_pdf": "121, 122, 148, 151",
+      "pagina_impresa": "46, 47, 73, 76",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 95.",
-      "comentario": "Correcta B: 10",
-      "source_question_id": "2025-2026-3-95",
-      "source_sha256": "f2aca79afd3daa5ea36886632cfa7a40c0c6f90d59aba102e9f80b5ab366cd23",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "15",
-      "opcion_b": "10",
-      "opcion_c": "12",
-      "opcion_d": "8",
-      "numero_original": 95
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-16",
-      "source_numero_original": 96,
+      "id": "final-14-umss-093",
+      "numero_original": 93,
+      "numero_pregunta": 93,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Un intervalo reúne 96 de 240 observaciones de asistencia a tutorías. ¿Cuál es su frecuencia relativa porcentual?",
+      "tema": "Frecuencias y gráficos",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La frecuencia absoluta indica cuántas observaciones pertenecen a una categoría o intervalo.\n2. Para seleccionar 60 unidades de una lista de 600 por muestreo sistemático, el intervalo de selección es 10.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
+      "justificacion": "1. Correcta. La frecuencia absoluta es el número de observaciones que pertenecen a una categoría o intervalo.\n2. Correcta. El intervalo se calcula como N/n, aquí 600 dividido entre 60.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. El intervalo se calcula como N/n, aquí 600 dividido entre 60.",
+        "B": "1. Correcta. La frecuencia absoluta es el número de observaciones que pertenecen a una categoría o intervalo.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La frecuencia absoluta es el número de observaciones que pertenecen a una categoría o intervalo. 2. Correcta. El intervalo se calcula como N/n, aquí 600 dividido entre 60."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 17 · frecuencias y graficos / cap. 16 · Muestreo sistemático",
+      "paginas_pdf": "99, 120",
+      "pagina_impresa": "24, 45",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 96.",
-      "comentario": "Correcta C: 40 %",
-      "source_question_id": "2025-2026-3-96",
-      "source_sha256": "83223dd3ab1e0580e1a5195e509d8d144c55542900fb61f1a6992f927e92c0dd",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "4 %",
-      "opcion_b": "80 %",
-      "opcion_c": "40 %",
-      "opcion_d": "60 %",
-      "numero_original": 96
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-17",
-      "source_numero_original": 97,
+      "id": "final-14-umss-094",
+      "numero_original": 94,
+      "numero_pregunta": 94,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 14",
-      "pregunta": "Una variable del estudio de asistencia a tutorías solo admite 0, 1, 2, 3 o más eventos completos. ¿Qué valor sería incompatible con esa definición?",
+      "tema": "Muestreo",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Con intervalo 8 e inicio 3, la segunda posición que se selecciona es la 8.\n2. La mediana de los valores ordenados 2, 5, 6, 9 y 10 es 5.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "D",
       "respuestas_aceptadas": [
         "D"
       ],
+      "justificacion": "1. Incorrecta. Se suma el intervalo al inicio: 3 + 8 = 11.\n2. Incorrecta. La tercera observación ocupa la posición central y su valor es 6.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Se suma el intervalo al inicio: 3 + 8 = 11.",
+        "B": "2. Incorrecta. La tercera observación ocupa la posición central y su valor es 6.",
+        "C": "1. Incorrecta. Se suma el intervalo al inicio: 3 + 8 = 11. 2. Incorrecta. La tercera observación ocupa la posición central y su valor es 6.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "truth_values": [
+        false,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 16 · Muestreo sistemático / cap. 18 · Mediana",
+      "paginas_pdf": "99, 151",
+      "pagina_impresa": "24, 76",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 16,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-14-umss-095",
+      "numero_original": 95,
+      "numero_pregunta": 95,
+      "materia": "SALUD PUBLICA",
+      "tema": "Medidas de tendencia central",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La moda corresponde al mayor valor observado, aunque aparezca con poca frecuencia.\n2. El percentil 90 y el primer decil señalan la misma posición.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "D",
+      "respuestas_aceptadas": [
+        "D"
+      ],
+      "justificacion": "1. Incorrecta. La moda es el valor con la mayor frecuencia, sea o no el valor más grande del conjunto.\n2. Incorrecta. El noveno decil y el percentil 90 señalan la misma posición de la distribución.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La moda es el valor con la mayor frecuencia, sea o no el valor más grande del conjunto.",
+        "B": "2. Incorrecta. El noveno decil y el percentil 90 señalan la misma posición de la distribución.",
+        "C": "1. Incorrecta. La moda es el valor con la mayor frecuencia, sea o no el valor más grande del conjunto. 2. Incorrecta. El noveno decil y el percentil 90 señalan la misma posición de la distribución.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "truth_values": [
+        false,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 18 · medidas de tendencia central / cap. 19 · medidas de posicion",
+      "paginas_pdf": "150, 155, 162, 169",
+      "pagina_impresa": "75, 80, 87, 94",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 18,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-14-umss-096",
+      "numero_original": 96,
+      "numero_pregunta": 96,
+      "materia": "SALUD PUBLICA",
+      "tema": "Medidas de tendencia central",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Para calcular una media con datos agrupados, la marca de clase se toma del límite superior del intervalo.\n2. El segundo cuartil corresponde a la mediana.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "justificacion": "1. Incorrecta. La marca de clase es el punto medio que representa al intervalo al calcular la media agrupada.\n2. Correcta. Q₂ corresponde al centro de la distribución ordenada y coincide con la mediana.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La marca de clase es el punto medio que representa al intervalo al calcular la media agrupada. 2. Correcta. Q₂ corresponde al centro de la distribución ordenada y coincide con la mediana.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La marca de clase es el punto medio que representa al intervalo al calcular la media agrupada.",
+        "D": "2. Correcta. Q₂ corresponde al centro de la distribución ordenada y coincide con la mediana."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 18 · medidas de tendencia central / cap. 19 · medidas de posicion",
+      "paginas_pdf": "150, 155, 162",
+      "pagina_impresa": "75, 80, 87",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 18,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-14-umss-097",
+      "numero_original": 97,
+      "numero_pregunta": 97,
+      "materia": "SALUD PUBLICA",
+      "tema": "Variables y medición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una escala ordinal ordena categorías sin asignar distancias definidas entre ellas.\n2. En el muestreo aleatorio simple se elige una unidad al azar y se incorporan las restantes a intervalos fijos.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. En la escala ordinal las categorías se pueden ordenar. Las distancias entre categorías no están definidas.\n2. Incorrecta. El muestreo aleatorio simple realiza un sorteo entre unidades individuales de la población.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. En la escala ordinal las categorías se pueden ordenar. Las distancias entre categorías no están definidas. 2. Incorrecta. El muestreo aleatorio simple realiza un sorteo entre unidades individuales de la población.",
+        "C": "2. Incorrecta. El muestreo aleatorio simple realiza un sorteo entre unidades individuales de la población.",
+        "D": "1. Correcta. En la escala ordinal las categorías se pueden ordenar. Las distancias entre categorías no están definidas."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 14 · variables y medicion / cap. 16 · muestreo",
+      "paginas_pdf": "93, 98, 99",
+      "pagina_impresa": "18, 23, 24",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 14,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 97.",
-      "comentario": "Correcta D: 2,5 eventos completos.",
-      "source_question_id": "2025-2026-3-97",
-      "source_sha256": "a16273ee8f12af7073e1e801a6c87497b717a4fd5eb38015afdc4991069e05c1",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "0 eventos.",
-      "opcion_b": "2 eventos.",
-      "opcion_c": "3 eventos.",
-      "opcion_d": "2,5 eventos completos.",
-      "numero_original": 97
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-18",
-      "source_numero_original": 98,
+      "id": "final-14-umss-098",
+      "numero_original": 98,
+      "numero_pregunta": 98,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Una categoría de asistencia a tutorías representa el 40 % del total. ¿Qué ángulo ocupa en un diagrama circular de 360°?",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 98.",
-      "comentario": "Correcta A: 144°",
-      "source_question_id": "2025-2026-3-98",
-      "source_sha256": "0634cba5dd389362820186110a5bd5a86817f2ce1230e891e0a56c5690fabcf0",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "144°",
-      "opcion_b": "72°",
-      "opcion_c": "40°",
-      "opcion_d": "216°",
-      "numero_original": 98
-    },
-    {
-      "id": "vida-final-8-19",
-      "source_numero_original": 99,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Una encuesta de asistencia a tutorías clasifica respuestas en seis categorías nominales. Se quiere comparar con claridad sus frecuencias. ¿Qué opción es adecuada?",
+      "tema": "Medidas de posición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El octavo decil identifica la misma posición que el percentil 90.\n2. Si el menor dato es 12 y el mayor es 47, el rango total es 35.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
+      "justificacion": "1. Incorrecta. El octavo decil corresponde al percentil 80. El noveno corresponde al percentil 90.\n2. Correcta. El rango se obtiene restando el valor mínimo del máximo: 47 − 12 = 35.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El octavo decil corresponde al percentil 80. El noveno corresponde al percentil 90. 2. Correcta. El rango se obtiene restando el valor mínimo del máximo: 47 − 12 = 35.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El octavo decil corresponde al percentil 80. El noveno corresponde al percentil 90.",
+        "D": "2. Correcta. El rango se obtiene restando el valor mínimo del máximo: 47 − 12 = 35."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 19 · Correspondencia entre deciles y percentiles / cap. 20 · Rango total",
+      "paginas_pdf": "169, 172",
+      "pagina_impresa": "94, 97",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 99.",
-      "comentario": "Correcta B: Un diagrama de barras con una barra por categoría.",
-      "source_question_id": "2025-2026-3-99",
-      "source_sha256": "71121c3120afdf4571a9aa0b482c4dd6b0a34b11d83d94c93d5d7c6d3c2ea93f",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Una curva temporal que suponga fechas no registradas en las categorías.",
-      "opcion_b": "Un diagrama de barras con una barra por categoría.",
-      "opcion_c": "Un histograma que trate los nombres de categorías como intervalos continuos.",
-      "opcion_d": "Una gráfica de dispersión sin disponer de dos variables numéricas.",
-      "numero_original": 99
+        "chapter": 19,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-8-20",
-      "source_numero_original": 100,
+      "id": "final-14-umss-099",
+      "numero_original": 99,
+      "numero_pregunta": 99,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "En una ojiva de asistencia a tutorías, la frecuencia relativa acumulada hasta un límite es 40 %. ¿Cómo se interpreta?",
+      "tema": "Medidas de posición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El primer cuartil corresponde a la posición teórica del 75 % en una distribución ordenada.\n2. El coeficiente de variación puede expresarse como el porcentaje que representa la desviación estándar respecto de la media.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "justificacion": "1. Incorrecta. Q₁ marca la posición teórica del 25 % de una distribución ordenada.\n2. Correcta. El coeficiente de variación divide la desviación estándar entre la media y expresa esa relación como porcentaje.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Q₁ marca la posición teórica del 25 % de una distribución ordenada. 2. Correcta. El coeficiente de variación divide la desviación estándar entre la media y expresa esa relación como porcentaje.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Q₁ marca la posición teórica del 25 % de una distribución ordenada.",
+        "D": "2. Correcta. El coeficiente de variación divide la desviación estándar entre la media y expresa esa relación como porcentaje."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 19 · medidas de posicion / cap. 20 · dispersion y forma de los datos",
+      "paginas_pdf": "162, 177, 179",
+      "pagina_impresa": "87, 102, 104",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 19,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-14-umss-100",
+      "numero_original": 100,
+      "numero_pregunta": 100,
+      "materia": "SALUD PUBLICA",
+      "tema": "Medidas de posición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El segundo cuartil y la mediana identifican la misma posición en una distribución ordenada.\n2. La desviación estándar es la raíz cuadrada de la varianza y se expresa en las unidades de la variable.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
+      "justificacion": "1. Correcta. Ambos separan la distribución en dos mitades.\n2. Correcta. La desviación estándar es la raíz cuadrada de la varianza y se expresa en las unidades originales.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. La desviación estándar es la raíz cuadrada de la varianza y se expresa en las unidades originales.",
+        "B": "1. Correcta. Ambos separan la distribución en dos mitades.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Ambos separan la distribución en dos mitades. 2. Correcta. La desviación estándar es la raíz cuadrada de la varianza y se expresa en las unidades originales."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 19 · Cuartiles / cap. 20 · dispersion y forma de los datos",
+      "paginas_pdf": "162, 177, 179",
+      "pagina_impresa": "87, 102, 104",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 100.",
-      "comentario": "Correcta C: El 40 % de las observaciones está acumulado hasta ese límite, según los intervalos definidos.",
-      "source_question_id": "2025-2026-3-100",
-      "source_sha256": "d7608ccbdd189d5051954b45111b136e9e744a208fd30b5b1e5ad33f881e4ab4",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "El 40 % está necesariamente por encima del valor máximo de la muestra.",
-      "opcion_b": "La gráfica solo muestra frecuencias no acumuladas.",
-      "opcion_c": "El 40 % de las observaciones está acumulado hasta ese límite, según los intervalos definidos.",
-      "opcion_d": "El 40 % pertenece exclusivamente al último intervalo, sin incluir los anteriores.",
-      "numero_original": 100
+        "chapter": 19,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     }
   ],
   "review": {

@@ -6,7 +6,7 @@
     const readableError = () => 'No se pudo cargar el examen. Intenta de nuevo.';
 
     async function catalog() {
-        if (!catalogPromise) catalogPromise = fetch('/content/past-exams/catalog.json?v=timer-100-cccd41b')
+        if (!catalogPromise) catalogPromise = fetch('/content/past-exams/catalog.json?v=examenes-umss')
             .then(response => { if (!response.ok) throw new Error(readableError()); return response.json(); })
             .then(data => { freeYear = data.freeYear; return data; })
             .catch(error => { catalogPromise = null; throw error; });
@@ -42,12 +42,6 @@
         if (examCache.size > 4) examCache.delete(examCache.keys().next().value);
         return pending;
     }
-    function sourceNotes(exam) {
-        const notes = [];
-        if (exam.missingNumbers.length) notes.push('En el Word original faltan las preguntas ' + exam.missingNumbers.join(', ') + '.');
-        (exam.excludedQuestions || []).forEach(question => notes.push('Pregunta ' + question.numero_original + ': ' + question.reason + ' No se incluye en la calificación.'));
-        return notes.join(' ');
-    }
     function releasePattern() {
         if (patternUrl) URL.revokeObjectURL(patternUrl);
         patternUrl = null;
@@ -68,8 +62,6 @@
             const eyebrow = document.createElement('span'); eyebrow.className = 'entrance-eyebrow'; eyebrow.textContent = 'GESTIÓN ' + exam.year;
             const title = document.createElement('h3'); title.textContent = exam.type;
             const meta = document.createElement('p'); meta.textContent = exam.count + ' preguntas · ' + exam.duration + ' minutos';
-            const note = document.createElement('p'); note.className = 'past-card-note';
-            note.textContent = sourceNotes(exam) ? 'Con observaciones del documento original' : 'Preguntas y patrón original';
             const button = document.createElement('button'); button.type = 'button'; button.className = 'btn-primary'; button.textContent = locked ? 'Desbloquear' : 'Realizar examen →';
             button.addEventListener('click', () => { if (isLocked(exam)) CampusAccess.unlock(); else selectExam(exam); });
             const heading = document.createElement('div'); heading.className = 'past-card-heading'; heading.append(eyebrow);
@@ -78,7 +70,7 @@
                 const icon = document.createElement('i'); icon.className = 'fas fa-lock'; icon.setAttribute('aria-hidden', 'true');
                 badge.append(icon, document.createTextNode(' Bloqueado')); heading.append(badge);
             }
-            card.append(heading, title, meta, note, button); root.append(card);
+            card.append(heading, title, meta, button); root.append(card);
         });
         $('past-empty').hidden = exams.length !== 0;
     }
@@ -87,8 +79,6 @@
         $('past-list').hidden = true; $('past-detail').hidden = false;
         $('past-detail-title').textContent = exam.title;
         $('past-detail-meta').textContent = exam.count + ' preguntas · ' + exam.duration + ' minutos';
-        $('past-source-notes').textContent = sourceNotes(exam);
-        $('past-source-notes').hidden = !sourceNotes(exam);
         $('past-back-label').textContent = 'Volver a los exámenes';
         $('past-start').textContent = isLocked(exam) ? 'Desbloquear' : 'Comenzar examen';
         if (!isLocked(exam) && !window.navigator?.connection?.saveData) prepareExam(exam).catch(() => {});

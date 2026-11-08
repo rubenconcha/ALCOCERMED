@@ -1,7 +1,12 @@
 'use strict';
 (function(root){
+ function studentComment(value) {
+  return typeof value === 'string'
+   ? value.replace(/\s*Adaptación del concepto evaluado en el examen de referencia; se eliminó la clave ambigua\.?/ig, '').trim()
+   : '';
+ }
  function commentaryData(q, read) {
-  let explanation = String(read(q, 'justificacion') || read(q, 'explicacion') || read(q, 'comentario') || '').trim();
+  let explanation = studentComment(read(q, 'justificacion') || read(q, 'explicacion') || read(q, 'comentario'));
   const options = [...'abcde'].map(letter => read(q, 'opcion_' + letter)).filter(value => value != null && String(value).trim()).map(String);
   const comments = read(q, 'comentarios_opciones');
   const option_explanations = options.map((_, i) => String(comments?.['ABCDE'[i]] || '').trim());
@@ -58,7 +63,7 @@
   }
 
   const { options = [], selected, accepted = [], option_explanations = [], source, printed_page, pdf_page } = review;
-  const explanation = typeof review.explanation === 'string' ? review.explanation.trim() : '';
+  const explanation = studentComment(review.explanation);
   const fromPattern = /^Examen pasado\b/i.test(source || '');
   const patternOnly = fromPattern && (!explanation || /^Respuesta según el patrón original\./i.test(explanation));
   const reasons = options.flatMap((_, index) => {
@@ -90,9 +95,9 @@
   }
 
   if (!workedSolution && !reasons.length && (patternOnly || !explanation)) {
-   panel.append(el('p', patternOnly
-    ? 'La clave está registrada en el patrón original. La explicación con bibliografía está pendiente.'
-    : 'Esta pregunta todavía no tiene un comentario guardado.', 'qr-commentary-muted'));
+   const keys = accepted.map(index => 'ABCDE'[index]).filter(Boolean).join(', ');
+   if (keys) panel.append(el('p', 'Clave del examen · ' + keys, 'qr-commentary-copy'));
+   else if (!source) panel.hidden = true;
   }
 
   if (source) {

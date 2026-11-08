@@ -37,6 +37,8 @@ module.exports = async function handler(req, res) {
   try {
     const bytes = await fs.promises.readFile(file);
     res.setHeader('Content-Type', pattern ? 'image/webp' : 'application/json; charset=utf-8');
-    return res.status(200).end(bytes);
+    if (pattern) return res.status(200).end(bytes);
+    const { missingNumbers, excludedQuestions, ...paper } = JSON.parse(bytes);
+    return res.status(200).end(JSON.stringify(paper));
   } catch (_) { return res.status(404).end(); }
 };

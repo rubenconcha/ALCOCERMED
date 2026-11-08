@@ -15,7 +15,7 @@ test('partial models obey confirmed chapter ranges and retain traceable original
   const bio=structuredClone(p),b=bio.questions.find(q=>q.coverage.subject==='BIOLOGIA CELULAR');b.coverage.chapter=stage==='first'?7:6;assert.equal(scope.validate(bio,stage),false);
   const health=structuredClone(p),h=health.questions.find(q=>q.coverage.subject==='SALUD PUBLICA');h.coverage.chapter=stage==='first'?7:6;assert.equal(scope.validate(health,stage),false);
  }
- const p=require('../api/_simulations/partial-first.json');assert.match(p.questions[99].pregunta,/fundamentación teórica/);assert.match(p.questions[99].fuente,/60–62/);
+ const p=require('../api/_simulations/partial-first.json');assert.match(p.questions[99].pregunta,/fundamentación teórica/);assert.match(p.questions[99].fuente,/Fundamentación teórica/);assert.equal(p.questions[99].paginas_pdf,'61, 62');
 });
 test('numbered catalog preserves partials and cumulative finals with all scopes available',()=>{
  assert.deepEqual(catalog.entries.map(e=>e.title),Array.from({length:14},(_,i)=>'Simulacro '+(i+1)));

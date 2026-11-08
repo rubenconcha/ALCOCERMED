@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" href="logo%20app%20juegos.png">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://asnwhddmurstzmghuyin.supabase.co" crossorigin>
-    <link rel="preload" href="/content/past-exams/catalog.json?v=timer-100-cccd41b" as="fetch" crossorigin="anonymous" fetchpriority="low">
+    <link rel="preload" href="/content/past-exams/catalog.json?v=examenes-umss" as="fetch" crossorigin="anonymous" fetchpriority="low">
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" async data-supabase-sdk></script>
 
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="campus-preview.css?v=3">
     <link rel="stylesheet" href="study-depth.css?v=3">
     <link rel="stylesheet" href="simulacro-library.css?v=6">
-    <link rel="stylesheet" href="past-exams.css?v=4">
+    <link rel="stylesheet" href="past-exams.css?v=5">
     <link rel="stylesheet" href="topic-evaluations.css?v=5">
     <link rel="stylesheet" href="campus-atlas.css?v=5">
 <link rel="stylesheet" href="/device-limit.css?v=1">
@@ -46,12 +46,12 @@
     <script defer src="official-flashcards.js?v=1"></script>
     <script defer src="study-depth.js?v=17"></script>
     <script defer src="campus-section-tracking.js?v=1"></script>
-    <script defer src="question-review.js?v=4"></script>
+    <script defer src="question-review.js?v=5"></script>
     <script defer src="study-media.js?v=20261021-visual5b"></script>
     <script defer src="script.js?v=20261108-comentarios"></script>
     <script defer src="study-assessments.js?v=2"></script>
-    <script defer src="simulation-scope.js?v=7"></script>
-    <script defer src="simulacro-ingreso.js?v=11"></script>
+    <script defer src="simulation-scope.js?v=8"></script>
+    <script defer src="simulacro-ingreso.js?v=12"></script>
     <script defer src="simulacro-library.js?v=7"></script>
     <script defer src="student-library.js?v=10"></script>
     <script defer src="flashcard-workspace.js?v=20261021-visual5b"></script>
@@ -59,8 +59,8 @@
     <script defer src="study-calendar-pdf.js?v=2"></script>
     <script defer src="study-calendar.js?v=4"></script>
     <script defer src="campus-shell.js?v=2"></script>
-    <script defer src="past-exam-breakdown.js?v=4"></script>
-    <script defer src="past-exams.js?v=9"></script>
+    <script defer src="past-exam-breakdown.js?v=5"></script>
+    <script defer src="past-exams.js?v=10"></script>
     <script defer src="topic-evaluations.js?v=20261107-suficiencia"></script>
     <script defer src="campus-atlas.js?v=12"></script>
     <script defer src="suficiencia-core.js?v=11"></script>
@@ -967,7 +967,7 @@
                             <button type="submit" class="past-action">Buscar</button>
                         </div>
                         <div class="past-filter-footer">
-                            <label class="past-check-line"><input type="checkbox" id="past-unconfirmed"> Solo preguntas sin tema confirmado</label>
+                            <label class="past-check-line"><input type="checkbox" id="past-unconfirmed"> Preguntas sin tema asignado</label>
                             <button type="button" id="past-reset-filters" class="past-text-button">Limpiar filtros</button>
                         </div>
                     </form>
@@ -1037,9 +1037,6 @@
             <div id="past-detail" class="past-detail" hidden>
                 <span class="entrance-eyebrow">EXAMEN PASADO</span>
                 <h3 id="past-detail-title"></h3><p id="past-detail-meta"></p>
-                <p>Las preguntas conservan la numeración del documento original. Puedes cambiar tus respuestas antes de finalizar. El cronómetro empieza al presionar Comenzar. Los 100 minutos son de referencia: puedes seguir respondiendo después y finalizar cuando quieras.</p>
-                <p>Elige una alternativa por pregunta según las afirmaciones del enunciado. Al terminar verás tu calificación, la revisión de respuestas y el patrón original.</p>
-                <p id="past-source-notes" class="past-source-notes" hidden></p>
                 <button id="past-start" type="button" class="btn-primary" onclick="startPastExam()">Comenzar examen</button>
                 <button id="past-topics-from-exam" type="button" class="past-text-button" hidden>Ver preguntas de este examen por tema →</button>
             </div>

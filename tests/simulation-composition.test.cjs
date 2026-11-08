@@ -13,6 +13,7 @@ test('all fourteen served simulations have exactly 50/30/20, valid topics and un
   assert.deepEqual(Object.fromEntries(['MORFOFUNCION','BIOLOGIA CELULAR','SALUD PUBLICA'].map(s=>[s,p.questions.filter(q=>q.materia===s).length])),{MORFOFUNCION:50,'BIOLOGIA CELULAR':30,'SALUD PUBLICA':20});
   for(const q of p.questions){
    assert.ok(q.fuente&&q.pregunta);assert.equal(q.respuestas_aceptadas.length,1);
+   assert.ok(scope.isAssertionQuestion(q),q.id+' debe usar afirmaciones numeradas');
    const answers=['a','b','c','d','e'].filter(l=>q['opcion_'+l]).map(l=>q['opcion_'+l].toLowerCase().trim().replace(/\s+/g,' '));assert.equal(new Set(answers).size,answers.length);
    if(q.source_question_id){const original=archives.get(q.source_question_id);assert.ok(original,q.source_question_id);assert.ok(q.source_sha256);if(!q.adaptation){assert.equal(q.pregunta,original.pregunta);assert.deepEqual(q.respuestas_aceptadas,original.respuestas_aceptadas);for(const l of 'abcde')assert.equal(q['opcion_'+l],original['opcion_'+l]);}}
   }
@@ -25,7 +26,17 @@ test('health scope follows last-year partials and originals remain archival refe
  const first=require('../api/_simulations/partial-first.json'),second=require('../api/_simulations/partial-second.json');
  const health=p=>p.questions.filter(q=>q.materia==='SALUD PUBLICA');
  assert.equal(health(first).length,20);assert.equal(health(second).length,20);
- const seen=new Set();for(const n of [3,4,5,6,8]){const p=require('../api/_simulations/final-'+n+'.json');for(const q of health(p)){assert.ok(q.source_question_id.startsWith('2025-2026-3-'));assert.ok(q.coverage.chapter>=14);assert.ok(!seen.has(normalize(q.pregunta)));seen.add(normalize(q.pregunta));}}
+ const seen=new Set();
+ for(const n of [3,4,5,6,8,13,14]){
+  const p=require('../api/_simulations/final-'+n+'.json');
+  for(const q of health(p)){
+   assert.ok(q.coverage.chapter>=14);
+   assert.equal(q.coverage.curriculum,'official-pdfs-2026-10-19');
+   assert.ok(q.fuente.includes('Educación en Salud')&&q.paginas_pdf&&q.justificacion);
+   assert.ok(!seen.has(normalize(q.pregunta)));
+   seen.add(normalize(q.pregunta));
+  }
+ }
  const report=require('../quality/simulation-composition-audit.json');assert.equal(report.archival_files_unchanged,true);
  assert.equal(report.models.length,14);assert.ok(report.fixed.some(t=>t.includes('50/50/0')));
 });

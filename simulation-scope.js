@@ -33,6 +33,17 @@
     [...letters].includes(q.respuesta_correcta)&&q.respuestas_aceptadas?.length===1&&q.respuestas_aceptadas[0]===q.respuesta_correcta;
   });
  }
+ function isAssertionQuestion(q){
+  const first=String(q.opcion_a||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');
+  if(first!=='sololaafirmacion1escorrecta'&&!/^(?:si)?1(?:es)?(?:correct[oa]|incorrect[oa])$/.test(first))return false;
+  if(q.truth_values===undefined)return true;
+  const count=q.opcion_e?3:2;
+  const combinations=count===3?['100','010','001','111','000']:['10','01','11','00'];
+  if(!Array.isArray(q.truth_values)||q.truth_values.length!==count||q.truth_values.some(value=>typeof value!=='boolean'))return false;
+  const lines=String(q.pregunta||'').split('\n').slice(1);
+  return lines.length===count&&lines.every((line,i)=>line.startsWith((i+1)+'. '))&&
+   combinations['ABCDE'.indexOf(q.respuesta_correcta)]===q.truth_values.map(Number).join('');
+ }
  function validate(paper,scope){
   if(scope==='semana2-testb-virtual')return validateWeek2(paper);
   if(scope==='semana3-grupo-virtual-2')return validateWeek3(paper,scope);
@@ -45,10 +56,10 @@
    const c=q.coverage,bounds=rule[c?.subject];if(!bounds||!Number.isInteger(c.chapter)||c.chapter<bounds[0]||c.chapter>bounds[1])return false;
    if(q.materia!==c.subject||!q.id||ids.has(q.id)||!q.pregunta||stems.has(stem)||!['a','b','c','d'].every(l=>q['opcion_'+l])||q.respuestas_aceptadas?.length!==1)return false;
    const options=['a','b','c','d','e'].filter(l=>q['opcion_'+l]).map(l=>String(q['opcion_'+l]).trim().toLowerCase());
-   if(new Set(options).size!==options.length||q.respuesta_correcta!==q.respuestas_aceptadas[0]||!q['opcion_'+q.respuesta_correcta?.toLowerCase()])return false;
+   if(!isAssertionQuestion(q)||new Set(options).size!==options.length||q.respuesta_correcta!==q.respuestas_aceptadas[0]||!q['opcion_'+q.respuesta_correcta?.toLowerCase()])return false;
    ids.add(q.id);stems.add(stem);counts[c.subject]++;
   }
   return counts.MORFOFUNCION===(mini?30:50)&&counts['BIOLOGIA CELULAR']===(mini?20:30)&&counts['SALUD PUBLICA']===(mini?0:20);
  }
- const api={rules,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.SimulationScope=api;
+ const api={rules,validate,isAssertionQuestion};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.SimulationScope=api;
 })(typeof window!=='undefined'?window:globalThis);

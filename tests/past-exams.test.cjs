@@ -17,7 +17,8 @@ test('los 15 exámenes conservan gestión, numeración, preguntas y patrones com
         const numbers = paper.questions.map(q => q.numero_original);
         assert.equal(new Set(numbers).size, exam.count);
         assert.deepEqual([...numbers].sort((a, b) => a - b), numbers);
-        assert.equal(numbers.length + exam.missingNumbers.length + exam.excludedQuestions.length, 100);
+        assert.equal(numbers.length + paper.missingNumbers.length + paper.excludedQuestions.length, 100);
+        assert.equal('missingNumbers' in exam || 'excludedQuestions' in exam, false);
         assert.ok(fs.existsSync('api/_past_exams/' + exam.id + '-pattern.webp'));
         assert.equal(fs.existsSync('content/past-exams/' + exam.id + '.json'), false, 'paid questions must not be public static files');
         for (const q of paper.questions) {
@@ -26,7 +27,7 @@ test('los 15 exámenes conservan gestión, numeración, preguntas y patrones com
             for (const key of q.respuestas_aceptadas) assert.ok(q['opcion_' + key.toLowerCase()]);
         }
     }
-    const final = catalog.exams.find(exam => exam.id === '2025-2026-3');
+    const final = require('../api/_past_exams/2025-2026-3.json');
     assert.deepEqual(final.missingNumbers, [67]);
     assert.equal(final.excludedQuestions[0].numero_original, 66);
 });
@@ -93,7 +94,12 @@ test('el servidor verifica la sesión y el plan antes de entregar preguntas o pa
             const expected = exam.year === catalog.freeYear ? 200 : 403;
             assert.equal(questionResponse.code, expected, exam.id + ' questions');
             assert.equal(patternResponse.code, expected, exam.id + ' pattern');
-            if (expected === 200) assert.equal(JSON.parse(questionResponse.bytes).questions.length, exam.count);
+            if (expected === 200) {
+                const paper = JSON.parse(questionResponse.bytes);
+                assert.equal(paper.questions.length, exam.count);
+                assert.equal(paper.type, exam.type);
+                assert.equal('missingNumbers' in paper || 'excludedQuestions' in paper, false);
+            }
         }
         global.fetch = async () => ({ ok: true, json: async () => ({ ready: true, premium: true }) });
         for (const exam of catalog.exams) {
@@ -139,6 +145,8 @@ test('la cuenta gratuita ve tres exámenes abiertos de la última gestión y doc
     latest[0].children.at(-1).events.click();
     assert.match(get('past-detail-title').textContent, /2025–2026/);
     assert.equal(get('past-start').textContent, 'Comenzar examen');
+    assert.equal(elements.has('past-source-notes'), false);
+    assert.doesNotMatch(JSON.stringify(cards), /observaciones del documento|en el Word original/i);
     free = false;
     await context.window.openPastExams();
     assert.equal(get('past-grid').children.filter(card => card.className.includes('past-card-locked')).length, 0);
@@ -156,7 +164,7 @@ test('el índice temático se alinea con la numeración histórica y las fuentes
             if (thematicIndex.topics[key]) tagged++;
             else assert.ok(thematicIndex.sources[key], q.id + ' debe mantener su materia');
         }
-        for (const n of [...exam.missingNumbers, ...exam.excludedQuestions.map(q => q.numero_original)]) {
+        for (const n of [...paper.missingNumbers, ...paper.excludedQuestions.map(q => q.numero_original)]) {
             assert.equal(indexed[n - 1], null);
         }
     }

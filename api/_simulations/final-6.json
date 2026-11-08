@@ -2045,524 +2045,724 @@
       "tema": "Tema 6"
     },
     {
-      "id": "vida-final-4-01",
-      "source_numero_original": 41,
+      "id": "final-6-umss-081",
+      "numero_original": 81,
+      "numero_pregunta": 81,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 16",
-      "pregunta": "Un equipo estudia actividad física en una población extensa y dispone de recursos limitados. ¿Qué justifica utilizar una muestra?",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 16,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 41.",
-      "comentario": "Correcta D: Obtener información de una parte de la población mediante un diseño de selección definido, reduciendo recursos frente a un censo.",
-      "source_question_id": "2025-2026-3-41",
-      "source_sha256": "dbc2104aefbe43040ffa1142c249c73257542d8f92e5e4ac7e9f0d0f132fb5f0",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Garantizar que desaparezca cualquier error de selección o estimación.",
-      "opcion_b": "Asegurar que cualquier grupo elegido por conveniencia represente a toda la población.",
-      "opcion_c": "Evitar identificar la población de la que proceden los participantes.",
-      "opcion_d": "Obtener información de una parte de la población mediante un diseño de selección definido, reduciendo recursos frente a un censo.",
-      "numero_original": 81
-    },
-    {
-      "id": "vida-final-4-02",
-      "source_numero_original": 42,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 14",
-      "pregunta": "En un registro sobre actividad física se anota también la temperatura del aula en grados Celsius. ¿Qué escala corresponde a esa temperatura?",
+      "tema": "Muestreo",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El muestreo estratificado incorpora unidades de cada estrato.\n2. En el muestreo aleatorio simple se elige una unidad al azar y se incorporan las restantes a intervalos fijos.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
+      "justificacion": "1. Correcta. En el muestreo estratificado se toman unidades de cada estrato para que todos los grupos estén representados.\n2. Incorrecta. El muestreo aleatorio simple realiza un sorteo entre unidades individuales de la población.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. En el muestreo estratificado se toman unidades de cada estrato para que todos los grupos estén representados. 2. Incorrecta. El muestreo aleatorio simple realiza un sorteo entre unidades individuales de la población.",
+        "C": "2. Incorrecta. El muestreo aleatorio simple realiza un sorteo entre unidades individuales de la población.",
+        "D": "1. Correcta. En el muestreo estratificado se toman unidades de cada estrato para que todos los grupos estén representados."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 16 · muestreo",
+      "paginas_pdf": "98, 99, 101",
+      "pagina_impresa": "23, 24, 26",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 16,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-6-umss-082",
+      "numero_original": 82,
+      "numero_pregunta": 82,
+      "materia": "SALUD PUBLICA",
+      "tema": "Variables y medición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Una escala ordinal ordena categorías sin asignar distancias definidas entre ellas.\n2. En una escala de razón, el cero es convencional y carece de significado comparar dos cantidades mediante un cociente.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. En la escala ordinal las categorías se pueden ordenar. Las distancias entre categorías no están definidas.\n2. Incorrecta. Con un cero absoluto, la escala de razón admite comparaciones como el doble o la mitad.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. En la escala ordinal las categorías se pueden ordenar. Las distancias entre categorías no están definidas. 2. Incorrecta. Con un cero absoluto, la escala de razón admite comparaciones como el doble o la mitad.",
+        "C": "2. Incorrecta. Con un cero absoluto, la escala de razón admite comparaciones como el doble o la mitad.",
+        "D": "1. Correcta. En la escala ordinal las categorías se pueden ordenar. Las distancias entre categorías no están definidas."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 14 · variables y medicion",
+      "paginas_pdf": "93, 94",
+      "pagina_impresa": "18, 19",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 14,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 42.",
-      "comentario": "Correcta A: De intervalo: las diferencias son comparables, pero 0 °C no representa ausencia de temperatura.",
-      "source_question_id": "2025-2026-3-42",
-      "source_sha256": "e4843afc11c71890913b85da69ab1bea789f2cc22513e9fa73f4112e70f69c02",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "De intervalo: las diferencias son comparables, pero 0 °C no representa ausencia de temperatura.",
-      "opcion_b": "De razón: 0 °C representa ausencia absoluta de temperatura.",
-      "opcion_c": "Nominal: los grados solo son etiquetas sin diferencias cuantificables.",
-      "opcion_d": "Ordinal: solo se conoce el orden y las diferencias entre grados no son comparables.",
-      "numero_original": 82
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-03",
-      "source_numero_original": 43,
+      "id": "final-6-umss-083",
+      "numero_original": 83,
+      "numero_pregunta": 83,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 15",
-      "pregunta": "El equipo calcula el promedio observado de actividad física en 160 participantes, sin generalizarlo a otras personas. ¿Qué está haciendo?",
+      "tema": "Estadística descriptiva",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Calcular un promedio para resumir exclusivamente las observaciones registradas constituye por sí solo inferencia estadística.\n2. Si el estudio se refiere a 600 estudiantes y selecciona 80 de ellos, los 80 forman una muestra.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
+      "justificacion": "1. Incorrecta. Resumir los datos observados es descriptivo. La inferencia utiliza la muestra para concluir algo sobre la población.\n2. Correcta. La muestra es la parte del conjunto de interés de la que se obtienen las observaciones.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Resumir los datos observados es descriptivo. La inferencia utiliza la muestra para concluir algo sobre la población. 2. Correcta. La muestra es la parte del conjunto de interés de la que se obtienen las observaciones.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Resumir los datos observados es descriptivo. La inferencia utiliza la muestra para concluir algo sobre la población.",
+        "D": "2. Correcta. La muestra es la parte del conjunto de interés de la que se obtienen las observaciones."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 15 · Estadística descriptiva / cap. 15 · Población y muestra",
+      "paginas_pdf": "89",
+      "pagina_impresa": "14",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 15,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 43.",
-      "comentario": "Correcta B: Estadística descriptiva de los datos observados.",
-      "source_question_id": "2025-2026-3-43",
-      "source_sha256": "144dbe3345eda9e3b5a8090d8f026996fa947ef43bbf54c1c2b4baa16b467794",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Una asignación aleatoria de tratamientos por el solo hecho de resumir datos.",
-      "opcion_b": "Estadística descriptiva de los datos observados.",
-      "opcion_c": "Una generalización inferencial a toda la población, aunque no se haya formulado.",
-      "opcion_d": "Un muestreo por bola de nieve por el solo hecho de calcular un promedio.",
-      "numero_original": 83
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-04",
-      "source_numero_original": 44,
+      "id": "final-6-umss-084",
+      "numero_original": 84,
+      "numero_pregunta": 84,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 14",
-      "pregunta": "En el estudio de actividad física, el lugar de residencia se codifica como rural=1 y urbano=2. ¿Qué interpretación es válida?",
+      "tema": "Variables y medición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Los códigos de una escala nominal identifican categorías.\n2. Si se usa una escala de intervalo, la diferencia de 5 a 6 representa la misma amplitud que la de 10 a 11.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
+      "justificacion": "1. Correcta. Los códigos de una escala nominal sirven para distinguir categorías. Su orden numérico carece de significado.\n2. Correcta. Ambas diferencias miden una unidad en una escala de intervalos iguales.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. Ambas diferencias miden una unidad en una escala de intervalos iguales.",
+        "B": "1. Correcta. Los códigos de una escala nominal sirven para distinguir categorías. Su orden numérico carece de significado.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Los códigos de una escala nominal sirven para distinguir categorías. Su orden numérico carece de significado. 2. Correcta. Ambas diferencias miden una unidad en una escala de intervalos iguales."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 14 · variables y medicion / cap. 14 · Escala de intervalo",
+      "paginas_pdf": "93, 94",
+      "pagina_impresa": "18, 19",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 14,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 44.",
-      "comentario": "Correcta C: Los números identifican categorías; no indican que urbano tenga el doble de residencia que rural.",
-      "source_question_id": "2025-2026-3-44",
-      "source_sha256": "678e3f50cdc4784b725fd3b8956c3dd7aec32c6a45754006923d9b1b17dacab5",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "La diferencia entre 2 y 1 mide una unidad física de residencia.",
-      "opcion_b": "Los códigos convierten la residencia en una variable cuantitativa continua.",
-      "opcion_c": "Los números identifican categorías; no indican que urbano tenga el doble de residencia que rural.",
-      "opcion_d": "Urbano representa necesariamente el doble de cantidad de residencia que rural.",
-      "numero_original": 84
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-05",
-      "source_numero_original": 45,
+      "id": "final-6-umss-085",
+      "numero_original": 85,
+      "numero_pregunta": 85,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Para agrupar mediciones de actividad física, se considera la regla de Sturges. ¿Qué orienta esta regla?",
-      "respuesta_correcta": "D",
-      "respuestas_aceptadas": [
-        "D"
-      ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 45.",
-      "comentario": "Correcta D: Una estimación del número de intervalos de clase a partir del tamaño del conjunto de datos.",
-      "source_question_id": "2025-2026-3-45",
-      "source_sha256": "a4eb68d0f04fe072cae48353d6c9d6200fede6b5f32d66496e0290b8635d00df",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "La selección del nombre de cada participante de la muestra.",
-      "opcion_b": "La demostración de que todos los datos siguen una distribución normal.",
-      "opcion_c": "La elección de la respuesta que confirmará la hipótesis del investigador.",
-      "opcion_d": "Una estimación del número de intervalos de clase a partir del tamaño del conjunto de datos.",
-      "numero_original": 85
-    },
-    {
-      "id": "vida-final-4-06",
-      "source_numero_original": 46,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 14",
-      "pregunta": "En una encuesta sobre actividad física, la satisfacción se registra como baja, media o alta. ¿Qué caracteriza esta escala?",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
-      ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 14,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 46.",
-      "comentario": "Correcta A: Es ordinal: existe orden, sin asegurar distancias iguales entre categorías.",
-      "source_question_id": "2025-2026-3-46",
-      "source_sha256": "966ae0f45215b77b0dcb750009420a12ca60ee287f680465ad3c9abb741108c7",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Es ordinal: existe orden, sin asegurar distancias iguales entre categorías.",
-      "opcion_b": "Es nominal: las categorías carecen de cualquier orden.",
-      "opcion_c": "Es de razón: la categoría baja equivale a ausencia absoluta de satisfacción.",
-      "opcion_d": "Es de intervalo: la distancia de baja a media es necesariamente igual a la de media a alta.",
-      "numero_original": 86
-    },
-    {
-      "id": "vida-final-4-07",
-      "source_numero_original": 47,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 14",
-      "pregunta": "El equipo de actividad física cuenta cuántos participantes hay en cada hogar. ¿Cómo se clasifica ese número?",
+      "tema": "Frecuencias y gráficos",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La frecuencia absoluta acumulada toma el conteo de una categoría y excluye todos los conteos que la preceden.\n2. Si los dos primeros grupos tienen frecuencias relativas de 15 % y 25 %, el acumulado del segundo grupo es 40 %.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 14,
-        "curriculum": "bibliography"
+      "justificacion": "1. Incorrecta. La frecuencia absoluta acumulada suma los conteos desde el inicio hasta el intervalo elegido.\n2. Correcta. Las frecuencias relativas se suman hasta el grupo indicado.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La frecuencia absoluta acumulada suma los conteos desde el inicio hasta el intervalo elegido. 2. Correcta. Las frecuencias relativas se suman hasta el grupo indicado.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. La frecuencia absoluta acumulada suma los conteos desde el inicio hasta el intervalo elegido.",
+        "D": "2. Correcta. Las frecuencias relativas se suman hasta el grupo indicado."
       },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 47.",
-      "comentario": "Correcta B: Cuantitativo discreto, porque resulta de contar unidades.",
-      "source_question_id": "2025-2026-3-47",
-      "source_sha256": "5acdfce1372915b9a6ab6b43f4e906f3ad2ba2730f16e146da35b7d170663e13",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Cualitativo ordinal, porque solo permite ordenar sin contar.",
-      "opcion_b": "Cuantitativo discreto, porque resulta de contar unidades.",
-      "opcion_c": "Cuantitativo continuo, porque admite cualquier fracción de participante.",
-      "opcion_d": "Cualitativo nominal, porque no expresa una cantidad.",
-      "numero_original": 87
-    },
-    {
-      "id": "vida-final-4-08",
-      "source_numero_original": 48,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Las respuestas sobre actividad física incluyen nombres de categorías sin orden natural. ¿Cómo pueden organizarse para tabularlas?",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
+      "truth_values": [
+        false,
+        true
       ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 17 · frecuencias y graficos / cap. 17 · Frecuencia relativa acumulada",
+      "paginas_pdf": "121, 122",
+      "pagina_impresa": "46, 47",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 48.",
-      "comentario": "Correcta C: Con un criterio explícito y constante, por ejemplo alfabético, conservando las frecuencias de cada categoría.",
-      "source_question_id": "2025-2026-3-48",
-      "source_sha256": "cbc832c2084f011be0ab87a1b7c52cded8ef9b189683f458806c8ddf02ddef33",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Eliminando las categorías con pocos casos antes de contar sus frecuencias.",
-      "opcion_b": "Suponiendo que la distancia entre dos nombres equivale a una unidad numérica.",
-      "opcion_c": "Con un criterio explícito y constante, por ejemplo alfabético, conservando las frecuencias de cada categoría.",
-      "opcion_d": "Asignando a cada nombre una magnitud física obtenida por multiplicación.",
-      "numero_original": 88
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-09",
-      "source_numero_original": 49,
+      "id": "final-6-umss-086",
+      "numero_original": 86,
+      "numero_pregunta": 86,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Una tabla de actividad física usa los intervalos [25, 35) y [35, 45). ¿Dónde se registra un valor exactamente igual a 35?",
+      "tema": "Variables y medición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En una escala de intervalo, el cero representa ausencia absoluta de lo medido.\n2. Codificar el estado civil con 1, 2 y 3 permite ordenar sus categorías por el valor numérico del código.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "D",
       "respuestas_aceptadas": [
         "D"
       ],
+      "justificacion": "1. Incorrecta. La escala de intervalo permite comparar diferencias. Su cero es un punto de referencia convencional.\n2. Incorrecta. En una escala nominal, los números son etiquetas y no expresan jerarquía.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La escala de intervalo permite comparar diferencias. Su cero es un punto de referencia convencional.",
+        "B": "2. Incorrecta. En una escala nominal, los números son etiquetas y no expresan jerarquía.",
+        "C": "1. Incorrecta. La escala de intervalo permite comparar diferencias. Su cero es un punto de referencia convencional. 2. Incorrecta. En una escala nominal, los números son etiquetas y no expresan jerarquía.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "truth_values": [
+        false,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 14 · variables y medicion / cap. 14 · Escala nominal",
+      "paginas_pdf": "93, 94",
+      "pagina_impresa": "18, 19",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 49.",
-      "comentario": "Correcta D: En [35, 45), que incluye su extremo inferior.",
-      "source_question_id": "2025-2026-3-49",
-      "source_sha256": "5c61a9a4ae89fd49371287f4cd45cd3f1586a9c55896945282e3db317aa26784",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "En [25, 35), que excluye su extremo superior.",
-      "opcion_b": "En ambos intervalos, duplicando la observación.",
-      "opcion_c": "En ninguno, aunque la tabla cubra ese valor.",
-      "opcion_d": "En [35, 45), que incluye su extremo inferior.",
-      "numero_original": 89
+        "chapter": 14,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-10",
-      "source_numero_original": 50,
+      "id": "final-6-umss-087",
+      "numero_original": 87,
+      "numero_pregunta": 87,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 20",
-      "pregunta": "En los datos de actividad física, el mínimo es 15 y el máximo 56. ¿Cuál es el rango?",
+      "tema": "Estadística descriptiva",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La estadística inferencial permite extraer conclusiones sobre una población a partir de una muestra.\n2. Se denomina muestra al conjunto completo de unidades antes de realizar cualquier selección.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
+      "justificacion": "1. Correcta. La estadística inferencial usa la muestra para estimar o sacar conclusiones sobre la población.\n2. Incorrecta. La muestra es la parte de la población que se selecciona para el estudio.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La estadística inferencial usa la muestra para estimar o sacar conclusiones sobre la población. 2. Incorrecta. La muestra es la parte de la población que se selecciona para el estudio.",
+        "C": "2. Incorrecta. La muestra es la parte de la población que se selecciona para el estudio.",
+        "D": "1. Correcta. La estadística inferencial usa la muestra para estimar o sacar conclusiones sobre la población."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 15 · estadistica descriptiva",
+      "paginas_pdf": "89, 90",
+      "pagina_impresa": "14, 15",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 15,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-6-umss-088",
+      "numero_original": 88,
+      "numero_pregunta": 88,
+      "materia": "SALUD PUBLICA",
+      "tema": "Frecuencias y gráficos",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La frecuencia absoluta indica cuántas observaciones pertenecen a una categoría o intervalo.\n2. Si las primeras frecuencias absolutas son 4, 7 y 9, el acumulado en la tercera categoría es 16.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. La frecuencia absoluta es el número de observaciones que pertenecen a una categoría o intervalo.\n2. Incorrecta. El acumulado incluye todas las categorías hasta la tercera: 4 + 7 + 9 = 20.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La frecuencia absoluta es el número de observaciones que pertenecen a una categoría o intervalo. 2. Incorrecta. El acumulado incluye todas las categorías hasta la tercera: 4 + 7 + 9 = 20.",
+        "C": "2. Incorrecta. El acumulado incluye todas las categorías hasta la tercera: 4 + 7 + 9 = 20.",
+        "D": "1. Correcta. La frecuencia absoluta es el número de observaciones que pertenecen a una categoría o intervalo."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 17 · frecuencias y graficos / cap. 17 · Frecuencia absoluta acumulada",
+      "paginas_pdf": "120, 121",
+      "pagina_impresa": "45, 46",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-6-umss-089",
+      "numero_original": 89,
+      "numero_pregunta": 89,
+      "materia": "SALUD PUBLICA",
+      "tema": "Frecuencias y gráficos",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Si 18 de 60 observaciones pertenecen a una categoría, su frecuencia relativa es 30 %.\n2. La frecuencia relativa acumulada suma las proporciones hasta la categoría indicada.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "C",
+      "respuestas_aceptadas": [
+        "C"
+      ],
+      "justificacion": "1. Correcta. Se divide 18 entre 60 y se multiplica por 100.\n2. Correcta. La frecuencia relativa acumulada suma proporciones o porcentajes hasta la categoría indicada.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. La frecuencia relativa acumulada suma proporciones o porcentajes hasta la categoría indicada.",
+        "B": "1. Correcta. Se divide 18 entre 60 y se multiplica por 100.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Se divide 18 entre 60 y se multiplica por 100. 2. Correcta. La frecuencia relativa acumulada suma proporciones o porcentajes hasta la categoría indicada."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 17 · Frecuencia absoluta y relativa / cap. 17 · frecuencias y graficos",
+      "paginas_pdf": "120, 121, 122",
+      "pagina_impresa": "45, 46, 47",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 17,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-6-umss-090",
+      "numero_original": 90,
+      "numero_pregunta": 90,
+      "materia": "SALUD PUBLICA",
+      "tema": "Dispersión y forma de los datos",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El rango intercuartil se obtiene restando el valor mínimo al máximo.\n2. El coeficiente de variación puede expresarse como el porcentaje que representa la desviación estándar respecto de la media.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "justificacion": "1. Incorrecta. El rango intercuartil resta Q₁ a Q₃ y mide la amplitud de la mitad central.\n2. Correcta. El coeficiente de variación divide la desviación estándar entre la media y expresa esa relación como porcentaje.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. El rango intercuartil resta Q₁ a Q₃ y mide la amplitud de la mitad central. 2. Correcta. El coeficiente de variación divide la desviación estándar entre la media y expresa esa relación como porcentaje.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. El rango intercuartil resta Q₁ a Q₃ y mide la amplitud de la mitad central.",
+        "D": "2. Correcta. El coeficiente de variación divide la desviación estándar entre la media y expresa esa relación como porcentaje."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 20 · dispersion y forma de los datos",
+      "paginas_pdf": "172, 173, 177, 179",
+      "pagina_impresa": "97, 98, 102, 104",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 20,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 50.",
-      "comentario": "Correcta A: 41",
-      "source_question_id": "2025-2026-3-50",
-      "source_sha256": "376a3022535f7ca0eb3eb0fc81dc2e498bbb6fbaaf84ed207ded7c9fbc2512a3",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "41",
-      "opcion_b": "71",
-      "opcion_c": "76",
-      "opcion_d": "42",
-      "numero_original": 90
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-11",
-      "source_numero_original": 91,
+      "id": "final-6-umss-091",
+      "numero_original": 91,
+      "numero_pregunta": 91,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 16",
-      "pregunta": "Para localizar participantes de un estudio de actividad física, los primeros informantes recomiendan a otras personas que cumplen los criterios. ¿Qué método se describe?",
-      "respuesta_correcta": "B",
+      "tema": "Muestreo",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Para seleccionar 60 unidades de una lista de 600 por muestreo sistemático, el intervalo de selección es 10.\n2. Con intervalo 8 e inicio 3, la segunda posición que se selecciona es la 8.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
       "respuestas_aceptadas": [
-        "B"
+        "A"
       ],
+      "justificacion": "1. Correcta. El intervalo se calcula como N/n, aquí 600 dividido entre 60.\n2. Incorrecta. Se suma el intervalo al inicio: 3 + 8 = 11.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. El intervalo se calcula como N/n, aquí 600 dividido entre 60. 2. Incorrecta. Se suma el intervalo al inicio: 3 + 8 = 11.",
+        "C": "2. Incorrecta. Se suma el intervalo al inicio: 3 + 8 = 11.",
+        "D": "1. Correcta. El intervalo se calcula como N/n, aquí 600 dividido entre 60."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 16 · Muestreo sistemático",
+      "paginas_pdf": "99",
+      "pagina_impresa": "24",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 16,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 91.",
-      "comentario": "Correcta B: Muestreo por bola de nieve.",
-      "source_question_id": "2025-2026-3-91",
-      "source_sha256": "80abd3f73e32f2469f8a933cb446fd9c84866cecbe88da4847819a57637655bb",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Censo completo de todos los integrantes de la población.",
-      "opcion_b": "Muestreo por bola de nieve.",
-      "opcion_c": "Muestreo aleatorio simple con probabilidades iguales conocidas.",
-      "opcion_d": "Muestreo sistemático con intervalo fijo calculado como N/n.",
-      "numero_original": 91
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-12",
-      "source_numero_original": 92,
+      "id": "final-6-umss-092",
+      "numero_original": 92,
+      "numero_pregunta": 92,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Se desea mostrar cómo se distribuyen mediciones continuas de actividad física, agrupadas en intervalos contiguos. ¿Qué gráfica corresponde?",
-      "respuesta_correcta": "C",
-      "respuestas_aceptadas": [
-        "C"
-      ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 92.",
-      "comentario": "Correcta C: Un histograma.",
-      "source_question_id": "2025-2026-3-92",
-      "source_sha256": "c75bbb4b6bcbeb9d61db7509c6ab2a75139b1a0c046478e97170b879f8feb88c",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Un diagrama de dispersión de dos variables distintas que no se han medido.",
-      "opcion_b": "Un mapa conceptual sin frecuencias ni intervalos.",
-      "opcion_c": "Un histograma.",
-      "opcion_d": "Un diagrama de barras separado para categorías nominales sin intervalos.",
-      "numero_original": 92
-    },
-    {
-      "id": "vida-final-4-13",
-      "source_numero_original": 93,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "En un diagrama de barras de actividad física, una categoría tiene 27 observaciones. Si la altura representa la frecuencia absoluta, ¿qué valor debe alcanzar su barra?",
+      "tema": "Frecuencias y gráficos",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La frecuencia relativa se obtiene al dividir el total de observaciones entre las de la categoría.\n2. La moda corresponde al mayor valor observado, aunque aparezca con poca frecuencia.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "D",
       "respuestas_aceptadas": [
         "D"
       ],
+      "justificacion": "1. Incorrecta. La frecuencia relativa divide el conteo de una categoría entre el total. Multiplicar el cociente por 100 da el porcentaje.\n2. Incorrecta. La moda es el valor con la mayor frecuencia, sea o no el valor más grande del conjunto.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La frecuencia relativa divide el conteo de una categoría entre el total. Multiplicar el cociente por 100 da el porcentaje.",
+        "B": "2. Incorrecta. La moda es el valor con la mayor frecuencia, sea o no el valor más grande del conjunto.",
+        "C": "1. Incorrecta. La frecuencia relativa divide el conteo de una categoría entre el total. Multiplicar el cociente por 100 da el porcentaje. 2. Incorrecta. La moda es el valor con la mayor frecuencia, sea o no el valor más grande del conjunto.",
+        "D": "Ninguna afirmación es correcta."
+      },
+      "truth_values": [
+        false,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 17 · frecuencias y graficos / cap. 18 · medidas de tendencia central",
+      "paginas_pdf": "120, 150, 155",
+      "pagina_impresa": "45, 75, 80",
       "coverage": {
         "subject": "SALUD PUBLICA",
         "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 93.",
-      "comentario": "Correcta D: 27",
-      "source_question_id": "2025-2026-3-93",
-      "source_sha256": "cd34c6947c95620866b1765a185f8bf150c38d45dd14b964eaf981286cf88787",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "54",
-      "opcion_b": "13.5",
-      "opcion_c": "28",
-      "opcion_d": "27",
-      "numero_original": 93
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-14",
-      "source_numero_original": 94,
+      "id": "final-6-umss-093",
+      "numero_original": 93,
+      "numero_pregunta": 93,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "En una gráfica de categorías de actividad física, todas las barras tienen la misma anchura. ¿Qué representa su altura cuando el eje vertical indica frecuencia?",
+      "tema": "Muestreo",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. En el muestreo por conglomerados, la selección inicial puede realizarse entre grupos como las escuelas.\n2. La estadística descriptiva usa los datos de una muestra para sacar conclusiones sobre toda la población.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "A",
       "respuestas_aceptadas": [
         "A"
       ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
+      "justificacion": "1. Correcta. En el muestreo por conglomerados, la selección inicial se realiza entre grupos, como las escuelas.\n2. Incorrecta. La estadística descriptiva organiza y resume el conjunto de datos disponible.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. En el muestreo por conglomerados, la selección inicial se realiza entre grupos, como las escuelas. 2. Incorrecta. La estadística descriptiva organiza y resume el conjunto de datos disponible.",
+        "C": "2. Incorrecta. La estadística descriptiva organiza y resume el conjunto de datos disponible.",
+        "D": "1. Correcta. En el muestreo por conglomerados, la selección inicial se realiza entre grupos, como las escuelas."
       },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 94.",
-      "comentario": "Correcta A: La frecuencia de la categoría correspondiente.",
-      "source_question_id": "2025-2026-3-94",
-      "source_sha256": "ba46ebb726edb8cabdc00faa129491c46e73077e7ffb680121f0717c411893e6",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "La frecuencia de la categoría correspondiente.",
-      "opcion_b": "El nombre de la categoría, sin relación con sus observaciones.",
-      "opcion_c": "La edad de todas las personas incluidas en esa categoría.",
-      "opcion_d": "La amplitud de un intervalo continuo que no aparece en la gráfica.",
-      "numero_original": 94
-    },
-    {
-      "id": "vida-final-4-15",
-      "source_numero_original": 95,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Para 240 datos de actividad física, se usa m=1+3,322·log10(n) y se redondea hacia arriba. ¿Cuántas clases se proponen?",
-      "respuesta_correcta": "B",
-      "respuestas_aceptadas": [
-        "B"
+      "truth_values": [
+        true,
+        false
       ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 16 · muestreo / cap. 15 · estadistica descriptiva",
+      "paginas_pdf": "89, 99, 101",
+      "pagina_impresa": "14, 24, 26",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 95.",
-      "comentario": "Correcta B: 9",
-      "source_question_id": "2025-2026-3-95",
-      "source_sha256": "f2aca79afd3daa5ea36886632cfa7a40c0c6f90d59aba102e9f80b5ab366cd23",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "14",
-      "opcion_b": "9",
-      "opcion_c": "11",
-      "opcion_d": "7",
-      "numero_original": 95
+        "chapter": 16,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-16",
-      "source_numero_original": 96,
+      "id": "final-6-umss-094",
+      "numero_original": 94,
+      "numero_pregunta": 94,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Un intervalo reúne 56 de 160 observaciones de actividad física. ¿Cuál es su frecuencia relativa porcentual?",
+      "tema": "Medidas de tendencia central",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La media de los valores 2, 7, 7 y 8 es 6.\n2. La media aritmética se calcula dividiendo la suma de los datos entre el número de observaciones.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
+      "justificacion": "1. Correcta. La suma de los cuatro valores es 24. Al dividirla entre 4 se obtiene 6.\n2. Correcta. La media aritmética reparte la suma de los valores entre todas las observaciones.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. La media aritmética reparte la suma de los valores entre todas las observaciones.",
+        "B": "1. Correcta. La suma de los cuatro valores es 24. Al dividirla entre 4 se obtiene 6.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. La suma de los cuatro valores es 24. Al dividirla entre 4 se obtiene 6. 2. Correcta. La media aritmética reparte la suma de los valores entre todas las observaciones."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 18 · Media aritmética / cap. 18 · medidas de tendencia central",
+      "paginas_pdf": "148, 151",
+      "pagina_impresa": "73, 76",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 96.",
-      "comentario": "Correcta C: 35 %",
-      "source_question_id": "2025-2026-3-96",
-      "source_sha256": "83223dd3ab1e0580e1a5195e509d8d144c55542900fb61f1a6992f927e92c0dd",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "3.5 %",
-      "opcion_b": "70 %",
-      "opcion_c": "35 %",
-      "opcion_d": "65 %",
-      "numero_original": 96
+        "chapter": 18,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-17",
-      "source_numero_original": 97,
+      "id": "final-6-umss-095",
+      "numero_original": 95,
+      "numero_pregunta": 95,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 14",
-      "pregunta": "Una variable del estudio de actividad física solo admite 0, 1, 2, 3 o más eventos completos. ¿Qué valor sería incompatible con esa definición?",
+      "tema": "Medidas de tendencia central",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. La mediana de los valores ordenados 2, 5, 6, 9 y 10 es 5.\n2. Para calcular una media con datos agrupados, la marca de clase se toma del límite superior del intervalo.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "D",
       "respuestas_aceptadas": [
         "D"
       ],
-      "coverage": {
-        "subject": "SALUD PUBLICA",
-        "chapter": 14,
-        "curriculum": "bibliography"
+      "justificacion": "1. Incorrecta. La tercera observación ocupa la posición central y su valor es 6.\n2. Incorrecta. La marca de clase es el punto medio que representa al intervalo al calcular la media agrupada.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. La tercera observación ocupa la posición central y su valor es 6.",
+        "B": "2. Incorrecta. La marca de clase es el punto medio que representa al intervalo al calcular la media agrupada.",
+        "C": "1. Incorrecta. La tercera observación ocupa la posición central y su valor es 6. 2. Incorrecta. La marca de clase es el punto medio que representa al intervalo al calcular la media agrupada.",
+        "D": "Ninguna afirmación es correcta."
       },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 97.",
-      "comentario": "Correcta D: 2,5 eventos completos.",
-      "source_question_id": "2025-2026-3-97",
-      "source_sha256": "a16273ee8f12af7073e1e801a6c87497b717a4fd5eb38015afdc4991069e05c1",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "0 eventos.",
-      "opcion_b": "2 eventos.",
-      "opcion_c": "3 eventos.",
-      "opcion_d": "2,5 eventos completos.",
-      "numero_original": 97
-    },
-    {
-      "id": "vida-final-4-18",
-      "source_numero_original": 98,
-      "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Una categoría de actividad física representa el 35 % del total. ¿Qué ángulo ocupa en un diagrama circular de 360°?",
-      "respuesta_correcta": "A",
-      "respuestas_aceptadas": [
-        "A"
+      "truth_values": [
+        false,
+        false
       ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 18 · Mediana / cap. 18 · medidas de tendencia central",
+      "paginas_pdf": "150, 151, 155",
+      "pagina_impresa": "75, 76, 80",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 98.",
-      "comentario": "Correcta A: 126°",
-      "source_question_id": "2025-2026-3-98",
-      "source_sha256": "0634cba5dd389362820186110a5bd5a86817f2ce1230e891e0a56c5690fabcf0",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "126°",
-      "opcion_b": "63°",
-      "opcion_c": "35°",
-      "opcion_d": "234°",
-      "numero_original": 98
+        "chapter": 18,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-19",
-      "source_numero_original": 99,
+      "id": "final-6-umss-096",
+      "numero_original": 96,
+      "numero_pregunta": 96,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "Una encuesta de actividad física clasifica respuestas en seis categorías nominales. Se quiere comparar con claridad sus frecuencias. ¿Qué opción es adecuada?",
+      "tema": "Muestreo",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El muestreo sistemático requiere realizar un nuevo sorteo independiente para seleccionar cada unidad.\n2. La población comprende el conjunto completo de unidades de interés.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "B",
       "respuestas_aceptadas": [
         "B"
       ],
+      "justificacion": "1. Incorrecta. Tras elegir el punto de inicio al azar, el muestreo sistemático avanza con un intervalo fijo.\n2. Correcta. La población es todo el conjunto sobre el que interesa obtener información.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Tras elegir el punto de inicio al azar, el muestreo sistemático avanza con un intervalo fijo. 2. Correcta. La población es todo el conjunto sobre el que interesa obtener información.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Tras elegir el punto de inicio al azar, el muestreo sistemático avanza con un intervalo fijo.",
+        "D": "2. Correcta. La población es todo el conjunto sobre el que interesa obtener información."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 16 · muestreo / cap. 15 · estadistica descriptiva",
+      "paginas_pdf": "89, 90, 98, 99",
+      "pagina_impresa": "14, 15, 23, 24",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
-      },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 99.",
-      "comentario": "Correcta B: Un diagrama de barras con una barra por categoría.",
-      "source_question_id": "2025-2026-3-99",
-      "source_sha256": "71121c3120afdf4571a9aa0b482c4dd6b0a34b11d83d94c93d5d7c6d3c2ea93f",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "Una curva temporal que suponga fechas no registradas en las categorías.",
-      "opcion_b": "Un diagrama de barras con una barra por categoría.",
-      "opcion_c": "Un histograma que trate los nombres de categorías como intervalos continuos.",
-      "opcion_d": "Una gráfica de dispersión sin disponer de dos variables numéricas.",
-      "numero_original": 99
+        "chapter": 16,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     },
     {
-      "id": "vida-final-4-20",
-      "source_numero_original": 100,
+      "id": "final-6-umss-097",
+      "numero_original": 97,
+      "numero_pregunta": 97,
       "materia": "SALUD PUBLICA",
-      "tema": "Estadística e investigación · tema 17",
-      "pregunta": "En una ojiva de actividad física, la frecuencia relativa acumulada hasta un límite es 35 %. ¿Cómo se interpreta?",
+      "tema": "Medidas de tendencia central",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. Para hallar la mediana importa la posición que ocupan los datos una vez ordenados.\n2. El octavo decil identifica la misma posición que el percentil 90.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. La mediana se obtiene a partir de la posición central de los datos ordenados.\n2. Incorrecta. El octavo decil corresponde al percentil 80. El noveno corresponde al percentil 90.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. La mediana se obtiene a partir de la posición central de los datos ordenados. 2. Incorrecta. El octavo decil corresponde al percentil 80. El noveno corresponde al percentil 90.",
+        "C": "2. Incorrecta. El octavo decil corresponde al percentil 80. El noveno corresponde al percentil 90.",
+        "D": "1. Correcta. La mediana se obtiene a partir de la posición central de los datos ordenados."
+      },
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 18 · medidas de tendencia central / cap. 19 · Correspondencia entre deciles y percentiles",
+      "paginas_pdf": "148, 151, 169",
+      "pagina_impresa": "73, 76, 94",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 18,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-6-umss-098",
+      "numero_original": 98,
+      "numero_pregunta": 98,
+      "materia": "SALUD PUBLICA",
+      "tema": "Medidas de posición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El segundo cuartil corresponde a la mediana.\n2. El tercer cuartil señala la posición teórica del 75 % de la distribución.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
       "respuesta_correcta": "C",
       "respuestas_aceptadas": [
         "C"
       ],
+      "justificacion": "1. Correcta. Q₂ corresponde al centro de la distribución ordenada y coincide con la mediana.\n2. Correcta. Q₃ corresponde a la posición teórica del 75 % de la distribución ordenada.",
+      "comentarios_opciones": {
+        "A": "2. Correcta. Q₃ corresponde a la posición teórica del 75 % de la distribución ordenada.",
+        "B": "1. Correcta. Q₂ corresponde al centro de la distribución ordenada y coincide con la mediana.",
+        "C": "Ambas afirmaciones son correctas.",
+        "D": "1. Correcta. Q₂ corresponde al centro de la distribución ordenada y coincide con la mediana. 2. Correcta. Q₃ corresponde a la posición teórica del 75 % de la distribución ordenada."
+      },
+      "truth_values": [
+        true,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 19 · medidas de posicion",
+      "paginas_pdf": "162, 169",
+      "pagina_impresa": "87, 94",
       "coverage": {
         "subject": "SALUD PUBLICA",
-        "chapter": 17,
-        "curriculum": "bibliography"
+        "chapter": 19,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-6-umss-099",
+      "numero_original": 99,
+      "numero_pregunta": 99,
+      "materia": "SALUD PUBLICA",
+      "tema": "Medidas de posición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El segundo cuartil y la mediana identifican la misma posición en una distribución ordenada.\n2. El percentil 90 y el primer decil señalan la misma posición.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "A",
+      "respuestas_aceptadas": [
+        "A"
+      ],
+      "justificacion": "1. Correcta. Ambos separan la distribución en dos mitades.\n2. Incorrecta. El noveno decil y el percentil 90 señalan la misma posición de la distribución.",
+      "comentarios_opciones": {
+        "A": "Solo la afirmación 1 es correcta.",
+        "B": "1. Correcta. Ambos separan la distribución en dos mitades. 2. Incorrecta. El noveno decil y el percentil 90 señalan la misma posición de la distribución.",
+        "C": "2. Incorrecta. El noveno decil y el percentil 90 señalan la misma posición de la distribución.",
+        "D": "1. Correcta. Ambos separan la distribución en dos mitades."
       },
-      "fuente": "Educación para la Vida · tema evaluado en el final 2025–2026, pregunta 100.",
-      "comentario": "Correcta C: El 35 % de las observaciones está acumulado hasta ese límite, según los intervalos definidos.",
-      "source_question_id": "2025-2026-3-100",
-      "source_sha256": "d7608ccbdd189d5051954b45111b136e9e744a208fd30b5b1e5ad33f881e4ab4",
-      "adaptation": "Nueva situación o nuevos datos sobre el mismo concepto del final de referencia; alternativas y clave recalculadas.",
-      "opcion_a": "El 35 % está necesariamente por encima del valor máximo de la muestra.",
-      "opcion_b": "La gráfica solo muestra frecuencias no acumuladas.",
-      "opcion_c": "El 35 % de las observaciones está acumulado hasta ese límite, según los intervalos definidos.",
-      "opcion_d": "El 35 % pertenece exclusivamente al último intervalo, sin incluir los anteriores.",
-      "numero_original": 100
+      "truth_values": [
+        true,
+        false
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 19 · Cuartiles / cap. 19 · medidas de posicion",
+      "paginas_pdf": "162, 169",
+      "pagina_impresa": "87, 94",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 19,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
+    },
+    {
+      "id": "final-6-umss-100",
+      "numero_original": 100,
+      "numero_pregunta": 100,
+      "materia": "SALUD PUBLICA",
+      "tema": "Medidas de posición",
+      "dificultad": "dificil",
+      "pregunta": "Señala cuáles de las siguientes afirmaciones son correctas.\n1. El primer cuartil corresponde a la posición teórica del 75 % en una distribución ordenada.\n2. Si la varianza es 25 cm², la desviación estándar es 5 cm.",
+      "opcion_a": "Solo la afirmación 1 es correcta",
+      "opcion_b": "Solo la afirmación 2 es correcta",
+      "opcion_c": "Ambas afirmaciones son correctas",
+      "opcion_d": "Ninguna afirmación es correcta",
+      "respuesta_correcta": "B",
+      "respuestas_aceptadas": [
+        "B"
+      ],
+      "justificacion": "1. Incorrecta. Q₁ marca la posición teórica del 25 % de una distribución ordenada.\n2. Correcta. La desviación estándar es la raíz cuadrada positiva de la varianza y usa las unidades originales.",
+      "comentarios_opciones": {
+        "A": "1. Incorrecta. Q₁ marca la posición teórica del 25 % de una distribución ordenada. 2. Correcta. La desviación estándar es la raíz cuadrada positiva de la varianza y usa las unidades originales.",
+        "B": "Solo la afirmación 2 es correcta.",
+        "C": "1. Incorrecta. Q₁ marca la posición teórica del 25 % de una distribución ordenada.",
+        "D": "2. Correcta. La desviación estándar es la raíz cuadrada positiva de la varianza y usa las unidades originales."
+      },
+      "truth_values": [
+        false,
+        true
+      ],
+      "fuente": "UMSS · Educación en Salud e Investigación · Curso Básico 2025–2026 · cap. 19 · medidas de posicion / cap. 20 · Desviación estándar",
+      "paginas_pdf": "162, 177",
+      "pagina_impresa": "87, 102",
+      "coverage": {
+        "subject": "SALUD PUBLICA",
+        "chapter": 19,
+        "curriculum": "official-pdfs-2026-10-19"
+      }
     }
   ],
   "review": {
