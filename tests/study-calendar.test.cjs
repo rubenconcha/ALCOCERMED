@@ -67,7 +67,7 @@ test('weekdays assign the example blocks and rotate verified readings and existi
     for (const items of plan.values()) {
         if (items[0].resource !== 'reading') continue;
         assert.deepEqual(items[1].topicLinks, items[0].reading.topicLinks);
-        assert.equal(items[1].title, 'Desglose · ' + items[0].reading.topic);
+        assert.equal(items[1].title, 'Examen pasado · ' + items[0].reading.topic);
         assert.equal(items[5].resource, 'evaluation');
         assert.deepEqual(items[5].topicLinks, items[0].reading.topicLinks);
     }

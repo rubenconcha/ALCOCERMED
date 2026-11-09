@@ -2273,7 +2273,7 @@
     {
       "id": "2025-2026-1-50",
       "numero_original": 90,
-      "pregunta": "1.-El ODS 9 busca construir infraestructuras resilientes y fomentar la innovación.\n2-El ODS 9 promueve una industrialización inclusiva y sostenible.\nA PARTIR DE ESTA PREGUNTA CONSIDERE LA SIGUIENTE CLAVE:",
+      "pregunta": "1.-El ODS 9 busca construir infraestructuras resilientes y fomentar la innovación.\n2-El ODS 9 promueve una industrialización inclusiva y sostenible.",
       "opcion_a": "Si 1 es correcto",
       "opcion_b": "Si 2 es correcto",
       "opcion_c": "Si ambos son correctos",
@@ -2290,7 +2290,7 @@
         "curriculum": "past-exams-2025-2026"
       },
       "source_question_id": "2025-2026-1-50",
-      "source_sha256": "c0fa82343cf8604647962b8287c97e7fbc1cd3ead1c1c83e07037ba91a72b3c0",
+      "source_sha256": "834179c710a3ce14ad966751f5c367c312f764a66b8c2c8886ef795f05342ca4",
       "source_numero_original": 50,
       "materia": "SALUD PUBLICA",
       "tema": "Tema 1"

@@ -14,7 +14,7 @@
     const tools = byId('calendar-workspace-tools');
     const scripts = new Map();
     const activityViews = { reading: 'study', questions: 'breakdown', evaluation: 'evaluation' };
-    const viewTitles = { study: 'Estudio', orientation: 'Estudio', manual: 'Estudio', breakdown: 'Desglose', evaluation: 'Evaluación' };
+    const viewTitles = { study: 'Estudio', orientation: 'Estudio', manual: 'Estudio', breakdown: 'Examen pasado', evaluation: 'Evaluación' };
     const actions = {
         practice: ['Abrir ejercicio', item => openStudyAsset(item, 'practice', () => {
             if (showScreen('sufficiency-practice-screen') !== false) window.SufficiencyPractice.openExercise(item.practice.id);
@@ -282,8 +282,8 @@
         const group = byId('calendar-rating');
         const item = state.active;
         group.replaceChildren();
-        group.hidden = !item?.resource;
-        if (!item?.resource) return;
+        group.hidden = !item?.resource || view === 'breakdown';
+        if (group.hidden) return;
         const label = element('span', '', 'Valora esta actividad');
         group.append(label);
         for (let stars = 1; stars <= 5; stars += 1) {
@@ -363,7 +363,7 @@
         const group = element('div', 'calendar-study-tools');
         group.append(
             tool('Manual', 'book', () => updateView('orientation')),
-            tool('Desglose', 'agenda', () => chooseTopic('breakdown')),
+            tool('Examen pasado', 'agenda', () => chooseTopic('breakdown')),
             tool('Evaluación', 'practice', () => chooseTopic('evaluation'))
         );
         card.append(content, group, readingSource(reading), element('p', 'calendar-study-guide', item.description));
@@ -428,22 +428,16 @@
     function renderBreakdown() {
         const readings = activities().filter(item => item.reading).map(item => item.reading);
         const select = element('select', 'calendar-topic-select');
-        select.setAttribute('aria-label', 'Tema del desglose');
+        select.setAttribute('aria-label', 'Tema del examen pasado');
         readings.forEach((book, i) => select.add(new Option(book.subject + ' · ' + book.topic, String(i))));
         select.value = String(readings.indexOf(reading));
         select.onchange = () => updateView('breakdown', readings[Number(select.value)]);
         tools.append(select);
 
-        const bar = element('div', 'calendar-breakdown-tools');
-        const count = element('span', 'calendar-breakdown-count');
-        count.setAttribute('aria-live', 'polite');
-        bar.append(count);
         const book = reading;
         const fallback = book.bankTopic ? () => openBank(book) : null;
-        if (fallback) bar.append(tool('Banco de preguntas', 'practice', fallback));
         const status = message(workspace, '');
-        workspace.append(bar);
-        releasePanel = window.CampusPastExams.openAssigned(workspace, { filter: book.topicLinks.past, status, count, fallback });
+        releasePanel = window.CampusPastExams.openAssigned(workspace, { filter: book.topicLinks.past, status, fallback });
     }
 
     function mountEvaluation() {

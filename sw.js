@@ -1,8 +1,8 @@
-const CACHE_NAME = 'alcocermed-main-v168-estudio-diario';
+const CACHE_NAME = 'alcocermed-main-v169-examenes-comentados';
 const APP_SHELL = [
     './student-results.js?v=3',
     './student-results.css?v=1',
-    './question-review.js?v=5',
+    './question-review.js?v=6',
     './suficiencia-core.js?v=11',
     './suficiencia.js?v=14',
     './suficiencia.css?v=8',
@@ -45,7 +45,7 @@ const APP_SHELL = [
     './flashcard-approved.css?v=5',
     './assets/fonts/outfit-900.woff2',
     './flashcard-workspace.js?v=20261021-visual5b',
-    './script.js?v=20261109-estudio',
+    './script.js?v=20261109-comentarios',
     './topic-evaluations.js?v=20261109-estudio',
     './topic-evaluations.css?v=5',
     './recuperar.html',
@@ -78,10 +78,10 @@ const APP_SHELL = [
     './summary-pdf-reader.js?v=6',
     './summary-pdf-reader.css?v=2',
     './campus-study-resources.css?v=5',
-    './study-calendar.css?v=9',
-    './study-calendar-data.js?v=5',
+    './study-calendar.css?v=10',
+    './study-calendar-data.js?v=6',
     './study-calendar-pdf.js?v=2',
-    './study-calendar.js?v=8',
+    './study-calendar.js?v=9',
     './campus-shell.css?v=3',
     './campus-shell.js?v=2',
     './campus-section-tracking.js?v=1',
@@ -108,8 +108,8 @@ const APP_SHELL = [
     './sufficiency-practice-content.js?v=1',
     './sufficiency-practice.js?v=2',
     './past-exams.js?v=12',
-    './past-exam-breakdown.js?v=7',
-    './past-exams.css?v=6',
+    './past-exam-breakdown.js?v=8',
+    './past-exams.css?v=7',
     './content/past-exams/catalog.json?v=examenes-umss',
 ];
 

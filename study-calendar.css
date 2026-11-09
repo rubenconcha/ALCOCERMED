@@ -133,7 +133,7 @@
 .calendar-study-topic h3, .calendar-info-card h3, .calendar-orientation h3 {
     margin:0; color:var(--cal-ink); font-size:17px; line-height:1.4; overflow-wrap:anywhere;
 }
-.calendar-study-tools, .calendar-breakdown-tools { display:flex; align-items:center; flex-wrap:wrap; gap:8px }
+.calendar-study-tools { display:flex; align-items:center; flex-wrap:wrap; gap:8px }
 .calendar-study-card .calendar-study-tools { justify-content:flex-end }
 .calendar-study-card > :is(.calendar-reading-source,.calendar-study-guide) { grid-column:1/-1 }
 .calendar-study-guide, .calendar-info-card p, .calendar-orientation p {
@@ -193,31 +193,8 @@
 #calendar-activity[data-view="breakdown"] .past-breakdown-layout {
     grid-template-columns:repeat(2,minmax(0,1fr)); padding:0; gap:12px;
 }
-.calendar-breakdown-tools { justify-content:space-between; min-height:40px; margin-bottom:8px }
-.calendar-breakdown-count { color:var(--cal-muted); font-size:12px }
-#calendar-activity #past-breakdown .past-question-card { border-radius:8px; border-top-width:1px; padding:clamp(14px,2vw,20px) }
-#calendar-activity .past-question-card .qr-layout { display:block }
 #calendar-activity .past-question-stem { padding-inline-start:12px; border-inline-start:4px solid var(--cal-gold) }
-#calendar-activity #past-question-title {
-    display:flex; align-items:center; gap:7px; margin:0; color:var(--cal-muted); font-size:13px;
-    font-weight:500; letter-spacing:normal; scroll-margin-top:calc(var(--shell-top,63px) + 125px);
-}
-.calendar-question-heading {
-    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:4px 10px; margin-bottom:10px;
-}
-.calendar-question-badge {
-    display:inline-grid; place-items:center; min-width:36px; padding:3px 7px; border-radius:24px;
-    background:var(--cal-gold); color:#272331; font-weight:600;
-}
-#calendar-activity .past-question-meta { padding-bottom:12px; border-bottom:1px solid var(--cal-border) }
-#calendar-activity #past-breakdown .past-question-navigation {
-    position:static; display:grid; gap:8px; grid-row:auto; padding:0; border:0; background:transparent; box-shadow:none;
-}
-#calendar-activity :is(#past-question-index,.qr-commentary) {
-    padding:14px 16px; border:1px solid var(--cal-border); border-radius:8px; background:var(--cal-panel);
-}
-#calendar-activity .qr-commentary.qr-locked { padding-block:13px }
-#calendar-activity .qr-commentary h4 { margin-bottom:4px }
+#calendar-activity #past-question-title { scroll-margin-top:calc(var(--shell-top,63px) + 125px) }
 #calendar-activity .past-question-numbers { display:flex; flex-wrap:wrap; gap:10px 14px }
 .calendar-question-year { display:flex; flex-wrap:wrap; align-content:start; gap:5px }
 .calendar-question-year > span {
@@ -228,7 +205,6 @@
 #calendar-activity .calendar-question-year button[aria-current="true"] {
     background:var(--cal-gold); border-color:var(--cal-gold); color:#272331; box-shadow:none;
 }
-#calendar-activity .past-question-arrows { margin:0; padding:0; border:0 }
 
 @container day-detail (max-width:760px) {
     .calendar-study-card { grid-template-columns:minmax(0,1fr) }

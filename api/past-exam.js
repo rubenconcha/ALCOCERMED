@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const catalog = require('../content/past-exams/catalog.json');
 const breakdown = require('./_past_exams/breakdown.cjs');
+const withCommentary = require('./_past_exams/commentaries.cjs');
 const exams = new Map(catalog.exams.map(exam => [exam.id, exam]));
 const supabaseUrl = 'https://asnwhddmurstzmghuyin.supabase.co';
 const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzbndoZGRtdXJzdHptZ2h1eWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDcwODAsImV4cCI6MjA5MjA4MzA4MH0.bd3kz5Xji6gQknGVw_M2d80XUTwcKzLyOEqKQwfaTmo';
@@ -39,6 +40,6 @@ module.exports = async function handler(req, res) {
     res.setHeader('Content-Type', pattern ? 'image/webp' : 'application/json; charset=utf-8');
     if (pattern) return res.status(200).end(bytes);
     const { missingNumbers, excludedQuestions, ...paper } = JSON.parse(bytes);
-    return res.status(200).end(JSON.stringify(paper));
+    return res.status(200).end(JSON.stringify({ ...paper, questions: paper.questions.map(withCommentary) }));
   } catch (_) { return res.status(404).end(); }
 };

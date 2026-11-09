@@ -32,6 +32,33 @@ test('los 15 exámenes conservan gestión, numeración, preguntas y patrones com
     assert.equal(final.excludedQuestions[0].numero_original, 66);
 });
 
+test('cada pregunta histórica tiene un comentario y las referencias distinguen los folios', () => {
+    const comments = require('../api/_past_exams/commentaries.json');
+    const withCommentary = require('../api/_past_exams/commentaries.cjs');
+    const validBooks = { M: 1251, B: 829, S: 232 };
+    const questions = catalog.exams.flatMap(exam => require('../api/_past_exams/' + exam.id + '.json').questions);
+    assert.deepEqual(Object.keys(comments).sort(), questions.map(question => question.id).sort());
+    for (const question of questions) {
+        const { text, status, references } = comments[question.id];
+        assert.ok(text.length >= 58, question.id);
+        assert.doesNotMatch(text, /Respuesta según el patrón original|\ufffd/i, question.id);
+        assert.ok(['v', 'p', 'd', 'l'].includes(status), question.id);
+        assert.equal(references.length > 0, status !== 'l', question.id);
+        for (const reference of references) {
+            assert.ok(Number.isInteger(reference.pdf) && reference.pdf >= 1 && reference.pdf <= validBooks[reference.book], question.id);
+            assert.ok(reference.section?.trim(), question.id);
+            assert.ok(reference.printed === null || Number.isInteger(reference.printed) && reference.printed > 0, question.id);
+        }
+        const enriched = withCommentary(question);
+        assert.equal(enriched.justificacion, text, question.id);
+        assert.deepEqual(enriched.respuestas_aceptadas, question.respuestas_aceptadas, question.id);
+        assert.equal(Boolean(enriched.clave_en_discrepancia), status === 'd', question.id);
+    }
+    const blood = withCommentary(questions.find(question => question.id === '2025-2026-2-5'));
+    assert.match(blood.justificacion, /albúmina.*pequeña.*globulinas/i);
+    assert.match(blood.fuente_comentario, /Saladin.*pág\. impresa 681.*pág\. PDF 709/);
+});
+
 test('el cronómetro de exámenes pasados permite responder después de 100 minutos y conserva el cierre de simulacros', () => {
     const source = fs.readFileSync('script.js', 'utf8');
     let tick, finished = 0;
@@ -210,7 +237,10 @@ test('el desglose aplica filtros, conserva las claves originales y protege las p
             topics: 'morfo-10', search: 'músculo geniogloso' })).body;
         assert.equal(filtered.count, 1);
         const original = require('../api/_past_exams/2025-2026-1.json').questions[0];
-        assert.deepEqual(filtered.questions[0].question, original);
+        const { justificacion, fuente_comentario, ...originalFields } = filtered.questions[0].question;
+        assert.deepEqual(originalFields, original);
+        assert.match(justificacion, /geniogloso/i);
+        assert.match(fuente_comentario, /Saladin.*Cap.tulo 10/i);
         assert.equal(filtered.questions[0].topic, 'morfo-10');
         const studyTopic = { subjects: 'morfo', topics: 'morfo-18' };
         const freeBlood = (await request(studyTopic)).body;

@@ -65,44 +65,16 @@ window.createPastExamBreakdown = function (request, scope) {
         if (topicPicker.open) renderTopics();
     }
 
-    function reference(topic, subject) {
-        const target = $('past-bibliography-copy');
-        $('past-bibliography').hidden = !topic || !subject;
-        if (!topic || !subject) {
-            target.replaceChildren();
-            return;
-        }
-        const print = topic.printedPage ? ' · pág. impresa ' + topic.printedPage : '';
-        target.replaceChildren(
-            node('strong', subject.title),
-            node('p', subject.credit),
-            node('p', topic.section + ' · ' + topic.title),
-            node('p', 'Inicio de la sección · pág. ' + topic.pdfPage + ' del PDF' + print)
-        );
-    }
-
     function renderQuestion(focus = false) {
         const row = data.questions[cursor];
         const question = row.question;
         const state = answers.get(question.id);
-        const subject = data.subjects.find(item => item.id === row.subject);
-        const topic = data.topics.find(item => item.id === row.topic);
         const accepted = simAcceptedAnswerIndices(question);
         const ordinal = (data.page - 1) * data.pageSize + cursor + 1;
         const checked = Boolean(state?.checked);
-        const meta = [
-            node('span', row.type + ' · ' + row.year, 'past-meta-source')
-        ];
-        if (subject) meta.push(node('span', subject.label, 'past-meta-subject'));
-        if (topic) meta.push(node('span', topic.title, 'past-meta-topic'));
-        $('past-question-meta').replaceChildren(...meta);
-        const title = $('past-question-title');
-        if (assigned) {
-            title.replaceChildren(document.createTextNode('Pregunta original '),
-                node('span', String(question.numero_original), 'calendar-question-badge'));
-        } else {
-            title.textContent = 'Pregunta original ' + question.numero_original;
-        }
+        $('past-question-meta').textContent = row.type + ' · ' + row.year;
+        $('past-question-title').replaceChildren(document.createTextNode('Pregunta '),
+            node('span', String(question.numero_original), 'past-question-badge'));
         $('past-question-stem').textContent = question.pregunta;
         const options = $('past-answer-options');
         options.replaceChildren(node('legend', 'Elige una alternativa'));
@@ -131,26 +103,26 @@ window.createPastExamBreakdown = function (request, scope) {
         check.textContent = checked ? 'Volver a responder' : 'Comprobar respuesta';
         check.classList.toggle('is-retry', checked);
         check.disabled = !accepted.length || state?.selected == null;
-        $('past-after-answer-next').hidden = !checked || ordinal >= data.count;
         const feedback = $('past-answer-feedback');
         feedback.hidden = !checked;
         const correct = checked && accepted.includes(state.selected);
         feedback.classList.toggle('is-correct', correct);
         feedback.classList.toggle('is-incorrect', checked && !correct);
         if (checked) {
-            const result = correct ? 'Respuesta correcta.' : 'Revisa tu respuesta.';
+            const result = question.clave_en_discrepancia
+                ? (correct ? 'Coincide con la clave original.' : 'La clave original marca otra opción.')
+                : (correct ? 'Respuesta correcta.' : 'Revisa tu respuesta.');
             feedback.replaceChildren(node('strong', result));
         }
         const commentary = checked
             ? { ...QuestionReview.commentaryData(question, campo), selected: state.selected, accepted }
             : {};
         $('past-commentary').replaceChildren(QuestionReview.showCommentary(commentary, {
+            compactSource: true,
             lockedMessage: checked ? '' : accepted.length
                 ? 'Comprueba tu respuesta para ver el comentario.'
                 : 'Selecciona otra pregunta para continuar.',
         }));
-        reference(topic, topic?.bibliography);
-        $('past-bibliography').open = false;
         $('past-question-position').textContent = ordinal + ' de ' + data.count;
         $('past-question-prev').disabled = ordinal <= 1;
         $('past-question-next').disabled = ordinal >= data.count;
@@ -158,7 +130,6 @@ window.createPastExamBreakdown = function (request, scope) {
         $('past-page-next').disabled = data.page >= data.pages;
         $('past-question-pages').hidden = data.pages <= 1;
         $('past-page-label').textContent = 'Página ' + data.page + ' de ' + data.pages;
-        let reviewed = 0;
         const buttons = data.questions.map((item, i) => {
             const position = (data.page - 1) * data.pageSize + i + 1;
             const number = node('button', String(assigned ? item.question.numero_original : position));
@@ -166,7 +137,6 @@ window.createPastExamBreakdown = function (request, scope) {
             const attempt = answers.get(item.question.id);
             let status = 'Pendiente';
             if (attempt?.checked) {
-                reviewed += 1;
                 const correct = simAcceptedAnswerIndices(item.question).includes(attempt.selected);
                 number.classList.add(correct ? 'is-correct' : 'is-incorrect');
                 status = correct ? 'Correcta' : 'Incorrecta';
@@ -193,10 +163,6 @@ window.createPastExamBreakdown = function (request, scope) {
         } else {
             numbers.replaceChildren(...buttons);
         }
-        $('past-progress').max = data.questions.length;
-        $('past-progress').value = reviewed;
-        $('past-progress-label').textContent = data.pages > 1 ? 'Revisadas en esta página' : 'Preguntas revisadas';
-        $('past-progress-count').textContent = reviewed + ' / ' + data.questions.length;
         if (focus) $('past-question-title').focus();
     }
 
@@ -228,13 +194,13 @@ window.createPastExamBreakdown = function (request, scope) {
         controller = next;
         const query = parameters(page);
         const status = assigned?.status || $('past-status');
-        const total = assigned?.count || $('past-count');
+        const total = assigned ? null : $('past-count');
         const key = JSON.stringify(query);
         const cached = recent.get(key);
         const saved = cached && cached.expires > Date.now() ? cached.result : null;
         if (!saved) {
             status.textContent = 'Cargando preguntas…';
-            total.textContent = '';
+            if (total) total.textContent = '';
             $('past-breakdown-results').hidden = true;
             $('past-breakdown-empty').hidden = true;
         }
@@ -249,7 +215,7 @@ window.createPastExamBreakdown = function (request, scope) {
             if (!assigned) updatePickerLabels();
             status.textContent = '';
             const count = data.requested ? data.count : data.available;
-            total.textContent = count + (count === 1 ? ' pregunta' : ' preguntas') + (data.requested ? '' : ' disponibles');
+            if (total) total.textContent = count + (count === 1 ? ' pregunta' : ' preguntas') + (data.requested ? '' : ' disponibles');
             if (data.locked) {
                 empty('Gestión reservada', 'Elige una gestión disponible o consulta los planes para practicar esta selección.',
                     'Consultar planes', () => CampusAccess.unlock());
@@ -274,7 +240,7 @@ window.createPastExamBreakdown = function (request, scope) {
         } catch (error) {
             if (next.signal.aborted || !active) return;
             status.textContent = '';
-            empty('No se pudo cargar el desglose', error.message, 'Reintentar', () => load(page, last, focus));
+            empty('No se pudieron cargar las preguntas', error.message, 'Reintentar', () => load(page, last, focus));
         }
     }
 
@@ -355,10 +321,8 @@ window.createPastExamBreakdown = function (request, scope) {
     };
     $('past-question-prev').onclick = () => step(-1);
     $('past-question-next').onclick = () => step(1);
-    $('past-after-answer-next').onclick = () => step(1);
     $('past-page-prev').onclick = () => load(data.page - 1, false, true);
     $('past-page-next').onclick = () => load(data.page + 1, false, true);
-    $('past-question-index').open = !matchMedia('(max-width: 950px)').matches;
     $('past-toggle-filters').onclick = event => {
         const button = event.currentTarget;
         const open = button.getAttribute('aria-expanded') === 'true';
@@ -393,23 +357,12 @@ window.createPastExamBreakdown = function (request, scope) {
     function openAssigned(host, context) {
         show(false);
         const panel = $('past-breakdown');
-        const commentary = $('past-commentary');
         const index = $('past-question-index');
         const home = panel.parentElement;
-        const commentHome = commentary.parentElement;
-        const title = $('past-question-title');
-        const meta = $('past-question-meta');
-        const arrows = $('past-question-prev').parentElement;
-        const arrowsHome = arrows.parentElement;
-        const arrowsNext = arrows.nextElementSibling;
-        const heading = node('div', '', 'calendar-question-heading');
         const wasOpen = index.open;
         assigned = context;
         host.append(panel);
-        index.before(commentary);
-        meta.before(heading);
-        heading.append(title, arrows);
-        index.open = !matchMedia('(max-width: 760px)').matches;
+        index.open = false;
         panel.hidden = false;
         show(true);
         return () => {
@@ -417,10 +370,6 @@ window.createPastExamBreakdown = function (request, scope) {
             assigned = null;
             panel.hidden = true;
             home.append(panel);
-            commentHome.append(commentary);
-            meta.after(title);
-            arrowsHome.insertBefore(arrows, arrowsNext);
-            heading.remove();
             index.open = wasOpen;
         };
     }

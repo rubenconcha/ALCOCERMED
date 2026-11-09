@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="campus-preview.css?v=3">
     <link rel="stylesheet" href="study-depth.css?v=3">
     <link rel="stylesheet" href="simulacro-library.css?v=6">
-    <link rel="stylesheet" href="past-exams.css?v=6">
+    <link rel="stylesheet" href="past-exams.css?v=7">
     <link rel="stylesheet" href="topic-evaluations.css?v=5">
     <link rel="stylesheet" href="campus-atlas.css?v=5">
 <link rel="stylesheet" href="/device-limit.css?v=1">
@@ -46,20 +46,20 @@
     <script defer src="official-flashcards.js?v=1"></script>
     <script defer src="study-depth.js?v=17"></script>
     <script defer src="campus-section-tracking.js?v=1"></script>
-    <script defer src="question-review.js?v=5"></script>
+    <script defer src="question-review.js?v=6"></script>
     <script defer src="study-media.js?v=20261021-visual5b"></script>
-    <script defer src="script.js?v=20261109-estudio"></script>
+    <script defer src="script.js?v=20261109-comentarios"></script>
     <script defer src="study-assessments.js?v=2"></script>
     <script defer src="simulation-scope.js?v=8"></script>
     <script defer src="simulacro-ingreso.js?v=12"></script>
     <script defer src="simulacro-library.js?v=7"></script>
     <script defer src="student-library.js?v=10"></script>
     <script defer src="flashcard-workspace.js?v=20261021-visual5b"></script>
-    <script defer src="study-calendar-data.js?v=5"></script>
+    <script defer src="study-calendar-data.js?v=6"></script>
     <script defer src="study-calendar-pdf.js?v=2"></script>
-    <script defer src="study-calendar.js?v=8"></script>
+    <script defer src="study-calendar.js?v=9"></script>
     <script defer src="campus-shell.js?v=2"></script>
-    <script defer src="past-exam-breakdown.js?v=7"></script>
+    <script defer src="past-exam-breakdown.js?v=8"></script>
     <script defer src="past-exams.js?v=12"></script>
     <script defer src="topic-evaluations.js?v=20261109-estudio"></script>
     <script defer src="campus-atlas.js?v=12"></script>
@@ -918,7 +918,7 @@
                 <div class="past-list-bar">
                     <div class="past-mode" role="group" aria-label="Vista de exámenes pasados">
                         <button id="past-mode-exams" type="button" aria-pressed="true" aria-controls="past-exam-cards"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg> Exámenes completos</button>
-                        <button id="past-mode-topics" type="button" aria-pressed="false" aria-controls="past-breakdown"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#map"></use></svg> Desglose por temas</button>
+                        <button id="past-mode-topics" type="button" aria-pressed="false" aria-controls="past-breakdown"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#map"></use></svg> Preguntas por tema</button>
                     </div>
                     <button type="button" class="past-filter-toggle" id="past-toggle-filters" aria-expanded="true" aria-controls="past-filters">Ocultar filtros</button>
                     <span id="past-count" aria-live="polite"></span>
@@ -976,7 +976,7 @@
                     <div id="past-grid" class="past-grid"></div>
                     <p id="past-empty" hidden>No hay exámenes para estos filtros.</p>
                 </div>
-                <section id="past-breakdown" aria-label="Desglose por temas" hidden>
+                <section id="past-breakdown" aria-label="Preguntas de exámenes pasados por tema" hidden>
                     <div id="past-breakdown-empty" class="past-breakdown-empty">
                         <svg class="study-tool-icon" aria-hidden="true"><use href="/assets/study-tools.svg?v=2#exam"></use></svg>
                         <h3 id="past-breakdown-empty-title">Elige qué quieres practicar</h3>
@@ -984,52 +984,38 @@
                         <button type="button" class="past-action" id="past-breakdown-empty-action" hidden></button>
                     </div>
                     <div id="past-breakdown-results" class="past-breakdown-layout" hidden>
-                        <div class="past-question-card qr-container" id="past-question-card">
-                            <div class="qr-layout">
-                                <div class="qr-question">
-                                    <div class="past-question-meta" id="past-question-meta"></div>
-                                    <h3 id="past-question-title" tabindex="-1"></h3>
-                                    <p class="past-question-stem" id="past-question-stem"></p>
-                                    <form id="past-answer-form">
-                                        <fieldset id="past-answer-options"><legend>Elige una alternativa</legend></fieldset>
-                                        <div id="past-answer-feedback" class="past-answer-feedback" role="status" hidden></div>
-                                        <div class="past-answer-actions">
-                                            <button type="submit" class="past-action" id="past-check-answer" disabled>Comprobar respuesta</button>
-                                            <button type="button" class="past-action" id="past-after-answer-next" hidden>Siguiente pregunta →</button>
-                                        </div>
-                                    </form>
-                                    <details class="past-reference" id="past-bibliography">
-                                        <summary><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#summary"></use></svg> Bibliografía de consulta</summary>
-                                        <div id="past-bibliography-copy"></div>
-                                    </details>
+                        <div class="past-question-card" id="past-question-card">
+                            <div class="past-question-heading">
+                                <h3 id="past-question-title" tabindex="-1"></h3>
+                                <div class="past-question-arrows">
+                                    <button type="button" id="past-question-prev" class="past-text-button" aria-label="Pregunta anterior">← Anterior</button>
+                                    <button type="button" id="past-question-next" class="past-text-button" aria-label="Pregunta siguiente">Siguiente →</button>
                                 </div>
-                                <div id="past-commentary"></div>
                             </div>
+                            <p class="past-question-meta" id="past-question-meta"></p>
+                            <p class="past-question-stem" id="past-question-stem"></p>
+                            <form id="past-answer-form">
+                                <fieldset id="past-answer-options"><legend>Elige una alternativa</legend></fieldset>
+                                <div id="past-answer-feedback" class="past-answer-feedback" role="status" hidden></div>
+                                <div class="past-answer-actions">
+                                    <button type="submit" class="past-action" id="past-check-answer" disabled>Comprobar respuesta</button>
+                                </div>
+                            </form>
                         </div>
-                        <aside class="past-question-navigation" aria-label="Navegación del desglose">
-                            <details id="past-question-index" open>
+                        <aside class="past-question-navigation" aria-label="Comentario y navegación de preguntas">
+                            <div id="past-commentary"></div>
+                            <details id="past-question-index">
                                 <summary>
-                                    <span class="past-map-icon"><svg aria-hidden="true"><use href="/assets/study-tools.svg?v=2#progress"></use></svg></span>
-                                    <span class="past-map-heading"><strong>Mapa de preguntas</strong><span id="past-question-position"></span></span>
+                                    <strong>Ir a pregunta</strong>
+                                    <span id="past-question-position"></span>
                                 </summary>
-                                <div class="past-map-progress">
-                                    <div><label id="past-progress-label" for="past-progress">Revisadas en esta página</label><span id="past-progress-count"></span></div>
-                                    <progress id="past-progress" max="1" value="0" aria-labelledby="past-progress-label"></progress>
-                                </div>
                                 <div id="past-question-numbers" class="past-question-numbers"></div>
-                                <ul class="past-map-legend">
-                                    <li class="is-current">Actual</li><li class="is-correct">Correcta</li><li class="is-incorrect">Incorrecta</li><li>Pendiente</li>
-                                </ul>
+                                <div class="past-question-pages" id="past-question-pages">
+                                    <button type="button" id="past-page-prev" class="past-text-button" aria-label="Página anterior">‹</button>
+                                    <span id="past-page-label"></span>
+                                    <button type="button" id="past-page-next" class="past-text-button" aria-label="Página siguiente">›</button>
+                                </div>
                             </details>
-                            <div class="past-question-arrows">
-                                <button type="button" id="past-question-prev" class="past-text-button">← Anterior</button>
-                                <button type="button" id="past-question-next" class="past-text-button">Siguiente →</button>
-                            </div>
-                            <div class="past-question-pages" id="past-question-pages">
-                                <button type="button" id="past-page-prev" class="past-text-button" aria-label="Página anterior">‹</button>
-                                <span id="past-page-label"></span>
-                                <button type="button" id="past-page-next" class="past-text-button" aria-label="Página siguiente">›</button>
-                            </div>
                         </aside>
                     </div>
                 </section>
@@ -1774,7 +1760,7 @@
     <template id="campus-section-assets">
         <link rel="stylesheet" data-campus-assets="flashcards" href="flashcard-workspace.css?v=4">
         <link rel="stylesheet" data-campus-assets="flashcards" href="flashcard-approved.css?v=5">
-        <link rel="stylesheet" data-campus-assets="calendar" href="study-calendar.css?v=9">
+        <link rel="stylesheet" data-campus-assets="calendar" href="study-calendar.css?v=10">
         <link rel="stylesheet" data-campus-assets="results" href="student-results.css?v=1">
         <link rel="stylesheet" data-campus-assets="maps" href="mindmap-viewer.css?v=8">
         <link rel="stylesheet" data-campus-assets="maps" href="intocables-sheets.css?v=1">

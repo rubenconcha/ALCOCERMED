@@ -2,6 +2,7 @@
 const fs = require('node:fs/promises');
 const path = require('node:path');
 const index = require('./topic-index.json');
+const withCommentary = require('./commentaries.cjs');
 
 const pageSize = 24;
 const files = new Map();
@@ -77,7 +78,7 @@ async function breakdown(catalog, access, query) {
             .map(([id, topic]) => ({ id, ...topic, count: topicCounts.get(id) || 0,
                 bibliography: index.sources[topic.source || topic.subject] })),
         questions: requested ? filtered.slice((page - 1) * pageSize, page * pageSize)
-            .map(({ terms, ...row }) => row) : [],
+            .map(({ terms, question, ...row }) => ({ ...row, question: withCommentary(question) })) : [],
     };
 }
 

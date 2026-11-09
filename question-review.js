@@ -18,7 +18,7 @@
   }
   return {
    options, explanation, option_explanations,
-   source: String(read(q, 'fuente') || ''),
+   source: String(read(q, 'fuente_comentario') || read(q, 'fuente') || ''),
    printed_page: String(read(q, 'pagina_impresa') || ''),
    pdf_page: String(read(q, 'paginas_pdf') || ''),
   };
@@ -48,7 +48,7 @@
  if(typeof module!=='undefined'&&module.exports)module.exports=root.QuestionReview;
  if(typeof document==='undefined')return;
  const el=(tag,value,cls)=>{const node=document.createElement(tag);if(value!=null)node.textContent=value;if(cls)node.className=cls;return node;};
- function showCommentary(review, { lockedMessage, workedSolution, sourceNote } = {}) {
+ function showCommentary(review, { lockedMessage, workedSolution, sourceNote, compactSource = false } = {}) {
   const panel = el('section', null, 'qr-commentary');
   const heading = el('h4', null, 'qr-commentary-title');
   const icon = el('i', null, 'far fa-comment-alt');
@@ -100,9 +100,10 @@
    else if (!source) panel.hidden = true;
   }
 
-  if (source) {
-   const reference = el('div', null, 'qr-reference');
-   reference.append(el('strong', fromPattern ? 'Origen de la clave' : 'Fuente del comentario'));
+  if (source && !(compactSource && fromPattern)) {
+   const reference = el(compactSource ? 'details' : 'div', null, compactSource ? 'qr-reference qr-reference-compact' : 'qr-reference');
+   const label = compactSource ? 'Fuente oficial' : fromPattern ? 'Origen de la clave' : 'Fuente del comentario';
+   reference.append(el(compactSource ? 'summary' : 'strong', label));
    const printed = printed_page && !source.includes('p. impresa ' + printed_page) ? 'Pág. impresa ' + printed_page : '';
    const digital = pdf_page && !source.includes('p. PDF ' + pdf_page) ? 'Pág. PDF ' + pdf_page : '';
    reference.append(el('p', [source, printed, digital].filter(Boolean).join(' · ')));
@@ -112,7 +113,7 @@
   return panel;
  }
 
- function showOptions({ options, selected, accepted = [] }) {
+ function showOptions({ options, selected, accepted = [] }, correctLabel = 'Correcta') {
   const list = el('ul', null, 'qr-answers');
   options.forEach((option, index) => {
    const item = el('li', null, 'qr-answer');
@@ -120,7 +121,7 @@
    if (correct) item.classList.add('is-correct');
    else if (index === selected && accepted.length) item.classList.add('is-wrong');
    const tags = el('span', null, 'qr-answer-tags');
-   if (correct) tags.append(el('span', 'Correcta', 'qr-reason-state'));
+   if (correct) tags.append(el('span', correctLabel, 'qr-reason-state'));
    if (index === selected) tags.append(el('span', 'Tu respuesta', 'qr-selected'));
    item.append(el('strong', 'ABCDE'[index], 'qr-answer-letter'), el('span', option), tags);
    list.append(item);

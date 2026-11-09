@@ -3617,10 +3617,12 @@ window.finalizarSimulacro = function () {
     // Revisión pregunta a pregunta
     var reviewList = document.getElementById('sim-review-list');
     if (reviewList) {
+        const historical = simState.mode === 'pasado';
         reviewList.replaceChildren();
         simState.preguntas.forEach(function (q, i) {
             const selected = simState.answers[i].selected;
             const accepted = simAcceptedAnswerIndices(q);
+            const disputedKey = historical && q.clave_en_discrepancia;
             const review = { ...QuestionReview.commentaryData(q, campo), selected, accepted };
             const isCorrect = accepted.includes(selected);
             const unanswered = selected === null;
@@ -3634,7 +3636,9 @@ window.finalizarSimulacro = function () {
             number.textContent = 'N° ' + (q.numero_original || i + 1);
             const badge = document.createElement('span');
             badge.className = 'sim-rev-badge';
-            badge.textContent = isCorrect ? '✓ Correcta' : unanswered ? '— Sin responder' : '✗ Incorrecta';
+            badge.textContent = unanswered ? '— Sin responder' : disputedKey
+                ? (isCorrect ? '✓ Coincide con la clave' : '✗ La clave marca otra opción')
+                : (isCorrect ? '✓ Correcta' : '✗ Incorrecta');
             header.append(number, badge);
 
             const layout = document.createElement('div');
@@ -3655,8 +3659,8 @@ window.finalizarSimulacro = function () {
                 passage.append(heading, text);
                 questionSide.append(passage);
             }
-            questionSide.append(QuestionReview.showOptions(review));
-            layout.append(questionSide, QuestionReview.showCommentary(review));
+            questionSide.append(QuestionReview.showOptions(review, disputedKey ? 'Clave original' : undefined));
+            layout.append(questionSide, QuestionReview.showCommentary(review, { compactSource: historical }));
             item.append(header, layout);
             reviewList.append(item);
         });

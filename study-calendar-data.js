@@ -151,7 +151,7 @@
             make('lectura-principal', 'study', '08:00', '10:00', morning.subject + ' · ' + morning.topic,
                 'Lee las páginas indicadas y anota las ideas que quieras comprobar en el bloque de preguntas.',
                 { resource: 'reading', reading: morning }),
-            make('repaso-preguntas', 'exam', '10:00', '11:00', 'Desglose · ' + morning.topic,
+            make('repaso-preguntas', 'exam', '10:00', '11:00', 'Examen pasado · ' + morning.topic,
                 'Practica las preguntas de ingreso del tema y comprueba tus respuestas con el comentario.',
                 { resource: 'questions', bankSubject: morning.bankSubject, bankTopic: morning.bankTopic, topicLinks: morning.topicLinks }),
             make('lectura-salud', 'study', '11:00', '12:00', 'Salud · ' + healthReading.topic,

@@ -232,7 +232,7 @@
     white-space: nowrap;
 }
 #past-filters .past-picker[open] .past-picker-value { border-color: var(--shell-blue); background: var(--shell-blue-soft) }
-.past-picker summary::after, .past-reference summary::after, #past-question-index summary::after {
+.past-picker summary::after, #past-question-index summary::after {
     content: "";
     flex: 0 0 7px;
     width: 7px;
@@ -325,23 +325,21 @@
 .past-breakdown-empty p, #past-empty { color: var(--shell-muted); font-size: .85rem; margin: 0 0 12px }
 .past-breakdown-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(225px, 23vw, 285px);
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
     align-items: start;
-    gap: clamp(12px, 1.6vw, 20px);
+    gap: 12px;
 }
-#past-breakdown .past-question-card { position: relative; padding: clamp(16px, 2.4vw, 30px); border-top: 4px solid #2581a6 }
-.past-question-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 15px }
-.past-question-meta span { padding: 5px 9px; border-radius: 20px; font-size: .69rem; font-weight: 600; line-height: 1.4; overflow-wrap: anywhere }
-.past-meta-source { background: var(--past-gold-soft); color: var(--past-gold-ink) }
-.past-meta-subject { background: var(--shell-blue-soft); color: var(--shell-blue) }
-.past-meta-topic { background: var(--past-mint-soft); color: var(--past-mint-ink) }
+#past-breakdown .past-question-card { padding: clamp(14px, 2vw, 20px); border-radius: 10px }
+.past-question-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 10px }
+.past-question-meta { margin: 0 0 14px; color: var(--shell-muted); font-size: .75rem }
 #past-question-title {
-    margin: 0 0 9px;
-    color: var(--shell-ink);
-    font-size: clamp(19px, 2.15vw, 27px);
-    line-height: 1.22;
-    letter-spacing: -.028em;
-    scroll-margin-top: calc(var(--shell-top) + 20px);
+    display: flex; align-items: center; gap: 6px; margin: 0;
+    color: var(--shell-ink); font-size: .92rem; font-weight: 600;
+    scroll-margin-top: calc(var(--shell-top) + 22px);
+}
+.past-question-badge {
+    display: inline-grid; place-items: center; min-width: 34px; padding: 3px 7px;
+    border-radius: 20px; background: var(--shell-gold); color: #272331; font-variant-numeric: tabular-nums;
 }
 .past-question-stem { margin: 0 0 19px; color: var(--shell-ink); font-size: clamp(.88rem, 1.3vw, 1.03rem); line-height: 1.68; white-space: pre-line; overflow-wrap: anywhere }
 #past-answer-options { min-width: 0; margin: 0; padding: 0; border: 0 }
@@ -395,35 +393,21 @@
     color: var(--past-state-ink, var(--shell-muted));
     font-size: .8rem;
 }
-.past-reference { margin-top: 15px; border-radius: 13px; background: var(--shell-soft); color: var(--shell-ink) }
-.past-reference summary, #past-question-index summary { display: flex; align-items: center; gap: 9px; list-style: none; cursor: pointer }
-.past-reference summary { min-height: 44px; padding: 8px 12px; color: var(--shell-blue); font-size: .8rem; font-weight: 600 }
-#past-bibliography-copy { padding: 0 12px 12px; font-size: .78rem; line-height: 1.55 }
-#past-bibliography-copy p { margin: 3px 0 0; color: var(--shell-muted) }
-
-#past-breakdown .past-question-navigation { position: sticky; top: calc(var(--shell-top) + 10px); padding: 14px; border-radius: 20px }
-#past-question-index summary { min-height: 43px; line-height: 1.2 }
-.past-map-icon { display: grid; place-items: center; flex: none; width: 37px; height: 37px; border-radius: 12px; background: var(--shell-blue-soft); color: var(--shell-blue) }
-.past-map-heading { display: grid; gap: 4px; min-width: 0; font-size: .81rem }
-#past-question-position { color: var(--shell-muted); font-size: .71rem; font-variant-numeric: tabular-nums }
-.past-map-progress { padding: 9px 10px; margin: 11px 0; border-radius: 11px; background: var(--shell-soft) }
-.past-map-progress > div { display: flex; justify-content: space-between; gap: 6px; font-size: .69rem; color: var(--shell-muted) }
-#past-progress-count { flex: none; color: var(--shell-ink); font-weight: 600; font-variant-numeric: tabular-nums }
-#past-progress {
-    appearance: none;
-    display: block;
-    width: 100%;
-    height: 6px;
-    margin-top: 7px;
-    overflow: hidden;
-    border: 0;
-    border-radius: 10px;
-    background: var(--shell-line);
-    color: var(--shell-blue);
+#past-breakdown .past-question-navigation {
+    display: grid; gap: 10px; padding: 0; border: 0; background: transparent; box-shadow: none;
 }
-#past-progress::-webkit-progress-bar { background: var(--shell-line) }
-#past-progress::-webkit-progress-value { background: var(--shell-blue); border-radius: 10px }
-#past-progress::-moz-progress-bar { background: var(--shell-blue); border-radius: 10px }
+#past-breakdown :is(#past-question-index, .qr-commentary) {
+    padding: 14px 16px; border: 1px solid var(--shell-line); border-radius: 10px; background: var(--shell-panel);
+}
+#past-question-index summary {
+    display: flex; align-items: center; gap: 8px; min-height: 28px; list-style: none; cursor: pointer;
+    color: var(--shell-ink); font-size: .8rem;
+}
+#past-question-position { margin-inline-start: auto; color: var(--shell-muted); font-size: .72rem; font-variant-numeric: tabular-nums }
+#past-question-index[open] .past-question-numbers { padding-block: 9px }
+#past-breakdown .qr-reference-compact { margin-top: 12px }
+#past-breakdown .qr-reference-compact summary { color: var(--shell-blue); font-weight: 600; cursor: pointer }
+#past-breakdown .qr-reference-compact p { margin-top: 6px }
 .past-question-numbers { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); justify-items: center; gap: 6px }
 .past-question-numbers button {
     position: relative;
@@ -458,15 +442,10 @@
 }
 .past-question-numbers .is-correct::after { content: "✓" }
 .past-question-numbers .is-incorrect::after { content: "!" }
-.past-map-legend { display: flex; flex-wrap: wrap; gap: 5px 9px; padding: 0; margin: 12px 0 0; list-style: none }
-.past-map-legend li { display: inline-flex; align-items: center; gap: 4px; color: var(--shell-muted); font-size: .65rem }
-.past-map-legend li::before { content: ""; width: 7px; height: 7px; flex: none; border-radius: 50%; background: var(--past-state-ink, var(--shell-line)) }
-.past-map-legend li.is-current::before { background: var(--shell-blue) }
-.past-question-arrows, .past-question-pages { display: flex; justify-content: space-between; align-items: center; gap: 4px; margin-top: 6px }
-.past-question-arrows { padding-top: 4px; border-top: 1px solid var(--shell-line) }
+.past-question-arrows, .past-question-pages { display: flex; justify-content: space-between; align-items: center; gap: 4px }
 .past-question-pages { color: var(--shell-muted); font-size: .72rem; border-top: 1px solid var(--shell-line) }
-#past-exams-screen .past-question-pages button { font-size: 1.2rem; min-width: 41px }
-#past-exams-screen .past-question-arrows button { padding-inline: 7px }
+#past-breakdown .past-question-pages button { font-size: 1.2rem; min-width: 41px }
+#past-breakdown .past-question-arrows button { padding-inline: 7px }
 
 body.campus-shell #past-exams-screen :is(.past-card, .past-detail) {
     padding: clamp(16px, 2vw, 24px);
@@ -492,9 +471,6 @@ body.campus-shell #past-exams-screen .past-card:not(.past-card-locked) { border-
     .past-question-filters > label { grid-column: 1 }
     .past-filter-footer { grid-column: 2; grid-row: 1 / span 2; align-self: end; margin-top: 0 }
 }
-@media (min-width: 951px) {
-    .past-breakdown-layout { padding-inline-end: 56px }
-}
 @media (min-width: 769px) and (max-width: 1050px) {
     #past-subject-picker .past-picker-panel { right: 0; left: auto }
     .campus-menu-pinned .past-filter-fields:has(#past-breakdown-pickers:not([hidden])) { grid-template-columns: repeat(2, minmax(0, 1fr)) }
@@ -502,9 +478,7 @@ body.campus-shell #past-exams-screen .past-card:not(.past-card-locked) { border-
 }
 @media (max-width: 950px) {
     .past-breakdown-layout { grid-template-columns: minmax(0, 1fr) }
-    #past-breakdown .past-question-navigation { position: static; grid-row: 1; padding: 10px 12px }
     .past-question-numbers { grid-template-columns: repeat(6, minmax(0, 1fr)) }
-    .past-question-arrows { margin-top: 4px; padding-top: 0 }
     .past-question-pages { justify-content: center; gap: 12px; margin-top: 4px }
 }
 @media (max-width: 768px) {
